@@ -1,0 +1,65 @@
+name: Bonterms Mutual NDA
+description: A mutual non-disclosure agreement based on Bonterms' standard terms.
+source_url: https://github.com/Bonterms/Mutual-NDA
+version: "1.0"
+license: CC-BY-4.0
+allow_derivatives: true
+attribution_text: >-
+  Based on the Bonterms Mutual NDA, available at https://bonterms.com.
+  Licensed under CC BY 4.0. Copyright Bonterms, Inc.
+fields:
+  - name: party_1_name
+    type: string
+    description: Full legal name of the first party
+    required: true
+    section: Parties
+  - name: party_1_email
+    type: string
+    description: Notice email address for the first party
+    required: true
+    section: Parties
+  - name: party_2_name
+    type: string
+    description: Full legal name of the second party
+    required: true
+    section: Parties
+  - name: party_2_email
+    type: string
+    description: Notice email address for the second party
+    required: true
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Date the NDA takes effect
+    required: true
+    section: Terms
+  - name: purpose
+    type: string
+    description: Permitted purpose for sharing confidential information
+    required: true
+    default: Evaluating a potential business relationship
+    section: Terms
+  - name: nda_term
+    type: string
+    description: Duration of the NDA agreement
+    required: true
+    default: 1 year
+    section: Terms
+  - name: confidentiality_period
+    type: string
+    description: How long confidential information remains protected after NDA expires
+    required: true
+    default: 1 year
+    section: Terms
+  - name: governing_law
+    type: string
+    description: State or jurisdiction whose laws govern the agreement
+    required: true
+    default: California
+    section: Legal
+  - name: courts
+    type: string
+    description: Courts with jurisdiction over disputes
+    required: true
+    default: courts located in San Francisco, California
+    section: Legal

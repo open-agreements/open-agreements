@@ -1,0 +1,81 @@
+name: Common Paper Cloud Service Agreement
+description: A cloud service agreement based on Common Paper's standard terms, covering SaaS subscriptions.
+source_url: https://github.com/CommonPaper/CSA
+version: "2.0"
+license: CC-BY-4.0
+allow_derivatives: true
+attribution_text: >-
+  Based on the Common Paper Cloud Service Agreement, available at https://commonpaper.com.
+  Licensed under CC BY 4.0. Copyright Common Paper, Inc.
+fields:
+  - name: provider_name
+    type: string
+    description: Full legal name of the cloud service provider
+    required: true
+    section: Parties
+  - name: provider_email
+    type: string
+    description: Notice email address for the provider
+    required: true
+    section: Parties
+  - name: customer_name
+    type: string
+    description: Full legal name of the customer
+    required: true
+    section: Parties
+  - name: customer_email
+    type: string
+    description: Notice email address for the customer
+    required: true
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Date the agreement takes effect
+    required: true
+    section: Terms
+  - name: service_description
+    type: string
+    description: Description of the cloud service being provided
+    required: true
+    section: Service
+  - name: subscription_term
+    type: string
+    description: Initial duration of the subscription
+    required: true
+    default: 1 year
+    section: Service
+  - name: renewal_term
+    type: string
+    description: Duration of each renewal period
+    required: true
+    default: 1 year
+    section: Service
+  - name: fees
+    type: string
+    description: Subscription fees and payment terms
+    required: true
+    section: Payment
+  - name: payment_period
+    type: string
+    description: Payment frequency (e.g., monthly, annually)
+    required: true
+    default: annually
+    section: Payment
+  - name: governing_law
+    type: string
+    description: State whose laws govern the agreement
+    required: true
+    default: Delaware
+    section: Legal
+  - name: jurisdiction
+    type: string
+    description: Courts with jurisdiction over disputes
+    required: true
+    default: courts located in New Castle County, Delaware
+    section: Legal
+  - name: provider_liability_cap
+    type: string
+    description: Maximum liability cap for the provider
+    required: false
+    default: amounts paid in the prior 12 months
+    section: Legal

@@ -1,0 +1,39 @@
+name: Validate Templates
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm ci
+
+      - name: Validate all templates
+        run: node bin/open-agreements.js validate
+
+      - name: Check no CC BY-ND derivatives
+        run: |
+          # Ensure no template with allow_derivatives=false has been modified
+          for dir in templates/*/; do
+            if [ -f "$dir/metadata.yaml" ]; then
+              allow=$(grep 'allow_derivatives:' "$dir/metadata.yaml" | awk '{print $2}')
+              if [ "$allow" = "false" ]; then
+                # Check if template.docx was modified in this PR
+                if git diff --name-only HEAD~1 2>/dev/null | grep -q "$dir"; then
+                  echo "ERROR: Modified template in $dir which has allow_derivatives=false"
+                  exit 1
+                fi
+              fi
+            fi
+          done
+          echo "License compliance check passed"

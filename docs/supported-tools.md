@@ -1,0 +1,53 @@
+# Supported Tools
+
+OpenAgreements uses an agent-agnostic `ToolCommandAdapter` interface for generating skills that work with different coding agents.
+
+## Currently Supported
+
+### Claude Code
+
+- **Skill file**: `.claude/commands/open-agreements.md`
+- **How it works**: Claude reads template metadata, interviews the user via `AskUserQuestion`, and invokes the CLI to render the DOCX
+- **Usage**: `/open-agreements` in Claude Code
+
+## Adding Support for New Agents
+
+To add support for a new coding agent (e.g., Cursor, Windsurf):
+
+### 1. Implement the ToolCommandAdapter interface
+
+```typescript
+import type { ToolCommandAdapter } from '../types.js';
+import type { TemplateMetadata } from '../../metadata.js';
+
+export class MyAgentAdapter implements ToolCommandAdapter {
+  readonly name = 'my-agent';
+
+  generateSkillFile(metadata: TemplateMetadata, templateId: string): string {
+    // Generate the skill/command file content for your agent
+    return '...';
+  }
+
+  getOutputPath(templateId: string): string {
+    // Return the file path where the skill should be written
+    return '.my-agent/commands/open-agreements.md';
+  }
+}
+```
+
+### 2. Register the adapter
+
+Add your adapter to `src/core/command-generation/adapters/`.
+
+### 3. Generate the skill file
+
+The adapter's `generateSkillFile` method should produce a file that:
+
+1. Discovers template fields from metadata
+2. Interviews the user for field values using the agent's native capabilities
+3. Invokes `open-agreements fill` to render the DOCX
+4. Reports the output path to the user
+
+## Interface Definition
+
+See `src/core/command-generation/types.ts` for the full `ToolCommandAdapter` interface.

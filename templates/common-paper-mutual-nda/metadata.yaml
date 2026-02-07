@@ -1,0 +1,65 @@
+name: Common Paper Mutual NDA
+description: A mutual non-disclosure agreement based on Common Paper's standard terms.
+source_url: https://github.com/CommonPaper/Mutual-NDA
+version: "2.0"
+license: CC-BY-4.0
+allow_derivatives: true
+attribution_text: >-
+  Based on the Common Paper Mutual NDA, available at https://commonpaper.com.
+  Licensed under CC BY 4.0. Copyright Common Paper, Inc.
+fields:
+  - name: party_1_name
+    type: string
+    description: Full legal name of the first party
+    required: true
+    section: Parties
+  - name: party_1_email
+    type: string
+    description: Notice email address for the first party
+    required: true
+    section: Parties
+  - name: party_2_name
+    type: string
+    description: Full legal name of the second party
+    required: true
+    section: Parties
+  - name: party_2_email
+    type: string
+    description: Notice email address for the second party
+    required: true
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Date the NDA takes effect
+    required: true
+    section: Terms
+  - name: purpose
+    type: string
+    description: Purpose for which confidential information will be shared
+    required: true
+    default: Evaluating whether to enter into a business relationship
+    section: Terms
+  - name: mnda_term
+    type: string
+    description: Duration of the NDA agreement
+    required: true
+    default: 1 year
+    section: Terms
+  - name: confidentiality_term
+    type: string
+    description: How long confidential information remains protected after NDA expires
+    required: true
+    default: 1 year
+    section: Terms
+  - name: governing_law
+    type: string
+    description: State whose laws govern the agreement
+    required: true
+    default: Delaware
+    section: Legal
+  - name: jurisdiction
+    type: string
+    description: Courts with jurisdiction over disputes
+    required: true
+    default: courts located in New Castle County, Delaware
+    section: Legal
