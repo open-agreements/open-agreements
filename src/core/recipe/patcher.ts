@@ -160,6 +160,29 @@ export function isRunSafeToRemove(run: Element): boolean {
   return true;
 }
 
+/**
+ * Compute the length of the common prefix between two strings.
+ */
+function commonPrefixLen(a: string, b: string): number {
+  let i = 0;
+  while (i < a.length && i < b.length && a[i] === b[i]) i++;
+  return i;
+}
+
+/**
+ * Compute the length of the common suffix between two strings,
+ * not overlapping with a known common prefix.
+ */
+function commonSuffixLen(a: string, b: string, prefixLen: number): number {
+  let i = 0;
+  while (
+    i < a.length - prefixLen &&
+    i < b.length - prefixLen &&
+    a[a.length - 1 - i] === b[b.length - 1 - i]
+  ) i++;
+  return i;
+}
+
 function replaceInParagraph(
   para: Element,
   replacements: Record<string, string>,
@@ -185,21 +208,42 @@ function replaceInParagraph(
       }
 
       const prevText = rebuilt.fullText;
-      const start = rebuilt.fullText.indexOf(key);
-      const end = start + key.length;
+      const matchStart = rebuilt.fullText.indexOf(key);
+      const replacement = replacements[key];
+
+      // Surgical replacement: compute common prefix/suffix between key and value
+      // so we only modify the differing middle, preserving formatting on context text.
+      const cpLen = commonPrefixLen(key, replacement);
+      const csLen = commonSuffixLen(key, replacement, cpLen);
+
+      let start: number;
+      let end: number;
+      let replText: string;
+
+      if (cpLen + csLen >= key.length || cpLen + csLen >= replacement.length) {
+        // No useful common prefix/suffix — full replacement (current behavior)
+        start = matchStart;
+        end = matchStart + key.length;
+        replText = replacement;
+      } else {
+        // Surgical: only replace the differing middle
+        start = matchStart + cpLen;
+        end = matchStart + key.length - csLen;
+        replText = replacement.slice(cpLen, replacement.length - csLen);
+      }
+
       const firstEntry = rebuilt.charMap[start];
       const lastEntry = rebuilt.charMap[end - 1];
-      const replacement = replacements[key];
 
       if (firstEntry.runIndex === lastEntry.runIndex) {
         const runText = getRunText(runs[firstEntry.runIndex]);
         setRunText(
           runs[firstEntry.runIndex],
-          runText.slice(0, firstEntry.charOffset) + replacement + runText.slice(lastEntry.charOffset + 1)
+          runText.slice(0, firstEntry.charOffset) + replText + runText.slice(lastEntry.charOffset + 1)
         );
       } else {
         const firstRunText = getRunText(runs[firstEntry.runIndex]);
-        setRunText(runs[firstEntry.runIndex], firstRunText.slice(0, firstEntry.charOffset) + replacement);
+        setRunText(runs[firstEntry.runIndex], firstRunText.slice(0, firstEntry.charOffset) + replText);
         const lastRunText = getRunText(runs[lastEntry.runIndex]);
         setRunText(runs[lastEntry.runIndex], lastRunText.slice(lastEntry.charOffset + 1));
         for (let mid = firstEntry.runIndex + 1; mid < lastEntry.runIndex; mid++) {

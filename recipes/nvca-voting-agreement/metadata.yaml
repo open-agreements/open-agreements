@@ -2,114 +2,67 @@ name: NVCA Model Voting Agreement
 description: >-
   Standard-form voting agreement for venture capital financings, covering board
   composition, drag-along rights, and stockholder voting obligations.
-source_url: https://nvca.org/wp-content/uploads/2023/02/NVCA-Model-Voting-Agreement-10-1-2025.docx
+source_url: https://nvca.org/wp-content/uploads/2024/10/NVCA-Model-VA-10-1-2025.docx
 source_version: "10-1-2025"
 license_note: >-
   NVCA model documents are freely downloadable but not redistributable.
   This recipe contains only transformation instructions, not the source document.
+source_sha256: 3496d7ae9343d1b5b7db13239313c6512e7e0d68d13273538c4dbf06416a5f0d
 optional: false
 fields:
   - name: company_name
     type: string
     description: Full legal name of the company
     required: true
-  - name: company_name_upper
-    type: string
-    description: Company name in uppercase
-    required: true
-  - name: state_of_incorporation
-    type: string
-    description: State of incorporation
-    required: true
-    default: Delaware
-  - name: state_of_incorporation_lower
-    type: string
-    description: State of incorporation (lowercase)
-    required: true
-    default: Delaware
-  - name: investor_1_name
+  - name: investor_name
     type: string
     description: Full name of the lead investor
     required: true
   - name: investor_2_name
     type: string
-    description: Full name of the second investor
-    required: false
-  - name: investor_1_designee
-    type: string
-    description: Name of the lead investor's board designee
-    required: true
-  - name: investor_2_designee
-    type: string
-    description: Name of the second investor's board designee
+    description: Full name of the second investor (if applicable)
     required: false
   - name: key_holder_name
     type: string
     description: Name of the key holder (typically founder/CEO)
     required: true
-  - name: alternate_key_holder_name
+  - name: effective_date
     type: string
-    description: Name of an alternate key holder
-    required: false
-  - name: key_holder_spouse_name
-    type: string
-    description: Name of the key holder's spouse (for community property states)
-    required: false
-  - name: series_name
-    type: string
-    description: Name of the preferred stock series
+    description: Effective date of the agreement (e.g. January 15, 2025)
     required: true
-    default: Series A
   - name: company_counsel
     type: string
     description: Company counsel name and address
     required: true
-  - name: investor_counsel
+  - name: counsel_cc
     type: string
-    description: Investor counsel name and address
-    required: true
-  - name: effective_date
-    type: date
-    description: Effective date of the agreement
-    required: true
-  - name: drag_along_percentage
-    type: string
-    description: Percentage threshold for drag-along rights
-    required: true
-    default: "sixty percent (60%)"
-  - name: board_size
-    type: string
-    description: Number of board members
-    required: true
-    default: "five (5)"
-  - name: notice_period_days
-    type: string
-    description: Notice period in days for certain actions
-    required: true
-    default: "120"
+    description: Additional counsel to CC on notices, or empty string if none
+    required: false
+    default: ""
   - name: judicial_district
     type: string
-    description: Federal judicial district for disputes
+    description: Federal judicial district for disputes (e.g. District of Delaware)
+    required: true
+    default: District of Delaware
+  - name: state_of_incorporation_lower
+    type: string
+    description: State of incorporation in lowercase (e.g. delaware)
+    required: true
+    default: delaware
+  - name: specify_percentage
+    type: string
+    description: Percentage threshold for drag-along and amendment provisions (number only, e.g. 60)
     required: true
   - name: amended_restated_upper
     type: string
-    description: AMENDED AND RESTATED or empty string
+    description: "AMENDED AND RESTATED or empty string"
     required: false
     default: ""
   - name: amended_restated
     type: string
-    description: Amended and Restated or empty string
+    description: "Amended and Restated or empty string"
     required: false
     default: ""
-  - name: named_person
-    type: string
-    description: Named person for specific provisions
-    required: false
-  - name: employee_title
-    type: string
-    description: Title reference for employee provisions
-    required: false
-    default: officer
   - name: signature_page_marker
     type: string
     description: Signature page marker text

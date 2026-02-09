@@ -8,18 +8,23 @@ import { resolveRecipeDir } from '../../utils/paths.js';
 import { cleanDocument } from './cleaner.js';
 import { patchDocument } from './patcher.js';
 import { verifyOutput } from './verifier.js';
+import { ensureSourceDocx } from './downloader.js';
+import { sanitizeCurrencyValues, BLANK_PLACEHOLDER } from '../fill-utils.js';
 import type { RecipeRunOptions, RecipeRunResult } from './types.js';
 
 /**
  * Run the full recipe pipeline: clean → patch → fill → verify.
- * Requires a local input DOCX file.
+ * If no inputPath is provided, auto-downloads the source document from source_url.
  */
 export async function runRecipe(options: RecipeRunOptions): Promise<RecipeRunResult> {
-  const { recipeId, inputPath, outputPath, values, keepIntermediate } = options;
+  const { recipeId, outputPath, values, keepIntermediate } = options;
   const recipeDir = resolveRecipeDir(recipeId);
 
   const metadata = loadRecipeMetadata(recipeDir);
   const cleanConfig = loadCleanConfig(recipeDir);
+
+  // Resolve input: explicit path or auto-download
+  const inputPath = options.inputPath ?? await ensureSourceDocx(recipeId, metadata);
 
   // Load replacements.json
   const replacementsPath = join(recipeDir, 'replacements.json');
@@ -50,11 +55,22 @@ export async function runRecipe(options: RecipeRunOptions): Promise<RecipeRunRes
     stages.patch = patchedPath;
 
     // Stage 3: Fill (render template tags with values)
+    // Default all metadata-defined fields to "" so omitted fields render blank
+    // rather than crashing with ReferenceError (many legal fields are intentionally blank)
+    const mergedValues: Record<string, string> = {};
+    for (const field of metadata.fields) {
+      mergedValues[field.name] = field.default ?? BLANK_PLACEHOLDER;
+    }
+    Object.assign(mergedValues, values);
+
+    // Strip leading $ from values where the template already has $ before the tag
+    const fillValues = sanitizeCurrencyValues(mergedValues, replacements);
+
     const filledPath = join(tempDir, 'filled.docx');
     const templateBuf = readFileSync(patchedPath);
     const filledBuf = await createReport({
       template: templateBuf,
-      data: values,
+      data: fillValues,
       cmdDelimiter: ['{', '}'],
     });
     writeFileSync(filledPath, filledBuf);
@@ -93,6 +109,7 @@ export async function runRecipe(options: RecipeRunOptions): Promise<RecipeRunRes
 export { cleanDocument } from './cleaner.js';
 export { patchDocument } from './patcher.js';
 export { verifyOutput, normalizeText } from './verifier.js';
+export { ensureSourceDocx } from './downloader.js';
 export { enumerateTextParts, getGeneralTextPartNames } from './ooxml-parts.js';
 export type { OoxmlTextParts } from './ooxml-parts.js';
 export type { RecipeRunOptions, RecipeRunResult, VerifyResult, VerifyCheck } from './types.js';

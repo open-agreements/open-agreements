@@ -8,6 +8,7 @@ import { resolveExternalDir } from '../../utils/paths.js';
 import { cleanDocument } from '../recipe/cleaner.js';
 import { patchDocument } from '../recipe/patcher.js';
 import { verifyOutput } from '../recipe/verifier.js';
+import { sanitizeCurrencyValues, BLANK_PLACEHOLDER } from '../fill-utils.js';
 import type { ExternalFillOptions, ExternalFillResult } from './types.js';
 
 /**
@@ -64,11 +65,22 @@ export async function runExternalFill(options: ExternalFillOptions): Promise<Ext
     stages.patch = patchedPath;
 
     // Stage 3: Fill (render template tags with values)
+    // Default all metadata-defined fields to "" so omitted fields render blank
+    // rather than crashing with ReferenceError (many legal fields are intentionally blank)
+    const mergedValues: Record<string, string> = {};
+    for (const field of metadata.fields) {
+      mergedValues[field.name] = field.default ?? BLANK_PLACEHOLDER;
+    }
+    Object.assign(mergedValues, values);
+
+    // Strip leading $ from values where the template already has $ before the tag
+    const fillValues = sanitizeCurrencyValues(mergedValues, replacements);
+
     const filledPath = join(tempDir, 'filled.docx');
     const templateBuf = readFileSync(patchedPath);
     const filledBuf = await createReport({
       template: templateBuf,
-      data: values,
+      data: fillValues,
       cmdDelimiter: ['{', '}'],
     });
     writeFileSync(filledPath, filledBuf);

@@ -87,7 +87,20 @@ export async function verifyOutput(
     });
   }
 
-  // Check 5: No drafting note paragraphs (if patterns were set)
+  // Check 5: No double dollar signs ($$ or $ $)
+  // This catches cases where the template already has a $ before a placeholder
+  // and the user also included a $ in their value (e.g. "$1,000,000")
+  const doubleDollarPattern = /\$[\s\u00A0\t]*\$/;
+  const doubleDollarLines = rawFullText.split('\n').filter((line) => doubleDollarPattern.test(line));
+  checks.push({
+    name: 'No double dollar signs',
+    passed: doubleDollarLines.length === 0,
+    details: doubleDollarLines.length > 0
+      ? `Found ${doubleDollarLines.length} occurrence(s): "${doubleDollarLines[0].trim().slice(0, 80)}"`
+      : undefined,
+  });
+
+  // Check 6: No drafting note paragraphs (if patterns were set)
   if (cleanConfig?.removeParagraphPatterns && cleanConfig.removeParagraphPatterns.length > 0) {
     const regexes = cleanConfig.removeParagraphPatterns.map((p) => new RegExp(p, 'i'));
     const lines = rawFullText.split('\n');

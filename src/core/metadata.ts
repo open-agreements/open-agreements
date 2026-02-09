@@ -62,6 +62,7 @@ export const RecipeMetadataSchema = z.object({
   source_version: z.string(),
   license_note: z.string(),
   optional: z.boolean().default(false),
+  source_sha256: z.string().optional(),
   fields: z.array(FieldDefinitionSchema).default([]),
 });
 export type RecipeMetadata = z.infer<typeof RecipeMetadataSchema>;
