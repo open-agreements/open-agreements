@@ -1,0 +1,37 @@
+{
+  "groups": [
+    {
+      "id": "effective_date",
+      "type": "radio",
+      "options": [
+        { "marker": "Date of last signature on this Order Form", "trigger": "default" },
+        { "marker": "{custom_start_date}", "trigger": { "field": "custom_start_date" } }
+      ]
+    },
+    {
+      "id": "pilot_fee",
+      "type": "radio",
+      "options": [
+        { "marker": "Free Pilot", "trigger": { "field": "pilot_is_free", "equals": true } },
+        { "marker": "{fees_description}", "trigger": "default" }
+      ]
+    },
+    {
+      "id": "payment_method",
+      "type": "checkbox",
+      "options": [
+        { "marker": "Pay by invoice", "trigger": { "field": "payment_by_invoice" } },
+        { "marker": "Automatic payment", "trigger": { "field": "payment_automatic" } }
+      ]
+    },
+    {
+      "id": "general_cap",
+      "type": "radio",
+      "options": [
+        { "marker": "{cap_multiplier}x the Fees", "trigger": { "field": "cap_type", "equals": "multiplier" } },
+        { "marker": "${general_cap_amount}", "trigger": { "field": "cap_type", "equals": "dollar" } },
+        { "marker": "The greater of", "trigger": { "field": "cap_type", "equals": "greater_of" } }
+      ]
+    }
+  ]
+}

@@ -76,6 +76,30 @@ fields:
     description: Liability cap multiplier (e.g. "2")
     required: false
     section: Liability
+  - name: pilot_is_free
+    type: boolean
+    description: Whether the pilot is free (true) or paid (false)
+    required: false
+    default: "false"
+    section: Payment
+  - name: payment_by_invoice
+    type: boolean
+    description: Whether customer pays by invoice
+    required: false
+    default: "true"
+    section: Payment
+  - name: payment_automatic
+    type: boolean
+    description: Whether customer pays automatically
+    required: false
+    default: "false"
+    section: Payment
+  - name: cap_type
+    type: string
+    description: "Liability cap type: multiplier, dollar, or greater_of"
+    required: false
+    default: multiplier
+    section: Liability
   - name: governing_law
     type: string
     description: State, province, and/or country whose laws govern the agreement
