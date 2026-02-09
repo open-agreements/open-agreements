@@ -52,23 +52,24 @@
   "author": "UseJunior <steven@usejunior.com>",
   "license": "MIT",
   "dependencies": {
+    "@xmldom/xmldom": "^0.9.5",
     "adm-zip": "^0.5.16",
     "commander": "^13.1.0",
     "docx-templates": "^4.13.0",
-    "@xmldom/xmldom": "^0.9.5",
     "js-yaml": "^4.1.0",
     "zod": "^3.24.0"
   },
   "devDependencies": {
+    "@eslint/js": "^9.39.2",
     "@types/adm-zip": "^0.5.7",
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^22.13.0",
-    "@eslint/js": "^9.39.2",
+    "allure-vitest": "^3.4.5",
     "docx": "^9.5.1",
     "eslint": "^9.19.0",
     "globals": "^14.0.0",
-    "typescript-eslint": "^8.54.0",
     "typescript": "^5.7.0",
+    "typescript-eslint": "^8.54.0",
     "vitest": "^3.0.0"
   },
   "engines": {

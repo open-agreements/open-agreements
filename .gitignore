@@ -2,3 +2,5 @@ node_modules/
 dist/
 *.tgz
 .DS_Store
+allure-results/
+allure-report/
