@@ -1,17 +1,46 @@
 // Public API exports
+
+// Template engine
 export { fillTemplate, type FillOptions, type FillResult } from './core/engine.js';
+
+// Metadata schemas and loaders
 export {
   loadMetadata,
   validateMetadata,
+  loadRecipeMetadata,
+  validateRecipeMetadata,
+  loadCleanConfig,
   TemplateMetadataSchema,
+  RecipeMetadataSchema,
+  CleanConfigSchema,
   LicenseEnum,
   FieldDefinitionSchema,
   type TemplateMetadata,
+  type RecipeMetadata,
+  type CleanConfig,
   type FieldDefinition,
   type License,
 } from './core/metadata.js';
+
+// Template validation
 export { validateTemplate, type TemplateValidationResult } from './core/validation/template.js';
 export { validateLicense, type LicenseValidationResult } from './core/validation/license.js';
 export { validateOutput, type OutputValidationResult } from './core/validation/output.js';
+export { validateRecipe, type RecipeValidationResult } from './core/validation/recipe.js';
+
+// Recipe engine
+export {
+  runRecipe,
+  downloadSource,
+  cleanDocument,
+  patchDocument,
+  verifyOutput,
+  type RecipeRunOptions,
+  type RecipeRunResult,
+  type VerifyResult,
+  type VerifyCheck,
+} from './core/recipe/index.js';
+
+// Command generation
 export type { ToolCommandAdapter } from './core/command-generation/types.js';
 export { ClaudeCodeAdapter } from './core/command-generation/adapters/claude.js';

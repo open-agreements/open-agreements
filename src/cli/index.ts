@@ -5,6 +5,8 @@ import { fileURLToPath } from 'node:url';
 import { runFill } from '../commands/fill.js';
 import { runValidate } from '../commands/validate.js';
 import { runList } from '../commands/list.js';
+import { runRecipeCommand, runRecipeClean, runRecipePatch } from '../commands/recipe.js';
+import { runScan } from '../commands/scan.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -14,8 +16,10 @@ const program = new Command();
 
 program
   .name('open-agreements')
-  .description('Open-source legal template filling CLI')
+  .description('Open-source legal template and recipe filling CLI')
   .version(pkg.version);
+
+// --- Fill command ---
 
 const fillCmd = new Command('fill');
 fillCmd
@@ -33,12 +37,11 @@ fillCmd
     }
 
     // Also parse --field_name "value" pairs from raw argv
-    const rawArgs = fillCmd.args.slice(1); // skip template name
     const parseArgs = process.argv.slice(process.argv.indexOf(template) + 1);
     for (let i = 0; i < parseArgs.length; i++) {
       const arg = parseArgs[i];
       if (arg === '-o' || arg === '--output' || arg === '-d' || arg === '--data') {
-        i++; // skip known options and their values
+        i++;
         continue;
       }
       if (arg.startsWith('--') && i + 1 < parseArgs.length) {
@@ -53,18 +56,74 @@ fillCmd
 
 program.addCommand(fillCmd);
 
+// --- Validate command ---
+
 program
   .command('validate [template]')
-  .description('Run validation pipeline on one or all templates')
+  .description('Run validation pipeline on all templates and recipes')
   .action((template?: string) => {
     runValidate({ template });
   });
 
+// --- List command ---
+
 program
   .command('list')
-  .description('Show available templates with license info')
+  .description('Show available templates and recipes')
   .action(() => {
     runList();
+  });
+
+// --- Recipe command ---
+
+const recipeCmd = new Command('recipe');
+recipeCmd.description('Work with recipe-based document pipelines');
+
+recipeCmd
+  .command('run <recipe-id>')
+  .description('Run the full recipe pipeline (download → clean → patch → fill → verify)')
+  .option('-i, --input <path>', 'User-supplied source DOCX (skips download)')
+  .option('-o, --output <path>', 'Output file path')
+  .option('-d, --data <json-file>', 'JSON file with field values')
+  .option('--keep-intermediate', 'Preserve intermediate files')
+  .action(async (recipeId: string, opts: { input?: string; output?: string; data?: string; keepIntermediate?: boolean }) => {
+    await runRecipeCommand({
+      recipeId,
+      input: opts.input,
+      output: opts.output,
+      data: opts.data,
+      keepIntermediate: opts.keepIntermediate,
+    });
+  });
+
+recipeCmd
+  .command('clean <input>')
+  .description('Run only the clean stage of a recipe')
+  .requiredOption('-o, --output <path>', 'Output file path')
+  .requiredOption('--recipe <id>', 'Recipe ID to use for clean config')
+  .action(async (input: string, opts: { output: string; recipe: string }) => {
+    await runRecipeClean({ input, output: opts.output, recipe: opts.recipe });
+  });
+
+recipeCmd
+  .command('patch <input>')
+  .description('Run only the patch stage of a recipe')
+  .requiredOption('-o, --output <path>', 'Output file path')
+  .requiredOption('--recipe <id>', 'Recipe ID to use for replacements')
+  .action(async (input: string, opts: { output: string; recipe: string }) => {
+    await runRecipePatch({ input, output: opts.output, recipe: opts.recipe });
+  });
+
+program.addCommand(recipeCmd);
+
+// --- Scan command ---
+
+program
+  .command('scan <input>')
+  .description('Scan a DOCX file for bracketed placeholders')
+  .option('--output-replacements <path>', 'Write a draft replacements.json')
+  .action((input: string, opts: { outputReplacements?: string }) => {
+    runScan({ input, outputReplacements: opts.outputReplacements });
   });
 
 program.parse();
