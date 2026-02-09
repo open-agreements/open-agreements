@@ -1,0 +1,8 @@
+{
+  "{payment_terms_days}x the fees": "{cap_multiplier}x the fees",
+  "{non_renewal_notice_days}x the fees": "{cap_multiplier}x the fees",
+  "[ # ]": "{fill_in_value}",
+  "[Describe fees, whether hourly, by project, by milestone, etc. Also include any pass-through or fractional charges such as for tooling or third-party license fees.]": "{fill_in_value}",
+  "[Fill in cadence of sending invoices, e.g., month, quarter, upon acceptance, after each milestone, etc.]": "{fill_in_detail}",
+  "[Fill in Customer's Obligations, e.g., identifying a single point of contact, geographic limitations on use of Deliverables, etc.]": "{fill_in_detail}"
+}

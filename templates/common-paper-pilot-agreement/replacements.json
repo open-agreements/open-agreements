@@ -1,0 +1,4 @@
+{
+  "{payment_terms_days}x the Fees": "{cap_multiplier}x the Fees",
+  "[ # ]": "{payment_terms_days}"
+}
