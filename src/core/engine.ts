@@ -6,7 +6,7 @@ import { prepareFillData, fillDocx } from './fill-pipeline.js';
 import { verifyTemplateFill } from './fill-utils.js';
 import { cleanDocument } from './recipe/cleaner.js';
 import { patchDocument } from './recipe/patcher.js';
-import { applySelections, loadSelectionsConfig } from './selector.js';
+
 
 export interface FillOptions {
   templateDir: string;
@@ -169,20 +169,6 @@ export async function fillTemplate(options: FillOptions): Promise<FillResult> {
     templateBuf = readFileSync(patchedPath);
   } else {
     templateBuf = readFileSync(templatePath);
-  }
-
-  // Apply selections if selections.json exists (clean → patch → SELECT → fill)
-  const selectionsPath = join(templateDir, 'selections.json');
-  if (existsSync(selectionsPath)) {
-    const selectionsConfig = loadSelectionsConfig(selectionsPath);
-    if (!tempDir) {
-      tempDir = mkdtempSync(join(tmpdir(), 'template-fill-'));
-    }
-    const selectInputPath = join(tempDir, 'pre-select.docx');
-    const selectOutputPath = join(tempDir, 'selected.docx');
-    writeFileSync(selectInputPath, templateBuf);
-    await applySelections(selectInputPath, selectOutputPath, selectionsConfig, data);
-    templateBuf = readFileSync(selectOutputPath);
   }
 
   try {
