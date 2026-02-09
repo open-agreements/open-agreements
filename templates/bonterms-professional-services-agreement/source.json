@@ -4,6 +4,7 @@
     "removeParagraphPatterns": ["^\\[Example:"],
     "clearParts": ["header2.xml", "footer1.xml", "footer2.xml"]
   },
+  "replacementColor": "000000",
   "replacements": {
     "[Customer]": "{customer_name}",
     "[Provider]": "{provider_name}",

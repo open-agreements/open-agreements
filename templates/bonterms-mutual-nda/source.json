@@ -4,6 +4,7 @@
     "removeParagraphPatterns": ["^\\[Example:"],
     "clearParts": ["header2.xml", "footer1.xml", "footer2.xml"]
   },
+  "replacementColor": "000000",
   "replacements": {
     "[How Confidential Information may be used]": "{purpose}",
     "[Agreement term and disclosure period]": "{nda_term}",

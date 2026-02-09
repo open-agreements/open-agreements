@@ -2,7 +2,7 @@
 /**
  * Prepare Bonterms templates from source DOCX cover pages.
  *
- * Discovers templates/*/source.json files and, for each one:
+ * Discovers source.json files under each template directory and, for each one:
  *   1. Runs cleanDocument() with the clean config
  *   2. Runs patchDocument() with the replacements
  *   3. Writes the result as template.docx
@@ -25,6 +25,7 @@ import { CleanConfigSchema } from '../src/core/metadata.js';
 interface SourceConfig {
   source_file: string;
   clean: Record<string, unknown>;
+  replacementColor?: string;
   replacements: Record<string, string>;
 }
 
@@ -78,7 +79,8 @@ async function main() {
 
       // Stage 2: Patch
       const outputPath = join(templatesDir, dirName, 'template.docx');
-      await patchDocument(cleanedPath, outputPath, config.replacements);
+      const patchOpts = config.replacementColor ? { replacementColor: config.replacementColor } : undefined;
+      await patchDocument(cleanedPath, outputPath, config.replacements, patchOpts);
       console.log(`  Patched → ${outputPath}`);
 
       processed++;

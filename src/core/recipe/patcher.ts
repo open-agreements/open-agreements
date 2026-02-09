@@ -38,10 +38,18 @@ const UNSAFE_RUN_CHILDREN = new Set([
  * Processing order: context keys first, nth keys second, simple keys last.
  * This ensures qualified rules claim their targets before simple rules sweep up the rest.
  */
+export interface PatchOptions {
+  /** Hex color (e.g. "000000") to apply to replacement text. When set, the
+   *  patcher explicitly sets <w:color> on runs that receive replacement text,
+   *  overriding any inherited placeholder styling (e.g. gray). */
+  replacementColor?: string;
+}
+
 export async function patchDocument(
   inputPath: string,
   outputPath: string,
-  replacements: Record<string, string>
+  replacements: Record<string, string>,
+  options?: PatchOptions,
 ): Promise<string> {
   const zip = new AdmZip(inputPath);
   const parser = new DOMParser();
@@ -105,7 +113,7 @@ export async function patchDocument(
         const rowContext = getTableRowContext(para);
         if (rowContext === null || !rowContext.includes(ck.context)) continue;
 
-        replaceInParagraph(para, { [ck.searchText]: ck.value }, [ck.searchText]);
+        replaceInParagraph(para, { [ck.searchText]: ck.value }, [ck.searchText], options?.replacementColor);
       }
     }
 
@@ -136,7 +144,7 @@ export async function patchDocument(
         counter++;
         const value = nthMap.get(counter);
         if (value !== undefined) {
-          replaceInParagraphOnce(para, searchText, value);
+          replaceInParagraphOnce(para, searchText, value, options?.replacementColor);
         }
       }
       nthCounters.set(searchText, counter);
@@ -152,7 +160,7 @@ export async function patchDocument(
       }
 
       for (let i = 0; i < allParagraphs.length; i++) {
-        replaceInParagraph(allParagraphs[i], simpleReplacements, simpleSortedKeys);
+        replaceInParagraph(allParagraphs[i], simpleReplacements, simpleSortedKeys, options?.replacementColor);
       }
     }
 
@@ -232,6 +240,44 @@ export function getRunText(run: Element): string {
     text += tElements[i].textContent ?? '';
   }
   return text;
+}
+
+/**
+ * Set <w:color w:val="..."/> on a run's <w:rPr>. Creates <w:rPr> if absent.
+ * Overwrites any existing <w:color>.
+ */
+function setRunColor(run: Element, colorHex: string): void {
+  const doc = run.ownerDocument as Document;
+  let rPr: Element | null = null;
+
+  // Find existing <w:rPr>
+  const children = run.childNodes;
+  for (let i = 0; i < children.length; i++) {
+    const child = children[i] as Element;
+    if (child.localName === 'rPr' && child.namespaceURI === W_NS) {
+      rPr = child;
+      break;
+    }
+  }
+
+  if (!rPr) {
+    rPr = doc.createElementNS(W_NS, 'w:rPr');
+    run.insertBefore(rPr, run.firstChild);
+  }
+
+  // Find or create <w:color>
+  const rPrChildren = rPr.childNodes;
+  for (let i = 0; i < rPrChildren.length; i++) {
+    const prop = rPrChildren[i] as Element;
+    if (prop.localName === 'color' && prop.namespaceURI === W_NS) {
+      prop.setAttributeNS(W_NS, 'w:val', colorHex);
+      return;
+    }
+  }
+
+  const color = doc.createElementNS(W_NS, 'w:color');
+  color.setAttributeNS(W_NS, 'w:val', colorHex);
+  rPr.appendChild(color);
 }
 
 function setRunText(run: Element, text: string): void {
@@ -333,7 +379,8 @@ function commonSuffixLen(a: string, b: string, prefixLen: number): number {
 function replaceInParagraphOnce(
   para: Element,
   searchText: string,
-  value: string
+  value: string,
+  replacementColor?: string,
 ): void {
   const runs = getRunElements(para);
   if (runs.length === 0) return;
@@ -365,6 +412,10 @@ function replaceInParagraphOnce(
     }
   }
 
+  if (replacementColor) {
+    setRunColor(runs[firstEntry.runIndex], replacementColor);
+  }
+
   // Sweep: remove empty runs that are safe to remove
   for (let i = runs.length - 1; i >= 0; i--) {
     if (getRunText(runs[i]) === '' && isRunSafeToRemove(runs[i])) {
@@ -376,7 +427,8 @@ function replaceInParagraphOnce(
 function replaceInParagraph(
   para: Element,
   replacements: Record<string, string>,
-  sortedKeys: string[]
+  sortedKeys: string[],
+  replacementColor?: string,
 ): void {
   const runs = getRunElements(para);
   if (runs.length === 0) return;
@@ -439,6 +491,10 @@ function replaceInParagraph(
         for (let mid = firstEntry.runIndex + 1; mid < lastEntry.runIndex; mid++) {
           setRunText(runs[mid], '');
         }
+      }
+
+      if (replacementColor) {
+        setRunColor(runs[firstEntry.runIndex], replacementColor);
       }
 
       rebuilt = buildCharMap(runs);
