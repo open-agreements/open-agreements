@@ -2,6 +2,14 @@
   "name": "open-agreements",
   "version": "0.1.0",
   "description": "Open-source legal template filling CLI and library",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/open-agreements/open-agreements.git"
+  },
+  "homepage": "https://github.com/open-agreements/open-agreements#readme",
+  "bugs": {
+    "url": "https://github.com/open-agreements/open-agreements/issues"
+  },
   "type": "module",
   "bin": {
     "open-agreements": "./bin/open-agreements.js"
