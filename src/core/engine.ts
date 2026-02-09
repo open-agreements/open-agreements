@@ -37,11 +37,17 @@ export async function fillTemplate(options: FillOptions): Promise<FillResult> {
   const templatePath = join(templateDir, 'template.docx');
   const templateBuf = readFileSync(templatePath);
 
+  // Warn about unknown keys not in metadata
+  const metadataFieldNames = new Set(metadata.fields.map((f) => f.name));
+  const unknownKeys = Object.keys(values).filter((k) => !metadataFieldNames.has(k));
+  if (unknownKeys.length > 0) {
+    console.warn(`Warning: unknown field(s) not in metadata: ${unknownKeys.join(', ')}`);
+  }
+
   const output = await createReport({
     template: templateBuf,
     data: values,
     cmdDelimiter: ['{', '}'],
-    noSandbox: true,
   });
 
   writeFileSync(outputPath, output);

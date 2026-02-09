@@ -12,21 +12,31 @@ export interface TemplateValidationResult {
 
 /**
  * Extract text content from a DOCX file by unzipping and reading word/document.xml.
- * Strips XML tags to get plain text content including {tag} placeholders.
+ * Concatenates <w:t> text within each <w:p> paragraph, then joins paragraphs with
+ * newlines to prevent false {tag} matches across element boundaries.
  */
 function extractDocxText(docxPath: string): string {
   const zip = new AdmZip(docxPath);
   const documentXml = zip.getEntry('word/document.xml');
   if (!documentXml) return '';
   const xml = documentXml.getData().toString('utf-8');
-  // Extract text from <w:t> elements
-  const textParts: string[] = [];
-  const regex = /<w:t[^>]*>([^<]*)<\/w:t>/g;
-  let match;
-  while ((match = regex.exec(xml)) !== null) {
-    textParts.push(match[1]);
+
+  const paragraphs: string[] = [];
+  const paraRegex = /<w:p[\s>][\s\S]*?<\/w:p>/g;
+  let paraMatch;
+  while ((paraMatch = paraRegex.exec(xml)) !== null) {
+    const paraXml = paraMatch[0];
+    const textParts: string[] = [];
+    const tRegex = /<w:t[^>]*>([^<]*)<\/w:t>/g;
+    let tMatch;
+    while ((tMatch = tRegex.exec(paraXml)) !== null) {
+      textParts.push(tMatch[1]);
+    }
+    if (textParts.length > 0) {
+      paragraphs.push(textParts.join(''));
+    }
   }
-  return textParts.join('');
+  return paragraphs.join('\n');
 }
 
 /**
@@ -72,9 +82,16 @@ export function validateTemplate(templateDir: string, templateId: string): Templ
   // Check for fields in metadata but not in DOCX
   for (const fieldName of metadataFieldNames) {
     if (!foundTags.has(fieldName)) {
-      warnings.push(
-        `Field "${fieldName}" defined in metadata but not found as {${fieldName}} in template.docx`
-      );
+      const field = metadata.fields.find((f) => f.name === fieldName);
+      if (field?.required) {
+        errors.push(
+          `Required field "${fieldName}" defined in metadata but not found as {${fieldName}} in template.docx`
+        );
+      } else {
+        warnings.push(
+          `Optional field "${fieldName}" defined in metadata but not found as {${fieldName}} in template.docx`
+        );
+      }
     }
   }
 

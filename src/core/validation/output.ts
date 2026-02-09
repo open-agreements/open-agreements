@@ -1,4 +1,4 @@
-import { readFileSync } from 'node:fs';
+import AdmZip from 'adm-zip';
 
 export interface OutputValidationResult {
   valid: boolean;
@@ -9,7 +9,7 @@ export interface OutputValidationResult {
 
 /**
  * Validate that a rendered DOCX preserves the heading structure of the source template.
- * Compares heading counts between source and output by scanning DOCX XML for heading styles.
+ * Extracts word/document.xml via AdmZip before scanning for heading styles.
  */
 export function validateOutput(
   sourceDocxPath: string,
@@ -17,11 +17,11 @@ export function validateOutput(
 ): OutputValidationResult {
   const errors: string[] = [];
 
-  let sourceBuf: Buffer;
-  let outputBuf: Buffer;
+  let sourceXml: string;
+  let outputXml: string;
   try {
-    sourceBuf = readFileSync(sourceDocxPath);
-    outputBuf = readFileSync(outputDocxPath);
+    sourceXml = extractDocumentXml(sourceDocxPath);
+    outputXml = extractDocumentXml(outputDocxPath);
   } catch (err) {
     return {
       valid: false,
@@ -31,9 +31,8 @@ export function validateOutput(
     };
   }
 
-  // Count heading styles in DOCX XML (w:pStyle w:val="Heading...")
-  const sourceHeadings = countHeadings(sourceBuf);
-  const outputHeadings = countHeadings(outputBuf);
+  const sourceHeadings = countHeadings(sourceXml);
+  const outputHeadings = countHeadings(outputXml);
 
   if (sourceHeadings !== outputHeadings) {
     errors.push(
@@ -50,10 +49,15 @@ export function validateOutput(
   };
 }
 
-function countHeadings(docxBuf: Buffer): number {
-  const content = docxBuf.toString('utf-8');
-  // Match DOCX XML heading paragraph style references
+function extractDocumentXml(docxPath: string): string {
+  const zip = new AdmZip(docxPath);
+  const entry = zip.getEntry('word/document.xml');
+  if (!entry) return '';
+  return entry.getData().toString('utf-8');
+}
+
+function countHeadings(xml: string): number {
   const headingPattern = /w:val="Heading\d"/g;
-  const matches = content.match(headingPattern);
+  const matches = xml.match(headingPattern);
   return matches ? matches.length : 0;
 }

@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-node@v4
         with:
@@ -23,13 +25,19 @@ jobs:
 
       - name: Check no CC BY-ND derivatives
         run: |
+          # Determine base ref for diff
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            BASE_SHA="${{ github.event.pull_request.base.sha }}"
+          else
+            BASE_SHA="HEAD~1"
+          fi
+
           # Ensure no template with allow_derivatives=false has been modified
           for dir in templates/*/; do
             if [ -f "$dir/metadata.yaml" ]; then
               allow=$(grep 'allow_derivatives:' "$dir/metadata.yaml" | awk '{print $2}')
               if [ "$allow" = "false" ]; then
-                # Check if template.docx was modified in this PR
-                if git diff --name-only HEAD~1 2>/dev/null | grep -q "$dir"; then
+                if git diff --name-only "$BASE_SHA" 2>/dev/null | grep -q "$dir"; then
                   echo "ERROR: Modified template in $dir which has allow_derivatives=false"
                   exit 1
                 fi
