@@ -1,0 +1,17 @@
+{
+  "source_file": "nda-cover-page.docx",
+  "clean": {
+    "removeParagraphPatterns": ["^\\[Example:"],
+    "clearParts": ["header2.xml", "footer1.xml", "footer2.xml"]
+  },
+  "replacements": {
+    "[How Confidential Information may be used]": "{purpose}",
+    "[Agreement term and disclosure period]": "{nda_term}",
+    "[How long Confidential Information is protected]": "{confidentiality_period}",
+    "Effective Date > [Fill in]": "{effective_date}",
+    "Governing Law > [Fill in]": "{governing_law}",
+    "Courts > [Fill in]": "{courts}",
+    "Party Name:#1": "Party Name: {party_1_name}",
+    "Party Name:#2": "Party Name: {party_2_name}"
+  }
+}

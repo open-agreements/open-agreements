@@ -2,6 +2,7 @@ import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { createHash } from 'node:crypto';
 import { validateExternalMetadata, loadExternalMetadata, CleanConfigSchema } from '../metadata.js';
+import { parseReplacementKey } from '../recipe/replacement-keys.js';
 
 export interface ExternalValidationResult {
   externalId: string;
@@ -96,11 +97,19 @@ export function validateExternal(
             }
           }
 
-          if (value.includes(key)) {
+          // For qualified keys, check against the searchText, not the full key.
+          // Nth keys use single-shot replacement so they can't loop — skip the check.
+          const parsed = parseReplacementKey(key, value);
+          if (parsed.type === 'simple' && value.includes(parsed.searchText)) {
             errors.push(
               `replacements.json: value for "${key}" contains the key itself (would cause infinite loop)`
             );
+          } else if (parsed.type === 'context' && value.includes(parsed.searchText)) {
+            errors.push(
+              `replacements.json: value for "${key}" contains the search text "${parsed.searchText}" (would cause infinite loop)`
+            );
           }
+          // nth keys: no infinite-loop check needed (single-shot replacement)
 
           // Check field coverage
           if (tags) {

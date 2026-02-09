@@ -52,6 +52,7 @@ export type ExternalMetadata = z.infer<typeof ExternalMetadataSchema>;
 export const CleanConfigSchema = z.object({
   removeFootnotes: z.boolean().default(false),
   removeParagraphPatterns: z.array(z.string()).default([]),
+  clearParts: z.array(z.string()).default([]),
 });
 export type CleanConfig = z.infer<typeof CleanConfigSchema>;
 
@@ -131,7 +132,7 @@ export function loadRecipeMetadata(recipeDir: string): RecipeMetadata {
 export function loadCleanConfig(recipeDir: string): CleanConfig {
   const cleanPath = join(recipeDir, 'clean.json');
   if (!existsSync(cleanPath)) {
-    return { removeFootnotes: false, removeParagraphPatterns: [] };
+    return { removeFootnotes: false, removeParagraphPatterns: [], clearParts: [] };
   }
   const raw = readFileSync(cleanPath, 'utf-8');
   return CleanConfigSchema.parse(JSON.parse(raw));

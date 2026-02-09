@@ -3,6 +3,7 @@ import { DOMParser } from '@xmldom/xmldom';
 import type { VerifyResult, VerifyCheck } from './types.js';
 import type { CleanConfig } from '../metadata.js';
 import { enumerateTextParts, getGeneralTextPartNames } from './ooxml-parts.js';
+import { extractSearchText } from './replacement-keys.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 
@@ -69,8 +70,9 @@ export async function verifyOutput(
   });
 
   // Check 3: No leftover [bracketed placeholders] from replacement map
-  const replacementKeys = Object.keys(replacements);
-  const leftoverBrackets = replacementKeys.filter((key) => rawFullText.includes(key));
+  // Use extractSearchText() to handle qualified keys (context, nth) properly
+  const searchTexts = [...new Set(Object.keys(replacements).map(extractSearchText))];
+  const leftoverBrackets = searchTexts.filter((text) => rawFullText.includes(text));
   checks.push({
     name: 'No leftover source placeholders',
     passed: leftoverBrackets.length === 0,
@@ -121,7 +123,7 @@ export async function verifyOutput(
 /**
  * Extract all text from general OOXML text parts (document, headers, footers, endnotes).
  */
-function extractAllText(docxPath: string): string {
+export function extractAllText(docxPath: string): string {
   const zip = new AdmZip(docxPath);
   const parser = new DOMParser();
 

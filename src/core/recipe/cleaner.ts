@@ -1,4 +1,5 @@
 import AdmZip from 'adm-zip';
+import { writeFileSync } from 'node:fs';
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
 import type { CleanConfig } from '../metadata.js';
 import { enumerateTextParts, getGeneralTextPartNames } from './ooxml-parts.js';
@@ -6,7 +7,8 @@ import { enumerateTextParts, getGeneralTextPartNames } from './ooxml-parts.js';
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 
 /**
- * Clean a DOCX document by removing footnotes and pattern-matched paragraphs.
+ * Clean a DOCX document by removing footnotes, pattern-matched paragraphs,
+ * and clearing specified parts.
  * Operates at the OOXML level to preserve formatting of retained content.
  *
  * Processes all general OOXML text parts (document, headers, footers, endnotes).
@@ -27,42 +29,89 @@ export async function cleanDocument(
   const parts = enumerateTextParts(zip);
   const generalParts = getGeneralTextPartNames(parts);
 
+  // Track which parts we modify so we can rebuild the zip cleanly
+  const modifiedParts = new Map<string, Buffer>();
+
+  // Clear specified parts (replace content with minimal valid XML)
+  if (config.clearParts && config.clearParts.length > 0) {
+    for (const entry of zip.getEntries()) {
+      const filename = entry.entryName.split('/').pop() ?? '';
+      if (config.clearParts.includes(filename)) {
+        const xml = entry.getData().toString('utf-8');
+        const doc = parser.parseFromString(xml, 'text/xml');
+        clearPartContent(doc);
+        modifiedParts.set(entry.entryName, Buffer.from(serializer.serializeToString(doc), 'utf-8'));
+      }
+    }
+  }
+
   // Clean all general text parts (document, headers, footers, endnotes)
   for (const partName of generalParts) {
+    // Skip parts already cleared
+    if (modifiedParts.has(partName)) continue;
+
     const entry = zip.getEntry(partName);
     if (!entry) continue;
 
     const xml = entry.getData().toString('utf-8');
     const doc = parser.parseFromString(xml, 'text/xml');
+    let modified = false;
 
     if (config.removeFootnotes) {
       removeFootnoteReferences(doc);
+      modified = true;
     }
 
     if (config.removeParagraphPatterns.length > 0) {
       removeParagraphsByPattern(doc, config.removeParagraphPatterns);
+      modified = true;
     }
 
-    zip.updateFile(partName, Buffer.from(serializer.serializeToString(doc), 'utf-8'));
+    if (modified) {
+      modifiedParts.set(partName, Buffer.from(serializer.serializeToString(doc), 'utf-8'));
+    }
   }
 
   // Clean footnotes.xml separately (has separator/continuationSeparator logic)
-  if (config.removeFootnotes && parts.footnotes) {
+  if (config.removeFootnotes && parts.footnotes && !modifiedParts.has(parts.footnotes)) {
     const footnotesEntry = zip.getEntry(parts.footnotes);
     if (footnotesEntry) {
       const xml = footnotesEntry.getData().toString('utf-8');
       const doc = parser.parseFromString(xml, 'text/xml');
       removeNormalFootnotes(doc);
-      zip.updateFile(parts.footnotes, Buffer.from(serializer.serializeToString(doc), 'utf-8'));
+      modifiedParts.set(parts.footnotes, Buffer.from(serializer.serializeToString(doc), 'utf-8'));
     }
   }
 
-  zip.writeZip(outputPath);
+  // Rebuild the zip from scratch to avoid adm-zip data descriptor issues
+  const outZip = new AdmZip();
+  for (const entry of zip.getEntries()) {
+    const data = modifiedParts.get(entry.entryName) ?? entry.getData();
+    outZip.addFile(entry.entryName, data);
+  }
+  writeFileSync(outputPath, outZip.toBuffer());
   return outputPath;
 }
 
 /* eslint-disable @typescript-eslint/no-explicit-any --
    @xmldom/xmldom types are incompatible with global DOM types */
+
+/**
+ * Replace part content with a single empty paragraph, preserving the root element
+ * and its namespace attributes.
+ */
+function clearPartContent(doc: any): void {
+  const root = doc.documentElement;
+  // Remove all children
+  while (root.firstChild) {
+    root.removeChild(root.firstChild);
+  }
+  // Add a minimal empty paragraph
+  const p = doc.createElementNS(W_NS, 'w:p');
+  const pPr = doc.createElementNS(W_NS, 'w:pPr');
+  p.appendChild(pPr);
+  root.appendChild(p);
+}
 
 function removeFootnoteReferences(doc: any): void {
   const refs = doc.getElementsByTagNameNS(W_NS, 'footnoteReference');
