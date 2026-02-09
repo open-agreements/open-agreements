@@ -6,6 +6,7 @@ import { prepareFillData, fillDocx } from './fill-pipeline.js';
 import { verifyTemplateFill } from './fill-utils.js';
 import { cleanDocument } from './recipe/cleaner.js';
 import { patchDocument } from './recipe/patcher.js';
+import { applySelections, loadSelectionsConfig } from './selector.js';
 
 
 export interface FillOptions {
@@ -169,6 +170,20 @@ export async function fillTemplate(options: FillOptions): Promise<FillResult> {
     templateBuf = readFileSync(patchedPath);
   } else {
     templateBuf = readFileSync(templatePath);
+  }
+
+  // Apply declarative option selections if selections.json exists
+  const selectionsPath = join(templateDir, 'selections.json');
+  if (existsSync(selectionsPath)) {
+    const selectionsConfig = loadSelectionsConfig(selectionsPath);
+    if (!tempDir) {
+      tempDir = mkdtempSync(join(tmpdir(), 'template-fill-'));
+    }
+    const preSelectPath = join(tempDir, 'pre-select.docx');
+    const postSelectPath = join(tempDir, 'post-select.docx');
+    writeFileSync(preSelectPath, templateBuf);
+    await applySelections(preSelectPath, postSelectPath, selectionsConfig, data);
+    templateBuf = readFileSync(postSelectPath);
   }
 
   try {
