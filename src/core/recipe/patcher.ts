@@ -1,4 +1,5 @@
 import AdmZip from 'adm-zip';
+import { writeFileSync } from 'node:fs';
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
 import type { Document, Element, Node } from '@xmldom/xmldom';
 import { enumerateTextParts, getGeneralTextPartNames } from './ooxml-parts.js';
@@ -48,6 +49,9 @@ export async function patchDocument(
   // Sort keys longest-first to prevent partial matches
   const sortedKeys = Object.keys(replacements).sort((a, b) => b.length - a.length);
 
+  // Track which parts we modify so we can rebuild the zip cleanly
+  const modifiedParts = new Map<string, Buffer>();
+
   for (const partName of partNames) {
     const entry = zip.getEntry(partName);
     if (!entry) continue;
@@ -61,10 +65,18 @@ export async function patchDocument(
       replaceInParagraph(allParagraphs[i], replacements, sortedKeys);
     }
 
-    zip.updateFile(partName, Buffer.from(serializer.serializeToString(doc), 'utf-8'));
+    modifiedParts.set(partName, Buffer.from(serializer.serializeToString(doc), 'utf-8'));
   }
 
-  zip.writeZip(outputPath);
+  // Rebuild the zip from scratch using addFile() to avoid adm-zip data
+  // descriptor issues. Some DOCX files use streaming (bit 3) flags which
+  // adm-zip's updateFile/writeZip/toBuffer handle incorrectly.
+  const outZip = new AdmZip();
+  for (const entry of zip.getEntries()) {
+    const data = modifiedParts.get(entry.entryName) ?? entry.getData();
+    outZip.addFile(entry.entryName, data);
+  }
+  writeFileSync(outputPath, outZip.toBuffer());
   return outputPath;
 }
 

@@ -2,9 +2,42 @@ name: NVCA Model Certificate of Incorporation
 description: >-
   Amended and restated certificate of incorporation for venture-backed Delaware
   corporations, defining preferred stock rights, preferences, and privileges.
-source_url: https://nvca.org/wp-content/uploads/2023/02/NVCA-Model-Certificate-of-Incorporation-10-1-2025.docx
+source_url: https://nvca.org/wp-content/uploads/2025/10/NVCA-Model-COI-10-1-2025.docx
 source_version: "10-1-2025"
 license_note: >-
   NVCA model documents are freely downloadable but not redistributable.
   This recipe contains only transformation instructions, not the source document.
+source_sha256: d75600769c12724990de48149d7a2bb161f3522daa54b1783672f93697d87d29
 optional: false
+fields:
+  - name: original_issue_price
+    type: string
+    description: Original purchase price per share of Series A Preferred Stock
+    required: true
+  - name: initial_purchase_price
+    type: string
+    description: Initial Series A purchase price per share
+    required: true
+  - name: signature_page_marker
+    type: string
+    description: Signature page marker text
+    required: false
+    default: Signature Page Follows
+  - name: time_zone
+    type: string
+    description: Time zone for notices and deadlines (e.g., Eastern, Pacific)
+    required: true
+    default: Eastern
+  - name: par_value
+    type: string
+    description: Par value per share of common and preferred stock
+    required: true
+    default: "0.001"
+  - name: specify_percentage
+    type: string
+    description: Percentage threshold for specified provisions
+    required: true
+  - name: effective_date
+    type: date
+    description: Effective date of the certificate of incorporation
+    required: true

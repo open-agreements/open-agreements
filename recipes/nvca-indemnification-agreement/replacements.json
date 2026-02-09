@@ -1,0 +1,17 @@
+{
+  "[name]": "{indemnitee_name}",
+  "[address]": "{indemnitee_address}",
+  "[corporation]": "{company_name}",
+  "[name of fund/sponsor]": "{fund_sponsor_name}",
+  "[director]": "{indemnitee_role}",
+  "[directors]": "{indemnitee_role_plural}",
+  "[officer]": "{indemnitee_role_secondary}",
+  "[officers]": "{indemnitee_role_secondary_plural}",
+  "[its]": "{indemnitee_pronoun_possessive}",
+  "[their]": "{indemnitee_pronoun_possessive_plural}",
+  "[Bylaws]": "{bylaws_name}",
+  "[Certificate of Incorporation]": "{certificate_name}",
+  "[and Appointing Stockholder]": "{and_appointing_stockholder}",
+  "[E]": "{indemnification_section_letter}",
+  "[Signature Page Follows]": "{signature_page_marker}"
+}

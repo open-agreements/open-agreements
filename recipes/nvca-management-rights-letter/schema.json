@@ -1,0 +1,13 @@
+{
+  "fields": [
+    { "name": "company_name_upper", "type": "string", "description": "Company name in uppercase" },
+    { "name": "investor_name", "type": "string", "description": "Full name of the investor" },
+    { "name": "investor_name_upper", "type": "string", "description": "Investor name in uppercase" },
+    { "name": "city", "type": "string", "description": "City for the company address" },
+    { "name": "state", "type": "string", "description": "State for the company address" },
+    { "name": "street_address", "type": "string", "description": "Street address for the company" },
+    { "name": "zip_code", "type": "string", "description": "ZIP code for the company address" },
+    { "name": "company_letterhead", "type": "string", "description": "Portfolio company letterhead text" },
+    { "name": "signature_page_marker", "type": "string", "description": "Signature page marker text" }
+  ]
+}

@@ -60,13 +60,11 @@ program
 
 program
   .command('list')
-  .description('Show available templates and recipes')
+  .description('Show all available agreements (templates, external, and recipes)')
   .option('--json', 'Output machine-readable JSON with full field definitions')
   .option('--json-strict', 'Like --json but exit non-zero if any metadata fails')
-  .option('--templates-only', 'Show only templates')
-  .option('--recipes-only', 'Show only recipes')
-  .action((opts: { json?: boolean; jsonStrict?: boolean; templatesOnly?: boolean; recipesOnly?: boolean }) => {
-    runList({ json: opts.json, jsonStrict: opts.jsonStrict, templatesOnly: opts.templatesOnly, recipesOnly: opts.recipesOnly });
+  .action((opts: { json?: boolean; jsonStrict?: boolean }) => {
+    runList({ json: opts.json, jsonStrict: opts.jsonStrict });
   });
 
 // --- Recipe command ---
@@ -77,11 +75,11 @@ recipeCmd.description('Work with recipe-based document pipelines');
 recipeCmd
   .command('run <recipe-id>')
   .description('Run the full recipe pipeline (clean → patch → fill → verify)')
-  .requiredOption('-i, --input <path>', 'Source DOCX file to process')
+  .option('-i, --input <path>', 'Source DOCX file (auto-downloads if omitted)')
   .option('-o, --output <path>', 'Output file path')
   .option('-d, --data <json-file>', 'JSON file with field values')
   .option('--keep-intermediate', 'Preserve intermediate files')
-  .action(async (recipeId: string, opts: { input: string; output?: string; data?: string; keepIntermediate?: boolean }) => {
+  .action(async (recipeId: string, opts: { input?: string; output?: string; data?: string; keepIntermediate?: boolean }) => {
     await runRecipeCommand({
       recipeId,
       input: opts.input,

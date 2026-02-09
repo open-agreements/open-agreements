@@ -1,0 +1,18 @@
+{
+  "[Insert Company Name]": "{company_name}",
+  "[Company Name]": "{company_name}",
+  "[Company]": "{company_name_short}",
+  "[Insert Investor Name]": "{investor_name}",
+  "[Company counsel name and address]": "{company_counsel}",
+  "[Counsel cc, if any]": "{counsel_cc}",
+  "[State of Delaware]": "State of {state_of_incorporation}",
+  "[State]": "{state_of_incorporation}",
+  "[state]": "{state_lower}",
+  "[judicial district]": "{judicial_district}",
+  "[AMENDED AND RESTATED]": "{amended_restated_upper}",
+  "[Amended and Restated]": "{amended_restated}",
+  "[description of business]": "{business_description}",
+  "[Signature Page Follows]": "{signature_page_marker}",
+  "[_________ __, 20__]": "{effective_date}",
+  "[Date checklist is being delivered]": "{checklist_delivery_date}"
+}

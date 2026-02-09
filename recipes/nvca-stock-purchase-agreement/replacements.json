@@ -1,0 +1,20 @@
+{
+  "[Insert Company Name]": "{company_name}",
+  "[Company name]": "{company_name}",
+  "[Insert Investor Name]": "{investor_name}",
+  "[Company Counsel Name and Address]": "{company_counsel}",
+  "[name of Investor\u2019s counsel]": "{investor_counsel}",
+  "[name of Investor's counsel]": "{investor_counsel}",
+  "[insert name of Company counsel]": "{company_counsel_name}",
+  "[name of lead Purchaser]": "{lead_purchaser_name}",
+  "[judicial district]": "{judicial_district}",
+  "[Balance Sheet Date]": "{balance_sheet_date}",
+  "[the Balance Sheet Date]": "{balance_sheet_date}",
+  "[insert Plan Year and Name]": "{benefit_plan_name}",
+  "[Signature Page Follows]": "{signature_page_marker}",
+  "[state]": "{state_lower}",
+  "[specify percentage]": "{specify_percentage}",
+  "[monthly]": "{financial_reporting_period}",
+  "[list the individual director names]": "{director_names}",
+  "[name the applicable Purchasers]": "{applicable_purchasers}"
+}

@@ -1,0 +1,98 @@
+name: Common Paper Order Form
+description: >-
+  An order form template for cloud service agreements, based on Common Paper's
+  standard form. References existing Key Terms and covers subscription details,
+  fees, pilot period, payment, and professional services.
+source_url: https://commonpaper.com/standards/cloud-service-agreement/2.1
+version: "2.1"
+license: CC-BY-4.0
+allow_derivatives: true
+attribution_text: >-
+  Based on the Common Paper Order Form, available at https://commonpaper.com.
+  Licensed under CC BY 4.0. Copyright Common Paper, Inc.
+fields:
+  - name: company_name
+    type: string
+    description: Company name (shown in header)
+    required: true
+    section: Parties
+  - name: provider_name
+    type: string
+    description: Name of the Provider
+    required: true
+    section: Parties
+  - name: customer_name
+    type: string
+    description: Name of the Customer
+    required: true
+    section: Parties
+  - name: key_terms_effective_date
+    type: string
+    description: Effective Date of the Key Terms agreement
+    required: true
+    section: Terms
+  - name: cloud_service
+    type: string
+    description: Description of the cloud service / product
+    required: true
+    section: Service
+  - name: custom_start_date
+    type: string
+    description: Custom start date (if not date of last signature)
+    required: false
+    section: Terms
+  - name: subscription_period
+    type: string
+    description: Length of access to the service (e.g. "12 months")
+    required: true
+    section: Service
+  - name: pilot_period
+    type: string
+    description: Length of pilot/trial period (e.g. "3 months")
+    required: false
+    section: Service
+  - name: fees
+    type: string
+    description: Subscription fee amount (e.g. "$10,000")
+    required: false
+    section: Payment
+  - name: fee_unit
+    type: string
+    description: Fee billing unit (e.g. "year", "month", "User")
+    required: false
+    section: Payment
+  - name: fill_in_value
+    type: string
+    description: General fill-in value for customizable sections
+    required: false
+    section: Terms
+  - name: payment_frequency
+    type: string
+    description: Payment frequency (e.g. "monthly", "quarterly", "annually")
+    required: false
+    section: Payment
+  - name: payment_terms_days
+    type: string
+    description: Number of days to pay after invoice
+    required: false
+    section: Payment
+  - name: payment_due_from
+    type: string
+    description: When payment terms start (e.g. "Customer's receipt of invoice")
+    required: false
+    section: Payment
+  - name: technical_support
+    type: string
+    description: Description of included support
+    required: false
+    section: Service
+  - name: professional_services_description
+    type: string
+    description: Description of professional services
+    required: false
+    section: Service
+  - name: professional_services_reference
+    type: string
+    description: Reference to SOW or PSA for professional services
+    required: false
+    section: Service

@@ -2,9 +2,49 @@ name: NVCA Model Management Rights Letter
 description: >-
   Management rights letter granting ERISA-qualifying management rights to
   venture capital fund investors.
-source_url: https://nvca.org/wp-content/uploads/2023/02/NVCA-Model-Management-Rights-Letter-10-1-2025.docx
-source_version: "10-1-2025"
+source_url: https://nvca.org/wp-content/uploads/2025/12/NVCA-2020-Management-Rights-Letter-1-1.docx
+source_version: "2020"
 license_note: >-
   NVCA model documents are freely downloadable but not redistributable.
   This recipe contains only transformation instructions, not the source document.
-optional: true
+source_sha256: 9661d2a68ca20ee77cf553f1ec5804f08147e7e4c35f5a03938e76a778083e8b
+optional: false
+fields:
+  - name: company_name_upper
+    type: string
+    description: Company name in uppercase
+    required: true
+  - name: investor_name
+    type: string
+    description: Full name of the investor
+    required: true
+  - name: investor_name_upper
+    type: string
+    description: Investor name in uppercase
+    required: true
+  - name: city
+    type: string
+    description: City for the company address
+    required: true
+  - name: state
+    type: string
+    description: State for the company address
+    required: true
+  - name: street_address
+    type: string
+    description: Street address for the company
+    required: true
+  - name: zip_code
+    type: string
+    description: ZIP code for the company address
+    required: true
+  - name: company_letterhead
+    type: string
+    description: Portfolio company letterhead text
+    required: false
+    default: ""
+  - name: signature_page_marker
+    type: string
+    description: Signature page marker text
+    required: false
+    default: Signature Page Follows

@@ -1,0 +1,55 @@
+name: Common Paper Independent Contractor Agreement
+description: >-
+  An independent contractor agreement based on Common Paper's standard form.
+  Covers the engagement of an independent contractor, including scope of
+  services, rates, payment, timeline, and governing law.
+source_url: https://commonpaper.com/standards/independent-contractor-agreement
+version: "1.0"
+license: CC-BY-4.0
+allow_derivatives: true
+attribution_text: >-
+  Based on the Common Paper Independent Contractor Agreement, available at
+  https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.
+fields:
+  - name: company_name_and_address
+    type: string
+    description: Name and address of the company engaging the contractor
+    required: true
+    section: Parties
+  - name: contractor_name_and_address
+    type: string
+    description: Name, legal business name (if any), and address of the contractor
+    required: true
+    section: Parties
+  - name: services_description
+    type: string
+    description: Description of services to be provided
+    required: true
+    section: Service
+  - name: rates_and_fees
+    type: string
+    description: Applicable rates and maximum fees or hours
+    required: true
+    section: Payment
+  - name: payment_terms
+    type: string
+    description: How and when contractor will submit invoices and be paid
+    required: true
+    section: Payment
+  - name: timeline
+    type: string
+    description: Start date, end date, timeline, milestones, etc.
+    required: true
+    section: Terms
+  - name: governing_law
+    type: string
+    description: State whose laws govern the agreement
+    required: true
+    default: the State of California
+    section: Legal
+  - name: jurisdiction
+    type: string
+    description: Courts with jurisdiction over disputes
+    required: true
+    default: San Francisco County, California
+    section: Legal

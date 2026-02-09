@@ -1,0 +1,60 @@
+name: Common Paper One-Way NDA
+description: >-
+  A one-way (unilateral) non-disclosure agreement cover page based on Common
+  Paper's standard terms. The Discloser shares confidential information with the
+  Receiver, but not vice versa. References the Standard Terms posted at
+  commonpaper.com.
+source_url: https://commonpaper.com/standards/one-way-nda/1.0
+version: "1.0"
+license: CC-BY-4.0
+allow_derivatives: true
+attribution_text: >-
+  Based on the Common Paper One-Way NDA, available at https://commonpaper.com.
+  Licensed under CC BY 4.0. Copyright Common Paper, Inc.
+fields:
+  - name: discloser_name_and_address
+    type: string
+    description: Company name and address of the Discloser
+    required: true
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Date the NDA takes effect
+    required: true
+    section: Terms
+  - name: purpose
+    type: string
+    description: How Confidential Information may be used
+    required: true
+    default: Evaluating whether to enter into a business relationship with the other party.
+    section: Terms
+  - name: nda_term
+    type: string
+    description: Period for sharing Confidential Information (e.g. "1 year", "2 years")
+    required: true
+    default: 1 year(s)
+    section: Terms
+  - name: confidentiality_term_start
+    type: string
+    description: When the confidentiality term begins counting (e.g. "Effective Date" or "date of last disclosure")
+    required: true
+    default: Effective Date
+    section: Terms
+  - name: governing_law
+    type: string
+    description: State whose laws govern the agreement
+    required: true
+    default: Delaware
+    section: Legal
+  - name: jurisdiction
+    type: string
+    description: Courts with jurisdiction over disputes
+    required: true
+    default: courts located in New Castle County, Delaware
+    section: Legal
+  - name: changes_to_standard_terms
+    type: string
+    description: Any modifications to the Common Paper Standard Terms
+    required: false
+    default: None.
+    section: Legal

@@ -50,6 +50,7 @@ export {
   cleanDocument,
   patchDocument,
   verifyOutput,
+  ensureSourceDocx,
   type RecipeRunOptions,
   type RecipeRunResult,
   type VerifyResult,

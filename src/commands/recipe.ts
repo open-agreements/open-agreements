@@ -6,7 +6,7 @@ import { getRecipesDir, resolveRecipeDir } from '../utils/paths.js';
 
 export interface RecipeRunArgs {
   recipeId: string;
-  input: string;
+  input?: string;
   output?: string;
   data?: string;
   keepIntermediate?: boolean;
@@ -34,7 +34,7 @@ export async function runRecipeCommand(args: RecipeRunArgs): Promise<void> {
   try {
     const result = await runRecipe({
       recipeId: args.recipeId,
-      inputPath: resolve(args.input),
+      inputPath: args.input ? resolve(args.input) : undefined,
       outputPath,
       values,
       keepIntermediate: args.keepIntermediate,

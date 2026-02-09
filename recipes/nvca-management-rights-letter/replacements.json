@@ -1,0 +1,11 @@
+{
+  "[COMPANY]": "{company_name_upper}",
+  "[Investor Name]": "{investor_name}",
+  "[INVESTOR]": "{investor_name_upper}",
+  "[City]": "{city}",
+  "[State]": "{state}",
+  "[Street Address]": "{street_address}",
+  "[Zip]": "{zip_code}",
+  "[PORTFOLIO COMPANY LETTERHEAD]": "{company_letterhead}",
+  "[Signature Page Follows]": "{signature_page_marker}"
+}

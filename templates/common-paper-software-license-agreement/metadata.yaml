@@ -1,0 +1,13 @@
+name: Common Paper Software License Agreement
+description: >-
+  Standard terms for a software license agreement, based on Common Paper's
+  standard form. Provides the framework terms for on-premise software licensing,
+  to be used with a separate cover page and order form.
+source_url: https://commonpaper.com/standards/software-license-agreement/1.1
+version: "1.1"
+license: CC-BY-4.0
+allow_derivatives: true
+attribution_text: >-
+  Based on the Common Paper Software License Agreement, available at
+  https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.
+fields: []

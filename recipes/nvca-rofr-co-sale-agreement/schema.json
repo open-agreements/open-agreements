@@ -1,0 +1,19 @@
+{
+  "fields": [
+    { "name": "company_name", "type": "string", "description": "Full legal name of the company (e.g. Acme Corp, Inc.)" },
+    { "name": "investor_name", "type": "string", "description": "Full legal name of the lead investor" },
+    { "name": "key_holder_name", "type": "string", "description": "Full name of the key holder (founder or executive)" },
+    { "name": "company_counsel", "type": "string", "description": "Name and address of company's legal counsel" },
+    { "name": "counsel_cc", "type": "string", "description": "Additional counsel to CC on notices, or empty string if none" },
+    { "name": "amended_restated_upper", "type": "string", "description": "Uppercase prefix if amending a prior agreement (e.g. AMENDED AND RESTATED) or empty string" },
+    { "name": "amended_restated", "type": "string", "description": "Title-case prefix if amending a prior agreement (e.g. Amended and Restated) or empty string" },
+    { "name": "judicial_district", "type": "string", "description": "Federal judicial district for dispute resolution (e.g. District of Delaware)" },
+    { "name": "state_lower", "type": "string", "description": "State of incorporation in lowercase (e.g. delaware)" },
+    { "name": "business_description", "type": "string", "description": "Brief description of the company's business" },
+    { "name": "signature_page_marker", "type": "string", "description": "Signature page marker text" },
+    { "name": "effective_date", "type": "string", "description": "Effective date of the agreement (e.g. January 15, 2025)" },
+    { "name": "specify_percentage", "type": "string", "description": "Specified percentage threshold for key holder transfers" },
+    { "name": "rofr_response_days", "type": "string", "description": "Number of days for the company and investors to respond to a ROFR notice (default 45)" },
+    { "name": "key_holders_label", "type": "string", "description": "Label for the key holders group (e.g. Key Holders or Founders)" }
+  ]
+}

@@ -1,0 +1,63 @@
+name: Common Paper Business Associate Agreement
+description: >-
+  A HIPAA business associate agreement cover page and standard terms, based on
+  Common Paper's standard form. Covers the use and protection of protected
+  health information (PHI) between a covered entity and a business associate.
+source_url: https://commonpaper.com/standards/business-associate-agreement/1.0
+version: "1.0"
+license: CC-BY-4.0
+allow_derivatives: true
+attribution_text: >-
+  Based on the Common Paper Business Associate Agreement, available at
+  https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.
+fields:
+  - name: company_name
+    type: string
+    description: Official company name
+    required: true
+    section: Parties
+  - name: party_role
+    type: string
+    description: Role in the agreement (Business Associate or Covered Entity)
+    required: true
+    section: Parties
+  - name: principal_agreement
+    type: string
+    description: Reference to the principal agreement
+    required: true
+    section: Terms
+  - name: subcontractor_role
+    type: string
+    description: Role of subcontractors
+    required: false
+    section: Terms
+  - name: free_text
+    type: string
+    description: Free text entry
+    required: false
+    section: Terms
+  - name: aggregation_restrictions
+    type: string
+    description: Specific aggregation restrictions
+    required: false
+    section: Terms
+  - name: offshoring_restrictions
+    type: string
+    description: Specific offshoring rights or restrictions
+    required: false
+    section: Terms
+  - name: breach_notification_unit
+    type: string
+    description: Unit for breach notification period
+    required: false
+    section: Terms
+  - name: fill_in_value
+    type: string
+    description: General fill-in value
+    required: false
+    section: Terms
+  - name: custom_effective_date
+    type: string
+    description: Custom effective date
+    required: false
+    section: Terms

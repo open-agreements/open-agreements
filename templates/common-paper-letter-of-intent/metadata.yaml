@@ -1,0 +1,43 @@
+name: Common Paper Letter of Intent
+description: >-
+  A letter of intent template for SaaS and technology deals, based on Common
+  Paper's standard form. Outlines product, timeline, fees, and references an
+  existing NDA.
+source_url: https://commonpaper.com/standards/letter-of-intent
+version: "1.0"
+license: CC-BY-4.0
+allow_derivatives: true
+attribution_text: >-
+  Based on the Common Paper Letter of Intent, available at
+  https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.
+fields:
+  - name: company_name
+    type: string
+    description: Official name of the company sending the letter
+    required: true
+    section: Parties
+  - name: product_name
+    type: string
+    description: Name of the product or service
+    required: true
+    section: Service
+  - name: product_description
+    type: string
+    description: Description of what the product will do
+    required: true
+    section: Service
+  - name: launch_date
+    type: string
+    description: Anticipated access or launch date
+    required: true
+    section: Terms
+  - name: fees_description
+    type: string
+    description: Description of fees and pricing
+    required: true
+    section: Payment
+  - name: nda_date
+    type: string
+    description: Date of the existing NDA between the parties
+    required: false
+    section: Terms

@@ -1,0 +1,17 @@
+{
+  "[Insert Company Name]": "{company_name}",
+  "[Insert Investor Name]": "{investor_name}",
+  "[Insert Key Holder Name]": "{key_holder_name}",
+  "[Company Counsel Name and Address]": "{company_counsel}",
+  "[Counsel cc, if any]": "{counsel_cc}",
+  "[AMENDED AND RESTATED]": "{amended_restated_upper}",
+  "[Amended and Restated]": "{amended_restated}",
+  "[judicial district]": "{judicial_district}",
+  "[state]": "{state_lower}",
+  "[description of business]": "{business_description}",
+  "[Signature Page Follows]": "{signature_page_marker}",
+  "[_____ __, 20___]": "{effective_date}",
+  "[specify percentage]": "{specify_percentage}",
+  "[45]": "{rofr_response_days}",
+  "[Key Holders]": "{key_holders_label}"
+}

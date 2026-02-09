@@ -2,9 +2,73 @@ name: NVCA Model Stock Purchase Agreement
 description: >-
   Series preferred stock purchase agreement for venture capital financings,
   covering purchase terms, representations, and closing conditions.
-source_url: https://nvca.org/wp-content/uploads/2023/02/NVCA-Model-Stock-Purchase-Agreement-10-1-2025.docx
-source_version: "10-1-2025"
+source_url: https://nvca.org/wp-content/uploads/2025/10/NVCA-Model-SPA-10-28-2025-1.docx
+source_version: "10-28-2025"
 license_note: >-
   NVCA model documents are freely downloadable but not redistributable.
   This recipe contains only transformation instructions, not the source document.
+source_sha256: b2c76452fa82dcda72f1fa9f82ba0ce28ea9445441c897f9cb7ac6663930dcab
 optional: false
+fields:
+  - name: company_name
+    type: string
+    description: Full legal name of the company
+    required: true
+  - name: investor_name
+    type: string
+    description: Full name of the investor
+    required: true
+  - name: company_counsel
+    type: string
+    description: Company counsel name and address
+    required: true
+  - name: investor_counsel
+    type: string
+    description: Investor counsel name and address
+    required: true
+  - name: company_counsel_name
+    type: string
+    description: Name of the company's counsel
+    required: true
+  - name: lead_purchaser_name
+    type: string
+    description: Name of the lead purchaser
+    required: true
+  - name: judicial_district
+    type: string
+    description: Federal judicial district for disputes
+    required: true
+  - name: balance_sheet_date
+    type: string
+    description: Date of the company's most recent balance sheet
+    required: true
+  - name: benefit_plan_name
+    type: string
+    description: Plan year and name of the employee benefit plan
+    required: false
+  - name: signature_page_marker
+    type: string
+    description: Signature page marker text
+    required: false
+    default: Signature Page Follows
+  - name: state_lower
+    type: string
+    description: State name (lowercase)
+    required: true
+  - name: specify_percentage
+    type: string
+    description: Specified percentage threshold
+    required: true
+  - name: financial_reporting_period
+    type: string
+    description: Financial reporting period (e.g., monthly, quarterly)
+    required: true
+    default: monthly
+  - name: director_names
+    type: string
+    description: List of individual director names
+    required: true
+  - name: applicable_purchasers
+    type: string
+    description: Names of the applicable purchasers
+    required: false

@@ -1,0 +1,185 @@
+name: Common Paper CSA With SLA
+description: >-
+  A cloud service agreement with SLA provisions, key terms, and standard terms,
+  based on Common Paper's standard form. Includes uptime targets, response
+  times, and support schedules alongside full CSA terms.
+source_url: https://commonpaper.com/standards/cloud-service-agreement/2.1
+version: "2.1"
+license: CC-BY-4.0
+allow_derivatives: true
+attribution_text: >-
+  Based on the Common Paper CSA With SLA, available at
+  https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.
+fields:
+  - name: company_name
+    type: string
+    description: Company name (shown in header)
+    required: true
+    section: Parties
+  - name: provider_name
+    type: string
+    description: Name of the Provider
+    required: true
+    section: Parties
+  - name: customer_name
+    type: string
+    description: Name of the Customer
+    required: true
+    section: Parties
+  - name: key_terms_effective_date
+    type: string
+    description: Effective Date of the Key Terms
+    required: true
+    section: Terms
+  - name: cloud_service
+    type: string
+    description: Description of the cloud service
+    required: true
+    section: Service
+  - name: custom_start_date
+    type: string
+    description: Custom start date
+    required: false
+    section: Terms
+  - name: subscription_period
+    type: string
+    description: Length of access to the service
+    required: true
+    section: Service
+  - name: pilot_period
+    type: string
+    description: Length of pilot/trial period
+    required: false
+    section: Service
+  - name: fees
+    type: string
+    description: Subscription fee amount
+    required: false
+    section: Payment
+  - name: fee_unit
+    type: string
+    description: Fee billing unit
+    required: false
+    section: Payment
+  - name: fill_in_value
+    type: string
+    description: General fill-in value
+    required: false
+    section: Terms
+  - name: payment_frequency
+    type: string
+    description: Payment frequency
+    required: false
+    section: Payment
+  - name: payment_terms_days
+    type: string
+    description: Days to pay after invoice
+    required: false
+    section: Payment
+  - name: payment_due_from
+    type: string
+    description: When payment terms start
+    required: false
+    section: Payment
+  - name: non_renewal_notice_days
+    type: string
+    description: Non-renewal notice days
+    required: false
+    section: Terms
+  - name: technical_support
+    type: string
+    description: Description of support
+    required: false
+    section: Service
+  - name: support_policy_reference
+    type: string
+    description: Reference to support policy
+    required: false
+    section: Service
+  - name: professional_services_reference
+    type: string
+    description: SOW or PSA reference
+    required: false
+    section: Service
+  - name: professional_services_description
+    type: string
+    description: Professional services description
+    required: false
+    section: Service
+  - name: custom_effective_date
+    type: string
+    description: Custom effective date
+    required: false
+    section: Legal
+  - name: governing_law
+    type: string
+    description: Governing law
+    required: true
+    default: Delaware
+    section: Legal
+  - name: jurisdiction
+    type: string
+    description: Jurisdiction
+    required: true
+    default: courts located in New Castle County, Delaware
+    section: Legal
+  - name: general_cap_amount
+    type: string
+    description: General liability cap amount
+    required: false
+    section: Liability
+  - name: cap_multiplier
+    type: string
+    description: Liability cap multiplier
+    required: false
+    section: Liability
+  - name: increased_cap_amount
+    type: string
+    description: Increased liability cap amount
+    required: false
+    section: Liability
+  - name: greater_of_dollar
+    type: string
+    description: Greater-of dollar amount
+    required: false
+    section: Liability
+  - name: greater_of_multiplier
+    type: string
+    description: Greater-of multiplier
+    required: false
+    section: Liability
+  - name: dpa_reference
+    type: string
+    description: DPA reference
+    required: false
+    section: Privacy
+  - name: support_start_time
+    type: string
+    description: Start time for support
+    required: false
+    section: Service
+  - name: support_end_time
+    type: string
+    description: End time for support
+    required: false
+    section: Service
+  - name: support_days
+    type: string
+    description: Days of the week for support
+    required: false
+    section: Service
+  - name: support_timezone
+    type: string
+    description: Support timezone
+    required: false
+    section: Service
+  - name: response_time_unit
+    type: string
+    description: Response time unit
+    required: false
+    section: Service
+  - name: resolution_time_unit
+    type: string
+    description: Resolution time unit
+    required: false
+    section: Service

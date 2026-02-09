@@ -1,8 +1,9 @@
 import { resolve } from 'node:path';
 import { existsSync, readdirSync } from 'node:fs';
 import { fillTemplate } from '../core/engine.js';
-import { getTemplatesDir, resolveTemplateDir, getExternalDir, resolveExternalDir } from '../utils/paths.js';
+import { getTemplatesDir, resolveTemplateDir, getExternalDir, resolveExternalDir, getRecipesDir, resolveRecipeDir } from '../utils/paths.js';
 import { runExternalFill } from '../core/external/index.js';
+import { runRecipe } from '../core/recipe/index.js';
 
 export interface FillArgs {
   template: string;
@@ -11,16 +12,18 @@ export interface FillArgs {
 }
 
 export async function runFill(args: FillArgs): Promise<void> {
-  // Search templates/ first, then external/
+  // Search templates/ → external/ → recipes/
   const templateDir = resolveTemplateDir(args.template);
   const externalDir = resolveExternalDir(args.template);
+  const recipeDir = resolveRecipeDir(args.template);
 
   const isTemplate = existsSync(templateDir);
   const isExternal = !isTemplate && existsSync(externalDir);
+  const isRecipe = !isTemplate && !isExternal && existsSync(recipeDir);
 
-  if (!isTemplate && !isExternal) {
+  if (!isTemplate && !isExternal && !isRecipe) {
     const available = getAvailableIds();
-    console.error(`Agreement "${args.template}" not found in templates or external agreements.`);
+    console.error(`Agreement "${args.template}" not found in templates, external, or recipes.`);
     if (available.length > 0) {
       console.error(`Available: ${available.join(', ')}`);
     }
@@ -31,7 +34,16 @@ export async function runFill(args: FillArgs): Promise<void> {
   const resolvedOutput = resolve(outputPath);
 
   try {
-    if (isExternal) {
+    if (isRecipe) {
+      const result = await runRecipe({
+        recipeId: args.template,
+        outputPath: resolvedOutput,
+        values: args.values,
+      });
+      console.log(`Filled ${result.metadata.name}`);
+      console.log(`Output: ${result.outputPath}`);
+      console.log(`Fields used: ${result.fieldsUsed.join(', ')}`);
+    } else if (isExternal) {
       const result = await runExternalFill({
         externalId: args.template,
         outputPath: resolvedOutput,
@@ -67,6 +79,12 @@ function getAvailableIds(): string[] {
   const extDir = getExternalDir();
   if (existsSync(extDir)) {
     ids.push(...readdirSync(extDir, { withFileTypes: true })
+      .filter((d) => d.isDirectory())
+      .map((d) => d.name));
+  }
+  const recipesDir = getRecipesDir();
+  if (existsSync(recipesDir)) {
+    ids.push(...readdirSync(recipesDir, { withFileTypes: true })
       .filter((d) => d.isDirectory())
       .map((d) => d.name));
   }

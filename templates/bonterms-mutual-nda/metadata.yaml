@@ -1,31 +1,24 @@
 name: Bonterms Mutual NDA
-description: A mutual non-disclosure agreement based on Bonterms' standard terms.
+description: >-
+  Cover page for the Bonterms Mutual NDA (Version 1.0). The standard terms
+  are incorporated by reference from bonterms.com.
 source_url: https://github.com/Bonterms/Mutual-NDA
 version: "1.0"
-license: CC-BY-4.0
+license: CC0-1.0
 allow_derivatives: true
 attribution_text: >-
-  Based on the Bonterms Mutual NDA, available at https://bonterms.com.
-  Licensed under CC BY 4.0. Copyright Bonterms, Inc.
+  Based on the Bonterms Mutual NDA Cover Page, available at
+  https://bonterms.com/forms/bonterms-mutual-nda-v1/.
+  Made available under CC0 1.0.
 fields:
   - name: party_1_name
     type: string
     description: Full legal name of the first party
     required: true
     section: Parties
-  - name: party_1_email
-    type: string
-    description: Notice email address for the first party
-    required: true
-    section: Parties
   - name: party_2_name
     type: string
     description: Full legal name of the second party
-    required: true
-    section: Parties
-  - name: party_2_email
-    type: string
-    description: Notice email address for the second party
     required: true
     section: Parties
   - name: effective_date
@@ -41,7 +34,7 @@ fields:
     section: Terms
   - name: nda_term
     type: string
-    description: Duration of the NDA agreement
+    description: Duration of the NDA agreement and disclosure period
     required: true
     default: 1 year
     section: Terms

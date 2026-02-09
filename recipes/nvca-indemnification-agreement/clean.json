@@ -1,0 +1,7 @@
+{
+  "removeFootnotes": false,
+  "removeParagraphPatterns": [
+    "^Comment:",
+    "^NOTE:"
+  ]
+}

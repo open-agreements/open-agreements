@@ -1,0 +1,9 @@
+{
+  "[insert original purchase price of Series A Preferred Stock]": "{original_issue_price}",
+  "[insert initial Series A purchase price]": "{initial_purchase_price}",
+  "[Signature Page Follows]": "{signature_page_marker}",
+  "[Eastern/Pacific]": "{time_zone}",
+  "[$0.001]": "${par_value}",
+  "[specify percentage]": "{specify_percentage}",
+  "[________ __, 20__]": "{effective_date}"
+}

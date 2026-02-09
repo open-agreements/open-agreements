@@ -1,0 +1,33 @@
+name: Common Paper AI Addendum
+description: >-
+  An AI addendum cover page and standard terms, based on Common Paper's standard
+  form. Adds AI-specific provisions to an existing agreement, covering model
+  training, input/output rights, and AI usage policies.
+source_url: https://commonpaper.com/standards/ai-addendum/1.0
+version: "1.0"
+license: CC-BY-4.0
+allow_derivatives: true
+attribution_text: >-
+  Based on the Common Paper AI Addendum, available at
+  https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.
+fields:
+  - name: company_name
+    type: string
+    description: Official company name
+    required: true
+    section: Parties
+  - name: agreement_description
+    type: string
+    description: Description of the underlying agreement
+    required: true
+    section: Terms
+  - name: ai_policy_reference
+    type: string
+    description: Reference to AI usage policy
+    required: false
+    section: Service
+  - name: additional_terms
+    type: string
+    description: Additional AI-specific terms
+    required: false
+    section: Legal

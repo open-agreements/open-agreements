@@ -1,0 +1,11 @@
+{
+  "fields": [
+    { "name": "original_issue_price", "type": "string", "description": "Original purchase price per share of Series A Preferred Stock" },
+    { "name": "initial_purchase_price", "type": "string", "description": "Initial Series A purchase price per share" },
+    { "name": "signature_page_marker", "type": "string", "description": "Signature page marker text" },
+    { "name": "time_zone", "type": "string", "description": "Time zone for notices and deadlines (e.g., Eastern, Pacific)" },
+    { "name": "par_value", "type": "string", "description": "Par value per share of common and preferred stock" },
+    { "name": "specify_percentage", "type": "string", "description": "Percentage threshold for specified provisions" },
+    { "name": "effective_date", "type": "date", "description": "Effective date of the certificate of incorporation" }
+  ]
+}

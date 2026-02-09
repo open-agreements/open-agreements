@@ -1,0 +1,129 @@
+name: Common Paper Order Form with SLA
+description: >-
+  An order form template with service level agreement (SLA) provisions, based on
+  Common Paper's standard form. Extends the standard order form with uptime
+  targets, response times, and support schedules.
+source_url: https://commonpaper.com/standards/cloud-service-agreement/2.1
+version: "2.1"
+license: CC-BY-4.0
+allow_derivatives: true
+attribution_text: >-
+  Based on the Common Paper Order Form with SLA, available at
+  https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.
+fields:
+  - name: company_name
+    type: string
+    description: Company name (shown in header)
+    required: true
+    section: Parties
+  - name: provider_name
+    type: string
+    description: Name of the Provider
+    required: true
+    section: Parties
+  - name: customer_name
+    type: string
+    description: Name of the Customer
+    required: true
+    section: Parties
+  - name: key_terms_effective_date
+    type: string
+    description: Effective Date of the Key Terms agreement
+    required: true
+    section: Terms
+  - name: cloud_service
+    type: string
+    description: Description of the cloud service / product
+    required: true
+    section: Service
+  - name: custom_start_date
+    type: string
+    description: Custom start date (if not date of last signature)
+    required: false
+    section: Terms
+  - name: subscription_period
+    type: string
+    description: Length of access to the service (e.g. "12 months")
+    required: true
+    section: Service
+  - name: pilot_period
+    type: string
+    description: Length of pilot/trial period (e.g. "3 months")
+    required: false
+    section: Service
+  - name: fees
+    type: string
+    description: Subscription fee amount (e.g. "$10,000")
+    required: false
+    section: Payment
+  - name: fee_unit
+    type: string
+    description: Fee billing unit (e.g. "year", "month", "User")
+    required: false
+    section: Payment
+  - name: fill_in_value
+    type: string
+    description: General fill-in value for customizable sections
+    required: false
+    section: Terms
+  - name: payment_frequency
+    type: string
+    description: Payment frequency (e.g. "monthly", "quarterly", "annually")
+    required: false
+    section: Payment
+  - name: payment_terms_days
+    type: string
+    description: Number of days to pay after invoice
+    required: false
+    section: Payment
+  - name: payment_due_from
+    type: string
+    description: When payment terms start (e.g. "Customer's receipt of invoice")
+    required: false
+    section: Payment
+  - name: technical_support
+    type: string
+    description: Description of included support
+    required: false
+    section: Service
+  - name: professional_services_description
+    type: string
+    description: Description of professional services
+    required: false
+    section: Service
+  - name: professional_services_reference
+    type: string
+    description: Reference to SOW or PSA for professional services
+    required: false
+    section: Service
+  # SLA-specific fields
+  - name: support_start_time
+    type: string
+    description: Start time for support availability
+    required: false
+    section: Service
+  - name: support_end_time
+    type: string
+    description: End time for support availability
+    required: false
+    section: Service
+  - name: support_days
+    type: string
+    description: Days of the week support is available
+    required: false
+    section: Service
+  - name: support_timezone
+    type: string
+    description: Timezone for support hours
+    required: false
+    section: Service
+  - name: response_time_unit
+    type: string
+    description: Unit for response time targets (e.g. "minutes", "hours", "days")
+    required: false
+    section: Service
+  - name: resolution_time_unit
+    type: string
+    description: Unit for resolution time targets (e.g. "hours", "days")
+    required: false
+    section: Service

@@ -1,6 +1,6 @@
 import { readdirSync, existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { validateRecipeMetadata } from '../metadata.js';
+import { validateRecipeMetadata, loadRecipeMetadata } from '../metadata.js';
 import { CleanConfigSchema } from '../metadata.js';
 
 export interface RecipeValidationResult {
@@ -159,6 +159,16 @@ export function validateRecipe(
     } catch {
       errors.push(`clean.json: invalid format`);
     }
+  }
+
+  // Warn if source_sha256 is missing (fill will skip integrity verification)
+  try {
+    const meta = loadRecipeMetadata(recipeDir);
+    if (!meta.source_sha256) {
+      warnings.push('No source_sha256 in metadata — fill will skip integrity verification');
+    }
+  } catch {
+    // metadata validation already handled above
   }
 
   return { recipeId, valid: errors.length === 0, scaffold: false, errors, warnings };

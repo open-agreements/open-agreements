@@ -1,0 +1,40 @@
+name: Bonterms Professional Services Agreement
+description: >-
+  Cover page for the Bonterms Professional Services Agreement (Version 1.2).
+  The standard terms are incorporated by reference from bonterms.com.
+source_url: https://github.com/Bonterms/Professional-Services-Agreement
+version: "1.2"
+license: CC0-1.0
+allow_derivatives: true
+attribution_text: >-
+  Based on the Bonterms Professional Services Agreement Cover Page, available at
+  https://bonterms.com/forms/professional-services-agreement-v1.2/.
+  Made available under CC0 1.0.
+fields:
+  - name: customer_name
+    type: string
+    description: Full legal name of the customer
+    required: true
+    section: Parties
+  - name: provider_name
+    type: string
+    description: Full legal name of the provider
+    required: true
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Date the agreement takes effect
+    required: true
+    section: Terms
+  - name: governing_law
+    type: string
+    description: State or jurisdiction whose laws govern the agreement
+    required: true
+    default: California
+    section: Legal
+  - name: courts
+    type: string
+    description: Courts with jurisdiction over disputes
+    required: true
+    default: courts located in San Francisco, California
+    section: Legal

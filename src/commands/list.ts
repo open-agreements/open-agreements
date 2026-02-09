@@ -9,8 +9,6 @@ const pkg = JSON.parse(readFileSync(pkgPath, 'utf-8'));
 export interface ListOptions {
   json?: boolean;
   jsonStrict?: boolean;
-  templatesOnly?: boolean;
-  recipesOnly?: boolean;
 }
 
 interface ListItem {
@@ -40,8 +38,7 @@ export function runList(opts: ListOptions = {}): void {
     runListJson(opts);
     return;
   }
-  if (!opts.recipesOnly) listAgreements();
-  if (!opts.templatesOnly) listRecipes();
+  listAgreements();
 }
 
 function mapFields(fields: { name: string; type: string; required: boolean; section?: string; description: string; default?: string }[]) {
@@ -59,84 +56,81 @@ function runListJson(opts: ListOptions): void {
   const results: ListItem[] = [];
   const errors: string[] = [];
 
-  if (!opts.recipesOnly) {
-    // Templates
-    const templatesDir = getTemplatesDir();
-    if (existsSync(templatesDir)) {
-      const dirs = readdirSync(templatesDir, { withFileTypes: true })
-        .filter((d) => d.isDirectory())
-        .map((d) => d.name);
+  // Templates
+  const templatesDir = getTemplatesDir();
+  if (existsSync(templatesDir)) {
+    const dirs = readdirSync(templatesDir, { withFileTypes: true })
+      .filter((d) => d.isDirectory())
+      .map((d) => d.name);
 
-      for (const id of dirs) {
-        const dir = resolveTemplateDir(id);
-        try {
-          const meta = loadMetadata(dir);
-          results.push({
-            name: id,
-            description: meta.description ?? meta.name,
-            license: meta.license,
-            source_url: meta.source_url,
-            source: sourceName(meta.source_url),
-            attribution_text: meta.attribution_text,
-            fields: mapFields(meta.fields),
-          });
-        } catch (err) {
-          errors.push(`template ${id}: ${err instanceof Error ? err.message : String(err)}`);
-        }
-      }
-    }
-
-    // External templates
-    const externalDir = getExternalDir();
-    if (existsSync(externalDir)) {
-      const dirs = readdirSync(externalDir, { withFileTypes: true })
-        .filter((d) => d.isDirectory())
-        .map((d) => d.name);
-
-      for (const id of dirs) {
-        const dir = resolveExternalDir(id);
-        try {
-          const meta = loadExternalMetadata(dir);
-          results.push({
-            name: id,
-            description: meta.description ?? meta.name,
-            license: meta.license,
-            source_url: meta.source_url,
-            source: sourceName(meta.source_url),
-            attribution_text: meta.attribution_text,
-            fields: mapFields(meta.fields),
-          });
-        } catch (err) {
-          errors.push(`external ${id}: ${err instanceof Error ? err.message : String(err)}`);
-        }
+    for (const id of dirs) {
+      const dir = resolveTemplateDir(id);
+      try {
+        const meta = loadMetadata(dir);
+        results.push({
+          name: id,
+          description: meta.description ?? meta.name,
+          license: meta.license,
+          source_url: meta.source_url,
+          source: sourceName(meta.source_url),
+          attribution_text: meta.attribution_text,
+          fields: mapFields(meta.fields),
+        });
+      } catch (err) {
+        errors.push(`template ${id}: ${err instanceof Error ? err.message : String(err)}`);
       }
     }
   }
 
-  if (!opts.templatesOnly) {
-    const recipesDir = getRecipesDir();
-    if (existsSync(recipesDir)) {
-      const dirs = readdirSync(recipesDir, { withFileTypes: true })
-        .filter((d) => d.isDirectory())
-        .map((d) => d.name);
+  // External templates
+  const externalDir = getExternalDir();
+  if (existsSync(externalDir)) {
+    const dirs = readdirSync(externalDir, { withFileTypes: true })
+      .filter((d) => d.isDirectory())
+      .map((d) => d.name);
 
-      for (const id of dirs) {
-        const dir = resolveRecipeDir(id);
-        try {
-          const meta = loadRecipeMetadata(dir);
-          results.push({
-            name: id,
-            description: meta.description ?? meta.name,
-            license_note: meta.license_note,
-            source_url: meta.source_url,
-            source: sourceName(meta.source_url),
-            source_version: meta.source_version,
-            optional: meta.optional,
-            fields: mapFields(meta.fields),
-          });
-        } catch (err) {
-          errors.push(`recipe ${id}: ${err instanceof Error ? err.message : String(err)}`);
-        }
+    for (const id of dirs) {
+      const dir = resolveExternalDir(id);
+      try {
+        const meta = loadExternalMetadata(dir);
+        results.push({
+          name: id,
+          description: meta.description ?? meta.name,
+          license: meta.license,
+          source_url: meta.source_url,
+          source: sourceName(meta.source_url),
+          attribution_text: meta.attribution_text,
+          fields: mapFields(meta.fields),
+        });
+      } catch (err) {
+        errors.push(`external ${id}: ${err instanceof Error ? err.message : String(err)}`);
+      }
+    }
+  }
+
+  // Recipes
+  const recipesDir = getRecipesDir();
+  if (existsSync(recipesDir)) {
+    const dirs = readdirSync(recipesDir, { withFileTypes: true })
+      .filter((d) => d.isDirectory())
+      .map((d) => d.name);
+
+    for (const id of dirs) {
+      const dir = resolveRecipeDir(id);
+      try {
+        const meta = loadRecipeMetadata(dir);
+        results.push({
+          name: id,
+          description: meta.description ?? meta.name,
+          license_note: meta.license_note,
+          source_url: meta.source_url,
+          source: sourceName(meta.source_url),
+          source_version: meta.source_version,
+          optional: meta.optional,
+          fields: mapFields(meta.fields),
+        });
+      } catch (err) {
+        errors.push(`recipe ${id}: ${err instanceof Error ? err.message : String(err)}`);
       }
     }
   }
@@ -158,7 +152,7 @@ function runListJson(opts: ListOptions): void {
   console.log(JSON.stringify(envelope, null, 2));
 }
 
-/** Unified list of templates + external templates */
+/** Unified list of all agreements: templates + external + recipes */
 function listAgreements(): void {
   interface Row { id: string; license: string; required: number; total: number; source: string; sourceUrl: string }
   const rows: Row[] = [];
@@ -197,6 +191,24 @@ function listAgreements(): void {
     }
   }
 
+  const recipesDir = getRecipesDir();
+  if (existsSync(recipesDir)) {
+    const dirs = readdirSync(recipesDir, { withFileTypes: true })
+      .filter((d) => d.isDirectory())
+      .map((d) => d.name);
+    for (const id of dirs) {
+      const dir = resolveRecipeDir(id);
+      try {
+        const meta = loadRecipeMetadata(dir);
+        const required = meta.fields.filter((f) => f.required).length;
+        const license = meta.optional ? 'recipe*' : 'recipe';
+        rows.push({ id, license, required, total: meta.fields.length, source: sourceName(meta.source_url) || '—', sourceUrl: meta.source_url });
+      } catch {
+        rows.push({ id, license: 'ERROR', required: 0, total: 0, source: '—', sourceUrl: 'Could not load metadata' });
+      }
+    }
+  }
+
   if (rows.length === 0) {
     console.log('No agreements found.');
     return;
@@ -212,39 +224,6 @@ function listAgreements(): void {
     console.log(
       `${row.id.padEnd(40)} ${row.license.padEnd(14)} ${fields.padEnd(8)} ${row.source.padEnd(16)} ${row.sourceUrl}`
     );
-  }
-}
-
-function listRecipes(): void {
-  const recipesDir = getRecipesDir();
-
-  if (!existsSync(recipesDir)) {
-    return;
-  }
-
-  const dirs = readdirSync(recipesDir, { withFileTypes: true })
-    .filter((d) => d.isDirectory())
-    .map((d) => d.name);
-
-  if (dirs.length === 0) {
-    return;
-  }
-
-  console.log(`\n${'Recipe'.padEnd(40)} ${'Version'.padEnd(14)} ${'Fields'.padEnd(8)} Source`);
-  console.log('─'.repeat(100));
-
-  for (const id of dirs) {
-    const dir = resolveRecipeDir(id);
-    try {
-      const meta = loadRecipeMetadata(dir);
-      const fieldCount = meta.fields.length;
-      const optionalTag = meta.optional ? ' (optional)' : '';
-      console.log(
-        `${(id + optionalTag).padEnd(40)} ${meta.source_version.padEnd(14)} ${`${fieldCount}`.padEnd(8)} ${meta.source_url}`
-      );
-    } catch {
-      console.log(`${id.padEnd(40)} ${'ERROR'.padEnd(14)} ${'—'.padEnd(8)} Could not load metadata`);
-    }
   }
 
   console.log('');
