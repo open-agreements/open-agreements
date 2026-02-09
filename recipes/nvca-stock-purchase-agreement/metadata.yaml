@@ -1,0 +1,10 @@
+name: NVCA Model Stock Purchase Agreement
+description: >-
+  Series preferred stock purchase agreement for venture capital financings,
+  covering purchase terms, representations, and closing conditions.
+source_url: https://nvca.org/wp-content/uploads/2023/02/NVCA-Model-Stock-Purchase-Agreement-10-1-2025.docx
+source_version: "10-1-2025"
+license_note: >-
+  NVCA model documents are freely downloadable but not redistributable.
+  This recipe contains only transformation instructions, not the source document.
+optional: false

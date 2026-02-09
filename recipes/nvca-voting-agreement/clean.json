@@ -1,0 +1,7 @@
+{
+  "removeFootnotes": true,
+  "removeParagraphPatterns": [
+    "^Note to Drafter:",
+    "^Preliminary Note\\b"
+  ]
+}

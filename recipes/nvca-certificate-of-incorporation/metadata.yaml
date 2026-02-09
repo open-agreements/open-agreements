@@ -1,0 +1,10 @@
+name: NVCA Model Certificate of Incorporation
+description: >-
+  Amended and restated certificate of incorporation for venture-backed Delaware
+  corporations, defining preferred stock rights, preferences, and privileges.
+source_url: https://nvca.org/wp-content/uploads/2023/02/NVCA-Model-Certificate-of-Incorporation-10-1-2025.docx
+source_version: "10-1-2025"
+license_note: >-
+  NVCA model documents are freely downloadable but not redistributable.
+  This recipe contains only transformation instructions, not the source document.
+optional: false

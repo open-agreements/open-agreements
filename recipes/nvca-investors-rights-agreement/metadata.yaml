@@ -1,0 +1,10 @@
+name: NVCA Model Investors' Rights Agreement
+description: >-
+  Investors' rights agreement for venture financings, covering registration rights,
+  information rights, board observer rights, and protective provisions.
+source_url: https://nvca.org/wp-content/uploads/2023/02/NVCA-Model-Investors-Rights-Agreement-10-1-2025.docx
+source_version: "10-1-2025"
+license_note: >-
+  NVCA model documents are freely downloadable but not redistributable.
+  This recipe contains only transformation instructions, not the source document.
+optional: false

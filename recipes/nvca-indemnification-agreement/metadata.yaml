@@ -1,0 +1,10 @@
+name: NVCA Model Indemnification Agreement
+description: >-
+  Director and officer indemnification agreement for venture-backed companies,
+  providing indemnification and advancement of expenses.
+source_url: https://nvca.org/wp-content/uploads/2023/02/NVCA-Model-Indemnification-Agreement-10-1-2025.docx
+source_version: "10-1-2025"
+license_note: >-
+  NVCA model documents are freely downloadable but not redistributable.
+  This recipe contains only transformation instructions, not the source document.
+optional: true
