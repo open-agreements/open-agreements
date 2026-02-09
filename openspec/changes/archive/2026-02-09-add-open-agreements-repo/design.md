@@ -4,7 +4,7 @@ An open-source tool for filling standard legal agreement templates. The tool is 
 ## Goals / Non-Goals
 - Goals:
   - TypeScript CLI and library for DOCX template filling
-  - Two-tier architecture: hosted templates + recipes for non-redistributable documents
+  - Three-tier architecture: internal templates (CC BY 4.0) + external templates (CC BY-ND 4.0, vendored unchanged) + recipes (not redistributable, downloaded at runtime)
   - Agent-agnostic skill architecture (Claude Code adapter for v1)
   - License compliance enforcement (CI + runtime validation)
   - npm distribution
@@ -18,7 +18,7 @@ An open-source tool for filling standard legal agreement templates. The tool is 
 - **Language: TypeScript** — Aligns with OpenSpec model and npm distribution. Python was considered but TS provides better type safety for template schemas and matches the existing OpenSpec architecture. A Python prototype validated the recipe approach before committing to TypeScript.
 - **DOCX engine: `docx-templates`** — MIT licensed, 48K weekly npm downloads, TypeScript-native, configurable delimiters. Chosen over `easy-template-x` (lower adoption) and `docxtemplater` (proprietary license for advanced features). Used by both template and recipe tiers for the final fill step.
 - **Recipe pre-processing: @xmldom/xmldom** — Recipes need XML-level surgery (footnote removal, run modification) before the template engine can fill. AdmZip handles DOCX-as-zip access. @xmldom/xmldom handles OOXML parsing.
-- **Two-tier architecture** — Internal templates (CC BY 4.0, hosted directly with `{tag}` placeholders) and External templates (CC BY-ND 4.0, vendored unchanged under `external/` with `source_sha256` for integrity). Both use the same `fill` command. External templates produce transient derivatives that exist only on the user's machine. _Originally designed as "templates + recipes" where recipes contained transformation instructions for non-redistributable documents. Simplified to external templates (2026-02-08) after the YC SAFE external template pattern proved simpler._
+- **Three-tier architecture** — (1) Internal templates (CC BY 4.0, hosted directly with `{tag}` placeholders under `templates/`), (2) External templates (CC BY-ND 4.0, vendored unchanged under `external/` with `source_sha256` for integrity — redistribution of unmodified copies is permitted by CC BY-ND), and (3) Recipes (not redistributable at all — e.g. NVCA model documents are freely downloadable but their license prohibits redistribution, so we ship only transformation instructions under `recipes/` and download the source DOCX at runtime from the publisher's URL). Internal templates and external templates both use the `fill` command. Recipes use the `recipe` command which adds download → clean → patch stages before fill.
 - **Architecture: OpenSpec-inspired** — Commander.js CLI, ToolCommandAdapter interface, Zod schemas. Mirrors the patterns in [OpenSpec](https://github.com/Fission-AI/OpenSpec) for consistency.
 - **Template layout: directory-per-template** — Each template is self-contained (`template.docx` + `metadata.yaml` + `README.md`). Simplifies contribution, licensing, and validation.
 - **Recipe layout: directory-per-recipe** — Each recipe contains `replacements.json` + `schema.json` + `metadata.yaml` + `clean.json` + `README.md`. No `.docx` files allowed (enforced by CI).
@@ -52,4 +52,4 @@ Not applicable — new repository with no existing code to migrate.
 
 ## Open Questions
 - ~~Preferred npm scope: `@usejunior/open-agreements` or `@openagreements/cli`?~~ Resolved: `open-agreements` (unscoped).
-- ~~How many NVCA documents to support in v1: just the 5 core, or all 7 including optional?~~ Resolved: Recipe approach superseded by external templates. NVCA documents will be added as external templates in a future change.
+- ~~How many NVCA documents to support in v1: just the 5 core, or all 7 including optional?~~ Resolved: All 7 (5 core + 2 optional). Optional recipes are marked `optional: true` in metadata.

@@ -29,20 +29,25 @@
 - [x] 3.3b Enhance CSA template with `{IF}...{END-IF}` conditionals for radio/checkbox sections, computed display fields for multi-option rows, boolean coercion in engine.ts, IF/END-IF whitelist in validation
 - [x] 3.4 Verify rendered output is faithful to source text
 
-## 3b. ~~Recipe Authoring (NVCA Financing Documents)~~ SUPERSEDED
+## 3b. Recipe Authoring (NVCA Financing Documents)
 
-> **Decision (2026-02-08):** Recipes replaced by external templates approach. NVCA documents will be vendored unchanged as external templates (like YC SAFEs) and patched on demand from GitHub repo copies. This simplifies the UX while still complying with CC BY-ND derivative restrictions. The recipe engine code (Phase 2b) remains in the codebase but no new recipes will be authored.
+> **Correction (2026-02-09):** Recipes are still needed. NVCA documents are freely downloadable but NOT redistributable — unlike YC SAFEs (CC BY-ND 4.0, which permits redistribution of unmodified copies). Recipes ship only transformation instructions; the source DOCX is downloaded at runtime from nvca.org.
 
+Core documents (required for any NVCA financing):
+- [ ] 3b.1 Create recipe: `nvca-certificate-of-incorporation`
+- [ ] 3b.2 Create recipe: `nvca-stock-purchase-agreement`
+- [ ] 3b.3 Create recipe: `nvca-investors-rights-agreement`
 - [x] 3b.4 Create recipe: `nvca-voting-agreement` (proof-of-concept, validated the approach)
-- [~] 3b.1 Create recipe: `nvca-certificate-of-incorporation` — SUPERSEDED by external template approach
-- [~] 3b.2 Create recipe: `nvca-stock-purchase-agreement` — SUPERSEDED
-- [~] 3b.3 Create recipe: `nvca-investors-rights-agreement` — SUPERSEDED
-- [~] 3b.5 Create recipe: `nvca-rofr-co-sale-agreement` — SUPERSEDED
-- [~] 3b.6 Create recipe: `nvca-management-rights-letter` — SUPERSEDED
-- [~] 3b.7 Create recipe: `nvca-indemnification-agreement` — SUPERSEDED
-- [~] 3b.8 Test each recipe against its real NVCA DOCX — SUPERSEDED
-- [~] 3b.9 Verify no .docx files committed to any recipe directory — SUPERSEDED
-- [~] 3b.10 Write recipe READMEs — SUPERSEDED
+- [ ] 3b.5 Create recipe: `nvca-rofr-co-sale-agreement`
+
+Optional documents:
+- [ ] 3b.6 Create recipe: `nvca-management-rights-letter` (marked optional in metadata)
+- [ ] 3b.7 Create recipe: `nvca-indemnification-agreement` (marked optional in metadata)
+
+Validation:
+- [ ] 3b.8 Test each recipe against its real NVCA DOCX (auto-downloaded from source_url)
+- [ ] 3b.9 Verify no .docx files committed to any recipe directory
+- [ ] 3b.10 Write recipe READMEs
 
 ## 4. Validation Pipeline
 - [x] 4.1 Template validation: all metadata fields present, all DOCX placeholders matched to field list
