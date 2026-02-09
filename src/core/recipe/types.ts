@@ -2,7 +2,7 @@ import type { RecipeMetadata } from '../metadata.js';
 
 export interface RecipeRunOptions {
   recipeId: string;
-  inputPath?: string;
+  inputPath: string;
   outputPath: string;
   values: Record<string, string>;
   keepIntermediate?: boolean;
@@ -13,7 +13,6 @@ export interface RecipeRunResult {
   metadata: RecipeMetadata;
   fieldsUsed: string[];
   stages: {
-    download?: string;
     clean: string;
     patch: string;
     fill: string;

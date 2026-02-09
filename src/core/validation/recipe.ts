@@ -1,24 +1,39 @@
 import { readdirSync, existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { validateRecipeMetadata, loadCleanConfig, loadRecipeMetadata } from '../metadata.js';
+import { validateRecipeMetadata } from '../metadata.js';
 import { CleanConfigSchema } from '../metadata.js';
 
 export interface RecipeValidationResult {
   recipeId: string;
   valid: boolean;
+  scaffold: boolean;
   errors: string[];
   warnings: string[];
 }
+
+/** Pattern for valid template tags within replacement values */
+const TAG_RE = /\{[a-z_][a-z0-9_]*\}/g;
+/** Pattern for any curly-brace token (to detect control tags) */
+const ANY_BRACE_RE = /\{[^}]+\}/g;
+/** Only simple identifiers inside braces are allowed */
+const SAFE_TAG_RE = /^\{[a-z_][a-z0-9_]*\}$/;
 
 /**
  * Validate a recipe directory:
  * - No .docx files (copyrighted content must not be committed)
  * - metadata.yaml validates against schema
- * - For non-scaffold recipes: replacements.json, schema.json, clean.json present and valid
+ * - For non-scaffold recipes: replacements.json, schema.json present and valid
+ * - Replacement values must be valid {identifier} tags
+ * - In strict mode: scaffolds are errors, all files required
  */
-export function validateRecipe(recipeDir: string, recipeId: string): RecipeValidationResult {
+export function validateRecipe(
+  recipeDir: string,
+  recipeId: string,
+  options?: { strict?: boolean }
+): RecipeValidationResult {
   const errors: string[] = [];
   const warnings: string[] = [];
+  const strict = options?.strict ?? false;
 
   // Check for .docx files (forbidden in recipe dirs)
   const files = readdirSync(recipeDir);
@@ -31,14 +46,21 @@ export function validateRecipe(recipeDir: string, recipeId: string): RecipeValid
   const metaResult = validateRecipeMetadata(recipeDir);
   if (!metaResult.valid) {
     errors.push(...metaResult.errors.map((e) => `metadata: ${e}`));
-    return { recipeId, valid: false, errors, warnings };
+    return { recipeId, valid: false, scaffold: false, errors, warnings };
   }
 
-  // Scaffold detection: if only metadata.yaml exists, this is a scaffold — skip further checks
+  // Scaffold detection: if only metadata.yaml exists, this is a scaffold
   const hasReplacements = existsSync(join(recipeDir, 'replacements.json'));
   const hasSchema = existsSync(join(recipeDir, 'schema.json'));
-  if (!hasReplacements && !hasSchema) {
-    return { recipeId, valid: errors.length === 0, errors, warnings };
+  const isScaffold = !hasReplacements && !hasSchema;
+
+  if (isScaffold) {
+    if (strict) {
+      errors.push('Scaffold recipe (metadata-only): not runnable. Use non-strict mode to allow scaffolds.');
+    } else {
+      warnings.push('Scaffold recipe (metadata-only): not runnable');
+    }
+    return { recipeId, valid: errors.length === 0, scaffold: true, errors, warnings };
   }
 
   // Validate replacements.json
@@ -52,6 +74,34 @@ export function validateRecipe(recipeDir: string, recipeId: string): RecipeValid
         for (const [key, value] of Object.entries(replacements)) {
           if (typeof value !== 'string') {
             errors.push(`replacements.json: value for "${key}" must be a string`);
+            continue;
+          }
+
+          // Value must contain at least one {identifier} tag
+          const tags = value.match(TAG_RE);
+          if (!tags || tags.length === 0) {
+            errors.push(
+              `replacements.json: value for "${key}" must contain at least one {identifier} tag, got "${value}"`
+            );
+          }
+
+          // All curly-brace tokens in value must be safe identifiers (no control tags)
+          const allBraces = value.match(ANY_BRACE_RE);
+          if (allBraces) {
+            for (const token of allBraces) {
+              if (!SAFE_TAG_RE.test(token)) {
+                errors.push(
+                  `replacements.json: unsafe tag "${token}" in value for "${key}". Only {identifier} tags allowed.`
+                );
+              }
+            }
+          }
+
+          // Value must not contain the source key (infinite loop prevention)
+          if (value.includes(key)) {
+            errors.push(
+              `replacements.json: value for "${key}" contains the key itself (would cause infinite loop)`
+            );
           }
         }
       }
@@ -59,7 +109,20 @@ export function validateRecipe(recipeDir: string, recipeId: string): RecipeValid
       errors.push(`replacements.json: ${(err as Error).message}`);
     }
   } else {
-    warnings.push('replacements.json not found (required for non-scaffold recipes)');
+    if (strict) {
+      errors.push('replacements.json not found (required for runnable recipes)');
+    } else {
+      warnings.push('replacements.json not found (required for runnable recipes)');
+    }
+  }
+
+  // schema.json is required for non-scaffold recipes
+  if (!hasSchema) {
+    if (strict) {
+      errors.push('schema.json not found (required for runnable recipes)');
+    } else {
+      warnings.push('schema.json not found (required for runnable recipes)');
+    }
   }
 
   // Validate schema.json field coverage
@@ -93,10 +156,10 @@ export function validateRecipe(recipeDir: string, recipeId: string): RecipeValid
     try {
       const raw = readFileSync(cleanPath, 'utf-8');
       CleanConfigSchema.parse(JSON.parse(raw));
-    } catch (err) {
+    } catch {
       errors.push(`clean.json: invalid format`);
     }
   }
 
-  return { recipeId, valid: errors.length === 0, errors, warnings };
+  return { recipeId, valid: errors.length === 0, scaffold: false, errors, warnings };
 }

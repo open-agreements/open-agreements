@@ -1,0 +1,13 @@
+{
+  "[Company Name]": "{company_name}",
+  "[Investor Name]": "{investor_name}",
+  "[__________]": "{purchase_amount}",
+  "[100 minus the discount]": "{discount_rate}",
+  "[Date of Safe]": "{date_of_safe}",
+  "[State of Incorporation]": "{state_of_incorporation}",
+  "[Governing Law Jurisdiction]": "{governing_law_jurisdiction}",
+  "[COMPANY]": "{company}",
+  "[COMPANY NAME]": "{company_name_caps}",
+  "[name]": "{name}",
+  "[title]": "{title}"
+}

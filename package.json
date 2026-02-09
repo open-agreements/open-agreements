@@ -1,5 +1,5 @@
 {
-  "name": "@usejunior/open-agreements",
+  "name": "open-agreements",
   "version": "0.1.0",
   "description": "Open-source legal template filling CLI and library",
   "type": "module",
@@ -14,6 +14,16 @@
       "types": "./dist/index.d.ts"
     }
   },
+  "files": [
+    "dist/",
+    "bin/",
+    "templates/",
+    "external/",
+    "recipes/",
+    "skills/",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
@@ -34,7 +44,6 @@
   "author": "UseJunior <steven@usejunior.com>",
   "license": "MIT",
   "dependencies": {
-    "@types/adm-zip": "^0.5.7",
     "adm-zip": "^0.5.16",
     "commander": "^13.1.0",
     "docx-templates": "^4.13.0",
@@ -43,10 +52,14 @@
     "zod": "^3.24.0"
   },
   "devDependencies": {
+    "@types/adm-zip": "^0.5.7",
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^22.13.0",
+    "@eslint/js": "^9.39.2",
     "docx": "^9.5.1",
     "eslint": "^9.19.0",
+    "globals": "^14.0.0",
+    "typescript-eslint": "^8.54.0",
     "typescript": "^5.7.0",
     "vitest": "^3.0.0"
   },

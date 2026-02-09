@@ -22,16 +22,31 @@ export {
   type License,
 } from './core/metadata.js';
 
+// External template engine
+export {
+  runExternalFill,
+  type ExternalFillOptions,
+  type ExternalFillResult,
+} from './core/external/index.js';
+
+// Metadata schemas and loaders (external)
+export {
+  loadExternalMetadata,
+  validateExternalMetadata,
+  ExternalMetadataSchema,
+  type ExternalMetadata,
+} from './core/metadata.js';
+
 // Template validation
 export { validateTemplate, type TemplateValidationResult } from './core/validation/template.js';
 export { validateLicense, type LicenseValidationResult } from './core/validation/license.js';
 export { validateOutput, type OutputValidationResult } from './core/validation/output.js';
 export { validateRecipe, type RecipeValidationResult } from './core/validation/recipe.js';
+export { validateExternal, type ExternalValidationResult } from './core/validation/external.js';
 
 // Recipe engine
 export {
   runRecipe,
-  downloadSource,
   cleanDocument,
   patchDocument,
   verifyOutput,

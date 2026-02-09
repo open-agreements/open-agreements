@@ -5,16 +5,16 @@ Standard agreements (NDAs, cloud terms, PSAs) are slow to draft and easy to drif
 
 ## What Changes
 - TypeScript CLI (`open-agreements`) with Commander.js
-- **Two-tier architecture**: hosted templates (CC BY 4.0) + recipes (non-redistributable sources like NVCA)
+- **Two-tier architecture**: internal templates (CC BY 4.0, hosted with `{tag}` placeholders) + external templates (CC BY-ND 4.0, vendored unchanged with `source_sha256` integrity check)
 - DOCX template rendering via `docx-templates` (MIT) — shared by both tiers
-- **Recipe engine** for non-redistributable documents: DOCX cleaning (footnote/note removal via PizZip + fast-xml-parser) + cross-run placeholder patching + verification
+- External templates (YC SAFEs, future NVCA documents) filled the same way as internal templates; derivatives exist only transiently on the user's machine
 - Zod validation pipeline (template metadata, recipe metadata, license compliance, output structure)
 - Agent-agnostic skill architecture via ToolCommandAdapter pattern (Claude Code adapter for v1)
 - 3 initial CC BY 4.0 templates: Common Paper Mutual NDA, Bonterms Mutual NDA, Common Paper Cloud Service Agreement
-- NVCA financing document recipes (Voting Agreement, Stock Purchase Agreement, Investors' Rights Agreement, ROFR/Co-Sale Agreement, Certificate of Incorporation, + 2 optional)
+- 4 YC SAFE external templates (valuation cap, discount, MFN, pro-rata side letter)
 - CI guardrails to prevent CC BY-ND license violations and copyrighted content in recipe directories
 
 ## Impact
 - Affected specs: New capability `open-agreements` (templates + recipes)
 - Affected code: New repository
-- Dependencies: docx-templates, PizZip, fast-xml-parser, Zod, Commander.js, AdmZip
+- Dependencies: docx-templates, Zod, Commander.js, AdmZip, @xmldom/xmldom

@@ -1,4 +1,4 @@
-import { readFileSync, existsSync } from 'node:fs';
+import { existsSync } from 'node:fs';
 import { join } from 'node:path';
 import AdmZip from 'adm-zip';
 import { loadMetadata } from '../metadata.js';
@@ -68,7 +68,7 @@ export function validateTemplate(templateDir: string, templateId: string): Templ
     };
   }
 
-  // Extract text from DOCX and find {tag} placeholders
+  // Extract text from DOCX and find {tag} placeholders and {IF field} conditionals
   const text = extractDocxText(templatePath);
   const placeholderRegex = /\{(\w+)\}/g;
   const foundTags = new Set<string>();
@@ -77,11 +77,28 @@ export function validateTemplate(templateDir: string, templateId: string): Templ
     foundTags.add(match[1]);
   }
 
+  // Also find fields used in IF conditions (boolean fields appear here, not as {field})
+  const conditionalRegex = /\{IF !?(\w+)\}/g;
+  const foundConditionalFields = new Set<string>();
+  let condMatch;
+  while ((condMatch = conditionalRegex.exec(text)) !== null) {
+    foundConditionalFields.add(condMatch[1]);
+  }
+
   const metadataFieldNames = new Set(metadata.fields.map((f) => f.name));
+
+  // Security: scan for docx-templates control/code tags that should not exist
+  // in open-source templates. Only simple {identifier} tags are allowed.
+  const rawXml = extractRawDocumentXml(templatePath);
+  if (rawXml) {
+    scanForUnsafeTemplateTags(rawXml, errors);
+  }
 
   // Check for fields in metadata but not in DOCX
   for (const fieldName of metadataFieldNames) {
-    if (!foundTags.has(fieldName)) {
+    // A field can appear as {field} (simple tag) or in {IF field}/{IF !field} (conditional)
+    const inDocx = foundTags.has(fieldName) || foundConditionalFields.has(fieldName);
+    if (!inDocx) {
       const field = metadata.fields.find((f) => f.name === fieldName);
       if (field?.required) {
         errors.push(
@@ -96,7 +113,10 @@ export function validateTemplate(templateDir: string, templateId: string): Templ
   }
 
   // Check for placeholders in DOCX but not in metadata
+  // Skip control tokens (IF, END) that aren't field names
+  const controlTokens = new Set(['IF', 'END']);
   for (const tag of foundTags) {
+    if (controlTokens.has(tag)) continue;
     if (!metadataFieldNames.has(tag)) {
       warnings.push(
         `Placeholder {${tag}} found in template.docx but not defined in metadata fields`
@@ -105,4 +125,61 @@ export function validateTemplate(templateDir: string, templateId: string): Templ
   }
 
   return { templateId, valid: errors.length === 0, errors, warnings };
+}
+
+/**
+ * Extract raw word/document.xml string from a DOCX file.
+ */
+function extractRawDocumentXml(docxPath: string): string | null {
+  const zip = new AdmZip(docxPath);
+  const entry = zip.getEntry('word/document.xml');
+  if (!entry) return null;
+  return entry.getData().toString('utf-8');
+}
+
+/** Allowed tag pattern: simple {identifier}, {IF [!]identifier}, or {END-IF}. */
+const SAFE_TAG_RE = /^\{(?:[a-zA-Z_][a-zA-Z0-9_]*|IF !?[a-zA-Z_][a-zA-Z0-9_]*|END-IF)\}$/;
+
+/**
+ * Scan the raw OOXML text content for any {…} tokens and reject ones that
+ * are not simple identifiers. This blocks docx-templates control tags
+ * ({#if}, {/if}, {>partial}, {= expression}, etc.) that could execute
+ * arbitrary code in the Node VM sandbox.
+ *
+ * We extract text from <w:t> elements and scan for curly-brace tokens,
+ * then also check across run boundaries within paragraphs.
+ */
+function scanForUnsafeTemplateTags(xml: string, errors: string[]): void {
+  // Extract all text content from <w:t> elements and reassemble per-paragraph
+  const paragraphs: string[] = [];
+  const paraRegex = /<w:p[\s>][\s\S]*?<\/w:p>/g;
+  let paraMatch;
+  while ((paraMatch = paraRegex.exec(xml)) !== null) {
+    const paraXml = paraMatch[0];
+    const textParts: string[] = [];
+    const tRegex = /<w:t[^>]*>([^<]*)<\/w:t>/g;
+    let tMatch;
+    while ((tMatch = tRegex.exec(paraXml)) !== null) {
+      textParts.push(tMatch[1]);
+    }
+    if (textParts.length > 0) {
+      paragraphs.push(textParts.join(''));
+    }
+  }
+
+  const fullText = paragraphs.join('\n');
+
+  // Find all {…} tokens in the reassembled text
+  const tokenRegex = /\{[^}]+\}/g;
+  let tokenMatch;
+  while ((tokenMatch = tokenRegex.exec(fullText)) !== null) {
+    const token = tokenMatch[0];
+    if (!SAFE_TAG_RE.test(token)) {
+      errors.push(
+        `Unsafe template tag "${token}" found in template.docx. ` +
+        `Only simple {identifier}, {IF [!]identifier}, and {END-IF} tags are allowed. ` +
+        `Control tags ({#...}, {/...}, {>...}, {=...}) are not permitted in open-source templates.`
+      );
+    }
+  }
 }

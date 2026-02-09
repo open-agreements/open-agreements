@@ -3,20 +3,19 @@ import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { createReport } from 'docx-templates';
 import { readFileSync, writeFileSync } from 'node:fs';
-import AdmZip from 'adm-zip';
 import { loadRecipeMetadata, loadCleanConfig } from '../metadata.js';
 import { resolveRecipeDir } from '../../utils/paths.js';
-import { downloadSource } from './downloader.js';
 import { cleanDocument } from './cleaner.js';
 import { patchDocument } from './patcher.js';
 import { verifyOutput } from './verifier.js';
 import type { RecipeRunOptions, RecipeRunResult } from './types.js';
 
 /**
- * Run the full recipe pipeline: download → clean → patch → fill → verify.
+ * Run the full recipe pipeline: clean → patch → fill → verify.
+ * Requires a local input DOCX file.
  */
 export async function runRecipe(options: RecipeRunOptions): Promise<RecipeRunResult> {
-  const { recipeId, outputPath, values, keepIntermediate } = options;
+  const { recipeId, inputPath, outputPath, values, keepIntermediate } = options;
   const recipeDir = resolveRecipeDir(recipeId);
 
   const metadata = loadRecipeMetadata(recipeDir);
@@ -36,28 +35,21 @@ export async function runRecipe(options: RecipeRunOptions): Promise<RecipeRunRes
   };
 
   try {
-    // Stage 1: Download or copy input
-    let inputPath: string;
-    if (options.inputPath) {
-      inputPath = join(tempDir, 'source.docx');
-      copyFileSync(options.inputPath, inputPath);
-    } else {
-      inputPath = join(tempDir, 'source.docx');
-      await downloadSource(metadata.source_url, inputPath);
-      stages.download = inputPath;
-    }
+    // Copy input to temp dir
+    const sourcePath = join(tempDir, 'source.docx');
+    copyFileSync(inputPath, sourcePath);
 
-    // Stage 2: Clean
+    // Stage 1: Clean
     const cleanedPath = join(tempDir, 'cleaned.docx');
-    await cleanDocument(inputPath, cleanedPath, cleanConfig);
+    await cleanDocument(sourcePath, cleanedPath, cleanConfig);
     stages.clean = cleanedPath;
 
-    // Stage 3: Patch (replace [brackets] with {template_tags})
+    // Stage 2: Patch (replace [brackets] with {template_tags})
     const patchedPath = join(tempDir, 'patched.docx');
     await patchDocument(cleanedPath, patchedPath, replacements);
     stages.patch = patchedPath;
 
-    // Stage 4: Fill (render template tags with values)
+    // Stage 3: Fill (render template tags with values)
     const filledPath = join(tempDir, 'filled.docx');
     const templateBuf = readFileSync(patchedPath);
     const filledBuf = await createReport({
@@ -68,7 +60,7 @@ export async function runRecipe(options: RecipeRunOptions): Promise<RecipeRunRes
     writeFileSync(filledPath, filledBuf);
     stages.fill = filledPath;
 
-    // Stage 5: Verify
+    // Stage 4: Verify
     const verifyResult = await verifyOutput(filledPath, values, replacements, cleanConfig);
     if (!verifyResult.passed) {
       const failures = verifyResult.checks
@@ -98,8 +90,9 @@ export async function runRecipe(options: RecipeRunOptions): Promise<RecipeRunRes
   }
 }
 
-export { downloadSource } from './downloader.js';
 export { cleanDocument } from './cleaner.js';
 export { patchDocument } from './patcher.js';
-export { verifyOutput } from './verifier.js';
+export { verifyOutput, normalizeText } from './verifier.js';
+export { enumerateTextParts, getGeneralTextPartNames } from './ooxml-parts.js';
+export type { OoxmlTextParts } from './ooxml-parts.js';
 export type { RecipeRunOptions, RecipeRunResult, VerifyResult, VerifyCheck } from './types.js';

@@ -7,8 +7,12 @@ export interface LicenseValidationResult {
 }
 
 /**
- * Validate that a template's license allows derivative works.
- * Templates with allow_derivatives=false cannot be filled (rendered).
+ * Validate a template's license metadata.
+ *
+ * The allow_derivatives field means "the committed source DOCX must not be
+ * modified" when false.  It does NOT prevent the tool from rendering filled
+ * output — that decision is made by the fill command based on directory
+ * context (templates/ vs external/).
  */
 export function validateLicense(templateDir: string, templateId: string): LicenseValidationResult {
   const errors: string[] = [];
@@ -24,17 +28,13 @@ export function validateLicense(templateDir: string, templateId: string): Licens
     };
   }
 
-  if (!metadata.allow_derivatives) {
+  // CC-BY-4.0 and CC-BY-ND-4.0 require attribution text
+  if (
+    (metadata.license === 'CC-BY-4.0' || metadata.license === 'CC-BY-ND-4.0') &&
+    !metadata.attribution_text.trim()
+  ) {
     errors.push(
-      `Template "${metadata.name}" (${metadata.license}) does not allow derivatives. ` +
-      'This template cannot be used for rendering filled documents.'
-    );
-  }
-
-  // CC-BY-4.0 requires attribution text
-  if (metadata.license === 'CC-BY-4.0' && !metadata.attribution_text.trim()) {
-    errors.push(
-      'CC-BY-4.0 license requires attribution_text to be non-empty.'
+      `${metadata.license} license requires attribution_text to be non-empty.`
     );
   }
 

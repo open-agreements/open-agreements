@@ -1,0 +1,9 @@
+{
+  "[Company Name]": "{company_name}",
+  "[Investor Name]": "{investor_name}",
+  "[Date of Safe]": "{date_of_safe}",
+  "[COMPANY NAME]": "{company_name_caps}",
+  "[INVESTOR NAME]": "{investor_name_caps}",
+  "[name]": "{name}",
+  "[title]": "{title}"
+}

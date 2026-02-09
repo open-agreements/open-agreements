@@ -36,7 +36,7 @@ with sandboxing disabled despite plans to accept contributed templates.
   multi-commit PRs)
 - **Strengthen metadata schema**: enum fields require `options`, defaults validate
   against declared type
-- **Warn on unknown fill keys**: typos in `--party_1_nme` silently pass today
+- **Warn on unknown fill keys**: typos in `--set party_1_nme=value` silently pass today
 - **Fix extractDocxText joins**: operate per-paragraph to avoid false tag matches
   across `<w:t>` element boundaries
 - Remove unused `jszip` and `fast-xml-parser` dependencies

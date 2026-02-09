@@ -1,0 +1,10 @@
+{
+  "name": "open-agreements",
+  "version": "0.1.0",
+  "description": "Fill standard legal agreement templates and produce signable DOCX files. Supports Common Paper and Bonterms templates.",
+  "author": {
+    "name": "Open Agreements",
+    "email": "steven@usejunior.com"
+  },
+  "license": "MIT"
+}

@@ -27,28 +27,18 @@ fillCmd
   .argument('<template>', 'Template name to fill')
   .option('-o, --output <path>', 'Output file path')
   .option('-d, --data <json-file>', 'JSON file with field values')
-  .allowUnknownOption(true)
-  .allowExcessArguments(true)
-  .action(async (template: string, opts: { output?: string; data?: string }) => {
+  .option('--set <key=value...>', 'Set a field value (repeatable)')
+  .action(async (template: string, opts: { output?: string; data?: string; set?: string[] }) => {
     let values: Record<string, string> = {};
 
     if (opts.data) {
       values = JSON.parse(readFileSync(opts.data, 'utf-8'));
     }
 
-    // Also parse --field_name "value" pairs from raw argv
-    const parseArgs = process.argv.slice(process.argv.indexOf(template) + 1);
-    for (let i = 0; i < parseArgs.length; i++) {
-      const arg = parseArgs[i];
-      if (arg === '-o' || arg === '--output' || arg === '-d' || arg === '--data') {
-        i++;
-        continue;
-      }
-      if (arg.startsWith('--') && i + 1 < parseArgs.length) {
-        const key = arg.slice(2).replace(/-/g, '_');
-        values[key] = parseArgs[i + 1];
-        i++;
-      }
+    for (const pair of opts.set ?? []) {
+      const eq = pair.indexOf('=');
+      if (eq < 1) throw new Error(`Invalid --set format: "${pair}" (expected key=value)`);
+      values[pair.slice(0, eq)] = pair.slice(eq + 1);
     }
 
     await runFill({ template, output: opts.output, values });
@@ -61,8 +51,9 @@ program.addCommand(fillCmd);
 program
   .command('validate [template]')
   .description('Run validation pipeline on all templates and recipes')
-  .action((template?: string) => {
-    runValidate({ template });
+  .option('--strict', 'Treat warnings (scaffolds, missing files) as errors')
+  .action((template: string | undefined, opts: { strict?: boolean }) => {
+    runValidate({ template, strict: opts.strict });
   });
 
 // --- List command ---
@@ -70,8 +61,12 @@ program
 program
   .command('list')
   .description('Show available templates and recipes')
-  .action(() => {
-    runList();
+  .option('--json', 'Output machine-readable JSON with full field definitions')
+  .option('--json-strict', 'Like --json but exit non-zero if any metadata fails')
+  .option('--templates-only', 'Show only templates')
+  .option('--recipes-only', 'Show only recipes')
+  .action((opts: { json?: boolean; jsonStrict?: boolean; templatesOnly?: boolean; recipesOnly?: boolean }) => {
+    runList({ json: opts.json, jsonStrict: opts.jsonStrict, templatesOnly: opts.templatesOnly, recipesOnly: opts.recipesOnly });
   });
 
 // --- Recipe command ---
@@ -81,12 +76,12 @@ recipeCmd.description('Work with recipe-based document pipelines');
 
 recipeCmd
   .command('run <recipe-id>')
-  .description('Run the full recipe pipeline (download → clean → patch → fill → verify)')
-  .option('-i, --input <path>', 'User-supplied source DOCX (skips download)')
+  .description('Run the full recipe pipeline (clean → patch → fill → verify)')
+  .requiredOption('-i, --input <path>', 'Source DOCX file to process')
   .option('-o, --output <path>', 'Output file path')
   .option('-d, --data <json-file>', 'JSON file with field values')
   .option('--keep-intermediate', 'Preserve intermediate files')
-  .action(async (recipeId: string, opts: { input?: string; output?: string; data?: string; keepIntermediate?: boolean }) => {
+  .action(async (recipeId: string, opts: { input: string; output?: string; data?: string; keepIntermediate?: boolean }) => {
     await runRecipeCommand({
       recipeId,
       input: opts.input,

@@ -1,12 +1,14 @@
 import { readdirSync, existsSync } from 'node:fs';
-import { validateMetadata, validateRecipeMetadata } from '../core/metadata.js';
+import { validateMetadata } from '../core/metadata.js';
 import { validateTemplate } from '../core/validation/template.js';
 import { validateLicense } from '../core/validation/license.js';
 import { validateRecipe } from '../core/validation/recipe.js';
-import { getTemplatesDir, resolveTemplateDir, getRecipesDir, resolveRecipeDir } from '../utils/paths.js';
+import { validateExternal } from '../core/validation/external.js';
+import { getTemplatesDir, resolveTemplateDir, getRecipesDir, resolveRecipeDir, getExternalDir, resolveExternalDir } from '../utils/paths.js';
 
 export interface ValidateArgs {
   template?: string;
+  strict?: boolean;
 }
 
 export function runValidate(args: ValidateArgs): void {
@@ -15,9 +17,14 @@ export function runValidate(args: ValidateArgs): void {
   // Validate templates
   hasErrors = validateTemplates(args) || hasErrors;
 
+  // Validate external templates (unless a specific template was requested)
+  if (!args.template) {
+    hasErrors = validateExternalTemplates() || hasErrors;
+  }
+
   // Validate recipes (unless a specific template was requested)
   if (!args.template) {
-    hasErrors = validateRecipes() || hasErrors;
+    hasErrors = validateRecipes(args) || hasErrors;
   }
 
   if (hasErrors) {
@@ -80,7 +87,41 @@ function validateTemplates(args: ValidateArgs): boolean {
   return hasErrors;
 }
 
-function validateRecipes(): boolean {
+function validateExternalTemplates(): boolean {
+  const externalDir = getExternalDir();
+  if (!existsSync(externalDir)) {
+    return false;
+  }
+
+  const externalIds = readdirSync(externalDir, { withFileTypes: true })
+    .filter((d) => d.isDirectory())
+    .map((d) => d.name);
+
+  if (externalIds.length === 0) {
+    return false;
+  }
+
+  let hasErrors = false;
+
+  for (const id of externalIds) {
+    const dir = resolveExternalDir(id);
+    console.log(`\nValidating external: ${id}`);
+
+    const result = validateExternal(dir, id);
+    if (!result.valid) {
+      hasErrors = true;
+      for (const e of result.errors) console.error(`  FAIL: ${e}`);
+    } else {
+      console.log('  PASS');
+    }
+    for (const w of result.warnings) console.log(`  WARN: ${w}`);
+  }
+
+  console.log(`\n${externalIds.length} external template(s) validated.`);
+  return hasErrors;
+}
+
+function validateRecipes(args: ValidateArgs): boolean {
   const recipesDir = getRecipesDir();
   if (!existsSync(recipesDir)) {
     return false;
@@ -100,12 +141,12 @@ function validateRecipes(): boolean {
     const dir = resolveRecipeDir(id);
     console.log(`\nValidating recipe: ${id}`);
 
-    const result = validateRecipe(dir, id);
+    const result = validateRecipe(dir, id, { strict: args.strict });
     if (!result.valid) {
       hasErrors = true;
       for (const e of result.errors) console.error(`  FAIL: ${e}`);
     } else {
-      console.log('  PASS');
+      console.log(`  PASS${result.scaffold ? ' (scaffold)' : ''}`);
     }
     for (const w of result.warnings) console.log(`  WARN: ${w}`);
   }

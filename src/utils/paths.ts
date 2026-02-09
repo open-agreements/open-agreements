@@ -1,4 +1,4 @@
-import { join, dirname } from 'node:path';
+import { join, dirname, resolve, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -10,6 +10,16 @@ export function getPackageRoot(): string {
   return join(__dirname, '..', '..');
 }
 
+/** Resolve a child directory, rejecting path traversal (e.g. "../../etc") */
+function resolveChildDir(parentDir: string, childId: string, label: string): string {
+  const resolved = resolve(join(parentDir, childId));
+  const rel = relative(resolve(parentDir), resolved);
+  if (rel.startsWith('..') || rel.startsWith(sep + sep)) {
+    throw new Error(`Invalid ${label} ID: ${childId}`);
+  }
+  return resolved;
+}
+
 /** Templates directory */
 export function getTemplatesDir(): string {
   return join(getPackageRoot(), 'templates');
@@ -17,7 +27,17 @@ export function getTemplatesDir(): string {
 
 /** Resolve a specific template directory by ID */
 export function resolveTemplateDir(templateId: string): string {
-  return join(getTemplatesDir(), templateId);
+  return resolveChildDir(getTemplatesDir(), templateId, 'template');
+}
+
+/** External templates directory */
+export function getExternalDir(): string {
+  return join(getPackageRoot(), 'external');
+}
+
+/** Resolve a specific external template directory by ID */
+export function resolveExternalDir(externalId: string): string {
+  return resolveChildDir(getExternalDir(), externalId, 'external');
 }
 
 /** Recipes directory */
@@ -27,5 +47,5 @@ export function getRecipesDir(): string {
 
 /** Resolve a specific recipe directory by ID */
 export function resolveRecipeDir(recipeId: string): string {
-  return join(getRecipesDir(), recipeId);
+  return resolveChildDir(getRecipesDir(), recipeId, 'recipe');
 }

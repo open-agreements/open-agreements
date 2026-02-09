@@ -1,0 +1,49 @@
+name: YC Pro Rata Side Letter
+description: >-
+  Y Combinator's Pro Rata Side Letter, granting the investor pro rata rights
+  in connection with a Post-Money SAFE investment.
+source_url: https://www.ycombinator.com/documents
+version: "2024.12"
+license: CC-BY-ND-4.0
+allow_derivatives: false
+attribution_text: >-
+  Based on the Y Combinator Pro Rata Side Letter, available at
+  https://www.ycombinator.com/documents. Licensed under CC BY-ND 4.0.
+  Copyright Y Combinator.
+source_sha256: 9b769a6a724da0c40e6649df8c774f49cc20dafe7247cc366ce4b98b4c2a3510
+fields:
+  - name: company_name
+    type: string
+    description: Full legal name of the company
+    required: true
+    section: Parties
+  - name: investor_name
+    type: string
+    description: Full legal name of the investor
+    required: true
+    section: Parties
+  - name: date_of_safe
+    type: date
+    description: Date of the related SAFE agreement
+    required: true
+    section: Deal Terms
+  - name: company_name_caps
+    type: string
+    description: Company name in uppercase as used in the header (e.g., "ACME INC.")
+    required: true
+    section: Signatures
+  - name: investor_name_caps
+    type: string
+    description: Investor name in uppercase as used in the header (e.g., "JANE DOE")
+    required: true
+    section: Signatures
+  - name: name
+    type: string
+    description: Name of the company signatory
+    required: true
+    section: Signatures
+  - name: title
+    type: string
+    description: Title of the company signatory (e.g., "CEO")
+    required: true
+    section: Signatures

@@ -1,12 +1,12 @@
 import { resolve } from 'node:path';
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { runRecipe, cleanDocument, patchDocument } from '../core/recipe/index.js';
-import { loadRecipeMetadata, loadCleanConfig } from '../core/metadata.js';
+import { loadCleanConfig } from '../core/metadata.js';
 import { getRecipesDir, resolveRecipeDir } from '../utils/paths.js';
 
 export interface RecipeRunArgs {
   recipeId: string;
-  input?: string;
+  input: string;
   output?: string;
   data?: string;
   keepIntermediate?: boolean;
@@ -34,7 +34,7 @@ export async function runRecipeCommand(args: RecipeRunArgs): Promise<void> {
   try {
     const result = await runRecipe({
       recipeId: args.recipeId,
-      inputPath: args.input ? resolve(args.input) : undefined,
+      inputPath: resolve(args.input),
       outputPath,
       values,
       keepIntermediate: args.keepIntermediate,

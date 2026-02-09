@@ -1,0 +1,12 @@
+{
+  "[Company Name]": "{company_name}",
+  "[Investor Name]": "{investor_name}",
+  "$[_____________] (the \u201cPurchase Amount\u201d)": "${purchase_amount} (the \u201cPurchase Amount\u201d)",
+  "$[_____________].": "${valuation_cap}.",
+  "[Date of Safe]": "{date_of_safe}",
+  "[State of Incorporation]": "{state_of_incorporation}",
+  "[Governing Law Jurisdiction]": "{governing_law_jurisdiction}",
+  "[COMPANY]": "{company}",
+  "[name]": "{name}",
+  "[title]": "{title}"
+}

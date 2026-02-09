@@ -1,10 +1,13 @@
 import { existsSync, writeFileSync } from 'node:fs';
 import AdmZip from 'adm-zip';
+import { enumerateTextParts, getGeneralTextPartNames } from '../core/recipe/ooxml-parts.js';
 
 /**
  * Scan a DOCX file and report all bracketed placeholders.
  * Classifies them as short (fill-in fields) vs long (alternative clauses).
  * Optionally outputs a draft replacements.json.
+ *
+ * Scans all general OOXML text parts (document, headers, footers, endnotes).
  */
 export function runScan(args: { input: string; outputReplacements?: string }): void {
   if (!existsSync(args.input)) {
@@ -12,12 +15,24 @@ export function runScan(args: { input: string; outputReplacements?: string }): v
     process.exit(1);
   }
 
-  const text = extractAllText(args.input);
-  const xml = extractDocumentXml(args.input);
+  const zip = new AdmZip(args.input);
+  const parts = enumerateTextParts(zip);
+  const partNames = getGeneralTextPartNames(parts);
 
-  // Find all bracketed content
-  const brackets = [...text.matchAll(/\[([^\]]+)\]/g)].map((m) => m[1]);
-  const unique = [...new Set(brackets)].sort();
+  // Collect bracketed content from all parts, tracking which part they appear in
+  const bracketsByPart = new Map<string, Set<string>>();
+  const allBrackets: string[] = [];
+
+  for (const partName of partNames) {
+    const text = extractPartText(zip, partName);
+    const brackets = [...text.matchAll(/\[([^\]]+)\]/g)].map((m) => m[1]);
+    if (brackets.length > 0) {
+      bracketsByPart.set(partName, new Set(brackets));
+      allBrackets.push(...brackets);
+    }
+  }
+
+  const unique = [...new Set(allBrackets)].sort();
 
   const shortPlaceholders: string[] = [];
   const longClauses: string[] = [];
@@ -31,9 +46,25 @@ export function runScan(args: { input: string; outputReplacements?: string }): v
   }
 
   console.log(`\n=== Scan of ${args.input} ===`);
+
+  // Report parts scanned
+  const nonDocParts = partNames.filter((p) => p !== 'word/document.xml');
+  if (nonDocParts.length > 0) {
+    console.log(`Parts scanned: document.xml + ${nonDocParts.length} additional (${nonDocParts.join(', ')})`);
+  }
+
   console.log(`\nShort placeholders (${shortPlaceholders.length}):`);
   for (const p of shortPlaceholders) {
-    console.log(`  ${p}`);
+    // Note which parts contain this placeholder (if outside document.xml)
+    const inner = p.slice(1, -1);
+    const locations: string[] = [];
+    for (const [partName, brackets] of bracketsByPart) {
+      if (partName !== 'word/document.xml' && brackets.has(inner)) {
+        locations.push(partName.replace('word/', ''));
+      }
+    }
+    const suffix = locations.length > 0 ? `  (also in: ${locations.join(', ')})` : '';
+    console.log(`  ${p}${suffix}`);
   }
 
   console.log(`\nLong clauses/alternatives (${longClauses.length}) — skipped by recipe:`);
@@ -42,12 +73,17 @@ export function runScan(args: { input: string; outputReplacements?: string }): v
   }
 
   // Footnote count
-  const footnoteCount = countFootnotes(args.input);
+  const footnoteCount = countFootnotes(zip);
   console.log(`\nFootnotes: ${footnoteCount} explanatory footnote(s)`);
 
-  // Underscore blanks
-  const blanks = text.match(/_{3,}/g) ?? [];
-  console.log(`Underscore blanks: ${blanks.length} occurrence(s)`);
+  // Underscore blanks (from all parts)
+  let totalBlanks = 0;
+  for (const partName of partNames) {
+    const text = extractPartText(zip, partName);
+    const blanks = text.match(/_{3,}/g) ?? [];
+    totalBlanks += blanks.length;
+  }
+  console.log(`Underscore blanks: ${totalBlanks} occurrence(s)`);
 
   // Output draft replacements.json
   if (args.outputReplacements) {
@@ -67,9 +103,8 @@ export function runScan(args: { input: string; outputReplacements?: string }): v
   console.log('');
 }
 
-function extractAllText(docxPath: string): string {
-  const zip = new AdmZip(docxPath);
-  const entry = zip.getEntry('word/document.xml');
+function extractPartText(zip: AdmZip, partName: string): string {
+  const entry = zip.getEntry(partName);
   if (!entry) return '';
   const xml = entry.getData().toString('utf-8');
 
@@ -91,15 +126,7 @@ function extractAllText(docxPath: string): string {
   return paragraphs.join('\n');
 }
 
-function extractDocumentXml(docxPath: string): string {
-  const zip = new AdmZip(docxPath);
-  const entry = zip.getEntry('word/document.xml');
-  if (!entry) return '';
-  return entry.getData().toString('utf-8');
-}
-
-function countFootnotes(docxPath: string): number {
-  const zip = new AdmZip(docxPath);
+function countFootnotes(zip: AdmZip): number {
   const entry = zip.getEntry('word/footnotes.xml');
   if (!entry) return 0;
   const xml = entry.getData().toString('utf-8');

@@ -1,12 +1,19 @@
 # OpenAgreements
 
+[![npm version](https://img.shields.io/npm/v/open-agreements)](https://www.npmjs.com/package/open-agreements)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Agent Skill](https://img.shields.io/badge/agent--skill-open--agreements-purple)](https://skills.sh)
+
 Open-source legal template filling CLI and library. Generate standard agreements (NDAs, cloud terms, service agreements) from DOCX templates with simple variable substitution.
 
 ## Quick Start
 
 ```bash
-# Install
-npm install @usejunior/open-agreements
+# Install globally
+npm install -g open-agreements
+
+# Or run without installing (requires Node.js >=20)
+npx -y open-agreements list
 
 # List available templates
 open-agreements list
@@ -62,8 +69,8 @@ Render a filled DOCX from a template.
 # Using a JSON data file
 open-agreements fill common-paper-mutual-nda -d data.json -o output.docx
 
-# Using CLI flags
-open-agreements fill common-paper-mutual-nda --party_1_name "Acme Corp" --governing_law "Delaware"
+# Using inline --set flags
+open-agreements fill common-paper-mutual-nda --set party_1_name="Acme Corp" --set governing_law="Delaware"
 ```
 
 ### `validate [template]`
@@ -81,6 +88,9 @@ Show available templates with license info and field counts.
 
 ```bash
 open-agreements list
+
+# Machine-readable JSON output (for agent skills and automation)
+open-agreements list --json
 ```
 
 ## Adding Templates
@@ -92,6 +102,16 @@ Requirements:
 - Include `metadata.yaml` with all required fields
 - Include attribution text per license requirements
 - All placeholders must use `{field_name}` syntax
+
+## Agent Skill
+
+OpenAgreements is available as an [Agent Skill](https://skills.sh) for Claude Code, Cursor, Copilot, Gemini, and other AI coding agents:
+
+```bash
+npx skills add open-agreements/open-agreements
+```
+
+The skill discovers templates dynamically, interviews users for field values, and renders signable DOCX files -- all with zero pre-installation required.
 
 ## Architecture
 

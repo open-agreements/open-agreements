@@ -3,7 +3,7 @@ import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import yaml from 'js-yaml';
 
-export const LicenseEnum = z.enum(['CC-BY-4.0', 'CC0-1.0']);
+export const LicenseEnum = z.enum(['CC-BY-4.0', 'CC0-1.0', 'CC-BY-ND-4.0']);
 export type License = z.infer<typeof LicenseEnum>;
 
 export const FieldDefinitionSchema = z.object({
@@ -40,6 +40,13 @@ export const TemplateMetadataSchema = z.object({
 });
 export type TemplateMetadata = z.infer<typeof TemplateMetadataSchema>;
 
+// --- External template schemas ---
+
+export const ExternalMetadataSchema = TemplateMetadataSchema.extend({
+  source_sha256: z.string(),
+});
+export type ExternalMetadata = z.infer<typeof ExternalMetadataSchema>;
+
 // --- Recipe schemas ---
 
 export const CleanConfigSchema = z.object({
@@ -71,6 +78,32 @@ export function loadMetadata(templateDir: string): TemplateMetadata {
 export function validateMetadata(templateDir: string): { valid: boolean; errors: string[] } {
   try {
     loadMetadata(templateDir);
+    return { valid: true, errors: [] };
+  } catch (err) {
+    if (err instanceof z.ZodError) {
+      return {
+        valid: false,
+        errors: err.issues.map(
+          (i) => `${i.path.join('.')}: ${i.message}`
+        ),
+      };
+    }
+    return { valid: false, errors: [(err as Error).message] };
+  }
+}
+
+// --- External template loaders ---
+
+export function loadExternalMetadata(externalDir: string): ExternalMetadata {
+  const metadataPath = join(externalDir, 'metadata.yaml');
+  const raw = readFileSync(metadataPath, 'utf-8');
+  const parsed = yaml.load(raw);
+  return ExternalMetadataSchema.parse(parsed);
+}
+
+export function validateExternalMetadata(externalDir: string): { valid: boolean; errors: string[] } {
+  try {
+    loadExternalMetadata(externalDir);
     return { valid: true, errors: [] };
   } catch (err) {
     if (err instanceof z.ZodError) {

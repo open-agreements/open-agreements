@@ -3,13 +3,13 @@
 ## Installation
 
 ```bash
-npm install @usejunior/open-agreements
+npm install -g open-agreements
 ```
 
 Or clone and build from source:
 
 ```bash
-git clone https://github.com/usejunior/open-agreements.git
+git clone https://github.com/open-agreements/open-agreements.git
 cd open-agreements
 npm install
 npm run build

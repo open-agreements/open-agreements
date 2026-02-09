@@ -1,12 +1,16 @@
 import AdmZip from 'adm-zip';
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
 import type { CleanConfig } from '../metadata.js';
+import { enumerateTextParts, getGeneralTextPartNames } from './ooxml-parts.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 
 /**
  * Clean a DOCX document by removing footnotes and pattern-matched paragraphs.
  * Operates at the OOXML level to preserve formatting of retained content.
+ *
+ * Processes all general OOXML text parts (document, headers, footers, endnotes).
+ * Footnotes.xml is handled separately with its separator/continuationSeparator logic.
  *
  * Note: Internal helpers use `any` for DOM nodes because @xmldom/xmldom's types
  * are incompatible with the global DOM types (missing EventTarget methods).
@@ -20,10 +24,15 @@ export async function cleanDocument(
   const parser = new DOMParser();
   const serializer = new XMLSerializer();
 
-  // Clean document.xml
-  const docEntry = zip.getEntry('word/document.xml');
-  if (docEntry) {
-    const xml = docEntry.getData().toString('utf-8');
+  const parts = enumerateTextParts(zip);
+  const generalParts = getGeneralTextPartNames(parts);
+
+  // Clean all general text parts (document, headers, footers, endnotes)
+  for (const partName of generalParts) {
+    const entry = zip.getEntry(partName);
+    if (!entry) continue;
+
+    const xml = entry.getData().toString('utf-8');
     const doc = parser.parseFromString(xml, 'text/xml');
 
     if (config.removeFootnotes) {
@@ -34,17 +43,17 @@ export async function cleanDocument(
       removeParagraphsByPattern(doc, config.removeParagraphPatterns);
     }
 
-    zip.updateFile('word/document.xml', Buffer.from(serializer.serializeToString(doc), 'utf-8'));
+    zip.updateFile(partName, Buffer.from(serializer.serializeToString(doc), 'utf-8'));
   }
 
-  // Clean footnotes.xml
-  if (config.removeFootnotes) {
-    const footnotesEntry = zip.getEntry('word/footnotes.xml');
+  // Clean footnotes.xml separately (has separator/continuationSeparator logic)
+  if (config.removeFootnotes && parts.footnotes) {
+    const footnotesEntry = zip.getEntry(parts.footnotes);
     if (footnotesEntry) {
       const xml = footnotesEntry.getData().toString('utf-8');
       const doc = parser.parseFromString(xml, 'text/xml');
       removeNormalFootnotes(doc);
-      zip.updateFile('word/footnotes.xml', Buffer.from(serializer.serializeToString(doc), 'utf-8'));
+      zip.updateFile(parts.footnotes, Buffer.from(serializer.serializeToString(doc), 'utf-8'));
     }
   }
 
