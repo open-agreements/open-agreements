@@ -19,3 +19,13 @@ export function getTemplatesDir(): string {
 export function resolveTemplateDir(templateId: string): string {
   return join(getTemplatesDir(), templateId);
 }
+
+/** Recipes directory */
+export function getRecipesDir(): string {
+  return join(getPackageRoot(), 'recipes');
+}
+
+/** Resolve a specific recipe directory by ID */
+export function resolveRecipeDir(recipeId: string): string {
+  return join(getRecipesDir(), recipeId);
+}
