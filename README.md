@@ -44,11 +44,19 @@ Claude interviews you for field values, then renders the filled DOCX automatical
 
 ## Templates
 
-| Template | Source | License |
-|----------|--------|---------|
-| Common Paper Mutual NDA | [Common Paper](https://commonpaper.com) | CC BY 4.0 |
-| Bonterms Mutual NDA | [Bonterms](https://bonterms.com) | CC BY 4.0 |
-| Common Paper Cloud Service Agreement | [Common Paper](https://commonpaper.com) | CC BY 4.0 |
+25 templates across three tiers. Run `open-agreements list` for the full inventory.
+
+| Tier | Count | Source | How It Works |
+|------|-------|--------|--------------|
+| Internal templates | 14 | [Common Paper](https://commonpaper.com), [Bonterms](https://bonterms.com) | Shipped in package, CC BY 4.0 |
+| External templates | 4 | [Y Combinator](https://www.ycombinator.com/documents) | Vendored unchanged, CC BY-ND 4.0 |
+| Recipes | 7 | [NVCA](https://nvca.org/model-legal-documents/) | Downloaded on demand (not redistributable) |
+
+**Internal templates** (NDAs, cloud terms, contractor agreements, etc.) are CC BY 4.0 — we ship the DOCX with `{tag}` placeholders.
+
+**External templates** (YC SAFEs) are CC BY-ND 4.0 — we vendor the original unchanged. The filled output is a transient derivative on your machine.
+
+**Recipes** (NVCA financing documents) are freely downloadable but not redistributable — we ship only transformation instructions and download the source DOCX from nvca.org at runtime.
 
 Each template is a self-contained directory:
 
@@ -93,15 +101,12 @@ open-agreements list
 open-agreements list --json
 ```
 
-## Adding Templates
+## Contributing
 
-See [docs/adding-templates.md](docs/adding-templates.md) for the template contribution guide.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for how to add templates, recipes, and other improvements.
 
-Requirements:
-- Template source must be CC BY 4.0 or CC0 licensed
-- Include `metadata.yaml` with all required fields
-- Include attribution text per license requirements
-- All placeholders must use `{field_name}` syntax
+- [Adding templates](docs/adding-templates.md) (CC BY 4.0 / CC0 sources)
+- [Adding recipes](docs/adding-recipes.md) (non-redistributable sources)
 
 ## Agent Skill
 
@@ -143,4 +148,4 @@ Template content is licensed under CC BY 4.0 by their respective authors. See ea
 
 ## Disclaimer
 
-This tool generates documents from standard templates. It does not provide legal advice. No affiliation with or endorsement by Common Paper, Bonterms, or any template source is implied. Consult an attorney for legal guidance.
+This tool generates documents from standard templates. It does not provide legal advice. No affiliation with or endorsement by Common Paper, Bonterms, Y Combinator, NVCA, or any template source is implied. Consult an attorney for legal guidance.
