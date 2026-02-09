@@ -4,43 +4,55 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Agent Skill](https://img.shields.io/badge/agent--skill-open--agreements-purple)](https://skills.sh)
 
-Open-source legal template filling CLI and library. Generate standard agreements (NDAs, cloud terms, service agreements) from DOCX templates with simple variable substitution.
+Fill standard legal agreement templates and produce signable DOCX files. 25 templates covering NDAs, cloud terms, contractor agreements, SAFEs, and NVCA financing documents.
 
-## Quick Start
+## Use with Claude Code
+
+OpenAgreements works as a [Claude Code plugin](https://docs.anthropic.com/en/docs/claude-code/plugins) and [Agent Skill](https://agentskills.io). No pre-installation required — Claude downloads and runs the CLI on demand via `npx`.
+
+### Option 1: Agent Skill (recommended)
+
+```bash
+npx skills add open-agreements/open-agreements
+```
+
+Then ask Claude to draft an agreement:
+
+```
+> Draft an NDA between Acme Corp and Beta Inc
+```
+
+Claude discovers available templates, interviews you for field values, and renders a signed-ready DOCX.
+
+### Option 2: Direct with Claude Code
+
+If you have Node.js >= 20, just ask Claude:
+
+```
+> Fill the Common Paper mutual NDA for my company
+```
+
+Claude runs `npx -y open-agreements@latest list --json` to discover templates, then `npx -y open-agreements@latest fill <template>` to render the output. Zero install.
+
+### Option 3: CLI
 
 ```bash
 # Install globally
 npm install -g open-agreements
 
-# Or run without installing (requires Node.js >=20)
-npx -y open-agreements list
-
 # List available templates
 open-agreements list
 
-# Fill a template with a JSON data file
+# Fill a template
 open-agreements fill common-paper-mutual-nda -d values.json -o my-nda.docx
-
-# Validate all templates
-open-agreements validate
 ```
 
-## How It Works
+### What Happens
 
-1. Choose a template (`open-agreements list`)
-2. Provide field values as JSON or via CLI flags
-3. The engine renders a filled DOCX preserving all formatting
-4. Review the output document
-
-### With Claude Code
-
-Use the built-in slash command:
-
-```
-/open-agreements
-```
-
-Claude interviews you for field values, then renders the filled DOCX automatically.
+1. Claude runs `list --json` to discover 25 templates and their fields
+2. Claude interviews you for field values (grouped by section, up to 4 questions per round)
+3. Claude runs `fill <template>` to render a DOCX preserving all original formatting
+4. You review and sign the output document
 
 ## Templates
 
@@ -108,16 +120,6 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for how to add templates, recipes, and ot
 - [Adding templates](docs/adding-templates.md) (CC BY 4.0 / CC0 sources)
 - [Adding recipes](docs/adding-recipes.md) (non-redistributable sources)
 
-## Agent Skill
-
-OpenAgreements is available as an [Agent Skill](https://skills.sh) for Claude Code, Cursor, Copilot, Gemini, and other AI coding agents:
-
-```bash
-npx skills add open-agreements/open-agreements
-```
-
-The skill discovers templates dynamically, interviews users for field values, and renders signable DOCX files -- all with zero pre-installation required.
-
 ## Architecture
 
 - **Language**: TypeScript
@@ -129,22 +131,30 @@ The skill discovers templates dynamically, interviews users for field values, an
 ```
 src/
 ├── cli/              # Commander.js CLI
-├── commands/         # fill, validate, list
+├── commands/         # fill, validate, list, recipe, scan
 ├── core/
 │   ├── engine.ts     # docx-templates wrapper
 │   ├── metadata.ts   # Zod schemas + loader
-│   ├── validation/   # template, license, output
+│   ├── recipe/       # Recipe pipeline (clean → patch → fill → verify)
+│   ├── external/     # External template support
+│   ├── validation/   # template, license, output, recipe
 │   └── command-generation/
 │       ├── types.ts  # ToolCommandAdapter interface
 │       └── adapters/ # Claude Code adapter
 └── index.ts          # Public API
 ```
 
+## Resources
+
+- [Claude Code Documentation](https://docs.anthropic.com/en/docs/claude-code)
+- [Claude Code Plugins Guide](https://docs.anthropic.com/en/docs/claude-code/plugins)
+- [Agent Skills Specification](https://agentskills.io)
+
 ## License
 
 MIT
 
-Template content is licensed under CC BY 4.0 by their respective authors. See each template's `metadata.yaml` for attribution details.
+Template content is licensed by their respective authors — CC BY 4.0 (Common Paper, Bonterms), CC BY-ND 4.0 (Y Combinator), or proprietary (NVCA, downloaded at runtime). See each template's `metadata.yaml` for details.
 
 ## Disclaimer
 
