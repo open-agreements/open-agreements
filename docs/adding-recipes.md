@@ -62,6 +62,55 @@ Map source placeholders to template tags:
 }
 ```
 
+**Critical: Keys must match actual document text.** Do NOT guess placeholder labels.
+Always derive keys from the scan output or by extracting text from the DOCX. Common
+pitfalls:
+- A placeholder labeled `[Insert Company Name]` on a signature page may appear as
+  `[____________]` (underscores) in the document body — use the body text as your key
+- Case matters: `[Company Counsel Name]` ≠ `[Company counsel name]`
+- Date patterns vary: `[_____ __, 20___]` vs `[________], 20[__]` — check exact text
+
+### Disambiguating generic underscore patterns
+
+When the same underscore pattern (e.g., `[____________]`) appears multiple times with
+different meanings, include surrounding context text in the key:
+
+```json
+{
+  "among [____________], a Delaware": "among {company_name}, a Delaware",
+  "[____________] (the \u201cInvestor\u201d)": "{investor_name} (the \u201cInvestor\u201d)"
+}
+```
+
+The patcher performs **surgical replacement**: it automatically detects common prefix/suffix
+between key and value, and only modifies the differing middle portion in the XML. This
+preserves formatting on the context text. No special syntax needed — just make sure the
+value includes the same context text as the key.
+
+Example: `"among [____________], a Delaware"` → `"among {company_name}, a Delaware"`
+- Common prefix: `"among "` (6 chars)
+- Common suffix: `", a Delaware"` (13 chars)
+- Only `[____________]` → `{company_name}` is modified in the XML
+
+### Currency and percent fields
+
+When a template has `$[amount]` (dollar sign outside the brackets), the patched template
+becomes `${field_name}`. If a user provides `$1,000,000` as the value, the output would be
+`$$1,000,000`. The `sanitizeCurrencyValues()` utility handles this automatically — it detects
+`${field}` patterns in replacements and strips leading `$` from user values. The verifier
+also checks for double dollar signs in the output.
+
+The same issue can occur with percent signs (`%`). Be aware when authoring replacements.
+
+### Two types of brackets in NVCA documents
+
+NVCA documents use brackets for two distinct purposes:
+1. **Fill-in fields**: `[Company Name]`, `[____________]` — these should be replaced
+2. **Optional/alternative clauses**: `[or consultant (excluding service solely as member
+   of the Board)]` — these should be left as-is for the drafter to decide
+
+Only map fill-in fields in `replacements.json`. Leave optional clauses alone.
+
 Tips:
 - Sort keys longest-first is handled automatically by the patcher
 - Include both smart quote and straight quote variants for the same placeholder
@@ -79,16 +128,30 @@ Tips:
 }
 ```
 
-## Step 6: Create schema.json
+## Step 6: Define fields in metadata.yaml
 
-Define all fields that replacement targets reference:
+Fields in `metadata.yaml` control default values for unfilled placeholders:
 
-```json
-{
-  "fields": [
-    { "name": "company_name", "type": "string", "description": "Full legal name" }
-  ]
-}
+- **`default: ""`** (explicit empty string): Field renders as empty — use for optional
+  fields that should be invisible when not provided (e.g., `amended_restated`)
+- **No `default` key**: Field renders as `_______` — a visible placeholder indicating
+  the field still needs to be filled in
+- **`default: "some value"`**: Field uses the specified default text
+
+```yaml
+fields:
+  - name: company_name
+    type: string
+    description: Full legal name
+    required: true           # no default → shows _______ if not provided
+  - name: amended_restated
+    type: string
+    description: "Amended and Restated or empty"
+    default: ""              # explicit empty → invisible when not provided
+  - name: judicial_district
+    type: string
+    description: Federal judicial district
+    default: District of Delaware  # default value used when not provided
 ```
 
 ## Step 7: Test
@@ -114,7 +177,8 @@ transformation instructions. This is enforced by validation.
 ## Known Limitations
 
 - Tracked changes in source documents are not handled
-- Headers and footers are not processed
 - Content controls (structured document tags) are not processed
 - Textboxes are not processed
-- Only `word/document.xml` is patched (not headers, footers, or other parts)
+
+Note: Headers, footers, and endnotes **are** processed. The patcher uses
+`enumerateTextParts()` to find all general OOXML text parts in the DOCX.

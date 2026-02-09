@@ -53,7 +53,8 @@ OpenAgreements is an open-source TypeScript CLI and library for filling standard
 - **License compliance**: Never host CC BY-ND content or create derivatives of non-derivative-licensed templates
 - **No copyrighted content in recipes**: Recipe directories must never contain `.docx` files (enforced by CI)
 - **Attribution required**: CC BY 4.0 templates must include attribution text in output
-- **Smart quotes**: Real legal DOCX files use Unicode curly quotes — replacement maps must handle both smart and straight variants
+- **Smart quotes**: Real legal DOCX files use Unicode curly quotes (`U+2018`/`U+2019` single, `U+201C`/`U+201D` double) — replacement keys in JSON must use Unicode escapes (`\u2019` etc.) to match. The `scan` tool reports these correctly; do not "fix" them to straight quotes.
+- **HTML entities in scanner vs DOM**: The `scan` tool reports raw XML text (e.g., `&amp;`), but the patcher operates on DOM-parsed text where entities are decoded (e.g., `&`). Replacement keys must use the decoded form.
 - **XML escaping**: Context values with `&`, `<`, `>` must be XML-escaped before template rendering
 
 ## Gotchas (Learned the Hard Way)
@@ -102,6 +103,24 @@ Some DOCX files use streaming (bit 3) data descriptor flags. adm-zip's `updateFi
 `writeZip()` / `toBuffer()` handle these incorrectly, producing corrupt output. The patcher
 works around this by rebuilding the zip from scratch using `addFile()` on a new `AdmZip()`
 instance instead of mutating the original.
+
+### Placeholders inside DOCX comments are not rendered
+Some Common Paper documents embed bracketed placeholders inside Word comment blocks
+(`w:comment` elements). These are not visible in the rendered document and should NOT be
+listed as fields in `metadata.yaml`. The validator will correctly report them as missing.
+Always verify placeholder locations by inspecting the rendered document, not just scanning
+raw XML.
+
+### Smart quotes require Unicode escapes in JSON replacement keys
+Common Paper DOCX files use curly/smart quotes: single (`\u2018`/`\u2019`) and double
+(`\u201c`/`\u201d`). When building `replacements.json` from `scan` output, use the exact
+Unicode escapes — do not replace with straight ASCII quotes. Example:
+`"Customer\u2019s receipt"` (correct) vs `"Customer's receipt"` (wrong — won't match).
+
+### Scanner reports raw XML entities; patcher uses decoded text
+The `scan` command reports text from raw XML, so `&amp;` appears literally. But `patchDocument()`
+parses XML into a DOM where entities are decoded (`&amp;` → `&`). Replacement keys must use
+the decoded form: `"name & date"` not `"name &amp; date"`.
 
 ### Currency values and double dollar signs
 When a template has `$[amount]` (dollar sign before the placeholder), the patched template
