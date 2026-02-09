@@ -1,7 +1,7 @@
-import { createReport } from 'docx-templates';
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { loadMetadata, type TemplateMetadata } from './metadata.js';
+import { prepareFillData, fillDocx } from './fill-pipeline.js';
 
 export interface FillOptions {
   templateDir: string;
@@ -19,9 +19,11 @@ export interface FillResult {
  * Compute display fields for radio/checkbox groups in table rows.
  * docx-templates only allows one {IF} per table row, so multi-option rows
  * use a single computed display tag that the engine populates from input fields.
+ *
+ * This is template-specific logic — only activates when metadata declares
+ * the relevant display field names.
  */
-function computeDisplayFields(data: Record<string, string | boolean>, metadata: TemplateMetadata): void {
-  const fieldNames = new Set(metadata.fields.map((f) => f.name));
+function computeDisplayFields(data: Record<string, string | boolean>, fieldNames: Set<string>): void {
   const str = (key: string): string => String(data[key] ?? '');
   const bool = (key: string): boolean => data[key] === true;
 
@@ -124,51 +126,30 @@ export async function fillTemplate(options: FillOptions): Promise<FillResult> {
   const { templateDir, values, outputPath } = options;
 
   const metadata = loadMetadata(templateDir);
+  const fieldNames = new Set(metadata.fields.map((f) => f.name));
 
-  const missing = metadata.fields
-    .filter((f) => f.required && !(f.name in values))
-    .map((f) => f.name);
-  if (missing.length > 0) {
-    throw new Error(`Missing required fields: ${missing.join(', ')}`);
-  }
-
-  // Fill in defaults for optional fields not provided by the user
-  for (const field of metadata.fields) {
-    if (!(field.name in values)) {
-      values[field.name] = field.default ?? '';
-    }
-  }
-
-  // Coerce boolean fields to actual JS booleans for IF conditions.
-  // docx-templates evaluates {IF field} in a JS context where the string
-  // "false" is truthy — only actual `false` is falsy.
-  const data: Record<string, string | boolean> = { ...values };
-  for (const field of metadata.fields) {
-    if (field.type === 'boolean' && field.name in data) {
-      const v = data[field.name];
-      data[field.name] = v === true || v === 'true';
-    }
-  }
-
-  // Compute display fields for templates that use radio/checkbox groups.
-  // docx-templates only allows one IF per table row, so multi-option rows
-  // use a single computed display tag instead of per-option conditionals.
-  computeDisplayFields(data, metadata);
+  // Prepare data using shared pipeline (defaults, booleans, display fields)
+  const data = prepareFillData({
+    values,
+    fields: metadata.fields,
+    useBlankPlaceholder: false,
+    coerceBooleans: true,
+    computeDisplayFields: (d) => computeDisplayFields(d, fieldNames),
+  });
 
   const templatePath = join(templateDir, 'template.docx');
   const templateBuf = readFileSync(templatePath);
 
   // Warn about unknown keys not in metadata
-  const metadataFieldNames = new Set(metadata.fields.map((f) => f.name));
-  const unknownKeys = Object.keys(data).filter((k) => !metadataFieldNames.has(k));
+  const unknownKeys = Object.keys(data).filter((k) => !fieldNames.has(k));
   if (unknownKeys.length > 0) {
     console.warn(`Warning: unknown field(s) not in metadata: ${unknownKeys.join(', ')}`);
   }
 
-  const output = await createReport({
-    template: templateBuf,
+  // Fill document using shared pipeline (currency sanitization + createReport)
+  const output = await fillDocx({
+    templateBuffer: templateBuf,
     data,
-    cmdDelimiter: ['{', '}'],
     fixSmartQuotes: true,
   });
 
