@@ -38,13 +38,12 @@
     "adm-zip": "^0.5.16",
     "commander": "^13.1.0",
     "docx-templates": "^4.13.0",
+    "@xmldom/xmldom": "^0.9.5",
     "js-yaml": "^4.1.0",
-    "jszip": "^3.10.1",
     "zod": "^3.24.0"
   },
   "devDependencies": {
     "@types/js-yaml": "^4.0.9",
-    "@types/jszip": "^3.4.0",
     "@types/node": "^22.13.0",
     "docx": "^9.5.1",
     "eslint": "^9.19.0",
