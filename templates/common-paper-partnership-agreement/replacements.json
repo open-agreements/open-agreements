@@ -1,0 +1,7 @@
+{
+  "{payment_terms_days} times the fees": "{cap_multiplier} times the fees",
+  "{non_renewal_notice_days} times the fees": "{cap_multiplier} times the fees",
+  "{non_renewal_notice_days}x the fees": "{cap_multiplier}x the fees",
+  "[____]": "{fill_in_detail}",
+  "[Fill in payment schedule, e.g., 30 days from receipt of invoice, 60 days before event, etc.]": "{fill_in_detail}"
+}

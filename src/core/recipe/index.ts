@@ -101,7 +101,7 @@ export async function runRecipe(options: RecipeRunOptions): Promise<RecipeRunRes
 
 export { cleanDocument } from './cleaner.js';
 export { patchDocument } from './patcher.js';
-export { verifyOutput, normalizeText } from './verifier.js';
+export { verifyOutput, normalizeText, extractAllText } from './verifier.js';
 export { ensureSourceDocx } from './downloader.js';
 export { enumerateTextParts, getGeneralTextPartNames } from './ooxml-parts.js';
 export type { OoxmlTextParts } from './ooxml-parts.js';

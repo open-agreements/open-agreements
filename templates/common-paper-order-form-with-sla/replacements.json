@@ -1,0 +1,5 @@
+{
+  "[ # ]": "{payment_terms_days}",
+  "[Describe Use Limitations, such as geographic restrictions, system requirements, etc.]": "{fill_in_value}",
+  "[describe how services fees will be billed, for example \"Invoices for these services will be sent monthly.\"]": "{fill_in_value}"
+}

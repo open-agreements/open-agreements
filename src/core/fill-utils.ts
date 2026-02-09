@@ -5,6 +5,7 @@
 import AdmZip from 'adm-zip';
 import { DOMParser } from '@xmldom/xmldom';
 import { enumerateTextParts, getGeneralTextPartNames } from './recipe/ooxml-parts.js';
+import type { VerifyResult } from './recipe/types.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 
@@ -13,39 +14,6 @@ const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
  * Makes it obvious what still needs attention in the output document.
  */
 export const BLANK_PLACEHOLDER = '_______';
-
-/**
- * Detect fields whose replacement values place a literal `$` immediately
- * before the `{field_name}` template tag (e.g. `${purchase_amount}`).
- * For those fields, strip a leading `$` from the user-provided value
- * to prevent double-dollar output like `$$1,000,000`.
- *
- * @deprecated Use {@link sanitizeCurrencyValuesFromDocx} instead — it scans
- * the DOCX buffer directly and works for all pipelines (template, recipe, external).
- */
-export function sanitizeCurrencyValues(
-  values: Record<string, string>,
-  replacements: Record<string, string>
-): Record<string, string> {
-  // Find fields where the replacement value has $ immediately before {field_name}
-  const dollarPrefixedFields = new Set<string>();
-  for (const replValue of Object.values(replacements)) {
-    const matches = replValue.matchAll(/\$\{(\w+)\}/g);
-    for (const m of matches) {
-      dollarPrefixedFields.add(m[1]);
-    }
-  }
-
-  if (dollarPrefixedFields.size === 0) return values;
-
-  const sanitized = { ...values };
-  for (const field of dollarPrefixedFields) {
-    if (sanitized[field] && sanitized[field].startsWith('$')) {
-      sanitized[field] = sanitized[field].slice(1);
-    }
-  }
-  return sanitized;
-}
 
 /**
  * Scan a DOCX template buffer for fields that have a literal `$` immediately
@@ -110,4 +78,67 @@ export function sanitizeCurrencyValuesFromDocx(
     }
   }
   return sanitized;
+}
+
+/**
+ * Verify a filled template DOCX output.
+ * Runs a subset of checks that are safe for templates:
+ * - No double dollar signs (catches currency sanitization failures)
+ * - No unrendered {template_tags} (catches fill failures)
+ *
+ * Does NOT check: leftover brackets (templates don't use them),
+ * context values present (templates use {IF} conditionals that hide values),
+ * drafting notes (stripped by fillDocx), footnotes (may be legitimate).
+ */
+export function verifyTemplateFill(outputPath: string): VerifyResult {
+  const zip = new AdmZip(outputPath);
+  const parser = new DOMParser();
+  const parts = enumerateTextParts(zip);
+  const partNames = getGeneralTextPartNames(parts);
+
+  const allParagraphs: string[] = [];
+  for (const partName of partNames) {
+    const entry = zip.getEntry(partName);
+    if (!entry) continue;
+    const xml = entry.getData().toString('utf-8');
+    const doc = parser.parseFromString(xml, 'text/xml');
+    const paras = doc.getElementsByTagNameNS(W_NS, 'p');
+    for (let i = 0; i < paras.length; i++) {
+      const tElements = paras[i].getElementsByTagNameNS(W_NS, 't');
+      const textParts: string[] = [];
+      for (let j = 0; j < tElements.length; j++) {
+        textParts.push(tElements[j].textContent ?? '');
+      }
+      if (textParts.length > 0) {
+        allParagraphs.push(textParts.join(''));
+      }
+    }
+  }
+  const rawFullText = allParagraphs.join('\n');
+
+  const checks: VerifyResult['checks'] = [];
+
+  // Check 1: No double dollar signs ($$ or $ $)
+  const doubleDollarPattern = /\$[\s\u00A0\t]*\$/;
+  const doubleDollarLines = rawFullText.split('\n').filter((line) => doubleDollarPattern.test(line));
+  checks.push({
+    name: 'No double dollar signs',
+    passed: doubleDollarLines.length === 0,
+    details: doubleDollarLines.length > 0
+      ? `Found ${doubleDollarLines.length} occurrence(s): "${doubleDollarLines[0].trim().slice(0, 80)}"`
+      : undefined,
+  });
+
+  // Check 2: No unrendered {template_tags}
+  const unrenderedTags = rawFullText.match(/\{[a-z_][a-z0-9_]*\}/gi) ?? [];
+  checks.push({
+    name: 'No unrendered template tags',
+    passed: unrenderedTags.length === 0,
+    details: unrenderedTags.length > 0 ? `Found: ${unrenderedTags.join(', ')}` : undefined,
+  });
+
+  return {
+    passed: checks.every((c) => c.passed),
+    checks,
+  };
 }

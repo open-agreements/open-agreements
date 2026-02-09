@@ -1,7 +1,12 @@
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, mkdtempSync, copyFileSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
-import { loadMetadata, type TemplateMetadata } from './metadata.js';
+import { tmpdir } from 'node:os';
+import { loadMetadata, loadCleanConfig, type TemplateMetadata } from './metadata.js';
 import { prepareFillData, fillDocx } from './fill-pipeline.js';
+import { verifyTemplateFill } from './fill-utils.js';
+import { cleanDocument } from './recipe/cleaner.js';
+import { patchDocument } from './recipe/patcher.js';
+
 
 export interface FillOptions {
   templateDir: string;
@@ -137,27 +142,63 @@ export async function fillTemplate(options: FillOptions): Promise<FillResult> {
     computeDisplayFields: (d) => computeDisplayFields(d, fieldNames),
   });
 
-  const templatePath = join(templateDir, 'template.docx');
-  const templateBuf = readFileSync(templatePath);
-
   // Warn about unknown keys not in metadata
   const unknownKeys = Object.keys(data).filter((k) => !fieldNames.has(k));
   if (unknownKeys.length > 0) {
     console.warn(`Warning: unknown field(s) not in metadata: ${unknownKeys.join(', ')}`);
   }
 
-  // Fill document using shared pipeline (currency sanitization + createReport)
-  const output = await fillDocx({
-    templateBuffer: templateBuf,
-    data,
-    fixSmartQuotes: true,
-  });
+  // Determine template buffer — run clean→patch if replacements.json exists
+  const templatePath = join(templateDir, 'template.docx');
+  const replacementsPath = join(templateDir, 'replacements.json');
+  let templateBuf: Buffer;
+  let tempDir: string | null = null;
 
-  writeFileSync(outputPath, output);
+  if (existsSync(replacementsPath)) {
+    const replacements: Record<string, string> = JSON.parse(readFileSync(replacementsPath, 'utf-8'));
+    const cleanConfig = loadCleanConfig(templateDir);
 
-  return {
-    outputPath,
-    metadata,
-    fieldsUsed: Object.keys(data),
-  };
+    tempDir = mkdtempSync(join(tmpdir(), 'template-fill-'));
+    const sourcePath = join(tempDir, 'source.docx');
+    const cleanedPath = join(tempDir, 'cleaned.docx');
+    const patchedPath = join(tempDir, 'patched.docx');
+
+    copyFileSync(templatePath, sourcePath);
+    await cleanDocument(sourcePath, cleanedPath, cleanConfig);
+    await patchDocument(cleanedPath, patchedPath, replacements);
+    templateBuf = readFileSync(patchedPath);
+  } else {
+    templateBuf = readFileSync(templatePath);
+  }
+
+  try {
+    // Fill document using shared pipeline (currency sanitization + createReport)
+    const output = await fillDocx({
+      templateBuffer: templateBuf,
+      data,
+      fixSmartQuotes: true,
+    });
+
+    writeFileSync(outputPath, output);
+
+    // Verify output — warnings only, does not throw
+    const verifyResult = verifyTemplateFill(outputPath);
+    if (!verifyResult.passed) {
+      const failures = verifyResult.checks
+        .filter((c) => !c.passed)
+        .map((c) => `${c.name}: ${c.details ?? 'failed'}`)
+        .join('; ');
+      console.warn(`Warning: verification issues: ${failures}`);
+    }
+
+    return {
+      outputPath,
+      metadata,
+      fieldsUsed: Object.keys(data),
+    };
+  } finally {
+    if (tempDir) {
+      rmSync(tempDir, { recursive: true, force: true });
+    }
+  }
 }
