@@ -38,3 +38,10 @@ fields:
     required: true
     default: courts located in San Francisco, California
     section: Legal
+  - name: deliverables_type
+    type: string
+    description: >-
+      Type of rights in deliverables: "licensed" or "assigned"
+    required: true
+    default: licensed
+    section: Terms

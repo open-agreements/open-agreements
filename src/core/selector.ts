@@ -20,8 +20,8 @@ const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 
 const TriggerSchema = z.union([
   z.literal('default'),
-  z.object({ field: z.string() }),
   z.object({ field: z.string(), equals: z.union([z.string(), z.boolean()]) }),
+  z.object({ field: z.string() }),
 ]);
 type Trigger = z.infer<typeof TriggerSchema>;
 
@@ -69,7 +69,7 @@ function extractParagraphText(para: any): string {
 }
 
 /** Check if a paragraph's text starts with a radio or checkbox marker. */
-const MARKER_RE = /^\(\s*x?\s*\)|^\[\s*x?\s*\]/i;
+const MARKER_RE = /^\(\s*x?\s*\)|^\[\s*x?\s*\]|^[\u2610\u2611\u2612]/i;
 
 function hasOptionPrefix(text: string): boolean {
   return MARKER_RE.test(text);
@@ -83,6 +83,18 @@ function setChecked(para: any, type: 'radio' | 'checkbox'): void {
   // Reconstruct the full text from all <w:t> elements
   const fullText = extractParagraphText(para);
   if (!fullText) return;
+
+  // Unicode ballot box: swap ☐/☒ → ☑
+  if (/^[\u2610\u2612]/.test(fullText)) {
+    for (let i = 0; i < tElements.length; i++) {
+      const content = tElements[i].textContent ?? '';
+      if (/[\u2610\u2612]/.test(content)) {
+        tElements[i].textContent = content.replace(/[\u2610\u2612]/, '\u2611');
+        return;
+      }
+    }
+    return;
+  }
 
   // Determine the replacement prefix
   const checkedPrefix = type === 'radio' ? '( x )' : '[ x ]';

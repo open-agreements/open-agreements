@@ -1,4 +1,4 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, vi } from 'vitest';
 import { mkdtempSync, writeFileSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
@@ -322,13 +322,14 @@ describe('prepareFillData', () => {
     expect(result.is_free).toBe('true');
   });
 
-  it('throws on missing required fields', () => {
-    expect(() =>
-      prepareFillData({
-        values: { amount: '100' },
-        fields,
-      })
-    ).toThrow('Missing required fields: company');
+  it('warns on missing required fields', () => {
+    const spy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    prepareFillData({
+      values: { amount: '100' },
+      fields,
+    });
+    expect(spy).toHaveBeenCalledWith('Warning: missing required fields: company');
+    spy.mockRestore();
   });
 
   it('calls computeDisplayFields callback', () => {
@@ -518,16 +519,7 @@ describe('Regression: behavioral divergence', () => {
     { name: 'amount', type: 'string' as const, required: false, description: 'Amount' },
   ];
 
-  it('template path defaults optional fields to empty string', () => {
-    const data = prepareFillData({
-      values: { name: 'Acme' },
-      fields: simpleFields,
-      useBlankPlaceholder: false,
-    });
-    expect(data.amount).toBe('');
-  });
-
-  it('recipe/external path defaults optional fields to BLANK_PLACEHOLDER', () => {
+  it('all paths default optional fields to BLANK_PLACEHOLDER', () => {
     const data = prepareFillData({
       values: { name: 'Acme' },
       fields: simpleFields,
@@ -562,13 +554,14 @@ describe('Regression: behavioral divergence', () => {
     expect(data.flag).toBe('false');
   });
 
-  it('template path throws on missing required fields', () => {
-    expect(() =>
-      prepareFillData({
-        values: {},
-        fields: simpleFields,
-      })
-    ).toThrow('Missing required fields: name');
+  it('template path warns on missing required fields', () => {
+    const spy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    prepareFillData({
+      values: {},
+      fields: simpleFields,
+    });
+    expect(spy).toHaveBeenCalledWith('Warning: missing required fields: name');
+    spy.mockRestore();
   });
 });
 

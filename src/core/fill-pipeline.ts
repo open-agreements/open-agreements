@@ -23,7 +23,7 @@ export interface PrepareFillDataOptions {
   /**
    * When true, unfilled optional fields default to BLANK_PLACEHOLDER ('_______')
    * so omissions are visible. When false, they default to '' (empty string).
-   * Recipes and external use true; templates use false.
+   * All fill paths use true by default.
    */
   useBlankPlaceholder?: boolean;
 
@@ -78,21 +78,21 @@ export function prepareFillData(options: PrepareFillDataOptions): Record<string,
     computeDisplayFields,
   } = options;
 
-  // Validate required fields
-  const missing = fields
-    .filter((f) => f.required && !(f.name in values))
-    .map((f) => f.name);
-  if (missing.length > 0) {
-    throw new Error(`Missing required fields: ${missing.join(', ')}`);
-  }
-
-  // Apply defaults for optional fields
+  // Apply defaults for fields not provided
   const defaultValue = useBlankPlaceholder ? BLANK_PLACEHOLDER : '';
   const data: Record<string, string | boolean> = { ...values };
   for (const field of fields) {
     if (!(field.name in data)) {
       data[field.name] = field.default ?? defaultValue;
     }
+  }
+
+  // Warn about required fields that are still unfilled (no value, no default)
+  const missing = fields
+    .filter((f) => f.required && (data[f.name] === '' || data[f.name] === BLANK_PLACEHOLDER))
+    .map((f) => f.name);
+  if (missing.length > 0) {
+    console.warn(`Warning: missing required fields: ${missing.join(', ')}`);
   }
 
   // Coerce boolean fields to actual JS booleans.

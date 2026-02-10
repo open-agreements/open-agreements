@@ -1,12 +1,9 @@
-import { readFileSync, writeFileSync, existsSync, mkdtempSync, copyFileSync, rmSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { tmpdir } from 'node:os';
 import { loadMetadata, loadCleanConfig, type TemplateMetadata } from './metadata.js';
-import { prepareFillData, fillDocx } from './fill-pipeline.js';
+import { loadSelectionsConfig } from './selector.js';
+import { runFillPipeline } from './unified-pipeline.js';
 import { verifyTemplateFill } from './fill-utils.js';
-import { cleanDocument } from './recipe/cleaner.js';
-import { patchDocument } from './recipe/patcher.js';
-import { applySelections, loadSelectionsConfig } from './selector.js';
 
 
 export interface FillOptions {
@@ -134,86 +131,44 @@ export async function fillTemplate(options: FillOptions): Promise<FillResult> {
   const metadata = loadMetadata(templateDir);
   const fieldNames = new Set(metadata.fields.map((f) => f.name));
 
-  // Prepare data using shared pipeline (defaults, booleans, display fields)
-  const data = prepareFillData({
-    values,
-    fields: metadata.fields,
-    useBlankPlaceholder: false,
-    coerceBooleans: true,
-    computeDisplayFields: (d) => computeDisplayFields(d, fieldNames),
-  });
-
   // Warn about unknown keys not in metadata
-  const unknownKeys = Object.keys(data).filter((k) => !fieldNames.has(k));
+  const unknownKeys = Object.keys(values).filter((k) => !fieldNames.has(k));
   if (unknownKeys.length > 0) {
     console.warn(`Warning: unknown field(s) not in metadata: ${unknownKeys.join(', ')}`);
   }
 
-  // Determine template buffer — run clean→patch if replacements.json exists
+  // Build cleanPatch if replacements.json exists
   const templatePath = join(templateDir, 'template.docx');
   const replacementsPath = join(templateDir, 'replacements.json');
-  let templateBuf: Buffer;
-  let tempDir: string | null = null;
+  const cleanPatch = existsSync(replacementsPath)
+    ? {
+        cleanConfig: loadCleanConfig(templateDir),
+        replacements: JSON.parse(readFileSync(replacementsPath, 'utf-8')) as Record<string, string>,
+      }
+    : undefined;
 
-  if (existsSync(replacementsPath)) {
-    const replacements: Record<string, string> = JSON.parse(readFileSync(replacementsPath, 'utf-8'));
-    const cleanConfig = loadCleanConfig(templateDir);
-
-    tempDir = mkdtempSync(join(tmpdir(), 'template-fill-'));
-    const sourcePath = join(tempDir, 'source.docx');
-    const cleanedPath = join(tempDir, 'cleaned.docx');
-    const patchedPath = join(tempDir, 'patched.docx');
-
-    copyFileSync(templatePath, sourcePath);
-    await cleanDocument(sourcePath, cleanedPath, cleanConfig);
-    await patchDocument(cleanedPath, patchedPath, replacements);
-    templateBuf = readFileSync(patchedPath);
-  } else {
-    templateBuf = readFileSync(templatePath);
-  }
-
-  // Apply declarative option selections if selections.json exists
+  // Load selectionsConfig if selections.json exists
   const selectionsPath = join(templateDir, 'selections.json');
-  if (existsSync(selectionsPath)) {
-    const selectionsConfig = loadSelectionsConfig(selectionsPath);
-    if (!tempDir) {
-      tempDir = mkdtempSync(join(tmpdir(), 'template-fill-'));
-    }
-    const preSelectPath = join(tempDir, 'pre-select.docx');
-    const postSelectPath = join(tempDir, 'post-select.docx');
-    writeFileSync(preSelectPath, templateBuf);
-    await applySelections(preSelectPath, postSelectPath, selectionsConfig, data);
-    templateBuf = readFileSync(postSelectPath);
-  }
+  const selectionsConfig = existsSync(selectionsPath)
+    ? loadSelectionsConfig(selectionsPath)
+    : undefined;
 
-  try {
-    // Fill document using shared pipeline (currency sanitization + createReport)
-    const output = await fillDocx({
-      templateBuffer: templateBuf,
-      data,
-      fixSmartQuotes: true,
-    });
+  const result = await runFillPipeline({
+    inputPath: templatePath,
+    outputPath,
+    values,
+    fields: metadata.fields,
+    cleanPatch,
+    selectionsConfig,
+    coerceBooleans: true,
+    computeDisplayFields: (d) => computeDisplayFields(d, fieldNames),
+    fixSmartQuotes: true,
+    verify: (p) => verifyTemplateFill(p),
+  });
 
-    writeFileSync(outputPath, output);
-
-    // Verify output — warnings only, does not throw
-    const verifyResult = verifyTemplateFill(outputPath);
-    if (!verifyResult.passed) {
-      const failures = verifyResult.checks
-        .filter((c) => !c.passed)
-        .map((c) => `${c.name}: ${c.details ?? 'failed'}`)
-        .join('; ');
-      console.warn(`Warning: verification issues: ${failures}`);
-    }
-
-    return {
-      outputPath,
-      metadata,
-      fieldsUsed: Object.keys(data),
-    };
-  } finally {
-    if (tempDir) {
-      rmSync(tempDir, { recursive: true, force: true });
-    }
-  }
+  return {
+    outputPath: result.outputPath,
+    metadata,
+    fieldsUsed: result.fieldsUsed,
+  };
 }

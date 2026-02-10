@@ -1,0 +1,12 @@
+{
+  "groups": [
+    {
+      "id": "rights_in_deliverables",
+      "type": "radio",
+      "options": [
+        { "marker": "Licensed Deliverables", "trigger": { "field": "deliverables_type", "equals": "licensed" } },
+        { "marker": "Assigned Deliverables", "trigger": { "field": "deliverables_type", "equals": "assigned" } }
+      ]
+    }
+  ]
+}

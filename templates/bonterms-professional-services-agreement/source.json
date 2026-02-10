@@ -1,7 +1,7 @@
 {
   "source_file": "psa-cover-page.docx",
   "clean": {
-    "removeParagraphPatterns": ["^\\[Example:"],
+    "removeParagraphPatterns": ["^\\[Example:", "^\\[See Section"],
     "clearParts": ["header2.xml", "footer1.xml", "footer2.xml"]
   },
   "replacementColor": "000000",
