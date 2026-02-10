@@ -192,7 +192,7 @@ function removeParagraphsByRange(
       if (inside) {
         toRemove.push(paragraphs[i]);
         if (text && endRe.test(text)) {
-          break;
+          inside = false;
         }
       }
     }

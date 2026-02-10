@@ -8,6 +8,10 @@
     {
       "start": "^MODEL INDEMNIFICATION AGREEMENT$",
       "end": "against their own directors and officers\\."
+    },
+    {
+      "start": "^\\[Comment:",
+      "end": "\\]\\s*$"
     }
   ]
 }

@@ -468,4 +468,30 @@ describe('cleanDocument removeRanges', () => {
 
     rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
+
+  it('removes repeated occurrences of the same range pattern', async () => {
+    const xml = makeDocXml([
+      'Keep1',
+      '[Comment: first block start',
+      'first block middle',
+      'first block end.]',
+      'Keep2',
+      '[Comment: second block.]',
+      'Keep3',
+    ]);
+    const inputPath = buildMinimalDocx(xml);
+    const outputPath = inputPath.replace('test.docx', 'output.docx');
+
+    await cleanDocument(inputPath, outputPath, {
+      removeFootnotes: false,
+      removeParagraphPatterns: [],
+      removeRanges: [{ start: '^\\[Comment:', end: '\\]\\s*$' }],
+      clearParts: [],
+    });
+
+    const text = extractText(outputPath);
+    expect(text).toBe('Keep1\nKeep2\nKeep3');
+
+    rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
+  });
 });
