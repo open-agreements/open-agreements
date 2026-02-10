@@ -113,6 +113,28 @@ open-agreements list
 open-agreements list --json
 ```
 
+## Contracts Workspace CLI (Separate Package)
+
+OpenAgreements now includes a sibling package for repository/workspace operations:
+
+- Package: `@open-agreements/contracts-workspace`
+- Binary: `open-agreements-workspace`
+- Docs: `docs/contracts-workspace.md`
+
+This package is intentionally separate from `open-agreements` so teams can adopt:
+
+- template filling only
+- workspace management only
+- or both together
+
+Core workspace features:
+
+- lifecycle-first `init` (`forms/`, `drafts/`, `incoming/`, `executed/`, `archive/`)
+- forms catalog with URL + SHA-256 validation
+- YAML status indexing and linting with filename-driven `_executed` status
+
+The v1 model is filesystem-only and works in locally synced cloud-drive folders (for example, Google Drive sync). No Drive API/OAuth integration is required.
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for how to add templates, recipes, and other improvements.
