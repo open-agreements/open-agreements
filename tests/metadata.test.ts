@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { TemplateMetadataSchema, RecipeMetadataSchema, FieldDefinitionSchema, CleanConfigSchema } from '../src/core/metadata.js';
+import { TemplateMetadataSchema, RecipeMetadataSchema, FieldDefinitionSchema, CleanConfigSchema, GuidanceOutputSchema } from '../src/core/metadata.js';
 
 describe('FieldDefinitionSchema', () => {
   it('accepts a valid string field', () => {
@@ -150,5 +150,36 @@ describe('CleanConfigSchema', () => {
     const result = CleanConfigSchema.parse({});
     expect(result.removeFootnotes).toBe(false);
     expect(result.removeParagraphPatterns).toEqual([]);
+  });
+});
+
+describe('GuidanceOutputSchema', () => {
+  it('accepts valid guidance output', () => {
+    const result = GuidanceOutputSchema.safeParse({
+      extractedFrom: { sourceHash: 'abc123', configHash: 'def456' },
+      entries: [
+        { source: 'footnote', part: 'word/footnotes.xml', index: 0, text: 'Some footnote' },
+        { source: 'pattern', part: 'word/document.xml', index: 1, text: 'A note' },
+        { source: 'range', part: 'word/document.xml', index: 2, text: 'Range text', groupId: 'range-2' },
+      ],
+    });
+    expect(result.success).toBe(true);
+  });
+
+  it('rejects missing extractedFrom', () => {
+    const result = GuidanceOutputSchema.safeParse({
+      entries: [],
+    });
+    expect(result.success).toBe(false);
+  });
+
+  it('rejects invalid source type', () => {
+    const result = GuidanceOutputSchema.safeParse({
+      extractedFrom: { sourceHash: 'a', configHash: 'b' },
+      entries: [
+        { source: 'invalid', part: 'word/document.xml', index: 0, text: 'test' },
+      ],
+    });
+    expect(result.success).toBe(false);
   });
 });

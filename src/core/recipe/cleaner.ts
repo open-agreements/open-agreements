@@ -1,10 +1,22 @@
 import AdmZip from 'adm-zip';
 import { writeFileSync } from 'node:fs';
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
-import type { CleanConfig } from '../metadata.js';
+import type { CleanConfig, GuidanceEntry, GuidanceOutput } from '../metadata.js';
 import { enumerateTextParts, getGeneralTextPartNames } from './ooxml-parts.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
+
+export interface CleanResult {
+  outputPath: string;
+  guidance?: GuidanceOutput;
+}
+
+export interface CleanOptions {
+  extractGuidance?: boolean;
+  /** Pre-computed hashes for guidance staleness detection */
+  sourceHash?: string;
+  configHash?: string;
+}
 
 /**
  * Clean a DOCX document by removing footnotes, pattern-matched paragraphs,
@@ -14,20 +26,28 @@ const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
  * Processes all general OOXML text parts (document, headers, footers, endnotes).
  * Footnotes.xml is handled separately with its separator/continuationSeparator logic.
  *
+ * When options.extractGuidance is true, captures the text content of all
+ * removed elements before deletion and returns them as structured guidance data.
+ *
  * Note: Internal helpers use `any` for DOM nodes because @xmldom/xmldom's types
  * are incompatible with the global DOM types (missing EventTarget methods).
  */
 export async function cleanDocument(
   inputPath: string,
   outputPath: string,
-  config: CleanConfig
-): Promise<string> {
+  config: CleanConfig,
+  options?: CleanOptions
+): Promise<CleanResult> {
   const zip = new AdmZip(inputPath);
   const parser = new DOMParser();
   const serializer = new XMLSerializer();
 
   const parts = enumerateTextParts(zip);
   const generalParts = getGeneralTextPartNames(parts);
+
+  const extract = options?.extractGuidance ?? false;
+  const entries: GuidanceEntry[] = [];
+  let indexCounter = 0;
 
   // Track which parts we modify so we can rebuild the zip cleanly
   const modifiedParts = new Map<string, Buffer>();
@@ -41,6 +61,21 @@ export async function cleanDocument(
         const doc = parser.parseFromString(xml, 'text/xml');
         clearPartContent(doc);
         modifiedParts.set(entry.entryName, Buffer.from(serializer.serializeToString(doc), 'utf-8'));
+      }
+    }
+  }
+
+  // Collect footnote reference order from document.xml for proper ordering
+  let footnoteRefOrder: string[] = [];
+  if (config.removeFootnotes && extract) {
+    const docEntry = zip.getEntry('word/document.xml');
+    if (docEntry) {
+      const docXml = docEntry.getData().toString('utf-8');
+      const docDoc = parser.parseFromString(docXml, 'text/xml');
+      const refs = docDoc.getElementsByTagNameNS(W_NS, 'footnoteReference');
+      for (let i = 0; i < refs.length; i++) {
+        const id = refs[i].getAttributeNS(W_NS, 'id') ?? refs[i].getAttribute('w:id');
+        if (id) footnoteRefOrder.push(id);
       }
     }
   }
@@ -63,12 +98,29 @@ export async function cleanDocument(
     }
 
     if (config.removeParagraphPatterns.length > 0) {
-      removeParagraphsByPattern(doc, config.removeParagraphPatterns);
+      if (extract) {
+        const extracted = extractAndRemoveParagraphsByPattern(doc, config.removeParagraphPatterns);
+        for (const text of extracted) {
+          entries.push({ source: 'pattern', part: partName, index: indexCounter++, text });
+        }
+      } else {
+        removeParagraphsByPattern(doc, config.removeParagraphPatterns);
+      }
       modified = true;
     }
 
     if (config.removeRanges && config.removeRanges.length > 0) {
-      removeParagraphsByRange(doc, config.removeRanges);
+      if (extract) {
+        const extracted = extractAndRemoveParagraphsByRange(doc, config.removeRanges);
+        for (const group of extracted) {
+          const groupId = `range-${indexCounter}`;
+          for (const text of group) {
+            entries.push({ source: 'range', part: partName, index: indexCounter++, text, groupId });
+          }
+        }
+      } else {
+        removeParagraphsByRange(doc, config.removeRanges);
+      }
       modified = true;
     }
 
@@ -83,7 +135,16 @@ export async function cleanDocument(
     if (footnotesEntry) {
       const xml = footnotesEntry.getData().toString('utf-8');
       const doc = parser.parseFromString(xml, 'text/xml');
-      removeNormalFootnotes(doc);
+
+      if (extract) {
+        const extracted = extractAndRemoveNormalFootnotes(doc, footnoteRefOrder);
+        for (const text of extracted) {
+          entries.push({ source: 'footnote', part: parts.footnotes, index: indexCounter++, text });
+        }
+      } else {
+        removeNormalFootnotes(doc);
+      }
+
       modifiedParts.set(parts.footnotes, Buffer.from(serializer.serializeToString(doc), 'utf-8'));
     }
   }
@@ -95,7 +156,18 @@ export async function cleanDocument(
     outZip.addFile(entry.entryName, data);
   }
   writeFileSync(outputPath, outZip.toBuffer());
-  return outputPath;
+
+  const result: CleanResult = { outputPath };
+  if (extract) {
+    result.guidance = {
+      extractedFrom: {
+        sourceHash: options?.sourceHash ?? '',
+        configHash: options?.configHash ?? '',
+      },
+      entries,
+    };
+  }
+  return result;
 }
 
 /* eslint-disable @typescript-eslint/no-explicit-any --
@@ -154,6 +226,44 @@ function removeNormalFootnotes(doc: any): void {
   }
 }
 
+/** Extract text from footnotes ordered by reference occurrence, then remove them. */
+function extractAndRemoveNormalFootnotes(doc: any, refOrder: string[]): string[] {
+  const footnotes = doc.getElementsByTagNameNS(W_NS, 'footnote');
+  const fnMap = new Map<string, { node: any; text: string }>();
+  const toRemove: any[] = [];
+
+  for (let i = 0; i < footnotes.length; i++) {
+    const fn = footnotes[i];
+    const fnType = fn.getAttributeNS(W_NS, 'type');
+    if (fnType !== 'separator' && fnType !== 'continuationSeparator') {
+      const id = fn.getAttributeNS(W_NS, 'id') ?? fn.getAttribute('w:id') ?? '';
+      const text = extractElementText(fn);
+      fnMap.set(id, { node: fn, text });
+      toRemove.push(fn);
+    }
+  }
+
+  // Order by footnoteReference occurrence in document.xml
+  const ordered: string[] = [];
+  for (const id of refOrder) {
+    const entry = fnMap.get(id);
+    if (entry && entry.text) {
+      ordered.push(entry.text);
+      fnMap.delete(id);
+    }
+  }
+  // Append any remaining footnotes not referenced (shouldn't happen normally)
+  for (const entry of fnMap.values()) {
+    if (entry.text) ordered.push(entry.text);
+  }
+
+  for (const fn of toRemove) {
+    fn.parentNode?.removeChild(fn);
+  }
+
+  return ordered;
+}
+
 function removeParagraphsByPattern(doc: any, patterns: string[]): void {
   const regexes = patterns.map((p) => new RegExp(p, 'i'));
   const paragraphs = doc.getElementsByTagNameNS(W_NS, 'p');
@@ -170,6 +280,29 @@ function removeParagraphsByPattern(doc: any, patterns: string[]): void {
   for (const para of toRemove) {
     para.parentNode?.removeChild(para);
   }
+}
+
+/** Extract text from pattern-matched paragraphs, then remove them. */
+function extractAndRemoveParagraphsByPattern(doc: any, patterns: string[]): string[] {
+  const regexes = patterns.map((p) => new RegExp(p, 'i'));
+  const paragraphs = doc.getElementsByTagNameNS(W_NS, 'p');
+  const toRemove: any[] = [];
+  const extracted: string[] = [];
+
+  for (let i = 0; i < paragraphs.length; i++) {
+    const para = paragraphs[i];
+    const text = extractParagraphText(para);
+    if (text && regexes.some((r) => r.test(text))) {
+      toRemove.push(para);
+      extracted.push(text);
+    }
+  }
+
+  for (const para of toRemove) {
+    para.parentNode?.removeChild(para);
+  }
+
+  return extracted;
 }
 
 function removeParagraphsByRange(
@@ -203,6 +336,51 @@ function removeParagraphsByRange(
   }
 }
 
+/** Extract text from range-deleted paragraphs, then remove them. Returns groups of text arrays. */
+function extractAndRemoveParagraphsByRange(
+  doc: any,
+  ranges: Array<{ start: string; end: string }>
+): string[][] {
+  const groups: string[][] = [];
+
+  for (const range of ranges) {
+    const startRe = new RegExp(range.start, 'i');
+    const endRe = new RegExp(range.end, 'i');
+    const paragraphs = doc.getElementsByTagNameNS(W_NS, 'p');
+
+    const toRemove: any[] = [];
+    const texts: string[] = [];
+    let inside = false;
+
+    for (let i = 0; i < paragraphs.length; i++) {
+      const text = extractParagraphText(paragraphs[i]);
+      if (!inside && text && startRe.test(text)) {
+        inside = true;
+      }
+      if (inside) {
+        toRemove.push(paragraphs[i]);
+        if (text) texts.push(text);
+        if (text && endRe.test(text)) {
+          // End of this range match — push group and continue scanning
+          groups.push([...texts]);
+          texts.length = 0;
+          inside = false;
+        }
+      }
+    }
+    // If inside is still true (no end match), push remaining as a group
+    if (texts.length > 0) {
+      groups.push(texts);
+    }
+
+    for (const para of toRemove) {
+      para.parentNode?.removeChild(para);
+    }
+  }
+
+  return groups;
+}
+
 function extractParagraphText(para: any): string {
   if (!para.getElementsByTagNameNS) return '';
   const textElements = para.getElementsByTagNameNS(W_NS, 't');
@@ -211,4 +389,16 @@ function extractParagraphText(para: any): string {
     parts.push(textElements[i].textContent ?? '');
   }
   return parts.join('').trim();
+}
+
+/** Extract all text from an element (used for footnotes which contain multiple paragraphs). */
+function extractElementText(element: any): string {
+  if (!element.getElementsByTagNameNS) return '';
+  const paragraphs = element.getElementsByTagNameNS(W_NS, 'p');
+  const paraTexts: string[] = [];
+  for (let i = 0; i < paragraphs.length; i++) {
+    const text = extractParagraphText(paragraphs[i]);
+    if (text) paraTexts.push(text);
+  }
+  return paraTexts.join('\n');
 }

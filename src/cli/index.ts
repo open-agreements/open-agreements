@@ -94,8 +94,9 @@ recipeCmd
   .description('Run only the clean stage of a recipe')
   .requiredOption('-o, --output <path>', 'Output file path')
   .requiredOption('--recipe <id>', 'Recipe ID to use for clean config')
-  .action(async (input: string, opts: { output: string; recipe: string }) => {
-    await runRecipeClean({ input, output: opts.output, recipe: opts.recipe });
+  .option('--extract-guidance <path>', 'Extract removed content as guidance JSON to the specified path')
+  .action(async (input: string, opts: { output: string; recipe: string; extractGuidance?: string }) => {
+    await runRecipeClean({ input, output: opts.output, recipe: opts.recipe, extractGuidance: opts.extractGuidance });
   });
 
 recipeCmd

@@ -60,6 +60,24 @@ export const CleanConfigSchema = z.object({
 });
 export type CleanConfig = z.infer<typeof CleanConfigSchema>;
 
+export const GuidanceEntrySchema = z.object({
+  source: z.enum(['footnote', 'pattern', 'range']),
+  part: z.string(),
+  index: z.number(),
+  text: z.string(),
+  groupId: z.string().optional(),
+});
+export type GuidanceEntry = z.infer<typeof GuidanceEntrySchema>;
+
+export const GuidanceOutputSchema = z.object({
+  extractedFrom: z.object({
+    sourceHash: z.string(),
+    configHash: z.string(),
+  }),
+  entries: z.array(GuidanceEntrySchema),
+});
+export type GuidanceOutput = z.infer<typeof GuidanceOutputSchema>;
+
 export const RecipeMetadataSchema = z.object({
   name: z.string(),
   description: z.string().optional(),

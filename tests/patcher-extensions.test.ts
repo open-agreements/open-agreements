@@ -495,3 +495,142 @@ describe('cleanDocument removeRanges', () => {
     rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 });
+
+describe('cleanDocument guidance extraction', () => {
+  function makeParagraph(text: string): string {
+    return `<w:p><w:r><w:t>${text}</w:t></w:r></w:p>`;
+  }
+
+  function makeDocXml(paragraphs: string[]): string {
+    return (
+      '<?xml version="1.0" encoding="UTF-8"?>' +
+      `<w:document xmlns:w="${W_NS}"><w:body>` +
+      paragraphs.map(makeParagraph).join('') +
+      '</w:body></w:document>'
+    );
+  }
+
+  it('returns pattern-matched text when extractGuidance is true', async () => {
+    const xml = makeDocXml(['Keep', 'NOTE: Remove this', 'Also keep']);
+    const inputPath = buildMinimalDocx(xml);
+    const outputPath = inputPath.replace('test.docx', 'output.docx');
+
+    const result = await cleanDocument(inputPath, outputPath, {
+      removeFootnotes: false,
+      removeParagraphPatterns: ['^NOTE:'],
+      removeRanges: [],
+      clearParts: [],
+    }, { extractGuidance: true });
+
+    expect(result.guidance).toBeDefined();
+    expect(result.guidance!.entries).toHaveLength(1);
+    expect(result.guidance!.entries[0].source).toBe('pattern');
+    expect(result.guidance!.entries[0].text).toBe('NOTE: Remove this');
+    expect(result.guidance!.entries[0].part).toBe('word/document.xml');
+
+    // Document should still be cleaned
+    const text = extractText(outputPath);
+    expect(text).toBe('Keep\nAlso keep');
+
+    rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
+  });
+
+  it('returns range-deleted text with groupId when extractGuidance is true', async () => {
+    const xml = makeDocXml(['Keep1', '[Comment: Start', 'Middle text', 'End.]', 'Keep2']);
+    const inputPath = buildMinimalDocx(xml);
+    const outputPath = inputPath.replace('test.docx', 'output.docx');
+
+    const result = await cleanDocument(inputPath, outputPath, {
+      removeFootnotes: false,
+      removeParagraphPatterns: [],
+      removeRanges: [{ start: '^\\[Comment:', end: '\\]\\s*$' }],
+      clearParts: [],
+    }, { extractGuidance: true });
+
+    expect(result.guidance).toBeDefined();
+    const rangeEntries = result.guidance!.entries.filter(e => e.source === 'range');
+    expect(rangeEntries).toHaveLength(3);
+    expect(rangeEntries[0].text).toBe('[Comment: Start');
+    expect(rangeEntries[1].text).toBe('Middle text');
+    expect(rangeEntries[2].text).toBe('End.]');
+    // All share the same groupId
+    const groupId = rangeEntries[0].groupId;
+    expect(groupId).toBeDefined();
+    expect(rangeEntries.every(e => e.groupId === groupId)).toBe(true);
+
+    const text = extractText(outputPath);
+    expect(text).toBe('Keep1\nKeep2');
+
+    rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
+  });
+
+  it('returns footnote text when extractGuidance is true', async () => {
+    const docXml =
+      '<?xml version="1.0" encoding="UTF-8"?>' +
+      `<w:document xmlns:w="${W_NS}"><w:body>` +
+      '<w:p><w:r><w:t>Body text</w:t></w:r>' +
+      '<w:r><w:rPr><w:rStyle w:val="FootnoteReference"/></w:rPr><w:footnoteReference w:id="1"/></w:r></w:p>' +
+      '</w:body></w:document>';
+
+    const footnotesXml =
+      '<?xml version="1.0" encoding="UTF-8"?>' +
+      `<w:footnotes xmlns:w="${W_NS}">` +
+      '<w:footnote w:type="separator" w:id="-1"><w:p><w:r><w:separator/></w:r></w:p></w:footnote>' +
+      '<w:footnote w:type="continuationSeparator" w:id="0"><w:p><w:r><w:continuationSeparator/></w:r></w:p></w:footnote>' +
+      '<w:footnote w:id="1"><w:p><w:r><w:t>This is footnote content.</w:t></w:r></w:p></w:footnote>' +
+      '</w:footnotes>';
+
+    const inputPath = buildMinimalDocx(docXml, { 'word/footnotes.xml': footnotesXml });
+    const outputPath = inputPath.replace('test.docx', 'output.docx');
+
+    const result = await cleanDocument(inputPath, outputPath, {
+      removeFootnotes: true,
+      removeParagraphPatterns: [],
+      removeRanges: [],
+      clearParts: [],
+    }, { extractGuidance: true });
+
+    expect(result.guidance).toBeDefined();
+    const fnEntries = result.guidance!.entries.filter(e => e.source === 'footnote');
+    expect(fnEntries).toHaveLength(1);
+    expect(fnEntries[0].text).toBe('This is footnote content.');
+    expect(fnEntries[0].part).toBe('word/footnotes.xml');
+
+    rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
+  });
+
+  it('returns guidance undefined when extractGuidance is not set', async () => {
+    const xml = makeDocXml(['Keep', 'NOTE: Remove', 'Also keep']);
+    const inputPath = buildMinimalDocx(xml);
+    const outputPath = inputPath.replace('test.docx', 'output.docx');
+
+    const result = await cleanDocument(inputPath, outputPath, {
+      removeFootnotes: false,
+      removeParagraphPatterns: ['^NOTE:'],
+      removeRanges: [],
+      clearParts: [],
+    });
+
+    expect(result.guidance).toBeUndefined();
+
+    rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
+  });
+
+  it('includes sourceHash and configHash in extractedFrom', async () => {
+    const xml = makeDocXml(['Keep', 'NOTE: Remove']);
+    const inputPath = buildMinimalDocx(xml);
+    const outputPath = inputPath.replace('test.docx', 'output.docx');
+
+    const result = await cleanDocument(inputPath, outputPath, {
+      removeFootnotes: false,
+      removeParagraphPatterns: ['^NOTE:'],
+      removeRanges: [],
+      clearParts: [],
+    }, { extractGuidance: true, sourceHash: 'src123', configHash: 'cfg456' });
+
+    expect(result.guidance!.extractedFrom.sourceHash).toBe('src123');
+    expect(result.guidance!.extractedFrom.configHash).toBe('cfg456');
+
+    rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
+  });
+});

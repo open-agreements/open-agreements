@@ -1,5 +1,6 @@
 import { resolve } from 'node:path';
-import { existsSync, readFileSync, readdirSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { runRecipe, cleanDocument, patchDocument } from '../core/recipe/index.js';
 import { loadCleanConfig } from '../core/metadata.js';
 import { getRecipesDir, resolveRecipeDir } from '../utils/paths.js';
@@ -52,14 +53,34 @@ export interface RecipeCleanArgs {
   input: string;
   output: string;
   recipe: string;
+  extractGuidance?: string;
 }
 
 export async function runRecipeClean(args: RecipeCleanArgs): Promise<void> {
   const recipeDir = resolveRecipeDir(args.recipe);
   const config = loadCleanConfig(recipeDir);
+  const inputPath = resolve(args.input);
 
   try {
-    await cleanDocument(resolve(args.input), resolve(args.output), config);
+    if (args.extractGuidance) {
+      const sourceData = readFileSync(inputPath);
+      const sourceHash = createHash('sha256').update(sourceData).digest('hex');
+      const cleanPath = resolve(recipeDir, 'clean.json');
+      const configData = existsSync(cleanPath) ? readFileSync(cleanPath, 'utf-8') : '{}';
+      const configHash = createHash('sha256').update(configData).digest('hex');
+
+      const result = await cleanDocument(inputPath, resolve(args.output), config, {
+        extractGuidance: true,
+        sourceHash,
+        configHash,
+      });
+      if (result.guidance) {
+        writeFileSync(resolve(args.extractGuidance), JSON.stringify(result.guidance, null, 2) + '\n');
+        console.log(`Guidance: ${args.extractGuidance} (${result.guidance.entries.length} entries)`);
+      }
+    } else {
+      await cleanDocument(inputPath, resolve(args.output), config);
+    }
     console.log(`Cleaned: ${args.output}`);
   } catch (err) {
     console.error(`Error: ${(err as Error).message}`);

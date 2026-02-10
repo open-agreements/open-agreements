@@ -15,13 +15,33 @@ original authors intended to accompany the form.
 - The cleaner captures removed content (footnotes, pattern-matched
   paragraphs, range-deleted blocks) as structured data **before** deleting
   it from the DOCX.
-- A new `guidance.json` file is written to the recipe directory during the
-  clean step, containing the extracted text organized by source type and
-  document position.
-- The `guidance.json` file ships with the recipe and is available as a
-  reference for AI agents and humans during fill.
-- The CLI does **not** parse or surface `guidance.json` at fill-time — it is
-  a reference document, not a runtime dependency.
+- When `--extract-guidance <path>` is passed to `recipe clean`, a
+  `guidance.json` file is written to the specified path containing the
+  extracted text organized by source type and document position.
+- The `cleanDocument()` API return type changes from `string` to
+  `{ outputPath: string; guidance?: GuidanceOutput }`. An `extractGuidance`
+  option controls whether extraction occurs. Existing callers are updated.
+- Guidance is a **local-only, authoring-time** artifact. It is NOT committed
+  to the repository or shipped in the npm package (see Licensing section).
+
+## Licensing / Redistribution
+
+Extracted guidance is verbatim source text — the exact words written by the
+document authors. For recipes like NVCA, the source documents are "freely
+downloadable but not redistributable" (`metadata.yaml` `license_note`).
+Committing verbatim extracted commentary to `recipes/` and shipping it via
+npm would violate the same redistribution constraints that motivated the
+recipe architecture in the first place.
+
+**Decision: local-only generation.** Guidance is generated on the user's
+machine from their locally downloaded DOCX during `recipe clean
+--extract-guidance`. The output file is written to a user-specified path
+(not into the recipe directory). The repo and npm package never contain
+`guidance.json` for non-redistributable sources.
+
+For sources with permissive licenses (e.g., CC BY 4.0 templates), guidance
+*could* be committed, but this proposal does not require it. The feature is
+opt-in and authoring-time only.
 
 ## Benefits
 
@@ -57,15 +77,16 @@ indemnification for X, so consider Y"), not structured data the CLI can act
 on mechanically. Surfacing it as warnings or field-level hints would require
 a mapping layer between comment text and specific fields — complexity that
 adds maintenance burden without clear user value. AI agents already read
-recipe directory contents; adding a well-structured JSON file to that
-directory is the minimum viable integration.
+recipe directory contents; adding a well-structured JSON file is the minimum
+viable integration.
 
 ## Impact
 
-- Affected specs: `open-agreements` (DOCX Cleaner, Recipe Pipeline)
-- Affected code: `src/core/recipe/cleaner.ts` (extraction logic),
-  `src/core/metadata.ts` (schema for guidance output), recipe directories
-  (new `guidance.json` files)
-- No CLI changes, no API changes, no breaking changes
-- New file (`guidance.json`) is additive and optional — recipes without
-  `clean.json` simply don't produce one
+- Affected specs: `open-agreements` (DOCX Cleaner, Recipe CLI Subcommands)
+- Affected code: `src/core/recipe/cleaner.ts` (extraction logic + return
+  type change), `src/core/metadata.ts` (Zod schemas), `src/commands/recipe.ts`
+  (new `--extract-guidance` flag)
+- CLI change: new `--extract-guidance <path>` flag on `recipe clean`
+- API change: `cleanDocument()` returns `{ outputPath, guidance? }` instead
+  of `string` (callers updated)
+- No breaking changes to user-facing fill behavior
