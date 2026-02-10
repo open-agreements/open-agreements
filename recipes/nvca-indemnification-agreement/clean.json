@@ -6,7 +6,7 @@
   ],
   "removeRanges": [
     {
-      "start": "^Preliminary Notes?\\b",
+      "start": "^MODEL INDEMNIFICATION AGREEMENT$",
       "end": "against their own directors and officers\\."
     }
   ]
