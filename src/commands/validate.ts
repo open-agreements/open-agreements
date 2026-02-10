@@ -1,10 +1,16 @@
-import { readdirSync, existsSync } from 'node:fs';
 import { validateMetadata } from '../core/metadata.js';
 import { validateTemplate } from '../core/validation/template.js';
 import { validateLicense } from '../core/validation/license.js';
 import { validateRecipe } from '../core/validation/recipe.js';
 import { validateExternal } from '../core/validation/external.js';
-import { getTemplatesDir, resolveTemplateDir, getRecipesDir, resolveRecipeDir, getExternalDir, resolveExternalDir } from '../utils/paths.js';
+import {
+  findExternalDir,
+  findRecipeDir,
+  findTemplateDir,
+  listExternalEntries,
+  listRecipeEntries,
+  listTemplateEntries,
+} from '../utils/paths.js';
 
 export interface ValidateArgs {
   template?: string;
@@ -12,20 +18,30 @@ export interface ValidateArgs {
 }
 
 export function runValidate(args: ValidateArgs): void {
+  if (args.template) {
+    runValidateSingle(args);
+    return;
+  }
+
   let hasErrors = false;
 
   // Validate templates
-  hasErrors = validateTemplates(args) || hasErrors;
+  hasErrors = validateTemplates(listTemplateEntries().map((entry) => ({
+    id: entry.id,
+    dir: entry.dir,
+  }))) || hasErrors;
 
   // Validate external templates (unless a specific template was requested)
-  if (!args.template) {
-    hasErrors = validateExternalTemplates() || hasErrors;
-  }
+  hasErrors = validateExternalTemplates(listExternalEntries().map((entry) => ({
+    id: entry.id,
+    dir: entry.dir,
+  }))) || hasErrors;
 
   // Validate recipes (unless a specific template was requested)
-  if (!args.template) {
-    hasErrors = validateRecipes(args) || hasErrors;
-  }
+  hasErrors = validateRecipes(
+    listRecipeEntries().map((entry) => ({ id: entry.id, dir: entry.dir })),
+    args
+  ) || hasErrors;
 
   if (hasErrors) {
     console.error('Validation FAILED');
@@ -35,26 +51,56 @@ export function runValidate(args: ValidateArgs): void {
   }
 }
 
-function validateTemplates(args: ValidateArgs): boolean {
-  const templatesDir = getTemplatesDir();
-  let templateIds: string[];
-
-  if (args.template) {
-    templateIds = [args.template];
-  } else {
-    if (!existsSync(templatesDir)) {
-      console.log('No templates directory found.');
-      return false;
+function runValidateSingle(args: ValidateArgs): void {
+  const id = args.template!;
+  const templateDir = findTemplateDir(id);
+  if (templateDir) {
+    const hasErrors = validateTemplates([{ id, dir: templateDir }]);
+    if (hasErrors) {
+      console.error('Validation FAILED');
+      process.exit(1);
     }
-    templateIds = readdirSync(templatesDir, { withFileTypes: true })
-      .filter((d) => d.isDirectory())
-      .map((d) => d.name);
+    console.log('Validation PASSED');
+    return;
+  }
+
+  const externalDir = findExternalDir(id);
+  if (externalDir) {
+    const hasErrors = validateExternalTemplates([{ id, dir: externalDir }]);
+    if (hasErrors) {
+      console.error('Validation FAILED');
+      process.exit(1);
+    }
+    console.log('Validation PASSED');
+    return;
+  }
+
+  const recipeDir = findRecipeDir(id);
+  if (recipeDir) {
+    const hasErrors = validateRecipes([{ id, dir: recipeDir }], args);
+    if (hasErrors) {
+      console.error('Validation FAILED');
+      process.exit(1);
+    }
+    console.log('Validation PASSED');
+    return;
+  }
+
+  console.error(`Agreement "${id}" not found in templates, external, or recipes.`);
+  process.exit(1);
+}
+
+function validateTemplates(entries: { id: string; dir: string }[]): boolean {
+  if (entries.length === 0) {
+    console.log('No templates found.');
+    return false;
   }
 
   let hasErrors = false;
 
-  for (const id of templateIds) {
-    const dir = resolveTemplateDir(id);
+  for (const entry of entries) {
+    const id = entry.id;
+    const dir = entry.dir;
     console.log(`\nValidating template: ${id}`);
 
     const metaResult = validateMetadata(dir);
@@ -83,28 +129,20 @@ function validateTemplates(args: ValidateArgs): boolean {
     }
   }
 
-  console.log(`\n${templateIds.length} template(s) validated.`);
+  console.log(`\n${entries.length} template(s) validated.`);
   return hasErrors;
 }
 
-function validateExternalTemplates(): boolean {
-  const externalDir = getExternalDir();
-  if (!existsSync(externalDir)) {
-    return false;
-  }
-
-  const externalIds = readdirSync(externalDir, { withFileTypes: true })
-    .filter((d) => d.isDirectory())
-    .map((d) => d.name);
-
-  if (externalIds.length === 0) {
+function validateExternalTemplates(entries: { id: string; dir: string }[]): boolean {
+  if (entries.length === 0) {
     return false;
   }
 
   let hasErrors = false;
 
-  for (const id of externalIds) {
-    const dir = resolveExternalDir(id);
+  for (const entry of entries) {
+    const id = entry.id;
+    const dir = entry.dir;
     console.log(`\nValidating external: ${id}`);
 
     const result = validateExternal(dir, id);
@@ -117,28 +155,20 @@ function validateExternalTemplates(): boolean {
     for (const w of result.warnings) console.log(`  WARN: ${w}`);
   }
 
-  console.log(`\n${externalIds.length} external template(s) validated.`);
+  console.log(`\n${entries.length} external template(s) validated.`);
   return hasErrors;
 }
 
-function validateRecipes(args: ValidateArgs): boolean {
-  const recipesDir = getRecipesDir();
-  if (!existsSync(recipesDir)) {
-    return false;
-  }
-
-  const recipeIds = readdirSync(recipesDir, { withFileTypes: true })
-    .filter((d) => d.isDirectory())
-    .map((d) => d.name);
-
-  if (recipeIds.length === 0) {
+function validateRecipes(entries: { id: string; dir: string }[], args: ValidateArgs): boolean {
+  if (entries.length === 0) {
     return false;
   }
 
   let hasErrors = false;
 
-  for (const id of recipeIds) {
-    const dir = resolveRecipeDir(id);
+  for (const entry of entries) {
+    const id = entry.id;
+    const dir = entry.dir;
     console.log(`\nValidating recipe: ${id}`);
 
     const result = validateRecipe(dir, id, { strict: args.strict });
@@ -151,6 +181,6 @@ function validateRecipes(args: ValidateArgs): boolean {
     for (const w of result.warnings) console.log(`  WARN: ${w}`);
   }
 
-  console.log(`\n${recipeIds.length} recipe(s) validated.`);
+  console.log(`\n${entries.length} recipe(s) validated.`);
   return hasErrors;
 }

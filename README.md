@@ -135,6 +135,21 @@ Core workspace features:
 
 The v1 model is filesystem-only and works in locally synced cloud-drive folders (for example, Google Drive sync). No Drive API/OAuth integration is required.
 
+## Optional Content Roots (Future-Proofing)
+
+To support logical unbundling as form libraries grow, `open-agreements` can load content from additional roots via:
+
+- env var: `OPEN_AGREEMENTS_CONTENT_ROOTS`
+- format: path-delimited list of absolute/relative directories (for example, `dirA:dirB` on macOS/Linux)
+- expected structure under each root: `templates/`, `external/`, and/or `recipes/`
+
+Lookup precedence is:
+
+1. roots in `OPEN_AGREEMENTS_CONTENT_ROOTS` (in listed order)
+2. bundled package content (default fallback)
+
+This keeps default installs simple while allowing advanced users to move large content libraries outside the core package.
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for how to add templates, recipes, and other improvements.
