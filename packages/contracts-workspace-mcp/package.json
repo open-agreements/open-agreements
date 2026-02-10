@@ -1,0 +1,35 @@
+{
+  "name": "@open-agreements/contracts-workspace-mcp",
+  "version": "0.1.0",
+  "description": "Local stdio MCP server for contracts workspace operations",
+  "type": "module",
+  "bin": {
+    "open-agreements-workspace-mcp": "./bin/open-agreements-workspace-mcp.js"
+  },
+  "main": "./dist/contracts-workspace-mcp/src/index.js",
+  "types": "./dist/contracts-workspace-mcp/src/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/contracts-workspace-mcp/src/index.js",
+      "types": "./dist/contracts-workspace-mcp/src/index.d.ts"
+    }
+  },
+  "files": [
+    "dist/",
+    "bin/",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run tests",
+    "start": "node ./bin/open-agreements-workspace-mcp.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "js-yaml": "^4.1.0",
+    "zod": "^3.24.0"
+  }
+}

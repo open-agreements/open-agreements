@@ -35,9 +35,11 @@
   "scripts": {
     "build": "tsc",
     "build:workspace": "tsc -p packages/contracts-workspace/tsconfig.json",
+    "build:workspace-mcp": "tsc -p packages/contracts-workspace-mcp/tsconfig.json",
     "dev": "tsc --watch",
     "test": "vitest",
     "test:workspace": "vitest run packages/contracts-workspace/tests",
+    "test:workspace-mcp": "vitest run packages/contracts-workspace-mcp/tests",
     "test:run": "vitest run",
     "lint": "eslint src/",
     "validate": "node bin/open-agreements.js validate",

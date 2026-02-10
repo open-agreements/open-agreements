@@ -135,6 +135,21 @@ Core workspace features:
 
 The v1 model is filesystem-only and works in locally synced cloud-drive folders (for example, Google Drive sync). No Drive API/OAuth integration is required.
 
+## Local MCP for Workspace Demo
+
+For local connector demos, there is a local stdio MCP package:
+
+- Package: `@open-agreements/contracts-workspace-mcp`
+- Binary: `open-agreements-workspace-mcp`
+- Docs: `docs/contracts-workspace.md`
+
+Quick start:
+
+```bash
+npm run build:workspace-mcp
+node packages/contracts-workspace-mcp/bin/open-agreements-workspace-mcp.js
+```
+
 ## Optional Content Roots (Future-Proofing)
 
 To support logical unbundling as form libraries grow, `open-agreements` can load content from additional roots via:
