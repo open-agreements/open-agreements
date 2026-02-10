@@ -67,6 +67,11 @@ export async function cleanDocument(
       modified = true;
     }
 
+    if (config.removeRanges && config.removeRanges.length > 0) {
+      removeParagraphsByRange(doc, config.removeRanges);
+      modified = true;
+    }
+
     if (modified) {
       modifiedParts.set(partName, Buffer.from(serializer.serializeToString(doc), 'utf-8'));
     }
@@ -164,6 +169,37 @@ function removeParagraphsByPattern(doc: any, patterns: string[]): void {
 
   for (const para of toRemove) {
     para.parentNode?.removeChild(para);
+  }
+}
+
+function removeParagraphsByRange(
+  doc: any,
+  ranges: Array<{ start: string; end: string }>
+): void {
+  for (const range of ranges) {
+    const startRe = new RegExp(range.start, 'i');
+    const endRe = new RegExp(range.end, 'i');
+    const paragraphs = doc.getElementsByTagNameNS(W_NS, 'p');
+
+    const toRemove: any[] = [];
+    let inside = false;
+
+    for (let i = 0; i < paragraphs.length; i++) {
+      const text = extractParagraphText(paragraphs[i]);
+      if (!inside && text && startRe.test(text)) {
+        inside = true;
+      }
+      if (inside) {
+        toRemove.push(paragraphs[i]);
+        if (text && endRe.test(text)) {
+          break;
+        }
+      }
+    }
+
+    for (const para of toRemove) {
+      para.parentNode?.removeChild(para);
+    }
   }
 }
 

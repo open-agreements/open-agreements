@@ -114,6 +114,22 @@ export async function verifyOutput(
     });
   }
 
+  // Check 7: No range-deleted sections (if ranges were set)
+  if (cleanConfig?.removeRanges && cleanConfig.removeRanges.length > 0) {
+    const rangeStartPatterns = cleanConfig.removeRanges.map((r) => new RegExp(r.start, 'i'));
+    const lines = rawFullText.split('\n');
+    const matchingLines = lines.filter((line) =>
+      rangeStartPatterns.some((r) => r.test(line.trim()))
+    );
+    checks.push({
+      name: 'Range-deleted sections removed',
+      passed: matchingLines.length === 0,
+      details: matchingLines.length > 0
+        ? `Found: ${matchingLines[0].trim().slice(0, 80)}...`
+        : undefined,
+    });
+  }
+
   return {
     passed: checks.every((c) => c.passed),
     checks,

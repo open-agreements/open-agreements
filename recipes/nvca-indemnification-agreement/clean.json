@@ -3,5 +3,11 @@
   "removeParagraphPatterns": [
     "^Comment:",
     "^NOTE:"
+  ],
+  "removeRanges": [
+    {
+      "start": "^Preliminary Notes?\\b",
+      "end": "against their own directors and officers\\."
+    }
   ]
 }

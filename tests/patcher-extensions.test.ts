@@ -357,6 +357,7 @@ describe('cleanDocument clearParts', () => {
     await cleanDocument(inputPath, outputPath, {
       removeFootnotes: false,
       removeParagraphPatterns: [],
+      removeRanges: [],
       clearParts: ['header2.xml'],
     });
 
@@ -371,6 +372,99 @@ describe('cleanDocument clearParts', () => {
     // But the part should still exist
     const zip = new AdmZip(outputPath);
     expect(zip.getEntry('word/header2.xml')).toBeDefined();
+
+    rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
+  });
+});
+
+describe('cleanDocument removeRanges', () => {
+  function makeParagraph(text: string): string {
+    return `<w:p><w:r><w:t>${text}</w:t></w:r></w:p>`;
+  }
+
+  function makeDocXml(paragraphs: string[]): string {
+    return (
+      '<?xml version="1.0" encoding="UTF-8"?>' +
+      `<w:document xmlns:w="${W_NS}"><w:body>` +
+      paragraphs.map(makeParagraph).join('') +
+      '</w:body></w:document>'
+    );
+  }
+
+  it('removes paragraphs from start through end inclusive', async () => {
+    const xml = makeDocXml(['Alpha', 'Beta start', 'Charlie', 'Delta end', 'Echo']);
+    const inputPath = buildMinimalDocx(xml);
+    const outputPath = inputPath.replace('test.docx', 'output.docx');
+
+    await cleanDocument(inputPath, outputPath, {
+      removeFootnotes: false,
+      removeParagraphPatterns: [],
+      removeRanges: [{ start: '^Beta', end: '^Delta' }],
+      clearParts: [],
+    });
+
+    const text = extractText(outputPath);
+    expect(text).toBe('Alpha\nEcho');
+
+    rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
+  });
+
+  it('removes nothing when start pattern does not match', async () => {
+    const xml = makeDocXml(['Alpha', 'Beta', 'Charlie']);
+    const inputPath = buildMinimalDocx(xml);
+    const outputPath = inputPath.replace('test.docx', 'output.docx');
+
+    await cleanDocument(inputPath, outputPath, {
+      removeFootnotes: false,
+      removeParagraphPatterns: [],
+      removeRanges: [{ start: '^NoMatch', end: '^Charlie' }],
+      clearParts: [],
+    });
+
+    const text = extractText(outputPath);
+    expect(text).toBe('Alpha\nBeta\nCharlie');
+
+    rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
+  });
+
+  it('removes from start through end of document when end pattern not found', async () => {
+    const xml = makeDocXml(['Alpha', 'Beta start', 'Charlie', 'Delta']);
+    const inputPath = buildMinimalDocx(xml);
+    const outputPath = inputPath.replace('test.docx', 'output.docx');
+
+    await cleanDocument(inputPath, outputPath, {
+      removeFootnotes: false,
+      removeParagraphPatterns: [],
+      removeRanges: [{ start: '^Beta', end: '^NoMatch' }],
+      clearParts: [],
+    });
+
+    const text = extractText(outputPath);
+    expect(text).toBe('Alpha');
+
+    rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
+  });
+
+  it('handles multiple ranges correctly', async () => {
+    const xml = makeDocXml([
+      'Keep1', 'Remove1Start', 'Remove1Mid', 'Remove1End',
+      'Keep2', 'Remove2Start', 'Remove2End', 'Keep3',
+    ]);
+    const inputPath = buildMinimalDocx(xml);
+    const outputPath = inputPath.replace('test.docx', 'output.docx');
+
+    await cleanDocument(inputPath, outputPath, {
+      removeFootnotes: false,
+      removeParagraphPatterns: [],
+      removeRanges: [
+        { start: '^Remove1Start', end: '^Remove1End' },
+        { start: '^Remove2Start', end: '^Remove2End' },
+      ],
+      clearParts: [],
+    });
+
+    const text = extractText(outputPath);
+    expect(text).toBe('Keep1\nKeep2\nKeep3');
 
     rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
