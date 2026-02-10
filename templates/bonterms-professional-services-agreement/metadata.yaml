@@ -42,6 +42,6 @@ fields:
     type: string
     description: >-
       Type of rights in deliverables: "licensed" or "assigned"
-    required: true
+    required: false
     default: licensed
     section: Terms
