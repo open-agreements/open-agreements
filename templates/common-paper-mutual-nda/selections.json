@@ -1,0 +1,38 @@
+{
+  "groups": [
+    {
+      "id": "mnda_term_options",
+      "type": "radio",
+      "options": [
+        {
+          "marker": "Expires {mnda_term} from Effective Date.",
+          "trigger": "default"
+        },
+        {
+          "marker": "Continues until terminated in accordance with the terms of the MNDA.",
+          "trigger": {
+            "field": "mnda_term",
+            "equals": "until terminated"
+          }
+        }
+      ]
+    },
+    {
+      "id": "confidentiality_term_options",
+      "type": "radio",
+      "options": [
+        {
+          "marker": "{confidentiality_term} from {confidentiality_term_start}, but in the case of trade secrets, until Confidential Information is no longer considered a trade secret under applicable laws.",
+          "trigger": "default"
+        },
+        {
+          "marker": "In perpetuity.",
+          "trigger": {
+            "field": "confidentiality_term",
+            "equals": "In perpetuity"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -96,12 +96,22 @@ function setChecked(para: any, type: 'radio' | 'checkbox'): void {
     return;
   }
 
-  // Determine the replacement prefix
-  const checkedPrefix = type === 'radio' ? '( x )' : '[ x ]';
+  // Determine marker style from the paragraph text first. Some templates use
+  // square-bracket markers ([ ]) with radio semantics.
+  let openBracket = '[';
+  let closeBracket = ']';
+  if (/\(\s*[xX]?\s*\)/.test(fullText)) {
+    openBracket = '(';
+    closeBracket = ')';
+  } else if (/\[\s*[xX]?\s*\]/.test(fullText)) {
+    openBracket = '[';
+    closeBracket = ']';
+  } else if (type === 'radio') {
+    openBracket = '(';
+    closeBracket = ')';
+  }
 
-  // Find which <w:t> contains the opening bracket
-  const openBracket = type === 'radio' ? '(' : '[';
-  const closeBracket = type === 'radio' ? ')' : ']';
+  const checkedPrefix = openBracket === '(' ? '( x )' : '[ x ]';
 
   // Walk through <w:t> elements to find and replace the marker
   let foundOpen = false;

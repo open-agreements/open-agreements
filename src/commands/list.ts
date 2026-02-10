@@ -1,7 +1,7 @@
-import { readdirSync, existsSync, readFileSync } from 'node:fs';
+import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { loadMetadata, loadRecipeMetadata, loadExternalMetadata } from '../core/metadata.js';
-import { getTemplatesDir, resolveTemplateDir, getRecipesDir, resolveRecipeDir, getExternalDir, resolveExternalDir } from '../utils/paths.js';
+import { listExternalEntries, listRecipeEntries, listTemplateEntries } from '../utils/paths.js';
 
 const pkgPath = fileURLToPath(new URL('../../package.json', import.meta.url));
 const pkg = JSON.parse(readFileSync(pkgPath, 'utf-8'));
@@ -57,81 +57,63 @@ function runListJson(opts: ListOptions): void {
   const errors: string[] = [];
 
   // Templates
-  const templatesDir = getTemplatesDir();
-  if (existsSync(templatesDir)) {
-    const dirs = readdirSync(templatesDir, { withFileTypes: true })
-      .filter((d) => d.isDirectory())
-      .map((d) => d.name);
-
-    for (const id of dirs) {
-      const dir = resolveTemplateDir(id);
-      try {
-        const meta = loadMetadata(dir);
-        results.push({
-          name: id,
-          description: meta.description ?? meta.name,
-          license: meta.license,
-          source_url: meta.source_url,
-          source: sourceName(meta.source_url),
-          attribution_text: meta.attribution_text,
-          fields: mapFields(meta.fields),
-        });
-      } catch (err) {
-        errors.push(`template ${id}: ${err instanceof Error ? err.message : String(err)}`);
-      }
+  for (const entry of listTemplateEntries()) {
+    const id = entry.id;
+    const dir = entry.dir;
+    try {
+      const meta = loadMetadata(dir);
+      results.push({
+        name: id,
+        description: meta.description ?? meta.name,
+        license: meta.license,
+        source_url: meta.source_url,
+        source: sourceName(meta.source_url),
+        attribution_text: meta.attribution_text,
+        fields: mapFields(meta.fields),
+      });
+    } catch (err) {
+      errors.push(`template ${id}: ${err instanceof Error ? err.message : String(err)}`);
     }
   }
 
   // External templates
-  const externalDir = getExternalDir();
-  if (existsSync(externalDir)) {
-    const dirs = readdirSync(externalDir, { withFileTypes: true })
-      .filter((d) => d.isDirectory())
-      .map((d) => d.name);
-
-    for (const id of dirs) {
-      const dir = resolveExternalDir(id);
-      try {
-        const meta = loadExternalMetadata(dir);
-        results.push({
-          name: id,
-          description: meta.description ?? meta.name,
-          license: meta.license,
-          source_url: meta.source_url,
-          source: sourceName(meta.source_url),
-          attribution_text: meta.attribution_text,
-          fields: mapFields(meta.fields),
-        });
-      } catch (err) {
-        errors.push(`external ${id}: ${err instanceof Error ? err.message : String(err)}`);
-      }
+  for (const entry of listExternalEntries()) {
+    const id = entry.id;
+    const dir = entry.dir;
+    try {
+      const meta = loadExternalMetadata(dir);
+      results.push({
+        name: id,
+        description: meta.description ?? meta.name,
+        license: meta.license,
+        source_url: meta.source_url,
+        source: sourceName(meta.source_url),
+        attribution_text: meta.attribution_text,
+        fields: mapFields(meta.fields),
+      });
+    } catch (err) {
+      errors.push(`external ${id}: ${err instanceof Error ? err.message : String(err)}`);
     }
   }
 
   // Recipes
-  const recipesDir = getRecipesDir();
-  if (existsSync(recipesDir)) {
-    const dirs = readdirSync(recipesDir, { withFileTypes: true })
-      .filter((d) => d.isDirectory())
-      .map((d) => d.name);
-
-    for (const id of dirs) {
-      const dir = resolveRecipeDir(id);
-      try {
-        const meta = loadRecipeMetadata(dir);
-        results.push({
-          name: id,
-          description: meta.description ?? meta.name,
-          license_note: meta.license_note,
-          source_url: meta.source_url,
-          source: sourceName(meta.source_url),
-          source_version: meta.source_version,
-          optional: meta.optional,
-          fields: mapFields(meta.fields),
-        });
-      } catch (err) {
-        errors.push(`recipe ${id}: ${err instanceof Error ? err.message : String(err)}`);
-      }
+  for (const entry of listRecipeEntries()) {
+    const id = entry.id;
+    const dir = entry.dir;
+    try {
+      const meta = loadRecipeMetadata(dir);
+      results.push({
+        name: id,
+        description: meta.description ?? meta.name,
+        license_note: meta.license_note,
+        source_url: meta.source_url,
+        source: sourceName(meta.source_url),
+        source_version: meta.source_version,
+        optional: meta.optional,
+        fields: mapFields(meta.fields),
+      });
+    } catch (err) {
+      errors.push(`recipe ${id}: ${err instanceof Error ? err.message : String(err)}`);
     }
   }
 
@@ -157,55 +139,40 @@ function listAgreements(): void {
   interface Row { id: string; license: string; required: number; total: number; source: string; sourceUrl: string }
   const rows: Row[] = [];
 
-  const templatesDir = getTemplatesDir();
-  if (existsSync(templatesDir)) {
-    const dirs = readdirSync(templatesDir, { withFileTypes: true })
-      .filter((d) => d.isDirectory())
-      .map((d) => d.name);
-    for (const id of dirs) {
-      const dir = resolveTemplateDir(id);
-      try {
-        const meta = loadMetadata(dir);
-        const required = meta.fields.filter((f) => f.required).length;
-        rows.push({ id, license: meta.license, required, total: meta.fields.length, source: sourceName(meta.source_url) || '—', sourceUrl: meta.source_url });
-      } catch {
-        rows.push({ id, license: 'ERROR', required: 0, total: 0, source: '—', sourceUrl: 'Could not load metadata' });
-      }
+  for (const entry of listTemplateEntries()) {
+    const id = entry.id;
+    const dir = entry.dir;
+    try {
+      const meta = loadMetadata(dir);
+      const required = meta.fields.filter((f) => f.required).length;
+      rows.push({ id, license: meta.license, required, total: meta.fields.length, source: sourceName(meta.source_url) || '—', sourceUrl: meta.source_url });
+    } catch {
+      rows.push({ id, license: 'ERROR', required: 0, total: 0, source: '—', sourceUrl: 'Could not load metadata' });
     }
   }
 
-  const externalDir = getExternalDir();
-  if (existsSync(externalDir)) {
-    const dirs = readdirSync(externalDir, { withFileTypes: true })
-      .filter((d) => d.isDirectory())
-      .map((d) => d.name);
-    for (const id of dirs) {
-      const dir = resolveExternalDir(id);
-      try {
-        const meta = loadExternalMetadata(dir);
-        const required = meta.fields.filter((f) => f.required).length;
-        rows.push({ id, license: meta.license, required, total: meta.fields.length, source: sourceName(meta.source_url) || '—', sourceUrl: meta.source_url });
-      } catch {
-        rows.push({ id, license: 'ERROR', required: 0, total: 0, source: '—', sourceUrl: 'Could not load metadata' });
-      }
+  for (const entry of listExternalEntries()) {
+    const id = entry.id;
+    const dir = entry.dir;
+    try {
+      const meta = loadExternalMetadata(dir);
+      const required = meta.fields.filter((f) => f.required).length;
+      rows.push({ id, license: meta.license, required, total: meta.fields.length, source: sourceName(meta.source_url) || '—', sourceUrl: meta.source_url });
+    } catch {
+      rows.push({ id, license: 'ERROR', required: 0, total: 0, source: '—', sourceUrl: 'Could not load metadata' });
     }
   }
 
-  const recipesDir = getRecipesDir();
-  if (existsSync(recipesDir)) {
-    const dirs = readdirSync(recipesDir, { withFileTypes: true })
-      .filter((d) => d.isDirectory())
-      .map((d) => d.name);
-    for (const id of dirs) {
-      const dir = resolveRecipeDir(id);
-      try {
-        const meta = loadRecipeMetadata(dir);
-        const required = meta.fields.filter((f) => f.required).length;
-        const license = meta.optional ? 'recipe*' : 'recipe';
-        rows.push({ id, license, required, total: meta.fields.length, source: sourceName(meta.source_url) || '—', sourceUrl: meta.source_url });
-      } catch {
-        rows.push({ id, license: 'ERROR', required: 0, total: 0, source: '—', sourceUrl: 'Could not load metadata' });
-      }
+  for (const entry of listRecipeEntries()) {
+    const id = entry.id;
+    const dir = entry.dir;
+    try {
+      const meta = loadRecipeMetadata(dir);
+      const required = meta.fields.filter((f) => f.required).length;
+      const license = meta.optional ? 'recipe*' : 'recipe';
+      rows.push({ id, license, required, total: meta.fields.length, source: sourceName(meta.source_url) || '—', sourceUrl: meta.source_url });
+    } catch {
+      rows.push({ id, license: 'ERROR', required: 0, total: 0, source: '—', sourceUrl: 'Could not load metadata' });
     }
   }
 

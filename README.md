@@ -113,6 +113,43 @@ open-agreements list
 open-agreements list --json
 ```
 
+## Contracts Workspace CLI (Separate Package)
+
+OpenAgreements now includes a sibling package for repository/workspace operations:
+
+- Package: `@open-agreements/contracts-workspace`
+- Binary: `open-agreements-workspace`
+- Docs: `docs/contracts-workspace.md`
+
+This package is intentionally separate from `open-agreements` so teams can adopt:
+
+- template filling only
+- workspace management only
+- or both together
+
+Core workspace features:
+
+- lifecycle-first `init` (`forms/`, `drafts/`, `incoming/`, `executed/`, `archive/`)
+- forms catalog with URL + SHA-256 validation
+- YAML status indexing and linting with filename-driven `_executed` status
+
+The v1 model is filesystem-only and works in locally synced cloud-drive folders (for example, Google Drive sync). No Drive API/OAuth integration is required.
+
+## Optional Content Roots (Future-Proofing)
+
+To support logical unbundling as form libraries grow, `open-agreements` can load content from additional roots via:
+
+- env var: `OPEN_AGREEMENTS_CONTENT_ROOTS`
+- format: path-delimited list of absolute/relative directories (for example, `dirA:dirB` on macOS/Linux)
+- expected structure under each root: `templates/`, `external/`, and/or `recipes/`
+
+Lookup precedence is:
+
+1. roots in `OPEN_AGREEMENTS_CONTENT_ROOTS` (in listed order)
+2. bundled package content (default fallback)
+
+This keeps default installs simple while allowing advanced users to move large content libraries outside the core package.
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for how to add templates, recipes, and other improvements.

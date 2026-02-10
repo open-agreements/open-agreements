@@ -1,7 +1,13 @@
 import { resolve } from 'node:path';
-import { existsSync, readdirSync } from 'node:fs';
 import { fillTemplate } from '../core/engine.js';
-import { getTemplatesDir, resolveTemplateDir, getExternalDir, resolveExternalDir, getRecipesDir, resolveRecipeDir } from '../utils/paths.js';
+import {
+  findTemplateDir,
+  findExternalDir,
+  findRecipeDir,
+  listTemplateIds,
+  listExternalIds,
+  listRecipeIds,
+} from '../utils/paths.js';
 import { runExternalFill } from '../core/external/index.js';
 import { runRecipe } from '../core/recipe/index.js';
 
@@ -13,13 +19,13 @@ export interface FillArgs {
 
 export async function runFill(args: FillArgs): Promise<void> {
   // Search templates/ → external/ → recipes/
-  const templateDir = resolveTemplateDir(args.template);
-  const externalDir = resolveExternalDir(args.template);
-  const recipeDir = resolveRecipeDir(args.template);
+  const templateDir = findTemplateDir(args.template);
+  const externalDir = findExternalDir(args.template);
+  const recipeDir = findRecipeDir(args.template);
 
-  const isTemplate = existsSync(templateDir);
-  const isExternal = !isTemplate && existsSync(externalDir);
-  const isRecipe = !isTemplate && !isExternal && existsSync(recipeDir);
+  const isTemplate = templateDir !== undefined;
+  const isExternal = !isTemplate && externalDir !== undefined;
+  const isRecipe = !isTemplate && !isExternal && recipeDir !== undefined;
 
   if (!isTemplate && !isExternal && !isRecipe) {
     const available = getAvailableIds();
@@ -54,7 +60,7 @@ export async function runFill(args: FillArgs): Promise<void> {
       console.log(`Fields used: ${result.fieldsUsed.join(', ')}`);
     } else {
       const result = await fillTemplate({
-        templateDir,
+        templateDir: templateDir!,
         values: args.values,
         outputPath: resolvedOutput,
       });
@@ -69,24 +75,5 @@ export async function runFill(args: FillArgs): Promise<void> {
 }
 
 function getAvailableIds(): string[] {
-  const ids: string[] = [];
-  const templatesDir = getTemplatesDir();
-  if (existsSync(templatesDir)) {
-    ids.push(...readdirSync(templatesDir, { withFileTypes: true })
-      .filter((d) => d.isDirectory())
-      .map((d) => d.name));
-  }
-  const extDir = getExternalDir();
-  if (existsSync(extDir)) {
-    ids.push(...readdirSync(extDir, { withFileTypes: true })
-      .filter((d) => d.isDirectory())
-      .map((d) => d.name));
-  }
-  const recipesDir = getRecipesDir();
-  if (existsSync(recipesDir)) {
-    ids.push(...readdirSync(recipesDir, { withFileTypes: true })
-      .filter((d) => d.isDirectory())
-      .map((d) => d.name));
-  }
-  return ids;
+  return [...new Set([...listTemplateIds(), ...listExternalIds(), ...listRecipeIds()])];
 }
