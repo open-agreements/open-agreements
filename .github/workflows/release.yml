@@ -1,0 +1,71 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  publish:
+    name: Publish to npm
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    concurrency:
+      group: npm-release-${{ github.ref }}
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org
+          cache: npm
+
+      - name: Verify tag matches package version
+        run: |
+          TAG_VERSION="${GITHUB_REF_NAME#v}"
+          PKG_VERSION="$(node -p "require('./package.json').version")"
+
+          if [ "$TAG_VERSION" != "$PKG_VERSION" ]; then
+            echo "Tag version ($TAG_VERSION) must match package.json version ($PKG_VERSION)."
+            exit 1
+          fi
+
+      - name: Verify release commit is on main
+        run: |
+          git fetch origin main
+          if ! git merge-base --is-ancestor "$GITHUB_SHA" "origin/main"; then
+            echo "Release tag commit is not contained in origin/main."
+            exit 1
+          fi
+
+      - run: npm ci
+
+      - name: Guard against duplicate publish
+        run: |
+          VERSION="${GITHUB_REF_NAME#v}"
+          if npm view "open-agreements@$VERSION" version >/dev/null 2>&1; then
+            echo "open-agreements@$VERSION already exists on npm."
+            exit 1
+          fi
+          echo "Version $VERSION not yet published."
+
+      - name: Build
+        run: npm run build
+
+      - name: Validate templates
+        run: npm run validate
+
+      - name: Run tests (includes OpenSpec traceability check)
+        run: npm run test:run
+
+      - name: Verify package contents
+        run: npm pack --dry-run
+
+      - name: Publish to npm (trusted publishing + provenance)
+        run: npm publish --provenance --access public
