@@ -25,6 +25,7 @@ This matrix maps canonical OpenSpec `#### Scenario:` entries to Allure story map
 | External template appears in list output | covered | `tests/open_agreements_traceability.allure.test.ts` |  |
 | External template fill | covered | `tests/open_agreements_traceability.allure.test.ts` |  |
 | Fill command renders output | covered | `tests/open_agreements_traceability.allure.test.ts` |  |
+| Fixed term selection removes non-selected options | covered | `tests/mutual-nda-selections.allure.test.ts` |  |
 | Full pipeline with auto-download | covered | `tests/open_agreements_traceability.allure.test.ts` |  |
 | Full pipeline with user-supplied input | covered | `tests/open_agreements_traceability.allure.test.ts` |  |
 | Invalid license enum fails validation | covered | `tests/open_agreements_traceability.allure.test.ts` |  |
@@ -41,6 +42,7 @@ This matrix maps canonical OpenSpec `#### Scenario:` entries to Allure story map
 | Optional field missing from DOCX | covered | `tests/open_agreements_traceability.allure.test.ts` |  |
 | Output heading validation | covered | `tests/open_agreements_traceability.allure.test.ts` |  |
 | Output structure matches source | covered | `tests/open_agreements_traceability.allure.test.ts` |  |
+| Perpetual selection marks selected options | covered | `tests/mutual-nda-selections.allure.test.ts` |  |
 | Placeholder discovery | covered | `tests/open_agreements_traceability.allure.test.ts` |  |
 | Preview-only fallback without Node.js | covered | `tests/open_agreements_traceability.allure.test.ts` |  |
 | Push to main license check | covered | `tests/open_agreements_traceability.allure.test.ts` |  |

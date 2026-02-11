@@ -6,6 +6,8 @@
 [![CI](https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml/badge.svg)](https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml)
 [![Validate Templates](https://github.com/open-agreements/open-agreements/actions/workflows/validate.yml/badge.svg)](https://github.com/open-agreements/open-agreements/actions/workflows/validate.yml)
 [![codecov](https://codecov.io/gh/open-agreements/open-agreements/graph/badge.svg)](https://codecov.io/gh/open-agreements/open-agreements)
+[![Tests: Vitest](https://img.shields.io/badge/tests-vitest-6E9F18)](https://vitest.dev/)
+[![OpenSpec Traceability](https://img.shields.io/badge/openspec-traceability%20gate-brightgreen)](./tests/OPENSPEC_TRACEABILITY.md)
 
 Fill standard legal agreement templates and produce signable DOCX files. 25 templates covering NDAs, cloud terms, contractor agreements, SAFEs, and NVCA financing documents.
 
@@ -16,6 +18,13 @@ Built by the team behind [UseJunior.com](https://usejunior.com) — in productio
 </p>
 
 > *Demo: Claude fills a Common Paper Mutual NDA in under 2 minutes. Sped up for brevity.*
+
+## Quality and Trust Signals
+
+- CI runs on pull requests and pushes to `main`.
+- Coverage is published to Codecov with repository-defined patch/project gates in `codecov.yml`.
+- The active JS test framework is Vitest, with JUnit test results uploaded for Codecov test analytics.
+- OpenSpec scenario traceability is enforced via `npm run check:spec-coverage`, with matrix output in `tests/OPENSPEC_TRACEABILITY.md`.
 
 ## How It Works
 

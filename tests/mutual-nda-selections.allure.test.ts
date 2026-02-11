@@ -6,6 +6,9 @@ import { fillTemplate } from '../src/core/engine.js';
 import { extractAllText } from '../src/core/recipe/verifier.js';
 import { getTemplatesDir } from '../src/utils/paths.js';
 
+declare const allure: any;
+
+const TEST_CAPABILITY = 'open-agreements';
 const tempDirs: string[] = [];
 
 afterEach(() => {
@@ -18,8 +21,21 @@ function mutualNdaTemplateDir(): string {
   return join(getTemplatesDir(), 'common-paper-mutual-nda');
 }
 
+async function tagScenario(story: string, description: string): Promise<void> {
+  await allure.epic('OpenSpec Traceability');
+  await allure.feature(TEST_CAPABILITY);
+  await allure.story(story);
+  await allure.severity('normal');
+  await allure.description(description);
+}
+
 describe('common-paper-mutual-nda selections', () => {
-  it('removes non-selected fixed-term options', async () => {
+  it('fixed-term flow removes non-selected options', async () => {
+    await tagScenario(
+      'Fixed term selection removes non-selected options',
+      'Behavior-level assertion for the OpenSpec scenario.'
+    );
+
     const tempDir = mkdtempSync(join(tmpdir(), 'oa-mnda-fixed-'));
     tempDirs.push(tempDir);
     const outputPath = join(tempDir, 'fixed-term.docx');
@@ -49,7 +65,12 @@ describe('common-paper-mutual-nda selections', () => {
     expect(text).not.toContain('In perpetuity.');
   });
 
-  it('selects perpetual and until-terminated options when requested', async () => {
+  it('perpetual flow marks selected options', async () => {
+    await tagScenario(
+      'Perpetual selection marks selected options',
+      'Behavior-level assertion for the OpenSpec scenario.'
+    );
+
     const tempDir = mkdtempSync(join(tmpdir(), 'oa-mnda-perpetual-'));
     tempDirs.push(tempDir);
     const outputPath = join(tempDir, 'perpetual.docx');

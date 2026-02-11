@@ -256,6 +256,25 @@ The system SHALL accept a template name, load the corresponding DOCX template, s
 - **WHEN** the user invokes `fill` without providing `governing_law`
 - **THEN** the system returns an error listing the missing required fields
 
+### Requirement: Mutual NDA Selection Semantics
+The `common-paper-mutual-nda` fill flow SHALL preserve only selected option
+text for checkbox-style MNDA term and confidentiality term choices, while
+marking selected choices with `[ x ]`.
+
+#### Scenario: Fixed term selection removes non-selected options
+- **GIVEN** the user sets `mnda_term` to a fixed duration
+- **AND** sets `confidentiality_term` to fixed-term language
+- **WHEN** the template is filled
+- **THEN** fixed-term options are marked with `[ x ]`
+- **AND** conflicting alternatives (for example "until terminated" or "in perpetuity") are removed
+
+#### Scenario: Perpetual selection marks selected options
+- **GIVEN** the user sets `mnda_term` to `until terminated`
+- **AND** sets `confidentiality_term` to `In perpetuity`
+- **WHEN** the template is filled
+- **THEN** the selected until-terminated and perpetuity options are marked with `[ x ]`
+- **AND** non-selected fixed-term alternatives are removed
+
 ### Requirement: Template Metadata Schema
 Each template directory SHALL contain a `metadata.yaml` validated by Zod schema with fields: `name`, `source_url`, `version`, `license` (enum: CC-BY-4.0, CC0-1.0), `allow_derivatives` (boolean), `attribution_text`, `fields` (array of field definitions with name, type, description, required).
 
@@ -406,4 +425,3 @@ SHALL NOT include `src/` or `node_modules/`.
 - **GIVEN** the package is published to npm
 - **WHEN** a user runs `npm install open-agreements` in a fresh directory
 - **THEN** `npx open-agreements list --json` produces valid JSON output
-

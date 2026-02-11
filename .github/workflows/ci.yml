@@ -58,12 +58,22 @@ jobs:
 
       - run: npm ci
 
-      - name: Test coverage
-        run: npm run test:coverage
+      - name: Test coverage + JUnit results
+        run: npm run test:coverage:ci
 
-      - name: Upload to Codecov
+      - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v5
         with:
           files: ./coverage/lcov.info
           use_oidc: true
-          fail_ci_if_error: false
+          fail_ci_if_error: true
+
+      # Tokenless/OIDC-first upload.
+      # If org policy changes, configure CODECOV_TOKEN as a repository secret.
+      - name: Upload test results to Codecov
+        if: ${{ !cancelled() }}
+        uses: codecov/test-results-action@v1
+        with:
+          files: ./coverage/junit.xml
+          use_oidc: true
+          fail_ci_if_error: true

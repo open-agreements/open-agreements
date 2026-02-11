@@ -42,6 +42,8 @@
     "test:workspace": "vitest run packages/contracts-workspace/tests",
     "test:workspace-mcp": "vitest run packages/contracts-workspace-mcp/tests",
     "test:coverage": "vitest run --coverage --coverage.reporter=lcov --coverage.reporter=text-summary",
+    "test:coverage:ci": "vitest run --coverage --coverage.reporter=lcov --coverage.reporter=text-summary --reporter=default --reporter=junit --outputFile=./coverage/junit.xml",
+    "test:junit": "vitest run --reporter=default --reporter=junit --outputFile=./coverage/junit.xml",
     "test:run": "npm run check:spec-coverage && vitest run",
     "lint": "eslint src/",
     "validate": "node bin/open-agreements.js validate",
