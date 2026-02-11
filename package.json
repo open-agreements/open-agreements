@@ -1,6 +1,6 @@
 {
   "name": "open-agreements",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Open-source legal template filling CLI and library",
   "repository": {
     "type": "git",
