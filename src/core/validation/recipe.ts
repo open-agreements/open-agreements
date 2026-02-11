@@ -23,7 +23,7 @@ const SAFE_TAG_RE = /^\{[a-z_][a-z0-9_]*\}$/;
  * Validate a recipe directory:
  * - No .docx files (copyrighted content must not be committed)
  * - metadata.yaml validates against schema
- * - For non-scaffold recipes: replacements.json, schema.json present and valid
+ * - For non-scaffold recipes: replacements.json present and valid
  * - Replacement values must be valid {identifier} tags
  * - In strict mode: scaffolds are errors, all files required
  */
@@ -51,9 +51,10 @@ export function validateRecipe(
   }
 
   // Scaffold detection: if only metadata.yaml exists, this is a scaffold
+  const metadata = loadRecipeMetadata(recipeDir);
+  const metadataFieldNames = new Set(metadata.fields.map((field) => field.name));
   const hasReplacements = existsSync(join(recipeDir, 'replacements.json'));
-  const hasSchema = existsSync(join(recipeDir, 'schema.json'));
-  const isScaffold = !hasReplacements && !hasSchema;
+  const isScaffold = !hasReplacements;
 
   if (isScaffold) {
     if (strict) {
@@ -72,6 +73,7 @@ export function validateRecipe(
       if (typeof replacements !== 'object' || replacements === null) {
         errors.push('replacements.json must be a JSON object');
       } else {
+        const unknownTargets = new Set<string>();
         for (const [key, value] of Object.entries(replacements)) {
           if (typeof value !== 'string') {
             errors.push(`replacements.json: value for "${key}" must be a string`);
@@ -94,6 +96,11 @@ export function validateRecipe(
                 errors.push(
                   `replacements.json: unsafe tag "${token}" in value for "${key}". Only {identifier} tags allowed.`
                 );
+                continue;
+              }
+              const fieldName = token.slice(1, -1);
+              if (!metadataFieldNames.has(fieldName)) {
+                unknownTargets.add(fieldName);
               }
             }
           }
@@ -113,6 +120,9 @@ export function validateRecipe(
           }
           // nth keys: no infinite-loop check needed (single-shot replacement)
         }
+        for (const fieldName of unknownTargets) {
+          warnings.push(`Replacement target {${fieldName}} not found in metadata fields`);
+        }
       }
     } catch (err) {
       errors.push(`replacements.json: ${(err as Error).message}`);
@@ -122,40 +132,6 @@ export function validateRecipe(
       errors.push('replacements.json not found (required for runnable recipes)');
     } else {
       warnings.push('replacements.json not found (required for runnable recipes)');
-    }
-  }
-
-  // schema.json is required for non-scaffold recipes
-  if (!hasSchema) {
-    if (strict) {
-      errors.push('schema.json not found (required for runnable recipes)');
-    } else {
-      warnings.push('schema.json not found (required for runnable recipes)');
-    }
-  }
-
-  // Validate schema.json field coverage
-  if (hasSchema && hasReplacements) {
-    try {
-      const schema = JSON.parse(readFileSync(join(recipeDir, 'schema.json'), 'utf-8'));
-      const replacements = JSON.parse(readFileSync(join(recipeDir, 'replacements.json'), 'utf-8'));
-
-      const schemaFields = new Set(
-        (schema.fields ?? schema).map?.((f: { name: string }) => f.name) ?? Object.keys(schema)
-      );
-
-      // Check that replacement targets reference schema fields
-      for (const value of Object.values(replacements)) {
-        const tagMatch = (value as string).match(/^\{(\w+)\}$/);
-        if (tagMatch) {
-          const fieldName = tagMatch[1];
-          if (!schemaFields.has(fieldName)) {
-            warnings.push(`Replacement target {${fieldName}} not found in schema.json`);
-          }
-        }
-      }
-    } catch {
-      // Already validated above
     }
   }
 
@@ -171,13 +147,8 @@ export function validateRecipe(
   }
 
   // Warn if source_sha256 is missing (fill will skip integrity verification)
-  try {
-    const meta = loadRecipeMetadata(recipeDir);
-    if (!meta.source_sha256) {
-      warnings.push('No source_sha256 in metadata — fill will skip integrity verification');
-    }
-  } catch {
-    // metadata validation already handled above
+  if (!metadata.source_sha256) {
+    warnings.push('No source_sha256 in metadata — fill will skip integrity verification');
   }
 
   return { recipeId, valid: errors.length === 0, scaffold: false, errors, warnings };

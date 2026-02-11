@@ -42,11 +42,15 @@ export function runList(opts: ListOptions = {}): void {
   listAgreementsWithOptions(opts);
 }
 
-function mapFields(fields: { name: string; type: string; required: boolean; section?: string; description: string; default?: string }[]) {
+function mapFields(
+  fields: { name: string; type: string; section?: string; description: string; default?: string }[],
+  requiredFields: string[]
+) {
+  const required = new Set(requiredFields);
   return fields.map((f) => ({
     name: f.name,
     type: f.type,
-    required: f.required,
+    required: required.has(f.name),
     section: f.section ?? null,
     description: f.description,
     default: f.default ?? null,
@@ -71,7 +75,7 @@ function runListJson(opts: ListOptions): void {
         source_url: meta.source_url,
         source: sourceName(meta.source_url),
         attribution_text: meta.attribution_text,
-        fields: mapFields(meta.fields),
+        fields: mapFields(meta.fields, meta.required_fields),
       });
     } catch (err) {
       errors.push(`template ${id}: ${err instanceof Error ? err.message : String(err)}`);
@@ -92,7 +96,7 @@ function runListJson(opts: ListOptions): void {
           source_url: meta.source_url,
           source: sourceName(meta.source_url),
           attribution_text: meta.attribution_text,
-          fields: mapFields(meta.fields),
+          fields: mapFields(meta.fields, meta.required_fields),
         });
       } catch (err) {
         errors.push(`external ${id}: ${err instanceof Error ? err.message : String(err)}`);
@@ -113,7 +117,7 @@ function runListJson(opts: ListOptions): void {
           source: sourceName(meta.source_url),
           source_version: meta.source_version,
           optional: meta.optional,
-          fields: mapFields(meta.fields),
+          fields: mapFields(meta.fields, meta.required_fields),
         });
       } catch (err) {
         errors.push(`recipe ${id}: ${err instanceof Error ? err.message : String(err)}`);
@@ -148,7 +152,7 @@ function listAgreementsWithOptions(opts: ListOptions): void {
     const dir = entry.dir;
     try {
       const meta = loadMetadata(dir);
-      const required = meta.fields.filter((f) => f.required).length;
+      const required = meta.required_fields.length;
       rows.push({ id, license: meta.license, required, total: meta.fields.length, source: sourceName(meta.source_url) || '—', sourceUrl: meta.source_url });
     } catch {
       rows.push({ id, license: 'ERROR', required: 0, total: 0, source: '—', sourceUrl: 'Could not load metadata' });
@@ -161,7 +165,7 @@ function listAgreementsWithOptions(opts: ListOptions): void {
       const dir = entry.dir;
       try {
         const meta = loadExternalMetadata(dir);
-        const required = meta.fields.filter((f) => f.required).length;
+        const required = meta.required_fields.length;
         rows.push({ id, license: meta.license, required, total: meta.fields.length, source: sourceName(meta.source_url) || '—', sourceUrl: meta.source_url });
       } catch {
         rows.push({ id, license: 'ERROR', required: 0, total: 0, source: '—', sourceUrl: 'Could not load metadata' });
@@ -173,7 +177,7 @@ function listAgreementsWithOptions(opts: ListOptions): void {
       const dir = entry.dir;
       try {
         const meta = loadRecipeMetadata(dir);
-        const required = meta.fields.filter((f) => f.required).length;
+        const required = meta.required_fields.length;
         const license = meta.optional ? 'recipe*' : 'recipe';
         rows.push({ id, license, required, total: meta.fields.length, source: sourceName(meta.source_url) || '—', sourceUrl: meta.source_url });
       } catch {

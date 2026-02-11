@@ -10,7 +10,6 @@ export const FieldDefinitionSchema = z.object({
   name: z.string(),
   type: z.enum(['string', 'date', 'number', 'boolean', 'enum']),
   description: z.string(),
-  required: z.boolean(),
   default: z.string().optional(),
   options: z.array(z.string()).optional(),
   section: z.string().optional(),
@@ -28,7 +27,35 @@ export const FieldDefinitionSchema = z.object({
 );
 export type FieldDefinition = z.infer<typeof FieldDefinitionSchema>;
 
-export const TemplateMetadataSchema = z.object({
+function validateRequiredFields(
+  fields: FieldDefinition[],
+  requiredFields: string[],
+  ctx: z.RefinementCtx
+): void {
+  const fieldNames = new Set(fields.map((field) => field.name));
+  const seen = new Set<string>();
+
+  requiredFields.forEach((fieldName, index) => {
+    if (seen.has(fieldName)) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['required_fields', index],
+        message: `Duplicate required field "${fieldName}"`,
+      });
+      return;
+    }
+    seen.add(fieldName);
+    if (!fieldNames.has(fieldName)) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['required_fields', index],
+        message: `Required field "${fieldName}" is not defined in fields`,
+      });
+    }
+  });
+}
+
+const TemplateMetadataBaseSchema = z.object({
   name: z.string(),
   description: z.string().optional(),
   source_url: z.string().url(),
@@ -37,13 +64,20 @@ export const TemplateMetadataSchema = z.object({
   allow_derivatives: z.boolean(),
   attribution_text: z.string(),
   fields: z.array(FieldDefinitionSchema),
+  required_fields: z.array(z.string()).default([]),
+});
+
+export const TemplateMetadataSchema = TemplateMetadataBaseSchema.superRefine((meta, ctx) => {
+  validateRequiredFields(meta.fields, meta.required_fields, ctx);
 });
 export type TemplateMetadata = z.infer<typeof TemplateMetadataSchema>;
 
 // --- External template schemas ---
 
-export const ExternalMetadataSchema = TemplateMetadataSchema.extend({
+export const ExternalMetadataSchema = TemplateMetadataBaseSchema.extend({
   source_sha256: z.string(),
+}).superRefine((meta, ctx) => {
+  validateRequiredFields(meta.fields, meta.required_fields, ctx);
 });
 export type ExternalMetadata = z.infer<typeof ExternalMetadataSchema>;
 
@@ -87,6 +121,9 @@ export const RecipeMetadataSchema = z.object({
   optional: z.boolean().default(false),
   source_sha256: z.string().optional(),
   fields: z.array(FieldDefinitionSchema).default([]),
+  required_fields: z.array(z.string()).default([]),
+}).superRefine((meta, ctx) => {
+  validateRequiredFields(meta.fields, meta.required_fields, ctx);
 });
 export type RecipeMetadata = z.infer<typeof RecipeMetadataSchema>;
 

@@ -20,6 +20,9 @@ export interface PrepareFillDataOptions {
   /** Field definitions from metadata. */
   fields: FieldDefinition[];
 
+  /** Required field names from metadata.required_fields. */
+  requiredFieldNames?: string[];
+
   /**
    * When true, unfilled optional fields default to BLANK_PLACEHOLDER ('_______')
    * so omissions are visible. When false, they default to '' (empty string).
@@ -73,6 +76,7 @@ export function prepareFillData(options: PrepareFillDataOptions): Record<string,
   const {
     values,
     fields,
+    requiredFieldNames = [],
     useBlankPlaceholder = false,
     coerceBooleans = false,
     computeDisplayFields,
@@ -88,8 +92,9 @@ export function prepareFillData(options: PrepareFillDataOptions): Record<string,
   }
 
   // Warn about required fields that are still unfilled (no value, no default)
+  const requiredSet = new Set(requiredFieldNames);
   const missing = fields
-    .filter((f) => f.required && (data[f.name] === '' || data[f.name] === BLANK_PLACEHOLDER))
+    .filter((f) => requiredSet.has(f.name) && (data[f.name] === '' || data[f.name] === BLANK_PLACEHOLDER))
     .map((f) => f.name);
   if (missing.length > 0) {
     console.warn(`Warning: missing required fields: ${missing.join(', ')}`);

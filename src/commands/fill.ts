@@ -27,9 +27,7 @@ function validateTemplateFillRequest(templateDir: string, values: Record<string,
     );
   }
 
-  const missingRequired = metadata.fields
-    .filter((field) => field.required && !values[field.name])
-    .map((field) => field.name);
+  const missingRequired = metadata.required_fields.filter((fieldName) => !values[fieldName]);
 
   if (missingRequired.length > 0) {
     throw new Error(`Missing required fields: ${missingRequired.join(', ')}`);
