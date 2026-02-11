@@ -103,6 +103,20 @@ open-agreements fill common-paper-mutual-nda -d values.json -o my-nda.docx
 
 **Recipes** (NVCA financing documents) are freely downloadable but not redistributable — we ship only transformation instructions and download the source DOCX from nvca.org at runtime.
 
+### Guidance Extraction
+
+Source documents contain expert commentary — footnotes, drafting notes, `[Comment: ...]` blocks — written by domain specialists (e.g., securities lawyers). The recipe cleaner removes this content to produce a fillable document, but can also extract it as structured JSON:
+
+```bash
+open-agreements recipe clean source.docx -o cleaned.docx \
+  --recipe nvca-indemnification-agreement \
+  --extract-guidance guidance.json
+```
+
+This produces a `guidance.json` with every removed footnote, comment, and drafting note tagged by source type and document position. The guidance is a local-only artifact (not committed or shipped) that AI agents or human authors can reference while filling the form. See [Adding Recipes — Guidance Extraction](docs/adding-recipes.md#guidance-extraction) for format details.
+
+**Why programmatic extraction?** The source document is the single source of truth. Re-running extraction after a publisher update produces fresh guidance with zero manual effort, preserves the exact language of domain experts, and captures everything — an AI can summarize on the fly, but cannot recover discarded content.
+
 Each template is a self-contained directory:
 
 ```

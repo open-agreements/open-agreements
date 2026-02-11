@@ -118,15 +118,49 @@ Tips:
 
 ## Step 5: Create clean.json (if needed)
 
+The cleaner removes content that shouldn't appear in the filled output — footnotes,
+drafting notes, preliminary commentary, multi-paragraph comment blocks, etc.
+
 ```json
 {
   "removeFootnotes": true,
   "removeParagraphPatterns": [
-    "^Note to Drafter:",
-    "^Preliminary Note\\b"
+    "^Comment:",
+    "^NOTE:"
+  ],
+  "removeRanges": [
+    {
+      "start": "^MODEL INDEMNIFICATION AGREEMENT$",
+      "end": "against their own directors and officers\\."
+    },
+    {
+      "start": "^\\[Comment:",
+      "end": "\\]\\s*$"
+    }
   ]
 }
 ```
+
+### clean.json fields
+
+| Field | Type | Description |
+|---|---|---|
+| `removeFootnotes` | boolean | Remove all footnotes from `word/footnotes.xml` |
+| `removeParagraphPatterns` | string[] | Regex patterns — any paragraph matching one is removed |
+| `removeRanges` | `{ start, end }[]` | Remove all paragraphs from the first matching `start` through the first subsequent `end` (inclusive). All occurrences of a range pattern are matched, not just the first. |
+| `clearParts` | string[] | OOXML part paths to clear entirely (e.g., `word/footer1.xml`) |
+
+### Range deletion
+
+`removeRanges` is useful for multi-paragraph blocks where individual patterns would be
+brittle. For example, the NVCA indemnification agreement has a 12-paragraph "Preliminary
+Notes" section and scattered multi-paragraph `[Comment: ...]` blocks. Two range entries
+replace what would otherwise require 15+ individual patterns.
+
+Each range scans paragraphs sequentially: when `start` matches, all paragraphs from that
+point through the first subsequent `end` match (inclusive) are removed. Matching then
+resumes from the next paragraph, so the same range pattern can match multiple occurrences
+in a single document.
 
 ## Step 6: Define fields in metadata.yaml
 
@@ -167,6 +201,78 @@ open-agreements recipe patch cleaned.docx -o patched.docx --recipe your-recipe-n
 # Full pipeline
 open-agreements recipe run your-recipe-name -d values.json -o output.docx --keep-intermediate
 ```
+
+## Guidance Extraction
+
+Source documents often contain expert commentary — footnotes, `[Comment: ...]` blocks,
+and drafting notes — that explain why fields exist, what the implications of different
+values are, and how sections interact. The cleaner removes this content to produce a
+fillable document, but the knowledge is valuable for anyone (human or AI) filling the
+form.
+
+The `--extract-guidance` flag on `recipe clean` captures all removed content as structured
+JSON **before** deleting it from the DOCX:
+
+```bash
+open-agreements recipe clean source.docx \
+  -o cleaned.docx \
+  --recipe nvca-indemnification-agreement \
+  --extract-guidance guidance.json
+```
+
+### Output format
+
+```json
+{
+  "extractedFrom": {
+    "sourceHash": "f9b61b4d...",
+    "configHash": "b77c2d27..."
+  },
+  "entries": [
+    {
+      "source": "range",
+      "part": "word/document.xml",
+      "index": 0,
+      "text": "MODEL INDEMNIFICATION AGREEMENT",
+      "groupId": "range-0"
+    },
+    {
+      "source": "pattern",
+      "part": "word/document.xml",
+      "index": 12,
+      "text": "Comment: This section addresses..."
+    },
+    {
+      "source": "footnote",
+      "part": "word/footnotes.xml",
+      "index": 40,
+      "text": "See Delaware General Corporation Law § 145."
+    }
+  ]
+}
+```
+
+Each entry records:
+
+| Field | Description |
+|---|---|
+| `source` | How the content was removed: `footnote`, `pattern`, or `range` |
+| `part` | OOXML part the content came from |
+| `index` | Global extraction order (preserves document position) |
+| `text` | The removed text content |
+| `groupId` | Shared identifier for entries from the same range match (range entries only) |
+
+### Staleness detection
+
+The `extractedFrom` object contains SHA-256 hashes of both the source DOCX and the
+`clean.json` config. If either changes, the guidance should be re-extracted.
+
+### Licensing note
+
+Extracted guidance contains verbatim source text. For non-redistributable sources (like
+NVCA), the guidance file must NOT be committed to the repository or shipped in the npm
+package — it is a **local-only, authoring-time** artifact generated on the user's machine.
+For permissive-licensed sources, guidance could be committed, but this is not required.
 
 ## Important: No .docx Files in Recipe Directories
 
