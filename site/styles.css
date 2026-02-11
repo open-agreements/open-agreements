@@ -216,12 +216,20 @@ h1 {
 pre {
   margin: 0;
   white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   font-size: 0.88rem;
   color: #1c2730;
+}
+
+pre code {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .demo {
@@ -280,6 +288,10 @@ figcaption {
   color: var(--accent-deep);
 }
 
+.dev-credit {
+  margin-left: auto;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(14px);
@@ -312,5 +324,9 @@ figcaption {
 
   h1 {
     font-size: 2rem;
+  }
+
+  .dev-credit {
+    margin-left: 0;
   }
 }
