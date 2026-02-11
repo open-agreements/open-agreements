@@ -1,10 +1,13 @@
-import { describe, it, expect, vi } from 'vitest';
+import { describe, expect, vi } from 'vitest';
+import { itAllure } from './helpers/allure-test.js';
 import { mkdtempSync, writeFileSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import AdmZip from 'adm-zip';
 import { detectCurrencyFields, sanitizeCurrencyValuesFromDocx, verifyTemplateFill, BLANK_PLACEHOLDER } from '../src/core/fill-utils.js';
 import { prepareFillData, fillDocx } from '../src/core/fill-pipeline.js';
+
+const it = itAllure.epic('Filling & Rendering');
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 
@@ -203,7 +206,7 @@ describe('verifyTemplateFill', () => {
     rmSync(path.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it('catches unrendered template tags', () => {
+  it.openspec('OA-025')('catches unrendered template tags', () => {
     const path = buildDocxFile(docXml(['Hello {unfilled_field}, welcome']));
     const result = verifyTemplateFill(path);
     expect(result.passed).toBe(false);
@@ -374,7 +377,7 @@ describe('fillDocx', () => {
     expect(result.length).toBeGreaterThan(0);
   });
 
-  it('strips drafting note paragraphs by default', async () => {
+  it.openspec('OA-019')('strips drafting note paragraphs by default', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +

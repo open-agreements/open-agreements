@@ -1,10 +1,13 @@
-import { describe, it, expect } from 'vitest';
+import { describe, expect } from 'vitest';
+import { itAllure } from './helpers/allure-test.js';
 import { join } from 'node:path';
 import { mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import AdmZip from 'adm-zip';
 import { DOMParser } from '@xmldom/xmldom';
 import { patchDocument, getRunText, isRunSafeToRemove } from '../src/core/recipe/patcher.js';
+
+const it = itAllure.epic('Filling & Rendering');
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 
@@ -59,7 +62,7 @@ function extractText(docxPath: string): string {
 }
 
 describe('patchDocument', () => {
-  it('replaces a placeholder within a single run', async () => {
+  it.openspec('OA-020')('replaces a placeholder within a single run', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -80,7 +83,7 @@ describe('patchDocument', () => {
     rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it('replaces a placeholder split across multiple runs', async () => {
+  it.openspec('OA-021')('replaces a placeholder split across multiple runs', async () => {
     // Word commonly splits "[Company Name]" across runs like:
     // Run 1: "[Company"  Run 2: " Name]"
     const xml =

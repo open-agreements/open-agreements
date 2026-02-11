@@ -1,6 +1,9 @@
-import { describe, it, expect } from 'vitest';
+import { describe, expect } from 'vitest';
+import { itAllure } from './helpers/allure-test.js';
 import AdmZip from 'adm-zip';
 import { enumerateTextParts, getGeneralTextPartNames } from '../src/core/recipe/ooxml-parts.js';
+
+const it = itAllure.epic('Discovery & Metadata');
 
 describe('enumerateTextParts', () => {
   it('finds document.xml only in minimal zip', () => {

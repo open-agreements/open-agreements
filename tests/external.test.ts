@@ -1,17 +1,27 @@
-import { describe, it, expect } from 'vitest';
+import { describe, expect } from 'vitest';
 import { execSync } from 'node:child_process';
 import { join } from 'node:path';
 import { readdirSync, existsSync } from 'node:fs';
 import { ExternalMetadataSchema } from '../src/core/metadata.js';
 import { validateExternal } from '../src/core/validation/external.js';
+import {
+  allureAttachment,
+  allureJsonAttachment,
+  allureParameter,
+  allureStep,
+  itAllure,
+} from './helpers/allure-test.js';
 
 const ROOT = new URL('..', import.meta.url).pathname;
 const BIN = join(ROOT, 'bin/open-agreements.js');
 const EXTERNAL_DIR = join(ROOT, 'external');
+const itDiscovery = itAllure.epic('Discovery & Metadata');
+const itFilling = itAllure.epic('Filling & Rendering');
+const itCompliance = itAllure.epic('Compliance & Governance');
 
 describe('ExternalMetadataSchema', () => {
-  it('accepts valid external metadata', () => {
-    const result = ExternalMetadataSchema.safeParse({
+  itDiscovery('accepts valid external metadata', async () => {
+    const input = {
       name: 'Test SAFE',
       source_url: 'https://example.com/safe',
       version: '1.0',
@@ -20,12 +30,21 @@ describe('ExternalMetadataSchema', () => {
       attribution_text: 'Based on Example SAFE',
       source_sha256: 'abcdef1234567890abcdef1234567890abcdef1234567890abcdef1234567890',
       fields: [],
+    };
+    await allureParameter('schema', 'ExternalMetadataSchema');
+    await allureJsonAttachment('external-metadata-input.json', input);
+    const result = await allureStep('Validate metadata payload', () =>
+      ExternalMetadataSchema.safeParse(input)
+    );
+    await allureJsonAttachment('external-metadata-parse-result.json', result);
+
+    await allureStep('Assert schema accepts valid payload', () => {
+      expect(result.success).toBe(true);
     });
-    expect(result.success).toBe(true);
   });
 
-  it('rejects missing source_sha256', () => {
-    const result = ExternalMetadataSchema.safeParse({
+  itDiscovery.openspec('OA-044')('rejects missing source_sha256', async () => {
+    const input = {
       name: 'Test SAFE',
       source_url: 'https://example.com/safe',
       version: '1.0',
@@ -33,12 +52,21 @@ describe('ExternalMetadataSchema', () => {
       allow_derivatives: false,
       attribution_text: 'Based on Example SAFE',
       fields: [],
+    };
+    await allureParameter('schema', 'ExternalMetadataSchema');
+    await allureJsonAttachment('external-metadata-input.json', input);
+    const result = await allureStep('Validate metadata payload', () =>
+      ExternalMetadataSchema.safeParse(input)
+    );
+    await allureJsonAttachment('external-metadata-parse-result.json', result);
+
+    await allureStep('Assert schema rejects payload without source hash', () => {
+      expect(result.success).toBe(false);
     });
-    expect(result.success).toBe(false);
   });
 
-  it('accepts CC-BY-ND-4.0 license', () => {
-    const result = ExternalMetadataSchema.safeParse({
+  itDiscovery('accepts CC-BY-ND-4.0 license', async () => {
+    const input = {
       name: 'Test',
       source_url: 'https://example.com',
       version: '1.0',
@@ -47,12 +75,17 @@ describe('ExternalMetadataSchema', () => {
       attribution_text: 'Attribution',
       source_sha256: 'a'.repeat(64),
       fields: [],
-    });
+    };
+    await allureParameter('license', 'CC-BY-ND-4.0');
+    const result = await allureStep('Validate external license value', () =>
+      ExternalMetadataSchema.safeParse(input)
+    );
+    await allureJsonAttachment('external-license-parse-result.json', result);
     expect(result.success).toBe(true);
   });
 
-  it('rejects non-CC license', () => {
-    const result = ExternalMetadataSchema.safeParse({
+  itDiscovery('rejects non-CC license', async () => {
+    const input = {
       name: 'Test',
       source_url: 'https://example.com',
       version: '1.0',
@@ -61,7 +94,12 @@ describe('ExternalMetadataSchema', () => {
       attribution_text: 'Attribution',
       source_sha256: 'a'.repeat(64),
       fields: [],
-    });
+    };
+    await allureParameter('license', 'MIT');
+    const result = await allureStep('Validate external license value', () =>
+      ExternalMetadataSchema.safeParse(input)
+    );
+    await allureJsonAttachment('external-license-parse-result.json', result);
     expect(result.success).toBe(false);
   });
 });
@@ -73,18 +111,24 @@ describe('External template validation', () => {
         .map((d) => d.name)
     : [];
 
-  it.each(externalIds)('validates %s', (id) => {
+  itCompliance.each(externalIds)('validates %s', async (id) => {
+    await allureParameter('external_template_id', id);
     const dir = join(EXTERNAL_DIR, id);
-    const result = validateExternal(dir, id);
-    expect(result.valid).toBe(true);
-    expect(result.errors).toHaveLength(0);
+    const result = await allureStep('Validate external template directory', () =>
+      validateExternal(dir, id)
+    );
+    await allureJsonAttachment(`${id}-external-validation-result.json`, result);
+    await allureStep('Assert external template validation passes', () => {
+      expect(result.valid).toBe(true);
+      expect(result.errors).toHaveLength(0);
+    });
   });
 });
 
 describe('External fill end-to-end', () => {
-  it('fills yc-safe-valuation-cap with sample values', () => {
+  itFilling.openspec('OA-043')('fills yc-safe-valuation-cap with sample values', async () => {
     const output = '/tmp/test-ext-valuation-cap.docx';
-    const result = execSync(
+    const command =
       `node ${BIN} fill yc-safe-valuation-cap` +
       ` --set company_name="Test Co"` +
       ` --set investor_name="Investor LLC"` +
@@ -96,17 +140,25 @@ describe('External fill end-to-end', () => {
       ` --set company="Test Co"` +
       ` --set name="Alice"` +
       ` --set title="CEO"` +
-      ` -o ${output}`,
-      { cwd: ROOT, encoding: 'utf-8', timeout: 30_000 }
+      ` -o ${output}`;
+
+    await allureParameter('template_id', 'yc-safe-valuation-cap');
+    await allureAttachment('external-fill-command.txt', command);
+    const result = await allureStep('Run CLI fill command', () =>
+      execSync(command, { cwd: ROOT, encoding: 'utf-8', timeout: 30_000 })
     );
-    expect(result).toContain('Filled');
-    expect(result).toContain(output);
-    expect(existsSync(output)).toBe(true);
+    await allureAttachment('external-fill-stdout.txt', result);
+
+    await allureStep('Assert fill command wrote output', () => {
+      expect(result).toContain('Filled');
+      expect(result).toContain(output);
+      expect(existsSync(output)).toBe(true);
+    });
   });
 
-  it('fills yc-safe-pro-rata-side-letter with sample values', () => {
+  itFilling('fills yc-safe-pro-rata-side-letter with sample values', async () => {
     const output = '/tmp/test-ext-pro-rata.docx';
-    const result = execSync(
+    const command =
       `node ${BIN} fill yc-safe-pro-rata-side-letter` +
       ` --set company_name="Test Co"` +
       ` --set investor_name="Investor LLC"` +
@@ -115,21 +167,30 @@ describe('External fill end-to-end', () => {
       ` --set investor_name_caps="INVESTOR LLC"` +
       ` --set name="Alice"` +
       ` --set title="CEO"` +
-      ` -o ${output}`,
-      { cwd: ROOT, encoding: 'utf-8', timeout: 30_000 }
+      ` -o ${output}`;
+    await allureParameter('template_id', 'yc-safe-pro-rata-side-letter');
+    await allureAttachment('external-fill-command.txt', command);
+
+    const result = await allureStep('Run CLI fill command', () =>
+      execSync(command, { cwd: ROOT, encoding: 'utf-8', timeout: 30_000 })
     );
-    expect(result).toContain('Filled');
-    expect(existsSync(output)).toBe(true);
+    await allureAttachment('external-fill-stdout.txt', result);
+
+    await allureStep('Assert fill command wrote output', () => {
+      expect(result).toContain('Filled');
+      expect(existsSync(output)).toBe(true);
+    });
   });
 });
 
 describe('list includes external templates', () => {
-  it('list --json includes yc-safe templates', () => {
-    const output = execSync(`node ${BIN} list --json`, {
+  itDiscovery.openspec('OA-045')('list --json includes yc-safe templates', async () => {
+    const output = await allureStep('Run list --json', () => execSync(`node ${BIN} list --json`, {
       cwd: ROOT,
       encoding: 'utf-8',
       timeout: 10_000,
-    });
+    }));
+    await allureAttachment('list-json-output.txt', output);
     const parsed = JSON.parse(output);
     const names = parsed.items.map((i: any) => i.name);
     expect(names).toContain('yc-safe-valuation-cap');
@@ -138,14 +199,15 @@ describe('list includes external templates', () => {
     expect(names).toContain('yc-safe-pro-rata-side-letter');
   });
 
-  it('external templates have CC-BY-ND-4.0 license', () => {
-    const output = execSync(`node ${BIN} list --json`, {
+  itDiscovery('external templates have CC-BY-ND-4.0 license', async () => {
+    const output = await allureStep('Run list --json', () => execSync(`node ${BIN} list --json`, {
       cwd: ROOT,
       encoding: 'utf-8',
       timeout: 10_000,
-    });
+    }));
     const parsed = JSON.parse(output);
     const ycItems = parsed.items.filter((i: any) => i.name.startsWith('yc-safe-'));
+    await allureJsonAttachment('yc-safe-list-items.json', ycItems);
     expect(ycItems.length).toBe(4);
     for (const item of ycItems) {
       expect(item.license).toBe('CC-BY-ND-4.0');
