@@ -24,6 +24,7 @@
       <nav class="topnav">
         <a href="#start">Get started</a>
         <a href="#demo">Demo</a>
+        <a href="#faq">Q&A</a>
         <a href="#trust">Trust</a>
         <a href="https://x.com/openagreements" target="_blank" rel="noreferrer">X</a>
         <a href="https://github.com/open-agreements/open-agreements" target="_blank" rel="noreferrer">GitHub</a>
@@ -88,6 +89,71 @@
         </figure>
       </section>
 
+      <section id="faq" class="section faq reveal">
+        <div class="demo-header">
+          <h2>Q&A</h2>
+          <p>Quick answers for legal ops teams evaluating OpenAgreements.</p>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>What is OpenAgreements?</summary>
+            <p>
+              OpenAgreements is an open-source CLI and library for filling standard legal agreement templates
+              (DOCX) with structured inputs. It is designed to work directly with coding agents and local workflows.
+            </p>
+          </details>
+          <details>
+            <summary>Does OpenAgreements send agreement data to remote servers?</summary>
+            <p>
+              The core tooling is local-first. Template fill runs on your machine and outputs local files.
+              You control any external services you choose to connect.
+            </p>
+          </details>
+          <details>
+            <summary>What templates are supported today?</summary>
+            <p>
+              The project includes internal templates (for example Common Paper and Bonterms), external vendored
+              templates (for example YC SAFEs), and recipe-driven templates downloaded from official sources at runtime.
+            </p>
+          </details>
+          <details>
+            <summary>Can I use OpenAgreements with Claude Code or other agent workflows?</summary>
+            <p>
+              Yes. You can use the CLI directly, install the Agent Skill, and connect the workspace MCP package for
+              lifecycle-focused contract organization workflows.
+            </p>
+          </details>
+          <details>
+            <summary>How is template licensing handled?</summary>
+            <p>
+              Licensing is enforced by template metadata and validation rules. Non-derivative sources are kept
+              unchanged, and non-redistributable sources are handled through recipe instructions and runtime download.
+            </p>
+          </details>
+          <details>
+            <summary>What is the contracts workspace package?</summary>
+            <p>
+              It is a separate package for organizing contract directories by lifecycle, generating status indexes,
+              and validating folder/file conventions without requiring template fill adoption.
+            </p>
+          </details>
+          <details>
+            <summary>How do I deploy this landing page to Vercel?</summary>
+            <p>
+              Import this GitHub repository into Vercel and deploy the root project. The included <code>vercel.json</code>
+              serves the static <code>site/</code> directory as the deployed output.
+            </p>
+          </details>
+          <details>
+            <summary>Does OpenAgreements replace legal counsel?</summary>
+            <p>
+              No. OpenAgreements automates document assembly and workflow structure. Teams should still involve qualified
+              legal counsel for legal advice, negotiation strategy, and jurisdiction-specific interpretation.
+            </p>
+          </details>
+        </div>
+      </section>
+
       <section class="section callout reveal">
         <h2>Built for legal teams that need control.</h2>
         <p>
@@ -115,6 +181,62 @@
       <p class="dev-credit">Developed by <a href="https://usejunior.com" target="_blank" rel="noreferrer">UseJunior</a></p>
     </footer>
 
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is OpenAgreements?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "OpenAgreements is an open-source CLI and library for filling standard legal agreement templates (DOCX) with structured inputs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does OpenAgreements send agreement data to remote servers?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "OpenAgreements is local-first and template fill runs on your machine; you control any external services you connect."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use OpenAgreements with Claude Code?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. You can use the CLI directly, the Agent Skill, and the contracts workspace MCP package."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is template licensing handled?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Licensing is enforced through metadata and validation. Non-derivative templates are preserved unchanged, and non-redistributable templates are recipe-driven."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I deploy this landing page to Vercel?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Import the repository into Vercel and deploy the root project. The included vercel.json serves the static site directory."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does OpenAgreements replace legal counsel?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. It automates document workflows; teams should still involve qualified legal counsel for legal advice."
+            }
+          }
+        ]
+      }
+    </script>
     <script src="./main.js" defer></script>
   </body>
 </html>

@@ -8,6 +8,7 @@
 - [x] 2.1 Add static landing page files in `site/` (HTML/CSS, responsive)
 - [x] 2.2 Include key content blocks: value proposition, trust signals, install paths, demo
 - [x] 2.3 Ensure page is readable on desktop and mobile
+- [x] 2.4 Add detailed Q&A section and FAQ structured data for SEO/AEO
 
 ## 3. Deployment configuration
 

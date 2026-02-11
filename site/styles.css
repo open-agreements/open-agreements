@@ -257,6 +257,47 @@ figcaption {
   font-size: 0.92rem;
 }
 
+.faq {
+  padding: clamp(20px, 4vw, 32px);
+}
+
+.faq-list {
+  display: grid;
+  gap: 10px;
+}
+
+.faq details {
+  border: 1px solid var(--line);
+  background: #fff;
+  padding: 12px 14px;
+}
+
+.faq summary {
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+}
+
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq summary::after {
+  content: "+";
+  float: right;
+  color: var(--accent-deep);
+  font-weight: 700;
+}
+
+.faq details[open] summary::after {
+  content: "-";
+}
+
+.faq details p {
+  margin: 10px 0 0;
+  color: var(--ink-soft);
+}
+
 .callout {
   padding: clamp(24px, 4vw, 36px);
   background: linear-gradient(150deg, #fff4e7, #fde7d8);

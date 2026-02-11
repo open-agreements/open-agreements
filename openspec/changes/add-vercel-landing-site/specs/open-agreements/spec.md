@@ -12,6 +12,11 @@ The project SHALL include a public landing page that communicates what OpenAgree
 - **WHEN** a visitor reviews the landing page
 - **THEN** the page links to key trust artifacts (npm package, CI status, coverage, source repository)
 
+#### Scenario: Visitor can find detailed Q&A content
+- **WHEN** a visitor navigates the landing page
+- **THEN** the page includes a detailed Q&A section answering common product, licensing, and deployment questions
+- **AND** includes FAQ structured data markup suitable for search engines
+
 ### Requirement: Vercel Static Deployment Configuration
 The repository SHALL include configuration that allows Vercel to deploy the landing page from this repository as a static site.
 
