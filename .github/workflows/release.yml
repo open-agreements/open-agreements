@@ -4,6 +4,12 @@ on:
   push:
     tags:
       - "v*.*.*"
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: "Existing release tag to publish (for example: v0.1.1)"
+        required: true
+        type: string
 
 jobs:
   publish:
@@ -12,13 +18,16 @@ jobs:
     permissions:
       contents: read
       id-token: write
+    env:
+      RELEASE_TAG: ${{ github.event_name == 'workflow_dispatch' && inputs.release_tag || github.ref_name }}
     concurrency:
-      group: npm-release-${{ github.ref }}
+      group: npm-release-${{ github.event_name == 'workflow_dispatch' && inputs.release_tag || github.ref_name }}
       cancel-in-progress: false
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: ${{ github.event_name == 'workflow_dispatch' && inputs.release_tag || github.ref }}
 
       - uses: actions/setup-node@v4
         with:
@@ -28,7 +37,8 @@ jobs:
 
       - name: Verify tag matches package version
         run: |
-          TAG_VERSION="${GITHUB_REF_NAME#v}"
+          TAG_REF="${RELEASE_TAG:-$GITHUB_REF_NAME}"
+          TAG_VERSION="${TAG_REF#v}"
           PKG_VERSION="$(node -p "require('./package.json').version")"
 
           if [ "$TAG_VERSION" != "$PKG_VERSION" ]; then
@@ -48,7 +58,8 @@ jobs:
 
       - name: Guard against duplicate publish
         run: |
-          VERSION="${GITHUB_REF_NAME#v}"
+          TAG_REF="${RELEASE_TAG:-$GITHUB_REF_NAME}"
+          VERSION="${TAG_REF#v}"
           if npm view "open-agreements@$VERSION" version >/dev/null 2>&1; then
             echo "open-agreements@$VERSION already exists on npm."
             exit 1
@@ -68,4 +79,7 @@ jobs:
         run: npm pack --dry-run
 
       - name: Publish to npm (trusted publishing + provenance)
-        run: npm publish --provenance --access public
+        run: |
+          unset NODE_AUTH_TOKEN
+          npm config delete //registry.npmjs.org/:_authToken || true
+          npm publish --provenance --access public
