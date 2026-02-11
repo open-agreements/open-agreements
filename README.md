@@ -190,6 +190,20 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for how to add templates, recipes, and ot
 - [Adding templates](docs/adding-templates.md) (CC BY 4.0 / CC0 sources)
 - [Adding recipes](docs/adding-recipes.md) (non-redistributable sources)
 
+## Releasing
+
+Releases are automated through GitHub Actions using npm trusted publishing (OIDC) with provenance enabled.
+
+1. Update version with `npm version patch` (or `minor` / `major`)
+2. Push commit + tag with `git push origin main --tags`
+3. The `Release` workflow publishes from the tag after running build, validation, tests, and package checks
+
+Workflow guardrails:
+
+- tag must match `package.json` version (for example, `v0.1.1`)
+- release commit must be contained in `origin/main`
+- publish fails if that npm version already exists
+
 ## Architecture
 
 - **Language**: TypeScript
