@@ -1,28 +1,28 @@
 name: Common Paper Term Sheet
 description: >-
-  A term sheet template for outlining key business terms, based on Common
-  Paper's standard form. A simple topic-and-details format for early-stage
-  deal discussions.
+  A term sheet template for outlining key business terms, based on Common Paper's standard form. A simple
+  topic-and-details format for early-stage deal discussions.
 source_url: https://commonpaper.com/standards/term-sheet
-version: "1.0"
+version: '1.0'
 license: CC-BY-4.0
 allow_derivatives: true
 attribution_text: >-
-  Based on the Common Paper Term Sheet, available at https://commonpaper.com.
-  Licensed under CC BY 4.0. Copyright Common Paper, Inc.
+  Based on the Common Paper Term Sheet, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common
+  Paper, Inc.
 fields:
   - name: company_name
     type: string
     description: Official name of the company
-    required: true
     section: Parties
   - name: topic
     type: string
     description: Topic or subject area of the term
-    required: true
     section: Terms
   - name: topic_details
     type: string
     description: Details about the topic
-    required: true
     section: Terms
+required_fields:
+  - company_name
+  - topic
+  - topic_details

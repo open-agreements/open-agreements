@@ -1,75 +1,71 @@
 name: NVCA Model Investors' Rights Agreement
 description: >-
-  Investors' rights agreement for venture financings, covering registration rights,
-  information rights, board observer rights, and protective provisions.
+  Investors' rights agreement for venture financings, covering registration rights, information rights, board observer
+  rights, and protective provisions.
 source_url: https://nvca.org/wp-content/uploads/2025/10/NVCA-Model-IRA-10-1-2025-2-1.docx
-source_version: "10-1-2025"
+source_version: 10-1-2025
 license_note: >-
-  NVCA model documents are freely downloadable but not redistributable.
-  This recipe contains only transformation instructions, not the source document.
+  NVCA model documents are freely downloadable but not redistributable. This recipe contains only transformation
+  instructions, not the source document.
 source_sha256: be8ad13f171a343bdb53716b1d318689ae3477cdf7f1986b2e3985e1cabbd08a
 optional: false
 fields:
   - name: company_name
     type: string
     description: Full legal name of the company (e.g. Acme Corp, Inc.)
-    required: true
   - name: company_name_short
     type: string
     description: Short name of the company used in running text (e.g. Acme or the Company)
-    required: true
   - name: investor_name
     type: string
     description: Full legal name of the lead investor
-    required: true
   - name: company_counsel
     type: string
     description: Name and address of company's legal counsel
-    required: true
   - name: counsel_cc
     type: string
     description: Additional counsel to CC on notices, or empty string if none
-    required: false
-    default: ""
+    default: ''
   - name: state_of_incorporation
     type: string
     description: State of incorporation (e.g. Delaware)
-    required: true
     default: Delaware
   - name: state_lower
     type: string
     description: State of incorporation in lowercase (e.g. delaware)
-    required: true
     default: delaware
   - name: judicial_district
     type: string
     description: Federal judicial district for dispute resolution (e.g. District of Delaware)
-    required: true
     default: District of Delaware
   - name: amended_restated_upper
     type: string
     description: Uppercase prefix if amending a prior agreement (e.g. AMENDED AND RESTATED) or empty string
-    required: false
-    default: ""
+    default: ''
   - name: amended_restated
     type: string
     description: Title-case prefix if amending a prior agreement (e.g. Amended and Restated) or empty string
-    required: false
-    default: ""
+    default: ''
   - name: business_description
     type: string
     description: Brief description of the company's business
-    required: true
   - name: signature_page_marker
     type: string
     description: Signature page marker text
-    required: false
     default: Signature Page Follows
   - name: effective_date
     type: string
     description: Effective date of the agreement (e.g. January 15, 2025)
-    required: true
   - name: checklist_delivery_date
     type: string
     description: Date the compliance checklist is being delivered
-    required: false
+required_fields:
+  - company_name
+  - company_name_short
+  - investor_name
+  - company_counsel
+  - state_of_incorporation
+  - state_lower
+  - judicial_district
+  - business_description
+  - effective_date

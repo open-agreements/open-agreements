@@ -1,80 +1,76 @@
 name: NVCA Model Right of First Refusal and Co-Sale Agreement
 description: >-
-  Right of first refusal and co-sale agreement for venture financings,
-  restricting transfer of founder shares and providing investor co-sale rights.
+  Right of first refusal and co-sale agreement for venture financings, restricting transfer of founder shares and
+  providing investor co-sale rights.
 source_url: https://nvca.org/wp-content/uploads/2025/10/NVCA-Model-ROFRA-10-1-2025.docx
-source_version: "10-1-2025"
+source_version: 10-1-2025
 license_note: >-
-  NVCA model documents are freely downloadable but not redistributable.
-  This recipe contains only transformation instructions, not the source document.
+  NVCA model documents are freely downloadable but not redistributable. This recipe contains only transformation
+  instructions, not the source document.
 source_sha256: 126b4a402d41b768ff0c9aebf593792159c31ca7a930c440dd5ae0516ef4c4ad
 optional: false
 fields:
   - name: company_name
     type: string
     description: Full legal name of the company (e.g. Acme Corp, Inc.)
-    required: true
   - name: investor_name
     type: string
     description: Full legal name of the lead investor
-    required: true
   - name: key_holder_name
     type: string
     description: Full name of the key holder (founder or executive)
-    required: true
   - name: company_counsel
     type: string
     description: Name and address of company's legal counsel
-    required: true
   - name: counsel_cc
     type: string
     description: Additional counsel to CC on notices, or empty string if none
-    required: false
-    default: ""
+    default: ''
   - name: amended_restated_upper
     type: string
     description: Uppercase prefix if amending a prior agreement (e.g. AMENDED AND RESTATED) or empty string
-    required: false
-    default: ""
+    default: ''
   - name: amended_restated
     type: string
     description: Title-case prefix if amending a prior agreement (e.g. Amended and Restated) or empty string
-    required: false
-    default: ""
+    default: ''
   - name: judicial_district
     type: string
     description: Federal judicial district for dispute resolution (e.g. District of Delaware)
-    required: true
     default: District of Delaware
   - name: state_lower
     type: string
     description: State of incorporation in lowercase (e.g. delaware)
-    required: true
     default: delaware
   - name: business_description
     type: string
     description: Brief description of the company's business
-    required: true
   - name: signature_page_marker
     type: string
     description: Signature page marker text
-    required: false
     default: Signature Page Follows
   - name: effective_date
     type: string
     description: Effective date of the agreement (e.g. January 15, 2025)
-    required: true
   - name: specify_percentage
     type: string
     description: Specified percentage threshold for key holder transfers
-    required: true
   - name: rofr_response_days
     type: string
     description: Number of days for the company and investors to respond to a ROFR notice (default 45)
-    required: true
-    default: "45"
+    default: '45'
   - name: key_holders_label
     type: string
     description: Label for the key holders group (e.g. Key Holders or Founders)
-    required: false
     default: Key Holders
+required_fields:
+  - company_name
+  - investor_name
+  - key_holder_name
+  - company_counsel
+  - judicial_district
+  - state_lower
+  - business_description
+  - effective_date
+  - specify_percentage
+  - rofr_response_days

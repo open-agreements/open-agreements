@@ -1,53 +1,53 @@
 name: Common Paper Amendment
 description: >-
-  An amendment template for modifying existing agreements, based on Common
-  Paper's standard form. References the original agreement and details the
-  specific changes being made.
+  An amendment template for modifying existing agreements, based on Common Paper's standard form. References the
+  original agreement and details the specific changes being made.
 source_url: https://commonpaper.com/standards/amendment
-version: "1.0"
+version: '1.0'
 license: CC-BY-4.0
 allow_derivatives: true
 attribution_text: >-
-  Based on the Common Paper Amendment, available at https://commonpaper.com.
-  Licensed under CC BY 4.0. Copyright Common Paper, Inc.
+  Based on the Common Paper Amendment, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common
+  Paper, Inc.
 fields:
   - name: company_name
     type: string
     description: Company name (shown in header)
-    required: true
     section: Parties
   - name: party_1
     type: string
     description: Full name of the first party to the original agreement
-    required: true
     section: Parties
   - name: party_2
     type: string
     description: Full name of the second party to the original agreement
-    required: true
     section: Parties
   - name: agreement_name
     type: string
     description: Name of the agreement being amended
-    required: true
     section: Terms
   - name: agreement_date
     type: string
     description: Date of the original agreement
-    required: true
     section: Terms
   - name: amendment_effective_date
     type: date
     description: Effective date of this amendment
-    required: true
     section: Terms
   - name: amendment_topic
     type: string
     description: Topic or variable being changed
-    required: true
     section: Terms
   - name: amendment_details
     type: string
     description: Details about what is being changed
-    required: true
     section: Terms
+required_fields:
+  - company_name
+  - party_1
+  - party_2
+  - agreement_name
+  - agreement_date
+  - amendment_effective_date
+  - amendment_topic
+  - amendment_details

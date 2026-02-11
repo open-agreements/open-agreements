@@ -1,141 +1,124 @@
 name: Common Paper Professional Services Agreement
 description: >-
-  A professional services agreement with key terms, statement of work, and
-  standard terms, based on Common Paper's standard form. Covers consulting and
-  professional services engagements including deliverables, IP ownership, fees,
-  and liability.
+  A professional services agreement with key terms, statement of work, and standard terms, based on Common Paper's
+  standard form. Covers consulting and professional services engagements including deliverables, IP ownership, fees, and
+  liability.
 source_url: https://commonpaper.com/standards/professional-services-agreement/1.1
-version: "1.1"
+version: '1.1'
 license: CC-BY-4.0
 allow_derivatives: true
 attribution_text: >-
-  Based on the Common Paper Professional Services Agreement, available at
-  https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.
+  Based on the Common Paper Professional Services Agreement, available at https://commonpaper.com. Licensed under CC BY
+  4.0. Copyright Common Paper, Inc.
 fields:
   - name: company_name
     type: string
     description: Official company name
-    required: true
     section: Parties
   - name: provider_name
     type: string
     description: Official name of the Provider
-    required: true
     section: Parties
   - name: customer_name
     type: string
     description: Official name of the Customer
-    required: true
     section: Parties
   - name: key_terms_effective_date
     type: string
     description: Effective Date of Key Terms
-    required: true
     section: Terms
   - name: custom_effective_date
     type: string
     description: Custom effective date
-    required: false
     section: Terms
   - name: custom_sow_date
     type: string
     description: Custom SOW date
-    required: false
     section: Terms
   - name: sow_number
     type: string
     description: Statement of Work number
-    required: true
     section: Terms
   - name: term_duration_unit
     type: string
     description: Duration unit for term
-    required: false
     section: Terms
   - name: custom_end_date
     type: string
     description: Custom end date
-    required: false
     section: Terms
   - name: payment_terms
     type: string
     description: Payment terms
-    required: true
     section: Payment
   - name: invoice_frequency_unit
     type: string
     description: Invoice frequency unit
-    required: false
     section: Payment
   - name: fill_in_value
     type: string
     description: General fill-in value
-    required: false
     section: Terms
   - name: fill_in_detail
     type: string
     description: Additional detail
-    required: false
     section: Terms
   - name: payment_terms_days
     type: string
     description: Days to pay after invoice
-    required: false
     section: Payment
   - name: non_renewal_notice_days
     type: string
     description: Non-renewal notice days
-    required: false
     section: Terms
   - name: general_cap_amount
     type: string
     description: General liability cap
-    required: false
     section: Liability
   - name: cap_multiplier
     type: string
     description: Cap multiplier
-    required: false
     section: Liability
   - name: increased_cap_amount
     type: string
     description: Increased cap amount
-    required: false
     section: Liability
   - name: greater_of_dollar
     type: string
     description: Greater-of dollar amount
-    required: false
     section: Liability
   - name: governing_law
     type: string
     description: Governing law
-    required: true
     default: Delaware
     section: Legal
   - name: jurisdiction
     type: string
     description: Jurisdiction
-    required: true
     default: courts in New Castle County, Delaware
     section: Legal
   - name: travel_expense_policy
     type: string
     description: Travel and expense policy
-    required: false
     section: Payment
   - name: customer_owned_deliverables
     type: string
     description: Customer-owned deliverables
-    required: false
     section: Terms
   - name: support_policy_reference
     type: string
     description: Support policy reference
-    required: false
     section: Service
   - name: dpa_reference
     type: string
     description: DPA reference
-    required: false
     section: Privacy
+required_fields:
+  - company_name
+  - provider_name
+  - customer_name
+  - key_terms_effective_date
+  - sow_number
+  - payment_terms
+  - governing_law
+  - jurisdiction

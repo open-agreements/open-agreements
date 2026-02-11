@@ -1,78 +1,71 @@
 name: Common Paper Statement of Work
 description: >-
-  A statement of work template for professional services engagements, based on
-  Common Paper's standard form. References a PSA or CSA Key Terms and covers
-  scope, deliverables, timeline, fees, and expenses.
+  A statement of work template for professional services engagements, based on Common Paper's standard form. References
+  a PSA or CSA Key Terms and covers scope, deliverables, timeline, fees, and expenses.
 source_url: https://commonpaper.com/standards/statement-of-work
-version: "1.0"
+version: '1.0'
 license: CC-BY-4.0
 allow_derivatives: true
 attribution_text: >-
-  Based on the Common Paper Statement of Work, available at
-  https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.
+  Based on the Common Paper Statement of Work, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright
+  Common Paper, Inc.
 fields:
   - name: company_name
     type: string
     description: Company name (shown in header)
-    required: true
     section: Parties
   - name: provider_name
     type: string
     description: Official name of the Provider on Key Terms
-    required: true
     section: Parties
   - name: customer_name
     type: string
     description: Official name of the Customer on Key Terms
-    required: true
     section: Parties
   - name: key_terms_effective_date
     type: string
     description: Effective Date of the Key Terms agreement
-    required: true
     section: Terms
   - name: sow_number
     type: string
     description: Statement of Work number (e.g. "1", "2")
-    required: true
     section: Terms
   - name: custom_sow_date
     type: string
     description: Custom SOW date (if not date of last signature)
-    required: false
     section: Terms
   - name: custom_end_date
     type: string
     description: Custom end date for the SOW term
-    required: false
     section: Terms
   - name: term_duration_unit
     type: string
     description: Duration unit for SOW term (e.g. "days", "weeks", "months", "year")
-    required: false
     section: Terms
   - name: payment_terms
     type: string
     description: Payment terms (e.g. "30 days from Customer's receipt of invoice")
-    required: true
     section: Payment
   - name: fill_in_value
     type: string
     description: General fill-in value for customizable sections
-    required: false
     section: Terms
   - name: invoice_frequency_unit
     type: string
     description: Invoice frequency unit (e.g. "days", "weeks", "months")
-    required: false
     section: Payment
   - name: travel_expense_policy
     type: string
     description: Description of or reference to travel and expense policy
-    required: false
     section: Payment
   - name: customer_owned_deliverables
     type: string
     description: Deliverables that will be owned by Customer under this SOW
-    required: false
     section: Terms
+required_fields:
+  - company_name
+  - provider_name
+  - customer_name
+  - key_terms_effective_date
+  - sow_number
+  - payment_terms

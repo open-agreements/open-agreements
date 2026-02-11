@@ -1,83 +1,79 @@
 name: NVCA Model Indemnification Agreement
 description: >-
-  Director and officer indemnification agreement for venture-backed companies,
-  providing indemnification and advancement of expenses.
+  Director and officer indemnification agreement for venture-backed companies, providing indemnification and advancement
+  of expenses.
 source_url: https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx
-source_version: "2020"
+source_version: '2020'
 license_note: >-
-  NVCA model documents are freely downloadable but not redistributable.
-  This recipe contains only transformation instructions, not the source document.
+  NVCA model documents are freely downloadable but not redistributable. This recipe contains only transformation
+  instructions, not the source document.
 source_sha256: f9b61b4d99e245573de41d9469925b4332f871ec0e6ac6593055cdfe17825300
 optional: false
 fields:
   - name: indemnitee_name
     type: string
     description: Full legal name of the indemnitee (director or officer)
-    required: true
   - name: indemnitee_address
     type: string
     description: Address of the indemnitee
-    required: true
   - name: company_name
     type: string
     description: Name of the corporation providing indemnification
-    required: true
   - name: fund_sponsor_name
     type: string
     description: Name of the sponsoring fund or entity appointing the indemnitee
-    required: false
   - name: indemnitee_role
     type: string
     description: Primary role being indemnified (e.g. director)
-    required: true
     default: director
   - name: indemnitee_role_plural
     type: string
     description: Plural form of the primary role (e.g. directors)
-    required: true
     default: directors
   - name: indemnitee_role_secondary
     type: string
     description: Secondary role being indemnified (e.g. officer)
-    required: false
     default: officer
   - name: indemnitee_role_secondary_plural
     type: string
     description: Plural form of the secondary role (e.g. officers)
-    required: false
     default: officers
   - name: indemnitee_pronoun_possessive
     type: string
     description: Possessive pronoun for the indemnitee entity (e.g. its)
-    required: true
     default: its
   - name: indemnitee_pronoun_possessive_plural
     type: string
     description: Plural possessive pronoun for the indemnitee (e.g. their)
-    required: true
     default: their
   - name: bylaws_name
     type: string
     description: Name of the company's bylaws document
-    required: true
     default: Bylaws
   - name: certificate_name
     type: string
     description: Name of the company's certificate of incorporation
-    required: true
     default: Certificate of Incorporation
   - name: and_appointing_stockholder
     type: string
     description: Optional additional party text or empty string
-    required: false
-    default: ""
+    default: ''
   - name: indemnification_section_letter
     type: string
     description: Section reference letter for indemnification provisions in the certificate
-    required: true
     default: E
   - name: signature_page_marker
     type: string
     description: Signature page marker text
-    required: false
     default: Signature Page Follows
+required_fields:
+  - indemnitee_name
+  - indemnitee_address
+  - company_name
+  - indemnitee_role
+  - indemnitee_role_plural
+  - indemnitee_pronoun_possessive
+  - indemnitee_pronoun_possessive_plural
+  - bylaws_name
+  - certificate_name
+  - indemnification_section_letter

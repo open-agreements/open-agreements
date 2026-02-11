@@ -1,149 +1,130 @@
 name: Common Paper Data Processing Agreement
 description: >-
-  A data processing agreement cover page and standard terms, based on Common
-  Paper's standard form. Covers GDPR and data protection compliance, including
-  processor/controller roles, data transfers, subprocessors, and security
-  measures.
+  A data processing agreement cover page and standard terms, based on Common Paper's standard form. Covers GDPR and data
+  protection compliance, including processor/controller roles, data transfers, subprocessors, and security measures.
 source_url: https://commonpaper.com/standards/data-processing-agreement/1.1
-version: "1.1"
+version: '1.1'
 license: CC-BY-4.0
 allow_derivatives: true
 attribution_text: >-
-  Based on the Common Paper Data Processing Agreement, available at
-  https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.
+  Based on the Common Paper Data Processing Agreement, available at https://commonpaper.com. Licensed under CC BY 4.0.
+  Copyright Common Paper, Inc.
 fields:
   - name: company_name
     type: string
     description: Official company name
-    required: true
     section: Parties
   - name: product_name
     type: string
     description: Name of product or service
-    required: true
     section: Service
   - name: underlying_agreement
     type: string
     description: Name and date of the underlying agreement
-    required: true
     section: Terms
   - name: customer_contact_name
     type: string
     description: Customer contact name
-    required: true
     section: Parties
   - name: customer_contact_title
     type: string
     description: Customer contact title
-    required: false
     section: Parties
   - name: customer_address
     type: string
     description: Customer's physical address
-    required: true
     section: Parties
   - name: provider_contact_name
     type: string
     description: Provider contact name
-    required: true
     section: Parties
   - name: provider_contact_title
     type: string
     description: Provider contact title
-    required: false
     section: Parties
   - name: provider_address
     type: string
     description: Provider's physical address
-    required: true
     section: Parties
   - name: physical_address
     type: string
     description: Physical address for notifications
-    required: false
     section: Parties
   - name: contact_address
     type: string
     description: Email and/or physical address
-    required: false
     section: Parties
   - name: provider_role
     type: string
     description: Provider's role (Controller or Processor)
-    required: true
     section: Terms
   - name: governing_law
     type: string
     description: Governing law state/province/country
-    required: true
     section: Legal
   - name: eu_member_state
     type: string
     description: EU Member State for disputes
-    required: false
     section: Legal
   - name: uk_governing_law
     type: string
     description: UK governing law selection
-    required: false
     section: Legal
   - name: subprocessor_name
     type: string
     description: Subprocessor name
-    required: false
     section: Privacy
   - name: custom_option
     type: string
     description: Custom option for selections
-    required: false
     section: Terms
   - name: custom_options
     type: string
     description: Multiple custom options
-    required: false
     section: Terms
   - name: url
     type: string
     description: URL for references
-    required: false
     section: Terms
   - name: countries_list
     type: string
     description: List of all countries for data transfers
-    required: false
     section: Privacy
   - name: csa_reference
     type: string
     description: Common Paper CSA reference
-    required: false
     section: Terms
   - name: non_csa_reference
     type: string
     description: Non-CSA agreement reference
-    required: false
     section: Terms
   - name: security_measures
     type: string
     description: Description of security measures
-    required: false
     section: Privacy
   - name: text_box
     type: string
     description: General text box entry
-    required: false
     section: Terms
   - name: fill_in_value
     type: string
     description: General fill-in value
-    required: false
     section: Terms
   - name: cap_multiplier
     type: string
     description: Liability cap multiplier
-    required: false
     section: Liability
   - name: policy_url
     type: string
     description: URL of where to find policies
-    required: false
     section: Privacy
+required_fields:
+  - company_name
+  - product_name
+  - underlying_agreement
+  - customer_contact_name
+  - customer_address
+  - provider_contact_name
+  - provider_address
+  - provider_role
+  - governing_law
