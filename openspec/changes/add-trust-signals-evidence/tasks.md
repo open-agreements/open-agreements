@@ -9,6 +9,7 @@
 - [x] 1.8 Expand canonical `open-agreements` scenarios for currently implemented behavior where coverage is shallow or implicit.
 - [x] 1.9 Add/expand Allure-reported behavior tests keyed to those scenarios (not only sentinel mappings) and keep `check:spec-coverage` green.
 - [x] 1.10 Scope Vitest coverage denominator to implementation sources and exclude tooling/support paths (scripts, docs/site, generated output, tests, type-only modules).
+- [x] 1.11 Refactor template-specific behavior tests to use a declarative scenario manifest + shared assertion runner while preserving human-readable Allure steps and story mappings.
 
 ## 2. Validation
 - [x] 2.1 Run `npm run test:run`.

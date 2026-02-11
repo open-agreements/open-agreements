@@ -1,0 +1,57 @@
+import type { TemplateBehaviorScenario } from '../helpers/template-behavior.js';
+
+export const MUTUAL_NDA_SELECTION_SCENARIOS: Record<string, TemplateBehaviorScenario> = {
+  fixed_term: {
+    id: 'mnda-fixed-term-selection',
+    title: 'fixed-term flow removes non-selected options',
+    story: 'Fixed term selection removes non-selected options',
+    description: 'Behavior-level assertion for the OpenSpec scenario.',
+    templateId: 'common-paper-mutual-nda',
+    outputFilename: 'fixed-term.docx',
+    values: {
+      purpose: 'Evaluate partnership',
+      effective_date: '2026-02-10',
+      mnda_term: '1 year(s)',
+      confidentiality_term: '1 year(s)',
+      confidentiality_term_start: 'Effective Date',
+      governing_law: 'Delaware',
+      jurisdiction: 'courts located in New Castle County, Delaware',
+      changes_to_standard_terms: 'None.',
+    },
+    assertions: [
+      { kind: 'contains', text: 'Expires 1 year(s) from Effective Date.' },
+      { kind: 'contains', text: '[ x ]Expires 1 year(s) from Effective Date.' },
+      { kind: 'notContains', text: 'Continues until terminated in accordance with the terms of the MNDA.' },
+      { kind: 'notContains', text: '[ ]Expires 1 year(s) from Effective Date.' },
+      { kind: 'contains', text: '1 year(s) from Effective Date' },
+      { kind: 'contains', text: '[ x ]1 year(s) from Effective Date' },
+      { kind: 'notContains', text: 'In perpetuity.' },
+    ],
+  },
+  perpetual: {
+    id: 'mnda-perpetual-selection',
+    title: 'perpetual flow marks selected options',
+    story: 'Perpetual selection marks selected options',
+    description: 'Behavior-level assertion for the OpenSpec scenario.',
+    templateId: 'common-paper-mutual-nda',
+    outputFilename: 'perpetual.docx',
+    values: {
+      purpose: 'Evaluate partnership',
+      effective_date: '2026-02-10',
+      mnda_term: 'until terminated',
+      confidentiality_term: 'In perpetuity',
+      confidentiality_term_start: 'Effective Date',
+      governing_law: 'Delaware',
+      jurisdiction: 'courts located in New Castle County, Delaware',
+      changes_to_standard_terms: 'None.',
+    },
+    assertions: [
+      { kind: 'contains', text: '[ x ]Continues until terminated in accordance with the terms of the MNDA.' },
+      { kind: 'notContains', text: '[ ]Continues until terminated in accordance with the terms of the MNDA.' },
+      { kind: 'notContains', text: 'Expires until terminated from Effective Date.' },
+      { kind: 'contains', text: '[ x ]In perpetuity.' },
+      { kind: 'notContains', text: '[ ]In perpetuity.' },
+      { kind: 'notContains', text: 'until Confidential Information is no longer considered a trade secret under applicable laws.' },
+    ],
+  },
+};

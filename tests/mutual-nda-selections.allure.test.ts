@@ -1,10 +1,14 @@
 import { mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { afterEach, describe, expect, it } from 'vitest';
-import { fillTemplate } from '../src/core/engine.js';
-import { extractAllText } from '../src/core/recipe/verifier.js';
+import { afterEach, describe, it } from 'vitest';
 import { getTemplatesDir } from '../src/utils/paths.js';
+import { MUTUAL_NDA_SELECTION_SCENARIOS } from './fixtures/template-behavior-scenarios.js';
+import {
+  assertTemplateScenarioText,
+  renderTemplateScenario,
+  type TemplateBehaviorScenario,
+} from './helpers/template-behavior.js';
 
 declare const allure: any;
 
@@ -17,85 +21,55 @@ afterEach(() => {
   }
 });
 
-function mutualNdaTemplateDir(): string {
-  return join(getTemplatesDir(), 'common-paper-mutual-nda');
-}
-
 async function tagScenario(story: string, description: string): Promise<void> {
   await allure.epic('OpenSpec Traceability');
   await allure.feature(TEST_CAPABILITY);
+  await allure.parentSuite('Template behavior');
+  await allure.suite('common-paper-mutual-nda');
   await allure.story(story);
   await allure.severity('normal');
   await allure.description(description);
 }
 
-describe('common-paper-mutual-nda selections', () => {
-  it('fixed-term flow removes non-selected options', async () => {
-    await tagScenario(
-      'Fixed term selection removes non-selected options',
-      'Behavior-level assertion for the OpenSpec scenario.'
-    );
+async function runScenario(scenario: TemplateBehaviorScenario): Promise<void> {
+  const tempDir = mkdtempSync(join(tmpdir(), `oa-${scenario.id}-`));
+  tempDirs.push(tempDir);
 
-    const tempDir = mkdtempSync(join(tmpdir(), 'oa-mnda-fixed-'));
-    tempDirs.push(tempDir);
-    const outputPath = join(tempDir, 'fixed-term.docx');
+  let renderedText = '';
 
-    await fillTemplate({
-      templateDir: mutualNdaTemplateDir(),
-      outputPath,
-      values: {
-        purpose: 'Evaluate partnership',
-        effective_date: '2026-02-10',
-        mnda_term: '1 year(s)',
-        confidentiality_term: '1 year(s)',
-        confidentiality_term_start: 'Effective Date',
-        governing_law: 'Delaware',
-        jurisdiction: 'courts located in New Castle County, Delaware',
-        changes_to_standard_terms: 'None.',
-      },
+  await allure.step('Render template', async () => {
+    const result = await renderTemplateScenario({
+      scenario,
+      outputDir: tempDir,
+      templatesRoot: getTemplatesDir(),
     });
-
-    const text = extractAllText(outputPath);
-    expect(text).toContain('Expires 1 year(s) from Effective Date.');
-    expect(text).toContain('[ x ]Expires 1 year(s) from Effective Date.');
-    expect(text).not.toContain('Continues until terminated in accordance with the terms of the MNDA.');
-    expect(text).not.toContain('[ ]Expires 1 year(s) from Effective Date.');
-    expect(text).toContain('1 year(s) from Effective Date');
-    expect(text).toContain('[ x ]1 year(s) from Effective Date');
-    expect(text).not.toContain('In perpetuity.');
+    renderedText = result.text;
   });
 
-  it('perpetual flow marks selected options', async () => {
+  await assertTemplateScenarioText(renderedText, scenario.assertions, async (name, run) => {
+    await allure.step(name, async () => {
+      await run();
+    });
+  });
+}
+
+describe('common-paper-mutual-nda selections', () => {
+  const fixedScenario = MUTUAL_NDA_SELECTION_SCENARIOS.fixed_term;
+  const perpetualScenario = MUTUAL_NDA_SELECTION_SCENARIOS.perpetual;
+
+  it(fixedScenario.title, async () => {
+    await tagScenario(
+      'Fixed term selection removes non-selected options',
+      fixedScenario.description
+    );
+    await runScenario(fixedScenario);
+  });
+
+  it(perpetualScenario.title, async () => {
     await tagScenario(
       'Perpetual selection marks selected options',
-      'Behavior-level assertion for the OpenSpec scenario.'
+      perpetualScenario.description
     );
-
-    const tempDir = mkdtempSync(join(tmpdir(), 'oa-mnda-perpetual-'));
-    tempDirs.push(tempDir);
-    const outputPath = join(tempDir, 'perpetual.docx');
-
-    await fillTemplate({
-      templateDir: mutualNdaTemplateDir(),
-      outputPath,
-      values: {
-        purpose: 'Evaluate partnership',
-        effective_date: '2026-02-10',
-        mnda_term: 'until terminated',
-        confidentiality_term: 'In perpetuity',
-        confidentiality_term_start: 'Effective Date',
-        governing_law: 'Delaware',
-        jurisdiction: 'courts located in New Castle County, Delaware',
-        changes_to_standard_terms: 'None.',
-      },
-    });
-
-    const text = extractAllText(outputPath);
-    expect(text).toContain('[ x ]Continues until terminated in accordance with the terms of the MNDA.');
-    expect(text).not.toContain('[ ]Continues until terminated in accordance with the terms of the MNDA.');
-    expect(text).not.toContain('Expires until terminated from Effective Date.');
-    expect(text).toContain('[ x ]In perpetuity.');
-    expect(text).not.toContain('[ ]In perpetuity.');
-    expect(text).not.toContain('until Confidential Information is no longer considered a trade secret under applicable laws.');
+    await runScenario(perpetualScenario);
   });
 });
