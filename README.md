@@ -174,6 +174,29 @@ npm run build:workspace-mcp
 node packages/contracts-workspace-mcp/bin/open-agreements-workspace-mcp.js
 ```
 
+## Website (Vercel)
+
+A basic landing page is included under `site/` for Vercel deployment.
+
+- Entry point: `site/index.html`
+- Styles: `site/styles.css`
+- Demo media: `site/assets/demo-fill-nda.gif`
+- Deployment config: `vercel.json`
+
+Local preview:
+
+```bash
+python3 -m http.server 8080 --directory site
+```
+
+Then open `http://localhost:8080`.
+
+Vercel deploy notes:
+
+- Import this repository in Vercel
+- Keep project root as repo root
+- The included `vercel.json` deploys `site/` as static output
+
 ## Optional Content Roots (Future-Proofing)
 
 To support logical unbundling as form libraries grow, `open-agreements` can load content from additional roots via:
