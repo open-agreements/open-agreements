@@ -11,6 +11,12 @@ Fill standard legal agreement templates and produce signable DOCX files. 25 temp
 
 Built by the team behind [UseJunior.com](https://usejunior.com) — in production at Am Law 100 firms.
 
+<p align="center">
+  <img src="docs/assets/demo-fill-nda.gif" alt="Fill a Mutual NDA in Claude Code — prompt, answer questions, get a signed-ready DOCX" width="720">
+</p>
+
+> *Demo: Claude fills a Common Paper Mutual NDA in under 2 minutes. Sped up for brevity.*
+
 ## How It Works
 
 ```
