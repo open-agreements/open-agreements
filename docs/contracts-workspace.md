@@ -86,3 +86,30 @@ This CLI is filesystem-only in v1. It is designed to work on local folders, incl
 - signature request integrations
 - automatic PDF splitting/signature-pack processing
 - cloud-native document API orchestration
+
+## Local MCP Server (for Claude Local Connectors)
+
+There is a sibling local MCP package that exposes workspace operations as tools:
+
+- Package: `@open-agreements/contracts-workspace-mcp`
+- Binary: `open-agreements-workspace-mcp`
+- Repo path: `packages/contracts-workspace-mcp/`
+
+### Build
+
+```bash
+npm run build:workspace-mcp
+```
+
+### Claude Code setup (local stdio MCP)
+
+```bash
+claude mcp add --transport stdio open-agreements-workspace-mcp -- node /ABSOLUTE/PATH/TO/open-agreements/packages/contracts-workspace-mcp/bin/open-agreements-workspace-mcp.js
+```
+
+### Demo flow
+
+1. Create a demo folder (for example, `/tmp/oa-demo-workspace`).
+2. Call `workspace_init` with `{"root_dir":"/tmp/oa-demo-workspace","agents":["claude","gemini"]}`.
+3. Call `status_generate` with `{"root_dir":"/tmp/oa-demo-workspace"}`.
+4. Add a sample file in `forms/` and call `status_lint` to show rule detection.
