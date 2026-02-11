@@ -21,6 +21,7 @@ In addition, trust is stronger when coverage policy is codified in-repo and beha
   - `README.md`
   - `site/index.html`
   - `.github/workflows/ci.yml`
+  - `vitest.config.ts`
   - `codecov.yml`
   - optional small script/package updates for JUnit output
   - `openspec/specs/open-agreements/spec.md`

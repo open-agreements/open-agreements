@@ -8,9 +8,11 @@
 - [x] 1.7 Add ratchet notes for project coverage floor increases (for example `50%` then `55%`) after baseline stabilizes.
 - [x] 1.8 Expand canonical `open-agreements` scenarios for currently implemented behavior where coverage is shallow or implicit.
 - [x] 1.9 Add/expand Allure-reported behavior tests keyed to those scenarios (not only sentinel mappings) and keep `check:spec-coverage` green.
+- [x] 1.10 Scope Vitest coverage denominator to implementation sources and exclude tooling/support paths (scripts, docs/site, generated output, tests, type-only modules).
 
 ## 2. Validation
 - [x] 2.1 Run `npm run test:run`.
 - [x] 2.2 Run `npm run test:coverage`.
 - [x] 2.3 Run `npm run check:spec-coverage`.
 - [x] 2.4 Run `openspec validate add-trust-signals-evidence --strict`.
+- [x] 2.5 Run `npm run test:coverage:ci`.

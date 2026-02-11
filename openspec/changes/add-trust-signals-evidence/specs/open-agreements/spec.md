@@ -44,6 +44,11 @@ Coverage gate policy SHALL be versioned in-repo so trust thresholds are explicit
 - **THEN** the project gate blocks material regression relative to baseline
 - **AND** policy notes define staged increases toward explicit project floors as coverage grows
 
+#### Scenario: Coverage denominator is scoped to implementation sources
+- **WHEN** coverage runs in CI
+- **THEN** denominator paths include implementation source trees (`src/**` and package `src/**`)
+- **AND** tooling/support paths (for example scripts, generated output, docs/site content, and test files) are excluded from gate calculations
+
 ### Requirement: Spec-Backed Allure Coverage Expansion
 Trust-oriented test coverage SHALL include executable Allure tests keyed to canonical OpenSpec scenarios, including retroactive scenario additions for already-implemented behavior.
 
