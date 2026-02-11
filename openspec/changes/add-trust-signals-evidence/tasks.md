@@ -10,6 +10,7 @@
 - [x] 1.9 Add/expand Allure-reported behavior tests keyed to those scenarios (not only sentinel mappings) and keep `check:spec-coverage` green.
 - [x] 1.10 Scope Vitest coverage denominator to implementation sources and exclude tooling/support paths (scripts, docs/site, generated output, tests, type-only modules).
 - [x] 1.11 Refactor template-specific behavior tests to use a declarative scenario manifest + shared assertion runner while preserving human-readable Allure steps and story mappings.
+- [x] 1.12 Apply shared Allure wrappers across core/unit test suites so tests default to behavior labels (`epic/feature/story`) and emit explicit execution steps for report readability.
 
 ## 2. Validation
 - [x] 2.1 Run `npm run test:run`.
