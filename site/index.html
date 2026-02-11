@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OpenAgreements | Open-source legal templates for AI workflows</title>
+    <meta
+      name="description"
+      content="Fill standard legal agreement templates locally with CLI and coding agents. Open-source, auditable, and designed for fast startup legal ops."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="bg-noise" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a class="brand" href="#top">OpenAgreements</a>
+      <nav class="topnav">
+        <a href="#start">Get started</a>
+        <a href="#demo">Demo</a>
+        <a href="#trust">Trust</a>
+        <a href="https://github.com/open-agreements/open-agreements" target="_blank" rel="noreferrer">GitHub</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section reveal">
+        <p class="eyebrow">Open-source legal operations</p>
+        <h1>Ship agreements faster, without black-box legal tooling.</h1>
+        <p class="hero-copy">
+          OpenAgreements fills standard legal templates from local data, keeps every step auditable,
+          and works with the coding-agent workflows teams already use.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#start">Start with CLI</a>
+          <a class="btn btn-ghost" href="https://skills.sh" target="_blank" rel="noreferrer">Use as Agent Skill</a>
+        </div>
+        <ul class="pill-row" id="trust">
+          <li><a href="https://www.npmjs.com/package/open-agreements" target="_blank" rel="noreferrer">npm package</a></li>
+          <li><a href="https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml" target="_blank" rel="noreferrer">CI status</a></li>
+          <li><a href="https://codecov.io/gh/open-agreements/open-agreements" target="_blank" rel="noreferrer">coverage</a></li>
+          <li><a href="https://github.com/open-agreements/open-agreements" target="_blank" rel="noreferrer">source code</a></li>
+        </ul>
+      </section>
+
+      <section id="start" class="section split reveal">
+        <div>
+          <h2>Start paths</h2>
+          <p>
+            Pick the integration path that fits your team now. You can run only the pieces you need:
+            template filling, contracts workspace tooling, or both.
+          </p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <h3>CLI</h3>
+            <p>Fastest way to run template fill and validation locally.</p>
+            <pre><code>npx -y open-agreements@latest list --json</code></pre>
+          </article>
+          <article class="card">
+            <h3>Claude + skills</h3>
+            <p>Use OpenAgreements from Claude Code with guided interviews.</p>
+            <pre><code>npx skills add open-agreements/open-agreements</code></pre>
+          </article>
+          <article class="card">
+            <h3>Workspace MCP</h3>
+            <p>Organize contracts by lifecycle with local-first tooling.</p>
+            <pre><code>npx -y @open-agreements/contracts-workspace-mcp</code></pre>
+          </article>
+        </div>
+      </section>
+
+      <section id="demo" class="section demo reveal">
+        <div class="demo-header">
+          <h2>Live workflow preview</h2>
+          <p>From prompt to signed-ready NDA output in one agent-driven run.</p>
+        </div>
+        <figure>
+          <img src="./assets/demo-fill-nda.gif" alt="OpenAgreements Mutual NDA fill demo" loading="lazy" />
+          <figcaption>Demo clip: Common Paper Mutual NDA filled through Claude Code + OpenAgreements.</figcaption>
+        </figure>
+      </section>
+
+      <section class="section callout reveal">
+        <h2>Built for legal teams that need control.</h2>
+        <p>
+          OpenAgreements is local-first, test-covered, and source-visible. No hidden prompt chains,
+          no opaque hosted logic.
+        </p>
+        <div class="callout-actions">
+          <a class="btn btn-primary" href="https://github.com/open-agreements/open-agreements" target="_blank" rel="noreferrer">Open GitHub</a>
+          <a class="btn btn-ghost" href="https://www.npmjs.com/package/open-agreements" target="_blank" rel="noreferrer">View npm package</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p><strong>OpenAgreements</strong> · Open-source legal templates + agent-ready workflows</p>
+      <p>
+        <a href="https://github.com/open-agreements/open-agreements" target="_blank" rel="noreferrer">GitHub</a>
+        <span>·</span>
+        <a href="https://www.npmjs.com/package/open-agreements" target="_blank" rel="noreferrer">npm</a>
+        <span>·</span>
+        <a href="https://skills.sh" target="_blank" rel="noreferrer">skills.sh</a>
+      </p>
+    </footer>
+
+    <script src="./main.js" defer></script>
+  </body>
+</html>
