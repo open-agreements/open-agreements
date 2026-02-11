@@ -24,24 +24,22 @@ const SAMPLE_METADATA: TemplateMetadata = {
       name: 'purpose',
       type: 'string',
       description: 'Purpose',
-      required: true,
       section: 'Term Sheet',
     },
     {
       name: 'effective_date',
       type: 'date',
       description: 'Effective date',
-      required: true,
       section: 'Term Sheet',
     },
     {
       name: 'governing_law',
       type: 'string',
       description: 'Governing law',
-      required: false,
       section: 'Legal',
     },
   ],
+  required_fields: ['purpose', 'effective_date'],
 };
 
 describe('adapter architecture', () => {

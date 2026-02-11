@@ -22,7 +22,6 @@ interface MetadataField {
   name: string;
   type: 'string' | 'date' | 'number' | 'boolean' | 'enum';
   description: string;
-  required?: boolean;
   default?: string;
   options?: string[];
 }
@@ -32,14 +31,7 @@ interface RecipeMetadataDocument {
   source_sha256?: string;
   optional?: boolean;
   fields?: MetadataField[];
-}
-
-interface SchemaField {
-  name: string;
-}
-
-interface RecipeSchemaDocument {
-  fields?: SchemaField[];
+  required_fields?: string[];
 }
 
 type ReplacementMap = Record<string, string>;
@@ -215,25 +207,18 @@ function countOccurrences(haystack: string, needle: string): number {
 }
 
 describe('NVCA SPA Template', () => {
-  it('keeps metadata, schema, and replacements aligned', async () => {
+  it('keeps metadata and replacements aligned', async () => {
     await allureParameter('recipe_id', RECIPE_ID);
 
     const metadata = await allureStep('Load metadata.yaml', () =>
       load(readFileSync(join(RECIPE_DIR, 'metadata.yaml'), 'utf-8')) as RecipeMetadataDocument
-    );
-    const schema = await allureStep('Load schema.json', () =>
-      JSON.parse(readFileSync(join(RECIPE_DIR, 'schema.json'), 'utf-8')) as RecipeSchemaDocument
     );
     const replacements = await allureStep('Load replacements.json', () =>
       JSON.parse(readFileSync(join(RECIPE_DIR, 'replacements.json'), 'utf-8')) as ReplacementMap
     );
 
     const metadataFieldNames = (metadata.fields ?? []).map((field) => field.name).sort();
-    const requiredFieldNames = (metadata.fields ?? [])
-      .filter((field) => field.required !== false)
-      .map((field) => field.name)
-      .sort();
-    const schemaFieldNames = (schema.fields ?? []).map((field) => field.name).sort();
+    const requiredFieldNames = (metadata.required_fields ?? []).slice().sort();
 
     const replacementFieldNames = Object.values(replacements)
       .map(extractFieldNameFromReplacement)
@@ -241,7 +226,7 @@ describe('NVCA SPA Template', () => {
       .sort();
 
     const unknownReplacementTargets = replacementFieldNames.filter(
-      (field) => !schemaFieldNames.includes(field)
+      (field) => !metadataFieldNames.includes(field)
     );
     const missingRequiredReplacementTargets = requiredFieldNames.filter(
       (field) => !replacementFieldNames.includes(field)
@@ -249,17 +234,13 @@ describe('NVCA SPA Template', () => {
 
     await allureJsonAttachment('nvca-spa-field-alignment.json', {
       metadataFieldNames,
-      schemaFieldNames,
       replacementFieldNames,
       requiredFieldNames,
       unknownReplacementTargets,
       missingRequiredReplacementTargets,
     });
 
-    await allureStep('Assert metadata fields exactly match schema fields', () => {
-      expect(metadataFieldNames).toEqual(schemaFieldNames);
-    });
-    await allureStep('Assert replacement targets are declared by schema', () => {
+    await allureStep('Assert replacement targets are declared by metadata', () => {
       expect(unknownReplacementTargets).toEqual([]);
     });
     await allureStep('Assert required metadata fields are represented in replacements', () => {

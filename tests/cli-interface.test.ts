@@ -128,7 +128,8 @@ describe('CLI interface behavior', () => {
         '  - name: party_name',
         '    type: string',
         '    description: Party',
-        '    required: true',
+        'required_fields:',
+        '  - party_name',
         '',
       ].join('\n'),
       'utf-8'

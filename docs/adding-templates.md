@@ -40,13 +40,14 @@ fields:
   - name: party_name
     type: string
     description: Full legal name of the party
-    required: true
     section: Parties
   - name: effective_date
     type: date
     description: Date the agreement takes effect
-    required: true
     section: Terms
+required_fields:
+  - party_name
+  - effective_date
 ```
 
 #### Field types

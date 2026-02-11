@@ -44,7 +44,6 @@ describe('FieldDefinitionSchema', () => {
         name: 'company_name',
         type: 'string',
         description: 'Company name',
-        required: true,
       },
       true
     );
@@ -58,7 +57,6 @@ describe('FieldDefinitionSchema', () => {
         name: 'status',
         type: 'enum',
         description: 'Status',
-        required: true,
       },
       false
     );
@@ -72,7 +70,6 @@ describe('FieldDefinitionSchema', () => {
         name: 'status',
         type: 'enum',
         description: 'Status',
-        required: true,
         options: ['active', 'inactive'],
       },
       true
@@ -87,7 +84,6 @@ describe('FieldDefinitionSchema', () => {
         name: 'status',
         type: 'enum',
         description: 'Status',
-        required: true,
         options: [],
       },
       false
@@ -102,7 +98,6 @@ describe('FieldDefinitionSchema', () => {
         name: 'count',
         type: 'number',
         description: 'Count',
-        required: false,
         default: 'abc',
       },
       false
@@ -117,7 +112,6 @@ describe('FieldDefinitionSchema', () => {
         name: 'count',
         type: 'number',
         description: 'Count',
-        required: false,
         default: '42',
       },
       true
@@ -132,7 +126,6 @@ describe('FieldDefinitionSchema', () => {
         name: 'active',
         type: 'boolean',
         description: 'Active',
-        required: false,
         default: 'yes',
       },
       false
@@ -186,6 +179,24 @@ describe('TemplateMetadataSchema', () => {
         allow_derivatives: true,
         attribution_text: 'Based on Example NDA',
         fields: [],
+      },
+      false
+    );
+  });
+
+  it('rejects unknown required_fields entries', async () => {
+    await expectSafeParseOutcome(
+      'TemplateMetadataSchema',
+      TemplateMetadataSchema,
+      {
+        name: 'Test NDA',
+        source_url: 'https://example.com/nda',
+        version: '1.0',
+        license: 'CC-BY-4.0',
+        allow_derivatives: true,
+        attribution_text: 'Based on Example NDA',
+        fields: [{ name: 'party_name', type: 'string', description: 'Party name' }],
+        required_fields: ['missing_field'],
       },
       false
     );

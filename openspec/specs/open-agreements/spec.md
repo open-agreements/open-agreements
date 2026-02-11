@@ -26,13 +26,13 @@ Optional fields missing from the DOCX MUST produce warnings. The `valid` field
 MUST be `false` when any required field is missing.
 
 #### Scenario: [OA-003] Required field missing from DOCX
-- **WHEN** metadata defines field `party_1_name` as `required: true`
+- **WHEN** metadata lists `party_1_name` in `required_fields`
 - **AND** no `{party_1_name}` placeholder exists in template.docx
 - **THEN** validation produces an error (not a warning)
 - **AND** `valid` is `false`
 
 #### Scenario: [OA-004] Optional field missing from DOCX
-- **WHEN** metadata defines field `governing_law` as `required: false`
+- **WHEN** metadata defines field `governing_law` but does not include it in `required_fields`
 - **AND** no `{governing_law}` placeholder exists in template.docx
 - **THEN** validation produces a warning
 - **AND** `valid` remains `true`
@@ -224,8 +224,8 @@ schema). Optional fields: `description`, `optional` (boolean, default false).
 ### Requirement: Recipe Directory Validation
 Recipe validation MUST enforce: no `.docx` files in the recipe directory
 (copyrighted content must not be committed), `replacements.json` exists and
-contains string-to-string entries, `schema.json` field names cover all
-replacement targets, `metadata.yaml` validates against the schema, and
+contains string-to-string entries, replacement target fields are declared in
+`metadata.yaml` (`fields` + `required_fields`), `metadata.yaml` validates against the schema, and
 `clean.json` validates against the clean config schema. Scaffold recipes
 (metadata.yaml only) MUST pass validation without requiring other files.
 
@@ -238,9 +238,9 @@ replacement targets, `metadata.yaml` validates against the schema, and
 - **AND** metadata is valid
 - **THEN** validation passes (scaffold recipes are allowed)
 
-#### Scenario: [OA-033] Replacement target not covered by schema
+#### Scenario: [OA-033] Replacement target not covered by metadata
 - **WHEN** `replacements.json` maps `[Tag]` to `{field_x}`
-- **AND** `schema.json` does not define `field_x`
+- **AND** `metadata.yaml` does not define `field_x` in `fields`
 - **THEN** validation warns about the uncovered replacement target
 
 ### Requirement: DOCX Template Rendering
@@ -252,7 +252,7 @@ The system SHALL accept a template name, load the corresponding DOCX template, s
 - **THEN** the system produces a DOCX file with all `{company_name}` placeholders replaced by "Acme Corp" and all `{effective_date}` placeholders replaced by "2026-03-01", preserving the original formatting (bold, italic, headings, tables)
 
 #### Scenario: [OA-035] Missing required field
-- **GIVEN** a template with a required field `{governing_law}`
+- **GIVEN** a template where `governing_law` appears in `required_fields`
 - **WHEN** the user invokes `fill` without providing `governing_law`
 - **THEN** the system returns an error listing the missing required fields
 

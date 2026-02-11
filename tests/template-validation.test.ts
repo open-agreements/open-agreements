@@ -56,9 +56,14 @@ function buildDocx(documentText: string): Buffer {
   return zip.toBuffer();
 }
 
-function createTemplateFixture(opts: { docText: string; fieldsYaml: string }): string {
+function createTemplateFixture(opts: { docText: string; fieldsYaml: string; requiredFields?: string[] }): string {
   const dir = mkdtempSync(join(tmpdir(), 'oa-template-validate-'));
   tempDirs.push(dir);
+  const requiredFields = opts.requiredFields ?? [];
+  const requiredFieldsLines =
+    requiredFields.length === 0
+      ? ['required_fields: []']
+      : ['required_fields:', ...requiredFields.map((field) => `  - ${field}`)];
   writeFileSync(
     join(dir, 'metadata.yaml'),
     [
@@ -70,6 +75,7 @@ function createTemplateFixture(opts: { docText: string; fieldsYaml: string }): s
       'attribution_text: Example Attribution',
       'fields:',
       opts.fieldsYaml,
+      ...requiredFieldsLines,
       '',
     ].join('\n'),
     'utf-8'
@@ -125,7 +131,8 @@ describe('validateTemplate placeholder coverage', () => {
   it.openspec('OA-003')('reports error for missing required placeholder', async () => {
     const dir = createTemplateFixture({
       docText: 'No placeholders here',
-      fieldsYaml: '  - name: required_field\n    type: string\n    description: Required\n    required: true',
+      fieldsYaml: '  - name: required_field\n    type: string\n    description: Required',
+      requiredFields: ['required_field'],
     });
     await allureParameter('fixture_template_id', 'fixture-required-missing');
     await allureAttachment('fixture-doc-text.txt', 'No placeholders here');
@@ -143,7 +150,8 @@ describe('validateTemplate placeholder coverage', () => {
   it.openspec('OA-004')('reports warning for missing optional placeholder', async () => {
     const dir = createTemplateFixture({
       docText: 'No placeholders here either',
-      fieldsYaml: '  - name: optional_field\n    type: string\n    description: Optional\n    required: false',
+      fieldsYaml: '  - name: optional_field\n    type: string\n    description: Optional',
+      requiredFields: [],
     });
     await allureParameter('fixture_template_id', 'fixture-optional-missing');
     await allureAttachment('fixture-doc-text.txt', 'No placeholders here either');

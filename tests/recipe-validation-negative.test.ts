@@ -26,7 +26,8 @@ function writeMetadata(recipeDir: string): void {
       '  - name: company_name',
       '    type: string',
       '    description: Company',
-      '    required: true',
+      'required_fields:',
+      '  - company_name',
       '',
     ].join('\n'),
     'utf-8'
@@ -46,7 +47,7 @@ describe('validateRecipe negative scenarios', () => {
     expect(result.errors.join(' ')).toContain('Copyrighted .docx file(s) found');
   });
 
-  it.openspec('OA-033')('warns when replacement targets are not in schema', () => {
+  it.openspec('OA-033')('warns when replacement targets are not in metadata fields', () => {
     const recipeDir = mkdtempSync(join(tmpdir(), 'oa-recipe-schema-'));
     tempDirs.push(recipeDir);
 
@@ -56,14 +57,9 @@ describe('validateRecipe negative scenarios', () => {
       JSON.stringify({ '[Company Name]': '{company_name_missing}' }, null, 2),
       'utf-8'
     );
-    writeFileSync(
-      join(recipeDir, 'schema.json'),
-      JSON.stringify({ fields: [{ name: 'company_name', type: 'string' }] }, null, 2),
-      'utf-8'
-    );
 
     const result = validateRecipe(recipeDir, 'fixture-recipe');
     expect(result.valid).toBe(true);
-    expect(result.warnings.join(' ')).toContain('Replacement target {company_name_missing} not found in schema.json');
+    expect(result.warnings.join(' ')).toContain('Replacement target {company_name_missing} not found in metadata fields');
   });
 });

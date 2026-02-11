@@ -250,10 +250,11 @@ describe('verifyTemplateFill', () => {
 
 describe('prepareFillData', () => {
   const fields = [
-    { name: 'company', type: 'string' as const, required: true, description: 'Company name' },
-    { name: 'amount', type: 'string' as const, required: false, description: 'Amount' },
-    { name: 'is_free', type: 'boolean' as const, required: false, description: 'Is free' },
+    { name: 'company', type: 'string' as const, description: 'Company name' },
+    { name: 'amount', type: 'string' as const, description: 'Amount' },
+    { name: 'is_free', type: 'boolean' as const, description: 'Is free' },
   ];
+  const requiredFieldNames = ['company'];
 
   it('defaults optional fields to empty string when useBlankPlaceholder is false', () => {
     const result = prepareFillData({
@@ -288,7 +289,7 @@ describe('prepareFillData', () => {
   it('uses field.default when provided', () => {
     const fieldsWithDefault = [
       ...fields.slice(0, 1),
-      { name: 'amount', type: 'string' as const, required: false, description: 'Amount', default: 'N/A' },
+      { name: 'amount', type: 'string' as const, description: 'Amount', default: 'N/A' },
     ];
     const result = prepareFillData({
       values: { company: 'Acme' },
@@ -330,6 +331,7 @@ describe('prepareFillData', () => {
     prepareFillData({
       values: { amount: '100' },
       fields,
+      requiredFieldNames,
     });
     expect(spy).toHaveBeenCalledWith('Warning: missing required fields: company');
     spy.mockRestore();
@@ -518,9 +520,10 @@ describe('fillDocx', () => {
 
 describe('Regression: behavioral divergence', () => {
   const simpleFields = [
-    { name: 'name', type: 'string' as const, required: true, description: 'Name' },
-    { name: 'amount', type: 'string' as const, required: false, description: 'Amount' },
+    { name: 'name', type: 'string' as const, description: 'Name' },
+    { name: 'amount', type: 'string' as const, description: 'Amount' },
   ];
+  const simpleRequiredFieldNames = ['name'];
 
   it('all paths default optional fields to BLANK_PLACEHOLDER', () => {
     const data = prepareFillData({
@@ -533,8 +536,8 @@ describe('Regression: behavioral divergence', () => {
 
   it('template path coerces boolean fields', () => {
     const boolFields = [
-      { name: 'company', type: 'string' as const, required: true, description: 'Co' },
-      { name: 'flag', type: 'boolean' as const, required: false, description: 'Flag' },
+      { name: 'company', type: 'string' as const, description: 'Co' },
+      { name: 'flag', type: 'boolean' as const, description: 'Flag' },
     ];
     const data = prepareFillData({
       values: { company: 'Acme', flag: 'false' },
@@ -546,8 +549,8 @@ describe('Regression: behavioral divergence', () => {
 
   it('recipe/external path does not coerce booleans', () => {
     const boolFields = [
-      { name: 'company', type: 'string' as const, required: true, description: 'Co' },
-      { name: 'flag', type: 'boolean' as const, required: false, description: 'Flag' },
+      { name: 'company', type: 'string' as const, description: 'Co' },
+      { name: 'flag', type: 'boolean' as const, description: 'Flag' },
     ];
     const data = prepareFillData({
       values: { company: 'Acme', flag: 'false' },
@@ -562,6 +565,7 @@ describe('Regression: behavioral divergence', () => {
     prepareFillData({
       values: {},
       fields: simpleFields,
+      requiredFieldNames: simpleRequiredFieldNames,
     });
     expect(spy).toHaveBeenCalledWith('Warning: missing required fields: name');
     spy.mockRestore();

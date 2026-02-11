@@ -48,7 +48,8 @@ fields:
   - name: company_name
     type: string
     description: Full legal name
-    required: true
+required_fields:
+  - company_name
 ```
 
 ## Step 4: Create replacements.json
@@ -177,7 +178,6 @@ fields:
   - name: company_name
     type: string
     description: Full legal name
-    required: true           # no default → shows _______ if not provided
   - name: amended_restated
     type: string
     description: "Amended and Restated or empty"
@@ -186,6 +186,8 @@ fields:
     type: string
     description: Federal judicial district
     default: District of Delaware  # default value used when not provided
+required_fields:
+  - company_name             # no default → shows _______ if not provided
 ```
 
 ## Step 7: Test
