@@ -3,8 +3,25 @@
 [![npm version](https://img.shields.io/npm/v/open-agreements)](https://www.npmjs.com/package/open-agreements)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Agent Skill](https://img.shields.io/badge/agent--skill-open--agreements-purple)](https://skills.sh)
+[![CI](https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml/badge.svg)](https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml)
+[![Validate Templates](https://github.com/open-agreements/open-agreements/actions/workflows/validate.yml/badge.svg)](https://github.com/open-agreements/open-agreements/actions/workflows/validate.yml)
 
 Fill standard legal agreement templates and produce signable DOCX files. 25 templates covering NDAs, cloud terms, contractor agreements, SAFEs, and NVCA financing documents.
+
+Built by the team behind [UseJunior.com](https://usejunior.com) — in production at Am Law 100 firms.
+
+## How It Works
+
+```
+1. Pick a template          2. Answer questions            3. Get a signed-ready DOCX
+┌─────────────────────┐     ┌─────────────────────────┐    ┌─────────────────────┐
+│ $ open-agreements   │     │ Party 1: Acme Corp      │    │                     │
+│   fill mutual-nda   │ ──▶ │ Party 2: Beta Inc       │ ──▶│  mutual-nda.docx    │
+│                     │     │ Governing law: Delaware  │    │  ✓ All fields filled│
+└─────────────────────┘     └─────────────────────────┘    └─────────────────────┘
+```
+
+No servers, no accounts, no subscriptions. Templates run locally via `npx` — your data never leaves your machine.
 
 ## Use with Claude Code
 
