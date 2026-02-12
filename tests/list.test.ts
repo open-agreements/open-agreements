@@ -1,4 +1,4 @@
-import { describe, expect, beforeAll } from 'vitest';
+import { describe, expect } from 'vitest';
 import { itAllure } from './helpers/allure-test.js';
 import { execSync } from 'node:child_process';
 import { join } from 'node:path';
@@ -13,22 +13,17 @@ describe('list --json envelope', () => {
   let parsed: any;
   let available = true;
 
-  beforeAll(() => {
-    try {
-      // Ensure built
-      execSync('npm run build', { cwd: ROOT, encoding: 'utf-8', timeout: 30_000, stdio: 'pipe' });
-
-      const output = execSync(`node ${BIN} list --json`, {
-        cwd: ROOT,
-        encoding: 'utf-8',
-        timeout: 10_000,
-      });
-      parsed = JSON.parse(output);
-    } catch (err) {
-      if (process.env.CI) throw err;
-      available = false;
-    }
-  });
+  try {
+    const output = execSync(`node ${BIN} list --json`, {
+      cwd: ROOT,
+      encoding: 'utf-8',
+      timeout: 10_000,
+    });
+    parsed = JSON.parse(output);
+  } catch (err) {
+    if (process.env.CI) throw err;
+    available = false;
+  }
 
   it('has schema_version 1', () => {
     if (!available) return;

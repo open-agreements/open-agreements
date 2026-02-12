@@ -379,6 +379,32 @@ describe('fillDocx', () => {
     expect(result.length).toBeGreaterThan(0);
   });
 
+  it('renders multiline values using explicit line-break runs', async () => {
+    const xml =
+      '<?xml version="1.0" encoding="UTF-8"?>' +
+      `<w:document xmlns:w="${W_NS}"><w:body>` +
+      '<w:p><w:r><w:t>{details}</w:t></w:r></w:p>' +
+      '</w:body></w:document>';
+    const buf = buildDocxBuffer(xml);
+
+    const result = await fillDocx({
+      templateBuffer: buf,
+      data: { details: 'Line one\nLine two\nLine three' },
+      stripParagraphPatterns: [],
+    });
+
+    const outZip = new AdmZip(Buffer.from(result));
+    const outXml = outZip.getEntry('word/document.xml')!.getData().toString('utf-8');
+
+    expect(outXml).toContain('<w:br/>');
+    expect(outXml).toContain('Line one');
+    expect(outXml).toContain('Line two');
+    expect(outXml).toContain('Line three');
+
+    // Word line breaks should be emitted as sibling runs, not embedded inside <w:t>.
+    expect(/<w:t(?:\s+[^>]*)?>[^<]*<w:br\/>/.test(outXml)).toBe(false);
+  });
+
   it.openspec('OA-019')('strips drafting note paragraphs by default', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +

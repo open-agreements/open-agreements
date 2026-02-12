@@ -53,6 +53,14 @@ interface FillRenderScenario {
   absentFragments?: string[];
 }
 
+type FieldAssertionMode = 'strict' | 'resilient' | 'skip';
+
+interface FieldAssertionPolicy {
+  mode: FieldAssertionMode;
+  reason?: string;
+  normalize?: 'none' | 'lowercase';
+}
+
 const RECIPE_ID = 'nvca-stock-purchase-agreement';
 const RECIPE_DIR = join(import.meta.dirname, '..', 'recipes', RECIPE_ID);
 const it = itAllure.epic('NVCA SPA Template');
@@ -97,6 +105,24 @@ const DECLARATIVE_FILL_SCENARIOS: FillRenderScenario[] = [
     minimumOccurrences: [{ text: 'Helios Labs, Inc.', count: 2 }],
   },
 ];
+
+const FIELD_ASSERTION_POLICY: Record<string, FieldAssertionPolicy> = {
+  company_name: { mode: 'strict', reason: 'Primary party identity across variants' },
+  investor_name: { mode: 'strict', reason: 'Counterparty identity' },
+  company_counsel: { mode: 'resilient', reason: 'Long freeform counsel block' },
+  investor_counsel: { mode: 'resilient', reason: 'Long freeform counsel block' },
+  company_counsel_name: { mode: 'resilient', reason: 'Name-only variant may evolve in wording' },
+  lead_purchaser_name: { mode: 'resilient', reason: 'Name appears in context-sensitive clauses' },
+  judicial_district: { mode: 'strict', reason: 'Venue term should remain exact' },
+  balance_sheet_date: { mode: 'strict', reason: 'Date anchor should be preserved exactly' },
+  benefit_plan_name: { mode: 'skip', reason: 'Optional field; covered in targeted scenario tests' },
+  signature_page_marker: { mode: 'strict', reason: 'Execution marker anchor' },
+  state_lower: { mode: 'strict', reason: 'Jurisdiction anchor', normalize: 'lowercase' },
+  specify_percentage: { mode: 'strict', reason: 'Key negotiated threshold anchor' },
+  financial_reporting_period: { mode: 'strict', reason: 'Reporting cadence anchor' },
+  director_names: { mode: 'resilient', reason: 'List formatting can vary while still valid' },
+  applicable_purchasers: { mode: 'resilient', reason: 'List formatting can vary while still valid' },
+};
 
 function extractFieldNameFromReplacement(value: string): string | null {
   const match = value.match(/^\{([a-zA-Z0-9_]+)\}$/);
@@ -204,6 +230,27 @@ function buildVerificationValues(
 function countOccurrences(haystack: string, needle: string): number {
   if (!needle) return 0;
   return haystack.split(needle).length - 1;
+}
+
+function buildPlaceholdersByField(replacements: ReplacementMap): Map<string, string[]> {
+  const placeholdersByField = new Map<string, string[]>();
+
+  for (const [placeholder, replacementValue] of Object.entries(replacements)) {
+    const fieldName = extractFieldNameFromReplacement(replacementValue);
+    if (!fieldName) continue;
+    const existing = placeholdersByField.get(fieldName) ?? [];
+    existing.push(placeholder);
+    placeholdersByField.set(fieldName, existing);
+  }
+
+  return placeholdersByField;
+}
+
+function normalizeByPolicy(value: string, policy: FieldAssertionPolicy): string {
+  if (policy.normalize === 'lowercase') {
+    return value.toLowerCase();
+  }
+  return value;
 }
 
 describe('NVCA SPA Template', () => {
@@ -349,6 +396,100 @@ describe('NVCA SPA Template', () => {
         expect(outputText).not.toContain('[Insert Company Name]');
         expect(outputText).not.toContain('[Insert Investor Name]');
       });
+    } finally {
+      rmSync(fixture.tempDir, { recursive: true, force: true });
+    }
+  });
+
+  it('enforces risk-tiered field assertion policy for full-corpus rendering', async () => {
+    await allureParameter('recipe_id', RECIPE_ID);
+
+    const { metadata, replacements, cleanConfig } = await allureStep('Load NVCA recipe artifacts', () =>
+      loadNvcaRecipeArtifacts()
+    );
+    const fields = metadata.fields ?? [];
+    const metadataFieldNames = fields.map((field) => field.name).sort();
+    const policyFieldNames = Object.keys(FIELD_ASSERTION_POLICY).sort();
+    const fieldsMissingPolicy = metadataFieldNames.filter((fieldName) => !(fieldName in FIELD_ASSERTION_POLICY));
+    const policyWithoutField = policyFieldNames.filter((fieldName) => !metadataFieldNames.includes(fieldName));
+    const sourcePlaceholders = Object.keys(replacements);
+    const placeholdersByField = buildPlaceholdersByField(replacements);
+
+    await allureJsonAttachment('nvca-spa-policy-map.json', FIELD_ASSERTION_POLICY);
+    await allureJsonAttachment('nvca-spa-policy-fields-missing.json', fieldsMissingPolicy);
+    await allureJsonAttachment('nvca-spa-policy-orphans.json', policyWithoutField);
+
+    await allureStep('Assert policy covers every metadata field with no stale entries', () => {
+      expect(fieldsMissingPolicy).toEqual([]);
+      expect(policyWithoutField).toEqual([]);
+    });
+
+    const values = buildScenarioValues(fields, {
+      company_name: 'Acme Robotics, Inc.',
+      investor_name: 'North Star Ventures LLC',
+      judicial_district: 'Northern District of California',
+      state_lower: 'delaware',
+      balance_sheet_date: '2025-12-31',
+      specify_percentage: '12%',
+      director_names: 'Jane Founder; Pat Director',
+      applicable_purchasers: 'North Star Ventures LLC',
+    });
+    const fixture = createSyntheticRecipeFixture(sourcePlaceholders);
+
+    await allureJsonAttachment('nvca-spa-policy-values.json', values);
+
+    try {
+      await allureStep('Run runRecipe against synthetic full-corpus source', async () => {
+        await runRecipe({
+          recipeId: RECIPE_ID,
+          inputPath: fixture.inputPath,
+          outputPath: fixture.outputPath,
+          values,
+        });
+      });
+
+      const outputText = await allureStep('Extract rendered text', () => extractAllText(fixture.outputPath));
+      const verifyResult = await allureStep('Verify output consistency', () =>
+        verifyOutput(fixture.outputPath, values, replacements, cleanConfig)
+      );
+
+      await allureAttachment('nvca-spa-policy-output.txt', outputText);
+      await allureJsonAttachment('nvca-spa-policy-verify.json', verifyResult);
+
+      await allureStep('Assert verifier passes before policy checks', () => {
+        expect(verifyResult.passed).toBe(true);
+      });
+
+      for (const field of fields) {
+        const policy = FIELD_ASSERTION_POLICY[field.name];
+        const value = values[field.name];
+        const placeholders = placeholdersByField.get(field.name) ?? [];
+        const normalizedExpected = value ? normalizeByPolicy(value, policy) : '';
+        const normalizedOutput = normalizeByPolicy(outputText, policy);
+
+        await allureStep(`Policy check for field "${field.name}" (${policy.mode})`, () => {
+          if (policy.mode === 'skip') {
+            expect(policy.reason).toBeDefined();
+            return;
+          }
+
+          expect(value).toBeDefined();
+          expect(normalizedOutput).toContain(normalizedExpected);
+
+          if (policy.mode === 'resilient') {
+            expect(countOccurrences(normalizedOutput, normalizedExpected)).toBeGreaterThanOrEqual(1);
+            return;
+          }
+
+          expect(placeholders.length).toBeGreaterThan(0);
+          expect(countOccurrences(normalizedOutput, normalizedExpected)).toBeGreaterThanOrEqual(
+            placeholders.length
+          );
+          for (const placeholder of placeholders) {
+            expect(outputText).not.toContain(placeholder);
+          }
+        });
+      }
     } finally {
       rmSync(fixture.tempDir, { recursive: true, force: true });
     }

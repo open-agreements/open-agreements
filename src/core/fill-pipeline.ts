@@ -369,5 +369,8 @@ export async function fillDocx(options: FillDocxOptions): Promise<Uint8Array> {
     data: sanitizedData,
     cmdDelimiter: ['{', '}'],
     fixSmartQuotes,
+    // Emit line breaks as separate text runs for viewer compatibility.
+    processLineBreaks: true,
+    processLineBreaksAsNewText: true,
   });
 }

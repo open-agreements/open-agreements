@@ -3,7 +3,7 @@ import { mkdtempSync, mkdirSync, rmSync, writeFileSync, existsSync } from 'node:
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import AdmZip from 'adm-zip';
-import { afterEach, beforeAll, describe, expect } from 'vitest';
+import { afterEach, describe, expect } from 'vitest';
 import { itAllure } from './helpers/allure-test.js';
 
 const ROOT = new URL('..', import.meta.url).pathname;
@@ -28,14 +28,6 @@ afterEach(() => {
   for (const dir of tempDirs.splice(0)) {
     rmSync(dir, { recursive: true, force: true });
   }
-});
-
-beforeAll(() => {
-  execFileSync('npm', ['run', 'build'], {
-    cwd: ROOT,
-    encoding: 'utf-8',
-    timeout: 60_000,
-  });
 });
 
 function runCli(args: string[], env?: NodeJS.ProcessEnv): string {
