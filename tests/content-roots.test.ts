@@ -1,12 +1,14 @@
 import { mkdtempSync, mkdirSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { afterEach, describe, expect, it } from 'vitest';
+import { afterEach, describe, expect } from 'vitest';
+import { itAllure } from './helpers/allure-test.js';
 import { findTemplateDir, listTemplateEntries } from '../src/utils/paths.js';
 
 const ENV_KEY = 'OPEN_AGREEMENTS_CONTENT_ROOTS';
 const originalEnv = process.env[ENV_KEY];
 const tempDirs: string[] = [];
+const it = itAllure.epic('Platform & Distribution');
 
 afterEach(() => {
   for (const dir of tempDirs.splice(0)) {

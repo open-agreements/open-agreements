@@ -1,8 +1,11 @@
 import { mkdtempSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
-import { describe, expect, it } from 'vitest';
+import { describe, expect } from 'vitest';
+import { itAllure } from '../../../tests/helpers/allure-test.js';
 import { callTool, listToolDescriptors } from '../src/core/tools.js';
+
+const it = itAllure.epic('Platform & Distribution');
 
 function getStructuredContent(result: Awaited<ReturnType<typeof callTool>>): Record<string, unknown> {
   return (result.structuredContent ?? {}) as Record<string, unknown>;

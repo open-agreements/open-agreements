@@ -1,90 +1,78 @@
 name: Common Paper Partnership Agreement
 description: >-
-  A partnership agreement cover page and standard terms, based on Common Paper's
-  standard form. Covers business partnerships including obligations, fees,
-  territory, liability, and data processing.
+  A partnership agreement cover page and standard terms, based on Common Paper's standard form. Covers business
+  partnerships including obligations, fees, territory, liability, and data processing.
 source_url: https://commonpaper.com/standards/partnership-agreement/1.1
-version: "1.1"
+version: '1.1'
 license: CC-BY-4.0
 allow_derivatives: true
 attribution_text: >-
-  Based on the Common Paper Partnership Agreement, available at
-  https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.
+  Based on the Common Paper Partnership Agreement, available at https://commonpaper.com. Licensed under CC BY 4.0.
+  Copyright Common Paper, Inc.
 fields:
   - name: company_name
     type: string
     description: Official company name (shown in header)
-    required: true
     section: Parties
   - name: custom_effective_date
     type: string
     description: Custom effective date for the agreement
-    required: false
     section: Terms
   - name: term_duration_unit
     type: string
     description: Duration unit for agreement term (e.g. "days", "weeks", "months", "year")
-    required: false
     section: Terms
   - name: custom_end_date
     type: string
     description: Custom end date for the agreement
-    required: false
     section: Terms
   - name: non_renewal_notice_days
     type: string
     description: Days of notice required before non-renewal
-    required: false
     section: Terms
   - name: territory
     type: string
     description: Specific geographic areas for the partnership
-    required: false
     section: Terms
   - name: fill_in_value
     type: string
     description: General fill-in value for customizable sections
-    required: false
     section: Terms
   - name: fill_in_detail
     type: string
     description: Additional detail for customizable sections
-    required: false
     section: Terms
   - name: payment_terms_days
     type: string
     description: Number of days to pay after invoice
-    required: false
     section: Payment
   - name: general_cap_amount
     type: string
     description: General liability cap dollar amount
-    required: false
     section: Liability
   - name: cap_multiplier
     type: string
     description: Liability cap multiplier (e.g. "2")
-    required: false
     section: Liability
   - name: increased_cap_amount
     type: string
     description: Increased liability cap dollar amount
-    required: false
     section: Liability
   - name: dpa_reference
     type: string
     description: Reference to or location of Data Processing Agreement
-    required: false
     section: Privacy
   - name: governing_law
     type: string
     description: State and/or country whose laws govern the agreement
-    required: true
     default: Delaware
     section: Legal
   - name: jurisdiction
     type: string
     description: Courts with jurisdiction over disputes
-    required: true
     default: courts located in New Castle County, Delaware
     section: Legal
+required_fields:
+  - company_name
+  - governing_law
+  - jurisdiction

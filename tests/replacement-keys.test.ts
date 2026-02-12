@@ -1,5 +1,8 @@
-import { describe, it, expect } from 'vitest';
+import { describe, expect } from 'vitest';
+import { itAllure } from './helpers/allure-test.js';
 import { parseReplacementKey, extractSearchText } from '../src/core/recipe/replacement-keys.js';
+
+const it = itAllure.epic('Cleaning & Normalization');
 
 describe('parseReplacementKey', () => {
   it('parses a simple key', () => {

@@ -1,10 +1,13 @@
-import { describe, it, expect, vi } from 'vitest';
+import { describe, expect, vi } from 'vitest';
+import { itAllure } from './helpers/allure-test.js';
 import { mkdtempSync, writeFileSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import AdmZip from 'adm-zip';
 import { detectCurrencyFields, sanitizeCurrencyValuesFromDocx, verifyTemplateFill, BLANK_PLACEHOLDER } from '../src/core/fill-utils.js';
 import { prepareFillData, fillDocx } from '../src/core/fill-pipeline.js';
+
+const it = itAllure.epic('Filling & Rendering');
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 
@@ -203,7 +206,7 @@ describe('verifyTemplateFill', () => {
     rmSync(path.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it('catches unrendered template tags', () => {
+  it.openspec('OA-025')('catches unrendered template tags', () => {
     const path = buildDocxFile(docXml(['Hello {unfilled_field}, welcome']));
     const result = verifyTemplateFill(path);
     expect(result.passed).toBe(false);
@@ -247,10 +250,11 @@ describe('verifyTemplateFill', () => {
 
 describe('prepareFillData', () => {
   const fields = [
-    { name: 'company', type: 'string' as const, required: true, description: 'Company name' },
-    { name: 'amount', type: 'string' as const, required: false, description: 'Amount' },
-    { name: 'is_free', type: 'boolean' as const, required: false, description: 'Is free' },
+    { name: 'company', type: 'string' as const, description: 'Company name' },
+    { name: 'amount', type: 'string' as const, description: 'Amount' },
+    { name: 'is_free', type: 'boolean' as const, description: 'Is free' },
   ];
+  const requiredFieldNames = ['company'];
 
   it('defaults optional fields to empty string when useBlankPlaceholder is false', () => {
     const result = prepareFillData({
@@ -285,7 +289,7 @@ describe('prepareFillData', () => {
   it('uses field.default when provided', () => {
     const fieldsWithDefault = [
       ...fields.slice(0, 1),
-      { name: 'amount', type: 'string' as const, required: false, description: 'Amount', default: 'N/A' },
+      { name: 'amount', type: 'string' as const, description: 'Amount', default: 'N/A' },
     ];
     const result = prepareFillData({
       values: { company: 'Acme' },
@@ -327,6 +331,7 @@ describe('prepareFillData', () => {
     prepareFillData({
       values: { amount: '100' },
       fields,
+      requiredFieldNames,
     });
     expect(spy).toHaveBeenCalledWith('Warning: missing required fields: company');
     spy.mockRestore();
@@ -374,7 +379,33 @@ describe('fillDocx', () => {
     expect(result.length).toBeGreaterThan(0);
   });
 
-  it('strips drafting note paragraphs by default', async () => {
+  it('renders multiline values using explicit line-break runs', async () => {
+    const xml =
+      '<?xml version="1.0" encoding="UTF-8"?>' +
+      `<w:document xmlns:w="${W_NS}"><w:body>` +
+      '<w:p><w:r><w:t>{details}</w:t></w:r></w:p>' +
+      '</w:body></w:document>';
+    const buf = buildDocxBuffer(xml);
+
+    const result = await fillDocx({
+      templateBuffer: buf,
+      data: { details: 'Line one\nLine two\nLine three' },
+      stripParagraphPatterns: [],
+    });
+
+    const outZip = new AdmZip(Buffer.from(result));
+    const outXml = outZip.getEntry('word/document.xml')!.getData().toString('utf-8');
+
+    expect(outXml).toContain('<w:br/>');
+    expect(outXml).toContain('Line one');
+    expect(outXml).toContain('Line two');
+    expect(outXml).toContain('Line three');
+
+    // Word line breaks should be emitted as sibling runs, not embedded inside <w:t>.
+    expect(/<w:t(?:\s+[^>]*)?>[^<]*<w:br\/>/.test(outXml)).toBe(false);
+  });
+
+  it.openspec('OA-019')('strips drafting note paragraphs by default', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -515,9 +546,10 @@ describe('fillDocx', () => {
 
 describe('Regression: behavioral divergence', () => {
   const simpleFields = [
-    { name: 'name', type: 'string' as const, required: true, description: 'Name' },
-    { name: 'amount', type: 'string' as const, required: false, description: 'Amount' },
+    { name: 'name', type: 'string' as const, description: 'Name' },
+    { name: 'amount', type: 'string' as const, description: 'Amount' },
   ];
+  const simpleRequiredFieldNames = ['name'];
 
   it('all paths default optional fields to BLANK_PLACEHOLDER', () => {
     const data = prepareFillData({
@@ -530,8 +562,8 @@ describe('Regression: behavioral divergence', () => {
 
   it('template path coerces boolean fields', () => {
     const boolFields = [
-      { name: 'company', type: 'string' as const, required: true, description: 'Co' },
-      { name: 'flag', type: 'boolean' as const, required: false, description: 'Flag' },
+      { name: 'company', type: 'string' as const, description: 'Co' },
+      { name: 'flag', type: 'boolean' as const, description: 'Flag' },
     ];
     const data = prepareFillData({
       values: { company: 'Acme', flag: 'false' },
@@ -543,8 +575,8 @@ describe('Regression: behavioral divergence', () => {
 
   it('recipe/external path does not coerce booleans', () => {
     const boolFields = [
-      { name: 'company', type: 'string' as const, required: true, description: 'Co' },
-      { name: 'flag', type: 'boolean' as const, required: false, description: 'Flag' },
+      { name: 'company', type: 'string' as const, description: 'Co' },
+      { name: 'flag', type: 'boolean' as const, description: 'Flag' },
     ];
     const data = prepareFillData({
       values: { company: 'Acme', flag: 'false' },
@@ -559,6 +591,7 @@ describe('Regression: behavioral divergence', () => {
     prepareFillData({
       values: {},
       fields: simpleFields,
+      requiredFieldNames: simpleRequiredFieldNames,
     });
     expect(spy).toHaveBeenCalledWith('Warning: missing required fields: name');
     spy.mockRestore();

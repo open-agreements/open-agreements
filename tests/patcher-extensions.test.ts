@@ -1,4 +1,5 @@
-import { describe, it, expect } from 'vitest';
+import { describe, expect } from 'vitest';
+import { itAllure } from './helpers/allure-test.js';
 import { join } from 'node:path';
 import { mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
@@ -6,6 +7,8 @@ import AdmZip from 'adm-zip';
 import { DOMParser } from '@xmldom/xmldom';
 import { patchDocument, getTableRowContext } from '../src/core/recipe/patcher.js';
 import { cleanDocument } from '../src/core/recipe/cleaner.js';
+
+const it = itAllure.epic('Filling & Rendering');
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 
@@ -67,7 +70,7 @@ function extractPartText(docxPath: string, partName: string): string {
 }
 
 describe('patchDocument context keys', () => {
-  it('replaces placeholder only in the matching table row', async () => {
+  it.openspec('OA-023')('replaces placeholder only in the matching table row', async () => {
     // Table with three rows, each having [Fill in] but different labels
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
@@ -564,7 +567,7 @@ describe('cleanDocument guidance extraction', () => {
     rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it('returns footnote text when extractGuidance is true', async () => {
+  it.openspec('OA-018')('returns footnote text when extractGuidance is true', async () => {
     const docXml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +

@@ -1,7 +1,8 @@
 import { existsSync, mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { afterEach, describe, expect, it } from 'vitest';
+import { afterEach, describe, expect } from 'vitest';
+import { itAllure } from '../../../tests/helpers/allure-test.js';
 import {
   CATALOG_FILE,
   CONTRACTS_GUIDE_FILE,
@@ -10,6 +11,7 @@ import {
 import { initializeWorkspace } from '../src/core/workspace-structure.js';
 
 const tempDirs: string[] = [];
+const it = itAllure.epic('Platform & Distribution');
 
 afterEach(() => {
   for (const dir of tempDirs.splice(0)) {

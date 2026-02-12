@@ -1,114 +1,100 @@
 name: Common Paper Pilot Agreement
 description: >-
-  A pilot agreement cover page and standard terms, based on Common Paper's
-  standard form. Covers trial or pilot periods for cloud services, including
-  fees, support, and liability provisions.
+  A pilot agreement cover page and standard terms, based on Common Paper's standard form. Covers trial or pilot periods
+  for cloud services, including fees, support, and liability provisions.
 source_url: https://commonpaper.com/standards/pilot-agreement/1.1
-version: "1.1"
+version: '1.1'
 license: CC-BY-4.0
 allow_derivatives: true
 attribution_text: >-
-  Based on the Common Paper Pilot Agreement, available at
-  https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.
+  Based on the Common Paper Pilot Agreement, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright
+  Common Paper, Inc.
 fields:
   - name: company_name
     type: string
     description: Official company name (shown in header)
-    required: true
     section: Parties
   - name: product_description
     type: string
     description: Description of the product being piloted
-    required: true
     section: Service
   - name: pilot_period
     type: string
     description: Length of the pilot period (e.g. "3 months")
-    required: true
     section: Terms
   - name: custom_start_date
     type: string
     description: Custom start date for the pilot
-    required: false
     section: Terms
   - name: pilot_fee
     type: string
     description: Fee for the pilot period (dollar amount)
-    required: false
     section: Payment
   - name: fees_description
     type: string
     description: Description of fees
-    required: false
     section: Payment
   - name: payment_frequency
     type: string
     description: Payment frequency (e.g. "monthly", "quarterly", "annually")
-    required: false
     section: Payment
   - name: payment_terms_days
     type: string
     description: Number of days to pay after invoice
-    required: false
     section: Payment
   - name: payment_due_from
     type: string
     description: When payment terms start (e.g. "Customer's receipt of invoice")
-    required: false
     section: Payment
   - name: technical_support
     type: string
     description: Description of included support and how to access it
-    required: false
     section: Service
   - name: support_policy_reference
     type: string
     description: Reference to or location of support policy
-    required: false
     section: Service
   - name: general_cap_amount
     type: string
     description: General liability cap dollar amount
-    required: false
     section: Liability
   - name: cap_multiplier
     type: string
     description: Liability cap multiplier (e.g. "2")
-    required: false
     section: Liability
   - name: pilot_is_free
     type: boolean
     description: Whether the pilot is free (true) or paid (false)
-    required: false
-    default: "false"
+    default: 'false'
     section: Payment
   - name: payment_by_invoice
     type: boolean
     description: Whether customer pays by invoice
-    required: false
-    default: "true"
+    default: 'true'
     section: Payment
   - name: payment_automatic
     type: boolean
     description: Whether customer pays automatically
-    required: false
-    default: "false"
+    default: 'false'
     section: Payment
   - name: cap_type
     type: string
-    description: "Liability cap type: multiplier, dollar, or greater_of"
-    required: false
+    description: 'Liability cap type: multiplier, dollar, or greater_of'
     default: multiplier
     section: Liability
   - name: governing_law
     type: string
     description: State, province, and/or country whose laws govern the agreement
-    required: true
     default: Delaware
     section: Legal
   - name: jurisdiction
     type: string
     description: Courts with jurisdiction over disputes
-    required: true
     default: courts located in New Castle County, Delaware
     section: Legal
+required_fields:
+  - company_name
+  - product_description
+  - pilot_period
+  - governing_law
+  - jurisdiction

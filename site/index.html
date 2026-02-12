@@ -47,6 +47,8 @@
           <li><a href="https://www.npmjs.com/package/open-agreements" target="_blank" rel="noreferrer">npm package</a></li>
           <li><a href="https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml" target="_blank" rel="noreferrer">CI status</a></li>
           <li><a href="https://codecov.io/gh/open-agreements/open-agreements" target="_blank" rel="noreferrer">coverage</a></li>
+          <li><a href="https://github.com/open-agreements/open-agreements/tree/main/tests" target="_blank" rel="noreferrer">Vitest tests</a></li>
+          <li><a href="https://github.com/open-agreements/open-agreements/blob/main/tests/OPENSPEC_TRACEABILITY.md" target="_blank" rel="noreferrer">OpenSpec traceability</a></li>
           <li><a href="https://github.com/open-agreements/open-agreements" target="_blank" rel="noreferrer">source code</a></li>
         </ul>
       </section>
@@ -138,10 +140,54 @@
             </p>
           </details>
           <details>
-            <summary>How do I deploy this landing page to Vercel?</summary>
+            <summary>Can OpenAgreements generate .docx NDAs and Cloud Services Agreements?</summary>
             <p>
-              Import this GitHub repository into Vercel and deploy the root project. The included <code>vercel.json</code>
-              serves the static <code>site/</code> directory as the deployed output.
+              Yes. OpenAgreements can generate editable <code>.docx</code> agreements from template inputs, including
+              Non-Disclosure Agreements (NDAs) and Cloud Services Agreements (CSAs), with local-first workflows that
+              keep output files in your own workspace.
+            </p>
+          </details>
+          <details>
+            <summary>Can I use OpenAgreements as an AI contract generator for startups?</summary>
+            <p>
+              Yes. OpenAgreements is built for agent-assisted contract drafting from structured prompts and form inputs.
+              Startup teams can generate first-pass agreements in <code>.docx</code>, then review and negotiate them with counsel.
+            </p>
+          </details>
+          <details>
+            <summary>Can I generate mutual and one-way NDA templates in Word format?</summary>
+            <p>
+              Yes. OpenAgreements includes NDA templates and can output editable Word <code>.docx</code> files for mutual
+              and one-way NDA workflows.
+            </p>
+          </details>
+          <details>
+            <summary>Can I generate Cloud Services Agreements with or without SLA terms?</summary>
+            <p>
+              Yes. OpenAgreements supports Cloud Services Agreement template variants, including flows that include SLA
+              terms and flows that omit SLA terms, all in editable <code>.docx</code> output.
+            </p>
+          </details>
+          <details>
+            <summary>Can I edit and redline generated contracts in Word or Google Docs?</summary>
+            <p>
+              Yes. Outputs are standard <code>.docx</code> files, so your team and counterparties can review, redline,
+              and negotiate in normal document tools.
+            </p>
+          </details>
+          <details>
+            <summary>Can OpenAgreements track contract lifecycle status like drafts and executed files?</summary>
+            <p>
+              Yes. The contracts workspace package helps organize folders by lifecycle (for example forms, drafts,
+              incoming, executed, and archive) and generate status indexes for quick review.
+            </p>
+          </details>
+          <details>
+            <summary>How can I verify OpenAgreements is actively maintained and tested?</summary>
+            <p>
+              Public trust signals include passing CI checks, Codecov coverage with patch/project gates,
+              Vitest-based test runs, and OpenSpec-to-Allure traceability checks that map canonical scenarios
+              to executable tests.
             </p>
           </details>
           <details>
@@ -220,10 +266,58 @@
           },
           {
             "@type": "Question",
-            "name": "How do I deploy this landing page to Vercel?",
+            "name": "Can OpenAgreements generate .docx NDAs and Cloud Services Agreements?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Import the repository into Vercel and deploy the root project. The included vercel.json serves the static site directory."
+              "text": "Yes. OpenAgreements can generate editable .docx agreements from template inputs, including Non-Disclosure Agreements (NDAs) and Cloud Services Agreements (CSAs), using local-first workflows."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use OpenAgreements as an AI contract generator for startups?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. OpenAgreements supports agent-assisted contract drafting from structured inputs so startup teams can generate first-pass .docx agreements."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I generate mutual and one-way NDA templates in Word format?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. OpenAgreements includes NDA templates and outputs editable Word .docx files for mutual and one-way NDA workflows."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I generate Cloud Services Agreements with or without SLA terms?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. OpenAgreements supports Cloud Services Agreement variants with and without SLA terms in editable .docx output."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I edit and redline generated contracts in Word or Google Docs?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. OpenAgreements outputs standard .docx files that can be reviewed and redlined in normal document tools."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can OpenAgreements track contract lifecycle status like drafts and executed files?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. The contracts workspace package can organize lifecycle folders and generate status indexes for contract tracking."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How can I verify OpenAgreements is actively maintained and tested?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Trust signals include passing CI, Codecov coverage gates, Vitest test runs, and OpenSpec-to-Allure traceability checks mapped to canonical scenarios."
             }
           },
           {

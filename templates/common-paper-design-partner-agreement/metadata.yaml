@@ -1,65 +1,59 @@
 name: Common Paper Design Partner Agreement
 description: >-
-  A design partner agreement cover page and standard terms, based on Common
-  Paper's standard form. Covers partnerships where a company provides early
-  access to a product in development in exchange for feedback and collaboration.
+  A design partner agreement cover page and standard terms, based on Common Paper's standard form. Covers partnerships
+  where a company provides early access to a product in development in exchange for feedback and collaboration.
 source_url: https://commonpaper.com/standards/design-partner-agreement/1.3
-version: "1.3"
+version: '1.3'
 license: CC-BY-4.0
 allow_derivatives: true
 attribution_text: >-
-  Based on the Common Paper Design Partner Agreement, available at
-  https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.
+  Based on the Common Paper Design Partner Agreement, available at https://commonpaper.com. Licensed under CC BY 4.0.
+  Copyright Common Paper, Inc.
 fields:
   - name: company_name
     type: string
     description: Official company name (shown in header)
-    required: true
     section: Parties
   - name: product_description
     type: string
     description: Description of the product being developed
-    required: true
     section: Service
   - name: billing_period
     type: string
     description: Billing period (e.g. "month", "quarter", "year", "term")
-    required: false
     section: Payment
   - name: term_length_unit
     type: string
     description: Unit for term length (e.g. "months", "quarters", "years")
-    required: false
     section: Terms
   - name: discount_amount
     type: string
     description: Discount amount (flat amount or percentage)
-    required: false
     section: Payment
   - name: free_text
     type: string
     description: Free text entry for customizable sections
-    required: false
     section: Terms
   - name: open_text
     type: string
     description: Open text entry for additional details
-    required: false
     section: Terms
   - name: other_details
     type: string
     description: Other details to fill in
-    required: false
     section: Terms
   - name: governing_law
     type: string
     description: State whose laws govern the agreement
-    required: true
     default: Delaware
     section: Legal
   - name: jurisdiction
     type: string
     description: Courts with jurisdiction over disputes
-    required: true
     default: courts located in New Castle County, Delaware
     section: Legal
+required_fields:
+  - company_name
+  - product_description
+  - governing_law
+  - jurisdiction

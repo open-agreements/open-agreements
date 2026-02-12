@@ -24,6 +24,7 @@ export interface PipelineOptions {
   outputPath: string;                   // Final output .docx
   values: Record<string, string | boolean>;
   fields: FieldDefinition[];
+  requiredFieldNames?: string[];
 
   // Clean/Patch — omit to skip (templates without replacements.json)
   cleanPatch?: {
@@ -72,6 +73,7 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
     outputPath,
     values,
     fields,
+    requiredFieldNames = [],
     cleanPatch,
     selectionsConfig,
     coerceBooleans = false,
@@ -106,6 +108,7 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
     const data = prepareFillData({
       values,
       fields,
+      requiredFieldNames,
       useBlankPlaceholder: true,
       coerceBooleans,
       computeDisplayFields,

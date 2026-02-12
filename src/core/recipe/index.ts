@@ -30,6 +30,7 @@ export async function runRecipe(options: RecipeRunOptions): Promise<RecipeRunRes
     outputPath,
     values,
     fields: metadata.fields,
+    requiredFieldNames: metadata.required_fields,
     cleanPatch: { cleanConfig, replacements },
     verify: (p) => verifyOutput(p, values, replacements, cleanConfig),
     keepIntermediate,

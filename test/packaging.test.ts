@@ -1,5 +1,11 @@
-import { describe, it, expect, beforeAll } from 'vitest';
+import { describe, expect, beforeAll } from 'vitest';
+import { itAllure } from '../tests/helpers/allure-test.js';
 import { execSync } from 'node:child_process';
+import { mkdtempSync, rmSync } from 'node:fs';
+import { join } from 'node:path';
+import { tmpdir } from 'node:os';
+
+const it = itAllure.epic('Platform & Distribution');
 
 interface PackFile {
   path: string;
@@ -62,4 +68,45 @@ describe('npm packaging', () => {
     if (!available) return;
     expect(files.some((f) => f.startsWith('node_modules/'))).toBe(false);
   });
+
+  it.openspec('OA-060')('installs from packed tarball and runs list --json', () => {
+    if (!available) return;
+
+    const repoRoot = new URL('..', import.meta.url).pathname;
+    const sandbox = mkdtempSync(join(tmpdir(), 'oa-pack-install-'));
+    let tarball = '';
+
+    try {
+      tarball = execSync('npm pack --ignore-scripts', {
+        cwd: repoRoot,
+        encoding: 'utf-8',
+        timeout: 30_000,
+      })
+        .trim()
+        .split('\n')
+        .at(-1) ?? '';
+
+      execSync('npm init -y', { cwd: sandbox, encoding: 'utf-8', timeout: 10_000 });
+      execSync(`npm install --ignore-scripts "${join(repoRoot, tarball)}"`, {
+        cwd: sandbox,
+        encoding: 'utf-8',
+        timeout: 60_000,
+      });
+
+      const output = execSync('npx open-agreements list --json', {
+        cwd: sandbox,
+        encoding: 'utf-8',
+        timeout: 30_000,
+      });
+      const parsed = JSON.parse(output);
+      expect(parsed.schema_version).toBe(1);
+      expect(Array.isArray(parsed.items)).toBe(true);
+      expect(parsed.items.length).toBeGreaterThan(0);
+    } finally {
+      if (tarball) {
+        rmSync(join(repoRoot, tarball), { force: true });
+      }
+      rmSync(sandbox, { recursive: true, force: true });
+    }
+  }, 30_000);
 });

@@ -1,10 +1,18 @@
 import type { ToolCommandAdapter } from '../types.js';
 import type { TemplateMetadata } from '../../metadata.js';
 
+interface InterviewField {
+  name: string;
+  description: string;
+  type: string;
+  required: boolean;
+}
+
 export class ClaudeCodeAdapter implements ToolCommandAdapter {
   readonly name = 'claude-code';
 
   generateSkillFile(metadata: TemplateMetadata, templateId: string): string {
+    const requiredFields = new Set(metadata.required_fields);
     const fieldsBySection = this.groupFieldsBySection(metadata);
     const questionRounds = this.buildQuestionRounds(fieldsBySection);
 
@@ -32,7 +40,7 @@ After collecting all field values, run:
 
 \`\`\`bash
 open-agreements fill ${templateId} ${metadata.fields
-      .filter((f) => f.required)
+      .filter((f) => requiredFields.has(f.name))
       .map((f) => `--${f.name} "\${${f.name}}"`)
       .join(' ')}
 \`\`\`
@@ -53,22 +61,27 @@ The filled DOCX will be saved to the current directory.
 
   private groupFieldsBySection(
     metadata: TemplateMetadata
-  ): Map<string, typeof metadata.fields> {
-    const sections = new Map<string, typeof metadata.fields>();
+  ): Map<string, InterviewField[]> {
+    const requiredFields = new Set(metadata.required_fields);
+    const sections = new Map<string, InterviewField[]>();
     for (const field of metadata.fields) {
+      const fieldWithRequired = {
+        ...field,
+        required: requiredFields.has(field.name),
+      };
       const section = field.section ?? 'General';
       if (!sections.has(section)) sections.set(section, []);
-      sections.get(section)!.push(field);
+      sections.get(section)!.push(fieldWithRequired);
     }
     return sections;
   }
 
   private buildQuestionRounds(
-    fieldsBySection: Map<string, { name: string; description: string; type: string; required: boolean }[]>
+    fieldsBySection: Map<string, InterviewField[]>
   ): string {
     let round = 1;
     let output = '';
-    let currentBatch: { name: string; description: string; type: string; required: boolean }[] = [];
+    let currentBatch: InterviewField[] = [];
 
     for (const [section, fields] of fieldsBySection) {
       for (const field of fields) {
@@ -92,7 +105,7 @@ The filled DOCX will be saved to the current directory.
   private formatRound(
     round: number,
     section: string,
-    fields: { name: string; description: string; type: string; required: boolean }[]
+    fields: InterviewField[]
   ): string {
     const fieldList = fields
       .map(

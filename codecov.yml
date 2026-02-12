@@ -1,0 +1,17 @@
+coverage:
+  status:
+    project:
+      default:
+        target: auto
+        threshold: 0.5%
+        if_ci_failed: error
+    patch:
+      default:
+        target: 85%
+        threshold: 5%
+        if_ci_failed: error
+
+# Ratchet plan:
+# - Keep project target on auto + tight regression threshold initially.
+# - After baseline stabilizes, move project target to explicit floors
+#   (for example 50%, then 55%) in follow-up PRs.

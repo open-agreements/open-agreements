@@ -1,5 +1,6 @@
 import { resolve } from 'node:path';
 import { fillTemplate } from '../core/engine.js';
+import { loadMetadata } from '../core/metadata.js';
 import {
   findTemplateDir,
   findExternalDir,
@@ -15,6 +16,22 @@ export interface FillArgs {
   template: string;
   output?: string;
   values: Record<string, string>;
+}
+
+function validateTemplateFillRequest(templateDir: string, values: Record<string, string>): void {
+  const metadata = loadMetadata(templateDir);
+
+  if (!metadata.allow_derivatives) {
+    throw new Error(
+      `Template "${metadata.name}" has allow_derivatives=false and cannot be filled from templates/.`
+    );
+  }
+
+  const missingRequired = metadata.required_fields.filter((fieldName) => !values[fieldName]);
+
+  if (missingRequired.length > 0) {
+    throw new Error(`Missing required fields: ${missingRequired.join(', ')}`);
+  }
 }
 
 export async function runFill(args: FillArgs): Promise<void> {
@@ -59,6 +76,7 @@ export async function runFill(args: FillArgs): Promise<void> {
       console.log(`Output: ${result.outputPath}`);
       console.log(`Fields used: ${result.fieldsUsed.join(', ')}`);
     } else {
+      validateTemplateFillRequest(templateDir!, args.values);
       const result = await fillTemplate({
         templateDir: templateDir!,
         values: args.values,

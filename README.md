@@ -6,6 +6,8 @@
 [![CI](https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml/badge.svg)](https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml)
 [![Validate Templates](https://github.com/open-agreements/open-agreements/actions/workflows/validate.yml/badge.svg)](https://github.com/open-agreements/open-agreements/actions/workflows/validate.yml)
 [![codecov](https://codecov.io/gh/open-agreements/open-agreements/graph/badge.svg)](https://codecov.io/gh/open-agreements/open-agreements)
+[![Tests: Vitest](https://img.shields.io/badge/tests-vitest-6E9F18)](https://vitest.dev/)
+[![OpenSpec Traceability](https://img.shields.io/badge/openspec-traceability%20gate-brightgreen)](./tests/OPENSPEC_TRACEABILITY.md)
 
 Fill standard legal agreement templates and produce signable DOCX files. 25 templates covering NDAs, cloud terms, contractor agreements, SAFEs, and NVCA financing documents.
 
@@ -16,6 +18,13 @@ Built by the team behind [UseJunior.com](https://usejunior.com) — in productio
 </p>
 
 > *Demo: Claude fills a Common Paper Mutual NDA in under 2 minutes. Sped up for brevity.*
+
+## Quality and Trust Signals
+
+- CI runs on pull requests and pushes to `main`.
+- Coverage is published to Codecov with repository-defined patch/project gates in `codecov.yml`.
+- The active JS test framework is Vitest, with JUnit test results uploaded for Codecov test analytics.
+- OpenSpec scenario traceability is enforced via `npm run check:spec-coverage`, with matrix output in `tests/OPENSPEC_TRACEABILITY.md`.
 
 ## How It Works
 
@@ -93,6 +102,20 @@ open-agreements fill common-paper-mutual-nda -d values.json -o my-nda.docx
 **External templates** (YC SAFEs) are CC BY-ND 4.0 — we vendor the original unchanged. The filled output is a transient derivative on your machine.
 
 **Recipes** (NVCA financing documents) are freely downloadable but not redistributable — we ship only transformation instructions and download the source DOCX from nvca.org at runtime.
+
+### Guidance Extraction
+
+Source documents contain expert commentary — footnotes, drafting notes, `[Comment: ...]` blocks — written by domain specialists (e.g., securities lawyers). The recipe cleaner removes this content to produce a fillable document, but can also extract it as structured JSON:
+
+```bash
+open-agreements recipe clean source.docx -o cleaned.docx \
+  --recipe nvca-indemnification-agreement \
+  --extract-guidance guidance.json
+```
+
+This produces a `guidance.json` with every removed footnote, comment, and drafting note tagged by source type and document position. The guidance is a local-only artifact (not committed or shipped) that AI agents or human authors can reference while filling the form. See [Adding Recipes — Guidance Extraction](docs/adding-recipes.md#guidance-extraction) for format details.
+
+**Why programmatic extraction?** The source document is the single source of truth. Re-running extraction after a publisher update produces fresh guidance with zero manual effort, preserves the exact language of domain experts, and captures everything — an AI can summarize on the fly, but cannot recover discarded content.
 
 Each template is a self-contained directory:
 

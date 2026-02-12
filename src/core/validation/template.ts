@@ -70,6 +70,7 @@ export function validateTemplate(templateDir: string, templateId: string): Templ
   }
 
   const metadataFieldNames = new Set(metadata.fields.map((f) => f.name));
+  const requiredFieldNames = new Set(metadata.required_fields);
 
   // Check if this template uses declarative replacements
   const replacementsPath = join(templateDir, 'replacements.json');
@@ -136,8 +137,7 @@ export function validateTemplate(templateDir: string, templateId: string): Templ
     for (const fieldName of metadataFieldNames) {
       const inTags = foundTags.has(fieldName) || foundConditionalFields.has(fieldName);
       if (!inTags) {
-        const field = metadata.fields.find((f) => f.name === fieldName);
-        if (field?.required) {
+        if (requiredFieldNames.has(fieldName)) {
           errors.push(
             `Required field "${fieldName}" defined in metadata but not found in replacement values or template.docx`
           );
@@ -187,8 +187,7 @@ export function validateTemplate(templateDir: string, templateId: string): Templ
     for (const fieldName of metadataFieldNames) {
       const inDocx = foundTags.has(fieldName) || foundConditionalFields.has(fieldName);
       if (!inDocx) {
-        const field = metadata.fields.find((f) => f.name === fieldName);
-        if (field?.required) {
+        if (requiredFieldNames.has(fieldName)) {
           errors.push(
             `Required field "${fieldName}" defined in metadata but not found as {${fieldName}} in template.docx`
           );

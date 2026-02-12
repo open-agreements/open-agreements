@@ -4,22 +4,20 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
 import { fileURLToPath } from 'node:url';
+import ts from 'typescript';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const REPO_ROOT = path.resolve(__dirname, '..');
 const SPEC_ROOT = path.join(REPO_ROOT, 'openspec', 'specs');
 const DEFAULT_MATRIX_PATH = path.join(REPO_ROOT, 'tests', 'OPENSPEC_TRACEABILITY.md');
-const TEST_SEARCH_ROOTS = [
-  path.join(REPO_ROOT, 'tests'),
-  path.join(REPO_ROOT, 'test'),
-  path.join(REPO_ROOT, 'packages'),
-];
+const TEST_ROOTS = ['tests', 'test'];
+const TEST_FILE_PATTERN = /\.test\.(?:[cm]?ts|[cm]?js|tsx|jsx)$/;
+const SCENARIO_ID_PATTERN = /^[A-Za-z0-9][A-Za-z0-9._:-]*$/;
 
 function normalizeScenarioName(value) {
   return value
     .trim()
-    .replace(/^\[[^\]]+\]\s*/, '')
     .replace(/\s+/g, ' ');
 }
 
@@ -30,6 +28,22 @@ function mdEscapeTableCell(value) {
     .trim();
 }
 
+function toPosixPath(value) {
+  return value.split(path.sep).join('/');
+}
+
+function parseScenarioHeader(value) {
+  const normalized = normalizeScenarioName(value);
+  const match = normalized.match(/^\[([^\]]+)\]\s+(.+)$/);
+  if (!match) {
+    return { id: '', title: normalized };
+  }
+  return {
+    id: match[1].trim(),
+    title: normalizeScenarioName(match[2]),
+  };
+}
+
 async function fileExists(filePath) {
   try {
     const stat = await fs.stat(filePath);
@@ -37,47 +51,6 @@ async function fileExists(filePath) {
   } catch {
     return false;
   }
-}
-
-async function dirExists(dirPath) {
-  try {
-    const stat = await fs.stat(dirPath);
-    return stat.isDirectory();
-  } catch {
-    return false;
-  }
-}
-
-async function listFilesRecursively(rootDir, predicate) {
-  const out = [];
-  const ignoredDirs = new Set([
-    'node_modules',
-    '.git',
-    'dist',
-    'coverage',
-    'allure-results',
-    'allure-report',
-  ]);
-
-  async function walk(dir) {
-    const entries = await fs.readdir(dir, { withFileTypes: true });
-    for (const entry of entries) {
-      const full = path.join(dir, entry.name);
-      if (entry.isDirectory()) {
-        if (ignoredDirs.has(entry.name)) {
-          continue;
-        }
-        await walk(full);
-        continue;
-      }
-      if (predicate(full)) {
-        out.push(full);
-      }
-    }
-  }
-
-  await walk(rootDir);
-  return out.sort();
 }
 
 async function listSpecCapabilities() {
@@ -100,279 +73,36 @@ async function listSpecFilesForCapability(capability) {
   return (await fileExists(specPath)) ? [specPath] : [];
 }
 
-function parseScenariosFromSpec(content) {
-  const scenarios = new Set();
+function parseScenariosFromSpec(content, specPathRel) {
+  const scenarios = [];
+  const errors = [];
+  const seenIds = new Set();
   const scenarioHeader = /^\s*####\s+Scenario:\s*(.+?)\s*$/gm;
   let match = scenarioHeader.exec(content);
+
   while (match) {
-    scenarios.add(normalizeScenarioName(match[1]));
-    match = scenarioHeader.exec(content);
-  }
-  return scenarios;
-}
-
-function parseCapabilityFromTest(content, testFile) {
-  const direct = content.match(/const\s+TEST_CAPABILITY\s*=\s*['"]([^'"]+)['"]/);
-  if (direct) {
-    return direct[1];
-  }
-
-  const described = content.match(/OpenSpec traceability:\s*([A-Za-z0-9_-]+)/);
-  if (described) {
-    return described[1];
-  }
-
-  if (!content.includes('OpenSpec Traceability')) {
-    return null;
-  }
-
-  throw new Error(`Cannot infer TEST_CAPABILITY from ${testFile}`);
-}
-
-function parseStoriesFromTest(content) {
-  const stories = new Set();
-
-  const helperCalls = /tagScenario\(\s*['"`]([^'"`]+)['"`]\s*,/g;
-  let match = helperCalls.exec(content);
-  while (match) {
-    stories.add(normalizeScenarioName(match[1]));
-    match = helperCalls.exec(content);
-  }
-
-  const direct = /allure\.story\(\s*['"`]([^'"`]+)['"`]\s*\)/g;
-  match = direct.exec(content);
-  while (match) {
-    stories.add(normalizeScenarioName(match[1]));
-    match = direct.exec(content);
-  }
-
-  return stories;
-}
-
-function parseSkippedStoriesFromTest(content) {
-  const skipped = new Set();
-  const skippedPattern = /(?:test|it)\.(?:skip|todo)\(\s*['"`](?:Scenario:\s*)?([^'"`]+)['"`]/g;
-  let match = skippedPattern.exec(content);
-  while (match) {
-    skipped.add(normalizeScenarioName(match[1]));
-    match = skippedPattern.exec(content);
-  }
-  return skipped;
-}
-
-function parsePendingMarkersFromTest(content) {
-  const markers = new Set();
-  if (/\bpending_impl\b/i.test(content)) {
-    markers.add('pending_impl');
-  }
-  if (/pending parity work/i.test(content)) {
-    markers.add('pending parity work');
-  }
-  return [...markers].sort();
-}
-
-function printSet(title, values) {
-  if (values.length === 0) {
-    return;
-  }
-  console.error(`  ${title}:`);
-  for (const value of values) {
-    console.error(`    - ${value}`);
-  }
-}
-
-async function validateCapabilityCoverage({ capability, testFiles }) {
-  const storySet = new Set();
-  const skippedStorySet = new Set();
-  const pendingMarkerSet = new Set();
-  const storyToFiles = new Map();
-
-  for (const testFile of testFiles) {
-    const content = await fs.readFile(testFile, 'utf-8');
-    const relTestFile = path.relative(REPO_ROOT, testFile).split(path.sep).join('/');
-
-    for (const story of parseStoriesFromTest(content)) {
-      storySet.add(story);
-      const files = storyToFiles.get(story) ?? new Set();
-      files.add(relTestFile);
-      storyToFiles.set(story, files);
-    }
-
-    for (const story of parseSkippedStoriesFromTest(content)) {
-      skippedStorySet.add(story);
-    }
-    for (const marker of parsePendingMarkersFromTest(content)) {
-      pendingMarkerSet.add(marker);
-    }
-  }
-
-  const specFiles = await listSpecFilesForCapability(capability);
-  if (specFiles.length === 0) {
-    return {
-      capability,
-      ok: false,
-      reason: `No canonical spec files found for capability '${capability}' under openspec/specs/${capability}/spec.md`,
-      missing: [],
-      extra: [],
-      skippedStories: [...skippedStorySet].sort(),
-      pendingMarkers: [...pendingMarkerSet].sort(),
-      stories: [...storySet].sort(),
-      scenarios: [],
-      storyToFiles: Object.fromEntries(
-        [...storyToFiles.entries()].map(([k, v]) => [k, [...v].sort()])
-      ),
-    };
-  }
-
-  const scenarioSet = new Set();
-  for (const specFile of specFiles) {
-    const content = await fs.readFile(specFile, 'utf-8');
-    for (const scenario of parseScenariosFromSpec(content)) {
-      scenarioSet.add(scenario);
-    }
-  }
-
-  if (scenarioSet.size === 0) {
-    return {
-      capability,
-      ok: false,
-      reason: `No '#### Scenario:' entries found for capability '${capability}'`,
-      missing: [],
-      extra: [],
-      skippedStories: [...skippedStorySet].sort(),
-      pendingMarkers: [...pendingMarkerSet].sort(),
-      stories: [...storySet].sort(),
-      scenarios: [],
-      storyToFiles: Object.fromEntries(
-        [...storyToFiles.entries()].map(([k, v]) => [k, [...v].sort()])
-      ),
-    };
-  }
-
-  const scenarios = [...scenarioSet].sort();
-  const stories = [...storySet].sort();
-  const scenarioLookup = new Set(scenarios);
-  const storyLookup = new Set(stories);
-
-  const missing = scenarios.filter((scenario) => !storyLookup.has(scenario));
-  const extra = stories.filter((story) => !scenarioLookup.has(story));
-  const skippedStories = [...skippedStorySet].sort();
-  const pendingMarkers = [...pendingMarkerSet].sort();
-
-  return {
-    capability,
-    ok: missing.length === 0
-      && extra.length === 0
-      && skippedStories.length === 0
-      && pendingMarkers.length === 0,
-    reason: '',
-    missing,
-    extra,
-    skippedStories,
-    pendingMarkers,
-    stories,
-    scenarios,
-    storyToFiles: Object.fromEntries(
-      [...storyToFiles.entries()].map(([k, v]) => [k, [...v].sort()])
-    ),
-  };
-}
-
-function buildMatrixMarkdown({ reports, unknownTraceabilityCapabilities }) {
-  const lines = [];
-  lines.push('# OpenAgreements OpenSpec Traceability Matrix');
-  lines.push('');
-  lines.push('> Auto-generated by `scripts/validate_openspec_coverage.mjs`.');
-  lines.push('> Do not hand-edit this file.');
-  lines.push('');
-  lines.push('This matrix maps canonical OpenSpec `#### Scenario:` entries to Allure story mappings extracted from `*.allure.test.ts` files.');
-  lines.push('');
-
-  for (const report of reports) {
-    lines.push(`## Capability: \`${report.capability}\``);
-    lines.push('');
-    lines.push('| Scenario | Status | Allure Test Files | Notes |');
-    lines.push('|---|---|---|---|');
-
-    if (!report.scenarios || report.scenarios.length === 0) {
-      lines.push(`| _No scenarios discovered_ | n/a | n/a | ${mdEscapeTableCell(report.reason || 'No scenarios found.')} |`);
-      lines.push('');
+    const { id, title } = parseScenarioHeader(match[1]);
+    if (!id) {
+      errors.push(`${specPathRel}: scenario '${title}' is missing an explicit ID (use [OA-001] format).`);
+      match = scenarioHeader.exec(content);
       continue;
     }
-
-    const skippedLookup = new Set(report.skippedStories ?? []);
-    const missingLookup = new Set(report.missing ?? []);
-
-    for (const scenario of report.scenarios) {
-      const mappedFiles = report.storyToFiles?.[scenario] ?? [];
-      const status = skippedLookup.has(scenario)
-        ? 'pending_impl'
-        : missingLookup.has(scenario)
-          ? 'missing'
-          : mappedFiles.length > 0
-            ? 'covered'
-            : 'missing';
-
-      const fileCell = mappedFiles.length > 0
-        ? mappedFiles.map((file) => `\`${file}\``).join(', ')
-        : 'n/a';
-
-      let notes = '';
-      if (skippedLookup.has(scenario)) {
-        notes = 'Mapped scenario is marked skip/todo in tests.';
-      } else if (missingLookup.has(scenario)) {
-        notes = 'No Allure story mapping found.';
-      }
-
-      lines.push(
-        `| ${mdEscapeTableCell(scenario)} | ${status} | ${mdEscapeTableCell(fileCell)} | ${mdEscapeTableCell(notes)} |`
-      );
+    if (!SCENARIO_ID_PATTERN.test(id)) {
+      errors.push(`${specPathRel}: scenario ID '${id}' has invalid format.`);
+      match = scenarioHeader.exec(content);
+      continue;
     }
-
-    if (report.extra && report.extra.length > 0) {
-      lines.push('');
-      lines.push('Extra stories not found in spec:');
-      for (const value of report.extra) {
-        lines.push(`- ${value}`);
-      }
+    if (seenIds.has(id)) {
+      errors.push(`${specPathRel}: duplicate scenario ID '${id}'.`);
+      match = scenarioHeader.exec(content);
+      continue;
     }
-
-    if (report.pendingMarkers && report.pendingMarkers.length > 0) {
-      lines.push('');
-      lines.push('Pending markers found in tests:');
-      for (const value of report.pendingMarkers) {
-        lines.push(`- ${value}`);
-      }
-    }
-
-    lines.push('');
+    seenIds.add(id);
+    scenarios.push({ id, title });
+    match = scenarioHeader.exec(content);
   }
 
-  if (unknownTraceabilityCapabilities.length > 0) {
-    lines.push('## Unknown Traceability Capabilities');
-    lines.push('');
-    lines.push('The following `TEST_CAPABILITY` values appear in tests but do not have a matching canonical spec capability:');
-    lines.push('');
-    for (const capability of unknownTraceabilityCapabilities) {
-      lines.push(`- ${capability}`);
-    }
-    lines.push('');
-  }
-
-  return `${lines.join('\n')}\n`;
-}
-
-async function writeMatrixFile(matrixPath, content) {
-  let previous = '';
-  try {
-    previous = await fs.readFile(matrixPath, 'utf-8');
-  } catch {
-    previous = '';
-  }
-
-  await fs.mkdir(path.dirname(matrixPath), { recursive: true });
-  await fs.writeFile(matrixPath, content, 'utf-8');
-  return previous !== content;
+  return { scenarios, errors };
 }
 
 function parseArgs() {
@@ -403,36 +133,349 @@ function parseArgs() {
   return { capabilities, writeMatrixPath };
 }
 
-async function collectAllureTestFiles() {
+async function listTestFiles() {
   const files = [];
-  for (const root of TEST_SEARCH_ROOTS) {
-    if (!(await dirExists(root))) {
+
+  async function walk(absDir) {
+    const entries = await fs.readdir(absDir, { withFileTypes: true });
+    for (const entry of entries) {
+      if (entry.name === 'node_modules' || entry.name === '.git') {
+        continue;
+      }
+      const absPath = path.join(absDir, entry.name);
+      if (entry.isDirectory()) {
+        await walk(absPath);
+        continue;
+      }
+      if (!TEST_FILE_PATTERN.test(entry.name)) {
+        continue;
+      }
+      files.push(toPosixPath(path.relative(REPO_ROOT, absPath)));
+    }
+  }
+
+  for (const root of TEST_ROOTS) {
+    const absRoot = path.join(REPO_ROOT, root);
+    try {
+      const stat = await fs.stat(absRoot);
+      if (!stat.isDirectory()) {
+        continue;
+      }
+      await walk(absRoot);
+    } catch {
+      // Ignore missing test roots.
+    }
+  }
+
+  return files.sort();
+}
+
+function getScriptKind(filePath) {
+  if (filePath.endsWith('.tsx')) return ts.ScriptKind.TSX;
+  if (filePath.endsWith('.jsx')) return ts.ScriptKind.JSX;
+  if (filePath.endsWith('.js') || filePath.endsWith('.mjs') || filePath.endsWith('.cjs')) {
+    return ts.ScriptKind.JS;
+  }
+  return ts.ScriptKind.TS;
+}
+
+function getStringLiteralValue(node) {
+  if (ts.isStringLiteral(node) || ts.isNoSubstitutionTemplateLiteral(node)) {
+    return node.text;
+  }
+  return null;
+}
+
+function extractScenarioIdsFromOpenSpecArgs(args) {
+  const values = [];
+  const errors = [];
+
+  for (const arg of args) {
+    if (ts.isArrayLiteralExpression(arg)) {
+      for (const element of arg.elements) {
+        const value = getStringLiteralValue(element);
+        if (value === null) {
+          errors.push('openspec([...]) must contain only string literal IDs.');
+          continue;
+        }
+        values.push(value.trim());
+      }
       continue;
     }
-    const found = await listFilesRecursively(root, (file) => file.endsWith('.allure.test.ts'));
-    files.push(...found);
+
+    const value = getStringLiteralValue(arg);
+    if (value === null) {
+      errors.push('openspec(...) arguments must be string literal IDs or arrays of IDs.');
+      continue;
+    }
+    values.push(value.trim());
   }
-  return [...new Set(files)].sort();
+
+  return {
+    ids: [...new Set(values.filter((value) => value.length > 0))],
+    errors,
+  };
+}
+
+function extractOpenSpecInvocation(node) {
+  if (!ts.isCallExpression(node)) {
+    return null;
+  }
+
+  // direct form: it.openspec('OA-001')('title', ...)
+  if (ts.isCallExpression(node.expression)) {
+    const inner = node.expression;
+    if (
+      ts.isPropertyAccessExpression(inner.expression)
+      && inner.expression.name.text === 'openspec'
+    ) {
+      return {
+        openspecCall: inner,
+        status: 'covered',
+      };
+    }
+  }
+
+  // chained form: it.openspec('OA-001').skip('title', ...)
+  if (ts.isPropertyAccessExpression(node.expression) && ts.isCallExpression(node.expression.expression)) {
+    const method = node.expression.name.text;
+    const inner = node.expression.expression;
+    if (
+      ts.isPropertyAccessExpression(inner.expression)
+      && inner.expression.name.text === 'openspec'
+    ) {
+      return {
+        openspecCall: inner,
+        status: (method === 'skip' || method === 'todo') ? 'pending' : 'covered',
+      };
+    }
+  }
+
+  return null;
+}
+
+function createBindingRef({ relFile, sourceFile, node, title }) {
+  const location = sourceFile.getLineAndCharacterOfPosition(node.getStart(sourceFile));
+  const line = location.line + 1;
+  return `${relFile}:${line} :: ${title}`;
+}
+
+async function collectOpenSpecBindings() {
+  const testFiles = await listTestFiles();
+  const bindingsByScenarioId = new Map();
+  const invalidBindings = [];
+
+  for (const relFile of testFiles) {
+    const absFile = path.join(REPO_ROOT, relFile);
+    const content = await fs.readFile(absFile, 'utf-8');
+    const sourceFile = ts.createSourceFile(
+      relFile,
+      content,
+      ts.ScriptTarget.Latest,
+      true,
+      getScriptKind(relFile)
+    );
+
+    function visit(node) {
+      if (ts.isCallExpression(node)) {
+        const invocation = extractOpenSpecInvocation(node);
+        if (invocation) {
+          const { openspecCall, status } = invocation;
+          const titleNode = node.arguments[0];
+          const title = titleNode
+            ? (getStringLiteralValue(titleNode) ?? '<dynamic test title>')
+            : '<missing test title>';
+
+          const { ids, errors } = extractScenarioIdsFromOpenSpecArgs(openspecCall.arguments);
+          for (const error of errors) {
+            invalidBindings.push(`${relFile}: ${error} (test: ${title})`);
+          }
+          if (ids.length === 0) {
+            invalidBindings.push(`${relFile}: openspec(...) has no scenario IDs (test: ${title})`);
+          }
+
+          const ref = createBindingRef({ relFile, sourceFile, node, title });
+          for (const id of ids) {
+            if (!SCENARIO_ID_PATTERN.test(id)) {
+              invalidBindings.push(`${relFile}: invalid scenario ID '${id}' (test: ${title})`);
+              continue;
+            }
+            const existing = bindingsByScenarioId.get(id) ?? [];
+            if (!existing.some((entry) => entry.ref === ref)) {
+              existing.push({ ref, status });
+            }
+            bindingsByScenarioId.set(id, existing);
+          }
+        }
+      }
+      ts.forEachChild(node, visit);
+    }
+
+    visit(sourceFile);
+  }
+
+  return {
+    bindingsByScenarioId,
+    invalidBindings: [...new Set(invalidBindings)].sort(),
+    testFiles,
+  };
+}
+
+function createEmptyCapabilityReport(capability) {
+  return {
+    capability,
+    ok: false,
+    reason: '',
+    scenarios: [],
+    missing: [],
+    pending: [],
+    scenarioToBindings: {},
+  };
+}
+
+function validateCapabilityCoverage({ capability, scenarios, bindingsByScenarioId }) {
+  const report = createEmptyCapabilityReport(capability);
+  report.scenarios = [...scenarios].sort((a, b) => a.id.localeCompare(b.id));
+
+  if (report.scenarios.length === 0) {
+    report.reason = `No '#### Scenario:' entries found for capability '${capability}'`;
+    return report;
+  }
+
+  const missing = [];
+  const pending = [];
+  const scenarioToBindings = {};
+
+  for (const scenario of report.scenarios) {
+    const bindings = bindingsByScenarioId.get(scenario.id) ?? [];
+    const renderedBindings = bindings
+      .map((entry) => entry.ref)
+      .sort();
+
+    scenarioToBindings[scenario.id] = renderedBindings;
+
+    if (bindings.length === 0) {
+      missing.push(scenario.id);
+      continue;
+    }
+
+    const hasCoveredBinding = bindings.some((entry) => entry.status === 'covered');
+    if (!hasCoveredBinding) {
+      pending.push(scenario.id);
+    }
+  }
+
+  report.missing = [...new Set(missing)].sort();
+  report.pending = [...new Set(pending)].sort();
+  report.scenarioToBindings = scenarioToBindings;
+  report.ok = report.missing.length === 0 && report.pending.length === 0;
+  return report;
+}
+
+function buildMatrixMarkdown({ reports, unknownScenarioIds, invalidBindings }) {
+  const lines = [];
+  lines.push('# OpenAgreements OpenSpec Traceability Matrix');
+  lines.push('');
+  lines.push('> Auto-generated by `scripts/validate_openspec_coverage.mjs`.');
+  lines.push('> Do not hand-edit this file.');
+  lines.push('');
+  lines.push('This matrix maps canonical OpenSpec `#### Scenario:` entries to test-local `.openspec(...)` bindings.');
+  lines.push('');
+
+  for (const report of reports) {
+    lines.push(`## Capability: \`${report.capability}\``);
+    lines.push('');
+    lines.push('| Scenario | Status | Mapped Tests | Notes |');
+    lines.push('|---|---|---|---|');
+
+    if (!report.scenarios || report.scenarios.length === 0) {
+      lines.push(`| _No scenarios discovered_ | n/a | n/a | ${mdEscapeTableCell(report.reason || 'No scenarios found.')} |`);
+      lines.push('');
+      continue;
+    }
+
+    const missingLookup = new Set(report.missing ?? []);
+    const pendingLookup = new Set(report.pending ?? []);
+
+    for (const scenario of report.scenarios) {
+      const mappedTests = report.scenarioToBindings?.[scenario.id] ?? [];
+      const isMissing = missingLookup.has(scenario.id);
+      const isPending = pendingLookup.has(scenario.id);
+
+      const status = isPending
+        ? 'pending_impl'
+        : isMissing
+          ? 'missing'
+          : 'covered';
+
+      const mappedCell = mappedTests.length > 0
+        ? mappedTests.map((testRef) => `\`${testRef}\``).join(', ')
+        : 'n/a';
+
+      let notes = '';
+      if (isPending) {
+        notes = 'Mapped test exists but is skip/todo.';
+      } else if (isMissing) {
+        notes = 'No test with matching .openspec(...) annotation found.';
+      }
+
+      lines.push(
+        `| ${mdEscapeTableCell(`[${scenario.id}] ${scenario.title}`)} | ${status} | ${mdEscapeTableCell(mappedCell)} | ${mdEscapeTableCell(notes)} |`
+      );
+    }
+
+    lines.push('');
+  }
+
+  if (unknownScenarioIds.length > 0) {
+    lines.push('## Unknown Scenario IDs');
+    lines.push('');
+    lines.push('The following IDs are used in tests but not found in canonical specs:');
+    lines.push('');
+    for (const id of unknownScenarioIds) {
+      lines.push(`- ${id}`);
+    }
+    lines.push('');
+  }
+
+  if (invalidBindings.length > 0) {
+    lines.push('## Invalid Test Bindings');
+    lines.push('');
+    for (const value of invalidBindings) {
+      lines.push(`- ${value}`);
+    }
+    lines.push('');
+  }
+
+  return `${lines.join('\n')}\n`;
+}
+
+async function writeMatrixFile(matrixPath, content) {
+  let previous = '';
+  try {
+    previous = await fs.readFile(matrixPath, 'utf-8');
+  } catch {
+    previous = '';
+  }
+
+  await fs.mkdir(path.dirname(matrixPath), { recursive: true });
+  await fs.writeFile(matrixPath, content, 'utf-8');
+  return previous !== content;
+}
+
+function printSet(title, values) {
+  if (values.length === 0) {
+    return;
+  }
+  console.error(`  ${title}:`);
+  for (const value of values) {
+    console.error(`    - ${value}`);
+  }
 }
 
 async function main() {
   const { capabilities: requestedCapabilities, writeMatrixPath } = parseArgs();
   const canonicalCapabilities = await listSpecCapabilities();
-
-  const allureTestFiles = await collectAllureTestFiles();
-  const byCapability = new Map();
-
-  for (const file of allureTestFiles) {
-    const content = await fs.readFile(file, 'utf-8');
-    const capability = parseCapabilityFromTest(content, file);
-    if (!capability) {
-      continue;
-    }
-    const list = byCapability.get(capability) ?? [];
-    list.push(file);
-    byCapability.set(capability, list);
-  }
-
   const capabilitiesToValidate = requestedCapabilities.length > 0
     ? requestedCapabilities
     : canonicalCapabilities;
@@ -442,44 +485,61 @@ async function main() {
     return;
   }
 
+  const { bindingsByScenarioId, invalidBindings } = await collectOpenSpecBindings();
   let hasFailures = false;
   const reports = [];
-
-  const unknownTraceabilityCapabilities = [...byCapability.keys()]
-    .filter((capability) => !canonicalCapabilities.includes(capability))
-    .sort();
-  if (requestedCapabilities.length === 0 && unknownTraceabilityCapabilities.length > 0) {
-    hasFailures = true;
-    console.error('Found traceability tests with unknown TEST_CAPABILITY values:');
-    for (const capability of unknownTraceabilityCapabilities) {
-      console.error(`  - ${capability}`);
-    }
-  }
+  const canonicalScenarioIdToCapability = new Map();
+  const duplicateScenarioIds = [];
+  const specParseErrors = [];
 
   for (const capability of capabilitiesToValidate) {
-    const files = byCapability.get(capability) ?? [];
-    if (files.length === 0) {
-      reports.push({
-        capability,
-        ok: false,
-        reason: `Capability '${capability}' is missing traceability tests.`,
-        missing: [],
-        extra: [],
-        skippedStories: [],
-        pendingMarkers: [],
-        stories: [],
-        scenarios: [],
-        storyToFiles: {},
-      });
+    const specFiles = await listSpecFilesForCapability(capability);
+    if (specFiles.length === 0) {
+      const report = createEmptyCapabilityReport(capability);
+      report.reason = `No canonical spec files found for capability '${capability}' under openspec/specs/${capability}/spec.md`;
+      reports.push(report);
       hasFailures = true;
-      console.error(`Capability '${capability}' is missing traceability tests. Add a *.allure.test.ts file with TEST_CAPABILITY='${capability}'.`);
+      console.error(`FAIL ${capability}`);
+      console.error(`  ${report.reason}`);
       continue;
     }
 
-    const report = await validateCapabilityCoverage({ capability, testFiles: files });
+    const scenarios = [];
+    for (const specFile of specFiles) {
+      const content = await fs.readFile(specFile, 'utf-8');
+      const relSpecPath = toPosixPath(path.relative(REPO_ROOT, specFile));
+      const parsed = parseScenariosFromSpec(content, relSpecPath);
+      scenarios.push(...parsed.scenarios);
+      specParseErrors.push(...parsed.errors);
+    }
+
+    const dedupedScenarios = [];
+    const seenScenarioIds = new Set();
+    for (const scenario of scenarios) {
+      if (seenScenarioIds.has(scenario.id)) {
+        specParseErrors.push(`Capability '${capability}' defines duplicate scenario ID '${scenario.id}'.`);
+        continue;
+      }
+      seenScenarioIds.add(scenario.id);
+      dedupedScenarios.push(scenario);
+
+      const existingCapability = canonicalScenarioIdToCapability.get(scenario.id);
+      if (existingCapability && existingCapability !== capability) {
+        duplicateScenarioIds.push(`${scenario.id} (used by ${existingCapability} and ${capability})`);
+      } else {
+        canonicalScenarioIdToCapability.set(scenario.id, capability);
+      }
+    }
+
+    const report = validateCapabilityCoverage({
+      capability,
+      scenarios: dedupedScenarios,
+      bindingsByScenarioId,
+    });
     reports.push(report);
+
     if (report.ok) {
-      console.log(`PASS ${capability}: ${report.scenarios.length} scenarios covered by ${report.stories.length} story mappings`);
+      console.log(`PASS ${capability}: ${report.scenarios.length} scenarios covered by test-local .openspec(...) bindings`);
       continue;
     }
 
@@ -488,13 +548,43 @@ async function main() {
     if (report.reason) {
       console.error(`  ${report.reason}`);
     }
-    printSet('Missing stories for spec scenarios', report.missing);
-    printSet('Extra stories not found in spec', report.extra);
-    printSet('Skipped/todo scenarios in traceability tests', report.skippedStories);
-    printSet('Pending markers in traceability tests', report.pendingMarkers);
+    printSet('Missing scenario IDs', report.missing ?? []);
+    printSet('Scenario IDs mapped only to skipped/todo tests', report.pending ?? []);
   }
 
-  const matrix = buildMatrixMarkdown({ reports, unknownTraceabilityCapabilities });
+  if (specParseErrors.length > 0) {
+    hasFailures = true;
+    console.error('Spec scenario parse errors:');
+    printSet('Errors', [...new Set(specParseErrors)].sort());
+  }
+
+  if (duplicateScenarioIds.length > 0) {
+    hasFailures = true;
+    console.error('Duplicate scenario IDs across capabilities:');
+    printSet('Duplicates', [...new Set(duplicateScenarioIds)].sort());
+  }
+
+  if (invalidBindings.length > 0) {
+    hasFailures = true;
+    console.error('Invalid .openspec(...) test bindings:');
+    printSet('Invalid bindings', invalidBindings);
+  }
+
+  const unknownScenarioIds = [...bindingsByScenarioId.keys()]
+    .filter((scenarioId) => !canonicalScenarioIdToCapability.has(scenarioId))
+    .sort();
+
+  if (unknownScenarioIds.length > 0) {
+    hasFailures = true;
+    console.error('Found test bindings for unknown scenario IDs:');
+    printSet('Unknown scenario IDs', unknownScenarioIds);
+  }
+
+  const matrix = buildMatrixMarkdown({
+    reports,
+    unknownScenarioIds,
+    invalidBindings,
+  });
   const matrixChanged = await writeMatrixFile(writeMatrixPath, matrix);
   console.log(`Wrote traceability matrix: ${path.relative(REPO_ROOT, writeMatrixPath)}`);
 

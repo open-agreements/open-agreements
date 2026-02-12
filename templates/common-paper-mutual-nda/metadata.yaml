@@ -1,59 +1,59 @@
 name: Common Paper Mutual NDA
 description: >-
-  A mutual non-disclosure agreement cover page based on Common Paper's standard
-  terms. The cover page references the Standard Terms posted at commonpaper.com.
+  A mutual non-disclosure agreement cover page based on Common Paper's standard terms. The cover page references the
+  Standard Terms posted at commonpaper.com.
 source_url: https://commonpaper.com/standards/mutual-nda/1.0
-version: "1.0"
+version: '1.0'
 license: CC-BY-4.0
 allow_derivatives: true
 attribution_text: >-
-  Based on the Common Paper Mutual NDA, available at https://commonpaper.com.
-  Licensed under CC BY 4.0. Copyright Common Paper, Inc.
+  Based on the Common Paper Mutual NDA, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common
+  Paper, Inc.
 fields:
   - name: purpose
     type: string
     description: How Confidential Information may be used
-    required: true
     default: Evaluating whether to enter into a business relationship with the other party
     section: Terms
   - name: effective_date
     type: date
     description: Date the NDA takes effect
-    required: true
     section: Terms
   - name: mnda_term
     type: string
     description: Period for sharing Confidential Information (e.g. "1 year", "2 years")
-    required: true
     default: 1 year(s)
     section: Terms
   - name: confidentiality_term
     type: string
     description: How long Confidential Information remains protected (e.g. "1 year", "2 years")
-    required: true
     default: 1 year(s)
     section: Terms
   - name: confidentiality_term_start
     type: string
     description: When the confidentiality term begins counting
-    required: true
     default: Effective Date
     section: Terms
   - name: governing_law
     type: string
     description: State whose laws govern the agreement
-    required: true
     default: Delaware
     section: Legal
   - name: jurisdiction
     type: string
     description: Courts with jurisdiction over disputes
-    required: true
     default: courts located in New Castle County, Delaware
     section: Legal
   - name: changes_to_standard_terms
     type: string
     description: Any modifications to the Common Paper Standard Terms
-    required: false
     default: None.
     section: Legal
+required_fields:
+  - purpose
+  - effective_date
+  - mnda_term
+  - confidentiality_term
+  - confidentiality_term_start
+  - governing_law
+  - jurisdiction

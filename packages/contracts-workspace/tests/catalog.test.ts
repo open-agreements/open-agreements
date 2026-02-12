@@ -2,7 +2,8 @@ import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'no
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { dump } from 'js-yaml';
-import { afterEach, describe, expect, it } from 'vitest';
+import { afterEach, describe, expect } from 'vitest';
+import { itAllure } from '../../../tests/helpers/allure-test.js';
 import {
   checksumSha256,
   fetchCatalogEntries,
@@ -11,6 +12,7 @@ import {
 import type { FormsCatalog } from '../src/core/types.js';
 
 const tempDirs: string[] = [];
+const it = itAllure.epic('Compliance & Governance');
 
 afterEach(() => {
   for (const dir of tempDirs.splice(0)) {

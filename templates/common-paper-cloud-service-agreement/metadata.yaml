@@ -1,488 +1,354 @@
 name: Common Paper Cloud Service Agreement
 description: >-
-  A cloud service agreement with order form and framework terms, based on
-  Common Paper's standard terms. Covers SaaS subscriptions, payment, SLAs,
-  liability, and data processing. Includes full Standard Terms v2.1.
+  A cloud service agreement with order form and framework terms, based on Common Paper's standard terms. Covers SaaS
+  subscriptions, payment, SLAs, liability, and data processing. Includes full Standard Terms v2.1.
 source_url: https://commonpaper.com/standards/cloud-service-agreement/2.1
-version: "2.1"
+version: '2.1'
 license: CC-BY-4.0
 allow_derivatives: true
 attribution_text: >-
-  Based on the Common Paper Cloud Service Agreement, available at
-  https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.
+  Based on the Common Paper Cloud Service Agreement, available at https://commonpaper.com. Licensed under CC BY 4.0.
+  Copyright Common Paper, Inc.
 fields:
-  # ===================================================================
-  # Order Form — Parties and Service
-  # ===================================================================
   - name: provider_name
     type: string
     description: Name of the cloud service provider
-    required: true
     section: Parties
   - name: customer_name
     type: string
     description: Name of the customer
-    required: true
     section: Parties
   - name: provider_legal_name
     type: string
     description: Official legal entity name of provider (for signature block)
-    required: true
     section: Parties
   - name: customer_legal_name
     type: string
     description: Official legal entity name of customer (for signature block)
-    required: true
     section: Parties
   - name: effective_date
     type: string
     description: Effective Date of Key Terms referenced in Order Form
-    required: true
     section: Terms
   - name: cloud_service
     type: string
     description: Description of the cloud service / product
-    required: true
     section: Service
-
-  # ===================================================================
-  # Order Form — Order Date (2-way radio)
-  # ===================================================================
   - name: order_date_is_last_signature
     type: boolean
     description: If true, order date is date of last signature; if false, use custom_order_date
-    required: false
-    default: "true"
+    default: 'true'
     section: Terms
   - name: custom_order_date
     type: string
     description: Custom start date (only used when order_date_is_last_signature is false)
-    required: false
     section: Terms
-
-  # ===================================================================
-  # Order Form — Pilot (optional section)
-  # ===================================================================
   - name: has_pilot
     type: boolean
     description: Whether a pilot/trial period is included
-    required: false
-    default: "false"
+    default: 'false'
     section: Service
   - name: pilot_period
     type: string
     description: Length of pilot/trial period (e.g. "3 months")
-    required: false
     section: Service
   - name: pilot_is_free
     type: boolean
     description: If true, pilot is a free trial; if false, pilot has a fee
-    required: false
-    default: "true"
+    default: 'true'
     section: Service
   - name: pilot_fee
     type: string
     description: Fee for pilot period (e.g. "$500"). Only used when pilot_is_free is false
-    required: false
     section: Payment
   - name: pilot_modifications
     type: string
     description: Modifications to the Agreement that apply only during the Pilot Period
-    required: false
     section: Service
-
-  # ===================================================================
-  # Order Form — Subscription
-  # ===================================================================
   - name: subscription_period
     type: string
     description: Length of access to the service (e.g. "12 months", "1 year")
-    required: true
     default: 12 months
     section: Service
-
-  # ===================================================================
-  # Order Form — Cloud Service Fees (checkboxes)
-  # ===================================================================
   - name: fee_is_per_unit
     type: boolean
     description: Whether fees are per-unit pricing (amount per fee_unit)
-    required: false
-    default: "true"
+    default: 'true'
     section: Payment
   - name: fees
     type: string
     description: Subscription fee amount (e.g. "$10,000"). Used in computed fees_display.
-    required: false
     section: Payment
   - name: fee_unit
     type: string
     description: Fee billing unit (e.g. "year", "month", "User"). Used in computed fees_display.
-    required: false
     default: year
     section: Payment
   - name: fee_is_other
     type: boolean
     description: Whether an alternative fee structure is used
-    required: false
-    default: "false"
+    default: 'false'
     section: Payment
   - name: other_fee_structure
     type: string
     description: Description of alternative fee structure
-    required: false
     section: Payment
   - name: fee_may_increase
     type: boolean
     description: Whether fees may increase up to a cap percentage per renewal
-    required: false
-    default: "false"
+    default: 'false'
     section: Payment
   - name: fee_increase_cap_pct
     type: string
     description: Maximum percentage fees may increase per renewal (e.g. "5")
-    required: false
     section: Payment
   - name: fee_will_increase
     type: boolean
     description: Whether fees will increase by a fixed percentage per renewal
-    required: false
-    default: "false"
+    default: 'false'
     section: Payment
   - name: fee_increase_fixed_pct
     type: string
     description: Fixed percentage fees will increase per renewal (e.g. "3")
-    required: false
     section: Payment
   - name: fee_inclusive_of_taxes
     type: boolean
     description: Whether fees are inclusive of taxes (modifies Standard Terms Section 4.1)
-    required: false
-    default: "false"
+    default: 'false'
     section: Payment
-
-  # ===================================================================
-  # Order Form — Payment Process (2-way radio)
-  # ===================================================================
   - name: payment_by_invoice
     type: boolean
     description: If true, payment by invoice; if false, automatic payment
-    required: false
-    default: "true"
+    default: 'true'
     section: Payment
   - name: payment_frequency
     type: string
     description: Billing frequency (e.g. "monthly", "quarterly", "annually")
-    required: false
     default: annually
     section: Payment
   - name: payment_terms_days
     type: string
     description: Days to pay after invoice (e.g. "30", "45"). Only for invoice payment
-    required: false
-    default: "30"
+    default: '30'
     section: Payment
   - name: payment_due_from
     type: string
     description: When payment terms start (e.g. "Customer's receipt of invoice")
-    required: false
     default: the invoice date
     section: Payment
-
-  # ===================================================================
-  # Order Form — Auto-renewal (2-way radio)
-  # ===================================================================
   - name: auto_renew
     type: boolean
     description: If true, order auto-renews with non-renewal notice; if false, expires at end
-    required: false
-    default: "true"
+    default: 'true'
     section: Terms
   - name: non_renewal_notice_days
     type: string
     description: Days of notice required before non-renewal (e.g. "30", "60"). Used in computed auto_renewal_display.
-    required: false
-    default: "30"
+    default: '30'
     section: Terms
-
-  # ===================================================================
-  # Order Form — Optional sections
-  # ===================================================================
   - name: has_use_limitations
     type: boolean
     description: Whether use limitations are specified
-    required: false
-    default: "false"
+    default: 'false'
     section: Service
   - name: use_limitations
     type: string
     description: Geographic restrictions, system requirements, or other use limitations
-    required: false
     section: Service
   - name: has_technical_support
     type: boolean
     description: Whether technical support details are included
-    required: false
-    default: "false"
+    default: 'false'
     section: Service
   - name: technical_support
     type: string
     description: Description of included support and how to access it
-    required: false
     section: Service
   - name: has_sla
     type: boolean
     description: Whether an SLA is included
-    required: false
-    default: "false"
+    default: 'false'
     section: Service
   - name: sla_description
     type: string
     description: Service Level Agreement details
-    required: false
     section: Service
   - name: has_professional_services
     type: boolean
     description: Whether professional services are included
-    required: false
-    default: "false"
+    default: 'false'
     section: Service
   - name: professional_services_description
     type: string
     description: Professional services description or SOW reference
-    required: false
     section: Service
-
-  # ===================================================================
-  # Key Terms — Effective Date (2-way radio)
-  # ===================================================================
   - name: effective_date_is_last_signature
     type: boolean
     description: If true, effective date is date of last signature; if false, use custom date
-    required: false
-    default: "true"
+    default: 'true'
     section: Legal
   - name: custom_effective_date
     type: string
     description: Custom effective date (only used when effective_date_is_last_signature is false)
-    required: false
     section: Legal
-
-  # ===================================================================
-  # Key Terms — Governing Law & Jurisdiction
-  # ===================================================================
   - name: governing_law
     type: string
     description: State, province, or country whose laws govern the agreement
-    required: true
     default: Delaware
     section: Legal
   - name: jurisdiction
     type: string
     description: Courts with jurisdiction over disputes
-    required: true
     default: courts located in New Castle County, Delaware
     section: Legal
-
-  # ===================================================================
-  # Key Terms — Covered Claims (optional section + checkboxes)
-  # ===================================================================
   - name: has_covered_claims
     type: boolean
     description: Whether indemnity covered claims are included
-    required: false
-    default: "true"
+    default: 'true'
     section: Liability
   - name: has_provider_covered_claims
     type: boolean
     description: Whether provider covered claims (IP indemnity) are included
-    required: false
-    default: "true"
+    default: 'true'
     section: Liability
   - name: has_customer_covered_claims
     type: boolean
     description: Whether customer covered claims (IP + restrictions indemnity) are included
-    required: false
-    default: "true"
+    default: 'true'
     section: Liability
-
-  # ===================================================================
-  # Key Terms — General Cap Amount (3-way radio)
-  # ===================================================================
   - name: general_cap_is_multiplier
     type: boolean
     description: General cap is Nx fees paid in prior 12 months
-    required: false
-    default: "true"
+    default: 'true'
     section: Liability
   - name: general_cap_multiplier
     type: string
     description: Multiplier for fee-based general cap (e.g. "2")
-    required: false
-    default: "2"
+    default: '2'
     section: Liability
   - name: general_cap_is_dollar
     type: boolean
     description: General cap is a fixed dollar amount
-    required: false
-    default: "false"
+    default: 'false'
     section: Liability
   - name: general_cap_dollar
     type: string
     description: Fixed dollar amount for general cap (e.g. "100,000")
-    required: false
     section: Liability
   - name: general_cap_is_greater_of
     type: boolean
     description: General cap is the greater of a dollar amount or Nx fees
-    required: false
-    default: "false"
+    default: 'false'
     section: Liability
   - name: general_cap_greater_dollar
     type: string
     description: Dollar amount for greater-of general cap (e.g. "100,000")
-    required: false
     section: Liability
   - name: general_cap_greater_multiplier
     type: string
     description: Multiplier for greater-of general cap (e.g. "2")
-    required: false
     section: Liability
-
-  # ===================================================================
-  # Key Terms — Increased Claims & Cap (optional section)
-  # ===================================================================
   - name: has_increased_claims
     type: boolean
     description: Whether increased claims (supercap) provisions are included
-    required: false
-    default: "false"
+    default: 'false'
     section: Liability
   - name: increased_claims_description
     type: string
     description: Description of claims covered by the increased cap (supercap)
-    required: false
     section: Liability
   - name: increased_cap_description
     type: string
     description: Description of the increased cap amount
-    required: false
     section: Liability
-
-  # ===================================================================
-  # Key Terms — Unlimited Claims (optional section)
-  # ===================================================================
   - name: has_unlimited_claims
     type: boolean
     description: Whether unlimited claims (no liability cap) are included
-    required: false
-    default: "false"
+    default: 'false'
     section: Liability
   - name: unlimited_claims_description
     type: string
     description: Description of claims excluded from liability cap
-    required: false
     section: Liability
-
-  # ===================================================================
-  # Key Terms — Additional Warranties (optional section)
-  # ===================================================================
   - name: has_additional_warranties
     type: boolean
     description: Whether additional warranties beyond standard terms are included
-    required: false
-    default: "false"
+    default: 'false'
     section: Legal
   - name: provider_warranty_description
     type: string
     description: Additional warranties from provider
-    required: false
     section: Legal
   - name: customer_warranty_description
     type: string
     description: Additional warranties from customer
-    required: false
     section: Legal
-
-  # ===================================================================
-  # Key Terms — DPA, Security, Insurance (optional sections)
-  # ===================================================================
   - name: has_dpa
     type: boolean
     description: Whether a Data Processing Agreement is referenced
-    required: false
-    default: "false"
+    default: 'false'
     section: Privacy
   - name: dpa_reference
     type: string
     description: Reference to or description of the DPA
-    required: false
     section: Privacy
   - name: has_security_policy
     type: boolean
     description: Whether a security policy section is included
-    required: false
-    default: "false"
+    default: 'false'
     section: Privacy
   - name: security_policy_description
     type: string
     description: Security policy details or certification commitments
-    required: false
     section: Privacy
   - name: has_insurance
     type: boolean
     description: Whether insurance minimum requirements are included
-    required: false
-    default: "false"
+    default: 'false'
     section: Legal
   - name: insurance_description
     type: string
     description: Insurance coverage requirements and minimums
-    required: false
     section: Legal
-
-  # ===================================================================
-  # Computed Display Fields (auto-generated by engine from input fields)
-  # Users should NOT set these directly — they are computed from the
-  # radio/checkbox input fields above.
-  # ===================================================================
   - name: order_date_display
     type: string
-    description: "[Computed] Order date text, derived from order_date_is_last_signature and custom_order_date"
-    required: false
+    description: '[Computed] Order date text, derived from order_date_is_last_signature and custom_order_date'
     section: Terms
   - name: pilot_fee_display
     type: string
-    description: "[Computed] Pilot fee text, derived from pilot_is_free and pilot_fee"
-    required: false
+    description: '[Computed] Pilot fee text, derived from pilot_is_free and pilot_fee'
     section: Service
   - name: fees_display
     type: string
-    description: "[Computed] Fee structure text, derived from fee boolean fields and amounts"
-    required: false
+    description: '[Computed] Fee structure text, derived from fee boolean fields and amounts'
     section: Payment
   - name: payment_display
     type: string
-    description: "[Computed] Payment process text, derived from payment_by_invoice and related fields"
-    required: false
+    description: '[Computed] Payment process text, derived from payment_by_invoice and related fields'
     section: Payment
   - name: auto_renewal_display
     type: string
-    description: "[Computed] Auto-renewal text, derived from auto_renew and non_renewal_notice_days"
-    required: false
+    description: '[Computed] Auto-renewal text, derived from auto_renew and non_renewal_notice_days'
     section: Terms
   - name: effective_date_display
     type: string
-    description: "[Computed] Effective date text, derived from effective_date_is_last_signature and custom_effective_date"
-    required: false
+    description: '[Computed] Effective date text, derived from effective_date_is_last_signature and custom_effective_date'
     section: Legal
   - name: covered_claims_display
     type: string
-    description: "[Computed] Covered claims text, derived from provider/customer covered claims booleans"
-    required: false
+    description: '[Computed] Covered claims text, derived from provider/customer covered claims booleans'
     section: Liability
   - name: general_cap_display
     type: string
-    description: "[Computed] General cap amount text, derived from cap type booleans and amounts"
-    required: false
+    description: '[Computed] General cap amount text, derived from cap type booleans and amounts'
     section: Liability
+required_fields:
+  - provider_name
+  - customer_name
+  - provider_legal_name
+  - customer_legal_name
+  - effective_date
+  - cloud_service
+  - subscription_period
+  - governing_law
+  - jurisdiction

@@ -1,70 +1,66 @@
 name: NVCA Model Voting Agreement
 description: >-
-  Standard-form voting agreement for venture capital financings, covering board
-  composition, drag-along rights, and stockholder voting obligations.
+  Standard-form voting agreement for venture capital financings, covering board composition, drag-along rights, and
+  stockholder voting obligations.
 source_url: https://nvca.org/wp-content/uploads/2024/10/NVCA-Model-VA-10-1-2025.docx
-source_version: "10-1-2025"
+source_version: 10-1-2025
 license_note: >-
-  NVCA model documents are freely downloadable but not redistributable.
-  This recipe contains only transformation instructions, not the source document.
+  NVCA model documents are freely downloadable but not redistributable. This recipe contains only transformation
+  instructions, not the source document.
 source_sha256: 3496d7ae9343d1b5b7db13239313c6512e7e0d68d13273538c4dbf06416a5f0d
 optional: false
 fields:
   - name: company_name
     type: string
     description: Full legal name of the company
-    required: true
   - name: investor_name
     type: string
     description: Full name of the lead investor
-    required: true
   - name: investor_2_name
     type: string
     description: Full name of the second investor (if applicable)
-    required: false
   - name: key_holder_name
     type: string
     description: Name of the key holder (typically founder/CEO)
-    required: true
   - name: effective_date
     type: string
     description: Effective date of the agreement (e.g. January 15, 2025)
-    required: true
   - name: company_counsel
     type: string
     description: Company counsel name and address
-    required: true
   - name: counsel_cc
     type: string
     description: Additional counsel to CC on notices, or empty string if none
-    required: false
-    default: ""
+    default: ''
   - name: judicial_district
     type: string
     description: Federal judicial district for disputes (e.g. District of Delaware)
-    required: true
     default: District of Delaware
   - name: state_of_incorporation_lower
     type: string
     description: State of incorporation in lowercase (e.g. delaware)
-    required: true
     default: delaware
   - name: specify_percentage
     type: string
     description: Percentage threshold for drag-along and amendment provisions (number only, e.g. 60)
-    required: true
   - name: amended_restated_upper
     type: string
-    description: "AMENDED AND RESTATED or empty string"
-    required: false
-    default: ""
+    description: AMENDED AND RESTATED or empty string
+    default: ''
   - name: amended_restated
     type: string
-    description: "Amended and Restated or empty string"
-    required: false
-    default: ""
+    description: Amended and Restated or empty string
+    default: ''
   - name: signature_page_marker
     type: string
     description: Signature page marker text
-    required: false
     default: Signature Page Follows
+required_fields:
+  - company_name
+  - investor_name
+  - key_holder_name
+  - effective_date
+  - company_counsel
+  - judicial_district
+  - state_of_incorporation_lower
+  - specify_percentage
