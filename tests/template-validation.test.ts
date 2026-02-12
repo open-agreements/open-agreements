@@ -56,7 +56,12 @@ function buildDocx(documentText: string): Buffer {
   return zip.toBuffer();
 }
 
-function createTemplateFixture(opts: { docText: string; fieldsYaml: string; requiredFields?: string[] }): string {
+function createTemplateFixture(opts: {
+  docText: string;
+  fieldsYaml: string;
+  requiredFields?: string[];
+  replacements?: Record<string, string>;
+}): string {
   const dir = mkdtempSync(join(tmpdir(), 'oa-template-validate-'));
   tempDirs.push(dir);
   const requiredFields = opts.requiredFields ?? [];
@@ -81,6 +86,9 @@ function createTemplateFixture(opts: { docText: string; fieldsYaml: string; requ
     'utf-8'
   );
   writeFileSync(join(dir, 'template.docx'), buildDocx(opts.docText));
+  if (opts.replacements) {
+    writeFileSync(join(dir, 'replacements.json'), JSON.stringify(opts.replacements, null, 2), 'utf-8');
+  }
   return dir;
 }
 
@@ -164,5 +172,21 @@ describe('validateTemplate placeholder coverage', () => {
       expect(result.valid).toBe(true);
       expect(result.warnings.join(' ')).toContain('Optional field \"optional_field\"');
     });
+  });
+
+  it('reports required-field errors for declarative replacements missing metadata tags', async () => {
+    const dir = createTemplateFixture({
+      docText: 'Order form has [Company Name] only',
+      fieldsYaml: '  - name: required_field\n    type: string\n    description: Required field',
+      requiredFields: ['required_field'],
+      replacements: {
+        '[Company Name]': '{other_field}',
+      },
+    });
+
+    const result = validateTemplate(dir, 'fixture-required-missing-in-replacements');
+    await allureJsonAttachment('required-missing-in-replacements-result.json', result);
+    expect(result.valid).toBe(false);
+    expect(result.errors.join(' ')).toContain('Required field \"required_field\" defined in metadata but not found');
   });
 });

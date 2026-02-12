@@ -11,8 +11,8 @@ This matrix maps canonical OpenSpec `#### Scenario:` entries to test-local `.ope
 |---|---|---|---|
 | [OA-001] Sandbox enabled by default | covered | `tests/security-behavior.test.ts:57 :: fillDocx uses sandboxed rendering by default` |  |
 | [OA-002] Malicious template expression blocked | covered | `tests/security-behavior.test.ts:86 :: fillDocx blocks malicious template expressions` |  |
-| [OA-003] Required field missing from DOCX | covered | `tests/template-validation.test.ts:131 :: reports error for missing required placeholder` |  |
-| [OA-004] Optional field missing from DOCX | covered | `tests/template-validation.test.ts:150 :: reports warning for missing optional placeholder` |  |
+| [OA-003] Required field missing from DOCX | covered | `tests/template-validation.test.ts:139 :: reports error for missing required placeholder` |  |
+| [OA-004] Optional field missing from DOCX | covered | `tests/template-validation.test.ts:158 :: reports warning for missing optional placeholder` |  |
 | [OA-005] Output heading validation | covered | `tests/output-validation.test.ts:70 :: compares heading counts from extracted document XML` |  |
 | [OA-006] Template placeholder extraction | covered | `tests/scan-command.test.ts:58 :: discovers bracketed placeholders in DOCX` |  |
 | [OA-007] Enum field without options | covered | `tests/metadata.test.ts:52 :: rejects enum field without options` |  |
@@ -20,8 +20,8 @@ This matrix maps canonical OpenSpec `#### Scenario:` entries to test-local `.ope
 | [OA-009] Unknown key in fill values | covered | `tests/security-behavior.test.ts:105 :: fillTemplate warns on unknown input keys` |  |
 | [OA-010] Multi-commit PR license check | covered | `tests/workflow-license-check.test.ts:16 :: uses PR base SHA for pull_request events` |  |
 | [OA-011] Push to main license check | covered | `tests/workflow-license-check.test.ts:26 :: uses HEAD~1 for push events` |  |
-| [OA-012] Full pipeline with auto-download | covered | `tests/recipe-command.test.ts:48 :: runRecipeCommand omits inputPath to allow auto-download` |  |
-| [OA-013] Full pipeline with user-supplied input | covered | `tests/recipe-command.test.ts:72 :: runRecipeCommand forwards a user-supplied input path` |  |
+| [OA-012] Full pipeline with auto-download | covered | `tests/recipe-command.test.ts:48 :: runRecipeCommand omits inputPath to allow auto-download`, `tests/recipe-index-unit.test.ts:98 :: uses downloader path when inputPath is omitted` |  |
+| [OA-013] Full pipeline with user-supplied input | covered | `tests/recipe-command.test.ts:72 :: runRecipeCommand forwards a user-supplied input path`, `tests/recipe-index-unit.test.ts:53 :: forwards requiredFieldNames when inputPath is supplied` |  |
 | [OA-014] Keep intermediate files | covered | `tests/recipe-command.test.ts:97 :: runRecipeCommand forwards keepIntermediate flag` |  |
 | [OA-015] Run full pipeline | covered | `tests/recipe-command.test.ts:48 :: runRecipeCommand omits inputPath to allow auto-download` |  |
 | [OA-016] Run clean stage only | covered | `tests/recipe-command.test.ts:120 :: runRecipeClean invokes cleanDocument with recipe config` |  |
@@ -37,25 +37,25 @@ This matrix maps canonical OpenSpec `#### Scenario:` entries to test-local `.ope
 | [OA-026] Leftover brackets detected | covered | `tests/verifier.test.ts:213 :: detects leftover bracketed placeholders from replacement keys` |  |
 | [OA-027] Placeholder discovery | covered | `tests/scan-command.test.ts:58 :: discovers bracketed placeholders in DOCX` |  |
 | [OA-028] Draft replacements output | covered | `tests/scan-command.test.ts:69 :: writes draft replacements JSON` |  |
-| [OA-029] Valid recipe metadata | covered | `tests/metadata.test.ts:207 :: accepts valid recipe metadata` |  |
-| [OA-030] Missing source_url | covered | `tests/metadata.test.ts:221 :: rejects missing source_url` |  |
+| [OA-029] Valid recipe metadata | covered | `tests/metadata.test.ts:225 :: accepts valid recipe metadata` |  |
+| [OA-030] Missing source_url | covered | `tests/metadata.test.ts:239 :: rejects missing source_url` |  |
 | [OA-031] DOCX file detected in recipe directory | covered | `tests/recipe-validation-negative.test.ts:38 :: rejects committed DOCX files in recipe directories` |  |
 | [OA-032] Scaffold recipe validation | covered | `tests/recipe-validation.test.ts:29 :: validates nvca-certificate-of-incorporation (scaffold)` |  |
 | [OA-033] Replacement target not covered by metadata | covered | `tests/recipe-validation-negative.test.ts:50 :: warns when replacement targets are not in metadata fields` |  |
-| [OA-034] Successful template fill | covered | `tests/cli-interface.test.ts:76 :: fill command renders output DOCX from template values` |  |
-| [OA-035] Missing required field | covered | `tests/cli-interface.test.ts:93 :: fill command reports missing required fields` |  |
+| [OA-034] Successful template fill | covered | `tests/cli-interface.test.ts:76 :: fill command renders output DOCX from template values`, `tests/fill-command.inprocess.test.ts:140 :: fills a template path and defaults output filename` |  |
+| [OA-035] Missing required field | covered | `tests/cli-interface.test.ts:93 :: fill command reports missing required fields`, `tests/fill-command.inprocess.test.ts:202 :: reports missing required fields before template fill` |  |
 | [OA-036] Fixed term selection removes non-selected options | covered | `tests/mutual-nda-selections.allure.test.ts:60 :: fixed-term flow removes non-selected options` |  |
 | [OA-037] Perpetual selection marks selected options | covered | `tests/mutual-nda-selections.allure.test.ts:64 :: perpetual flow marks selected options` |  |
 | [OA-038] Valid metadata passes validation | covered | `tests/metadata.test.ts:137 :: accepts valid template metadata` |  |
 | [OA-039] Missing metadata field fails validation | covered | `tests/metadata.test.ts:154 :: rejects metadata missing required license field` |  |
 | [OA-040] Invalid license enum fails validation | covered | `tests/metadata.test.ts:170 :: rejects invalid license` |  |
-| [OA-041] Derivative blocked for non-derivative license | covered | `tests/cli-interface.test.ts:103 :: fill command blocks templates marked allow_derivatives=false` |  |
+| [OA-041] Derivative blocked for non-derivative license | covered | `tests/cli-interface.test.ts:103 :: fill command blocks templates marked allow_derivatives=false`, `tests/fill-command.inprocess.test.ts:170 :: blocks template fill when allow_derivatives is false` |  |
 | [OA-042] CI blocks modification of CC BY-ND template | covered | `tests/workflow-license-check.test.ts:34 :: checks modified allow_derivatives=false templates and exits non-zero` |  |
-| [OA-043] External template fill | covered | `tests/external.test.ts:129 :: fills yc-safe-valuation-cap with sample values` |  |
+| [OA-043] External template fill | covered | `tests/external-index-unit.test.ts:64 :: passes requiredFieldNames through to unified fill pipeline`, `tests/external.test.ts:129 :: fills yc-safe-valuation-cap with sample values`, `tests/fill-command.inprocess.test.ts:235 :: routes external IDs to external fill pipeline` |  |
 | [OA-044] External metadata requires source_sha256 | covered | `tests/external.test.ts:46 :: rejects missing source_sha256` |  |
 | [OA-045] External template appears in list output | covered | `tests/external.test.ts:187 :: list --json includes yc-safe templates` |  |
-| [OA-046] Fill command renders output | covered | `tests/cli-interface.test.ts:76 :: fill command renders output DOCX from template values` |  |
-| [OA-047] List command shows templates | covered | `tests/cli-interface.test.ts:141 :: list command shows templates in human-readable output` |  |
+| [OA-046] Fill command renders output | covered | `tests/cli-interface.test.ts:76 :: fill command renders output DOCX from template values`, `tests/cli-program.test.ts:49 :: parses fill command data and set flags into runFill payload`, `tests/fill-command.inprocess.test.ts:140 :: fills a template path and defaults output filename` |  |
+| [OA-047] List command shows templates | covered | `tests/cli-interface.test.ts:141 :: list command shows templates in human-readable output`, `tests/cli-program.test.ts:119 :: forwards list flags to runList`, `tests/list-command.inprocess.test.ts:310 :: renders human-readable table rows with error placeholders when metadata fails` |  |
 | [OA-048] Skill interviews user for field values | covered | `tests/agent-skill-behavior.test.ts:70 :: generated Claude skill interviews user in AskUserQuestion rounds` |  |
 | [OA-049] Skill renders DOCX after interview | covered | `tests/agent-skill-behavior.test.ts:76 :: generated Claude skill renders DOCX via fill command after interview` |  |
 | [OA-050] Output structure matches source | covered | `tests/output-validation.test.ts:70 :: compares heading counts from extracted document XML` |  |
@@ -65,8 +65,8 @@ This matrix maps canonical OpenSpec `#### Scenario:` entries to test-local `.ope
 | [OA-054] Skill renders DOCX via npx (zero pre-install) | covered | `tests/agent-skill-behavior.test.ts:82 :: documents npx zero-preinstall DOCX rendering path` |  |
 | [OA-055] Skill renders DOCX via installed CLI | covered | `tests/agent-skill-behavior.test.ts:86 :: documents installed CLI DOCX rendering path` |  |
 | [OA-056] Preview-only fallback without Node.js | covered | `tests/agent-skill-behavior.test.ts:90 :: documents preview-only fallback when Node.js is unavailable` |  |
-| [OA-057] JSON output includes full metadata sorted by name | covered | `tests/list.test.ts:54 :: items are sorted by name`, `tests/list.test.ts:61 :: items include full template metadata in json output` |  |
-| [OA-058] --json-strict exits non-zero on metadata errors | covered | `tests/list.test.ts:96 :: --json-strict exits non-zero on metadata errors` |  |
-| [OA-059] --templates-only filters to templates | covered | `tests/list.test.ts:81 :: --templates-only filters to templates` |  |
+| [OA-057] JSON output includes full metadata sorted by name | covered | `tests/list-command.inprocess.test.ts:147 :: emits sorted JSON envelope with normalized sources and mapped fields`, `tests/list.test.ts:54 :: items are sorted by name`, `tests/list.test.ts:61 :: items include full template metadata in json output` |  |
+| [OA-058] --json-strict exits non-zero on metadata errors | covered | `tests/list-command.inprocess.test.ts:216 :: exits non-zero in --json-strict mode when metadata loading fails`, `tests/list.test.ts:96 :: --json-strict exits non-zero on metadata errors` |  |
+| [OA-059] --templates-only filters to templates | covered | `tests/list-command.inprocess.test.ts:245 :: honors templates-only by skipping external and recipe metadata`, `tests/list.test.ts:81 :: --templates-only filters to templates` |  |
 | [OA-060] Clean install from registry works | covered | `test/packaging.test.ts:72 :: installs from packed tarball and runs list --json` |  |
 

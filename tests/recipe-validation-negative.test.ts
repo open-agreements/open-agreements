@@ -62,4 +62,20 @@ describe('validateRecipe negative scenarios', () => {
     expect(result.valid).toBe(true);
     expect(result.warnings.join(' ')).toContain('Replacement target {company_name_missing} not found in metadata fields');
   });
+
+  it('rejects unsafe non-identifier replacement tags', () => {
+    const recipeDir = mkdtempSync(join(tmpdir(), 'oa-recipe-unsafe-tag-'));
+    tempDirs.push(recipeDir);
+
+    writeMetadata(recipeDir);
+    writeFileSync(
+      join(recipeDir, 'replacements.json'),
+      JSON.stringify({ '[Company Name]': '{#if hacked}' }, null, 2),
+      'utf-8'
+    );
+
+    const result = validateRecipe(recipeDir, 'fixture-recipe');
+    expect(result.valid).toBe(false);
+    expect(result.errors.join(' ')).toContain('unsafe tag');
+  });
 });

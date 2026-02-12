@@ -201,6 +201,24 @@ describe('TemplateMetadataSchema', () => {
       false
     );
   });
+
+  it('rejects duplicate required_fields entries', async () => {
+    await expectSafeParseOutcome(
+      'TemplateMetadataSchema',
+      TemplateMetadataSchema,
+      {
+        name: 'Test NDA',
+        source_url: 'https://example.com/nda',
+        version: '1.0',
+        license: 'CC-BY-4.0',
+        allow_derivatives: true,
+        attribution_text: 'Based on Example NDA',
+        fields: [{ name: 'party_name', type: 'string', description: 'Party name' }],
+        required_fields: ['party_name', 'party_name'],
+      },
+      false
+    );
+  });
 });
 
 describe('RecipeMetadataSchema', () => {
