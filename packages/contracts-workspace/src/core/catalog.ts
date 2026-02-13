@@ -1,9 +1,10 @@
 import { createHash } from 'node:crypto';
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
-import { basename, extname, join } from 'node:path';
+import { basename, dirname, extname } from 'node:path';
 import { dump, load } from 'js-yaml';
 import { z } from 'zod';
 import { CATALOG_FILE, LIFECYCLE_DIRS, type LifecycleDir } from './constants.js';
+import { createProvider } from './filesystem-provider.js';
+import type { WorkspaceProvider } from './provider.js';
 import type { CatalogEntry, FetchSummary, FormsCatalog } from './types.js';
 
 const LifecycleEnum = z.enum(LIFECYCLE_DIRS);
@@ -34,18 +35,35 @@ const FormsCatalogSchema = z.object({
 });
 
 export function catalogPath(rootDir: string): string {
-  return join(rootDir, CATALOG_FILE);
+  return `${rootDir}/${CATALOG_FILE}`;
 }
 
-export function loadCatalog(catalogFilePath: string): FormsCatalog {
-  const raw = readFileSync(catalogFilePath, 'utf-8');
+export function loadCatalog(catalogRelativePath: string, provider?: WorkspaceProvider): FormsCatalog {
+  if (provider) {
+    const raw = provider.readTextFile(catalogRelativePath);
+    const parsed = load(raw);
+    return FormsCatalogSchema.parse(parsed);
+  }
+  // Fallback: treat as absolute path via a provider rooted at its dirname
+  const p = createProvider(dirname(catalogRelativePath));
+  const fileName = basename(catalogRelativePath);
+  const raw = p.readTextFile(fileName);
   const parsed = load(raw);
   return FormsCatalogSchema.parse(parsed);
 }
 
-export function validateCatalog(catalogFilePath: string): { valid: true; catalog: FormsCatalog } | { valid: false; errors: string[] } {
+export function validateCatalog(
+  catalogFilePath: string,
+  provider?: WorkspaceProvider
+): { valid: true; catalog: FormsCatalog } | { valid: false; errors: string[] } {
   try {
-    const raw = readFileSync(catalogFilePath, 'utf-8');
+    let raw: string;
+    if (provider) {
+      raw = provider.readTextFile(catalogFilePath);
+    } else {
+      const p = createProvider(dirname(catalogFilePath));
+      raw = p.readTextFile(basename(catalogFilePath));
+    }
     const parsed = load(raw);
     const result = FormsCatalogSchema.safeParse(parsed);
     if (!result.success) {
@@ -68,13 +86,18 @@ export function validateCatalog(catalogFilePath: string): { valid: true; catalog
   }
 }
 
-export function writeCatalog(catalogFilePath: string, catalog: FormsCatalog): void {
+export function writeCatalog(catalogFilePath: string, catalog: FormsCatalog, provider?: WorkspaceProvider): void {
   const yaml = dump(catalog, {
     noRefs: true,
     lineWidth: 120,
     sortKeys: false,
   });
-  writeFileSync(catalogFilePath, yaml, 'utf-8');
+  if (provider) {
+    provider.writeFile(catalogFilePath, yaml);
+  } else {
+    const p = createProvider(dirname(catalogFilePath));
+    p.writeFile(basename(catalogFilePath), yaml);
+  }
 }
 
 export function checksumSha256(buffer: Buffer): string {
@@ -100,9 +123,16 @@ export async function fetchCatalogEntries(options: {
   catalogFilePath?: string;
   ids?: string[];
   downloader?: (url: string) => Promise<Buffer>;
+  provider?: WorkspaceProvider;
 }): Promise<FetchSummary> {
+  const p = options.provider ?? createProvider(options.rootDir);
   const filePath = options.catalogFilePath ?? catalogPath(options.rootDir);
-  const validation = validateCatalog(filePath);
+
+  // validateCatalog needs the absolute path when no provider is given,
+  // or the relative path when a provider is given.
+  const validation = options.provider
+    ? validateCatalog(CATALOG_FILE, p)
+    : validateCatalog(filePath);
   if (!validation.valid) {
     throw new Error(`Catalog validation failed:\n- ${validation.errors.join('\n- ')}`);
   }
@@ -143,14 +173,15 @@ export async function fetchCatalogEntries(options: {
         );
       }
 
-      const destination = destinationPathForEntry(options.rootDir, entry);
-      mkdirSync(destination.directory, { recursive: true });
-      writeFileSync(destination.path, buffer);
+      const destination = destinationRelativePath(entry);
+      const destDir = dirname(destination);
+      p.mkdir(destDir, { recursive: true });
+      p.writeFile(destination, buffer);
 
       results.push({
         id: entry.id,
         status: 'downloaded',
-        path: destination.path,
+        path: `${options.rootDir}/${destination}`,
         message: 'Downloaded and checksum-verified.',
       });
     } catch (error) {
@@ -181,23 +212,20 @@ async function downloadBinary(url: string): Promise<Buffer> {
   return Buffer.from(arrayBuffer);
 }
 
-function destinationPathForEntry(rootDir: string, entry: CatalogEntry): { directory: string; path: string } {
+function destinationRelativePath(entry: CatalogEntry): string {
   const lifecycle: LifecycleDir = entry.destination_lifecycle ?? 'forms';
-  let directory = join(rootDir, lifecycle);
+  let directory = lifecycle as string;
 
   if (lifecycle === 'forms') {
     const topic = entry.destination_topic ?? 'uncategorized';
-    directory = join(directory, topic);
+    directory = `${directory}/${topic}`;
   }
 
   const fileName = entry.destination_filename
     ?? sanitizeFileNameFromUrl(entry.source_url)
     ?? `${entry.id}.docx`;
 
-  return {
-    directory,
-    path: join(directory, fileName),
-  };
+  return `${directory}/${fileName}`;
 }
 
 function sanitizeFileNameFromUrl(url: string): string | undefined {
