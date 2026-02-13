@@ -9,7 +9,7 @@ import { FilesystemProvider } from '../src/core/filesystem-provider.js';
 import { MemoryProvider } from '../src/core/memory-provider.js';
 import { initializeWorkspace } from '../src/core/workspace-structure.js';
 import { lintWorkspace } from '../src/core/lint.js';
-import { hasExecutedMarker } from '../src/core/indexer.js';
+import { hasExecutedMarker, hasPartiallyExecutedMarker, collectWorkspaceDocuments } from '../src/core/indexer.js';
 
 const tempDirs: string[] = [];
 const it = itAllure.epic('Platform & Distribution');
@@ -222,6 +222,191 @@ describe('init generates WORKSPACE.md and FOLDER.md', () => {
     initializeWorkspace('/test', {}, provider);
     const config = loadConventions(provider);
     expect(config.naming.style).toBe('snake_case');
+  });
+});
+
+describe('partially_executed marker detection', () => {
+  it('hasPartiallyExecutedMarker detects _partially_executed suffix', () => {
+    expect(hasPartiallyExecutedMarker('nda_partially_executed.docx')).toBe(true);
+    expect(hasPartiallyExecutedMarker('nda_executed.docx')).toBe(false);
+    expect(hasPartiallyExecutedMarker('nda.docx')).toBe(false);
+  });
+
+  it('hasExecutedMarker returns false for _partially_executed files', () => {
+    expect(hasExecutedMarker('nda_partially_executed.docx')).toBe(false);
+    expect(hasExecutedMarker('nda_executed.docx')).toBe(true);
+  });
+
+  it('collectWorkspaceDocuments assigns partially_executed status', () => {
+    const provider = new MemoryProvider('/test');
+    initializeWorkspace('/test', {}, provider);
+
+    provider.writeFile('executed/nda_executed.docx', 'data');
+    provider.writeFile('executed/msa_partially_executed.docx', 'data');
+    provider.writeFile('drafts/draft.docx', 'data');
+
+    const docs = collectWorkspaceDocuments('/test', provider);
+    const executed = docs.find((d) => d.file_name === 'nda_executed.docx')!;
+    const partial = docs.find((d) => d.file_name === 'msa_partially_executed.docx')!;
+    const pending = docs.find((d) => d.file_name === 'draft.docx')!;
+
+    expect(executed.status).toBe('executed');
+    expect(executed.executed).toBe(true);
+    expect(executed.partially_executed).toBe(false);
+
+    expect(partial.status).toBe('partially_executed');
+    expect(partial.executed).toBe(false);
+    expect(partial.partially_executed).toBe(true);
+
+    expect(pending.status).toBe('pending');
+    expect(pending.executed).toBe(false);
+    expect(pending.partially_executed).toBe(false);
+  });
+
+  it('lint does not warn about missing marker for partially_executed files in executed/', () => {
+    const provider = new MemoryProvider('/test');
+    initializeWorkspace('/test', {}, provider);
+
+    provider.writeFile('executed/nda_partially_executed.docx', 'data');
+
+    const report = lintWorkspace('/test', provider);
+    const missingMarker = report.findings.filter((f) => f.code === 'missing-executed-marker');
+    expect(missingMarker.length).toBe(0);
+  });
+
+  it('scanner detects _partially_executed as a distinct candidate', () => {
+    const provider = new MemoryProvider('/test');
+    provider.seed('contracts/nda_partially_executed.docx', 'a');
+    provider.seed('contracts/msa_partially_executed.docx', 'b');
+    provider.seed('contracts/sow_partially_executed.pdf', 'c');
+    provider.seed('contracts/engagement_partially_executed.docx', 'd');
+    provider.seed('contracts/template.docx', 'e');
+    provider.seed('contracts/draft.docx', 'f');
+    const config = scanExistingConventions(provider);
+    expect(config.executed_marker.pattern).toBe('_partially_executed');
+    expect(config.executed_marker.location).toBe('before_extension');
+  });
+});
+
+describe('title-case-spaces naming detection', () => {
+  it('detects Title Case With Spaces naming style', () => {
+    const provider = new MemoryProvider('/test');
+    provider.seed('docs/Board Meeting Minutes.docx', 'a');
+    provider.seed('docs/Employee Offer Letter.docx', 'b');
+    provider.seed('docs/Vendor Agreement Template.docx', 'c');
+    provider.seed('docs/Stock Purchase Agreement.pdf', 'd');
+    provider.seed('docs/Confidentiality Agreement.docx', 'e');
+    provider.seed('docs/Consulting Services Agreement.docx', 'f');
+    const config = scanExistingConventions(provider);
+    expect(config.naming.style).toBe('title-case-spaces');
+    expect(config.naming.separator).toBe(' ');
+  });
+
+  it('does not detect title-case-spaces when files have dash separators', () => {
+    const provider = new MemoryProvider('/test');
+    provider.seed('docs/NDA - Acme Corp.docx', 'a');
+    provider.seed('docs/MSA - Partner Inc.docx', 'b');
+    provider.seed('docs/SOW - Client LLC.docx', 'c');
+    provider.seed('docs/Amendment - Vendor Co.pdf', 'd');
+    provider.seed('docs/Template - Standard.docx', 'e');
+    provider.seed('docs/Draft - Review.docx', 'f');
+    const config = scanExistingConventions(provider);
+    expect(config.naming.style).toBe('title-case-dash');
+  });
+});
+
+describe('duplicate-file lint rule', () => {
+  it('detects copy-pattern duplicates', () => {
+    const provider = new MemoryProvider('/test');
+    initializeWorkspace('/test', {}, provider);
+
+    provider.writeFile('drafts/contract.docx', 'data');
+    provider.writeFile('drafts/contract (1).docx', 'data');
+
+    const report = lintWorkspace('/test', provider);
+    const dups = report.findings.filter((f) => f.code === 'duplicate-file');
+    expect(dups.length).toBe(2);
+  });
+
+  it('detects timestamp-suffixed duplicates', () => {
+    const provider = new MemoryProvider('/test');
+    initializeWorkspace('/test', {}, provider);
+
+    provider.writeFile('incoming/report.pdf', 'data');
+    provider.writeFile('incoming/report - 2024-01-15.pdf', 'data');
+
+    const report = lintWorkspace('/test', provider);
+    const dups = report.findings.filter((f) => f.code === 'duplicate-file');
+    expect(dups.length).toBe(2);
+  });
+
+  it('does not flag unrelated files as duplicates', () => {
+    const provider = new MemoryProvider('/test');
+    initializeWorkspace('/test', {}, provider);
+
+    provider.writeFile('drafts/nda.docx', 'data');
+    provider.writeFile('drafts/msa.docx', 'data');
+
+    const report = lintWorkspace('/test', provider);
+    const dups = report.findings.filter((f) => f.code === 'duplicate-file');
+    expect(dups.length).toBe(0);
+  });
+});
+
+describe('root-orphan lint rule', () => {
+  it('warns about files at workspace root', () => {
+    const provider = new MemoryProvider('/test');
+    initializeWorkspace('/test', {}, provider);
+
+    provider.writeFile('stray_document.docx', 'data');
+
+    const report = lintWorkspace('/test', provider);
+    const orphans = report.findings.filter((f) => f.code === 'root-orphan');
+    expect(orphans.length).toBe(1);
+    expect(orphans[0].path).toBe('stray_document.docx');
+  });
+
+  it('does not warn about known config files', () => {
+    const provider = new MemoryProvider('/test');
+    initializeWorkspace('/test', {}, provider);
+
+    // These are created by init and should not be flagged
+    const report = lintWorkspace('/test', provider);
+    const orphans = report.findings.filter((f) => f.code === 'root-orphan');
+    expect(orphans.length).toBe(0);
+  });
+});
+
+describe('cross-contamination lint rule', () => {
+  it('warns when file keywords suggest wrong domain folder', () => {
+    const provider = new MemoryProvider('/test');
+    initializeWorkspace('/test', {}, provider);
+
+    // Configure applicable_domains to include domain folders
+    const config = loadConventions(provider);
+    config.lifecycle.applicable_domains = ['Board Meetings', 'Sales', 'Employment'];
+    writeConventions(provider, config);
+
+    // An employment file sitting in Board Meetings
+    provider.mkdir('Board Meetings');
+    provider.seed('Board Meetings/Employment Offer Letter.docx', 'data');
+
+    const report = lintWorkspace('/test', provider);
+    const crossFindings = report.findings.filter((f) => f.code === 'cross-contamination');
+    expect(crossFindings.length).toBe(1);
+    expect(crossFindings[0].message).toContain('Employment');
+  });
+
+  it('does not run when no non-lifecycle domain folders are configured', () => {
+    const provider = new MemoryProvider('/test');
+    initializeWorkspace('/test', {}, provider);
+
+    // Default conventions only have lifecycle dirs as applicable_domains
+    provider.writeFile('drafts/employment_offer.docx', 'data');
+
+    const report = lintWorkspace('/test', provider);
+    const crossFindings = report.findings.filter((f) => f.code === 'cross-contamination');
+    expect(crossFindings.length).toBe(0);
   });
 });
 
