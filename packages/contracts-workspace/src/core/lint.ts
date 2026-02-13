@@ -1,4 +1,4 @@
-import { CONTRACTS_GUIDE_FILE, CATALOG_FILE, INDEX_FILE, INTERNAL_DIR, LIFECYCLE_DIRS } from './constants.js';
+import { CONTRACTS_GUIDE_FILE, CATALOG_FILE, INDEX_FILE, LIFECYCLE_DIRS } from './constants.js';
 import { loadConventions } from './convention-config.js';
 import { createProvider } from './filesystem-provider.js';
 import { collectWorkspaceDocuments, hasExecutedMarker, hasPartiallyExecutedMarker } from './indexer.js';
