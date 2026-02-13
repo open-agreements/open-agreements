@@ -5,3 +5,9 @@ dist/
 allure-results/
 allure-report/
 coverage/
+
+# Draft change proposals (unimplemented roadmap — keep private until shipped)
+# Archived (implemented) changes are safe to track
+openspec/changes/add-*/
+!openspec/changes/archive/
+.vercel
