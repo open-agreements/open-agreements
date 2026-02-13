@@ -1,42 +1,50 @@
-import { readdirSync, statSync, writeFileSync } from 'node:fs';
-import { join, relative } from 'node:path';
 import { dump } from 'js-yaml';
 import { EXECUTED_SUFFIX, INDEX_FILE, LIFECYCLE_DIRS, type LifecycleDir } from './constants.js';
+import { loadConventions } from './convention-config.js';
+import { createProvider } from './filesystem-provider.js';
+import type { WorkspaceProvider } from './provider.js';
 import type { DocumentRecord, LintReport, StatusIndex } from './types.js';
 
-export function hasExecutedMarker(fileName: string): boolean {
+export function hasExecutedMarker(fileName: string, pattern = EXECUTED_SUFFIX): boolean {
   const withoutExtension = fileName.replace(/\.[^.]*$/u, '');
-  return withoutExtension.toLowerCase().endsWith(EXECUTED_SUFFIX);
+  return withoutExtension.toLowerCase().endsWith(pattern);
 }
 
-export function collectWorkspaceDocuments(rootDir: string): DocumentRecord[] {
+export function collectWorkspaceDocuments(rootDir: string, provider?: WorkspaceProvider): DocumentRecord[] {
+  const p = provider ?? createProvider(rootDir);
   const records: DocumentRecord[] = [];
 
-  for (const lifecycle of LIFECYCLE_DIRS) {
-    const lifecyclePath = join(rootDir, lifecycle);
-    const filePaths = walkFiles(lifecyclePath);
+  // Exclude workspace documentation files from indexing
+  const conventions = loadConventions(p);
+  const excludedNames = new Set([
+    conventions.documentation.root_file,
+    conventions.documentation.folder_file,
+  ]);
 
-    for (const filePath of filePaths) {
-      const relativePath = relative(rootDir, filePath).replaceAll('\\\\', '/');
-      const fileName = relativePath.split('/').at(-1) ?? '';
+  for (const lifecycle of LIFECYCLE_DIRS) {
+    const fileInfos = p.walk(lifecycle);
+
+    for (const info of fileInfos) {
+      const fileName = info.name;
+      if (excludedNames.has(fileName)) continue;
       const extension = fileName.includes('.')
         ? fileName.slice(fileName.lastIndexOf('.') + 1).toLowerCase()
         : '';
+      const pathParts = info.relativePath.split('/');
       const topic = lifecycle === 'forms'
-        ? relativePath.split('/')[1] || undefined
+        ? pathParts[1] || undefined
         : undefined;
-      const stats = statSync(filePath);
       const executed = hasExecutedMarker(fileName);
 
       records.push({
-        path: relativePath,
+        path: info.relativePath,
         file_name: fileName,
         extension,
         lifecycle,
         topic,
         executed,
         status: executed ? 'executed' : 'pending',
-        updated_at: stats.mtime.toISOString(),
+        updated_at: info.mtime.toISOString(),
       });
     }
   }
@@ -74,37 +82,18 @@ export function buildStatusIndex(rootDir: string, documents: DocumentRecord[], l
   };
 }
 
-export function writeStatusIndex(rootDir: string, index: StatusIndex, outputPath = INDEX_FILE): string {
-  const path = join(rootDir, outputPath);
+export function writeStatusIndex(
+  rootDir: string,
+  index: StatusIndex,
+  outputPath = INDEX_FILE,
+  provider?: WorkspaceProvider
+): string {
+  const p = provider ?? createProvider(rootDir);
   const yaml = dump(index, {
     noRefs: true,
     lineWidth: 120,
     sortKeys: false,
   });
-  writeFileSync(path, yaml, 'utf-8');
-  return path;
-}
-
-function walkFiles(directoryPath: string): string[] {
-  try {
-    const entries = readdirSync(directoryPath, { withFileTypes: true });
-    const output: string[] = [];
-
-    for (const entry of entries) {
-      const fullPath = join(directoryPath, entry.name);
-      if (entry.isDirectory()) {
-        output.push(...walkFiles(fullPath));
-      } else if (entry.isFile()) {
-        output.push(fullPath);
-      }
-    }
-
-    return output;
-  } catch (error) {
-    const code = (error as NodeJS.ErrnoException).code;
-    if (code === 'ENOENT') {
-      return [];
-    }
-    throw error;
-  }
+  p.writeFile(outputPath, yaml);
+  return `${rootDir}/${outputPath}`;
 }

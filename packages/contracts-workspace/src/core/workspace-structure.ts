@@ -1,5 +1,3 @@
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
-import { join, relative } from 'node:path';
 import { dump } from 'js-yaml';
 import {
   AGENT_SETUP_DIR,
@@ -9,13 +7,19 @@ import {
   LIFECYCLE_DIRS,
   type LifecycleDir,
 } from './constants.js';
+import { defaultConventions, writeConventions } from './convention-config.js';
+import { scanExistingConventions } from './convention-scanner.js';
 import { createDefaultCatalog } from './default-catalog.js';
-import type { AgentName, InitWorkspaceOptions, InitWorkspaceResult } from './types.js';
+import { createProvider } from './filesystem-provider.js';
+import type { WorkspaceProvider } from './provider.js';
+import type { AgentName, ConventionConfig, InitWorkspaceOptions, InitWorkspaceResult } from './types.js';
 
 export function initializeWorkspace(
   rootDir: string,
-  options: InitWorkspaceOptions = {}
+  options: InitWorkspaceOptions = {},
+  provider?: WorkspaceProvider
 ): InitWorkspaceResult {
+  const p = provider ?? createProvider(rootDir);
   const createdDirectories: string[] = [];
   const existingDirectories: string[] = [];
   const createdFiles: string[] = [];
@@ -26,56 +30,81 @@ export function initializeWorkspace(
     ? options.topics
     : [...DEFAULT_FORM_TOPICS];
 
+  // Detect whether directory is non-empty and scan conventions if so
+  const isNonEmpty = hasExistingContent(p);
+  const conventions = isNonEmpty
+    ? scanExistingConventions(p)
+    : defaultConventions();
+
+  // Write conventions config
+  writeConventions(p, conventions);
+
   for (const lifecycle of LIFECYCLE_DIRS) {
-    const path = join(rootDir, lifecycle);
-    ensureDirectory(path, rootDir, createdDirectories, existingDirectories);
+    ensureDirectory(lifecycle, p, createdDirectories, existingDirectories);
 
     if (lifecycle === 'forms') {
       for (const topic of topics) {
-        const topicPath = join(path, topic);
-        ensureDirectory(topicPath, rootDir, createdDirectories, existingDirectories);
+        ensureDirectory(`${lifecycle}/${topic}`, p, createdDirectories, existingDirectories);
       }
     }
   }
 
-  const contractsGuidePath = join(rootDir, CONTRACTS_GUIDE_FILE);
   ensureFile(
-    contractsGuidePath,
+    CONTRACTS_GUIDE_FILE,
     buildContractsGuide(topics),
-    rootDir,
+    p,
     createdFiles,
     existingFiles
   );
 
-  const catalogFilePath = join(rootDir, CATALOG_FILE);
   ensureFile(
-    catalogFilePath,
+    CATALOG_FILE,
     dump(createDefaultCatalog(), {
       noRefs: true,
       lineWidth: 120,
       sortKeys: false,
     }),
-    rootDir,
+    p,
     createdFiles,
     existingFiles
   );
 
+  // Generate WORKSPACE.md and FOLDER.md files
+  const workspaceDocFile = conventions.documentation.root_file;
+  ensureFile(
+    workspaceDocFile,
+    buildWorkspaceMd(conventions, LIFECYCLE_DIRS as unknown as string[]),
+    p,
+    createdFiles,
+    existingFiles
+  );
+
+  for (const lifecycle of LIFECYCLE_DIRS) {
+    const folderDocFile = `${lifecycle}/${conventions.documentation.folder_file}`;
+    ensureFile(
+      folderDocFile,
+      buildFolderMd(lifecycle, conventions, true),
+      p,
+      createdFiles,
+      existingFiles
+    );
+  }
+
   const agents = normalizeAgents(options.agents);
   if (agents.length > 0) {
-    const agentSetupRoot = join(rootDir, AGENT_SETUP_DIR);
-    ensureDirectory(agentSetupRoot, rootDir, createdDirectories, existingDirectories);
+    ensureDirectory(AGENT_SETUP_DIR, p, createdDirectories, existingDirectories);
 
     for (const agent of agents) {
-      const snippetPath = join(agentSetupRoot, `${agent}.md`);
+      const snippetRelative = `${AGENT_SETUP_DIR}/${agent}.md`;
       ensureFile(
-        snippetPath,
+        snippetRelative,
         buildAgentSnippet(agent),
-        rootDir,
+        p,
         createdFiles,
         existingFiles
       );
       agentInstructions.push(
-        `${agent}: ${relative(rootDir, snippetPath)} references ${CONTRACTS_GUIDE_FILE}`
+        `${agent}: ${snippetRelative} references ${CONTRACTS_GUIDE_FILE}`
       );
     }
   }
@@ -90,41 +119,44 @@ export function initializeWorkspace(
   };
 }
 
+function hasExistingContent(provider: WorkspaceProvider): boolean {
+  try {
+    const entries = provider.readdir('.');
+    return entries.some((e) => !e.name.startsWith('.'));
+  } catch {
+    return false;
+  }
+}
+
 function ensureDirectory(
-  directoryPath: string,
-  rootDir: string,
+  relativePath: string,
+  provider: WorkspaceProvider,
   createdDirectories: string[],
   existingDirectories: string[]
 ): void {
-  const rel = relative(rootDir, directoryPath) || '.';
-  if (existsSync(directoryPath)) {
-    existingDirectories.push(rel);
+  if (provider.exists(relativePath)) {
+    existingDirectories.push(relativePath);
     return;
   }
 
-  mkdirSync(directoryPath, { recursive: true });
-  createdDirectories.push(rel);
+  provider.mkdir(relativePath, { recursive: true });
+  createdDirectories.push(relativePath);
 }
 
 function ensureFile(
-  filePath: string,
+  relativePath: string,
   content: string,
-  rootDir: string,
+  provider: WorkspaceProvider,
   createdFiles: string[],
   existingFiles: string[]
 ): void {
-  try {
-    readFileSync(filePath, 'utf-8');
-    existingFiles.push(relative(rootDir, filePath));
-  } catch (error) {
-    const code = (error as NodeJS.ErrnoException).code;
-    if (code !== 'ENOENT') {
-      throw error;
-    }
-
-    writeFileSync(filePath, content, 'utf-8');
-    createdFiles.push(relative(rootDir, filePath));
+  if (provider.exists(relativePath)) {
+    existingFiles.push(relativePath);
+    return;
   }
+
+  provider.writeFile(relativePath, content);
+  createdFiles.push(relativePath);
 }
 
 function normalizeAgents(agents: AgentName[] | undefined): AgentName[] {
@@ -133,6 +165,89 @@ function normalizeAgents(agents: AgentName[] | undefined): AgentName[] {
   }
 
   return [...new Set(agents.filter((agent) => agent === 'claude' || agent === 'gemini'))];
+}
+
+export function buildWorkspaceMd(config: ConventionConfig, domains: string[]): string {
+  const folderList = domains.map((d) => `- \`${d}/\` — see \`${d}/${config.documentation.folder_file}\``).join('\n');
+  const marker = config.executed_marker.pattern;
+  const style = config.naming.style;
+
+  return `# Workspace Overview
+
+This workspace is managed by contracts-workspace.
+
+## Conventions
+
+- **Naming style**: ${style}
+- **Executed marker**: \`${marker}\` (${config.executed_marker.location})
+- **Date format**: ${config.naming.date_format}
+
+## Domain Folders
+
+${folderList}
+
+## Quick Reference
+
+- Run \`open-agreements-workspace status lint\` to check workspace structure.
+- Run \`open-agreements-workspace status generate\` to rebuild the index.
+- Convention config: \`.contracts-workspace/conventions.yaml\`
+`;
+}
+
+export function buildFolderMd(folderName: string, config: ConventionConfig, isLifecycle: boolean): string {
+  const marker = config.executed_marker.pattern;
+
+  if (isLifecycle) {
+    return `# ${folderName}/
+
+Lifecycle folder managed by contracts-workspace.
+
+## Purpose
+
+${lifecyclePurpose(folderName)}
+
+## Conventions
+
+- Naming style: ${config.naming.style}
+- Executed marker: \`${marker}\`
+- Files here should follow the workspace naming conventions.
+
+## See Also
+
+- [\`${config.documentation.root_file}\`](../${config.documentation.root_file}) — workspace overview
+`;
+  }
+
+  return `# ${folderName}/
+
+Domain folder in this workspace.
+
+## Conventions
+
+- Naming style: ${config.naming.style}
+- Executed marker: \`${marker}\`
+
+## See Also
+
+- [\`${config.documentation.root_file}\`](../${config.documentation.root_file}) — workspace overview
+`;
+}
+
+function lifecyclePurpose(folder: string): string {
+  switch (folder) {
+    case 'forms':
+      return 'Source templates and form libraries, organized by topic.';
+    case 'drafts':
+      return 'Work-in-progress documents not yet finalized.';
+    case 'incoming':
+      return 'Documents received from counterparties pending review.';
+    case 'executed':
+      return 'Fully signed/executed agreements. Files should include the executed marker in their filename.';
+    case 'archive':
+      return 'Superseded or expired documents retained for reference.';
+    default:
+      return 'Documents in this folder.';
+  }
 }
 
 function buildContractsGuide(topics: string[]): string {

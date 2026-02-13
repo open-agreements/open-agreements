@@ -1,15 +1,19 @@
-import { existsSync, statSync } from 'node:fs';
-import { join } from 'node:path';
 import { INDEX_FILE, LIFECYCLE_DIRS } from './constants.js';
-import { collectWorkspaceDocuments } from './indexer.js';
+import { loadConventions } from './convention-config.js';
+import { createProvider } from './filesystem-provider.js';
+import { collectWorkspaceDocuments, hasExecutedMarker } from './indexer.js';
+import type { WorkspaceProvider } from './provider.js';
 import type { LintFinding, LintReport } from './types.js';
 
-export function lintWorkspace(rootDir: string): LintReport {
+export function lintWorkspace(rootDir: string, provider?: WorkspaceProvider): LintReport {
+  const p = provider ?? createProvider(rootDir);
   const findings: LintFinding[] = [];
 
+  const conventions = loadConventions(p);
+  const markerPattern = conventions.executed_marker.pattern;
+
   for (const lifecycle of LIFECYCLE_DIRS) {
-    const folderPath = join(rootDir, lifecycle);
-    if (!existsSync(folderPath)) {
+    if (!p.exists(lifecycle)) {
       findings.push({
         code: 'missing-directory',
         severity: 'error',
@@ -19,7 +23,7 @@ export function lintWorkspace(rootDir: string): LintReport {
     }
   }
 
-  const documents = collectWorkspaceDocuments(rootDir);
+  const documents = collectWorkspaceDocuments(rootDir, p);
   for (const document of documents) {
     if (document.lifecycle === 'forms' && document.extension === 'pdf') {
       findings.push({
@@ -30,18 +34,21 @@ export function lintWorkspace(rootDir: string): LintReport {
       });
     }
 
-    if (document.lifecycle === 'executed' && !document.executed) {
+    // Use convention-configured marker pattern
+    const fileHasMarker = hasExecutedMarker(document.file_name, markerPattern);
+
+    if (document.lifecycle === 'executed' && !fileHasMarker) {
       findings.push({
         code: 'missing-executed-marker',
         severity: 'warning',
-        message: 'File in executed/ is missing _executed suffix in filename.',
+        message: `File in executed/ is missing ${markerPattern} marker in filename.`,
         path: document.path,
       });
     }
 
     if (
       (document.lifecycle === 'forms' || document.lifecycle === 'drafts' || document.lifecycle === 'incoming')
-      && document.executed
+      && fileHasMarker
     ) {
       findings.push({
         code: 'executed-marker-outside-executed',
@@ -52,7 +59,7 @@ export function lintWorkspace(rootDir: string): LintReport {
     }
   }
 
-  findings.push(...detectStaleIndex(rootDir, documents));
+  findings.push(...detectStaleIndex(p, documents));
 
   return {
     findings,
@@ -61,9 +68,8 @@ export function lintWorkspace(rootDir: string): LintReport {
   };
 }
 
-function detectStaleIndex(rootDir: string, documents: ReturnType<typeof collectWorkspaceDocuments>): LintFinding[] {
-  const indexPath = join(rootDir, INDEX_FILE);
-  if (!existsSync(indexPath)) {
+function detectStaleIndex(provider: WorkspaceProvider, documents: ReturnType<typeof collectWorkspaceDocuments>): LintFinding[] {
+  if (!provider.exists(INDEX_FILE)) {
     return [
       {
         code: 'missing-index',
@@ -74,7 +80,7 @@ function detectStaleIndex(rootDir: string, documents: ReturnType<typeof collectW
     ];
   }
 
-  const indexMtime = statSync(indexPath).mtimeMs;
+  const indexMtime = provider.stat(INDEX_FILE).mtime.getTime();
   const latestDocumentMtime = documents.reduce((latest, doc) => {
     const mtime = new Date(doc.updated_at).getTime();
     return mtime > latest ? mtime : latest;
