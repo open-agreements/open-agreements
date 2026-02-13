@@ -1,9 +1,23 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
-  "installCommand": "echo 'No install step required for static site deployment'",
+  "installCommand": "npm install && npm run build",
   "buildCommand": "echo 'Static site ready'",
   "outputDirectory": "site",
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "functions": {
+    "api/a2a.ts": {
+      "maxDuration": 30,
+      "includeFiles": "{templates,external,dist}/**"
+    },
+    "api/mcp.ts": {
+      "maxDuration": 30,
+      "includeFiles": "{templates,external,dist}/**"
+    },
+    "api/download.ts": {
+      "maxDuration": 30,
+      "includeFiles": "{templates,external,dist}/**"
+    }
+  }
 }

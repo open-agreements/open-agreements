@@ -1,0 +1,35 @@
+{
+  "name": "OpenAgreements",
+  "description": "Fill legal agreement templates (NDAs, SAFEs, cloud terms, employment) with field values. Returns signed-ready DOCX.",
+  "url": "https://openagreements.ai/api/a2a",
+  "version": "1.0.0",
+  "protocolVersion": "1.0",
+  "provider": {
+    "organization": "OpenAgreements",
+    "url": "https://openagreements.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": ["application/json"],
+  "defaultOutputModes": ["application/json"],
+  "securitySchemes": {
+    "none": {
+      "type": "none"
+    }
+  },
+  "security": [{ "none": [] }],
+  "skills": [
+    {
+      "id": "fill-template",
+      "name": "Fill Legal Template",
+      "description": "Accepts a template name and field values, returns a filled DOCX. Fills whatever fields are provided; missing fields render as blanks. Send a message/send with Part.data containing {\"skill\": \"fill-template\", \"template\": \"<template-id>\", \"values\": {\"field\": \"value\"}}."
+    },
+    {
+      "id": "list-templates",
+      "name": "List Available Templates",
+      "description": "Returns the catalog of available legal templates with their field schemas, licenses, and attribution requirements. Send a message/send with Part.data containing {\"skill\": \"list-templates\"}."
+    }
+  ]
+}
