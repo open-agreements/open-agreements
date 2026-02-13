@@ -36,7 +36,8 @@ export interface DocumentRecord {
   lifecycle: LifecycleDir;
   topic?: string;
   executed: boolean;
-  status: 'executed' | 'pending';
+  partially_executed: boolean;
+  status: 'executed' | 'partially_executed' | 'pending';
   updated_at: string;
 }
 
@@ -46,6 +47,7 @@ export interface StatusIndex {
   summary: {
     total_documents: number;
     executed_documents: number;
+    partially_executed_documents: number;
     pending_documents: number;
     by_lifecycle: Record<LifecycleDir, number>;
   };
@@ -99,6 +101,10 @@ export interface ConventionConfig {
   executed_marker: {
     pattern: string;
     location: 'before_extension' | 'in_parentheses' | 'custom';
+    partially_executed_marker?: {
+      pattern: string;
+      location: 'before_extension' | 'in_parentheses' | 'custom';
+    };
   };
   naming: {
     style: string;

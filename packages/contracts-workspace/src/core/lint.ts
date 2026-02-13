@@ -1,9 +1,9 @@
-import { INDEX_FILE, LIFECYCLE_DIRS } from './constants.js';
+import { CONTRACTS_GUIDE_FILE, CATALOG_FILE, INDEX_FILE, INTERNAL_DIR, LIFECYCLE_DIRS } from './constants.js';
 import { loadConventions } from './convention-config.js';
 import { createProvider } from './filesystem-provider.js';
-import { collectWorkspaceDocuments, hasExecutedMarker } from './indexer.js';
+import { collectWorkspaceDocuments, hasExecutedMarker, hasPartiallyExecutedMarker } from './indexer.js';
 import type { WorkspaceProvider } from './provider.js';
-import type { LintFinding, LintReport } from './types.js';
+import type { ConventionConfig, LintFinding, LintReport } from './types.js';
 
 export function lintWorkspace(rootDir: string, provider?: WorkspaceProvider): LintReport {
   const p = provider ?? createProvider(rootDir);
@@ -36,8 +36,9 @@ export function lintWorkspace(rootDir: string, provider?: WorkspaceProvider): Li
 
     // Use convention-configured marker pattern
     const fileHasMarker = hasExecutedMarker(document.file_name, markerPattern);
+    const fileHasPartialMarker = document.partially_executed;
 
-    if (document.lifecycle === 'executed' && !fileHasMarker) {
+    if (document.lifecycle === 'executed' && !fileHasMarker && !fileHasPartialMarker) {
       findings.push({
         code: 'missing-executed-marker',
         severity: 'warning',
@@ -48,7 +49,7 @@ export function lintWorkspace(rootDir: string, provider?: WorkspaceProvider): Li
 
     if (
       (document.lifecycle === 'forms' || document.lifecycle === 'drafts' || document.lifecycle === 'incoming')
-      && fileHasMarker
+      && (fileHasMarker || fileHasPartialMarker)
     ) {
       findings.push({
         code: 'executed-marker-outside-executed',
@@ -60,6 +61,9 @@ export function lintWorkspace(rootDir: string, provider?: WorkspaceProvider): Li
   }
 
   findings.push(...detectStaleIndex(p, documents));
+  findings.push(...detectDuplicateFiles(documents));
+  findings.push(...detectRootOrphans(p, conventions));
+  findings.push(...detectCrossContamination(p, conventions));
 
   return {
     findings,
@@ -98,4 +102,150 @@ function detectStaleIndex(provider: WorkspaceProvider, documents: ReturnType<typ
   }
 
   return [];
+}
+
+// --- duplicate-file ---
+
+const COPY_TIMESTAMP_PATTERNS = [
+  / \(\d+\)$/u,                              // " (1)", " (2)"
+  / - Copy$/iu,                               // " - Copy"
+  / - \d{4}-\d{2}-\d{2},? \d{1,2}:\d{2} [AP]M$/iu,  // " - 2024-01-15, 3:42 PM"
+  / - \d{4}-\d{2}-\d{2}$/u,                  // " - 2024-01-15"
+  / copy$/iu,                                  // " copy"
+];
+
+function normalizeForDuplicateCheck(fileName: string): string {
+  const extIdx = fileName.lastIndexOf('.');
+  const ext = extIdx > 0 ? fileName.slice(extIdx) : '';
+  let stem = extIdx > 0 ? fileName.slice(0, extIdx) : fileName;
+
+  for (const pattern of COPY_TIMESTAMP_PATTERNS) {
+    stem = stem.replace(pattern, '');
+  }
+
+  return (stem + ext).toLowerCase();
+}
+
+function detectDuplicateFiles(documents: ReturnType<typeof collectWorkspaceDocuments>): LintFinding[] {
+  const findings: LintFinding[] = [];
+  const groups = new Map<string, typeof documents>();
+
+  for (const doc of documents) {
+    const key = `${doc.lifecycle}/${normalizeForDuplicateCheck(doc.file_name)}`;
+    const group = groups.get(key);
+    if (group) {
+      group.push(doc);
+    } else {
+      groups.set(key, [doc]);
+    }
+  }
+
+  for (const [, group] of groups) {
+    if (group.length > 1) {
+      for (const doc of group) {
+        findings.push({
+          code: 'duplicate-file',
+          severity: 'warning',
+          message: `File appears to be a duplicate or timestamped copy. ${group.length} files share the same normalized name.`,
+          path: doc.path,
+        });
+      }
+    }
+  }
+
+  return findings;
+}
+
+// --- root-orphan ---
+
+const ROOT_CONFIG_FILES = new Set([
+  CONTRACTS_GUIDE_FILE,
+  'WORKSPACE.md',
+  CATALOG_FILE,
+  INDEX_FILE,
+  '.gitignore',
+  '.gitkeep',
+]);
+
+function detectRootOrphans(provider: WorkspaceProvider, conventions: ConventionConfig): LintFinding[] {
+  const findings: LintFinding[] = [];
+  const docFile = conventions.documentation.root_file;
+
+  try {
+    const rootEntries = provider.readdir('.');
+    for (const entry of rootEntries) {
+      if (entry.isDirectory) continue;
+      if (ROOT_CONFIG_FILES.has(entry.name)) continue;
+      if (entry.name === docFile) continue;
+      if (entry.name.startsWith('.')) continue;
+
+      findings.push({
+        code: 'root-orphan',
+        severity: 'warning',
+        message: 'File at workspace root is not in a lifecycle folder. Consider moving to drafts/ or incoming/.',
+        path: entry.name,
+      });
+    }
+  } catch {
+    // readdir may fail on empty/nonexistent root
+  }
+
+  return findings;
+}
+
+// --- cross-contamination ---
+
+const DOMAIN_KEYWORD_MAP: [RegExp, string[]][] = [
+  [/\b(firewall|network|vpn|security|infosec|soc2|penetration)\b/iu, ['Security', 'Network Architecture', 'IT Security']],
+  [/\b(nda|agreement|contract|amendment|addendum|sow|msa)\b/iu, ['Sales', 'Vendor Agreements', 'Commercial']],
+  [/\b(board|resolution|minutes|consent|governance)\b/iu, ['Board Meetings', 'Corporate Governance']],
+  [/\b(offer.?letter|employment|salary|compensation|benefits|onboarding)\b/iu, ['Employment', 'HR', 'People']],
+  [/\b(invoice|payment|billing|accounts|receivable|payable)\b/iu, ['Finance', 'Accounting']],
+  [/\b(patent|trademark|copyright|intellectual.?property|ip.?assignment)\b/iu, ['IP', 'Intellectual Property']],
+  [/\b(policy|handbook|procedure|compliance)\b/iu, ['Policies', 'Compliance']],
+];
+
+function detectCrossContamination(provider: WorkspaceProvider, conventions: ConventionConfig): LintFinding[] {
+  const findings: LintFinding[] = [];
+  const lifecycleDirSet = new Set(LIFECYCLE_DIRS as readonly string[]);
+  const applicableDomains = conventions.lifecycle.applicable_domains;
+
+  // Only run when applicable_domains are configured and include non-lifecycle folders
+  const domainFolders = applicableDomains.filter((d) => !lifecycleDirSet.has(d));
+  if (domainFolders.length === 0) return findings;
+
+  for (const folder of domainFolders) {
+    let files: { name: string; relativePath: string }[];
+    try {
+      files = provider.walk(folder);
+    } catch {
+      continue;
+    }
+
+    for (const file of files) {
+      const fileName = file.name.toLowerCase();
+      const matchedDomains: string[] = [];
+
+      for (const [pattern, expectedDomains] of DOMAIN_KEYWORD_MAP) {
+        if (pattern.test(fileName)) {
+          const currentFolderLower = folder.toLowerCase();
+          const isExpected = expectedDomains.some((d) => d.toLowerCase() === currentFolderLower);
+          if (!isExpected) {
+            matchedDomains.push(expectedDomains[0]);
+          }
+        }
+      }
+
+      if (matchedDomains.length > 0) {
+        findings.push({
+          code: 'cross-contamination',
+          severity: 'warning',
+          message: `File may belong in ${matchedDomains[0]}/ rather than ${folder}/.`,
+          path: file.relativePath,
+        });
+      }
+    }
+  }
+
+  return findings;
 }

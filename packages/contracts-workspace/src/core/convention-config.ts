@@ -11,6 +11,10 @@ const ConventionConfigSchema = z.object({
   executed_marker: z.object({
     pattern: z.string().min(1),
     location: z.enum(['before_extension', 'in_parentheses', 'custom']),
+    partially_executed_marker: z.object({
+      pattern: z.string().min(1),
+      location: z.enum(['before_extension', 'in_parentheses', 'custom']),
+    }).optional(),
   }),
   naming: z.object({
     style: z.string().min(1),
@@ -38,6 +42,10 @@ export function defaultConventions(): ConventionConfig {
     executed_marker: {
       pattern: '_executed',
       location: 'before_extension',
+      partially_executed_marker: {
+        pattern: '_partially_executed',
+        location: 'before_extension',
+      },
     },
     naming: {
       style: 'snake_case',

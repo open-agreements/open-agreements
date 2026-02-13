@@ -83,8 +83,10 @@ function collectAllFileNames(provider: WorkspaceProvider): string[] {
 
 function detectExecutedMarker(fileNames: string[]): ConventionConfig['executed_marker'] | null {
   const candidates: MarkerCandidate[] = [
+    { pattern: '_partially_executed', location: 'before_extension', count: 0 },
     { pattern: '_executed', location: 'before_extension', count: 0 },
     { pattern: '_signed', location: 'before_extension', count: 0 },
+    { pattern: '(partially executed)', location: 'in_parentheses', count: 0 },
     { pattern: '(executed)', location: 'in_parentheses', count: 0 },
     { pattern: '(fully executed)', location: 'in_parentheses', count: 0 },
     { pattern: '(signed)', location: 'in_parentheses', count: 0 },
@@ -92,15 +94,20 @@ function detectExecutedMarker(fileNames: string[]): ConventionConfig['executed_m
 
   for (const fileName of fileNames) {
     const lower = fileName.toLowerCase();
+    let matched = false;
     for (const candidate of candidates) {
       if (candidate.location === 'before_extension') {
         const withoutExt = lower.replace(/\.[^.]*$/u, '');
         if (withoutExt.endsWith(candidate.pattern)) {
           candidate.count++;
+          matched = true;
+          break; // Longer patterns listed first prevent double-counting
         }
       } else if (candidate.location === 'in_parentheses') {
         if (lower.includes(candidate.pattern)) {
           candidate.count++;
+          matched = true;
+          break;
         }
       }
     }
@@ -125,10 +132,18 @@ function detectExecutedMarker(fileNames: string[]): ConventionConfig['executed_m
   };
 }
 
+function isMostlyCapitalized(str: string): boolean {
+  const words = str.split(/\s+/u).filter((w) => w.length > 0);
+  if (words.length === 0) return false;
+  const capitalizedCount = words.filter((w) => /^[A-Z]/u.test(w)).length;
+  return capitalizedCount / words.length >= 0.5;
+}
+
 function detectNamingStyle(fileNames: string[]): ConventionConfig['naming'] | null {
   const candidates: NamingCandidate[] = [
     { style: 'snake_case', separator: '_', count: 0 },
     { style: 'kebab-case', separator: '-', count: 0 },
+    { style: 'title-case-spaces', separator: ' ', count: 0 },
     { style: 'title-case-dash', separator: ' - ', count: 0 },
   ];
 
@@ -138,6 +153,10 @@ function detectNamingStyle(fileNames: string[]): ConventionConfig['naming'] | nu
 
     // Title case with dash separator (e.g., "NDA - Company Name")
     if (/\s-\s/.test(withoutExt)) {
+      candidates[3].count++;
+    }
+    // Title case with spaces, no dash separator (e.g., "Board Meeting Minutes")
+    else if (/\s/.test(withoutExt) && !/\s-\s/.test(withoutExt) && isMostlyCapitalized(withoutExt)) {
       candidates[2].count++;
     }
     // Snake case (e.g., "company_nda_v2")

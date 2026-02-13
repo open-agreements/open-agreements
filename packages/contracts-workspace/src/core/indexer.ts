@@ -1,12 +1,21 @@
 import { dump } from 'js-yaml';
-import { EXECUTED_SUFFIX, INDEX_FILE, LIFECYCLE_DIRS, type LifecycleDir } from './constants.js';
+import { EXECUTED_SUFFIX, PARTIALLY_EXECUTED_SUFFIX, INDEX_FILE, LIFECYCLE_DIRS, type LifecycleDir } from './constants.js';
 import { loadConventions } from './convention-config.js';
 import { createProvider } from './filesystem-provider.js';
 import type { WorkspaceProvider } from './provider.js';
 import type { DocumentRecord, LintReport, StatusIndex } from './types.js';
 
+export function hasPartiallyExecutedMarker(fileName: string, pattern = PARTIALLY_EXECUTED_SUFFIX): boolean {
+  const withoutExtension = fileName.replace(/\.[^.]*$/u, '');
+  return withoutExtension.toLowerCase().endsWith(pattern.toLowerCase());
+}
+
 export function hasExecutedMarker(fileName: string, pattern = EXECUTED_SUFFIX): boolean {
   const withoutExtension = fileName.replace(/\.[^.]*$/u, '');
+  // Check partially_executed first since '_partially_executed' ends with '_executed'
+  if (hasPartiallyExecutedMarker(fileName)) {
+    return false;
+  }
   return withoutExtension.toLowerCase().endsWith(pattern);
 }
 
@@ -34,7 +43,10 @@ export function collectWorkspaceDocuments(rootDir: string, provider?: WorkspaceP
       const topic = lifecycle === 'forms'
         ? pathParts[1] || undefined
         : undefined;
-      const executed = hasExecutedMarker(fileName);
+      const partialMarkerPattern = conventions.executed_marker.partially_executed_marker?.pattern ?? PARTIALLY_EXECUTED_SUFFIX;
+      const partiallyExecuted = hasPartiallyExecutedMarker(fileName, partialMarkerPattern);
+      const executed = partiallyExecuted ? false : hasExecutedMarker(fileName);
+      const status = executed ? 'executed' : partiallyExecuted ? 'partially_executed' : 'pending';
 
       records.push({
         path: info.relativePath,
@@ -43,7 +55,8 @@ export function collectWorkspaceDocuments(rootDir: string, provider?: WorkspaceP
         lifecycle,
         topic,
         executed,
-        status: executed ? 'executed' : 'pending',
+        partially_executed: partiallyExecuted,
+        status,
         updated_at: info.mtime.toISOString(),
       });
     }
@@ -63,6 +76,7 @@ export function buildStatusIndex(rootDir: string, documents: DocumentRecord[], l
   }
 
   const executedCount = documents.filter((doc) => doc.executed).length;
+  const partiallyExecutedCount = documents.filter((doc) => doc.partially_executed).length;
 
   return {
     generated_at: new Date().toISOString(),
@@ -70,7 +84,8 @@ export function buildStatusIndex(rootDir: string, documents: DocumentRecord[], l
     summary: {
       total_documents: documents.length,
       executed_documents: executedCount,
-      pending_documents: documents.length - executedCount,
+      partially_executed_documents: partiallyExecutedCount,
+      pending_documents: documents.length - executedCount - partiallyExecutedCount,
       by_lifecycle: byLifecycle,
     },
     documents,
