@@ -89,8 +89,14 @@ describe('list options', () => {
 
     expect(names.length).toBeGreaterThan(0);
     expect(names).toContain('common-paper-mutual-nda');
+    expect(names).toContain('openagreements-employment-offer-letter');
     expect(names).not.toContain('yc-safe-valuation-cap');
     expect(names).not.toContain('nvca-voting-agreement');
+
+    const employmentItem = parsed.items.find((item: { name: string }) =>
+      item.name === 'openagreements-employment-offer-letter'
+    );
+    expect(employmentItem.category).toBe('employment');
   });
 
   it.openspec('OA-058')('--json-strict exits non-zero on metadata errors', () => {

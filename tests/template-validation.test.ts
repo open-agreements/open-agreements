@@ -120,12 +120,65 @@ describe('validateTemplate', () => {
       expect(result.errors).toEqual([]);
     });
   });
+
+  it('validates openagreements-employment-offer-letter without errors', async () => {
+    const dir = join(templatesDir, 'openagreements-employment-offer-letter');
+    await allureParameter('template_id', 'openagreements-employment-offer-letter');
+    const result = await allureStep('Validate template', () =>
+      validateTemplate(dir, 'openagreements-employment-offer-letter')
+    );
+    await allureJsonAttachment('template-validation-result.json', result);
+
+    await allureStep('Assert template passes validation', () => {
+      expect(result.valid).toBe(true);
+      expect(result.errors).toEqual([]);
+    });
+  });
+
+  it('validates openagreements-employee-ip-inventions-assignment without errors', async () => {
+    const dir = join(templatesDir, 'openagreements-employee-ip-inventions-assignment');
+    await allureParameter('template_id', 'openagreements-employee-ip-inventions-assignment');
+    const result = await allureStep('Validate template', () =>
+      validateTemplate(dir, 'openagreements-employee-ip-inventions-assignment')
+    );
+    await allureJsonAttachment('template-validation-result.json', result);
+
+    await allureStep('Assert template passes validation', () => {
+      expect(result.valid).toBe(true);
+      expect(result.errors).toEqual([]);
+    });
+  });
+
+  it('validates openagreements-employment-confidentiality-acknowledgement without errors', async () => {
+    const dir = join(templatesDir, 'openagreements-employment-confidentiality-acknowledgement');
+    await allureParameter('template_id', 'openagreements-employment-confidentiality-acknowledgement');
+    const result = await allureStep('Validate template', () =>
+      validateTemplate(dir, 'openagreements-employment-confidentiality-acknowledgement')
+    );
+    await allureJsonAttachment('template-validation-result.json', result);
+
+    await allureStep('Assert template passes validation', () => {
+      expect(result.valid).toBe(true);
+      expect(result.errors).toEqual([]);
+    });
+  });
 });
 
 describe('validateMetadata', () => {
   it('validates bonterms-mutual-nda metadata', async () => {
     const dir = join(templatesDir, 'bonterms-mutual-nda');
     await allureParameter('template_id', 'bonterms-mutual-nda');
+    const result = await allureStep('Validate metadata.yaml', () => validateMetadata(dir));
+    await allureJsonAttachment('metadata-validation-result.json', result);
+
+    await allureStep('Assert metadata validation passes', () => {
+      expect(result.valid).toBe(true);
+    });
+  });
+
+  it('validates employment offer metadata', async () => {
+    const dir = join(templatesDir, 'openagreements-employment-offer-letter');
+    await allureParameter('template_id', 'openagreements-employment-offer-letter');
     const result = await allureStep('Validate metadata.yaml', () => validateMetadata(dir));
     await allureJsonAttachment('metadata-validation-result.json', result);
 

@@ -44,6 +44,7 @@ export interface PipelineOptions {
 
   // Verification callback — each path passes its own verifier
   verify: (outputPath: string) => VerifyResult | Promise<VerifyResult>;
+  postProcess?: (outputPath: string) => void | Promise<void>;
 
   // Debugging
   keepIntermediate?: boolean;           // default: false
@@ -80,6 +81,7 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
     computeDisplayFields,
     fixSmartQuotes = false,
     verify,
+    postProcess,
     keepIntermediate = false,
   } = options;
 
@@ -139,6 +141,11 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
 
     // Step 7: Copy to output
     copyFileSync(filledPath, outputPath);
+
+    // Optional post-processing for recipe-specific normalization.
+    if (postProcess) {
+      await postProcess(outputPath);
+    }
 
     // Step 8: Verify
     const verifyResult = await verify(outputPath);

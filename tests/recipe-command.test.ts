@@ -117,6 +117,32 @@ describe('recipe commands', () => {
     );
   });
 
+  it.openspec('OA-063')('runRecipeCommand forwards computed artifact output path', async () => {
+    const outDir = mkdtempSync(join(tmpdir(), 'oa-recipe-computed-'));
+    tempDirs.push(outDir);
+    const computedOut = join(outDir, 'computed.json');
+
+    runRecipeMock.mockResolvedValue({
+      metadata: { name: 'NVCA Voting Agreement' },
+      outputPath: join(outDir, 'out.docx'),
+      fieldsUsed: ['company_name'],
+      computedOutPath: computedOut,
+      computedArtifact: { profile_present: true },
+    });
+
+    await runRecipeCommand({
+      recipeId: 'nvca-voting-agreement',
+      output: join(outDir, 'out.docx'),
+      computedOut,
+    });
+
+    expect(runRecipeMock).toHaveBeenCalledWith(
+      expect.objectContaining({
+        computedOutPath: computedOut,
+      })
+    );
+  });
+
   it.openspec('OA-016')('runRecipeClean invokes cleanDocument with recipe config', async () => {
     const outDir = mkdtempSync(join(tmpdir(), 'oa-recipe-clean-'));
     tempDirs.push(outDir);

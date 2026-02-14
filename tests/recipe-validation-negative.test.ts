@@ -78,4 +78,71 @@ describe('validateRecipe negative scenarios', () => {
     expect(result.valid).toBe(false);
     expect(result.errors.join(' ')).toContain('unsafe tag');
   });
+
+  it.openspec('OA-065')('rejects computed profiles with unsupported predicate operators', () => {
+    const recipeDir = mkdtempSync(join(tmpdir(), 'oa-recipe-computed-op-'));
+    tempDirs.push(recipeDir);
+
+    writeMetadata(recipeDir);
+    writeFileSync(
+      join(recipeDir, 'replacements.json'),
+      JSON.stringify({ '[Company Name]': '{company_name}' }, null, 2),
+      'utf-8'
+    );
+    writeFileSync(
+      join(recipeDir, 'computed.json'),
+      JSON.stringify(
+        {
+          version: '1.0',
+          rules: [
+            {
+              id: 'bad-op',
+              when_all: [{ field: 'company_name', op: 'greater_than', value: 'A' }],
+              set_audit: { invalid: true },
+            },
+          ],
+        },
+        null,
+        2
+      ),
+      'utf-8'
+    );
+
+    const result = validateRecipe(recipeDir, 'fixture-recipe');
+    expect(result.valid).toBe(false);
+    expect(result.errors.join(' ')).toContain('computed.json');
+  });
+
+  it('rejects invalid normalize.json configuration', () => {
+    const recipeDir = mkdtempSync(join(tmpdir(), 'oa-recipe-normalize-'));
+    tempDirs.push(recipeDir);
+
+    writeMetadata(recipeDir);
+    writeFileSync(
+      join(recipeDir, 'replacements.json'),
+      JSON.stringify({ '[Company Name]': '{company_name}' }, null, 2),
+      'utf-8'
+    );
+    writeFileSync(
+      join(recipeDir, 'normalize.json'),
+      JSON.stringify(
+        {
+          paragraph_rules: [
+            {
+              id: 'bad-rule',
+              section_heading: 'Qualifications',
+              // paragraph_contains is required
+            },
+          ],
+        },
+        null,
+        2
+      ),
+      'utf-8'
+    );
+
+    const result = validateRecipe(recipeDir, 'fixture-recipe');
+    expect(result.valid).toBe(false);
+    expect(result.errors.join(' ')).toContain('normalize.json');
+  });
 });

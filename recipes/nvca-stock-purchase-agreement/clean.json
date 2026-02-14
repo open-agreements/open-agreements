@@ -1,10 +1,14 @@
 {
   "removeFootnotes": true,
   "removeParagraphPatterns": [
+    "^This sample document is the work product of a national coalition of attorneys",
+    "^For those who will redline this against prior NVCA versions",
+    "^The Stock Purchase Agreement sets forth the basic terms of the purchase and sale of the preferred stock",
     "^Note to Drafter:",
     "^Preliminary Note\\b",
     "^Alternative 1:",
     "^Alternative 2:",
-    "^\\[Alternative"
+    "^\\[Alternative",
+    "^\\["
   ]
 }

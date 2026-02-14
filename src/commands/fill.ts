@@ -1,4 +1,5 @@
-import { resolve } from 'node:path';
+import { writeFile } from 'node:fs/promises';
+import { parse, resolve } from 'node:path';
 import { fillTemplate } from '../core/engine.js';
 import { loadMetadata } from '../core/metadata.js';
 import {
@@ -11,11 +12,27 @@ import {
 } from '../utils/paths.js';
 import { runExternalFill } from '../core/external/index.js';
 import { runRecipe } from '../core/recipe/index.js';
+import {
+  generateEmploymentMemo,
+  isEmploymentTemplateId,
+  renderEmploymentMemoMarkdown,
+  type MemoFormat,
+} from '../core/employment/memo.js';
+
+interface FillMemoArgs {
+  enabled: boolean;
+  format: MemoFormat;
+  jsonOutputPath?: string;
+  markdownOutputPath?: string;
+  jurisdiction?: string;
+  baselineTemplateId?: string;
+}
 
 export interface FillArgs {
   template: string;
   output?: string;
   values: Record<string, string>;
+  memo?: FillMemoArgs;
 }
 
 function validateTemplateFillRequest(templateDir: string, values: Record<string, string>): void {
@@ -57,6 +74,12 @@ export async function runFill(args: FillArgs): Promise<void> {
   const resolvedOutput = resolve(outputPath);
 
   try {
+    if (args.memo?.enabled && !isEmploymentTemplateId(args.template)) {
+      throw new Error(
+        `Memo generation is currently supported only for employment templates. Received template "${args.template}".`
+      );
+    }
+
     if (isRecipe) {
       const result = await runRecipe({
         recipeId: args.template,
@@ -85,11 +108,61 @@ export async function runFill(args: FillArgs): Promise<void> {
       console.log(`Filled ${result.metadata.name}`);
       console.log(`Output: ${result.outputPath}`);
       console.log(`Fields used: ${result.fieldsUsed.join(', ')}`);
+
+      if (args.memo?.enabled) {
+        const memo = generateEmploymentMemo({
+          templateId: args.template,
+          templateMetadata: result.metadata,
+          values: args.values,
+          jurisdiction: args.memo.jurisdiction,
+          baselineTemplateId: args.memo.baselineTemplateId,
+        });
+
+        const memoOutputPaths = getMemoOutputPaths({
+          outputPath: resolvedOutput,
+          format: args.memo.format,
+          jsonOutputPath: args.memo.jsonOutputPath,
+          markdownOutputPath: args.memo.markdownOutputPath,
+        });
+
+        if (memoOutputPaths.jsonPath) {
+          await writeFile(memoOutputPaths.jsonPath, `${JSON.stringify(memo, null, 2)}\n`, 'utf-8');
+          console.log(`Memo JSON: ${memoOutputPaths.jsonPath}`);
+        }
+
+        if (memoOutputPaths.markdownPath) {
+          const markdown = renderEmploymentMemoMarkdown(memo);
+          await writeFile(memoOutputPaths.markdownPath, `${markdown}\n`, 'utf-8');
+          console.log(`Memo Markdown: ${memoOutputPaths.markdownPath}`);
+        }
+      }
     }
   } catch (err) {
     console.error(`Error: ${(err as Error).message}`);
     process.exit(1);
   }
+}
+
+function getMemoOutputPaths(args: {
+  outputPath: string;
+  format: MemoFormat;
+  jsonOutputPath?: string;
+  markdownOutputPath?: string;
+}): { jsonPath?: string; markdownPath?: string } {
+  const outputParts = parse(args.outputPath);
+  const defaultBase = resolve(outputParts.dir, outputParts.name || outputParts.base);
+
+  const wantsJson = args.format === 'json' || args.format === 'both';
+  const wantsMarkdown = args.format === 'markdown' || args.format === 'both';
+
+  return {
+    jsonPath: wantsJson
+      ? resolve(args.jsonOutputPath ?? `${defaultBase}.memo.json`)
+      : undefined,
+    markdownPath: wantsMarkdown
+      ? resolve(args.markdownOutputPath ?? `${defaultBase}.memo.md`)
+      : undefined,
+  };
 }
 
 function getAvailableIds(): string[] {

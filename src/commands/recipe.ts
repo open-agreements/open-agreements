@@ -11,6 +11,8 @@ export interface RecipeRunArgs {
   output?: string;
   data?: string;
   keepIntermediate?: boolean;
+  computedOut?: string;
+  normalizeBrackets?: boolean;
 }
 
 export async function runRecipeCommand(args: RecipeRunArgs): Promise<void> {
@@ -25,7 +27,7 @@ export async function runRecipeCommand(args: RecipeRunArgs): Promise<void> {
     process.exit(1);
   }
 
-  let values: Record<string, string> = {};
+  let values: Record<string, string | boolean> = {};
   if (args.data) {
     values = JSON.parse(readFileSync(args.data, 'utf-8'));
   }
@@ -39,10 +41,15 @@ export async function runRecipeCommand(args: RecipeRunArgs): Promise<void> {
       outputPath,
       values,
       keepIntermediate: args.keepIntermediate,
+      computedOutPath: args.computedOut ? resolve(args.computedOut) : undefined,
+      normalizeBracketArtifacts: args.normalizeBrackets,
     });
     console.log(`Filled ${result.metadata.name}`);
     console.log(`Output: ${result.outputPath}`);
     console.log(`Fields used: ${result.fieldsUsed.join(', ')}`);
+    if (result.computedOutPath && result.computedArtifact) {
+      console.log(`Computed artifact: ${result.computedOutPath}`);
+    }
   } catch (err) {
     console.error(`Error: ${(err as Error).message}`);
     process.exit(1);

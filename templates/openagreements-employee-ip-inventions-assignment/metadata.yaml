@@ -1,0 +1,69 @@
+name: OpenAgreements Employee IP and Inventions Assignment
+description: >-
+  Employee proprietary information and inventions assignment agreement with
+  explicit prior-inventions and personal-project carveout language placeholders.
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-employee-ip-inventions-assignment
+version: '1.0'
+license: CC-BY-4.0
+allow_derivatives: true
+attribution_text: >-
+  Authored by OpenAgreements contributors. Baseline structure inspired by
+  permissive public references including the Balanced Employee IP Agreement
+  (CC0) and Papertrail legal-docs (CC0). Licensed under CC BY 4.0.
+fields:
+  - name: company_name
+    type: string
+    description: Legal name of employer
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of employee
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Effective date of this agreement
+    section: Timing
+  - name: prior_inventions_disclosure
+    type: string
+    description: List of prior inventions excluded from assignment, or None
+    default: None listed
+    section: Inventions
+  - name: excluded_inventions_statement
+    type: string
+    description: Carveout statement for independently developed inventions
+    default: >-
+      Inventions developed entirely on personal time without use of company
+      equipment, supplies, facilities, confidential information, or trade
+      secrets are excluded to the extent permitted by applicable law.
+    section: Inventions
+  - name: confidential_information_definition
+    type: string
+    description: Definition summary for confidential information obligations
+    section: Confidentiality
+  - name: return_of_materials_timing
+    type: string
+    description: Timing for return or deletion of company materials
+    section: Confidentiality
+  - name: post_termination_assistance
+    type: string
+    description: Cooperation obligations after termination
+    default: reasonable assistance with filings and signatures related to assigned inventions
+    section: Inventions
+  - name: governing_law
+    type: string
+    description: Governing law state
+    default: California
+    section: Legal
+  - name: venue
+    type: string
+    description: Venue for disputes
+    default: state and federal courts in the governing law state
+    section: Legal
+required_fields:
+  - company_name
+  - employee_name
+  - effective_date
+  - confidential_information_definition
+  - return_of_materials_timing
+  - governing_law
+  - venue

@@ -53,6 +53,18 @@ The following template sources are **not included** because they use CC BY-ND an
 
 These may be added in the future if their publishers provide clear guidance on programmatic use, or via the recipe tier (download at runtime).
 
+### Employment Source Classifications
+
+Employment workflow sources are additionally tracked by terms compatibility:
+
+- `permissive` (compatible with in-repo or derivative workflows)
+- `pointer-only` (reference but no vendoring by default)
+- `restricted-no-automation` (excluded from automated onboarding)
+
+Current v1 employment policy and source registry:
+
+- `docs/employment-source-policy.md`
+
 ## Integrity Enforcement
 
 External templates include a SHA-256 hash (`source_sha256` in `metadata.yaml`) of the original DOCX file. Both the `validate` command and the `fill` command verify this hash before processing, ensuring the committed file has not been accidentally modified.

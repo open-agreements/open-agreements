@@ -1,0 +1,59 @@
+name: OpenAgreements Employment Confidentiality Acknowledgement
+description: >-
+  Employee confidentiality and acceptable-use acknowledgement companion for
+  onboarding packets, including reporting and post-employment handling.
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-employment-confidentiality-acknowledgement
+version: '1.0'
+license: CC-BY-4.0
+allow_derivatives: true
+attribution_text: >-
+  Authored by OpenAgreements contributors using permissive public reference
+  patterns from Papertrail legal-docs (CC0) and open policy frameworks.
+  Licensed under CC BY 4.0.
+fields:
+  - name: company_name
+    type: string
+    description: Legal name of the company
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of employee
+    section: Parties
+  - name: policy_effective_date
+    type: date
+    description: Effective date for this acknowledgement
+    section: Timing
+  - name: approved_tools_scope
+    type: string
+    description: Approved tools/systems scope for company data
+    section: Data Handling
+  - name: data_access_scope
+    type: string
+    description: Permitted access scope and business purpose
+    section: Data Handling
+  - name: security_reporting_contact
+    type: string
+    description: Contact for reporting incidents or accidental disclosure
+    section: Reporting
+  - name: post_employment_obligations
+    type: string
+    description: Obligations after employment ends
+    default: no retention, sharing, or use of company confidential information after termination
+    section: Post-Employment
+  - name: acknowledgement_date
+    type: date
+    description: Date of employee acknowledgement
+    section: Signature
+  - name: signatory_name
+    type: string
+    description: Printed name used in signature block
+    section: Signature
+required_fields:
+  - company_name
+  - employee_name
+  - policy_effective_date
+  - approved_tools_scope
+  - data_access_scope
+  - security_reporting_contact
+  - acknowledgement_date
+  - signatory_name

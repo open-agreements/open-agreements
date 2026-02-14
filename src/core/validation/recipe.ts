@@ -2,7 +2,9 @@ import { readdirSync, existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { validateRecipeMetadata, loadRecipeMetadata } from '../metadata.js';
 import { CleanConfigSchema } from '../metadata.js';
+import { NormalizeConfigSchema } from '../metadata.js';
 import { parseReplacementKey } from '../recipe/replacement-keys.js';
+import { ComputedProfileSchema } from '../recipe/computed.js';
 
 export interface RecipeValidationResult {
   recipeId: string;
@@ -53,8 +55,23 @@ export function validateRecipe(
   // Scaffold detection: if only metadata.yaml exists, this is a scaffold
   const metadata = loadRecipeMetadata(recipeDir);
   const metadataFieldNames = new Set(metadata.fields.map((field) => field.name));
+  const computedPath = join(recipeDir, 'computed.json');
   const hasReplacements = existsSync(join(recipeDir, 'replacements.json'));
   const isScaffold = !hasReplacements;
+
+  // Validate computed.json if present
+  if (existsSync(computedPath)) {
+    try {
+      const raw = readFileSync(computedPath, 'utf-8');
+      ComputedProfileSchema.parse(JSON.parse(raw));
+    } catch (err) {
+      if (err instanceof Error) {
+        errors.push(`computed.json: ${err.message}`);
+      } else {
+        errors.push('computed.json: invalid format');
+      }
+    }
+  }
 
   if (isScaffold) {
     if (strict) {
@@ -143,6 +160,17 @@ export function validateRecipe(
       CleanConfigSchema.parse(JSON.parse(raw));
     } catch {
       errors.push(`clean.json: invalid format`);
+    }
+  }
+
+  // Validate normalize.json if present
+  const normalizePath = join(recipeDir, 'normalize.json');
+  if (existsSync(normalizePath)) {
+    try {
+      const raw = readFileSync(normalizePath, 'utf-8');
+      NormalizeConfigSchema.parse(JSON.parse(raw));
+    } catch {
+      errors.push('normalize.json: invalid format');
     }
   }
 

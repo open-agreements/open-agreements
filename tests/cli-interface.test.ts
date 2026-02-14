@@ -1,5 +1,5 @@
 import { execFileSync } from 'node:child_process';
-import { mkdtempSync, mkdirSync, rmSync, writeFileSync, existsSync } from 'node:fs';
+import { mkdtempSync, mkdirSync, rmSync, writeFileSync, existsSync, readFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import AdmZip from 'adm-zip';
@@ -24,6 +24,39 @@ const COMMON_PAPER_REQUIRED_VALUES: Record<string, string> = {
   changes_to_standard_terms: 'None.',
 };
 
+const EMPLOYMENT_OFFER_REQUIRED_VALUES: Record<string, string> = {
+  employer_name: 'Acme, Inc.',
+  employee_name: 'Taylor Developer',
+  position_title: 'Senior Software Engineer',
+  employment_type: 'full-time',
+  start_date: '2026-03-01',
+  base_salary: '$220,000 annualized',
+  work_location: 'Remote (United States)',
+  governing_law: 'California',
+  offer_expiration_date: '2026-02-28',
+};
+
+const EMPLOYEE_IP_REQUIRED_VALUES: Record<string, string> = {
+  company_name: 'Acme, Inc.',
+  employee_name: 'Taylor Developer',
+  effective_date: '2026-03-01',
+  confidential_information_definition: 'all non-public technical and business information',
+  return_of_materials_timing: 'within 5 business days of termination',
+  governing_law: 'California',
+  venue: 'state and federal courts in San Francisco County, California',
+};
+
+const CONFIDENTIALITY_ACK_REQUIRED_VALUES: Record<string, string> = {
+  company_name: 'Acme, Inc.',
+  employee_name: 'Taylor Developer',
+  policy_effective_date: '2026-03-01',
+  approved_tools_scope: 'company-managed systems and approved productivity tooling',
+  data_access_scope: 'least-privilege access for assigned job duties',
+  security_reporting_contact: 'security@acme.example',
+  acknowledgement_date: '2026-03-01',
+  signatory_name: 'Taylor Developer',
+};
+
 afterEach(() => {
   for (const dir of tempDirs.splice(0)) {
     rmSync(dir, { recursive: true, force: true });
@@ -39,6 +72,10 @@ function runCli(args: string[], env?: NodeJS.ProcessEnv): string {
       ...env,
     },
   });
+}
+
+function readJsonFile(path: string): unknown {
+  return JSON.parse(readFileSync(path, 'utf-8'));
 }
 
 function buildMinimalDocx(documentText: string): Buffer {
@@ -88,6 +125,167 @@ describe('CLI interface behavior', () => {
 
     runCli(args);
     expect(existsSync(outputPath)).toBe(true);
+  });
+
+  it('fill command renders output DOCX for employment offer template', () => {
+    const outDir = mkdtempSync(join(tmpdir(), 'oa-cli-employment-fill-'));
+    tempDirs.push(outDir);
+    const outputPath = join(outDir, 'employment-offer.docx');
+
+    const args = [
+      'fill',
+      'openagreements-employment-offer-letter',
+      '-o',
+      outputPath,
+      ...Object.entries(EMPLOYMENT_OFFER_REQUIRED_VALUES).flatMap(([key, value]) => ['--set', `${key}=${value}`]),
+    ];
+
+    runCli(args);
+    expect(existsSync(outputPath)).toBe(true);
+  });
+
+  it('fill command renders output DOCX for employee IP template', () => {
+    const outDir = mkdtempSync(join(tmpdir(), 'oa-cli-employment-ip-fill-'));
+    tempDirs.push(outDir);
+    const outputPath = join(outDir, 'employment-ip.docx');
+
+    const args = [
+      'fill',
+      'openagreements-employee-ip-inventions-assignment',
+      '-o',
+      outputPath,
+      ...Object.entries(EMPLOYEE_IP_REQUIRED_VALUES).flatMap(([key, value]) => ['--set', `${key}=${value}`]),
+    ];
+
+    runCli(args);
+    expect(existsSync(outputPath)).toBe(true);
+  });
+
+  it('fill command renders output DOCX for confidentiality acknowledgement template', () => {
+    const outDir = mkdtempSync(join(tmpdir(), 'oa-cli-employment-ack-fill-'));
+    tempDirs.push(outDir);
+    const outputPath = join(outDir, 'employment-confidentiality-ack.docx');
+
+    const args = [
+      'fill',
+      'openagreements-employment-confidentiality-acknowledgement',
+      '-o',
+      outputPath,
+      ...Object.entries(CONFIDENTIALITY_ACK_REQUIRED_VALUES).flatMap(([key, value]) => ['--set', `${key}=${value}`]),
+    ];
+
+    runCli(args);
+    expect(existsSync(outputPath)).toBe(true);
+  });
+
+  it('fill command can emit employment memo JSON with disclaimer and jurisdiction warning when rule matches', () => {
+    const outDir = mkdtempSync(join(tmpdir(), 'oa-cli-employment-memo-json-'));
+    tempDirs.push(outDir);
+
+    const outputPath = join(outDir, 'employment-ip.docx');
+    const memoJsonPath = join(outDir, 'employment-ip.memo.json');
+
+    const args = [
+      'fill',
+      'openagreements-employee-ip-inventions-assignment',
+      '-o',
+      outputPath,
+      '--memo',
+      'json',
+      '--memo-json',
+      memoJsonPath,
+      '--memo-jurisdiction',
+      'California',
+      ...Object.entries(EMPLOYEE_IP_REQUIRED_VALUES).flatMap(([key, value]) => ['--set', `${key}=${value}`]),
+    ];
+
+    runCli(args);
+
+    expect(existsSync(outputPath)).toBe(true);
+    expect(existsSync(memoJsonPath)).toBe(true);
+
+    const memo = readJsonFile(memoJsonPath) as {
+      disclaimer: string;
+      findings: Array<{ category: string; summary: string }>;
+    };
+
+    expect(memo.disclaimer).toContain('not legal advice');
+    expect(memo.findings.some((finding) => finding.category === 'jurisdiction_warning')).toBe(true);
+
+    const memoText = JSON.stringify(memo).toLowerCase();
+    expect(memoText).not.toContain('we recommend');
+    expect(memoText).not.toContain('you should');
+    expect(memoText).not.toContain('best strategy');
+  });
+
+  it('fill command does not fabricate jurisdiction warnings when no rule matches', () => {
+    const outDir = mkdtempSync(join(tmpdir(), 'oa-cli-employment-memo-no-match-'));
+    tempDirs.push(outDir);
+
+    const outputPath = join(outDir, 'employment-offer.docx');
+    const memoJsonPath = join(outDir, 'employment-offer.memo.json');
+
+    const args = [
+      'fill',
+      'openagreements-employment-offer-letter',
+      '-o',
+      outputPath,
+      '--memo',
+      'json',
+      '--memo-json',
+      memoJsonPath,
+      '--memo-jurisdiction',
+      'Texas',
+      ...Object.entries({
+        ...EMPLOYMENT_OFFER_REQUIRED_VALUES,
+        governing_law: 'Texas',
+      }).flatMap(([key, value]) => ['--set', `${key}=${value}`]),
+    ];
+
+    runCli(args);
+
+    expect(existsSync(outputPath)).toBe(true);
+    expect(existsSync(memoJsonPath)).toBe(true);
+
+    const memo = readJsonFile(memoJsonPath) as {
+      disclaimer: string;
+      findings: Array<{ category: string }>;
+    };
+
+    expect(memo.disclaimer).toContain('not legal advice');
+    expect(memo.findings.some((finding) => finding.category === 'jurisdiction_warning')).toBe(false);
+  });
+
+  it('fill command can emit employment memo Markdown with disclaimer', () => {
+    const outDir = mkdtempSync(join(tmpdir(), 'oa-cli-employment-memo-md-'));
+    tempDirs.push(outDir);
+
+    const outputPath = join(outDir, 'employment-ack.docx');
+    const memoMarkdownPath = join(outDir, 'employment-ack.memo.md');
+
+    const args = [
+      'fill',
+      'openagreements-employment-confidentiality-acknowledgement',
+      '-o',
+      outputPath,
+      '--memo',
+      'markdown',
+      '--memo-md',
+      memoMarkdownPath,
+      ...Object.entries(CONFIDENTIALITY_ACK_REQUIRED_VALUES).flatMap(([key, value]) => ['--set', `${key}=${value}`]),
+    ];
+
+    runCli(args);
+
+    expect(existsSync(outputPath)).toBe(true);
+    expect(existsSync(memoMarkdownPath)).toBe(true);
+
+    const markdown = readFileSync(memoMarkdownPath, 'utf-8').toLowerCase();
+    expect(markdown).toContain('## disclaimer');
+    expect(markdown).toContain('not legal advice');
+    expect(markdown).not.toContain('we recommend');
+    expect(markdown).not.toContain('you should');
+    expect(markdown).not.toContain('best strategy');
   });
 
   it.openspec('OA-035')('fill command reports missing required fields', () => {
