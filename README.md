@@ -9,7 +9,7 @@
 [![Tests: Vitest](https://img.shields.io/badge/tests-vitest-6E9F18)](https://vitest.dev/)
 [![OpenSpec Traceability](https://img.shields.io/badge/openspec-traceability%20gate-brightgreen)](./tests/OPENSPEC_TRACEABILITY.md)
 
-Fill standard legal agreement templates and produce signable DOCX files. 25 templates covering NDAs, cloud terms, contractor agreements, SAFEs, and NVCA financing documents.
+Fill standard legal agreement templates and produce signable DOCX files. 28 templates covering NDAs, cloud terms, employment docs, contractor agreements, SAFEs, and NVCA financing documents.
 
 Built by the team behind [UseJunior.com](https://usejunior.com) — in production at Am Law 100 firms.
 
@@ -82,22 +82,22 @@ open-agreements fill common-paper-mutual-nda -d values.json -o my-nda.docx
 
 ### What Happens
 
-1. Claude runs `list --json` to discover 25 templates and their fields
+1. Claude runs `list --json` to discover 28 templates and their fields
 2. Claude interviews you for field values (grouped by section, up to 4 questions per round)
 3. Claude runs `fill <template>` to render a DOCX preserving all original formatting
 4. You review and sign the output document
 
 ## Templates
 
-25 templates across three tiers. Run `open-agreements list` for the full inventory.
+28 templates across three tiers. Run `open-agreements list` for the full inventory.
 
 | Tier | Count | Source | How It Works |
 |------|-------|--------|--------------|
-| Internal templates | 14 | [Common Paper](https://commonpaper.com), [Bonterms](https://bonterms.com) | Shipped in package, CC BY 4.0 |
+| Internal templates | 17 | [Common Paper](https://commonpaper.com), [Bonterms](https://bonterms.com), OpenAgreements | Shipped in package, CC BY 4.0 |
 | External templates | 4 | [Y Combinator](https://www.ycombinator.com/documents) | Vendored unchanged, CC BY-ND 4.0 |
 | Recipes | 7 | [NVCA](https://nvca.org/model-legal-documents/) | Downloaded on demand (not redistributable) |
 
-**Internal templates** (NDAs, cloud terms, contractor agreements, etc.) are CC BY 4.0 — we ship the DOCX with `{tag}` placeholders.
+**Internal templates** (NDAs, cloud terms, employment forms, contractor agreements, etc.) are CC BY 4.0 — we ship the DOCX with `{tag}` placeholders.
 
 **External templates** (YC SAFEs) are CC BY-ND 4.0 — we vendor the original unchanged. The filled output is a transient derivative on your machine.
 
@@ -241,6 +241,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for how to add templates, recipes, and ot
 
 - [Adding templates](docs/adding-templates.md) (CC BY 4.0 / CC0 sources)
 - [Adding recipes](docs/adding-recipes.md) (non-redistributable sources)
+- [Employment source policy](docs/employment-source-policy.md) (trust and terms classifications)
 
 ## Releasing
 

@@ -5,6 +5,7 @@
 - Template source must be **CC BY 4.0** or **CC0** licensed
 - The source document must be available as DOCX
 - You must include proper attribution per the license
+- Source terms must not conflict with automation or redistribution policy
 
 ## Steps
 
@@ -78,3 +79,15 @@ open-agreements validate <template-name>
 ```
 
 This checks metadata schema compliance, placeholder-field alignment, and license compliance.
+
+## Source Terms Gate
+
+Before adding a template, classify the source as one of:
+
+- `permissive`
+- `pointer-only`
+- `restricted-no-automation`
+
+Do not onboard `restricted-no-automation` sources into `templates/`, `external/`,
+or recipe auto-fetch flows without explicit written permission. Employment-pack
+classifications are tracked in `docs/employment-source-policy.md`.

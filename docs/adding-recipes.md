@@ -151,6 +151,39 @@ drafting notes, preliminary commentary, multi-paragraph comment blocks, etc.
 | `removeRanges` | `{ start, end }[]` | Remove all paragraphs from the first matching `start` through the first subsequent `end` (inclusive). All occurrences of a range pattern are matched, not just the first. |
 | `clearParts` | string[] | OOXML part paths to clear entirely (e.g., `word/footer1.xml`) |
 
+### Optional: normalize.json for post-fill clause fixes
+
+Some source documents (especially NVCA forms) still contain bracket artifacts
+after normal fill (for example trailing `]`, unresolved underscore placeholders,
+or alternative clauses that should collapse to one branch). Add `normalize.json`
+to apply explicit post-fill rules.
+
+```json
+{
+  "paragraph_rules": [
+    {
+      "id": "fill-company-counsel-name",
+      "section_heading": "Conditions of the Purchasers’ Obligations at Closing",
+      "section_heading_any": ["Qualifications"],
+      "paragraph_contains": "The Purchasers shall have received from",
+      "replacements": {
+        "[___________]": "{company_counsel_name}"
+      },
+      "trim_unmatched_trailing_bracket": true
+    }
+  ]
+}
+```
+
+Rule behavior:
+- `section_heading`: primary heading to scope the rule.
+- `section_heading_any`: optional heading aliases (useful when source headings differ across versions).
+- `paragraph_contains`: required anchor; rule applies only if paragraph contains this text.
+- `replacements`: optional token replacements; `{field_name}` is resolved from fill values (or `_______` if missing).
+- `trim_unmatched_trailing_bracket`: removes dangling trailing `]` after replacement.
+
+This keeps cleanup declarative and versionable, instead of relying on brittle ad hoc parsing scripts.
+
 ### Range deletion
 
 `removeRanges` is useful for multi-paragraph blocks where individual patterns would be
