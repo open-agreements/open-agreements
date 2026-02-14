@@ -99,6 +99,48 @@ describe('CLI program wiring', () => {
     }
   });
 
+  itPlatform('parses fill memo flags into runFill payload', async () => {
+    const program = createProgram();
+
+    await allureStep('Parse fill command with memo options', async () => {
+      await program.parseAsync([
+        'node',
+        'open-agreements',
+        'fill',
+        'openagreements-employment-offer-letter',
+        '--set',
+        'employer_name=Acme Inc.',
+        '--memo',
+        'both',
+        '--memo-json',
+        '/tmp/memo.json',
+        '--memo-md',
+        '/tmp/memo.md',
+        '--memo-jurisdiction',
+        'California',
+        '--memo-baseline',
+        'openagreements-employment-offer-letter',
+      ]);
+    });
+
+    expect(runFillMock).toHaveBeenCalledTimes(1);
+    expect(runFillMock).toHaveBeenCalledWith({
+      template: 'openagreements-employment-offer-letter',
+      output: undefined,
+      values: {
+        employer_name: 'Acme Inc.',
+      },
+      memo: {
+        enabled: true,
+        format: 'both',
+        jsonOutputPath: '/tmp/memo.json',
+        markdownOutputPath: '/tmp/memo.md',
+        jurisdiction: 'California',
+        baselineTemplateId: 'openagreements-employment-offer-letter',
+      },
+    });
+  });
+
   itPlatform('rejects invalid --set values without key=value format', async () => {
     const program = createProgram();
 
@@ -114,6 +156,21 @@ describe('CLI program wiring', () => {
     ).rejects.toThrow('Invalid --set format: "=missingKey"');
 
     expect(runFillMock).not.toHaveBeenCalled();
+  });
+
+  itPlatform('rejects invalid --memo format values', async () => {
+    const program = createProgram();
+
+    await expect(
+      program.parseAsync([
+        'node',
+        'open-agreements',
+        'fill',
+        'openagreements-employment-offer-letter',
+        '--memo',
+        'xml',
+      ])
+    ).rejects.toThrow('Invalid --memo format: "xml"');
   });
 
   itPlatform.openspec('OA-047')('forwards list flags to runList', async () => {
@@ -154,6 +211,8 @@ describe('CLI program wiring', () => {
       'out.docx',
       '--data',
       'values.json',
+      '--computed-out',
+      'computed.json',
       '--keep-intermediate',
     ]);
 
@@ -188,7 +247,9 @@ describe('CLI program wiring', () => {
       input: 'input.docx',
       output: 'out.docx',
       data: 'values.json',
+      computedOut: 'computed.json',
       keepIntermediate: true,
+      normalizeBrackets: true,
     });
 
     expect(runRecipeCleanMock).toHaveBeenCalledWith({

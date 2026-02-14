@@ -18,6 +18,7 @@ type EpicName =
 const DEFAULT_EPIC: EpicName = 'Platform & Distribution';
 const JSON_CONTENT_TYPE = 'application/json';
 const TEXT_CONTENT_TYPE = 'text/plain';
+const MARKDOWN_CONTENT_TYPE = 'text/markdown';
 const MAX_ASSERTIONS_RECORDED_PER_TEST = 250;
 const MAX_STRING_PREVIEW_CHARS = 500;
 const MAX_ARRAY_PREVIEW_ITEMS = 25;
@@ -480,6 +481,32 @@ export async function allureAttachment(name: string, content: string, contentTyp
   if (typeof allure !== 'undefined' && typeof allure.attachment === 'function') {
     await allure.attachment(name, content, contentType);
   }
+}
+
+export type AllureSeverityLevel = 'blocker' | 'critical' | 'normal' | 'minor' | 'trivial';
+
+export async function allureSeverity(level: AllureSeverityLevel): Promise<void> {
+  if (typeof allure !== 'undefined' && typeof allure.severity === 'function') {
+    await allure.severity(level);
+  }
+}
+
+export async function allureMarkdownAttachment(name: string, content: string): Promise<void> {
+  await allureAttachment(name, content, MARKDOWN_CONTENT_TYPE);
+}
+
+export async function allureDescription(content: string): Promise<void> {
+  if (typeof allure !== 'undefined' && typeof allure.description === 'function') {
+    await allure.description(content);
+  }
+}
+
+export async function allureDescriptionHtml(content: string): Promise<void> {
+  if (typeof allure !== 'undefined' && typeof allure.descriptionHtml === 'function') {
+    await allure.descriptionHtml(content);
+    return;
+  }
+  await allureDescription(content);
 }
 
 export async function allureJsonAttachment(name: string, payload: unknown): Promise<void> {
