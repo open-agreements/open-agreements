@@ -1,4 +1,4 @@
-import { mkdtempSync, writeFileSync, existsSync } from 'node:fs';
+import { mkdtempSync, mkdirSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { describe, expect } from 'vitest';
@@ -23,7 +23,7 @@ describe('contracts-workspace-mcp tools', () => {
     ]);
   });
 
-  it('initializes workspace with lifecycle directories and CONTRACTS.md', async () => {
+  it('returns workspace setup suggestions without mutating the filesystem', async () => {
     const root = mkdtempSync(join(tmpdir(), 'oa-mcp-init-'));
     const result = await callTool('workspace_init', {
       root_dir: root,
@@ -34,13 +34,12 @@ describe('contracts-workspace-mcp tools', () => {
 
     expect(result.isError).toBeUndefined();
     expect(payload.root_dir).toBe(root);
-    expect(existsSync(join(root, 'forms'))).toBe(true);
-    expect(existsSync(join(root, 'drafts'))).toBe(true);
-    expect(existsSync(join(root, 'incoming'))).toBe(true);
-    expect(existsSync(join(root, 'executed'))).toBe(true);
-    expect(existsSync(join(root, 'archive'))).toBe(true);
-    expect(existsSync(join(root, 'forms', 'finance'))).toBe(true);
-    expect(existsSync(join(root, 'CONTRACTS.md'))).toBe(true);
+    expect(payload.mode).toBe('suggest-only');
+    expect((payload.missing_directories as string[])).toContain('finance');
+    expect((payload.missing_directories as string[])).not.toContain('finance/forms');
+    expect((payload.missing_files as string[])).toContain('CONTRACTS.md');
+    expect(existsSync(join(root, 'finance'))).toBe(false);
+    expect(existsSync(join(root, 'CONTRACTS.md'))).toBe(false);
   });
 
   it('reports invalid catalog entries with structured errors', async () => {
@@ -67,7 +66,9 @@ entries:
 
   it('generates status index and returns lint findings', async () => {
     const root = mkdtempSync(join(tmpdir(), 'oa-mcp-status-'));
-    await callTool('workspace_init', { root_dir: root });
+    for (const folder of ['forms', 'forms/corporate', 'drafts', 'incoming', 'executed', 'archive']) {
+      mkdirSync(join(root, folder), { recursive: true });
+    }
 
     writeFileSync(join(root, 'forms', 'corporate', 'example.pdf'), 'pdf', 'utf-8');
 

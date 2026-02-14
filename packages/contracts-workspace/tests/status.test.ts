@@ -1,4 +1,4 @@
-import { mkdtempSync, rmSync, utimesSync, writeFileSync } from 'node:fs';
+import { mkdirSync, mkdtempSync, rmSync, utimesSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { afterEach, describe, expect } from 'vitest';
@@ -29,6 +29,11 @@ describe('status and lint', () => {
 
     initializeWorkspace(root);
 
+    // Init no longer creates lifecycle dirs — create them for this test
+    mkdirSync(join(root, 'forms', 'corporate'), { recursive: true });
+    mkdirSync(join(root, 'executed'), { recursive: true });
+    mkdirSync(join(root, 'drafts'), { recursive: true });
+
     writeFileSync(join(root, 'forms', 'corporate', 'template.pdf'), 'pdf-bytes');
     writeFileSync(join(root, 'executed', 'unsigned.docx'), 'docx-bytes');
     writeFileSync(join(root, 'drafts', 'draft_executed.docx'), 'docx-bytes');
@@ -40,7 +45,6 @@ describe('status and lint', () => {
     expect(lint.findings.some((finding) => finding.code === 'disallowed-file-type')).toBe(true);
     expect(lint.findings.some((finding) => finding.code === 'missing-executed-marker')).toBe(true);
     expect(lint.findings.some((finding) => finding.code === 'executed-marker-outside-executed')).toBe(true);
-    expect(lint.findings.some((finding) => finding.code === 'missing-index')).toBe(true);
   });
 
   it('detects stale contracts-index.yaml when files are newer than the index', () => {
@@ -48,6 +52,7 @@ describe('status and lint', () => {
     tempDirs.push(root);
 
     initializeWorkspace(root);
+    mkdirSync(join(root, 'incoming'), { recursive: true });
     const agreementPath = join(root, 'incoming', 'partner_msa.docx');
     writeFileSync(agreementPath, 'docx-bytes');
 

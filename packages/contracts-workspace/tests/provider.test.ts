@@ -197,11 +197,11 @@ describe('MemoryProvider works with initializeWorkspace', () => {
     const provider = new MemoryProvider('/mem-ws');
     const result = initializeWorkspace('/mem-ws', { agents: ['claude'] }, provider);
 
-    expect(result.createdDirectories.length).toBeGreaterThan(0);
     expect(result.createdFiles).toContain('CONTRACTS.md');
     expect(result.createdFiles).toContain('forms-catalog.yaml');
-    expect(provider.exists('forms')).toBe(true);
-    expect(provider.exists('executed')).toBe(true);
+    // Lifecycle dirs are not auto-created
+    expect(provider.exists('forms')).toBe(false);
+    expect(provider.exists('executed')).toBe(false);
     expect(provider.exists('CONTRACTS.md')).toBe(true);
     expect(provider.readTextFile('CONTRACTS.md')).toContain('CONTRACTS.md');
   });

@@ -25,3 +25,4 @@ export const AGENT_SETUP_DIR = '.contracts-workspace/agents';
 
 // These values are defaults. Runtime behavior reads from convention config.
 export const EXECUTED_SUFFIX = '_executed';
+export const PARTIALLY_EXECUTED_SUFFIX = '_partially_executed';

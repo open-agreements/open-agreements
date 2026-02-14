@@ -4,15 +4,24 @@ import {
   CATALOG_FILE,
   CONTRACTS_GUIDE_FILE,
   DEFAULT_FORM_TOPICS,
+  INDEX_FILE,
   LIFECYCLE_DIRS,
   type LifecycleDir,
 } from './constants.js';
-import { defaultConventions, writeConventions } from './convention-config.js';
+import { conventionsPath, defaultConventions, writeConventions } from './convention-config.js';
 import { scanExistingConventions } from './convention-scanner.js';
 import { createDefaultCatalog } from './default-catalog.js';
 import { createProvider } from './filesystem-provider.js';
+import { buildStatusIndex, collectWorkspaceDocuments, writeStatusIndex } from './indexer.js';
+import { lintWorkspace } from './lint.js';
 import type { WorkspaceProvider } from './provider.js';
-import type { AgentName, ConventionConfig, InitWorkspaceOptions, InitWorkspaceResult } from './types.js';
+import type {
+  AgentName,
+  ConventionConfig,
+  InitWorkspaceOptions,
+  InitWorkspacePlanResult,
+  InitWorkspaceResult,
+} from './types.js';
 
 export function initializeWorkspace(
   rootDir: string,
@@ -39,13 +48,11 @@ export function initializeWorkspace(
   // Write conventions config
   writeConventions(p, conventions);
 
+  // Track existing lifecycle directories but do not create them.
+  // Missing directories surface as lint warnings for the LLM agent to act on.
   for (const lifecycle of LIFECYCLE_DIRS) {
-    ensureDirectory(lifecycle, p, createdDirectories, existingDirectories);
-
-    if (lifecycle === 'forms') {
-      for (const topic of topics) {
-        ensureDirectory(`${lifecycle}/${topic}`, p, createdDirectories, existingDirectories);
-      }
+    if (p.exists(lifecycle)) {
+      existingDirectories.push(lifecycle);
     }
   }
 
@@ -79,15 +86,18 @@ export function initializeWorkspace(
     existingFiles
   );
 
+  // Write FOLDER.md only into lifecycle directories that already exist
   for (const lifecycle of LIFECYCLE_DIRS) {
-    const folderDocFile = `${lifecycle}/${conventions.documentation.folder_file}`;
-    ensureFile(
-      folderDocFile,
-      buildFolderMd(lifecycle, conventions, true),
-      p,
-      createdFiles,
-      existingFiles
-    );
+    if (p.exists(lifecycle)) {
+      const folderDocFile = `${lifecycle}/${conventions.documentation.folder_file}`;
+      ensureFile(
+        folderDocFile,
+        buildFolderMd(lifecycle, conventions, true),
+        p,
+        createdFiles,
+        existingFiles
+      );
+    }
   }
 
   const agents = normalizeAgents(options.agents);
@@ -109,6 +119,15 @@ export function initializeWorkspace(
     }
   }
 
+  // Generate status index so lint doesn't immediately warn about missing-index
+  if (!p.exists(INDEX_FILE)) {
+    const documents = collectWorkspaceDocuments(rootDir, p);
+    const lint = lintWorkspace(rootDir, p);
+    const index = buildStatusIndex(rootDir, documents, lint);
+    writeStatusIndex(rootDir, index, INDEX_FILE, p);
+    createdFiles.push(INDEX_FILE);
+  }
+
   return {
     rootDir,
     createdDirectories,
@@ -116,6 +135,70 @@ export function initializeWorkspace(
     createdFiles,
     existingFiles,
     agentInstructions,
+  };
+}
+
+export function planWorkspaceInitialization(
+  rootDir: string,
+  options: InitWorkspaceOptions = {},
+  provider?: WorkspaceProvider
+): InitWorkspacePlanResult {
+  const p = provider ?? createProvider(rootDir);
+
+  const isNonEmpty = hasExistingContent(p);
+  const conventions = isNonEmpty
+    ? scanExistingConventions(p)
+    : defaultConventions();
+
+  const topics = resolveSuggestedTopics(options.topics, conventions);
+  const agents = normalizeAgents(options.agents);
+
+  const suggestedDirectories = dedupe([
+    ...topics,
+    ...(agents.length > 0 ? [AGENT_SETUP_DIR] : []),
+  ]);
+
+  const workspaceDocFile = conventions.documentation.root_file;
+  const agentSnippetFiles = agents.map((agent) => `${AGENT_SETUP_DIR}/${agent}.md`);
+
+  const suggestedFiles = dedupe([
+    conventionsPath(),
+    CONTRACTS_GUIDE_FILE,
+    CATALOG_FILE,
+    workspaceDocFile,
+    ...agentSnippetFiles,
+    INDEX_FILE,
+  ]);
+
+  const existingDirectories = suggestedDirectories.filter((path) => p.exists(path));
+  const missingDirectories = suggestedDirectories.filter((path) => !p.exists(path));
+  const existingFiles = suggestedFiles.filter((path) => p.exists(path));
+  const missingFiles = suggestedFiles.filter((path) => !p.exists(path));
+
+  const agentInstructions = agents.map(
+    (agent) => `${agent}: ${AGENT_SETUP_DIR}/${agent}.md references ${CONTRACTS_GUIDE_FILE}`
+  );
+
+  const suggestedCommands = dedupe([
+    ...(missingDirectories.length > 0 ? ['mkdir -p <missing-directory-paths>'] : []),
+    ...(missingFiles.length > 0 ? ['Create missing workspace files from templates'] : []),
+    ...(missingFiles.includes(INDEX_FILE) ? ['open-agreements-workspace status generate'] : []),
+    'open-agreements-workspace status lint',
+  ]);
+
+  const lint = withoutLifecycleRootMissingWarnings(lintWorkspace(rootDir, p));
+
+  return {
+    rootDir,
+    suggestedDirectories,
+    existingDirectories,
+    missingDirectories,
+    suggestedFiles,
+    existingFiles,
+    missingFiles,
+    agentInstructions,
+    suggestedCommands,
+    lint,
   };
 }
 
@@ -165,6 +248,37 @@ function normalizeAgents(agents: AgentName[] | undefined): AgentName[] {
   }
 
   return [...new Set(agents.filter((agent) => agent === 'claude' || agent === 'gemini'))];
+}
+
+function dedupe(values: string[]): string[] {
+  return [...new Set(values)];
+}
+
+function resolveSuggestedTopics(
+  requestedTopics: string[] | undefined,
+  conventions: ConventionConfig
+): string[] {
+  if (requestedTopics && requestedTopics.length > 0) {
+    return dedupe(requestedTopics);
+  }
+
+  const conventionTopics = conventions.lifecycle.applicable_domains.filter(
+    (domain) => !LIFECYCLE_DIRS.includes(domain as LifecycleDir)
+  );
+  if (conventionTopics.length > 0) {
+    return dedupe(conventionTopics);
+  }
+
+  return [];
+}
+
+function withoutLifecycleRootMissingWarnings(lint: InitWorkspacePlanResult['lint']): InitWorkspacePlanResult['lint'] {
+  const findings = lint.findings.filter((finding) => finding.code !== 'missing-directory');
+  return {
+    findings,
+    errorCount: findings.filter((finding) => finding.severity === 'error').length,
+    warningCount: findings.filter((finding) => finding.severity === 'warning').length,
+  };
 }
 
 export function buildWorkspaceMd(config: ConventionConfig, domains: string[]): string {

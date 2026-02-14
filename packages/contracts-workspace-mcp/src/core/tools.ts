@@ -4,7 +4,7 @@ import { INDEX_FILE } from '../../../contracts-workspace/src/core/constants.js';
 import { catalogPath, fetchCatalogEntries, validateCatalog } from '../../../contracts-workspace/src/core/catalog.js';
 import { buildStatusIndex, collectWorkspaceDocuments, writeStatusIndex } from '../../../contracts-workspace/src/core/indexer.js';
 import { lintWorkspace } from '../../../contracts-workspace/src/core/lint.js';
-import { initializeWorkspace } from '../../../contracts-workspace/src/core/workspace-structure.js';
+import { planWorkspaceInitialization } from '../../../contracts-workspace/src/core/workspace-structure.js';
 
 type JsonSchema = Record<string, unknown>;
 
@@ -50,7 +50,7 @@ const StatusLintSchema = z.object({
 const tools: ToolDefinition[] = [
   {
     name: 'workspace_init',
-    description: 'Initialize lifecycle-first contract workspace folders and CONTRACTS.md.',
+    description: 'Preview topic-first workspace setup and return missing folders/files without creating them.',
     inputSchema: {
       type: 'object',
       properties: {
@@ -58,12 +58,12 @@ const tools: ToolDefinition[] = [
         agents: {
           type: 'array',
           items: { type: 'string', enum: ['claude', 'gemini'] },
-          description: 'Optional AI agent snippets to generate.',
+          description: 'Optional AI agent snippets to suggest.',
         },
         topics: {
           type: 'array',
           items: { type: 'string' },
-          description: 'Optional list of forms topic folders.',
+          description: 'Optional list of top-level topic folders to suggest.',
         },
       },
       additionalProperties: false,
@@ -71,13 +71,26 @@ const tools: ToolDefinition[] = [
     invoke: async (args) => {
       const input = WorkspaceInitSchema.parse(args ?? {});
       const rootDir = resolveRootDir(input.root_dir);
-      const result = initializeWorkspace(rootDir, {
+      const result = planWorkspaceInitialization(rootDir, {
         agents: input.agents,
         topics: input.topics,
       });
       return successResult({
         root_dir: rootDir,
-        ...result,
+        mode: 'suggest-only',
+        suggested_directories: result.suggestedDirectories,
+        existing_directories: result.existingDirectories,
+        missing_directories: result.missingDirectories,
+        suggested_files: result.suggestedFiles,
+        existing_files: result.existingFiles,
+        missing_files: result.missingFiles,
+        agent_instructions: result.agentInstructions,
+        suggested_commands: result.suggestedCommands,
+        lint: {
+          findings: result.lint.findings,
+          error_count: result.lint.errorCount,
+          warning_count: result.lint.warningCount,
+        },
       });
     },
   },

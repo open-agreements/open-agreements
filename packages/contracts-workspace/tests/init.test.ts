@@ -8,7 +8,7 @@ import {
   CONTRACTS_GUIDE_FILE,
   LIFECYCLE_DIRS,
 } from '../src/core/constants.js';
-import { initializeWorkspace } from '../src/core/workspace-structure.js';
+import { initializeWorkspace, planWorkspaceInitialization } from '../src/core/workspace-structure.js';
 
 const tempDirs: string[] = [];
 const it = itAllure.epic('Platform & Distribution');
@@ -20,21 +20,22 @@ afterEach(() => {
 });
 
 describe('initializeWorkspace', () => {
-  it('creates lifecycle directories, guide, catalog, and optional agent snippets', () => {
+  it('creates config files and agent snippets but does not create lifecycle directories', () => {
     const root = mkdtempSync(join(tmpdir(), 'oa-workspace-init-'));
     tempDirs.push(root);
 
     const result = initializeWorkspace(root, { agents: ['claude', 'gemini'] });
 
+    // Lifecycle directories are NOT auto-created — they surface as lint warnings
     for (const lifecycle of LIFECYCLE_DIRS) {
-      expect(existsSync(join(root, lifecycle))).toBe(true);
+      expect(existsSync(join(root, lifecycle))).toBe(false);
     }
     expect(existsSync(join(root, CONTRACTS_GUIDE_FILE))).toBe(true);
     expect(existsSync(join(root, CATALOG_FILE))).toBe(true);
     expect(existsSync(join(root, '.contracts-workspace', 'agents', 'claude.md'))).toBe(true);
     expect(existsSync(join(root, '.contracts-workspace', 'agents', 'gemini.md'))).toBe(true);
 
-    expect(result.createdDirectories.length).toBeGreaterThan(0);
+    expect(result.createdDirectories).not.toContain('forms');
     expect(result.createdFiles).toContain(CONTRACTS_GUIDE_FILE);
     expect(result.createdFiles).toContain(CATALOG_FILE);
     expect(result.agentInstructions.length).toBe(2);
@@ -49,8 +50,22 @@ describe('initializeWorkspace', () => {
 
     expect(second.createdDirectories.length).toBe(0);
     expect(second.createdFiles.length).toBe(0);
-    expect(second.existingDirectories.length).toBeGreaterThan(0);
     expect(second.existingFiles).toContain(CONTRACTS_GUIDE_FILE);
     expect(second.existingFiles).toContain(CATALOG_FILE);
+  });
+
+  it('plans workspace setup without creating files or directories', () => {
+    const root = mkdtempSync(join(tmpdir(), 'oa-workspace-plan-'));
+    tempDirs.push(root);
+
+    const plan = planWorkspaceInitialization(root, { agents: ['claude'], topics: ['finance'] });
+
+    expect(plan.missingDirectories).toContain('finance');
+    expect(plan.missingDirectories).not.toContain('finance/forms');
+    expect(plan.missingFiles).toContain(CONTRACTS_GUIDE_FILE);
+    expect(plan.missingFiles).toContain(CATALOG_FILE);
+    expect(plan.suggestedCommands).toContain('open-agreements-workspace status lint');
+    expect(existsSync(join(root, 'finance'))).toBe(false);
+    expect(existsSync(join(root, CONTRACTS_GUIDE_FILE))).toBe(false);
   });
 });
