@@ -1,0 +1,71 @@
+{
+  "paragraph_rules": [
+    {
+      "id": "costs-of-enforcement-select-each-party",
+      "section_heading": "Costs of Enforcement",
+      "paragraph_contains": "Each party will bear its own costs in respect of any disputes arising under this Agreement.",
+      "replacements": {
+        "[If any action at law or in equity (including, arbitration) is necessary to enforce or interpret the terms of any of the Transaction Agreements, the prevailing party shall be entitled to reasonable attorneys’ fees, costs and necessary disbursements in addition to any other relief to which such party may be entitled.]": "",
+        "[Each party will bear its own costs in respect of any disputes arising under this Agreement.]": "Each party will bear its own costs in respect of any disputes arising under this Agreement."
+      },
+      "trim_unmatched_trailing_bracket": true
+    },
+    {
+      "id": "fill-initial-closing-minimum-shares",
+      "section_heading": "Conditions of the Purchasers’ Obligations at Closing",
+      "section_heading_any": [
+        "Proceedings and Documents",
+        "Voting Agreement"
+      ],
+      "paragraph_contains": "A minimum of",
+      "replacements": {
+        "[_________]": "{minimum_shares_initial_closing}",
+        "[_______]": "{minimum_shares_initial_closing}"
+      },
+      "trim_unmatched_trailing_bracket": true
+    },
+    {
+      "id": "fill-company-counsel-name",
+      "section_heading": "Conditions of the Purchasers’ Obligations at Closing",
+      "section_heading_any": [
+        "Qualifications"
+      ],
+      "paragraph_contains": "The Purchasers shall have received from",
+      "replacements": {
+        "[___________]": "{company_counsel_name}"
+      },
+      "trim_unmatched_trailing_bracket": true
+    },
+    {
+      "id": "fill-board-composition-placeholders",
+      "section_heading": "Conditions of the Purchasers’ Obligations at Closing",
+      "section_heading_any": [
+        "Qualifications"
+      ],
+      "paragraph_contains": "authorized size of the Board of Directors",
+      "replacements": {
+        "[______]": "{board_size}",
+        "[_________________]": "{director_names}"
+      },
+      "trim_unmatched_trailing_bracket": true
+    },
+    {
+      "id": "trim-purchaser-country-concern-bracket",
+      "section_heading": "Representations and Warranties of the Purchaser",
+      "section_heading_any": [
+        "Residence"
+      ],
+      "paragraph_contains": "Except as otherwise disclosed in writing to the Company, the Purchaser is not a “person of a country of concern”",
+      "trim_unmatched_trailing_bracket": true
+    },
+    {
+      "id": "trim-purchaser-covered-person-bracket",
+      "section_heading": "Representations and Warranties of the Purchaser",
+      "section_heading_any": [
+        "Residence"
+      ],
+      "paragraph_contains": "The Purchaser is not a “covered person” as that term is defined in the DSP",
+      "trim_unmatched_trailing_bracket": true
+    }
+  ]
+}

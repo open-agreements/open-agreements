@@ -1,0 +1,103 @@
+{
+  "version": "1.0",
+  "max_passes": 4,
+  "rules": [
+    {
+      "id": "derive-dispute-resolution-track-arbitration",
+      "description": "Alternative 1 in the SPA uses arbitration.",
+      "when_all": [
+        { "field": "dispute_resolution_mode", "op": "eq", "value": "arbitration" }
+      ],
+      "set_audit": {
+        "dispute_resolution_track": "arbitration",
+        "forum_governing_law_alignment": "n/a-arbitration"
+      }
+    },
+    {
+      "id": "derive-dispute-resolution-track-courts",
+      "description": "Alternative 2 in the SPA uses state/federal courts.",
+      "when_all": [
+        { "field": "dispute_resolution_mode", "op": "eq", "value": "courts" }
+      ],
+      "set_audit": {
+        "dispute_resolution_track": "courts"
+      }
+    },
+    {
+      "id": "derive-arbitration-location-default",
+      "description": "Alternative 1 contains a [location] placeholder for arbitration venue.",
+      "when_all": [
+        { "field": "dispute_resolution_track", "op": "eq", "value": "arbitration" },
+        { "field": "arbitration_location", "op": "falsy" }
+      ],
+      "set_fill": {
+        "arbitration_location": "San Francisco, California"
+      }
+    },
+    {
+      "id": "derive-judicial-district-default-california",
+      "description": "Alternative 2 courts path: derive district if omitted.",
+      "when_all": [
+        { "field": "dispute_resolution_track", "op": "eq", "value": "courts" },
+        { "field": "state_lower", "op": "eq", "value": "california" },
+        { "field": "judicial_district", "op": "falsy" }
+      ],
+      "set_fill": {
+        "judicial_district": "Northern District of California"
+      }
+    },
+    {
+      "id": "derive-judicial-district-default-new-york",
+      "description": "Alternative 2 courts path: derive district if omitted.",
+      "when_all": [
+        { "field": "dispute_resolution_track", "op": "eq", "value": "courts" },
+        { "field": "state_lower", "op": "eq", "value": "new york" },
+        { "field": "judicial_district", "op": "falsy" }
+      ],
+      "set_fill": {
+        "judicial_district": "Southern District of New York"
+      }
+    },
+    {
+      "id": "derive-judicial-district-default-delaware",
+      "description": "Alternative 2 courts path: derive district if omitted.",
+      "when_all": [
+        { "field": "dispute_resolution_track", "op": "eq", "value": "courts" },
+        { "field": "state_lower", "op": "eq", "value": "delaware" },
+        { "field": "judicial_district", "op": "falsy" }
+      ],
+      "set_fill": {
+        "judicial_district": "District of Delaware"
+      }
+    },
+    {
+      "id": "derive-governing-law-baseline",
+      "description": "NVCA SPA governing law clause is fixed to Delaware.",
+      "set_audit": {
+        "governing_law_state": "delaware"
+      }
+    },
+    {
+      "id": "derive-forum-governing-alignment",
+      "description": "Forum aligns with governing law when courts mode also uses Delaware.",
+      "when_all": [
+        { "field": "dispute_resolution_track", "op": "eq", "value": "courts" },
+        { "field": "state_lower", "op": "eq", "value": "delaware" }
+      ],
+      "set_audit": {
+        "forum_governing_law_alignment": "aligned"
+      }
+    },
+    {
+      "id": "derive-forum-governing-mismatch",
+      "description": "Forum diverges from governing law when non-Delaware courts are selected.",
+      "when_all": [
+        { "field": "dispute_resolution_track", "op": "eq", "value": "courts" },
+        { "field": "state_lower", "op": "neq", "value": "delaware" }
+      ],
+      "set_audit": {
+        "forum_governing_law_alignment": "mismatch"
+      }
+    }
+  ]
+}

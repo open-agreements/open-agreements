@@ -28,6 +28,64 @@ fields:
   - name: lead_purchaser_name
     type: string
     description: Name of the lead purchaser
+  - name: series_designation
+    type: string
+    description: Series designation shown in the agreement title and share definitions
+    default: A
+  - name: agreement_date_month_day
+    type: string
+    description: Month/day portion of the agreement date in the opening paragraph
+    default: January 15
+  - name: agreement_year_two_digits
+    type: string
+    description: Two-digit year suffix used in opening date format 20[__]
+    default: "26"
+  - name: par_value_per_share
+    type: string
+    description: Par value per share inserted in the opening purchase clause
+    default: "0.0001"
+  - name: purchase_price_per_share
+    type: string
+    description: Purchase price per share inserted in the opening purchase clause
+    default: "1.00"
+  - name: applicable_word
+    type: string
+    description: Optional word inserted before Closing in bracketed templates
+    default: ""
+  - name: optional_closing_reference
+    type: string
+    description: Optional bracket fragment after Exhibit A in opening purchase clause
+    default: ""
+  - name: optional_clause_text
+    type: string
+    description: Optional alternate purchase-price clause text for conversion scenarios
+    default: ""
+  - name: optional_plural_suffix
+    type: string
+    description: Optional plural suffix used in bracketed labels like Closing[s]
+    default: ""
+  - name: closing_heading
+    type: string
+    description: Heading text used for single-closing default
+    default: Initial Closing.
+  - name: initial_word_lower
+    type: string
+    description: Lowercase word used for single-closing phrasing
+    default: initial
+  - name: initial_word_title
+    type: string
+    description: Titlecase word used for single-closing phrasing
+    default: Initial
+  - name: dispute_resolution_mode
+    type: enum
+    description: Dispute resolution alternative in SPA (Alternative 1 arbitration or Alternative 2 courts)
+    options:
+      - arbitration
+      - courts
+    default: courts
+  - name: arbitration_location
+    type: string
+    description: Arbitration venue for Dispute Resolution Alternative 1
   - name: judicial_district
     type: string
     description: Federal judicial district for disputes
@@ -54,6 +112,12 @@ fields:
   - name: director_names
     type: string
     description: List of individual director names
+  - name: board_size
+    type: string
+    description: Authorized number of board seats at the Initial Closing
+  - name: minimum_shares_initial_closing
+    type: string
+    description: Minimum number of shares required to be sold at the Initial Closing
   - name: applicable_purchasers
     type: string
     description: Names of the applicable purchasers
@@ -70,3 +134,5 @@ required_fields:
   - specify_percentage
   - financial_reporting_period
   - director_names
+  - board_size
+  - minimum_shares_initial_closing
