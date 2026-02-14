@@ -378,7 +378,7 @@ describe('root-orphan lint rule', () => {
 });
 
 describe('cross-contamination lint rule', () => {
-  it('warns when file keywords suggest wrong domain folder', () => {
+  it('warns when a high-confidence compound phrase suggests wrong domain folder', () => {
     const provider = new MemoryProvider('/test');
     initializeWorkspace('/test', {}, provider);
 
@@ -387,14 +387,31 @@ describe('cross-contamination lint rule', () => {
     config.lifecycle.applicable_domains = ['Board Meetings', 'Sales', 'Employment'];
     writeConventions(provider, config);
 
-    // An employment file sitting in Board Meetings
+    // An offer letter sitting in Board Meetings — "offer letter" is a high-confidence Employment phrase
     provider.mkdir('Board Meetings');
-    provider.seed('Board Meetings/Employment Offer Letter.docx', 'data');
+    provider.seed('Board Meetings/2025 Offer Letter - Jane Doe.docx', 'data');
 
     const report = lintWorkspace('/test', provider);
     const crossFindings = report.findings.filter((f) => f.code === 'cross-contamination');
     expect(crossFindings.length).toBe(1);
     expect(crossFindings[0].message).toContain('Employment');
+  });
+
+  it('does not flag generic terms like agreement or policy', () => {
+    const provider = new MemoryProvider('/test');
+    initializeWorkspace('/test', {}, provider);
+
+    const config = loadConventions(provider);
+    config.lifecycle.applicable_domains = ['Board Meetings', 'Sales'];
+    writeConventions(provider, config);
+
+    // "Agreement" is generic — should NOT be flagged
+    provider.mkdir('Board Meetings');
+    provider.seed('Board Meetings/Shareholders Agreement.docx', 'data');
+
+    const report = lintWorkspace('/test', provider);
+    const crossFindings = report.findings.filter((f) => f.code === 'cross-contamination');
+    expect(crossFindings.length).toBe(0);
   });
 
   it('does not run when no non-lifecycle domain folders are configured', () => {

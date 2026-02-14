@@ -40,7 +40,6 @@ describe('status and lint', () => {
     expect(lint.findings.some((finding) => finding.code === 'disallowed-file-type')).toBe(true);
     expect(lint.findings.some((finding) => finding.code === 'missing-executed-marker')).toBe(true);
     expect(lint.findings.some((finding) => finding.code === 'executed-marker-outside-executed')).toBe(true);
-    expect(lint.findings.some((finding) => finding.code === 'missing-index')).toBe(true);
   });
 
   it('detects stale contracts-index.yaml when files are newer than the index', () => {

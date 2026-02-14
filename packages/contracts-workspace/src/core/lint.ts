@@ -194,15 +194,19 @@ function detectRootOrphans(provider: WorkspaceProvider, conventions: ConventionC
 }
 
 // --- cross-contamination ---
+//
+// This rule is intentionally conservative. It only flags files whose
+// names contain compound phrases that unambiguously identify a domain —
+// single generic words like "policy", "agreement", or "invoice" appear
+// across too many folders to be useful signals.
 
-const DOMAIN_KEYWORD_MAP: [RegExp, string[]][] = [
-  [/\b(firewall|network|vpn|security|infosec|soc2|penetration)\b/iu, ['Security', 'Network Architecture', 'IT Security']],
-  [/\b(nda|agreement|contract|amendment|addendum|sow|msa)\b/iu, ['Sales', 'Vendor Agreements', 'Commercial']],
-  [/\b(board|resolution|minutes|consent|governance)\b/iu, ['Board Meetings', 'Corporate Governance']],
-  [/\b(offer.?letter|employment|salary|compensation|benefits|onboarding)\b/iu, ['Employment', 'HR', 'People']],
-  [/\b(invoice|payment|billing|accounts|receivable|payable)\b/iu, ['Finance', 'Accounting']],
-  [/\b(patent|trademark|copyright|intellectual.?property|ip.?assignment)\b/iu, ['IP', 'Intellectual Property']],
-  [/\b(policy|handbook|procedure|compliance)\b/iu, ['Policies', 'Compliance']],
+const DOMAIN_PHRASE_MAP: [RegExp, string[]][] = [
+  [/\boffer.?letter\b/iu, ['Employment', 'HR', 'People', 'Employment and Human Resources']],
+  [/\bip.?assignment\b/iu, ['IP', 'Intellectual Property']],
+  [/\bstock.?purchase\b/iu, ['Equity Documents', 'Corporate']],
+  [/\bboard.?meeting.?minutes\b/iu, ['Board Meetings', 'Corporate Governance']],
+  [/\bpenetration.?test/iu, ['Security', 'IT Security']],
+  [/\bdata.?processing.?agreement\b/iu, ['Compliance', 'Policies']],
 ];
 
 function detectCrossContamination(provider: WorkspaceProvider, conventions: ConventionConfig): LintFinding[] {
@@ -224,25 +228,21 @@ function detectCrossContamination(provider: WorkspaceProvider, conventions: Conv
 
     for (const file of files) {
       const fileName = file.name.toLowerCase();
-      const matchedDomains: string[] = [];
 
-      for (const [pattern, expectedDomains] of DOMAIN_KEYWORD_MAP) {
+      for (const [pattern, expectedDomains] of DOMAIN_PHRASE_MAP) {
         if (pattern.test(fileName)) {
           const currentFolderLower = folder.toLowerCase();
           const isExpected = expectedDomains.some((d) => d.toLowerCase() === currentFolderLower);
           if (!isExpected) {
-            matchedDomains.push(expectedDomains[0]);
+            findings.push({
+              code: 'cross-contamination',
+              severity: 'warning',
+              message: `File may belong in ${expectedDomains[0]}/ rather than ${folder}/.`,
+              path: file.relativePath,
+            });
+            break;
           }
         }
-      }
-
-      if (matchedDomains.length > 0) {
-        findings.push({
-          code: 'cross-contamination',
-          severity: 'warning',
-          message: `File may belong in ${matchedDomains[0]}/ rather than ${folder}/.`,
-          path: file.relativePath,
-        });
       }
     }
   }

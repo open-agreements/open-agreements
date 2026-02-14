@@ -4,6 +4,7 @@ import {
   CATALOG_FILE,
   CONTRACTS_GUIDE_FILE,
   DEFAULT_FORM_TOPICS,
+  INDEX_FILE,
   LIFECYCLE_DIRS,
   type LifecycleDir,
 } from './constants.js';
@@ -11,6 +12,8 @@ import { defaultConventions, writeConventions } from './convention-config.js';
 import { scanExistingConventions } from './convention-scanner.js';
 import { createDefaultCatalog } from './default-catalog.js';
 import { createProvider } from './filesystem-provider.js';
+import { buildStatusIndex, collectWorkspaceDocuments, writeStatusIndex } from './indexer.js';
+import { lintWorkspace } from './lint.js';
 import type { WorkspaceProvider } from './provider.js';
 import type { AgentName, ConventionConfig, InitWorkspaceOptions, InitWorkspaceResult } from './types.js';
 
@@ -107,6 +110,15 @@ export function initializeWorkspace(
         `${agent}: ${snippetRelative} references ${CONTRACTS_GUIDE_FILE}`
       );
     }
+  }
+
+  // Generate status index so lint doesn't immediately warn about missing-index
+  if (!p.exists(INDEX_FILE)) {
+    const documents = collectWorkspaceDocuments(rootDir, p);
+    const lint = lintWorkspace(rootDir, p);
+    const index = buildStatusIndex(rootDir, documents, lint);
+    writeStatusIndex(rootDir, index, INDEX_FILE, p);
+    createdFiles.push(INDEX_FILE);
   }
 
   return {
