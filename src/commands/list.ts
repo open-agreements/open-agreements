@@ -17,16 +17,37 @@ interface ListItem {
   [key: string]: unknown;
 }
 
+function categoryFromId(id: string): string {
+  if (id.includes('employment') || id.includes('employee-ip-inventions')) {
+    return 'employment';
+  }
+  return 'general';
+}
+
 /** Extract a human-friendly source name from a URL */
 function sourceName(url: string): string | null {
   try {
-    const host = new URL(url).hostname.replace(/^www\./, '');
+    const parsed = new URL(url);
+    const host = parsed.hostname.replace(/^www\./, '');
+    const pathname = parsed.pathname;
+
+    if (host === 'github.com' && pathname.startsWith('/open-agreements/')) {
+      return 'OpenAgreements';
+    }
+    if (host === 'github.com' && pathname.startsWith('/papertrail/legal-docs')) {
+      return 'Papertrail';
+    }
+    if (host === 'github.com' && pathname.startsWith('/docusign/')) {
+      return 'DocuSign';
+    }
+
     const map: Record<string, string> = {
       'commonpaper.com': 'Common Paper',
       'bonterms.com': 'Bonterms',
       'ycombinator.com': 'Y Combinator',
       'bookface-static.ycombinator.com': 'Y Combinator',
       'nvca.org': 'NVCA',
+      'openagreements.ai': 'OpenAgreements',
     };
     return map[host] ?? host;
   } catch {
@@ -70,6 +91,7 @@ function runListJson(opts: ListOptions): void {
       const meta = loadMetadata(dir);
       results.push({
         name: id,
+        category: categoryFromId(id),
         description: meta.description ?? meta.name,
         license: meta.license,
         source_url: meta.source_url,
@@ -91,6 +113,7 @@ function runListJson(opts: ListOptions): void {
         const meta = loadExternalMetadata(dir);
         results.push({
           name: id,
+          category: categoryFromId(id),
           description: meta.description ?? meta.name,
           license: meta.license,
           source_url: meta.source_url,
@@ -111,6 +134,7 @@ function runListJson(opts: ListOptions): void {
         const meta = loadRecipeMetadata(dir);
         results.push({
           name: id,
+          category: categoryFromId(id),
           description: meta.description ?? meta.name,
           license_note: meta.license_note,
           source_url: meta.source_url,
@@ -143,7 +167,7 @@ function runListJson(opts: ListOptions): void {
 }
 
 function listAgreementsWithOptions(opts: ListOptions): void {
-  interface Row { id: string; license: string; required: number; total: number; source: string; sourceUrl: string }
+  interface Row { id: string; category: string; license: string; required: number; total: number; source: string; sourceUrl: string }
   const rows: Row[] = [];
   const templatesOnly = opts.templatesOnly === true;
 
@@ -153,9 +177,25 @@ function listAgreementsWithOptions(opts: ListOptions): void {
     try {
       const meta = loadMetadata(dir);
       const required = meta.required_fields.length;
-      rows.push({ id, license: meta.license, required, total: meta.fields.length, source: sourceName(meta.source_url) || '—', sourceUrl: meta.source_url });
+      rows.push({
+        id,
+        category: categoryFromId(id),
+        license: meta.license,
+        required,
+        total: meta.fields.length,
+        source: sourceName(meta.source_url) || '—',
+        sourceUrl: meta.source_url,
+      });
     } catch {
-      rows.push({ id, license: 'ERROR', required: 0, total: 0, source: '—', sourceUrl: 'Could not load metadata' });
+      rows.push({
+        id,
+        category: categoryFromId(id),
+        license: 'ERROR',
+        required: 0,
+        total: 0,
+        source: '—',
+        sourceUrl: 'Could not load metadata',
+      });
     }
   }
 
@@ -166,9 +206,25 @@ function listAgreementsWithOptions(opts: ListOptions): void {
       try {
         const meta = loadExternalMetadata(dir);
         const required = meta.required_fields.length;
-        rows.push({ id, license: meta.license, required, total: meta.fields.length, source: sourceName(meta.source_url) || '—', sourceUrl: meta.source_url });
+        rows.push({
+          id,
+          category: categoryFromId(id),
+          license: meta.license,
+          required,
+          total: meta.fields.length,
+          source: sourceName(meta.source_url) || '—',
+          sourceUrl: meta.source_url,
+        });
       } catch {
-        rows.push({ id, license: 'ERROR', required: 0, total: 0, source: '—', sourceUrl: 'Could not load metadata' });
+        rows.push({
+          id,
+          category: categoryFromId(id),
+          license: 'ERROR',
+          required: 0,
+          total: 0,
+          source: '—',
+          sourceUrl: 'Could not load metadata',
+        });
       }
     }
 
@@ -179,9 +235,25 @@ function listAgreementsWithOptions(opts: ListOptions): void {
         const meta = loadRecipeMetadata(dir);
         const required = meta.required_fields.length;
         const license = meta.optional ? 'recipe*' : 'recipe';
-        rows.push({ id, license, required, total: meta.fields.length, source: sourceName(meta.source_url) || '—', sourceUrl: meta.source_url });
+        rows.push({
+          id,
+          category: categoryFromId(id),
+          license,
+          required,
+          total: meta.fields.length,
+          source: sourceName(meta.source_url) || '—',
+          sourceUrl: meta.source_url,
+        });
       } catch {
-        rows.push({ id, license: 'ERROR', required: 0, total: 0, source: '—', sourceUrl: 'Could not load metadata' });
+        rows.push({
+          id,
+          category: categoryFromId(id),
+          license: 'ERROR',
+          required: 0,
+          total: 0,
+          source: '—',
+          sourceUrl: 'Could not load metadata',
+        });
       }
     }
   }
@@ -193,13 +265,15 @@ function listAgreementsWithOptions(opts: ListOptions): void {
 
   rows.sort((a, b) => a.id.localeCompare(b.id));
 
-  console.log(`\n${'Agreement'.padEnd(40)} ${'License'.padEnd(14)} ${'Fields'.padEnd(8)} ${'Source'.padEnd(16)} URL`);
+  console.log(
+    `\n${'Agreement'.padEnd(40)} ${'Category'.padEnd(12)} ${'License'.padEnd(14)} ${'Fields'.padEnd(8)} ${'Source'.padEnd(16)} URL`
+  );
   console.log('─'.repeat(120));
 
   for (const row of rows) {
     const fields = row.license === 'ERROR' ? '—' : `${row.required}/${row.total}`;
     console.log(
-      `${row.id.padEnd(40)} ${row.license.padEnd(14)} ${fields.padEnd(8)} ${row.source.padEnd(16)} ${row.sourceUrl}`
+      `${row.id.padEnd(40)} ${row.category.padEnd(12)} ${row.license.padEnd(14)} ${fields.padEnd(8)} ${row.source.padEnd(16)} ${row.sourceUrl}`
     );
   }
 

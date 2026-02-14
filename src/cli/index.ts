@@ -7,6 +7,7 @@ import { runValidate } from '../commands/validate.js';
 import { runList } from '../commands/list.js';
 import { runRecipeCommand, runRecipeClean, runRecipePatch } from '../commands/recipe.js';
 import { runScan } from '../commands/scan.js';
+import { type MemoFormat } from '../core/employment/memo.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -28,7 +29,24 @@ export function createProgram(): Command {
     .option('-o, --output <path>', 'Output file path')
     .option('-d, --data <json-file>', 'JSON file with field values')
     .option('--set <key=value...>', 'Set a field value (repeatable)')
-    .action(async (template: string, opts: { output?: string; data?: string; set?: string[] }) => {
+    .option('--memo [format]', 'Generate memo artifact(s): json, markdown, or both (default: both)')
+    .option('--memo-json <path>', 'Output path for memo JSON')
+    .option('--memo-md <path>', 'Output path for memo Markdown')
+    .option('--memo-jurisdiction <name>', 'Jurisdiction override used for memo warning rules')
+    .option('--memo-baseline <template-id>', 'Baseline template id for deterministic variance checks')
+    .action(async (
+      template: string,
+      opts: {
+        output?: string;
+        data?: string;
+        set?: string[];
+        memo?: string | boolean;
+        memoJson?: string;
+        memoMd?: string;
+        memoJurisdiction?: string;
+        memoBaseline?: string;
+      }
+    ) => {
       let values: Record<string, string> = {};
 
       if (opts.data) {
@@ -41,7 +59,12 @@ export function createProgram(): Command {
         values[pair.slice(0, eq)] = pair.slice(eq + 1);
       }
 
-      await runFill({ template, output: opts.output, values });
+      await runFill({
+        template,
+        output: opts.output,
+        values,
+        memo: buildMemoArgs(opts),
+      });
     });
 
   program.addCommand(fillCmd);
@@ -80,13 +103,17 @@ export function createProgram(): Command {
     .option('-o, --output <path>', 'Output file path')
     .option('-d, --data <json-file>', 'JSON file with field values')
     .option('--keep-intermediate', 'Preserve intermediate files')
-    .action(async (recipeId: string, opts: { input?: string; output?: string; data?: string; keepIntermediate?: boolean }) => {
+    .option('--computed-out <path>', 'Write computed interaction artifact JSON')
+    .option('--no-normalize-brackets', 'Disable post-fill bracket artifact normalization')
+    .action(async (recipeId: string, opts: { input?: string; output?: string; data?: string; keepIntermediate?: boolean; computedOut?: string; normalizeBrackets?: boolean }) => {
       await runRecipeCommand({
         recipeId,
         input: opts.input,
         output: opts.output,
         data: opts.data,
         keepIntermediate: opts.keepIntermediate,
+        computedOut: opts.computedOut,
+        normalizeBrackets: opts.normalizeBrackets,
       });
     });
 
@@ -122,6 +149,50 @@ export function createProgram(): Command {
     });
 
   return program;
+}
+
+function buildMemoArgs(opts: {
+  memo?: string | boolean;
+  memoJson?: string;
+  memoMd?: string;
+  memoJurisdiction?: string;
+  memoBaseline?: string;
+}): {
+  enabled: boolean;
+  format: MemoFormat;
+  jsonOutputPath?: string;
+  markdownOutputPath?: string;
+  jurisdiction?: string;
+  baselineTemplateId?: string;
+} | undefined {
+  const hasMemoRelatedFlag = Boolean(
+    opts.memo !== undefined
+    || opts.memoJson
+    || opts.memoMd
+    || opts.memoJurisdiction
+    || opts.memoBaseline
+  );
+
+  if (!hasMemoRelatedFlag) {
+    return undefined;
+  }
+
+  let format: MemoFormat = 'both';
+  if (typeof opts.memo === 'string') {
+    if (opts.memo !== 'json' && opts.memo !== 'markdown' && opts.memo !== 'both') {
+      throw new Error(`Invalid --memo format: "${opts.memo}" (expected json, markdown, or both)`);
+    }
+    format = opts.memo;
+  }
+
+  return {
+    enabled: true,
+    format,
+    jsonOutputPath: opts.memoJson,
+    markdownOutputPath: opts.memoMd,
+    jurisdiction: opts.memoJurisdiction,
+    baselineTemplateId: opts.memoBaseline,
+  };
 }
 
 export async function runCli(argv = process.argv): Promise<void> {
