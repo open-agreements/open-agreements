@@ -4,7 +4,7 @@ Local stdio MCP server for contracts workspace operations.
 
 ## Scope
 
-This package exposes local workspace tools (init, catalog, status) over MCP so
+This package exposes local workspace tools (topic-first init planning, catalog, status) over MCP so
 agents can operate on a local contracts directory without a remote server.
 
 ## Available Tools
@@ -32,7 +32,7 @@ claude mcp add --transport stdio open-agreements-workspace-mcp -- node /ABSOLUTE
 
 Then in Claude Code, call tools like:
 
-- `workspace_init` with `{"root_dir":"/path/to/workspace","agents":["claude","gemini"]}`
+- `workspace_init` with `{"root_dir":"/path/to/workspace","agents":["claude","gemini"]}` to get missing folder/file suggestions (no auto-write)
 - `status_generate` with `{"root_dir":"/path/to/workspace"}`
 
 ## Claude Desktop Local Connector Setup
