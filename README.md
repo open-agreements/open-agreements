@@ -176,7 +176,7 @@ This package is intentionally separate from `open-agreements` so teams can adopt
 
 Core workspace features:
 
-- lifecycle-first `init` (`forms/`, `drafts/`, `incoming/`, `executed/`, `archive/`)
+- topic-first `init` planning (minimal suggested structure with top-level domains)
 - forms catalog with URL + SHA-256 validation
 - YAML status indexing and linting with filename-driven `_executed` status
 

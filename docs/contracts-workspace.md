@@ -10,7 +10,7 @@ The contracts workspace CLI is a separate package focused on filesystem-based co
 
 `open-agreements` is optimized for template/recipe filling. The workspace CLI handles repository-level workflows:
 
-- lifecycle-first folder scaffolding
+- topic-first structure planning/suggestions
 - forms catalog validation/download (URL + checksum)
 - filename-driven execution status
 - YAML status indexing + linting
@@ -21,18 +21,20 @@ Teams can use one package without requiring the other.
 
 ### `init`
 
-Scaffold a workspace in the current directory.
+Preview a workspace setup in the current directory. This command does not create folders/files automatically.
 
 ```bash
 open-agreements-workspace init --agents claude,gemini
 ```
 
-Creates:
+Suggests:
 
-- `forms/`, `drafts/`, `incoming/`, `executed/`, `archive/`
-- topic folders under `forms/`
+- top-level topic folders
 - `CONTRACTS.md`
 - `forms-catalog.yaml`
+- `WORKSPACE.md`
+- `.contracts-workspace/conventions.yaml`
+- `contracts-index.yaml` (generate with `status generate`)
 - optional snippets under `.contracts-workspace/agents/`
 
 ### `catalog validate`
@@ -110,6 +112,6 @@ claude mcp add --transport stdio open-agreements-workspace-mcp -- node /ABSOLUTE
 ### Demo flow
 
 1. Create a demo folder (for example, `/tmp/oa-demo-workspace`).
-2. Call `workspace_init` with `{"root_dir":"/tmp/oa-demo-workspace","agents":["claude","gemini"]}`.
+2. Call `workspace_init` with `{"root_dir":"/tmp/oa-demo-workspace","agents":["claude","gemini"]}` and create the suggested folders/files.
 3. Call `status_generate` with `{"root_dir":"/tmp/oa-demo-workspace"}`.
-4. Add a sample file in `forms/` and call `status_lint` to show rule detection.
+4. Add a sample file in a topic folder and call `status_lint` to show rule detection.

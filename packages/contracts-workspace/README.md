@@ -1,12 +1,12 @@
 # @open-agreements/contracts-workspace
 
-Lifecycle-first workspace CLI for organizing, cataloging, and tracking contract files.
+Topic-first workspace CLI for organizing, cataloging, and tracking contract files.
 
 ## Scope
 
 This package focuses on repository/workspace operations:
 
-- `init` scaffolds lifecycle folders and `CONTRACTS.md`
+- `init` previews a minimal topic-first structure and suggests setup actions (no auto-write)
 - `catalog` validates and fetches forms from URL + checksum catalog entries
 - `status` generates `contracts-index.yaml` and lints workspace structure
 
@@ -29,12 +29,14 @@ open-agreements-workspace status generate
 open-agreements-workspace status lint
 ```
 
-## Files Created by `init`
+## Structure Suggested by `init`
 
-- `forms/`, `drafts/`, `incoming/`, `executed/`, `archive/`
-- topic folders under `forms/`
+- top-level topic folders (for example, `Vendor Agreements/`, `Employment and Human Resources/`)
 - `CONTRACTS.md`
 - `forms-catalog.yaml`
+- `WORKSPACE.md`
+- `.contracts-workspace/conventions.yaml`
+- `contracts-index.yaml` (generated via `status generate`)
 - optional snippets under `.contracts-workspace/agents/`
 
 ## Status Conventions

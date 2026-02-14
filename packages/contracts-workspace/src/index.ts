@@ -1,4 +1,10 @@
-export { initializeWorkspace, inferLifecycle, buildWorkspaceMd, buildFolderMd } from './core/workspace-structure.js';
+export {
+  initializeWorkspace,
+  planWorkspaceInitialization,
+  inferLifecycle,
+  buildWorkspaceMd,
+  buildFolderMd,
+} from './core/workspace-structure.js';
 export { validateCatalog, loadCatalog, writeCatalog, fetchCatalogEntries, checksumSha256 } from './core/catalog.js';
 export { lintWorkspace } from './core/lint.js';
 export { collectWorkspaceDocuments, buildStatusIndex, writeStatusIndex, hasExecutedMarker, hasPartiallyExecutedMarker } from './core/indexer.js';
@@ -10,6 +16,7 @@ export { scanExistingConventions } from './core/convention-scanner.js';
 export type {
   AgentName,
   InitWorkspaceOptions,
+  InitWorkspacePlanResult,
   InitWorkspaceResult,
   LintFinding,
   LintReport,
