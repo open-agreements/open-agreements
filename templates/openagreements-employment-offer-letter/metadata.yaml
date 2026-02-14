@@ -1,0 +1,77 @@
+name: OpenAgreements Employment Offer Letter
+description: >-
+  A startup-focused employment offer letter template for full-time or part-time
+  hiring with compensation, equity summary, and at-will framing.
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-employment-offer-letter
+version: '1.0'
+license: CC-BY-4.0
+allow_derivatives: true
+attribution_text: >-
+  Authored by OpenAgreements contributors. Drafting structure informed by
+  publicly available permissive sources including the DocuSign template library
+  (MIT) and Papertrail legal-docs (CC0). Licensed under CC BY 4.0.
+fields:
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    section: Parties
+  - name: position_title
+    type: string
+    description: Offered role title
+    section: Role
+  - name: employment_type
+    type: enum
+    description: Employment basis
+    options:
+      - full-time
+      - part-time
+    section: Role
+  - name: start_date
+    type: date
+    description: Employment start date
+    section: Timing
+  - name: reporting_manager
+    type: string
+    description: Manager or role this position reports to
+    section: Role
+  - name: base_salary
+    type: string
+    description: Base salary or hourly amount
+    section: Compensation
+  - name: bonus_terms
+    type: string
+    description: Bonus eligibility summary
+    default: discretionary bonus eligibility as determined by company policy
+    section: Compensation
+  - name: equity_terms
+    type: string
+    description: Equity grant summary, if any
+    default: no equity grant is included in this offer
+    section: Compensation
+  - name: work_location
+    type: string
+    description: Primary work location and/or remote status
+    section: Work Model
+  - name: governing_law
+    type: string
+    description: Governing law state for the offer letter
+    default: California
+    section: Legal
+  - name: offer_expiration_date
+    type: date
+    description: Date by which the offer must be accepted
+    section: Timing
+required_fields:
+  - employer_name
+  - employee_name
+  - position_title
+  - employment_type
+  - start_date
+  - base_salary
+  - work_location
+  - governing_law
+  - offer_expiration_date
