@@ -23,4 +23,5 @@ export const INDEX_FILE = 'contracts-index.yaml';
 export const INTERNAL_DIR = '.contracts-workspace';
 export const AGENT_SETUP_DIR = '.contracts-workspace/agents';
 
+// These values are defaults. Runtime behavior reads from convention config.
 export const EXECUTED_SUFFIX = '_executed';

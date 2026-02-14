@@ -213,6 +213,79 @@ h1 {
   color: var(--ink-soft);
 }
 
+.card-featured {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+
+.card-hint {
+  font-size: 0.82rem;
+  margin-top: 6px !important;
+  opacity: 0.72;
+}
+
+.copy-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+  transition: border-color 150ms ease, background 150ms ease;
+}
+
+.copy-btn:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.copy-btn code {
+  flex: 1;
+  min-width: 0;
+}
+
+.copy-label {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  color: var(--accent-deep);
+  position: relative;
+  cursor: pointer;
+}
+
+.copy-tooltip {
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid var(--line);
+  padding: 2px 8px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.copy-label:hover .copy-tooltip {
+  display: block;
+}
+
+.copy-btn-inline {
+  display: inline-flex;
+  width: auto;
+  padding: 2px 8px;
+  gap: 6px;
+  vertical-align: baseline;
+}
+
 pre {
   margin: 0;
   white-space: pre-wrap;
@@ -245,7 +318,8 @@ figure {
   margin: 0;
 }
 
-figure img {
+figure img,
+figure video {
   width: 100%;
   border: 1px solid var(--line);
   display: block;
@@ -350,7 +424,7 @@ figcaption {
   }
 
   .cards {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: 1fr;
   }
 }
 

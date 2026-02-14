@@ -93,3 +93,29 @@ export interface FetchSummary {
   pointerOnlyCount: number;
   failedCount: number;
 }
+
+export interface ConventionConfig {
+  schema_version: 1;
+  executed_marker: {
+    pattern: string;
+    location: 'before_extension' | 'in_parentheses' | 'custom';
+  };
+  naming: {
+    style: string;
+    separator: string;
+    date_format: string;
+  };
+  lifecycle: {
+    folders: Record<string, string>;
+    applicable_domains: string[];
+    asset_domains: string[];
+  };
+  cross_references: {
+    policy: string;
+    mechanism: string;
+  };
+  documentation: {
+    root_file: string;
+    folder_file: string;
+  };
+}
