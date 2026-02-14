@@ -16,6 +16,19 @@ export interface InitWorkspaceResult {
   agentInstructions: string[];
 }
 
+export interface InitWorkspacePlanResult {
+  rootDir: string;
+  suggestedDirectories: string[];
+  existingDirectories: string[];
+  missingDirectories: string[];
+  suggestedFiles: string[];
+  existingFiles: string[];
+  missingFiles: string[];
+  agentInstructions: string[];
+  suggestedCommands: string[];
+  lint: LintReport;
+}
+
 export interface LintFinding {
   code: string;
   severity: 'error' | 'warning';
