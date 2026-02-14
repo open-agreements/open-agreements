@@ -149,7 +149,8 @@ describe('convention-aware lint', () => {
     initializeWorkspace(root);
     const provider = new FilesystemProvider(root);
 
-    // Write a file in executed/ without marker
+    // Init no longer creates lifecycle dirs — create for this test
+    provider.mkdir('executed');
     provider.writeFile('executed/unsigned.docx', 'data');
 
     const report = lintWorkspace(root, provider);
@@ -166,6 +167,7 @@ describe('convention-aware lint', () => {
     writeConventions(provider, config);
 
     // File with _signed should NOT get missing-executed-marker
+    provider.mkdir('executed');
     provider.writeFile('executed/contract_signed.docx', 'data');
     // File without marker should get warning
     provider.writeFile('executed/contract.docx', 'data');
@@ -191,13 +193,17 @@ describe('init generates WORKSPACE.md and FOLDER.md', () => {
     const result = initializeWorkspace('/test', {}, provider);
 
     expect(result.createdFiles).toContain('WORKSPACE.md');
-    expect(result.createdFiles).toContain('forms/FOLDER.md');
-    expect(result.createdFiles).toContain('executed/FOLDER.md');
+    // FOLDER.md only written inside lifecycle dirs that already exist
+    expect(result.createdFiles).not.toContain('forms/FOLDER.md');
 
     const workspaceMd = provider.readTextFile('WORKSPACE.md');
     expect(workspaceMd).toContain('Workspace Overview');
     expect(workspaceMd).toContain('snake_case');
 
+    // Verify FOLDER.md is written when lifecycle dir exists
+    provider.mkdir('executed');
+    const result2 = initializeWorkspace('/test', {}, provider);
+    expect(result2.createdFiles).toContain('executed/FOLDER.md');
     const folderMd = provider.readTextFile('executed/FOLDER.md');
     expect(folderMd).toContain('executed/');
     expect(folderMd).toContain('Fully signed');
@@ -241,6 +247,8 @@ describe('partially_executed marker detection', () => {
     const provider = new MemoryProvider('/test');
     initializeWorkspace('/test', {}, provider);
 
+    provider.mkdir('executed');
+    provider.mkdir('drafts');
     provider.writeFile('executed/nda_executed.docx', 'data');
     provider.writeFile('executed/msa_partially_executed.docx', 'data');
     provider.writeFile('drafts/draft.docx', 'data');
@@ -267,6 +275,7 @@ describe('partially_executed marker detection', () => {
     const provider = new MemoryProvider('/test');
     initializeWorkspace('/test', {}, provider);
 
+    provider.mkdir('executed');
     provider.writeFile('executed/nda_partially_executed.docx', 'data');
 
     const report = lintWorkspace('/test', provider);
@@ -320,6 +329,7 @@ describe('duplicate-file lint rule', () => {
     const provider = new MemoryProvider('/test');
     initializeWorkspace('/test', {}, provider);
 
+    provider.mkdir('drafts');
     provider.writeFile('drafts/contract.docx', 'data');
     provider.writeFile('drafts/contract (1).docx', 'data');
 
@@ -332,6 +342,7 @@ describe('duplicate-file lint rule', () => {
     const provider = new MemoryProvider('/test');
     initializeWorkspace('/test', {}, provider);
 
+    provider.mkdir('incoming');
     provider.writeFile('incoming/report.pdf', 'data');
     provider.writeFile('incoming/report - 2024-01-15.pdf', 'data');
 
@@ -344,6 +355,7 @@ describe('duplicate-file lint rule', () => {
     const provider = new MemoryProvider('/test');
     initializeWorkspace('/test', {}, provider);
 
+    provider.mkdir('drafts');
     provider.writeFile('drafts/nda.docx', 'data');
     provider.writeFile('drafts/msa.docx', 'data');
 
@@ -419,6 +431,7 @@ describe('cross-contamination lint rule', () => {
     initializeWorkspace('/test', {}, provider);
 
     // Default conventions only have lifecycle dirs as applicable_domains
+    provider.mkdir('drafts');
     provider.writeFile('drafts/employment_offer.docx', 'data');
 
     const report = lintWorkspace('/test', provider);
@@ -428,18 +441,16 @@ describe('cross-contamination lint rule', () => {
 });
 
 describe('backward compatibility', () => {
-  it('existing tests still pass — init produces same lifecycle dirs', () => {
+  it('init creates config files but not lifecycle directories', () => {
     const root = mkdtempSync(join(tmpdir(), 'oa-compat-'));
     tempDirs.push(root);
 
     const result = initializeWorkspace(root);
     expect(result.createdFiles).toContain('CONTRACTS.md');
     expect(result.createdFiles).toContain('forms-catalog.yaml');
-    expect(result.createdDirectories).toContain('forms');
-    expect(result.createdDirectories).toContain('drafts');
-    expect(result.createdDirectories).toContain('incoming');
-    expect(result.createdDirectories).toContain('executed');
-    expect(result.createdDirectories).toContain('archive');
+    // Lifecycle dirs are not auto-created — lint suggests them instead
+    expect(result.createdDirectories).not.toContain('forms');
+    expect(result.createdDirectories).not.toContain('executed');
   });
 
   it('init is idempotent with conventions', () => {

@@ -16,8 +16,8 @@ export function lintWorkspace(rootDir: string, provider?: WorkspaceProvider): Li
     if (!p.exists(lifecycle)) {
       findings.push({
         code: 'missing-directory',
-        severity: 'error',
-        message: `Required lifecycle directory is missing: ${lifecycle}/`,
+        severity: 'warning',
+        message: `Lifecycle directory not found: ${lifecycle}/. Consider creating it to organize documents.`,
         path: `${lifecycle}/`,
       });
     }
