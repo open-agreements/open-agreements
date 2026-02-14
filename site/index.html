@@ -25,7 +25,8 @@
     <header class="topbar">
       <a class="brand" href="#top">OpenAgreements</a>
       <nav class="topnav">
-        <a href="#start">Get started</a>
+        <a href="#install">Install</a>
+        <a href="#start">Getting started</a>
         <a href="#demo">Demo</a>
         <a href="#faq">Q&A</a>
         <a href="#trust">Trust</a>
@@ -37,14 +38,14 @@
     <main id="top">
       <section class="hero section reveal">
         <p class="eyebrow">Open-source legal operations</p>
-        <h1>Ship agreements faster, without black-box legal tooling.</h1>
+        <h1>You use Claude for code. Use it for paperwork too.</h1>
         <p class="hero-copy">
-          OpenAgreements fills standard legal templates from local data, keeps every step auditable,
-          and works with the coding-agent workflows teams already use.
+          Add OpenAgreements to Claude and fill NDAs, SAFEs, offer letters, and more &mdash;
+          straight from the chat. Or use our free remote MCP connector to get started in seconds.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#start">Start with CLI</a>
-          <a class="btn btn-ghost" href="https://skills.sh/open-agreements/open-agreements/open-agreements" target="_blank" rel="noreferrer">Use as Agent Skill</a>
+          <a class="btn btn-primary" href="#install">See how to install</a>
+          <a class="btn btn-ghost" href="#start">All setup options</a>
         </div>
         <ul class="pill-row" id="trust">
           <li><a href="https://www.npmjs.com/package/open-agreements" target="_blank" rel="noreferrer">npm package</a></li>
@@ -58,29 +59,41 @@
 
       <section id="start" class="section split reveal">
         <div>
-          <h2>Start paths</h2>
+          <h2>Getting started</h2>
           <p>
-            Pick the integration path that fits your team now. You can run only the pieces you need:
-            template filling, contracts workspace tooling, or both.
+            Pick the integration path that fits your workflow. Add the remote connector for instant
+            access in Claude, or use the CLI for local template fill and validation.
           </p>
         </div>
         <div class="cards">
+          <article class="card card-featured">
+            <h3>Claude</h3>
+            <p>Add as a connector in Claude and start filling agreements instantly.</p>
+            <button class="copy-btn" data-copy="https://openagreements.ai/api/mcp">
+              <code>https://openagreements.ai/api/mcp</code>
+              <span class="copy-label" aria-label="Copy"><svg class="copy-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span class="copy-tooltip">Copy</span></span>
+            </button>
+            <p class="card-hint">Settings &rarr; Connectors &rarr; Add custom connector &rarr; paste URL</p>
+          </article>
           <article class="card">
             <h3>CLI</h3>
-            <p>Fastest way to run template fill and validation locally.</p>
+            <p>Run template fill and validation locally from the terminal.</p>
             <pre><code>npx -y open-agreements@latest list --json</code></pre>
           </article>
-          <article class="card">
-            <h3>Claude + skills</h3>
-            <p>Use OpenAgreements from Claude Code with guided interviews.</p>
-            <pre><code>npx skills add open-agreements/open-agreements</code></pre>
-          </article>
-          <article class="card">
-            <h3>Workspace MCP</h3>
-            <p>Organize contracts by lifecycle with local-first tooling.</p>
-            <pre><code>npx -y @open-agreements/contracts-workspace-mcp</code></pre>
-          </article>
         </div>
+      </section>
+
+      <section id="install" class="section demo reveal">
+        <div class="demo-header">
+          <h2>Install in 30 seconds</h2>
+          <p>Add the connector, ask Claude to fill an agreement, download the DOCX.</p>
+        </div>
+        <figure>
+          <video autoplay loop muted playsinline poster="./assets/demo-install-claude-poster.jpg">
+            <source src="./assets/demo-install-claude.mp4" type="video/mp4" />
+          </video>
+          <figcaption>Add <button class="copy-btn copy-btn-inline" data-copy="https://openagreements.ai/api/mcp"><code>https://openagreements.ai/api/mcp</code> <span class="copy-label" aria-label="Copy"><svg class="copy-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span class="copy-tooltip">Copy</span></span></button> as a connector in Claude &rarr; start filling agreements.</figcaption>
+        </figure>
       </section>
 
       <section id="demo" class="section demo reveal">
@@ -97,7 +110,7 @@
       <section id="faq" class="section faq reveal">
         <div class="demo-header">
           <h2>Q&A</h2>
-          <p>Quick answers for legal ops teams evaluating OpenAgreements.</p>
+          <p>Quick answers for teams evaluating OpenAgreements.</p>
         </div>
         <div class="faq-list">
           <details>
@@ -117,15 +130,16 @@
           <details>
             <summary>What templates are supported today?</summary>
             <p>
-              The project includes internal templates (for example Common Paper and Bonterms), external vendored
-              templates (for example YC SAFEs), and recipe-driven templates downloaded from official sources at runtime.
+              The project includes internal templates (Common Paper, Bonterms, and employment packs), external vendored
+              templates (YC SAFEs), and recipe-driven templates (NVCA Series A documents) downloaded from official sources at runtime.
             </p>
           </details>
           <details>
-            <summary>Can I use OpenAgreements with Claude Code or other agent workflows?</summary>
+            <summary>Can I use OpenAgreements with Claude?</summary>
             <p>
-              Yes. You can use the CLI directly, install the Agent Skill, and connect the workspace MCP package for
-              lifecycle-focused contract organization workflows.
+              Yes. Add <code>https://openagreements.ai/api/mcp</code> as a connector in Claude
+              (Settings &rarr; Connectors &rarr; Add custom connector) and you can list templates,
+              fill agreements, and download DOCX files directly from the chat.
             </p>
           </details>
           <details>
@@ -138,8 +152,10 @@
           <details>
             <summary>What is the contracts workspace package?</summary>
             <p>
-              It is a separate package for organizing contract directories by lifecycle, generating status indexes,
-              and validating folder/file conventions without requiring template fill adoption.
+              It is a separate package for organizing contract directories, generating status indexes,
+              and validating folder/file conventions. The <code>init</code> command previews a topic-first
+              structure and suggests setup actions without auto-creating folders, so your team or AI agent
+              stays in control.
             </p>
           </details>
           <details>
@@ -194,6 +210,23 @@
             </p>
           </details>
           <details>
+            <summary>Can I generate employment offer letters and IP assignment agreements?</summary>
+            <p>
+              Yes. OpenAgreements includes employment templates for offer letters, IP/inventions assignments,
+              and confidentiality acknowledgements. The fill pipeline can also generate a jurisdiction-aware
+              employment memo with compliance notes and disclaimers.
+            </p>
+          </details>
+          <details>
+            <summary>What are computed recipe profiles?</summary>
+            <p>
+              Recipes can include a <code>computed.json</code> file that derives fill values from user inputs
+              using conditional rules. For example, the NVCA Stock Purchase Agreement recipe computes
+              dispute-resolution defaults and governing-law alignment automatically based on the selected
+              jurisdiction and mode.
+            </p>
+          </details>
+          <details>
             <summary>Does OpenAgreements replace legal counsel?</summary>
             <p>
               No. OpenAgreements automates document assembly and workflow structure. Teams should still involve qualified
@@ -204,10 +237,10 @@
       </section>
 
       <section class="section callout reveal">
-        <h2>Built for legal teams that need control.</h2>
+        <h2>Built for power users.</h2>
         <p>
-          OpenAgreements is local-first, test-covered, and source-visible. No hidden prompt chains,
-          no opaque hosted logic.
+          Open-source, test-covered, and source-visible. No hidden prompt chains, no vendor lock-in &mdash;
+          just standard templates you can inspect, fill, and ship.
         </p>
         <div class="callout-actions">
           <a class="btn btn-primary" href="https://github.com/open-agreements/open-agreements" target="_blank" rel="noreferrer">Open GitHub</a>
@@ -223,7 +256,7 @@
         <span>·</span>
         <a href="https://www.npmjs.com/package/open-agreements" target="_blank" rel="noreferrer">npm</a>
         <span>·</span>
-        <a href="https://skills.sh/open-agreements/open-agreements/open-agreements" target="_blank" rel="noreferrer">skills.sh</a>
+        <a href="https://openagreements.ai" target="_blank" rel="noreferrer">openagreements.ai</a>
         <span>·</span>
         <a href="https://x.com/openagreements" target="_blank" rel="noreferrer">x.com/openagreements</a>
       </p>
@@ -253,10 +286,10 @@
           },
           {
             "@type": "Question",
-            "name": "Can I use OpenAgreements with Claude Code?",
+            "name": "Can I use OpenAgreements with Claude?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. You can use the CLI directly, the Agent Skill, and the contracts workspace MCP package."
+              "text": "Yes. Add https://openagreements.ai/api/mcp as a connector in Claude (Settings > Connectors > Add custom connector) and you can list templates, fill agreements, and download DOCX files directly from the chat."
             }
           },
           {
@@ -321,6 +354,22 @@
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Trust signals include passing CI, Codecov coverage gates, Vitest test runs, and OpenSpec-to-Allure traceability checks mapped to canonical scenarios."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I generate employment offer letters and IP assignment agreements?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. OpenAgreements includes employment templates for offer letters, IP/inventions assignments, and confidentiality acknowledgements, plus a jurisdiction-aware employment memo generator."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are computed recipe profiles?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Recipes can include conditional rules that derive fill values from user inputs automatically, such as computing dispute-resolution defaults based on jurisdiction."
             }
           },
           {
