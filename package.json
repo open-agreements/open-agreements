@@ -83,6 +83,7 @@
     "@types/adm-zip": "^0.5.7",
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^22.13.0",
+    "@vercel/node": "^5.6.3",
     "@vitest/coverage-v8": "^3.2.4",
     "allure-vitest": "^3.4.5",
     "docx": "^9.5.1",
