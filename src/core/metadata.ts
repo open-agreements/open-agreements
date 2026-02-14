@@ -94,6 +94,22 @@ export const CleanConfigSchema = z.object({
 });
 export type CleanConfig = z.infer<typeof CleanConfigSchema>;
 
+export const DeclarativeParagraphNormalizeRuleSchema = z.object({
+  id: z.string(),
+  section_heading: z.string(),
+  section_heading_any: z.array(z.string()).optional(),
+  ignore_heading: z.boolean().optional(),
+  paragraph_contains: z.string(),
+  replacements: z.record(z.string()).optional(),
+  trim_unmatched_trailing_bracket: z.boolean().optional(),
+});
+export type DeclarativeParagraphNormalizeRule = z.infer<typeof DeclarativeParagraphNormalizeRuleSchema>;
+
+export const NormalizeConfigSchema = z.object({
+  paragraph_rules: z.array(DeclarativeParagraphNormalizeRuleSchema).default([]),
+});
+export type NormalizeConfig = z.infer<typeof NormalizeConfigSchema>;
+
 export const GuidanceEntrySchema = z.object({
   source: z.enum(['footnote', 'pattern', 'range']),
   part: z.string(),
@@ -195,6 +211,15 @@ export function loadCleanConfig(recipeDir: string): CleanConfig {
   }
   const raw = readFileSync(cleanPath, 'utf-8');
   return CleanConfigSchema.parse(JSON.parse(raw));
+}
+
+export function loadNormalizeConfig(recipeDir: string): NormalizeConfig {
+  const normalizePath = join(recipeDir, 'normalize.json');
+  if (!existsSync(normalizePath)) {
+    return { paragraph_rules: [] };
+  }
+  const raw = readFileSync(normalizePath, 'utf-8');
+  return NormalizeConfigSchema.parse(JSON.parse(raw));
 }
 
 export function validateRecipeMetadata(recipeDir: string): { valid: boolean; errors: string[] } {
