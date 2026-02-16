@@ -68,6 +68,29 @@ If you have Claude Code installed, use the slash command:
 
 Claude will ask you which template to use and interview you for field values interactively.
 
+## Employment Templates
+
+OpenAgreements includes employment templates with jurisdiction-aware memo generation:
+
+```bash
+open-agreements fill openagreements-employment-offer-letter -d employee.json -o offer.docx --memo memo.json
+```
+
+Available employment templates:
+- `openagreements-employment-offer-letter`
+- `openagreements-employee-ip-inventions-assignment`
+- `openagreements-employment-confidentiality-acknowledgement`
+
+## Recipe-Driven Templates
+
+Some templates (like NVCA Series A documents) are downloaded from official sources at runtime:
+
+```bash
+open-agreements fill --recipe nvca-stock-purchase-agreement -d deal.json -o spa.docx
+```
+
+Recipes can include computed profiles that derive fill values automatically. Use `--computed-out computed.json` to capture the computed audit artifact.
+
 ## Validation
 
 Run the validation pipeline to check all templates:
