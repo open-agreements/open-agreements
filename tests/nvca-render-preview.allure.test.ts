@@ -45,6 +45,10 @@ const RECIPE_ID = 'nvca-stock-purchase-agreement';
 const RECIPE_DIR = resolveRecipeDir(RECIPE_ID);
 const SOURCE_CACHE_PATH = join(homedir(), '.open-agreements', 'cache', RECIPE_ID, 'source.docx');
 
+// This test requires a cached NVCA source DOCX and LibreOffice — skip in CI
+const hasPrereqs = existsSync(SOURCE_CACHE_PATH) &&
+  spawnSync('which', ['soffice'], { encoding: 'utf-8' }).status === 0;
+
 const it = itAllure.withLabels({
   epic: 'NVCA SPA Template',
   feature: 'NVCA SPA Legal QA',
@@ -52,7 +56,7 @@ const it = itAllure.withLabels({
   subSuite: 'Rendered Page Evidence',
 });
 
-describe('NVCA rendered preview evidence', () => {
+describe.skipIf(!hasPrereqs)('NVCA rendered preview evidence', () => {
   it('attaches rendered NVCA pages as PNG evidence for human review', async () => {
     await allureParameter('recipe_id', RECIPE_ID);
     await allureParameter('evidence_renderer', 'libreoffice+pdftoppm');
@@ -62,6 +66,7 @@ describe('NVCA rendered preview evidence', () => {
     );
 
     await allureStep('Assert cached NVCA source exists for deterministic visual run', () => {
+      // Guarded by describe.skipIf(!hasPrereqs) — this is a documentation assertion
       expect(existsSync(SOURCE_CACHE_PATH)).toBe(true);
     });
 
