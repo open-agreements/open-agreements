@@ -100,8 +100,10 @@ export const DeclarativeParagraphNormalizeRuleSchema = z.object({
   section_heading_any: z.array(z.string()).optional(),
   ignore_heading: z.boolean().optional(),
   paragraph_contains: z.string(),
+  paragraph_end_contains: z.string().optional(),
   replacements: z.record(z.string()).optional(),
   trim_unmatched_trailing_bracket: z.boolean().optional(),
+  expected_min_matches: z.number().int().nonnegative().optional(),
 });
 export type DeclarativeParagraphNormalizeRule = z.infer<typeof DeclarativeParagraphNormalizeRuleSchema>;
 
