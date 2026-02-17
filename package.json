@@ -38,6 +38,10 @@
     "build:workspace-mcp": "tsc -p packages/contracts-workspace-mcp/tsconfig.json",
     "dev": "tsc --watch",
     "check:spec-coverage": "node scripts/validate_openspec_coverage.mjs",
+    "check:source-drift": "npm run build && node scripts/source_drift_canary.mjs",
+    "generate:employment-templates": "node scripts/generate_employment_templates.mjs",
+    "generate:employment-templates:libreoffice": "node scripts/generate_employment_templates_libreoffice.mjs",
+    "render:docx-pages": "node scripts/render_docx_pages.mjs",
     "test": "npm run build && npm run check:spec-coverage && vitest",
     "test:workspace": "vitest run packages/contracts-workspace/tests",
     "test:workspace-mcp": "vitest run packages/contracts-workspace-mcp/tests",
@@ -47,7 +51,12 @@
     "test:run": "npm run build && npm run check:spec-coverage && vitest run",
     "lint": "eslint src/",
     "validate": "node bin/open-agreements.js validate",
-    "prepare": "npm run build"
+    "build:css": "npx tailwindcss -i site/src/input.css -o site/styles.css --minify",
+    "build:html": "npx @11ty/eleventy",
+    "build:site": "npm run build:css && npm run build:html",
+    "prepare": "npm run build",
+    "report:allure": "rm -rf ./allure-report && npx allure awesome ./allure-results --output ./allure-report",
+    "report:allure:open": "npx allure open ./allure-report"
   },
   "keywords": [
     "legal",
@@ -79,16 +88,19 @@
     "zod": "^3.24.0"
   },
   "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
     "@eslint/js": "^9.39.2",
     "@types/adm-zip": "^0.5.7",
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^22.13.0",
     "@vercel/node": "^5.6.3",
     "@vitest/coverage-v8": "^3.2.4",
+    "allure": "^3.1.0",
     "allure-vitest": "^3.4.5",
     "docx": "^9.5.1",
     "eslint": "^9.19.0",
     "globals": "^14.0.0",
+    "tailwindcss": "^3.4.0",
     "typescript": "^5.7.0",
     "typescript-eslint": "^8.54.0",
     "vitest": "^3.0.0"

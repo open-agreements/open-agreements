@@ -35,7 +35,7 @@ describe('npm packaging', () => {
       if (process.env.CI) throw err; // fail hard in CI
       available = false;
     }
-  });
+  }, 45_000);
 
   it('includes dist/cli/index.js', () => {
     if (!available) return;

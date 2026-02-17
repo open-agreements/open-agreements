@@ -3,7 +3,7 @@ import { join } from 'node:path';
 import { loadMetadata, loadCleanConfig, type TemplateMetadata } from './metadata.js';
 import { loadSelectionsConfig } from './selector.js';
 import { runFillPipeline } from './unified-pipeline.js';
-import { verifyTemplateFill } from './fill-utils.js';
+import { BLANK_PLACEHOLDER, verifyTemplateFill } from './fill-utils.js';
 
 
 export interface FillOptions {
@@ -29,6 +29,35 @@ export interface FillResult {
 function computeDisplayFields(data: Record<string, string | boolean>, fieldNames: Set<string>): void {
   const str = (key: string): string => String(data[key] ?? '');
   const bool = (key: string): boolean => data[key] === true;
+  const isBlankPlaceholder = (value: unknown): boolean =>
+    typeof value === 'string' && value.trim() === BLANK_PLACEHOLDER;
+  const toGoogleDocUrl = (value: string): string => {
+    const raw = value.trim();
+    if (raw === '') return '';
+    if (/^https?:\/\//i.test(raw)) return raw;
+    if (/^docs\.google\.com\/document\/d\//i.test(raw)) return `https://${raw}`;
+    if (/^[A-Za-z0-9_-]{20,}$/.test(raw)) return `https://docs.google.com/document/d/${raw}/`;
+    return raw;
+  };
+
+  // Optional cover-table rows in employment templates should disappear when blank.
+  // The default blank placeholder is intentionally visible in most contexts,
+  // but for these optional rows we normalize blank placeholders to empty strings
+  // so {IF field} conditions evaluate false and remove the row.
+  if (isBlankPlaceholder(data['bonus_terms'])) {
+    data['bonus_terms'] = '';
+  }
+  if (isBlankPlaceholder(data['equity_terms'])) {
+    data['equity_terms'] = '';
+  }
+  if (isBlankPlaceholder(data['cloud_drive_id'])) {
+    data['cloud_drive_id'] = '';
+  }
+  const cloudDriveId = typeof data['cloud_drive_id'] === 'string' ? data['cloud_drive_id'].trim() : '';
+  if (fieldNames.has('cloud_drive_id_footer')) {
+    const docUrl = cloudDriveId ? toGoogleDocUrl(cloudDriveId) : '';
+    data['cloud_drive_id_footer'] = docUrl ? `Document URL: ${docUrl}` : '';
+  }
 
   // Order Date: "Date of last signature" or custom date
   if (fieldNames.has('order_date_display') && !data['order_date_display']) {

@@ -11,3 +11,16 @@ coverage/
 openspec/changes/add-*/
 !openspec/changes/archive/
 .vercel
+
+# Build artifacts
+_site/
+site/downloads/
+
+# Python virtual env
+.venv/
+
+# Git worktrees
+.worktrees/
+
+# CI / test artifacts
+artifacts/

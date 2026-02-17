@@ -328,12 +328,72 @@ function stripFilledHighlighting(
 }
 
 /**
+ * Remove malformed/empty table rows that can be produced by conditional tags
+ * (for example false {IF ...} blocks wrapped around full row content).
+ *
+ * Some viewers (notably Apple Pages) may render entire tables incorrectly when
+ * a <w:tr> remains with <w:trPr> but no <w:tc> cells.
+ */
+function stripEmptyTableRows(docxBuffer: Buffer): Buffer {
+  const zip = new AdmZip(docxBuffer);
+  const parser = new DOMParser();
+  const serializer = new XMLSerializer();
+  const parts = enumerateTextParts(zip);
+  const partNames = getGeneralTextPartNames(parts);
+
+  let modified = false;
+
+  for (const partName of partNames) {
+    const entry = zip.getEntry(partName);
+    if (!entry) continue;
+
+    const xml = entry.getData().toString('utf-8');
+    const doc = parser.parseFromString(xml, 'text/xml');
+    const rows = doc.getElementsByTagNameNS(W_NS, 'tr');
+
+    const rowsToRemove: any[] = [];
+    for (let i = 0; i < rows.length; i++) {
+      const row = rows[i];
+      let hasCell = false;
+      for (let c = 0; c < row.childNodes.length; c++) {
+        const child = row.childNodes[c] as any;
+        if (child?.localName === 'tc' && child?.namespaceURI === W_NS) {
+          hasCell = true;
+          break;
+        }
+      }
+      if (!hasCell) {
+        rowsToRemove.push(row);
+      }
+    }
+
+    if (rowsToRemove.length > 0) {
+      modified = true;
+      for (const row of rowsToRemove) {
+        row.parentNode?.removeChild(row);
+      }
+      const outXml = serializer.serializeToString(doc);
+      zip.updateFile(partName, Buffer.from(outXml, 'utf-8'));
+    }
+  }
+
+  if (!modified) return docxBuffer;
+
+  const outZip = new AdmZip();
+  for (const entry of zip.getEntries()) {
+    outZip.addFile(entry.entryName, entry.getData());
+  }
+  return outZip.toBuffer();
+}
+
+/**
  * Fill a DOCX template with prepared data:
  * 1. Strip drafting note paragraphs (configurable, on by default)
  * 2. Strip highlighting from runs with filled fields (unfilled keep their highlight)
  * 3. Sanitize currency values by scanning the template buffer for ${field} patterns
  * 4. Call docx-templates createReport() with standard delimiters
- * 5. Return the filled buffer
+ * 5. Remove structurally empty table rows left by conditional rendering
+ * 6. Return the filled buffer
  */
 export async function fillDocx(options: FillDocxOptions): Promise<Uint8Array> {
   const {
@@ -364,7 +424,7 @@ export async function fillDocx(options: FillDocxOptions): Promise<Uint8Array> {
   const sanitizedData = sanitizeCurrencyValuesFromDocx(data, templateBuffer);
 
   // Step 4: Fill template
-  return createReport({
+  const filled = await createReport({
     template: templateBuffer,
     data: sanitizedData,
     cmdDelimiter: ['{', '}'],
@@ -373,4 +433,8 @@ export async function fillDocx(options: FillDocxOptions): Promise<Uint8Array> {
     processLineBreaks: true,
     processLineBreaksAsNewText: true,
   });
+
+  // Step 5: Remove malformed empty table rows from conditional rendering
+  const cleaned = stripEmptyTableRows(Buffer.from(filled));
+  return cleaned;
 }

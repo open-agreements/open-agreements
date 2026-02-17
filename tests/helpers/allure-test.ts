@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs';
 import { chai, expect, it as vitestIt, test as vitestTest } from 'vitest';
 
 declare const allure: any;
@@ -477,7 +478,11 @@ export async function allureParameter(name: string, value: string): Promise<void
   }
 }
 
-export async function allureAttachment(name: string, content: string, contentType = TEXT_CONTENT_TYPE): Promise<void> {
+export async function allureAttachment(
+  name: string,
+  content: string | Buffer | Uint8Array,
+  contentType = TEXT_CONTENT_TYPE,
+): Promise<void> {
   if (typeof allure !== 'undefined' && typeof allure.attachment === 'function') {
     await allure.attachment(name, content, contentType);
   }
@@ -512,4 +517,17 @@ export async function allureDescriptionHtml(content: string): Promise<void> {
 export async function allureJsonAttachment(name: string, payload: unknown): Promise<void> {
   const body = JSON.stringify(payload, null, 2);
   await allureAttachment(name, body, JSON_CONTENT_TYPE);
+}
+
+export async function allureFileAttachment(
+  name: string,
+  filePath: string,
+  contentType = 'application/octet-stream',
+): Promise<void> {
+  const bytes = readFileSync(filePath);
+  await allureAttachment(name, bytes, contentType);
+}
+
+export async function allureImageAttachment(name: string, filePath: string, contentType = 'image/png'): Promise<void> {
+  await allureFileAttachment(name, filePath, contentType);
 }

@@ -104,6 +104,7 @@ export type { CleanResult, CleanOptions } from './cleaner.js';
 export { patchDocument } from './patcher.js';
 export { verifyOutput, normalizeText, extractAllText } from './verifier.js';
 export { ensureSourceDocx } from './downloader.js';
+export { checkRecipeSourceDrift, computeSourceStructureSignature } from './source-drift.js';
 export { enumerateTextParts, getGeneralTextPartNames } from './ooxml-parts.js';
 export type { OoxmlTextParts } from './ooxml-parts.js';
 export type { RecipeRunOptions, RecipeRunResult, VerifyResult, VerifyCheck } from './types.js';

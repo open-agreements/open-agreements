@@ -1,96 +1,98 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OpenAgreements | Open-source legal templates for AI workflows</title>
-    <meta
-      name="description"
-      content="Fill standard legal agreement templates locally with CLI and coding agents. Open-source, auditable, and designed for fast startup legal ops."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="./assets/favicon.ico" sizes="any" />
-    <link rel="icon" href="./assets/favicon-32x32.png" type="image/png" sizes="32x32" />
-    <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png" />
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <div class="bg-noise" aria-hidden="true"></div>
+---
+layout: base.njk
+title: "OpenAgreements | Open-source legal templates for AI workflows"
+description: "Fill legal agreement templates with coding agents or local CLI execution. Open-source and auditable."
+---
 
-    <header class="topbar">
-      <a class="brand" href="#top">OpenAgreements</a>
-      <nav class="topnav">
-        <a href="#install">Install</a>
-        <a href="#start">Getting started</a>
-        <a href="#demo">Demo</a>
-        <a href="#faq">Q&A</a>
-        <a href="#trust">Trust</a>
-        <a href="https://x.com/openagreements" target="_blank" rel="noreferrer">X</a>
-        <a href="https://github.com/open-agreements/open-agreements" target="_blank" rel="noreferrer">GitHub</a>
-      </nav>
-    </header>
-
-    <main id="top">
+    <main id="top" class="main-wrap">
       <section class="hero section reveal">
         <p class="eyebrow">Open-source legal operations</p>
-        <h1>You use Claude for code. Use it for paperwork too.</h1>
+        <h1>You use coding agents for code. Use them for paperwork too.</h1>
         <p class="hero-copy">
-          Add OpenAgreements to Claude and fill NDAs, SAFEs, offer letters, and more &mdash;
-          straight from the chat. Or use our free remote MCP connector to get started in seconds.
+          Fill NDAs, SAFEs, offer letters, and more with two modes: hosted MCP connector for
+          quick setup in Claude, or local package execution for machine-local workflows.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#install">See how to install</a>
-          <a class="btn btn-ghost" href="#start">All setup options</a>
+          <a class="btn btn-primary" href="#start">Installation instructions</a>
+          <a class="btn btn-ghost" href="/templates">Browse templates</a>
         </div>
+        <span class="download-badge" data-npm-downloads>loading downloads…</span>
         <ul class="pill-row" id="trust">
           <li><a href="https://www.npmjs.com/package/open-agreements" target="_blank" rel="noreferrer">npm package</a></li>
           <li><a href="https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml" target="_blank" rel="noreferrer">CI status</a></li>
           <li><a href="https://codecov.io/gh/open-agreements/open-agreements" target="_blank" rel="noreferrer">coverage</a></li>
-          <li><a href="https://github.com/open-agreements/open-agreements/tree/main/tests" target="_blank" rel="noreferrer">Vitest tests</a></li>
-          <li><a href="https://github.com/open-agreements/open-agreements/blob/main/tests/OPENSPEC_TRACEABILITY.md" target="_blank" rel="noreferrer">OpenSpec traceability</a></li>
           <li><a href="https://github.com/open-agreements/open-agreements" target="_blank" rel="noreferrer">source code</a></li>
         </ul>
       </section>
 
+      <section class="section reveal" style="padding: clamp(26px, 4vw, 42px);">
+        <h2>Browse agreement packs</h2>
+        <p style="color: var(--ink-soft); margin: 8px 0 0;">{{ catalog.templates | length }} templates across {{ catalog.categories | length }} categories — all open-source, auditable, and ready to fill.</p>
+        <div class="pack-grid">
+          {%- for cat in catalog.categories %}
+          <a class="pack-card" href="/templates/?category={{ cat.slug }}">
+            <h3>{{ cat.label }}</h3>
+            <span class="pack-count">{{ cat.count }} template{{ "s" if cat.count != 1 }}</span>
+            <p class="pack-desc">{{ cat.description }}</p>
+            <p class="pack-sources">From {{ cat.sources | join(", ") }}</p>
+          </a>
+          {%- endfor %}
+        </div>
+        <p style="margin-top: 16px;"><a href="/templates" style="color: var(--accent-deep); font-weight: 600; text-decoration: none;">View full catalog &rarr;</a></p>
+      </section>
+
       <section id="start" class="section split reveal">
         <div>
-          <h2>Getting started</h2>
+          <div id="install-context" class="install-context" hidden style="margin-bottom: 16px;">
+            <p>To use <strong id="install-context-name"></strong>, pick a setup method below.</p>
+          </div>
+          <h2>Installation instructions</h2>
           <p>
-            Pick the integration path that fits your workflow. Add the remote connector for instant
-            access in Claude, or use the CLI for local template fill and validation.
+            Pick the mode that fits your workflow. Hosted MCP connector is convenience mode through
+            <code>openagreements.ai</code>; local package execution runs from your terminal on your machine.
           </p>
         </div>
         <div class="cards">
           <article class="card card-featured">
-            <h3>Claude</h3>
-            <p>Add as a connector in Claude and start filling agreements instantly.</p>
+            <h3>Hosted MCP connector</h3>
+            <p>Convenience mode for fast startup in Claude.</p>
             <button class="copy-btn" data-copy="https://openagreements.ai/api/mcp">
               <code>https://openagreements.ai/api/mcp</code>
               <span class="copy-label" aria-label="Copy"><svg class="copy-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span class="copy-tooltip">Copy</span></span>
             </button>
+            <p class="card-hint">Request/response content passes through the hosted connector service.</p>
             <p class="card-hint">Settings &rarr; Connectors &rarr; Add custom connector &rarr; paste URL</p>
           </article>
           <article class="card">
-            <h3>CLI</h3>
-            <p>Run template fill and validation locally from the terminal.</p>
+            <h3>Local package execution</h3>
+            <p>Run template fill and validation from your terminal on your machine.</p>
             <pre><code>npx -y open-agreements@latest list --json</code></pre>
           </article>
         </div>
       </section>
 
+      <section class="section reveal" style="padding: clamp(26px, 4vw, 42px);">
+        <div class="demo-header">
+          <h2>Quick decision</h2>
+        </div>
+        <p style="color: var(--ink-soft);">
+          If your document is sensitive, use fully local package execution. If you prioritize convenience,
+          use the hosted MCP connector.
+        </p>
+        <p style="color: var(--ink-soft);">
+          Mode-by-mode data flow summary:
+          <a href="https://github.com/open-agreements/open-agreements/blob/main/docs/trust-checklist.md" target="_blank" rel="noreferrer">docs/trust-checklist.md</a>
+        </p>
+      </section>
+
       <section id="install" class="section demo reveal">
         <div class="demo-header">
-          <h2>Install in 30 seconds</h2>
-          <p>Add the connector, ask Claude to fill an agreement, download the DOCX.</p>
+          <h2>Claude Chat MCP setup video</h2>
+          <p>Add the hosted connector in Claude Chat and start filling agreements in under a minute.</p>
         </div>
         <figure>
-          <video autoplay loop muted playsinline poster="./assets/demo-install-claude-poster.jpg">
-            <source src="./assets/demo-install-claude.mp4" type="video/mp4" />
+          <video autoplay loop muted playsinline poster="/assets/demo-install-claude-poster.jpg">
+            <source src="/assets/demo-install-claude.mp4" type="video/mp4" />
           </video>
           <figcaption>Add <button class="copy-btn copy-btn-inline" data-copy="https://openagreements.ai/api/mcp"><code>https://openagreements.ai/api/mcp</code> <span class="copy-label" aria-label="Copy"><svg class="copy-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span class="copy-tooltip">Copy</span></span></button> as a connector in Claude &rarr; start filling agreements.</figcaption>
         </figure>
@@ -102,7 +104,7 @@
           <p>From prompt to signed-ready NDA output in one agent-driven run.</p>
         </div>
         <figure>
-          <img src="./assets/demo-fill-nda.gif" alt="OpenAgreements Mutual NDA fill demo" loading="lazy" />
+          <img src="/assets/demo-fill-nda.gif" alt="OpenAgreements Mutual NDA fill demo" loading="lazy" />
           <figcaption>Demo clip: Common Paper Mutual NDA filled through Claude Code + OpenAgreements.</figcaption>
         </figure>
       </section>
@@ -117,14 +119,15 @@
             <summary>What is OpenAgreements?</summary>
             <p>
               OpenAgreements is an open-source CLI and library for filling standard legal agreement templates
-              (DOCX) with structured inputs. It is designed to work directly with coding agents and local workflows.
+              (DOCX) with structured inputs. It is designed to work directly with coding agents across hosted and local workflows.
             </p>
           </details>
           <details>
             <summary>Does OpenAgreements send agreement data to remote servers?</summary>
             <p>
-              The core tooling is local-first. Template fill runs on your machine and outputs local files.
-              You control any external services you choose to connect.
+              In local package mode, template fill runs on your machine and writes local files.
+              If you use the hosted connector at <code>https://openagreements.ai/api/mcp</code>,
+              request/response content passes through that hosted service.
             </p>
           </details>
           <details>
@@ -162,8 +165,8 @@
             <summary>Can OpenAgreements generate .docx NDAs and Cloud Services Agreements?</summary>
             <p>
               Yes. OpenAgreements can generate editable <code>.docx</code> agreements from template inputs, including
-              Non-Disclosure Agreements (NDAs) and Cloud Services Agreements (CSAs), with local-first workflows that
-              keep output files in your own workspace.
+              Non-Disclosure Agreements (NDAs) and Cloud Services Agreements (CSAs), with workflow options for
+              hosted connector use or local package execution.
             </p>
           </details>
           <details>
@@ -237,9 +240,9 @@
       </section>
 
       <section class="section callout reveal">
-        <h2>Built for power users.</h2>
+        <h2>Open-source, auditable, trustworthy.</h2>
         <p>
-          Open-source, test-covered, and source-visible. No hidden prompt chains, no vendor lock-in &mdash;
+          Test-covered and source-visible. No hidden prompt chains, no vendor lock-in &mdash;
           just standard templates you can inspect, fill, and ship.
         </p>
         <div class="callout-actions">
@@ -249,19 +252,9 @@
       </section>
     </main>
 
-    <footer class="footer">
-      <p><strong>OpenAgreements</strong> · Open-source legal templates + agent-ready workflows</p>
-      <p>
-        <a href="https://github.com/open-agreements/open-agreements" target="_blank" rel="noreferrer">GitHub</a>
-        <span>·</span>
-        <a href="https://www.npmjs.com/package/open-agreements" target="_blank" rel="noreferrer">npm</a>
-        <span>·</span>
-        <a href="https://openagreements.ai" target="_blank" rel="noreferrer">openagreements.ai</a>
-        <span>·</span>
-        <a href="https://x.com/openagreements" target="_blank" rel="noreferrer">x.com/openagreements</a>
-      </p>
-      <p class="dev-credit">Developed by <a href="https://usejunior.com" target="_blank" rel="noreferrer">UseJunior</a></p>
-    </footer>
+    <script id="template-map" type="application/json">
+      { {%- for t in catalog.templates %}"{{ t.id }}": "{{ t.displayName }}"{% if not loop.last %}, {% endif %}{%- endfor %} }
+    </script>
 
     <script type="application/ld+json">
       {
@@ -281,7 +274,7 @@
             "name": "Does OpenAgreements send agreement data to remote servers?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "OpenAgreements is local-first and template fill runs on your machine; you control any external services you connect."
+              "text": "In local package mode, template fill runs on your machine and writes local files. If you use the hosted connector at https://openagreements.ai/api/mcp, request and response content passes through that hosted service."
             }
           },
           {
@@ -305,7 +298,7 @@
             "name": "Can OpenAgreements generate .docx NDAs and Cloud Services Agreements?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Yes. OpenAgreements can generate editable .docx agreements from template inputs, including Non-Disclosure Agreements (NDAs) and Cloud Services Agreements (CSAs), using local-first workflows."
+              "text": "Yes. OpenAgreements can generate editable .docx agreements from template inputs, including Non-Disclosure Agreements (NDAs) and Cloud Services Agreements (CSAs), with workflow options for hosted connector use or local package execution."
             }
           },
           {
@@ -383,6 +376,3 @@
         ]
       }
     </script>
-    <script src="./main.js" defer></script>
-  </body>
-</html>

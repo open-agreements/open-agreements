@@ -1,8 +1,12 @@
-import { defineConfig } from 'vitest/config';
+import { configDefaults, defineConfig } from 'vitest/config';
 
 export default defineConfig({
   test: {
     setupFiles: ['allure-vitest/setup'],
+    exclude: [
+      ...configDefaults.exclude,
+      '**/.worktrees/**',
+    ],
     reporters: [
       'default',
       ['allure-vitest/reporter', { resultsDir: './allure-results' }],

@@ -1,0 +1,71 @@
+---
+layout: base.njk
+title: "Template Catalog | OpenAgreements"
+description: "Browse all open-source legal agreement templates. NDAs, SAFEs, Cloud Service Agreements, NVCA documents, and more."
+extraScripts: '<script src="/templates-filter.js" defer></script>'
+---
+
+    <main class="main-wrap">
+      <section class="section reveal" style="padding: clamp(26px, 4vw, 42px);">
+        <h1 style="font-size: clamp(1.6rem, 4vw, 2.8rem); max-width: none;">Template Catalog</h1>
+        <p style="color: var(--ink-soft); margin: 8px 0 0;">{{ catalog.templates | length }} templates across {{ catalog.categories | length }} categories. <span data-npm-downloads>loading downloads…</span></p>
+
+        {# Desktop filter tabs #}
+        <div class="filter-bar" role="tablist" aria-label="Filter templates by category">
+          <button class="filter-tab active" data-category="all" role="tab" aria-selected="true">All</button>
+          {%- for cat in catalog.categories %}
+          <button class="filter-tab" data-category="{{ cat.slug }}" role="tab" aria-selected="false">{{ cat.label }} ({{ cat.count }})</button>
+          {%- endfor %}
+        </div>
+
+        {# Mobile filter dropdown #}
+        <select class="filter-select" aria-label="Filter templates by category">
+          <option value="all">All categories</option>
+          {%- for cat in catalog.categories %}
+          <option value="{{ cat.slug }}">{{ cat.label }} ({{ cat.count }})</option>
+          {%- endfor %}
+        </select>
+
+        {# Template cards — server-rendered for SEO #}
+        <div class="template-grid" id="template-grid">
+          {%- for t in catalog.templates %}
+          <article class="template-card" data-category="{{ t.category }}">
+            <h3>{{ t.displayName }}</h3>
+            <div class="template-meta">
+              {% if t.isRecipe %}
+                <span class="template-license recipe">Recipe</span>
+              {% else %}
+                <span class="template-license">{{ t.license }}</span>
+              {% endif %}
+              {% if t.hasPreview %}
+                <span class="template-badge-oa">OpenAgreements original</span>
+              {% else %}
+                <span class="template-source">
+                  <a href="{{ t.sourceUrl }}" target="_blank" rel="noreferrer">{{ t.sourceLabel }}</a>
+                </span>
+              {% endif %}
+            </div>
+            <p class="template-desc">{{ t.description }}</p>
+            <p class="template-fields">{{ t.totalFields }} total field{{ "s" if t.totalFields != 1 }}</p>
+            <div class="template-actions">
+              {% if t.hasPreview %}
+                <a class="btn btn-sm btn-ghost" href="/templates/{{ t.id }}/">View template</a>
+              {% elif t.isRecipe %}
+                <a class="btn btn-sm btn-ghost" href="{{ t.sourceDocUrl }}" target="_blank" rel="noreferrer">View on {{ t.sourceLabel | lower }}.org</a>
+              {% else %}
+                <a class="btn btn-sm btn-ghost" href="{{ t.sourceDocUrl }}" target="_blank" rel="noreferrer">View source</a>
+              {% endif %}
+              <a class="btn btn-sm btn-primary" href="/?template={{ t.id }}#start">Installation instructions</a>
+            </div>
+            {% if t.isRecipe %}
+              <p class="template-note">Source downloaded from {{ t.sourceLabel | lower }}.org at fill time. Not redistributed in this package.</p>
+            {% endif %}
+          </article>
+          {%- endfor %}
+        </div>
+
+        <div class="empty-state" id="empty-state">
+          No templates match this filter.
+        </div>
+      </section>
+    </main>
