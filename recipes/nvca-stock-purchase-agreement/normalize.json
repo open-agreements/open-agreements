@@ -4,11 +4,13 @@
       "id": "costs-of-enforcement-select-each-party",
       "section_heading": "Costs of Enforcement",
       "paragraph_contains": "Each party will bear its own costs in respect of any disputes arising under this Agreement.",
+      "paragraph_end_contains": "this Agreement.]",
       "replacements": {
         "[If any action at law or in equity (including, arbitration) is necessary to enforce or interpret the terms of any of the Transaction Agreements, the prevailing party shall be entitled to reasonable attorneys’ fees, costs and necessary disbursements in addition to any other relief to which such party may be entitled.]": "",
         "[Each party will bear its own costs in respect of any disputes arising under this Agreement.]": "Each party will bear its own costs in respect of any disputes arising under this Agreement."
       },
-      "trim_unmatched_trailing_bracket": true
+      "trim_unmatched_trailing_bracket": true,
+      "expected_min_matches": 1
     },
     {
       "id": "fill-initial-closing-minimum-shares",
@@ -18,11 +20,13 @@
         "Voting Agreement"
       ],
       "paragraph_contains": "A minimum of",
+      "paragraph_end_contains": "Shares must be sold at the [Initial] Closing.]",
       "replacements": {
         "[_________]": "{minimum_shares_initial_closing}",
         "[_______]": "{minimum_shares_initial_closing}"
       },
-      "trim_unmatched_trailing_bracket": true
+      "trim_unmatched_trailing_bracket": true,
+      "expected_min_matches": 1
     },
     {
       "id": "fill-company-counsel-name",
@@ -31,10 +35,12 @@
         "Qualifications"
       ],
       "paragraph_contains": "The Purchasers shall have received from",
+      "paragraph_end_contains": "counsel for the Company",
       "replacements": {
         "[___________]": "{company_counsel_name}"
       },
-      "trim_unmatched_trailing_bracket": true
+      "trim_unmatched_trailing_bracket": true,
+      "expected_min_matches": 1
     },
     {
       "id": "fill-board-composition-placeholders",
@@ -43,11 +49,13 @@
         "Qualifications"
       ],
       "paragraph_contains": "authorized size of the Board of Directors",
+      "paragraph_end_contains": "Board of Directors shall be comprised of",
       "replacements": {
         "[______]": "{board_size}",
         "[_________________]": "{director_names}"
       },
-      "trim_unmatched_trailing_bracket": true
+      "trim_unmatched_trailing_bracket": true,
+      "expected_min_matches": 1
     },
     {
       "id": "trim-purchaser-country-concern-bracket",
@@ -56,7 +64,9 @@
         "Residence"
       ],
       "paragraph_contains": "Except as otherwise disclosed in writing to the Company, the Purchaser is not a “person of a country of concern”",
-      "trim_unmatched_trailing_bracket": true
+      "paragraph_end_contains": "Outbound Investment Security Program.]",
+      "trim_unmatched_trailing_bracket": true,
+      "expected_min_matches": 1
     },
     {
       "id": "trim-purchaser-covered-person-bracket",
@@ -65,7 +75,9 @@
         "Residence"
       ],
       "paragraph_contains": "The Purchaser is not a “covered person” as that term is defined in the DSP",
-      "trim_unmatched_trailing_bracket": true
+      "paragraph_end_contains": "term is defined in the DSP.]",
+      "trim_unmatched_trailing_bracket": true,
+      "expected_min_matches": 1
     }
   ]
 }

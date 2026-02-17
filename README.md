@@ -1,6 +1,7 @@
 # OpenAgreements
 
 [![npm version](https://img.shields.io/npm/v/open-agreements)](https://www.npmjs.com/package/open-agreements)
+[![npm downloads](https://img.shields.io/npm/dm/open-agreements.svg)](https://npmjs.org/package/open-agreements)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Agent Skill](https://img.shields.io/badge/agent--skill-open--agreements-purple)](https://skills.sh)
 [![CI](https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml/badge.svg)](https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml)
@@ -25,6 +26,9 @@ Built by the team behind [UseJunior.com](https://usejunior.com) — in productio
 - Coverage is published to Codecov with repository-defined patch/project gates in `codecov.yml`.
 - The active JS test framework is Vitest, with JUnit test results uploaded for Codecov test analytics.
 - OpenSpec scenario traceability is enforced via `npm run check:spec-coverage`, with matrix output in `tests/OPENSPEC_TRACEABILITY.md`.
+- Recipe source drift canary (`npm run check:source-drift`) verifies expected source hash plus structural replacement/normalize anchors.
+- Assumption-level regressions are tracked in `docs/assumptions.md` with executable mapping in `tests/ASSUMPTION_TEST_MATRIX.md`.
+- Maintainer: [Steven Obiajulu](https://www.linkedin.com/in/steven-obiajulu/) (MIT-trained mechanical engineer; Harvard Law trained lawyer).
 
 ## How It Works
 
@@ -37,7 +41,17 @@ Built by the team behind [UseJunior.com](https://usejunior.com) — in productio
 └─────────────────────┘     └─────────────────────────┘    └─────────────────────┘
 ```
 
-No servers, no accounts, no subscriptions. Templates run locally via `npx` — your data never leaves your machine.
+OpenAgreements supports two execution modes with different trust boundaries:
+
+- Hosted remote MCP connector (`https://openagreements.ai/api/mcp`) for fast setup in Claude.
+- Fully local package execution (`npx`, global install, or local stdio MCP package) for machine-local workflows.
+
+There is no global default mode recommendation. Choose based on document sensitivity, internal policy, and workflow speed needs. See `docs/trust-checklist.md` for a 60-second data-flow summary.
+
+### Quick Decision
+
+- If your document is sensitive, use fully local package execution.
+- If you prioritize convenience, use the hosted remote MCP connector.
 
 ## Use with Claude Code
 

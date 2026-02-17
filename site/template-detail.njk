@@ -1,0 +1,49 @@
+---
+layout: base.njk
+pagination:
+  data: catalog.previewTemplates
+  size: 1
+  alias: t
+permalink: "templates/{{ t.id }}/index.html"
+eleventyComputed:
+  title: "{{ t.displayName }} | OpenAgreements"
+  description: "{{ t.description }}"
+---
+
+    <main class="main-wrap">
+      <section class="section template-detail reveal" style="padding: clamp(26px, 4vw, 42px);">
+        <p style="margin: 0 0 16px;"><a href="/templates" style="color: var(--accent-deep); text-decoration: none; font-size: 0.88rem;">&larr; Back to catalog</a></p>
+
+        <h1 style="font-size: clamp(1.4rem, 3.5vw, 2.2rem); max-width: none;">{{ t.displayName }}</h1>
+
+        <div class="template-meta" style="margin: 12px 0;">
+          <span class="template-badge-oa">OpenAgreements original</span>
+          <span class="template-license">{{ t.license }}</span>
+        </div>
+
+        <p style="color: var(--ink-soft); max-width: 65ch;">{{ t.description }}</p>
+
+        <p class="template-fields" style="margin: 12px 0 24px;">{{ t.totalFields }} total field{{ "s" if t.totalFields != 1 }}</p>
+
+        <div class="template-detail-actions" style="margin-bottom: 24px;">
+          {% if t.distributable %}
+          <a class="btn btn-ghost" href="/downloads/{{ t.id }}.docx" download>Download blank DOCX</a>
+          <a class="btn btn-ghost" href="/downloads/{{ t.id }}.md" download>Download markdown</a>
+          {% endif %}
+          <a class="btn btn-primary" href="/?template={{ t.id }}#start">Installation instructions</a>
+        </div>
+
+        {% if t.previewPages and t.previewPages.length %}
+        <div class="template-preview">
+          {%- for page in t.previewPages %}
+          <img
+            class="template-preview-page"
+            src="{{ page }}"
+            alt="{{ t.displayName }} — page {{ loop.index }}"
+            loading="{% if loop.first %}eager{% else %}lazy{% endif %}"
+          />
+          {%- endfor %}
+        </div>
+        {% endif %}
+      </section>
+    </main>

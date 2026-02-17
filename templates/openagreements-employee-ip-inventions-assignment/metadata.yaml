@@ -3,7 +3,7 @@ description: >-
   Employee proprietary information and inventions assignment agreement with
   explicit prior-inventions and personal-project carveout language placeholders.
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-employee-ip-inventions-assignment
-version: '1.0'
+version: '1.1'
 license: CC-BY-4.0
 allow_derivatives: true
 attribution_text: >-
@@ -59,11 +59,13 @@ fields:
     description: Venue for disputes
     default: state and federal courts in the governing law state
     section: Legal
-required_fields:
-  - company_name
-  - employee_name
-  - effective_date
-  - confidential_information_definition
-  - return_of_materials_timing
-  - governing_law
-  - venue
+  - name: cloud_drive_id
+    type: string
+    description: Optional document-system URI or file ID for execution copy traceability
+    section: Document Management
+  - name: cloud_drive_id_footer
+    type: string
+    description: Internal computed footer text for document-system traceability
+    default: ''
+    section: Document Management
+required_fields: []

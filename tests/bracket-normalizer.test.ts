@@ -114,6 +114,8 @@ describe('normalizeBracketArtifacts', () => {
     writeFileSync(
       input,
       buildDocx([
+        '[Small Business Concern',
+        '. The Company together with its “affiliates” is a “small business concern” within the meaning of the Small Business Act.]',
         'Qualifications',
         '. The Purchasers shall have received from [___________], counsel for the Company, an opinion.]',
         '. As of the Initial Closing, the authorized size of the Board of Directors shall be [______], and the Board of Directors shall be comprised of [_________________].]',
@@ -129,28 +131,35 @@ describe('normalizeBracketArtifacts', () => {
           section_heading: 'Conditions of the Purchasers’ Obligations at Closing',
           section_heading_any: ['Qualifications'],
           paragraph_contains: 'The Purchasers shall have received from',
+          paragraph_end_contains: 'counsel for the Company',
           replacements: {
             '[___________]': '{company_counsel_name}',
           },
           trim_unmatched_trailing_bracket: true,
+          expected_min_matches: 1,
         },
         {
           id: 'board-composition',
           section_heading: 'Conditions of the Purchasers’ Obligations at Closing',
           section_heading_any: ['Qualifications'],
           paragraph_contains: 'authorized size of the Board of Directors',
+          paragraph_end_contains: 'Board of Directors shall be comprised of',
           replacements: {
             '[______]': '{board_size}',
             '[_________________]': '{director_names}',
           },
           trim_unmatched_trailing_bracket: true,
+          expected_min_matches: 1,
         },
         {
           id: 'country-of-concern',
           section_heading: 'Representations and Warranties of the Purchaser',
           section_heading_any: ['Residence'],
           paragraph_contains: 'person of a country of concern',
+          paragraph_end_contains:
+            'within the meaning of the Outbound Investment Security Program.]',
           trim_unmatched_trailing_bracket: true,
+          expected_min_matches: 1,
         },
       ],
       fieldValues: {
@@ -162,11 +171,57 @@ describe('normalizeBracketArtifacts', () => {
     const resultParagraphs = readParagraphs(output);
     const joined = resultParagraphs.join('\n');
 
-    expect(stats.declarativeRuleApplications).toBe(3);
+    expect(stats.declarativeRuleApplications).toBe(5);
+    expect(stats.declarativeRuleMatchCounts['opinion-counsel']).toBe(1);
+    expect(stats.declarativeRuleMatchCounts['board-composition']).toBe(1);
+    expect(stats.declarativeRuleMatchCounts['country-of-concern']).toBe(1);
+    expect(stats.declarativeRuleExpectationFailures).toEqual([]);
+    expect(joined).toContain('Small Business Concern');
+    expect(joined).toContain('small business concern” within the meaning of the Small Business Act.');
     expect(joined).toContain('received from Cooley LLP, counsel for the Company');
     expect(joined).toContain('authorized size of the Board of Directors shall be _______');
     expect(joined).toContain('Board of Directors shall be comprised of Jane Founder; Pat Director.');
     expect(joined).toContain('person of a country of concern” within the meaning of the Outbound Investment Security Program.');
     expect(joined).not.toContain(']');
+  });
+
+  it('tracks expectation failures when a rule start/end anchor pair is not found', async () => {
+    const dir = mkdtempSync(join(tmpdir(), 'oa-bracket-normalizer-expectations-'));
+    tempDirs.push(dir);
+
+    const input = join(dir, 'input.docx');
+    const output = join(dir, 'output.docx');
+
+    writeFileSync(
+      input,
+      buildDocx([
+        'Qualifications',
+        '. The Purchasers shall have received from [___________], counsel for the Company, an opinion.]',
+      ])
+    );
+
+    const stats = await normalizeBracketArtifacts(input, output, {
+      rules: [
+        {
+          id: 'missed-end-anchor',
+          section_heading: 'Conditions of the Purchasers’ Obligations at Closing',
+          section_heading_any: ['Qualifications'],
+          paragraph_contains: 'The Purchasers shall have received from',
+          paragraph_end_contains: 'THIS END ANCHOR DOES NOT EXIST',
+          replacements: {
+            '[___________]': '{company_counsel_name}',
+          },
+          expected_min_matches: 1,
+        },
+      ],
+      fieldValues: {
+        company_counsel_name: 'Cooley LLP',
+      },
+    });
+
+    expect(stats.declarativeRuleMatchCounts['missed-end-anchor']).toBe(0);
+    expect(stats.declarativeRuleExpectationFailures).toContain(
+      'missed-end-anchor: expected at least 1 match(es), found 0'
+    );
   });
 });

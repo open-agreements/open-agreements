@@ -2,24 +2,27 @@ import { existsSync, writeFileSync } from 'node:fs';
 import AdmZip from 'adm-zip';
 import { enumerateTextParts, getGeneralTextPartNames } from '../core/recipe/ooxml-parts.js';
 
-/**
- * Scan a DOCX file and report all bracketed placeholders.
- * Classifies them as short (fill-in fields) vs long (alternative clauses).
- * Optionally outputs a draft replacements.json.
- *
- * Scans all general OOXML text parts (document, headers, footers, endnotes).
- */
-export function runScan(args: { input: string; outputReplacements?: string }): void {
-  if (!existsSync(args.input)) {
-    console.error(`File not found: ${args.input}`);
-    process.exit(1);
-  }
+export interface ScanDocxResult {
+  partNames: string[];
+  bracketsByPart: Map<string, Set<string>>;
+  unique: string[];
+  shortPlaceholders: string[];
+  longClauses: string[];
+  footnoteCount: number;
+  underscoreBlankCount: number;
+}
 
-  const zip = new AdmZip(args.input);
+/**
+ * Collect bracket placeholder information from a DOCX file.
+ *
+ * This is the programmatic counterpart to the user-facing `scan` command and
+ * can be reused by tests and validation tools.
+ */
+export function scanDocxBrackets(inputPath: string): ScanDocxResult {
+  const zip = new AdmZip(inputPath);
   const parts = enumerateTextParts(zip);
   const partNames = getGeneralTextPartNames(parts);
 
-  // Collect bracketed content from all parts, tracking which part they appear in
   const bracketsByPart = new Map<string, Set<string>>();
   const allBrackets: string[] = [];
 
@@ -33,7 +36,6 @@ export function runScan(args: { input: string; outputReplacements?: string }): v
   }
 
   const unique = [...new Set(allBrackets)].sort();
-
   const shortPlaceholders: string[] = [];
   const longClauses: string[] = [];
 
@@ -44,6 +46,47 @@ export function runScan(args: { input: string; outputReplacements?: string }): v
       longClauses.push(`[${b.slice(0, 60)}...]`);
     }
   }
+
+  let underscoreBlankCount = 0;
+  for (const partName of partNames) {
+    const text = extractPartText(zip, partName);
+    const blanks = text.match(/_{3,}/g) ?? [];
+    underscoreBlankCount += blanks.length;
+  }
+
+  return {
+    partNames,
+    bracketsByPart,
+    unique,
+    shortPlaceholders,
+    longClauses,
+    footnoteCount: countFootnotes(zip),
+    underscoreBlankCount,
+  };
+}
+
+/**
+ * Scan a DOCX file and report all bracketed placeholders.
+ * Classifies them as short (fill-in fields) vs long (alternative clauses).
+ * Optionally outputs a draft replacements.json.
+ *
+ * Scans all general OOXML text parts (document, headers, footers, endnotes).
+ */
+export function runScan(args: { input: string; outputReplacements?: string }): void {
+  if (!existsSync(args.input)) {
+    console.error(`File not found: ${args.input}`);
+    process.exit(1);
+  }
+
+  const scan = scanDocxBrackets(args.input);
+  const {
+    partNames,
+    bracketsByPart,
+    shortPlaceholders,
+    longClauses,
+    footnoteCount,
+    underscoreBlankCount,
+  } = scan;
 
   console.log(`\n=== Scan of ${args.input} ===`);
 
@@ -73,17 +116,9 @@ export function runScan(args: { input: string; outputReplacements?: string }): v
   }
 
   // Footnote count
-  const footnoteCount = countFootnotes(zip);
   console.log(`\nFootnotes: ${footnoteCount} explanatory footnote(s)`);
 
-  // Underscore blanks (from all parts)
-  let totalBlanks = 0;
-  for (const partName of partNames) {
-    const text = extractPartText(zip, partName);
-    const blanks = text.match(/_{3,}/g) ?? [];
-    totalBlanks += blanks.length;
-  }
-  console.log(`Underscore blanks: ${totalBlanks} occurrence(s)`);
+  console.log(`Underscore blanks: ${underscoreBlankCount} occurrence(s)`);
 
   // Output draft replacements.json
   if (args.outputReplacements) {

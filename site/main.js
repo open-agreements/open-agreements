@@ -1,3 +1,4 @@
+// Reveal on scroll
 const nodes = document.querySelectorAll('.reveal');
 
 const io = new IntersectionObserver(
@@ -27,3 +28,66 @@ document.querySelectorAll('[data-copy]').forEach((btn) => {
     });
   });
 });
+
+// npm download stats — always shown, whatever the count
+async function fetchDownloadStats() {
+  const res = await fetch('https://api.npmjs.org/downloads/point/last-month/open-agreements');
+  const { downloads } = await res.json();
+  document.querySelectorAll('[data-npm-downloads]').forEach(el => {
+    el.textContent = `${downloads.toLocaleString()} downloads/month`;
+  });
+}
+fetchDownloadStats().catch(() => {
+  document.querySelectorAll('[data-npm-downloads]').forEach(el => {
+    el.textContent = '';
+  });
+});
+
+// Template-aware install section: react to ?template= param
+(function () {
+  // Preferred: /?template=<id>#install (standard query param)
+  let templateId = new URLSearchParams(window.location.search).get('template');
+
+  // Fallback: /#install?template=<id> (legacy hash-based)
+  if (!templateId) {
+    const hash = window.location.hash;
+    if (hash.includes('?template=')) {
+      const qs = hash.split('?')[1];
+      if (qs) templateId = new URLSearchParams(qs).get('template');
+    }
+  }
+
+  if (!templateId) return;
+
+  // Look up display name from embedded map
+  const mapEl = document.getElementById('template-map');
+  let displayName = templateId;
+  if (mapEl) {
+    try {
+      const map = JSON.parse(mapEl.textContent);
+      if (map[templateId]) displayName = map[templateId];
+    } catch (e) { /* use raw ID */ }
+  }
+
+  // Show contextual banner
+  const banner = document.getElementById('install-context');
+  const nameEl = document.getElementById('install-context-name');
+  if (banner && nameEl) {
+    nameEl.textContent = displayName;
+    banner.hidden = false;
+  }
+
+  // Pre-fill CLI example with template ID (lives in #start section)
+  const cliCode = document.querySelector('#start pre code');
+  if (cliCode) {
+    cliCode.textContent = `npx -y open-agreements@latest fill ${templateId}`;
+  }
+
+  // Scroll to installation instructions section
+  const installSection = document.getElementById('start');
+  if (installSection) {
+    requestAnimationFrame(() => {
+      installSection.scrollIntoView({ behavior: 'smooth' });
+    });
+  }
+})();

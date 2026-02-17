@@ -43,6 +43,11 @@ export { validateLicense, type LicenseValidationResult } from './core/validation
 export { validateOutput, type OutputValidationResult } from './core/validation/output.js';
 export { validateRecipe, type RecipeValidationResult } from './core/validation/recipe.js';
 export { validateExternal, type ExternalValidationResult } from './core/validation/external.js';
+export {
+  assessScanMetadataCoverage,
+  type ScanMetadataCoverageInput,
+  type ScanMetadataCoverageReport,
+} from './core/validation/scan-metadata.js';
 
 // Recipe engine
 export {
@@ -51,6 +56,8 @@ export {
   patchDocument,
   verifyOutput,
   ensureSourceDocx,
+  checkRecipeSourceDrift,
+  computeSourceStructureSignature,
   type RecipeRunOptions,
   type RecipeRunResult,
   type VerifyResult,

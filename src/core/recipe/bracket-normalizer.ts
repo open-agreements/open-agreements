@@ -19,6 +19,15 @@ export interface BracketNormalizationStats {
   removedParagraphs: number;
   normalizedParagraphs: number;
   declarativeRuleApplications: number;
+  declarativeRuleMatchCounts: Record<string, number>;
+  declarativeRuleMutationCounts: Record<string, number>;
+  declarativeRuleExpectationFailures: string[];
+  declarativeRuleExamples: Array<{
+    rule_id: string;
+    heading: string;
+    before: string;
+    after: string;
+  }>;
 }
 
 export interface DeclarativeParagraphNormalizeRule {
@@ -27,8 +36,10 @@ export interface DeclarativeParagraphNormalizeRule {
   section_heading_any?: string[];
   ignore_heading?: boolean;
   paragraph_contains: string;
+  paragraph_end_contains?: string;
   replacements?: Record<string, string>;
   trim_unmatched_trailing_bracket?: boolean;
+  expected_min_matches?: number;
 }
 
 export interface DeclarativeNormalizeConfig {
@@ -67,10 +78,21 @@ export async function normalizeBracketArtifacts(
     removedParagraphs: 0,
     normalizedParagraphs: 0,
     declarativeRuleApplications: 0,
+    declarativeRuleMatchCounts: {},
+    declarativeRuleMutationCounts: {},
+    declarativeRuleExpectationFailures: [],
+    declarativeRuleExamples: [],
   };
   const rules = options?.rules ?? [];
   const fieldValues = options?.fieldValues ?? {};
   const blankPlaceholder = options?.blankPlaceholder ?? BLANK_PLACEHOLDER;
+  const hasDeclarativeRules = rules.length > 0;
+  for (const rule of rules) {
+    if (!(rule.id in stats.declarativeRuleMatchCounts)) {
+      stats.declarativeRuleMatchCounts[rule.id] = 0;
+      stats.declarativeRuleMutationCounts[rule.id] = 0;
+    }
+  }
 
   for (const partName of partNames) {
     const entry = zip.getEntry(partName);
@@ -102,6 +124,36 @@ export async function normalizeBracketArtifacts(
       if (declarativeResult.applied) {
         stats.declarativeRuleApplications += 1;
       }
+      if (declarativeResult.rule_id) {
+        const ruleId = declarativeResult.rule_id;
+        stats.declarativeRuleMatchCounts[ruleId] =
+          (stats.declarativeRuleMatchCounts[ruleId] ?? 0) + 1;
+        if (declarativeResult.text !== original) {
+          stats.declarativeRuleMutationCounts[ruleId] =
+            (stats.declarativeRuleMutationCounts[ruleId] ?? 0) + 1;
+        }
+        const existingExamples = stats.declarativeRuleExamples.filter(
+          (example) => example.rule_id === ruleId
+        ).length;
+        if (existingExamples < 2) {
+          stats.declarativeRuleExamples.push({
+            rule_id: ruleId,
+            heading: lastHeading,
+            before: original,
+            after: declarativeResult.text,
+          });
+        }
+      }
+
+      // If declarative rules are provided, prefer targeted mutation only.
+      // This avoids broad paragraph rewrites that can shift inline styling.
+      if (hasDeclarativeRules) {
+        if (declarativeResult.text !== original) {
+          setParagraphText(para, declarativeResult.text);
+          stats.normalizedParagraphs += 1;
+        }
+        continue;
+      }
 
       const normalized = normalizeParagraphText(declarativeResult.text, stats);
       if (normalized === null) {
@@ -123,6 +175,16 @@ export async function normalizeBracketArtifacts(
     zip.updateFile(partName, Buffer.from(serializer.serializeToString(doc), 'utf-8'));
   }
 
+  for (const rule of rules) {
+    if (rule.expected_min_matches === undefined) continue;
+    const actualMatches = stats.declarativeRuleMatchCounts[rule.id] ?? 0;
+    if (actualMatches < rule.expected_min_matches) {
+      stats.declarativeRuleExpectationFailures.push(
+        `${rule.id}: expected at least ${rule.expected_min_matches} match(es), found ${actualMatches}`
+      );
+    }
+  }
+
   const outZip = new AdmZip();
   for (const entry of zip.getEntries()) {
     outZip.addFile(entry.entryName, entry.getData());
@@ -142,13 +204,19 @@ function applyDeclarativeRulesToParagraph(params: {
   rules: DeclarativeParagraphNormalizeRule[];
   fieldValues: Record<string, string | boolean>;
   blankPlaceholder: string;
-}): { text: string; applied: boolean } {
+}): { text: string; applied: boolean; rule_id?: string } {
   const { text, heading, rules, fieldValues, blankPlaceholder } = params;
+  let mutated = text;
+  let matchedRule = false;
+  let matchedRuleId: string | undefined;
+
   for (const rule of rules) {
     if (!matchesHeading(rule, heading)) continue;
-    if (!text.includes(rule.paragraph_contains)) continue;
+    if (!mutated.includes(rule.paragraph_contains)) continue;
+    if (rule.paragraph_end_contains && !mutated.includes(rule.paragraph_end_contains)) continue;
+    matchedRule = true;
+    matchedRuleId = rule.id;
 
-    let mutated = text;
     for (const [token, template] of Object.entries(rule.replacements ?? {})) {
       const resolved = resolveTemplateValue(template, fieldValues, blankPlaceholder);
       mutated = mutated.split(token).join(resolved);
@@ -168,10 +236,16 @@ function applyDeclarativeRulesToParagraph(params: {
       .replace(/^\.\s*/, '')
       .trim();
 
-    return { text: mutated, applied: mutated !== text };
+    break;
   }
 
-  return { text, applied: false };
+  // Lightweight fallback cleanup for declarative mode:
+  // 1) Preserve bracket-prefixed heading labels by removing only leading '['.
+  // 2) Trim unmatched trailing ']' artifacts that remain after option pruning.
+  mutated = normalizeBracketPrefixedHeading(mutated);
+  mutated = trimUnmatchedTrailingBrackets(mutated);
+
+  return { text: mutated, applied: matchedRule || mutated !== text, rule_id: matchedRuleId };
 }
 
 function matchesHeading(rule: DeclarativeParagraphNormalizeRule, heading: string): boolean {
@@ -194,6 +268,28 @@ function resolveTemplateValue(
     if (typeof value === 'string' && value.trim().length > 0) return value;
     return blankPlaceholder;
   });
+}
+
+function normalizeBracketPrefixedHeading(text: string): string {
+  const trimmed = text.trim();
+  if (!trimmed.startsWith('[')) return text;
+  if (trimmed.includes(']')) return text;
+  if (trimmed.length > 90) return text;
+  if (trimmed.includes('_')) return text;
+  if (/[.:;!?].+[.:;!?]/.test(trimmed)) return text;
+  if (!/^\[[A-Z][A-Za-z0-9 ,&()'’/.-]+$/.test(trimmed)) return text;
+  return trimmed.slice(1).trim();
+}
+
+function trimUnmatchedTrailingBrackets(text: string): string {
+  let out = text;
+  let openCount = (out.match(/\[/g) ?? []).length;
+  let closeCount = (out.match(/\]/g) ?? []).length;
+  while (closeCount > openCount && /\]\s*$/.test(out)) {
+    out = out.replace(/\]\s*$/, '').trimEnd();
+    closeCount -= 1;
+  }
+  return out;
 }
 
 function normalizeParagraphText(text: string, stats: BracketNormalizationStats): string | null {
