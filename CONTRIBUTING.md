@@ -51,11 +51,12 @@ npm run test:run
 ## Project Structure
 
 ```
-templates/          # Internal templates (CC BY 4.0) — we ship the DOCX
-external/           # External templates (CC BY-ND 4.0) — vendored unchanged
-recipes/            # Recipes (not redistributable) — instructions only, DOCX downloaded at runtime
-src/                # TypeScript source
-tests/              # Vitest tests
+content/
+  templates/        # Internal templates (CC BY 4.0) — we ship the DOCX
+  external/         # External templates (CC BY-ND 4.0) — vendored unchanged
+  recipes/          # Recipes (not redistributable) — instructions only, DOCX downloaded at runtime
+src/                # TypeScript source + collocated unit tests
+integration-tests/  # Integration and end-to-end tests
 skills/             # Agent Skills (Claude Code, Cursor, etc.)
 docs/               # Documentation
 ```

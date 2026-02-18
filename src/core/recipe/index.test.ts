@@ -5,7 +5,7 @@ import { tmpdir } from 'node:os';
 import {
   allureJsonAttachment,
   itAllure,
-} from './helpers/allure-test.js';
+} from '../../../integration-tests/helpers/allure-test.js';
 
 const itFilling = itAllure.epic('Filling & Rendering');
 const tempDirs: string[] = [];
@@ -79,15 +79,15 @@ describe('runRecipe', () => {
       },
     }));
 
-    vi.doMock('../src/utils/paths.js', () => ({
+    vi.doMock('../../utils/paths.js', () => ({
       resolveRecipeDir: () => recipeDir,
     }));
 
-    vi.doMock('../src/core/unified-pipeline.js', () => ({
+    vi.doMock('../unified-pipeline.js', () => ({
       runFillPipeline: runFillPipelineMock,
     }));
 
-    const { runRecipe } = await import('../src/core/recipe/index.js');
+    const { runRecipe } = await import('./index.js');
 
     const result = await runRecipe({
       recipeId: 'fixture-recipe',
@@ -157,15 +157,15 @@ describe('runRecipe', () => {
       },
     }));
 
-    vi.doMock('../src/utils/paths.js', () => ({
+    vi.doMock('../../utils/paths.js', () => ({
       resolveRecipeDir: () => recipeDir,
     }));
 
-    vi.doMock('../src/core/unified-pipeline.js', () => ({
+    vi.doMock('../unified-pipeline.js', () => ({
       runFillPipeline: runFillPipelineMock,
     }));
 
-    const { runRecipe } = await import('../src/core/recipe/index.js');
+    const { runRecipe } = await import('./index.js');
 
     const result = await runRecipe({
       recipeId: 'fixture-recipe',
@@ -222,19 +222,19 @@ describe('runRecipe', () => {
       },
     }));
 
-    vi.doMock('../src/utils/paths.js', () => ({
+    vi.doMock('../../utils/paths.js', () => ({
       resolveRecipeDir: () => recipeDir,
     }));
 
-    vi.doMock('../src/core/recipe/downloader.js', () => ({
+    vi.doMock('./downloader.js', () => ({
       ensureSourceDocx: ensureSourceDocxMock,
     }));
 
-    vi.doMock('../src/core/unified-pipeline.js', () => ({
+    vi.doMock('../unified-pipeline.js', () => ({
       runFillPipeline: runFillPipelineMock,
     }));
 
-    const { runRecipe } = await import('../src/core/recipe/index.js');
+    const { runRecipe } = await import('./index.js');
 
     await runRecipe({
       recipeId: 'fixture-recipe',
@@ -288,19 +288,19 @@ describe('runRecipe', () => {
       };
     });
 
-    vi.doMock('../src/utils/paths.js', () => ({
+    vi.doMock('../../utils/paths.js', () => ({
       resolveRecipeDir: () => recipeDir,
     }));
 
-    vi.doMock('../src/core/recipe/bracket-normalizer.js', () => ({
+    vi.doMock('./bracket-normalizer.js', () => ({
       normalizeBracketArtifacts: normalizeMock,
     }));
 
-    vi.doMock('../src/core/unified-pipeline.js', () => ({
+    vi.doMock('../unified-pipeline.js', () => ({
       runFillPipeline: runFillPipelineMock,
     }));
 
-    const { runRecipe } = await import('../src/core/recipe/index.js');
+    const { runRecipe } = await import('./index.js');
 
     await runRecipe({
       recipeId: 'fixture-recipe',

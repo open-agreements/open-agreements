@@ -1,11 +1,11 @@
 import { describe, expect } from 'vitest';
-import { itAllure } from './helpers/allure-test.js';
+import { itAllure } from '../../../integration-tests/helpers/allure-test.js';
 import { join } from 'node:path';
 import { mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import AdmZip from 'adm-zip';
 import { DOMParser } from '@xmldom/xmldom';
-import { patchDocument, getRunText, isRunSafeToRemove } from '../src/core/recipe/patcher.js';
+import { patchDocument, getRunText, isRunSafeToRemove } from './patcher.js';
 
 const it = itAllure.epic('Filling & Rendering');
 

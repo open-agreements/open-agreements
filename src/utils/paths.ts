@@ -40,14 +40,21 @@ function resolveChildDir(parentDir: string, childId: string, label: string): str
   return resolved;
 }
 
+/** Resolve a content sub-directory, preferring the nested content/ layout. */
+function resolveContentDir(root: string, kind: 'templates' | 'external' | 'recipes'): string {
+  const nested = join(root, 'content', kind);
+  if (existsSync(nested)) return nested;
+  return join(root, kind);
+}
+
 /** Templates directory */
 export function getTemplatesDir(): string {
-  return join(getPackageRoot(), 'templates');
+  return resolveContentDir(getPackageRoot(), 'templates');
 }
 
 /** All template directories in precedence order (env roots first, package root last). */
 export function getAllTemplatesDirs(): string[] {
-  return getContentRoots().map((root) => join(root, 'templates'));
+  return getContentRoots().map((root) => resolveContentDir(root, 'templates'));
 }
 
 /** Resolve a specific template directory by ID */
@@ -71,12 +78,12 @@ export function listTemplateIds(): string[] {
 
 /** External templates directory */
 export function getExternalDir(): string {
-  return join(getPackageRoot(), 'external');
+  return resolveContentDir(getPackageRoot(), 'external');
 }
 
 /** All external template directories in precedence order (env roots first, package root last). */
 export function getAllExternalDirs(): string[] {
-  return getContentRoots().map((root) => join(root, 'external'));
+  return getContentRoots().map((root) => resolveContentDir(root, 'external'));
 }
 
 /** Resolve a specific external template directory by ID */
@@ -100,12 +107,12 @@ export function listExternalIds(): string[] {
 
 /** Recipes directory */
 export function getRecipesDir(): string {
-  return join(getPackageRoot(), 'recipes');
+  return resolveContentDir(getPackageRoot(), 'recipes');
 }
 
 /** All recipe directories in precedence order (env roots first, package root last). */
 export function getAllRecipesDirs(): string[] {
-  return getContentRoots().map((root) => join(root, 'recipes'));
+  return getContentRoots().map((root) => resolveContentDir(root, 'recipes'));
 }
 
 /** Resolve a specific recipe directory by ID */

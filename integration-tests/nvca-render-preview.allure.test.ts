@@ -55,6 +55,7 @@ const it = itAllure.withLabels({
   suite: 'Visual Review',
   subSuite: 'Rendered Page Evidence',
 });
+const RENDER_PREVIEW_TIMEOUT_MS = 60_000;
 
 describe.skipIf(!hasPrereqs)('NVCA rendered preview evidence', () => {
   it('attaches rendered NVCA pages as PNG evidence for human review', async () => {
@@ -170,5 +171,5 @@ describe.skipIf(!hasPrereqs)('NVCA rendered preview evidence', () => {
     } finally {
       rmSync(tempDir, { recursive: true, force: true });
     }
-  });
+  }, RENDER_PREVIEW_TIMEOUT_MS);
 });

@@ -2,11 +2,13 @@ import { mkdtempSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import AdmZip from 'adm-zip';
-import { afterEach, describe, expect, it } from 'vitest';
-import { normalizeBracketArtifacts } from '../src/core/recipe/bracket-normalizer.js';
+import { afterEach, describe, expect } from 'vitest';
+import { normalizeBracketArtifacts } from './bracket-normalizer.js';
+import { itAllure } from '../../../integration-tests/helpers/allure-test.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 const tempDirs: string[] = [];
+const it = itAllure.epic('Cleaning & Normalization');
 
 afterEach(() => {
   for (const dir of tempDirs.splice(0)) {

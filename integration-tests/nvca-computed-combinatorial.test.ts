@@ -17,7 +17,7 @@ type FactorDomains = Record<string, FactorValue[]>;
 type FactorCase = Record<string, FactorValue>;
 
 const RECIPE_ID = 'nvca-stock-purchase-agreement';
-const RECIPE_DIR = join(import.meta.dirname, '..', 'recipes', RECIPE_ID);
+const RECIPE_DIR = join(import.meta.dirname, '..', 'content', 'recipes', RECIPE_ID);
 const profile = loadComputedProfile(RECIPE_DIR);
 if (!profile) {
   throw new Error(`Expected computed.json for ${RECIPE_ID}`);

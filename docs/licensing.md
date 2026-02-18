@@ -12,15 +12,15 @@ Each template has its own license, specified in its `metadata.yaml`. Supported l
 
 | License | Can Modify Source? | Can Fill & Use? | Must Attribute? | Directory |
 |---------|-------------------|-----------------|-----------------|-----------|
-| CC BY 4.0 | Yes | Yes | Yes | `templates/` |
-| CC0 1.0 | Yes | Yes | No | `templates/` |
-| CC BY-ND 4.0 | No | Yes (fill in blanks) | Yes | `external/` |
+| CC BY 4.0 | Yes | Yes | Yes | `content/templates/` |
+| CC0 1.0 | Yes | Yes | No | `content/templates/` |
+| CC BY-ND 4.0 | No | Yes (fill in blanks) | Yes | `content/external/` |
 
-### Templates (`templates/`)
+### Templates (`content/templates/`)
 
-Templates licensed under CC-BY-4.0 or CC0-1.0 allow derivative works. The DOCX files in `templates/` contain pre-baked `{tag}` placeholders and can be modified freely. These are filled directly by the template engine.
+Templates licensed under CC-BY-4.0 or CC0-1.0 allow derivative works. The DOCX files in `content/templates/` contain pre-baked `{tag}` placeholders and can be modified freely. These are filled directly by the template engine.
 
-### External Templates (`external/`)
+### External Templates (`content/external/`)
 
 External templates are third-party standard-form documents (e.g., Y Combinator SAFEs) that are redistributable under CC-BY-ND 4.0 but must not be modified. The original DOCX files are committed to the repo **unmodified**. At fill time, the tool applies bracket-to-tag replacement in a temporary directory, fills the values, and produces an output file — the committed source is never altered.
 
@@ -39,7 +39,7 @@ Templates licensed under CC BY 4.0 and CC BY-ND 4.0 require attribution. OpenAgr
 1. Including the `attribution_text` from `metadata.yaml` in the generated DOCX
 2. Displaying source URL and license info in the `list` command
 3. Including attribution in each template's README
-4. Maintaining a `LICENSE` file in the `external/` directory with full copyright notices
+4. Maintaining a `LICENSE` file in the `content/external/` directory with full copyright notices
 
 ## What's Still Excluded
 

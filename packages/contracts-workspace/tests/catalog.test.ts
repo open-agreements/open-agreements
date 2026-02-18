@@ -3,7 +3,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { dump } from 'js-yaml';
 import { afterEach, describe, expect } from 'vitest';
-import { itAllure } from '../../../tests/helpers/allure-test.js';
+import { itAllure } from '../../../integration-tests/helpers/allure-test.js';
 import {
   checksumSha256,
   fetchCatalogEntries,

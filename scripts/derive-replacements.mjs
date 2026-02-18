@@ -151,7 +151,7 @@ function deriveReplacements(origParas, patchedParas) {
 // --- Main ---
 
 const modifiedTemplates = execSync(
-  "git diff --name-only HEAD -- 'templates/common-paper-*/template.docx'",
+  "git diff --name-only HEAD -- 'content/templates/common-paper-*/template.docx'",
   { encoding: 'utf-8' }
 ).trim().split('\n').filter(Boolean);
 
@@ -161,8 +161,8 @@ const tempBase = mkdtempSync(join(tmpdir(), 'derive-repl-'));
 let allValid = true;
 
 for (const relPath of modifiedTemplates) {
-  const templateId = relPath.split('/')[1]; // e.g., "common-paper-pilot-agreement"
-  const templateDir = join(process.cwd(), 'templates', templateId);
+  const templateId = relPath.split('/')[2]; // e.g., "common-paper-pilot-agreement"
+  const templateDir = join(process.cwd(), 'content', 'templates', templateId);
   const patchedPath = join(templateDir, 'template.docx');
 
   console.log(`Processing: ${templateId}`);

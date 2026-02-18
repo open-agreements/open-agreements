@@ -63,7 +63,7 @@ interface FieldAssertionPolicy {
 }
 
 const RECIPE_ID = 'nvca-stock-purchase-agreement';
-const RECIPE_DIR = join(import.meta.dirname, '..', 'recipes', RECIPE_ID);
+const RECIPE_DIR = join(import.meta.dirname, '..', 'content', 'recipes', RECIPE_ID);
 const it = itAllure.withLabels({
   epic: 'NVCA SPA Template',
   feature: 'NVCA SPA Legal QA',

@@ -4,14 +4,14 @@ import {
   allureParameter,
   allureStep,
   itAllure,
-} from './helpers/allure-test.js';
+} from '../../integration-tests/helpers/allure-test.js';
 import {
   TemplateMetadataSchema,
   RecipeMetadataSchema,
   FieldDefinitionSchema,
   CleanConfigSchema,
   GuidanceOutputSchema,
-} from '../src/core/metadata.js';
+} from './metadata.js';
 
 type SafeParseSchema = {
   safeParse: (payload: unknown) => { success: boolean };

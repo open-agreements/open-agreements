@@ -14,7 +14,7 @@ import {
 
 const ROOT = new URL('..', import.meta.url).pathname;
 const BIN = join(ROOT, 'bin/open-agreements.js');
-const EXTERNAL_DIR = join(ROOT, 'external');
+const EXTERNAL_DIR = join(ROOT, 'content', 'external');
 const itDiscovery = itAllure.epic('Discovery & Metadata');
 const itFilling = itAllure.epic('Filling & Rendering');
 const itCompliance = itAllure.epic('Compliance & Governance');

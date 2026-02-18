@@ -25,9 +25,7 @@
   "files": [
     "dist/",
     "bin/",
-    "templates/",
-    "external/",
-    "recipes/",
+    "content/",
     "skills/",
     "README.md",
     "LICENSE"

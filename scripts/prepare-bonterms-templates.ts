@@ -44,7 +44,7 @@ async function main() {
   }
 
   const projectRoot = resolve(import.meta.dirname!, '..');
-  const templatesDir = join(projectRoot, 'templates');
+  const templatesDir = join(projectRoot, 'content', 'templates');
 
   // Discover all source.json files
   const templateDirs = readdirSync(templatesDir, { withFileTypes: true })
@@ -90,7 +90,7 @@ async function main() {
   }
 
   if (processed === 0) {
-    console.log('No source.json files found in templates/');
+    console.log('No source.json files found in content/templates/');
   } else {
     console.log(`\nDone! Processed ${processed} template(s).`);
   }

@@ -130,7 +130,7 @@ function copyDownloads(templates) {
     if (!t.hasPreview || !t.distributable) continue;
     // Copy DOCX and MD variants
     for (const ext of ["docx", "md"]) {
-      const src = resolve(root, "templates", t.id, `template.${ext}`);
+      const src = resolve(root, "content", "templates", t.id, `template.${ext}`);
       const dest = resolve(downloadsDir, `${t.id}.${ext}`);
       if (!existsSync(src)) continue;
       // Skip copy if destination is already up-to-date (avoids watch-mode churn)

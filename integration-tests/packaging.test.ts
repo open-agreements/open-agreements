@@ -1,5 +1,5 @@
 import { describe, expect, beforeAll } from 'vitest';
-import { itAllure } from '../tests/helpers/allure-test.js';
+import { itAllure } from './helpers/allure-test.js';
 import { execSync } from 'node:child_process';
 import { mkdtempSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
@@ -49,14 +49,14 @@ describe('npm packaging', () => {
 
   it('includes a template metadata file', () => {
     if (!available) return;
-    expect(files.some((f) => f.startsWith('templates/') && f.endsWith('metadata.yaml'))).toBe(
+    expect(files.some((f) => f.startsWith('content/templates/') && f.endsWith('metadata.yaml'))).toBe(
       true
     );
   });
 
   it('includes a recipe metadata file', () => {
     if (!available) return;
-    expect(files.some((f) => f.startsWith('recipes/') && f.endsWith('metadata.yaml'))).toBe(true);
+    expect(files.some((f) => f.startsWith('content/recipes/') && f.endsWith('metadata.yaml'))).toBe(true);
   });
 
   it('does NOT include src/', () => {
