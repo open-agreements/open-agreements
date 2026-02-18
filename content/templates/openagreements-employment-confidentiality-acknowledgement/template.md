@@ -40,7 +40,7 @@ After employment ends, Employee will continue obligations listed in Cover Terms 
 
 Company may update policies from time to time. Employee remains responsible for complying with current written policies communicated by Company.
 
-## Signatures
+## Acknowledgement Signature
 
 By signing this acknowledgement, Employee confirms understanding of the confidentiality and security obligations above.
 
