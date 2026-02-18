@@ -1,0 +1,7 @@
+{
+  "darwin": {
+    "cask": "libreoffice-still",
+    "sofficePath": "/Applications/LibreOffice.app/Contents/MacOS/soffice",
+    "expectedVersion": "25.8.4.2"
+  }
+}

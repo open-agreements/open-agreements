@@ -4,6 +4,8 @@ import { mkdtempSync, mkdirSync, readdirSync, rmSync, statSync } from 'node:fs';
 import { basename, dirname, extname, join, resolve } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { tmpdir } from 'node:os';
+import { pathToFileURL } from 'node:url';
+import { resolveLibreOfficeBinary } from './libreoffice_headless.mjs';
 
 function parseArgs(argv) {
   const parsed = {
@@ -98,6 +100,9 @@ function printHelp() {
       '',
       'Environment:',
       '  SOFFICE_BIN              Optional path to soffice binary',
+      '  OA_SOFFICE_PIN_PATH      Pinned soffice path (required on macOS unless opt-out)',
+      '  OA_SOFFICE_PIN_VERSION   Exact expected version from `soffice --version`',
+      '  OA_ALLOW_UNPINNED_SOFFICE Allow PATH fallback on macOS when set to 1/true',
       '  PDFTOPPM_BIN             Optional path to pdftoppm binary',
     ].join('\n')
   );
@@ -116,7 +121,11 @@ function runChecked(command, args, options = {}) {
 
   if (result.status !== 0) {
     const stderr = result.stderr?.trim() ?? '';
-    throw new Error(`${command} failed with exit code ${result.status}${stderr ? `: ${stderr}` : ''}`);
+    const stdout = result.stdout?.trim() ?? '';
+    const termination =
+      result.status === null ? `signal ${result.signal ?? 'unknown'}` : `exit code ${result.status}`;
+    const details = [stderr, stdout].filter((value) => value.length > 0).join('\n');
+    throw new Error(`${command} failed with ${termination}${details ? `: ${details}` : ''}`);
   }
 
   return result;
@@ -157,7 +166,8 @@ function main() {
   const inputBase = basename(inputPath, ext);
   const prefix = args.prefix ?? inputBase;
 
-  const sofficeBin = resolveCommand('SOFFICE_BIN', 'soffice');
+  const sofficeInfo = resolveLibreOfficeBinary();
+  const sofficeBin = sofficeInfo.command;
   const pdftoppmBin = resolveCommand('PDFTOPPM_BIN', 'pdftoppm');
   const renderEnv = {
     ...process.env,
@@ -166,78 +176,85 @@ function main() {
   };
 
   const tempDir = mkdtempSync(join(tmpdir(), 'oa-docx-render-'));
+  const sofficeProfileDir = mkdtempSync(join(tmpdir(), 'oa-soffice-profile-'));
   const pdfOutDir = args.keepPdf ? outputDir : tempDir;
-
-  runChecked(sofficeBin, [
-    '--headless',
-    '--invisible',
-    '--nodefault',
-    '--nolockcheck',
-    '--nologo',
-    '--norestore',
-    '--convert-to',
-    'pdf:writer_pdf_Export',
-    '--outdir',
-    pdfOutDir,
-    inputPath,
-  ], { env: renderEnv });
-
   const pdfPath = join(pdfOutDir, `${inputBase}.pdf`);
-  statSync(pdfPath);
 
-  const prefixPath = join(outputDir, prefix);
-  const pdftoppmArgs = ['-png', '-r', String(args.dpi), '-f', String(args.firstPage)];
-  if (args.lastPage !== null) {
-    pdftoppmArgs.push('-l', String(args.lastPage));
-  }
-  pdftoppmArgs.push(pdfPath, prefixPath);
+  try {
+    runChecked(sofficeBin, [
+      `-env:UserInstallation=${pathToFileURL(sofficeProfileDir).href}`,
+      '--headless',
+      '--invisible',
+      '--nodefault',
+      '--nolockcheck',
+      '--nologo',
+      '--norestore',
+      '--convert-to',
+      'pdf:writer_pdf_Export',
+      '--outdir',
+      pdfOutDir,
+      inputPath,
+    ], { env: renderEnv });
 
-  runChecked(pdftoppmBin, pdftoppmArgs);
+    statSync(pdfPath);
 
-  const files = readdirSync(outputDir)
-    .filter((name) => name.startsWith(`${prefix}-`) && name.endsWith('.png'))
-    .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
-    .map((name) => join(outputDir, name));
+    const prefixPath = join(outputDir, prefix);
+    const pdftoppmArgs = ['-png', '-r', String(args.dpi), '-f', String(args.firstPage)];
+    if (args.lastPage !== null) {
+      pdftoppmArgs.push('-l', String(args.lastPage));
+    }
+    pdftoppmArgs.push(pdfPath, prefixPath);
 
-  if (files.length === 0) {
-    throw new Error('No PNG pages were generated.');
-  }
+    runChecked(pdftoppmBin, pdftoppmArgs);
 
-  const summary = {
-    input_docx: inputPath,
-    output_dir: outputDir,
-    prefix,
-    dpi: args.dpi,
-    first_page: args.firstPage,
-    last_page: args.lastPage,
-    page_count: files.length,
-    pages: files,
-    intermediate_pdf: pdfPath,
-    renderer: {
-      docx_to_pdf: 'libreoffice',
-      pdf_to_png: 'pdftoppm',
-    },
-  };
+    const files = readdirSync(outputDir)
+      .filter((name) => name.startsWith(`${prefix}-`) && name.endsWith('.png'))
+      .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
+      .map((name) => join(outputDir, name));
 
-  if (!args.keepPdf) {
-    rmSync(pdfPath, { force: true });
+    if (files.length === 0) {
+      throw new Error('No PNG pages were generated.');
+    }
+
+    const summary = {
+      input_docx: inputPath,
+      output_dir: outputDir,
+      prefix,
+      dpi: args.dpi,
+      first_page: args.firstPage,
+      last_page: args.lastPage,
+      page_count: files.length,
+      pages: files,
+      intermediate_pdf: pdfPath,
+      renderer: {
+        docx_to_pdf: 'libreoffice',
+        docx_to_pdf_version: sofficeInfo.version,
+        pdf_to_png: 'pdftoppm',
+      },
+    };
+
+    if (!args.keepPdf) {
+      rmSync(pdfPath, { force: true });
+      summary.intermediate_pdf = null;
+    }
+
+    if (args.json) {
+      console.log(JSON.stringify(summary, null, 2));
+    } else {
+      console.log('DOCX render complete');
+      console.log(`Input: ${summary.input_docx}`);
+      console.log(`Pages rendered: ${summary.page_count}`);
+      console.log(`PNG output: ${summary.output_dir}`);
+      for (const pagePath of summary.pages) {
+        console.log(`- ${pagePath}`);
+      }
+      if (summary.intermediate_pdf) {
+        console.log(`Intermediate PDF: ${summary.intermediate_pdf}`);
+      }
+    }
+  } finally {
     rmSync(tempDir, { recursive: true, force: true });
-    summary.intermediate_pdf = null;
-  }
-
-  if (args.json) {
-    console.log(JSON.stringify(summary, null, 2));
-  } else {
-    console.log('DOCX render complete');
-    console.log(`Input: ${summary.input_docx}`);
-    console.log(`Pages rendered: ${summary.page_count}`);
-    console.log(`PNG output: ${summary.output_dir}`);
-    for (const pagePath of summary.pages) {
-      console.log(`- ${pagePath}`);
-    }
-    if (summary.intermediate_pdf) {
-      console.log(`Intermediate PDF: ${summary.intermediate_pdf}`);
-    }
+    rmSync(sofficeProfileDir, { recursive: true, force: true });
   }
 }
 

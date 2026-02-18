@@ -1,0 +1,70 @@
+{
+  "template_id": "openagreements-employment-confidentiality-acknowledgement",
+  "layout_id": "cover-standard-signature-v1",
+  "style_id": "openagreements-default-v1",
+  "output_docx_path": "content/templates/openagreements-employment-confidentiality-acknowledgement/template.docx",
+  "output_markdown_path": "content/templates/openagreements-employment-confidentiality-acknowledgement/template.md",
+  "document": {
+    "title": "Employment Confidentiality Acknowledgement",
+    "label": "OpenAgreements Employment Confidentiality Acknowledgement",
+    "version": "1.1",
+    "license": "Free to use under CC BY 4.0",
+    "include_cloud_doc_line": true
+  },
+  "sections": {
+    "cover_terms": {
+      "section_label": "Cover Terms",
+      "heading_title": "Cover Terms",
+      "subtitle": "The key business terms of this confidentiality acknowledgement are as follows.",
+      "rows": [
+        { "label": "Company", "value": "{company_name}" },
+        { "label": "Employee", "value": "{employee_name}" },
+        { "label": "Policy Effective Date", "value": "{policy_effective_date}" },
+        { "label": "Approved Tools Scope", "value": "{approved_tools_scope}" },
+        { "label": "Data Access Scope", "value": "{data_access_scope}" },
+        { "label": "Security Reporting Contact", "value": "{security_reporting_contact}" },
+        { "label": "Post-Employment Obligations", "value": "{post_employment_obligations}" },
+        { "label": "Acknowledgement Date", "value": "{acknowledgement_date}" },
+        { "label": "Signatory Name", "value": "{signatory_name}" }
+      ]
+    },
+    "standard_terms": {
+      "section_label": "Standard Terms",
+      "heading_title": "Standard Terms",
+      "clauses": [
+        {
+          "heading": "Confidential Information Handling",
+          "body": "Employee will use confidential information only for authorized business purposes and within the data access scope listed in Cover Terms."
+        },
+        {
+          "heading": "Approved Tools and Systems",
+          "body": "Employee will access Company data only through approved tools and systems listed in Cover Terms unless written authorization is provided."
+        },
+        {
+          "heading": "Security Incident Reporting",
+          "body": "Employee will promptly report suspected incidents to the security reporting contact listed in Cover Terms."
+        },
+        {
+          "heading": "Post-Employment Obligations",
+          "body": "After employment ends, Employee will continue obligations listed in Cover Terms and as required by law."
+        },
+        {
+          "heading": "Policy Updates",
+          "body": "Company may update policies from time to time. Employee remains responsible for complying with current written policies communicated by Company."
+        }
+      ]
+    },
+    "signature": {
+      "mode": "one-party",
+      "section_label": "Signature Page",
+      "heading_title": "Acknowledgement Signature",
+      "preamble": "By signing this acknowledgement, Employee confirms understanding of the confidentiality and security obligations above.",
+      "party": "Employee",
+      "rows": [
+        { "label": "Signature" },
+        { "label": "Print Name", "value": "{signatory_name}" },
+        { "label": "Date", "value": "{acknowledgement_date}" }
+      ]
+    }
+  }
+}

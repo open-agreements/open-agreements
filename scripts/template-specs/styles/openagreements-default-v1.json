@@ -1,0 +1,57 @@
+{
+  "id": "openagreements-default-v1",
+  "defined_terms": [
+    "Company",
+    "Employee",
+    "Customer",
+    "Provider",
+    "Confidential Information",
+    "Cover Terms",
+    "Standard Terms",
+    "Subscription Period",
+    "Governing Law"
+  ],
+  "colors": {
+    "ink": "1D2021",
+    "ink_soft": "494A4B",
+    "muted": "8C8D8E",
+    "accent": "117086",
+    "accent_deep": "107087",
+    "rule": "C7C7C7"
+  },
+  "fonts": {
+    "heading": "Georgia",
+    "body": "Arial"
+  },
+  "page_margin": {
+    "top": 936,
+    "right": 1080,
+    "bottom": 720,
+    "left": 1080,
+    "header": 360,
+    "footer": 432,
+    "gutter": 0
+  },
+  "table_widths": {
+    "cover_terms": [3420, 6650],
+    "signature_two_party": [2605, 3600, 250, 3620],
+    "signature_one_party": [2605, 7465],
+    "section_header": [7900, 2170]
+  },
+  "spacing": {
+    "line": 276,
+    "body_after": 120,
+    "title_before": 240,
+    "title_after": 210,
+    "section_title_after": 240,
+    "clause_heading_before": 300,
+    "clause_heading_after": 120,
+    "note_after": 80
+  },
+  "sizes": {
+    "header_accent_rule": 14,
+    "table_rule": 4,
+    "cover_row_height": 700,
+    "signature_row_height": 690
+  }
+}
