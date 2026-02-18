@@ -5,6 +5,7 @@ import {
   Footer,
   Header,
   HeightRule,
+  LineRuleType,
   PageNumber,
   Paragraph,
   Table,
@@ -17,6 +18,90 @@ import {
   VerticalAlign,
   WidthType,
 } from 'docx';
+
+function buildDocumentStyles(style) {
+  return {
+    default: {
+      document: {
+        run: {
+          font: style.fonts.body,
+          size: 22,
+          color: style.colors.ink,
+        },
+        paragraph: {
+          spacing: {
+            before: 0,
+            after: 0,
+            line: style.spacing.line,
+            lineRule: LineRuleType.AUTO,
+          },
+        },
+      },
+    },
+    paragraphStyles: [
+      {
+        id: 'Normal',
+        name: 'Normal',
+        next: 'Normal',
+        quickFormat: true,
+        run: {
+          font: style.fonts.body,
+          size: 22,
+          color: style.colors.ink,
+        },
+        paragraph: {
+          spacing: {
+            before: 0,
+            after: 0,
+            line: style.spacing.line,
+            lineRule: LineRuleType.AUTO,
+          },
+        },
+      },
+      {
+        id: 'OAClauseHeading',
+        name: 'OA Clause Heading',
+        basedOn: 'Normal',
+        next: 'OAClauseBody',
+        quickFormat: true,
+        run: {
+          font: style.fonts.body,
+          size: 22,
+          bold: true,
+          color: style.colors.ink,
+        },
+        paragraph: {
+          spacing: {
+            before: style.spacing.clause_heading_before,
+            after: style.spacing.clause_heading_after,
+            line: style.spacing.line,
+            lineRule: LineRuleType.AUTO,
+          },
+        },
+      },
+      {
+        id: 'OAClauseBody',
+        name: 'OA Clause Body',
+        basedOn: 'Normal',
+        next: 'OAClauseHeading',
+        quickFormat: true,
+        run: {
+          font: style.fonts.body,
+          size: 22,
+          color: style.colors.ink,
+        },
+        paragraph: {
+          spacing: {
+            before: 0,
+            after: style.spacing.body_after,
+            line: style.spacing.line,
+            lineRule: LineRuleType.AUTO,
+          },
+        },
+      },
+    ],
+  };
+}
 
 function escapeRegExp(value) {
   return value.replace(/[.*+?^${}()|[\\]\\]/g, '\\$&');
@@ -189,6 +274,7 @@ function buildSection(sectionLabel, documentLabel, documentVersion, children, st
 
 function bodyParagraph(text, style, opts = {}) {
   return new Paragraph({
+    style: opts.style,
     contextualSpacing: false,
     spacing: {
       before: opts.before ?? 0,
@@ -381,6 +467,7 @@ function coverTable(rows, headingTitle, subtitle, style, nilBorder, ruleBorder) 
 function clauseParagraphs(index, clauseItem, style) {
   return [
     new Paragraph({
+      style: 'OAClauseHeading',
       contextualSpacing: false,
       spacing: {
         before: style.spacing.clause_heading_before,
@@ -399,7 +486,7 @@ function clauseParagraphs(index, clauseItem, style) {
         }),
       ],
     }),
-    bodyParagraph(clauseItem.body, style, { size: 22 }),
+    bodyParagraph(clauseItem.body, style, { size: 22, style: 'OAClauseBody' }),
   ];
 }
 
@@ -662,6 +749,7 @@ export function renderCoverStandardSignatureV1(spec, style) {
     : onePartySignatureTable(sections.signature, style, nilBorder, ruleBorder);
 
   const doc = new Document({
+    styles: buildDocumentStyles(style),
     sections: [
       buildSection(
         sections.cover_terms.section_label,

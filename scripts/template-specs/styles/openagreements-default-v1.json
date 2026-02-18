@@ -39,12 +39,12 @@
     "section_header": [7900, 2170]
   },
   "spacing": {
-    "line": 276,
-    "body_after": 120,
+    "line": 340,
+    "body_after": 280,
     "title_before": 240,
     "title_after": 210,
     "section_title_after": 240,
-    "clause_heading_before": 300,
+    "clause_heading_before": 320,
     "clause_heading_after": 120,
     "note_after": 80
   },
