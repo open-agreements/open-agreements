@@ -11,7 +11,7 @@ import { assessScanMetadataCoverage } from '../src/core/validation/scan-metadata
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 const tempDirs: string[] = [];
 const RECIPE_ID = 'nvca-stock-purchase-agreement';
-const RECIPE_DIR = join(import.meta.dirname, '..', 'recipes', RECIPE_ID);
+const RECIPE_DIR = join(import.meta.dirname, '..', 'content', 'recipes', RECIPE_ID);
 
 afterEach(() => {
   for (const dir of tempDirs.splice(0)) {
@@ -163,4 +163,3 @@ describe('scan vs metadata completeness', () => {
     expect(report.mappedFieldsNotInMetadata).toEqual([]);
   });
 });
-

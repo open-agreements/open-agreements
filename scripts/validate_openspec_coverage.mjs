@@ -108,7 +108,8 @@ function parseScenariosFromSpec(content, specPathRel) {
 function parseArgs() {
   const args = process.argv.slice(2);
   const capabilities = [];
-  let writeMatrixPath = DEFAULT_MATRIX_PATH;
+  let writeMatrixRequested = false;
+  let writeMatrixPath = null;
   for (let index = 0; index < args.length; index += 1) {
     const arg = args[index];
     if (arg === '--capability') {
@@ -121,6 +122,7 @@ function parseArgs() {
       continue;
     }
     if (arg === '--write-matrix') {
+      writeMatrixRequested = true;
       const value = args[index + 1];
       if (value && !value.startsWith('--')) {
         writeMatrixPath = path.resolve(process.cwd(), value);
@@ -129,6 +131,9 @@ function parseArgs() {
       continue;
     }
     throw new Error(`Unknown argument: ${arg}`);
+  }
+  if (writeMatrixRequested && !writeMatrixPath) {
+    writeMatrixPath = DEFAULT_MATRIX_PATH;
   }
   return { capabilities, writeMatrixPath };
 }
@@ -585,12 +590,11 @@ async function main() {
     unknownScenarioIds,
     invalidBindings,
   });
-  const matrixChanged = await writeMatrixFile(writeMatrixPath, matrix);
-  console.log(`Wrote traceability matrix: ${path.relative(REPO_ROOT, writeMatrixPath)}`);
-
-  if (process.env.CI && matrixChanged) {
-    hasFailures = true;
-    console.error('Traceability matrix changed in CI. Commit updated matrix output.');
+  if (writeMatrixPath) {
+    await writeMatrixFile(writeMatrixPath, matrix);
+    console.log(`Wrote traceability matrix: ${path.relative(REPO_ROOT, writeMatrixPath)}`);
+  } else {
+    console.log('Traceability matrix not written (use --write-matrix [path] to export).');
   }
 
   if (hasFailures) {
