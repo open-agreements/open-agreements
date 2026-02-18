@@ -77,3 +77,28 @@ jobs:
           files: ./coverage/junit.xml
           use_oidc: true
           fail_ci_if_error: true
+
+  source-drift-canary:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Source drift canary (strict on main, permissive on PR)
+        run: |
+          if [ "${{ github.event_name }}" = "push" ] && [ "${{ github.ref }}" = "refs/heads/main" ]; then
+            echo "Running strict source drift canary on main."
+            node scripts/source_drift_canary.mjs --download --strict-missing
+          else
+            echo "Running permissive source drift canary on pull requests."
+            node scripts/source_drift_canary.mjs --download
+          fi

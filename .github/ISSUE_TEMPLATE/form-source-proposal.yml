@@ -1,0 +1,107 @@
+name: Form Source Proposal
+description: Propose a new legal form source or template with licensing-safe provenance details.
+title: "Add form source: "
+labels:
+  - area/forms
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template when proposing new form coverage.
+        Keep provenance and licensing details concrete so triage can classify quickly.
+
+        Triage notes:
+        - Set issue Type to `Feature` for form coverage requests.
+        - Maintainers assign `priority/*` and `status/*` labels during triage.
+        - Keep Assignees, Projects, and Milestone empty unless ownership/scheduling is explicit.
+
+  - type: input
+    id: source_url
+    attributes:
+      label: Source URL
+      description: Canonical source URL for the form set or document.
+      placeholder: https://example.com/forms
+    validations:
+      required: true
+
+  - type: input
+    id: publisher
+    attributes:
+      label: Publisher/author
+      description: Organization or person that published the source form.
+      placeholder: Example Law Firm
+    validations:
+      required: true
+
+  - type: dropdown
+    id: document_type
+    attributes:
+      label: Document type in scope
+      options:
+        - Board resolution
+        - Board unanimous written consent
+        - Stockholder unanimous written consent
+        - Other governance form
+    validations:
+      required: true
+
+  - type: textarea
+    id: jurisdiction
+    attributes:
+      label: Jurisdiction/applicability
+      description: Describe jurisdiction and company profile fit (for example, Delaware C-corp SMB).
+      placeholder: Delaware C corporations, early-stage and SMB financings.
+    validations:
+      required: true
+
+  - type: input
+    id: license_signal
+    attributes:
+      label: License/terms signal
+      description: Exact license name or terms indicator with link.
+      placeholder: CC0 1.0 (repo README link)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: intended_path
+    attributes:
+      label: Intended implementation path
+      description: Choose the expected placement based on rights.
+      options:
+        - content/templates/
+        - content/external/
+        - content/recipes/
+        - excluded
+    validations:
+      required: true
+
+  - type: textarea
+    id: provenance
+    attributes:
+      label: Provenance note
+      description: Explain what the proposed OpenAgreements artifact will be based on.
+      placeholder: Derived from <source> with explicit source attribution and metadata linkage.
+    validations:
+      required: true
+
+  - type: textarea
+    id: usefulness
+    attributes:
+      label: Practical usefulness
+      description: Describe the concrete user workflow this would unblock.
+      placeholder: Frequently needed for board approvals in Delaware startup financings.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Pre-submit checks
+      options:
+        - label: I reviewed docs/licensing.md and docs/adding-templates.md or docs/adding-recipes.md.
+          required: true
+        - label: I included a clear license/terms signal with a URL.
+          required: true
+        - label: I confirmed this proposal references only sources intended for this issue.
+          required: true

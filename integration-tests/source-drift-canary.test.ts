@@ -3,12 +3,14 @@ import { mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import AdmZip from 'adm-zip';
-import { afterEach, describe, expect, it } from 'vitest';
+import { afterEach, describe, expect } from 'vitest';
 import type { NormalizeConfig, RecipeMetadata } from '../src/core/metadata.js';
 import { checkRecipeSourceDrift, computeSourceStructureSignature } from '../src/core/recipe/source-drift.js';
+import { itAllure } from './helpers/allure-test.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 const tempDirs: string[] = [];
+const it = itAllure.epic('Verification & Drift');
 
 afterEach(() => {
   for (const dir of tempDirs.splice(0)) {

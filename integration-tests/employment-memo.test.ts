@@ -1,6 +1,7 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect } from 'vitest';
 import { loadMetadata } from '../src/core/metadata.js';
 import { findTemplateDir } from '../src/utils/paths.js';
+import { itAllure } from './helpers/allure-test.js';
 import {
   EMPLOYMENT_MEMO_DISCLAIMER,
   applyAdviceLanguageGuard,
@@ -16,6 +17,8 @@ function mustFindTemplateDir(templateId: string): string {
   }
   return templateDir;
 }
+
+const it = itAllure.epic('Compliance & Governance');
 
 describe('employment memo generator', () => {
   it('generates disclaimer + findings + jurisdiction warnings for matching rules', () => {

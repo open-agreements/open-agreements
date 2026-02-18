@@ -6,7 +6,7 @@ This document models the current NVCA SPA test and runtime architecture after ad
 
 ```mermaid
 flowchart TB
-    START([Run NVCA SPA test suite<br/>tests/nvca-spa-template.test.ts])
+    START([Run NVCA SPA test suite<br/>integration-tests/nvca-spa-template.test.ts])
 
     subgraph INPUTS["1. Inputs and Profiles"]
       I1[metadata.yaml<br/>field definitions + required_fields]
