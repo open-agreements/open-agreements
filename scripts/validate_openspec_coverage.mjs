@@ -105,8 +105,8 @@ function parseScenariosFromSpec(content, specPathRel) {
   return { scenarios, errors };
 }
 
-function parseArgs() {
-  const args = process.argv.slice(2);
+export function parseArgs(argv = process.argv.slice(2), cwd = process.cwd()) {
+  const args = argv;
   const capabilities = [];
   let writeMatrixRequested = false;
   let writeMatrixPath = null;
@@ -125,7 +125,7 @@ function parseArgs() {
       writeMatrixRequested = true;
       const value = args[index + 1];
       if (value && !value.startsWith('--')) {
-        writeMatrixPath = path.resolve(process.cwd(), value);
+        writeMatrixPath = path.resolve(cwd, value);
         index += 1;
       }
       continue;
@@ -478,8 +478,8 @@ function printSet(title, values) {
   }
 }
 
-async function main() {
-  const { capabilities: requestedCapabilities, writeMatrixPath } = parseArgs();
+export async function main(argv = process.argv.slice(2)) {
+  const { capabilities: requestedCapabilities, writeMatrixPath } = parseArgs(argv);
   const canonicalCapabilities = await listSpecCapabilities();
   const capabilitiesToValidate = requestedCapabilities.length > 0
     ? requestedCapabilities
@@ -602,4 +602,6 @@ async function main() {
   }
 }
 
-await main();
+if (process.argv[1] && path.resolve(process.argv[1]) === __filename) {
+  await main();
+}
