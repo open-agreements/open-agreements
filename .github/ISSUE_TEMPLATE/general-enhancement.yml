@@ -1,0 +1,47 @@
+name: Feature Request
+description: Propose a non-bug improvement.
+title: "Feature: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Triage notes:
+        - Set issue Type to `Feature` for new capability requests.
+        - Maintainers assign `area/*`, `priority/*`, and `status/*` labels during triage.
+        - Keep Assignees, Projects, and Milestone empty unless ownership/scheduling is explicit.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What is missing or painful today?
+      placeholder: Describe the current gap.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: What should be added or changed?
+      placeholder: Describe the proposed solution.
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: How do we know this is done?
+      placeholder: List concrete acceptance checks.
+    validations:
+      required: true
+
+  - type: input
+    id: repo_area
+    attributes:
+      label: Suggested area label
+      description: Optional. Example: area/forms, area/licensing, area/recipes, area/tooling, area/docs
+      placeholder: area/forms
+    validations:
+      required: false

@@ -2,16 +2,18 @@ import { mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import AdmZip from 'adm-zip';
-import { afterEach, describe, expect, it } from 'vitest';
+import { afterEach, describe, expect } from 'vitest';
 import { scanDocxBrackets } from '../src/commands/scan.js';
 import { loadRecipeMetadata } from '../src/core/metadata.js';
 import { parseReplacementKey } from '../src/core/recipe/replacement-keys.js';
 import { assessScanMetadataCoverage } from '../src/core/validation/scan-metadata.js';
+import { itAllure } from './helpers/allure-test.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 const tempDirs: string[] = [];
 const RECIPE_ID = 'nvca-stock-purchase-agreement';
 const RECIPE_DIR = join(import.meta.dirname, '..', 'content', 'recipes', RECIPE_ID);
+const it = itAllure.epic('Discovery & Metadata');
 
 afterEach(() => {
   for (const dir of tempDirs.splice(0)) {

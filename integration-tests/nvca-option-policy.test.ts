@@ -2,15 +2,17 @@ import { mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import AdmZip from 'adm-zip';
-import { afterEach, describe, expect, it } from 'vitest';
+import { afterEach, describe, expect } from 'vitest';
 import { evaluateComputedProfile, loadComputedProfile } from '../src/core/recipe/computed.js';
 import { normalizeBracketArtifacts } from '../src/core/recipe/bracket-normalizer.js';
 import { extractAllText } from '../src/core/recipe/verifier.js';
+import { itAllure } from './helpers/allure-test.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 const tempDirs: string[] = [];
 const RECIPE_ID = 'nvca-stock-purchase-agreement';
 const RECIPE_DIR = join(import.meta.dirname, '..', 'content', 'recipes', RECIPE_ID);
+const it = itAllure.epic('NVCA SPA Template');
 
 afterEach(() => {
   for (const dir of tempDirs.splice(0)) {

@@ -37,6 +37,8 @@
     "dev": "tsc --watch",
     "check:spec-coverage": "node scripts/validate_openspec_coverage.mjs",
     "check:source-drift": "npm run build && node scripts/source_drift_canary.mjs",
+    "check:allure-labels": "node scripts/validate_allure_test_labels.mjs",
+    "check:libreoffice": "node scripts/check_libreoffice_headless.mjs",
     "generate:employment-templates": "node scripts/generate_employment_templates.mjs",
     "generate:employment-templates:libreoffice": "node scripts/generate_employment_templates_libreoffice.mjs",
     "render:docx-pages": "node scripts/render_docx_pages.mjs",
@@ -51,9 +53,10 @@
     "validate": "node bin/open-agreements.js validate",
     "build:css": "npx tailwindcss -i site/src/input.css -o site/styles.css --minify",
     "build:html": "npx @11ty/eleventy",
-    "build:site": "npm run build:css && npm run build:html",
+    "build:site:indexes": "node scripts/generate_site_indexes.mjs",
+    "build:site": "npm run build:css && npm run build:html && npm run build:site:indexes",
     "prepare": "npm run build",
-    "report:allure": "rm -rf ./allure-report && npx allure awesome ./allure-results --output ./allure-report",
+    "report:allure": "rm -rf ./allure-report && npx allure awesome ./allure-results --output ./allure-report --group-by epic,feature,story",
     "report:allure:open": "npx allure open ./allure-report"
   },
   "keywords": [
