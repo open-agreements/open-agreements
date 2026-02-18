@@ -48,6 +48,8 @@ function isClauseHeadingParagraph(text: string): boolean {
 
 function paragraphSpacing(paragraph: Element): {
   after: string | null;
+  before: string | null;
+  line: string | null;
   afterAutospacing: string | null;
   beforeAutospacing: string | null;
   contextualSpacing: string | null;
@@ -56,6 +58,8 @@ function paragraphSpacing(paragraph: Element): {
   if (pPrNodes.length === 0) {
     return {
       after: null,
+      before: null,
+      line: null,
       afterAutospacing: null,
       beforeAutospacing: null,
       contextualSpacing: null,
@@ -69,13 +73,17 @@ function paragraphSpacing(paragraph: Element): {
   if (spacingNodes.length === 0) {
     return {
       after: null,
+      before: null,
+      line: null,
       afterAutospacing: null,
       beforeAutospacing: null,
       contextualSpacing,
     };
   }
   return {
+    before: spacingNodes[0].getAttributeNS(W_NS, 'before'),
     after: spacingNodes[0].getAttributeNS(W_NS, 'after'),
+    line: spacingNodes[0].getAttributeNS(W_NS, 'line'),
     afterAutospacing: spacingNodes[0].getAttributeNS(W_NS, 'afterAutospacing'),
     beforeAutospacing: spacingNodes[0].getAttributeNS(W_NS, 'beforeAutospacing'),
     contextualSpacing,
@@ -116,16 +124,21 @@ describe('employment template standard-terms spacing', () => {
 
         const spacing = paragraphSpacing(paragraph);
         checkedParagraphs += 1;
+        const expectedBefore = isClauseHeadingParagraph(text) ? '320' : '0';
         const expectedAfter = isClauseHeadingParagraph(text) ? '120' : '280';
         if (
-          spacing.after !== expectedAfter
-          || spacing.afterAutospacing !== '0'
-          || spacing.beforeAutospacing !== '0'
-          || spacing.contextualSpacing !== '0'
+          spacing.before !== expectedBefore
+          || spacing.after !== expectedAfter
+          || spacing.line !== '340'
+          || spacing.afterAutospacing !== null
+          || spacing.beforeAutospacing !== null
+          || spacing.contextualSpacing !== null
         ) {
           spacingFailures.push(
-            `expectedAfter=${expectedAfter} after=${spacing.after ?? 'missing'} afterAuto=${spacing.afterAutospacing ?? 'missing'} `
-            + `beforeAuto=${spacing.beforeAutospacing ?? 'missing'} contextual=${spacing.contextualSpacing ?? 'missing'} `
+            `expectedBefore=${expectedBefore} before=${spacing.before ?? 'missing'} expectedAfter=${expectedAfter} `
+            + `after=${spacing.after ?? 'missing'} line=${spacing.line ?? 'missing'} `
+            + `afterAuto=${spacing.afterAutospacing ?? 'missing'} beforeAuto=${spacing.beforeAutospacing ?? 'missing'} `
+            + `contextual=${spacing.contextualSpacing ?? 'missing'} `
             + `text="${text.slice(0, 80)}"`
           );
         }

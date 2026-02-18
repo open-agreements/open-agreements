@@ -102,30 +102,24 @@ function enforceStandardTermsSpacing(docxPath, signatureHeading) {
       pPr.insertBefore(spacing, pPr.firstChild);
     }
 
-    const targetAfter = isClauseHeadingParagraph(text) ? '120' : '280';
-    spacing.setAttributeNS(W_NS, 'w:after', targetAfter);
-    spacing.setAttributeNS(W_NS, 'w:afterAutospacing', '0');
-    spacing.setAttributeNS(W_NS, 'w:beforeAutospacing', '0');
-    if (!spacing.getAttributeNS(W_NS, 'line')) {
-      spacing.setAttributeNS(W_NS, 'w:line', '276');
-    }
-    if (!spacing.getAttributeNS(W_NS, 'lineRule')) {
-      spacing.setAttributeNS(W_NS, 'w:lineRule', 'auto');
-    }
+    const isHeading = isClauseHeadingParagraph(text);
+    spacing.setAttributeNS(W_NS, 'w:before', isHeading ? '320' : '0');
+    spacing.setAttributeNS(W_NS, 'w:after', isHeading ? '120' : '280');
+    spacing.setAttributeNS(W_NS, 'w:line', '340');
+    spacing.setAttributeNS(W_NS, 'w:lineRule', 'auto');
+    spacing.removeAttributeNS(W_NS, 'beforeAutospacing');
+    spacing.removeAttributeNS(W_NS, 'afterAutospacing');
 
-    let contextualSpacing = null;
+    const contextualNodes = [];
     for (let j = 0; j < pPr.childNodes.length; j += 1) {
       const child = pPr.childNodes[j];
       if (child && child.nodeType === 1 && child.localName === 'contextualSpacing' && child.namespaceURI === W_NS) {
-        contextualSpacing = child;
-        break;
+        contextualNodes.push(child);
       }
     }
-    if (!contextualSpacing) {
-      contextualSpacing = doc.createElementNS(W_NS, 'w:contextualSpacing');
-      pPr.appendChild(contextualSpacing);
+    for (const nodeToRemove of contextualNodes) {
+      pPr.removeChild(nodeToRemove);
     }
-    contextualSpacing.setAttributeNS(W_NS, 'w:val', '0');
   }
 
   zip.updateFile('word/document.xml', Buffer.from(serializer.serializeToString(doc), 'utf-8'));
