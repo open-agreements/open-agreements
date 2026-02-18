@@ -2,7 +2,7 @@
 
 This document captures the highest-impact assumptions in the OpenAgreements pipeline, especially for NVCA recipe processing where source formatting and bracket semantics are complex.
 
-Use this together with `integration-tests/ASSUMPTION_TEST_MATRIX.md`.
+Use this together with the targeted verification commands at the end of this document.
 
 ## Why this exists
 

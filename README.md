@@ -8,7 +8,7 @@
 [![Validate Templates](https://github.com/open-agreements/open-agreements/actions/workflows/validate.yml/badge.svg)](https://github.com/open-agreements/open-agreements/actions/workflows/validate.yml)
 [![codecov](https://codecov.io/gh/open-agreements/open-agreements/graph/badge.svg)](https://codecov.io/gh/open-agreements/open-agreements)
 [![Tests: Vitest](https://img.shields.io/badge/tests-vitest-6E9F18)](https://vitest.dev/)
-[![OpenSpec Traceability](https://img.shields.io/badge/openspec-traceability%20gate-brightgreen)](./integration-tests/OPENSPEC_TRACEABILITY.md)
+[![OpenSpec Traceability](https://img.shields.io/badge/openspec-traceability%20gate-brightgreen)](./scripts/validate_openspec_coverage.mjs)
 
 Fill standard legal agreement templates and produce signable DOCX files. Templates cover NDAs, cloud terms, employment docs, contractor agreements, SAFEs, and NVCA financing documents.
 
@@ -25,9 +25,9 @@ Built by the team behind [UseJunior.com](https://usejunior.com) — in productio
 - CI runs on pull requests and pushes to `main`.
 - Coverage is published to Codecov with repository-defined patch/project gates in `codecov.yml`.
 - The active JS test framework is Vitest, with JUnit test results uploaded for Codecov test analytics.
-- OpenSpec scenario traceability is enforced via `npm run check:spec-coverage`, with matrix output in `integration-tests/OPENSPEC_TRACEABILITY.md`.
+- OpenSpec scenario traceability is enforced via `npm run check:spec-coverage`. For a local matrix export, run `npm run check:spec-coverage -- --write-matrix integration-tests/OPENSPEC_TRACEABILITY.md`.
 - Recipe source drift canary (`npm run check:source-drift`) verifies expected source hash plus structural replacement/normalize anchors.
-- Assumption-level regressions are tracked in `docs/assumptions.md` with executable mapping in `integration-tests/ASSUMPTION_TEST_MATRIX.md`.
+- Assumption-level regressions are tracked in `docs/assumptions.md` and validated via targeted regression tests + CI gates.
 - LibreOffice-powered DOCX visual rendering uses a pinned build config on macOS (`config/libreoffice-headless.json`); run `npm run check:libreoffice` before visual Allure evidence tests.
 - Maintainer: [Steven Obiajulu](https://www.linkedin.com/in/steven-obiajulu/) (MIT-trained mechanical engineer; Harvard Law trained lawyer).
 
