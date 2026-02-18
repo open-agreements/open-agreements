@@ -3,13 +3,13 @@ import { join } from 'node:path';
 import { mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import AdmZip from 'adm-zip';
-import { verifyOutput, normalizeText } from '../src/core/recipe/verifier.js';
+import { verifyOutput, normalizeText } from './verifier.js';
 import {
   allureJsonAttachment,
   allureParameter,
   allureStep,
   itAllure,
-} from './helpers/allure-test.js';
+} from '../../../integration-tests/helpers/allure-test.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 const it = itAllure.epic('Verification & Drift');

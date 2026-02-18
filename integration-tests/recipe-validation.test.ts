@@ -9,7 +9,7 @@ import {
   itAllure,
 } from './helpers/allure-test.js';
 
-const recipesDir = join(import.meta.dirname, '..', 'recipes');
+const recipesDir = join(import.meta.dirname, '..', 'content', 'recipes');
 const it = itAllure.epic('Verification & Drift');
 
 describe('validateRecipe', () => {

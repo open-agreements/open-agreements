@@ -1,6 +1,6 @@
 import { describe, expect } from 'vitest';
-import { itAllure } from './helpers/allure-test.js';
-import { parseReplacementKey, extractSearchText } from '../src/core/recipe/replacement-keys.js';
+import { itAllure } from '../../../integration-tests/helpers/allure-test.js';
+import { parseReplacementKey, extractSearchText } from './replacement-keys.js';
 
 const it = itAllure.epic('Cleaning & Normalization');
 

@@ -2,7 +2,7 @@ import { mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { afterEach, describe, expect } from 'vitest';
-import { itAllure } from '../../../tests/helpers/allure-test.js';
+import { itAllure } from '../../../integration-tests/helpers/allure-test.js';
 import { defaultConventions, loadConventions, writeConventions } from '../src/core/convention-config.js';
 import { scanExistingConventions } from '../src/core/convention-scanner.js';
 import { FilesystemProvider } from '../src/core/filesystem-provider.js';

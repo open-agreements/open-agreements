@@ -1,7 +1,7 @@
 import { describe, expect } from 'vitest';
-import { itAllure } from './helpers/allure-test.js';
+import { itAllure } from '../../../integration-tests/helpers/allure-test.js';
 import AdmZip from 'adm-zip';
-import { enumerateTextParts, getGeneralTextPartNames } from '../src/core/recipe/ooxml-parts.js';
+import { enumerateTextParts, getGeneralTextPartNames } from './ooxml-parts.js';
 
 const it = itAllure.epic('Discovery & Metadata');
 

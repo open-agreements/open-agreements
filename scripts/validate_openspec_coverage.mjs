@@ -10,8 +10,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const REPO_ROOT = path.resolve(__dirname, '..');
 const SPEC_ROOT = path.join(REPO_ROOT, 'openspec', 'specs');
-const DEFAULT_MATRIX_PATH = path.join(REPO_ROOT, 'tests', 'OPENSPEC_TRACEABILITY.md');
-const TEST_ROOTS = ['tests', 'test'];
+const DEFAULT_MATRIX_PATH = path.join(REPO_ROOT, 'integration-tests', 'OPENSPEC_TRACEABILITY.md');
+const TEST_ROOTS = ['integration-tests', 'src'];
 const TEST_FILE_PATTERN = /\.test\.(?:[cm]?ts|[cm]?js|tsx|jsx)$/;
 const SCENARIO_ID_PATTERN = /^[A-Za-z0-9][A-Za-z0-9._:-]*$/;
 

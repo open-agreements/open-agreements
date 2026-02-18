@@ -3,12 +3,12 @@ import {
   buildComputedArtifact,
   ComputedProfileSchema,
   evaluateComputedProfile,
-} from '../src/core/recipe/computed.js';
+} from './computed.js';
 import {
   allureJsonAttachment,
   allureStep,
   itAllure,
-} from './helpers/allure-test.js';
+} from '../../../integration-tests/helpers/allure-test.js';
 
 const itVerification = itAllure.epic('Verification & Drift');
 

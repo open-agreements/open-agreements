@@ -6,7 +6,7 @@ import { createHash } from 'node:crypto';
 import {
   allureJsonAttachment,
   itAllure,
-} from './helpers/allure-test.js';
+} from '../../../integration-tests/helpers/allure-test.js';
 
 const itFilling = itAllure.epic('Filling & Rendering');
 const tempDirs: string[] = [];
@@ -70,15 +70,15 @@ describe('runExternalFill', () => {
       stages: {},
     }));
 
-    vi.doMock('../src/utils/paths.js', () => ({
+    vi.doMock('../../utils/paths.js', () => ({
       resolveExternalDir: () => root,
     }));
 
-    vi.doMock('../src/core/unified-pipeline.js', () => ({
+    vi.doMock('../unified-pipeline.js', () => ({
       runFillPipeline: runFillPipelineMock,
     }));
 
-    const { runExternalFill } = await import('../src/core/external/index.js');
+    const { runExternalFill } = await import('./index.js');
 
     const logSpy = vi.spyOn(console, 'log').mockImplementation(() => {});
 
@@ -107,15 +107,15 @@ describe('runExternalFill', () => {
 
     const runFillPipelineMock = vi.fn();
 
-    vi.doMock('../src/utils/paths.js', () => ({
+    vi.doMock('../../utils/paths.js', () => ({
       resolveExternalDir: () => root,
     }));
 
-    vi.doMock('../src/core/unified-pipeline.js', () => ({
+    vi.doMock('../unified-pipeline.js', () => ({
       runFillPipeline: runFillPipelineMock,
     }));
 
-    const { runExternalFill } = await import('../src/core/external/index.js');
+    const { runExternalFill } = await import('./index.js');
 
     await expect(
       runExternalFill({

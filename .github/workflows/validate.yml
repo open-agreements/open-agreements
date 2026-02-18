@@ -33,7 +33,7 @@ jobs:
           fi
 
           # Ensure no template with allow_derivatives=false has been modified
-          for dir in templates/*/; do
+          for dir in content/templates/*/; do
             if [ -f "$dir/metadata.yaml" ]; then
               allow=$(grep 'allow_derivatives:' "$dir/metadata.yaml" | awk '{print $2}')
               if [ "$allow" = "false" ]; then

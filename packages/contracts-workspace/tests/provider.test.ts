@@ -2,7 +2,7 @@ import { existsSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { afterEach, describe, expect } from 'vitest';
-import { itAllure } from '../../../tests/helpers/allure-test.js';
+import { itAllure } from '../../../integration-tests/helpers/allure-test.js';
 import { FilesystemProvider } from '../src/core/filesystem-provider.js';
 import { MemoryProvider } from '../src/core/memory-provider.js';
 import type { WorkspaceProvider } from '../src/core/provider.js';
