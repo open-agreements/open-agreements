@@ -7,6 +7,7 @@ import {
   Footer,
   Header,
   HeightRule,
+  LineRuleType,
   Packer,
   PageNumber,
   Paragraph,
@@ -55,6 +56,88 @@ const DEF_TERMS = [
   'Subscription Period',
   'Governing Law',
 ];
+
+const DOCUMENT_STYLES = {
+  default: {
+    document: {
+      run: {
+        font: 'Arial',
+        size: 22,
+        color: BRAND.INK,
+      },
+      paragraph: {
+        spacing: {
+          before: 0,
+          after: 0,
+          line: 340,
+          lineRule: LineRuleType.AUTO,
+        },
+      },
+    },
+  },
+  paragraphStyles: [
+    {
+      id: 'Normal',
+      name: 'Normal',
+      next: 'Normal',
+      quickFormat: true,
+      run: {
+        font: 'Arial',
+        size: 22,
+        color: BRAND.INK,
+      },
+      paragraph: {
+        spacing: {
+          before: 0,
+          after: 0,
+          line: 340,
+          lineRule: LineRuleType.AUTO,
+        },
+      },
+    },
+    {
+      id: 'OAClauseHeading',
+      name: 'OA Clause Heading',
+      basedOn: 'Normal',
+      next: 'OAClauseBody',
+      quickFormat: true,
+      run: {
+        font: 'Arial',
+        size: 22,
+        bold: true,
+        color: BRAND.INK,
+      },
+      paragraph: {
+        spacing: {
+          before: 320,
+          after: 120,
+          line: 340,
+          lineRule: LineRuleType.AUTO,
+        },
+      },
+    },
+    {
+      id: 'OAClauseBody',
+      name: 'OA Clause Body',
+      basedOn: 'Normal',
+      next: 'OAClauseHeading',
+      quickFormat: true,
+      run: {
+        font: 'Arial',
+        size: 22,
+        color: BRAND.INK,
+      },
+      paragraph: {
+        spacing: {
+          before: 0,
+          after: 280,
+          line: 340,
+          lineRule: LineRuleType.AUTO,
+        },
+      },
+    },
+  ],
+};
 
 function escapeRegExp(value) {
   return value.replace(/[.*+?^${}()|[\\]\\]/g, '\\$&');
@@ -227,10 +310,12 @@ function title(text) {
 
 function body(text, opts = {}) {
   return new Paragraph({
+    style: opts.style,
     spacing: {
       before: opts.before ?? 0,
-      after: opts.after ?? 120,
-      line: opts.line ?? 276,
+      after: opts.after ?? 280,
+      line: opts.line ?? 340,
+      lineRule: LineRuleType.AUTO,
     },
     alignment: opts.alignment,
     children: runsWithDefinedTerms(text, opts.terms, {
@@ -396,7 +481,7 @@ function coverTable(rows, titleText, subtitleText) {
 
 function sectionTitle(text) {
   return new Paragraph({
-    spacing: { before: 0, after: 240, line: 276 },
+    spacing: { before: 0, after: 240, line: 340, lineRule: LineRuleType.AUTO },
     children: [
       new TextRun({
         text,
@@ -412,8 +497,9 @@ function sectionTitle(text) {
 function clause(index, headingText, bodyText) {
   return [
     new Paragraph({
-      // Keep explicit 6pt after-spacing for Standard Terms compatibility.
-      spacing: { before: 300, after: 120, line: 276 },
+      style: 'OAClauseHeading',
+      // Keep explicit Standard Terms spacing for cross-editor compatibility.
+      spacing: { before: 320, after: 120, line: 340, lineRule: LineRuleType.AUTO },
       children: [
         new TextRun({
           text: `${index}. ${headingText}.`,
@@ -424,8 +510,21 @@ function clause(index, headingText, bodyText) {
         }),
       ],
     }),
-    body(bodyText, { size: 22, terms: DEF_TERMS }),
+    body(bodyText, {
+      size: 22,
+      terms: DEF_TERMS,
+      style: 'OAClauseBody',
+      after: 280,
+      line: 340,
+    }),
   ];
+}
+
+function createDocument(sections) {
+  return new Document({
+    styles: DOCUMENT_STYLES,
+    sections,
+  });
 }
 
 function signatureHeaderCell(text) {
@@ -687,8 +786,7 @@ function offerLetterDoc() {
     { label: 'Date', left: '', right: '' },
   ];
 
-  return new Document({
-    sections: [
+  return createDocument([
       buildSection(
         'Cover Terms',
         docLabel,
@@ -715,8 +813,7 @@ function offerLetterDoc() {
         }),
         twoPartySignatureTable('Employer', 'Employee', signatureRows),
       ]),
-    ],
-  });
+    ]);
 }
 
 function ipAssignmentDoc() {
@@ -786,8 +883,7 @@ function ipAssignmentDoc() {
     { label: 'Date', left: '', right: '' },
   ];
 
-  return new Document({
-    sections: [
+  return createDocument([
       buildSection(
         'Cover Terms',
         docLabel,
@@ -814,8 +910,7 @@ function ipAssignmentDoc() {
         }),
         twoPartySignatureTable('Company', 'Employee', signatureRows),
       ]),
-    ],
-  });
+    ]);
 }
 
 function confidentialityAckDoc() {
@@ -863,8 +958,7 @@ function confidentialityAckDoc() {
     { label: 'Date', value: '{acknowledgement_date}' },
   ];
 
-  return new Document({
-    sections: [
+  return createDocument([
       buildSection(
         'Cover Terms',
         docLabel,
@@ -891,8 +985,7 @@ function confidentialityAckDoc() {
         }),
         onePartySignatureTable('Employee', signatureRows),
       ]),
-    ],
-  });
+    ]);
 }
 
 function renderMarkdown({ title: docTitle, label, version, license, coverSubtitle, coverRows, clauses, signaturePreamble, signatureSections }) {
@@ -1065,12 +1158,12 @@ function writeMd(content, path) {
   writeFileSync(resolve(path), content, 'utf-8');
 }
 
-await writeDoc(offerLetterDoc(), 'templates/openagreements-employment-offer-letter/template.docx');
-await writeDoc(ipAssignmentDoc(), 'templates/openagreements-employee-ip-inventions-assignment/template.docx');
-await writeDoc(confidentialityAckDoc(), 'templates/openagreements-employment-confidentiality-acknowledgement/template.docx');
+await writeDoc(offerLetterDoc(), 'content/templates/openagreements-employment-offer-letter/template.docx');
+await writeDoc(ipAssignmentDoc(), 'content/templates/openagreements-employee-ip-inventions-assignment/template.docx');
+await writeDoc(confidentialityAckDoc(), 'content/templates/openagreements-employment-confidentiality-acknowledgement/template.docx');
 
-writeMd(offerLetterMarkdown(), 'templates/openagreements-employment-offer-letter/template.md');
-writeMd(ipAssignmentMarkdown(), 'templates/openagreements-employee-ip-inventions-assignment/template.md');
-writeMd(confidentialityAckMarkdown(), 'templates/openagreements-employment-confidentiality-acknowledgement/template.md');
+writeMd(offerLetterMarkdown(), 'content/templates/openagreements-employment-offer-letter/template.md');
+writeMd(ipAssignmentMarkdown(), 'content/templates/openagreements-employee-ip-inventions-assignment/template.md');
+writeMd(confidentialityAckMarkdown(), 'content/templates/openagreements-employment-confidentiality-acknowledgement/template.md');
 
 console.log('Regenerated branded employment templates (open-source pipeline).');
