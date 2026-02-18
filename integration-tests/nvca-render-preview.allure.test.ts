@@ -44,7 +44,6 @@ interface RenderSummary {
 const RECIPE_ID = 'nvca-stock-purchase-agreement';
 const RECIPE_DIR = resolveRecipeDir(RECIPE_ID);
 const SOURCE_CACHE_PATH = join(homedir(), '.open-agreements', 'cache', RECIPE_ID, 'source.docx');
-const RENDER_PREVIEW_TIMEOUT_MS = 30_000;
 const LIBREOFFICE_CHECK_SCRIPT = join(import.meta.dirname, '..', 'scripts', 'check_libreoffice_headless.mjs');
 
 // This test requires a cached NVCA source DOCX and LibreOffice — skip in CI
