@@ -1,3 +1,10 @@
+---
+title: Adding Templates
+description: How to add a new CC BY or CC0 template to the repository.
+order: 2
+section: Guides
+---
+
 # Adding Templates
 
 ## Requirements

@@ -1,3 +1,10 @@
+---
+title: Employment Template Branding Pipeline
+description: How employment templates are generated, styled, and extended.
+order: 9
+section: Guides
+---
+
 # Employment Template Branding Pipeline
 
 This repository uses an open-source-only pipeline to generate branded

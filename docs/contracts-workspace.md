@@ -1,3 +1,10 @@
+---
+title: Contracts Workspace CLI
+description: Filesystem-based contract repository management with catalog, status, and lint commands.
+order: 6
+section: Packages
+---
+
 # Contracts Workspace CLI
 
 The contracts workspace CLI is a separate package focused on filesystem-based contract operations.
@@ -75,9 +82,32 @@ open-agreements-workspace status lint
 Current baseline lint checks:
 
 - required lifecycle folders exist
-- disallowed file types by folder (for example, PDF in `forms/`)
-- `_executed` naming consistency
+- disallowed file types by folder (configurable via `disallowed_file_types` in conventions)
+- executed marker naming consistency (uses configured marker, default `_executed`)
 - stale `contracts-index.yaml` detection
+- duplicate/timestamped file detection
+- root orphan detection
+- cross-contamination detection (file in wrong domain folder)
+
+## Convention Config
+
+Workspace naming and structure conventions are stored in `.contracts-workspace/conventions.yaml`.
+
+### Adaptive Init
+
+When `init` runs on a non-empty directory, it scans existing filenames to infer:
+- **Executed marker**: detects `_executed`, `_signed`, `(fully executed)`, `(signed)` patterns
+- **Naming style**: detects `snake_case`, `kebab-case`, `title-case-spaces`, `title-case-dash`
+- **Domain applicability**: classifies folders as lifecycle-applicable or asset-only
+
+On an empty directory, defaults apply (`snake_case`, `_executed`).
+
+### Generated Docs (WORKSPACE.md / FOLDER.md)
+
+`init` generates `WORKSPACE.md` at the workspace root and `FOLDER.md` in each existing lifecycle folder. These files:
+- Are convention-aware (reflect configured naming style and markers)
+- Use sentinel comments for idempotent re-generation
+- Preserve user content added outside the sentinel block on re-init
 
 ## Local-Synced Drive Model (v1)
 

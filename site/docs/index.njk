@@ -1,0 +1,31 @@
+---
+layout: base.njk
+title: Documentation | OpenAgreements
+description: Guides, references, and architecture docs for OpenAgreements.
+permalink: /docs/
+---
+<div class="main-wrap" style="margin-top:24px; margin-bottom:48px;">
+  <div class="section" style="padding:clamp(26px, 4vw, 42px);">
+    <h1>Documentation</h1>
+    <p style="color:var(--ink-soft); max-width:60ch; margin:12px 0 28px;">
+      Guides, references, and architecture docs for the OpenAgreements CLI,
+      template engine, and contracts workspace.
+    </p>
+
+    {% for group in docsNav %}
+      <h2 style="margin-top:28px;">{{ group.section }}</h2>
+      <div class="cards" style="grid-template-columns:repeat(auto-fill, minmax(280px, 1fr)); margin-top:12px;">
+        {% for item in group.items %}
+          <a href="/docs/{{ item.slug }}/" class="card pack-card">
+            <h3>{{ item.title }}</h3>
+            {% for doc in collections.docs %}
+              {% if doc.fileSlug == item.slug %}
+                <p class="pack-desc">{{ doc.data.description }}</p>
+              {% endif %}
+            {% endfor %}
+          </a>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+</div>

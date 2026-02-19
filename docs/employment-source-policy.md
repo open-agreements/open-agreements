@@ -1,3 +1,10 @@
+---
+title: Employment Source Policy
+description: Trust and licensing classifications for employment-pack content onboarding.
+order: 10
+section: Reference
+---
+
 # Employment Source Policy
 
 This document defines trust and licensing classifications for employment-pack

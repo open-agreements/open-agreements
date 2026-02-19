@@ -1,3 +1,10 @@
+---
+title: Getting Started
+description: Install open-agreements and fill your first agreement template.
+order: 1
+section: Start Here
+---
+
 # Getting Started
 
 ## Installation

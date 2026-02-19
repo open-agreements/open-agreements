@@ -9,55 +9,45 @@
 
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { z } from 'zod';
-import { handleFill, handleListTemplates, handleCreateChecklist, DOCX_MIME, createDownloadToken } from './_shared.js';
+import {
+  handleFill,
+  handleGetTemplate,
+  handleListTemplates,
+  DOCX_MIME,
+  createDownloadToken,
+  parseDownloadToken,
+} from './_shared.js';
+import { ErrorCode, makeToolError, wrapError, wrapSuccess } from './_envelope.js';
 
 // ---------------------------------------------------------------------------
 // Zod schemas for MCP tool argument validation
 // ---------------------------------------------------------------------------
 
-const FillTemplateArgsSchema = z.object({
-  template: z.string(),
-  values: z.record(z.string(), z.unknown()).optional().default({}),
+const ListTemplatesArgsSchema = z.object({
+  mode: z.enum(['compact', 'full']).optional().default('full'),
 });
 
-const ListTemplatesArgsSchema = z.object({});
+const GetTemplateArgsSchema = z.object({
+  template_id: z.string().min(1),
+});
 
-const CreateChecklistArgsSchema = z.object({
-  deal_name: z.string(),
-  created_at: z.string().optional().default(new Date().toISOString()),
-  updated_at: z.string().optional().default(new Date().toISOString()),
-  working_group: z.array(z.object({
-    name: z.string(),
-    email: z.string().optional(),
-    organization: z.string(),
-    role: z.string().optional(),
-  })).optional().default([]),
-  documents: z.array(z.object({
-    document_name: z.string(),
-    status: z.string(),
-  })).optional().default([]),
-  action_items: z.array(z.object({
-    item_id: z.string(),
-    description: z.string(),
-    status: z.string(),
-    assigned_to: z.object({
-      organization: z.string(),
-      individual_name: z.string().optional(),
-      role: z.string().optional(),
-    }),
-    due_date: z.string().optional(),
-  })).optional().default([]),
-  open_issues: z.array(z.object({
-    issue_id: z.string(),
-    title: z.string(),
-    status: z.string(),
-    escalation_tier: z.string().optional(),
-    resolution: z.string().optional(),
-  })).optional().default([]),
+const FillTemplateArgsSchema = z.object({
+  template: z.string().min(1),
+  values: z.record(z.string(), z.unknown()).optional().default({}),
+  return_mode: z.enum(['url', 'base64_docx', 'mcp_resource']).optional().default('url'),
+});
+
+const DownloadFilledArgsSchema = z.object({
+  token: z.string().min(1),
 });
 
 // Base URL for download links — derived from the incoming request at call time
 let _baseUrl = 'https://openagreements.ai';
+
+const TOOL_LIST_TEMPLATES = 'list_templates';
+const TOOL_GET_TEMPLATE = 'get_template';
+const TOOL_FILL_TEMPLATE = 'fill_template';
+const TOOL_DOWNLOAD_FILLED = 'download_filled';
 
 // ---------------------------------------------------------------------------
 // MCP tool definitions
@@ -65,116 +55,76 @@ let _baseUrl = 'https://openagreements.ai';
 
 const TOOLS = [
   {
-    name: 'list_templates',
+    name: TOOL_LIST_TEMPLATES,
     description:
-      'List all available legal agreement templates (NDAs, SAFEs, cloud terms, employment docs) ' +
-      'with their field schemas, licenses, and attribution requirements. ' +
-      'Call this first to discover which templates are available and what fields they accept.',
+      'List all available legal agreement templates. ' +
+      'Supports compact and full metadata modes for discovery.',
     inputSchema: {
       type: 'object' as const,
-      properties: {},
+      properties: {
+        mode: {
+          type: 'string',
+          enum: ['compact', 'full'],
+          description: 'Response detail mode. Defaults to "full".',
+        },
+      },
     },
   },
   {
-    name: 'fill_template',
+    name: TOOL_GET_TEMPLATE,
     description:
-      'Fill a legal agreement template with field values and return a signed-ready DOCX file. ' +
-      'Fills whatever fields are provided; missing fields render as blanks. ' +
-      'Use list_templates first to see available templates and their fields.',
+      'Fetch a single template definition with full field metadata.',
+    inputSchema: {
+      type: 'object' as const,
+      properties: {
+        template_id: {
+          type: 'string',
+          description: 'Template ID, e.g. "common-paper-mutual-nda".',
+        },
+      },
+      required: ['template_id'],
+    },
+  },
+  {
+    name: TOOL_FILL_TEMPLATE,
+    description:
+      'Fill a legal agreement template with field values and return a document ' +
+      'via URL, inline base64, or MCP resource preview metadata.',
     inputSchema: {
       type: 'object' as const,
       properties: {
         template: {
           type: 'string',
-          description: 'Template ID, e.g. "common-paper-mutual-nda" or "closing-checklist"',
+          description: 'Template ID, e.g. "common-paper-mutual-nda".',
         },
         values: {
           type: 'object',
-          description: 'Field values to fill in the template. Keys are field names; values are strings, booleans, or arrays depending on field type.',
+          description: 'Field values to fill in the template.',
           additionalProperties: true,
+        },
+        return_mode: {
+          type: 'string',
+          enum: ['url', 'base64_docx', 'mcp_resource'],
+          description: 'Artifact return mode. Defaults to "url".',
         },
       },
       required: ['template'],
     },
   },
   {
-    name: 'create_closing_checklist',
+    name: TOOL_DOWNLOAD_FILLED,
     description:
-      'Create a deal closing checklist DOCX from structured JSON input. ' +
-      'Accepts deal name, working group members, documents, action items, and open issues. ' +
-      'Returns a formatted checklist for distribution to deal participants.',
+      'Retrieve a filled template using a previously issued token. ' +
+      'Returns base64 DOCX and metadata in a structured envelope.',
     inputSchema: {
       type: 'object' as const,
       properties: {
-        deal_name: { type: 'string', description: 'Name of the deal or transaction' },
-        created_at: { type: 'string', description: 'ISO date when checklist was first created (defaults to now)' },
-        updated_at: { type: 'string', description: 'ISO date when checklist was last updated (defaults to now)' },
-        working_group: {
-          type: 'array',
-          description: 'Working group members',
-          items: {
-            type: 'object',
-            properties: {
-              name: { type: 'string' },
-              email: { type: 'string' },
-              organization: { type: 'string' },
-              role: { type: 'string' },
-            },
-            required: ['name', 'organization'],
-          },
-        },
-        documents: {
-          type: 'array',
-          description: 'Deal documents and their statuses',
-          items: {
-            type: 'object',
-            properties: {
-              document_name: { type: 'string' },
-              status: { type: 'string', enum: ['NOT_STARTED', 'DRAFTING', 'INTERNAL_REVIEW', 'CLIENT_REVIEW', 'NEGOTIATING', 'FORM_FINAL', 'EXECUTED', 'ON_HOLD'] },
-            },
-            required: ['document_name', 'status'],
-          },
-        },
-        action_items: {
-          type: 'array',
-          description: 'Action items to track',
-          items: {
-            type: 'object',
-            properties: {
-              item_id: { type: 'string' },
-              description: { type: 'string' },
-              status: { type: 'string', enum: ['NOT_STARTED', 'IN_PROGRESS', 'COMPLETED', 'ON_HOLD'] },
-              assigned_to: {
-                type: 'object',
-                properties: {
-                  organization: { type: 'string' },
-                  individual_name: { type: 'string' },
-                  role: { type: 'string' },
-                },
-                required: ['organization'],
-              },
-              due_date: { type: 'string' },
-            },
-            required: ['item_id', 'description', 'status', 'assigned_to'],
-          },
-        },
-        open_issues: {
-          type: 'array',
-          description: 'Open issues requiring resolution',
-          items: {
-            type: 'object',
-            properties: {
-              issue_id: { type: 'string' },
-              title: { type: 'string' },
-              status: { type: 'string', enum: ['OPEN', 'ESCALATED', 'RESOLVED', 'DEFERRED'] },
-              escalation_tier: { type: 'string', enum: ['YELLOW', 'RED'] },
-              resolution: { type: 'string' },
-            },
-            required: ['issue_id', 'title', 'status'],
-          },
+        token: {
+          type: 'string',
+          description: 'Download token from fill_template(url mode).',
         },
       },
-      required: ['deal_name'],
+      required: ['token'],
     },
   },
 ];
@@ -191,13 +141,296 @@ function jsonRpcError(id: unknown, code: number, message: string) {
   return { jsonrpc: '2.0', id: id ?? null, error: { code, message } };
 }
 
+function operationalMetadata() {
+  return {
+    // Placeholder fields until auth/rate-limit middleware is wired.
+    rate_limit: {
+      limit: null,
+      remaining: null,
+      reset_at: null,
+    },
+    auth: null,
+  };
+}
+
+function issueDetails(error: z.ZodError) {
+  return {
+    issues: error.issues.map((issue) => ({
+      path: issue.path.join('.'),
+      code: issue.code,
+      message: issue.message,
+    })),
+  };
+}
+
+function isUnknownTemplateError(message: string): boolean {
+  return message.toLowerCase().includes('unknown template');
+}
+
+function normalizedTemplate(template: {
+  name: string;
+  category: string;
+  description: string;
+  license?: string;
+  source_url: string;
+  source: string | null;
+  attribution_text?: string;
+  fields: {
+    name: string;
+    type: string;
+    required: boolean;
+    section: string | null;
+    description: string;
+    default: string | null;
+  }[];
+}) {
+  return {
+    template_id: template.name,
+    name: template.name,
+    category: template.category,
+    description: template.description,
+    license: template.license ?? null,
+    source_url: template.source_url,
+    source: template.source,
+    attribution_text: template.attribution_text ?? null,
+    fields: template.fields,
+  };
+}
+
+function compactTemplate(template: { name: string; fields: unknown[] }) {
+  return {
+    template_id: template.name,
+    name: template.name,
+    field_count: template.fields.length,
+  };
+}
+
+function toolSuccessResult(id: unknown, tool: string, data: Record<string, unknown>) {
+  const envelope = wrapSuccess(tool, {
+    ...data,
+    ...operationalMetadata(),
+  });
+  return jsonRpcResult(id, {
+    content: [{ type: 'text', text: JSON.stringify(envelope) }],
+  });
+}
+
+function toolErrorResult(
+  id: unknown,
+  tool: string,
+  code: (typeof ErrorCode)[keyof typeof ErrorCode],
+  message: string,
+  opts?: { retriable?: boolean; details?: Record<string, unknown> },
+) {
+  const envelope = wrapError(tool, makeToolError(code, message, opts));
+  return jsonRpcResult(id, {
+    content: [{ type: 'text', text: JSON.stringify(envelope) }],
+    isError: true,
+  });
+}
+
+function tokenExpiryIso(token: string): string {
+  const parsed = parseDownloadToken(token);
+  if (!parsed) {
+    // Token was generated locally in this process; fallback only if parse fails unexpectedly.
+    return new Date(Date.now() + 60 * 60 * 1000).toISOString();
+  }
+  return new Date(parsed.e).toISOString();
+}
+
+function mcpGetHtmlPage(): string {
+  return `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>OpenAgreements MCP Endpoint</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f5f0e8;
+        --ink: #142023;
+        --ink-soft: #334348;
+        --card: #fff8ee;
+        --line: #d2c2ae;
+        --accent: #be4b2f;
+        --accent-deep: #953118;
+        --accent-soft: #f9dac5;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "IBM Plex Sans", ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 8% -15%, #fde8d8 0, transparent 42%),
+          radial-gradient(circle at 96% 10%, #e3ebf4 0, transparent 38%),
+          var(--bg);
+      }
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.22;
+        background-image:
+          linear-gradient(transparent 95%, rgba(20, 32, 35, 0.08) 96%),
+          linear-gradient(90deg, transparent 95%, rgba(20, 32, 35, 0.08) 96%);
+        background-size: 34px 34px;
+      }
+      .topbar {
+        width: min(1120px, 92vw);
+        margin: 18px auto 0;
+        padding: 12px 16px;
+        border: 1px solid var(--line);
+        background: rgba(255, 248, 238, 0.76);
+        backdrop-filter: blur(6px);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+      .brand {
+        font-family: "Fraunces", Georgia, "Times New Roman", serif;
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-decoration: none;
+        color: var(--ink);
+      }
+      .topnav {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        color: var(--ink-soft);
+        font-size: 0.94rem;
+      }
+      .topnav a {
+        color: var(--ink-soft);
+        text-decoration: none;
+      }
+      .topnav a:hover {
+        color: var(--accent-deep);
+      }
+      main {
+        width: min(1120px, 92vw);
+        margin: 24px auto 0;
+        border: 1px solid var(--line);
+        background: var(--card);
+        box-shadow: 0 16px 50px rgba(20, 32, 35, 0.16);
+        position: relative;
+        z-index: 1;
+      }
+      section {
+        padding: clamp(28px, 5vw, 56px);
+      }
+      .eyebrow {
+        margin: 0 0 8px;
+        text-transform: uppercase;
+        letter-spacing: 0.09em;
+        color: var(--accent-deep);
+        font-size: 0.8rem;
+        font-weight: 700;
+      }
+      h1 {
+        margin: 0;
+        font-family: "Fraunces", Georgia, "Times New Roman", serif;
+        font-size: clamp(2rem, 5vw, 3.4rem);
+        line-height: 1.03;
+        max-width: 14ch;
+      }
+      p {
+        margin: 12px 0 0;
+        color: var(--ink-soft);
+        line-height: 1.55;
+        max-width: 70ch;
+      }
+      .actions {
+        margin-top: 22px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        border: 1px solid transparent;
+        padding: 10px 16px;
+        font-weight: 600;
+      }
+      .btn-primary {
+        background: linear-gradient(120deg, var(--accent), var(--accent-deep));
+        color: #fff;
+      }
+      .btn-ghost {
+        border-color: var(--line);
+        color: var(--ink);
+        background: #fff;
+      }
+      code {
+        background: var(--bg);
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        padding: 2px 6px;
+        color: var(--ink);
+      }
+      ul {
+        margin: 14px 0 0;
+        padding-left: 24px;
+        color: var(--ink-soft);
+      }
+      li { margin: 4px 0; }
+      li a {
+        color: var(--accent-deep);
+        text-decoration: none;
+      }
+      li a:hover { text-decoration: underline; }
+      @media (max-width: 740px) {
+        .topbar { display: block; }
+        .topnav { margin-top: 8px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="https://openagreements.ai">OpenAgreements</a>
+      <nav class="topnav">
+        <a href="https://openagreements.ai/templates">Template Library</a>
+        <span>|</span>
+        <a href="https://openagreements.ai#start">Install Guide</a>
+        <span>|</span>
+        <a href="https://openagreements.ai#faq">Q&A</a>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <p class="eyebrow">Open-source legal operations</p>
+        <h1>OpenAgreements MCP endpoint</h1>
+        <p>This route is for MCP clients (streamable HTTP), not direct browser use.</p>
+        <p>Endpoint: <code>https://openagreements.ai/api/mcp</code></p>
+        <p>Use JSON-RPC over HTTP POST with methods like <code>initialize</code>, <code>tools/list</code>, and <code>tools/call</code>.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://openagreements.ai#start">Installation instructions</a>
+          <a class="btn btn-ghost" href="https://openagreements.ai/templates">Browse templates</a>
+        </div>
+        <ul>
+          <li>Website: <a href="https://openagreements.ai">openagreements.ai</a></li>
+          <li>GitHub: <a href="https://github.com/open-agreements/open-agreements">open-agreements/open-agreements</a></li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>`;
+}
+
 // ---------------------------------------------------------------------------
 // MCP method handlers
 // ---------------------------------------------------------------------------
 
 function handleInitialize(id: unknown, params: Record<string, unknown>) {
   const clientVersion = (params.protocolVersion as string) ?? '2024-11-05';
-  // Accept any version the client requests; respond with the same
+  // Accept any version the client requests; respond with the same.
   return jsonRpcResult(id, {
     protocolVersion: clientVersion,
     capabilities: { tools: { listChanged: false } },
@@ -213,114 +446,162 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>) {
   const name = params.name as string;
   const args = (params.arguments as Record<string, unknown>) ?? {};
 
-  if (name === 'list_templates') {
+  if (name === TOOL_LIST_TEMPLATES) {
     const parsed = ListTemplatesArgsSchema.safeParse(args);
     if (!parsed.success) {
-      return jsonRpcResult(id, {
-        content: [{ type: 'text', text: `Validation error: ${parsed.error.issues.map(i => i.message).join(', ')}` }],
-        isError: true,
+      return toolErrorResult(
+        id,
+        TOOL_LIST_TEMPLATES,
+        ErrorCode.INVALID_ARGUMENT,
+        'Invalid arguments for list_templates.',
+        { details: issueDetails(parsed.error) },
+      );
+    }
+
+    const { mode } = parsed.data;
+    const { items } = handleListTemplates();
+
+    if (mode === 'compact') {
+      return toolSuccessResult(id, TOOL_LIST_TEMPLATES, {
+        mode,
+        templates: items.map((item) => compactTemplate(item)),
       });
     }
 
-    const { items } = handleListTemplates();
-
-    // Build a concise human-readable summary with full field detail in JSON
-    const lines = items.map(
-      (t) => `- ${t.name} — ${t.description} [${t.license ?? 'recipe'}, ${t.fields.length} fields, ${t.source}]`,
-    );
-    const summary = `Available templates (${items.length}):\n\n${lines.join('\n')}`;
-
-    return jsonRpcResult(id, {
-      content: [
-        { type: 'text', text: summary },
-        { type: 'text', text: JSON.stringify(items) },
-      ],
+    return toolSuccessResult(id, TOOL_LIST_TEMPLATES, {
+      mode,
+      templates: items.map((item) => normalizedTemplate(item)),
     });
   }
 
-  if (name === 'fill_template') {
-    const parsed = FillTemplateArgsSchema.safeParse(args);
+  if (name === TOOL_GET_TEMPLATE) {
+    const parsed = GetTemplateArgsSchema.safeParse(args);
     if (!parsed.success) {
-      return jsonRpcResult(id, {
-        content: [{ type: 'text', text: `Validation error: ${parsed.error.issues.map(i => i.message).join(', ')}` }],
-        isError: true,
-      });
+      return toolErrorResult(
+        id,
+        TOOL_GET_TEMPLATE,
+        ErrorCode.INVALID_ARGUMENT,
+        'Invalid arguments for get_template.',
+        { details: issueDetails(parsed.error) },
+      );
     }
 
-    const { template, values } = parsed.data;
+    const template = handleGetTemplate(parsed.data.template_id);
+    if (!template) {
+      return toolErrorResult(
+        id,
+        TOOL_GET_TEMPLATE,
+        ErrorCode.TEMPLATE_NOT_FOUND,
+        `Template not found: "${parsed.data.template_id}"`,
+      );
+    }
+
+    return toolSuccessResult(id, TOOL_GET_TEMPLATE, {
+      template: normalizedTemplate(template),
+    });
+  }
+
+  if (name === TOOL_FILL_TEMPLATE) {
+    const parsed = FillTemplateArgsSchema.safeParse(args);
+    if (!parsed.success) {
+      return toolErrorResult(
+        id,
+        TOOL_FILL_TEMPLATE,
+        ErrorCode.INVALID_ARGUMENT,
+        'Invalid arguments for fill_template.',
+        { details: issueDetails(parsed.error) },
+      );
+    }
+
+    const { template, values, return_mode } = parsed.data;
 
     const outcome = await handleFill(template, values);
 
     if (!outcome.ok) {
-      return jsonRpcResult(id, {
-        content: [{ type: 'text', text: `Error: ${outcome.error}` }],
-        isError: true,
+      const errorCode = isUnknownTemplateError(outcome.error)
+        ? ErrorCode.TEMPLATE_NOT_FOUND
+        : ErrorCode.INVALID_ARGUMENT;
+      return toolErrorResult(id, TOOL_FILL_TEMPLATE, errorCode, outcome.error);
+    }
+
+    if (return_mode === 'base64_docx') {
+      return toolSuccessResult(id, TOOL_FILL_TEMPLATE, {
+        content_type: DOCX_MIME,
+        docx_base64: outcome.base64,
+        metadata: outcome.metadata,
+        return_mode,
       });
     }
 
-    const m = outcome.metadata;
     const token = createDownloadToken(template, values);
-    const downloadUrl = `${_baseUrl}/api/download?token=${token}`;
+    const downloadUrl = `${_baseUrl}/api/download?token=${encodeURIComponent(token)}`;
+    const expiresAt = tokenExpiryIso(token);
 
-    const summary = [
-      `Filled "${m.template}" — ${m.filledFieldCount} of ${m.totalFieldCount} fields populated.`,
-      m.missingFields.length > 0 ? `Missing fields: ${m.missingFields.join(', ')}` : 'All fields filled.',
-      '',
-      `Download your DOCX: ${downloadUrl}`,
-      '(Link expires in 1 hour)',
-      '',
-      m.license ? `License: ${m.license}` : null,
-      m.attribution ? `Attribution: ${m.attribution}` : null,
-    ]
-      .filter(Boolean)
-      .join('\n');
+    if (return_mode === 'mcp_resource') {
+      return toolSuccessResult(id, TOOL_FILL_TEMPLATE, {
+        content_type: DOCX_MIME,
+        download_url: downloadUrl,
+        expires_at: expiresAt,
+        metadata: outcome.metadata,
+        resource_uri: `oa://filled/${token}`,
+        return_mode,
+      });
+    }
 
-    return jsonRpcResult(id, {
-      content: [
-        { type: 'text', text: summary },
-      ],
+    return toolSuccessResult(id, TOOL_FILL_TEMPLATE, {
+      download_url: downloadUrl,
+      token,
+      expires_at: expiresAt,
+      metadata: outcome.metadata,
+      return_mode,
     });
   }
 
-  if (name === 'create_closing_checklist') {
-    const parsed = CreateChecklistArgsSchema.safeParse(args);
+  if (name === TOOL_DOWNLOAD_FILLED) {
+    const parsed = DownloadFilledArgsSchema.safeParse(args);
     if (!parsed.success) {
-      return jsonRpcResult(id, {
-        content: [{ type: 'text', text: `Validation error: ${parsed.error.issues.map(i => `${i.path.join('.')}: ${i.message}`).join(', ')}` }],
-        isError: true,
-      });
+      return toolErrorResult(
+        id,
+        TOOL_DOWNLOAD_FILLED,
+        ErrorCode.INVALID_ARGUMENT,
+        'Invalid arguments for download_filled.',
+        { details: issueDetails(parsed.error) },
+      );
     }
 
-    const outcome = await handleCreateChecklist(parsed.data);
+    const payload = parseDownloadToken(parsed.data.token);
+    if (!payload) {
+      return toolErrorResult(
+        id,
+        TOOL_DOWNLOAD_FILLED,
+        ErrorCode.TOKEN_EXPIRED,
+        'Invalid or expired token.',
+      );
+    }
 
+    const outcome = await handleFill(payload.t, payload.v);
     if (!outcome.ok) {
-      return jsonRpcResult(id, {
-        content: [{ type: 'text', text: `Error: ${outcome.error}` }],
-        isError: true,
-      });
+      const errorCode = isUnknownTemplateError(outcome.error)
+        ? ErrorCode.TEMPLATE_NOT_FOUND
+        : ErrorCode.INVALID_ARGUMENT;
+      return toolErrorResult(id, TOOL_DOWNLOAD_FILLED, errorCode, outcome.error);
     }
 
-    const token = createDownloadToken('closing-checklist', parsed.data);
-    const downloadUrl = `${_baseUrl}/api/download?token=${token}`;
-
-    const d = parsed.data;
-    const summary = [
-      `Created closing checklist for "${d.deal_name}".`,
-      `Working group: ${d.working_group.length} members | Documents: ${d.documents.length} | Action items: ${d.action_items.length} | Open issues: ${d.open_issues.length}`,
-      '',
-      `Download your DOCX: ${downloadUrl}`,
-      '(Link expires in 1 hour)',
-    ].join('\n');
-
-    return jsonRpcResult(id, {
-      content: [{ type: 'text', text: summary }],
+    return toolSuccessResult(id, TOOL_DOWNLOAD_FILLED, {
+      content_type: DOCX_MIME,
+      docx_base64: outcome.base64,
+      metadata: outcome.metadata,
+      token_expires_at: new Date(payload.e).toISOString(),
     });
   }
 
-  return jsonRpcResult(id, {
-    content: [{ type: 'text', text: `Unknown tool: "${name}". Available: list_templates, fill_template, create_closing_checklist.` }],
-    isError: true,
-  });
+  return toolErrorResult(
+    id,
+    name || 'tools/call',
+    ErrorCode.INVALID_ARGUMENT,
+    `Unknown tool: "${name}"`,
+    { details: { available_tools: TOOLS.map((tool) => tool.name) } },
+  );
 }
 
 // ---------------------------------------------------------------------------
@@ -328,19 +609,30 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>) {
 // ---------------------------------------------------------------------------
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
-  // CORS for browser-based MCP clients
+  // CORS for browser-based MCP clients.
   res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Mcp-Session-Id');
   res.setHeader('Access-Control-Expose-Headers', 'Mcp-Session-Id');
 
   if (req.method === 'OPTIONS') return res.status(204).end();
 
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Only POST requests are accepted' });
+  if (req.method === 'GET') {
+    const acceptHeader = req.headers['accept'];
+    const accept = Array.isArray(acceptHeader) ? acceptHeader.join(',') : (acceptHeader ?? '');
+    if (accept.includes('text/html')) {
+      res.setHeader('Content-Type', 'text/html; charset=utf-8');
+      res.setHeader('Cache-Control', 'no-store');
+      return res.status(200).send(mcpGetHtmlPage());
+    }
+    return res.status(405).json({ error: 'Only POST requests are accepted for MCP clients' });
   }
 
-  // Capture base URL from request for building download links
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Only POST requests are accepted for MCP clients' });
+  }
+
+  // Capture base URL from request for building download links.
   const proto = req.headers['x-forwarded-proto'] ?? 'https';
   const host = req.headers['x-forwarded-host'] ?? req.headers['host'] ?? 'openagreements.ai';
   _baseUrl = `${proto}://${host}`;
@@ -351,7 +643,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(400).json(jsonRpcError(body?.id, -32600, 'Invalid JSON-RPC 2.0 request'));
   }
 
-  // Notifications (no id) — acknowledge without response body
+  // Notifications (no id) — acknowledge without response body.
   if (body.id === undefined || body.id === null) {
     return res.status(202).end();
   }
@@ -365,6 +657,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       case 'tools/list':
         return res.status(200).json(handleToolsList(body.id));
       case 'tools/call':
+        // NOTE: Auth middleware would intercept protected routes before this point.
         return res.status(200).json(await handleToolsCall(body.id, params));
       case 'ping':
         return res.status(200).json(jsonRpcResult(body.id, {}));
