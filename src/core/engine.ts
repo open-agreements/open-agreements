@@ -8,7 +8,7 @@ import { BLANK_PLACEHOLDER, verifyTemplateFill } from './fill-utils.js';
 
 export interface FillOptions {
   templateDir: string;
-  values: Record<string, string | boolean>;
+  values: Record<string, unknown>;
   outputPath: string;
 }
 
@@ -26,7 +26,7 @@ export interface FillResult {
  * This is template-specific logic — only activates when metadata declares
  * the relevant display field names.
  */
-function computeDisplayFields(data: Record<string, string | boolean>, fieldNames: Set<string>): void {
+function computeDisplayFields(data: Record<string, unknown>, fieldNames: Set<string>): void {
   const str = (key: string): string => String(data[key] ?? '');
   const bool = (key: string): boolean => data[key] === true;
   const isBlankPlaceholder = (value: unknown): boolean =>

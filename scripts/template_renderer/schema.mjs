@@ -108,6 +108,10 @@ export const styleProfileSchema = z.object({
     signature_two_party: z.array(z.number().int().positive()).length(4),
     signature_one_party: z.array(z.number().int().positive()).length(2),
     section_header: z.array(z.number().int().positive()).length(2),
+    checklist_working_group: z.array(z.number().int().positive()).length(4).optional(),
+    checklist_documents: z.array(z.number().int().positive()).length(2).optional(),
+    checklist_action_items: z.array(z.number().int().positive()).length(5).optional(),
+    checklist_open_issues: z.array(z.number().int().positive()).length(5).optional(),
   }),
   spacing: z.object({
     line: z.number().int().positive(),
@@ -124,6 +128,7 @@ export const styleProfileSchema = z.object({
     table_rule: z.number().int().positive(),
     cover_row_height: z.number().int().positive(),
     signature_row_height: z.number().int().positive(),
+    checklist_row_height: z.number().int().positive().optional(),
   }),
 });
 

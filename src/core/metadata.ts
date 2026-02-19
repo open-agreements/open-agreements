@@ -8,7 +8,7 @@ export type License = z.infer<typeof LicenseEnum>;
 
 export const FieldDefinitionSchema = z.object({
   name: z.string(),
-  type: z.enum(['string', 'date', 'number', 'boolean', 'enum']),
+  type: z.enum(['string', 'date', 'number', 'boolean', 'enum', 'array']),
   description: z.string(),
   default: z.string().optional(),
   options: z.array(z.string()).optional(),

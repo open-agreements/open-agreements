@@ -22,7 +22,7 @@ import type { VerifyResult } from './recipe/types.js';
 export interface PipelineOptions {
   inputPath: string;                    // Source .docx
   outputPath: string;                   // Final output .docx
-  values: Record<string, string | boolean>;
+  values: Record<string, unknown>;
   fields: FieldDefinition[];
   requiredFieldNames?: string[];
 
@@ -37,7 +37,7 @@ export interface PipelineOptions {
 
   // prepareFillData options
   coerceBooleans?: boolean;             // default: false
-  computeDisplayFields?: (data: Record<string, string | boolean>) => void;
+  computeDisplayFields?: (data: Record<string, unknown>) => void;
 
   // fillDocx options
   fixSmartQuotes?: boolean;             // default: false
