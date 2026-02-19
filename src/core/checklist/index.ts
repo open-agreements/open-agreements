@@ -1,4 +1,4 @@
-import { ClosingChecklistSchema, type ClosingChecklist } from './schemas.js';
+import { ClosingChecklistSchema } from './schemas.js';
 
 export { ClosingChecklistSchema, type ClosingChecklist } from './schemas.js';
 

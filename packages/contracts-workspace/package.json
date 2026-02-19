@@ -32,6 +32,6 @@
   "dependencies": {
     "commander": "^13.1.0",
     "js-yaml": "^4.1.0",
-    "zod": "^3.24.0"
+    "zod": "^4.0.0"
   }
 }
