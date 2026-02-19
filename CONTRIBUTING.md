@@ -2,6 +2,8 @@
 
 Thanks for your interest in contributing! OpenAgreements is an open-source tool for filling standard legal agreement templates. Contributions of new templates, recipe improvements, bug fixes, and documentation are welcome.
 
+Please follow our [Code of Conduct](CODE_OF_CONDUCT.md) in all project spaces.
+
 ## Ways to Contribute
 
 ### Add a Template

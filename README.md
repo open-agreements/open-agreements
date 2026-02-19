@@ -259,6 +259,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for how to add templates, recipes, and ot
 - [Adding templates](docs/adding-templates.md) (CC BY 4.0 / CC0 sources)
 - [Adding recipes](docs/adding-recipes.md) (non-redistributable sources)
 - [Employment source policy](docs/employment-source-policy.md) (trust and terms classifications)
+- [Code of Conduct](CODE_OF_CONDUCT.md) (community expectations and enforcement)
 
 ## Releasing
 
