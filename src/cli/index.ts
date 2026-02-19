@@ -7,6 +7,7 @@ import { runValidate } from '../commands/validate.js';
 import { runList } from '../commands/list.js';
 import { runRecipeCommand, runRecipeClean, runRecipePatch } from '../commands/recipe.js';
 import { runScan } from '../commands/scan.js';
+import { runChecklistCreate, runChecklistRender } from '../commands/checklist.js';
 import { type MemoFormat } from '../core/employment/memo.js';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -147,6 +148,31 @@ export function createProgram(): Command {
     .action((input: string, opts: { outputReplacements?: string }) => {
       runScan({ input, outputReplacements: opts.outputReplacements });
     });
+
+  // --- Checklist command ---
+
+  const checklistCmd = new Command('checklist');
+  checklistCmd.description('Work with closing checklists');
+
+  checklistCmd
+    .command('create')
+    .description('Create a closing checklist DOCX from JSON data')
+    .requiredOption('-d, --data <json-file>', 'JSON file with checklist data')
+    .option('-o, --output <path>', 'Output file path (default: closing-checklist.docx)')
+    .action(async (opts: { data: string; output?: string }) => {
+      await runChecklistCreate({ data: opts.data, output: opts.output });
+    });
+
+  checklistCmd
+    .command('render')
+    .description('Render a closing checklist as Markdown from JSON data')
+    .requiredOption('-d, --data <json-file>', 'JSON file with checklist data')
+    .option('-o, --output <path>', 'Output Markdown file path (prints to stdout if omitted)')
+    .action(async (opts: { data: string; output?: string }) => {
+      await runChecklistRender({ data: opts.data, output: opts.output });
+    });
+
+  program.addCommand(checklistCmd);
 
   return program;
 }

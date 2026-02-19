@@ -64,9 +64,9 @@ export function detectCurrencyFields(docxBuffer: Buffer): Set<string> {
  * the template buffer directly instead of requiring a replacements map.
  */
 export function sanitizeCurrencyValuesFromDocx(
-  values: Record<string, string | boolean>,
+  values: Record<string, unknown>,
   docxBuffer: Buffer
-): Record<string, string | boolean> {
+): Record<string, unknown> {
   const currencyFields = detectCurrencyFields(docxBuffer);
   if (currencyFields.size === 0) return values;
 

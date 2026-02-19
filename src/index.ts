@@ -64,6 +64,34 @@ export {
   type VerifyCheck,
 } from './core/recipe/index.js';
 
+// Closing checklist
+export {
+  renderChecklistMarkdown,
+  ClosingChecklistSchema,
+  type ClosingChecklist,
+} from './core/checklist/index.js';
+
+export {
+  ChecklistItemStatusEnum,
+  IssueStatusEnum,
+  EscalationTierEnum,
+  DocumentStatusEnum,
+  ResponsibilitySchema,
+  WorkingGroupMemberSchema,
+  DealDocumentSchema,
+  ActionItemSchema,
+  OpenIssueSchema,
+  type ChecklistItemStatus,
+  type IssueStatus,
+  type EscalationTier,
+  type DocumentStatus,
+  type Responsibility,
+  type WorkingGroupMember,
+  type DealDocument,
+  type ActionItem,
+  type OpenIssue,
+} from './core/checklist/schemas.js';
+
 // Command generation
 export type { ToolCommandAdapter } from './core/command-generation/types.js';
 export { ClaudeCodeAdapter } from './core/command-generation/adapters/claude.js';

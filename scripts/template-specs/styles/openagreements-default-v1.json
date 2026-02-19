@@ -36,7 +36,11 @@
     "cover_terms": [3420, 6650],
     "signature_two_party": [2605, 3600, 250, 3620],
     "signature_one_party": [2605, 7465],
-    "section_header": [7900, 2170]
+    "section_header": [7900, 2170],
+    "checklist_working_group": [2800, 2800, 2200, 2270],
+    "checklist_documents": [6700, 3370],
+    "checklist_action_items": [800, 3600, 1800, 2070, 1800],
+    "checklist_open_issues": [1500, 2600, 1500, 1500, 2970]
   },
   "spacing": {
     "line": 340,
@@ -52,6 +56,7 @@
     "header_accent_rule": 14,
     "table_rule": 4,
     "cover_row_height": 700,
-    "signature_row_height": 690
+    "signature_row_height": 690,
+    "checklist_row_height": 500
   }
 }
