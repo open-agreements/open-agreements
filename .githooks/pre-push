@@ -1,0 +1,21 @@
+#!/usr/bin/env sh
+set -eu
+
+ROOT="$(git rev-parse --show-toplevel)"
+cd "$ROOT"
+
+# Skip with SKIP_PRE_PUSH=1 git push when needed
+if [ "${SKIP_PRE_PUSH:-0}" = "1" ]; then
+  exit 0
+fi
+
+echo "pre-push: building…"
+npm run build --silent
+
+echo "pre-push: validating templates…"
+node bin/open-agreements.js validate
+
+echo "pre-push: running tests…"
+npx vitest run --reporter=dot
+
+echo "pre-push: all checks passed"
