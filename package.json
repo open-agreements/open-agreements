@@ -39,6 +39,7 @@
     "dev": "tsc --watch",
     "check:spec-coverage": "node scripts/validate_openspec_coverage.mjs",
     "check:source-drift": "npm run build && node scripts/source_drift_canary.mjs",
+    "generate:schemas": "node scripts/generate_json_schemas.mjs",
     "generate:employment-templates": "node scripts/generate_employment_templates.mjs",
     "generate:employment-templates:libreoffice": "node scripts/generate_employment_templates_libreoffice.mjs",
     "render:docx-pages": "node scripts/render_docx_pages.mjs",
@@ -103,7 +104,8 @@
     "tailwindcss": "^3.4.0",
     "typescript": "^5.7.0",
     "typescript-eslint": "^8.54.0",
-    "vitest": "^3.0.0"
+    "vitest": "^3.0.0",
+    "zod-to-json-schema": "^3.25.1"
   },
   "engines": {
     "node": ">=20"

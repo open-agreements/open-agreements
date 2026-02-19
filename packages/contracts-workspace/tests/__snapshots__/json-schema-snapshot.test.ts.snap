@@ -1,0 +1,257 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`JSON Schema generation from Zod > full schema snapshots > ConventionConfigSchema snapshot 1`] = `
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "properties": {
+    "cross_references": {
+      "additionalProperties": false,
+      "properties": {
+        "mechanism": {
+          "type": "string",
+        },
+        "policy": {
+          "type": "string",
+        },
+      },
+      "required": [
+        "policy",
+        "mechanism",
+      ],
+      "type": "object",
+    },
+    "documentation": {
+      "additionalProperties": false,
+      "properties": {
+        "folder_file": {
+          "minLength": 1,
+          "type": "string",
+        },
+        "root_file": {
+          "minLength": 1,
+          "type": "string",
+        },
+      },
+      "required": [
+        "root_file",
+        "folder_file",
+      ],
+      "type": "object",
+    },
+    "executed_marker": {
+      "additionalProperties": false,
+      "properties": {
+        "location": {
+          "enum": [
+            "before_extension",
+            "in_parentheses",
+            "custom",
+          ],
+          "type": "string",
+        },
+        "partially_executed_marker": {
+          "additionalProperties": false,
+          "properties": {
+            "location": {
+              "enum": [
+                "before_extension",
+                "in_parentheses",
+                "custom",
+              ],
+              "type": "string",
+            },
+            "pattern": {
+              "minLength": 1,
+              "type": "string",
+            },
+          },
+          "required": [
+            "pattern",
+            "location",
+          ],
+          "type": "object",
+        },
+        "pattern": {
+          "minLength": 1,
+          "type": "string",
+        },
+      },
+      "required": [
+        "pattern",
+        "location",
+      ],
+      "type": "object",
+    },
+    "lifecycle": {
+      "additionalProperties": false,
+      "properties": {
+        "applicable_domains": {
+          "items": {
+            "type": "string",
+          },
+          "type": "array",
+        },
+        "asset_domains": {
+          "items": {
+            "type": "string",
+          },
+          "type": "array",
+        },
+        "folders": {
+          "additionalProperties": {
+            "type": "string",
+          },
+          "type": "object",
+        },
+      },
+      "required": [
+        "folders",
+        "applicable_domains",
+        "asset_domains",
+      ],
+      "type": "object",
+    },
+    "naming": {
+      "additionalProperties": false,
+      "properties": {
+        "date_format": {
+          "minLength": 1,
+          "type": "string",
+        },
+        "separator": {
+          "type": "string",
+        },
+        "style": {
+          "minLength": 1,
+          "type": "string",
+        },
+      },
+      "required": [
+        "style",
+        "separator",
+        "date_format",
+      ],
+      "type": "object",
+    },
+    "schema_version": {
+      "const": 1,
+      "type": "number",
+    },
+  },
+  "required": [
+    "schema_version",
+    "executed_marker",
+    "naming",
+    "lifecycle",
+    "cross_references",
+    "documentation",
+  ],
+  "type": "object",
+}
+`;
+
+exports[`JSON Schema generation from Zod > full schema snapshots > FormsCatalogSchema snapshot 1`] = `
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "additionalProperties": false,
+  "properties": {
+    "entries": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "checksum": {
+            "additionalProperties": false,
+            "properties": {
+              "sha256": {
+                "pattern": "^[a-fA-F0-9]{64}$",
+                "type": "string",
+              },
+            },
+            "required": [
+              "sha256",
+            ],
+            "type": "object",
+          },
+          "destination_filename": {
+            "minLength": 1,
+            "type": "string",
+          },
+          "destination_lifecycle": {
+            "enum": [
+              "forms",
+              "drafts",
+              "incoming",
+              "executed",
+              "archive",
+            ],
+            "type": "string",
+          },
+          "destination_topic": {
+            "minLength": 1,
+            "type": "string",
+          },
+          "id": {
+            "minLength": 1,
+            "type": "string",
+          },
+          "license": {
+            "additionalProperties": false,
+            "properties": {
+              "redistribution": {
+                "enum": [
+                  "allowed-unmodified",
+                  "pointer-only",
+                ],
+                "type": "string",
+              },
+              "type": {
+                "minLength": 1,
+                "type": "string",
+              },
+            },
+            "required": [
+              "type",
+              "redistribution",
+            ],
+            "type": "object",
+          },
+          "name": {
+            "minLength": 1,
+            "type": "string",
+          },
+          "notes": {
+            "type": "string",
+          },
+          "source_url": {
+            "format": "uri",
+            "type": "string",
+          },
+        },
+        "required": [
+          "id",
+          "name",
+          "source_url",
+          "checksum",
+          "license",
+        ],
+        "type": "object",
+      },
+      "type": "array",
+    },
+    "generated_at": {
+      "format": "date-time",
+      "type": "string",
+    },
+    "schema_version": {
+      "const": 1,
+      "type": "number",
+    },
+  },
+  "required": [
+    "schema_version",
+    "entries",
+  ],
+  "type": "object",
+}
+`;

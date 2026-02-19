@@ -1,7 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
-  "installCommand": "npm install && npm run build && npm run build:site",
+  "installCommand": "npm install && npm run build:workspace && npm run generate:schemas && npm run build:site",
   "buildCommand": "echo 'Static site ready'",
   "outputDirectory": "_site",
   "cleanUrls": true,

@@ -17,6 +17,7 @@
   "files": [
     "dist/",
     "bin/",
+    "schemas/",
     "README.md"
   ],
   "scripts": {

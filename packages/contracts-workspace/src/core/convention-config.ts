@@ -6,7 +6,7 @@ import type { ConventionConfig } from './types.js';
 
 const CONVENTIONS_PATH = `${INTERNAL_DIR}/conventions.yaml`;
 
-const ConventionConfigSchema = z.object({
+export const ConventionConfigSchema = z.object({
   schema_version: z.literal(1),
   executed_marker: z.object({
     pattern: z.string().min(1),
