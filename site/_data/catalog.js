@@ -64,6 +64,13 @@ const CATEGORIES = [
       "NVCA model documents for Series A and later rounds.",
     match: (id) => id.startsWith("nvca-"),
   },
+  {
+    slug: "other",
+    label: "Other",
+    description: "Additional templates that do not map to the primary categories.",
+    // Catch-all bucket populated via fallback category assignment.
+    match: () => false,
+  },
 ];
 
 const LICENSE_FLAGS = {
