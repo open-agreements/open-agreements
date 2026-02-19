@@ -345,8 +345,8 @@ describe('MCP endpoint — api/mcp.ts', () => {
     await allureJsonAttachment('mcp-tools-list.json', res.body);
 
     const tools = (res.body as any).result.tools;
-    expect(tools).toHaveLength(2);
-    expect(tools.map((t: any) => t.name).sort()).toEqual(['fill_template', 'list_templates']);
+    expect(tools).toHaveLength(3);
+    expect(tools.map((t: any) => t.name).sort()).toEqual(['create_closing_checklist', 'fill_template', 'list_templates']);
   });
 
   it('handles tools/call list_templates', async () => {
@@ -415,7 +415,7 @@ describe('MCP endpoint — api/mcp.ts', () => {
 
     const result = (res.body as any).result;
     expect(result.isError).toBe(true);
-    expect(result.content[0].text.toLowerCase()).toContain('required');
+    expect(result.content[0].text.toLowerCase()).toMatch(/required|expected string/i);
   });
 
   it('returns error for fill_template when handleFill fails', async () => {

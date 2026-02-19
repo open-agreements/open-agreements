@@ -2,7 +2,7 @@
 
 exports[`JSON Schema generation from Zod > full schema snapshots > ConventionConfigSchema snapshot 1`] = `
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
   "properties": {
     "cross_references": {
@@ -19,6 +19,23 @@ exports[`JSON Schema generation from Zod > full schema snapshots > ConventionCon
         "policy",
         "mechanism",
       ],
+      "type": "object",
+    },
+    "disallowed_file_types": {
+      "additionalProperties": {
+        "items": {
+          "type": "string",
+        },
+        "type": "array",
+      },
+      "default": {
+        "forms": [
+          "pdf",
+        ],
+      },
+      "propertyNames": {
+        "type": "string",
+      },
       "type": "object",
     },
     "documentation": {
@@ -102,6 +119,9 @@ exports[`JSON Schema generation from Zod > full schema snapshots > ConventionCon
           "additionalProperties": {
             "type": "string",
           },
+          "propertyNames": {
+            "type": "string",
+          },
           "type": "object",
         },
       },
@@ -144,6 +164,7 @@ exports[`JSON Schema generation from Zod > full schema snapshots > ConventionCon
     "executed_marker",
     "naming",
     "lifecycle",
+    "disallowed_file_types",
     "cross_references",
     "documentation",
   ],
@@ -153,7 +174,7 @@ exports[`JSON Schema generation from Zod > full schema snapshots > ConventionCon
 
 exports[`JSON Schema generation from Zod > full schema snapshots > FormsCatalogSchema snapshot 1`] = `
 {
-  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
   "properties": {
     "entries": {
@@ -241,6 +262,7 @@ exports[`JSON Schema generation from Zod > full schema snapshots > FormsCatalogS
     },
     "generated_at": {
       "format": "date-time",
+      "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))T(?:(?:[01]\\d|2[0-3]):[0-5]\\d(?::[0-5]\\d(?:\\.\\d+)?)?(?:Z))$",
       "type": "string",
     },
     "schema_version": {
