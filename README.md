@@ -5,8 +5,10 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Agent Skill](https://img.shields.io/badge/agent--skill-open--agreements-purple)](https://skills.sh)
 [![CI](https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml/badge.svg)](https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml)
+[![Live MCP Status](https://openagreements.openstatus.dev/badge/v2?variant=outline)](https://openagreements.openstatus.dev/)
 [![Validate Templates](https://github.com/open-agreements/open-agreements/actions/workflows/validate.yml/badge.svg)](https://github.com/open-agreements/open-agreements/actions/workflows/validate.yml)
 [![codecov](https://codecov.io/gh/open-agreements/open-agreements/graph/badge.svg)](https://codecov.io/gh/open-agreements/open-agreements)
+[![GitHub stargazers](https://img.shields.io/github/stars/open-agreements/open-agreements?style=social)](https://github.com/open-agreements/open-agreements/stargazers)
 [![Tests: Vitest](https://img.shields.io/badge/tests-vitest-6E9F18)](https://vitest.dev/)
 [![OpenSpec Traceability](https://img.shields.io/badge/openspec-traceability%20gate-brightgreen)](./scripts/validate_openspec_coverage.mjs)
 
@@ -23,6 +25,7 @@ Built by the team behind [UseJunior.com](https://usejunior.com) — in productio
 ## Quality and Trust Signals
 
 - CI runs on pull requests and pushes to `main`.
+- Live service health is published via OpenStatus at `openagreements.openstatus.dev`.
 - Coverage is published to Codecov with repository-defined patch/project gates in `codecov.yml`.
 - The active JS test framework is Vitest, with JUnit test results uploaded for Codecov test analytics.
 - OpenSpec scenario traceability is enforced via `npm run check:spec-coverage`. For a local matrix export, run `npm run check:spec-coverage -- --write-matrix integration-tests/OPENSPEC_TRACEABILITY.md`.
