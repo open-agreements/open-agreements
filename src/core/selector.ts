@@ -164,7 +164,7 @@ function setChecked(para: any, type: 'radio' | 'checkbox'): void {
 }
 
 /** Evaluate a trigger against fill data. */
-function triggerFires(trigger: Trigger, data: Record<string, string | boolean>): boolean {
+function triggerFires(trigger: Trigger, data: Record<string, unknown>): boolean {
   if (trigger === 'default') return false; // default never "fires" — it's the fallback
 
   if ('equals' in trigger) {
@@ -196,7 +196,7 @@ export async function applySelections(
   inputPath: string,
   outputPath: string,
   config: SelectionsConfig,
-  data: Record<string, string | boolean>,
+  data: Record<string, unknown>,
 ): Promise<void> {
   const inputBuf = readFileSync(inputPath);
   const zip = new AdmZip(inputBuf);
@@ -246,7 +246,7 @@ interface OptionMatch {
 function processGroup(
   doc: any,
   group: z.infer<typeof GroupSchema>,
-  data: Record<string, string | boolean>,
+  data: Record<string, unknown>,
 ): boolean {
   // Step 1: Find paragraphs matching each option's marker
   const allParagraphs = doc.getElementsByTagNameNS(W_NS, 'p');

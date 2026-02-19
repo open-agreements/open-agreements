@@ -15,7 +15,7 @@ const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 
 export interface PrepareFillDataOptions {
   /** User-provided values. */
-  values: Record<string, string | boolean>;
+  values: Record<string, unknown>;
 
   /** Field definitions from metadata. */
   fields: FieldDefinition[];
@@ -37,7 +37,7 @@ export interface PrepareFillDataOptions {
    * Optional callback for computing display fields (template-specific).
    * Called after defaults and boolean coercion are applied.
    */
-  computeDisplayFields?: (data: Record<string, string | boolean>) => void;
+  computeDisplayFields?: (data: Record<string, unknown>) => void;
 }
 
 export interface FillDocxOptions {
@@ -45,7 +45,7 @@ export interface FillDocxOptions {
   templateBuffer: Buffer;
 
   /** Prepared fill data from prepareFillData(). */
-  data: Record<string, string | boolean>;
+  data: Record<string, unknown>;
 
   /** Apply docx-templates smart quote normalization. */
   fixSmartQuotes?: boolean;
@@ -72,7 +72,7 @@ const DEFAULT_STRIP_PATTERNS = [/\bDrafting note\b/i];
  * 3. Coerce boolean fields (optional)
  * 4. Compute display fields (optional, template-specific)
  */
-export function prepareFillData(options: PrepareFillDataOptions): Record<string, string | boolean> {
+export function prepareFillData(options: PrepareFillDataOptions): Record<string, unknown> {
   const {
     values,
     fields,
@@ -84,10 +84,15 @@ export function prepareFillData(options: PrepareFillDataOptions): Record<string,
 
   // Apply defaults for fields not provided
   const defaultValue = useBlankPlaceholder ? BLANK_PLACEHOLDER : '';
-  const data: Record<string, string | boolean> = { ...values };
+  const data: Record<string, unknown> = { ...values };
   for (const field of fields) {
     if (!(field.name in data)) {
-      data[field.name] = field.default ?? defaultValue;
+      // Array fields default to empty array, not blank placeholder
+      if (field.type === 'array') {
+        data[field.name] = [];
+      } else {
+        data[field.name] = field.default ?? defaultValue;
+      }
     }
   }
 

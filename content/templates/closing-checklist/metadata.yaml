@@ -1,0 +1,36 @@
+name: Closing Checklist
+description: >-
+  A deal closing checklist tracking working group members, document statuses,
+  action items, and open issues. Accepts structured JSON input and renders
+  a formatted DOCX for distribution to deal participants.
+source_url: https://github.com/open-agreements/open-agreements
+version: '1.0'
+license: CC0-1.0
+allow_derivatives: true
+attribution_text: >-
+  OpenAgreements Closing Checklist. Licensed under CC0 1.0.
+fields:
+  - name: deal_name
+    type: string
+    description: Name of the deal or transaction
+  - name: created_at
+    type: string
+    description: ISO date when the checklist was first created
+  - name: updated_at
+    type: string
+    description: ISO date when the checklist was last updated
+  - name: working_group
+    type: array
+    description: Array of working group members (name, email, organization, role)
+  - name: documents
+    type: array
+    description: Array of deal documents (document_name, status)
+  - name: action_items
+    type: array
+    description: Array of action items (item_id, description, status, assigned_to, due_date)
+  - name: open_issues
+    type: array
+    description: Array of open issues (issue_id, title, status, escalation_tier, positions)
+required_fields:
+  - deal_name
+  - updated_at
