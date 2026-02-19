@@ -126,13 +126,15 @@ describe('employment template standard-terms spacing', () => {
         checkedParagraphs += 1;
         const expectedBefore = isClauseHeadingParagraph(text) ? '320' : '0';
         const expectedAfter = isClauseHeadingParagraph(text) ? '120' : '280';
+        // In OOXML, explicit "false" is semantically equivalent to absent (null)
+        const isSet = (v: string | null) => v !== null && v !== 'false';
         if (
           spacing.before !== expectedBefore
           || spacing.after !== expectedAfter
           || spacing.line !== '340'
-          || spacing.afterAutospacing !== null
-          || spacing.beforeAutospacing !== null
-          || spacing.contextualSpacing !== null
+          || isSet(spacing.afterAutospacing)
+          || isSet(spacing.beforeAutospacing)
+          || isSet(spacing.contextualSpacing)
         ) {
           spacingFailures.push(
             `expectedBefore=${expectedBefore} before=${spacing.before ?? 'missing'} expectedAfter=${expectedAfter} `
