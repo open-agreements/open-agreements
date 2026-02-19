@@ -275,7 +275,7 @@ async function method3AstToDocx(statuses) {
 }
 
 async function method4TemplateFill(statuses) {
-  const templatePath = resolve(ROOT, 'templates/openagreements-employment-offer-letter/template.docx');
+  const templatePath = resolve(ROOT, 'content/templates/openagreements-employment-offer-letter/template.docx');
   const outputPath = resolve(OUT_DIR, '04-docx-template-fill.docx');
   const replacements = {
     employer_name: 'OpenAgreements, Inc.',
@@ -551,7 +551,7 @@ async function main() {
     run('01 Pandoc md->docx + reference.docx', 'pandoc', [
       INPUT_MD,
       '--reference-doc',
-      resolve(ROOT, 'templates/openagreements-employment-offer-letter/template.docx'),
+      resolve(ROOT, 'content/templates/openagreements-employment-offer-letter/template.docx'),
       '-o',
       resolve(OUT_DIR, '01-pandoc-reference.docx'),
     ])

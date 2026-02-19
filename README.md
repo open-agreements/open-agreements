@@ -8,9 +8,9 @@
 [![Validate Templates](https://github.com/open-agreements/open-agreements/actions/workflows/validate.yml/badge.svg)](https://github.com/open-agreements/open-agreements/actions/workflows/validate.yml)
 [![codecov](https://codecov.io/gh/open-agreements/open-agreements/graph/badge.svg)](https://codecov.io/gh/open-agreements/open-agreements)
 [![Tests: Vitest](https://img.shields.io/badge/tests-vitest-6E9F18)](https://vitest.dev/)
-[![OpenSpec Traceability](https://img.shields.io/badge/openspec-traceability%20gate-brightgreen)](./tests/OPENSPEC_TRACEABILITY.md)
+[![OpenSpec Traceability](https://img.shields.io/badge/openspec-traceability%20gate-brightgreen)](./scripts/validate_openspec_coverage.mjs)
 
-Fill standard legal agreement templates and produce signable DOCX files. 28 templates covering NDAs, cloud terms, employment docs, contractor agreements, SAFEs, and NVCA financing documents.
+Fill standard legal agreement templates and produce signable DOCX files. Templates cover NDAs, cloud terms, employment docs, contractor agreements, SAFEs, and NVCA financing documents.
 
 Built by the team behind [UseJunior.com](https://usejunior.com) — in production at Am Law 100 firms.
 
@@ -25,9 +25,10 @@ Built by the team behind [UseJunior.com](https://usejunior.com) — in productio
 - CI runs on pull requests and pushes to `main`.
 - Coverage is published to Codecov with repository-defined patch/project gates in `codecov.yml`.
 - The active JS test framework is Vitest, with JUnit test results uploaded for Codecov test analytics.
-- OpenSpec scenario traceability is enforced via `npm run check:spec-coverage`, with matrix output in `tests/OPENSPEC_TRACEABILITY.md`.
+- OpenSpec scenario traceability is enforced via `npm run check:spec-coverage`. For a local matrix export, run `npm run check:spec-coverage -- --write-matrix integration-tests/OPENSPEC_TRACEABILITY.md`.
 - Recipe source drift canary (`npm run check:source-drift`) verifies expected source hash plus structural replacement/normalize anchors.
-- Assumption-level regressions are tracked in `docs/assumptions.md` with executable mapping in `tests/ASSUMPTION_TEST_MATRIX.md`.
+- Assumption-level regressions are tracked in `docs/assumptions.md` and validated via targeted regression tests + CI gates.
+- LibreOffice-powered DOCX visual rendering uses a pinned build config on macOS (`config/libreoffice-headless.json`); run `npm run check:libreoffice` before visual Allure evidence tests.
 - Maintainer: [Steven Obiajulu](https://www.linkedin.com/in/steven-obiajulu/) (MIT-trained mechanical engineer; Harvard Law trained lawyer).
 
 ## How It Works
@@ -96,7 +97,7 @@ open-agreements fill common-paper-mutual-nda -d values.json -o my-nda.docx
 
 ### What Happens
 
-1. Claude runs `list --json` to discover 28 templates and their fields
+1. Claude runs `list --json` to discover available templates and their fields
 2. Claude interviews you for field values (grouped by section, up to 4 questions per round)
 3. Claude runs `fill <template>` to render a DOCX preserving all original formatting
 4. You review and sign the output document
@@ -134,7 +135,7 @@ This produces a `guidance.json` with every removed footnote, comment, and drafti
 Each template is a self-contained directory:
 
 ```
-templates/<name>/
+content/templates/<name>/
 ├── template.docx     # DOCX with {tag} placeholders
 ├── metadata.yaml     # Fields, license, source, attribution
 └── README.md         # Template-specific documentation
@@ -213,17 +214,19 @@ node packages/contracts-workspace-mcp/bin/open-agreements-workspace-mcp.js
 
 ## Website (Vercel)
 
-A basic landing page is included under `site/` for Vercel deployment.
+A static marketing site is generated from `site/` with Eleventy.
 
-- Entry point: `site/index.html`
+- Entry points: `site/index.njk`, `site/templates.njk`, `site/template-detail.njk`
 - Styles: `site/styles.css`
 - Demo media: `site/assets/demo-fill-nda.gif`
 - Deployment config: `vercel.json`
+- Discovery outputs (generated during `npm run build:site`): `_site/llms.txt`, `_site/llms-full.txt`, `_site/sitemap.xml`, `_site/robots.txt`
 
 Local preview:
 
 ```bash
-python3 -m http.server 8080 --directory site
+npm run build:site
+python3 -m http.server 8080 --directory _site
 ```
 
 Then open `http://localhost:8080`.
@@ -232,7 +235,7 @@ Vercel deploy notes:
 
 - Import this repository in Vercel
 - Keep project root as repo root
-- The included `vercel.json` deploys `site/` as static output
+- The included `vercel.json` deploys `_site/` as static output
 
 ## Optional Content Roots (Future-Proofing)
 
@@ -240,7 +243,7 @@ To support logical unbundling as form libraries grow, `open-agreements` can load
 
 - env var: `OPEN_AGREEMENTS_CONTENT_ROOTS`
 - format: path-delimited list of absolute/relative directories (for example, `dirA:dirB` on macOS/Linux)
-- expected structure under each root: `templates/`, `external/`, and/or `recipes/`
+- expected structure under each root: `templates/`, `external/`, and/or `recipes/` (or nested under `content/`)
 
 Lookup precedence is:
 
@@ -280,19 +283,26 @@ Workflow guardrails:
 - **Skill Pattern**: Agent-agnostic `ToolCommandAdapter` interface
 
 ```
-src/
-├── cli/              # Commander.js CLI
-├── commands/         # fill, validate, list, recipe, scan
+content/                    # All content directories
+├── templates/              # Internal templates (CC BY 4.0)
+├── external/               # External templates (CC BY-ND 4.0)
+└── recipes/                # Recipes (downloaded at runtime)
+
+src/                        # TypeScript source + collocated unit tests
+├── cli/                    # Commander.js CLI
+├── commands/               # fill, validate, list, recipe, scan
 ├── core/
-│   ├── engine.ts     # docx-templates wrapper
-│   ├── metadata.ts   # Zod schemas + loader
-│   ├── recipe/       # Recipe pipeline (clean → patch → fill → verify)
-│   ├── external/     # External template support
-│   ├── validation/   # template, license, output, recipe
+│   ├── engine.ts           # docx-templates wrapper
+│   ├── metadata.ts         # Zod schemas + loader
+│   ├── recipe/             # Recipe pipeline (clean → patch → fill → verify)
+│   ├── external/           # External template support
+│   ├── validation/         # template, license, output, recipe
 │   └── command-generation/
-│       ├── types.ts  # ToolCommandAdapter interface
-│       └── adapters/ # Claude Code adapter
-└── index.ts          # Public API
+│       ├── types.ts        # ToolCommandAdapter interface
+│       └── adapters/       # Claude Code adapter
+└── index.ts                # Public API
+
+integration-tests/          # Integration and end-to-end tests
 ```
 
 ## Resources

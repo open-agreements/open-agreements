@@ -27,6 +27,7 @@ export default defineConfig({
         '**/__tests__/**',
         '**/dist/**',
         '**/bin/**',
+        'content/**',
         'scripts/**',
         'site/**',
         'openspec/**',

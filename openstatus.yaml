@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=https://www.openstatus.dev/schema.json
+
+openagreements-mcp:
+  name: "OpenAgreements MCP"
+  description: "MCP tool-serving endpoint"
+  frequency: "10m"
+  active: true
+  regions:
+    - iad
+    - ams
+  retry: 3
+  kind: http
+  request:
+    url: https://openagreements.ai/api/mcp
+    method: POST
+    headers:
+      Content-Type: application/json
+    body: |
+      {"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-03-26","capabilities":{},"clientInfo":{"name":"openstatus-monitor","version":"1.0.0"}}}
+  assertions:
+    - kind: statusCode
+      compare: eq
+      target: 200

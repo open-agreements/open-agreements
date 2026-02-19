@@ -2,7 +2,7 @@ import { mkdirSync, mkdtempSync, rmSync, utimesSync, writeFileSync } from 'node:
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { afterEach, describe, expect } from 'vitest';
-import { itAllure } from '../../../tests/helpers/allure-test.js';
+import { itAllure } from '../../../integration-tests/helpers/allure-test.js';
 import { INDEX_FILE } from '../src/core/constants.js';
 import { buildStatusIndex, collectWorkspaceDocuments, hasExecutedMarker, writeStatusIndex } from '../src/core/indexer.js';
 import { lintWorkspace } from '../src/core/lint.js';

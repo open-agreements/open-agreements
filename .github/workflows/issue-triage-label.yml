@@ -1,0 +1,34 @@
+name: Issue Triage Label
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  issues: write
+
+jobs:
+  add-need-triage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add status/need-triage label
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const label = "status/need-triage";
+            const issue_number = context.payload.issue.number;
+            const existing = context.payload.issue.labels.map((l) => l.name);
+
+            if (existing.includes(label)) {
+              core.info(`Issue #${issue_number} already has ${label}`);
+              return;
+            }
+
+            await github.rest.issues.addLabels({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number,
+              labels: [label],
+            });
+
+            core.info(`Added ${label} to issue #${issue_number}`);

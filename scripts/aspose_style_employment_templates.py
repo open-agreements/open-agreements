@@ -13,9 +13,9 @@ ROOT = Path(__file__).resolve().parents[1]
 JUNIOR_ROOT = Path("/Users/stevenobiajulu/Projects/junior-AI-email-bot")
 
 TARGETS = [
-    ROOT / "templates/openagreements-employment-offer-letter/template.docx",
-    ROOT / "templates/openagreements-employee-ip-inventions-assignment/template.docx",
-    ROOT / "templates/openagreements-employment-confidentiality-acknowledgement/template.docx",
+    ROOT / "content/templates/openagreements-employment-offer-letter/template.docx",
+    ROOT / "content/templates/openagreements-employee-ip-inventions-assignment/template.docx",
+    ROOT / "content/templates/openagreements-employment-confidentiality-acknowledgement/template.docx",
 ]
 
 CLAUSE_HEADING_RE = re.compile(r"^\d+\.\s.+\.$")

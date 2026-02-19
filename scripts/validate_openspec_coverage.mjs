@@ -10,8 +10,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const REPO_ROOT = path.resolve(__dirname, '..');
 const SPEC_ROOT = path.join(REPO_ROOT, 'openspec', 'specs');
-const DEFAULT_MATRIX_PATH = path.join(REPO_ROOT, 'tests', 'OPENSPEC_TRACEABILITY.md');
-const TEST_ROOTS = ['tests', 'test'];
+const DEFAULT_MATRIX_PATH = path.join(REPO_ROOT, 'integration-tests', 'OPENSPEC_TRACEABILITY.md');
+const TEST_ROOTS = ['integration-tests', 'src'];
 const TEST_FILE_PATTERN = /\.test\.(?:[cm]?ts|[cm]?js|tsx|jsx)$/;
 const SCENARIO_ID_PATTERN = /^[A-Za-z0-9][A-Za-z0-9._:-]*$/;
 
@@ -105,10 +105,11 @@ function parseScenariosFromSpec(content, specPathRel) {
   return { scenarios, errors };
 }
 
-function parseArgs() {
-  const args = process.argv.slice(2);
+export function parseArgs(argv = process.argv.slice(2), cwd = process.cwd()) {
+  const args = argv;
   const capabilities = [];
-  let writeMatrixPath = DEFAULT_MATRIX_PATH;
+  let writeMatrixRequested = false;
+  let writeMatrixPath = null;
   for (let index = 0; index < args.length; index += 1) {
     const arg = args[index];
     if (arg === '--capability') {
@@ -121,14 +122,18 @@ function parseArgs() {
       continue;
     }
     if (arg === '--write-matrix') {
+      writeMatrixRequested = true;
       const value = args[index + 1];
       if (value && !value.startsWith('--')) {
-        writeMatrixPath = path.resolve(process.cwd(), value);
+        writeMatrixPath = path.resolve(cwd, value);
         index += 1;
       }
       continue;
     }
     throw new Error(`Unknown argument: ${arg}`);
+  }
+  if (writeMatrixRequested && !writeMatrixPath) {
+    writeMatrixPath = DEFAULT_MATRIX_PATH;
   }
   return { capabilities, writeMatrixPath };
 }
@@ -473,8 +478,8 @@ function printSet(title, values) {
   }
 }
 
-async function main() {
-  const { capabilities: requestedCapabilities, writeMatrixPath } = parseArgs();
+export async function main(argv = process.argv.slice(2)) {
+  const { capabilities: requestedCapabilities, writeMatrixPath } = parseArgs(argv);
   const canonicalCapabilities = await listSpecCapabilities();
   const capabilitiesToValidate = requestedCapabilities.length > 0
     ? requestedCapabilities
@@ -585,12 +590,11 @@ async function main() {
     unknownScenarioIds,
     invalidBindings,
   });
-  const matrixChanged = await writeMatrixFile(writeMatrixPath, matrix);
-  console.log(`Wrote traceability matrix: ${path.relative(REPO_ROOT, writeMatrixPath)}`);
-
-  if (process.env.CI && matrixChanged) {
-    hasFailures = true;
-    console.error('Traceability matrix changed in CI. Commit updated matrix output.');
+  if (writeMatrixPath) {
+    await writeMatrixFile(writeMatrixPath, matrix);
+    console.log(`Wrote traceability matrix: ${path.relative(REPO_ROOT, writeMatrixPath)}`);
+  } else {
+    console.log('Traceability matrix not written (use --write-matrix [path] to export).');
   }
 
   if (hasFailures) {
@@ -598,4 +602,6 @@ async function main() {
   }
 }
 
-await main();
+if (process.argv[1] && path.resolve(process.argv[1]) === __filename) {
+  await main();
+}

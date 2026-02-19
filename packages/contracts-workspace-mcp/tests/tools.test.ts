@@ -2,7 +2,7 @@ import { mkdtempSync, mkdirSync, writeFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { describe, expect } from 'vitest';
-import { itAllure } from '../../../tests/helpers/allure-test.js';
+import { itAllure } from '../../../integration-tests/helpers/allure-test.js';
 import { callTool, listToolDescriptors } from '../src/core/tools.js';
 
 const it = itAllure.epic('Platform & Distribution');

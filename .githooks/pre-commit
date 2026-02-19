@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+set -eu
+
+ROOT="$(git rev-parse --show-toplevel)"
+cd "$ROOT"
+
+CHANGED_TEST_FILES="$(
+  git diff --cached --name-only --diff-filter=ACMR \
+    | grep -E '^(tests|test|packages/[^/]+/tests)/.*\.test\.ts$' \
+    || true
+)"
+
+if [ -z "$CHANGED_TEST_FILES" ]; then
+  exit 0
+fi
+
+npm run check:allure-labels -- $CHANGED_TEST_FILES
