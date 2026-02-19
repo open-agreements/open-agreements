@@ -759,22 +759,6 @@
   .shield-value {
     background: #6b7280;
   }
-
-  .status-value.is-checking {
-    background: #6b7280;
-  }
-
-  .status-value.is-good {
-    background: #238636;
-  }
-
-  .status-value.is-bad {
-    background: #cf222e;
-  }
-
-  .status-value.is-unknown {
-    background: #6b7280;
-  }
 }
 
 /* ─── Responsive ─── */
