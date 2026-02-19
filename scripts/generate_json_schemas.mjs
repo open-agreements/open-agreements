@@ -18,7 +18,7 @@
 import { writeFileSync, mkdirSync, copyFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { zodToJsonSchema } from 'zod-to-json-schema';
+import { z } from 'zod';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, '..');
@@ -70,8 +70,8 @@ mkdirSync(canonicalDir, { recursive: true });
 mkdirSync(siteDir, { recursive: true });
 
 for (const { name, schema, title, description } of schemas) {
-  const jsonSchema = zodToJsonSchema(schema, {
-    $refStrategy: 'none',
+  const jsonSchema = z.toJSONSchema(schema, {
+    reused: 'inline',
   });
 
   // Add standard JSON Schema metadata at the top level

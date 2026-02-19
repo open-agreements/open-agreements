@@ -30,7 +30,7 @@ export const CatalogEntrySchema = z.object({
 
 export const FormsCatalogSchema = z.object({
   schema_version: z.literal(1),
-  generated_at: z.string().datetime().optional(),
+  generated_at: z.iso.datetime().optional(),
   entries: z.array(CatalogEntrySchema),
 });
 
