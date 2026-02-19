@@ -8,7 +8,19 @@
  */
 
 import type { VercelRequest, VercelResponse } from '@vercel/node';
+import { z } from 'zod';
 import { handleFill, handleListTemplates, DOCX_MIME, createDownloadToken } from './_shared.js';
+
+// ---------------------------------------------------------------------------
+// Zod schemas for MCP tool argument validation
+// ---------------------------------------------------------------------------
+
+const FillTemplateArgsSchema = z.object({
+  template: z.string(),
+  values: z.record(z.unknown()).optional().default({}),
+});
+
+const ListTemplatesArgsSchema = z.object({});
 
 // Base URL for download links — derived from the incoming request at call time
 let _baseUrl = 'https://openagreements.ai';
@@ -40,12 +52,12 @@ const TOOLS = [
       properties: {
         template: {
           type: 'string',
-          description: 'Template ID, e.g. "common-paper-mutual-nda" or "yc-safe-valuation-cap"',
+          description: 'Template ID, e.g. "common-paper-mutual-nda" or "closing-checklist"',
         },
         values: {
           type: 'object',
-          description: 'Field values to fill in the template. Keys are field names, values are strings.',
-          additionalProperties: { type: 'string' },
+          description: 'Field values to fill in the template. Keys are field names; values are strings, booleans, or arrays depending on field type.',
+          additionalProperties: true,
         },
       },
       required: ['template'],
@@ -88,6 +100,14 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>) {
   const args = (params.arguments as Record<string, unknown>) ?? {};
 
   if (name === 'list_templates') {
+    const parsed = ListTemplatesArgsSchema.safeParse(args);
+    if (!parsed.success) {
+      return jsonRpcResult(id, {
+        content: [{ type: 'text', text: `Validation error: ${parsed.error.issues.map(i => i.message).join(', ')}` }],
+        isError: true,
+      });
+    }
+
     const { items } = handleListTemplates();
 
     // Build a concise human-readable summary with full field detail in JSON
@@ -105,15 +125,16 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>) {
   }
 
   if (name === 'fill_template') {
-    const template = args.template as string | undefined;
-    if (!template) {
+    const parsed = FillTemplateArgsSchema.safeParse(args);
+    if (!parsed.success) {
       return jsonRpcResult(id, {
-        content: [{ type: 'text', text: 'Error: "template" argument is required.' }],
+        content: [{ type: 'text', text: `Validation error: ${parsed.error.issues.map(i => i.message).join(', ')}` }],
         isError: true,
       });
     }
 
-    const values = (args.values as Record<string, string>) ?? {};
+    const { template, values } = parsed.data;
+
     const outcome = await handleFill(template, values);
 
     if (!outcome.ok) {
