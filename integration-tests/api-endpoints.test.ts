@@ -415,7 +415,7 @@ describe('MCP endpoint — api/mcp.ts', () => {
 
     const result = (res.body as any).result;
     expect(result.isError).toBe(true);
-    expect(result.content[0].text).toContain('required');
+    expect(result.content[0].text.toLowerCase()).toContain('required');
   });
 
   it('returns error for fill_template when handleFill fails', async () => {

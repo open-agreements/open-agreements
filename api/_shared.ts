@@ -137,7 +137,7 @@ function mapFields(
 
 export async function handleFill(
   template: string,
-  values: Record<string, string>,
+  values: Record<string, unknown>,
 ): Promise<FillOutcome> {
   const internalDir = findTemplateDir(template);
   const externalDir = !internalDir ? findExternalDir(template) : undefined;
@@ -247,7 +247,7 @@ export interface DownloadPayload {
   /** template ID */
   t: string;
   /** field values */
-  v: Record<string, string>;
+  v: Record<string, unknown>;
   /** expiry (epoch ms) */
   e: number;
 }
@@ -255,7 +255,7 @@ export interface DownloadPayload {
 /** Create a signed download token encoding template + values + expiry. */
 export function createDownloadToken(
   template: string,
-  values: Record<string, string>,
+  values: Record<string, unknown>,
 ): string {
   const payload: DownloadPayload = {
     t: template,
