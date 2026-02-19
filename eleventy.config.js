@@ -5,6 +5,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("site/.well-known");
   eleventyConfig.addPassthroughCopy("site/styles.css");
   eleventyConfig.addPassthroughCopy("site/downloads");
+  eleventyConfig.addPassthroughCopy("site/schemas");
   eleventyConfig.ignores.add("site/downloads/**/*.md");
 
   return {
