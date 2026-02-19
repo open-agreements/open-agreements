@@ -134,19 +134,20 @@ function copyDownloads(templates) {
     mkdirSync(downloadsDir, { recursive: true });
   }
   for (const t of templates) {
-    if (!t.hasPreview || !t.distributable) continue;
-    // Copy DOCX and MD variants
-    for (const ext of ["docx", "md"]) {
-      const src = resolve(root, "content", "templates", t.id, `template.${ext}`);
-      const dest = resolve(downloadsDir, `${t.id}.${ext}`);
-      if (!existsSync(src)) continue;
-      // Skip copy if destination is already up-to-date (avoids watch-mode churn)
-      if (existsSync(dest)) {
-        const srcMtime = statSync(src).mtimeMs;
-        const destMtime = statSync(dest).mtimeMs;
-        if (destMtime >= srcMtime) continue;
+    if (t.hasDocxDownload) {
+      const src = resolve(root, "content", "templates", t.id, "template.docx");
+      const dest = resolve(downloadsDir, `${t.id}.docx`);
+      if (!existsSync(dest) || statSync(dest).mtimeMs < statSync(src).mtimeMs) {
+        copyFileSync(src, dest);
       }
-      copyFileSync(src, dest);
+    }
+
+    if (t.hasMarkdownDownload) {
+      const src = resolve(root, "content", "templates", t.id, "template.md");
+      const dest = resolve(downloadsDir, `${t.id}.md`);
+      if (!existsSync(dest) || statSync(dest).mtimeMs < statSync(src).mtimeMs) {
+        copyFileSync(src, dest);
+      }
     }
   }
 }
@@ -177,6 +178,9 @@ export default function () {
 
     const isOpenAgreements = item.name.startsWith("openagreements-") || sourceLabel === "OpenAgreements";
     const hasPreview = isOpenAgreements;
+    const templateDir = resolve(root, "content", "templates", item.name);
+    const hasDocxDownload = hasPreview && flags.distributable && existsSync(resolve(templateDir, "template.docx"));
+    const hasMarkdownDownload = hasPreview && flags.distributable && existsSync(resolve(templateDir, "template.md"));
 
     const templateData = {
       id: item.name,
@@ -191,6 +195,8 @@ export default function () {
       totalFields: item.fields.length,
       category,
       hasPreview,
+      hasDocxDownload,
+      hasMarkdownDownload,
       ...flags,
     };
 

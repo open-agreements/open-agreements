@@ -57,11 +57,12 @@
     "test:run": "npm run build && npm run check:spec-coverage && vitest run",
     "lint": "eslint src/",
     "validate": "node bin/open-agreements.js validate",
+    "build:downloads": "node scripts/prepare_site_downloads.mjs",
     "build:css": "npx tailwindcss -i site/src/input.css -o site/styles.css --minify",
     "build:docs": "mkdir -p site/docs && cp docs/getting-started.md docs/adding-templates.md docs/adding-recipes.md docs/licensing.md docs/trust-checklist.md docs/contracts-workspace.md docs/supported-tools.md docs/assumptions.md docs/template-branding-pipeline.md docs/employment-source-policy.md site/docs/",
     "build:html": "npx @11ty/eleventy",
     "build:site:indexes": "node scripts/generate_site_indexes.mjs",
-    "build:site": "npm run check:template-previews && npm run build:css && npm run build:docs && npm run build:html && npm run build:site:indexes",
+    "build:site": "npm run build:downloads && npm run check:template-previews && npm run build:css && npm run build:docs && npm run build:html && npm run build:site:indexes",
     "prepare": "npm run build",
     "report:allure": "rm -rf ./allure-report && npx allure awesome ./allure-results --output ./allure-report --group-by epic,feature,story",
     "report:allure:open": "npx allure open ./allure-report"

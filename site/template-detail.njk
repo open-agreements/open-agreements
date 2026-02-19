@@ -26,8 +26,10 @@ eleventyComputed:
         <p class="template-fields" style="margin: 12px 0 24px;">{{ t.totalFields }} total field{{ "s" if t.totalFields != 1 }}</p>
 
         <div class="template-detail-actions" style="margin-bottom: 24px;">
-          {% if t.distributable %}
+          {% if t.hasDocxDownload %}
           <a class="btn btn-ghost" href="/downloads/{{ t.id }}.docx" download>Download blank DOCX</a>
+          {% endif %}
+          {% if t.hasMarkdownDownload %}
           <a class="btn btn-ghost" href="/downloads/{{ t.id }}.md" download>Download markdown</a>
           {% endif %}
           <a class="btn btn-primary" href="/?template={{ t.id }}#start">Installation instructions</a>
