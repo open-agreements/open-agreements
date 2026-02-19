@@ -129,6 +129,7 @@ export interface ConventionConfig {
     applicable_domains: string[];
     asset_domains: string[];
   };
+  disallowed_file_types?: Record<string, string[]>;
   cross_references: {
     policy: string;
     mechanism: string;

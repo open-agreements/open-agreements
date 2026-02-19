@@ -58,7 +58,7 @@ export function initializeWorkspace(
 
   ensureFile(
     CONTRACTS_GUIDE_FILE,
-    buildContractsGuide(topics),
+    buildContractsGuide(topics, conventions),
     p,
     createdFiles,
     existingFiles
@@ -76,9 +76,9 @@ export function initializeWorkspace(
     existingFiles
   );
 
-  // Generate WORKSPACE.md and FOLDER.md files
+  // Generate WORKSPACE.md and FOLDER.md files (sentinel-aware for idempotent re-init)
   const workspaceDocFile = conventions.documentation.root_file;
-  ensureFile(
+  ensureFileWithSentinel(
     workspaceDocFile,
     buildWorkspaceMd(conventions, LIFECYCLE_DIRS as unknown as string[]),
     p,
@@ -90,7 +90,7 @@ export function initializeWorkspace(
   for (const lifecycle of LIFECYCLE_DIRS) {
     if (p.exists(lifecycle)) {
       const folderDocFile = `${lifecycle}/${conventions.documentation.folder_file}`;
-      ensureFile(
+      ensureFileWithSentinel(
         folderDocFile,
         buildFolderMd(lifecycle, conventions, true),
         p,
@@ -242,6 +242,45 @@ function ensureFile(
   createdFiles.push(relativePath);
 }
 
+const SENTINEL_BEGIN = '<!-- contracts-workspace:begin -->';
+const SENTINEL_END = '<!-- contracts-workspace:end -->';
+
+/**
+ * Write a file with sentinel comments. On re-init:
+ * - If file doesn't exist, write it (with sentinels wrapping generated content).
+ * - If file exists and contains sentinels, replace content between them, preserving user additions outside.
+ * - If file exists without sentinels, skip (user fully replaced it).
+ */
+function ensureFileWithSentinel(
+  relativePath: string,
+  content: string,
+  provider: WorkspaceProvider,
+  createdFiles: string[],
+  existingFiles: string[]
+): void {
+  const wrapped = `${SENTINEL_BEGIN}\n${content}${SENTINEL_END}\n`;
+
+  if (!provider.exists(relativePath)) {
+    provider.writeFile(relativePath, wrapped);
+    createdFiles.push(relativePath);
+    return;
+  }
+
+  existingFiles.push(relativePath);
+
+  const existing = provider.readTextFile(relativePath);
+  const beginIdx = existing.indexOf(SENTINEL_BEGIN);
+  const endIdx = existing.indexOf(SENTINEL_END);
+  if (beginIdx < 0 || endIdx < 0 || endIdx <= beginIdx) {
+    // No sentinels found — user fully replaced it, leave it alone
+    return;
+  }
+
+  const before = existing.slice(0, beginIdx);
+  const after = existing.slice(endIdx + SENTINEL_END.length);
+  provider.writeFile(relativePath, `${before}${wrapped.trimEnd()}${after}`);
+}
+
 function normalizeAgents(agents: AgentName[] | undefined): AgentName[] {
   if (!agents || agents.length === 0) {
     return [];
@@ -364,7 +403,8 @@ function lifecyclePurpose(folder: string): string {
   }
 }
 
-function buildContractsGuide(topics: string[]): string {
+function buildContractsGuide(topics: string[], conventions?: ConventionConfig): string {
+  const config = conventions ?? defaultConventions();
   const lifecycleLegend = LIFECYCLE_DIRS.map((name) => `- \`${name}/\``).join('\n');
   const topicLegend = topics.map((name) => `- \`${name}\``).join('\n');
 
@@ -382,13 +422,14 @@ ${topicLegend}
 
 ## Naming Conventions
 
-- Use descriptive snake_case filenames.
-- Execution status is filename-driven: append \`_executed\` before the extension when signed.
-- Example: \`acme_subscription_agreement_executed.docx\`.
+- Use descriptive ${config.naming.style} filenames.
+- Execution status is filename-driven: append \`${config.executed_marker.pattern}\` before the extension when signed.
+- Example: \`acme_subscription_agreement${config.executed_marker.pattern}.docx\`.
 
 ## Status Tracking
 
-- \`_executed\` in filename is the source of truth for signed status.
+- \`${config.executed_marker.pattern}\` in filename is the source of truth for signed status.
+- Convention config: \`.contracts-workspace/conventions.yaml\`
 - Regenerate workspace index with:
   - \`open-agreements-workspace status generate\`
 - Run validator/lint with:

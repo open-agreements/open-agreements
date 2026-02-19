@@ -26,6 +26,7 @@ export const ConventionConfigSchema = z.object({
     applicable_domains: z.array(z.string()),
     asset_domains: z.array(z.string()),
   }),
+  disallowed_file_types: z.record(z.string(), z.array(z.string())).optional().default({ forms: ['pdf'] }),
   cross_references: z.object({
     policy: z.string(),
     mechanism: z.string(),

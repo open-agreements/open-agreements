@@ -23,15 +23,20 @@ export function lintWorkspace(rootDir: string, provider?: WorkspaceProvider): Li
     }
   }
 
+  const disallowedMap = conventions.disallowed_file_types ?? { forms: ['pdf'] };
+
   const documents = collectWorkspaceDocuments(rootDir, p);
   for (const document of documents) {
-    if (document.lifecycle === 'forms' && document.extension === 'pdf') {
-      findings.push({
-        code: 'disallowed-file-type',
-        severity: 'error',
-        message: 'PDF files are not allowed in forms/. Move this file to executed/ or archive/.',
-        path: document.path,
-      });
+    if (document.lifecycle) {
+      const disallowed = disallowedMap[document.lifecycle];
+      if (disallowed && disallowed.includes(document.extension)) {
+        findings.push({
+          code: 'disallowed-file-type',
+          severity: 'error',
+          message: `${document.extension.toUpperCase()} files are not allowed in ${document.lifecycle}/. Move this file to executed/ or archive/.`,
+          path: document.path,
+        });
+      }
     }
 
     // Use convention-configured marker pattern
