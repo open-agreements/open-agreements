@@ -9,7 +9,7 @@ import type { CatalogEntry, FetchSummary, FormsCatalog } from './types.js';
 
 const LifecycleEnum = z.enum(LIFECYCLE_DIRS);
 
-const CatalogEntrySchema = z.object({
+export const CatalogEntrySchema = z.object({
   id: z.string().min(1),
   name: z.string().min(1),
   source_url: z.string().url(),
@@ -28,7 +28,7 @@ const CatalogEntrySchema = z.object({
   notes: z.string().optional(),
 });
 
-const FormsCatalogSchema = z.object({
+export const FormsCatalogSchema = z.object({
   schema_version: z.literal(1),
   generated_at: z.string().datetime().optional(),
   entries: z.array(CatalogEntrySchema),
