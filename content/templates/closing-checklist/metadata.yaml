@@ -33,5 +33,4 @@ fields:
     description: Array of open issues (issue_id, title, status, escalation_tier, positions)
 required_fields:
   - deal_name
-  - created_at
   - updated_at
