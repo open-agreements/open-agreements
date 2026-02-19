@@ -131,6 +131,35 @@ function mapFields(
   }));
 }
 
+interface RawTemplateMetadata {
+  name: string;
+  description?: string;
+  license?: string;
+  source_url: string;
+  attribution_text?: string;
+  fields: {
+    name: string;
+    type: string;
+    section?: string;
+    description: string;
+    default?: string;
+  }[];
+  required_fields: string[];
+}
+
+function toTemplateItem(templateId: string, meta: RawTemplateMetadata): TemplateItem {
+  return {
+    name: templateId,
+    category: categoryFromId(templateId),
+    description: meta.description ?? meta.name,
+    license: meta.license,
+    source_url: meta.source_url,
+    source: sourceName(meta.source_url),
+    attribution_text: meta.attribution_text,
+    fields: mapFields(meta.fields, meta.required_fields),
+  };
+}
+
 // ---------------------------------------------------------------------------
 // Fill handler — protocol-agnostic
 // ---------------------------------------------------------------------------
@@ -193,38 +222,44 @@ export async function handleCreateChecklist(
 // List handler — protocol-agnostic
 // ---------------------------------------------------------------------------
 
+export function handleGetTemplate(templateId: string): TemplateItem | null {
+  const internalDir = findTemplateDir(templateId);
+  if (internalDir) {
+    try {
+      const meta = loadMetadata(internalDir) as RawTemplateMetadata;
+      return toTemplateItem(templateId, meta);
+    } catch {
+      return null;
+    }
+  }
+
+  const externalDir = findExternalDir(templateId);
+  if (externalDir) {
+    try {
+      const meta = loadExternalMetadata(externalDir) as RawTemplateMetadata;
+      return toTemplateItem(templateId, meta);
+    } catch {
+      return null;
+    }
+  }
+
+  return null;
+}
+
 export function handleListTemplates(): ListOutcome {
   const items: TemplateItem[] = [];
 
   for (const entry of listTemplateEntries()) {
     try {
-      const meta = loadMetadata(entry.dir);
-      items.push({
-        name: entry.id,
-        category: categoryFromId(entry.id),
-        description: meta.description ?? meta.name,
-        license: meta.license,
-        source_url: meta.source_url,
-        source: sourceName(meta.source_url),
-        attribution_text: meta.attribution_text,
-        fields: mapFields(meta.fields, meta.required_fields),
-      });
+      const meta = loadMetadata(entry.dir) as RawTemplateMetadata;
+      items.push(toTemplateItem(entry.id, meta));
     } catch { /* skip */ }
   }
 
   for (const entry of listExternalEntries()) {
     try {
-      const meta = loadExternalMetadata(entry.dir);
-      items.push({
-        name: entry.id,
-        category: categoryFromId(entry.id),
-        description: meta.description ?? meta.name,
-        license: meta.license,
-        source_url: meta.source_url,
-        source: sourceName(meta.source_url),
-        attribution_text: meta.attribution_text,
-        fields: mapFields(meta.fields, meta.required_fields),
-      });
+      const meta = loadExternalMetadata(entry.dir) as RawTemplateMetadata;
+      items.push(toTemplateItem(entry.id, meta));
     } catch { /* skip */ }
   }
 

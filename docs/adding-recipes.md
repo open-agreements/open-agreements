@@ -1,3 +1,10 @@
+---
+title: Adding Recipes
+description: Create recipe-driven templates for non-redistributable document sources.
+order: 3
+section: Guides
+---
+
 # Adding Recipes
 
 Recipes enable OpenAgreements to work with non-redistributable document sources

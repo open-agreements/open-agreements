@@ -1,3 +1,10 @@
+---
+title: Licensing
+description: How template licensing, attribution, and integrity enforcement work.
+order: 4
+section: Reference
+---
+
 # Licensing
 
 > **Disclaimer**: This documentation describes how OpenAgreements handles template licensing from a technical perspective. It is not legal advice. Consult a qualified attorney for questions about your specific use of these documents.

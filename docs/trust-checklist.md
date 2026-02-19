@@ -1,3 +1,10 @@
+---
+title: Trust Checklist
+description: Data-flow modes and trust-boundary decisions for local vs hosted execution.
+order: 5
+section: Reference
+---
+
 # Trust Checklist
 
 This checklist tracks Sprint 1 trust-boundary messaging only.

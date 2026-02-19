@@ -49,12 +49,14 @@ const MOCK_FILL_FAILURE = {
 
 const handleFillMock = vi.fn();
 const handleListTemplatesMock = vi.fn(() => MOCK_LIST_RESULT);
+const handleGetTemplateMock = vi.fn(() => MOCK_LIST_RESULT.items[0]);
 const createDownloadTokenMock = vi.fn(() => 'mock-token.mock-sig');
 const parseDownloadTokenMock = vi.fn();
 
 vi.mock('../api/_shared.js', () => ({
   handleFill: handleFillMock,
   handleListTemplates: handleListTemplatesMock,
+  handleGetTemplate: handleGetTemplateMock,
   createDownloadToken: createDownloadTokenMock,
   parseDownloadToken: parseDownloadTokenMock,
   DOCX_MIME: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
@@ -104,6 +106,11 @@ function createMockReq(overrides: {
     body: overrides.body ?? {},
     query: overrides.query ?? {},
   };
+}
+
+function parseMcpEnvelope(body: any) {
+  const text = body?.result?.content?.[0]?.text;
+  return JSON.parse(text as string);
 }
 
 afterEach(() => {
@@ -291,12 +298,24 @@ describe('MCP endpoint — api/mcp.ts', () => {
     expect(res.headers['Access-Control-Allow-Headers']).toContain('Mcp-Session-Id');
   });
 
-  it('returns 405 for non-POST methods', async () => {
-    const req = createMockReq({ method: 'GET' });
+  it('returns 405 JSON for non-browser GET requests', async () => {
+    const req = createMockReq({ method: 'GET', headers: { accept: 'application/json' } });
     const res = createMockRes();
     await mcpHandler(req as any, res as any);
 
     expect(res.statusCode).toBe(405);
+    expect((res.body as any).error).toContain('Only POST');
+  });
+
+  it('returns 200 HTML for browser-style GET requests', async () => {
+    const req = createMockReq({ method: 'GET', headers: { accept: 'text/html' } });
+    const res = createMockRes();
+    await mcpHandler(req as any, res as any);
+
+    expect(res.statusCode).toBe(200);
+    expect(res.headers['Content-Type']).toContain('text/html');
+    expect(typeof res.body).toBe('string');
+    expect(String(res.body)).toContain('OpenAgreements MCP endpoint');
   });
 
   it('handles initialize handshake', async () => {
@@ -345,11 +364,16 @@ describe('MCP endpoint — api/mcp.ts', () => {
     await allureJsonAttachment('mcp-tools-list.json', res.body);
 
     const tools = (res.body as any).result.tools;
-    expect(tools).toHaveLength(3);
-    expect(tools.map((t: any) => t.name).sort()).toEqual(['create_closing_checklist', 'fill_template', 'list_templates']);
+    expect(tools).toHaveLength(4);
+    expect(tools.map((t: any) => t.name).sort()).toEqual([
+      'download_filled',
+      'fill_template',
+      'get_template',
+      'list_templates',
+    ]);
   });
 
-  it('handles tools/call list_templates', async () => {
+  it('handles tools/call list_templates with envelope response', async () => {
     const req = createMockReq({
       body: {
         jsonrpc: '2.0',
@@ -362,14 +386,44 @@ describe('MCP endpoint — api/mcp.ts', () => {
     await mcpHandler(req as any, res as any);
 
     expect(handleListTemplatesMock).toHaveBeenCalledTimes(1);
-    const content = (res.body as any).result.content;
-    expect(content).toHaveLength(2); // summary + JSON
-    expect(content[0].type).toBe('text');
-    expect(content[0].text).toContain('Available templates');
+    const envelope = parseMcpEnvelope(res.body);
+    expect(envelope.ok).toBe(true);
+    expect(envelope.tool).toBe('list_templates');
+    expect(envelope.schema_version).toBe('2026-02-19');
+    expect(envelope.data.mode).toBe('full');
+    expect(envelope.data.templates).toHaveLength(1);
+    expect(envelope.data.rate_limit).toBeDefined();
   });
 
-  it('handles tools/call fill_template with download URL', async () => {
+  it('handles tools/call get_template', async () => {
+    const req = createMockReq({
+      body: {
+        jsonrpc: '2.0',
+        id: 31,
+        method: 'tools/call',
+        params: {
+          name: 'get_template',
+          arguments: { template_id: 'common-paper-mutual-nda' },
+        },
+      },
+    });
+    const res = createMockRes();
+    await mcpHandler(req as any, res as any);
+
+    expect(handleGetTemplateMock).toHaveBeenCalledWith('common-paper-mutual-nda');
+    const envelope = parseMcpEnvelope(res.body);
+    expect(envelope.ok).toBe(true);
+    expect(envelope.tool).toBe('get_template');
+    expect(envelope.data.template.template_id).toBe('common-paper-mutual-nda');
+  });
+
+  it('handles tools/call fill_template with URL return_mode envelope', async () => {
     handleFillMock.mockResolvedValue(MOCK_FILL_SUCCESS);
+    parseDownloadTokenMock.mockReturnValue({
+      t: 'common-paper-mutual-nda',
+      v: { company_name: 'Acme Corp' },
+      e: Date.now() + 3600000,
+    });
 
     const req = createMockReq({
       headers: { 'content-type': 'application/json', host: 'openagreements.ai' },
@@ -394,14 +448,17 @@ describe('MCP endpoint — api/mcp.ts', () => {
     expect(handleFillMock).toHaveBeenCalledWith('common-paper-mutual-nda', { company_name: 'Acme Corp' });
     expect(createDownloadTokenMock).toHaveBeenCalledWith('common-paper-mutual-nda', { company_name: 'Acme Corp' });
 
-    const content = (res.body as any).result.content;
-    expect(content).toHaveLength(1); // text only — no binary blob
-    expect(content[0].text).toContain('Download your DOCX');
-    expect(content[0].text).toContain('/api/download?token=');
-    expect(content[0].text).toContain('expires in 1 hour');
+    const envelope = parseMcpEnvelope(res.body);
+    expect(envelope.ok).toBe(true);
+    expect(envelope.tool).toBe('fill_template');
+    expect(envelope.data.return_mode).toBe('url');
+    expect(envelope.data.download_url).toContain('/api/download?token=');
+    expect(envelope.data.token).toBe('mock-token.mock-sig');
+    expect(envelope.data.expires_at).toBeDefined();
+    expect(envelope.data.rate_limit).toBeDefined();
   });
 
-  it('returns error for fill_template with missing template arg', async () => {
+  it('returns INVALID_ARGUMENT envelope for fill_template with missing template arg', async () => {
     const req = createMockReq({
       body: {
         jsonrpc: '2.0',
@@ -414,11 +471,14 @@ describe('MCP endpoint — api/mcp.ts', () => {
     await mcpHandler(req as any, res as any);
 
     const result = (res.body as any).result;
+    const envelope = parseMcpEnvelope(res.body);
     expect(result.isError).toBe(true);
-    expect(result.content[0].text.toLowerCase()).toMatch(/required|expected string/i);
+    expect(envelope.ok).toBe(false);
+    expect(envelope.error.code).toBe('INVALID_ARGUMENT');
+    expect(envelope.error.details.issues.length).toBeGreaterThan(0);
   });
 
-  it('returns error for fill_template when handleFill fails', async () => {
+  it('returns TEMPLATE_NOT_FOUND envelope for fill_template when handleFill fails', async () => {
     handleFillMock.mockResolvedValue(MOCK_FILL_FAILURE);
 
     const req = createMockReq({
@@ -433,11 +493,14 @@ describe('MCP endpoint — api/mcp.ts', () => {
     await mcpHandler(req as any, res as any);
 
     const result = (res.body as any).result;
+    const envelope = parseMcpEnvelope(res.body);
     expect(result.isError).toBe(true);
-    expect(result.content[0].text).toContain('nonexistent');
+    expect(envelope.ok).toBe(false);
+    expect(envelope.error.code).toBe('TEMPLATE_NOT_FOUND');
+    expect(envelope.error.message).toContain('nonexistent');
   });
 
-  it('returns error for unknown tool name', async () => {
+  it('returns INVALID_ARGUMENT envelope for unknown tool name', async () => {
     const req = createMockReq({
       body: {
         jsonrpc: '2.0',
@@ -450,8 +513,11 @@ describe('MCP endpoint — api/mcp.ts', () => {
     await mcpHandler(req as any, res as any);
 
     const result = (res.body as any).result;
+    const envelope = parseMcpEnvelope(res.body);
     expect(result.isError).toBe(true);
-    expect(result.content[0].text).toContain('unknown_tool');
+    expect(envelope.ok).toBe(false);
+    expect(envelope.error.code).toBe('INVALID_ARGUMENT');
+    expect(envelope.error.message).toContain('unknown_tool');
   });
 
   it('responds to ping', async () => {

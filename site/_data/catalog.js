@@ -64,6 +64,13 @@ const CATEGORIES = [
       "NVCA model documents for Series A and later rounds.",
     match: (id) => id.startsWith("nvca-"),
   },
+  {
+    slug: "other",
+    label: "Other",
+    description: "Additional templates that do not map to the primary categories.",
+    // Catch-all bucket populated via fallback category assignment.
+    match: () => false,
+  },
 ];
 
 const LICENSE_FLAGS = {
@@ -158,6 +165,7 @@ export default function () {
     const flags = isRecipe
       ? { distributable: false, fillable: false }
       : LICENSE_FLAGS[item.license] || { distributable: false, fillable: false };
+    const sourceLabel = getSourceLabel(item);
 
     let category = "other";
     for (const cat of CATEGORIES) {
@@ -167,7 +175,7 @@ export default function () {
       }
     }
 
-    const isOpenAgreements = item.name.startsWith("openagreements-");
+    const isOpenAgreements = item.name.startsWith("openagreements-") || sourceLabel === "OpenAgreements";
     const hasPreview = isOpenAgreements;
 
     const templateData = {
@@ -176,7 +184,7 @@ export default function () {
       description: item.description,
       license: item.license || "Recipe",
       isRecipe,
-      sourceLabel: getSourceLabel(item),
+      sourceLabel,
       sourceUrl: getSourceUrl(item),
       sourceDocUrl: item.source_url,
       requiredFields: item.fields.filter((f) => f.required).length,
@@ -187,7 +195,7 @@ export default function () {
     };
 
     // Include full field metadata and preview images for OpenAgreements templates
-    if (isOpenAgreements) {
+    if (hasPreview) {
       templateData.fields = item.fields.map((f) => ({
         name: f.name,
         displayName: formatFieldName(f.name),

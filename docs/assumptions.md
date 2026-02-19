@@ -1,3 +1,10 @@
+---
+title: Assumptions
+description: High-impact pipeline assumptions and their linked verification commands.
+order: 8
+section: Reference
+---
+
 # Assumptions
 
 This document captures the highest-impact assumptions in the OpenAgreements pipeline, especially for NVCA recipe processing where source formatting and bracket semantics are complex.

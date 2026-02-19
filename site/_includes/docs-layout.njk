@@ -1,0 +1,57 @@
+---
+layout: base.njk
+---
+<div class="docs-wrap">
+  <aside class="docs-sidebar">
+    <nav aria-label="Documentation">
+      {% for group in docsNav %}
+        <h4 class="docs-nav-section">{{ group.section }}</h4>
+        <ul>
+          {% for item in group.items %}
+            <li>
+              <a
+                href="/docs/{{ item.slug }}/"
+                class="docs-nav-link{% if page.fileSlug == item.slug %} is-active{% endif %}"
+              >{{ item.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endfor %}
+    </nav>
+  </aside>
+
+  <main class="docs-main section">
+    <article class="prose">
+      {{ content | safe }}
+    </article>
+
+    <nav class="docs-pagination" aria-label="Pagination">
+      {% set allItems = [] %}
+      {% for group in docsNav %}
+        {% for item in group.items %}
+          {% set allItems = (allItems.push(item), allItems) %}
+        {% endfor %}
+      {% endfor %}
+
+      {% set prevItem = null %}
+      {% set nextItem = null %}
+      {% for item in allItems %}
+        {% if item.slug == page.fileSlug %}
+          {% if loop.index0 > 0 %}
+            {% set prevItem = allItems[loop.index0 - 1] %}
+          {% endif %}
+          {% if loop.index0 < allItems.length - 1 %}
+            {% set nextItem = allItems[loop.index0 + 1] %}
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+
+      {% if prevItem %}
+        <a href="/docs/{{ prevItem.slug }}/" class="docs-pagination-prev">&larr; {{ prevItem.title }}</a>
+      {% endif %}
+      {% if nextItem %}
+        <a href="/docs/{{ nextItem.slug }}/" class="docs-pagination-next">{{ nextItem.title }} &rarr;</a>
+      {% endif %}
+    </nav>
+  </main>
+</div>

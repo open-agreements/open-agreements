@@ -1,3 +1,10 @@
+---
+title: Supported Tools
+description: Agent adapters and how to add support for new coding agents.
+order: 7
+section: Reference
+---
+
 # Supported Tools
 
 OpenAgreements uses an agent-agnostic `ToolCommandAdapter` interface for generating skills that work with different coding agents.
