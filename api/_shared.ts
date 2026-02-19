@@ -180,6 +180,16 @@ export async function handleFill(
 }
 
 // ---------------------------------------------------------------------------
+// Create checklist handler — protocol-agnostic
+// ---------------------------------------------------------------------------
+
+export async function handleCreateChecklist(
+  data: Record<string, unknown>,
+): Promise<FillOutcome> {
+  return handleFill('closing-checklist', data);
+}
+
+// ---------------------------------------------------------------------------
 // List handler — protocol-agnostic
 // ---------------------------------------------------------------------------
 

@@ -176,6 +176,13 @@ export function validateTemplate(templateDir: string, templateId: string): Templ
       foundConditionalFields.add(condMatch[1]);
     }
 
+    // Extract array field names from FOR loop constructs
+    const forLoopRegex = /\{FOR \w+ IN (\w+)\}/g;
+    let forMatch;
+    while ((forMatch = forLoopRegex.exec(text)) !== null) {
+      foundTags.add(forMatch[1]);
+    }
+
     // Security: scan for docx-templates control/code tags that should not exist
     // in open-source templates. Only simple {identifier} tags are allowed.
     const rawXml = extractRawDocumentXml(templatePath);
@@ -224,8 +231,16 @@ function extractRawDocumentXml(docxPath: string): string | null {
   return entry.getData().toString('utf-8');
 }
 
-/** Allowed tag pattern: simple {identifier}, {IF [!]identifier}, or {END-IF}. */
-const SAFE_TAG_RE = /^\{(?:[a-zA-Z_][a-zA-Z0-9_]*|IF !?[a-zA-Z_][a-zA-Z0-9_]*|END-IF)\}$/;
+/**
+ * Allowed tag patterns:
+ *   {identifier}                  — simple placeholder
+ *   {IF [!]identifier}            — conditional start
+ *   {END-IF}                      — conditional end
+ *   {FOR var IN identifier}       — loop start (docx-templates)
+ *   {END-FOR var}                 — loop end
+ *   {$var.field} / {$var.a.b}     — loop variable access
+ */
+const SAFE_TAG_RE = /^\{(?:[a-zA-Z_][a-zA-Z0-9_]*|IF !?[a-zA-Z_][a-zA-Z0-9_]*|END-IF|FOR [a-zA-Z_]\w* IN [a-zA-Z_]\w*|END-FOR [a-zA-Z_]\w*|\$[a-zA-Z_]\w*(?:\.[a-zA-Z_]\w*)+)\}$/;
 
 /**
  * Scan the raw OOXML text content for any {…} tokens and reject ones that

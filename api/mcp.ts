@@ -9,7 +9,7 @@
 
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { z } from 'zod';
-import { handleFill, handleListTemplates, DOCX_MIME, createDownloadToken } from './_shared.js';
+import { handleFill, handleListTemplates, handleCreateChecklist, DOCX_MIME, createDownloadToken } from './_shared.js';
 
 // ---------------------------------------------------------------------------
 // Zod schemas for MCP tool argument validation
@@ -17,10 +17,44 @@ import { handleFill, handleListTemplates, DOCX_MIME, createDownloadToken } from 
 
 const FillTemplateArgsSchema = z.object({
   template: z.string(),
-  values: z.record(z.unknown()).optional().default({}),
+  values: z.record(z.string(), z.unknown()).optional().default({}),
 });
 
 const ListTemplatesArgsSchema = z.object({});
+
+const CreateChecklistArgsSchema = z.object({
+  deal_name: z.string(),
+  created_at: z.string().optional().default(new Date().toISOString()),
+  updated_at: z.string().optional().default(new Date().toISOString()),
+  working_group: z.array(z.object({
+    name: z.string(),
+    email: z.string().optional(),
+    organization: z.string(),
+    role: z.string().optional(),
+  })).optional().default([]),
+  documents: z.array(z.object({
+    document_name: z.string(),
+    status: z.string(),
+  })).optional().default([]),
+  action_items: z.array(z.object({
+    item_id: z.string(),
+    description: z.string(),
+    status: z.string(),
+    assigned_to: z.object({
+      organization: z.string(),
+      individual_name: z.string().optional(),
+      role: z.string().optional(),
+    }),
+    due_date: z.string().optional(),
+  })).optional().default([]),
+  open_issues: z.array(z.object({
+    issue_id: z.string(),
+    title: z.string(),
+    status: z.string(),
+    escalation_tier: z.string().optional(),
+    resolution: z.string().optional(),
+  })).optional().default([]),
+});
 
 // Base URL for download links — derived from the incoming request at call time
 let _baseUrl = 'https://openagreements.ai';
@@ -61,6 +95,86 @@ const TOOLS = [
         },
       },
       required: ['template'],
+    },
+  },
+  {
+    name: 'create_closing_checklist',
+    description:
+      'Create a deal closing checklist DOCX from structured JSON input. ' +
+      'Accepts deal name, working group members, documents, action items, and open issues. ' +
+      'Returns a formatted checklist for distribution to deal participants.',
+    inputSchema: {
+      type: 'object' as const,
+      properties: {
+        deal_name: { type: 'string', description: 'Name of the deal or transaction' },
+        created_at: { type: 'string', description: 'ISO date when checklist was first created (defaults to now)' },
+        updated_at: { type: 'string', description: 'ISO date when checklist was last updated (defaults to now)' },
+        working_group: {
+          type: 'array',
+          description: 'Working group members',
+          items: {
+            type: 'object',
+            properties: {
+              name: { type: 'string' },
+              email: { type: 'string' },
+              organization: { type: 'string' },
+              role: { type: 'string' },
+            },
+            required: ['name', 'organization'],
+          },
+        },
+        documents: {
+          type: 'array',
+          description: 'Deal documents and their statuses',
+          items: {
+            type: 'object',
+            properties: {
+              document_name: { type: 'string' },
+              status: { type: 'string', enum: ['NOT_STARTED', 'DRAFTING', 'INTERNAL_REVIEW', 'CLIENT_REVIEW', 'NEGOTIATING', 'FORM_FINAL', 'EXECUTED', 'ON_HOLD'] },
+            },
+            required: ['document_name', 'status'],
+          },
+        },
+        action_items: {
+          type: 'array',
+          description: 'Action items to track',
+          items: {
+            type: 'object',
+            properties: {
+              item_id: { type: 'string' },
+              description: { type: 'string' },
+              status: { type: 'string', enum: ['NOT_STARTED', 'IN_PROGRESS', 'COMPLETED', 'ON_HOLD'] },
+              assigned_to: {
+                type: 'object',
+                properties: {
+                  organization: { type: 'string' },
+                  individual_name: { type: 'string' },
+                  role: { type: 'string' },
+                },
+                required: ['organization'],
+              },
+              due_date: { type: 'string' },
+            },
+            required: ['item_id', 'description', 'status', 'assigned_to'],
+          },
+        },
+        open_issues: {
+          type: 'array',
+          description: 'Open issues requiring resolution',
+          items: {
+            type: 'object',
+            properties: {
+              issue_id: { type: 'string' },
+              title: { type: 'string' },
+              status: { type: 'string', enum: ['OPEN', 'ESCALATED', 'RESOLVED', 'DEFERRED'] },
+              escalation_tier: { type: 'string', enum: ['YELLOW', 'RED'] },
+              resolution: { type: 'string' },
+            },
+            required: ['issue_id', 'title', 'status'],
+          },
+        },
+      },
+      required: ['deal_name'],
     },
   },
 ];
@@ -168,8 +282,43 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>) {
     });
   }
 
+  if (name === 'create_closing_checklist') {
+    const parsed = CreateChecklistArgsSchema.safeParse(args);
+    if (!parsed.success) {
+      return jsonRpcResult(id, {
+        content: [{ type: 'text', text: `Validation error: ${parsed.error.issues.map(i => `${i.path.join('.')}: ${i.message}`).join(', ')}` }],
+        isError: true,
+      });
+    }
+
+    const outcome = await handleCreateChecklist(parsed.data);
+
+    if (!outcome.ok) {
+      return jsonRpcResult(id, {
+        content: [{ type: 'text', text: `Error: ${outcome.error}` }],
+        isError: true,
+      });
+    }
+
+    const token = createDownloadToken('closing-checklist', parsed.data);
+    const downloadUrl = `${_baseUrl}/api/download?token=${token}`;
+
+    const d = parsed.data;
+    const summary = [
+      `Created closing checklist for "${d.deal_name}".`,
+      `Working group: ${d.working_group.length} members | Documents: ${d.documents.length} | Action items: ${d.action_items.length} | Open issues: ${d.open_issues.length}`,
+      '',
+      `Download your DOCX: ${downloadUrl}`,
+      '(Link expires in 1 hour)',
+    ].join('\n');
+
+    return jsonRpcResult(id, {
+      content: [{ type: 'text', text: summary }],
+    });
+  }
+
   return jsonRpcResult(id, {
-    content: [{ type: 'text', text: `Unknown tool: "${name}". Available: list_templates, fill_template.` }],
+    content: [{ type: 'text', text: `Unknown tool: "${name}". Available: list_templates, fill_template, create_closing_checklist.` }],
     isError: true,
   });
 }
