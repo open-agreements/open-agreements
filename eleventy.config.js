@@ -1,7 +1,20 @@
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
 
 export default function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
+
+  // rawMarkdown filter: reads the source .md and strips frontmatter
+  eleventyConfig.addNunjucksFilter("rawMarkdown", function (inputPath) {
+    try {
+      const abs = resolve(inputPath);
+      const src = readFileSync(abs, "utf8");
+      return src.replace(/^---[\s\S]*?---\n*/, "");
+    } catch {
+      return "";
+    }
+  });
   eleventyConfig.addPassthroughCopy("site/assets");
   eleventyConfig.addPassthroughCopy("site/main.js");
   eleventyConfig.addPassthroughCopy("site/templates-filter.js");
