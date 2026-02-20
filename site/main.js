@@ -175,20 +175,24 @@ if (statusPill) {
   ul.className = 'toc-list';
 
   headings.forEach((heading) => {
+    // Skip headings inside links (e.g. docs index cards)
+    if (heading.closest('a')) return;
+
+    // Capture heading text before appending anchor node
+    const headingText = heading.textContent.trim();
+
     // Assign id slug if missing
     if (!heading.id) {
-      heading.id = heading.textContent
-        .trim()
+      heading.id = headingText
         .toLowerCase()
         .replace(/[^\w\s-]/g, '')
         .replace(/\s+/g, '-');
     }
 
-    // Add permalink anchor
+    // Add permalink anchor; visible marker is rendered in CSS ::after
     const anchor = document.createElement('a');
     anchor.className = 'heading-anchor';
     anchor.href = '#' + heading.id;
-    anchor.textContent = '#';
     anchor.setAttribute('aria-label', 'Link to this section');
     heading.appendChild(anchor);
 
@@ -198,7 +202,7 @@ if (statusPill) {
     const link = document.createElement('a');
     link.className = 'toc-link';
     link.href = '#' + heading.id;
-    link.textContent = heading.childNodes[0].textContent.trim();
+    link.textContent = headingText;
     li.appendChild(link);
     ul.appendChild(li);
   });

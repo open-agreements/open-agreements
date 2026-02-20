@@ -972,19 +972,23 @@
     font-weight: 600;
   }
 
-  /* Heading anchor links */
+  /* Heading anchor links — hidden by default, shown on heading hover */
   .heading-anchor {
-    color: var(--line);
     text-decoration: none;
-    margin-left: 6px;
+    margin-left: 4px;
+  }
+
+  .heading-anchor::after {
+    content: "#";
+    color: var(--line);
     opacity: 0;
     transition: opacity 150ms ease;
     font-weight: 400;
   }
 
-  .prose h2:hover .heading-anchor,
-  .prose h3:hover .heading-anchor,
-  .heading-anchor:focus {
+  .prose h2:hover .heading-anchor::after,
+  .prose h3:hover .heading-anchor::after,
+  .heading-anchor:focus::after {
     opacity: 1;
     color: var(--accent-deep);
   }
@@ -1105,6 +1109,12 @@
 
   .prose a:hover {
     color: var(--accent);
+  }
+
+  .prose a.pack-card,
+  .prose a.pack-card:hover {
+    text-decoration: none;
+    color: inherit;
   }
 
   .prose img {
