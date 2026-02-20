@@ -9,6 +9,7 @@ coverage/
 # Draft change proposals (unimplemented roadmap — keep private until shipped)
 # Archived (implemented) changes are safe to track
 openspec/changes/add-*/
+!openspec/changes/add-clause-similarity-provenance/
 !openspec/changes/archive/
 .vercel
 
