@@ -7,15 +7,16 @@
  *   URL:  https://openagreements.ai/api/mcp
  */
 
-import type { VercelRequest, VercelResponse } from '@vercel/node';
+import type { HttpRequest, HttpResponse } from './_http-types.js';
 import { z } from 'zod';
 import {
   handleFill,
   handleGetTemplate,
   handleListTemplates,
   DOCX_MIME,
-  createDownloadToken,
-  parseDownloadToken,
+  createDownloadArtifact,
+  resolveDownloadArtifact,
+  type ResolveDownloadArtifactErrorCode,
 } from './_shared.js';
 import { ErrorCode, makeToolError, wrapError, wrapSuccess } from './_envelope.js';
 
@@ -38,7 +39,7 @@ const FillTemplateArgsSchema = z.object({
 });
 
 const DownloadFilledArgsSchema = z.object({
-  token: z.string().min(1),
+  download_id: z.string().min(1),
 });
 
 // Base URL for download links — derived from the incoming request at call time
@@ -114,17 +115,17 @@ const TOOLS = [
   {
     name: TOOL_DOWNLOAD_FILLED,
     description:
-      'Retrieve a filled template using a previously issued token. ' +
+      'Retrieve a filled template using a previously issued download_id. ' +
       'Returns base64 DOCX and metadata in a structured envelope.',
     inputSchema: {
       type: 'object' as const,
       properties: {
-        token: {
+        download_id: {
           type: 'string',
-          description: 'Download token from fill_template(url mode).',
+          description: 'Download ID from fill_template(url mode).',
         },
       },
-      required: ['token'],
+      required: ['download_id'],
     },
   },
 ];
@@ -229,13 +230,36 @@ function toolErrorResult(
   });
 }
 
-function tokenExpiryIso(token: string): string {
-  const parsed = parseDownloadToken(token);
-  if (!parsed) {
-    // Token was generated locally in this process; fallback only if parse fails unexpectedly.
-    return new Date(Date.now() + 60 * 60 * 1000).toISOString();
+function mapDownloadResolutionError(
+  code: ResolveDownloadArtifactErrorCode,
+): { code: (typeof ErrorCode)[keyof typeof ErrorCode]; message: string } {
+  switch (code) {
+    case 'DOWNLOAD_ID_MALFORMED':
+      return {
+        code: ErrorCode.DOWNLOAD_LINK_INVALID,
+        message: 'Malformed download_id.',
+      };
+    case 'DOWNLOAD_SIGNATURE_INVALID':
+      return {
+        code: ErrorCode.DOWNLOAD_LINK_INVALID,
+        message: 'Invalid download_id signature.',
+      };
+    case 'DOWNLOAD_EXPIRED':
+      return {
+        code: ErrorCode.DOWNLOAD_LINK_EXPIRED,
+        message: 'Download link expired.',
+      };
+    case 'DOWNLOAD_NOT_FOUND':
+      return {
+        code: ErrorCode.DOWNLOAD_LINK_NOT_FOUND,
+        message: 'Download link not found.',
+      };
+    default:
+      return {
+        code: ErrorCode.DOWNLOAD_LINK_INVALID,
+        message: 'Invalid download link.',
+      };
   }
-  return new Date(parsed.e).toISOString();
 }
 
 function mcpGetHtmlPage(): string {
@@ -533,9 +557,9 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>) {
       });
     }
 
-    const token = createDownloadToken(template, values);
-    const downloadUrl = `${_baseUrl}/api/download?token=${encodeURIComponent(token)}`;
-    const expiresAt = tokenExpiryIso(token);
+    const artifact = await createDownloadArtifact(template, values);
+    const downloadUrl = `${_baseUrl}/api/download?id=${encodeURIComponent(artifact.download_id)}`;
+    const expiresAt = artifact.expires_at;
 
     if (return_mode === 'mcp_resource') {
       return toolSuccessResult(id, TOOL_FILL_TEMPLATE, {
@@ -543,14 +567,15 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>) {
         download_url: downloadUrl,
         expires_at: expiresAt,
         metadata: outcome.metadata,
-        resource_uri: `oa://filled/${token}`,
+        download_id: artifact.download_id,
+        resource_uri: `oa://filled/${artifact.download_id}`,
         return_mode,
       });
     }
 
     return toolSuccessResult(id, TOOL_FILL_TEMPLATE, {
       download_url: downloadUrl,
-      token,
+      download_id: artifact.download_id,
       expires_at: expiresAt,
       metadata: outcome.metadata,
       return_mode,
@@ -569,17 +594,13 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>) {
       );
     }
 
-    const payload = parseDownloadToken(parsed.data.token);
-    if (!payload) {
-      return toolErrorResult(
-        id,
-        TOOL_DOWNLOAD_FILLED,
-        ErrorCode.TOKEN_EXPIRED,
-        'Invalid or expired token.',
-      );
+    const resolved = await resolveDownloadArtifact(parsed.data.download_id);
+    if (!resolved.ok) {
+      const mapped = mapDownloadResolutionError(resolved.code);
+      return toolErrorResult(id, TOOL_DOWNLOAD_FILLED, mapped.code, mapped.message);
     }
 
-    const outcome = await handleFill(payload.t, payload.v);
+    const outcome = await handleFill(resolved.artifact.template, resolved.artifact.values);
     if (!outcome.ok) {
       const errorCode = isUnknownTemplateError(outcome.error)
         ? ErrorCode.TEMPLATE_NOT_FOUND
@@ -591,7 +612,8 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>) {
       content_type: DOCX_MIME,
       docx_base64: outcome.base64,
       metadata: outcome.metadata,
-      token_expires_at: new Date(payload.e).toISOString(),
+      download_id: parsed.data.download_id,
+      download_expires_at: new Date(resolved.artifact.expires_at_ms).toISOString(),
     });
   }
 
@@ -608,7 +630,7 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>) {
 // Main handler — MCP Streamable HTTP transport
 // ---------------------------------------------------------------------------
 
-export default async function handler(req: VercelRequest, res: VercelResponse) {
+export default async function handler(req: HttpRequest, res: HttpResponse) {
   // CORS for browser-based MCP clients.
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');

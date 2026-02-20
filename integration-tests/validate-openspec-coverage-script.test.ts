@@ -1,8 +1,11 @@
 import { existsSync, mkdtempSync, readFileSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { describe, expect, it } from 'vitest';
+import { describe, expect } from 'vitest';
+import { itAllure } from './helpers/allure-test.js';
 import { main, parseArgs } from '../scripts/validate_openspec_coverage.mjs';
+
+const it = itAllure.epic('Verification & Drift').withLabels({ feature: 'OpenSpec Coverage Script' });
 
 describe('validate_openspec_coverage script', () => {
   it('parses args without writing matrix by default', () => {

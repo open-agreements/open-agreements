@@ -37,7 +37,7 @@ export function normalizeText(text: string): string {
  */
 export async function verifyOutput(
   outputPath: string,
-  values: Record<string, string>,
+  values: Record<string, unknown>,
   replacements: Record<string, string>,
   cleanConfig?: CleanConfig
 ): Promise<VerifyResult> {
@@ -49,7 +49,7 @@ export async function verifyOutput(
   // Check 1: All context values present (with normalization)
   const missingValues: string[] = [];
   for (const [key, value] of Object.entries(values)) {
-    if (!value || !value.trim()) continue; // skip empty/whitespace-only values
+    if (typeof value !== 'string' || !value.trim()) continue; // only verify non-empty text values
     const normalizedValue = normalizeText(value);
     if (!normalizedFullText.includes(normalizedValue)) {
       missingValues.push(`${key}="${value}"`);

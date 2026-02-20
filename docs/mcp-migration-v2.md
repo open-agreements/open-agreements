@@ -45,22 +45,22 @@ Error responses now use the same envelope shape with `ok: false` and a structure
 
 ## `fill_template` Return Modes
 
-- `url` (default): `{ download_url, token, expires_at, metadata }`
+- `url` (default): `{ download_url, download_id, expires_at, metadata }`
 - `base64_docx`: `{ docx_base64, content_type, metadata }`
-- `mcp_resource`: `{ resource_uri, download_url, content_type, expires_at, metadata }`
+- `mcp_resource`: `{ resource_uri, download_url, download_id, content_type, expires_at, metadata }`
 
-`mcp_resource` currently returns preview-style `resource_uri` values (`oa://filled/{token}`) with `download_url` fallback.
+`mcp_resource` returns preview-style `resource_uri` values (`oa://filled/{download_id}`) with `download_url` fallback.
 
 ## `download_filled`
 
-Use `download_filled` to retrieve base64 DOCX in-protocol using the previously issued token.
+Use `download_filled` to retrieve base64 DOCX in-protocol using the previously issued `download_id`.
 
 Input:
 ```json
-{ "token": "..." }
+{ "download_id": "..." }
 ```
 
-Success data includes `docx_base64`, `content_type`, and template metadata.
+Success data includes `docx_base64`, `content_type`, template metadata, and `download_expires_at`.
 
 ## Error Code Taxonomy
 
@@ -71,7 +71,23 @@ Success data includes `docx_base64`, `content_type`, and template metadata.
 | `AUTH_REQUIRED` | Authentication required | usually `false` until auth changes |
 | `RATE_LIMITED` | Throttled due to request limits | `true` |
 | `TEMPLATE_NOT_FOUND` | Unknown template ID | `false` |
-| `TOKEN_EXPIRED` | Invalid/expired artifact token | `false` |
+| `DOWNLOAD_LINK_INVALID` | Malformed or signature-invalid download ID | `false` |
+| `DOWNLOAD_LINK_EXPIRED` | Download link expired | `false` |
+| `DOWNLOAD_LINK_NOT_FOUND` | Download ID not found in TTL store | `false` |
+
+## `/api/download` Contract
+
+- Query parameter: `id` (required)
+- Methods:
+  - `GET` returns DOCX bytes on success
+  - `HEAD` returns status-only probe semantics with no response body
+- Machine-readable errors:
+  - `DOWNLOAD_ID_MISSING`
+  - `DOWNLOAD_ID_MALFORMED`
+  - `DOWNLOAD_SIGNATURE_INVALID`
+  - `DOWNLOAD_EXPIRED`
+  - `DOWNLOAD_NOT_FOUND`
+  - `DOWNLOAD_RENDER_FAILED`
 
 ## Auth and Rate-Limit Metadata
 

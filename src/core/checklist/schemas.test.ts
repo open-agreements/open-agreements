@@ -1,4 +1,5 @@
-import { describe, it, expect } from 'vitest';
+import { describe, expect } from 'vitest';
+import { itAllure } from '../../../integration-tests/helpers/allure-test.js';
 import {
   ClosingChecklistSchema,
   ChecklistItemStatusEnum,
@@ -8,6 +9,8 @@ import {
   ActionItemSchema,
   OpenIssueSchema,
 } from './schemas.js';
+
+const it = itAllure.epic('Compliance & Governance').withLabels({ feature: 'Checklist Schemas' });
 
 describe('ClosingChecklistSchema', () => {
   const minimal = {

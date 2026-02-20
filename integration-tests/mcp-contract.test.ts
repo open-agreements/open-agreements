@@ -58,7 +58,7 @@ const MOCK_FILL_TEMPLATE_NOT_FOUND = {
   error: 'Unknown template: "nonexistent"',
 };
 
-const VALID_TOKEN = 'valid-token.mock-sig';
+const VALID_DOWNLOAD_ID = 'validdownloadid00000000000000000000.mock-sig';
 
 const handleListTemplatesMock = vi.fn(() => MOCK_LIST_RESULT);
 const handleGetTemplateMock = vi.fn((templateId: string) => (
@@ -67,13 +67,23 @@ const handleGetTemplateMock = vi.fn((templateId: string) => (
 const handleFillMock = vi.fn(async (template: string) => (
   template === 'nonexistent' ? MOCK_FILL_TEMPLATE_NOT_FOUND : MOCK_FILL_SUCCESS
 ));
-const createDownloadTokenMock = vi.fn(() => VALID_TOKEN);
-const parseDownloadTokenMock = vi.fn((token: string) => {
-  if (token !== VALID_TOKEN) return null;
+const createDownloadArtifactMock = vi.fn(() => ({
+  download_id: VALID_DOWNLOAD_ID,
+  expires_at: new Date(Date.now() + 3600000).toISOString(),
+  expires_at_ms: Date.now() + 3600000,
+}));
+const resolveDownloadArtifactMock = vi.fn((downloadId: string) => {
+  if (downloadId !== VALID_DOWNLOAD_ID) {
+    return { ok: false as const, code: 'DOWNLOAD_EXPIRED' as const };
+  }
   return {
-    t: MOCK_TEMPLATE.name,
-    v: { company_name: 'Acme Corp' },
-    e: Date.now() + 3600000,
+    ok: true as const,
+    artifact: {
+      template: MOCK_TEMPLATE.name,
+      values: { company_name: 'Acme Corp' },
+      expires_at_ms: Date.now() + 3600000,
+      created_at_ms: Date.now(),
+    },
   };
 });
 
@@ -81,8 +91,8 @@ vi.mock('../api/_shared.js', () => ({
   handleListTemplates: handleListTemplatesMock,
   handleGetTemplate: handleGetTemplateMock,
   handleFill: handleFillMock,
-  createDownloadToken: createDownloadTokenMock,
-  parseDownloadToken: parseDownloadTokenMock,
+  createDownloadArtifact: createDownloadArtifactMock,
+  resolveDownloadArtifact: resolveDownloadArtifactMock,
   DOCX_MIME: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
 }));
 
@@ -257,8 +267,8 @@ describe('MCP contract envelope behaviors', () => {
     const urlEnvelope = parseEnvelope(urlRes.body);
     expect(urlEnvelope.ok).toBe(true);
     expect(urlEnvelope.data.return_mode).toBe('url');
-    expect(urlEnvelope.data.download_url).toContain('/api/download?token=');
-    expect(urlEnvelope.data.token).toBe(VALID_TOKEN);
+    expect(urlEnvelope.data.download_url).toContain('/api/download?id=');
+    expect(urlEnvelope.data.download_id).toBe(VALID_DOWNLOAD_ID);
 
     const base64Req = createMockReq({
       body: {
@@ -305,17 +315,17 @@ describe('MCP contract envelope behaviors', () => {
     const resourceEnvelope = parseEnvelope(resourceRes.body);
     expect(resourceEnvelope.ok).toBe(true);
     expect(resourceEnvelope.data.return_mode).toBe('mcp_resource');
-    expect(resourceEnvelope.data.resource_uri).toBe(`oa://filled/${VALID_TOKEN}`);
-    expect(resourceEnvelope.data.download_url).toContain('/api/download?token=');
+    expect(resourceEnvelope.data.resource_uri).toBe(`oa://filled/${VALID_DOWNLOAD_ID}`);
+    expect(resourceEnvelope.data.download_url).toContain('/api/download?id=');
   });
 
-  it('returns download_filled success and TOKEN_EXPIRED error envelopes', async () => {
+  it('returns download_filled success and DOWNLOAD_LINK_EXPIRED error envelopes', async () => {
     const validReq = createMockReq({
       body: {
         jsonrpc: '2.0',
         id: 9,
         method: 'tools/call',
-        params: { name: 'download_filled', arguments: { token: VALID_TOKEN } },
+        params: { name: 'download_filled', arguments: { download_id: VALID_DOWNLOAD_ID } },
       },
     });
     const validRes = createMockRes();
@@ -325,14 +335,15 @@ describe('MCP contract envelope behaviors', () => {
     expect(validEnvelope.ok).toBe(true);
     expect(validEnvelope.tool).toBe('download_filled');
     expect(validEnvelope.data.docx_base64).toBe(MOCK_FILL_SUCCESS.base64);
-    expect(validEnvelope.data.token_expires_at).toBeDefined();
+    expect(validEnvelope.data.download_id).toBe(VALID_DOWNLOAD_ID);
+    expect(validEnvelope.data.download_expires_at).toBeDefined();
 
     const expiredReq = createMockReq({
       body: {
         jsonrpc: '2.0',
         id: 10,
         method: 'tools/call',
-        params: { name: 'download_filled', arguments: { token: 'expired-token' } },
+        params: { name: 'download_filled', arguments: { download_id: 'expired-token' } },
       },
     });
     const expiredRes = createMockRes();
@@ -341,7 +352,7 @@ describe('MCP contract envelope behaviors', () => {
     const expiredEnvelope = parseEnvelope(expiredRes.body);
     expect((expiredRes.body as any).result.isError).toBe(true);
     expect(expiredEnvelope.ok).toBe(false);
-    expect(expiredEnvelope.error.code).toBe('TOKEN_EXPIRED');
+    expect(expiredEnvelope.error.code).toBe('DOWNLOAD_LINK_EXPIRED');
   });
 
   it('returns INVALID_ARGUMENT for invalid arguments and unknown tool', async () => {
