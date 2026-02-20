@@ -21,9 +21,18 @@ layout: base.njk
   </aside>
 
   <main class="docs-main section">
-    <article class="prose">
+    <div class="docs-toolbar">
+      <button class="btn btn-sm btn-ghost" id="copy-md" type="button">Copy as Markdown</button>
+      <a class="btn btn-sm btn-ghost" href="https://github.com/open-agreements/open-agreements/issues/new?title=Docs feedback: {{ title | urlencode }}" target="_blank" rel="noreferrer">Feedback</a>
+    </div>
+
+    <article id="docs-content" class="prose">
       {{ content | safe }}
     </article>
+
+    {% if page.inputPath %}
+      <script type="text/plain" id="page-markdown">{{ page.inputPath | rawMarkdown }}</script>
+    {% endif %}
 
     <nav class="docs-pagination" aria-label="Pagination">
       {% set allItems = [] %}
@@ -54,4 +63,9 @@ layout: base.njk
       {% endif %}
     </nav>
   </main>
+
+  <aside class="docs-toc">
+    <h4 class="docs-toc-heading">On this page</h4>
+    <nav id="toc-nav" aria-label="Table of contents"></nav>
+  </aside>
 </div>

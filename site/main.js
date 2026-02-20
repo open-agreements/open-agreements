@@ -29,23 +29,6 @@ document.querySelectorAll('[data-copy]').forEach((btn) => {
   });
 });
 
-// npm download stats in trust badge
-async function fetchDownloadStats() {
-  const res = await fetch('https://api.npmjs.org/downloads/point/last-month/open-agreements');
-  if (!res.ok) throw new Error(`HTTP ${res.status}`);
-  const { downloads } = await res.json();
-  const downloadLabel = Number.isFinite(downloads) ? `${downloads.toLocaleString()}/month` : 'unavailable';
-
-  document.querySelectorAll('[data-npm-downloads]').forEach((el) => {
-    el.textContent = downloadLabel;
-  });
-}
-fetchDownloadStats().catch(() => {
-  document.querySelectorAll('[data-npm-downloads]').forEach((el) => {
-    el.textContent = 'unavailable';
-  });
-});
-
 // Live MCP status pill
 const statusPill = document.querySelector('[data-live-status-pill]');
 const statusValue = document.querySelector('[data-live-status-value]');
@@ -173,6 +156,103 @@ if (statusPill) {
     if (statusLastCheckedAt) renderStatusPill();
   }, 60_000);
 }
+
+// ─── Docs: ToC generation + active heading tracking ───
+(function () {
+  const content = document.getElementById('docs-content');
+  const tocNav = document.getElementById('toc-nav');
+  const tocContainer = document.querySelector('.docs-toc');
+  if (!content || !tocNav) return;
+
+  const headings = content.querySelectorAll('h2, h3');
+  if (headings.length < 3) {
+    if (tocContainer) tocContainer.style.display = 'none';
+    return;
+  }
+
+  // Build ToC list
+  const ul = document.createElement('ul');
+  ul.className = 'toc-list';
+
+  headings.forEach((heading) => {
+    // Skip headings inside links (e.g. card titles on docs index)
+    if (heading.closest('a')) return;
+
+    // Grab heading text before we append anything
+    const headingText = heading.textContent.trim();
+
+    // Assign id slug if missing
+    if (!heading.id) {
+      heading.id = headingText
+        .toLowerCase()
+        .replace(/[^\w\s-]/g, '')
+        .replace(/\s+/g, '-');
+    }
+
+    // Add permalink anchor (no visible text — CSS ::after adds # on hover)
+    const anchor = document.createElement('a');
+    anchor.className = 'heading-anchor';
+    anchor.href = '#' + heading.id;
+    anchor.setAttribute('aria-label', 'Link to this section');
+    heading.appendChild(anchor);
+
+    // Create ToC entry
+    const li = document.createElement('li');
+    li.className = heading.tagName === 'H3' ? 'toc-item toc-item-nested' : 'toc-item';
+    const link = document.createElement('a');
+    link.className = 'toc-link';
+    link.href = '#' + heading.id;
+    link.textContent = headingText;
+    li.appendChild(link);
+    ul.appendChild(li);
+  });
+
+  tocNav.appendChild(ul);
+
+  // Active heading tracking via IntersectionObserver
+  const tocLinks = tocNav.querySelectorAll('.toc-link');
+  const headingMap = new Map();
+  tocLinks.forEach((link) => {
+    const id = link.getAttribute('href').slice(1);
+    headingMap.set(id, link);
+  });
+
+  let activeId = null;
+  const observer = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          if (activeId) {
+            const prev = headingMap.get(activeId);
+            if (prev) prev.classList.remove('is-active');
+          }
+          activeId = entry.target.id;
+          const curr = headingMap.get(activeId);
+          if (curr) curr.classList.add('is-active');
+        }
+      }
+    },
+    { rootMargin: '0px 0px -70% 0px', threshold: 0 }
+  );
+
+  headings.forEach((h) => observer.observe(h));
+})();
+
+// ─── Docs: Copy as Markdown ───
+(function () {
+  const btn = document.getElementById('copy-md');
+  if (!btn) return;
+
+  btn.addEventListener('click', () => {
+    const src = document.getElementById('page-markdown');
+    if (!src) return;
+    navigator.clipboard.writeText(src.textContent).then(() => {
+      const orig = btn.textContent;
+      btn.textContent = 'Copied!';
+      setTimeout(() => { btn.textContent = orig; }, 1500);
+    });
+  });
+})();
 
 // Template-aware install section: react to ?template= param
 (function () {

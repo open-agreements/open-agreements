@@ -155,6 +155,72 @@
     color: #8b938d;
   }
 
+  /* Topbar actions (GitHub star widget + Feedback) */
+  .topbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+
+  .gh-star-widget {
+    display: inline-flex;
+    align-items: stretch;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    overflow: hidden;
+    font-size: 0.82rem;
+    line-height: 1;
+  }
+
+  .gh-star-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    background: #fff;
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 120ms ease;
+  }
+
+  .gh-star-btn:hover {
+    background: var(--bg);
+  }
+
+  .gh-star-btn svg {
+    flex-shrink: 0;
+  }
+
+  .gh-star-count {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 8px;
+    background: var(--bg);
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 600;
+    border-left: 1px solid var(--line);
+    transition: color 120ms ease;
+  }
+
+  .gh-star-count:hover {
+    color: var(--accent-deep);
+  }
+
+  .topbar-feedback {
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: color 120ms ease;
+  }
+
+  .topbar-feedback:hover {
+    color: var(--accent-deep);
+  }
+
   /* Main container */
   .main-wrap {
     width: min(1120px, 92vw);
@@ -846,10 +912,10 @@
 /* ─── Docs layout ─── */
 @layer components {
   .docs-wrap {
-    width: min(1120px, 92vw);
+    width: min(1280px, 92vw);
     margin: 24px auto 48px;
     display: grid;
-    grid-template-columns: 240px 1fr;
+    grid-template-columns: 240px 1fr 200px;
     gap: 32px;
     align-items: start;
   }
@@ -907,6 +973,90 @@
   .docs-main {
     min-width: 0;
     padding: clamp(28px, 5vw, 56px);
+  }
+
+  /* Docs toolbar */
+  .docs-toolbar {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* "On this page" ToC */
+  .docs-toc {
+    position: sticky;
+    top: 80px;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+    padding: 16px 0;
+  }
+
+  .docs-toc-heading {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-soft);
+    margin: 0 0 10px;
+  }
+
+  .toc-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .toc-item {
+    margin: 0;
+  }
+
+  .toc-item-nested {
+    padding-left: 12px;
+  }
+
+  .toc-link {
+    display: block;
+    padding: 3px 0;
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    text-decoration: none;
+    border-left: 2px solid transparent;
+    padding-left: 10px;
+    transition: color 120ms ease, border-color 120ms ease;
+  }
+
+  .toc-link:hover {
+    color: var(--accent-deep);
+  }
+
+  .toc-link.is-active {
+    color: var(--accent-deep);
+    border-left-color: var(--accent);
+    font-weight: 600;
+  }
+
+  /* Heading anchor links — hidden by default, # appears on hover via ::after */
+  .heading-anchor {
+    text-decoration: none;
+    margin-left: 4px;
+  }
+
+  .heading-anchor::after {
+    content: "#";
+    color: var(--line);
+    font-weight: 400;
+    opacity: 0;
+    transition: opacity 150ms ease;
+  }
+
+  .prose h2:hover .heading-anchor::after,
+  .prose h3:hover .heading-anchor::after,
+  .heading-anchor:focus::after {
+    opacity: 1;
+    color: var(--accent-deep);
   }
 
   /* Prose typography */
@@ -1027,6 +1177,12 @@
     color: var(--accent);
   }
 
+  .prose a.pack-card,
+  .prose a.pack-card:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+
   .prose img {
     max-width: 100%;
     border: 1px solid var(--line);
@@ -1056,9 +1212,63 @@
   .docs-pagination-next {
     margin-left: auto;
   }
+
+  /* GitHub stars badge */
+  .gh-stars-badge {
+    display: inline-flex;
+    align-items: stretch;
+    text-decoration: none;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid rgba(20, 32, 35, 0.18);
+    transition: transform 140ms ease, filter 140ms ease;
+  }
+
+  .gh-stars-badge:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.03);
+  }
+
+  .gh-stars-badge .shield-segment {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    height: 20px;
+    padding: 0 8px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .gh-stars-badge .shield-label {
+    background: #24292f;
+  }
+
+  .gh-stars-badge .shield-value {
+    background: #0969da;
+  }
+
+  .gh-stars-badge svg {
+    width: 12px;
+    height: 12px;
+    fill: currentColor;
+  }
 }
 
-/* Docs responsive */
+/* Docs responsive — hide ToC at <=1024px */
+@media (max-width: 1024px) {
+  .docs-wrap {
+    grid-template-columns: 240px 1fr;
+  }
+
+  .docs-toc {
+    display: none;
+  }
+}
+
+/* Docs responsive — collapse sidebar at <=768px */
 @media (max-width: 768px) {
   .docs-wrap {
     grid-template-columns: 1fr;
@@ -1069,6 +1279,10 @@
     position: static;
     max-height: none;
     border-bottom: none;
+  }
+
+  .docs-toc {
+    display: none;
   }
 
   .prose table {

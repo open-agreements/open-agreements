@@ -6,41 +6,31 @@ description: "Fill legal agreement templates with coding agents or local CLI exe
 
     <main id="top" class="main-wrap">
       <section class="hero section reveal">
-        <p class="eyebrow">Open-source legal operations</p>
-        <h1>You use coding agents for code. Use them for paperwork too.</h1>
+        <h1>Use coding agents for paperwork too.</h1>
         <p class="hero-copy">
-          Fill NDAs, SAFEs, offer letters, and more with two modes: hosted MCP connector for
-          quick setup in Claude, or local package execution for machine-local workflows.
+          Fill NDAs, SAFEs, offer letters, and more — hosted MCP connector or local CLI.
         </p>
+        <div style="margin-top: 20px;">
+          <button class="copy-btn" data-copy="https://openagreements.ai/api/mcp" style="max-width: 500px;">
+            <code>https://openagreements.ai/api/mcp</code>
+            <span class="copy-label" aria-label="Copy"><svg class="copy-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span class="copy-tooltip">Copy</span></span>
+          </button>
+          <p style="font-size: 0.82rem; color: var(--ink-soft); margin: 6px 0 0;">Paste in Claude &rarr; Settings &rarr; Connectors</p>
+        </div>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#start">Installation instructions</a>
-          <a class="btn btn-ghost" href="/templates">Browse templates</a>
+          <a class="btn btn-primary" href="/docs/getting-started/">Get Started</a>
+          <a class="btn btn-ghost" href="/templates">Browse Templates</a>
         </div>
         <div class="badge-stack" id="trust">
           <div class="badge-row">
-            <a class="trust-badge trust-badge-shield" href="https://www.npmjs.com/package/open-agreements" target="_blank" rel="noreferrer">
-              <span class="shield-segment shield-label">downloads</span>
-              <span class="shield-segment shield-value" data-npm-downloads>loading…</span>
-            </a>
-            <a class="trust-badge" href="https://www.npmjs.com/package/open-agreements" target="_blank" rel="noreferrer">
-              <img src="https://img.shields.io/npm/v/open-agreements?logo=npm&label=npm" alt="npm version" height="20" loading="lazy" />
+            <a class="trust-badge" href="https://npmjs.org/package/open-agreements" target="_blank" rel="noreferrer">
+              <img src="https://img.shields.io/npm/dm/open-agreements.svg" alt="npm downloads" height="20" loading="lazy" />
             </a>
             <a class="trust-badge" href="https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml?query=branch%3Amain" target="_blank" rel="noreferrer">
               <img src="https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml/badge.svg" alt="CI status" height="20" loading="lazy" />
             </a>
-            <a class="trust-badge" href="https://github.com/open-agreements/open-agreements/actions/workflows/validate.yml?query=branch%3Amain" target="_blank" rel="noreferrer">
-              <img src="https://github.com/open-agreements/open-agreements/actions/workflows/validate.yml/badge.svg" alt="Template validation status" height="20" loading="lazy" />
-            </a>
             <a class="trust-badge" href="https://app.codecov.io/gh/open-agreements/open-agreements" target="_blank" rel="noreferrer">
-              <img src="https://codecov.io/gh/open-agreements/open-agreements/graph/badge.svg" alt="Coverage status" height="20" loading="lazy" />
-            </a>
-          </div>
-          <div class="badge-row">
-            <a class="trust-badge" href="https://github.com/open-agreements/open-agreements" target="_blank" rel="noreferrer">
-              <img src="https://img.shields.io/badge/GitHub-open--agreements%2Fopen--agreements-181717?logo=github&logoColor=white" alt="GitHub repository" height="20" loading="lazy" />
-            </a>
-            <a class="trust-badge" href="https://github.com/open-agreements/open-agreements/stargazers" target="_blank" rel="noreferrer">
-              <img src="https://img.shields.io/github/stars/open-agreements/open-agreements?style=social&label=Star" alt="GitHub stargazers" height="20" loading="lazy" />
+              <img src="https://img.shields.io/codecov/c/github/open-agreements/open-agreements/main" alt="Coverage status" height="20" loading="lazy" />
             </a>
             <a class="trust-badge trust-badge-shield" data-live-status-pill href="https://openagreements.openstatus.dev/" target="_blank" rel="noreferrer">
               <span class="shield-segment shield-label">Live MCP status</span>
@@ -66,48 +56,38 @@ description: "Fill legal agreement templates with coding agents or local CLI exe
         <p style="margin-top: 16px;"><a href="/templates" style="color: var(--accent-deep); font-weight: 600; text-decoration: none;">View full catalog &rarr;</a></p>
       </section>
 
-      <section id="start" class="section split reveal">
-        <div>
-          <div id="install-context" class="install-context" hidden style="margin-bottom: 16px;">
-            <p>To use <strong id="install-context-name"></strong>, pick a setup method below.</p>
+      <section id="start" class="section reveal" style="padding: clamp(26px, 4vw, 42px);">
+        <details>
+          <summary style="cursor: pointer; font-weight: 600; font-size: 1.1rem; list-style: none;">
+            <h2 style="display: inline; font-size: 1.1rem;">More install options</h2>
+          </summary>
+          <div style="margin-top: 16px;">
+            <div id="install-context" class="install-context" hidden style="margin-bottom: 16px;">
+              <p>To use <strong id="install-context-name"></strong>, pick a setup method below.</p>
+            </div>
+            <p style="color: var(--ink-soft);">
+              Pick the mode that fits your workflow. Hosted MCP connector is convenience mode through
+              <code>openagreements.ai</code>; local package execution runs from your terminal on your machine.
+            </p>
+            <div class="cards" style="margin-top: 16px;">
+              <article class="card card-featured">
+                <h3>Hosted MCP connector</h3>
+                <p>Convenience mode for fast startup in Claude.</p>
+                <button class="copy-btn" data-copy="https://openagreements.ai/api/mcp">
+                  <code>https://openagreements.ai/api/mcp</code>
+                  <span class="copy-label" aria-label="Copy"><svg class="copy-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span class="copy-tooltip">Copy</span></span>
+                </button>
+                <p class="card-hint">Request/response content passes through the hosted connector service.</p>
+                <p class="card-hint">Settings &rarr; Connectors &rarr; Add custom connector &rarr; paste URL</p>
+              </article>
+              <article class="card">
+                <h3>Local package execution</h3>
+                <p>Run template fill and validation from your terminal on your machine.</p>
+                <pre><code>npx -y open-agreements@latest list --json</code></pre>
+              </article>
+            </div>
           </div>
-          <h2>Installation instructions</h2>
-          <p>
-            Pick the mode that fits your workflow. Hosted MCP connector is convenience mode through
-            <code>openagreements.ai</code>; local package execution runs from your terminal on your machine.
-          </p>
-        </div>
-        <div class="cards">
-          <article class="card card-featured">
-            <h3>Hosted MCP connector</h3>
-            <p>Convenience mode for fast startup in Claude.</p>
-            <button class="copy-btn" data-copy="https://openagreements.ai/api/mcp">
-              <code>https://openagreements.ai/api/mcp</code>
-              <span class="copy-label" aria-label="Copy"><svg class="copy-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span class="copy-tooltip">Copy</span></span>
-            </button>
-            <p class="card-hint">Request/response content passes through the hosted connector service.</p>
-            <p class="card-hint">Settings &rarr; Connectors &rarr; Add custom connector &rarr; paste URL</p>
-          </article>
-          <article class="card">
-            <h3>Local package execution</h3>
-            <p>Run template fill and validation from your terminal on your machine.</p>
-            <pre><code>npx -y open-agreements@latest list --json</code></pre>
-          </article>
-        </div>
-      </section>
-
-      <section class="section reveal" style="padding: clamp(26px, 4vw, 42px);">
-        <div class="demo-header">
-          <h2>Quick decision</h2>
-        </div>
-        <p style="color: var(--ink-soft);">
-          If your document is sensitive, use fully local package execution. If you prioritize convenience,
-          use the hosted MCP connector.
-        </p>
-        <p style="color: var(--ink-soft);">
-          Mode-by-mode data flow summary:
-          <a href="https://github.com/open-agreements/open-agreements/blob/main/docs/trust-checklist.md" target="_blank" rel="noreferrer">docs/trust-checklist.md</a>
-        </p>
+        </details>
       </section>
 
       <section id="install" class="section demo reveal">
@@ -202,34 +182,6 @@ description: "Fill legal agreement templates with coding agents or local CLI exe
             </p>
           </details>
           <details>
-            <summary>Can I generate mutual and one-way NDA templates in Word format?</summary>
-            <p>
-              Yes. OpenAgreements includes NDA templates and can output editable Word <code>.docx</code> files for mutual
-              and one-way NDA workflows.
-            </p>
-          </details>
-          <details>
-            <summary>Can I generate Cloud Services Agreements with or without SLA terms?</summary>
-            <p>
-              Yes. OpenAgreements supports Cloud Services Agreement template variants, including flows that include SLA
-              terms and flows that omit SLA terms, all in editable <code>.docx</code> output.
-            </p>
-          </details>
-          <details>
-            <summary>Can I edit and redline generated contracts in Word or Google Docs?</summary>
-            <p>
-              Yes. Outputs are standard <code>.docx</code> files, so your team and counterparties can review, redline,
-              and negotiate in normal document tools.
-            </p>
-          </details>
-          <details>
-            <summary>Can OpenAgreements track contract lifecycle status like drafts and executed files?</summary>
-            <p>
-              Yes. The contracts workspace package helps organize folders by lifecycle (for example forms, drafts,
-              incoming, executed, and archive) and generate status indexes for quick review.
-            </p>
-          </details>
-          <details>
             <summary>How can I verify OpenAgreements is actively maintained and tested?</summary>
             <p>
               Public trust signals include passing CI checks, Codecov coverage with patch/project gates,
@@ -243,15 +195,6 @@ description: "Fill legal agreement templates with coding agents or local CLI exe
               Yes. OpenAgreements includes employment templates for offer letters, IP/inventions assignments,
               and confidentiality acknowledgements. The fill pipeline can also generate a jurisdiction-aware
               employment memo with compliance notes and disclaimers.
-            </p>
-          </details>
-          <details>
-            <summary>What are computed recipe profiles?</summary>
-            <p>
-              Recipes can include a <code>computed.json</code> file that derives fill values from user inputs
-              using conditional rules. For example, the NVCA Stock Purchase Agreement recipe computes
-              dispute-resolution defaults and governing-law alignment automatically based on the selected
-              jurisdiction and mode.
             </p>
           </details>
           <details>
@@ -336,38 +279,6 @@ description: "Fill legal agreement templates with coding agents or local CLI exe
           },
           {
             "@type": "Question",
-            "name": "Can I generate mutual and one-way NDA templates in Word format?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. OpenAgreements includes NDA templates and outputs editable Word .docx files for mutual and one-way NDA workflows."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can I generate Cloud Services Agreements with or without SLA terms?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. OpenAgreements supports Cloud Services Agreement variants with and without SLA terms in editable .docx output."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can I edit and redline generated contracts in Word or Google Docs?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. OpenAgreements outputs standard .docx files that can be reviewed and redlined in normal document tools."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Can OpenAgreements track contract lifecycle status like drafts and executed files?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. The contracts workspace package can organize lifecycle folders and generate status indexes for contract tracking."
-            }
-          },
-          {
-            "@type": "Question",
             "name": "How can I verify OpenAgreements is actively maintained and tested?",
             "acceptedAnswer": {
               "@type": "Answer",
@@ -380,14 +291,6 @@ description: "Fill legal agreement templates with coding agents or local CLI exe
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Yes. OpenAgreements includes employment templates for offer letters, IP/inventions assignments, and confidentiality acknowledgements, plus a jurisdiction-aware employment memo generator."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What are computed recipe profiles?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Recipes can include conditional rules that derive fill values from user inputs automatically, such as computing dispute-resolution defaults based on jurisdiction."
             }
           },
           {

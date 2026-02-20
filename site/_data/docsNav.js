@@ -19,7 +19,7 @@ export default function () {
       ],
     },
     {
-      section: "Packages",
+      section: "Other Packages",
       items: [
         { title: "Contracts Workspace CLI", slug: "contracts-workspace" },
       ],
