@@ -25,12 +25,23 @@
 
     <header class="topbar">
       <a class="brand" href="/">OpenAgreements</a>
-      <nav class="topnav">
+      <button
+        type="button"
+        class="topnav-toggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        aria-controls="site-nav"
+        hidden
+      >
+        <span class="topnav-toggle-bars" aria-hidden="true"></span>
+      </button>
+      <nav id="site-nav" class="topnav">
         <a href="/templates">Template Library</a>
         <a href="/#start">Install Guide</a>
         <a href="/#demo">Demo Video</a>
         <a href="/#faq">Q &amp; A</a>
         <a href="/docs/">Docs</a>
+        <a class="topnav-feedback-link" href="https://github.com/open-agreements/open-agreements/issues/new" target="_blank" rel="noreferrer">Feedback</a>
       </nav>
       <div class="topbar-actions">
         <div class="gh-star-widget">

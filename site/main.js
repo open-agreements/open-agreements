@@ -29,6 +29,53 @@ document.querySelectorAll('[data-copy]').forEach((btn) => {
   });
 });
 
+// Mobile top navigation toggle
+(function () {
+  const topbar = document.querySelector('.topbar');
+  const nav = document.getElementById('site-nav');
+  const toggle = document.querySelector('.topnav-toggle');
+  if (!topbar || !nav || !toggle) return;
+
+  const mediaQuery = window.matchMedia('(max-width: 640px)');
+
+  function closeNav() {
+    topbar.classList.remove('nav-open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }
+
+  function setReadyState() {
+    if (mediaQuery.matches) {
+      toggle.hidden = false;
+      closeNav();
+    } else {
+      toggle.hidden = true;
+      closeNav();
+    }
+  }
+
+  toggle.addEventListener('click', () => {
+    const isOpen = topbar.classList.toggle('nav-open');
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+
+  nav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (mediaQuery.matches) closeNav();
+    });
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') closeNav();
+  });
+
+  if (typeof mediaQuery.addEventListener === 'function') {
+    mediaQuery.addEventListener('change', setReadyState);
+  } else if (typeof mediaQuery.addListener === 'function') {
+    mediaQuery.addListener(setReadyState);
+  }
+  setReadyState();
+})();
+
 // Live MCP status pill
 const statusPill = document.querySelector('[data-live-status-pill]');
 const statusValue = document.querySelector('[data-live-status-value]');

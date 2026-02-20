@@ -155,6 +155,70 @@
     color: #8b938d;
   }
 
+  .topnav-feedback-link {
+    display: none;
+  }
+
+  .topnav-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border: 1px solid var(--line);
+    background: #fff;
+    color: var(--ink);
+    transition: border-color 120ms ease, background 120ms ease;
+  }
+
+  .topnav-toggle:hover {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+  }
+
+  .topnav-toggle-bars,
+  .topnav-toggle-bars::before,
+  .topnav-toggle-bars::after {
+    display: block;
+    width: 16px;
+    height: 2px;
+    border-radius: 999px;
+    background: currentColor;
+    transition: transform 180ms ease, top 180ms ease, opacity 180ms ease;
+    content: "";
+  }
+
+  .topnav-toggle-bars {
+    position: relative;
+  }
+
+  .topnav-toggle-bars::before,
+  .topnav-toggle-bars::after {
+    position: absolute;
+    left: 0;
+  }
+
+  .topnav-toggle-bars::before {
+    top: -6px;
+  }
+
+  .topnav-toggle-bars::after {
+    top: 6px;
+  }
+
+  .topbar.nav-open .topnav-toggle-bars {
+    transform: rotate(45deg);
+  }
+
+  .topbar.nav-open .topnav-toggle-bars::before {
+    opacity: 0;
+  }
+
+  .topbar.nav-open .topnav-toggle-bars::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+
   /* Topbar actions (GitHub star widget + Feedback) */
   .topbar-actions {
     display: flex;
@@ -869,26 +933,104 @@
     -webkit-overflow-scrolling: touch;
   }
 
-
   .topbar {
     position: static;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 10px;
+    align-items: center;
+    padding: 12px;
+  }
+
+  .topnav-toggle {
+    display: inline-flex;
+  }
+
+  .topbar-actions {
+    display: none;
+  }
+
+  .topnav-feedback-link {
+    display: block;
   }
 
   .topnav {
-    gap: 10px;
+    grid-column: 1 / -1;
+    display: grid;
+    gap: 0;
+    margin-top: 0;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    border: 1px solid var(--line);
+    border-width: 0;
+    background: #fff;
+    transition: max-height 200ms ease, opacity 180ms ease, margin-top 180ms ease,
+      border-width 180ms ease;
+  }
+
+  .topnav a {
+    display: block;
+    font-size: 0.9rem;
+    line-height: 1.3;
+    padding: 10px 12px;
+    border-top: 1px solid var(--line);
+  }
+
+  .topnav a:first-child {
+    border-top: none;
   }
 
   .topnav a + a {
     margin-left: 0;
-    padding-left: 0;
+    padding-left: 12px;
   }
 
   .topnav a + a::before {
     content: none;
   }
 
+  .topnav a:hover {
+    color: var(--accent-deep);
+    background: var(--accent-soft);
+  }
+
+  .topbar.nav-open .topnav {
+    max-height: 320px;
+    opacity: 1;
+    margin-top: 4px;
+    pointer-events: auto;
+    border-width: 1px;
+  }
+
   h1 {
     font-size: 2rem;
+  }
+
+  .main-wrap {
+    width: min(1120px, 94vw);
+    margin-top: 18px;
+  }
+
+  .section {
+    margin: 16px 0;
+  }
+
+  .hero {
+    padding: 22px 18px;
+  }
+
+  .hero-actions,
+  .callout-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .hero-actions .btn,
+  .callout-actions .btn {
+    width: 100%;
   }
 
   .dev-credit {
