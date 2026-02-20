@@ -76,9 +76,9 @@ document.querySelectorAll('[data-copy]').forEach((btn) => {
   setReadyState();
 })();
 
-// Live MCP status pill
+// MCP server status badge
 const statusPill = document.querySelector('[data-live-status-pill]');
-const statusValue = document.querySelector('[data-live-status-value]');
+const statusImage = document.querySelector('[data-live-status-img]');
 let statusState = 'checking';
 let statusLastCheckedAt = null;
 
@@ -88,23 +88,35 @@ function formatRelativeMinuteTime(date) {
 }
 
 function renderStatusPill() {
-  if (!statusPill || !statusValue) return;
+  if (!statusPill || !statusImage) return;
 
   const stateText = {
-    checking: 'checking…',
+    checking: 'checking...',
     good: 'operational',
     bad: 'degraded',
+    maintenance: 'maintenance',
     unknown: 'unverified',
-  }[statusState] ?? 'unverified';
+  }[statusState] ?? 'checking...';
 
-  statusValue.classList.remove('is-checking', 'is-good', 'is-bad', 'is-unknown');
-  statusValue.classList.add(`is-${statusState}`);
+  const stateColor = {
+    checking: '9f9f9f',
+    good: '4c1',
+    bad: 'e05d44',
+    maintenance: 'dfb317',
+    unknown: '9f9f9f',
+  }[statusState] ?? '9f9f9f';
+
+  const message = statusLastCheckedAt
+    ? `${stateText} • ${formatRelativeMinuteTime(statusLastCheckedAt)}`
+    : stateText;
+  const label = 'MCP server status';
+  const badgeUrl = `https://img.shields.io/badge/${encodeURIComponent(label)}-${encodeURIComponent(message)}-${stateColor}.svg`;
+  statusImage.src = badgeUrl;
+  statusImage.alt = `${label}: ${message}`;
 
   if (statusLastCheckedAt) {
-    statusValue.textContent = `${stateText} • ${formatRelativeMinuteTime(statusLastCheckedAt)}`;
     statusPill.title = `Last checked ${statusLastCheckedAt.toLocaleString()}`;
   } else {
-    statusValue.textContent = stateText;
     statusPill.title = 'Checking service status';
   }
 }
@@ -123,7 +135,16 @@ async function fetchStatusFromApiStatus(baseOrigin = '') {
     const state = typeof data?.status === 'string' ? data.status : '';
 
     if (state === 'operational') return 'good';
-    if (state === 'degraded') return 'bad';
+    if (
+      state === 'degraded'
+      || state === 'partial_outage'
+      || state === 'major_outage'
+      || state === 'outage'
+      || state === 'incident'
+    ) {
+      return 'bad';
+    }
+    if (state === 'maintenance') return 'maintenance';
     return 'unknown';
   } catch {
     return null;
@@ -175,7 +196,7 @@ async function checkMcpStatus() {
 
   for (const origin of origins) {
     const apiStatusState = await fetchStatusFromApiStatus(origin);
-    if (apiStatusState === 'good' || apiStatusState === 'bad') {
+    if (apiStatusState === 'good' || apiStatusState === 'bad' || apiStatusState === 'maintenance') {
       setStatusState(apiStatusState, checkedAt);
       return;
     }
