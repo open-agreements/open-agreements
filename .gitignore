@@ -20,11 +20,7 @@ site/downloads/
 site/schemas/
 packages/contracts-workspace/schemas/
 
-# safe-docx suite (migrated to dedicated repo)
-packages/docx-comparison/
-packages/docx-primitives/
-packages/safe-docx/
-packages/safe-docx-mcpb/
+# Local test documents
 tests/test_documents/
 
 # Smoke test artifacts
@@ -47,3 +43,4 @@ integration-tests/OPENSPEC_TRACEABILITY.md
 # MCP bundle artifacts
 *.mcpb
 *.dxt
+.env*.local

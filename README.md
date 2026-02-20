@@ -115,7 +115,7 @@ This repository includes a Cursor plugin manifest with MCP wiring:
 The default MCP setup in `mcp.json` includes:
 
 - Hosted OpenAgreements MCP connector (`https://openagreements.ai/api/mcp`)
-- Local SafeDocX stdio server (`npx -y @open-agreements/safe-docx`)
+- Local SafeDocX stdio server (`npx -y @usejunior/safedocx`)
 
 To publish this plugin in Cursor Marketplace, submit this repository at:
 

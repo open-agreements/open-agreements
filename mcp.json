@@ -8,7 +8,7 @@
       "command": "npx",
       "args": [
         "-y",
-        "@open-agreements/safe-docx"
+        "@usejunior/safedocx"
       ]
     }
   }
