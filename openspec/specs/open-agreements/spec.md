@@ -466,3 +466,18 @@ The NVCA SPA test suite SHALL include interaction-focused coverage that asserts 
 - **AND** computed outputs include forum vs governing-law alignment status
 - **AND** when courts are selected and judicial district is omitted, computed outputs derive judicial district defaults
 - **AND** the exported trace shows the dependency chain
+
+### Requirement: Safe Docx Suite Is Externalized
+The repository SHALL integrate SafeDocX as an external package dependency rather than vendoring the SafeDocX package suite in `packages/`.
+
+#### Scenario: [OA-067] safe-docx suite package directories are not vendored
+- **WHEN** maintainers inspect repository package directories
+- **THEN** `packages/safe-docx`, `packages/docx-primitives`, `packages/docx-comparison`, and `packages/safe-docx-mcpb` are absent
+- **AND** only active OpenAgreements package directories remain
+
+### Requirement: Local MCP Configuration Uses External SafeDocX Package
+The repository SHALL configure local MCP integration to use the published UseJunior SafeDocX package.
+
+#### Scenario: [OA-068] mcp.json points to canonical external package
+- **WHEN** maintainers inspect `mcp.json`
+- **THEN** the `safe-docx` stdio server command uses `npx -y @usejunior/safedocx`

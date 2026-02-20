@@ -50,15 +50,19 @@ const MOCK_FILL_FAILURE = {
 const handleFillMock = vi.fn();
 const handleListTemplatesMock = vi.fn(() => MOCK_LIST_RESULT);
 const handleGetTemplateMock = vi.fn(() => MOCK_LIST_RESULT.items[0]);
-const createDownloadTokenMock = vi.fn(() => 'mock-token.mock-sig');
-const parseDownloadTokenMock = vi.fn();
+const createDownloadArtifactMock = vi.fn(() => ({
+  download_id: 'mock-download-id.mock-sig',
+  expires_at: new Date(Date.now() + 3600000).toISOString(),
+  expires_at_ms: Date.now() + 3600000,
+}));
+const resolveDownloadArtifactMock = vi.fn();
 
 vi.mock('../api/_shared.js', () => ({
   handleFill: handleFillMock,
   handleListTemplates: handleListTemplatesMock,
   handleGetTemplate: handleGetTemplateMock,
-  createDownloadToken: createDownloadTokenMock,
-  parseDownloadToken: parseDownloadTokenMock,
+  createDownloadArtifact: createDownloadArtifactMock,
+  resolveDownloadArtifact: resolveDownloadArtifactMock,
   DOCX_MIME: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
   PROJECT_ROOT: '/mock',
 }));
@@ -419,11 +423,6 @@ describe('MCP endpoint — api/mcp.ts', () => {
 
   it('handles tools/call fill_template with URL return_mode envelope', async () => {
     handleFillMock.mockResolvedValue(MOCK_FILL_SUCCESS);
-    parseDownloadTokenMock.mockReturnValue({
-      t: 'common-paper-mutual-nda',
-      v: { company_name: 'Acme Corp' },
-      e: Date.now() + 3600000,
-    });
 
     const req = createMockReq({
       headers: { 'content-type': 'application/json', host: 'openagreements.ai' },
@@ -446,14 +445,14 @@ describe('MCP endpoint — api/mcp.ts', () => {
     await allureJsonAttachment('mcp-fill-response.json', res.body);
 
     expect(handleFillMock).toHaveBeenCalledWith('common-paper-mutual-nda', { company_name: 'Acme Corp' });
-    expect(createDownloadTokenMock).toHaveBeenCalledWith('common-paper-mutual-nda', { company_name: 'Acme Corp' });
+    expect(createDownloadArtifactMock).toHaveBeenCalledWith('common-paper-mutual-nda', { company_name: 'Acme Corp' });
 
     const envelope = parseMcpEnvelope(res.body);
     expect(envelope.ok).toBe(true);
     expect(envelope.tool).toBe('fill_template');
     expect(envelope.data.return_mode).toBe('url');
-    expect(envelope.data.download_url).toContain('/api/download?token=');
-    expect(envelope.data.token).toBe('mock-token.mock-sig');
+    expect(envelope.data.download_url).toContain('/api/download?id=');
+    expect(envelope.data.download_id).toBe('mock-download-id.mock-sig');
     expect(envelope.data.expires_at).toBeDefined();
     expect(envelope.data.rate_limit).toBeDefined();
   });
@@ -557,7 +556,7 @@ describe('MCP endpoint — api/mcp.ts', () => {
 const { default: downloadHandler } = await import('../api/download.js');
 
 describe('Download endpoint — api/download.ts', () => {
-  it('returns 405 for non-GET methods', async () => {
+  it('returns 405 for non-GET/HEAD methods', async () => {
     const req = createMockReq({ method: 'POST' });
     const res = createMockRes();
     await downloadHandler(req as any, res as any);
@@ -565,35 +564,40 @@ describe('Download endpoint — api/download.ts', () => {
     expect(res.statusCode).toBe(405);
   });
 
-  it('returns 400 when token is missing', async () => {
+  it('returns 400 with machine-readable code when id is missing', async () => {
     const req = createMockReq({ method: 'GET', query: {} });
     const res = createMockRes();
     await downloadHandler(req as any, res as any);
 
     expect(res.statusCode).toBe(400);
-    expect((res.body as any).error).toContain('token');
+    expect((res.body as any).error.code).toBe('DOWNLOAD_ID_MISSING');
+    expect((res.body as any).error.message).toContain('"id"');
   });
 
-  it('returns 403 for invalid token', async () => {
-    parseDownloadTokenMock.mockReturnValue(null);
+  it('returns 403 with machine-readable code for invalid signature', async () => {
+    resolveDownloadArtifactMock.mockReturnValue({ ok: false, code: 'DOWNLOAD_SIGNATURE_INVALID' });
 
-    const req = createMockReq({ method: 'GET', query: { token: 'bad-token' } });
+    const req = createMockReq({ method: 'GET', query: { id: 'bad-download-id' } });
     const res = createMockRes();
     await downloadHandler(req as any, res as any);
 
     expect(res.statusCode).toBe(403);
-    expect((res.body as any).error).toContain('expired');
+    expect((res.body as any).error.code).toBe('DOWNLOAD_SIGNATURE_INVALID');
   });
 
-  it('serves DOCX for valid token', async () => {
-    parseDownloadTokenMock.mockReturnValue({
-      t: 'common-paper-mutual-nda',
-      v: { company_name: 'Acme Corp' },
-      e: Date.now() + 3600000,
+  it('serves DOCX for valid download_id', async () => {
+    resolveDownloadArtifactMock.mockReturnValue({
+      ok: true,
+      artifact: {
+        template: 'common-paper-mutual-nda',
+        values: { company_name: 'Acme Corp' },
+        expires_at_ms: Date.now() + 3600000,
+        created_at_ms: Date.now(),
+      },
     });
     handleFillMock.mockResolvedValue(MOCK_FILL_SUCCESS);
 
-    const req = createMockReq({ method: 'GET', query: { token: 'valid-token.valid-sig' } });
+    const req = createMockReq({ method: 'GET', query: { id: 'valid-id.valid-sig' } });
     const res = createMockRes();
     await downloadHandler(req as any, res as any);
 
@@ -606,20 +610,59 @@ describe('Download endpoint — api/download.ts', () => {
     expect(Buffer.isBuffer(res.body)).toBe(true);
   });
 
-  it('returns 500 when handleFill fails for a valid token', async () => {
-    parseDownloadTokenMock.mockReturnValue({
-      t: 'nonexistent',
-      v: {},
-      e: Date.now() + 3600000,
+  it('returns 500 with machine-readable code when fill fails for a valid id', async () => {
+    resolveDownloadArtifactMock.mockReturnValue({
+      ok: true,
+      artifact: {
+        template: 'nonexistent',
+        values: {},
+        expires_at_ms: Date.now() + 3600000,
+        created_at_ms: Date.now(),
+      },
     });
     handleFillMock.mockResolvedValue(MOCK_FILL_FAILURE);
 
-    const req = createMockReq({ method: 'GET', query: { token: 'valid-but-bad-template' } });
+    const req = createMockReq({ method: 'GET', query: { id: 'valid-but-bad-template' } });
     const res = createMockRes();
     await downloadHandler(req as any, res as any);
 
     expect(res.statusCode).toBe(500);
-    expect((res.body as any).error).toContain('nonexistent');
+    expect((res.body as any).error.code).toBe('DOWNLOAD_RENDER_FAILED');
+    expect((res.body as any).error.message).toContain('nonexistent');
+  });
+
+  it('supports HEAD for valid download_id without response body', async () => {
+    resolveDownloadArtifactMock.mockReturnValue({
+      ok: true,
+      artifact: {
+        template: 'common-paper-mutual-nda',
+        values: { company_name: 'Acme Corp' },
+        expires_at_ms: Date.now() + 3600000,
+        created_at_ms: Date.now(),
+      },
+    });
+    handleFillMock.mockResolvedValue(MOCK_FILL_SUCCESS);
+
+    const req = createMockReq({ method: 'HEAD', query: { id: 'valid-id.valid-sig' } });
+    const res = createMockRes();
+    await downloadHandler(req as any, res as any);
+
+    expect(res.statusCode).toBe(200);
+    expect(res.body).toBeUndefined();
+    expect(res.ended).toBe(true);
+  });
+
+  it('supports HEAD error probing with status parity', async () => {
+    resolveDownloadArtifactMock.mockReturnValue({ ok: false, code: 'DOWNLOAD_EXPIRED' });
+
+    const req = createMockReq({ method: 'HEAD', query: { id: 'expired-id.valid-sig' } });
+    const res = createMockRes();
+    await downloadHandler(req as any, res as any);
+
+    expect(res.statusCode).toBe(410);
+    expect(res.headers['X-Download-Error-Code']).toBe('DOWNLOAD_EXPIRED');
+    expect(res.body).toBeUndefined();
+    expect(res.ended).toBe(true);
   });
 
   it('returns 204 for OPTIONS (CORS preflight)', async () => {

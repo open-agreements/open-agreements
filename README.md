@@ -104,6 +104,23 @@ open-agreements fill common-paper-mutual-nda -d values.json -o my-nda.docx
 3. Claude runs `fill <template>` to render a DOCX preserving all original formatting
 4. You review and sign the output document
 
+## Use with Cursor
+
+This repository includes a Cursor plugin manifest with MCP wiring:
+
+- Plugin manifest: `.cursor-plugin/plugin.json`
+- MCP config: `mcp.json`
+- Skill: `skills/open-agreements/SKILL.md`
+
+The default MCP setup in `mcp.json` includes:
+
+- Hosted OpenAgreements MCP connector (`https://openagreements.ai/api/mcp`)
+- Local SafeDocX stdio server (`npx -y @usejunior/safedocx`)
+
+To publish this plugin in Cursor Marketplace, submit this repository at:
+
+- https://cursor.com/marketplace/publish
+
 ## Templates
 
 28 templates across three tiers. Run `open-agreements list` for the full inventory.

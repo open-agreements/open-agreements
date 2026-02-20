@@ -1,6 +1,6 @@
 /**
- * Unit tests for the stateless download token (HMAC sign/verify/expiry).
- * These are pure crypto tests — no mocking needed.
+ * Unit tests for signed opaque download IDs (sign/verify/expiry).
+ * These are pure helper tests — no endpoint mocking needed.
  */
 
 import { describe, expect } from 'vitest';
@@ -8,88 +8,84 @@ import { itAllure, allureStep, allureJsonAttachment } from './helpers/allure-tes
 
 const it = itAllure.epic('Platform & Distribution');
 
-// Import token functions directly — they only use node:crypto
-const { createDownloadToken, parseDownloadToken } = await import('../api/_shared.js');
+const { createDownloadArtifact, resolveDownloadArtifact } = await import('../api/_shared.js');
 
-describe('Download token — sign / verify / expiry', () => {
+describe('Download IDs — sign / verify / expiry', () => {
   const TEMPLATE = 'common-paper-mutual-nda';
   const VALUES = { company_name: 'Acme Corp', counterparty_name: 'Globex Inc' };
 
-  it('round-trips a valid token', async () => {
-    const token = createDownloadToken(TEMPLATE, VALUES);
-    await allureStep('Create token', async () => {
-      expect(token).toBeTypeOf('string');
-      expect(token).toContain('.');
+  it('round-trips a valid signed download_id', async () => {
+    const created = await createDownloadArtifact(TEMPLATE, VALUES);
+    await allureStep('Create download artifact', async () => {
+      expect(created.download_id).toBeTypeOf('string');
+      expect(created.download_id).toContain('.');
     });
 
-    const payload = await allureStep('Parse token', async () => {
-      return parseDownloadToken(token);
+    const resolved = await allureStep('Resolve download_id', async () => {
+      return resolveDownloadArtifact(created.download_id);
     });
 
-    await allureJsonAttachment('token-roundtrip.json', { token: token.slice(0, 40) + '...', payload });
-    expect(payload).not.toBeNull();
-    expect(payload!.t).toBe(TEMPLATE);
-    expect(payload!.v).toEqual(VALUES);
-    expect(payload!.e).toBeGreaterThan(Date.now());
+    await allureJsonAttachment('download-id-roundtrip.json', {
+      download_id: created.download_id.slice(0, 40) + '...',
+      resolved,
+    });
+    expect(resolved.ok).toBe(true);
+    if (resolved.ok) {
+      expect(resolved.artifact.template).toBe(TEMPLATE);
+      expect(resolved.artifact.values).toEqual(VALUES);
+      expect(resolved.artifact.expires_at_ms).toBeGreaterThan(Date.now());
+    }
   });
 
-  it('rejects a tampered token', async () => {
-    const token = createDownloadToken(TEMPLATE, VALUES);
-    const tampered = token.slice(0, -1) + (token.endsWith('A') ? 'B' : 'A');
+  it('rejects a tampered signature', async () => {
+    const created = await createDownloadArtifact(TEMPLATE, VALUES);
+    const tampered = created.download_id.slice(0, -1)
+      + (created.download_id.endsWith('A') ? 'B' : 'A');
 
-    const payload = parseDownloadToken(tampered);
-    expect(payload).toBeNull();
+    const resolved = await resolveDownloadArtifact(tampered);
+    expect(resolved).toEqual({ ok: false, code: 'DOWNLOAD_SIGNATURE_INVALID' });
   });
 
-  it('rejects a completely invalid token', async () => {
-    expect(parseDownloadToken('')).toBeNull();
-    expect(parseDownloadToken('no-dot-here')).toBeNull();
-    expect(parseDownloadToken('.leading-dot')).toBeNull();
-    expect(parseDownloadToken('not-base64.not-base64')).toBeNull();
+  it('rejects malformed download_id values', async () => {
+    await expect(resolveDownloadArtifact('')).resolves.toEqual({ ok: false, code: 'DOWNLOAD_ID_MALFORMED' });
+    await expect(resolveDownloadArtifact('no-dot-here')).resolves.toEqual({ ok: false, code: 'DOWNLOAD_ID_MALFORMED' });
+    await expect(resolveDownloadArtifact('.leading-dot')).resolves.toEqual({ ok: false, code: 'DOWNLOAD_ID_MALFORMED' });
+    await expect(resolveDownloadArtifact('nothex.not-base64')).resolves.toEqual({ ok: false, code: 'DOWNLOAD_ID_MALFORMED' });
   });
 
-  it('rejects an expired token', async () => {
-    const token = createDownloadToken(TEMPLATE, VALUES);
-
-    // Decode and re-encode with past expiry to simulate expiration
-    const dotIdx = token.indexOf('.');
-    const data = token.slice(0, dotIdx);
-    const decoded = JSON.parse(Buffer.from(data, 'base64url').toString('utf-8'));
-    decoded.e = Date.now() - 1000; // 1 second ago
-    const expiredData = Buffer.from(JSON.stringify(decoded)).toString('base64url');
-
-    // Re-sign would need the secret, so instead forge the full token
-    // Since we can't access the secret, we just verify that the original
-    // token parsing validates expiry if we could manipulate it.
-    // For a proper test, we verify behavior with a forged payload (wrong sig).
-    const forgedToken = expiredData + '.' + token.slice(dotIdx + 1);
-    const payload = parseDownloadToken(forgedToken);
-    expect(payload).toBeNull(); // sig mismatch OR expired
+  it('rejects an expired download_id', async () => {
+    const created = await createDownloadArtifact(TEMPLATE, VALUES, { ttl_ms: -1 });
+    const resolved = await resolveDownloadArtifact(created.download_id);
+    expect(resolved).toEqual({ ok: false, code: 'DOWNLOAD_EXPIRED' });
   });
 
   it('preserves empty values object', async () => {
-    const token = createDownloadToken(TEMPLATE, {});
-    const payload = parseDownloadToken(token);
-    expect(payload).not.toBeNull();
-    expect(payload!.v).toEqual({});
+    const created = await createDownloadArtifact(TEMPLATE, {});
+    const resolved = await resolveDownloadArtifact(created.download_id);
+    expect(resolved.ok).toBe(true);
+    if (resolved.ok) {
+      expect(resolved.artifact.values).toEqual({});
+    }
   });
 
-  it('handles many field values without exceeding URL-safe lengths', async () => {
+  it('keeps download_id length stable as values grow', async () => {
     const manyValues: Record<string, string> = {};
     for (let i = 0; i < 20; i++) {
       manyValues[`field_${i}`] = `value_${i}_with_some_content`;
     }
-    const token = createDownloadToken(TEMPLATE, manyValues);
+    const created = await createDownloadArtifact(TEMPLATE, manyValues);
 
-    await allureJsonAttachment('large-token-stats.json', {
+    await allureJsonAttachment('download-id-stats.json', {
       fieldCount: 20,
-      tokenLength: token.length,
-      withinUrlLimit: token.length < 2048,
+      downloadIdLength: created.download_id.length,
+      withinUrlLimit: created.download_id.length < 256,
     });
 
-    expect(token.length).toBeLessThan(2048);
-    const payload = parseDownloadToken(token);
-    expect(payload).not.toBeNull();
-    expect(Object.keys(payload!.v)).toHaveLength(20);
+    expect(created.download_id.length).toBeLessThan(256);
+    const resolved = await resolveDownloadArtifact(created.download_id);
+    expect(resolved.ok).toBe(true);
+    if (resolved.ok) {
+      expect(Object.keys(resolved.artifact.values)).toHaveLength(20);
+    }
   });
 });

@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "open-agreements": {
+      "url": "https://openagreements.ai/api/mcp"
+    },
+    "safe-docx": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@usejunior/safedocx"
+      ]
+    }
+  }
+}

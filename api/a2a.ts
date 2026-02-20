@@ -3,7 +3,7 @@
  * JSON-RPC 2.0 with message/send routing to fill-template and list-templates skills.
  */
 
-import type { VercelRequest, VercelResponse } from '@vercel/node';
+import type { HttpRequest, HttpResponse } from './_http-types.js';
 import { randomUUID } from 'node:crypto';
 import { handleFill, handleListTemplates, DOCX_MIME } from './_shared.js';
 
@@ -23,7 +23,7 @@ function jsonRpcResult(id: unknown, result: unknown) {
 // Main handler
 // ---------------------------------------------------------------------------
 
-export default async function handler(req: VercelRequest, res: VercelResponse) {
+export default async function handler(req: HttpRequest, res: HttpResponse) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');

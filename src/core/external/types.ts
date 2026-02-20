@@ -3,7 +3,7 @@ import type { ExternalMetadata } from '../metadata.js';
 export interface ExternalFillOptions {
   externalId: string;
   outputPath: string;
-  values: Record<string, string>;
+  values: Record<string, unknown>;
   keepIntermediate?: boolean;
 }
 

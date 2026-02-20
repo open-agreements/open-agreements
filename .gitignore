@@ -9,14 +9,26 @@ coverage/
 # Draft change proposals (unimplemented roadmap — keep private until shipped)
 # Archived (implemented) changes are safe to track
 openspec/changes/add-*/
+openspec/changes/update-*/
 !openspec/changes/archive/
 .vercel
 
 # Build artifacts
 _site/
+site/docs/*.md
 site/downloads/
 site/schemas/
 packages/contracts-workspace/schemas/
+
+# Local test documents
+tests/test_documents/
+
+# Smoke test artifacts
+.tmp-smoke/
+
+# AI agent config
+GEMINI.md
+gemini-extension.json
 
 # Python virtual env
 .venv/
@@ -27,3 +39,8 @@ packages/contracts-workspace/schemas/
 # CI / test artifacts
 artifacts/
 integration-tests/OPENSPEC_TRACEABILITY.md
+
+# MCP bundle artifacts
+*.mcpb
+*.dxt
+.env*.local
