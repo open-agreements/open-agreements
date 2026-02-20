@@ -17,6 +17,14 @@ OpenAgreements uses an agent-agnostic `ToolCommandAdapter` interface for generat
 - **How it works**: Claude reads template metadata, interviews the user via `AskUserQuestion`, and invokes the CLI to render the DOCX
 - **Usage**: `/open-agreements` in Claude Code
 
+### Cursor
+
+- **Plugin manifest**: `.cursor-plugin/plugin.json`
+- **MCP config**: `mcp.json`
+- **Skill file**: `skills/open-agreements/SKILL.md`
+- **How it works**: Cursor can load OpenAgreements MCP servers from `mcp.json` and use the OpenAgreements skill for guided template filling
+- **Publish URL**: `https://cursor.com/marketplace/publish`
+
 ## Adding Support for New Agents
 
 To add support for a new coding agent (e.g., Cursor, Windsurf):

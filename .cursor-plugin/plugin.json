@@ -1,0 +1,32 @@
+{
+  "name": "open-agreements",
+  "displayName": "OpenAgreements",
+  "description": "Open-source legal template automation for DOCX with MCP tooling.",
+  "version": "0.1.1",
+  "author": {
+    "name": "Open Agreements",
+    "email": "steven@usejunior.com"
+  },
+  "publisher": "Open Agreements",
+  "homepage": "https://github.com/open-agreements/open-agreements#readme",
+  "repository": "https://github.com/open-agreements/open-agreements",
+  "license": "MIT",
+  "logo": "site/assets/openagreements_logo.jpg",
+  "keywords": [
+    "cursor",
+    "mcp",
+    "legal",
+    "docx",
+    "contracts",
+    "nda"
+  ],
+  "category": "Developer Tools",
+  "tags": [
+    "mcp",
+    "legal-tech",
+    "document-generation",
+    "contract-automation"
+  ],
+  "skills": "skills/**/SKILL.md",
+  "mcpServers": "mcp.json"
+}
