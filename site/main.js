@@ -175,10 +175,10 @@ if (statusPill) {
   ul.className = 'toc-list';
 
   headings.forEach((heading) => {
-    // Skip headings inside links (e.g. docs index cards)
+    // Skip headings inside links (e.g. card titles on docs index)
     if (heading.closest('a')) return;
 
-    // Capture heading text before appending anchor node
+    // Grab heading text before we append anything
     const headingText = heading.textContent.trim();
 
     // Assign id slug if missing
@@ -189,7 +189,7 @@ if (statusPill) {
         .replace(/\s+/g, '-');
     }
 
-    // Add permalink anchor; visible marker is rendered in CSS ::after
+    // Add permalink anchor (no visible text — CSS ::after adds # on hover)
     const anchor = document.createElement('a');
     anchor.className = 'heading-anchor';
     anchor.href = '#' + heading.id;

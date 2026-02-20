@@ -23,17 +23,14 @@ description: "Fill legal agreement templates with coding agents or local CLI exe
         </div>
         <div class="badge-stack" id="trust">
           <div class="badge-row">
-            {% if github.stars != null %}
-            <a class="gh-stars-badge" href="https://github.com/open-agreements/open-agreements/stargazers" target="_blank" rel="noreferrer">
-              <span class="shield-segment shield-label"><svg viewBox="0 0 16 16" width="12" height="12" fill="currentColor"><path d="M8 .25a.75.75 0 0 1 .673.418l1.882 3.815 4.21.612a.75.75 0 0 1 .416 1.279l-3.046 2.97.719 4.192a.75.75 0 0 1-1.088.791L8 12.347l-3.766 1.98a.75.75 0 0 1-1.088-.79l.72-4.194L.818 6.374a.75.75 0 0 1 .416-1.28l4.21-.611L7.327.668A.75.75 0 0 1 8 .25z"/></svg> Stars</span>
-              <span class="shield-segment shield-value">{{ github.stars }}</span>
-            </a>
-            {% endif %}
             <a class="trust-badge" href="https://npmjs.org/package/open-agreements" target="_blank" rel="noreferrer">
               <img src="https://img.shields.io/npm/dm/open-agreements.svg" alt="npm downloads" height="20" loading="lazy" />
             </a>
             <a class="trust-badge" href="https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml?query=branch%3Amain" target="_blank" rel="noreferrer">
               <img src="https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml/badge.svg" alt="CI status" height="20" loading="lazy" />
+            </a>
+            <a class="trust-badge" href="https://app.codecov.io/gh/open-agreements/open-agreements" target="_blank" rel="noreferrer">
+              <img src="https://img.shields.io/codecov/c/github/open-agreements/open-agreements/main" alt="Coverage status" height="20" loading="lazy" />
             </a>
             <a class="trust-badge trust-badge-shield" data-live-status-pill href="https://openagreements.openstatus.dev/" target="_blank" rel="noreferrer">
               <span class="shield-segment shield-label">Live MCP status</span>

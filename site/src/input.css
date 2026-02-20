@@ -155,6 +155,72 @@
     color: #8b938d;
   }
 
+  /* Topbar actions (GitHub star widget + Feedback) */
+  .topbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+
+  .gh-star-widget {
+    display: inline-flex;
+    align-items: stretch;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    overflow: hidden;
+    font-size: 0.82rem;
+    line-height: 1;
+  }
+
+  .gh-star-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    background: #fff;
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 120ms ease;
+  }
+
+  .gh-star-btn:hover {
+    background: var(--bg);
+  }
+
+  .gh-star-btn svg {
+    flex-shrink: 0;
+  }
+
+  .gh-star-count {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 8px;
+    background: var(--bg);
+    color: var(--ink);
+    text-decoration: none;
+    font-weight: 600;
+    border-left: 1px solid var(--line);
+    transition: color 120ms ease;
+  }
+
+  .gh-star-count:hover {
+    color: var(--accent-deep);
+  }
+
+  .topbar-feedback {
+    color: var(--ink-soft);
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 500;
+    transition: color 120ms ease;
+  }
+
+  .topbar-feedback:hover {
+    color: var(--accent-deep);
+  }
+
   /* Main container */
   .main-wrap {
     width: min(1120px, 92vw);
@@ -972,7 +1038,7 @@
     font-weight: 600;
   }
 
-  /* Heading anchor links — hidden by default, shown on heading hover */
+  /* Heading anchor links — hidden by default, # appears on hover via ::after */
   .heading-anchor {
     text-decoration: none;
     margin-left: 4px;
@@ -981,9 +1047,9 @@
   .heading-anchor::after {
     content: "#";
     color: var(--line);
+    font-weight: 400;
     opacity: 0;
     transition: opacity 150ms ease;
-    font-weight: 400;
   }
 
   .prose h2:hover .heading-anchor::after,
