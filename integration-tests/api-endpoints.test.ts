@@ -585,6 +585,24 @@ describe('Download endpoint — api/download.ts', () => {
     expect((res.body as any).error.code).toBe('DOWNLOAD_SIGNATURE_INVALID');
   });
 
+  it('renders a user-facing HTML error page when browser clients request text/html', async () => {
+    resolveDownloadArtifactMock.mockReturnValue({ ok: false, code: 'DOWNLOAD_EXPIRED' });
+
+    const req = createMockReq({
+      method: 'GET',
+      query: { id: 'expired-id.valid-sig' },
+      headers: { accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' },
+    });
+    const res = createMockRes();
+    await downloadHandler(req as any, res as any);
+
+    expect(res.statusCode).toBe(410);
+    expect(res.headers['Content-Type']).toContain('text/html');
+    expect(typeof res.body).toBe('string');
+    expect(String(res.body)).toContain('Download Link Unavailable');
+    expect(String(res.body)).toContain('DOWNLOAD_EXPIRED');
+  });
+
   it('serves DOCX for valid download_id', async () => {
     resolveDownloadArtifactMock.mockReturnValue({
       ok: true,
