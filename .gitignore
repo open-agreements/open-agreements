@@ -6,11 +6,10 @@ allure-results/
 allure-report/
 coverage/
 
-# Draft change proposals (unimplemented roadmap — keep private until shipped)
-# Archived (implemented) changes are safe to track
-openspec/changes/add-*/
-openspec/changes/update-*/
-!openspec/changes/archive/
+# OpenSpec private drafts (local brainstorming only)
+openspec/private/*
+!openspec/private/.gitkeep
+!openspec/private/README.md
 .vercel
 
 # Build artifacts
