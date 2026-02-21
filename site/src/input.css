@@ -874,45 +874,6 @@
     height: 20px;
   }
 
-  .trust-badge-shield {
-    border: 1px solid rgba(20, 32, 35, 0.18);
-  }
-
-  .shield-segment {
-    display: inline-flex;
-    align-items: center;
-    height: 20px;
-    padding: 0 8px;
-    font-size: 0.72rem;
-    font-weight: 600;
-    color: #fff;
-    line-height: 1;
-    white-space: nowrap;
-  }
-
-  .shield-label {
-    background: #4b5563;
-  }
-
-  .shield-value {
-    background: #6b7280;
-  }
-
-  .status-value.is-checking {
-    background: #6b7280;
-  }
-
-  .status-value.is-good {
-    background: #238636;
-  }
-
-  .status-value.is-bad {
-    background: #cf222e;
-  }
-
-  .status-value.is-unknown {
-    background: #6b7280;
-  }
 }
 
 /* ─── Responsive ─── */
@@ -1045,10 +1006,6 @@
     display: block;
   }
 
-  .shield-segment {
-    font-size: 0.68rem;
-    padding: 0 6px;
-  }
 }
 
 /* ─── Docs layout ─── */
@@ -1355,48 +1312,6 @@
     margin-left: auto;
   }
 
-  /* GitHub stars badge */
-  .gh-stars-badge {
-    display: inline-flex;
-    align-items: stretch;
-    text-decoration: none;
-    border-radius: 4px;
-    overflow: hidden;
-    border: 1px solid rgba(20, 32, 35, 0.18);
-    transition: transform 140ms ease, filter 140ms ease;
-  }
-
-  .gh-stars-badge:hover {
-    transform: translateY(-1px);
-    filter: brightness(1.03);
-  }
-
-  .gh-stars-badge .shield-segment {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    height: 20px;
-    padding: 0 8px;
-    font-size: 0.72rem;
-    font-weight: 600;
-    color: #fff;
-    line-height: 1;
-    white-space: nowrap;
-  }
-
-  .gh-stars-badge .shield-label {
-    background: #24292f;
-  }
-
-  .gh-stars-badge .shield-value {
-    background: #0969da;
-  }
-
-  .gh-stars-badge svg {
-    width: 12px;
-    height: 12px;
-    fill: currentColor;
-  }
 }
 
 /* Docs responsive — hide ToC at <=1024px */
