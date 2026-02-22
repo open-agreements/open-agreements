@@ -24,6 +24,21 @@ export interface ChecklistAppliedPatchStore {
   set(record: ChecklistAppliedPatchRecord): Promise<void>;
 }
 
+export interface ChecklistProposedPatchRecord {
+  checklist_id: string;
+  patch_id: string;
+  patch_hash: string;
+  proposed_at_ms: number;
+  expected_revision: number;
+  validation_id: string;
+  resolved_operations: ResolvedChecklistPatchOperation[];
+}
+
+export interface ChecklistProposedPatchStore {
+  get(checklistId: string, patchId: string): Promise<ChecklistProposedPatchRecord | null>;
+  set(record: ChecklistProposedPatchRecord): Promise<void>;
+}
+
 class InMemoryChecklistAppliedPatchStore implements ChecklistAppliedPatchStore {
   private readonly map = new Map<string, ChecklistAppliedPatchRecord>();
 
@@ -40,7 +55,24 @@ class InMemoryChecklistAppliedPatchStore implements ChecklistAppliedPatchStore {
   }
 }
 
+class InMemoryChecklistProposedPatchStore implements ChecklistProposedPatchStore {
+  private readonly map = new Map<string, ChecklistProposedPatchRecord>();
+
+  private key(checklistId: string, patchId: string): string {
+    return `${checklistId}:${patchId}`;
+  }
+
+  async get(checklistId: string, patchId: string): Promise<ChecklistProposedPatchRecord | null> {
+    return this.map.get(this.key(checklistId, patchId)) ?? null;
+  }
+
+  async set(record: ChecklistProposedPatchRecord): Promise<void> {
+    this.map.set(this.key(record.checklist_id, record.patch_id), record);
+  }
+}
+
 let appliedPatchStore: ChecklistAppliedPatchStore | null = null;
+let proposedPatchStore: ChecklistProposedPatchStore | null = null;
 
 export function setChecklistAppliedPatchStore(store: ChecklistAppliedPatchStore | null): void {
   appliedPatchStore = store;
@@ -53,6 +85,17 @@ export function getChecklistAppliedPatchStore(): ChecklistAppliedPatchStore {
   return appliedPatchStore;
 }
 
+export function setChecklistProposedPatchStore(store: ChecklistProposedPatchStore | null): void {
+  proposedPatchStore = store;
+}
+
+export function getChecklistProposedPatchStore(): ChecklistProposedPatchStore {
+  if (!proposedPatchStore) {
+    proposedPatchStore = new InMemoryChecklistProposedPatchStore();
+  }
+  return proposedPatchStore;
+}
+
 export type ChecklistPatchApplyErrorCode =
   | 'CHECKLIST_SCHEMA_INVALID'
   | 'APPLY_REQUEST_SCHEMA_INVALID'
@@ -61,8 +104,7 @@ export type ChecklistPatchApplyErrorCode =
   | 'REVISION_CONFLICT'
   | 'PATCH_ID_CONFLICT'
   | 'APPLY_OPERATION_FAILED'
-  | 'POST_PATCH_SCHEMA_INVALID'
-  | 'MODE_NOT_SUPPORTED';
+  | 'POST_PATCH_SCHEMA_INVALID';
 
 export interface ChecklistPatchApplyFailure {
   ok: false;
@@ -79,6 +121,8 @@ export interface ChecklistPatchApplySuccess {
   patch_id: string;
   patch_hash: string;
   idempotent_replay: boolean;
+  mode: 'APPLY' | 'PROPOSED';
+  applied: boolean;
   resolved_operations: ResolvedChecklistPatchOperation[];
 }
 
@@ -92,6 +136,7 @@ export interface ApplyChecklistPatchInput {
   now_ms?: number;
   validation_store?: ChecklistPatchValidationStore;
   applied_patch_store?: ChecklistAppliedPatchStore;
+  proposed_patch_store?: ChecklistProposedPatchStore;
 }
 
 function cloneValue<T>(value: T): T {
@@ -150,14 +195,7 @@ export async function applyChecklistPatch(input: ApplyChecklistPatchInput): Prom
   if (!requestParsed.ok) return requestParsed;
 
   const request = requestParsed.request;
-  if (request.patch.mode !== 'APPLY') {
-    return {
-      ok: false,
-      error_code: 'MODE_NOT_SUPPORTED',
-      message: `Patch mode "${request.patch.mode}" is not supported by apply; use validate/proposed flow.`,
-      diagnostics: [],
-    };
-  }
+  const mode = request.patch.mode;
 
   const patchHash = computeChecklistPatchHash(request.patch);
   const validationStore = input.validation_store ?? getChecklistPatchValidationStore();
@@ -214,6 +252,8 @@ export async function applyChecklistPatch(input: ApplyChecklistPatchInput): Prom
         patch_id: request.patch.patch_id,
         patch_hash: patchHash,
         idempotent_replay: true,
+        mode,
+        applied: false,
         resolved_operations: validationArtifact.resolved_operations,
       };
     }
@@ -223,6 +263,57 @@ export async function applyChecklistPatch(input: ApplyChecklistPatchInput): Prom
       error_code: 'PATCH_ID_CONFLICT',
       message: `patch_id "${request.patch.patch_id}" already exists with different payload hash.`,
       diagnostics: [],
+    };
+  }
+
+  if (mode === 'PROPOSED') {
+    const proposedStore = input.proposed_patch_store ?? getChecklistProposedPatchStore();
+    const existingProposal = await proposedStore.get(input.checklist_id, request.patch.patch_id);
+    if (existingProposal) {
+      if (existingProposal.patch_hash === patchHash) {
+        return {
+          ok: true,
+          checklist: checklistParsed.checklist,
+          previous_revision: input.current_revision,
+          new_revision: input.current_revision,
+          patch_id: request.patch.patch_id,
+          patch_hash: patchHash,
+          idempotent_replay: true,
+          mode,
+          applied: false,
+          resolved_operations: validationArtifact.resolved_operations,
+        };
+      }
+      return {
+        ok: false,
+        error_code: 'PATCH_ID_CONFLICT',
+        message: `patch_id "${request.patch.patch_id}" already exists with different payload hash.`,
+        diagnostics: [],
+      };
+    }
+
+    const proposedAt = input.now_ms ?? Date.now();
+    await proposedStore.set({
+      checklist_id: input.checklist_id,
+      patch_id: request.patch.patch_id,
+      patch_hash: patchHash,
+      proposed_at_ms: proposedAt,
+      expected_revision: request.patch.expected_revision,
+      validation_id: request.validation_id,
+      resolved_operations: validationArtifact.resolved_operations,
+    });
+
+    return {
+      ok: true,
+      checklist: checklistParsed.checklist,
+      previous_revision: input.current_revision,
+      new_revision: input.current_revision,
+      patch_id: request.patch.patch_id,
+      patch_hash: patchHash,
+      idempotent_replay: false,
+      mode,
+      applied: false,
+      resolved_operations: validationArtifact.resolved_operations,
     };
   }
 
@@ -287,6 +378,8 @@ export async function applyChecklistPatch(input: ApplyChecklistPatchInput): Prom
     patch_id: request.patch.patch_id,
     patch_hash: patchHash,
     idempotent_replay: false,
+    mode,
+    applied: true,
     resolved_operations: applyResult.resolved_operations,
   };
 }

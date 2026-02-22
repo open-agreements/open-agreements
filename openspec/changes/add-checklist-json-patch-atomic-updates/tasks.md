@@ -18,18 +18,18 @@
 - [x] 3.5 Require valid, unexpired `validation_id` with matching patch hash before apply
 
 ## 4. Tooling Surface
-- [ ] 4.1 Add checklist patch validate tool/command
-- [ ] 4.2 Add checklist patch apply tool/command that requires `validation_id`
-- [ ] 4.3 Add optional `PROPOSED` mode handling (stored proposal, no state mutation)
-- [ ] 4.4 Document the agent workflow: write patch JSON -> validate -> apply
+- [x] 4.1 Add checklist patch validate tool/command
+- [x] 4.2 Add checklist patch apply tool/command that requires `validation_id`
+- [x] 4.3 Add optional `PROPOSED` mode handling (stored proposal, no state mutation)
+- [x] 4.4 Document the agent workflow: write patch JSON -> validate -> apply
 
 ## 5. Evidence and Rendering
-- [ ] 5.1 Persist citation metadata from patch operations
-- [ ] 5.2 Render latest citation context in checklist outputs where applicable
+- [x] 5.1 Persist citation metadata from patch operations
+- [x] 5.2 Render latest citation context in checklist outputs where applicable
 
 ## 6. Tests
 - [x] 6.1 Unit tests for patch schema and validation edge cases
 - [x] 6.2 Unit tests for no-guessing target resolution
-- [ ] 6.3 Integration tests for atomicity and optimistic concurrency
-- [ ] 6.4 Integration tests for idempotent replay and patch_id conflict handling
-- [ ] 6.5 Integration tests for multi-operation patch from a single email source event
+- [x] 6.3 Integration tests for atomicity and optimistic concurrency
+- [x] 6.4 Integration tests for idempotent replay and patch_id conflict handling
+- [x] 6.5 Integration tests for multi-operation patch from a single email source event

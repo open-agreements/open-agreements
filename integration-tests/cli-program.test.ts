@@ -15,6 +15,10 @@ const runRecipeCommandMock = vi.fn();
 const runRecipeCleanMock = vi.fn();
 const runRecipePatchMock = vi.fn();
 const runScanMock = vi.fn();
+const runChecklistCreateMock = vi.fn();
+const runChecklistRenderMock = vi.fn();
+const runChecklistPatchValidateMock = vi.fn();
+const runChecklistPatchApplyMock = vi.fn();
 
 vi.mock('../src/commands/fill.js', () => ({
   runFill: runFillMock,
@@ -36,6 +40,13 @@ vi.mock('../src/commands/recipe.js', () => ({
 
 vi.mock('../src/commands/scan.js', () => ({
   runScan: runScanMock,
+}));
+
+vi.mock('../src/commands/checklist.js', () => ({
+  runChecklistCreate: runChecklistCreateMock,
+  runChecklistRender: runChecklistRenderMock,
+  runChecklistPatchValidate: runChecklistPatchValidateMock,
+  runChecklistPatchApply: runChecklistPatchApplyMock,
 }));
 
 const { createProgram, runCli } = await import('../src/cli/index.js');
@@ -263,6 +274,58 @@ describe('CLI program wiring', () => {
       input: 'clean.docx',
       output: 'patched.docx',
       recipe: 'nvca-voting-agreement',
+    });
+  });
+
+  itPlatform('forwards checklist patch validate/apply subcommands', async () => {
+    await runCli([
+      'node',
+      'open-agreements',
+      'checklist',
+      'patch-validate',
+      '--state',
+      'state.json',
+      '--patch',
+      'patch.json',
+      '--output',
+      'validate-result.json',
+      '--validation-store',
+      '.tmp/validation-store.json',
+    ]);
+
+    await runCli([
+      'node',
+      'open-agreements',
+      'checklist',
+      'patch-apply',
+      '--state',
+      'state.json',
+      '--request',
+      'apply-request.json',
+      '--output',
+      'apply-result.json',
+      '--validation-store',
+      '.tmp/validation-store.json',
+      '--applied-store',
+      '.tmp/applied-store.json',
+      '--proposed-store',
+      '.tmp/proposed-store.json',
+    ]);
+
+    expect(runChecklistPatchValidateMock).toHaveBeenCalledWith({
+      state: 'state.json',
+      patch: 'patch.json',
+      output: 'validate-result.json',
+      validationStore: '.tmp/validation-store.json',
+    });
+
+    expect(runChecklistPatchApplyMock).toHaveBeenCalledWith({
+      state: 'state.json',
+      request: 'apply-request.json',
+      output: 'apply-result.json',
+      validationStore: '.tmp/validation-store.json',
+      appliedStore: '.tmp/applied-store.json',
+      proposedStore: '.tmp/proposed-store.json',
     });
   });
 });

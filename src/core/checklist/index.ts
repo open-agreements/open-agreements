@@ -1,6 +1,7 @@
 import {
   ClosingChecklistSchema,
   type ActionItem,
+  type Citation,
   type ChecklistDocument,
   type ChecklistEntry,
   type ChecklistStage,
@@ -49,8 +50,12 @@ export {
   applyChecklistPatch,
   setChecklistAppliedPatchStore,
   getChecklistAppliedPatchStore,
+  setChecklistProposedPatchStore,
+  getChecklistProposedPatchStore,
   type ChecklistAppliedPatchRecord,
   type ChecklistAppliedPatchStore,
+  type ChecklistProposedPatchRecord,
+  type ChecklistProposedPatchStore,
   type ChecklistPatchApplyErrorCode,
   type ChecklistPatchApplyFailure,
   type ChecklistPatchApplySuccess,
@@ -133,6 +138,19 @@ function responsibilityLabel(responsibility?: Responsibility): string {
     responsibility.organization ?? '',
     responsibility.role ?? '',
   ]).join(', ');
+}
+
+function citationLabel(citation: Citation): string {
+  const base = citation.text ?? citation.ref ?? '';
+  const sources = nonEmpty([citation.link ?? '', citation.filepath ?? '']);
+  if (!base) return sources.join(' | ');
+  if (sources.length === 0) return base;
+  return `${base} (${sources.join(' | ')})`;
+}
+
+function latestCitationLabel(citations: Citation[]): string {
+  if (citations.length === 0) return '';
+  return citationLabel(citations[citations.length - 1]!);
 }
 
 function signatoryLabel(signatory: Signatory): string {
@@ -271,7 +289,7 @@ export function buildChecklistTemplateContext(data: unknown): ChecklistTemplateC
 
     for (const row of stageRows) {
       const indent = '\u00A0\u00A0'.repeat(row.depth);
-      const citationText = row.entry.citations.map((citation) => citation.ref).join('; ');
+      const citationText = row.entry.citations.map(citationLabel).join('; ');
       const linkText = row.document?.primary_link ? ` (${row.document.primary_link})` : '';
       const documentName = `${row.number} ${indent}${row.entry.title}${citationText ? ` [${citationText}]` : ''}${linkText}`;
 
@@ -290,15 +308,17 @@ export function buildChecklistTemplateContext(data: unknown): ChecklistTemplateC
       });
 
       for (const action of row.linkedActions) {
+        const latestCitation = latestCitationLabel(action.citations);
         documentRows.push({
           document_name: `\u00A0\u00A0${indent}\u21B3 Action ${action.action_id}: ${action.description}`,
-          status: action.status,
+          status: latestCitation ? `${action.status} | Evidence: ${latestCitation}` : action.status,
         });
       }
       for (const issue of row.linkedIssues) {
+        const latestCitation = latestCitationLabel(issue.citations);
         documentRows.push({
           document_name: `\u00A0\u00A0${indent}\u21B3 Issue ${issue.issue_id}: ${issue.title}`,
-          status: issue.status,
+          status: latestCitation ? `${issue.status} | Evidence: ${latestCitation}` : issue.status,
         });
       }
     }
@@ -307,7 +327,7 @@ export function buildChecklistTemplateContext(data: unknown): ChecklistTemplateC
   const fallbackActions: LegacyTemplateActionRow[] = model.unlinkedActions.map((action) => ({
     item_id: action.action_id,
     description: action.description,
-    status: action.status,
+    status: latestCitationLabel(action.citations) ? `${action.status} | ${latestCitationLabel(action.citations)}` : action.status,
     assigned_to: {
       organization: responsibilityLabel(action.assigned_to) || '',
     },
@@ -319,7 +339,7 @@ export function buildChecklistTemplateContext(data: unknown): ChecklistTemplateC
     title: issue.title,
     status: issue.status,
     escalation_tier: '',
-    resolution: issue.summary ?? '',
+    resolution: nonEmpty([issue.summary ?? '', latestCitationLabel(issue.citations)]).join(' | '),
   }));
 
   return {
@@ -351,7 +371,7 @@ export function renderChecklistMarkdown(data: unknown): string {
       lines.push(`${indent}${row.number}. ${row.entry.title} — ${row.entry.status}`);
 
       if (row.entry.citations.length > 0) {
-        lines.push(`${indent}   - Citations: ${row.entry.citations.map((c) => c.ref).join('; ')}`);
+        lines.push(`${indent}   - Citations: ${row.entry.citations.map(citationLabel).join('; ')}`);
       }
       if (row.document?.primary_link) {
         lines.push(`${indent}   - Link: ${row.document.primary_link}`);
@@ -372,14 +392,16 @@ export function renderChecklistMarkdown(data: unknown): string {
       if (row.linkedActions.length > 0) {
         lines.push(`${indent}   - Linked Actions:`);
         for (const action of row.linkedActions) {
-          lines.push(`${indent}     - [${action.status}] ${action.action_id}: ${action.description}`);
+          const latestCitation = latestCitationLabel(action.citations);
+          lines.push(`${indent}     - [${action.status}] ${action.action_id}: ${action.description}${latestCitation ? ` (Evidence: ${latestCitation})` : ''}`);
         }
       }
 
       if (row.linkedIssues.length > 0) {
         lines.push(`${indent}   - Linked Issues:`);
         for (const issue of row.linkedIssues) {
-          lines.push(`${indent}     - [${issue.status}] ${issue.issue_id}: ${issue.title}`);
+          const latestCitation = latestCitationLabel(issue.citations);
+          lines.push(`${indent}     - [${issue.status}] ${issue.issue_id}: ${issue.title}${latestCitation ? ` (Evidence: ${latestCitation})` : ''}`);
         }
       }
     }
@@ -389,7 +411,8 @@ export function renderChecklistMarkdown(data: unknown): string {
   if (model.unlinkedActions.length > 0) {
     lines.push('## Unlinked Action Items');
     for (const action of model.unlinkedActions) {
-      lines.push(`- [${action.status}] ${action.action_id}: ${action.description}`);
+      const latestCitation = latestCitationLabel(action.citations);
+      lines.push(`- [${action.status}] ${action.action_id}: ${action.description}${latestCitation ? ` (Evidence: ${latestCitation})` : ''}`);
     }
     lines.push('');
   }
@@ -397,7 +420,8 @@ export function renderChecklistMarkdown(data: unknown): string {
   if (model.unlinkedIssues.length > 0) {
     lines.push('## Unlinked Issues');
     for (const issue of model.unlinkedIssues) {
-      lines.push(`- [${issue.status}] ${issue.issue_id}: ${issue.title}`);
+      const latestCitation = latestCitationLabel(issue.citations);
+      lines.push(`- [${issue.status}] ${issue.issue_id}: ${issue.title}${latestCitation ? ` (Evidence: ${latestCitation})` : ''}`);
     }
     lines.push('');
   }

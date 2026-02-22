@@ -1,7 +1,7 @@
 import { beforeEach, describe, expect } from 'vitest';
 import { itAllure } from '../../../integration-tests/helpers/allure-test.js';
 import { setChecklistPatchValidationStore, validateChecklistPatch } from './patch-validator.js';
-import { applyChecklistPatch, setChecklistAppliedPatchStore } from './patch-apply.js';
+import { applyChecklistPatch, getChecklistProposedPatchStore, setChecklistAppliedPatchStore, setChecklistProposedPatchStore } from './patch-apply.js';
 
 const it = itAllure.epic('Compliance & Governance').withLabels({ feature: 'Checklist Patch Apply' });
 
@@ -46,6 +46,7 @@ describe('applyChecklistPatch', () => {
   beforeEach(() => {
     setChecklistPatchValidationStore(null);
     setChecklistAppliedPatchStore(null);
+    setChecklistProposedPatchStore(null);
   });
 
   it('applies a validated patch and increments revision exactly once', async () => {
@@ -348,5 +349,44 @@ describe('applyChecklistPatch', () => {
     if (result.ok) return;
     expect(result.error_code).toBe('APPLY_OPERATION_FAILED');
     expect((applyChecklistState.issues as Array<{ status: string }>)[0]?.status).toBe('OPEN');
+  });
+
+  it('stores PROPOSED mode patch without mutating checklist revision', async () => {
+    const checklist = buildChecklist();
+    const patch = {
+      patch_id: 'patch_apply_008',
+      expected_revision: 7,
+      mode: 'PROPOSED',
+      operations: [{ op: 'replace', path: '/issues/0/status', value: 'CLOSED' }],
+    };
+
+    const validation = await validateChecklistPatch({
+      checklist_id: 'ck_001',
+      checklist,
+      current_revision: 7,
+      patch,
+    });
+    expect(validation.ok).toBe(true);
+    if (!validation.ok) return;
+
+    const result = await applyChecklistPatch({
+      checklist_id: 'ck_001',
+      checklist,
+      current_revision: 7,
+      request: {
+        validation_id: validation.validation_id,
+        patch,
+      },
+    });
+
+    expect(result.ok).toBe(true);
+    if (!result.ok) return;
+    expect(result.mode).toBe('PROPOSED');
+    expect(result.applied).toBe(false);
+    expect(result.new_revision).toBe(7);
+    expect(result.checklist.issues[0]?.status).toBe('OPEN');
+
+    const proposedRecord = await getChecklistProposedPatchStore().get('ck_001', 'patch_apply_008');
+    expect(proposedRecord?.patch_hash).toBe(result.patch_hash);
   });
 });
