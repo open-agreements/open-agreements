@@ -3,7 +3,7 @@ import {
   allureJsonAttachment,
   allurePrettyJsonAttachment,
   allureStep,
-  allureWordLikeTextAttachment,
+  allureWordLikeMarkdownAttachment,
   itAllure,
 } from '../../../integration-tests/helpers/allure-test.js';
 import {
@@ -28,7 +28,7 @@ async function validateWithEvidence(
   await allureStep(`Given ${label} input payload`, async () => {
     await allurePrettyJsonAttachment(`${slug}-input-pretty.html`, input);
     await allureJsonAttachment(`${slug}-input.json`, input);
-    await allureWordLikeTextAttachment(
+    await allureWordLikeMarkdownAttachment(
       `${slug}-checklist-before-word-like.html`,
       renderChecklistMarkdown(input.checklist),
       { title: 'Checklist before patch validation' },

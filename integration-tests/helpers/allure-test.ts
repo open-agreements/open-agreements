@@ -8,6 +8,8 @@ import {
   allureMarkdownAttachment,
   allurePrettyJsonAttachment,
   allureWordLikeTextAttachment,
+  allureWordLikeMarkdownAttachment,
+  allureWordLikeMarkdownDiffAttachment,
   allureFileAttachment,
   allureImageAttachment,
   type AllureBddContext,
@@ -322,6 +324,8 @@ export {
   allureMarkdownAttachment,
   allurePrettyJsonAttachment,
   allureWordLikeTextAttachment,
+  allureWordLikeMarkdownAttachment,
+  allureWordLikeMarkdownDiffAttachment,
   allureFileAttachment,
   allureImageAttachment,
 };

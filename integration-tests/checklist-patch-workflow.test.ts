@@ -3,7 +3,8 @@ import {
   allureJsonAttachment,
   allurePrettyJsonAttachment,
   allureStep,
-  allureWordLikeTextAttachment,
+  allureWordLikeMarkdownAttachment,
+  allureWordLikeMarkdownDiffAttachment,
   itAllure,
 } from './helpers/allure-test.js';
 import {
@@ -38,7 +39,7 @@ async function validateWithEvidence(
   await allureStep(`Given ${label} validation input`, async () => {
     await allurePrettyJsonAttachment(`${slug}-validation-input-pretty.html`, input);
     await allureJsonAttachment(`${slug}-validation-input.json`, input);
-    await allureWordLikeTextAttachment(
+    await allureWordLikeMarkdownAttachment(
       `${slug}-checklist-before-validation-word-like.html`,
       renderChecklistMarkdown(input.checklist),
       { title: 'Checklist before patch validation' },
@@ -63,7 +64,7 @@ async function applyWithEvidence(
   await allureStep(`Given ${label} apply input`, async () => {
     await allurePrettyJsonAttachment(`${slug}-apply-input-pretty.html`, input);
     await allureJsonAttachment(`${slug}-apply-input.json`, input);
-    await allureWordLikeTextAttachment(
+    await allureWordLikeMarkdownAttachment(
       `${slug}-checklist-before-apply-word-like.html`,
       renderChecklistMarkdown(input.checklist),
       { title: 'Checklist before patch apply' },
@@ -77,10 +78,18 @@ async function applyWithEvidence(
   await allurePrettyJsonAttachment(`${slug}-apply-result-pretty.html`, result);
   await allureJsonAttachment(`${slug}-apply-result.json`, result);
   if (result.ok) {
-    await allureWordLikeTextAttachment(
+    const beforeMarkdown = renderChecklistMarkdown(input.checklist);
+    const afterMarkdown = renderChecklistMarkdown(result.checklist);
+    await allureWordLikeMarkdownAttachment(
       `${slug}-checklist-after-apply-word-like.html`,
-      renderChecklistMarkdown(result.checklist),
+      afterMarkdown,
       { title: 'Checklist after patch apply' },
+    );
+    await allureWordLikeMarkdownDiffAttachment(
+      `${slug}-checklist-redline-word-like.html`,
+      beforeMarkdown,
+      afterMarkdown,
+      { title: 'Checklist redline (before \u2192 after)' },
     );
   }
   return result;
