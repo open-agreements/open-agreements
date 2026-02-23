@@ -18,12 +18,12 @@ afterEach(() => {
 });
 
 describe('status and lint', () => {
-  it('infers executed marker from filename', () => {
+  it.openspec(['OA-125', 'OA-126'])('infers executed marker from filename', () => {
     expect(hasExecutedMarker('nda_executed.docx')).toBe(true);
     expect(hasExecutedMarker('nda.docx')).toBe(false);
   });
 
-  it('collects document records and reports lint findings', () => {
+  it.openspec('OA-128')('collects document records and reports lint findings', () => {
     const root = mkdtempSync(join(tmpdir(), 'oa-status-lint-'));
     tempDirs.push(root);
 
@@ -47,7 +47,9 @@ describe('status and lint', () => {
     expect(lint.findings.some((finding) => finding.code === 'executed-marker-outside-executed')).toBe(true);
   });
 
-  it('detects stale contracts-index.yaml when files are newer than the index', () => {
+  it.openspec(['OA-127', 'OA-129'])(
+    'detects stale contracts-index.yaml when files are newer than the index',
+    () => {
     const root = mkdtempSync(join(tmpdir(), 'oa-status-stale-'));
     tempDirs.push(root);
 
@@ -68,5 +70,6 @@ describe('status and lint', () => {
 
     const lintAfter = lintWorkspace(root);
     expect(lintAfter.findings.some((finding) => finding.code === 'stale-index')).toBe(true);
-  });
+    }
+  );
 });

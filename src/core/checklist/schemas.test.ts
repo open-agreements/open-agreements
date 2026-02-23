@@ -76,7 +76,9 @@ describe('ClosingChecklistSchema v2', () => {
     });
   });
 
-  it('accepts full input with documents, entries, signatories, and links', async () => {
+  it.openspec(['OA-094', 'OA-096', 'OA-097'])(
+    'accepts full input with documents, entries, signatories, and links',
+    async () => {
     const full = {
       ...minimal,
       documents: [
@@ -135,9 +137,10 @@ describe('ClosingChecklistSchema v2', () => {
     await allureStep('Then full payload parses successfully', async () => {
       expect(result.success).toBe(true);
     });
-  });
+    }
+  );
 
-  it('accepts stable string IDs that are not UUIDs', async () => {
+  it.openspec('OA-088')('accepts stable string IDs that are not UUIDs', async () => {
     const result = await safeParseWithEvidence(
       'stable string IDs payload',
       ClosingChecklistSchema,
@@ -160,7 +163,7 @@ describe('ClosingChecklistSchema v2', () => {
     });
   });
 
-  it('allows checklist entries with no document_id', async () => {
+  it.openspec('OA-098')('allows checklist entries with no document_id', async () => {
     const result = await safeParseWithEvidence(
       'checklist entry without document_id payload',
       ClosingChecklistSchema,
@@ -181,7 +184,7 @@ describe('ClosingChecklistSchema v2', () => {
     });
   });
 
-  it('rejects checklist entry pointing to unknown document', async () => {
+  it.openspec('OA-089')('rejects checklist entry pointing to unknown document', async () => {
     const result = await safeParseWithEvidence(
       'entry referencing unknown document payload',
       ClosingChecklistSchema,
@@ -204,7 +207,7 @@ describe('ClosingChecklistSchema v2', () => {
     });
   });
 
-  it('rejects mapping one document to multiple checklist entries', async () => {
+  it.openspec('OA-090')('rejects mapping one document to multiple checklist entries', async () => {
     const result = await safeParseWithEvidence(
       'duplicate document mapping payload',
       ClosingChecklistSchema,
@@ -349,7 +352,7 @@ describe('ClosingChecklistSchema v2', () => {
     });
   });
 
-  it('accepts all valid issue statuses and rejects legacy statuses', async () => {
+  it.openspec('OA-100')('accepts all valid issue statuses and rejects legacy statuses', async () => {
     const outcomes = await allureStep('When issue status values are parsed', async () => ({
       open: IssueStatusEnum.safeParse('OPEN').success,
       closed: IssueStatusEnum.safeParse('CLOSED').success,
@@ -491,6 +494,28 @@ describe('ClosingChecklistSchema v2', () => {
 
     await allureStep('Then citation text-only payload parses successfully', async () => {
       expect(result.success).toBe(true);
+    });
+  });
+
+  it.openspec('OA-102')('rejects legacy flat payloads that omit document-first structures', async () => {
+    const result = await safeParseWithEvidence(
+      'legacy flat checklist payload',
+      ClosingChecklistSchema,
+      {
+        ...minimal,
+        documents: [],
+        // Legacy shape used flat entries without stable IDs and stage/sort keys.
+        checklist_entries: [
+          {
+            title: 'Legacy checklist row only',
+            status: 'OPEN',
+          },
+        ],
+      },
+    );
+
+    await allureStep('Then legacy flat payload is rejected', async () => {
+      expect(result.success).toBe(false);
     });
   });
 });

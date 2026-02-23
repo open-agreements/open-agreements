@@ -21,7 +21,36 @@ afterEach(() => {
 });
 
 describe('catalog validation and fetch', () => {
-  it('rejects entries missing checksum', () => {
+  it.openspec('OA-120')('accepts entries with source_url and checksum', () => {
+    const root = mkdtempSync(join(tmpdir(), 'oa-catalog-valid-'));
+    tempDirs.push(root);
+
+    const validCatalog = {
+      schema_version: 1,
+      entries: [
+        {
+          id: 'with-checksum',
+          name: 'With checksum',
+          source_url: 'https://example.com/form.docx',
+          checksum: {
+            sha256: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa',
+          },
+          license: {
+            type: 'CC-BY-4.0',
+            redistribution: 'allowed-unmodified',
+          },
+        },
+      ],
+    };
+
+    const catalogPath = join(root, 'forms-catalog.yaml');
+    writeFileSync(catalogPath, dump(validCatalog), 'utf-8');
+
+    const result = validateCatalog(catalogPath);
+    expect(result.valid).toBe(true);
+  });
+
+  it.openspec('OA-121')('rejects entries missing checksum', () => {
     const root = mkdtempSync(join(tmpdir(), 'oa-catalog-invalid-'));
     tempDirs.push(root);
 
@@ -47,7 +76,9 @@ describe('catalog validation and fetch', () => {
     expect(result.valid).toBe(false);
   });
 
-  it('downloads allowed entries, skips pointer-only entries, and blocks checksum mismatches', async () => {
+  it.openspec(['OA-122', 'OA-123', 'OA-124'])(
+    'downloads allowed entries, skips pointer-only entries, and blocks checksum mismatches',
+    async () => {
     const root = mkdtempSync(join(tmpdir(), 'oa-catalog-fetch-'));
     tempDirs.push(root);
 
@@ -117,5 +148,6 @@ describe('catalog validation and fetch', () => {
 
     const badPath = join(root, 'forms', 'finance', 'bad.docx');
     expect(existsSync(badPath)).toBe(false);
-  });
+    }
+  );
 });

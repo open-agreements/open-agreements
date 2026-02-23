@@ -555,7 +555,7 @@ Coverage gate policy SHALL be versioned in-repo so trust thresholds are explicit
 
 #### Scenario: [OA-080] Coverage denominator is scoped to implementation sources
 - **WHEN** coverage runs in CI
-- **THEN** denominator paths include implementation source trees (`src/**` and package `src/**`)
+- **THEN** denominator scope is limited to implementation source trees configured in coverage settings
 - **AND** tooling/support paths (for example scripts, generated output, docs/site content, and test files) are excluded from gate calculations
 
 ### Requirement: Spec-Backed Allure Coverage Expansion
@@ -570,6 +570,14 @@ Trust-oriented test coverage SHALL include executable Allure tests keyed to cano
 - **WHEN** canonical scenarios exist for an implemented behavior
 - **THEN** at least one Allure-reported test asserts that behavior and maps to the scenario
 - **AND** `npm run check:spec-coverage` remains green for missing/extra/pending mappings
+
+### Requirement: Canonical Evidence Story
+The trust surface SHALL include a reproducible evidence story demonstrating the fill pipeline from structured JSON input to valid DOCX output, with pre-generated page renders committed at stable paths.
+
+#### Scenario: [OA-132] Canonical evidence story fills template from JSON payload
+- **WHEN** the evidence story JSON payload is passed to the fill pipeline for the Common Paper Mutual NDA template
+- **THEN** the CLI produces a valid DOCX file with correct placeholder substitution
+- **AND** the JSON payload and rendered page PNG are attached as Allure evidence artifacts
 
 ### Requirement: Opaque Download Links for Hosted Fill
 The hosted OpenAgreements fill flow SHALL issue download URLs using opaque

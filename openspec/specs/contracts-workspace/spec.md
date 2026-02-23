@@ -1,34 +1,34 @@
 # contracts-workspace Specification
 
 ## Purpose
-TBD - created by archiving change add-contracts-workspace-cli. Update Purpose after archive.
+Define the canonical behavior for the standalone contracts workspace package and
+CLI used for filesystem-first contract repository operations.
+
 ## Requirements
 ### Requirement: Workspace Initialization Command
-The system SHALL provide an `init` command in a dedicated contracts workspace CLI
-that bootstraps a lifecycle-first contract directory in the current working
-directory. The command MUST create top-level folders `forms/`, `drafts/`,
-`incoming/`, `executed/`, and `archive/` when missing.
+The system SHALL provide an `init` command in a dedicated contracts workspace
+CLI that writes workspace guidance/config files and planning output in the
+current directory. In v1, `init` SHALL NOT require automatic creation of
+lifecycle folders.
 
-#### Scenario: Initialize empty workspace
+#### Scenario: [OA-115] Initialize empty workspace
 - **WHEN** a user runs the workspace `init` command in an empty directory
-- **THEN** the system creates `forms/`, `drafts/`, `incoming/`, `executed/`, and `archive/`
-- **AND** exits successfully with a summary of created paths
+- **THEN** the system writes core workspace guidance/config files
+- **AND** reports a plan for recommended workspace structure
 
-#### Scenario: Re-run init on existing workspace
-- **WHEN** a user runs `init` in a directory that already contains some or all required folders
-- **THEN** existing folders are preserved
-- **AND** missing folders are created
+#### Scenario: [OA-116] Re-run init on existing workspace
+- **WHEN** a user runs `init` in a directory that already contains generated workspace files
+- **THEN** existing files are preserved
 - **AND** the command remains idempotent
 
-### Requirement: Topic Scaffold Under Forms
-The `init` workflow SHALL scaffold topic subfolders under `forms/` so forms can
-be organized by subject area while keeping lifecycle as the top-level information
-architecture.
+### Requirement: Topic Scaffold Planning
+The `init` workflow SHALL include topic-domain planning so forms can be
+organized by subject area without forcing one fixed top-level folder layout.
 
-#### Scenario: Forms topic scaffolding
-- **WHEN** `init` creates a new workspace
-- **THEN** topic folders are created under `forms/`
-- **AND** no topic folders are created as top-level lifecycle replacements
+#### Scenario: [OA-117] Forms topic scaffolding
+- **WHEN** `init` planning runs with topic inputs
+- **THEN** suggested topic domains are included in the generated plan
+- **AND** planning does not require immediate folder creation
 
 ### Requirement: Shared Agent Guidance File
 The `init` workflow SHALL generate a shared `CONTRACTS.md` file that defines
@@ -36,7 +36,7 @@ workspace conventions for AI agents and humans. This file MUST include folder
 semantics, naming conventions, status conventions, and command references for
 catalog/status operations.
 
-#### Scenario: CONTRACTS.md generated
+#### Scenario: [OA-118] CONTRACTS.md generated
 - **WHEN** `init` completes
 - **THEN** `CONTRACTS.md` exists at the workspace root
 - **AND** it documents lifecycle folders and status naming rules
@@ -45,7 +45,7 @@ catalog/status operations.
 The workspace tooling SHALL provide optional setup guidance for Claude Code and
 Gemini CLI that references `CONTRACTS.md` as the canonical collaboration ruleset.
 
-#### Scenario: Agent setup output
+#### Scenario: [OA-119] Agent setup output
 - **WHEN** a user requests agent setup during initialization
 - **THEN** the tool emits or writes integration instructions for Claude Code and Gemini CLI
 - **AND** both integrations reference `CONTRACTS.md`
@@ -56,11 +56,11 @@ downloadable form references with both source URL and checksum. Catalog entries
 MUST include license handling metadata that distinguishes redistributable
 unmodified sources from pointer-only/proprietary references.
 
-#### Scenario: Validate catalog entry with checksum
+#### Scenario: [OA-120] Validate catalog entry with checksum
 - **WHEN** `catalog validate` runs on an entry containing `source_url` and SHA-256 checksum
 - **THEN** the entry passes structural validation if required fields are present
 
-#### Scenario: Reject missing checksum
+#### Scenario: [OA-121] Reject missing checksum
 - **WHEN** `catalog validate` runs on an entry with a URL but no checksum
 - **THEN** validation fails with an error describing the missing checksum requirement
 
@@ -69,12 +69,12 @@ The workspace tooling SHALL provide a command to download eligible catalog
 entries and verify file integrity against the configured checksum before placing
 files into the workspace.
 
-#### Scenario: Successful download and checksum verification
+#### Scenario: [OA-122] Successful download and checksum verification
 - **WHEN** a user runs catalog download for an eligible entry
 - **AND** the downloaded file hash matches the configured checksum
 - **THEN** the file is placed in the configured workspace destination
 
-#### Scenario: Checksum mismatch blocks placement
+#### Scenario: [OA-123] Checksum mismatch blocks placement
 - **WHEN** a catalog download completes but computed hash differs from configured checksum
 - **THEN** the tool fails the operation
 - **AND** the file is not accepted into the workspace destination
@@ -84,7 +84,7 @@ Catalog entries marked as pointer-only/proprietary SHALL be represented as
 reference metadata and MUST NOT be vendored automatically when redistribution is
 not permitted.
 
-#### Scenario: Pointer-only entry behavior
+#### Scenario: [OA-124] Pointer-only entry behavior
 - **WHEN** catalog download is requested for a pointer-only/proprietary entry
 - **THEN** the tool reports that direct vendoring is disallowed
 - **AND** provides reference details (URL/checksum/license notes) for user-managed retrieval
@@ -93,11 +93,11 @@ not permitted.
 Execution status SHALL be derived from filename conventions, with `_executed` as
 an authoritative status marker for signed/executed documents.
 
-#### Scenario: Executed status inferred from filename
+#### Scenario: [OA-125] Executed status inferred from filename
 - **WHEN** a document filename includes `_executed`
 - **THEN** status indexing marks the document as executed
 
-#### Scenario: No executed marker
+#### Scenario: [OA-126] No executed marker
 - **WHEN** a document filename lacks `_executed`
 - **THEN** status indexing does not mark the document as executed by default
 
@@ -106,7 +106,7 @@ The workspace tooling SHALL generate a YAML status index summarizing contract
 files, inferred lifecycle state, and lint findings. Generated output MUST include
 a generation timestamp.
 
-#### Scenario: Generate contracts index
+#### Scenario: [OA-127] Generate contracts index
 - **WHEN** a user runs `status generate`
 - **THEN** the tool writes `contracts-index.yaml`
 - **AND** includes an explicit generation timestamp
@@ -116,11 +116,11 @@ a generation timestamp.
 The workspace tooling SHALL lint directory and file organization rules,
 including disallowed file-type placement and stale index detection.
 
-#### Scenario: Disallowed file type placement
+#### Scenario: [OA-128] Disallowed file type placement
 - **WHEN** lint runs and finds a PDF under `forms/`
 - **THEN** lint reports a violation
 
-#### Scenario: Stale index detection
+#### Scenario: [OA-129] Stale index detection
 - **WHEN** lint runs and workspace files are newer than `contracts-index.yaml`
 - **THEN** lint reports the index as stale and recommends regeneration
 
@@ -129,17 +129,16 @@ The workspace tooling SHALL operate on local filesystem directories only in v1,
 including locally synced cloud-drive folders. It SHALL NOT require cloud API
 integrations in this change.
 
-#### Scenario: Local synced drive compatibility
-- **WHEN** a user runs workspace commands in a locally synced Google Drive folder
+#### Scenario: [OA-130] Local synced drive compatibility
+- **WHEN** a user runs workspace commands in a locally synced cloud-drive folder
 - **THEN** commands operate using normal filesystem semantics
-- **AND** no Google Drive API credentials are required
+- **AND** no cloud API credentials are required
 
 ### Requirement: Independent Package Boundary
 Contracts workspace functionality SHALL be delivered as a sibling package/CLI,
 independently installable from the existing OpenAgreements template-filling CLI.
 
-#### Scenario: Workspace-only adoption
+#### Scenario: [OA-131] Workspace-only adoption
 - **WHEN** a user installs the workspace package without installing template-filling tooling
 - **THEN** workspace commands are available
 - **AND** template-filling commands are not required for workspace initialization, catalog, or status features
-

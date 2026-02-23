@@ -435,7 +435,7 @@ describe('MCP endpoint — api/mcp.ts', () => {
     expect(envelope.data.template.template_id).toBe('common-paper-mutual-nda');
   });
 
-  it('handles tools/call fill_template with URL return_mode envelope', async () => {
+  it.openspec('OA-083')('handles tools/call fill_template with URL return_mode envelope', async () => {
     handleFillMock.mockResolvedValue(MOCK_FILL_SUCCESS);
 
     const req = createMockReq({
@@ -588,7 +588,7 @@ describe('Download endpoint — api/download.ts', () => {
     expect(String(getErrorObject(res).message)).toContain('"id"');
   });
 
-  it('returns 403 with machine-readable code for invalid signature', async () => {
+  it.openspec('OA-086')('returns 403 with machine-readable code for invalid signature', async () => {
     resolveDownloadArtifactMock.mockReturnValue({ ok: false, code: 'DOWNLOAD_SIGNATURE_INVALID' });
 
     const req = createMockReq({ method: 'GET', query: { id: 'bad-download-id' } });
@@ -617,7 +617,7 @@ describe('Download endpoint — api/download.ts', () => {
     expect(String(res.body)).toContain('DOWNLOAD_EXPIRED');
   });
 
-  it('serves DOCX for valid download_id', async () => {
+  it.openspec('OA-084')('serves DOCX for valid download_id', async () => {
     resolveDownloadArtifactMock.mockReturnValue({
       ok: true,
       artifact: {
@@ -663,7 +663,7 @@ describe('Download endpoint — api/download.ts', () => {
     expect(String(getErrorObject(res).message)).toContain('nonexistent');
   });
 
-  it('supports HEAD for valid download_id without response body', async () => {
+  it.openspec('OA-085')('supports HEAD for valid download_id without response body', async () => {
     resolveDownloadArtifactMock.mockReturnValue({
       ok: true,
       artifact: {
@@ -684,7 +684,7 @@ describe('Download endpoint — api/download.ts', () => {
     expect(res.ended).toBe(true);
   });
 
-  it('supports HEAD error probing with status parity', async () => {
+  it.openspec('OA-087')('supports HEAD error probing with status parity', async () => {
     resolveDownloadArtifactMock.mockReturnValue({ ok: false, code: 'DOWNLOAD_EXPIRED' });
 
     const req = createMockReq({ method: 'HEAD', query: { id: 'expired-id.valid-sig' } });

@@ -36,10 +36,17 @@ describe('validate_openspec_coverage script', () => {
     const matrixPath = join(tempDir, 'traceability.md');
     try {
       process.exitCode = 0;
-      await main(['--capability', 'open-agreements']);
+      await main(['--capability', 'open-agreements', '--capability', 'contracts-workspace']);
       expect(existsSync(matrixPath)).toBe(false);
 
-      await main(['--capability', 'open-agreements', '--write-matrix', matrixPath]);
+      await main([
+        '--capability',
+        'open-agreements',
+        '--capability',
+        'contracts-workspace',
+        '--write-matrix',
+        matrixPath,
+      ]);
       expect(existsSync(matrixPath)).toBe(true);
       expect(readFileSync(matrixPath, 'utf-8')).toContain('# OpenAgreements OpenSpec Traceability Matrix');
     } finally {
@@ -48,7 +55,7 @@ describe('validate_openspec_coverage script', () => {
     }
   });
 
-  it('enforces behavior-oriented scenario bullets', () => {
+  it.openspec('OA-081')('enforces behavior-oriented scenario bullets', () => {
     const specBody = [
       '## Requirements',
       '### Requirement: Example',
@@ -65,6 +72,17 @@ describe('validate_openspec_coverage script', () => {
         expect.stringContaining('must include at least one **THEN** bullet'),
       ]),
     );
+  });
+
+  it.openspec('OA-082')('keeps canonical OpenSpec-to-Allure mappings green for open-agreements capability', async () => {
+    const previousExitCode = process.exitCode;
+    try {
+      process.exitCode = 0;
+      await main(['--capability', 'open-agreements', '--capability', 'contracts-workspace']);
+      expect(process.exitCode ?? 0).toBe(0);
+    } finally {
+      process.exitCode = previousExitCode;
+    }
   });
 
   it('rejects path-dependent scenario prose', () => {
