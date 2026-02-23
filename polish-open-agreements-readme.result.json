@@ -1,0 +1,42 @@
+{
+  "schema_version": "sub-agent-result.v1",
+  "task_short_name": "polish-open-agreements-readme",
+  "status": "blocked",
+  "summary": "Polished README for the Phase 6 readiness gate by moving the demo GIF directly under badges, preserving the customer proof line, replacing the How It Works block with the requested 3-step copy, updating package keywords, and documenting Claude Code Birthday Showcase findings plus a draft virtual showcase entry.",
+  "verify_undone_result": "Before editing, README already had a demo GIF and the UseJunior proof line, but the How It Works section used different wording and did not include the requested '36 standard agreements' step text; package.json did not include singular keywords 'template' and 'agreement'; no root tasks.md contained Claude Code Birthday Showcase findings.",
+  "files_changed": [
+    {"action": "modified", "path": "README.md"},
+    {"action": "modified", "path": "package.json"},
+    {"action": "added", "path": "tasks.md"}
+  ],
+  "acceptance_criteria_results": [
+    {
+      "criterion": "Demo GIF visible above the fold in README.md",
+      "met": true,
+      "evidence": "README.md places the GIF immediately after badges at lines 14-16 with <img src=\"docs/assets/demo-fill-nda.gif\">; GIF asset confirmed at docs/assets/demo-fill-nda.gif."
+    },
+    {
+      "criterion": "package.json keywords updated with legal/contract/MCP terms",
+      "met": true,
+      "evidence": "package.json keywords now include nda, contract, legal, template, agreement, docx, mcp, claude, open-source, legal-tech, and document-generation."
+    },
+    {
+      "criterion": "Customer proof line added to README",
+      "met": true,
+      "evidence": "README.md line 22 contains: Built by the team behind UseJunior.com — in production at Am Law 100 firms."
+    },
+    {
+      "criterion": "How it works 3-step section added",
+      "met": true,
+      "evidence": "README.md lines 38-40 now include: Step 1 (Choose a template - 36 standard agreements), Step 2 (Fill in your details via prompts or MCP), Step 3 (Get a professionally formatted DOCX)."
+    },
+    {
+      "criterion": "Claude Code Birthday Showcase investigated and findings documented",
+      "met": true,
+      "evidence": "tasks.md bottom comment (lines 4-15) documents event details, submission requirements, virtual-path status, and includes a draft OpenAgreements showcase entry."
+    }
+  ],
+  "open_questions": [
+    "Sandbox policy denied writing to /Users/stevenobiajulu/Projects/foam-notes/logs/daily/results/polish-open-agreements-readme.json (Operation not permitted)."
+  ]
+}

@@ -65,12 +65,14 @@
     "build:site:indexes": "node scripts/generate_site_indexes.mjs",
     "build:site": "npm run build:downloads && npm run check:template-previews && npm run build:css && npm run build:docs && npm run build:html && npm run build:site:indexes",
     "prepare": "npm run build",
-    "report:allure": "rm -rf ./allure-report && npx allure awesome ./allure-results --output ./allure-report --group-by epic,feature,story",
+    "report:allure": "rm -rf ./allure-report && npx allure awesome ./allure-results --output ./allure-report --group-by epic,feature,story && node scripts/patch_allure_html_sanitizer.mjs --report-dir ./allure-report",
     "report:allure:open": "npx allure open ./allure-report"
   },
   "keywords": [
     "legal",
+    "template",
     "templates",
+    "agreement",
     "nda",
     "agreements",
     "docx",
