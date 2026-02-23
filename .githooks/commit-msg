@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+# OA_NO_AI_COAUTHORS_HOOK: remove AI co-author trailers from commit messages
+set -eu
+
+msg_file="${1:-}"
+if [ -z "$msg_file" ] || [ ! -f "$msg_file" ]; then
+  exit 0
+fi
+
+tmp_file="${msg_file}.no_ai_coauthors.$$"
+awk '{
+  line=tolower($0)
+  if (line ~ /^[[:space:]]*co-authored-by:[[:space:]]*(cursor|cursor agent|codex|claude)[[:space:]]*</) next
+  if (line ~ /^[[:space:]]*co-authored-by:[[:space:]]*.*@(cursor\.com|openai\.com|anthropic\.com)>[[:space:]]*$/) next
+  print
+}' "$msg_file" > "$tmp_file"
+mv "$tmp_file" "$msg_file"
