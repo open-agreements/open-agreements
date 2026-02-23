@@ -19,6 +19,12 @@ const itDiscovery = itAllure.epic('Discovery & Metadata');
 const itFilling = itAllure.epic('Filling & Rendering');
 const itCompliance = itAllure.epic('Compliance & Governance');
 
+interface ListedTemplate {
+  name: string;
+  license?: string;
+  source?: string;
+}
+
 describe('ExternalMetadataSchema', () => {
   itDiscovery('accepts valid external metadata', async () => {
     const input = {
@@ -191,8 +197,8 @@ describe('list includes external templates', () => {
       timeout: 10_000,
     }));
     await allureAttachment('list-json-output.txt', output);
-    const parsed = JSON.parse(output);
-    const names = parsed.items.map((i: any) => i.name);
+    const parsed = JSON.parse(output) as { items: ListedTemplate[] };
+    const names = parsed.items.map((item) => item.name);
     expect(names).toContain('yc-safe-valuation-cap');
     expect(names).toContain('yc-safe-discount');
     expect(names).toContain('yc-safe-mfn');
@@ -205,8 +211,8 @@ describe('list includes external templates', () => {
       encoding: 'utf-8',
       timeout: 10_000,
     }));
-    const parsed = JSON.parse(output);
-    const ycItems = parsed.items.filter((i: any) => i.name.startsWith('yc-safe-'));
+    const parsed = JSON.parse(output) as { items: ListedTemplate[] };
+    const ycItems = parsed.items.filter((item) => item.name.startsWith('yc-safe-'));
     await allureJsonAttachment('yc-safe-list-items.json', ycItems);
     expect(ycItems.length).toBe(4);
     for (const item of ycItems) {
