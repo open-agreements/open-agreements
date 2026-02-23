@@ -1,0 +1,13 @@
+{
+  "template_id": "common-paper-mutual-nda",
+  "fields": {
+    "purpose": "Evaluating a potential partnership between Acme Corp and Globex Inc to jointly develop renewable energy monitoring software",
+    "effective_date": "2026-03-01",
+    "mnda_term": "2 years",
+    "confidentiality_term": "3 years",
+    "confidentiality_term_start": "Effective Date",
+    "governing_law": "California",
+    "jurisdiction": "courts located in San Francisco, California",
+    "changes_to_standard_terms": "None."
+  }
+}

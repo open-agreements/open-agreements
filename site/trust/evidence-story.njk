@@ -1,0 +1,75 @@
+---
+layout: base.njk
+title: Evidence Story | OpenAgreements
+description: See how documents are generated from prompt to structured JSON to final Word document.
+---
+
+<main class="main-wrap">
+  <section class="section" style="padding: clamp(32px, 5vw, 56px) clamp(16px, 4vw, 48px);">
+    <h1>Evidence Story: NDA Fill</h1>
+    <p style="color: var(--ink-soft); max-width: 640px; margin: 8px 0 32px;">
+      A concrete example of the fill pipeline — from a natural language request
+      through structured JSON to the final filled Word document.
+      Every step is reproducible and tested.
+    </p>
+
+    <div class="evidence-step">
+      <h3><span class="evidence-step-number">1</span> Prompt</h3>
+      <blockquote style="margin: 12px 0 0; padding: 12px 16px; border-left: 3px solid var(--accent); background: var(--accent-soft); font-style: italic;">
+        Fill a Common Paper Mutual NDA for Acme Corp and Globex Inc.
+        They're evaluating a partnership to jointly develop renewable energy monitoring software.
+        Effective March 1, 2026. Two-year term, three-year confidentiality period.
+        California law, San Francisco courts.
+      </blockquote>
+    </div>
+
+    <div class="evidence-step">
+      <h3><span class="evidence-step-number">2</span> Structured JSON Payload</h3>
+      <p style="color: var(--ink-soft); font-size: 0.88rem; margin: 0 0 12px;">
+        The agent translates the prompt into a deterministic fill payload.
+        This is the exact JSON passed to <code>open-agreements fill</code>.
+      </p>
+      <pre><code class="language-json">{
+  "template_id": "common-paper-mutual-nda",
+  "fields": {
+    "purpose": "Evaluating a potential partnership between Acme Corp and Globex Inc to jointly develop renewable energy monitoring software",
+    "effective_date": "2026-03-01",
+    "mnda_term": "2 years",
+    "confidentiality_term": "3 years",
+    "confidentiality_term_start": "Effective Date",
+    "governing_law": "California",
+    "jurisdiction": "courts located in San Francisco, California",
+    "changes_to_standard_terms": "None."
+  }
+}</code></pre>
+    </div>
+
+    <div class="evidence-step">
+      <h3><span class="evidence-step-number">3</span> Final Document Output</h3>
+      <p style="color: var(--ink-soft); font-size: 0.88rem; margin: 0 0 12px;">
+        The filled DOCX rendered as a page image. All placeholder fields have been
+        replaced with the values from the JSON payload.
+      </p>
+      <img
+        src="/assets/evidence/nda-fill/output.png"
+        alt="Rendered page 1 of the filled Common Paper Mutual NDA"
+        style="max-width: 600px;"
+        loading="lazy"
+      />
+    </div>
+
+    <div style="margin-top: 24px; padding: 16px; border: 1px solid var(--line); background: var(--bg); font-size: 0.88rem;">
+      <h3 style="margin: 0 0 8px; font-size: 0.95rem;">How to reproduce</h3>
+      <ol style="margin: 0; padding-left: 20px; color: var(--ink-soft);">
+        <li>Install: <code>npm install -g open-agreements</code></li>
+        <li>Save the JSON above as <code>payload.json</code></li>
+        <li>Run: <code>open-agreements fill common-paper-mutual-nda -d payload.json -o nda.docx</code></li>
+        <li>Open <code>nda.docx</code> to verify the filled values match</li>
+      </ol>
+    </div>
+
+    <p style="margin-top: 20px;">
+      <a href="/trust/" style="color: var(--accent-deep);">&larr; Back to Trust</a>
+    </p>
+  </section>
+</main>
