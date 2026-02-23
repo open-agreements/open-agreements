@@ -115,6 +115,15 @@ jobs:
     if: github.ref == 'refs/heads/main'
     needs: [test]
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    concurrency:
+      group: pages
+      cancel-in-progress: true
     steps:
       - uses: actions/checkout@v4
 
@@ -134,12 +143,14 @@ jobs:
       - name: Generate and brand Allure report
         run: npm run report:allure
 
-      - name: Deploy Allure report to Vercel
-        run: npm run allure:deploy
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_ALLURE_PROJECT_ID }}
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: allure-report
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
 
   source-drift-canary:
     runs-on: ubuntu-latest
