@@ -9,8 +9,21 @@ const ROOT = new URL('..', import.meta.url).pathname;
 const BIN = join(ROOT, 'bin/open-agreements.js');
 const it = itAllure.epic('Discovery & Metadata');
 
+interface ListItem {
+  name: string;
+  attribution_text?: string;
+  category?: string;
+  [key: string]: unknown;
+}
+
+interface ListResponse {
+  schema_version: number;
+  cli_version: string;
+  items: ListItem[];
+}
+
 describe('list --json envelope', () => {
-  let parsed: any;
+  let parsed: ListResponse | null = null;
   let available = true;
 
   try {
@@ -19,30 +32,30 @@ describe('list --json envelope', () => {
       encoding: 'utf-8',
       timeout: 10_000,
     });
-    parsed = JSON.parse(output);
+    parsed = JSON.parse(output) as ListResponse;
   } catch (err) {
     if (process.env.CI) throw err;
     available = false;
   }
 
   it('has schema_version 1', () => {
-    if (!available) return;
+    if (!available || !parsed) return;
     expect(parsed.schema_version).toBe(1);
   });
 
   it('has a cli_version string', () => {
-    if (!available) return;
+    if (!available || !parsed) return;
     expect(typeof parsed.cli_version).toBe('string');
     expect(parsed.cli_version.length).toBeGreaterThan(0);
   });
 
   it('has items as an array', () => {
-    if (!available) return;
+    if (!available || !parsed) return;
     expect(Array.isArray(parsed.items)).toBe(true);
   });
 
   it('items contain name and license or license_note keys', () => {
-    if (!available) return;
+    if (!available || !parsed) return;
     expect(parsed.items.length).toBeGreaterThan(0);
     for (const item of parsed.items) {
       expect(item).toHaveProperty('name');
@@ -52,15 +65,15 @@ describe('list --json envelope', () => {
   });
 
   it.openspec('OA-057')('items are sorted by name', () => {
-    if (!available) return;
-    const names = parsed.items.map((i: any) => i.name);
+    if (!available || !parsed) return;
+    const names = parsed.items.map((item) => item.name);
     const sorted = [...names].sort((a: string, b: string) => a.localeCompare(b));
     expect(names).toEqual(sorted);
   });
 
   it.openspec('OA-057')('items include full template metadata in json output', () => {
-    if (!available) return;
-    const templateItems = parsed.items.filter((item: any) => typeof item.attribution_text === 'string');
+    if (!available || !parsed) return;
+    const templateItems = parsed.items.filter((item) => typeof item.attribution_text === 'string');
     expect(templateItems.length).toBeGreaterThan(0);
 
     for (const item of templateItems) {
@@ -84,8 +97,8 @@ describe('list options', () => {
       encoding: 'utf-8',
       timeout: 10_000,
     });
-    const parsed = JSON.parse(output);
-    const names = parsed.items.map((item: { name: string }) => item.name);
+    const parsed = JSON.parse(output) as ListResponse;
+    const names = parsed.items.map((item) => item.name);
 
     expect(names.length).toBeGreaterThan(0);
     expect(names).toContain('common-paper-mutual-nda');

@@ -1,0 +1,63 @@
+---
+layout: base.njk
+title: Trust | OpenAgreements
+description: Reliability evidence and trust signals for OpenAgreements.
+---
+
+<main class="main-wrap">
+  <section class="section" style="padding: clamp(32px, 5vw, 56px) clamp(16px, 4vw, 48px);">
+    <h1>Trust &amp; Evidence</h1>
+    <p style="color: var(--ink-soft); max-width: 640px; margin: 8px 0 32px;">
+      Machine-generated, verifiable evidence of software quality.
+      Every claim below links to its source — inspect anything.
+    </p>
+
+    <div class="trust-cards">
+
+      <a href="/trust/system-card/" class="trust-card">
+        <h2>System Card</h2>
+        <p>
+          Reliability summary covering OpenSpec scenario mapping
+          and automated test run status across all packages.
+        </p>
+        <span class="trust-card-cta">View system card &rarr;</span>
+      </a>
+
+      <a href="/trust/template-evidence/" class="trust-card">
+        <h2>Template Evidence Ledger</h2>
+        <p>
+          Per-template validation status, source provenance,
+          licensing, and field metadata for every template in the catalog.
+        </p>
+        <span class="trust-card-cta">View template evidence &rarr;</span>
+      </a>
+
+      <a href="/trust/evidence-story/" class="trust-card">
+        <h2>Evidence Story</h2>
+        <p>
+          See how documents are generated: from natural language prompt
+          to structured JSON payload to final filled Word document.
+        </p>
+        <span class="trust-card-cta">View evidence story &rarr;</span>
+      </a>
+
+    </div>
+
+    <div style="margin-top: 40px;">
+      <h2>External Signals</h2>
+      <div class="badge-stack" style="justify-content: flex-start; margin-top: 12px;">
+        <div class="badge-row">
+          <a class="trust-badge" href="https://npmjs.org/package/open-agreements" target="_blank" rel="noreferrer">
+            <img src="https://img.shields.io/npm/dm/open-agreements.svg" alt="npm downloads" height="20" loading="lazy" />
+          </a>
+          <a class="trust-badge" href="https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml?query=branch%3Amain" target="_blank" rel="noreferrer">
+            <img src="https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml/badge.svg" alt="CI status" height="20" loading="lazy" />
+          </a>
+          <a class="trust-badge" href="https://app.codecov.io/gh/open-agreements/open-agreements" target="_blank" rel="noreferrer">
+            <img src="https://img.shields.io/codecov/c/github/open-agreements/open-agreements/main" alt="Coverage status" height="20" loading="lazy" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

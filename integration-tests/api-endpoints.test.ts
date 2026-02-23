@@ -112,9 +112,23 @@ function createMockReq(overrides: {
   };
 }
 
-function parseMcpEnvelope(body: any) {
-  const text = body?.result?.content?.[0]?.text;
-  return JSON.parse(text as string);
+function asObject(value: unknown): Record<string, unknown> {
+  return typeof value === 'object' && value !== null ? (value as Record<string, unknown>) : {};
+}
+
+function getResultObject(res: MockRes): Record<string, unknown> {
+  return asObject(asObject(res.body).result);
+}
+
+function getErrorObject(res: MockRes): Record<string, unknown> {
+  return asObject(asObject(res.body).error);
+}
+
+function parseMcpEnvelope(body: unknown): Record<string, unknown> {
+  const result = asObject(asObject(body).result);
+  const content = Array.isArray(result.content) ? result.content : [];
+  const first = content.length > 0 ? asObject(content[0]) : {};
+  return JSON.parse(String(first.text ?? '{}')) as Record<string, unknown>;
 }
 
 afterEach(() => {
@@ -131,7 +145,7 @@ describe('A2A endpoint — api/a2a.ts', () => {
   it('returns 204 for OPTIONS (CORS preflight)', async () => {
     const req = createMockReq({ method: 'OPTIONS' });
     const res = createMockRes();
-    await a2aHandler(req as any, res as any);
+    await a2aHandler(req, res);
 
     expect(res.statusCode).toBe(204);
     expect(res.ended).toBe(true);
@@ -141,7 +155,7 @@ describe('A2A endpoint — api/a2a.ts', () => {
   it('returns 405 for non-POST methods', async () => {
     const req = createMockReq({ method: 'GET' });
     const res = createMockRes();
-    await a2aHandler(req as any, res as any);
+    await a2aHandler(req, res);
 
     expect(res.statusCode).toBe(405);
   });
@@ -149,10 +163,10 @@ describe('A2A endpoint — api/a2a.ts', () => {
   it('returns JSON-RPC error for invalid request body', async () => {
     const req = createMockReq({ body: { notJsonRpc: true } });
     const res = createMockRes();
-    await a2aHandler(req as any, res as any);
+    await a2aHandler(req, res);
 
     expect(res.statusCode).toBe(200);
-    expect((res.body as any).error.code).toBe(-32600);
+    expect(getErrorObject(res).code).toBe(-32600);
   });
 
   it('returns JSON-RPC error for unsupported methods', async () => {
@@ -160,11 +174,11 @@ describe('A2A endpoint — api/a2a.ts', () => {
       body: { jsonrpc: '2.0', id: 1, method: 'tasks/get' },
     });
     const res = createMockRes();
-    await a2aHandler(req as any, res as any);
+    await a2aHandler(req, res);
 
     expect(res.statusCode).toBe(200);
-    expect((res.body as any).error.code).toBe(-32601);
-    expect((res.body as any).error.message).toContain('tasks/get');
+    expect(getErrorObject(res).code).toBe(-32601);
+    expect(String(getErrorObject(res).message)).toContain('tasks/get');
   });
 
   it('routes list-templates skill to handleListTemplates', async () => {
@@ -181,13 +195,13 @@ describe('A2A endpoint — api/a2a.ts', () => {
       },
     });
     const res = createMockRes();
-    await a2aHandler(req as any, res as any);
+    await a2aHandler(req, res);
 
     await allureJsonAttachment('a2a-list-response.json', res.body);
 
     expect(res.statusCode).toBe(200);
     expect(handleListTemplatesMock).toHaveBeenCalledTimes(1);
-    const result = (res.body as any).result;
+    const result = getResultObject(res);
     expect(result.status.state).toBe('completed');
     expect(result.artifacts[0].parts[0].data.items).toHaveLength(1);
   });
@@ -217,13 +231,13 @@ describe('A2A endpoint — api/a2a.ts', () => {
       },
     });
     const res = createMockRes();
-    await a2aHandler(req as any, res as any);
+    await a2aHandler(req, res);
 
     await allureJsonAttachment('a2a-fill-response.json', res.body);
 
     expect(res.statusCode).toBe(200);
     expect(handleFillMock).toHaveBeenCalledWith('common-paper-mutual-nda', { company_name: 'Acme Corp' });
-    const result = (res.body as any).result;
+    const result = getResultObject(res);
     expect(result.status.state).toBe('completed');
     expect(result.artifacts[0].parts[0].data.inlineData).toBe(MOCK_FILL_SUCCESS.base64);
   });
@@ -244,9 +258,9 @@ describe('A2A endpoint — api/a2a.ts', () => {
       },
     });
     const res = createMockRes();
-    await a2aHandler(req as any, res as any);
+    await a2aHandler(req, res);
 
-    const result = (res.body as any).result;
+    const result = getResultObject(res);
     expect(result.status.state).toBe('failed');
     expect(result.status.message).toContain('nonexistent');
   });
@@ -265,9 +279,9 @@ describe('A2A endpoint — api/a2a.ts', () => {
       },
     });
     const res = createMockRes();
-    await a2aHandler(req as any, res as any);
+    await a2aHandler(req, res);
 
-    expect((res.body as any).error.message).toContain('unknown-skill');
+    expect(String(getErrorObject(res).message)).toContain('unknown-skill');
   });
 
   it('returns error when message parts are missing', async () => {
@@ -280,9 +294,9 @@ describe('A2A endpoint — api/a2a.ts', () => {
       },
     });
     const res = createMockRes();
-    await a2aHandler(req as any, res as any);
+    await a2aHandler(req, res);
 
-    expect((res.body as any).error.code).toBe(-32602);
+    expect(getErrorObject(res).code).toBe(-32602);
   });
 });
 
@@ -296,7 +310,7 @@ describe('MCP endpoint — api/mcp.ts', () => {
   it('returns 204 for OPTIONS (CORS preflight)', async () => {
     const req = createMockReq({ method: 'OPTIONS' });
     const res = createMockRes();
-    await mcpHandler(req as any, res as any);
+    await mcpHandler(req, res);
 
     expect(res.statusCode).toBe(204);
     expect(res.headers['Access-Control-Allow-Headers']).toContain('Mcp-Session-Id');
@@ -305,16 +319,16 @@ describe('MCP endpoint — api/mcp.ts', () => {
   it('returns 405 JSON for non-browser GET requests', async () => {
     const req = createMockReq({ method: 'GET', headers: { accept: 'application/json' } });
     const res = createMockRes();
-    await mcpHandler(req as any, res as any);
+    await mcpHandler(req, res);
 
     expect(res.statusCode).toBe(405);
-    expect((res.body as any).error).toContain('Only POST');
+    expect(String(asObject(res.body).error)).toContain('Only POST');
   });
 
   it('returns 200 HTML for browser-style GET requests', async () => {
     const req = createMockReq({ method: 'GET', headers: { accept: 'text/html' } });
     const res = createMockRes();
-    await mcpHandler(req as any, res as any);
+    await mcpHandler(req, res);
 
     expect(res.statusCode).toBe(200);
     expect(res.headers['Content-Type']).toContain('text/html');
@@ -336,12 +350,12 @@ describe('MCP endpoint — api/mcp.ts', () => {
       },
     });
     const res = createMockRes();
-    await mcpHandler(req as any, res as any);
+    await mcpHandler(req, res);
 
     await allureJsonAttachment('mcp-initialize-response.json', res.body);
 
     expect(res.statusCode).toBe(200);
-    const result = (res.body as any).result;
+    const result = getResultObject(res);
     expect(result.protocolVersion).toBe('2024-11-05');
     expect(result.serverInfo.name).toBe('OpenAgreements');
     expect(result.capabilities.tools).toBeDefined();
@@ -352,7 +366,7 @@ describe('MCP endpoint — api/mcp.ts', () => {
       body: { jsonrpc: '2.0', method: 'notifications/initialized' },
     });
     const res = createMockRes();
-    await mcpHandler(req as any, res as any);
+    await mcpHandler(req, res);
 
     expect(res.statusCode).toBe(202);
     expect(res.ended).toBe(true);
@@ -363,13 +377,13 @@ describe('MCP endpoint — api/mcp.ts', () => {
       body: { jsonrpc: '2.0', id: 2, method: 'tools/list' },
     });
     const res = createMockRes();
-    await mcpHandler(req as any, res as any);
+    await mcpHandler(req, res);
 
     await allureJsonAttachment('mcp-tools-list.json', res.body);
 
-    const tools = (res.body as any).result.tools;
+    const tools = getResultObject(res).tools;
     expect(tools).toHaveLength(4);
-    expect(tools.map((t: any) => t.name).sort()).toEqual([
+    expect(tools.map((t: { name: string }) => t.name).sort()).toEqual([
       'download_filled',
       'fill_template',
       'get_template',
@@ -387,7 +401,7 @@ describe('MCP endpoint — api/mcp.ts', () => {
       },
     });
     const res = createMockRes();
-    await mcpHandler(req as any, res as any);
+    await mcpHandler(req, res);
 
     expect(handleListTemplatesMock).toHaveBeenCalledTimes(1);
     const envelope = parseMcpEnvelope(res.body);
@@ -412,7 +426,7 @@ describe('MCP endpoint — api/mcp.ts', () => {
       },
     });
     const res = createMockRes();
-    await mcpHandler(req as any, res as any);
+    await mcpHandler(req, res);
 
     expect(handleGetTemplateMock).toHaveBeenCalledWith('common-paper-mutual-nda');
     const envelope = parseMcpEnvelope(res.body);
@@ -421,7 +435,7 @@ describe('MCP endpoint — api/mcp.ts', () => {
     expect(envelope.data.template.template_id).toBe('common-paper-mutual-nda');
   });
 
-  it('handles tools/call fill_template with URL return_mode envelope', async () => {
+  it.openspec('OA-083')('handles tools/call fill_template with URL return_mode envelope', async () => {
     handleFillMock.mockResolvedValue(MOCK_FILL_SUCCESS);
 
     const req = createMockReq({
@@ -440,7 +454,7 @@ describe('MCP endpoint — api/mcp.ts', () => {
       },
     });
     const res = createMockRes();
-    await mcpHandler(req as any, res as any);
+    await mcpHandler(req, res);
 
     await allureJsonAttachment('mcp-fill-response.json', res.body);
 
@@ -467,9 +481,9 @@ describe('MCP endpoint — api/mcp.ts', () => {
       },
     });
     const res = createMockRes();
-    await mcpHandler(req as any, res as any);
+    await mcpHandler(req, res);
 
-    const result = (res.body as any).result;
+    const result = getResultObject(res);
     const envelope = parseMcpEnvelope(res.body);
     expect(result.isError).toBe(true);
     expect(envelope.ok).toBe(false);
@@ -489,9 +503,9 @@ describe('MCP endpoint — api/mcp.ts', () => {
       },
     });
     const res = createMockRes();
-    await mcpHandler(req as any, res as any);
+    await mcpHandler(req, res);
 
-    const result = (res.body as any).result;
+    const result = getResultObject(res);
     const envelope = parseMcpEnvelope(res.body);
     expect(result.isError).toBe(true);
     expect(envelope.ok).toBe(false);
@@ -509,9 +523,9 @@ describe('MCP endpoint — api/mcp.ts', () => {
       },
     });
     const res = createMockRes();
-    await mcpHandler(req as any, res as any);
+    await mcpHandler(req, res);
 
-    const result = (res.body as any).result;
+    const result = getResultObject(res);
     const envelope = parseMcpEnvelope(res.body);
     expect(result.isError).toBe(true);
     expect(envelope.ok).toBe(false);
@@ -524,10 +538,10 @@ describe('MCP endpoint — api/mcp.ts', () => {
       body: { jsonrpc: '2.0', id: 8, method: 'ping' },
     });
     const res = createMockRes();
-    await mcpHandler(req as any, res as any);
+    await mcpHandler(req, res);
 
     expect(res.statusCode).toBe(200);
-    expect((res.body as any).result).toEqual({});
+    expect(getResultObject(res)).toEqual({});
   });
 
   it('returns method-not-supported for unknown methods', async () => {
@@ -535,15 +549,15 @@ describe('MCP endpoint — api/mcp.ts', () => {
       body: { jsonrpc: '2.0', id: 9, method: 'resources/list' },
     });
     const res = createMockRes();
-    await mcpHandler(req as any, res as any);
+    await mcpHandler(req, res);
 
-    expect((res.body as any).error.code).toBe(-32601);
+    expect(getErrorObject(res).code).toBe(-32601);
   });
 
   it('returns 400 for invalid JSON-RPC body', async () => {
     const req = createMockReq({ body: { not: 'jsonrpc' } });
     const res = createMockRes();
-    await mcpHandler(req as any, res as any);
+    await mcpHandler(req, res);
 
     expect(res.statusCode).toBe(400);
   });
@@ -559,7 +573,7 @@ describe('Download endpoint — api/download.ts', () => {
   it('returns 405 for non-GET/HEAD methods', async () => {
     const req = createMockReq({ method: 'POST' });
     const res = createMockRes();
-    await downloadHandler(req as any, res as any);
+    await downloadHandler(req, res);
 
     expect(res.statusCode).toBe(405);
   });
@@ -567,25 +581,43 @@ describe('Download endpoint — api/download.ts', () => {
   it('returns 400 with machine-readable code when id is missing', async () => {
     const req = createMockReq({ method: 'GET', query: {} });
     const res = createMockRes();
-    await downloadHandler(req as any, res as any);
+    await downloadHandler(req, res);
 
     expect(res.statusCode).toBe(400);
-    expect((res.body as any).error.code).toBe('DOWNLOAD_ID_MISSING');
-    expect((res.body as any).error.message).toContain('"id"');
+    expect(getErrorObject(res).code).toBe('DOWNLOAD_ID_MISSING');
+    expect(String(getErrorObject(res).message)).toContain('"id"');
   });
 
-  it('returns 403 with machine-readable code for invalid signature', async () => {
+  it.openspec('OA-086')('returns 403 with machine-readable code for invalid signature', async () => {
     resolveDownloadArtifactMock.mockReturnValue({ ok: false, code: 'DOWNLOAD_SIGNATURE_INVALID' });
 
     const req = createMockReq({ method: 'GET', query: { id: 'bad-download-id' } });
     const res = createMockRes();
-    await downloadHandler(req as any, res as any);
+    await downloadHandler(req, res);
 
     expect(res.statusCode).toBe(403);
-    expect((res.body as any).error.code).toBe('DOWNLOAD_SIGNATURE_INVALID');
+    expect(getErrorObject(res).code).toBe('DOWNLOAD_SIGNATURE_INVALID');
   });
 
-  it('serves DOCX for valid download_id', async () => {
+  it('renders a user-facing HTML error page when browser clients request text/html', async () => {
+    resolveDownloadArtifactMock.mockReturnValue({ ok: false, code: 'DOWNLOAD_EXPIRED' });
+
+    const req = createMockReq({
+      method: 'GET',
+      query: { id: 'expired-id.valid-sig' },
+      headers: { accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8' },
+    });
+    const res = createMockRes();
+    await downloadHandler(req, res);
+
+    expect(res.statusCode).toBe(410);
+    expect(res.headers['Content-Type']).toContain('text/html');
+    expect(typeof res.body).toBe('string');
+    expect(String(res.body)).toContain('Download Link Unavailable');
+    expect(String(res.body)).toContain('DOWNLOAD_EXPIRED');
+  });
+
+  it.openspec('OA-084')('serves DOCX for valid download_id', async () => {
     resolveDownloadArtifactMock.mockReturnValue({
       ok: true,
       artifact: {
@@ -599,7 +631,7 @@ describe('Download endpoint — api/download.ts', () => {
 
     const req = createMockReq({ method: 'GET', query: { id: 'valid-id.valid-sig' } });
     const res = createMockRes();
-    await downloadHandler(req as any, res as any);
+    await downloadHandler(req, res);
 
     await allureJsonAttachment('download-response-headers.json', res.headers);
 
@@ -624,14 +656,14 @@ describe('Download endpoint — api/download.ts', () => {
 
     const req = createMockReq({ method: 'GET', query: { id: 'valid-but-bad-template' } });
     const res = createMockRes();
-    await downloadHandler(req as any, res as any);
+    await downloadHandler(req, res);
 
     expect(res.statusCode).toBe(500);
-    expect((res.body as any).error.code).toBe('DOWNLOAD_RENDER_FAILED');
-    expect((res.body as any).error.message).toContain('nonexistent');
+    expect(getErrorObject(res).code).toBe('DOWNLOAD_RENDER_FAILED');
+    expect(String(getErrorObject(res).message)).toContain('nonexistent');
   });
 
-  it('supports HEAD for valid download_id without response body', async () => {
+  it.openspec('OA-085')('supports HEAD for valid download_id without response body', async () => {
     resolveDownloadArtifactMock.mockReturnValue({
       ok: true,
       artifact: {
@@ -645,19 +677,19 @@ describe('Download endpoint — api/download.ts', () => {
 
     const req = createMockReq({ method: 'HEAD', query: { id: 'valid-id.valid-sig' } });
     const res = createMockRes();
-    await downloadHandler(req as any, res as any);
+    await downloadHandler(req, res);
 
     expect(res.statusCode).toBe(200);
     expect(res.body).toBeUndefined();
     expect(res.ended).toBe(true);
   });
 
-  it('supports HEAD error probing with status parity', async () => {
+  it.openspec('OA-087')('supports HEAD error probing with status parity', async () => {
     resolveDownloadArtifactMock.mockReturnValue({ ok: false, code: 'DOWNLOAD_EXPIRED' });
 
     const req = createMockReq({ method: 'HEAD', query: { id: 'expired-id.valid-sig' } });
     const res = createMockRes();
-    await downloadHandler(req as any, res as any);
+    await downloadHandler(req, res);
 
     expect(res.statusCode).toBe(410);
     expect(res.headers['X-Download-Error-Code']).toBe('DOWNLOAD_EXPIRED');
@@ -668,7 +700,7 @@ describe('Download endpoint — api/download.ts', () => {
   it('returns 204 for OPTIONS (CORS preflight)', async () => {
     const req = createMockReq({ method: 'OPTIONS' });
     const res = createMockRes();
-    await downloadHandler(req as any, res as any);
+    await downloadHandler(req, res);
 
     expect(res.statusCode).toBe(204);
   });

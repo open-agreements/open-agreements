@@ -5,7 +5,8 @@ import { mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import AdmZip from 'adm-zip';
 import { DOMParser } from '@xmldom/xmldom';
-import { patchDocument, getRunText, isRunSafeToRemove } from './patcher.js';
+import type { Element } from '@xmldom/xmldom';
+import { patchDocument, isRunSafeToRemove } from './patcher.js';
 
 const it = itAllure.epic('Filling & Rendering');
 
@@ -419,10 +420,10 @@ describe('patchDocument', () => {
 describe('isRunSafeToRemove', () => {
   const parser = new DOMParser();
 
-  function makeRun(innerXml: string): any {
+  function makeRun(innerXml: string): Element {
     const xml = `<w:r xmlns:w="${W_NS}">${innerXml}</w:r>`;
     const doc = parser.parseFromString(xml, 'text/xml');
-    return doc.documentElement;
+    return doc.documentElement as Element;
   }
 
   it('returns true for run with only rPr and empty t', () => {

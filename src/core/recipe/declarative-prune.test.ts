@@ -3,6 +3,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import AdmZip from 'adm-zip';
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
+import type { Element } from '@xmldom/xmldom';
 import { afterEach, describe, expect } from 'vitest';
 import { itAllure } from '../../../integration-tests/helpers/allure-test.js';
 
@@ -70,7 +71,7 @@ async function applyDeclarativePrunePrototype(
   let lastHeading = '';
 
   for (let i = 0; i < paragraphs.length; i++) {
-    const para = paragraphs[i] as any;
+    const para = paragraphs[i];
     const original = extractParagraphText(para).trim();
     if (!original) continue;
 
@@ -147,7 +148,7 @@ async function applyDeclarativeParagraphRulesPrototype(
   let lastHeading = '';
 
   for (let i = 0; i < paragraphs.length; i++) {
-    const para = paragraphs[i] as any;
+    const para = paragraphs[i];
     const original = extractParagraphText(para).trim();
     if (!original) continue;
 
@@ -284,7 +285,7 @@ function readDocText(path: string): string {
   return paragraphs.join('\n');
 }
 
-function extractParagraphText(para: any): string {
+function extractParagraphText(para: Element): string {
   const tElements = para.getElementsByTagNameNS(W_NS, 't');
   const parts: string[] = [];
   for (let i = 0; i < tElements.length; i++) {
@@ -293,7 +294,7 @@ function extractParagraphText(para: any): string {
   return parts.join('');
 }
 
-function setParagraphText(para: any, text: string): void {
+function setParagraphText(para: Element, text: string): void {
   const tElements = para.getElementsByTagNameNS(W_NS, 't');
   if (tElements.length === 0) return;
   tElements[0].textContent = text;

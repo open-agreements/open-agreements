@@ -1,0 +1,22 @@
+name: Working Group List
+description: >-
+  Standalone working group roster for a transaction. Tracks staffed deal team
+  members and contact details outside the closing checklist document.
+source_url: https://github.com/open-agreements/open-agreements
+version: '1.0'
+license: CC0-1.0
+allow_derivatives: true
+attribution_text: >-
+  OpenAgreements Working Group List. Licensed under CC0 1.0.
+fields:
+  - name: deal_name
+    type: string
+    description: Name of the deal or transaction
+  - name: updated_at
+    type: string
+    description: ISO date when the list was last updated
+  - name: working_group
+    type: array
+    description: Array of working group members (name, organization, role, email)
+required_fields:
+  - deal_name

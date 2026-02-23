@@ -10,6 +10,7 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { z } from 'zod';
 import AdmZip from 'adm-zip';
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
+import type { Document, Element, Node } from '@xmldom/xmldom';
 import { enumerateTextParts, getGeneralTextPartNames } from './recipe/ooxml-parts.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
@@ -54,11 +55,8 @@ export function loadSelectionsConfig(path: string): SelectionsConfig {
 // Helpers
 // ---------------------------------------------------------------------------
 
-/* eslint-disable @typescript-eslint/no-explicit-any --
-   @xmldom/xmldom types are incompatible with global DOM types */
-
 /** Extract paragraph text by concatenating all <w:t> elements. */
-function extractParagraphText(para: any): string {
+function extractParagraphText(para: Element): string {
   if (!para.getElementsByTagNameNS) return '';
   const tElements = para.getElementsByTagNameNS(W_NS, 't');
   const parts: string[] = [];
@@ -76,7 +74,7 @@ function hasOptionPrefix(text: string): boolean {
 }
 
 /** Update a paragraph's marker prefix to checked state. */
-function setChecked(para: any, type: 'radio' | 'checkbox'): void {
+function setChecked(para: Element, type: 'radio' | 'checkbox'): void {
   const tElements = para.getElementsByTagNameNS(W_NS, 't');
   if (tElements.length === 0) return;
 
@@ -116,8 +114,7 @@ function setChecked(para: any, type: 'radio' | 'checkbox'): void {
   // Walk through <w:t> elements to find and replace the marker
   let foundOpen = false;
   let foundClose = false;
-  let firstT: any = null;
-  const tToBlank: any[] = [];
+  const tToBlank: Element[] = [];
 
   for (let i = 0; i < tElements.length; i++) {
     const t = tElements[i];
@@ -127,7 +124,6 @@ function setChecked(para: any, type: 'radio' | 'checkbox'): void {
       const openIdx = content.indexOf(openBracket);
       if (openIdx >= 0) {
         foundOpen = true;
-        firstT = t;
 
         // Check if close bracket is in the same <w:t>
         const closeIdx = content.indexOf(closeBracket, openIdx + 1);
@@ -235,7 +231,7 @@ export async function applySelections(
 }
 
 interface OptionMatch {
-  para: any;
+  para: Element;
   optionIndex: number;
 }
 
@@ -244,7 +240,7 @@ interface OptionMatch {
  * Returns true if any modifications were made.
  */
 function processGroup(
-  doc: any,
+  doc: Document,
   group: z.infer<typeof GroupSchema>,
   data: Record<string, unknown>,
 ): boolean {
@@ -274,12 +270,11 @@ function processGroup(
 
   // Step 3: Collect all <w:p> in this cell and classify them
   const cellParas = cell.getElementsByTagNameNS(W_NS, 'p');
-  const optionParaSet = new Set(optionMatches.map((m) => m.para));
 
   // Build an ordered list of { para, ownerOptionIndex }
   // Header paragraphs (before first option) have ownerOptionIndex = -1
   interface ClassifiedPara {
-    para: any;
+    para: Element;
     ownerOptionIndex: number;
     isOption: boolean;
   }
@@ -367,11 +362,14 @@ function processGroup(
 }
 
 /** Walk up the DOM to find an ancestor with the given local name. */
-function findAncestor(node: any, localName: string): any {
-  let current = node.parentNode;
+function findAncestor(node: Element, localName: string): Element | null {
+  let current: Node | null = node.parentNode;
   while (current) {
-    if (current.localName === localName && current.namespaceURI === W_NS) {
-      return current;
+    if (current.nodeType === 1) {
+      const element = current as Element;
+      if (element.localName === localName && element.namespaceURI === W_NS) {
+        return element;
+      }
     }
     current = current.parentNode;
   }

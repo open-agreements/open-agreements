@@ -1,0 +1,90 @@
+---
+layout: base.njk
+title: Template Evidence Ledger | OpenAgreements
+description: Per-template validation status, source provenance, and field metadata.
+---
+
+<main class="main-wrap">
+  <section class="section" style="padding: clamp(32px, 5vw, 56px) clamp(16px, 4vw, 48px);">
+    <h1>Template Evidence Ledger</h1>
+    <p style="color: var(--ink-soft); max-width: 640px; margin: 8px 0 4px;">
+      Validation status for every template in the catalog.
+      Each row shows source provenance, licensing, and whether the template has
+      dedicated automated tests.
+    </p>
+    <p style="color: var(--ink-soft); font-size: 0.85rem; margin: 0 0 24px;">
+      Generated {{ templateEvidence.generated_at_utc | truncate(19, true, "") }} UTC
+      &middot;
+      <strong>{{ templateEvidence.validated_count }}</strong> validated,
+      <strong>{{ templateEvidence.not_covered_count }}</strong> not covered,
+      <strong>{{ templateEvidence.not_applicable_count }}</strong> n/a
+      &middot;
+      {{ templateEvidence.total_templates }} templates total
+    </p>
+
+    <div style="overflow-x: auto; -webkit-overflow-scrolling: touch;">
+      <table class="evidence-table">
+        <thead>
+          <tr>
+            <th>Template</th>
+            <th>Source</th>
+            <th>License</th>
+            <th>Fields</th>
+            <th>Validation</th>
+            <th>Last Run</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for t in templateEvidence.templates %}
+          <tr>
+            <td>
+              <strong>{{ t.displayName }}</strong>
+              <br><code style="font-size: 0.75rem; color: var(--ink-soft);">{{ t.id }}</code>
+            </td>
+            <td>
+              <a href="{{ t.sourceUrl }}" target="_blank" rel="noreferrer" style="color: var(--accent-deep); text-decoration: none;">{{ t.sourceLabel }}</a>
+            </td>
+            <td>
+              {% if t.license == "Recipe" %}
+                <span class="template-license recipe">Recipe</span>
+              {% else %}
+                <span class="template-license">{{ t.license }}</span>
+              {% endif %}
+            </td>
+            <td>{{ t.requiredFields }}/{{ t.totalFields }}</td>
+            <td>
+              {% if t.validation_status == "validated" %}
+                <span class="status-validated">Validated</span>
+              {% elif t.validation_status == "not_covered" %}
+                <span class="status-not-covered">Not covered</span>
+              {% else %}
+                <span class="status-not-applicable">&mdash;</span>
+              {% endif %}
+            </td>
+            <td>
+              {% if t.last_validation_at %}
+                {{ t.last_validation_at | truncate(19, true, "") }}
+              {% else %}
+                &mdash;
+              {% endif %}
+            </td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <div style="margin-top: 32px; padding: 16px; border: 1px solid var(--line); background: var(--bg); font-size: 0.88rem;">
+      <h3 style="margin: 0 0 8px; font-size: 0.95rem;">About validation status</h3>
+      <ul style="margin: 0; padding-left: 20px; color: var(--ink-soft);">
+        <li><strong class="status-validated">Validated</strong> &mdash; template has dedicated Allure test(s) that exercise the fill pipeline with template-specific payloads.</li>
+        <li><strong class="status-not-covered">Not covered</strong> &mdash; template exists in the catalog but has no dedicated validation test yet. General fill-pipeline tests still exercise the template engine.</li>
+        <li><strong class="status-not-applicable">N/A</strong> &mdash; recipe template downloaded at runtime from upstream source; not pre-validated in the test suite.</li>
+      </ul>
+    </div>
+
+    <p style="margin-top: 20px;">
+      <a href="/trust/" style="color: var(--accent-deep);">&larr; Back to Trust</a>
+    </p>
+  </section>
+</main>

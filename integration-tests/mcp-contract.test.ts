@@ -135,9 +135,19 @@ function createMockReq(overrides: {
   };
 }
 
-function parseEnvelope(body: any) {
-  const text = body?.result?.content?.[0]?.text;
-  return JSON.parse(text as string);
+function asObject(value: unknown): Record<string, unknown> {
+  return typeof value === 'object' && value !== null ? (value as Record<string, unknown>) : {};
+}
+
+function getResultObject(res: MockRes): Record<string, unknown> {
+  return asObject(asObject(res.body).result);
+}
+
+function parseEnvelope(body: unknown): Record<string, unknown> {
+  const result = asObject(asObject(body).result);
+  const content = Array.isArray(result.content) ? result.content : [];
+  const first = content.length > 0 ? asObject(content[0]) : {};
+  return JSON.parse(String(first.text ?? '{}')) as Record<string, unknown>;
 }
 
 const { default: mcpHandler } = await import('../api/mcp.js');
@@ -158,7 +168,7 @@ describe('MCP contract envelope behaviors', () => {
     });
     const res = createMockRes();
 
-    await mcpHandler(req as any, res as any);
+    await mcpHandler(req, res);
 
     const envelope = parseEnvelope(res.body);
     await allureJsonAttachment('mcp-contract-list-templates-success.json', envelope);
@@ -182,7 +192,7 @@ describe('MCP contract envelope behaviors', () => {
       },
     });
     const compactRes = createMockRes();
-    await mcpHandler(compactReq as any, compactRes as any);
+    await mcpHandler(compactReq, compactRes);
 
     const compactEnvelope = parseEnvelope(compactRes.body);
     expect(compactEnvelope.ok).toBe(true);
@@ -202,7 +212,7 @@ describe('MCP contract envelope behaviors', () => {
       },
     });
     const fullRes = createMockRes();
-    await mcpHandler(fullReq as any, fullRes as any);
+    await mcpHandler(fullReq, fullRes);
 
     const fullEnvelope = parseEnvelope(fullRes.body);
     expect(fullEnvelope.ok).toBe(true);
@@ -221,7 +231,7 @@ describe('MCP contract envelope behaviors', () => {
       },
     });
     const foundRes = createMockRes();
-    await mcpHandler(foundReq as any, foundRes as any);
+    await mcpHandler(foundReq, foundRes);
 
     const foundEnvelope = parseEnvelope(foundRes.body);
     expect(foundEnvelope.ok).toBe(true);
@@ -237,10 +247,10 @@ describe('MCP contract envelope behaviors', () => {
       },
     });
     const missingRes = createMockRes();
-    await mcpHandler(missingReq as any, missingRes as any);
+    await mcpHandler(missingReq, missingRes);
 
     const missingEnvelope = parseEnvelope(missingRes.body);
-    expect((missingRes.body as any).result.isError).toBe(true);
+    expect(getResultObject(missingRes).isError).toBe(true);
     expect(missingEnvelope.ok).toBe(false);
     expect(missingEnvelope.error.code).toBe('TEMPLATE_NOT_FOUND');
   });
@@ -262,7 +272,7 @@ describe('MCP contract envelope behaviors', () => {
       },
     });
     const urlRes = createMockRes();
-    await mcpHandler(urlReq as any, urlRes as any);
+    await mcpHandler(urlReq, urlRes);
 
     const urlEnvelope = parseEnvelope(urlRes.body);
     expect(urlEnvelope.ok).toBe(true);
@@ -286,7 +296,7 @@ describe('MCP contract envelope behaviors', () => {
       },
     });
     const base64Res = createMockRes();
-    await mcpHandler(base64Req as any, base64Res as any);
+    await mcpHandler(base64Req, base64Res);
 
     const base64Envelope = parseEnvelope(base64Res.body);
     expect(base64Envelope.ok).toBe(true);
@@ -310,7 +320,7 @@ describe('MCP contract envelope behaviors', () => {
       },
     });
     const resourceRes = createMockRes();
-    await mcpHandler(resourceReq as any, resourceRes as any);
+    await mcpHandler(resourceReq, resourceRes);
 
     const resourceEnvelope = parseEnvelope(resourceRes.body);
     expect(resourceEnvelope.ok).toBe(true);
@@ -329,7 +339,7 @@ describe('MCP contract envelope behaviors', () => {
       },
     });
     const validRes = createMockRes();
-    await mcpHandler(validReq as any, validRes as any);
+    await mcpHandler(validReq, validRes);
 
     const validEnvelope = parseEnvelope(validRes.body);
     expect(validEnvelope.ok).toBe(true);
@@ -347,10 +357,10 @@ describe('MCP contract envelope behaviors', () => {
       },
     });
     const expiredRes = createMockRes();
-    await mcpHandler(expiredReq as any, expiredRes as any);
+    await mcpHandler(expiredReq, expiredRes);
 
     const expiredEnvelope = parseEnvelope(expiredRes.body);
-    expect((expiredRes.body as any).result.isError).toBe(true);
+    expect(getResultObject(expiredRes).isError).toBe(true);
     expect(expiredEnvelope.ok).toBe(false);
     expect(expiredEnvelope.error.code).toBe('DOWNLOAD_LINK_EXPIRED');
   });
@@ -371,7 +381,7 @@ describe('MCP contract envelope behaviors', () => {
       },
     });
     const invalidArgRes = createMockRes();
-    await mcpHandler(invalidArgReq as any, invalidArgRes as any);
+    await mcpHandler(invalidArgReq, invalidArgRes);
 
     const invalidArgEnvelope = parseEnvelope(invalidArgRes.body);
     expect(invalidArgEnvelope.ok).toBe(false);
@@ -387,7 +397,7 @@ describe('MCP contract envelope behaviors', () => {
       },
     });
     const unknownToolRes = createMockRes();
-    await mcpHandler(unknownToolReq as any, unknownToolRes as any);
+    await mcpHandler(unknownToolReq, unknownToolRes);
 
     const unknownToolEnvelope = parseEnvelope(unknownToolRes.body);
     expect(unknownToolEnvelope.ok).toBe(false);
@@ -397,7 +407,7 @@ describe('MCP contract envelope behaviors', () => {
   it('returns HTML for browser GET and 405 for non-browser GET', async () => {
     const browserReq = createMockReq({ method: 'GET', headers: { accept: 'text/html' } });
     const browserRes = createMockRes();
-    await mcpHandler(browserReq as any, browserRes as any);
+    await mcpHandler(browserReq, browserRes);
 
     expect(browserRes.statusCode).toBe(200);
     expect(browserRes.headers['Content-Type']).toContain('text/html');
@@ -405,9 +415,9 @@ describe('MCP contract envelope behaviors', () => {
 
     const nonBrowserReq = createMockReq({ method: 'GET', headers: { accept: 'application/json' } });
     const nonBrowserRes = createMockRes();
-    await mcpHandler(nonBrowserReq as any, nonBrowserRes as any);
+    await mcpHandler(nonBrowserReq, nonBrowserRes);
 
     expect(nonBrowserRes.statusCode).toBe(405);
-    expect((nonBrowserRes.body as any).error).toContain('Only POST');
+    expect(String(asObject(nonBrowserRes.body).error)).toContain('Only POST');
   });
 });

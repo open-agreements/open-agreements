@@ -34,6 +34,10 @@ OpenAgreements is an open-source TypeScript CLI and library for filling standard
 ### Testing Strategy
 - Unit tests with Vitest for core modules (engine, metadata, validation)
 - Integration tests: fill a template end-to-end, verify output DOCX content
+- OpenSpec scenarios are authored as behavioral requirements with `GIVEN`/`WHEN`/`THEN`, not implementation-path narratives
+- OpenSpec scenarios should stay path-independent (avoid `src/...` or test-file references in canonical scenario prose)
+- Testable OpenSpec scenarios must map to at least one Allure-decorated `.openspec(...)` test via `itAllure`/`testAllure`
+- Extend existing behavior scenarios before adding issue-specific regression-only scenarios; keep capability sections cohesive
 - CI runs `open-agreements validate` on every PR
 
 ### Git Workflow

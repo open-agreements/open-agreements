@@ -11,15 +11,15 @@
 [![Tests: Vitest](https://img.shields.io/badge/tests-vitest-6E9F18)](https://vitest.dev/)
 [![OpenSpec Traceability](https://img.shields.io/badge/openspec-traceability%20gate-brightgreen)](./scripts/validate_openspec_coverage.mjs)
 
-Fill standard legal agreement templates and produce signable DOCX files. Templates cover NDAs, cloud terms, employment docs, contractor agreements, SAFEs, and NVCA financing documents.
-
-Built by the team behind [UseJunior.com](https://usejunior.com) — in production at Am Law 100 firms.
-
 <p align="center">
   <img src="docs/assets/demo-fill-nda.gif" alt="Fill a Mutual NDA in Claude Code — prompt, answer questions, get a signed-ready DOCX" width="720">
 </p>
 
 > *Demo: Claude fills a Common Paper Mutual NDA in under 2 minutes. Sped up for brevity.*
+
+Fill standard legal agreement templates and produce signable DOCX files. Templates cover NDAs, cloud terms, employment docs, contractor agreements, SAFEs, and NVCA financing documents.
+
+Built by the team behind [UseJunior.com](https://usejunior.com) — in production at Am Law 100 firms.
 
 ## Quality and Trust Signals
 
@@ -35,14 +35,9 @@ Built by the team behind [UseJunior.com](https://usejunior.com) — in productio
 
 ## How It Works
 
-```
-1. Pick a template          2. Answer questions            3. Get a signed-ready DOCX
-┌─────────────────────┐     ┌─────────────────────────┐    ┌─────────────────────┐
-│ $ open-agreements   │     │ Party 1: Acme Corp      │    │                     │
-│   fill mutual-nda   │ ──▶ │ Party 2: Beta Inc       │ ──▶│  mutual-nda.docx    │
-│                     │     │ Governing law: Delaware  │    │  ✓ All fields filled│
-└─────────────────────┘     └─────────────────────────┘    └─────────────────────┘
-```
+1. Step 1: Choose a template (36 standard agreements)
+2. Step 2: Fill in your details (interactive prompts or MCP)
+3. Step 3: Get a professionally formatted DOCX
 
 OpenAgreements supports two execution modes with different trust boundaries:
 

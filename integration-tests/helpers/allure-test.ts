@@ -1,11 +1,24 @@
-import { readFileSync } from 'node:fs';
-import { chai, expect, it as vitestIt, test as vitestTest } from 'vitest';
+import { chai, expect } from 'vitest';
+import {
+  createAllureTestHelpers,
+  getAllureRuntime,
+  allureSeverity,
+  allureDescription,
+  allureDescriptionHtml,
+  allureMarkdownAttachment,
+  allurePrettyJsonAttachment,
+  allureWordLikeTextAttachment,
+  allureWordLikeMarkdownAttachment,
+  allureWordLikeMarkdownDiffAttachment,
+  allureFileAttachment,
+  allureImageAttachment,
+  type AllureBddContext,
+  type AllureRuntime,
+  type AllureStepContext,
+  type AllureSeverityLevel,
+} from '@usejunior/allure-test-factory';
 
-declare const allure: any;
-
-type AnyFn = (...args: any[]) => any;
-
-type WrappedTestFn = typeof vitestIt;
+// ── Repo-specific epic names ────────────────────────────────────────────────
 
 type EpicName =
   | 'Platform & Distribution'
@@ -16,24 +29,15 @@ type EpicName =
   | 'Compliance & Governance'
   | 'NVCA SPA Template';
 
-const DEFAULT_EPIC: EpicName = 'Platform & Distribution';
-const JSON_CONTENT_TYPE = 'application/json';
-const TEXT_CONTENT_TYPE = 'text/plain';
-const MARKDOWN_CONTENT_TYPE = 'text/markdown';
+// ── Assertion capture constants ─────────────────────────────────────────────
+
 const MAX_ASSERTIONS_RECORDED_PER_TEST = 250;
 const MAX_STRING_PREVIEW_CHARS = 500;
 const MAX_ARRAY_PREVIEW_ITEMS = 25;
 const MAX_OBJECT_PREVIEW_KEYS = 25;
 const MAX_PREVIEW_DEPTH = 4;
 
-interface AllureLabelDefaults {
-  epic?: EpicName;
-  feature?: string;
-  parentSuite?: string;
-  suite?: string;
-  subSuite?: string;
-  openspecScenarioIds?: string[];
-}
+// ── Assertion capture infrastructure (OA-only) ─────────────────────────────
 
 interface AssertionRecord {
   index: number;
@@ -51,25 +55,13 @@ const assertionRecordsByTest = new Map<string, AssertionRecord[]>();
 const droppedAssertionsByTest = new Map<string, number>();
 let assertionInstrumentationInstalled = false;
 
-function currentTestKey(): string {
-  const state = expect.getState() as { currentTestName?: string; testPath?: string };
-  return `${state.testPath ?? ''}::${state.currentTestName ?? ''}`;
-}
-
-function setCurrentTestKeyContext(): string {
-  const key = currentTestKey();
-  if (key.length > 2) {
-    (globalThis as Record<string, unknown>).__OA_ALLURE_TEST_KEY__ = key;
-  }
-  return key;
-}
-
 function getCurrentTestKeyContext(): string {
   const key = (globalThis as Record<string, unknown>).__OA_ALLURE_TEST_KEY__;
   if (typeof key === 'string' && key.length > 0) {
     return key;
   }
-  return currentTestKey();
+  const state = expect.getState() as { currentTestName?: string; testPath?: string };
+  return `${state.testPath ?? ''}::${state.currentTestName ?? ''}`;
 }
 
 function beginAssertionCapture(testKey: string): void {
@@ -192,19 +184,40 @@ function toSerializablePreview(
   return String(value);
 }
 
+function extractExecutionError(error: unknown): Record<string, unknown> {
+  if (!(error instanceof Error)) {
+    return { message: String(error) };
+  }
+  const asRecord = error as Error & {
+    actual?: unknown;
+    expected?: unknown;
+    operator?: unknown;
+    showDiff?: unknown;
+  };
+  return {
+    name: error.name,
+    message: error.message,
+    operator: typeof asRecord.operator === 'string' ? asRecord.operator : undefined,
+    showDiff: typeof asRecord.showDiff === 'boolean' ? asRecord.showDiff : undefined,
+    expected: toSerializablePreview(asRecord.expected),
+    actual: toSerializablePreview(asRecord.actual),
+    stack: truncateString(error.stack ?? ''),
+  };
+}
+
 function installAssertionInstrumentation(): void {
   if (assertionInstrumentationInstalled) {
     return;
   }
 
-  const assertionProto = (chai.Assertion as { prototype?: { assert?: (...args: any[]) => unknown } }).prototype;
+  const assertionProto = (chai.Assertion as { prototype?: { assert?: (...args: unknown[]) => unknown } }).prototype;
   const originalAssert = assertionProto?.assert;
   if (!assertionProto || typeof originalAssert !== 'function') {
     return;
   }
 
   assertionInstrumentationInstalled = true;
-  assertionProto.assert = function patchedAssert(...args: any[]): unknown {
+  assertionProto.assert = function patchedAssert(...args: unknown[]): unknown {
     const key = getCurrentTestKeyContext();
     const records = assertionRecordsByTest.get(key);
     const shouldRecord = Array.isArray(records);
@@ -261,273 +274,60 @@ function installAssertionInstrumentation(): void {
   };
 }
 
-function extractExecutionError(error: unknown): Record<string, unknown> {
-  if (!(error instanceof Error)) {
-    return { message: String(error) };
-  }
-  const asRecord = error as Error & {
-    actual?: unknown;
-    expected?: unknown;
-    operator?: unknown;
-    showDiff?: unknown;
-  };
-  return {
-    name: error.name,
-    message: error.message,
-    operator: typeof asRecord.operator === 'string' ? asRecord.operator : undefined,
-    showDiff: typeof asRecord.showDiff === 'boolean' ? asRecord.showDiff : undefined,
-    expected: toSerializablePreview(asRecord.expected),
-    actual: toSerializablePreview(asRecord.actual),
-    stack: truncateString(error.stack ?? ''),
-  };
-}
-
 installAssertionInstrumentation();
 
-function parseCurrentTestName(): string[] {
-  const state = expect.getState() as { currentTestName?: string };
-  return (state.currentTestName ?? '')
-    .split(' > ')
-    .map((part) => part.trim())
-    .filter(Boolean);
-}
+// ── Factory instantiation with lifecycle hooks ──────────────────────────────
 
-function resolveEpic(feature: string, fullName: string, defaults?: AllureLabelDefaults): EpicName {
-  void feature;
-  void fullName;
-  if (defaults?.epic) {
-    return defaults.epic;
-  }
-  return DEFAULT_EPIC;
-}
-
-async function applyDefaultAllureLabels(defaults?: AllureLabelDefaults): Promise<void> {
-  if (typeof allure === 'undefined') {
-    return;
-  }
-
-  const nameParts = parseCurrentTestName();
-  const hierarchyParts = nameParts.slice(0, -1);
-  const fullName = nameParts.join(' > ');
-  const feature = defaults?.feature ?? hierarchyParts[0] ?? nameParts[0] ?? 'General';
-  const suite = defaults?.suite ?? hierarchyParts[1];
-  const subSuite = defaults?.subSuite ?? hierarchyParts[2];
-  const epic = resolveEpic(feature, fullName, defaults);
-  const parentSuite = defaults?.parentSuite ?? epic;
-
-  await allure.epic(epic);
-  await allure.feature(feature);
-  await allure.parentSuite(parentSuite);
-  if (suite) {
-    await allure.suite(suite);
-  }
-  if (subSuite && typeof allure.subSuite === 'function') {
-    await allure.subSuite(subSuite);
-  }
-  await allure.severity('normal');
-}
-
-function resolveStoryLabel(explicitName: unknown, nameParts: string[]): string {
-  if (
-    typeof explicitName === 'string' &&
-    explicitName.trim().length > 0 &&
-    !/%[sdifjoO]/.test(explicitName)
-  ) {
-    return explicitName;
-  }
-  return nameParts.at(-1) ?? 'Unnamed test';
-}
-
-function normalizeOpenSpecScenarioIds(values: unknown[]): string[] {
-  const flattened = values.flatMap((value) => Array.isArray(value) ? value : [value]);
-  const ids = flattened
-    .filter((value): value is string => typeof value === 'string')
-    .map((value) => value.trim())
-    .filter((value) => value.length > 0);
-  return [...new Set(ids)];
-}
-
-function wrapWithAllure(fn?: AnyFn, explicitName?: unknown, defaults?: AllureLabelDefaults): AnyFn | undefined {
-  if (!fn) {
-    return undefined;
-  }
-
-  return async (...args: any[]) => {
-    const testKey = setCurrentTestKeyContext();
+const helpers = createAllureTestHelpers<EpicName>({
+  defaultEpic: 'Platform & Distribution',
+  defaultParentSuite: 'epic',
+  injectBddContext: false,
+  openspec: {
+    repoBaseUrl: 'https://github.com/open-agreements/open-agreements',
+  },
+  beforeTest: ({ testKey }) => {
     beginAssertionCapture(testKey);
-    await applyDefaultAllureLabels(defaults);
-
-    const nameParts = parseCurrentTestName();
-    const hierarchyParts = nameParts.slice(0, -1);
-    const fullName = nameParts.join(' > ');
-    const feature = defaults?.feature ?? hierarchyParts[0] ?? nameParts[0] ?? 'General';
-    const suite = defaults?.suite ?? hierarchyParts[1] ?? '';
-    const epic = resolveEpic(feature, fullName, defaults);
-    const scenarioIds = defaults?.openspecScenarioIds ?? [];
-    const storyLabels: string[] = scenarioIds.length > 0
-      ? scenarioIds
-      : [resolveStoryLabel(explicitName, nameParts)];
-
-    if (typeof allure !== 'undefined') {
-      for (const story of storyLabels) {
-        await allure.story(story);
-      }
+  },
+  afterTest: async ({ testKey, error, helpers: h }) => {
+    const capture = consumeAssertionCapture(testKey);
+    if (capture.records.length > 0 || capture.dropped > 0) {
+      await h.allureJsonAttachment('assertion-details.json', {
+        totalAssertions: capture.records.length + capture.dropped,
+        recordedAssertions: capture.records.length,
+        droppedAssertions: capture.dropped,
+        failures: capture.records.filter((r) => !r.passed).length,
+        assertions: capture.records,
+      });
     }
-
-    await allureParameter('epic', epic);
-    await allureParameter('feature', feature);
-    if (suite.length > 0) {
-      await allureParameter('suite', suite);
+    if (error) {
+      await h.allureJsonAttachment('execution-error.json', extractExecutionError(error));
     }
-    await allureParameter('test_name', fullName);
-    if (scenarioIds.length > 0) {
-      await allureParameter('openspec_scenario_ids', scenarioIds.join(' | '));
-    }
-    await allureJsonAttachment('test-context', {
-      epic,
-      feature,
-      suite: suite.length > 0 ? suite : undefined,
-      testName: fullName,
-      stories: storyLabels,
-      openspecScenarioIds: scenarioIds,
-    });
+  },
+});
 
-    try {
-      const result = await allureStep('Execute test body', async () => fn(...args));
-      const assertionCapture = consumeAssertionCapture(testKey);
-      if (assertionCapture.records.length > 0 || assertionCapture.dropped > 0) {
-        await allureJsonAttachment('assertion-details.json', {
-          totalAssertions: assertionCapture.records.length + assertionCapture.dropped,
-          recordedAssertions: assertionCapture.records.length,
-          droppedAssertions: assertionCapture.dropped,
-          failures: assertionCapture.records.filter((record) => !record.passed).length,
-          assertions: assertionCapture.records,
-        });
-      }
-      return result;
-    } catch (error) {
-      const message = error instanceof Error ? `${error.name}: ${error.message}` : String(error);
-      await allureAttachment('execution-error.txt', message, TEXT_CONTENT_TYPE);
-      await allureJsonAttachment('execution-error.json', extractExecutionError(error));
-      const assertionCapture = consumeAssertionCapture(testKey);
-      if (assertionCapture.records.length > 0 || assertionCapture.dropped > 0) {
-        await allureJsonAttachment('assertion-details.json', {
-          totalAssertions: assertionCapture.records.length + assertionCapture.dropped,
-          recordedAssertions: assertionCapture.records.length,
-          droppedAssertions: assertionCapture.dropped,
-          failures: assertionCapture.records.filter((record) => !record.passed).length,
-          assertions: assertionCapture.records,
-        });
-      }
-      throw error;
-    }
-  };
-}
+// ── Re-exports (same names, same module path → zero test file changes) ──────
 
-type WrappedAllureTestFn = WrappedTestFn & {
-  withLabels: (defaults: AllureLabelDefaults) => WrappedAllureTestFn;
-  epic: (epic: EpicName) => WrappedAllureTestFn;
-  openspec: (...scenarioIds: Array<string | string[]>) => WrappedAllureTestFn;
+export const {
+  itAllure,
+  testAllure,
+  allureStep,
+  allureParameter,
+  allureAttachment,
+  allureJsonAttachment,
+} = helpers;
+
+export {
+  getAllureRuntime,
+  allureSeverity,
+  allureDescription,
+  allureDescriptionHtml,
+  allureMarkdownAttachment,
+  allurePrettyJsonAttachment,
+  allureWordLikeTextAttachment,
+  allureWordLikeMarkdownAttachment,
+  allureWordLikeMarkdownDiffAttachment,
+  allureFileAttachment,
+  allureImageAttachment,
 };
 
-function withAllure(base: any, defaults?: AllureLabelDefaults): WrappedAllureTestFn {
-  const wrapped: any = (name: any, fn?: AnyFn, timeout?: number) =>
-    base(name, wrapWithAllure(fn, name, defaults), timeout);
-
-  wrapped.only = (name: any, fn?: AnyFn, timeout?: number) =>
-    base.only(name, wrapWithAllure(fn, name, defaults), timeout);
-  wrapped.skip = base.skip.bind(base);
-  wrapped.todo = base.todo.bind(base);
-  wrapped.fails = (name: any, fn?: AnyFn, timeout?: number) =>
-    base.fails(name, wrapWithAllure(fn, name, defaults), timeout);
-  wrapped.concurrent = (name: any, fn?: AnyFn, timeout?: number) =>
-    base.concurrent(name, wrapWithAllure(fn, name, defaults), timeout);
-
-  wrapped.each = (...tableArgs: any[]) => {
-    const eachBase = base.each(...tableArgs);
-    return (name: any, fn?: AnyFn, timeout?: number) =>
-      eachBase(name, wrapWithAllure(fn, name, defaults), timeout);
-  };
-
-  wrapped.withLabels = (nextDefaults: AllureLabelDefaults) =>
-    withAllure(base, { ...defaults, ...nextDefaults });
-  wrapped.epic = (epic: EpicName) =>
-    withAllure(base, { ...defaults, epic });
-  wrapped.openspec = (...scenarioIds: Array<string | string[]>) =>
-    withAllure(base, {
-      ...defaults,
-      openspecScenarioIds: normalizeOpenSpecScenarioIds(scenarioIds),
-    });
-
-  return wrapped as WrappedAllureTestFn;
-}
-
-export const itAllure = withAllure(vitestIt);
-export const testAllure = withAllure(vitestTest);
-
-export async function allureStep<T>(name: string, run: () => T | Promise<T>): Promise<T> {
-  if (typeof allure !== 'undefined' && typeof allure.step === 'function') {
-    return allure.step(name, run);
-  }
-  return run();
-}
-
-export async function allureParameter(name: string, value: string): Promise<void> {
-  if (typeof allure !== 'undefined' && typeof allure.parameter === 'function') {
-    await allure.parameter(name, value);
-  }
-}
-
-export async function allureAttachment(
-  name: string,
-  content: string | Buffer | Uint8Array,
-  contentType = TEXT_CONTENT_TYPE,
-): Promise<void> {
-  if (typeof allure !== 'undefined' && typeof allure.attachment === 'function') {
-    await allure.attachment(name, content, contentType);
-  }
-}
-
-export type AllureSeverityLevel = 'blocker' | 'critical' | 'normal' | 'minor' | 'trivial';
-
-export async function allureSeverity(level: AllureSeverityLevel): Promise<void> {
-  if (typeof allure !== 'undefined' && typeof allure.severity === 'function') {
-    await allure.severity(level);
-  }
-}
-
-export async function allureMarkdownAttachment(name: string, content: string): Promise<void> {
-  await allureAttachment(name, content, MARKDOWN_CONTENT_TYPE);
-}
-
-export async function allureDescription(content: string): Promise<void> {
-  if (typeof allure !== 'undefined' && typeof allure.description === 'function') {
-    await allure.description(content);
-  }
-}
-
-export async function allureDescriptionHtml(content: string): Promise<void> {
-  if (typeof allure !== 'undefined' && typeof allure.descriptionHtml === 'function') {
-    await allure.descriptionHtml(content);
-    return;
-  }
-  await allureDescription(content);
-}
-
-export async function allureJsonAttachment(name: string, payload: unknown): Promise<void> {
-  const body = JSON.stringify(payload, null, 2);
-  await allureAttachment(name, body, JSON_CONTENT_TYPE);
-}
-
-export async function allureFileAttachment(
-  name: string,
-  filePath: string,
-  contentType = 'application/octet-stream',
-): Promise<void> {
-  const bytes = readFileSync(filePath);
-  await allureAttachment(name, bytes, contentType);
-}
-
-export async function allureImageAttachment(name: string, filePath: string, contentType = 'image/png'): Promise<void> {
-  await allureFileAttachment(name, filePath, contentType);
-}
+export type { AllureSeverityLevel, AllureBddContext, AllureRuntime, AllureStepContext };

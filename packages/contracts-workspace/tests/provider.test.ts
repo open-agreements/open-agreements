@@ -1,4 +1,4 @@
-import { existsSync, mkdtempSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { afterEach, describe, expect } from 'vitest';
@@ -28,7 +28,7 @@ function createMemoryProvider(): { provider: MemoryProvider; root: string } {
 }
 
 describe('FilesystemProvider', () => {
-  it('exists returns false for missing paths and true after mkdir', () => {
+  it.openspec('OA-130')('exists returns false for missing paths and true after mkdir', () => {
     const { provider } = createFilesystemProvider();
     expect(provider.exists('forms')).toBe(false);
     provider.mkdir('forms');
@@ -204,5 +204,20 @@ describe('MemoryProvider works with initializeWorkspace', () => {
     expect(provider.exists('executed')).toBe(false);
     expect(provider.exists('CONTRACTS.md')).toBe(true);
     expect(provider.readTextFile('CONTRACTS.md')).toContain('CONTRACTS.md');
+  });
+});
+
+describe('workspace package boundary', () => {
+  it.openspec('OA-131')('contracts-workspace package is independently installable', () => {
+    const packageJsonPath = join(new URL('..', import.meta.url).pathname, 'package.json');
+    const packageJson = JSON.parse(readFileSync(packageJsonPath, 'utf-8')) as {
+      name?: string;
+      bin?: Record<string, string>;
+      dependencies?: Record<string, string>;
+    };
+
+    expect(packageJson.name).toBe('@open-agreements/contracts-workspace');
+    expect(packageJson.bin).toHaveProperty('open-agreements-workspace');
+    expect(packageJson.dependencies).not.toHaveProperty('open-agreements');
   });
 });

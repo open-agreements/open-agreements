@@ -7,7 +7,12 @@ import { runValidate } from '../commands/validate.js';
 import { runList } from '../commands/list.js';
 import { runRecipeCommand, runRecipeClean, runRecipePatch } from '../commands/recipe.js';
 import { runScan } from '../commands/scan.js';
-import { runChecklistCreate, runChecklistRender } from '../commands/checklist.js';
+import {
+  runChecklistCreate,
+  runChecklistRender,
+  runChecklistPatchValidate,
+  runChecklistPatchApply,
+} from '../commands/checklist.js';
 import { type MemoFormat } from '../core/employment/memo.js';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -170,6 +175,58 @@ export function createProgram(): Command {
     .option('-o, --output <path>', 'Output Markdown file path (prints to stdout if omitted)')
     .action(async (opts: { data: string; output?: string }) => {
       await runChecklistRender({ data: opts.data, output: opts.output });
+    });
+
+  checklistCmd
+    .command('patch-validate')
+    .description('Validate a checklist patch against checklist state (dry run, no mutation)')
+    .requiredOption('--state <json-file>', 'Checklist state JSON ({ checklist_id, revision, checklist })')
+    .requiredOption('--patch <json-file>', 'Patch envelope JSON file')
+    .option('-o, --output <json-file>', 'Output JSON path for validation result')
+    .option('--validation-store <json-file>', 'Persist validation artifacts to this JSON file')
+    .action(async (
+      opts: {
+        state: string;
+        patch: string;
+        output?: string;
+        validationStore?: string;
+      }
+    ) => {
+      await runChecklistPatchValidate({
+        state: opts.state,
+        patch: opts.patch,
+        output: opts.output,
+        validationStore: opts.validationStore,
+      });
+    });
+
+  checklistCmd
+    .command('patch-apply')
+    .description('Apply a previously validated checklist patch to checklist state')
+    .requiredOption('--state <json-file>', 'Checklist state JSON ({ checklist_id, revision, checklist })')
+    .requiredOption('--request <json-file>', 'Patch apply request JSON ({ validation_id, patch })')
+    .option('-o, --output <json-file>', 'Output JSON path for apply result')
+    .option('--validation-store <json-file>', 'Validation artifact JSON store (must match validate step)')
+    .option('--applied-store <json-file>', 'Applied patch JSON store (for idempotency + patch_id conflicts)')
+    .option('--proposed-store <json-file>', 'Proposed patch JSON store (for mode=PROPOSED)')
+    .action(async (
+      opts: {
+        state: string;
+        request: string;
+        output?: string;
+        validationStore?: string;
+        appliedStore?: string;
+        proposedStore?: string;
+      }
+    ) => {
+      await runChecklistPatchApply({
+        state: opts.state,
+        request: opts.request,
+        output: opts.output,
+        validationStore: opts.validationStore,
+        appliedStore: opts.appliedStore,
+        proposedStore: opts.proposedStore,
+      });
     });
 
   program.addCommand(checklistCmd);

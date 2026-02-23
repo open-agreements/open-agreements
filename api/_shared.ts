@@ -24,6 +24,10 @@ process.env['OPEN_AGREEMENTS_CONTENT_ROOTS'] = PROJECT_ROOT;
 import { fillTemplate } from '../dist/core/engine.js';
 import { runExternalFill } from '../dist/core/external/index.js';
 import {
+  ClosingChecklistSchema,
+  buildChecklistTemplateContext,
+} from '../dist/core/checklist/index.js';
+import {
   loadMetadata,
   loadExternalMetadata,
 } from '../dist/core/metadata.js';
@@ -215,7 +219,14 @@ export async function handleFill(
 export async function handleCreateChecklist(
   data: Record<string, unknown>,
 ): Promise<FillOutcome> {
-  return handleFill('closing-checklist', data);
+  const parsed = ClosingChecklistSchema.safeParse(data);
+  if (!parsed.success) {
+    const message = parsed.error.issues
+      .map((issue) => `${issue.path.join('.')}: ${issue.message}`)
+      .join('; ');
+    return { ok: false, error: `Invalid closing checklist payload: ${message}` };
+  }
+  return handleFill('closing-checklist', buildChecklistTemplateContext(parsed.data));
 }
 
 // ---------------------------------------------------------------------------
