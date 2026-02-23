@@ -10,14 +10,9 @@ const SANITIZER_ALLOWLIST_CALL =
 
 const HTML_PREVIEW_NEEDLES = [
   {
-    needle: 'children:B2(Sw,{item:e,i18n:{imageDiff:e=>i(`imageDiff.${e}`)}})',
+    needle: 'children:V2(Rw,{item:e,i18n:{imageDiff:e=>i(`imageDiff.${e}`)}})',
     replacement:
-      'children:B2(Sw,{item:e,previewable:"html"===s||"svg"===s||"image"===s,i18n:{imageDiff:e=>i(`imageDiff.${e}`)}})',
-  },
-  {
-    needle: 'component:B2(Sw,{item:e,i18n:{imageDiff:e=>r(`imageDiff.${e}`)}})',
-    replacement:
-      'component:B2(Sw,{item:e,previewable:"html"===Wd(a)||"svg"===Wd(a)||"image"===Wd(a),i18n:{imageDiff:e=>r(`imageDiff.${e}`)}})',
+      'children:V2(Rw,{item:e,previewable:"html"===s||"svg"===s||"image"===s,i18n:{imageDiff:e=>i(`imageDiff.${e}`)}})',
   },
 ];
 
