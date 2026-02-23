@@ -1,13 +1,48 @@
 import { describe, expect } from 'vitest';
-import { itAllure } from '../../../integration-tests/helpers/allure-test.js';
+import {
+  allureJsonAttachment,
+  allurePrettyJsonAttachment,
+  allureStep,
+  allureWordLikeTextAttachment,
+  itAllure,
+} from '../../../integration-tests/helpers/allure-test.js';
 import {
   CHECKLIST_PATCH_VALIDATION_TTL_MS,
   getChecklistPatchValidationArtifact,
   setChecklistPatchValidationStore,
   validateChecklistPatch,
 } from './patch-validator.js';
+import { renderChecklistMarkdown } from './index.js';
 
 const it = itAllure.epic('Compliance & Governance').withLabels({ feature: 'Checklist Patch Validation' });
+
+type ValidateChecklistPatchArgs = Parameters<typeof validateChecklistPatch>[0];
+type ValidateChecklistPatchResult = Awaited<ReturnType<typeof validateChecklistPatch>>;
+
+async function validateWithEvidence(
+  label: string,
+  input: ValidateChecklistPatchArgs,
+): Promise<ValidateChecklistPatchResult> {
+  const slug = label.replace(/[^a-z0-9]+/gi, '-').toLowerCase();
+
+  await allureStep(`Given ${label} input payload`, async () => {
+    await allurePrettyJsonAttachment(`${slug}-input-pretty.html`, input);
+    await allureJsonAttachment(`${slug}-input.json`, input);
+    await allureWordLikeTextAttachment(
+      `${slug}-checklist-before-word-like.html`,
+      renderChecklistMarkdown(input.checklist),
+      { title: 'Checklist before patch validation' },
+    );
+  });
+
+  const result = await allureStep(`When validateChecklistPatch runs for ${label}`, async () =>
+    validateChecklistPatch(input)
+  );
+
+  await allurePrettyJsonAttachment(`${slug}-result-pretty.html`, result);
+  await allureJsonAttachment(`${slug}-result.json`, result);
+  return result;
+}
 
 describe('validateChecklistPatch', () => {
   const baseChecklist = {
@@ -40,8 +75,8 @@ describe('validateChecklistPatch', () => {
     ],
   };
 
-  it('validates a patch with dry-run only and persists a validation artifact', async () => {
-    const result = await validateChecklistPatch({
+  it.openspec('OA-106')('validates a patch with dry-run only and persists a validation artifact', async () => {
+    const result = await validateWithEvidence('dry-run patch validation', {
       checklist_id: 'ck_001',
       checklist: baseChecklist,
       current_revision: 12,
@@ -55,22 +90,41 @@ describe('validateChecklistPatch', () => {
       },
     });
 
-    expect(result.ok).toBe(true);
-    if (!result.ok) return;
+    await allureStep('Then validation returns ok=true', async () => {
+      expect(result.ok).toBe(true);
+    });
 
-    expect(result.resulting_state_valid).toBe(true);
-    expect(result.resolved_operations).toHaveLength(2);
-    expect(baseChecklist.issues[0]?.status).toBe('OPEN');
-    expect(baseChecklist.issues[0]?.summary).toBeUndefined();
+    if (!result.ok) {
+      throw new Error('Expected dry-run validation to succeed.');
+    }
 
-    const artifact = await getChecklistPatchValidationArtifact(result.validation_id);
-    expect(artifact).not.toBeNull();
-    expect(artifact?.checklist_id).toBe('ck_001');
-    expect(artifact?.patch_id).toBe('patch_001');
+    await allureStep('And resulting state is valid', async () => {
+      expect(result.resulting_state_valid).toBe(true);
+    });
+
+    await allureStep('And resolved operation count is preserved', async () => {
+      expect(result.resolved_operations).toHaveLength(2);
+    });
+
+    await allureStep('And dry-run does not mutate the source checklist input', async () => {
+      expect(baseChecklist.issues[0]?.status).toBe('OPEN');
+      expect(baseChecklist.issues[0]?.summary).toBeUndefined();
+    });
+
+    const artifact = await allureStep('When validation artifact is fetched by validation_id', async () =>
+      getChecklistPatchValidationArtifact(result.validation_id)
+    );
+    await allureJsonAttachment('dry-run-patch-validation-artifact.json', artifact);
+
+    await allureStep('Then validation artifact exists and is linked to checklist and patch IDs', async () => {
+      expect(artifact).not.toBeNull();
+      expect(artifact?.checklist_id).toBe('ck_001');
+      expect(artifact?.patch_id).toBe('patch_001');
+    });
   });
 
-  it('rejects unknown target paths without guessing', async () => {
-    const result = await validateChecklistPatch({
+  it.openspec('OA-109')('rejects unknown target paths without guessing', async () => {
+    const result = await validateWithEvidence('unknown target path validation', {
       checklist_id: 'ck_001',
       checklist: baseChecklist,
       current_revision: 12,
@@ -83,14 +137,22 @@ describe('validateChecklistPatch', () => {
       },
     });
 
-    expect(result.ok).toBe(false);
-    if (result.ok) return;
-    expect(result.diagnostics[0]?.code).toBe('TARGET_NOT_FOUND');
-    expect(result.diagnostics[0]?.operation_index).toBe(0);
+    await allureStep('Then validation fails for unresolved targets', async () => {
+      expect(result.ok).toBe(false);
+    });
+
+    if (result.ok) {
+      throw new Error('Expected unknown target validation to fail.');
+    }
+
+    await allureStep('And diagnostics identify TARGET_NOT_FOUND at operation index 0', async () => {
+      expect(result.diagnostics[0]?.code).toBe('TARGET_NOT_FOUND');
+      expect(result.diagnostics[0]?.operation_index).toBe(0);
+    });
   });
 
-  it('rejects stale expected revision during validation', async () => {
-    const result = await validateChecklistPatch({
+  it.openspec('OA-105')('rejects stale expected revision during validation', async () => {
+    const result = await validateWithEvidence('stale expected revision validation', {
       checklist_id: 'ck_001',
       checklist: baseChecklist,
       current_revision: 13,
@@ -101,13 +163,21 @@ describe('validateChecklistPatch', () => {
       },
     });
 
-    expect(result.ok).toBe(false);
-    if (result.ok) return;
-    expect(result.diagnostics[0]?.code).toBe('REVISION_CONFLICT');
+    await allureStep('Then validation fails', async () => {
+      expect(result.ok).toBe(false);
+    });
+
+    if (result.ok) {
+      throw new Error('Expected stale expected_revision validation to fail.');
+    }
+
+    await allureStep('And diagnostics report REVISION_CONFLICT', async () => {
+      expect(result.diagnostics[0]?.code).toBe('REVISION_CONFLICT');
+    });
   });
 
-  it('rejects patches whose resulting state violates checklist schema', async () => {
-    const result = await validateChecklistPatch({
+  it.openspec('OA-104')('rejects patches whose resulting state violates checklist schema', async () => {
+    const result = await validateWithEvidence('post-patch schema invalid validation', {
       checklist_id: 'ck_001',
       checklist: baseChecklist,
       current_revision: 12,
@@ -120,15 +190,26 @@ describe('validateChecklistPatch', () => {
       },
     });
 
-    expect(result.ok).toBe(false);
-    if (result.ok) return;
-    expect(result.diagnostics.some((diagnostic) => diagnostic.code === 'POST_PATCH_SCHEMA_INVALID')).toBe(true);
+    await allureStep('Then validation fails on invalid resulting state', async () => {
+      expect(result.ok).toBe(false);
+    });
+
+    if (result.ok) {
+      throw new Error('Expected invalid resulting-state schema validation to fail.');
+    }
+
+    await allureStep('And diagnostics include POST_PATCH_SCHEMA_INVALID', async () => {
+      expect(result.diagnostics.some((diagnostic) => diagnostic.code === 'POST_PATCH_SCHEMA_INVALID')).toBe(true);
+    });
   });
 
   it('expires validation artifacts after TTL', async () => {
-    setChecklistPatchValidationStore(null);
+    await allureStep('Given validation artifact store is reset', async () => {
+      setChecklistPatchValidationStore(null);
+    });
+
     const now = 1_700_000_000_000;
-    const result = await validateChecklistPatch({
+    const result = await validateWithEvidence('validation artifact ttl flow', {
       checklist_id: 'ck_001',
       checklist: baseChecklist,
       current_revision: 12,
@@ -140,17 +221,32 @@ describe('validateChecklistPatch', () => {
         operations: [{ op: 'replace', path: '/issues/0/status', value: 'CLOSED' }],
       },
     });
-    expect(result.ok).toBe(true);
-    if (!result.ok) return;
 
-    const beforeExpiry = await getChecklistPatchValidationArtifact(result.validation_id, {
-      now_ms: now + CHECKLIST_PATCH_VALIDATION_TTL_MS - 1,
+    await allureStep('Then validation succeeds and emits validation_id', async () => {
+      expect(result.ok).toBe(true);
     });
-    expect(beforeExpiry).not.toBeNull();
 
-    const afterExpiry = await getChecklistPatchValidationArtifact(result.validation_id, {
-      now_ms: now + CHECKLIST_PATCH_VALIDATION_TTL_MS + 1,
+    if (!result.ok) {
+      throw new Error('Expected validation to succeed before TTL expiry checks.');
+    }
+
+    const beforeExpiry = await allureStep('When artifact is fetched before TTL expiration', async () =>
+      getChecklistPatchValidationArtifact(result.validation_id, {
+        now_ms: now + CHECKLIST_PATCH_VALIDATION_TTL_MS - 1,
+      })
+    );
+    await allureJsonAttachment('validation-artifact-before-expiry.json', beforeExpiry);
+
+    const afterExpiry = await allureStep('When artifact is fetched after TTL expiration', async () =>
+      getChecklistPatchValidationArtifact(result.validation_id, {
+        now_ms: now + CHECKLIST_PATCH_VALIDATION_TTL_MS + 1,
+      })
+    );
+    await allureJsonAttachment('validation-artifact-after-expiry.json', afterExpiry);
+
+    await allureStep('Then artifact exists before expiry and is removed after expiry', async () => {
+      expect(beforeExpiry).not.toBeNull();
+      expect(afterExpiry).toBeNull();
     });
-    expect(afterExpiry).toBeNull();
   });
 });

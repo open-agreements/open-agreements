@@ -9,11 +9,22 @@ import ts from 'typescript';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const REPO_ROOT = path.resolve(__dirname, '..');
+const CHANGES_ROOT = path.join(REPO_ROOT, 'openspec', 'changes');
 const SPEC_ROOT = path.join(REPO_ROOT, 'openspec', 'specs');
 const DEFAULT_MATRIX_PATH = path.join(REPO_ROOT, 'integration-tests', 'OPENSPEC_TRACEABILITY.md');
 const TEST_ROOTS = ['integration-tests', 'src'];
 const TEST_FILE_PATTERN = /\.test\.(?:[cm]?ts|[cm]?js|tsx|jsx)$/;
 const SCENARIO_ID_PATTERN = /^[A-Za-z0-9][A-Za-z0-9._:-]*$/;
+const SCENARIO_HEADER_RE = /^\s*####\s+Scenario:\s*(.+?)\s*$/;
+const SCENARIO_BLOCK_TERMINATOR_RE = /^\s*(?:###\s+Requirement:|##\s+)/;
+const SCENARIO_WHEN_RE = /^\s*-\s+\*\*WHEN\*\*/i;
+const SCENARIO_THEN_RE = /^\s*-\s+\*\*THEN\*\*/i;
+const REPO_PATH_REFERENCE_RE = /\b(?:src|integration-tests|packages|openspec|scripts)\/[A-Za-z0-9._/-]*/;
+const ABSOLUTE_PATH_REFERENCE_RE = /(?:^|[`'"])(?:\/Users\/|\/home\/|[A-Za-z]:\\)/;
+const REGRESSION_TITLE_RE = /\b(?:regression|hotfix|bugfix|workaround)\b/i;
+const ALLURE_HELPER_IMPORT_RE = /(?:^|\/)helpers\/allure-test\.js$/;
+const ALLURE_WRAPPER_EXPORT_NAMES = new Set(['itAllure', 'testAllure']);
+const ALLURE_WRAPPER_CHAIN_METHODS = new Set(['epic', 'withLabels', 'openspec']);
 
 function normalizeScenarioName(value) {
   return value
@@ -73,34 +84,192 @@ async function listSpecFilesForCapability(capability) {
   return (await fileExists(specPath)) ? [specPath] : [];
 }
 
-function parseScenariosFromSpec(content, specPathRel) {
+async function listActiveChangeSpecFiles(changesRoot = CHANGES_ROOT) {
+  const out = [];
+  let changeEntries;
+  try {
+    changeEntries = await fs.readdir(changesRoot, { withFileTypes: true });
+  } catch {
+    return out;
+  }
+
+  for (const changeEntry of changeEntries) {
+    if (!changeEntry.isDirectory() || changeEntry.name === 'archive') {
+      continue;
+    }
+
+    const specsRoot = path.join(changesRoot, changeEntry.name, 'specs');
+    let capabilityEntries;
+    try {
+      capabilityEntries = await fs.readdir(specsRoot, { withFileTypes: true });
+    } catch {
+      continue;
+    }
+
+    for (const capabilityEntry of capabilityEntries) {
+      if (!capabilityEntry.isDirectory()) {
+        continue;
+      }
+      const specPath = path.join(specsRoot, capabilityEntry.name, 'spec.md');
+      if (!(await fileExists(specPath))) {
+        continue;
+      }
+      out.push({
+        changeId: changeEntry.name,
+        capability: capabilityEntry.name,
+        specPath,
+      });
+    }
+  }
+
+  return out.sort((a, b) => a.specPath.localeCompare(b.specPath));
+}
+
+export async function collectScenarioIdsFromActiveChangeSpecs({
+  changesRoot = CHANGES_ROOT,
+  repoRoot = REPO_ROOT,
+} = {}) {
+  const scenarioIdToSources = new Map();
+  const specFiles = await listActiveChangeSpecFiles(changesRoot);
+
+  for (const specFile of specFiles) {
+    const content = await fs.readFile(specFile.specPath, 'utf-8');
+    const relSpecPath = toPosixPath(path.relative(repoRoot, specFile.specPath));
+    const parsed = parseScenariosFromSpec(content, relSpecPath);
+
+    for (const scenario of parsed.scenarios) {
+      const existing = scenarioIdToSources.get(scenario.id) ?? [];
+      if (!existing.includes(relSpecPath)) {
+        existing.push(relSpecPath);
+      }
+      scenarioIdToSources.set(scenario.id, existing);
+    }
+  }
+
+  return { scenarioIdToSources };
+}
+
+function formatSpecLocation(specPathRel, line) {
+  if (Number.isInteger(line) && line > 0) {
+    return `${specPathRel}:${line}`;
+  }
+  return specPathRel;
+}
+
+function findPathDependentReference(values) {
+  for (const value of values) {
+    const normalized = normalizeScenarioName(value);
+    if (normalized.length === 0) {
+      continue;
+    }
+    if (REPO_PATH_REFERENCE_RE.test(normalized) || ABSOLUTE_PATH_REFERENCE_RE.test(normalized)) {
+      return normalized;
+    }
+  }
+  return null;
+}
+
+function validateScenarioAuthoring({ specPathRel, line, id, title, bodyLines }) {
+  const errors = [];
+  const scenarioLabel = id || title || '<unnamed scenario>';
+  const location = formatSpecLocation(specPathRel, line);
+
+  const hasWhen = bodyLines.some((value) => SCENARIO_WHEN_RE.test(value));
+  if (!hasWhen) {
+    errors.push(
+      `${location}: scenario '${scenarioLabel}' must include at least one **WHEN** bullet to stay behavior-oriented.`
+    );
+  }
+
+  const hasThen = bodyLines.some((value) => SCENARIO_THEN_RE.test(value));
+  if (!hasThen) {
+    errors.push(
+      `${location}: scenario '${scenarioLabel}' must include at least one **THEN** bullet to stay behavior-oriented.`
+    );
+  }
+
+  if (REGRESSION_TITLE_RE.test(title)) {
+    errors.push(
+      `${location}: scenario '${scenarioLabel}' title should describe durable behavior, not a one-off regression label.`
+    );
+  }
+
+  const pathReference = findPathDependentReference([title, ...bodyLines]);
+  if (pathReference) {
+    errors.push(
+      `${location}: scenario '${scenarioLabel}' references '${pathReference}'. Specs should be path-independent.`
+    );
+  }
+
+  return errors;
+}
+
+export function parseScenariosFromSpec(content, specPathRel) {
   const scenarios = [];
   const errors = [];
   const seenIds = new Set();
-  const scenarioHeader = /^\s*####\s+Scenario:\s*(.+?)\s*$/gm;
-  let match = scenarioHeader.exec(content);
+  const lines = content.split(/\r?\n/);
+  let pendingScenario = null;
 
-  while (match) {
-    const { id, title } = parseScenarioHeader(match[1]);
+  function flushPendingScenario() {
+    if (!pendingScenario) {
+      return;
+    }
+
+    const { id, title } = parseScenarioHeader(pendingScenario.header);
+    errors.push(
+      ...validateScenarioAuthoring({
+        specPathRel,
+        line: pendingScenario.line,
+        id,
+        title,
+        bodyLines: pendingScenario.bodyLines,
+      })
+    );
+
     if (!id) {
-      errors.push(`${specPathRel}: scenario '${title}' is missing an explicit ID (use [OA-001] format).`);
-      match = scenarioHeader.exec(content);
-      continue;
+      errors.push(
+        `${formatSpecLocation(specPathRel, pendingScenario.line)}: scenario '${title}' is missing an explicit ID (use [OA-001] format).`
+      );
+      pendingScenario = null;
+      return;
     }
     if (!SCENARIO_ID_PATTERN.test(id)) {
-      errors.push(`${specPathRel}: scenario ID '${id}' has invalid format.`);
-      match = scenarioHeader.exec(content);
-      continue;
+      errors.push(`${formatSpecLocation(specPathRel, pendingScenario.line)}: scenario ID '${id}' has invalid format.`);
+      pendingScenario = null;
+      return;
     }
     if (seenIds.has(id)) {
-      errors.push(`${specPathRel}: duplicate scenario ID '${id}'.`);
-      match = scenarioHeader.exec(content);
-      continue;
+      errors.push(`${formatSpecLocation(specPathRel, pendingScenario.line)}: duplicate scenario ID '${id}'.`);
+      pendingScenario = null;
+      return;
     }
     seenIds.add(id);
     scenarios.push({ id, title });
-    match = scenarioHeader.exec(content);
+    pendingScenario = null;
   }
+
+  for (let index = 0; index < lines.length; index += 1) {
+    const line = lines[index];
+    if (pendingScenario && SCENARIO_BLOCK_TERMINATOR_RE.test(line)) {
+      flushPendingScenario();
+    }
+
+    const match = line.match(SCENARIO_HEADER_RE);
+    if (match) {
+      flushPendingScenario();
+      pendingScenario = {
+        header: match[1],
+        line: index + 1,
+        bodyLines: [],
+      };
+      continue;
+    }
+    if (pendingScenario) {
+      pendingScenario.bodyLines.push(line);
+    }
+  }
+  flushPendingScenario();
 
   return { scenarios, errors };
 }
@@ -236,6 +405,7 @@ function extractOpenSpecInvocation(node) {
     ) {
       return {
         openspecCall: inner,
+        openspecRoot: inner.expression.expression,
         status: 'covered',
       };
     }
@@ -251,6 +421,7 @@ function extractOpenSpecInvocation(node) {
     ) {
       return {
         openspecCall: inner,
+        openspecRoot: inner.expression.expression,
         status: (method === 'skip' || method === 'todo') ? 'pending' : 'covered',
       };
     }
@@ -265,6 +436,181 @@ function createBindingRef({ relFile, sourceFile, node, title }) {
   return `${relFile}:${line} :: ${title}`;
 }
 
+function getImportModuleSpecifier(node) {
+  if (!ts.isImportDeclaration(node)) {
+    return null;
+  }
+  if (!node.moduleSpecifier || !ts.isStringLiteral(node.moduleSpecifier)) {
+    return null;
+  }
+  return node.moduleSpecifier.text;
+}
+
+function collectAllureImportAliases(sourceFile) {
+  const aliases = new Set();
+  for (const statement of sourceFile.statements) {
+    const moduleSpecifier = getImportModuleSpecifier(statement);
+    if (!moduleSpecifier || !ALLURE_HELPER_IMPORT_RE.test(moduleSpecifier)) {
+      continue;
+    }
+    const bindings = statement.importClause?.namedBindings;
+    if (!bindings || !ts.isNamedImports(bindings)) {
+      continue;
+    }
+    for (const element of bindings.elements) {
+      const importedName = element.propertyName?.text ?? element.name.text;
+      if (ALLURE_WRAPPER_EXPORT_NAMES.has(importedName)) {
+        aliases.add(element.name.text);
+      }
+    }
+  }
+  return aliases;
+}
+
+function unwrapExpression(node) {
+  if (ts.isParenthesizedExpression(node) || ts.isAsExpression(node) || ts.isSatisfiesExpression(node)) {
+    return unwrapExpression(node.expression);
+  }
+  return node;
+}
+
+function isAllureWrapperExpression(node, knownWrapperAliases) {
+  const expression = unwrapExpression(node);
+  if (ts.isIdentifier(expression)) {
+    return knownWrapperAliases.has(expression.text);
+  }
+
+  if (ts.isPropertyAccessExpression(expression)) {
+    if (!ALLURE_WRAPPER_CHAIN_METHODS.has(expression.name.text)) {
+      return false;
+    }
+    return isAllureWrapperExpression(expression.expression, knownWrapperAliases);
+  }
+
+  if (ts.isCallExpression(expression)) {
+    if (!ts.isPropertyAccessExpression(expression.expression)) {
+      return false;
+    }
+    const methodName = expression.expression.name.text;
+    if (!ALLURE_WRAPPER_CHAIN_METHODS.has(methodName)) {
+      return false;
+    }
+    return isAllureWrapperExpression(expression.expression.expression, knownWrapperAliases);
+  }
+
+  return false;
+}
+
+function collectAllureWrapperAliases(sourceFile) {
+  const knownAliases = collectAllureImportAliases(sourceFile);
+  const declarations = [];
+
+  function visit(node) {
+    if (ts.isVariableDeclaration(node) && ts.isIdentifier(node.name) && node.initializer) {
+      declarations.push(node);
+    }
+    ts.forEachChild(node, visit);
+  }
+  visit(sourceFile);
+
+  let changed = true;
+  while (changed) {
+    changed = false;
+    for (const declaration of declarations) {
+      const alias = declaration.name.text;
+      if (knownAliases.has(alias)) {
+        continue;
+      }
+      if (isAllureWrapperExpression(declaration.initializer, knownAliases)) {
+        knownAliases.add(alias);
+        changed = true;
+      }
+    }
+  }
+
+  return knownAliases;
+}
+
+function mergeBindings(target, source) {
+  for (const [scenarioId, entries] of source.entries()) {
+    const existing = target.get(scenarioId) ?? [];
+    for (const entry of entries) {
+      if (!existing.some((candidate) => candidate.ref === entry.ref && candidate.status === entry.status)) {
+        existing.push(entry);
+      }
+    }
+    target.set(scenarioId, existing);
+  }
+}
+
+export function collectOpenSpecBindingsFromSource({ relFile, content }) {
+  const bindingsByScenarioId = new Map();
+  const invalidBindings = [];
+  const sourceFile = ts.createSourceFile(
+    relFile,
+    content,
+    ts.ScriptTarget.Latest,
+    true,
+    getScriptKind(relFile)
+  );
+  const knownAllureWrappers = collectAllureWrapperAliases(sourceFile);
+
+  function visit(node) {
+    if (ts.isCallExpression(node)) {
+      const invocation = extractOpenSpecInvocation(node);
+      if (invocation) {
+        const { openspecCall, openspecRoot, status } = invocation;
+        const titleNode = node.arguments[0];
+        const title = titleNode
+          ? (getStringLiteralValue(titleNode) ?? '<dynamic test title>')
+          : '<missing test title>';
+
+        if (!isAllureWrapperExpression(openspecRoot, knownAllureWrappers)) {
+          invalidBindings.push(
+            `${relFile}: .openspec(...) must use an Allure wrapper derived from itAllure/testAllure (test: ${title})`
+          );
+          ts.forEachChild(node, visit);
+          return;
+        }
+
+        const { ids, errors } = extractScenarioIdsFromOpenSpecArgs(openspecCall.arguments);
+        for (const error of errors) {
+          invalidBindings.push(`${relFile}: ${error} (test: ${title})`);
+        }
+        if (ids.length === 0) {
+          invalidBindings.push(`${relFile}: openspec(...) has no scenario IDs (test: ${title})`);
+        }
+
+        const ref = createBindingRef({ relFile, sourceFile, node, title });
+        for (const id of ids) {
+          if (!SCENARIO_ID_PATTERN.test(id)) {
+            invalidBindings.push(`${relFile}: invalid scenario ID '${id}' (test: ${title})`);
+            continue;
+          }
+          const existing = bindingsByScenarioId.get(id) ?? [];
+          if (!existing.some((entry) => entry.ref === ref)) {
+            existing.push({ ref, status });
+          }
+          bindingsByScenarioId.set(id, existing);
+        }
+      }
+    }
+    ts.forEachChild(node, visit);
+  }
+
+  visit(sourceFile);
+  return {
+    bindingsByScenarioId,
+    invalidBindings: [...new Set(invalidBindings)].sort(),
+  };
+}
+
+export function computeUnknownScenarioIds(bindingsByScenarioId, knownScenarioIds) {
+  return [...bindingsByScenarioId.keys()]
+    .filter((scenarioId) => !knownScenarioIds.has(scenarioId))
+    .sort();
+}
+
 async function collectOpenSpecBindings() {
   const testFiles = await listTestFiles();
   const bindingsByScenarioId = new Map();
@@ -273,50 +619,9 @@ async function collectOpenSpecBindings() {
   for (const relFile of testFiles) {
     const absFile = path.join(REPO_ROOT, relFile);
     const content = await fs.readFile(absFile, 'utf-8');
-    const sourceFile = ts.createSourceFile(
-      relFile,
-      content,
-      ts.ScriptTarget.Latest,
-      true,
-      getScriptKind(relFile)
-    );
-
-    function visit(node) {
-      if (ts.isCallExpression(node)) {
-        const invocation = extractOpenSpecInvocation(node);
-        if (invocation) {
-          const { openspecCall, status } = invocation;
-          const titleNode = node.arguments[0];
-          const title = titleNode
-            ? (getStringLiteralValue(titleNode) ?? '<dynamic test title>')
-            : '<missing test title>';
-
-          const { ids, errors } = extractScenarioIdsFromOpenSpecArgs(openspecCall.arguments);
-          for (const error of errors) {
-            invalidBindings.push(`${relFile}: ${error} (test: ${title})`);
-          }
-          if (ids.length === 0) {
-            invalidBindings.push(`${relFile}: openspec(...) has no scenario IDs (test: ${title})`);
-          }
-
-          const ref = createBindingRef({ relFile, sourceFile, node, title });
-          for (const id of ids) {
-            if (!SCENARIO_ID_PATTERN.test(id)) {
-              invalidBindings.push(`${relFile}: invalid scenario ID '${id}' (test: ${title})`);
-              continue;
-            }
-            const existing = bindingsByScenarioId.get(id) ?? [];
-            if (!existing.some((entry) => entry.ref === ref)) {
-              existing.push({ ref, status });
-            }
-            bindingsByScenarioId.set(id, existing);
-          }
-        }
-      }
-      ts.forEachChild(node, visit);
-    }
-
-    visit(sourceFile);
+    const parsed = collectOpenSpecBindingsFromSource({ relFile, content });
+    mergeBindings(bindingsByScenarioId, parsed.bindingsByScenarioId);
+    invalidBindings.push(...parsed.invalidBindings);
   }
 
   return {
@@ -435,7 +740,7 @@ function buildMatrixMarkdown({ reports, unknownScenarioIds, invalidBindings }) {
   if (unknownScenarioIds.length > 0) {
     lines.push('## Unknown Scenario IDs');
     lines.push('');
-    lines.push('The following IDs are used in tests but not found in canonical specs:');
+    lines.push('The following IDs are used in tests but not found in canonical specs or active change specs:');
     lines.push('');
     for (const id of unknownScenarioIds) {
       lines.push(`- ${id}`);
@@ -481,6 +786,7 @@ function printSet(title, values) {
 export async function main(argv = process.argv.slice(2)) {
   const { capabilities: requestedCapabilities, writeMatrixPath } = parseArgs(argv);
   const canonicalCapabilities = await listSpecCapabilities();
+  const { scenarioIdToSources: activeChangeScenarioIdToSources } = await collectScenarioIdsFromActiveChangeSpecs();
   const capabilitiesToValidate = requestedCapabilities.length > 0
     ? requestedCapabilities
     : canonicalCapabilities;
@@ -575,13 +881,12 @@ export async function main(argv = process.argv.slice(2)) {
     printSet('Invalid bindings', invalidBindings);
   }
 
-  const unknownScenarioIds = [...bindingsByScenarioId.keys()]
-    .filter((scenarioId) => !canonicalScenarioIdToCapability.has(scenarioId))
-    .sort();
+  const knownScenarioIds = new Set([...canonicalScenarioIdToCapability.keys(), ...activeChangeScenarioIdToSources.keys()]);
+  const unknownScenarioIds = computeUnknownScenarioIds(bindingsByScenarioId, knownScenarioIds);
 
   if (unknownScenarioIds.length > 0) {
     hasFailures = true;
-    console.error('Found test bindings for unknown scenario IDs:');
+    console.error('Found test bindings for unknown scenario IDs (not present in canonical specs or active change specs):');
     printSet('Unknown scenario IDs', unknownScenarioIds);
   }
 

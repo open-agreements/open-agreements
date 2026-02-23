@@ -1,9 +1,16 @@
-import { existsSync, mkdtempSync, readFileSync, rmSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { describe, expect } from 'vitest';
 import { itAllure } from './helpers/allure-test.js';
-import { main, parseArgs } from '../scripts/validate_openspec_coverage.mjs';
+import {
+  collectOpenSpecBindingsFromSource,
+  collectScenarioIdsFromActiveChangeSpecs,
+  computeUnknownScenarioIds,
+  main,
+  parseArgs,
+  parseScenariosFromSpec,
+} from '../scripts/validate_openspec_coverage.mjs';
 
 const it = itAllure.epic('Verification & Drift').withLabels({ feature: 'OpenSpec Coverage Script' });
 
@@ -39,5 +46,126 @@ describe('validate_openspec_coverage script', () => {
       process.exitCode = 0;
       rmSync(tempDir, { recursive: true, force: true });
     }
+  });
+
+  it('enforces behavior-oriented scenario bullets', () => {
+    const specBody = [
+      '## Requirements',
+      '### Requirement: Example',
+      '#### Scenario: [OA-900] Missing behavior bullets',
+      '- **GIVEN** a setup exists',
+      '- **AND** a second setup exists',
+      '',
+    ].join('\n');
+
+    const parsed = parseScenariosFromSpec(specBody, 'openspec/specs/example/spec.md');
+    expect(parsed.errors).toEqual(
+      expect.arrayContaining([
+        expect.stringContaining('must include at least one **WHEN** bullet'),
+        expect.stringContaining('must include at least one **THEN** bullet'),
+      ]),
+    );
+  });
+
+  it('rejects path-dependent scenario prose', () => {
+    const specBody = [
+      '## Requirements',
+      '### Requirement: Example',
+      '#### Scenario: [OA-901] Adapter coupling by source path',
+      '- **GIVEN** the interface lives in `src/core/command-generation/types.ts`',
+      '- **WHEN** a new adapter is implemented',
+      '- **THEN** compilation succeeds',
+      '',
+    ].join('\n');
+
+    const parsed = parseScenariosFromSpec(specBody, 'openspec/specs/example/spec.md');
+    expect(parsed.errors.some((value) => value.includes('path-independent'))).toBe(true);
+  });
+
+  it('accepts openspec mappings only from Allure wrappers', () => {
+    const source = [
+      "import { describe } from 'vitest';",
+      "import { itAllure } from './helpers/allure-test.js';",
+      "const it = itAllure.epic('Verification & Drift');",
+      "describe('suite', () => {",
+      "  it.openspec('OA-900')('maps to scenario', () => {});",
+      '});',
+      '',
+    ].join('\n');
+
+    const parsed = collectOpenSpecBindingsFromSource({
+      relFile: 'integration-tests/fake-allure.test.ts',
+      content: source,
+    });
+
+    expect(parsed.invalidBindings).toEqual([]);
+    expect(parsed.bindingsByScenarioId.has('OA-900')).toBe(true);
+  });
+
+  it('collects scenario IDs from active change-package specs', async () => {
+    const tempDir = mkdtempSync(join(tmpdir(), 'oa-speccov-active-change-'));
+    const changesRoot = join(tempDir, 'openspec', 'changes');
+    const specPath = join(changesRoot, 'add-demo-capability', 'specs', 'open-agreements', 'spec.md');
+
+    try {
+      mkdirSync(join(changesRoot, 'add-demo-capability', 'specs', 'open-agreements'), { recursive: true });
+      writeFileSync(
+        specPath,
+        [
+          '## ADDED Requirements',
+          '### Requirement: Demo requirement',
+          '#### Scenario: [OA-950] Active change scenario ID',
+          '- **WHEN** a test binds to OA-950',
+          '- **THEN** the ID is recognized as a known scenario',
+          '',
+        ].join('\n'),
+        'utf-8',
+      );
+
+      const { scenarioIdToSources } = await collectScenarioIdsFromActiveChangeSpecs({
+        changesRoot,
+        repoRoot: tempDir,
+      });
+
+      expect([...scenarioIdToSources.keys()]).toContain('OA-950');
+      expect(scenarioIdToSources.get('OA-950')).toEqual([
+        'openspec/changes/add-demo-capability/specs/open-agreements/spec.md',
+      ]);
+    } finally {
+      rmSync(tempDir, { recursive: true, force: true });
+    }
+  });
+
+  it('does not mark active-change scenario IDs as unknown', () => {
+    const bindingsByScenarioId = new Map([
+      ['OA-950', [{ ref: 'integration-tests/fake.ts:10 :: test', status: 'covered' }]],
+      ['OA-951', [{ ref: 'integration-tests/fake.ts:12 :: test', status: 'covered' }]],
+    ]);
+
+    const knownScenarioIds = new Set(['OA-950']);
+    const unknown = computeUnknownScenarioIds(bindingsByScenarioId, knownScenarioIds);
+
+    expect(unknown).toEqual(['OA-951']);
+  });
+
+  it('rejects openspec mappings from non-Allure wrappers', () => {
+    const source = [
+      "import { describe } from 'vitest';",
+      'const it = {',
+      "  openspec: () => (name, fn) => fn?.(),",
+      '};',
+      "describe('suite', () => {",
+      "  it.openspec('OA-900')('maps to scenario', () => {});",
+      '});',
+      '',
+    ].join('\n');
+
+    const parsed = collectOpenSpecBindingsFromSource({
+      relFile: 'integration-tests/fake-non-allure.test.ts',
+      content: source,
+    });
+
+    expect(parsed.bindingsByScenarioId.size).toBe(0);
+    expect(parsed.invalidBindings.some((value) => value.includes('must use an Allure wrapper'))).toBe(true);
   });
 });

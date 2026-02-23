@@ -1,6 +1,7 @@
 import AdmZip from 'adm-zip';
 import { writeFileSync } from 'node:fs';
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
+import type { Document, Element, Node } from '@xmldom/xmldom';
 import type { CleanConfig, GuidanceEntry, GuidanceOutput } from '../metadata.js';
 import { enumerateTextParts, getGeneralTextPartNames } from './ooxml-parts.js';
 
@@ -29,8 +30,8 @@ export interface CleanOptions {
  * When options.extractGuidance is true, captures the text content of all
  * removed elements before deletion and returns them as structured guidance data.
  *
- * Note: Internal helpers use `any` for DOM nodes because @xmldom/xmldom's types
- * are incompatible with the global DOM types (missing EventTarget methods).
+ * Note: Helpers use xmldom's own `Document`/`Element`/`Node` types to avoid
+ * incompatibilities with the global DOM lib declarations.
  */
 export async function cleanDocument(
   inputPath: string,
@@ -66,12 +67,12 @@ export async function cleanDocument(
   }
 
   // Collect footnote reference order from document.xml for proper ordering
-  let footnoteRefOrder: string[] = [];
+  const footnoteRefOrder: string[] = [];
   if (config.removeFootnotes && extract) {
-    const docEntry = zip.getEntry('word/document.xml');
+      const docEntry = zip.getEntry('word/document.xml');
     if (docEntry) {
       const docXml = docEntry.getData().toString('utf-8');
-      const docDoc = parser.parseFromString(docXml, 'text/xml');
+      const docDoc: Document = parser.parseFromString(docXml, 'text/xml');
       const refs = docDoc.getElementsByTagNameNS(W_NS, 'footnoteReference');
       for (let i = 0; i < refs.length; i++) {
         const id = refs[i].getAttributeNS(W_NS, 'id') ?? refs[i].getAttribute('w:id');
@@ -89,7 +90,7 @@ export async function cleanDocument(
     if (!entry) continue;
 
     const xml = entry.getData().toString('utf-8');
-    const doc = parser.parseFromString(xml, 'text/xml');
+    const doc: Document = parser.parseFromString(xml, 'text/xml');
     let modified = false;
 
     if (config.removeFootnotes) {
@@ -134,7 +135,7 @@ export async function cleanDocument(
     const footnotesEntry = zip.getEntry(parts.footnotes);
     if (footnotesEntry) {
       const xml = footnotesEntry.getData().toString('utf-8');
-      const doc = parser.parseFromString(xml, 'text/xml');
+      const doc: Document = parser.parseFromString(xml, 'text/xml');
 
       if (extract) {
         const extracted = extractAndRemoveNormalFootnotes(doc, footnoteRefOrder);
@@ -170,15 +171,13 @@ export async function cleanDocument(
   return result;
 }
 
-/* eslint-disable @typescript-eslint/no-explicit-any --
-   @xmldom/xmldom types are incompatible with global DOM types */
-
 /**
  * Replace part content with a single empty paragraph, preserving the root element
  * and its namespace attributes.
  */
-function clearPartContent(doc: any): void {
+function clearPartContent(doc: Document): void {
   const root = doc.documentElement;
+  if (!root) return;
   // Remove all children
   while (root.firstChild) {
     root.removeChild(root.firstChild);
@@ -190,17 +189,21 @@ function clearPartContent(doc: any): void {
   root.appendChild(p);
 }
 
-function removeFootnoteReferences(doc: any): void {
+function removeFootnoteReferences(doc: Document): void {
   const refs = doc.getElementsByTagNameNS(W_NS, 'footnoteReference');
-  const runsToRemove: any[] = [];
+  const runsToRemove: Element[] = [];
 
   for (let i = 0; i < refs.length; i++) {
-    let node: any = refs[i];
-    while (node && !(node.localName === 'r' && node.namespaceURI === W_NS)) {
+    let node: Node | null = refs[i];
+    while (node) {
+      if (node.nodeType === 1) {
+        const element = node as Element;
+        if (element.localName === 'r' && element.namespaceURI === W_NS) {
+          runsToRemove.push(element);
+          break;
+        }
+      }
       node = node.parentNode;
-    }
-    if (node) {
-      runsToRemove.push(node);
     }
   }
 
@@ -209,9 +212,9 @@ function removeFootnoteReferences(doc: any): void {
   }
 }
 
-function removeNormalFootnotes(doc: any): void {
+function removeNormalFootnotes(doc: Document): void {
   const footnotes = doc.getElementsByTagNameNS(W_NS, 'footnote');
-  const toRemove: any[] = [];
+  const toRemove: Element[] = [];
 
   for (let i = 0; i < footnotes.length; i++) {
     const fn = footnotes[i];
@@ -227,10 +230,10 @@ function removeNormalFootnotes(doc: any): void {
 }
 
 /** Extract text from footnotes ordered by reference occurrence, then remove them. */
-function extractAndRemoveNormalFootnotes(doc: any, refOrder: string[]): string[] {
+function extractAndRemoveNormalFootnotes(doc: Document, refOrder: string[]): string[] {
   const footnotes = doc.getElementsByTagNameNS(W_NS, 'footnote');
-  const fnMap = new Map<string, { node: any; text: string }>();
-  const toRemove: any[] = [];
+  const fnMap = new Map<string, { node: Element; text: string }>();
+  const toRemove: Element[] = [];
 
   for (let i = 0; i < footnotes.length; i++) {
     const fn = footnotes[i];
@@ -264,10 +267,10 @@ function extractAndRemoveNormalFootnotes(doc: any, refOrder: string[]): string[]
   return ordered;
 }
 
-function removeParagraphsByPattern(doc: any, patterns: string[]): void {
+function removeParagraphsByPattern(doc: Document, patterns: string[]): void {
   const regexes = patterns.map((p) => new RegExp(p, 'i'));
   const paragraphs = doc.getElementsByTagNameNS(W_NS, 'p');
-  const toRemove: any[] = [];
+  const toRemove: Element[] = [];
 
   for (let i = 0; i < paragraphs.length; i++) {
     const para = paragraphs[i];
@@ -283,10 +286,10 @@ function removeParagraphsByPattern(doc: any, patterns: string[]): void {
 }
 
 /** Extract text from pattern-matched paragraphs, then remove them. */
-function extractAndRemoveParagraphsByPattern(doc: any, patterns: string[]): string[] {
+function extractAndRemoveParagraphsByPattern(doc: Document, patterns: string[]): string[] {
   const regexes = patterns.map((p) => new RegExp(p, 'i'));
   const paragraphs = doc.getElementsByTagNameNS(W_NS, 'p');
-  const toRemove: any[] = [];
+  const toRemove: Element[] = [];
   const extracted: string[] = [];
 
   for (let i = 0; i < paragraphs.length; i++) {
@@ -306,7 +309,7 @@ function extractAndRemoveParagraphsByPattern(doc: any, patterns: string[]): stri
 }
 
 function removeParagraphsByRange(
-  doc: any,
+  doc: Document,
   ranges: Array<{ start: string; end: string }>
 ): void {
   for (const range of ranges) {
@@ -314,7 +317,7 @@ function removeParagraphsByRange(
     const endRe = new RegExp(range.end, 'i');
     const paragraphs = doc.getElementsByTagNameNS(W_NS, 'p');
 
-    const toRemove: any[] = [];
+    const toRemove: Element[] = [];
     let inside = false;
 
     for (let i = 0; i < paragraphs.length; i++) {
@@ -338,7 +341,7 @@ function removeParagraphsByRange(
 
 /** Extract text from range-deleted paragraphs, then remove them. Returns groups of text arrays. */
 function extractAndRemoveParagraphsByRange(
-  doc: any,
+  doc: Document,
   ranges: Array<{ start: string; end: string }>
 ): string[][] {
   const groups: string[][] = [];
@@ -348,7 +351,7 @@ function extractAndRemoveParagraphsByRange(
     const endRe = new RegExp(range.end, 'i');
     const paragraphs = doc.getElementsByTagNameNS(W_NS, 'p');
 
-    const toRemove: any[] = [];
+    const toRemove: Element[] = [];
     const texts: string[] = [];
     let inside = false;
 
@@ -381,7 +384,7 @@ function extractAndRemoveParagraphsByRange(
   return groups;
 }
 
-function extractParagraphText(para: any): string {
+function extractParagraphText(para: Element): string {
   if (!para.getElementsByTagNameNS) return '';
   const textElements = para.getElementsByTagNameNS(W_NS, 't');
   const parts: string[] = [];
@@ -392,7 +395,7 @@ function extractParagraphText(para: any): string {
 }
 
 /** Extract all text from an element (used for footnotes which contain multiple paragraphs). */
-function extractElementText(element: any): string {
+function extractElementText(element: Element): string {
   if (!element.getElementsByTagNameNS) return '';
   const paragraphs = element.getElementsByTagNameNS(W_NS, 'p');
   const paraTexts: string[] = [];

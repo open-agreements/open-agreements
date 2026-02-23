@@ -1,6 +1,7 @@
 import AdmZip from 'adm-zip';
 import { writeFileSync } from 'node:fs';
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
+import type { Document, Element } from '@xmldom/xmldom';
 import { enumerateTextParts, getGeneralTextPartNames } from './ooxml-parts.js';
 import { BLANK_PLACEHOLDER } from '../fill-utils.js';
 
@@ -99,9 +100,9 @@ export async function normalizeBracketArtifacts(
     if (!entry) continue;
 
     const xml = entry.getData().toString('utf-8');
-    const doc = parser.parseFromString(xml, 'text/xml');
+    const doc: Document = parser.parseFromString(xml, 'text/xml');
     const paragraphs = doc.getElementsByTagNameNS(W_NS, 'p');
-    const toRemove: any[] = [];
+    const toRemove: Element[] = [];
     let lastHeading = '';
 
     for (let i = 0; i < paragraphs.length; i++) {
@@ -283,7 +284,7 @@ function normalizeBracketPrefixedHeading(text: string): string {
 
 function trimUnmatchedTrailingBrackets(text: string): string {
   let out = text;
-  let openCount = (out.match(/\[/g) ?? []).length;
+  const openCount = (out.match(/\[/g) ?? []).length;
   let closeCount = (out.match(/\]/g) ?? []).length;
   while (closeCount > openCount && /\]\s*$/.test(out)) {
     out = out.replace(/\]\s*$/, '').trimEnd();
@@ -394,9 +395,7 @@ function extractTopLevelSegments(text: string): Segment[] {
   return out;
 }
 
-/* eslint-disable @typescript-eslint/no-explicit-any --
-   @xmldom/xmldom node typing is incompatible with DOM lib types. */
-function extractParagraphText(para: any): string {
+function extractParagraphText(para: Element): string {
   const tElements = para.getElementsByTagNameNS(W_NS, 't');
   const parts: string[] = [];
   for (let i = 0; i < tElements.length; i++) {
@@ -405,8 +404,8 @@ function extractParagraphText(para: any): string {
   return parts.join('');
 }
 
-function setParagraphText(para: any, text: string): void {
-  const doc = para.ownerDocument;
+function setParagraphText(para: Element, text: string): void {
+  const doc = para.ownerDocument as Document;
   const tElements = para.getElementsByTagNameNS(W_NS, 't');
 
   if (tElements.length === 0) {

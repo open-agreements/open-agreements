@@ -1,11 +1,36 @@
 import { readFileSync } from 'node:fs';
 import { chai, expect, it as vitestIt, test as vitestTest } from 'vitest';
 
-declare const allure: any;
+interface AllureApi {
+  epic: (label: string) => Promise<void>;
+  feature: (label: string) => Promise<void>;
+  parentSuite: (label: string) => Promise<void>;
+  suite: (label: string) => Promise<void>;
+  subSuite?: (label: string) => Promise<void>;
+  severity: (level: string) => Promise<void>;
+  story: (label: string) => Promise<void>;
+  step: <T>(name: string, run: () => T | Promise<T>) => Promise<T>;
+  parameter: (name: string, value: string) => Promise<void>;
+  attachment: (name: string, content: string | Buffer | Uint8Array, contentType: string) => Promise<void>;
+  description?: (content: string) => Promise<void>;
+  descriptionHtml?: (content: string) => Promise<void>;
+}
 
-type AnyFn = (...args: any[]) => any;
+declare const allure: AllureApi | undefined;
 
-type WrappedTestFn = typeof vitestIt;
+type WrappedFn = (...args: unknown[]) => unknown | Promise<unknown>;
+
+type TestRegistrationFn = (name: unknown, fn?: WrappedFn, timeout?: number) => unknown;
+
+interface AllureBaseTestFn {
+  (name: unknown, fn?: WrappedFn, timeout?: number): unknown;
+  only: TestRegistrationFn;
+  skip: (...args: unknown[]) => unknown;
+  todo: (...args: unknown[]) => unknown;
+  fails: TestRegistrationFn;
+  concurrent: TestRegistrationFn;
+  each: (...tableArgs: unknown[]) => TestRegistrationFn;
+}
 
 type EpicName =
   | 'Platform & Distribution'
@@ -20,6 +45,7 @@ const DEFAULT_EPIC: EpicName = 'Platform & Distribution';
 const JSON_CONTENT_TYPE = 'application/json';
 const TEXT_CONTENT_TYPE = 'text/plain';
 const MARKDOWN_CONTENT_TYPE = 'text/markdown';
+const HTML_CONTENT_TYPE = 'text/html';
 const MAX_ASSERTIONS_RECORDED_PER_TEST = 250;
 const MAX_STRING_PREVIEW_CHARS = 500;
 const MAX_ARRAY_PREVIEW_ITEMS = 25;
@@ -113,6 +139,87 @@ function truncateString(value: string): string {
   return `${value.slice(0, MAX_STRING_PREVIEW_CHARS)}... [truncated ${value.length - MAX_STRING_PREVIEW_CHARS} chars]`;
 }
 
+function escapeForHtml(value: unknown): string {
+  return String(value)
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#39;');
+}
+
+function buildHtmlAttachment(body: string, extraStyles = ''): string {
+  return [
+    '<!doctype html>',
+    '<html><head><meta charset="utf-8">',
+    '<style>',
+    'html,body{margin:0;padding:0;overflow:auto;}',
+    'body{font-family:ui-sans-serif,system-ui,sans-serif;padding:12px;color:#2f2a24;line-height:1.45;box-sizing:border-box;}',
+    'pre{background:#f7f3eb;padding:12px;border-radius:8px;white-space:pre-wrap;overflow:auto;max-height:none;}',
+    'code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;}',
+    '.doc-panel{border:1px solid #d7c7b5;border-radius:8px;padding:12px;background:#fffdf8;}',
+    '.doc-title{margin:0 0 10px 0;font-size:14px;font-weight:600;color:#1f2937;}',
+    '.doc-text{margin:0;font-family:Georgia,"Times New Roman",serif;font-size:16px;line-height:1.6;white-space:pre-wrap;}',
+    '.json-source .json-token-key{color:#0c5a41;font-weight:600;}',
+    '.json-source .json-token-string{color:#7a2ce8;}',
+    '.json-source .json-token-number{color:#b35309;}',
+    '.json-source .json-token-boolean{color:#1f4f8f;font-weight:600;}',
+    '.json-source .json-token-null{color:#6b7280;font-weight:600;}',
+    extraStyles,
+    '</style></head><body>',
+    `<div id="allure-auto-size-root">${body}</div>`,
+    '</body></html>',
+  ].join('');
+}
+
+function highlightJsonForHtml(json: string): string {
+  const tokenRe = /"(?:\\u[\da-fA-F]{4}|\\[^u]|[^\\"])*"|\btrue\b|\bfalse\b|\bnull\b|-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?/g;
+  let output = '';
+  let cursor = 0;
+  let match: RegExpExecArray | null = null;
+
+  while ((match = tokenRe.exec(json)) !== null) {
+    const token = match[0];
+    const index = match.index;
+    output += escapeForHtml(json.slice(cursor, index));
+
+    let cssClass = 'json-token-number';
+    if (token.startsWith('"')) {
+      const rest = json.slice(index + token.length);
+      cssClass = /^\s*:/.test(rest) ? 'json-token-key' : 'json-token-string';
+    } else if (token === 'true' || token === 'false') {
+      cssClass = 'json-token-boolean';
+    } else if (token === 'null') {
+      cssClass = 'json-token-null';
+    }
+
+    output += `<span class="${cssClass}">${escapeForHtml(token)}</span>`;
+    cursor = index + token.length;
+  }
+
+  output += escapeForHtml(json.slice(cursor));
+  return output;
+}
+
+function buildPrettyJsonHtml(payload: unknown): string {
+  const prettyJson = JSON.stringify(payload, null, 2);
+  const highlighted = highlightJsonForHtml(prettyJson);
+  return buildHtmlAttachment([
+    '<pre><code class="json-source">',
+    highlighted,
+    '</code></pre>',
+  ].join(''));
+}
+
+function buildWordLikeTextHtml(content: string, title?: string): string {
+  return buildHtmlAttachment([
+    '<section class="doc-panel">',
+    title ? `<h2 class="doc-title">${escapeForHtml(title)}</h2>` : '',
+    `<p class="doc-text">${escapeForHtml(content)}</p>`,
+    '</section>',
+  ].join(''));
+}
+
 function toSerializablePreview(
   value: unknown,
   depth = 0,
@@ -197,14 +304,14 @@ function installAssertionInstrumentation(): void {
     return;
   }
 
-  const assertionProto = (chai.Assertion as { prototype?: { assert?: (...args: any[]) => unknown } }).prototype;
+  const assertionProto = (chai.Assertion as { prototype?: { assert?: (...args: unknown[]) => unknown } }).prototype;
   const originalAssert = assertionProto?.assert;
   if (!assertionProto || typeof originalAssert !== 'function') {
     return;
   }
 
   assertionInstrumentationInstalled = true;
-  assertionProto.assert = function patchedAssert(...args: any[]): unknown {
+  assertionProto.assert = function patchedAssert(...args: unknown[]): unknown {
     const key = getCurrentTestKeyContext();
     const records = assertionRecordsByTest.get(key);
     const shouldRecord = Array.isArray(records);
@@ -347,12 +454,12 @@ function normalizeOpenSpecScenarioIds(values: unknown[]): string[] {
   return [...new Set(ids)];
 }
 
-function wrapWithAllure(fn?: AnyFn, explicitName?: unknown, defaults?: AllureLabelDefaults): AnyFn | undefined {
+function wrapWithAllure(fn?: WrappedFn, explicitName?: unknown, defaults?: AllureLabelDefaults): WrappedFn | undefined {
   if (!fn) {
     return undefined;
   }
 
-  return async (...args: any[]) => {
+  return async (...args: unknown[]) => {
     const testKey = setCurrentTestKeyContext();
     beginAssertionCapture(testKey);
     await applyDefaultAllureLabels(defaults);
@@ -393,7 +500,7 @@ function wrapWithAllure(fn?: AnyFn, explicitName?: unknown, defaults?: AllureLab
     });
 
     try {
-      const result = await allureStep('Execute test body', async () => fn(...args));
+      const result = await fn(...args);
       const assertionCapture = consumeAssertionCapture(testKey);
       if (assertionCapture.records.length > 0 || assertionCapture.dropped > 0) {
         await allureJsonAttachment('assertion-details.json', {
@@ -424,28 +531,28 @@ function wrapWithAllure(fn?: AnyFn, explicitName?: unknown, defaults?: AllureLab
   };
 }
 
-type WrappedAllureTestFn = WrappedTestFn & {
+type WrappedAllureTestFn = AllureBaseTestFn & {
   withLabels: (defaults: AllureLabelDefaults) => WrappedAllureTestFn;
   epic: (epic: EpicName) => WrappedAllureTestFn;
   openspec: (...scenarioIds: Array<string | string[]>) => WrappedAllureTestFn;
 };
 
-function withAllure(base: any, defaults?: AllureLabelDefaults): WrappedAllureTestFn {
-  const wrapped: any = (name: any, fn?: AnyFn, timeout?: number) =>
-    base(name, wrapWithAllure(fn, name, defaults), timeout);
+function withAllure(base: AllureBaseTestFn, defaults?: AllureLabelDefaults): WrappedAllureTestFn {
+  const wrapped = ((name: unknown, fn?: WrappedFn, timeout?: number) =>
+    base(name, wrapWithAllure(fn, name, defaults), timeout)) as WrappedAllureTestFn;
 
-  wrapped.only = (name: any, fn?: AnyFn, timeout?: number) =>
+  wrapped.only = (name: unknown, fn?: WrappedFn, timeout?: number) =>
     base.only(name, wrapWithAllure(fn, name, defaults), timeout);
-  wrapped.skip = base.skip.bind(base);
-  wrapped.todo = base.todo.bind(base);
-  wrapped.fails = (name: any, fn?: AnyFn, timeout?: number) =>
+  wrapped.skip = (...args: unknown[]) => base.skip(...args);
+  wrapped.todo = (...args: unknown[]) => base.todo(...args);
+  wrapped.fails = (name: unknown, fn?: WrappedFn, timeout?: number) =>
     base.fails(name, wrapWithAllure(fn, name, defaults), timeout);
-  wrapped.concurrent = (name: any, fn?: AnyFn, timeout?: number) =>
+  wrapped.concurrent = (name: unknown, fn?: WrappedFn, timeout?: number) =>
     base.concurrent(name, wrapWithAllure(fn, name, defaults), timeout);
 
-  wrapped.each = (...tableArgs: any[]) => {
+  wrapped.each = (...tableArgs: unknown[]) => {
     const eachBase = base.each(...tableArgs);
-    return (name: any, fn?: AnyFn, timeout?: number) =>
+    return (name: unknown, fn?: WrappedFn, timeout?: number) =>
       eachBase(name, wrapWithAllure(fn, name, defaults), timeout);
   };
 
@@ -459,11 +566,11 @@ function withAllure(base: any, defaults?: AllureLabelDefaults): WrappedAllureTes
       openspecScenarioIds: normalizeOpenSpecScenarioIds(scenarioIds),
     });
 
-  return wrapped as WrappedAllureTestFn;
+  return wrapped;
 }
 
-export const itAllure = withAllure(vitestIt);
-export const testAllure = withAllure(vitestTest);
+export const itAllure = withAllure(vitestIt as unknown as AllureBaseTestFn);
+export const testAllure = withAllure(vitestTest as unknown as AllureBaseTestFn);
 
 export async function allureStep<T>(name: string, run: () => T | Promise<T>): Promise<T> {
   if (typeof allure !== 'undefined' && typeof allure.step === 'function') {
@@ -517,6 +624,18 @@ export async function allureDescriptionHtml(content: string): Promise<void> {
 export async function allureJsonAttachment(name: string, payload: unknown): Promise<void> {
   const body = JSON.stringify(payload, null, 2);
   await allureAttachment(name, body, JSON_CONTENT_TYPE);
+}
+
+export async function allurePrettyJsonAttachment(name: string, payload: unknown): Promise<void> {
+  await allureAttachment(name, buildPrettyJsonHtml(payload), HTML_CONTENT_TYPE);
+}
+
+export async function allureWordLikeTextAttachment(
+  name: string,
+  content: string,
+  options?: { title?: string },
+): Promise<void> {
+  await allureAttachment(name, buildWordLikeTextHtml(content, options?.title), HTML_CONTENT_TYPE);
 }
 
 export async function allureFileAttachment(

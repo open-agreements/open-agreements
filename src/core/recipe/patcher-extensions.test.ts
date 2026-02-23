@@ -5,6 +5,7 @@ import { mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import AdmZip from 'adm-zip';
 import { DOMParser } from '@xmldom/xmldom';
+import type { Element } from '@xmldom/xmldom';
 import { patchDocument, getTableRowContext } from './patcher.js';
 import { cleanDocument } from './cleaner.js';
 
@@ -323,7 +324,7 @@ describe('getTableRowContext', () => {
     const doc = parser.parseFromString(xml, 'text/xml');
     const paras = doc.getElementsByTagNameNS(W_NS, 'p');
     // Second paragraph is in the second cell
-    const context = getTableRowContext(paras[1] as any);
+    const context = getTableRowContext(paras[1] as Element);
     expect(context).toBe('Label');
   });
 
@@ -333,8 +334,8 @@ describe('getTableRowContext', () => {
       '<w:p><w:r><w:t>Not in table</w:t></w:r></w:p>' +
       '</w:body></w:document>';
     const doc = parser.parseFromString(xml, 'text/xml');
-    const para = doc.getElementsByTagNameNS(W_NS, 'p')[0];
-    expect(getTableRowContext(para as any)).toBeNull();
+    const para = doc.getElementsByTagNameNS(W_NS, 'p')[0] as Element;
+    expect(getTableRowContext(para)).toBeNull();
   });
 });
 

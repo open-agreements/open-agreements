@@ -6,6 +6,7 @@
 
 import AdmZip from 'adm-zip';
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
+import type { Document, Element, Node } from '@xmldom/xmldom';
 import { createReport } from 'docx-templates';
 import { sanitizeCurrencyValuesFromDocx, BLANK_PLACEHOLDER } from './fill-utils.js';
 import { enumerateTextParts, getGeneralTextPartNames } from './recipe/ooxml-parts.js';
@@ -124,13 +125,10 @@ export function prepareFillData(options: PrepareFillDataOptions): Record<string,
   return data;
 }
 
-/* eslint-disable @typescript-eslint/no-explicit-any --
-   @xmldom/xmldom types are incompatible with global DOM types */
-
 /**
  * Extract paragraph text by concatenating all <w:t> elements.
  */
-function extractParagraphText(para: any): string {
+function extractParagraphText(para: Element): string {
   if (!para.getElementsByTagNameNS) return '';
   const tElements = para.getElementsByTagNameNS(W_NS, 't');
   const parts: string[] = [];
@@ -144,7 +142,7 @@ function extractParagraphText(para: any): string {
  * Check if a table row contains ONLY paragraphs that match the strip patterns
  * (or are empty). If so, the entire row can be safely removed.
  */
-function isRowOnlyDraftingNotes(tr: any, patterns: RegExp[]): boolean {
+function isRowOnlyDraftingNotes(tr: Element, patterns: RegExp[]): boolean {
   const paras = tr.getElementsByTagNameNS(W_NS, 'p');
   if (paras.length === 0) return false;
   for (let i = 0; i < paras.length; i++) {
@@ -178,12 +176,12 @@ function stripParagraphs(docxBuffer: Buffer, patterns: RegExp[]): Buffer {
     if (!entry) continue;
 
     const xml = entry.getData().toString('utf-8');
-    const doc = parser.parseFromString(xml, 'text/xml');
+    const doc: Document = parser.parseFromString(xml, 'text/xml');
 
     // Collect table rows to remove (whole row when only drafting notes)
-    const rowsToRemove = new Set<any>();
+    const rowsToRemove = new Set<Element>();
     // Collect standalone paragraphs to remove
-    const parasToRemove: any[] = [];
+    const parasToRemove: Element[] = [];
 
     const allParagraphs = doc.getElementsByTagNameNS(W_NS, 'p');
     for (let i = 0; i < allParagraphs.length; i++) {
@@ -192,16 +190,19 @@ function stripParagraphs(docxBuffer: Buffer, patterns: RegExp[]): Buffer {
       if (!text || !patterns.some((r) => r.test(text))) continue;
 
       // Walk up to find if this is inside a table cell
-      let node: any = para.parentNode;
+      let node: Node | null = para.parentNode;
       let inTableCell = false;
-      let tableRow: any = null;
+      let tableRow: Element | null = null;
       while (node) {
-        if (node.localName === 'tc' && node.namespaceURI === W_NS) {
-          inTableCell = true;
-        }
-        if (node.localName === 'tr' && node.namespaceURI === W_NS) {
-          tableRow = node;
-          break;
+        if (node.nodeType === 1) {
+          const element = node as Element;
+          if (element.localName === 'tc' && element.namespaceURI === W_NS) {
+            inTableCell = true;
+          }
+          if (element.localName === 'tr' && element.namespaceURI === W_NS) {
+            tableRow = element;
+            break;
+          }
         }
         node = node.parentNode;
       }
@@ -241,7 +242,7 @@ function stripParagraphs(docxBuffer: Buffer, patterns: RegExp[]): Buffer {
 /**
  * Extract all text from a run (<w:r>) by concatenating its <w:t> elements.
  */
-function extractRunText(run: any): string {
+function extractRunText(run: Element): string {
   const tElements = run.getElementsByTagNameNS(W_NS, 't');
   const parts: string[] = [];
   for (let i = 0; i < tElements.length; i++) {
@@ -281,10 +282,10 @@ function stripFilledHighlighting(
     if (!entry) continue;
 
     const xml = entry.getData().toString('utf-8');
-    const doc = parser.parseFromString(xml, 'text/xml');
+    const doc: Document = parser.parseFromString(xml, 'text/xml');
 
     const allRuns = doc.getElementsByTagNameNS(W_NS, 'r');
-    const toRemove: any[] = [];
+    const toRemove: Element[] = [];
 
     for (let i = 0; i < allRuns.length; i++) {
       const run = allRuns[i];
@@ -297,7 +298,7 @@ function stripFilledHighlighting(
       // Check if this run's text contains a tag for a filled field
       const runText = extractRunText(run);
       let hasFilled = false;
-      let match;
+      let match: RegExpExecArray | null = null;
       tagPattern.lastIndex = 0;
       while ((match = tagPattern.exec(runText)) !== null) {
         if (filledFields.has(match[1])) {
@@ -353,18 +354,21 @@ function stripEmptyTableRows(docxBuffer: Buffer): Buffer {
     if (!entry) continue;
 
     const xml = entry.getData().toString('utf-8');
-    const doc = parser.parseFromString(xml, 'text/xml');
+    const doc: Document = parser.parseFromString(xml, 'text/xml');
     const rows = doc.getElementsByTagNameNS(W_NS, 'tr');
 
-    const rowsToRemove: any[] = [];
+    const rowsToRemove: Element[] = [];
     for (let i = 0; i < rows.length; i++) {
       const row = rows[i];
       let hasCell = false;
       for (let c = 0; c < row.childNodes.length; c++) {
-        const child = row.childNodes[c] as any;
-        if (child?.localName === 'tc' && child?.namespaceURI === W_NS) {
-          hasCell = true;
-          break;
+        const child = row.childNodes[c];
+        if (child?.nodeType === 1) {
+          const childElement = child as Element;
+          if (childElement.localName === 'tc' && childElement.namespaceURI === W_NS) {
+            hasCell = true;
+            break;
+          }
         }
       }
       if (!hasCell) {

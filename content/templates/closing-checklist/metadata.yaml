@@ -1,10 +1,10 @@
 name: Closing Checklist
 description: >-
-  A deal closing checklist tracking working group members, document statuses,
-  action items, and open issues. Accepts structured JSON input and renders
-  a formatted DOCX for distribution to deal participants.
+  A stage-first, document-first closing checklist that tracks canonical
+  documents, checklist entries, signatories, action items, and issues.
+  Accepts structured JSON input and renders a formatted DOCX for distribution.
 source_url: https://github.com/open-agreements/open-agreements
-version: '1.0'
+version: '2.0'
 license: CC0-1.0
 allow_derivatives: true
 attribution_text: >-
@@ -13,24 +13,27 @@ fields:
   - name: deal_name
     type: string
     description: Name of the deal or transaction
-  - name: created_at
-    type: string
-    description: ISO date when the checklist was first created
   - name: updated_at
     type: string
     description: ISO date when the checklist was last updated
-  - name: working_group
-    type: array
-    description: Array of working group members (name, email, organization, role)
   - name: documents
     type: array
-    description: Array of deal documents (document_name, status)
+    description: Canonical documents (document_id, title, optional primary_link, labels)
+  - name: checklist_entries
+    type: array
+    description: Stage-scoped checklist rows (entry_id, stage, sort_key, title, status, optional document_id)
   - name: action_items
     type: array
-    description: Array of action items (item_id, description, status, assigned_to, due_date)
+    description: Action items with optional related_document_ids
+  - name: issues
+    type: array
+    description: Issues with OPEN/CLOSED status and optional related_document_ids
+  - name: working_group
+    type: array
+    description: Compatibility field for legacy template sections (always empty in v2 checklist flow)
   - name: open_issues
     type: array
-    description: Array of open issues (issue_id, title, status, escalation_tier, positions)
+    description: Compatibility field for legacy template sections (derived from unlinked issues in v2 checklist flow)
 required_fields:
   - deal_name
   - updated_at

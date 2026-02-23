@@ -160,7 +160,7 @@ describe('sanitizeCurrencyValuesFromDocx', () => {
   it('does not strip $ from boolean values', () => {
     const buf = buildDocxBuffer(docXml(['Amount: ${some_field}']));
     const result = sanitizeCurrencyValuesFromDocx(
-      { some_field: true as any, other: '$100' },
+      { some_field: true, other: '$100' },
       buf
     );
     expect(result.some_field).toBe(true);

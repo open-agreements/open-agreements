@@ -372,7 +372,7 @@ The system SHALL define a `ToolCommandAdapter` interface enabling future adapter
 - **THEN** it implements all interface methods and generates a valid Claude Code slash command file
 
 #### Scenario: [OA-053] New adapter can be added without modifying core
-- **GIVEN** the `ToolCommandAdapter` interface is defined in `src/core/command-generation/types.ts`
+- **GIVEN** the `ToolCommandAdapter` interface is part of the core command-generation contract
 - **WHEN** a developer creates a new adapter (e.g., for Cursor or Windsurf)
 - **THEN** they can implement the interface without modifying any existing core or adapter code
 
@@ -467,17 +467,319 @@ The NVCA SPA test suite SHALL include interaction-focused coverage that asserts 
 - **AND** when courts are selected and judicial district is omitted, computed outputs derive judicial district defaults
 - **AND** the exported trace shows the dependency chain
 
-### Requirement: Safe Docx Suite Is Externalized
-The repository SHALL integrate SafeDocX as an external package dependency rather than vendoring the SafeDocX package suite in `packages/`.
+### Requirement: Optional Content Root Overrides
+The system SHALL support optional content root overrides via the
+`OPEN_AGREEMENTS_CONTENT_ROOTS` environment variable. The value MUST be treated
+as a path-delimited list of root directories that may contain `templates/`,
+`external/`, and `recipes/` subdirectories.
 
-#### Scenario: [OA-067] safe-docx suite package directories are not vendored
-- **WHEN** maintainers inspect repository package directories
-- **THEN** `packages/safe-docx`, `packages/docx-primitives`, `packages/docx-comparison`, and `packages/safe-docx-mcpb` are absent
-- **AND** only active OpenAgreements package directories remain
+#### Scenario: [OA-067] Default behavior without env var
+- **WHEN** `OPEN_AGREEMENTS_CONTENT_ROOTS` is not set
+- **THEN** agreement discovery uses bundled package directories only
 
-### Requirement: Local MCP Configuration Uses External SafeDocX Package
-The repository SHALL configure local MCP integration to use the published UseJunior SafeDocX package.
+#### Scenario: [OA-068] Additional discovery with env var
+- **WHEN** `OPEN_AGREEMENTS_CONTENT_ROOTS` is set to one or more directories
+- **THEN** agreement discovery includes matching IDs from those directories
+- **AND** bundled package directories remain available as fallback
 
-#### Scenario: [OA-068] mcp.json points to canonical external package
-- **WHEN** maintainers inspect `mcp.json`
-- **THEN** the `safe-docx` stdio server command uses `npx -y @usejunior/safedocx`
+### Requirement: Content Root Precedence and Dedupe
+The system SHALL apply deterministic precedence when duplicate agreement IDs
+exist across multiple content roots, and the system SHALL dedupe by first
+match.
+
+#### Scenario: [OA-069] Override wins over bundled content
+- **GIVEN** agreement ID `x` exists in both an override root and bundled content
+- **WHEN** `OPEN_AGREEMENTS_CONTENT_ROOTS` includes the override root first
+- **THEN** commands resolve ID `x` to the override root copy
+- **AND** bundled duplicate entries are not listed a second time
+
+### Requirement: Unified Root-Aware Command Resolution
+The `fill`, `list`, and `validate` commands SHALL resolve agreements using the
+merged root model (override roots first, bundled fallback).
+
+#### Scenario: [OA-070] Fill from override root
+- **WHEN** `fill <id>` is run and `<id>` exists only in an override root
+- **THEN** the command resolves and fills that agreement successfully
+
+#### Scenario: [OA-071] List includes override-only entries
+- **WHEN** `list --json` is run with override roots configured
+- **THEN** the output includes override-only entries merged into the inventory
+
+#### Scenario: [OA-072] Validate single ID across tiers with overrides
+- **WHEN** `validate <id>` is run for an ID present in templates, external, or recipes under override roots
+- **THEN** the command validates the matching entry from the merged root set
+
+### Requirement: Public Trust Signal Surfaces
+The project SHALL expose trust signals that help users and AI agents quickly verify maintenance quality and testing posture from public surfaces.
+
+#### Scenario: [OA-073] README exposes trust evidence at first glance
+- **WHEN** a visitor opens the repository README
+- **THEN** the top section shows trust signals for CI status and coverage
+- **AND** identifies the active JavaScript test framework (Vitest or Jest)
+
+#### Scenario: [OA-074] Landing page exposes trust evidence without scrolling deep
+- **WHEN** a visitor opens the landing page
+- **THEN** the Trust section links to npm package, CI status, coverage dashboard, and source repository
+- **AND** includes an explicit signal for the active JavaScript test framework (Vitest or Jest)
+
+### Requirement: CI-Published Coverage and Test Results
+The CI pipeline SHALL publish both code coverage and machine-readable unit test results to external trust surfaces.
+
+#### Scenario: [OA-075] Coverage uploads to Codecov
+- **WHEN** CI runs on pull requests or pushes to main
+- **THEN** coverage output is generated from the active test runner
+- **AND** an `lcov` report is uploaded to Codecov
+
+#### Scenario: [OA-076] Unit test results upload in machine-readable format
+- **WHEN** CI runs unit tests
+- **THEN** the active test runner emits a JUnit XML report
+- **AND** CI uploads that test result report to Codecov test-results ingestion
+
+#### Scenario: [OA-077] Tokenless-first test result upload
+- **WHEN** repository-level Codecov settings allow tokenless uploads
+- **THEN** CI test result upload succeeds without a hard dependency on `CODECOV_TOKEN`
+- **AND** repository docs or workflow comments explain the expected auth mode
+
+### Requirement: Repository-Defined Coverage Gate Policy
+Coverage gate policy SHALL be versioned in-repo so trust thresholds are explicit, reviewable, and ratchetable over time.
+
+#### Scenario: [OA-078] Initial patch and project gates are codified
+- **WHEN** coverage policy is configured
+- **THEN** patch coverage uses target `85%` with `5%` threshold
+- **AND** project coverage uses target `auto` with `0.5%` threshold
+
+#### Scenario: [OA-079] Coverage policy prevents regressions while allowing staged hardening
+- **WHEN** coverage is uploaded for new commits
+- **THEN** the project gate blocks material regression relative to baseline
+- **AND** policy notes define staged increases toward explicit project floors as coverage grows
+
+#### Scenario: [OA-080] Coverage denominator is scoped to implementation sources
+- **WHEN** coverage runs in CI
+- **THEN** denominator paths include implementation source trees (`src/**` and package `src/**`)
+- **AND** tooling/support paths (for example scripts, generated output, docs/site content, and test files) are excluded from gate calculations
+
+### Requirement: Spec-Backed Allure Coverage Expansion
+Trust-oriented test coverage SHALL include executable Allure tests keyed to canonical OpenSpec scenarios, including retroactive scenario additions for already-implemented behavior.
+
+#### Scenario: [OA-081] Retroactive specs are added for implemented behavior
+- **WHEN** maintainers identify implemented behavior not represented in canonical scenarios
+- **THEN** canonical OpenSpec scenarios are added or clarified before claiming coverage
+- **AND** scenario names remain stable enough for traceability mapping
+
+#### Scenario: [OA-082] Behavior-level Allure tests are linked to canonical scenarios
+- **WHEN** canonical scenarios exist for an implemented behavior
+- **THEN** at least one Allure-reported test asserts that behavior and maps to the scenario
+- **AND** `npm run check:spec-coverage` remains green for missing/extra/pending mappings
+
+### Requirement: Opaque Download Links for Hosted Fill
+The hosted OpenAgreements fill flow SHALL issue download URLs using opaque
+download identifiers instead of embedding full fill payload values in the URL.
+
+#### Scenario: [OA-083] fill_template url mode returns id-based download metadata
+- **WHEN** a client calls `fill_template` with `return_mode: "url"`
+- **THEN** the response includes a `download_id` and `download_url`
+- **AND** `download_url` uses an opaque identifier parameter (`id`) rather than serialized fill values
+
+#### Scenario: [OA-084] download endpoint resolves a valid opaque identifier
+- **WHEN** a client requests `/api/download` with a valid non-expired `id`
+- **THEN** the endpoint returns `200` and a DOCX attachment
+
+### Requirement: Download Endpoint Supports HEAD Probing
+The hosted download endpoint SHALL support `HEAD` requests so clients can probe
+link viability without downloading the document body.
+
+#### Scenario: [OA-085] head request for valid id-based link
+- **WHEN** a client sends `HEAD /api/download?id=<valid_id>`
+- **THEN** the endpoint returns `200`
+- **AND** the response omits the document body
+
+### Requirement: Download Errors Are Machine-Actionable
+The hosted download endpoint SHALL return machine-readable error codes that
+distinguish missing parameters, malformed links, invalid signatures, and expiry.
+
+#### Scenario: [OA-086] malformed or tampered link returns explicit code
+- **WHEN** a client sends a download request with a malformed or tampered identifier
+- **THEN** the endpoint returns an error response with a specific error code describing the failure class
+- **AND** the response does not collapse all failures into one generic message
+
+#### Scenario: [OA-087] expired link returns explicit expiry code
+- **WHEN** a client sends a request with an expired identifier
+- **THEN** the endpoint returns an error response with an explicit expiry error code
+
+### Requirement: Document-First Closing Checklist Data Model
+The system SHALL model closing checklists with canonical documents as the primary records and stage-scoped checklist entries as render rows. IDs SHALL be stable string identifiers and SHALL NOT require UUID format.
+
+#### Scenario: [OA-088] Document and checklist entry use stable string IDs
+- **WHEN** a checklist payload defines `document_id: "escrow-agreement-executed"` and `entry_id: "entry-escrow-closing"`
+- **THEN** validation accepts those IDs as valid stable strings
+- **AND** validation does not require UUID-only formats
+
+#### Scenario: [OA-089] Checklist entry references unknown document ID
+- **WHEN** a checklist entry references a `document_id` not present in canonical documents
+- **THEN** validation fails with a structured error identifying the missing reference
+
+#### Scenario: [OA-090] One document maps to at most one checklist entry
+- **WHEN** two checklist entries reference the same `document_id`
+- **THEN** validation fails with a structured duplicate-mapping error
+
+### Requirement: Stage-First Nested Lawyer Rendering
+The system SHALL render closing checklists grouped by stage (`PRE_SIGNING`, `SIGNING`, `CLOSING`, `POST_CLOSING`) with nested rows based on parent entry relationships.
+
+#### Scenario: [OA-091] Checklist renders in canonical stage order
+- **WHEN** checklist entries are provided across all four stages
+- **THEN** rendered output groups rows under those stage headers in canonical order
+
+#### Scenario: [OA-092] Child entry is rendered beneath parent entry
+- **WHEN** an entry includes `parent_entry_id` referencing another entry in the same stage
+- **THEN** rendered output displays the child row indented beneath the parent row
+
+### Requirement: Stable Sort Key and Computed Display Numbering
+Checklist entries SHALL include a stable non-positional `sort_key`. Rendered row numbering (`1`, `1.1`, `1.1.1`) SHALL be computed at render time from the sorted nested tree.
+
+#### Scenario: [OA-093] Inserting an entry does not require renumbering stored IDs
+- **WHEN** a new entry is inserted between existing entries by assigning an intermediate `sort_key`
+- **THEN** existing `entry_id` and `document_id` values remain unchanged
+- **AND** rendered numbering updates to reflect the new order
+
+### Requirement: Optional Document Labels
+Canonical documents SHALL support optional freeform `labels[]` metadata.
+
+#### Scenario: [OA-094] Document carries optional labels
+- **WHEN** a document includes labels like `phase:closing` and `priority:high`
+- **THEN** validation accepts the labels
+- **AND** checklist rendering remains valid whether labels are present or absent
+
+### Requirement: Named Signatory Tracking with Signature Artifacts
+The system SHALL track signatories as explicit named entries with per-signatory status on checklist entries. The renderer SHALL display signer identity and signer status, not only aggregate counts. Signatories SHALL support optional signature artifact locations.
+
+#### Scenario: [OA-095] Partially signed document shows missing signer identity
+- **WHEN** one checklist entry has three expected signatories and one has not signed
+- **THEN** rendered output identifies the specific signatory marked pending
+- **AND** rendered output does not collapse the state to only a numeric fraction
+
+#### Scenario: [OA-096] Signatory stores signature artifact location
+- **WHEN** a signatory includes a signature artifact with `uri` or `path` and optional `received_at`
+- **THEN** validation accepts the artifact metadata
+- **AND** rendered output can include the artifact location context
+
+### Requirement: Minimal Citation Support
+Checklist entries SHALL support optional minimal citation metadata as a list of reference objects.
+
+#### Scenario: [OA-097] Entry includes simple citation reference
+- **WHEN** an entry includes `citations: [{ "ref": "SPA §6.2(b)" }]`
+- **THEN** rendered output includes that citation with the corresponding row
+
+### Requirement: Document-Linked and Document-Less Checklist Entries
+Checklist entries MAY exist without `document_id` to support pre-document or administrative tasks. Action items and issues SHALL link to zero or more canonical documents via `related_document_ids`.
+
+#### Scenario: [OA-098] Checklist entry with no document for pre-document task
+- **WHEN** an entry is created for a task like ordering a good standing certificate and omits `document_id`
+- **THEN** validation succeeds
+- **AND** the entry renders normally in its stage section
+
+#### Scenario: [OA-099] Unlinked action item is rendered in fallback section
+- **WHEN** an action item has no related document IDs
+- **THEN** rendered output includes the item in a dedicated unlinked section
+
+### Requirement: Simplified Issue Lifecycle
+Issues SHALL use a simplified lifecycle with only `OPEN` and `CLOSED` statuses.
+
+#### Scenario: [OA-100] Issue with unsupported granular status is rejected
+- **WHEN** an issue status is provided as `AGREED_IN_PRINCIPLE`
+- **THEN** validation fails with a status-enum error
+
+### Requirement: Standalone Working Group Document
+The system SHALL treat the working group roster as a standalone document flow rather than an embedded closing checklist table.
+
+#### Scenario: [OA-101] Checklist references working group roster document
+- **WHEN** a user includes a working group list in the deal packet
+- **THEN** the closing checklist represents it as a document row with link/reference metadata
+- **AND** the checklist renderer does not require an embedded working-group table block
+
+### Requirement: Legacy Checklist Payload Rejection
+The system SHALL reject the previous flat checklist payload shape once the document-first model is enabled.
+
+#### Scenario: [OA-102] Legacy flat payload submitted to checklist creation
+- **WHEN** input includes only top-level legacy flat arrays and omits required document-first checklist entry structures
+- **THEN** validation fails with machine-readable contract errors
+
+
+### Requirement: Atomic Checklist JSON Patch Transactions
+The system SHALL support checklist updates via JSON patch envelopes applied atomically. If any operation in a patch is invalid, the system SHALL apply none of the operations.
+
+#### Scenario: [OA-103] Apply valid multi-operation patch atomically
+- **WHEN** a patch contains valid operations that update multiple checklist targets
+- **THEN** the system applies all operations in one transaction
+- **AND** checklist revision increments exactly once
+
+#### Scenario: [OA-104] Reject invalid patch without partial mutation
+- **WHEN** one operation in a patch is invalid
+- **THEN** the patch is rejected
+- **AND** no checklist state mutation is committed
+
+### Requirement: Optimistic Concurrency for Patch Apply
+Patch apply SHALL require `expected_revision` and SHALL reject apply when current revision differs.
+
+#### Scenario: [OA-105] Expected revision mismatch
+- **WHEN** a patch is submitted with stale `expected_revision`
+- **THEN** apply fails with revision conflict
+- **AND** no state mutation is committed
+
+### Requirement: Dry-Run Patch Validation
+The system SHALL provide dry-run patch validation that parses patch JSON, resolves targets, and validates post-patch checklist state without committing changes. Successful validation SHALL return a short-lived `validation_id` bound to the validated patch hash, checklist, and expected revision.
+
+#### Scenario: [OA-106] Dry-run returns resolved plan without mutation
+- **WHEN** a valid patch is submitted to validation
+- **THEN** the response includes resolved operations, resulting-state validity, and `validation_id`
+- **AND** checklist revision remains unchanged
+
+### Requirement: Apply Requires Prior Successful Validation
+The system SHALL require apply requests to include a valid, unexpired `validation_id` from a successful validation run for the same patch payload and checklist revision.
+
+#### Scenario: [OA-107] Apply without validation_id is rejected
+- **WHEN** an apply request omits `validation_id`
+- **THEN** apply fails with a validation-required error
+- **AND** no checklist state mutation is committed
+
+#### Scenario: [OA-108] Apply with mismatched validation artifact is rejected
+- **WHEN** an apply request includes a `validation_id` that does not match the submitted patch payload hash or expected revision
+- **THEN** apply fails with a validation mismatch error
+- **AND** no checklist state mutation is committed
+
+### Requirement: Strict Target Resolution Without Guessing
+Patch operations that require existing targets (for example replace/remove) SHALL fail when target paths or IDs do not resolve exactly.
+
+#### Scenario: [OA-109] Unknown target path is rejected
+- **WHEN** a replace operation references a non-existent issue ID path
+- **THEN** validation fails with a structured target-resolution error
+
+### Requirement: Patch-Level Idempotency
+The system SHALL enforce patch-level idempotency using `patch_id`.
+
+#### Scenario: [OA-110] Replay same patch_id does not duplicate effects
+- **WHEN** the same patch payload is applied again with the same `patch_id`
+- **THEN** the system returns an idempotent replay response
+- **AND** checklist revision does not increment a second time
+
+#### Scenario: [OA-111] Reused patch_id with different payload is rejected
+- **WHEN** a patch is submitted with a previously used `patch_id` but different operations
+- **THEN** apply fails with a patch-id conflict error
+
+### Requirement: Flexible Evidence Citations in Patch Updates
+Checklist updates SHALL support citations with required raw evidence text and optional link/filepath.
+
+#### Scenario: [OA-112] Citation with text only
+- **WHEN** a patch adds a citation containing only `text`
+- **THEN** validation succeeds
+
+#### Scenario: [OA-113] Citation with link and filepath
+- **WHEN** a patch adds a citation containing `text`, `link`, and `filepath`
+- **THEN** validation succeeds
+
+### Requirement: Optional Proposed Patch Mode
+Patch envelopes SHALL support optional `mode` with `APPLY` and `PROPOSED` values. `PROPOSED` mode SHALL not require approval workflow in v1.
+
+#### Scenario: [OA-114] Proposed patch is stored but not applied
+- **WHEN** a valid patch is submitted with `mode: PROPOSED`
+- **THEN** the system stores the proposal and validation output
+- **AND** checklist state revision remains unchanged
