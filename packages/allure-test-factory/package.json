@@ -1,0 +1,34 @@
+{
+  "name": "@usejunior/allure-test-factory",
+  "version": "0.1.0",
+  "description": "Shared Allure test helpers for vitest — BDD context, OpenSpec auto-inference, Prism.js highlighting",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./src/index.js",
+      "types": "./src/index.d.ts"
+    }
+  },
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "files": [
+    "src/"
+  ],
+  "peerDependencies": {
+    "vitest": ">=2.0.0",
+    "prismjs": ">=1.29.0",
+    "fast-xml-parser": ">=4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "prismjs": {
+      "optional": false
+    },
+    "fast-xml-parser": {
+      "optional": false
+    }
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
