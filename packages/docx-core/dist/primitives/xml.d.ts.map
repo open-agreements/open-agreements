@@ -1,0 +1,1 @@
+{"version":3,"file":"xml.d.ts","sourceRoot":"","sources":["../../src/primitives/xml.ts"],"names":[],"mappings":"AAEA,MAAM,MAAM,MAAM,GAAG,QAAQ,CAAC;AAE9B,wBAAgB,QAAQ,CAAC,GAAG,EAAE,MAAM,GAAG,MAAM,CAW5C;AAED,wBAAgB,YAAY,CAAC,GAAG,EAAE,MAAM,GAAG,MAAM,CAEhD;AAED,wBAAgB,WAAW,CAAC,IAAI,EAAE,IAAI,GAAG,IAAI,GAAG,SAAS,GAAG,MAAM,CAEjE"}

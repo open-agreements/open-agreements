@@ -1,0 +1,1 @@
+{"version":3,"file":"reject_changes.d.ts","sourceRoot":"","sources":["../../src/primitives/reject_changes.ts"],"names":[],"mappings":"AAAA;;;;;;;;;;;;GAYG;AAMH,MAAM,MAAM,mBAAmB,GAAG;IAChC,iBAAiB,EAAE,MAAM,CAAC;IAC1B,iBAAiB,EAAE,MAAM,CAAC;IAC1B,aAAa,EAAE,MAAM,CAAC;IACtB,uBAAuB,EAAE,MAAM,CAAC;CACjC,CAAC;AA6NF;;;;;GAKG;AACH,wBAAgB,aAAa,CAAC,GAAG,EAAE,QAAQ,GAAG,mBAAmB,CAoJhE"}
