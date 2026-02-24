@@ -263,10 +263,6 @@ function makeSystemCardMarkdown({ traceability, allure }) {
   lines.push("");
   lines.push("# OpenAgreements System Card");
   lines.push("");
-  lines.push(
-    `Evidence snapshot (UTC): \`${utcTimestamp(allure.latestStop)}\``,
-  );
-  lines.push("");
   lines.push("## Executive Summary");
   lines.push("");
   lines.push('<div class="trust-summary-banner">');
@@ -352,9 +348,6 @@ function makeSystemCardMarkdown({ traceability, allure }) {
   lines.push(`| Non-passing | ${commaFmt(totalNonPassing)} |`);
   lines.push(
     `| Skipped | ${commaFmt(statusCount(allure.statusCounts, "skipped"))} |`,
-  );
-  lines.push(
-    `| Last observed update (UTC) | ${utcTimestamp(allure.latestStop)} |`,
   );
   lines.push("");
   lines.push("### 3) External Signals");

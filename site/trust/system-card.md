@@ -6,13 +6,11 @@ description: Reliability summary and evidence for OpenAgreements.
 
 # OpenAgreements System Card
 
-Evidence snapshot (UTC): `2026-02-23T19:47:47.704Z`
-
 ## Executive Summary
 
 <div class="trust-summary-banner">
-<h2>Moderate signal; review caveats</h2>
-<p>132 of 132 spec scenarios are mapped to tests. 1,745 automated checks were recorded, with 2 non-passing outcomes.</p>
+<h2>Strong signal in measured scope</h2>
+<p>132 of 132 spec scenarios are mapped to tests. 481 automated checks were recorded, with 0 non-passing outcomes.</p>
 </div>
 
 - This card focuses on reliability signals developers can scan quickly.
@@ -22,7 +20,7 @@ Evidence snapshot (UTC): `2026-02-23T19:47:47.704Z`
 
 <div class="trust-chart">
 <div class="chart-row"><div class="chart-label">OpenSpec scenario mapping<span class="chart-detail">132/132 scenarios</span></div><div class="chart-track"><span class="chart-fill is-good" style="width:100.0%"></span></div><div class="chart-value">100.0%</div></div>
-<div class="chart-row"><div class="chart-label">Automated test pass rate<span class="chart-detail">1,743 passing checks</span></div><div class="chart-track"><span class="chart-fill is-good" style="width:99.9%"></span></div><div class="chart-value">99.9%</div></div>
+<div class="chart-row"><div class="chart-label">Automated test pass rate<span class="chart-detail">481 passing checks</span></div><div class="chart-track"><span class="chart-fill is-good" style="width:100.0%"></span></div><div class="chart-value">100.0%</div></div>
 </div>
 
 ## Key Results
@@ -45,11 +43,10 @@ No unmapped scenarios were found in the currently measured scope.
 
 | Metric | Value |
 |---|---:|
-| Recorded checks | 1,745 |
-| Passing | 1,743 |
-| Non-passing | 2 |
+| Recorded checks | 481 |
+| Passing | 481 |
+| Non-passing | 0 |
 | Skipped | 0 |
-| Last observed update (UTC) | 2026-02-23T19:47:47.704Z |
 
 ### 3) External Signals
 

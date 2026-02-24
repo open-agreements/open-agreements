@@ -41,12 +41,20 @@ const LICENSE_FLAGS = {
   "CC-BY-ND-4.0": { distributable: true, fillable: true },
 };
 
-function getSourceLabel(name) {
+function getSourceLabel(name, metadata) {
   if (name.startsWith("common-paper-")) return "Common Paper";
   if (name.startsWith("bonterms-")) return "Bonterms";
   if (name.startsWith("nvca-")) return "NVCA";
   if (name.startsWith("yc-safe-")) return "Y Combinator";
   if (name.startsWith("openagreements-")) return "OpenAgreements";
+  // Fall back to source_url for non-prefixed OA templates
+  const sourceUrl = String(metadata?.source_url || "").toLowerCase();
+  if (
+    sourceUrl.includes("openagreements.ai") ||
+    sourceUrl.includes("github.com/open-agreements")
+  ) {
+    return "OpenAgreements";
+  }
   return "Unknown";
 }
 
@@ -148,23 +156,19 @@ function main() {
     const flags = isRecipe
       ? { distributable: false, fillable: false }
       : LICENSE_FLAGS[item.license] || { distributable: false, fillable: false };
-    const sourceLabel = getSourceLabel(item.name);
+    const sourceLabel = getSourceLabel(item.name, item);
     const sourceUrl = getSourceUrl(sourceLabel);
 
     // Determine validation status
     let validationStatus;
-    let lastValidationAt = null;
     let validationSource = "none";
 
     if (isRecipe) {
       validationStatus = "not_applicable";
     } else if (validatedTemplates.has(item.name)) {
       validationStatus = "validated";
-      const info = validatedTemplates.get(item.name);
-      lastValidationAt =
-        info.latestStop != null
-          ? new Date(info.latestStop).toISOString()
-          : null;
+      // Timestamps are volatile (differ per run) — omit from committed artifact.
+      // The live allure report has per-test timing.
       validationSource = "allure-template-suite";
     } else {
       validationStatus = "not_covered";
@@ -191,7 +195,6 @@ function main() {
       requiredFields: item.fields.filter((f) => f.required).length,
       totalFields: item.fields.length,
       validation_status: validationStatus,
-      last_validation_at: lastValidationAt,
       validation_source: validationSource,
       hasPreview,
     };
@@ -206,7 +209,6 @@ function main() {
   );
 
   const output = {
-    generated_at_utc: new Date().toISOString(),
     total_templates: evidence.length,
     validated_count: evidence.filter((e) => e.validation_status === "validated")
       .length,
