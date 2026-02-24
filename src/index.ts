@@ -66,7 +66,6 @@ export {
 
 // Closing checklist
 export {
-  renderChecklistMarkdown,
   buildChecklistTemplateContext,
   ClosingChecklistSchema,
   ChecklistPatchEnvelopeSchema,

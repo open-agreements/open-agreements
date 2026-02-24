@@ -1,0 +1,59 @@
+{
+  "name": "@usejunior/docx-core",
+  "version": "0.1.0",
+  "description": "OOXML (.docx) core library: primitives, comparison, and track changes",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "clean:dist": "node -e \"const { rmSync } = require('node:fs'); rmSync('dist', { recursive: true, force: true });\"",
+    "build": "npm run clean:dist && tsc -p tsconfig.build.json",
+    "dev": "tsc -p tsconfig.build.json --watch",
+    "test": "node ../../node_modules/vitest/vitest.mjs",
+    "test:run": "node ../../node_modules/vitest/vitest.mjs run",
+    "test:baseline": "node ../../node_modules/vitest/vitest.mjs run -c vitest.baseline.config.ts",
+    "test:coverage": "node ../../node_modules/vitest/vitest.mjs run --coverage --coverage.reporter=text-summary --coverage.reporter=json-summary --coverage.reporter=lcov",
+    "check:spec-coverage": "node scripts/validate_openspec_coverage.mjs",
+    "lint": "tsc --noEmit",
+    "benchmark": "tsx src/benchmark/runner.ts",
+    "cli": "node dist/cli/index.js"
+  },
+  "dependencies": {
+    "@xmldom/xmldom": "^0.8.10",
+    "diff-match-patch": "^1.0.5",
+    "jszip": "^3.10.1"
+  },
+  "devDependencies": {
+    "@types/diff-match-patch": "^1.0.36",
+    "@types/node": "^22.10.0",
+    "@vitest/coverage-v8": "^3.2.4",
+    "@vitest/runner": "^3.2.4",
+    "allure-vitest": "^3.0.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "vitest": "^3.2.4"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "docx",
+    "ooxml",
+    "word",
+    "comparison",
+    "track-changes",
+    "document-editing",
+    "serverless",
+    "cloudflare-workers",
+    "edge",
+    "vercel"
+  ],
+  "license": "MIT",
+  "bin": {
+    "docx-comparison": "dist/cli/index.js",
+    "safe-docx-compare": "dist/cli/index.js"
+  }
+}

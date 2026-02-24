@@ -3,16 +3,18 @@ import {
   allureJsonAttachment,
   allurePrettyJsonAttachment,
   allureStep,
-  allureWordLikeMarkdownAttachment,
   itAllure,
 } from '../../../integration-tests/helpers/allure-test.js';
+import {
+  renderChecklistDocx,
+  attachChecklistDocxPreview,
+} from '../../../integration-tests/helpers/docx-evidence.js';
 import {
   CHECKLIST_PATCH_VALIDATION_TTL_MS,
   getChecklistPatchValidationArtifact,
   setChecklistPatchValidationStore,
   validateChecklistPatch,
 } from './patch-validator.js';
-import { renderChecklistMarkdown } from './index.js';
 
 const it = itAllure.epic('Compliance & Governance').withLabels({ feature: 'Checklist Patch Validation' });
 
@@ -28,9 +30,10 @@ async function validateWithEvidence(
   await allureStep(`Given ${label} input payload`, async () => {
     await allurePrettyJsonAttachment(`${slug}-input-pretty.html`, input);
     await allureJsonAttachment(`${slug}-input.json`, input);
-    await allureWordLikeMarkdownAttachment(
+    const docx = await renderChecklistDocx(input.checklist);
+    await attachChecklistDocxPreview(
       `${slug}-checklist-before-word-like.html`,
-      renderChecklistMarkdown(input.checklist),
+      docx,
       { title: 'Checklist before patch validation' },
     );
   });
