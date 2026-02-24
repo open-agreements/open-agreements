@@ -207,6 +207,70 @@ describe('ChecklistPatch schemas', () => {
     });
   });
 
+  it('accepts operations with optional rationale and source fields', async () => {
+    const withBoth = await safeParseWithEvidence(
+      'operation with rationale and source',
+      {
+        op: 'replace',
+        path: '/issues/iss-1/status',
+        value: 'CLOSED',
+        rationale: 'Opposing counsel confirmed resolution in email thread',
+        source: 'outlook:AAMkAGI2',
+      },
+      (payload) => ChecklistPatchOperationSchema.safeParse(payload),
+    );
+
+    const withoutMetadata = await safeParseWithEvidence(
+      'operation without rationale or source',
+      {
+        op: 'replace',
+        path: '/issues/iss-1/status',
+        value: 'CLOSED',
+      },
+      (payload) => ChecklistPatchOperationSchema.safeParse(payload),
+    );
+
+    await allureStep('Then operation with rationale and source is accepted', async () => {
+      expect(withBoth.success).toBe(true);
+    });
+
+    await allureStep('And operation without rationale or source is accepted', async () => {
+      expect(withoutMetadata.success).toBe(true);
+    });
+  });
+
+  it('rejects empty rationale or source strings', async () => {
+    const emptyRationale = await safeParseWithEvidence(
+      'operation with empty rationale',
+      {
+        op: 'replace',
+        path: '/issues/iss-1/status',
+        value: 'CLOSED',
+        rationale: '',
+      },
+      (payload) => ChecklistPatchOperationSchema.safeParse(payload),
+    );
+
+    const emptySource = await safeParseWithEvidence(
+      'operation with empty source',
+      {
+        op: 'replace',
+        path: '/issues/iss-1/status',
+        value: 'CLOSED',
+        source: '',
+      },
+      (payload) => ChecklistPatchOperationSchema.safeParse(payload),
+    );
+
+    await allureStep('Then empty rationale is rejected', async () => {
+      expect(emptyRationale.success).toBe(false);
+    });
+
+    await allureStep('And empty source is rejected', async () => {
+      expect(emptySource.success).toBe(false);
+    });
+  });
+
   it.openspec('OA-107')('requires validation_id for apply requests', async () => {
     const missingValidationId = await safeParseWithEvidence(
       'apply request without validation_id',

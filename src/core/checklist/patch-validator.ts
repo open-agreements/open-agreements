@@ -130,7 +130,11 @@ function stableStringify(value: unknown): string {
 }
 
 export function computeChecklistPatchHash(patch: ChecklistPatchEnvelope): string {
-  return createHash('sha256').update(stableStringify(patch)).digest('hex');
+  const structural = {
+    ...patch,
+    operations: patch.operations.map(({ op, path, value }) => ({ op, path, value })),
+  };
+  return createHash('sha256').update(stableStringify(structural)).digest('hex');
 }
 
 export const DANGEROUS_KEYS = new Set(['__proto__', 'constructor', 'prototype']);

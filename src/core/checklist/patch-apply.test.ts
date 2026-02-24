@@ -10,13 +10,15 @@ import {
   attachChecklistDocxPreview,
   attachChecklistRedline,
 } from '../../../integration-tests/helpers/docx-evidence.js';
-import { setChecklistPatchValidationStore, validateChecklistPatch } from './patch-validator.js';
+import { computeChecklistPatchHash, setChecklistPatchValidationStore, validateChecklistPatch } from './patch-validator.js';
 import {
   applyChecklistPatch,
+  getChecklistAppliedPatchStore,
   getChecklistProposedPatchStore,
   setChecklistAppliedPatchStore,
   setChecklistProposedPatchStore,
 } from './patch-apply.js';
+import { ChecklistPatchEnvelopeSchema } from './patch-schemas.js';
 
 const it = itAllure.epic('Compliance & Governance').withLabels({ feature: 'Checklist Patch Apply' });
 
@@ -539,6 +541,81 @@ describe('applyChecklistPatch', () => {
       }
       expect(result.error_code).toBe('APPLY_OPERATION_FAILED');
       expect((applyChecklistState.issues as Array<{ status: string }>)[0]?.status).toBe('OPEN');
+    });
+  });
+
+  it('rationale and source do not affect patch hash (idempotency)', async () => {
+    const patchWithout = ChecklistPatchEnvelopeSchema.parse({
+      patch_id: 'patch_hash_test',
+      expected_revision: 0,
+      operations: [{ op: 'replace', path: '/issues/0/status', value: 'CLOSED' }],
+    });
+
+    const patchWith = ChecklistPatchEnvelopeSchema.parse({
+      patch_id: 'patch_hash_test',
+      expected_revision: 0,
+      operations: [{
+        op: 'replace',
+        path: '/issues/0/status',
+        value: 'CLOSED',
+        rationale: 'Confirmed by counsel',
+        source: 'outlook:AAMkAGI2',
+      }],
+    });
+
+    await allureStep('Then hashes are identical regardless of rationale/source', async () => {
+      expect(computeChecklistPatchHash(patchWithout)).toBe(computeChecklistPatchHash(patchWith));
+    });
+  });
+
+  it('stores full patch envelope (including rationale) in applied patch record', async () => {
+    const checklist = buildChecklist();
+    const patch = {
+      patch_id: 'patch_apply_rationale_store',
+      expected_revision: 7,
+      operations: [{
+        op: 'replace' as const,
+        path: '/issues/0/status',
+        value: 'CLOSED',
+        rationale: 'Counsel confirmed in email thread',
+        source: 'outlook:AAMkAGI2',
+      }],
+    };
+
+    const validation = await validateWithEvidence('rationale-store-validation', {
+      checklist_id: 'ck_001',
+      checklist,
+      current_revision: 7,
+      patch,
+    });
+
+    if (!validation.ok) {
+      throw new Error('Expected validation to succeed for rationale store test.');
+    }
+
+    const applied = await applyWithEvidence('rationale-store-apply', {
+      checklist_id: 'ck_001',
+      checklist,
+      current_revision: 7,
+      request: {
+        validation_id: validation.validation_id,
+        patch,
+      },
+    });
+
+    if (!applied.ok) {
+      throw new Error('Expected apply to succeed for rationale store test.');
+    }
+
+    const record = await allureStep('When applied patch record is fetched from store', async () =>
+      getChecklistAppliedPatchStore().get('ck_001', 'patch_apply_rationale_store')
+    );
+    await allureJsonAttachment('rationale-store-record.json', record);
+
+    await allureStep('Then stored record contains full patch envelope with rationale', async () => {
+      expect(record).not.toBeNull();
+      expect(record!.patch.operations[0]!.rationale).toBe('Counsel confirmed in email thread');
+      expect(record!.patch.operations[0]!.source).toBe('outlook:AAMkAGI2');
     });
   });
 

@@ -47,6 +47,8 @@ export const ChecklistPatchOperationSchema = z.object({
   op: z.enum(JSON_PATCH_OPS),
   path: JsonPointerSchema,
   value: z.unknown().optional(),
+  rationale: z.string().min(1).optional(),
+  source: z.string().min(1).optional(),
 }).superRefine((operation, ctx) => {
   const expectsValue = operation.op === 'add' || operation.op === 'replace';
   const hasValue = operation.value !== undefined;

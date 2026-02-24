@@ -30,6 +30,7 @@ export {
 } from './patch-schemas.js';
 export {
   CHECKLIST_PATCH_VALIDATION_TTL_MS,
+  DANGEROUS_KEYS,
   applyChecklistPatchOperations,
   computeChecklistPatchHash,
   validateChecklistPatch,
