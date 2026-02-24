@@ -15,7 +15,7 @@
       "requiredFields": 8,
       "totalFields": 8,
       "validation_status": "validated",
-      "validation_source": "allure-template-suite",
+      "validation_source": "test-source-scan",
       "hasPreview": false
     },
     {
@@ -29,7 +29,7 @@
       "requiredFields": 7,
       "totalFields": 8,
       "validation_status": "validated",
-      "validation_source": "allure-template-suite",
+      "validation_source": "test-source-scan",
       "hasPreview": false
     },
     {
@@ -43,7 +43,7 @@
       "requiredFields": 0,
       "totalFields": 12,
       "validation_status": "validated",
-      "validation_source": "allure-template-suite",
+      "validation_source": "test-source-scan",
       "hasPreview": true
     },
     {
@@ -57,7 +57,7 @@
       "requiredFields": 0,
       "totalFields": 11,
       "validation_status": "validated",
-      "validation_source": "allure-template-suite",
+      "validation_source": "test-source-scan",
       "hasPreview": true
     },
     {
@@ -71,7 +71,7 @@
       "requiredFields": 0,
       "totalFields": 14,
       "validation_status": "validated",
-      "validation_source": "allure-template-suite",
+      "validation_source": "test-source-scan",
       "hasPreview": true
     },
     {
@@ -85,7 +85,7 @@
       "requiredFields": 7,
       "totalFields": 7,
       "validation_status": "validated",
-      "validation_source": "allure-template-suite",
+      "validation_source": "test-source-scan",
       "hasPreview": false
     },
     {
@@ -99,7 +99,7 @@
       "requiredFields": 10,
       "totalFields": 10,
       "validation_status": "validated",
-      "validation_source": "allure-template-suite",
+      "validation_source": "test-source-scan",
       "hasPreview": false
     },
     {

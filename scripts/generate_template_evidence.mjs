@@ -32,7 +32,7 @@ import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = resolve(__dirname, "..");
-const ALLURE_RESULTS_DIR = join(REPO_ROOT, "allure-results");
+const INTEGRATION_TESTS_DIR = join(REPO_ROOT, "integration-tests");
 const OUTPUT_PATH = join(REPO_ROOT, "site", "_data", "templateEvidence.json");
 
 const LICENSE_FLAGS = {
@@ -92,45 +92,36 @@ function formatName(id) {
 }
 
 /**
- * Scan allure results for template_id parameters to determine which templates
- * have dedicated validation tests.
+ * Scan integration test source files for allureParameter('template_id', '...')
+ * calls to determine which templates have dedicated validation tests.
+ *
+ * This is deterministic (same source = same result) unlike reading allure-results
+ * which vary by environment and accumulate across runs.
  */
 function collectValidatedTemplateIds() {
-  const validated = new Map(); // templateId -> { count, latestStop }
+  const validated = new Set();
 
   let entries;
   try {
-    entries = readdirSync(ALLURE_RESULTS_DIR);
+    entries = readdirSync(INTEGRATION_TESTS_DIR);
   } catch {
     return validated;
   }
 
-  const resultFiles = entries.filter((f) => f.endsWith("-result.json"));
+  const testFiles = entries.filter((f) => f.endsWith(".test.ts"));
+  const pattern = /allureParameter\s*\(\s*['"]template_id['"]\s*,\s*['"]([^'"]+)['"]\s*\)/g;
 
-  for (const file of resultFiles) {
+  for (const file of testFiles) {
     try {
-      const data = JSON.parse(
-        readFileSync(join(ALLURE_RESULTS_DIR, file), "utf-8"),
-      );
-      const params = data.parameters || [];
-      const templateParam = params.find(
-        (p) => p.name === "template_id" || p.name === "templateId",
-      );
-
-      if (templateParam && templateParam.value) {
-        const id = templateParam.value;
-        const existing = validated.get(id) || { count: 0, latestStop: null };
-        existing.count++;
-        if (typeof data.stop === "number") {
-          existing.latestStop =
-            existing.latestStop == null
-              ? data.stop
-              : Math.max(existing.latestStop, data.stop);
-        }
-        validated.set(id, existing);
+      const source = readFileSync(join(INTEGRATION_TESTS_DIR, file), "utf-8");
+      let match;
+      while ((match = pattern.exec(source)) !== null) {
+        validated.add(match[1]);
       }
+      // Reset lastIndex for next file
+      pattern.lastIndex = 0;
     } catch {
-      // Skip malformed files
+      // Skip unreadable files
     }
   }
 
@@ -167,9 +158,7 @@ function main() {
       validationStatus = "not_applicable";
     } else if (validatedTemplates.has(item.name)) {
       validationStatus = "validated";
-      // Timestamps are volatile (differ per run) — omit from committed artifact.
-      // The live allure report has per-test timing.
-      validationSource = "allure-template-suite";
+      validationSource = "test-source-scan";
     } else {
       validationStatus = "not_covered";
     }
