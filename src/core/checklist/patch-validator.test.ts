@@ -51,14 +51,14 @@ describe('validateChecklistPatch', () => {
   const baseChecklist = {
     deal_name: 'Project Atlas',
     updated_at: '2026-02-22',
-    documents: [
-      {
+    documents: {
+      'doc-spa': {
         document_id: 'doc-spa',
         title: 'Stock Purchase Agreement',
       },
-    ],
-    checklist_entries: [
-      {
+    },
+    checklist_entries: {
+      'entry-spa': {
         entry_id: 'entry-spa',
         document_id: 'doc-spa',
         stage: 'SIGNING',
@@ -66,16 +66,16 @@ describe('validateChecklistPatch', () => {
         title: 'Stock Purchase Agreement',
         status: 'FORM_FINAL',
       },
-    ],
-    action_items: [],
-    issues: [
-      {
+    },
+    action_items: {},
+    issues: {
+      'iss-price': {
         issue_id: 'iss-price',
         title: 'Purchase price adjustment language',
         status: 'OPEN',
         related_document_ids: ['doc-spa'],
       },
-    ],
+    },
   };
 
   it.openspec('OA-106')('validates a patch with dry-run only and persists a validation artifact', async () => {
@@ -87,8 +87,8 @@ describe('validateChecklistPatch', () => {
         patch_id: 'patch_001',
         expected_revision: 12,
         operations: [
-          { op: 'replace', path: '/issues/0/status', value: 'CLOSED' },
-          { op: 'add', path: '/issues/0/summary', value: 'Resolved by counsel confirmation in email thread.' },
+          { op: 'replace', path: '/issues/iss-price/status', value: 'CLOSED' },
+          { op: 'add', path: '/issues/iss-price/summary', value: 'Resolved by counsel confirmation in email thread.' },
         ],
       },
     });
@@ -110,8 +110,8 @@ describe('validateChecklistPatch', () => {
     });
 
     await allureStep('And dry-run does not mutate the source checklist input', async () => {
-      expect(baseChecklist.issues[0]?.status).toBe('OPEN');
-      expect(baseChecklist.issues[0]?.summary).toBeUndefined();
+      expect(baseChecklist.issues['iss-price']?.status).toBe('OPEN');
+      expect((baseChecklist.issues['iss-price'] as Record<string, unknown>)?.summary).toBeUndefined();
     });
 
     const artifact = await allureStep('When validation artifact is fetched by validation_id', async () =>
@@ -162,7 +162,7 @@ describe('validateChecklistPatch', () => {
       patch: {
         patch_id: 'patch_003',
         expected_revision: 12,
-        operations: [{ op: 'replace', path: '/issues/0/status', value: 'CLOSED' }],
+        operations: [{ op: 'replace', path: '/issues/iss-price/status', value: 'CLOSED' }],
       },
     });
 
@@ -188,7 +188,7 @@ describe('validateChecklistPatch', () => {
         patch_id: 'patch_004',
         expected_revision: 12,
         operations: [
-          { op: 'replace', path: '/issues/0/status', value: 'INVALID_STATUS' },
+          { op: 'replace', path: '/issues/iss-price/status', value: 'INVALID_STATUS' },
         ],
       },
     });
@@ -269,7 +269,7 @@ describe('validateChecklistPatch', () => {
         patch_id: 'patch_final_proto',
         expected_revision: 12,
         operations: [
-          { op: 'add', path: '/issues/0/__proto__', value: 'bad' },
+          { op: 'add', path: '/issues/iss-price/__proto__', value: 'bad' },
         ],
       },
     });
@@ -284,6 +284,122 @@ describe('validateChecklistPatch', () => {
 
     await allureStep('And diagnostics identify TARGET_PATH_INVALID', async () => {
       expect(result.diagnostics[0]?.code).toBe('TARGET_PATH_INVALID');
+    });
+  });
+
+  it('adds a new record key via add operation', async () => {
+    const result = await validateWithEvidence('add-new-record-key', {
+      checklist_id: 'ck_001',
+      checklist: baseChecklist,
+      current_revision: 12,
+      patch: {
+        patch_id: 'patch_add_key',
+        expected_revision: 12,
+        operations: [
+          {
+            op: 'add',
+            path: '/issues/iss-new',
+            value: {
+              issue_id: 'iss-new',
+              title: 'New issue added via patch',
+              status: 'OPEN',
+              related_document_ids: ['doc-spa'],
+            },
+          },
+        ],
+      },
+    });
+
+    await allureStep('Then adding a new record key succeeds', async () => {
+      expect(result.ok).toBe(true);
+    });
+  });
+
+  it('replaces an existing record value', async () => {
+    const result = await validateWithEvidence('replace-existing-record-value', {
+      checklist_id: 'ck_001',
+      checklist: baseChecklist,
+      current_revision: 12,
+      patch: {
+        patch_id: 'patch_replace_key',
+        expected_revision: 12,
+        operations: [
+          { op: 'replace', path: '/issues/iss-price/status', value: 'CLOSED' },
+        ],
+      },
+    });
+
+    await allureStep('Then replacing an existing record field succeeds', async () => {
+      expect(result.ok).toBe(true);
+    });
+  });
+
+  it('removes an existing record key', async () => {
+    const result = await validateWithEvidence('remove-record-key', {
+      checklist_id: 'ck_001',
+      checklist: baseChecklist,
+      current_revision: 12,
+      patch: {
+        patch_id: 'patch_remove_key',
+        expected_revision: 12,
+        operations: [
+          { op: 'remove', path: '/issues/iss-price' },
+        ],
+      },
+    });
+
+    await allureStep('Then removing a record key succeeds', async () => {
+      expect(result.ok).toBe(true);
+    });
+  });
+
+  it('appends to a sub-array within a record value', async () => {
+    const result = await validateWithEvidence('sub-array-append', {
+      checklist_id: 'ck_001',
+      checklist: baseChecklist,
+      current_revision: 12,
+      patch: {
+        patch_id: 'patch_sub_array',
+        expected_revision: 12,
+        operations: [
+          {
+            op: 'add',
+            path: '/issues/iss-price/citations/-',
+            value: { text: 'Counsel confirmed in email' },
+          },
+        ],
+      },
+    });
+
+    await allureStep('Then appending to sub-array within record succeeds', async () => {
+      expect(result.ok).toBe(true);
+    });
+  });
+
+  it('rejects legacy numeric path when key does not exist', async () => {
+    const result = await validateWithEvidence('reject-legacy-numeric-path', {
+      checklist_id: 'ck_001',
+      checklist: baseChecklist,
+      current_revision: 12,
+      patch: {
+        patch_id: 'patch_numeric_path',
+        expected_revision: 12,
+        operations: [
+          { op: 'replace', path: '/issues/0/status', value: 'CLOSED' },
+        ],
+      },
+    });
+
+    await allureStep('Then legacy numeric path is rejected (no key "0" exists)', async () => {
+      expect(result.ok).toBe(false);
+    });
+
+    if (result.ok) {
+      throw new Error('Expected legacy numeric path to be rejected.');
+    }
+
+    await allureStep('And diagnostics identify TARGET_NOT_FOUND', async () => {
+      expect(result.diagnostics[0]?.code).toBe('TARGET_NOT_FOUND');
     });
   });
 
@@ -302,7 +418,7 @@ describe('validateChecklistPatch', () => {
       patch: {
         patch_id: 'patch_005',
         expected_revision: 12,
-        operations: [{ op: 'replace', path: '/issues/0/status', value: 'CLOSED' }],
+        operations: [{ op: 'replace', path: '/issues/iss-price/status', value: 'CLOSED' }],
       },
     });
 

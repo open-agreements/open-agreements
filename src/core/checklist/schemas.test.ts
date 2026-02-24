@@ -68,11 +68,11 @@ describe('ClosingChecklistSchema v2', () => {
       throw new Error('Expected minimal checklist payload to parse successfully.');
     }
 
-    await allureStep('And array fields default to empty arrays', async () => {
-      expect(result.data.documents).toEqual([]);
-      expect(result.data.checklist_entries).toEqual([]);
-      expect(result.data.action_items).toEqual([]);
-      expect(result.data.issues).toEqual([]);
+    await allureStep('And record fields default to empty objects', async () => {
+      expect(result.data.documents).toEqual({});
+      expect(result.data.checklist_entries).toEqual({});
+      expect(result.data.action_items).toEqual({});
+      expect(result.data.issues).toEqual({});
     });
   });
 
@@ -81,16 +81,16 @@ describe('ClosingChecklistSchema v2', () => {
     async () => {
     const full = {
       ...minimal,
-      documents: [
-        {
+      documents: {
+        'escrow-agreement-executed': {
           document_id: 'escrow-agreement-executed',
           title: 'Escrow Agreement (Executed)',
           primary_link: 'https://drive.example.com/escrow-executed',
           labels: ['phase:closing'],
         },
-      ],
-      checklist_entries: [
-        {
+      },
+      checklist_entries: {
+        'entry-escrow': {
           entry_id: 'entry-escrow',
           document_id: 'escrow-agreement-executed',
           stage: 'CLOSING',
@@ -113,23 +113,23 @@ describe('ClosingChecklistSchema v2', () => {
             },
           ],
         },
-      ],
-      action_items: [
-        {
+      },
+      action_items: {
+        'act-1': {
           action_id: 'act-1',
           description: 'Finalize funds flow memo',
           status: 'IN_PROGRESS',
           related_document_ids: ['escrow-agreement-executed'],
         },
-      ],
-      issues: [
-        {
+      },
+      issues: {
+        'iss-1': {
           issue_id: 'iss-1',
           title: 'Escrow release mechanics',
           status: 'OPEN',
           related_document_ids: ['escrow-agreement-executed'],
         },
-      ],
+      },
     };
 
     const result = await safeParseWithEvidence('full checklist payload', ClosingChecklistSchema, full);
@@ -146,15 +146,19 @@ describe('ClosingChecklistSchema v2', () => {
       ClosingChecklistSchema,
       {
         ...minimal,
-        documents: [{ document_id: 'doc-spa-form-v4', title: 'SPA (Form)' }],
-        checklist_entries: [{
-          entry_id: 'entry-spa-form-v4',
-          document_id: 'doc-spa-form-v4',
-          stage: 'SIGNING',
-          sort_key: '100',
-          title: 'SPA (Form)',
-          status: 'FORM_FINAL',
-        }],
+        documents: {
+          'doc-spa-form-v4': { document_id: 'doc-spa-form-v4', title: 'SPA (Form)' },
+        },
+        checklist_entries: {
+          'entry-spa-form-v4': {
+            entry_id: 'entry-spa-form-v4',
+            document_id: 'doc-spa-form-v4',
+            stage: 'SIGNING',
+            sort_key: '100',
+            title: 'SPA (Form)',
+            status: 'FORM_FINAL',
+          },
+        },
       },
     );
 
@@ -169,13 +173,15 @@ describe('ClosingChecklistSchema v2', () => {
       ClosingChecklistSchema,
       {
         ...minimal,
-        checklist_entries: [{
-          entry_id: 'entry-order-good-standing',
-          stage: 'PRE_SIGNING',
-          sort_key: '020',
-          title: 'Order Delaware good standing certificate',
-          status: 'NOT_STARTED',
-        }],
+        checklist_entries: {
+          'entry-order-good-standing': {
+            entry_id: 'entry-order-good-standing',
+            stage: 'PRE_SIGNING',
+            sort_key: '020',
+            title: 'Order Delaware good standing certificate',
+            status: 'NOT_STARTED',
+          },
+        },
       },
     );
 
@@ -190,15 +196,19 @@ describe('ClosingChecklistSchema v2', () => {
       ClosingChecklistSchema,
       {
         ...minimal,
-        documents: [{ document_id: 'doc-1', title: 'SPA' }],
-        checklist_entries: [{
-          entry_id: 'entry-1',
-          document_id: 'doc-404',
-          stage: 'SIGNING',
-          sort_key: '100',
-          title: 'SPA',
-          status: 'FORM_FINAL',
-        }],
+        documents: {
+          'doc-1': { document_id: 'doc-1', title: 'SPA' },
+        },
+        checklist_entries: {
+          'entry-1': {
+            entry_id: 'entry-1',
+            document_id: 'doc-404',
+            stage: 'SIGNING',
+            sort_key: '100',
+            title: 'SPA',
+            status: 'FORM_FINAL',
+          },
+        },
       },
     );
 
@@ -213,9 +223,11 @@ describe('ClosingChecklistSchema v2', () => {
       ClosingChecklistSchema,
       {
         ...minimal,
-        documents: [{ document_id: 'doc-1', title: 'Escrow Agreement' }],
-        checklist_entries: [
-          {
+        documents: {
+          'doc-1': { document_id: 'doc-1', title: 'Escrow Agreement' },
+        },
+        checklist_entries: {
+          'entry-1': {
             entry_id: 'entry-1',
             document_id: 'doc-1',
             stage: 'SIGNING',
@@ -223,7 +235,7 @@ describe('ClosingChecklistSchema v2', () => {
             title: 'Escrow Agreement (Form)',
             status: 'FORM_FINAL',
           },
-          {
+          'entry-2': {
             entry_id: 'entry-2',
             document_id: 'doc-1',
             stage: 'CLOSING',
@@ -231,7 +243,7 @@ describe('ClosingChecklistSchema v2', () => {
             title: 'Escrow Agreement (Executed)',
             status: 'FULLY_EXECUTED',
           },
-        ],
+        },
       },
     );
 
@@ -246,15 +258,15 @@ describe('ClosingChecklistSchema v2', () => {
       ClosingChecklistSchema,
       {
         ...minimal,
-        checklist_entries: [
-          {
+        checklist_entries: {
+          'entry-parent': {
             entry_id: 'entry-parent',
             stage: 'SIGNING',
             sort_key: '100',
             title: 'Parent',
             status: 'FORM_FINAL',
           },
-          {
+          'entry-child': {
             entry_id: 'entry-child',
             parent_entry_id: 'entry-parent',
             stage: 'CLOSING',
@@ -262,7 +274,7 @@ describe('ClosingChecklistSchema v2', () => {
             title: 'Child',
             status: 'NOT_STARTED',
           },
-        ],
+        },
       },
     );
 
@@ -277,13 +289,17 @@ describe('ClosingChecklistSchema v2', () => {
       ClosingChecklistSchema,
       {
         ...minimal,
-        documents: [{ document_id: 'doc-1', title: 'SPA' }],
-        action_items: [{
-          action_id: 'act-1',
-          description: 'Do thing',
-          status: 'IN_PROGRESS',
-          related_document_ids: ['doc-2'],
-        }],
+        documents: {
+          'doc-1': { document_id: 'doc-1', title: 'SPA' },
+        },
+        action_items: {
+          'act-1': {
+            action_id: 'act-1',
+            description: 'Do thing',
+            status: 'IN_PROGRESS',
+            related_document_ids: ['doc-2'],
+          },
+        },
       },
     );
 
@@ -298,13 +314,17 @@ describe('ClosingChecklistSchema v2', () => {
       ClosingChecklistSchema,
       {
         ...minimal,
-        documents: [{ document_id: 'doc-1', title: 'SPA' }],
-        issues: [{
-          issue_id: 'iss-1',
-          title: 'Issue',
-          status: 'OPEN',
-          related_document_ids: ['doc-2'],
-        }],
+        documents: {
+          'doc-1': { document_id: 'doc-1', title: 'SPA' },
+        },
+        issues: {
+          'iss-1': {
+            issue_id: 'iss-1',
+            title: 'Issue',
+            status: 'OPEN',
+            related_document_ids: ['doc-2'],
+          },
+        },
       },
     );
 
@@ -472,23 +492,29 @@ describe('ClosingChecklistSchema v2', () => {
       ClosingChecklistSchema,
       {
         ...minimal,
-        documents: [{ document_id: 'doc-1', title: 'Escrow Agreement' }],
-        checklist_entries: [{
-          entry_id: 'entry-1',
-          document_id: 'doc-1',
-          stage: 'CLOSING',
-          sort_key: '100',
-          title: 'Escrow Agreement',
-          status: 'PARTIALLY_SIGNED',
-          citations: [{ text: "Opposing counsel replied 'I agree'" }],
-        }],
-        issues: [{
-          issue_id: 'iss-1',
-          title: 'Escrow issue',
-          status: 'OPEN',
-          related_document_ids: ['doc-1'],
-          citations: [{ text: 'Email confirmation', filepath: '/tmp/email.eml' }],
-        }],
+        documents: {
+          'doc-1': { document_id: 'doc-1', title: 'Escrow Agreement' },
+        },
+        checklist_entries: {
+          'entry-1': {
+            entry_id: 'entry-1',
+            document_id: 'doc-1',
+            stage: 'CLOSING',
+            sort_key: '100',
+            title: 'Escrow Agreement',
+            status: 'PARTIALLY_SIGNED',
+            citations: [{ text: "Opposing counsel replied 'I agree'" }],
+          },
+        },
+        issues: {
+          'iss-1': {
+            issue_id: 'iss-1',
+            title: 'Escrow issue',
+            status: 'OPEN',
+            related_document_ids: ['doc-1'],
+            citations: [{ text: 'Email confirmation', filepath: '/tmp/email.eml' }],
+          },
+        },
       },
     );
 
@@ -503,18 +529,78 @@ describe('ClosingChecklistSchema v2', () => {
       ClosingChecklistSchema,
       {
         ...minimal,
-        documents: [],
+        documents: {},
+
         // Legacy shape used flat entries without stable IDs and stage/sort keys.
-        checklist_entries: [
-          {
+        checklist_entries: {
+          'bad-entry': {
             title: 'Legacy checklist row only',
             status: 'OPEN',
           },
-        ],
+        },
       },
     );
 
     await allureStep('Then legacy flat payload is rejected', async () => {
+      expect(result.success).toBe(false);
+    });
+  });
+
+  it('rejects record key that does not match item ID', async () => {
+    const result = await safeParseWithEvidence(
+      'key-mismatch document payload',
+      ClosingChecklistSchema,
+      {
+        ...minimal,
+        documents: {
+          'wrong-key': { document_id: 'doc-1', title: 'SPA' },
+        },
+      },
+    );
+
+    await allureStep('Then mismatched record key is rejected', async () => {
+      expect(result.success).toBe(false);
+    });
+  });
+
+  it('handles z.record edge cases (undefined and null input)', async () => {
+    const undefinedDocs = await safeParseWithEvidence(
+      'checklist with undefined documents',
+      ClosingChecklistSchema,
+      { ...minimal, documents: undefined },
+    );
+
+    const nullDocs = await safeParseWithEvidence(
+      'checklist with null documents',
+      ClosingChecklistSchema,
+      { ...minimal, documents: null },
+    );
+
+    await allureStep('Then undefined documents defaults to empty record', async () => {
+      expect(undefinedDocs.success).toBe(true);
+    });
+
+    await allureStep('And null documents is rejected', async () => {
+      expect(nullDocs.success).toBe(false);
+    });
+  });
+
+  it('rejects dangerous keys in record collections', async () => {
+    // Note: __proto__ is already stripped by Zod's z.record() parser (it never reaches superRefine).
+    // The patch validator (DANGEROUS_KEYS) blocks __proto__ in JSON Pointer paths separately.
+    // Here we test constructor/prototype which DO pass through Zod and must be caught by superRefine.
+    const result = await safeParseWithEvidence(
+      'dangerous key in documents',
+      ClosingChecklistSchema,
+      {
+        ...minimal,
+        documents: {
+          'constructor': { document_id: 'constructor', title: 'Polluted' },
+        },
+      },
+    );
+
+    await allureStep('Then dangerous key constructor is rejected', async () => {
       expect(result.success).toBe(false);
     });
   });
