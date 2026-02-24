@@ -5,10 +5,12 @@
  *
  * Inputs:
  *   - OpenSpec traceability matrix (from validate_openspec_coverage.mjs --write-matrix)
- *   - Allure test results (allure-results/*-result.json)
  *
  * Output:
  *   - site/trust/system-card.md (Eleventy page with frontmatter)
+ *
+ * The system card contains only deterministic data (OpenSpec traceability).
+ * Allure test run data is served by the live report at tests.openagreements.ai.
  *
  * Usage:
  *   node scripts/generate_system_card.mjs
@@ -30,7 +32,6 @@ const TRACEABILITY_PATH = path.join(
   "integration-tests",
   "OPENSPEC_TRACEABILITY.md",
 );
-const ALLURE_RESULTS_DIR = path.join(REPO_ROOT, "allure-results");
 
 function parseArgs() {
   const args = process.argv.slice(2);
@@ -102,79 +103,9 @@ function parseMatrixMarkdown(markdown) {
   };
 }
 
-/**
- * Parse allure-results/*-result.json files into a summary.
- */
-async function parseAllureResults(dirPath) {
-  let entries;
-  try {
-    entries = await fs.readdir(dirPath, { withFileTypes: true });
-  } catch {
-    return {
-      available: false,
-      total: 0,
-      latestStop: null,
-      statusCounts: {},
-    };
-  }
-
-  const resultFiles = entries
-    .filter((e) => e.isFile() && e.name.endsWith("-result.json"))
-    .map((e) => path.join(dirPath, e.name));
-
-  const statusCounts = new Map();
-  let latestStop = null;
-
-  for (const filePath of resultFiles) {
-    try {
-      const raw = await fs.readFile(filePath, "utf-8");
-      const parsed = JSON.parse(raw);
-      const status = String(parsed.status ?? "unknown");
-      statusCounts.set(status, (statusCounts.get(status) ?? 0) + 1);
-
-      if (typeof parsed.stop === "number") {
-        latestStop =
-          latestStop == null ? parsed.stop : Math.max(latestStop, parsed.stop);
-      }
-    } catch {
-      statusCounts.set("unknown", (statusCounts.get("unknown") ?? 0) + 1);
-    }
-  }
-
-  return {
-    available: true,
-    total: resultFiles.length,
-    latestStop,
-    statusCounts: Object.fromEntries(
-      [...statusCounts.entries()].sort(([a], [b]) => a.localeCompare(b)),
-    ),
-  };
-}
-
-function utcTimestamp(value) {
-  if (value == null) return "n/a";
-  return new Date(value).toISOString().replace(".000", "");
-}
-
 function pct(covered, total) {
   if (!total) return "0.0%";
   return `${((covered / total) * 100).toFixed(1)}%`;
-}
-
-function commaFmt(n) {
-  return n.toLocaleString("en-US");
-}
-
-function statusCount(counts, key) {
-  return counts[key] ?? 0;
-}
-
-function nonPassingCount(counts) {
-  return (
-    statusCount(counts, "failed") +
-    statusCount(counts, "broken") +
-    statusCount(counts, "unknown")
-  );
 }
 
 function percentValue(num, denom) {
@@ -217,40 +148,15 @@ function chartRowHtml({ label, detail, percent }) {
   ].join("");
 }
 
-function reliabilityVerdict({ unmappedCount, nonPassingChecks }) {
-  if (unmappedCount === 0 && nonPassingChecks === 0) {
-    return "Strong signal in measured scope";
-  }
-  if (unmappedCount <= 2 && nonPassingChecks <= 2) {
-    return "Moderate signal; review caveats";
-  }
-  return "Needs attention before relying on this run";
-}
-
-function makeSystemCardMarkdown({ traceability, allure }) {
+function makeSystemCardMarkdown({ traceability }) {
   const mappingCoverage = percentValue(traceability.covered, traceability.total);
-  const totalNonPassing = nonPassingCount(allure.statusCounts);
-  const passRate = allure.total
-    ? percentValue(statusCount(allure.statusCounts, "passed"), allure.total)
-    : null;
+  const unmapped = traceability.missing + traceability.pending;
 
-  const conclusion = reliabilityVerdict({
-    unmappedCount: traceability.missing + traceability.pending,
-    nonPassingChecks: totalNonPassing,
+  const chartRow = chartRowHtml({
+    label: "OpenSpec scenario mapping",
+    detail: `${traceability.covered}/${traceability.total} scenarios`,
+    percent: mappingCoverage,
   });
-
-  const chartRows = [
-    chartRowHtml({
-      label: "OpenSpec scenario mapping",
-      detail: `${traceability.covered}/${traceability.total} scenarios`,
-      percent: mappingCoverage,
-    }),
-    chartRowHtml({
-      label: "Automated test pass rate",
-      detail: `${commaFmt(statusCount(allure.statusCounts, "passed"))} passing checks`,
-      percent: passRate,
-    }),
-  ];
 
   const lines = [];
   lines.push("---");
@@ -266,9 +172,17 @@ function makeSystemCardMarkdown({ traceability, allure }) {
   lines.push("## Executive Summary");
   lines.push("");
   lines.push('<div class="trust-summary-banner">');
-  lines.push(`<h2>${escapeHtml(conclusion)}</h2>`);
+  if (unmapped === 0) {
+    lines.push(
+      `<h2>All ${traceability.total} spec scenarios mapped to tests</h2>`,
+    );
+  } else {
+    lines.push(
+      `<h2>${traceability.covered} of ${traceability.total} spec scenarios mapped</h2>`,
+    );
+  }
   lines.push(
-    `<p>${escapeHtml(commaFmt(traceability.covered))} of ${escapeHtml(commaFmt(traceability.total))} spec scenarios are mapped to tests. ${escapeHtml(commaFmt(allure.total))} automated checks were recorded, with ${escapeHtml(commaFmt(totalNonPassing))} non-passing outcomes.</p>`,
+    `<p>${traceability.covered} of ${traceability.total} OpenSpec scenarios are mapped to automated tests across ${traceability.capabilities.length} capabilities.</p>`,
   );
   lines.push("</div>");
   lines.push("");
@@ -282,9 +196,7 @@ function makeSystemCardMarkdown({ traceability, allure }) {
   lines.push("## Visual Snapshot");
   lines.push("");
   lines.push('<div class="trust-chart">');
-  for (const row of chartRows) {
-    lines.push(row);
-  }
+  lines.push(chartRow);
   lines.push("</div>");
   lines.push("");
   lines.push("## Key Results");
@@ -301,9 +213,7 @@ function makeSystemCardMarkdown({ traceability, allure }) {
   lines.push("|---|---:|");
   lines.push(`| Spec scenarios | ${traceability.total} |`);
   lines.push(`| Mapped to tests | ${traceability.covered} |`);
-  lines.push(
-    `| Unmapped | ${traceability.missing + traceability.pending} |`,
-  );
+  lines.push(`| Unmapped | ${unmapped} |`);
   lines.push(
     `| Coverage | ${pct(traceability.covered, traceability.total)} |`,
   );
@@ -335,27 +245,15 @@ function makeSystemCardMarkdown({ traceability, allure }) {
     lines.push("");
   }
 
-  lines.push("### 2) Automated Test Run Status");
-  lines.push("");
-  lines.push(
-    "| Metric | Value |",
-  );
-  lines.push("|---|---:|");
-  lines.push(`| Recorded checks | ${commaFmt(allure.total)} |`);
-  lines.push(
-    `| Passing | ${commaFmt(statusCount(allure.statusCounts, "passed"))} |`,
-  );
-  lines.push(`| Non-passing | ${commaFmt(totalNonPassing)} |`);
-  lines.push(
-    `| Skipped | ${commaFmt(statusCount(allure.statusCounts, "skipped"))} |`,
-  );
-  lines.push("");
-  lines.push("### 3) External Signals");
+  lines.push("### 2) Live Signals");
   lines.push("");
   lines.push(
     "| Signal | Link |",
   );
   lines.push("|---|---|");
+  lines.push(
+    "| Allure test report | [tests.openagreements.ai](https://tests.openagreements.ai) |",
+  );
   lines.push(
     "| Code coverage (Codecov) | [![Coverage](https://img.shields.io/codecov/c/github/open-agreements/open-agreements/main)](https://app.codecov.io/gh/open-agreements/open-agreements) |",
   );
@@ -372,7 +270,7 @@ function makeSystemCardMarkdown({ traceability, allure }) {
     "- A high mapping percentage means each spec scenario is represented by at least one test.",
   );
   lines.push(
-    "- A high pass rate means recent automated runs did not surface failures in the current result set.",
+    "- Live test run data (pass rates, failure details) is available in the [Allure report](https://tests.openagreements.ai).",
   );
   lines.push(
     "- Both signals should be read together, along with known limitations below.",
@@ -384,9 +282,6 @@ function makeSystemCardMarkdown({ traceability, allure }) {
   lines.push(
     "- Mapping coverage can be 100% and defects can still exist.",
   );
-  lines.push(
-    "- Run-status counts depend on the current contents of the allure-results directory; stale results should be cleaned before release reporting.",
-  );
   lines.push("");
   lines.push("## Appendix: Methods (Technical)");
   lines.push("");
@@ -394,7 +289,7 @@ function makeSystemCardMarkdown({ traceability, allure }) {
     "- Mapping numbers are read from the generated OpenSpec traceability matrix.",
   );
   lines.push(
-    "- Run-status numbers are read from `allure-results/*-result.json` files.",
+    "- Live test data is published to GitHub Pages on every push to main.",
   );
   lines.push(
     "- This page is regenerated by running `npm run generate:system-card`.",
@@ -443,9 +338,8 @@ async function main() {
   }
 
   const traceability = parseMatrixMarkdown(matrixRaw);
-  const allure = await parseAllureResults(ALLURE_RESULTS_DIR);
 
-  const systemCard = makeSystemCardMarkdown({ traceability, allure });
+  const systemCard = makeSystemCardMarkdown({ traceability });
 
   await ensureDir(outputPath);
   await fs.writeFile(outputPath, systemCard, "utf-8");

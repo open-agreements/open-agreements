@@ -108,9 +108,6 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Run tests to populate allure-results
-        run: npx vitest run
-
       - name: Verify system card and template evidence are up to date
         run: npm run trust:check
 
