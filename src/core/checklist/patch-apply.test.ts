@@ -3,10 +3,13 @@ import {
   allureJsonAttachment,
   allurePrettyJsonAttachment,
   allureStep,
-  allureWordLikeMarkdownAttachment,
-  allureWordLikeMarkdownDiffAttachment,
   itAllure,
 } from '../../../integration-tests/helpers/allure-test.js';
+import {
+  renderChecklistDocx,
+  attachChecklistDocxPreview,
+  attachChecklistRedline,
+} from '../../../integration-tests/helpers/docx-evidence.js';
 import { setChecklistPatchValidationStore, validateChecklistPatch } from './patch-validator.js';
 import {
   applyChecklistPatch,
@@ -14,7 +17,6 @@ import {
   setChecklistAppliedPatchStore,
   setChecklistProposedPatchStore,
 } from './patch-apply.js';
-import { renderChecklistMarkdown } from './index.js';
 
 const it = itAllure.epic('Compliance & Governance').withLabels({ feature: 'Checklist Patch Apply' });
 
@@ -39,9 +41,10 @@ async function validateWithEvidence(
   await allureStep(`Given ${label} validation input`, async () => {
     await allurePrettyJsonAttachment(`${slug}-validation-input-pretty.html`, input);
     await allureJsonAttachment(`${slug}-validation-input.json`, input);
-    await allureWordLikeMarkdownAttachment(
+    const docx = await renderChecklistDocx(input.checklist);
+    await attachChecklistDocxPreview(
       `${slug}-checklist-before-validation-word-like.html`,
-      renderChecklistMarkdown(input.checklist),
+      docx,
       { title: 'Checklist before patch validation' },
     );
   });
@@ -64,9 +67,10 @@ async function applyWithEvidence(
   await allureStep(`Given ${label} apply input`, async () => {
     await allurePrettyJsonAttachment(`${slug}-apply-input-pretty.html`, input);
     await allureJsonAttachment(`${slug}-apply-input.json`, input);
-    await allureWordLikeMarkdownAttachment(
+    const docx = await renderChecklistDocx(input.checklist);
+    await attachChecklistDocxPreview(
       `${slug}-checklist-before-apply-word-like.html`,
-      renderChecklistMarkdown(input.checklist),
+      docx,
       { title: 'Checklist before patch apply' },
     );
   });
@@ -78,17 +82,17 @@ async function applyWithEvidence(
   await allurePrettyJsonAttachment(`${slug}-apply-result-pretty.html`, result);
   await allureJsonAttachment(`${slug}-apply-result.json`, result);
   if (result.ok) {
-    const beforeMarkdown = renderChecklistMarkdown(input.checklist);
-    const afterMarkdown = renderChecklistMarkdown(result.checklist);
-    await allureWordLikeMarkdownAttachment(
+    const beforeDocx = await renderChecklistDocx(input.checklist);
+    const afterDocx = await renderChecklistDocx(result.checklist);
+    await attachChecklistDocxPreview(
       `${slug}-checklist-after-apply-word-like.html`,
-      afterMarkdown,
+      afterDocx,
       { title: 'Checklist after patch apply' },
     );
-    await allureWordLikeMarkdownDiffAttachment(
+    await attachChecklistRedline(
       `${slug}-checklist-redline-word-like.html`,
-      beforeMarkdown,
-      afterMarkdown,
+      beforeDocx,
+      afterDocx,
       { title: 'Checklist redline (before \u2192 after)' },
     );
   }

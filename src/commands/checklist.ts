@@ -15,18 +15,12 @@ import {
   type ChecklistPatchValidationStore,
   type ChecklistProposedPatchRecord,
   type ChecklistProposedPatchStore,
-  renderChecklistMarkdown,
   validateChecklistPatch,
 } from '../core/checklist/index.js';
 import { fillTemplate } from '../core/engine.js';
 import { findTemplateDir } from '../utils/paths.js';
 
 export interface ChecklistCreateArgs {
-  data: string;
-  output?: string;
-}
-
-export interface ChecklistRenderArgs {
   data: string;
   output?: string;
 }
@@ -188,25 +182,6 @@ export async function runChecklistCreate(args: ChecklistCreateArgs): Promise<voi
     console.log(`Checklist entries: ${c.checklist_entries.length}`);
     console.log(`Action items: ${c.action_items.length}`);
     console.log(`Issues: ${c.issues.length}`);
-  } catch (err) {
-    console.error(`Error: ${(err as Error).message}`);
-    process.exit(1);
-  }
-}
-
-export async function runChecklistRender(args: ChecklistRenderArgs): Promise<void> {
-  const raw = JSON.parse(readFileSync(args.data, 'utf-8'));
-  const outputPath = args.output ? resolve(args.output) : undefined;
-
-  try {
-    const markdown = renderChecklistMarkdown(raw);
-
-    if (outputPath) {
-      await writeFile(outputPath, `${markdown}\n`, 'utf-8');
-      console.log(`Markdown written to: ${outputPath}`);
-    } else {
-      console.log(markdown);
-    }
   } catch (err) {
     console.error(`Error: ${(err as Error).message}`);
     process.exit(1);

@@ -3,13 +3,16 @@ import {
   allureJsonAttachment,
   allurePrettyJsonAttachment,
   allureStep,
-  allureWordLikeMarkdownAttachment,
-  allureWordLikeMarkdownDiffAttachment,
   itAllure,
 } from './helpers/allure-test.js';
 import {
+  renderChecklistDocx,
+  attachChecklistDocxPreview,
+  attachChecklistRedline,
+  docxToHtml,
+} from './helpers/docx-evidence.js';
+import {
   applyChecklistPatch,
-  renderChecklistMarkdown,
   setChecklistAppliedPatchStore,
   setChecklistPatchValidationStore,
   setChecklistProposedPatchStore,
@@ -39,9 +42,10 @@ async function validateWithEvidence(
   await allureStep(`Given ${label} validation input`, async () => {
     await allurePrettyJsonAttachment(`${slug}-validation-input-pretty.html`, input);
     await allureJsonAttachment(`${slug}-validation-input.json`, input);
-    await allureWordLikeMarkdownAttachment(
+    const docx = await renderChecklistDocx(input.checklist);
+    await attachChecklistDocxPreview(
       `${slug}-checklist-before-validation-word-like.html`,
-      renderChecklistMarkdown(input.checklist),
+      docx,
       { title: 'Checklist before patch validation' },
     );
   });
@@ -64,9 +68,10 @@ async function applyWithEvidence(
   await allureStep(`Given ${label} apply input`, async () => {
     await allurePrettyJsonAttachment(`${slug}-apply-input-pretty.html`, input);
     await allureJsonAttachment(`${slug}-apply-input.json`, input);
-    await allureWordLikeMarkdownAttachment(
+    const docx = await renderChecklistDocx(input.checklist);
+    await attachChecklistDocxPreview(
       `${slug}-checklist-before-apply-word-like.html`,
-      renderChecklistMarkdown(input.checklist),
+      docx,
       { title: 'Checklist before patch apply' },
     );
   });
@@ -78,17 +83,17 @@ async function applyWithEvidence(
   await allurePrettyJsonAttachment(`${slug}-apply-result-pretty.html`, result);
   await allureJsonAttachment(`${slug}-apply-result.json`, result);
   if (result.ok) {
-    const beforeMarkdown = renderChecklistMarkdown(input.checklist);
-    const afterMarkdown = renderChecklistMarkdown(result.checklist);
-    await allureWordLikeMarkdownAttachment(
+    const beforeDocx = await renderChecklistDocx(input.checklist);
+    const afterDocx = await renderChecklistDocx(result.checklist);
+    await attachChecklistDocxPreview(
       `${slug}-checklist-after-apply-word-like.html`,
-      afterMarkdown,
+      afterDocx,
       { title: 'Checklist after patch apply' },
     );
-    await allureWordLikeMarkdownDiffAttachment(
+    await attachChecklistRedline(
       `${slug}-checklist-redline-word-like.html`,
-      beforeMarkdown,
-      afterMarkdown,
+      beforeDocx,
+      afterDocx,
       { title: 'Checklist redline (before \u2192 after)' },
     );
   }
@@ -414,14 +419,15 @@ describe('checklist patch workflow (integration)', () => {
       throw new Error('Expected apply to succeed for multi-operation source event patch.');
     }
 
-    const markdown = await allureStep('When checklist markdown is rendered after apply', async () =>
-      renderChecklistMarkdown(applied.checklist)
+    const afterDocx = await allureStep('When checklist DOCX is rendered after apply', async () =>
+      renderChecklistDocx(applied.checklist)
     );
-    await allureJsonAttachment('multi-operation-rendered-markdown-evidence.json', { markdown });
+    const html = docxToHtml(afterDocx);
+    await allureJsonAttachment('multi-operation-rendered-html-evidence.json', { html });
 
-    await allureStep('Then rendered markdown includes evidence text and filepath', async () => {
-      expect(markdown).toContain('Evidence: Opposing counsel replied');
-      expect(markdown).toContain('escrow-thread.eml');
+    await allureStep('Then rendered DOCX includes evidence text and filepath', async () => {
+      expect(html).toContain('Opposing counsel replied');
+      expect(html).toContain('escrow-thread.eml');
     });
   });
 });

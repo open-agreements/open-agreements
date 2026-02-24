@@ -1,6 +1,6 @@
 import { describe, expect } from 'vitest';
 import { itAllure } from '../../../integration-tests/helpers/allure-test.js';
-import { buildChecklistTemplateContext, renderChecklistMarkdown } from './index.js';
+import { buildChecklistTemplateContext } from './index.js';
 
 const it = itAllure.epic('Compliance & Governance').withLabels({ feature: 'Checklist Rendering v2' });
 
@@ -87,7 +87,7 @@ describe('checklist render model traceability', () => {
   it.openspec(['OA-095', 'OA-096'])(
     'renders named pending signatories and signature artifact locations for partially signed documents',
     () => {
-      const markdown = renderChecklistMarkdown({
+      const context = buildChecklistTemplateContext({
         deal_name: 'Atlas Series A',
         updated_at: '2026-02-23',
         documents: [{ document_id: 'doc-escrow', title: 'Escrow Agreement (Executed)' }],
@@ -119,9 +119,13 @@ describe('checklist render model traceability', () => {
         issues: [],
       });
 
-      expect(markdown).toContain('M. Kent [PENDING]');
-      expect(markdown).toContain('A. Lee [RECEIVED]');
-      expect(markdown).toContain('https://drive.example.com/buyer-signature.pdf');
+      const escrowRow = context.documents.find((row) => row.document_name.includes('Escrow Agreement'));
+      expect(escrowRow).toBeTruthy();
+      expect(escrowRow!.status).toContain('M. Kent');
+      expect(escrowRow!.status).toContain('PENDING');
+      expect(escrowRow!.status).toContain('A. Lee');
+      expect(escrowRow!.status).toContain('RECEIVED');
+      expect(escrowRow!.status).toContain('https://drive.example.com/buyer-signature.pdf');
     },
   );
 

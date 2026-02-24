@@ -322,60 +322,6 @@ export async function allureWordLikeTextAttachment(name, content, options) {
   }
 }
 
-export function buildWordLikeMarkdownHtml(markdown, title) {
-  const escaped = escapeForHtml(markdown);
-  return buildHtmlAttachment([
-    '<section class="doc-panel">',
-    title ? `<h2 class="doc-title">${escapeForHtml(title)}</h2>` : '',
-    `<pre class="doc-text" style="white-space:pre-wrap;font-family:Georgia,'Times New Roman',serif;font-size:15px;line-height:1.6;">${escaped}</pre>`,
-    '</section>',
-  ].join(''));
-}
-
-export function buildWordLikeMarkdownDiffHtml(before, after, title) {
-  const beforeLines = before.split('\n');
-  const afterLines = after.split('\n');
-  const diffParts = [];
-  const maxLen = Math.max(beforeLines.length, afterLines.length);
-
-  for (let i = 0; i < maxLen; i++) {
-    const bLine = i < beforeLines.length ? beforeLines[i] : undefined;
-    const aLine = i < afterLines.length ? afterLines[i] : undefined;
-
-    if (bLine === aLine) {
-      diffParts.push(escapeForHtml(aLine));
-    } else if (bLine !== undefined && aLine !== undefined) {
-      diffParts.push(`<span class="doc-del">${escapeForHtml(bLine)}</span>`);
-      diffParts.push(`<span class="doc-ins">${escapeForHtml(aLine)}</span>`);
-    } else if (bLine !== undefined) {
-      diffParts.push(`<span class="doc-del">${escapeForHtml(bLine)}</span>`);
-    } else {
-      diffParts.push(`<span class="doc-ins">${escapeForHtml(aLine)}</span>`);
-    }
-  }
-
-  return buildHtmlAttachment([
-    '<section class="doc-panel">',
-    title ? `<h2 class="doc-title">${escapeForHtml(title)}</h2>` : '',
-    `<pre class="doc-text" style="white-space:pre-wrap;font-family:Georgia,'Times New Roman',serif;font-size:15px;line-height:1.6;">${diffParts.join('\n')}</pre>`,
-    '</section>',
-  ].join(''));
-}
-
-export async function allureWordLikeMarkdownAttachment(name, markdown, options) {
-  const runtime = getAllureRuntime();
-  if (runtime && typeof runtime.attachment === 'function') {
-    await runtime.attachment(name, buildWordLikeMarkdownHtml(markdown, options?.title), HTML_CONTENT_TYPE);
-  }
-}
-
-export async function allureWordLikeMarkdownDiffAttachment(name, before, after, options) {
-  const runtime = getAllureRuntime();
-  if (runtime && typeof runtime.attachment === 'function') {
-    await runtime.attachment(name, buildWordLikeMarkdownDiffHtml(before, after, options?.title), HTML_CONTENT_TYPE);
-  }
-}
-
 export async function allureFileAttachment(name, filePath, contentType = 'application/octet-stream') {
   const runtime = getAllureRuntime();
   if (runtime && typeof runtime.attachment === 'function') {

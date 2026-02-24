@@ -9,7 +9,6 @@ import { runRecipeCommand, runRecipeClean, runRecipePatch } from '../commands/re
 import { runScan } from '../commands/scan.js';
 import {
   runChecklistCreate,
-  runChecklistRender,
   runChecklistPatchValidate,
   runChecklistPatchApply,
 } from '../commands/checklist.js';
@@ -166,15 +165,6 @@ export function createProgram(): Command {
     .option('-o, --output <path>', 'Output file path (default: closing-checklist.docx)')
     .action(async (opts: { data: string; output?: string }) => {
       await runChecklistCreate({ data: opts.data, output: opts.output });
-    });
-
-  checklistCmd
-    .command('render')
-    .description('Render a closing checklist as Markdown from JSON data')
-    .requiredOption('-d, --data <json-file>', 'JSON file with checklist data')
-    .option('-o, --output <path>', 'Output Markdown file path (prints to stdout if omitted)')
-    .action(async (opts: { data: string; output?: string }) => {
-      await runChecklistRender({ data: opts.data, output: opts.output });
     });
 
   checklistCmd

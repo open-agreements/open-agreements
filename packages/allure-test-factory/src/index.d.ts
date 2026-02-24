@@ -228,19 +228,6 @@ export function allureWordLikeTextAttachment(
   content: string,
   options?: { title?: string },
 ): Promise<void>;
-export function buildWordLikeMarkdownHtml(markdown: string, title?: string): string;
-export function buildWordLikeMarkdownDiffHtml(before: string, after: string, title?: string): string;
-export function allureWordLikeMarkdownAttachment(
-  name: string,
-  markdown: string,
-  options?: { title?: string },
-): Promise<void>;
-export function allureWordLikeMarkdownDiffAttachment(
-  name: string,
-  before: string,
-  after: string,
-  options?: { title?: string },
-): Promise<void>;
 export function allureFileAttachment(
   name: string,
   filePath: string,
