@@ -1,5 +1,4 @@
 {
-  "generated_at_utc": "2026-02-23T20:08:55.224Z",
   "total_templates": 41,
   "validated_count": 7,
   "not_covered_count": 27,
@@ -16,7 +15,6 @@
       "requiredFields": 8,
       "totalFields": 8,
       "validation_status": "validated",
-      "last_validation_at": "2026-02-23T19:47:38.152Z",
       "validation_source": "allure-template-suite",
       "hasPreview": false
     },
@@ -31,7 +29,6 @@
       "requiredFields": 7,
       "totalFields": 8,
       "validation_status": "validated",
-      "last_validation_at": "2026-02-23T19:47:38.140Z",
       "validation_source": "allure-template-suite",
       "hasPreview": false
     },
@@ -46,7 +43,6 @@
       "requiredFields": 0,
       "totalFields": 12,
       "validation_status": "validated",
-      "last_validation_at": "2026-02-23T19:47:38.146Z",
       "validation_source": "allure-template-suite",
       "hasPreview": true
     },
@@ -61,7 +57,6 @@
       "requiredFields": 0,
       "totalFields": 11,
       "validation_status": "validated",
-      "last_validation_at": "2026-02-23T19:47:38.151Z",
       "validation_source": "allure-template-suite",
       "hasPreview": true
     },
@@ -76,7 +71,6 @@
       "requiredFields": 0,
       "totalFields": 14,
       "validation_status": "validated",
-      "last_validation_at": "2026-02-23T19:47:38.154Z",
       "validation_source": "allure-template-suite",
       "hasPreview": true
     },
@@ -91,7 +85,6 @@
       "requiredFields": 7,
       "totalFields": 7,
       "validation_status": "validated",
-      "last_validation_at": "2026-02-23T19:47:35.791Z",
       "validation_source": "allure-template-suite",
       "hasPreview": false
     },
@@ -106,7 +99,6 @@
       "requiredFields": 10,
       "totalFields": 10,
       "validation_status": "validated",
-      "last_validation_at": "2026-02-23T19:47:35.201Z",
       "validation_source": "allure-template-suite",
       "hasPreview": false
     },
@@ -121,22 +113,20 @@
       "requiredFields": 5,
       "totalFields": 6,
       "validation_status": "not_covered",
-      "last_validation_at": null,
       "validation_source": "none",
       "hasPreview": false
     },
     {
       "id": "closing-checklist",
       "displayName": "Closing Checklist",
-      "sourceLabel": "Unknown",
-      "sourceUrl": "#",
+      "sourceLabel": "OpenAgreements",
+      "sourceUrl": "https://openagreements.ai",
       "license": "CC0-1.0",
       "distributable": true,
       "fillable": true,
       "requiredFields": 2,
       "totalFields": 8,
       "validation_status": "not_covered",
-      "last_validation_at": null,
       "validation_source": "none",
       "hasPreview": true
     },
@@ -151,7 +141,6 @@
       "requiredFields": 2,
       "totalFields": 4,
       "validation_status": "not_covered",
-      "last_validation_at": null,
       "validation_source": "none",
       "hasPreview": false
     },
@@ -166,7 +155,6 @@
       "requiredFields": 0,
       "totalFields": 2,
       "validation_status": "not_covered",
-      "last_validation_at": null,
       "validation_source": "none",
       "hasPreview": false
     },
@@ -181,7 +169,6 @@
       "requiredFields": 8,
       "totalFields": 8,
       "validation_status": "not_covered",
-      "last_validation_at": null,
       "validation_source": "none",
       "hasPreview": false
     },
@@ -196,7 +183,6 @@
       "requiredFields": 3,
       "totalFields": 10,
       "validation_status": "not_covered",
-      "last_validation_at": null,
       "validation_source": "none",
       "hasPreview": false
     },
@@ -211,7 +197,6 @@
       "requiredFields": 9,
       "totalFields": 74,
       "validation_status": "not_covered",
-      "last_validation_at": null,
       "validation_source": "none",
       "hasPreview": false
     },
@@ -226,7 +211,6 @@
       "requiredFields": 4,
       "totalFields": 14,
       "validation_status": "not_covered",
-      "last_validation_at": null,
       "validation_source": "none",
       "hasPreview": false
     },
@@ -241,7 +225,6 @@
       "requiredFields": 8,
       "totalFields": 30,
       "validation_status": "not_covered",
-      "last_validation_at": null,
       "validation_source": "none",
       "hasPreview": false
     },
@@ -256,7 +239,6 @@
       "requiredFields": 8,
       "totalFields": 34,
       "validation_status": "not_covered",
-      "last_validation_at": null,
       "validation_source": "none",
       "hasPreview": false
     },
@@ -271,7 +253,6 @@
       "requiredFields": 8,
       "totalFields": 28,
       "validation_status": "not_covered",
-      "last_validation_at": null,
       "validation_source": "none",
       "hasPreview": false
     },
@@ -286,7 +267,6 @@
       "requiredFields": 9,
       "totalFields": 27,
       "validation_status": "not_covered",
-      "last_validation_at": null,
       "validation_source": "none",
       "hasPreview": false
     },
@@ -301,7 +281,6 @@
       "requiredFields": 4,
       "totalFields": 10,
       "validation_status": "not_covered",
-      "last_validation_at": null,
       "validation_source": "none",
       "hasPreview": false
     },
@@ -316,7 +295,6 @@
       "requiredFields": 8,
       "totalFields": 8,
       "validation_status": "not_covered",
-      "last_validation_at": null,
       "validation_source": "none",
       "hasPreview": false
     },
@@ -331,7 +309,6 @@
       "requiredFields": 5,
       "totalFields": 6,
       "validation_status": "not_covered",
-      "last_validation_at": null,
       "validation_source": "none",
       "hasPreview": false
     },
@@ -346,7 +323,6 @@
       "requiredFields": 7,
       "totalFields": 8,
       "validation_status": "not_covered",
-      "last_validation_at": null,
       "validation_source": "none",
       "hasPreview": false
     },
@@ -361,7 +337,6 @@
       "requiredFields": 6,
       "totalFields": 17,
       "validation_status": "not_covered",
-      "last_validation_at": null,
       "validation_source": "none",
       "hasPreview": false
     },
@@ -376,7 +351,6 @@
       "requiredFields": 6,
       "totalFields": 23,
       "validation_status": "not_covered",
-      "last_validation_at": null,
       "validation_source": "none",
       "hasPreview": false
     },
@@ -391,7 +365,6 @@
       "requiredFields": 3,
       "totalFields": 15,
       "validation_status": "not_covered",
-      "last_validation_at": null,
       "validation_source": "none",
       "hasPreview": false
     },
@@ -406,7 +379,6 @@
       "requiredFields": 5,
       "totalFields": 19,
       "validation_status": "not_covered",
-      "last_validation_at": null,
       "validation_source": "none",
       "hasPreview": false
     },
@@ -421,7 +393,6 @@
       "requiredFields": 8,
       "totalFields": 25,
       "validation_status": "not_covered",
-      "last_validation_at": null,
       "validation_source": "none",
       "hasPreview": false
     },
@@ -436,7 +407,6 @@
       "requiredFields": 0,
       "totalFields": 0,
       "validation_status": "not_covered",
-      "last_validation_at": null,
       "validation_source": "none",
       "hasPreview": false
     },
@@ -451,7 +421,6 @@
       "requiredFields": 6,
       "totalFields": 13,
       "validation_status": "not_covered",
-      "last_validation_at": null,
       "validation_source": "none",
       "hasPreview": false
     },
@@ -466,24 +435,22 @@
       "requiredFields": 3,
       "totalFields": 3,
       "validation_status": "not_covered",
-      "last_validation_at": null,
       "validation_source": "none",
       "hasPreview": false
     },
     {
       "id": "working-group-list",
       "displayName": "Working Group List",
-      "sourceLabel": "Unknown",
-      "sourceUrl": "#",
+      "sourceLabel": "OpenAgreements",
+      "sourceUrl": "https://openagreements.ai",
       "license": "CC0-1.0",
       "distributable": true,
       "fillable": true,
       "requiredFields": 1,
       "totalFields": 3,
       "validation_status": "not_covered",
-      "last_validation_at": null,
       "validation_source": "none",
-      "hasPreview": false
+      "hasPreview": true
     },
     {
       "id": "yc-safe-discount",
@@ -496,7 +463,6 @@
       "requiredFields": 11,
       "totalFields": 11,
       "validation_status": "not_covered",
-      "last_validation_at": null,
       "validation_source": "none",
       "hasPreview": false
     },
@@ -511,7 +477,6 @@
       "requiredFields": 10,
       "totalFields": 10,
       "validation_status": "not_covered",
-      "last_validation_at": null,
       "validation_source": "none",
       "hasPreview": false
     },
@@ -526,7 +491,6 @@
       "requiredFields": 6,
       "totalFields": 7,
       "validation_status": "not_applicable",
-      "last_validation_at": null,
       "validation_source": "none",
       "hasPreview": false
     },
@@ -541,7 +505,6 @@
       "requiredFields": 10,
       "totalFields": 15,
       "validation_status": "not_applicable",
-      "last_validation_at": null,
       "validation_source": "none",
       "hasPreview": false
     },
@@ -556,7 +519,6 @@
       "requiredFields": 9,
       "totalFields": 14,
       "validation_status": "not_applicable",
-      "last_validation_at": null,
       "validation_source": "none",
       "hasPreview": false
     },
@@ -571,7 +533,6 @@
       "requiredFields": 7,
       "totalFields": 9,
       "validation_status": "not_applicable",
-      "last_validation_at": null,
       "validation_source": "none",
       "hasPreview": false
     },
@@ -586,7 +547,6 @@
       "requiredFields": 10,
       "totalFields": 15,
       "validation_status": "not_applicable",
-      "last_validation_at": null,
       "validation_source": "none",
       "hasPreview": false
     },
@@ -601,7 +561,6 @@
       "requiredFields": 14,
       "totalFields": 31,
       "validation_status": "not_applicable",
-      "last_validation_at": null,
       "validation_source": "none",
       "hasPreview": false
     },
@@ -616,7 +575,6 @@
       "requiredFields": 8,
       "totalFields": 13,
       "validation_status": "not_applicable",
-      "last_validation_at": null,
       "validation_source": "none",
       "hasPreview": false
     }
