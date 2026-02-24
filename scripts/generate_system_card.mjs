@@ -160,7 +160,7 @@ function makeSystemCardMarkdown({ traceability }) {
 
   const lines = [];
   lines.push("---");
-  lines.push("layout: base.njk");
+  lines.push("layout: trust-layout.njk");
   lines.push("title: System Card | OpenAgreements");
   lines.push(
     "description: Reliability summary and evidence for OpenAgreements.",

@@ -13,8 +13,6 @@ description: Per-template validation status, source provenance, and field metada
       dedicated automated tests.
     </p>
     <p style="color: var(--ink-soft); font-size: 0.85rem; margin: 0 0 24px;">
-      Generated {{ templateEvidence.generated_at_utc | truncate(19, true, "") }} UTC
-      &middot;
       <strong>{{ templateEvidence.validated_count }}</strong> validated,
       <strong>{{ templateEvidence.not_covered_count }}</strong> not covered,
       <strong>{{ templateEvidence.not_applicable_count }}</strong> n/a
@@ -31,7 +29,6 @@ description: Per-template validation status, source provenance, and field metada
             <th>License</th>
             <th>Fields</th>
             <th>Validation</th>
-            <th>Last Run</th>
           </tr>
         </thead>
         <tbody>
@@ -59,13 +56,6 @@ description: Per-template validation status, source provenance, and field metada
                 <span class="status-not-covered">Not covered</span>
               {% else %}
                 <span class="status-not-applicable">&mdash;</span>
-              {% endif %}
-            </td>
-            <td>
-              {% if t.last_validation_at %}
-                {{ t.last_validation_at | truncate(19, true, "") }}
-              {% else %}
-                &mdash;
               {% endif %}
             </td>
           </tr>
