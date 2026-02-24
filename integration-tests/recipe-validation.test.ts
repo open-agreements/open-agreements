@@ -13,7 +13,7 @@ const recipesDir = join(import.meta.dirname, '..', 'content', 'recipes');
 const it = itAllure.epic('Verification & Drift');
 
 describe('validateRecipe', () => {
-  it('validates nvca-voting-agreement (full recipe)', async () => {
+  it.openspec('OA-159')('validates nvca-voting-agreement (full recipe)', async () => {
     const dir = join(recipesDir, 'nvca-voting-agreement');
     await allureParameter('recipe_id', 'nvca-voting-agreement');
     const result = await allureStep('Validate full recipe', () =>
@@ -40,7 +40,7 @@ describe('validateRecipe', () => {
 });
 
 describe('validateRecipeMetadata', () => {
-  it('validates nvca-voting-agreement metadata', async () => {
+  it.openspec('OA-159')('validates nvca-voting-agreement metadata', async () => {
     const dir = join(recipesDir, 'nvca-voting-agreement');
     await allureParameter('recipe_id', 'nvca-voting-agreement');
     const result = await allureStep('Validate recipe metadata', () =>
@@ -52,7 +52,7 @@ describe('validateRecipeMetadata', () => {
     });
   });
 
-  it('validates scaffold metadata', async () => {
+  it.openspec('OA-159')('validates scaffold metadata', async () => {
     const dir = join(recipesDir, 'nvca-management-rights-letter');
     await allureParameter('recipe_id', 'nvca-management-rights-letter');
     const result = await allureStep('Validate scaffold metadata', () =>

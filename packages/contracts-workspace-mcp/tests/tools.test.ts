@@ -12,7 +12,7 @@ function getStructuredContent(result: Awaited<ReturnType<typeof callTool>>): Rec
 }
 
 describe('contracts-workspace-mcp tools', () => {
-  it('lists expected tools', () => {
+  it.openspec('OA-215')('lists expected tools', () => {
     const names = listToolDescriptors().map((tool) => tool.name);
     expect(names).toEqual([
       'workspace_init',
@@ -23,7 +23,7 @@ describe('contracts-workspace-mcp tools', () => {
     ]);
   });
 
-  it('returns workspace setup suggestions without mutating the filesystem', async () => {
+  it.openspec('OA-215')('returns workspace setup suggestions without mutating the filesystem', async () => {
     const root = mkdtempSync(join(tmpdir(), 'oa-mcp-init-'));
     const result = await callTool('workspace_init', {
       root_dir: root,
@@ -42,7 +42,7 @@ describe('contracts-workspace-mcp tools', () => {
     expect(existsSync(join(root, 'CONTRACTS.md'))).toBe(false);
   });
 
-  it('reports invalid catalog entries with structured errors', async () => {
+  it.openspec('OA-215')('reports invalid catalog entries with structured errors', async () => {
     const root = mkdtempSync(join(tmpdir(), 'oa-mcp-catalog-'));
     const invalidCatalog = `
 schema_version: 1
@@ -64,7 +64,7 @@ entries:
     expect(Array.isArray(payload.errors)).toBe(true);
   });
 
-  it('generates status index and returns lint findings', async () => {
+  it.openspec('OA-215')('generates status index and returns lint findings', async () => {
     const root = mkdtempSync(join(tmpdir(), 'oa-mcp-status-'));
     for (const folder of ['forms', 'forms/corporate', 'drafts', 'incoming', 'executed', 'archive']) {
       mkdirSync(join(root, folder), { recursive: true });

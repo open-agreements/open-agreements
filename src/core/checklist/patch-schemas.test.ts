@@ -40,7 +40,7 @@ async function safeParseWithEvidence(
 }
 
 describe('ChecklistPatch schemas', () => {
-  it('parses a valid patch envelope with default APPLY mode', async () => {
+  it.openspec('OA-200')('parses a valid patch envelope with default APPLY mode', async () => {
     const payload = {
       patch_id: 'patch_thread_44_v1',
       expected_revision: 12,
@@ -70,7 +70,7 @@ describe('ChecklistPatch schemas', () => {
     });
   });
 
-  it('rejects empty operation arrays', async () => {
+  it.openspec('OA-200')('rejects empty operation arrays', async () => {
     const parsed = await safeParseWithEvidence(
       'patch envelope with empty operations',
       {
@@ -86,7 +86,7 @@ describe('ChecklistPatch schemas', () => {
     });
   });
 
-  it('rejects paths that are not valid JSON pointers', async () => {
+  it.openspec('OA-200')('rejects paths that are not valid JSON pointers', async () => {
     const missingLeadingSlash = await safeParseWithEvidence(
       'json pointer missing leading slash',
       'issues/iss-1/status',
@@ -118,7 +118,7 @@ describe('ChecklistPatch schemas', () => {
     });
   });
 
-  it('enforces operation/value compatibility', async () => {
+  it.openspec('OA-200')('enforces operation/value compatibility', async () => {
     const addMissingValue = await safeParseWithEvidence(
       'add operation missing value',
       {

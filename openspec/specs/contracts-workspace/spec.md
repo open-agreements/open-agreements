@@ -142,3 +142,137 @@ independently installable from the existing OpenAgreements template-filling CLI.
 - **WHEN** a user installs the workspace package without installing template-filling tooling
 - **THEN** workspace commands are available
 - **AND** template-filling commands are not required for workspace initialization, catalog, or status features
+
+### Requirement: Workspace Convention Configuration
+The convention system MUST support writing, loading, and round-tripping convention
+configs with both filesystem and memory providers. Default conventions MUST be
+returned when no config file exists.
+
+#### Scenario: [OA-202] Convention config round-trip and defaults
+- **WHEN** convention config is written and loaded via any provider
+- **THEN** the loaded config matches the written config
+- **AND** when no config file exists, default conventions are returned
+
+### Requirement: Convention Scanner Detection
+The convention scanner MUST detect naming styles (snake_case, kebab-case,
+title-case-spaces), execution status markers (_executed, _partially_executed),
+and asset-like folders from workspace file inventories.
+
+#### Scenario: [OA-203] Convention scanner pattern detection
+- **WHEN** the scanner analyzes workspace files
+- **THEN** it returns defaults for empty or small (< 5 files) workspaces
+- **AND** detects _executed and (fully executed) marker patterns from file majority
+- **AND** detects snake_case, kebab-case, and title-case-spaces naming styles
+- **AND** classifies asset-like folders separately
+
+### Requirement: Convention-Aware Linting
+The linter MUST use default or custom markers from conventions config and support
+marker-based validation of workspace files.
+
+#### Scenario: [OA-204] Convention-aware lint with custom markers
+- **WHEN** linting runs with or without a conventions config
+- **THEN** default markers are used when no config exists
+- **AND** custom markers from config are applied when present
+
+#### Scenario: [OA-205] Convention-aware indexer marker detection
+- **WHEN** the indexer checks for executed markers
+- **THEN** `hasExecutedMarker` accepts custom patterns from conventions
+
+### Requirement: Workspace Initialization Artifacts
+The `init` command MUST generate WORKSPACE.md, FOLDER.md, and conventions.yaml
+files. It MUST be idempotent and scan conventions on non-empty workspaces.
+
+#### Scenario: [OA-206] Init generates documentation and config files
+- **WHEN** `init` runs on an empty workspace
+- **THEN** WORKSPACE.md, FOLDER.md, and conventions.yaml are created
+- **AND** re-running init is idempotent
+- **AND** non-empty workspaces trigger convention scanning
+
+### Requirement: Partially Executed Document Status
+The system MUST detect `_partially_executed` filename suffix as a distinct status,
+not conflate it with `_executed`, and skip lint warnings for partial executions.
+
+#### Scenario: [OA-207] Partially executed document handling
+- **WHEN** a document filename includes `_partially_executed`
+- **THEN** `hasPartiallyExecutedMarker` detects it
+- **AND** `hasExecutedMarker` returns false for partially executed files
+- **AND** workspace document collection assigns `partially_executed` status
+- **AND** lint does not warn about missing markers for partially executed files
+- **AND** the scanner detects _partially_executed as a distinct candidate
+
+### Requirement: Duplicate File Detection
+The linter MUST detect copy-pattern and timestamp-suffixed duplicate files
+while not flagging unrelated files.
+
+#### Scenario: [OA-208] Duplicate file lint detection
+- **WHEN** the workspace contains copy-pattern or timestamp-suffixed duplicate files
+- **THEN** lint detects and flags them
+- **AND** unrelated files are not flagged as duplicates
+
+### Requirement: Root Orphan Detection
+The linter MUST warn about files at the workspace root while exempting known
+config files.
+
+#### Scenario: [OA-209] Root orphan lint detection
+- **WHEN** files exist at the workspace root
+- **THEN** lint warns about non-config files
+- **AND** known config files are not flagged
+
+### Requirement: Cross-Contamination Detection
+The linter MUST detect files whose names suggest they belong in a different
+domain folder, using high-confidence compound phrases while ignoring generic terms.
+
+#### Scenario: [OA-210] Cross-contamination lint detection
+- **WHEN** files contain high-confidence compound phrases suggesting wrong domain placement
+- **THEN** lint warns about potential cross-contamination
+- **AND** generic terms like "agreement" or "policy" are not flagged
+- **AND** the rule does not run when no non-lifecycle domain folders are configured
+
+### Requirement: Workspace Init Backward Compatibility
+Init MUST create config files without forcing lifecycle directory creation and
+remain idempotent across repeated invocations.
+
+#### Scenario: [OA-211] Init backward compatibility
+- **WHEN** init runs
+- **THEN** config files are created but lifecycle directories are not
+- **AND** repeated init invocations are idempotent with conventions
+
+### Requirement: Provider Filesystem Semantics
+Both FilesystemProvider and MemoryProvider MUST implement consistent filesystem
+semantics including exists, read, write, mkdir, readdir, stat, and walk operations.
+
+#### Scenario: [OA-212] FilesystemProvider operations
+- **WHEN** filesystem operations are performed via FilesystemProvider
+- **THEN** exists returns false for missing paths and true after creation
+- **AND** writeFile/readTextFile round-trips correctly
+- **AND** readFile returns Buffers
+- **AND** mkdir with recursive creates nested directories
+- **AND** readdir lists entries, stat returns correct FileInfo, and walk recursively finds files
+
+#### Scenario: [OA-213] MemoryProvider operations
+- **WHEN** filesystem operations are performed via MemoryProvider
+- **THEN** exists, seed, writeFile/readTextFile, readFile, mkdir, readdir, stat, and walk all behave consistently
+- **AND** ENOENT errors are thrown for missing paths
+- **AND** MemoryProvider works with initializeWorkspace
+
+### Requirement: JSON Schema Snapshot Consistency
+Zod-to-JSON-Schema mappings MUST produce stable snapshots for key constructs
+(literal, regex, datetime, record, enum) and full schema shapes.
+
+#### Scenario: [OA-214] Zod-to-JSON-Schema construct mappings
+- **WHEN** Zod schemas are converted to JSON Schema
+- **THEN** z.literal produces const, z.string().regex() produces pattern, z.iso.datetime() produces format
+- **AND** z.record produces additionalProperties, z.enum produces enum arrays
+- **AND** full schema snapshots for FormsCatalogSchema and ConventionConfigSchema are stable
+
+### Requirement: MCP Tool Descriptors
+The MCP tool layer MUST list expected tools, return workspace setup suggestions
+without side effects, report structured errors for invalid catalog entries,
+and generate status indexes with lint findings.
+
+#### Scenario: [OA-215] MCP workspace tool operations
+- **WHEN** MCP tools are invoked
+- **THEN** tool listing returns expected tools
+- **AND** workspace setup suggestions are returned without filesystem mutation
+- **AND** invalid catalog entries produce structured errors
+- **AND** status index generation includes lint findings

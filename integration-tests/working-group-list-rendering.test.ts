@@ -37,7 +37,7 @@ function getParagraphText(docxPath: string): string[] {
 }
 
 describe('working-group-list rendering', () => {
-  it('renders one line per working group member', async () => {
+  it.openspec('OA-177')('renders one line per working group member', async () => {
     const templateDir = findTemplateDir('working-group-list');
     expect(templateDir).toBeTruthy();
 

@@ -8,13 +8,13 @@ const it = itAllure.epic('Compliance & Governance');
 
 describe('JSON Schema generation from Zod', () => {
   describe('key Zod construct mappings', () => {
-    it('z.literal(1) produces const: 1', () => {
+    it.openspec('OA-214')('z.literal(1) produces const: 1', () => {
       const schema = z.toJSONSchema(FormsCatalogSchema, { reused: 'inline' });
       const props = schema.properties as Record<string, Record<string, unknown>>;
       expect(props.schema_version).toEqual({ type: 'number', const: 1 });
     });
 
-    it('z.string().regex() produces pattern field', () => {
+    it.openspec('OA-214')('z.string().regex() produces pattern field', () => {
       const schema = z.toJSONSchema(CatalogEntrySchema, { reused: 'inline' });
       const props = schema.properties as Record<string, Record<string, unknown>>;
       const checksum = props.checksum as Record<string, unknown>;
@@ -22,14 +22,14 @@ describe('JSON Schema generation from Zod', () => {
       expect(checksumProps.sha256).toHaveProperty('pattern', '^[a-fA-F0-9]{64}$');
     });
 
-    it('z.iso.datetime() produces format: date-time', () => {
+    it.openspec('OA-214')('z.iso.datetime() produces format: date-time', () => {
       const schema = z.toJSONSchema(FormsCatalogSchema, { reused: 'inline' });
       const props = schema.properties as Record<string, Record<string, unknown>>;
       expect(props.generated_at).toHaveProperty('type', 'string');
       expect(props.generated_at).toHaveProperty('format', 'date-time');
     });
 
-    it('z.record(z.string(), z.string()) produces additionalProperties', () => {
+    it.openspec('OA-214')('z.record(z.string(), z.string()) produces additionalProperties', () => {
       const schema = z.toJSONSchema(ConventionConfigSchema, { reused: 'inline' });
       const props = schema.properties as Record<string, Record<string, unknown>>;
       const lifecycle = props.lifecycle as Record<string, unknown>;
@@ -38,7 +38,7 @@ describe('JSON Schema generation from Zod', () => {
       expect(lifecycleProps.folders).toHaveProperty('additionalProperties', { type: 'string' });
     });
 
-    it('z.enum() produces enum array', () => {
+    it.openspec('OA-214')('z.enum() produces enum array', () => {
       const schema = z.toJSONSchema(CatalogEntrySchema, { reused: 'inline' });
       const props = schema.properties as Record<string, Record<string, unknown>>;
       expect(props.destination_lifecycle).toEqual({
@@ -49,12 +49,12 @@ describe('JSON Schema generation from Zod', () => {
   });
 
   describe('full schema snapshots', () => {
-    it('FormsCatalogSchema snapshot', () => {
+    it.openspec('OA-214')('FormsCatalogSchema snapshot', () => {
       const schema = z.toJSONSchema(FormsCatalogSchema, { reused: 'inline' });
       expect(schema).toMatchSnapshot();
     });
 
-    it('ConventionConfigSchema snapshot', () => {
+    it.openspec('OA-214')('ConventionConfigSchema snapshot', () => {
       const schema = z.toJSONSchema(ConventionConfigSchema, { reused: 'inline' });
       expect(schema).toMatchSnapshot();
     });

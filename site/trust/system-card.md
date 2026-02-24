@@ -9,8 +9,8 @@ description: Reliability summary and evidence for OpenAgreements.
 ## Executive Summary
 
 <div class="trust-summary-banner">
-<h2>All 132 spec scenarios mapped to tests</h2>
-<p>132 of 132 OpenSpec scenarios are mapped to automated tests across 2 capabilities.</p>
+<h2>All 215 spec scenarios mapped to tests</h2>
+<p>215 of 215 OpenSpec scenarios are mapped to automated tests across 2 capabilities.</p>
 </div>
 
 - This card focuses on reliability signals developers can scan quickly.
@@ -19,7 +19,7 @@ description: Reliability summary and evidence for OpenAgreements.
 ## Visual Snapshot
 
 <div class="trust-chart">
-<div class="chart-row"><div class="chart-label">OpenSpec scenario mapping<span class="chart-detail">132/132 scenarios</span></div><div class="chart-track"><span class="chart-fill is-good" style="width:100.0%"></span></div><div class="chart-value">100.0%</div></div>
+<div class="chart-row"><div class="chart-label">OpenSpec scenario mapping<span class="chart-detail">215/215 scenarios</span></div><div class="chart-track"><span class="chart-fill is-good" style="width:100.0%"></span></div><div class="chart-value">100.0%</div></div>
 </div>
 
 ## Key Results
@@ -30,8 +30,8 @@ This is **spec scenario mapping coverage**, not line/branch code coverage.
 
 | Metric | Value |
 |---|---:|
-| Spec scenarios | 132 |
-| Mapped to tests | 132 |
+| Spec scenarios | 215 |
+| Mapped to tests | 215 |
 | Unmapped | 0 |
 | Coverage | 100.0% |
 | Capabilities measured | 2 |

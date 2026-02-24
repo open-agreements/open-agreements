@@ -37,34 +37,34 @@ describe('npm packaging', () => {
     }
   }, 45_000);
 
-  it('includes dist/cli/index.js', () => {
+  it.openspec('OA-157')('includes dist/cli/index.js', () => {
     if (!available) return;
     expect(files).toContain('dist/cli/index.js');
   });
 
-  it('includes bin/open-agreements.js', () => {
+  it.openspec('OA-157')('includes bin/open-agreements.js', () => {
     if (!available) return;
     expect(files).toContain('bin/open-agreements.js');
   });
 
-  it('includes a template metadata file', () => {
+  it.openspec('OA-157')('includes a template metadata file', () => {
     if (!available) return;
     expect(files.some((f) => f.startsWith('content/templates/') && f.endsWith('metadata.yaml'))).toBe(
       true
     );
   });
 
-  it('includes a recipe metadata file', () => {
+  it.openspec('OA-157')('includes a recipe metadata file', () => {
     if (!available) return;
     expect(files.some((f) => f.startsWith('content/recipes/') && f.endsWith('metadata.yaml'))).toBe(true);
   });
 
-  it('does NOT include src/', () => {
+  it.openspec('OA-157')('does NOT include src/', () => {
     if (!available) return;
     expect(files.some((f) => f.startsWith('src/'))).toBe(false);
   });
 
-  it('does NOT include node_modules/', () => {
+  it.openspec('OA-157')('does NOT include node_modules/', () => {
     if (!available) return;
     expect(files.some((f) => f.startsWith('node_modules/'))).toBe(false);
   });

@@ -21,7 +21,7 @@ function mustFindTemplateDir(templateId: string): string {
 const it = itAllure.epic('Compliance & Governance');
 
 describe('employment memo generator', () => {
-  it('generates disclaimer + findings + jurisdiction warnings for matching rules', () => {
+  it.openspec('OA-164')('generates disclaimer + findings + jurisdiction warnings for matching rules', () => {
     const templateId = 'openagreements-employee-ip-inventions-assignment';
     const metadata = loadMetadata(mustFindTemplateDir(templateId));
 
@@ -59,7 +59,7 @@ describe('employment memo generator', () => {
     expect(memo.counsel_escalation.high_risk_finding_ids.length).toBeGreaterThan(0);
   });
 
-  it('does not fabricate jurisdiction warnings when no rule matches', () => {
+  it.openspec('OA-164')('does not fabricate jurisdiction warnings when no rule matches', () => {
     const templateId = 'openagreements-employment-offer-letter';
     const metadata = loadMetadata(mustFindTemplateDir(templateId));
 
@@ -85,7 +85,7 @@ describe('employment memo generator', () => {
     expect(memo.disclaimer).toContain('not legal advice');
   });
 
-  it('produces deterministic baseline variance findings against selected baseline template', () => {
+  it.openspec('OA-164')('produces deterministic baseline variance findings against selected baseline template', () => {
     const templateId = 'openagreements-employee-ip-inventions-assignment';
     const metadata = loadMetadata(mustFindTemplateDir(templateId));
 
@@ -114,7 +114,7 @@ describe('employment memo generator', () => {
     expect(governingLawVariance).toBeDefined();
   });
 
-  it('renders markdown output with mandatory disclaimer and citations', () => {
+  it.openspec('OA-164')('renders markdown output with mandatory disclaimer and citations', () => {
     const templateId = 'openagreements-employment-confidentiality-acknowledgement';
     const metadata = loadMetadata(mustFindTemplateDir(templateId));
 
@@ -142,7 +142,7 @@ describe('employment memo generator', () => {
 });
 
 describe('employment memo language guard', () => {
-  it('rewrites prescriptive wording and blocks prohibited phrases', () => {
+  it.openspec('OA-165')('rewrites prescriptive wording and blocks prohibited phrases', () => {
     const rewritten = applyAdviceLanguageGuard('We recommend this plan. You should use the best strategy.');
 
     expect(rewritten).not.toContain('We recommend');

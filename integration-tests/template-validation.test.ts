@@ -93,7 +93,7 @@ function createTemplateFixture(opts: {
 }
 
 describe('validateTemplate', () => {
-  it('validates bonterms-mutual-nda without errors', async () => {
+  it.openspec('OA-153')('validates bonterms-mutual-nda without errors', async () => {
     const dir = join(templatesDir, 'bonterms-mutual-nda');
     await allureParameter('template_id', 'bonterms-mutual-nda');
     const result = await allureStep('Validate template', () =>
@@ -107,7 +107,7 @@ describe('validateTemplate', () => {
     });
   });
 
-  it('validates common-paper-mutual-nda without errors', async () => {
+  it.openspec('OA-153')('validates common-paper-mutual-nda without errors', async () => {
     const dir = join(templatesDir, 'common-paper-mutual-nda');
     await allureParameter('template_id', 'common-paper-mutual-nda');
     const result = await allureStep('Validate template', () =>
@@ -121,7 +121,7 @@ describe('validateTemplate', () => {
     });
   });
 
-  it('validates openagreements-employment-offer-letter without errors', async () => {
+  it.openspec('OA-153')('validates openagreements-employment-offer-letter without errors', async () => {
     const dir = join(templatesDir, 'openagreements-employment-offer-letter');
     await allureParameter('template_id', 'openagreements-employment-offer-letter');
     const result = await allureStep('Validate template', () =>
@@ -135,7 +135,7 @@ describe('validateTemplate', () => {
     });
   });
 
-  it('validates openagreements-employee-ip-inventions-assignment without errors', async () => {
+  it.openspec('OA-153')('validates openagreements-employee-ip-inventions-assignment without errors', async () => {
     const dir = join(templatesDir, 'openagreements-employee-ip-inventions-assignment');
     await allureParameter('template_id', 'openagreements-employee-ip-inventions-assignment');
     const result = await allureStep('Validate template', () =>
@@ -149,7 +149,7 @@ describe('validateTemplate', () => {
     });
   });
 
-  it('validates openagreements-employment-confidentiality-acknowledgement without errors', async () => {
+  it.openspec('OA-153')('validates openagreements-employment-confidentiality-acknowledgement without errors', async () => {
     const dir = join(templatesDir, 'openagreements-employment-confidentiality-acknowledgement');
     await allureParameter('template_id', 'openagreements-employment-confidentiality-acknowledgement');
     const result = await allureStep('Validate template', () =>
@@ -165,7 +165,7 @@ describe('validateTemplate', () => {
 });
 
 describe('validateMetadata', () => {
-  it('validates bonterms-mutual-nda metadata', async () => {
+  it.openspec('OA-153')('validates bonterms-mutual-nda metadata', async () => {
     const dir = join(templatesDir, 'bonterms-mutual-nda');
     await allureParameter('template_id', 'bonterms-mutual-nda');
     const result = await allureStep('Validate metadata.yaml', () => validateMetadata(dir));
@@ -176,7 +176,7 @@ describe('validateMetadata', () => {
     });
   });
 
-  it('validates employment offer metadata', async () => {
+  it.openspec('OA-153')('validates employment offer metadata', async () => {
     const dir = join(templatesDir, 'openagreements-employment-offer-letter');
     await allureParameter('template_id', 'openagreements-employment-offer-letter');
     const result = await allureStep('Validate metadata.yaml', () => validateMetadata(dir));
@@ -227,7 +227,7 @@ describe('validateTemplate placeholder coverage', () => {
     });
   });
 
-  it('reports required-field errors for declarative replacements missing metadata tags', async () => {
+  it.openspec('OA-154')('reports required-field errors for declarative replacements missing metadata tags', async () => {
     const dir = createTemplateFixture({
       docText: 'Order form has [Company Name] only',
       fieldsYaml: '  - name: required_field\n    type: string\n    description: Required field',

@@ -14,7 +14,7 @@ describe('Download IDs — sign / verify / expiry', () => {
   const TEMPLATE = 'common-paper-mutual-nda';
   const VALUES = { company_name: 'Acme Corp', counterparty_name: 'Globex Inc' };
 
-  it('round-trips a valid signed download_id', async () => {
+  it.openspec('OA-161')('round-trips a valid signed download_id', async () => {
     const created = await createDownloadArtifact(TEMPLATE, VALUES);
     await allureStep('Create download artifact', async () => {
       expect(created.download_id).toBeTypeOf('string');
@@ -37,7 +37,7 @@ describe('Download IDs — sign / verify / expiry', () => {
     }
   });
 
-  it('rejects a tampered signature', async () => {
+  it.openspec('OA-161')('rejects a tampered signature', async () => {
     const created = await createDownloadArtifact(TEMPLATE, VALUES);
     const tampered = created.download_id.slice(0, -1)
       + (created.download_id.endsWith('A') ? 'B' : 'A');
@@ -46,20 +46,20 @@ describe('Download IDs — sign / verify / expiry', () => {
     expect(resolved).toEqual({ ok: false, code: 'DOWNLOAD_SIGNATURE_INVALID' });
   });
 
-  it('rejects malformed download_id values', async () => {
+  it.openspec('OA-161')('rejects malformed download_id values', async () => {
     await expect(resolveDownloadArtifact('')).resolves.toEqual({ ok: false, code: 'DOWNLOAD_ID_MALFORMED' });
     await expect(resolveDownloadArtifact('no-dot-here')).resolves.toEqual({ ok: false, code: 'DOWNLOAD_ID_MALFORMED' });
     await expect(resolveDownloadArtifact('.leading-dot')).resolves.toEqual({ ok: false, code: 'DOWNLOAD_ID_MALFORMED' });
     await expect(resolveDownloadArtifact('nothex.not-base64')).resolves.toEqual({ ok: false, code: 'DOWNLOAD_ID_MALFORMED' });
   });
 
-  it('rejects an expired download_id', async () => {
+  it.openspec('OA-162')('rejects an expired download_id', async () => {
     const created = await createDownloadArtifact(TEMPLATE, VALUES, { ttl_ms: -1 });
     const resolved = await resolveDownloadArtifact(created.download_id);
     expect(resolved).toEqual({ ok: false, code: 'DOWNLOAD_EXPIRED' });
   });
 
-  it('preserves empty values object', async () => {
+  it.openspec('OA-161')('preserves empty values object', async () => {
     const created = await createDownloadArtifact(TEMPLATE, {});
     const resolved = await resolveDownloadArtifact(created.download_id);
     expect(resolved.ok).toBe(true);
@@ -68,7 +68,7 @@ describe('Download IDs — sign / verify / expiry', () => {
     }
   });
 
-  it('keeps download_id length stable as values grow', async () => {
+  it.openspec('OA-162')('keeps download_id length stable as values grow', async () => {
     const manyValues: Record<string, string> = {};
     for (let i = 0; i < 20; i++) {
       manyValues[`field_${i}`] = `value_${i}_with_some_content`;

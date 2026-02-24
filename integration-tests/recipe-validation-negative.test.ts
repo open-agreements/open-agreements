@@ -63,7 +63,7 @@ describe('validateRecipe negative scenarios', () => {
     expect(result.warnings.join(' ')).toContain('Replacement target {company_name_missing} not found in metadata fields');
   });
 
-  it('rejects unsafe non-identifier replacement tags', () => {
+  it.openspec('OA-160')('rejects unsafe non-identifier replacement tags', () => {
     const recipeDir = mkdtempSync(join(tmpdir(), 'oa-recipe-unsafe-tag-'));
     tempDirs.push(recipeDir);
 
@@ -113,7 +113,7 @@ describe('validateRecipe negative scenarios', () => {
     expect(result.errors.join(' ')).toContain('computed.json');
   });
 
-  it('rejects invalid normalize.json configuration', () => {
+  it.openspec('OA-160')('rejects invalid normalize.json configuration', () => {
     const recipeDir = mkdtempSync(join(tmpdir(), 'oa-recipe-normalize-'));
     tempDirs.push(recipeDir);
 

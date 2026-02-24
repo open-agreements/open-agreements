@@ -157,7 +157,7 @@ afterEach(() => {
 });
 
 describe('MCP contract envelope behaviors', () => {
-  it('returns a consistent success envelope shape for list_templates', async () => {
+  it.openspec('OA-163')('returns a consistent success envelope shape for list_templates', async () => {
     const req = createMockReq({
       body: {
         jsonrpc: '2.0',
@@ -182,7 +182,7 @@ describe('MCP contract envelope behaviors', () => {
     expect(envelope.data.auth).toBeNull();
   });
 
-  it('returns compact and full list_templates payload modes', async () => {
+  it.openspec('OA-163')('returns compact and full list_templates payload modes', async () => {
     const compactReq = createMockReq({
       body: {
         jsonrpc: '2.0',
@@ -221,7 +221,7 @@ describe('MCP contract envelope behaviors', () => {
     expect(fullEnvelope.data.templates[0].fields).toHaveLength(2);
   });
 
-  it('returns get_template found and TEMPLATE_NOT_FOUND envelopes', async () => {
+  it.openspec('OA-163')('returns get_template found and TEMPLATE_NOT_FOUND envelopes', async () => {
     const foundReq = createMockReq({
       body: {
         jsonrpc: '2.0',
@@ -255,7 +255,7 @@ describe('MCP contract envelope behaviors', () => {
     expect(missingEnvelope.error.code).toBe('TEMPLATE_NOT_FOUND');
   });
 
-  it('returns fill_template envelopes for url, base64_docx, and mcp_resource', async () => {
+  it.openspec('OA-163')('returns fill_template envelopes for url, base64_docx, and mcp_resource', async () => {
     const urlReq = createMockReq({
       body: {
         jsonrpc: '2.0',
@@ -329,7 +329,7 @@ describe('MCP contract envelope behaviors', () => {
     expect(resourceEnvelope.data.download_url).toContain('/api/download?id=');
   });
 
-  it('returns download_filled success and DOWNLOAD_LINK_EXPIRED error envelopes', async () => {
+  it.openspec('OA-163')('returns download_filled success and DOWNLOAD_LINK_EXPIRED error envelopes', async () => {
     const validReq = createMockReq({
       body: {
         jsonrpc: '2.0',
@@ -365,7 +365,7 @@ describe('MCP contract envelope behaviors', () => {
     expect(expiredEnvelope.error.code).toBe('DOWNLOAD_LINK_EXPIRED');
   });
 
-  it('returns INVALID_ARGUMENT for invalid arguments and unknown tool', async () => {
+  it.openspec('OA-163')('returns INVALID_ARGUMENT for invalid arguments and unknown tool', async () => {
     const invalidArgReq = createMockReq({
       body: {
         jsonrpc: '2.0',
@@ -404,7 +404,7 @@ describe('MCP contract envelope behaviors', () => {
     expect(unknownToolEnvelope.error.code).toBe('INVALID_ARGUMENT');
   });
 
-  it('returns HTML for browser GET and 405 for non-browser GET', async () => {
+  it.openspec('OA-163')('returns HTML for browser GET and 405 for non-browser GET', async () => {
     const browserReq = createMockReq({ method: 'GET', headers: { accept: 'text/html' } });
     const browserRes = createMockRes();
     await mcpHandler(browserReq, browserRes);

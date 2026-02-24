@@ -57,7 +57,7 @@ describe('ClosingChecklistSchema v2', () => {
     updated_at: '2026-02-22',
   };
 
-  it('parses minimal valid input', async () => {
+  it.openspec('OA-198')('parses minimal valid input', async () => {
     const result = await safeParseWithEvidence('minimal checklist payload', ClosingChecklistSchema, minimal);
 
     await allureStep('Then minimal payload parses successfully', async () => {
@@ -240,7 +240,7 @@ describe('ClosingChecklistSchema v2', () => {
     });
   });
 
-  it('rejects parent_entry_id that points to different stage', async () => {
+  it.openspec('OA-198')('rejects parent_entry_id that points to different stage', async () => {
     const result = await safeParseWithEvidence(
       'parent entry cross-stage payload',
       ClosingChecklistSchema,
@@ -271,7 +271,7 @@ describe('ClosingChecklistSchema v2', () => {
     });
   });
 
-  it('rejects unknown related_document_ids in action items', async () => {
+  it.openspec('OA-198')('rejects unknown related_document_ids in action items', async () => {
     const result = await safeParseWithEvidence(
       'action item unknown related_document_ids payload',
       ClosingChecklistSchema,
@@ -292,7 +292,7 @@ describe('ClosingChecklistSchema v2', () => {
     });
   });
 
-  it('rejects unknown related_document_ids in issues', async () => {
+  it.openspec('OA-198')('rejects unknown related_document_ids in issues', async () => {
     const result = await safeParseWithEvidence(
       'issue unknown related_document_ids payload',
       ClosingChecklistSchema,
@@ -313,7 +313,7 @@ describe('ClosingChecklistSchema v2', () => {
     });
   });
 
-  it('accepts all valid stage values', async () => {
+  it.openspec('OA-198')('accepts all valid stage values', async () => {
     const candidates = ['PRE_SIGNING', 'SIGNING', 'CLOSING', 'POST_CLOSING'];
 
     const outcomes = await allureStep('When each stage enum value is parsed', async () =>
@@ -328,7 +328,7 @@ describe('ClosingChecklistSchema v2', () => {
     });
   });
 
-  it('accepts all valid checklist entry status values', async () => {
+  it.openspec('OA-198')('accepts all valid checklist entry status values', async () => {
     const candidates = [
       'NOT_STARTED',
       'DRAFT',
@@ -370,7 +370,7 @@ describe('ClosingChecklistSchema v2', () => {
     });
   });
 
-  it('accepts all valid action item statuses', async () => {
+  it.openspec('OA-198')('accepts all valid action item statuses', async () => {
     const candidates = ['NOT_STARTED', 'IN_PROGRESS', 'COMPLETED', 'ON_HOLD'];
 
     const outcomes = await allureStep('When each action item status enum value is parsed', async () =>
@@ -385,7 +385,7 @@ describe('ClosingChecklistSchema v2', () => {
     });
   });
 
-  it('accepts all valid signatory statuses', async () => {
+  it.openspec('OA-198')('accepts all valid signatory statuses', async () => {
     const candidates = ['PENDING', 'RECEIVED', 'N_A'];
 
     const outcomes = await allureStep('When each signatory status enum value is parsed', async () =>
@@ -400,7 +400,7 @@ describe('ClosingChecklistSchema v2', () => {
     });
   });
 
-  it('signature artifact requires uri or path', async () => {
+  it.openspec('OA-198')('signature artifact requires uri or path', async () => {
     const invalid = await safeParseWithEvidence('signature artifact missing uri and path payload', SignatureArtifactSchema, {});
     const validUri = await safeParseWithEvidence(
       'signature artifact with uri payload',
@@ -426,7 +426,7 @@ describe('ClosingChecklistSchema v2', () => {
     });
   });
 
-  it('defaults related_document_ids on action items and issues', async () => {
+  it.openspec('OA-198')('defaults related_document_ids on action items and issues', async () => {
     const action = await safeParseWithEvidence(
       'action item defaults payload',
       ActionItemSchema,
@@ -466,7 +466,7 @@ describe('ClosingChecklistSchema v2', () => {
     });
   });
 
-  it('accepts citation text-only evidence payloads', async () => {
+  it.openspec('OA-199')('accepts citation text-only evidence payloads', async () => {
     const result = await safeParseWithEvidence(
       'citation text-only evidence payload',
       ClosingChecklistSchema,

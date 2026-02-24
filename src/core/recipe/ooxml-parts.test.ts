@@ -6,7 +6,7 @@ import { enumerateTextParts, getGeneralTextPartNames } from './ooxml-parts.js';
 const it = itAllure.epic('Discovery & Metadata');
 
 describe('enumerateTextParts', () => {
-  it('finds document.xml only in minimal zip', () => {
+  it.openspec('OA-190')('finds document.xml only in minimal zip', () => {
     const zip = new AdmZip();
     zip.addFile('word/document.xml', Buffer.from('<doc/>', 'utf-8'));
     zip.addFile('[Content_Types].xml', Buffer.from('<Types/>', 'utf-8'));
@@ -19,7 +19,7 @@ describe('enumerateTextParts', () => {
     expect(parts.footnotes).toBeNull();
   });
 
-  it('finds all part types in a full zip', () => {
+  it.openspec('OA-190')('finds all part types in a full zip', () => {
     const zip = new AdmZip();
     zip.addFile('word/document.xml', Buffer.from('<doc/>', 'utf-8'));
     zip.addFile('word/header1.xml', Buffer.from('<hdr/>', 'utf-8'));
@@ -37,7 +37,7 @@ describe('enumerateTextParts', () => {
     expect(parts.footnotes).toBe('word/footnotes.xml');
   });
 
-  it('ignores non-matching files in word/', () => {
+  it.openspec('OA-190')('ignores non-matching files in word/', () => {
     const zip = new AdmZip();
     zip.addFile('word/document.xml', Buffer.from('<doc/>', 'utf-8'));
     zip.addFile('word/styles.xml', Buffer.from('<s/>', 'utf-8'));
@@ -52,7 +52,7 @@ describe('enumerateTextParts', () => {
 });
 
 describe('getGeneralTextPartNames', () => {
-  it('returns flat list excluding footnotes', () => {
+  it.openspec('OA-190')('returns flat list excluding footnotes', () => {
     const zip = new AdmZip();
     zip.addFile('word/document.xml', Buffer.from('<doc/>', 'utf-8'));
     zip.addFile('word/header1.xml', Buffer.from('<hdr/>', 'utf-8'));
@@ -70,7 +70,7 @@ describe('getGeneralTextPartNames', () => {
     expect(names).not.toContain('word/footnotes.xml');
   });
 
-  it('returns empty array when no parts exist', () => {
+  it.openspec('OA-190')('returns empty array when no parts exist', () => {
     const zip = new AdmZip();
     zip.addFile('word/styles.xml', Buffer.from('<s/>', 'utf-8'));
 

@@ -5,7 +5,7 @@ import { parseReplacementKey, extractSearchText } from './replacement-keys.js';
 const it = itAllure.epic('Cleaning & Normalization');
 
 describe('parseReplacementKey', () => {
-  it('parses a simple key', () => {
+  it.openspec('OA-187')('parses a simple key', () => {
     const result = parseReplacementKey('[Company Name]', '{company_name}');
     expect(result).toEqual({
       type: 'simple',
@@ -14,7 +14,7 @@ describe('parseReplacementKey', () => {
     });
   });
 
-  it('parses a context key with " > " separator', () => {
+  it.openspec('OA-187')('parses a context key with " > " separator', () => {
     const result = parseReplacementKey('Effective Date > [Fill in]', '{effective_date}');
     expect(result).toEqual({
       type: 'context',
@@ -24,7 +24,7 @@ describe('parseReplacementKey', () => {
     });
   });
 
-  it('splits on first " > " only', () => {
+  it.openspec('OA-187')('splits on first " > " only', () => {
     const result = parseReplacementKey('A > B > C', '{tag}');
     expect(result).toEqual({
       type: 'context',
@@ -34,7 +34,7 @@ describe('parseReplacementKey', () => {
     });
   });
 
-  it('parses an nth occurrence key', () => {
+  it.openspec('OA-187')('parses an nth occurrence key', () => {
     const result = parseReplacementKey('Party Name:#1', 'Party Name: {party_1_name}');
     expect(result).toEqual({
       type: 'nth',
@@ -44,7 +44,7 @@ describe('parseReplacementKey', () => {
     });
   });
 
-  it('parses nth key with N > 1', () => {
+  it.openspec('OA-187')('parses nth key with N > 1', () => {
     const result = parseReplacementKey('Company:#2', 'Company: {provider_name}');
     expect(result).toEqual({
       type: 'nth',
@@ -54,17 +54,17 @@ describe('parseReplacementKey', () => {
     });
   });
 
-  it('treats #0 as simple (N must be positive)', () => {
+  it.openspec('OA-187')('treats #0 as simple (N must be positive)', () => {
     const result = parseReplacementKey('text#0', '{tag}');
     expect(result.type).toBe('simple');
   });
 
-  it('treats trailing # without number as simple', () => {
+  it.openspec('OA-187')('treats trailing # without number as simple', () => {
     const result = parseReplacementKey('text#abc', '{tag}');
     expect(result.type).toBe('simple');
   });
 
-  it('does not confuse > inside text without spaces', () => {
+  it.openspec('OA-187')('does not confuse > inside text without spaces', () => {
     const result = parseReplacementKey('A>B', '{tag}');
     // " > " requires spaces, so "A>B" is simple
     expect(result.type).toBe('simple');
@@ -72,23 +72,23 @@ describe('parseReplacementKey', () => {
 });
 
 describe('extractSearchText', () => {
-  it('returns key as-is for simple keys', () => {
+  it.openspec('OA-187')('returns key as-is for simple keys', () => {
     expect(extractSearchText('[Company Name]')).toBe('[Company Name]');
   });
 
-  it('extracts placeholder from context key', () => {
+  it.openspec('OA-187')('extracts placeholder from context key', () => {
     expect(extractSearchText('Effective Date > [Fill in]')).toBe('[Fill in]');
   });
 
-  it('strips #N suffix from nth key', () => {
+  it.openspec('OA-187')('strips #N suffix from nth key', () => {
     expect(extractSearchText('Party Name:#1')).toBe('Party Name:');
   });
 
-  it('strips #N for multi-digit N', () => {
+  it.openspec('OA-187')('strips #N for multi-digit N', () => {
     expect(extractSearchText('Item:#12')).toBe('Item:');
   });
 
-  it('leaves #0 alone (not valid nth)', () => {
+  it.openspec('OA-187')('leaves #0 alone (not valid nth)', () => {
     expect(extractSearchText('text#0')).toBe('text#0');
   });
 });

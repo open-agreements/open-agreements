@@ -35,14 +35,14 @@ describe('FilesystemProvider', () => {
     expect(provider.exists('forms')).toBe(true);
   });
 
-  it('writeFile and readTextFile round-trip correctly', () => {
+  it.openspec('OA-212')('writeFile and readTextFile round-trip correctly', () => {
     const { provider } = createFilesystemProvider();
     provider.mkdir('drafts');
     provider.writeFile('drafts/test.txt', 'hello world');
     expect(provider.readTextFile('drafts/test.txt')).toBe('hello world');
   });
 
-  it('readFile returns a Buffer', () => {
+  it.openspec('OA-212')('readFile returns a Buffer', () => {
     const { provider } = createFilesystemProvider();
     provider.mkdir('forms');
     provider.writeFile('forms/binary.bin', Buffer.from([0x00, 0x01, 0x02]));
@@ -51,13 +51,13 @@ describe('FilesystemProvider', () => {
     expect(content.length).toBe(3);
   });
 
-  it('mkdir with recursive creates nested directories', () => {
+  it.openspec('OA-212')('mkdir with recursive creates nested directories', () => {
     const { provider } = createFilesystemProvider();
     provider.mkdir('forms/corporate/sub', { recursive: true });
     expect(provider.exists('forms/corporate/sub')).toBe(true);
   });
 
-  it('readdir lists directory entries', () => {
+  it.openspec('OA-212')('readdir lists directory entries', () => {
     const { provider } = createFilesystemProvider();
     provider.mkdir('executed');
     provider.writeFile('executed/a.docx', 'a');
@@ -68,7 +68,7 @@ describe('FilesystemProvider', () => {
     expect(entries.every((e) => !e.isDirectory)).toBe(true);
   });
 
-  it('stat returns correct FileInfo', () => {
+  it.openspec('OA-212')('stat returns correct FileInfo', () => {
     const { provider } = createFilesystemProvider();
     provider.mkdir('archive');
     provider.writeFile('archive/contract.pdf', 'pdf-bytes');
@@ -79,7 +79,7 @@ describe('FilesystemProvider', () => {
     expect(info.mtime).toBeInstanceOf(Date);
   });
 
-  it('walk recursively finds all files', () => {
+  it.openspec('OA-212')('walk recursively finds all files', () => {
     const { provider } = createFilesystemProvider();
     provider.mkdir('forms/corporate', { recursive: true });
     provider.writeFile('forms/corporate/nda.docx', 'nda');
@@ -93,19 +93,19 @@ describe('FilesystemProvider', () => {
     expect(files.every((f) => !f.isDirectory)).toBe(true);
   });
 
-  it('walk returns empty array for ENOENT', () => {
+  it.openspec('OA-212')('walk returns empty array for ENOENT', () => {
     const { provider } = createFilesystemProvider();
     expect(provider.walk('nonexistent')).toEqual([]);
   });
 });
 
 describe('MemoryProvider', () => {
-  it('exists returns false for missing paths', () => {
+  it.openspec('OA-213')('exists returns false for missing paths', () => {
     const { provider } = createMemoryProvider();
     expect(provider.exists('forms')).toBe(false);
   });
 
-  it('seed creates file and parent directories', () => {
+  it.openspec('OA-213')('seed creates file and parent directories', () => {
     const { provider } = createMemoryProvider();
     provider.seed('forms/corporate/nda.docx', 'NDA content');
     expect(provider.exists('forms')).toBe(true);
@@ -114,19 +114,19 @@ describe('MemoryProvider', () => {
     expect(provider.readTextFile('forms/corporate/nda.docx')).toBe('NDA content');
   });
 
-  it('writeFile and readTextFile round-trip', () => {
+  it.openspec('OA-213')('writeFile and readTextFile round-trip', () => {
     const { provider } = createMemoryProvider();
     provider.mkdir('drafts');
     provider.writeFile('drafts/test.txt', 'hello');
     expect(provider.readTextFile('drafts/test.txt')).toBe('hello');
   });
 
-  it('readFile throws ENOENT for missing files', () => {
+  it.openspec('OA-213')('readFile throws ENOENT for missing files', () => {
     const { provider } = createMemoryProvider();
     expect(() => provider.readFile('missing.txt')).toThrow(/ENOENT/);
   });
 
-  it('mkdir with recursive creates nested directories', () => {
+  it.openspec('OA-213')('mkdir with recursive creates nested directories', () => {
     const { provider } = createMemoryProvider();
     provider.mkdir('a/b/c', { recursive: true });
     expect(provider.exists('a')).toBe(true);
@@ -134,7 +134,7 @@ describe('MemoryProvider', () => {
     expect(provider.exists('a/b/c')).toBe(true);
   });
 
-  it('readdir lists files and subdirectories', () => {
+  it.openspec('OA-213')('readdir lists files and subdirectories', () => {
     const { provider } = createMemoryProvider();
     provider.seed('forms/corporate/nda.docx', 'nda');
     provider.seed('forms/finance/safe.docx', 'safe');
@@ -151,7 +151,7 @@ describe('MemoryProvider', () => {
     expect(files).toEqual(['readme.md']);
   });
 
-  it('stat returns correct info for files and directories', () => {
+  it.openspec('OA-213')('stat returns correct info for files and directories', () => {
     const { provider } = createMemoryProvider();
     provider.mkdir('executed');
     provider.seed('executed/signed.pdf', 'pdf-data');
@@ -165,12 +165,12 @@ describe('MemoryProvider', () => {
     expect(fileStat.size).toBe(Buffer.from('pdf-data').length);
   });
 
-  it('stat throws ENOENT for missing paths', () => {
+  it.openspec('OA-213')('stat throws ENOENT for missing paths', () => {
     const { provider } = createMemoryProvider();
     expect(() => provider.stat('nope')).toThrow(/ENOENT/);
   });
 
-  it('walk recursively finds all files', () => {
+  it.openspec('OA-213')('walk recursively finds all files', () => {
     const { provider } = createMemoryProvider();
     provider.seed('forms/corporate/nda.docx', 'nda');
     provider.seed('forms/finance/safe.docx', 'safe');
@@ -185,14 +185,14 @@ describe('MemoryProvider', () => {
     ]);
   });
 
-  it('walk returns empty for nonexistent directory', () => {
+  it.openspec('OA-213')('walk returns empty for nonexistent directory', () => {
     const { provider } = createMemoryProvider();
     expect(provider.walk('nonexistent')).toEqual([]);
   });
 });
 
 describe('MemoryProvider works with initializeWorkspace', () => {
-  it('can initialize a workspace entirely in memory', async () => {
+  it.openspec('OA-213')('can initialize a workspace entirely in memory', async () => {
     const { initializeWorkspace } = await import('../src/core/workspace-structure.js');
     const provider = new MemoryProvider('/mem-ws');
     const result = initializeWorkspace('/mem-ws', { agents: ['claude'] }, provider);

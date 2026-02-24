@@ -57,7 +57,7 @@ function getTableRowsAsCellText(docxPath: string): string[][][] {
 }
 
 describe('closing-checklist rendering', () => {
-  it('renders stage-first checklist rows with linked items and unlinked fallbacks', async () => {
+  it.openspec('OA-175')('renders stage-first checklist rows with linked items and unlinked fallbacks', async () => {
     const templateDir = findTemplateDir('closing-checklist');
     expect(templateDir).toBeTruthy();
 

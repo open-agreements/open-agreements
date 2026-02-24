@@ -21,7 +21,7 @@ afterEach(() => {
 });
 
 describe('convention config', () => {
-  it('defaultConventions returns valid config', () => {
+  it.openspec('OA-202')('defaultConventions returns valid config', () => {
     const config = defaultConventions();
     expect(config.schema_version).toBe(1);
     expect(config.executed_marker.pattern).toBe('_executed');
@@ -29,7 +29,7 @@ describe('convention config', () => {
     expect(config.lifecycle.applicable_domains).toContain('forms');
   });
 
-  it('write and load round-trip with MemoryProvider', () => {
+  it.openspec('OA-202')('write and load round-trip with MemoryProvider', () => {
     const provider = new MemoryProvider('/test');
     const config = defaultConventions();
     config.naming.style = 'kebab-case';
@@ -40,13 +40,13 @@ describe('convention config', () => {
     expect(loaded.schema_version).toBe(1);
   });
 
-  it('loadConventions returns defaults when file is missing', () => {
+  it.openspec('OA-202')('loadConventions returns defaults when file is missing', () => {
     const provider = new MemoryProvider('/test');
     const config = loadConventions(provider);
     expect(config).toEqual(defaultConventions());
   });
 
-  it('write and load round-trip with FilesystemProvider', () => {
+  it.openspec('OA-202')('write and load round-trip with FilesystemProvider', () => {
     const root = mkdtempSync(join(tmpdir(), 'oa-conv-'));
     tempDirs.push(root);
     const provider = new FilesystemProvider(root);
@@ -60,13 +60,13 @@ describe('convention config', () => {
 });
 
 describe('convention scanner', () => {
-  it('returns defaults for empty workspace', () => {
+  it.openspec('OA-203')('returns defaults for empty workspace', () => {
     const provider = new MemoryProvider('/test');
     const config = scanExistingConventions(provider);
     expect(config).toEqual(defaultConventions());
   });
 
-  it('returns defaults when fewer than 5 files exist', () => {
+  it.openspec('OA-203')('returns defaults when fewer than 5 files exist', () => {
     const provider = new MemoryProvider('/test');
     provider.seed('contracts/nda.docx', 'a');
     provider.seed('contracts/msa.docx', 'b');
@@ -74,7 +74,7 @@ describe('convention scanner', () => {
     expect(config.executed_marker.pattern).toBe('_executed');
   });
 
-  it('detects _executed marker pattern from majority of files', () => {
+  it.openspec('OA-203')('detects _executed marker pattern from majority of files', () => {
     const provider = new MemoryProvider('/test');
     provider.seed('executed/nda_executed.docx', 'a');
     provider.seed('executed/msa_executed.docx', 'b');
@@ -87,7 +87,7 @@ describe('convention scanner', () => {
     expect(config.executed_marker.location).toBe('before_extension');
   });
 
-  it('detects (fully executed) parenthetical marker', () => {
+  it.openspec('OA-203')('detects (fully executed) parenthetical marker', () => {
     const provider = new MemoryProvider('/test');
     provider.seed('contracts/NDA (fully executed).pdf', 'a');
     provider.seed('contracts/MSA (fully executed).pdf', 'b');
@@ -100,7 +100,7 @@ describe('convention scanner', () => {
     expect(config.executed_marker.location).toBe('in_parentheses');
   });
 
-  it('detects snake_case naming style', () => {
+  it.openspec('OA-203')('detects snake_case naming style', () => {
     const provider = new MemoryProvider('/test');
     provider.seed('docs/company_nda_v2.docx', 'a');
     provider.seed('docs/partner_msa_final.docx', 'b');
@@ -112,7 +112,7 @@ describe('convention scanner', () => {
     expect(config.naming.style).toBe('snake_case');
   });
 
-  it('detects kebab-case naming style', () => {
+  it.openspec('OA-203')('detects kebab-case naming style', () => {
     const provider = new MemoryProvider('/test');
     provider.seed('docs/company-nda-v2.docx', 'a');
     provider.seed('docs/partner-msa-final.docx', 'b');
@@ -124,7 +124,7 @@ describe('convention scanner', () => {
     expect(config.naming.style).toBe('kebab-case');
   });
 
-  it('classifies asset-like folders separately', () => {
+  it.openspec('OA-203')('classifies asset-like folders separately', () => {
     const provider = new MemoryProvider('/test');
     provider.mkdir('Logos');
     provider.mkdir('Presentations');
@@ -143,7 +143,7 @@ describe('convention scanner', () => {
 });
 
 describe('convention-aware lint', () => {
-  it('uses default marker when no conventions file exists', () => {
+  it.openspec('OA-204')('uses default marker when no conventions file exists', () => {
     const root = mkdtempSync(join(tmpdir(), 'oa-lint-conv-'));
     tempDirs.push(root);
     initializeWorkspace(root);
@@ -157,7 +157,7 @@ describe('convention-aware lint', () => {
     expect(report.findings.some((f) => f.code === 'missing-executed-marker')).toBe(true);
   });
 
-  it('uses custom marker from conventions config', () => {
+  it.openspec('OA-204')('uses custom marker from conventions config', () => {
     const provider = new MemoryProvider('/test');
     initializeWorkspace('/test', {}, provider);
 
@@ -180,7 +180,7 @@ describe('convention-aware lint', () => {
 });
 
 describe('convention-aware indexer', () => {
-  it('hasExecutedMarker accepts custom pattern', () => {
+  it.openspec('OA-205')('hasExecutedMarker accepts custom pattern', () => {
     expect(hasExecutedMarker('contract_signed.docx', '_signed')).toBe(true);
     expect(hasExecutedMarker('contract_executed.docx', '_signed')).toBe(false);
     expect(hasExecutedMarker('NDA (fully executed).pdf', '(fully executed)')).toBe(true);
@@ -188,7 +188,7 @@ describe('convention-aware indexer', () => {
 });
 
 describe('init generates WORKSPACE.md and FOLDER.md', () => {
-  it('creates documentation files on empty workspace', () => {
+  it.openspec('OA-206')('creates documentation files on empty workspace', () => {
     const provider = new MemoryProvider('/test');
     const result = initializeWorkspace('/test', {}, provider);
 
@@ -209,7 +209,7 @@ describe('init generates WORKSPACE.md and FOLDER.md', () => {
     expect(folderMd).toContain('Fully signed');
   });
 
-  it('creates conventions.yaml during init', () => {
+  it.openspec('OA-206')('creates conventions.yaml during init', () => {
     const provider = new MemoryProvider('/test');
     initializeWorkspace('/test', {}, provider);
 
@@ -218,7 +218,7 @@ describe('init generates WORKSPACE.md and FOLDER.md', () => {
     expect(config.schema_version).toBe(1);
   });
 
-  it('scans conventions on non-empty workspace', () => {
+  it.openspec('OA-206')('scans conventions on non-empty workspace', () => {
     const provider = new MemoryProvider('/test');
     // Pre-seed with snake_case files
     for (let i = 0; i < 6; i++) {
@@ -232,18 +232,18 @@ describe('init generates WORKSPACE.md and FOLDER.md', () => {
 });
 
 describe('partially_executed marker detection', () => {
-  it('hasPartiallyExecutedMarker detects _partially_executed suffix', () => {
+  it.openspec('OA-207')('hasPartiallyExecutedMarker detects _partially_executed suffix', () => {
     expect(hasPartiallyExecutedMarker('nda_partially_executed.docx')).toBe(true);
     expect(hasPartiallyExecutedMarker('nda_executed.docx')).toBe(false);
     expect(hasPartiallyExecutedMarker('nda.docx')).toBe(false);
   });
 
-  it('hasExecutedMarker returns false for _partially_executed files', () => {
+  it.openspec('OA-207')('hasExecutedMarker returns false for _partially_executed files', () => {
     expect(hasExecutedMarker('nda_partially_executed.docx')).toBe(false);
     expect(hasExecutedMarker('nda_executed.docx')).toBe(true);
   });
 
-  it('collectWorkspaceDocuments assigns partially_executed status', () => {
+  it.openspec('OA-207')('collectWorkspaceDocuments assigns partially_executed status', () => {
     const provider = new MemoryProvider('/test');
     initializeWorkspace('/test', {}, provider);
 
@@ -271,7 +271,7 @@ describe('partially_executed marker detection', () => {
     expect(pending.partially_executed).toBe(false);
   });
 
-  it('lint does not warn about missing marker for partially_executed files in executed/', () => {
+  it.openspec('OA-207')('lint does not warn about missing marker for partially_executed files in executed/', () => {
     const provider = new MemoryProvider('/test');
     initializeWorkspace('/test', {}, provider);
 
@@ -283,7 +283,7 @@ describe('partially_executed marker detection', () => {
     expect(missingMarker.length).toBe(0);
   });
 
-  it('scanner detects _partially_executed as a distinct candidate', () => {
+  it.openspec('OA-207')('scanner detects _partially_executed as a distinct candidate', () => {
     const provider = new MemoryProvider('/test');
     provider.seed('contracts/nda_partially_executed.docx', 'a');
     provider.seed('contracts/msa_partially_executed.docx', 'b');
@@ -298,7 +298,7 @@ describe('partially_executed marker detection', () => {
 });
 
 describe('title-case-spaces naming detection', () => {
-  it('detects Title Case With Spaces naming style', () => {
+  it.openspec('OA-203')('detects Title Case With Spaces naming style', () => {
     const provider = new MemoryProvider('/test');
     provider.seed('docs/Board Meeting Minutes.docx', 'a');
     provider.seed('docs/Employee Offer Letter.docx', 'b');
@@ -311,7 +311,7 @@ describe('title-case-spaces naming detection', () => {
     expect(config.naming.separator).toBe(' ');
   });
 
-  it('does not detect title-case-spaces when files have dash separators', () => {
+  it.openspec('OA-203')('does not detect title-case-spaces when files have dash separators', () => {
     const provider = new MemoryProvider('/test');
     provider.seed('docs/NDA - Acme Corp.docx', 'a');
     provider.seed('docs/MSA - Partner Inc.docx', 'b');
@@ -325,7 +325,7 @@ describe('title-case-spaces naming detection', () => {
 });
 
 describe('duplicate-file lint rule', () => {
-  it('detects copy-pattern duplicates', () => {
+  it.openspec('OA-208')('detects copy-pattern duplicates', () => {
     const provider = new MemoryProvider('/test');
     initializeWorkspace('/test', {}, provider);
 
@@ -338,7 +338,7 @@ describe('duplicate-file lint rule', () => {
     expect(dups.length).toBe(2);
   });
 
-  it('detects timestamp-suffixed duplicates', () => {
+  it.openspec('OA-208')('detects timestamp-suffixed duplicates', () => {
     const provider = new MemoryProvider('/test');
     initializeWorkspace('/test', {}, provider);
 
@@ -351,7 +351,7 @@ describe('duplicate-file lint rule', () => {
     expect(dups.length).toBe(2);
   });
 
-  it('does not flag unrelated files as duplicates', () => {
+  it.openspec('OA-208')('does not flag unrelated files as duplicates', () => {
     const provider = new MemoryProvider('/test');
     initializeWorkspace('/test', {}, provider);
 
@@ -366,7 +366,7 @@ describe('duplicate-file lint rule', () => {
 });
 
 describe('root-orphan lint rule', () => {
-  it('warns about files at workspace root', () => {
+  it.openspec('OA-209')('warns about files at workspace root', () => {
     const provider = new MemoryProvider('/test');
     initializeWorkspace('/test', {}, provider);
 
@@ -378,7 +378,7 @@ describe('root-orphan lint rule', () => {
     expect(orphans[0].path).toBe('stray_document.docx');
   });
 
-  it('does not warn about known config files', () => {
+  it.openspec('OA-209')('does not warn about known config files', () => {
     const provider = new MemoryProvider('/test');
     initializeWorkspace('/test', {}, provider);
 
@@ -390,7 +390,7 @@ describe('root-orphan lint rule', () => {
 });
 
 describe('cross-contamination lint rule', () => {
-  it('warns when a high-confidence compound phrase suggests wrong domain folder', () => {
+  it.openspec('OA-210')('warns when a high-confidence compound phrase suggests wrong domain folder', () => {
     const provider = new MemoryProvider('/test');
     initializeWorkspace('/test', {}, provider);
 
@@ -409,7 +409,7 @@ describe('cross-contamination lint rule', () => {
     expect(crossFindings[0].message).toContain('Employment');
   });
 
-  it('does not flag generic terms like agreement or policy', () => {
+  it.openspec('OA-210')('does not flag generic terms like agreement or policy', () => {
     const provider = new MemoryProvider('/test');
     initializeWorkspace('/test', {}, provider);
 
@@ -426,7 +426,7 @@ describe('cross-contamination lint rule', () => {
     expect(crossFindings.length).toBe(0);
   });
 
-  it('does not run when no non-lifecycle domain folders are configured', () => {
+  it.openspec('OA-210')('does not run when no non-lifecycle domain folders are configured', () => {
     const provider = new MemoryProvider('/test');
     initializeWorkspace('/test', {}, provider);
 
@@ -441,7 +441,7 @@ describe('cross-contamination lint rule', () => {
 });
 
 describe('backward compatibility', () => {
-  it('init creates config files but not lifecycle directories', () => {
+  it.openspec('OA-211')('init creates config files but not lifecycle directories', () => {
     const root = mkdtempSync(join(tmpdir(), 'oa-compat-'));
     tempDirs.push(root);
 
@@ -453,7 +453,7 @@ describe('backward compatibility', () => {
     expect(result.createdDirectories).not.toContain('executed');
   });
 
-  it('init is idempotent with conventions', () => {
+  it.openspec('OA-211')('init is idempotent with conventions', () => {
     const root = mkdtempSync(join(tmpdir(), 'oa-idem-'));
     tempDirs.push(root);
 
