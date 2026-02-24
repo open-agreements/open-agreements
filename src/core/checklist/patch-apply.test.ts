@@ -127,8 +127,8 @@ function buildChecklist(): Record<string, unknown> {
     },
     action_items: {},
     issues: {
-      'iss-escrow': {
-        issue_id: 'iss-escrow',
+      'issue-escrow': {
+        issue_id: 'issue-escrow',
         title: 'Escrow release mechanics',
         summary: 'Open drafting point.',
         status: 'OPEN',
@@ -151,7 +151,7 @@ describe('applyChecklistPatch', () => {
       patch_id: 'patch_apply_001',
       expected_revision: 7,
       operations: [
-        { op: 'replace', path: '/issues/iss-escrow/status', value: 'CLOSED' },
+        { op: 'replace', path: '/issues/issue-escrow/status', value: 'CLOSED' },
         { op: 'replace', path: '/checklist_entries/entry-escrow/status', value: 'PARTIALLY_SIGNED' },
       ],
     };
@@ -199,12 +199,12 @@ describe('applyChecklistPatch', () => {
     });
 
     await allureStep('And patch mutations are reflected in returned checklist', async () => {
-      expect(applied.checklist.issues['iss-escrow']?.status).toBe('CLOSED');
+      expect(applied.checklist.issues['issue-escrow']?.status).toBe('CLOSED');
       expect(applied.checklist.checklist_entries['entry-escrow']?.status).toBe('PARTIALLY_SIGNED');
     });
 
     await allureStep('And source checklist input remains unchanged', async () => {
-      expect((checklist.issues as Record<string, { status: string }>)['iss-escrow']?.status).toBe('OPEN');
+      expect((checklist.issues as Record<string, { status: string }>)['issue-escrow']?.status).toBe('OPEN');
     });
   });
 
@@ -213,7 +213,7 @@ describe('applyChecklistPatch', () => {
     const patch = {
       patch_id: 'patch_apply_002',
       expected_revision: 7,
-      operations: [{ op: 'replace', path: '/issues/iss-escrow/status', value: 'CLOSED' }],
+      operations: [{ op: 'replace', path: '/issues/issue-escrow/status', value: 'CLOSED' }],
     };
 
     const validation = await validateWithEvidence('idempotent-replay-initial-validation', {
@@ -279,7 +279,7 @@ describe('applyChecklistPatch', () => {
     const patchV1 = {
       patch_id: 'patch_apply_003',
       expected_revision: 7,
-      operations: [{ op: 'replace', path: '/issues/iss-escrow/status', value: 'CLOSED' }],
+      operations: [{ op: 'replace', path: '/issues/issue-escrow/status', value: 'CLOSED' }],
     };
 
     const validationV1 = await validateWithEvidence('patch-id-conflict-validation-v1', {
@@ -318,7 +318,7 @@ describe('applyChecklistPatch', () => {
     const patchV2 = {
       patch_id: 'patch_apply_003',
       expected_revision: 8,
-      operations: [{ op: 'replace', path: '/issues/iss-escrow/status', value: 'OPEN' }],
+      operations: [{ op: 'replace', path: '/issues/issue-escrow/status', value: 'OPEN' }],
     };
 
     const validationV2 = await validateWithEvidence('patch-id-conflict-validation-v2', {
@@ -365,7 +365,7 @@ describe('applyChecklistPatch', () => {
         patch: {
           patch_id: 'patch_apply_004',
           expected_revision: 7,
-          operations: [{ op: 'replace', path: '/issues/iss-escrow/status', value: 'CLOSED' }],
+          operations: [{ op: 'replace', path: '/issues/issue-escrow/status', value: 'CLOSED' }],
         },
       },
     });
@@ -384,7 +384,7 @@ describe('applyChecklistPatch', () => {
     const validatedPatch = {
       patch_id: 'patch_apply_005',
       expected_revision: 7,
-      operations: [{ op: 'replace', path: '/issues/iss-escrow/status', value: 'CLOSED' }],
+      operations: [{ op: 'replace', path: '/issues/issue-escrow/status', value: 'CLOSED' }],
     };
 
     const validation = await validateWithEvidence('validation-mismatch-validation', {
@@ -405,7 +405,7 @@ describe('applyChecklistPatch', () => {
     const tamperedPatch = {
       patch_id: 'patch_apply_005',
       expected_revision: 7,
-      operations: [{ op: 'replace', path: '/issues/iss-escrow/status', value: 'OPEN' }],
+      operations: [{ op: 'replace', path: '/issues/issue-escrow/status', value: 'OPEN' }],
     };
 
     const result = await applyWithEvidence('validation-mismatch-apply', {
@@ -432,7 +432,7 @@ describe('applyChecklistPatch', () => {
     const patch = {
       patch_id: 'patch_apply_006',
       expected_revision: 7,
-      operations: [{ op: 'replace', path: '/issues/iss-escrow/status', value: 'CLOSED' }],
+      operations: [{ op: 'replace', path: '/issues/issue-escrow/status', value: 'CLOSED' }],
     };
 
     const validation = await validateWithEvidence('stale-revision-validation', {
@@ -473,14 +473,14 @@ describe('applyChecklistPatch', () => {
     const validatedChecklist = {
       ...buildChecklist(),
       issues: {
-        'iss-1': {
-          issue_id: 'iss-1',
+        'issue-1': {
+          issue_id: 'issue-1',
           title: 'One',
           status: 'OPEN',
           related_document_ids: ['doc-escrow'],
         },
-        'iss-2': {
-          issue_id: 'iss-2',
+        'issue-2': {
+          issue_id: 'issue-2',
           title: 'Two',
           status: 'OPEN',
           related_document_ids: ['doc-escrow'],
@@ -492,8 +492,8 @@ describe('applyChecklistPatch', () => {
       patch_id: 'patch_apply_007',
       expected_revision: 7,
       operations: [
-        { op: 'replace', path: '/issues/iss-1/status', value: 'CLOSED' },
-        { op: 'replace', path: '/issues/iss-2/status', value: 'CLOSED' },
+        { op: 'replace', path: '/issues/issue-1/status', value: 'CLOSED' },
+        { op: 'replace', path: '/issues/issue-2/status', value: 'CLOSED' },
       ],
     };
 
@@ -515,8 +515,8 @@ describe('applyChecklistPatch', () => {
     const applyChecklistState = {
       ...buildChecklist(),
       issues: {
-        'iss-1': {
-          issue_id: 'iss-1',
+        'issue-1': {
+          issue_id: 'issue-1',
           title: 'One',
           status: 'OPEN',
           related_document_ids: ['doc-escrow'],
@@ -540,7 +540,7 @@ describe('applyChecklistPatch', () => {
         throw new Error('Expected apply to fail when runtime targets drift.');
       }
       expect(result.error_code).toBe('APPLY_OPERATION_FAILED');
-      expect((applyChecklistState.issues as Record<string, { status: string }>)['iss-1']?.status).toBe('OPEN');
+      expect((applyChecklistState.issues as Record<string, { status: string }>)['issue-1']?.status).toBe('OPEN');
     });
   });
 
@@ -548,7 +548,7 @@ describe('applyChecklistPatch', () => {
     const patchWithout = ChecklistPatchEnvelopeSchema.parse({
       patch_id: 'patch_hash_test',
       expected_revision: 0,
-      operations: [{ op: 'replace', path: '/issues/iss-1/status', value: 'CLOSED' }],
+      operations: [{ op: 'replace', path: '/issues/issue-1/status', value: 'CLOSED' }],
     });
 
     const patchWith = ChecklistPatchEnvelopeSchema.parse({
@@ -556,7 +556,7 @@ describe('applyChecklistPatch', () => {
       expected_revision: 0,
       operations: [{
         op: 'replace',
-        path: '/issues/iss-1/status',
+        path: '/issues/issue-1/status',
         value: 'CLOSED',
         rationale: 'Confirmed by counsel',
         source: 'outlook:AAMkAGI2',
@@ -575,7 +575,7 @@ describe('applyChecklistPatch', () => {
       expected_revision: 7,
       operations: [{
         op: 'replace' as const,
-        path: '/issues/iss-escrow/status',
+        path: '/issues/issue-escrow/status',
         value: 'CLOSED',
         rationale: 'Counsel confirmed in email thread',
         source: 'outlook:AAMkAGI2',
@@ -625,7 +625,7 @@ describe('applyChecklistPatch', () => {
       patch_id: 'patch_apply_008',
       expected_revision: 7,
       mode: 'PROPOSED',
-      operations: [{ op: 'replace', path: '/issues/iss-escrow/status', value: 'CLOSED' }],
+      operations: [{ op: 'replace', path: '/issues/issue-escrow/status', value: 'CLOSED' }],
     };
 
     const validation = await validateWithEvidence('proposed-mode-validation', {
@@ -661,7 +661,7 @@ describe('applyChecklistPatch', () => {
       expect(result.mode).toBe('PROPOSED');
       expect(result.applied).toBe(false);
       expect(result.new_revision).toBe(7);
-      expect(result.checklist.issues['iss-escrow']?.status).toBe('OPEN');
+      expect(result.checklist.issues['issue-escrow']?.status).toBe('OPEN');
     });
 
     if (!result.ok) {

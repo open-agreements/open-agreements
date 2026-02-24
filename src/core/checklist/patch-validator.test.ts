@@ -69,8 +69,8 @@ describe('validateChecklistPatch', () => {
     },
     action_items: {},
     issues: {
-      'iss-price': {
-        issue_id: 'iss-price',
+      'issue-price': {
+        issue_id: 'issue-price',
         title: 'Purchase price adjustment language',
         status: 'OPEN',
         related_document_ids: ['doc-spa'],
@@ -87,8 +87,8 @@ describe('validateChecklistPatch', () => {
         patch_id: 'patch_001',
         expected_revision: 12,
         operations: [
-          { op: 'replace', path: '/issues/iss-price/status', value: 'CLOSED' },
-          { op: 'add', path: '/issues/iss-price/summary', value: 'Resolved by counsel confirmation in email thread.' },
+          { op: 'replace', path: '/issues/issue-price/status', value: 'CLOSED' },
+          { op: 'add', path: '/issues/issue-price/summary', value: 'Resolved by counsel confirmation in email thread.' },
         ],
       },
     });
@@ -110,8 +110,8 @@ describe('validateChecklistPatch', () => {
     });
 
     await allureStep('And dry-run does not mutate the source checklist input', async () => {
-      expect(baseChecklist.issues['iss-price']?.status).toBe('OPEN');
-      expect((baseChecklist.issues['iss-price'] as Record<string, unknown>)?.summary).toBeUndefined();
+      expect(baseChecklist.issues['issue-price']?.status).toBe('OPEN');
+      expect((baseChecklist.issues['issue-price'] as Record<string, unknown>)?.summary).toBeUndefined();
     });
 
     const artifact = await allureStep('When validation artifact is fetched by validation_id', async () =>
@@ -135,7 +135,7 @@ describe('validateChecklistPatch', () => {
         patch_id: 'patch_002',
         expected_revision: 12,
         operations: [
-          { op: 'replace', path: '/issues_by_id/iss-price/status', value: 'CLOSED' },
+          { op: 'replace', path: '/issues_by_id/issue-price/status', value: 'CLOSED' },
         ],
       },
     });
@@ -162,7 +162,7 @@ describe('validateChecklistPatch', () => {
       patch: {
         patch_id: 'patch_003',
         expected_revision: 12,
-        operations: [{ op: 'replace', path: '/issues/iss-price/status', value: 'CLOSED' }],
+        operations: [{ op: 'replace', path: '/issues/issue-price/status', value: 'CLOSED' }],
       },
     });
 
@@ -188,7 +188,7 @@ describe('validateChecklistPatch', () => {
         patch_id: 'patch_004',
         expected_revision: 12,
         operations: [
-          { op: 'replace', path: '/issues/iss-price/status', value: 'INVALID_STATUS' },
+          { op: 'replace', path: '/issues/issue-price/status', value: 'INVALID_STATUS' },
         ],
       },
     });
@@ -269,7 +269,7 @@ describe('validateChecklistPatch', () => {
         patch_id: 'patch_final_proto',
         expected_revision: 12,
         operations: [
-          { op: 'add', path: '/issues/iss-price/__proto__', value: 'bad' },
+          { op: 'add', path: '/issues/issue-price/__proto__', value: 'bad' },
         ],
       },
     });
@@ -298,9 +298,9 @@ describe('validateChecklistPatch', () => {
         operations: [
           {
             op: 'add',
-            path: '/issues/iss-new',
+            path: '/issues/issue-new',
             value: {
-              issue_id: 'iss-new',
+              issue_id: 'issue-new',
               title: 'New issue added via patch',
               status: 'OPEN',
               related_document_ids: ['doc-spa'],
@@ -324,7 +324,7 @@ describe('validateChecklistPatch', () => {
         patch_id: 'patch_replace_key',
         expected_revision: 12,
         operations: [
-          { op: 'replace', path: '/issues/iss-price/status', value: 'CLOSED' },
+          { op: 'replace', path: '/issues/issue-price/status', value: 'CLOSED' },
         ],
       },
     });
@@ -343,7 +343,7 @@ describe('validateChecklistPatch', () => {
         patch_id: 'patch_remove_key',
         expected_revision: 12,
         operations: [
-          { op: 'remove', path: '/issues/iss-price' },
+          { op: 'remove', path: '/issues/issue-price' },
         ],
       },
     });
@@ -364,7 +364,7 @@ describe('validateChecklistPatch', () => {
         operations: [
           {
             op: 'add',
-            path: '/issues/iss-price/citations/-',
+            path: '/issues/issue-price/citations/-',
             value: { text: 'Counsel confirmed in email' },
           },
         ],
@@ -418,7 +418,7 @@ describe('validateChecklistPatch', () => {
       patch: {
         patch_id: 'patch_005',
         expected_revision: 12,
-        operations: [{ op: 'replace', path: '/issues/iss-price/status', value: 'CLOSED' }],
+        operations: [{ op: 'replace', path: '/issues/issue-price/status', value: 'CLOSED' }],
       },
     });
 

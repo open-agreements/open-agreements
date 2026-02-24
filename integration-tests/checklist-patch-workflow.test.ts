@@ -123,8 +123,8 @@ function baseChecklist(): Record<string, unknown> {
     },
     action_items: {},
     issues: {
-      'iss-escrow': {
-        issue_id: 'iss-escrow',
+      'issue-escrow': {
+        issue_id: 'issue-escrow',
         title: 'Escrow release mechanics',
         status: 'OPEN',
         related_document_ids: ['doc-escrow'],
@@ -144,14 +144,14 @@ describe('checklist patch workflow (integration)', () => {
     const checklistForValidation = {
       ...baseChecklist(),
       issues: {
-        'iss-1': {
-          issue_id: 'iss-1',
+        'issue-1': {
+          issue_id: 'issue-1',
           title: 'Issue one',
           status: 'OPEN',
           related_document_ids: ['doc-escrow'],
         },
-        'iss-2': {
-          issue_id: 'iss-2',
+        'issue-2': {
+          issue_id: 'issue-2',
           title: 'Issue two',
           status: 'OPEN',
           related_document_ids: ['doc-escrow'],
@@ -163,8 +163,8 @@ describe('checklist patch workflow (integration)', () => {
       patch_id: 'patch_integration_atomic_1',
       expected_revision: 4,
       operations: [
-        { op: 'replace', path: '/issues/iss-1/status', value: 'CLOSED' },
-        { op: 'replace', path: '/issues/iss-2/status', value: 'CLOSED' },
+        { op: 'replace', path: '/issues/issue-1/status', value: 'CLOSED' },
+        { op: 'replace', path: '/issues/issue-2/status', value: 'CLOSED' },
       ],
     };
 
@@ -204,8 +204,8 @@ describe('checklist patch workflow (integration)', () => {
     const driftedChecklist = {
       ...baseChecklist(),
       issues: {
-        'iss-1': {
-          issue_id: 'iss-1',
+        'issue-1': {
+          issue_id: 'issue-1',
           title: 'Issue one',
           status: 'OPEN',
           related_document_ids: ['doc-escrow'],
@@ -229,7 +229,7 @@ describe('checklist patch workflow (integration)', () => {
         throw new Error('Expected drifted apply to fail with APPLY_OPERATION_FAILED.');
       }
       expect(driftedApply.error_code).toBe('APPLY_OPERATION_FAILED');
-      expect((driftedChecklist.issues as Record<string, { status: string }>)['iss-1']?.status).toBe('OPEN');
+      expect((driftedChecklist.issues as Record<string, { status: string }>)['issue-1']?.status).toBe('OPEN');
     });
   });
 
@@ -239,7 +239,7 @@ describe('checklist patch workflow (integration)', () => {
       patch_id: 'patch_integration_idempotent_1',
       expected_revision: 7,
       operations: [
-        { op: 'replace', path: '/issues/iss-escrow/status', value: 'CLOSED' },
+        { op: 'replace', path: '/issues/issue-escrow/status', value: 'CLOSED' },
       ],
     };
 
@@ -303,7 +303,7 @@ describe('checklist patch workflow (integration)', () => {
       patch_id: 'patch_integration_idempotent_1',
       expected_revision: 8,
       operations: [
-        { op: 'replace', path: '/issues/iss-escrow/status', value: 'OPEN' },
+        { op: 'replace', path: '/issues/issue-escrow/status', value: 'OPEN' },
       ],
     };
 
@@ -352,10 +352,10 @@ describe('checklist patch workflow (integration)', () => {
         conversation_id: 'AAQkAGI2...',
       },
       operations: [
-        { op: 'replace', path: '/issues/iss-escrow/status', value: 'CLOSED' },
+        { op: 'replace', path: '/issues/issue-escrow/status', value: 'CLOSED' },
         {
           op: 'add',
-          path: '/issues/iss-escrow/citations/-',
+          path: '/issues/issue-escrow/citations/-',
           value: {
             text: "Opposing counsel replied 'I agree' to escrow release wording.",
             link: 'https://outlook.office365.com/mail/deeplink?ItemID=AAMkAGI2...',
@@ -409,8 +409,8 @@ describe('checklist patch workflow (integration)', () => {
       if (!applied.ok) {
         throw new Error('Expected apply to succeed for multi-operation source event patch.');
       }
-      expect(applied.checklist.issues['iss-escrow']?.status).toBe('CLOSED');
-      expect(applied.checklist.issues['iss-escrow']?.citations[0]?.text).toContain('I agree');
+      expect(applied.checklist.issues['issue-escrow']?.status).toBe('CLOSED');
+      expect(applied.checklist.issues['issue-escrow']?.citations[0]?.text).toContain('I agree');
       expect(applied.checklist.checklist_entries['entry-escrow']?.status).toBe('PARTIALLY_SIGNED');
       expect(applied.checklist.checklist_entries['entry-escrow']?.signatories[0]?.status).toBe('RECEIVED');
     });

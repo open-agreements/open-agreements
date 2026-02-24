@@ -123,8 +123,8 @@ describe('ClosingChecklistSchema v2', () => {
         },
       },
       issues: {
-        'iss-1': {
-          issue_id: 'iss-1',
+        'issue-1': {
+          issue_id: 'issue-1',
           title: 'Escrow release mechanics',
           status: 'OPEN',
           related_document_ids: ['escrow-agreement-executed'],
@@ -318,8 +318,8 @@ describe('ClosingChecklistSchema v2', () => {
           'doc-1': { document_id: 'doc-1', title: 'SPA' },
         },
         issues: {
-          'iss-1': {
-            issue_id: 'iss-1',
+          'issue-1': {
+            issue_id: 'issue-1',
             title: 'Issue',
             status: 'OPEN',
             related_document_ids: ['doc-2'],
@@ -461,7 +461,7 @@ describe('ClosingChecklistSchema v2', () => {
       'issue defaults payload',
       IssueSchema,
       {
-        issue_id: 'iss-1',
+        issue_id: 'issue-1',
         title: 'Issue',
         status: 'OPEN',
       },
@@ -507,8 +507,8 @@ describe('ClosingChecklistSchema v2', () => {
           },
         },
         issues: {
-          'iss-1': {
-            issue_id: 'iss-1',
+          'issue-1': {
+            issue_id: 'issue-1',
             title: 'Escrow issue',
             status: 'OPEN',
             related_document_ids: ['doc-1'],
