@@ -206,6 +206,87 @@ describe('validateChecklistPatch', () => {
     });
   });
 
+  it('rejects patches targeting __proto__ path', async () => {
+    const result = await validateWithEvidence('proto-pollution-path', {
+      checklist_id: 'ck_001',
+      checklist: baseChecklist,
+      current_revision: 12,
+      patch: {
+        patch_id: 'patch_proto',
+        expected_revision: 12,
+        operations: [
+          { op: 'add', path: '/__proto__/polluted', value: true },
+        ],
+      },
+    });
+
+    await allureStep('Then validation rejects dangerous __proto__ path', async () => {
+      expect(result.ok).toBe(false);
+    });
+
+    if (result.ok) {
+      throw new Error('Expected __proto__ path to be rejected.');
+    }
+
+    await allureStep('And diagnostics identify TARGET_PATH_INVALID', async () => {
+      expect(result.diagnostics[0]?.code).toBe('TARGET_PATH_INVALID');
+    });
+  });
+
+  it('rejects patches targeting constructor/prototype paths', async () => {
+    const constructorResult = await validateWithEvidence('constructor-pollution-path', {
+      checklist_id: 'ck_001',
+      checklist: baseChecklist,
+      current_revision: 12,
+      patch: {
+        patch_id: 'patch_constructor',
+        expected_revision: 12,
+        operations: [
+          { op: 'add', path: '/constructor/prototype', value: {} },
+        ],
+      },
+    });
+
+    await allureStep('Then validation rejects dangerous constructor path', async () => {
+      expect(constructorResult.ok).toBe(false);
+    });
+
+    if (constructorResult.ok) {
+      throw new Error('Expected constructor path to be rejected.');
+    }
+
+    await allureStep('And diagnostics identify TARGET_PATH_INVALID for constructor', async () => {
+      expect(constructorResult.diagnostics[0]?.code).toBe('TARGET_PATH_INVALID');
+    });
+  });
+
+  it('rejects patches with dangerous key as final token', async () => {
+    const result = await validateWithEvidence('final-token-proto', {
+      checklist_id: 'ck_001',
+      checklist: baseChecklist,
+      current_revision: 12,
+      patch: {
+        patch_id: 'patch_final_proto',
+        expected_revision: 12,
+        operations: [
+          { op: 'add', path: '/issues/0/__proto__', value: 'bad' },
+        ],
+      },
+    });
+
+    await allureStep('Then validation rejects dangerous final token', async () => {
+      expect(result.ok).toBe(false);
+    });
+
+    if (result.ok) {
+      throw new Error('Expected dangerous final token to be rejected.');
+    }
+
+    await allureStep('And diagnostics identify TARGET_PATH_INVALID', async () => {
+      expect(result.diagnostics[0]?.code).toBe('TARGET_PATH_INVALID');
+    });
+  });
+
   it.openspec('OA-201')('expires validation artifacts after TTL', async () => {
     await allureStep('Given validation artifact store is reset', async () => {
       setChecklistPatchValidationStore(null);
