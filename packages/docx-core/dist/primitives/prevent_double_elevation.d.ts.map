@@ -1,0 +1,1 @@
+{"version":3,"file":"prevent_double_elevation.d.ts","sourceRoot":"","sources":["../../src/primitives/prevent_double_elevation.ts"],"names":[],"mappings":"AAIA,MAAM,MAAM,4BAA4B,GAAG;IACzC,qBAAqB,EAAE,MAAM,CAAC;CAC/B,CAAC;AAyEF;;;;;;;;;;GAUG;AACH,wBAAgB,sBAAsB,CACpC,SAAS,EAAE,QAAQ,EACnB,OAAO,CAAC,EAAE;IAAE,cAAc,CAAC,EAAE,MAAM,EAAE,CAAA;CAAE,GACtC,4BAA4B,CAkF9B"}
