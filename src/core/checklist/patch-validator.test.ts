@@ -206,7 +206,7 @@ describe('validateChecklistPatch', () => {
     });
   });
 
-  it('expires validation artifacts after TTL', async () => {
+  it.openspec('OA-201')('expires validation artifacts after TTL', async () => {
     await allureStep('Given validation artifact store is reset', async () => {
       setChecklistPatchValidationStore(null);
     });

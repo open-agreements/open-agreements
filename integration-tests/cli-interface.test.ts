@@ -127,7 +127,7 @@ describe('CLI interface behavior', () => {
     expect(existsSync(outputPath)).toBe(true);
   });
 
-  it('fill command renders output DOCX for employment offer template', () => {
+  it.openspec('OA-155')('fill command renders output DOCX for employment offer template', () => {
     const outDir = mkdtempSync(join(tmpdir(), 'oa-cli-employment-fill-'));
     tempDirs.push(outDir);
     const outputPath = join(outDir, 'employment-offer.docx');
@@ -144,7 +144,7 @@ describe('CLI interface behavior', () => {
     expect(existsSync(outputPath)).toBe(true);
   });
 
-  it('fill command renders output DOCX for employee IP template', () => {
+  it.openspec('OA-155')('fill command renders output DOCX for employee IP template', () => {
     const outDir = mkdtempSync(join(tmpdir(), 'oa-cli-employment-ip-fill-'));
     tempDirs.push(outDir);
     const outputPath = join(outDir, 'employment-ip.docx');
@@ -161,7 +161,7 @@ describe('CLI interface behavior', () => {
     expect(existsSync(outputPath)).toBe(true);
   });
 
-  it('fill command renders output DOCX for confidentiality acknowledgement template', () => {
+  it.openspec('OA-155')('fill command renders output DOCX for confidentiality acknowledgement template', () => {
     const outDir = mkdtempSync(join(tmpdir(), 'oa-cli-employment-ack-fill-'));
     tempDirs.push(outDir);
     const outputPath = join(outDir, 'employment-confidentiality-ack.docx');
@@ -178,7 +178,7 @@ describe('CLI interface behavior', () => {
     expect(existsSync(outputPath)).toBe(true);
   });
 
-  it('fill command can emit employment memo JSON with disclaimer and jurisdiction warning when rule matches', () => {
+  it.openspec('OA-156')('fill command can emit employment memo JSON with disclaimer and jurisdiction warning when rule matches', () => {
     const outDir = mkdtempSync(join(tmpdir(), 'oa-cli-employment-memo-json-'));
     tempDirs.push(outDir);
 
@@ -218,7 +218,7 @@ describe('CLI interface behavior', () => {
     expect(memoText).not.toContain('best strategy');
   });
 
-  it('fill command does not fabricate jurisdiction warnings when no rule matches', () => {
+  it.openspec('OA-156')('fill command does not fabricate jurisdiction warnings when no rule matches', () => {
     const outDir = mkdtempSync(join(tmpdir(), 'oa-cli-employment-memo-no-match-'));
     tempDirs.push(outDir);
 
@@ -256,7 +256,7 @@ describe('CLI interface behavior', () => {
     expect(memo.findings.some((finding) => finding.category === 'jurisdiction_warning')).toBe(false);
   });
 
-  it('fill command can emit employment memo Markdown with disclaimer', () => {
+  it.openspec('OA-156')('fill command can emit employment memo Markdown with disclaimer', () => {
     const outDir = mkdtempSync(join(tmpdir(), 'oa-cli-employment-memo-md-'));
     tempDirs.push(outDir);
 

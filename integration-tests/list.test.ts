@@ -38,23 +38,23 @@ describe('list --json envelope', () => {
     available = false;
   }
 
-  it('has schema_version 1', () => {
+  it.openspec('OA-158')('has schema_version 1', () => {
     if (!available || !parsed) return;
     expect(parsed.schema_version).toBe(1);
   });
 
-  it('has a cli_version string', () => {
+  it.openspec('OA-158')('has a cli_version string', () => {
     if (!available || !parsed) return;
     expect(typeof parsed.cli_version).toBe('string');
     expect(parsed.cli_version.length).toBeGreaterThan(0);
   });
 
-  it('has items as an array', () => {
+  it.openspec('OA-158')('has items as an array', () => {
     if (!available || !parsed) return;
     expect(Array.isArray(parsed.items)).toBe(true);
   });
 
-  it('items contain name and license or license_note keys', () => {
+  it.openspec('OA-158')('items contain name and license or license_note keys', () => {
     if (!available || !parsed) return;
     expect(parsed.items.length).toBeGreaterThan(0);
     for (const item of parsed.items) {

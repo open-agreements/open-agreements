@@ -95,7 +95,7 @@ function joinText(runs: RunInfo[]): string {
 }
 
 describe('run-level formatting boundary diff', () => {
-  it('preserves underline boundaries while stripping heading-leading brackets', async () => {
+  it.openspec('OA-174')('preserves underline boundaries while stripping heading-leading brackets', async () => {
     const dir = mkdtempSync(join(tmpdir(), 'oa-run-boundary-heading-'));
     tempDirs.push(dir);
     const input = join(dir, 'input.docx');
@@ -123,7 +123,7 @@ describe('run-level formatting boundary diff', () => {
     expect(runs[1].underline).toBe(true);
   });
 
-  it('trims trailing unmatched bracket without moving underlined anchor text', async () => {
+  it.openspec('OA-174')('trims trailing unmatched bracket without moving underlined anchor text', async () => {
     const dir = mkdtempSync(join(tmpdir(), 'oa-run-boundary-trailing-'));
     tempDirs.push(dir);
     const input = join(dir, 'input.docx');

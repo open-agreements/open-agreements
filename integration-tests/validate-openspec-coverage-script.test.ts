@@ -15,23 +15,23 @@ import {
 const it = itAllure.epic('Verification & Drift').withLabels({ feature: 'OpenSpec Coverage Script' });
 
 describe('validate_openspec_coverage script', () => {
-  it('parses args without writing matrix by default', () => {
+  it.openspec('OA-150')('parses args without writing matrix by default', () => {
     const parsed = parseArgs([]);
     expect(parsed.capabilities).toEqual([]);
     expect(parsed.writeMatrixPath).toBeNull();
   });
 
-  it('parses --write-matrix with default path when value is omitted', () => {
+  it.openspec('OA-150')('parses --write-matrix with default path when value is omitted', () => {
     const parsed = parseArgs(['--write-matrix'], '/tmp/open-agreements');
     expect(parsed.writeMatrixPath).toMatch(/integration-tests\/OPENSPEC_TRACEABILITY\.md$/);
   });
 
-  it('parses --write-matrix with a custom path relative to cwd', () => {
+  it.openspec('OA-150')('parses --write-matrix with a custom path relative to cwd', () => {
     const parsed = parseArgs(['--write-matrix', 'reports/matrix.md'], '/tmp/open-agreements');
     expect(parsed.writeMatrixPath).toBe('/tmp/open-agreements/reports/matrix.md');
   });
 
-  it('only writes a matrix when requested', async () => {
+  it.openspec('OA-150')('only writes a matrix when requested', async () => {
     const tempDir = mkdtempSync(join(tmpdir(), 'oa-speccov-'));
     const matrixPath = join(tempDir, 'traceability.md');
     try {
@@ -85,7 +85,7 @@ describe('validate_openspec_coverage script', () => {
     }
   });
 
-  it('rejects path-dependent scenario prose', () => {
+  it.openspec('OA-151')('rejects path-dependent scenario prose', () => {
     const specBody = [
       '## Requirements',
       '### Requirement: Example',
@@ -100,7 +100,7 @@ describe('validate_openspec_coverage script', () => {
     expect(parsed.errors.some((value) => value.includes('path-independent'))).toBe(true);
   });
 
-  it('accepts openspec mappings only from Allure wrappers', () => {
+  it.openspec('OA-151')('accepts openspec mappings only from Allure wrappers', () => {
     const source = [
       "import { describe } from 'vitest';",
       "import { itAllure } from './helpers/allure-test.js';",
@@ -120,7 +120,7 @@ describe('validate_openspec_coverage script', () => {
     expect(parsed.bindingsByScenarioId.has('OA-900')).toBe(true);
   });
 
-  it('collects scenario IDs from active change-package specs', async () => {
+  it.openspec('OA-152')('collects scenario IDs from active change-package specs', async () => {
     const tempDir = mkdtempSync(join(tmpdir(), 'oa-speccov-active-change-'));
     const changesRoot = join(tempDir, 'openspec', 'changes');
     const specPath = join(changesRoot, 'add-demo-capability', 'specs', 'open-agreements', 'spec.md');
@@ -154,7 +154,7 @@ describe('validate_openspec_coverage script', () => {
     }
   });
 
-  it('does not mark active-change scenario IDs as unknown', () => {
+  it.openspec('OA-152')('does not mark active-change scenario IDs as unknown', () => {
     const bindingsByScenarioId = new Map([
       ['OA-950', [{ ref: 'integration-tests/fake.ts:10 :: test', status: 'covered' }]],
       ['OA-951', [{ ref: 'integration-tests/fake.ts:12 :: test', status: 'covered' }]],
@@ -166,7 +166,7 @@ describe('validate_openspec_coverage script', () => {
     expect(unknown).toEqual(['OA-951']);
   });
 
-  it('rejects openspec mappings from non-Allure wrappers', () => {
+  it.openspec('OA-151')('rejects openspec mappings from non-Allure wrappers', () => {
     const source = [
       "import { describe } from 'vitest';",
       'const it = {',

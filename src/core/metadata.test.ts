@@ -36,7 +36,7 @@ async function expectSafeParseOutcome(
 }
 
 describe('FieldDefinitionSchema', () => {
-  it('accepts a valid string field', async () => {
+  it.openspec('OA-193')('accepts a valid string field', async () => {
     await expectSafeParseOutcome(
       'FieldDefinitionSchema',
       FieldDefinitionSchema,
@@ -62,7 +62,7 @@ describe('FieldDefinitionSchema', () => {
     );
   });
 
-  it('accepts enum field with options', async () => {
+  it.openspec('OA-193')('accepts enum field with options', async () => {
     await expectSafeParseOutcome(
       'FieldDefinitionSchema',
       FieldDefinitionSchema,
@@ -76,7 +76,7 @@ describe('FieldDefinitionSchema', () => {
     );
   });
 
-  it('rejects enum field with empty options', async () => {
+  it.openspec('OA-193')('rejects enum field with empty options', async () => {
     await expectSafeParseOutcome(
       'FieldDefinitionSchema',
       FieldDefinitionSchema,
@@ -104,7 +104,7 @@ describe('FieldDefinitionSchema', () => {
     );
   });
 
-  it('accepts number field with numeric default', async () => {
+  it.openspec('OA-193')('accepts number field with numeric default', async () => {
     await expectSafeParseOutcome(
       'FieldDefinitionSchema',
       FieldDefinitionSchema,
@@ -118,7 +118,7 @@ describe('FieldDefinitionSchema', () => {
     );
   });
 
-  it('rejects boolean field with invalid default', async () => {
+  it.openspec('OA-193')('rejects boolean field with invalid default', async () => {
     await expectSafeParseOutcome(
       'FieldDefinitionSchema',
       FieldDefinitionSchema,
@@ -184,7 +184,7 @@ describe('TemplateMetadataSchema', () => {
     );
   });
 
-  it('rejects unknown required_fields entries', async () => {
+  it.openspec('OA-194')('rejects unknown required_fields entries', async () => {
     await expectSafeParseOutcome(
       'TemplateMetadataSchema',
       TemplateMetadataSchema,
@@ -202,7 +202,7 @@ describe('TemplateMetadataSchema', () => {
     );
   });
 
-  it('rejects duplicate required_fields entries', async () => {
+  it.openspec('OA-194')('rejects duplicate required_fields entries', async () => {
     await expectSafeParseOutcome(
       'TemplateMetadataSchema',
       TemplateMetadataSchema,
@@ -249,7 +249,7 @@ describe('RecipeMetadataSchema', () => {
     );
   });
 
-  it('defaults optional to false', async () => {
+  it.openspec('OA-195')('defaults optional to false', async () => {
     const parsed = await allureStep('Parse recipe metadata with optional omitted', () =>
       RecipeMetadataSchema.parse({
         name: 'Test',
@@ -267,7 +267,7 @@ describe('RecipeMetadataSchema', () => {
 });
 
 describe('CleanConfigSchema', () => {
-  it('accepts valid clean config', async () => {
+  it.openspec('OA-196')('accepts valid clean config', async () => {
     await expectSafeParseOutcome(
       'CleanConfigSchema',
       CleanConfigSchema,
@@ -279,7 +279,7 @@ describe('CleanConfigSchema', () => {
     );
   });
 
-  it('defaults missing fields', async () => {
+  it.openspec('OA-196')('defaults missing fields', async () => {
     const parsed = await allureStep('Parse empty clean config', () => CleanConfigSchema.parse({}));
     await allureJsonAttachment('clean-config-defaults.json', parsed);
 
@@ -291,7 +291,7 @@ describe('CleanConfigSchema', () => {
 });
 
 describe('GuidanceOutputSchema', () => {
-  it('accepts valid guidance output', async () => {
+  it.openspec('OA-197')('accepts valid guidance output', async () => {
     await expectSafeParseOutcome(
       'GuidanceOutputSchema',
       GuidanceOutputSchema,
@@ -307,7 +307,7 @@ describe('GuidanceOutputSchema', () => {
     );
   });
 
-  it('rejects missing extractedFrom', async () => {
+  it.openspec('OA-197')('rejects missing extractedFrom', async () => {
     await expectSafeParseOutcome(
       'GuidanceOutputSchema',
       GuidanceOutputSchema,
@@ -318,7 +318,7 @@ describe('GuidanceOutputSchema', () => {
     );
   });
 
-  it('rejects invalid source type', async () => {
+  it.openspec('OA-197')('rejects invalid source type', async () => {
     await expectSafeParseOutcome(
       'GuidanceOutputSchema',
       GuidanceOutputSchema,

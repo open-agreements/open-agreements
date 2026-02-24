@@ -111,7 +111,7 @@ describe('patchDocument context keys', () => {
     rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it('does not replace in non-table paragraphs', async () => {
+  it.openspec('OA-183')('does not replace in non-table paragraphs', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -141,7 +141,7 @@ describe('patchDocument context keys', () => {
     rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it('does not replace when row label does not match', async () => {
+  it.openspec('OA-183')('does not replace when row label does not match', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -169,7 +169,7 @@ describe('patchDocument context keys', () => {
 });
 
 describe('patchDocument nth occurrence keys', () => {
-  it('replaces only the Nth occurrence of a text', async () => {
+  it.openspec('OA-183')('replaces only the Nth occurrence of a text', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -193,7 +193,7 @@ describe('patchDocument nth occurrence keys', () => {
     rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it('does not infinite loop when value contains searchText', async () => {
+  it.openspec('OA-183')('does not infinite loop when value contains searchText', async () => {
     // "Party Name:" → "Party Name: {tag}" — value contains key
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
@@ -215,7 +215,7 @@ describe('patchDocument nth occurrence keys', () => {
     rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it('counts occurrences by original position, not re-scanning modified text', async () => {
+  it.openspec('OA-183')('counts occurrences by original position, not re-scanning modified text', async () => {
     // Regression: if nth keys are processed in separate passes, #1 replaces
     // "Party Name:" → "Party Name: {party_1}" in paragraph 1. Then when #2
     // iterates from the top, paragraph 1 still contains "Party Name:" (as a
@@ -247,7 +247,7 @@ describe('patchDocument nth occurrence keys', () => {
     rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it('leaves unmatched occurrences untouched when no simple fallback', async () => {
+  it.openspec('OA-183')('leaves unmatched occurrences untouched when no simple fallback', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -276,7 +276,7 @@ describe('patchDocument nth occurrence keys', () => {
 });
 
 describe('patchDocument mixed key types', () => {
-  it('context keys process before simple keys', async () => {
+  it.openspec('OA-183')('context keys process before simple keys', async () => {
     // Context key should match first, then simple key handles the rest
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
@@ -313,7 +313,7 @@ describe('patchDocument mixed key types', () => {
 describe('getTableRowContext', () => {
   const parser = new DOMParser();
 
-  it('returns label text for a paragraph in the second cell', () => {
+  it.openspec('OA-184')('returns label text for a paragraph in the second cell', () => {
     const xml =
       `<w:document xmlns:w="${W_NS}"><w:body>` +
       '<w:tbl><w:tr>' +
@@ -328,7 +328,7 @@ describe('getTableRowContext', () => {
     expect(context).toBe('Label');
   });
 
-  it('returns null for a paragraph not in a table', () => {
+  it.openspec('OA-184')('returns null for a paragraph not in a table', () => {
     const xml =
       `<w:document xmlns:w="${W_NS}"><w:body>` +
       '<w:p><w:r><w:t>Not in table</w:t></w:r></w:p>' +
@@ -340,7 +340,7 @@ describe('getTableRowContext', () => {
 });
 
 describe('cleanDocument clearParts', () => {
-  it('clears content of specified parts', async () => {
+  it.openspec('OA-185')('clears content of specified parts', async () => {
     const docXml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -395,7 +395,7 @@ describe('cleanDocument removeRanges', () => {
     );
   }
 
-  it('removes paragraphs from start through end inclusive', async () => {
+  it.openspec('OA-185')('removes paragraphs from start through end inclusive', async () => {
     const xml = makeDocXml(['Alpha', 'Beta start', 'Charlie', 'Delta end', 'Echo']);
     const inputPath = buildMinimalDocx(xml);
     const outputPath = inputPath.replace('test.docx', 'output.docx');
@@ -413,7 +413,7 @@ describe('cleanDocument removeRanges', () => {
     rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it('removes nothing when start pattern does not match', async () => {
+  it.openspec('OA-185')('removes nothing when start pattern does not match', async () => {
     const xml = makeDocXml(['Alpha', 'Beta', 'Charlie']);
     const inputPath = buildMinimalDocx(xml);
     const outputPath = inputPath.replace('test.docx', 'output.docx');
@@ -431,7 +431,7 @@ describe('cleanDocument removeRanges', () => {
     rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it('removes from start through end of document when end pattern not found', async () => {
+  it.openspec('OA-185')('removes from start through end of document when end pattern not found', async () => {
     const xml = makeDocXml(['Alpha', 'Beta start', 'Charlie', 'Delta']);
     const inputPath = buildMinimalDocx(xml);
     const outputPath = inputPath.replace('test.docx', 'output.docx');
@@ -449,7 +449,7 @@ describe('cleanDocument removeRanges', () => {
     rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it('handles multiple ranges correctly', async () => {
+  it.openspec('OA-185')('handles multiple ranges correctly', async () => {
     const xml = makeDocXml([
       'Keep1', 'Remove1Start', 'Remove1Mid', 'Remove1End',
       'Keep2', 'Remove2Start', 'Remove2End', 'Keep3',
@@ -473,7 +473,7 @@ describe('cleanDocument removeRanges', () => {
     rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it('removes repeated occurrences of the same range pattern', async () => {
+  it.openspec('OA-185')('removes repeated occurrences of the same range pattern', async () => {
     const xml = makeDocXml([
       'Keep1',
       '[Comment: first block start',
@@ -514,7 +514,7 @@ describe('cleanDocument guidance extraction', () => {
     );
   }
 
-  it('returns pattern-matched text when extractGuidance is true', async () => {
+  it.openspec('OA-186')('returns pattern-matched text when extractGuidance is true', async () => {
     const xml = makeDocXml(['Keep', 'NOTE: Remove this', 'Also keep']);
     const inputPath = buildMinimalDocx(xml);
     const outputPath = inputPath.replace('test.docx', 'output.docx');
@@ -539,7 +539,7 @@ describe('cleanDocument guidance extraction', () => {
     rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it('returns range-deleted text with groupId when extractGuidance is true', async () => {
+  it.openspec('OA-186')('returns range-deleted text with groupId when extractGuidance is true', async () => {
     const xml = makeDocXml(['Keep1', '[Comment: Start', 'Middle text', 'End.]', 'Keep2']);
     const inputPath = buildMinimalDocx(xml);
     const outputPath = inputPath.replace('test.docx', 'output.docx');
@@ -603,7 +603,7 @@ describe('cleanDocument guidance extraction', () => {
     rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it('returns guidance undefined when extractGuidance is not set', async () => {
+  it.openspec('OA-186')('returns guidance undefined when extractGuidance is not set', async () => {
     const xml = makeDocXml(['Keep', 'NOTE: Remove', 'Also keep']);
     const inputPath = buildMinimalDocx(xml);
     const outputPath = inputPath.replace('test.docx', 'output.docx');
@@ -620,7 +620,7 @@ describe('cleanDocument guidance extraction', () => {
     rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it('includes sourceHash and configHash in extractedFrom', async () => {
+  it.openspec('OA-186')('includes sourceHash and configHash in extractedFrom', async () => {
     const xml = makeDocXml(['Keep', 'NOTE: Remove']);
     const inputPath = buildMinimalDocx(xml);
     const outputPath = inputPath.replace('test.docx', 'output.docx');

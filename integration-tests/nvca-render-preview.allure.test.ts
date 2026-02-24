@@ -59,7 +59,7 @@ const it = itAllure.withLabels({
 const RENDER_PREVIEW_TIMEOUT_MS = 60_000;
 
 describe.skipIf(!hasPrereqs)('NVCA rendered preview evidence', () => {
-  it('attaches rendered NVCA pages as PNG evidence for human review', async () => {
+  it.openspec('OA-176')('attaches rendered NVCA pages as PNG evidence for human review', async () => {
     await allureParameter('recipe_id', RECIPE_ID);
     await allureParameter('evidence_renderer', 'libreoffice+pdftoppm');
 

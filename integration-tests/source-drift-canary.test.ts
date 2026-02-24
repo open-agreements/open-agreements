@@ -92,7 +92,7 @@ const NORMALIZE_CONFIG: NormalizeConfig = {
 };
 
 describe('source drift canary', () => {
-  it('passes when hash and structural anchors match recipe configuration', () => {
+  it.openspec('OA-166')('passes when hash and structural anchors match recipe configuration', () => {
     const dir = mkdtempSync(join(tmpdir(), 'oa-source-drift-pass-'));
     tempDirs.push(dir);
     const sourcePath = join(dir, 'source.docx');
@@ -123,7 +123,7 @@ describe('source drift canary', () => {
     expect(result.ok).toBe(true);
   });
 
-  it('fails when source hash mismatches metadata', () => {
+  it.openspec('OA-166')('fails when source hash mismatches metadata', () => {
     const dir = mkdtempSync(join(tmpdir(), 'oa-source-drift-hash-'));
     tempDirs.push(dir);
     const sourcePath = join(dir, 'source.docx');
@@ -146,7 +146,7 @@ describe('source drift canary', () => {
     expect(result.ok).toBe(false);
   });
 
-  it('reports structural anchor drift for missing replacement and normalize anchors', () => {
+  it.openspec('OA-166')('reports structural anchor drift for missing replacement and normalize anchors', () => {
     const dir = mkdtempSync(join(tmpdir(), 'oa-source-drift-anchors-'));
     tempDirs.push(dir);
     const sourcePath = join(dir, 'source.docx');
@@ -177,7 +177,7 @@ describe('source drift canary', () => {
     expect(result.ok).toBe(false);
   });
 
-  it('emits basic structure signature useful for drift diagnostics', () => {
+  it.openspec('OA-167')('emits basic structure signature useful for drift diagnostics', () => {
     const dir = mkdtempSync(join(tmpdir(), 'oa-source-drift-signature-'));
     tempDirs.push(dir);
     const sourcePath = join(dir, 'source.docx');

@@ -48,39 +48,39 @@ async function runVerificationWithTrace(
 }
 
 describe('normalizeText', () => {
-  it('converts non-breaking spaces to regular spaces', () => {
+  it.openspec('OA-188')('converts non-breaking spaces to regular spaces', () => {
     expect(normalizeText('hello\u00A0world')).toBe('hello world');
     expect(normalizeText('hello\u2007world')).toBe('hello world');
     expect(normalizeText('hello\u202Fworld')).toBe('hello world');
   });
 
-  it('normalizes smart single quotes', () => {
+  it.openspec('OA-188')('normalizes smart single quotes', () => {
     expect(normalizeText('\u2018hello\u2019')).toBe("'hello'");
     expect(normalizeText('\u2039hi\u203A')).toBe("'hi'");
   });
 
-  it('normalizes smart double quotes', () => {
+  it.openspec('OA-188')('normalizes smart double quotes', () => {
     expect(normalizeText('\u201Chello\u201D')).toBe('"hello"');
     expect(normalizeText('\u00ABhi\u00BB')).toBe('"hi"');
     expect(normalizeText('\u201Ahi\u201E')).toBe('"hi"');
   });
 
-  it('collapses horizontal whitespace to single space', () => {
+  it.openspec('OA-188')('collapses horizontal whitespace to single space', () => {
     expect(normalizeText('hello   world')).toBe('hello world');
     expect(normalizeText('hello\t\tworld')).toBe('hello world');
   });
 
-  it('preserves newlines', () => {
+  it.openspec('OA-188')('preserves newlines', () => {
     expect(normalizeText('hello\nworld')).toBe('hello\nworld');
   });
 
-  it('trims', () => {
+  it.openspec('OA-188')('trims', () => {
     expect(normalizeText('  hello  ')).toBe('hello');
   });
 });
 
 describe('verifyOutput', () => {
-  it('skips empty string values', async () => {
+  it.openspec('OA-189')('skips empty string values', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -100,7 +100,7 @@ describe('verifyOutput', () => {
     rmSync(docxPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it('skips whitespace-only values', async () => {
+  it.openspec('OA-189')('skips whitespace-only values', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -142,7 +142,7 @@ describe('verifyOutput', () => {
     rmSync(docxPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it('matches with collapsed whitespace', async () => {
+  it.openspec('OA-189')('matches with collapsed whitespace', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -162,7 +162,7 @@ describe('verifyOutput', () => {
     rmSync(docxPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it('matches with non-breaking space', async () => {
+  it.openspec('OA-189')('matches with non-breaking space', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +

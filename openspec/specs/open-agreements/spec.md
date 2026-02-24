@@ -791,3 +791,530 @@ Patch envelopes SHALL support optional `mode` with `APPLY` and `PROPOSED` values
 - **WHEN** a valid patch is submitted with `mode: PROPOSED`
 - **THEN** the system stores the proposal and validation output
 - **AND** checklist state revision remains unchanged
+
+### Requirement: Currency Field Detection and Sanitization
+The fill pipeline MUST detect dollar-prefixed template fields (`${field}`) across
+all DOCX parts (body, headers, footers, endnotes) and strip leading `$` from
+string fill values for those fields to prevent double-dollar output (`$$`).
+
+#### Scenario: [OA-133] Currency field detection across DOCX parts
+- **WHEN** a DOCX template contains `${field_name}` patterns in body, headers, footers, or endnotes
+- **THEN** `detectCurrencyFields` identifies all such fields including split-run cases
+- **AND** non-currency `{field}` patterns are not flagged
+
+#### Scenario: [OA-134] Currency value sanitization strips leading dollar sign
+- **WHEN** fill values include dollar-prefixed strings for detected currency fields
+- **THEN** the leading `$` is stripped from those values only
+- **AND** non-currency fields retain their original values including any `$` prefix
+- **AND** non-string values (booleans) are passed through unchanged
+
+### Requirement: Post-Fill Verification Checks
+The verifier MUST detect double dollar signs (`$$`), dollar-space-dollar (`$ $`),
+and unrendered template tags in the filled DOCX output across all parts including
+headers and footers.
+
+#### Scenario: [OA-135] Double dollar sign detection in filled output
+- **WHEN** a filled DOCX contains `$$` or `$ $` patterns in body text
+- **THEN** verification fails with details identifying the offending text
+- **AND** legitimate single `$` amounts pass verification
+
+#### Scenario: [OA-136] Verification passes for clean output
+- **WHEN** a filled DOCX has no double-dollar, unrendered tags, or leftover placeholders
+- **THEN** verification passes with all checks marked as passed
+
+#### Scenario: [OA-137] Verification scans headers and footers
+- **WHEN** an unrendered template tag exists in a header or footer part
+- **THEN** verification detects the tag and reports failure
+
+### Requirement: Fill Data Preparation
+The `prepareFillData` function MUST apply default values for optional fields,
+coerce boolean string values when configured, and warn on missing required fields.
+The `computeDisplayFields` callback MUST be invoked when provided.
+
+#### Scenario: [OA-138] Optional field defaulting and blank placeholder
+- **WHEN** optional fields are not provided in fill values
+- **THEN** they default to empty string (useBlankPlaceholder=false) or BLANK_PLACEHOLDER (useBlankPlaceholder=true)
+- **AND** user-provided values override defaults
+- **AND** field-level defaults from metadata are respected
+
+#### Scenario: [OA-139] Boolean coercion and required field warnings
+- **WHEN** boolean coercion is configured and string boolean values are provided
+- **THEN** string "true"/"false" values for boolean fields are coerced to native booleans when enabled
+- **AND** string values pass through unchanged when coercion is disabled
+- **AND** missing required fields emit a warning
+- **AND** computeDisplayFields callback is invoked when provided
+
+### Requirement: Fill Pipeline DOCX Rendering
+The `fillDocx` function MUST support smart quote normalization, multiline values
+as explicit line-break runs, paragraph stripping with table-row cleanup,
+and highlight removal from filled fields.
+
+#### Scenario: [OA-140] Smart quote normalization during fill
+- **WHEN** a template DOCX contains smart/curly quotes around tag names
+- **AND** `fixSmartQuotes` is enabled
+- **THEN** `fillDocx` normalizes quotes and successfully fills the tags
+
+#### Scenario: [OA-141] Multiline value rendering with line breaks
+- **WHEN** a fill value contains newline characters
+- **THEN** `fillDocx` renders each line with explicit `<w:br/>` elements between sibling runs
+
+#### Scenario: [OA-142] Paragraph stripping with table-row cleanup
+- **WHEN** `stripParagraphPatterns` is configured (or defaults are used)
+- **THEN** matching paragraphs are removed from the output
+- **AND** table rows where all cell paragraphs are stripped are also removed
+- **AND** table rows with any non-stripped content are preserved
+- **AND** when patterns are empty, all paragraphs are preserved
+
+#### Scenario: [OA-143] Highlight stripping from filled fields
+- **WHEN** template runs contain highlight formatting on `{field}` placeholders
+- **THEN** highlighting is removed from runs where the field was filled with a value
+
+### Requirement: Fill Pipeline Behavioral Consistency
+Template and recipe/external fill paths MUST maintain consistent behavior
+for optional field defaulting while allowing path-specific boolean coercion.
+
+#### Scenario: [OA-144] Path-specific fill behavior consistency
+- **WHEN** template path fills with blank placeholders, boolean coercion, and required field warnings
+- **AND** recipe/external path fills without boolean coercion
+- **THEN** both paths default optional fields to BLANK_PLACEHOLDER consistently
+
+#### Scenario: [OA-145] Currency sanitization prevents double-dollar in filled output
+- **WHEN** a template contains `${field}` and fill value is `$50,000`
+- **THEN** the filled output contains `$50,000` (not `$$50,000`)
+
+### Requirement: API Endpoint Protocol Compliance
+The hosted API endpoints (A2A, MCP, download) MUST handle CORS preflight,
+method restrictions, and protocol-specific error formats correctly.
+
+#### Scenario: [OA-146] A2A endpoint protocol handling
+- **WHEN** the A2A endpoint receives OPTIONS, non-POST, invalid body, or unsupported method requests
+- **THEN** it returns appropriate CORS, 405, or JSON-RPC error responses
+- **AND** routes known skills (list-templates, fill-template) to correct handlers
+
+#### Scenario: [OA-147] MCP endpoint protocol handling
+- **WHEN** the MCP endpoint receives OPTIONS, GET (browser vs non-browser), or JSON-RPC requests
+- **THEN** it returns CORS 204, HTML landing page, 405, or protocol responses appropriately
+- **AND** handles initialize, tools/list, tools/call, ping, and notification methods
+
+#### Scenario: [OA-148] MCP tool call envelope responses
+- **WHEN** MCP tools/call is invoked for list_templates, get_template, or fill_template
+- **THEN** responses use structured envelope format with appropriate status codes
+- **AND** missing arguments return INVALID_ARGUMENT envelope
+- **AND** not-found templates return TEMPLATE_NOT_FOUND envelope
+
+#### Scenario: [OA-149] Download endpoint method and error handling
+- **WHEN** the download endpoint receives non-GET/HEAD methods or missing parameters
+- **THEN** it returns 405 or 400 with machine-readable error codes
+- **AND** browser clients requesting text/html receive user-facing error pages
+- **AND** fill failures return 500 with machine-readable codes
+
+### Requirement: OpenSpec Coverage Validation Script
+The validation script MUST parse CLI arguments, enforce behavior-oriented scenario
+prose, accept only Allure wrapper bindings, and collect scenario IDs from active
+change-package specs.
+
+#### Scenario: [OA-150] Coverage script CLI argument parsing
+- **WHEN** the script runs with or without `--write-matrix`
+- **THEN** it parses arguments correctly, defaulting matrix path when omitted
+- **AND** only writes a traceability matrix file when `--write-matrix` is set
+
+#### Scenario: [OA-151] Coverage script validation rules
+- **WHEN** scenario prose contains path-dependent text or non-Allure wrapper bindings
+- **THEN** the script rejects them with descriptive errors
+- **AND** accepts valid Allure-wrapped openspec mappings only
+
+#### Scenario: [OA-152] Active change-package scenario collection
+- **WHEN** active change packages define additional scenarios
+- **THEN** the script collects those IDs and does not mark them as unknown
+
+### Requirement: Template Validation for All Templates
+Template validation MUST succeed for all bundled templates (bonterms-mutual-nda,
+common-paper-mutual-nda, employment offer, IP assignment, confidentiality) with
+no errors. Metadata validation MUST pass independently.
+
+#### Scenario: [OA-153] All bundled templates pass validation
+- **WHEN** `validateTemplate` runs on each bundled template
+- **THEN** validation produces zero errors for each template
+- **AND** `validateMetadata` passes for each template's metadata independently
+
+#### Scenario: [OA-154] Declarative replacement coverage validation
+- **WHEN** replacements reference metadata tags not declared in the template
+- **THEN** validation reports required-field errors for uncovered tags
+
+### Requirement: CLI Fill for All Template Types
+The CLI `fill` command MUST render valid DOCX output for all supported template
+types (NDA, employment offer, IP assignment, confidentiality acknowledgement).
+
+#### Scenario: [OA-155] CLI fill renders all template types
+- **WHEN** `fill` is invoked for employment offer, IP assignment, or confidentiality templates
+- **THEN** a valid DOCX file is produced for each template
+
+#### Scenario: [OA-156] CLI employment memo output
+- **WHEN** `fill` is invoked with `--emit-memo` for an employment template matching jurisdiction rules
+- **THEN** JSON output includes disclaimer, findings, and jurisdiction warnings
+- **AND** when no rules match, no jurisdiction warnings are fabricated
+- **AND** Markdown output includes mandatory disclaimer
+
+### Requirement: npm Package Distribution Integrity
+The packed npm tarball MUST include `dist/`, `bin/`, template metadata, and recipe
+metadata. It MUST NOT include `src/` or `node_modules/`.
+
+#### Scenario: [OA-157] Package tarball includes required files and excludes source
+- **WHEN** the package is packed via `npm pack`
+- **THEN** tarball contains compiled output, CLI entry point, template metadata, and recipe metadata
+- **AND** tarball does not contain uncompiled source or dependency directories
+
+### Requirement: List Command Envelope Structure
+The `list --json` output MUST include `schema_version`, `cli_version`, and
+typed items with license information.
+
+#### Scenario: [OA-158] List JSON envelope structure
+- **WHEN** `list --json` is invoked
+- **THEN** output has `schema_version: 1`, a `cli_version` string, and an `items` array
+- **AND** each item contains `name` and either `license` or `license_note`
+
+### Requirement: Recipe Validation for Bundled Recipes
+Recipe validation MUST succeed for all bundled full and scaffold recipes.
+Metadata validation MUST pass independently.
+
+#### Scenario: [OA-159] Bundled recipes pass validation
+- **WHEN** `validateRecipe` runs on bundled full recipes and scaffold recipes
+- **THEN** validation passes for each
+- **AND** `validateRecipeMetadata` passes for each recipe's metadata independently
+
+### Requirement: Recipe Negative Validation
+Recipe validation MUST reject unsafe non-identifier replacement tags and
+invalid normalize.json configurations.
+
+#### Scenario: [OA-160] Unsafe replacement tags and invalid normalize configs rejected
+- **WHEN** a recipe contains non-identifier replacement tags or invalid normalize.json
+- **THEN** validation fails with descriptive errors
+
+### Requirement: Download Token Lifecycle
+The download token system MUST sign, verify, and expire opaque download identifiers.
+Tampered or malformed tokens MUST be rejected.
+
+#### Scenario: [OA-161] Download token sign and verify round-trip
+- **WHEN** a download token is signed with fill payload
+- **THEN** verification recovers the original payload including template, values, and return mode
+- **AND** tampered signatures are rejected
+- **AND** malformed token values are rejected
+
+#### Scenario: [OA-162] Download token expiry and size stability
+- **WHEN** a token exceeds its TTL
+- **THEN** verification rejects it as expired
+- **AND** token length remains stable as payload size grows
+
+### Requirement: MCP Protocol Envelope Contract
+The MCP endpoint MUST return consistent envelope shapes for all tool calls
+including list, fill, get, and download operations with proper error envelopes.
+
+#### Scenario: [OA-163] MCP contract envelope shapes
+- **WHEN** MCP tools are called (list_templates, get_template, fill_template, download_filled)
+- **THEN** success responses have consistent envelope structure
+- **AND** error responses use typed error codes (INVALID_ARGUMENT, TEMPLATE_NOT_FOUND, DOWNLOAD_LINK_EXPIRED)
+- **AND** compact and full payload modes are supported for list_templates
+- **AND** browser GET returns HTML, non-browser GET returns 405
+
+### Requirement: Employment Memo Generation
+The employment memo generator MUST produce disclaimers, findings, jurisdiction
+warnings, and language-guarded output for matching employment templates.
+
+#### Scenario: [OA-164] Employment memo content generation
+- **WHEN** an employment template fill triggers memo generation with matching jurisdiction rules
+- **THEN** output includes mandatory disclaimer, compliance findings, and jurisdiction-specific warnings
+- **AND** deterministic baseline variance findings are produced against the selected baseline template
+- **AND** markdown output includes mandatory disclaimer and citations
+
+#### Scenario: [OA-165] Employment memo language guard
+- **WHEN** memo text contains prescriptive wording or prohibited phrases
+- **THEN** the language guard rewrites prescriptive wording and blocks prohibited phrases
+
+### Requirement: Source Drift Detection
+The source drift canary MUST verify source document integrity by checking content
+hash and structural anchors against recipe configuration.
+
+#### Scenario: [OA-166] Source drift hash and anchor verification
+- **WHEN** a recipe's source document hash and structural anchors match configuration
+- **THEN** drift check passes
+- **AND** when hash mismatches, drift check fails
+- **AND** when replacement or normalize anchors are missing, structural anchor drift is reported
+
+#### Scenario: [OA-167] Source drift structure signature
+- **WHEN** drift diagnostics run on a source document
+- **THEN** a basic structure signature is emitted for drift analysis
+
+### Requirement: NVCA Option Vesting Policy Computation
+The NVCA option resolution engine MUST apply clause-level policies including
+costs-of-enforcement and dispute-resolution, defaulting venue and district values.
+
+#### Scenario: [OA-168] NVCA clause policy resolution
+- **WHEN** costs-of-enforcement policy is applied
+- **THEN** only the each-party clause is retained
+- **AND** when dispute-resolution selects arbitration, venue defaults are applied
+- **AND** when courts are selected, district defaults by state with alignment flags
+
+#### Scenario: [OA-169] Unresolved legal alternatives preserved
+- **WHEN** no explicit clause policy is defined for an in-line legal alternative
+- **THEN** the alternative text is preserved unresolved until a policy is added
+
+### Requirement: JSON Template Renderer
+The JSON template renderer MUST support multiple templates sharing layout IDs,
+reject unknown layouts, detect style mismatches, and validate spacing tokens.
+
+#### Scenario: [OA-170] JSON template renderer validation
+- **WHEN** templates reference layout IDs
+- **THEN** multiple templates sharing the same layout ID are supported
+- **AND** unknown layout IDs are rejected with actionable errors
+- **AND** style mismatches between spec and profile are rejected
+- **AND** invalid spacing token types are caught before rendering
+
+### Requirement: NVCA Template Assumption Validation
+The NVCA template processing MUST preserve bracket-prefixed headings while removing
+bracketed alternatives during clean, and normalize heading-leading brackets during
+the normalize step.
+
+#### Scenario: [OA-171] NVCA clean and normalize assumptions
+- **WHEN** the clean step processes bracket-prefixed headings and bracketed alternatives
+- **THEN** bracket-prefixed headings are preserved while bracketed alternatives are removed
+- **AND** declarative normalize strips heading-leading brackets and trims unmatched trailing brackets
+
+### Requirement: Metadata Completeness Assessment
+The scan-vs-metadata check MUST flag short placeholders discovered by scan that
+are not mapped in metadata-backed replacements.
+
+#### Scenario: [OA-172] Scan metadata completeness assessment
+- **WHEN** a scan discovers short placeholders not mapped in recipe metadata
+- **THEN** those unmapped placeholders are flagged
+- **AND** sampled NVCA placeholders map to metadata-backed replacements
+
+### Requirement: Employment Template Formatting Integrity
+Employment templates MUST maintain paragraph style names and spacing values
+(e.g. 6pt) in Standard Terms sections across all employment template variants.
+
+#### Scenario: [OA-173] Employment template paragraph styles and spacing
+- **WHEN** employment templates are examined for Standard Terms sections
+- **THEN** paragraph style names match expected values
+- **AND** spacing values are preserved (e.g. 6pt)
+
+### Requirement: Formatting Diff Boundary Conditions
+Run-level formatting operations MUST preserve underline boundaries while stripping
+heading-leading brackets and trimming trailing unmatched brackets without moving
+anchored text.
+
+#### Scenario: [OA-174] Formatting boundary preservation
+- **WHEN** bracket stripping operates on underlined heading text
+- **THEN** underline boundaries are preserved
+- **AND** trailing unmatched brackets are trimmed without moving underlined anchor text
+
+### Requirement: Closing Checklist Stage-First Rendering
+The closing checklist renderer MUST output stage-first grouped rows with linked
+items and unlinked fallback sections.
+
+#### Scenario: [OA-175] Stage-first checklist rendering with fallbacks
+- **WHEN** checklist entries include linked and unlinked items across stages
+- **THEN** rendering outputs stage-grouped rows with linked items and unlinked fallbacks
+
+### Requirement: NVCA SPA Preview Rendering
+The system SHALL support rendering NVCA SPA template output as PNG evidence
+pages for human review.
+
+#### Scenario: [OA-176] NVCA rendered preview evidence
+- **WHEN** NVCA template prerequisites are available
+- **THEN** rendered pages are attached as PNG evidence for human review
+
+### Requirement: Working Group List Rendering
+The working group list renderer MUST output one line per working group member.
+
+#### Scenario: [OA-177] Working group member rendering
+- **WHEN** a working group list payload contains multiple members
+- **THEN** rendering outputs one line per member
+
+### Requirement: Recipe Patcher Operations
+The cross-run patcher MUST handle single-run, multi-run, and nested replacements,
+preserve run formatting, process longest matches first, handle multiple occurrences,
+detect infinite loops, clean empty intermediate runs, and preserve non-text children.
+
+#### Scenario: [OA-178] Multi-run and nested patcher replacements
+- **WHEN** placeholders span two or three runs, are nested in hyperlinks, or mix direct and nested runs
+- **THEN** replacements are placed correctly in each case
+- **AND** formatting (bold, italic, etc.) of the first run is preserved
+
+#### Scenario: [OA-179] Patcher match ordering and occurrence handling
+- **WHEN** the replacement map contains overlapping keys or the same placeholder appears multiple times
+- **THEN** longest match is replaced first to prevent partial matches
+- **AND** all occurrences are replaced
+- **AND** infinite loop conditions (value contains key) throw an error
+
+#### Scenario: [OA-180] Patcher run preservation
+- **WHEN** runs are consumed during cross-run replacement
+- **THEN** empty intermediate runs are removed
+- **AND** runs containing non-text children (drawings, etc.) are preserved
+- **AND** paragraphs without matches are left untouched
+
+#### Scenario: [OA-181] Patcher header and auxiliary part processing
+- **WHEN** placeholders appear in header XML parts
+- **THEN** the patcher processes and replaces them correctly
+
+#### Scenario: [OA-182] Run safety classification
+- **WHEN** determining whether consumed runs can be removed
+- **THEN** runs with only rPr and empty text are safe to remove
+- **AND** runs with drawings, breaks, tabs, or footnoteReferences are not safe to remove
+
+### Requirement: Recipe Patcher Extensions
+The patcher extensions MUST support context-aware keys (table row scoping),
+nth-occurrence keys, mixed key type ordering, part clearing, range removal,
+and guidance extraction.
+
+#### Scenario: [OA-183] Context key and nth-occurrence replacements
+- **WHEN** replacement keys use context (" > ") syntax or nth-occurrence (#N) syntax
+- **THEN** context keys scope replacement to matching table rows
+- **AND** nth keys replace only the specified occurrence without infinite looping
+- **AND** context keys are processed before simple keys
+
+#### Scenario: [OA-184] Table row context detection
+- **WHEN** a paragraph is inside a table cell
+- **THEN** `getTableRowContext` returns the label text from the adjacent cell
+- **AND** for paragraphs not in tables, returns null
+
+#### Scenario: [OA-185] Document part clearing and range removal
+- **WHEN** `cleanDocument` is called with clearParts or removeRanges configuration
+- **THEN** specified parts have their content cleared
+- **AND** paragraph ranges between start and end patterns are removed
+- **AND** unmatched start patterns remove through end of document
+- **AND** multiple and repeated range patterns are handled correctly
+
+#### Scenario: [OA-186] Guidance extraction from clean operations
+- **WHEN** `extractGuidance` is enabled during document cleaning
+- **THEN** pattern-matched text, range-deleted text with groupId, and footnote text are collected
+- **AND** extraction metadata includes sourceHash and configHash
+- **AND** when extractGuidance is not set, guidance is undefined
+
+### Requirement: Replacement Key Parsing
+Replacement keys MUST be parsed into simple, context-aware (" > " separator),
+and nth-occurrence (#N suffix) types.
+
+#### Scenario: [OA-187] Replacement key type parsing
+- **WHEN** replacement keys are parsed
+- **THEN** simple keys return as-is with type "simple"
+- **AND** keys with " > " separator return context and placeholder parts
+- **AND** keys with #N suffix return the nth occurrence number
+- **AND** #0 and trailing # are treated as simple keys
+- **AND** `extractSearchText` strips context and #N suffixes correctly
+
+### Requirement: Recipe Verifier Edge Cases
+The verifier MUST normalize text (non-breaking spaces, smart quotes, whitespace)
+and skip empty/whitespace-only values during output verification.
+
+#### Scenario: [OA-188] Verifier text normalization
+- **WHEN** output text contains non-breaking spaces, smart quotes, or excess whitespace
+- **THEN** normalization converts them for matching purposes
+- **AND** newlines are preserved and text is trimmed
+
+#### Scenario: [OA-189] Verifier skips empty and whitespace-only values
+- **WHEN** fill values include empty strings or whitespace-only strings
+- **THEN** those values are skipped during verification (not flagged as missing)
+- **AND** values present only in header text are found via auxiliary part scanning
+
+### Requirement: OOXML Part Enumeration
+The part enumerator MUST discover all text-bearing OOXML parts (document.xml,
+headers, footers, endnotes, footnotes) and filter non-matching files.
+
+#### Scenario: [OA-190] OOXML part discovery
+- **WHEN** a DOCX zip contains various word/ entries
+- **THEN** `enumerateTextParts` finds document.xml, headers, footers, endnotes, and footnotes
+- **AND** ignores non-matching files
+- **AND** `getGeneralTextPartNames` returns a flat list excluding footnotes
+
+### Requirement: Bracket Artifact Normalization
+The bracket normalizer MUST remove bracket artifacts and degenerate optional-clause
+leftovers, apply declarative paragraph rules with heading aliases and field
+interpolation, and track expectation failures.
+
+#### Scenario: [OA-191] Bracket artifact cleanup and declarative rules
+- **WHEN** bracket normalization runs on a patched document
+- **THEN** bracket artifacts and degenerate optional-clause leftovers are removed
+- **AND** declarative paragraph rules with heading aliases and field interpolation are applied
+- **AND** expectation failures (missing rule anchor pairs) are tracked
+
+### Requirement: Declarative Paragraph Pruning
+The declarative pruning system MUST select options via declarative anchors,
+warn on missing anchors, and fill/clean targeted clauses.
+
+#### Scenario: [OA-192] Declarative option selection and warning
+- **WHEN** declarative anchors specify which option to keep
+- **THEN** only the selected option is preserved
+- **AND** when a selected option anchor is not found, a warning is emitted
+- **AND** targeted NVCA clauses are filled and cleaned via declarative rules
+
+### Requirement: Metadata Field Schema Validation
+Field definitions MUST enforce type-specific constraints: enum fields require
+non-empty options, default values must match declared type.
+
+#### Scenario: [OA-193] Field definition edge cases
+- **WHEN** field definitions include enum with options, enum with empty options, boolean with invalid default, or number with numeric default
+- **THEN** valid configurations pass and invalid ones are rejected with descriptive errors
+
+### Requirement: Template Metadata Required Fields
+Template metadata MUST reject `required_fields` entries that reference undeclared
+field names and reject duplicate entries in `required_fields`.
+
+#### Scenario: [OA-194] Required fields referential integrity
+- **WHEN** `required_fields` references an undeclared field name or contains duplicates
+- **THEN** schema validation fails with descriptive errors
+
+### Requirement: Recipe Metadata Defaults
+Recipe metadata MUST default `optional` to `false` when not explicitly set.
+
+#### Scenario: [OA-195] Recipe metadata optional field default
+- **WHEN** recipe metadata omits the `optional` field
+- **THEN** it defaults to `false`
+
+### Requirement: Clean Configuration Schema
+The clean configuration schema MUST accept valid configs and apply sensible
+defaults for missing fields.
+
+#### Scenario: [OA-196] Clean config validation and defaults
+- **WHEN** a clean configuration is validated
+- **THEN** valid configs pass and missing optional fields receive defaults
+
+### Requirement: Guidance Output Schema
+The guidance output schema MUST validate extracted guidance structure including
+`extractedFrom` metadata and source type.
+
+#### Scenario: [OA-197] Guidance output validation
+- **WHEN** guidance output is validated
+- **THEN** valid output with proper extractedFrom metadata passes
+- **AND** missing extractedFrom or invalid source types are rejected
+
+### Requirement: Checklist Schema Structural Rules
+The checklist schema MUST enforce parent-stage consistency, related document
+reference validity, status enum values, signature artifact requirements, and
+default arrays for related documents.
+
+#### Scenario: [OA-198] Checklist structural validation rules
+- **WHEN** checklist entries reference parent entries in different stages, unknown document IDs in action items or issues, or invalid status values
+- **THEN** validation rejects with structured errors
+- **AND** valid stage, entry status, action item status, and signatory status values are accepted
+- **AND** signature artifacts require uri or path
+- **AND** related_document_ids defaults to empty array on action items and issues
+
+#### Scenario: [OA-199] Checklist citation evidence validation
+- **WHEN** checklist entries include citation text-only evidence payloads
+- **THEN** validation accepts them
+
+### Requirement: Patch Schema Validation Rules
+Patch schemas MUST reject empty operation arrays, invalid JSON pointer paths,
+and enforce operation/value compatibility.
+
+#### Scenario: [OA-200] Patch schema structural validation
+- **WHEN** a patch envelope has empty operations, invalid JSON pointer paths, or incompatible operation/value pairs
+- **THEN** validation rejects with structured errors
+- **AND** valid patch envelopes with default APPLY mode are accepted
+
+### Requirement: Patch Validator Artifact Expiry
+Validation artifacts MUST expire after a configured TTL.
+
+#### Scenario: [OA-201] Validation artifact TTL expiry
+- **WHEN** a validation artifact exceeds its TTL
+- **THEN** it is no longer valid for apply requests
