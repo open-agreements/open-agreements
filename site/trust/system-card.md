@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: trust-layout.njk
 title: System Card | OpenAgreements
 description: Reliability summary and evidence for OpenAgreements.
 ---
