@@ -591,7 +591,21 @@ function toGithubSourceUrl({ filePath, line, blobRef }) {
 
 function toAllureTestResultUrl({ reportUrl, testResultId }) {
   const baseUrl = String(reportUrl || DEFAULT_ALLURE_REPORT_URL).replace(/\/+$/, "");
-  return `${baseUrl}#${encodeURIComponent(testResultId)}`;
+  const [reportBase] = baseUrl.split("#");
+  return `${reportBase}#/${encodeURIComponent(testResultId)}`;
+}
+
+function shouldUseAllureDeepLinks(reportUrl) {
+  const envOverride = process.env.SYSTEM_CARD_ENABLE_REMOTE_ALLURE_DEEP_LINKS;
+  if (envOverride === "1") return true;
+
+  try {
+    const url = new URL(String(reportUrl || DEFAULT_ALLURE_REPORT_URL));
+    const host = (url.hostname || "").toLowerCase();
+    return host === "127.0.0.1" || host === "localhost";
+  } catch {
+    return false;
+  }
 }
 
 function renderMappedTestReference(ref, linkContext) {
@@ -601,7 +615,9 @@ function renderMappedTestReference(ref, linkContext) {
   }
 
   const key = makeAllureLookupKey(parsed.filePath, parsed.title);
-  const allureTestResultId = linkContext.allureByRef.get(key) ?? null;
+  const allureTestResultId = linkContext.useAllureDeepLinks
+    ? (linkContext.allureByRef.get(key) ?? null)
+    : null;
   const githubUrl = toGithubSourceUrl({
     filePath: parsed.filePath,
     line: parsed.line,
@@ -614,7 +630,7 @@ function renderMappedTestReference(ref, linkContext) {
       testResultId: allureTestResultId,
     })
     : String(linkContext.allureReportUrl || DEFAULT_ALLURE_REPORT_URL);
-  const allureLabel = "Test details";
+  const allureLabel = allureTestResultId ? "Test details" : "Allure report";
   const allureClassName = allureTestResultId
     ? "mapped-test-allure-link"
     : "mapped-test-allure-link is-fallback";
@@ -732,6 +748,7 @@ function makeSystemCardMarkdown({ traceability, runtimeTrust, linkContext }) {
   const effectiveLinkContext = linkContext ?? {
     githubBlobRef: resolveGithubBlobRef(runtime),
     allureReportUrl: runtime?.report_url ?? DEFAULT_ALLURE_REPORT_URL,
+    useAllureDeepLinks: shouldUseAllureDeepLinks(runtime?.report_url ?? DEFAULT_ALLURE_REPORT_URL),
     allureByRef: new Map(),
   };
 
@@ -964,6 +981,7 @@ async function main() {
   const linkContext = {
     githubBlobRef: resolveGithubBlobRef(runtime),
     allureReportUrl: runtime?.report_url ?? DEFAULT_ALLURE_REPORT_URL,
+    useAllureDeepLinks: shouldUseAllureDeepLinks(runtime?.report_url ?? DEFAULT_ALLURE_REPORT_URL),
     allureByRef: allureTestResultIndex.byRef,
   };
 

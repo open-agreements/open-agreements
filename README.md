@@ -10,6 +10,12 @@
 [![GitHub stargazers](https://img.shields.io/github/stars/open-agreements/open-agreements?style=social)](https://github.com/open-agreements/open-agreements/stargazers)
 [![Tests: Vitest](https://img.shields.io/badge/tests-vitest-6E9F18)](https://vitest.dev/)
 [![OpenSpec Traceability](https://img.shields.io/badge/openspec-traceability%20gate-brightgreen)](./scripts/validate_openspec_coverage.mjs)
+[![Socket Badge](https://socket.dev/api/badge/npm/package/open-agreements)](https://socket.dev/npm/package/open-agreements)
+[![install size](https://packagephobia.com/badge?p=open-agreements)](https://packagephobia.com/result?p=open-agreements)
+
+<!-- TODO: Add OpenSSF Scorecard badge once repo is indexed at securityscorecards.dev -->
+<!-- TODO: Add OpenSSF Best Practices badge after registration at bestpractices.dev -->
+<!-- TODO: Re-evaluate Snyk badge — Advisor migrated to security.snyk.io (July 2024) -->
 
 <p align="center">
   <img src="docs/assets/demo-fill-nda.gif" alt="Fill a Mutual NDA in Claude Code — prompt, answer questions, get a signed-ready DOCX" width="720">

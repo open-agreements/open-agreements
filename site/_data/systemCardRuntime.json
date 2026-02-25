@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-02-25T03:29:49.691Z",
+  "report_url": "https://tests.openagreements.ai",
+  "status": "passed",
+  "stats": {
+    "total": 481,
+    "passed": 481,
+    "failed": 0,
+    "broken": 0,
+    "skipped": 0,
+    "flaky": 0,
+    "pass_rate_percent": 100
+  },
+  "run": {
+    "created_at_utc": "2026-02-24T19:26:02.421Z",
+    "duration_ms": 51334,
+    "commit_sha": "9b92669",
+    "commit_url": "https://github.com/open-agreements/open-agreements/commit/9b92669db73c9d42a76bec411fe1dafdd94292fc",
+    "ci_run_url": "https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml",
+    "pull_request_url": null
+  },
+  "freshness": {
+    "age_minutes": 484,
+    "stale_after_hours": 24,
+    "is_stale": false
+  }
+}
