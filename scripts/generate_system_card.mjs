@@ -614,7 +614,7 @@ function renderMappedTestReference(ref, linkContext) {
       testResultId: allureTestResultId,
     })
     : String(linkContext.allureReportUrl || DEFAULT_ALLURE_REPORT_URL);
-  const allureLabel = allureTestResultId ? "Test details" : "Test details";
+  const allureLabel = "Test details";
   const allureClassName = allureTestResultId
     ? "mapped-test-allure-link"
     : "mapped-test-allure-link is-fallback";
