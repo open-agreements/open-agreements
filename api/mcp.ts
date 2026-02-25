@@ -15,8 +15,6 @@ import {
   handleListTemplates,
   DOCX_MIME,
   createDownloadArtifact,
-  resolveDownloadArtifact,
-  type ResolveDownloadArtifactErrorCode,
 } from './_shared.js';
 import { ErrorCode, makeToolError, wrapError, wrapSuccess } from './_envelope.js';
 
@@ -35,11 +33,7 @@ const GetTemplateArgsSchema = z.object({
 const FillTemplateArgsSchema = z.object({
   template: z.string().min(1),
   values: z.record(z.string(), z.unknown()).optional().default({}),
-  return_mode: z.enum(['url', 'base64_docx', 'mcp_resource']).optional().default('url'),
-});
-
-const DownloadFilledArgsSchema = z.object({
-  download_id: z.string().min(1),
+  return_mode: z.enum(['url', 'mcp_resource']).optional().default('url'),
 });
 
 // Base URL for download links — derived from the incoming request at call time
@@ -48,7 +42,6 @@ let _baseUrl = 'https://openagreements.ai';
 const TOOL_LIST_TEMPLATES = 'list_templates';
 const TOOL_GET_TEMPLATE = 'get_template';
 const TOOL_FILL_TEMPLATE = 'fill_template';
-const TOOL_DOWNLOAD_FILLED = 'download_filled';
 
 // ---------------------------------------------------------------------------
 // MCP tool definitions
@@ -90,7 +83,7 @@ const TOOLS = [
     name: TOOL_FILL_TEMPLATE,
     description:
       'Fill a legal agreement template with field values and return a document ' +
-      'via URL, inline base64, or MCP resource preview metadata.',
+      'via URL or MCP resource preview metadata.',
     inputSchema: {
       type: 'object' as const,
       properties: {
@@ -105,27 +98,11 @@ const TOOLS = [
         },
         return_mode: {
           type: 'string',
-          enum: ['url', 'base64_docx', 'mcp_resource'],
+          enum: ['url', 'mcp_resource'],
           description: 'Artifact return mode. Defaults to "url".',
         },
       },
       required: ['template'],
-    },
-  },
-  {
-    name: TOOL_DOWNLOAD_FILLED,
-    description:
-      'Retrieve a filled template using a previously issued download_id. ' +
-      'Returns base64 DOCX and metadata in a structured envelope.',
-    inputSchema: {
-      type: 'object' as const,
-      properties: {
-        download_id: {
-          type: 'string',
-          description: 'Download ID from fill_template(url mode).',
-        },
-      },
-      required: ['download_id'],
     },
   },
 ];
@@ -228,38 +205,6 @@ function toolErrorResult(
     content: [{ type: 'text', text: JSON.stringify(envelope) }],
     isError: true,
   });
-}
-
-function mapDownloadResolutionError(
-  code: ResolveDownloadArtifactErrorCode,
-): { code: (typeof ErrorCode)[keyof typeof ErrorCode]; message: string } {
-  switch (code) {
-    case 'DOWNLOAD_ID_MALFORMED':
-      return {
-        code: ErrorCode.DOWNLOAD_LINK_INVALID,
-        message: 'Malformed download_id.',
-      };
-    case 'DOWNLOAD_SIGNATURE_INVALID':
-      return {
-        code: ErrorCode.DOWNLOAD_LINK_INVALID,
-        message: 'Invalid download_id signature.',
-      };
-    case 'DOWNLOAD_EXPIRED':
-      return {
-        code: ErrorCode.DOWNLOAD_LINK_EXPIRED,
-        message: 'Download link expired.',
-      };
-    case 'DOWNLOAD_NOT_FOUND':
-      return {
-        code: ErrorCode.DOWNLOAD_LINK_NOT_FOUND,
-        message: 'Download link not found.',
-      };
-    default:
-      return {
-        code: ErrorCode.DOWNLOAD_LINK_INVALID,
-        message: 'Invalid download link.',
-      };
-  }
 }
 
 function mcpGetHtmlPage(): string {
@@ -548,15 +493,6 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>) {
       return toolErrorResult(id, TOOL_FILL_TEMPLATE, errorCode, outcome.error);
     }
 
-    if (return_mode === 'base64_docx') {
-      return toolSuccessResult(id, TOOL_FILL_TEMPLATE, {
-        content_type: DOCX_MIME,
-        docx_base64: outcome.base64,
-        metadata: outcome.metadata,
-        return_mode,
-      });
-    }
-
     const artifact = await createDownloadArtifact(template, values);
     const downloadUrl = `${_baseUrl}/api/download?id=${encodeURIComponent(artifact.download_id)}`;
     const expiresAt = artifact.expires_at;
@@ -579,41 +515,6 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>) {
       expires_at: expiresAt,
       metadata: outcome.metadata,
       return_mode,
-    });
-  }
-
-  if (name === TOOL_DOWNLOAD_FILLED) {
-    const parsed = DownloadFilledArgsSchema.safeParse(args);
-    if (!parsed.success) {
-      return toolErrorResult(
-        id,
-        TOOL_DOWNLOAD_FILLED,
-        ErrorCode.INVALID_ARGUMENT,
-        'Invalid arguments for download_filled.',
-        { details: issueDetails(parsed.error) },
-      );
-    }
-
-    const resolved = await resolveDownloadArtifact(parsed.data.download_id);
-    if (!resolved.ok) {
-      const mapped = mapDownloadResolutionError(resolved.code);
-      return toolErrorResult(id, TOOL_DOWNLOAD_FILLED, mapped.code, mapped.message);
-    }
-
-    const outcome = await handleFill(resolved.artifact.template, resolved.artifact.values);
-    if (!outcome.ok) {
-      const errorCode = isUnknownTemplateError(outcome.error)
-        ? ErrorCode.TEMPLATE_NOT_FOUND
-        : ErrorCode.INVALID_ARGUMENT;
-      return toolErrorResult(id, TOOL_DOWNLOAD_FILLED, errorCode, outcome.error);
-    }
-
-    return toolSuccessResult(id, TOOL_DOWNLOAD_FILLED, {
-      content_type: DOCX_MIME,
-      docx_base64: outcome.base64,
-      metadata: outcome.metadata,
-      download_id: parsed.data.download_id,
-      download_expires_at: new Date(resolved.artifact.expires_at_ms).toISOString(),
     });
   }
 

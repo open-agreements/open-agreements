@@ -382,9 +382,8 @@ describe('MCP endpoint — api/mcp.ts', () => {
     await allureJsonAttachment('mcp-tools-list.json', res.body);
 
     const tools = getResultObject(res).tools;
-    expect(tools).toHaveLength(4);
+    expect(tools).toHaveLength(3);
     expect(tools.map((t: { name: string }) => t.name).sort()).toEqual([
-      'download_filled',
       'fill_template',
       'get_template',
       'list_templates',

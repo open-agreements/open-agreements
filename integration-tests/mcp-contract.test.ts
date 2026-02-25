@@ -72,27 +72,12 @@ const createDownloadArtifactMock = vi.fn(() => ({
   expires_at: new Date(Date.now() + 3600000).toISOString(),
   expires_at_ms: Date.now() + 3600000,
 }));
-const resolveDownloadArtifactMock = vi.fn((downloadId: string) => {
-  if (downloadId !== VALID_DOWNLOAD_ID) {
-    return { ok: false as const, code: 'DOWNLOAD_EXPIRED' as const };
-  }
-  return {
-    ok: true as const,
-    artifact: {
-      template: MOCK_TEMPLATE.name,
-      values: { company_name: 'Acme Corp' },
-      expires_at_ms: Date.now() + 3600000,
-      created_at_ms: Date.now(),
-    },
-  };
-});
 
 vi.mock('../api/_shared.js', () => ({
   handleListTemplates: handleListTemplatesMock,
   handleGetTemplate: handleGetTemplateMock,
   handleFill: handleFillMock,
   createDownloadArtifact: createDownloadArtifactMock,
-  resolveDownloadArtifact: resolveDownloadArtifactMock,
   DOCX_MIME: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
 }));
 
@@ -255,7 +240,7 @@ describe('MCP contract envelope behaviors', () => {
     expect(missingEnvelope.error.code).toBe('TEMPLATE_NOT_FOUND');
   });
 
-  it.openspec('OA-DST-032')('returns fill_template envelopes for url, base64_docx, and mcp_resource', async () => {
+  it.openspec('OA-DST-032')('returns fill_template envelopes for url and mcp_resource', async () => {
     const urlReq = createMockReq({
       body: {
         jsonrpc: '2.0',
@@ -280,34 +265,10 @@ describe('MCP contract envelope behaviors', () => {
     expect(urlEnvelope.data.download_url).toContain('/api/download?id=');
     expect(urlEnvelope.data.download_id).toBe(VALID_DOWNLOAD_ID);
 
-    const base64Req = createMockReq({
-      body: {
-        jsonrpc: '2.0',
-        id: 7,
-        method: 'tools/call',
-        params: {
-          name: 'fill_template',
-          arguments: {
-            template: 'common-paper-mutual-nda',
-            values: { company_name: 'Acme Corp' },
-            return_mode: 'base64_docx',
-          },
-        },
-      },
-    });
-    const base64Res = createMockRes();
-    await mcpHandler(base64Req, base64Res);
-
-    const base64Envelope = parseEnvelope(base64Res.body);
-    expect(base64Envelope.ok).toBe(true);
-    expect(base64Envelope.data.return_mode).toBe('base64_docx');
-    expect(base64Envelope.data.docx_base64).toBe(MOCK_FILL_SUCCESS.base64);
-    expect(base64Envelope.data.content_type).toContain('wordprocessingml.document');
-
     const resourceReq = createMockReq({
       body: {
         jsonrpc: '2.0',
-        id: 8,
+        id: 7,
         method: 'tools/call',
         params: {
           name: 'fill_template',
@@ -329,43 +290,7 @@ describe('MCP contract envelope behaviors', () => {
     expect(resourceEnvelope.data.download_url).toContain('/api/download?id=');
   });
 
-  it.openspec('OA-DST-032')('returns download_filled success and DOWNLOAD_LINK_EXPIRED error envelopes', async () => {
-    const validReq = createMockReq({
-      body: {
-        jsonrpc: '2.0',
-        id: 9,
-        method: 'tools/call',
-        params: { name: 'download_filled', arguments: { download_id: VALID_DOWNLOAD_ID } },
-      },
-    });
-    const validRes = createMockRes();
-    await mcpHandler(validReq, validRes);
-
-    const validEnvelope = parseEnvelope(validRes.body);
-    expect(validEnvelope.ok).toBe(true);
-    expect(validEnvelope.tool).toBe('download_filled');
-    expect(validEnvelope.data.docx_base64).toBe(MOCK_FILL_SUCCESS.base64);
-    expect(validEnvelope.data.download_id).toBe(VALID_DOWNLOAD_ID);
-    expect(validEnvelope.data.download_expires_at).toBeDefined();
-
-    const expiredReq = createMockReq({
-      body: {
-        jsonrpc: '2.0',
-        id: 10,
-        method: 'tools/call',
-        params: { name: 'download_filled', arguments: { download_id: 'expired-token' } },
-      },
-    });
-    const expiredRes = createMockRes();
-    await mcpHandler(expiredReq, expiredRes);
-
-    const expiredEnvelope = parseEnvelope(expiredRes.body);
-    expect(getResultObject(expiredRes).isError).toBe(true);
-    expect(expiredEnvelope.ok).toBe(false);
-    expect(expiredEnvelope.error.code).toBe('DOWNLOAD_LINK_EXPIRED');
-  });
-
-  it.openspec('OA-DST-032')('returns INVALID_ARGUMENT for invalid arguments and unknown tool', async () => {
+  it.openspec('OA-DST-032')('returns INVALID_ARGUMENT for removed/invalid arguments and unknown tool', async () => {
     const invalidArgReq = createMockReq({
       body: {
         jsonrpc: '2.0',
@@ -375,7 +300,7 @@ describe('MCP contract envelope behaviors', () => {
           name: 'fill_template',
           arguments: {
             template: 'common-paper-mutual-nda',
-            return_mode: 'invalid-mode',
+            return_mode: 'base64_docx',
           },
         },
       },

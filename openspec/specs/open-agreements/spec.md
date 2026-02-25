@@ -1007,12 +1007,12 @@ Tampered or malformed tokens MUST be rejected.
 
 ### Requirement: MCP Protocol Envelope Contract
 The MCP endpoint MUST return consistent envelope shapes for all tool calls
-including list, fill, get, and download operations with proper error envelopes.
+including list, fill, and get operations with proper error envelopes.
 
 #### Scenario: [OA-DST-032] MCP contract envelope shapes
-- **WHEN** MCP tools are called (list_templates, get_template, fill_template, download_filled)
+- **WHEN** MCP tools are called (list_templates, get_template, fill_template)
 - **THEN** success responses have consistent envelope structure
-- **AND** error responses use typed error codes (INVALID_ARGUMENT, TEMPLATE_NOT_FOUND, DOWNLOAD_LINK_EXPIRED)
+- **AND** error responses use typed error codes (INVALID_ARGUMENT, TEMPLATE_NOT_FOUND)
 - **AND** compact and full payload modes are supported for list_templates
 - **AND** browser GET returns HTML, non-browser GET returns 405
 

@@ -36,7 +36,6 @@ Error responses now use the same envelope shape with `ok: false` and a structure
 - `list_templates`
 - `get_template` (new)
 - `fill_template` (updated)
-- `download_filled` (new)
 
 ## `list_templates` Modes
 
@@ -46,21 +45,14 @@ Error responses now use the same envelope shape with `ok: false` and a structure
 ## `fill_template` Return Modes
 
 - `url` (default): `{ download_url, download_id, expires_at, metadata }`
-- `base64_docx`: `{ docx_base64, content_type, metadata }`
 - `mcp_resource`: `{ resource_uri, download_url, download_id, content_type, expires_at, metadata }`
 
 `mcp_resource` returns preview-style `resource_uri` values (`oa://filled/{download_id}`) with `download_url` fallback.
+For best performance and reliability, use `return_mode: "url"` and download bytes directly:
 
-## `download_filled`
-
-Use `download_filled` to retrieve base64 DOCX in-protocol using the previously issued `download_id`.
-
-Input:
-```json
-{ "download_id": "..." }
+```bash
+curl -L "$DOWNLOAD_URL" -o filled.docx
 ```
-
-Success data includes `docx_base64`, `content_type`, template metadata, and `download_expires_at`.
 
 ## Error Code Taxonomy
 
@@ -106,5 +98,5 @@ Non-browser GET requests still return `405` JSON errors. MCP client behavior ove
 1. Parse `result.content[0].text` as JSON.
 2. Branch on `envelope.ok`.
 3. Handle `envelope.error.code` (avoid parsing free-form text).
-4. Choose explicit `fill_template.return_mode` where needed.
-5. Add support for `get_template` and `download_filled` in client flows.
+4. Use `fill_template.return_mode: "url"` and download via `download_url` out-of-band.
+5. Add support for `get_template`.
