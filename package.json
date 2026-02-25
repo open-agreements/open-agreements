@@ -71,12 +71,14 @@
     "report:allure:open": "npx allure open ./allure-report",
     "allure:deploy": "node scripts/deploy_allure_report.mjs",
     "allure:summary:export": "node scripts/export_allure_summary.mjs",
+    "export:system-card-runtime": "node scripts/export_allure_summary.mjs",
     "generate:system-card": "node scripts/generate_system_card.mjs",
+    "check:system-card-runtime": "node scripts/check_system_card_runtime.mjs",
     "check:system-card": "npm run generate:system-card && git diff --exit-code -- site/trust/system-card.md",
     "generate:template-evidence": "node scripts/generate_template_evidence.mjs",
     "check:template-evidence": "npm run generate:template-evidence && git diff --exit-code -- site/_data/templateEvidence.json",
-    "trust:rebuild": "npm run generate:system-card && npm run generate:template-evidence",
-    "trust:check": "npm run check:system-card && npm run check:template-evidence"
+    "trust:rebuild": "npm run export:system-card-runtime && npm run generate:system-card && npm run generate:template-evidence",
+    "trust:check": "npm run check:system-card-runtime && npm run check:system-card && npm run check:template-evidence"
   },
   "keywords": [
     "legal",

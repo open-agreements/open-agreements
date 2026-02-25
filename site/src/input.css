@@ -915,7 +915,7 @@
   /* System card inline chart */
   .trust-summary-banner {
     padding: 16px 20px;
-    border: 1px solid var(--border);
+    border: 1px solid var(--line);
     background: #fff;
     margin-bottom: 16px;
   }

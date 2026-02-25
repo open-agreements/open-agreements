@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ["site/**/*.njk"],
+  content: ["site/**/*.{njk,md}"],
   theme: {
     extend: {
       colors: {
