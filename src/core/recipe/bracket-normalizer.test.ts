@@ -73,7 +73,7 @@ function escapeXml(value: string): string {
 }
 
 describe('normalizeBracketArtifacts', () => {
-  it.openspec('OA-191')('removes bracket artifacts and degenerate optional-clause leftovers', async () => {
+  it.openspec('OA-ENG-008')('removes bracket artifacts and degenerate optional-clause leftovers', async () => {
     const dir = mkdtempSync(join(tmpdir(), 'oa-bracket-normalizer-'));
     tempDirs.push(dir);
 
@@ -106,7 +106,7 @@ describe('normalizeBracketArtifacts', () => {
     expect(joined).not.toContain('from, counsel');
   });
 
-  it.openspec('OA-191')('applies declarative paragraph rules with heading aliases and field interpolation', async () => {
+  it.openspec('OA-ENG-008')('applies declarative paragraph rules with heading aliases and field interpolation', async () => {
     const dir = mkdtempSync(join(tmpdir(), 'oa-bracket-normalizer-rules-'));
     tempDirs.push(dir);
 
@@ -187,7 +187,7 @@ describe('normalizeBracketArtifacts', () => {
     expect(joined).not.toContain(']');
   });
 
-  it.openspec('OA-191')('tracks expectation failures when a rule start/end anchor pair is not found', async () => {
+  it.openspec('OA-ENG-008')('tracks expectation failures when a rule start/end anchor pair is not found', async () => {
     const dir = mkdtempSync(join(tmpdir(), 'oa-bracket-normalizer-expectations-'));
     tempDirs.push(dir);
 

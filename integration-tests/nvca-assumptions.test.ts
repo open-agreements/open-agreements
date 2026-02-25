@@ -76,7 +76,7 @@ function escapeXml(value: string): string {
 }
 
 describe('NVCA assumptions regression', () => {
-  it.openspec('OA-171')('clean step preserves bracket-prefixed headings while removing bracketed alternatives', async () => {
+  it.openspec('OA-TMP-018')('clean step preserves bracket-prefixed headings while removing bracketed alternatives', async () => {
     const dir = mkdtempSync(join(tmpdir(), 'oa-nvca-assump-clean-'));
     tempDirs.push(dir);
 
@@ -107,7 +107,7 @@ describe('NVCA assumptions regression', () => {
     expect(joined).not.toContain('Alternative 2');
   });
 
-  it.openspec('OA-171')('declarative normalize strips heading-leading brackets and trims unmatched trailing brackets', async () => {
+  it.openspec('OA-TMP-018')('declarative normalize strips heading-leading brackets and trims unmatched trailing brackets', async () => {
     const dir = mkdtempSync(join(tmpdir(), 'oa-nvca-assump-normalize-'));
     tempDirs.push(dir);
 

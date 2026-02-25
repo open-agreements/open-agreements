@@ -37,39 +37,39 @@ describe('npm packaging', () => {
     }
   }, 45_000);
 
-  it.openspec('OA-157')('includes dist/cli/index.js', () => {
+  it.openspec('OA-DST-029')('includes dist/cli/index.js', () => {
     if (!available) return;
     expect(files).toContain('dist/cli/index.js');
   });
 
-  it.openspec('OA-157')('includes bin/open-agreements.js', () => {
+  it.openspec('OA-DST-029')('includes bin/open-agreements.js', () => {
     if (!available) return;
     expect(files).toContain('bin/open-agreements.js');
   });
 
-  it.openspec('OA-157')('includes a template metadata file', () => {
+  it.openspec('OA-DST-029')('includes a template metadata file', () => {
     if (!available) return;
     expect(files.some((f) => f.startsWith('content/templates/') && f.endsWith('metadata.yaml'))).toBe(
       true
     );
   });
 
-  it.openspec('OA-157')('includes a recipe metadata file', () => {
+  it.openspec('OA-DST-029')('includes a recipe metadata file', () => {
     if (!available) return;
     expect(files.some((f) => f.startsWith('content/recipes/') && f.endsWith('metadata.yaml'))).toBe(true);
   });
 
-  it.openspec('OA-157')('does NOT include src/', () => {
+  it.openspec('OA-DST-029')('does NOT include src/', () => {
     if (!available) return;
     expect(files.some((f) => f.startsWith('src/'))).toBe(false);
   });
 
-  it.openspec('OA-157')('does NOT include node_modules/', () => {
+  it.openspec('OA-DST-029')('does NOT include node_modules/', () => {
     if (!available) return;
     expect(files.some((f) => f.startsWith('node_modules/'))).toBe(false);
   });
 
-  it.openspec('OA-060')('installs from packed tarball and runs list --json', () => {
+  it.openspec('OA-DST-005')('installs from packed tarball and runs list --json', () => {
     if (!available) return;
 
     const repoRoot = new URL('..', import.meta.url).pathname;

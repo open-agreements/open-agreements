@@ -326,7 +326,7 @@ describe('declarative prune prototype', () => {
     },
   };
 
-  it.openspec('OA-192')('keeps only selected option via declarative anchors', async () => {
+  it.openspec('OA-ENG-009')('keeps only selected option via declarative anchors', async () => {
     const dir = mkdtempSync(join(tmpdir(), 'oa-prune-prototype-'));
     tempDirs.push(dir);
     const input = join(dir, 'input.docx');
@@ -352,7 +352,7 @@ describe('declarative prune prototype', () => {
     expect(text).not.toContain(']');
   });
 
-  it.openspec('OA-192')('emits warning when selected option anchor is not found', async () => {
+  it.openspec('OA-ENG-009')('emits warning when selected option anchor is not found', async () => {
     const dir = mkdtempSync(join(tmpdir(), 'oa-prune-prototype-warning-'));
     tempDirs.push(dir);
     const input = join(dir, 'input.docx');
@@ -375,7 +375,7 @@ describe('declarative prune prototype', () => {
     expect(text).toContain('[If any action at law or in equity is necessary.]');
   });
 
-  it.openspec('OA-192')('fills and cleans targeted NVCA clauses via declarative paragraph rules', async () => {
+  it.openspec('OA-ENG-009')('fills and cleans targeted NVCA clauses via declarative paragraph rules', async () => {
     const dir = mkdtempSync(join(tmpdir(), 'oa-prune-prototype-nvca-'));
     tempDirs.push(dir);
     const input = join(dir, 'input.docx');

@@ -92,7 +92,7 @@ function paragraphSpacing(paragraph: Element): {
 
 describe('employment template standard-terms spacing', () => {
   for (const testCase of EMPLOYMENT_SPACING_CASES) {
-    it.openspec('OA-173')(`${testCase.templatePath} keeps 6pt spacing in Standard Terms`, () => {
+    it.openspec('OA-FIL-020')(`${testCase.templatePath} keeps 6pt spacing in Standard Terms`, () => {
       const xml = loadDocumentXml(testCase.templatePath);
       const doc = new DOMParser().parseFromString(xml, 'text/xml');
 

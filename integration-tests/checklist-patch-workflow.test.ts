@@ -140,7 +140,7 @@ describe('checklist patch workflow (integration)', () => {
     setChecklistProposedPatchStore(null);
   });
 
-  it.openspec('OA-105')('enforces optimistic concurrency and all-or-nothing apply behavior', async () => {
+  it.openspec('OA-CKL-018')('enforces optimistic concurrency and all-or-nothing apply behavior', async () => {
     const checklistForValidation = {
       ...baseChecklist(),
       issues: {
@@ -233,7 +233,7 @@ describe('checklist patch workflow (integration)', () => {
     });
   });
 
-  it.openspec('OA-110')('supports idempotent replay and rejects patch_id hash conflicts', async () => {
+  it.openspec('OA-CKL-023')('supports idempotent replay and rejects patch_id hash conflicts', async () => {
     const checklist = baseChecklist();
     const patch = {
       patch_id: 'patch_integration_idempotent_1',
@@ -341,7 +341,7 @@ describe('checklist patch workflow (integration)', () => {
     });
   });
 
-  it.openspec('OA-103')('applies a multi-operation patch from one source event and renders evidence', async () => {
+  it.openspec('OA-CKL-016')('applies a multi-operation patch from one source event and renders evidence', async () => {
     const checklist = baseChecklist();
     const patch = {
       patch_id: 'patch_integration_email_1',

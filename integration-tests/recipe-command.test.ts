@@ -45,7 +45,7 @@ afterEach(() => {
 });
 
 describe('recipe commands', () => {
-  it.openspec(['OA-012', 'OA-015'])('runRecipeCommand omits inputPath to allow auto-download', async () => {
+  it.openspec(['OA-RCP-001', 'OA-RCP-004'])('runRecipeCommand omits inputPath to allow auto-download', async () => {
     const outDir = mkdtempSync(join(tmpdir(), 'oa-recipe-auto-'));
     tempDirs.push(outDir);
 
@@ -69,7 +69,7 @@ describe('recipe commands', () => {
     );
   });
 
-  it.openspec('OA-013')('runRecipeCommand forwards a user-supplied input path', async () => {
+  it.openspec('OA-RCP-002')('runRecipeCommand forwards a user-supplied input path', async () => {
     const outDir = mkdtempSync(join(tmpdir(), 'oa-recipe-input-'));
     tempDirs.push(outDir);
     const inputPath = join(outDir, 'source.docx');
@@ -94,7 +94,7 @@ describe('recipe commands', () => {
     );
   });
 
-  it.openspec('OA-014')('runRecipeCommand forwards keepIntermediate flag', async () => {
+  it.openspec('OA-RCP-003')('runRecipeCommand forwards keepIntermediate flag', async () => {
     const outDir = mkdtempSync(join(tmpdir(), 'oa-recipe-keep-'));
     tempDirs.push(outDir);
 
@@ -117,7 +117,7 @@ describe('recipe commands', () => {
     );
   });
 
-  it.openspec('OA-063')('runRecipeCommand forwards computed artifact output path', async () => {
+  it.openspec('OA-RCP-023')('runRecipeCommand forwards computed artifact output path', async () => {
     const outDir = mkdtempSync(join(tmpdir(), 'oa-recipe-computed-'));
     tempDirs.push(outDir);
     const computedOut = join(outDir, 'computed.json');
@@ -143,7 +143,7 @@ describe('recipe commands', () => {
     );
   });
 
-  it.openspec('OA-016')('runRecipeClean invokes cleanDocument with recipe config', async () => {
+  it.openspec('OA-RCP-005')('runRecipeClean invokes cleanDocument with recipe config', async () => {
     const outDir = mkdtempSync(join(tmpdir(), 'oa-recipe-clean-'));
     tempDirs.push(outDir);
     const inputPath = join(outDir, 'source.docx');
@@ -163,7 +163,7 @@ describe('recipe commands', () => {
     expect(cleanDocumentMock.mock.calls[0][2]).toEqual(expect.objectContaining({ removeFootnotes: expect.any(Boolean) }));
   });
 
-  it.openspec('OA-017')('runRecipePatch invokes patchDocument with recipe replacements', async () => {
+  it.openspec('OA-RCP-006')('runRecipePatch invokes patchDocument with recipe replacements', async () => {
     const outDir = mkdtempSync(join(tmpdir(), 'oa-recipe-patch-'));
     tempDirs.push(outDir);
     const inputPath = join(outDir, 'source.docx');

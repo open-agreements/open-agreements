@@ -18,7 +18,7 @@ const EVIDENCE_DIR = resolve(REPO_ROOT, 'site', 'assets', 'evidence', 'nda-fill'
 const it = itAllure.epic('Filling & Rendering');
 
 describe('Canonical Evidence Story: NDA Fill', () => {
-  it.openspec('OA-132')(
+  it.openspec('OA-DST-016')(
     'fills Common Paper Mutual NDA from JSON payload and produces a valid DOCX',
     async () => {
       await allureDescription(

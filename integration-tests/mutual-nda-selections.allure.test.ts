@@ -57,11 +57,11 @@ describe('common-paper-mutual-nda selections', () => {
   const fixedScenario = MUTUAL_NDA_SELECTION_SCENARIOS.fixed_term;
   const perpetualScenario = MUTUAL_NDA_SELECTION_SCENARIOS.perpetual;
 
-  it.openspec('OA-036')('fixed-term flow removes non-selected options', async () => {
+  it.openspec('OA-TMP-007')('fixed-term flow removes non-selected options', async () => {
     await runScenario(fixedScenario);
   });
 
-  it.openspec('OA-037')('perpetual flow marks selected options', async () => {
+  it.openspec('OA-TMP-008')('perpetual flow marks selected options', async () => {
     await runScenario(perpetualScenario);
   });
 });

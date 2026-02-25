@@ -62,7 +62,7 @@ function escapeXml(value: string): string {
 }
 
 describe('NVCA option resolution policy', () => {
-  it.openspec('OA-168')('costs-of-enforcement policy keeps only the each-party clause', async () => {
+  it.openspec('OA-FIL-018')('costs-of-enforcement policy keeps only the each-party clause', async () => {
     const dir = mkdtempSync(join(tmpdir(), 'oa-nvca-policy-costs-'));
     tempDirs.push(dir);
     const input = join(dir, 'input.docx');
@@ -94,7 +94,7 @@ describe('NVCA option resolution policy', () => {
     expect(text).not.toContain('prevailing party shall be entitled to reasonable attorneys’ fees');
   });
 
-  it.openspec('OA-168')('dispute-resolution policy defaults arbitration venue when arbitration is selected', () => {
+  it.openspec('OA-FIL-018')('dispute-resolution policy defaults arbitration venue when arbitration is selected', () => {
     const profile = loadComputedProfile(RECIPE_DIR);
     expect(profile).not.toBeNull();
 
@@ -108,7 +108,7 @@ describe('NVCA option resolution policy', () => {
     expect(evaluated.fillValues.arbitration_location).toBe('San Francisco, California');
   });
 
-  it.openspec('OA-168')('dispute-resolution policy defaults courts district by state and flags alignment', () => {
+  it.openspec('OA-FIL-018')('dispute-resolution policy defaults courts district by state and flags alignment', () => {
     const profile = loadComputedProfile(RECIPE_DIR);
     expect(profile).not.toBeNull();
 
@@ -123,7 +123,7 @@ describe('NVCA option resolution policy', () => {
     expect(evaluated.fillValues.judicial_district).toBe('Northern District of California');
   });
 
-  it.openspec('OA-169')('preserves unresolved in-line legal alternatives until an explicit clause policy is added', async () => {
+  it.openspec('OA-FIL-019')('preserves unresolved in-line legal alternatives until an explicit clause policy is added', async () => {
     const dir = mkdtempSync(join(tmpdir(), 'oa-nvca-policy-unresolved-'));
     tempDirs.push(dir);
     const input = join(dir, 'input.docx');

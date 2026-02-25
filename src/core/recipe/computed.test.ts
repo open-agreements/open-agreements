@@ -13,7 +13,7 @@ import {
 const itVerification = itAllure.epic('Verification & Drift');
 
 describe('computed profile evaluator', () => {
-  itVerification.openspec('OA-062')('evaluates dispute-resolution interaction rules deterministically across bounded passes', async () => {
+  itVerification.openspec('OA-RCP-022')('evaluates dispute-resolution interaction rules deterministically across bounded passes', async () => {
     const profile = ComputedProfileSchema.parse({
       version: '1.0',
       max_passes: 4,

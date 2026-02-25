@@ -219,7 +219,7 @@ function pick<T>(items: T[], rng: () => number): T {
 }
 
 describe('NVCA computed interaction strategy', () => {
-  itVerification.openspec('OA-066')('achieves MC/DC-style coverage for dispute-resolution forum and governing-law alignment chain', async () => {
+  itVerification.openspec('OA-FIL-002')('achieves MC/DC-style coverage for dispute-resolution forum and governing-law alignment chain', async () => {
     await allureParameter('recipe_id', RECIPE_ID);
     await allureParameter('strategy', 'mcdc');
 
@@ -262,7 +262,7 @@ describe('NVCA computed interaction strategy', () => {
     });
   });
 
-  itVerification.openspec('OA-062')('uses pairwise reduction to cover interaction space without full Cartesian explosion', async () => {
+  itVerification.openspec('OA-RCP-022')('uses pairwise reduction to cover interaction space without full Cartesian explosion', async () => {
     await allureParameter('recipe_id', RECIPE_ID);
     await allureParameter('strategy', 'pairwise');
 
@@ -283,7 +283,7 @@ describe('NVCA computed interaction strategy', () => {
     expect(reduction.selected.length).toBeLessThan(reduction.totalCombinations);
   });
 
-  itVerification.openspec('OA-066')('enforces dispute-resolution invariants across deterministic pseudo-random generated states', async () => {
+  itVerification.openspec('OA-FIL-002')('enforces dispute-resolution invariants across deterministic pseudo-random generated states', async () => {
     await allureParameter('recipe_id', RECIPE_ID);
     await allureParameter('strategy', 'property-invariants');
 
@@ -304,7 +304,7 @@ describe('NVCA computed interaction strategy', () => {
     expect(trials).toBeGreaterThanOrEqual(100);
   });
 
-  itVerification.openspec('OA-066')('applies metamorphic checks when dispute-resolution mode toggles from courts to arbitration', async () => {
+  itVerification.openspec('OA-FIL-002')('applies metamorphic checks when dispute-resolution mode toggles from courts to arbitration', async () => {
     await allureParameter('recipe_id', RECIPE_ID);
     await allureParameter('strategy', 'metamorphic');
 

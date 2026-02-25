@@ -21,7 +21,7 @@ afterEach(() => {
 });
 
 describe('catalog validation and fetch', () => {
-  it.openspec('OA-120')('accepts entries with source_url and checksum', () => {
+  it.openspec('OA-WKS-006')('accepts entries with source_url and checksum', () => {
     const root = mkdtempSync(join(tmpdir(), 'oa-catalog-valid-'));
     tempDirs.push(root);
 
@@ -50,7 +50,7 @@ describe('catalog validation and fetch', () => {
     expect(result.valid).toBe(true);
   });
 
-  it.openspec('OA-121')('rejects entries missing checksum', () => {
+  it.openspec('OA-WKS-007')('rejects entries missing checksum', () => {
     const root = mkdtempSync(join(tmpdir(), 'oa-catalog-invalid-'));
     tempDirs.push(root);
 
@@ -76,7 +76,7 @@ describe('catalog validation and fetch', () => {
     expect(result.valid).toBe(false);
   });
 
-  it.openspec(['OA-122', 'OA-123', 'OA-124'])(
+  it.openspec(['OA-WKS-008', 'OA-WKS-009', 'OA-WKS-010'])(
     'downloads allowed entries, skips pointer-only entries, and blocks checksum mismatches',
     async () => {
     const root = mkdtempSync(join(tmpdir(), 'oa-catalog-fetch-'));

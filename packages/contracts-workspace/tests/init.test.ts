@@ -20,7 +20,7 @@ afterEach(() => {
 });
 
 describe('initializeWorkspace', () => {
-  it.openspec(['OA-115', 'OA-118', 'OA-119'])(
+  it.openspec(['OA-WKS-001', 'OA-WKS-004', 'OA-WKS-005'])(
     'creates config files and agent snippets but does not create lifecycle directories',
     () => {
     const root = mkdtempSync(join(tmpdir(), 'oa-workspace-init-'));
@@ -44,7 +44,7 @@ describe('initializeWorkspace', () => {
     }
   );
 
-  it.openspec('OA-116')('is idempotent when re-run', () => {
+  it.openspec('OA-WKS-002')('is idempotent when re-run', () => {
     const root = mkdtempSync(join(tmpdir(), 'oa-workspace-idempotent-'));
     tempDirs.push(root);
 
@@ -57,7 +57,7 @@ describe('initializeWorkspace', () => {
     expect(second.existingFiles).toContain(CATALOG_FILE);
   });
 
-  it.openspec('OA-117')('plans workspace setup without creating files or directories', () => {
+  it.openspec('OA-WKS-003')('plans workspace setup without creating files or directories', () => {
     const root = mkdtempSync(join(tmpdir(), 'oa-workspace-plan-'));
     tempDirs.push(root);
 

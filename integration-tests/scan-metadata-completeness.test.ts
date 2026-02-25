@@ -107,7 +107,7 @@ function loadNvcaCoverageInputs(): {
 }
 
 describe('scan vs metadata completeness', () => {
-  it.openspec('OA-172')('flags short placeholders discovered by scan that are not mapped', () => {
+  it.openspec('OA-TMP-019')('flags short placeholders discovered by scan that are not mapped', () => {
     const { metadataFields, replacements, extraCoveredFields } = loadNvcaCoverageInputs();
     const dir = mkdtempSync(join(tmpdir(), 'oa-scan-metadata-gap-'));
     tempDirs.push(dir);
@@ -135,7 +135,7 @@ describe('scan vs metadata completeness', () => {
     expect(report.uncoveredShortPlaceholders).toContain('[Unexpected Placeholder Not In Replacements]');
   });
 
-  it.openspec('OA-172')('maps sampled NVCA scanned placeholders to metadata-backed replacements', () => {
+  it.openspec('OA-TMP-019')('maps sampled NVCA scanned placeholders to metadata-backed replacements', () => {
     const { metadataFields, replacements, extraCoveredFields } = loadNvcaCoverageInputs();
     const dir = mkdtempSync(join(tmpdir(), 'oa-scan-metadata-sample-'));
     tempDirs.push(dir);

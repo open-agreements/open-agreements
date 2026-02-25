@@ -144,7 +144,7 @@ afterEach(() => {
 });
 
 describe('runList in-process coverage', () => {
-  itDiscovery.openspec('OA-057')('emits sorted JSON envelope with normalized sources and mapped fields', async () => {
+  itDiscovery.openspec('OA-CLI-012')('emits sorted JSON envelope with normalized sources and mapped fields', async () => {
     const harness = await loadListHarness({
       templateEntries: [
         { id: 'z-template', dir: '/templates/z-template', baseDir: '/templates' },
@@ -213,7 +213,7 @@ describe('runList in-process coverage', () => {
     });
   });
 
-  itDiscovery.openspec('OA-058')('exits non-zero in --json-strict mode when metadata loading fails', async () => {
+  itDiscovery.openspec('OA-CLI-013')('exits non-zero in --json-strict mode when metadata loading fails', async () => {
     const harness = await loadListHarness({
       templateEntries: [
         { id: 'bad-template', dir: '/templates/bad-template', baseDir: '/templates' },
@@ -242,7 +242,7 @@ describe('runList in-process coverage', () => {
     expect(errorSpy).toHaveBeenCalledWith(expect.stringContaining('error: template bad-template: metadata parse failed'));
   });
 
-  itDiscovery.openspec('OA-059')('honors templates-only by skipping external and recipe metadata', async () => {
+  itDiscovery.openspec('OA-CLI-014')('honors templates-only by skipping external and recipe metadata', async () => {
     const harness = await loadListHarness({
       templateEntries: [
         { id: 'template-only', dir: '/templates/template-only', baseDir: '/templates' },
@@ -307,7 +307,7 @@ describe('runList in-process coverage', () => {
     expect(envelope.items[0].name).toBe('good-template');
   });
 
-  itDiscovery.openspec('OA-047')('renders human-readable table rows with error placeholders when metadata fails', async () => {
+  itDiscovery.openspec('OA-CLI-004')('renders human-readable table rows with error placeholders when metadata fails', async () => {
     const harness = await loadListHarness({
       templateEntries: [
         { id: 'good-template', dir: '/templates/good-template', baseDir: '/templates' },
