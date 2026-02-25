@@ -1,67 +1,70 @@
 import { describe, expect } from 'vitest';
 import { itAllure } from '../../../integration-tests/helpers/allure-test.js';
 import { buildChecklistTemplateContext } from './index.js';
+import { arrayToRecord } from './test-utils.js';
 
 const it = itAllure.epic('Compliance & Governance').withLabels({ feature: 'Checklist Rendering v2' });
 
 describe('checklist render model traceability', () => {
-  it.openspec(['OA-091', 'OA-092', 'OA-093'])(
+  it.openspec(['OA-CKL-004', 'OA-CKL-005', 'OA-CKL-006'])(
     'renders canonical stage order with nested numbering while keeping stable IDs unchanged',
     () => {
+      const entriesArray = [
+        {
+          entry_id: 'entry-pre',
+          stage: 'PRE_SIGNING',
+          sort_key: '010',
+          title: 'Pre-signing setup',
+          status: 'NOT_STARTED',
+        },
+        {
+          entry_id: 'entry-parent',
+          document_id: 'doc-parent',
+          stage: 'SIGNING',
+          sort_key: '100',
+          title: 'Parent signing package',
+          status: 'FORM_FINAL',
+        },
+        {
+          entry_id: 'entry-inserted',
+          document_id: 'doc-inserted',
+          stage: 'SIGNING',
+          sort_key: '105',
+          title: 'Inserted mid-stream item',
+          status: 'DRAFT',
+        },
+        {
+          entry_id: 'entry-child',
+          parent_entry_id: 'entry-parent',
+          stage: 'SIGNING',
+          sort_key: '110',
+          title: 'Nested child signature dependency',
+          status: 'CIRCULATED',
+        },
+        {
+          entry_id: 'entry-closing',
+          document_id: 'doc-closing',
+          stage: 'CLOSING',
+          sort_key: '200',
+          title: 'Closing deliverable',
+          status: 'NOT_STARTED',
+        },
+      ];
+
       const payload = {
         deal_name: 'Atlas Series A',
         updated_at: '2026-02-23',
-        documents: [
+        documents: arrayToRecord([
           { document_id: 'doc-parent', title: 'Parent signing package' },
           { document_id: 'doc-inserted', title: 'Inserted mid-stream item' },
           { document_id: 'doc-closing', title: 'Closing deliverable' },
-        ],
-        checklist_entries: [
-          {
-            entry_id: 'entry-pre',
-            stage: 'PRE_SIGNING',
-            sort_key: '010',
-            title: 'Pre-signing setup',
-            status: 'NOT_STARTED',
-          },
-          {
-            entry_id: 'entry-parent',
-            document_id: 'doc-parent',
-            stage: 'SIGNING',
-            sort_key: '100',
-            title: 'Parent signing package',
-            status: 'FORM_FINAL',
-          },
-          {
-            entry_id: 'entry-inserted',
-            document_id: 'doc-inserted',
-            stage: 'SIGNING',
-            sort_key: '105',
-            title: 'Inserted mid-stream item',
-            status: 'DRAFT',
-          },
-          {
-            entry_id: 'entry-child',
-            parent_entry_id: 'entry-parent',
-            stage: 'SIGNING',
-            sort_key: '110',
-            title: 'Nested child signature dependency',
-            status: 'CIRCULATED',
-          },
-          {
-            entry_id: 'entry-closing',
-            document_id: 'doc-closing',
-            stage: 'CLOSING',
-            sort_key: '200',
-            title: 'Closing deliverable',
-            status: 'NOT_STARTED',
-          },
-        ],
-        action_items: [],
-        issues: [],
+        ], 'document_id'),
+        checklist_entries: arrayToRecord(entriesArray, 'entry_id'),
+        action_items: {},
+        issues: {},
       };
 
-      const originalIds = payload.checklist_entries.map((entry) => entry.entry_id);
+      const originalIds = entriesArray.map((entry) => entry.entry_id);
       const context = buildChecklistTemplateContext(payload);
       const documentRows = context.documents.map((row) => row.document_name);
 
@@ -79,20 +82,22 @@ describe('checklist render model traceability', () => {
       expect(childRow).toContain('Nested child signature dependency');
       expect(insertedRow).toBeTruthy();
 
-      const resultingIds = payload.checklist_entries.map((entry) => entry.entry_id);
+      const resultingIds = Object.values(payload.checklist_entries).map((entry) => entry.entry_id);
       expect(resultingIds).toEqual(originalIds);
     },
   );
 
-  it.openspec(['OA-095', 'OA-096'])(
+  it.openspec(['OA-CKL-008', 'OA-CKL-009'])(
     'renders named pending signatories and signature artifact locations for partially signed documents',
     () => {
       const context = buildChecklistTemplateContext({
         deal_name: 'Atlas Series A',
         updated_at: '2026-02-23',
-        documents: [{ document_id: 'doc-escrow', title: 'Escrow Agreement (Executed)' }],
-        checklist_entries: [
-          {
+        documents: {
+          'doc-escrow': { document_id: 'doc-escrow', title: 'Escrow Agreement (Executed)' },
+        },
+        checklist_entries: {
+          'entry-escrow': {
             entry_id: 'entry-escrow',
             document_id: 'doc-escrow',
             stage: 'CLOSING',
@@ -114,9 +119,9 @@ describe('checklist render model traceability', () => {
               },
             ],
           },
-        ],
-        action_items: [],
-        issues: [],
+        },
+        action_items: {},
+        issues: {},
       });
 
       const escrowRow = context.documents.find((row) => row.document_name.includes('Escrow Agreement'));
@@ -129,15 +134,17 @@ describe('checklist render model traceability', () => {
     },
   );
 
-  it.openspec(['OA-097', 'OA-099', 'OA-101'])(
+  it.openspec(['OA-CKL-010', 'OA-CKL-012', 'OA-CKL-014'])(
     'renders citation-backed working-group document rows and keeps unlinked actions in fallback sections',
     () => {
       const context = buildChecklistTemplateContext({
         deal_name: 'Atlas Series A',
         updated_at: '2026-02-23',
-        documents: [{ document_id: 'doc-working-group', title: 'Working Group List' }],
-        checklist_entries: [
-          {
+        documents: {
+          'doc-working-group': { document_id: 'doc-working-group', title: 'Working Group List' },
+        },
+        checklist_entries: {
+          'entry-working-group': {
             entry_id: 'entry-working-group',
             document_id: 'doc-working-group',
             stage: 'PRE_SIGNING',
@@ -146,16 +153,16 @@ describe('checklist render model traceability', () => {
             status: 'FORM_FINAL',
             citations: [{ ref: 'Working Group Exhibit A' }],
           },
-        ],
-        action_items: [
-          {
+        },
+        action_items: {
+          'A-UNLINKED': {
             action_id: 'A-UNLINKED',
             description: 'Collect conflict check forms',
             status: 'NOT_STARTED',
             related_document_ids: [],
           },
-        ],
-        issues: [],
+        },
+        issues: {},
       });
 
       expect(context.documents.some((row) => row.document_name.includes('Working Group List'))).toBe(true);

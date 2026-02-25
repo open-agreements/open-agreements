@@ -67,7 +67,7 @@ function writeDocxPair(sourceHeadingCount: number, outputHeadingCount: number): 
 }
 
 describe('validateOutput', () => {
-  it.openspec(['OA-005', 'OA-050'])('compares heading counts from extracted document XML', async () => {
+  it.openspec(['OA-ENG-003', 'OA-RCP-019'])('compares heading counts from extracted document XML', async () => {
     await allureParameter('source_headings', '2');
     await allureParameter('output_headings', '2');
 
@@ -86,7 +86,7 @@ describe('validateOutput', () => {
     });
   });
 
-  it.openspec('OA-051')('detects structural drift when heading counts differ', async () => {
+  it.openspec('OA-RCP-020')('detects structural drift when heading counts differ', async () => {
     await allureParameter('source_headings', '3');
     await allureParameter('output_headings', '2');
 

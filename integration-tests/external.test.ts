@@ -49,7 +49,7 @@ describe('ExternalMetadataSchema', () => {
     });
   });
 
-  itDiscovery.openspec('OA-044')('rejects missing source_sha256', async () => {
+  itDiscovery.openspec('OA-TMP-013')('rejects missing source_sha256', async () => {
     const input = {
       name: 'Test SAFE',
       source_url: 'https://example.com/safe',
@@ -132,7 +132,7 @@ describe('External template validation', () => {
 });
 
 describe('External fill end-to-end', () => {
-  itFilling.openspec('OA-043')('fills yc-safe-valuation-cap with sample values', async () => {
+  itFilling.openspec('OA-TMP-012')('fills yc-safe-valuation-cap with sample values', async () => {
     const output = '/tmp/test-ext-valuation-cap.docx';
     const command =
       `node ${BIN} fill yc-safe-valuation-cap` +
@@ -190,7 +190,7 @@ describe('External fill end-to-end', () => {
 });
 
 describe('list includes external templates', () => {
-  itDiscovery.openspec('OA-045')('list --json includes yc-safe templates', async () => {
+  itDiscovery.openspec('OA-TMP-014')('list --json includes yc-safe templates', async () => {
     const output = await allureStep('Run list --json', () => execSync(`node ${BIN} list --json`, {
       cwd: ROOT,
       encoding: 'utf-8',

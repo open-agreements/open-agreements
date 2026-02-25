@@ -88,14 +88,14 @@ function writeOverrideTemplate(root: string, templateId = 'override-only-templat
 }
 
 describe('content root overrides', () => {
-  it.openspec('OA-067')('uses bundled content roots when no override env var is set', () => {
+  it.openspec('OA-CLI-015')('uses bundled content roots when no override env var is set', () => {
     delete process.env[ENV_KEY];
     const bundled = findTemplateDir('common-paper-mutual-nda');
     expect(bundled).toBeTruthy();
     expect(bundled).toContain('templates/common-paper-mutual-nda');
   });
 
-  it.openspec('OA-068')('discovers additional templates from OPEN_AGREEMENTS_CONTENT_ROOTS', () => {
+  it.openspec('OA-CLI-016')('discovers additional templates from OPEN_AGREEMENTS_CONTENT_ROOTS', () => {
     const root = mkdtempSync(join(tmpdir(), 'oa-content-roots-'));
     tempDirs.push(root);
 
@@ -109,7 +109,7 @@ describe('content root overrides', () => {
     expect(entries.some((entry) => entry.id === 'common-paper-mutual-nda')).toBe(true);
   });
 
-  it.openspec('OA-069')('deduplicates IDs by precedence with env roots first', () => {
+  it.openspec('OA-CLI-017')('deduplicates IDs by precedence with env roots first', () => {
     const root = mkdtempSync(join(tmpdir(), 'oa-content-roots-priority-'));
     tempDirs.push(root);
 
@@ -126,7 +126,7 @@ describe('content root overrides', () => {
     expect(match!.dir).toBe(overrideDir);
   });
 
-  it.openspec('OA-070')('fills an agreement that exists only in an override root', async () => {
+  it.openspec('OA-CLI-018')('fills an agreement that exists only in an override root', async () => {
     const root = mkdtempSync(join(tmpdir(), 'oa-content-roots-fill-'));
     tempDirs.push(root);
     writeOverrideTemplate(root, 'override-fill-template');
@@ -142,7 +142,7 @@ describe('content root overrides', () => {
     expect(existsSync(outputPath)).toBe(true);
   });
 
-  it.openspec('OA-071')('list --json includes override-only template entries', () => {
+  it.openspec('OA-CLI-019')('list --json includes override-only template entries', () => {
     const root = mkdtempSync(join(tmpdir(), 'oa-content-roots-list-'));
     tempDirs.push(root);
     writeOverrideTemplate(root, 'override-list-template');
@@ -161,7 +161,7 @@ describe('content root overrides', () => {
     expect(parsed.items.some((item) => item.name === 'override-list-template')).toBe(true);
   });
 
-  it.openspec('OA-072')('validate single ID resolves from configured override roots', () => {
+  it.openspec('OA-CLI-020')('validate single ID resolves from configured override roots', () => {
     const root = mkdtempSync(join(tmpdir(), 'oa-content-roots-validate-'));
     tempDirs.push(root);
     writeOverrideTemplate(root, 'override-validate-template');

@@ -13,7 +13,7 @@ const VALIDATE_WORKFLOW = readFileSync(join(ROOT, '.github/workflows/validate.ym
 const it = itAllure.epic('Compliance & Governance');
 
 describe('validate workflow license-diff logic', () => {
-  it.openspec('OA-010')('uses PR base SHA for pull_request events', async () => {
+  it.openspec('OA-DST-001')('uses PR base SHA for pull_request events', async () => {
     await allureParameter('workflow', '.github/workflows/validate.yml');
     await allureAttachment('workflow-snippet.txt', VALIDATE_WORKFLOW);
 
@@ -23,7 +23,7 @@ describe('validate workflow license-diff logic', () => {
     });
   });
 
-  it.openspec('OA-011')('uses HEAD~1 for push events', async () => {
+  it.openspec('OA-DST-002')('uses HEAD~1 for push events', async () => {
     await allureParameter('workflow', '.github/workflows/validate.yml');
 
     await allureStep('Assert push-event base SHA fallback', () => {
@@ -31,7 +31,7 @@ describe('validate workflow license-diff logic', () => {
     });
   });
 
-  it.openspec('OA-042')('checks modified allow_derivatives=false templates and exits non-zero', async () => {
+  it.openspec('OA-DST-004')('checks modified allow_derivatives=false templates and exits non-zero', async () => {
     await allureParameter('workflow', '.github/workflows/validate.yml');
 
     await allureStep('Assert non-derivative enforcement block', () => {

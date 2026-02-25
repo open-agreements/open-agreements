@@ -176,12 +176,15 @@ export async function runChecklistCreate(args: ChecklistCreateArgs): Promise<voi
       outputPath,
     });
 
+    const countItems = (collection: unknown[] | Record<string, unknown>) =>
+      Array.isArray(collection) ? collection.length : Object.keys(collection).length;
+
     console.log(`Created closing checklist for "${c.deal_name}"`);
     console.log(`Output: ${outputPath}`);
-    console.log(`Documents: ${c.documents.length}`);
-    console.log(`Checklist entries: ${c.checklist_entries.length}`);
-    console.log(`Action items: ${c.action_items.length}`);
-    console.log(`Issues: ${c.issues.length}`);
+    console.log(`Documents: ${countItems(c.documents)}`);
+    console.log(`Checklist entries: ${countItems(c.checklist_entries)}`);
+    console.log(`Action items: ${countItems(c.action_items)}`);
+    console.log(`Issues: ${countItems(c.issues)}`);
   } catch (err) {
     console.error(`Error: ${(err as Error).message}`);
     process.exit(1);

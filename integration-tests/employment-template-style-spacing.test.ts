@@ -126,7 +126,7 @@ function standardTermsParagraphs(documentXml: string, endMarker: string): Array<
 
 describe('employment template style and spacing', () => {
   for (const testCase of EMPLOYMENT_TEMPLATE_CASES) {
-    it.openspec('OA-173')(`${testCase.templatePath} emits Standard Terms paragraph styles`, () => {
+    it.openspec('OA-FIL-020')(`${testCase.templatePath} emits Standard Terms paragraph styles`, () => {
       const stylesXml = loadXmlPart(testCase.templatePath, 'word/styles.xml');
       const stylesDoc = new DOMParser().parseFromString(stylesXml, 'text/xml');
       const styleNodes = stylesDoc.getElementsByTagNameNS(W_NS, 'style');
@@ -161,7 +161,7 @@ describe('employment template style and spacing', () => {
       expect(styleFailures).toEqual([]);
     });
 
-    it.openspec('OA-173')(`${testCase.templatePath} keeps Standard Terms spacing values`, () => {
+    it.openspec('OA-FIL-020')(`${testCase.templatePath} keeps Standard Terms spacing values`, () => {
       const documentXml = loadXmlPart(testCase.templatePath, 'word/document.xml');
       const paragraphs = standardTermsParagraphs(documentXml, testCase.endMarker);
       expect(paragraphs.length).toBeGreaterThan(0);

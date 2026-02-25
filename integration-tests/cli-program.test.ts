@@ -57,7 +57,7 @@ afterEach(() => {
 });
 
 describe('CLI program wiring', () => {
-  itPlatform.openspec('OA-046')('parses fill command data and set flags into runFill payload', async () => {
+  itPlatform.openspec('OA-CLI-003')('parses fill command data and set flags into runFill payload', async () => {
     const tempDir = mkdtempSync(join(tmpdir(), 'oa-cli-program-'));
     const dataPath = join(tempDir, 'values.json');
     writeFileSync(dataPath, JSON.stringify({ company_name: 'Data Co', purpose: 'Data Purpose' }), 'utf-8');
@@ -221,7 +221,7 @@ describe('CLI program wiring', () => {
     });
   });
 
-  itPlatform.openspec('OA-047')('forwards list flags to runList', async () => {
+  itPlatform.openspec('OA-CLI-004')('forwards list flags to runList', async () => {
     const argv = [
       'node',
       'open-agreements',

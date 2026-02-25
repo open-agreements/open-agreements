@@ -55,7 +55,7 @@ function writeDocxWithText(text: string): string {
 }
 
 describe('runScan', () => {
-  it.openspec(['OA-006', 'OA-027'])('discovers bracketed placeholders in DOCX', () => {
+  it.openspec(['OA-ENG-004', 'OA-CLI-001'])('discovers bracketed placeholders in DOCX', () => {
     const input = writeDocxWithText('Party: [Company Name] and Date: [Effective Date]');
     const logSpy = vi.spyOn(console, 'log').mockImplementation(() => {});
 
@@ -66,7 +66,7 @@ describe('runScan', () => {
     expect(output).toContain('[Effective Date]');
   });
 
-  it.openspec('OA-028')('writes draft replacements JSON', () => {
+  it.openspec('OA-CLI-002')('writes draft replacements JSON', () => {
     const input = writeDocxWithText('Party: [Company Name] and Date: [Effective Date]');
     const outDir = mkdtempSync(join(tmpdir(), 'oa-scan-replacements-'));
     tempDirs.push(outDir);

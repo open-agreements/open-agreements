@@ -122,13 +122,15 @@ export const IssueSchema = z.object({
 });
 export type Issue = z.infer<typeof IssueSchema>;
 
+import { DANGEROUS_KEYS } from './patch-validator.js';
+
 const ClosingChecklistBaseSchema = z.object({
   deal_name: z.string().min(1),
   updated_at: z.string().min(1),
-  documents: z.array(ChecklistDocumentSchema).default([]),
-  checklist_entries: z.array(ChecklistEntrySchema).default([]),
-  action_items: z.array(ActionItemSchema).default([]),
-  issues: z.array(IssueSchema).default([]),
+  documents: z.record(z.string(), ChecklistDocumentSchema).default({}),
+  checklist_entries: z.record(z.string(), ChecklistEntrySchema).default({}),
+  action_items: z.record(z.string(), ActionItemSchema).default({}),
+  issues: z.record(z.string(), IssueSchema).default({}),
 });
 
 // ---------------------------------------------------------------------------
@@ -136,42 +138,50 @@ const ClosingChecklistBaseSchema = z.object({
 // ---------------------------------------------------------------------------
 
 export const ClosingChecklistSchema = ClosingChecklistBaseSchema.superRefine((checklist, ctx) => {
-  const documentIds = new Map<string, number>();
-  checklist.documents.forEach((document, index) => {
-    const seen = documentIds.get(document.document_id);
-    if (seen !== undefined) {
+  // Key policy: reject dangerous keys in all collections
+  for (const collectionName of ['documents', 'checklist_entries', 'action_items', 'issues'] as const) {
+    for (const key of Object.keys(checklist[collectionName])) {
+      if (DANGEROUS_KEYS.has(key)) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: [collectionName, key],
+          message: `record key "${key}" is a disallowed key`,
+        });
+      }
+    }
+  }
+
+  // Key-value consistency: dict key must match item ID
+  const knownDocumentIds = new Set<string>();
+  for (const [key, document] of Object.entries(checklist.documents)) {
+    if (key !== document.document_id) {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
-        path: ['documents', index, 'document_id'],
-        message: `duplicate document_id "${document.document_id}" (already used at documents.${seen}.document_id)`,
+        path: ['documents', key, 'document_id'],
+        message: `record key "${key}" does not match document_id "${document.document_id}"`,
       });
-    } else {
-      documentIds.set(document.document_id, index);
     }
-  });
+    knownDocumentIds.add(document.document_id);
+  }
 
-  const entryIds = new Map<string, number>();
   const documentToEntry = new Map<string, string>();
   const entriesById = new Map<string, ChecklistEntry>();
 
-  checklist.checklist_entries.forEach((entry, index) => {
-    const seen = entryIds.get(entry.entry_id);
-    if (seen !== undefined) {
+  for (const [key, entry] of Object.entries(checklist.checklist_entries)) {
+    if (key !== entry.entry_id) {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
-        path: ['checklist_entries', index, 'entry_id'],
-        message: `duplicate entry_id "${entry.entry_id}" (already used at checklist_entries.${seen}.entry_id)`,
+        path: ['checklist_entries', key, 'entry_id'],
+        message: `record key "${key}" does not match entry_id "${entry.entry_id}"`,
       });
-    } else {
-      entryIds.set(entry.entry_id, index);
     }
     entriesById.set(entry.entry_id, entry);
 
     if (entry.document_id) {
-      if (!documentIds.has(entry.document_id)) {
+      if (!knownDocumentIds.has(entry.document_id)) {
         ctx.addIssue({
           code: z.ZodIssueCode.custom,
-          path: ['checklist_entries', index, 'document_id'],
+          path: ['checklist_entries', key, 'document_id'],
           message: `unknown document_id "${entry.document_id}"`,
         });
       }
@@ -180,65 +190,78 @@ export const ClosingChecklistSchema = ClosingChecklistBaseSchema.superRefine((ch
       if (mappedEntryId && mappedEntryId !== entry.entry_id) {
         ctx.addIssue({
           code: z.ZodIssueCode.custom,
-          path: ['checklist_entries', index, 'document_id'],
+          path: ['checklist_entries', key, 'document_id'],
           message: `document_id "${entry.document_id}" is already mapped to entry_id "${mappedEntryId}"`,
         });
       } else {
         documentToEntry.set(entry.document_id, entry.entry_id);
       }
     }
-  });
+  }
 
-  checklist.checklist_entries.forEach((entry, index) => {
-    if (!entry.parent_entry_id) return;
+  for (const [key, entry] of Object.entries(checklist.checklist_entries)) {
+    if (!entry.parent_entry_id) continue;
     const parent = entriesById.get(entry.parent_entry_id);
     if (!parent) {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
-        path: ['checklist_entries', index, 'parent_entry_id'],
+        path: ['checklist_entries', key, 'parent_entry_id'],
         message: `unknown parent_entry_id "${entry.parent_entry_id}"`,
       });
-      return;
+      continue;
     }
     if (entry.parent_entry_id === entry.entry_id) {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
-        path: ['checklist_entries', index, 'parent_entry_id'],
+        path: ['checklist_entries', key, 'parent_entry_id'],
         message: 'entry cannot be its own parent',
       });
     }
     if (parent.stage !== entry.stage) {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
-        path: ['checklist_entries', index, 'parent_entry_id'],
+        path: ['checklist_entries', key, 'parent_entry_id'],
         message: `parent entry "${entry.parent_entry_id}" is in stage ${parent.stage}, but child is in ${entry.stage}`,
       });
     }
-  });
+  }
 
-  const knownDocumentIds = new Set(checklist.documents.map((d) => d.document_id));
-  checklist.action_items.forEach((action, index) => {
+  for (const [key, action] of Object.entries(checklist.action_items)) {
+    if (key !== action.action_id) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['action_items', key, 'action_id'],
+        message: `record key "${key}" does not match action_id "${action.action_id}"`,
+      });
+    }
     action.related_document_ids.forEach((documentId, docIdx) => {
       if (!knownDocumentIds.has(documentId)) {
         ctx.addIssue({
           code: z.ZodIssueCode.custom,
-          path: ['action_items', index, 'related_document_ids', docIdx],
+          path: ['action_items', key, 'related_document_ids', docIdx],
           message: `unknown related document_id "${documentId}"`,
         });
       }
     });
-  });
+  }
 
-  checklist.issues.forEach((issue, index) => {
+  for (const [key, issue] of Object.entries(checklist.issues)) {
+    if (key !== issue.issue_id) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['issues', key, 'issue_id'],
+        message: `record key "${key}" does not match issue_id "${issue.issue_id}"`,
+      });
+    }
     issue.related_document_ids.forEach((documentId, docIdx) => {
       if (!knownDocumentIds.has(documentId)) {
         ctx.addIssue({
           code: z.ZodIssueCode.custom,
-          path: ['issues', index, 'related_document_ids', docIdx],
+          path: ['issues', key, 'related_document_ids', docIdx],
           message: `unknown related document_id "${documentId}"`,
         });
       }
     });
-  });
+  }
 });
 export type ClosingChecklist = z.infer<typeof ClosingChecklistSchema>;

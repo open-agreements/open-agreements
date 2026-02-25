@@ -11,12 +11,12 @@ CLI that writes workspace guidance/config files and planning output in the
 current directory. In v1, `init` SHALL NOT require automatic creation of
 lifecycle folders.
 
-#### Scenario: [OA-115] Initialize empty workspace
+#### Scenario: [OA-WKS-001] Initialize empty workspace
 - **WHEN** a user runs the workspace `init` command in an empty directory
 - **THEN** the system writes core workspace guidance/config files
 - **AND** reports a plan for recommended workspace structure
 
-#### Scenario: [OA-116] Re-run init on existing workspace
+#### Scenario: [OA-WKS-002] Re-run init on existing workspace
 - **WHEN** a user runs `init` in a directory that already contains generated workspace files
 - **THEN** existing files are preserved
 - **AND** the command remains idempotent
@@ -25,7 +25,7 @@ lifecycle folders.
 The `init` workflow SHALL include topic-domain planning so forms can be
 organized by subject area without forcing one fixed top-level folder layout.
 
-#### Scenario: [OA-117] Forms topic scaffolding
+#### Scenario: [OA-WKS-003] Forms topic scaffolding
 - **WHEN** `init` planning runs with topic inputs
 - **THEN** suggested topic domains are included in the generated plan
 - **AND** planning does not require immediate folder creation
@@ -36,7 +36,7 @@ workspace conventions for AI agents and humans. This file MUST include folder
 semantics, naming conventions, status conventions, and command references for
 catalog/status operations.
 
-#### Scenario: [OA-118] CONTRACTS.md generated
+#### Scenario: [OA-WKS-004] CONTRACTS.md generated
 - **WHEN** `init` completes
 - **THEN** `CONTRACTS.md` exists at the workspace root
 - **AND** it documents lifecycle folders and status naming rules
@@ -45,7 +45,7 @@ catalog/status operations.
 The workspace tooling SHALL provide optional setup guidance for Claude Code and
 Gemini CLI that references `CONTRACTS.md` as the canonical collaboration ruleset.
 
-#### Scenario: [OA-119] Agent setup output
+#### Scenario: [OA-WKS-005] Agent setup output
 - **WHEN** a user requests agent setup during initialization
 - **THEN** the tool emits or writes integration instructions for Claude Code and Gemini CLI
 - **AND** both integrations reference `CONTRACTS.md`
@@ -56,11 +56,11 @@ downloadable form references with both source URL and checksum. Catalog entries
 MUST include license handling metadata that distinguishes redistributable
 unmodified sources from pointer-only/proprietary references.
 
-#### Scenario: [OA-120] Validate catalog entry with checksum
+#### Scenario: [OA-WKS-006] Validate catalog entry with checksum
 - **WHEN** `catalog validate` runs on an entry containing `source_url` and SHA-256 checksum
 - **THEN** the entry passes structural validation if required fields are present
 
-#### Scenario: [OA-121] Reject missing checksum
+#### Scenario: [OA-WKS-007] Reject missing checksum
 - **WHEN** `catalog validate` runs on an entry with a URL but no checksum
 - **THEN** validation fails with an error describing the missing checksum requirement
 
@@ -69,12 +69,12 @@ The workspace tooling SHALL provide a command to download eligible catalog
 entries and verify file integrity against the configured checksum before placing
 files into the workspace.
 
-#### Scenario: [OA-122] Successful download and checksum verification
+#### Scenario: [OA-WKS-008] Successful download and checksum verification
 - **WHEN** a user runs catalog download for an eligible entry
 - **AND** the downloaded file hash matches the configured checksum
 - **THEN** the file is placed in the configured workspace destination
 
-#### Scenario: [OA-123] Checksum mismatch blocks placement
+#### Scenario: [OA-WKS-009] Checksum mismatch blocks placement
 - **WHEN** a catalog download completes but computed hash differs from configured checksum
 - **THEN** the tool fails the operation
 - **AND** the file is not accepted into the workspace destination
@@ -84,7 +84,7 @@ Catalog entries marked as pointer-only/proprietary SHALL be represented as
 reference metadata and MUST NOT be vendored automatically when redistribution is
 not permitted.
 
-#### Scenario: [OA-124] Pointer-only entry behavior
+#### Scenario: [OA-WKS-010] Pointer-only entry behavior
 - **WHEN** catalog download is requested for a pointer-only/proprietary entry
 - **THEN** the tool reports that direct vendoring is disallowed
 - **AND** provides reference details (URL/checksum/license notes) for user-managed retrieval
@@ -93,11 +93,11 @@ not permitted.
 Execution status SHALL be derived from filename conventions, with `_executed` as
 an authoritative status marker for signed/executed documents.
 
-#### Scenario: [OA-125] Executed status inferred from filename
+#### Scenario: [OA-WKS-011] Executed status inferred from filename
 - **WHEN** a document filename includes `_executed`
 - **THEN** status indexing marks the document as executed
 
-#### Scenario: [OA-126] No executed marker
+#### Scenario: [OA-WKS-012] No executed marker
 - **WHEN** a document filename lacks `_executed`
 - **THEN** status indexing does not mark the document as executed by default
 
@@ -106,7 +106,7 @@ The workspace tooling SHALL generate a YAML status index summarizing contract
 files, inferred lifecycle state, and lint findings. Generated output MUST include
 a generation timestamp.
 
-#### Scenario: [OA-127] Generate contracts index
+#### Scenario: [OA-WKS-013] Generate contracts index
 - **WHEN** a user runs `status generate`
 - **THEN** the tool writes `contracts-index.yaml`
 - **AND** includes an explicit generation timestamp
@@ -116,11 +116,11 @@ a generation timestamp.
 The workspace tooling SHALL lint directory and file organization rules,
 including disallowed file-type placement and stale index detection.
 
-#### Scenario: [OA-128] Disallowed file type placement
+#### Scenario: [OA-WKS-014] Disallowed file type placement
 - **WHEN** lint runs and finds a PDF under `forms/`
 - **THEN** lint reports a violation
 
-#### Scenario: [OA-129] Stale index detection
+#### Scenario: [OA-WKS-015] Stale index detection
 - **WHEN** lint runs and workspace files are newer than `contracts-index.yaml`
 - **THEN** lint reports the index as stale and recommends regeneration
 
@@ -129,7 +129,7 @@ The workspace tooling SHALL operate on local filesystem directories only in v1,
 including locally synced cloud-drive folders. It SHALL NOT require cloud API
 integrations in this change.
 
-#### Scenario: [OA-130] Local synced drive compatibility
+#### Scenario: [OA-WKS-016] Local synced drive compatibility
 - **WHEN** a user runs workspace commands in a locally synced cloud-drive folder
 - **THEN** commands operate using normal filesystem semantics
 - **AND** no cloud API credentials are required
@@ -138,7 +138,7 @@ integrations in this change.
 Contracts workspace functionality SHALL be delivered as a sibling package/CLI,
 independently installable from the existing OpenAgreements template-filling CLI.
 
-#### Scenario: [OA-131] Workspace-only adoption
+#### Scenario: [OA-WKS-017] Workspace-only adoption
 - **WHEN** a user installs the workspace package without installing template-filling tooling
 - **THEN** workspace commands are available
 - **AND** template-filling commands are not required for workspace initialization, catalog, or status features
@@ -148,7 +148,7 @@ The convention system MUST support writing, loading, and round-tripping conventi
 configs with both filesystem and memory providers. Default conventions MUST be
 returned when no config file exists.
 
-#### Scenario: [OA-202] Convention config round-trip and defaults
+#### Scenario: [OA-WKS-018] Convention config round-trip and defaults
 - **WHEN** convention config is written and loaded via any provider
 - **THEN** the loaded config matches the written config
 - **AND** when no config file exists, default conventions are returned
@@ -158,7 +158,7 @@ The convention scanner MUST detect naming styles (snake_case, kebab-case,
 title-case-spaces), execution status markers (_executed, _partially_executed),
 and asset-like folders from workspace file inventories.
 
-#### Scenario: [OA-203] Convention scanner pattern detection
+#### Scenario: [OA-WKS-019] Convention scanner pattern detection
 - **WHEN** the scanner analyzes workspace files
 - **THEN** it returns defaults for empty or small (< 5 files) workspaces
 - **AND** detects _executed and (fully executed) marker patterns from file majority
@@ -169,12 +169,12 @@ and asset-like folders from workspace file inventories.
 The linter MUST use default or custom markers from conventions config and support
 marker-based validation of workspace files.
 
-#### Scenario: [OA-204] Convention-aware lint with custom markers
+#### Scenario: [OA-WKS-020] Convention-aware lint with custom markers
 - **WHEN** linting runs with or without a conventions config
 - **THEN** default markers are used when no config exists
 - **AND** custom markers from config are applied when present
 
-#### Scenario: [OA-205] Convention-aware indexer marker detection
+#### Scenario: [OA-WKS-021] Convention-aware indexer marker detection
 - **WHEN** the indexer checks for executed markers
 - **THEN** `hasExecutedMarker` accepts custom patterns from conventions
 
@@ -182,7 +182,7 @@ marker-based validation of workspace files.
 The `init` command MUST generate WORKSPACE.md, FOLDER.md, and conventions.yaml
 files. It MUST be idempotent and scan conventions on non-empty workspaces.
 
-#### Scenario: [OA-206] Init generates documentation and config files
+#### Scenario: [OA-WKS-022] Init generates documentation and config files
 - **WHEN** `init` runs on an empty workspace
 - **THEN** WORKSPACE.md, FOLDER.md, and conventions.yaml are created
 - **AND** re-running init is idempotent
@@ -192,7 +192,7 @@ files. It MUST be idempotent and scan conventions on non-empty workspaces.
 The system MUST detect `_partially_executed` filename suffix as a distinct status,
 not conflate it with `_executed`, and skip lint warnings for partial executions.
 
-#### Scenario: [OA-207] Partially executed document handling
+#### Scenario: [OA-WKS-023] Partially executed document handling
 - **WHEN** a document filename includes `_partially_executed`
 - **THEN** `hasPartiallyExecutedMarker` detects it
 - **AND** `hasExecutedMarker` returns false for partially executed files
@@ -204,7 +204,7 @@ not conflate it with `_executed`, and skip lint warnings for partial executions.
 The linter MUST detect copy-pattern and timestamp-suffixed duplicate files
 while not flagging unrelated files.
 
-#### Scenario: [OA-208] Duplicate file lint detection
+#### Scenario: [OA-WKS-024] Duplicate file lint detection
 - **WHEN** the workspace contains copy-pattern or timestamp-suffixed duplicate files
 - **THEN** lint detects and flags them
 - **AND** unrelated files are not flagged as duplicates
@@ -213,7 +213,7 @@ while not flagging unrelated files.
 The linter MUST warn about files at the workspace root while exempting known
 config files.
 
-#### Scenario: [OA-209] Root orphan lint detection
+#### Scenario: [OA-WKS-025] Root orphan lint detection
 - **WHEN** files exist at the workspace root
 - **THEN** lint warns about non-config files
 - **AND** known config files are not flagged
@@ -222,7 +222,7 @@ config files.
 The linter MUST detect files whose names suggest they belong in a different
 domain folder, using high-confidence compound phrases while ignoring generic terms.
 
-#### Scenario: [OA-210] Cross-contamination lint detection
+#### Scenario: [OA-WKS-026] Cross-contamination lint detection
 - **WHEN** files contain high-confidence compound phrases suggesting wrong domain placement
 - **THEN** lint warns about potential cross-contamination
 - **AND** generic terms like "agreement" or "policy" are not flagged
@@ -232,7 +232,7 @@ domain folder, using high-confidence compound phrases while ignoring generic ter
 Init MUST create config files without forcing lifecycle directory creation and
 remain idempotent across repeated invocations.
 
-#### Scenario: [OA-211] Init backward compatibility
+#### Scenario: [OA-WKS-027] Init backward compatibility
 - **WHEN** init runs
 - **THEN** config files are created but lifecycle directories are not
 - **AND** repeated init invocations are idempotent with conventions
@@ -241,7 +241,7 @@ remain idempotent across repeated invocations.
 Both FilesystemProvider and MemoryProvider MUST implement consistent filesystem
 semantics including exists, read, write, mkdir, readdir, stat, and walk operations.
 
-#### Scenario: [OA-212] FilesystemProvider operations
+#### Scenario: [OA-WKS-028] FilesystemProvider operations
 - **WHEN** filesystem operations are performed via FilesystemProvider
 - **THEN** exists returns false for missing paths and true after creation
 - **AND** writeFile/readTextFile round-trips correctly
@@ -249,7 +249,7 @@ semantics including exists, read, write, mkdir, readdir, stat, and walk operatio
 - **AND** mkdir with recursive creates nested directories
 - **AND** readdir lists entries, stat returns correct FileInfo, and walk recursively finds files
 
-#### Scenario: [OA-213] MemoryProvider operations
+#### Scenario: [OA-WKS-029] MemoryProvider operations
 - **WHEN** filesystem operations are performed via MemoryProvider
 - **THEN** exists, seed, writeFile/readTextFile, readFile, mkdir, readdir, stat, and walk all behave consistently
 - **AND** ENOENT errors are thrown for missing paths
@@ -259,7 +259,7 @@ semantics including exists, read, write, mkdir, readdir, stat, and walk operatio
 Zod-to-JSON-Schema mappings MUST produce stable snapshots for key constructs
 (literal, regex, datetime, record, enum) and full schema shapes.
 
-#### Scenario: [OA-214] Zod-to-JSON-Schema construct mappings
+#### Scenario: [OA-WKS-030] Zod-to-JSON-Schema construct mappings
 - **WHEN** Zod schemas are converted to JSON Schema
 - **THEN** z.literal produces const, z.string().regex() produces pattern, z.iso.datetime() produces format
 - **AND** z.record produces additionalProperties, z.enum produces enum arrays
@@ -270,7 +270,7 @@ The MCP tool layer MUST list expected tools, return workspace setup suggestions
 without side effects, report structured errors for invalid catalog entries,
 and generate status indexes with lint findings.
 
-#### Scenario: [OA-215] MCP workspace tool operations
+#### Scenario: [OA-WKS-031] MCP workspace tool operations
 - **WHEN** MCP tools are invoked
 - **THEN** tool listing returns expected tools
 - **AND** workspace setup suggestions are returned without filesystem mutation

@@ -1,5 +1,5 @@
 import { ClosingChecklistSchema, type ClosingChecklist } from './schemas.js';
-import { ChecklistPatchApplyRequestSchema, type ChecklistPatchApplyRequest } from './patch-schemas.js';
+import { ChecklistPatchApplyRequestSchema, type ChecklistPatchApplyRequest, type ChecklistPatchEnvelope } from './patch-schemas.js';
 import {
   applyChecklistPatchOperations,
   computeChecklistPatchHash,
@@ -17,6 +17,7 @@ export interface ChecklistAppliedPatchRecord {
   applied_at_ms: number;
   revision_before: number;
   revision_after: number;
+  patch: ChecklistPatchEnvelope;
 }
 
 export interface ChecklistAppliedPatchStore {
@@ -368,6 +369,7 @@ export async function applyChecklistPatch(input: ApplyChecklistPatchInput): Prom
     applied_at_ms: appliedAt,
     revision_before: input.current_revision,
     revision_after: input.current_revision + 1,
+    patch: request.patch,
   });
 
   return {

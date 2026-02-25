@@ -30,6 +30,7 @@ export {
 } from './patch-schemas.js';
 export {
   CHECKLIST_PATCH_VALIDATION_TTL_MS,
+  DANGEROUS_KEYS,
   applyChecklistPatchOperations,
   computeChecklistPatchHash,
   validateChecklistPatch,
@@ -164,18 +165,27 @@ function signatoryLabel(signatory: Signatory): string {
   return `${who} [${signatory.status}] (${artifacts.join(', ')})`;
 }
 
+function toArray<T>(collection: T[] | Record<string, T>): T[] {
+  return Array.isArray(collection) ? collection : Object.values(collection);
+}
+
 function buildRenderModel(data: unknown): RenderModel {
   const checklist = ClosingChecklistSchema.parse(data);
-  const documentsById = new Map(checklist.documents.map((document) => [document.document_id, document]));
+  const documents = toArray(checklist.documents);
+  const entries = toArray(checklist.checklist_entries);
+  const actions = toArray(checklist.action_items);
+  const issues = toArray(checklist.issues);
+
+  const documentsById = new Map(documents.map((document) => [document.document_id, document]));
   const entryDocumentIds = new Set(
-    checklist.checklist_entries
+    entries
       .map((entry) => entry.document_id)
       .filter((documentId): documentId is string => Boolean(documentId)),
   );
 
   const actionsByDocument = new Map<string, ActionItem[]>();
   const unlinkedActions: ActionItem[] = [];
-  for (const action of checklist.action_items) {
+  for (const action of actions) {
     const linkedDocumentIds = action.related_document_ids.filter((documentId) => entryDocumentIds.has(documentId));
     if (linkedDocumentIds.length === 0) {
       unlinkedActions.push(action);
@@ -190,7 +200,7 @@ function buildRenderModel(data: unknown): RenderModel {
 
   const issuesByDocument = new Map<string, Issue[]>();
   const unlinkedIssues: Issue[] = [];
-  for (const issue of checklist.issues) {
+  for (const issue of issues) {
     const linkedDocumentIds = issue.related_document_ids.filter((documentId) => entryDocumentIds.has(documentId));
     if (linkedDocumentIds.length === 0) {
       unlinkedIssues.push(issue);
@@ -203,11 +213,11 @@ function buildRenderModel(data: unknown): RenderModel {
     }
   }
 
-  for (const actions of actionsByDocument.values()) {
-    actions.sort((a, b) => a.action_id.localeCompare(b.action_id));
+  for (const actionGroup of actionsByDocument.values()) {
+    actionGroup.sort((a, b) => a.action_id.localeCompare(b.action_id));
   }
-  for (const issues of issuesByDocument.values()) {
-    issues.sort((a, b) => a.issue_id.localeCompare(b.issue_id));
+  for (const issueGroup of issuesByDocument.values()) {
+    issueGroup.sort((a, b) => a.issue_id.localeCompare(b.issue_id));
   }
   unlinkedActions.sort((a, b) => a.action_id.localeCompare(b.action_id));
   unlinkedIssues.sort((a, b) => a.issue_id.localeCompare(b.issue_id));
@@ -215,7 +225,7 @@ function buildRenderModel(data: unknown): RenderModel {
   const rowsByStage = new Map<ChecklistStage, RenderRow[]>();
 
   for (const stage of STAGE_ORDER) {
-    const stageEntries = checklist.checklist_entries
+    const stageEntries = entries
       .filter((entry) => entry.stage === stage)
       .sort(compareBySortKey);
     const stageEntriesById = new Map(stageEntries.map((entry) => [entry.entry_id, entry]));

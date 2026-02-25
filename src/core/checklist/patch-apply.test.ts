@@ -10,13 +10,15 @@ import {
   attachChecklistDocxPreview,
   attachChecklistRedline,
 } from '../../../integration-tests/helpers/docx-evidence.js';
-import { setChecklistPatchValidationStore, validateChecklistPatch } from './patch-validator.js';
+import { computeChecklistPatchHash, setChecklistPatchValidationStore, validateChecklistPatch } from './patch-validator.js';
 import {
   applyChecklistPatch,
+  getChecklistAppliedPatchStore,
   getChecklistProposedPatchStore,
   setChecklistAppliedPatchStore,
   setChecklistProposedPatchStore,
 } from './patch-apply.js';
+import { ChecklistPatchEnvelopeSchema } from './patch-schemas.js';
 
 const it = itAllure.epic('Compliance & Governance').withLabels({ feature: 'Checklist Patch Apply' });
 
@@ -103,14 +105,14 @@ function buildChecklist(): Record<string, unknown> {
   return {
     deal_name: 'Project Atlas',
     updated_at: '2026-02-22',
-    documents: [
-      {
+    documents: {
+      'doc-escrow': {
         document_id: 'doc-escrow',
         title: 'Escrow Agreement',
       },
-    ],
-    checklist_entries: [
-      {
+    },
+    checklist_entries: {
+      'entry-escrow': {
         entry_id: 'entry-escrow',
         document_id: 'doc-escrow',
         stage: 'CLOSING',
@@ -122,17 +124,17 @@ function buildChecklist(): Record<string, unknown> {
           { party: 'Seller', status: 'PENDING', signature_artifacts: [] },
         ],
       },
-    ],
-    action_items: [],
-    issues: [
-      {
-        issue_id: 'iss-escrow',
+    },
+    action_items: {},
+    issues: {
+      'issue-escrow': {
+        issue_id: 'issue-escrow',
         title: 'Escrow release mechanics',
         summary: 'Open drafting point.',
         status: 'OPEN',
         related_document_ids: ['doc-escrow'],
       },
-    ],
+    },
   };
 }
 
@@ -143,14 +145,14 @@ describe('applyChecklistPatch', () => {
     setChecklistProposedPatchStore(null);
   });
 
-  it.openspec('OA-103')('applies a validated patch and increments revision exactly once', async () => {
+  it.openspec('OA-CKL-016')('applies a validated patch and increments revision exactly once', async () => {
     const checklist = buildChecklist();
     const patch = {
       patch_id: 'patch_apply_001',
       expected_revision: 7,
       operations: [
-        { op: 'replace', path: '/issues/0/status', value: 'CLOSED' },
-        { op: 'replace', path: '/checklist_entries/0/status', value: 'PARTIALLY_SIGNED' },
+        { op: 'replace', path: '/issues/issue-escrow/status', value: 'CLOSED' },
+        { op: 'replace', path: '/checklist_entries/entry-escrow/status', value: 'PARTIALLY_SIGNED' },
       ],
     };
 
@@ -197,21 +199,21 @@ describe('applyChecklistPatch', () => {
     });
 
     await allureStep('And patch mutations are reflected in returned checklist', async () => {
-      expect(applied.checklist.issues[0]?.status).toBe('CLOSED');
-      expect(applied.checklist.checklist_entries[0]?.status).toBe('PARTIALLY_SIGNED');
+      expect(applied.checklist.issues['issue-escrow']?.status).toBe('CLOSED');
+      expect(applied.checklist.checklist_entries['entry-escrow']?.status).toBe('PARTIALLY_SIGNED');
     });
 
     await allureStep('And source checklist input remains unchanged', async () => {
-      expect((checklist.issues as Array<{ status: string }>)[0]?.status).toBe('OPEN');
+      expect((checklist.issues as Record<string, { status: string }>)['issue-escrow']?.status).toBe('OPEN');
     });
   });
 
-  it.openspec('OA-110')('returns no-op on idempotent replay with same patch_id and payload', async () => {
+  it.openspec('OA-CKL-023')('returns no-op on idempotent replay with same patch_id and payload', async () => {
     const checklist = buildChecklist();
     const patch = {
       patch_id: 'patch_apply_002',
       expected_revision: 7,
-      operations: [{ op: 'replace', path: '/issues/0/status', value: 'CLOSED' }],
+      operations: [{ op: 'replace', path: '/issues/issue-escrow/status', value: 'CLOSED' }],
     };
 
     const validation = await validateWithEvidence('idempotent-replay-initial-validation', {
@@ -272,12 +274,12 @@ describe('applyChecklistPatch', () => {
     });
   });
 
-  it.openspec('OA-111')('rejects reused patch_id with different payload hash', async () => {
+  it.openspec('OA-CKL-024')('rejects reused patch_id with different payload hash', async () => {
     const checklist = buildChecklist();
     const patchV1 = {
       patch_id: 'patch_apply_003',
       expected_revision: 7,
-      operations: [{ op: 'replace', path: '/issues/0/status', value: 'CLOSED' }],
+      operations: [{ op: 'replace', path: '/issues/issue-escrow/status', value: 'CLOSED' }],
     };
 
     const validationV1 = await validateWithEvidence('patch-id-conflict-validation-v1', {
@@ -316,7 +318,7 @@ describe('applyChecklistPatch', () => {
     const patchV2 = {
       patch_id: 'patch_apply_003',
       expected_revision: 8,
-      operations: [{ op: 'replace', path: '/issues/0/status', value: 'OPEN' }],
+      operations: [{ op: 'replace', path: '/issues/issue-escrow/status', value: 'OPEN' }],
     };
 
     const validationV2 = await validateWithEvidence('patch-id-conflict-validation-v2', {
@@ -353,7 +355,7 @@ describe('applyChecklistPatch', () => {
     });
   });
 
-  it.openspec('OA-107')('rejects apply with missing validation artifact', async () => {
+  it.openspec('OA-CKL-020')('rejects apply with missing validation artifact', async () => {
     const result = await applyWithEvidence('missing-validation-artifact', {
       checklist_id: 'ck_001',
       checklist: buildChecklist(),
@@ -363,7 +365,7 @@ describe('applyChecklistPatch', () => {
         patch: {
           patch_id: 'patch_apply_004',
           expected_revision: 7,
-          operations: [{ op: 'replace', path: '/issues/0/status', value: 'CLOSED' }],
+          operations: [{ op: 'replace', path: '/issues/issue-escrow/status', value: 'CLOSED' }],
         },
       },
     });
@@ -377,12 +379,12 @@ describe('applyChecklistPatch', () => {
     });
   });
 
-  it.openspec('OA-108')('rejects apply when validation_id does not match patch payload hash', async () => {
+  it.openspec('OA-CKL-021')('rejects apply when validation_id does not match patch payload hash', async () => {
     const checklist = buildChecklist();
     const validatedPatch = {
       patch_id: 'patch_apply_005',
       expected_revision: 7,
-      operations: [{ op: 'replace', path: '/issues/0/status', value: 'CLOSED' }],
+      operations: [{ op: 'replace', path: '/issues/issue-escrow/status', value: 'CLOSED' }],
     };
 
     const validation = await validateWithEvidence('validation-mismatch-validation', {
@@ -403,7 +405,7 @@ describe('applyChecklistPatch', () => {
     const tamperedPatch = {
       patch_id: 'patch_apply_005',
       expected_revision: 7,
-      operations: [{ op: 'replace', path: '/issues/0/status', value: 'OPEN' }],
+      operations: [{ op: 'replace', path: '/issues/issue-escrow/status', value: 'OPEN' }],
     };
 
     const result = await applyWithEvidence('validation-mismatch-apply', {
@@ -425,12 +427,12 @@ describe('applyChecklistPatch', () => {
     });
   });
 
-  it.openspec('OA-105')('rejects stale revision for non-replay apply', async () => {
+  it.openspec('OA-CKL-018')('rejects stale revision for non-replay apply', async () => {
     const checklist = buildChecklist();
     const patch = {
       patch_id: 'patch_apply_006',
       expected_revision: 7,
-      operations: [{ op: 'replace', path: '/issues/0/status', value: 'CLOSED' }],
+      operations: [{ op: 'replace', path: '/issues/issue-escrow/status', value: 'CLOSED' }],
     };
 
     const validation = await validateWithEvidence('stale-revision-validation', {
@@ -467,31 +469,31 @@ describe('applyChecklistPatch', () => {
     });
   });
 
-  it.openspec('OA-104')('preserves all-or-nothing behavior when apply-time target resolution fails', async () => {
+  it.openspec('OA-CKL-017')('preserves all-or-nothing behavior when apply-time target resolution fails', async () => {
     const validatedChecklist = {
       ...buildChecklist(),
-      issues: [
-        {
-          issue_id: 'iss-1',
+      issues: {
+        'issue-1': {
+          issue_id: 'issue-1',
           title: 'One',
           status: 'OPEN',
           related_document_ids: ['doc-escrow'],
         },
-        {
-          issue_id: 'iss-2',
+        'issue-2': {
+          issue_id: 'issue-2',
           title: 'Two',
           status: 'OPEN',
           related_document_ids: ['doc-escrow'],
         },
-      ],
+      },
     };
 
     const patch = {
       patch_id: 'patch_apply_007',
       expected_revision: 7,
       operations: [
-        { op: 'replace', path: '/issues/0/status', value: 'CLOSED' },
-        { op: 'replace', path: '/issues/1/status', value: 'CLOSED' },
+        { op: 'replace', path: '/issues/issue-1/status', value: 'CLOSED' },
+        { op: 'replace', path: '/issues/issue-2/status', value: 'CLOSED' },
       ],
     };
 
@@ -512,14 +514,14 @@ describe('applyChecklistPatch', () => {
 
     const applyChecklistState = {
       ...buildChecklist(),
-      issues: [
-        {
-          issue_id: 'iss-1',
+      issues: {
+        'issue-1': {
+          issue_id: 'issue-1',
           title: 'One',
           status: 'OPEN',
           related_document_ids: ['doc-escrow'],
         },
-      ],
+      },
     };
 
     const result = await applyWithEvidence('all-or-nothing-apply', {
@@ -538,17 +540,92 @@ describe('applyChecklistPatch', () => {
         throw new Error('Expected apply to fail when runtime targets drift.');
       }
       expect(result.error_code).toBe('APPLY_OPERATION_FAILED');
-      expect((applyChecklistState.issues as Array<{ status: string }>)[0]?.status).toBe('OPEN');
+      expect((applyChecklistState.issues as Record<string, { status: string }>)['issue-1']?.status).toBe('OPEN');
     });
   });
 
-  it.openspec('OA-114')('stores PROPOSED mode patch without mutating checklist revision', async () => {
+  it('rationale and source do not affect patch hash (idempotency)', async () => {
+    const patchWithout = ChecklistPatchEnvelopeSchema.parse({
+      patch_id: 'patch_hash_test',
+      expected_revision: 0,
+      operations: [{ op: 'replace', path: '/issues/issue-1/status', value: 'CLOSED' }],
+    });
+
+    const patchWith = ChecklistPatchEnvelopeSchema.parse({
+      patch_id: 'patch_hash_test',
+      expected_revision: 0,
+      operations: [{
+        op: 'replace',
+        path: '/issues/issue-1/status',
+        value: 'CLOSED',
+        rationale: 'Confirmed by counsel',
+        source: 'outlook:AAMkAGI2',
+      }],
+    });
+
+    await allureStep('Then hashes are identical regardless of rationale/source', async () => {
+      expect(computeChecklistPatchHash(patchWithout)).toBe(computeChecklistPatchHash(patchWith));
+    });
+  });
+
+  it('stores full patch envelope (including rationale) in applied patch record', async () => {
+    const checklist = buildChecklist();
+    const patch = {
+      patch_id: 'patch_apply_rationale_store',
+      expected_revision: 7,
+      operations: [{
+        op: 'replace' as const,
+        path: '/issues/issue-escrow/status',
+        value: 'CLOSED',
+        rationale: 'Counsel confirmed in email thread',
+        source: 'outlook:AAMkAGI2',
+      }],
+    };
+
+    const validation = await validateWithEvidence('rationale-store-validation', {
+      checklist_id: 'ck_001',
+      checklist,
+      current_revision: 7,
+      patch,
+    });
+
+    if (!validation.ok) {
+      throw new Error('Expected validation to succeed for rationale store test.');
+    }
+
+    const applied = await applyWithEvidence('rationale-store-apply', {
+      checklist_id: 'ck_001',
+      checklist,
+      current_revision: 7,
+      request: {
+        validation_id: validation.validation_id,
+        patch,
+      },
+    });
+
+    if (!applied.ok) {
+      throw new Error('Expected apply to succeed for rationale store test.');
+    }
+
+    const record = await allureStep('When applied patch record is fetched from store', async () =>
+      getChecklistAppliedPatchStore().get('ck_001', 'patch_apply_rationale_store')
+    );
+    await allureJsonAttachment('rationale-store-record.json', record);
+
+    await allureStep('Then stored record contains full patch envelope with rationale', async () => {
+      expect(record).not.toBeNull();
+      expect(record!.patch.operations[0]!.rationale).toBe('Counsel confirmed in email thread');
+      expect(record!.patch.operations[0]!.source).toBe('outlook:AAMkAGI2');
+    });
+  });
+
+  it.openspec('OA-CKL-027')('stores PROPOSED mode patch without mutating checklist revision', async () => {
     const checklist = buildChecklist();
     const patch = {
       patch_id: 'patch_apply_008',
       expected_revision: 7,
       mode: 'PROPOSED',
-      operations: [{ op: 'replace', path: '/issues/0/status', value: 'CLOSED' }],
+      operations: [{ op: 'replace', path: '/issues/issue-escrow/status', value: 'CLOSED' }],
     };
 
     const validation = await validateWithEvidence('proposed-mode-validation', {
@@ -584,7 +661,7 @@ describe('applyChecklistPatch', () => {
       expect(result.mode).toBe('PROPOSED');
       expect(result.applied).toBe(false);
       expect(result.new_revision).toBe(7);
-      expect(result.checklist.issues[0]?.status).toBe('OPEN');
+      expect(result.checklist.issues['issue-escrow']?.status).toBe('OPEN');
     });
 
     if (!result.ok) {

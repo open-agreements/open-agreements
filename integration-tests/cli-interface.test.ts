@@ -110,7 +110,7 @@ function buildMinimalDocx(documentText: string): Buffer {
 }
 
 describe('CLI interface behavior', () => {
-  it.openspec(['OA-034', 'OA-046'])('fill command renders output DOCX from template values', () => {
+  it.openspec(['OA-TMP-005', 'OA-CLI-003'])('fill command renders output DOCX from template values', () => {
     const outDir = mkdtempSync(join(tmpdir(), 'oa-cli-fill-'));
     tempDirs.push(outDir);
     const outputPath = join(outDir, 'mutual-nda.docx');
@@ -127,7 +127,7 @@ describe('CLI interface behavior', () => {
     expect(existsSync(outputPath)).toBe(true);
   });
 
-  it.openspec('OA-155')('fill command renders output DOCX for employment offer template', () => {
+  it.openspec('OA-CLI-021')('fill command renders output DOCX for employment offer template', () => {
     const outDir = mkdtempSync(join(tmpdir(), 'oa-cli-employment-fill-'));
     tempDirs.push(outDir);
     const outputPath = join(outDir, 'employment-offer.docx');
@@ -144,7 +144,7 @@ describe('CLI interface behavior', () => {
     expect(existsSync(outputPath)).toBe(true);
   });
 
-  it.openspec('OA-155')('fill command renders output DOCX for employee IP template', () => {
+  it.openspec('OA-CLI-021')('fill command renders output DOCX for employee IP template', () => {
     const outDir = mkdtempSync(join(tmpdir(), 'oa-cli-employment-ip-fill-'));
     tempDirs.push(outDir);
     const outputPath = join(outDir, 'employment-ip.docx');
@@ -161,7 +161,7 @@ describe('CLI interface behavior', () => {
     expect(existsSync(outputPath)).toBe(true);
   });
 
-  it.openspec('OA-155')('fill command renders output DOCX for confidentiality acknowledgement template', () => {
+  it.openspec('OA-CLI-021')('fill command renders output DOCX for confidentiality acknowledgement template', () => {
     const outDir = mkdtempSync(join(tmpdir(), 'oa-cli-employment-ack-fill-'));
     tempDirs.push(outDir);
     const outputPath = join(outDir, 'employment-confidentiality-ack.docx');
@@ -178,7 +178,7 @@ describe('CLI interface behavior', () => {
     expect(existsSync(outputPath)).toBe(true);
   });
 
-  it.openspec('OA-156')('fill command can emit employment memo JSON with disclaimer and jurisdiction warning when rule matches', () => {
+  it.openspec('OA-CLI-022')('fill command can emit employment memo JSON with disclaimer and jurisdiction warning when rule matches', () => {
     const outDir = mkdtempSync(join(tmpdir(), 'oa-cli-employment-memo-json-'));
     tempDirs.push(outDir);
 
@@ -218,7 +218,7 @@ describe('CLI interface behavior', () => {
     expect(memoText).not.toContain('best strategy');
   });
 
-  it.openspec('OA-156')('fill command does not fabricate jurisdiction warnings when no rule matches', () => {
+  it.openspec('OA-CLI-022')('fill command does not fabricate jurisdiction warnings when no rule matches', () => {
     const outDir = mkdtempSync(join(tmpdir(), 'oa-cli-employment-memo-no-match-'));
     tempDirs.push(outDir);
 
@@ -256,7 +256,7 @@ describe('CLI interface behavior', () => {
     expect(memo.findings.some((finding) => finding.category === 'jurisdiction_warning')).toBe(false);
   });
 
-  it.openspec('OA-156')('fill command can emit employment memo Markdown with disclaimer', () => {
+  it.openspec('OA-CLI-022')('fill command can emit employment memo Markdown with disclaimer', () => {
     const outDir = mkdtempSync(join(tmpdir(), 'oa-cli-employment-memo-md-'));
     tempDirs.push(outDir);
 
@@ -288,7 +288,7 @@ describe('CLI interface behavior', () => {
     expect(markdown).not.toContain('best strategy');
   });
 
-  it.openspec('OA-035')('fill command reports missing required fields', () => {
+  it.openspec('OA-TMP-006')('fill command reports missing required fields', () => {
     const outDir = mkdtempSync(join(tmpdir(), 'oa-cli-missing-'));
     tempDirs.push(outDir);
     const outputPath = join(outDir, 'missing-fields.docx');
@@ -298,7 +298,7 @@ describe('CLI interface behavior', () => {
     );
   });
 
-  it.openspec('OA-041')('fill command blocks templates marked allow_derivatives=false', () => {
+  it.openspec('OA-DST-003')('fill command blocks templates marked allow_derivatives=false', () => {
     const root = mkdtempSync(join(tmpdir(), 'oa-cli-license-'));
     tempDirs.push(root);
     const templateDir = join(root, 'templates', 'restricted-template');
@@ -336,7 +336,7 @@ describe('CLI interface behavior', () => {
     ).toThrow(/allow_derivatives=false/);
   });
 
-  it.openspec('OA-047')('list command shows templates in human-readable output', () => {
+  it.openspec('OA-CLI-004')('list command shows templates in human-readable output', () => {
     const output = runCli(['list']);
     expect(output).toContain('common-paper-mutual-nda');
     expect(output).toContain('License');

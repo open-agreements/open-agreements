@@ -142,7 +142,7 @@ afterEach(() => {
 const { default: a2aHandler } = await import('../api/a2a.js');
 
 describe('A2A endpoint — api/a2a.ts', () => {
-  it.openspec('OA-146')('returns 204 for OPTIONS (CORS preflight)', async () => {
+  it.openspec('OA-DST-022')('returns 204 for OPTIONS (CORS preflight)', async () => {
     const req = createMockReq({ method: 'OPTIONS' });
     const res = createMockRes();
     await a2aHandler(req, res);
@@ -152,7 +152,7 @@ describe('A2A endpoint — api/a2a.ts', () => {
     expect(res.headers['Access-Control-Allow-Origin']).toBe('*');
   });
 
-  it.openspec('OA-146')('returns 405 for non-POST methods', async () => {
+  it.openspec('OA-DST-022')('returns 405 for non-POST methods', async () => {
     const req = createMockReq({ method: 'GET' });
     const res = createMockRes();
     await a2aHandler(req, res);
@@ -160,7 +160,7 @@ describe('A2A endpoint — api/a2a.ts', () => {
     expect(res.statusCode).toBe(405);
   });
 
-  it.openspec('OA-146')('returns JSON-RPC error for invalid request body', async () => {
+  it.openspec('OA-DST-022')('returns JSON-RPC error for invalid request body', async () => {
     const req = createMockReq({ body: { notJsonRpc: true } });
     const res = createMockRes();
     await a2aHandler(req, res);
@@ -169,7 +169,7 @@ describe('A2A endpoint — api/a2a.ts', () => {
     expect(getErrorObject(res).code).toBe(-32600);
   });
 
-  it.openspec('OA-146')('returns JSON-RPC error for unsupported methods', async () => {
+  it.openspec('OA-DST-022')('returns JSON-RPC error for unsupported methods', async () => {
     const req = createMockReq({
       body: { jsonrpc: '2.0', id: 1, method: 'tasks/get' },
     });
@@ -181,7 +181,7 @@ describe('A2A endpoint — api/a2a.ts', () => {
     expect(String(getErrorObject(res).message)).toContain('tasks/get');
   });
 
-  it.openspec('OA-146')('routes list-templates skill to handleListTemplates', async () => {
+  it.openspec('OA-DST-022')('routes list-templates skill to handleListTemplates', async () => {
     const req = createMockReq({
       body: {
         jsonrpc: '2.0',
@@ -206,7 +206,7 @@ describe('A2A endpoint — api/a2a.ts', () => {
     expect(result.artifacts[0].parts[0].data.items).toHaveLength(1);
   });
 
-  it.openspec('OA-146')('routes fill-template skill to handleFill', async () => {
+  it.openspec('OA-DST-022')('routes fill-template skill to handleFill', async () => {
     handleFillMock.mockResolvedValue(MOCK_FILL_SUCCESS);
 
     const req = createMockReq({
@@ -242,7 +242,7 @@ describe('A2A endpoint — api/a2a.ts', () => {
     expect(result.artifacts[0].parts[0].data.inlineData).toBe(MOCK_FILL_SUCCESS.base64);
   });
 
-  it.openspec('OA-146')('returns failed status when handleFill fails', async () => {
+  it.openspec('OA-DST-022')('returns failed status when handleFill fails', async () => {
     handleFillMock.mockResolvedValue(MOCK_FILL_FAILURE);
 
     const req = createMockReq({
@@ -265,7 +265,7 @@ describe('A2A endpoint — api/a2a.ts', () => {
     expect(result.status.message).toContain('nonexistent');
   });
 
-  it.openspec('OA-146')('returns error for unknown skill', async () => {
+  it.openspec('OA-DST-022')('returns error for unknown skill', async () => {
     const req = createMockReq({
       body: {
         jsonrpc: '2.0',
@@ -284,7 +284,7 @@ describe('A2A endpoint — api/a2a.ts', () => {
     expect(String(getErrorObject(res).message)).toContain('unknown-skill');
   });
 
-  it.openspec('OA-146')('returns error when message parts are missing', async () => {
+  it.openspec('OA-DST-022')('returns error when message parts are missing', async () => {
     const req = createMockReq({
       body: {
         jsonrpc: '2.0',
@@ -307,7 +307,7 @@ describe('A2A endpoint — api/a2a.ts', () => {
 const { default: mcpHandler } = await import('../api/mcp.js');
 
 describe('MCP endpoint — api/mcp.ts', () => {
-  it.openspec('OA-147')('returns 204 for OPTIONS (CORS preflight)', async () => {
+  it.openspec('OA-DST-023')('returns 204 for OPTIONS (CORS preflight)', async () => {
     const req = createMockReq({ method: 'OPTIONS' });
     const res = createMockRes();
     await mcpHandler(req, res);
@@ -316,7 +316,7 @@ describe('MCP endpoint — api/mcp.ts', () => {
     expect(res.headers['Access-Control-Allow-Headers']).toContain('Mcp-Session-Id');
   });
 
-  it.openspec('OA-147')('returns 405 JSON for non-browser GET requests', async () => {
+  it.openspec('OA-DST-023')('returns 405 JSON for non-browser GET requests', async () => {
     const req = createMockReq({ method: 'GET', headers: { accept: 'application/json' } });
     const res = createMockRes();
     await mcpHandler(req, res);
@@ -325,7 +325,7 @@ describe('MCP endpoint — api/mcp.ts', () => {
     expect(String(asObject(res.body).error)).toContain('Only POST');
   });
 
-  it.openspec('OA-147')('returns 200 HTML for browser-style GET requests', async () => {
+  it.openspec('OA-DST-023')('returns 200 HTML for browser-style GET requests', async () => {
     const req = createMockReq({ method: 'GET', headers: { accept: 'text/html' } });
     const res = createMockRes();
     await mcpHandler(req, res);
@@ -336,7 +336,7 @@ describe('MCP endpoint — api/mcp.ts', () => {
     expect(String(res.body)).toContain('OpenAgreements MCP endpoint');
   });
 
-  it.openspec('OA-147')('handles initialize handshake', async () => {
+  it.openspec('OA-DST-023')('handles initialize handshake', async () => {
     const req = createMockReq({
       body: {
         jsonrpc: '2.0',
@@ -361,7 +361,7 @@ describe('MCP endpoint — api/mcp.ts', () => {
     expect(result.capabilities.tools).toBeDefined();
   });
 
-  it.openspec('OA-147')('returns 202 for notifications (no id)', async () => {
+  it.openspec('OA-DST-023')('returns 202 for notifications (no id)', async () => {
     const req = createMockReq({
       body: { jsonrpc: '2.0', method: 'notifications/initialized' },
     });
@@ -372,7 +372,7 @@ describe('MCP endpoint — api/mcp.ts', () => {
     expect(res.ended).toBe(true);
   });
 
-  it.openspec('OA-148')('handles tools/list', async () => {
+  it.openspec('OA-DST-024')('handles tools/list', async () => {
     const req = createMockReq({
       body: { jsonrpc: '2.0', id: 2, method: 'tools/list' },
     });
@@ -391,7 +391,7 @@ describe('MCP endpoint — api/mcp.ts', () => {
     ]);
   });
 
-  it.openspec('OA-148')('handles tools/call list_templates with envelope response', async () => {
+  it.openspec('OA-DST-024')('handles tools/call list_templates with envelope response', async () => {
     const req = createMockReq({
       body: {
         jsonrpc: '2.0',
@@ -413,7 +413,7 @@ describe('MCP endpoint — api/mcp.ts', () => {
     expect(envelope.data.rate_limit).toBeDefined();
   });
 
-  it.openspec('OA-148')('handles tools/call get_template', async () => {
+  it.openspec('OA-DST-024')('handles tools/call get_template', async () => {
     const req = createMockReq({
       body: {
         jsonrpc: '2.0',
@@ -435,7 +435,7 @@ describe('MCP endpoint — api/mcp.ts', () => {
     expect(envelope.data.template.template_id).toBe('common-paper-mutual-nda');
   });
 
-  it.openspec('OA-083')('handles tools/call fill_template with URL return_mode envelope', async () => {
+  it.openspec('OA-DST-017')('handles tools/call fill_template with URL return_mode envelope', async () => {
     handleFillMock.mockResolvedValue(MOCK_FILL_SUCCESS);
 
     const req = createMockReq({
@@ -471,7 +471,7 @@ describe('MCP endpoint — api/mcp.ts', () => {
     expect(envelope.data.rate_limit).toBeDefined();
   });
 
-  it.openspec('OA-148')('returns INVALID_ARGUMENT envelope for fill_template with missing template arg', async () => {
+  it.openspec('OA-DST-024')('returns INVALID_ARGUMENT envelope for fill_template with missing template arg', async () => {
     const req = createMockReq({
       body: {
         jsonrpc: '2.0',
@@ -491,7 +491,7 @@ describe('MCP endpoint — api/mcp.ts', () => {
     expect(envelope.error.details.issues.length).toBeGreaterThan(0);
   });
 
-  it.openspec('OA-148')('returns TEMPLATE_NOT_FOUND envelope for fill_template when handleFill fails', async () => {
+  it.openspec('OA-DST-024')('returns TEMPLATE_NOT_FOUND envelope for fill_template when handleFill fails', async () => {
     handleFillMock.mockResolvedValue(MOCK_FILL_FAILURE);
 
     const req = createMockReq({
@@ -513,7 +513,7 @@ describe('MCP endpoint — api/mcp.ts', () => {
     expect(envelope.error.message).toContain('nonexistent');
   });
 
-  it.openspec('OA-148')('returns INVALID_ARGUMENT envelope for unknown tool name', async () => {
+  it.openspec('OA-DST-024')('returns INVALID_ARGUMENT envelope for unknown tool name', async () => {
     const req = createMockReq({
       body: {
         jsonrpc: '2.0',
@@ -533,7 +533,7 @@ describe('MCP endpoint — api/mcp.ts', () => {
     expect(envelope.error.message).toContain('unknown_tool');
   });
 
-  it.openspec('OA-147')('responds to ping', async () => {
+  it.openspec('OA-DST-023')('responds to ping', async () => {
     const req = createMockReq({
       body: { jsonrpc: '2.0', id: 8, method: 'ping' },
     });
@@ -544,7 +544,7 @@ describe('MCP endpoint — api/mcp.ts', () => {
     expect(getResultObject(res)).toEqual({});
   });
 
-  it.openspec('OA-147')('returns method-not-supported for unknown methods', async () => {
+  it.openspec('OA-DST-023')('returns method-not-supported for unknown methods', async () => {
     const req = createMockReq({
       body: { jsonrpc: '2.0', id: 9, method: 'resources/list' },
     });
@@ -554,7 +554,7 @@ describe('MCP endpoint — api/mcp.ts', () => {
     expect(getErrorObject(res).code).toBe(-32601);
   });
 
-  it.openspec('OA-147')('returns 400 for invalid JSON-RPC body', async () => {
+  it.openspec('OA-DST-023')('returns 400 for invalid JSON-RPC body', async () => {
     const req = createMockReq({ body: { not: 'jsonrpc' } });
     const res = createMockRes();
     await mcpHandler(req, res);
@@ -570,7 +570,7 @@ describe('MCP endpoint — api/mcp.ts', () => {
 const { default: downloadHandler } = await import('../api/download.js');
 
 describe('Download endpoint — api/download.ts', () => {
-  it.openspec('OA-149')('returns 405 for non-GET/HEAD methods', async () => {
+  it.openspec('OA-DST-025')('returns 405 for non-GET/HEAD methods', async () => {
     const req = createMockReq({ method: 'POST' });
     const res = createMockRes();
     await downloadHandler(req, res);
@@ -578,7 +578,7 @@ describe('Download endpoint — api/download.ts', () => {
     expect(res.statusCode).toBe(405);
   });
 
-  it.openspec('OA-149')('returns 400 with machine-readable code when id is missing', async () => {
+  it.openspec('OA-DST-025')('returns 400 with machine-readable code when id is missing', async () => {
     const req = createMockReq({ method: 'GET', query: {} });
     const res = createMockRes();
     await downloadHandler(req, res);
@@ -588,7 +588,7 @@ describe('Download endpoint — api/download.ts', () => {
     expect(String(getErrorObject(res).message)).toContain('"id"');
   });
 
-  it.openspec('OA-086')('returns 403 with machine-readable code for invalid signature', async () => {
+  it.openspec('OA-DST-020')('returns 403 with machine-readable code for invalid signature', async () => {
     resolveDownloadArtifactMock.mockReturnValue({ ok: false, code: 'DOWNLOAD_SIGNATURE_INVALID' });
 
     const req = createMockReq({ method: 'GET', query: { id: 'bad-download-id' } });
@@ -599,7 +599,7 @@ describe('Download endpoint — api/download.ts', () => {
     expect(getErrorObject(res).code).toBe('DOWNLOAD_SIGNATURE_INVALID');
   });
 
-  it.openspec('OA-149')('renders a user-facing HTML error page when browser clients request text/html', async () => {
+  it.openspec('OA-DST-025')('renders a user-facing HTML error page when browser clients request text/html', async () => {
     resolveDownloadArtifactMock.mockReturnValue({ ok: false, code: 'DOWNLOAD_EXPIRED' });
 
     const req = createMockReq({
@@ -617,7 +617,7 @@ describe('Download endpoint — api/download.ts', () => {
     expect(String(res.body)).toContain('DOWNLOAD_EXPIRED');
   });
 
-  it.openspec('OA-084')('serves DOCX for valid download_id', async () => {
+  it.openspec('OA-DST-018')('serves DOCX for valid download_id', async () => {
     resolveDownloadArtifactMock.mockReturnValue({
       ok: true,
       artifact: {
@@ -642,7 +642,7 @@ describe('Download endpoint — api/download.ts', () => {
     expect(Buffer.isBuffer(res.body)).toBe(true);
   });
 
-  it.openspec('OA-149')('returns 500 with machine-readable code when fill fails for a valid id', async () => {
+  it.openspec('OA-DST-025')('returns 500 with machine-readable code when fill fails for a valid id', async () => {
     resolveDownloadArtifactMock.mockReturnValue({
       ok: true,
       artifact: {
@@ -663,7 +663,7 @@ describe('Download endpoint — api/download.ts', () => {
     expect(String(getErrorObject(res).message)).toContain('nonexistent');
   });
 
-  it.openspec('OA-085')('supports HEAD for valid download_id without response body', async () => {
+  it.openspec('OA-DST-019')('supports HEAD for valid download_id without response body', async () => {
     resolveDownloadArtifactMock.mockReturnValue({
       ok: true,
       artifact: {
@@ -684,7 +684,7 @@ describe('Download endpoint — api/download.ts', () => {
     expect(res.ended).toBe(true);
   });
 
-  it.openspec('OA-087')('supports HEAD error probing with status parity', async () => {
+  it.openspec('OA-DST-021')('supports HEAD error probing with status parity', async () => {
     resolveDownloadArtifactMock.mockReturnValue({ ok: false, code: 'DOWNLOAD_EXPIRED' });
 
     const req = createMockReq({ method: 'HEAD', query: { id: 'expired-id.valid-sig' } });
@@ -697,7 +697,7 @@ describe('Download endpoint — api/download.ts', () => {
     expect(res.ended).toBe(true);
   });
 
-  it.openspec('OA-149')('returns 204 for OPTIONS (CORS preflight)', async () => {
+  it.openspec('OA-DST-025')('returns 204 for OPTIONS (CORS preflight)', async () => {
     const req = createMockReq({ method: 'OPTIONS' });
     const res = createMockRes();
     await downloadHandler(req, res);

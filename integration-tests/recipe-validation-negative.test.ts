@@ -35,7 +35,7 @@ function writeMetadata(recipeDir: string): void {
 }
 
 describe('validateRecipe negative scenarios', () => {
-  it.openspec('OA-031')('rejects committed DOCX files in recipe directories', () => {
+  it.openspec('OA-RCP-016')('rejects committed DOCX files in recipe directories', () => {
     const recipeDir = mkdtempSync(join(tmpdir(), 'oa-recipe-docx-'));
     tempDirs.push(recipeDir);
 
@@ -47,7 +47,7 @@ describe('validateRecipe negative scenarios', () => {
     expect(result.errors.join(' ')).toContain('Copyrighted .docx file(s) found');
   });
 
-  it.openspec('OA-033')('warns when replacement targets are not in metadata fields', () => {
+  it.openspec('OA-RCP-018')('warns when replacement targets are not in metadata fields', () => {
     const recipeDir = mkdtempSync(join(tmpdir(), 'oa-recipe-schema-'));
     tempDirs.push(recipeDir);
 
@@ -63,7 +63,7 @@ describe('validateRecipe negative scenarios', () => {
     expect(result.warnings.join(' ')).toContain('Replacement target {company_name_missing} not found in metadata fields');
   });
 
-  it.openspec('OA-160')('rejects unsafe non-identifier replacement tags', () => {
+  it.openspec('OA-RCP-027')('rejects unsafe non-identifier replacement tags', () => {
     const recipeDir = mkdtempSync(join(tmpdir(), 'oa-recipe-unsafe-tag-'));
     tempDirs.push(recipeDir);
 
@@ -79,7 +79,7 @@ describe('validateRecipe negative scenarios', () => {
     expect(result.errors.join(' ')).toContain('unsafe tag');
   });
 
-  it.openspec('OA-065')('rejects computed profiles with unsupported predicate operators', () => {
+  it.openspec('OA-RCP-025')('rejects computed profiles with unsupported predicate operators', () => {
     const recipeDir = mkdtempSync(join(tmpdir(), 'oa-recipe-computed-op-'));
     tempDirs.push(recipeDir);
 
@@ -113,7 +113,7 @@ describe('validateRecipe negative scenarios', () => {
     expect(result.errors.join(' ')).toContain('computed.json');
   });
 
-  it.openspec('OA-160')('rejects invalid normalize.json configuration', () => {
+  it.openspec('OA-RCP-027')('rejects invalid normalize.json configuration', () => {
     const recipeDir = mkdtempSync(join(tmpdir(), 'oa-recipe-normalize-'));
     tempDirs.push(recipeDir);
 

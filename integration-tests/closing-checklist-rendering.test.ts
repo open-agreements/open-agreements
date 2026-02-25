@@ -57,7 +57,7 @@ function getTableRowsAsCellText(docxPath: string): string[][][] {
 }
 
 describe('closing-checklist rendering', () => {
-  it.openspec('OA-175')('renders stage-first checklist rows with linked items and unlinked fallbacks', async () => {
+  it.openspec('OA-CKL-028')('renders stage-first checklist rows with linked items and unlinked fallbacks', async () => {
     const templateDir = findTemplateDir('closing-checklist');
     expect(templateDir).toBeTruthy();
 
@@ -71,22 +71,22 @@ describe('closing-checklist rendering', () => {
       values: buildChecklistTemplateContext({
         deal_name: 'Project Atlas - Series A Closing',
         updated_at: '2026-02-20',
-        documents: [
-          {
+        documents: {
+          'doc-spa-form': {
             document_id: 'doc-spa-form',
             title: 'Stock Purchase Agreement (Form)',
             primary_link: 'https://drive.example.com/spa-form',
             labels: ['phase:signing'],
           },
-          {
+          'doc-escrow-exec': {
             document_id: 'doc-escrow-exec',
             title: 'Escrow Agreement (Executed)',
             primary_link: 'https://drive.example.com/escrow-exec',
             labels: ['phase:closing'],
           },
-        ],
-        checklist_entries: [
-          {
+        },
+        checklist_entries: {
+          'entry-spa': {
             entry_id: 'entry-spa',
             document_id: 'doc-spa-form',
             stage: 'SIGNING',
@@ -95,7 +95,7 @@ describe('closing-checklist rendering', () => {
             status: 'FORM_FINAL',
             citations: [{ ref: 'SPA §2.1' }],
           },
-          {
+          'entry-escrow': {
             entry_id: 'entry-escrow',
             document_id: 'doc-escrow-exec',
             stage: 'CLOSING',
@@ -117,9 +117,9 @@ describe('closing-checklist rendering', () => {
               },
             ],
           },
-        ],
-        action_items: [
-          {
+        },
+        action_items: {
+          'A-101': {
             action_id: 'A-101',
             description: 'Collect escrow signature pages',
             status: 'IN_PROGRESS',
@@ -127,7 +127,7 @@ describe('closing-checklist rendering', () => {
             due_date: '2026-02-24',
             related_document_ids: ['doc-escrow-exec'],
           },
-          {
+          'A-102': {
             action_id: 'A-102',
             description: 'Order good standing certificate',
             status: 'NOT_STARTED',
@@ -135,23 +135,23 @@ describe('closing-checklist rendering', () => {
             due_date: '2026-02-25',
             related_document_ids: [],
           },
-        ],
-        issues: [
-          {
+        },
+        issues: {
+          'I-77': {
             issue_id: 'I-77',
             title: 'MFN carveout language',
             status: 'OPEN',
             summary: 'Pending partner review',
             related_document_ids: ['doc-spa-form'],
           },
-          {
+          'I-88': {
             issue_id: 'I-88',
             title: 'Outstanding tax certificate',
             status: 'OPEN',
             summary: 'Not yet raised to counterparty',
             related_document_ids: [],
           },
-        ],
+        },
       }),
     });
 

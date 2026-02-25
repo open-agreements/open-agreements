@@ -526,6 +526,14 @@ export function createAllureTestHelpers(config) {
     const idToMeta = new Map();
 
     const files = listOpenSpecFiles(openspecSpecRoot);
+    // Sort canonical specs first so idToMeta first-match-wins picks the correct title
+    // (otherwise archive/ sorts before specs/ alphabetically and shadows canonical IDs)
+    files.sort((a, b) => {
+      const aCanonical = !a.includes(`${path.sep}changes${path.sep}`) && !a.includes(`${path.sep}private${path.sep}`);
+      const bCanonical = !b.includes(`${path.sep}changes${path.sep}`) && !b.includes(`${path.sep}private${path.sep}`);
+      if (aCanonical !== bCanonical) return aCanonical ? -1 : 1;
+      return a.localeCompare(b);
+    });
     for (const filePath of files) {
       const content = fs.readFileSync(filePath, 'utf-8');
       const relativePath = path.relative(openspecRepoRoot, filePath).split(path.sep).join('/');
@@ -825,11 +833,16 @@ export function createAllureTestHelpers(config) {
       const baseStoryLabels = scenarioIds.length > 0
         ? scenarioIds
         : [resolveStoryLabel(explicitName, nameParts)];
-      const storyLabels = baseStoryLabels.map((story) =>
-        /^Scenario:\s*/i.test(story) || /^\[[^\]]+\]\s*/.test(story)
-          ? normalizeScenarioText(story)
-          : story,
-      );
+      const storyLabels = baseStoryLabels.map((story) => {
+        if (/^Scenario:\s*/i.test(story) || /^\[[^\]]+\]\s*/.test(story)) {
+          return normalizeScenarioText(story);
+        }
+        if (openspecEnabled && matchesOpenSpecIdPattern(story)) {
+          const meta = getOpenSpecIndex().idToMeta.get(story);
+          if (meta?.name) return meta.name;
+        }
+        return story;
+      });
       const scenarioSerials = new Set();
       if (openspecEnabled) {
         for (const story of baseStoryLabels) {
@@ -847,18 +860,18 @@ export function createAllureTestHelpers(config) {
       const isScenarioStyle = baseStoryLabels.some((story) => /^Scenario:\s*/i.test(story));
       let effectiveDefaults = defaults;
       if (scenarioIds.length > 0 || isScenarioStyle) {
-        const firstStory = storyLabels[0] ?? '';
-        const scenarioText = normalizeScenarioText(firstStory);
-        const autoDefaults = {
-          description: scenarioText.length > 0
-            ? [
-              `This test validates the OpenSpec scenario: ${scenarioText}.`,
-              'Expected outcome: implementation behavior matches this scenario.',
-            ].join('\n')
-            : undefined,
-          tags: ['human-readable'],
-          parameters: { audience: 'non-technical' },
-        };
+        const testName = resolveStoryLabel(explicitName, nameParts);
+        const scenarioLines = [...scenarioSerials].map((id) => {
+          const meta = openspecEnabled ? getOpenSpecIndex().idToMeta.get(id) : null;
+          return meta?.name ? `${id}: ${meta.name}` : id;
+        });
+        let description;
+        if (scenarioLines.length === 1) {
+          description = `**Scenario**: ${scenarioLines[0]}\n**Verifies**: ${testName}`;
+        } else if (scenarioLines.length > 1) {
+          description = `**Scenarios**:\n${scenarioLines.map((l) => `- ${l}`).join('\n')}\n**Verifies**: ${testName}`;
+        }
+        const autoDefaults = { description, tags: ['human-readable'], parameters: { audience: 'non-technical' } };
         effectiveDefaults = mergeAllureDefaults(autoDefaults, defaults);
       }
 

@@ -130,8 +130,14 @@ function stableStringify(value: unknown): string {
 }
 
 export function computeChecklistPatchHash(patch: ChecklistPatchEnvelope): string {
-  return createHash('sha256').update(stableStringify(patch)).digest('hex');
+  const structural = {
+    ...patch,
+    operations: patch.operations.map(({ op, path, value }) => ({ op, path, value })),
+  };
+  return createHash('sha256').update(stableStringify(structural)).digest('hex');
 }
+
+export const DANGEROUS_KEYS = new Set(['__proto__', 'constructor', 'prototype']);
 
 function decodePointerToken(token: string): string {
   return token.replace(/~1/g, '/').replace(/~0/g, '~');
@@ -184,6 +190,15 @@ function resolveParent(root: unknown, path: string): ParentResolution {
   const parentTokens: string[] = [];
 
   for (const token of tokens.slice(0, -1)) {
+    if (DANGEROUS_KEYS.has(token)) {
+      return {
+        ok: false,
+        code: 'TARGET_PATH_INVALID',
+        message: `path token "${token}" is a disallowed key`,
+        path: encodePointer(parentTokens.concat(token)),
+      };
+    }
+
     if (Array.isArray(current)) {
       const index = parseArrayIndex(token);
       if (index === null) {
@@ -208,7 +223,7 @@ function resolveParent(root: unknown, path: string): ParentResolution {
     }
 
     if (isRecord(current)) {
-      if (!(token in current)) {
+      if (!Object.prototype.hasOwnProperty.call(current, token)) {
         return {
           ok: false,
           code: 'TARGET_NOT_FOUND',
@@ -266,6 +281,18 @@ function applyOperationDryRun(
   }
 
   const { parent, parentPath, finalToken } = parentResult;
+
+  if (DANGEROUS_KEYS.has(finalToken)) {
+    return {
+      ok: false,
+      diagnostic: {
+        code: 'TARGET_PATH_INVALID',
+        message: `path token "${finalToken}" is a disallowed key`,
+        path: operation.path,
+        operation_index: operationIndex,
+      },
+    };
+  }
 
   if (Array.isArray(parent)) {
     if (finalToken === '-') {

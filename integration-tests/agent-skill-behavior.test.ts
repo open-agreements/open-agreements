@@ -43,7 +43,7 @@ const SAMPLE_METADATA: TemplateMetadata = {
 };
 
 describe('adapter architecture', () => {
-  it.openspec('OA-052')('ClaudeCodeAdapter implements ToolCommandAdapter interface', () => {
+  it.openspec('OA-CLI-007')('ClaudeCodeAdapter implements ToolCommandAdapter interface', () => {
     const adapter: ToolCommandAdapter = new ClaudeCodeAdapter();
     expect(adapter.name).toBe('claude-code');
     expect(adapter.getOutputPath('common-paper-mutual-nda')).toBe(
@@ -52,7 +52,7 @@ describe('adapter architecture', () => {
     expect(typeof adapter.generateSkillFile).toBe('function');
   });
 
-  it.openspec('OA-053')('new adapter can be added without modifying core', () => {
+  it.openspec('OA-CLI-008')('new adapter can be added without modifying core', () => {
     const customAdapter: ToolCommandAdapter = {
       name: 'cursor',
       generateSkillFile: () => '# cursor skill',
@@ -67,27 +67,27 @@ describe('Claude skill generation', () => {
   const adapter = new ClaudeCodeAdapter();
   const generatedSkill = adapter.generateSkillFile(SAMPLE_METADATA, 'common-paper-mutual-nda');
 
-  it.openspec('OA-048')('generated Claude skill interviews user in AskUserQuestion rounds', () => {
+  it.openspec('OA-CLI-005')('generated Claude skill interviews user in AskUserQuestion rounds', () => {
     expect(generatedSkill).toContain('AskUserQuestion');
     expect(generatedSkill).toContain('Field Collection Rounds');
     expect(generatedSkill).toContain('Round 1');
   });
 
-  it.openspec('OA-049')('generated Claude skill renders DOCX via fill command after interview', () => {
+  it.openspec('OA-CLI-006')('generated Claude skill renders DOCX via fill command after interview', () => {
     expect(generatedSkill).toContain('open-agreements fill common-paper-mutual-nda');
   });
 });
 
 describe('published skills/open-agreements/SKILL.md execution paths', () => {
-  it.openspec('OA-054')('documents npx zero-preinstall DOCX rendering path', () => {
+  it.openspec('OA-CLI-009')('documents npx zero-preinstall DOCX rendering path', () => {
     expect(SKILL_MD).toContain('npx -y open-agreements@latest fill <template-name>');
   });
 
-  it.openspec('OA-055')('documents installed CLI DOCX rendering path', () => {
+  it.openspec('OA-CLI-010')('documents installed CLI DOCX rendering path', () => {
     expect(SKILL_MD).toContain('open-agreements fill <template-name>');
   });
 
-  it.openspec('OA-056')('documents preview-only fallback when Node.js is unavailable', () => {
+  it.openspec('OA-CLI-011')('documents preview-only fallback when Node.js is unavailable', () => {
     expect(SKILL_MD).toContain('PREVIEW_ONLY');
     expect(SKILL_MD).toContain('install Node.js >=20 for signable DOCX output');
   });

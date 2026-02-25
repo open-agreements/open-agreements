@@ -102,19 +102,19 @@ function endnotesXml(text: string): string {
 // ---------------------------------------------------------------------------
 
 describe('detectCurrencyFields', () => {
-  it.openspec('OA-133')('detects field when $ and {field} are split across runs', () => {
+  it.openspec('OA-FIL-003')('detects field when $ and {field} are split across runs', () => {
     const buf = buildDocxBuffer(docXmlSplitRuns(['Amount: $', '{purchase_amount}']));
     const fields = detectCurrencyFields(buf);
     expect(fields.has('purchase_amount')).toBe(true);
   });
 
-  it.openspec('OA-133')('returns empty set for DOCX without dollar-prefixed fields', () => {
+  it.openspec('OA-FIL-003')('returns empty set for DOCX without dollar-prefixed fields', () => {
     const buf = buildDocxBuffer(docXml(['Hello {name}, welcome to {company}']));
     const fields = detectCurrencyFields(buf);
     expect(fields.size).toBe(0);
   });
 
-  it.openspec('OA-133')('scans headers', () => {
+  it.openspec('OA-FIL-003')('scans headers', () => {
     const buf = buildDocxBuffer(docXml(['Body text']), {
       'word/header1.xml': headerXml('Fee: ${fee_amount}'),
     });
@@ -122,7 +122,7 @@ describe('detectCurrencyFields', () => {
     expect(fields.has('fee_amount')).toBe(true);
   });
 
-  it.openspec('OA-133')('scans footers', () => {
+  it.openspec('OA-FIL-003')('scans footers', () => {
     const buf = buildDocxBuffer(docXml(['Body text']), {
       'word/footer1.xml': footerXml('Total: ${total}'),
     });
@@ -130,7 +130,7 @@ describe('detectCurrencyFields', () => {
     expect(fields.has('total')).toBe(true);
   });
 
-  it.openspec('OA-133')('scans endnotes', () => {
+  it.openspec('OA-FIL-003')('scans endnotes', () => {
     const buf = buildDocxBuffer(docXml(['Body text']), {
       'word/endnotes.xml': endnotesXml('Cap: ${valuation_cap}'),
     });
@@ -138,7 +138,7 @@ describe('detectCurrencyFields', () => {
     expect(fields.has('valuation_cap')).toBe(true);
   });
 
-  it.openspec('OA-133')('detects multiple currency fields in a single paragraph', () => {
+  it.openspec('OA-FIL-003')('detects multiple currency fields in a single paragraph', () => {
     const buf = buildDocxBuffer(docXml(['Fee: ${fee} and Cap: ${cap}']));
     const fields = detectCurrencyFields(buf);
     expect(fields.has('fee')).toBe(true);
@@ -147,7 +147,7 @@ describe('detectCurrencyFields', () => {
 });
 
 describe('sanitizeCurrencyValuesFromDocx', () => {
-  it.openspec('OA-134')('strips $ from string values for detected currency fields', () => {
+  it.openspec('OA-FIL-004')('strips $ from string values for detected currency fields', () => {
     const buf = buildDocxBuffer(docXml(['Amount: ${purchase_amount}']));
     const result = sanitizeCurrencyValuesFromDocx(
       { purchase_amount: '$50,000', name: 'Acme' },
@@ -157,7 +157,7 @@ describe('sanitizeCurrencyValuesFromDocx', () => {
     expect(result.name).toBe('Acme');
   });
 
-  it.openspec('OA-134')('does not strip $ from boolean values', () => {
+  it.openspec('OA-FIL-004')('does not strip $ from boolean values', () => {
     const buf = buildDocxBuffer(docXml(['Amount: ${some_field}']));
     const result = sanitizeCurrencyValuesFromDocx(
       { some_field: true, other: '$100' },
@@ -166,14 +166,14 @@ describe('sanitizeCurrencyValuesFromDocx', () => {
     expect(result.some_field).toBe(true);
   });
 
-  it.openspec('OA-134')('returns same object when no currency fields detected', () => {
+  it.openspec('OA-FIL-004')('returns same object when no currency fields detected', () => {
     const buf = buildDocxBuffer(docXml(['Hello {name}']));
     const values = { name: '$Alice' };
     const result = sanitizeCurrencyValuesFromDocx(values, buf);
     expect(result).toBe(values); // same reference — no copy needed
   });
 
-  it.openspec('OA-134')('does not strip $ from non-currency fields', () => {
+  it.openspec('OA-FIL-004')('does not strip $ from non-currency fields', () => {
     const buf = buildDocxBuffer(docXml(['Amount: ${amount}']));
     const result = sanitizeCurrencyValuesFromDocx(
       { amount: '$100', ticker: '$AAPL' },
@@ -189,7 +189,7 @@ describe('sanitizeCurrencyValuesFromDocx', () => {
 // ---------------------------------------------------------------------------
 
 describe('verifyTemplateFill', () => {
-  it.openspec('OA-135')('catches double dollar signs in output', () => {
+  it.openspec('OA-FIL-005')('catches double dollar signs in output', () => {
     const path = buildDocxFile(docXml(['The amount is $$50,000']));
     const result = verifyTemplateFill(path);
     expect(result.passed).toBe(false);
@@ -199,14 +199,14 @@ describe('verifyTemplateFill', () => {
     rmSync(path.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it.openspec('OA-135')('catches $ $ with whitespace between', () => {
+  it.openspec('OA-FIL-005')('catches $ $ with whitespace between', () => {
     const path = buildDocxFile(docXml(['The amount is $ $50,000']));
     const result = verifyTemplateFill(path);
     expect(result.passed).toBe(false);
     rmSync(path.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it.openspec('OA-025')('catches unrendered template tags', () => {
+  it.openspec('OA-RCP-012')('catches unrendered template tags', () => {
     const path = buildDocxFile(docXml(['Hello {unfilled_field}, welcome']));
     const result = verifyTemplateFill(path);
     expect(result.passed).toBe(false);
@@ -216,7 +216,7 @@ describe('verifyTemplateFill', () => {
     rmSync(path.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it.openspec('OA-136')('passes clean output with no issues', () => {
+  it.openspec('OA-FIL-006')('passes clean output with no issues', () => {
     const path = buildDocxFile(docXml(['Hello Alice, the amount is $50,000']));
     const result = verifyTemplateFill(path);
     expect(result.passed).toBe(true);
@@ -224,7 +224,7 @@ describe('verifyTemplateFill', () => {
     rmSync(path.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it.openspec('OA-135')('does not flag legitimate single dollar signs', () => {
+  it.openspec('OA-FIL-005')('does not flag legitimate single dollar signs', () => {
     const path = buildDocxFile(docXml(['Fee: $1,000', 'Cap: $5,000,000']));
     const result = verifyTemplateFill(path);
     const check = result.checks.find((c) => c.name === 'No double dollar signs');
@@ -232,7 +232,7 @@ describe('verifyTemplateFill', () => {
     rmSync(path.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it.openspec('OA-137')('scans headers and footers for issues', () => {
+  it.openspec('OA-FIL-007')('scans headers and footers for issues', () => {
     const path = buildDocxFile(docXml(['Body is clean']), {
       'word/header1.xml': headerXml('{leftover_tag}'),
     });
@@ -256,7 +256,7 @@ describe('prepareFillData', () => {
   ];
   const requiredFieldNames = ['company'];
 
-  it.openspec('OA-138')('defaults optional fields to empty string when useBlankPlaceholder is false', () => {
+  it.openspec('OA-FIL-008')('defaults optional fields to empty string when useBlankPlaceholder is false', () => {
     const result = prepareFillData({
       values: { company: 'Acme' },
       fields,
@@ -267,7 +267,7 @@ describe('prepareFillData', () => {
     expect(result.is_free).toBe('');
   });
 
-  it.openspec('OA-138')('defaults optional fields to BLANK_PLACEHOLDER when useBlankPlaceholder is true', () => {
+  it.openspec('OA-FIL-008')('defaults optional fields to BLANK_PLACEHOLDER when useBlankPlaceholder is true', () => {
     const result = prepareFillData({
       values: { company: 'Acme' },
       fields,
@@ -277,7 +277,7 @@ describe('prepareFillData', () => {
     expect(result.is_free).toBe(BLANK_PLACEHOLDER);
   });
 
-  it.openspec('OA-138')('user values override defaults', () => {
+  it.openspec('OA-FIL-008')('user values override defaults', () => {
     const result = prepareFillData({
       values: { company: 'Acme', amount: '$50,000' },
       fields,
@@ -286,7 +286,7 @@ describe('prepareFillData', () => {
     expect(result.amount).toBe('$50,000');
   });
 
-  it.openspec('OA-138')('uses field.default when provided', () => {
+  it.openspec('OA-FIL-008')('uses field.default when provided', () => {
     const fieldsWithDefault = [
       ...fields.slice(0, 1),
       { name: 'amount', type: 'string' as const, description: 'Amount', default: 'N/A' },
@@ -299,7 +299,7 @@ describe('prepareFillData', () => {
     expect(result.amount).toBe('N/A');
   });
 
-  it.openspec('OA-139')('coerces boolean fields when coerceBooleans is true', () => {
+  it.openspec('OA-FIL-009')('coerces boolean fields when coerceBooleans is true', () => {
     const result = prepareFillData({
       values: { company: 'Acme', is_free: 'true' },
       fields,
@@ -308,7 +308,7 @@ describe('prepareFillData', () => {
     expect(result.is_free).toBe(true);
   });
 
-  it.openspec('OA-139')('coerces "false" string to false boolean', () => {
+  it.openspec('OA-FIL-009')('coerces "false" string to false boolean', () => {
     const result = prepareFillData({
       values: { company: 'Acme', is_free: 'false' },
       fields,
@@ -317,7 +317,7 @@ describe('prepareFillData', () => {
     expect(result.is_free).toBe(false);
   });
 
-  it.openspec('OA-139')('does not coerce booleans when coerceBooleans is false', () => {
+  it.openspec('OA-FIL-009')('does not coerce booleans when coerceBooleans is false', () => {
     const result = prepareFillData({
       values: { company: 'Acme', is_free: 'true' },
       fields,
@@ -326,7 +326,7 @@ describe('prepareFillData', () => {
     expect(result.is_free).toBe('true');
   });
 
-  it.openspec('OA-139')('warns on missing required fields', () => {
+  it.openspec('OA-FIL-009')('warns on missing required fields', () => {
     const spy = vi.spyOn(console, 'warn').mockImplementation(() => {});
     prepareFillData({
       values: { amount: '100' },
@@ -337,7 +337,7 @@ describe('prepareFillData', () => {
     spy.mockRestore();
   });
 
-  it.openspec('OA-139')('calls computeDisplayFields callback', () => {
+  it.openspec('OA-FIL-009')('calls computeDisplayFields callback', () => {
     let callbackCalled = false;
     prepareFillData({
       values: { company: 'Acme' },
@@ -356,7 +356,7 @@ describe('prepareFillData', () => {
 // ---------------------------------------------------------------------------
 
 describe('fillDocx', () => {
-  it.openspec('OA-140')('passes fixSmartQuotes option through to createReport', async () => {
+  it.openspec('OA-FIL-010')('passes fixSmartQuotes option through to createReport', async () => {
     // Smart-quoted tag in the DOCX — \u201C and \u201D around tag name
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
@@ -379,7 +379,7 @@ describe('fillDocx', () => {
     expect(result.length).toBeGreaterThan(0);
   });
 
-  it.openspec('OA-141')('renders multiline values using explicit line-break runs', async () => {
+  it.openspec('OA-FIL-011')('renders multiline values using explicit line-break runs', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -405,7 +405,7 @@ describe('fillDocx', () => {
     expect(/<w:t(?:\s+[^>]*)?>[^<]*<w:br\/>/.test(outXml)).toBe(false);
   });
 
-  it.openspec('OA-019')('strips drafting note paragraphs by default', async () => {
+  it.openspec('OA-ENG-006')('strips drafting note paragraphs by default', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -429,7 +429,7 @@ describe('fillDocx', () => {
     expect(outXml).not.toContain('Drafting note');
   });
 
-  it.openspec('OA-142')('preserves all paragraphs when stripParagraphPatterns is empty', async () => {
+  it.openspec('OA-FIL-012')('preserves all paragraphs when stripParagraphPatterns is empty', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -450,7 +450,7 @@ describe('fillDocx', () => {
     expect(outXml).toContain('Drafting note');
   });
 
-  it.openspec('OA-143')('strips highlighting from runs with filled fields', async () => {
+  it.openspec('OA-FIL-013')('strips highlighting from runs with filled fields', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -483,7 +483,7 @@ describe('fillDocx', () => {
     expect(highlightCount).toBeGreaterThanOrEqual(1);
   });
 
-  it.openspec('OA-142')('removes table row when all paragraphs are drafting notes', async () => {
+  it.openspec('OA-FIL-012')('removes table row when all paragraphs are drafting notes', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -511,7 +511,7 @@ describe('fillDocx', () => {
     expect(trCount).toBe(2);
   });
 
-  it.openspec('OA-142')('does not remove table row when it has non-note content', async () => {
+  it.openspec('OA-FIL-012')('does not remove table row when it has non-note content', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -551,7 +551,7 @@ describe('Regression: behavioral divergence', () => {
   ];
   const simpleRequiredFieldNames = ['name'];
 
-  it.openspec('OA-144')('all paths default optional fields to BLANK_PLACEHOLDER', () => {
+  it.openspec('OA-FIL-014')('all paths default optional fields to BLANK_PLACEHOLDER', () => {
     const data = prepareFillData({
       values: { name: 'Acme' },
       fields: simpleFields,
@@ -560,7 +560,7 @@ describe('Regression: behavioral divergence', () => {
     expect(data.amount).toBe(BLANK_PLACEHOLDER);
   });
 
-  it.openspec('OA-144')('template path coerces boolean fields', () => {
+  it.openspec('OA-FIL-014')('template path coerces boolean fields', () => {
     const boolFields = [
       { name: 'company', type: 'string' as const, description: 'Co' },
       { name: 'flag', type: 'boolean' as const, description: 'Flag' },
@@ -573,7 +573,7 @@ describe('Regression: behavioral divergence', () => {
     expect(data.flag).toBe(false);
   });
 
-  it.openspec('OA-144')('recipe/external path does not coerce booleans', () => {
+  it.openspec('OA-FIL-014')('recipe/external path does not coerce booleans', () => {
     const boolFields = [
       { name: 'company', type: 'string' as const, description: 'Co' },
       { name: 'flag', type: 'boolean' as const, description: 'Flag' },
@@ -586,7 +586,7 @@ describe('Regression: behavioral divergence', () => {
     expect(data.flag).toBe('false');
   });
 
-  it.openspec('OA-144')('template path warns on missing required fields', () => {
+  it.openspec('OA-FIL-014')('template path warns on missing required fields', () => {
     const spy = vi.spyOn(console, 'warn').mockImplementation(() => {});
     prepareFillData({
       values: {},
@@ -603,7 +603,7 @@ describe('Regression: behavioral divergence', () => {
 // ---------------------------------------------------------------------------
 
 describe('Integration: template currency sanitization', () => {
-  it.openspec('OA-145')('template fill with $50,000 produces $50,000 not $$50,000', async () => {
+  it.openspec('OA-FIL-015')('template fill with $50,000 produces $50,000 not $$50,000', async () => {
     // Build a template DOCX with ${purchase_amount} (dollar before tag)
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +

@@ -54,7 +54,7 @@ function buildDocxBuffer(documentXml: string): Buffer {
 }
 
 describe('fill security behavior', () => {
-  it.openspec('OA-001')('fillDocx uses sandboxed rendering by default', async () => {
+  it.openspec('OA-ENG-001')('fillDocx uses sandboxed rendering by default', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body><w:p><w:r><w:t>Hello {name}</w:t></w:r></w:p></w:body></w:document>`;
@@ -83,7 +83,7 @@ describe('fill security behavior', () => {
     });
   });
 
-  it.openspec('OA-002')('fillDocx blocks malicious template expressions', async () => {
+  it.openspec('OA-ENG-002')('fillDocx blocks malicious template expressions', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body><w:p><w:r><w:t>{= require('fs').readFileSync('/etc/passwd','utf8') }</w:t></w:r></w:p></w:body></w:document>`;
@@ -102,7 +102,7 @@ describe('fill security behavior', () => {
     });
   });
 
-  it.openspec('OA-009')('fillTemplate warns on unknown input keys', async () => {
+  it.openspec('OA-FIL-001')('fillTemplate warns on unknown input keys', async () => {
     const templateDir = join(getTemplatesDir(), 'common-paper-mutual-nda');
     const outputDir = mkdtempSync(join(tmpdir(), 'oa-unknown-keys-'));
     tempDirs.push(outputDir);

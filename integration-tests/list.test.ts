@@ -38,23 +38,23 @@ describe('list --json envelope', () => {
     available = false;
   }
 
-  it.openspec('OA-158')('has schema_version 1', () => {
+  it.openspec('OA-CLI-023')('has schema_version 1', () => {
     if (!available || !parsed) return;
     expect(parsed.schema_version).toBe(1);
   });
 
-  it.openspec('OA-158')('has a cli_version string', () => {
+  it.openspec('OA-CLI-023')('has a cli_version string', () => {
     if (!available || !parsed) return;
     expect(typeof parsed.cli_version).toBe('string');
     expect(parsed.cli_version.length).toBeGreaterThan(0);
   });
 
-  it.openspec('OA-158')('has items as an array', () => {
+  it.openspec('OA-CLI-023')('has items as an array', () => {
     if (!available || !parsed) return;
     expect(Array.isArray(parsed.items)).toBe(true);
   });
 
-  it.openspec('OA-158')('items contain name and license or license_note keys', () => {
+  it.openspec('OA-CLI-023')('items contain name and license or license_note keys', () => {
     if (!available || !parsed) return;
     expect(parsed.items.length).toBeGreaterThan(0);
     for (const item of parsed.items) {
@@ -64,14 +64,14 @@ describe('list --json envelope', () => {
     }
   });
 
-  it.openspec('OA-057')('items are sorted by name', () => {
+  it.openspec('OA-CLI-012')('items are sorted by name', () => {
     if (!available || !parsed) return;
     const names = parsed.items.map((item) => item.name);
     const sorted = [...names].sort((a: string, b: string) => a.localeCompare(b));
     expect(names).toEqual(sorted);
   });
 
-  it.openspec('OA-057')('items include full template metadata in json output', () => {
+  it.openspec('OA-CLI-012')('items include full template metadata in json output', () => {
     if (!available || !parsed) return;
     const templateItems = parsed.items.filter((item) => typeof item.attribution_text === 'string');
     expect(templateItems.length).toBeGreaterThan(0);
@@ -91,7 +91,7 @@ describe('list --json envelope', () => {
 });
 
 describe('list options', () => {
-  it.openspec('OA-059')('--templates-only filters to templates', () => {
+  it.openspec('OA-CLI-014')('--templates-only filters to templates', () => {
     const output = execSync(`node ${BIN} list --json --templates-only`, {
       cwd: ROOT,
       encoding: 'utf-8',
@@ -112,7 +112,7 @@ describe('list options', () => {
     expect(employmentItem.category).toBe('employment');
   });
 
-  it.openspec('OA-058')('--json-strict exits non-zero on metadata errors', () => {
+  it.openspec('OA-CLI-013')('--json-strict exits non-zero on metadata errors', () => {
     const root = mkdtempSync(join(tmpdir(), 'oa-list-strict-'));
     const templatesDir = join(root, 'templates', 'bad-template');
     mkdirSync(templatesDir, { recursive: true });
