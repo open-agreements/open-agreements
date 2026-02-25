@@ -74,5 +74,6 @@ with httpx.Client() as client:
 ```
 
 ## Notes
-- `return_mode` supports `url` (default), `base64_docx`, and `mcp_resource`.
+- Use `return_mode: "url"` for `fill_template` and download the artifact out-of-band, e.g. `curl -L "$DOWNLOAD_URL" -o filled.docx`.
+- `return_mode` supports `url` (default) and `mcp_resource`.
 - Error envelopes are machine-readable with stable `error.code` values.

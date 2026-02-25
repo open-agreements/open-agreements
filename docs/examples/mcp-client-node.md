@@ -91,5 +91,6 @@ function parseEnvelope<T = any>(result: any): ToolEnvelope<T> {
 ```
 
 ## Notes
+- Use `fill_template` with `return_mode: 'url'`, then download via `curl -L "$DOWNLOAD_URL" -o filled.docx`.
 - Tool results always return one JSON envelope text block.
 - Error handling should branch on `envelope.ok` and `envelope.error.code`.
