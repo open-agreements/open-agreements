@@ -218,10 +218,8 @@ function truncateInlineEvidence(content: string, maxChars = MAX_INLINE_EVIDENCE_
 
 function renderInlineEvidenceHtml(title: string, content: string): string {
   return [
-    '<details>',
-    `<summary><strong>${htmlEscape(title)}</strong></summary>`,
+    `<h4>${htmlEscape(title)}</h4>`,
     `<pre>${htmlEscape(truncateInlineEvidence(content))}</pre>`,
-    '</details>',
   ].join('');
 }
 
