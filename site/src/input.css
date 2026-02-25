@@ -915,15 +915,15 @@
   /* System card inline chart */
   .trust-summary-banner {
     padding: 16px 20px;
-    border: 1px solid var(--accent);
-    background: linear-gradient(120deg, var(--accent-soft), #fff4e7);
+    border: 1px solid var(--border);
+    background: #fff;
     margin-bottom: 16px;
   }
 
   .trust-summary-banner h2 {
     font-size: 1.2rem;
     margin: 0 0 6px;
-    color: var(--accent-deep);
+    color: var(--ink);
     border-bottom: none;
   }
 
@@ -931,6 +931,46 @@
     margin: 0;
     color: var(--ink-soft);
     font-size: 0.92rem;
+  }
+
+  .trust-metric-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .trust-metric-card {
+    border: 1px solid var(--line);
+    background: #fff;
+    padding: 12px 14px;
+  }
+
+  .trust-metric-card.is-warning {
+    border-color: var(--accent);
+    background: #fff4e7;
+  }
+
+  .trust-metric-label {
+    margin: 0 0 4px;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--ink-soft);
+    font-weight: 600;
+  }
+
+  .trust-metric-value {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .trust-metric-note {
+    margin: 4px 0 0;
+    font-size: 0.78rem;
+    color: var(--ink-soft);
   }
 
   .trust-chart {
@@ -942,7 +982,7 @@
 
   .chart-row {
     display: grid;
-    grid-template-columns: 1fr 180px 60px;
+    grid-template-columns: minmax(220px, 1fr) 220px 170px;
     gap: 12px;
     align-items: center;
     font-size: 0.88rem;
@@ -977,10 +1017,125 @@
   .chart-fill.is-low { background: #be4b2f; }
   .chart-fill.is-na { background: var(--line); }
 
-  .chart-value {
+  .chart-note {
     text-align: right;
-    font-weight: 600;
+    color: var(--ink-soft);
     font-size: 0.82rem;
+  }
+
+  .epic-breakdown {
+    border: 1px solid var(--line);
+    background: #fff;
+    margin-bottom: 10px;
+  }
+
+  .epic-breakdown summary {
+    cursor: pointer;
+    padding: 10px 12px;
+    font-weight: 600;
+    color: var(--ink);
+    border-bottom: 1px solid transparent;
+  }
+
+  .epic-breakdown[open] summary {
+    border-bottom-color: var(--line);
+  }
+
+  .epic-breakdown-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.8rem;
+  }
+
+  .epic-breakdown-table th,
+  .epic-breakdown-table td {
+    text-align: left;
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+
+  .epic-breakdown-table th {
+    background: var(--bg);
+    font-size: 0.74rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 600;
+  }
+
+  .epic-breakdown-table tr:last-child td {
+    border-bottom: none;
+  }
+
+  .scenario-status {
+    display: inline-block;
+    padding: 2px 8px;
+    border: 1px solid var(--line);
+    font-size: 0.74rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 700;
+  }
+
+  .scenario-status.is-covered {
+    border-color: #2e8540;
+    color: #2e8540;
+    background: #eef9f1;
+  }
+
+  .scenario-status.is-missing {
+    border-color: #be4b2f;
+    color: #be4b2f;
+    background: #fff1ed;
+  }
+
+  .mapped-test-entry {
+    margin-bottom: 10px;
+    line-height: 1.45;
+    padding-left: 16px;
+    position: relative;
+  }
+
+  .mapped-test-entry::before {
+    content: "\2022";
+    position: absolute;
+    left: 0;
+    color: var(--ink-soft);
+  }
+
+  .mapped-test-entry:last-child {
+    margin-bottom: 0;
+  }
+
+  .mapped-test-title {
+    display: block;
+    color: var(--ink);
+  }
+
+  .mapped-test-links {
+    display: block;
+    margin-top: 2px;
+    font-size: 0.8rem;
+  }
+
+  .mapped-test-source-link,
+  .mapped-test-allure-link {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+
+  .mapped-test-source-link {
+    color: var(--accent-deep);
+  }
+
+  .mapped-test-allure-link {
+    margin-left: 8px;
+    color: var(--accent-deep);
+  }
+
+  .mapped-test-allure-link.is-fallback {
+    opacity: 0.78;
   }
 
   /* Template evidence ledger table */
@@ -1176,6 +1331,21 @@
 
   .filter-select {
     display: block;
+  }
+
+  .chart-row {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .chart-note {
+    text-align: left;
+  }
+
+  .epic-breakdown-table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
 }
