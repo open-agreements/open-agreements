@@ -97,12 +97,21 @@ jobs:
           npm pack --dry-run
           (cd packages/contracts-workspace-mcp && npm pack --dry-run)
           (cd packages/contract-templates-mcp && npm pack --dry-run)
+          SCOPED_DIR="$(mktemp -d)"
+          cleanup_scoped_dir() {
+            rm -rf "$SCOPED_DIR"
+          }
+          trap cleanup_scoped_dir EXIT
+          node scripts/prepare_scoped_open_agreements_package.mjs --out-dir "$SCOPED_DIR"
+          (cd "$SCOPED_DIR" && npm pack --dry-run)
+          trap - EXIT
+          cleanup_scoped_dir
 
       - name: Guard against duplicate publish
         run: |
           TAG_REF="${RELEASE_TAG:-$GITHUB_REF_NAME}"
           VERSION="${TAG_REF#v}"
-          for pkg in open-agreements @open-agreements/contracts-workspace-mcp @open-agreements/contract-templates-mcp; do
+          for pkg in open-agreements @open-agreements/open-agreements @open-agreements/contracts-workspace-mcp @open-agreements/contract-templates-mcp; do
             if npm view "$pkg@$VERSION" version >/dev/null 2>&1; then
               echo "$pkg@$VERSION already exists on npm."
               exit 1
@@ -158,6 +167,21 @@ jobs:
             exit 1
           fi
           npm publish --provenance --access public
+
+          if npm view "@open-agreements/open-agreements@$VERSION" version >/dev/null 2>&1; then
+            echo "@open-agreements/open-agreements@$VERSION already exists on npm."
+            exit 1
+          fi
+          SCOPED_DIR="$(mktemp -d)"
+          cleanup_scoped_dir() {
+            rm -rf "$SCOPED_DIR"
+          }
+          trap cleanup_scoped_dir EXIT
+          node scripts/prepare_scoped_open_agreements_package.mjs --out-dir "$SCOPED_DIR"
+          echo "Publishing @open-agreements/open-agreements from $SCOPED_DIR"
+          (cd "$SCOPED_DIR" && npm publish --provenance --access public)
+          trap - EXIT
+          cleanup_scoped_dir
 
           for entry in "@open-agreements/contracts-workspace-mcp:packages/contracts-workspace-mcp" "@open-agreements/contract-templates-mcp:packages/contract-templates-mcp"; do
             PKG_NAME="${entry%%:*}"
