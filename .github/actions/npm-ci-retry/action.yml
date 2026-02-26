@@ -1,0 +1,29 @@
+name: npm-ci-retry
+description: Install dependencies with retry and exponential backoff.
+runs:
+  using: composite
+  steps:
+    - name: npm ci with retry
+      shell: bash
+      run: |
+        set -euo pipefail
+
+        attempt=1
+        max_attempts=3
+        delay_seconds=5
+
+        while true; do
+          if npm ci; then
+            exit 0
+          fi
+
+          if [ "$attempt" -ge "$max_attempts" ]; then
+            echo "npm ci failed after ${attempt} attempts."
+            exit 1
+          fi
+
+          echo "npm ci failed on attempt ${attempt}/${max_attempts}. Retrying in ${delay_seconds}s..."
+          sleep "$delay_seconds"
+          attempt=$((attempt + 1))
+          delay_seconds=$((delay_seconds * 2))
+        done

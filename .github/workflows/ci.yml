@@ -7,6 +7,40 @@ on:
     branches: [main]
 
 jobs:
+  semgrep:
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+    uses: ./.github/workflows/semgrep.yml
+
+  codeql:
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - uses: github/codeql-action/init@v3
+        with:
+          languages: javascript-typescript
+          config-file: ./.github/codeql/codeql-config.yml
+
+      - name: Install dependencies (retry)
+        uses: ./.github/actions/npm-ci-retry
+
+      - name: Build
+        run: npm run build
+
+      - uses: github/codeql-action/analyze@v3
+
   spec-coverage:
     runs-on: ubuntu-latest
     steps:
@@ -17,7 +51,8 @@ jobs:
           node-version: 20
           cache: npm
 
-      - run: npm ci
+      - name: Install dependencies (retry)
+        uses: ./.github/actions/npm-ci-retry
 
       - name: Validate OpenSpec traceability coverage
         run: npm run check:spec-coverage
@@ -32,7 +67,8 @@ jobs:
           node-version: 20
           cache: npm
 
-      - run: npm ci
+      - name: Install dependencies (retry)
+        uses: ./.github/actions/npm-ci-retry
 
       - name: Validate template preview PNGs
         run: npm run check:template-previews
@@ -50,7 +86,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: npm
 
-      - run: npm ci
+      - name: Install dependencies (retry)
+        uses: ./.github/actions/npm-ci-retry
 
       - name: Build
         run: npm run build
@@ -71,7 +108,8 @@ jobs:
           node-version: 20
           cache: npm
 
-      - run: npm ci
+      - name: Install dependencies (retry)
+        uses: ./.github/actions/npm-ci-retry
 
       - name: Test coverage + JUnit results
         run: npm run test:coverage:ci
@@ -103,7 +141,8 @@ jobs:
           node-version: 20
           cache: npm
 
-      - run: npm ci
+      - name: Install dependencies (retry)
+        uses: ./.github/actions/npm-ci-retry
 
       - name: Build
         run: npm run build
@@ -132,7 +171,8 @@ jobs:
           node-version: 20
           cache: npm
 
-      - run: npm ci
+      - name: Install dependencies (retry)
+        uses: ./.github/actions/npm-ci-retry
 
       - name: Build
         run: npm run build
@@ -162,7 +202,8 @@ jobs:
           node-version: 20
           cache: npm
 
-      - run: npm ci
+      - name: Install dependencies (retry)
+        uses: ./.github/actions/npm-ci-retry
 
       - name: Build
         run: npm run build

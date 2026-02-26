@@ -1,0 +1,16 @@
+name: OpenAgreements CodeQL
+
+paths:
+  - src
+  - packages
+  - scripts
+  - bin
+  - site
+
+paths-ignore:
+  - "**/node_modules/**"
+  - "**/dist/**"
+  - "**/coverage/**"
+  - "**/allure-report/**"
+  - "site/docs/**"
+  - "site/_site/**"
