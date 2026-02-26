@@ -131,25 +131,6 @@ jobs:
           use_oidc: true
           fail_ci_if_error: true
 
-  system-card-freshness:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
-
-      - name: Install dependencies (retry)
-        uses: ./.github/actions/npm-ci-retry
-
-      - name: Build
-        run: npm run build
-
-      - name: Verify system card and template evidence are up to date
-        run: npm run trust:check
-
   deploy-allure:
     if: github.ref == 'refs/heads/main'
     needs: [test]

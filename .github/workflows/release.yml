@@ -84,3 +84,57 @@ jobs:
           unset NODE_AUTH_TOKEN
           npm config delete //registry.npmjs.org/:_authToken || true
           npm publish --provenance --access public
+
+  deploy-vercel-production:
+    name: Deploy to Vercel (production)
+    needs: [publish]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    env:
+      RELEASE_TAG: ${{ github.event_name == 'workflow_dispatch' && inputs.release_tag || github.ref_name }}
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+    steps:
+      - name: Verify Vercel secrets are configured
+        run: |
+          for key in VERCEL_TOKEN VERCEL_ORG_ID VERCEL_PROJECT_ID; do
+            if [ -z "${!key:-}" ]; then
+              echo "Missing required secret: ${key}"
+              exit 1
+            fi
+          done
+
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event_name == 'workflow_dispatch' && inputs.release_tag || github.ref }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Build and deploy production on Vercel
+        id: vercel_deploy
+        run: |
+          npx vercel pull --yes --environment=production --token="$VERCEL_TOKEN"
+          npx vercel build --prod --token="$VERCEL_TOKEN"
+          DEPLOY_OUTPUT="$(npx vercel deploy --prebuilt --prod --yes --token="$VERCEL_TOKEN")"
+          echo "$DEPLOY_OUTPUT"
+          DEPLOY_URL="$(echo "$DEPLOY_OUTPUT" | grep -Eo 'https://[^[:space:]]+' | tail -n 1)"
+          if [ -z "$DEPLOY_URL" ]; then
+            echo "Could not parse Vercel deployment URL."
+            exit 1
+          fi
+          echo "deploy_url=$DEPLOY_URL" >> "$GITHUB_OUTPUT"
+
+      - name: Publish deployment summary
+        run: |
+          {
+            echo "### Vercel Production Deploy"
+            echo ""
+            echo "- Release tag: ${RELEASE_TAG}"
+            echo "- Deployment URL: ${{ steps.vercel_deploy.outputs.deploy_url }}"
+          } >> "$GITHUB_STEP_SUMMARY"

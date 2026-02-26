@@ -3,10 +3,15 @@
 /**
  * Export runtime trust data for the System Card.
  *
- * Reads allure-report/summary.json and writes site/_data/systemCardRuntime.json.
+ * Supports two data sources:
+ *   - allure-summary (default): reads allure-report/summary.json
+ *   - build-metadata: stamps runtime metadata from the current build/deploy environment
+ *
+ * Writes site/_data/systemCardRuntime.json.
  *
  * Usage:
  *   node scripts/export_allure_summary.mjs
+ *   node scripts/export_allure_summary.mjs --mode build-metadata
  *   node scripts/export_allure_summary.mjs --report-dir ./allure-report --output site/_data/systemCardRuntime.json
  */
 
@@ -18,14 +23,29 @@ import { execFileSync } from "node:child_process";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = resolve(__dirname, "..");
 const DEFAULT_REPORT_URL = "https://tests.openagreements.ai";
+const MODE_ALLURE_SUMMARY = "allure-summary";
+const MODE_BUILD_METADATA = "build-metadata";
 
 function parseArgs() {
   const args = process.argv.slice(2);
   let reportDir = resolve(REPO_ROOT, "allure-report");
   let outputPath = resolve(REPO_ROOT, "site", "_data", "systemCardRuntime.json");
   let staleAfterHours = 24;
+  let mode = MODE_ALLURE_SUMMARY;
 
   for (let i = 0; i < args.length; i++) {
+    if (args[i] === "--mode") {
+      const value = args[i + 1];
+      if (!value) throw new Error("--mode requires a value");
+      if (value !== MODE_ALLURE_SUMMARY && value !== MODE_BUILD_METADATA) {
+        throw new Error(
+          `--mode must be one of: ${MODE_ALLURE_SUMMARY}, ${MODE_BUILD_METADATA}`,
+        );
+      }
+      mode = value;
+      i++;
+      continue;
+    }
     if (args[i] === "--report-dir") {
       const value = args[i + 1];
       if (!value) throw new Error("--report-dir requires a path value");
@@ -52,7 +72,7 @@ function parseArgs() {
     throw new Error(`Unknown argument: ${args[i]}`);
   }
 
-  return { reportDir, outputPath, staleAfterHours };
+  return { reportDir, outputPath, staleAfterHours, mode };
 }
 
 function maybeNumber(value) {
@@ -114,23 +134,8 @@ function ensureIsoUtc(valueMs, fallbackIso) {
   return new Date(valueMs).toISOString();
 }
 
-function main() {
-  const { reportDir, outputPath, staleAfterHours } = parseArgs();
-  const summaryPath = resolveSummaryPath(reportDir);
-  if (!summaryPath) {
-    console.error(`Allure summary not found under: ${reportDir}`);
-    console.error(
-      "Run 'npm run report:allure' first to generate the report.",
-    );
-    process.exit(1);
-  }
-
-  const raw = readFileSync(summaryPath, "utf-8");
-  const summary = JSON.parse(raw);
-
-  const now = new Date();
+function buildRuntimeFromAllureSummary({ summary, now, staleAfterHours }) {
   const nowMs = now.getTime();
-
   const stats = summary.stats ?? summary.statistic ?? {};
   const total = Number(stats.total ?? 0);
   const passed = Number(stats.passed ?? 0);
@@ -147,11 +152,13 @@ function main() {
   const maxAgeMinutes = staleAfterHours * 60;
   const isStale = ageMinutes > maxAgeMinutes;
 
-  const commitSha = process.env.GITHUB_SHA ?? readGitCommitSha();
+  const commitSha = process.env.GITHUB_SHA ?? process.env.VERCEL_GIT_COMMIT_SHA ?? readGitCommitSha();
   const { commitUrl, runUrl } = buildGithubUrls(commitSha);
 
-  const exported = {
+  return {
     schema_version: 1,
+    runtime_source: MODE_ALLURE_SUMMARY,
+    metrics_available: true,
     generated_at_utc: now.toISOString(),
     report_url: DEFAULT_REPORT_URL,
     status: summary.status ?? (failed > 0 ? "failed" : "passed"),
@@ -171,6 +178,7 @@ function main() {
       commit_url: commitUrl,
       ci_run_url: summary.jobHref || runUrl,
       pull_request_url: summary.pullRequestHref || null,
+      deployment_url: null,
     },
     freshness: {
       age_minutes: ageMinutes,
@@ -178,6 +186,69 @@ function main() {
       is_stale: isStale,
     },
   };
+}
+
+function buildRuntimeFromBuildMetadata({ now, staleAfterHours }) {
+  const commitSha = process.env.VERCEL_GIT_COMMIT_SHA ?? process.env.GITHUB_SHA ?? readGitCommitSha();
+  const { commitUrl, runUrl } = buildGithubUrls(commitSha);
+  const deploymentUrl = process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : null;
+
+  return {
+    schema_version: 1,
+    runtime_source: MODE_BUILD_METADATA,
+    metrics_available: false,
+    generated_at_utc: now.toISOString(),
+    report_url: DEFAULT_REPORT_URL,
+    status: "unknown",
+    stats: {
+      total: 0,
+      passed: 0,
+      failed: 0,
+      broken: 0,
+      skipped: 0,
+      flaky: 0,
+      pass_rate_percent: 0,
+    },
+    run: {
+      created_at_utc: now.toISOString(),
+      duration_ms: null,
+      commit_sha: shortSha(commitSha),
+      commit_url: commitUrl,
+      ci_run_url: runUrl,
+      pull_request_url: null,
+      deployment_url: deploymentUrl,
+    },
+    freshness: {
+      age_minutes: 0,
+      stale_after_hours: staleAfterHours,
+      is_stale: false,
+    },
+  };
+}
+
+function main() {
+  const { reportDir, outputPath, staleAfterHours, mode } = parseArgs();
+  const now = new Date();
+
+  let exported;
+  if (mode === MODE_BUILD_METADATA) {
+    exported = buildRuntimeFromBuildMetadata({ now, staleAfterHours });
+  } else {
+    const summaryPath = resolveSummaryPath(reportDir);
+    if (!summaryPath) {
+      console.error(`Allure summary not found under: ${reportDir}`);
+      console.error(
+        "Run 'npm run report:allure' first to generate the report.",
+      );
+      process.exit(1);
+    }
+
+    const raw = readFileSync(summaryPath, "utf-8");
+    const summary = JSON.parse(raw);
+    exported = buildRuntimeFromAllureSummary({ summary, now, staleAfterHours });
+  }
 
   const outDir = dirname(outputPath);
   if (!existsSync(outDir)) {
