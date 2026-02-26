@@ -4,17 +4,8 @@ import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
 const manifestPath = resolve(process.cwd(), 'gemini-extension.json');
-let manifest;
-try {
-  const raw = readFileSync(manifestPath, 'utf8');
-  manifest = JSON.parse(raw);
-} catch (error) {
-  if (error && typeof error === 'object' && 'code' in error && error.code === 'ENOENT') {
-    console.log('SKIP gemini extension manifest contract: gemini-extension.json not present in this checkout.');
-    process.exit(0);
-  }
-  throw error;
-}
+const raw = readFileSync(manifestPath, 'utf8');
+const manifest = JSON.parse(raw);
 
 const requiredTopLevel = [
   'name',
