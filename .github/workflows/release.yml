@@ -7,13 +7,13 @@ on:
   workflow_dispatch:
     inputs:
       release_tag:
-        description: "Existing release tag to publish (for example: v0.1.1)"
+        description: "Existing release tag to publish (for example: v0.2.0)"
         required: true
         type: string
 
 jobs:
-  publish:
-    name: Publish to npm
+  preflight:
+    name: Release preflight
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -31,18 +31,35 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           registry-url: https://registry.npmjs.org
           cache: npm
 
-      - name: Verify tag matches package version
+      - name: Use npm 11.5.1+ for OIDC trusted publishing compatibility
+        run: npm install --global npm@11.5.1
+
+      - name: Verify tag matches release versions
         run: |
           TAG_REF="${RELEASE_TAG:-$GITHUB_REF_NAME}"
           TAG_VERSION="${TAG_REF#v}"
-          PKG_VERSION="$(node -p "require('./package.json').version")"
 
-          if [ "$TAG_VERSION" != "$PKG_VERSION" ]; then
-            echo "Tag version ($TAG_VERSION) must match package.json version ($PKG_VERSION)."
+          for pkg in package.json packages/contracts-workspace-mcp/package.json packages/contract-templates-mcp/package.json; do
+            PKG_VERSION="$(node -p "require('./${pkg}').version")"
+            if [ "$TAG_VERSION" != "$PKG_VERSION" ]; then
+              echo "Tag version ($TAG_VERSION) must match ${pkg} version ($PKG_VERSION)."
+              exit 1
+            fi
+          done
+
+          GEMINI_VERSION="$(node -p "require('./gemini-extension.json').version")"
+          if [ "$TAG_VERSION" != "$GEMINI_VERSION" ]; then
+            echo "Tag version ($TAG_VERSION) must match gemini-extension.json version ($GEMINI_VERSION)."
+            exit 1
+          fi
+
+          CURSOR_VERSION="$(node -p "require('./.cursor-plugin/plugin.json').version")"
+          if [ "$TAG_VERSION" != "$CURSOR_VERSION" ]; then
+            echo "Tag version ($TAG_VERSION) must match .cursor-plugin/plugin.json version ($CURSOR_VERSION)."
             exit 1
           fi
 
@@ -54,32 +71,195 @@ jobs:
             exit 1
           fi
 
-      - run: npm ci
+      - name: Install dependencies (retry)
+        uses: ./.github/actions/npm-ci-retry
+
+      - name: Build publishable packages
+        run: |
+          npm run build
+          npm run build:workspace-mcp
+          npm run build:contract-templates-mcp
+
+      - name: Validate templates
+        run: npm run validate
+
+      - name: Validate Gemini extension manifest contract
+        run: npm run check:gemini-extension-manifest
+
+      - name: Run tests (includes OpenSpec traceability check)
+        run: npm run test:run
+
+      - name: Isolated package runtime smoke checks
+        run: npm run check:isolated-runtime
+
+      - name: Verify package contents
+        run: |
+          npm pack --dry-run
+          (cd packages/contracts-workspace-mcp && npm pack --dry-run)
+          (cd packages/contract-templates-mcp && npm pack --dry-run)
 
       - name: Guard against duplicate publish
         run: |
           TAG_REF="${RELEASE_TAG:-$GITHUB_REF_NAME}"
           VERSION="${TAG_REF#v}"
+          for pkg in open-agreements @open-agreements/contracts-workspace-mcp @open-agreements/contract-templates-mcp; do
+            if npm view "$pkg@$VERSION" version >/dev/null 2>&1; then
+              echo "$pkg@$VERSION already exists on npm."
+              exit 1
+            fi
+            echo "$pkg@$VERSION not yet published."
+          done
+
+  publish-suite:
+    name: Publish package suite
+    needs: [preflight]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    env:
+      RELEASE_TAG: ${{ github.event_name == 'workflow_dispatch' && inputs.release_tag || github.ref_name }}
+    concurrency:
+      group: npm-release-${{ github.event_name == 'workflow_dispatch' && inputs.release_tag || github.ref_name }}
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event_name == 'workflow_dispatch' && inputs.release_tag || github.ref }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+          cache: npm
+
+      - name: Use npm 11.5.1+ for OIDC trusted publishing compatibility
+        run: npm install --global npm@11.5.1
+
+      - name: Install dependencies (retry)
+        uses: ./.github/actions/npm-ci-retry
+
+      - name: Build publishable packages
+        run: |
+          npm run build
+          npm run build:workspace-mcp
+          npm run build:contract-templates-mcp
+
+      - name: Publish to npm (trusted publishing + provenance)
+        run: |
+          TAG_REF="${RELEASE_TAG:-$GITHUB_REF_NAME}"
+          VERSION="${TAG_REF#v}"
+          unset NODE_AUTH_TOKEN
+          npm config delete //registry.npmjs.org/:_authToken || true
+
           if npm view "open-agreements@$VERSION" version >/dev/null 2>&1; then
             echo "open-agreements@$VERSION already exists on npm."
             exit 1
           fi
-          echo "Version $VERSION not yet published."
-
-      - name: Build
-        run: npm run build
-
-      - name: Validate templates
-        run: npm run validate
-
-      - name: Run tests (includes OpenSpec traceability check)
-        run: npm run test:run
-
-      - name: Verify package contents
-        run: npm pack --dry-run
-
-      - name: Publish to npm (trusted publishing + provenance)
-        run: |
-          unset NODE_AUTH_TOKEN
-          npm config delete //registry.npmjs.org/:_authToken || true
           npm publish --provenance --access public
+
+          for entry in "@open-agreements/contracts-workspace-mcp:packages/contracts-workspace-mcp" "@open-agreements/contract-templates-mcp:packages/contract-templates-mcp"; do
+            PKG_NAME="${entry%%:*}"
+            PKG_DIR="${entry##*:}"
+            if npm view "$PKG_NAME@$VERSION" version >/dev/null 2>&1; then
+              echo "$PKG_NAME@$VERSION already exists on npm."
+              exit 1
+            fi
+            echo "Publishing $PKG_NAME from $PKG_DIR"
+            (cd "$PKG_DIR" && npm publish --provenance --access public)
+          done
+
+  publish-github-release:
+    name: Publish GitHub release notes
+    needs: [publish-suite]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      RELEASE_TAG: ${{ github.event_name == 'workflow_dispatch' && inputs.release_tag || github.ref_name }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event_name == 'workflow_dispatch' && inputs.release_tag || github.ref }}
+
+      - name: Ensure GitHub release exists with generated notes
+        id: release
+        run: |
+          TAG_REF="${RELEASE_TAG:-$GITHUB_REF_NAME}"
+          if gh release view "$TAG_REF" >/dev/null 2>&1; then
+            echo "created=false" >> "$GITHUB_OUTPUT"
+            echo "GitHub release already exists for ${TAG_REF}."
+          else
+            gh release create "$TAG_REF" --title "$TAG_REF" --generate-notes --verify-tag
+            echo "created=true" >> "$GITHUB_OUTPUT"
+            echo "Created GitHub release for ${TAG_REF}."
+          fi
+
+      - name: Publish release summary
+        run: |
+          TAG_REF="${RELEASE_TAG:-$GITHUB_REF_NAME}"
+          RELEASE_URL="$(gh release view "$TAG_REF" --json url --jq '.url')"
+          {
+            echo "### GitHub Release"
+            echo ""
+            echo "- Tag: ${TAG_REF}"
+            echo "- Created in this run: ${{ steps.release.outputs.created }}"
+            echo "- Release URL: ${RELEASE_URL}"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+  deploy-vercel-production:
+    name: Deploy to Vercel (production)
+    needs: [publish-suite, publish-github-release]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    env:
+      RELEASE_TAG: ${{ github.event_name == 'workflow_dispatch' && inputs.release_tag || github.ref_name }}
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+    steps:
+      - name: Verify Vercel secrets are configured
+        run: |
+          for key in VERCEL_TOKEN VERCEL_ORG_ID VERCEL_PROJECT_ID; do
+            if [ -z "${!key:-}" ]; then
+              echo "Missing required secret: ${key}"
+              exit 1
+            fi
+          done
+
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event_name == 'workflow_dispatch' && inputs.release_tag || github.ref }}
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Build and deploy production on Vercel
+        id: vercel_deploy
+        run: |
+          npx vercel pull --yes --environment=production --token="$VERCEL_TOKEN"
+          npx vercel build --prod --token="$VERCEL_TOKEN"
+          DEPLOY_OUTPUT="$(npx vercel deploy --prebuilt --prod --yes --token="$VERCEL_TOKEN")"
+          echo "$DEPLOY_OUTPUT"
+          DEPLOY_URL="$(echo "$DEPLOY_OUTPUT" | grep -Eo 'https://[^[:space:]]+' | tail -n 1)"
+          if [ -z "$DEPLOY_URL" ]; then
+            echo "Could not parse Vercel deployment URL."
+            exit 1
+          fi
+          echo "deploy_url=$DEPLOY_URL" >> "$GITHUB_OUTPUT"
+
+      - name: Publish deployment summary
+        run: |
+          {
+            echo "### Vercel Production Deploy"
+            echo ""
+            echo "- Release tag: ${RELEASE_TAG}"
+            echo "- Deployment URL: ${{ steps.vercel_deploy.outputs.deploy_url }}"
+          } >> "$GITHUB_STEP_SUMMARY"

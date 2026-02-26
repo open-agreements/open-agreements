@@ -18,7 +18,8 @@ jobs:
         with:
           node-version: 20
 
-      - run: npm ci
+      - name: Install dependencies (retry)
+        uses: ./.github/actions/npm-ci-retry
 
       - name: Validate all templates
         run: node bin/open-agreements.js validate

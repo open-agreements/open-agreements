@@ -723,10 +723,13 @@ function metricCardHtml({ label, value, note, warning = false }) {
 
 function makeSystemCardMarkdown({ traceability, runtimeTrust, linkContext }) {
   const runtime = runtimeTrust.available ? runtimeTrust.data : null;
+  const runtimeSource = runtime?.runtime_source ?? "allure-summary";
+  const hasRuntimeMetrics = runtime?.metrics_available !== false;
   const latestPassRate = runtime?.stats?.pass_rate_percent;
   const latestTotal = runtime?.stats?.total;
   const latestPassed = runtime?.stats?.passed;
   const latestFailed = runtime?.stats?.failed;
+  const runtimeGeneratedAtUtc = runtime?.generated_at_utc;
   const runtimeCreatedAtUtc = runtime?.run?.created_at_utc;
   const runtimeAgeMinutes = runtime?.freshness?.age_minutes;
   const runtimeIsStale = runtime?.freshness?.is_stale;
@@ -734,14 +737,16 @@ function makeSystemCardMarkdown({ traceability, runtimeTrust, linkContext }) {
   const passRateText = Number.isFinite(latestPassRate) ? fixedPercent(latestPassRate) : "Unavailable";
   const latestTotalText = Number.isFinite(latestTotal) ? String(latestTotal) : "Unavailable";
   const latestPassedText = Number.isFinite(latestPassed) ? String(latestPassed) : "Unavailable";
-  const latestRunText = Number.isFinite(latestPassed) && Number.isFinite(latestTotal)
+  const latestRunText = hasRuntimeMetrics && Number.isFinite(latestPassed) && Number.isFinite(latestTotal)
     ? `${latestPassed}/${latestTotal}`
     : "Unavailable";
-  const failCountText = Number.isFinite(latestFailed) ? String(latestFailed) : "Unavailable";
+  const failCountText = hasRuntimeMetrics && Number.isFinite(latestFailed)
+    ? String(latestFailed)
+    : "Unavailable";
   const mappingCoverageText = pct(traceability.covered, traceability.total);
   const dataAgeText = Number.isFinite(runtimeAgeMinutes) ? `${runtimeAgeMinutes} min` : "Unavailable";
 
-  const runtimeSummary = Number.isFinite(latestPassed) && Number.isFinite(latestTotal)
+  const runtimeSummary = hasRuntimeMetrics && Number.isFinite(latestPassed) && Number.isFinite(latestTotal)
     ? `${latestPassed}/${latestTotal} passing tests`
     : "runtime results are currently unavailable";
 
@@ -769,7 +774,10 @@ function makeSystemCardMarkdown({ traceability, runtimeTrust, linkContext }) {
   }
 
   const proofLines = [
-    `- Last verified run (UTC): ${toUtcDisplay(runtimeCreatedAtUtc)}`,
+    `- Runtime source: ${runtimeSource === "build-metadata" ? "build metadata" : "allure summary"}`,
+    runtimeSource === "build-metadata"
+      ? `- Build timestamp (UTC): ${toUtcDisplay(runtimeGeneratedAtUtc ?? runtimeCreatedAtUtc)}`
+      : `- Last verified run (UTC): ${toUtcDisplay(runtimeCreatedAtUtc)}`,
     `- Commit: ${runtime?.run?.commit_sha ? safeLink(runtime.run.commit_url, runtime.run.commit_sha) : "Unavailable"}`,
     `- CI run: ${safeLink(runtime?.run?.ci_run_url, "workflow run")}`,
     `- Allure report: ${safeLink(runtime?.report_url ?? DEFAULT_ALLURE_REPORT_URL, "tests.openagreements.ai")}`,
@@ -791,12 +799,16 @@ function makeSystemCardMarkdown({ traceability, runtimeTrust, linkContext }) {
   lines.push("");
   lines.push("# OpenAgreements System Card");
   lines.push("");
+  lines.push(`_Last updated (UTC): ${toUtcDisplay(runtimeGeneratedAtUtc ?? runtimeCreatedAtUtc)}_`);
+  lines.push("");
   lines.push("## Executive Summary");
   lines.push("");
   lines.push('<div class="trust-summary-banner">');
   lines.push("<h2>Traceability and runtime status</h2>");
   lines.push(
-    `<p>${traceability.covered}/${traceability.total} scenarios are mapped to automated tests across ${traceability.capabilities.length} capabilities, and the latest published run reports ${runtimeSummary}.</p>`,
+    runtimeSource === "build-metadata"
+      ? `<p>${traceability.covered}/${traceability.total} scenarios are mapped to automated tests across ${traceability.capabilities.length} capabilities, and runtime metadata is stamped at deployment build time.</p>`
+      : `<p>${traceability.covered}/${traceability.total} scenarios are mapped to automated tests across ${traceability.capabilities.length} capabilities, and the latest published run reports ${runtimeSummary}.</p>`,
   );
   lines.push("</div>");
   lines.push("");
@@ -811,15 +823,19 @@ function makeSystemCardMarkdown({ traceability, runtimeTrust, linkContext }) {
   lines.push(metricCardHtml({
     label: "Latest test run",
     value: latestRunText,
-    note: Number.isFinite(latestFailed)
+    note: runtimeSource === "build-metadata"
+      ? "Test result counters are omitted in build-metadata mode"
+      : Number.isFinite(latestFailed)
       ? `${failCountText} failing test(s) in latest Allure run`
       : "Latest Allure run data unavailable",
-    warning: Number.isFinite(latestFailed) ? latestFailed > 0 : false,
+    warning: hasRuntimeMetrics && Number.isFinite(latestFailed) ? latestFailed > 0 : false,
   }));
   lines.push(metricCardHtml({
     label: "Data age",
     value: dataAgeText,
-    note: "Minutes since the latest published Allure report snapshot",
+    note: runtimeSource === "build-metadata"
+      ? "Minutes since deployment build metadata was generated"
+      : "Minutes since the latest published Allure report snapshot",
     warning: runtimeIsStale === true,
   }));
   lines.push("</div>");
@@ -921,14 +937,22 @@ function makeSystemCardMarkdown({ traceability, runtimeTrust, linkContext }) {
   lines.push("## Limitations");
   lines.push("");
   lines.push("- Scenario mapping coverage indicates linkage between scenarios and tests, not exhaustive code-path coverage.");
-  lines.push("- Runtime pass/fail values reflect the latest published Allure run and can change with each CI run.");
+  if (runtimeSource === "build-metadata") {
+    lines.push("- Runtime pass/fail counters are not fetched in build-metadata mode; the last updated timestamp reflects deployment build time.");
+  } else {
+    lines.push("- Runtime pass/fail values reflect the latest published Allure run and can change with each CI run.");
+  }
   lines.push("- Independent third-party audits are out of scope for this page.");
   lines.push("");
 
   lines.push("## Appendix: Methods (Technical)");
   lines.push("");
   lines.push("- Scenario mapping numbers are read from the generated OpenSpec traceability matrix.");
-  lines.push("- Runtime pass/fail metrics are exported from `allure-report/summary.json`.");
+  if (runtimeSource === "build-metadata") {
+    lines.push("- Runtime metadata is exported from build/deployment environment variables.");
+  } else {
+    lines.push("- Runtime pass/fail metrics are exported from `allure-report/summary.json`.");
+  }
   lines.push("- This page is regenerated by running `npm run trust:rebuild`.");
   lines.push("");
 

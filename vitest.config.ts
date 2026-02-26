@@ -16,6 +16,7 @@ export default defineConfig({
       all: true,
       include: [
         'src/**/*.ts',
+        'packages/contract-templates-mcp/src/**/*.ts',
         'packages/contracts-workspace/src/**/*.ts',
         'packages/contracts-workspace-mcp/src/**/*.ts',
       ],

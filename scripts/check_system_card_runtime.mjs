@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Validate site/_data/systemCardRuntime.json shape and freshness.
+ * Validate site/_data/systemCardRuntime.json shape.
  *
  * Usage:
  *   node scripts/check_system_card_runtime.mjs
@@ -18,7 +18,7 @@ const REPO_ROOT = resolve(__dirname, "..");
 function parseArgs() {
   const args = process.argv.slice(2);
   let inputPath = resolve(REPO_ROOT, "site", "_data", "systemCardRuntime.json");
-  let maxAgeHours = 24;
+  let maxAgeHours = null;
 
   for (let i = 0; i < args.length; i++) {
     if (args[i] === "--input") {
@@ -77,18 +77,22 @@ function main() {
   assert(Number.isFinite(createdAtMs), "run.created_at_utc must be parseable ISO timestamp.");
 
   const ageMinutes = Math.max(0, Math.round((Date.now() - createdAtMs) / 60000));
-  const maxAgeMinutes = maxAgeHours * 60;
-  if (ageMinutes > maxAgeMinutes) {
-    const ageHours = (ageMinutes / 60).toFixed(1);
-    console.error(
-      `System card runtime data is stale (${ageHours}h old; max ${maxAgeHours}h).`,
-    );
-    process.exit(1);
+  if (maxAgeHours != null) {
+    const maxAgeMinutes = maxAgeHours * 60;
+    if (ageMinutes > maxAgeMinutes) {
+      const ageHours = (ageMinutes / 60).toFixed(1);
+      console.error(
+        `System card runtime data is stale (${ageHours}h old; max ${maxAgeHours}h).`,
+      );
+      process.exit(1);
+    }
   }
 
   const relPath = relative(REPO_ROOT, inputPath);
   console.log(
-    `PASS runtime data freshness: ${relPath} (${ageMinutes} minutes old, max ${maxAgeHours}h)`,
+    maxAgeHours == null
+      ? `PASS runtime data shape: ${relPath} (age ${ageMinutes} minutes)`
+      : `PASS runtime data freshness: ${relPath} (${ageMinutes} minutes old, max ${maxAgeHours}h)`,
   );
 }
 

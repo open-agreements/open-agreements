@@ -21,7 +21,7 @@ interface JsonRpcResponse {
 }
 
 const SERVER_INFO = {
-  name: 'open-agreements-workspace-mcp',
+  name: 'open-agreements-contract-templates-mcp',
   version: '0.2.0',
 };
 
@@ -36,13 +36,13 @@ export function runStdioServer(): void {
         await handleMessage(message);
       } catch (error) {
         const details = error instanceof Error ? error.message : String(error);
-        process.stderr.write(`[open-agreements-workspace-mcp] unhandled error: ${details}\n`);
+        process.stderr.write(`[open-agreements-contract-templates-mcp] unhandled error: ${details}\n`);
       }
     }
   });
 
   process.stdin.on('error', (error) => {
-    process.stderr.write(`[open-agreements-workspace-mcp] stdin error: ${error.message}\n`);
+    process.stderr.write(`[open-agreements-contract-templates-mcp] stdin error: ${error.message}\n`);
   });
 
   process.stdin.resume();
@@ -218,51 +218,44 @@ class StdioMessageParser {
     return messages;
   }
 
+  private trimLeadingNoise(): void {
+    while (this.buffer.length > 0) {
+      const first = this.buffer[0];
+      if (first === 13 || first === 10) {
+        this.buffer = this.buffer.subarray(1);
+        continue;
+      }
+      break;
+    }
+  }
+
   private parseHeaderFramedMessage(): string | null {
-    const crlfIndex = this.buffer.indexOf('\r\n\r\n');
-    const lfIndex = this.buffer.indexOf('\n\n');
-    let headerEnd = -1;
-    let separatorBytes = 0;
-
-    if (crlfIndex >= 0 && (lfIndex === -1 || crlfIndex < lfIndex)) {
-      headerEnd = crlfIndex;
-      separatorBytes = 4;
-    } else if (lfIndex >= 0) {
-      headerEnd = lfIndex;
-      separatorBytes = 2;
-    }
-
-    if (headerEnd < 0) {
+    const headerEnd = this.buffer.indexOf('\r\n\r\n');
+    if (headerEnd === -1) {
       return null;
     }
 
-    const header = this.buffer.subarray(0, headerEnd).toString('utf8');
-    const lengthMatch = header.match(/content-length:\s*(\d+)/iu);
-    if (!lengthMatch) {
-      this.buffer = this.buffer.subarray(headerEnd + separatorBytes);
+    const headerText = this.buffer.subarray(0, headerEnd).toString('utf8');
+    const contentLength = extractContentLength(headerText);
+    if (contentLength === null) {
+      this.buffer = this.buffer.subarray(headerEnd + 4);
       return '';
     }
 
-    const contentLength = Number(lengthMatch[1]);
-    if (!Number.isFinite(contentLength) || contentLength < 0) {
-      this.buffer = this.buffer.subarray(headerEnd + separatorBytes);
-      return '';
-    }
-
-    const start = headerEnd + separatorBytes;
-    const end = start + contentLength;
-    if (this.buffer.length < end) {
+    const bodyStart = headerEnd + 4;
+    const bodyEnd = bodyStart + contentLength;
+    if (this.buffer.length < bodyEnd) {
       return null;
     }
 
-    const message = this.buffer.subarray(start, end).toString('utf8');
-    this.buffer = this.buffer.subarray(end);
-    return message;
+    const body = this.buffer.subarray(bodyStart, bodyEnd).toString('utf8').trim();
+    this.buffer = this.buffer.subarray(bodyEnd);
+    return body;
   }
 
   private parseLineMessage(): string | null {
     const newlineIndex = this.buffer.indexOf('\n');
-    if (newlineIndex < 0) {
+    if (newlineIndex === -1) {
       return null;
     }
 
@@ -270,27 +263,25 @@ class StdioMessageParser {
     this.buffer = this.buffer.subarray(newlineIndex + 1);
     return line;
   }
-
-  private trimLeadingNoise(): void {
-    while (this.buffer.length > 0) {
-      const byte = this.buffer[0];
-      const isWhitespace = byte === 0x20 || byte === 0x09 || byte === 0x0a || byte === 0x0d;
-      if (!isWhitespace) {
-        break;
-      }
-      this.buffer = this.buffer.subarray(1);
-    }
-  }
 }
 
 function startsWithContentLengthHeader(buffer: Buffer): boolean {
-  const preview = buffer.subarray(0, Math.min(buffer.length, 32)).toString('utf8').toLowerCase();
-  return preview.startsWith('content-length:');
+  const head = buffer.subarray(0, Math.min(buffer.length, 32)).toString('utf8').toLowerCase();
+  return head.startsWith('content-length:');
 }
 
-function safeParseJson(raw: string): unknown | null {
+function extractContentLength(headerText: string): number | null {
+  const match = /content-length:\s*(\d+)/i.exec(headerText);
+  if (!match) {
+    return null;
+  }
+  const parsed = Number.parseInt(match[1], 10);
+  return Number.isFinite(parsed) && parsed >= 0 ? parsed : null;
+}
+
+function safeParseJson(value: string): unknown | null {
   try {
-    return JSON.parse(raw);
+    return JSON.parse(value);
   } catch {
     return null;
   }

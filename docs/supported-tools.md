@@ -25,6 +25,14 @@ OpenAgreements uses an agent-agnostic `ToolCommandAdapter` interface for generat
 - **How it works**: Cursor can load OpenAgreements MCP servers from `mcp.json` and use the OpenAgreements skill for guided template filling
 - **Publish URL**: `https://cursor.com/marketplace/publish`
 
+### Gemini CLI
+
+- **Extension manifest**: `gemini-extension.json`
+- **Context file**: `GEMINI.md`
+- **How it works**: Gemini loads two local stdio MCP servers:
+  - `@open-agreements/contracts-workspace-mcp` for workspace/catalog/status operations
+  - `@open-agreements/contract-templates-mcp` for template discovery and fill workflows
+
 ## Adding Support for New Agents
 
 To add support for a new coding agent (e.g., Cursor, Windsurf):
