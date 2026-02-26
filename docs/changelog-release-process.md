@@ -44,7 +44,7 @@ Allowed types include:
 1. Merge approved PRs into `main`.
 2. Bump `package.json` version and create a matching tag (`vX.Y.Z`).
 3. Push the tag. The release workflow will:
-   - publish the npm package suite with trusted OIDC provenance,
+   - publish the npm package suite with trusted OIDC provenance, including both `open-agreements` and `@open-agreements/open-agreements`,
    - create a GitHub Release with auto-generated notes (if one does not exist),
    - deploy production to Vercel.
 4. During site builds, changelog data is generated from GitHub Releases and published on:
