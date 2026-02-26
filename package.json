@@ -78,7 +78,8 @@
     "generate:template-evidence": "node scripts/generate_template_evidence.mjs",
     "check:template-evidence": "npm run generate:template-evidence && git diff --exit-code -- site/_data/templateEvidence.json",
     "trust:rebuild": "npm run export:system-card-runtime && npm run generate:system-card && npm run generate:template-evidence",
-    "trust:check": "npm run check:system-card-runtime && npm run check:system-card && npm run check:template-evidence"
+    "trust:check": "npm run check:system-card-runtime && npm run check:system-card && npm run check:template-evidence",
+    "preflight:ci": "npm run lint && npm run validate && npm run check:template-previews && npm run test:run && npm run trust:check"
   },
   "keywords": [
     "legal",

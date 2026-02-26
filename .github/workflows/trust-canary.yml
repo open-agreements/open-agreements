@@ -14,7 +14,8 @@ jobs:
           node-version: 20
           cache: npm
 
-      - run: npm ci
+      - name: Install dependencies (retry)
+        uses: ./.github/actions/npm-ci-retry
 
       - name: Build
         run: npm run build

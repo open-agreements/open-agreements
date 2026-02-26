@@ -54,7 +54,8 @@ jobs:
             exit 1
           fi
 
-      - run: npm ci
+      - name: Install dependencies (retry)
+        uses: ./.github/actions/npm-ci-retry
 
       - name: Guard against duplicate publish
         run: |
