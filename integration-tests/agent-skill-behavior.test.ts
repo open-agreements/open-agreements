@@ -79,16 +79,18 @@ describe('Claude skill generation', () => {
 });
 
 describe('published skills/open-agreements/SKILL.md execution paths', () => {
-  it.openspec('OA-CLI-009')('documents npx zero-preinstall DOCX rendering path', () => {
-    expect(SKILL_MD).toContain('npx -y open-agreements@latest fill <template-name>');
+  it.openspec('OA-CLI-009')('documents remote MCP as primary zero-install path', () => {
+    expect(SKILL_MD).toContain('Remote MCP');
+    expect(SKILL_MD).toContain('fill_template');
+    expect(SKILL_MD).not.toContain('npx -y open-agreements@latest');
   });
 
   it.openspec('OA-CLI-010')('documents installed CLI DOCX rendering path', () => {
     expect(SKILL_MD).toContain('open-agreements fill <template-name>');
   });
 
-  it.openspec('OA-CLI-011')('documents preview-only fallback when Node.js is unavailable', () => {
+  it.openspec('OA-CLI-011')('documents preview-only fallback when MCP and CLI are unavailable', () => {
     expect(SKILL_MD).toContain('PREVIEW_ONLY');
-    expect(SKILL_MD).toContain('install Node.js >=20 for signable DOCX output');
+    expect(SKILL_MD).toContain('Preview Only');
   });
 });
