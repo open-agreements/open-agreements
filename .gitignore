@@ -28,8 +28,8 @@ tests/test_documents/
 .tmp-smoke/
 
 # AI agent config
-GEMINI.md
-gemini-extension.json
+GEMINI.local.md
+gemini-extension.local.json
 
 # Python virtual env
 .venv/

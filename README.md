@@ -116,7 +116,8 @@ This repository includes a Cursor plugin manifest with MCP wiring:
 The default MCP setup in `mcp.json` includes:
 
 - Hosted OpenAgreements MCP connector (`https://openagreements.ai/api/mcp`)
-- Local SafeDocX stdio server (`npx -y @usejunior/safedocx`)
+- Local workspace MCP server (`npx -y @open-agreements/contracts-workspace-mcp`)
+- Local template drafting MCP server (`npx -y @open-agreements/contract-templates-mcp`)
 
 To publish this plugin in Cursor Marketplace, submit this repository at:
 
@@ -232,6 +233,20 @@ npm run build:workspace-mcp
 node packages/contracts-workspace-mcp/bin/open-agreements-workspace-mcp.js
 ```
 
+## Local MCP for Template Drafting
+
+For local Gemini/Cursor template drafting flows, use:
+
+- Package: `@open-agreements/contract-templates-mcp`
+- Binary: `open-agreements-contract-templates-mcp`
+
+Quick start:
+
+```bash
+npm run build:contract-templates-mcp
+node packages/contract-templates-mcp/bin/open-agreements-contract-templates-mcp.js
+```
+
 ## Website (Vercel)
 
 A static marketing site is generated from `site/` with Eleventy.
@@ -285,15 +300,16 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for how to add templates, recipes, and ot
 
 Releases are automated through GitHub Actions using npm trusted publishing (OIDC) with provenance enabled.
 
-1. Update version with `npm version patch` (or `minor` / `major`)
+1. Update versions in root package + publishable MCP packages.
 2. Push commit + tag with `git push origin main --tags`
-3. The `Release` workflow publishes from the tag after running build, validation, tests, and package checks
+3. Run the local Gemini extension gate (copy/symlink into `~/.gemini/extensions/open-agreements` and verify both local MCP servers start/respond).
+4. The `Release` workflow publishes from the tag after running build, validation, tests, isolated runtime smoke, and package checks.
 
 Workflow guardrails:
 
-- tag must match `package.json` version (for example, `v0.1.1`)
+- tag must match root + publishable package versions
 - release commit must be contained in `origin/main`
-- publish fails if that npm version already exists
+- publish fails if any target npm version already exists
 
 ## Architecture
 
