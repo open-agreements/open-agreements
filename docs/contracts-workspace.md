@@ -127,6 +127,11 @@ There is a sibling local MCP package that exposes workspace operations as tools:
 - Binary: `open-agreements-workspace-mcp`
 - Repo path: `packages/contracts-workspace-mcp/`
 
+For local template drafting/filling tools, use the separate package:
+
+- Package: `@open-agreements/contract-templates-mcp`
+- Binary: `open-agreements-contract-templates-mcp`
+
 ### Build
 
 ```bash

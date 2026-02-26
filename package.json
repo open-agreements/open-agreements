@@ -1,8 +1,9 @@
 {
   "name": "open-agreements",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "workspaces": [
     "packages/allure-test-factory",
+    "packages/contract-templates-mcp",
     "packages/contracts-workspace",
     "packages/contracts-workspace-mcp",
     "packages/docx-core"
@@ -40,12 +41,15 @@
     "build": "tsc",
     "build:workspace": "tsc -p packages/contracts-workspace/tsconfig.json",
     "build:workspace-mcp": "tsc -p packages/contracts-workspace-mcp/tsconfig.json",
+    "build:contract-templates-mcp": "tsc -p packages/contract-templates-mcp/tsconfig.json",
     "dev": "tsc --watch",
     "check:spec-coverage": "node scripts/validate_openspec_coverage.mjs",
     "check:template-previews": "node scripts/check_template_previews.mjs",
     "check:source-drift": "npm run build && node scripts/source_drift_canary.mjs",
     "check:allure-labels": "node scripts/validate_allure_test_labels.mjs",
     "check:libreoffice": "node scripts/check_libreoffice_headless.mjs",
+    "check:gemini-extension-manifest": "node scripts/check_gemini_extension_manifest.mjs",
+    "check:isolated-runtime": "node scripts/check_isolated_package_runtime.mjs",
     "generate:schemas": "node scripts/generate_json_schemas.mjs",
     "generate:employment-templates": "node scripts/generate_employment_templates.mjs",
     "generate:employment-templates:libreoffice": "node scripts/generate_employment_templates_libreoffice.mjs",
@@ -82,7 +86,7 @@
     "check:template-evidence": "npm run generate:template-evidence && git diff --exit-code -- site/_data/templateEvidence.json",
     "trust:rebuild": "npm run export:system-card-runtime && npm run generate:system-card && npm run generate:template-evidence && npm run generate:changelog-data",
     "trust:check": "npm run check:system-card-runtime && npm run check:system-card && npm run check:template-evidence",
-    "preflight:ci": "npm run lint && npm run validate && npm run check:template-previews && npm run test:run && npm run trust:check"
+    "preflight:ci": "npm run lint && npm run validate && npm run check:template-previews && npm run check:gemini-extension-manifest && npm run test:run && npm run trust:check"
   },
   "keywords": [
     "legal",

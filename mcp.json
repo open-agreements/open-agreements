@@ -3,12 +3,20 @@
     "open-agreements": {
       "url": "https://openagreements.ai/api/mcp"
     },
-    "safe-docx": {
+    "contracts-workspace-mcp": {
       "type": "stdio",
       "command": "npx",
       "args": [
         "-y",
-        "@usejunior/safedocx"
+        "@open-agreements/contracts-workspace-mcp"
+      ]
+    },
+    "contract-templates-mcp": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@open-agreements/contract-templates-mcp"
       ]
     }
   }
