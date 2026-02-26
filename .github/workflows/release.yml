@@ -85,9 +85,49 @@ jobs:
           npm config delete //registry.npmjs.org/:_authToken || true
           npm publish --provenance --access public
 
+  publish-github-release:
+    name: Publish GitHub release notes
+    needs: [publish]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      RELEASE_TAG: ${{ github.event_name == 'workflow_dispatch' && inputs.release_tag || github.ref_name }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event_name == 'workflow_dispatch' && inputs.release_tag || github.ref }}
+
+      - name: Ensure GitHub release exists with generated notes
+        id: release
+        run: |
+          TAG_REF="${RELEASE_TAG:-$GITHUB_REF_NAME}"
+          if gh release view "$TAG_REF" >/dev/null 2>&1; then
+            echo "created=false" >> "$GITHUB_OUTPUT"
+            echo "GitHub release already exists for ${TAG_REF}."
+          else
+            gh release create "$TAG_REF" --title "$TAG_REF" --generate-notes --verify-tag
+            echo "created=true" >> "$GITHUB_OUTPUT"
+            echo "Created GitHub release for ${TAG_REF}."
+          fi
+
+      - name: Publish release summary
+        run: |
+          TAG_REF="${RELEASE_TAG:-$GITHUB_REF_NAME}"
+          RELEASE_URL="$(gh release view "$TAG_REF" --json url --jq '.url')"
+          {
+            echo "### GitHub Release"
+            echo ""
+            echo "- Tag: ${TAG_REF}"
+            echo "- Created in this run: ${{ steps.release.outputs.created }}"
+            echo "- Release URL: ${RELEASE_URL}"
+          } >> "$GITHUB_STEP_SUMMARY"
+
   deploy-vercel-production:
     name: Deploy to Vercel (production)
-    needs: [publish]
+    needs: [publish, publish-github-release]
     runs-on: ubuntu-latest
     permissions:
       contents: read

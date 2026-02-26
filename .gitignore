@@ -18,6 +18,7 @@ _site/
 site/docs/*.md
 site/downloads/
 site/schemas/
+site/_data/changelog.json
 packages/contracts-workspace/schemas/
 
 # Local test documents

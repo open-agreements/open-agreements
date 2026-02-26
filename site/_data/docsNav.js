@@ -28,6 +28,7 @@ export default function () {
       section: "Reference",
       items: [
         { title: "Licensing", slug: "licensing" },
+        { title: "Changelog & Release Process", slug: "changelog-release-process" },
         { title: "Trust Checklist", slug: "trust-checklist" },
         { title: "Supported Tools", slug: "supported-tools" },
         { title: "Assumptions", slug: "assumptions" },
