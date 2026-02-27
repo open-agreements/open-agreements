@@ -2,7 +2,7 @@
   "name": "open-agreements",
   "displayName": "OpenAgreements",
   "description": "Open-source legal template automation for DOCX with MCP tooling.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": {
     "name": "Open Agreements",
     "email": "steven@usejunior.com"
