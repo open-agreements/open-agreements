@@ -86,6 +86,15 @@ description: "Fill legal agreement templates with coding agents or local CLI exe
                 <p class="card-hint">Settings &rarr; Connectors &rarr; Add custom connector &rarr; paste URL</p>
               </article>
               <article class="card">
+                <h3>Gemini CLI extension</h3>
+                <p>Install as a Gemini CLI extension with MCP tools, context files, and skills.</p>
+                <button class="copy-btn" data-copy="gemini extensions install https://github.com/open-agreements/open-agreements">
+                  <code>gemini extensions install https://github.com/open-agreements/open-agreements</code>
+                  <span class="copy-label" aria-label="Copy"><svg class="copy-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span class="copy-tooltip">Copy</span></span>
+                </button>
+                <p class="card-hint"><a href="https://geminicli.com/extensions/?name=open-agreementsopen-agreements" target="_blank" rel="noreferrer">View on Gemini Extensions</a></p>
+              </article>
+              <article class="card">
                 <h3>Local package execution</h3>
                 <p>Run template fill and validation from your terminal on your machine.</p>
                 <pre><code>npx -y open-agreements@latest list --json</code></pre>
@@ -190,7 +199,7 @@ description: "Fill legal agreement templates with coding agents or local CLI exe
             <summary>How can I verify OpenAgreements is actively maintained and tested?</summary>
             <p>
               Public trust signals include passing CI checks, Codecov coverage with patch/project gates,
-              Vitest-based test runs, and OpenSpec-to-Allure traceability checks that map canonical scenarios
+              Vitest-based test runs, and scenario-to-test traceability checks that map canonical scenarios
               to executable tests.
             </p>
           </details>
@@ -288,7 +297,7 @@ description: "Fill legal agreement templates with coding agents or local CLI exe
             "name": "How can I verify OpenAgreements is actively maintained and tested?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Trust signals include passing CI, Codecov coverage gates, Vitest test runs, and OpenSpec-to-Allure traceability checks mapped to canonical scenarios."
+              "text": "Trust signals include passing CI, Codecov coverage gates, Vitest test runs, and scenario-to-test traceability checks mapped to canonical scenarios."
             }
           },
           {

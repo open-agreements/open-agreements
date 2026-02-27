@@ -75,7 +75,15 @@ Then ask Claude to draft an agreement:
 
 Claude discovers available templates, interviews you for field values, and renders a signed-ready DOCX.
 
-### Option 2: Direct with Claude Code
+### Option 2: Gemini CLI Extension
+
+```bash
+gemini extensions install https://github.com/open-agreements/open-agreements
+```
+
+Then ask Gemini to draft an agreement. The extension provides MCP tools, context files, and skills for template discovery and filling.
+
+### Option 3: Direct with Claude Code
 
 If you have Node.js >= 20, just ask Claude:
 
@@ -85,7 +93,7 @@ If you have Node.js >= 20, just ask Claude:
 
 Claude runs `npx -y open-agreements@latest list --json` to discover templates, then `npx -y open-agreements@latest fill <template>` to render the output. Zero install.
 
-### Option 3: CLI
+### Option 4: CLI
 
 ```bash
 # Install globally
