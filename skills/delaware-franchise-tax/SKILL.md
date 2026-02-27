@@ -23,8 +23,8 @@ File your Delaware annual franchise tax and annual report.
 ## Security model
 
 - This skill **does not** download or execute any code.
-- It **does not** access the Delaware eCorp portal programmatically (the portal prohibits automated tools).
 - All portal interactions are performed by the user, guided step-by-step by the agent.
+- If the user opts in to browser automation (Playwright via CDP), the agent may assist with portal navigation — but credit card and banking details must **always** be entered by the user directly.
 
 ## When to Use
 
@@ -117,16 +117,43 @@ Total due:                     $XXX + $50 = $XXX
 
 ## Phase 3: File via Portal
 
-Guide the user step by step. The agent reads instructions aloud; the user operates the browser.
+The agent can automate the portal using Playwright if Chrome is running with remote debugging enabled. Otherwise, guide the user step-by-step.
+
+### Automation Setup (Playwright via CDP)
+
+If the user says "use playwright", "use the browser" or requests similar automation:
+
+1. **Launch Chrome with remote debugging** (see `reference/ecorp-portal-playwright-notes.md` for commands)
+2. **Connect via Playwright** (see reference for CDP connection snippet)
+3. **Portal field reference**: See `reference/ecorp-portal-playwright-notes.md` for:
+   - All field selector IDs
+   - Date field workaround (must use JS `el.value =` not Playwright `.fill()`)
+   - State dropdown abbreviations (use `value="NY"` not `label="New York"`)
+   - Director name fields (separate first/middle/last fields, NOT one name field)
+   - APVC activation sequence
+   - Session/eId behavior
+
+### Filing Steps
 
 1. **Navigate**: Open https://icis.corp.delaware.gov/ecorp/logintax.aspx
 2. **Login**: Enter Business Entity File Number. Solve CAPTCHA (if the user shares a screenshot, the agent can try to read it). Click **Continue**.
 3. **Entity verification**: Confirm entity name, registered agent, and registered office match your records.
-4. **Officers and directors**: Review and confirm or update names and addresses. Enter Nature of Business if prompted.
-5. **Stock information**: Enter authorized shares, par value, issued shares, and gross assets for each class.
-6. **Tax method**: Select **Assumed Par Value Capital Method** (or whichever method produced the lower tax). Verify the displayed tax matches your calculation from Phase 2. If it does not match, stop and troubleshoot before proceeding.
-7. **Payment**: Enter credit card or ACH details. Total = tax + filing fee. **Click Submit ONCE** — the portal warns about duplicate charges on double-click. If tax exceeds $5,000, ACH payment is required.
-8. **Confirmation**: Save the confirmation number. Screenshot the confirmation page.
+4. **Fill form fields** (all on one page):
+   - **Stock info**: Issued shares (per-class field, NOT the readonly total), gross assets, asset date (must == fiscal year end)
+   - **Address**: Principal business address with state abbreviation
+   - **Nature of business**: Select from dropdown (e.g., "Technology/Software")
+   - **Officer**: First/middle/last name, title, address
+   - **Directors**: Set total count, click "Enter Directors Info", fill first/middle/last name + address for each
+   - **Authorization**: First/middle/last name, title, address
+   - **T&C checkbox**: Must check `chkCertify` before continuing
+5. **Recalculate tax**: Click "Recalculate Tax" button. Verify the displayed tax matches your calculation from Phase 2. If it still shows the Authorized Shares method amount, the asset date is probably wrong — fix it via JavaScript.
+6. **Review**: Click "Continue Filing" to see the Review Copy. Verify all data.
+7. **Payment**: Click "Proceed to Payment". The agent **must stop here** — credit card and banking details must be entered by the user. If tax exceeds $5,000, ACH payment is required.
+8. **Confirmation**: After payment:
+   - Click **"Display Confirmation Copy"** (`onclick="downloadConfirmation();return false;"`) to save receipt PDF
+   - Click **"Email Confirmation Copy"** to email the filed report (opens popup at `Email.aspx`, enter email address)
+   - **CRITICAL**: "Once you leave this screen, you will no longer be able to obtain a confirmation copy" — save/email before navigating away
+   - Record the Service Request Number from the URL: `srNo=XXXXX`
 
 ## Phase 4: Record and Remind
 
@@ -156,6 +183,7 @@ For detailed calculation formulas and official guidance, see the `reference/` di
 - `reference/tax-calculation.md` — full formulas for both methods with examples
 - `reference/filing-instructions.md` — fees, payment methods, deadlines
 - `reference/faq.md` — frequently asked questions
+- `reference/ecorp-portal-playwright-notes.md` — field selectors, gotchas, and automation tips for the eCorp portal
 
 **Official source**: https://corp.delaware.gov/paytaxes/
 **Help line**: 302-739-3073, Option 3
