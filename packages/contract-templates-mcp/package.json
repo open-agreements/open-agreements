@@ -1,6 +1,6 @@
 {
   "name": "@open-agreements/contract-templates-mcp",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Local stdio MCP server for OpenAgreements template discovery and filling",
   "type": "module",
   "bin": {
