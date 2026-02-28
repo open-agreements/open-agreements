@@ -9,6 +9,11 @@ import { runRecipeCommand, runRecipeClean, runRecipePatch } from '../commands/re
 import { runScan } from '../commands/scan.js';
 import {
   runChecklistCreate,
+  runChecklistList,
+  runChecklistShow,
+  runChecklistUpdate,
+  runChecklistRender,
+  runChecklistHistory,
   runChecklistPatchValidate,
   runChecklistPatchApply,
 } from '../commands/checklist.js';
@@ -160,16 +165,58 @@ export function createProgram(): Command {
 
   checklistCmd
     .command('create')
-    .description('Create a closing checklist DOCX from JSON data')
-    .requiredOption('-d, --data <json-file>', 'JSON file with checklist data')
+    .description('Initialize a new checklist in the state directory')
+    .argument('<deal-name>', 'Deal name for the checklist')
+    .option('-d, --data <json-file>', 'JSON file with initial checklist data (brownfield)')
+    .action(async (dealName: string, opts: { data?: string }) => {
+      await runChecklistCreate({ dealName, data: opts.data });
+    });
+
+  checklistCmd
+    .command('list')
+    .description('List all checklists')
+    .action(async () => {
+      await runChecklistList();
+    });
+
+  checklistCmd
+    .command('show')
+    .description('Show current checklist state')
+    .argument('<name-or-id>', 'Deal name or UUID')
+    .option('--json', 'Print full JSON state')
+    .action(async (nameOrId: string, opts: { json?: boolean }) => {
+      await runChecklistShow({ nameOrId, json: opts.json });
+    });
+
+  checklistCmd
+    .command('update')
+    .description('Validate and apply a patch to a checklist (unified command)')
+    .argument('<name-or-id>', 'Deal name or UUID')
+    .requiredOption('-d, --data <json-file>', 'Patch envelope JSON file')
+    .action(async (nameOrId: string, opts: { data: string }) => {
+      await runChecklistUpdate({ nameOrId, data: opts.data });
+    });
+
+  checklistCmd
+    .command('render')
+    .description('Render a checklist to DOCX')
+    .argument('<name-or-id>', 'Deal name or UUID')
     .option('-o, --output <path>', 'Output file path (default: closing-checklist.docx)')
-    .action(async (opts: { data: string; output?: string }) => {
-      await runChecklistCreate({ data: opts.data, output: opts.output });
+    .action(async (nameOrId: string, opts: { output?: string }) => {
+      await runChecklistRender({ nameOrId, output: opts.output });
+    });
+
+  checklistCmd
+    .command('history')
+    .description('Show update history for a checklist')
+    .argument('<name-or-id>', 'Deal name or UUID')
+    .action(async (nameOrId: string) => {
+      await runChecklistHistory({ nameOrId });
     });
 
   checklistCmd
     .command('patch-validate')
-    .description('Validate a checklist patch against checklist state (dry run, no mutation)')
+    .description('Validate a checklist patch against state (dry run, no mutation)')
     .requiredOption('--state <json-file>', 'Checklist state JSON ({ checklist_id, revision, checklist })')
     .requiredOption('--patch <json-file>', 'Patch envelope JSON file')
     .option('-o, --output <json-file>', 'Output JSON path for validation result')
@@ -192,13 +239,13 @@ export function createProgram(): Command {
 
   checklistCmd
     .command('patch-apply')
-    .description('Apply a previously validated checklist patch to checklist state')
+    .description('Apply a previously validated checklist patch to state')
     .requiredOption('--state <json-file>', 'Checklist state JSON ({ checklist_id, revision, checklist })')
     .requiredOption('--request <json-file>', 'Patch apply request JSON ({ validation_id, patch })')
     .option('-o, --output <json-file>', 'Output JSON path for apply result')
-    .option('--validation-store <json-file>', 'Validation artifact JSON store (must match validate step)')
-    .option('--applied-store <json-file>', 'Applied patch JSON store (for idempotency + patch_id conflicts)')
-    .option('--proposed-store <json-file>', 'Proposed patch JSON store (for mode=PROPOSED)')
+    .option('--validation-store <json-file>', 'Validation artifact JSON store')
+    .option('--applied-store <json-file>', 'Applied patch JSON store')
+    .option('--proposed-store <json-file>', 'Proposed patch JSON store')
     .action(async (
       opts: {
         state: string;
