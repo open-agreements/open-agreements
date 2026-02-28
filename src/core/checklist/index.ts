@@ -10,6 +10,7 @@ import {
   type Responsibility,
   type Signatory,
 } from './schemas.js';
+import { humanStatus } from './status-labels.js';
 
 export { ClosingChecklistSchema, type ClosingChecklist } from './schemas.js';
 export {
@@ -63,6 +64,22 @@ export {
   type ChecklistPatchApplyResult,
   type ApplyChecklistPatchInput,
 } from './patch-apply.js';
+export { humanStatus, STATUS_LABELS } from './status-labels.js';
+export {
+  createChecklist,
+  listChecklists,
+  resolveChecklist,
+  getChecklistState,
+  saveChecklistState,
+  appendHistory,
+  getHistory,
+  ChecklistStateSchema,
+  type ChecklistState,
+  type ChecklistMeta,
+  type ChecklistSummary,
+  type HistoryRecord,
+} from './state-manager.js';
+export { appendJsonl, readJsonl } from './jsonl-stores.js';
 
 const STAGE_ORDER: ChecklistStage[] = ['PRE_SIGNING', 'SIGNING', 'CLOSING', 'POST_CLOSING'];
 const STAGE_HEADINGS: Record<ChecklistStage, string> = {
@@ -89,42 +106,50 @@ interface RenderModel {
   unlinkedIssues: Issue[];
 }
 
-interface LegacyTemplateDocumentRow {
-  document_name: string;
+// ---------------------------------------------------------------------------
+// 4-column document row: Number | Title | Status | Responsible Party
+// ---------------------------------------------------------------------------
+
+interface TemplateDocumentRow {
+  number: string;
+  title: string;
   status: string;
+  responsible_party: string;
 }
 
-interface LegacyTemplateActionRow {
+interface TemplateActionRow {
   item_id: string;
   description: string;
   status: string;
-  assigned_to: {
-    organization: string;
-  };
+  assigned_to: string;
   due_date: string;
 }
 
-interface LegacyTemplateIssueRow {
+interface TemplateIssueRow {
   issue_id: string;
   title: string;
   status: string;
-  escalation_tier: string;
-  resolution: string;
+  summary: string;
 }
 
 export interface ChecklistTemplateContext {
   deal_name: string;
   updated_at: string;
-  // Template compatibility placeholders (kept empty in v2 model).
-  working_group: Array<Record<string, unknown>>;
-  documents: LegacyTemplateDocumentRow[];
-  action_items: LegacyTemplateActionRow[];
-  open_issues: LegacyTemplateIssueRow[];
+  documents: TemplateDocumentRow[];
+  action_items: TemplateActionRow[];
+  open_issues: TemplateIssueRow[];
 }
 
-function compareBySortKey(a: { sort_key: string; entry_id: string }, b: { sort_key: string; entry_id: string }): number {
-  const keyCompare = a.sort_key.localeCompare(b.sort_key, undefined, { numeric: true, sensitivity: 'base' });
-  if (keyCompare !== 0) return keyCompare;
+function compareBySortKey(
+  a: { sort_key?: string; entry_id: string },
+  b: { sort_key?: string; entry_id: string },
+): number {
+  const aKey = a.sort_key ?? '';
+  const bKey = b.sort_key ?? '';
+  if (aKey || bKey) {
+    const keyCompare = aKey.localeCompare(bKey, undefined, { numeric: true, sensitivity: 'base' });
+    if (keyCompare !== 0) return keyCompare;
+  }
   return a.entry_id.localeCompare(b.entry_id);
 }
 
@@ -156,17 +181,26 @@ function latestCitationLabel(citations: Citation[]): string {
 
 function signatoryLabel(signatory: Signatory): string {
   const who = nonEmpty([signatory.party, signatory.name ?? '', signatory.title ?? '']).join(' ');
-  const artifacts = signatory.signature_artifacts
-    .map((artifact) => artifact.uri ?? artifact.path ?? '')
-    .filter((value) => value.length > 0);
-  if (artifacts.length === 0) {
-    return `${who} [${signatory.status}]`;
-  }
-  return `${who} [${signatory.status}] (${artifacts.join(', ')})`;
+  return `${who}: ${humanStatus(signatory.status)}`;
 }
 
 function toArray<T>(collection: T[] | Record<string, T>): T[] {
   return Array.isArray(collection) ? collection : Object.values(collection);
+}
+
+function assignAutoSortKeys(entries: ChecklistEntry[]): void {
+  const byStage = new Map<string, ChecklistEntry[]>();
+  for (const entry of entries) {
+    if (entry.sort_key) continue;
+    const group = byStage.get(entry.stage) ?? [];
+    group.push(entry);
+    byStage.set(entry.stage, group);
+  }
+  for (const group of byStage.values()) {
+    group.forEach((entry, index) => {
+      entry.sort_key = String((index + 1) * 100);
+    });
+  }
 }
 
 function buildRenderModel(data: unknown): RenderModel {
@@ -175,6 +209,8 @@ function buildRenderModel(data: unknown): RenderModel {
   const entries = toArray(checklist.checklist_entries);
   const actions = toArray(checklist.action_items);
   const issues = toArray(checklist.issues);
+
+  assignAutoSortKeys(entries);
 
   const documentsById = new Map(documents.map((document) => [document.document_id, document]));
   const entryDocumentIds = new Set(
@@ -243,9 +279,8 @@ function buildRenderModel(data: unknown): RenderModel {
     }
 
     roots.sort(compareBySortKey);
-    for (const [parentId, children] of childrenByParent.entries()) {
+    for (const [, children] of childrenByParent.entries()) {
       children.sort(compareBySortKey);
-      childrenByParent.set(parentId, children);
     }
 
     const stageRows: RenderRow[] = [];
@@ -282,83 +317,108 @@ function buildRenderModel(data: unknown): RenderModel {
 }
 
 /**
- * Build template values for the legacy closing-checklist DOCX template from
+ * Build template values for the closing-checklist DOCX template from
  * document-first v2 checklist input.
+ *
+ * Layout:
+ *   - Stage headers as bold section rows
+ *   - Entry rows: Number | Title | Status | Responsible Party
+ *   - Citations as indented sub-rows under their entry
+ *   - Signatories as indented sub-rows
+ *   - Linked actions/issues as indented sub-rows
  */
 export function buildChecklistTemplateContext(data: unknown): ChecklistTemplateContext {
   const model = buildRenderModel(data);
-  const documentRows: LegacyTemplateDocumentRow[] = [];
+  const documentRows: TemplateDocumentRow[] = [];
 
   STAGE_ORDER.forEach((stage, index) => {
     const stageRows = model.rowsByStage.get(stage) ?? [];
     if (stageRows.length === 0) return;
+
+    // Stage heading row
     documentRows.push({
-      document_name: `${STAGE_ROMANS[index]}. ${STAGE_HEADINGS[stage]}`,
+      number: '',
+      title: `${STAGE_ROMANS[index]}. ${STAGE_HEADINGS[stage]}`,
       status: '',
+      responsible_party: '',
     });
 
     for (const row of stageRows) {
       const indent = '\u00A0\u00A0'.repeat(row.depth);
-      const citationText = row.entry.citations.map(citationLabel).join('; ');
-      const linkText = row.document?.primary_link ? ` (${row.document.primary_link})` : '';
-      const documentName = `${row.number} ${indent}${row.entry.title}${citationText ? ` [${citationText}]` : ''}${linkText}`;
+      const linkSuffix = row.document?.primary_link ? ` (${row.document.primary_link})` : '';
 
-      const statusParts: string[] = [row.entry.status];
-      if (row.entry.signatories.length > 0) {
-        statusParts.push(row.entry.signatories.map(signatoryLabel).join('; '));
-      }
-      const responsibility = responsibilityLabel(row.entry.responsible_party);
-      if (responsibility) {
-        statusParts.push(`Resp: ${responsibility}`);
-      }
-
+      // Main entry row
       documentRows.push({
-        document_name: documentName,
-        status: statusParts.join(' | '),
+        number: row.number,
+        title: `${indent}${row.entry.title}${linkSuffix}`,
+        status: humanStatus(row.entry.status),
+        responsible_party: responsibilityLabel(row.entry.responsible_party),
       });
 
+      // Citation sub-rows
+      for (const citation of row.entry.citations) {
+        documentRows.push({
+          number: '',
+          title: `${indent}\u00A0\u00A0Ref: ${citationLabel(citation)}`,
+          status: '',
+          responsible_party: '',
+        });
+      }
+
+      // Signatory sub-rows
+      for (const signatory of row.entry.signatories) {
+        documentRows.push({
+          number: '',
+          title: `${indent}\u00A0\u00A0Signatory: ${signatoryLabel(signatory)}`,
+          status: '',
+          responsible_party: '',
+        });
+      }
+
+      // Linked action sub-rows
       for (const action of row.linkedActions) {
         const latestCitation = latestCitationLabel(action.citations);
         documentRows.push({
-          document_name: `\u00A0\u00A0${indent}\u21B3 Action ${action.action_id}: ${action.description}`,
-          status: latestCitation ? `${action.status} | Evidence: ${latestCitation}` : action.status,
+          number: '',
+          title: `${indent}\u00A0\u00A0Action ${action.action_id}: ${action.description}`,
+          status: latestCitation ? `${humanStatus(action.status)} | ${latestCitation}` : humanStatus(action.status),
+          responsible_party: responsibilityLabel(action.assigned_to),
         });
       }
+
+      // Linked issue sub-rows
       for (const issue of row.linkedIssues) {
         const latestCitation = latestCitationLabel(issue.citations);
         documentRows.push({
-          document_name: `\u00A0\u00A0${indent}\u21B3 Issue ${issue.issue_id}: ${issue.title}`,
-          status: latestCitation ? `${issue.status} | Evidence: ${latestCitation}` : issue.status,
+          number: '',
+          title: `${indent}\u00A0\u00A0Issue ${issue.issue_id}: ${issue.title}`,
+          status: latestCitation ? `${humanStatus(issue.status)} | ${latestCitation}` : humanStatus(issue.status),
+          responsible_party: '',
         });
       }
     }
   });
 
-  const fallbackActions: LegacyTemplateActionRow[] = model.unlinkedActions.map((action) => ({
+  const fallbackActions: TemplateActionRow[] = model.unlinkedActions.map((action) => ({
     item_id: action.action_id,
     description: action.description,
-    status: latestCitationLabel(action.citations) ? `${action.status} | ${latestCitationLabel(action.citations)}` : action.status,
-    assigned_to: {
-      organization: responsibilityLabel(action.assigned_to) || '',
-    },
+    status: humanStatus(action.status),
+    assigned_to: responsibilityLabel(action.assigned_to),
     due_date: action.due_date ?? '',
   }));
 
-  const fallbackIssues: LegacyTemplateIssueRow[] = model.unlinkedIssues.map((issue) => ({
+  const fallbackIssues: TemplateIssueRow[] = model.unlinkedIssues.map((issue) => ({
     issue_id: issue.issue_id,
     title: issue.title,
-    status: issue.status,
-    escalation_tier: '',
-    resolution: nonEmpty([issue.summary ?? '', latestCitationLabel(issue.citations)]).join(' | '),
+    status: humanStatus(issue.status),
+    summary: nonEmpty([issue.summary ?? '', latestCitationLabel(issue.citations)]).join(' | '),
   }));
 
   return {
     deal_name: model.checklist.deal_name,
     updated_at: model.checklist.updated_at,
-    working_group: [],
     documents: documentRows,
     action_items: fallbackActions,
     open_issues: fallbackIssues,
   };
 }
-
