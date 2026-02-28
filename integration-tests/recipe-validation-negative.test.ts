@@ -35,6 +35,29 @@ function writeMetadata(recipeDir: string): void {
 }
 
 describe('validateRecipe negative scenarios', () => {
+  it('fails when metadata.yaml is invalid', () => {
+    const recipeDir = mkdtempSync(join(tmpdir(), 'oa-recipe-invalid-metadata-'));
+    tempDirs.push(recipeDir);
+    writeFileSync(join(recipeDir, 'metadata.yaml'), 'name: Broken Recipe', 'utf-8');
+
+    const result = validateRecipe(recipeDir, 'fixture-recipe');
+
+    expect(result.valid).toBe(false);
+    expect(result.errors.join(' ')).toContain('metadata:');
+  });
+
+  it('treats metadata-only recipes as strict-mode errors', () => {
+    const recipeDir = mkdtempSync(join(tmpdir(), 'oa-recipe-strict-scaffold-'));
+    tempDirs.push(recipeDir);
+    writeMetadata(recipeDir);
+
+    const result = validateRecipe(recipeDir, 'fixture-recipe', { strict: true });
+
+    expect(result.valid).toBe(false);
+    expect(result.scaffold).toBe(true);
+    expect(result.errors.join(' ')).toContain('Scaffold recipe (metadata-only): not runnable');
+  });
+
   it.openspec('OA-RCP-016')('rejects committed DOCX files in recipe directories', () => {
     const recipeDir = mkdtempSync(join(tmpdir(), 'oa-recipe-docx-'));
     tempDirs.push(recipeDir);
@@ -77,6 +100,61 @@ describe('validateRecipe negative scenarios', () => {
     const result = validateRecipe(recipeDir, 'fixture-recipe');
     expect(result.valid).toBe(false);
     expect(result.errors.join(' ')).toContain('unsafe tag');
+  });
+
+  it('rejects replacements.json when it is not a JSON object', () => {
+    const recipeDir = mkdtempSync(join(tmpdir(), 'oa-recipe-replacements-object-'));
+    tempDirs.push(recipeDir);
+
+    writeMetadata(recipeDir);
+    writeFileSync(join(recipeDir, 'replacements.json'), '1', 'utf-8');
+
+    const result = validateRecipe(recipeDir, 'fixture-recipe');
+
+    expect(result.valid).toBe(false);
+    expect(result.errors.join(' ')).toContain('replacements.json must be a JSON object');
+  });
+
+  it('rejects replacement value shape and infinite loop patterns', () => {
+    const recipeDir = mkdtempSync(join(tmpdir(), 'oa-recipe-replacement-shape-'));
+    tempDirs.push(recipeDir);
+
+    writeMetadata(recipeDir);
+    writeFileSync(
+      join(recipeDir, 'replacements.json'),
+      JSON.stringify(
+        {
+          '[Not String]': 123,
+          '[No Tags]': 'literal value',
+          '[Loop]': '[Loop] {company_name}',
+          'Label > [Company Name]': '{company_name} [Company Name]',
+        },
+        null,
+        2
+      ),
+      'utf-8'
+    );
+
+    const result = validateRecipe(recipeDir, 'fixture-recipe');
+
+    expect(result.valid).toBe(false);
+    expect(result.errors.join(' ')).toContain('value for "[Not String]" must be a string');
+    expect(result.errors.join(' ')).toContain('must contain at least one {identifier} tag');
+    expect(result.errors.join(' ')).toContain('contains the key itself');
+    expect(result.errors.join(' ')).toContain('contains the search text');
+  });
+
+  it('rejects replacements.json parse failures', () => {
+    const recipeDir = mkdtempSync(join(tmpdir(), 'oa-recipe-replacements-parse-'));
+    tempDirs.push(recipeDir);
+
+    writeMetadata(recipeDir);
+    writeFileSync(join(recipeDir, 'replacements.json'), '{invalid json', 'utf-8');
+
+    const result = validateRecipe(recipeDir, 'fixture-recipe');
+
+    expect(result.valid).toBe(false);
+    expect(result.errors.join(' ')).toContain('replacements.json:');
   });
 
   it.openspec('OA-RCP-025')('rejects computed profiles with unsupported predicate operators', () => {
@@ -144,5 +222,27 @@ describe('validateRecipe negative scenarios', () => {
     const result = validateRecipe(recipeDir, 'fixture-recipe');
     expect(result.valid).toBe(false);
     expect(result.errors.join(' ')).toContain('normalize.json');
+  });
+
+  it.openspec('OA-RCP-027')('rejects invalid clean.json configuration', () => {
+    const recipeDir = mkdtempSync(join(tmpdir(), 'oa-recipe-clean-invalid-'));
+    tempDirs.push(recipeDir);
+
+    writeMetadata(recipeDir);
+    writeFileSync(
+      join(recipeDir, 'replacements.json'),
+      JSON.stringify({ '[Company Name]': '{company_name}' }, null, 2),
+      'utf-8'
+    );
+    writeFileSync(
+      join(recipeDir, 'clean.json'),
+      JSON.stringify({ removeFootnotes: 'invalid' }, null, 2),
+      'utf-8'
+    );
+
+    const result = validateRecipe(recipeDir, 'fixture-recipe');
+
+    expect(result.valid).toBe(false);
+    expect(result.errors.join(' ')).toContain('clean.json');
   });
 });

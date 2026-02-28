@@ -1,3 +1,6 @@
+import { existsSync, mkdtempSync, readFileSync, rmSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join, resolve } from 'node:path';
 import { afterEach, describe, expect, vi } from 'vitest';
 import {
   allureJsonAttachment,
@@ -20,10 +23,25 @@ interface FillHarnessOptions {
   fillError?: Error;
   externalError?: Error;
   recipeError?: Error;
+  isEmploymentTemplateId?: (templateId: string) => boolean;
+  memo?: Record<string, unknown>;
+  memoMarkdown?: string;
 }
 
 interface FillHarness {
-  runFill: (args: { template: string; output?: string; values: Record<string, string> }) => Promise<void>;
+  runFill: (args: {
+    template: string;
+    output?: string;
+    values: Record<string, string>;
+    memo?: {
+      enabled: boolean;
+      format: 'json' | 'markdown' | 'both';
+      jsonOutputPath?: string;
+      markdownOutputPath?: string;
+      jurisdiction?: string;
+      baselineTemplateId?: string;
+    };
+  }) => Promise<void>;
   spies: {
     findTemplateDir: ReturnType<typeof vi.fn>;
     findExternalDir: ReturnType<typeof vi.fn>;
@@ -35,6 +53,9 @@ interface FillHarness {
     fillTemplate: ReturnType<typeof vi.fn>;
     runExternalFill: ReturnType<typeof vi.fn>;
     runRecipe: ReturnType<typeof vi.fn>;
+    generateEmploymentMemo: ReturnType<typeof vi.fn>;
+    isEmploymentTemplateId: ReturnType<typeof vi.fn>;
+    renderEmploymentMemoMarkdown: ReturnType<typeof vi.fn>;
   };
 }
 
@@ -87,6 +108,24 @@ async function loadFillHarness(opts: FillHarnessOptions = {}): Promise<FillHarne
     };
   });
 
+  const isEmploymentTemplateId = vi.fn((templateId: string) => {
+    if (opts.isEmploymentTemplateId) {
+      return opts.isEmploymentTemplateId(templateId);
+    }
+    return templateId.includes('employment');
+  });
+
+  const generateEmploymentMemo = vi.fn((input: Record<string, unknown>) => {
+    return opts.memo ?? {
+      templateId: input.templateId,
+      riskSummary: 'Low risk',
+    };
+  });
+
+  const renderEmploymentMemoMarkdown = vi.fn(() => {
+    return opts.memoMarkdown ?? '# Employment Memo\n\nNo additional risks.';
+  });
+
   vi.doMock('../src/utils/paths.js', () => ({
     findTemplateDir,
     findExternalDir,
@@ -112,6 +151,12 @@ async function loadFillHarness(opts: FillHarnessOptions = {}): Promise<FillHarne
     runRecipe,
   }));
 
+  vi.doMock('../src/core/employment/memo.js', () => ({
+    generateEmploymentMemo,
+    isEmploymentTemplateId,
+    renderEmploymentMemoMarkdown,
+  }));
+
   const { runFill } = await import('../src/commands/fill.js');
 
   return {
@@ -127,11 +172,19 @@ async function loadFillHarness(opts: FillHarnessOptions = {}): Promise<FillHarne
       fillTemplate,
       runExternalFill,
       runRecipe,
+      generateEmploymentMemo,
+      isEmploymentTemplateId,
+      renderEmploymentMemoMarkdown,
     },
   };
 }
 
+const tempDirs: string[] = [];
+
 afterEach(() => {
+  for (const dir of tempDirs.splice(0)) {
+    rmSync(dir, { recursive: true, force: true });
+  }
   vi.restoreAllMocks();
   vi.resetModules();
 });
@@ -325,5 +378,182 @@ describe('runFill in-process coverage', () => {
     ).rejects.toThrow('EXIT_1');
 
     expect(errorSpy).toHaveBeenCalledWith('Error: render failed');
+  });
+
+  itFilling('rejects memo generation for non-employment templates', async () => {
+    const harness = await loadFillHarness({
+      templateDir: '/templates/common-paper-mutual-nda',
+      metadata: {
+        name: 'Mutual NDA',
+        allow_derivatives: true,
+        required_fields: [],
+      },
+      isEmploymentTemplateId: () => false,
+    });
+
+    const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+    const exitSpy = vi.spyOn(process, 'exit').mockImplementation(((code?: number) => {
+      throw new Error(`EXIT_${code ?? 0}`);
+    }) as never);
+
+    await expect(
+      harness.runFill({
+        template: 'common-paper-mutual-nda',
+        values: {},
+        memo: {
+          enabled: true,
+          format: 'json',
+        },
+      })
+    ).rejects.toThrow('EXIT_1');
+
+    expect(exitSpy).toHaveBeenCalledWith(1);
+    expect(harness.spies.fillTemplate).not.toHaveBeenCalled();
+    expect(errorSpy).toHaveBeenCalledWith(
+      expect.stringContaining('Memo generation is currently supported only for employment templates')
+    );
+  });
+
+  itFilling('writes memo artifacts for employment templates with default output paths', async () => {
+    const outDir = mkdtempSync(join(tmpdir(), 'oa-fill-memo-'));
+    tempDirs.push(outDir);
+    const outputPath = join(outDir, 'offer-letter.docx');
+    const memoData = {
+      templateId: 'openagreements-employment-offer-letter',
+      riskSummary: 'Medium',
+    };
+
+    const harness = await loadFillHarness({
+      templateDir: '/templates/openagreements-employment-offer-letter',
+      metadata: {
+        name: 'Employment Offer Letter',
+        allow_derivatives: true,
+        required_fields: [],
+      },
+      isEmploymentTemplateId: (templateId) => templateId.startsWith('openagreements-employment'),
+      memo: memoData,
+      memoMarkdown: '# Memo\n\nGenerated memo content.',
+    });
+
+    const logSpy = vi.spyOn(console, 'log').mockImplementation(() => {});
+
+    await harness.runFill({
+      template: 'openagreements-employment-offer-letter',
+      output: outputPath,
+      values: { company_name: 'Acme Corp' },
+      memo: {
+        enabled: true,
+        format: 'both',
+      },
+    });
+
+    const expectedJsonPath = resolve(outDir, 'offer-letter.memo.json');
+    const expectedMarkdownPath = resolve(outDir, 'offer-letter.memo.md');
+    const memoJson = JSON.parse(readFileSync(expectedJsonPath, 'utf-8'));
+    const memoMarkdown = readFileSync(expectedMarkdownPath, 'utf-8');
+
+    expect(harness.spies.generateEmploymentMemo).toHaveBeenCalledTimes(1);
+    expect(harness.spies.generateEmploymentMemo).toHaveBeenCalledWith(
+      expect.objectContaining({
+        templateId: 'openagreements-employment-offer-letter',
+        jurisdiction: undefined,
+      })
+    );
+    expect(harness.spies.renderEmploymentMemoMarkdown).toHaveBeenCalledWith(memoData);
+    expect(memoJson).toEqual(memoData);
+    expect(memoMarkdown).toContain('# Memo');
+    expect(logSpy).toHaveBeenCalledWith(`Memo JSON: ${expectedJsonPath}`);
+    expect(logSpy).toHaveBeenCalledWith(`Memo Markdown: ${expectedMarkdownPath}`);
+  });
+
+  itFilling('honors custom memo output path overrides', async () => {
+    const outDir = mkdtempSync(join(tmpdir(), 'oa-fill-memo-custom-'));
+    tempDirs.push(outDir);
+    const outputPath = join(outDir, 'offer-letter.docx');
+    const customJsonPath = join(outDir, 'custom-memo.json');
+
+    const harness = await loadFillHarness({
+      templateDir: '/templates/openagreements-employment-offer-letter',
+      metadata: {
+        name: 'Employment Offer Letter',
+        allow_derivatives: true,
+        required_fields: [],
+      },
+      isEmploymentTemplateId: () => true,
+      memo: { summary: 'Custom output path test' },
+    });
+
+    await harness.runFill({
+      template: 'openagreements-employment-offer-letter',
+      output: outputPath,
+      values: { company_name: 'Acme Corp' },
+      memo: {
+        enabled: true,
+        format: 'json',
+        jsonOutputPath: customJsonPath,
+      },
+    });
+
+    expect(() => JSON.parse(readFileSync(customJsonPath, 'utf-8'))).not.toThrow();
+  });
+
+  itFilling('supports markdown-only memo output without writing JSON', async () => {
+    const outDir = mkdtempSync(join(tmpdir(), 'oa-fill-memo-markdown-only-'));
+    tempDirs.push(outDir);
+    const customMarkdownPath = join(outDir, 'memo-only.md');
+
+    const harness = await loadFillHarness({
+      templateDir: '/templates/openagreements-employment-offer-letter',
+      metadata: {
+        name: 'Employment Offer Letter',
+        allow_derivatives: true,
+        required_fields: [],
+      },
+      isEmploymentTemplateId: () => true,
+      memoMarkdown: '# Markdown only',
+    });
+
+    await harness.runFill({
+      template: 'openagreements-employment-offer-letter',
+      output: join(outDir, 'offer-letter.docx'),
+      values: { company_name: 'Acme Corp' },
+      memo: {
+        enabled: true,
+        format: 'markdown',
+        markdownOutputPath: customMarkdownPath,
+      },
+    });
+
+    expect(existsSync(customMarkdownPath)).toBe(true);
+    expect(existsSync(join(outDir, 'offer-letter.memo.json'))).toBe(false);
+  });
+
+  itFilling('derives memo basename from output paths without file names', async () => {
+    const outDir = mkdtempSync(join(tmpdir(), 'oa-fill-memo-root-output-'));
+    tempDirs.push(outDir);
+    const customJsonPath = join(outDir, 'root-derived.json');
+
+    const harness = await loadFillHarness({
+      templateDir: '/templates/openagreements-employment-offer-letter',
+      metadata: {
+        name: 'Employment Offer Letter',
+        allow_derivatives: true,
+        required_fields: [],
+      },
+      isEmploymentTemplateId: () => true,
+    });
+
+    await harness.runFill({
+      template: 'openagreements-employment-offer-letter',
+      output: '/',
+      values: { company_name: 'Acme Corp' },
+      memo: {
+        enabled: true,
+        format: 'json',
+        jsonOutputPath: customJsonPath,
+      },
+    });
+
+    expect(existsSync(customJsonPath)).toBe(true);
   });
 });

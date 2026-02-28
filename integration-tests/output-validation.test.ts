@@ -56,6 +56,14 @@ function buildDocx(headingCount: number): Buffer {
   return zip.toBuffer();
 }
 
+function buildDocxWithoutDocumentXml(): Buffer {
+  const zip = new AdmZip();
+  zip.addFile('[Content_Types].xml', Buffer.from(CONTENT_TYPES_XML, 'utf-8'));
+  zip.addFile('_rels/.rels', Buffer.from(RELS_XML, 'utf-8'));
+  zip.addFile('word/_rels/document.xml.rels', Buffer.from(WORD_RELS_XML, 'utf-8'));
+  return zip.toBuffer();
+}
+
 function writeDocxPair(sourceHeadingCount: number, outputHeadingCount: number): { sourcePath: string; outputPath: string } {
   const dir = mkdtempSync(join(tmpdir(), 'oa-output-validate-'));
   tempDirs.push(dir);
@@ -102,5 +110,36 @@ describe('validateOutput', () => {
       expect(result.valid).toBe(false);
       expect(result.errors.join(' ')).toContain('Heading count mismatch');
     });
+  });
+
+  it('returns a read error when source/output files are not valid DOCX archives', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'oa-output-invalid-archive-'));
+    tempDirs.push(dir);
+    const sourcePath = join(dir, 'source.docx');
+    const outputPath = join(dir, 'output.docx');
+    writeFileSync(sourcePath, Buffer.from('not-a-zip-archive'));
+    writeFileSync(outputPath, Buffer.from('not-a-zip-archive'));
+
+    const result = validateOutput(sourcePath, outputPath);
+
+    expect(result.valid).toBe(false);
+    expect(result.errors.join(' ')).toContain('Failed to read files');
+    expect(result.sourceHeadingCount).toBe(0);
+    expect(result.outputHeadingCount).toBe(0);
+  });
+
+  it('treats missing word/document.xml entries as zero headings', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'oa-output-missing-document-xml-'));
+    tempDirs.push(dir);
+    const sourcePath = join(dir, 'source.docx');
+    const outputPath = join(dir, 'output.docx');
+    writeFileSync(sourcePath, buildDocxWithoutDocumentXml());
+    writeFileSync(outputPath, buildDocxWithoutDocumentXml());
+
+    const result = validateOutput(sourcePath, outputPath);
+
+    expect(result.valid).toBe(true);
+    expect(result.sourceHeadingCount).toBe(0);
+    expect(result.outputHeadingCount).toBe(0);
   });
 });
