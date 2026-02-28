@@ -254,6 +254,20 @@ function resolveEpicFromWrapperExpression(node, aliasToEpic) {
         return epic.trim();
       }
     }
+    if (methodName === "withLabels") {
+      const arg = expression.arguments[0];
+      if (arg && ts.isObjectLiteralExpression(arg)) {
+        const epicProp = arg.properties.find(
+          (p) => ts.isPropertyAssignment(p) && ts.isIdentifier(p.name) && p.name.text === "epic",
+        );
+        if (epicProp && ts.isPropertyAssignment(epicProp)) {
+          const epic = getStringLiteralValue(epicProp.initializer);
+          if (epic && epic.trim().length > 0) {
+            return epic.trim();
+          }
+        }
+      }
+    }
     return baseEpic;
   }
 
