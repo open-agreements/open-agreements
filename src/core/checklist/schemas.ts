@@ -91,7 +91,7 @@ export const ChecklistEntrySchema = z.object({
   entry_id: z.string().min(1),
   document_id: z.string().min(1).optional(),
   stage: ChecklistStageEnum,
-  sort_key: z.string().min(1),
+  sort_key: z.string().min(1).optional(),
   title: z.string().min(1),
   status: ChecklistEntryStatusEnum,
   parent_entry_id: z.string().min(1).optional(),
