@@ -4,7 +4,7 @@ description: >-
   documents, checklist entries, signatories, action items, and issues.
   Accepts structured JSON input and renders a formatted DOCX for distribution.
 source_url: https://github.com/open-agreements/open-agreements
-version: '2.0'
+version: '2.1'
 license: CC0-1.0
 allow_derivatives: true
 attribution_text: >-
@@ -18,22 +18,15 @@ fields:
     description: ISO date when the checklist was last updated
   - name: documents
     type: array
-    description: Canonical documents (document_id, title, optional primary_link, labels)
-  - name: checklist_entries
-    type: array
-    description: Stage-scoped checklist rows (entry_id, stage, sort_key, title, status, optional document_id)
+    description: >-
+      Checklist entry rows with 4 columns: number, title, status (human-readable),
+      responsible_party. Stage headings and citation/signatory sub-rows are included.
   - name: action_items
     type: array
-    description: Action items with optional related_document_ids
-  - name: issues
-    type: array
-    description: Issues with OPEN/CLOSED status and optional related_document_ids
-  - name: working_group
-    type: array
-    description: Compatibility field for legacy template sections (always empty in v2 checklist flow)
+    description: Unlinked action items (item_id, description, status, assigned_to, due_date)
   - name: open_issues
     type: array
-    description: Compatibility field for legacy template sections (derived from unlinked issues in v2 checklist flow)
+    description: Unlinked issues (issue_id, title, status, summary)
 required_fields:
   - deal_name
   - updated_at

@@ -57,7 +57,7 @@ function getTableRowsAsCellText(docxPath: string): string[][][] {
 }
 
 describe('closing-checklist rendering', () => {
-  it.openspec('OA-CKL-028')('renders stage-first checklist rows with linked items and unlinked fallbacks', async () => {
+  it.openspec('OA-CKL-028')('renders stage-first 4-column checklist with linked items and unlinked fallbacks', async () => {
     const templateDir = findTemplateDir('closing-checklist');
     expect(templateDir).toBeTruthy();
 
@@ -102,6 +102,7 @@ describe('closing-checklist rendering', () => {
             sort_key: '200',
             title: 'Escrow Agreement (Executed)',
             status: 'PARTIALLY_SIGNED',
+            responsible_party: { organization: 'Finance' },
             signatories: [
               {
                 party: 'Buyer',
@@ -156,22 +157,70 @@ describe('closing-checklist rendering', () => {
     });
 
     const tables = getTableRowsAsCellText(outputPath);
-    expect(tables).toHaveLength(4);
-    expect(tables.map((table) => table.map((row) => row.length))).toEqual([
-      [4],
-      [2, 2, 2, 2, 2, 2, 2],
-      [5, 5],
-      [5, 5],
-    ]);
 
-    expect(tables[1][1]).toEqual(['II. SIGNING', '']);
-    expect(tables[1][2][0]).toContain('1 Stock Purchase Agreement (Form)');
-    expect(tables[1][3][0]).toContain('Issue I-77');
-    expect(tables[1][4]).toEqual(['III. CLOSING', '']);
-    expect(tables[1][5][0]).toContain('1 Escrow Agreement (Executed)');
-    expect(tables[1][6][0]).toContain('Action A-101');
+    // 3 tables: documents (4-col), action_items (5-col), open_issues (4-col)
+    expect(tables).toHaveLength(3);
 
-    expect(tables[2][1][0]).toBe('A-102');
-    expect(tables[3][1][0]).toBe('I-88');
+    // Documents table: header + data rows
+    const docTable = tables[0];
+    // Header row
+    expect(docTable[0]).toEqual(['No.', 'Title', 'Status', 'Responsible Party']);
+
+    // Find stage headings and entry rows (skip FOR control rows)
+    const docDataRows = docTable.filter((row) => {
+      // Skip header, FOR control rows (empty first cell with no title text)
+      const hasContent = row.some((cell) => cell.length > 0);
+      return hasContent && row[0] !== 'No.';
+    });
+
+    // Should contain stage headings and entries
+    const signingHeading = docDataRows.find((row) => row[1].includes('SIGNING'));
+    expect(signingHeading).toBeTruthy();
+
+    const closingHeading = docDataRows.find((row) => row[1].includes('CLOSING'));
+    expect(closingHeading).toBeTruthy();
+
+    // Entry rows should have human-readable statuses
+    const spaRow = docDataRows.find((row) => row[1].includes('Stock Purchase Agreement'));
+    expect(spaRow).toBeTruthy();
+    expect(spaRow![2]).toBe('Form Final');
+
+    const escrowRow = docDataRows.find((row) => row[1].includes('Escrow Agreement'));
+    expect(escrowRow).toBeTruthy();
+    expect(escrowRow![2]).toBe('Partially Signed');
+    expect(escrowRow![3]).toBe('Finance');
+
+    // Citation sub-row
+    const citationRow = docDataRows.find((row) => row[1].includes('Ref: SPA'));
+    expect(citationRow).toBeTruthy();
+
+    // Signatory sub-rows
+    const buyerSigRow = docDataRows.find((row) => row[1].includes('Signatory: Buyer'));
+    expect(buyerSigRow).toBeTruthy();
+    expect(buyerSigRow![1]).toContain('Received');
+
+    // Linked action sub-row
+    const linkedAction = docDataRows.find((row) => row[1].includes('Action A-101'));
+    expect(linkedAction).toBeTruthy();
+    expect(linkedAction![2]).toBe('In Progress');
+
+    // Linked issue sub-row
+    const linkedIssue = docDataRows.find((row) => row[1].includes('Issue I-77'));
+    expect(linkedIssue).toBeTruthy();
+    expect(linkedIssue![2]).toBe('Open');
+
+    // Unlinked action items table (5-col)
+    const actTable = tables[1];
+    expect(actTable[0]).toEqual(['ID', 'Description', 'Status', 'Assigned To', 'Due Date']);
+    const a102Row = actTable.find((row) => row[0] === 'A-102');
+    expect(a102Row).toBeTruthy();
+    expect(a102Row![2]).toBe('Not Started');
+
+    // Unlinked issues table (4-col)
+    const issTable = tables[2];
+    expect(issTable[0]).toEqual(['ID', 'Title', 'Status', 'Summary']);
+    const i88Row = issTable.find((row) => row[0] === 'I-88');
+    expect(i88Row).toBeTruthy();
+    expect(i88Row![2]).toBe('Open');
   });
 });
