@@ -155,3 +155,12 @@ Use `list_templates` (MCP) or `list --json` (CLI) for the latest inventory and f
 - OpenAgreements employment templates are licensed under CC-BY-4.0
 - These templates are designed for US at-will employment — state-specific laws may apply
 - This tool does not provide legal advice — consult an attorney
+
+## Bespoke edits (beyond template fields)
+
+If you need to edit boilerplate or add custom language that is not exposed as a template field,
+use the `edit-docx-agreement` skill to surgically edit the generated DOCX and produce a
+tracked-changes output for review. This requires a separately configured Safe Docx MCP server.
+
+Note: templates licensed under CC-BY-ND-4.0 (e.g., YC SAFEs) can be filled for your own use
+but must not be redistributed in modified form.

@@ -180,3 +180,12 @@ Templates are discovered dynamically — always use `list_templates` (MCP) or `l
 - Templates are licensed by their respective authors (CC-BY-4.0, CC0-1.0, or CC-BY-ND-4.0)
 - External templates (CC-BY-ND-4.0, e.g. YC SAFEs) can be filled for your own use but must not be redistributed in modified form
 - This tool does not provide legal advice — consult an attorney
+
+## Bespoke edits (beyond template fields)
+
+If you need to edit boilerplate or add custom language that is not exposed as a template field,
+use the `edit-docx-agreement` skill to surgically edit the generated DOCX and produce a
+tracked-changes output for review. This requires a separately configured Safe Docx MCP server.
+
+Note: templates licensed under CC-BY-ND-4.0 (e.g., YC SAFEs) can be filled for your own use
+but must not be redistributed in modified form.
