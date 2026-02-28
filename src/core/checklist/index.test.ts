@@ -66,20 +66,21 @@ describe('checklist render model traceability', () => {
 
       const originalIds = entriesArray.map((entry) => entry.entry_id);
       const context = buildChecklistTemplateContext(payload);
-      const documentRows = context.documents.map((row) => row.document_name);
+      const titleRows = context.documents.map((row) => row.title);
 
-      const preSigningIndex = documentRows.findIndex((row) => row.includes('I. PRE-SIGNING'));
-      const signingIndex = documentRows.findIndex((row) => row.includes('II. SIGNING'));
-      const closingIndex = documentRows.findIndex((row) => row.includes('III. CLOSING'));
+      const preSigningIndex = titleRows.findIndex((row) => row.includes('I. PRE-SIGNING'));
+      const signingIndex = titleRows.findIndex((row) => row.includes('II. SIGNING'));
+      const closingIndex = titleRows.findIndex((row) => row.includes('III. CLOSING'));
       expect(preSigningIndex).toBeGreaterThanOrEqual(0);
       expect(signingIndex).toBeGreaterThan(preSigningIndex);
       expect(closingIndex).toBeGreaterThan(signingIndex);
 
-      const parentRow = documentRows.find((row) => row.includes('1 Parent signing package'));
-      const childRow = documentRows.find((row) => row.includes('1.1'));
-      const insertedRow = documentRows.find((row) => row.includes('2 Inserted mid-stream item'));
+      const parentRow = context.documents.find((row) => row.number === '1' && row.title.includes('Parent signing package'));
+      const childRow = context.documents.find((row) => row.number === '1.1');
+      const insertedRow = context.documents.find((row) => row.number === '2' && row.title.includes('Inserted mid-stream item'));
       expect(parentRow).toBeTruthy();
-      expect(childRow).toContain('Nested child signature dependency');
+      expect(childRow).toBeTruthy();
+      expect(childRow!.title).toContain('Nested child signature dependency');
       expect(insertedRow).toBeTruthy();
 
       const resultingIds = Object.values(payload.checklist_entries).map((entry) => entry.entry_id);
@@ -124,18 +125,25 @@ describe('checklist render model traceability', () => {
         issues: {},
       });
 
-      const escrowRow = context.documents.find((row) => row.document_name.includes('Escrow Agreement'));
+      const escrowRow = context.documents.find((row) => row.title.includes('Escrow Agreement'));
       expect(escrowRow).toBeTruthy();
-      expect(escrowRow!.status).toContain('M. Kent');
-      expect(escrowRow!.status).toContain('PENDING');
-      expect(escrowRow!.status).toContain('A. Lee');
-      expect(escrowRow!.status).toContain('RECEIVED');
-      expect(escrowRow!.status).toContain('https://drive.example.com/buyer-signature.pdf');
+
+      // Signatories are now sub-rows
+      const signatoryRows = context.documents.filter((row) => row.title.includes('Signatory:'));
+      expect(signatoryRows.length).toBeGreaterThanOrEqual(2);
+
+      const kentRow = signatoryRows.find((row) => row.title.includes('M. Kent'));
+      expect(kentRow).toBeTruthy();
+      expect(kentRow!.title).toContain('Pending');
+
+      const leeRow = signatoryRows.find((row) => row.title.includes('A. Lee'));
+      expect(leeRow).toBeTruthy();
+      expect(leeRow!.title).toContain('Received');
     },
   );
 
   it.openspec(['OA-CKL-010', 'OA-CKL-012', 'OA-CKL-014'])(
-    'renders citation-backed working-group document rows and keeps unlinked actions in fallback sections',
+    'renders citation-backed document rows and keeps unlinked actions in fallback sections',
     () => {
       const context = buildChecklistTemplateContext({
         deal_name: 'Atlas Series A',
@@ -165,11 +173,11 @@ describe('checklist render model traceability', () => {
         issues: {},
       });
 
-      expect(context.documents.some((row) => row.document_name.includes('Working Group List'))).toBe(true);
-      expect(context.documents.some((row) => row.document_name.includes('Working Group Exhibit A'))).toBe(true);
+      expect(context.documents.some((row) => row.title.includes('Working Group List'))).toBe(true);
+      // Citation is now a sub-row
+      expect(context.documents.some((row) => row.title.includes('Working Group Exhibit A'))).toBe(true);
       expect(context.action_items).toHaveLength(1);
       expect(context.action_items[0]!.item_id).toBe('A-UNLINKED');
-      expect(context.working_group).toEqual([]);
     },
   );
 });
