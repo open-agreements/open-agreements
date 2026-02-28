@@ -54,6 +54,7 @@ const UNMAPPED_EPIC_LABEL = "Unmapped";
 const MAPPED_TEST_REF_RE = /^(.+?):(\d+)\s+::\s+(.+)$/;
 const DEFAULT_ALLURE_REPORT_URL = "https://tests.openagreements.ai";
 const GITHUB_BLOB_ROOT = "https://github.com/open-agreements/open-agreements/blob";
+const NEW_YORK_TZ = "America/New_York";
 
 function parseArgs() {
   const args = process.argv.slice(2);
@@ -582,6 +583,23 @@ function toUtcDisplay(value) {
   return parsed.toISOString().replace("T", " ").replace(".000Z", "Z");
 }
 
+function toNewYorkDisplay(value) {
+  if (!value) return "Unavailable";
+  const parsed = new Date(value);
+  if (Number.isNaN(parsed.getTime())) return "Unavailable";
+  return new Intl.DateTimeFormat("en-US", {
+    timeZone: NEW_YORK_TZ,
+    year: "numeric",
+    month: "short",
+    day: "2-digit",
+    hour: "numeric",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: true,
+    timeZoneName: "short",
+  }).format(parsed);
+}
+
 function resolveGithubBlobRef(runtimeTrust) {
   const commitUrl = runtimeTrust?.run?.commit_url;
   if (typeof commitUrl === "string") {
@@ -644,7 +662,7 @@ function renderMappedTestReference(ref, linkContext) {
       testResultId: allureTestResultId,
     })
     : String(linkContext.allureReportUrl || DEFAULT_ALLURE_REPORT_URL);
-  const allureLabel = allureTestResultId ? "Test details" : "Allure report";
+  const allureLabel = allureTestResultId ? "Test details" : "Test report";
   const allureClassName = allureTestResultId
     ? "mapped-test-allure-link"
     : "mapped-test-allure-link is-fallback";
@@ -745,6 +763,7 @@ function makeSystemCardMarkdown({ traceability, runtimeTrust, linkContext }) {
   const latestFailed = runtime?.stats?.failed;
   const runtimeGeneratedAtUtc = runtime?.generated_at_utc;
   const runtimeCreatedAtUtc = runtime?.run?.created_at_utc;
+  const runtimeGeneratedAtNy = toNewYorkDisplay(runtimeGeneratedAtUtc ?? runtimeCreatedAtUtc);
   const runtimeAgeMinutes = runtime?.freshness?.age_minutes;
   const runtimeIsStale = runtime?.freshness?.is_stale;
 
@@ -759,6 +778,11 @@ function makeSystemCardMarkdown({ traceability, runtimeTrust, linkContext }) {
     : "Unavailable";
   const mappingCoverageText = pct(traceability.covered, traceability.total);
   const dataAgeText = Number.isFinite(runtimeAgeMinutes) ? `${runtimeAgeMinutes} min` : "Unavailable";
+  const dataMetricLabel = runtimeSource === "build-metadata" ? "Last generated" : "Data age";
+  const dataMetricValue = runtimeSource === "build-metadata" ? runtimeGeneratedAtNy : dataAgeText;
+  const dataMetricNote = runtimeSource === "build-metadata"
+    ? "Timestamp when deployment build metadata was generated (America/New_York)"
+    : "Minutes since the latest published test report snapshot";
 
   const runtimeSummary = hasRuntimeMetrics && Number.isFinite(latestPassed) && Number.isFinite(latestTotal)
     ? `${latestPassed}/${latestTotal} passing tests`
@@ -792,13 +816,16 @@ function makeSystemCardMarkdown({ traceability, runtimeTrust, linkContext }) {
     runtimeSource === "build-metadata"
       ? `- Build timestamp (UTC): ${toUtcDisplay(runtimeGeneratedAtUtc ?? runtimeCreatedAtUtc)}`
       : `- Last verified run (UTC): ${toUtcDisplay(runtimeCreatedAtUtc)}`,
+    ...(runtimeSource === "build-metadata"
+      ? [`- Build timestamp (America/New_York): ${runtimeGeneratedAtNy}`]
+      : []),
     `- Commit: ${runtime?.run?.commit_sha ? safeLink(runtime.run.commit_url, runtime.run.commit_sha) : "Unavailable"}`,
     `- CI run: ${safeLink(runtime?.run?.ci_run_url, "workflow run")}`,
-    `- Allure report: ${safeLink(runtime?.report_url ?? DEFAULT_ALLURE_REPORT_URL, "tests.openagreements.ai")}`,
-    "- Mapped test entries link to GitHub source lines; matching Allure test-result links are shown when available.",
+    `- Test report: ${safeLink(runtime?.report_url ?? DEFAULT_ALLURE_REPORT_URL, "tests.openagreements.ai")}`,
+    "- Mapped test entries link to GitHub source lines; matching test-result links are shown when available.",
   ];
 
-  if (Number.isFinite(runtimeAgeMinutes)) {
+  if (runtimeSource !== "build-metadata" && Number.isFinite(runtimeAgeMinutes)) {
     proofLines.push(`- Data age: ${runtimeAgeMinutes} minute(s)`);
   }
 
@@ -840,16 +867,14 @@ function makeSystemCardMarkdown({ traceability, runtimeTrust, linkContext }) {
     note: runtimeSource === "build-metadata"
       ? "Test result counters are omitted in build-metadata mode"
       : Number.isFinite(latestFailed)
-      ? `${failCountText} failing test(s) in latest Allure run`
-      : "Latest Allure run data unavailable",
+      ? `${failCountText} failing test(s) in latest test report run`
+      : "Latest test report run data unavailable",
     warning: hasRuntimeMetrics && Number.isFinite(latestFailed) ? latestFailed > 0 : false,
   }));
   lines.push(metricCardHtml({
-    label: "Data age",
-    value: dataAgeText,
-    note: runtimeSource === "build-metadata"
-      ? "Minutes since deployment build metadata was generated"
-      : "Minutes since the latest published Allure report snapshot",
+    label: dataMetricLabel,
+    value: dataMetricValue,
+    note: dataMetricNote,
     warning: runtimeIsStale === true,
   }));
   lines.push("</div>");
@@ -925,7 +950,7 @@ function makeSystemCardMarkdown({ traceability, runtimeTrust, linkContext }) {
   lines.push("| Signal | Link |");
   lines.push("|---|---|");
   lines.push(
-    "| Allure test report | [tests.openagreements.ai](https://tests.openagreements.ai) |",
+    "| Test report | [tests.openagreements.ai](https://tests.openagreements.ai) |",
   );
   lines.push(
     "| Code coverage (Codecov) | [![Coverage](https://img.shields.io/codecov/c/github/open-agreements/open-agreements/main)](https://app.codecov.io/gh/open-agreements/open-agreements) |",
@@ -954,7 +979,7 @@ function makeSystemCardMarkdown({ traceability, runtimeTrust, linkContext }) {
   if (runtimeSource === "build-metadata") {
     lines.push("- Runtime pass/fail counters are not fetched in build-metadata mode; the last updated timestamp reflects deployment build time.");
   } else {
-    lines.push("- Runtime pass/fail values reflect the latest published Allure run and can change with each CI run.");
+    lines.push("- Runtime pass/fail values reflect the latest published test report run and can change with each CI run.");
   }
   lines.push("- Independent third-party audits are out of scope for this page.");
   lines.push("");

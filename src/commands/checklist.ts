@@ -1,7 +1,6 @@
 import { existsSync, readFileSync } from 'node:fs';
 import { mkdir, writeFile } from 'node:fs/promises';
-import { dirname } from 'node:path';
-import { resolve } from 'node:path';
+import { dirname, resolve } from 'node:path';
 import { z } from 'zod';
 import {
   ChecklistPatchApplyRequestSchema,
@@ -9,45 +8,29 @@ import {
   ClosingChecklistSchema,
   applyChecklistPatch,
   buildChecklistTemplateContext,
+  validateChecklistPatch,
+  humanStatus,
+  createChecklist as createChecklistState,
+  listChecklists as listChecklistsState,
+  resolveChecklist,
+  getChecklistState,
+  saveChecklistState,
+  appendHistory,
+  getHistory,
   type ChecklistAppliedPatchRecord,
   type ChecklistAppliedPatchStore,
   type ChecklistPatchValidationArtifact,
   type ChecklistPatchValidationStore,
   type ChecklistProposedPatchRecord,
   type ChecklistProposedPatchStore,
-  validateChecklistPatch,
+  type HistoryRecord,
 } from '../core/checklist/index.js';
 import { fillTemplate } from '../core/engine.js';
 import { findTemplateDir } from '../utils/paths.js';
 
-export interface ChecklistCreateArgs {
-  data: string;
-  output?: string;
-}
-
-export interface ChecklistPatchValidateArgs {
-  state: string;
-  patch: string;
-  output?: string;
-  validationStore?: string;
-}
-
-export interface ChecklistPatchApplyArgs {
-  state: string;
-  request: string;
-  output?: string;
-  validationStore?: string;
-  appliedStore?: string;
-  proposedStore?: string;
-}
-
-const ChecklistStateSchema = z.object({
-  checklist_id: z.string().min(1),
-  revision: z.number().int().nonnegative(),
-  checklist: ClosingChecklistSchema,
-});
-
-type ChecklistState = z.infer<typeof ChecklistStateSchema>;
+// ---------------------------------------------------------------------------
+// Shared helpers
+// ---------------------------------------------------------------------------
 
 async function writeJsonFile(path: string, value: unknown): Promise<void> {
   await mkdir(dirname(path), { recursive: true });
@@ -57,6 +40,10 @@ async function writeJsonFile(path: string, value: unknown): Promise<void> {
 function loadJsonFile(path: string): unknown {
   return JSON.parse(readFileSync(path, 'utf-8'));
 }
+
+// ---------------------------------------------------------------------------
+// JSON file-backed stores for patch-validate / patch-apply
+// ---------------------------------------------------------------------------
 
 class JsonFileValidationStore implements ChecklistPatchValidationStore {
   constructor(private readonly filePath: string) {}
@@ -78,8 +65,7 @@ class JsonFileValidationStore implements ChecklistPatchValidationStore {
   }
 
   async get(validationId: string): Promise<ChecklistPatchValidationArtifact | null> {
-    const data = this.load();
-    return data[validationId] ?? null;
+    return this.load()[validationId] ?? null;
   }
 
   async delete(validationId: string): Promise<void> {
@@ -107,8 +93,7 @@ class JsonFileAppliedPatchStore implements ChecklistAppliedPatchStore {
   }
 
   async get(checklistId: string, patchId: string): Promise<ChecklistAppliedPatchRecord | null> {
-    const data = this.load();
-    return data[this.key(checklistId, patchId)] ?? null;
+    return this.load()[this.key(checklistId, patchId)] ?? null;
   }
 
   async set(record: ChecklistAppliedPatchRecord): Promise<void> {
@@ -136,8 +121,7 @@ class JsonFileProposedPatchStore implements ChecklistProposedPatchStore {
   }
 
   async get(checklistId: string, patchId: string): Promise<ChecklistProposedPatchRecord | null> {
-    const data = this.load();
-    return data[this.key(checklistId, patchId)] ?? null;
+    return this.load()[this.key(checklistId, patchId)] ?? null;
   }
 
   async set(record: ChecklistProposedPatchRecord): Promise<void> {
@@ -147,52 +131,256 @@ class JsonFileProposedPatchStore implements ChecklistProposedPatchStore {
   }
 }
 
+// ---------------------------------------------------------------------------
+// Commands
+// ---------------------------------------------------------------------------
+
+export interface ChecklistCreateArgs {
+  dealName: string;
+  data?: string;
+}
+
 export async function runChecklistCreate(args: ChecklistCreateArgs): Promise<void> {
-  const raw = JSON.parse(readFileSync(args.data, 'utf-8'));
-  const outputPath = resolve(args.output ?? 'closing-checklist.docx');
-
-  // Pre-validate with the Zod schema for good error messages
-  const parseResult = ClosingChecklistSchema.safeParse(raw);
-  if (!parseResult.success) {
-    const issues = parseResult.error.issues.map(
-      (i) => `  ${i.path.join('.')}: ${i.message}`
-    );
-    console.error(`Validation errors:\n${issues.join('\n')}`);
-    process.exit(1);
-  }
-
-  const c = parseResult.data;
-
-  try {
-    const templateDir = findTemplateDir('closing-checklist');
-    if (!templateDir) {
-      console.error('Error: closing-checklist template not found');
+  let initialData = undefined;
+  if (args.data) {
+    const raw = JSON.parse(readFileSync(args.data, 'utf-8'));
+    const parsed = ClosingChecklistSchema.safeParse(raw);
+    if (!parsed.success) {
+      const issues = parsed.error.issues.map((i) => `  ${i.path.join('.')}: ${i.message}`);
+      console.error(`Validation errors:\n${issues.join('\n')}`);
       process.exit(1);
     }
+    initialData = parsed.data;
+  }
 
-    await fillTemplate({
-      templateDir,
-      values: buildChecklistTemplateContext(c) as unknown as Record<string, unknown>,
-      outputPath,
-    });
+  const { uuid } = createChecklistState(args.dealName, initialData);
+  console.log(`Created checklist "${args.dealName}"`);
+  console.log(`UUID: ${uuid}`);
+}
 
-    const countItems = (collection: unknown[] | Record<string, unknown>) =>
-      Array.isArray(collection) ? collection.length : Object.keys(collection).length;
+export async function runChecklistList(): Promise<void> {
+  const checklists = listChecklistsState();
+  if (checklists.length === 0) {
+    console.log('No checklists found.');
+    return;
+  }
 
-    console.log(`Created closing checklist for "${c.deal_name}"`);
-    console.log(`Output: ${outputPath}`);
-    console.log(`Documents: ${countItems(c.documents)}`);
-    console.log(`Checklist entries: ${countItems(c.checklist_entries)}`);
-    console.log(`Action items: ${countItems(c.action_items)}`);
-    console.log(`Issues: ${countItems(c.issues)}`);
-  } catch (err) {
-    console.error(`Error: ${(err as Error).message}`);
-    process.exit(1);
+  console.log('Checklists:\n');
+  for (const c of checklists) {
+    console.log(`  ${c.deal_name}`);
+    console.log(`    UUID: ${c.uuid}`);
+    console.log(`    Revision: ${c.revision}  Updated: ${c.updated_at}`);
+    console.log('');
   }
 }
 
+export interface ChecklistShowArgs {
+  nameOrId: string;
+  json?: boolean;
+}
+
+export async function runChecklistShow(args: ChecklistShowArgs): Promise<void> {
+  const uuid = resolveChecklist(args.nameOrId);
+  if (!uuid) {
+    console.error(`Checklist not found: "${args.nameOrId}"`);
+    process.exit(1);
+  }
+
+  const state = getChecklistState(uuid);
+
+  if (args.json) {
+    console.log(JSON.stringify(state, null, 2));
+    return;
+  }
+
+  const c = state.checklist;
+  console.log(`${c.deal_name}`);
+  console.log(`UUID: ${state.checklist_id}  Revision: ${state.revision}  Updated: ${c.updated_at}\n`);
+
+  const entries = Object.values(c.checklist_entries);
+  const documents = Object.values(c.documents);
+  const actions = Object.values(c.action_items);
+  const issues = Object.values(c.issues);
+
+  console.log(`Documents: ${documents.length}  Entries: ${entries.length}  Actions: ${actions.length}  Issues: ${issues.length}\n`);
+
+  for (const entry of entries) {
+    const status = humanStatus(entry.status);
+    const responsible = entry.responsible_party
+      ? [entry.responsible_party.individual_name, entry.responsible_party.organization].filter(Boolean).join(', ')
+      : '';
+    console.log(`  [${status}] ${entry.title}${responsible ? `  (${responsible})` : ''}`);
+  }
+}
+
+export interface ChecklistUpdateArgs {
+  nameOrId: string;
+  data: string;
+}
+
+export async function runChecklistUpdate(args: ChecklistUpdateArgs): Promise<void> {
+  const uuid = resolveChecklist(args.nameOrId);
+  if (!uuid) {
+    console.error(`Checklist not found: "${args.nameOrId}"`);
+    process.exit(1);
+  }
+
+  const state = getChecklistState(uuid);
+  const patchRaw = loadJsonFile(args.data);
+
+  const patchParsed = ChecklistPatchEnvelopeSchema.safeParse(patchRaw);
+  if (!patchParsed.success) {
+    const issues = patchParsed.error.issues.map((i) => `  ${i.path.join('.')}: ${i.message}`);
+    console.error(`Patch validation errors:\n${issues.join('\n')}`);
+    process.exit(1);
+  }
+
+  // Step 1: Validate (ephemeral, in-memory)
+  const validationResult = await validateChecklistPatch({
+    checklist_id: state.checklist_id,
+    checklist: state.checklist,
+    current_revision: state.revision,
+    patch: patchParsed.data,
+  });
+
+  if (!validationResult.ok) {
+    console.error('Patch validation failed:');
+    for (const d of validationResult.diagnostics) {
+      console.error(`  [${d.code}] ${d.message}${d.path ? ` (${d.path})` : ''}`);
+    }
+    process.exit(1);
+  }
+
+  // Step 2: Apply
+  const applyRequest = {
+    validation_id: validationResult.validation_id,
+    patch: patchParsed.data,
+  };
+
+  const applyResult = await applyChecklistPatch({
+    checklist_id: state.checklist_id,
+    checklist: state.checklist,
+    current_revision: state.revision,
+    request: applyRequest,
+  });
+
+  if (!applyResult.ok) {
+    console.error('Patch apply failed:');
+    console.error(JSON.stringify(applyResult, null, 2));
+    process.exit(1);
+  }
+
+  if (applyResult.applied && !applyResult.idempotent_replay) {
+    // Auto-set updated_at
+    applyResult.checklist.updated_at = new Date().toISOString().slice(0, 10);
+
+    const nextState = {
+      checklist_id: state.checklist_id,
+      revision: applyResult.new_revision,
+      checklist: applyResult.checklist,
+    };
+    saveChecklistState(uuid, nextState);
+
+    const historyRecord: HistoryRecord = {
+      patch_id: patchParsed.data.patch_id,
+      applied_at: new Date().toISOString(),
+      revision_before: state.revision,
+      revision_after: applyResult.new_revision,
+      operation_count: patchParsed.data.operations.length,
+    };
+    await appendHistory(uuid, historyRecord);
+
+    console.log(`Applied patch "${patchParsed.data.patch_id}" to "${state.checklist.deal_name}"`);
+    console.log(`Revision: ${state.revision} → ${applyResult.new_revision}`);
+  } else {
+    console.log('Checklist state unchanged (idempotent replay).');
+  }
+}
+
+export interface ChecklistRenderArgs {
+  nameOrId: string;
+  output?: string;
+}
+
+export async function runChecklistRender(args: ChecklistRenderArgs): Promise<void> {
+  const uuid = resolveChecklist(args.nameOrId);
+  if (!uuid) {
+    console.error(`Checklist not found: "${args.nameOrId}"`);
+    process.exit(1);
+  }
+
+  const state = getChecklistState(uuid);
+  const outputPath = resolve(args.output ?? 'closing-checklist.docx');
+
+  const templateDir = findTemplateDir('closing-checklist');
+  if (!templateDir) {
+    console.error('Error: closing-checklist template not found');
+    process.exit(1);
+  }
+
+  await fillTemplate({
+    templateDir,
+    values: buildChecklistTemplateContext(state.checklist) as unknown as Record<string, unknown>,
+    outputPath,
+  });
+
+  console.log(`Rendered checklist for "${state.checklist.deal_name}"`);
+  console.log(`Output: ${outputPath}`);
+}
+
+export interface ChecklistHistoryArgs {
+  nameOrId: string;
+}
+
+export async function runChecklistHistory(args: ChecklistHistoryArgs): Promise<void> {
+  const uuid = resolveChecklist(args.nameOrId);
+  if (!uuid) {
+    console.error(`Checklist not found: "${args.nameOrId}"`);
+    process.exit(1);
+  }
+
+  const history = getHistory(uuid);
+  if (history.length === 0) {
+    console.log('No update history.');
+    return;
+  }
+
+  console.log('Update history:\n');
+  for (const record of history) {
+    console.log(`  ${record.applied_at}  ${record.patch_id}`);
+    console.log(`    Revision: ${record.revision_before} → ${record.revision_after}  Operations: ${record.operation_count}`);
+    console.log('');
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Advanced subcommands: patch-validate, patch-apply
+// ---------------------------------------------------------------------------
+
+export interface ChecklistPatchValidateArgs {
+  state: string;
+  patch: string;
+  output?: string;
+  validationStore?: string;
+}
+
+export interface ChecklistPatchApplyArgs {
+  state: string;
+  request: string;
+  output?: string;
+  validationStore?: string;
+  appliedStore?: string;
+  proposedStore?: string;
+}
+
+const ChecklistStateFileSchema = z.object({
+  checklist_id: z.string().min(1),
+  revision: z.number().int().nonnegative(),
+  checklist: ClosingChecklistSchema,
+});
+
 export async function runChecklistPatchValidate(args: ChecklistPatchValidateArgs): Promise<void> {
-  const state = ChecklistStateSchema.parse(loadJsonFile(args.state));
+  const state = ChecklistStateFileSchema.parse(loadJsonFile(args.state));
   const patchRaw = loadJsonFile(args.patch);
 
   const patchParsed = ChecklistPatchEnvelopeSchema.safeParse(patchRaw);
@@ -226,7 +414,7 @@ export async function runChecklistPatchValidate(args: ChecklistPatchValidateArgs
 
 export async function runChecklistPatchApply(args: ChecklistPatchApplyArgs): Promise<void> {
   const statePath = resolve(args.state);
-  const state = ChecklistStateSchema.parse(loadJsonFile(statePath));
+  const state = ChecklistStateFileSchema.parse(loadJsonFile(statePath));
   const requestRaw = loadJsonFile(args.request);
 
   const requestParsed = ChecklistPatchApplyRequestSchema.safeParse(requestRaw);
@@ -263,7 +451,7 @@ export async function runChecklistPatchApply(args: ChecklistPatchApplyArgs): Pro
 
   const shouldUpdateState = result.applied && !result.idempotent_replay;
   if (shouldUpdateState) {
-    const nextState: ChecklistState = {
+    const nextState = {
       checklist_id: state.checklist_id,
       revision: result.new_revision,
       checklist: result.checklist,

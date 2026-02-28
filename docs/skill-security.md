@@ -19,6 +19,10 @@ As of v0.2.0, all skills use one of three execution paths:
 
 No skill instructs the agent to download or install packages.
 
+### External tool integrations
+
+The `edit-docx-agreement` skill bridges to the Safe Docx MCP server for surgical DOCX editing. Safe Docx is a **separate system** with its own trust/security model — it is not part of the OpenAgreements zero-download security model. The skill requires the user to have Safe Docx already configured in their agent environment; it does not instruct agents to download or install Safe Docx.
+
 ### Added: Explicit trust boundaries
 
 All skills now include a Security Model section that specifies:
