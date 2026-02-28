@@ -1119,23 +1119,21 @@
   }
 
   .mapped-test-source-link,
-  .mapped-test-allure-link {
+  .mapped-test-source-link:visited,
+  .mapped-test-allure-link,
+  .mapped-test-allure-link:visited {
+    color: var(--accent-deep);
     text-decoration: underline;
     text-decoration-thickness: 1px;
     text-underline-offset: 2px;
   }
 
-  .mapped-test-source-link {
-    color: var(--accent-deep);
-  }
-
   .mapped-test-allure-link {
     margin-left: 8px;
-    color: var(--accent-deep);
   }
 
   .mapped-test-allure-link.is-fallback {
-    opacity: 0.78;
+    opacity: 1;
   }
 
   /* Template evidence ledger table */
