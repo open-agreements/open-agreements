@@ -65,11 +65,8 @@ export function validateRecipe(
       const raw = readFileSync(computedPath, 'utf-8');
       ComputedProfileSchema.parse(JSON.parse(raw));
     } catch (err) {
-      if (err instanceof Error) {
-        errors.push(`computed.json: ${err.message}`);
-      } else {
-        errors.push('computed.json: invalid format');
-      }
+      const message = err instanceof Error ? err.message : 'invalid format';
+      errors.push(`computed.json: ${message}`);
     }
   }
 
@@ -82,74 +79,66 @@ export function validateRecipe(
     return { recipeId, valid: errors.length === 0, scaffold: true, errors, warnings };
   }
 
-  // Validate replacements.json
-  if (hasReplacements) {
-    try {
-      const raw = readFileSync(join(recipeDir, 'replacements.json'), 'utf-8');
-      const replacements = JSON.parse(raw);
-      if (typeof replacements !== 'object' || replacements === null) {
-        errors.push('replacements.json must be a JSON object');
-      } else {
-        const unknownTargets = new Set<string>();
-        for (const [key, value] of Object.entries(replacements)) {
-          if (typeof value !== 'string') {
-            errors.push(`replacements.json: value for "${key}" must be a string`);
-            continue;
-          }
+  // Validate replacements.json for runnable recipes.
+  try {
+    const raw = readFileSync(join(recipeDir, 'replacements.json'), 'utf-8');
+    const replacements = JSON.parse(raw);
+    if (typeof replacements !== 'object' || replacements === null) {
+      errors.push('replacements.json must be a JSON object');
+    } else {
+      const unknownTargets = new Set<string>();
+      for (const [key, value] of Object.entries(replacements)) {
+        if (typeof value !== 'string') {
+          errors.push(`replacements.json: value for "${key}" must be a string`);
+          continue;
+        }
 
-          // Value must contain at least one {identifier} tag
-          const tags = value.match(TAG_RE);
-          if (!tags || tags.length === 0) {
-            errors.push(
-              `replacements.json: value for "${key}" must contain at least one {identifier} tag, got "${value}"`
-            );
-          }
+        // Value must contain at least one {identifier} tag
+        const tags = value.match(TAG_RE);
+        if (!tags || tags.length === 0) {
+          errors.push(
+            `replacements.json: value for "${key}" must contain at least one {identifier} tag, got "${value}"`
+          );
+        }
 
-          // All curly-brace tokens in value must be safe identifiers (no control tags)
-          const allBraces = value.match(ANY_BRACE_RE);
-          if (allBraces) {
-            for (const token of allBraces) {
-              if (!SAFE_TAG_RE.test(token)) {
-                errors.push(
-                  `replacements.json: unsafe tag "${token}" in value for "${key}". Only {identifier} tags allowed.`
-                );
-                continue;
-              }
-              const fieldName = token.slice(1, -1);
-              if (!metadataFieldNames.has(fieldName)) {
-                unknownTargets.add(fieldName);
-              }
+        // All curly-brace tokens in value must be safe identifiers (no control tags)
+        const allBraces = value.match(ANY_BRACE_RE);
+        if (allBraces) {
+          for (const token of allBraces) {
+            if (!SAFE_TAG_RE.test(token)) {
+              errors.push(
+                `replacements.json: unsafe tag "${token}" in value for "${key}". Only {identifier} tags allowed.`
+              );
+              continue;
+            }
+            const fieldName = token.slice(1, -1);
+            if (!metadataFieldNames.has(fieldName)) {
+              unknownTargets.add(fieldName);
             }
           }
+        }
 
-          // Value must not contain the source key (infinite loop prevention)
-          // For qualified keys, check against the searchText, not the full key.
-          // Nth keys use single-shot replacement so they can't loop — skip the check.
-          const parsed = parseReplacementKey(key, value);
-          if (parsed.type === 'simple' && value.includes(parsed.searchText)) {
-            errors.push(
-              `replacements.json: value for "${key}" contains the key itself (would cause infinite loop)`
-            );
-          } else if (parsed.type === 'context' && value.includes(parsed.searchText)) {
-            errors.push(
-              `replacements.json: value for "${key}" contains the search text "${parsed.searchText}" (would cause infinite loop)`
-            );
-          }
-          // nth keys: no infinite-loop check needed (single-shot replacement)
+        // Value must not contain the source key (infinite loop prevention)
+        // For qualified keys, check against the searchText, not the full key.
+        // Nth keys use single-shot replacement so they can't loop — skip the check.
+        const parsed = parseReplacementKey(key, value);
+        if (parsed.type === 'simple' && value.includes(parsed.searchText)) {
+          errors.push(
+            `replacements.json: value for "${key}" contains the key itself (would cause infinite loop)`
+          );
+        } else if (parsed.type === 'context' && value.includes(parsed.searchText)) {
+          errors.push(
+            `replacements.json: value for "${key}" contains the search text "${parsed.searchText}" (would cause infinite loop)`
+          );
         }
-        for (const fieldName of unknownTargets) {
-          warnings.push(`Replacement target {${fieldName}} not found in metadata fields`);
-        }
+        // nth keys: no infinite-loop check needed (single-shot replacement)
       }
-    } catch (err) {
-      errors.push(`replacements.json: ${(err as Error).message}`);
+      for (const fieldName of unknownTargets) {
+        warnings.push(`Replacement target {${fieldName}} not found in metadata fields`);
+      }
     }
-  } else {
-    if (strict) {
-      errors.push('replacements.json not found (required for runnable recipes)');
-    } else {
-      warnings.push('replacements.json not found (required for runnable recipes)');
-    }
+  } catch (err) {
+    errors.push(`replacements.json: ${(err as Error).message}`);
   }
 
   // Validate clean.json if present

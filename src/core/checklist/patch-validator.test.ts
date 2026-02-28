@@ -14,6 +14,7 @@ import {
   getChecklistPatchValidationArtifact,
   setChecklistPatchValidationStore,
   validateChecklistPatch,
+  applyChecklistPatchOperations,
 } from './patch-validator.js';
 
 const it = itAllure.epic('Compliance & Governance').withLabels({ feature: 'Checklist Patch Validation' });
@@ -401,6 +402,180 @@ describe('validateChecklistPatch', () => {
     await allureStep('And diagnostics identify TARGET_NOT_FOUND', async () => {
       expect(result.diagnostics[0]?.code).toBe('TARGET_NOT_FOUND');
     });
+  });
+
+  it('rejects "-" array token for non-add operations', async () => {
+    const checklistCopy = JSON.parse(JSON.stringify(baseChecklist));
+    const result = applyChecklistPatchOperations(
+      checklistCopy,
+      [{ op: 'replace', path: '/issues/issue-price/related_document_ids/-', value: 'doc-new' }]
+    );
+
+    await allureStep('Then non-add array dash is rejected with TARGET_PATH_INVALID', async () => {
+      expect(result.ok).toBe(false);
+      if (result.ok) {
+        throw new Error('Expected replace against "-" to be rejected.');
+      }
+      expect(result.diagnostic.code).toBe('TARGET_PATH_INVALID');
+    });
+  });
+
+  it('rejects non-numeric array index tokens', async () => {
+    const result = await validateWithEvidence('reject-array-nonnumeric-index', {
+      checklist_id: 'ck_001',
+      checklist: baseChecklist,
+      current_revision: 12,
+      patch: {
+        patch_id: 'patch_array_nonnumeric',
+        expected_revision: 12,
+        operations: [
+          { op: 'replace', path: '/issues/issue-price/related_document_ids/not-an-index', value: 'doc-new' },
+        ],
+      },
+    });
+
+    await allureStep('Then non-numeric array token is rejected as invalid path', async () => {
+      expect(result.ok).toBe(false);
+      if (result.ok) {
+        throw new Error('Expected non-numeric array index to be rejected.');
+      }
+      expect(result.diagnostics[0]?.code).toBe('TARGET_PATH_INVALID');
+    });
+  });
+
+  it('rejects out-of-bounds array add and remove operations', async () => {
+    const addResult = await validateWithEvidence('reject-array-add-out-of-bounds', {
+      checklist_id: 'ck_001',
+      checklist: baseChecklist,
+      current_revision: 12,
+      patch: {
+        patch_id: 'patch_array_add_oob',
+        expected_revision: 12,
+        operations: [
+          { op: 'add', path: '/issues/issue-price/related_document_ids/9', value: 'doc-new' },
+        ],
+      },
+    });
+
+    const removeResult = await validateWithEvidence('reject-array-remove-out-of-bounds', {
+      checklist_id: 'ck_001',
+      checklist: baseChecklist,
+      current_revision: 12,
+      patch: {
+        patch_id: 'patch_array_remove_oob',
+        expected_revision: 12,
+        operations: [
+          { op: 'remove', path: '/issues/issue-price/related_document_ids/9' },
+        ],
+      },
+    });
+
+    await allureStep('Then out-of-bounds add/remove diagnostics use TARGET_NOT_FOUND', async () => {
+      expect(addResult.ok).toBe(false);
+      expect(removeResult.ok).toBe(false);
+      if (addResult.ok || removeResult.ok) {
+        throw new Error('Expected out-of-bounds array operations to fail.');
+      }
+      expect(addResult.diagnostics[0]?.code).toBe('TARGET_NOT_FOUND');
+      expect(removeResult.diagnostics[0]?.code).toBe('TARGET_NOT_FOUND');
+    });
+  });
+
+  it('rejects paths that traverse through non-container values', async () => {
+    const result = await validateWithEvidence('reject-non-container-parent', {
+      checklist_id: 'ck_001',
+      checklist: baseChecklist,
+      current_revision: 12,
+      patch: {
+        patch_id: 'patch_non_container_parent',
+        expected_revision: 12,
+        operations: [
+          { op: 'add', path: '/issues/issue-price/status/child', value: 'x' },
+        ],
+      },
+    });
+
+    await allureStep('Then traversal through scalar values fails with TARGET_PARENT_INVALID', async () => {
+      expect(result.ok).toBe(false);
+      if (result.ok) {
+        throw new Error('Expected traversal through scalar parent to fail.');
+      }
+      expect(result.diagnostics[0]?.code).toBe('TARGET_PARENT_INVALID');
+    });
+  });
+
+  it('returns checklist schema diagnostics for invalid checklist payloads', async () => {
+    const result = await validateChecklistPatch({
+      checklist_id: 'ck_001',
+      checklist: {
+        updated_at: '2026-02-22',
+      },
+      current_revision: 12,
+      patch: {
+        patch_id: 'patch_invalid_checklist',
+        expected_revision: 12,
+        operations: [
+          { op: 'replace', path: '/issues/issue-price/status', value: 'CLOSED' },
+        ],
+      },
+    });
+
+    expect(result.ok).toBe(false);
+    if (result.ok) {
+      throw new Error('Expected invalid checklist to fail schema validation.');
+    }
+    expect(result.diagnostics[0]?.code).toBe('CHECKLIST_SCHEMA_INVALID');
+  });
+
+  it('returns patch schema diagnostics for invalid patch payloads', async () => {
+    const result = await validateChecklistPatch({
+      checklist_id: 'ck_001',
+      checklist: baseChecklist,
+      current_revision: 12,
+      patch: {
+        expected_revision: 12,
+        operations: [],
+      } as unknown as ValidateChecklistPatchArgs['patch'],
+    });
+
+    expect(result.ok).toBe(false);
+    if (result.ok) {
+      throw new Error('Expected invalid patch envelope to fail schema validation.');
+    }
+    expect(result.diagnostics[0]?.code).toBe('PATCH_SCHEMA_INVALID');
+  });
+
+  it('supports JSON clone fallback when structuredClone is unavailable', async () => {
+    const originalStructuredClone = globalThis.structuredClone;
+    const descriptor = Object.getOwnPropertyDescriptor(globalThis, 'structuredClone');
+    Object.defineProperty(globalThis, 'structuredClone', {
+      value: undefined,
+      configurable: true,
+      writable: true,
+    });
+
+    try {
+      const clonedChecklist = JSON.parse(JSON.stringify(baseChecklist));
+      const opResult = applyChecklistPatchOperations(
+        clonedChecklist,
+        [{ op: 'add', path: '/issues/issue-fallback', value: { issue_id: 'issue-fallback', title: 'Fallback', status: 'OPEN' } }]
+      );
+
+      expect(opResult.ok).toBe(true);
+      expect((clonedChecklist.issues as Record<string, unknown>)['issue-fallback']).toEqual(
+        expect.objectContaining({ issue_id: 'issue-fallback' })
+      );
+    } finally {
+      if (descriptor) {
+        Object.defineProperty(globalThis, 'structuredClone', descriptor);
+      } else {
+        Object.defineProperty(globalThis, 'structuredClone', {
+          value: originalStructuredClone,
+          configurable: true,
+          writable: true,
+        });
+      }
+    }
   });
 
   it.openspec('OA-CKL-033')('expires validation artifacts after TTL', async () => {

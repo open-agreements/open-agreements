@@ -278,6 +278,36 @@ describe('CLI program wiring', () => {
     });
   });
 
+  itPlatform('forwards checklist create command payload', async () => {
+    const checklistCreateArgv = [
+      'node',
+      'open-agreements',
+      'checklist',
+      'create',
+      '--data',
+      'checklist.json',
+      '--output',
+      'closing-checklist.docx',
+    ];
+
+    await allureStep('Given checklist create argv payload', async () => {
+      await allureJsonAttachment('cli-checklist-create-argv.json', checklistCreateArgv);
+    });
+
+    await allureStep('When checklist create is executed', async () => {
+      await runCli(checklistCreateArgv);
+    });
+
+    await allureJsonAttachment('cli-checklist-create-forwarded-call.json', runChecklistCreateMock.mock.calls[0]?.[0]);
+
+    await allureStep('Then checklist create forwards expected file paths', async () => {
+      expect(runChecklistCreateMock).toHaveBeenCalledWith({
+        data: 'checklist.json',
+        output: 'closing-checklist.docx',
+      });
+    });
+  });
+
   itPlatform('forwards recipe subcommands to recipe command handlers', async () => {
     const recipeRunArgv = [
       'node',

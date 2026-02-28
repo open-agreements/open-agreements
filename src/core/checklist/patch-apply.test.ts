@@ -469,6 +469,224 @@ describe('applyChecklistPatch', () => {
     });
   });
 
+  it('rejects invalid checklist payloads before request/validation checks', async () => {
+    const patch = {
+      patch_id: 'patch_apply_schema_invalid_checklist',
+      expected_revision: 7,
+      operations: [{ op: 'replace', path: '/issues/issue-escrow/status', value: 'CLOSED' }],
+    };
+
+    const result = await applyChecklistPatch({
+      checklist_id: 'ck_001',
+      checklist: { updated_at: '2026-02-22' },
+      current_revision: 7,
+      request: {
+        validation_id: 'val-any',
+        patch,
+      },
+    });
+
+    expect(result.ok).toBe(false);
+    if (result.ok) {
+      throw new Error('Expected checklist schema validation to fail.');
+    }
+    expect(result.error_code).toBe('CHECKLIST_SCHEMA_INVALID');
+  });
+
+  it('rejects invalid apply request payloads before validation lookup', async () => {
+    const result = await applyChecklistPatch({
+      checklist_id: 'ck_001',
+      checklist: buildChecklist(),
+      current_revision: 7,
+      request: {
+        validation_id: '',
+      },
+    });
+
+    expect(result.ok).toBe(false);
+    if (result.ok) {
+      throw new Error('Expected apply request schema validation to fail.');
+    }
+    expect(result.error_code).toBe('APPLY_REQUEST_SCHEMA_INVALID');
+  });
+
+  it('rejects validation artifacts tied to a different checklist', async () => {
+    const patch = {
+      patch_id: 'patch_apply_validation_checklist_mismatch',
+      expected_revision: 7,
+      operations: [{ op: 'replace', path: '/issues/issue-escrow/status', value: 'CLOSED' }],
+    };
+    const patchHash = computeChecklistPatchHash(ChecklistPatchEnvelopeSchema.parse(patch));
+    const validationStore = {
+      async set() {},
+      async get() {
+        return {
+          validation_id: 'val-mismatch',
+          checklist_id: 'ck-other',
+          patch_id: patch.patch_id,
+          patch_hash: patchHash,
+          expected_revision: 7,
+          created_at_ms: 0,
+          expires_at_ms: Number.MAX_SAFE_INTEGER,
+          resolved_operations: [],
+        };
+      },
+      async delete() {},
+    };
+
+    const result = await applyChecklistPatch({
+      checklist_id: 'ck_001',
+      checklist: buildChecklist(),
+      current_revision: 7,
+      request: {
+        validation_id: 'val-mismatch',
+        patch,
+      },
+      validation_store: validationStore,
+    });
+
+    expect(result.ok).toBe(false);
+    if (result.ok) {
+      throw new Error('Expected checklist mismatch to fail.');
+    }
+    expect(result.error_code).toBe('VALIDATION_MISMATCH');
+  });
+
+  it('rejects validation artifacts tied to a different patch_id', async () => {
+    const patch = {
+      patch_id: 'patch_apply_validation_patch_id_mismatch',
+      expected_revision: 7,
+      operations: [{ op: 'replace', path: '/issues/issue-escrow/status', value: 'CLOSED' }],
+    };
+    const patchHash = computeChecklistPatchHash(ChecklistPatchEnvelopeSchema.parse(patch));
+    const validationStore = {
+      async set() {},
+      async get() {
+        return {
+          validation_id: 'val-mismatch',
+          checklist_id: 'ck_001',
+          patch_id: 'different-patch-id',
+          patch_hash: patchHash,
+          expected_revision: 7,
+          created_at_ms: 0,
+          expires_at_ms: Number.MAX_SAFE_INTEGER,
+          resolved_operations: [],
+        };
+      },
+      async delete() {},
+    };
+
+    const result = await applyChecklistPatch({
+      checklist_id: 'ck_001',
+      checklist: buildChecklist(),
+      current_revision: 7,
+      request: {
+        validation_id: 'val-mismatch',
+        patch,
+      },
+      validation_store: validationStore,
+    });
+
+    expect(result.ok).toBe(false);
+    if (result.ok) {
+      throw new Error('Expected patch_id mismatch to fail.');
+    }
+    expect(result.error_code).toBe('VALIDATION_MISMATCH');
+  });
+
+  it('rejects apply when validated revision differs from current revision', async () => {
+    const patch = {
+      patch_id: 'patch_apply_validated_revision_mismatch',
+      expected_revision: 7,
+      operations: [{ op: 'replace', path: '/issues/issue-escrow/status', value: 'CLOSED' }],
+    };
+    const patchHash = computeChecklistPatchHash(ChecklistPatchEnvelopeSchema.parse(patch));
+    const validationStore = {
+      async set() {},
+      async get() {
+        return {
+          validation_id: 'val-revision',
+          checklist_id: 'ck_001',
+          patch_id: patch.patch_id,
+          patch_hash: patchHash,
+          expected_revision: 6,
+          created_at_ms: 0,
+          expires_at_ms: Number.MAX_SAFE_INTEGER,
+          resolved_operations: [],
+        };
+      },
+      async delete() {},
+    };
+
+    const result = await applyChecklistPatch({
+      checklist_id: 'ck_001',
+      checklist: buildChecklist(),
+      current_revision: 7,
+      request: {
+        validation_id: 'val-revision',
+        patch,
+      },
+      validation_store: validationStore,
+    });
+
+    expect(result.ok).toBe(false);
+    if (result.ok) {
+      throw new Error('Expected validated revision mismatch to fail.');
+    }
+    expect(result.error_code).toBe('REVISION_CONFLICT');
+  });
+
+  it('rejects patches that produce post-apply schema-invalid checklist states', async () => {
+    const patch = {
+      patch_id: 'patch_apply_post_schema_invalid',
+      expected_revision: 7,
+      operations: [{ op: 'replace', path: '/issues/issue-escrow/status', value: 'INVALID_STATUS' }],
+    };
+    const parsedPatch = ChecklistPatchEnvelopeSchema.parse(patch);
+    const patchHash = computeChecklistPatchHash(parsedPatch);
+    const validationStore = {
+      async set() {},
+      async get() {
+        return {
+          validation_id: 'val-post-schema',
+          checklist_id: 'ck_001',
+          patch_id: patch.patch_id,
+          patch_hash: patchHash,
+          expected_revision: 7,
+          created_at_ms: 0,
+          expires_at_ms: Number.MAX_SAFE_INTEGER,
+          resolved_operations: [],
+        };
+      },
+      async delete() {},
+    };
+
+    const appliedStore = {
+      async get() {
+        return null;
+      },
+      async set() {},
+    };
+
+    const result = await applyChecklistPatch({
+      checklist_id: 'ck_001',
+      checklist: buildChecklist(),
+      current_revision: 7,
+      request: {
+        validation_id: 'val-post-schema',
+        patch,
+      },
+      validation_store: validationStore,
+      applied_patch_store: appliedStore,
+    });
+
+    expect(result.ok).toBe(false);
+    if (result.ok) {
+      throw new Error('Expected post-patch schema-invalid state to fail.');
+    }
+    expect(result.error_code).toBe('POST_PATCH_SCHEMA_INVALID');
+  });
+
   it.openspec('OA-CKL-017')('preserves all-or-nothing behavior when apply-time target resolution fails', async () => {
     const validatedChecklist = {
       ...buildChecklist(),

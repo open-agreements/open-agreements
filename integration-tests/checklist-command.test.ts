@@ -317,6 +317,29 @@ describe('checklist command coverage', () => {
     expect(logSpy.mock.calls.some((call) => String(call[0]).includes('Checklist entries: 1'))).toBe(true);
   });
 
+  it('reports checklist creation renderer failures through command error channel', async () => {
+    const harness = await loadChecklistHarness();
+    const dir = createTempDir('oa-checklist-create-render-error-');
+    const dataPath = join(dir, 'checklist.json');
+    writeJson(dataPath, createChecklistPayload());
+
+    harness.spies.fillTemplate.mockRejectedValueOnce(new Error('render failed'));
+    const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+    const exitSpy = vi.spyOn(process, 'exit').mockImplementation(((code?: number) => {
+      throw new Error(`EXIT_${code ?? 0}`);
+    }) as never);
+
+    await expect(
+      harness.runChecklistCreate({
+        data: dataPath,
+        output: join(dir, 'closing-checklist.docx'),
+      })
+    ).rejects.toThrow('EXIT_1');
+
+    expect(exitSpy).toHaveBeenCalledWith(1);
+    expect(errorSpy).toHaveBeenCalledWith('Error: render failed');
+  });
+
   it('writes patch validation output and persists validation artifacts through the JSON store', async () => {
     const harness = await loadChecklistHarness();
     const dir = createTempDir('oa-checklist-validate-success-');
@@ -493,5 +516,31 @@ describe('checklist command coverage', () => {
 
     expect(exitSpy).toHaveBeenCalledWith(1);
     expect(errorSpy).toHaveBeenCalledWith(expect.stringContaining('REVISION_CONFLICT'));
+  });
+
+  it('exits when patch-apply receives an invalid request envelope', async () => {
+    const harness = await loadChecklistHarness();
+    const dir = createTempDir('oa-checklist-apply-invalid-request-');
+    const statePath = join(dir, 'state.json');
+    const requestPath = join(dir, 'request.json');
+    writeJson(statePath, createStatePayload(3));
+    writeJson(requestPath, {
+      validation_id: '',
+    });
+
+    const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
+    const exitSpy = vi.spyOn(process, 'exit').mockImplementation(((code?: number) => {
+      throw new Error(`EXIT_${code ?? 0}`);
+    }) as never);
+
+    await expect(
+      harness.runChecklistPatchApply({
+        state: statePath,
+        request: requestPath,
+      })
+    ).rejects.toThrow('EXIT_1');
+
+    expect(exitSpy).toHaveBeenCalledWith(1);
+    expect(errorSpy).toHaveBeenCalledWith(expect.stringContaining('Patch apply request errors:'));
   });
 });
