@@ -111,13 +111,22 @@ jobs:
         run: |
           TAG_REF="${RELEASE_TAG:-$GITHUB_REF_NAME}"
           VERSION="${TAG_REF#v}"
+          ALREADY=0
+          TOTAL=0
           for pkg in open-agreements @open-agreements/open-agreements @open-agreements/contracts-workspace-mcp @open-agreements/contract-templates-mcp; do
+            TOTAL=$((TOTAL + 1))
             if npm view "$pkg@$VERSION" version >/dev/null 2>&1; then
-              echo "$pkg@$VERSION already exists on npm."
-              exit 1
+              echo "$pkg@$VERSION already published."
+              ALREADY=$((ALREADY + 1))
+            else
+              echo "$pkg@$VERSION not yet published."
             fi
-            echo "$pkg@$VERSION not yet published."
           done
+          if [ "$ALREADY" -eq "$TOTAL" ]; then
+            echo "All $TOTAL packages already published for $VERSION — nothing to do."
+            exit 1
+          fi
+          echo "$ALREADY of $TOTAL packages already published — publish step will skip those."
 
   publish-suite:
     name: Publish package suite
