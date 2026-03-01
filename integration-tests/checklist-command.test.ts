@@ -14,7 +14,7 @@ interface ChecklistHarnessOptions {
 }
 
 interface ChecklistHarness {
-  runChecklistCreate: (args: { data: string; output?: string }) => Promise<void>;
+  runChecklistCreate: (args: { dealName: string; data?: string }) => Promise<void>;
   runChecklistPatchValidate: (args: {
     state: string;
     patch: string;
@@ -33,6 +33,7 @@ interface ChecklistHarness {
     fillTemplate: ReturnType<typeof vi.fn>;
     findTemplateDir: ReturnType<typeof vi.fn>;
     buildChecklistTemplateContext: ReturnType<typeof vi.fn>;
+    createChecklist: ReturnType<typeof vi.fn>;
     validateChecklistPatch: ReturnType<typeof vi.fn>;
     applyChecklistPatch: ReturnType<typeof vi.fn>;
   };
@@ -190,6 +191,10 @@ async function loadChecklistHarness(opts: ChecklistHarnessOptions = {}): Promise
     checklist,
   }));
 
+  const createChecklist = vi.fn((_dealName: string, _initialData?: unknown) => ({
+    uuid: 'ck-123',
+  }));
+
   vi.doMock('../src/core/engine.js', () => ({
     fillTemplate,
   }));
@@ -231,6 +236,7 @@ async function loadChecklistHarness(opts: ChecklistHarnessOptions = {}): Promise
       ChecklistPatchEnvelopeSchema,
       ChecklistPatchApplyRequestSchema,
       buildChecklistTemplateContext,
+      createChecklist,
       validateChecklistPatch,
       applyChecklistPatch,
     };
@@ -246,6 +252,7 @@ async function loadChecklistHarness(opts: ChecklistHarnessOptions = {}): Promise
       fillTemplate,
       findTemplateDir,
       buildChecklistTemplateContext,
+      createChecklist,
       validateChecklistPatch,
       applyChecklistPatch,
     },
@@ -264,80 +271,44 @@ describe('checklist command coverage', () => {
       throw new Error(`EXIT_${code ?? 0}`);
     }) as never);
 
-    await expect(harness.runChecklistCreate({ data: dataPath })).rejects.toThrow('EXIT_1');
+    await expect(harness.runChecklistCreate({ dealName: 'Project Atlas', data: dataPath })).rejects.toThrow('EXIT_1');
 
     expect(exitSpy).toHaveBeenCalledWith(1);
     expect(errorSpy).toHaveBeenCalledWith(expect.stringContaining('Validation errors:'));
-    expect(harness.spies.fillTemplate).not.toHaveBeenCalled();
+    expect(harness.spies.createChecklist).not.toHaveBeenCalled();
   });
 
-  it('fails checklist creation when closing-checklist template is unavailable', async () => {
-    const harness = await loadChecklistHarness({ templateDir: undefined });
-    harness.spies.findTemplateDir.mockReturnValue(undefined);
-
+  it('creates checklist state from valid initial data and logs UUID', async () => {
+    const harness = await loadChecklistHarness();
     const dir = createTempDir('oa-checklist-template-missing-');
     const dataPath = join(dir, 'checklist.json');
     writeJson(dataPath, createChecklistPayload());
 
-    const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
-    const exitSpy = vi.spyOn(process, 'exit').mockImplementation(((code?: number) => {
-      throw new Error(`EXIT_${code ?? 0}`);
-    }) as never);
-
-    await expect(harness.runChecklistCreate({ data: dataPath })).rejects.toThrow('EXIT_1');
-
-    expect(exitSpy).toHaveBeenCalledWith(1);
-    expect(errorSpy).toHaveBeenCalledWith('Error: closing-checklist template not found');
-  });
-
-  it('creates checklist output and logs summary counts', async () => {
-    const harness = await loadChecklistHarness();
-    const dir = createTempDir('oa-checklist-create-');
-    const dataPath = join(dir, 'checklist.json');
-    const outputPath = join(dir, 'closing-checklist.docx');
-    writeJson(dataPath, createChecklistPayload());
-
     const logSpy = vi.spyOn(console, 'log').mockImplementation(() => {});
 
-    await allureStep('Run runChecklistCreate with valid checklist payload', async () => {
-      await harness.runChecklistCreate({ data: dataPath, output: outputPath });
-    });
+    await harness.runChecklistCreate({ dealName: 'Project Atlas', data: dataPath });
 
-    await allureJsonAttachment('checklist-create-forwarding.json', {
-      fillTemplateCall: harness.spies.fillTemplate.mock.calls[0]?.[0],
-      contextCall: harness.spies.buildChecklistTemplateContext.mock.calls[0]?.[0],
-      logs: logSpy.mock.calls.map((call) => String(call[0])),
-    });
-
-    expect(harness.spies.fillTemplate).toHaveBeenCalledTimes(1);
-    expect(harness.spies.fillTemplate.mock.calls[0]?.[0]).toMatchObject({
-      templateDir: '/templates/closing-checklist',
-      outputPath,
-    });
-    expect(logSpy.mock.calls.some((call) => String(call[0]).includes('Checklist entries: 1'))).toBe(true);
+    expect(harness.spies.createChecklist).toHaveBeenCalledWith('Project Atlas', expect.objectContaining({
+      deal_name: 'Project Atlas',
+      updated_at: '2026-02-28',
+    }));
+    expect(logSpy).toHaveBeenCalledWith('Created checklist "Project Atlas"');
+    expect(logSpy).toHaveBeenCalledWith('UUID: ck-123');
   });
 
-  it('reports checklist creation renderer failures through command error channel', async () => {
+  it('creates checklist state without initial data when --data is omitted', async () => {
     const harness = await loadChecklistHarness();
-    const dir = createTempDir('oa-checklist-create-render-error-');
-    const dataPath = join(dir, 'checklist.json');
-    writeJson(dataPath, createChecklistPayload());
+    await harness.runChecklistCreate({ dealName: 'Project Atlas' });
+    expect(harness.spies.createChecklist).toHaveBeenCalledWith('Project Atlas', undefined);
+  });
 
-    harness.spies.fillTemplate.mockRejectedValueOnce(new Error('render failed'));
-    const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
-    const exitSpy = vi.spyOn(process, 'exit').mockImplementation(((code?: number) => {
-      throw new Error(`EXIT_${code ?? 0}`);
-    }) as never);
+  it('surfaces checklist state creation failures', async () => {
+    const harness = await loadChecklistHarness();
+    harness.spies.createChecklist.mockImplementationOnce(() => {
+      throw new Error('state write failed');
+    });
 
-    await expect(
-      harness.runChecklistCreate({
-        data: dataPath,
-        output: join(dir, 'closing-checklist.docx'),
-      })
-    ).rejects.toThrow('EXIT_1');
-
-    expect(exitSpy).toHaveBeenCalledWith(1);
-    expect(errorSpy).toHaveBeenCalledWith('Error: render failed');
+    await expect(harness.runChecklistCreate({ dealName: 'Project Atlas' })).rejects.toThrow('state write failed');
   });
 
   it('writes patch validation output and persists validation artifacts through the JSON store', async () => {

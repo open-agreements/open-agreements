@@ -284,10 +284,9 @@ describe('CLI program wiring', () => {
       'open-agreements',
       'checklist',
       'create',
+      'Project Atlas',
       '--data',
       'checklist.json',
-      '--output',
-      'closing-checklist.docx',
     ];
 
     await allureStep('Given checklist create argv payload', async () => {
@@ -302,8 +301,8 @@ describe('CLI program wiring', () => {
 
     await allureStep('Then checklist create forwards expected file paths', async () => {
       expect(runChecklistCreateMock).toHaveBeenCalledWith({
+        dealName: 'Project Atlas',
         data: 'checklist.json',
-        output: 'closing-checklist.docx',
       });
     });
   });
