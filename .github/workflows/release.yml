@@ -162,36 +162,39 @@ jobs:
           unset NODE_AUTH_TOKEN
           npm config delete //registry.npmjs.org/:_authToken || true
 
+          # Publish unscoped open-agreements (skip if already published by a prior partial run)
           if npm view "open-agreements@$VERSION" version >/dev/null 2>&1; then
-            echo "open-agreements@$VERSION already exists on npm."
-            exit 1
+            echo "open-agreements@$VERSION already published — skipping."
+          else
+            npm publish --provenance --access public
           fi
-          npm publish --provenance --access public
 
+          # Publish @open-agreements/open-agreements scoped variant
           if npm view "@open-agreements/open-agreements@$VERSION" version >/dev/null 2>&1; then
-            echo "@open-agreements/open-agreements@$VERSION already exists on npm."
-            exit 1
+            echo "@open-agreements/open-agreements@$VERSION already published — skipping."
+          else
+            SCOPED_DIR="$(mktemp -d)"
+            cleanup_scoped_dir() {
+              rm -rf "$SCOPED_DIR"
+            }
+            trap cleanup_scoped_dir EXIT
+            node scripts/prepare_scoped_open_agreements_package.mjs --out-dir "$SCOPED_DIR"
+            echo "Publishing @open-agreements/open-agreements from $SCOPED_DIR"
+            (cd "$SCOPED_DIR" && npm publish --provenance --access public)
+            trap - EXIT
+            cleanup_scoped_dir
           fi
-          SCOPED_DIR="$(mktemp -d)"
-          cleanup_scoped_dir() {
-            rm -rf "$SCOPED_DIR"
-          }
-          trap cleanup_scoped_dir EXIT
-          node scripts/prepare_scoped_open_agreements_package.mjs --out-dir "$SCOPED_DIR"
-          echo "Publishing @open-agreements/open-agreements from $SCOPED_DIR"
-          (cd "$SCOPED_DIR" && npm publish --provenance --access public)
-          trap - EXIT
-          cleanup_scoped_dir
 
+          # Publish workspace MCP packages
           for entry in "@open-agreements/contracts-workspace-mcp:packages/contracts-workspace-mcp" "@open-agreements/contract-templates-mcp:packages/contract-templates-mcp"; do
             PKG_NAME="${entry%%:*}"
             PKG_DIR="${entry##*:}"
             if npm view "$PKG_NAME@$VERSION" version >/dev/null 2>&1; then
-              echo "$PKG_NAME@$VERSION already exists on npm."
-              exit 1
+              echo "$PKG_NAME@$VERSION already published — skipping."
+            else
+              echo "Publishing $PKG_NAME from $PKG_DIR"
+              (cd "$PKG_DIR" && npm publish --provenance --access public)
             fi
-            echo "Publishing $PKG_NAME from $PKG_DIR"
-            (cd "$PKG_DIR" && npm publish --provenance --access public)
           done
 
   publish-github-release:
