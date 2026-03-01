@@ -58,7 +58,6 @@ const HEADER_SHADING = { type: ShadingType.CLEAR, color: 'auto', fill: 'F5F5F5' 
 // Build-time width assertions
 // ---------------------------------------------------------------------------
 const checklistWidths = {
-  checklist_working_group: style.table_widths.checklist_working_group,
   checklist_documents: style.table_widths.checklist_documents,
   checklist_action_items: style.table_widths.checklist_action_items,
   checklist_open_issues: style.table_widths.checklist_open_issues,
@@ -317,9 +316,51 @@ function dataCell(text, opts = {}) {
 }
 
 // ---------------------------------------------------------------------------
-// Build a checklist table with header row + single data row (looped by docx-templates)
+// Command cell — tiny invisible text for FOR / END-FOR loop markers
 // ---------------------------------------------------------------------------
-function checklistTable(columnWidths, headers, dataCells) {
+function cmdCell(cmd) {
+  return new TableCell({
+    borders: horizontalBorders(),
+    margins: CELL_MARGINS,
+    verticalAlign: VerticalAlign.CENTER,
+    children: [
+      new Paragraph({
+        spacing: { after: 0, line: style.spacing.line },
+        children: [new TextRun({ text: cmd, font: style.fonts.body, size: 2, color: style.colors.ink })],
+      }),
+    ],
+  });
+}
+
+function emptyCell() {
+  return new TableCell({
+    borders: horizontalBorders(),
+    margins: CELL_MARGINS,
+    verticalAlign: VerticalAlign.CENTER,
+    children: [
+      new Paragraph({
+        spacing: { after: 0, line: style.spacing.line },
+        children: [new TextRun({ text: '', font: style.fonts.body, size: 2 })],
+      }),
+    ],
+  });
+}
+
+// ---------------------------------------------------------------------------
+// Build a checklist table with header row + 3-row loop pattern:
+//   Row 1: {FOR x IN array} (command row — removed by docx-templates)
+//   Row 2: data cells (repeated per iteration)
+//   Row 3: {END-FOR x} (command row — removed by docx-templates)
+// ---------------------------------------------------------------------------
+function checklistTable(columnWidths, headers, dataCells, forCmd, endForCmd) {
+  const colCount = columnWidths.length;
+  const forRowCells = [cmdCell(forCmd)];
+  const endForRowCells = [cmdCell(endForCmd)];
+  for (let i = 1; i < colCount; i++) {
+    forRowCells.push(emptyCell());
+    endForRowCells.push(emptyCell());
+  }
+
   return new Table({
     width: { size: TABLE_WIDTH, type: WidthType.DXA },
     layout: TableLayoutType.FIXED,
@@ -332,10 +373,20 @@ function checklistTable(columnWidths, headers, dataCells) {
         height: { value: style.sizes.checklist_row_height, rule: HeightRule.ATLEAST },
         children: headers.map((label) => headerCell(label)),
       }),
+      // FOR command row
+      new TableRow({
+        height: { value: 0, rule: HeightRule.ATLEAST },
+        children: forRowCells,
+      }),
       // Data row — docx-templates repeats this row per iteration
       new TableRow({
         height: { value: style.sizes.checklist_row_height, rule: HeightRule.ATLEAST },
         children: dataCells,
+      }),
+      // END-FOR command row
+      new TableRow({
+        height: { value: 0, rule: HeightRule.ATLEAST },
+        children: endForRowCells,
       }),
     ],
   });
@@ -371,31 +422,19 @@ const doc = new Document({
           ],
         }),
 
-        // ------ Working Group ------
-        sectionTitleParagraph('Working Group'),
-        checklistTable(
-          style.table_widths.checklist_working_group,
-          ['Name', 'Organization', 'Role', 'Email'],
-          [
-            dataCell('{$m.name}', { prefixCmd: '{FOR m IN working_group}' }),
-            dataCell('{$m.organization}'),
-            dataCell('{$m.role}'),
-            dataCell('{$m.email}', { suffixCmd: '{END-FOR m}' }),
-          ],
-        ),
-
-        // Spacer
-        new Paragraph({ spacing: { before: 200, after: 0 }, children: [] }),
-
-        // ------ Documents ------
+        // ------ Documents (4-column: No. | Title | Status | Responsible Party) ------
         sectionTitleParagraph('Documents'),
         checklistTable(
           style.table_widths.checklist_documents,
-          ['Document', 'Status'],
+          ['No.', 'Title', 'Status', 'Responsible Party'],
           [
-            dataCell('{$d.document_name}', { prefixCmd: '{FOR d IN documents}' }),
-            dataCell('{$d.status}', { suffixCmd: '{END-FOR d}' }),
+            dataCell('{$d.number}'),
+            dataCell('{$d.title}'),
+            dataCell('{$d.status}'),
+            dataCell('{$d.responsible_party}'),
           ],
+          '{FOR d IN documents}',
+          '{END-FOR d}',
         ),
 
         // Spacer
@@ -407,29 +446,32 @@ const doc = new Document({
           style.table_widths.checklist_action_items,
           ['ID', 'Description', 'Status', 'Assigned To', 'Due Date'],
           [
-            dataCell('{$a.item_id}', { prefixCmd: '{FOR a IN action_items}' }),
+            dataCell('{$a.item_id}'),
             dataCell('{$a.description}'),
             dataCell('{$a.status}'),
-            dataCell('{$a.assigned_to.organization}'),
-            dataCell('{$a.due_date}', { suffixCmd: '{END-FOR a}' }),
+            dataCell('{$a.assigned_to}'),
+            dataCell('{$a.due_date}'),
           ],
+          '{FOR a IN action_items}',
+          '{END-FOR a}',
         ),
 
         // Spacer
         new Paragraph({ spacing: { before: 200, after: 0 }, children: [] }),
 
-        // ------ Open Issues (5-column summary) ------
+        // ------ Open Issues (4-column: ID | Title | Status | Summary) ------
         sectionTitleParagraph('Open Issues'),
         checklistTable(
           style.table_widths.checklist_open_issues,
-          ['ID', 'Title', 'Status', 'Escalation', 'Resolution'],
+          ['ID', 'Title', 'Status', 'Summary'],
           [
-            dataCell('{$i.issue_id}', { prefixCmd: '{FOR i IN open_issues}' }),
+            dataCell('{$i.issue_id}'),
             dataCell('{$i.title}'),
             dataCell('{$i.status}'),
-            dataCell('{$i.escalation_tier}'),
-            dataCell('{$i.resolution}', { suffixCmd: '{END-FOR i}' }),
+            dataCell('{$i.summary}'),
           ],
+          '{FOR i IN open_issues}',
+          '{END-FOR i}',
         ),
       ],
     },

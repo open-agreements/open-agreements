@@ -8,6 +8,7 @@ import {
   ClosingChecklistSchema,
   applyChecklistPatch,
   buildChecklistTemplateContext,
+  formatChecklistDocx,
   validateChecklistPatch,
   humanStatus,
   createChecklist as createChecklistState,
@@ -322,6 +323,7 @@ export async function runChecklistRender(args: ChecklistRenderArgs): Promise<voi
     templateDir,
     values: buildChecklistTemplateContext(state.checklist) as unknown as Record<string, unknown>,
     outputPath,
+    postProcess: formatChecklistDocx,
   });
 
   console.log(`Rendered checklist for "${state.checklist.deal_name}"`);

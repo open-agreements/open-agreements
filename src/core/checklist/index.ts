@@ -80,6 +80,7 @@ export {
   type HistoryRecord,
 } from './state-manager.js';
 export { appendJsonl, readJsonl } from './jsonl-stores.js';
+export { formatChecklistDocx } from './format-checklist-docx.js';
 
 const STAGE_ORDER: ChecklistStage[] = ['PRE_SIGNING', 'SIGNING', 'CLOSING', 'POST_CLOSING'];
 const STAGE_HEADINGS: Record<ChecklistStage, string> = {
@@ -367,9 +368,10 @@ export function buildChecklistTemplateContext(data: unknown): ChecklistTemplateC
 
       // Signatory sub-rows
       for (const signatory of row.entry.signatories) {
+        const sigCheckbox = signatory.status === 'RECEIVED' ? '\u2611' : '\u2610';
         documentRows.push({
           number: '',
-          title: `${indent}\u00A0\u00A0Signatory: ${signatoryLabel(signatory)}`,
+          title: `${indent}\u00A0\u00A0${sigCheckbox} Signatory: ${signatoryLabel(signatory)}`,
           status: '',
           responsible_party: '',
         });
@@ -377,10 +379,11 @@ export function buildChecklistTemplateContext(data: unknown): ChecklistTemplateC
 
       // Linked action sub-rows
       for (const action of row.linkedActions) {
+        const actCheckbox = action.status === 'COMPLETED' ? '\u2611' : '\u2610';
         const latestCitation = latestCitationLabel(action.citations);
         documentRows.push({
           number: '',
-          title: `${indent}\u00A0\u00A0Action ${action.action_id}: ${action.description}`,
+          title: `${indent}\u00A0\u00A0${actCheckbox} Action ${action.action_id}: ${action.description}`,
           status: latestCitation ? `${humanStatus(action.status)} | ${latestCitation}` : humanStatus(action.status),
           responsible_party: responsibilityLabel(action.assigned_to),
         });
@@ -388,10 +391,11 @@ export function buildChecklistTemplateContext(data: unknown): ChecklistTemplateC
 
       // Linked issue sub-rows
       for (const issue of row.linkedIssues) {
+        const issCheckbox = issue.status === 'CLOSED' ? '\u2611' : '\u2610';
         const latestCitation = latestCitationLabel(issue.citations);
         documentRows.push({
           number: '',
-          title: `${indent}\u00A0\u00A0Issue ${issue.issue_id}: ${issue.title}`,
+          title: `${indent}\u00A0\u00A0${issCheckbox} Issue ${issue.issue_id}: ${issue.title}`,
           status: latestCitation ? `${humanStatus(issue.status)} | ${latestCitation}` : humanStatus(issue.status),
           responsible_party: '',
         });
