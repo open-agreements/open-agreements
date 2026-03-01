@@ -38,9 +38,9 @@
     "signature_one_party": [2605, 7465],
     "section_header": [7900, 2170],
     "checklist_working_group": [2800, 2800, 2200, 2270],
-    "checklist_documents": [6700, 3370],
+    "checklist_documents": [600, 5670, 1800, 2000],
     "checklist_action_items": [800, 3600, 1800, 2070, 1800],
-    "checklist_open_issues": [1500, 2600, 1500, 1500, 2970]
+    "checklist_open_issues": [1200, 3870, 1500, 3500]
   },
   "spacing": {
     "line": 340,

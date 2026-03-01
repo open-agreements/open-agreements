@@ -10,6 +10,7 @@ export interface FillOptions {
   templateDir: string;
   values: Record<string, unknown>;
   outputPath: string;
+  postProcess?: (outputPath: string) => void | Promise<void>;
 }
 
 export interface FillResult {
@@ -194,6 +195,7 @@ export async function fillTemplate(options: FillOptions): Promise<FillResult> {
     computeDisplayFields: (d) => computeDisplayFields(d, fieldNames),
     fixSmartQuotes: true,
     verify: (p) => verifyTemplateFill(p),
+    postProcess: options.postProcess,
   });
 
   return {
