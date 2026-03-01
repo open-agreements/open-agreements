@@ -1,9 +1,9 @@
 import { resolve } from 'node:path';
 import { createHash } from 'node:crypto';
-import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import { runRecipe, cleanDocument, patchDocument } from '../core/recipe/index.js';
 import { loadCleanConfig } from '../core/metadata.js';
-import { getRecipesDir, resolveRecipeDir } from '../utils/paths.js';
+import { listRecipeIds, resolveRecipeDir } from '../utils/paths.js';
 
 export interface RecipeRunArgs {
   recipeId: string;
@@ -19,7 +19,7 @@ export async function runRecipeCommand(args: RecipeRunArgs): Promise<void> {
   const recipeDir = resolveRecipeDir(args.recipeId);
 
   if (!existsSync(recipeDir)) {
-    const available = getAvailableRecipes();
+    const available = listRecipeIds();
     console.error(`Recipe "${args.recipeId}" not found.`);
     if (available.length > 0) {
       console.error(`Available recipes: ${available.join(', ')}`);
@@ -113,12 +113,4 @@ export async function runRecipePatch(args: RecipePatchArgs): Promise<void> {
     console.error(`Error: ${(err as Error).message}`);
     process.exit(1);
   }
-}
-
-function getAvailableRecipes(): string[] {
-  const recipesDir = getRecipesDir();
-  if (!existsSync(recipesDir)) return [];
-  return readdirSync(recipesDir, { withFileTypes: true })
-    .filter((d) => d.isDirectory())
-    .map((d) => d.name);
 }

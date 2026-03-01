@@ -61,6 +61,8 @@ function createTemplateFixture(opts: {
   fieldsYaml: string;
   requiredFields?: string[];
   replacements?: Record<string, string>;
+  replacementsRaw?: string;
+  writeTemplateDocx?: boolean;
 }): string {
   const dir = mkdtempSync(join(tmpdir(), 'oa-template-validate-'));
   tempDirs.push(dir);
@@ -85,11 +87,23 @@ function createTemplateFixture(opts: {
     ].join('\n'),
     'utf-8'
   );
-  writeFileSync(join(dir, 'template.docx'), buildDocx(opts.docText));
-  if (opts.replacements) {
+  if (opts.writeTemplateDocx ?? true) {
+    writeFileSync(join(dir, 'template.docx'), buildDocx(opts.docText));
+  }
+  if (opts.replacementsRaw !== undefined) {
+    writeFileSync(join(dir, 'replacements.json'), opts.replacementsRaw, 'utf-8');
+  } else if (opts.replacements) {
     writeFileSync(join(dir, 'replacements.json'), JSON.stringify(opts.replacements, null, 2), 'utf-8');
   }
   return dir;
+}
+
+function buildDocxWithoutDocumentXml(): Buffer {
+  const zip = new AdmZip();
+  zip.addFile('[Content_Types].xml', Buffer.from(CONTENT_TYPES_XML, 'utf-8'));
+  zip.addFile('_rels/.rels', Buffer.from(RELS_XML, 'utf-8'));
+  zip.addFile('word/_rels/document.xml.rels', Buffer.from(WORD_RELS_XML, 'utf-8'));
+  return zip.toBuffer();
 }
 
 describe('validateTemplate', () => {
@@ -241,5 +255,133 @@ describe('validateTemplate placeholder coverage', () => {
     await allureJsonAttachment('required-missing-in-replacements-result.json', result);
     expect(result.valid).toBe(false);
     expect(result.errors.join(' ')).toContain('Required field \"required_field\" defined in metadata but not found');
+  });
+
+  it('returns an error when metadata cannot be loaded', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'oa-template-metadata-missing-'));
+    tempDirs.push(dir);
+
+    const result = validateTemplate(dir, 'fixture-missing-metadata');
+
+    expect(result.valid).toBe(false);
+    expect(result.errors.join(' ')).toContain('Failed to load metadata');
+  });
+
+  it('returns an error when template.docx is absent', () => {
+    const dir = createTemplateFixture({
+      docText: 'Unused',
+      fieldsYaml: '  - name: company_name\n    type: string\n    description: Company name',
+      writeTemplateDocx: false,
+    });
+
+    const result = validateTemplate(dir, 'fixture-missing-docx');
+
+    expect(result.valid).toBe(false);
+    expect(result.errors).toContain('template.docx not found in template directory');
+  });
+
+  it('returns an error when replacements.json cannot be parsed', () => {
+    const dir = createTemplateFixture({
+      docText: '[Company Name]',
+      fieldsYaml: '  - name: company_name\n    type: string\n    description: Company name',
+      replacementsRaw: '{invalid-json',
+    });
+
+    const result = validateTemplate(dir, 'fixture-invalid-replacements-json');
+
+    expect(result.valid).toBe(false);
+    expect(result.errors.join(' ')).toContain('Failed to parse replacements.json');
+  });
+
+  it('validates declarative replacement keys and placeholder coverage', () => {
+    const dir = createTemplateFixture({
+      docText: '[Company Name] {doc_only} {IF doc_flag}{END-IF} {IF}',
+      fieldsYaml: [
+        '  - name: company_name',
+        '    type: string',
+        '    description: Company name',
+        '  - name: unused_optional',
+        '    type: string',
+        '    description: Optional but unused',
+      ].join('\n'),
+      requiredFields: ['company_name'],
+      replacements: {
+        '[Missing Placeholder]': '{company_name}',
+        '[Company Name]': '{company_name} {IF company_name}{END-IF}',
+      },
+    });
+
+    const result = validateTemplate(dir, 'fixture-declarative-coverage');
+
+    expect(result.valid).toBe(false);
+    expect(result.errors.join(' ')).toContain('Replacement key "[Missing Placeholder]" not found');
+    expect(result.warnings.join(' ')).toContain('Optional field "unused_optional"');
+    expect(result.warnings.join(' ')).toContain('Placeholder {doc_only} found in replacements/template');
+  });
+
+  it('accepts FOR loop placeholders in direct template scanning mode', () => {
+    const dir = createTemplateFixture({
+      docText: '{FOR row IN board_members}{$row.name}{END-FOR row}',
+      fieldsYaml: '  - name: board_members\n    type: array\n    description: Board members',
+    });
+
+    const result = validateTemplate(dir, 'fixture-for-loop');
+
+    expect(result.valid).toBe(true);
+    expect(result.errors).toEqual([]);
+  });
+
+  it('flags unsafe template control tags in template.docx', () => {
+    const dir = createTemplateFixture({
+      docText: '{#if hacked}Text{/if}',
+      fieldsYaml: '  - name: company_name\n    type: string\n    description: Company name',
+    });
+
+    const result = validateTemplate(dir, 'fixture-unsafe-tags');
+
+    expect(result.valid).toBe(false);
+    expect(result.errors.join(' ')).toContain('Unsafe template tag');
+  });
+
+  it('warns on unknown placeholders and ignores END control token warnings', () => {
+    const dir = createTemplateFixture({
+      docText: '{END} {unknown_field}',
+      fieldsYaml: '  - name: known_field\n    type: string\n    description: Known field',
+    });
+
+    const result = validateTemplate(dir, 'fixture-unknown-placeholder');
+
+    expect(result.valid).toBe(true);
+    expect(result.warnings.join(' ')).toContain('Placeholder {unknown_field} found in template.docx');
+    expect(result.warnings.join(' ')).not.toContain('Placeholder {END}');
+  });
+
+  it('handles DOCX files that do not contain word/document.xml', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'oa-template-missing-document-xml-'));
+    tempDirs.push(dir);
+    writeFileSync(
+      join(dir, 'metadata.yaml'),
+      [
+        'name: Missing XML Fixture',
+        'source_url: https://example.com/template.docx',
+        'version: "1.0"',
+        'license: CC-BY-4.0',
+        'allow_derivatives: true',
+        'attribution_text: Example attribution',
+        'fields:',
+        '  - name: optional_field',
+        '    type: string',
+        '    description: Optional field',
+        'required_fields: []',
+        '',
+      ].join('\n'),
+      'utf-8'
+    );
+    writeFileSync(join(dir, 'template.docx'), buildDocxWithoutDocumentXml());
+
+    const result = validateTemplate(dir, 'fixture-no-document-xml');
+
+    expect(result.valid).toBe(true);
+    expect(result.warnings.join(' ')).toContain('Optional field "optional_field"');
   });
 });
