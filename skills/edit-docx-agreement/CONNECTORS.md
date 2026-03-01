@@ -3,7 +3,7 @@
 ## OpenAgreements (for template filling)
 
 Use the standard OpenAgreements connectors (remote MCP or local CLI) for fill operations.
-See `skills/open-agreements/CONNECTORS.md` for details.
+See https://github.com/open-agreements/open-agreements/blob/main/skills/open-agreements/CONNECTORS.md for details.
 
 ## Safe Docx MCP (for surgical DOCX editing)
 

@@ -18,7 +18,7 @@ Use this skill when a user asks for **custom edits that are not exposed as templ
 
 > **Interactivity note**: Always ask the user for missing inputs (file path, change intent, output preferences).
 
-## Trust boundary
+## Security model
 
 This skill bridges two separate systems:
 - **OpenAgreements** (remote MCP or local CLI) — for template filling. Follows the OpenAgreements zero-download security model.
