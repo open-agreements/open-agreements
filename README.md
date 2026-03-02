@@ -280,6 +280,36 @@ Vercel deploy notes:
 - Keep project root as repo root
 - The included `vercel.json` deploys `_site/` as static output
 
+## Compliance & Audit Skills
+
+Open Agreements includes AI agent skills for ISO 27001 and SOC 2 compliance work. These are markdown-only procedural skills — no scripts executed, no secrets required, evidence stays local. Developed with [Hazel Castro](https://internalisoaudit.com) (ISO 27001 Lead Auditor, 14+ years, 100+ audits).
+
+### ISO 27001 Evidence Collection
+
+Collect, organize, and validate evidence for ISO 27001 and SOC 2 audits. API-first approach with CLI commands for major cloud platforms. Produces timestamped, auditor-ready evidence packages.
+
+```bash
+npx skills add open-agreements/open-agreements --skill iso-27001-evidence-collection
+```
+
+### ISO 27001 Internal Audit
+
+Run a structured internal audit against ISO 27001:2022. Walk through controls by domain, identify gaps, collect evidence, and generate findings with corrective action recommendations.
+
+```bash
+npx skills add open-agreements/open-agreements --skill iso-27001-internal-audit
+```
+
+### SOC 2 Readiness
+
+Assess SOC 2 Type II readiness. Map Trust Services Criteria to controls, identify gaps, and build a prioritized remediation plan with NIST SP 800-53 cross-mapping.
+
+```bash
+npx skills add open-agreements/open-agreements --skill soc2-readiness
+```
+
+All three skills use NIST SP 800-53 (public domain) as their canonical reference. Browse the full skill catalog at [skills.sh/open-agreements](https://skills.sh/open-agreements).
+
 ## Optional Content Roots (Future-Proofing)
 
 To support logical unbundling as form libraries grow, `open-agreements` can load content from additional roots via:
