@@ -107,7 +107,13 @@
     "nvca",
     "template-engine",
     "document-generation",
-    "contract-automation"
+    "contract-automation",
+    "iso-27001",
+    "soc-2",
+    "compliance",
+    "audit",
+    "grc",
+    "evidence-collection"
   ],
   "author": "UseJunior <steven@usejunior.com>",
   "license": "MIT",

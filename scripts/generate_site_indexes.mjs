@@ -271,6 +271,17 @@ for (const link of helpfulLinks) {
 }
 
 llmsLines.push("");
+llmsLines.push("## Compliance & Audit Skills");
+llmsLines.push("");
+llmsLines.push("Open Agreements includes AI agent skills for ISO 27001 and SOC 2 compliance work. Install individually:");
+llmsLines.push("");
+llmsLines.push("- **ISO 27001 Evidence Collection** — Collect, organize, and validate audit evidence with API-first CLI commands for major cloud platforms. Install: `npx skills add open-agreements/open-agreements --skill iso-27001-evidence-collection`");
+llmsLines.push("- **ISO 27001 Internal Audit** — Run a structured internal audit against ISO 27001:2022. Walk through controls by domain, identify gaps, and generate findings. Install: `npx skills add open-agreements/open-agreements --skill iso-27001-internal-audit`");
+llmsLines.push("- **SOC 2 Readiness** — Assess SOC 2 Type II readiness. Map Trust Services Criteria to controls and build a prioritized remediation plan. Install: `npx skills add open-agreements/open-agreements --skill soc2-readiness`");
+llmsLines.push("");
+llmsLines.push("Lead maintainer: Hazel Cornelia DeCastro (ISO 27001 Lead Auditor, 14+ years). Full catalog: [skills.sh/open-agreements](https://skills.sh/open-agreements)");
+
+llmsLines.push("");
 llmsLines.push("## Discovery files");
 llmsLines.push(`- [sitemap.xml](${SITE_ORIGIN}/sitemap.xml)`);
 llmsLines.push(`- [llms-full.txt](${SITE_ORIGIN}/llms-full.txt)`);
