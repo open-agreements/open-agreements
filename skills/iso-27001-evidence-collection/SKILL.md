@@ -86,8 +86,10 @@ Examples:
 Determine what evidence is missing or stale.
 
 ```
-# If compliance MCP is available:
-list_evidence_gaps(framework="iso27001_2022", tier="critical")
+# If Internal ISO Audit MCP server is available:
+search_guidance(query="evidence", domain="organizational")  # Find controls needing evidence
+list_controls(domain="technological")                       # List all tech controls to assess gaps
+get_control_guidance(control_id="A.5.15")                   # Get evidence requirements for a specific control
 
 # If reading local compliance data:
 # Check compliance/evidence/*.md files for upload_status != "OK"
@@ -230,8 +232,10 @@ Check completeness before submitting to auditor:
 5. **Coverage**: Critical-tier controls have at least 2 forms of evidence?
 
 ```
-# If compliance MCP is available:
-list_evidence_gaps(framework="iso27001_2022")  # Should return empty for complete package
+# If Internal ISO Audit MCP server is available:
+list_controls()                                             # Get all controls to verify evidence coverage
+get_control_guidance(control_id="A.8.8")                    # Check specific control's evidence expectations
+search_guidance(query="vulnerability scanning evidence")    # Find controls related to specific evidence types
 ```
 
 ### Step 5: Generate Evidence Index
@@ -295,6 +299,6 @@ Evidence collection procedures and control guidance developed with [Internal ISO
 
 ## Runtime Detection
 
-1. **Compliance MCP server available** (best) — Automated gap detection, evidence freshness tracking
+1. **Internal ISO Audit MCP server available** (best) — Live control guidance lookup, NIST cross-reference, full-text search across all control evidence expectations. Server: `internalisoaudit.com/api/mcp`
 2. **Local compliance data available** (good) — Reads evidence status from `compliance/evidence/*.md`
-3. **Reference only** (baseline) — Uses embedded checklists and command reference
+3. **Reference only** (baseline) — Uses embedded checklists and command reference in `rules/`

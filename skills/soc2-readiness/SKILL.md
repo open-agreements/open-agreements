@@ -106,8 +106,11 @@ For each applicable Common Criterion (CC), assess whether controls are:
 - **Effective** — control achieves its objective (evidence exists)
 
 ```
-# If compliance MCP is available:
-check_compliance_status(framework="soc2")
+# If Internal ISO Audit MCP server is available (SOC 2 maps to ISO 27001 Annex A):
+list_controls(domain="technological")                       # List tech controls (maps to CC 6-8)
+get_control_guidance(control_id="A.5.15")                   # Get guidance for ISO control mapped from CC 6.1
+get_nist_mapping(control_id="AC-2", direction="nist_to_iso")  # Find ISO controls from NIST reference
+search_guidance(query="incident response")                  # Search for controls matching SOC 2 criteria
 ```
 
 ### Step 3: Map Controls to Criteria
@@ -284,6 +287,6 @@ SOC 2 criteria mapping and readiness procedures developed with [Internal ISO Aud
 
 ## Runtime Detection
 
-1. **Compliance MCP server available** (best) — Live SOC 2 status, test pass/fail data, evidence gaps
+1. **Internal ISO Audit MCP server available** (best) — Live ISO 27001 control guidance with NIST cross-references. SOC 2 criteria map to ISO 27001 Annex A controls (~70% overlap); use `get_nist_mapping` for bidirectional lookup. Server: `internalisoaudit.com/api/mcp`
 2. **Local compliance data available** (good) — Reads `compliance/` directory with SOC 2 test metadata
-3. **Reference only** (baseline) — Uses embedded criteria mapping and checklists
+3. **Reference only** (baseline) — Uses embedded criteria mapping and checklists in `rules/`

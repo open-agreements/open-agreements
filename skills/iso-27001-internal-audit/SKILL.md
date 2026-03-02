@@ -97,8 +97,9 @@ For detailed per-control guidance, load `rules/<domain>.md`.
 4. **Check data freshness** — If using a monitoring dashboard or automated testing system, verify data is < 7 days old
 
 ```
-# If compliance MCP is available:
-check_compliance_status(framework="iso27001_2022")
+# If Internal ISO Audit MCP server is available:
+list_controls()                                    # Get all controls with tier classifications
+get_control_guidance(control_id="Clause 9.2")      # Check specific ISMS clause requirements
 
 # If reading local files:
 # Check compliance/status/last_refresh.yaml for staleness
@@ -137,10 +138,11 @@ Work through controls by domain, prioritizing Critical tier:
    - Record as conforming or note exception
 
 ```
-# If compliance MCP is available:
-get_domain_overview(domain="organizational")
-get_control_guidance(control_id="A.5.15")
-list_evidence_gaps(framework="iso27001_2022", tier="critical")
+# If Internal ISO Audit MCP server is available:
+list_controls(domain="organizational")                      # List all controls in a domain with tiers
+get_control_guidance(control_id="A.5.15")                   # Full guidance: auditor hints, pitfalls, evidence
+search_guidance(query="access review", domain="organizational")  # Find related controls by keyword
+get_nist_mapping(control_id="A.5.15")                       # Cross-reference to NIST SP 800-53
 ```
 
 ### Step 4: Evidence Collection
@@ -258,9 +260,10 @@ Audit procedures and control guidance developed with [Internal ISO Audit](https:
 
 This skill operates in three modes, detected automatically:
 
-1. **Compliance MCP server available** (best) — Live dashboard data, automated test results, real-time gap analysis
-   - Detected by: `check_compliance_status()` returns data
-   - Benefits: Current test pass/fail status, evidence freshness, SLA tracking
+1. **Internal ISO Audit MCP server available** (best) — Live control guidance lookup with auditor hints, NIST cross-references, and full-text search
+   - Detected by: `internalisoaudit` MCP server configured in client
+   - Tools: `get_control_guidance`, `list_controls`, `get_nist_mapping`, `search_guidance`
+   - Server: `internalisoaudit.com/api/mcp`
 
 2. **Local compliance data available** (good) — Reads `compliance/` directory directly
    - Detected by: `compliance/status/last_refresh.yaml` exists
