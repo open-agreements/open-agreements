@@ -1,5 +1,6 @@
 import AdmZip from 'adm-zip';
 import { DOMParser } from '@xmldom/xmldom';
+import type { Element, Node } from '@xmldom/xmldom';
 import { mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
@@ -36,6 +37,52 @@ function getParagraphText(docxPath: string): string[] {
   return out;
 }
 
+function getTableRows(docxPath: string): string[][] {
+  const zip = new AdmZip(docxPath);
+  const xml = zip.getEntry('word/document.xml')?.getData().toString('utf-8') ?? '';
+  const doc = new DOMParser().parseFromString(xml, 'text/xml');
+  const tables = doc.getElementsByTagNameNS(W_NS, 'tbl');
+  const rows: string[][] = [];
+
+  for (let t = 0; t < tables.length; t++) {
+    const rowNodes = Array.from(tables[t].childNodes ?? []).filter((node: Node): node is Element => {
+      if (node.nodeType !== 1) return false;
+      const element = node as Element;
+      return element.localName === 'tr' && element.namespaceURI === W_NS;
+    });
+    for (const row of rowNodes) {
+      const cells = Array.from(row.childNodes ?? []).filter((node: Node): node is Element => {
+        if (node.nodeType !== 1) return false;
+        const element = node as Element;
+        return element.localName === 'tc' && element.namespaceURI === W_NS;
+      });
+      const cellText = cells.map((cell) => {
+        const textNodes = cell.getElementsByTagNameNS(W_NS, 't');
+        const parts: string[] = [];
+        for (let i = 0; i < textNodes.length; i++) {
+          parts.push(textNodes[i].textContent ?? '');
+        }
+        return parts.join('').trim();
+      });
+      rows.push(cellText);
+    }
+  }
+
+  return rows;
+}
+
+function getXmlContent(docxPath: string, entryPattern: RegExp): string {
+  const zip = new AdmZip(docxPath);
+  const entries = zip.getEntries();
+  const parts: string[] = [];
+  for (const entry of entries) {
+    if (entryPattern.test(entry.entryName)) {
+      parts.push(entry.getData().toString('utf-8'));
+    }
+  }
+  return parts.join('\n');
+}
+
 describe('working-group-list rendering', () => {
   it.openspec('OA-CKL-029')('renders one line per working group member', async () => {
     const templateDir = findTemplateDir('working-group-list');
@@ -58,11 +105,38 @@ describe('working-group-list rendering', () => {
       },
     });
 
-    const lines = getParagraphText(outputPath);
-    expect(lines).toContain('Project Atlas - Series A Closing - Working Group List');
-    expect(lines).toContain('Updated: 2026-02-22');
-    expect(lines).toContain('Name | Organization | Role | Email');
-    expect(lines).toContain('Alex Founder | Atlas Co | CEO | alex@atlas.co');
-    expect(lines).toContain('Morgan Counsel | Law Firm | Lead Counsel | morgan@lawfirm.com');
+    // Title and date paragraphs
+    const paragraphs = getParagraphText(outputPath);
+    expect(paragraphs).toContain('Project Atlas - Series A Closing — Working Group List');
+    expect(paragraphs).toContain('Updated: 2026-02-22');
+
+    // Table assertions
+    const rows = getTableRows(outputPath);
+    const nonEmptyRows = rows.filter((row) => row.some((cell) => cell.length > 0));
+
+    // Header row
+    expect(nonEmptyRows[0]).toEqual(['Name', 'Organization', 'Role', 'Email']);
+
+    // Data rows contain filled member values
+    const alexRow = nonEmptyRows.find((row) => row.includes('Alex Founder'));
+    expect(alexRow).toBeTruthy();
+    expect(alexRow).toEqual(['Alex Founder', 'Atlas Co', 'CEO', 'alex@atlas.co']);
+
+    const morganRow = nonEmptyRows.find((row) => row.includes('Morgan Counsel'));
+    expect(morganRow).toBeTruthy();
+    expect(morganRow).toEqual(['Morgan Counsel', 'Law Firm', 'Lead Counsel', 'morgan@lawfirm.com']);
+
+    // No leftover loop markers in the filled output
+    const allText = rows.flat().join(' ');
+    expect(allText).not.toContain('{FOR');
+    expect(allText).not.toContain('{END-FOR');
+
+    // Header XML contains "WORKING GROUP LIST"
+    const headerXml = getXmlContent(outputPath, /word\/header\d*\.xml/);
+    expect(headerXml).toContain('WORKING GROUP LIST');
+
+    // Footer XML contains "CC0 1.0"
+    const footerXml = getXmlContent(outputPath, /word\/footer\d*\.xml/);
+    expect(footerXml).toContain('CC0 1.0');
   });
 });
