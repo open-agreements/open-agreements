@@ -279,7 +279,16 @@ For detailed SOC 2-specific guidance:
 
 | File | Coverage |
 |------|----------|
-| `rules/trust-services.md` | Detailed per-criterion guidance for all 5 trust service categories |
+| `rules/logical-access.md` | CC 6.1–6.8 — access control, provisioning, physical, threat detection |
+| `rules/system-operations.md` | CC 7.1–7.5 — monitoring, anomaly detection, incident response, recovery |
+| `rules/change-vendor-management.md` | CC 8.1, CC 9.1–9.2 — change control, risk mitigation, vendor management |
+| `rules/control-environment.md` | CC 1.1–1.5 — governance, ethics, org structure, competence, accountability |
+| `rules/risk-assessment.md` | CC 3.1–3.4 — risk objectives, identification, fraud risk, change impact |
+| `rules/control-activities.md` | CC 5.1–5.3 — risk mitigation selection, technology controls, policy deployment |
+| `rules/communication-info.md` | CC 2.1–2.3 — internal/external communication, information quality |
+| `rules/monitoring-activities.md` | CC 4.1–4.2 — ongoing monitoring, deficiency evaluation |
+| `rules/optional-categories.md` | A 1.x, PI 1.x, C 1.x — Availability, Processing Integrity, Confidentiality |
+| `rules/privacy-criteria.md` | P 1.x–8.x — Privacy criteria (when PII in scope) |
 
 ## Attribution
 
