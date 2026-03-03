@@ -288,9 +288,9 @@ const tools: ToolDefinition[] = [
           : 'FILL_FAILED';
         return toolError('fill_template', code, message);
       } finally {
-        if (!input.output_path) {
-          rmSync(workingDir, { recursive: true, force: true });
-        }
+        // Always clean workingDir; if output_path was provided, the output file
+        // lives outside workingDir so it's safe to remove.
+        rmSync(workingDir, { recursive: true, force: true });
       }
     },
   },
