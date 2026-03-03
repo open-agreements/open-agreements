@@ -19,6 +19,49 @@ export interface FillResult {
   fieldsUsed: string[];
 }
 
+/** Derive signatory display fields for party N. Reusable across templates. */
+function deriveSignatoryFields(
+  data: Record<string, unknown>,
+  n: number,
+  fieldNames: Set<string>,
+  str: (key: string) => string,
+  isBlankPlaceholder: (val: unknown) => boolean,
+): void {
+  const typeKey = `party_${n}_type`;
+  if (!fieldNames.has(typeKey)) return;
+
+  const typeVal = str(typeKey);
+  const isEntity = typeVal !== 'individual';
+  data[`party_${n}_is_entity`] = isEntity;
+
+  // Derive display fields: show value for entities, empty string for individuals
+  for (const suffix of ['title', 'company']) {
+    const srcKey = `party_${n}_${suffix}`;
+    const displayKey = `party_${n}_${suffix}_display`;
+    if (isEntity) {
+      const val = data[srcKey];
+      data[displayKey] = (val && !isBlankPlaceholder(val)) ? String(val) : '';
+    } else {
+      data[displayKey] = '';
+      // Warn if entity-only fields are set for an individual
+      const val = data[srcKey];
+      if (val && !isBlankPlaceholder(val) && String(val).trim() !== '') {
+        console.warn(
+          `Warning: ${srcKey} is set but party_${n}_type is "individual" — value will be ignored`
+        );
+      }
+    }
+  }
+
+  // Normalize signature fields: blank instead of BLANK_PLACEHOLDER underscores
+  for (const suffix of ['name', 'email', 'title', 'company']) {
+    const key = `party_${n}_${suffix}`;
+    if (isBlankPlaceholder(data[key])) {
+      data[key] = '';
+    }
+  }
+}
+
 /**
  * Compute display fields for radio/checkbox groups in table rows.
  * docx-templates only allows one {IF} per table row, so multi-option rows
@@ -40,6 +83,11 @@ function computeDisplayFields(data: Record<string, unknown>, fieldNames: Set<str
     if (/^[A-Za-z0-9_-]{20,}$/.test(raw)) return `https://docs.google.com/document/d/${raw}/`;
     return raw;
   };
+
+  // ── Signatory type derivation (works for any template with party_N_type) ──
+  for (const n of [1, 2]) {
+    deriveSignatoryFields(data, n, fieldNames, str, isBlankPlaceholder);
+  }
 
   // Optional cover-table rows in employment templates should disappear when blank.
   // The default blank placeholder is intentionally visible in most contexts,

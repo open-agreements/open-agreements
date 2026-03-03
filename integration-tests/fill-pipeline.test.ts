@@ -1,11 +1,12 @@
 import { describe, expect, vi } from 'vitest';
 import { itAllure } from './helpers/allure-test.js';
-import { mkdtempSync, writeFileSync, rmSync } from 'node:fs';
-import { join } from 'node:path';
+import { mkdtempSync, writeFileSync, readFileSync, rmSync } from 'node:fs';
+import { join, resolve } from 'node:path';
 import { tmpdir } from 'node:os';
 import AdmZip from 'adm-zip';
 import { detectCurrencyFields, sanitizeCurrencyValuesFromDocx, verifyTemplateFill, BLANK_PLACEHOLDER } from '../src/core/fill-utils.js';
 import { prepareFillData, fillDocx } from '../src/core/fill-pipeline.js';
+import { loadMetadata } from '../src/core/metadata.js';
 
 const it = itAllure.epic('Filling & Rendering');
 
@@ -626,5 +627,150 @@ describe('Integration: template currency sanitization', () => {
     // Should contain $50,000 not $$50,000
     expect(outXml).toContain('50,000');
     expect(outXml).not.toContain('$$');
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Section 6: NDA Signature Block Fields
+// ---------------------------------------------------------------------------
+
+describe('NDA signature block fields', () => {
+  const NDA_DIR = resolve(__dirname, '../content/templates/common-paper-mutual-nda');
+
+  /** Fill the real NDA template with the given values and return the output XML text. */
+  async function fillNdaTemplate(values: Record<string, unknown>): Promise<{ xml: string; buf: Uint8Array }> {
+    const metadata = loadMetadata(NDA_DIR);
+    const fieldNames = new Set(metadata.fields.map((f) => f.name));
+    const data = prepareFillData({
+      values,
+      fields: metadata.fields,
+      requiredFieldNames: metadata.required_fields,
+      useBlankPlaceholder: true,
+      coerceBooleans: true,
+      computeDisplayFields: (d) => {
+        // Inline import of computeDisplayFields is not exported, so we replicate
+        // the signatory derivation directly using the engine's fillTemplate instead.
+        // Instead, use fillTemplate from engine.ts via the full pipeline.
+      },
+    });
+
+    // Use fillTemplate via the engine for the full pipeline (includes computeDisplayFields)
+    const { fillTemplate } = await import('../src/core/engine.js');
+    const tempDir = mkdtempSync(join(tmpdir(), 'nda-sig-test-'));
+    const outputPath = join(tempDir, 'output.docx');
+    await fillTemplate({
+      templateDir: NDA_DIR,
+      values,
+      outputPath,
+    });
+
+    const outZip = new AdmZip(outputPath);
+    const allText: string[] = [];
+    for (const entry of outZip.getEntries()) {
+      if (entry.entryName.startsWith('word/') && entry.entryName.endsWith('.xml')) {
+        allText.push(entry.getData().toString('utf-8'));
+      }
+    }
+    const xml = allText.join('\n');
+    const buf = readFileSync(outputPath);
+    rmSync(tempDir, { recursive: true, force: true });
+    return { xml, buf };
+  }
+
+  const BASE_VALUES = {
+    purpose: 'Evaluating a potential business partnership',
+    effective_date: '2026-03-01',
+    mnda_term: '2 years',
+    confidentiality_term: '3 years',
+    confidentiality_term_start: 'Effective Date',
+    governing_law: 'California',
+    jurisdiction: 'courts located in San Francisco County, California',
+    changes_to_standard_terms: 'None.',
+  };
+
+  it.openspec('OA-NDA-001')('fills all signature fields in entity mode (both parties)', async () => {
+    const { xml, buf } = await fillNdaTemplate({
+      ...BASE_VALUES,
+      party_1_type: 'entity',
+      party_1_name: 'Alice Johnson',
+      party_1_title: 'CEO',
+      party_1_company: 'Acme Corp',
+      party_1_email: 'alice@acme.example',
+      party_2_type: 'entity',
+      party_2_name: 'Bob Smith',
+      party_2_title: 'CTO',
+      party_2_company: 'Beta Inc',
+      party_2_email: 'bob@beta.example',
+    });
+
+    // All signatory values should appear
+    expect(xml).toContain('Alice Johnson');
+    expect(xml).toContain('CEO');
+    expect(xml).toContain('Acme Corp');
+    expect(xml).toContain('alice@acme.example');
+    expect(xml).toContain('Bob Smith');
+    expect(xml).toContain('CTO');
+    expect(xml).toContain('Beta Inc');
+    expect(xml).toContain('bob@beta.example');
+
+    // No unrendered {field_name} tags
+    expect(xml).not.toMatch(/\{[a-z_][a-z0-9_]*\}/i);
+
+    // No IF/END-IF conditionals
+    expect(xml).not.toContain('{IF ');
+    expect(xml).not.toContain('{END-IF}');
+
+    // Valid non-zero buffer
+    expect(buf.length).toBeGreaterThan(0);
+  });
+
+  it.openspec('OA-NDA-002')('suppresses title/company for individual party (mixed mode)', async () => {
+    const { xml } = await fillNdaTemplate({
+      ...BASE_VALUES,
+      party_1_type: 'entity',
+      party_1_name: 'Alice Johnson',
+      party_1_title: 'CEO',
+      party_1_company: 'Acme Corp',
+      party_1_email: 'alice@acme.example',
+      party_2_type: 'individual',
+      party_2_name: 'Charlie Doe',
+      party_2_title: 'ZZZ_SHOULD_NOT_RENDER',
+      party_2_company: 'ZZZ_SHOULD_NOT_RENDER',
+      party_2_email: 'charlie@personal.example',
+    });
+
+    // Party 1 entity fields render
+    expect(xml).toContain('Alice Johnson');
+    expect(xml).toContain('CEO');
+    expect(xml).toContain('Acme Corp');
+
+    // Party 2 individual: name and email render, sentinel values do NOT
+    expect(xml).toContain('Charlie Doe');
+    expect(xml).toContain('charlie@personal.example');
+    expect(xml).not.toContain('ZZZ_SHOULD_NOT_RENDER');
+
+    // No unrendered tags
+    expect(xml).not.toMatch(/\{[a-z_][a-z0-9_]*\}/i);
+  });
+
+  it.openspec('OA-NDA-003')('warns when individual party has title set', async () => {
+    const spy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    try {
+      await fillNdaTemplate({
+        ...BASE_VALUES,
+        party_1_type: 'individual',
+        party_1_name: 'Dana Lee',
+        party_1_title: 'CEO',
+        party_1_email: 'dana@example.com',
+      });
+
+      const warningCalls = spy.mock.calls.map((c) => String(c[0]));
+      const relevantWarning = warningCalls.find(
+        (msg) => msg.includes('party_1_title') && msg.includes('individual')
+      );
+      expect(relevantWarning).toBeDefined();
+    } finally {
+      spy.mockRestore();
+    }
   });
 });

@@ -275,6 +275,32 @@ marking selected choices with `[ x ]`.
 - **THEN** the selected until-terminated and perpetuity options are marked with `[ x ]`
 - **AND** non-selected fixed-term alternatives are removed
 
+### Requirement: NDA Signature Block Fields
+The `common-paper-mutual-nda` template SHALL support per-party signatory fields
+with `party_N_type` toggling between entity and individual modes. Title and
+company cells use derived display fields that resolve to empty string for
+individuals, respecting the one-IF-per-row constraint in docx-templates.
+
+#### Scenario: [OA-NDA-001] Entity mode fills all signature fields
+- **GIVEN** both parties have `party_N_type` set to `entity`
+- **AND** all signatory fields (name, title, company, email) are provided
+- **WHEN** the template is filled
+- **THEN** all signatory values appear in the output
+- **AND** no unrendered template tags remain
+
+#### Scenario: [OA-NDA-002] Individual mode suppresses title and company
+- **GIVEN** one party has `party_N_type` set to `individual`
+- **AND** title and company values are provided for that party
+- **WHEN** the template is filled
+- **THEN** the individual party's title and company cells are blank
+- **AND** entity-only sentinel values do not appear in output
+
+#### Scenario: [OA-NDA-003] Warning emitted for conflicting individual fields
+- **GIVEN** a party has `party_N_type` set to `individual`
+- **AND** `party_N_title` is also set to a non-empty value
+- **WHEN** display fields are computed
+- **THEN** a console warning is emitted identifying the conflicting field
+
 ### Requirement: Template Metadata Schema
 Each template directory SHALL contain a `metadata.yaml` validated by Zod schema with fields: `name`, `source_url`, `version`, `license` (enum: CC-BY-4.0, CC0-1.0), `allow_derivatives` (boolean), `attribution_text`, `fields` (array of field definitions with name, type, description, required).
 
