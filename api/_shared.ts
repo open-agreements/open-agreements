@@ -34,9 +34,15 @@ import {
 import {
   findTemplateDir,
   findExternalDir,
-  listTemplateEntries,
   listExternalEntries,
 } from '../dist/utils/paths.js';
+import {
+  listTemplateItems,
+  categoryFromId,
+  sourceName,
+  mapFields,
+  type TemplateListItem,
+} from '../dist/core/template-listing.js';
 
 // ---------------------------------------------------------------------------
 // Shared types
@@ -93,47 +99,6 @@ export interface ListOutcome {
 // ---------------------------------------------------------------------------
 // Helpers
 // ---------------------------------------------------------------------------
-
-function categoryFromId(id: string): string {
-  if (id.includes('employment') || id.includes('employee-ip-inventions')) {
-    return 'employment';
-  }
-  return 'general';
-}
-
-function sourceName(url: string): string | null {
-  try {
-    const parsed = new URL(url);
-    const host = parsed.hostname.replace(/^www\./, '');
-    const pathname = parsed.pathname;
-    if (host === 'github.com' && pathname.startsWith('/open-agreements/')) return 'OpenAgreements';
-    const map: Record<string, string> = {
-      'commonpaper.com': 'Common Paper',
-      'bonterms.com': 'Bonterms',
-      'ycombinator.com': 'Y Combinator',
-      'bookface-static.ycombinator.com': 'Y Combinator',
-      'openagreements.ai': 'OpenAgreements',
-    };
-    return map[host] ?? host;
-  } catch {
-    return null;
-  }
-}
-
-function mapFields(
-  fields: { name: string; type: string; section?: string; description: string; default?: string }[],
-  requiredFields: string[],
-) {
-  const required = new Set(requiredFields);
-  return fields.map((f) => ({
-    name: f.name,
-    type: f.type,
-    required: required.has(f.name),
-    section: f.section ?? null,
-    description: f.description,
-    default: f.default ?? null,
-  }));
-}
 
 interface RawTemplateMetadata {
   name: string;
@@ -258,23 +223,19 @@ export function handleGetTemplate(templateId: string): TemplateItem | null {
 }
 
 export function handleListTemplates(): ListOutcome {
-  const items: TemplateItem[] = [];
+  // Internal templates via shared module (sorted, errors skipped)
+  const internal: TemplateItem[] = listTemplateItems({ templatesOnly: true }) as TemplateItem[];
 
-  for (const entry of listTemplateEntries()) {
-    try {
-      const meta = loadMetadata(entry.dir) as RawTemplateMetadata;
-      items.push(toTemplateItem(entry.id, meta));
-    } catch { /* skip */ }
-  }
-
+  // External templates (not covered by listTemplateItems)
+  const external: TemplateItem[] = [];
   for (const entry of listExternalEntries()) {
     try {
       const meta = loadExternalMetadata(entry.dir) as RawTemplateMetadata;
-      items.push(toTemplateItem(entry.id, meta));
+      external.push(toTemplateItem(entry.id, meta));
     } catch { /* skip */ }
   }
 
-  items.sort((a, b) => a.name.localeCompare(b.name));
+  const items = [...internal, ...external].sort((a, b) => a.name.localeCompare(b.name));
 
   let cliVersion = '0.0.0';
   try {

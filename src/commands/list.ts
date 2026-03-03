@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { loadMetadata, loadRecipeMetadata, loadExternalMetadata } from '../core/metadata.js';
+import { categoryFromId, sourceName, mapFields } from '../core/template-listing.js';
 import { listExternalEntries, listRecipeEntries, listTemplateEntries } from '../utils/paths.js';
 
 const pkgPath = fileURLToPath(new URL('../../package.json', import.meta.url));
@@ -17,65 +18,12 @@ interface ListItem {
   [key: string]: unknown;
 }
 
-function categoryFromId(id: string): string {
-  if (id.includes('employment') || id.includes('employee-ip-inventions')) {
-    return 'employment';
-  }
-  return 'general';
-}
-
-/** Extract a human-friendly source name from a URL */
-function sourceName(url: string): string | null {
-  try {
-    const parsed = new URL(url);
-    const host = parsed.hostname.replace(/^www\./, '');
-    const pathname = parsed.pathname;
-
-    if (host === 'github.com' && pathname.startsWith('/open-agreements/')) {
-      return 'OpenAgreements';
-    }
-    if (host === 'github.com' && pathname.startsWith('/papertrail/legal-docs')) {
-      return 'Papertrail';
-    }
-    if (host === 'github.com' && pathname.startsWith('/docusign/')) {
-      return 'DocuSign';
-    }
-
-    const map: Record<string, string> = {
-      'commonpaper.com': 'Common Paper',
-      'bonterms.com': 'Bonterms',
-      'ycombinator.com': 'Y Combinator',
-      'bookface-static.ycombinator.com': 'Y Combinator',
-      'nvca.org': 'NVCA',
-      'openagreements.ai': 'OpenAgreements',
-    };
-    return map[host] ?? host;
-  } catch {
-    return null;
-  }
-}
-
 export function runList(opts: ListOptions = {}): void {
   if (opts.json || opts.jsonStrict) {
     runListJson(opts);
     return;
   }
   listAgreementsWithOptions(opts);
-}
-
-function mapFields(
-  fields: { name: string; type: string; section?: string; description: string; default?: string }[],
-  requiredFields: string[]
-) {
-  const required = new Set(requiredFields);
-  return fields.map((f) => ({
-    name: f.name,
-    type: f.type,
-    required: required.has(f.name),
-    section: f.section ?? null,
-    description: f.description,
-    default: f.default ?? null,
-  }));
 }
 
 function runListJson(opts: ListOptions): void {
