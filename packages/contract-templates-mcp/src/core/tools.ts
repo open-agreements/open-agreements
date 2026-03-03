@@ -75,8 +75,10 @@ interface RepoModules {
 }
 
 let _modules: RepoModules | null = null;
+let _moduleOverride: RepoModules | null | undefined = undefined;
 
 async function importRepoModules(): Promise<RepoModules | null> {
+  if (_moduleOverride !== undefined) return _moduleOverride;
   if (_modules) return _modules;
 
   // Strategy 1: local repo dist (monorepo dev/CI)
@@ -109,6 +111,7 @@ async function importRepoModules(): Promise<RepoModules | null> {
   }
 
   // Strategy 2: npm dependency (installed package with v0.2.2+)
+  /* c8 ignore start — unreachable in monorepo; covered by isolated-runtime-smoke CI */
   try {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any -- runtime guard handles older versions
     const mod: any = await import('open-agreements');
@@ -125,6 +128,7 @@ async function importRepoModules(): Promise<RepoModules | null> {
       return _modules;
     }
   } catch { /* fall through */ }
+  /* c8 ignore end */
 
   return null; // caller uses child process fallback
 }
@@ -132,6 +136,12 @@ async function importRepoModules(): Promise<RepoModules | null> {
 /** Reset cached modules — for testing only. */
 export function _resetModuleCache(): void {
   _modules = null;
+  _moduleOverride = undefined;
+}
+
+/** Inject module override — for testing only. */
+export function _setModuleOverride(modules: RepoModules | null | undefined): void {
+  _moduleOverride = modules;
 }
 
 const tools: ToolDefinition[] = [
