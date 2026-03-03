@@ -233,8 +233,9 @@ async function loadTemplates(): Promise<TemplateRecord[]> {
   }
 
   // Strategy 2: npm dependency (installed package with v0.2.2+)
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- runtime guard handles older versions without listTemplateItems
   try {
-    const mod = await import('open-agreements');
+    const mod: any = await import('open-agreements');
     if (typeof mod.listTemplateItems === 'function') {
       return mod.listTemplateItems({ templatesOnly: true });
     }
