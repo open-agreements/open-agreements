@@ -60,6 +60,80 @@ interface ToolDefinition {
   invoke: (args: unknown) => Promise<ToolCallResult>;
 }
 
+// ---------------------------------------------------------------------------
+// Cached module loader — resolves all needed functions once
+// ---------------------------------------------------------------------------
+
+interface RepoModules {
+  listTemplateItems: (opts: { templatesOnly: boolean }) => TemplateRecord[];
+  findTemplateDir: (id: string) => string | undefined;
+  loadMetadata: (dir: string) => Record<string, unknown>;
+  fillTemplate: (opts: { templateDir: string; values: Record<string, unknown>; outputPath: string }) => Promise<unknown>;
+  categoryFromId: (id: string) => string;
+  sourceName: (url: string) => string | null;
+  mapFields: (fields: Record<string, unknown>[], required: string[]) => TemplateField[];
+}
+
+let _modules: RepoModules | null = null;
+
+async function importRepoModules(): Promise<RepoModules | null> {
+  if (_modules) return _modules;
+
+  // Strategy 1: local repo dist (monorepo dev/CI)
+  const root = findLocalRepoRoot();
+  if (root) {
+    try {
+      const listingUrl = pathToFileURL(resolve(root, 'dist', 'core', 'template-listing.js')).href;
+      const pathsUrl = pathToFileURL(resolve(root, 'dist', 'utils', 'paths.js')).href;
+      const metadataUrl = pathToFileURL(resolve(root, 'dist', 'core', 'metadata.js')).href;
+      const engineUrl = pathToFileURL(resolve(root, 'dist', 'core', 'engine.js')).href;
+
+      const [listing, paths, metadata, engine] = await Promise.all([
+        import(listingUrl),
+        import(pathsUrl),
+        import(metadataUrl),
+        import(engineUrl),
+      ]);
+
+      _modules = {
+        listTemplateItems: listing.listTemplateItems,
+        findTemplateDir: paths.findTemplateDir,
+        loadMetadata: metadata.loadMetadata,
+        fillTemplate: engine.fillTemplate,
+        categoryFromId: listing.categoryFromId,
+        sourceName: listing.sourceName,
+        mapFields: listing.mapFields,
+      };
+      return _modules;
+    } catch { /* fall through */ }
+  }
+
+  // Strategy 2: npm dependency (installed package with v0.2.2+)
+  try {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any -- runtime guard handles older versions
+    const mod: any = await import('open-agreements');
+    if (typeof mod.listTemplateItems === 'function' && typeof mod.findTemplateDir === 'function') {
+      _modules = {
+        listTemplateItems: mod.listTemplateItems,
+        findTemplateDir: mod.findTemplateDir,
+        loadMetadata: mod.loadMetadata,
+        fillTemplate: mod.fillTemplate,
+        categoryFromId: mod.categoryFromId ?? ((id: string) => id.includes('employment') ? 'employment' : 'general'),
+        sourceName: mod.sourceName ?? (() => null),
+        mapFields: mod.mapFields ?? ((f: TemplateField[]) => f),
+      };
+      return _modules;
+    }
+  } catch { /* fall through */ }
+
+  return null; // caller uses child process fallback
+}
+
+/** Reset cached modules — for testing only. */
+export function _resetModuleCache(): void {
+  _modules = null;
+}
+
 const tools: ToolDefinition[] = [
   {
     name: 'list_templates',
@@ -107,16 +181,39 @@ const tools: ToolDefinition[] = [
     },
     invoke: async (args) => {
       const input = GetTemplateArgsSchema.parse(args ?? {});
+      const mod = await importRepoModules();
+
+      if (mod) {
+        // O(1) direct lookup via findTemplateDir + loadMetadata
+        const dir = mod.findTemplateDir(input.template_id);
+        if (!dir) {
+          return toolError('get_template', 'TEMPLATE_NOT_FOUND', `Template not found: "${input.template_id}"`);
+        }
+        try {
+          const meta = mod.loadMetadata(dir);
+          const template: TemplateRecord = {
+            name: input.template_id,
+            category: mod.categoryFromId(input.template_id),
+            description: (meta.description ?? meta.name) as string,
+            license: (meta.license as string) ?? null,
+            source_url: meta.source_url as string,
+            source: mod.sourceName(meta.source_url as string),
+            attribution_text: meta.attribution_text as string | undefined,
+            fields: mod.mapFields(meta.fields as Record<string, unknown>[], meta.required_fields as string[]),
+          };
+          return successResult('get_template', { template: normalizeTemplate(template) });
+        } catch {
+          return toolError('get_template', 'TEMPLATE_NOT_FOUND', `Template not found: "${input.template_id}"`);
+        }
+      }
+
+      // Child process fallback — load all and filter
       const items = await loadTemplates();
       const template = items.find((item) => item.name === input.template_id);
-
       if (!template) {
         return toolError('get_template', 'TEMPLATE_NOT_FOUND', `Template not found: "${input.template_id}"`);
       }
-
-      return successResult('get_template', {
-        template: normalizeTemplate(template),
-      });
+      return successResult('get_template', { template: normalizeTemplate(template) });
     },
   },
   {
@@ -150,21 +247,26 @@ const tools: ToolDefinition[] = [
     invoke: async (args) => {
       const input = FillTemplateArgsSchema.parse(args ?? {});
       const workingDir = mkdtempSync(join(tmpdir(), 'oa-templates-mcp-'));
-      const dataPath = join(workingDir, 'values.json');
       const outputPath = input.output_path
         ? resolve(input.output_path)
         : resolve(workingDir, `${input.template}-${Date.now()}.docx`);
 
       try {
-        writeFileSync(dataPath, `${JSON.stringify(input.values, null, 2)}\n`, 'utf8');
-        await runOpenAgreements([
-          'fill',
-          input.template,
-          '--data',
-          dataPath,
-          '--output',
-          outputPath,
-        ]);
+        const mod = await importRepoModules();
+
+        if (mod) {
+          // In-process fill via findTemplateDir + fillTemplate
+          const dir = mod.findTemplateDir(input.template);
+          if (!dir) {
+            return toolError('fill_template', 'TEMPLATE_NOT_FOUND', `Unknown template: "${input.template}"`);
+          }
+          await mod.fillTemplate({ templateDir: dir, values: input.values, outputPath });
+        } else {
+          // Child process fallback
+          const dataPath = join(workingDir, 'values.json');
+          writeFileSync(dataPath, `${JSON.stringify(input.values, null, 2)}\n`, 'utf8');
+          await runOpenAgreements(['fill', input.template, '--data', dataPath, '--output', outputPath]);
+        }
 
         const basePayload = {
           template: input.template,
@@ -175,10 +277,7 @@ const tools: ToolDefinition[] = [
 
         if (input.return_mode === 'inline_base64') {
           const base64 = readFileSync(outputPath).toString('base64');
-          return successResult('fill_template', {
-            ...basePayload,
-            inline_base64: base64,
-          });
+          return successResult('fill_template', { ...basePayload, inline_base64: base64 });
         }
 
         return successResult('fill_template', basePayload);
@@ -189,11 +288,9 @@ const tools: ToolDefinition[] = [
           : 'FILL_FAILED';
         return toolError('fill_template', code, message);
       } finally {
-        rmSync(dataPath, { force: true });
         if (!input.output_path) {
-          rmSync(outputPath, { force: true });
+          rmSync(workingDir, { recursive: true, force: true });
         }
-        rmSync(workingDir, { recursive: true, force: true });
       }
     },
   },
@@ -222,26 +319,10 @@ export async function callTool(name: string, args: unknown): Promise<ToolCallRes
 }
 
 async function loadTemplates(): Promise<TemplateRecord[]> {
-  // Strategy 1: local repo dist (monorepo dev/CI)
-  const root = findLocalRepoRoot();
-  if (root) {
-    try {
-      const url = pathToFileURL(resolve(root, 'dist', 'core', 'template-listing.js')).href;
-      const { listTemplateItems } = await import(url);
-      return listTemplateItems({ templatesOnly: true });
-    } catch { /* fall through */ }
-  }
+  const mod = await importRepoModules();
+  if (mod) return mod.listTemplateItems({ templatesOnly: true });
 
-  // Strategy 2: npm dependency (installed package with v0.2.2+)
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- runtime guard handles older versions without listTemplateItems
-  try {
-    const mod: any = await import('open-agreements');
-    if (typeof mod.listTemplateItems === 'function') {
-      return mod.listTemplateItems({ templatesOnly: true });
-    }
-  } catch { /* fall through */ }
-
-  // Strategy 3: child process fallback
+  // Child process fallback
   const { stdout } = await runOpenAgreements(['list', '--json', '--templates-only']);
   const parsed = JSON.parse(stdout);
   if (!Array.isArray(parsed.items)) {
