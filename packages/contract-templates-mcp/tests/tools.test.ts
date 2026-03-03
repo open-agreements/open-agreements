@@ -32,6 +32,17 @@ describe('contract-templates-mcp tools', () => {
     expect(templates.length).toBeGreaterThan(0);
   });
 
+  it.openspec('OA-DST-033')('get_template returns a known template by ID', async () => {
+    const result = await callTool('get_template', { template_id: 'common-paper-mutual-nda' });
+    const payload = getPayload(result);
+    expect(result.isError).toBeUndefined();
+    expect(payload.ok).toBe(true);
+    const data = payload.data as Record<string, unknown>;
+    const template = data.template as Record<string, unknown>;
+    expect(template.template_id).toBe('common-paper-mutual-nda');
+    expect(Array.isArray(template.fields)).toBe(true);
+  });
+
   it.openspec('OA-DST-033')('returns TEMPLATE_NOT_FOUND for an unknown template id', async () => {
     const result = await callTool('get_template', { template_id: 'nonexistent-template-id' });
     const payload = getPayload(result);
@@ -41,5 +52,28 @@ describe('contract-templates-mcp tools', () => {
     expect(payload.tool).toBe('get_template');
     const error = payload.error as Record<string, unknown>;
     expect(error.code).toBe('TEMPLATE_NOT_FOUND');
+  });
+
+  it.openspec('OA-DST-033')('fill_template fills a template in-process', async () => {
+    const result = await callTool('fill_template', {
+      template: 'common-paper-mutual-nda',
+      values: {
+        purpose: 'Evaluating a potential partnership',
+        effective_date: '2026-03-03',
+        mnda_term: '2 years',
+        confidentiality_term: '3 years',
+        confidentiality_term_start: 'Effective Date',
+        governing_law: 'California',
+        jurisdiction: 'courts located in San Francisco County, California',
+      },
+      return_mode: 'inline_base64',
+    });
+    const payload = getPayload(result);
+    expect(result.isError).toBeUndefined();
+    expect(payload.ok).toBe(true);
+    const data = payload.data as Record<string, unknown>;
+    expect(data.template).toBe('common-paper-mutual-nda');
+    expect(typeof data.inline_base64).toBe('string');
+    expect((data.inline_base64 as string).length).toBeGreaterThan(100);
   });
 });

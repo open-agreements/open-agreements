@@ -150,7 +150,7 @@ export {
 } from './core/template-listing.js';
 
 // Template discovery
-export { listTemplateEntries, type ContentEntry } from './utils/paths.js';
+export { listTemplateEntries, findTemplateDir, type ContentEntry } from './utils/paths.js';
 
 // Command generation
 export type { ToolCommandAdapter } from './core/command-generation/types.js';
