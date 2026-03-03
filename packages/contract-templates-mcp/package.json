@@ -29,7 +29,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "open-agreements": "^0.1.1",
+    "open-agreements": "^0.2.2",
     "zod": "^4.0.0"
   }
 }

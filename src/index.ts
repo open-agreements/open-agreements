@@ -142,6 +142,16 @@ export {
   type Issue,
 } from './core/checklist/schemas.js';
 
+// Template listing
+export {
+  listTemplateItems,
+  type TemplateListItem,
+  type TemplateListField,
+} from './core/template-listing.js';
+
+// Template discovery
+export { listTemplateEntries, type ContentEntry } from './utils/paths.js';
+
 // Command generation
 export type { ToolCommandAdapter } from './core/command-generation/types.js';
 export { ClaudeCodeAdapter } from './core/command-generation/adapters/claude.js';

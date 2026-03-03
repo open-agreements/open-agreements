@@ -2,7 +2,7 @@ import { execFile } from 'node:child_process';
 import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { dirname, join, resolve } from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import { promisify } from 'node:util';
 import { z } from 'zod';
 
@@ -47,12 +47,6 @@ interface TemplateRecord {
   fields: TemplateField[];
 }
 
-interface ListPayload {
-  schema_version: number;
-  cli_version: string;
-  items: TemplateRecord[];
-}
-
 export interface ToolCallResult {
   content: Array<{ type: 'text'; text: string }>;
   isError?: boolean;
@@ -83,17 +77,17 @@ const tools: ToolDefinition[] = [
     },
     invoke: async (args) => {
       const input = ListTemplatesArgsSchema.parse(args ?? {});
-      const payload = await loadTemplates();
+      const items = await loadTemplates();
       if (input.mode === 'compact') {
         return successResult('list_templates', {
           mode: 'compact',
-          templates: payload.items.map((item) => compactTemplate(item)),
+          templates: items.map((item) => compactTemplate(item)),
         });
       }
 
       return successResult('list_templates', {
         mode: 'full',
-        templates: payload.items.map((item) => normalizeTemplate(item)),
+        templates: items.map((item) => normalizeTemplate(item)),
       });
     },
   },
@@ -113,8 +107,8 @@ const tools: ToolDefinition[] = [
     },
     invoke: async (args) => {
       const input = GetTemplateArgsSchema.parse(args ?? {});
-      const payload = await loadTemplates();
-      const template = payload.items.find((item) => item.name === input.template_id);
+      const items = await loadTemplates();
+      const template = items.find((item) => item.name === input.template_id);
 
       if (!template) {
         return toolError('get_template', 'TEMPLATE_NOT_FOUND', `Template not found: "${input.template_id}"`);
@@ -227,13 +221,33 @@ export async function callTool(name: string, args: unknown): Promise<ToolCallRes
   }
 }
 
-async function loadTemplates(): Promise<ListPayload> {
+async function loadTemplates(): Promise<TemplateRecord[]> {
+  // Strategy 1: local repo dist (monorepo dev/CI)
+  const root = findLocalRepoRoot();
+  if (root) {
+    try {
+      const url = pathToFileURL(resolve(root, 'dist', 'core', 'template-listing.js')).href;
+      const { listTemplateItems } = await import(url);
+      return listTemplateItems({ templatesOnly: true });
+    } catch { /* fall through */ }
+  }
+
+  // Strategy 2: npm dependency (installed package with v0.2.2+)
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any -- runtime guard handles older versions without listTemplateItems
+  try {
+    const mod: any = await import('open-agreements');
+    if (typeof mod.listTemplateItems === 'function') {
+      return mod.listTemplateItems({ templatesOnly: true });
+    }
+  } catch { /* fall through */ }
+
+  // Strategy 3: child process fallback
   const { stdout } = await runOpenAgreements(['list', '--json', '--templates-only']);
-  const parsed = JSON.parse(stdout) as ListPayload;
+  const parsed = JSON.parse(stdout);
   if (!Array.isArray(parsed.items)) {
     throw new Error('Invalid list output from open-agreements command.');
   }
-  return parsed;
+  return parsed.items;
 }
 
 function normalizeTemplate(template: TemplateRecord): Record<string, unknown> {
@@ -299,12 +313,11 @@ function resolveOpenAgreementsCommand(): { command: string; argsPrefix: string[]
   return { command: 'open-agreements', argsPrefix: [] };
 }
 
-function findLocalRepoBin(): string | null {
+function findLocalRepoRoot(): string | null {
   let cursor = dirname(fileURLToPath(import.meta.url));
   for (let depth = 0; depth < 12; depth += 1) {
-    const candidate = resolve(cursor, 'bin', 'open-agreements.js');
-    if (existsSync(candidate)) {
-      return candidate;
+    if (existsSync(resolve(cursor, 'bin', 'open-agreements.js'))) {
+      return cursor;
     }
 
     const parent = resolve(cursor, '..');
@@ -314,12 +327,17 @@ function findLocalRepoBin(): string | null {
     cursor = parent;
   }
 
-  const cwdCandidate = resolve(process.cwd(), 'bin', 'open-agreements.js');
-  if (existsSync(cwdCandidate)) {
-    return cwdCandidate;
+  const cwd = process.cwd();
+  if (existsSync(resolve(cwd, 'bin', 'open-agreements.js'))) {
+    return cwd;
   }
 
   return null;
+}
+
+function findLocalRepoBin(): string | null {
+  const root = findLocalRepoRoot();
+  return root ? resolve(root, 'bin', 'open-agreements.js') : null;
 }
 
 async function runOpenAgreements(args: string[]): Promise<{ stdout: string; stderr: string }> {
