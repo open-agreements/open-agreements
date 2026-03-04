@@ -113,6 +113,54 @@ fields:
     type: string
     description: DPA reference
     section: Privacy
+  - name: provider_signatory_type
+    type: enum
+    description: Whether the Provider signatory is an entity or individual
+    options:
+      - entity
+      - individual
+    default: entity
+    section: Signature Block
+  - name: provider_signatory_name
+    type: string
+    description: Full legal name of the Provider's signatory
+    section: Signature Block
+  - name: provider_signatory_title
+    type: string
+    description: Title/role of the Provider's signatory (entity only)
+    section: Signature Block
+  - name: provider_signatory_company
+    type: string
+    description: Company name for the Provider signatory (entity only)
+    section: Signature Block
+  - name: provider_signatory_email
+    type: string
+    description: Notice email address for the Provider
+    section: Signature Block
+  - name: customer_signatory_type
+    type: enum
+    description: Whether the Customer signatory is an entity or individual
+    options:
+      - entity
+      - individual
+    default: entity
+    section: Signature Block
+  - name: customer_signatory_name
+    type: string
+    description: Full legal name of the Customer's signatory
+    section: Signature Block
+  - name: customer_signatory_title
+    type: string
+    description: Title/role of the Customer's signatory (entity only)
+    section: Signature Block
+  - name: customer_signatory_company
+    type: string
+    description: Company name for the Customer signatory (entity only)
+    section: Signature Block
+  - name: customer_signatory_email
+    type: string
+    description: Notice email address for the Customer
+    section: Signature Block
 required_fields:
   - company_name
   - provider_name

@@ -49,6 +49,30 @@ fields:
     description: Any modifications to the Common Paper Standard Terms
     default: None.
     section: Legal
+  - name: recipient_signatory_type
+    type: enum
+    description: Whether the Recipient signatory is an entity or individual
+    options:
+      - entity
+      - individual
+    default: entity
+    section: Signature Block
+  - name: recipient_signatory_name
+    type: string
+    description: Full legal name of the Recipient's signatory
+    section: Signature Block
+  - name: recipient_signatory_title
+    type: string
+    description: Title/role of the Recipient's signatory (entity only)
+    section: Signature Block
+  - name: recipient_signatory_company
+    type: string
+    description: Company name for the Recipient signatory (entity only)
+    section: Signature Block
+  - name: recipient_signatory_email
+    type: string
+    description: Notice email address for the Recipient
+    section: Signature Block
 required_fields:
   - discloser_name_and_address
   - effective_date

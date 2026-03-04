@@ -44,6 +44,54 @@ fields:
     description: Courts with jurisdiction over disputes
     default: San Francisco County, California
     section: Legal
+  - name: company_signatory_type
+    type: enum
+    description: Whether the Company signatory is an entity or individual
+    options:
+      - entity
+      - individual
+    default: entity
+    section: Signature Block
+  - name: company_signatory_name
+    type: string
+    description: Full legal name of the Company's signatory
+    section: Signature Block
+  - name: company_signatory_title
+    type: string
+    description: Title/role of the Company's signatory (entity only)
+    section: Signature Block
+  - name: company_signatory_company
+    type: string
+    description: Company name for the Company signatory (entity only)
+    section: Signature Block
+  - name: company_signatory_email
+    type: string
+    description: Notice email address for the Company
+    section: Signature Block
+  - name: contractor_signatory_type
+    type: enum
+    description: Whether the Contractor signatory is an entity or individual
+    options:
+      - entity
+      - individual
+    default: entity
+    section: Signature Block
+  - name: contractor_signatory_name
+    type: string
+    description: Full legal name of the Contractor's signatory
+    section: Signature Block
+  - name: contractor_signatory_title
+    type: string
+    description: Title/role of the Contractor's signatory (entity only)
+    section: Signature Block
+  - name: contractor_signatory_company
+    type: string
+    description: Company name for the Contractor signatory (entity only)
+    section: Signature Block
+  - name: contractor_signatory_email
+    type: string
+    description: Notice email address for the Contractor
+    section: Signature Block
 required_fields:
   - company_name_and_address
   - contractor_name_and_address

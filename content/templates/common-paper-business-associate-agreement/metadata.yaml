@@ -50,6 +50,54 @@ fields:
     type: string
     description: Custom effective date
     section: Terms
+  - name: provider_signatory_type
+    type: enum
+    description: Whether the Provider signatory is an entity or individual
+    options:
+      - entity
+      - individual
+    default: entity
+    section: Signature Block
+  - name: provider_signatory_name
+    type: string
+    description: Full legal name of the Provider's signatory
+    section: Signature Block
+  - name: provider_signatory_title
+    type: string
+    description: Title/role of the Provider's signatory (entity only)
+    section: Signature Block
+  - name: provider_signatory_company
+    type: string
+    description: Company name for the Provider signatory (entity only)
+    section: Signature Block
+  - name: provider_signatory_email
+    type: string
+    description: Notice email address for the Provider
+    section: Signature Block
+  - name: company_signatory_type
+    type: enum
+    description: Whether the Company signatory is an entity or individual
+    options:
+      - entity
+      - individual
+    default: entity
+    section: Signature Block
+  - name: company_signatory_name
+    type: string
+    description: Full legal name of the Company's signatory
+    section: Signature Block
+  - name: company_signatory_title
+    type: string
+    description: Title/role of the Company's signatory (entity only)
+    section: Signature Block
+  - name: company_signatory_company
+    type: string
+    description: Company name for the Company signatory (entity only)
+    section: Signature Block
+  - name: company_signatory_email
+    type: string
+    description: Notice email address for the Company
+    section: Signature Block
 required_fields:
   - company_name
   - party_role

@@ -28,6 +28,24 @@ A partnership agreement based on [Common Paper's](https://commonpaper.com) stand
 | `governing_law` | string | yes | Governing law |
 | `jurisdiction` | string | yes | Jurisdiction |
 
+
+### Signature Block
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `company_signatory_type` | enum (`entity` / `individual`) | no | Whether the Company signatory is an entity or individual (default: `entity`) |
+| `company_signatory_name` | string | no | Full legal name of the Company's signatory |
+| `company_signatory_title` | string | no | Title/role of the Company's signatory (entity only) |
+| `company_signatory_company` | string | no | Company name for the Company signatory (entity only) |
+| `company_signatory_email` | string | no | Notice email address for the Company |
+| `partner_signatory_type` | enum (`entity` / `individual`) | no | Whether the Partner signatory is an entity or individual (default: `entity`) |
+| `partner_signatory_name` | string | no | Full legal name of the Partner's signatory |
+| `partner_signatory_title` | string | no | Title/role of the Partner's signatory (entity only) |
+| `partner_signatory_company` | string | no | Company name for the Partner signatory (entity only) |
+| `partner_signatory_email` | string | no | Notice email address for the Partner |
+
+> **Note:** `*_title` and `*_company` are only rendered when the corresponding `*_type` is `entity` (default). When set to `individual`, those cells are left blank even if values are provided.
+
 ## Attribution
 
 Based on the Common Paper Partnership Agreement, available at https://commonpaper.com.
