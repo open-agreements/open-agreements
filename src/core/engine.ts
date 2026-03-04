@@ -19,25 +19,25 @@ export interface FillResult {
   fieldsUsed: string[];
 }
 
-/** Derive signatory display fields for party N. Reusable across templates. */
+/** Derive signatory display fields for a given prefix. Reusable across templates. */
 function deriveSignatoryFields(
   data: Record<string, unknown>,
-  n: number,
+  prefix: string,
   fieldNames: Set<string>,
   str: (key: string) => string,
   isBlankPlaceholder: (val: unknown) => boolean,
 ): void {
-  const typeKey = `party_${n}_type`;
+  const typeKey = `${prefix}_type`;
   if (!fieldNames.has(typeKey)) return;
 
   const typeVal = str(typeKey);
   const isEntity = typeVal !== 'individual';
-  data[`party_${n}_is_entity`] = isEntity;
+  data[`${prefix}_is_entity`] = isEntity;
 
   // Derive display fields: show value for entities, empty string for individuals
   for (const suffix of ['title', 'company']) {
-    const srcKey = `party_${n}_${suffix}`;
-    const displayKey = `party_${n}_${suffix}_display`;
+    const srcKey = `${prefix}_${suffix}`;
+    const displayKey = `${prefix}_${suffix}_display`;
     if (isEntity) {
       const val = data[srcKey];
       data[displayKey] = (val && !isBlankPlaceholder(val)) ? String(val) : '';
@@ -47,7 +47,7 @@ function deriveSignatoryFields(
       const val = data[srcKey];
       if (val && !isBlankPlaceholder(val) && String(val).trim() !== '') {
         console.warn(
-          `Warning: ${srcKey} is set but party_${n}_type is "individual" — value will be ignored`
+          `Warning: ${srcKey} is set but ${prefix}_type is "individual" — value will be ignored`
         );
       }
     }
@@ -55,7 +55,7 @@ function deriveSignatoryFields(
 
   // Normalize signature fields: blank instead of BLANK_PLACEHOLDER underscores
   for (const suffix of ['name', 'email', 'title', 'company']) {
-    const key = `party_${n}_${suffix}`;
+    const key = `${prefix}_${suffix}`;
     if (isBlankPlaceholder(data[key])) {
       data[key] = '';
     }
@@ -84,9 +84,22 @@ function computeDisplayFields(data: Record<string, unknown>, fieldNames: Set<str
     return raw;
   };
 
-  // ── Signatory type derivation (works for any template with party_N_type) ──
+  // ── Signatory type derivation ──
+  // Auto-discover role-based prefixes: match *_signatory_type
+  for (const key of fieldNames) {
+    if (key.endsWith('_signatory_type')) {
+      const prefix = key.slice(0, -5); // strip "_type" → e.g. "provider_signatory"
+      if (fieldNames.has(`${prefix}_name`) && fieldNames.has(`${prefix}_title`)) {
+        deriveSignatoryFields(data, prefix, fieldNames, str, isBlankPlaceholder);
+      }
+    }
+  }
+  // Legacy backward compat: party_1_type, party_2_type (mutual NDA)
   for (const n of [1, 2]) {
-    deriveSignatoryFields(data, n, fieldNames, str, isBlankPlaceholder);
+    const legacyKey = `party_${n}_type`;
+    if (fieldNames.has(legacyKey) && fieldNames.has(`party_${n}_name`) && fieldNames.has(`party_${n}_title`)) {
+      deriveSignatoryFields(data, `party_${n}`, fieldNames, str, isBlankPlaceholder);
+    }
   }
 
   // Optional cover-table rows in employment templates should disappear when blank.
