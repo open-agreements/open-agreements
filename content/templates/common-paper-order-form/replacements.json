@@ -2,5 +2,7 @@
   "[ # ]": "{payment_terms_days}",
   "[Describe Use Limitations, such as geographic restrictions, system requirements, etc.]": "{fill_in_value}",
   "[describe how services fees will be billed, for example \"Invoices for these services will be sent monthly.\"]": "{fill_in_value}",
-  "[Provider will use commercially reasonable efforts to provide and maintain the Cloud Service without excessive errors and interruptions. If Provider does not meet the SLA in two consecutive months or over three months in any 12-month period, then Customer may, as its only remedy, terminate this Order Form upon notice and receive a prorated refund of prepaid Fees for the remainder of the Subscription Period.]": "{sla_terms}"
+  "[Provider will use commercially reasonable efforts to provide and maintain the Cloud Service without excessive errors and interruptions. If Provider does not meet the SLA in two consecutive months or over three months in any 12-month period, then Customer may, as its only remedy, terminate this Order Form upon notice and receive a prorated refund of prepaid Fees for the remainder of the Subscription Period.]": "{sla_terms}",
+  "up to [    ]% per renewal": "up to {fee_increase_max_percent}% per renewal",
+  "will increase [    ]% per renewal": "will increase {fee_increase_percent}% per renewal"
 }

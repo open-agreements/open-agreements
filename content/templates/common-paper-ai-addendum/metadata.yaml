@@ -98,6 +98,14 @@ fields:
     type: boolean
     description: Provider AI-specific Covered Claims apply
     section: AI Liability
+  - name: provider_covered_claims_detail
+    type: string
+    description: Detail of Provider Covered Claims describing Output IP infringement provisions
+    section: AI Liability
+  - name: provider_covered_claims_exclusions
+    type: string
+    description: Provider Covered Claims indemnity exclusions (e.g. combined use, Input, breach, modifications)
+    section: AI Liability
   - name: customer_covered_claims_detail
     type: string
     description: Detail of Customer Covered Claims describing IP infringement and usage violation provisions

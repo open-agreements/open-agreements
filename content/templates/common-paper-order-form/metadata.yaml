@@ -102,6 +102,14 @@ fields:
     type: boolean
     description: Fees will increase a fixed percentage per renewal
     section: Payment
+  - name: fee_increase_max_percent
+    type: string
+    description: Maximum fee increase percentage per renewal (used with fee_may_increase)
+    section: Payment
+  - name: fee_increase_percent
+    type: string
+    description: Fee increase percentage per renewal (used with fee_will_increase)
+    section: Payment
   - name: fee_inclusive_of_taxes
     type: boolean
     description: Fees are inclusive of taxes (modifies Standard Terms Section 4.1)

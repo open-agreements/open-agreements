@@ -1,4 +1,4 @@
 {
-  "[ # ]": "{fill_in_value}",
+  "[ # ]": "{breach_notification_number}",
   "[ insert specific purpose(s), such as \u201cgenerating data analytics for academic research\u201d ]": "{deidentification_purpose}"
 }

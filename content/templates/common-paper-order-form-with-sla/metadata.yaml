@@ -134,6 +134,14 @@ fields:
     description: >-
       Set to true when fees will automatically increase upon renewal.
     section: Payment
+  - name: fee_increase_max_percent
+    type: string
+    description: Maximum fee increase percentage per renewal (used with fee_may_increase)
+    section: Payment
+  - name: fee_increase_percent
+    type: string
+    description: Fee increase percentage per renewal (used with fee_will_increase)
+    section: Payment
   - name: fee_inclusive_of_taxes
     type: boolean
     description: >-

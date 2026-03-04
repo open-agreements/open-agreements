@@ -42,9 +42,13 @@ fields:
     type: string
     description: Unit for breach notification period
     section: Terms
-  - name: fill_in_value
+  - name: breach_notification_number
     type: string
-    description: General fill-in value
+    description: Numeric value for the breach notification period (e.g. 5)
+    section: Terms
+  - name: other_changes
+    type: string
+    description: Prose describing other changes to BAA Standard Terms
     section: Terms
   - name: custom_effective_date
     type: string
