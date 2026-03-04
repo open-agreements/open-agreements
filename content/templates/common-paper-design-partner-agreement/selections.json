@@ -1,0 +1,25 @@
+{
+  "groups": [
+    {
+      "id": "partner_commitments",
+      "type": "checkbox",
+      "options": [
+        { "marker": "Participate in {free_text} Feedback sessions", "trigger": { "field": "partner_feedback_sessions" } },
+        { "marker": "Provide case study", "trigger": { "field": "partner_case_study" } },
+        { "marker": "Appear as a customer in private customer lists", "trigger": { "field": "partner_private_list" } },
+        { "marker": "Appear as a customer on Provider\u2019s website", "trigger": { "field": "partner_public_list" } },
+        { "marker": "Serve as a reference", "trigger": { "field": "partner_reference" } },
+        { "marker": "Give a {discount_amount} discount", "trigger": { "field": "provider_discount" } },
+        { "marker": "Develop the following Product functionality", "trigger": { "field": "provider_develop_functionality" } }
+      ]
+    },
+    {
+      "id": "fee_structure",
+      "type": "radio",
+      "options": [
+        { "marker": "During the Term, Partner will pay Provider", "trigger": { "field": "has_fees", "equals": true } },
+        { "marker": "There are no Fees under this Agreement", "trigger": "default" }
+      ]
+    }
+  ]
+}

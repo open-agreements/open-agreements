@@ -1,0 +1,64 @@
+{
+  "groups": [
+    {
+      "id": "order_start_date",
+      "type": "radio",
+      "options": [
+        { "marker": "Date of last signature on this Order Form", "trigger": "default" },
+        { "marker": "{custom_start_date}", "trigger": { "field": "custom_start_date" } }
+      ]
+    },
+    {
+      "id": "pilot_fee",
+      "type": "radio",
+      "options": [
+        { "marker": "Fee for Pilot Period:", "trigger": { "field": "pilot_has_fee", "equals": true } },
+        { "marker": "Free trial", "trigger": "default" }
+      ]
+    },
+    {
+      "id": "fee_structure",
+      "type": "checkbox",
+      "options": [
+        { "marker": "{fees} per {fee_unit}", "trigger": { "field": "fee_is_per_unit" } },
+        { "marker": "Other fee structure:", "trigger": { "field": "fee_is_other" } },
+        { "marker": "Fees may increase up to", "trigger": { "field": "fee_may_increase" } },
+        { "marker": "Fees will increase", "trigger": { "field": "fee_will_increase" } },
+        { "marker": "Modifying Section 4.1 of the Standard Terms, Fees are inclusive of taxes", "trigger": { "field": "fee_inclusive_of_taxes" } }
+      ]
+    },
+    {
+      "id": "payment_method",
+      "type": "radio",
+      "options": [
+        { "marker": "Pay by invoice", "trigger": { "field": "payment_by_invoice", "equals": true } },
+        { "marker": "Automatic payment", "trigger": "default" }
+      ]
+    },
+    {
+      "id": "auto_renewal",
+      "type": "radio",
+      "options": [
+        { "marker": "Non-Renewal Notice Date:", "trigger": "default" },
+        { "marker": "Modifying Section 5.1 of the Standard Terms, this Order Form does not automatically renew", "trigger": { "field": "no_auto_renew", "equals": true } }
+      ]
+    },
+    {
+      "id": "sla_terms",
+      "type": "checkbox",
+      "options": [
+        { "marker": "Target Uptime:", "trigger": { "field": "has_target_uptime" } },
+        { "marker": "Target Response Time:", "trigger": { "field": "has_target_response_time" } }
+      ]
+    },
+    {
+      "id": "professional_services",
+      "type": "checkbox",
+      "options": [
+        { "marker": "Provider will provide professional services according to the {professional_services_reference}", "trigger": { "field": "professional_services_by_reference" } },
+        { "marker": "Provider will provide the following professional services: {professional_services_description}", "trigger": { "field": "professional_services_described" } },
+        { "marker": "Payment Process for these services:", "trigger": { "field": "professional_services_payment" } }
+      ]
+    }
+  ]
+}

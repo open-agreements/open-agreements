@@ -26,6 +26,82 @@ fields:
     type: string
     description: Additional AI-specific terms
     section: Legal
+  - name: training_data_none
+    type: boolean
+    description: No Training Data types selected
+    section: AI Training
+  - name: training_data_usage
+    type: boolean
+    description: Usage Data is Training Data
+    section: AI Training
+  - name: training_data_feedback
+    type: boolean
+    description: Feedback is Training Data
+    section: AI Training
+  - name: training_data_input
+    type: boolean
+    description: Input is Training Data
+    section: AI Training
+  - name: training_data_output
+    type: boolean
+    description: Output is Training Data
+    section: AI Training
+  - name: training_data_prompts
+    type: boolean
+    description: User prompts (excluding other Input) are Training Data
+    section: AI Training
+  - name: training_data_customer_content
+    type: boolean
+    description: Customer Content is Training Data
+    section: AI Training
+  - name: training_data_additional
+    type: boolean
+    description: Additional Training Data types apply
+    section: AI Training
+  - name: model_training_none
+    type: boolean
+    description: No model training permitted
+    section: AI Training
+  - name: model_training_customer_only
+    type: boolean
+    description: Model training solely for Customer benefit
+    section: AI Training
+  - name: training_data_aggregated
+    type: boolean
+    description: Training Data must be aggregated
+    section: AI Training
+  - name: training_data_deidentified
+    type: boolean
+    description: Training Data must be de-identified
+    section: AI Training
+  - name: training_data_best_effort_deidentify
+    type: boolean
+    description: Provider will use commercially reasonable efforts to de-identify Training Data
+    section: AI Training
+  - name: training_requirements_additional
+    type: boolean
+    description: Additional Training Data requirements apply
+    section: AI Training
+  - name: no_customer_identification
+    type: boolean
+    description: Neither Input nor Output may identify Customer
+    section: AI Output
+  - name: improvements_for_customer_only
+    type: boolean
+    description: Improvements from Customer data solely for Customer benefit
+    section: AI Output
+  - name: output_restrictions_additional
+    type: boolean
+    description: Additional output restrictions apply
+    section: AI Output
+  - name: ai_provider_covered_claims
+    type: boolean
+    description: Provider AI-specific Covered Claims apply
+    section: AI Liability
+  - name: ai_customer_covered_claims
+    type: boolean
+    description: Customer AI-specific Covered Claims apply
+    section: AI Liability
   - name: provider_signatory_type
     type: enum
     description: Whether the Provider signatory is an entity or individual

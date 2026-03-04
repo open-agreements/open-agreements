@@ -62,6 +62,159 @@ fields:
     type: string
     description: Reference to or location of Data Processing Agreement
     section: Privacy
+  - name: company_promotional_activities
+    type: boolean
+    description: Company will engage in promotional activities
+    section: Obligations
+  - name: company_promotional_materials
+    type: boolean
+    description: Company will provide promotional materials
+    section: Obligations
+  - name: company_sponsored_benefits
+    type: boolean
+    description: Company will provide sponsored benefits
+    section: Obligations
+  - name: company_makes_referrals
+    type: boolean
+    description: Company will make referrals to Partner
+    section: Obligations
+  - name: company_pays_partner
+    type: boolean
+    description: Company will pay Partner per payment schedule
+    section: Obligations
+  - name: company_brand_licensor
+    type: boolean
+    description: Company provides Brand Elements as Licensor
+    section: Obligations
+  - name: partner_makes_referrals
+    type: boolean
+    description: Partner will make referrals to Company
+    section: Obligations
+  - name: partner_pays_company
+    type: boolean
+    description: Partner will pay Company per payment schedule
+    section: Obligations
+  - name: partner_brand_licensor
+    type: boolean
+    description: Partner provides Brand Elements as Licensor
+    section: Obligations
+  - name: company_invoices_partner
+    type: boolean
+    description: Company will send invoices to Partner
+    section: Payment
+  - name: partner_invoices_company
+    type: boolean
+    description: Partner will send invoices to Company
+    section: Payment
+  - name: has_payment_schedule
+    type: boolean
+    description: Payment schedule applies
+    section: Payment
+  - name: has_company_covered_claims
+    type: boolean
+    description: Company Covered Claims apply
+    section: Liability
+  - name: has_partner_covered_claims
+    type: boolean
+    description: Partner Covered Claims apply
+    section: Liability
+  - name: general_cap_type
+    type: enum
+    description: >-
+      Set to true to select how the General Cap Amount (baseline liability limit) is calculated.
+      "multiplier" uses a multiple of fees paid, "dollar" uses a fixed dollar amount,
+      "greater_of" uses the greater of a dollar amount or a multiple of fees.
+    options:
+      - multiplier
+      - dollar
+      - greater_of
+    section: Liability
+  - name: increased_cap_type
+    type: enum
+    description: >-
+      Set to true to select how the Increased Cap Amount (higher liability limit for
+      Increased Claims) is calculated. Same options as general_cap_type.
+    options:
+      - multiplier
+      - dollar
+      - greater_of
+    section: Liability
+  - name: increased_claim_breach_conf
+    type: boolean
+    description: >-
+      Set to true when breach of Section 11 (Confidentiality) should be classified
+      as an Increased Claim with a higher liability cap.
+    section: Liability
+  - name: increased_claim_indemnification
+    type: boolean
+    description: >-
+      Set to true when an Indemnifying Party's indemnification obligations for its
+      Covered Claims should be classified as an Increased Claim.
+    section: Liability
+  - name: increased_claim_breach_conf_gross
+    type: boolean
+    description: >-
+      Set to true when breach of confidentiality resulting from gross negligence or
+      willful misconduct should be classified as an Increased Claim.
+    section: Liability
+  - name: increased_claim_gross_willful
+    type: boolean
+    description: >-
+      Set to true when claims resulting from a party's gross negligence or willful
+      misconduct should be classified as an Increased Claim.
+    section: Liability
+  - name: increased_claim_other
+    type: boolean
+    description: >-
+      Set to true to include a custom Increased Claim category. Specify the claim
+      type in fill_in_detail.
+    section: Liability
+  - name: unlimited_claim_indemnification
+    type: boolean
+    description: >-
+      Set to true when an Indemnifying Party's indemnification obligations for its
+      Covered Claims should have no liability cap (Unlimited Claim).
+    section: Liability
+  - name: unlimited_claim_breach_conf
+    type: boolean
+    description: >-
+      Set to true when breach of Section 11 (Confidentiality) should have no
+      liability cap (Unlimited Claim).
+    section: Liability
+  - name: unlimited_claim_breach_conf_gross
+    type: boolean
+    description: >-
+      Set to true when breach of confidentiality resulting from gross negligence or
+      willful misconduct should have no liability cap (Unlimited Claim).
+    section: Liability
+  - name: unlimited_claim_gross_willful
+    type: boolean
+    description: >-
+      Set to true when claims resulting from a party's gross negligence or willful
+      misconduct should have no liability cap (Unlimited Claim).
+    section: Liability
+  - name: unlimited_claim_other
+    type: boolean
+    description: >-
+      Set to true to include a custom Unlimited Claim category. Specify the claim
+      type in fill_in_detail.
+    section: Liability
+  - name: additional_terms_by_company
+    type: boolean
+    description: Additional terms from Company
+    section: Terms
+  - name: additional_terms_by_partner
+    type: boolean
+    description: Additional terms from Partner
+    section: Terms
+  - name: company_brand_guidelines
+    type: boolean
+    description: Company Brand Guidelines apply
+    section: Terms
+  - name: partner_brand_guidelines
+    type: boolean
+    description: Partner Brand Guidelines apply
+    section: Terms
   - name: governing_law
     type: string
     description: State and/or country whose laws govern the agreement

@@ -48,8 +48,60 @@ fields:
     section: Terms
   - name: custom_effective_date
     type: string
-    description: Custom effective date
+    description: Custom effective date (if not date of last signature)
     section: Terms
+  - name: maintains_designated_record_set
+    type: boolean
+    description: Whether Provider maintains PHI in a Designated Record Set
+    section: Terms
+  - name: no_subcontracting
+    type: boolean
+    description: Provider will not subcontract
+    section: Subcontracting
+  - name: subcontracting_with_conditions
+    type: boolean
+    description: Provider will not subcontract unless conditions are met
+    section: Subcontracting
+  - name: subcontract_notice_required
+    type: boolean
+    description: Notice must be provided to Company before subcontracting
+    section: Subcontracting
+  - name: subcontract_permission_required
+    type: boolean
+    description: Company explicit permission required for subcontracting
+    section: Subcontracting
+  - name: no_offshoring
+    type: boolean
+    description: Offshoring of PHI and/or Services is not permitted
+    section: Subcontracting
+  - name: offshoring_with_conditions
+    type: boolean
+    description: Offshoring not permitted unless conditions met
+    section: Subcontracting
+  - name: no_deidentification
+    type: boolean
+    description: Provider will not de-identify PHI
+    section: De-identification
+  - name: deidentification_with_conditions
+    type: boolean
+    description: Provider will not de-identify PHI unless conditions met
+    section: De-identification
+  - name: deidentify_for_purpose
+    type: boolean
+    description: De-identification for specific purposes only
+    section: De-identification
+  - name: deidentify_additional_requirements
+    type: boolean
+    description: Additional requirements for de-identifying PHI
+    section: De-identification
+  - name: no_aggregation
+    type: boolean
+    description: Provider will not aggregate PHI
+    section: De-identification
+  - name: aggregation_with_conditions
+    type: boolean
+    description: Provider will not aggregate PHI unless conditions met
+    section: De-identification
   - name: provider_signatory_type
     type: enum
     description: Whether the Provider signatory is an entity or individual

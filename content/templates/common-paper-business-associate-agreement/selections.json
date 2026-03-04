@@ -1,0 +1,38 @@
+{
+  "groups": [
+    {
+      "id": "designated_record_set",
+      "type": "radio",
+      "options": [
+        { "marker": "Provider maintains PHI in a Designated Record Set", "trigger": { "field": "maintains_designated_record_set", "equals": true } },
+        { "marker": "Provider does not maintain PHI in a Designated Record Set", "trigger": "default" }
+      ]
+    },
+    {
+      "id": "subcontracting_phi",
+      "type": "checkbox",
+      "options": [
+        { "marker": "Provider will not subcontract.", "trigger": { "field": "no_subcontracting" } },
+        { "marker": "Provider will not subcontract unless:", "trigger": { "field": "subcontracting_with_conditions" } },
+        { "marker": "notice has been provided to Company", "trigger": { "field": "subcontract_notice_required" } },
+        { "marker": "with Company\u2019s explicit permission", "trigger": { "field": "subcontract_permission_required" } },
+        { "marker": "Offshoring of PHI and/or Services is not permitted.", "trigger": { "field": "no_offshoring" } },
+        { "marker": "Offshoring of PHI and/or Services not permitted unless", "trigger": { "field": "offshoring_with_conditions" } },
+        { "marker": "Provider will not de-identify PHI.", "trigger": { "field": "no_deidentification" } },
+        { "marker": "Provider will not de-identify PHI unless:", "trigger": { "field": "deidentification_with_conditions" } },
+        { "marker": "doing so for the specific purpose of", "trigger": { "field": "deidentify_for_purpose" } },
+        { "marker": "the following additional requirements for de-identifying PHI", "trigger": { "field": "deidentify_additional_requirements" } },
+        { "marker": "Provider will not aggregate PHI.", "trigger": { "field": "no_aggregation" } },
+        { "marker": "Provider will not aggregate PHI unless", "trigger": { "field": "aggregation_with_conditions" } }
+      ]
+    },
+    {
+      "id": "effective_date",
+      "type": "radio",
+      "options": [
+        { "marker": "Date of last signature on this Cover Page", "trigger": "default" },
+        { "marker": "{custom_effective_date}", "trigger": { "field": "custom_effective_date" } }
+      ]
+    }
+  ]
+}

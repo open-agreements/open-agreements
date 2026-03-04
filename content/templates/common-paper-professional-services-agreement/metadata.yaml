@@ -87,6 +87,232 @@ fields:
     type: string
     description: Greater-of dollar amount
     section: Liability
+  - name: include_in_progress_deliverables
+    type: boolean
+    description: >-
+      Set to true when in-progress work should be included as Deliverables
+      in addition to completed projects.
+    section: Deliverables
+  - name: deliverables_meet_specs
+    type: boolean
+    description: >-
+      Set to true when Deliverables must meet attached specifications.
+    section: Deliverables
+  - name: deliverables_acceptance_process
+    type: boolean
+    description: >-
+      Set to true when Deliverables are subject to an acceptance process
+      before being considered final.
+    section: Deliverables
+  - name: ownership_upon_payment
+    type: boolean
+    description: >-
+      Set to true when Customer owns Deliverables only upon full payment
+      (not as they are created).
+    section: Deliverables
+  - name: no_third_party_materials
+    type: boolean
+    description: >-
+      Set to true when no Third-Party Materials will be incorporated
+      into Deliverables.
+    section: Deliverables
+  - name: has_third_party_materials
+    type: boolean
+    description: >-
+      Set to true when Third-Party Materials will be incorporated
+      into Deliverables.
+    section: Deliverables
+  - name: provider_procures_materials
+    type: boolean
+    description: >-
+      Set to true when Provider is responsible for procuring required
+      Third-Party Materials.
+    section: Deliverables
+  - name: customer_procures_materials
+    type: boolean
+    description: >-
+      Set to true when Customer is responsible for procuring required
+      Third-Party Materials.
+    section: Deliverables
+  - name: additional_terms_by_provider
+    type: boolean
+    description: >-
+      Set to true when Provider is adding additional terms to the agreement.
+      Specify terms in fill_in_detail.
+    section: Terms
+  - name: additional_terms_by_customer
+    type: boolean
+    description: >-
+      Set to true when Customer is adding additional terms to the agreement.
+      Specify terms in fill_in_detail.
+    section: Terms
+  - name: has_security_policy
+    type: boolean
+    description: >-
+      Set to true when Provider has a Security Policy available at the
+      specified DPA reference URL.
+    section: Security
+  - name: has_security_certifications
+    type: boolean
+    description: >-
+      Set to true when Provider maintains annually updated security
+      reports or certifications.
+    section: Security
+  - name: cert_iso_27001
+    type: boolean
+    description: Set to true when Provider holds ISO 27001 certification.
+    section: Security
+  - name: cert_penetration_testing
+    type: boolean
+    description: Set to true when Provider performs regular penetration testing.
+    section: Security
+  - name: cert_soc2_type1
+    type: boolean
+    description: Set to true when Provider holds SOC 2 Type I certification.
+    section: Security
+  - name: cert_pci_level1
+    type: boolean
+    description: Set to true when Provider holds PCI Level 1 certification.
+    section: Security
+  - name: cert_soc2_type2
+    type: boolean
+    description: Set to true when Provider holds SOC 2 Type II certification.
+    section: Security
+  - name: cert_pci_level2
+    type: boolean
+    description: Set to true when Provider holds PCI Level 2 certification.
+    section: Security
+  - name: cert_hitrust
+    type: boolean
+    description: Set to true when Provider holds HITRUST certification.
+    section: Security
+  - name: cert_fedramp
+    type: boolean
+    description: Set to true when Provider holds FedRAMP Authorization.
+    section: Security
+  - name: cert_other
+    type: boolean
+    description: >-
+      Set to true to include an additional security certification.
+      Specify the certification in fill_in_detail.
+    section: Security
+  - name: provider_may_use_logo
+    type: boolean
+    description: >-
+      Set to true when Provider may publicly identify Customer and use
+      Customer's logo and trademarks in promotional materials.
+    section: Publicity
+  - name: provider_may_identify_nonpublic
+    type: boolean
+    description: >-
+      Set to true when Provider may identify Customer as a customer
+      in non-public settings (e.g., sales conversations).
+    section: Publicity
+  - name: general_cap_type
+    type: enum
+    description: >-
+      How the General Cap Amount (baseline liability limit) is calculated.
+      "multiplier" uses a multiple of fees, "dollar" uses a fixed amount,
+      "greater_of" uses the greater of a dollar amount or a multiple of fees.
+    options:
+      - multiplier
+      - dollar
+      - greater_of
+    section: Liability
+  - name: increased_cap_type
+    type: enum
+    description: >-
+      How the Increased Cap Amount (higher liability limit for Increased
+      Claims) is calculated. Same options as general_cap_type.
+    options:
+      - multiplier
+      - dollar
+      - greater_of
+    section: Liability
+  - name: increased_claim_breach_privacy
+    type: boolean
+    description: >-
+      Set to true when breach of Section 3 (Privacy & Security) should be
+      classified as an Increased Claim with a higher liability cap.
+    section: Liability
+  - name: increased_claim_breach_conf
+    type: boolean
+    description: >-
+      Set to true when breach of Section 11 (Confidentiality) should be
+      classified as an Increased Claim (excluding Privacy & Security breaches).
+    section: Liability
+  - name: increased_claim_indemnification
+    type: boolean
+    description: >-
+      Set to true when indemnification obligations for Covered Claims should
+      be classified as an Increased Claim.
+    section: Liability
+  - name: increased_claim_breach_privacy_gross
+    type: boolean
+    description: >-
+      Set to true when breach of Privacy & Security resulting from gross
+      negligence or willful misconduct is an Increased Claim.
+    section: Liability
+  - name: increased_claim_breach_conf_gross
+    type: boolean
+    description: >-
+      Set to true when breach of Confidentiality resulting from gross
+      negligence or willful misconduct is an Increased Claim.
+    section: Liability
+  - name: increased_claim_gross_willful
+    type: boolean
+    description: >-
+      Set to true when claims from gross negligence or willful misconduct
+      should be classified as Increased Claims.
+    section: Liability
+  - name: increased_claim_other
+    type: boolean
+    description: >-
+      Set to true to include a custom Increased Claim category. Specify in
+      fill_in_detail.
+    section: Liability
+  - name: unlimited_claim_breach_privacy_gross
+    type: boolean
+    description: >-
+      Set to true when breach of Privacy & Security resulting from gross
+      negligence should have no liability cap (Unlimited Claim).
+    section: Liability
+  - name: unlimited_claim_breach_conf_gross
+    type: boolean
+    description: >-
+      Set to true when breach of Confidentiality resulting from gross
+      negligence should have no liability cap (Unlimited Claim).
+    section: Liability
+  - name: unlimited_claim_indemnification
+    type: boolean
+    description: >-
+      Set to true when indemnification for Covered Claims should have
+      no liability cap (Unlimited Claim).
+    section: Liability
+  - name: unlimited_claim_breach_privacy
+    type: boolean
+    description: >-
+      Set to true when breach of Section 3 (Privacy & Security) should
+      have no liability cap (Unlimited Claim).
+    section: Liability
+  - name: unlimited_claim_breach_conf
+    type: boolean
+    description: >-
+      Set to true when breach of Section 11 (Confidentiality) should
+      have no liability cap (Unlimited Claim).
+    section: Liability
+  - name: unlimited_claim_gross_willful
+    type: boolean
+    description: >-
+      Set to true when claims from gross negligence or willful misconduct
+      should have no liability cap (Unlimited Claim).
+    section: Liability
+  - name: unlimited_claim_other
+    type: boolean
+    description: >-
+      Set to true to include a custom Unlimited Claim category. Specify
+      in fill_in_detail.
+    section: Liability
   - name: governing_law
     type: string
     description: Governing law

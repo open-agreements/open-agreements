@@ -1,0 +1,207 @@
+{
+  "groups": [
+    {
+      "id": "deliverable_terms",
+      "type": "checkbox",
+      "options": [
+        { "marker": "In addition to completed projects, Deliverables include in-progress", "trigger": { "field": "include_in_progress_deliverables" } },
+        { "marker": "Deliverables will meet the attached specifications", "trigger": { "field": "deliverables_meet_specs" } },
+        { "marker": "Deliverables are subject to the acceptance process", "trigger": { "field": "deliverables_acceptance_process" } }
+      ]
+    },
+    {
+      "id": "deliverable_ownership",
+      "type": "radio",
+      "options": [
+        { "marker": "Customer owns Deliverables as they are created", "trigger": "default" },
+        { "marker": "Customer owns Deliverables upon payment", "trigger": { "field": "ownership_upon_payment", "equals": true } }
+      ]
+    },
+    {
+      "id": "third_party_materials",
+      "type": "checkbox",
+      "options": [
+        { "marker": "No Third-Party Materials will be incorporated", "trigger": { "field": "no_third_party_materials" } },
+        { "marker": "Third-Party Materials will be incorporated", "trigger": { "field": "has_third_party_materials" } },
+        { "marker": "Provider will procure Third-Party Materials", "trigger": { "field": "provider_procures_materials" } },
+        { "marker": "Customer will procure Third-Party Materials", "trigger": { "field": "customer_procures_materials" } }
+      ]
+    },
+    {
+      "id": "travel_expenses",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "Travel and expenses:", "trigger": { "field": "travel_expense_policy" } }
+      ]
+    },
+    {
+      "id": "sow_date",
+      "type": "radio",
+      "options": [
+        { "marker": "Date of last signature on this Cover Page", "trigger": "default" },
+        { "marker": "{custom_sow_date}", "trigger": { "field": "custom_sow_date" } }
+      ]
+    },
+    {
+      "id": "sow_term",
+      "type": "radio",
+      "options": [
+        { "marker": "{fill_in_value} {term_duration_unit} after the SOW Date", "trigger": "default" },
+        { "marker": "{custom_end_date}", "trigger": { "field": "custom_end_date" } }
+      ]
+    },
+    {
+      "id": "effective_date",
+      "type": "radio",
+      "options": [
+        { "marker": "Date of last signature on this Cover Page", "trigger": "default" },
+        { "marker": "{custom_effective_date}", "trigger": { "field": "custom_effective_date" } }
+      ]
+    },
+    {
+      "id": "additional_terms",
+      "type": "checkbox",
+      "options": [
+        { "marker": "By Provider: {fill_in_detail}", "trigger": { "field": "additional_terms_by_provider" } },
+        { "marker": "By Customer: {fill_in_detail}", "trigger": { "field": "additional_terms_by_customer" } }
+      ]
+    },
+    {
+      "id": "general_cap",
+      "type": "radio",
+      "cellContext": "no General Cap Amount",
+      "options": [
+        { "marker": "{cap_multiplier}x the fees paid or payable by Customer to Provider", "trigger": { "field": "general_cap_type", "equals": "multiplier" } },
+        { "marker": "${general_cap_amount}", "trigger": { "field": "general_cap_type", "equals": "dollar" } },
+        { "marker": "The greater of ${increased_cap_amount}", "trigger": { "field": "general_cap_type", "equals": "greater_of" } }
+      ]
+    },
+    {
+      "id": "increased_claims",
+      "type": "checkbox",
+      "cellContext": "no Increased Claims are included",
+      "options": [
+        { "marker": "Breach of Section 3 (Privacy & Security)", "trigger": { "field": "increased_claim_breach_privacy" } },
+        { "marker": "Breach of Section 11 (Confidentiality) (however, excluding any breach of Section 3", "trigger": { "field": "increased_claim_breach_conf" } },
+        { "marker": "indemnification obligations for its Covered Claims", "trigger": { "field": "increased_claim_indemnification" } },
+        { "marker": "Breach of Section 3 (Privacy & Security) resulting from gross negligence", "trigger": { "field": "increased_claim_breach_privacy_gross" } },
+        { "marker": "Breach of Section 11 (Confidentiality) resulting from gross negligence", "trigger": { "field": "increased_claim_breach_conf_gross" } },
+        { "marker": "Claims resulting from a party\u2019s gross negligence or willful misconduct", "trigger": { "field": "increased_claim_gross_willful" } },
+        { "marker": "Other: {fill_in_detail}", "trigger": { "field": "increased_claim_other" } }
+      ]
+    },
+    {
+      "id": "increased_cap",
+      "type": "radio",
+      "cellContext": "Increased Claims are included, customize",
+      "options": [
+        { "marker": "{cap_multiplier}x the fees paid or payable by Customer to Provider", "trigger": { "field": "increased_cap_type", "equals": "multiplier" } },
+        { "marker": "${general_cap_amount}", "trigger": { "field": "increased_cap_type", "equals": "dollar" } },
+        { "marker": "The greater of ${increased_cap_amount}", "trigger": { "field": "increased_cap_type", "equals": "greater_of" } }
+      ]
+    },
+    {
+      "id": "unlimited_claims",
+      "type": "checkbox",
+      "cellContext": "no Unlimited Claims are included",
+      "options": [
+        { "marker": "Breach of Section 3 (Privacy & Security) resulting from gross negligence", "trigger": { "field": "unlimited_claim_breach_privacy_gross" } },
+        { "marker": "Breach of Section 11 (Confidentiality) resulting from gross negligence", "trigger": { "field": "unlimited_claim_breach_conf_gross" } },
+        { "marker": "indemnification obligations for its Covered Claims", "trigger": { "field": "unlimited_claim_indemnification" } },
+        { "marker": "Breach of Section 3 (Privacy & Security)", "trigger": { "field": "unlimited_claim_breach_privacy" } },
+        { "marker": "Breach of Section 11 (Confidentiality) (however, excluding any breach of Section 3", "trigger": { "field": "unlimited_claim_breach_conf" } },
+        { "marker": "Claims resulting from a party\u2019s gross negligence or willful misconduct", "trigger": { "field": "unlimited_claim_gross_willful" } },
+        { "marker": "Other: {fill_in_detail}", "trigger": { "field": "unlimited_claim_other" } }
+      ]
+    },
+    {
+      "id": "security_policy",
+      "type": "checkbox",
+      "options": [
+        { "marker": "Security Policy available at {dpa_reference}", "trigger": { "field": "has_security_policy" } },
+        { "marker": "Provider will maintain annually updated reports or annual certifications", "trigger": { "field": "has_security_certifications" } }
+      ]
+    },
+    {
+      "id": "security_cert_iso27001",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "ISO 27001", "trigger": { "field": "cert_iso_27001" } }
+      ]
+    },
+    {
+      "id": "security_cert_pentest",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "Penetration testing", "trigger": { "field": "cert_penetration_testing" } }
+      ]
+    },
+    {
+      "id": "security_cert_soc2_type1",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "SOC 2 Type I", "trigger": { "field": "cert_soc2_type1" } }
+      ]
+    },
+    {
+      "id": "security_cert_pci_level1",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "PCI Level 1", "trigger": { "field": "cert_pci_level1" } }
+      ]
+    },
+    {
+      "id": "security_cert_soc2_type2",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "SOC 2 Type II", "trigger": { "field": "cert_soc2_type2" } }
+      ]
+    },
+    {
+      "id": "security_cert_pci_level2",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "PCI Level 2", "trigger": { "field": "cert_pci_level2" } }
+      ]
+    },
+    {
+      "id": "security_cert_hitrust",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "HITRUST", "trigger": { "field": "cert_hitrust" } }
+      ]
+    },
+    {
+      "id": "security_cert_fedramp",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "FedRAMP Authorized", "trigger": { "field": "cert_fedramp" } }
+      ]
+    },
+    {
+      "id": "security_cert_other",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "Other: {fill_in_detail}", "trigger": { "field": "cert_other" } }
+      ]
+    },
+    {
+      "id": "publicity",
+      "type": "checkbox",
+      "options": [
+        { "marker": "Provider may identify Customer and use Customer\u2019s logo and trademarks", "trigger": { "field": "provider_may_use_logo" } },
+        { "marker": "Provider may identify Customer as a customer in non-public settings", "trigger": { "field": "provider_may_identify_nonpublic" } }
+      ]
+    }
+  ]
+}

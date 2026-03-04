@@ -102,6 +102,80 @@ fields:
     type: string
     description: Unit for resolution time targets (e.g. "hours", "days")
     section: Service
+  - name: pilot_has_fee
+    type: boolean
+    description: >-
+      Set to true when the Pilot Period has an associated fee
+      (not a free trial).
+    section: Payment
+  - name: fee_is_per_unit
+    type: boolean
+    description: >-
+      Set to true when fees are charged per unit (e.g., per user, per month).
+    section: Payment
+  - name: fee_is_other
+    type: boolean
+    description: >-
+      Set to true when a custom fee structure applies. Describe in
+      fill_in_value.
+    section: Payment
+  - name: fee_may_increase
+    type: boolean
+    description: >-
+      Set to true when fees may increase up to a specified percentage
+      upon renewal.
+    section: Payment
+  - name: fee_will_increase
+    type: boolean
+    description: >-
+      Set to true when fees will automatically increase upon renewal.
+    section: Payment
+  - name: fee_inclusive_of_taxes
+    type: boolean
+    description: >-
+      Set to true when fees are inclusive of taxes, modifying Section 4.1
+      of the Standard Terms.
+    section: Payment
+  - name: payment_by_invoice
+    type: boolean
+    description: >-
+      Set to true when payment is by invoice (not automatic payment).
+    section: Payment
+  - name: no_auto_renew
+    type: boolean
+    description: >-
+      Set to true when this Order Form does not automatically renew,
+      modifying Section 5.1 of the Standard Terms.
+    section: Terms
+  - name: has_target_uptime
+    type: boolean
+    description: >-
+      Set to true when a Target Uptime percentage is specified in
+      the SLA.
+    section: Service
+  - name: has_target_response_time
+    type: boolean
+    description: >-
+      Set to true when Target Response Times are specified in the SLA.
+    section: Service
+  - name: professional_services_by_reference
+    type: boolean
+    description: >-
+      Set to true when professional services are described by reference
+      to an external SOW or PSA.
+    section: Service
+  - name: professional_services_described
+    type: boolean
+    description: >-
+      Set to true when professional services are described inline
+      in the Order Form.
+    section: Service
+  - name: professional_services_payment
+    type: boolean
+    description: >-
+      Set to true when a separate payment process applies to
+      professional services.
+    section: Payment
   - name: provider_signatory_type
     type: enum
     description: Whether the Provider signatory is an entity or individual

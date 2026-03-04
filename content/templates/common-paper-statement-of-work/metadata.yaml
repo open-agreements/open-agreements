@@ -58,6 +58,38 @@ fields:
     type: string
     description: Description of or reference to travel and expense policy
     section: Payment
+  - name: include_in_progress_deliverables
+    type: boolean
+    description: Include in-progress drafts or components as Deliverables
+    section: Deliverables
+  - name: deliverables_meet_specs
+    type: boolean
+    description: Deliverables will meet attached specifications
+    section: Deliverables
+  - name: deliverables_acceptance_process
+    type: boolean
+    description: Deliverables are subject to an acceptance process
+    section: Deliverables
+  - name: ownership_upon_payment
+    type: boolean
+    description: Customer owns Deliverables upon payment (vs. as created)
+    section: Deliverables
+  - name: no_third_party_materials
+    type: boolean
+    description: No Third-Party Materials in Deliverables
+    section: Deliverables
+  - name: has_third_party_materials
+    type: boolean
+    description: Third-Party Materials will be incorporated in Deliverables
+    section: Deliverables
+  - name: provider_procures_materials
+    type: boolean
+    description: Provider will procure Third-Party Materials
+    section: Deliverables
+  - name: customer_procures_materials
+    type: boolean
+    description: Customer will procure Third-Party Materials
+    section: Deliverables
   - name: customer_owned_deliverables
     type: string
     description: Deliverables that will be owned by Customer under this SOW
