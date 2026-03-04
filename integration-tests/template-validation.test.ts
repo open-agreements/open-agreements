@@ -316,7 +316,7 @@ describe('validateTemplate placeholder coverage', () => {
     expect(result.valid).toBe(false);
     expect(result.errors.join(' ')).toContain('Replacement key "[Missing Placeholder]" not found');
     expect(result.warnings.join(' ')).toContain('Optional field "unused_optional"');
-    expect(result.warnings.join(' ')).toContain('Placeholder {doc_only} found in replacements/template');
+    expect(result.warnings.join(' ')).toContain('Placeholder {doc_only} found in template but not defined in metadata fields');
   });
 
   it('accepts FOR loop placeholders in direct template scanning mode', () => {

@@ -114,6 +114,10 @@ fields:
     type: string
     description: Liability cap multiplier
     section: Liability
+  - name: greater_of_dollar
+    type: string
+    description: Dollar amount for the greater-of liability cap
+    section: Liability
   - name: policy_url
     type: string
     description: URL of where to find policies
