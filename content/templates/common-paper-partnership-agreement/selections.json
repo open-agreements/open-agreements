@@ -3,13 +3,24 @@
     {
       "id": "company_commitments",
       "type": "checkbox",
+      "standalone": true,
       "options": [
-        { "marker": "Engage in the following promotional activities:", "trigger": { "field": "company_promotional_activities" } },
-        { "marker": "Provide the following promotional materials:", "trigger": { "field": "company_promotional_materials" } },
-        { "marker": "Provide the following sponsored benefits:", "trigger": { "field": "company_sponsored_benefits" } },
+        { "marker": "promotional activities: {company_promotional_activities_detail}", "trigger": { "field": "company_promotional_activities" } },
+        { "marker": "promotional materials: {company_promotional_materials_detail}", "trigger": { "field": "company_promotional_materials" } },
+        { "marker": "sponsored benefits: {company_sponsored_benefits_detail}", "trigger": { "field": "company_sponsored_benefits" } },
         { "marker": "Make Referrals to Partner", "trigger": { "field": "company_makes_referrals" } },
         { "marker": "Pay Partner the following amount", "trigger": { "field": "company_pays_partner" } },
-        { "marker": "Provide Company\u2019s Brand Elements as Licensor", "trigger": { "field": "company_brand_licensor" } },
+        { "marker": "Provide Company\u2019s Brand Elements as Licensor", "trigger": { "field": "company_brand_licensor" } }
+      ]
+    },
+    {
+      "id": "partner_commitments",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "promotional activities: {partner_promotional_activities_detail}", "trigger": { "field": "partner_promotional_activities" } },
+        { "marker": "promotional materials: {partner_promotional_materials_detail}", "trigger": { "field": "partner_promotional_materials" } },
+        { "marker": "sponsored benefits: {partner_sponsored_benefits_detail}", "trigger": { "field": "partner_sponsored_benefits" } },
         { "marker": "Make Referrals to Company", "trigger": { "field": "partner_makes_referrals" } },
         { "marker": "Pay Company the following amount", "trigger": { "field": "partner_pays_company" } },
         { "marker": "Provide Partner\u2019s Brand Elements as Licensor", "trigger": { "field": "partner_brand_licensor" } }

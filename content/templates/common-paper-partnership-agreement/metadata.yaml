@@ -162,6 +162,18 @@ fields:
     type: boolean
     description: Company provides Brand Elements as Licensor
     section: Obligations
+  - name: partner_promotional_activities
+    type: boolean
+    description: Partner will engage in promotional activities
+    section: Obligations
+  - name: partner_promotional_materials
+    type: boolean
+    description: Partner will provide promotional materials
+    section: Obligations
+  - name: partner_sponsored_benefits
+    type: boolean
+    description: Partner will provide sponsored benefits
+    section: Obligations
   - name: partner_makes_referrals
     type: boolean
     description: Partner will make referrals to Company

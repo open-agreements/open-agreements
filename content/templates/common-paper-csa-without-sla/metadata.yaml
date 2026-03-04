@@ -62,6 +62,18 @@ fields:
     type: string
     description: How professional services fees will be billed
     section: Payment
+  - name: fee_increase_max_percent
+    type: string
+    description: Maximum fee increase percentage per renewal (used with fee_may_increase)
+    section: Payment
+  - name: fee_increase_percent
+    type: string
+    description: Fee increase percentage per renewal (used with fee_will_increase)
+    section: Payment
+  - name: sla_terms
+    type: string
+    description: Service level terms describing uptime commitments, remedies for SLA breaches, and refund policies
+    section: Service
   - name: increased_claim_other_detail
     type: string
     description: Description of a custom Increased Claim category

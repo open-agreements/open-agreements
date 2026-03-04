@@ -38,6 +38,8 @@
   "pilot_modifications": true,
   "fee_is_per_unit": true,
   "fee_is_other": true,
+  "fee_increase_max_percent": "5",
+  "fee_increase_percent": "3",
   "fee_may_increase": true,
   "fee_will_increase": true,
   "fee_inclusive_of_taxes": true,

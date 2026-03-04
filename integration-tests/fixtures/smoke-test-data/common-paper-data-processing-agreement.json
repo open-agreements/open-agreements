@@ -24,6 +24,7 @@
   "security_measures": "AES-256 encryption at rest, TLS 1.3 in transit, SOC 2 Type II compliance",
   "text_box": "Additional data processing details as agreed between the parties",
   "other_security_certification": "ISO 27701 Privacy Information Management",
+  "dpa_covered_claims_detail": "(1) Provider's breach or alleged breach of the DPA, or (2) Provider's gross negligence or willful misconduct, in each case, that results in a Security Incident",
   "cap_multiplier": "2",
   "greater_of_dollar": "$250,000",
   "policy_url": "https://techco.com/security-policy",

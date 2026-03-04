@@ -3,5 +3,7 @@
   "{non_renewal_notice_days}x the Fees": "{cap_multiplier}x the Fees",
   "[ # ]": "{payment_terms_days}",
   "[Describe Use Limitations, such as geographic restrictions, system requirements, etc.]": "{use_limitations}",
-  "[describe how services fees will be billed, for example \"Invoices for these services will be sent monthly.\"]": "{professional_services_billing}"
+  "[describe how services fees will be billed, for example \"Invoices for these services will be sent monthly.\"]": "{professional_services_billing}",
+  "up to [    ]% per renewal": "up to {fee_increase_max_percent}% per renewal",
+  "will increase [    ]% per renewal": "will increase {fee_increase_percent}% per renewal"
 }

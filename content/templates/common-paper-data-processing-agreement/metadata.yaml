@@ -110,6 +110,10 @@ fields:
     type: string
     description: Name of additional security certification (e.g. "ISO 27701 Privacy Information Management")
     section: Security
+  - name: dpa_covered_claims_detail
+    type: string
+    description: Specific scope of DPA Covered Claims (e.g., breach of DPA, gross negligence resulting in Security Incident)
+    section: Legal
   - name: cap_multiplier
     type: string
     description: Liability cap multiplier
