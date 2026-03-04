@@ -52,8 +52,16 @@ fields:
     section: Payment
   - name: fill_in_value
     type: string
-    description: General fill-in value for customizable sections
-    section: Terms
+    description: Custom fee structure description (used with fee_is_other)
+    section: Payment
+  - name: use_limitations
+    type: string
+    description: Description of use limitations or prohibited uses of the Cloud Service
+    section: Service
+  - name: professional_services_billing
+    type: string
+    description: How professional services fees will be billed (e.g. "Invoices for these services will be sent monthly.")
+    section: Payment
   - name: payment_frequency
     type: string
     description: Payment frequency (e.g. "monthly", "quarterly", "annually")

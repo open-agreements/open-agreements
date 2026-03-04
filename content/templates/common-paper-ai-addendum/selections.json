@@ -38,7 +38,7 @@
       "type": "checkbox",
       "options": [
         { "marker": "Neither Input nor Output may identify Customer", "trigger": { "field": "no_customer_identification" } },
-        { "marker": "Improvements based on Customer\u2019s Input, Output, or Training Data will be solely for Customer\u2019s benefit", "trigger": { "field": "improvements_for_customer_only" } },
+        { "marker": "Improvements based on Customer's Input, Output, or Training Data will be solely for Customer's benefit", "trigger": { "field": "improvements_for_customer_only" } },
         { "marker": "{additional_terms}", "trigger": { "field": "output_restrictions_additional" } }
       ]
     },

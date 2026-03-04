@@ -1,8 +1,8 @@
 {
   "[ # ]": "{payment_terms_days}",
-  "[__]": "{fill_in_value}",
-  "[Describe Use Limitations, such as geographic restrictions, system requirements, etc.]": "{fill_in_value}",
-  "[describe how services fees will be billed, for example \"Invoices for these services will be sent monthly.\"]": "{fill_in_value}",
+  "[__]": "{target_uptime_percent}",
+  "[Describe Use Limitations, such as geographic restrictions, system requirements, etc.]": "{use_limitations}",
+  "[describe how services fees will be billed, for example \"Invoices for these services will be sent monthly.\"]": "{professional_services_billing}",
   "[ fill in how customers request support or file an incident ticket, e.g., email support@companyname.com or visit www.companyname.com/helpdesk to submit a ticket ]": "{support_request_process}",
   "up to [    ]% per renewal": "up to {fee_increase_max_percent}% per renewal",
   "will increase [    ]% per renewal": "will increase {fee_increase_percent}% per renewal"
