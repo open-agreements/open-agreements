@@ -31,11 +31,18 @@ const OptionSchema = z.object({
   trigger: TriggerSchema,
 });
 
-const GroupSchema = z.object({
-  id: z.string(),
-  type: z.enum(['radio', 'checkbox']),
-  options: z.array(OptionSchema).min(2),
-});
+const GroupSchema = z
+  .object({
+    id: z.string(),
+    type: z.enum(['radio', 'checkbox']),
+    standalone: z.boolean().optional(),
+    cellContext: z.string().optional(),
+    options: z.array(OptionSchema).min(1),
+  })
+  .refine(
+    (g) => g.standalone === true || g.options.length >= 2,
+    { message: 'Non-standalone groups require at least 2 options' },
+  );
 
 export const SelectionsConfigSchema = z.object({
   groups: z.array(GroupSchema).min(1),
@@ -64,6 +71,16 @@ function extractParagraphText(para: Element): string {
     parts.push(tElements[i].textContent ?? '');
   }
   return parts.join('').trim();
+}
+
+/** Extract all text from a table cell by concatenating its paragraph texts. */
+function extractCellText(cell: Element): string {
+  const paras = cell.getElementsByTagNameNS(W_NS, 'p');
+  const parts: string[] = [];
+  for (let i = 0; i < paras.length; i++) {
+    parts.push(extractParagraphText(paras[i]));
+  }
+  return parts.join(' ');
 }
 
 /** Check if a paragraph's text starts with a radio or checkbox marker. */
@@ -201,8 +218,6 @@ export async function applySelections(
   const parts = enumerateTextParts(zip);
   const partNames = getGeneralTextPartNames(parts);
 
-  let modified = false;
-
   for (const partName of partNames) {
     const entry = zip.getEntry(partName);
     if (!entry) continue;
@@ -210,12 +225,13 @@ export async function applySelections(
     const xml = entry.getData().toString('utf-8');
     const doc = parser.parseFromString(xml, 'text/xml');
 
+    let partModified = false;
     for (const group of config.groups) {
       const result = processGroup(doc, group, data);
-      if (result) modified = true;
+      if (result) partModified = true;
     }
 
-    if (modified) {
+    if (partModified) {
       const outXml = serializer.serializeToString(doc);
       zip.updateFile(partName, Buffer.from(outXml, 'utf-8'));
     }
@@ -244,9 +260,13 @@ function processGroup(
   group: z.infer<typeof GroupSchema>,
   data: Record<string, unknown>,
 ): boolean {
-  // Step 1: Find paragraphs matching each option's marker
+  if (group.standalone) {
+    return processStandaloneGroup(doc, group, data);
+  }
+
+  // Step 1: Find ALL candidate paragraphs for each option's marker
   const allParagraphs = doc.getElementsByTagNameNS(W_NS, 'p');
-  const optionMatches: OptionMatch[] = [];
+  const candidatesPerOption: OptionMatch[][] = group.options.map(() => []);
 
   for (let oi = 0; oi < group.options.length; oi++) {
     const option = group.options[oi];
@@ -254,19 +274,77 @@ function processGroup(
       const para = allParagraphs[pi];
       const text = extractParagraphText(para);
       if (text && hasOptionPrefix(text) && text.includes(option.marker)) {
-        optionMatches.push({ para, optionIndex: oi });
-        break; // first match per option
+        candidatesPerOption[oi].push({ para, optionIndex: oi });
       }
     }
   }
 
-  // If we couldn't find all option markers, skip this group
-  if (optionMatches.length < 2) return false;
+  // Step 2: Find a cell where ALL options have at least one candidate
+  // Group candidates by their parent cell
+  const cellCandidates = new Map<Element, OptionMatch[]>();
 
-  // Step 2: Verify all matched paragraphs share the same parent <w:tc>
-  const cells = optionMatches.map((m) => findAncestor(m.para, 'tc'));
-  const cell = cells[0];
-  if (!cell || !cells.every((c) => c === cell)) return false;
+  for (const candidates of candidatesPerOption) {
+    for (const match of candidates) {
+      const cell = findAncestor(match.para, 'tc');
+      if (!cell) continue;
+      if (!cellCandidates.has(cell)) cellCandidates.set(cell, []);
+      cellCandidates.get(cell)!.push(match);
+    }
+  }
+
+  // Collect all qualifying cells (where all options are represented)
+  const qualifyingCells: { cell: Element; matches: OptionMatch[] }[] = [];
+
+  for (const [candidateCell, matches] of cellCandidates) {
+    const representedOptions = new Set(matches.map((m) => m.optionIndex));
+    if (representedOptions.size >= 2 && representedOptions.size >= group.options.length) {
+      const seen = new Set<number>();
+      const deduped: OptionMatch[] = [];
+      for (const match of matches) {
+        if (!seen.has(match.optionIndex)) {
+          seen.add(match.optionIndex);
+          deduped.push(match);
+        }
+      }
+      qualifyingCells.push({ cell: candidateCell, matches: deduped });
+    }
+  }
+
+  if (qualifyingCells.length === 0) return false;
+
+  let cell: Element;
+  let optionMatches: OptionMatch[];
+
+  if (qualifyingCells.length === 1) {
+    cell = qualifyingCells[0].cell;
+    optionMatches = qualifyingCells[0].matches;
+  } else if (group.cellContext) {
+    const filtered = qualifyingCells.filter(({ cell: c }) => {
+      const cellText = extractCellText(c);
+      return cellText.includes(group.cellContext!);
+    });
+    if (filtered.length === 1) {
+      cell = filtered[0].cell;
+      optionMatches = filtered[0].matches;
+    } else if (filtered.length === 0) {
+      throw new Error(
+        `[selector] Group "${group.id}": cellContext "${group.cellContext}" did not match any of ${qualifyingCells.length} candidate cells.`,
+      );
+    } else {
+      throw new Error(
+        `[selector] Group "${group.id}": cellContext "${group.cellContext}" matched ${filtered.length} cells (expected 1). Use a more specific cellContext.`,
+      );
+    }
+  } else {
+    const snippets = qualifyingCells.map(({ cell: c }, i) => {
+      const text = extractCellText(c);
+      return `  Cell ${i + 1}: "${text.substring(0, 120)}..."`;
+    });
+    throw new Error(
+      `[selector] Group "${group.id}": ${qualifyingCells.length} candidate cells with identical markers. ` +
+      `Add "cellContext" to disambiguate.\nCandidates:\n${snippets.join('\n')}`,
+    );
+  }
 
   // Step 3: Collect all <w:p> in this cell and classify them
   const cellParas = cell.getElementsByTagNameNS(W_NS, 'p');
@@ -293,44 +371,7 @@ function processGroup(
   }
 
   // Step 4: Evaluate triggers to determine selected options
-  const selectedIndices = new Set<number>();
-
-  if (group.type === 'radio') {
-    // Radio: first trigger that fires wins; if none, use default
-    let found = false;
-    for (let i = 0; i < group.options.length; i++) {
-      if (triggerFires(group.options[i].trigger, data)) {
-        selectedIndices.add(i);
-        found = true;
-        break;
-      }
-    }
-    if (!found) {
-      // Find the default option
-      const defaultIdx = group.options.findIndex((o) => o.trigger === 'default');
-      if (defaultIdx >= 0) selectedIndices.add(defaultIdx);
-    }
-  } else {
-    // Checkbox: select each option whose trigger fires
-    for (let i = 0; i < group.options.length; i++) {
-      if (group.options[i].trigger === 'default') {
-        // Default for checkbox: selected if no other option fires
-        // (evaluated after checking all others)
-        continue;
-      }
-      if (triggerFires(group.options[i].trigger, data)) {
-        selectedIndices.add(i);
-      }
-    }
-    // Handle defaults for checkbox
-    if (selectedIndices.size === 0) {
-      for (let i = 0; i < group.options.length; i++) {
-        if (group.options[i].trigger === 'default') {
-          selectedIndices.add(i);
-        }
-      }
-    }
-  }
+  const selectedIndices = evaluateTriggers(group, data);
 
   // Step 5 & 6: Remove unselected options + sub-clauses, mark selected as checked
   let madeChanges = false;
@@ -356,6 +397,123 @@ function processGroup(
   if (remainingParas.length === 0) {
     const newP = doc.createElementNS(W_NS, 'w:p');
     cell.appendChild(newP);
+  }
+
+  return madeChanges;
+}
+
+/**
+ * Evaluate triggers against fill data and return the set of selected option indices.
+ */
+function evaluateTriggers(
+  group: z.infer<typeof GroupSchema>,
+  data: Record<string, unknown>,
+): Set<number> {
+  const selectedIndices = new Set<number>();
+
+  if (group.type === 'radio') {
+    // Radio: first trigger that fires wins; if none, use default
+    let found = false;
+    for (let i = 0; i < group.options.length; i++) {
+      if (triggerFires(group.options[i].trigger, data)) {
+        selectedIndices.add(i);
+        found = true;
+        break;
+      }
+    }
+    if (!found) {
+      const defaultIdx = group.options.findIndex((o) => o.trigger === 'default');
+      if (defaultIdx >= 0) selectedIndices.add(defaultIdx);
+    }
+  } else {
+    // Checkbox: select each option whose trigger fires
+    for (let i = 0; i < group.options.length; i++) {
+      if (group.options[i].trigger === 'default') continue;
+      if (triggerFires(group.options[i].trigger, data)) {
+        selectedIndices.add(i);
+      }
+    }
+    // Handle defaults for checkbox
+    if (selectedIndices.size === 0) {
+      for (let i = 0; i < group.options.length; i++) {
+        if (group.options[i].trigger === 'default') {
+          selectedIndices.add(i);
+        }
+      }
+    }
+  }
+
+  return selectedIndices;
+}
+
+/**
+ * Process a standalone checkbox group where each option may be in a different
+ * table cell. If trigger fires → mark checked; if not → remove the option
+ * paragraph and any non-option sub-clause paragraphs that follow it in the
+ * same cell.
+ */
+function processStandaloneGroup(
+  doc: Document,
+  group: z.infer<typeof GroupSchema>,
+  data: Record<string, unknown>,
+): boolean {
+  const allParagraphs = doc.getElementsByTagNameNS(W_NS, 'p');
+  const selectedIndices = evaluateTriggers(group, data);
+  let madeChanges = false;
+
+  for (let oi = 0; oi < group.options.length; oi++) {
+    const option = group.options[oi];
+
+    // Find the marker paragraph
+    let markerPara: Element | null = null;
+    for (let pi = 0; pi < allParagraphs.length; pi++) {
+      const para = allParagraphs[pi];
+      const text = extractParagraphText(para);
+      if (text && hasOptionPrefix(text) && text.includes(option.marker)) {
+        markerPara = para;
+        break;
+      }
+    }
+    if (!markerPara) continue;
+
+    if (selectedIndices.has(oi)) {
+      setChecked(markerPara, group.type);
+      madeChanges = true;
+    } else {
+      // Remove: marker paragraph + consecutive non-option sub-clauses in same cell
+      const cell = findAncestor(markerPara, 'tc');
+      if (cell) {
+        const cellParas = cell.getElementsByTagNameNS(W_NS, 'p');
+        // Find marker index within cell
+        let markerIdx = -1;
+        for (let ci = 0; ci < cellParas.length; ci++) {
+          if (cellParas[ci] === markerPara) { markerIdx = ci; break; }
+        }
+        if (markerIdx >= 0) {
+          // Collect sub-clause paragraphs after the marker (until next option or end)
+          const toRemove: Element[] = [markerPara];
+          for (let ci = markerIdx + 1; ci < cellParas.length; ci++) {
+            const p = cellParas[ci];
+            const text = extractParagraphText(p);
+            if (text && hasOptionPrefix(text)) break; // next option — stop
+            toRemove.push(p);
+          }
+          for (const p of toRemove) {
+            p.parentNode?.removeChild(p);
+          }
+          // Ensure at least one <w:p> remains in cell
+          const remaining = cell.getElementsByTagNameNS(W_NS, 'p');
+          if (remaining.length === 0) {
+            const newP = doc.createElementNS(W_NS, 'w:p');
+            cell.appendChild(newP);
+          }
+        }
+      } else {
+        // No cell parent — just remove the paragraph
+        markerPara.parentNode?.removeChild(markerPara);
+      }
+      madeChanges = true;
+    }
   }
 
   return madeChanges;
