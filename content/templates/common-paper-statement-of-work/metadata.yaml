@@ -62,9 +62,21 @@ fields:
     type: string
     description: Customer obligations such as identifying a point of contact or geographic limitations
     section: Terms
-  - name: fill_in_value
+  - name: term_duration_value
     type: string
-    description: General fill-in value for customizable sections
+    description: Numeric duration for the SOW term (e.g. "6", "12")
+    section: Terms
+  - name: rejection_period_value
+    type: string
+    description: Number of time units for the deliverable rejection period
+    section: Deliverables
+  - name: resubmission_period_value
+    type: string
+    description: Number of time units for the deliverable resubmission period
+    section: Deliverables
+  - name: changes_to_standard_terms
+    type: string
+    description: List of specific changes to the Standard Terms for this SOW
     section: Terms
   - name: invoice_frequency_unit
     type: string

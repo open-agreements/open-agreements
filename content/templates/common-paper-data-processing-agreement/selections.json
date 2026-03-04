@@ -86,7 +86,7 @@
       "type": "checkbox",
       "standalone": true,
       "options": [
-        { "marker": "Other: {fill_in_value}", "trigger": { "field": "cert_other" } }
+        { "marker": "Other: {other_security_certification}", "trigger": { "field": "cert_other" } }
       ]
     },
     {

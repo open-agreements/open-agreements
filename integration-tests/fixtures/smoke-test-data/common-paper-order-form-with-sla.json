@@ -9,7 +9,7 @@
   "pilot_period": "3 months",
   "fees": "$10,000",
   "fee_unit": "year",
-  "fill_in_value": "5%",
+  "custom_fee_structure": "Usage-based pricing: $0.10 per API call, billed monthly in arrears",
   "use_limitations": "Customer may not use the Cloud Service for any illegal purpose, to transmit malware, or to exceed the licensed number of users. Customer shall not reverse-engineer, sublicense, or resell the Cloud Service.",
   "professional_services_billing": "Invoices for professional services will be sent monthly in arrears based on hours worked at the agreed rate.",
   "target_uptime_percent": "99.9",

@@ -50,10 +50,38 @@ fields:
     type: string
     description: Fee billing unit
     section: Payment
-  - name: fill_in_value
+  - name: custom_fee_structure
     type: string
-    description: General fill-in value
+    description: Custom fee structure description (used with fee_is_other)
+    section: Payment
+  - name: use_limitations
+    type: string
+    description: Description of use limitations or prohibited uses of the Cloud Service
+    section: Service
+  - name: professional_services_billing
+    type: string
+    description: How professional services fees will be billed
+    section: Payment
+  - name: increased_claim_other_detail
+    type: string
+    description: Description of a custom Increased Claim category
+    section: Liability
+  - name: unlimited_claim_other_detail
+    type: string
+    description: Description of a custom Unlimited Claim category
+    section: Liability
+  - name: additional_warranty_provider_detail
+    type: string
+    description: Additional warranty text provided by the Provider
     section: Terms
+  - name: additional_warranty_customer_detail
+    type: string
+    description: Additional warranty text provided by the Customer
+    section: Terms
+  - name: other_security_certification
+    type: string
+    description: Name of additional security certification (e.g. "ISO 27701")
+    section: Security
   - name: payment_frequency
     type: string
     description: Payment frequency
@@ -145,7 +173,7 @@ fields:
     type: boolean
     description: >-
       Set to true when a custom fee structure applies. Describe in
-      fill_in_value.
+      custom_fee_structure.
     section: Payment
   - name: fee_may_increase
     type: boolean
@@ -260,7 +288,7 @@ fields:
     type: boolean
     description: >-
       Set to true to include a custom Increased Claim category. Specify in
-      fill_in_value.
+      increased_claim_other_detail.
     section: Liability
   - name: unlimited_claim_indemnification
     type: boolean
@@ -296,7 +324,7 @@ fields:
     type: boolean
     description: >-
       Set to true to include a custom Unlimited Claim category. Specify
-      in fill_in_value.
+      in unlimited_claim_other_detail.
     section: Liability
   - name: additional_warranty_by_provider
     type: boolean
@@ -364,7 +392,7 @@ fields:
     type: boolean
     description: >-
       Set to true to include an additional security certification.
-      Specify the certification in fill_in_value.
+      Specify the certification in other_security_certification.
     section: Security
   - name: insurance_commercial_liability
     type: boolean

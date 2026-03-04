@@ -34,10 +34,54 @@ fields:
     type: string
     description: Specific geographic areas for the partnership
     section: Terms
-  - name: fill_in_value
+  - name: term_duration_value
     type: string
-    description: General fill-in value for customizable sections
+    description: Numeric duration for the agreement term (e.g. "6", "12")
     section: Terms
+  - name: changes_to_standard_terms
+    type: string
+    description: List of specific changes to the Standard Terms
+    section: Terms
+  - name: company_promotional_activities_detail
+    type: string
+    description: Description of the promotional activities the Company will engage in
+    section: Obligations
+  - name: company_promotional_materials_detail
+    type: string
+    description: Description of the promotional materials the Company will provide
+    section: Obligations
+  - name: company_sponsored_benefits_detail
+    type: string
+    description: Description of the sponsored benefits the Company will provide
+    section: Obligations
+  - name: company_referral_criteria
+    type: string
+    description: Criteria a third party must meet to qualify as a Referral to Partner
+    section: Obligations
+  - name: company_payment_to_partner_detail
+    type: string
+    description: Amount the Company will pay Partner per the Payment Schedule
+    section: Obligations
+  - name: partner_promotional_activities_detail
+    type: string
+    description: Description of the promotional activities the Partner will engage in
+    section: Obligations
+  - name: partner_promotional_materials_detail
+    type: string
+    description: Description of the promotional materials the Partner will provide
+    section: Obligations
+  - name: partner_sponsored_benefits_detail
+    type: string
+    description: Description of the sponsored benefits the Partner will provide
+    section: Obligations
+  - name: partner_referral_criteria
+    type: string
+    description: Criteria a third party must meet to qualify as a Referral to Company
+    section: Obligations
+  - name: partner_payment_to_company_detail
+    type: string
+    description: Amount the Partner will pay Company per the Payment Schedule
+    section: Obligations
   - name: invoice_address
     type: string
     description: Address or email where invoices and bills for fees should be sent
@@ -50,10 +94,26 @@ fields:
     type: string
     description: Detail of Partner Covered Claims covering gross negligence and IP representations
     section: Liability
-  - name: fill_in_detail
+  - name: increased_claim_other_detail
     type: string
-    description: Additional detail for customizable sections
+    description: Description of a custom Increased Claim category
+    section: Liability
+  - name: unlimited_claim_other_detail
+    type: string
+    description: Description of a custom Unlimited Claim category
+    section: Liability
+  - name: additional_warranty_company_detail
+    type: string
+    description: Additional warranty text provided by the Company
     section: Terms
+  - name: additional_warranty_partner_detail
+    type: string
+    description: Additional warranty text provided by the Partner
+    section: Terms
+  - name: payment_schedule_detail
+    type: string
+    description: Payment schedule details (e.g. "30 days from receipt of invoice")
+    section: Payment
   - name: payment_terms_days
     type: string
     description: Number of days to pay after invoice
@@ -183,7 +243,7 @@ fields:
     type: boolean
     description: >-
       Set to true to include a custom Increased Claim category. Specify the claim
-      type in fill_in_detail.
+      type in the corresponding detail field.
     section: Liability
   - name: unlimited_claim_indemnification
     type: boolean
@@ -213,7 +273,7 @@ fields:
     type: boolean
     description: >-
       Set to true to include a custom Unlimited Claim category. Specify the claim
-      type in fill_in_detail.
+      type in the corresponding detail field.
     section: Liability
   - name: additional_terms_by_company
     type: boolean

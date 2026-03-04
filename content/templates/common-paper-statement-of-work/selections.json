@@ -47,7 +47,7 @@
       "id": "sow_term",
       "type": "radio",
       "options": [
-        { "marker": "{fill_in_value} {term_duration_unit} after the SOW Date", "trigger": "default" },
+        { "marker": "{term_duration_value} {term_duration_unit} after the SOW Date", "trigger": "default" },
         { "marker": "{custom_end_date}", "trigger": { "field": "custom_end_date" } }
       ]
     }

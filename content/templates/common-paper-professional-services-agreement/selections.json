@@ -47,7 +47,7 @@
       "id": "sow_term",
       "type": "radio",
       "options": [
-        { "marker": "{fill_in_value} {term_duration_unit} after the SOW Date", "trigger": "default" },
+        { "marker": "{term_duration_value} {term_duration_unit} after the SOW Date", "trigger": "default" },
         { "marker": "{custom_end_date}", "trigger": { "field": "custom_end_date" } }
       ]
     },
@@ -63,8 +63,8 @@
       "id": "additional_terms",
       "type": "checkbox",
       "options": [
-        { "marker": "By Provider: {fill_in_detail}", "trigger": { "field": "additional_terms_by_provider" } },
-        { "marker": "By Customer: {fill_in_detail}", "trigger": { "field": "additional_terms_by_customer" } }
+        { "marker": "By Provider: {additional_warranty_provider_detail}", "trigger": { "field": "additional_terms_by_provider" } },
+        { "marker": "By Customer: {additional_warranty_customer_detail}", "trigger": { "field": "additional_terms_by_customer" } }
       ]
     },
     {
@@ -88,7 +88,7 @@
         { "marker": "Breach of Section 3 (Privacy & Security) resulting from gross negligence", "trigger": { "field": "increased_claim_breach_privacy_gross" } },
         { "marker": "Breach of Section 11 (Confidentiality) resulting from gross negligence", "trigger": { "field": "increased_claim_breach_conf_gross" } },
         { "marker": "Claims resulting from a party\u2019s gross negligence or willful misconduct", "trigger": { "field": "increased_claim_gross_willful" } },
-        { "marker": "Other: {fill_in_detail}", "trigger": { "field": "increased_claim_other" } }
+        { "marker": "Other: {increased_claim_other_detail}", "trigger": { "field": "increased_claim_other" } }
       ]
     },
     {
@@ -112,7 +112,7 @@
         { "marker": "Breach of Section 3 (Privacy & Security)", "trigger": { "field": "unlimited_claim_breach_privacy" } },
         { "marker": "Breach of Section 11 (Confidentiality) (however, excluding any breach of Section 3", "trigger": { "field": "unlimited_claim_breach_conf" } },
         { "marker": "Claims resulting from a party\u2019s gross negligence or willful misconduct", "trigger": { "field": "unlimited_claim_gross_willful" } },
-        { "marker": "Other: {fill_in_detail}", "trigger": { "field": "unlimited_claim_other" } }
+        { "marker": "Other: {unlimited_claim_other_detail}", "trigger": { "field": "unlimited_claim_other" } }
       ]
     },
     {
@@ -192,7 +192,7 @@
       "type": "checkbox",
       "standalone": true,
       "options": [
-        { "marker": "Other: {fill_in_detail}", "trigger": { "field": "cert_other" } }
+        { "marker": "Other: {other_security_certification}", "trigger": { "field": "cert_other" } }
       ]
     },
     {

@@ -71,14 +71,58 @@ fields:
     type: string
     description: Description of or reference to the Data Processing Agreement
     section: Privacy
-  - name: fill_in_value
+  - name: term_duration_value
     type: string
-    description: General fill-in value
+    description: Numeric duration for the SOW term (e.g. "6", "12")
     section: Terms
-  - name: fill_in_detail
+  - name: rejection_period_value
     type: string
-    description: Additional detail
+    description: Number of time units for the deliverable rejection period
+    section: Deliverables
+  - name: resubmission_period_value
+    type: string
+    description: Number of time units for the deliverable resubmission period
+    section: Deliverables
+  - name: sow_changes_to_standard_terms
+    type: string
+    description: Changes to the Standard Terms that apply only to this SOW
     section: Terms
+  - name: changes_to_standard_terms
+    type: string
+    description: Changes to the Standard Terms that apply to the Agreement and all SOWs
+    section: Terms
+  - name: fee_description
+    type: string
+    description: Description of fees including hourly, project, or milestone-based rates and pass-through charges
+    section: Payment
+  - name: invoice_cadence
+    type: string
+    description: Cadence for sending invoices (e.g. monthly, quarterly, upon acceptance, after each milestone)
+    section: Payment
+  - name: customer_obligations
+    type: string
+    description: Customer obligations such as identifying a point of contact or geographic limitations
+    section: Terms
+  - name: increased_claim_other_detail
+    type: string
+    description: Description of a custom Increased Claim category
+    section: Liability
+  - name: unlimited_claim_other_detail
+    type: string
+    description: Description of a custom Unlimited Claim category
+    section: Liability
+  - name: additional_warranty_provider_detail
+    type: string
+    description: Additional warranty text provided by the Provider
+    section: Terms
+  - name: additional_warranty_customer_detail
+    type: string
+    description: Additional warranty text provided by the Customer
+    section: Terms
+  - name: other_security_certification
+    type: string
+    description: Name of additional security certification (e.g. "ISO 27701")
+    section: Security
   - name: payment_terms_days
     type: string
     description: Days to pay after invoice
@@ -154,13 +198,13 @@ fields:
     type: boolean
     description: >-
       Set to true when Provider is adding additional terms to the agreement.
-      Specify terms in fill_in_detail.
+      Specify terms in additional_warranty_provider_detail.
     section: Terms
   - name: additional_terms_by_customer
     type: boolean
     description: >-
       Set to true when Customer is adding additional terms to the agreement.
-      Specify terms in fill_in_detail.
+      Specify terms in additional_warranty_customer_detail.
     section: Terms
   - name: has_security_policy
     type: boolean
@@ -210,7 +254,7 @@ fields:
     type: boolean
     description: >-
       Set to true to include an additional security certification.
-      Specify the certification in fill_in_detail.
+      Specify the certification in other_security_certification.
     section: Security
   - name: provider_may_use_logo
     type: boolean
@@ -285,7 +329,7 @@ fields:
     type: boolean
     description: >-
       Set to true to include a custom Increased Claim category. Specify in
-      fill_in_detail.
+      increased_claim_other_detail.
     section: Liability
   - name: unlimited_claim_breach_privacy_gross
     type: boolean
@@ -327,7 +371,7 @@ fields:
     type: boolean
     description: >-
       Set to true to include a custom Unlimited Claim category. Specify
-      in fill_in_detail.
+      in unlimited_claim_other_detail.
     section: Liability
   - name: governing_law
     type: string

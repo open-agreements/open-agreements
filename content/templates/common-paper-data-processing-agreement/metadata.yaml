@@ -106,10 +106,10 @@ fields:
     type: string
     description: General text box entry
     section: Terms
-  - name: fill_in_value
+  - name: other_security_certification
     type: string
-    description: General fill-in value
-    section: Terms
+    description: Name of additional security certification (e.g. "ISO 27701 Privacy Information Management")
+    section: Security
   - name: cap_multiplier
     type: string
     description: Liability cap multiplier
@@ -181,7 +181,7 @@ fields:
     type: boolean
     description: >-
       Set to true to include an additional security certification.
-      Specify the certification in fill_in_value.
+      Specify the certification in other_security_certification.
     section: Security
   - name: indemnification_csa_reference
     type: boolean

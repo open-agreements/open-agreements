@@ -23,7 +23,7 @@
   "non_csa_reference": "Master Services Agreement dated January 1, 2026",
   "security_measures": "AES-256 encryption at rest, TLS 1.3 in transit, SOC 2 Type II compliance",
   "text_box": "Additional data processing details as agreed between the parties",
-  "fill_in_value": "ISO 27701 Privacy Information Management",
+  "other_security_certification": "ISO 27701 Privacy Information Management",
   "cap_multiplier": "2",
   "greater_of_dollar": "$250,000",
   "policy_url": "https://techco.com/security-policy",

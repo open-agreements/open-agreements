@@ -50,7 +50,7 @@ fields:
     type: string
     description: Fee billing unit (e.g. "year", "month", "User")
     section: Payment
-  - name: fill_in_value
+  - name: custom_fee_structure
     type: string
     description: Custom fee structure description (used with fee_is_other)
     section: Payment
@@ -133,7 +133,7 @@ fields:
     type: boolean
     description: >-
       Set to true when a custom fee structure applies. Describe in
-      fill_in_value.
+      custom_fee_structure.
     section: Payment
   - name: fee_may_increase
     type: boolean

@@ -82,7 +82,7 @@
         { "marker": "indemnification obligations for its Covered Claims", "trigger": { "field": "increased_claim_indemnification" } },
         { "marker": "Breach of Section 11 (Confidentiality) resulting from gross negligence", "trigger": { "field": "increased_claim_breach_conf_gross" } },
         { "marker": "Claims resulting from a party\u2019s gross negligence or willful misconduct", "trigger": { "field": "increased_claim_gross_willful" } },
-        { "marker": "Other: {fill_in_detail}", "trigger": { "field": "increased_claim_other" } }
+        { "marker": "Other: {increased_claim_other_detail}", "trigger": { "field": "increased_claim_other" } }
       ]
     },
     {
@@ -104,15 +104,15 @@
         { "marker": "Breach of Section 11 (Confidentiality)", "trigger": { "field": "unlimited_claim_breach_conf" } },
         { "marker": "Breach of Section 11 (Confidentiality) resulting from gross negligence", "trigger": { "field": "unlimited_claim_breach_conf_gross" } },
         { "marker": "Claims resulting from a party\u2019s gross negligence or willful misconduct", "trigger": { "field": "unlimited_claim_gross_willful" } },
-        { "marker": "Other: {fill_in_detail}", "trigger": { "field": "unlimited_claim_other" } }
+        { "marker": "Other: {unlimited_claim_other_detail}", "trigger": { "field": "unlimited_claim_other" } }
       ]
     },
     {
       "id": "additional_terms",
       "type": "checkbox",
       "options": [
-        { "marker": "By Company: {fill_in_detail}", "trigger": { "field": "additional_terms_by_company" } },
-        { "marker": "By Partner: {fill_in_detail}", "trigger": { "field": "additional_terms_by_partner" } }
+        { "marker": "By Company: {additional_warranty_company_detail}", "trigger": { "field": "additional_terms_by_company" } },
+        { "marker": "By Partner: {additional_warranty_partner_detail}", "trigger": { "field": "additional_terms_by_partner" } }
       ]
     },
     {
