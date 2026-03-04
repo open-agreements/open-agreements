@@ -50,10 +50,22 @@ fields:
     type: string
     description: Fee billing unit (e.g. "year", "month", "User")
     section: Payment
-  - name: fill_in_value
+  - name: custom_fee_structure
     type: string
-    description: General fill-in value for customizable sections
-    section: Terms
+    description: Custom fee structure description (used with fee_is_other)
+    section: Payment
+  - name: use_limitations
+    type: string
+    description: Description of use limitations or prohibited uses of the Cloud Service
+    section: Service
+  - name: professional_services_billing
+    type: string
+    description: How professional services fees will be billed (e.g. "Invoices for these services will be sent monthly.")
+    section: Payment
+  - name: target_uptime_percent
+    type: string
+    description: Target uptime percentage for the SLA (e.g. "99.9")
+    section: Service
   - name: payment_frequency
     type: string
     description: Payment frequency (e.g. "monthly", "quarterly", "annually")
@@ -94,6 +106,10 @@ fields:
     type: string
     description: Timezone for support hours
     section: Service
+  - name: support_request_process
+    type: string
+    description: How customers request support or file incident tickets (e.g. email address, helpdesk URL)
+    section: Service
   - name: response_time_unit
     type: string
     description: Unit for response time targets (e.g. "minutes", "hours", "days")
@@ -102,6 +118,88 @@ fields:
     type: string
     description: Unit for resolution time targets (e.g. "hours", "days")
     section: Service
+  - name: pilot_has_fee
+    type: boolean
+    description: >-
+      Set to true when the Pilot Period has an associated fee
+      (not a free trial).
+    section: Payment
+  - name: fee_is_per_unit
+    type: boolean
+    description: >-
+      Set to true when fees are charged per unit (e.g., per user, per month).
+    section: Payment
+  - name: fee_is_other
+    type: boolean
+    description: >-
+      Set to true when a custom fee structure applies. Describe in
+      custom_fee_structure.
+    section: Payment
+  - name: fee_may_increase
+    type: boolean
+    description: >-
+      Set to true when fees may increase up to a specified percentage
+      upon renewal.
+    section: Payment
+  - name: fee_will_increase
+    type: boolean
+    description: >-
+      Set to true when fees will automatically increase upon renewal.
+    section: Payment
+  - name: fee_increase_max_percent
+    type: string
+    description: Maximum fee increase percentage per renewal (used with fee_may_increase)
+    section: Payment
+  - name: fee_increase_percent
+    type: string
+    description: Fee increase percentage per renewal (used with fee_will_increase)
+    section: Payment
+  - name: fee_inclusive_of_taxes
+    type: boolean
+    description: >-
+      Set to true when fees are inclusive of taxes, modifying Section 4.1
+      of the Standard Terms.
+    section: Payment
+  - name: payment_by_invoice
+    type: boolean
+    description: >-
+      Set to true when payment is by invoice (not automatic payment).
+    section: Payment
+  - name: no_auto_renew
+    type: boolean
+    description: >-
+      Set to true when this Order Form does not automatically renew,
+      modifying Section 5.1 of the Standard Terms.
+    section: Terms
+  - name: has_target_uptime
+    type: boolean
+    description: >-
+      Set to true when a Target Uptime percentage is specified in
+      the SLA.
+    section: Service
+  - name: has_target_response_time
+    type: boolean
+    description: >-
+      Set to true when Target Response Times are specified in the SLA.
+    section: Service
+  - name: professional_services_by_reference
+    type: boolean
+    description: >-
+      Set to true when professional services are described by reference
+      to an external SOW or PSA.
+    section: Service
+  - name: professional_services_described
+    type: boolean
+    description: >-
+      Set to true when professional services are described inline
+      in the Order Form.
+    section: Service
+  - name: professional_services_payment
+    type: boolean
+    description: >-
+      Set to true when a separate payment process applies to
+      professional services.
+    section: Payment
   - name: provider_signatory_type
     type: enum
     description: Whether the Provider signatory is an entity or individual

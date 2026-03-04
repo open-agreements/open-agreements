@@ -1,0 +1,18 @@
+{
+  "company_name": "Acme Corporation",
+  "product_name": "AcmeSign Pro",
+  "product_description": "Cloud-based document management and e-signature platform with automated workflow capabilities",
+  "launch_date": "June 1, 2026",
+  "fees_description": "$2,500 per month for up to 100 users, billed annually",
+  "nda_date": "January 15, 2026",
+  "provider_signatory_type": "entity",
+  "provider_signatory_name": "Jane Provider",
+  "provider_signatory_title": "Chief Executive Officer",
+  "provider_signatory_company": "TechCo Inc.",
+  "provider_signatory_email": "legal@techco.com",
+  "customer_signatory_type": "entity",
+  "customer_signatory_name": "John Customer",
+  "customer_signatory_title": "Chief Executive Officer",
+  "customer_signatory_company": "BuyCo LLC",
+  "customer_signatory_email": "legal@buyco.com"
+}

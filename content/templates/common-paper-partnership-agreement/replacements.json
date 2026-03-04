@@ -2,6 +2,9 @@
   "{payment_terms_days} times the fees": "{cap_multiplier} times the fees",
   "{non_renewal_notice_days} times the fees": "{cap_multiplier} times the fees",
   "{non_renewal_notice_days}x the fees": "{cap_multiplier}x the fees",
-  "[____]": "{fill_in_detail}",
-  "[Fill in payment schedule, e.g., 30 days from receipt of invoice, 60 days before event, etc.]": "{fill_in_detail}"
+  "[___]": "{invoice_address}",
+  "[Fill in payment schedule, e.g., 30 days from receipt of invoice, 60 days before event, etc.]": "{payment_schedule_detail}",
+  "[(a) Company's gross negligence or willful misconduct; or (b) Company's breach or alleged breach of its representations and warranties in Section 7, including the intellectual property representations or warranties.]": "{company_covered_claims_detail}",
+  "[(a) Partner's gross negligence or willful misconduct; or (b) Partner's breach or alleged breach of its representations and warranties in Section 7, including the intellectual property representations or warranties.]": "{partner_covered_claims_detail}",
+  "[ If required by law or appropriate for the Obligations, attach or describe where to find. ]": "{dpa_description}"
 }

@@ -1,0 +1,62 @@
+{
+  "groups": [
+    {
+      "id": "training_data_types",
+      "type": "checkbox",
+      "options": [
+        { "marker": "None", "trigger": { "field": "training_data_none" } },
+        { "marker": "Usage Data", "trigger": { "field": "training_data_usage" } },
+        { "marker": "Feedback", "trigger": { "field": "training_data_feedback" } },
+        { "marker": "Input", "trigger": { "field": "training_data_input" } },
+        { "marker": "Output", "trigger": { "field": "training_data_output" } },
+        { "marker": "User prompts, excluding other components of Input", "trigger": { "field": "training_data_prompts" } },
+        { "marker": "Customer Content", "trigger": { "field": "training_data_customer_content" } },
+        { "marker": "{additional_terms}", "trigger": { "field": "training_data_additional" } }
+      ]
+    },
+    {
+      "id": "model_training_scope",
+      "type": "radio",
+      "options": [
+        { "marker": "None", "trigger": { "field": "model_training_none", "equals": true } },
+        { "marker": "Train the Model(s) in the AI Services solely for Customer\u2019s benefit", "trigger": { "field": "model_training_customer_only", "equals": true } },
+        { "marker": "Train the Model(s) in the AI Services", "trigger": "default" }
+      ]
+    },
+    {
+      "id": "training_data_requirements",
+      "type": "checkbox",
+      "options": [
+        { "marker": "Training Data must be aggregated", "trigger": { "field": "training_data_aggregated" } },
+        { "marker": "Training Data must be de-identified", "trigger": { "field": "training_data_deidentified" } },
+        { "marker": "Provider will use commercially reasonable efforts consistent with industry standard technology to de-identify", "trigger": { "field": "training_data_best_effort_deidentify" } },
+        { "marker": "{additional_terms}", "trigger": { "field": "training_requirements_additional" } }
+      ]
+    },
+    {
+      "id": "output_restrictions",
+      "type": "checkbox",
+      "options": [
+        { "marker": "Neither Input nor Output may identify Customer", "trigger": { "field": "no_customer_identification" } },
+        { "marker": "Improvements based on Customer's Input, Output, or Training Data will be solely for Customer's benefit", "trigger": { "field": "improvements_for_customer_only" } },
+        { "marker": "{additional_terms}", "trigger": { "field": "output_restrictions_additional" } }
+      ]
+    },
+    {
+      "id": "ai_covered_claims",
+      "type": "checkbox",
+      "options": [
+        { "marker": "Provider Covered Claims include any action", "trigger": { "field": "ai_provider_covered_claims" } },
+        { "marker": "Customer Covered Claims include any action", "trigger": { "field": "ai_customer_covered_claims" } }
+      ]
+    },
+    {
+      "id": "ai_acceptable_use_policy",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "Use of the AI Services is subject to the Acceptable Use Policy", "trigger": { "field": "ai_policy_reference" } }
+      ]
+    }
+  ]
+}

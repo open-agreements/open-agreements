@@ -1,0 +1,138 @@
+{
+  "groups": [
+    {
+      "id": "company_commitments",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "promotional activities: {company_promotional_activities_detail}", "trigger": { "field": "company_promotional_activities" } },
+        { "marker": "promotional materials: {company_promotional_materials_detail}", "trigger": { "field": "company_promotional_materials" } },
+        { "marker": "sponsored benefits: {company_sponsored_benefits_detail}", "trigger": { "field": "company_sponsored_benefits" } },
+        { "marker": "Make Referrals to Partner", "trigger": { "field": "company_makes_referrals" } },
+        { "marker": "Pay Partner the following amount", "trigger": { "field": "company_pays_partner" } },
+        { "marker": "Provide Company\u2019s Brand Elements as Licensor", "trigger": { "field": "company_brand_licensor" } }
+      ]
+    },
+    {
+      "id": "partner_commitments",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "promotional activities: {partner_promotional_activities_detail}", "trigger": { "field": "partner_promotional_activities" } },
+        { "marker": "promotional materials: {partner_promotional_materials_detail}", "trigger": { "field": "partner_promotional_materials" } },
+        { "marker": "sponsored benefits: {partner_sponsored_benefits_detail}", "trigger": { "field": "partner_sponsored_benefits" } },
+        { "marker": "Make Referrals to Company", "trigger": { "field": "partner_makes_referrals" } },
+        { "marker": "Pay Company the following amount", "trigger": { "field": "partner_pays_company" } },
+        { "marker": "Provide Partner\u2019s Brand Elements as Licensor", "trigger": { "field": "partner_brand_licensor" } }
+      ]
+    },
+    {
+      "id": "territory",
+      "type": "radio",
+      "options": [
+        { "marker": "Worldwide", "trigger": "default" },
+        { "marker": "{territory}", "trigger": { "field": "territory" } }
+      ]
+    },
+    {
+      "id": "invoicing",
+      "type": "checkbox",
+      "options": [
+        { "marker": "Company will send invoices or bills for Fees owed by Partner", "trigger": { "field": "company_invoices_partner" } },
+        { "marker": "Partner will send invoices or bills for Fees owed by Company", "trigger": { "field": "partner_invoices_company" } }
+      ]
+    },
+    {
+      "id": "payment_schedule",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "The party making payment will pay the other party according to the following schedule", "trigger": { "field": "has_payment_schedule" } }
+      ]
+    },
+    {
+      "id": "term_end",
+      "type": "radio",
+      "options": [
+        { "marker": "{term_duration_unit} after the Effective Date", "trigger": "default" },
+        { "marker": "{custom_end_date}", "trigger": { "field": "custom_end_date" } }
+      ]
+    },
+    {
+      "id": "effective_date",
+      "type": "radio",
+      "options": [
+        { "marker": "Date of last signature on this Cover Page", "trigger": "default" },
+        { "marker": "{custom_effective_date}", "trigger": { "field": "custom_effective_date" } }
+      ]
+    },
+    {
+      "id": "covered_claims",
+      "type": "checkbox",
+      "options": [
+        { "marker": "Company Covered Claim(s):", "trigger": { "field": "has_company_covered_claims" } },
+        { "marker": "Partner Covered Claim(s):", "trigger": { "field": "has_partner_covered_claims" } }
+      ]
+    },
+    {
+      "id": "general_cap",
+      "type": "radio",
+      "cellContext": "no General Cap Amount",
+      "options": [
+        { "marker": "{cap_multiplier} times the fees", "trigger": { "field": "general_cap_type", "equals": "multiplier" } },
+        { "marker": "${general_cap_amount}", "trigger": { "field": "general_cap_type", "equals": "dollar" } },
+        { "marker": "The greater of ${increased_cap_amount}", "trigger": { "field": "general_cap_type", "equals": "greater_of" } }
+      ]
+    },
+    {
+      "id": "increased_claims",
+      "type": "checkbox",
+      "cellContext": "no Increased Claims are included",
+      "options": [
+        { "marker": "Breach of Section 11 (Confidentiality)", "trigger": { "field": "increased_claim_breach_conf" } },
+        { "marker": "indemnification obligations for its Covered Claims", "trigger": { "field": "increased_claim_indemnification" } },
+        { "marker": "Breach of Section 11 (Confidentiality) resulting from gross negligence", "trigger": { "field": "increased_claim_breach_conf_gross" } },
+        { "marker": "Claims resulting from a party\u2019s gross negligence or willful misconduct", "trigger": { "field": "increased_claim_gross_willful" } },
+        { "marker": "Other: {increased_claim_other_detail}", "trigger": { "field": "increased_claim_other" } }
+      ]
+    },
+    {
+      "id": "increased_cap",
+      "type": "radio",
+      "cellContext": "Increased Claims are included, customize",
+      "options": [
+        { "marker": "{cap_multiplier} times the fees", "trigger": { "field": "increased_cap_type", "equals": "multiplier" } },
+        { "marker": "${general_cap_amount}", "trigger": { "field": "increased_cap_type", "equals": "dollar" } },
+        { "marker": "The greater of ${increased_cap_amount}", "trigger": { "field": "increased_cap_type", "equals": "greater_of" } }
+      ]
+    },
+    {
+      "id": "unlimited_claims",
+      "type": "checkbox",
+      "cellContext": "no Unlimited Claims are included",
+      "options": [
+        { "marker": "indemnification obligations for its Covered Claims", "trigger": { "field": "unlimited_claim_indemnification" } },
+        { "marker": "Breach of Section 11 (Confidentiality)", "trigger": { "field": "unlimited_claim_breach_conf" } },
+        { "marker": "Breach of Section 11 (Confidentiality) resulting from gross negligence", "trigger": { "field": "unlimited_claim_breach_conf_gross" } },
+        { "marker": "Claims resulting from a party\u2019s gross negligence or willful misconduct", "trigger": { "field": "unlimited_claim_gross_willful" } },
+        { "marker": "Other: {unlimited_claim_other_detail}", "trigger": { "field": "unlimited_claim_other" } }
+      ]
+    },
+    {
+      "id": "additional_terms",
+      "type": "checkbox",
+      "options": [
+        { "marker": "By Company: {additional_warranty_company_detail}", "trigger": { "field": "additional_terms_by_company" } },
+        { "marker": "By Partner: {additional_warranty_partner_detail}", "trigger": { "field": "additional_terms_by_partner" } }
+      ]
+    },
+    {
+      "id": "brand_guidelines",
+      "type": "checkbox",
+      "options": [
+        { "marker": "Company Brand Guidelines", "trigger": { "field": "company_brand_guidelines" } },
+        { "marker": "Partner Brand Guidelines", "trigger": { "field": "partner_brand_guidelines" } }
+      ]
+    }
+  ]
+}

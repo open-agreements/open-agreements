@@ -50,10 +50,18 @@ fields:
     type: string
     description: Fee billing unit (e.g. "year", "month", "User")
     section: Payment
-  - name: fill_in_value
+  - name: custom_fee_structure
     type: string
-    description: General fill-in value for customizable sections
-    section: Terms
+    description: Custom fee structure description (used with fee_is_other)
+    section: Payment
+  - name: use_limitations
+    type: string
+    description: Description of use limitations or prohibited uses of the Cloud Service
+    section: Service
+  - name: professional_services_billing
+    type: string
+    description: How professional services fees will be billed (e.g. "Invoices for these services will be sent monthly.")
+    section: Payment
   - name: payment_frequency
     type: string
     description: Payment frequency (e.g. "monthly", "quarterly", "annually")
@@ -66,6 +74,10 @@ fields:
     type: string
     description: When payment terms start (e.g. "Customer's receipt of invoice")
     section: Payment
+  - name: sla_terms
+    type: string
+    description: Service level terms describing uptime commitments, remedies for SLA breaches, and refund policies
+    section: Service
   - name: technical_support
     type: string
     description: Description of included support
@@ -77,6 +89,58 @@ fields:
   - name: professional_services_reference
     type: string
     description: Reference to SOW or PSA for professional services
+    section: Service
+  - name: pilot_has_fee
+    type: boolean
+    description: Whether pilot period has a fee (vs. free trial)
+    section: Service
+  - name: fee_is_per_unit
+    type: boolean
+    description: Fees charged per unit
+    section: Payment
+  - name: fee_is_other
+    type: boolean
+    description: Other fee structure applies
+    section: Payment
+  - name: fee_may_increase
+    type: boolean
+    description: Fees may increase up to a percentage per renewal
+    section: Payment
+  - name: fee_will_increase
+    type: boolean
+    description: Fees will increase a fixed percentage per renewal
+    section: Payment
+  - name: fee_increase_max_percent
+    type: string
+    description: Maximum fee increase percentage per renewal (used with fee_may_increase)
+    section: Payment
+  - name: fee_increase_percent
+    type: string
+    description: Fee increase percentage per renewal (used with fee_will_increase)
+    section: Payment
+  - name: fee_inclusive_of_taxes
+    type: boolean
+    description: Fees are inclusive of taxes (modifies Standard Terms Section 4.1)
+    section: Payment
+  - name: payment_by_invoice
+    type: boolean
+    description: Payment by invoice (vs. automatic payment)
+    section: Payment
+  - name: no_auto_renew
+    type: boolean
+    description: Order Form does not automatically renew
+    section: Terms
+  - name: professional_services_by_reference
+    type: boolean
+    description: Professional services per referenced SOW/PSA
+    section: Service
+  - name: professional_services_described
+    type: boolean
+    description: Professional services described inline
+    section: Service
+  - name: professional_services_payment
+    type: boolean
+    description: Payment process for professional services described
     section: Service
   - name: provider_signatory_type
     type: enum

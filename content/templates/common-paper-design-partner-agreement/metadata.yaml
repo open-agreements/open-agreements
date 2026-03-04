@@ -38,10 +38,58 @@ fields:
     type: string
     description: Open text entry for additional details
     section: Terms
-  - name: other_details
+  - name: partner_other_details
     type: string
-    description: Other details to fill in
-    section: Terms
+    description: Additional partner commitments not listed above
+    section: Program
+  - name: provider_other_details
+    type: string
+    description: Additional provider commitments not listed above
+    section: Program
+  - name: has_partner_other_details
+    type: boolean
+    description: >-
+      Set to true when additional partner commitments are specified
+      in partner_other_details.
+    section: Program
+  - name: has_provider_other_details
+    type: boolean
+    description: >-
+      Set to true when additional provider commitments are specified
+      in provider_other_details.
+    section: Program
+  - name: partner_feedback_sessions
+    type: boolean
+    description: Partner will participate in feedback sessions
+    section: Program
+  - name: partner_case_study
+    type: boolean
+    description: Partner will provide a case study
+    section: Program
+  - name: partner_private_list
+    type: boolean
+    description: Partner will appear in private customer lists
+    section: Program
+  - name: partner_public_list
+    type: boolean
+    description: Partner will appear on public customer lists and website
+    section: Program
+  - name: partner_reference
+    type: boolean
+    description: Partner will serve as a reference for prospective customers
+    section: Program
+  - name: provider_discount
+    type: boolean
+    description: Provider will give a discount for long-term agreement
+    section: Program
+  - name: provider_develop_functionality
+    type: boolean
+    description: Provider will develop specific product functionality
+    section: Program
+  - name: has_fees
+    type: boolean
+    description: Whether fees apply under this agreement
+    section: Payment
   - name: governing_law
     type: string
     description: State whose laws govern the agreement

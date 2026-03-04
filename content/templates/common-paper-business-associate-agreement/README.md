@@ -20,7 +20,8 @@ A HIPAA business associate agreement based on [Common Paper's](https://commonpap
 | `aggregation_restrictions` | string | no | Specific aggregation restrictions |
 | `offshoring_restrictions` | string | no | Specific offshoring rights or restrictions |
 | `breach_notification_unit` | string | no | Unit for breach notification period |
-| `fill_in_value` | string | no | General fill-in value |
+| `breach_notification_number` | string | no | Numeric value for the breach notification period (e.g. 5) |
+| `other_changes` | string | no | Prose describing other changes to BAA Standard Terms |
 | `custom_effective_date` | string | no | Custom effective date |
 
 

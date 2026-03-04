@@ -75,6 +75,11 @@ function computeDisplayFields(data: Record<string, unknown>, fieldNames: Set<str
   const bool = (key: string): boolean => data[key] === true;
   const isBlankPlaceholder = (value: unknown): boolean =>
     typeof value === 'string' && value.trim() === BLANK_PLACEHOLDER;
+  /** True when a display field should be computed (not yet set or defaulted to blank). */
+  const needsCompute = (key: string): boolean => {
+    const val = data[key];
+    return !val || isBlankPlaceholder(val);
+  };
   const toGoogleDocUrl = (value: string): string => {
     const raw = value.trim();
     if (raw === '') return '';
@@ -122,21 +127,21 @@ function computeDisplayFields(data: Record<string, unknown>, fieldNames: Set<str
   }
 
   // Order Date: "Date of last signature" or custom date
-  if (fieldNames.has('order_date_display') && !data['order_date_display']) {
+  if (fieldNames.has('order_date_display') && needsCompute('order_date_display')) {
     data['order_date_display'] = bool('order_date_is_last_signature')
       ? '( x )\tDate of last signature on this Order Form'
       : `( x )\t${str('custom_order_date')}`;
   }
 
   // Pilot fee: paid or free trial
-  if (fieldNames.has('pilot_fee_display') && !data['pilot_fee_display']) {
+  if (fieldNames.has('pilot_fee_display') && needsCompute('pilot_fee_display')) {
     data['pilot_fee_display'] = bool('pilot_is_free')
       ? '( x )\tFree trial'
       : `( x )\tFee for Pilot Period: ${str('pilot_fee')}`;
   }
 
   // Cloud Service Fees: build from selected checkboxes
-  if (fieldNames.has('fees_display') && !data['fees_display']) {
+  if (fieldNames.has('fees_display') && needsCompute('fees_display')) {
     const lines: string[] = [];
     if (bool('fee_is_per_unit')) {
       lines.push(`[ x ] ${str('fees')} per ${str('fee_unit')}`);
@@ -157,7 +162,7 @@ function computeDisplayFields(data: Record<string, unknown>, fieldNames: Set<str
   }
 
   // Payment Process: invoice or automatic
-  if (fieldNames.has('payment_display') && !data['payment_display']) {
+  if (fieldNames.has('payment_display') && needsCompute('payment_display')) {
     if (bool('payment_by_invoice')) {
       const freq = str('payment_frequency');
       const days = str('payment_terms_days');
@@ -175,7 +180,7 @@ function computeDisplayFields(data: Record<string, unknown>, fieldNames: Set<str
   }
 
   // Auto-renewal
-  if (fieldNames.has('auto_renewal_display') && !data['auto_renewal_display']) {
+  if (fieldNames.has('auto_renewal_display') && needsCompute('auto_renewal_display')) {
     if (bool('auto_renew')) {
       const days = str('non_renewal_notice_days');
       data['auto_renewal_display'] =
@@ -186,14 +191,14 @@ function computeDisplayFields(data: Record<string, unknown>, fieldNames: Set<str
   }
 
   // Effective Date
-  if (fieldNames.has('effective_date_display') && !data['effective_date_display']) {
+  if (fieldNames.has('effective_date_display') && needsCompute('effective_date_display')) {
     data['effective_date_display'] = bool('effective_date_is_last_signature')
       ? '( x )\tDate of last Cover Page signature'
       : `( x )\t${str('custom_effective_date')}`;
   }
 
   // Covered Claims
-  if (fieldNames.has('covered_claims_display') && !data['covered_claims_display']) {
+  if (fieldNames.has('covered_claims_display') && needsCompute('covered_claims_display')) {
     const lines: string[] = [];
     if (bool('has_provider_covered_claims')) {
       lines.push('[ x ] Provider Covered Claims: [Any action, proceeding, or claim that the Cloud Service, when used by Customer as permitted under the Agreement, infringes or misappropriates a third party\u2019s intellectual property rights.]');
@@ -205,7 +210,7 @@ function computeDisplayFields(data: Record<string, unknown>, fieldNames: Set<str
   }
 
   // General Cap Amount
-  if (fieldNames.has('general_cap_display') && !data['general_cap_display']) {
+  if (fieldNames.has('general_cap_display') && needsCompute('general_cap_display')) {
     if (bool('general_cap_is_multiplier')) {
       data['general_cap_display'] = `( x )\t${str('general_cap_multiplier')}x the Fees paid or payable by Customer in the 12 month period immediately preceding the claim`;
     } else if (bool('general_cap_is_dollar')) {

@@ -106,10 +106,14 @@ fields:
     type: string
     description: General text box entry
     section: Terms
-  - name: fill_in_value
+  - name: other_security_certification
     type: string
-    description: General fill-in value
-    section: Terms
+    description: Name of additional security certification (e.g. "ISO 27701 Privacy Information Management")
+    section: Security
+  - name: dpa_covered_claims_detail
+    type: string
+    description: Specific scope of DPA Covered Claims (e.g., breach of DPA, gross negligence resulting in Security Incident)
+    section: Legal
   - name: cap_multiplier
     type: string
     description: Liability cap multiplier
@@ -122,6 +126,352 @@ fields:
     type: string
     description: URL of where to find policies
     section: Privacy
+  - name: has_subprocessor
+    type: boolean
+    description: >-
+      Set to true when a pre-approved subprocessor is specified.
+    section: Privacy
+  - name: dpa_security_reasonable_efforts
+    type: boolean
+    description: >-
+      Set to true when Provider will use commercially reasonable efforts
+      to secure the Service from unauthorized access.
+    section: Security
+  - name: has_dpa_security_policy
+    type: boolean
+    description: >-
+      Set to true when Provider has a Security Policy available at the
+      specified policy_url.
+    section: Security
+  - name: has_dpa_security_certifications
+    type: boolean
+    description: >-
+      Set to true when Provider maintains annually updated security
+      reports or certifications.
+    section: Security
+  - name: cert_iso_27001
+    type: boolean
+    description: Set to true when Provider holds ISO 27001 certification.
+    section: Security
+  - name: cert_penetration_testing
+    type: boolean
+    description: Set to true when Provider performs regular penetration testing.
+    section: Security
+  - name: cert_soc2_type1
+    type: boolean
+    description: Set to true when Provider holds SOC 2 Type I certification.
+    section: Security
+  - name: cert_pci_level1
+    type: boolean
+    description: Set to true when Provider holds PCI Level 1 certification.
+    section: Security
+  - name: cert_soc2_type2
+    type: boolean
+    description: Set to true when Provider holds SOC 2 Type II certification.
+    section: Security
+  - name: cert_pci_level2
+    type: boolean
+    description: Set to true when Provider holds PCI Level 2 certification.
+    section: Security
+  - name: cert_hipaa
+    type: boolean
+    description: Set to true when Provider holds HIPAA certification.
+    section: Security
+  - name: cert_fedramp
+    type: boolean
+    description: Set to true when Provider holds FedRAMP Authorization.
+    section: Security
+  - name: cert_other
+    type: boolean
+    description: >-
+      Set to true to include an additional security certification.
+      Specify the certification in other_security_certification.
+    section: Security
+  - name: indemnification_csa_reference
+    type: boolean
+    description: >-
+      Set to true when using Common Paper CSA-style indemnification
+      reference for DPA Covered Claims.
+    section: Liability
+  - name: indemnification_non_csa_reference
+    type: boolean
+    description: >-
+      Set to true when using non-CSA indemnification language for
+      DPA Covered Claims.
+    section: Liability
+  - name: cap_csa_reference
+    type: boolean
+    description: >-
+      Set to true when using CSA-style Increased Claim cap for
+      DPA Covered Claims.
+    section: Liability
+  - name: cap_non_csa_reference
+    type: boolean
+    description: >-
+      Set to true when using non-CSA liability cap language for
+      DPA Covered Claims.
+    section: Liability
+  - name: has_dpa_governing_law
+    type: boolean
+    description: >-
+      Set to true when DPA-specific governing law overrides the
+      Agreement's governing law clause.
+    section: Legal
+  - name: has_ccpa_terms
+    type: boolean
+    description: >-
+      Set to true when California Consumer Privacy Act (CCPA) terms
+      are included in the DPA.
+    section: Legal
+  - name: has_eea_transfers
+    type: boolean
+    description: >-
+      Set to true when EEA data transfer mechanisms are specified.
+    section: Privacy
+  - name: has_uk_transfers
+    type: boolean
+    description: >-
+      Set to true when UK data transfer mechanisms are specified.
+    section: Privacy
+  - name: data_subject_end_users
+    type: boolean
+    description: >-
+      Set to true when end users or customers are included as
+      data subjects.
+    section: Privacy
+  - name: data_subject_employees
+    type: boolean
+    description: >-
+      Set to true when employees are included as data subjects.
+    section: Privacy
+  - name: data_subject_custom
+    type: boolean
+    description: >-
+      Set to true to include a custom data subject category.
+      Specify in custom_option.
+    section: Privacy
+  - name: pd_name
+    type: boolean
+    description: Set to true when Name is a category of personal data processed.
+    section: Privacy
+  - name: pd_contact
+    type: boolean
+    description: >-
+      Set to true when contact information (email, phone, address)
+      is a category of personal data processed.
+    section: Privacy
+  - name: pd_employment
+    type: boolean
+    description: >-
+      Set to true when employment information (employee ID, compensation)
+      is a category of personal data processed.
+    section: Privacy
+  - name: pd_financial
+    type: boolean
+    description: >-
+      Set to true when financial information (bank account numbers)
+      is a category of personal data processed.
+    section: Privacy
+  - name: pd_professional
+    type: boolean
+    description: >-
+      Set to true when professional or biographic information (resume, CV)
+      is a category of personal data processed.
+    section: Privacy
+  - name: pd_transactional
+    type: boolean
+    description: >-
+      Set to true when transactional information (account info, purchases)
+      is a category of personal data processed.
+    section: Privacy
+  - name: pd_user_activity
+    type: boolean
+    description: >-
+      Set to true when user activity and analysis (device info, IP address)
+      is a category of personal data processed.
+    section: Privacy
+  - name: pd_location
+    type: boolean
+    description: >-
+      Set to true when location information is a category of personal
+      data processed.
+    section: Privacy
+  - name: pd_custom
+    type: boolean
+    description: >-
+      Set to true to include a custom personal data category.
+      Specify in custom_option.
+    section: Privacy
+  - name: security_measures_see_policy
+    type: boolean
+    description: >-
+      Set to true when security measures reference the Security Policy.
+    section: Security
+  - name: security_measures_custom
+    type: boolean
+    description: >-
+      Set to true to include custom security measures.
+      Specify in custom_option.
+    section: Security
+  - name: processing_continuous
+    type: boolean
+    description: >-
+      Set to true when data processing is continuous.
+    section: Privacy
+  - name: processing_frequency_custom
+    type: boolean
+    description: >-
+      Set to true to specify a custom processing frequency.
+      Specify in custom_options.
+    section: Privacy
+  - name: pa_receiving
+    type: boolean
+    description: >-
+      Set to true when receiving data (collection, accessing, retrieval)
+      is a processing activity.
+    section: Privacy
+  - name: pa_holding
+    type: boolean
+    description: >-
+      Set to true when holding data (storage, organization, structuring)
+      is a processing activity.
+    section: Privacy
+  - name: pa_using
+    type: boolean
+    description: >-
+      Set to true when using data (analysis, consultation, testing)
+      is a processing activity.
+    section: Privacy
+  - name: pa_updating
+    type: boolean
+    description: >-
+      Set to true when updating data (correcting, adaptation, alteration)
+      is a processing activity.
+    section: Privacy
+  - name: pa_protecting
+    type: boolean
+    description: >-
+      Set to true when protecting data (restricting, encrypting, testing)
+      is a processing activity.
+    section: Privacy
+  - name: pa_sharing
+    type: boolean
+    description: >-
+      Set to true when sharing data (disclosure, dissemination)
+      is a processing activity.
+    section: Privacy
+  - name: pa_returning
+    type: boolean
+    description: >-
+      Set to true when returning data to the data exporter or data
+      subject is a processing activity.
+    section: Privacy
+  - name: pa_erasing
+    type: boolean
+    description: >-
+      Set to true when erasing data (destruction, deletion)
+      is a processing activity.
+    section: Privacy
+  - name: pa_custom
+    type: boolean
+    description: >-
+      Set to true to include a custom processing activity.
+      Specify in custom_options.
+    section: Privacy
+  - name: sm_pseudonymization
+    type: boolean
+    description: >-
+      Set to true when pseudonymization and encryption of personal data
+      is a security measure.
+    section: Security
+  - name: sm_confidentiality
+    type: boolean
+    description: >-
+      Set to true when ensuring ongoing confidentiality, integrity,
+      availability, and resilience is a security measure.
+    section: Security
+  - name: sm_restore
+    type: boolean
+    description: >-
+      Set to true when ability to restore availability and access
+      after incidents is a security measure.
+    section: Security
+  - name: sm_testing
+    type: boolean
+    description: >-
+      Set to true when regular testing and evaluation of security
+      measures is a security measure.
+    section: Security
+  - name: sm_user_auth
+    type: boolean
+    description: >-
+      Set to true when user identification and authorization process
+      protection is a security measure.
+    section: Security
+  - name: sm_transit
+    type: boolean
+    description: >-
+      Set to true when protecting personal data during transmission
+      (in transit) is a security measure.
+    section: Security
+  - name: sm_storage
+    type: boolean
+    description: >-
+      Set to true when protecting personal data during storage
+      (at rest) is a security measure.
+    section: Security
+  - name: sm_physical
+    type: boolean
+    description: >-
+      Set to true when physical security of processing locations
+      is a security measure.
+    section: Security
+  - name: sm_logging
+    type: boolean
+    description: Set to true when events logging is a security measure.
+    section: Security
+  - name: sm_config
+    type: boolean
+    description: >-
+      Set to true when systems configuration and default configuration
+      is a security measure.
+    section: Security
+  - name: sm_governance
+    type: boolean
+    description: >-
+      Set to true when internal IT and IT security governance and
+      management is a security measure.
+    section: Security
+  - name: sm_certification
+    type: boolean
+    description: >-
+      Set to true when certification or assurance of processes and
+      products is a security measure.
+    section: Security
+  - name: sm_minimization
+    type: boolean
+    description: Set to true when data minimization is a security measure.
+    section: Security
+  - name: sm_quality
+    type: boolean
+    description: Set to true when ensuring data quality is a security measure.
+    section: Security
+  - name: sm_retention
+    type: boolean
+    description: >-
+      Set to true when ensuring limited data retention is a security measure.
+    section: Security
+  - name: sm_accountability
+    type: boolean
+    description: >-
+      Set to true when ensuring accountability is a security measure.
+    section: Security
+  - name: sm_portability
+    type: boolean
+    description: >-
+      Set to true when allowing data portability and ensuring erasure
+      is a security measure.
+    section: Security
   - name: provider_signatory_type
     type: enum
     description: Whether the Provider signatory is an entity or individual

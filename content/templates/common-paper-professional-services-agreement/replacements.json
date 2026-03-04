@@ -1,8 +1,11 @@
 {
   "{payment_terms_days}x the fees": "{cap_multiplier}x the fees",
   "{non_renewal_notice_days}x the fees": "{cap_multiplier}x the fees",
-  "[ # ]": "{fill_in_value}",
-  "[Describe fees, whether hourly, by project, by milestone, etc. Also include any pass-through or fractional charges such as for tooling or third-party license fees.]": "{fill_in_value}",
-  "[Fill in cadence of sending invoices, e.g., month, quarter, upon acceptance, after each milestone, etc.]": "{fill_in_detail}",
-  "[Fill in Customer's Obligations, e.g., identifying a single point of contact, geographic limitations on use of Deliverables, etc.]": "{fill_in_detail}"
+  "[Enter a description of the Services to be performed under this SOW. Include details such as key individuals, overall project timeline, milestones, etc.]": "{services_description}",
+  "[Describe fees, whether hourly, by project, by milestone, etc. Also include any pass-through or fractional charges such as for tooling or third-party license fees.]": "{fee_description}",
+  "[Fill in cadence of sending invoices, e.g., month, quarter, upon acceptance, after each milestone, etc.]": "{invoice_cadence}",
+  "[Fill in Customer's Obligations, e.g., identifying a single point of contact, geographic limitations on use of Deliverables, etc.]": "{customer_obligations}",
+  "[(a) the Deliverables (excluding any Customer Materials and Third-Party Materials procured by Customer), when used by Customer according to the terms of the SOW and the Agreement, violate, misappropriate, or otherwise infringe upon anyone else's intellectual property or other proprietary rights; (b) Provider's employees or Subcontractors are deemed to be Customer's employees because of Provider's actions or omissions; or (c) arises out of Provider's gross negligence, fraud, or willful misconduct.]": "{provider_covered_claims_detail}",
+  "[(a) Customer Materials or Third-Party Materials procured by Customer, when used by Provider according to the terms of the SOW and the Agreement, violate, misappropriate, or otherwise infringe upon anyone else's intellectual property or other proprietary rights; or (b) arises out of Customer's gross negligence, fraud, or willful misconduct.]": "{customer_covered_claims_detail}",
+  "[If required by law or appropriate for the Services, attach or describe where to find.]": "{dpa_description}"
 }

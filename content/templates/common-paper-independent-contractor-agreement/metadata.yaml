@@ -34,6 +34,10 @@ fields:
     type: string
     description: Start date, end date, timeline, milestones, etc.
     section: Terms
+  - name: other_terms
+    type: string
+    description: Additional terms relevant to the engagement (e.g., expense or travel reimbursements)
+    section: Terms
   - name: governing_law
     type: string
     description: State whose laws govern the agreement

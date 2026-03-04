@@ -1,0 +1,16 @@
+{
+  "provider_name": "TechCo Inc.",
+  "cloud_service": "AcmeSign Pro - Cloud-based document management and e-signature platform",
+  "custom_order_date": "March 1, 2026",
+  "effective_date": "March 1, 2026",
+  "subscription_period": "12 months",
+  "payment_frequency": "monthly",
+  "payment_terms_days": "30",
+  "non_renewal_notice_date": "30 days before the end of the then-current Subscription Period",
+  "order_date": "the date Customer first accesses the Cloud Service",
+  "governing_law": "Delaware",
+  "jurisdiction": "courts located in New Castle County, Delaware",
+  "provider_email": "legal@techco.com",
+  "unlimited_claims": "Gross negligence or willful misconduct by either party",
+  "pricing_page": "https://techco.com/pricing"
+}

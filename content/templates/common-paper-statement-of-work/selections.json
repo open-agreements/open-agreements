@@ -1,0 +1,55 @@
+{
+  "groups": [
+    {
+      "id": "deliverable_terms",
+      "type": "checkbox",
+      "options": [
+        { "marker": "In addition to completed projects, Deliverables include in-progress", "trigger": { "field": "include_in_progress_deliverables" } },
+        { "marker": "Deliverables will meet the attached specifications", "trigger": { "field": "deliverables_meet_specs" } },
+        { "marker": "Deliverables are subject to the acceptance process", "trigger": { "field": "deliverables_acceptance_process" } }
+      ]
+    },
+    {
+      "id": "deliverable_ownership",
+      "type": "radio",
+      "options": [
+        { "marker": "Customer owns Deliverables as they are created", "trigger": "default" },
+        { "marker": "Customer owns Deliverables upon payment", "trigger": { "field": "ownership_upon_payment", "equals": true } }
+      ]
+    },
+    {
+      "id": "third_party_materials",
+      "type": "checkbox",
+      "options": [
+        { "marker": "No Third-Party Materials will be incorporated", "trigger": { "field": "no_third_party_materials" } },
+        { "marker": "Third-Party Materials will be incorporated", "trigger": { "field": "has_third_party_materials" } },
+        { "marker": "Provider will procure Third-Party Materials", "trigger": { "field": "provider_procures_materials" } },
+        { "marker": "Customer will procure Third-Party Materials", "trigger": { "field": "customer_procures_materials" } }
+      ]
+    },
+    {
+      "id": "travel_expenses",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "Travel and expenses:", "trigger": { "field": "travel_expense_policy" } }
+      ]
+    },
+    {
+      "id": "sow_date",
+      "type": "radio",
+      "options": [
+        { "marker": "Date of last signature on this Cover Page", "trigger": "default" },
+        { "marker": "{custom_sow_date}", "trigger": { "field": "custom_sow_date" } }
+      ]
+    },
+    {
+      "id": "sow_term",
+      "type": "radio",
+      "options": [
+        { "marker": "{term_duration_value} {term_duration_unit} after the SOW Date", "trigger": "default" },
+        { "marker": "{custom_end_date}", "trigger": { "field": "custom_end_date" } }
+      ]
+    }
+  ]
+}

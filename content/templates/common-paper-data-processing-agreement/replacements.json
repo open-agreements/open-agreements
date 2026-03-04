@@ -1,3 +1,4 @@
 {
-  "[_________]": "{greater_of_dollar}"
+  "[_________]": "{greater_of_dollar}",
+  "[(1) Provider\u2019s breach or alleged breach of the DPA, or (2) Provider\u2019s gross negligence or willful misconduct, in each case, that results in a Security Incident.]": "{dpa_covered_claims_detail}"
 }
