@@ -124,6 +124,296 @@ fields:
     type: string
     description: DPA reference
     section: Privacy
+  - name: pilot_has_fee
+    type: boolean
+    description: >-
+      Set to true when the Pilot Period has an associated fee
+      (not a free trial).
+    section: Payment
+  - name: pilot_modifications
+    type: boolean
+    description: >-
+      Set to true when modifications to the Agreement apply only
+      during the Pilot Period.
+    section: Service
+  - name: fee_is_per_unit
+    type: boolean
+    description: >-
+      Set to true when fees are charged per unit (e.g., per user, per month).
+    section: Payment
+  - name: fee_is_other
+    type: boolean
+    description: >-
+      Set to true when a custom fee structure applies. Describe in
+      fill_in_value.
+    section: Payment
+  - name: fee_may_increase
+    type: boolean
+    description: >-
+      Set to true when fees may increase up to a specified percentage
+      upon renewal.
+    section: Payment
+  - name: fee_will_increase
+    type: boolean
+    description: >-
+      Set to true when fees will automatically increase upon renewal.
+    section: Payment
+  - name: fee_inclusive_of_taxes
+    type: boolean
+    description: >-
+      Set to true when fees are inclusive of taxes, modifying Section 4.1
+      of the Standard Terms.
+    section: Payment
+  - name: payment_by_invoice
+    type: boolean
+    description: >-
+      Set to true when payment is by invoice (not automatic payment).
+    section: Payment
+  - name: no_auto_renew
+    type: boolean
+    description: >-
+      Set to true when this Order Form does not automatically renew,
+      modifying Section 5.1 of the Standard Terms.
+    section: Terms
+  - name: professional_services_by_reference
+    type: boolean
+    description: >-
+      Set to true when professional services are described by reference
+      to an external SOW or PSA.
+    section: Service
+  - name: professional_services_described
+    type: boolean
+    description: >-
+      Set to true when professional services are described inline
+      in the Order Form.
+    section: Service
+  - name: professional_services_payment
+    type: boolean
+    description: >-
+      Set to true when a separate payment process applies to
+      professional services.
+    section: Payment
+  - name: has_provider_covered_claims
+    type: boolean
+    description: >-
+      Set to true when Provider Covered Claims (IP indemnification)
+      are included.
+    section: Liability
+  - name: has_customer_covered_claims
+    type: boolean
+    description: >-
+      Set to true when Customer Covered Claims (IP and restrictions
+      indemnification) are included.
+    section: Liability
+  - name: general_cap_type
+    type: enum
+    description: >-
+      How the General Cap Amount (baseline liability limit) is calculated.
+      "multiplier" uses a multiple of fees, "dollar" uses a fixed amount,
+      "greater_of" uses the greater of a dollar amount or a multiple of fees.
+    options:
+      - multiplier
+      - dollar
+      - greater_of
+    section: Liability
+  - name: increased_cap_type
+    type: enum
+    description: >-
+      How the Increased Cap Amount (higher liability limit for Increased
+      Claims) is calculated. Same options as general_cap_type.
+    options:
+      - multiplier
+      - dollar
+      - greater_of
+    section: Liability
+  - name: increased_claim_breach_privacy
+    type: boolean
+    description: >-
+      Set to true when breach of Section 3 (Privacy & Security) should be
+      classified as an Increased Claim with a higher liability cap.
+    section: Liability
+  - name: increased_claim_breach_conf
+    type: boolean
+    description: >-
+      Set to true when breach of Section 10 (Confidentiality) should be
+      classified as an Increased Claim (excluding data or security breaches).
+    section: Liability
+  - name: increased_claim_indemnification
+    type: boolean
+    description: >-
+      Set to true when indemnification obligations for Covered Claims should
+      be classified as an Increased Claim.
+    section: Liability
+  - name: increased_claim_breach_privacy_gross
+    type: boolean
+    description: >-
+      Set to true when breach of Privacy & Security resulting from gross
+      negligence is an Increased Claim.
+    section: Liability
+  - name: increased_claim_breach_conf_gross
+    type: boolean
+    description: >-
+      Set to true when breach of Confidentiality resulting from gross
+      negligence is an Increased Claim.
+    section: Liability
+  - name: increased_claim_other
+    type: boolean
+    description: >-
+      Set to true to include a custom Increased Claim category. Specify in
+      fill_in_value.
+    section: Liability
+  - name: unlimited_claim_indemnification
+    type: boolean
+    description: >-
+      Set to true when indemnification for Covered Claims should have
+      no liability cap (Unlimited Claim).
+    section: Liability
+  - name: unlimited_claim_breach_privacy_gross
+    type: boolean
+    description: >-
+      Set to true when breach of Privacy & Security resulting from gross
+      negligence should have no liability cap (Unlimited Claim).
+    section: Liability
+  - name: unlimited_claim_breach_conf_gross
+    type: boolean
+    description: >-
+      Set to true when breach of Confidentiality resulting from gross
+      negligence should have no liability cap (Unlimited Claim).
+    section: Liability
+  - name: unlimited_claim_breach_privacy
+    type: boolean
+    description: >-
+      Set to true when breach of Section 3 (Privacy & Security) should
+      have no liability cap (Unlimited Claim).
+    section: Liability
+  - name: unlimited_claim_breach_conf
+    type: boolean
+    description: >-
+      Set to true when breach of Section 10 (Confidentiality) should
+      have no liability cap (Unlimited Claim).
+    section: Liability
+  - name: unlimited_claim_other
+    type: boolean
+    description: >-
+      Set to true to include a custom Unlimited Claim category. Specify
+      in fill_in_value.
+    section: Liability
+  - name: additional_warranty_by_provider
+    type: boolean
+    description: >-
+      Set to true when Provider is providing additional warranties beyond
+      the Standard Terms.
+    section: Legal
+  - name: additional_warranty_by_customer
+    type: boolean
+    description: >-
+      Set to true when Customer is providing additional warranties beyond
+      the Standard Terms.
+    section: Legal
+  - name: security_reasonable_efforts
+    type: boolean
+    description: >-
+      Set to true when Provider will use commercially reasonable efforts
+      to secure the Cloud Service.
+    section: Security
+  - name: has_security_policy
+    type: boolean
+    description: >-
+      Set to true when Provider has a Security Policy available at the
+      specified DPA reference URL.
+    section: Security
+  - name: has_security_certifications
+    type: boolean
+    description: >-
+      Set to true when Provider maintains annually updated security
+      reports or certifications.
+    section: Security
+  - name: cert_iso_27001
+    type: boolean
+    description: Set to true when Provider holds ISO 27001 certification.
+    section: Security
+  - name: cert_penetration_testing
+    type: boolean
+    description: Set to true when Provider performs regular penetration testing.
+    section: Security
+  - name: cert_soc2_type1
+    type: boolean
+    description: Set to true when Provider holds SOC 2 Type I certification.
+    section: Security
+  - name: cert_pci_level1
+    type: boolean
+    description: Set to true when Provider holds PCI Level 1 certification.
+    section: Security
+  - name: cert_soc2_type2
+    type: boolean
+    description: Set to true when Provider holds SOC 2 Type II certification.
+    section: Security
+  - name: cert_pci_level2
+    type: boolean
+    description: Set to true when Provider holds PCI Level 2 certification.
+    section: Security
+  - name: cert_hitrust
+    type: boolean
+    description: Set to true when Provider holds HITRUST certification.
+    section: Security
+  - name: cert_fedramp
+    type: boolean
+    description: Set to true when Provider holds FedRAMP Authorization.
+    section: Security
+  - name: cert_other
+    type: boolean
+    description: >-
+      Set to true to include an additional security certification.
+      Specify the certification in fill_in_value.
+    section: Security
+  - name: insurance_commercial_liability
+    type: boolean
+    description: >-
+      Set to true when Provider must carry commercial general liability
+      insurance with a minimum limit.
+    section: Insurance
+  - name: insurance_workers_comp
+    type: boolean
+    description: >-
+      Set to true when Provider must carry workers' compensation or
+      employers' liability insurance.
+    section: Insurance
+  - name: insurance_errors_omissions
+    type: boolean
+    description: >-
+      Set to true when Provider must carry errors and omissions or
+      professional liability insurance.
+    section: Insurance
+  - name: insurance_cyber
+    type: boolean
+    description: >-
+      Set to true when Provider must carry cyber liability insurance
+      with a minimum limit.
+    section: Insurance
+  - name: insurance_additional_insured
+    type: boolean
+    description: >-
+      Set to true when Provider's policies will cover Customer as
+      additional insured.
+    section: Insurance
+  - name: additional_insured_commercial
+    type: boolean
+    description: >-
+      Set to true when Customer is additional insured on commercial
+      general liability policy.
+    section: Insurance
+  - name: additional_insured_eo
+    type: boolean
+    description: >-
+      Set to true when Customer is additional insured on errors and
+      omissions or professional liability policy.
+    section: Insurance
+  - name: additional_insured_cyber
+    type: boolean
+    description: >-
+      Set to true when Customer is additional insured on cyber
+      liability policy.
+    section: Insurance
   - name: provider_signatory_type
     type: enum
     description: Whether the Provider signatory is an entity or individual

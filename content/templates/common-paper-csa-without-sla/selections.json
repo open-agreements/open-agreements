@@ -1,0 +1,250 @@
+{
+  "groups": [
+    {
+      "id": "order_start_date",
+      "type": "radio",
+      "options": [
+        { "marker": "Date of last signature on this Order Form", "trigger": "default" },
+        { "marker": "{custom_start_date}", "trigger": { "field": "custom_start_date" } }
+      ]
+    },
+    {
+      "id": "pilot_fee",
+      "type": "radio",
+      "options": [
+        { "marker": "Fee for Pilot Period:", "trigger": { "field": "pilot_has_fee", "equals": true } },
+        { "marker": "Free trial", "trigger": "default" }
+      ]
+    },
+    {
+      "id": "pilot_modifications",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "Modifications to the Agreement that apply only to the Pilot Period", "trigger": { "field": "pilot_modifications" } }
+      ]
+    },
+    {
+      "id": "fee_structure",
+      "type": "checkbox",
+      "options": [
+        { "marker": "{fees} per {fee_unit}", "trigger": { "field": "fee_is_per_unit" } },
+        { "marker": "Other fee structure:", "trigger": { "field": "fee_is_other" } },
+        { "marker": "Fees may increase up to", "trigger": { "field": "fee_may_increase" } },
+        { "marker": "Fees will increase", "trigger": { "field": "fee_will_increase" } },
+        { "marker": "Modifying Section 4.1 of the Standard Terms, Fees are inclusive of taxes", "trigger": { "field": "fee_inclusive_of_taxes" } }
+      ]
+    },
+    {
+      "id": "payment_method",
+      "type": "radio",
+      "options": [
+        { "marker": "Pay by invoice", "trigger": { "field": "payment_by_invoice", "equals": true } },
+        { "marker": "Automatic payment", "trigger": "default" }
+      ]
+    },
+    {
+      "id": "auto_renewal",
+      "type": "radio",
+      "options": [
+        { "marker": "Non-Renewal Notice Date:", "trigger": "default" },
+        { "marker": "Modifying Section 5.1 of the Standard Terms, this Order Form does not automatically renew", "trigger": { "field": "no_auto_renew", "equals": true } }
+      ]
+    },
+    {
+      "id": "professional_services",
+      "type": "checkbox",
+      "options": [
+        { "marker": "Provider will provide professional services according to the {professional_services_reference}", "trigger": { "field": "professional_services_by_reference" } },
+        { "marker": "Provider will provide the following professional services: {professional_services_description}", "trigger": { "field": "professional_services_described" } },
+        { "marker": "Payment Process for these services:", "trigger": { "field": "professional_services_payment" } }
+      ]
+    },
+    {
+      "id": "effective_date",
+      "type": "radio",
+      "options": [
+        { "marker": "Date of last signature on this Cover Page", "trigger": "default" },
+        { "marker": "{custom_effective_date}", "trigger": { "field": "custom_effective_date" } }
+      ]
+    },
+    {
+      "id": "covered_claims",
+      "type": "checkbox",
+      "options": [
+        { "marker": "Provider Covered Claims:", "trigger": { "field": "has_provider_covered_claims" } },
+        { "marker": "Customer Covered Claims:", "trigger": { "field": "has_customer_covered_claims" } }
+      ]
+    },
+    {
+      "id": "general_cap",
+      "type": "radio",
+      "cellContext": "no General Cap Amount",
+      "options": [
+        { "marker": "{cap_multiplier}x the Fees paid or payable by Customer to Provider", "trigger": { "field": "general_cap_type", "equals": "multiplier" } },
+        { "marker": "${general_cap_amount}", "trigger": { "field": "general_cap_type", "equals": "dollar" } },
+        { "marker": "The greater of ${increased_cap_amount}", "trigger": { "field": "general_cap_type", "equals": "greater_of" } }
+      ]
+    },
+    {
+      "id": "increased_claims",
+      "type": "checkbox",
+      "cellContext": "no Increased Claims are included",
+      "options": [
+        { "marker": "Breach of Section 3 (Privacy & Security)", "trigger": { "field": "increased_claim_breach_privacy" } },
+        { "marker": "Breach of Section 10 (Confidentiality) (however, excluding any data or security breaches)", "trigger": { "field": "increased_claim_breach_conf" } },
+        { "marker": "indemnification obligation", "trigger": { "field": "increased_claim_indemnification" } },
+        { "marker": "Breach of Section 3 (Privacy & Security) resulting from gross negligence", "trigger": { "field": "increased_claim_breach_privacy_gross" } },
+        { "marker": "Breach of Section 10 (Confidentiality) resulting from gross negligence", "trigger": { "field": "increased_claim_breach_conf_gross" } },
+        { "marker": "Other: {fill_in_value}", "trigger": { "field": "increased_claim_other" } }
+      ]
+    },
+    {
+      "id": "increased_cap",
+      "type": "radio",
+      "cellContext": "Increased Claims are included above",
+      "options": [
+        { "marker": "{cap_multiplier}x the Fees paid or payable by Customer to Provider", "trigger": { "field": "increased_cap_type", "equals": "multiplier" } },
+        { "marker": "${general_cap_amount}", "trigger": { "field": "increased_cap_type", "equals": "dollar" } },
+        { "marker": "The greater of ${increased_cap_amount}", "trigger": { "field": "increased_cap_type", "equals": "greater_of" } }
+      ]
+    },
+    {
+      "id": "unlimited_claims",
+      "type": "checkbox",
+      "cellContext": "no Unlimited Claims are included",
+      "options": [
+        { "marker": "indemnification obligation", "trigger": { "field": "unlimited_claim_indemnification" } },
+        { "marker": "Breach of Section 3 (Privacy & Security) resulting from gross negligence", "trigger": { "field": "unlimited_claim_breach_privacy_gross" } },
+        { "marker": "Breach of Section 10 (Confidentiality) resulting from gross negligence", "trigger": { "field": "unlimited_claim_breach_conf_gross" } },
+        { "marker": "Breach of Section 3 (Privacy & Security)", "trigger": { "field": "unlimited_claim_breach_privacy" } },
+        { "marker": "Breach of Section 10 (Confidentiality) (however, excluding any data or security breaches)", "trigger": { "field": "unlimited_claim_breach_conf" } },
+        { "marker": "Other: {fill_in_value}", "trigger": { "field": "unlimited_claim_other" } }
+      ]
+    },
+    {
+      "id": "additional_warranties",
+      "type": "checkbox",
+      "options": [
+        { "marker": "By Provider:", "trigger": { "field": "additional_warranty_by_provider" } },
+        { "marker": "By Customer:", "trigger": { "field": "additional_warranty_by_customer" } }
+      ]
+    },
+    {
+      "id": "security_commitments",
+      "type": "checkbox",
+      "options": [
+        { "marker": "Provider will use commercially reasonable efforts to secure the Cloud Service", "trigger": { "field": "security_reasonable_efforts" } },
+        { "marker": "Provider will comply with the Security Policy available at {dpa_reference}", "trigger": { "field": "has_security_policy" } },
+        { "marker": "Provider will maintain annually updated reports or annual certifications", "trigger": { "field": "has_security_certifications" } }
+      ]
+    },
+    {
+      "id": "security_cert_iso27001",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "ISO 27001", "trigger": { "field": "cert_iso_27001" } }
+      ]
+    },
+    {
+      "id": "security_cert_pentest",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "Penetration testing", "trigger": { "field": "cert_penetration_testing" } }
+      ]
+    },
+    {
+      "id": "security_cert_soc2_type1",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "SOC 2 Type I", "trigger": { "field": "cert_soc2_type1" } }
+      ]
+    },
+    {
+      "id": "security_cert_pci_level1",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "PCI Level 1", "trigger": { "field": "cert_pci_level1" } }
+      ]
+    },
+    {
+      "id": "security_cert_soc2_type2",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "SOC 2 Type II", "trigger": { "field": "cert_soc2_type2" } }
+      ]
+    },
+    {
+      "id": "security_cert_pci_level2",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "PCI Level 2", "trigger": { "field": "cert_pci_level2" } }
+      ]
+    },
+    {
+      "id": "security_cert_hitrust",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "HITRUST", "trigger": { "field": "cert_hitrust" } }
+      ]
+    },
+    {
+      "id": "security_cert_fedramp",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "FedRAMP Authorized", "trigger": { "field": "cert_fedramp" } }
+      ]
+    },
+    {
+      "id": "security_cert_other",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "Other: {fill_in_value}", "trigger": { "field": "cert_other" } }
+      ]
+    },
+    {
+      "id": "insurance",
+      "type": "checkbox",
+      "options": [
+        { "marker": "Commercial general liability with a minimum limit", "trigger": { "field": "insurance_commercial_liability" } },
+        { "marker": "Workers\u2019 compensation or employers\u2019 liability insurance", "trigger": { "field": "insurance_workers_comp" } },
+        { "marker": "Errors and omissions or professional liability with a minimum limit", "trigger": { "field": "insurance_errors_omissions" } },
+        { "marker": "Cyber liability insurance with a minimum limit", "trigger": { "field": "insurance_cyber" } },
+        { "marker": "The following of Provider\u2019s policies will cover Customer as additional insured", "trigger": { "field": "insurance_additional_insured" } }
+      ]
+    },
+    {
+      "id": "additional_insured_commercial",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "Commercial general liability", "trigger": { "field": "additional_insured_commercial" } }
+      ]
+    },
+    {
+      "id": "additional_insured_eo",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "Errors and omissions or professional liability", "trigger": { "field": "additional_insured_eo" } }
+      ]
+    },
+    {
+      "id": "additional_insured_cyber",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "Cyber liability", "trigger": { "field": "additional_insured_cyber" } }
+      ]
+    }
+  ]
+}

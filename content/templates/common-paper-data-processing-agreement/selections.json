@@ -1,0 +1,211 @@
+{
+  "groups": [
+    {
+      "id": "has_subprocessor",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "{subprocessor_name}", "trigger": { "field": "has_subprocessor" } }
+      ]
+    },
+    {
+      "id": "security_commitments",
+      "type": "checkbox",
+      "options": [
+        { "marker": "Provider will use commercially reasonable efforts to secure the Service from unauthorized access", "trigger": { "field": "dpa_security_reasonable_efforts" } },
+        { "marker": "Security Policy available at {policy_url}", "trigger": { "field": "has_dpa_security_policy" } },
+        { "marker": "Provider will maintain annually updated reports or annual certifications", "trigger": { "field": "has_dpa_security_certifications" } }
+      ]
+    },
+    {
+      "id": "security_cert_iso27001",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "ISO 27001", "trigger": { "field": "cert_iso_27001" } }
+      ]
+    },
+    {
+      "id": "security_cert_pentest",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "Penetration testing", "trigger": { "field": "cert_penetration_testing" } }
+      ]
+    },
+    {
+      "id": "security_cert_soc2_type1",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "SOC 2 Type I", "trigger": { "field": "cert_soc2_type1" } }
+      ]
+    },
+    {
+      "id": "security_cert_pci_level1",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "PCI Level 1", "trigger": { "field": "cert_pci_level1" } }
+      ]
+    },
+    {
+      "id": "security_cert_soc2_type2",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "SOC 2 Type II", "trigger": { "field": "cert_soc2_type2" } }
+      ]
+    },
+    {
+      "id": "security_cert_pci_level2",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "PCI Level 2", "trigger": { "field": "cert_pci_level2" } }
+      ]
+    },
+    {
+      "id": "security_cert_hipaa",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "HIPAA", "trigger": { "field": "cert_hipaa" } }
+      ]
+    },
+    {
+      "id": "security_cert_fedramp",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "FedRAMP Authorized", "trigger": { "field": "cert_fedramp" } }
+      ]
+    },
+    {
+      "id": "security_cert_other",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "Other: {fill_in_value}", "trigger": { "field": "cert_other" } }
+      ]
+    },
+    {
+      "id": "indemnification_type",
+      "type": "checkbox",
+      "options": [
+        { "marker": "{csa_reference} The Agreement includes an additional Provider Covered Claim", "trigger": { "field": "indemnification_csa_reference" } },
+        { "marker": "{non_csa_reference} Without limiting the indemnity obligations", "trigger": { "field": "indemnification_non_csa_reference" } }
+      ]
+    },
+    {
+      "id": "cap_type",
+      "type": "checkbox",
+      "options": [
+        { "marker": "{csa_reference} The Agreement includes an additional Increased Claim", "trigger": { "field": "cap_csa_reference" } },
+        { "marker": "{non_csa_reference} The following is added to the end of Section 8.1", "trigger": { "field": "cap_non_csa_reference" } }
+      ]
+    },
+    {
+      "id": "dpa_governing_law",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "Notwithstanding the governing law or similar clauses of the Agreement, all interpretations and disputes about this DPA", "trigger": { "field": "has_dpa_governing_law" } }
+      ]
+    },
+    {
+      "id": "ccpa_terms",
+      "type": "checkbox",
+      "standalone": true,
+      "options": [
+        { "marker": "California Consumer Privacy Act", "trigger": { "field": "has_ccpa_terms" } }
+      ]
+    },
+    {
+      "id": "transfer_mechanisms",
+      "type": "checkbox",
+      "options": [
+        { "marker": "EEA Transfers:", "trigger": { "field": "has_eea_transfers" } },
+        { "marker": "UK Transfers:", "trigger": { "field": "has_uk_transfers" } }
+      ]
+    },
+    {
+      "id": "data_subjects",
+      "type": "checkbox",
+      "options": [
+        { "marker": "Customer\u2019s end users or customers", "trigger": { "field": "data_subject_end_users" } },
+        { "marker": "Customer\u2019s employees", "trigger": { "field": "data_subject_employees" } },
+        { "marker": "{custom_option}", "trigger": { "field": "data_subject_custom" } }
+      ]
+    },
+    {
+      "id": "personal_data_types",
+      "type": "checkbox",
+      "options": [
+        { "marker": "Name", "trigger": { "field": "pd_name" } },
+        { "marker": "Contact information such as email, phone number, or address", "trigger": { "field": "pd_contact" } },
+        { "marker": "Employment information such as employee ID or compensation", "trigger": { "field": "pd_employment" } },
+        { "marker": "Financial information such as bank account numbers", "trigger": { "field": "pd_financial" } },
+        { "marker": "Professional or biographic information such as resume or CV", "trigger": { "field": "pd_professional" } },
+        { "marker": "Transactional information such as account information or purchases", "trigger": { "field": "pd_transactional" } },
+        { "marker": "User activity and analysis such as device information or IP address", "trigger": { "field": "pd_user_activity" } },
+        { "marker": "Location information", "trigger": { "field": "pd_location" } },
+        { "marker": "{custom_option}", "trigger": { "field": "pd_custom" } }
+      ]
+    },
+    {
+      "id": "security_measures_reference",
+      "type": "checkbox",
+      "options": [
+        { "marker": "See Security Policy", "trigger": { "field": "security_measures_see_policy" } },
+        { "marker": "{custom_option}", "trigger": { "field": "security_measures_custom" } }
+      ]
+    },
+    {
+      "id": "processing_frequency",
+      "type": "checkbox",
+      "options": [
+        { "marker": "Continuous", "trigger": { "field": "processing_continuous" } },
+        { "marker": "{custom_options}", "trigger": { "field": "processing_frequency_custom" } }
+      ]
+    },
+    {
+      "id": "processing_activities",
+      "type": "checkbox",
+      "options": [
+        { "marker": "Receiving data, including collection, accessing, retrieval, recording, and data entry", "trigger": { "field": "pa_receiving" } },
+        { "marker": "Holding data, including storage, organization, and structuring", "trigger": { "field": "pa_holding" } },
+        { "marker": "Using data, including analysis, consultation, testing, automated decision making, and profiling", "trigger": { "field": "pa_using" } },
+        { "marker": "Updating data, including correcting, adaptation, alteration, alignment, and combination", "trigger": { "field": "pa_updating" } },
+        { "marker": "Protecting data, including restricting, encrypting, and security testing", "trigger": { "field": "pa_protecting" } },
+        { "marker": "Sharing data, including disclosure, dissemination, allowing access, or otherwise making available", "trigger": { "field": "pa_sharing" } },
+        { "marker": "Returning data to the data exporter or data subject", "trigger": { "field": "pa_returning" } },
+        { "marker": "Erasing data, including destruction and deletion", "trigger": { "field": "pa_erasing" } },
+        { "marker": "{custom_options}", "trigger": { "field": "pa_custom" } }
+      ]
+    },
+    {
+      "id": "security_measures_detail",
+      "type": "checkbox",
+      "options": [
+        { "marker": "Pseudonymization and encryption of personal data:", "trigger": { "field": "sm_pseudonymization" } },
+        { "marker": "Ensuring ongoing confidentiality, integrity, availability, and resilience", "trigger": { "field": "sm_confidentiality" } },
+        { "marker": "Ability to restore the availability of and access to Customer Personal Data", "trigger": { "field": "sm_restore" } },
+        { "marker": "Regular testing, assessment, and evaluation of the effectiveness", "trigger": { "field": "sm_testing" } },
+        { "marker": "User identification and authorization process and protection:", "trigger": { "field": "sm_user_auth" } },
+        { "marker": "Protecting Customer Personal Data during transmission", "trigger": { "field": "sm_transit" } },
+        { "marker": "Protecting Customer Personal Data during storage", "trigger": { "field": "sm_storage" } },
+        { "marker": "Physical security where Customer Personal Data is processed:", "trigger": { "field": "sm_physical" } },
+        { "marker": "Events logging:", "trigger": { "field": "sm_logging" } },
+        { "marker": "Systems configuration, including default configuration:", "trigger": { "field": "sm_config" } },
+        { "marker": "Internal IT and IT security governance and management:", "trigger": { "field": "sm_governance" } },
+        { "marker": "Certification or assurance of processes and products:", "trigger": { "field": "sm_certification" } },
+        { "marker": "Ensuring data minimization:", "trigger": { "field": "sm_minimization" } },
+        { "marker": "Ensuring data quality:", "trigger": { "field": "sm_quality" } },
+        { "marker": "Ensuring limited data retention:", "trigger": { "field": "sm_retention" } },
+        { "marker": "Ensuring accountability:", "trigger": { "field": "sm_accountability" } },
+        { "marker": "Allowing data portability and ensuring erasure:", "trigger": { "field": "sm_portability" } }
+      ]
+    }
+  ]
+}
