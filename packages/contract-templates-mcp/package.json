@@ -1,6 +1,6 @@
 {
   "name": "@open-agreements/contract-templates-mcp",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Local stdio MCP server for OpenAgreements template discovery and filling",
   "type": "module",
   "bin": {
@@ -26,6 +26,11 @@
   },
   "engines": {
     "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/open-agreements/open-agreements.git",
+    "directory": "packages/contract-templates-mcp"
   },
   "license": "MIT",
   "dependencies": {

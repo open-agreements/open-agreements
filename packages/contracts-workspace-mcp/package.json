@@ -1,6 +1,6 @@
 {
   "name": "@open-agreements/contracts-workspace-mcp",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Local stdio MCP server for contracts workspace operations",
   "type": "module",
   "bin": {
@@ -26,6 +26,11 @@
   },
   "engines": {
     "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/open-agreements/open-agreements.git",
+    "directory": "packages/contracts-workspace-mcp"
   },
   "license": "MIT",
   "dependencies": {
