@@ -228,13 +228,18 @@ export async function fillTemplate(options: FillOptions): Promise<FillResult> {
     console.warn(`Warning: unknown field(s) not in metadata: ${unknownKeys.join(', ')}`);
   }
 
-  // Build cleanPatch if replacements.json exists
+  // Build cleanPatch if replacements.json or clean.json exists
   const templatePath = join(templateDir, 'template.docx');
   const replacementsPath = join(templateDir, 'replacements.json');
-  const cleanPatch = existsSync(replacementsPath)
+  const cleanJsonPath = join(templateDir, 'clean.json');
+  const hasReplacements = existsSync(replacementsPath);
+  const hasCleanJson = existsSync(cleanJsonPath);
+  const cleanPatch = (hasReplacements || hasCleanJson)
     ? {
         cleanConfig: loadCleanConfig(templateDir),
-        replacements: JSON.parse(readFileSync(replacementsPath, 'utf-8')) as Record<string, string>,
+        replacements: hasReplacements
+          ? JSON.parse(readFileSync(replacementsPath, 'utf-8')) as Record<string, string>
+          : {},
       }
     : undefined;
 
