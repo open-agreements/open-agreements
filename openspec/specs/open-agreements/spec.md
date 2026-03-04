@@ -275,6 +275,68 @@ marking selected choices with `[ x ]`.
 - **THEN** the selected until-terminated and perpetuity options are marked with `[ x ]`
 - **AND** non-selected fixed-term alternatives are removed
 
+### Requirement: Signature Block Fields
+All Common Paper templates SHALL support per-party signatory fields with
+entity/individual toggle. The engine auto-discovers `*_signatory_type` prefixes
+(role-based) plus legacy `party_N_type` (mutual NDA). Title and company cells
+use derived display fields that resolve to empty string for individuals,
+respecting the one-IF-per-row constraint in docx-templates.
+
+#### Scenario: [OA-NDA-001] Entity mode fills all signature fields
+- **GIVEN** both parties have `party_N_type` set to `entity`
+- **AND** all signatory fields (name, title, company, email) are provided
+- **WHEN** the template is filled
+- **THEN** all signatory values appear in the output
+- **AND** no unrendered template tags remain
+
+#### Scenario: [OA-NDA-002] Individual mode suppresses title and company
+- **GIVEN** one party has `party_N_type` set to `individual`
+- **AND** title and company values are provided for that party
+- **WHEN** the template is filled
+- **THEN** the individual party's title and company cells are blank
+- **AND** entity-only sentinel values do not appear in output
+
+#### Scenario: [OA-NDA-003] Warning emitted for conflicting individual fields
+- **GIVEN** a party has `party_N_type` set to `individual`
+- **AND** `party_N_title` is also set to a non-empty value
+- **WHEN** display fields are computed
+- **THEN** a console warning is emitted identifying the conflicting field
+
+#### Scenario: [OA-NDA-004] Standard 2-party entity mode (pilot agreement)
+- **GIVEN** the `common-paper-pilot-agreement` template with `provider_signatory_*` and `customer_signatory_*` fields
+- **AND** both signatory types set to `entity` with all fields provided
+- **WHEN** the template is filled
+- **THEN** all signatory values appear in the output
+- **AND** no unrendered template tags remain
+
+#### Scenario: [OA-NDA-005] Individual mode suppression (contractor agreement)
+- **GIVEN** the `common-paper-independent-contractor-agreement` template
+- **AND** `contractor_signatory_type` set to `individual`
+- **WHEN** the template is filled
+- **THEN** the contractor's title and company display cells are blank
+- **AND** name and email still render
+
+#### Scenario: [OA-NDA-006] One-way NDA single party
+- **GIVEN** the `common-paper-one-way-nda` template with `recipient_signatory_*` fields
+- **AND** all signatory fields provided in entity mode
+- **WHEN** the template is filled
+- **THEN** all signatory values render including company display
+- **AND** no unrendered template tags remain
+
+#### Scenario: [OA-NDA-007] Dual sig block (CSA)
+- **GIVEN** the `common-paper-cloud-service-agreement` with two signature tables
+- **AND** provider and customer signatory fields provided
+- **WHEN** the template is filled
+- **THEN** both signature tables are filled from the same fields
+- **AND** no unrendered template tags remain
+
+#### Scenario: [OA-NDA-008] Parametric smoke test (all templates)
+- **GIVEN** each of the 19 Common Paper templates with signatory fields
+- **AND** sample entity-mode data provided for all signatory fields
+- **WHEN** the template is filled
+- **THEN** no unrendered `{field}` tags remain in the output
+- **AND** individual-mode fill also produces clean output
+
 ### Requirement: Template Metadata Schema
 Each template directory SHALL contain a `metadata.yaml` validated by Zod schema with fields: `name`, `source_url`, `version`, `license` (enum: CC-BY-4.0, CC0-1.0), `allow_derivatives` (boolean), `attribution_text`, `fields` (array of field definitions with name, type, description, required).
 

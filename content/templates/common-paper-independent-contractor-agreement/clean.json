@@ -1,0 +1,8 @@
+{
+  "removeRanges": [
+    {
+      "start": "^Interpreting help text$",
+      "end": "^Send to your counterparty"
+    }
+  ]
+}

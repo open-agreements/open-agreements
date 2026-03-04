@@ -1,11 +1,13 @@
 import { describe, expect, vi } from 'vitest';
 import { itAllure } from './helpers/allure-test.js';
-import { mkdtempSync, writeFileSync, rmSync } from 'node:fs';
-import { join } from 'node:path';
+import { mkdtempSync, writeFileSync, readFileSync, rmSync, readdirSync } from 'node:fs';
+import { join, resolve } from 'node:path';
 import { tmpdir } from 'node:os';
 import AdmZip from 'adm-zip';
 import { detectCurrencyFields, sanitizeCurrencyValuesFromDocx, verifyTemplateFill, BLANK_PLACEHOLDER } from '../src/core/fill-utils.js';
 import { prepareFillData, fillDocx } from '../src/core/fill-pipeline.js';
+import { loadMetadata } from '../src/core/metadata.js';
+import { fillTemplate } from '../src/core/engine.js';
 
 const it = itAllure.epic('Filling & Rendering');
 
@@ -627,4 +629,426 @@ describe('Integration: template currency sanitization', () => {
     expect(outXml).toContain('50,000');
     expect(outXml).not.toContain('$$');
   });
+});
+
+// ---------------------------------------------------------------------------
+// Section 6: NDA Signature Block Fields
+// ---------------------------------------------------------------------------
+
+describe('NDA signature block fields', () => {
+  const NDA_DIR = resolve(__dirname, '../content/templates/common-paper-mutual-nda');
+
+  /** Fill the real NDA template with the given values and return the output XML text. */
+  async function fillNdaTemplate(values: Record<string, unknown>): Promise<{ xml: string; buf: Uint8Array }> {
+    const metadata = loadMetadata(NDA_DIR);
+    const fieldNames = new Set(metadata.fields.map((f) => f.name));
+    const data = prepareFillData({
+      values,
+      fields: metadata.fields,
+      requiredFieldNames: metadata.required_fields,
+      useBlankPlaceholder: true,
+      coerceBooleans: true,
+      computeDisplayFields: (d) => {
+        // Inline import of computeDisplayFields is not exported, so we replicate
+        // the signatory derivation directly using the engine's fillTemplate instead.
+        // Instead, use fillTemplate from engine.ts via the full pipeline.
+      },
+    });
+
+    // Use fillTemplate via the engine for the full pipeline (includes computeDisplayFields)
+    const { fillTemplate } = await import('../src/core/engine.js');
+    const tempDir = mkdtempSync(join(tmpdir(), 'nda-sig-test-'));
+    const outputPath = join(tempDir, 'output.docx');
+    await fillTemplate({
+      templateDir: NDA_DIR,
+      values,
+      outputPath,
+    });
+
+    const outZip = new AdmZip(outputPath);
+    const allText: string[] = [];
+    for (const entry of outZip.getEntries()) {
+      if (entry.entryName.startsWith('word/') && entry.entryName.endsWith('.xml')) {
+        allText.push(entry.getData().toString('utf-8'));
+      }
+    }
+    const xml = allText.join('\n');
+    const buf = readFileSync(outputPath);
+    rmSync(tempDir, { recursive: true, force: true });
+    return { xml, buf };
+  }
+
+  const BASE_VALUES = {
+    purpose: 'Evaluating a potential business partnership',
+    effective_date: '2026-03-01',
+    mnda_term: '2 years',
+    confidentiality_term: '3 years',
+    confidentiality_term_start: 'Effective Date',
+    governing_law: 'California',
+    jurisdiction: 'courts located in San Francisco County, California',
+    changes_to_standard_terms: 'None.',
+  };
+
+  it.openspec('OA-NDA-001')('fills all signature fields in entity mode (both parties)', async () => {
+    const { xml, buf } = await fillNdaTemplate({
+      ...BASE_VALUES,
+      party_1_type: 'entity',
+      party_1_name: 'Alice Johnson',
+      party_1_title: 'CEO',
+      party_1_company: 'Acme Corp',
+      party_1_email: 'alice@acme.example',
+      party_2_type: 'entity',
+      party_2_name: 'Bob Smith',
+      party_2_title: 'CTO',
+      party_2_company: 'Beta Inc',
+      party_2_email: 'bob@beta.example',
+    });
+
+    // All signatory values should appear
+    expect(xml).toContain('Alice Johnson');
+    expect(xml).toContain('CEO');
+    expect(xml).toContain('Acme Corp');
+    expect(xml).toContain('alice@acme.example');
+    expect(xml).toContain('Bob Smith');
+    expect(xml).toContain('CTO');
+    expect(xml).toContain('Beta Inc');
+    expect(xml).toContain('bob@beta.example');
+
+    // No unrendered {field_name} tags
+    expect(xml).not.toMatch(/\{[a-z_][a-z0-9_]*\}/i);
+
+    // No IF/END-IF conditionals
+    expect(xml).not.toContain('{IF ');
+    expect(xml).not.toContain('{END-IF}');
+
+    // Valid non-zero buffer
+    expect(buf.length).toBeGreaterThan(0);
+  });
+
+  it.openspec('OA-NDA-002')('suppresses title/company for individual party (mixed mode)', async () => {
+    const { xml } = await fillNdaTemplate({
+      ...BASE_VALUES,
+      party_1_type: 'entity',
+      party_1_name: 'Alice Johnson',
+      party_1_title: 'CEO',
+      party_1_company: 'Acme Corp',
+      party_1_email: 'alice@acme.example',
+      party_2_type: 'individual',
+      party_2_name: 'Charlie Doe',
+      party_2_title: 'ZZZ_SHOULD_NOT_RENDER',
+      party_2_company: 'ZZZ_SHOULD_NOT_RENDER',
+      party_2_email: 'charlie@personal.example',
+    });
+
+    // Party 1 entity fields render
+    expect(xml).toContain('Alice Johnson');
+    expect(xml).toContain('CEO');
+    expect(xml).toContain('Acme Corp');
+
+    // Party 2 individual: name and email render, sentinel values do NOT
+    expect(xml).toContain('Charlie Doe');
+    expect(xml).toContain('charlie@personal.example');
+    expect(xml).not.toContain('ZZZ_SHOULD_NOT_RENDER');
+
+    // No unrendered tags
+    expect(xml).not.toMatch(/\{[a-z_][a-z0-9_]*\}/i);
+  });
+
+  it.openspec('OA-NDA-003')('warns when individual party has title set', async () => {
+    const spy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    try {
+      await fillNdaTemplate({
+        ...BASE_VALUES,
+        party_1_type: 'individual',
+        party_1_name: 'Dana Lee',
+        party_1_title: 'CEO',
+        party_1_email: 'dana@example.com',
+      });
+
+      const warningCalls = spy.mock.calls.map((c) => String(c[0]));
+      const relevantWarning = warningCalls.find(
+        (msg) => msg.includes('party_1_title') && msg.includes('individual')
+      );
+      expect(relevantWarning).toBeDefined();
+    } finally {
+      spy.mockRestore();
+    }
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Section 7: Signature Block Fields — All Templates
+// ---------------------------------------------------------------------------
+
+/** Fill a template and return all word/*.xml text concatenated. */
+async function fillAndExtractXml(
+  templateDir: string,
+  values: Record<string, unknown>,
+): Promise<string> {
+  const tempDir = mkdtempSync(join(tmpdir(), 'sig-test-'));
+  const outputPath = join(tempDir, 'output.docx');
+  try {
+    await fillTemplate({ templateDir, values, outputPath });
+    const outZip = new AdmZip(outputPath);
+    const allText: string[] = [];
+    for (const entry of outZip.getEntries()) {
+      if (entry.entryName.startsWith('word/') && entry.entryName.endsWith('.xml')) {
+        allText.push(entry.getData().toString('utf-8'));
+      }
+    }
+    return allText.join('\n');
+  } finally {
+    rmSync(tempDir, { recursive: true, force: true });
+  }
+}
+
+/** Generate dummy values for ALL fields in a template (required + optional + replacements). */
+function dummyAllValues(templateDir: string): Record<string, unknown> {
+  const metadata = loadMetadata(templateDir);
+  const values: Record<string, unknown> = {};
+  for (const field of metadata.fields) {
+    // Skip signatory fields — caller populates these explicitly
+    if (field.name.endsWith('_signatory_type') || field.name.endsWith('_signatory_name') ||
+        field.name.endsWith('_signatory_title') || field.name.endsWith('_signatory_company') ||
+        field.name.endsWith('_signatory_email') ||
+        field.name.match(/^party_[12]_(type|name|title|company|email)$/)) {
+      continue;
+    }
+    if (field.type === 'boolean') {
+      values[field.name] = field.default != null ? String(field.default) === 'true' : false;
+    } else if (field.type === 'date') {
+      values[field.name] = field.default ?? '2026-03-01';
+    } else {
+      values[field.name] = field.default ?? `Test ${field.name}`;
+    }
+  }
+  // Also provide values for fields injected via replacements.json (not in metadata)
+  const replacementsPath = join(templateDir, 'replacements.json');
+  try {
+    const replacements = JSON.parse(readFileSync(replacementsPath, 'utf-8')) as Record<string, string>;
+    for (const target of Object.values(replacements)) {
+      const match = target.match(/^\{(\w+)\}$/);
+      if (match && !values[match[1]]) {
+        values[match[1]] = `Test ${match[1]}`;
+      }
+    }
+  } catch {
+    // No replacements.json — fine
+  }
+  return values;
+}
+
+describe('Signature block fields — role-based templates', () => {
+  const TEMPLATES_DIR = resolve(__dirname, '../content/templates');
+
+  it.openspec('OA-NDA-004')('standard 2-party entity mode (pilot agreement)', async () => {
+    const dir = join(TEMPLATES_DIR, 'common-paper-pilot-agreement');
+    const xml = await fillAndExtractXml(dir, {
+      company_name: 'Acme Corp',
+      product_description: 'Widget Platform',
+      pilot_period: '90 days',
+      governing_law: 'Delaware',
+      jurisdiction: 'courts located in New Castle County, Delaware',
+      provider_signatory_type: 'entity',
+      provider_signatory_name: 'Alice Johnson',
+      provider_signatory_title: 'CEO',
+      provider_signatory_company: 'Acme Corp',
+      provider_signatory_email: 'alice@acme.example',
+      customer_signatory_type: 'entity',
+      customer_signatory_name: 'Bob Smith',
+      customer_signatory_title: 'CTO',
+      customer_signatory_company: 'Beta Inc',
+      customer_signatory_email: 'bob@beta.example',
+    });
+
+    expect(xml).toContain('Alice Johnson');
+    expect(xml).toContain('CEO');
+    expect(xml).toContain('alice@acme.example');
+    expect(xml).toContain('Bob Smith');
+    expect(xml).toContain('CTO');
+    expect(xml).toContain('bob@beta.example');
+    expect(xml).not.toMatch(/\{[a-z_][a-z0-9_]*\}/i);
+  });
+
+  it.openspec('OA-NDA-005')('individual mode suppression (contractor agreement)', async () => {
+    const dir = join(TEMPLATES_DIR, 'common-paper-independent-contractor-agreement');
+    const xml = await fillAndExtractXml(dir, {
+      company_name_and_address: 'Acme Corp, 123 Main St',
+      contractor_name_and_address: 'Jane Doe, 456 Oak Ave',
+      services_description: 'Software development',
+      rates_and_fees: '$150/hour',
+      payment_terms: 'Net 30',
+      timeline: '6 months',
+      governing_law: 'California',
+      jurisdiction: 'courts located in San Francisco County, California',
+      company_signatory_type: 'entity',
+      company_signatory_name: 'Alice Johnson',
+      company_signatory_title: 'CEO',
+      company_signatory_company: 'Acme Corp',
+      company_signatory_email: 'alice@acme.example',
+      contractor_signatory_type: 'individual',
+      contractor_signatory_name: 'Jane Doe',
+      contractor_signatory_title: 'ZZZ_SHOULD_NOT_RENDER',
+      contractor_signatory_company: 'ZZZ_SHOULD_NOT_RENDER',
+      contractor_signatory_email: 'jane@example.com',
+    });
+
+    // Company entity fields render
+    expect(xml).toContain('Alice Johnson');
+    expect(xml).toContain('CEO');
+
+    // Contractor individual: name and email render, sentinel values do NOT
+    expect(xml).toContain('Jane Doe');
+    expect(xml).toContain('jane@example.com');
+    expect(xml).not.toContain('ZZZ_SHOULD_NOT_RENDER');
+
+    expect(xml).not.toMatch(/\{[a-z_][a-z0-9_]*\}/i);
+  });
+
+  it.openspec('OA-NDA-006')('one-way NDA single party', async () => {
+    const dir = join(TEMPLATES_DIR, 'common-paper-one-way-nda');
+    const xml = await fillAndExtractXml(dir, {
+      discloser_name_and_address: 'Acme Corp, 123 Main St, Wilmington, DE',
+      effective_date: '2026-03-01',
+      purpose: 'Evaluating a potential partnership',
+      nda_term: '2 years',
+      confidentiality_term_start: 'Effective Date',
+      governing_law: 'Delaware',
+      jurisdiction: 'New Castle County, Delaware',
+      changes_to_standard_terms: 'None.',
+      recipient_signatory_type: 'entity',
+      recipient_signatory_name: 'Bob Smith',
+      recipient_signatory_title: 'General Counsel',
+      recipient_signatory_company: 'Beta Inc',
+      recipient_signatory_email: 'bob@beta.example',
+    });
+
+    expect(xml).toContain('Bob Smith');
+    expect(xml).toContain('General Counsel');
+    expect(xml).toContain('Beta Inc');
+    expect(xml).toContain('bob@beta.example');
+    expect(xml).not.toMatch(/\{[a-z_][a-z0-9_]*\}/i);
+  });
+
+  it.openspec('OA-NDA-007')('dual sig block (CSA)', async () => {
+    const dir = join(TEMPLATES_DIR, 'common-paper-cloud-service-agreement');
+    const xml = await fillAndExtractXml(dir, {
+      provider_name: 'Acme SaaS',
+      customer_name: 'Beta Corp',
+      provider_legal_name: 'Acme SaaS Inc.',
+      customer_legal_name: 'Beta Corp LLC',
+      effective_date: '2026-03-01',
+      cloud_service: 'Cloud Widget Platform',
+      subscription_period: '1 year',
+      governing_law: 'Delaware',
+      jurisdiction: 'courts located in New Castle County, Delaware',
+      provider_signatory_type: 'entity',
+      provider_signatory_name: 'Alice Johnson',
+      provider_signatory_title: 'CEO',
+      provider_signatory_company: 'Acme SaaS Inc.',
+      provider_signatory_email: 'alice@acme.example',
+      customer_signatory_type: 'entity',
+      customer_signatory_name: 'Bob Smith',
+      customer_signatory_title: 'VP Engineering',
+      customer_signatory_company: 'Beta Corp LLC',
+      customer_signatory_email: 'bob@beta.example',
+    });
+
+    // Both tables should contain signatory data
+    expect(xml).toContain('Alice Johnson');
+    expect(xml).toContain('CEO');
+    expect(xml).toContain('alice@acme.example');
+    expect(xml).toContain('Bob Smith');
+    expect(xml).toContain('VP Engineering');
+    expect(xml).toContain('bob@beta.example');
+    expect(xml).not.toMatch(/\{[a-z_][a-z0-9_]*\}/i);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Section 8: Parametric Smoke Test — All Templates with Signatory Fields
+// ---------------------------------------------------------------------------
+
+describe('Parametric smoke test — signatory fields across all templates', () => {
+  const TEMPLATES_DIR = resolve(__dirname, '../content/templates');
+
+  // Discover all common-paper template dirs that have *_signatory_type fields
+  const templateDirs = readdirSync(TEMPLATES_DIR)
+    .filter((d) => d.startsWith('common-paper-'))
+    .map((d) => join(TEMPLATES_DIR, d))
+    .filter((dir) => {
+      try {
+        const meta = loadMetadata(dir);
+        return meta.fields.some((f) => f.name.endsWith('_signatory_type'));
+      } catch {
+        return false;
+      }
+    });
+
+  // Also include the mutual NDA (legacy party_N_type)
+  const mutualNdaDir = join(TEMPLATES_DIR, 'common-paper-mutual-nda');
+  const allDirs = templateDirs.some((d) => d.endsWith('common-paper-mutual-nda'))
+    ? templateDirs
+    : [...templateDirs, mutualNdaDir];
+
+  it.openspec('OA-NDA-008')('all templates fill cleanly in entity mode', async () => {
+    const spy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    try {
+      for (const dir of allDirs) {
+        const metadata = loadMetadata(dir);
+        const values = dummyAllValues(dir);
+
+        // Fill all signatory fields with entity-mode data
+        for (const field of metadata.fields) {
+          if (field.name.endsWith('_signatory_type') || field.name === 'party_1_type' || field.name === 'party_2_type') {
+            values[field.name] = 'entity';
+          } else if (field.name.endsWith('_signatory_name') || (field.name.match(/^party_[12]_name$/) && metadata.fields.some(f => f.name === field.name.replace('_name', '_type')))) {
+            values[field.name] = 'Test Signer';
+          } else if (field.name.endsWith('_signatory_title') || (field.name.match(/^party_[12]_title$/) && metadata.fields.some(f => f.name === field.name.replace('_title', '_type')))) {
+            values[field.name] = 'CEO';
+          } else if (field.name.endsWith('_signatory_company') || (field.name.match(/^party_[12]_company$/) && metadata.fields.some(f => f.name === field.name.replace('_company', '_type')))) {
+            values[field.name] = 'Test Corp';
+          } else if (field.name.endsWith('_signatory_email') || (field.name.match(/^party_[12]_email$/) && metadata.fields.some(f => f.name === field.name.replace('_email', '_type')))) {
+            values[field.name] = 'test@example.com';
+          }
+        }
+
+        const dirName = dir.split('/').pop();
+        const xml = await fillAndExtractXml(dir, values);
+        const unrendered = xml.match(/\{[a-z_][a-z0-9_]*\}/gi) ?? [];
+        expect(unrendered, `Unrendered tags in ${dirName}: ${unrendered.join(', ')}`).toEqual([]);
+      }
+    } finally {
+      spy.mockRestore();
+    }
+  }, 30_000);
+
+  it.openspec('OA-NDA-008')('all templates fill cleanly in individual mode', async () => {
+    const spy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    try {
+      for (const dir of allDirs) {
+        const metadata = loadMetadata(dir);
+        const values = dummyAllValues(dir);
+
+        // Fill all signatory fields with individual-mode data
+        for (const field of metadata.fields) {
+          if (field.name.endsWith('_signatory_type') || field.name === 'party_1_type' || field.name === 'party_2_type') {
+            values[field.name] = 'individual';
+          } else if (field.name.endsWith('_signatory_name') || (field.name.match(/^party_[12]_name$/) && metadata.fields.some(f => f.name === field.name.replace('_name', '_type')))) {
+            values[field.name] = 'Test Person';
+          } else if (field.name.endsWith('_signatory_email') || (field.name.match(/^party_[12]_email$/) && metadata.fields.some(f => f.name === field.name.replace('_email', '_type')))) {
+            values[field.name] = 'test@example.com';
+          }
+          // Intentionally skip title/company for individual mode
+        }
+
+        const dirName = dir.split('/').pop();
+        const xml = await fillAndExtractXml(dir, values);
+        const unrendered = xml.match(/\{[a-z_][a-z0-9_]*\}/gi) ?? [];
+        expect(unrendered, `Unrendered tags in ${dirName}: ${unrendered.join(', ')}`).toEqual([]);
+      }
+    } finally {
+      spy.mockRestore();
+    }
+  }, 30_000);
 });

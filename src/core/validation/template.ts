@@ -105,6 +105,7 @@ export function validateTemplate(templateDir: string, templateId: string): Templ
 
     // Collect {tags} from replacement values and the DOCX text
     const foundTags = new Set<string>();
+    const replacementTags = new Set<string>(); // tags specifically from replacement values
     const foundConditionalFields = new Set<string>();
 
     // Tags from replacement values (these will exist after patching)
@@ -113,6 +114,7 @@ export function validateTemplate(templateDir: string, templateId: string): Templ
       let match;
       while ((match = placeholderRegex.exec(value)) !== null) {
         foundTags.add(match[1]);
+        replacementTags.add(match[1]);
       }
       const conditionalRegex = /\{IF !?(\w+)\}/g;
       let condMatch;
@@ -149,14 +151,21 @@ export function validateTemplate(templateDir: string, templateId: string): Templ
       }
     }
 
-    // Check for tags not in metadata
+    // Check for tags not in metadata — replacement-injected tags are errors
+    // (they cause runtime ReferenceError), DOCX-native tags are warnings.
     const controlTokens = new Set(['IF', 'END']);
     for (const tag of foundTags) {
       if (controlTokens.has(tag)) continue;
       if (!metadataFieldNames.has(tag)) {
-        warnings.push(
-          `Placeholder {${tag}} found in replacements/template but not defined in metadata fields`
-        );
+        if (replacementTags.has(tag)) {
+          errors.push(
+            `Replacement-injected field {${tag}} not defined in metadata — will cause runtime error during fill`
+          );
+        } else {
+          warnings.push(
+            `Placeholder {${tag}} found in template but not defined in metadata fields`
+          );
+        }
       }
     }
   } else {

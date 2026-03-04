@@ -52,6 +52,54 @@ fields:
     description: Courts with jurisdiction over disputes
     default: courts located in New Castle County, Delaware
     section: Legal
+  - name: provider_signatory_type
+    type: enum
+    description: Whether the Provider signatory is an entity or individual
+    options:
+      - entity
+      - individual
+    default: entity
+    section: Signature Block
+  - name: provider_signatory_name
+    type: string
+    description: Full legal name of the Provider's signatory
+    section: Signature Block
+  - name: provider_signatory_title
+    type: string
+    description: Title/role of the Provider's signatory (entity only)
+    section: Signature Block
+  - name: provider_signatory_company
+    type: string
+    description: Company name for the Provider signatory (entity only)
+    section: Signature Block
+  - name: provider_signatory_email
+    type: string
+    description: Notice email address for the Provider
+    section: Signature Block
+  - name: partner_signatory_type
+    type: enum
+    description: Whether the Partner signatory is an entity or individual
+    options:
+      - entity
+      - individual
+    default: entity
+    section: Signature Block
+  - name: partner_signatory_name
+    type: string
+    description: Full legal name of the Partner's signatory
+    section: Signature Block
+  - name: partner_signatory_title
+    type: string
+    description: Title/role of the Partner's signatory (entity only)
+    section: Signature Block
+  - name: partner_signatory_company
+    type: string
+    description: Company name for the Partner signatory (entity only)
+    section: Signature Block
+  - name: partner_signatory_email
+    type: string
+    description: Notice email address for the Partner
+    section: Signature Block
 required_fields:
   - company_name
   - product_description

@@ -19,6 +19,49 @@ export interface FillResult {
   fieldsUsed: string[];
 }
 
+/** Derive signatory display fields for a given prefix. Reusable across templates. */
+function deriveSignatoryFields(
+  data: Record<string, unknown>,
+  prefix: string,
+  fieldNames: Set<string>,
+  str: (key: string) => string,
+  isBlankPlaceholder: (val: unknown) => boolean,
+): void {
+  const typeKey = `${prefix}_type`;
+  if (!fieldNames.has(typeKey)) return;
+
+  const typeVal = str(typeKey);
+  const isEntity = typeVal !== 'individual';
+  data[`${prefix}_is_entity`] = isEntity;
+
+  // Derive display fields: show value for entities, empty string for individuals
+  for (const suffix of ['title', 'company']) {
+    const srcKey = `${prefix}_${suffix}`;
+    const displayKey = `${prefix}_${suffix}_display`;
+    if (isEntity) {
+      const val = data[srcKey];
+      data[displayKey] = (val && !isBlankPlaceholder(val)) ? String(val) : '';
+    } else {
+      data[displayKey] = '';
+      // Warn if entity-only fields are set for an individual
+      const val = data[srcKey];
+      if (val && !isBlankPlaceholder(val) && String(val).trim() !== '') {
+        console.warn(
+          `Warning: ${srcKey} is set but ${prefix}_type is "individual" — value will be ignored`
+        );
+      }
+    }
+  }
+
+  // Normalize signature fields: blank instead of BLANK_PLACEHOLDER underscores
+  for (const suffix of ['name', 'email', 'title', 'company']) {
+    const key = `${prefix}_${suffix}`;
+    if (isBlankPlaceholder(data[key])) {
+      data[key] = '';
+    }
+  }
+}
+
 /**
  * Compute display fields for radio/checkbox groups in table rows.
  * docx-templates only allows one {IF} per table row, so multi-option rows
@@ -40,6 +83,24 @@ function computeDisplayFields(data: Record<string, unknown>, fieldNames: Set<str
     if (/^[A-Za-z0-9_-]{20,}$/.test(raw)) return `https://docs.google.com/document/d/${raw}/`;
     return raw;
   };
+
+  // ── Signatory type derivation ──
+  // Auto-discover role-based prefixes: match *_signatory_type
+  for (const key of fieldNames) {
+    if (key.endsWith('_signatory_type')) {
+      const prefix = key.slice(0, -5); // strip "_type" → e.g. "provider_signatory"
+      if (fieldNames.has(`${prefix}_name`) && fieldNames.has(`${prefix}_title`)) {
+        deriveSignatoryFields(data, prefix, fieldNames, str, isBlankPlaceholder);
+      }
+    }
+  }
+  // Legacy backward compat: party_1_type, party_2_type (mutual NDA)
+  for (const n of [1, 2]) {
+    const legacyKey = `party_${n}_type`;
+    if (fieldNames.has(legacyKey) && fieldNames.has(`party_${n}_name`) && fieldNames.has(`party_${n}_title`)) {
+      deriveSignatoryFields(data, `party_${n}`, fieldNames, str, isBlankPlaceholder);
+    }
+  }
 
   // Optional cover-table rows in employment templates should disappear when blank.
   // The default blank placeholder is intentionally visible in most contexts,
@@ -167,13 +228,18 @@ export async function fillTemplate(options: FillOptions): Promise<FillResult> {
     console.warn(`Warning: unknown field(s) not in metadata: ${unknownKeys.join(', ')}`);
   }
 
-  // Build cleanPatch if replacements.json exists
+  // Build cleanPatch if replacements.json or clean.json exists
   const templatePath = join(templateDir, 'template.docx');
   const replacementsPath = join(templateDir, 'replacements.json');
-  const cleanPatch = existsSync(replacementsPath)
+  const cleanJsonPath = join(templateDir, 'clean.json');
+  const hasReplacements = existsSync(replacementsPath);
+  const hasCleanJson = existsSync(cleanJsonPath);
+  const cleanPatch = (hasReplacements || hasCleanJson)
     ? {
         cleanConfig: loadCleanConfig(templateDir),
-        replacements: JSON.parse(readFileSync(replacementsPath, 'utf-8')) as Record<string, string>,
+        replacements: hasReplacements
+          ? JSON.parse(readFileSync(replacementsPath, 'utf-8')) as Record<string, string>
+          : {},
       }
     : undefined;
 

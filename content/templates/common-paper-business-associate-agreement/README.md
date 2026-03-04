@@ -23,6 +23,24 @@ A HIPAA business associate agreement based on [Common Paper's](https://commonpap
 | `fill_in_value` | string | no | General fill-in value |
 | `custom_effective_date` | string | no | Custom effective date |
 
+
+### Signature Block
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `provider_signatory_type` | enum (`entity` / `individual`) | no | Whether the Provider signatory is an entity or individual (default: `entity`) |
+| `provider_signatory_name` | string | no | Full legal name of the Provider's signatory |
+| `provider_signatory_title` | string | no | Title/role of the Provider's signatory (entity only) |
+| `provider_signatory_company` | string | no | Company name for the Provider signatory (entity only) |
+| `provider_signatory_email` | string | no | Notice email address for the Provider |
+| `company_signatory_type` | enum (`entity` / `individual`) | no | Whether the Company signatory is an entity or individual (default: `entity`) |
+| `company_signatory_name` | string | no | Full legal name of the Company's signatory |
+| `company_signatory_title` | string | no | Title/role of the Company's signatory (entity only) |
+| `company_signatory_company` | string | no | Company name for the Company signatory (entity only) |
+| `company_signatory_email` | string | no | Notice email address for the Company |
+
+> **Note:** `*_title` and `*_company` are only rendered when the corresponding `*_type` is `entity` (default). When set to `individual`, those cells are left blank even if values are provided.
+
 ## Attribution
 
 Based on the Common Paper Business Associate Agreement, available at https://commonpaper.com.

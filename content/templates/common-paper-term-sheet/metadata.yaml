@@ -22,6 +22,54 @@ fields:
     type: string
     description: Details about the topic
     section: Terms
+  - name: party_1_signatory_type
+    type: enum
+    description: Whether the first party signatory is an entity or individual
+    options:
+      - entity
+      - individual
+    default: entity
+    section: Signature Block
+  - name: party_1_signatory_name
+    type: string
+    description: Full legal name of the first party's signatory
+    section: Signature Block
+  - name: party_1_signatory_title
+    type: string
+    description: Title/role of the first party's signatory (entity only)
+    section: Signature Block
+  - name: party_1_signatory_company
+    type: string
+    description: Company name for the first party signatory (entity only)
+    section: Signature Block
+  - name: party_1_signatory_email
+    type: string
+    description: Notice email address for the first party
+    section: Signature Block
+  - name: party_2_signatory_type
+    type: enum
+    description: Whether the second party signatory is an entity or individual
+    options:
+      - entity
+      - individual
+    default: entity
+    section: Signature Block
+  - name: party_2_signatory_name
+    type: string
+    description: Full legal name of the second party's signatory
+    section: Signature Block
+  - name: party_2_signatory_title
+    type: string
+    description: Title/role of the second party's signatory (entity only)
+    section: Signature Block
+  - name: party_2_signatory_company
+    type: string
+    description: Company name for the second party signatory (entity only)
+    section: Signature Block
+  - name: party_2_signatory_email
+    type: string
+    description: Notice email address for the second party
+    section: Signature Block
 required_fields:
   - company_name
   - topic

@@ -49,6 +49,54 @@ fields:
     description: Any modifications to the Common Paper Standard Terms
     default: None.
     section: Legal
+  - name: party_1_type
+    type: enum
+    description: Whether the first party is an entity or individual
+    options:
+      - entity
+      - individual
+    default: entity
+    section: Signature Block
+  - name: party_1_name
+    type: string
+    description: Full legal name of the first party's signatory
+    section: Signature Block
+  - name: party_1_title
+    type: string
+    description: Title/role of the first party's signatory (entity only)
+    section: Signature Block
+  - name: party_1_company
+    type: string
+    description: Company name for the first party (entity only)
+    section: Signature Block
+  - name: party_1_email
+    type: string
+    description: Notice email address for the first party
+    section: Signature Block
+  - name: party_2_type
+    type: enum
+    description: Whether the second party is an entity or individual
+    options:
+      - entity
+      - individual
+    default: entity
+    section: Signature Block
+  - name: party_2_name
+    type: string
+    description: Full legal name of the second party's signatory
+    section: Signature Block
+  - name: party_2_title
+    type: string
+    description: Title/role of the second party's signatory (entity only)
+    section: Signature Block
+  - name: party_2_company
+    type: string
+    description: Company name for the second party (entity only)
+    section: Signature Block
+  - name: party_2_email
+    type: string
+    description: Notice email address for the second party
+    section: Signature Block
 required_fields:
   - purpose
   - effective_date

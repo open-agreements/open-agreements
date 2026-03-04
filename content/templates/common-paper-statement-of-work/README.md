@@ -26,6 +26,24 @@ A statement of work template for professional services engagements, based on [Co
 | `travel_expense_policy` | string | no | Travel and expense policy |
 | `customer_owned_deliverables` | string | no | Customer-owned deliverables |
 
+
+### Signature Block
+
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `provider_signatory_type` | enum (`entity` / `individual`) | no | Whether the Provider signatory is an entity or individual (default: `entity`) |
+| `provider_signatory_name` | string | no | Full legal name of the Provider's signatory |
+| `provider_signatory_title` | string | no | Title/role of the Provider's signatory (entity only) |
+| `provider_signatory_company` | string | no | Company name for the Provider signatory (entity only) |
+| `provider_signatory_email` | string | no | Notice email address for the Provider |
+| `customer_signatory_type` | enum (`entity` / `individual`) | no | Whether the Customer signatory is an entity or individual (default: `entity`) |
+| `customer_signatory_name` | string | no | Full legal name of the Customer's signatory |
+| `customer_signatory_title` | string | no | Title/role of the Customer's signatory (entity only) |
+| `customer_signatory_company` | string | no | Company name for the Customer signatory (entity only) |
+| `customer_signatory_email` | string | no | Notice email address for the Customer |
+
+> **Note:** `*_title` and `*_company` are only rendered when the corresponding `*_type` is `entity` (default). When set to `individual`, those cells are left blank even if values are provided.
+
 ## Attribution
 
 Based on the Common Paper Statement of Work, available at https://commonpaper.com.
