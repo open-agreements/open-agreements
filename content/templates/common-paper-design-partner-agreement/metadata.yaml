@@ -38,10 +38,26 @@ fields:
     type: string
     description: Open text entry for additional details
     section: Terms
-  - name: other_details
+  - name: partner_other_details
     type: string
-    description: Other details to fill in
-    section: Terms
+    description: Additional partner commitments not listed above
+    section: Program
+  - name: provider_other_details
+    type: string
+    description: Additional provider commitments not listed above
+    section: Program
+  - name: has_partner_other_details
+    type: boolean
+    description: >-
+      Set to true when additional partner commitments are specified
+      in partner_other_details.
+    section: Program
+  - name: has_provider_other_details
+    type: boolean
+    description: >-
+      Set to true when additional provider commitments are specified
+      in provider_other_details.
+    section: Program
   - name: partner_feedback_sessions
     type: boolean
     description: Partner will participate in feedback sessions

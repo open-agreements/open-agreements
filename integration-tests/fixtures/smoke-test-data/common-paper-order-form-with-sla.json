@@ -20,6 +20,7 @@
   "support_end_time": "5:00 PM",
   "support_days": "Monday through Friday",
   "support_timezone": "Eastern Time (ET)",
+  "support_request_process": "Email support@techco.com or visit www.techco.com/helpdesk to submit a ticket",
   "response_time_unit": "hours",
   "resolution_time_unit": "hours",
   "pilot_has_fee": true,

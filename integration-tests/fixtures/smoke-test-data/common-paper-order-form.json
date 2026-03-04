@@ -13,6 +13,7 @@
   "payment_frequency": "annually",
   "payment_terms_days": "30",
   "payment_due_from": "Customer's receipt of invoice",
+  "sla_terms": "Provider will use commercially reasonable efforts to maintain 99.9% uptime. If Provider fails to meet this target in two consecutive months, Customer may terminate and receive a prorated refund of prepaid Fees.",
   "technical_support": "Email and chat support during business hours, Monday through Friday, 9 AM to 5 PM ET",
   "professional_services_description": "Implementation, data migration, and user training services",
   "professional_services_reference": "See Statement of Work #1, dated March 15, 2026",

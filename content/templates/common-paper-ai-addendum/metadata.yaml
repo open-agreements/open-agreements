@@ -98,6 +98,10 @@ fields:
     type: boolean
     description: Provider AI-specific Covered Claims apply
     section: AI Liability
+  - name: customer_covered_claims_detail
+    type: string
+    description: Detail of Customer Covered Claims describing IP infringement and usage violation provisions
+    section: AI Liability
   - name: ai_customer_covered_claims
     type: boolean
     description: Customer AI-specific Covered Claims apply

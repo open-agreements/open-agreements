@@ -86,6 +86,10 @@ fields:
     type: boolean
     description: Provider will not de-identify PHI unless conditions met
     section: De-identification
+  - name: deidentification_purpose
+    type: string
+    description: Specific purpose(s) for which Provider may de-identify PHI (e.g. generating data analytics)
+    section: De-identification
   - name: deidentify_for_purpose
     type: boolean
     description: De-identification for specific purposes only

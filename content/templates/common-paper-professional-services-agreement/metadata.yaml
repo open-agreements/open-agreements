@@ -55,6 +55,22 @@ fields:
     type: string
     description: Invoice frequency unit
     section: Payment
+  - name: services_description
+    type: string
+    description: Description of the Services to be performed, including key individuals, timeline, and milestones
+    section: Terms
+  - name: provider_covered_claims_detail
+    type: string
+    description: Detail of Provider Covered Claims covering IP infringement, employee misclassification, and gross negligence
+    section: Liability
+  - name: customer_covered_claims_detail
+    type: string
+    description: Detail of Customer Covered Claims covering IP infringement and gross negligence
+    section: Liability
+  - name: dpa_description
+    type: string
+    description: Description of or reference to the Data Processing Agreement
+    section: Privacy
   - name: fill_in_value
     type: string
     description: General fill-in value

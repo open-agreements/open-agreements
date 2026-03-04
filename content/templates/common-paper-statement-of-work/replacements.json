@@ -1,3 +1,7 @@
 {
-  "[ # ]": "{fill_in_value}"
+  "[ # ]": "{fill_in_value}",
+  "[ Enter a description of the Services to be performed under this SOW. Include details such as key individuals, overall project timeline, milestones, etc. ]": "{services_description}",
+  "[ Describe fees, whether hourly, by project, by milestone, etc. Also include any pass-through or fractional charges such as for tooling or third-party license fees. ]": "{fee_description}",
+  "[ Fill in cadence of sending invoices, e.g., month, quarter, upon acceptance, after each milestone, etc. ]": "{invoice_cadence}",
+  "[ Fill in Customer's Obligations, e.g., identifying a single point of contact, geographic limitations on use of Deliverables, etc. ]": "{customer_obligations}"
 }

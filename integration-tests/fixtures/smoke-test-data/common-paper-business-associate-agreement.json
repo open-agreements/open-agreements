@@ -17,6 +17,7 @@
   "no_offshoring": true,
   "offshoring_with_conditions": true,
   "no_deidentification": true,
+  "deidentification_purpose": "generating de-identified data analytics for population health management research",
   "deidentification_with_conditions": true,
   "deidentify_for_purpose": true,
   "deidentify_additional_requirements": true,

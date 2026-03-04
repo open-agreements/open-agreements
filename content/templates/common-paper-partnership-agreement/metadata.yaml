@@ -38,6 +38,18 @@ fields:
     type: string
     description: General fill-in value for customizable sections
     section: Terms
+  - name: invoice_address
+    type: string
+    description: Address or email where invoices and bills for fees should be sent
+    section: Payment
+  - name: company_covered_claims_detail
+    type: string
+    description: Detail of Company Covered Claims covering gross negligence and IP representations
+    section: Liability
+  - name: partner_covered_claims_detail
+    type: string
+    description: Detail of Partner Covered Claims covering gross negligence and IP representations
+    section: Liability
   - name: fill_in_detail
     type: string
     description: Additional detail for customizable sections
@@ -61,6 +73,10 @@ fields:
   - name: dpa_reference
     type: string
     description: Reference to or location of Data Processing Agreement
+    section: Privacy
+  - name: dpa_description
+    type: string
+    description: Description of the Data Processing Agreement, or where to find it
     section: Privacy
   - name: company_promotional_activities
     type: boolean

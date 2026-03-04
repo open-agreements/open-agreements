@@ -21,6 +21,7 @@
   "improvements_for_customer_only": true,
   "output_restrictions_additional": true,
   "ai_provider_covered_claims": true,
+  "customer_covered_claims_detail": "that (1) the Input, when used by Provider according to the terms of the Agreement and the AI Addendum, violates or infringes upon intellectual property rights of third parties; or (2) results from Customer's use of the AI Services in violation of applicable restrictions",
   "ai_customer_covered_claims": true,
   "provider_signatory_type": "entity",
   "provider_signatory_name": "Jane Provider",

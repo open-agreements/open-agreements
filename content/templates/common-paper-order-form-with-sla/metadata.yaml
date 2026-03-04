@@ -94,6 +94,10 @@ fields:
     type: string
     description: Timezone for support hours
     section: Service
+  - name: support_request_process
+    type: string
+    description: How customers request support or file incident tickets (e.g. email address, helpdesk URL)
+    section: Service
   - name: response_time_unit
     type: string
     description: Unit for response time targets (e.g. "minutes", "hours", "days")

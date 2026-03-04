@@ -46,6 +46,22 @@ fields:
     type: string
     description: Payment terms (e.g. "30 days from Customer's receipt of invoice")
     section: Payment
+  - name: services_description
+    type: string
+    description: Description of the Services to be performed, including key individuals, timeline, and milestones
+    section: Terms
+  - name: fee_description
+    type: string
+    description: Description of fees including hourly, project, or milestone-based rates and pass-through charges
+    section: Payment
+  - name: invoice_cadence
+    type: string
+    description: Cadence for sending invoices (e.g. monthly, quarterly, upon acceptance, after each milestone)
+    section: Payment
+  - name: customer_obligations
+    type: string
+    description: Customer obligations such as identifying a point of contact or geographic limitations
+    section: Terms
   - name: fill_in_value
     type: string
     description: General fill-in value for customizable sections

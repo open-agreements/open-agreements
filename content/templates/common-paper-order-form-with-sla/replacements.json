@@ -1,5 +1,7 @@
 {
   "[ # ]": "{payment_terms_days}",
+  "[__]": "{fill_in_value}",
   "[Describe Use Limitations, such as geographic restrictions, system requirements, etc.]": "{fill_in_value}",
-  "[describe how services fees will be billed, for example \"Invoices for these services will be sent monthly.\"]": "{fill_in_value}"
+  "[describe how services fees will be billed, for example \"Invoices for these services will be sent monthly.\"]": "{fill_in_value}",
+  "[ fill in how customers request support or file an incident ticket, e.g., email support@companyname.com or visit www.companyname.com/helpdesk to submit a ticket ]": "{support_request_process}"
 }

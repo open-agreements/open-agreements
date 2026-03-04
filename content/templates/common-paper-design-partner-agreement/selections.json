@@ -9,8 +9,10 @@
         { "marker": "Appear as a customer in private customer lists", "trigger": { "field": "partner_private_list" } },
         { "marker": "Appear as a customer on Provider\u2019s website", "trigger": { "field": "partner_public_list" } },
         { "marker": "Serve as a reference", "trigger": { "field": "partner_reference" } },
+        { "marker": "{partner_other_details}", "trigger": { "field": "has_partner_other_details" } },
         { "marker": "Give a {discount_amount} discount", "trigger": { "field": "provider_discount" } },
-        { "marker": "Develop the following Product functionality", "trigger": { "field": "provider_develop_functionality" } }
+        { "marker": "Develop the following Product functionality", "trigger": { "field": "provider_develop_functionality" } },
+        { "marker": "{provider_other_details}", "trigger": { "field": "has_provider_other_details" } }
       ]
     },
     {

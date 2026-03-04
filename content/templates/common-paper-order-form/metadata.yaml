@@ -66,6 +66,10 @@ fields:
     type: string
     description: When payment terms start (e.g. "Customer's receipt of invoice")
     section: Payment
+  - name: sla_terms
+    type: string
+    description: Service level terms describing uptime commitments, remedies for SLA breaches, and refund policies
+    section: Service
   - name: technical_support
     type: string
     description: Description of included support
