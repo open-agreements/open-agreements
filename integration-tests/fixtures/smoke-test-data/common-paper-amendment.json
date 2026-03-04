@@ -1,0 +1,20 @@
+{
+  "company_name": "Acme Corporation",
+  "party_1": "TechCo Inc.",
+  "party_2": "BuyCo LLC",
+  "agreement_name": "Cloud Service Agreement",
+  "agreement_date": "January 15, 2026",
+  "amendment_effective_date": "March 1, 2026",
+  "amendment_topic": "Subscription Fees and Payment Terms",
+  "amendment_details": "Section 4.1 is hereby amended to increase the annual subscription fee from $10,000 to $15,000, effective upon renewal. Payment terms are extended from 30 to 45 days.",
+  "party_1_signatory_type": "entity",
+  "party_1_signatory_name": "Jane Provider",
+  "party_1_signatory_title": "Chief Executive Officer",
+  "party_1_signatory_company": "TechCo Inc.",
+  "party_1_signatory_email": "legal@techco.com",
+  "party_2_signatory_type": "entity",
+  "party_2_signatory_name": "John Customer",
+  "party_2_signatory_title": "Chief Executive Officer",
+  "party_2_signatory_company": "BuyCo LLC",
+  "party_2_signatory_email": "legal@buyco.com"
+}

@@ -1,0 +1,20 @@
+{
+  "company_name_and_address": "Acme Corporation, 100 Innovation Drive, Wilmington, DE 19801",
+  "contractor_name_and_address": "DevWorks Consulting LLC, 200 Contractor Lane, San Francisco, CA 94105",
+  "services_description": "Software development and integration services for the AcmeSign Pro platform",
+  "rates_and_fees": "$200 per hour, not to exceed $50,000 total or 250 hours",
+  "payment_terms": "Contractor will submit invoices bi-weekly; payment due within 30 days of receipt",
+  "timeline": "Starting March 1, 2026 through August 31, 2026, with milestone reviews at 30, 60, and 90 days",
+  "governing_law": "Delaware",
+  "jurisdiction": "courts located in New Castle County, Delaware",
+  "company_signatory_type": "entity",
+  "company_signatory_name": "Jane Provider",
+  "company_signatory_title": "Chief Executive Officer",
+  "company_signatory_company": "Acme Corporation",
+  "company_signatory_email": "legal@techco.com",
+  "contractor_signatory_type": "entity",
+  "contractor_signatory_name": "John Customer",
+  "contractor_signatory_title": "Chief Executive Officer",
+  "contractor_signatory_company": "DevWorks Consulting LLC",
+  "contractor_signatory_email": "legal@buyco.com"
+}

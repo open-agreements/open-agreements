@@ -1,0 +1,15 @@
+{
+  "discloser_name_and_address": "TechCo Inc., 100 Innovation Drive, Wilmington, DE 19801",
+  "effective_date": "March 1, 2026",
+  "purpose": "Evaluating whether to enter into a business relationship with the other party.",
+  "nda_term": "1 year(s)",
+  "confidentiality_term_start": "Effective Date",
+  "governing_law": "Delaware",
+  "jurisdiction": "courts located in New Castle County, Delaware",
+  "changes_to_standard_terms": "None.",
+  "recipient_signatory_type": "entity",
+  "recipient_signatory_name": "John Customer",
+  "recipient_signatory_title": "Chief Executive Officer",
+  "recipient_signatory_company": "BuyCo LLC",
+  "recipient_signatory_email": "legal@buyco.com"
+}

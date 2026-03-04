@@ -1,0 +1,20 @@
+{
+  "purpose": "Evaluating whether to enter into a business relationship with the other party",
+  "effective_date": "March 1, 2026",
+  "mnda_term": "1 year(s)",
+  "confidentiality_term": "1 year(s)",
+  "confidentiality_term_start": "Effective Date",
+  "governing_law": "Delaware",
+  "jurisdiction": "courts located in New Castle County, Delaware",
+  "changes_to_standard_terms": "None.",
+  "party_1_type": "entity",
+  "party_1_name": "Jane Provider",
+  "party_1_title": "Chief Executive Officer",
+  "party_1_company": "TechCo Inc.",
+  "party_1_email": "legal@techco.com",
+  "party_2_type": "entity",
+  "party_2_name": "John Customer",
+  "party_2_title": "Chief Executive Officer",
+  "party_2_company": "BuyCo LLC",
+  "party_2_email": "legal@buyco.com"
+}
