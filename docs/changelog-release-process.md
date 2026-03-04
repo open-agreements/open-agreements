@@ -1,6 +1,6 @@
 ---
 title: Changelog & Release Process
-description: How release notes are generated and published to the public changelog.
+description: How release notes are generated and published to the public changelog
 section: Reference
 ---
 
