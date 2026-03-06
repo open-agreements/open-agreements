@@ -67,7 +67,7 @@ __________________
 
 6. **Professional but direct.** Not stiff. Slightly conversational — "here's," "your call," "happy to" are fine. Avoid legalese in the email body; save technical precision for the document itself.
 
-7. **No title block by default.** Sign off with just your name. Add a title block manually for first-contact situations where the recipient doesn't know you yet.
+7. **Avoid contrastive juxtaposition.** Do not use the pattern "X isn't Y — it's Z." It is a hallmark of AI-generated writing and reads as performative rather than natural. Restructure to state the positive directly.
 
 ## Client relationship principles
 
