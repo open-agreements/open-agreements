@@ -216,11 +216,24 @@ async function fetchGithubReleases({ repo, maxReleases, includePrereleases }) {
     throw new Error("GitHub Releases API response was not an array");
   }
 
-  return payload
+  const normalized = payload
     .filter((release) => release && !release.draft)
     .filter((release) => includePrereleases || !release.prerelease)
     .slice(0, maxReleases)
     .map((release) => normalizeGithubRelease(release, repo));
+
+  // Sort semver descending so ordering is deterministic regardless of GitHub API order
+  // or when a release object was retroactively created for an existing tag.
+  normalized.sort((a, b) => {
+    const parts = (t) => (t ?? "").replace(/^v/i, "").split(".").map(Number);
+    const [aV, bV] = [parts(a.tag), parts(b.tag)];
+    for (let i = 0; i < 3; i++) {
+      if ((bV[i] ?? 0) !== (aV[i] ?? 0)) return (bV[i] ?? 0) - (aV[i] ?? 0);
+    }
+    return 0;
+  });
+
+  return normalized;
 }
 
 async function main() {

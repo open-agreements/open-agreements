@@ -208,7 +208,8 @@ jobs:
 
   publish-github-release:
     name: Publish GitHub release notes
-    needs: [publish-suite]
+    needs: [preflight, publish-suite]
+    if: always() && needs.preflight.result == 'success'
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -221,7 +222,8 @@ jobs:
           fetch-depth: 0
           ref: ${{ github.event_name == 'workflow_dispatch' && inputs.release_tag || github.ref }}
 
-      - name: Ensure GitHub release exists with generated notes
+      - name: Create GitHub release (only if publish succeeded)
+        if: needs.publish-suite.result == 'success'
         id: release
         run: |
           TAG_REF="${RELEASE_TAG:-$GITHUB_REF_NAME}"
@@ -235,14 +237,23 @@ jobs:
           fi
 
       - name: Publish release summary
+        if: always()
         run: |
           TAG_REF="${RELEASE_TAG:-$GITHUB_REF_NAME}"
-          RELEASE_URL="$(gh release view "$TAG_REF" --json url --jq '.url')"
+          PUBLISH_RESULT="${{ needs.publish-suite.result }}"
           {
-            echo "### GitHub Release"
-            echo ""
-            echo "- Tag: ${TAG_REF}"
-            echo "- Created in this run: ${{ steps.release.outputs.created }}"
-            echo "- Release URL: ${RELEASE_URL}"
+            echo "### GitHub Release: ${TAG_REF}"
+            if [ "$PUBLISH_RESULT" = "success" ]; then
+              RELEASE_URL="$(gh release view "$TAG_REF" --json url --jq '.url' 2>/dev/null || echo 'n/a')"
+              echo "- npm publish: SUCCESS"
+              echo "- Release created: ${{ steps.release.outputs.created || 'already existed' }}"
+              echo "- Release URL: ${RELEASE_URL}"
+            else
+              echo "- npm publish: FAILED — GitHub Release was NOT created"
+              echo "- To recover once the tag is corrected, run:"
+              echo '  ```'
+              echo "  gh release create ${TAG_REF} --title ${TAG_REF} --generate-notes --verify-tag --latest=false"
+              echo '  ```'
+            fi
           } >> "$GITHUB_STEP_SUMMARY"
 
