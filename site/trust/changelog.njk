@@ -4,6 +4,61 @@ title: Changelog | OpenAgreements
 description: Public release history with auto-generated notes from GitHub releases.
 ---
 
+<style>
+.cl-warning {
+  background: var(--accent-soft);
+  border-left: 3px solid var(--accent-deep);
+  padding: 10px 14px;
+  margin: 0 0 16px;
+  font-size: 0.88rem;
+  color: var(--ink);
+}
+.cl-group {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 4px 12px;
+  align-items: start;
+  margin: 5px 0;
+}
+.cl-type-label {
+  color: var(--ink-soft);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding-top: 3px;
+  white-space: nowrap;
+}
+.cl-entries {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.cl-entries li {
+  margin: 2px 0;
+  font-size: 0.9rem;
+  padding-left: 14px;
+  position: relative;
+}
+.cl-entries li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--ink-soft);
+}
+.cl-scope {
+  color: var(--ink-soft);
+  font-size: 0.84rem;
+}
+.cl-scope::before { content: "("; }
+.cl-scope::after  { content: ")"; }
+.cl-pr {
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+  font-family: monospace;
+}
+</style>
+
 <main class="main-wrap">
   <section class="section" style="padding: clamp(32px, 5vw, 56px) clamp(16px, 4vw, 48px);">
     <h1>Changelog</h1>
@@ -50,7 +105,7 @@ description: Public release history with auto-generated notes from GitHub releas
             <details{% if loop.index0 == 0 %} open{% endif %}>
               <summary style="cursor: pointer; color: var(--ink); font-weight: 600;">Release notes</summary>
               <div class="release-notes" style="margin: 12px 0 0; font-size: 0.9rem; line-height: 1.55;">
-                {{ release.notes | renderMarkdown | safe }}
+                {{ release.notes | formatReleaseNotes | safe }}
               </div>
             </details>
           {% else %}
