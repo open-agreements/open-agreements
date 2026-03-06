@@ -34,6 +34,7 @@ function normalizeScenarioName(value) {
 
 function mdEscapeTableCell(value) {
   return String(value)
+    .replace(/\\/g, '\\\\')
     .replace(/\|/g, '\\|')
     .replace(/\r?\n/g, ' ')
     .trim();
