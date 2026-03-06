@@ -1,4 +1,4 @@
-import { execSync } from "node:child_process";
+import { execFileSync } from "node:child_process";
 import { resolve, dirname } from "node:path";
 import { copyFileSync, mkdirSync, existsSync, statSync, readdirSync } from "node:fs";
 import { fileURLToPath } from "node:url";
@@ -154,7 +154,7 @@ function copyDownloads(templates) {
 
 export default function () {
   const bin = resolve(root, "bin/open-agreements.js");
-  const raw = execSync(`node ${bin} list --json`, {
+  const raw = execFileSync("node", [bin, "list", "--json"], {
     cwd: root,
     encoding: "utf-8",
     timeout: 30000,

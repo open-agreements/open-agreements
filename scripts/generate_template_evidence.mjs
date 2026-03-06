@@ -19,7 +19,7 @@
  *   node scripts/generate_template_evidence.mjs
  */
 
-import { execSync } from "node:child_process";
+import { execFileSync } from "node:child_process";
 import {
   readFileSync,
   writeFileSync,
@@ -131,7 +131,7 @@ function collectValidatedTemplateIds() {
 function main() {
   // Get template catalog
   const bin = resolve(REPO_ROOT, "bin/open-agreements.js");
-  const raw = execSync(`node ${bin} list --json`, {
+  const raw = execFileSync("node", [bin, "list", "--json"], {
     cwd: REPO_ROOT,
     encoding: "utf-8",
     timeout: 30000,
