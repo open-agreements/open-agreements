@@ -2,10 +2,22 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
   "installCommand": "npm ci --include=dev",
-  "buildCommand": "npm run build:site:vercel",
+  "buildCommand": "REDIRECT_MODE=1 npm run build:site:vercel",
   "outputDirectory": "_site",
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/", "destination": "https://usejunior.com/developer-tools/open-agreements", "permanent": true },
+    { "source": "/templates", "destination": "https://usejunior.com/developer-tools/open-agreements/templates", "permanent": true },
+    { "source": "/templates/:name", "destination": "https://usejunior.com/developer-tools/open-agreements/templates/:name", "permanent": true },
+    { "source": "/docs", "destination": "https://usejunior.com/developer-tools/open-agreements", "permanent": true },
+    { "source": "/docs/:slug", "destination": "https://usejunior.com/developer-tools/open-agreements", "permanent": true },
+    { "source": "/trust", "destination": "https://usejunior.com/developer-tools/open-agreements", "permanent": true },
+    { "source": "/trust/system-card", "destination": "https://usejunior.com/developer-tools/open-agreements", "permanent": true },
+    { "source": "/trust/template-evidence", "destination": "https://usejunior.com/developer-tools/open-agreements", "permanent": true },
+    { "source": "/trust/evidence-story", "destination": "https://usejunior.com/developer-tools/open-agreements", "permanent": true },
+    { "source": "/trust/changelog", "destination": "https://usejunior.com/developer-tools/open-agreements", "permanent": true }
+  ],
   "functions": {
     "api/a2a.ts": {
       "maxDuration": 30,
