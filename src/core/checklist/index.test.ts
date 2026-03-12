@@ -75,9 +75,9 @@ describe('checklist render model traceability', () => {
       expect(signingIndex).toBeGreaterThan(preSigningIndex);
       expect(closingIndex).toBeGreaterThan(signingIndex);
 
-      const parentRow = context.documents.find((row) => row.number === '1' && row.title.includes('Parent signing package'));
-      const childRow = context.documents.find((row) => row.number === '1.1');
-      const insertedRow = context.documents.find((row) => row.number === '2' && row.title.includes('Inserted mid-stream item'));
+      const parentRow = context.documents.find((row) => row.entry_id === 'entry-parent' && row.title.includes('Parent signing package'));
+      const childRow = context.documents.find((row) => row.entry_id === 'entry-child');
+      const insertedRow = context.documents.find((row) => row.entry_id === 'entry-inserted' && row.title.includes('Inserted mid-stream item'));
       expect(parentRow).toBeTruthy();
       expect(childRow).toBeTruthy();
       expect(childRow!.title).toContain('Nested child signature dependency');

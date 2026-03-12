@@ -425,9 +425,11 @@ describe('checklist patch workflow (integration)', () => {
     const html = docxToHtml(afterDocx);
     await allureJsonAttachment('multi-operation-rendered-html-evidence.json', { html });
 
-    await allureStep('Then rendered DOCX includes evidence text and filepath', async () => {
-      expect(html).toContain('Opposing counsel replied');
-      expect(html).toContain('escrow-thread.eml');
+    await allureStep('Then rendered DOCX includes the closed issue and updated signatories', async () => {
+      // Linked issue sub-row shows closed status with checkbox
+      expect(html).toContain('[x] Issue issue-escrow');
+      // Signatory sub-row shows RECEIVED status with checkbox
+      expect(html).toContain('[x] Signatory: Buyer');
     });
   });
 });

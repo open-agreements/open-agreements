@@ -3,7 +3,7 @@
  *
  * Provides multiple comparison approaches:
  * - Baseline A: WmlComparer wrapper (Docxodus WASM or dotnet CLI)
- * - Baseline B: Pure TypeScript (diff-match-patch + OOXML renderer) - paragraph level
+ * - Baseline B: Pure TypeScript (diff-match-patch + OOXML renderer) - paragraph level (dev-only)
  * - Atomizer: Pure TypeScript with atom-level comparison, move detection, format detection
  */
 export interface CompareOptions {
@@ -20,7 +20,7 @@ export interface CompareOptions {
      * Atomizer-only normalization: merge adjacent <w:r> siblings with identical formatting
      * prior to comparison. This can reduce overly-granular diffs for heavily-fragmented docs.
      *
-     * Default: false.
+     * Default: true.
      */
     premergeRuns?: boolean;
     /**
@@ -34,13 +34,12 @@ export interface CompareOptions {
     /**
      * Comparison engine to use:
      * - 'atomizer': Character-level comparison with move detection (recommended)
-     * - 'diffmatch': Paragraph-level comparison (faster, less precise)
      * - 'wmlcomparer': .NET WmlComparer (requires external runtime)
      * - 'auto': Automatically select best available engine (currently 'atomizer')
      *
      * Default: 'auto'
      */
-    engine?: 'wmlcomparer' | 'diffmatch' | 'atomizer' | 'auto';
+    engine?: 'wmlcomparer' | 'atomizer' | 'auto';
 }
 export interface CompareStats {
     insertions: number;
@@ -49,12 +48,13 @@ export interface CompareStats {
 }
 export type ReconstructionMode = 'rebuild' | 'inplace';
 export type ReconstructionFallbackReason = 'round_trip_safety_check_failed';
-export type ReconstructionSafetyCheckName = 'acceptText' | 'rejectText' | 'acceptBookmarks' | 'rejectBookmarks';
+export type ReconstructionSafetyCheckName = 'acceptText' | 'rejectText' | 'acceptBookmarks' | 'rejectBookmarks' | 'fieldStructure';
 export interface ReconstructionSafetyChecks {
     acceptText: boolean;
     rejectText: boolean;
     acceptBookmarks: boolean;
     rejectBookmarks: boolean;
+    fieldStructure: boolean;
 }
 export interface ReconstructionTextMismatchDetails {
     expectedLength: number;
@@ -121,7 +121,7 @@ export interface ReconstructionSafetyFailureSummary {
     rejectBookmarks?: ReconstructionBookmarkMismatchSummary;
 }
 export interface ReconstructionAttemptDiagnostics {
-    pass: 'inplace_word_split' | 'inplace_run_level';
+    pass: 'inplace_word_split' | 'inplace_run_level' | 'inplace_word_split_cross_run' | 'inplace_run_level_cross_run';
     checks: ReconstructionSafetyChecks;
     failedChecks: ReconstructionSafetyCheckName[];
     failureDetails?: ReconstructionSafetyFailureDetails;
@@ -136,7 +136,7 @@ export interface CompareResult {
     /** Statistics about the comparison */
     stats: CompareStats;
     /** Which engine was used */
-    engine: 'wmlcomparer' | 'diffmatch' | 'atomizer';
+    engine: 'wmlcomparer' | 'atomizer';
     /**
      * Requested reconstruction mode. Present for atomizer outputs.
      */

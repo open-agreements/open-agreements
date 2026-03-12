@@ -3,8 +3,8 @@ import { getParagraphText, getParagraphRuns } from './text.js';
 import { extractListLabel, stripListLabel, LabelType } from './list_labels.js';
 import { parseNumberingXml, computeListLabelForParagraph } from './numbering.js';
 import { parseStylesXml, extractParagraphFormatting, extractEffectiveRunFormatting } from './styles.js';
-import { emitDefinitionTagsFromString, detectDefinitionSpans, HIGHLIGHT_TAG } from './semantic_tags.js';
-import { computeModalBaseline, emitFormattingTags, mergeAdjacentTags } from './formatting_tags.js';
+import { HIGHLIGHT_TAG } from './semantic_tags.js';
+import { computeModalBaseline, computeParagraphFontBaseline, emitFormattingTags, mergeAdjacentTags } from './formatting_tags.js';
 import { isReservedFootnote } from './footnotes.js';
 const SHORT_HEADER_MAX_LENGTH = 50;
 const MAX_HEADER_TEXT_LENGTH = 60;
@@ -49,6 +49,19 @@ function emitHighlightTagsFromParagraph(p) {
 function fingerprintKey(fp) {
     // Stable JSON-ish key used for Map lookups.
     return `${fp.list_level}|${fp.left_indent_pt.toFixed(1)}|${fp.first_line_indent_pt.toFixed(1)}|${fp.style_name}|${fp.alignment}`;
+}
+/**
+ * v0.3: Compact style fingerprint token.
+ * Concatenates style name, list level, alignment, and indentation for token-efficient LLM context.
+ * Example: "Normal:L-1:LEFT:I0:H0"
+ */
+function computeFingerprintToken(fp, styleId) {
+    const name = styleId || fp.style_name || 'body';
+    const level = `L${fp.list_level}`;
+    const align = fp.alignment;
+    const indent = `I${Math.round(fp.left_indent_pt)}`;
+    const hanging = `H${Math.round(fp.first_line_indent_pt)}`;
+    return `${name}:${level}:${align}:${indent}:${hanging}`;
 }
 // Pattern-based header detection fallback (ported from Python ingestor._extract_header_info).
 const HEADER_PATTERN = /^([A-Z][^.!?:]*(?:\s+[A-Z][^.!?:]*)*)([.:]?)(?:\s|$)/;
@@ -229,7 +242,7 @@ function headerStripFromText(params) {
     }
     return text;
 }
-export function renderToon(nodes) {
+export function renderToon(nodes, options = {}) {
     const lines = ['#SCHEMA id | list_label | header | style | text'];
     for (const n of nodes) {
         let text = n.tagged_text;
@@ -240,7 +253,8 @@ export function renderToon(nodes) {
             text = header;
             header = '';
         }
-        lines.push(`${n.id} | ${n.list_label} | ${header} | ${n.style} | ${text}`);
+        const style = options.compact ? computeFingerprintToken(n.style_fingerprint, n.style) : n.style;
+        lines.push(`${n.id} | ${n.list_label} | ${header} | ${style} | ${text}`);
     }
     return lines.join('\n');
 }
@@ -449,6 +463,7 @@ export function buildNodesForDocumentView(params) {
     const { paragraphs, stylesXml, numberingXml, relsMap } = params;
     const includeSemantic = params.include_semantic_tags ?? true;
     const showFormatting = params.show_formatting ?? false;
+    const formattingMode = params.formatting_mode ?? 'compact';
     // Build footnote display number map if documentXml is provided
     const footnoteDisplayMap = params.documentXml
         ? buildFootnoteDisplayMap(params.documentXml, params.footnotesXml ?? null)
@@ -506,7 +521,7 @@ export function buildNodesForDocumentView(params) {
         }
     }
     const docBaseline = showFormatting
-        ? computeModalBaseline(allBodyRuns)
+        ? computeModalBaseline(allBodyRuns, { formattingMode })
         : { bold: false, italic: false, underline: false, suppressed: false };
     // ── Pass 2: main loop ──
     const nodes = [];
@@ -638,18 +653,13 @@ export function buildNodesForDocumentView(params) {
                 bodyRuns = annotatedRuns;
             }
             // Emit formatting tags from run-level metadata.
-            // Detect definition spans from the exact body run text used for emission so
-            // span offsets stay aligned after list-label stripping/slicing.
-            const bodyPlainText = bodyRuns.map((r) => r.text).join('');
-            const defSpans = includeSemantic ? detectDefinitionSpans(bodyPlainText) : undefined;
-            tagged = emitFormattingTags({ runs: bodyRuns, baseline: docBaseline, definitionSpans: defSpans });
+            const paraFontBaseline = computeParagraphFontBaseline(bodyRuns, { formattingMode });
+            tagged = emitFormattingTags({ runs: bodyRuns, baseline: docBaseline, fontBaseline: paraFontBaseline });
             tagged = mergeAdjacentTags(tagged);
         }
         else if (includeSemantic) {
-            // Legacy path: emit only highlight + definition tags (no formatting tags).
-            const highlightTagged = emitHighlightTagsFromParagraph(p).replace(/\r/g, '').replace(/\n/g, '').trim();
-            const semanticBase = cleanTextNoLabel === fullText ? highlightTagged : cleanTextNoLabel;
-            tagged = emitDefinitionTagsFromString(semanticBase);
+            // Legacy path: emit only highlight tags (no formatting tags).
+            tagged = emitHighlightTagsFromParagraph(p).replace(/\r/g, '').replace(/\n/g, '').trim();
         }
         const fp = {
             list_level: listLevel,
@@ -667,13 +677,30 @@ export function buildNodesForDocumentView(params) {
                 if (seenRun.has(tr.r))
                     continue;
                 seenRun.add(tr.r);
-                const fmt = extractEffectiveRunFormatting({ run: tr.r, paragraphPPr: paraPPr ?? null, paragraphStyleId: paraFmt.styleId, styles: stylesModel });
-                // Skip header-style runs (bold/underline) at the very beginning; we want body.
-                const isHeaderStyle = fmt.bold || fmt.underline;
-                if (isHeaderStyle && (headerText || '').length > 0)
-                    continue;
+                const fmt = extractEffectiveRunFormatting({
+                    run: tr.r,
+                    paragraphPPr: paraPPr ?? null,
+                    paragraphStyleId: paraFmt.styleId,
+                    styles: stylesModel,
+                });
+                // v0.3: Improved body detection. 
+                // If there is a header, we want the first run that IS NOT the header.
+                if (headerText && (headerText.length > 0)) {
+                    if (tr.text.trim() === headerText.trim() || headerText.includes(tr.text)) {
+                        continue;
+                    }
+                }
                 bodyFmt = fmt;
                 break;
+            }
+            // Fallback: if no body runs found, use paragraph-level properties
+            if (!bodyFmt) {
+                bodyFmt = extractEffectiveRunFormatting({
+                    run: p,
+                    paragraphPPr: paraPPr ?? null,
+                    paragraphStyleId: paraFmt.styleId,
+                    styles: stylesModel,
+                });
             }
         }
         catch {

@@ -27,6 +27,9 @@ const SAFE_RUN_CHILD_TAGS = new Set([
     'w:cr',
     // Deleted text can appear if input already has revisions.
     'w:delText',
+    // Rendering hint — records where the last page break was rendered.
+    // No semantic significance; safe to keep in a merged run.
+    'w:lastRenderedPageBreak',
 ]);
 function sha1(content) {
     return createHash('sha1').update(content, 'utf8').digest('hex');

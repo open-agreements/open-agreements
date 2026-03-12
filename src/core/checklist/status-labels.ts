@@ -30,3 +30,15 @@ export const STATUS_LABELS: Record<string, string> = {
 export function humanStatus(status: string): string {
   return STATUS_LABELS[status] ?? status;
 }
+
+export const REVERSE_STATUS_LABELS: Record<string, string> = Object.fromEntries(
+  Object.entries(STATUS_LABELS).map(([key, value]) => [value, key]),
+);
+
+/**
+ * Convert a human-readable status label back to its enum key.
+ * Returns null if the label is not recognized.
+ */
+export function reverseHumanStatus(label: string): string | null {
+  return REVERSE_STATUS_LABELS[label.trim()] ?? null;
+}

@@ -64,7 +64,7 @@ export {
   type ChecklistPatchApplyResult,
   type ApplyChecklistPatchInput,
 } from './patch-apply.js';
-export { humanStatus, STATUS_LABELS } from './status-labels.js';
+export { humanStatus, STATUS_LABELS, reverseHumanStatus, REVERSE_STATUS_LABELS } from './status-labels.js';
 export {
   createChecklist,
   listChecklists,
@@ -81,6 +81,31 @@ export {
 } from './state-manager.js';
 export { appendJsonl, readJsonl } from './jsonl-stores.js';
 export { formatChecklistDocx } from './format-checklist-docx.js';
+export {
+  importChecklistFromDocx,
+  type DocxImportOptions,
+  type DocxImportWarning,
+  type DocxImportWarningCode,
+  type DocxImportSummary,
+  type DocxImportResult,
+  type DocxImportFailure,
+  type DocxImportErrorCode,
+  type DocxImportOutcome,
+} from './docx-import.js';
+export {
+  classifyRow,
+  getDirectChildRows,
+  getDirectChildCells,
+  getCellText,
+  findTableByHeaders,
+  isControlRow,
+  extractRenderVersion,
+  DOCUMENTS_HEADERS,
+  ACTION_ITEMS_HEADERS,
+  ISSUES_HEADERS,
+  RENDER_VERSION_MARKER,
+  type RowType,
+} from './docx-table-helpers.js';
 
 const STAGE_ORDER: ChecklistStage[] = ['PRE_SIGNING', 'SIGNING', 'CLOSING', 'POST_CLOSING'];
 const STAGE_HEADINGS: Record<ChecklistStage, string> = {
@@ -108,17 +133,18 @@ interface RenderModel {
 }
 
 // ---------------------------------------------------------------------------
-// 4-column document row: Number | Title | Status | Responsible Party
+// 5-column document row: ID | Title | Link | Status | Responsible
 // ---------------------------------------------------------------------------
 
-interface TemplateDocumentRow {
-  number: string;
+export interface TemplateDocumentRow {
+  entry_id: string;
   title: string;
+  link: string;
   status: string;
-  responsible_party: string;
+  responsible: string;
 }
 
-interface TemplateActionRow {
+export interface TemplateActionRow {
   item_id: string;
   description: string;
   status: string;
@@ -126,11 +152,16 @@ interface TemplateActionRow {
   due_date: string;
 }
 
-interface TemplateIssueRow {
+// ---------------------------------------------------------------------------
+// 5-column issue row: ID | Title | Status | Summary | Citation
+// ---------------------------------------------------------------------------
+
+export interface TemplateIssueRow {
   issue_id: string;
   title: string;
   status: string;
   summary: string;
+  citation: string;
 }
 
 export interface ChecklistTemplateContext {
@@ -165,6 +196,18 @@ function responsibilityLabel(responsibility?: Responsibility): string {
     responsibility.organization ?? '',
     responsibility.role ?? '',
   ]).join(', ');
+}
+
+/**
+ * Merged responsible column: "Entity (Individual)" format.
+ * Role is preserved in canonical data but NOT rendered in DOCX.
+ */
+function responsibleMergedColumn(r?: Responsibility): string {
+  if (!r) return '';
+  const org = r.organization ?? '';
+  const individual = r.individual_name ?? '';
+  if (org && individual) return `${org} (${individual})`;
+  return org || individual;
 }
 
 function citationLabel(citation: Citation): string {
@@ -318,15 +361,14 @@ function buildRenderModel(data: unknown): RenderModel {
 }
 
 /**
- * Build template values for the closing-checklist DOCX template from
- * document-first v2 checklist input.
+ * Build template values for the closing-checklist DOCX template.
  *
- * Layout:
+ * Layout (5-column):
  *   - Stage headers as bold section rows
- *   - Entry rows: Number | Title | Status | Responsible Party
+ *   - Entry rows: ID | Title | Link | Status | Responsible
  *   - Citations as indented sub-rows under their entry
- *   - Signatories as indented sub-rows
- *   - Linked actions/issues as indented sub-rows
+ *   - Signatories as bracket-checkbox sub-rows
+ *   - Linked actions/issues as bracket-checkbox sub-rows
  */
 export function buildChecklistTemplateContext(data: unknown): ChecklistTemplateContext {
   const model = buildRenderModel(data);
@@ -338,66 +380,69 @@ export function buildChecklistTemplateContext(data: unknown): ChecklistTemplateC
 
     // Stage heading row
     documentRows.push({
-      number: '',
+      entry_id: '',
       title: `${STAGE_ROMANS[index]}. ${STAGE_HEADINGS[stage]}`,
+      link: '',
       status: '',
-      responsible_party: '',
+      responsible: '',
     });
 
     for (const row of stageRows) {
       const indent = '\u00A0\u00A0'.repeat(row.depth);
-      const linkSuffix = row.document?.primary_link ? ` (${row.document.primary_link})` : '';
 
-      // Main entry row
+      // Main entry row (lossless: title is clean, link is separate column)
       documentRows.push({
-        number: row.number,
-        title: `${indent}${row.entry.title}${linkSuffix}`,
+        entry_id: row.entry.entry_id,
+        title: `${indent}${row.entry.title}`,
+        link: row.document?.primary_link ?? '',
         status: humanStatus(row.entry.status),
-        responsible_party: responsibilityLabel(row.entry.responsible_party),
+        responsible: responsibleMergedColumn(row.entry.responsible_party),
       });
 
       // Citation sub-rows
       for (const citation of row.entry.citations) {
         documentRows.push({
-          number: '',
+          entry_id: '',
           title: `${indent}\u00A0\u00A0Ref: ${citationLabel(citation)}`,
+          link: '',
           status: '',
-          responsible_party: '',
+          responsible: '',
         });
       }
 
       // Signatory sub-rows
       for (const signatory of row.entry.signatories) {
-        const sigCheckbox = signatory.status === 'RECEIVED' ? '\u2611' : '\u2610';
+        const sigCheckbox = signatory.status === 'RECEIVED' ? '[x]' : '[ ]';
         documentRows.push({
-          number: '',
+          entry_id: '',
           title: `${indent}\u00A0\u00A0${sigCheckbox} Signatory: ${signatoryLabel(signatory)}`,
+          link: '',
           status: '',
-          responsible_party: '',
+          responsible: '',
         });
       }
 
       // Linked action sub-rows
       for (const action of row.linkedActions) {
-        const actCheckbox = action.status === 'COMPLETED' ? '\u2611' : '\u2610';
-        const latestCitation = latestCitationLabel(action.citations);
+        const actCheckbox = action.status === 'COMPLETED' ? '[x]' : '[ ]';
         documentRows.push({
-          number: '',
+          entry_id: '',
           title: `${indent}\u00A0\u00A0${actCheckbox} Action ${action.action_id}: ${action.description}`,
-          status: latestCitation ? `${humanStatus(action.status)} | ${latestCitation}` : humanStatus(action.status),
-          responsible_party: responsibilityLabel(action.assigned_to),
+          link: '',
+          status: humanStatus(action.status),
+          responsible: responsibilityLabel(action.assigned_to),
         });
       }
 
       // Linked issue sub-rows
       for (const issue of row.linkedIssues) {
-        const issCheckbox = issue.status === 'CLOSED' ? '\u2611' : '\u2610';
-        const latestCitation = latestCitationLabel(issue.citations);
+        const issCheckbox = issue.status === 'CLOSED' ? '[x]' : '[ ]';
         documentRows.push({
-          number: '',
+          entry_id: '',
           title: `${indent}\u00A0\u00A0${issCheckbox} Issue ${issue.issue_id}: ${issue.title}`,
-          status: latestCitation ? `${humanStatus(issue.status)} | ${latestCitation}` : humanStatus(issue.status),
-          responsible_party: '',
+          link: '',
+          status: humanStatus(issue.status),
+          responsible: '',
         });
       }
     }
@@ -415,7 +460,8 @@ export function buildChecklistTemplateContext(data: unknown): ChecklistTemplateC
     issue_id: issue.issue_id,
     title: issue.title,
     status: humanStatus(issue.status),
-    summary: nonEmpty([issue.summary ?? '', latestCitationLabel(issue.citations)]).join(' | '),
+    summary: issue.summary ?? '',
+    citation: latestCitationLabel(issue.citations),
   }));
 
   return {

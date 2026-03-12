@@ -37,10 +37,11 @@
     "signature_two_party": [2605, 3600, 250, 3620],
     "signature_one_party": [2605, 7465],
     "section_header": [7900, 2170],
+    "checklist_section_header": [11510, 2170],
     "checklist_working_group": [2800, 2800, 2200, 2270],
-    "checklist_documents": [600, 5670, 1800, 2000],
-    "checklist_action_items": [800, 3600, 1800, 2070, 1800],
-    "checklist_open_issues": [1200, 3870, 1500, 3500]
+    "checklist_documents": [1200, 5080, 2400, 1800, 3200],
+    "checklist_action_items": [1200, 5480, 2000, 2800, 2200],
+    "checklist_open_issues": [1200, 3480, 1800, 4000, 3200]
   },
   "spacing": {
     "line": 340,

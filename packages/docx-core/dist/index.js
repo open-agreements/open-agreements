@@ -3,10 +3,9 @@
  *
  * Provides multiple comparison approaches:
  * - Baseline A: WmlComparer wrapper (Docxodus WASM or dotnet CLI)
- * - Baseline B: Pure TypeScript (diff-match-patch + OOXML renderer) - paragraph level
+ * - Baseline B: Pure TypeScript (diff-match-patch + OOXML renderer) - paragraph level (dev-only)
  * - Atomizer: Pure TypeScript with atom-level comparison, move detection, format detection
  */
-import { compareDocumentsBaselineB } from './baselines/diffmatch/pipeline.js';
 import { compareDocumentsAtomizer } from './baselines/atomizer/pipeline.js';
 /**
  * Compare two DOCX documents and produce a document with track changes.
@@ -18,6 +17,11 @@ import { compareDocumentsAtomizer } from './baselines/atomizer/pipeline.js';
  */
 export async function compareDocuments(original, revised, options = {}) {
     const { engine = 'auto', author, date, reconstructionMode, premergeRuns } = options;
+    // Migration error for removed diffmatch engine
+    if (engine === 'diffmatch') {
+        throw new Error("The 'diffmatch' engine has been removed from the public API. " +
+            "Use engine: 'atomizer' (recommended) or 'auto'.");
+    }
     // Atomizer engine (recommended) - character-level with move detection
     if (engine === 'atomizer' || engine === 'auto') {
         return compareDocumentsAtomizer(original, revised, {
@@ -27,13 +31,9 @@ export async function compareDocuments(original, revised, options = {}) {
             premergeRuns,
         });
     }
-    // Diffmatch engine - paragraph-level (fallback)
-    if (engine === 'diffmatch') {
-        return compareDocumentsBaselineB(original, revised, { author, date });
-    }
     // WmlComparer engine requires --docxodus option at CLI level
     throw new Error('WmlComparer engine is only available through the benchmark CLI. ' +
-        'Use engine: "diffmatch" or "atomizer" for programmatic access.');
+        'Use engine: "atomizer" or "auto" for programmatic access.');
 }
 // Re-export shared utilities
 export * from './shared/ooxml/namespaces.js';

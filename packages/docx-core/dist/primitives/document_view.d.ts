@@ -1,5 +1,6 @@
 import { LabelType } from './list_labels.js';
 import { type ParagraphAlignment, type RunFormatting } from './styles.js';
+import { type FormattingMode } from './formatting_tags.js';
 import type { RelsMap } from './relationships.js';
 export type HeaderFormatting = {
     bold: boolean;
@@ -61,7 +62,9 @@ export type DocumentViewNode = {
     body_run_formatting: RunFormatting | null;
 };
 export declare function discoverStyles(nodes: DocumentViewNode[]): DocumentStyles;
-export declare function renderToon(nodes: DocumentViewNode[]): string;
+export declare function renderToon(nodes: DocumentViewNode[], options?: {
+    compact?: boolean;
+}): string;
 export type BuildDocumentViewOptions = {
     include_semantic_tags?: boolean;
 };
@@ -83,6 +86,7 @@ export declare function buildNodesForDocumentView(params: {
     numberingXml: Document | null;
     include_semantic_tags?: boolean;
     show_formatting?: boolean;
+    formatting_mode?: FormattingMode;
     relsMap?: RelsMap;
     documentXml?: Document;
     footnotesXml?: Document | null;
