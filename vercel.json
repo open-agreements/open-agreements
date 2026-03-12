@@ -2,7 +2,7 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
   "installCommand": "npm ci --include=dev",
-  "buildCommand": "npm run build:site:vercel",
+  "buildCommand": "REDIRECT_MODE=1 npm run build:site:vercel",
   "outputDirectory": "_site",
   "cleanUrls": true,
   "trailingSlash": false,
