@@ -9,6 +9,30 @@ const mdSafe = markdownIt({ html: false, linkify: false });
 export default function (eleventyConfig) {
   eleventyConfig.addPlugin(syntaxHighlight);
 
+  // canonicalUrl filter: map openagreements.ai paths to usejunior.com equivalents
+  eleventyConfig.addNunjucksFilter("canonicalUrl", function (url) {
+    const base = "https://usejunior.com/developer-tools/open-agreements";
+    const path = url === "/" ? "/" : url.replace(/\/$/, "");
+
+    if (path === "/") return base;
+    if (path === "/templates") return `${base}/templates`;
+    if (path.startsWith("/templates/")) {
+      const slug = path.replace("/templates/", "");
+      return `${base}/templates/${slug}`;
+    }
+    // /docs/*, /trust/* have no equivalent — point to main OA page
+    return base;
+  });
+
+  // REDIRECT_MODE: stop generating HTML pages when redirects are active
+  if (process.env.REDIRECT_MODE === "1") {
+    eleventyConfig.ignores.add("site/index.njk");
+    eleventyConfig.ignores.add("site/templates.njk");
+    eleventyConfig.ignores.add("site/template-detail.njk");
+    eleventyConfig.ignores.add("site/trust/**");
+    eleventyConfig.ignores.add("site/docs/**");
+  }
+
   // renderMarkdown filter: convert markdown string to HTML
   eleventyConfig.addNunjucksFilter("renderMarkdown", function (value) {
     if (!value || typeof value !== "string") return "";
