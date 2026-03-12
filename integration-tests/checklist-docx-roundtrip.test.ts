@@ -806,4 +806,445 @@ describe('checklist DOCX round-trip', () => {
     expect(result.patch).toBeNull();
     expect(result.summary.documentsProcessed).toBeGreaterThan(0);
   });
+
+  it('invalid DOCX buffer returns PARSE_FAILED', () => {
+    const result = importChecklistFromDocx({
+      docxBuffer: Buffer.from('not a valid zip'),
+      canonicalChecklist: baseChecklist,
+      checklistId: 'test-1',
+      currentRevision: 1,
+    });
+
+    expect(result.ok).toBe(false);
+    if (result.ok) return;
+    expect(result.error_code).toBe('PARSE_FAILED');
+  });
+
+  it('documents table: clearing responsible produces remove op', async () => {
+    const buffer = await renderChecklistDocx(baseChecklist);
+    const modified = modifyCellInDocx(
+      buffer, DOC_HEADERS, 'Responsible',
+      (row) => row['ID'] === 'entry-1',
+      '',
+    );
+
+    const result = importChecklistFromDocx({
+      docxBuffer: modified,
+      canonicalChecklist: baseChecklist,
+      checklistId: 'test-1',
+      currentRevision: 1,
+    });
+
+    expect(result.ok).toBe(true);
+    if (!result.ok) return;
+    expect(result.patch).not.toBeNull();
+    const removeOp = result.patch!.operations.find(
+      (op) => op.op === 'remove' && op.path === '/checklist_entries/entry-1/responsible_party',
+    );
+    expect(removeOp).toBeTruthy();
+  });
+
+  it('documents table: adding responsible where none exists produces replace op', async () => {
+    const noResponsibleChecklist: ClosingChecklist = {
+      ...baseChecklist,
+      checklist_entries: {
+        'entry-1': {
+          ...baseChecklist.checklist_entries['entry-1']!,
+          responsible_party: undefined,
+        },
+      },
+    };
+
+    const buffer = await renderChecklistDocx(noResponsibleChecklist);
+    const modified = modifyCellInDocx(
+      buffer, DOC_HEADERS, 'Responsible',
+      (row) => row['ID'] === 'entry-1',
+      'New Org',
+    );
+
+    const result = importChecklistFromDocx({
+      docxBuffer: modified,
+      canonicalChecklist: noResponsibleChecklist,
+      checklistId: 'test-1',
+      currentRevision: 1,
+    });
+
+    expect(result.ok).toBe(true);
+    if (!result.ok) return;
+    expect(result.patch).not.toBeNull();
+    const addOp = result.patch!.operations.find(
+      (op) => op.path === '/checklist_entries/entry-1/responsible_party',
+    );
+    expect(addOp).toBeTruthy();
+    expect((addOp!.value as Record<string, string>).organization).toBe('New Org');
+  });
+
+  it('documents table: org-only canonical with changed org', async () => {
+    const orgOnlyChecklist: ClosingChecklist = {
+      ...baseChecklist,
+      checklist_entries: {
+        'entry-1': {
+          ...baseChecklist.checklist_entries['entry-1']!,
+          responsible_party: { organization: 'Old Org' },
+        },
+      },
+    };
+
+    const buffer = await renderChecklistDocx(orgOnlyChecklist);
+    const modified = modifyCellInDocx(
+      buffer, DOC_HEADERS, 'Responsible',
+      (row) => row['ID'] === 'entry-1',
+      'New Org',
+    );
+
+    const result = importChecklistFromDocx({
+      docxBuffer: modified,
+      canonicalChecklist: orgOnlyChecklist,
+      checklistId: 'test-1',
+      currentRevision: 1,
+    });
+
+    expect(result.ok).toBe(true);
+    if (!result.ok) return;
+    expect(result.patch).not.toBeNull();
+    const orgOp = result.patch!.operations.find(
+      (op) => op.path === '/checklist_entries/entry-1/responsible_party/organization',
+    );
+    expect(orgOp).toBeTruthy();
+    expect(orgOp!.value).toBe('New Org');
+  });
+
+  it('documents table: individual-only canonical parse', async () => {
+    const individualOnlyChecklist: ClosingChecklist = {
+      ...baseChecklist,
+      checklist_entries: {
+        'entry-1': {
+          ...baseChecklist.checklist_entries['entry-1']!,
+          responsible_party: { individual_name: 'Jane Doe' },
+        },
+      },
+    };
+
+    const buffer = await renderChecklistDocx(individualOnlyChecklist);
+    const modified = modifyCellInDocx(
+      buffer, DOC_HEADERS, 'Responsible',
+      (row) => row['ID'] === 'entry-1',
+      'John Smith',
+    );
+
+    const result = importChecklistFromDocx({
+      docxBuffer: modified,
+      canonicalChecklist: individualOnlyChecklist,
+      checklistId: 'test-1',
+      currentRevision: 1,
+    });
+
+    expect(result.ok).toBe(true);
+    if (!result.ok) return;
+    expect(result.patch).not.toBeNull();
+    const nameOp = result.patch!.operations.find(
+      (op) => op.path === '/checklist_entries/entry-1/responsible_party/individual_name',
+    );
+    expect(nameOp).toBeTruthy();
+    expect(nameOp!.value).toBe('John Smith');
+  });
+
+  it('documents table: clearing link produces remove op', async () => {
+    const buffer = await renderChecklistDocx(baseChecklist);
+    const modified = modifyCellInDocx(
+      buffer, DOC_HEADERS, 'Link',
+      (row) => row['ID'] === 'entry-1',
+      '',
+    );
+
+    const result = importChecklistFromDocx({
+      docxBuffer: modified,
+      canonicalChecklist: baseChecklist,
+      checklistId: 'test-1',
+      currentRevision: 1,
+    });
+
+    expect(result.ok).toBe(true);
+    if (!result.ok) return;
+    expect(result.patch).not.toBeNull();
+    const linkOp = result.patch!.operations.find(
+      (op) => op.path === '/documents/doc-1/primary_link',
+    );
+    expect(linkOp).toBeTruthy();
+    expect(linkOp!.op).toBe('remove');
+  });
+
+  it('action items: detects description, assigned_to, and due_date changes', async () => {
+    const buffer = await renderChecklistDocx(baseChecklist);
+    let modified = modifyCellInDocx(
+      buffer, ACTION_HEADERS, 'Description',
+      (row) => row['ID'] === 'A-1',
+      'Updated description',
+    );
+    modified = modifyCellInDocx(
+      modified, ACTION_HEADERS, 'Assigned To',
+      (row) => row['ID'] === 'A-1',
+      'Charlie',
+    );
+    modified = modifyCellInDocx(
+      modified, ACTION_HEADERS, 'Due Date',
+      (row) => row['ID'] === 'A-1',
+      '2026-04-01',
+    );
+
+    const result = importChecklistFromDocx({
+      docxBuffer: modified,
+      canonicalChecklist: baseChecklist,
+      checklistId: 'test-1',
+      currentRevision: 1,
+    });
+
+    expect(result.ok).toBe(true);
+    if (!result.ok) return;
+    expect(result.patch).not.toBeNull();
+
+    const descOp = result.patch!.operations.find((op) => op.path === '/action_items/A-1/description');
+    expect(descOp).toBeTruthy();
+    expect(descOp!.value).toBe('Updated description');
+
+    const assignedOp = result.patch!.operations.find((op) => op.path === '/action_items/A-1/assigned_to/individual_name');
+    expect(assignedOp).toBeTruthy();
+    expect(assignedOp!.value).toBe('Charlie');
+
+    const dueOp = result.patch!.operations.find((op) => op.path === '/action_items/A-1/due_date');
+    expect(dueOp).toBeTruthy();
+    expect(dueOp!.value).toBe('2026-04-01');
+  });
+
+  it('action items: clearing due_date produces remove op', async () => {
+    const buffer = await renderChecklistDocx(baseChecklist);
+    const modified = modifyCellInDocx(
+      buffer, ACTION_HEADERS, 'Due Date',
+      (row) => row['ID'] === 'A-1',
+      '',
+    );
+
+    const result = importChecklistFromDocx({
+      docxBuffer: modified,
+      canonicalChecklist: baseChecklist,
+      checklistId: 'test-1',
+      currentRevision: 1,
+    });
+
+    expect(result.ok).toBe(true);
+    if (!result.ok) return;
+    expect(result.patch).not.toBeNull();
+    const dueOp = result.patch!.operations.find((op) => op.path === '/action_items/A-1/due_date');
+    expect(dueOp).toBeTruthy();
+    expect(dueOp!.op).toBe('remove');
+  });
+
+  it('issues: add row with empty ID produces add op', async () => {
+    const buffer = await renderChecklistDocx(baseChecklist);
+    const modified = addRowToTable(
+      buffer, ISSUE_HEADERS,
+      { 'ID': '', 'Title': 'New issue from DOCX', 'Status': 'Open', 'Summary': 'Needs discussion', 'Citation': '' },
+    );
+
+    const result = importChecklistFromDocx({
+      docxBuffer: modified,
+      canonicalChecklist: baseChecklist,
+      checklistId: 'test-1',
+      currentRevision: 1,
+    });
+
+    expect(result.ok).toBe(true);
+    if (!result.ok) return;
+    expect(result.patch).not.toBeNull();
+    const addOps = result.patch!.operations.filter(
+      (op) => op.op === 'add' && op.path.startsWith('/issues/'),
+    );
+    expect(addOps.length).toBeGreaterThanOrEqual(1);
+    const value = addOps[0]!.value as Record<string, unknown>;
+    expect(value.title).toBe('New issue from DOCX');
+  });
+
+  it('issues: remove row produces remove op', async () => {
+    const buffer = await renderChecklistDocx(baseChecklist);
+    const modified = removeRowFromTable(
+      buffer, ISSUE_HEADERS,
+      (row) => row['ID'] === 'I-1',
+    );
+
+    const result = importChecklistFromDocx({
+      docxBuffer: modified,
+      canonicalChecklist: baseChecklist,
+      checklistId: 'test-1',
+      currentRevision: 1,
+    });
+
+    expect(result.ok).toBe(true);
+    if (!result.ok) return;
+    expect(result.patch).not.toBeNull();
+    const removeOp = result.patch!.operations.find(
+      (op) => op.op === 'remove' && op.path === '/issues/I-1',
+    );
+    expect(removeOp).toBeTruthy();
+  });
+
+  it('issues: detects title change', async () => {
+    const buffer = await renderChecklistDocx(baseChecklist);
+    const modified = modifyCellInDocx(
+      buffer, ISSUE_HEADERS, 'Title',
+      (row) => row['ID'] === 'I-1',
+      'Revised indemnity cap',
+    );
+
+    const result = importChecklistFromDocx({
+      docxBuffer: modified,
+      canonicalChecklist: baseChecklist,
+      checklistId: 'test-1',
+      currentRevision: 1,
+    });
+
+    expect(result.ok).toBe(true);
+    if (!result.ok) return;
+    expect(result.patch).not.toBeNull();
+    const titleOp = result.patch!.operations.find((op) => op.path === '/issues/I-1/title');
+    expect(titleOp).toBeTruthy();
+    expect(titleOp!.value).toBe('Revised indemnity cap');
+  });
+
+  it('issues: clearing summary produces remove op', async () => {
+    const buffer = await renderChecklistDocx(baseChecklist);
+    const modified = modifyCellInDocx(
+      buffer, ISSUE_HEADERS, 'Summary',
+      (row) => row['ID'] === 'I-1',
+      '',
+    );
+
+    const result = importChecklistFromDocx({
+      docxBuffer: modified,
+      canonicalChecklist: baseChecklist,
+      checklistId: 'test-1',
+      currentRevision: 1,
+    });
+
+    expect(result.ok).toBe(true);
+    if (!result.ok) return;
+    expect(result.patch).not.toBeNull();
+    const summaryOp = result.patch!.operations.find((op) => op.path === '/issues/I-1/summary');
+    expect(summaryOp).toBeTruthy();
+    expect(summaryOp!.op).toBe('remove');
+  });
+
+  it('action items: assigning to unassigned item creates assigned_to', async () => {
+    const unassignedChecklist: ClosingChecklist = {
+      ...baseChecklist,
+      action_items: {
+        'A-1': {
+          ...baseChecklist.action_items['A-1']!,
+          assigned_to: undefined,
+        },
+      },
+    };
+
+    const buffer = await renderChecklistDocx(unassignedChecklist);
+    const modified = modifyCellInDocx(
+      buffer, ACTION_HEADERS, 'Assigned To',
+      (row) => row['ID'] === 'A-1',
+      'New Person',
+    );
+
+    const result = importChecklistFromDocx({
+      docxBuffer: modified,
+      canonicalChecklist: unassignedChecklist,
+      checklistId: 'test-1',
+      currentRevision: 1,
+    });
+
+    expect(result.ok).toBe(true);
+    if (!result.ok) return;
+    expect(result.patch).not.toBeNull();
+    const assignedOp = result.patch!.operations.find((op) => op.path === '/action_items/A-1/assigned_to');
+    expect(assignedOp).toBeTruthy();
+    expect((assignedOp!.value as Record<string, string>).individual_name).toBe('New Person');
+  });
+
+  it('action items: unknown ID produces warning', async () => {
+    const buffer = await renderChecklistDocx(baseChecklist);
+    const modified = modifyCellInDocx(
+      buffer, ACTION_HEADERS, 'ID',
+      (row) => row['ID'] === 'A-1',
+      'A-UNKNOWN',
+    );
+
+    const result = importChecklistFromDocx({
+      docxBuffer: modified,
+      canonicalChecklist: baseChecklist,
+      checklistId: 'test-1',
+      currentRevision: 1,
+    });
+
+    expect(result.ok).toBe(true);
+    if (!result.ok) return;
+    const unknownWarning = result.warnings.find((w) => w.code === 'UNKNOWN_ID' && w.table === 'action_items');
+    expect(unknownWarning).toBeTruthy();
+  });
+
+  it('issues: unknown ID produces warning', async () => {
+    const buffer = await renderChecklistDocx(baseChecklist);
+    const modified = modifyCellInDocx(
+      buffer, ISSUE_HEADERS, 'ID',
+      (row) => row['ID'] === 'I-1',
+      'I-UNKNOWN',
+    );
+
+    const result = importChecklistFromDocx({
+      docxBuffer: modified,
+      canonicalChecklist: baseChecklist,
+      checklistId: 'test-1',
+      currentRevision: 1,
+    });
+
+    expect(result.ok).toBe(true);
+    if (!result.ok) return;
+    const unknownWarning = result.warnings.find((w) => w.code === 'UNKNOWN_ID' && w.table === 'issues');
+    expect(unknownWarning).toBeTruthy();
+  });
+
+  it('issues: duplicate ID produces warning', async () => {
+    const buffer = await renderChecklistDocx(baseChecklist);
+    const modified = addRowToTable(
+      buffer, ISSUE_HEADERS,
+      { 'ID': 'I-1', 'Title': 'Duplicate', 'Status': 'Open', 'Summary': '', 'Citation': '' },
+    );
+
+    const result = importChecklistFromDocx({
+      docxBuffer: modified,
+      canonicalChecklist: baseChecklist,
+      checklistId: 'test-1',
+      currentRevision: 1,
+    });
+
+    expect(result.ok).toBe(true);
+    if (!result.ok) return;
+    const dupWarning = result.warnings.find((w) => w.code === 'DUPLICATE_ID' && w.table === 'issues');
+    expect(dupWarning).toBeTruthy();
+  });
+
+  it('action items: duplicate ID produces warning', async () => {
+    const buffer = await renderChecklistDocx(baseChecklist);
+    const modified = addRowToTable(
+      buffer, ACTION_HEADERS,
+      { 'ID': 'A-1', 'Description': 'Duplicate', 'Status': 'Not Started', 'Assigned To': '', 'Due Date': '' },
+    );
+
+    const result = importChecklistFromDocx({
+      docxBuffer: modified,
+      canonicalChecklist: baseChecklist,
+      checklistId: 'test-1',
+      currentRevision: 1,
+    });
+
+    expect(result.ok).toBe(true);
+    if (!result.ok) return;
+    const dupWarning = result.warnings.find((w) => w.code === 'DUPLICATE_ID' && w.table === 'action_items');
+    expect(dupWarning).toBeTruthy();
+  });
 });
