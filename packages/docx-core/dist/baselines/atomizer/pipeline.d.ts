@@ -28,7 +28,7 @@ export interface AtomizerOptions {
      * This reduces overly-fragmented diffs without relying on atom-level cross-run text merging,
      * and can improve revision grouping in Word.
      *
-     * Default: false.
+     * Default: true.
      */
     premergeRuns?: boolean;
     /**
@@ -62,4 +62,8 @@ export interface AtomizerOptions {
  * @returns Comparison result with track changes document
  */
 export declare function compareDocumentsAtomizer(original: Buffer, revised: Buffer, options?: AtomizerOptions): Promise<CompareResult>;
+export interface AuxiliaryMergeResult {
+    mergedIds: Set<string>;
+    createdPart: boolean;
+}
 //# sourceMappingURL=pipeline.d.ts.map

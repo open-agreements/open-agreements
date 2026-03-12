@@ -7,6 +7,7 @@ import { buildNodesForDocumentView } from './document_view.js';
 import { findUniqueSubstringMatch } from './matching.js';
 import { parseDocumentRels } from './relationships.js';
 import { setParagraphSpacing, setTableCellPadding, setTableRowHeight, } from './layout.js';
+import { extractTables, } from './tables.js';
 import { mergeRuns } from './merge_runs.js';
 import { simplifyRedlines } from './simplify_redlines.js';
 import { preventDoubleElevation } from './prevent_double_elevation.js';
@@ -179,8 +180,9 @@ export class DocxDocument {
     buildDocumentView(opts) {
         const includeSemanticTags = opts?.includeSemanticTags ?? true;
         const showFormatting = opts?.showFormatting ?? false;
+        const formattingMode = opts?.formattingMode ?? 'compact';
         const cached = this.documentViewCache;
-        if (!this.dirty && cached && cached.includeSemanticTags === includeSemanticTags && cached.showFormatting === showFormatting) {
+        if (!this.dirty && cached && cached.includeSemanticTags === includeSemanticTags && cached.showFormatting === showFormatting && cached.formattingMode === formattingMode) {
             return { nodes: cached.nodes, styles: cached.styles };
         }
         const paragraphs = this.getParagraphs()
@@ -197,11 +199,12 @@ export class DocxDocument {
             numberingXml: this.numberingXml,
             include_semantic_tags: includeSemanticTags,
             show_formatting: showFormatting,
+            formatting_mode: formattingMode,
             relsMap: this.relsMap,
             documentXml: this.documentXml,
             footnotesXml: this.footnotesXml,
         });
-        this.documentViewCache = { includeSemanticTags, showFormatting, nodes, styles };
+        this.documentViewCache = { includeSemanticTags, showFormatting, formattingMode, nodes, styles };
         this.dirty = false;
         return { nodes, styles };
     }
@@ -222,12 +225,36 @@ export class DocxDocument {
         this.dirty = true;
         this.documentViewCache = null;
     }
+    /**
+     * Replace text at a known character range without re-searching.
+     * Used by the range-trimming approach where the caller has already located the match.
+     */
+    replaceTextAtRange(params) {
+        const { targetParagraphId, start, end, replaceText } = params;
+        const p = findParagraphByBookmarkId(this.documentXml, targetParagraphId);
+        if (!p)
+            throw new Error(`Paragraph not found: ${targetParagraphId}`);
+        replaceParagraphTextRange(p, start, end, replaceText);
+        this.dirty = true;
+        this.documentViewCache = null;
+    }
     insertParagraph(params) {
-        const { positionalAnchorNodeId, relativePosition, newText, newParagraphId: _newParagraphId } = params;
+        const { positionalAnchorNodeId, relativePosition, newText, newParagraphId: _newParagraphId, styleSourceId } = params;
         const anchor = findParagraphByBookmarkId(this.documentXml, positionalAnchorNodeId);
         if (!anchor)
             throw new Error(`Anchor paragraph not found: ${positionalAnchorNodeId}`);
         const anchorP = anchor;
+        // Resolve style source paragraph (if provided).
+        let styleSourceP = null;
+        let styleSourceFallback = false;
+        if (styleSourceId) {
+            styleSourceP = findParagraphByBookmarkId(this.documentXml, styleSourceId);
+            if (!styleSourceP) {
+                styleSourceFallback = true;
+                // Fall back to anchor
+            }
+        }
+        const formattingSource = styleSourceP ?? anchorP;
         const doc = this.documentXml;
         const parent = anchorP.parentNode;
         if (!parent)
@@ -303,25 +330,25 @@ export class DocxDocument {
                 return next.nextSibling;
             return anchorP.nextSibling;
         }
-        // Choose a run in the anchor to use as formatting template: pick the run with the most visible text.
-        const anchorVisibleRuns = getParagraphRuns(anchorP);
+        // Choose a run in the formatting source to use as formatting template: pick the run with the most visible text.
+        const sourceVisibleRuns = getParagraphRuns(formattingSource);
         let templateRun = null;
         let bestLen = -1;
-        for (const tr of anchorVisibleRuns) {
+        for (const tr of sourceVisibleRuns) {
             if (tr.text.length > bestLen) {
                 bestLen = tr.text.length;
                 templateRun = tr.r;
             }
         }
         if (!templateRun) {
-            const allRuns = Array.from(anchorP.getElementsByTagNameNS(OOXML.W_NS, W.r));
+            const allRuns = Array.from(formattingSource.getElementsByTagNameNS(OOXML.W_NS, W.r));
             templateRun = allRuns[0] ?? doc.createElementNS(OOXML.W_NS, 'w:r');
         }
         const paragraphsToInsert = newText.replace(/\r\n/g, '\n').split(/\n{2,}/);
         const insertedIds = [];
         let cursor = getInsertionRefNode();
         for (const paraText of paragraphsToInsert) {
-            const newP = cloneParagraphShell(anchorP);
+            const newP = cloneParagraphShell(formattingSource);
             const newRun = cloneRunFormattingOnly(templateRun);
             appendTextToRun(newRun, paraText);
             newP.appendChild(newRun);
@@ -335,7 +362,13 @@ export class DocxDocument {
         }
         this.dirty = true;
         this.documentViewCache = null;
-        return { newParagraphId: insertedIds[0], newParagraphIds: insertedIds };
+        const result = {
+            newParagraphId: insertedIds[0],
+            newParagraphIds: insertedIds,
+        };
+        if (styleSourceFallback)
+            result.styleSourceFallback = true;
+        return result;
     }
     setParagraphSpacing(mutation) {
         const result = setParagraphSpacing(this.documentXml, mutation);
@@ -360,6 +393,13 @@ export class DocxDocument {
             this.documentViewCache = null;
         }
         return result;
+    }
+    /**
+     * Extract tables from the document body.
+     * Read-only operation — does not mutate document state.
+     */
+    extractTables(options) {
+        return extractTables(this.documentXml, options);
     }
     /**
      * Merge format-identical adjacent runs only (no redline simplification).

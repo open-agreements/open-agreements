@@ -69,6 +69,27 @@ function findNeighborParagraphOutsideRemoval(paragraph, paragraphsToRemove, dire
     }
     return undefined;
 }
+/**
+ * Tag names that represent visible content inside a w:r element.
+ * A run containing at least one of these is considered substantive (non-empty).
+ */
+const RUN_VISIBLE_CONTENT_TAGS = new Set([
+    'w:t', 'w:tab', 'w:br', 'w:cr', 'w:drawing', 'w:object', 'w:pict',
+    'w:sym', 'w:fldChar', 'w:instrText',
+]);
+/**
+ * Returns true if a w:r element contains at least one visible content child.
+ * Empty runs (containing only w:rPr or nothing) return false.
+ */
+function runHasVisibleContent(run) {
+    for (let i = 0; i < run.childNodes.length; i++) {
+        const child = run.childNodes[i];
+        if (child.nodeType === NODE_TYPE.ELEMENT && RUN_VISIBLE_CONTENT_TAGS.has(child.tagName)) {
+            return true;
+        }
+    }
+    return false;
+}
 function paragraphContentStartIndex(paragraph) {
     const children = childElements(paragraph);
     let idx = 0;
@@ -403,45 +424,50 @@ export function rejectAllChanges(documentXml) {
             paragraphsToRemove.add(p);
         }
     }
-    // Also check w:moveTo elements (moved-to content, also removed when rejecting)
-    for (const moveTo of findAllByTagName(root, 'w:moveTo')) {
-        // Walk up to find containing w:p
-        let p;
-        let current = parentElement(moveTo);
-        while (current) {
-            if (current.tagName === 'w:p') {
-                p = current;
-                break;
-            }
-            current = parentElement(current);
-        }
-        if (p && !paragraphsToRemove.has(p)) {
-            // Check if this paragraph has any w:del or w:moveFrom elements (should keep those)
-            const dels = findAllByTagName(p, 'w:del');
-            const moveFroms = findAllByTagName(p, 'w:moveFrom');
-            if (dels.length > 0 || moveFroms.length > 0) {
-                continue;
-            }
-            // Check if this paragraph has any w:r elements outside of w:ins/w:moveTo
-            let hasContentOutsideRemoved = false;
-            for (const child of childElements(p)) {
-                if (child.tagName === 'w:r') {
+    // Also check paragraphs where ALL substantive content is inside w:ins and/or
+    // w:moveTo wrappers (no bare w:r, no w:del, no w:moveFrom). These paragraphs
+    // should be removed on reject even without an explicit PPR-INS paragraph marker.
+    // This handles the inplace modifier's no-op wrapParagraphAsInserted (which omits
+    // PPR-INS for Google Docs compatibility).
+    for (const p of findAllByTagName(root, 'w:p')) {
+        if (paragraphsToRemove.has(p))
+            continue;
+        // Must have at least one w:ins or w:moveTo
+        const insEls = findAllByTagName(p, 'w:ins');
+        const moveToEls = findAllByTagName(p, 'w:moveTo');
+        if (insEls.length === 0 && moveToEls.length === 0)
+            continue;
+        // Skip if paragraph has deleted/moveFrom content (those survive reject)
+        const dels = findAllByTagName(p, 'w:del');
+        const moveFroms = findAllByTagName(p, 'w:moveFrom');
+        if (dels.length > 0 || moveFroms.length > 0)
+            continue;
+        // Check if this paragraph has any w:r elements with visible content
+        // outside of w:ins/w:moveTo. Empty w:r shells (no w:t, w:tab, w:br, etc.)
+        // should NOT count as substantive content — they are artifacts that would
+        // otherwise prevent paragraph removal, leaving ghost paragraphs after reject.
+        let hasContentOutsideRemoved = false;
+        for (const child of childElements(p)) {
+            if (child.tagName === 'w:r') {
+                if (runHasVisibleContent(child)) {
                     hasContentOutsideRemoved = true;
                     break;
                 }
-                if (child.tagName !== 'w:ins' && child.tagName !== 'w:moveTo' &&
-                    child.tagName !== 'w:pPr' &&
-                    child.tagName !== 'w:moveToRangeStart' && child.tagName !== 'w:moveToRangeEnd') {
-                    const runsInChild = findAllByTagName(child, 'w:r');
-                    if (runsInChild.length > 0) {
-                        hasContentOutsideRemoved = true;
-                        break;
-                    }
+                continue;
+            }
+            if (child.tagName !== 'w:ins' && child.tagName !== 'w:moveTo' &&
+                child.tagName !== 'w:pPr' &&
+                child.tagName !== 'w:moveToRangeStart' && child.tagName !== 'w:moveToRangeEnd' &&
+                child.tagName !== 'w:bookmarkStart' && child.tagName !== 'w:bookmarkEnd') {
+                const runsInChild = findAllByTagName(child, 'w:r');
+                if (runsInChild.some(runHasVisibleContent)) {
+                    hasContentOutsideRemoved = true;
+                    break;
                 }
             }
-            if (!hasContentOutsideRemoved) {
-                paragraphsToRemove.add(p);
-            }
+        }
+        if (!hasContentOutsideRemoved) {
+            paragraphsToRemove.add(p);
         }
     }
     preserveCrossParagraphBookmarksForReject(root, paragraphsToRemove);
@@ -467,6 +493,10 @@ export function rejectAllChanges(documentXml) {
     // Convert w:delText to w:t
     for (const delText of findAllByTagName(root, 'w:delText')) {
         renameElement(delText, 'w:t');
+    }
+    // Convert w:delInstrText to w:instrText
+    for (const delInstrText of findAllByTagName(root, 'w:delInstrText')) {
+        renameElement(delInstrText, 'w:instrText');
     }
     // Remove format change tracking
     removeAllByTagName(root, 'w:rPrChange');

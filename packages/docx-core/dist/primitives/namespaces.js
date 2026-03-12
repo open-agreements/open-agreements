@@ -42,6 +42,7 @@ export const W = {
     u: 'u',
     highlight: 'highlight',
     sz: 'sz',
+    szCs: 'szCs',
     color: 'color',
     vertAlign: 'vertAlign',
     position: 'position',

@@ -1,4 +1,12 @@
 import type { RunFormatting } from './styles.js';
+/**
+ * Controls formatting tag emission behaviour.
+ *
+ * - `compact` — 60% threshold suppression (default, current behavior)
+ * - `full`   — all formatting emitted, no suppression (benchmark mode)
+ * - `plain_text` — no formatting tags at all (future: fast text-only views)
+ */
+export type FormattingMode = 'compact' | 'full' | 'plain_text';
 export type AnnotatedRun = {
     text: string;
     formatting: RunFormatting;
@@ -12,19 +20,24 @@ export type FormattingBaseline = {
     underline: boolean;
     suppressed: boolean;
 };
-export declare function computeModalBaseline(runs: AnnotatedRun[]): FormattingBaseline;
-export type DefinitionSpan = {
-    /** Plain-text offset of the opening quote (inclusive). */
-    start: number;
-    /** Plain-text offset one past the closing quote (exclusive). */
-    end: number;
-    /** The defined term text (excluding quotes). */
-    term: string;
+export type FontBaseline = {
+    modalColor: string | null;
+    colorSuppressed: boolean;
+    modalFontSizePt: number;
+    fontSizeSuppressed: boolean;
+    modalFontName: string;
+    fontNameSuppressed: boolean;
 };
+export declare function computeModalBaseline(runs: AnnotatedRun[], options?: {
+    formattingMode?: FormattingMode;
+}): FormattingBaseline;
+export declare function computeParagraphFontBaseline(runs: AnnotatedRun[], options?: {
+    formattingMode?: FormattingMode;
+}): FontBaseline;
 export declare function emitFormattingTags(params: {
     runs: AnnotatedRun[];
     baseline: FormattingBaseline;
-    definitionSpans?: DefinitionSpan[];
+    fontBaseline?: FontBaseline | null;
 }): string;
 export declare function mergeAdjacentTags(tagged: string): string;
 //# sourceMappingURL=formatting_tags.d.ts.map

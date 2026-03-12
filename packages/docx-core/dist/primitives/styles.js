@@ -1,6 +1,9 @@
 import { OOXML, W } from './namespaces.js';
 function getWAttr(el, localName) {
-    return el.getAttributeNS(OOXML.W_NS, localName) ?? el.getAttribute(`w:${localName}`) ?? el.getAttribute(localName);
+    // Use || instead of ?? — getAttributeNS returns "" (not null) when the
+    // attribute exists without proper NS binding (e.g. set via setAttribute
+    // instead of setAttributeNS).
+    return el.getAttributeNS(OOXML.W_NS, localName) || el.getAttribute(`w:${localName}`) || el.getAttribute(localName) || null;
 }
 export function parseStylesXml(stylesDoc) {
     const byId = new Map();
@@ -130,7 +133,7 @@ function parseFontName(parent) {
     const el = parent.getElementsByTagNameNS(OOXML.W_NS, W.rFonts).item(0);
     if (!el)
         return null;
-    return getWAttr(el, 'ascii') ?? getWAttr(el, 'hAnsi') ?? getWAttr(el, 'cs') ?? null;
+    return getWAttr(el, 'ascii') ?? getWAttr(el, 'hAnsi') ?? getWAttr(el, 'cs') ?? getWAttr(el, 'val') ?? null;
 }
 function parseFontSizePt(parent) {
     if (!parent)
@@ -138,7 +141,10 @@ function parseFontSizePt(parent) {
     const el = parent.getElementsByTagNameNS(OOXML.W_NS, W.sz).item(0);
     if (!el)
         return null;
-    const v = Number.parseInt(getWAttr(el, 'val') ?? '', 10);
+    const valStr = getWAttr(el, 'val') || el.getAttribute('val');
+    if (!valStr)
+        return null;
+    const v = Number.parseInt(valStr, 10);
     if (Number.isNaN(v))
         return null;
     // OOXML stores half-points.
@@ -150,7 +156,7 @@ function parseColorHex(parent) {
     const el = parent.getElementsByTagNameNS(OOXML.W_NS, W.color).item(0);
     if (!el)
         return null;
-    const v = getWAttr(el, 'val');
+    const v = getWAttr(el, 'val') || el.getAttribute('val');
     if (!v || v === 'auto')
         return null;
     return v;
@@ -168,7 +174,8 @@ function parseHighlightVal(parent) {
 }
 export function extractEffectiveRunFormatting(params) {
     const { run, paragraphPPr, paragraphStyleId, styles } = params;
-    const rPr = run.getElementsByTagNameNS(OOXML.W_NS, W.rPr).item(0);
+    const isRun = run.localName === W.r || run.localName === 'r';
+    const rPr = isRun ? run.getElementsByTagNameNS(OOXML.W_NS, W.rPr).item(0) : null;
     const pRPr = paragraphPPr ? paragraphPPr.getElementsByTagNameNS(OOXML.W_NS, W.rPr).item(0) : null;
     // Resolve w:rStyle character style chain (e.g. "Strong" → bold via style definition).
     const rStyleEl = rPr?.getElementsByTagNameNS(OOXML.W_NS, W.rStyle).item(0);
@@ -185,6 +192,14 @@ export function extractEffectiveRunFormatting(params) {
     const fontName = firstNonNull([parseFontName(rPr), parseFontName(rStyleRPr), parseFontName(pRPr), parseFontName(styleRPr)]) ?? '';
     const fontSizePt = firstNonNull([parseFontSizePt(rPr), parseFontSizePt(rStyleRPr), parseFontSizePt(pRPr), parseFontSizePt(styleRPr)]) ?? 0;
     const colorHex = firstNonNull([parseColorHex(rPr), parseColorHex(rStyleRPr), parseColorHex(pRPr), parseColorHex(styleRPr)]);
-    return { bold, italic, underline, highlightVal: highlightVal ?? null, fontName, fontSizePt, colorHex: colorHex ?? null };
+    return {
+        bold,
+        italic,
+        underline,
+        highlightVal: highlightVal ?? null,
+        fontName,
+        fontSizePt,
+        colorHex: colorHex ?? null,
+    };
 }
 //# sourceMappingURL=styles.js.map

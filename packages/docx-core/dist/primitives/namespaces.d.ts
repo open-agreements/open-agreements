@@ -32,6 +32,7 @@ export declare const W: {
     readonly u: "u";
     readonly highlight: "highlight";
     readonly sz: "sz";
+    readonly szCs: "szCs";
     readonly color: "color";
     readonly vertAlign: "vertAlign";
     readonly position: "position";

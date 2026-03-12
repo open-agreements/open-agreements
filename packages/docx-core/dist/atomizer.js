@@ -214,6 +214,9 @@ export function createComparisonUnitAtom(options) {
     const ancestorUnids = extractAncestorUnids(ancestors);
     // Calculate SHA1 hash for the atom
     const sha1Hash = hashElement(contentElement);
+    // Extract and clone run properties for first-class rPr access
+    const rPrElement = getRunProperties({ ancestorElements: ancestors });
+    const rPr = rPrElement ? rPrElement.cloneNode(true) : null;
     return {
         contentElement,
         ancestorElements: [...ancestors], // Copy to avoid mutation
@@ -222,6 +225,7 @@ export function createComparisonUnitAtom(options) {
         revTrackElement,
         sha1Hash,
         correlationStatus,
+        rPr,
     };
 }
 // =============================================================================
@@ -285,6 +289,7 @@ function createEmptyParagraphAtomWithContext(paragraphElement, ancestors, part, 
         sha1Hash: sha1(hashContent),
         correlationStatus,
         isEmptyParagraph: true, // Mark this as an empty paragraph atom
+        rPr: null, // Empty paragraphs have no run formatting
     };
 }
 /**
@@ -503,10 +508,23 @@ export function collapseFieldSequences(atoms) {
                 i++;
             }
             // Check if field spans multiple paragraphs (like TOC, INDEX)
-            // If so, don't collapse - preserve paragraph structure
+            // If so, don't collapse the outer field - preserve paragraph structure.
+            // But recursively collapse inner single-paragraph fields (e.g., PAGEREF
+            // nested inside TOC) so they are treated as single atoms during LCS.
             if (fieldSpansMultipleParagraphs(fieldAtoms)) {
-                // Pass through all field atoms unchanged
-                result.push(...fieldAtoms);
+                if (separatorIndex >= 0 && separatorIndex < fieldAtoms.length - 1) {
+                    // Pass through outer field markers: begin, instrText..., separate
+                    result.push(...fieldAtoms.slice(0, separatorIndex + 1));
+                    // Recursively collapse inner content (between separator and end)
+                    const innerContent = fieldAtoms.slice(separatorIndex + 1, -1);
+                    result.push(...collapseFieldSequences(innerContent));
+                    // Pass through outer end marker
+                    result.push(fieldAtoms[fieldAtoms.length - 1]);
+                }
+                else {
+                    // No separator found (unusual), pass through unchanged
+                    result.push(...fieldAtoms);
+                }
                 continue;
             }
             // Extract visible text from the field result (after separator)
@@ -535,6 +553,8 @@ export function collapseFieldSequences(atoms) {
                 correlationStatus: firstAtom.correlationStatus,
                 // Store original atoms for document reconstruction
                 collapsedFieldAtoms: fieldAtoms,
+                // Inherit rPr from first atom in the field sequence
+                rPr: firstAtom.rPr,
             };
             result.push(collapsedAtom);
         }
@@ -604,6 +624,8 @@ function splitAtomIntoWords(atom) {
             paragraphIndex: atom.paragraphIndex,
             // Track that this came from a split atom for potential later merge
             splitFromAtom: atom,
+            // Share rPr reference (read-only after atomization)
+            rPr: atom.rPr,
         };
         result.push(wordAtom);
     }

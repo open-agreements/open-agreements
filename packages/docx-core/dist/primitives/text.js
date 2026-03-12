@@ -138,7 +138,7 @@ function appendTextToRun(doc, run, text) {
     }
     flush();
 }
-function visibleLengthForEl(el) {
+export function visibleLengthForEl(el) {
     if (el.namespaceURI !== OOXML.W_NS)
         return 0;
     if (el.localName === W.t)
@@ -149,7 +149,7 @@ function visibleLengthForEl(el) {
         return 1;
     return 0;
 }
-function getDirectContentElements(run) {
+export function getDirectContentElements(run) {
     // Direct children excluding rPr; preserves unknown nodes without duplicating them on splits.
     const out = [];
     for (const child of Array.from(run.childNodes)) {
@@ -164,7 +164,7 @@ function getDirectContentElements(run) {
     }
     return out;
 }
-function splitRunAtVisibleOffset(run, offset) {
+export function splitRunAtVisibleOffset(run, offset) {
     const doc = run.ownerDocument;
     if (!doc)
         throw new Error('Run has no ownerDocument');
@@ -265,24 +265,31 @@ function ensureRPr(doc, run) {
     run.insertBefore(rPr, run.firstChild);
     return rPr;
 }
-function ensureBoolProp(doc, rPr, localName) {
+function ensureBoolProp(doc, rPr, localName, val) {
     let el = rPr.getElementsByTagNameNS(OOXML.W_NS, localName).item(0);
-    if (!el) {
-        el = doc.createElementNS(OOXML.W_NS, `w:${localName}`);
-        rPr.appendChild(el);
+    if (val) {
+        if (!el) {
+            el = doc.createElementNS(OOXML.W_NS, `w:${localName}`);
+            rPr.insertBefore(el, rPr.firstChild);
+        }
+        el.setAttribute('w:val', '1');
     }
-    // Ensure truthy by removing any explicit false.
-    el.removeAttributeNS(OOXML.W_NS, 'val');
-    el.removeAttribute('w:val');
-    el.removeAttribute('val');
+    else if (el) {
+        el.parentNode?.removeChild(el);
+    }
 }
 function ensureUnderline(doc, rPr, val) {
     let el = rPr.getElementsByTagNameNS(OOXML.W_NS, W.u).item(0);
+    if (val === false) {
+        if (el)
+            el.parentNode?.removeChild(el);
+        return;
+    }
     if (!el) {
         el = doc.createElementNS(OOXML.W_NS, `w:${W.u}`);
-        rPr.appendChild(el);
+        rPr.insertBefore(el, rPr.firstChild);
     }
-    const v = val ?? 'single';
+    const v = typeof val === 'string' ? val : 'single';
     el.setAttribute('w:val', v);
 }
 function clearHighlightProp(rPr) {
@@ -291,12 +298,44 @@ function clearHighlightProp(rPr) {
         h.parentNode?.removeChild(h);
 }
 function ensureHighlight(doc, rPr, val) {
+    if (val === false) {
+        clearHighlightProp(rPr);
+        return;
+    }
     let el = rPr.getElementsByTagNameNS(OOXML.W_NS, W.highlight).item(0);
     if (!el) {
         el = doc.createElementNS(OOXML.W_NS, `w:${W.highlight}`);
-        rPr.appendChild(el);
+        rPr.insertBefore(el, rPr.firstChild);
     }
-    el.setAttribute('w:val', val ?? 'yellow');
+    el.setAttribute('w:val', typeof val === 'string' ? val : 'yellow');
+}
+function ensureSz(doc, rPr, halfPoints) {
+    for (const localName of [W.sz, W.szCs]) {
+        let el = rPr.getElementsByTagNameNS(OOXML.W_NS, localName).item(0);
+        if (!el) {
+            el = doc.createElementNS(OOXML.W_NS, `w:${localName}`);
+            rPr.insertBefore(el, rPr.firstChild);
+        }
+        el.setAttributeNS(OOXML.W_NS, 'w:val', Math.round(halfPoints).toString());
+    }
+}
+function ensureColor(doc, rPr, hex) {
+    let el = rPr.getElementsByTagNameNS(OOXML.W_NS, W.color).item(0);
+    if (!el) {
+        el = doc.createElementNS(OOXML.W_NS, `w:${W.color}`);
+        rPr.insertBefore(el, rPr.firstChild);
+    }
+    el.setAttributeNS(OOXML.W_NS, 'w:val', hex.replace('#', ''));
+}
+function ensureFont(doc, rPr, name) {
+    let el = rPr.getElementsByTagNameNS(OOXML.W_NS, W.rFonts).item(0);
+    if (!el) {
+        el = doc.createElementNS(OOXML.W_NS, `w:${W.rFonts}`);
+        rPr.insertBefore(el, rPr.firstChild);
+    }
+    el.setAttributeNS(OOXML.W_NS, 'w:ascii', name);
+    el.setAttributeNS(OOXML.W_NS, 'w:hAnsi', name);
+    el.setAttributeNS(OOXML.W_NS, 'w:cs', name);
 }
 function applyRunProps(doc, run, add, clearHighlight) {
     if (!add && !clearHighlight)
@@ -306,14 +345,20 @@ function applyRunProps(doc, run, add, clearHighlight) {
         clearHighlightProp(rPr);
     if (!add)
         return;
-    if (add.bold)
-        ensureBoolProp(doc, rPr, W.b);
-    if (add.italic)
-        ensureBoolProp(doc, rPr, W.i);
-    if (add.underline)
-        ensureUnderline(doc, rPr, typeof add.underline === 'string' ? add.underline : null);
-    if (add.highlight)
-        ensureHighlight(doc, rPr, typeof add.highlight === 'string' ? add.highlight : null);
+    if (add.bold !== undefined)
+        ensureBoolProp(doc, rPr, W.b, add.bold);
+    if (add.italic !== undefined)
+        ensureBoolProp(doc, rPr, W.i, add.italic);
+    if (add.underline !== undefined)
+        ensureUnderline(doc, rPr, add.underline);
+    if (add.highlight !== undefined)
+        ensureHighlight(doc, rPr, add.highlight);
+    if (add.fontSize !== undefined)
+        ensureSz(doc, rPr, add.fontSize);
+    if (add.color !== undefined)
+        ensureColor(doc, rPr, add.color);
+    if (add.fontName !== undefined)
+        ensureFont(doc, rPr, add.fontName);
 }
 export function replaceParagraphTextRange(p, start, end, replacement) {
     // Replace visible text in [start, end) in paragraph by operating on w:t nodes.

@@ -125,6 +125,8 @@ export interface ComparisonUnitAtom extends ComparisonUnit {
     splitFromAtom?: ComparisonUnitAtom;
     /** Which document this atom originated from (for correct formatting application) */
     sourceDocument?: 'original' | 'revised';
+    /** Cloned run properties (w:rPr) captured at atomization time, or null if no formatting */
+    rPr?: Element | null;
 }
 /**
  * Settings for move detection algorithm.

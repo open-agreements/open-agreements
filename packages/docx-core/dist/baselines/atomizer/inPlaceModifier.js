@@ -12,7 +12,9 @@
  */
 import { CorrelationStatus } from '../../core-types.js';
 import { EMPTY_PARAGRAPH_TAG } from '../../atomizer.js';
-import { getLeafText, childElements, findChildByTagName, insertAfterElement, wrapElement, } from '../../primitives/index.js';
+import { getLeafText, childElements, findChildByTagName, insertAfterElement, wrapElement, unwrapElement, splitRunAtVisibleOffset, visibleLengthForEl, getDirectContentElements, } from '../../primitives/index.js';
+import { areRunPropertiesEqual } from '../../format-detection.js';
+import { enforceConsumerCompatibility } from './consumerCompatibility.js';
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
 import { warn } from './debug.js';
 const SYNTHETIC_DOC = new DOMParser().parseFromString('<root xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"/>', 'application/xml');
@@ -125,8 +127,9 @@ function formatDate(date) {
  * @param element - The element to process
  */
 function convertToDelText(element) {
-    if (element.tagName === 'w:t') {
-        const newEl = createEl('w:delText');
+    if (element.tagName === 'w:t' || element.tagName === 'w:instrText') {
+        const newTag = element.tagName === 'w:t' ? 'w:delText' : 'w:delInstrText';
+        const newEl = createEl(newTag);
         // Copy text content
         while (element.firstChild)
             newEl.appendChild(element.firstChild);
@@ -136,10 +139,6 @@ function convertToDelText(element) {
             newEl.setAttribute(attr.name, attr.value);
         }
         element.parentNode?.replaceChild(newEl, element);
-        // Recurse into children of the new element (none expected for w:t, but be safe)
-        for (const child of childElements(newEl)) {
-            convertToDelText(child);
-        }
         return;
     }
     for (const child of childElements(element)) {
@@ -152,9 +151,22 @@ function convertToDelText(element) {
  * Collapsed field atoms use a synthetic w:t as their top-level contentElement,
  * but retain the original field sequence in collapsedFieldAtoms. For insertion,
  * we must replay the original sequence rather than the synthetic text.
+ *
+ * @param filterRun - When provided, only return content elements whose
+ *   collapsed field atom belongs to this specific source run. Used by
+ *   insertDeletedRun/insertMoveFromRun to emit one cloned run per original
+ *   source run, preserving multi-run field structure.
  */
-function getInsertableAtomContentElements(atom) {
+function getInsertableAtomContentElements(atom, filterRun) {
     if (atom.collapsedFieldAtoms && atom.collapsedFieldAtoms.length > 0) {
+        if (filterRun) {
+            return atom.collapsedFieldAtoms
+                .filter((fieldAtom) => {
+                const run = fieldAtom.sourceRunElement ?? findAncestorByTag(fieldAtom, 'w:r');
+                return run === filterRun;
+            })
+                .map((fieldAtom) => fieldAtom.contentElement);
+        }
         return atom.collapsedFieldAtoms.map((fieldAtom) => fieldAtom.contentElement);
     }
     return [atom.contentElement];
@@ -163,8 +175,11 @@ function getInsertableAtomContentElements(atom) {
  * Clone a source run and replace its non-rPr children with atom content.
  *
  * This keeps run-level formatting while allowing atom-level fragment insertion.
+ *
+ * @param filterRun - When provided, only include content elements belonging
+ *   to this source run (for multi-run collapsed field replay).
  */
-function cloneRunWithAtomContent(sourceRun, atom) {
+function cloneRunWithAtomContent(sourceRun, atom, filterRun) {
     const clonedRun = sourceRun.cloneNode(true);
     const retainedChildren = [];
     for (const child of childElements(clonedRun)) {
@@ -179,7 +194,7 @@ function cloneRunWithAtomContent(sourceRun, atom) {
     for (const child of retainedChildren) {
         clonedRun.appendChild(child);
     }
-    for (const contentElement of getInsertableAtomContentElements(atom)) {
+    for (const contentElement of getInsertableAtomContentElements(atom, filterRun)) {
         const fragment = contentElement.cloneNode(true);
         clonedRun.appendChild(fragment);
     }
@@ -391,12 +406,14 @@ function cloneUnemittedSourceBookmarkMarkers(sourceRun, targetParagraph, state, 
     }
     return clones;
 }
-function prependMarkersToWrapper(wrapper, markers) {
-    for (let i = markers.length - 1; i >= 0; i--) {
-        const marker = markers[i];
+function insertMarkersBeforeWrapper(wrapper, markers) {
+    const parent = wrapper.parentNode;
+    if (!parent)
+        return;
+    for (const marker of markers) {
         if (!marker)
             continue;
-        wrapper.insertBefore(marker, wrapper.firstChild);
+        parent.insertBefore(marker, wrapper);
     }
 }
 function filterEquivalentBookmarkMarkers(markers, targetNode, context) {
@@ -517,8 +534,17 @@ function addParagraphMarkRevisionMarker(paragraph, markerTag, author, dateStr, s
     let rPr = findChildByTagName(pPr, 'w:rPr');
     if (!rPr) {
         rPr = createEl('w:rPr');
-        // Keep existing pPr children order stable; rPr commonly appears after spacing/jc.
-        pPr.appendChild(rPr);
+        // CT_PPr ordering: ... base props ..., w:rPr, w:sectPr?, w:pPrChange?
+        // Insert rPr in schema-correct position (before sectPr/pPrChange).
+        const sectPr = findChildByTagName(pPr, 'w:sectPr');
+        const pPrChange = findChildByTagName(pPr, 'w:pPrChange');
+        const insertBefore = sectPr ?? pPrChange ?? null;
+        if (insertBefore) {
+            pPr.insertBefore(rPr, insertBefore);
+        }
+        else {
+            pPr.appendChild(rPr);
+        }
     }
     // Avoid duplicating markers.
     if (findChildByTagName(rPr, markerTag))
@@ -587,12 +613,6 @@ export function insertDeletedRun(deletedAtom, insertAfterRun, targetParagraph, a
     if (!sourceRun) {
         return null;
     }
-    // Clone only the atom fragment while preserving run-level formatting.
-    // For collapsed fields, replay the original field sequence rather than
-    // the synthetic collapsed w:t placeholder.
-    const clonedRun = cloneRunWithAtomContent(sourceRun, deletedAtom);
-    // Convert w:t to w:delText
-    convertToDelText(clonedRun);
     // Create w:del wrapper
     const id = allocateRevisionId(state);
     const del = createEl('w:del', {
@@ -600,8 +620,22 @@ export function insertDeletedRun(deletedAtom, insertAfterRun, targetParagraph, a
         'w:author': author,
         'w:date': dateStr,
     });
-    // Add cloned run as child of del
-    del.appendChild(clonedRun);
+    // For collapsed field atoms, replay one cloned run per original source run
+    // to preserve multi-run field structure. Without this, all field elements
+    // get packed into a single run, breaking Word's field parsing.
+    const runs = getAtomRuns(deletedAtom);
+    if (runs.length > 1) {
+        for (const run of runs) {
+            const clonedRun = cloneRunWithAtomContent(run, deletedAtom, run);
+            convertToDelText(clonedRun);
+            del.appendChild(clonedRun);
+        }
+    }
+    else {
+        const clonedRun = cloneRunWithAtomContent(sourceRun, deletedAtom);
+        convertToDelText(clonedRun);
+        del.appendChild(clonedRun);
+    }
     // Insert at correct position
     if (insertAfterRun) {
         insertAfterElement(insertAfterRun, del);
@@ -618,7 +652,7 @@ export function insertDeletedRun(deletedAtom, insertAfterRun, targetParagraph, a
     }
     const sourceMarkers = cloneUnemittedSourceBookmarkMarkers(sourceRun, targetParagraph, state, context);
     if (sourceMarkers.length > 0)
-        prependMarkersToWrapper(del, sourceMarkers);
+        insertMarkersBeforeWrapper(del, sourceMarkers);
     return del;
 }
 /**
@@ -643,12 +677,21 @@ export function insertMoveFromRun(atom, moveName, insertAfterRun, targetParagrap
     if (!sourceRun) {
         return null;
     }
-    // Clone only the atom fragment while preserving run-level formatting.
-    // For collapsed fields, replay the original field sequence rather than
-    // the synthetic collapsed w:t placeholder.
-    const clonedRun = cloneRunWithAtomContent(sourceRun, atom);
-    // Convert w:t to w:delText (moved-from content appears as deleted)
-    convertToDelText(clonedRun);
+    // For collapsed field atoms, replay one cloned run per original source run.
+    const runs = getAtomRuns(atom);
+    const clonedRuns = [];
+    if (runs.length > 1) {
+        for (const run of runs) {
+            const clonedRun = cloneRunWithAtomContent(run, atom, run);
+            convertToDelText(clonedRun);
+            clonedRuns.push(clonedRun);
+        }
+    }
+    else {
+        const clonedRun = cloneRunWithAtomContent(sourceRun, atom);
+        convertToDelText(clonedRun);
+        clonedRuns.push(clonedRun);
+    }
     // Get or allocate move range IDs
     const ids = getMoveRangeIds(state, moveName);
     const moveId = allocateRevisionId(state);
@@ -669,8 +712,10 @@ export function insertMoveFromRun(atom, moveName, insertAfterRun, targetParagrap
     const rangeEnd = createEl('w:moveFromRangeEnd', {
         'w:id': String(ids.sourceRangeId),
     });
-    // Add cloned run as child of moveFrom
-    moveFrom.appendChild(clonedRun);
+    // Add cloned run(s) as children of moveFrom
+    for (const clonedRun of clonedRuns) {
+        moveFrom.appendChild(clonedRun);
+    }
     // Insert at correct position: rangeStart -> moveFrom(run) -> rangeEnd
     if (insertAfterRun) {
         insertAfterElement(insertAfterRun, rangeStart);
@@ -693,7 +738,7 @@ export function insertMoveFromRun(atom, moveName, insertAfterRun, targetParagrap
     }
     const sourceMarkers = cloneUnemittedSourceBookmarkMarkers(sourceRun, targetParagraph, state, context);
     if (sourceMarkers.length > 0)
-        prependMarkersToWrapper(moveFrom, sourceMarkers);
+        insertMarkersBeforeWrapper(moveFrom, sourceMarkers);
     return moveFrom;
 }
 /**
@@ -846,15 +891,78 @@ export function addFormatChange(run, oldRunProperties, author, dateStr, state) {
         'w:author': author,
         'w:date': dateStr,
     });
-    // Clone old properties as children of rPrChange
+    // Clone old properties into a w:rPr wrapper inside rPrChange (OOXML spec requires
+    // rPrChange to contain a single w:rPr child holding the previous formatting).
     if (oldRunProperties) {
+        const oldRPr = createEl('w:rPr');
         for (const child of childElements(oldRunProperties)) {
             const cloned = child.cloneNode(true);
-            rPrChange.appendChild(cloned);
+            oldRPr.appendChild(cloned);
         }
+        rPrChange.appendChild(oldRPr);
     }
     // Add rPrChange to rPr
     rPr.appendChild(rPrChange);
+}
+/**
+ * Add a paragraph property change element (w:pPrChange) to record the "before"
+ * state of paragraph properties.  This is needed for Google Docs to display
+ * inserted paragraphs as tracked changes.
+ *
+ * The child `<w:pPr>` inside `w:pPrChange` must conform to CT_PPrBase — it
+ * MUST NOT contain w:rPr, w:sectPr, or w:pPrChange.
+ *
+ * @param paragraph - The w:p element
+ * @param author - Author name
+ * @param dateStr - Formatted date
+ * @param state - Revision ID state
+ */
+export function addParagraphPropertyChange(paragraph, author, dateStr, state) {
+    let pPr = findChildByTagName(paragraph, 'w:pPr');
+    if (!pPr) {
+        pPr = createEl('w:pPr');
+        paragraph.insertBefore(pPr, paragraph.firstChild);
+    }
+    // Idempotent — don't add a second pPrChange.
+    if (findChildByTagName(pPr, 'w:pPrChange'))
+        return;
+    const id = allocateRevisionId(state);
+    const pPrChange = createEl('w:pPrChange', {
+        'w:id': String(id),
+        'w:author': author,
+        'w:date': dateStr,
+    });
+    // Clone current pPr content as "before" snapshot.
+    // pPrChange child pPr must be CT_PPrBase — exclude rPr, rPrChange, sectPr, pPrChange.
+    const EXCLUDED = new Set(['w:rPr', 'w:rPrChange', 'w:pPrChange', 'w:sectPr']);
+    const oldPPr = createEl('w:pPr');
+    for (const child of childElements(pPr)) {
+        if (!EXCLUDED.has(child.tagName))
+            oldPPr.appendChild(child.cloneNode(true));
+    }
+    pPrChange.appendChild(oldPPr);
+    pPr.appendChild(pPrChange); // pPrChange goes last in pPr per schema
+}
+/**
+ * Tag names that represent visible content inside a w:r element.
+ * A run containing at least one of these is considered substantive (non-empty).
+ */
+const RUN_VISIBLE_CONTENT_TAGS = new Set([
+    'w:t', 'w:tab', 'w:br', 'w:cr', 'w:drawing', 'w:object', 'w:pict',
+    'w:sym', 'w:fldChar', 'w:instrText',
+]);
+/**
+ * Returns true if a w:r element contains at least one visible content child.
+ * Empty runs (containing only w:rPr or nothing) return false.
+ */
+export function runHasVisibleContent(run) {
+    for (let i = 0; i < run.childNodes.length; i++) {
+        const child = run.childNodes[i];
+        if (child.nodeType === 1 && RUN_VISIBLE_CONTENT_TAGS.has(child.tagName)) {
+            return true;
+        }
+    }
+    return false;
 }
 /**
  * Wrap an inserted empty paragraph with <w:ins>.
@@ -867,9 +975,42 @@ export function addFormatChange(run, oldRunProperties, author, dateStr, state) {
  * @param state - Revision ID state
  */
 export function wrapParagraphAsInserted(paragraph, author, dateStr, state) {
-    // IMPORTANT: <w:ins> is not a container for <w:p> in WordprocessingML.
-    // For paragraph insertions (including empty paragraphs), we encode a paragraph-mark
-    // revision marker in w:pPr/w:rPr instead of wrapping the paragraph element.
+    // For paragraphs with substantive run content: skip the paragraph-mark marker.
+    // Google Docs ignores (or actively hides) w:ins-wrapped runs when they
+    // coexist with PPR-INS markers. Since individual runs are already wrapped
+    // with <w:ins>, the paragraph-level marker is redundant for non-empty
+    // paragraphs and omitting it maximises cross-application compatibility.
+    //
+    // For empty paragraphs (no runs, or only empty w:r shells): we MUST add
+    // the PPR-INS marker so that Reject All removes the paragraph. Without it,
+    // the empty paragraph shell survives reject, causing round-trip safety failures.
+    //
+    // Important: empty <w:r> elements (no w:t, w:tab, w:br, etc.) should NOT
+    // count as substantive content. They are empty shells that don't produce
+    // visible output and should not prevent PPR-INS from being added.
+    let hasSubstantiveContent = false;
+    for (const child of childElements(paragraph)) {
+        if (child.tagName === 'w:ins') {
+            // Check if the w:ins wrapper contains runs with visible content
+            for (let i = 0; i < child.childNodes.length; i++) {
+                const insChild = child.childNodes[i];
+                if (insChild.nodeType === 1 && insChild.tagName === 'w:r' &&
+                    runHasVisibleContent(insChild)) {
+                    hasSubstantiveContent = true;
+                    break;
+                }
+            }
+            if (hasSubstantiveContent)
+                break;
+        }
+        else if (child.tagName === 'w:r' && runHasVisibleContent(child)) {
+            hasSubstantiveContent = true;
+            break;
+        }
+    }
+    if (hasSubstantiveContent) {
+        return true;
+    }
     addParagraphMarkRevisionMarker(paragraph, 'w:ins', author, dateStr, state);
     return true;
 }
@@ -887,6 +1028,271 @@ export function wrapParagraphAsDeleted(paragraph, author, dateStr, state) {
     addParagraphMarkRevisionMarker(paragraph, 'w:del', author, dateStr, state);
     return true;
 }
+// Field-character tag names that should not be split.
+const FIELD_CHAR_TAG_NAMES = new Set([
+    'w:fldChar', 'w:instrText', 'w:delInstrText',
+]);
+/**
+ * Visible text length for an atom's contentElement.
+ *
+ * Atom contentElements created by the word-split atomizer use prefixed tagNames
+ * (e.g. `"w:t"`) without namespace URIs, so we match on `tagName` rather than
+ * `localName`/`namespaceURI` (which is what the DOM-level `visibleLengthForEl` does).
+ */
+function atomContentVisibleLength(el) {
+    const tag = el.tagName;
+    if (tag === 'w:t')
+        return (el.textContent ?? '').length;
+    if (tag === 'w:tab' || tag === 'w:br')
+        return 1;
+    // w:cr is treated as zero-length (consistent with visibleLengthForEl which also returns 0).
+    return 0;
+}
+/**
+ * Pre-split revised-tree runs that contain atoms with mixed correlation statuses.
+ *
+ * Without this, `handleInserted` wraps the entire run with `<w:ins>`, destroying
+ * Equal content in the same run. After splitting, each fragment is a separate
+ * `<w:r>` and existing per-status handlers work without modification.
+ *
+ * Safety: wrapped in try/catch per run group. If any DOM operation fails, the
+ * run is skipped and the existing fallback-to-rebuild architecture handles it.
+ */
+export function preSplitMixedStatusRuns(mergedAtoms) {
+    // Group atoms by their sourceRunElement (revised-tree runs only).
+    const runGroups = new Map();
+    for (const atom of mergedAtoms) {
+        if (!atom.sourceRunElement)
+            continue;
+        // Skip original-tree atoms — Deleted/MovedSource runs are cloned, not wrapped.
+        if (atom.correlationStatus === CorrelationStatus.Deleted ||
+            atom.correlationStatus === CorrelationStatus.MovedSource)
+            continue;
+        // Skip collapsed field atoms (multi-run field sequences).
+        if (atom.collapsedFieldAtoms && atom.collapsedFieldAtoms.length > 0)
+            continue;
+        // Skip field character elements — semantically fragile.
+        if (FIELD_CHAR_TAG_NAMES.has(atom.contentElement.tagName))
+            continue;
+        const group = runGroups.get(atom.sourceRunElement);
+        if (group) {
+            group.push(atom);
+        }
+        else {
+            runGroups.set(atom.sourceRunElement, [atom]);
+        }
+    }
+    for (const [run, atoms] of runGroups) {
+        // Early check: skip single-status runs before any DOM work.
+        const statuses = new Set(atoms.map((a) => a.correlationStatus));
+        if (statuses.size <= 1)
+            continue;
+        // Guard: skip runs already detached from the tree.
+        if (!run.parentNode)
+            continue;
+        try {
+            // Compute the run's actual visible length via DOM traversal.
+            const contentEls = getDirectContentElements(run);
+            let runVisibleLength = 0;
+            for (const cel of contentEls) {
+                runVisibleLength += visibleLengthForEl(cel);
+            }
+            // Cross-run safety: if sum of atom lengths exceeds run visible length,
+            // this group contains a cross-run merged atom (passes 3/4). Skip it.
+            let sumAtomLengths = 0;
+            for (const atom of atoms) {
+                sumAtomLengths += atomContentVisibleLength(atom.contentElement);
+            }
+            if (sumAtomLengths > runVisibleLength)
+                continue;
+            const spans = [];
+            let offset = 0;
+            for (const atom of atoms) {
+                const len = atomContentVisibleLength(atom.contentElement);
+                const lastSpan = spans[spans.length - 1];
+                if (lastSpan && lastSpan.status === atom.correlationStatus) {
+                    lastSpan.length += len;
+                    lastSpan.atoms.push(atom);
+                }
+                else {
+                    spans.push({
+                        status: atom.correlationStatus,
+                        startOffset: offset,
+                        length: len,
+                        atoms: [atom],
+                    });
+                }
+                offset += len;
+            }
+            // If only one span after grouping, no split needed.
+            if (spans.length <= 1)
+                continue;
+            // Collect split points: startOffset of each span after the first.
+            const splitPoints = [];
+            for (let i = 1; i < spans.length; i++) {
+                const pt = spans[i].startOffset;
+                // Filter out degenerate split points at boundaries.
+                if (pt > 0 && pt < runVisibleLength) {
+                    splitPoints.push(pt);
+                }
+            }
+            if (splitPoints.length === 0)
+                continue;
+            // Split DOM run right-to-left to keep earlier offsets valid.
+            const rightFragments = [];
+            for (let i = splitPoints.length - 1; i >= 0; i--) {
+                const { right } = splitRunAtVisibleOffset(run, splitPoints[i]);
+                rightFragments.push(right);
+            }
+            // Map fragments: [originalRun (leftmost), ...reverse(rightFragments)]
+            // After R-to-L splits, rightFragments are in reverse document order.
+            const fragments = [run, ...rightFragments.reverse()];
+            // Update atom sourceRunElement pointers to the correct fragment.
+            // Each span maps to one fragment in order.
+            for (let i = 0; i < spans.length; i++) {
+                const fragment = fragments[i];
+                if (!fragment)
+                    continue;
+                for (const atom of spans[i].atoms) {
+                    atom.sourceRunElement = fragment;
+                }
+            }
+        }
+        catch (_err) {
+            // DOM operation failed — skip this run. The existing fallback-to-rebuild
+            // architecture will handle it if the overall safety check fails.
+            warn('preSplitMixedStatusRuns', `Skipping run split due to error: ${_err}`);
+        }
+    }
+}
+/**
+ * Pre-split revised-tree runs where word-split Equal atoms from the same run
+ * are interleaved with Deleted/MovedSource atoms in the merged atom list.
+ *
+ * `preSplitMixedStatusRuns` handles the case where a single run contains atoms
+ * with DIFFERENT statuses (e.g., some Equal and some Inserted). But it cannot
+ * handle the case where ALL atoms from a run are Equal yet Deleted atoms (from
+ * the original tree) are interspersed between them in the merged list.
+ *
+ * Without this split, `handleEqual` sees all Equal atoms pointing to the same
+ * run and skips position advancement (the `lastRevisedRunAnchor` optimization).
+ * Subsequent `handleDeleted` calls then insert deleted content at the wrong
+ * position because the cursor never advanced past the shared run.
+ *
+ * This function detects interleaved sequences and splits the DOM run so each
+ * contiguous group of Equal atoms gets its own run fragment. The handlers then
+ * advance the cursor correctly across fragments.
+ */
+export function preSplitInterleavedWordRuns(mergedAtoms) {
+    const runToGroups = new Map();
+    // Track cumulative offset per run (sums visible lengths of atoms seen so far)
+    const runToOffset = new Map();
+    let lastRevisedRun = null;
+    for (const atom of mergedAtoms) {
+        // Skip atoms from the original tree (Deleted/MovedSource have runs in the
+        // original tree, not the revised tree).
+        if (atom.correlationStatus === CorrelationStatus.Deleted ||
+            atom.correlationStatus === CorrelationStatus.MovedSource) {
+            // A Deleted/MovedSource atom between Equal atoms from the same run
+            // creates an interleaving gap. Mark this by clearing lastRevisedRun
+            // so the next Equal atom from the same run starts a new group.
+            lastRevisedRun = null;
+            continue;
+        }
+        const run = atom.sourceRunElement;
+        if (!run)
+            continue;
+        // Skip collapsed field atoms — multi-run field sequences.
+        if (atom.collapsedFieldAtoms && atom.collapsedFieldAtoms.length > 0)
+            continue;
+        // Skip field character elements — semantically fragile.
+        if (FIELD_CHAR_TAG_NAMES.has(atom.contentElement.tagName))
+            continue;
+        const atomLen = atomContentVisibleLength(atom.contentElement);
+        const currentOffset = runToOffset.get(run) ?? 0;
+        runToOffset.set(run, currentOffset + atomLen);
+        const groups = runToGroups.get(run);
+        if (!groups) {
+            // First time seeing this run — create initial group.
+            runToGroups.set(run, [{
+                    startOffset: currentOffset,
+                    length: atomLen,
+                    atoms: [atom],
+                }]);
+            lastRevisedRun = run;
+            continue;
+        }
+        if (lastRevisedRun === run) {
+            // Contiguous with the previous atom from the same run — extend group.
+            const lastGroup = groups[groups.length - 1];
+            lastGroup.length += atomLen;
+            lastGroup.atoms.push(atom);
+        }
+        else {
+            // Gap detected (a Deleted/MovedSource atom intervened). Start new group.
+            groups.push({
+                startOffset: currentOffset,
+                length: atomLen,
+                atoms: [atom],
+            });
+        }
+        lastRevisedRun = run;
+    }
+    // Now split runs that have more than one group.
+    for (const [run, groups] of runToGroups) {
+        if (groups.length <= 1)
+            continue;
+        // Guard: skip runs already detached from the tree.
+        if (!run.parentNode)
+            continue;
+        try {
+            // Compute actual visible length of the DOM run.
+            const contentEls = getDirectContentElements(run);
+            let runVisibleLength = 0;
+            for (const cel of contentEls) {
+                runVisibleLength += visibleLengthForEl(cel);
+            }
+            // Safety: if the sum of atom lengths exceeds run visible length,
+            // something is off (cross-run atoms, etc.). Skip.
+            let sumAtomLengths = 0;
+            for (const group of groups) {
+                sumAtomLengths += group.length;
+            }
+            if (sumAtomLengths > runVisibleLength)
+                continue;
+            // Collect split points: the startOffset of each group after the first.
+            const splitPoints = [];
+            for (let i = 1; i < groups.length; i++) {
+                const pt = groups[i].startOffset;
+                if (pt > 0 && pt < runVisibleLength) {
+                    splitPoints.push(pt);
+                }
+            }
+            if (splitPoints.length === 0)
+                continue;
+            // Split DOM run right-to-left to keep earlier offsets valid.
+            const rightFragments = [];
+            for (let i = splitPoints.length - 1; i >= 0; i--) {
+                const { right } = splitRunAtVisibleOffset(run, splitPoints[i]);
+                rightFragments.push(right);
+            }
+            // Map fragments: [originalRun (leftmost), ...reverse(rightFragments)]
+            const fragments = [run, ...rightFragments.reverse()];
+            // Update atom sourceRunElement pointers to the correct fragment.
+            for (let i = 0; i < groups.length; i++) {
+                const fragment = fragments[i];
+                if (!fragment)
+                    continue;
+                for (const atom of groups[i].atoms) {
+                    atom.sourceRunElement = fragment;
+                }
+            }
+        }
+        catch (_err) {
+            warn('preSplitInterleavedWordRuns', `Skipping run split due to error: ${_err}`);
+        }
+    }
+}
 /**
  * Modify the revised document's AST in-place based on comparison results.
  *
@@ -903,6 +1309,8 @@ export function modifyRevisedDocument(revisedRoot, originalAtoms, revisedAtoms, 
     // Populate these once up-front so handlers don't have to rescan ancestor chains.
     attachSourceElementPointers(originalAtoms);
     attachSourceElementPointers(revisedAtoms);
+    preSplitMixedStatusRuns(mergedAtoms);
+    preSplitInterleavedWordRuns(mergedAtoms);
     // Process atoms and apply track changes to the revised tree
     // Group atoms by paragraph for efficient processing
     const ctx = processAtoms(mergedAtoms, originalAtoms, revisedAtoms, author, dateStr, state, revisedRoot);
@@ -911,8 +1319,19 @@ export function modifyRevisedDocument(revisedRoot, originalAtoms, revisedAtoms, 
     // - Reject All should remove inserted paragraphs entirely
     // - Accept All should remove deleted paragraphs entirely
     applyWholeParagraphRevisionMarkers(mergedAtoms, ctx);
+    // Suppress field-adjacent no-op del/ins pairs (issue #42, Bug 1).
+    // Must run BEFORE merge — after merge, pairwise comparison is impossible.
+    suppressNoOpChangePairs(ctx.body);
     // Merge adjacent <w:ins>/<w:del> siblings to reduce revision fragmentation.
     mergeAdjacentTrackChangeSiblings(ctx.body);
+    // Coalesce del/ins pair chains across whitespace (issue #42, Bug 2b).
+    // Merges [del:A][ins:X][ws][del:B][ins:Y] → [del:A ws B][ins:X ws Y]
+    coalesceDelInsPairChains(ctx.body);
+    // Merge whitespace-bridged track change siblings (issue #42, Bug 2).
+    // Runs AFTER coalesce — handles ins+ws+ins and moveTo+ws+moveTo bridging.
+    mergeWhitespaceBridgedTrackChanges(ctx.body);
+    // Apply strict post-render consumer compatibility pass
+    enforceConsumerCompatibility(revisedRoot, () => allocateRevisionId(state));
     // Serialize the modified tree
     return new XMLSerializer().serializeToString(revisedRoot.ownerDocument || revisedRoot);
 }
@@ -935,8 +1354,15 @@ function handleInserted(atom, ctx) {
         }
         const endRun = getAtomRunAtBoundary(atom, 'end') ?? runs[runs.length - 1];
         const insertionPoint = getRunInsertionAnchor(endRun);
+        if (insertionPoint === ctx.lastRevisedRunAnchor) {
+            return {
+                newLastParagraph: atom.sourceParagraphElement ?? ctx.lastProcessedParagraph,
+                newLastParagraphIndex: atom.paragraphIndex,
+            };
+        }
         return {
             newLastRun: insertionPoint,
+            newLastRevisedRunAnchor: insertionPoint,
             newLastParagraph: atom.sourceParagraphElement ?? ctx.lastProcessedParagraph,
             newLastParagraphIndex: atom.paragraphIndex,
         };
@@ -1183,8 +1609,15 @@ function handleMovedDestination(atom, ctx) {
         }
         const endRun = getAtomRunAtBoundary(atom, 'end') ?? runs[runs.length - 1];
         const insertionPoint = getRunInsertionAnchor(endRun);
+        if (insertionPoint === ctx.lastRevisedRunAnchor) {
+            return {
+                newLastParagraph: atom.sourceParagraphElement ?? ctx.lastProcessedParagraph,
+                newLastParagraphIndex: atom.paragraphIndex,
+            };
+        }
         return {
             newLastRun: insertionPoint,
+            newLastRevisedRunAnchor: insertionPoint,
             newLastParagraph: atom.sourceParagraphElement ?? ctx.lastProcessedParagraph,
             newLastParagraphIndex: atom.paragraphIndex,
         };
@@ -1199,9 +1632,17 @@ function handleFormatChanged(atom, ctx) {
     const run = getAtomRunAtBoundary(atom, 'start');
     if (run && atom.formatChange?.oldRunProperties) {
         addFormatChange(run, atom.formatChange.oldRunProperties, ctx.author, ctx.dateStr, ctx.state);
-        const insertionPoint = getRunInsertionAnchor(getAtomRunAtBoundary(atom, 'end') ?? run);
+        const endRun = getAtomRunAtBoundary(atom, 'end') ?? run;
+        const insertionPoint = getRunInsertionAnchor(endRun);
+        if (insertionPoint === ctx.lastRevisedRunAnchor) {
+            return {
+                newLastParagraph: atom.sourceParagraphElement ?? ctx.lastProcessedParagraph,
+                newLastParagraphIndex: atom.paragraphIndex,
+            };
+        }
         return {
             newLastRun: insertionPoint,
+            newLastRevisedRunAnchor: insertionPoint,
             newLastParagraph: atom.sourceParagraphElement ?? ctx.lastProcessedParagraph,
             newLastParagraphIndex: atom.paragraphIndex,
         };
@@ -1227,8 +1668,17 @@ function handleEqual(atom, ctx) {
     const run = getAtomRunAtBoundary(atom, 'end');
     if (run) {
         const insertionPoint = getRunInsertionAnchor(run);
+        // BUG FIX: Don't move the insertion point backwards if we are still in the same run.
+        // This prevents Deleted atoms inserted between words of the same run from being reversed.
+        if (insertionPoint === ctx.lastRevisedRunAnchor) {
+            return {
+                newLastParagraph: atom.sourceParagraphElement ?? ctx.lastProcessedParagraph,
+                newLastParagraphIndex: atom.paragraphIndex,
+            };
+        }
         return {
             newLastRun: insertionPoint,
+            newLastRevisedRunAnchor: insertionPoint,
             newLastParagraph: atom.sourceParagraphElement ?? ctx.lastProcessedParagraph,
             newLastParagraphIndex: atom.paragraphIndex,
         };
@@ -1245,6 +1695,7 @@ function handleEqual(atom, ctx) {
         // Setting newLastRun to null explicitly resets it.
         return {
             newLastRun: null, // Reset - we're in a new paragraph with no runs yet
+            newLastRevisedRunAnchor: null,
             // Use the revised paragraph (not the original's sourceParagraphElement!)
             newLastParagraph: revisedParagraph ?? ctx.lastProcessedParagraph,
             newLastParagraphIndex: atom.paragraphIndex,
@@ -1265,6 +1716,54 @@ const ATOM_HANDLERS = {
     [CorrelationStatus.Equal]: handleEqual,
     [CorrelationStatus.Unknown]: handleEqual,
 };
+const DELETION_LIKE_STATUSES = new Set([
+    CorrelationStatus.Deleted,
+    CorrelationStatus.MovedSource,
+]);
+const INSERTION_LIKE_STATUSES = new Set([
+    CorrelationStatus.Inserted,
+    CorrelationStatus.MovedDestination,
+]);
+/**
+ * Reorder merged atoms so that within each contiguous block of non-equal atoms,
+ * all deletion-like atoms come before all insertion-like atoms.
+ *
+ * This produces grouped tracked changes ("<del>old words</del><ins>new words</ins>")
+ * instead of alternating word-by-word pairs ("<del>old1</del><ins>new1</ins><del>old2</del>...").
+ */
+export function groupDeletionsBeforeInsertions(atoms) {
+    const result = [];
+    let i = 0;
+    while (i < atoms.length) {
+        const atom = atoms[i];
+        const status = atom.correlationStatus;
+        // Pass through equal/format-changed/unknown atoms unchanged
+        if (!DELETION_LIKE_STATUSES.has(status) && !INSERTION_LIKE_STATUSES.has(status)) {
+            result.push(atom);
+            i++;
+            continue;
+        }
+        // Collect a contiguous block of change atoms (deletions + insertions)
+        const deletions = [];
+        const insertions = [];
+        while (i < atoms.length) {
+            const s = atoms[i].correlationStatus;
+            if (DELETION_LIKE_STATUSES.has(s)) {
+                deletions.push(atoms[i]);
+            }
+            else if (INSERTION_LIKE_STATUSES.has(s)) {
+                insertions.push(atoms[i]);
+            }
+            else {
+                break;
+            }
+            i++;
+        }
+        // Emit all deletions first, then all insertions
+        result.push(...deletions, ...insertions);
+    }
+    return result;
+}
 /**
  * Process atoms and apply track changes to the revised AST.
  *
@@ -1283,6 +1782,7 @@ function processAtoms(mergedAtoms, _originalAtoms, revisedAtoms, author, dateStr
             state,
             body: revisedRoot,
             lastProcessedRun: null,
+            lastRevisedRunAnchor: null,
             lastProcessedParagraph: null,
             lastParagraphIndex: undefined,
             unifiedParaToElement: new Map(),
@@ -1330,6 +1830,7 @@ function processAtoms(mergedAtoms, _originalAtoms, revisedAtoms, author, dateStr
         state,
         body,
         lastProcessedRun: null,
+        lastRevisedRunAnchor: null,
         lastProcessedParagraph: null,
         lastParagraphIndex: undefined,
         unifiedParaToElement,
@@ -1339,12 +1840,19 @@ function processAtoms(mergedAtoms, _originalAtoms, revisedAtoms, author, dateStr
         createdParagraphLastRun: new Map(),
         createdParagraphTrailingBookmarks: new Map(),
     };
-    for (const atom of mergedAtoms) {
+    // Reorder atoms so consecutive deletions precede consecutive insertions.
+    // This produces grouped tracked changes (all <w:del> then all <w:ins>)
+    // instead of alternating word-by-word del/ins pairs.
+    const reorderedAtoms = groupDeletionsBeforeInsertions(mergedAtoms);
+    for (const atom of reorderedAtoms) {
         const handler = ATOM_HANDLERS[atom.correlationStatus];
         const result = handler(atom, ctx);
         // Update position tracking based on handler result
         if (result.newLastRun !== undefined) {
             ctx.lastProcessedRun = result.newLastRun;
+        }
+        if (result.newLastRevisedRunAnchor !== undefined) {
+            ctx.lastRevisedRunAnchor = result.newLastRevisedRunAnchor;
         }
         if (result.newLastParagraph !== undefined) {
             ctx.lastProcessedParagraph = result.newLastParagraph;
@@ -1449,6 +1957,315 @@ function mergeAdjacentTrackChangeSiblings(root) {
                 continue;
             }
             i++;
+        }
+        // Recurse into current children (re-query after mutations)
+        for (const child of childElements(node)) {
+            traverse(child);
+        }
+    }
+    traverse(root);
+}
+// =============================================================================
+// Bug 1: Suppress field-adjacent false no-op del/ins pairs (issue #42)
+// =============================================================================
+/**
+ * Build a normalized content signature for a run's non-rPr children.
+ * On the del side, maps w:delText → w:t and w:delInstrText → w:instrText
+ * so that content from del wrappers can be compared to ins wrappers.
+ */
+function normalizeRunContentSignature(run, isDelSide) {
+    const parts = [];
+    for (let i = 0; i < run.childNodes.length; i++) {
+        const child = run.childNodes[i];
+        if (child.nodeType !== 1)
+            continue;
+        const el = child;
+        if (el.tagName === 'w:rPr')
+            continue;
+        let tag = el.tagName;
+        if (isDelSide) {
+            if (tag === 'w:delText')
+                tag = 'w:t';
+            else if (tag === 'w:delInstrText')
+                tag = 'w:instrText';
+        }
+        const text = el.textContent ?? '';
+        parts.push(`<${tag}>${text}</${tag}>`);
+    }
+    return parts.join('');
+}
+/**
+ * Check if an adjacent w:del + w:ins pair is a no-op (identical text and formatting).
+ * Both wrappers must contain the same number of runs with matching rPr and content.
+ */
+export function isNoOpPair(del, ins) {
+    const delRuns = childElements(del).filter(c => c.tagName === 'w:r');
+    const insRuns = childElements(ins).filter(c => c.tagName === 'w:r');
+    if (delRuns.length !== insRuns.length)
+        return false;
+    if (delRuns.length === 0)
+        return false;
+    for (let i = 0; i < delRuns.length; i++) {
+        const delRun = delRuns[i];
+        const insRun = insRuns[i];
+        // Compare formatting via canonical rPr comparison
+        const delRPr = findChildByTagName(delRun, 'w:rPr');
+        const insRPr = findChildByTagName(insRun, 'w:rPr');
+        if (!areRunPropertiesEqual(delRPr ?? null, insRPr ?? null))
+            return false;
+        // Compare content structure (text, tabs, breaks, field chars, etc.)
+        const delSig = normalizeRunContentSignature(delRun, true);
+        const insSig = normalizeRunContentSignature(insRun, false);
+        if (delSig !== insSig)
+            return false;
+    }
+    return true;
+}
+/**
+ * Suppress no-op del/ins pairs — adjacent w:del + w:ins wrappers where the
+ * content and formatting are identical. These arise from field-adjacent atoms
+ * that are false-positive changes.
+ *
+ * When a no-op is detected, both wrappers are unwrapped, leaving the ins-side
+ * runs as plain (non-tracked) children. The del-side runs are removed.
+ */
+export function suppressNoOpChangePairs(root) {
+    function traverse(node) {
+        const children = childElements(node);
+        for (let i = 0; i < children.length - 1;) {
+            const a = children[i];
+            const b = children[i + 1];
+            if (a.tagName === 'w:del' && b.tagName === 'w:ins' && isNoOpPair(a, b)) {
+                // Remove the del wrapper and its content entirely
+                node.removeChild(a);
+                // Unwrap the ins wrapper — promote its children to the parent
+                unwrapElement(b);
+                // Re-snapshot children after mutation
+                children.splice(i, 2, ...childElements(node).slice(i));
+                // Don't increment — recheck from same position
+                continue;
+            }
+            i++;
+        }
+        // Recurse into current children (re-query after mutations)
+        for (const child of childElements(node)) {
+            traverse(child);
+        }
+    }
+    traverse(root);
+}
+// =============================================================================
+// Bug 2: Merge whitespace-bridged track change siblings (issue #42)
+// =============================================================================
+/**
+ * Narrow whitespace predicate for bridging: returns true only if a w:r element's
+ * visible children are exclusively w:t elements with whitespace-only text content.
+ * Excludes w:tab, w:br, w:cr which have layout significance.
+ */
+function isInlineWhitespaceOnlyRun(run) {
+    if (run.tagName !== 'w:r')
+        return false;
+    let hasVisibleChild = false;
+    for (let i = 0; i < run.childNodes.length; i++) {
+        const child = run.childNodes[i];
+        if (child.nodeType !== 1)
+            continue;
+        const el = child;
+        if (el.tagName === 'w:rPr')
+            continue;
+        // Only w:t with whitespace-only text is allowed
+        if (el.tagName === 'w:t') {
+            const text = el.textContent ?? '';
+            if (text.length === 0 || !/^\s+$/.test(text))
+                return false;
+            hasVisibleChild = true;
+            continue;
+        }
+        // Any other visible element (w:tab, w:br, w:cr, w:fldChar, etc.) disqualifies
+        return false;
+    }
+    return hasVisibleChild;
+}
+/**
+ * Merge track-change wrappers (w:del or w:ins) that are separated by a
+ * whitespace-only run. This groups "word-by-word" tracked changes into
+ * contiguous blocks for cleaner presentation.
+ *
+ * For w:del: clones the whitespace run, converts w:t→w:delText, and absorbs
+ * both the whitespace and the second wrapper's children into the first wrapper.
+ *
+ * For w:ins: moves the whitespace run into the first wrapper, then absorbs
+ * the second wrapper's children.
+ *
+ * Both projections (Accept All, Reject All) remain correct because each
+ * wrapper independently contains the whitespace it needs.
+ */
+export function mergeWhitespaceBridgedTrackChanges(root) {
+    function traverse(node) {
+        const children = childElements(node);
+        for (let i = 0; i < children.length - 2;) {
+            const a = children[i];
+            const mid = children[i + 1];
+            const b = children[i + 2];
+            // Check: same track-change tag, same author/date, with whitespace-only run between.
+            // Only bridge w:ins and w:moveTo — bridging w:del is unsafe because the
+            // intervening whitespace is Equal content needed by the accept projection.
+            const bridgeableTags = new Set(['w:ins', 'w:moveTo']);
+            if (a.tagName === b.tagName &&
+                bridgeableTags.has(a.tagName) &&
+                a.getAttribute('w:author') === b.getAttribute('w:author') &&
+                a.getAttribute('w:date') === b.getAttribute('w:date') &&
+                isInlineWhitespaceOnlyRun(mid)) {
+                // Move the whitespace run into the first wrapper, then absorb second's children
+                a.appendChild(mid);
+                while (b.firstChild)
+                    a.appendChild(b.firstChild);
+                node.removeChild(b);
+                // mid was moved into a, b removed from parent — splice both from snapshot
+                children.splice(i + 1, 2);
+                // Don't increment — recheck a with new next sibling
+                continue;
+            }
+            i++;
+        }
+        // Recurse into current children (re-query after mutations)
+        for (const child of childElements(node)) {
+            traverse(child);
+        }
+    }
+    traverse(root);
+}
+// =============================================================================
+// Bug 2b: Coalesce del/ins pair chains across whitespace (issue #42)
+// =============================================================================
+/**
+ * Convert w:t → w:delText and w:instrText → w:delInstrText within a run,
+ * preserving xml:space attributes. Used for cloning whitespace runs into
+ * w:del wrappers during pair-chain coalescing.
+ */
+function convertRunTextToDelText(run) {
+    for (let i = 0; i < run.childNodes.length; i++) {
+        const child = run.childNodes[i];
+        if (child.nodeType !== 1)
+            continue;
+        const el = child;
+        if (el.tagName === 'w:t' || el.tagName === 'w:instrText') {
+            const newTag = el.tagName === 'w:t' ? 'w:delText' : 'w:delInstrText';
+            const newEl = createEl(newTag);
+            // Copy text content
+            while (el.firstChild)
+                newEl.appendChild(el.firstChild);
+            // Copy attributes (including xml:space="preserve")
+            for (let j = 0; j < el.attributes.length; j++) {
+                const attr = el.attributes[j];
+                newEl.setAttribute(attr.name, attr.value);
+            }
+            run.replaceChild(newEl, el);
+        }
+    }
+}
+/**
+ * Coalesce alternating del/ins pair chains separated by whitespace-only runs
+ * into single grouped del + ins wrappers.
+ *
+ * Pattern: [w:del, w:ins, ws-segment..., w:del, w:ins, ws-segment..., w:del, w:ins]
+ *
+ * For each whitespace segment between consecutive [del, ins] pairs:
+ * 1. Clone each ws-run → convert to delText → append to first del
+ * 2. Clone each ws-run → keep as w:t → append to first ins
+ * 3. Move nextDel's children into first del
+ * 4. Move nextIns's children into first ins
+ * 5. Remove original ws-runs, empty nextDel, empty nextIns from parent
+ *
+ * Safety invariants:
+ * - Only bridges when both del AND ins absorb the whitespace (both projections correct)
+ * - Incomplete tail [del, ins, ws, del] (no trailing ins) → stop chain, don't bridge
+ * - All wrappers in chain must share same w:author and w:date
+ */
+export function coalesceDelInsPairChains(root) {
+    function traverse(node) {
+        const children = childElements(node);
+        for (let i = 0; i < children.length - 1;) {
+            const firstDel = children[i];
+            const firstIns = children[i + 1];
+            // Must start with a [del, ins] pair
+            if (firstDel.tagName !== 'w:del' || firstIns.tagName !== 'w:ins') {
+                i++;
+                continue;
+            }
+            const author = firstDel.getAttribute('w:author');
+            const date = firstDel.getAttribute('w:date');
+            // All four must match author/date
+            if (firstIns.getAttribute('w:author') !== author ||
+                firstIns.getAttribute('w:date') !== date) {
+                i++;
+                continue;
+            }
+            // Try to extend the chain by absorbing subsequent [ws..., del, ins] triples
+            let cursor = i + 2; // position after firstIns
+            let chainExtended = false;
+            while (cursor < children.length) {
+                // Collect whitespace segment (1..N consecutive whitespace-only runs)
+                const wsStart = cursor;
+                while (cursor < children.length && isInlineWhitespaceOnlyRun(children[cursor])) {
+                    cursor++;
+                }
+                const wsEnd = cursor;
+                const wsCount = wsEnd - wsStart;
+                if (wsCount === 0)
+                    break; // No whitespace → end of chain
+                // Must have a complete [del, ins] pair after the whitespace
+                if (cursor + 1 >= children.length)
+                    break; // Not enough elements
+                const nextDel = children[cursor];
+                const nextIns = children[cursor + 1];
+                if (nextDel.tagName !== 'w:del' || nextIns.tagName !== 'w:ins')
+                    break;
+                // Author/date must match
+                if (nextDel.getAttribute('w:author') !== author ||
+                    nextDel.getAttribute('w:date') !== date ||
+                    nextIns.getAttribute('w:author') !== author ||
+                    nextIns.getAttribute('w:date') !== date)
+                    break;
+                // All conditions met — absorb this [ws..., del, ins] into the first pair
+                // 1. Clone whitespace runs into del (as delText) and ins (as w:t)
+                for (let w = wsStart; w < wsEnd; w++) {
+                    const wsRun = children[w];
+                    const delClone = wsRun.cloneNode(true);
+                    convertRunTextToDelText(delClone);
+                    firstDel.appendChild(delClone);
+                    const insClone = wsRun.cloneNode(true);
+                    firstIns.appendChild(insClone);
+                }
+                // 2. Move nextDel's children into firstDel
+                while (nextDel.firstChild)
+                    firstDel.appendChild(nextDel.firstChild);
+                // 3. Move nextIns's children into firstIns
+                while (nextIns.firstChild)
+                    firstIns.appendChild(nextIns.firstChild);
+                // 4. Remove ws-runs, nextDel, nextIns from parent
+                for (let w = wsStart; w < wsEnd; w++) {
+                    node.removeChild(children[w]);
+                }
+                node.removeChild(nextDel);
+                node.removeChild(nextIns);
+                // 5. Splice removed elements from children snapshot
+                // Remove wsCount + 2 elements starting at wsStart
+                children.splice(wsStart, wsCount + 2);
+                // Reset cursor to continue checking after firstIns
+                cursor = wsStart;
+                chainExtended = true;
+            }
+            // Advance past the (possibly extended) [del, ins] pair
+            i += chainExtended ? 2 : 1;
+            // If no chain was formed, we only skip the del (i++ already happened above
+            // for the non-chain case), but if it was a chain we skip both del+ins.
+            // Actually: if chain wasn't extended, we need to check if firstDel+firstIns
+            // alone should advance by 2 or by 1. Since they ARE a del+ins pair but
+            // no chain formed, skip both.
+            if (!chainExtended) {
+                i++; // skip the ins too (total i += 2 from the earlier i++)
+            }
         }
         // Recurse into current children (re-query after mutations)
         for (const child of childElements(node)) {

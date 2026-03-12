@@ -4,11 +4,22 @@
  * Rebuilds document.xml from marked atoms with track changes.
  * Generates w:ins, w:del, w:moveFrom, w:moveTo elements as appropriate.
  */
+import { DOMParser } from '@xmldom/xmldom';
 import { CorrelationStatus } from '../../core-types.js';
-import { getLeafText, childElements } from '../../primitives/index.js';
+import { getLeafText, childElements, findChildByTagName } from '../../primitives/index.js';
 import { serializeToXml, cloneElement } from './xmlToWmlElement.js';
 import { EMPTY_PARAGRAPH_TAG } from '../../atomizer.js';
+import { areRunPropertiesEqual } from '../../format-detection.js';
 import { debug } from './debug.js';
+const SYNTHETIC_DOC = new DOMParser().parseFromString('<root xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"/>', 'application/xml');
+const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
+function createEl(tag, attrs) {
+    const el = SYNTHETIC_DOC.createElementNS(W_NS, tag);
+    if (attrs)
+        for (const [k, v] of Object.entries(attrs))
+            el.setAttribute(k, v);
+    return el;
+}
 /**
  * Create initial revision ID state.
  */
@@ -116,10 +127,10 @@ function groupAtomsByParagraph(atoms) {
             groups.push(currentGroup);
         }
         // Check if we need a new run group
-        // Each atom's ancestorElements already comes from its own source tree
-        // (original atoms carry original formatting, revised atoms carry revised formatting),
-        // so we always use the rPr from the atom's run ancestor — no cross-contamination possible.
-        const rPr = rAncestor ? findChildByTag(rAncestor, 'w:rPr') : null;
+        // Use the first-class rPr field from the atom when available,
+        // falling back to ancestor walk for atoms created before rPr was populated.
+        const atomRPr = getEffectiveAtomRPr(atom);
+        const rPr = atomRPr ?? (rAncestor ? findChildByTag(rAncestor, 'w:rPr') : null);
         if (!currentRunGroup || shouldStartNewRunGroup(currentRunGroup, atom)) {
             if (currentRunGroup) {
                 currentGroup.runGroups.push(currentRunGroup);
@@ -176,20 +187,14 @@ function reorderChangeBlocks(groups) {
             // Collect the entire change block
             const deletions = [];
             const insertions = [];
-            let delRPr = null;
-            let insRPr = null;
             while (i < runGroups.length) {
                 const group = runGroups[i];
                 if (group.status === CorrelationStatus.Deleted) {
                     deletions.push(...group.atoms);
-                    if (!delRPr)
-                        delRPr = group.rPr;
                     i++;
                 }
                 else if (group.status === CorrelationStatus.Inserted) {
                     insertions.push(...group.atoms);
-                    if (!insRPr)
-                        insRPr = group.rPr;
                     i++;
                 }
                 else if (group.status === CorrelationStatus.Equal && isWhitespaceOnlyGroup(group)) {
@@ -217,18 +222,19 @@ function reorderChangeBlocks(groups) {
                 }
             }
             // Output reordered: all deletions first, then all insertions
+            // rPr is set to null — buildRunContent will sub-group atoms by rPr
             if (deletions.length > 0) {
                 result.push({
                     status: CorrelationStatus.Deleted,
                     atoms: deletions,
-                    rPr: delRPr,
+                    rPr: null,
                 });
             }
             if (insertions.length > 0) {
                 result.push({
                     status: CorrelationStatus.Inserted,
                     atoms: insertions,
-                    rPr: insRPr,
+                    rPr: null,
                 });
             }
         }
@@ -317,6 +323,13 @@ function shouldStartNewParagraph(currentGroup, currentRunGroup, currentAtom) {
     return false;
 }
 /**
+ * Get the effective rPr for an atom — uses the first-class `rPr` field
+ * when available, otherwise returns null.
+ */
+function getEffectiveAtomRPr(atom) {
+    return atom.rPr ?? null;
+}
+/**
  * Determine if we should start a new run group.
  */
 function shouldStartNewRunGroup(currentGroup, atom) {
@@ -328,7 +341,21 @@ function shouldStartNewRunGroup(currentGroup, atom) {
     if (currentGroup.moveName !== atom.moveName) {
         return true;
     }
-    return false;
+    // Skip rPr splitting for MovedSource/MovedDestination to avoid
+    // duplicate move range markers (moveFromRangeStart/End)
+    if (currentGroup.status === CorrelationStatus.MovedSource ||
+        currentGroup.status === CorrelationStatus.MovedDestination) {
+        return false;
+    }
+    // Different rPr = new group (prevents formatting bleed between runs)
+    const currentRPr = getEffectiveAtomRPr(currentGroup.atoms[currentGroup.atoms.length - 1]);
+    const newRPr = getEffectiveAtomRPr(atom);
+    // Fast path: reference equality or both null
+    if (currentRPr === newRPr)
+        return false;
+    if (currentRPr === null && newRPr === null)
+        return false;
+    return !areRunPropertiesEqual(currentRPr, newRPr);
 }
 /**
  * Check if a paragraph group represents an empty paragraph with a specific status.
@@ -433,9 +460,10 @@ function buildParagraphXml(group, author, dateStr, revState) {
     if (isEntireParagraphWithStatus(group, CorrelationStatus.Inserted)) {
         const paraId = allocateRevisionId(revState);
         const runId = allocateRevisionId(revState);
+        const pPrChangeEl = buildPPrChangeElement(group.pPr, author, dateStr, revState);
         const parts = [];
         parts.push('<w:p>');
-        parts.push(serializePPrWithParaRevisionMarker(group.pPr, `<w:ins w:id="${paraId}" w:author="${escapeXmlAttr(author)}" w:date="${dateStr}" />`));
+        parts.push(serializePPrWithParaRevisionMarker(group.pPr, 'w:ins', paraId, author, dateStr, pPrChangeEl));
         parts.push(`<w:ins w:id="${runId}" w:author="${escapeXmlAttr(author)}" w:date="${dateStr}">`);
         for (const runGroup of group.runGroups) {
             parts.push(buildRunContentAsPlainRun(runGroup));
@@ -449,41 +477,32 @@ function buildParagraphXml(group, author, dateStr, revState) {
         const runId = allocateRevisionId(revState);
         const parts = [];
         parts.push('<w:p>');
-        parts.push(serializePPrWithParaRevisionMarker(group.pPr, `<w:del w:id="${paraId}" w:author="${escapeXmlAttr(author)}" w:date="${dateStr}" />`));
+        parts.push(serializePPrWithParaRevisionMarker(group.pPr, 'w:del', paraId, author, dateStr));
         parts.push(`<w:del w:id="${runId}" w:author="${escapeXmlAttr(author)}" w:date="${dateStr}">`);
         for (const runGroup of group.runGroups) {
             const plainRun = buildRunContentAsPlainRun(runGroup);
-            parts.push(plainRun.replace(/<w:t([^>]*)>([^<]*)<\/w:t>/g, '<w:delText$1>$2</w:delText>'));
+            parts.push(plainRun
+                .replace(/<w:t([^>]*)>([^<]*)<\/w:t>/g, '<w:delText$1>$2</w:delText>')
+                .replace(/<w:instrText([^>]*)>([^<]*)<\/w:instrText>/g, '<w:delInstrText$1>$2</w:delInstrText>'));
         }
         parts.push('</w:del>');
         parts.push('</w:p>');
         return parts.join('');
     }
-    // Check for inserted empty paragraphs - wrap entire paragraph in w:ins
+    // Empty inserted paragraphs — use paragraph-mark revision marker (same as whole-paragraph).
+    // In OOXML, <w:ins> is NOT a valid container for <w:p>. The correct encoding places the
+    // marker inside w:pPr > w:rPr.
     if (isEmptyParagraphWithStatus(group, CorrelationStatus.Inserted)) {
-        const id = allocateRevisionId(revState);
-        const parts = [];
-        parts.push(`<w:ins w:id="${id}" w:author="${escapeXmlAttr(author)}" w:date="${dateStr}">`);
-        parts.push('<w:p>');
-        if (group.pPr) {
-            parts.push(serializeToXml(group.pPr));
-        }
-        parts.push('</w:p>');
-        parts.push('</w:ins>');
-        return parts.join('');
+        const paraId = allocateRevisionId(revState);
+        const pPrChangeEl = buildPPrChangeElement(group.pPr, author, dateStr, revState);
+        const pPrXml = serializePPrWithParaRevisionMarker(group.pPr, 'w:ins', paraId, author, dateStr, pPrChangeEl);
+        return `<w:p>${pPrXml}</w:p>`;
     }
-    // Check for deleted empty paragraphs - wrap entire paragraph in w:del
+    // Empty deleted paragraphs — use paragraph-mark revision marker.
     if (isEmptyParagraphWithStatus(group, CorrelationStatus.Deleted)) {
-        const id = allocateRevisionId(revState);
-        const parts = [];
-        parts.push(`<w:del w:id="${id}" w:author="${escapeXmlAttr(author)}" w:date="${dateStr}">`);
-        parts.push('<w:p>');
-        if (group.pPr) {
-            parts.push(serializeToXml(group.pPr));
-        }
-        parts.push('</w:p>');
-        parts.push('</w:del>');
-        return parts.join('');
+        const paraId = allocateRevisionId(revState);
+        const pPrXml = serializePPrWithParaRevisionMarker(group.pPr, 'w:del', paraId, author, dateStr);
+        return `<w:p>${pPrXml}</w:p>`;
     }
     const parts = [];
     parts.push('<w:p>');
@@ -500,26 +519,64 @@ function buildParagraphXml(group, author, dateStr, revState) {
     return parts.join('');
 }
 /**
- * Serialize paragraph properties and ensure a paragraph-level revision marker exists.
+ * Serialize paragraph properties with a paragraph-level revision marker (w:ins or w:del)
+ * placed inside w:pPr > w:rPr, per OOXML spec.
  *
- * If pPr is missing, synthesize one with rPr containing the marker.
+ * DOM-based implementation — replaces the former regex-based approach.
  */
-function serializePPrWithParaRevisionMarker(pPr, markerXml) {
-    // Common case: no paragraph properties. Create minimal pPr/rPr.
-    if (!pPr) {
-        return `<w:pPr><w:rPr>${markerXml}</w:rPr></w:pPr>`;
+function serializePPrWithParaRevisionMarker(pPr, markerTag, id, author, dateStr, pPrChangeEl) {
+    // Clone pPr or synthesize empty one.
+    const effectivePPr = pPr ? cloneElement(pPr) : createEl('w:pPr');
+    // Find or create w:rPr at schema-correct position.
+    let rPr = findChildByTagName(effectivePPr, 'w:rPr');
+    if (!rPr) {
+        rPr = createEl('w:rPr');
+        const sectPr = findChildByTagName(effectivePPr, 'w:sectPr');
+        const existingPPrChange = findChildByTagName(effectivePPr, 'w:pPrChange');
+        const insertBefore = sectPr ?? existingPPrChange ?? null;
+        if (insertBefore) {
+            effectivePPr.insertBefore(rPr, insertBefore);
+        }
+        else {
+            effectivePPr.appendChild(rPr);
+        }
     }
-    let xml = serializeToXml(pPr);
-    // Handle self-closing <w:pPr/> form.
-    if (/<w:pPr\b[^>]*\/>/.test(xml)) {
-        return xml.replace(/<w:pPr\b([^>]*)\/>/, `<w:pPr$1><w:rPr>${markerXml}</w:rPr></w:pPr>`);
+    // Insert revision marker at start of rPr.
+    const marker = createEl(markerTag, {
+        'w:id': String(id),
+        'w:author': author,
+        'w:date': dateStr,
+    });
+    rPr.insertBefore(marker, rPr.firstChild);
+    // Append pPrChange at end if provided.
+    if (pPrChangeEl) {
+        effectivePPr.appendChild(pPrChangeEl);
     }
-    // If there's an rPr, inject the marker at the start of it.
-    if (xml.includes('<w:rPr')) {
-        return xml.replace(/<w:rPr(\b[^>]*)>/, `<w:rPr$1>${markerXml}`);
+    return serializeToXml(effectivePPr);
+}
+/**
+ * Build a `<w:pPrChange>` Element from a pPr DOM element.
+ *
+ * The child `<w:pPr>` conforms to CT_PPrBase — it excludes w:rPr, w:sectPr,
+ * w:rPrChange, and w:pPrChange.
+ */
+function buildPPrChangeElement(pPr, author, dateStr, revState) {
+    const id = allocateRevisionId(revState);
+    const EXCLUDED = new Set(['w:rPr', 'w:rPrChange', 'w:pPrChange', 'w:sectPr']);
+    const pPrChange = createEl('w:pPrChange', {
+        'w:id': String(id),
+        'w:author': author,
+        'w:date': dateStr,
+    });
+    const oldPPr = createEl('w:pPr');
+    if (pPr) {
+        for (const child of childElements(pPr)) {
+            if (!EXCLUDED.has(child.tagName))
+                oldPPr.appendChild(child.cloneNode(true));
+        }
     }
-    // Otherwise, add a new rPr with the marker before closing pPr.
-    return xml.replace(/<\/w:pPr>/, `<w:rPr>${markerXml}</w:rPr></w:pPr>`);
+    pPrChange.appendChild(oldPPr);
+    return pPrChange;
 }
 /**
  * Returns true if every atom in the paragraph is of the specified status
@@ -557,52 +614,20 @@ function isEntireParagraphWithStatus(group, status) {
 /**
  * Build a <w:r> without track-change wrappers. Used when the whole paragraph is already
  * wrapped (paragraph-level <w:ins>/<w:del>).
+ *
+ * When group.rPr is null, sub-groups atoms by per-atom rPr to prevent formatting bleed.
  */
 function buildRunContentAsPlainRun(group) {
-    // Reuse the existing run serializer logic, but do not apply wrapper tags.
     const contentAtoms = group.atoms.filter((atom) => atom.contentElement.tagName !== EMPTY_PARAGRAPH_TAG);
     if (contentAtoms.length === 0)
         return '';
-    const parts = [];
-    parts.push('<w:r>');
-    if (group.rPr)
-        parts.push(serializeToXml(group.rPr));
-    // Coalesce adjacent w:t atoms into a single <w:t> to reduce fragmentation.
-    // This keeps Word's UI from presenting overly granular sub-selections and
-    // tends to match how Word serializes "typed" text.
-    let pendingText = '';
-    const flushPendingText = () => {
-        if (!pendingText)
-            return;
-        const escaped = escapeXmlText(pendingText);
-        const needsPreserve = pendingText.startsWith(' ') ||
-            pendingText.endsWith(' ') ||
-            pendingText.includes('  ');
-        parts.push(needsPreserve
-            ? `<w:t xml:space="preserve">${escaped}</w:t>`
-            : `<w:t>${escaped}</w:t>`);
-        pendingText = '';
-    };
-    for (const atom of contentAtoms) {
-        debugAtomCounter++;
-        if (atom.collapsedFieldAtoms && atom.collapsedFieldAtoms.length > 0) {
-            flushPendingText();
-            for (const fieldAtom of atom.collapsedFieldAtoms) {
-                parts.push(serializeAtomElement(fieldAtom.contentElement));
-            }
-            continue;
-        }
-        const el = atom.contentElement;
-        if (el.tagName === 'w:t') {
-            pendingText += getLeafText(el) ?? '';
-            continue;
-        }
-        flushPendingText();
-        parts.push(serializeAtomElement(el));
+    // If group has explicit rPr, emit a single run
+    if (group.rPr !== null) {
+        return buildSingleRun(group.atoms, group.rPr);
     }
-    flushPendingText();
-    parts.push('</w:r>');
-    return parts.join('');
+    // No group-level rPr — sub-group by per-atom rPr
+    const subGroups = subGroupByRPr(contentAtoms);
+    return subGroups.map(sg => buildSingleRun(sg.atoms, sg.rPr)).join('');
 }
 /**
  * Build XML for a run group with appropriate track changes wrapper.
@@ -650,6 +675,85 @@ export function getDebugCounters() {
     return { atoms: debugAtomCounter, wt: debugWtCounter };
 }
 /**
+ * Sub-group atoms by contiguous rPr — atoms with the same effective rPr
+ * stay in one sub-group, a change in rPr starts a new sub-group.
+ */
+function subGroupByRPr(atoms) {
+    if (atoms.length === 0)
+        return [];
+    const result = [];
+    let currentRPr = getEffectiveAtomRPr(atoms[0]);
+    let currentAtoms = [atoms[0]];
+    for (let i = 1; i < atoms.length; i++) {
+        const atomRPr = getEffectiveAtomRPr(atoms[i]);
+        // Fast path: reference equality or both null
+        let same = currentRPr === atomRPr;
+        if (!same && currentRPr === null && atomRPr === null) {
+            same = true;
+        }
+        if (!same) {
+            same = areRunPropertiesEqual(currentRPr, atomRPr);
+        }
+        if (same) {
+            currentAtoms.push(atoms[i]);
+        }
+        else {
+            result.push({ rPr: currentRPr, atoms: currentAtoms });
+            currentRPr = atomRPr;
+            currentAtoms = [atoms[i]];
+        }
+    }
+    result.push({ rPr: currentRPr, atoms: currentAtoms });
+    return result;
+}
+/**
+ * Build a single <w:r> element from a set of atoms with the given rPr.
+ * Preserves pendingText coalescing, collapsedFieldAtoms expansion,
+ * and debug counter increments.
+ */
+function buildSingleRun(atoms, rPr) {
+    const contentAtoms = atoms.filter((atom) => atom.contentElement.tagName !== EMPTY_PARAGRAPH_TAG);
+    if (contentAtoms.length === 0)
+        return '';
+    const parts = [];
+    parts.push('<w:r>');
+    if (rPr)
+        parts.push(serializeToXml(rPr));
+    let pendingText = '';
+    const flushPendingText = () => {
+        if (!pendingText)
+            return;
+        const escaped = escapeXmlText(pendingText);
+        const needsPreserve = pendingText.startsWith(' ') ||
+            pendingText.endsWith(' ') ||
+            pendingText.includes('  ');
+        parts.push(needsPreserve
+            ? `<w:t xml:space="preserve">${escaped}</w:t>`
+            : `<w:t>${escaped}</w:t>`);
+        pendingText = '';
+    };
+    for (const atom of contentAtoms) {
+        debugAtomCounter++;
+        if (atom.collapsedFieldAtoms && atom.collapsedFieldAtoms.length > 0) {
+            flushPendingText();
+            for (const fieldAtom of atom.collapsedFieldAtoms) {
+                parts.push(serializeAtomElement(fieldAtom.contentElement));
+            }
+            continue;
+        }
+        const el = atom.contentElement;
+        if (el.tagName === 'w:t') {
+            pendingText += getLeafText(el) ?? '';
+            continue;
+        }
+        flushPendingText();
+        parts.push(serializeAtomElement(el));
+    }
+    flushPendingText();
+    parts.push('</w:r>');
+    return parts.join('');
+}
+/**
  * Serialize an atom's content element to XML string.
  */
 function serializeAtomElement(element) {
@@ -683,6 +787,11 @@ function serializeAtomElement(element) {
  *
  * Returns empty string if all atoms are empty paragraph markers,
  * which ensures no empty <w:r> elements are generated.
+ *
+ * When group.rPr is non-null, emits a single <w:r> with that rPr.
+ * When group.rPr is null (e.g., after reorderChangeBlocks merges atoms
+ * from multiple original RunGroups), sub-groups atoms by their per-atom
+ * rPr and emits one <w:r> per sub-group to prevent formatting bleed.
  */
 function buildRunContent(group) {
     // Check if this run group contains only empty paragraph atoms
@@ -691,48 +800,13 @@ function buildRunContent(group) {
     if (contentAtoms.length === 0) {
         return '';
     }
-    const parts = [];
-    parts.push('<w:r>');
-    // Add run properties
-    if (group.rPr) {
-        parts.push(serializeToXml(group.rPr));
+    // If group has explicit rPr, emit a single run
+    if (group.rPr !== null) {
+        return buildSingleRun(group.atoms, group.rPr);
     }
-    // Add atom content (skipping empty paragraph atoms)
-    // Coalesce adjacent w:t atoms into a single <w:t> to reduce fragmentation.
-    let pendingText = '';
-    const flushPendingText = () => {
-        if (!pendingText)
-            return;
-        const escaped = escapeXmlText(pendingText);
-        const needsPreserve = pendingText.startsWith(' ') ||
-            pendingText.endsWith(' ') ||
-            pendingText.includes('  ');
-        parts.push(needsPreserve
-            ? `<w:t xml:space="preserve">${escaped}</w:t>`
-            : `<w:t>${escaped}</w:t>`);
-        pendingText = '';
-    };
-    for (const atom of contentAtoms) {
-        debugAtomCounter++;
-        // Check if this is a collapsed field - if so, expand back to original atoms
-        if (atom.collapsedFieldAtoms && atom.collapsedFieldAtoms.length > 0) {
-            flushPendingText();
-            for (const fieldAtom of atom.collapsedFieldAtoms) {
-                parts.push(serializeAtomElement(fieldAtom.contentElement));
-            }
-            continue;
-        }
-        const element = atom.contentElement;
-        if (element.tagName === 'w:t') {
-            pendingText += getLeafText(element) ?? '';
-            continue;
-        }
-        flushPendingText();
-        parts.push(serializeAtomElement(element));
-    }
-    flushPendingText();
-    parts.push('</w:r>');
-    return parts.join('');
+    // No group-level rPr — sub-group by per-atom rPr
+    const subGroups = subGroupByRPr(contentAtoms);
+    return subGroups.map(sg => buildSingleRun(sg.atoms, sg.rPr)).join('');
 }
 /**
  * Wrap content with w:ins element.
@@ -746,8 +820,10 @@ function wrapWithIns(content, author, dateStr, revState) {
  */
 function wrapWithDel(content, author, dateStr, revState) {
     const id = allocateRevisionId(revState);
-    // For deletions, we need to convert w:t to w:delText
-    const delContent = content.replace(/<w:t([^>]*)>([^<]*)<\/w:t>/g, '<w:delText$1>$2</w:delText>');
+    // For deletions, convert w:t to w:delText and w:instrText to w:delInstrText
+    const delContent = content
+        .replace(/<w:t([^>]*)>([^<]*)<\/w:t>/g, '<w:delText$1>$2</w:delText>')
+        .replace(/<w:instrText([^>]*)>([^<]*)<\/w:instrText>/g, '<w:delInstrText$1>$2</w:delInstrText>');
     return `<w:del w:id="${id}" w:author="${escapeXmlAttr(author)}" w:date="${dateStr}">${delContent}</w:del>`;
 }
 /**
@@ -756,8 +832,10 @@ function wrapWithDel(content, author, dateStr, revState) {
 function wrapWithMoveFrom(content, author, dateStr, moveName, revState) {
     const ids = getMoveRangeIds(revState, moveName);
     const moveId = allocateRevisionId(revState);
-    // Convert w:t to w:delText for moved-from content
-    const delContent = content.replace(/<w:t([^>]*)>([^<]*)<\/w:t>/g, '<w:delText$1>$2</w:delText>');
+    // Convert w:t to w:delText and w:instrText to w:delInstrText for moved-from content
+    const delContent = content
+        .replace(/<w:t([^>]*)>([^<]*)<\/w:t>/g, '<w:delText$1>$2</w:delText>')
+        .replace(/<w:instrText([^>]*)>([^<]*)<\/w:instrText>/g, '<w:delInstrText$1>$2</w:delInstrText>');
     return (`<w:moveFromRangeStart w:id="${ids.sourceRangeId}" w:name="${moveName}" w:author="${escapeXmlAttr(author)}" w:date="${dateStr}"/>` +
         `<w:moveFrom w:id="${moveId}" w:author="${escapeXmlAttr(author)}" w:date="${dateStr}">${delContent}</w:moveFrom>` +
         `<w:moveFromRangeEnd w:id="${ids.sourceRangeId}"/>`);
@@ -779,24 +857,27 @@ function buildFormatChangeRun(group, author, dateStr, revState) {
     const parts = [];
     parts.push('<w:r>');
     // Build rPr with rPrChange
-    if (group.rPr || group.atoms[0]?.formatChange) {
+    const effectiveRPr = group.rPr ?? group.atoms[0]?.rPr ?? null;
+    if (effectiveRPr || group.atoms[0]?.formatChange) {
         parts.push('<w:rPr>');
         // Current properties
-        if (group.rPr) {
-            for (const child of childElements(group.rPr)) {
+        if (effectiveRPr) {
+            for (const child of childElements(effectiveRPr)) {
                 if (child.tagName !== 'w:rPrChange') {
                     parts.push(serializeToXml(child));
                 }
             }
         }
-        // Add rPrChange with old properties
+        // Add rPrChange with old properties (wrapped in w:rPr per OOXML spec)
         const formatChange = group.atoms[0]?.formatChange;
         if (formatChange?.oldRunProperties) {
             const id = allocateRevisionId(revState);
             parts.push(`<w:rPrChange w:id="${id}" w:author="${escapeXmlAttr(author)}" w:date="${dateStr}">`);
+            parts.push('<w:rPr>');
             for (const child of childElements(formatChange.oldRunProperties)) {
                 parts.push(serializeToXml(child));
             }
+            parts.push('</w:rPr>');
             parts.push('</w:rPrChange>');
         }
         parts.push('</w:rPr>');

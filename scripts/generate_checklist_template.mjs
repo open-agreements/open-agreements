@@ -22,6 +22,7 @@ import {
   LineRuleType,
   Packer,
   PageNumber,
+  PageOrientation,
   Paragraph,
   ShadingType,
   Table,
@@ -50,7 +51,8 @@ const style = JSON.parse(readFileSync(STYLE_PATH, 'utf-8'));
 // ---------------------------------------------------------------------------
 // Constants
 // ---------------------------------------------------------------------------
-const TABLE_WIDTH = 10070; // page content width in DXA (12240 letter − 2×1080 margins)
+// Landscape letter: 15840 DXA wide, minus margins
+const TABLE_WIDTH = 15840 - style.page_margin.left - style.page_margin.right; // = 13680
 const CELL_MARGINS = { top: 115, left: 115, bottom: 115, right: 115 };
 const HEADER_SHADING = { type: ShadingType.CLEAR, color: 'auto', fill: 'F5F5F5' };
 
@@ -144,7 +146,7 @@ function pageHeader(label) {
       new Table({
         width: { size: TABLE_WIDTH, type: WidthType.DXA },
         layout: TableLayoutType.FIXED,
-        columnWidths: style.table_widths.section_header,
+        columnWidths: style.table_widths.checklist_section_header,
         borders: {
           top: {
             style: BorderStyle.SINGLE,
@@ -400,7 +402,14 @@ const doc = new Document({
   sections: [
     {
       properties: {
-        page: { margin: style.page_margin },
+        page: {
+          margin: style.page_margin,
+          size: {
+            orientation: PageOrientation.LANDSCAPE,
+            width: 12240,  // US Letter portrait width (DXA) — library swaps for landscape
+            height: 15840, // US Letter portrait height (DXA)
+          },
+        },
       },
       headers: { default: pageHeader('Closing Checklist') },
       footers: { default: pageFooter() },
@@ -422,16 +431,17 @@ const doc = new Document({
           ],
         }),
 
-        // ------ Documents (4-column: No. | Title | Status | Responsible Party) ------
+        // ------ Documents (5-column: ID | Title | Link | Status | Responsible) ------
         sectionTitleParagraph('Documents'),
         checklistTable(
           style.table_widths.checklist_documents,
-          ['No.', 'Title', 'Status', 'Responsible Party'],
+          ['ID', 'Title', 'Link', 'Status', 'Responsible'],
           [
-            dataCell('{$d.number}'),
+            dataCell('{$d.entry_id}'),
             dataCell('{$d.title}'),
+            dataCell('{$d.link}'),
             dataCell('{$d.status}'),
-            dataCell('{$d.responsible_party}'),
+            dataCell('{$d.responsible}'),
           ],
           '{FOR d IN documents}',
           '{END-FOR d}',
@@ -459,16 +469,17 @@ const doc = new Document({
         // Spacer
         new Paragraph({ spacing: { before: 200, after: 0 }, children: [] }),
 
-        // ------ Open Issues (4-column: ID | Title | Status | Summary) ------
+        // ------ Open Issues (5-column: ID | Title | Status | Summary | Citation) ------
         sectionTitleParagraph('Open Issues'),
         checklistTable(
           style.table_widths.checklist_open_issues,
-          ['ID', 'Title', 'Status', 'Summary'],
+          ['ID', 'Title', 'Status', 'Summary', 'Citation'],
           [
             dataCell('{$i.issue_id}'),
             dataCell('{$i.title}'),
             dataCell('{$i.status}'),
             dataCell('{$i.summary}'),
+            dataCell('{$i.citation}'),
           ],
           '{FOR i IN open_issues}',
           '{END-FOR i}',

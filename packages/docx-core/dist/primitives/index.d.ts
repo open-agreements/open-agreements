@@ -23,4 +23,5 @@ export * from './footnotes.js';
 export * from './relationships.js';
 export * from './formatting_tags.js';
 export * from './prevent_double_elevation.js';
+export * from './tables.js';
 //# sourceMappingURL=index.d.ts.map

@@ -87,6 +87,52 @@ function runContentChildren(run) {
     }
     return out;
 }
+/**
+ * Consolidate adjacent w:t elements within a run into a single w:t.
+ * This is needed after run merging, since appending content children from
+ * one run into another produces multiple w:t fragments.
+ * Skips whitespace-only text nodes between elements (formatting indentation).
+ */
+function consolidateRunTextNodes(run) {
+    let child = run.firstChild;
+    while (child) {
+        if (child.nodeType !== 1 || !isW(child, W.t)) {
+            child = child.nextSibling;
+            continue;
+        }
+        // Found a w:t — absorb any following w:t siblings, skipping whitespace text nodes.
+        const first = child;
+        let next = first.nextSibling;
+        while (next) {
+            // Skip whitespace-only text nodes (formatting indentation).
+            if (next.nodeType === 3 && !(next.textContent ?? '').trim()) {
+                const ws = next;
+                next = ws.nextSibling;
+                ws.parentNode?.removeChild(ws);
+                continue;
+            }
+            // Absorb adjacent w:t elements.
+            if (next.nodeType === 1 && isW(next, W.t)) {
+                const following = next.nextSibling;
+                first.textContent = (first.textContent ?? '') + (next.textContent ?? '');
+                next.parentNode?.removeChild(next);
+                next = following;
+                continue;
+            }
+            // Non-text, non-whitespace node — stop consolidation.
+            break;
+        }
+        // Fix xml:space attribute for the consolidated text.
+        const text = first.textContent ?? '';
+        if (text.startsWith(' ') || text.endsWith(' ')) {
+            first.setAttributeNS('http://www.w3.org/XML/1998/namespace', 'xml:space', 'preserve');
+        }
+        else {
+            first.removeAttributeNS('http://www.w3.org/XML/1998/namespace', 'space');
+        }
+        child = first.nextSibling;
+    }
+}
 /** Remove all `<w:proofErr>` elements from a paragraph. */
 function removeProofErrors(paragraph) {
     const proofErrs = Array.from(paragraph.getElementsByTagNameNS(OOXML.W_NS, 'proofErr'));
@@ -151,6 +197,8 @@ function mergeParagraphRuns(paragraph) {
                 for (const node of runContentChildren(next)) {
                     current.appendChild(node);
                 }
+                // Consolidate adjacent w:t fragments produced by the merge.
+                consolidateRunTextNodes(current);
                 next.parentNode?.removeChild(next);
                 group.splice(i + 1, 1);
                 merged++;

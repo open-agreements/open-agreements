@@ -85,6 +85,33 @@ function removeQuotes(input) {
     }
     return { text: outChars.join(''), spans: outSpans };
 }
+function stripAllTags(input) {
+    if (!input.text)
+        return input;
+    const tags = [
+        /<\/?[biu]>/g,
+        /<a\s+href="[^"]*">/g,
+        /<\/a>/g,
+        /<highlight>/g,
+        /<\/highlight>/g,
+        /<highlighting>/g,
+        /<\/highlighting>/g,
+    ];
+    let text = input.text;
+    const spans = input.spans.slice();
+    for (const tag of tags) {
+        let match;
+        tag.lastIndex = 0;
+        while ((match = tag.exec(text)) !== null) {
+            const len = match[0].length;
+            const idx = match.index;
+            text = text.slice(0, idx) + text.slice(idx + len);
+            spans.splice(idx, len);
+            tag.lastIndex = idx;
+        }
+    }
+    return { text, spans };
+}
 function findAllMatchIndices(haystack, needle) {
     if (!needle)
         return [];
@@ -99,18 +126,76 @@ function findAllMatchIndices(haystack, needle) {
     }
     return hits;
 }
-export function findUniqueSubstringMatch(haystack, needle) {
+/**
+ * Transfer the document's smart-quote style to a target string.
+ *
+ * Scans `documentText` for the first left/right double and single smart-quote
+ * variants, then replaces straight quotes in `targetText` with those variants.
+ * Uses positional context (after whitespace/punctuation/start → opening, else closing)
+ * to choose the correct direction.
+ *
+ * Returns `targetText` unchanged when `documentText` contains no smart quotes.
+ * Angle quotes (« » ‹ ›) are explicitly non-goal for v1.
+ */
+export function applyDocumentQuoteStyle(documentText, targetText) {
+    // Detect which smart-quote variants the document uses.
+    let leftDouble = null;
+    let rightDouble = null;
+    let leftSingle = null;
+    let rightSingle = null;
+    // Angle quotes are excluded from transfer (v1 non-goal).
+    const ANGLE_QUOTES = new Set(['\u00ab', '\u00bb', '\u2039', '\u203a']);
+    for (const ch of documentText) {
+        if (ANGLE_QUOTES.has(ch))
+            continue;
+        if (ch === '\u201c' && !leftDouble)
+            leftDouble = ch;
+        if (ch === '\u201d' && !rightDouble)
+            rightDouble = ch;
+        if (ch === '\u2018' && !leftSingle)
+            leftSingle = ch;
+        if (ch === '\u2019' && !rightSingle)
+            rightSingle = ch;
+    }
+    // No smart quotes in document → return unchanged.
+    if (!leftDouble && !rightDouble && !leftSingle && !rightSingle)
+        return targetText;
+    let result = '';
+    for (let i = 0; i < targetText.length; i++) {
+        const ch = targetText[i];
+        if (ch === '"' && (leftDouble || rightDouble)) {
+            // Determine opening vs closing by looking at the preceding character.
+            const prev = i > 0 ? targetText[i - 1] : '';
+            const isOpening = i === 0 || /[\s(\[{]/.test(prev);
+            result += isOpening ? (leftDouble ?? rightDouble) : (rightDouble ?? leftDouble);
+            continue;
+        }
+        if (ch === "'" && (leftSingle || rightSingle)) {
+            const prev = i > 0 ? targetText[i - 1] : '';
+            const isOpening = i === 0 || /[\s(\[{]/.test(prev);
+            result += isOpening ? (leftSingle ?? rightSingle) : (rightSingle ?? leftSingle);
+            continue;
+        }
+        result += ch;
+    }
+    return result;
+}
+export function findUniqueSubstringMatch(haystack, needle, options = {}) {
     if (!needle)
         return { status: 'not_found' };
     const hayBase = toMappedText(haystack);
     const needleBase = toMappedText(needle);
     const stages = [
         { mode: 'exact', transforms: [] },
-        { mode: 'quote_normalized', transforms: [normalizeQuotes] },
-        { mode: 'flexible_whitespace', transforms: [normalizeQuotes, collapseWhitespace] },
-        { mode: 'quote_optional', transforms: [normalizeQuotes, collapseWhitespace, removeQuotes] },
+        { mode: 'clean', transforms: [stripAllTags] },
+        { mode: 'quote_normalized', transforms: [stripAllTags, normalizeQuotes] },
+        { mode: 'flexible_whitespace', transforms: [stripAllTags, normalizeQuotes, collapseWhitespace] },
+        { mode: 'quote_optional', transforms: [stripAllTags, normalizeQuotes, collapseWhitespace, removeQuotes] },
     ];
+    const targetMode = options.mode === 'default' ? undefined : options.mode;
     for (const stage of stages) {
+        if (targetMode !== undefined && stage.mode !== targetMode)
+            continue;
         const h = applyTransforms(hayBase, stage.transforms);
         const n = applyTransforms(needleBase, stage.transforms);
         if (!n.text)
@@ -119,24 +204,18 @@ export function findUniqueSubstringMatch(haystack, needle) {
         if (hits.length === 0)
             continue;
         if (hits.length > 1) {
-            return {
-                status: 'multiple',
-                mode: stage.mode,
-                matchCount: hits.length,
-            };
+            return { status: 'multiple', mode: stage.mode, matchCount: hits.length };
         }
         const hit = hits[0];
         const startSpan = h.spans[hit];
         const endSpan = h.spans[hit + n.text.length - 1];
-        const start = startSpan.start;
-        const end = endSpan.end;
         return {
             status: 'unique',
             mode: stage.mode,
             matchCount: 1,
-            start,
-            end,
-            matchedText: haystack.slice(start, end),
+            start: startSpan.start,
+            end: endSpan.end,
+            matchedText: haystack.slice(startSpan.start, endSpan.end),
         };
     }
     return { status: 'not_found' };

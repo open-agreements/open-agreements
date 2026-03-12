@@ -1,6 +1,8 @@
 import { type ReplacementPart } from './text.js';
 import { type DocumentStyles, type DocumentViewNode } from './document_view.js';
+import type { FormattingMode } from './formatting_tags.js';
 import { type ParagraphSpacingMutation, type ParagraphSpacingMutationResult, type TableCellPaddingMutation, type TableCellPaddingMutationResult, type TableRowHeightMutation, type TableRowHeightMutationResult } from './layout.js';
+import { type ExtractTablesOptions, type ExtractTablesResult } from './tables.js';
 import { type MergeRunsResult } from './merge_runs.js';
 import { type ValidateDocumentResult } from './validate_document.js';
 import { type AcceptChangesResult } from './accept_changes.js';
@@ -61,6 +63,7 @@ export declare class DocxDocument {
     buildDocumentView(opts?: {
         includeSemanticTags?: boolean;
         showFormatting?: boolean;
+        formattingMode?: FormattingMode;
     }): {
         nodes: DocumentViewNode[];
         styles: DocumentStyles;
@@ -70,18 +73,35 @@ export declare class DocxDocument {
         findText: string;
         replaceText: string | ReplacementPart[];
     }): void;
+    /**
+     * Replace text at a known character range without re-searching.
+     * Used by the range-trimming approach where the caller has already located the match.
+     */
+    replaceTextAtRange(params: {
+        targetParagraphId: string;
+        start: number;
+        end: number;
+        replaceText: string | ReplacementPart[];
+    }): void;
     insertParagraph(params: {
         positionalAnchorNodeId: string;
         relativePosition: 'BEFORE' | 'AFTER';
         newText: string;
         newParagraphId?: string;
+        styleSourceId?: string;
     }): {
         newParagraphId: string;
         newParagraphIds: string[];
+        styleSourceFallback?: boolean;
     };
     setParagraphSpacing(mutation: ParagraphSpacingMutation): ParagraphSpacingMutationResult;
     setTableRowHeight(mutation: TableRowHeightMutation): TableRowHeightMutationResult;
     setTableCellPadding(mutation: TableCellPaddingMutation): TableCellPaddingMutationResult;
+    /**
+     * Extract tables from the document body.
+     * Read-only operation — does not mutate document state.
+     */
+    extractTables(options?: ExtractTablesOptions): ExtractTablesResult;
     /**
      * Merge format-identical adjacent runs only (no redline simplification).
      * Useful as a pre-processing step before text search when runs may be fragmented.

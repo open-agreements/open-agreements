@@ -72,7 +72,7 @@ function getTableRowFormatting(docxPath: string): CellFormatting[][] {
   const xml = zip.getEntry('word/document.xml')?.getData().toString('utf-8') ?? '';
   const doc = new DOMParser().parseFromString(xml, 'text/xml');
   const tables = doc.getElementsByTagNameNS(W_NS, 'tbl');
-  const headerTargets = ['No.', 'Title', 'Status', 'Responsible Party'];
+  const headerTargets = ['ID', 'Title', 'Link', 'Status', 'Responsible'];
 
   // Find the Documents table by matching header
   for (let t = 0; t < tables.length; t++) {
@@ -259,19 +259,19 @@ describe('closing-checklist rendering', () => {
 
     const tables = getTableRowsAsCellText(outputPath);
 
-    // 3 tables: documents (4-col), action_items (5-col), open_issues (4-col)
+    // 3 tables: documents (5-col), action_items (5-col), open_issues (5-col)
     expect(tables).toHaveLength(3);
 
     // Documents table: header + data rows
     const docTable = tables[0];
-    // Header row
-    expect(docTable[0]).toEqual(['No.', 'Title', 'Status', 'Responsible Party']);
+    // Header row: ID | Title | Link | Status | Responsible
+    expect(docTable[0]).toEqual(['ID', 'Title', 'Link', 'Status', 'Responsible']);
 
     // Find stage headings and entry rows (skip FOR control rows)
     const docDataRows = docTable.filter((row) => {
-      // Skip header, FOR control rows (empty first cell with no title text)
+      // Skip header, FOR control rows (empty cells with no content)
       const hasContent = row.some((cell) => cell.length > 0);
-      return hasContent && row[0] !== 'No.';
+      return hasContent && row[0] !== 'ID';
     });
 
     // Should contain stage headings and entries
@@ -281,41 +281,46 @@ describe('closing-checklist rendering', () => {
     const closingHeading = docDataRows.find((row) => row[1].includes('CLOSING'));
     expect(closingHeading).toBeTruthy();
 
-    // Entry rows should have human-readable statuses
+    // Entry rows should have human-readable statuses (col 3 = Status)
     const spaRow = docDataRows.find((row) => row[1].includes('Stock Purchase Agreement'));
     expect(spaRow).toBeTruthy();
-    expect(spaRow![2]).toBe('Form Final');
+    expect(spaRow![3]).toBe('Form Final');
+    // Link column (col 2)
+    expect(spaRow![2]).toBe('https://drive.example.com/spa-form');
+    // ID column (col 0)
+    expect(spaRow![0]).toBe('entry-spa');
 
     const escrowRow = docDataRows.find((row) => row[1].includes('Escrow Agreement'));
     expect(escrowRow).toBeTruthy();
-    expect(escrowRow![2]).toBe('Partially Signed');
-    expect(escrowRow![3]).toBe('Finance');
+    expect(escrowRow![3]).toBe('Partially Signed');
+    // Responsible column (col 4) should have "Finance"
+    expect(escrowRow![4]).toBe('Finance');
 
     // Citation sub-row
     const citationRow = docDataRows.find((row) => row[1].includes('Ref: SPA'));
     expect(citationRow).toBeTruthy();
 
-    // Signatory sub-rows (now with checkbox prefixes)
+    // Signatory sub-rows (now with bracket checkboxes, in Title col = 1)
     const buyerSigRow = docDataRows.find((row) => row[1].includes('Signatory: Buyer'));
     expect(buyerSigRow).toBeTruthy();
     expect(buyerSigRow![1]).toContain('Received');
-    expect(buyerSigRow![1]).toContain('\u2611'); // ☑ for RECEIVED
+    expect(buyerSigRow![1]).toContain('[x]');
 
     const sellerSigRow = docDataRows.find((row) => row[1].includes('Signatory: Seller'));
     expect(sellerSigRow).toBeTruthy();
-    expect(sellerSigRow![1]).toContain('\u2610'); // ☐ for PENDING
+    expect(sellerSigRow![1]).toContain('[ ]');
 
-    // Linked action sub-row (with checkbox)
+    // Linked action sub-row (with checkbox, Title col = 1, Status col = 3)
     const linkedAction = docDataRows.find((row) => row[1].includes('Action A-101'));
     expect(linkedAction).toBeTruthy();
-    expect(linkedAction![2]).toBe('In Progress');
-    expect(linkedAction![1]).toContain('\u2610'); // ☐ for IN_PROGRESS (not COMPLETED)
+    expect(linkedAction![3]).toBe('In Progress');
+    expect(linkedAction![1]).toContain('[ ]');
 
     // Linked issue sub-row (with checkbox)
     const linkedIssue = docDataRows.find((row) => row[1].includes('Issue I-77'));
     expect(linkedIssue).toBeTruthy();
-    expect(linkedIssue![2]).toBe('Open');
-    expect(linkedIssue![1]).toContain('\u2610'); // ☐ for OPEN (not CLOSED)
+    expect(linkedIssue![3]).toBe('Open');
+    expect(linkedIssue![1]).toContain('[ ]');
 
     // Unlinked action items table (5-col)
     const actTable = tables[1];
@@ -324,9 +329,9 @@ describe('closing-checklist rendering', () => {
     expect(a102Row).toBeTruthy();
     expect(a102Row![2]).toBe('Not Started');
 
-    // Unlinked issues table (4-col)
+    // Unlinked issues table (5-col: ID | Title | Status | Summary | Citation)
     const issTable = tables[2];
-    expect(issTable[0]).toEqual(['ID', 'Title', 'Status', 'Summary']);
+    expect(issTable[0]).toEqual(['ID', 'Title', 'Status', 'Summary', 'Citation']);
     const i88Row = issTable.find((row) => row[0] === 'I-88');
     expect(i88Row).toBeTruthy();
     expect(i88Row![2]).toBe('Open');
@@ -337,39 +342,42 @@ describe('closing-checklist rendering', () => {
     const formatting = getTableRowFormatting(outputPath);
     expect(formatting.length).toBeGreaterThan(0);
 
+    // Title is at column index 1 (5-column layout)
+    const TITLE_COL = 1;
+
     // Stage heading rows: title cell should be italic
-    const stageHeadingFmt = formatting.find((row) => row[1]?.text.includes('SIGNING') && /^[IVX]+\./.test(row[1].text));
+    const stageHeadingFmt = formatting.find((row) => row[TITLE_COL]?.text.includes('SIGNING') && /^[IVX]+\./.test(row[TITLE_COL].text));
     expect(stageHeadingFmt).toBeTruthy();
-    expect(stageHeadingFmt![1].italic).toBe(true);
+    expect(stageHeadingFmt![TITLE_COL].italic).toBe(true);
 
     // Main entry rows: title cell should be bold
-    const spaFmt = formatting.find((row) => row[1]?.text.includes('Stock Purchase Agreement'));
+    const spaFmt = formatting.find((row) => row[TITLE_COL]?.text.includes('Stock Purchase Agreement'));
     expect(spaFmt).toBeTruthy();
-    expect(spaFmt![1].bold).toBe(true);
+    expect(spaFmt![TITLE_COL].bold).toBe(true);
 
-    const escrowFmt = formatting.find((row) => row[1]?.text.includes('Escrow Agreement'));
+    const escrowFmt = formatting.find((row) => row[TITLE_COL]?.text.includes('Escrow Agreement'));
     expect(escrowFmt).toBeTruthy();
-    expect(escrowFmt![1].bold).toBe(true);
+    expect(escrowFmt![TITLE_COL].bold).toBe(true);
 
     // Citation sub-rows: title cell should be italic
-    const citFmt = formatting.find((row) => row[1]?.text.includes('Ref: SPA'));
+    const citFmt = formatting.find((row) => row[TITLE_COL]?.text.includes('Ref: SPA'));
     expect(citFmt).toBeTruthy();
-    expect(citFmt![1].italic).toBe(true);
+    expect(citFmt![TITLE_COL].italic).toBe(true);
 
     // Sub-rows should have indent > 0 and no leading NBSPs in text
-    const sigFmt = formatting.find((row) => row[1]?.text.includes('Signatory: Buyer'));
+    const sigFmt = formatting.find((row) => row[TITLE_COL]?.text.includes('Signatory: Buyer'));
     expect(sigFmt).toBeTruthy();
-    expect(sigFmt![1].indentLeft).toBeGreaterThan(0);
-    expect(sigFmt![1].text).not.toMatch(/^\u00A0/);
+    expect(sigFmt![TITLE_COL].indentLeft).toBeGreaterThan(0);
+    expect(sigFmt![TITLE_COL].text).not.toMatch(/^\u00A0/);
 
-    const actionFmt = formatting.find((row) => row[1]?.text.includes('Action A-101'));
+    const actionFmt = formatting.find((row) => row[TITLE_COL]?.text.includes('Action A-101'));
     expect(actionFmt).toBeTruthy();
-    expect(actionFmt![1].indentLeft).toBeGreaterThan(0);
-    expect(actionFmt![1].text).not.toMatch(/^\u00A0/);
+    expect(actionFmt![TITLE_COL].indentLeft).toBeGreaterThan(0);
+    expect(actionFmt![TITLE_COL].text).not.toMatch(/^\u00A0/);
 
-    const issueFmt = formatting.find((row) => row[1]?.text.includes('Issue I-77'));
+    const issueFmt = formatting.find((row) => row[TITLE_COL]?.text.includes('Issue I-77'));
     expect(issueFmt).toBeTruthy();
-    expect(issueFmt![1].indentLeft).toBeGreaterThan(0);
-    expect(issueFmt![1].text).not.toMatch(/^\u00A0/);
+    expect(issueFmt![TITLE_COL].indentLeft).toBeGreaterThan(0);
+    expect(issueFmt![TITLE_COL].text).not.toMatch(/^\u00A0/);
   });
 });

@@ -10,34 +10,17 @@
 import AdmZip from 'adm-zip';
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
 import type { Document as XMLDocument, Element, Node } from '@xmldom/xmldom';
+import {
+  classifyRow,
+  getDirectChildRows,
+  getDirectChildCells,
+  getCellText,
+  findTableByHeaders,
+  DOCUMENTS_HEADERS,
+  RENDER_VERSION_MARKER,
+} from './docx-table-helpers.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
-
-const DOCUMENTS_HEADERS = ['No.', 'Title', 'Status', 'Responsible Party'];
-
-// ---------------------------------------------------------------------------
-// Row classification
-// ---------------------------------------------------------------------------
-
-type RowType = 'stage_heading' | 'main_entry' | 'citation' | 'signatory' | 'action' | 'issue' | 'unknown';
-
-function classifyRow(numberText: string, titleText: string): RowType {
-  // Stage heading: number cell empty, title matches roman numeral pattern
-  if (!numberText.trim() && /^[IVX]+\.\s/.test(titleText.trim())) {
-    return 'stage_heading';
-  }
-  // Main entry: number cell non-empty
-  if (numberText.trim()) {
-    return 'main_entry';
-  }
-  // Sub-rows: number cell empty, classify by title content
-  const stripped = titleText.replace(/^\u00A0+/, '').trim();
-  if (stripped.startsWith('Ref:')) return 'citation';
-  if (/^\u2610\s+Signatory:|^\u2611\s+Signatory:|^Signatory:/.test(stripped)) return 'signatory';
-  if (/^\u2610\s+Action\s|^\u2611\s+Action\s|^Action\s/.test(stripped)) return 'action';
-  if (/^\u2610\s+Issue\s|^\u2611\s+Issue\s|^Issue\s/.test(stripped)) return 'issue';
-  return 'unknown';
-}
 
 // ---------------------------------------------------------------------------
 // XML helpers (same patterns as recipe/patcher.ts)
@@ -207,19 +190,6 @@ function countAndStripNbspIndent(tc: Element): number {
 }
 
 // ---------------------------------------------------------------------------
-// Cell text extraction
-// ---------------------------------------------------------------------------
-
-function getCellText(tc: Element): string {
-  const tNodes = tc.getElementsByTagNameNS(W_NS, 't');
-  const parts: string[] = [];
-  for (let i = 0; i < tNodes.length; i++) {
-    parts.push(tNodes[i].textContent ?? '');
-  }
-  return parts.join('');
-}
-
-// ---------------------------------------------------------------------------
 // Apply formatting to all runs in a cell
 // ---------------------------------------------------------------------------
 
@@ -242,61 +212,6 @@ function formatCellRuns(tc: Element, format: { bold?: boolean; italic?: boolean;
 }
 
 // ---------------------------------------------------------------------------
-// Find Documents table by matching header row
-// ---------------------------------------------------------------------------
-
-function findDocumentsTable(xmlDoc: XMLDocument): Element | null {
-  const tables = xmlDoc.getElementsByTagNameNS(W_NS, 'tbl');
-  for (let t = 0; t < tables.length; t++) {
-    const table = tables[t] as Element;
-    const rows = getDirectChildRows(table);
-    if (rows.length === 0) continue;
-
-    const headerRow = rows[0];
-    const cells = getDirectChildCells(headerRow);
-    const headerTexts = cells.map((c) => getCellText(c).trim());
-
-    if (
-      headerTexts.length === DOCUMENTS_HEADERS.length &&
-      headerTexts.every((text, i) => text === DOCUMENTS_HEADERS[i])
-    ) {
-      return table;
-    }
-  }
-  return null;
-}
-
-function getDirectChildRows(table: Element): Element[] {
-  const rows: Element[] = [];
-  const children = table.childNodes;
-  for (let i = 0; i < children.length; i++) {
-    const child = children[i] as Node;
-    if (child.nodeType === 1) {
-      const el = child as Element;
-      if (el.localName === 'tr' && el.namespaceURI === W_NS) {
-        rows.push(el);
-      }
-    }
-  }
-  return rows;
-}
-
-function getDirectChildCells(row: Element): Element[] {
-  const cells: Element[] = [];
-  const children = row.childNodes;
-  for (let i = 0; i < children.length; i++) {
-    const child = children[i] as Node;
-    if (child.nodeType === 1) {
-      const el = child as Element;
-      if (el.localName === 'tc' && el.namespaceURI === W_NS) {
-        cells.push(el);
-      }
-    }
-  }
-  return cells;
-}
-
-// ---------------------------------------------------------------------------
 // Main formatter
 // ---------------------------------------------------------------------------
 
@@ -308,23 +223,27 @@ export async function formatChecklistDocx(docxPath: string): Promise<void> {
   const xmlStr = entry.getData().toString('utf-8');
   const xmlDoc = new DOMParser().parseFromString(xmlStr, 'text/xml');
 
-  const docsTable = findDocumentsTable(xmlDoc);
+  const docsTable = findTableByHeaders(xmlDoc, DOCUMENTS_HEADERS);
   if (!docsTable) return;
+
+  // 5-column layout: ID at 0, Title at 1
+  const idColIdx = 0;
+  const titleColIdx = 1;
 
   const rows = getDirectChildRows(docsTable);
   // Skip header row (index 0)
   for (let r = 1; r < rows.length; r++) {
-    const cells = getDirectChildCells(rows[r]);
-    if (cells.length < 2) continue;
+    const cells = getDirectChildCells(rows[r]!);
+    if (cells.length < titleColIdx + 1) continue;
 
-    const numberText = getCellText(cells[0]);
-    const titleText = getCellText(cells[1]);
-    const rowType = classifyRow(numberText, titleText);
+    const idText = getCellText(cells[idColIdx]!);
+    const titleText = getCellText(cells[titleColIdx]!);
+    const rowType = classifyRow(idText, titleText);
 
     // Convert NBSP indentation to OOXML indent on title cell
-    countAndStripNbspIndent(cells[1]);
+    countAndStripNbspIndent(cells[titleColIdx]!);
 
-    const titleCell = cells[1];
+    const titleCell = cells[titleColIdx]!;
 
     switch (rowType) {
       case 'stage_heading':
@@ -343,6 +262,33 @@ export async function formatChecklistDocx(docxPath: string): Promise<void> {
         break;
       case 'unknown':
         break;
+    }
+  }
+
+  // Inject render version marker (hidden paragraph, 1pt white text)
+  const body = xmlDoc.getElementsByTagNameNS(W_NS, 'body').item(0);
+  if (body) {
+    const markerP = xmlDoc.createElementNS(W_NS, 'w:p');
+    const markerR = xmlDoc.createElementNS(W_NS, 'w:r');
+    const markerRPr = xmlDoc.createElementNS(W_NS, 'w:rPr');
+    const markerSz = xmlDoc.createElementNS(W_NS, 'w:sz');
+    markerSz.setAttributeNS(W_NS, 'w:val', '2');
+    const markerColor = xmlDoc.createElementNS(W_NS, 'w:color');
+    markerColor.setAttributeNS(W_NS, 'w:val', 'FFFFFF');
+    markerRPr.appendChild(markerSz);
+    markerRPr.appendChild(markerColor);
+    markerR.appendChild(markerRPr);
+    const markerT = xmlDoc.createElementNS(W_NS, 'w:t');
+    markerT.appendChild(xmlDoc.createTextNode(RENDER_VERSION_MARKER));
+    markerR.appendChild(markerT);
+    markerP.appendChild(markerR);
+
+    // Insert before sectPr if present, else append
+    const sectPr = body.getElementsByTagNameNS(W_NS, 'sectPr').item(0);
+    if (sectPr) {
+      body.insertBefore(markerP, sectPr);
+    } else {
+      body.appendChild(markerP);
     }
   }
 
