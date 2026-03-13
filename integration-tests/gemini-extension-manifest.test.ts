@@ -19,7 +19,7 @@ describe('gemini extension manifest', () => {
     }
   });
 
-  it.openspec('OA-DST-034')('defines two local npx MCP servers without cwd overrides', () => {
+  it.openspec('OA-DST-034')('defines local npx MCP servers without cwd overrides', () => {
     const manifest = JSON.parse(
       readFileSync(MANIFEST_PATH, 'utf8'),
     ) as {
@@ -27,12 +27,11 @@ describe('gemini extension manifest', () => {
     };
     const servers = manifest.mcpServers ?? {};
 
-    expect(Object.keys(servers).sort()).toEqual(['contract-templates-mcp', 'contracts-workspace-mcp']);
-    expect(servers['contracts-workspace-mcp'].command).toBe('npx');
-    expect(servers['contracts-workspace-mcp'].args).toContain('@open-agreements/contracts-workspace-mcp');
-    expect(servers['contract-templates-mcp'].command).toBe('npx');
-    expect(servers['contract-templates-mcp'].args).toContain('@open-agreements/contract-templates-mcp');
-    expect(servers['contracts-workspace-mcp'].cwd).toBeUndefined();
-    expect(servers['contract-templates-mcp'].cwd).toBeUndefined();
+    expect(Object.keys(servers).sort()).toEqual(['checklist-mcp', 'contract-templates-mcp', 'contracts-workspace-mcp']);
+    for (const [key, server] of Object.entries(servers)) {
+      expect(server.command).toBe('npx');
+      expect(server.args).toContain(`@open-agreements/${key}`);
+      expect(server.cwd).toBeUndefined();
+    }
   });
 });

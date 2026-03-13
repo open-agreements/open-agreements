@@ -23,6 +23,10 @@ const packTargets = [
     name: '@open-agreements/contract-templates-mcp',
     dir: resolve(REPO_ROOT, 'packages/contract-templates-mcp'),
   },
+  {
+    name: '@open-agreements/checklist-mcp',
+    dir: resolve(REPO_ROOT, 'packages/checklist-mcp'),
+  },
 ];
 
 function run(command, args, options = {}) {
@@ -77,6 +81,7 @@ function main() {
   run('npm', ['run', 'build'], { cwd: REPO_ROOT, timeout: 120000 });
   run('npm', ['run', 'build:workspace-mcp'], { cwd: REPO_ROOT, timeout: 120000 });
   run('npm', ['run', 'build:contract-templates-mcp'], { cwd: REPO_ROOT, timeout: 120000 });
+  run('npm', ['run', 'build:checklist-mcp'], { cwd: REPO_ROOT, timeout: 120000 });
 
   const packed = packTargets.map(pack);
   const sandbox = mkdtempSync(join(tmpdir(), 'oa-isolated-runtime-'));
@@ -100,6 +105,7 @@ function main() {
 
     assertMcpStartup('open-agreements-workspace-mcp', sandbox);
     assertMcpStartup('open-agreements-contract-templates-mcp', sandbox);
+    assertMcpStartup('open-agreements-checklist-mcp', sandbox);
 
     console.log('PASS isolated package runtime checks.');
   } finally {

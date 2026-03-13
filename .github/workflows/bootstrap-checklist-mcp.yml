@@ -1,0 +1,36 @@
+name: Bootstrap checklist-mcp (one-time first publish)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  publish:
+    name: First publish @open-agreements/checklist-mcp
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+          cache: npm
+
+      - name: Install dependencies (retry)
+        uses: ./.github/actions/npm-ci-retry
+
+      - name: Build
+        run: |
+          npm run build
+          npm run build:checklist-mcp
+
+      - name: Verify package contents
+        run: cd packages/checklist-mcp && npm pack --dry-run
+
+      - name: Publish with token (first publish — OIDC not yet configured)
+        run: cd packages/checklist-mcp && npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
