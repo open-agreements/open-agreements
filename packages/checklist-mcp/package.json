@@ -1,0 +1,40 @@
+{
+  "name": "@open-agreements/checklist-mcp",
+  "version": "0.4.0",
+  "description": "Local stdio MCP server for OpenAgreements checklist memory operations",
+  "type": "module",
+  "bin": {
+    "open-agreements-checklist-mcp": "./bin/open-agreements-checklist-mcp.js"
+  },
+  "main": "./dist/checklist-mcp/src/index.js",
+  "types": "./dist/checklist-mcp/src/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/checklist-mcp/src/index.js",
+      "types": "./dist/checklist-mcp/src/index.d.ts"
+    }
+  },
+  "files": [
+    "dist/",
+    "bin/",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run tests",
+    "start": "node ./bin/open-agreements-checklist-mcp.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/open-agreements/open-agreements.git",
+    "directory": "packages/checklist-mcp"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "open-agreements": ">=0.3.1",
+    "zod": "^4.0.0"
+  }
+}

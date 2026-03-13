@@ -1,6 +1,6 @@
 {
   "name": "@open-agreements/contract-templates-mcp",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "Local stdio MCP server for OpenAgreements template discovery and filling",
   "type": "module",
   "bin": {
@@ -34,7 +34,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "open-agreements": "^0.2.2",
+    "open-agreements": ">=0.3.1",
     "zod": "^4.0.0"
   }
 }

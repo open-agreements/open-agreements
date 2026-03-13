@@ -43,7 +43,7 @@ jobs:
           TAG_REF="${RELEASE_TAG:-$GITHUB_REF_NAME}"
           TAG_VERSION="${TAG_REF#v}"
 
-          for pkg in package.json packages/contracts-workspace-mcp/package.json packages/contract-templates-mcp/package.json; do
+          for pkg in package.json packages/contracts-workspace-mcp/package.json packages/contract-templates-mcp/package.json packages/checklist-mcp/package.json; do
             PKG_VERSION="$(node -p "require('./${pkg}').version")"
             if [ "$TAG_VERSION" != "$PKG_VERSION" ]; then
               echo "Tag version ($TAG_VERSION) must match ${pkg} version ($PKG_VERSION)."
@@ -79,6 +79,7 @@ jobs:
           npm run build
           npm run build:workspace-mcp
           npm run build:contract-templates-mcp
+          npm run build:checklist-mcp
 
       - name: Validate templates
         run: npm run validate
@@ -97,6 +98,7 @@ jobs:
           npm pack --dry-run
           (cd packages/contracts-workspace-mcp && npm pack --dry-run)
           (cd packages/contract-templates-mcp && npm pack --dry-run)
+          (cd packages/checklist-mcp && npm pack --dry-run)
           SCOPED_DIR="$(mktemp -d)"
           cleanup_scoped_dir() {
             rm -rf "$SCOPED_DIR"
@@ -113,7 +115,7 @@ jobs:
           VERSION="${TAG_REF#v}"
           ALREADY=0
           TOTAL=0
-          for pkg in open-agreements @open-agreements/open-agreements @open-agreements/contracts-workspace-mcp @open-agreements/contract-templates-mcp; do
+          for pkg in open-agreements @open-agreements/open-agreements @open-agreements/contracts-workspace-mcp @open-agreements/contract-templates-mcp @open-agreements/checklist-mcp; do
             TOTAL=$((TOTAL + 1))
             if npm view "$pkg@$VERSION" version >/dev/null 2>&1; then
               echo "$pkg@$VERSION already published."
@@ -163,6 +165,7 @@ jobs:
           npm run build
           npm run build:workspace-mcp
           npm run build:contract-templates-mcp
+          npm run build:checklist-mcp
 
       - name: Publish to npm (trusted publishing + provenance)
         run: |
@@ -195,7 +198,7 @@ jobs:
           fi
 
           # Publish workspace MCP packages
-          for entry in "@open-agreements/contracts-workspace-mcp:packages/contracts-workspace-mcp" "@open-agreements/contract-templates-mcp:packages/contract-templates-mcp"; do
+          for entry in "@open-agreements/contracts-workspace-mcp:packages/contracts-workspace-mcp" "@open-agreements/contract-templates-mcp:packages/contract-templates-mcp" "@open-agreements/checklist-mcp:packages/checklist-mcp"; do
             PKG_NAME="${entry%%:*}"
             PKG_DIR="${entry##*:}"
             if npm view "$PKG_NAME@$VERSION" version >/dev/null 2>&1; then
