@@ -76,6 +76,11 @@ fields:
     type: string
     description: Titlecase word used for single-closing phrasing
     default: Initial
+  - name: closing_type
+    type: enum
+    description: Single closing or additional closings
+    options: [single, additional]
+    default: single
   - name: dispute_resolution_mode
     type: enum
     description: Dispute resolution alternative in SPA (Alternative 1 arbitration or Alternative 2 courts)

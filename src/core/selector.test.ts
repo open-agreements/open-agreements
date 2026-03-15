@@ -433,3 +433,120 @@ describe('cross-cell disambiguation', () => {
     ).rejects.toThrow(/did not match any/);
   });
 });
+
+// ---------------------------------------------------------------------------
+// Markerless selections
+// ---------------------------------------------------------------------------
+
+describe('markerless selections', () => {
+  it('removes paragraph when trigger does not fire', async () => {
+    const body = `
+      ${para('Section 1.2(a) Initial Closing.')}
+      ${para('Additional Closings. The Company may sell additional shares.')}
+      ${para('Sub-clause detail about additional closings.')}
+      ${para('Section 1.2(c) Tranche Closing.')}
+    `;
+    const inputPath = buildTestDocx(body);
+    const outputPath = join(makeTempDir(), 'out.docx');
+
+    const config: SelectionsConfig = {
+      groups: [{
+        id: 'additional_closings',
+        type: 'checkbox',
+        standalone: true,
+        markerless: true,
+        options: [{
+          marker: 'Additional Closings',
+          trigger: { field: 'closing_type', equals: 'additional' },
+        }],
+      }],
+    };
+
+    await applySelections(inputPath, outputPath, config, { closing_type: 'single' });
+
+    const text = extractText(outputPath);
+    expect(text).toContain('Initial Closing');
+    expect(text).not.toContain('Additional Closings');
+    expect(text).not.toContain('Sub-clause detail');
+    expect(text).toContain('Tranche Closing');
+  });
+
+  it('keeps paragraph when trigger fires', async () => {
+    const body = `
+      ${para('Section 1.2(a) Initial Closing.')}
+      ${para('Additional Closings. The Company may sell additional shares.')}
+      ${para('Sub-clause detail about additional closings.')}
+      ${para('Section 1.2(c) Tranche Closing.')}
+    `;
+    const inputPath = buildTestDocx(body);
+    const outputPath = join(makeTempDir(), 'out.docx');
+
+    const config: SelectionsConfig = {
+      groups: [{
+        id: 'additional_closings',
+        type: 'checkbox',
+        standalone: true,
+        markerless: true,
+        options: [{
+          marker: 'Additional Closings',
+          trigger: { field: 'closing_type', equals: 'additional' },
+        }],
+      }],
+    };
+
+    await applySelections(inputPath, outputPath, config, { closing_type: 'additional' });
+
+    const text = extractText(outputPath);
+    expect(text).toContain('Initial Closing');
+    expect(text).toContain('Additional Closings');
+    expect(text).toContain('Sub-clause detail');
+    expect(text).toContain('Tranche Closing');
+  });
+
+  it('replaces paragraph text with replaceWith when unselected', async () => {
+    const body = `
+      ${para('Section 1.2(a) Initial Closing.')}
+      ${para('Additional Closings. The Company may sell additional shares.')}
+      ${para('Sub-clause detail about additional closings.')}
+      ${para('Section 1.2(c) Tranche Closing.')}
+    `;
+    const inputPath = buildTestDocx(body);
+    const outputPath = join(makeTempDir(), 'out.docx');
+
+    const config: SelectionsConfig = {
+      groups: [{
+        id: 'additional_closings',
+        type: 'checkbox',
+        standalone: true,
+        markerless: true,
+        options: [{
+          marker: 'Additional Closings',
+          trigger: { field: 'closing_type', equals: 'additional' },
+          replaceWith: '[Reserved]',
+        }],
+      }],
+    };
+
+    await applySelections(inputPath, outputPath, config, { closing_type: 'single' });
+
+    const text = extractText(outputPath);
+    expect(text).toContain('Initial Closing');
+    expect(text).toContain('[Reserved]');
+    expect(text).not.toContain('Additional Closings');
+    expect(text).not.toContain('Sub-clause detail');
+    expect(text).toContain('Tranche Closing');
+  });
+
+  it('schema accepts markerless:true group with 1 option', () => {
+    const result = SelectionsConfigSchema.safeParse({
+      groups: [{
+        id: 'test',
+        type: 'checkbox',
+        standalone: true,
+        markerless: true,
+        options: [{ marker: 'Some text', trigger: { field: 'flag' } }],
+      }],
+    });
+    expect(result.success).toBe(true);
+  });
+});

@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "id": "additional_closings",
+      "type": "checkbox",
+      "standalone": true,
+      "markerless": true,
+      "options": [
+        {
+          "marker": "Additional Closings",
+          "trigger": { "field": "closing_type", "equals": "additional" },
+          "replaceWith": "[Reserved]"
+        }
+      ]
+    }
+  ]
+}

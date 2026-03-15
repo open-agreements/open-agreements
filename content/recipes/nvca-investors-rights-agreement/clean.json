@@ -1,12 +1,20 @@
 {
   "removeFootnotes": true,
   "removeParagraphPatterns": [
+    "^An Investors['\u2019] Rights Agreement can cover many different subjects",
     "^Note to Drafter:",
     "^Preliminary Note\\b",
     "^Alternative 1:",
     "^Alternative 2:",
     "^Alternative:",
     "^\\[Alternative",
-    "^Annex 2"
+    "^Annex 2",
+    "^Last [Uu]pdated"
+  ],
+  "removeRanges": [
+    {
+      "start": "^This sample document is the work product",
+      "end": "are flagged as .Revised."
+    }
   ]
 }
