@@ -13,9 +13,6 @@ fields:
   - name: company_name
     type: string
     description: Full legal name of the corporation
-  - name: original_incorporation_date
-    type: string
-    description: Date the corporation was originally incorporated (e.g., January 1, 2020)
   - name: registered_agent_address
     type: string
     description: Street address of the registered agent in Delaware
@@ -45,9 +42,6 @@ fields:
     type: string
     description: Series designation for preferred stock (e.g., A, B, C)
     default: A
-  - name: series_preferred_shares
-    type: string
-    description: Number of designated shares of the Series Preferred Stock
   - name: original_issue_price
     type: string
     description: Original purchase price per share of Series A Preferred Stock
