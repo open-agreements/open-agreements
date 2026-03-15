@@ -473,4 +473,68 @@ describe('CLI program wiring', () => {
       });
     });
   });
+
+  itPlatform('--values alias produces same result as --data on fill command', async () => {
+    const tempDir = mkdtempSync(join(tmpdir(), 'oa-cli-values-'));
+    const dataPath = join(tempDir, 'values.json');
+    writeFileSync(dataPath, JSON.stringify({ company_name: 'Values Co' }), 'utf-8');
+
+    try {
+      const argv = [
+        'node',
+        'open-agreements',
+        'fill',
+        'common-paper-mutual-nda',
+        '--values',
+        dataPath,
+        '--output',
+        '/tmp/out.docx',
+      ];
+
+      const program = createProgram();
+      await program.parseAsync(argv);
+
+      expect(runFillMock).toHaveBeenCalledTimes(1);
+      const call = runFillMock.mock.calls[0]?.[0];
+      expect(call.values).toEqual({ company_name: 'Values Co' });
+    } finally {
+      rmSync(tempDir, { recursive: true, force: true });
+    }
+  });
+
+  itPlatform('--values alias works on recipe run command', async () => {
+    const argv = [
+      'node',
+      'open-agreements',
+      'recipe',
+      'run',
+      'nvca-voting-agreement',
+      '--values',
+      'values.json',
+      '--output',
+      'out.docx',
+    ];
+
+    await runCli(argv);
+
+    expect(runRecipeCommandMock).toHaveBeenCalledTimes(1);
+    expect(runRecipeCommandMock.mock.calls[0]?.[0].data).toBe('values.json');
+  });
+
+  itPlatform('--values alias works on checklist create command', async () => {
+    const argv = [
+      'node',
+      'open-agreements',
+      'checklist',
+      'create',
+      'Test Deal',
+      '--values',
+      'checklist.json',
+    ];
+
+    await runCli(argv);
+
+    expect(runChecklistCreateMock).toHaveBeenCalledTimes(1);
+    expect(runChecklistCreateMock.mock.calls[0]?.[0].data).toBe('checklist.json');
+  });
 });

@@ -35,6 +35,46 @@ eleventyComputed:
           <a class="btn btn-primary" href="/?template={{ t.id }}#start">Installation instructions</a>
         </div>
 
+        {% if t.fields and t.fields.length %}
+        <h2 style="font-size: 1.2rem; margin: 32px 0 12px;">Fields</h2>
+        <div style="overflow-x: auto;">
+          <table class="fields-table" style="width: 100%; border-collapse: collapse; font-size: 0.88rem;">
+            <thead>
+              <tr style="border-bottom: 2px solid var(--border, #e0e0e0); text-align: left;">
+                <th style="padding: 8px 12px;">Field</th>
+                <th style="padding: 8px 12px;">Type</th>
+                <th style="padding: 8px 12px;">Default</th>
+                <th style="padding: 8px 12px;">Description</th>
+                {% if t.hasRationale %}<th style="padding: 8px 12px;">Default Rationale</th>{% endif %}
+              </tr>
+            </thead>
+            <tbody>
+              {%- for field in t.fields %}
+              <tr style="border-bottom: 1px solid var(--border, #e8e8e8);">
+                <td style="padding: 8px 12px; font-family: monospace; white-space: nowrap;">{{ field.name }}</td>
+                <td style="padding: 8px 12px;">{{ field.type }}</td>
+                <td style="padding: 8px 12px;">{% if field.default %}{{ field.default }}{% else %}<span style="color: var(--ink-soft);">&mdash;</span>{% endif %}</td>
+                <td style="padding: 8px 12px;">{{ field.description }}</td>
+                {% if t.hasRationale %}<td style="padding: 8px 12px; font-size: 0.82rem; color: var(--ink-soft);">{% if field.defaultValueRationale %}{{ field.defaultValueRationale }}{% endif %}</td>{% endif %}
+              </tr>
+              {%- endfor %}
+            </tbody>
+          </table>
+        </div>
+        {% endif %}
+
+        {% if t.marketDataCitations and t.marketDataCitations.length %}
+        <div style="margin-top: 24px; padding: 16px; background: var(--bg-soft, #f8f8f8); border-radius: 8px; font-size: 0.84rem;">
+          <p style="margin: 0 0 8px; font-weight: 600;">Sources</p>
+          <p style="margin: 0 0 8px; color: var(--ink-soft);">Default values are informed by market data from the following published venture financing reports. These sources provide statistical data only &mdash; all template forms are from the NVCA Model Legal Documents.</p>
+          <ul style="margin: 0; padding-left: 20px;">
+            {%- for cite in t.marketDataCitations %}
+            <li>{% if cite.url %}<a href="{{ cite.url }}" style="color: var(--accent-deep);">{{ cite.label }}</a>{% else %}{{ cite.label }}{% endif %}</li>
+            {%- endfor %}
+          </ul>
+        </div>
+        {% endif %}
+
         {% if t.previewPages and t.previewPages.length %}
         <div class="template-preview">
           {%- for page in t.previewPages %}

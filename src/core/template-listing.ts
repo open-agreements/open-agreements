@@ -21,6 +21,7 @@ export interface TemplateListField {
   section: string | null;
   description: string;
   default: string | null;
+  default_value_rationale: string | null;
 }
 
 export interface TemplateListItem {
@@ -77,7 +78,7 @@ export function sourceName(url: string): string | null {
 }
 
 export function mapFields(
-  fields: { name: string; type: string; section?: string; description: string; default?: string }[],
+  fields: { name: string; type: string; section?: string; description: string; default?: string; default_value_rationale?: string }[],
   requiredFields: string[],
 ): TemplateListField[] {
   const required = new Set(requiredFields);
@@ -88,6 +89,7 @@ export function mapFields(
     section: f.section ?? null,
     description: f.description,
     default: f.default ?? null,
+    default_value_rationale: f.default_value_rationale ?? null,
   }));
 }
 

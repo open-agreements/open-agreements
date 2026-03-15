@@ -1,8 +1,20 @@
 {
   "removeFootnotes": true,
+  "removeBeforePattern": "^AMENDED AND RESTATEDCERTIFICATE OF INCORPORATIONOF",
   "removeParagraphPatterns": [
     "^Note to Drafter:",
-    "^Preliminary Note\\b",
-    "^\\[?Use the following"
+    "^\\[?Use the following",
+    "^Last [Uu]pdated",
+    "^GDSVF"
+  ],
+  "removeRanges": [
+    {
+      "start": "^This sample document is the work product",
+      "end": "are flagged as .Revised."
+    },
+    {
+      "start": "^Preliminary Notes$",
+      "end": "potentially interested party\\."
+    }
   ]
 }

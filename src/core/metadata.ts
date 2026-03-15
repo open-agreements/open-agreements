@@ -11,6 +11,7 @@ export const FieldDefinitionSchema = z.object({
   type: z.enum(['string', 'date', 'number', 'boolean', 'enum', 'array']),
   description: z.string(),
   default: z.string().optional(),
+  default_value_rationale: z.string().optional(),
   options: z.array(z.string()).optional(),
   section: z.string().optional(),
 }).refine(
@@ -85,6 +86,7 @@ export type ExternalMetadata = z.infer<typeof ExternalMetadataSchema>;
 
 export const CleanConfigSchema = z.object({
   removeFootnotes: z.boolean().default(false),
+  removeBeforePattern: z.string().optional(),
   removeParagraphPatterns: z.array(z.string()).default([]),
   removeRanges: z.array(z.object({
     start: z.string(),
@@ -130,6 +132,12 @@ export const GuidanceOutputSchema = z.object({
 });
 export type GuidanceOutput = z.infer<typeof GuidanceOutputSchema>;
 
+const MarketDataCitationSchema = z.object({
+  id: z.string(),
+  label: z.string(),
+  url: z.string().optional(),
+});
+
 export const RecipeMetadataSchema = z.object({
   name: z.string(),
   description: z.string().optional(),
@@ -140,6 +148,7 @@ export const RecipeMetadataSchema = z.object({
   source_sha256: z.string().optional(),
   fields: z.array(FieldDefinitionSchema).default([]),
   required_fields: z.array(z.string()).default([]),
+  market_data_citations: z.array(MarketDataCitationSchema).optional(),
 }).superRefine((meta, ctx) => {
   validateRequiredFields(meta.fields, meta.required_fields, ctx);
 });

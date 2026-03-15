@@ -9,6 +9,13 @@ license_note: >-
   instructions, not the source document.
 source_sha256: d75600769c12724990de48149d7a2bb161f3522daa54b1783672f93697d87d29
 optional: false
+market_data_citations:
+  - id: wsgr-2025
+    label: WSGR Entrepreneurs Report 2023-2025
+  - id: cooley-q4-2025
+    label: Cooley Venture Financing Report Q4 2025
+  - id: fenwick-2024
+    label: Fenwick Silicon Valley Venture Capital Survey 2024
 fields:
   - name: company_name
     type: string
@@ -56,12 +63,53 @@ fields:
     type: string
     description: Annual dividend rate percentage on Preferred Stock
     default: '8'
+  - name: dividend_rate_per_share
+    type: string
+    description: Dividend rate per annum per share of Preferred Stock (dollar amount)
   - name: preferred_shares_outstanding_threshold
     type: string
     description: Minimum shares of Preferred Stock outstanding for protective provisions to apply
   - name: preferred_director_seats
     type: string
     description: Number of Preferred Director board seats
+  - name: preferred_shares_designated_portion
+    type: string
+    description: Portion of preferred shares designated as the named series
+    default: all
+  - name: original_incorporation_name
+    type: string
+    description: Original incorporation name, if different from current company name (leave blank if same)
+  - name: redemption_start_date
+    type: string
+    description: Earliest date on which preferred stock may be redeemed
+  - name: qualified_financing_notice_days
+    type: string
+    description: Days of prior notice required for qualified financing
+  - name: no_cumulative_voting
+    type: boolean
+    description: Include 'no cumulative voting' clause
+    default: 'true'
+    default_value_rationale: ">95% of deals include this (WSGR 2023-2025, Cooley Q4 2025)"
+  - name: common_stock_voting_limitation
+    type: boolean
+    description: Include clause limiting common stock from vetoing preferred-only amendments
+    default: 'true'
+    default_value_rationale: ">90% standard; prevents common from vetoing preferred-only amendments"
+  - name: authorized_shares_vote_provision
+    type: boolean
+    description: Include simplified vote provision for changing authorized Common Stock count
+    default: 'true'
+    default_value_rationale: ">95%; DGCL 242(b)(2) opt-out for streamlined option pool expansion"
+  - name: include_officer_indemnification
+    type: boolean
+    description: Include officer indemnification alongside director indemnification
+    default: 'true'
+    default_value_rationale: ">80% of deals include officer indemnification (Cooley Q4 2025)"
+  - name: include_redemption_cross_ref
+    type: boolean
+    description: Include cross-reference to Section 6.1 (Redemption)
+    default: 'false'
+    default_value_rationale: "<5% of deals include redemption; only if Article 6 is active"
   - name: signature_page_marker
     type: string
     description: Signature page marker text
@@ -92,6 +140,14 @@ fields:
     type: string
     description: Days prior to record date for mandatory conversion notice
     default: '10'
+  - name: dividend_formula_prefix
+    type: string
+    description: Non-cumulative dividend formula prefix phrase
+    default: the greater of
+  - name: dividend_formula_alt
+    type: string
+    description: Alternative dividend formula phrase
+    default: the sum of
 required_fields:
   - company_name
   - original_issue_price

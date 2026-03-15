@@ -210,7 +210,14 @@ export default function () {
         section: f.section || "General",
         description: f.description || "",
         default: f.default != null ? String(f.default) : null,
+        defaultValueRationale: f.default_value_rationale || null,
       }));
+
+      templateData.hasRationale = item.fields.some((f) => f.default_value_rationale);
+
+      if (item.market_data_citations && item.market_data_citations.length) {
+        templateData.marketDataCitations = item.market_data_citations;
+      }
 
       // Discover pre-rendered page images
       const previewDir = resolve(__dirname, "..", "assets", "previews", item.name);
