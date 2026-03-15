@@ -98,7 +98,6 @@ export function validateExternal(
           }
 
           // For qualified keys, check against the searchText, not the full key.
-          // Nth keys use single-shot replacement so they can't loop — skip the check.
           const parsed = parseReplacementKey(key, value);
           if (parsed.type === 'simple' && value.includes(parsed.searchText)) {
             errors.push(
@@ -109,7 +108,6 @@ export function validateExternal(
               `replacements.json: value for "${key}" contains the search text "${parsed.searchText}" (would cause infinite loop)`
             );
           }
-          // nth keys: no infinite-loop check needed (single-shot replacement)
 
           // Check field coverage
           if (tags) {

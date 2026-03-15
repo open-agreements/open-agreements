@@ -34,36 +34,6 @@ describe('parseReplacementKey', () => {
     });
   });
 
-  it.openspec('OA-RCP-039')('parses an nth occurrence key', () => {
-    const result = parseReplacementKey('Party Name:#1', 'Party Name: {party_1_name}');
-    expect(result).toEqual({
-      type: 'nth',
-      searchText: 'Party Name:',
-      n: 1,
-      value: 'Party Name: {party_1_name}',
-    });
-  });
-
-  it.openspec('OA-RCP-039')('parses nth key with N > 1', () => {
-    const result = parseReplacementKey('Company:#2', 'Company: {provider_name}');
-    expect(result).toEqual({
-      type: 'nth',
-      searchText: 'Company:',
-      n: 2,
-      value: 'Company: {provider_name}',
-    });
-  });
-
-  it.openspec('OA-RCP-039')('treats #0 as simple (N must be positive)', () => {
-    const result = parseReplacementKey('text#0', '{tag}');
-    expect(result.type).toBe('simple');
-  });
-
-  it.openspec('OA-RCP-039')('treats trailing # without number as simple', () => {
-    const result = parseReplacementKey('text#abc', '{tag}');
-    expect(result.type).toBe('simple');
-  });
-
   it.openspec('OA-RCP-039')('does not confuse > inside text without spaces', () => {
     const result = parseReplacementKey('A>B', '{tag}');
     // " > " requires spaces, so "A>B" is simple
@@ -78,17 +48,5 @@ describe('extractSearchText', () => {
 
   it.openspec('OA-RCP-039')('extracts placeholder from context key', () => {
     expect(extractSearchText('Effective Date > [Fill in]')).toBe('[Fill in]');
-  });
-
-  it.openspec('OA-RCP-039')('strips #N suffix from nth key', () => {
-    expect(extractSearchText('Party Name:#1')).toBe('Party Name:');
-  });
-
-  it.openspec('OA-RCP-039')('strips #N for multi-digit N', () => {
-    expect(extractSearchText('Item:#12')).toBe('Item:');
-  });
-
-  it.openspec('OA-RCP-039')('leaves #0 alone (not valid nth)', () => {
-    expect(extractSearchText('text#0')).toBe('text#0');
   });
 });

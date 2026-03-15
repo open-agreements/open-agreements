@@ -70,7 +70,7 @@ export async function verifyOutput(
   });
 
   // Check 3: No leftover [bracketed placeholders] from replacement map
-  // Use extractSearchText() to handle qualified keys (context, nth) properly
+  // Use extractSearchText() to handle qualified keys (context) properly
   const searchTexts = [...new Set(Object.keys(replacements).map(extractSearchText))];
   const leftoverBrackets = searchTexts.filter((text) => rawFullText.includes(text));
   checks.push({
