@@ -10,12 +10,64 @@ license_note: >-
 source_sha256: d75600769c12724990de48149d7a2bb161f3522daa54b1783672f93697d87d29
 optional: false
 fields:
+  - name: company_name
+    type: string
+    description: Full legal name of the corporation
+  - name: original_incorporation_date
+    type: string
+    description: Date the corporation was originally incorporated (e.g., January 1, 2020)
+  - name: registered_agent_address
+    type: string
+    description: Street address of the registered agent in Delaware
+  - name: registered_agent_city
+    type: string
+    description: City of the registered agent office
+  - name: registered_agent_county
+    type: string
+    description: County of the registered agent office
+  - name: registered_agent_name
+    type: string
+    description: Name of the registered agent in Delaware
+  - name: total_authorized_shares
+    type: string
+    description: Total number of authorized shares of all classes
+  - name: number_of_classes
+    type: string
+    description: Number of classes of stock (e.g., two)
+    default: two
+  - name: common_shares_authorized
+    type: string
+    description: Number of authorized shares of Common Stock
+  - name: preferred_shares_authorized
+    type: string
+    description: Number of authorized shares of Preferred Stock
+  - name: series_designation
+    type: string
+    description: Series designation for preferred stock (e.g., A, B, C)
+    default: A
+  - name: series_preferred_shares
+    type: string
+    description: Number of designated shares of the Series Preferred Stock
   - name: original_issue_price
     type: string
     description: Original purchase price per share of Series A Preferred Stock
   - name: initial_purchase_price
     type: string
     description: Initial Series A purchase price per share
+  - name: liquidation_preference_multiple
+    type: string
+    description: Liquidation preference multiple (e.g., 1, 1.5, 2)
+    default: '1'
+  - name: dividend_rate_percent
+    type: string
+    description: Annual dividend rate percentage on Preferred Stock
+    default: '8'
+  - name: preferred_shares_outstanding_threshold
+    type: string
+    description: Minimum shares of Preferred Stock outstanding for protective provisions to apply
+  - name: preferred_director_seats
+    type: string
+    description: Number of Preferred Director board seats
   - name: signature_page_marker
     type: string
     description: Signature page marker text
@@ -34,10 +86,25 @@ fields:
   - name: effective_date
     type: date
     description: Effective date of the certificate of incorporation
+  - name: adjustment_notice_days
+    type: string
+    description: Days to provide notice of conversion price adjustments
+    default: '10'
+  - name: redemption_interest_rate
+    type: string
+    description: Annual interest rate on unredeemed shares (percentage)
+    default: '12'
+  - name: conversion_notice_days
+    type: string
+    description: Days prior to record date for mandatory conversion notice
+    default: '10'
 required_fields:
+  - company_name
   - original_issue_price
   - initial_purchase_price
-  - time_zone
   - par_value
   - specify_percentage
   - effective_date
+  - total_authorized_shares
+  - common_shares_authorized
+  - preferred_shares_authorized

@@ -3,6 +3,6 @@
   "removeParagraphPatterns": [
     "^Note to Drafter:",
     "^Preliminary Note\\b",
-    "^Use the following"
+    "^\\[?Use the following"
   ]
 }
