@@ -1,0 +1,221 @@
+import { describe, expect, it } from 'vitest';
+import { mkdtempSync, rmSync } from 'node:fs';
+import { join } from 'node:path';
+import { tmpdir } from 'node:os';
+import AdmZip from 'adm-zip';
+import { DOMParser } from '@xmldom/xmldom';
+import { cleanDocument } from './cleaner.js';
+import type { CleanConfig } from '../metadata.js';
+
+const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
+
+function buildTestDocxRaw(bodyXml: string): string {
+  const dir = mkdtempSync(join(tmpdir(), 'cleaner-test-'));
+  const path = join(dir, 'input.docx');
+
+  const documentXml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+  <w:body>${bodyXml}</w:body>
+</w:document>`;
+
+  const zip = new AdmZip();
+  zip.addFile('word/document.xml', Buffer.from(documentXml, 'utf-8'));
+  zip.addFile('[Content_Types].xml', Buffer.from(`<?xml version="1.0" encoding="UTF-8"?>
+<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">
+  <Default Extension="xml" ContentType="application/xml"/>
+  <Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/>
+</Types>`, 'utf-8'));
+  zip.addFile('word/_rels/document.xml.rels', Buffer.from(`<?xml version="1.0" encoding="UTF-8"?>
+<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"/>`, 'utf-8'));
+  zip.writeZip(path);
+  return path;
+}
+
+function buildTestDocx(paragraphs: string[]): string {
+  const bodyContent = paragraphs
+    .map((text) => `<w:p><w:r><w:t>${text}</w:t></w:r></w:p>`)
+    .join('');
+  return buildTestDocxRaw(bodyContent);
+}
+
+function extractParaTexts(docxPath: string): string[] {
+  const zip = new AdmZip(docxPath);
+  const entry = zip.getEntry('word/document.xml');
+  if (!entry) return [];
+  const xml = entry.getData().toString('utf-8');
+  const doc = new DOMParser().parseFromString(xml, 'text/xml');
+  const paras = doc.getElementsByTagNameNS(W_NS, 'p');
+  const texts: string[] = [];
+  for (let i = 0; i < paras.length; i++) {
+    const tElements = paras[i].getElementsByTagNameNS(W_NS, 't');
+    const parts: string[] = [];
+    for (let j = 0; j < tElements.length; j++) {
+      parts.push(tElements[j].textContent ?? '');
+    }
+    texts.push(parts.join(''));
+  }
+  return texts;
+}
+
+function extractDocXml(docxPath: string): string {
+  const zip = new AdmZip(docxPath);
+  const entry = zip.getEntry('word/document.xml');
+  return entry ? entry.getData().toString('utf-8') : '';
+}
+
+describe('cleanDocument removeBeforePattern', () => {
+  it('removes paragraphs before the anchor pattern', async () => {
+    const inputPath = buildTestDocx([
+      'COVER PAGE TITLE',
+      '',
+      'AMENDED AND RESTATEDCERTIFICATE OF INCORPORATIONOF Acme Corp',
+      'Article content here',
+    ]);
+    const outputDir = mkdtempSync(join(tmpdir(), 'cleaner-out-'));
+    const outputPath = join(outputDir, 'output.docx');
+
+    const config: CleanConfig = {
+      removeFootnotes: false,
+      removeBeforePattern: '^AMENDED AND RESTATEDCERTIFICATE OF INCORPORATIONOF',
+      removeParagraphPatterns: [],
+      removeRanges: [],
+      clearParts: [],
+    };
+
+    await cleanDocument(inputPath, outputPath, config);
+    const texts = extractParaTexts(outputPath);
+
+    expect(texts).toEqual([
+      'AMENDED AND RESTATEDCERTIFICATE OF INCORPORATIONOF Acme Corp',
+      'Article content here',
+    ]);
+
+    rmSync(outputDir, { recursive: true, force: true });
+  });
+
+  it('no-ops when anchor pattern is not found', async () => {
+    const inputPath = buildTestDocx([
+      'First paragraph',
+      'Second paragraph',
+    ]);
+    const outputDir = mkdtempSync(join(tmpdir(), 'cleaner-out-'));
+    const outputPath = join(outputDir, 'output.docx');
+
+    const config: CleanConfig = {
+      removeFootnotes: false,
+      removeBeforePattern: '^NONEXISTENT PATTERN',
+      removeParagraphPatterns: [],
+      removeRanges: [],
+      clearParts: [],
+    };
+
+    await cleanDocument(inputPath, outputPath, config);
+    const texts = extractParaTexts(outputPath);
+
+    expect(texts).toEqual([
+      'First paragraph',
+      'Second paragraph',
+    ]);
+
+    rmSync(outputDir, { recursive: true, force: true });
+  });
+
+  it('extracts removed content when guidance extraction is enabled', async () => {
+    const inputPath = buildTestDocx([
+      'Cover Title',
+      'Cover Subtitle',
+      'AMENDED AND RESTATEDCERTIFICATE OF INCORPORATIONOF Corp',
+      'Body content',
+    ]);
+    const outputDir = mkdtempSync(join(tmpdir(), 'cleaner-out-'));
+    const outputPath = join(outputDir, 'output.docx');
+
+    const config: CleanConfig = {
+      removeFootnotes: false,
+      removeBeforePattern: '^AMENDED AND RESTATEDCERTIFICATE OF INCORPORATIONOF',
+      removeParagraphPatterns: [],
+      removeRanges: [],
+      clearParts: [],
+    };
+
+    const result = await cleanDocument(inputPath, outputPath, config, {
+      extractGuidance: true,
+      sourceHash: 'test',
+      configHash: 'test',
+    });
+
+    expect(result.guidance).toBeDefined();
+    expect(result.guidance!.entries.length).toBe(2);
+    expect(result.guidance!.entries[0].text).toBe('Cover Title');
+    expect(result.guidance!.entries[1].text).toBe('Cover Subtitle');
+
+    rmSync(outputDir, { recursive: true, force: true });
+  });
+
+  it('removes cover page sectPr (no lowerRoman numbering leak)', async () => {
+    // Simulate cover page: P0 (title) + P1 (empty with sectPr) + P2 (real title)
+    const bodyXml = [
+      '<w:p><w:r><w:t>AMENDED AND RESTATEDCERTIFICATE OF INCORPORATION</w:t></w:r></w:p>',
+      '<w:p><w:pPr><w:sectPr><w:pgNumType w:fmt="lowerRoman" w:start="1"/><w:titlePg/></w:sectPr></w:pPr></w:p>',
+      '<w:p><w:r><w:t>AMENDED AND RESTATEDCERTIFICATE OF INCORPORATIONOF Acme Corp</w:t></w:r></w:p>',
+      '<w:p><w:r><w:t>Body content</w:t></w:r></w:p>',
+    ].join('');
+
+    const inputPath = buildTestDocxRaw(bodyXml);
+    const outputDir = mkdtempSync(join(tmpdir(), 'cleaner-out-'));
+    const outputPath = join(outputDir, 'output.docx');
+
+    const config: CleanConfig = {
+      removeFootnotes: false,
+      removeBeforePattern: '^AMENDED AND RESTATEDCERTIFICATE OF INCORPORATIONOF',
+      removeParagraphPatterns: [],
+      removeRanges: [],
+      clearParts: [],
+    };
+
+    await cleanDocument(inputPath, outputPath, config);
+    const texts = extractParaTexts(outputPath);
+
+    // P0 and P1 (with sectPr) removed; P2 and body remain
+    expect(texts).toEqual([
+      'AMENDED AND RESTATEDCERTIFICATE OF INCORPORATIONOF Acme Corp',
+      'Body content',
+    ]);
+
+    // Verify the lowerRoman sectPr was removed with P1
+    const xml = extractDocXml(outputPath);
+    expect(xml).not.toContain('lowerRoman');
+    expect(xml).not.toContain('titlePg');
+
+    rmSync(outputDir, { recursive: true, force: true });
+  });
+
+  it('combines removeBeforePattern with removeParagraphPatterns', async () => {
+    const inputPath = buildTestDocx([
+      'Cover page',
+      'REAL TITLE OF THE DOCUMENT',
+      'Note to Drafter: remove this',
+      'Keep this content',
+    ]);
+    const outputDir = mkdtempSync(join(tmpdir(), 'cleaner-out-'));
+    const outputPath = join(outputDir, 'output.docx');
+
+    const config: CleanConfig = {
+      removeFootnotes: false,
+      removeBeforePattern: '^REAL TITLE',
+      removeParagraphPatterns: ['^Note to Drafter:'],
+      removeRanges: [],
+      clearParts: [],
+    };
+
+    await cleanDocument(inputPath, outputPath, config);
+    const texts = extractParaTexts(outputPath);
+
+    expect(texts).toEqual([
+      'REAL TITLE OF THE DOCUMENT',
+      'Keep this content',
+    ]);
+
+    rmSync(outputDir, { recursive: true, force: true });
+  });
+});

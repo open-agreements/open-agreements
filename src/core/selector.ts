@@ -29,6 +29,7 @@ type Trigger = z.infer<typeof TriggerSchema>;
 const OptionSchema = z.object({
   marker: z.string(),
   trigger: TriggerSchema,
+  replaceWith: z.string().optional(),
 });
 
 const GroupSchema = z
@@ -36,12 +37,13 @@ const GroupSchema = z
     id: z.string(),
     type: z.enum(['radio', 'checkbox']),
     standalone: z.boolean().optional(),
+    markerless: z.boolean().optional(),
     cellContext: z.string().optional(),
     options: z.array(OptionSchema).min(1),
   })
   .refine(
-    (g) => g.standalone === true || g.options.length >= 2,
-    { message: 'Non-standalone groups require at least 2 options' },
+    (g) => g.standalone === true || g.markerless === true || g.options.length >= 2,
+    { message: 'Non-standalone/non-markerless groups require at least 2 options' },
   );
 
 export const SelectionsConfigSchema = z.object({
@@ -260,6 +262,10 @@ function processGroup(
   group: z.infer<typeof GroupSchema>,
   data: Record<string, unknown>,
 ): boolean {
+  if (group.markerless) {
+    return processMarkerlessGroup(doc, group, data);
+  }
+
   if (group.standalone) {
     return processStandaloneGroup(doc, group, data);
   }
@@ -511,6 +517,106 @@ function processStandaloneGroup(
       } else {
         // No cell parent — just remove the paragraph
         markerPara.parentNode?.removeChild(markerPara);
+      }
+      madeChanges = true;
+    }
+  }
+
+  return madeChanges;
+}
+
+/** Replace all <w:t> content in a paragraph with new text. First node gets the text, rest get empty string. */
+function replaceParagraphText(para: Element, newText: string): void {
+  const tElements = para.getElementsByTagNameNS(W_NS, 't');
+  for (let i = 0; i < tElements.length; i++) {
+    tElements[i].textContent = i === 0 ? newText : '';
+  }
+}
+
+/**
+ * Process a markerless group where option paragraphs are matched by content text
+ * without requiring [ ] / ( ) prefix markers.
+ *
+ * When selected → keep paragraph as-is.
+ * When unselected + replaceWith → replace paragraph text, remove sub-clause paragraphs.
+ * When unselected + no replaceWith → remove paragraph + sub-clause paragraphs.
+ */
+function processMarkerlessGroup(
+  doc: Document,
+  group: z.infer<typeof GroupSchema>,
+  data: Record<string, unknown>,
+): boolean {
+  const selectedIndices = evaluateTriggers(group, data);
+  let madeChanges = false;
+
+  for (let oi = 0; oi < group.options.length; oi++) {
+    const option = group.options[oi];
+
+    // Snapshot all paragraphs before mutating to avoid live NodeList issues
+    const allParagraphs = doc.getElementsByTagNameNS(W_NS, 'p');
+    const matchedParas: Element[] = [];
+    for (let pi = 0; pi < allParagraphs.length; pi++) {
+      const para = allParagraphs[pi];
+      const text = extractParagraphText(para);
+      if (text && text.includes(option.marker)) {
+        matchedParas.push(para);
+      }
+    }
+
+    if (matchedParas.length === 0) continue;
+
+    if (selectedIndices.has(oi)) {
+      // Selected — keep paragraphs as-is, no changes needed
+      continue;
+    }
+
+    // Unselected — process each matched paragraph
+    for (const markerPara of matchedParas) {
+      const parent = markerPara.parentNode;
+      if (!parent) continue;
+
+      // Collect sub-clause paragraphs following the match
+      const siblings: Element[] = [];
+      const childNodes = parent.childNodes;
+      let foundMarker = false;
+      for (let ci = 0; ci < childNodes.length; ci++) {
+        const node = childNodes[ci];
+        if (node.nodeType !== 1) continue;
+        const el = node as Element;
+        if (el.localName !== 'p' || el.namespaceURI !== W_NS) continue;
+        siblings.push(el);
+      }
+
+      const markerIdx = siblings.indexOf(markerPara);
+      if (markerIdx < 0) continue;
+
+      // Walk forward to collect sub-clause paragraphs
+      const subClauses: Element[] = [];
+      for (let si = markerIdx + 1; si < siblings.length; si++) {
+        const p = siblings[si];
+        const text = extractParagraphText(p);
+        // Stop at next section heading or another option's marker
+        if (text) {
+          const isAnotherMarker = group.options.some((o) => text.includes(o.marker));
+          // Stop at what looks like a section heading (e.g., "(c)", "1.3", "SECTION")
+          const isSectionHeading = /^\(?[a-z]\)|^\d+\.\d+|^SECTION\b|^ARTICLE\b/i.test(text);
+          if (isAnotherMarker || isSectionHeading) break;
+        }
+        subClauses.push(p);
+      }
+
+      if (option.replaceWith !== undefined) {
+        // Replace matched paragraph text, remove sub-clauses
+        replaceParagraphText(markerPara, option.replaceWith);
+        for (const p of subClauses) {
+          p.parentNode?.removeChild(p);
+        }
+      } else {
+        // Remove matched paragraph + sub-clauses
+        markerPara.parentNode?.removeChild(markerPara);
+        for (const p of subClauses) {
+          p.parentNode?.removeChild(p);
+        }
       }
       madeChanges = true;
     }

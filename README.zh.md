@@ -29,7 +29,7 @@
 
 填写标准法律协议模板并生成可签署的 DOCX 文件。模板涵盖 NDA、云服务条款、雇佣文档、承包商协议、SAFE 以及 NVCA 融资文件。
 
-由 [UseJunior.com](https://usejunior.com) 背后团队构建，已在 Am Law 100 律所中投入生产使用。
+**Open Agreements** 由 [UseJunior](https://usejunior.com) 构建，属于 [UseJunior 开发者工具](https://usejunior.com/developer-tools/open-agreements)的一部分。已在 Am Law 100 律所中投入生产使用。
 
 ## 质量与可信信号
 
@@ -298,6 +298,11 @@ Vercel 部署说明：
 2. 包内自带内容（默认回退）
 
 这既保持默认安装简单，也允许高级用户将大型内容库移出核心包。
+
+## 另请参阅
+
+- [safe-docx](https://github.com/UseJunior/safe-docx) — 使用编程代理对现有 Word 文档进行精准编辑（MCP 服务器）
+- [UseJunior Developer Tools](https://usejunior.com/developer-tools/open-agreements) — 产品页面，含安装选项和模板目录
 
 ## 贡献
 

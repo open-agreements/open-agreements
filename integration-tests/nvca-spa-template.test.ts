@@ -10,6 +10,7 @@ import { extractAllText, verifyOutput } from '../src/core/recipe/verifier.js';
 import { runFillPipeline } from '../src/core/unified-pipeline.js';
 import { validateRecipe } from '../src/core/validation/recipe.js';
 import { validateRecipeMetadata } from '../src/core/metadata.js';
+import { applySelections, loadSelectionsConfig } from '../src/core/selector.js';
 import {
   allureDescriptionHtml,
   allureParameter,
@@ -134,6 +135,10 @@ const FIELD_ASSERTION_POLICY: Record<string, FieldAssertionPolicy> = {
   closing_heading: { mode: 'strict', reason: 'Single-closing heading should render explicitly' },
   initial_word_lower: { mode: 'strict', reason: 'Single-closing lowercase token should render explicitly' },
   initial_word_title: { mode: 'strict', reason: 'Single-closing titlecase token should render explicitly' },
+  closing_type: {
+    mode: 'skip',
+    reason: 'Control input for markerless selection toggle; downstream effect tested in dedicated closing_type behavioral test',
+  },
   dispute_resolution_mode: {
     mode: 'skip',
     reason: 'Computed control input; not rendered directly in template text',
@@ -860,6 +865,68 @@ describe('NVCA SPA Template', () => {
         });
       } finally {
         rmSync(fixture.tempDir, { recursive: true, force: true });
+      }
+    }
+  );
+
+  itFilling(
+    'closing_type "single" replaces Additional Closings with [Reserved]',
+    async () => {
+      await allureParameter('recipe_id', RECIPE_ID);
+      const closingContext: LawyerReviewContext = {
+        legalQuestion: 'Does closing_type="single" remove the Additional Closings section and replace the heading with [Reserved]?',
+        riskTier: 'High',
+        whyItMatters: 'Single-closing deals must not contain additional-closing language. Section numbering must be preserved via [Reserved].',
+        expectedOutcome: 'Additional Closings heading replaced with [Reserved], sub-clauses removed, surrounding sections undisturbed.',
+      };
+      await applyLawyerReviewContext(closingContext);
+
+      const selectionsConfig = await allureStep('Load SPA selections.json', () =>
+        loadSelectionsConfig(join(RECIPE_DIR, 'selections.json'))
+      );
+
+      // Build a fixture with paragraph text that mirrors the real SPA structure
+      const tempDir = mkdtempSync(join(tmpdir(), 'nvca-spa-closing-'));
+      const inputPath = join(tempDir, 'source.docx');
+      const outputPath = join(tempDir, 'filled.docx');
+
+      const documentXml =
+        '<?xml version="1.0" encoding="UTF-8"?>' +
+        `<w:document xmlns:w="${W_NS}"><w:body>` +
+        '<w:p><w:r><w:t>1.2(a) Initial Closing.</w:t></w:r></w:p>' +
+        '<w:p><w:r><w:t>The initial closing of the purchase shall occur on the date hereof.</w:t></w:r></w:p>' +
+        '<w:p><w:r><w:t>Additional Closings. At any time following the Initial Closing, the Company may sell additional shares.</w:t></w:r></w:p>' +
+        '<w:p><w:r><w:t>Such additional sales shall be on the same terms and conditions.</w:t></w:r></w:p>' +
+        '<w:p><w:r><w:t>1.2(c) Tranche Closing.</w:t></w:r></w:p>' +
+        '</w:body></w:document>';
+
+      const zip = new AdmZip();
+      zip.addFile('[Content_Types].xml', Buffer.from(CONTENT_TYPES_XML, 'utf-8'));
+      zip.addFile('_rels/.rels', Buffer.from(ROOT_RELS_XML, 'utf-8'));
+      zip.addFile('word/_rels/document.xml.rels', Buffer.from(WORD_RELS_XML, 'utf-8'));
+      zip.addFile('word/document.xml', Buffer.from(documentXml, 'utf-8'));
+      writeFileSync(inputPath, zip.toBuffer());
+
+      try {
+        await allureStep('Apply selections with closing_type=single', async () => {
+          await applySelections(inputPath, outputPath, selectionsConfig, { closing_type: 'single' });
+        });
+
+        const outputText = await allureStep('Extract output text', () => extractAllText(outputPath));
+        await applyLawyerReviewContext(
+          closingContext,
+          renderTextEvidenceHtml('Rendered Output Text', outputText)
+        );
+
+        await allureStep('Assert Additional Closings text absent from single-closing output', () => {
+          expect(outputText).not.toContain('Additional Closing');
+        });
+        await allureStep('Assert surrounding sections preserved', () => {
+          expect(outputText).toContain('Initial Closing');
+          expect(outputText).toContain('Tranche Closing');
+        });
+      } finally {
+        rmSync(tempDir, { recursive: true, force: true });
       }
     }
   );

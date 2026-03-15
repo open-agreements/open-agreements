@@ -93,20 +93,21 @@ export async function cleanDocument(
     const doc: Document = parser.parseFromString(xml, 'text/xml');
     let modified = false;
 
-    if (config.removeFootnotes) {
-      removeFootnoteReferences(doc);
-      modified = true;
-    }
-
-    if (config.removeParagraphPatterns.length > 0) {
+    // Remove cover-page paragraphs before anchor pattern (document.xml only)
+    if (config.removeBeforePattern && partName === 'word/document.xml') {
       if (extract) {
-        const extracted = extractAndRemoveParagraphsByPattern(doc, config.removeParagraphPatterns);
+        const extracted = extractAndRemoveParagraphsBeforePattern(doc, config.removeBeforePattern);
         for (const text of extracted) {
           entries.push({ source: 'pattern', part: partName, index: indexCounter++, text });
         }
       } else {
-        removeParagraphsByPattern(doc, config.removeParagraphPatterns);
+        removeParagraphsBeforePattern(doc, config.removeBeforePattern);
       }
+      modified = true;
+    }
+
+    if (config.removeFootnotes) {
+      removeFootnoteReferences(doc);
       modified = true;
     }
 
@@ -121,6 +122,18 @@ export async function cleanDocument(
         }
       } else {
         removeParagraphsByRange(doc, config.removeRanges);
+      }
+      modified = true;
+    }
+
+    if (config.removeParagraphPatterns.length > 0) {
+      if (extract) {
+        const extracted = extractAndRemoveParagraphsByPattern(doc, config.removeParagraphPatterns);
+        for (const text of extracted) {
+          entries.push({ source: 'pattern', part: partName, index: indexCounter++, text });
+        }
+      } else {
+        removeParagraphsByPattern(doc, config.removeParagraphPatterns);
       }
       modified = true;
     }
@@ -392,6 +405,78 @@ function extractParagraphText(para: Element): string {
     parts.push(textElements[i].textContent ?? '');
   }
   return parts.join('').trim();
+}
+
+/**
+ * Remove all paragraphs from the start of <w:body> up to (but not including) the first
+ * paragraph whose text matches the given regex pattern. No-op if no match is found.
+ */
+function removeParagraphsBeforePattern(doc: Document, pattern: string): void {
+  const regex = new RegExp(pattern);
+  const body = doc.getElementsByTagNameNS(W_NS, 'body')[0];
+  if (!body) return;
+
+  const paragraphs = body.getElementsByTagNameNS(W_NS, 'p');
+  const toRemove: Element[] = [];
+
+  for (let i = 0; i < paragraphs.length; i++) {
+    const para = paragraphs[i];
+    // Only consider direct children of <w:body>
+    if (para.parentNode !== body) continue;
+    const text = extractParagraphText(para);
+    if (regex.test(text)) {
+      // Found the anchor — stop collecting
+      break;
+    }
+    toRemove.push(para);
+  }
+
+  // Only remove if we found the anchor (i.e., we didn't exhaust all paragraphs)
+  if (toRemove.length === 0) return;
+  // Verify anchor was actually found by checking we didn't collect all body paragraphs
+  const bodyParas: Element[] = [];
+  for (let i = 0; i < paragraphs.length; i++) {
+    if (paragraphs[i].parentNode === body) bodyParas.push(paragraphs[i]);
+  }
+  if (toRemove.length >= bodyParas.length) return; // No anchor found — no-op
+
+  for (const para of toRemove) {
+    para.parentNode?.removeChild(para);
+  }
+}
+
+/** Extract text from paragraphs before anchor pattern, then remove them. */
+function extractAndRemoveParagraphsBeforePattern(doc: Document, pattern: string): string[] {
+  const regex = new RegExp(pattern);
+  const body = doc.getElementsByTagNameNS(W_NS, 'body')[0];
+  if (!body) return [];
+
+  const paragraphs = body.getElementsByTagNameNS(W_NS, 'p');
+  const toRemove: Element[] = [];
+  const extracted: string[] = [];
+
+  for (let i = 0; i < paragraphs.length; i++) {
+    const para = paragraphs[i];
+    if (para.parentNode !== body) continue;
+    const text = extractParagraphText(para);
+    if (regex.test(text)) {
+      break;
+    }
+    toRemove.push(para);
+    if (text) extracted.push(text);
+  }
+
+  const bodyParas: Element[] = [];
+  for (let i = 0; i < paragraphs.length; i++) {
+    if (paragraphs[i].parentNode === body) bodyParas.push(paragraphs[i]);
+  }
+  if (toRemove.length >= bodyParas.length) return [];
+
+  for (const para of toRemove) {
+    para.parentNode?.removeChild(para);
+  }
+
+  return extracted;
 }
 
 /** Extract all text from an element (used for footnotes which contain multiple paragraphs). */

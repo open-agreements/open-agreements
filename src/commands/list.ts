@@ -80,7 +80,7 @@ function runListJson(opts: ListOptions): void {
       const dir = entry.dir;
       try {
         const meta = loadRecipeMetadata(dir);
-        results.push({
+        const item: ListItem = {
           name: id,
           category: categoryFromId(id),
           description: meta.description ?? meta.name,
@@ -90,7 +90,11 @@ function runListJson(opts: ListOptions): void {
           source_version: meta.source_version,
           optional: meta.optional,
           fields: mapFields(meta.fields, meta.required_fields),
-        });
+        };
+        if (meta.market_data_citations) {
+          item.market_data_citations = meta.market_data_citations;
+        }
+        results.push(item);
       } catch (err) {
         errors.push(`recipe ${id}: ${err instanceof Error ? err.message : String(err)}`);
       }

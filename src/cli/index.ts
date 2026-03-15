@@ -38,6 +38,7 @@ export function createProgram(): Command {
     .argument('<template>', 'Template name to fill')
     .option('-o, --output <path>', 'Output file path')
     .option('-d, --data <json-file>', 'JSON file with field values')
+    .option('--values <json-file>', 'Alias for --data')
     .option('--set <key=value...>', 'Set a field value (repeatable)')
     .option('--memo [format]', 'Generate memo artifact(s): json, markdown, or both (default: both)')
     .option('--memo-json <path>', 'Output path for memo JSON')
@@ -49,6 +50,7 @@ export function createProgram(): Command {
       opts: {
         output?: string;
         data?: string;
+        values?: string;
         set?: string[];
         memo?: string | boolean;
         memoJson?: string;
@@ -58,9 +60,10 @@ export function createProgram(): Command {
       }
     ) => {
       let values: Record<string, string> = {};
+      const dataPath = opts.data ?? opts.values;
 
-      if (opts.data) {
-        values = JSON.parse(readFileSync(opts.data, 'utf-8'));
+      if (dataPath) {
+        values = JSON.parse(readFileSync(dataPath, 'utf-8'));
       }
 
       for (const pair of opts.set ?? []) {
@@ -112,15 +115,16 @@ export function createProgram(): Command {
     .option('-i, --input <path>', 'Source DOCX file (auto-downloads if omitted)')
     .option('-o, --output <path>', 'Output file path')
     .option('-d, --data <json-file>', 'JSON file with field values')
+    .option('--values <json-file>', 'Alias for --data')
     .option('--keep-intermediate', 'Preserve intermediate files')
     .option('--computed-out <path>', 'Write computed interaction artifact JSON')
     .option('--no-normalize-brackets', 'Disable post-fill bracket artifact normalization')
-    .action(async (recipeId: string, opts: { input?: string; output?: string; data?: string; keepIntermediate?: boolean; computedOut?: string; normalizeBrackets?: boolean }) => {
+    .action(async (recipeId: string, opts: { input?: string; output?: string; data?: string; values?: string; keepIntermediate?: boolean; computedOut?: string; normalizeBrackets?: boolean }) => {
       await runRecipeCommand({
         recipeId,
         input: opts.input,
         output: opts.output,
-        data: opts.data,
+        data: opts.data ?? opts.values,
         keepIntermediate: opts.keepIntermediate,
         computedOut: opts.computedOut,
         normalizeBrackets: opts.normalizeBrackets,
@@ -168,8 +172,9 @@ export function createProgram(): Command {
     .description('Initialize a new checklist in the state directory')
     .argument('<deal-name>', 'Deal name for the checklist')
     .option('-d, --data <json-file>', 'JSON file with initial checklist data (brownfield)')
-    .action(async (dealName: string, opts: { data?: string }) => {
-      await runChecklistCreate({ dealName, data: opts.data });
+    .option('--values <json-file>', 'Alias for --data')
+    .action(async (dealName: string, opts: { data?: string; values?: string }) => {
+      await runChecklistCreate({ dealName, data: opts.data ?? opts.values });
     });
 
   checklistCmd

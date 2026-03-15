@@ -29,7 +29,7 @@
 
 Preencha modelos padrão de acordos legais e gere arquivos DOCX prontos para assinatura. Os modelos cobrem NDAs, termos de cloud, documentos de trabalho, acordos com contratados, SAFEs e documentos de financiamento NVCA.
 
-Construído pela equipe por trás da [UseJunior.com](https://usejunior.com) — em produção em escritórios Am Law 100.
+**Open Agreements** por [UseJunior](https://usejunior.com) — parte das [ferramentas para desenvolvedores da UseJunior](https://usejunior.com/developer-tools/open-agreements). Em produção em escritórios Am Law 100.
 
 ## Qualidade e sinais de confiança
 
@@ -298,6 +298,11 @@ A precedência de busca é:
 2. conteúdo empacotado padrão (fallback)
 
 Isso mantém instalações padrão simples e permite que usuários avançados movam bibliotecas de conteúdo grandes para fora do pacote principal.
+
+## Veja também
+
+- [safe-docx](https://github.com/UseJunior/safe-docx) — edição cirúrgica de documentos Word existentes com agentes de código (servidor MCP)
+- [UseJunior Developer Tools](https://usejunior.com/developer-tools/open-agreements) — página do produto com opções de instalação e catálogo de modelos
 
 ## Contribuindo
 

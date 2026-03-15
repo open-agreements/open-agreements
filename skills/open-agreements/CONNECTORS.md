@@ -12,7 +12,7 @@ This skill uses `~~category` placeholders for optional integrations. The skill w
 
 ### Setting up the Remote MCP (recommended)
 
-The remote MCP handles all 41 templates server-side. No local dependencies needed. See [openagreements.ai](https://openagreements.ai) for setup instructions.
+The remote MCP handles all 41 templates server-side. No local dependencies needed. See the [Open Agreements product page](https://usejunior.com/developer-tools/open-agreements) for setup instructions.
 
 ### Alternative: Local CLI
 
