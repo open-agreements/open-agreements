@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { mkdtempSync, rmSync, readFileSync } from 'node:fs';
+import { mkdtempSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import AdmZip from 'adm-zip';
@@ -9,17 +9,13 @@ import type { CleanConfig } from '../metadata.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 
-function buildTestDocx(paragraphs: string[]): string {
+function buildTestDocxRaw(bodyXml: string): string {
   const dir = mkdtempSync(join(tmpdir(), 'cleaner-test-'));
   const path = join(dir, 'input.docx');
 
-  const bodyContent = paragraphs
-    .map((text) => `<w:p><w:r><w:t>${text}</w:t></w:r></w:p>`)
-    .join('');
-
   const documentXml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
-  <w:body>${bodyContent}</w:body>
+  <w:body>${bodyXml}</w:body>
 </w:document>`;
 
   const zip = new AdmZip();
@@ -33,6 +29,13 @@ function buildTestDocx(paragraphs: string[]): string {
 <Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"/>`, 'utf-8'));
   zip.writeZip(path);
   return path;
+}
+
+function buildTestDocx(paragraphs: string[]): string {
+  const bodyContent = paragraphs
+    .map((text) => `<w:p><w:r><w:t>${text}</w:t></w:r></w:p>`)
+    .join('');
+  return buildTestDocxRaw(bodyContent);
 }
 
 function extractParaTexts(docxPath: string): string[] {
@@ -52,6 +55,12 @@ function extractParaTexts(docxPath: string): string[] {
     texts.push(parts.join(''));
   }
   return texts;
+}
+
+function extractDocXml(docxPath: string): string {
+  const zip = new AdmZip(docxPath);
+  const entry = zip.getEntry('word/document.xml');
+  return entry ? entry.getData().toString('utf-8') : '';
 }
 
 describe('cleanDocument removeBeforePattern', () => {
@@ -139,6 +148,73 @@ describe('cleanDocument removeBeforePattern', () => {
     expect(result.guidance!.entries.length).toBe(2);
     expect(result.guidance!.entries[0].text).toBe('Cover Title');
     expect(result.guidance!.entries[1].text).toBe('Cover Subtitle');
+
+    rmSync(outputDir, { recursive: true, force: true });
+  });
+
+  it('removes cover page sectPr (no lowerRoman numbering leak)', async () => {
+    // Simulate cover page: P0 (title) + P1 (empty with sectPr) + P2 (real title)
+    const bodyXml = [
+      '<w:p><w:r><w:t>AMENDED AND RESTATEDCERTIFICATE OF INCORPORATION</w:t></w:r></w:p>',
+      '<w:p><w:pPr><w:sectPr><w:pgNumType w:fmt="lowerRoman" w:start="1"/><w:titlePg/></w:sectPr></w:pPr></w:p>',
+      '<w:p><w:r><w:t>AMENDED AND RESTATEDCERTIFICATE OF INCORPORATIONOF Acme Corp</w:t></w:r></w:p>',
+      '<w:p><w:r><w:t>Body content</w:t></w:r></w:p>',
+    ].join('');
+
+    const inputPath = buildTestDocxRaw(bodyXml);
+    const outputDir = mkdtempSync(join(tmpdir(), 'cleaner-out-'));
+    const outputPath = join(outputDir, 'output.docx');
+
+    const config: CleanConfig = {
+      removeFootnotes: false,
+      removeBeforePattern: '^AMENDED AND RESTATEDCERTIFICATE OF INCORPORATIONOF',
+      removeParagraphPatterns: [],
+      removeRanges: [],
+      clearParts: [],
+    };
+
+    await cleanDocument(inputPath, outputPath, config);
+    const texts = extractParaTexts(outputPath);
+
+    // P0 and P1 (with sectPr) removed; P2 and body remain
+    expect(texts).toEqual([
+      'AMENDED AND RESTATEDCERTIFICATE OF INCORPORATIONOF Acme Corp',
+      'Body content',
+    ]);
+
+    // Verify the lowerRoman sectPr was removed with P1
+    const xml = extractDocXml(outputPath);
+    expect(xml).not.toContain('lowerRoman');
+    expect(xml).not.toContain('titlePg');
+
+    rmSync(outputDir, { recursive: true, force: true });
+  });
+
+  it('combines removeBeforePattern with removeParagraphPatterns', async () => {
+    const inputPath = buildTestDocx([
+      'Cover page',
+      'REAL TITLE OF THE DOCUMENT',
+      'Note to Drafter: remove this',
+      'Keep this content',
+    ]);
+    const outputDir = mkdtempSync(join(tmpdir(), 'cleaner-out-'));
+    const outputPath = join(outputDir, 'output.docx');
+
+    const config: CleanConfig = {
+      removeFootnotes: false,
+      removeBeforePattern: '^REAL TITLE',
+      removeParagraphPatterns: ['^Note to Drafter:'],
+      removeRanges: [],
+      clearParts: [],
+    };
+
+    await cleanDocument(inputPath, outputPath, config);
+    const texts = extractParaTexts(outputPath);
+
+    expect(texts).toEqual([
+      'REAL TITLE OF THE DOCUMENT',
+      'Keep this content',
+    ]);
 
     rmSync(outputDir, { recursive: true, force: true });
   });
