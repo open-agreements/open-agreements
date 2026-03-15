@@ -29,7 +29,7 @@
 
 Completa plantillas estándar de acuerdos legales y genera archivos DOCX listos para firma. Las plantillas cubren NDAs, términos cloud, documentos laborales, acuerdos con contratistas, SAFEs y documentos de financiamiento NVCA.
 
-Creado por el equipo detrás de [UseJunior.com](https://usejunior.com) — en producción en firmas Am Law 100.
+**Open Agreements** por [UseJunior](https://usejunior.com) — parte de las [herramientas para desarrolladores de UseJunior](https://usejunior.com/developer-tools/open-agreements). En producción en firmas Am Law 100.
 
 ## Calidad y señales de confianza
 
@@ -298,6 +298,11 @@ La precedencia de búsqueda es:
 2. contenido del paquete incluido (fallback por defecto)
 
 Esto mantiene simples las instalaciones por defecto y permite a usuarios avanzados mover bibliotecas de contenido grandes fuera del paquete principal.
+
+## Ver también
+
+- [safe-docx](https://github.com/UseJunior/safe-docx) — edición quirúrgica de documentos Word existentes con agentes de programación (servidor MCP)
+- [UseJunior Developer Tools](https://usejunior.com/developer-tools/open-agreements) — página del producto con opciones de instalación y catálogo de plantillas
 
 ## Contribuir
 

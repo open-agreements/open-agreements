@@ -18,6 +18,14 @@
         "-y",
         "@open-agreements/contract-templates-mcp"
       ]
+    },
+    "checklist-mcp": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@open-agreements/checklist-mcp"
+      ]
     }
   }
 }

@@ -29,7 +29,7 @@
 
 Fülle standardisierte juristische Vertragsvorlagen aus und erzeuge signierbare DOCX-Dateien. Die Vorlagen decken NDAs, Cloud-Bedingungen, Arbeitsdokumente, Contractor-Verträge, SAFEs und NVCA-Finanzierungsdokumente ab.
 
-Entwickelt vom Team hinter [UseJunior.com](https://usejunior.com) — produktiv im Einsatz bei Am Law 100 Kanzleien.
+**Open Agreements** von [UseJunior](https://usejunior.com) — Teil der [UseJunior Developer Tools](https://usejunior.com/developer-tools/open-agreements). Produktiv im Einsatz bei Am Law 100 Kanzleien.
 
 ## Qualitäts- und Vertrauenssignale
 
@@ -298,6 +298,11 @@ Lookup-Priorität:
 2. gebündelter Package-Content (Standard-Fallback)
 
 So bleiben Standardinstallationen einfach, während fortgeschrittene Nutzer große Content-Bibliotheken außerhalb des Kernpakets ablegen können.
+
+## Siehe auch
+
+- [safe-docx](https://github.com/UseJunior/safe-docx) — chirurgische Bearbeitung bestehender Word-Dokumente mit Coding-Agents (MCP-Server)
+- [UseJunior Developer Tools](https://usejunior.com/developer-tools/open-agreements) — Produktseite mit Installationsoptionen und Vorlagenkatalog
 
 ## Mitwirken
 

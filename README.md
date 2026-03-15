@@ -25,7 +25,7 @@
 
 Fill standard legal agreement templates and produce signable DOCX files. Templates cover NDAs, cloud terms, employment docs, contractor agreements, SAFEs, and NVCA financing documents.
 
-Built by the team behind [UseJunior.com](https://usejunior.com) — in production at Am Law 100 firms.
+**Open Agreements** by [UseJunior](https://usejunior.com) — part of the [UseJunior developer tools](https://usejunior.com/developer-tools/open-agreements). In production at Am Law 100 firms.
 
 ## Quality and Trust Signals
 
@@ -324,6 +324,11 @@ Lookup precedence is:
 2. bundled package content (default fallback)
 
 This keeps default installs simple while allowing advanced users to move large content libraries outside the core package.
+
+## See Also
+
+- [safe-docx](https://github.com/UseJunior/safe-docx) — surgical editing of existing Word documents with coding agents (MCP server)
+- [UseJunior Developer Tools](https://usejunior.com/developer-tools/open-agreements) — product page with install options and template catalog
 
 ## Contributing
 
