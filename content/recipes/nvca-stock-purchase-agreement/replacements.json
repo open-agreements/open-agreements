@@ -34,5 +34,11 @@
   "[specify percentage]": "{specify_percentage}",
   "[monthly]": "{financial_reporting_period}",
   "[list the individual director names]": "{director_names}",
-  "[name the applicable Purchasers]": "{applicable_purchasers}"
+  "[name the applicable Purchasers]": "{applicable_purchasers}",
+  "A minimum of > [_________]": "{minimum_shares_initial_closing}",
+  "A minimum of > [_______]": "{minimum_shares_initial_closing}",
+  "expenses of > [_______]": "{investor_counsel}",
+  "U.S. District Court for the District of [_____]": "U.S. District Court for the {judicial_district}",
+  "\u201cSeries > [___]": "{series_designation}",
+  "\"Series > [___]": "{series_designation}"
 }

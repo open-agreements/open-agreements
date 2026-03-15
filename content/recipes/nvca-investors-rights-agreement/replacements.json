@@ -14,5 +14,8 @@
   "[description of business]": "{business_description}",
   "[Signature Page Follows]": "{signature_page_marker}",
   "[_________ __, 20__]": "{effective_date}",
-  "[Date checklist is being delivered]": "{checklist_delivery_date}"
+  "[Date checklist is being delivered]": "{checklist_delivery_date}",
+  "[________], 20[__]": "{effective_date}",
+  "among [____________], a Delaware": "among {company_name}, a Delaware",
+  "U.S. District Court for the District of [_____]": "U.S. District Court for the {judicial_district}"
 }

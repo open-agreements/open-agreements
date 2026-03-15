@@ -13,22 +13,6 @@
       "expected_min_matches": 1
     },
     {
-      "id": "fill-initial-closing-minimum-shares",
-      "section_heading": "Conditions of the Purchasers’ Obligations at Closing",
-      "section_heading_any": [
-        "Proceedings and Documents",
-        "Voting Agreement"
-      ],
-      "paragraph_contains": "A minimum of",
-      "paragraph_end_contains": "Shares must be sold at the [Initial] Closing.]",
-      "replacements": {
-        "[_________]": "{minimum_shares_initial_closing}",
-        "[_______]": "{minimum_shares_initial_closing}"
-      },
-      "trim_unmatched_trailing_bracket": true,
-      "expected_min_matches": 1
-    },
-    {
       "id": "fill-company-counsel-name",
       "section_heading": "Conditions of the Purchasers’ Obligations at Closing",
       "section_heading_any": [

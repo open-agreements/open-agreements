@@ -13,5 +13,8 @@
   "[_____ __, 20___]": "{effective_date}",
   "[specify percentage]": "{specify_percentage}",
   "[45]": "{rofr_response_days}",
-  "[Key Holders]": "{key_holders_label}"
+  "[Key Holders]": "{key_holders_label}",
+  "[________], 20[__]": "{effective_date}",
+  "among [____________], a Delaware": "among {company_name}, a Delaware",
+  "U.S. District Court for the District of [_____]": "U.S. District Court for the {judicial_district}"
 }

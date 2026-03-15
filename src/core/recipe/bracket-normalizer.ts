@@ -149,19 +149,25 @@ export async function normalizeBracketArtifacts(
       // If declarative rules are provided, prefer targeted mutation only.
       // This avoids broad paragraph rewrites that can shift inline styling.
       if (hasDeclarativeRules) {
-        if (declarativeResult.text !== original) {
-          setParagraphText(para, declarativeResult.text);
+        let finalText = declarativeResult.text;
+        // Sanitize double-dollar artifacts ($$ or $ $) → single $
+        finalText = finalText.replace(/\$[\s\u00A0\t]*\$/g, '$');
+        if (finalText !== original) {
+          setParagraphText(para, finalText);
           stats.normalizedParagraphs += 1;
         }
         continue;
       }
 
-      const normalized = normalizeParagraphText(declarativeResult.text, stats);
+      let normalized = normalizeParagraphText(declarativeResult.text, stats);
       if (normalized === null) {
         toRemove.push(para);
         stats.removedParagraphs += 1;
         continue;
       }
+
+      // Sanitize double-dollar artifacts ($$ or $ $) → single $
+      normalized = normalized.replace(/\$[\s\u00A0\t]*\$/g, '$');
 
       if (normalized !== original) {
         setParagraphText(para, normalized);
