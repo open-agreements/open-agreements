@@ -226,7 +226,7 @@ describe('verifyOutput', () => {
       { '[Company Name]': '{company_name}' }
     );
 
-    const placeholdersCheck = result.checks.find((c) => c.name === 'No leftover source placeholders');
+    const placeholdersCheck = result.checks.find((c) => c.name === 'Leftover source placeholders');
     await allureStep('Assert leftover placeholder is reported', () => {
       expect(placeholdersCheck?.passed).toBe(false);
       expect(placeholdersCheck?.details).toContain('[Company Name]');

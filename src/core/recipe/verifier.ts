@@ -74,7 +74,7 @@ export async function verifyOutput(
   const searchTexts = [...new Set(Object.keys(replacements).map(extractSearchText))];
   const leftoverBrackets = searchTexts.filter((text) => rawFullText.includes(text));
   checks.push({
-    name: 'No leftover source placeholders',
+    name: 'Leftover source placeholders',
     passed: leftoverBrackets.length === 0,
     details: leftoverBrackets.length > 0 ? `Found: ${leftoverBrackets.join(', ')}` : undefined,
   });

@@ -942,7 +942,7 @@ describe('NVCA SPA Template', () => {
         await allureStep('Assert scenario output passes verifier checks', () => {
           expect(verifyResult.passed).toBe(true);
           const leftoverCheck = verifyResult.checks.find(
-            (check) => check.name === 'No leftover source placeholders'
+            (check) => check.name === 'Leftover source placeholders'
           );
           expect(leftoverCheck?.passed).toBe(true);
         });

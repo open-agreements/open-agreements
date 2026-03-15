@@ -58,6 +58,23 @@ export function assessScanMetadataCoverage(
     }
   }
 
+  // Brackets embedded inside longer simple-key searchTexts are still covered
+  // by those keys (the patcher replaces the full key including the bracket).
+  const embeddedBracketCoverage = new Map<string, Set<string>>();
+  for (const [searchText, fields] of placeholderFieldMap.entries()) {
+    for (const match of searchText.matchAll(/\[[^\]]+\]/g)) {
+      const bracket = match[0];
+      if (bracket !== searchText && fields.size > 0) {
+        if (!embeddedBracketCoverage.has(bracket)) {
+          embeddedBracketCoverage.set(bracket, new Set<string>());
+        }
+        for (const field of fields) {
+          embeddedBracketCoverage.get(bracket)!.add(field);
+        }
+      }
+    }
+  }
+
   const coveredShort = new Set<string>();
   const uncoveredShort = new Set<string>();
   const ignoredShort = new Set<string>();
@@ -69,7 +86,7 @@ export function assessScanMetadataCoverage(
       continue;
     }
 
-    const mapped = placeholderFieldMap.get(placeholder);
+    const mapped = placeholderFieldMap.get(placeholder) ?? embeddedBracketCoverage.get(placeholder);
     if (!mapped || mapped.size === 0) {
       uncoveredShort.add(placeholder);
       continue;

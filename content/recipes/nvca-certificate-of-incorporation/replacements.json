@@ -25,5 +25,9 @@
   "[________ __, 20__]": "{effective_date}",
   "not later than > [10]": "{adjustment_notice_days}",
   "at least > [10]": "{conversion_notice_days}",
-  "[12]": "{redemption_interest_rate}"
+  "[12]": "{redemption_interest_rate}",
+  "Series A Preferred Stock": "Series {series_designation} Preferred Stock",
+  "Common Stock, $ > [_____]": "{par_value}",
+  "Preferred Stock, $ > [______]": "{par_value}",
+  "$_______ [insert original purchase price of Series A Preferred Stock]": "${original_issue_price}"
 }
