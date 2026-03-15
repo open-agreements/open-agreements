@@ -2,6 +2,9 @@
   "removeFootnotes": true,
   "removeParagraphPatterns": [
     "^Note to Drafter:",
-    "^Preliminary Note\\b"
+    "^Preliminary Note\\b",
+    "^\\[?Alternative 1:",
+    "^\\[?Alternative 2:",
+    "^\\[Alternative"
   ]
 }

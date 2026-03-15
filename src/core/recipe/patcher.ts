@@ -30,12 +30,12 @@ const UNSAFE_RUN_CHILDREN = new Set([
  * Uses a char_map algorithm to handle cross-run replacements where Word splits
  * placeholder text across multiple XML run elements.
  *
- * Supports three key syntax types:
+ * Supports two key syntax types:
  * - Simple: "search text" → replaces all occurrences
- * - Context: "label > placeholder" → replaces placeholder only in matching table rows
- * - Nth: "text#N" → replaces only the Nth occurrence across the document
+ * - Context: "context > placeholder" → in tables, replaces placeholder in rows
+ *   where label matches; in paragraphs, replaces first placeholder after context
  *
- * Processing order: context keys first, nth keys second, simple keys last.
+ * Processing order: context keys first, simple keys last.
  * This ensures qualified rules claim their targets before simple rules sweep up the rest.
  */
 export interface PatchOptions {
@@ -73,23 +73,12 @@ export async function patchDocument(
     .filter((k): k is ParsedKey & { type: 'context' } => k.type === 'context')
     .sort((a, b) => b.searchText.length - a.searchText.length);
 
-  const nthKeys = parsedKeys
-    .filter((k): k is ParsedKey & { type: 'nth' } => k.type === 'nth')
-    .sort((a, b) => {
-      // Group by searchText, then by N ascending
-      if (a.searchText !== b.searchText) return b.searchText.length - a.searchText.length;
-      return a.n - b.n;
-    });
-
   const simpleKeys = parsedKeys
     .filter((k): k is ParsedKey & { type: 'simple' } => k.type === 'simple')
     .sort((a, b) => b.searchText.length - a.searchText.length);
 
   // Track which parts we modify so we can rebuild the zip cleanly
   const modifiedParts = new Map<string, Buffer>();
-
-  // Occurrence counter for nth keys (shared across all parts, reset per patchDocument call)
-  const nthCounters = new Map<string, number>();
 
   for (const partName of partNames) {
     const entry = zip.getEntry(partName);
@@ -111,46 +100,17 @@ export async function patchDocument(
         if (!fullText.includes(ck.searchText)) continue;
 
         const rowContext = getTableRowContext(para);
-        if (rowContext === null || !rowContext.includes(ck.context)) continue;
-
-        replaceInParagraph(para, { [ck.searchText]: ck.value }, [ck.searchText], options?.replacementColor);
-      }
-    }
-
-    // Phase 2: Nth occurrence keys — group by searchText for a single pass each
-    const nthGroups = new Map<string, Array<ParsedKey & { type: 'nth' }>>();
-    for (const nk of nthKeys) {
-      const group = nthGroups.get(nk.searchText) ?? [];
-      group.push(nk);
-      nthGroups.set(nk.searchText, group);
-    }
-
-    for (const [searchText, group] of nthGroups) {
-      // Build a map from occurrence number → value for this group
-      const nthMap = new Map<number, string>();
-      for (const nk of group) {
-        nthMap.set(nk.n, nk.value);
-      }
-
-      let counter = nthCounters.get(searchText) ?? 0;
-      for (let i = 0; i < allParagraphs.length; i++) {
-        const para = allParagraphs[i];
-        const runs = getRunElements(para);
-        if (runs.length === 0) continue;
-
-        const { fullText } = buildCharMap(runs);
-        if (!fullText.includes(searchText)) continue;
-
-        counter++;
-        const value = nthMap.get(counter);
-        if (value !== undefined) {
-          replaceInParagraphOnce(para, searchText, value, options?.replacementColor);
+        if (rowContext !== null) {
+          if (!rowContext.includes(ck.context)) continue;
+          replaceInParagraph(para, { [ck.searchText]: ck.value }, [ck.searchText], options?.replacementColor);
+        } else {
+          if (!fullText.includes(ck.context)) continue;
+          replaceFirstAfterContext(para, ck.searchText, ck.context, ck.value, options?.replacementColor);
         }
       }
-      nthCounters.set(searchText, counter);
     }
 
-    // Phase 3: Simple keys
+    // Phase 2: Simple keys
     if (simpleKeys.length > 0) {
       const simpleReplacements: Record<string, string> = {};
       const simpleSortedKeys: string[] = [];
@@ -372,29 +332,20 @@ function commonSuffixLen(a: string, b: string, prefixLen: number): number {
 }
 
 /**
- * Perform a single replacement of searchText with value in the paragraph.
- * Does NOT loop — replaces only the first match found.
- * Used for nth-occurrence keys where the value may contain the searchText.
+ * Low-level charMap-based splice: replace `searchTextLength` characters starting at
+ * `matchStart` with `value`, cleaning up empty runs afterwards.
  */
-function replaceInParagraphOnce(
-  para: Element,
-  searchText: string,
+function replaceAtPosition(
+  runs: Element[],
+  charMap: CharMapEntry[],
+  matchStart: number,
+  searchTextLength: number,
   value: string,
   replacementColor?: string,
 ): void {
-  const runs = getRunElements(para);
-  if (runs.length === 0) return;
-
-  const rebuilt = buildCharMap(runs);
-  const matchStart = rebuilt.fullText.indexOf(searchText);
-  if (matchStart === -1) return;
-
-  // Always use full replacement for single-shot mode
-  const start = matchStart;
-  const end = matchStart + searchText.length;
-
-  const firstEntry = rebuilt.charMap[start];
-  const lastEntry = rebuilt.charMap[end - 1];
+  const end = matchStart + searchTextLength;
+  const firstEntry = charMap[matchStart];
+  const lastEntry = charMap[end - 1];
 
   if (firstEntry.runIndex === lastEntry.runIndex) {
     const runText = getRunText(runs[firstEntry.runIndex]);
@@ -422,6 +373,45 @@ function replaceInParagraphOnce(
       runs[i].parentNode?.removeChild(runs[i]);
     }
   }
+}
+
+/**
+ * Perform a single replacement of searchText with value in the paragraph.
+ * Does NOT loop — replaces only the first match found.
+ */
+function replaceInParagraphOnce(
+  para: Element,
+  searchText: string,
+  value: string,
+  replacementColor?: string,
+): void {
+  const runs = getRunElements(para);
+  if (runs.length === 0) return;
+  const { fullText, charMap } = buildCharMap(runs);
+  const matchStart = fullText.indexOf(searchText);
+  if (matchStart === -1) return;
+  replaceAtPosition(runs, charMap, matchStart, searchText.length, value, replacementColor);
+}
+
+/**
+ * Replace the first occurrence of searchText that appears AFTER contextText
+ * in the same paragraph. Each call is self-contained — no chaining or order dependency.
+ */
+function replaceFirstAfterContext(
+  para: Element,
+  searchText: string,
+  contextText: string,
+  value: string,
+  replacementColor?: string,
+): void {
+  const runs = getRunElements(para);
+  if (runs.length === 0) return;
+  const { fullText, charMap } = buildCharMap(runs);
+  const ctxPos = fullText.indexOf(contextText);
+  if (ctxPos === -1) return;
+  const matchStart = fullText.indexOf(searchText, ctxPos + contextText.length);
+  if (matchStart === -1) return;
+  replaceAtPosition(runs, charMap, matchStart, searchText.length, value, replacementColor);
 }
 
 function replaceInParagraph(

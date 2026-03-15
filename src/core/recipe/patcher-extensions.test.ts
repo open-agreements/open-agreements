@@ -111,7 +111,7 @@ describe('patchDocument context keys', () => {
     rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it.openspec('OA-RCP-035')('does not replace in non-table paragraphs', async () => {
+  it.openspec('OA-RCP-035')('does not replace in non-table paragraphs when context text is absent', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -134,7 +134,7 @@ describe('patchDocument context keys', () => {
     const text = extractText(outputPath);
     // Table row should be replaced
     expect(text).toContain('{effective_date}');
-    // Non-table paragraph should still have [Fill in]
+    // Non-table paragraph should still have [Fill in] (context "Effective Date" not in that paragraph)
     const lines = text.split('\n');
     expect(lines[0]).toBe('[Fill in]');
 
@@ -168,108 +168,120 @@ describe('patchDocument context keys', () => {
   });
 });
 
-describe('patchDocument nth occurrence keys', () => {
-  it.openspec('OA-RCP-035')('replaces only the Nth occurrence of a text', async () => {
+describe('patchDocument paragraph context keys', () => {
+  it.openspec('OA-RCP-035')('replaces first placeholder after context in a paragraph', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
-      '<w:p><w:r><w:t>Party Name:</w:t></w:r></w:p>' +
-      '<w:p><w:r><w:t>Party Name:</w:t></w:r></w:p>' +
+      '<w:p><w:r><w:t>not later than [10] days before</w:t></w:r></w:p>' +
       '</w:body></w:document>';
 
     const inputPath = buildMinimalDocx(xml);
     const outputPath = inputPath.replace('test.docx', 'output.docx');
 
     await patchDocument(inputPath, outputPath, {
-      'Party Name:#1': 'Party Name: {party_1}',
-      'Party Name:#2': 'Party Name: {party_2}',
+      'not later than > [10]': '{adjustment_notice_days}',
     });
 
     const text = extractText(outputPath);
-    const lines = text.split('\n');
-    expect(lines[0]).toBe('Party Name: {party_1}');
-    expect(lines[1]).toBe('Party Name: {party_2}');
+    expect(text).toBe('not later than {adjustment_notice_days} days before');
 
     rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it.openspec('OA-RCP-035')('does not infinite loop when value contains searchText', async () => {
-    // "Party Name:" → "Party Name: {tag}" — value contains key
+  it.openspec('OA-RCP-035')('leaves placeholder untouched when context absent from paragraph', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
-      '<w:p><w:r><w:t>Party Name:</w:t></w:r></w:p>' +
+      '<w:p><w:r><w:t>some other text [10] here</w:t></w:r></w:p>' +
       '</w:body></w:document>';
 
     const inputPath = buildMinimalDocx(xml);
     const outputPath = inputPath.replace('test.docx', 'output.docx');
 
-    // Should not throw — nth keys use single-shot replacement
     await patchDocument(inputPath, outputPath, {
-      'Party Name:#1': 'Party Name: {party_1_name}',
+      'not later than > [10]': '{adjustment_notice_days}',
     });
 
     const text = extractText(outputPath);
-    expect(text).toBe('Party Name: {party_1_name}');
+    expect(text).toBe('some other text [10] here');
 
     rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it.openspec('OA-RCP-035')('counts occurrences by original position, not re-scanning modified text', async () => {
-    // Regression: if nth keys are processed in separate passes, #1 replaces
-    // "Party Name:" → "Party Name: {party_1}" in paragraph 1. Then when #2
-    // iterates from the top, paragraph 1 still contains "Party Name:" (as a
-    // prefix of the new value), so a naive re-scan would count it as
-    // occurrence 1 again, making paragraph 2 appear as occurrence 2.
-    // The correct behavior requires a single grouped pass so #2 sees
-    // paragraph 2 as the second original occurrence.
+  it.openspec('OA-RCP-035')('independently replaces duplicate placeholders via different contexts', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
-      '<w:p><w:r><w:t>Party Name:</w:t></w:r></w:p>' +
-      '<w:p><w:r><w:t>Party Name:</w:t></w:r></w:p>' +
+      '<w:p><w:r><w:t>not later than [10] days and at least [10] days</w:t></w:r></w:p>' +
       '</w:body></w:document>';
 
     const inputPath = buildMinimalDocx(xml);
     const outputPath = inputPath.replace('test.docx', 'output.docx');
 
     await patchDocument(inputPath, outputPath, {
-      'Party Name:#1': 'Party Name: {party_1}',
-      'Party Name:#2': 'Party Name: {party_2}',
+      'not later than > [10]': '{adjustment_notice_days}',
+      'at least > [10]': '{conversion_notice_days}',
     });
 
     const text = extractText(outputPath);
-    const lines = text.split('\n');
-    // #1 must modify paragraph 1, #2 must modify paragraph 2
-    expect(lines[0]).toBe('Party Name: {party_1}');
-    expect(lines[1]).toBe('Party Name: {party_2}');
+    expect(text).toBe('not later than {adjustment_notice_days} days and at least {conversion_notice_days} days');
 
     rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it.openspec('OA-RCP-035')('leaves unmatched occurrences untouched when no simple fallback', async () => {
+  it.openspec('OA-RCP-035')('table-row context takes priority over paragraph context', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
-      '<w:p><w:r><w:t>Party Name:</w:t></w:r></w:p>' +
-      '<w:p><w:r><w:t>Party Name:</w:t></w:r></w:p>' +
-      '<w:p><w:r><w:t>Party Name:</w:t></w:r></w:p>' +
+      '<w:tbl>' +
+      '<w:tr>' +
+      '<w:tc><w:p><w:r><w:t>Effective Date</w:t></w:r></w:p></w:tc>' +
+      '<w:tc><w:p><w:r><w:t>[Fill in]</w:t></w:r></w:p></w:tc>' +
+      '</w:tr>' +
+      '</w:tbl>' +
+      '<w:p><w:r><w:t>Effective Date [Fill in]</w:t></w:r></w:p>' +
       '</w:body></w:document>';
 
     const inputPath = buildMinimalDocx(xml);
     const outputPath = inputPath.replace('test.docx', 'output.docx');
 
     await patchDocument(inputPath, outputPath, {
-      'Party Name:#1': 'Party Name: {party_1}',
-      'Party Name:#2': 'Party Name: {party_2}',
+      'Effective Date > [Fill in]': '{effective_date}',
     });
 
     const text = extractText(outputPath);
     const lines = text.split('\n');
-    expect(lines[0]).toBe('Party Name: {party_1}');
-    expect(lines[1]).toBe('Party Name: {party_2}');
-    // Third occurrence untouched
-    expect(lines[2]).toBe('Party Name:');
+    // Table row replaced via row context
+    expect(lines).toContain('{effective_date}');
+    // Paragraph replaced via paragraph context
+    expect(lines[lines.length - 1]).toBe('Effective Date {effective_date}');
+
+    rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
+  });
+
+  it.openspec('OA-RCP-035')('context keys coexist with simple keys', async () => {
+    const xml =
+      '<?xml version="1.0" encoding="UTF-8"?>' +
+      `<w:document xmlns:w="${W_NS}"><w:body>` +
+      '<w:p><w:r><w:t>not later than [10] days</w:t></w:r></w:p>' +
+      '<w:p><w:r><w:t>some other [10] here</w:t></w:r></w:p>' +
+      '</w:body></w:document>';
+
+    const inputPath = buildMinimalDocx(xml);
+    const outputPath = inputPath.replace('test.docx', 'output.docx');
+
+    await patchDocument(inputPath, outputPath, {
+      'not later than > [10]': '{adjustment_notice_days}',
+      '[10]': '{default_days}',
+    });
+
+    const text = extractText(outputPath);
+    const lines = text.split('\n');
+    // Context key claims the first paragraph
+    expect(lines[0]).toBe('not later than {adjustment_notice_days} days');
+    // Simple key sweeps the second paragraph
+    expect(lines[1]).toBe('some other {default_days} here');
 
     rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
   });

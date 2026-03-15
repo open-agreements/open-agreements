@@ -1,6 +1,7 @@
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { loadRecipeMetadata, loadCleanConfig, loadNormalizeConfig } from '../metadata.js';
+import { loadSelectionsConfig } from '../selector.js';
 import { resolveRecipeDir } from '../../utils/paths.js';
 import { verifyOutput } from './verifier.js';
 import { ensureSourceDocx } from './downloader.js';
@@ -26,6 +27,12 @@ export async function runRecipe(options: RecipeRunOptions): Promise<RecipeRunRes
   const metadata = loadRecipeMetadata(recipeDir);
   const cleanConfig = loadCleanConfig(recipeDir);
   const normalizeConfig = loadNormalizeConfig(recipeDir);
+
+  // Load selectionsConfig if selections.json exists (mirrors engine.ts template path)
+  const selectionsPath = join(recipeDir, 'selections.json');
+  const selectionsConfig = existsSync(selectionsPath)
+    ? loadSelectionsConfig(selectionsPath)
+    : undefined;
 
   // Resolve input: explicit path or auto-download
   const inputPath = options.inputPath ?? await ensureSourceDocx(recipeId, metadata);
@@ -77,6 +84,7 @@ export async function runRecipe(options: RecipeRunOptions): Promise<RecipeRunRes
     fields: metadata.fields,
     requiredFieldNames: metadata.required_fields,
     cleanPatch: { cleanConfig, replacements },
+    selectionsConfig,
     postProcess: shouldNormalizeBracketArtifacts
       ? async (outputDocPath: string) => {
         await normalizeBracketArtifacts(outputDocPath, outputDocPath, {

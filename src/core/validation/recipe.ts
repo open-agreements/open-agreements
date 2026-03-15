@@ -120,7 +120,6 @@ export function validateRecipe(
 
         // Value must not contain the source key (infinite loop prevention)
         // For qualified keys, check against the searchText, not the full key.
-        // Nth keys use single-shot replacement so they can't loop — skip the check.
         const parsed = parseReplacementKey(key, value);
         if (parsed.type === 'simple' && value.includes(parsed.searchText)) {
           errors.push(
@@ -131,7 +130,6 @@ export function validateRecipe(
             `replacements.json: value for "${key}" contains the search text "${parsed.searchText}" (would cause infinite loop)`
           );
         }
-        // nth keys: no infinite-loop check needed (single-shot replacement)
       }
       for (const fieldName of unknownTargets) {
         warnings.push(`Replacement target {${fieldName}} not found in metadata fields`);
