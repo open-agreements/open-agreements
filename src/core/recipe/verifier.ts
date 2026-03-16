@@ -130,10 +130,74 @@ export async function verifyOutput(
     });
   }
 
+  // Check 8: No single-character underlined runs adjacent to non-underlined runs
+  // This is a hallmark of quota-based text redistribution corrupting formatting.
+  const formattingAnomalyCount = countFormattingAnomalies(outputPath);
+  checks.push({
+    name: 'No formatting anomalies',
+    passed: formattingAnomalyCount === 0,
+    details: formattingAnomalyCount > 0
+      ? `Found ${formattingAnomalyCount} single-char underlined run(s) adjacent to non-underlined runs`
+      : undefined,
+  });
+
   return {
     passed: checks.every((c) => c.passed),
     checks,
   };
+}
+
+/**
+ * Count formatting anomalies: single-character underlined runs adjacent to
+ * non-underlined runs. This pattern is the hallmark of quota-based text
+ * redistribution corrupting run-level formatting.
+ */
+function countFormattingAnomalies(docxPath: string): number {
+  const zip = new AdmZip(docxPath);
+  const parser = new DOMParser();
+  const parts = enumerateTextParts(zip);
+  const partNames = getGeneralTextPartNames(parts);
+  let count = 0;
+
+  for (const partName of partNames) {
+    const entry = zip.getEntry(partName);
+    if (!entry) continue;
+    const xmlContent = entry.getData().toString('utf-8');
+    const doc = parser.parseFromString(xmlContent, 'text/xml');
+    const paras = doc.getElementsByTagNameNS(W_NS, 'p');
+
+    for (let i = 0; i < paras.length; i++) {
+      const runs = paras[i].getElementsByTagNameNS(W_NS, 'r');
+      for (let j = 0; j < runs.length; j++) {
+        const run = runs[j];
+        const tEls = run.getElementsByTagNameNS(W_NS, 't');
+        let runText = '';
+        for (let k = 0; k < tEls.length; k++) {
+          runText += tEls[k].textContent ?? '';
+        }
+        if (runText.length !== 1) continue;
+
+        // Check if this run is underlined
+        const rPr = run.getElementsByTagNameNS(W_NS, 'rPr');
+        if (rPr.length === 0) continue;
+        const uEls = rPr[0].getElementsByTagNameNS(W_NS, 'u');
+        if (uEls.length === 0) continue;
+
+        // Check adjacent run (next) for non-underlined
+        if (j + 1 < runs.length) {
+          const nextRun = runs[j + 1];
+          const nextRPr = nextRun.getElementsByTagNameNS(W_NS, 'rPr');
+          const nextHasUnderline = nextRPr.length > 0 &&
+            nextRPr[0].getElementsByTagNameNS(W_NS, 'u').length > 0;
+          if (!nextHasUnderline) {
+            count++;
+          }
+        }
+      }
+    }
+  }
+
+  return count;
 }
 
 /**
