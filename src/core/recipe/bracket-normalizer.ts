@@ -13,6 +13,7 @@ export interface BracketNormalizationStats {
   removedSegments: number;
   removedParagraphs: number;
   normalizedParagraphs: number;
+  formattingFallbackCount: number;
   declarativeRuleApplications: number;
   declarativeRuleMatchCounts: Record<string, number>;
   declarativeRuleMutationCounts: Record<string, number>;
@@ -70,6 +71,7 @@ export async function normalizeBracketArtifacts(
     removedSegments: 0,
     removedParagraphs: 0,
     normalizedParagraphs: 0,
+    formattingFallbackCount: 0,
     declarativeRuleApplications: 0,
     declarativeRuleMatchCounts: {},
     declarativeRuleMutationCounts: {},
@@ -167,6 +169,7 @@ export async function normalizeBracketArtifacts(
             // Set text directly on <w:t> elements — less formatting-safe
             // but better than skipping the replacement entirely.
             setParagraphTextFallback(para, finalText);
+            stats.formattingFallbackCount += 1;
           }
         }
         stats.normalizedParagraphs += 1;
@@ -184,6 +187,12 @@ export async function normalizeBracketArtifacts(
         `${rule.id}: expected at least ${rule.expected_min_matches} match(es), found ${actualMatches}`
       );
     }
+  }
+
+  if (stats.formattingFallbackCount > 0) {
+    console.warn(
+      `Warning: ${stats.formattingFallbackCount} paragraph(s) used formatting-destructive fallback during normalization`
+    );
   }
 
   const outZip = new AdmZip();
