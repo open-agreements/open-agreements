@@ -2,6 +2,11 @@ import AdmZip from 'adm-zip';
 import { writeFileSync } from 'node:fs';
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
 import type { Document, Element, Node } from '@xmldom/xmldom';
+import {
+  replaceParagraphTextRange,
+  getParagraphText,
+  SafeDocxError,
+} from '@usejunior/docx-core';
 import { enumerateTextParts, getGeneralTextPartNames } from './ooxml-parts.js';
 import { parseReplacementKey } from './replacement-keys.js';
 import type { ParsedKey } from './replacement-keys.js';
@@ -135,21 +140,19 @@ export async function patchDocument(
 
     // Collect paragraph text before any replacements for zero-match detection
     for (let i = 0; i < allParagraphs.length; i++) {
-      const runs = getRunElements(allParagraphs[i]);
-      if (runs.length === 0) continue;
-      const { fullText } = buildCharMap(runs);
-      preMatchTexts.push(normalizeQuotes(fullText));
+      const text = getParagraphText(allParagraphs[i] as unknown as globalThis.Element);
+      if (!text) continue;
+      preMatchTexts.push(normalizeQuotes(text));
     }
 
     // Phase 1: Context keys
     for (const ck of contextKeys) {
       for (let i = 0; i < allParagraphs.length; i++) {
         const para = allParagraphs[i];
-        const runs = getRunElements(para);
-        if (runs.length === 0) continue;
+        const paraText = getParagraphText(para as unknown as globalThis.Element);
+        if (!paraText) continue;
 
-        const { fullText } = buildCharMap(runs);
-        const normalizedText = normalizeQuotes(fullText);
+        const normalizedText = normalizeQuotes(paraText);
         if (!normalizedText.includes(ck.searchText)) continue;
 
         const rowContext = getTableRowContext(para);
@@ -374,33 +377,13 @@ export function isRunSafeToRemove(run: Element): boolean {
 }
 
 /**
- * Compute the length of the common prefix between two strings.
- */
-function commonPrefixLen(a: string, b: string): number {
-  let i = 0;
-  while (i < a.length && i < b.length && a[i] === b[i]) i++;
-  return i;
-}
-
-/**
- * Compute the length of the common suffix between two strings,
- * not overlapping with a known common prefix.
- */
-function commonSuffixLen(a: string, b: string, prefixLen: number): number {
-  let i = 0;
-  while (
-    i < a.length - prefixLen &&
-    i < b.length - prefixLen &&
-    a[a.length - 1 - i] === b[b.length - 1 - i]
-  ) i++;
-  return i;
-}
-
-/**
- * Low-level charMap-based splice: replace `searchTextLength` characters starting at
+ * Legacy charMap-based splice: replace `searchTextLength` characters starting at
  * `matchStart` with `value`, cleaning up empty runs afterwards.
+ * Used as a fallback when replaceParagraphTextRange throws UNSAFE_CONTAINER_BOUNDARY
+ * (e.g. replacements spanning across hyperlinks or SDTs) or UNSUPPORTED_EDIT
+ * (e.g. replacement spans field results).
  */
-function replaceAtPosition(
+function replaceAtPositionLegacy(
   runs: Element[],
   charMap: CharMapEntry[],
   matchStart: number,
@@ -443,6 +426,8 @@ function replaceAtPosition(
 /**
  * Perform a single replacement of searchText with value in the paragraph.
  * Does NOT loop — replaces only the first match found.
+ * Uses docx-core's replaceParagraphTextRange for correct formatting preservation,
+ * with a legacy charMap fallback for container-boundary cases (hyperlinks, SDTs).
  */
 function replaceInParagraphOnce(
   para: Element,
@@ -450,17 +435,36 @@ function replaceInParagraphOnce(
   value: string,
   replacementColor?: string,
 ): void {
-  const runs = getRunElements(para);
-  if (runs.length === 0) return;
-  const { fullText, charMap } = buildCharMap(runs);
+  const fullText = getParagraphText(para as unknown as globalThis.Element);
   const matchStart = normalizeQuotes(fullText).indexOf(searchText);
   if (matchStart === -1) return;
-  replaceAtPosition(runs, charMap, matchStart, searchText.length, value, replacementColor);
+
+  try {
+    replaceParagraphTextRange(
+      para as unknown as globalThis.Element,
+      matchStart,
+      matchStart + searchText.length,
+      replacementColor
+        ? [{ text: value, addRunProps: { color: replacementColor } }]
+        : value,
+    );
+  } catch (e) {
+    if (e instanceof SafeDocxError && (e.code === 'UNSAFE_CONTAINER_BOUNDARY' || e.code === 'UNSUPPORTED_EDIT')) {
+      const runs = getRunElements(para);
+      const { fullText: legacyText, charMap } = buildCharMap(runs);
+      const legacyPos = normalizeQuotes(legacyText).indexOf(searchText);
+      if (legacyPos === -1) return;
+      replaceAtPositionLegacy(runs, charMap, legacyPos, searchText.length, value, replacementColor);
+    } else {
+      throw e;
+    }
+  }
 }
 
 /**
  * Replace the first occurrence of searchText that appears AFTER contextText
  * in the same paragraph. Each call is self-contained — no chaining or order dependency.
+ * Uses docx-core's replaceParagraphTextRange with legacy charMap fallback.
  */
 function replaceFirstAfterContext(
   para: Element,
@@ -469,15 +473,36 @@ function replaceFirstAfterContext(
   value: string,
   replacementColor?: string,
 ): void {
-  const runs = getRunElements(para);
-  if (runs.length === 0) return;
-  const { fullText, charMap } = buildCharMap(runs);
+  const fullText = getParagraphText(para as unknown as globalThis.Element);
   const normalizedFull = normalizeQuotes(fullText);
   const ctxPos = normalizedFull.indexOf(contextText);
   if (ctxPos === -1) return;
   const matchStart = normalizedFull.indexOf(searchText, ctxPos + contextText.length);
   if (matchStart === -1) return;
-  replaceAtPosition(runs, charMap, matchStart, searchText.length, value, replacementColor);
+
+  try {
+    replaceParagraphTextRange(
+      para as unknown as globalThis.Element,
+      matchStart,
+      matchStart + searchText.length,
+      replacementColor
+        ? [{ text: value, addRunProps: { color: replacementColor } }]
+        : value,
+    );
+  } catch (e) {
+    if (e instanceof SafeDocxError && (e.code === 'UNSAFE_CONTAINER_BOUNDARY' || e.code === 'UNSUPPORTED_EDIT')) {
+      const runs = getRunElements(para);
+      const { fullText: legacyText, charMap } = buildCharMap(runs);
+      const normalizedLegacy = normalizeQuotes(legacyText);
+      const legacyCtxPos = normalizedLegacy.indexOf(contextText);
+      if (legacyCtxPos === -1) return;
+      const legacyPos = normalizedLegacy.indexOf(searchText, legacyCtxPos + contextText.length);
+      if (legacyPos === -1) return;
+      replaceAtPositionLegacy(runs, charMap, legacyPos, searchText.length, value, replacementColor);
+    } else {
+      throw e;
+    }
+  }
 }
 
 function replaceInParagraph(
@@ -486,17 +511,17 @@ function replaceInParagraph(
   sortedKeys: string[],
   replacementColor?: string,
 ): void {
-  const runs = getRunElements(para);
-  if (runs.length === 0) return;
-
-  const { fullText } = buildCharMap(runs);
-  const normalizedFull = normalizeQuotes(fullText);
-  if (!sortedKeys.some((key) => normalizedFull.includes(key))) return;
+  // Quick check: skip if no keys match
+  const initialText = getParagraphText(para as unknown as globalThis.Element);
+  if (!initialText) return;
+  const normalizedInitial = normalizeQuotes(initialText);
+  if (!sortedKeys.some((key) => normalizedInitial.includes(key))) return;
 
   for (const key of sortedKeys) {
-    let rebuilt = buildCharMap(runs);
     let iterations = 0;
-    while (normalizeQuotes(rebuilt.fullText).includes(key)) {
+    let paraText = getParagraphText(para as unknown as globalThis.Element);
+
+    while (normalizeQuotes(paraText).includes(key)) {
       iterations++;
       if (iterations > MAX_REPLACEMENTS_PER_KEY) {
         throw new Error(
@@ -506,58 +531,37 @@ function replaceInParagraph(
         );
       }
 
-      const prevText = rebuilt.fullText;
-      const matchStart = normalizeQuotes(rebuilt.fullText).indexOf(key);
+      const prevText = paraText;
+      const matchStart = normalizeQuotes(paraText).indexOf(key);
       const replacement = replacements[key];
 
-      // Surgical replacement: compute common prefix/suffix between key and value
-      // so we only modify the differing middle, preserving formatting on context text.
-      const cpLen = commonPrefixLen(key, replacement);
-      const csLen = commonSuffixLen(key, replacement, cpLen);
-
-      let start: number;
-      let end: number;
-      let replText: string;
-
-      if (cpLen + csLen >= key.length || cpLen + csLen >= replacement.length) {
-        // No useful common prefix/suffix — full replacement (current behavior)
-        start = matchStart;
-        end = matchStart + key.length;
-        replText = replacement;
-      } else {
-        // Surgical: only replace the differing middle
-        start = matchStart + cpLen;
-        end = matchStart + key.length - csLen;
-        replText = replacement.slice(cpLen, replacement.length - csLen);
-      }
-
-      const firstEntry = rebuilt.charMap[start];
-      const lastEntry = rebuilt.charMap[end - 1];
-
-      if (firstEntry.runIndex === lastEntry.runIndex) {
-        const runText = getRunText(runs[firstEntry.runIndex]);
-        setRunText(
-          runs[firstEntry.runIndex],
-          runText.slice(0, firstEntry.charOffset) + replText + runText.slice(lastEntry.charOffset + 1)
+      try {
+        replaceParagraphTextRange(
+          para as unknown as globalThis.Element,
+          matchStart,
+          matchStart + key.length,
+          replacementColor
+            ? [{ text: replacement, addRunProps: { color: replacementColor } }]
+            : replacement,
         );
-      } else {
-        const firstRunText = getRunText(runs[firstEntry.runIndex]);
-        setRunText(runs[firstEntry.runIndex], firstRunText.slice(0, firstEntry.charOffset) + replText);
-        const lastRunText = getRunText(runs[lastEntry.runIndex]);
-        setRunText(runs[lastEntry.runIndex], lastRunText.slice(lastEntry.charOffset + 1));
-        for (let mid = firstEntry.runIndex + 1; mid < lastEntry.runIndex; mid++) {
-          setRunText(runs[mid], '');
+      } catch (e) {
+        if (e instanceof SafeDocxError && (e.code === 'UNSAFE_CONTAINER_BOUNDARY' || e.code === 'UNSUPPORTED_EDIT')) {
+          // Fallback: use legacy charMap splice for this specific match
+          const runs = getRunElements(para);
+          const { fullText: legacyText, charMap } = buildCharMap(runs);
+          const legacyPos = normalizeQuotes(legacyText).indexOf(key);
+          if (legacyPos === -1) break;
+          replaceAtPositionLegacy(runs, charMap, legacyPos, key.length, replacement, replacementColor);
+        } else {
+          throw e;
         }
       }
 
-      if (replacementColor) {
-        setRunColor(runs[firstEntry.runIndex], replacementColor);
-      }
-
-      rebuilt = buildCharMap(runs);
+      // Re-read paragraph text after DOM modification
+      paraText = getParagraphText(para as unknown as globalThis.Element);
 
       // Progress guard: if text didn't change, we're stuck
-      if (rebuilt.fullText === prevText) {
+      if (paraText === prevText) {
         throw new Error(
           `Patcher: no progress replacing key "${key}" — replacement value may contain the search key.`
         );
@@ -566,9 +570,10 @@ function replaceInParagraph(
   }
 
   // Sweep: remove empty runs that are safe to remove (no drawings, fields, etc.)
-  for (let i = runs.length - 1; i >= 0; i--) {
-    if (getRunText(runs[i]) === '' && isRunSafeToRemove(runs[i])) {
-      runs[i].parentNode?.removeChild(runs[i]);
+  const finalRuns = getRunElements(para);
+  for (let i = finalRuns.length - 1; i >= 0; i--) {
+    if (getRunText(finalRuns[i]) === '' && isRunSafeToRemove(finalRuns[i])) {
+      finalRuns[i].parentNode?.removeChild(finalRuns[i]);
     }
   }
 }
