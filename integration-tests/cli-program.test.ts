@@ -379,7 +379,7 @@ describe('CLI program wiring', () => {
         data: 'values.json',
         computedOut: 'computed.json',
         keepIntermediate: true,
-        normalizeBrackets: undefined,
+        normalizeBrackets: true,
       });
     });
 
