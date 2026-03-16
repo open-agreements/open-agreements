@@ -8,9 +8,25 @@ import type { ParsedKey } from './replacement-keys.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 
+/**
+ * Normalize smart/typographic quotes to ASCII equivalents for matching.
+ * Uses the same canonical quote set as verifier's normalizeText().
+ * This is a 1-to-1 character mapping so charMap positions remain valid.
+ */
+function normalizeQuotes(text: string): string {
+  return text
+    .replace(/[\u2018\u2019\u2039\u203A]/g, "'")
+    .replace(/[\u201C\u201D\u201A\u201E\u00AB\u00BB]/g, '"');
+}
+
 interface CharMapEntry {
   runIndex: number;
   charOffset: number;
+}
+
+export interface PatchResult {
+  outputPath: string;
+  zeroMatchKeys: string[];
 }
 
 /** Maximum replacement iterations per key per paragraph to prevent infinite loops. */
@@ -50,7 +66,7 @@ export async function patchDocument(
   outputPath: string,
   replacements: Record<string, string>,
   options?: PatchOptions,
-): Promise<string> {
+): Promise<PatchResult> {
   const zip = new AdmZip(inputPath);
   const parser = new DOMParser();
   const serializer = new XMLSerializer();
@@ -62,23 +78,51 @@ export async function patchDocument(
     throw new Error('No OOXML text parts found in DOCX');
   }
 
-  // Parse and classify all keys
+  // Parse and classify all keys, normalizing smart quotes
   const parsedKeys: ParsedKey[] = [];
   for (const [key, value] of Object.entries(replacements)) {
-    parsedKeys.push(parseReplacementKey(key, value));
+    const parsed = parseReplacementKey(key, value);
+    // Normalize smart quotes in search text and context for matching
+    if (parsed.type === 'context') {
+      parsed.searchText = normalizeQuotes(parsed.searchText);
+      parsed.context = normalizeQuotes(parsed.context);
+    } else {
+      parsed.searchText = normalizeQuotes(parsed.searchText);
+    }
+    parsedKeys.push(parsed);
+  }
+
+  // Deduplicate keys that collide after quote normalization
+  const seenSearchKeys = new Map<string, ParsedKey>();
+  const deduplicatedKeys: ParsedKey[] = [];
+  for (const pk of parsedKeys) {
+    const dedupKey = pk.type === 'context' ? `${pk.context} > ${pk.searchText}` : pk.searchText;
+    const existing = seenSearchKeys.get(dedupKey);
+    if (existing) {
+      if (existing.value !== pk.value) {
+        console.warn(`Patcher: quote-normalized key collision for "${dedupKey}" with different values`);
+      }
+      // Skip duplicate
+    } else {
+      seenSearchKeys.set(dedupKey, pk);
+      deduplicatedKeys.push(pk);
+    }
   }
 
   // Separate by type and sort
-  const contextKeys = parsedKeys
+  const contextKeys = deduplicatedKeys
     .filter((k): k is ParsedKey & { type: 'context' } => k.type === 'context')
     .sort((a, b) => b.searchText.length - a.searchText.length);
 
-  const simpleKeys = parsedKeys
+  const simpleKeys = deduplicatedKeys
     .filter((k): k is ParsedKey & { type: 'simple' } => k.type === 'simple')
     .sort((a, b) => b.searchText.length - a.searchText.length);
 
   // Track which parts we modify so we can rebuild the zip cleanly
   const modifiedParts = new Map<string, Buffer>();
+
+  // Collect all pre-patch paragraph text for zero-match detection
+  const preMatchTexts: string[] = [];
 
   for (const partName of partNames) {
     const entry = zip.getEntry(partName);
@@ -89,6 +133,14 @@ export async function patchDocument(
 
     const allParagraphs = doc.getElementsByTagNameNS(W_NS, 'p');
 
+    // Collect paragraph text before any replacements for zero-match detection
+    for (let i = 0; i < allParagraphs.length; i++) {
+      const runs = getRunElements(allParagraphs[i]);
+      if (runs.length === 0) continue;
+      const { fullText } = buildCharMap(runs);
+      preMatchTexts.push(normalizeQuotes(fullText));
+    }
+
     // Phase 1: Context keys
     for (const ck of contextKeys) {
       for (let i = 0; i < allParagraphs.length; i++) {
@@ -97,14 +149,16 @@ export async function patchDocument(
         if (runs.length === 0) continue;
 
         const { fullText } = buildCharMap(runs);
-        if (!fullText.includes(ck.searchText)) continue;
+        const normalizedText = normalizeQuotes(fullText);
+        if (!normalizedText.includes(ck.searchText)) continue;
 
         const rowContext = getTableRowContext(para);
         if (rowContext !== null) {
-          if (!rowContext.includes(ck.context)) continue;
+          const normalizedRowContext = normalizeQuotes(rowContext);
+          if (!normalizedRowContext.includes(ck.context)) continue;
           replaceInParagraph(para, { [ck.searchText]: ck.value }, [ck.searchText], options?.replacementColor);
         } else {
-          if (!fullText.includes(ck.context)) continue;
+          if (!normalizedText.includes(ck.context)) continue;
           replaceFirstAfterContext(para, ck.searchText, ck.context, ck.value, options?.replacementColor);
         }
       }
@@ -122,9 +176,20 @@ export async function patchDocument(
       for (let i = 0; i < allParagraphs.length; i++) {
         replaceInParagraph(allParagraphs[i], simpleReplacements, simpleSortedKeys, options?.replacementColor);
       }
+
     }
 
     modifiedParts.set(partName, Buffer.from(serializer.serializeToString(doc), 'utf-8'));
+  }
+
+  // Compute zero-match keys by checking pre-patch paragraph text
+  const preMatchFullText = preMatchTexts.join('\n');
+  const zeroMatchKeys: string[] = [];
+  for (const pk of deduplicatedKeys) {
+    const keyLabel = pk.type === 'context' ? `${pk.context} > ${pk.searchText}` : pk.searchText;
+    if (!preMatchFullText.includes(pk.searchText)) {
+      zeroMatchKeys.push(keyLabel);
+    }
   }
 
   // Rebuild the zip from scratch using addFile() to avoid adm-zip data
@@ -136,7 +201,7 @@ export async function patchDocument(
     outZip.addFile(entry.entryName, data);
   }
   writeFileSync(outputPath, outZip.toBuffer());
-  return outputPath;
+  return { outputPath, zeroMatchKeys };
 }
 
 /**
@@ -388,7 +453,7 @@ function replaceInParagraphOnce(
   const runs = getRunElements(para);
   if (runs.length === 0) return;
   const { fullText, charMap } = buildCharMap(runs);
-  const matchStart = fullText.indexOf(searchText);
+  const matchStart = normalizeQuotes(fullText).indexOf(searchText);
   if (matchStart === -1) return;
   replaceAtPosition(runs, charMap, matchStart, searchText.length, value, replacementColor);
 }
@@ -407,9 +472,10 @@ function replaceFirstAfterContext(
   const runs = getRunElements(para);
   if (runs.length === 0) return;
   const { fullText, charMap } = buildCharMap(runs);
-  const ctxPos = fullText.indexOf(contextText);
+  const normalizedFull = normalizeQuotes(fullText);
+  const ctxPos = normalizedFull.indexOf(contextText);
   if (ctxPos === -1) return;
-  const matchStart = fullText.indexOf(searchText, ctxPos + contextText.length);
+  const matchStart = normalizedFull.indexOf(searchText, ctxPos + contextText.length);
   if (matchStart === -1) return;
   replaceAtPosition(runs, charMap, matchStart, searchText.length, value, replacementColor);
 }
@@ -424,12 +490,13 @@ function replaceInParagraph(
   if (runs.length === 0) return;
 
   const { fullText } = buildCharMap(runs);
-  if (!sortedKeys.some((key) => fullText.includes(key))) return;
+  const normalizedFull = normalizeQuotes(fullText);
+  if (!sortedKeys.some((key) => normalizedFull.includes(key))) return;
 
   for (const key of sortedKeys) {
     let rebuilt = buildCharMap(runs);
     let iterations = 0;
-    while (rebuilt.fullText.includes(key)) {
+    while (normalizeQuotes(rebuilt.fullText).includes(key)) {
       iterations++;
       if (iterations > MAX_REPLACEMENTS_PER_KEY) {
         throw new Error(
@@ -440,7 +507,7 @@ function replaceInParagraph(
       }
 
       const prevText = rebuilt.fullText;
-      const matchStart = rebuilt.fullText.indexOf(key);
+      const matchStart = normalizeQuotes(rebuilt.fullText).indexOf(key);
       const replacement = replacements[key];
 
       // Surgical replacement: compute common prefix/suffix between key and value

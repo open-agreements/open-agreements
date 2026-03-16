@@ -388,7 +388,7 @@ describe('recipe commands', () => {
     const inputPath = join(outDir, 'source.docx');
     writeFileSync(inputPath, Buffer.from('docx-bytes'));
 
-    patchDocumentMock.mockResolvedValue(undefined);
+    patchDocumentMock.mockResolvedValue({ outputPath: '', zeroMatchKeys: [] });
 
     await runRecipePatch({
       input: inputPath,
