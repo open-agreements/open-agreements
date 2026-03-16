@@ -96,7 +96,7 @@ fields:
     type: string
     description: Notice email address for the Contractor
     section: Signature Block
-required_fields:
+priority_fields:
   - company_name_and_address
   - contractor_name_and_address
   - services_description

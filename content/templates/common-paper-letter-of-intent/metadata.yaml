@@ -82,7 +82,7 @@ fields:
     type: string
     description: Notice email address for the Customer
     section: Signature Block
-required_fields:
+priority_fields:
   - company_name
   - product_name
   - product_description

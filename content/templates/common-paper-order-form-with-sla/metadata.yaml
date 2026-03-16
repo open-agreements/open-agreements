@@ -248,7 +248,7 @@ fields:
     type: string
     description: Notice email address for the Customer
     section: Signature Block
-required_fields:
+priority_fields:
   - company_name
   - provider_name
   - customer_name

@@ -158,7 +158,7 @@ fields:
     type: string
     description: Notice email address for the Company
     section: Signature Block
-required_fields:
+priority_fields:
   - company_name
   - party_role
   - principal_agreement

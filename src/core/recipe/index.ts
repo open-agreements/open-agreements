@@ -75,14 +75,14 @@ export async function runRecipe(options: RecipeRunOptions): Promise<RecipeRunRes
   }
 
   const shouldNormalizeBracketArtifacts =
-    options.normalizeBracketArtifacts ?? recipeId === 'nvca-stock-purchase-agreement';
+    options.normalizeBracketArtifacts ?? normalizeConfig.paragraph_rules.length > 0;
 
   const result = await runFillPipeline({
     inputPath,
     outputPath,
     values: effectiveValues,
     fields: metadata.fields,
-    requiredFieldNames: metadata.required_fields,
+    priorityFieldNames: metadata.priority_fields,
     cleanPatch: { cleanConfig, replacements },
     selectionsConfig,
     postProcess: shouldNormalizeBracketArtifacts
@@ -110,6 +110,7 @@ export async function runRecipe(options: RecipeRunOptions): Promise<RecipeRunRes
 export { cleanDocument } from './cleaner.js';
 export type { CleanResult, CleanOptions } from './cleaner.js';
 export { patchDocument } from './patcher.js';
+export type { PatchResult } from './patcher.js';
 export { verifyOutput, normalizeText, extractAllText } from './verifier.js';
 export { ensureSourceDocx } from './downloader.js';
 export { checkRecipeSourceDrift, computeSourceStructureSignature } from './source-drift.js';

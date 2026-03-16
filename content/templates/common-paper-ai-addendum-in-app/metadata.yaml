@@ -106,4 +106,4 @@ fields:
     type: boolean
     description: Customer AI-specific Covered Claims apply
     section: AI Liability
-required_fields: []
+priority_fields: []

@@ -97,7 +97,7 @@ fields:
     type: string
     description: Notice email address for the second party
     section: Signature Block
-required_fields:
+priority_fields:
   - purpose
   - effective_date
   - mnda_term

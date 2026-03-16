@@ -12,7 +12,7 @@ export class ClaudeCodeAdapter implements ToolCommandAdapter {
   readonly name = 'claude-code';
 
   generateSkillFile(metadata: TemplateMetadata, templateId: string): string {
-    const requiredFields = new Set(metadata.required_fields);
+    const priorityFields = new Set(metadata.priority_fields);
     const fieldsBySection = this.groupFieldsBySection(metadata);
     const questionRounds = this.buildQuestionRounds(fieldsBySection);
 
@@ -40,7 +40,7 @@ After collecting all field values, run:
 
 \`\`\`bash
 open-agreements fill ${templateId} ${metadata.fields
-      .filter((f) => requiredFields.has(f.name))
+      .filter((f) => priorityFields.has(f.name))
       .map((f) => `--${f.name} "\${${f.name}}"`)
       .join(' ')}
 \`\`\`
@@ -62,12 +62,12 @@ The filled DOCX will be saved to the current directory.
   private groupFieldsBySection(
     metadata: TemplateMetadata
   ): Map<string, InterviewField[]> {
-    const requiredFields = new Set(metadata.required_fields);
+    const priorityFields = new Set(metadata.priority_fields);
     const sections = new Map<string, InterviewField[]>();
     for (const field of metadata.fields) {
       const fieldWithRequired = {
         ...field,
-        required: requiredFields.has(field.name),
+        required: priorityFields.has(field.name),
       };
       const section = field.section ?? 'General';
       if (!sections.has(section)) sections.set(section, []);

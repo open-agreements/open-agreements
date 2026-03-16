@@ -13,7 +13,7 @@ function mockModules(overrides: Record<string, unknown> = {}): any {
   return {
     listTemplateItems: () => [],
     findTemplateDir: () => '/mock/dir',
-    loadMetadata: () => ({ name: 'mock', fields: [], required_fields: [] }),
+    loadMetadata: () => ({ name: 'mock', fields: [], priority_fields: [] }),
     fillTemplate: async () => ({}),
     categoryFromId: () => 'general',
     sourceName: () => null,

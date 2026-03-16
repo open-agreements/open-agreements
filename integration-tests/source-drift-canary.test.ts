@@ -75,7 +75,7 @@ function makeMetadata(sourceSha: string): RecipeMetadata {
     fields: [
       { name: 'company_name', type: 'string', description: 'Company' },
     ],
-    required_fields: ['company_name'],
+    priority_fields: ['company_name'],
   };
 }
 

@@ -113,7 +113,7 @@ interface RawTemplateMetadata {
     description: string;
     default?: string;
   }[];
-  required_fields: string[];
+  priority_fields: string[];
 }
 
 function toTemplateItem(templateId: string, meta: RawTemplateMetadata): TemplateItem {
@@ -125,7 +125,7 @@ function toTemplateItem(templateId: string, meta: RawTemplateMetadata): Template
     source_url: meta.source_url,
     source: sourceName(meta.source_url),
     attribution_text: meta.attribution_text,
-    fields: mapFields(meta.fields, meta.required_fields),
+    fields: mapFields(meta.fields, meta.priority_fields),
   };
 }
 

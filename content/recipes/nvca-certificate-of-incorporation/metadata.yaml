@@ -154,7 +154,7 @@ fields:
   - name: strategic_partnership_exception_shares
     type: string
     description: Max shares issuable for strategic partnerships without triggering anti-dilution
-required_fields:
+priority_fields:
   - company_name
   - original_issue_price
   - initial_purchase_price

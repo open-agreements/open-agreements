@@ -256,7 +256,7 @@ describe('prepareFillData', () => {
     { name: 'amount', type: 'string' as const, description: 'Amount' },
     { name: 'is_free', type: 'boolean' as const, description: 'Is free' },
   ];
-  const requiredFieldNames = ['company'];
+  const priorityFieldNames = ['company'];
 
   it.openspec('OA-FIL-008')('defaults optional fields to empty string when useBlankPlaceholder is false', () => {
     const result = prepareFillData({
@@ -328,14 +328,15 @@ describe('prepareFillData', () => {
     expect(result.is_free).toBe('true');
   });
 
-  it.openspec('OA-FIL-009')('warns on missing required fields', () => {
+  it.openspec('OA-FIL-009')('warns on missing priority fields', () => {
     const spy = vi.spyOn(console, 'warn').mockImplementation(() => {});
     prepareFillData({
       values: { amount: '100' },
       fields,
-      requiredFieldNames,
+      priorityFieldNames,
     });
-    expect(spy).toHaveBeenCalledWith('Warning: missing required fields: company');
+    expect(spy).toHaveBeenCalledWith(expect.stringContaining('priority fields are unfilled'));
+    expect(spy).toHaveBeenCalledWith(expect.stringContaining('company'));
     spy.mockRestore();
   });
 
@@ -551,7 +552,7 @@ describe('Regression: behavioral divergence', () => {
     { name: 'name', type: 'string' as const, description: 'Name' },
     { name: 'amount', type: 'string' as const, description: 'Amount' },
   ];
-  const simpleRequiredFieldNames = ['name'];
+  const simplePriorityFieldNames = ['name'];
 
   it.openspec('OA-FIL-014')('all paths default optional fields to BLANK_PLACEHOLDER', () => {
     const data = prepareFillData({
@@ -588,14 +589,15 @@ describe('Regression: behavioral divergence', () => {
     expect(data.flag).toBe('false');
   });
 
-  it.openspec('OA-FIL-014')('template path warns on missing required fields', () => {
+  it.openspec('OA-FIL-014')('template path warns on missing priority fields', () => {
     const spy = vi.spyOn(console, 'warn').mockImplementation(() => {});
     prepareFillData({
       values: {},
       fields: simpleFields,
-      requiredFieldNames: simpleRequiredFieldNames,
+      priorityFieldNames: simplePriorityFieldNames,
     });
-    expect(spy).toHaveBeenCalledWith('Warning: missing required fields: name');
+    expect(spy).toHaveBeenCalledWith(expect.stringContaining('priority fields are unfilled'));
+    expect(spy).toHaveBeenCalledWith(expect.stringContaining('name'));
     spy.mockRestore();
   });
 });
@@ -645,7 +647,7 @@ describe('NDA signature block fields', () => {
     const data = prepareFillData({
       values,
       fields: metadata.fields,
-      requiredFieldNames: metadata.required_fields,
+      priorityFieldNames: metadata.priority_fields,
       useBlankPlaceholder: true,
       coerceBooleans: true,
       computeDisplayFields: (d) => {

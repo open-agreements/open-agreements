@@ -70,7 +70,7 @@ export function validateTemplate(templateDir: string, templateId: string): Templ
   }
 
   const metadataFieldNames = new Set(metadata.fields.map((f) => f.name));
-  const requiredFieldNames = new Set(metadata.required_fields);
+  const priorityFieldNames = new Set(metadata.priority_fields);
 
   // Check if this template uses declarative replacements
   const replacementsPath = join(templateDir, 'replacements.json');
@@ -139,9 +139,9 @@ export function validateTemplate(templateDir: string, templateId: string): Templ
     for (const fieldName of metadataFieldNames) {
       const inTags = foundTags.has(fieldName) || foundConditionalFields.has(fieldName);
       if (!inTags) {
-        if (requiredFieldNames.has(fieldName)) {
+        if (priorityFieldNames.has(fieldName)) {
           errors.push(
-            `Required field "${fieldName}" defined in metadata but not found in replacement values or template.docx`
+            `Priority field "${fieldName}" defined in metadata but not found in replacement values or template.docx`
           );
         } else {
           warnings.push(
@@ -203,9 +203,9 @@ export function validateTemplate(templateDir: string, templateId: string): Templ
     for (const fieldName of metadataFieldNames) {
       const inDocx = foundTags.has(fieldName) || foundConditionalFields.has(fieldName);
       if (!inDocx) {
-        if (requiredFieldNames.has(fieldName)) {
+        if (priorityFieldNames.has(fieldName)) {
           errors.push(
-            `Required field "${fieldName}" defined in metadata but not found as {${fieldName}} in template.docx`
+            `Priority field "${fieldName}" defined in metadata but not found as {${fieldName}} in template.docx`
           );
         } else {
           warnings.push(

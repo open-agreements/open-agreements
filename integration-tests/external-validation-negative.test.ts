@@ -62,7 +62,7 @@ function writeMetadata(dir: string, sourceSha: string): void {
       '  - name: company_name',
       '    type: string',
       '    description: Company',
-      'required_fields: []',
+      'priority_fields: []',
       '',
     ].join('\n'),
     'utf-8'

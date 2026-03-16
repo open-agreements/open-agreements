@@ -26,7 +26,7 @@ function writeMetadata(recipeDir: string): void {
       '  - name: company_name',
       '    type: string',
       '    description: Company',
-      'required_fields:',
+      'priority_fields:',
       '  - company_name',
       '',
     ].join('\n'),

@@ -191,7 +191,7 @@ export default function () {
       sourceLabel,
       sourceUrl: getSourceUrl(item),
       sourceDocUrl: item.source_url,
-      requiredFields: item.fields.filter((f) => f.required).length,
+      priorityFields: item.fields.filter((f) => f.required).length,
       totalFields: item.fields.length,
       category,
       hasPreview,

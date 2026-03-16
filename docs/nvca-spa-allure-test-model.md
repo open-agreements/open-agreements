@@ -9,7 +9,7 @@ flowchart TB
     START([Run NVCA SPA test suite<br/>integration-tests/nvca-spa-template.test.ts])
 
     subgraph INPUTS["1. Inputs and Profiles"]
-      I1[metadata.yaml<br/>field definitions + required_fields]
+      I1[metadata.yaml<br/>field definitions + priority_fields]
       I2[replacements.json<br/>source placeholder -> template tag]
       I3[clean.json<br/>footnote and drafting-note normalization]
       I4[computed.json optional<br/>interaction rules set_fill + set_audit]

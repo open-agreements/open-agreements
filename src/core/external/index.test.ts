@@ -44,7 +44,7 @@ function createExternalFixture(overrides?: { sourceSha256?: string }) {
       '  - name: company_name',
       '    type: string',
       '    description: Company name',
-      'required_fields:',
+      'priority_fields:',
       '  - company_name',
       '',
     ].join('\n'),
@@ -61,7 +61,7 @@ function createExternalFixture(overrides?: { sourceSha256?: string }) {
 }
 
 describe('runExternalFill', () => {
-  itFilling.openspec('OA-TMP-012')('passes requiredFieldNames through to unified fill pipeline', async () => {
+  itFilling.openspec('OA-TMP-012')('passes priorityFieldNames through to unified fill pipeline', async () => {
     const { root } = createExternalFixture();
 
     const runFillPipelineMock = vi.fn(async ({ outputPath }: { outputPath: string }) => ({
@@ -96,7 +96,7 @@ describe('runExternalFill', () => {
 
     expect(runFillPipelineMock).toHaveBeenCalledTimes(1);
     expect(runFillPipelineMock.mock.calls[0][0]).toMatchObject({
-      requiredFieldNames: ['company_name'],
+      priorityFieldNames: ['company_name'],
       values: { company_name: 'Acme Corp' },
     });
     expect(result.fieldsUsed).toEqual(['company_name']);

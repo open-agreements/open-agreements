@@ -390,7 +390,7 @@ fields:
     type: string
     description: Notice email address for the Customer
     section: Signature Block
-required_fields:
+priority_fields:
   - provider_name
   - customer_name
   - provider_legal_name

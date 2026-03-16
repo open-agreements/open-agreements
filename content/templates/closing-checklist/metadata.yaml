@@ -27,6 +27,6 @@ fields:
   - name: open_issues
     type: array
     description: Unlinked issues (issue_id, title, status, summary)
-required_fields:
+priority_fields:
   - deal_name
   - updated_at

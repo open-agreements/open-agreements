@@ -39,7 +39,7 @@ const SAMPLE_METADATA: TemplateMetadata = {
       section: 'Legal',
     },
   ],
-  required_fields: ['purpose', 'effective_date'],
+  priority_fields: ['purpose', 'effective_date'],
 };
 
 describe('adapter architecture', () => {

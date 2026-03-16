@@ -181,7 +181,7 @@ function main() {
       license: item.license || "Recipe",
       distributable: flags.distributable,
       fillable: flags.fillable,
-      requiredFields: item.fields.filter((f) => f.required).length,
+      priorityFields: item.fields.filter((f) => f.required).length,
       totalFields: item.fields.length,
       validation_status: validationStatus,
       validation_source: validationSource,

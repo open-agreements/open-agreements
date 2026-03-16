@@ -209,7 +209,7 @@ const tools: ToolDefinition[] = [
             source_url: meta.source_url as string,
             source: mod.sourceName(meta.source_url as string),
             attribution_text: meta.attribution_text as string | undefined,
-            fields: mod.mapFields(meta.fields as Record<string, unknown>[], meta.required_fields as string[]),
+            fields: mod.mapFields(meta.fields as Record<string, unknown>[], meta.priority_fields as string[]),
           };
           return successResult('get_template', { template: normalizeTemplate(template) });
         } catch {

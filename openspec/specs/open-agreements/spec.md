@@ -26,13 +26,13 @@ Optional fields missing from the DOCX MUST produce warnings. The `valid` field
 MUST be `false` when any required field is missing.
 
 #### Scenario: [OA-TMP-001] Required field missing from DOCX
-- **WHEN** metadata lists `party_1_name` in `required_fields`
+- **WHEN** metadata lists `party_1_name` in `priority_fields`
 - **AND** no `{party_1_name}` placeholder exists in template.docx
 - **THEN** validation produces an error (not a warning)
 - **AND** `valid` is `false`
 
 #### Scenario: [OA-TMP-002] Optional field missing from DOCX
-- **WHEN** metadata defines field `governing_law` but does not include it in `required_fields`
+- **WHEN** metadata defines field `governing_law` but does not include it in `priority_fields`
 - **AND** no `{governing_law}` placeholder exists in template.docx
 - **THEN** validation produces a warning
 - **AND** `valid` remains `true`
@@ -225,7 +225,7 @@ schema). Optional fields: `description`, `optional` (boolean, default false).
 Recipe validation MUST enforce: no `.docx` files in the recipe directory
 (copyrighted content must not be committed), `replacements.json` exists and
 contains string-to-string entries, replacement target fields are declared in
-`metadata.yaml` (`fields` + `required_fields`), `metadata.yaml` validates against the schema, and
+`metadata.yaml` (`fields` + `priority_fields`), `metadata.yaml` validates against the schema, and
 `clean.json` validates against the clean config schema. Scaffold recipes
 (metadata.yaml only) MUST pass validation without requiring other files.
 
@@ -252,7 +252,7 @@ The system SHALL accept a template name, load the corresponding DOCX template, s
 - **THEN** the system produces a DOCX file with all `{company_name}` placeholders replaced by "Acme Corp" and all `{effective_date}` placeholders replaced by "2026-03-01", preserving the original formatting (bold, italic, headings, tables)
 
 #### Scenario: [OA-TMP-006] Missing required field
-- **GIVEN** a template where `governing_law` appears in `required_fields`
+- **GIVEN** a template where `governing_law` appears in `priority_fields`
 - **WHEN** the user invokes `fill` without providing `governing_law`
 - **THEN** the system returns an error listing the missing required fields
 
@@ -1318,11 +1318,11 @@ non-empty options, default values must match declared type.
 - **THEN** valid configurations pass and invalid ones are rejected with descriptive errors
 
 ### Requirement: Template Metadata Required Fields
-Template metadata MUST reject `required_fields` entries that reference undeclared
-field names and reject duplicate entries in `required_fields`.
+Template metadata MUST reject `priority_fields` entries that reference undeclared
+field names and reject duplicate entries in `priority_fields`.
 
 #### Scenario: [OA-TMP-021] Required fields referential integrity
-- **WHEN** `required_fields` references an undeclared field name or contains duplicates
+- **WHEN** `priority_fields` references an undeclared field name or contains duplicates
 - **THEN** schema validation fails with descriptive errors
 
 ### Requirement: Recipe Metadata Defaults

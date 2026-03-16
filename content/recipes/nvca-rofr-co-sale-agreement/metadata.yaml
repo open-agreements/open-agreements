@@ -63,7 +63,7 @@ fields:
     type: string
     description: Label for the key holders group (e.g. Key Holders or Founders)
     default: Key Holders
-required_fields:
+priority_fields:
   - company_name
   - investor_name
   - key_holder_name

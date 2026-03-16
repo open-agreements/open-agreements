@@ -288,14 +288,15 @@ describe('CLI interface behavior', () => {
     expect(markdown).not.toContain('best strategy');
   });
 
-  it.openspec('OA-TMP-006')('fill command reports missing required fields', () => {
+  it.openspec('OA-TMP-006')('fill command warns about missing priority fields but continues', () => {
     const outDir = mkdtempSync(join(tmpdir(), 'oa-cli-missing-'));
     tempDirs.push(outDir);
     const outputPath = join(outDir, 'missing-fields.docx');
 
-    expect(() => runCli(['fill', 'common-paper-mutual-nda', '-o', outputPath, '--set', 'purpose=Only purpose'])).toThrow(
-      /Missing required fields/
-    );
+    // Fill now proceeds with a warning instead of throwing
+    runCli(['fill', 'common-paper-mutual-nda', '-o', outputPath, '--set', 'purpose=Only purpose']);
+
+    expect(existsSync(outputPath)).toBe(true);
   });
 
   it.openspec('OA-DST-003')('fill command blocks templates marked allow_derivatives=false', () => {
@@ -318,7 +319,7 @@ describe('CLI interface behavior', () => {
         '  - name: party_name',
         '    type: string',
         '    description: Party',
-        'required_fields:',
+        'priority_fields:',
         '  - party_name',
         '',
       ].join('\n'),

@@ -55,7 +55,7 @@ fields:
   - name: company_name
     type: string
     description: Full legal name
-required_fields:
+priority_fields:
   - company_name
 ```
 
@@ -226,7 +226,7 @@ fields:
     type: string
     description: Federal judicial district
     default: District of Delaware  # default value used when not provided
-required_fields:
+priority_fields:
   - company_name             # no default → shows _______ if not provided
 ```
 

@@ -30,7 +30,7 @@ function createMetadataDir(license: string, attributionText: string): string {
       '  - name: company_name',
       '    type: string',
       '    description: Company',
-      'required_fields: []',
+      'priority_fields: []',
       '',
     ].join('\n'),
     'utf-8'

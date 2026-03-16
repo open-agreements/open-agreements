@@ -66,7 +66,7 @@ fields:
     type: string
     description: Reference to pricing page
     section: Payment
-required_fields:
+priority_fields:
   - provider_name
   - cloud_service
   - governing_law

@@ -77,7 +77,7 @@ function writeOverrideTemplate(root: string, templateId = 'override-only-templat
       '  - name: company_name',
       '    type: string',
       '    description: Company name',
-      'required_fields:',
+      'priority_fields:',
       '  - company_name',
       '',
     ].join('\n'),
