@@ -118,7 +118,7 @@ export function createProgram(): Command {
     .option('--values <json-file>', 'Alias for --data')
     .option('--keep-intermediate', 'Preserve intermediate files')
     .option('--computed-out <path>', 'Write computed interaction artifact JSON')
-    .option('--no-normalize-brackets', 'Disable post-fill bracket artifact normalization')
+    .option('--normalize-brackets', 'Enable post-fill bracket artifact normalization')
     .action(async (recipeId: string, opts: { input?: string; output?: string; data?: string; values?: string; keepIntermediate?: boolean; computedOut?: string; normalizeBrackets?: boolean }) => {
       await runRecipeCommand({
         recipeId,

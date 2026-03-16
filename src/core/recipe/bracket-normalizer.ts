@@ -2,17 +2,11 @@ import AdmZip from 'adm-zip';
 import { writeFileSync } from 'node:fs';
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
 import type { Document, Element } from '@xmldom/xmldom';
+import { replaceParagraphTextRange } from '@usejunior/docx-core';
 import { enumerateTextParts, getGeneralTextPartNames } from './ooxml-parts.js';
 import { BLANK_PLACEHOLDER } from '../fill-utils.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
-
-interface Segment {
-  start: number;
-  end: number;
-  raw: string;
-  inner: string;
-}
 
 export interface BracketNormalizationStats {
   unbracketedSegments: number;
@@ -56,11 +50,9 @@ export interface BracketNormalizationOptions {
 /**
  * Normalize residual bracket artifacts in generated recipe documents.
  *
- * Strategy:
- * - Unbracket simple single-level clauses (`[text]` -> `text`)
- * - Remove complex/nested segments with unresolved placeholders
- * - Remove orphan bracket characters and punctuation artifacts
- * - Drop paragraphs that collapse to punctuation-only content
+ * Only operates when declarative rules are provided (via normalize.json).
+ * Without declarative rules, returns zero-change stats (no-op).
+ * Uses formatting-preserving replaceParagraphTextRange for all text mutations.
  */
 export async function normalizeBracketArtifacts(
   inputPath: string,
@@ -88,6 +80,17 @@ export async function normalizeBracketArtifacts(
   const fieldValues = options?.fieldValues ?? {};
   const blankPlaceholder = options?.blankPlaceholder ?? BLANK_PLACEHOLDER;
   const hasDeclarativeRules = rules.length > 0;
+
+  // No declarative rules → no-op. Brackets remain visible for lawyers.
+  if (!hasDeclarativeRules) {
+    const outZip = new AdmZip();
+    for (const entry of zip.getEntries()) {
+      outZip.addFile(entry.entryName, entry.getData());
+    }
+    writeFileSync(outputPath, outZip.toBuffer());
+    return stats;
+  }
+
   for (const rule of rules) {
     if (!(rule.id in stats.declarativeRuleMatchCounts)) {
       stats.declarativeRuleMatchCounts[rule.id] = 0;
@@ -102,7 +105,6 @@ export async function normalizeBracketArtifacts(
     const xml = entry.getData().toString('utf-8');
     const doc: Document = parser.parseFromString(xml, 'text/xml');
     const paragraphs = doc.getElementsByTagNameNS(W_NS, 'p');
-    const toRemove: Element[] = [];
     let lastHeading = '';
 
     for (let i = 0; i < paragraphs.length; i++) {
@@ -146,37 +148,29 @@ export async function normalizeBracketArtifacts(
         }
       }
 
-      // If declarative rules are provided, prefer targeted mutation only.
-      // This avoids broad paragraph rewrites that can shift inline styling.
-      if (hasDeclarativeRules) {
-        let finalText = declarativeResult.text;
-        // Sanitize double-dollar artifacts ($$ or $ $) → single $
-        finalText = finalText.replace(/\$[\s\u00A0\t]*\$/g, '$');
-        if (finalText !== original) {
-          setParagraphText(para, finalText);
-          stats.normalizedParagraphs += 1;
-        }
-        continue;
-      }
-
-      let normalized = normalizeParagraphText(declarativeResult.text, stats);
-      if (normalized === null) {
-        toRemove.push(para);
-        stats.removedParagraphs += 1;
-        continue;
-      }
-
+      let finalText = declarativeResult.text;
       // Sanitize double-dollar artifacts ($$ or $ $) → single $
-      normalized = normalized.replace(/\$[\s\u00A0\t]*\$/g, '$');
-
-      if (normalized !== original) {
-        setParagraphText(para, normalized);
+      finalText = finalText.replace(/\$[\s\u00A0\t]*\$/g, '$');
+      if (finalText !== original) {
+        const range = computeReplacementRange(original, finalText);
+        if (range) {
+          try {
+            replaceParagraphTextRange(
+              para as unknown as globalThis.Element,
+              range.start,
+              range.end,
+              range.replacement,
+            );
+          } catch {
+            // Fallback for paragraphs with field results or other complex
+            // structures that replaceParagraphTextRange cannot handle.
+            // Set text directly on <w:t> elements — less formatting-safe
+            // but better than skipping the replacement entirely.
+            setParagraphTextFallback(para, finalText);
+          }
+        }
         stats.normalizedParagraphs += 1;
       }
-    }
-
-    for (const para of toRemove) {
-      para.parentNode?.removeChild(para);
     }
 
     zip.updateFile(partName, Buffer.from(serializer.serializeToString(doc), 'utf-8'));
@@ -199,6 +193,27 @@ export async function normalizeBracketArtifacts(
   writeFileSync(outputPath, outZip.toBuffer());
 
   return stats;
+}
+
+/**
+ * Compute the minimal contiguous replacement range between two strings.
+ * Returns null if the strings are identical.
+ */
+function computeReplacementRange(
+  oldText: string,
+  newText: string
+): { start: number; end: number; replacement: string } | null {
+  if (oldText === newText) return null;
+  let start = 0;
+  const minLen = Math.min(oldText.length, newText.length);
+  while (start < minLen && oldText[start] === newText[start]) start++;
+  let oldEnd = oldText.length;
+  let newEnd = newText.length;
+  while (oldEnd > start && newEnd > start && oldText[oldEnd - 1] === newText[newEnd - 1]) {
+    oldEnd--;
+    newEnd--;
+  }
+  return { start, end: oldEnd, replacement: newText.slice(start, newEnd) };
 }
 
 function isHeadingLike(text: string): boolean {
@@ -284,7 +299,7 @@ function normalizeBracketPrefixedHeading(text: string): string {
   if (trimmed.length > 90) return text;
   if (trimmed.includes('_')) return text;
   if (/[.:;!?].+[.:;!?]/.test(trimmed)) return text;
-  if (!/^\[[A-Z][A-Za-z0-9 ,&()'’/.-]+$/.test(trimmed)) return text;
+  if (!/^\[[A-Z][A-Za-z0-9 ,&()''/.-]+$/.test(trimmed)) return text;
   return trimmed.slice(1).trim();
 }
 
@@ -299,108 +314,6 @@ function trimUnmatchedTrailingBrackets(text: string): string {
   return out;
 }
 
-function normalizeParagraphText(text: string, stats: BracketNormalizationStats): string | null {
-  let out = text;
-
-  // First pass: handle complete same-paragraph bracket segments.
-  const segments = extractTopLevelSegments(out);
-  if (segments.length > 0) {
-    const ordered = [...segments].sort((a, b) => b.start - a.start);
-    for (const seg of ordered) {
-      const replacement = shouldRemoveSegment(seg.inner) ? '' : seg.inner.trim();
-      out = `${out.slice(0, seg.start)}${replacement}${out.slice(seg.end + 1)}`;
-      if (replacement === '') {
-        stats.removedSegments += 1;
-      } else {
-        stats.unbracketedSegments += 1;
-      }
-    }
-  }
-
-  // Second pass: remove orphan bracket chars from cross-paragraph constructs.
-  out = out.replaceAll('[', '').replaceAll(']', '');
-
-  // Punctuation/spacing normalization for artifacts created by bracket deletion.
-  out = out
-    .replace(/^\s*[.;:,]\s*/, '')
-    .replace(/\s+,/g, ',')
-    .replace(/\s+;/g, ';')
-    .replace(/\s+\./g, '.')
-    .replace(/\bfrom,\s+counsel\b/gi, 'from counsel')
-    .replace(/\(\s+/g, '(')
-    .replace(/\s+\)/g, ')')
-    .replace(/\s{2,}/g, ' ')
-    .trim();
-
-  // Prefer a single deterministic costs clause when both alternatives are present.
-  if (
-    out.includes('If any action at law or in equity') &&
-    out.includes('Each party will bear its own costs in respect of any disputes arising under this Agreement.')
-  ) {
-    out = 'Each party will bear its own costs in respect of any disputes arising under this Agreement.';
-  }
-
-  // Drop known degenerate artifacts produced when optional bracket blocks are stripped.
-  if (/^A minimum of\s+Shares must be sold at the Initial Closing\.?$/i.test(out)) {
-    return null;
-  }
-  if (
-    /^As of the Initial Closing, the authorized size of the Board of Directors shall be, and the Board of Directors shall be comprised of\.?$/i.test(
-      out
-    )
-  ) {
-    return null;
-  }
-
-  // Drop degenerate paragraphs that are now effectively empty.
-  if (!out || /^[.,;:]+$/.test(out)) {
-    return null;
-  }
-
-  return out;
-}
-
-function shouldRemoveSegment(inner: string): boolean {
-  const normalized = inner.trim();
-  if (!normalized) return true;
-
-  // Nested bracket segments are usually unresolved alternatives; drop them.
-  if (normalized.includes('[') || normalized.includes(']')) return true;
-
-  // Placeholder blanks and underscore markers should be removed.
-  if (normalized.includes('_')) return true;
-
-  // Known placeholder-only tokens.
-  if (/^(date|specify|state|initial|applicable|audited|unaudited)$/i.test(normalized)) return true;
-  if (/^\(?[ivx]+\)?$/i.test(normalized)) return true;
-  if (/^\d+$/.test(normalized)) return true;
-
-  return false;
-}
-
-function extractTopLevelSegments(text: string): Segment[] {
-  const out: Segment[] = [];
-  let depth = 0;
-  let start = -1;
-
-  for (let i = 0; i < text.length; i++) {
-    const ch = text[i];
-    if (ch === '[') {
-      if (depth === 0) start = i;
-      depth += 1;
-    } else if (ch === ']') {
-      if (depth > 0) depth -= 1;
-      if (depth === 0 && start !== -1) {
-        const raw = text.slice(start, i + 1);
-        out.push({ start, end: i, raw, inner: raw.slice(1, -1) });
-        start = -1;
-      }
-    }
-  }
-
-  return out;
-}
-
 function extractParagraphText(para: Element): string {
   const tElements = para.getElementsByTagNameNS(W_NS, 't');
   const parts: string[] = [];
@@ -410,45 +323,20 @@ function extractParagraphText(para: Element): string {
   return parts.join('');
 }
 
-function setParagraphText(para: Element, text: string): void {
-  const doc = para.ownerDocument as Document;
+/**
+ * Fallback for paragraphs where replaceParagraphTextRange cannot operate
+ * (e.g., field results spanning across runs). Sets text on the first <w:t>
+ * element and clears the rest. Less formatting-safe than replaceParagraphTextRange
+ * but avoids throwing.
+ */
+function setParagraphTextFallback(para: Element, text: string): void {
   const tElements = para.getElementsByTagNameNS(W_NS, 't');
-
-  if (tElements.length === 0) {
-    const run = doc.createElementNS(W_NS, 'w:r');
-    const t = doc.createElementNS(W_NS, 'w:t');
-    t.textContent = text;
-    run.appendChild(t);
-    para.appendChild(run);
-    return;
+  if (tElements.length === 0) return;
+  tElements[0].textContent = text;
+  if (text.startsWith(' ') || text.endsWith(' ')) {
+    tElements[0].setAttribute('xml:space', 'preserve');
   }
-
-  // Preserve existing run-level formatting by distributing normalized text
-  // across current text nodes using original node-length quotas.
-  const originalLengths: number[] = [];
-  for (let i = 0; i < tElements.length; i++) {
-    originalLengths.push((tElements[i].textContent ?? '').length);
-  }
-
-  let cursor = 0;
-  const total = text.length;
-
-  for (let i = 0; i < tElements.length; i++) {
-    const quota = i === tElements.length - 1
-      ? total - cursor
-      : Math.min(originalLengths[i], Math.max(0, total - cursor));
-    if (quota > 0) {
-      tElements[i].textContent = text.slice(cursor, cursor + quota);
-      cursor += quota;
-    } else {
-      tElements[i].textContent = '';
-    }
-  }
-
-  // If the paragraph grew beyond original capacity, append the tail to
-  // the last node to avoid creating new runs and style surprises.
-  if (cursor < total) {
-    const last = tElements[tElements.length - 1];
-    last.textContent = (last.textContent ?? '') + text.slice(cursor);
+  for (let i = 1; i < tElements.length; i++) {
+    tElements[i].textContent = '';
   }
 }
