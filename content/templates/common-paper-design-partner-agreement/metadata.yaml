@@ -148,7 +148,7 @@ fields:
     type: string
     description: Notice email address for the Partner
     section: Signature Block
-required_fields:
+priority_fields:
   - company_name
   - product_description
   - governing_law

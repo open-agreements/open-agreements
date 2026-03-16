@@ -259,7 +259,7 @@ export async function fillTemplate(options: FillOptions): Promise<FillResult> {
     outputPath,
     values,
     fields: metadata.fields,
-    requiredFieldNames: metadata.required_fields,
+    priorityFieldNames: metadata.priority_fields,
     cleanPatch,
     selectionsConfig,
     coerceBooleans: true,

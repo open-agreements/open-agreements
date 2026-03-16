@@ -73,7 +73,7 @@ fields:
     type: string
     description: Notice email address for the Recipient
     section: Signature Block
-required_fields:
+priority_fields:
   - discloser_name_and_address
   - effective_date
   - purpose

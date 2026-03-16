@@ -51,7 +51,7 @@ fields:
     type: string
     description: Title of the company signatory (e.g., "CEO")
     section: Signatures
-required_fields:
+priority_fields:
   - company_name
   - investor_name
   - purchase_amount

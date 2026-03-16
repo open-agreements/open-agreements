@@ -33,7 +33,7 @@ function createRecipeFixture(options?: { computedProfile?: unknown; normalizeCon
       '  - name: company_name',
       '    type: string',
       '    description: Company name',
-      'required_fields:',
+      'priority_fields:',
       '  - company_name',
       '',
     ].join('\n'),
@@ -66,7 +66,7 @@ function createRecipeFixture(options?: { computedProfile?: unknown; normalizeCon
 }
 
 describe('runRecipe', () => {
-  itFilling.openspec(['OA-RCP-002', 'OA-RCP-021'])('forwards requiredFieldNames when inputPath is supplied', async () => {
+  itFilling.openspec(['OA-RCP-002', 'OA-RCP-021'])('forwards priorityFieldNames when inputPath is supplied', async () => {
     const recipeDir = createRecipeFixture();
 
     const runFillPipelineMock = vi.fn(async ({ outputPath }: { outputPath: string }) => ({
@@ -105,7 +105,7 @@ describe('runRecipe', () => {
     expect(runFillPipelineMock.mock.calls[0][0]).toMatchObject({
       inputPath: '/tmp/input.docx',
       outputPath: '/tmp/output.docx',
-      requiredFieldNames: ['company_name'],
+      priorityFieldNames: ['company_name'],
       values: { company_name: 'Acme Corp' },
     });
     expect(result.fieldsUsed).toEqual(['company_name']);

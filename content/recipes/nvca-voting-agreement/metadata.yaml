@@ -55,7 +55,7 @@ fields:
     type: string
     description: Signature page marker text
     default: Signature Page Follows
-required_fields:
+priority_fields:
   - company_name
   - investor_name
   - key_holder_name

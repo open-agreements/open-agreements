@@ -44,10 +44,10 @@ function validateTemplateFillRequest(templateDir: string, values: Record<string,
     );
   }
 
-  const missingRequired = metadata.required_fields.filter((fieldName) => !values[fieldName]);
+  const missingPriority = metadata.priority_fields.filter((fieldName) => !values[fieldName]);
 
-  if (missingRequired.length > 0) {
-    throw new Error(`Missing required fields: ${missingRequired.join(', ')}`);
+  if (missingPriority.length > 0) {
+    console.warn(`Note: ${missingPriority.length} priority fields are unfilled: ${missingPriority.join(', ')}`);
   }
 }
 

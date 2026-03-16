@@ -90,7 +90,7 @@ fields:
     type: string
     description: Notice email address for the second party
     section: Signature Block
-required_fields:
+priority_fields:
   - company_name
   - party_1
   - party_2

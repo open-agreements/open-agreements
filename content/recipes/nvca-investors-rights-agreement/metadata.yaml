@@ -59,7 +59,7 @@ fields:
   - name: checklist_delivery_date
     type: string
     description: Date the compliance checklist is being delivered
-required_fields:
+priority_fields:
   - company_name
   - company_name_short
   - investor_name

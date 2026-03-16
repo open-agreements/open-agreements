@@ -45,7 +45,7 @@ function runListJson(opts: ListOptions): void {
         source_url: meta.source_url,
         source: sourceName(meta.source_url),
         attribution_text: meta.attribution_text,
-        fields: mapFields(meta.fields, meta.required_fields),
+        fields: mapFields(meta.fields, meta.priority_fields),
       });
     } catch (err) {
       errors.push(`template ${id}: ${err instanceof Error ? err.message : String(err)}`);
@@ -67,7 +67,7 @@ function runListJson(opts: ListOptions): void {
           source_url: meta.source_url,
           source: sourceName(meta.source_url),
           attribution_text: meta.attribution_text,
-          fields: mapFields(meta.fields, meta.required_fields),
+          fields: mapFields(meta.fields, meta.priority_fields),
         });
       } catch (err) {
         errors.push(`external ${id}: ${err instanceof Error ? err.message : String(err)}`);
@@ -89,7 +89,7 @@ function runListJson(opts: ListOptions): void {
           source: sourceName(meta.source_url),
           source_version: meta.source_version,
           optional: meta.optional,
-          fields: mapFields(meta.fields, meta.required_fields),
+          fields: mapFields(meta.fields, meta.priority_fields),
         };
         if (meta.market_data_citations) {
           item.market_data_citations = meta.market_data_citations;
@@ -119,7 +119,7 @@ function runListJson(opts: ListOptions): void {
 }
 
 function listAgreementsWithOptions(opts: ListOptions): void {
-  interface Row { id: string; category: string; license: string; required: number; total: number; source: string; sourceUrl: string }
+  interface Row { id: string; category: string; license: string; priority: number; total: number; source: string; sourceUrl: string }
   const rows: Row[] = [];
   const templatesOnly = opts.templatesOnly === true;
 
@@ -128,12 +128,12 @@ function listAgreementsWithOptions(opts: ListOptions): void {
     const dir = entry.dir;
     try {
       const meta = loadMetadata(dir);
-      const required = meta.required_fields.length;
+      const priority = meta.priority_fields.length;
       rows.push({
         id,
         category: categoryFromId(id),
         license: meta.license,
-        required,
+        priority,
         total: meta.fields.length,
         source: sourceName(meta.source_url) || '—',
         sourceUrl: meta.source_url,
@@ -143,7 +143,7 @@ function listAgreementsWithOptions(opts: ListOptions): void {
         id,
         category: categoryFromId(id),
         license: 'ERROR',
-        required: 0,
+        priority: 0,
         total: 0,
         source: '—',
         sourceUrl: 'Could not load metadata',
@@ -157,12 +157,12 @@ function listAgreementsWithOptions(opts: ListOptions): void {
       const dir = entry.dir;
       try {
         const meta = loadExternalMetadata(dir);
-        const required = meta.required_fields.length;
+        const priority = meta.priority_fields.length;
         rows.push({
           id,
           category: categoryFromId(id),
           license: meta.license,
-          required,
+          priority,
           total: meta.fields.length,
           source: sourceName(meta.source_url) || '—',
           sourceUrl: meta.source_url,
@@ -172,7 +172,7 @@ function listAgreementsWithOptions(opts: ListOptions): void {
           id,
           category: categoryFromId(id),
           license: 'ERROR',
-          required: 0,
+          priority: 0,
           total: 0,
           source: '—',
           sourceUrl: 'Could not load metadata',
@@ -185,13 +185,13 @@ function listAgreementsWithOptions(opts: ListOptions): void {
       const dir = entry.dir;
       try {
         const meta = loadRecipeMetadata(dir);
-        const required = meta.required_fields.length;
+        const priority = meta.priority_fields.length;
         const license = meta.optional ? 'recipe*' : 'recipe';
         rows.push({
           id,
           category: categoryFromId(id),
           license,
-          required,
+          priority,
           total: meta.fields.length,
           source: sourceName(meta.source_url) || '—',
           sourceUrl: meta.source_url,
@@ -201,7 +201,7 @@ function listAgreementsWithOptions(opts: ListOptions): void {
           id,
           category: categoryFromId(id),
           license: 'ERROR',
-          required: 0,
+          priority: 0,
           total: 0,
           source: '—',
           sourceUrl: 'Could not load metadata',
@@ -223,7 +223,7 @@ function listAgreementsWithOptions(opts: ListOptions): void {
   console.log('─'.repeat(120));
 
   for (const row of rows) {
-    const fields = row.license === 'ERROR' ? '—' : `${row.required}/${row.total}`;
+    const fields = row.license === 'ERROR' ? '—' : `${row.priority}/${row.total}`;
     console.log(
       `${row.id.padEnd(40)} ${row.category.padEnd(12)} ${row.license.padEnd(14)} ${fields.padEnd(8)} ${row.source.padEnd(16)} ${row.sourceUrl}`
     );

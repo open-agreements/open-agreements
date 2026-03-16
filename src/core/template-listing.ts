@@ -79,9 +79,9 @@ export function sourceName(url: string): string | null {
 
 export function mapFields(
   fields: { name: string; type: string; section?: string; description: string; default?: string; default_value_rationale?: string }[],
-  requiredFields: string[],
+  priorityFields: string[],
 ): TemplateListField[] {
-  const required = new Set(requiredFields);
+  const required = new Set(priorityFields);
   return fields.map((f) => ({
     name: f.name,
     type: f.type,
@@ -112,7 +112,7 @@ export function listTemplateItems(opts?: { templatesOnly?: boolean }): TemplateL
         source_url: meta.source_url,
         source: sourceName(meta.source_url),
         attribution_text: meta.attribution_text,
-        fields: mapFields(meta.fields, meta.required_fields),
+        fields: mapFields(meta.fields, meta.priority_fields),
       });
     } catch {
       // Skip templates that fail to load (matches CLI --json behavior)

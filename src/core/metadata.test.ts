@@ -184,7 +184,7 @@ describe('TemplateMetadataSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-021')('rejects unknown required_fields entries', async () => {
+  it.openspec('OA-TMP-021')('rejects unknown priority_fields entries', async () => {
     await expectSafeParseOutcome(
       'TemplateMetadataSchema',
       TemplateMetadataSchema,
@@ -196,13 +196,13 @@ describe('TemplateMetadataSchema', () => {
         allow_derivatives: true,
         attribution_text: 'Based on Example NDA',
         fields: [{ name: 'party_name', type: 'string', description: 'Party name' }],
-        required_fields: ['missing_field'],
+        priority_fields: ['missing_field'],
       },
       false
     );
   });
 
-  it.openspec('OA-TMP-021')('rejects duplicate required_fields entries', async () => {
+  it.openspec('OA-TMP-021')('rejects duplicate priority_fields entries', async () => {
     await expectSafeParseOutcome(
       'TemplateMetadataSchema',
       TemplateMetadataSchema,
@@ -214,7 +214,7 @@ describe('TemplateMetadataSchema', () => {
         allow_derivatives: true,
         attribution_text: 'Based on Example NDA',
         fields: [{ name: 'party_name', type: 'string', description: 'Party name' }],
-        required_fields: ['party_name', 'party_name'],
+        priority_fields: ['party_name', 'party_name'],
       },
       false
     );

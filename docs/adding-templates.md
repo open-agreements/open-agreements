@@ -53,7 +53,7 @@ fields:
     type: date
     description: Date the agreement takes effect
     section: Terms
-required_fields:
+priority_fields:
   - party_name
   - effective_date
 ```

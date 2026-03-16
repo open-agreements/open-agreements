@@ -47,7 +47,7 @@ fields:
     description: Courts with jurisdiction over disputes
     default: courts located in San Francisco, California
     section: Legal
-required_fields:
+priority_fields:
   - party_1_name
   - party_2_name
   - effective_date

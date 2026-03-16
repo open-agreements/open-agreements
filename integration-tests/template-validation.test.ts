@@ -59,18 +59,18 @@ function buildDocx(documentText: string): Buffer {
 function createTemplateFixture(opts: {
   docText: string;
   fieldsYaml: string;
-  requiredFields?: string[];
+  priorityFields?: string[];
   replacements?: Record<string, string>;
   replacementsRaw?: string;
   writeTemplateDocx?: boolean;
 }): string {
   const dir = mkdtempSync(join(tmpdir(), 'oa-template-validate-'));
   tempDirs.push(dir);
-  const requiredFields = opts.requiredFields ?? [];
-  const requiredFieldsLines =
-    requiredFields.length === 0
-      ? ['required_fields: []']
-      : ['required_fields:', ...requiredFields.map((field) => `  - ${field}`)];
+  const priorityFields = opts.priorityFields ?? [];
+  const priorityFieldsLines =
+    priorityFields.length === 0
+      ? ['priority_fields: []']
+      : ['priority_fields:', ...priorityFields.map((field) => `  - ${field}`)];
   writeFileSync(
     join(dir, 'metadata.yaml'),
     [
@@ -82,7 +82,7 @@ function createTemplateFixture(opts: {
       'attribution_text: Example Attribution',
       'fields:',
       opts.fieldsYaml,
-      ...requiredFieldsLines,
+      ...priorityFieldsLines,
       '',
     ].join('\n'),
     'utf-8'
@@ -207,7 +207,7 @@ describe('validateTemplate placeholder coverage', () => {
     const dir = createTemplateFixture({
       docText: 'No placeholders here',
       fieldsYaml: '  - name: required_field\n    type: string\n    description: Required',
-      requiredFields: ['required_field'],
+      priorityFields: ['required_field'],
     });
     await allureParameter('fixture_template_id', 'fixture-required-missing');
     await allureAttachment('fixture-doc-text.txt', 'No placeholders here');
@@ -218,7 +218,7 @@ describe('validateTemplate placeholder coverage', () => {
 
     await allureStep('Assert required placeholder error is reported', () => {
       expect(result.valid).toBe(false);
-      expect(result.errors.join(' ')).toContain('Required field \"required_field\"');
+      expect(result.errors.join(' ')).toContain('Priority field \"required_field\"');
     });
   });
 
@@ -226,7 +226,7 @@ describe('validateTemplate placeholder coverage', () => {
     const dir = createTemplateFixture({
       docText: 'No placeholders here either',
       fieldsYaml: '  - name: optional_field\n    type: string\n    description: Optional',
-      requiredFields: [],
+      priorityFields: [],
     });
     await allureParameter('fixture_template_id', 'fixture-optional-missing');
     await allureAttachment('fixture-doc-text.txt', 'No placeholders here either');
@@ -244,8 +244,8 @@ describe('validateTemplate placeholder coverage', () => {
   it.openspec('OA-TMP-016')('reports required-field errors for declarative replacements missing metadata tags', async () => {
     const dir = createTemplateFixture({
       docText: 'Order form has [Company Name] only',
-      fieldsYaml: '  - name: required_field\n    type: string\n    description: Required field',
-      requiredFields: ['required_field'],
+      fieldsYaml: '  - name: required_field\n    type: string\n    description: Priority field',
+      priorityFields: ['required_field'],
       replacements: {
         '[Company Name]': '{other_field}',
       },
@@ -254,7 +254,7 @@ describe('validateTemplate placeholder coverage', () => {
     const result = validateTemplate(dir, 'fixture-required-missing-in-replacements');
     await allureJsonAttachment('required-missing-in-replacements-result.json', result);
     expect(result.valid).toBe(false);
-    expect(result.errors.join(' ')).toContain('Required field \"required_field\" defined in metadata but not found');
+    expect(result.errors.join(' ')).toContain('Priority field \"required_field\" defined in metadata but not found');
   });
 
   it('returns an error when metadata cannot be loaded', () => {
@@ -304,7 +304,7 @@ describe('validateTemplate placeholder coverage', () => {
         '    type: string',
         '    description: Optional but unused',
       ].join('\n'),
-      requiredFields: ['company_name'],
+      priorityFields: ['company_name'],
       replacements: {
         '[Missing Placeholder]': '{company_name}',
         '[Company Name]': '{company_name} {IF company_name}{END-IF}',
@@ -372,7 +372,7 @@ describe('validateTemplate placeholder coverage', () => {
         '  - name: optional_field',
         '    type: string',
         '    description: Optional field',
-        'required_fields: []',
+        'priority_fields: []',
         '',
       ].join('\n'),
       'utf-8'

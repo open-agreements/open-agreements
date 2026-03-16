@@ -37,7 +37,7 @@ fields:
     description: 'Type of rights in deliverables: "licensed" or "assigned"'
     default: licensed
     section: Terms
-required_fields:
+priority_fields:
   - customer_name
   - provider_name
   - effective_date

@@ -126,7 +126,7 @@ fields:
   - name: applicable_purchasers
     type: string
     description: Names of the applicable purchasers
-required_fields:
+priority_fields:
   - company_name
   - investor_name
   - company_counsel

@@ -18,7 +18,7 @@ interface TemplateMeta {
   source_url: string;
   attribution_text: string;
   fields: Array<{ name: string; type: string; description: string; section?: string; default?: string }>;
-  required_fields: string[];
+  priority_fields: string[];
 }
 
 interface RecipeMeta {
@@ -29,7 +29,7 @@ interface RecipeMeta {
   license_note: string;
   optional: boolean;
   fields: Array<{ name: string; type: string; description: string; section?: string; default?: string }>;
-  required_fields: string[];
+  priority_fields: string[];
 }
 
 interface ListHarnessOptions {
@@ -70,7 +70,7 @@ function templateMeta(name: string, sourceUrl: string): TemplateMeta {
     source_url: sourceUrl,
     attribution_text: `${name} attribution`,
     fields: baseFields(),
-    required_fields: ['company_name'],
+    priority_fields: ['company_name'],
   };
 }
 
@@ -83,7 +83,7 @@ function recipeMeta(name: string, sourceUrl: string): RecipeMeta {
     license_note: 'Use per source license',
     optional: false,
     fields: baseFields(),
-    required_fields: ['company_name'],
+    priority_fields: ['company_name'],
   };
 }
 

@@ -512,7 +512,7 @@ fields:
     type: string
     description: Company name for the Customer signatory (entity only)
     section: Signature Block
-required_fields:
+priority_fields:
   - company_name
   - product_name
   - underlying_agreement

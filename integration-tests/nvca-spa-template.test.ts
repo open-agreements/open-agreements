@@ -33,7 +33,7 @@ interface RecipeMetadataDocument {
   source_sha256?: string;
   optional?: boolean;
   fields?: MetadataField[];
-  required_fields?: string[];
+  priority_fields?: string[];
 }
 
 type ReplacementMap = Record<string, string>;
@@ -464,7 +464,7 @@ describe('NVCA SPA Template', () => {
     );
 
     const metadataFieldNames = (metadata.fields ?? []).map((field) => field.name).sort();
-    const requiredFieldNames = (metadata.required_fields ?? []).slice().sort();
+    const priorityFieldNames = (metadata.priority_fields ?? []).slice().sort();
 
     const replacementFieldNames = Object.values(replacements)
       .map(extractFieldNameFromReplacement)
@@ -481,7 +481,7 @@ describe('NVCA SPA Template', () => {
     const unknownReplacementTargets = representedFieldNames.filter(
       (field) => !metadataFieldNames.includes(field)
     );
-    const missingRequiredReplacementTargets = requiredFieldNames.filter(
+    const missingRequiredReplacementTargets = priorityFieldNames.filter(
       (field) => !representedFieldNames.includes(field)
     );
 
@@ -490,7 +490,7 @@ describe('NVCA SPA Template', () => {
       replacementFieldNames,
       normalizeFieldNames,
       representedFieldNames,
-      requiredFieldNames,
+      priorityFieldNames,
       unknownReplacementTargets,
       missingRequiredReplacementTargets,
     };

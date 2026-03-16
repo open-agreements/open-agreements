@@ -19,7 +19,7 @@ interface EngineHarness {
     outputPath: string;
   }) => Promise<{
     outputPath: string;
-    metadata: { name: string; fields: Array<{ name: string }>; required_fields: string[] };
+    metadata: { name: string; fields: Array<{ name: string }>; priority_fields: string[] };
     fieldsUsed: string[];
   }>;
   BLANK_PLACEHOLDER: string;
@@ -76,7 +76,7 @@ async function loadEngineHarness(opts: EngineHarnessOptions): Promise<EngineHarn
       type: 'string',
       description: name,
     })),
-    required_fields: [] as string[],
+    priority_fields: [] as string[],
   }));
 
   const loadCleanConfig = vi.fn(() => ({ mode: 'fixture' }));

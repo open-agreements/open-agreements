@@ -18,7 +18,7 @@ interface FillHarnessOptions {
   metadata?: {
     name: string;
     allow_derivatives: boolean;
-    required_fields: string[];
+    priority_fields: string[];
   };
   fillError?: Error;
   externalError?: Error;
@@ -75,7 +75,7 @@ async function loadFillHarness(opts: FillHarnessOptions = {}): Promise<FillHarne
   const loadMetadata = vi.fn(() => opts.metadata ?? {
     name: 'Mock Template',
     allow_derivatives: true,
-    required_fields: ['company_name'],
+    priority_fields: ['company_name'],
   });
 
   const fillTemplate = vi.fn(async ({ outputPath }: { outputPath: string }) => {
@@ -196,7 +196,7 @@ describe('runFill in-process coverage', () => {
       metadata: {
         name: 'Mutual NDA',
         allow_derivatives: true,
-        required_fields: ['company_name'],
+        priority_fields: ['company_name'],
       },
     });
 
@@ -226,7 +226,7 @@ describe('runFill in-process coverage', () => {
       metadata: {
         name: 'Restricted Template',
         allow_derivatives: false,
-        required_fields: ['company_name'],
+        priority_fields: ['company_name'],
       },
     });
 
@@ -252,37 +252,31 @@ describe('runFill in-process coverage', () => {
     expect(errorSpy).toHaveBeenCalledWith(expect.stringContaining('allow_derivatives=false'));
   });
 
-  itFilling.openspec('OA-TMP-006')('reports missing required fields before template fill', async () => {
+  itFilling.openspec('OA-TMP-006')('warns about missing priority fields but continues fill', async () => {
     const harness = await loadFillHarness({
       templateDir: '/templates/common-paper-mutual-nda',
       metadata: {
         name: 'Mutual NDA',
         allow_derivatives: true,
-        required_fields: ['company_name', 'effective_date'],
+        priority_fields: ['company_name', 'effective_date'],
       },
     });
 
-    const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => {});
-    const exitSpy = vi
-      .spyOn(process, 'exit')
-      .mockImplementation(((code?: number) => {
-        throw new Error(`EXIT_${code ?? 0}`);
-      }) as never);
+    const warnSpy = vi.spyOn(console, 'warn').mockImplementation(() => {});
+    const logSpy = vi.spyOn(console, 'log').mockImplementation(() => {});
 
-    await allureStep('Attempt fill with missing required fields', async () => {
-      await expect(
-        harness.runFill({ template: 'common-paper-mutual-nda', values: { company_name: 'Acme Corp' } })
-      ).rejects.toThrow('EXIT_1');
+    await allureStep('Fill with missing priority fields proceeds with warning', async () => {
+      await harness.runFill({ template: 'common-paper-mutual-nda', values: { company_name: 'Acme Corp' } });
     });
 
-    await allureJsonAttachment('runFill-missing-required-fields.json', {
-      stderrCalls: errorSpy.mock.calls.map((call) => String(call[0])),
+    await allureJsonAttachment('runFill-missing-priority-fields.json', {
+      warnCalls: warnSpy.mock.calls.map((call) => String(call[0])),
       expectedMissing: ['effective_date'],
     });
 
-    expect(exitSpy).toHaveBeenCalledWith(1);
-    expect(harness.spies.fillTemplate).not.toHaveBeenCalled();
-    expect(errorSpy).toHaveBeenCalledWith(expect.stringContaining('Missing required fields: effective_date'));
+    expect(warnSpy).toHaveBeenCalledWith(expect.stringContaining('priority fields are unfilled'));
+    expect(warnSpy).toHaveBeenCalledWith(expect.stringContaining('effective_date'));
+    expect(harness.spies.fillTemplate).toHaveBeenCalled();
   });
 
   itFilling.openspec('OA-TMP-012')('routes external IDs to external fill pipeline', async () => {
@@ -363,7 +357,7 @@ describe('runFill in-process coverage', () => {
       metadata: {
         name: 'Mutual NDA',
         allow_derivatives: true,
-        required_fields: [],
+        priority_fields: [],
       },
       fillError: new Error('render failed'),
     });
@@ -386,7 +380,7 @@ describe('runFill in-process coverage', () => {
       metadata: {
         name: 'Mutual NDA',
         allow_derivatives: true,
-        required_fields: [],
+        priority_fields: [],
       },
       isEmploymentTemplateId: () => false,
     });
@@ -428,7 +422,7 @@ describe('runFill in-process coverage', () => {
       metadata: {
         name: 'Employment Offer Letter',
         allow_derivatives: true,
-        required_fields: [],
+        priority_fields: [],
       },
       isEmploymentTemplateId: (templateId) => templateId.startsWith('openagreements-employment'),
       memo: memoData,
@@ -477,7 +471,7 @@ describe('runFill in-process coverage', () => {
       metadata: {
         name: 'Employment Offer Letter',
         allow_derivatives: true,
-        required_fields: [],
+        priority_fields: [],
       },
       isEmploymentTemplateId: () => true,
       memo: { summary: 'Custom output path test' },
@@ -507,7 +501,7 @@ describe('runFill in-process coverage', () => {
       metadata: {
         name: 'Employment Offer Letter',
         allow_derivatives: true,
-        required_fields: [],
+        priority_fields: [],
       },
       isEmploymentTemplateId: () => true,
       memoMarkdown: '# Markdown only',
@@ -538,7 +532,7 @@ describe('runFill in-process coverage', () => {
       metadata: {
         name: 'Employment Offer Letter',
         allow_derivatives: true,
-        required_fields: [],
+        priority_fields: [],
       },
       isEmploymentTemplateId: () => true,
     });

@@ -46,7 +46,7 @@ export async function runExternalFill(options: ExternalFillOptions): Promise<Ext
     outputPath,
     values,
     fields: metadata.fields,
-    requiredFieldNames: metadata.required_fields,
+    priorityFieldNames: metadata.priority_fields,
     cleanPatch: { cleanConfig, replacements },
     verify: (p) => verifyOutput(p, values, replacements, cleanConfig),
     keepIntermediate,

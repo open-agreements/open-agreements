@@ -498,7 +498,7 @@ function buildBaselineVarianceFindings(args: {
 
     const currentValue = args.fieldValues[fieldName] ?? '';
     const baselineDefault = baselineField.default?.trim() ?? '';
-    const baselineRequiresField = args.baselineMetadata.required_fields.includes(fieldName);
+    const baselineRequiresField = args.baselineMetadata.priority_fields.includes(fieldName);
 
     if (baselineDefault.length > 0 && currentValue.length > 0 && currentValue !== baselineDefault) {
       findings.push({
@@ -552,13 +552,13 @@ function buildBaselineVarianceFindings(args: {
           },
           {
             type: 'template',
-            reference: `${args.baselineTemplateId}.required_fields`,
+            reference: `${args.baselineTemplateId}.priority_fields`,
             value: fieldName,
           },
         ],
         citations: [
           {
-            source: `${args.baselineMetadata.name} required_fields metadata`,
+            source: `${args.baselineMetadata.name} priority_fields metadata`,
             source_date: getTemplateSourceDate(args.baselineTemplateId),
           },
         ],

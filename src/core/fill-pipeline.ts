@@ -21,8 +21,8 @@ export interface PrepareFillDataOptions {
   /** Field definitions from metadata. */
   fields: FieldDefinition[];
 
-  /** Required field names from metadata.required_fields. */
-  requiredFieldNames?: string[];
+  /** Priority field names from metadata.priority_fields. */
+  priorityFieldNames?: string[];
 
   /**
    * When true, unfilled optional fields default to BLANK_PLACEHOLDER ('_______')
@@ -68,7 +68,7 @@ const DEFAULT_STRIP_PATTERNS = [/\bDrafting note\b/i];
 
 /**
  * Prepare fill data with all normalization steps:
- * 1. Validate required fields are present
+ * 1. Warn about unfilled priority fields
  * 2. Apply defaults for optional fields not provided
  * 3. Coerce boolean fields (optional)
  * 4. Compute display fields (optional, template-specific)
@@ -77,7 +77,7 @@ export function prepareFillData(options: PrepareFillDataOptions): Record<string,
   const {
     values,
     fields,
-    requiredFieldNames = [],
+    priorityFieldNames = [],
     useBlankPlaceholder = false,
     coerceBooleans = false,
     computeDisplayFields,
@@ -97,13 +97,13 @@ export function prepareFillData(options: PrepareFillDataOptions): Record<string,
     }
   }
 
-  // Warn about required fields that are still unfilled (no value, no default)
-  const requiredSet = new Set(requiredFieldNames);
+  // Warn about priority fields that are still unfilled (no value, no default)
+  const prioritySet = new Set(priorityFieldNames);
   const missing = fields
-    .filter((f) => requiredSet.has(f.name) && (data[f.name] === '' || data[f.name] === BLANK_PLACEHOLDER))
+    .filter((f) => prioritySet.has(f.name) && (data[f.name] === '' || data[f.name] === BLANK_PLACEHOLDER))
     .map((f) => f.name);
   if (missing.length > 0) {
-    console.warn(`Warning: missing required fields: ${missing.join(', ')}`);
+    console.warn(`Note: ${missing.length} priority fields are unfilled: ${missing.join(', ')}`);
   }
 
   // Coerce boolean fields to actual JS booleans.

@@ -18,5 +18,5 @@ fields:
   - name: working_group
     type: array
     description: Array of working group members (name, organization, role, email)
-required_fields:
+priority_fields:
   - deal_name

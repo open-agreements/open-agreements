@@ -24,7 +24,7 @@ export interface PipelineOptions {
   outputPath: string;                   // Final output .docx
   values: Record<string, unknown>;
   fields: FieldDefinition[];
-  requiredFieldNames?: string[];
+  priorityFieldNames?: string[];
 
   // Clean/Patch — omit to skip (templates without replacements.json)
   cleanPatch?: {
@@ -74,7 +74,7 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
     outputPath,
     values,
     fields,
-    requiredFieldNames = [],
+    priorityFieldNames = [],
     cleanPatch,
     selectionsConfig,
     coerceBooleans = false,
@@ -100,7 +100,29 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
       await cleanDocument(sourcePath, cleanedPath, cleanPatch.cleanConfig);
 
       const patchedPath = join(tempDir, 'patched.docx');
-      await patchDocument(cleanedPath, patchedPath, cleanPatch.replacements);
+      const patchResult = await patchDocument(cleanedPath, patchedPath, cleanPatch.replacements);
+
+      // Suppress zero-match warnings for keys whose search text appears in
+      // cleaned content (removeRanges, removeParagraphPatterns, removeBeforePattern).
+      // These keys target text that was intentionally removed by clean.json.
+      const cleanPatterns = [
+        ...cleanPatch.cleanConfig.removeParagraphPatterns,
+        ...cleanPatch.cleanConfig.removeRanges.flatMap(r => [r.start, r.end]),
+        ...(cleanPatch.cleanConfig.removeBeforePattern ? [cleanPatch.cleanConfig.removeBeforePattern] : []),
+      ];
+      const unexpectedZeroMatch = patchResult.zeroMatchKeys.filter(key => {
+        // Extract just the search text portion (after > for context keys)
+        const sepIdx = key.indexOf(' > ');
+        const searchText = sepIdx !== -1 ? key.slice(sepIdx + 3) : key;
+        // Suppress if any clean pattern relates to this key's search text
+        return !cleanPatterns.some(p => p.includes(searchText) || searchText.includes(p));
+      });
+
+      if (unexpectedZeroMatch.length > 0) {
+        console.warn(
+          `Note: ${unexpectedZeroMatch.length} replacement key(s) had zero matches: ${unexpectedZeroMatch.join(', ')}`
+        );
+      }
 
       currentPath = patchedPath;
       stages = { clean: cleanedPath, patch: patchedPath, fill: '' };
@@ -110,7 +132,7 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
     const data = prepareFillData({
       values,
       fields,
-      requiredFieldNames,
+      priorityFieldNames,
       useBlankPlaceholder: true,
       coerceBooleans,
       computeDisplayFields,
