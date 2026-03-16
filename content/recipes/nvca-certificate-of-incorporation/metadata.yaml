@@ -148,6 +148,12 @@ fields:
     type: string
     description: Alternative dividend formula phrase
     default: the sum of
+  - name: acquisition_exception_shares
+    type: string
+    description: Max shares issuable as acquisition consideration without triggering anti-dilution
+  - name: strategic_partnership_exception_shares
+    type: string
+    description: Max shares issuable for strategic partnerships without triggering anti-dilution
 required_fields:
   - company_name
   - original_issue_price
