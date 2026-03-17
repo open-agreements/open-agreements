@@ -4,11 +4,15 @@ import { homedir } from 'node:os';
 import { createHash } from 'node:crypto';
 import type { RecipeMetadata } from '../metadata.js';
 
-const CACHE_ROOT = process.env['OPEN_AGREEMENTS_CACHE_ROOT']
-  ?? join(homedir(), '.open-agreements', 'cache');
+// Lazy — must be a function so ESM import hoisting doesn't evaluate before
+// api/_shared.ts sets OPEN_AGREEMENTS_CACHE_ROOT for Vercel.
+function getCacheRoot(): string {
+  return process.env['OPEN_AGREEMENTS_CACHE_ROOT']
+    ?? join(homedir(), '.open-agreements', 'cache');
+}
 
 function getCachePath(recipeId: string): string {
-  return join(CACHE_ROOT, recipeId, 'source.docx');
+  return join(getCacheRoot(), recipeId, 'source.docx');
 }
 
 function verifyHash(buf: Buffer, expected: string): boolean {
@@ -63,7 +67,7 @@ export async function ensureSourceDocx(recipeId: string, metadata: RecipeMetadat
   }
 
   // Write to cache
-  const cacheDir = join(CACHE_ROOT, recipeId);
+  const cacheDir = join(getCacheRoot(), recipeId);
   mkdirSync(cacheDir, { recursive: true });
   writeFileSync(cachePath, buf);
   console.log(`Cached: ${cachePath}`);
