@@ -27,14 +27,18 @@ const ListTemplatesArgsSchema = z.object({
 });
 
 const GetTemplateArgsSchema = z.object({
-  template_id: z.string().min(1),
-});
+  template_id: z.string().min(1).optional(),
+  template: z.string().min(1).optional(),
+}).transform((v) => ({ template_id: v.template_id ?? v.template ?? '' }))
+  .refine((v) => v.template_id.length > 0, { message: 'template_id or template is required' });
 
 const FillTemplateArgsSchema = z.object({
-  template: z.string().min(1),
+  template: z.string().min(1).optional(),
+  template_id: z.string().min(1).optional(),
   values: z.record(z.string(), z.unknown()).optional().default({}),
   return_mode: z.enum(['url', 'mcp_resource']).optional().default('url'),
-});
+}).transform((v) => ({ ...v, template: v.template ?? v.template_id ?? '' }))
+  .refine((v) => v.template.length > 0, { message: 'template or template_id is required' });
 
 // Base URL for download links — derived from the incoming request at call time
 let _baseUrl = 'https://openagreements.ai';
