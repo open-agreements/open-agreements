@@ -49,7 +49,7 @@ function extractDocumentParagraphs(docxPath: string): string[] {
     while ((tMatch = tRegex.exec(paraXml)) !== null) {
       parts.push(tMatch[1]);
     }
-    const text = parts.join('').trim();
+    const text = parts.join('').trimStart();
     if (text.length > 0) {
       paragraphs.push(text);
     }
