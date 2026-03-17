@@ -88,28 +88,18 @@ fields:
   - name: no_cumulative_voting
     type: boolean
     description: Include 'no cumulative voting' clause
-    default: 'true'
-    default_value_rationale: ">95% of deals include this (WSGR 2023-2025, Cooley Q4 2025)"
   - name: common_stock_voting_limitation
     type: boolean
     description: Include clause limiting common stock from vetoing preferred-only amendments
-    default: 'true'
-    default_value_rationale: ">90% standard; prevents common from vetoing preferred-only amendments"
   - name: authorized_shares_vote_provision
     type: boolean
     description: Include simplified vote provision for changing authorized Common Stock count
-    default: 'true'
-    default_value_rationale: ">95%; DGCL 242(b)(2) opt-out for streamlined option pool expansion"
   - name: include_officer_indemnification
     type: boolean
     description: Include officer indemnification alongside director indemnification
-    default: 'true'
-    default_value_rationale: ">80% of deals include officer indemnification (Cooley Q4 2025)"
   - name: include_redemption_cross_ref
     type: boolean
     description: Include cross-reference to Section 6.1 (Redemption)
-    default: 'false'
-    default_value_rationale: "<5% of deals include redemption; only if Article 6 is active"
   - name: signature_page_marker
     type: string
     description: Signature page marker text

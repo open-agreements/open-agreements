@@ -26,6 +26,10 @@ fields:
     type: string
     description: Additional counsel to CC on notices, or empty string if none
     default: ''
+  - name: optional_blank_value
+    type: string
+    description: Empty-value replacement used to clear optional bracketed drafting text and formatting artifacts
+    default: ''
   - name: amended_restated_upper
     type: string
     description: Uppercase prefix if amending a prior agreement (e.g. AMENDED AND RESTATED) or empty string

@@ -1,0 +1,15 @@
+{
+  "company_name": "IMIM Technologies, Inc.",
+  "registered_agent_name": "National Registered Agents, Inc.",
+  "registered_agent_address": "1209 Orange Street",
+  "registered_agent_city": "Wilmington",
+  "registered_agent_county": "New Castle",
+  "total_authorized_shares": "50,000,000",
+  "common_shares_authorized": "40,000,000",
+  "preferred_shares_authorized": "10,000,000",
+  "series_designation": "A",
+  "original_issue_price": "4.25",
+  "initial_purchase_price": "4.25",
+  "par_value": "0.0001",
+  "effective_date": "March 20, 2026"
+}

@@ -17,61 +17,61 @@
     {
       "id": "no-cumulative-voting-include",
       "description": "Include 'no cumulative voting' clause (>95% standard)",
-      "when_all": [{ "field": "no_cumulative_voting", "op": "truthy" }],
+      "when_all": [{ "field": "no_cumulative_voting", "op": "neq", "value": false }],
       "set_fill": { "no_cumulative_voting_clause": "There shall be no cumulative voting." }
     },
     {
       "id": "no-cumulative-voting-exclude",
       "description": "Remove 'no cumulative voting' clause",
-      "when_all": [{ "field": "no_cumulative_voting", "op": "falsy" }],
+      "when_all": [{ "field": "no_cumulative_voting", "op": "eq", "value": false }],
       "set_fill": { "no_cumulative_voting_clause": "" }
     },
     {
       "id": "common-stock-voting-limitation-include",
       "description": "Include common stock voting limitation clause (>90% standard)",
-      "when_all": [{ "field": "common_stock_voting_limitation", "op": "truthy" }],
+      "when_all": [{ "field": "common_stock_voting_limitation", "op": "neq", "value": false }],
       "set_fill": { "common_stock_voting_limitation_clause": "; provided, however, that any amendment, alteration, or repeal of any provision of this Restated Certificate (including any Preferred Stock Designation) that would alter or change the powers, preferences, or special rights of one series of Preferred Stock so as to affect them adversely, but shall not so affect the entire class of Preferred Stock, must be approved by the holders of at least a majority of the shares of the affected series, exclusively and as a separate class, irrespective of whether such approval is required by Section 242(b)(2) of the DGCL or by Section 4.3.4 hereof" }
     },
     {
       "id": "common-stock-voting-limitation-exclude",
       "description": "Remove common stock voting limitation clause",
-      "when_all": [{ "field": "common_stock_voting_limitation", "op": "falsy" }],
+      "when_all": [{ "field": "common_stock_voting_limitation", "op": "eq", "value": false }],
       "set_fill": { "common_stock_voting_limitation_clause": "" }
     },
     {
       "id": "authorized-shares-vote-include",
       "description": "Include simplified authorized shares vote provision (>95% standard)",
-      "when_all": [{ "field": "authorized_shares_vote_provision", "op": "truthy" }],
+      "when_all": [{ "field": "authorized_shares_vote_provision", "op": "neq", "value": false }],
       "set_fill": { "authorized_shares_vote_provision_clause": "The number of authorized shares of Common Stock may be increased or decreased (but not below the number of shares of Common Stock then outstanding) by the affirmative vote of the holders of a majority of the stock of the Corporation entitled to vote, irrespective of the provisions of Section 242(b)(2) of the DGCL." }
     },
     {
       "id": "authorized-shares-vote-exclude",
       "description": "Remove simplified authorized shares vote provision",
-      "when_all": [{ "field": "authorized_shares_vote_provision", "op": "falsy" }],
+      "when_all": [{ "field": "authorized_shares_vote_provision", "op": "eq", "value": false }],
       "set_fill": { "authorized_shares_vote_provision_clause": "" }
     },
     {
       "id": "officer-indemnification-include",
       "description": "Include officer indemnification (>80% standard)",
-      "when_all": [{ "field": "include_officer_indemnification", "op": "truthy" }],
+      "when_all": [{ "field": "include_officer_indemnification", "op": "neq", "value": false }],
       "set_fill": { "or_officer_clause": "or officer" }
     },
     {
       "id": "officer-indemnification-exclude",
       "description": "Remove officer indemnification",
-      "when_all": [{ "field": "include_officer_indemnification", "op": "falsy" }],
+      "when_all": [{ "field": "include_officer_indemnification", "op": "eq", "value": false }],
       "set_fill": { "or_officer_clause": "" }
     },
     {
       "id": "redemption-cross-ref-include",
       "description": "Include redemption Section 6.1 cross-reference",
-      "when_all": [{ "field": "include_redemption_cross_ref", "op": "truthy" }],
+      "when_all": [{ "field": "include_redemption_cross_ref", "op": "eq", "value": true }],
       "set_fill": { "redemption_cross_ref_clause": " and Section 6.1" }
     },
     {
       "id": "redemption-cross-ref-exclude",
       "description": "Remove redemption Section 6.1 cross-reference (<5% of deals)",
-      "when_all": [{ "field": "include_redemption_cross_ref", "op": "falsy" }],
+      "when_all": [{ "field": "include_redemption_cross_ref", "op": "neq", "value": true }],
       "set_fill": { "redemption_cross_ref_clause": "" }
     }
   ]

@@ -19,6 +19,9 @@ fields:
   - name: company_name
     type: string
     description: Name of the corporation providing indemnification
+  - name: agreement_effective_date
+    type: string
+    description: Effective date in the opening clause (e.g., March 20, 2026)
   - name: fund_sponsor_name
     type: string
     description: Name of the sponsoring fund or entity appointing the indemnitee
@@ -70,6 +73,7 @@ priority_fields:
   - indemnitee_name
   - indemnitee_address
   - company_name
+  - agreement_effective_date
   - indemnitee_role
   - indemnitee_role_plural
   - indemnitee_pronoun_possessive
