@@ -4,7 +4,7 @@
  */
 
 import { randomUUID, createHmac, timingSafeEqual } from 'node:crypto';
-import { readFileSync } from 'node:fs';
+import { readFileSync, writeFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -41,7 +41,7 @@ import {
   findRecipeDir,
   listRecipeEntries,
 } from '../dist/utils/paths.js';
-import { runRecipe } from '../dist/core/recipe/index.js';
+import { runRecipe, ensureSourceDocx } from '../dist/core/recipe/index.js';
 import {
   listTemplateItems,
   categoryFromId,
@@ -202,6 +202,72 @@ export async function handleFill(
 }
 
 // ---------------------------------------------------------------------------
+// Redline generation — compare source vs filled for recipe templates
+// ---------------------------------------------------------------------------
+
+export interface RedlineResult {
+  base64: string;
+  stats: { insertions: number; deletions: number; modifications: number };
+}
+
+/**
+ * Generate a redline (track-changes) DOCX comparing a base document
+ * against the filled output. Returns null for non-recipe templates.
+ *
+ * @param redlineBase 'source' = cleaned form (text boxes/commentary stripped, shows
+ *                               replacement pattern + field substitution changes)
+ *                    'clean'  = patched intermediate (shows only field substitutions)
+ * @param values      Re-runs recipe with keepIntermediate to access stage files
+ */
+export async function generateRedlineFromFill(
+  template: string,
+  filledBase64: string,
+  redlineBase: 'source' | 'clean' = 'source',
+  values?: Record<string, unknown>,
+): Promise<RedlineResult | null> {
+  const recipeDir = findRecipeDir(template);
+  if (!recipeDir) return null;
+
+  // Use relative path for Vercel serverless tracing (workspace package
+  // may not be in node_modules inside the function bundle).
+  const { compareDocuments } = await import('../packages/docx-core/dist/index.js');
+
+  // Run recipe with keepIntermediate to get stage files for comparison base
+  const tmpOutput = join('/tmp', `${template}-redline-tmp-${randomUUID()}.docx`);
+  const recipeResult = await runRecipe({
+    recipeId: template,
+    outputPath: tmpOutput,
+    values: (values ?? {}) as Record<string, string | boolean>,
+    keepIntermediate: true,
+  });
+
+  // 'source' → cleaned stage: text boxes and commentary removed, but replacement
+  //            patterns and field placeholders still intact. Shows all legal text
+  //            changes. (Raw source can't be used because compareDocuments doesn't
+  //            diff text box/shape elements — they pass through untouched.)
+  // 'clean'  → patched stage: replacement patterns applied ({field_name} tokens),
+  //            shows only field value substitutions.
+  const basePath = redlineBase === 'clean'
+    ? recipeResult.stages.patch
+    : recipeResult.stages.clean;
+  const baseBuffer = readFileSync(basePath);
+
+  const filledBuffer = Buffer.from(filledBase64, 'base64');
+  const compareResult = await compareDocuments(baseBuffer, filledBuffer, {
+    author: 'Open Agreements',
+  });
+
+  return {
+    base64: compareResult.document.toString('base64'),
+    stats: {
+      insertions: compareResult.stats.insertions,
+      deletions: compareResult.stats.deletions,
+      modifications: compareResult.stats.modifications,
+    },
+  };
+}
+
+// ---------------------------------------------------------------------------
 // Create checklist handler — protocol-agnostic
 // ---------------------------------------------------------------------------
 
@@ -350,6 +416,8 @@ export interface DownloadArtifact {
   values: Record<string, unknown>;
   created_at_ms: number;
   expires_at_ms: number;
+  variant?: 'filled' | 'redline';
+  redline_base?: 'source' | 'clean';
 }
 
 function isDownloadArtifact(value: unknown): value is DownloadArtifact {
@@ -486,7 +554,7 @@ export interface CreatedDownloadArtifact {
 export async function createDownloadArtifact(
   template: string,
   values: Record<string, unknown>,
-  opts?: { ttl_ms?: number; now_ms?: number },
+  opts?: { ttl_ms?: number; now_ms?: number; variant?: 'filled' | 'redline'; redline_base?: 'source' | 'clean' },
 ): Promise<CreatedDownloadArtifact> {
   const nowMs = opts?.now_ms ?? Date.now();
   const ttlMs = opts?.ttl_ms ?? DOWNLOAD_TTL_MS;
@@ -498,6 +566,8 @@ export async function createDownloadArtifact(
     values,
     created_at_ms: nowMs,
     expires_at_ms: expiresAtMs,
+    ...(opts?.variant && { variant: opts.variant }),
+    ...(opts?.redline_base && { redline_base: opts.redline_base }),
   };
 
   await getDownloadArtifactStore().set(rawId, artifact);

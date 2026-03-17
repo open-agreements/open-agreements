@@ -48,5 +48,10 @@
   "[or officer]": "{or_officer_clause}",
   "[the greater of]": "{dividend_formula_prefix} ",
   "[the sum of]": "{dividend_formula_alt}",
-  "[and Section 6.1]": "{redemption_cross_ref_clause}"
+  "[and Section 6.1]": "{redemption_cross_ref_clause}",
+
+  "References to \u201cPreferred Stock\u201d mean the Series A Preferred Stock": "References to \u201cPreferred Stock\u201d mean the Series {series_designation} Preferred Stock",
+  "with respect to the Series A Preferred Stock": "with respect to the Series {series_designation} Preferred Stock",
+  "per share of Series A Preferred Stock": "per share of Series {series_designation} Preferred Stock",
+  "first share of Series A Preferred Stock": "first share of Series {series_designation} Preferred Stock"
 }
