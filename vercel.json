@@ -21,15 +21,15 @@
   "functions": {
     "api/a2a.ts": {
       "maxDuration": 30,
-      "includeFiles": "{content/templates,content/external,dist}/**"
+      "includeFiles": "{content/templates,content/external,content/recipes,dist}/**"
     },
     "api/mcp.ts": {
       "maxDuration": 30,
-      "includeFiles": "{content/templates,content/external,dist}/**"
+      "includeFiles": "{content/templates,content/external,content/recipes,dist}/**"
     },
     "api/download.ts": {
       "maxDuration": 30,
-      "includeFiles": "{content/templates,content/external,dist}/**"
+      "includeFiles": "{content/templates,content/external,content/recipes,dist}/**"
     }
   }
 }

@@ -16,6 +16,7 @@ const __shared_dirname = dirname(fileURLToPath(import.meta.url));
 export const PROJECT_ROOT = join(__shared_dirname, '..');
 
 process.env['OPEN_AGREEMENTS_CONTENT_ROOTS'] = PROJECT_ROOT;
+process.env['OPEN_AGREEMENTS_CACHE_ROOT'] ??= join('/tmp', '.open-agreements-cache');
 
 // ---------------------------------------------------------------------------
 // Core imports from compiled dist/
@@ -30,12 +31,17 @@ import {
 import {
   loadMetadata,
   loadExternalMetadata,
+  loadRecipeMetadata,
 } from '../dist/core/metadata.js';
+import type { RecipeMetadata } from '../dist/core/metadata.js';
 import {
   findTemplateDir,
   findExternalDir,
   listExternalEntries,
+  findRecipeDir,
+  listRecipeEntries,
 } from '../dist/utils/paths.js';
+import { runRecipe } from '../dist/core/recipe/index.js';
 import {
   listTemplateItems,
   categoryFromId,
@@ -129,6 +135,19 @@ function toTemplateItem(templateId: string, meta: RawTemplateMetadata): Template
   };
 }
 
+function recipeToTemplateItem(recipeId: string, meta: RecipeMetadata): TemplateItem {
+  return {
+    name: recipeId,
+    category: categoryFromId(recipeId),
+    description: meta.description ?? meta.name,
+    license: meta.license_note,
+    source_url: meta.source_url,
+    source: sourceName(meta.source_url),
+    attribution_text: undefined,
+    fields: mapFields(meta.fields, meta.priority_fields),
+  };
+}
+
 // ---------------------------------------------------------------------------
 // Fill handler — protocol-agnostic
 // ---------------------------------------------------------------------------
@@ -139,8 +158,9 @@ export async function handleFill(
 ): Promise<FillOutcome> {
   const internalDir = findTemplateDir(template);
   const externalDir = !internalDir ? findExternalDir(template) : undefined;
+  const recipeDir = !internalDir && !externalDir ? findRecipeDir(template) : undefined;
 
-  if (!internalDir && !externalDir) {
+  if (!internalDir && !externalDir && !recipeDir) {
     return { ok: false, error: `Unknown template: "${template}"` };
   }
 
@@ -153,8 +173,12 @@ export async function handleFill(
     const result = await fillTemplate({ templateDir: internalDir, values, outputPath });
     meta = result.metadata;
     fieldsUsed = result.fieldsUsed;
-  } else {
+  } else if (externalDir) {
     const result = await runExternalFill({ externalId: template, values, outputPath });
+    meta = result.metadata;
+    fieldsUsed = result.fieldsUsed;
+  } else {
+    const result = await runRecipe({ recipeId: template, outputPath, values });
     meta = result.metadata;
     fieldsUsed = result.fieldsUsed;
   }
@@ -219,6 +243,16 @@ export function handleGetTemplate(templateId: string): TemplateItem | null {
     }
   }
 
+  const recipeDir = findRecipeDir(templateId);
+  if (recipeDir) {
+    try {
+      const meta = loadRecipeMetadata(recipeDir);
+      return recipeToTemplateItem(templateId, meta);
+    } catch {
+      return null;
+    }
+  }
+
   return null;
 }
 
@@ -235,7 +269,15 @@ export function handleListTemplates(): ListOutcome {
     } catch { /* skip */ }
   }
 
-  const items = [...internal, ...external].sort((a, b) => a.name.localeCompare(b.name));
+  const recipes: TemplateItem[] = [];
+  for (const entry of listRecipeEntries()) {
+    try {
+      const meta = loadRecipeMetadata(entry.dir);
+      recipes.push(recipeToTemplateItem(entry.id, meta));
+    } catch { /* skip */ }
+  }
+
+  const items = [...internal, ...external, ...recipes].sort((a, b) => a.name.localeCompare(b.name));
 
   let cliVersion = '0.0.0';
   try {

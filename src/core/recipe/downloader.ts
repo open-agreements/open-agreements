@@ -4,7 +4,8 @@ import { homedir } from 'node:os';
 import { createHash } from 'node:crypto';
 import type { RecipeMetadata } from '../metadata.js';
 
-const CACHE_ROOT = join(homedir(), '.open-agreements', 'cache');
+const CACHE_ROOT = process.env['OPEN_AGREEMENTS_CACHE_ROOT']
+  ?? join(homedir(), '.open-agreements', 'cache');
 
 function getCachePath(recipeId: string): string {
   return join(CACHE_ROOT, recipeId, 'source.docx');
