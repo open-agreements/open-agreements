@@ -37,6 +37,12 @@ gemini-extension.local.json
 # Git worktrees
 .worktrees/
 
+# Hardening experiment journal (persists across git reverts)
+.hardening-journal/
+
+# Hardening output
+.nvca-hardening-output/
+
 # CI / test artifacts
 artifacts/
 integration-tests/OPENSPEC_TRACEABILITY.md
