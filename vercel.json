@@ -25,11 +25,11 @@
     },
     "api/mcp.ts": {
       "maxDuration": 30,
-      "includeFiles": "{content/templates,content/external,content/recipes,dist}/**"
+      "includeFiles": "{content/templates,content/external,content/recipes,dist,packages/docx-core/dist}/**"
     },
     "api/download.ts": {
       "maxDuration": 30,
-      "includeFiles": "{content/templates,content/external,content/recipes,dist}/**"
+      "includeFiles": "{content/templates,content/external,content/recipes,dist,packages/docx-core/dist}/**"
     }
   }
 }

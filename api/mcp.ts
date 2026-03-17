@@ -15,6 +15,7 @@ import {
   handleListTemplates,
   DOCX_MIME,
   createDownloadArtifact,
+  generateRedlineFromFill,
 } from './_shared.js';
 import { ErrorCode, makeToolError, wrapError, wrapSuccess } from './_envelope.js';
 
@@ -37,6 +38,8 @@ const FillTemplateArgsSchema = z.object({
   template_id: z.string().min(1).optional(),
   values: z.record(z.string(), z.unknown()).optional().default({}),
   return_mode: z.enum(['url', 'mcp_resource']).optional().default('url'),
+  include_redline: z.boolean().optional().default(true),
+  redline_base: z.enum(['source', 'clean']).optional().default('source'),
 }).transform((v) => ({ ...v, template: v.template ?? v.template_id ?? '' }))
   .refine((v) => v.template.length > 0, { message: 'template or template_id is required' });
 
@@ -87,7 +90,9 @@ const TOOLS = [
     name: TOOL_FILL_TEMPLATE,
     description:
       'Fill a legal agreement template with field values and return a document ' +
-      'via URL or MCP resource preview metadata.',
+      'via URL or MCP resource preview metadata. ' +
+      'For recipe templates (e.g. NVCA), also generates a redline (track-changes) ' +
+      'document comparing the filled output against the standard form.',
     inputSchema: {
       type: 'object' as const,
       properties: {
@@ -104,6 +109,15 @@ const TOOLS = [
           type: 'string',
           enum: ['url', 'mcp_resource'],
           description: 'Artifact return mode. Defaults to "url".',
+        },
+        include_redline: {
+          type: 'boolean',
+          description: 'Generate a redline (track-changes) document. Defaults to true for recipes.',
+        },
+        redline_base: {
+          type: 'string',
+          enum: ['source', 'clean'],
+          description: 'Base document for redline comparison. "source" = raw standard form (default), "clean" = cleaned intermediate.',
         },
       },
       required: ['template'],
@@ -486,7 +500,7 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>) {
       );
     }
 
-    const { template, values, return_mode } = parsed.data;
+    const { template, values, return_mode, include_redline, redline_base } = parsed.data;
 
     const outcome = await handleFill(template, values);
 
@@ -501,6 +515,29 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>) {
     const downloadUrl = `${_baseUrl}/api/download?id=${encodeURIComponent(artifact.download_id)}`;
     const expiresAt = artifact.expires_at;
 
+    // Generate redline (track-changes) for recipe templates
+    let redlineData: Record<string, unknown> = {};
+    if (include_redline) {
+      try {
+        const redline = await generateRedlineFromFill(template, outcome.base64, redline_base, values);
+        if (redline) {
+          const redlineArtifact = await createDownloadArtifact(template, values, {
+            variant: 'redline',
+            redline_base,
+          });
+          const redlineUrl = `${_baseUrl}/api/download?id=${encodeURIComponent(redlineArtifact.download_id)}`;
+          redlineData = {
+            redline_download_url: redlineUrl,
+            redline_download_id: redlineArtifact.download_id,
+            redline_expires_at: redlineArtifact.expires_at,
+            redline_stats: redline.stats,
+          };
+        }
+      } catch {
+        // Redline generation is best-effort; don't fail the fill
+      }
+    }
+
     if (return_mode === 'mcp_resource') {
       return toolSuccessResult(id, TOOL_FILL_TEMPLATE, {
         content_type: DOCX_MIME,
@@ -510,6 +547,7 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>) {
         download_id: artifact.download_id,
         resource_uri: `oa://filled/${artifact.download_id}`,
         return_mode,
+        ...redlineData,
       });
     }
 
@@ -519,6 +557,7 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>) {
       expires_at: expiresAt,
       metadata: outcome.metadata,
       return_mode,
+      ...redlineData,
     });
   }
 

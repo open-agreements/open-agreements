@@ -5,7 +5,7 @@
  */
 
 import type { HttpRequest, HttpResponse } from './_http-types.js';
-import { resolveDownloadArtifact, handleFill, DOCX_MIME } from './_shared.js';
+import { resolveDownloadArtifact, handleFill, generateRedlineFromFill, DOCX_MIME } from './_shared.js';
 
 type DownloadHttpErrorCode =
   | 'DOWNLOAD_ID_MISSING'
@@ -185,8 +185,25 @@ export default async function handler(req: HttpRequest, res: HttpResponse) {
     return sendDownloadError(req, res, 500, 'DOWNLOAD_RENDER_FAILED', outcome.error);
   }
 
-  const filename = `${resolved.artifact.template}.docx`;
-  const docxBuffer = Buffer.from(outcome.base64, 'base64');
+  let docxBuffer: Buffer;
+  let filename: string;
+
+  if (resolved.artifact.variant === 'redline') {
+    const redline = await generateRedlineFromFill(
+      resolved.artifact.template,
+      outcome.base64,
+      resolved.artifact.redline_base ?? 'source',
+      resolved.artifact.values,
+    );
+    if (!redline) {
+      return sendDownloadError(req, res, 500, 'DOWNLOAD_RENDER_FAILED', 'Redline generation not available for this template.');
+    }
+    docxBuffer = Buffer.from(redline.base64, 'base64');
+    filename = `${resolved.artifact.template}-redline.docx`;
+  } else {
+    docxBuffer = Buffer.from(outcome.base64, 'base64');
+    filename = `${resolved.artifact.template}.docx`;
+  }
 
   res.setHeader('Content-Type', DOCX_MIME);
   res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
