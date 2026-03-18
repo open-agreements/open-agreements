@@ -10,6 +10,10 @@ const it = itAllure.epic('Platform & Distribution');
 
 const ROOT = new URL('..', import.meta.url).pathname;
 const SKILL_MD = readFileSync(join(ROOT, 'skills/open-agreements/SKILL.md'), 'utf-8');
+const SHARED_EXECUTION_MD = readFileSync(
+  join(ROOT, 'skills/shared/template-filling-execution.md'),
+  'utf-8'
+);
 
 const SAMPLE_METADATA: TemplateMetadata = {
   name: 'Mutual Non-Disclosure Agreement',
@@ -80,17 +84,20 @@ describe('Claude skill generation', () => {
 
 describe('published skills/open-agreements/SKILL.md execution paths', () => {
   it.openspec('OA-CLI-009')('documents remote MCP as primary zero-install path', () => {
-    expect(SKILL_MD).toContain('Remote MCP');
-    expect(SKILL_MD).toContain('fill_template');
-    expect(SKILL_MD).not.toContain('npx -y open-agreements@latest');
+    // Execution steps now live in shared/template-filling-execution.md,
+    // referenced from SKILL.md via relative link
+    expect(SKILL_MD).toContain('template-filling-execution.md');
+    expect(SHARED_EXECUTION_MD).toContain('Remote MCP');
+    expect(SHARED_EXECUTION_MD).toContain('fill_template');
+    expect(SHARED_EXECUTION_MD).not.toContain('npx -y open-agreements@latest');
   });
 
   it.openspec('OA-CLI-010')('documents installed CLI DOCX rendering path', () => {
-    expect(SKILL_MD).toContain('open-agreements fill <template-name>');
+    expect(SHARED_EXECUTION_MD).toContain('open-agreements fill <template-name>');
   });
 
   it.openspec('OA-CLI-011')('documents preview-only fallback when MCP and CLI are unavailable', () => {
-    expect(SKILL_MD).toContain('PREVIEW_ONLY');
-    expect(SKILL_MD).toContain('Preview Only');
+    expect(SHARED_EXECUTION_MD).toContain('PREVIEW_ONLY');
+    expect(SHARED_EXECUTION_MD).toContain('PREVIEW ONLY');
   });
 });
