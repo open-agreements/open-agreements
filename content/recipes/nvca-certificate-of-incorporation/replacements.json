@@ -45,13 +45,13 @@
   "acquisition of another corporation > [[do not exceed an aggregate of [______] shares of Common Stock (including shares underlying (directly or indirectly) any such Options or Convertible Securities)];] [or]": "{acquisition_exception_shares} shares of Common Stock (including shares underlying (directly or indirectly) any such Options or Convertible Securities)];] [or]",
   "approved by the Requisite Directors] > [that do not exceed an aggregate of [______] shares of Common Stock (including shares underlying (directly or indirectly) any such Options or Convertible Securities)];]": "that do not exceed an aggregate of {strategic_partnership_exception_shares} shares of Common Stock (including shares underlying (directly or indirectly) any such Options or Convertible Securities)];]",
   "strategic partnerships > [that do not exceed an aggregate of [______] shares of Common Stock (including shares underlying (directly or indirectly) any such Options or Convertible Securities)].": "that do not exceed an aggregate of {strategic_partnership_exception_shares} shares of Common Stock (including shares underlying (directly or indirectly) any such Options or Convertible Securities)].",
+  "[, including the approval of [at least one]": ", including the approval of at least {preferred_director_seats}",
+  "[the holders of [a majority]": "the holders of {preferred_shares_outstanding_threshold}",
+  "[and prior to [Date]": "and prior to {effective_date}",
+  "[, and such issuance dates occur within a period of no more than [180]": ", and such issuance dates occur within a period of no more than {qualified_financing_notice_days}",
+  "[at a price of at least $[_____]": "at a price of at least ${original_issue_price}",
   "[or officer]": "{or_officer_clause}",
   "[the greater of]": "{dividend_formula_prefix} ",
   "[the sum of]": "{dividend_formula_alt}",
-  "[and Section 6.1]": "{redemption_cross_ref_clause}",
-
-  "References to \u201cPreferred Stock\u201d mean the Series A Preferred Stock": "References to \u201cPreferred Stock\u201d mean the Series {series_designation} Preferred Stock",
-  "with respect to the Series A Preferred Stock": "with respect to the Series {series_designation} Preferred Stock",
-  "per share of Series A Preferred Stock": "per share of Series {series_designation} Preferred Stock",
-  "first share of Series A Preferred Stock": "first share of Series {series_designation} Preferred Stock"
+  "[and Section 6.1]": "{redemption_cross_ref_clause}"
 }
