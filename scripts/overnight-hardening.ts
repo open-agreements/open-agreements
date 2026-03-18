@@ -183,6 +183,7 @@ interface RecipeReport {
   exitReason: 'perfect' | 'max_loops' | 'stalled' | 'error';
   newFixtures: number;
   scorecards: RecipeScorecard[];
+  bestScorecard?: RecipeScorecard;  // last kept scorecard (not reverted)
   errors: string[];
   policyViolations: string[];
 }
@@ -608,6 +609,17 @@ async function hardenRecipe(
   }
 
   const startContinuous = scorecard.continuous_total;
+
+  // Unified accepted state — tracks the last KEPT scorecard + commit.
+  // Only kept/same-score iterations update this; reverted iterations do not.
+  let accepted = {
+    scorecard,
+    commitSha: execSync('git rev-parse HEAD', { cwd: PROJECT_ROOT }).toString().trim(),
+    continuous: scorecard.continuous_total,
+    score: scorecard.total_numeric,
+  };
+  // keptScorecards excludes reverted attempts so Pareto high-water is accurate.
+  const keptScorecards: RecipeScorecard[] = [scorecard];
   let bestContinuous = startContinuous;
 
   // Log baseline convergence point
@@ -643,6 +655,7 @@ async function hardenRecipe(
       exitReason: 'perfect',
       newFixtures: 0,
       scorecards,
+      bestScorecard: scorecard,
       errors,
       policyViolations,
     };
@@ -665,6 +678,7 @@ async function hardenRecipe(
       exitReason: 'stalled',
       newFixtures: 0,
       scorecards,
+      bestScorecard: scorecard,
       errors,
       policyViolations,
     };
@@ -692,7 +706,8 @@ async function hardenRecipe(
   }
 
   let bestScore = scorecard.total_numeric;
-  let bestCommitSha = execSync('git rev-parse HEAD', { cwd: PROJECT_ROOT }).toString().trim();
+  // bestCommitSha is now derived from accepted.commitSha — kept for backward compat
+  let bestCommitSha = accepted.commitSha;
   let noImprovementCount = 0;
   let cumulativeGain = 0;
   const startScore = scorecard.total_numeric;
@@ -774,7 +789,8 @@ async function hardenRecipe(
 
     if (!regrade) {
       console.log('  Re-grade failed — Codex likely broke metadata, reverting');
-      revertToCommit(bestCommitSha, recipeId);
+      revertToCommit(accepted.commitSha, recipeId);
+      scorecard = accepted.scorecard; // reset in-memory scorecard to last kept
       noImprovementCount++;
 
       // Log invalid experiment
@@ -834,8 +850,8 @@ async function hardenRecipe(
       }
     }
 
-    // Check Pareto protection
-    const highWater = buildCheckHighWater(scorecards.slice(0, -1));
+    // Check Pareto protection — only kept scorecards inform the high-water mark
+    const highWater = buildCheckHighWater(keptScorecards.slice(0, -1));
     const regressed = findRegressedChecks(highWater, scorecard);
     if (regressed.length > 0) {
       console.log(`  Pareto regression on: ${regressed.join(', ')}`);
@@ -853,6 +869,8 @@ async function hardenRecipe(
       bestScore = newScore;
       bestContinuous = newContinuous;
       bestCommitSha = gitCheckpoint(recipeId, i, newScore, newContinuous);
+      keptScorecards.push(scorecard);
+      accepted = { scorecard, commitSha: bestCommitSha, continuous: newContinuous, score: newScore };
 
       // Log experiment
       const checksImproved = scorecard.checks
@@ -907,6 +925,7 @@ async function hardenRecipe(
         exitReason: 'perfect',
         newFixtures: countFixtures(recipeId) - initialFixtureCount,
         scorecards,
+        bestScorecard: accepted.scorecard,
         errors,
         policyViolations,
       };
@@ -919,6 +938,8 @@ async function hardenRecipe(
       bestScore = Math.max(bestScore, newScore);
       bestContinuous = newContinuous;
       bestCommitSha = gitCheckpoint(recipeId, i, newScore, newContinuous);
+      keptScorecards.push(scorecard);
+      accepted = { scorecard, commitSha: bestCommitSha, continuous: newContinuous, score: newScore };
       outcome = 'kept';
       console.log(`  New best: ${newContinuous.toFixed(3)}/${scorecard.max_applicable} (committed ${bestCommitSha.slice(0, 8)})`);
 
@@ -930,17 +951,20 @@ async function hardenRecipe(
         noImprovementCount++;
       }
     } else if (newContinuous < bestContinuous - EPS_KEEP || regressed.length > 0) {
-      // Regression or Pareto violation
+      // Regression or Pareto violation — revert to accepted state
       const reason = regressed.length > 0
         ? `Pareto regression on ${regressed.join(', ')}`
         : `continuous ${newContinuous.toFixed(3)} < best ${bestContinuous.toFixed(3)}`;
       console.log(`  Reverting: ${reason}`);
-      revertToCommit(bestCommitSha, recipeId);
+      revertToCommit(accepted.commitSha, recipeId);
+      scorecard = accepted.scorecard; // reset in-memory scorecard to last kept
       outcome = 'reverted';
       noImprovementCount++;
     } else {
       // Same score — still commit if there are improvements in details
-      gitCheckpoint(recipeId, i, newScore, newContinuous);
+      const sha = gitCheckpoint(recipeId, i, newScore, newContinuous);
+      keptScorecards.push(scorecard);
+      accepted = { scorecard, commitSha: sha, continuous: newContinuous, score: newScore };
       outcome = 'kept';
       noImprovementCount++;
       console.log(`  No improvement (${noImprovementCount}/${STALL_LIMIT} before stall)`);
@@ -1005,6 +1029,7 @@ async function hardenRecipe(
         exitReason: 'stalled',
         newFixtures: countFixtures(recipeId) - initialFixtureCount,
         scorecards,
+        bestScorecard: accepted.scorecard,
         errors,
         policyViolations,
       };
@@ -1022,6 +1047,7 @@ async function hardenRecipe(
     exitReason: 'max_loops',
     newFixtures: countFixtures(recipeId) - initialFixtureCount,
     scorecards,
+    bestScorecard: accepted.scorecard,
     errors,
     policyViolations,
   };
@@ -1114,7 +1140,7 @@ function updateQualityTracker(reports: RecipeReport[]): void {
   const today = new Date().toISOString().slice(0, 10);
 
   for (const report of reports) {
-    const lastScorecard = report.scorecards[report.scorecards.length - 1];
+    const lastScorecard = report.bestScorecard ?? report.scorecards[report.scorecards.length - 1];
     if (!lastScorecard) continue;
 
     const { structural, behavioral, fill } = lastScorecard.scores;
