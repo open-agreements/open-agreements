@@ -19,6 +19,7 @@
   "[(iii) appoint, to the extent such party is not otherwise subject to service of process in the State of Delaware, irrevocably [name] > [address]": "{indemnitee_address}",
   "[The Company hereby acknowledges that Indemnitee has certain rights to indemnification, advancement of expenses and/or insurance provided by [Name of Fund/Sponsor] > [its]": "{indemnitee_pronoun_possessive}",
   "[and Appointing Stockholder]": "{and_appointing_stockholder}",
+  "[, and terminate on the closing of an initial public offering of the Company’s Common Stock; provided, however, that in the event of any such suspension or termination, the Appointing Stockholder’s rights to indemnification and advancement of expenses will not be suspended or terminated with respect to any Proceeding based in whole or in part on facts and circumstances occurring at any time prior to such suspension or termination regardless of whether the Proceeding arises before or after such suspension or termination.]": "{appointing_stockholder_ipo_termination_clause}",
   "[E] > [Signature Page Follows]": "{indemnification_section_letter}",
   "[Signature Page Follows]": "{signature_page_marker}",
   "[Comment:  See In re HealthSouth Corp. Securities Litigation, 572 F.3d 854 (11th Cir. 2009).] > [director]": "{indemnitee_role}",

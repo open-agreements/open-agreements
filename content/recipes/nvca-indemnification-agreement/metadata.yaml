@@ -61,6 +61,10 @@ fields:
     type: string
     description: Optional additional party text or empty string
     default: ''
+  - name: appointing_stockholder_ipo_termination_clause
+    type: string
+    description: Optional clause text that terminates Appointing Stockholder rights at IPO closing
+    default: ''
   - name: indemnification_section_letter
     type: string
     description: Section reference letter for indemnification provisions in the certificate
