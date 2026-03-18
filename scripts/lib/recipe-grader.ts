@@ -424,10 +424,16 @@ async function checkF1DefaultFill(
       values: defaults,
     });
 
+    // Clean source for formatting anomaly baseline
+    const meta = loadRecipeMetadata(recipeDir);
+    const cleanConfig = loadCleanConfig(recipeDir);
+    const sourcePath = await ensureSourceDocx(recipeId, meta);
+    const cleanedSourcePath = join(tempDir, 'cleaned-source.docx');
+    await cleanDocument(sourcePath, cleanedSourcePath, cleanConfig);
+
     const replacementsPath = join(recipeDir, 'replacements.json');
     const replacements: Record<string, string> = JSON.parse(readFileSync(replacementsPath, 'utf-8'));
-    const cleanConfig = loadCleanConfig(recipeDir);
-    const result = await verifyOutput(outPath, defaults, replacements, cleanConfig);
+    const result = await verifyOutput(outPath, defaults, replacements, cleanConfig, cleanedSourcePath);
 
     const failedChecks = result.checks.filter((c) => !c.passed);
     const totalVerify = result.checks.length;
@@ -473,6 +479,7 @@ async function checkF2FullFill(
     };
   }
 
+  const tempDir = mkdtempSync(join(tmpdir(), `grader-f2-${recipeId}-`));
   try {
     const defaults = buildDefaultValues(recipeDir);
     const merged = { ...defaults, ...fixtureValues };
@@ -483,10 +490,16 @@ async function checkF2FullFill(
       values: merged,
     });
 
+    // Clean source for formatting anomaly baseline
+    const meta = loadRecipeMetadata(recipeDir);
+    const cleanConfig = loadCleanConfig(recipeDir);
+    const sourcePath = await ensureSourceDocx(recipeId, meta);
+    const cleanedSourcePath = join(tempDir, 'cleaned-source.docx');
+    await cleanDocument(sourcePath, cleanedSourcePath, cleanConfig);
+
     const replacementsPath = join(recipeDir, 'replacements.json');
     const replacements: Record<string, string> = JSON.parse(readFileSync(replacementsPath, 'utf-8'));
-    const cleanConfig = loadCleanConfig(recipeDir);
-    const result = await verifyOutput(outPath, merged, replacements, cleanConfig);
+    const result = await verifyOutput(outPath, merged, replacements, cleanConfig, cleanedSourcePath);
 
     const failedChecks = result.checks.filter((c) => !c.passed);
     const totalVerify = result.checks.length;
@@ -509,6 +522,8 @@ async function checkF2FullFill(
       check: { id: 'F2', name: 'Full-values fill', passed: false, score: 0, details: `Error: ${(err as Error).message}` },
       verifyResult: null,
     };
+  } finally {
+    rmSync(tempDir, { recursive: true, force: true });
   }
 }
 
@@ -531,11 +546,18 @@ async function checkF3FormattingAnomalies(
     }
   }
 
+  const tempDir = mkdtempSync(join(tmpdir(), `grader-f3-${recipeId}-`));
   try {
+    // Clean the source to establish baseline anomaly count
+    const meta = loadRecipeMetadata(recipeDir);
+    const cleanConfig = loadCleanConfig(recipeDir);
+    const sourcePath = await ensureSourceDocx(recipeId, meta);
+    const cleanedSourcePath = join(tempDir, 'cleaned-source.docx');
+    await cleanDocument(sourcePath, cleanedSourcePath, cleanConfig);
+
     const replacementsPath = join(recipeDir, 'replacements.json');
     const replacements: Record<string, string> = JSON.parse(readFileSync(replacementsPath, 'utf-8'));
-    const cleanConfig = loadCleanConfig(recipeDir);
-    const result = await verifyOutput(outPath, {}, replacements, cleanConfig);
+    const result = await verifyOutput(outPath, {}, replacements, cleanConfig, cleanedSourcePath);
     const anomalyCheck = result.checks.find((c) => c.name === 'No formatting anomalies');
     return {
       id: 'F3',
@@ -545,6 +567,8 @@ async function checkF3FormattingAnomalies(
     };
   } catch (err) {
     return { id: 'F3', name: 'Formatting anomalies', passed: false, details: `Error: ${(err as Error).message}` };
+  } finally {
+    rmSync(tempDir, { recursive: true, force: true });
   }
 }
 
@@ -653,7 +677,7 @@ function generateRecommendations(checks: CheckResult[], coverage: { uncovered: s
         recs.push(`Full-values fill has issues: ${check.details}`);
         break;
       case 'F3':
-        recs.push('SKIP F3 — formatting anomalies are a patcher engine limitation, not fixable via recipe files');
+        recs.push(`Formatting anomalies introduced by fill/patch: ${check.details}`);
         break;
       case 'F4':
         if (zeroMatchKeys.length > 0) {

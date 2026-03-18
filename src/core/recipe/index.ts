@@ -111,7 +111,7 @@ export { cleanDocument } from './cleaner.js';
 export type { CleanResult, CleanOptions } from './cleaner.js';
 export { patchDocument } from './patcher.js';
 export type { PatchResult } from './patcher.js';
-export { verifyOutput, normalizeText, extractAllText } from './verifier.js';
+export { verifyOutput, normalizeText, extractAllText, countFormattingAnomalies } from './verifier.js';
 export { ensureSourceDocx } from './downloader.js';
 export { checkRecipeSourceDrift, computeSourceStructureSignature } from './source-drift.js';
 export { enumerateTextParts, getGeneralTextPartNames } from './ooxml-parts.js';

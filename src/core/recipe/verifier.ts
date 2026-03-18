@@ -39,7 +39,8 @@ export async function verifyOutput(
   outputPath: string,
   values: Record<string, unknown>,
   replacements: Record<string, string>,
-  cleanConfig?: CleanConfig
+  cleanConfig?: CleanConfig,
+  cleanedSourcePath?: string,
 ): Promise<VerifyResult> {
   const checks: VerifyCheck[] = [];
   const rawFullText = extractAllText(outputPath);
@@ -132,13 +133,18 @@ export async function verifyOutput(
 
   // Check 8: No single-character underlined runs adjacent to non-underlined runs
   // This is a hallmark of quota-based text redistribution corrupting formatting.
-  const formattingAnomalyCount = countFormattingAnomalies(outputPath);
+  // When cleanedSourcePath is provided, only flag NEW anomalies introduced by fill/patch.
+  const outputAnomalyCount = countFormattingAnomalies(outputPath);
+  const baselineAnomalyCount = cleanedSourcePath ? countFormattingAnomalies(cleanedSourcePath) : 0;
+  const newAnomalyCount = Math.max(0, outputAnomalyCount - baselineAnomalyCount);
   checks.push({
     name: 'No formatting anomalies',
-    passed: formattingAnomalyCount === 0,
-    details: formattingAnomalyCount > 0
-      ? `Found ${formattingAnomalyCount} single-char underlined run(s) adjacent to non-underlined runs`
-      : undefined,
+    passed: newAnomalyCount === 0,
+    details: newAnomalyCount > 0
+      ? `Found ${newAnomalyCount} new single-char underlined run(s) adjacent to non-underlined runs (${outputAnomalyCount} total, ${baselineAnomalyCount} in source)`
+      : baselineAnomalyCount > 0
+        ? `${baselineAnomalyCount} pre-existing anomaly(ies) in source (baselined)`
+        : undefined,
   });
 
   return {
@@ -152,7 +158,7 @@ export async function verifyOutput(
  * non-underlined runs. This pattern is the hallmark of quota-based text
  * redistribution corrupting run-level formatting.
  */
-function countFormattingAnomalies(docxPath: string): number {
+export function countFormattingAnomalies(docxPath: string): number {
   const zip = new AdmZip(docxPath);
   const parser = new DOMParser();
   const parts = enumerateTextParts(zip);

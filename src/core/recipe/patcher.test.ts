@@ -417,6 +417,165 @@ describe('patchDocument', () => {
   });
 });
 
+describe('patchDocument — formatting preservation (docx-core)', () => {
+  /**
+   * Helper: extract raw run XML from the first <w:p> in a DOCX.
+   * Returns an array of { text, hasBold } per run.
+   */
+  function extractRunInfo(docxPath: string): Array<{ text: string; bold: boolean }> {
+    const zip = new AdmZip(docxPath);
+    const entry = zip.getEntry('word/document.xml');
+    if (!entry) return [];
+    const xml = entry.getData().toString('utf-8');
+    const doc = new DOMParser().parseFromString(xml, 'text/xml');
+    const runs = doc.getElementsByTagNameNS(W_NS, 'r');
+    const result: Array<{ text: string; bold: boolean }> = [];
+    for (let i = 0; i < runs.length; i++) {
+      const run = runs[i];
+      const tElements = run.getElementsByTagNameNS(W_NS, 't');
+      let text = '';
+      for (let j = 0; j < tElements.length; j++) {
+        text += tElements[j].textContent ?? '';
+      }
+      if (!text) continue;
+      const rPr = run.getElementsByTagNameNS(W_NS, 'rPr');
+      let bold = false;
+      if (rPr.length > 0) {
+        bold = rPr[0].getElementsByTagNameNS(W_NS, 'b').length > 0;
+      }
+      result.push({ text, bold });
+    }
+    return result;
+  }
+
+  it.openspec('OA-RCP-035')('no mid-word formatting split on cross-run replacement with common prefix', async () => {
+    // Regression: surgical optimization caused "clause" (bold) + "(s)" (plain) split
+    // when replacing "clause[(s)]" → "clause(s)" across formatting boundaries.
+    const xml =
+      '<?xml version="1.0" encoding="UTF-8"?>' +
+      `<w:document xmlns:w="${W_NS}"><w:body>` +
+      '<w:p>' +
+      '<w:r><w:rPr><w:b/></w:rPr><w:t>The clause</w:t></w:r>' +
+      '<w:r><w:t>[(s)] of the agreement</w:t></w:r>' +
+      '</w:p>' +
+      '</w:body></w:document>';
+
+    const inputPath = buildMinimalDocx(xml);
+    const outputPath = inputPath.replace('test.docx', 'output.docx');
+
+    await patchDocument(inputPath, outputPath, {
+      'clause[(s)]': 'clause(s)',
+    });
+
+    const text = extractText(outputPath);
+    expect(text).toBe('The clause(s) of the agreement');
+
+    // The key assertion: "clause(s)" must NOT be split across runs with different formatting.
+    // docx-core places the full replacement in a single new run, preventing mid-word splits.
+    const runInfo = extractRunInfo(outputPath);
+    // Find which run(s) contain "clause(s)"
+    const clauseRuns = runInfo.filter(r => r.text.includes('clause(s)') || r.text.includes('clause'));
+    // "clause(s)" should be fully within a single run or contiguous runs with the same formatting
+    const fullClauseText = clauseRuns.map(r => r.text).join('');
+    expect(fullClauseText).toContain('clause(s)');
+    // Verify no single-char split like "p" + "rovided" or "clause" + "(s)" with different formatting
+    for (const r of runInfo) {
+      if (r.text === '(s)' || r.text === '(s' || r.text === 's)') {
+        // If "(s)" is in its own run, it must have same formatting as "clause" run
+        const clauseRun = runInfo.find(cr => cr.text.includes('clause'));
+        if (clauseRun) {
+          expect(r.bold).toBe(clauseRun.bold);
+        }
+      }
+    }
+
+    rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
+  });
+
+  it.openspec('OA-RCP-035')('container-boundary replacement uses fallback without throwing', async () => {
+    // Replacement spans from direct paragraph run into <w:hyperlink> child run.
+    // docx-core throws UNSAFE_CONTAINER_BOUNDARY; patcher falls back to legacy charMap.
+    const xml =
+      '<?xml version="1.0" encoding="UTF-8"?>' +
+      `<w:document xmlns:w="${W_NS}"><w:body>` +
+      '<w:p>' +
+      '<w:r><w:t>[Company</w:t></w:r>' +
+      '<w:hyperlink>' +
+      '<w:r><w:t> Name]</w:t></w:r>' +
+      '</w:hyperlink>' +
+      '</w:p>' +
+      '</w:body></w:document>';
+
+    const inputPath = buildMinimalDocx(xml);
+    const outputPath = inputPath.replace('test.docx', 'output.docx');
+
+    // Should NOT throw — falls back to legacy
+    await patchDocument(inputPath, outputPath, {
+      '[Company Name]': '{company_name}',
+    });
+
+    const text = extractText(outputPath);
+    expect(text).toBe('{company_name}');
+
+    rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
+  });
+
+  it.openspec('OA-RCP-035')('tab before match does not shift replacement offset', async () => {
+    // Paragraph with <w:tab/> before the match; docx-core counts tabs as visible chars
+    const xml =
+      '<?xml version="1.0" encoding="UTF-8"?>' +
+      `<w:document xmlns:w="${W_NS}"><w:body>` +
+      '<w:p>' +
+      '<w:r><w:t>Item</w:t><w:tab/><w:t>[Amount]</w:t></w:r>' +
+      '</w:p>' +
+      '</w:body></w:document>';
+
+    const inputPath = buildMinimalDocx(xml);
+    const outputPath = inputPath.replace('test.docx', 'output.docx');
+
+    await patchDocument(inputPath, outputPath, {
+      '[Amount]': '{amount}',
+    });
+
+    // Verify the replacement happened correctly
+    const zip = new AdmZip(outputPath);
+    const outputXml = zip.getEntry('word/document.xml')!.getData().toString('utf-8');
+    expect(outputXml).toContain('{amount}');
+    expect(outputXml).not.toContain('[Amount]');
+    // Tab element should be preserved
+    expect(outputXml).toContain('<w:tab');
+
+    rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
+  });
+
+  it.openspec('OA-RCP-035')('replacementColor applied via addRunProps.color', async () => {
+    const xml =
+      '<?xml version="1.0" encoding="UTF-8"?>' +
+      `<w:document xmlns:w="${W_NS}"><w:body>` +
+      '<w:p><w:r><w:t>[Company Name]</w:t></w:r></w:p>' +
+      '</w:body></w:document>';
+
+    const inputPath = buildMinimalDocx(xml);
+    const outputPath = inputPath.replace('test.docx', 'output.docx');
+
+    await patchDocument(inputPath, outputPath, {
+      '[Company Name]': 'Acme Corp',
+    }, { replacementColor: '000000' });
+
+    const zip = new AdmZip(outputPath);
+    const outputXml = zip.getEntry('word/document.xml')!.getData().toString('utf-8');
+    expect(outputXml).toContain('Acme Corp');
+    // Color should be set on the replacement run
+    expect(outputXml).toContain('000000');
+    // Verify it's in a <w:color> element
+    const doc = new DOMParser().parseFromString(outputXml, 'text/xml');
+    const colorEls = doc.getElementsByTagNameNS(W_NS, 'color');
+    expect(colorEls.length).toBeGreaterThan(0);
+
+    rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
+  });
+});
+
 describe('isRunSafeToRemove', () => {
   const parser = new DOMParser();
 

@@ -122,7 +122,7 @@ Fixture files go in: integration-tests/fixtures/`);
 8. When adding new fields to metadata.yaml, always include: name, type, description, and default.
 9. Do NOT invent synthetic helper fields (e.g. "optional_blank_value"). Only use fields already defined in metadata.yaml. If a new field is genuinely needed, it must represent real deal-term data, not a formatting workaround.
 10. Multi-paragraph bracketed sections (e.g. ["DPA" means...], [Foreign Person...], [Limitation on...]) are OPTIONAL CLAUSES, not fill placeholders. Handle them with clean.json \`removeRanges\` (start/end pattern) or computed.json toggles — NEVER add them to replacements.json.
-11. F3 formatting anomalies (single-char underlined runs) are a known patcher limitation in the engine. You cannot fix them by editing recipe files. Skip F3 and focus on other failing checks.`);
+11. F3 formatting anomalies (single-char underlined runs) are baselined against the cleaned source — the verifier only flags NEW anomalies introduced by fill/patch. If F3 fails, investigate whether recipe edits are introducing formatting corruption.`);
 
   // Verify command
   sections.push(`## Verify Your Changes:
@@ -238,7 +238,7 @@ function getCategoryGuidance(
         lines.push('- Fix full-values fill: ensure all fixture values appear in the output and no placeholders remain');
       }
       if (fFailures.some((c) => c.id === 'F3')) {
-        lines.push('- SKIP F3 (formatting anomalies) — this is a patcher engine limitation you cannot fix via recipe files. Focus on F1, F2, F4 instead.');
+        lines.push('- Fix F3 (formatting anomalies) — the verifier now baselines against the source, so failures mean fill/patch introduced new anomalies. Check if replacement values or computed rules are corrupting run-level formatting.');
       }
       if (fFailures.some((c) => c.id === 'F4')) {
         lines.push(`- Fix zero-match keys: ${scorecard.zero_match_keys.slice(0, 5).join(', ')}`);
