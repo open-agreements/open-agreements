@@ -57,6 +57,7 @@ interface ToolDefinition {
   name: string;
   description: string;
   inputSchema: JsonSchema;
+  annotations?: { readOnlyHint?: boolean; destructiveHint?: boolean };
   invoke: (args: unknown) => Promise<ToolCallResult>;
 }
 
@@ -159,6 +160,7 @@ const tools: ToolDefinition[] = [
       },
       additionalProperties: false,
     },
+    annotations: { readOnlyHint: true, destructiveHint: false },
     invoke: async (args) => {
       const input = ListTemplatesArgsSchema.parse(args ?? {});
       const items = await loadTemplates();
@@ -189,6 +191,7 @@ const tools: ToolDefinition[] = [
       required: ['template_id'],
       additionalProperties: false,
     },
+    annotations: { readOnlyHint: true, destructiveHint: false },
     invoke: async (args) => {
       const input = GetTemplateArgsSchema.parse(args ?? {});
       const mod = await importRepoModules();
@@ -254,6 +257,7 @@ const tools: ToolDefinition[] = [
       required: ['template'],
       additionalProperties: false,
     },
+    annotations: { readOnlyHint: false, destructiveHint: false },
     invoke: async (args) => {
       const input = FillTemplateArgsSchema.parse(args ?? {});
       const workingDir = mkdtempSync(join(tmpdir(), 'oa-templates-mcp-'));
@@ -306,11 +310,12 @@ const tools: ToolDefinition[] = [
   },
 ];
 
-export function listToolDescriptors(): Array<{ name: string; description: string; inputSchema: JsonSchema }> {
+export function listToolDescriptors(): Array<{ name: string; description: string; inputSchema: JsonSchema; annotations?: { readOnlyHint?: boolean; destructiveHint?: boolean } }> {
   return tools.map((tool) => ({
     name: tool.name,
     description: tool.description,
     inputSchema: tool.inputSchema,
+    ...(tool.annotations ? { annotations: tool.annotations } : {}),
   }));
 }
 

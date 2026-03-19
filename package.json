@@ -1,6 +1,6 @@
 {
   "name": "open-agreements",
-  "version": "0.6.0",
+  "version": "0.5.0",
   "workspaces": [
     "packages/allure-test-factory",
     "packages/contract-templates-mcp",
@@ -36,7 +36,8 @@
     "content/",
     "skills/",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "server.json"
   ],
   "bundleDependencies": [
     "@usejunior/docx-core"
