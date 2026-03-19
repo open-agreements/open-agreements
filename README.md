@@ -397,6 +397,13 @@ MIT
 
 Template content is licensed by their respective authors — CC BY 4.0 (Common Paper, Bonterms), CC BY-ND 4.0 (Y Combinator), or proprietary (NVCA, downloaded at runtime). See each template's `metadata.yaml` for details.
 
+## Privacy
+
+- **Local mode** (`npx`, global install, stdio MCP): all processing happens on your machine. No document content is sent externally.
+- **Hosted mode** (`https://openagreements.ai/api/mcp`): template filling runs server-side. No filled documents are stored after the response is returned.
+
+See our [Privacy Policy](https://usejunior.com/privacy_policy) for details.
+
 ## Disclaimer
 
 This tool generates documents from standard templates. It does not provide legal advice. No affiliation with or endorsement by Common Paper, Bonterms, Y Combinator, NVCA, or any template source is implied. Consult an attorney for legal guidance.

@@ -18,6 +18,7 @@ interface ToolDefinition {
   name: string;
   description: string;
   inputSchema: JsonSchema;
+  annotations?: { readOnlyHint?: boolean; destructiveHint?: boolean };
   invoke: (args: unknown) => Promise<ToolCallResult>;
 }
 
@@ -68,6 +69,7 @@ const tools: ToolDefinition[] = [
       },
       additionalProperties: false,
     },
+    annotations: { readOnlyHint: true, destructiveHint: false },
     invoke: async (args) => {
       const input = WorkspaceInitSchema.parse(args ?? {});
       const rootDir = resolveRootDir(input.root_dir);
@@ -105,6 +107,7 @@ const tools: ToolDefinition[] = [
       },
       additionalProperties: false,
     },
+    annotations: { readOnlyHint: true, destructiveHint: false },
     invoke: async (args) => {
       const input = CatalogValidateSchema.parse(args ?? {});
       const rootDir = resolveRootDir(input.root_dir);
@@ -143,6 +146,7 @@ const tools: ToolDefinition[] = [
       },
       additionalProperties: false,
     },
+    annotations: { readOnlyHint: false, destructiveHint: false },
     invoke: async (args) => {
       const input = CatalogFetchSchema.parse(args ?? {});
       const rootDir = resolveRootDir(input.root_dir);
@@ -177,6 +181,7 @@ const tools: ToolDefinition[] = [
       },
       additionalProperties: false,
     },
+    annotations: { readOnlyHint: false, destructiveHint: false },
     invoke: async (args) => {
       const input = StatusGenerateSchema.parse(args ?? {});
       const rootDir = resolveRootDir(input.root_dir);
@@ -212,6 +217,7 @@ const tools: ToolDefinition[] = [
       },
       additionalProperties: false,
     },
+    annotations: { readOnlyHint: true, destructiveHint: false },
     invoke: async (args) => {
       const input = StatusLintSchema.parse(args ?? {});
       const rootDir = resolveRootDir(input.root_dir);
@@ -226,11 +232,12 @@ const tools: ToolDefinition[] = [
   },
 ];
 
-export function listToolDescriptors(): Array<{ name: string; description: string; inputSchema: JsonSchema }> {
+export function listToolDescriptors(): Array<{ name: string; description: string; inputSchema: JsonSchema; annotations?: { readOnlyHint?: boolean; destructiveHint?: boolean } }> {
   return tools.map((tool) => ({
     name: tool.name,
     description: tool.description,
     inputSchema: tool.inputSchema,
+    ...(tool.annotations ? { annotations: tool.annotations } : {}),
   }));
 }
 

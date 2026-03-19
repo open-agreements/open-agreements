@@ -18,6 +18,7 @@ interface ToolDefinition {
   name: string;
   description: string;
   inputSchema: JsonSchema;
+  annotations?: { readOnlyHint?: boolean; destructiveHint?: boolean };
   invoke: (args: unknown) => Promise<ToolCallResult>;
 }
 
@@ -171,6 +172,7 @@ const tools: ToolDefinition[] = [
       required: ['deal_name'],
       additionalProperties: false,
     },
+    annotations: { readOnlyHint: false, destructiveHint: false },
     invoke: async (args) => {
       const input = ChecklistCreateSchema.parse(args ?? {});
       const mod = await requireModules();
@@ -186,6 +188,7 @@ const tools: ToolDefinition[] = [
       properties: {},
       additionalProperties: false,
     },
+    annotations: { readOnlyHint: true, destructiveHint: false },
     invoke: async () => {
       const mod = await requireModules();
       const result = mod.listChecklists();
@@ -203,6 +206,7 @@ const tools: ToolDefinition[] = [
       required: ['checklist_id'],
       additionalProperties: false,
     },
+    annotations: { readOnlyHint: true, destructiveHint: false },
     invoke: async (args) => {
       const input = ChecklistReadSchema.parse(args ?? {});
       const mod = await requireModules();
@@ -223,6 +227,7 @@ const tools: ToolDefinition[] = [
       required: ['checklist_id', 'patch'],
       additionalProperties: false,
     },
+    annotations: { readOnlyHint: true, destructiveHint: false },
     invoke: async (args) => {
       const input = ChecklistPatchValidateSchema.parse(args ?? {});
       const mod = await requireModules();
@@ -246,6 +251,7 @@ const tools: ToolDefinition[] = [
       required: ['checklist_id', 'validation_id', 'patch'],
       additionalProperties: false,
     },
+    annotations: { readOnlyHint: false, destructiveHint: true },
     invoke: async (args) => {
       const input = ChecklistPatchApplySchema.parse(args ?? {});
       const mod = await requireModules();
@@ -274,6 +280,7 @@ const tools: ToolDefinition[] = [
       required: ['checklist_id'],
       additionalProperties: false,
     },
+    annotations: { readOnlyHint: false, destructiveHint: false },
     invoke: async (args) => {
       const input = ChecklistRenderDocxSchema.parse(args ?? {});
       const mod = await requireModules();
@@ -329,6 +336,7 @@ const tools: ToolDefinition[] = [
       required: ['checklist_id'],
       additionalProperties: false,
     },
+    annotations: { readOnlyHint: true, destructiveHint: false },
     invoke: async (args) => {
       const input = ChecklistImportDocxSchema.parse(args ?? {});
       const mod = await requireModules();
@@ -369,11 +377,12 @@ const tools: ToolDefinition[] = [
 // Tool dispatch
 // ---------------------------------------------------------------------------
 
-export function listToolDescriptors(): Array<{ name: string; description: string; inputSchema: JsonSchema }> {
+export function listToolDescriptors(): Array<{ name: string; description: string; inputSchema: JsonSchema; annotations?: { readOnlyHint?: boolean; destructiveHint?: boolean } }> {
   return tools.map((tool) => ({
     name: tool.name,
     description: tool.description,
     inputSchema: tool.inputSchema,
+    ...(tool.annotations ? { annotations: tool.annotations } : {}),
   }));
 }
 

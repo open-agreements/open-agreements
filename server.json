@@ -1,0 +1,31 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.open-agreements/open-agreements",
+  "title": "Open Agreements",
+  "description": "Fill standard legal agreement templates (NDAs, SAFEs, NVCA docs, employment) as DOCX files.",
+  "version": "0.5.0",
+  "websiteUrl": "https://openagreements.ai",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@open-agreements/contract-templates-mcp",
+      "version": "0.5.0",
+      "transport": { "type": "stdio" },
+      "runtimeHint": "npx",
+      "environmentVariables": []
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://openagreements.ai/api/mcp"
+    }
+  ],
+  "repository": {
+    "url": "https://github.com/open-agreements/open-agreements",
+    "source": "github",
+    "id": "open-agreements/open-agreements"
+  },
+  "license": "MIT",
+  "tags": ["legal", "contracts", "templates", "docx", "nda", "safe", "nvca", "employment"]
+}
