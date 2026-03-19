@@ -5,6 +5,7 @@
       "type": "checkbox",
       "standalone": true,
       "markerless": true,
+      "subClauseStopPatterns": ["^Closing Deliverables", "^Defined Terms"],
       "options": [
         {
           "marker": "Additional Closings",
