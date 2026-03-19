@@ -70,6 +70,7 @@ const TOOLS = [
         },
       },
     },
+    annotations: { readOnlyHint: true, destructiveHint: false },
   },
   {
     name: TOOL_GET_TEMPLATE,
@@ -85,6 +86,7 @@ const TOOLS = [
       },
       required: ['template_id'],
     },
+    annotations: { readOnlyHint: true, destructiveHint: false },
   },
   {
     name: TOOL_FILL_TEMPLATE,
@@ -122,6 +124,7 @@ const TOOLS = [
       },
       required: ['template'],
     },
+    annotations: { readOnlyHint: false, destructiveHint: false },
   },
 ];
 
