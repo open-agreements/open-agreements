@@ -6,7 +6,6 @@
     "packages/contract-templates-mcp",
     "packages/contracts-workspace",
     "packages/contracts-workspace-mcp",
-    "packages/docx-core",
     "packages/checklist-mcp"
   ],
   "description": "Open-source legal template filling CLI and library",
@@ -38,9 +37,6 @@
     "README.md",
     "LICENSE",
     "server.json"
-  ],
-  "bundleDependencies": [
-    "@usejunior/docx-core"
   ],
   "scripts": {
     "build": "tsc",
@@ -129,7 +125,7 @@
     "commander": "^13.1.0",
     "docx-templates": "^4.13.0",
     "js-yaml": "^4.1.0",
-    "@usejunior/docx-core": "*",
+    "@usejunior/docx-core": ">=0.7.0",
     "zod": "^4.0.0"
   },
   "devDependencies": {
