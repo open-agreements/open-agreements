@@ -216,4 +216,27 @@ export function createWmlTextElement(doc, text) {
     el.appendChild(doc.createTextNode(text));
     return el;
 }
+// ── Namespace-aware OOXML element checks ───────────────────────────
+/**
+ * Check if an element is in the OOXML WordprocessingML namespace
+ * with the given local name.
+ */
+export function isW(el, localName) {
+    return !!el && el.namespaceURI === OOXML.W_NS && el.localName === localName;
+}
+/**
+ * Get direct child elements in the OOXML WordprocessingML namespace
+ * with a specific local name. Unlike getElementsByTagNameNS, this only
+ * returns direct children (not nested descendants).
+ */
+export function getDirectChildrenByName(parent, localName) {
+    const out = [];
+    for (let i = 0; i < parent.childNodes.length; i++) {
+        const child = parent.childNodes[i];
+        if (child.nodeType === NODE_TYPE.ELEMENT && isW(child, localName)) {
+            out.push(child);
+        }
+    }
+    return out;
+}
 //# sourceMappingURL=dom-helpers.js.map

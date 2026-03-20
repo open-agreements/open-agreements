@@ -36,6 +36,18 @@ export type DocumentStyles = {
     styles: Map<string, DocumentStyleInfo>;
     fingerprint_to_style: Map<string, string>;
 };
+export type TableContext = {
+    table_id: string;
+    table_index: number;
+    row_index: number;
+    col_index: number;
+    col_header: string;
+    total_rows: number;
+    total_cols: number;
+    is_header_row: boolean;
+    para_in_cell: number;
+    cell_para_count: number;
+};
 export type DocumentViewNode = {
     id: string;
     list_label: string;
@@ -60,8 +72,34 @@ export type DocumentViewNode = {
     };
     header_formatting: HeaderFormatting | null;
     body_run_formatting: RunFormatting | null;
+    table_context?: TableContext;
 };
 export declare function discoverStyles(nodes: DocumentViewNode[]): DocumentStyles;
+/**
+ * Format a single toon data line for one DocumentViewNode.
+ * Handles table-context-aware style (th/td) and header stripping.
+ */
+export declare function formatToonDataLine(n: DocumentViewNode, options?: {
+    compact?: boolean;
+}): string;
+/**
+ * Collect table marker info (dimensions) from nodes for #TABLE markers.
+ * Column headers are NOT included in the marker — they appear once in the th() rows.
+ */
+export declare function collectTableMarkerInfo(nodes: readonly Pick<DocumentViewNode, 'table_context'>[]): Map<number, {
+    id: string;
+    totalRows: number;
+    totalCols: number;
+}>;
+/**
+ * Format a #TABLE marker line from collected table info.
+ * Headers are omitted — they appear exactly once in the th(0,N) data rows.
+ */
+export declare function formatTableMarker(info: {
+    id: string;
+    totalRows: number;
+    totalCols: number;
+}): string;
 export declare function renderToon(nodes: DocumentViewNode[], options?: {
     compact?: boolean;
 }): string;
@@ -81,6 +119,7 @@ export declare function buildNodesForDocumentView(params: {
     paragraphs: Array<{
         id: string;
         p: Element;
+        tableContext?: TableContext;
     }>;
     stylesXml: Document | null;
     numberingXml: Document | null;
