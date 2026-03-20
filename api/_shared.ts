@@ -228,9 +228,7 @@ export async function generateRedlineFromFill(
   const recipeDir = findRecipeDir(template);
   if (!recipeDir) return null;
 
-  // Use relative path for Vercel serverless tracing (workspace package
-  // may not be in node_modules inside the function bundle).
-  const { compareDocuments } = await import('../packages/docx-core/dist/index.js');
+  const { compareDocuments } = await import('@usejunior/docx-core');
 
   // Run recipe with keepIntermediate to get stage files for comparison base
   const tmpOutput = join('/tmp', `${template}-redline-tmp-${randomUUID()}.docx`);
