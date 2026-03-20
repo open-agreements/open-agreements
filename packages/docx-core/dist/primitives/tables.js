@@ -6,23 +6,10 @@
  * header-based table filtering.
  */
 import { OOXML, W } from './namespaces.js';
+import { isW, getDirectChildrenByName } from './dom-helpers.js';
 // ---------------------------------------------------------------------------
-// Internal helpers (same patterns as layout.ts)
+// Internal helpers
 // ---------------------------------------------------------------------------
-function isW(el, localName) {
-    return !!el && el.namespaceURI === OOXML.W_NS && el.localName === localName;
-}
-function getDirectChildrenByName(parent, localName) {
-    const out = [];
-    for (const child of Array.from(parent.childNodes)) {
-        if (child.nodeType !== 1)
-            continue;
-        const el = child;
-        if (isW(el, localName))
-            out.push(el);
-    }
-    return out;
-}
 /** Get text content of a single paragraph element. */
 function getParagraphText(p) {
     const parts = [];

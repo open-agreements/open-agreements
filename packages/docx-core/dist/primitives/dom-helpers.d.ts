@@ -91,4 +91,15 @@ export declare function createWmlElement(doc: Document, localTag: string, attrs?
  * Automatically sets xml:space="preserve" to maintain whitespace fidelity.
  */
 export declare function createWmlTextElement(doc: Document, text: string): Element;
+/**
+ * Check if an element is in the OOXML WordprocessingML namespace
+ * with the given local name.
+ */
+export declare function isW(el: Element | null | undefined, localName: string): boolean;
+/**
+ * Get direct child elements in the OOXML WordprocessingML namespace
+ * with a specific local name. Unlike getElementsByTagNameNS, this only
+ * returns direct children (not nested descendants).
+ */
+export declare function getDirectChildrenByName(parent: Element, localName: string): Element[];
 //# sourceMappingURL=dom-helpers.d.ts.map
