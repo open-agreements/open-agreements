@@ -27,6 +27,34 @@
           "replaceWith": ""
         }
       ]
+    },
+    {
+      "id": "convertible_securities_clause",
+      "type": "checkbox",
+      "standalone": true,
+      "markerless": true,
+      "inline": true,
+      "options": [
+        {
+          "marker": "[or, as applicable, a purchase price of $[___] per share with respect to the shares of Series [____] Preferred Stock being issued [in the Initial Closing] pursuant to any cancellation or conversion of Convertible Securities (as defined below) as set forth in Section 1.3 below]",
+          "trigger": { "field": "include_convertible_securities", "equals": true },
+          "replaceWith": ""
+        }
+      ]
+    },
+    {
+      "id": "closing_reference_bracket",
+      "type": "checkbox",
+      "standalone": true,
+      "markerless": true,
+      "inline": true,
+      "options": [
+        {
+          "marker": "[with respect to such Closing]",
+          "trigger": { "field": "include_closing_reference", "equals": true },
+          "replaceWith": ""
+        }
+      ]
     }
   ]
 }

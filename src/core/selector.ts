@@ -611,7 +611,14 @@ function processMarkerlessGroup(
             madeChanges = true;
           } catch (e) {
             if (e instanceof SafeDocxError) {
-              console.warn(`[selector] inline replacement failed for group "${group.id}": ${e.message}`);
+              // Fallback: formatting-destructive text splice via xmldom w:t elements
+              const rawText = extractParagraphText(markerPara);
+              const rawIdx = normalizeQuotes(rawText).indexOf(normalizedMarker);
+              if (rawIdx !== -1) {
+                const newText = rawText.slice(0, rawIdx) + replacement + rawText.slice(rawIdx + normalizedMarker.length);
+                replaceParagraphText(markerPara, newText);
+                madeChanges = true;
+              }
             }
             break;
           }
