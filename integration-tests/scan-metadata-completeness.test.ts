@@ -5,7 +5,8 @@ import AdmZip from 'adm-zip';
 import { afterEach, describe, expect } from 'vitest';
 import { scanDocxBrackets } from '../src/commands/scan.js';
 import { loadRecipeMetadata } from '../src/core/metadata.js';
-import { parseReplacementKey } from '../src/core/recipe/replacement-keys.js';
+import { parseReplacementKey, resolveReplacementValue } from '../src/core/recipe/replacement-keys.js';
+import type { ReplacementValue } from '../src/core/recipe/replacement-keys.js';
 import { assessScanMetadataCoverage } from '../src/core/validation/scan-metadata.js';
 import { itAllure } from './helpers/allure-test.js';
 
@@ -64,13 +65,13 @@ function escapeXml(value: string): string {
 
 function loadNvcaCoverageInputs(): {
   metadataFields: string[];
-  replacements: Record<string, string>;
+  replacements: Record<string, ReplacementValue>;
   extraCoveredFields: string[];
 } {
   const metadata = loadRecipeMetadata(RECIPE_DIR);
   const replacements = JSON.parse(
     readFileSync(join(RECIPE_DIR, 'replacements.json'), 'utf-8')
-  ) as Record<string, string>;
+  ) as Record<string, ReplacementValue>;
   const normalize = JSON.parse(
     readFileSync(join(RECIPE_DIR, 'normalize.json'), 'utf-8')
   ) as {
@@ -143,7 +144,7 @@ describe('scan vs metadata completeness', () => {
 
     const sampledShortSearchTexts = [...new Set(
       Object.entries(replacements)
-        .map(([key, value]) => parseReplacementKey(key, value).searchText)
+        .map(([key, rawValue]) => parseReplacementKey(key, resolveReplacementValue(rawValue)).searchText)
         .filter((searchText) => searchText.length <= 80)
     )].slice(0, 35);
 

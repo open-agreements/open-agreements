@@ -1,11 +1,12 @@
-import { parseReplacementKey } from '../recipe/replacement-keys.js';
+import { parseReplacementKey, resolveReplacementValue } from '../recipe/replacement-keys.js';
+import type { ReplacementValue } from '../recipe/replacement-keys.js';
 
 const FIELD_TAG_RE = /\{([a-z_][a-z0-9_]*)\}/g;
 
 export interface ScanMetadataCoverageInput {
   scannedShortPlaceholders: string[];
   metadataFields: string[];
-  replacements: Record<string, string>;
+  replacements: Record<string, ReplacementValue>;
   extraCoveredFields?: string[];
   ignoredPlaceholders?: string[];
 }
@@ -42,7 +43,8 @@ export function assessScanMetadataCoverage(
   const placeholderFieldMap = new Map<string, Set<string>>();
   const mappedFieldsNotInMetadata = new Set<string>();
 
-  for (const [key, value] of Object.entries(input.replacements)) {
+  for (const [key, rawValue] of Object.entries(input.replacements)) {
+    const value = resolveReplacementValue(rawValue);
     const parsed = parseReplacementKey(key, value);
     const searchText = parsed.searchText;
     const tags = extractFieldTags(value);

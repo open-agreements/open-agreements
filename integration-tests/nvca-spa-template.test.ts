@@ -36,7 +36,7 @@ interface RecipeMetadataDocument {
   priority_fields?: string[];
 }
 
-type ReplacementMap = Record<string, string>;
+type ReplacementMap = Record<string, import('../src/core/recipe/replacement-keys.js').ReplacementValue>;
 
 interface CleanConfig {
   removeFootnotes?: boolean;
@@ -307,8 +307,9 @@ async function applyLawyerReviewContext(
   await allureDescriptionHtml(sections.join(''));
 }
 
-function extractFieldNameFromReplacement(value: string): string | null {
-  const match = value.match(/^\{([a-zA-Z0-9_]+)\}$/);
+function extractFieldNameFromReplacement(value: string | { value: string; format?: Record<string, unknown> }): string | null {
+  const str = typeof value === 'string' ? value : value.value;
+  const match = str.match(/^\{([a-zA-Z0-9_]+)\}$/);
   return match?.[1] ?? null;
 }
 
