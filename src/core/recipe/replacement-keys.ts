@@ -7,6 +7,14 @@
  *     where label matches; in paragraphs, replaces first placeholder after context
  */
 
+/** A replacement value: either a plain string or an object with value + formatting. */
+export type ReplacementValue = string | { value: string; format?: Record<string, unknown> };
+
+/** Extract the plain string value from a ReplacementValue. */
+export function resolveReplacementValue(rv: ReplacementValue): string {
+  return typeof rv === 'string' ? rv : rv.value;
+}
+
 export type ParsedKey =
   | { type: 'simple'; searchText: string; value: string }
   | { type: 'context'; context: string; searchText: string; value: string };
