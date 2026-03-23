@@ -1,6 +1,5 @@
 node_modules/
 dist/
-!packages/docx-core/dist/
 *.tgz
 .DS_Store
 allure-results/
