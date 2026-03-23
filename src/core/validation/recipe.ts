@@ -60,10 +60,36 @@ export function validateRecipe(
   const isScaffold = !hasReplacements;
 
   // Validate computed.json if present
+  let computedSetFillFields: Set<string> | undefined;
   if (existsSync(computedPath)) {
     try {
       const raw = readFileSync(computedPath, 'utf-8');
-      ComputedProfileSchema.parse(JSON.parse(raw));
+      const profile = ComputedProfileSchema.parse(JSON.parse(raw));
+
+      // Collect all fields targeted by defaults or set_fill rules
+      computedSetFillFields = new Set<string>();
+      for (const field of Object.keys(profile.defaults)) {
+        computedSetFillFields.add(field);
+      }
+      for (const rule of profile.rules) {
+        for (const field of Object.keys(rule.set_fill)) {
+          computedSetFillFields.add(field);
+        }
+      }
+
+      // Validate: computed set_fill fields must not have non-empty metadata defaults.
+      // When computed.json owns a field, metadata should declare default: "" (or omit it)
+      // so that the computed rule is the single source of truth for that field's value.
+      for (const field of computedSetFillFields) {
+        const metaField = metadata.fields.find((f) => f.name === field);
+        if (metaField && metaField.default !== undefined && metaField.default !== '') {
+          errors.push(
+            `computed/metadata conflict: field "${field}" is set by computed.json set_fill ` +
+            `but has non-empty metadata default "${metaField.default}". ` +
+            `Computed-owned fields must use default: "" to avoid conflicting values.`
+          );
+        }
+      }
     } catch (err) {
       const message = err instanceof Error ? err.message : 'invalid format';
       errors.push(`computed.json: ${message}`);
@@ -87,9 +113,15 @@ export function validateRecipe(
       errors.push('replacements.json must be a JSON object');
     } else {
       const unknownTargets = new Set<string>();
-      for (const [key, value] of Object.entries(replacements)) {
-        if (typeof value !== 'string') {
-          errors.push(`replacements.json: value for "${key}" must be a string`);
+      for (const [key, rawValue] of Object.entries(replacements)) {
+        // Value can be a string or { value: string, format?: object }
+        let value: string;
+        if (typeof rawValue === 'string') {
+          value = rawValue;
+        } else if (typeof rawValue === 'object' && rawValue !== null && typeof (rawValue as Record<string, unknown>).value === 'string') {
+          value = (rawValue as Record<string, unknown>).value as string;
+        } else {
+          errors.push(`replacements.json: value for "${key}" must be a string or { value: string, format?: object }`);
           continue;
         }
 
