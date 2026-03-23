@@ -38,6 +38,9 @@
     "LICENSE",
     "server.json"
   ],
+  "bundleDependencies": [
+    "@usejunior/docx-core"
+  ],
   "scripts": {
     "build": "tsc",
     "build:workspace": "tsc -p packages/contracts-workspace/tsconfig.json",

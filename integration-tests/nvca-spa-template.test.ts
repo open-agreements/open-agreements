@@ -36,7 +36,7 @@ interface RecipeMetadataDocument {
   priority_fields?: string[];
 }
 
-type ReplacementMap = Record<string, string>;
+type ReplacementMap = Record<string, import('../src/core/recipe/replacement-keys.js').ReplacementValue>;
 
 interface CleanConfig {
   removeFootnotes?: boolean;
@@ -129,8 +129,10 @@ const FIELD_ASSERTION_POLICY: Record<string, FieldAssertionPolicy> = {
   par_value_per_share: { mode: 'skip', reason: 'Nth-qualified replacement; exercised in real-source integration checks' },
   purchase_price_per_share: { mode: 'skip', reason: 'Nth-qualified replacement; exercised in real-source integration checks' },
   applicable_word: { mode: 'skip', reason: 'Control field for optional closing-word bracket cleanup' },
-  optional_closing_reference: { mode: 'skip', reason: 'Control field for optional reference bracket cleanup' },
-  optional_clause_text: { mode: 'skip', reason: 'Control field for optional alternate clause removal' },
+  include_convertible_securities: { mode: 'skip', reason: 'Boolean trigger for inline selection — convertible securities clause' },
+  include_closing_reference: { mode: 'skip', reason: 'Boolean trigger for inline selection — closing reference bracket' },
+  bind_all_convertible_holders_to_convert: { mode: 'skip', reason: 'Computed control input; drives purchaser_scope token' },
+  purchaser_scope: { mode: 'strict', reason: 'Consent scope word derived from bind_all_convertible_holders_to_convert' },
   optional_plural_suffix: { mode: 'skip', reason: 'Control field for optional pluralized headings' },
   closing_heading: { mode: 'strict', reason: 'Single-closing heading should render explicitly' },
   initial_word_lower: { mode: 'strict', reason: 'Single-closing lowercase token should render explicitly' },
@@ -307,8 +309,9 @@ async function applyLawyerReviewContext(
   await allureDescriptionHtml(sections.join(''));
 }
 
-function extractFieldNameFromReplacement(value: string): string | null {
-  const match = value.match(/^\{([a-zA-Z0-9_]+)\}$/);
+function extractFieldNameFromReplacement(value: string | { value: string; format?: Record<string, unknown> }): string | null {
+  const str = typeof value === 'string' ? value : value.value;
+  const match = str.match(/^\{([a-zA-Z0-9_]+)\}$/);
   return match?.[1] ?? null;
 }
 

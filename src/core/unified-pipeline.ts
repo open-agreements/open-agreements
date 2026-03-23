@@ -11,13 +11,19 @@
 import { readFileSync, writeFileSync, copyFileSync, mkdtempSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
+import AdmZip from 'adm-zip';
+import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
+import { getParagraphText, replaceParagraphTextRange } from '@usejunior/docx-core';
 import { prepareFillData, fillDocx } from './fill-pipeline.js';
 import { cleanDocument } from './recipe/cleaner.js';
 import { patchDocument } from './recipe/patcher.js';
 import { applySelections } from './selector.js';
+import { enumerateTextParts, getGeneralTextPartNames } from './recipe/ooxml-parts.js';
 import type { FieldDefinition, CleanConfig } from './metadata.js';
 import type { SelectionsConfig } from './selector.js';
 import type { VerifyResult } from './recipe/types.js';
+
+const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 
 export interface PipelineOptions {
   inputPath: string;                    // Source .docx
@@ -29,7 +35,7 @@ export interface PipelineOptions {
   // Clean/Patch — omit to skip (templates without replacements.json)
   cleanPatch?: {
     cleanConfig: CleanConfig;
-    replacements: Record<string, string>;
+    replacements: Record<string, string | { value: string; format?: Record<string, unknown> }>;
   };
 
   // Selections — omit to skip (only templates with selections.json)
@@ -161,6 +167,9 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
       stages.fill = filledPath;
     }
 
+    // Collapse double spaces left by empty field substitutions (e.g. {initial_word_lower} → "")
+    await collapseDoubleSpacesInDocx(filledPath);
+
     // Step 7: Copy to output
     copyFileSync(filledPath, outputPath);
 
@@ -193,5 +202,51 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
     if (!keepIntermediate) {
       rmSync(tempDir, { recursive: true, force: true });
     }
+  }
+}
+
+/**
+ * Collapse runs of 2+ spaces into a single space within all text paragraphs.
+ * Fixes double spaces left when empty field substitutions (e.g. {initial_word_lower} → "")
+ * leave adjacent spaces in the DOCX.
+ */
+async function collapseDoubleSpacesInDocx(docxPath: string): Promise<void> {
+  const zip = new AdmZip(docxPath);
+  const parser = new DOMParser();
+  const serializer = new XMLSerializer();
+  const parts = enumerateTextParts(zip);
+  const partNames = getGeneralTextPartNames(parts);
+  let anyModified = false;
+
+  for (const partName of partNames) {
+    const entry = zip.getEntry(partName);
+    if (!entry) continue;
+    const doc = parser.parseFromString(entry.getData().toString('utf-8'), 'text/xml');
+    const paragraphs = doc.getElementsByTagNameNS(W_NS, 'p');
+    let partModified = false;
+
+    for (let i = 0; i < paragraphs.length; i++) {
+      const para = paragraphs[i] as unknown as globalThis.Element;
+      let text = getParagraphText(para);
+      let match: RegExpExecArray | null;
+      while ((match = / {2,}/.exec(text)) !== null) {
+        try {
+          replaceParagraphTextRange(para, match.index, match.index + match[0].length, ' ');
+          partModified = true;
+        } catch {
+          break;
+        }
+        text = getParagraphText(para);
+      }
+    }
+
+    if (partModified) {
+      zip.updateFile(partName, Buffer.from(serializer.serializeToString(doc), 'utf-8'));
+      anyModified = true;
+    }
+  }
+
+  if (anyModified) {
+    writeFileSync(docxPath, zip.toBuffer());
   }
 }

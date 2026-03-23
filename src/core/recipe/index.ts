@@ -39,9 +39,10 @@ export async function runRecipe(options: RecipeRunOptions): Promise<RecipeRunRes
 
   // Load replacements.json
   const replacementsPath = join(recipeDir, 'replacements.json');
-  const replacements: Record<string, string> = JSON.parse(readFileSync(replacementsPath, 'utf-8'));
+  const replacements: Record<string, string | { value: string; format?: Record<string, unknown> }> = JSON.parse(readFileSync(replacementsPath, 'utf-8'));
   const replacementFieldNames = new Set<string>();
-  for (const replacement of Object.values(replacements)) {
+  for (const rawReplacement of Object.values(replacements)) {
+    const replacement = typeof rawReplacement === 'string' ? rawReplacement : rawReplacement.value;
     for (const match of replacement.matchAll(/\{([a-zA-Z0-9_]+)\}/g)) {
       replacementFieldNames.add(match[1]);
     }

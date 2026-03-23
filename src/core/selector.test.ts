@@ -550,3 +550,146 @@ describe('markerless selections', () => {
     expect(result.success).toBe(true);
   });
 });
+
+// ---------------------------------------------------------------------------
+// Inline selections
+// ---------------------------------------------------------------------------
+
+describe('inline selections', () => {
+  it('deletes inline marker text when trigger does not fire', async () => {
+    const body = `
+      ${para('Purchase at the Closing). , [Each Purchaser shall buy Tranche Shares.] The Company agrees.')}
+    `;
+    const inputPath = buildTestDocx(body);
+    const outputPath = join(makeTempDir(), 'out.docx');
+
+    const config: SelectionsConfig = {
+      groups: [{
+        id: 'tranche_inline',
+        type: 'checkbox',
+        standalone: true,
+        markerless: true,
+        inline: true,
+        options: [{
+          marker: ', [Each Purchaser shall buy Tranche Shares.]',
+          trigger: { field: 'include_tranche', equals: true },
+          replaceWith: '',
+        }],
+      }],
+    };
+
+    await applySelections(inputPath, outputPath, config, {});
+
+    const text = extractText(outputPath);
+    expect(text).toContain('Purchase at the Closing).');
+    expect(text).toContain('The Company agrees.');
+    expect(text).not.toContain('Each Purchaser shall buy Tranche Shares');
+  });
+
+  it('keeps inline text when trigger fires', async () => {
+    const body = `
+      ${para('Purchase at the Closing). , [Each Purchaser shall buy Tranche Shares.] The Company agrees.')}
+    `;
+    const inputPath = buildTestDocx(body);
+    const outputPath = join(makeTempDir(), 'out.docx');
+
+    const config: SelectionsConfig = {
+      groups: [{
+        id: 'tranche_inline',
+        type: 'checkbox',
+        standalone: true,
+        markerless: true,
+        inline: true,
+        options: [{
+          marker: ', [Each Purchaser shall buy Tranche Shares.]',
+          trigger: { field: 'include_tranche', equals: true },
+          replaceWith: '',
+        }],
+      }],
+    };
+
+    await applySelections(inputPath, outputPath, config, { include_tranche: true });
+
+    const text = extractText(outputPath);
+    expect(text).toContain('Each Purchaser shall buy Tranche Shares');
+    expect(text).toContain('Purchase at the Closing).');
+    expect(text).toContain('The Company agrees.');
+  });
+
+  it('replaces inline text with non-empty replaceWith', async () => {
+    const body = `
+      ${para('Before [optional clause] after.')}
+    `;
+    const inputPath = buildTestDocx(body);
+    const outputPath = join(makeTempDir(), 'out.docx');
+
+    const config: SelectionsConfig = {
+      groups: [{
+        id: 'optional_inline',
+        type: 'checkbox',
+        standalone: true,
+        markerless: true,
+        inline: true,
+        options: [{
+          marker: '[optional clause]',
+          trigger: { field: 'keep_optional', equals: true },
+          replaceWith: '[REPLACED]',
+        }],
+      }],
+    };
+
+    await applySelections(inputPath, outputPath, config, {});
+
+    const text = extractText(outputPath);
+    expect(text).toContain('Before [REPLACED] after.');
+    expect(text).not.toContain('optional clause');
+  });
+
+  it('matches smart quotes against ASCII quotes in marker', async () => {
+    // Use smart quotes in the document text (\u201C and \u201D)
+    const body = `
+      ${para('Purchase at the Closing). , [Each Purchaser\u2019s \u201CShares\u201D here.] Done.')}
+    `;
+    const inputPath = buildTestDocx(body);
+    const outputPath = join(makeTempDir(), 'out.docx');
+
+    const config: SelectionsConfig = {
+      groups: [{
+        id: 'smart_quote_test',
+        type: 'checkbox',
+        standalone: true,
+        markerless: true,
+        inline: true,
+        options: [{
+          // ASCII quotes in marker — normalizeQuotes should match
+          marker: ', [Each Purchaser\'s "Shares" here.]',
+          trigger: { field: 'keep_it', equals: true },
+          replaceWith: '',
+        }],
+      }],
+    };
+
+    await applySelections(inputPath, outputPath, config, {});
+
+    const text = extractText(outputPath);
+    expect(text).toContain('Purchase at the Closing).');
+    expect(text).toContain('Done.');
+    expect(text).not.toContain('Shares');
+  });
+
+  it('schema rejects inline:true without markerless:true', () => {
+    const result = SelectionsConfigSchema.safeParse({
+      groups: [{
+        id: 'bad',
+        type: 'checkbox',
+        standalone: true,
+        inline: true,
+        options: [{ marker: 'text', trigger: { field: 'flag' } }],
+      }],
+    });
+    expect(result.success).toBe(false);
+    if (!result.success) {
+      expect(result.error.message).toContain('inline');
+    }
+  });
+});

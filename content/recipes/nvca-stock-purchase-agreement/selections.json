@@ -5,11 +5,54 @@
       "type": "checkbox",
       "standalone": true,
       "markerless": true,
+      "subClauseStopPatterns": ["^Closing Deliverables", "^Defined Terms"],
       "options": [
         {
           "marker": "Additional Closings",
           "trigger": { "field": "closing_type", "equals": "additional" },
           "replaceWith": "[Reserved]"
+        }
+      ]
+    },
+    {
+      "id": "tranche_closing_clause",
+      "type": "checkbox",
+      "standalone": true,
+      "markerless": true,
+      "inline": true,
+      "options": [
+        {
+          "marker": ", [Each Purchaser at the Initial Closing shall be obligated to purchase that number of Tranche Closing Shares (as defined below) as is set forth opposite such Purchaser's name on Exhibit A under the heading \"Tranche Closing Shares\" (as to any Purchaser, its \"Tranche Closing Shares\"), as provided in Section [1.2(c)] below.]",
+          "trigger": { "field": "include_tranche_closing", "equals": true },
+          "replaceWith": ""
+        }
+      ]
+    },
+    {
+      "id": "convertible_securities_clause",
+      "type": "checkbox",
+      "standalone": true,
+      "markerless": true,
+      "inline": true,
+      "options": [
+        {
+          "marker": "[or, as applicable, a purchase price of $[___] per share with respect to the shares of Series [____] Preferred Stock being issued [in the Initial Closing] pursuant to any cancellation or conversion of Convertible Securities (as defined below) as set forth in Section 1.3 below]",
+          "trigger": { "field": "include_convertible_securities", "equals": true },
+          "replaceWith": ""
+        }
+      ]
+    },
+    {
+      "id": "closing_reference_bracket",
+      "type": "checkbox",
+      "standalone": true,
+      "markerless": true,
+      "inline": true,
+      "options": [
+        {
+          "marker": "[with respect to such Closing]",
+          "trigger": { "field": "include_closing_reference", "equals": true },
+          "replaceWith": ""
         }
       ]
     }

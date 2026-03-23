@@ -52,30 +52,33 @@ fields:
     type: string
     description: Optional word inserted before Closing in bracketed templates
     default: ""
-  - name: optional_closing_reference
+  - name: include_convertible_securities
+    type: boolean
+    description: Include convertible securities conversion clause in Section 1.1(b)
+    default: "false"
+  - name: include_closing_reference
+    type: boolean
+    description: Include "with respect to such Closing" bracket in purchase clause
+    default: "false"
+  - name: purchaser_scope
     type: string
-    description: Optional bracket fragment after Exhibit A in opening purchase clause
-    default: ""
-  - name: optional_clause_text
-    type: string
-    description: Optional alternate purchase-price clause text for conversion scenarios
-    default: ""
+    description: Convertible securities consent scope word — set by computed.json from bind_all_convertible_holders_to_convert
   - name: optional_plural_suffix
     type: string
-    description: Optional plural suffix used in bracketed labels like Closing[s]
-    default: ""
+    description: Optional plural suffix — set by computed.json defaults
   - name: closing_heading
     type: string
-    description: Heading text used for single-closing default
-    default: Initial Closing.
+    description: Heading text — set by computed.json defaults
   - name: initial_word_lower
     type: string
-    description: Lowercase word used for single-closing phrasing
-    default: initial
+    description: Lowercase qualifier — set by computed.json defaults and rules
   - name: initial_word_title
     type: string
-    description: Titlecase word used for single-closing phrasing
-    default: Initial
+    description: Titlecase qualifier — set by computed.json defaults and rules
+  - name: bind_all_convertible_holders_to_convert
+    type: boolean
+    description: Purchasers agree on behalf of all convertible security holders to convert (not just their own)
+    default: "true"
   - name: closing_type
     type: enum
     description: Single closing or additional closings

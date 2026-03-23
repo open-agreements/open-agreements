@@ -8,8 +8,8 @@ import {
   SafeDocxError,
 } from '@usejunior/docx-core';
 import { enumerateTextParts, getGeneralTextPartNames } from './ooxml-parts.js';
-import { parseReplacementKey } from './replacement-keys.js';
-import type { ParsedKey } from './replacement-keys.js';
+import { parseReplacementKey, resolveReplacementValue } from './replacement-keys.js';
+import type { ParsedKey, ReplacementValue } from './replacement-keys.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 
@@ -69,7 +69,7 @@ export interface PatchOptions {
 export async function patchDocument(
   inputPath: string,
   outputPath: string,
-  replacements: Record<string, string>,
+  replacements: Record<string, ReplacementValue>,
   options?: PatchOptions,
 ): Promise<PatchResult> {
   const zip = new AdmZip(inputPath);
@@ -85,7 +85,8 @@ export async function patchDocument(
 
   // Parse and classify all keys, normalizing smart quotes
   const parsedKeys: ParsedKey[] = [];
-  for (const [key, value] of Object.entries(replacements)) {
+  for (const [key, rawValue] of Object.entries(replacements)) {
+    const value = resolveReplacementValue(rawValue);
     const parsed = parseReplacementKey(key, value);
     // Normalize smart quotes in search text and context for matching
     if (parsed.type === 'context') {

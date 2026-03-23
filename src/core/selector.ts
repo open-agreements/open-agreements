@@ -11,9 +11,17 @@ import { z } from 'zod';
 import AdmZip from 'adm-zip';
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
 import type { Document, Element, Node } from '@xmldom/xmldom';
+import { getParagraphText, replaceParagraphTextRange, SafeDocxError } from '@usejunior/docx-core';
 import { enumerateTextParts, getGeneralTextPartNames } from './recipe/ooxml-parts.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
+
+/** Normalize smart quotes to ASCII equivalents for matching. */
+function normalizeQuotes(text: string): string {
+  return text
+    .replace(/[\u2018\u2019\u2039\u203A]/g, "'")
+    .replace(/[\u201C\u201D\u201A\u201E\u00AB\u00BB]/g, '"');
+}
 
 // ---------------------------------------------------------------------------
 // Schema
@@ -38,12 +46,28 @@ const GroupSchema = z
     type: z.enum(['radio', 'checkbox']),
     standalone: z.boolean().optional(),
     markerless: z.boolean().optional(),
+    inline: z.boolean().optional(),
     cellContext: z.string().optional(),
+    subClauseStopPatterns: z.array(z.string()).optional(),
     options: z.array(OptionSchema).min(1),
   })
   .refine(
     (g) => g.standalone === true || g.markerless === true || g.options.length >= 2,
     { message: 'Non-standalone/non-markerless groups require at least 2 options' },
+  )
+  .refine(
+    (g) => {
+      if (!g.subClauseStopPatterns) return true;
+      for (const p of g.subClauseStopPatterns) {
+        try { new RegExp(p, 'i'); } catch { return false; }
+      }
+      return true;
+    },
+    { message: 'subClauseStopPatterns must contain valid regular expressions' },
+  )
+  .refine(
+    (g) => !g.inline || g.markerless === true,
+    { message: 'inline: true requires markerless: true' },
   );
 
 export const SelectionsConfigSchema = z.object({
@@ -555,10 +579,11 @@ function processMarkerlessGroup(
     // Snapshot all paragraphs before mutating to avoid live NodeList issues
     const allParagraphs = doc.getElementsByTagNameNS(W_NS, 'p');
     const matchedParas: Element[] = [];
+    const normalizedMarkerText = normalizeQuotes(option.marker);
     for (let pi = 0; pi < allParagraphs.length; pi++) {
       const para = allParagraphs[pi];
       const text = extractParagraphText(para);
-      if (text && text.includes(option.marker)) {
+      if (text && normalizeQuotes(text).includes(normalizedMarkerText)) {
         matchedParas.push(para);
       }
     }
@@ -570,7 +595,40 @@ function processMarkerlessGroup(
       continue;
     }
 
-    // Unselected — process each matched paragraph
+    // Unselected — inline mode: delete/replace marker text within the paragraph
+    if (group.inline) {
+      for (const markerPara of matchedParas) {
+        const normalizedMarker = normalizeQuotes(option.marker);
+        const replacement = option.replaceWith ?? '';
+        const globalPara = markerPara as unknown as globalThis.Element;
+        let text = normalizeQuotes(getParagraphText(globalPara));
+        let safety = 0;
+        while (safety++ < 50) {
+          const idx = text.indexOf(normalizedMarker);
+          if (idx === -1) break;
+          try {
+            replaceParagraphTextRange(globalPara, idx, idx + normalizedMarker.length, replacement);
+            madeChanges = true;
+          } catch (e) {
+            if (e instanceof SafeDocxError) {
+              // Fallback: formatting-destructive text splice via xmldom w:t elements
+              const rawText = extractParagraphText(markerPara);
+              const rawIdx = normalizeQuotes(rawText).indexOf(normalizedMarker);
+              if (rawIdx !== -1) {
+                const newText = rawText.slice(0, rawIdx) + replacement + rawText.slice(rawIdx + normalizedMarker.length);
+                replaceParagraphText(markerPara, newText);
+                madeChanges = true;
+              }
+            }
+            break;
+          }
+          text = normalizeQuotes(getParagraphText(globalPara));
+        }
+      }
+      continue;
+    }
+
+    // Unselected — process each matched paragraph (paragraph-level deletion)
     for (const markerPara of matchedParas) {
       const parent = markerPara.parentNode;
       if (!parent) continue;
@@ -592,15 +650,27 @@ function processMarkerlessGroup(
 
       // Walk forward to collect sub-clause paragraphs
       const subClauses: Element[] = [];
+      const customStopRe = group.subClauseStopPatterns?.length
+        ? new RegExp(group.subClauseStopPatterns.map(p => `(?:${p})`).join('|'), 'i')
+        : null;
+
+      // Get marker paragraph's numbering level for level-aware stop
+      const markerIlvl = getNumberingLevel(markerPara);
+
       for (let si = markerIdx + 1; si < siblings.length; si++) {
         const p = siblings[si];
+
+        // Stop at auto-numbered paragraphs at same or higher level
+        if (hasAutoNumbering(p, markerIlvl !== -1 ? markerIlvl : undefined)) break;
+
         const text = extractParagraphText(p);
         // Stop at next section heading or another option's marker
         if (text) {
           const isAnotherMarker = group.options.some((o) => text.includes(o.marker));
           // Stop at what looks like a section heading (e.g., "(c)", "1.3", "SECTION")
           const isSectionHeading = /^\(?[a-z]\)|^\d+\.\d+|^SECTION\b|^ARTICLE\b/i.test(text);
-          if (isAnotherMarker || isSectionHeading) break;
+          const isCustomStop = customStopRe ? customStopRe.test(text) : false;
+          if (isAnotherMarker || isSectionHeading || isCustomStop) break;
         }
         subClauses.push(p);
       }
@@ -623,6 +693,39 @@ function processMarkerlessGroup(
   }
 
   return madeChanges;
+}
+
+/** Check if a paragraph has Word auto-numbering at or above the given level. */
+function hasAutoNumbering(para: Element, maxIlvl?: number): boolean {
+  for (let i = 0; i < para.childNodes.length; i++) {
+    const child = para.childNodes[i] as Element;
+    if (child.nodeType !== 1) continue;
+    if (child.localName === 'pPr' && child.namespaceURI === W_NS) {
+      const numPrs = child.getElementsByTagNameNS(W_NS, 'numPr');
+      if (numPrs.length === 0) return false;
+      if (maxIlvl === undefined) return true;
+      const ilvlEl = numPrs[0].getElementsByTagNameNS(W_NS, 'ilvl');
+      if (ilvlEl.length === 0) return true; // no level = top-level
+      const level = parseInt(ilvlEl[0].getAttribute('w:val') ?? '0', 10);
+      return level <= maxIlvl;
+    }
+  }
+  return false;
+}
+
+/** Get the numbering level (ilvl) of a paragraph, or -1 if not numbered. */
+function getNumberingLevel(para: Element): number {
+  for (let i = 0; i < para.childNodes.length; i++) {
+    const child = para.childNodes[i] as Element;
+    if (child.nodeType !== 1) continue;
+    if (child.localName === 'pPr' && child.namespaceURI === W_NS) {
+      const numPrs = child.getElementsByTagNameNS(W_NS, 'numPr');
+      if (numPrs.length === 0) return -1;
+      const ilvlEl = numPrs[0].getElementsByTagNameNS(W_NS, 'ilvl');
+      return parseInt(ilvlEl[0]?.getAttribute('w:val') ?? '0', 10);
+    }
+  }
+  return -1;
 }
 
 /** Walk up the DOM to find an ancestor with the given local name. */

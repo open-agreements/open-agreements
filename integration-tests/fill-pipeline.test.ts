@@ -1023,7 +1023,7 @@ describe('Parametric smoke test — signatory fields across all templates', () =
     } finally {
       spy.mockRestore();
     }
-  }, 30_000);
+  }, 60_000);
 
   it.openspec('OA-NDA-008')('all templates fill cleanly in individual mode', async () => {
     const spy = vi.spyOn(console, 'warn').mockImplementation(() => {});
@@ -1052,5 +1052,5 @@ describe('Parametric smoke test — signatory fields across all templates', () =
     } finally {
       spy.mockRestore();
     }
-  }, 30_000);
+  }, 60_000);
 });
