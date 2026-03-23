@@ -58,6 +58,8 @@ export const ComputedRuleSchema = z.object({
 export const ComputedProfileSchema = z.object({
   version: z.string().default('1.0'),
   max_passes: z.number().int().min(1).max(20).default(4),
+  /** Unconditional defaults applied before any rules evaluate. */
+  defaults: z.record(z.string().min(1), PrimitiveSchema).default({}),
   rules: z.array(ComputedRuleSchema).min(1),
 });
 
@@ -202,6 +204,14 @@ export function evaluateComputedProfile(
 ): EvaluatedComputedProfile {
   const fillValues: ComputedValueMap = { ...inputValues };
   const auditValues: ComputedValueMap = {};
+
+  // Apply unconditional defaults for fields not already provided by input
+  for (const [field, value] of Object.entries(profile.defaults)) {
+    if (!(field in fillValues) || fillValues[field] === undefined || fillValues[field] === '') {
+      fillValues[field] = value;
+    }
+  }
+
   const combinedState: ComputedValueMap = { ...fillValues };
   const passes: ComputedPassTrace[] = [];
 
