@@ -1,6 +1,13 @@
 {
   "version": "1.0",
   "max_passes": 4,
+  "defaults": {
+    "initial_word_lower": "",
+    "initial_word_title": "",
+    "closing_heading": "Closing.",
+    "optional_plural_suffix": "",
+    "purchaser_scope": "all"
+  },
   "rules": [
     {
       "id": "derive-dispute-resolution-track-arbitration",
@@ -68,6 +75,29 @@
       ],
       "set_fill": {
         "judicial_district": "District of Delaware"
+      }
+    },
+    {
+      "id": "derive-purchaser-scope-singular",
+      "description": "Single purchaser: [such/all] resolves to 'such'.",
+      "when_all": [
+        { "field": "purchaser_is_plural", "op": "eq", "value": "false" }
+      ],
+      "set_fill": {
+        "purchaser_scope": "such"
+      }
+    },
+    {
+      "id": "derive-closing-type-additional",
+      "description": "When closing_type is additional, populate Initial qualifier fields.",
+      "when_all": [
+        { "field": "closing_type", "op": "eq", "value": "additional" }
+      ],
+      "set_fill": {
+        "initial_word_lower": "initial ",
+        "initial_word_title": "Initial ",
+        "closing_heading": "Initial Closing.",
+        "optional_plural_suffix": "s"
       }
     },
     {

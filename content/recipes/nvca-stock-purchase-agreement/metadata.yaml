@@ -60,6 +60,9 @@ fields:
     type: boolean
     description: Include "with respect to such Closing" bracket in purchase clause
     default: "false"
+  - name: purchaser_scope
+    type: string
+    description: Singular/plural scope word — set by computed.json defaults and rules
   - name: optional_plural_suffix
     type: string
     description: Optional plural suffix — set by computed.json defaults
@@ -72,6 +75,10 @@ fields:
   - name: initial_word_title
     type: string
     description: Titlecase qualifier — set by computed.json defaults and rules
+  - name: purchaser_is_plural
+    type: boolean
+    description: Whether the deal has multiple purchasers (controls singular/plural grammar)
+    default: "true"
   - name: closing_type
     type: enum
     description: Single closing or additional closings

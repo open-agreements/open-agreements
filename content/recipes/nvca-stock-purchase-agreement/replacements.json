@@ -16,6 +16,7 @@
   "purchase price of $ > [__]": "{purchase_price_per_share}",
   "such Series > [__]": "{series_designation}",
   "[applicable]": "{applicable_word}",
+  "[such/all]": "{purchaser_scope}",
   "Closing > [s]": "{optional_plural_suffix}",
   "[Initial Closing.]": { "value": "{closing_heading}", "format": { "underline": true } },
   "[initial] ": "{initial_word_lower}",
