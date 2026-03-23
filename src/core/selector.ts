@@ -11,9 +11,17 @@ import { z } from 'zod';
 import AdmZip from 'adm-zip';
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
 import type { Document, Element, Node } from '@xmldom/xmldom';
+import { getParagraphText, replaceParagraphTextRange, SafeDocxError } from '@usejunior/docx-core';
 import { enumerateTextParts, getGeneralTextPartNames } from './recipe/ooxml-parts.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
+
+/** Normalize smart quotes to ASCII equivalents for matching. */
+function normalizeQuotes(text: string): string {
+  return text
+    .replace(/[\u2018\u2019\u2039\u203A]/g, "'")
+    .replace(/[\u201C\u201D\u201A\u201E\u00AB\u00BB]/g, '"');
+}
 
 // ---------------------------------------------------------------------------
 // Schema
@@ -38,6 +46,7 @@ const GroupSchema = z
     type: z.enum(['radio', 'checkbox']),
     standalone: z.boolean().optional(),
     markerless: z.boolean().optional(),
+    inline: z.boolean().optional(),
     cellContext: z.string().optional(),
     subClauseStopPatterns: z.array(z.string()).optional(),
     options: z.array(OptionSchema).min(1),
@@ -55,6 +64,10 @@ const GroupSchema = z
       return true;
     },
     { message: 'subClauseStopPatterns must contain valid regular expressions' },
+  )
+  .refine(
+    (g) => !g.inline || g.markerless === true,
+    { message: 'inline: true requires markerless: true' },
   );
 
 export const SelectionsConfigSchema = z.object({
@@ -566,10 +579,11 @@ function processMarkerlessGroup(
     // Snapshot all paragraphs before mutating to avoid live NodeList issues
     const allParagraphs = doc.getElementsByTagNameNS(W_NS, 'p');
     const matchedParas: Element[] = [];
+    const normalizedMarkerText = normalizeQuotes(option.marker);
     for (let pi = 0; pi < allParagraphs.length; pi++) {
       const para = allParagraphs[pi];
       const text = extractParagraphText(para);
-      if (text && text.includes(option.marker)) {
+      if (text && normalizeQuotes(text).includes(normalizedMarkerText)) {
         matchedParas.push(para);
       }
     }
@@ -581,7 +595,33 @@ function processMarkerlessGroup(
       continue;
     }
 
-    // Unselected — process each matched paragraph
+    // Unselected — inline mode: delete/replace marker text within the paragraph
+    if (group.inline) {
+      for (const markerPara of matchedParas) {
+        const normalizedMarker = normalizeQuotes(option.marker);
+        const replacement = option.replaceWith ?? '';
+        const globalPara = markerPara as unknown as globalThis.Element;
+        let text = normalizeQuotes(getParagraphText(globalPara));
+        let safety = 0;
+        while (safety++ < 50) {
+          const idx = text.indexOf(normalizedMarker);
+          if (idx === -1) break;
+          try {
+            replaceParagraphTextRange(globalPara, idx, idx + normalizedMarker.length, replacement);
+            madeChanges = true;
+          } catch (e) {
+            if (e instanceof SafeDocxError) {
+              console.warn(`[selector] inline replacement failed for group "${group.id}": ${e.message}`);
+            }
+            break;
+          }
+          text = normalizeQuotes(getParagraphText(globalPara));
+        }
+      }
+      continue;
+    }
+
+    // Unselected — process each matched paragraph (paragraph-level deletion)
     for (const markerPara of matchedParas) {
       const parent = markerPara.parentNode;
       if (!parent) continue;

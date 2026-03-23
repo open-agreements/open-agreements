@@ -13,6 +13,20 @@
           "replaceWith": "[Reserved]"
         }
       ]
+    },
+    {
+      "id": "tranche_closing_clause",
+      "type": "checkbox",
+      "standalone": true,
+      "markerless": true,
+      "inline": true,
+      "options": [
+        {
+          "marker": ", [Each Purchaser at the Initial Closing shall be obligated to purchase that number of Tranche Closing Shares (as defined below) as is set forth opposite such Purchaser's name on Exhibit A under the heading \"Tranche Closing Shares\" (as to any Purchaser, its \"Tranche Closing Shares\"), as provided in Section [1.2(c)] below.]",
+          "trigger": { "field": "include_tranche_closing", "equals": true },
+          "replaceWith": ""
+        }
+      ]
     }
   ]
 }
