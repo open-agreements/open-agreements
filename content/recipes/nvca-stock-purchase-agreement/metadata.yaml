@@ -62,7 +62,7 @@ fields:
     default: "false"
   - name: purchaser_scope
     type: string
-    description: Singular/plural scope word — set by computed.json defaults and rules
+    description: Convertible securities consent scope word — set by computed.json from bind_all_convertible_holders_to_convert
   - name: optional_plural_suffix
     type: string
     description: Optional plural suffix — set by computed.json defaults
@@ -75,9 +75,9 @@ fields:
   - name: initial_word_title
     type: string
     description: Titlecase qualifier — set by computed.json defaults and rules
-  - name: purchaser_is_plural
+  - name: bind_all_convertible_holders_to_convert
     type: boolean
-    description: Whether the deal has multiple purchasers (controls singular/plural grammar)
+    description: Purchasers agree on behalf of all convertible security holders to convert (not just their own)
     default: "true"
   - name: closing_type
     type: enum

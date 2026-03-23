@@ -78,10 +78,10 @@
       }
     },
     {
-      "id": "derive-purchaser-scope-singular",
-      "description": "Single purchaser: [such/all] resolves to 'such'.",
+      "id": "derive-purchaser-scope-narrow",
+      "description": "Narrow consent: each purchaser binds only their own convertible securities.",
       "when_all": [
-        { "field": "purchaser_is_plural", "op": "eq", "value": "false" }
+        { "field": "bind_all_convertible_holders_to_convert", "op": "eq", "value": "false" }
       ],
       "set_fill": {
         "purchaser_scope": "such"
