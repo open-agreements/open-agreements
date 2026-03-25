@@ -146,10 +146,7 @@ function pickProtocolVersion(params: unknown): string {
 }
 
 function sendResponse(response: JsonRpcResponse): void {
-  const body = JSON.stringify(response);
-  const bytes = Buffer.byteLength(body, 'utf8');
-  const framed = `Content-Length: ${bytes}\r\nContent-Type: application/json\r\n\r\n${body}`;
-  process.stdout.write(framed);
+  process.stdout.write(JSON.stringify(response) + '\n');
 }
 
 function sendError(id: JsonRpcId, code: number, message: string, data?: unknown): void {
