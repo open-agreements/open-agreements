@@ -1,6 +1,6 @@
 {
   "name": "open-agreements",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "workspaces": [
     "packages/allure-test-factory",
     "packages/contract-templates-mcp",
@@ -55,6 +55,7 @@
     "check:libreoffice": "node scripts/check_libreoffice_headless.mjs",
     "check:gemini-extension-manifest": "node scripts/check_gemini_extension_manifest.mjs",
     "check:isolated-runtime": "node scripts/check_isolated_package_runtime.mjs",
+    "generate:concerto": "node scripts/generate_concerto_types.mjs",
     "generate:schemas": "node scripts/generate_json_schemas.mjs",
     "generate:employment-templates": "node scripts/generate_employment_templates.mjs",
     "generate:employment-templates:libreoffice": "node scripts/generate_employment_templates_libreoffice.mjs",
