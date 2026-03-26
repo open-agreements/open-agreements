@@ -26,5 +26,7 @@
   "acquisition_exception_shares": "500,000",
   "strategic_partnership_exception_shares": "250,000",
   "qualified_financing_notice_days": "30",
-  "redemption_start_date": "March 20, 2031"
+  "redemption_start_date": "March 20, 2031",
+  "include_pay_to_play": false,
+  "include_redemption": false
 }

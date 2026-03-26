@@ -1,0 +1,95 @@
+{
+  "groups": [
+    {
+      "id": "dividends",
+      "type": "radio",
+      "markerless": true,
+      "subClauseStopPatterns": ["^Liquidation"],
+      "options": [
+        {
+          "marker": "highest Preferred Stock dividend for the applicable series",
+          "trigger": "default"
+        },
+        {
+          "marker": "The holders of then outstanding shares of Preferred Stock shall be entitled to receive, only when, as and if declared",
+          "trigger": { "field": "dividend_type", "equals": "non_cumulative_fixed" }
+        },
+        {
+          "marker": "From and after the date of the issuance of any shares of Preferred Stock, dividends at the rate per annum",
+          "trigger": { "field": "dividend_type", "equals": "cumulative" }
+        }
+      ]
+    },
+    {
+      "id": "liquidation_section_2_1",
+      "type": "radio",
+      "markerless": true,
+      "subClauseStopPatterns": ["^2\\.1Preferential", "^Payments to Holders of Common Stock", "^2\\.2Distribution", "^Deemed Liquidation Events"],
+      "options": [
+        {
+          "marker": "such amount per share as would have been payable had all shares",
+          "trigger": "default"
+        },
+        {
+          "marker": "2.1Preferential Payments",
+          "trigger": { "field": "liquidation_participation", "equals": "participating" }
+        }
+      ]
+    },
+    {
+      "id": "liquidation_section_2_2",
+      "type": "radio",
+      "markerless": true,
+      "subClauseStopPatterns": ["^Deemed Liquidation Events"],
+      "options": [
+        {
+          "marker": "Payments to Holders of Common Stock",
+          "trigger": "default"
+        },
+        {
+          "marker": "Distribution of Remaining Assets",
+          "trigger": { "field": "liquidation_participation", "equals": "participating" }
+        }
+      ]
+    },
+    {
+      "id": "anti_dilution",
+      "type": "radio",
+      "markerless": true,
+      "subClauseStopPatterns": ["^Determination of Consideration"],
+      "options": [
+        {
+          "marker": "determined in accordance with the following formula",
+          "trigger": "default"
+        },
+        {
+          "marker": "4.4.4Adjustment of Conversion Price",
+          "trigger": { "field": "anti_dilution_type", "equals": "full_ratchet" }
+        }
+      ]
+    },
+    {
+      "id": "pay_to_play",
+      "type": "checkbox",
+      "markerless": true,
+      "subClauseStopPatterns": ["^Redemption"],
+      "options": [
+        {
+          "marker": "Special Mandatory Conversion.,",
+          "trigger": { "field": "include_pay_to_play" }
+        }
+      ]
+    },
+    {
+      "id": "redemption_provisions",
+      "type": "checkbox",
+      "markerless": true,
+      "options": [
+        {
+          "marker": "General. Unless prohibited by Delaware law",
+          "trigger": { "field": "include_redemption" }
+        }
+      ]
+    }
+  ]
+}

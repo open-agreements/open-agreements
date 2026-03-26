@@ -11,5 +11,10 @@
   "original_issue_price": "4.25",
   "initial_purchase_price": "4.25",
   "par_value": "0.0001",
-  "effective_date": "March 20, 2026"
+  "effective_date": "March 20, 2026",
+  "dividend_type": "non_cumulative_as_converted",
+  "liquidation_participation": "non_participating",
+  "anti_dilution_type": "broad_based_weighted_average",
+  "include_pay_to_play": false,
+  "include_redemption": false
 }
