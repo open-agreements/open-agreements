@@ -13,6 +13,8 @@
 [![Socket Badge](https://socket.dev/api/badge/npm/package/open-agreements)](https://socket.dev/npm/package/open-agreements)
 [![install size](https://packagephobia.com/badge?p=open-agreements)](https://packagephobia.com/result?p=open-agreements)
 
+[English](./README.md) | [Español](./README.es.md) | [简体中文](./README.zh.md) | [Português (Brasil)](./README.pt-br.md) | [Deutsch](./README.de.md)
+
 <!-- TODO: Add OpenSSF Scorecard badge once repo is indexed at securityscorecards.dev -->
 <!-- TODO: Add OpenSSF Best Practices badge after registration at bestpractices.dev -->
 <!-- TODO: Re-evaluate Snyk badge — Advisor migrated to security.snyk.io (July 2024) -->
