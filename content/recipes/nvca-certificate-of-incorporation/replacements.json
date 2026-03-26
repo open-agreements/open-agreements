@@ -96,7 +96,7 @@
   "[; provided, however, that Excluded Shares (as such term is defined in Section 6.2) shall not be redeemed and shall be excluded from the calculations set forth in this sentence] > [or officer]": "{or_officer_clause}",
   "[annually] > [the greater of]": "{dividend_formula_prefix} ",
   "[or officers] > [the sum of]": "{dividend_formula_alt}",
-  "Redemption. > [Other than as set forth in Section 2.3.2(b), the Preferred Stock is not redeemable at the option of the holder or the Corporation.],": "{no_redemption_clause}",
+"Redemption. > [Other than as set forth in Section 2.3.2(b), the Preferred Stock is not redeemable at the option of the holder or the Corporation.],": "{no_redemption_clause}",
   "Preferred Stock”), > [all]": "{preferred_shares_designated_portion}",
   "designated as “Series > A Preferred Stock": "{series_designation} Preferred Stock"
 }
