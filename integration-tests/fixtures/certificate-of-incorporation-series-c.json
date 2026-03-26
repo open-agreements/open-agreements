@@ -36,5 +36,11 @@
   "dividend_formula_prefix": "the greater of",
   "dividend_formula_alt": "the sum of",
   "acquisition_exception_shares": "500,000",
-  "strategic_partnership_exception_shares": "250,000"
+  "strategic_partnership_exception_shares": "250,000",
+  "dividend_type": "non_cumulative_as_converted",
+  "liquidation_participation": "non_participating",
+  "anti_dilution_type": "broad_based_weighted_average",
+  "include_pay_to_play": false,
+  "include_redemption": true,
+  "include_redemption_cross_ref": true
 }

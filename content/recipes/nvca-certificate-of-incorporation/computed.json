@@ -73,6 +73,27 @@
       "description": "Remove redemption Section 6.1 cross-reference (<5% of deals)",
       "when_all": [{ "field": "include_redemption_cross_ref", "op": "neq", "value": true }],
       "set_fill": { "redemption_cross_ref_clause": "" }
+    },
+    {
+      "id": "no-redemption-statement-include",
+      "description": "Keep 'not redeemable' statement when no full redemption (default)",
+      "when_all": [{ "field": "include_redemption", "op": "neq", "value": true }],
+      "set_fill": { "no_redemption_clause": "Other than as set forth in Section 2.3.2(b), the Preferred Stock is not redeemable at the option of the holder or the Corporation." }
+    },
+    {
+      "id": "no-redemption-statement-exclude",
+      "description": "Remove 'not redeemable' statement when full redemption included",
+      "when_all": [{ "field": "include_redemption", "op": "eq", "value": true }],
+      "set_fill": { "no_redemption_clause": "" }
+    },
+    {
+      "id": "redemption-cross-ref-force-off",
+      "description": "Force redemption cross-ref off when redemption article is excluded",
+      "when_all": [
+        { "field": "include_redemption", "op": "neq", "value": true },
+        { "field": "include_redemption_cross_ref", "op": "eq", "value": true }
+      ],
+      "set_fill": { "redemption_cross_ref_clause": "" }
     }
   ]
 }

@@ -144,6 +144,24 @@ fields:
   - name: strategic_partnership_exception_shares
     type: string
     description: Max shares issuable for strategic partnerships without triggering anti-dilution
+  - name: dividend_type
+    type: string
+    description: 'Dividend structure: non_cumulative_as_converted (>95%), non_cumulative_fixed, or cumulative'
+    default: non_cumulative_as_converted
+  - name: liquidation_participation
+    type: string
+    description: 'Liquidation participation type: non_participating (94-96%) or participating'
+    default: non_participating
+  - name: anti_dilution_type
+    type: string
+    description: 'Anti-dilution formula: broad_based_weighted_average (>98%) or full_ratchet'
+    default: broad_based_weighted_average
+  - name: include_pay_to_play
+    type: boolean
+    description: Include Section 5A pay-to-play conversion provisions (<5% of deals)
+  - name: include_redemption
+    type: boolean
+    description: Include Article Sixth full redemption provisions (2-5% of deals)
 priority_fields:
   - company_name
   - original_issue_price
