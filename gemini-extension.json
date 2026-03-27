@@ -1,6 +1,6 @@
 {
   "name": "open-agreements",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "description": "Local MCP extension for OpenAgreements workspace organization and contract template drafting.",
   "contextFileName": "GEMINI.md",
   "entrypoint": "GEMINI.md",
