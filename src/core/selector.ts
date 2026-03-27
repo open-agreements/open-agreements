@@ -85,6 +85,79 @@ export function loadSelectionsConfig(path: string): SelectionsConfig {
 }
 
 // ---------------------------------------------------------------------------
+// Bookmark-aware removal
+// ---------------------------------------------------------------------------
+
+/**
+ * Remove a set of paragraphs from the document, cleaning up any bookmark
+ * start/end elements whose counterparts would be orphaned.
+ *
+ * Phase A: For each doomed paragraph, find bookmarkStart/End elements.
+ *          If the counterpart (by w:id) lives outside the doomed set, mark it
+ *          for removal so no orphans remain.
+ * Phase B: Remove orphaned counterparts.
+ * Phase C: Remove the paragraphs themselves.
+ */
+function removeWithBookmarkCleanup(doc: Document, parasToRemove: Set<Element>): void {
+  if (parasToRemove.size === 0) return;
+
+  const orphanedCounterparts: Element[] = [];
+
+  for (const p of parasToRemove) {
+    const starts = p.getElementsByTagNameNS(W_NS, 'bookmarkStart');
+    for (let i = 0; i < starts.length; i++) {
+      const id = starts[i].getAttribute('w:id');
+      if (!id) continue;
+      const allEnds = doc.getElementsByTagNameNS(W_NS, 'bookmarkEnd');
+      for (let j = 0; j < allEnds.length; j++) {
+        if (allEnds[j].getAttribute('w:id') !== id) continue;
+        const endParent = findAncestorElement(allEnds[j], 'p');
+        if (!endParent || !parasToRemove.has(endParent)) {
+          orphanedCounterparts.push(allEnds[j]);
+        }
+        break;
+      }
+    }
+
+    const ends = p.getElementsByTagNameNS(W_NS, 'bookmarkEnd');
+    for (let i = 0; i < ends.length; i++) {
+      const id = ends[i].getAttribute('w:id');
+      if (!id) continue;
+      const allStarts = doc.getElementsByTagNameNS(W_NS, 'bookmarkStart');
+      for (let j = 0; j < allStarts.length; j++) {
+        if (allStarts[j].getAttribute('w:id') !== id) continue;
+        const startParent = findAncestorElement(allStarts[j], 'p');
+        if (!startParent || !parasToRemove.has(startParent)) {
+          orphanedCounterparts.push(allStarts[j]);
+        }
+        break;
+      }
+    }
+  }
+
+  for (const el of orphanedCounterparts) {
+    el.parentNode?.removeChild(el);
+  }
+
+  for (const p of parasToRemove) {
+    p.parentNode?.removeChild(p);
+  }
+}
+
+/** Find the nearest ancestor element with the given local name (W namespace). */
+function findAncestorElement(node: Node, localName: string): Element | null {
+  let current = node.parentNode;
+  while (current) {
+    if (current.nodeType === 1) {
+      const el = current as Element;
+      if (el.localName === localName && el.namespaceURI === W_NS) return el;
+    }
+    current = current.parentNode;
+  }
+  return null;
+}
+
+// ---------------------------------------------------------------------------
 // Helpers
 // ---------------------------------------------------------------------------
 
@@ -405,6 +478,7 @@ function processGroup(
 
   // Step 5 & 6: Remove unselected options + sub-clauses, mark selected as checked
   let madeChanges = false;
+  const parasToRemove = new Set<Element>();
 
   for (const item of classified) {
     if (item.ownerOptionIndex === -1) continue; // header — always keep
@@ -416,11 +490,13 @@ function processGroup(
         madeChanges = true;
       }
     } else {
-      // Unselected: remove paragraph
-      item.para.parentNode?.removeChild(item.para);
+      // Unselected: collect for bookmark-aware removal
+      parasToRemove.add(item.para);
       madeChanges = true;
     }
   }
+
+  removeWithBookmarkCleanup(doc, parasToRemove);
 
   // Ensure at least one <w:p> remains in the cell (OOXML requirement)
   const remainingParas = cell.getElementsByTagNameNS(W_NS, 'p');
@@ -528,9 +604,7 @@ function processStandaloneGroup(
             if (text && hasOptionPrefix(text)) break; // next option — stop
             toRemove.push(p);
           }
-          for (const p of toRemove) {
-            p.parentNode?.removeChild(p);
-          }
+          removeWithBookmarkCleanup(doc, new Set(toRemove));
           // Ensure at least one <w:p> remains in cell
           const remaining = cell.getElementsByTagNameNS(W_NS, 'p');
           if (remaining.length === 0) {
@@ -540,7 +614,7 @@ function processStandaloneGroup(
         }
       } else {
         // No cell parent — just remove the paragraph
-        markerPara.parentNode?.removeChild(markerPara);
+        removeWithBookmarkCleanup(doc, new Set([markerPara]));
       }
       madeChanges = true;
     }
@@ -572,6 +646,7 @@ function processMarkerlessGroup(
 ): boolean {
   const selectedIndices = evaluateTriggers(group, data);
   let madeChanges = false;
+  const parasToRemove = new Set<Element>();
 
   for (let oi = 0; oi < group.options.length; oi++) {
     const option = group.options[oi];
@@ -676,21 +751,21 @@ function processMarkerlessGroup(
       }
 
       if (option.replaceWith !== undefined) {
-        // Replace matched paragraph text, remove sub-clauses
+        // Replace matched paragraph text; sub-clauses deferred for removal
         replaceParagraphText(markerPara, option.replaceWith);
-        for (const p of subClauses) {
-          p.parentNode?.removeChild(p);
-        }
       } else {
-        // Remove matched paragraph + sub-clauses
-        markerPara.parentNode?.removeChild(markerPara);
-        for (const p of subClauses) {
-          p.parentNode?.removeChild(p);
-        }
+        // Marker paragraph deferred for removal
+        parasToRemove.add(markerPara);
+      }
+      for (const p of subClauses) {
+        parasToRemove.add(p);
       }
       madeChanges = true;
     }
   }
+
+  // Deferred removal with bookmark cleanup
+  removeWithBookmarkCleanup(doc, parasToRemove);
 
   return madeChanges;
 }
