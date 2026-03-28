@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Agent Skill](https://img.shields.io/badge/agent--skill-open--agreements-purple)](https://skills.sh)
 [![CI](https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml/badge.svg)](https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml)
-[![MCP Server Status](https://img.shields.io/endpoint?url=https%3A%2F%2Fopenagreements.ai%2Fapi%2Fstatus%3Fformat%3Dshields)](https://openagreements.openstatus.dev/)
+[![MCP Server Status](https://img.shields.io/endpoint?url=https%3A%2F%2Fopenagreements.org%2Fapi%2Fstatus%3Fformat%3Dshields)](https://openagreements.openstatus.dev/)
 [![codecov](https://img.shields.io/codecov/c/github/open-agreements/open-agreements/main)](https://app.codecov.io/gh/open-agreements/open-agreements)
 [![GitHub stargazers](https://img.shields.io/github/stars/open-agreements/open-agreements?style=social)](https://github.com/open-agreements/open-agreements/stargazers)
 [![Tests: Vitest](https://img.shields.io/badge/tests-vitest-6E9F18)](https://vitest.dev/)
@@ -51,7 +51,7 @@ Completa plantillas estándar de acuerdos legales y genera archivos DOCX listos 
 
 OpenAgreements admite dos modos de ejecución con límites de confianza diferentes:
 
-- Conector MCP remoto alojado (`https://openagreements.ai/api/mcp`) para configuración rápida en Claude.
+- Conector MCP remoto alojado (`https://openagreements.org/api/mcp`) para configuración rápida en Claude.
 - Ejecución totalmente local del paquete (`npx`, instalación global o paquete MCP local por stdio) para flujos de trabajo locales en tu máquina.
 
 No existe una recomendación de modo global por defecto. Elige según sensibilidad del documento, políticas internas y necesidades de velocidad del flujo de trabajo. Consulta `docs/trust-checklist.md` para un resumen de flujo de datos en 60 segundos.
@@ -127,7 +127,7 @@ Este repositorio incluye un manifiesto de plugin de Cursor con integración MCP:
 
 La configuración MCP por defecto en `mcp.json` incluye:
 
-- Conector MCP OpenAgreements alojado (`https://openagreements.ai/api/mcp`)
+- Conector MCP OpenAgreements alojado (`https://openagreements.org/api/mcp`)
 - Servidor MCP local de workspace (`npx -y @open-agreements/contracts-workspace-mcp`)
 - Servidor MCP local para redacción de plantillas (`npx -y @open-agreements/contract-templates-mcp`)
 
