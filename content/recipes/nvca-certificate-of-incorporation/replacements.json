@@ -1,6 +1,6 @@
 {
   "INCORPORATIONOF > [_________]": "{company_name}",
-  "[____________], a corporation": "{company_name}, a corporation",
+  "[____________], a corporation > [____________]": "{company_name}",
   "name of this corporation is > [_______________]": "{company_name}",
   "registered agent at such address is > [_____________________]": "{registered_agent_name}",
   "State of Delaware is > [_____________]": "{registered_agent_address}",
