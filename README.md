@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Agent Skill](https://img.shields.io/badge/agent--skill-open--agreements-purple)](https://skills.sh)
 [![CI](https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml/badge.svg)](https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml)
-[![MCP Server Status](https://img.shields.io/endpoint?url=https%3A%2F%2Fopenagreements.ai%2Fapi%2Fstatus%3Fformat%3Dshields)](https://openagreements.openstatus.dev/)
+[![MCP Server Status](https://img.shields.io/endpoint?url=https%3A%2F%2Fopenagreements.org%2Fapi%2Fstatus%3Fformat%3Dshields)](https://openagreements.openstatus.dev/)
 [![codecov](https://img.shields.io/codecov/c/github/open-agreements/open-agreements/main)](https://app.codecov.io/gh/open-agreements/open-agreements)
 [![GitHub stargazers](https://img.shields.io/github/stars/open-agreements/open-agreements?style=social)](https://github.com/open-agreements/open-agreements/stargazers)
 [![Tests: Vitest](https://img.shields.io/badge/tests-vitest-6E9F18)](https://vitest.dev/)
@@ -49,7 +49,7 @@ Fill standard legal agreement templates and produce signable DOCX files. Templat
 
 OpenAgreements supports two execution modes with different trust boundaries:
 
-- Hosted remote MCP connector (`https://openagreements.ai/api/mcp`) for fast setup in Claude.
+- Hosted remote MCP connector (`https://openagreements.org/api/mcp`) for fast setup in Claude.
 - Fully local package execution (`npx`, global install, or local stdio MCP package) for machine-local workflows.
 
 There is no global default mode recommendation. Choose based on document sensitivity, internal policy, and workflow speed needs. See `docs/trust-checklist.md` for a 60-second data-flow summary.
@@ -125,7 +125,7 @@ This repository includes a Cursor plugin manifest with MCP wiring:
 
 The default MCP setup in `mcp.json` includes:
 
-- Hosted OpenAgreements MCP connector (`https://openagreements.ai/api/mcp`)
+- Hosted OpenAgreements MCP connector (`https://openagreements.org/api/mcp`)
 - Local workspace MCP server (`npx -y @open-agreements/contracts-workspace-mcp`)
 - Local template drafting MCP server (`npx -y @open-agreements/contract-templates-mcp`)
 
@@ -402,7 +402,7 @@ Template content is licensed by their respective authors — CC BY 4.0 (Common P
 ## Privacy
 
 - **Local mode** (`npx`, global install, stdio MCP): all processing happens on your machine. No document content is sent externally.
-- **Hosted mode** (`https://openagreements.ai/api/mcp`): template filling runs server-side. No filled documents are stored after the response is returned.
+- **Hosted mode** (`https://openagreements.org/api/mcp`): template filling runs server-side. No filled documents are stored after the response is returned.
 
 See our [Privacy Policy](https://usejunior.com/privacy_policy) for details.
 
