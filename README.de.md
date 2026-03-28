@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Agent Skill](https://img.shields.io/badge/agent--skill-open--agreements-purple)](https://skills.sh)
 [![CI](https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml/badge.svg)](https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml)
-[![MCP Server Status](https://img.shields.io/endpoint?url=https%3A%2F%2Fopenagreements.ai%2Fapi%2Fstatus%3Fformat%3Dshields)](https://openagreements.openstatus.dev/)
+[![MCP Server Status](https://img.shields.io/endpoint?url=https%3A%2F%2Fopenagreements.org%2Fapi%2Fstatus%3Fformat%3Dshields)](https://openagreements.openstatus.dev/)
 [![codecov](https://img.shields.io/codecov/c/github/open-agreements/open-agreements/main)](https://app.codecov.io/gh/open-agreements/open-agreements)
 [![GitHub stargazers](https://img.shields.io/github/stars/open-agreements/open-agreements?style=social)](https://github.com/open-agreements/open-agreements/stargazers)
 [![Tests: Vitest](https://img.shields.io/badge/tests-vitest-6E9F18)](https://vitest.dev/)
@@ -51,7 +51,7 @@ Fülle standardisierte juristische Vertragsvorlagen aus und erzeuge signierbare 
 
 OpenAgreements unterstützt zwei Ausführungsmodi mit unterschiedlichen Vertrauensgrenzen:
 
-- Gehosteter Remote-MCP-Connector (`https://openagreements.ai/api/mcp`) für schnelles Setup in Claude.
+- Gehosteter Remote-MCP-Connector (`https://openagreements.org/api/mcp`) für schnelles Setup in Claude.
 - Vollständig lokale Paketausführung (`npx`, globale Installation oder lokales stdio-MCP-Paket) für machine-lokale Workflows.
 
 Es gibt keine globale Empfehlung für einen Standardmodus. Wähle je nach Dokument-Sensibilität, interner Policy und gewünschter Workflow-Geschwindigkeit. Siehe `docs/trust-checklist.md` für eine 60-Sekunden-Datenflussübersicht.
@@ -127,7 +127,7 @@ Dieses Repository enthält ein Cursor-Plugin-Manifest mit MCP-Verdrahtung:
 
 Das Standard-MCP-Setup in `mcp.json` enthält:
 
-- Gehosteten OpenAgreements-MCP-Connector (`https://openagreements.ai/api/mcp`)
+- Gehosteten OpenAgreements-MCP-Connector (`https://openagreements.org/api/mcp`)
 - Lokalen Workspace-MCP-Server (`npx -y @open-agreements/contracts-workspace-mcp`)
 - Lokalen Template-Drafting-MCP-Server (`npx -y @open-agreements/contract-templates-mcp`)
 
