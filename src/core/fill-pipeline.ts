@@ -35,6 +35,15 @@ export interface PrepareFillDataOptions {
   coerceBooleans?: boolean;
 
   /**
+   * Default values for signature tag fields from signing.yaml.
+   * These are {tag}s in the DOCX that aren't in metadata.yaml (e.g., {sig_party_1}).
+   * When a signing provider is connected, these are filled with provider-specific
+   * anchor strings. When no provider is connected, they default to empty strings
+   * to prevent docx-templates from treating them as undefined JS expressions.
+   */
+  signingTagDefaults?: Record<string, string>;
+
+  /**
    * Optional callback for computing display fields (template-specific).
    * Called after defaults and boolean coercion are applied.
    */
@@ -81,11 +90,21 @@ export function prepareFillData(options: PrepareFillDataOptions): Record<string,
     useBlankPlaceholder = false,
     coerceBooleans = false,
     computeDisplayFields,
+    signingTagDefaults,
   } = options;
 
   // Apply defaults for fields not provided
   const defaultValue = useBlankPlaceholder ? BLANK_PLACEHOLDER : '';
   const data: Record<string, unknown> = { ...values };
+
+  // Inject signing tag defaults (empty strings unless provider anchors are supplied)
+  if (signingTagDefaults) {
+    for (const [key, val] of Object.entries(signingTagDefaults)) {
+      if (!(key in data)) {
+        data[key] = val;
+      }
+    }
+  }
   for (const field of fields) {
     if (!(field.name in data)) {
       // Array fields default to empty array, not blank placeholder

@@ -44,6 +44,7 @@ export interface PipelineOptions {
   // prepareFillData options
   coerceBooleans?: boolean;             // default: false
   computeDisplayFields?: (data: Record<string, unknown>) => void;
+  signingTagDefaults?: Record<string, string>;  // defaults for {sig_*} tags
 
   // fillDocx options
   fixSmartQuotes?: boolean;             // default: false
@@ -142,6 +143,7 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
       useBlankPlaceholder: true,
       coerceBooleans,
       computeDisplayFields,
+      signingTagDefaults: options.signingTagDefaults,
     });
 
     // Step 5: Read current buffer; apply selections if configured

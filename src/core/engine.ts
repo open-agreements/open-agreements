@@ -4,6 +4,7 @@ import { loadMetadata, loadCleanConfig, type TemplateMetadata } from './metadata
 import { loadSelectionsConfig } from './selector.js';
 import { runFillPipeline } from './unified-pipeline.js';
 import { BLANK_PLACEHOLDER, verifyTemplateFill } from './fill-utils.js';
+import { loadSigningConfig, getSignatureTagFields } from './signing-config.js';
 
 
 export interface FillOptions {
@@ -227,10 +228,24 @@ export async function fillTemplate(options: FillOptions): Promise<FillResult> {
   const metadata = loadMetadata(templateDir);
   const fieldNames = new Set(metadata.fields.map((f) => f.name));
 
-  // Warn about unknown keys not in metadata
-  const unknownKeys = Object.keys(values).filter((k) => !fieldNames.has(k));
+  // Load signing config if present — needed to inject defaults for {sig_*} tags
+  const signingConfig = loadSigningConfig(templateDir);
+  const signingTagFields = signingConfig ? new Set(getSignatureTagFields(signingConfig)) : new Set<string>();
+
+  // Warn about unknown keys not in metadata (exclude signing tag fields)
+  const unknownKeys = Object.keys(values).filter((k) => !fieldNames.has(k) && !signingTagFields.has(k));
   if (unknownKeys.length > 0) {
     console.warn(`Warning: unknown field(s) not in metadata: ${unknownKeys.join(', ')}`);
+  }
+
+  // Build signing tag defaults: empty strings for any sig/date tags not in values
+  const signingTagDefaults: Record<string, string> = {};
+  if (signingConfig) {
+    for (const field of getSignatureTagFields(signingConfig)) {
+      if (!(field in values)) {
+        signingTagDefaults[field] = '';
+      }
+    }
   }
 
   // Build cleanPatch if replacements.json or clean.json exists
@@ -267,6 +282,7 @@ export async function fillTemplate(options: FillOptions): Promise<FillResult> {
     fixSmartQuotes: true,
     verify: (p) => verifyTemplateFill(p),
     postProcess: options.postProcess,
+    signingTagDefaults: Object.keys(signingTagDefaults).length > 0 ? signingTagDefaults : undefined,
   });
 
   return {
