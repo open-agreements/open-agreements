@@ -6,7 +6,8 @@
     "packages/contract-templates-mcp",
     "packages/contracts-workspace",
     "packages/contracts-workspace-mcp",
-    "packages/checklist-mcp"
+    "packages/checklist-mcp",
+    "packages/signing"
   ],
   "description": "Open-source legal template filling CLI and library",
   "repository": {
