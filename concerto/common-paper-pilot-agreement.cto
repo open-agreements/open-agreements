@@ -1,0 +1,55 @@
+namespace org.openagreements.commonpaper.commonpaperpilotagreement@1.0.0
+
+import org.accordproject.contract.Contract from https://models.accordproject.org/accordproject/contract.cto
+
+/**
+ * Common Paper Pilot Agreement
+ *
+ * A pilot agreement cover page and standard terms, based on Common Paper's
+ * standard form. Covers trial or pilot periods for cloud services, including
+ * fees, support, and liability provisions.
+ * Source: https://commonpaper.com/standards/pilot-agreement/1.1
+ * License: CC-BY-4.0
+ */
+
+enum Provider_signatory_typeType {
+  o entity
+  o individual
+}
+
+enum Customer_signatory_typeType {
+  o entity
+  o individual
+}
+
+asset CommonPaperPilotAgreement extends Contract {
+  o String company_name
+  o String product_description
+  o String pilot_period
+  o String custom_start_date optional
+  o String pilot_fee optional
+  o String fees_description optional
+  o String payment_frequency optional
+  o String payment_terms_days optional
+  o String payment_due_from optional
+  o String technical_support optional
+  o String support_policy_reference optional
+  o String general_cap_amount optional
+  o String cap_multiplier optional
+  o Boolean pilot_is_free default=false
+  o Boolean payment_by_invoice default=true
+  o Boolean payment_automatic default=false
+  o String cap_type default="multiplier"
+  o String governing_law default="Delaware"
+  o String jurisdiction default="courts located in New Castle County, Delaware"
+  o Provider_signatory_typeType provider_signatory_type default="entity"
+  o String provider_signatory_name optional
+  o String provider_signatory_title optional
+  o String provider_signatory_company optional
+  o String provider_signatory_email optional
+  o Customer_signatory_typeType customer_signatory_type default="entity"
+  o String customer_signatory_name optional
+  o String customer_signatory_title optional
+  o String customer_signatory_company optional
+  o String customer_signatory_email optional
+}

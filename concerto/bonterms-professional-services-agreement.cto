@@ -1,0 +1,21 @@
+namespace org.openagreements.bonterms.bontermsprofessionalservicesagreement@1.0.0
+
+import org.accordproject.contract.Contract from https://models.accordproject.org/accordproject/contract.cto
+
+/**
+ * Bonterms Professional Services Agreement
+ *
+ * Cover page for the Bonterms Professional Services Agreement (Version 1.2).
+ * The standard terms are incorporated by reference from bonterms.com.
+ * Source: https://github.com/Bonterms/Professional-Services-Agreement
+ * License: CC0-1.0
+ */
+
+asset BontermsProfessionalServicesAgreement extends Contract {
+  o String customer_name
+  o String provider_name
+  o String effective_date
+  o String governing_law default="California"
+  o String courts default="courts located in San Francisco, California"
+  o String deliverables_type default="licensed"
+}

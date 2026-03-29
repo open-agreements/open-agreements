@@ -1,0 +1,26 @@
+namespace org.openagreements.custom.openagreementsemploymentconfidentialityacknowledgement@1.0.0
+
+import org.accordproject.contract.Contract from https://models.accordproject.org/accordproject/contract.cto
+
+/**
+ * OpenAgreements Employment Confidentiality Acknowledgement
+ *
+ * Employee confidentiality and acceptable-use acknowledgement companion for
+ * onboarding packets, including reporting and post-employment handling.
+ * Source: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-employment-confidentiality-acknowledgement
+ * License: CC-BY-4.0
+ */
+
+asset OpenagreementsEmploymentConfidentialityAcknowledgement extends Contract {
+  o String company_name optional
+  o String employee_name optional
+  o String policy_effective_date optional
+  o String approved_tools_scope optional
+  o String data_access_scope optional
+  o String security_reporting_contact optional
+  o String post_employment_obligations default="no retention, sharing, or use of company confidential information after termination"
+  o String acknowledgement_date optional
+  o String signatory_name optional
+  o String cloud_drive_id optional
+  o String cloud_drive_id_footer default=""
+}

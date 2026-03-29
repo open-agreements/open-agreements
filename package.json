@@ -56,6 +56,7 @@
     "check:gemini-extension-manifest": "node scripts/check_gemini_extension_manifest.mjs",
     "check:isolated-runtime": "node scripts/check_isolated_package_runtime.mjs",
     "generate:concerto": "node scripts/generate_concerto_types.mjs",
+    "validate:concerto": "node scripts/validate_concerto_metadata_parity.mjs",
     "generate:schemas": "node scripts/generate_json_schemas.mjs",
     "generate:employment-templates": "node scripts/generate_employment_templates.mjs",
     "generate:employment-templates:libreoffice": "node scripts/generate_employment_templates_libreoffice.mjs",

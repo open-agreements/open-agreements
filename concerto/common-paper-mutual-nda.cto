@@ -1,0 +1,44 @@
+namespace org.openagreements.commonpaper.commonpapermutualnda@1.0.0
+
+import org.accordproject.contract.Contract from https://models.accordproject.org/accordproject/contract.cto
+
+/**
+ * Common Paper Mutual NDA
+ *
+ * A mutual non-disclosure agreement cover page based on Common Paper's
+ * standard terms. The cover page references the Standard Terms posted at
+ * commonpaper.com.
+ * Source: https://commonpaper.com/standards/mutual-nda/1.0
+ * License: CC-BY-4.0
+ */
+
+enum Party_1_typeType {
+  o entity
+  o individual
+}
+
+enum Party_2_typeType {
+  o entity
+  o individual
+}
+
+asset CommonPaperMutualNda extends Contract {
+  o String purpose default="Evaluating whether to enter into a business relationship with the other party"
+  o String effective_date
+  o String mnda_term default="1 year(s)"
+  o String confidentiality_term default="1 year(s)"
+  o String confidentiality_term_start default="Effective Date"
+  o String governing_law default="Delaware"
+  o String jurisdiction default="courts located in New Castle County, Delaware"
+  o String changes_to_standard_terms default="None."
+  o Party_1_typeType party_1_type default="entity"
+  o String party_1_name optional
+  o String party_1_title optional
+  o String party_1_company optional
+  o String party_1_email optional
+  o Party_2_typeType party_2_type default="entity"
+  o String party_2_name optional
+  o String party_2_title optional
+  o String party_2_company optional
+  o String party_2_email optional
+}

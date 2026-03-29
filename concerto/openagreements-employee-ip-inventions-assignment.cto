@@ -1,0 +1,28 @@
+namespace org.openagreements.custom.openagreementsemployeeipinventionsassignment@1.0.0
+
+import org.accordproject.contract.Contract from https://models.accordproject.org/accordproject/contract.cto
+
+/**
+ * OpenAgreements Employee IP and Inventions Assignment
+ *
+ * Employee proprietary information and inventions assignment agreement with
+ * explicit prior-inventions and personal-project carveout language
+ * placeholders.
+ * Source: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-employee-ip-inventions-assignment
+ * License: CC-BY-4.0
+ */
+
+asset OpenagreementsEmployeeIpInventionsAssignment extends Contract {
+  o String company_name optional
+  o String employee_name optional
+  o String effective_date optional
+  o String prior_inventions_disclosure default="None listed"
+  o String excluded_inventions_statement default="Inventions developed entirely on personal time without use of company equipment, supplies, facilities, confidential information, or trade secrets are excluded to the extent permitted by applicable law."
+  o String confidential_information_definition optional
+  o String return_of_materials_timing optional
+  o String post_termination_assistance default="reasonable assistance with filings and signatures related to assigned inventions"
+  o String governing_law default="California"
+  o String venue default="state and federal courts in the governing law state"
+  o String cloud_drive_id optional
+  o String cloud_drive_id_footer default=""
+}

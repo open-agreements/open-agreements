@@ -1,0 +1,61 @@
+namespace org.openagreements.commonpaper.commonpaperbusinessassociateagreement@1.0.0
+
+import org.accordproject.contract.Contract from https://models.accordproject.org/accordproject/contract.cto
+
+/**
+ * Common Paper Business Associate Agreement
+ *
+ * A HIPAA business associate agreement cover page and standard terms, based
+ * on Common Paper's standard form. Covers the use and protection of protected
+ * health information (PHI) between a covered entity and a business associate.
+ * Source: https://commonpaper.com/standards/business-associate-agreement/1.0
+ * License: CC-BY-4.0
+ */
+
+enum Provider_signatory_typeType {
+  o entity
+  o individual
+}
+
+enum Company_signatory_typeType {
+  o entity
+  o individual
+}
+
+asset CommonPaperBusinessAssociateAgreement extends Contract {
+  o String company_name
+  o String party_role
+  o String principal_agreement
+  o String subcontractor_role optional
+  o String free_text optional
+  o String aggregation_restrictions optional
+  o String offshoring_restrictions optional
+  o String breach_notification_unit optional
+  o String breach_notification_number optional
+  o String other_changes optional
+  o String custom_effective_date optional
+  o Boolean maintains_designated_record_set optional
+  o Boolean no_subcontracting optional
+  o Boolean subcontracting_with_conditions optional
+  o Boolean subcontract_notice_required optional
+  o Boolean subcontract_permission_required optional
+  o Boolean no_offshoring optional
+  o Boolean offshoring_with_conditions optional
+  o Boolean no_deidentification optional
+  o Boolean deidentification_with_conditions optional
+  o String deidentification_purpose optional
+  o Boolean deidentify_for_purpose optional
+  o Boolean deidentify_additional_requirements optional
+  o Boolean no_aggregation optional
+  o Boolean aggregation_with_conditions optional
+  o Provider_signatory_typeType provider_signatory_type default="entity"
+  o String provider_signatory_name optional
+  o String provider_signatory_title optional
+  o String provider_signatory_company optional
+  o String provider_signatory_email optional
+  o Company_signatory_typeType company_signatory_type default="entity"
+  o String company_signatory_name optional
+  o String company_signatory_title optional
+  o String company_signatory_company optional
+  o String company_signatory_email optional
+}

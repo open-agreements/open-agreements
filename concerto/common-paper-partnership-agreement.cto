@@ -1,0 +1,115 @@
+namespace org.openagreements.commonpaper.commonpaperpartnershipagreement@1.0.0
+
+import org.accordproject.contract.Contract from https://models.accordproject.org/accordproject/contract.cto
+
+/**
+ * Common Paper Partnership Agreement
+ *
+ * A partnership agreement cover page and standard terms, based on Common
+ * Paper's standard form. Covers business partnerships including obligations,
+ * fees, territory, liability, and data processing.
+ * Source: https://commonpaper.com/standards/partnership-agreement/1.1
+ * License: CC-BY-4.0
+ */
+
+enum General_cap_typeType {
+  o multiplier
+  o dollar
+  o greater_of
+}
+
+enum Increased_cap_typeType {
+  o multiplier
+  o dollar
+  o greater_of
+}
+
+enum Company_signatory_typeType {
+  o entity
+  o individual
+}
+
+enum Partner_signatory_typeType {
+  o entity
+  o individual
+}
+
+asset CommonPaperPartnershipAgreement extends Contract {
+  o String company_name
+  o String custom_effective_date optional
+  o String term_duration_unit optional
+  o String custom_end_date optional
+  o String non_renewal_notice_days optional
+  o String territory optional
+  o String term_duration_value optional
+  o String changes_to_standard_terms optional
+  o String company_promotional_activities_detail optional
+  o String company_promotional_materials_detail optional
+  o String company_sponsored_benefits_detail optional
+  o String company_referral_criteria optional
+  o String company_payment_to_partner_detail optional
+  o String partner_promotional_activities_detail optional
+  o String partner_promotional_materials_detail optional
+  o String partner_sponsored_benefits_detail optional
+  o String partner_referral_criteria optional
+  o String partner_payment_to_company_detail optional
+  o String invoice_address optional
+  o String company_covered_claims_detail optional
+  o String partner_covered_claims_detail optional
+  o String increased_claim_other_detail optional
+  o String unlimited_claim_other_detail optional
+  o String additional_warranty_company_detail optional
+  o String additional_warranty_partner_detail optional
+  o String payment_schedule_detail optional
+  o String payment_terms_days optional
+  o String general_cap_amount optional
+  o String cap_multiplier optional
+  o String increased_cap_amount optional
+  o String dpa_reference optional
+  o String dpa_description optional
+  o Boolean company_promotional_activities optional
+  o Boolean company_promotional_materials optional
+  o Boolean company_sponsored_benefits optional
+  o Boolean company_makes_referrals optional
+  o Boolean company_pays_partner optional
+  o Boolean company_brand_licensor optional
+  o Boolean partner_promotional_activities optional
+  o Boolean partner_promotional_materials optional
+  o Boolean partner_sponsored_benefits optional
+  o Boolean partner_makes_referrals optional
+  o Boolean partner_pays_company optional
+  o Boolean partner_brand_licensor optional
+  o Boolean company_invoices_partner optional
+  o Boolean partner_invoices_company optional
+  o Boolean has_payment_schedule optional
+  o Boolean has_company_covered_claims optional
+  o Boolean has_partner_covered_claims optional
+  o General_cap_typeType general_cap_type optional
+  o Increased_cap_typeType increased_cap_type optional
+  o Boolean increased_claim_breach_conf optional
+  o Boolean increased_claim_indemnification optional
+  o Boolean increased_claim_breach_conf_gross optional
+  o Boolean increased_claim_gross_willful optional
+  o Boolean increased_claim_other optional
+  o Boolean unlimited_claim_indemnification optional
+  o Boolean unlimited_claim_breach_conf optional
+  o Boolean unlimited_claim_breach_conf_gross optional
+  o Boolean unlimited_claim_gross_willful optional
+  o Boolean unlimited_claim_other optional
+  o Boolean additional_terms_by_company optional
+  o Boolean additional_terms_by_partner optional
+  o Boolean company_brand_guidelines optional
+  o Boolean partner_brand_guidelines optional
+  o String governing_law default="Delaware"
+  o String jurisdiction default="courts located in New Castle County, Delaware"
+  o Company_signatory_typeType company_signatory_type default="entity"
+  o String company_signatory_name optional
+  o String company_signatory_title optional
+  o String company_signatory_company optional
+  o String company_signatory_email optional
+  o Partner_signatory_typeType partner_signatory_type default="entity"
+  o String partner_signatory_name optional
+  o String partner_signatory_title optional
+  o String partner_signatory_company optional
+  o String partner_signatory_email optional
+}

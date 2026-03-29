@@ -1,0 +1,27 @@
+namespace org.openagreements.nda.mutual
+
+import org.accordproject.contract.Contract from https://models.accordproject.org/accordproject/contract.cto
+import org.accordproject.runtime.Request from https://models.accordproject.org/accordproject/runtime.cto
+import org.accordproject.runtime.Response from https://models.accordproject.org/accordproject/runtime.cto
+
+/**
+ * Mutual Non-Disclosure Agreement.
+ *
+ * Both parties agree to keep shared information confidential
+ * for a specified period, with standard remedies for breach.
+ *
+ * Party names are owned String fields (not --> Party references)
+ * because the base Party type only has partyId and relationships
+ * serialize as resource URIs, not human-readable names. This matches
+ * the pattern used in promissory-note, saft, and safte templates.
+ */
+asset MutualNDAContract extends Contract {
+  o String party1
+  o String party2
+  o DateTime effectiveDate
+  o String purpose default="evaluating a potential business relationship"
+  o String ndaTerm default="1 year"
+  o String confidentialityPeriod default="1 year"
+  o String governingLaw default="Delaware"
+  o String jurisdiction default="courts located in New Castle County, Delaware"
+}

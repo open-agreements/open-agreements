@@ -1,0 +1,39 @@
+namespace org.openagreements.commonpaper.commonpapertermsheet@1.0.0
+
+import org.accordproject.contract.Contract from https://models.accordproject.org/accordproject/contract.cto
+
+/**
+ * Common Paper Term Sheet
+ *
+ * A term sheet template for outlining key business terms, based on Common
+ * Paper's standard form. A simple topic-and-details format for early-stage
+ * deal discussions.
+ * Source: https://commonpaper.com/standards/term-sheet
+ * License: CC-BY-4.0
+ */
+
+enum Party_1_signatory_typeType {
+  o entity
+  o individual
+}
+
+enum Party_2_signatory_typeType {
+  o entity
+  o individual
+}
+
+asset CommonPaperTermSheet extends Contract {
+  o String company_name
+  o String topic
+  o String topic_details
+  o Party_1_signatory_typeType party_1_signatory_type default="entity"
+  o String party_1_signatory_name optional
+  o String party_1_signatory_title optional
+  o String party_1_signatory_company optional
+  o String party_1_signatory_email optional
+  o Party_2_signatory_typeType party_2_signatory_type default="entity"
+  o String party_2_signatory_name optional
+  o String party_2_signatory_title optional
+  o String party_2_signatory_company optional
+  o String party_2_signatory_email optional
+}

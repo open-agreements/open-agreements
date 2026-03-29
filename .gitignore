@@ -36,6 +36,9 @@ gemini-extension.local.json
 # Git worktrees
 .worktrees/
 
+# Concerto codegen output (regenerated from .cto source)
+concerto/generated/
+
 # Hardening experiment journal (persists across git reverts)
 .hardening-journal/
 

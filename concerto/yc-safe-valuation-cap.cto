@@ -1,0 +1,26 @@
+namespace org.openagreements.yc.ycsafevaluationcap@1.0.0
+
+import org.accordproject.contract.Contract from https://models.accordproject.org/accordproject/contract.cto
+
+/**
+ * YC Post-Money SAFE — Valuation Cap
+ *
+ * Y Combinator's Post-Money SAFE (Simple Agreement for Future Equity) with a
+ * valuation cap and no discount. The most common early-stage investment
+ * instrument.
+ * Source: https://www.ycombinator.com/documents
+ * License: CC-BY-ND-4.0
+ */
+
+asset YcSafeValuationCap extends Contract {
+  o String company_name
+  o String investor_name
+  o String purchase_amount
+  o String valuation_cap
+  o String date_of_safe
+  o String state_of_incorporation
+  o String governing_law_jurisdiction
+  o String company
+  o String name
+  o String title
+}

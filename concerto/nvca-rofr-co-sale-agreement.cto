@@ -1,0 +1,31 @@
+namespace org.openagreements.nvca.nvcarofrcosaleagreement@1.0.0
+
+import org.accordproject.contract.Contract from https://models.accordproject.org/accordproject/contract.cto
+
+/**
+ * NVCA Model Right of First Refusal and Co-Sale Agreement
+ *
+ * Right of first refusal and co-sale agreement for venture financings,
+ * restricting transfer of founder shares and providing investor co-sale
+ * rights.
+ * Source: https://nvca.org/wp-content/uploads/2025/10/NVCA-Model-ROFRA-10-1-2025.docx
+ */
+
+asset NvcaRofrCoSaleAgreement extends Contract {
+  o String company_name
+  o String investor_name
+  o String key_holder_name
+  o String company_counsel
+  o String counsel_cc default=""
+  o String optional_blank_value default=""
+  o String amended_restated_upper default=""
+  o String amended_restated default=""
+  o String judicial_district default="District of Delaware"
+  o String state_lower default="delaware"
+  o String business_description
+  o String signature_page_marker default="Signature Page Follows"
+  o String effective_date
+  o String specify_percentage
+  o String rofr_response_days default="45"
+  o String key_holders_label default="Key Holders"
+}
