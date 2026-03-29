@@ -1,7 +1,7 @@
 {
   "mcpServers": {
     "open-agreements": {
-      "url": "https://openagreements.ai/api/mcp"
+      "url": "https://openagreements.org/api/mcp"
     },
     "contracts-workspace-mcp": {
       "type": "stdio",
