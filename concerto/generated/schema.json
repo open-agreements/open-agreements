@@ -1,0 +1,119 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "definitions": {
+    "org.openagreements.nda.bonterms@1.0.0.Party": {
+      "title": "Party",
+      "description": "An instance of org.openagreements.nda.bonterms@1.0.0.Party",
+      "type": "object",
+      "properties": {
+        "$class": {
+          "type": "string",
+          "default": "org.openagreements.nda.bonterms@1.0.0.Party",
+          "pattern": "^org\\.openagreements\\.nda\\.bonterms@1\\.0\\.0\\.Party$",
+          "description": "The class identifier for org.openagreements.nda.bonterms@1.0.0.Party"
+        },
+        "name": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "$class",
+        "name"
+      ]
+    },
+    "org.openagreements.nda.bonterms@1.0.0.NDATerms": {
+      "title": "NDATerms",
+      "description": "An instance of org.openagreements.nda.bonterms@1.0.0.NDATerms",
+      "type": "object",
+      "properties": {
+        "$class": {
+          "type": "string",
+          "default": "org.openagreements.nda.bonterms@1.0.0.NDATerms",
+          "pattern": "^org\\.openagreements\\.nda\\.bonterms@1\\.0\\.0\\.NDATerms$",
+          "description": "The class identifier for org.openagreements.nda.bonterms@1.0.0.NDATerms"
+        },
+        "effective_date": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "purpose": {
+          "default": "Evaluating a potential business relationship",
+          "type": "string"
+        },
+        "nda_term": {
+          "default": "1 year",
+          "type": "string"
+        },
+        "confidentiality_period": {
+          "default": "1 year",
+          "type": "string"
+        }
+      },
+      "required": [
+        "$class",
+        "effective_date",
+        "purpose",
+        "nda_term",
+        "confidentiality_period"
+      ]
+    },
+    "org.openagreements.nda.bonterms@1.0.0.GoverningLaw": {
+      "title": "GoverningLaw",
+      "description": "An instance of org.openagreements.nda.bonterms@1.0.0.GoverningLaw",
+      "type": "object",
+      "properties": {
+        "$class": {
+          "type": "string",
+          "default": "org.openagreements.nda.bonterms@1.0.0.GoverningLaw",
+          "pattern": "^org\\.openagreements\\.nda\\.bonterms@1\\.0\\.0\\.GoverningLaw$",
+          "description": "The class identifier for org.openagreements.nda.bonterms@1.0.0.GoverningLaw"
+        },
+        "governing_law": {
+          "default": "California",
+          "type": "string"
+        },
+        "courts": {
+          "default": "courts located in San Francisco, California",
+          "type": "string"
+        }
+      },
+      "required": [
+        "$class",
+        "governing_law",
+        "courts"
+      ]
+    },
+    "org.openagreements.nda.bonterms@1.0.0.BontermsMutualNDA": {
+      "title": "BontermsMutualNDA",
+      "description": "An instance of org.openagreements.nda.bonterms@1.0.0.BontermsMutualNDA",
+      "type": "object",
+      "properties": {
+        "$class": {
+          "type": "string",
+          "default": "org.openagreements.nda.bonterms@1.0.0.BontermsMutualNDA",
+          "pattern": "^org\\.openagreements\\.nda\\.bonterms@1\\.0\\.0\\.BontermsMutualNDA$",
+          "description": "The class identifier for org.openagreements.nda.bonterms@1.0.0.BontermsMutualNDA"
+        },
+        "party_1": {
+          "$ref": "#/definitions/org.openagreements.nda.bonterms@1.0.0.Party"
+        },
+        "party_2": {
+          "$ref": "#/definitions/org.openagreements.nda.bonterms@1.0.0.Party"
+        },
+        "terms": {
+          "$ref": "#/definitions/org.openagreements.nda.bonterms@1.0.0.NDATerms"
+        },
+        "legal": {
+          "$ref": "#/definitions/org.openagreements.nda.bonterms@1.0.0.GoverningLaw"
+        }
+      },
+      "required": [
+        "$class",
+        "party_1",
+        "party_2",
+        "terms",
+        "legal"
+      ]
+    }
+  }
+}
