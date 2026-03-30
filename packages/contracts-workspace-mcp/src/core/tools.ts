@@ -1,10 +1,15 @@
 import { isAbsolute, resolve } from 'node:path';
+import { load } from 'js-yaml';
 import { z } from 'zod';
 import { INDEX_FILE } from '../../../contracts-workspace/src/core/constants.js';
 import { catalogPath, fetchCatalogEntries, validateCatalog } from '../../../contracts-workspace/src/core/catalog.js';
 import { buildStatusIndex, collectWorkspaceDocuments, writeStatusIndex } from '../../../contracts-workspace/src/core/indexer.js';
 import { lintWorkspace } from '../../../contracts-workspace/src/core/lint.js';
 import { planWorkspaceInitialization } from '../../../contracts-workspace/src/core/workspace-structure.js';
+import { saveAnalysis, loadAnalysis, isAnalysisStale, listPendingDocuments } from '../../../contracts-workspace/src/core/analysis-store.js';
+import { enrichStatusIndex } from '../../../contracts-workspace/src/core/analysis-indexer.js';
+import { loadConventions } from '../../../contracts-workspace/src/core/convention-config.js';
+import type { StatusIndex } from '../../../contracts-workspace/src/core/types.js';
 
 type JsonSchema = Record<string, unknown>;
 
@@ -46,6 +51,51 @@ const StatusGenerateSchema = z.object({
 
 const StatusLintSchema = z.object({
   root_dir: z.string().min(1).optional(),
+});
+
+const SaveContractAnalysisSchema = z.object({
+  root_dir: z.string().min(1).optional(),
+  document_path: z.string().min(1),
+  classification: z.object({
+    document_type: z.string().min(1),
+    confidence: z.enum(['high', 'medium', 'low']),
+    parties: z.array(z.string()),
+    effective_date: z.string().optional(),
+    expiration_date: z.string().optional(),
+    governing_law: z.string().optional(),
+    summary: z.string().min(1),
+  }).optional(),
+  extractions: z.array(z.object({
+    clause: z.string().min(1),
+    found: z.boolean(),
+    text: z.string().optional(),
+    section_reference: z.string().optional(),
+    notes: z.string().optional(),
+  })).optional(),
+  analyzed_by: z.string().min(1).optional(),
+});
+
+const ReadContractAnalysisSchema = z.object({
+  root_dir: z.string().min(1).optional(),
+  document_path: z.string().min(1),
+});
+
+const ListPendingContractsSchema = z.object({
+  root_dir: z.string().min(1).optional(),
+});
+
+const SearchContractsSchema = z.object({
+  root_dir: z.string().min(1).optional(),
+  document_type: z.string().optional(),
+  party: z.string().optional(),
+  expiring_before: z.string().optional(),
+  stale: z.boolean().optional(),
+  analyzed: z.boolean().optional(),
+});
+
+const SuggestContractRenameSchema = z.object({
+  root_dir: z.string().min(1).optional(),
+  document_path: z.string().min(1),
 });
 
 const tools: ToolDefinition[] = [
@@ -197,13 +247,15 @@ const tools: ToolDefinition[] = [
 
       const finalLint = lintWorkspace(rootDir);
       const finalIndex = buildStatusIndex(rootDir, documents, finalLint);
-      const indexPath = writeStatusIndex(rootDir, finalIndex, outputPath);
+      const enrichedIndex = enrichStatusIndex(rootDir, finalIndex);
+      const indexPath = writeStatusIndex(rootDir, enrichedIndex, outputPath);
 
       return successResult({
         root_dir: rootDir,
         index_path: resolve(indexPath),
-        summary: finalIndex.summary,
-        lint: finalIndex.lint,
+        summary: enrichedIndex.summary,
+        lint: enrichedIndex.lint,
+        analysis: enrichedIndex.analysis,
       });
     },
   },
@@ -227,6 +279,242 @@ const tools: ToolDefinition[] = [
         findings: lint.findings,
         error_count: lint.errorCount,
         warning_count: lint.warningCount,
+      });
+    },
+  },
+  {
+    name: 'save_contract_analysis',
+    description: 'Store document classification and/or clause extractions. Supports partial updates — provide only classification or only extractions to update one without overwriting the other.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        root_dir: { type: 'string', description: 'Workspace root. Defaults to current working directory.' },
+        document_path: { type: 'string', description: 'Relative path to the document, e.g. "vendor/acme_msa.docx".' },
+        classification: {
+          type: 'object',
+          description: 'Document classification metadata.',
+          properties: {
+            document_type: { type: 'string', description: 'Contract type: nda, msa, sow, employment-agreement, etc.' },
+            confidence: { type: 'string', enum: ['high', 'medium', 'low'] },
+            parties: { type: 'array', items: { type: 'string' }, description: 'Parties to the agreement.' },
+            effective_date: { type: 'string', description: 'ISO 8601 date.' },
+            expiration_date: { type: 'string', description: 'ISO 8601 date.' },
+            governing_law: { type: 'string', description: 'Governing law jurisdiction.' },
+            summary: { type: 'string', description: 'Brief summary of the document.' },
+          },
+          required: ['document_type', 'confidence', 'parties', 'summary'],
+        },
+        extractions: {
+          type: 'array',
+          description: 'Extracted clause provisions.',
+          items: {
+            type: 'object',
+            properties: {
+              clause: { type: 'string', description: 'Clause identifier, e.g. "limitation-of-liability".' },
+              found: { type: 'boolean' },
+              text: { type: 'string', description: 'Extracted clause text.' },
+              section_reference: { type: 'string', description: 'Section reference, e.g. "Section 8.2".' },
+              notes: { type: 'string', description: 'Additional notes.' },
+            },
+            required: ['clause', 'found'],
+          },
+        },
+        analyzed_by: { type: 'string', description: 'Agent identifier, e.g. "claude" or "gemini".' },
+      },
+      required: ['document_path'],
+      additionalProperties: false,
+    },
+    annotations: { readOnlyHint: false, destructiveHint: false },
+    invoke: async (args) => {
+      const input = SaveContractAnalysisSchema.parse(args);
+      const rootDir = resolveRootDir(input.root_dir);
+      const analysis = saveAnalysis(rootDir, {
+        documentPath: input.document_path,
+        classification: input.classification as Parameters<typeof saveAnalysis>[1]['classification'],
+        extractions: input.extractions as Parameters<typeof saveAnalysis>[1]['extractions'],
+        analyzedBy: input.analyzed_by,
+      });
+      return successResult({
+        root_dir: rootDir,
+        document_path: input.document_path,
+        document_id: analysis.document_id,
+        content_hash: analysis.content_hash,
+        analyzed_at: analysis.analyzed_at,
+      });
+    },
+  },
+  {
+    name: 'read_contract_analysis',
+    description: 'Retrieve stored analysis for a document, including classification, clause extractions, and staleness status.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        root_dir: { type: 'string', description: 'Workspace root. Defaults to current working directory.' },
+        document_path: { type: 'string', description: 'Relative path to the document.' },
+      },
+      required: ['document_path'],
+      additionalProperties: false,
+    },
+    annotations: { readOnlyHint: true, destructiveHint: false },
+    invoke: async (args) => {
+      const input = ReadContractAnalysisSchema.parse(args);
+      const rootDir = resolveRootDir(input.root_dir);
+      const analysis = loadAnalysis(rootDir, input.document_path);
+      const staleness = isAnalysisStale(rootDir, input.document_path);
+      return successResult({
+        root_dir: rootDir,
+        document_path: input.document_path,
+        analysis,
+        stale: staleness.stale,
+        stale_reason: staleness.reason ?? null,
+      });
+    },
+  },
+  {
+    name: 'list_pending_contracts',
+    description: 'List documents needing analysis (new, content changed, or incomplete classification). Returns reason codes and prior metadata for subagent dispatch.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        root_dir: { type: 'string', description: 'Workspace root. Defaults to current working directory.' },
+      },
+      additionalProperties: false,
+    },
+    annotations: { readOnlyHint: true, destructiveHint: false },
+    invoke: async (args) => {
+      const input = ListPendingContractsSchema.parse(args ?? {});
+      const rootDir = resolveRootDir(input.root_dir);
+      const documents = collectWorkspaceDocuments(rootDir);
+      const pending = listPendingDocuments(rootDir, documents);
+      return successResult({
+        root_dir: rootDir,
+        pending_count: pending.length,
+        total_documents: documents.length,
+        documents: pending,
+      });
+    },
+  },
+  {
+    name: 'search_contracts',
+    description: 'Search the contract portfolio with filters. Reads from contracts-index.yaml for fast retrieval. Run status_generate first to ensure the index is current.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        root_dir: { type: 'string', description: 'Workspace root. Defaults to current working directory.' },
+        document_type: { type: 'string', description: 'Filter by document type (nda, msa, sow, etc.).' },
+        party: { type: 'string', description: 'Filter by party name (substring match).' },
+        expiring_before: { type: 'string', description: 'ISO date. Return only documents expiring before this date.' },
+        stale: { type: 'boolean', description: 'If true, return only documents with stale analyses.' },
+        analyzed: { type: 'boolean', description: 'If true, only analyzed; if false, only unanalyzed.' },
+      },
+      additionalProperties: false,
+    },
+    annotations: { readOnlyHint: true, destructiveHint: false },
+    invoke: async (args) => {
+      const input = SearchContractsSchema.parse(args ?? {});
+      const rootDir = resolveRootDir(input.root_dir);
+
+      // Read the enriched index
+      const documents = collectWorkspaceDocuments(rootDir);
+      const lint = lintWorkspace(rootDir);
+      const baseIndex = buildStatusIndex(rootDir, documents, lint);
+      const index = enrichStatusIndex(rootDir, baseIndex);
+
+      let results = index.documents;
+
+      if (input.document_type) {
+        results = results.filter((doc) =>
+          doc.classification?.document_type === input.document_type,
+        );
+      }
+
+      if (input.party) {
+        const partyLower = input.party.toLowerCase();
+        results = results.filter((doc) =>
+          doc.classification?.parties.some((p) => p.toLowerCase().includes(partyLower)),
+        );
+      }
+
+      if (input.expiring_before) {
+        const cutoff = input.expiring_before;
+        results = results.filter((doc) => {
+          if (!doc.classification) return false;
+          const analysis = loadAnalysis(rootDir, doc.path);
+          return analysis?.classification?.expiration_date
+            && analysis.classification.expiration_date <= cutoff;
+        });
+      }
+
+      if (input.stale !== undefined) {
+        results = results.filter((doc) => doc.stale === input.stale);
+      }
+
+      if (input.analyzed !== undefined) {
+        results = results.filter((doc) => doc.analyzed === input.analyzed);
+      }
+
+      return successResult({
+        root_dir: rootDir,
+        match_count: results.length,
+        documents: results,
+      });
+    },
+  },
+  {
+    name: 'suggest_contract_rename',
+    description: 'Suggest a standardized filename for a classified document based on its metadata and workspace naming conventions.',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        root_dir: { type: 'string', description: 'Workspace root. Defaults to current working directory.' },
+        document_path: { type: 'string', description: 'Relative path to the document.' },
+      },
+      required: ['document_path'],
+      additionalProperties: false,
+    },
+    annotations: { readOnlyHint: true, destructiveHint: false },
+    invoke: async (args) => {
+      const input = SuggestContractRenameSchema.parse(args);
+      const rootDir = resolveRootDir(input.root_dir);
+      const analysis = loadAnalysis(rootDir, input.document_path);
+
+      if (!analysis?.classification) {
+        return successResult({
+          root_dir: rootDir,
+          current_path: input.document_path,
+          suggested_name: null,
+          reason: 'Document has not been classified yet. Run save_contract_analysis first.',
+        });
+      }
+
+      const classification = analysis.classification;
+      const ext = input.document_path.includes('.')
+        ? input.document_path.slice(input.document_path.lastIndexOf('.'))
+        : '';
+
+      // Build standardized name: {date}_{party}_{type}.{ext}
+      const parts: string[] = [];
+      if (classification.effective_date) {
+        parts.push(classification.effective_date);
+      }
+      if (classification.parties.length > 0) {
+        // Use first party, sanitized for filename
+        const party = classification.parties[0]
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/gu, '_')
+          .replace(/_+$/u, '');
+        parts.push(party);
+      }
+      parts.push(classification.document_type);
+
+      const suggestedName = parts.join('_') + ext;
+
+      return successResult({
+        root_dir: rootDir,
+        current_path: input.document_path,
+        suggested_name: suggestedName,
+        pattern_used: '{date}_{party}_{document_type}{ext}',
+        reason: `Based on classification: ${classification.document_type} with ${classification.parties.join(', ')}`,
       });
     },
   },
