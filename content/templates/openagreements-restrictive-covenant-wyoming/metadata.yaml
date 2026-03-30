@@ -91,13 +91,15 @@ fields:
       12 months is the most common enforceable duration. Mayer Brown guidance
       states 1-2 years is the outer range of reasonableness.
     section: Employee Non-Solicitation
-  - name: covered_employees_scope
+  - name: covered_employee_period
     type: string
     description: >-
-      Which employees are covered by the non-solicitation restriction.
-      For example: employees Employee managed or worked with in the
-      12 months before termination.
-    default: employees Employee managed or worked with in the 12 months before termination
+      Lookback period for determining which employees are covered by
+      the non-solicitation restriction.
+    default: 12 months
+    default_value_rationale: >-
+      12 months is the most common lookback period for employee
+      non-solicitation scope.
     section: Employee Non-Solicitation
 
   # --- Customer Non-Solicitation ---
@@ -114,13 +116,15 @@ fields:
       12 months is the most common enforceable duration. Compass Minerals uses
       12 months for non-CEO employees and 24 months for CEO.
     section: Customer Non-Solicitation
-  - name: covered_customers_scope
+  - name: covered_customer_period
     type: string
     description: >-
-      Which customers are covered by the non-solicitation restriction.
-      For example: customers or business partners Employee worked with
-      in the 12 months before termination.
-    default: customers or business partners Employee worked with in the 12 months before termination
+      Lookback period for determining which customers are covered by
+      the non-solicitation and non-dealing restrictions.
+    default: 12 months
+    default_value_rationale: >-
+      12 months is the most common lookback period for customer
+      non-solicitation scope.
     section: Customer Non-Solicitation
 
   # --- Non-Competition (conditional on pathway) ---
@@ -179,6 +183,19 @@ fields:
     description: Duration of the no-business-with-covered-customers restriction
     default: 12 months
     section: No Business with Covered Customers
+
+  # --- Passive Public Holdings ---
+  - name: passive_public_holdings_threshold
+    type: string
+    description: >-
+      Maximum ownership percentage of publicly traded securities permitted
+      under the Passive Public Holdings carveout.
+    default: five percent
+    default_value_rationale: >-
+      Five percent of any class of publicly traded securities is the standard
+      passive investment carveout across Fortune 500 restrictive covenant
+      agreements.
+    section: Definitions
 
   # --- Non-Investment (conditional) ---
   - name: noninvestment_included

@@ -336,13 +336,13 @@ const CLAUSE_SIGNALS: Record<string, ClauseSignal[]> = {
         'Can licensed counsel confirm whether the competitive business definition is sufficiently narrow?',
     },
     {
-      id: 'covered-customers-scope',
-      field: 'covered_customers_scope',
+      id: 'covered-customer-period',
+      field: 'covered_customer_period',
       missingSeverity: 'medium',
       missingSummary:
-        'Covered customer scope is blank. Non-solicitation and non-dealing covenants need a defined scope to be enforceable.',
+        'Covered customer lookback period is blank. The definition of Covered Customers requires a lookback period to determine scope.',
       presentSummary:
-        'Covered customer scope is specified.',
+        'Covered customer lookback period is specified.',
     },
     {
       id: 'noncompete-duration',

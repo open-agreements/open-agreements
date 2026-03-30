@@ -13,18 +13,16 @@ The terms below are incorporated into and form part of this agreement.
 | **Employee Title / Position** | {employee_title} |
 | **Effective Date** | {effective_date} |
 | **Governing Law** | {governing_law} |
-| **Confidentiality** | Trade secrets: {confidentiality_trade_secret_duration}
-Other confidential information: {confidentiality_other_duration} |
-| **Employee Non-Solicitation** | Duration: {employee_nonsolicit_duration}
-Covered employees: {covered_employees_scope} |
-| **Customer Non-Solicitation** | Duration: {customer_nonsolicit_duration}
-Covered customers: {covered_customers_scope} |
+| **Confidentiality** | Trade secrets duration: {confidentiality_trade_secret_duration}
+Other Confidential Information duration: {confidentiality_other_duration} |
+| **Employee Non-Solicitation** | Duration: {employee_nonsolicit_duration} |
+| **Customer Non-Solicitation** | Duration: {customer_nonsolicit_duration} |
 | **Non-Competition** | Duration: {noncompete_duration}
 Restricted Territory: {territory}
 Competitive Business: {competitive_business_definition} |
 | **Specified Competitors** | {specified_competitors} |
-| **No Business with Covered Customers** | {nondealing_duration}; same scope as customer non-solicitation |
-| **Non-Investment** | {noninvestment_duration}; active ownership barred, passive public holdings permitted |
+| **No Business with Covered Customers** | Duration: {nondealing_duration} |
+| **Non-Investment** | Duration: {noninvestment_duration} |
 | **Non-Disparagement** | Duration: {nondisparagement_duration} |
 
 ## Standard Terms
@@ -35,17 +33,19 @@ Competitive Business: {competitive_business_definition} |
 
 1.2 **"Confidential Information"** means non-public information relating to Employer's business, including trade secrets, customer lists, pricing, business processes, technical data, and strategic plans, but excluding information that becomes public through no fault of Employee.
 
-1.3 **"Covered Customers"** means the customers, vendors, referral sources, and business partners described in Cover Terms, limited to those with whom Employee had material contact or for whom Employee had responsibility during the covered customer period specified in Cover Terms.
+1.3 **"Covered Customers"** means customers, vendors, referral sources, and business partners with whom Employee had material contact or for whom Employee had responsibility during the {covered_customer_period} before termination of employment.
 
-1.4 **"Covered Employees"** means the employees described in Cover Terms under Covered Employees.
+1.4 **"Covered Employees"** means employees with whom Employee worked or whom Employee managed during the {covered_employee_period} before termination of employment.
 
-1.5 **"Protected Interests"** means Employer's legitimate business interests in its Confidential Information, customer and business-partner relationships, workforce stability, and goodwill.
+1.5 **"Passive Public Holdings"** means ownership of securities of a publicly traded company representing less than {passive_public_holdings_threshold} of any class of such company’s securities, and interests in diversified mutual funds, index funds, and exchange-traded funds that may hold securities of a Competitive Business.
 
-1.6 **"Restricted Period"** means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason.
+1.6 **"Protected Interests"** means Employer's legitimate business interests in its Confidential Information, customer and business-partner relationships, workforce stability, and goodwill.
 
-1.7 **"Restricted Territory"** means the geographic area described in Cover Terms under Restricted Territory.
+1.7 **"Restricted Period"** means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason.
 
-1.8 **"Solicit"** means to directly or indirectly contact, approach, induce, encourage, or provide Confidential Information to any person or entity for the purpose of diverting business away from Employer, but does not include responding to general advertisements or unsolicited inquiries not initiated by Employee.
+1.8 **"Restricted Territory"** means the geographic area described in Cover Terms under Restricted Territory.
+
+1.9 **"Solicit"** means to directly or indirectly contact, approach, induce, encourage, or provide Confidential Information to any person or entity for the purpose of diverting business away from Employer, but does not include responding to general advertisements or unsolicited inquiries not initiated by Employee.
 
 ### 2. Timing and Employee Acknowledgements
 
@@ -77,11 +77,11 @@ During the Restricted Period, Employee must not accept, service, or do business 
 
 ### 9. Non-Competition
 
-During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant is included only because the restriction pathway specified by Employer supports its enforceability under Wyo. Stat. § 1-23-108. Passive ownership of publicly traded securities representing less than five percent of any class of securities is permitted. Ownership of interests in diversified mutual funds, index funds, or exchange-traded funds that may hold securities of a Competitive Business is permitted.
+During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant is included only because the restriction pathway specified by Employer supports its enforceability under Wyo. Stat. § 1-23-108. Passive Public Holdings are permitted.
 
 ### 10. Non-Investment
 
-During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This restriction primarily targets active or material ownership in private competitors. Passive ownership of publicly traded securities representing less than five percent of any class of securities is permitted, as are interests in diversified mutual funds, index funds, and exchange-traded funds. This covenant requires a lawful restriction pathway under Wyo. Stat. § 1-23-108.
+During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This restriction primarily targets active or material ownership in private competitors. Passive Public Holdings are permitted. This covenant requires a lawful restriction pathway under Wyo. Stat. § 1-23-108.
 
 ### 11. Non-Disparagement
 

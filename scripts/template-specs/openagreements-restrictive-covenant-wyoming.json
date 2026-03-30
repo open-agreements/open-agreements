@@ -23,13 +23,13 @@
         { "label": "Employee Title / Position", "value": "{employee_title}", "condition": "employee_title" },
         { "label": "Effective Date", "value": "{effective_date}" },
         { "label": "Governing Law", "value": "{governing_law}" },
-        { "label": "Confidentiality", "value": "Trade secrets: {confidentiality_trade_secret_duration}\nOther confidential information: {confidentiality_other_duration}" },
-        { "label": "Employee Non-Solicitation", "value": "Duration: {employee_nonsolicit_duration}\nCovered employees: {covered_employees_scope}", "condition": "employee_nonsolicit_included" },
-        { "label": "Customer Non-Solicitation", "value": "Duration: {customer_nonsolicit_duration}\nCovered customers: {covered_customers_scope}", "condition": "customer_nonsolicit_included" },
+        { "label": "Confidentiality", "value": "Trade secrets duration: {confidentiality_trade_secret_duration}\nOther Confidential Information duration: {confidentiality_other_duration}" },
+        { "label": "Employee Non-Solicitation", "value": "Duration: {employee_nonsolicit_duration}", "condition": "employee_nonsolicit_included" },
+        { "label": "Customer Non-Solicitation", "value": "Duration: {customer_nonsolicit_duration}", "condition": "customer_nonsolicit_included" },
         { "label": "Non-Competition", "value": "Duration: {noncompete_duration}\nRestricted Territory: {territory}\nCompetitive Business: {competitive_business_definition}", "condition": "noncompete_included" },
         { "label": "Specified Competitors", "value": "{specified_competitors}", "condition": "noncompete_included" },
-        { "label": "No Business with Covered Customers", "value": "{nondealing_duration}; same scope as customer non-solicitation", "condition": "nondealing_included" },
-        { "label": "Non-Investment", "value": "{noninvestment_duration}; active ownership barred, passive public holdings permitted", "condition": "noninvestment_included" },
+        { "label": "No Business with Covered Customers", "value": "Duration: {nondealing_duration}", "condition": "nondealing_included" },
+        { "label": "Non-Investment", "value": "Duration: {noninvestment_duration}", "condition": "noninvestment_included" },
         { "label": "Non-Disparagement", "value": "Duration: {nondisparagement_duration}" }
       ]
     },
@@ -43,8 +43,9 @@
           "terms": [
             { "term": "Competitive Business", "definition": "means the business activities described in Cover Terms under Competitive Business." },
             { "term": "Confidential Information", "definition": "means non-public information relating to Employer's business, including trade secrets, customer lists, pricing, business processes, technical data, and strategic plans, but excluding information that becomes public through no fault of Employee." },
-            { "term": "Covered Customers", "definition": "means the customers, vendors, referral sources, and business partners described in Cover Terms, limited to those with whom Employee had material contact or for whom Employee had responsibility during the covered customer period specified in Cover Terms." },
-            { "term": "Covered Employees", "definition": "means the employees described in Cover Terms under Covered Employees." },
+            { "term": "Covered Customers", "definition": "means customers, vendors, referral sources, and business partners with whom Employee had material contact or for whom Employee had responsibility during the {covered_customer_period} before termination of employment." },
+            { "term": "Covered Employees", "definition": "means employees with whom Employee worked or whom Employee managed during the {covered_employee_period} before termination of employment." },
+            { "term": "Passive Public Holdings", "definition": "means ownership of securities of a publicly traded company representing less than {passive_public_holdings_threshold} of any class of such company\u2019s securities, and interests in diversified mutual funds, index funds, and exchange-traded funds that may hold securities of a Competitive Business." },
             { "term": "Protected Interests", "definition": "means Employer's legitimate business interests in its Confidential Information, customer and business-partner relationships, workforce stability, and goodwill." },
             { "term": "Restricted Period", "definition": "means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason." },
             { "term": "Restricted Territory", "definition": "means the geographic area described in Cover Terms under Restricted Territory." },
@@ -87,13 +88,13 @@
         },
         {
           "heading": "Non-Competition",
-          "body": "During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant is included only because the restriction pathway specified by Employer supports its enforceability under Wyo. Stat. \u00a7 1-23-108. Passive ownership of publicly traded securities representing less than five percent of any class of securities is permitted. Ownership of interests in diversified mutual funds, index funds, or exchange-traded funds that may hold securities of a Competitive Business is permitted.",
+          "body": "During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant is included only because the restriction pathway specified by Employer supports its enforceability under Wyo. Stat. \u00a7 1-23-108. Passive Public Holdings are permitted.",
           "condition": "noncompete_included",
           "omitted_body": "[Intentionally Omitted.]"
         },
         {
           "heading": "Non-Investment",
-          "body": "During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This restriction primarily targets active or material ownership in private competitors. Passive ownership of publicly traded securities representing less than five percent of any class of securities is permitted, as are interests in diversified mutual funds, index funds, and exchange-traded funds. This covenant requires a lawful restriction pathway under Wyo. Stat. \u00a7 1-23-108.",
+          "body": "During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This restriction primarily targets active or material ownership in private competitors. Passive Public Holdings are permitted. This covenant requires a lawful restriction pathway under Wyo. Stat. \u00a7 1-23-108.",
           "condition": "noninvestment_included",
           "omitted_body": "[Intentionally Omitted.]"
         },

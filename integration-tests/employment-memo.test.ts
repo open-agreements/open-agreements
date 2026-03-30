@@ -157,8 +157,8 @@ describe('wyoming restrictive covenant memo', () => {
         worker_category: 'Executive',
         restriction_pathways: 'Executive or Management Personnel',
         competitive_business_definition: 'Software development services',
-        covered_customers_scope: 'Customers served by Employee in the prior 24 months',
-        covered_employees_scope: 'All engineering department employees',
+        covered_customer_period: '24 months',
+        covered_employee_period: '12 months',
         governing_law: 'Wyoming',
       },
     });
