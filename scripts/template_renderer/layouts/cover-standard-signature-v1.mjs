@@ -393,23 +393,20 @@ function keyLabelCell(row, style, nilBorder, ruleBorder) {
   const isGroupHeader = !isSub && row.value === '';
   return new TableCell({
     borders: horizontalBorders(ruleBorder, nilBorder),
-    margins: { top: 32, left: isSub ? 345 : 115, bottom: 32, right: 115 },
+    margins: { top: isGroupHeader ? 200 : 32, left: isSub ? 345 : 115, bottom: 32, right: 115 },
     verticalAlign: isGroupHeader ? VerticalAlign.BOTTOM : VerticalAlign.CENTER,
     children: [
-      // Group headers get an empty paragraph before the label to create visual separation
-      ...(isGroupHeader
-        ? [new Paragraph({ spacing: { after: 0, line: 240 }, children: [new TextRun({ text: '', size: 22 })] })]
-        : []),
-      // For conditional rows, put {IF} in a separate zero-height paragraph so docx-templates
-      // can remove it cleanly without leaving an empty paragraph artifact
-      ...(row.condition
+      // For conditional sub-rows, put {IF} in a separate zero-height paragraph so docx-templates
+      // can remove it cleanly without leaving an empty paragraph artifact.
+      // For group headers, put {IF} inline to avoid corrupting cell properties.
+      ...(row.condition && isSub
         ? [new Paragraph({ spacing: { after: 0, line: 0 }, children: [new TextRun({ text: `{IF ${row.condition}}`, size: 1 })] })]
         : []),
       new Paragraph({
         spacing: { after: row.hint ? 10 : 0, line: style.spacing.line },
         children: [
           new TextRun({
-            text: row.label,
+            text: (row.condition && !isSub) ? `{IF ${row.condition}}${row.label}` : row.label,
             font: style.fonts.body,
             size: isSub ? 20 : 22,
             bold: !isSub,
@@ -438,6 +435,7 @@ function keyLabelCell(row, style, nilBorder, ruleBorder) {
 }
 
 function keyValueCell(row, style, nilBorder, ruleBorder, opts = {}) {
+  const isGroupHeader = !row.sub && row.value === '';
   const valueText = row.condition ? `${row.value}{END-IF}` : row.value;
   const lines = valueText.split('\n');
   const valueParagraphs = lines.map((line, i) =>
@@ -445,7 +443,7 @@ function keyValueCell(row, style, nilBorder, ruleBorder, opts = {}) {
   );
   return new TableCell({
     borders: horizontalBorders(ruleBorder, nilBorder),
-    margins: { top: 32, left: 115, bottom: 32, right: 115 },
+    margins: { top: isGroupHeader ? 200 : 32, left: 115, bottom: 32, right: 115 },
     verticalAlign: VerticalAlign.CENTER,
     children: [
       ...valueParagraphs,

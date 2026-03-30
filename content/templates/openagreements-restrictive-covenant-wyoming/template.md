@@ -16,9 +16,10 @@ The terms below are incorporated into and form part of this agreement.
 | **Confidentiality** | |
 | *Confidentiality — Trade Secrets Duration* | {confidentiality_trade_secret_duration} |
 | *Confidentiality — Other Confidential Information Duration* | {confidentiality_other_duration} |
-| **Non-Solicitation** | |
-| *Non-Solicitation — Employee Duration* | {employee_nonsolicit_duration} |
-| *Non-Solicitation — Customer Duration* | {customer_nonsolicit_duration} |
+| **Employee Non-Solicitation** | |
+| *Employee Non-Solicitation — Duration* | {employee_nonsolicit_duration} |
+| **Customer Non-Solicitation** | |
+| *Customer Non-Solicitation — Duration* | {customer_nonsolicit_duration} |
 | **Non-Competition** | |
 | *Non-Competition — Duration* | {noncompete_duration} |
 | *Non-Competition — Restricted Territory* | {territory} |

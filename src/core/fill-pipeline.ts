@@ -399,6 +399,28 @@ function stripEmptyTableRows(docxBuffer: Buffer): Buffer {
       }
     }
 
+    // Deduplicate tcPr elements within table cells (docx-templates {IF} processing
+    // can create duplicate <w:tcPr> blocks where the first has default properties
+    // that override the intended ones in the second)
+    const allCells = doc.getElementsByTagNameNS(W_NS, 'tc');
+    for (let i = 0; i < allCells.length; i++) {
+      const cell = allCells[i];
+      const tcPrs: Element[] = [];
+      for (let c = 0; c < cell.childNodes.length; c++) {
+        const child = cell.childNodes[c];
+        if (child.nodeType === 1 && (child as Element).localName === 'tcPr' && (child as Element).namespaceURI === W_NS) {
+          tcPrs.push(child as Element);
+        }
+      }
+      if (tcPrs.length > 1) {
+        modified = true;
+        // Keep only the last tcPr (has the correct properties from our renderer)
+        for (let t = 0; t < tcPrs.length - 1; t++) {
+          cell.removeChild(tcPrs[t]);
+        }
+      }
+    }
+
     // Also strip empty paragraphs within table cells (artifacts from {IF} tag processing)
     const cells = doc.getElementsByTagNameNS(W_NS, 'tc');
     const parasToRemove: Element[] = [];
