@@ -391,11 +391,16 @@ function rowHeadingCell(titleText, subtitleText, style, nilBorder, ruleBorder) {
 function keyLabelCell(row, style, nilBorder, ruleBorder) {
   const labelText = row.condition ? `{IF ${row.condition}}${row.label}` : row.label;
   const isSub = row.sub === true;
+  const isGroupHeader = !isSub && row.value === '';
   return new TableCell({
     borders: horizontalBorders(ruleBorder, nilBorder),
     margins: { top: 144, left: isSub ? 345 : 115, bottom: 144, right: 115 },
-    verticalAlign: VerticalAlign.CENTER,
+    verticalAlign: VerticalAlign.BOTTOM,
     children: [
+      // Group headers get an empty paragraph before the label to push it down
+      ...(isGroupHeader
+        ? [new Paragraph({ spacing: { after: 0, line: style.spacing.line }, children: [] })]
+        : []),
       new Paragraph({
         spacing: { after: row.hint ? 10 : 0, line: style.spacing.line },
         children: [
