@@ -126,12 +126,14 @@
   "author": "UseJunior <steven@usejunior.com>",
   "license": "MIT",
   "dependencies": {
+    "@google-cloud/firestore": "^8.3.0",
+    "@google-cloud/storage": "^7.19.0",
+    "@usejunior/docx-core": ">=0.7.0",
     "@xmldom/xmldom": "^0.9.5",
     "adm-zip": "^0.5.16",
     "commander": "^13.1.0",
     "docx-templates": "^4.13.0",
     "js-yaml": "^4.1.0",
-    "@usejunior/docx-core": ">=0.7.0",
     "zod": "^4.0.0"
   },
   "devDependencies": {

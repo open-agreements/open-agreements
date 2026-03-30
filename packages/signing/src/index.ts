@@ -41,3 +41,6 @@ export type {
   StoredEnvelopeStatus,
   GCSConfig,
 } from './storage.js';
+
+export { createGCloudStorageCallbacks } from './gcloud-storage.js';
+export type { GCloudStorageConfig } from './gcloud-storage.js';
