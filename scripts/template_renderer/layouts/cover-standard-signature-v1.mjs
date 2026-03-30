@@ -389,23 +389,27 @@ function rowHeadingCell(titleText, subtitleText, style, nilBorder, ruleBorder) {
 }
 
 function keyLabelCell(row, style, nilBorder, ruleBorder) {
-  const labelText = row.condition ? `{IF ${row.condition}}${row.label}` : row.label;
   const isSub = row.sub === true;
   const isGroupHeader = !isSub && row.value === '';
   return new TableCell({
     borders: horizontalBorders(ruleBorder, nilBorder),
     margins: { top: 144, left: isSub ? 345 : 115, bottom: 144, right: 115 },
-    verticalAlign: VerticalAlign.BOTTOM,
+    verticalAlign: isGroupHeader ? VerticalAlign.BOTTOM : VerticalAlign.CENTER,
     children: [
-      // Group headers get an empty paragraph before the label to push it down
+      // Group headers get an empty paragraph before the label to create visual separation
       ...(isGroupHeader
-        ? [new Paragraph({ spacing: { after: 0, line: style.spacing.line }, children: [] })]
+        ? [new Paragraph({ spacing: { after: 0, line: 240 }, children: [new TextRun({ text: '', size: 22 })] })]
+        : []),
+      // For conditional rows, put {IF} in a separate zero-height paragraph so docx-templates
+      // can remove it cleanly without leaving an empty paragraph artifact
+      ...(row.condition
+        ? [new Paragraph({ spacing: { after: 0, line: 0 }, children: [new TextRun({ text: `{IF ${row.condition}}`, size: 1 })] })]
         : []),
       new Paragraph({
         spacing: { after: row.hint ? 10 : 0, line: style.spacing.line },
         children: [
           new TextRun({
-            text: labelText,
+            text: row.label,
             font: style.fonts.body,
             size: isSub ? 20 : 22,
             bold: !isSub,

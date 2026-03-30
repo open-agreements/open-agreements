@@ -399,7 +399,31 @@ function stripEmptyTableRows(docxBuffer: Buffer): Buffer {
       }
     }
 
-    if (rowsToRemove.length > 0) {
+    // Also strip empty paragraphs within table cells (artifacts from {IF} tag processing)
+    const cells = doc.getElementsByTagNameNS(W_NS, 'tc');
+    const parasToRemove: Element[] = [];
+    for (let i = 0; i < cells.length; i++) {
+      const cell = cells[i];
+      const paras = cell.getElementsByTagNameNS(W_NS, 'p');
+      // Only strip empty paras if the cell has at least 2 paragraphs
+      // (keep the last one — Word requires at least one <w:p> per cell)
+      if (paras.length < 2) continue;
+      let nonEmptyCount = 0;
+      for (let p = 0; p < paras.length; p++) {
+        if ((paras[p].textContent || '').trim().length > 0) nonEmptyCount++;
+      }
+      if (nonEmptyCount === 0) continue; // Don't strip if all are empty
+      for (let p = 0; p < paras.length; p++) {
+        if ((paras[p].textContent || '').trim().length === 0 && paras[p].parentNode === cell) {
+          parasToRemove.push(paras[p]);
+        }
+      }
+    }
+    for (const para of parasToRemove) {
+      para.parentNode?.removeChild(para);
+    }
+
+    if (rowsToRemove.length > 0 || parasToRemove.length > 0) {
       modified = true;
       for (const row of rowsToRemove) {
         row.parentNode?.removeChild(row);
