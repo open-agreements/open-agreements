@@ -66,7 +66,7 @@ fields:
   - name: confidentiality_trade_secret_duration
     type: string
     description: Duration of confidentiality obligations for trade secrets
-    default: Indefinite
+    default: Perpetual
     section: Confidentiality
   - name: confidentiality_other_duration
     type: string

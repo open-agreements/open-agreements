@@ -15,9 +15,9 @@ The terms below are incorporated into and form part of this agreement.
 | **Governing Law** | {governing_law} |
 | **Confidentiality** | Trade secrets: {confidentiality_trade_secret_duration}
 Other confidential information: {confidentiality_other_duration} |
-| **Employee Non-Solicitation** | Restriction: {employee_nonsolicit_duration}
+| **Employee Non-Solicitation** | Duration: {employee_nonsolicit_duration}
 Covered employees: {covered_employees_scope} |
-| **Customer Non-Solicitation** | Restriction: {customer_nonsolicit_duration}
+| **Customer Non-Solicitation** | Duration: {customer_nonsolicit_duration}
 Covered customers: {covered_customers_scope} |
 | **Non-Competition** | Duration: {noncompete_duration}
 Restricted Territory: {territory}
@@ -25,7 +25,7 @@ Competitive Business: {competitive_business_definition} |
 | **Specified Competitors** | {specified_competitors} |
 | **No Business with Covered Customers** | {nondealing_duration}; same scope as customer non-solicitation |
 | **Non-Investment** | {noninvestment_duration}; active ownership barred, passive public holdings permitted |
-| **Non-Disparagement** | {nondisparagement_duration} |
+| **Non-Disparagement** | Duration: {nondisparagement_duration} |
 
 ## Standard Terms
 
@@ -53,7 +53,7 @@ Employee acknowledges that the restrictions in this agreement are reasonable and
 
 ### 3. Confidential Information and Trade Secret Protection
 
-Employee must treat all Confidential Information as strictly confidential. Employee must not use or disclose Confidential Information except as required to perform authorized job duties or with Employer's prior written consent. Employee's obligations regarding trade secrets continue indefinitely. Employee's obligations regarding other Confidential Information continue for the period specified in Cover Terms. Trade secrets are protected under Wyoming law, including Wyo. Stat. § 6-3-501(a)(xi).
+Employee must treat all Confidential Information as strictly confidential. Employee must not use or disclose Confidential Information except as required to perform authorized job duties or with Employer's prior written consent. Employee's obligations regarding trade secrets continue in perpetuity. Employee's obligations regarding other Confidential Information continue for the period specified in Cover Terms. Trade secrets are protected under Wyoming law, including Wyo. Stat. § 6-3-501(a)(xi).
 
 ### 4. Permitted Disclosures and Protected Conduct
 

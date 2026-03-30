@@ -380,17 +380,21 @@ function stripEmptyTableRows(docxBuffer: Buffer): Buffer {
     for (let i = 0; i < rows.length; i++) {
       const row = rows[i];
       let hasCell = false;
+      let allCellsEmpty = true;
       for (let c = 0; c < row.childNodes.length; c++) {
         const child = row.childNodes[c];
         if (child?.nodeType === 1) {
           const childElement = child as Element;
           if (childElement.localName === 'tc' && childElement.namespaceURI === W_NS) {
             hasCell = true;
-            break;
+            const cellText = (childElement.textContent || '').trim();
+            if (cellText.length > 0) {
+              allCellsEmpty = false;
+            }
           }
         }
       }
-      if (!hasCell) {
+      if (!hasCell || (hasCell && allCellsEmpty)) {
         rowsToRemove.push(row);
       }
     }

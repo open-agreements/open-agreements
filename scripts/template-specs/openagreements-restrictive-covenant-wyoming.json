@@ -20,17 +20,17 @@
       "rows": [
         { "label": "Employer", "value": "{employer_name}" },
         { "label": "Employee", "value": "{employee_name}" },
-        { "label": "Employee Title / Position", "value": "{employee_title}" },
+        { "label": "Employee Title / Position", "value": "{employee_title}", "condition": "employee_title" },
         { "label": "Effective Date", "value": "{effective_date}" },
         { "label": "Governing Law", "value": "{governing_law}" },
         { "label": "Confidentiality", "value": "Trade secrets: {confidentiality_trade_secret_duration}\nOther confidential information: {confidentiality_other_duration}" },
-        { "label": "Employee Non-Solicitation", "value": "Restriction: {employee_nonsolicit_duration}\nCovered employees: {covered_employees_scope}", "condition": "employee_nonsolicit_included" },
-        { "label": "Customer Non-Solicitation", "value": "Restriction: {customer_nonsolicit_duration}\nCovered customers: {covered_customers_scope}", "condition": "customer_nonsolicit_included" },
+        { "label": "Employee Non-Solicitation", "value": "Duration: {employee_nonsolicit_duration}\nCovered employees: {covered_employees_scope}", "condition": "employee_nonsolicit_included" },
+        { "label": "Customer Non-Solicitation", "value": "Duration: {customer_nonsolicit_duration}\nCovered customers: {covered_customers_scope}", "condition": "customer_nonsolicit_included" },
         { "label": "Non-Competition", "value": "Duration: {noncompete_duration}\nRestricted Territory: {territory}\nCompetitive Business: {competitive_business_definition}", "condition": "noncompete_included" },
         { "label": "Specified Competitors", "value": "{specified_competitors}", "condition": "noncompete_included" },
         { "label": "No Business with Covered Customers", "value": "{nondealing_duration}; same scope as customer non-solicitation", "condition": "nondealing_included" },
         { "label": "Non-Investment", "value": "{noninvestment_duration}; active ownership barred, passive public holdings permitted", "condition": "noninvestment_included" },
-        { "label": "Non-Disparagement", "value": "{nondisparagement_duration}" }
+        { "label": "Non-Disparagement", "value": "Duration: {nondisparagement_duration}" }
       ]
     },
     "standard_terms": {
@@ -57,7 +57,7 @@
         },
         {
           "heading": "Confidential Information and Trade Secret Protection",
-          "body": "Employee must treat all Confidential Information as strictly confidential. Employee must not use or disclose Confidential Information except as required to perform authorized job duties or with Employer's prior written consent. Employee's obligations regarding trade secrets continue indefinitely. Employee's obligations regarding other Confidential Information continue for the period specified in Cover Terms. Trade secrets are protected under Wyoming law, including Wyo. Stat. \u00a7 6-3-501(a)(xi)."
+          "body": "Employee must treat all Confidential Information as strictly confidential. Employee must not use or disclose Confidential Information except as required to perform authorized job duties or with Employer's prior written consent. Employee's obligations regarding trade secrets continue in perpetuity. Employee's obligations regarding other Confidential Information continue for the period specified in Cover Terms. Trade secrets are protected under Wyoming law, including Wyo. Stat. \u00a7 6-3-501(a)(xi)."
         },
         {
           "heading": "Permitted Disclosures and Protected Conduct",
