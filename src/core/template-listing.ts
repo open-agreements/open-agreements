@@ -40,7 +40,7 @@ export interface TemplateListItem {
 // ---------------------------------------------------------------------------
 
 export function categoryFromId(id: string): string {
-  if (id.includes('employment') || id.includes('employee-ip-inventions')) {
+  if (id.includes('employment') || id.includes('employee-ip-inventions') || id.includes('restrictive-covenant')) {
     return 'employment';
   }
   return 'general';

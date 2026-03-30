@@ -48,8 +48,8 @@ const CATEGORIES = [
   {
     slug: "employment",
     label: "Employment",
-    description: "Offer letters, IP assignments, and confidentiality acknowledgements.",
-    match: (id) => /employment|employee-ip/.test(id),
+    description: "Offer letters, IP assignments, confidentiality acknowledgements, and restrictive covenants.",
+    match: (id) => /employment|employee-ip|restrictive-covenant/.test(id),
   },
   {
     slug: "safes",
