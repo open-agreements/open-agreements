@@ -22,9 +22,23 @@ export type {
   LintReport,
   DocumentRecord,
   StatusIndex,
+  AnalysisSummary,
   CatalogEntry,
   FormsCatalog,
   FetchResult,
   FetchSummary,
   ConventionConfig,
 } from './core/types.js';
+export type { DocumentType, DocumentClassification, ClauseExtraction, DocumentAnalysis } from './core/analysis-types.js';
+export {
+  analysisPath,
+  generateDocumentId,
+  contentHash,
+  computeContentHash,
+  loadAnalysis,
+  saveAnalysis,
+  isAnalysisStale,
+  listPendingDocuments,
+} from './core/analysis-store.js';
+export type { SaveAnalysisInput, PendingDocument } from './core/analysis-store.js';
+export { enrichDocumentRecord, buildAnalysisSummary, enrichStatusIndex } from './core/analysis-indexer.js';
