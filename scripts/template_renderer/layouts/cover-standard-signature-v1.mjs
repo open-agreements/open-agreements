@@ -390,9 +390,10 @@ function rowHeadingCell(titleText, subtitleText, style, nilBorder, ruleBorder) {
 
 function keyLabelCell(row, style, nilBorder, ruleBorder) {
   const labelText = row.condition ? `{IF ${row.condition}}${row.label}` : row.label;
+  const isSub = row.sub === true;
   return new TableCell({
     borders: horizontalBorders(ruleBorder, nilBorder),
-    margins: { top: 144, left: 115, bottom: 144, right: 115 },
+    margins: { top: 144, left: isSub ? 345 : 115, bottom: 144, right: 115 },
     verticalAlign: VerticalAlign.CENTER,
     children: [
       new Paragraph({
@@ -401,9 +402,10 @@ function keyLabelCell(row, style, nilBorder, ruleBorder) {
           new TextRun({
             text: labelText,
             font: style.fonts.body,
-            size: 22,
-            bold: true,
-            color: style.colors.ink,
+            size: isSub ? 20 : 22,
+            bold: !isSub,
+            italics: isSub,
+            color: isSub ? style.colors.ink_soft : style.colors.ink,
           }),
         ],
       }),
@@ -426,11 +428,11 @@ function keyLabelCell(row, style, nilBorder, ruleBorder) {
   });
 }
 
-function keyValueCell(row, style, nilBorder, ruleBorder) {
+function keyValueCell(row, style, nilBorder, ruleBorder, opts = {}) {
   const valueText = row.condition ? `${row.value}{END-IF}` : row.value;
   const lines = valueText.split('\n');
   const valueParagraphs = lines.map((line, i) =>
-    bodyParagraph(line, style, { size: 22, after: i < lines.length - 1 ? 40 : (row.note ? 40 : 0) })
+    bodyParagraph(line, style, { size: 22, after: i < lines.length - 1 ? 40 : (row.note ? 40 : 0), terms: opts.terms })
   );
   return new TableCell({
     borders: horizontalBorders(ruleBorder, nilBorder),
@@ -443,7 +445,7 @@ function keyValueCell(row, style, nilBorder, ruleBorder) {
   });
 }
 
-function coverTable(rows, headingTitle, subtitle, style, nilBorder, ruleBorder) {
+function coverTable(rows, headingTitle, subtitle, style, nilBorder, ruleBorder, opts = {}) {
   return new Table({
     width: { size: 10070, type: WidthType.DXA },
     layout: TableLayoutType.FIXED,
@@ -461,7 +463,7 @@ function coverTable(rows, headingTitle, subtitle, style, nilBorder, ruleBorder) 
       ...rows.map((row) =>
         new TableRow({
           height: { value: style.sizes.cover_row_height, rule: HeightRule.ATLEAST },
-          children: [keyLabelCell(row, style, nilBorder, ruleBorder), keyValueCell(row, style, nilBorder, ruleBorder)],
+          children: [keyLabelCell(row, style, nilBorder, ruleBorder), keyValueCell(row, style, nilBorder, ruleBorder, opts)],
         })
       ),
     ],
@@ -784,8 +786,19 @@ function renderMarkdown(spec) {
   lines.push('');
   lines.push('| Term | Value |');
   lines.push('|------|-------|');
+  let lastParentLabel = '';
   for (const row of sections.cover_terms.rows) {
-    lines.push(`| **${row.label}** | ${row.value} |`);
+    if (row.sub) {
+      const mdLabel = lastParentLabel ? `${lastParentLabel} — ${row.label}` : row.label;
+      lines.push(`| *${mdLabel}* | ${row.value} |`);
+    } else {
+      lastParentLabel = row.label;
+      if (row.value) {
+        lines.push(`| **${row.label}** | ${row.value} |`);
+      } else {
+        lines.push(`| **${row.label}** | |`);
+      }
+    }
   }
   lines.push('');
 
@@ -887,7 +900,8 @@ export function renderCoverStandardSignatureV1(spec, style) {
             sections.cover_terms.subtitle,
             style,
             nilBorder,
-            ruleBorder
+            ruleBorder,
+            { terms: highlightMode === 'all_instances' ? undefined : [] }
           ),
         ],
         style,

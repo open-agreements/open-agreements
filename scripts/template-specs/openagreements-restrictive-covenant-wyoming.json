@@ -23,14 +23,23 @@
         { "label": "Employee Title / Position", "value": "{employee_title}", "condition": "employee_title" },
         { "label": "Effective Date", "value": "{effective_date}" },
         { "label": "Governing Law", "value": "{governing_law}" },
-        { "label": "Confidentiality", "value": "Trade secrets duration: {confidentiality_trade_secret_duration}\nOther Confidential Information duration: {confidentiality_other_duration}" },
-        { "label": "Employee Non-Solicitation", "value": "Duration: {employee_nonsolicit_duration}", "condition": "employee_nonsolicit_included" },
-        { "label": "Customer Non-Solicitation", "value": "Duration: {customer_nonsolicit_duration}", "condition": "customer_nonsolicit_included" },
-        { "label": "Non-Competition", "value": "Duration: {noncompete_duration}\nRestricted Territory: {territory}\nCompetitive Business: {competitive_business_definition}", "condition": "noncompete_included" },
-        { "label": "Specified Competitors", "value": "{specified_competitors}", "condition": "noncompete_included" },
-        { "label": "No Business with Covered Customers", "value": "Duration: {nondealing_duration}", "condition": "nondealing_included" },
-        { "label": "Non-Investment", "value": "Duration: {noninvestment_duration}", "condition": "noninvestment_included" },
-        { "label": "Non-Disparagement", "value": "Duration: {nondisparagement_duration}" }
+        { "label": "Confidentiality", "value": "" },
+        { "label": "Trade Secrets Duration", "value": "{confidentiality_trade_secret_duration}", "sub": true },
+        { "label": "Other Confidential Information Duration", "value": "{confidentiality_other_duration}", "sub": true },
+        { "label": "Non-Solicitation", "value": "" },
+        { "label": "Employee Duration", "value": "{employee_nonsolicit_duration}", "sub": true, "condition": "employee_nonsolicit_included" },
+        { "label": "Customer Duration", "value": "{customer_nonsolicit_duration}", "sub": true, "condition": "customer_nonsolicit_included" },
+        { "label": "Non-Competition", "value": "", "condition": "noncompete_included" },
+        { "label": "Duration", "value": "{noncompete_duration}", "sub": true, "condition": "noncompete_included" },
+        { "label": "Restricted Territory", "value": "{territory}", "sub": true, "condition": "noncompete_included" },
+        { "label": "Competitive Business", "value": "{competitive_business_definition}", "sub": true, "condition": "noncompete_included" },
+        { "label": "Specified Competitors", "value": "{specified_competitors}", "sub": true, "condition": "noncompete_included" },
+        { "label": "No Business with Covered Customers", "value": "", "condition": "nondealing_included" },
+        { "label": "Duration", "value": "{nondealing_duration}", "sub": true, "condition": "nondealing_included" },
+        { "label": "Non-Investment", "value": "", "condition": "noninvestment_included" },
+        { "label": "Duration", "value": "{noninvestment_duration}", "sub": true, "condition": "noninvestment_included" },
+        { "label": "Non-Disparagement", "value": "" },
+        { "label": "Duration", "value": "{nondisparagement_duration}", "sub": true }
       ]
     },
     "standard_terms": {
@@ -49,7 +58,8 @@
             { "term": "Protected Interests", "definition": "means Employer's legitimate business interests in its Confidential Information, customer and business-partner relationships, workforce stability, and goodwill." },
             { "term": "Restricted Period", "definition": "means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason." },
             { "term": "Restricted Territory", "definition": "means the geographic area described in Cover Terms under Restricted Territory." },
-            { "term": "Solicit", "definition": "means to directly or indirectly contact, approach, induce, encourage, or provide Confidential Information to any person or entity for the purpose of diverting business away from Employer, but does not include responding to general advertisements or unsolicited inquiries not initiated by Employee." }
+            { "term": "Solicit", "definition": "means to directly or indirectly contact, approach, induce, encourage, or provide Confidential Information to any person or entity for the purpose of diverting business away from Employer, but does not include responding to general advertisements or unsolicited inquiries not initiated by Employee." },
+            { "term": "Trade Secrets", "definition": "has the meaning given in Wyo. Stat. \u00a7 6-3-501(a)(xi)." }
           ]
         },
         {

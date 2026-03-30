@@ -13,17 +13,23 @@ The terms below are incorporated into and form part of this agreement.
 | **Employee Title / Position** | {employee_title} |
 | **Effective Date** | {effective_date} |
 | **Governing Law** | {governing_law} |
-| **Confidentiality** | Trade secrets duration: {confidentiality_trade_secret_duration}
-Other Confidential Information duration: {confidentiality_other_duration} |
-| **Employee Non-Solicitation** | Duration: {employee_nonsolicit_duration} |
-| **Customer Non-Solicitation** | Duration: {customer_nonsolicit_duration} |
-| **Non-Competition** | Duration: {noncompete_duration}
-Restricted Territory: {territory}
-Competitive Business: {competitive_business_definition} |
-| **Specified Competitors** | {specified_competitors} |
-| **No Business with Covered Customers** | Duration: {nondealing_duration} |
-| **Non-Investment** | Duration: {noninvestment_duration} |
-| **Non-Disparagement** | Duration: {nondisparagement_duration} |
+| **Confidentiality** | |
+| *Confidentiality — Trade Secrets Duration* | {confidentiality_trade_secret_duration} |
+| *Confidentiality — Other Confidential Information Duration* | {confidentiality_other_duration} |
+| **Non-Solicitation** | |
+| *Non-Solicitation — Employee Duration* | {employee_nonsolicit_duration} |
+| *Non-Solicitation — Customer Duration* | {customer_nonsolicit_duration} |
+| **Non-Competition** | |
+| *Non-Competition — Duration* | {noncompete_duration} |
+| *Non-Competition — Restricted Territory* | {territory} |
+| *Non-Competition — Competitive Business* | {competitive_business_definition} |
+| *Non-Competition — Specified Competitors* | {specified_competitors} |
+| **No Business with Covered Customers** | |
+| *No Business with Covered Customers — Duration* | {nondealing_duration} |
+| **Non-Investment** | |
+| *Non-Investment — Duration* | {noninvestment_duration} |
+| **Non-Disparagement** | |
+| *Non-Disparagement — Duration* | {nondisparagement_duration} |
 
 ## Standard Terms
 
@@ -46,6 +52,8 @@ Competitive Business: {competitive_business_definition} |
 1.8 **"Restricted Territory"** means the geographic area described in Cover Terms under Restricted Territory.
 
 1.9 **"Solicit"** means to directly or indirectly contact, approach, induce, encourage, or provide Confidential Information to any person or entity for the purpose of diverting business away from Employer, but does not include responding to general advertisements or unsolicited inquiries not initiated by Employee.
+
+1.10 **"Trade Secrets"** has the meaning given in Wyo. Stat. § 6-3-501(a)(xi).
 
 ### 2. Timing and Employee Acknowledgements
 

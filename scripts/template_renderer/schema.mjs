@@ -11,6 +11,7 @@ const coverRowSchema = z.object({
   hint: z.string().optional(),
   note: z.string().optional(),
   condition: z.string().regex(fieldNamePattern).optional(),
+  sub: z.boolean().optional().default(false),
 });
 
 const textClauseSchema = z.object({
