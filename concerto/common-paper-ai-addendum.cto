@@ -1,0 +1,62 @@
+namespace org.openagreements.commonpaper.commonpaperaiaddendum@1.0.0
+
+import org.accordproject.contract.Contract from https://models.accordproject.org/accordproject/contract.cto
+
+/**
+ * Common Paper AI Addendum
+ *
+ * An AI addendum cover page and standard terms, based on Common Paper's
+ * standard form. Adds AI-specific provisions to an existing agreement,
+ * covering model training, input/output rights, and AI usage policies.
+ * Source: https://commonpaper.com/standards/ai-addendum/1.0
+ * License: CC-BY-4.0
+ */
+
+enum Provider_signatory_typeType {
+  o entity
+  o individual
+}
+
+enum Customer_signatory_typeType {
+  o entity
+  o individual
+}
+
+asset CommonPaperAiAddendum extends Contract {
+  o String company_name
+  o String agreement_description
+  o String ai_policy_reference optional
+  o String additional_terms optional
+  o Boolean training_data_none optional
+  o Boolean training_data_usage optional
+  o Boolean training_data_feedback optional
+  o Boolean training_data_input optional
+  o Boolean training_data_output optional
+  o Boolean training_data_prompts optional
+  o Boolean training_data_customer_content optional
+  o Boolean training_data_additional optional
+  o Boolean model_training_none optional
+  o Boolean model_training_customer_only optional
+  o Boolean training_data_aggregated optional
+  o Boolean training_data_deidentified optional
+  o Boolean training_data_best_effort_deidentify optional
+  o Boolean training_requirements_additional optional
+  o Boolean no_customer_identification optional
+  o Boolean improvements_for_customer_only optional
+  o Boolean output_restrictions_additional optional
+  o Boolean ai_provider_covered_claims optional
+  o String provider_covered_claims_detail optional
+  o String provider_covered_claims_exclusions optional
+  o String customer_covered_claims_detail optional
+  o Boolean ai_customer_covered_claims optional
+  o Provider_signatory_typeType provider_signatory_type default="entity"
+  o String provider_signatory_name optional
+  o String provider_signatory_title optional
+  o String provider_signatory_company optional
+  o String provider_signatory_email optional
+  o Customer_signatory_typeType customer_signatory_type default="entity"
+  o String customer_signatory_name optional
+  o String customer_signatory_title optional
+  o String customer_signatory_company optional
+  o String customer_signatory_email optional
+}

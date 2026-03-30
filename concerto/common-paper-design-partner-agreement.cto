@@ -1,0 +1,58 @@
+namespace org.openagreements.commonpaper.commonpaperdesignpartneragreement@1.0.0
+
+import org.accordproject.contract.Contract from https://models.accordproject.org/accordproject/contract.cto
+
+/**
+ * Common Paper Design Partner Agreement
+ *
+ * A design partner agreement cover page and standard terms, based on Common
+ * Paper's standard form. Covers partnerships where a company provides early
+ * access to a product in development in exchange for feedback and
+ * collaboration.
+ * Source: https://commonpaper.com/standards/design-partner-agreement/1.3
+ * License: CC-BY-4.0
+ */
+
+enum Provider_signatory_typeType {
+  o entity
+  o individual
+}
+
+enum Partner_signatory_typeType {
+  o entity
+  o individual
+}
+
+asset CommonPaperDesignPartnerAgreement extends Contract {
+  o String company_name
+  o String product_description
+  o String billing_period optional
+  o String term_length_unit optional
+  o String discount_amount optional
+  o String free_text optional
+  o String open_text optional
+  o String partner_other_details optional
+  o String provider_other_details optional
+  o Boolean has_partner_other_details optional
+  o Boolean has_provider_other_details optional
+  o Boolean partner_feedback_sessions optional
+  o Boolean partner_case_study optional
+  o Boolean partner_private_list optional
+  o Boolean partner_public_list optional
+  o Boolean partner_reference optional
+  o Boolean provider_discount optional
+  o Boolean provider_develop_functionality optional
+  o Boolean has_fees optional
+  o String governing_law default="Delaware"
+  o String jurisdiction default="courts located in New Castle County, Delaware"
+  o Provider_signatory_typeType provider_signatory_type default="entity"
+  o String provider_signatory_name optional
+  o String provider_signatory_title optional
+  o String provider_signatory_company optional
+  o String provider_signatory_email optional
+  o Partner_signatory_typeType partner_signatory_type default="entity"
+  o String partner_signatory_name optional
+  o String partner_signatory_title optional
+  o String partner_signatory_company optional
+  o String partner_signatory_email optional
+}

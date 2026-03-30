@@ -1,0 +1,27 @@
+namespace org.openagreements.nvca.nvcavotingagreement@1.0.0
+
+import org.accordproject.contract.Contract from https://models.accordproject.org/accordproject/contract.cto
+
+/**
+ * NVCA Model Voting Agreement
+ *
+ * Standard-form voting agreement for venture capital financings, covering
+ * board composition, drag-along rights, and stockholder voting obligations.
+ * Source: https://nvca.org/wp-content/uploads/2024/10/NVCA-Model-VA-10-1-2025.docx
+ */
+
+asset NvcaVotingAgreement extends Contract {
+  o String company_name
+  o String investor_name
+  o String investor_2_name optional
+  o String key_holder_name
+  o String effective_date
+  o String company_counsel
+  o String counsel_cc default=""
+  o String judicial_district default="District of Delaware"
+  o String state_of_incorporation_lower default="delaware"
+  o String specify_percentage
+  o String amended_restated_upper default=""
+  o String amended_restated default=""
+  o String signature_page_marker default="Signature Page Follows"
+}

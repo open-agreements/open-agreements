@@ -1,0 +1,34 @@
+namespace org.openagreements.custom.openagreementsemploymentofferletter@1.0.0
+
+import org.accordproject.contract.Contract from https://models.accordproject.org/accordproject/contract.cto
+
+/**
+ * OpenAgreements Employment Offer Letter
+ *
+ * A startup-focused employment offer letter template for full-time or
+ * part-time hiring with compensation, equity summary, and at-will framing.
+ * Source: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-employment-offer-letter
+ * License: CC-BY-4.0
+ */
+
+enum Employment_typeType {
+  o full_time
+  o part_time
+}
+
+asset OpenagreementsEmploymentOfferLetter extends Contract {
+  o String employer_name optional
+  o String employee_name optional
+  o String position_title optional
+  o Employment_typeType employment_type optional
+  o String start_date optional
+  o String reporting_manager optional
+  o String base_salary optional
+  o String bonus_terms optional
+  o String equity_terms optional
+  o String work_location optional
+  o String governing_law default="California"
+  o String offer_expiration_date optional
+  o String cloud_drive_id optional
+  o String cloud_drive_id_footer default=""
+}

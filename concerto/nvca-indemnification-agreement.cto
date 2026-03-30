@@ -1,0 +1,31 @@
+namespace org.openagreements.nvca.nvcaindemnificationagreement@1.0.0
+
+import org.accordproject.contract.Contract from https://models.accordproject.org/accordproject/contract.cto
+
+/**
+ * NVCA Model Indemnification Agreement
+ *
+ * Director and officer indemnification agreement for venture-backed
+ * companies, providing indemnification and advancement of expenses.
+ * Source: https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx
+ */
+
+asset NvcaIndemnificationAgreement extends Contract {
+  o String indemnitee_name
+  o String indemnitee_address
+  o String company_name
+  o String agreement_effective_date
+  o String fund_sponsor_name optional
+  o String indemnitee_role default="director"
+  o String indemnitee_role_plural default="directors"
+  o String indemnitee_role_secondary default="officer"
+  o String indemnitee_role_secondary_plural default="officers"
+  o String indemnitee_pronoun_possessive default="its"
+  o String indemnitee_pronoun_possessive_plural default="their"
+  o String bylaws_name default="Bylaws"
+  o String certificate_name default="Certificate of Incorporation"
+  o String and_appointing_stockholder default=""
+  o String appointing_stockholder_ipo_termination_clause default=""
+  o String indemnification_section_letter default="E"
+  o String signature_page_marker default="Signature Page Follows"
+}

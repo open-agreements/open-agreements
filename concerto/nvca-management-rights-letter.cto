@@ -1,0 +1,23 @@
+namespace org.openagreements.nvca.nvcamanagementrightsletter@1.0.0
+
+import org.accordproject.contract.Contract from https://models.accordproject.org/accordproject/contract.cto
+
+/**
+ * NVCA Model Management Rights Letter
+ *
+ * Management rights letter granting ERISA-qualifying management rights to
+ * venture capital fund investors.
+ * Source: https://nvca.org/wp-content/uploads/2025/12/NVCA-2020-Management-Rights-Letter-1-1.docx
+ */
+
+asset NvcaManagementRightsLetter extends Contract {
+  o String company_name_upper
+  o String investor_name
+  o String investor_name_upper
+  o String city
+  o String state
+  o String street_address
+  o String zip_code
+  o String company_letterhead default=""
+  o String signature_page_marker default="Signature Page Follows"
+}

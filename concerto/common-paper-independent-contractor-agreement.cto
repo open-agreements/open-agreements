@@ -1,0 +1,45 @@
+namespace org.openagreements.commonpaper.commonpaperindependentcontractoragreement@1.0.0
+
+import org.accordproject.contract.Contract from https://models.accordproject.org/accordproject/contract.cto
+
+/**
+ * Common Paper Independent Contractor Agreement
+ *
+ * An independent contractor agreement based on Common Paper's standard form.
+ * Covers the engagement of an independent contractor, including scope of
+ * services, rates, payment, timeline, and governing law.
+ * Source: https://commonpaper.com/standards/independent-contractor-agreement
+ * License: CC-BY-4.0
+ */
+
+enum Company_signatory_typeType {
+  o entity
+  o individual
+}
+
+enum Contractor_signatory_typeType {
+  o entity
+  o individual
+}
+
+asset CommonPaperIndependentContractorAgreement extends Contract {
+  o String company_name_and_address
+  o String contractor_name_and_address
+  o String services_description
+  o String rates_and_fees
+  o String payment_terms
+  o String timeline
+  o String other_terms optional
+  o String governing_law default="the State of California"
+  o String jurisdiction default="San Francisco County, California"
+  o Company_signatory_typeType company_signatory_type default="entity"
+  o String company_signatory_name optional
+  o String company_signatory_title optional
+  o String company_signatory_company optional
+  o String company_signatory_email optional
+  o Contractor_signatory_typeType contractor_signatory_type default="entity"
+  o String contractor_signatory_name optional
+  o String contractor_signatory_title optional
+  o String contractor_signatory_company optional
+  o String contractor_signatory_email optional
+}

@@ -1,0 +1,40 @@
+namespace org.openagreements.commonpaper.commonpaperaiaddenduminapp@1.0.0
+
+import org.accordproject.contract.Contract from https://models.accordproject.org/accordproject/contract.cto
+
+/**
+ * Common Paper AI Addendum In-App
+ *
+ * An in-app AI addendum based on Common Paper's standard form. A streamlined
+ * version of the AI addendum designed to be accepted electronically within an
+ * application.
+ * Source: https://commonpaper.com/standards/ai-addendum/1.0
+ * License: CC-BY-4.0
+ */
+
+asset CommonPaperAiAddendumInApp extends Contract {
+  o String ai_policy_reference optional
+  o String additional_terms optional
+  o Boolean training_data_none optional
+  o Boolean training_data_usage optional
+  o Boolean training_data_feedback optional
+  o Boolean training_data_input optional
+  o Boolean training_data_output optional
+  o Boolean training_data_prompts optional
+  o Boolean training_data_customer_content optional
+  o Boolean training_data_additional optional
+  o Boolean model_training_none optional
+  o Boolean model_training_customer_only optional
+  o Boolean training_data_aggregated optional
+  o Boolean training_data_deidentified optional
+  o Boolean training_data_best_effort_deidentify optional
+  o Boolean training_requirements_additional optional
+  o Boolean no_customer_identification optional
+  o Boolean improvements_for_customer_only optional
+  o Boolean output_restrictions_additional optional
+  o Boolean ai_provider_covered_claims optional
+  o String provider_covered_claims_detail optional
+  o String provider_covered_claims_exclusions optional
+  o String customer_covered_claims_detail optional
+  o Boolean ai_customer_covered_claims optional
+}

@@ -1,0 +1,127 @@
+namespace org.openagreements.commonpaper.commonpaperdataprocessingagreement@1.0.0
+
+import org.accordproject.contract.Contract from https://models.accordproject.org/accordproject/contract.cto
+
+/**
+ * Common Paper Data Processing Agreement
+ *
+ * A data processing agreement cover page and standard terms, based on Common
+ * Paper's standard form. Covers GDPR and data protection compliance,
+ * including processor/controller roles, data transfers, subprocessors, and
+ * security measures.
+ * Source: https://commonpaper.com/standards/data-processing-agreement/1.1
+ * License: CC-BY-4.0
+ */
+
+enum Provider_signatory_typeType {
+  o entity
+  o individual
+}
+
+enum Customer_signatory_typeType {
+  o entity
+  o individual
+}
+
+asset CommonPaperDataProcessingAgreement extends Contract {
+  o String company_name
+  o String product_name
+  o String underlying_agreement
+  o String customer_contact_name
+  o String customer_contact_title optional
+  o String customer_address
+  o String provider_contact_name
+  o String provider_contact_title optional
+  o String provider_address
+  o String physical_address optional
+  o String contact_address optional
+  o String provider_role
+  o String governing_law
+  o String eu_member_state optional
+  o String uk_governing_law optional
+  o String subprocessor_name optional
+  o String custom_option optional
+  o String custom_options optional
+  o String url optional
+  o String countries_list optional
+  o String csa_reference optional
+  o String non_csa_reference optional
+  o String security_measures optional
+  o String text_box optional
+  o String other_security_certification optional
+  o String dpa_covered_claims_detail optional
+  o String cap_multiplier optional
+  o String greater_of_dollar optional
+  o String policy_url optional
+  o Boolean has_subprocessor optional
+  o Boolean dpa_security_reasonable_efforts optional
+  o Boolean has_dpa_security_policy optional
+  o Boolean has_dpa_security_certifications optional
+  o Boolean cert_iso_27001 optional
+  o Boolean cert_penetration_testing optional
+  o Boolean cert_soc2_type1 optional
+  o Boolean cert_pci_level1 optional
+  o Boolean cert_soc2_type2 optional
+  o Boolean cert_pci_level2 optional
+  o Boolean cert_hipaa optional
+  o Boolean cert_fedramp optional
+  o Boolean cert_other optional
+  o Boolean indemnification_csa_reference optional
+  o Boolean indemnification_non_csa_reference optional
+  o Boolean cap_csa_reference optional
+  o Boolean cap_non_csa_reference optional
+  o Boolean has_dpa_governing_law optional
+  o Boolean has_ccpa_terms optional
+  o Boolean has_eea_transfers optional
+  o Boolean has_uk_transfers optional
+  o Boolean data_subject_end_users optional
+  o Boolean data_subject_employees optional
+  o Boolean data_subject_custom optional
+  o Boolean pd_name optional
+  o Boolean pd_contact optional
+  o Boolean pd_employment optional
+  o Boolean pd_financial optional
+  o Boolean pd_professional optional
+  o Boolean pd_transactional optional
+  o Boolean pd_user_activity optional
+  o Boolean pd_location optional
+  o Boolean pd_custom optional
+  o Boolean security_measures_see_policy optional
+  o Boolean security_measures_custom optional
+  o Boolean processing_continuous optional
+  o Boolean processing_frequency_custom optional
+  o Boolean pa_receiving optional
+  o Boolean pa_holding optional
+  o Boolean pa_using optional
+  o Boolean pa_updating optional
+  o Boolean pa_protecting optional
+  o Boolean pa_sharing optional
+  o Boolean pa_returning optional
+  o Boolean pa_erasing optional
+  o Boolean pa_custom optional
+  o Boolean sm_pseudonymization optional
+  o Boolean sm_confidentiality optional
+  o Boolean sm_restore optional
+  o Boolean sm_testing optional
+  o Boolean sm_user_auth optional
+  o Boolean sm_transit optional
+  o Boolean sm_storage optional
+  o Boolean sm_physical optional
+  o Boolean sm_logging optional
+  o Boolean sm_config optional
+  o Boolean sm_governance optional
+  o Boolean sm_certification optional
+  o Boolean sm_minimization optional
+  o Boolean sm_quality optional
+  o Boolean sm_retention optional
+  o Boolean sm_accountability optional
+  o Boolean sm_portability optional
+  o Provider_signatory_typeType provider_signatory_type default="entity"
+  o String provider_signatory_name optional
+  o String provider_signatory_title optional
+  o String provider_signatory_company optional
+  o Customer_signatory_typeType customer_signatory_type default="entity"
+  o String customer_signatory_name optional
+  o String customer_signatory_title optional
+  o String customer_signatory_company optional
+}

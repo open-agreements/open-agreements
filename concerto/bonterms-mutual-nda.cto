@@ -1,0 +1,23 @@
+namespace org.openagreements.bonterms.bontermsmutualnda@1.0.0
+
+import org.accordproject.contract.Contract from https://models.accordproject.org/accordproject/contract.cto
+
+/**
+ * Bonterms Mutual NDA
+ *
+ * Cover page for the Bonterms Mutual NDA (Version 1.0). The standard terms
+ * are incorporated by reference from bonterms.com.
+ * Source: https://github.com/Bonterms/Mutual-NDA
+ * License: CC0-1.0
+ */
+
+asset BontermsMutualNda extends Contract {
+  o String party_1_name
+  o String party_2_name
+  o String effective_date
+  o String purpose default="Evaluating a potential business relationship"
+  o String nda_term default="1 year"
+  o String confidentiality_period default="1 year"
+  o String governing_law default="California"
+  o String courts default="courts located in San Francisco, California"
+}

@@ -1,0 +1,30 @@
+namespace org.openagreements.commonpaper.commonpapercsaclickthrough@1.0.0
+
+import org.accordproject.contract.Contract from https://models.accordproject.org/accordproject/contract.cto
+
+/**
+ * Common Paper CSA Click-Through
+ *
+ * A click-through cloud service agreement based on Common Paper's standard
+ * terms. Designed for self-serve SaaS products where the customer accepts
+ * terms online rather than negotiating a paper agreement.
+ * Source: https://commonpaper.com/standards/cloud-service-agreement/2.1
+ * License: CC-BY-4.0
+ */
+
+asset CommonPaperCsaClickThrough extends Contract {
+  o String provider_name
+  o String cloud_service
+  o String custom_order_date optional
+  o String effective_date optional
+  o String subscription_period optional
+  o String payment_frequency optional
+  o String payment_terms_days optional
+  o String non_renewal_notice_date optional
+  o String order_date optional
+  o String governing_law
+  o String jurisdiction
+  o String provider_email optional
+  o String unlimited_claims optional
+  o String pricing_page optional
+}

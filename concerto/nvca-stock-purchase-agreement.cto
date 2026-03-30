@@ -1,0 +1,58 @@
+namespace org.openagreements.nvca.nvcastockpurchaseagreement@1.0.0
+
+import org.accordproject.contract.Contract from https://models.accordproject.org/accordproject/contract.cto
+
+/**
+ * NVCA Model Stock Purchase Agreement
+ *
+ * Series preferred stock purchase agreement for venture capital financings,
+ * covering purchase terms, representations, and closing conditions.
+ * Source: https://nvca.org/wp-content/uploads/2025/10/NVCA-Model-SPA-10-28-2025-1.docx
+ */
+
+enum Closing_typeType {
+  o single
+  o additional
+}
+
+enum Dispute_resolution_modeType {
+  o arbitration
+  o courts
+}
+
+asset NvcaStockPurchaseAgreement extends Contract {
+  o String company_name
+  o String investor_name
+  o String company_counsel
+  o String investor_counsel
+  o String company_counsel_name
+  o String lead_purchaser_name
+  o String series_designation default="A"
+  o String agreement_date_month_day default="January 15"
+  o String agreement_year_two_digits default="26"
+  o String par_value_per_share default="0.0001"
+  o String purchase_price_per_share default="1.00"
+  o String applicable_word default=""
+  o Boolean include_convertible_securities default=false
+  o Boolean include_closing_reference default=false
+  o String purchaser_scope optional
+  o String optional_plural_suffix optional
+  o String closing_heading optional
+  o String initial_word_lower optional
+  o String initial_word_title optional
+  o Boolean bind_all_convertible_holders_to_convert default=true
+  o Closing_typeType closing_type default="single"
+  o Dispute_resolution_modeType dispute_resolution_mode default="courts"
+  o String arbitration_location optional
+  o String judicial_district
+  o String balance_sheet_date
+  o String benefit_plan_name optional
+  o String signature_page_marker default="Signature Page Follows"
+  o String state_lower
+  o String specify_percentage
+  o String financial_reporting_period default="monthly"
+  o String director_names
+  o String board_size
+  o String minimum_shares_initial_closing
+  o String applicable_purchasers optional
+}
