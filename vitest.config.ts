@@ -6,6 +6,7 @@ export default defineConfig({
     exclude: [
       ...configDefaults.exclude,
       '**/.worktrees/**',
+      '.claude/worktrees/**',
     ],
     reporters: [
       'default',
