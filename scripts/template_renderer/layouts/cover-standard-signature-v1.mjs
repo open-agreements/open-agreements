@@ -393,7 +393,7 @@ function keyLabelCell(row, style, nilBorder, ruleBorder) {
   const isGroupHeader = !isSub && row.value === '';
   return new TableCell({
     borders: horizontalBorders(ruleBorder, nilBorder),
-    margins: { top: 144, left: isSub ? 345 : 115, bottom: 144, right: 115 },
+    margins: { top: 32, left: isSub ? 345 : 115, bottom: 32, right: 115 },
     verticalAlign: isGroupHeader ? VerticalAlign.BOTTOM : VerticalAlign.CENTER,
     children: [
       // Group headers get an empty paragraph before the label to create visual separation
@@ -445,7 +445,7 @@ function keyValueCell(row, style, nilBorder, ruleBorder, opts = {}) {
   );
   return new TableCell({
     borders: horizontalBorders(ruleBorder, nilBorder),
-    margins: { top: 144, left: 115, bottom: 144, right: 115 },
+    margins: { top: 32, left: 115, bottom: 32, right: 115 },
     verticalAlign: VerticalAlign.CENTER,
     children: [
       ...valueParagraphs,

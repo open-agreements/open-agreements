@@ -56,7 +56,7 @@
   "sizes": {
     "header_accent_rule": 14,
     "table_rule": 4,
-    "cover_row_height": 700,
+    "cover_row_height": 403,
     "signature_row_height": 690,
     "checklist_row_height": 500
   }
