@@ -27,3 +27,17 @@ export type {
 
 export { DocuSignProvider } from './docusign.js';
 export type { DocuSignConfig } from './docusign.js';
+
+export {
+  encrypt,
+  decrypt,
+  createDocumentRef,
+  createArtifactRef,
+} from './storage.js';
+
+export type {
+  StoredConnection,
+  AuditLogEntry,
+  StoredEnvelopeStatus,
+  GCSConfig,
+} from './storage.js';
