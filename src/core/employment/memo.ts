@@ -325,17 +325,6 @@ const CLAUSE_SIGNALS: Record<string, ClauseSignal[]> = {
         'Can licensed counsel confirm the employee role classification under Wyoming Stat. section 1-23-108?',
     },
     {
-      id: 'consideration',
-      field: 'consideration',
-      missingSeverity: 'high',
-      missingSummary:
-        'Consideration for the covenants is blank. For existing employees, new consideration beyond continued employment may be required for enforceability.',
-      presentSummary:
-        'Consideration for the covenants is specified.',
-      followUpQuestionWhenMissing:
-        'Can licensed counsel confirm whether the consideration is sufficient for enforceability?',
-    },
-    {
       id: 'competitive-business-definition',
       field: 'competitive_business_definition',
       missingSeverity: 'medium',
@@ -347,13 +336,13 @@ const CLAUSE_SIGNALS: Record<string, ClauseSignal[]> = {
         'Can licensed counsel confirm whether the competitive business definition is sufficiently narrow?',
     },
     {
-      id: 'protected-customers',
-      field: 'protected_customers',
+      id: 'covered-customers-scope',
+      field: 'covered_customers_scope',
       missingSeverity: 'medium',
       missingSummary:
-        'Protected customer / partner description is blank. Non-solicitation and non-dealing covenants need a defined scope to be enforceable.',
+        'Covered customer scope is blank. Non-solicitation and non-dealing covenants need a defined scope to be enforceable.',
       presentSummary:
-        'Protected customer / partner description is specified.',
+        'Covered customer scope is specified.',
     },
     {
       id: 'noncompete-duration',

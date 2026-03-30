@@ -7,40 +7,30 @@
   "document": {
     "title": "Employee Restrictive Covenant Agreement (Wyoming)",
     "label": "OpenAgreements Employee Restrictive Covenant (Wyoming)",
-    "version": "1.0",
+    "version": "2.0",
     "license": "Free to use under CC BY 4.0",
-    "include_cloud_doc_line": true
+    "include_cloud_doc_line": true,
+    "defined_term_highlight_mode": "definition_site_only"
   },
   "sections": {
     "cover_terms": {
       "section_label": "Cover Terms",
       "heading_title": "Cover Terms",
-      "subtitle": "The key business terms of this restrictive covenant agreement are as follows. This agreement is governed by Wyoming law, including Wyo. Stat. \u00a7 1-23-108 (2025).",
+      "subtitle": "The terms below are incorporated into and form part of this agreement.",
       "rows": [
         { "label": "Employer", "value": "{employer_name}" },
         { "label": "Employee", "value": "{employee_name}" },
         { "label": "Employee Title / Position", "value": "{employee_title}" },
         { "label": "Effective Date", "value": "{effective_date}" },
-        { "label": "Worker Category", "value": "{worker_category}" },
-        { "label": "Wyoming Restriction Pathway(s)", "value": "{restriction_pathways}" },
-        { "label": "Consideration", "value": "{consideration}" },
-        { "label": "Competitive Business Definition", "value": "{competitive_business_definition}" },
-        { "label": "Protected Customer / Partner Description", "value": "{protected_customers}" },
-        { "label": "Protected Employee Group", "value": "{protected_employee_group}" },
-        { "label": "Specified Competitors", "value": "{specified_competitors}" },
-        { "label": "Territory", "value": "{territory}" },
-        { "label": "Passive Investment Threshold", "value": "{passive_investment_threshold}" },
-        { "label": "Return-of-Property Deadline", "value": "{return_of_property_deadline}" },
         { "label": "Governing Law", "value": "{governing_law}" },
-        { "label": "Venue", "value": "{venue}" },
-        { "label": "Covenant Matrix", "value": "Covenant | Included | Duration | Scope" },
-        { "label": "Confidentiality", "value": "{confidentiality_included} | {confidentiality_duration} | Per Defined Terms" },
-        { "label": "Non-Solicitation of Employees", "value": "{employee_nonsolicit_included} | {employee_nonsolicit_duration} | {protected_employee_group}" },
-        { "label": "Non-Solicitation of Customers / Partners", "value": "{customer_nonsolicit_included} | {customer_nonsolicit_duration} | {protected_customers}" },
-        { "label": "Non-Dealing", "value": "{nondealing_included} | {nondealing_duration} | Same as customer non-solicitation" },
-        { "label": "Non-Competition", "value": "{noncompete_included} | {noncompete_duration} | {competitive_business_definition} within {territory}" },
-        { "label": "Non-Investment", "value": "{noninvestment_included} | {noninvestment_duration} | Above {passive_investment_threshold}" },
-        { "label": "Non-Disparagement", "value": "{nondisparagement_included} | Indefinite | Reciprocal" }
+        { "label": "Confidentiality", "value": "Trade secrets: {confidentiality_trade_secret_duration}\nOther confidential information: {confidentiality_other_duration}" },
+        { "label": "Employee Non-Solicitation", "value": "Restriction: {employee_nonsolicit_duration}\nCovered employees: {covered_employees_scope}", "condition": "employee_nonsolicit_included" },
+        { "label": "Customer Non-Solicitation", "value": "Restriction: {customer_nonsolicit_duration}\nCovered customers: {covered_customers_scope}", "condition": "customer_nonsolicit_included" },
+        { "label": "Non-Competition", "value": "Duration: {noncompete_duration}\nRestricted Territory: {territory}\nCompetitive Business: {competitive_business_definition}", "condition": "noncompete_included" },
+        { "label": "Specified Competitors", "value": "{specified_competitors}", "condition": "noncompete_included" },
+        { "label": "No Business with Covered Customers", "value": "{nondealing_duration}; same scope as customer non-solicitation", "condition": "nondealing_included" },
+        { "label": "Non-Investment", "value": "{noninvestment_duration}; active ownership barred, passive public holdings permitted", "condition": "noninvestment_included" },
+        { "label": "Non-Disparagement", "value": "{nondisparagement_duration}" }
       ]
     },
     "standard_terms": {
@@ -48,16 +38,26 @@
       "heading_title": "Standard Terms",
       "clauses": [
         {
+          "type": "definitions",
           "heading": "Defined Terms",
-          "body": "\"Competitive Business\" means the business activities described in Cover Terms under Competitive Business Definition. \"Confidential Information\" means non-public information relating to Employer's business, including trade secrets, customer lists, pricing, business processes, technical data, and strategic plans, but excluding information that becomes public through no fault of Employee. \"Protected Interests\" means Employer's legitimate business interests in its Confidential Information, customer and business-partner relationships, workforce stability, and goodwill. \"Restricted Period\" means the duration specified in the Covenant Matrix for each covenant, beginning on the date Employee's employment ends. \"Restricted Territory\" means the geographic area described in Cover Terms under Territory. \"Solicit\" means to directly or indirectly contact, approach, induce, encourage, or provide Confidential Information to any person or entity for the purpose of diverting business away from Employer, but does not include responding to general advertisements or unsolicited inquiries not initiated by Employee."
+          "terms": [
+            { "term": "Competitive Business", "definition": "means the business activities described in Cover Terms under Competitive Business." },
+            { "term": "Confidential Information", "definition": "means non-public information relating to Employer's business, including trade secrets, customer lists, pricing, business processes, technical data, and strategic plans, but excluding information that becomes public through no fault of Employee." },
+            { "term": "Covered Customers", "definition": "means the customers, vendors, referral sources, and business partners described in Cover Terms, limited to those with whom Employee had material contact or for whom Employee had responsibility during the covered customer period specified in Cover Terms." },
+            { "term": "Covered Employees", "definition": "means the employees described in Cover Terms under Covered Employees." },
+            { "term": "Protected Interests", "definition": "means Employer's legitimate business interests in its Confidential Information, customer and business-partner relationships, workforce stability, and goodwill." },
+            { "term": "Restricted Period", "definition": "means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason." },
+            { "term": "Restricted Territory", "definition": "means the geographic area described in Cover Terms under Restricted Territory." },
+            { "term": "Solicit", "definition": "means to directly or indirectly contact, approach, induce, encourage, or provide Confidential Information to any person or entity for the purpose of diverting business away from Employer, but does not include responding to general advertisements or unsolicited inquiries not initiated by Employee." }
+          ]
         },
         {
-          "heading": "Consideration, Timing, and Employee Acknowledgements",
-          "body": "Employee acknowledges that the consideration described in Cover Terms is adequate and sufficient for the obligations in this agreement. Employee acknowledges that the restrictions in this agreement are reasonable and necessary to protect Employer's Protected Interests. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. This agreement is effective as of the Effective Date listed in Cover Terms."
+          "heading": "Timing and Employee Acknowledgements",
+          "body": "Employee acknowledges that the restrictions in this agreement are reasonable and necessary to protect Employer's Protected Interests. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. This agreement is effective as of the Effective Date listed in Cover Terms."
         },
         {
           "heading": "Confidential Information and Trade Secret Protection",
-          "body": "Employee must treat all Confidential Information as strictly confidential. Employee must not use or disclose Confidential Information except as required to perform authorized job duties or with Employer's prior written consent. Employee's obligations under this section continue during and after employment until the information becomes public through no fault of Employee. Trade secrets are protected under Wyoming law, including Wyo. Stat. \u00a7 6-3-501(a)(xi)."
+          "body": "Employee must treat all Confidential Information as strictly confidential. Employee must not use or disclose Confidential Information except as required to perform authorized job duties or with Employer's prior written consent. Employee's obligations regarding trade secrets continue indefinitely. Employee's obligations regarding other Confidential Information continue for the period specified in Cover Terms. Trade secrets are protected under Wyoming law, including Wyo. Stat. \u00a7 6-3-501(a)(xi)."
         },
         {
           "heading": "Permitted Disclosures and Protected Conduct",
@@ -65,31 +65,41 @@
         },
         {
           "heading": "Return, Deletion, and Certification of Company Property",
-          "body": "Within the deadline specified in Cover Terms under Return-of-Property Deadline, Employee must return to Employer all documents, devices, files, credentials, and other materials containing or relating to Confidential Information. Where permitted, Employee must permanently delete electronic copies of Confidential Information from personal devices and accounts. Employee must certify compliance with this section in writing upon Employer's request."
+          "body": "Upon termination of employment, Employee must promptly return to Employer all documents, devices, files, credentials, and other materials containing or relating to Confidential Information. Where permitted, Employee must permanently delete electronic copies of Confidential Information from personal devices and accounts. Employee must certify compliance with this section in writing upon Employer's request."
         },
         {
           "heading": "Non-Solicitation of Employees",
-          "body": "During the Restricted Period specified in the Covenant Matrix, Employee must not Solicit, recruit, hire, or attempt to hire any person within the Protected Employee Group described in Cover Terms. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees."
+          "body": "During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees.",
+          "condition": "employee_nonsolicit_included",
+          "omitted_body": "[Intentionally Omitted.]"
         },
         {
           "heading": "Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners",
-          "body": "During the Restricted Period specified in the Covenant Matrix, Employee must not Solicit the business of any customer, vendor, referral source, or business partner described in Cover Terms under Protected Customer / Partner Description, limited to those with whom Employee had material contact or for whom Employee had responsibility during the final 24 months of employment. Practitioner sources flag uncertainty about whether Wyo. Stat. \u00a7 1-23-108 could reach certain non-solicitation provisions depending on how they function."
+          "body": "During the Restricted Period, Employee must not Solicit the business of any Covered Customer. Practitioner sources flag uncertainty about whether Wyo. Stat. \u00a7 1-23-108 could reach certain non-solicitation provisions depending on how they function.",
+          "condition": "customer_nonsolicit_included",
+          "omitted_body": "[Intentionally Omitted.]"
         },
         {
-          "heading": "Non-Dealing",
-          "body": "If the Covenant Matrix indicates that Non-Dealing is included, then during the Restricted Period specified in the Covenant Matrix, Employee must not engage in business with any person or entity described in Cover Terms under Protected Customer / Partner Description, regardless of whether Employee or the other party first initiated contact. This covenant requires a lawful restriction pathway under Wyo. Stat. \u00a7 1-23-108 as specified in Cover Terms."
+          "heading": "No Business with Covered Customers",
+          "body": "During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This restriction is broader than non-solicitation because it applies even if the Covered Customer approaches Employee. If the Cover Terms indicate that this restriction applies, it requires a lawful restriction pathway under Wyo. Stat. \u00a7 1-23-108.",
+          "condition": "nondealing_included",
+          "omitted_body": "[Intentionally Omitted.]"
         },
         {
           "heading": "Non-Competition",
-          "body": "If the Covenant Matrix indicates that Non-Competition is included, then during the Restricted Period specified in the Covenant Matrix, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant is included only because the Wyoming Restriction Pathway(s) specified in Cover Terms support its enforceability under Wyo. Stat. \u00a7 1-23-108. Passive ownership of securities below the Passive Investment Threshold listed in Cover Terms is permitted. Ownership of interests in diversified mutual funds, index funds, or exchange-traded funds that may hold securities of a Competitive Business is permitted."
+          "body": "During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant is included only because the restriction pathway specified by Employer supports its enforceability under Wyo. Stat. \u00a7 1-23-108. Passive ownership of publicly traded securities representing less than five percent of any class of securities is permitted. Ownership of interests in diversified mutual funds, index funds, or exchange-traded funds that may hold securities of a Competitive Business is permitted.",
+          "condition": "noncompete_included",
+          "omitted_body": "[Intentionally Omitted.]"
         },
         {
-          "heading": "Non-Investment / Non-Ownership / Non-Participation",
-          "body": "If the Covenant Matrix indicates that Non-Investment is included, then during the Restricted Period specified in the Covenant Matrix, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business, except as permitted by the passive investment carve-outs in the Non-Competition section. This covenant requires a lawful restriction pathway under Wyo. Stat. \u00a7 1-23-108 as specified in Cover Terms."
+          "heading": "Non-Investment",
+          "body": "During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This restriction primarily targets active or material ownership in private competitors. Passive ownership of publicly traded securities representing less than five percent of any class of securities is permitted, as are interests in diversified mutual funds, index funds, and exchange-traded funds. This covenant requires a lawful restriction pathway under Wyo. Stat. \u00a7 1-23-108.",
+          "condition": "noninvestment_included",
+          "omitted_body": "[Intentionally Omitted.]"
         },
         {
           "heading": "Non-Disparagement",
-          "body": "If the Covenant Matrix indicates that Non-Disparagement is included, Employee must not make statements that are intended to or reasonably likely to disparage Employer, its officers, directors, employees, products, or services. Employer must instruct its executive officers not to make statements that are intended to or reasonably likely to disparage Employee. This section does not restrict either party from making truthful statements in legal proceedings, providing truthful testimony, or making disclosures to government agencies."
+          "body": "During the Restricted Period specified in Cover Terms for Non-Disparagement, Employee must not make statements that are intended to or reasonably likely to disparage Employer, its officers, directors, employees, products, or services. This section does not restrict Employee from making truthful statements in legal proceedings, providing truthful testimony, making disclosures to government agencies, or exercising rights protected by law."
         },
         {
           "heading": "Physician-Specific Rights and Notices",
@@ -117,7 +127,7 @@
         },
         {
           "heading": "Survival and Expiration of Each Covenant",
-          "body": "Each restrictive covenant in this agreement survives the termination of Employee's employment for the duration specified in the Covenant Matrix. Obligations under the Confidential Information and Trade Secret Protection section survive indefinitely to the extent they relate to trade secrets. The Non-Disparagement obligation survives indefinitely. All other provisions survive to the extent necessary to enforce rights that arose during employment."
+          "body": "Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms. Obligations under the Confidential Information and Trade Secret Protection section survive indefinitely to the extent they relate to trade secrets. All other provisions survive to the extent necessary to enforce rights that arose during employment."
         },
         {
           "heading": "Assignment and Successors",
@@ -125,7 +135,7 @@
         },
         {
           "heading": "Governing Law, Venue, and Dispute Process",
-          "body": "This agreement is governed by the law listed in Cover Terms, including Wyo. Stat. \u00a7 1-23-108 for contracts entered into on or after July 1, 2025. Disputes will be resolved in the venue listed in Cover Terms, subject to non-waivable rights under applicable law."
+          "body": "This agreement is governed by the law listed in Cover Terms, including Wyo. Stat. \u00a7 1-23-108 for contracts entered into on or after July 1, 2025. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law."
         },
         {
           "heading": "Entire Agreement, Amendment, Waiver, and Electronic Signatures",
@@ -137,13 +147,13 @@
       "mode": "two-party",
       "section_label": "Signature Page",
       "heading_title": "Signatures",
-      "preamble": "By signing this agreement, each party acknowledges and agrees to the restrictive covenant obligations above. Employee confirms having read and understood each provision, including the Covenant Matrix.",
+      "preamble": "By signing this agreement, each party acknowledges and agrees to the restrictive covenant obligations above. Employee confirms having read and understood each provision, including the Cover Terms.",
       "party_a": "Employer",
       "party_b": "Employee",
       "rows": [
         { "label": "Signature" },
         { "label": "Print Name", "left": "{employer_name}", "right": "{employee_name}" },
-        { "label": "Title" },
+        { "label": "Title", "left_only": true },
         { "label": "Date" }
       ]
     }

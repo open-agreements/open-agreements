@@ -1,10 +1,10 @@
 # Employee Restrictive Covenant Agreement (Wyoming)
 
-OpenAgreements Employee Restrictive Covenant (Wyoming) (v1.0). Free to use under CC BY 4.0.
+OpenAgreements Employee Restrictive Covenant (Wyoming) (v2.0). Free to use under CC BY 4.0.
 
 ## Cover Terms
 
-The key business terms of this restrictive covenant agreement are as follows. This agreement is governed by Wyoming law, including Wyo. Stat. § 1-23-108 (2025).
+The terms below are incorporated into and form part of this agreement.
 
 | Term | Value |
 |------|-------|
@@ -12,40 +12,48 @@ The key business terms of this restrictive covenant agreement are as follows. Th
 | **Employee** | {employee_name} |
 | **Employee Title / Position** | {employee_title} |
 | **Effective Date** | {effective_date} |
-| **Worker Category** | {worker_category} |
-| **Wyoming Restriction Pathway(s)** | {restriction_pathways} |
-| **Consideration** | {consideration} |
-| **Competitive Business Definition** | {competitive_business_definition} |
-| **Protected Customer / Partner Description** | {protected_customers} |
-| **Protected Employee Group** | {protected_employee_group} |
-| **Specified Competitors** | {specified_competitors} |
-| **Territory** | {territory} |
-| **Passive Investment Threshold** | {passive_investment_threshold} |
-| **Return-of-Property Deadline** | {return_of_property_deadline} |
 | **Governing Law** | {governing_law} |
-| **Venue** | {venue} |
-| **Covenant Matrix** | Covenant | Included | Duration | Scope |
-| **Confidentiality** | {confidentiality_included} | {confidentiality_duration} | Per Defined Terms |
-| **Non-Solicitation of Employees** | {employee_nonsolicit_included} | {employee_nonsolicit_duration} | {protected_employee_group} |
-| **Non-Solicitation of Customers / Partners** | {customer_nonsolicit_included} | {customer_nonsolicit_duration} | {protected_customers} |
-| **Non-Dealing** | {nondealing_included} | {nondealing_duration} | Same as customer non-solicitation |
-| **Non-Competition** | {noncompete_included} | {noncompete_duration} | {competitive_business_definition} within {territory} |
-| **Non-Investment** | {noninvestment_included} | {noninvestment_duration} | Above {passive_investment_threshold} |
-| **Non-Disparagement** | {nondisparagement_included} | Indefinite | Reciprocal |
+| **Confidentiality** | Trade secrets: {confidentiality_trade_secret_duration}
+Other confidential information: {confidentiality_other_duration} |
+| **Employee Non-Solicitation** | Restriction: {employee_nonsolicit_duration}
+Covered employees: {covered_employees_scope} |
+| **Customer Non-Solicitation** | Restriction: {customer_nonsolicit_duration}
+Covered customers: {covered_customers_scope} |
+| **Non-Competition** | Duration: {noncompete_duration}
+Restricted Territory: {territory}
+Competitive Business: {competitive_business_definition} |
+| **Specified Competitors** | {specified_competitors} |
+| **No Business with Covered Customers** | {nondealing_duration}; same scope as customer non-solicitation |
+| **Non-Investment** | {noninvestment_duration}; active ownership barred, passive public holdings permitted |
+| **Non-Disparagement** | {nondisparagement_duration} |
 
 ## Standard Terms
 
 ### 1. Defined Terms
 
-"Competitive Business" means the business activities described in Cover Terms under Competitive Business Definition. "Confidential Information" means non-public information relating to Employer's business, including trade secrets, customer lists, pricing, business processes, technical data, and strategic plans, but excluding information that becomes public through no fault of Employee. "Protected Interests" means Employer's legitimate business interests in its Confidential Information, customer and business-partner relationships, workforce stability, and goodwill. "Restricted Period" means the duration specified in the Covenant Matrix for each covenant, beginning on the date Employee's employment ends. "Restricted Territory" means the geographic area described in Cover Terms under Territory. "Solicit" means to directly or indirectly contact, approach, induce, encourage, or provide Confidential Information to any person or entity for the purpose of diverting business away from Employer, but does not include responding to general advertisements or unsolicited inquiries not initiated by Employee.
+1.1 **"Competitive Business"** means the business activities described in Cover Terms under Competitive Business.
 
-### 2. Consideration, Timing, and Employee Acknowledgements
+1.2 **"Confidential Information"** means non-public information relating to Employer's business, including trade secrets, customer lists, pricing, business processes, technical data, and strategic plans, but excluding information that becomes public through no fault of Employee.
 
-Employee acknowledges that the consideration described in Cover Terms is adequate and sufficient for the obligations in this agreement. Employee acknowledges that the restrictions in this agreement are reasonable and necessary to protect Employer's Protected Interests. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. This agreement is effective as of the Effective Date listed in Cover Terms.
+1.3 **"Covered Customers"** means the customers, vendors, referral sources, and business partners described in Cover Terms, limited to those with whom Employee had material contact or for whom Employee had responsibility during the covered customer period specified in Cover Terms.
+
+1.4 **"Covered Employees"** means the employees described in Cover Terms under Covered Employees.
+
+1.5 **"Protected Interests"** means Employer's legitimate business interests in its Confidential Information, customer and business-partner relationships, workforce stability, and goodwill.
+
+1.6 **"Restricted Period"** means the duration specified in Cover Terms for each covenant, beginning on the date Employee's employment with Employer ends for any reason.
+
+1.7 **"Restricted Territory"** means the geographic area described in Cover Terms under Restricted Territory.
+
+1.8 **"Solicit"** means to directly or indirectly contact, approach, induce, encourage, or provide Confidential Information to any person or entity for the purpose of diverting business away from Employer, but does not include responding to general advertisements or unsolicited inquiries not initiated by Employee.
+
+### 2. Timing and Employee Acknowledgements
+
+Employee acknowledges that the restrictions in this agreement are reasonable and necessary to protect Employer's Protected Interests. Employee acknowledges having had the opportunity to consult with independent legal counsel before signing this agreement. This agreement is effective as of the Effective Date listed in Cover Terms.
 
 ### 3. Confidential Information and Trade Secret Protection
 
-Employee must treat all Confidential Information as strictly confidential. Employee must not use or disclose Confidential Information except as required to perform authorized job duties or with Employer's prior written consent. Employee's obligations under this section continue during and after employment until the information becomes public through no fault of Employee. Trade secrets are protected under Wyoming law, including Wyo. Stat. § 6-3-501(a)(xi).
+Employee must treat all Confidential Information as strictly confidential. Employee must not use or disclose Confidential Information except as required to perform authorized job duties or with Employer's prior written consent. Employee's obligations regarding trade secrets continue indefinitely. Employee's obligations regarding other Confidential Information continue for the period specified in Cover Terms. Trade secrets are protected under Wyoming law, including Wyo. Stat. § 6-3-501(a)(xi).
 
 ### 4. Permitted Disclosures and Protected Conduct
 
@@ -53,31 +61,31 @@ Nothing in this agreement prohibits Employee from: (a) reporting possible violat
 
 ### 5. Return, Deletion, and Certification of Company Property
 
-Within the deadline specified in Cover Terms under Return-of-Property Deadline, Employee must return to Employer all documents, devices, files, credentials, and other materials containing or relating to Confidential Information. Where permitted, Employee must permanently delete electronic copies of Confidential Information from personal devices and accounts. Employee must certify compliance with this section in writing upon Employer's request.
+Upon termination of employment, Employee must promptly return to Employer all documents, devices, files, credentials, and other materials containing or relating to Confidential Information. Where permitted, Employee must permanently delete electronic copies of Confidential Information from personal devices and accounts. Employee must certify compliance with this section in writing upon Employer's request.
 
 ### 6. Non-Solicitation of Employees
 
-During the Restricted Period specified in the Covenant Matrix, Employee must not Solicit, recruit, hire, or attempt to hire any person within the Protected Employee Group described in Cover Terms. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees.
+During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees.
 
 ### 7. Non-Solicitation of Customers, Vendors, Referral Sources, and Business Partners
 
-During the Restricted Period specified in the Covenant Matrix, Employee must not Solicit the business of any customer, vendor, referral source, or business partner described in Cover Terms under Protected Customer / Partner Description, limited to those with whom Employee had material contact or for whom Employee had responsibility during the final 24 months of employment. Practitioner sources flag uncertainty about whether Wyo. Stat. § 1-23-108 could reach certain non-solicitation provisions depending on how they function.
+During the Restricted Period, Employee must not Solicit the business of any Covered Customer. Practitioner sources flag uncertainty about whether Wyo. Stat. § 1-23-108 could reach certain non-solicitation provisions depending on how they function.
 
-### 8. Non-Dealing
+### 8. No Business with Covered Customers
 
-If the Covenant Matrix indicates that Non-Dealing is included, then during the Restricted Period specified in the Covenant Matrix, Employee must not engage in business with any person or entity described in Cover Terms under Protected Customer / Partner Description, regardless of whether Employee or the other party first initiated contact. This covenant requires a lawful restriction pathway under Wyo. Stat. § 1-23-108 as specified in Cover Terms.
+During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This restriction is broader than non-solicitation because it applies even if the Covered Customer approaches Employee. If the Cover Terms indicate that this restriction applies, it requires a lawful restriction pathway under Wyo. Stat. § 1-23-108.
 
 ### 9. Non-Competition
 
-If the Covenant Matrix indicates that Non-Competition is included, then during the Restricted Period specified in the Covenant Matrix, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant is included only because the Wyoming Restriction Pathway(s) specified in Cover Terms support its enforceability under Wyo. Stat. § 1-23-108. Passive ownership of securities below the Passive Investment Threshold listed in Cover Terms is permitted. Ownership of interests in diversified mutual funds, index funds, or exchange-traded funds that may hold securities of a Competitive Business is permitted.
+During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant is included only because the restriction pathway specified by Employer supports its enforceability under Wyo. Stat. § 1-23-108. Passive ownership of publicly traded securities representing less than five percent of any class of securities is permitted. Ownership of interests in diversified mutual funds, index funds, or exchange-traded funds that may hold securities of a Competitive Business is permitted.
 
-### 10. Non-Investment / Non-Ownership / Non-Participation
+### 10. Non-Investment
 
-If the Covenant Matrix indicates that Non-Investment is included, then during the Restricted Period specified in the Covenant Matrix, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business, except as permitted by the passive investment carve-outs in the Non-Competition section. This covenant requires a lawful restriction pathway under Wyo. Stat. § 1-23-108 as specified in Cover Terms.
+During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This restriction primarily targets active or material ownership in private competitors. Passive ownership of publicly traded securities representing less than five percent of any class of securities is permitted, as are interests in diversified mutual funds, index funds, and exchange-traded funds. This covenant requires a lawful restriction pathway under Wyo. Stat. § 1-23-108.
 
 ### 11. Non-Disparagement
 
-If the Covenant Matrix indicates that Non-Disparagement is included, Employee must not make statements that are intended to or reasonably likely to disparage Employer, its officers, directors, employees, products, or services. Employer must instruct its executive officers not to make statements that are intended to or reasonably likely to disparage Employee. This section does not restrict either party from making truthful statements in legal proceedings, providing truthful testimony, or making disclosures to government agencies.
+During the Restricted Period specified in Cover Terms for Non-Disparagement, Employee must not make statements that are intended to or reasonably likely to disparage Employer, its officers, directors, employees, products, or services. This section does not restrict Employee from making truthful statements in legal proceedings, providing truthful testimony, making disclosures to government agencies, or exercising rights protected by law.
 
 ### 12. Physician-Specific Rights and Notices
 
@@ -105,7 +113,7 @@ If any provision of this agreement is found to be unenforceable, the remaining p
 
 ### 18. Survival and Expiration of Each Covenant
 
-Each restrictive covenant in this agreement survives the termination of Employee's employment for the duration specified in the Covenant Matrix. Obligations under the Confidential Information and Trade Secret Protection section survive indefinitely to the extent they relate to trade secrets. The Non-Disparagement obligation survives indefinitely. All other provisions survive to the extent necessary to enforce rights that arose during employment.
+Each restrictive covenant in this agreement survives the termination of Employee's employment for the Restricted Period specified in Cover Terms. Obligations under the Confidential Information and Trade Secret Protection section survive indefinitely to the extent they relate to trade secrets. All other provisions survive to the extent necessary to enforce rights that arose during employment.
 
 ### 19. Assignment and Successors
 
@@ -113,7 +121,7 @@ Employee may not assign this agreement or any rights or obligations under it. Em
 
 ### 20. Governing Law, Venue, and Dispute Process
 
-This agreement is governed by the law listed in Cover Terms, including Wyo. Stat. § 1-23-108 for contracts entered into on or after July 1, 2025. Disputes will be resolved in the venue listed in Cover Terms, subject to non-waivable rights under applicable law.
+This agreement is governed by the law listed in Cover Terms, including Wyo. Stat. § 1-23-108 for contracts entered into on or after July 1, 2025. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law.
 
 ### 21. Entire Agreement, Amendment, Waiver, and Electronic Signatures
 
@@ -121,7 +129,7 @@ This agreement constitutes the entire agreement between the parties regarding it
 
 ## Signatures
 
-By signing this agreement, each party acknowledges and agrees to the restrictive covenant obligations above. Employee confirms having read and understood each provision, including the Covenant Matrix.
+By signing this agreement, each party acknowledges and agrees to the restrictive covenant obligations above. Employee confirms having read and understood each provision, including the Cover Terms.
 
 **Employer**
 
@@ -134,5 +142,4 @@ Date: _______________
 
 Signature: _______________
 Print Name: {employee_name}
-Title: _______________
 Date: _______________

@@ -17,6 +17,7 @@ const specPaths = [
   join(import.meta.dirname, '..', 'scripts', 'template-specs', 'openagreements-employment-offer-letter.json'),
   join(import.meta.dirname, '..', 'scripts', 'template-specs', 'openagreements-employee-ip-inventions-assignment.json'),
   join(import.meta.dirname, '..', 'scripts', 'template-specs', 'openagreements-employment-confidentiality-acknowledgement.json'),
+  join(import.meta.dirname, '..', 'scripts', 'template-specs', 'openagreements-restrictive-covenant-wyoming.json'),
 ];
 
 describe('json template renderer', () => {
@@ -29,10 +30,11 @@ describe('json template renderer', () => {
     expect(layoutIds.has('cover-standard-signature-v1')).toBe(true);
 
     const outputs = specs.map((spec) => renderFromValidatedSpec(spec, style));
-    expect(outputs).toHaveLength(3);
+    expect(outputs).toHaveLength(4);
     expect(outputs[0].markdown).toContain('## Standard Terms');
     expect(outputs[1].markdown).toContain('## Signatures');
     expect(outputs[2].markdown).toContain('## Acknowledgement Signature');
+    expect(outputs[3].markdown).toContain('## Standard Terms');
   });
 
   it.openspec('OA-TMP-017')('rejects unknown layout ids with actionable error', () => {

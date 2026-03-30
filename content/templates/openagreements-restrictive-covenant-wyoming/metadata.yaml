@@ -1,12 +1,12 @@
 name: OpenAgreements Employee Restrictive Covenant (Wyoming)
 description: >-
   Wyoming-specific employee restrictive covenant agreement with modular
-  covenant matrix (non-compete, non-solicitation, non-dealing, non-investment,
+  covenant structure (non-compete, non-solicitation, non-dealing, non-investment,
   confidentiality, non-disparagement). Incorporates Wyo. Stat. section 1-23-108
   (SF 107, 2025) pathway gating for non-compete-adjacent covenants. Drafted as
   a starting point for licensed counsel review.
 source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-wyoming
-version: '1.0'
+version: '2.0'
 license: CC-BY-4.0
 allow_derivatives: true
 attribution_text: >-
@@ -15,6 +15,7 @@ attribution_text: >-
   Fisher Phillips, Littler Mendelson, Foley & Lardner, Faegre Drinker, and
   Vinson & Elkins. See practice note for sources. Licensed under CC BY 4.0.
 fields:
+  # --- Parties (on cover page) ---
   - name: employer_name
     type: string
     description: Legal name of the employer
@@ -25,126 +26,86 @@ fields:
     section: Parties
   - name: employee_title
     type: string
-    description: Employee job title or position
+    description: Employee job title or position (optional)
+    default: ''
     section: Parties
   - name: effective_date
     type: date
     description: Effective date of this agreement
     section: Timing
+  - name: governing_law
+    type: string
+    description: Governing law state
+    default: Wyoming
+    section: Legal
+
+  # --- AI-only fields (drive memo warnings, never in output) ---
   - name: worker_category
     type: enum
     description: >-
       Employee role classification under Wyo. Stat. section 1-23-108.
-      Non-compete covenants are enforceable only for executive or management
-      personnel and professional staff to them.
+      AI-only field that drives memo warnings. Not shown in the output document.
     options:
-      - executive
-      - management
-      - professional_staff
-      - physician
-      - other
-    section: Role
+      - Executive
+      - Management
+      - Professional Staff
+      - Physician
+      - Other
+    section: AI Analysis
   - name: restriction_pathways
     type: string
     description: >-
-      Wyoming restriction pathway(s) that support non-compete-adjacent covenants
-      under Wyo. Stat. section 1-23-108. Multiple pathways may apply. Use
-      comma-separated values. Options: executive_or_management,
-      trade_secret_protection, none.
-    default: none
+      Wyoming restriction pathway(s) under Wyo. Stat. section 1-23-108.
+      AI-only field that drives memo warnings and conditional gating.
+      Not shown in the output document. Options: Executive or Management
+      Personnel, Trade Secret Protection, None.
+    default: None
+    section: AI Analysis
+
+  # --- Confidentiality (on cover page, always visible) ---
+  - name: confidentiality_trade_secret_duration
+    type: string
+    description: Duration of confidentiality obligations for trade secrets
+    default: Indefinite
+    section: Confidentiality
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for non-trade-secret information
+    default: 24 months
     default_value_rationale: >-
-      Defaults to none because Wyo. Stat. section 1-23-108 voids most
-      non-compete covenants. The drafter must affirmatively select a pathway.
-    section: Pathway
-  - name: consideration
-    type: string
-    description: >-
-      What the employee receives in exchange for the restrictive covenants
-      (e.g., initial employment, continued employment, equity grant, separate
-      payment). For existing employees, new consideration beyond continued
-      employment may be required.
-    section: Consideration
-  - name: competitive_business_definition
-    type: string
-    description: >-
-      Description of the business activities that constitute competition
-      with the employer (e.g., the development and sale of widget software).
-    section: Covenants
-  - name: protected_customers
-    type: string
-    description: >-
-      Description of the customers, vendors, referral sources, and business
-      partners covered by the non-solicitation and non-dealing covenants,
-      limited to those with whom the employee had material contact.
-    section: Covenants
-  - name: protected_employee_group
-    type: string
-    description: >-
-      Description of the employees covered by the employee non-solicitation
-      covenant (e.g., all employees, employees in the same department,
-      employees the departing employee managed or worked with).
-    section: Covenants
-  - name: specified_competitors
-    type: string
-    description: >-
-      Optional named list of specific competitors. Narrowing the restriction
-      to named competitors strengthens enforceability.
-    default: ''
-    section: Covenants
-  - name: territory
-    type: string
-    description: Geographic scope of the non-competition restriction
-    default: the geographic area in which Employee provided services
-    default_value_rationale: >-
-      Tied to the employee's actual service area rather than the employer's
-      full footprint. Narrower scope improves enforceability under Wyoming's
-      strict scrutiny of non-compete provisions.
-    section: Covenants
-  - name: passive_investment_threshold
-    type: string
-    description: >-
-      Maximum passive ownership percentage permitted under the non-compete
-      and non-investment covenants.
-    default: 5% of any class of publicly traded securities
-    default_value_rationale: >-
-      5% passive investment carve-out is standard across Fortune 500
-      restrictive covenant agreements (e.g., Compass Minerals, Old National
-      Bancorp SEC filings).
-    section: Covenants
-  - name: return_of_property_deadline
-    type: string
-    description: Deadline for returning company property after termination
-    default: 5 business days after termination
-    section: Obligations
-  - name: confidentiality_included
-    type: string
-    description: Whether the confidentiality covenant is included
-    default: 'Yes'
-    section: Covenant Matrix
-  - name: confidentiality_duration
-    type: string
-    description: Duration of confidentiality obligations
-    default: Indefinite for trade secrets; 24 months for other Confidential Information
-    section: Covenant Matrix
+      24 months is common for non-trade-secret confidentiality obligations
+      in employment agreements.
+    section: Confidentiality
+
+  # --- Employee Non-Solicitation ---
   - name: employee_nonsolicit_included
-    type: string
+    type: boolean
     description: Whether the employee non-solicitation covenant is included
-    default: 'Yes'
-    section: Covenant Matrix
+    default: 'true'
+    section: Employee Non-Solicitation
   - name: employee_nonsolicit_duration
     type: string
     description: Duration of employee non-solicitation restriction
     default: 12 months
     default_value_rationale: >-
-      12 months is the most common enforceable duration for employee
-      non-solicitation covenants. Mayer Brown guidance states 1-2 years is
-      the outer range of reasonableness.
-    section: Covenant Matrix
-  - name: customer_nonsolicit_included
+      12 months is the most common enforceable duration. Mayer Brown guidance
+      states 1-2 years is the outer range of reasonableness.
+    section: Employee Non-Solicitation
+  - name: covered_employees_scope
     type: string
+    description: >-
+      Which employees are covered by the non-solicitation restriction.
+      For example: employees Employee managed or worked with in the
+      12 months before termination.
+    default: employees Employee managed or worked with in the 12 months before termination
+    section: Employee Non-Solicitation
+
+  # --- Customer Non-Solicitation ---
+  - name: customer_nonsolicit_included
+    type: boolean
     description: Whether the customer/partner non-solicitation covenant is included
-    default: 'Yes'
-    section: Covenant Matrix
+    default: 'true'
+    section: Customer Non-Solicitation
   - name: customer_nonsolicit_duration
     type: string
     description: Duration of customer/partner non-solicitation restriction
@@ -152,31 +113,28 @@ fields:
     default_value_rationale: >-
       12 months is the most common enforceable duration. Compass Minerals uses
       12 months for non-CEO employees and 24 months for CEO.
-    section: Covenant Matrix
-  - name: nondealing_included
+    section: Customer Non-Solicitation
+  - name: covered_customers_scope
     type: string
     description: >-
-      Whether the non-dealing covenant is included. Requires a lawful
-      restriction pathway under Wyo. Stat. section 1-23-108.
-    default: 'No'
-    section: Covenant Matrix
-  - name: nondealing_duration
-    type: string
-    description: Duration of non-dealing restriction
-    default: 12 months
-    section: Covenant Matrix
+      Which customers are covered by the non-solicitation restriction.
+      For example: customers or business partners Employee worked with
+      in the 12 months before termination.
+    default: customers or business partners Employee worked with in the 12 months before termination
+    section: Customer Non-Solicitation
+
+  # --- Non-Competition (conditional on pathway) ---
   - name: noncompete_included
-    type: string
+    type: boolean
     description: >-
       Whether the non-competition covenant is included. Requires a lawful
-      restriction pathway under Wyo. Stat. section 1-23-108. Defaults to No
-      because most non-compete covenants are void under Wyoming law.
-    default: 'No'
+      restriction pathway under Wyo. Stat. section 1-23-108.
+    default: 'false'
     default_value_rationale: >-
       Wyo. Stat. section 1-23-108 voids most non-compete covenants. The
       drafter must affirmatively include this covenant only when a statutory
       pathway applies.
-    section: Covenant Matrix
+    section: Non-Competition
   - name: noncompete_duration
     type: string
     description: Duration of non-competition restriction
@@ -185,34 +143,67 @@ fields:
       12 months is the most common enforceable duration. Hassler v. Circle C
       Resources (2022 WY 28) struck down a 24-month provision with broad
       scope. No Wyoming court has upheld a non-compete exceeding 24 months.
-    section: Covenant Matrix
-  - name: noninvestment_included
+    section: Non-Competition
+  - name: territory
     type: string
+    description: Geographic scope of the non-competition restriction
+    default: the geographic area in which Employee provided services
+    default_value_rationale: >-
+      Tied to the employee's actual service area. Narrower scope improves
+      enforceability under Wyoming's strict scrutiny.
+    section: Non-Competition
+  - name: competitive_business_definition
+    type: string
+    description: >-
+      Description of the business activities that constitute competition
+      with the employer.
+    section: Non-Competition
+  - name: specified_competitors
+    type: string
+    description: >-
+      Optional named list of specific competitors. Narrowing the restriction
+      to named competitors strengthens enforceability.
+    default: ''
+    section: Non-Competition
+
+  # --- No Business with Covered Customers (conditional) ---
+  - name: nondealing_included
+    type: boolean
+    description: >-
+      Whether the no-business-with-covered-customers covenant is included.
+      Requires a lawful restriction pathway under Wyo. Stat. section 1-23-108.
+    default: 'false'
+    section: No Business with Covered Customers
+  - name: nondealing_duration
+    type: string
+    description: Duration of the no-business-with-covered-customers restriction
+    default: 12 months
+    section: No Business with Covered Customers
+
+  # --- Non-Investment (conditional) ---
+  - name: noninvestment_included
+    type: boolean
     description: >-
       Whether the non-investment covenant is included. Requires a lawful
       restriction pathway under Wyo. Stat. section 1-23-108.
-    default: 'No'
-    section: Covenant Matrix
+    default: 'false'
+    section: Non-Investment
   - name: noninvestment_duration
     type: string
     description: Duration of non-investment restriction
     default: 12 months
-    section: Covenant Matrix
-  - name: nondisparagement_included
+    section: Non-Investment
+
+  # --- Non-Disparagement ---
+  - name: nondisparagement_duration
     type: string
-    description: Whether the reciprocal non-disparagement covenant is included
-    default: 'Yes'
-    section: Covenant Matrix
-  - name: governing_law
-    type: string
-    description: Governing law state
-    default: Wyoming
-    section: Legal
-  - name: venue
-    type: string
-    description: Venue for disputes
-    default: state and federal courts in Wyoming
-    section: Legal
+    description: Duration of non-disparagement obligation (measured from termination)
+    default: 24 months
+    default_value_rationale: >-
+      24 months is common for employment non-disparagement provisions.
+    section: Non-Disparagement
+
+  # --- Document Management ---
   - name: cloud_drive_id
     type: string
     description: Optional document-system URI or file ID for execution copy traceability
@@ -225,5 +216,3 @@ fields:
 priority_fields:
   - employer_name
   - employee_name
-  - worker_category
-  - restriction_pathways

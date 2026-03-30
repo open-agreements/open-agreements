@@ -126,7 +126,7 @@ export const EMPLOYMENT_JURISDICTION_RULES: JurisdictionRule[] = [
         'openagreements-restrictive-covenant-wyoming',
       ],
       field_one_of: {
-        restriction_pathways: ['none'],
+        restriction_pathways: ['None', 'none'],
       },
     },
     message:

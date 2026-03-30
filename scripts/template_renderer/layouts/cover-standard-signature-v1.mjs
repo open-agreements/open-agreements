@@ -428,12 +428,16 @@ function keyLabelCell(row, style, nilBorder, ruleBorder) {
 
 function keyValueCell(row, style, nilBorder, ruleBorder) {
   const valueText = row.condition ? `${row.value}{END-IF}` : row.value;
+  const lines = valueText.split('\n');
+  const valueParagraphs = lines.map((line, i) =>
+    bodyParagraph(line, style, { size: 22, after: i < lines.length - 1 ? 40 : (row.note ? 40 : 0) })
+  );
   return new TableCell({
     borders: horizontalBorders(ruleBorder, nilBorder),
     margins: { top: 144, left: 115, bottom: 144, right: 115 },
     verticalAlign: VerticalAlign.CENTER,
     children: [
-      bodyParagraph(valueText, style, { size: 22, after: row.note ? 40 : 0 }),
+      ...valueParagraphs,
       ...(row.note ? [noteParagraph(row.note, style)] : []),
     ],
   });
@@ -464,30 +468,123 @@ function coverTable(rows, headingTitle, subtitle, style, nilBorder, ruleBorder) 
   });
 }
 
-function clauseParagraphs(index, clauseItem, style) {
-  return [
-    new Paragraph({
-      style: 'OAClauseHeading',
-      contextualSpacing: false,
-      spacing: {
-        before: style.spacing.clause_heading_before,
-        after: style.spacing.clause_heading_after,
-        line: style.spacing.line,
-        beforeAutoSpacing: false,
-        afterAutoSpacing: false,
-      },
-      children: [
-        new TextRun({
-          text: `${index}. ${clauseItem.heading}.`,
-          font: style.fonts.body,
-          size: 22,
-          bold: true,
-          color: style.colors.ink,
-        }),
-      ],
-    }),
-    bodyParagraph(clauseItem.body, style, { size: 22, style: 'OAClauseBody' }),
-  ];
+function definitionSubParagraphs(parentIndex, terms, style) {
+  const sorted = [...terms].sort((a, b) => a.term.localeCompare(b.term));
+  const paragraphs = [];
+  for (let i = 0; i < sorted.length; i++) {
+    const { term, definition } = sorted[i];
+    const subIndex = `${parentIndex}.${i + 1}`;
+    paragraphs.push(
+      new Paragraph({
+        style: 'OAClauseBody',
+        contextualSpacing: false,
+        spacing: {
+          before: i === 0 ? 0 : style.spacing.clause_heading_before,
+          after: style.spacing.body_after,
+          line: style.spacing.line,
+          beforeAutoSpacing: false,
+          afterAutoSpacing: false,
+        },
+        children: [
+          new TextRun({
+            text: `${subIndex} `,
+            font: style.fonts.body,
+            size: 22,
+            color: style.colors.ink,
+          }),
+          new TextRun({
+            text: `\u201C${term}\u201D`,
+            font: style.fonts.body,
+            size: 22,
+            bold: true,
+            color: style.colors.accent,
+          }),
+          new TextRun({
+            text: ` ${definition}`,
+            font: style.fonts.body,
+            size: 22,
+            color: style.colors.ink,
+          }),
+        ],
+      })
+    );
+  }
+  return paragraphs;
+}
+
+function bodyParagraphsFromText(text, style, opts = {}) {
+  const lines = text.split('\n');
+  return lines.map((line, i) =>
+    bodyParagraph(line, style, {
+      ...opts,
+      after: i < lines.length - 1 ? (opts.after ?? style.spacing.body_after) : (opts.after ?? style.spacing.body_after),
+    })
+  );
+}
+
+function clauseParagraphs(index, clauseItem, style, opts = {}) {
+  // Definitions clause type
+  if (clauseItem.type === 'definitions') {
+    return [
+      new Paragraph({
+        style: 'OAClauseHeading',
+        contextualSpacing: false,
+        spacing: {
+          before: style.spacing.clause_heading_before,
+          after: style.spacing.clause_heading_after,
+          line: style.spacing.line,
+          beforeAutoSpacing: false,
+          afterAutoSpacing: false,
+        },
+        children: [
+          new TextRun({
+            text: `${index}. ${clauseItem.heading}.`,
+            font: style.fonts.body,
+            size: 22,
+            bold: true,
+            color: style.colors.ink,
+          }),
+        ],
+      }),
+      ...definitionSubParagraphs(index, clauseItem.terms, style),
+    ];
+  }
+
+  // Text clause with optional condition/omitted_body
+  const headingParagraph = new Paragraph({
+    style: 'OAClauseHeading',
+    contextualSpacing: false,
+    spacing: {
+      before: style.spacing.clause_heading_before,
+      after: style.spacing.clause_heading_after,
+      line: style.spacing.line,
+      beforeAutoSpacing: false,
+      afterAutoSpacing: false,
+    },
+    children: [
+      new TextRun({
+        text: `${index}. ${clauseItem.heading}.`,
+        font: style.fonts.body,
+        size: 22,
+        bold: true,
+        color: style.colors.ink,
+      }),
+    ],
+  });
+
+  const termsOpt = opts.terms;
+  const bodyParas = bodyParagraphsFromText(clauseItem.body, style, { size: 22, style: 'OAClauseBody', terms: termsOpt });
+
+  if (clauseItem.condition && clauseItem.omitted_body) {
+    // Wrap body in {IF condition} and omitted_body in {IF !condition}
+    const ifOpen = bodyParagraph(`{IF ${clauseItem.condition}}`, style, { size: 22, style: 'OAClauseBody', terms: [] });
+    const ifClose = bodyParagraph('{END-IF}', style, { size: 22, style: 'OAClauseBody', terms: [] });
+    const ifNotOpen = bodyParagraph(`{IF !${clauseItem.condition}}`, style, { size: 22, style: 'OAClauseBody', terms: [] });
+    const omittedPara = bodyParagraph(clauseItem.omitted_body, style, { size: 22, style: 'OAClauseBody', terms: [] });
+    return [headingParagraph, ifOpen, ...bodyParas, ifClose, ifNotOpen, omittedPara, ifClose];
+  }
+
+  return [headingParagraph, ...bodyParas];
 }
 
 function signatureLabelCell(label, hint, style, nilBorder) {
@@ -629,7 +726,9 @@ function twoPartySignatureTable(signatureSpec, style, nilBorder, ruleBorder) {
             signatureLabelCell(row.label, row.hint, style, nilBorder),
             signatureLineCell(row.left ?? '', style, nilBorder, ruleBorder),
             signatureSpacerCell(nilBorder),
-            signatureLineCell(row.right ?? '', style, nilBorder, ruleBorder),
+            row.left_only
+              ? signatureLineCell('', style, nilBorder, nilBorder)
+              : signatureLineCell(row.right ?? '', style, nilBorder, ruleBorder),
           ],
         })
       ),
@@ -696,8 +795,16 @@ function renderMarkdown(spec) {
     const clauseItem = sections.standard_terms.clauses[i];
     lines.push(`### ${i + 1}. ${clauseItem.heading}`);
     lines.push('');
-    lines.push(clauseItem.body);
-    lines.push('');
+    if (clauseItem.type === 'definitions') {
+      const sorted = [...clauseItem.terms].sort((a, b) => a.term.localeCompare(b.term));
+      for (let j = 0; j < sorted.length; j++) {
+        lines.push(`${i + 1}.${j + 1} **"${sorted[j].term}"** ${sorted[j].definition}`);
+        lines.push('');
+      }
+    } else {
+      lines.push(clauseItem.body);
+      lines.push('');
+    }
   }
 
   lines.push(`## ${sections.signature.heading_title}`);
@@ -713,7 +820,7 @@ function renderMarkdown(spec) {
       },
       {
         party: sections.signature.party_b,
-        rows: sections.signature.rows.map((row) => ({ label: row.label, value: row.right ?? '' })),
+        rows: sections.signature.rows.filter((row) => !row.left_only).map((row) => ({ label: row.label, value: row.right ?? '' })),
       },
     ];
     for (const section of sectionsOut) {
@@ -740,9 +847,26 @@ export function renderCoverStandardSignatureV1(spec, style) {
   const { nilBorder, ruleBorder } = createBorders(style);
   const { document, sections } = spec;
 
-  const standardClauseParagraphs = sections.standard_terms.clauses.flatMap((clauseItem, idx) =>
-    clauseParagraphs(idx + 1, clauseItem, style)
-  );
+  // Derive defined terms from definitions clause if present (DRY)
+  const highlightMode = document.defined_term_highlight_mode || 'all_instances';
+  const definitionsClause = sections.standard_terms.clauses.find((c) => c.type === 'definitions');
+  const derivedTerms = definitionsClause
+    ? definitionsClause.terms.map((t) => t.term)
+    : style.defined_terms;
+
+  const standardClauseParagraphs = sections.standard_terms.clauses.flatMap((clauseItem, idx) => {
+    const isDefinitionsClause = clauseItem.type === 'definitions';
+    let termsForClause;
+    if (highlightMode === 'none') {
+      termsForClause = [];
+    } else if (highlightMode === 'definition_site_only') {
+      // Only highlight in the definitions clause itself (handled internally by definitionSubParagraphs)
+      termsForClause = [];
+    } else {
+      termsForClause = derivedTerms;
+    }
+    return clauseParagraphs(idx + 1, clauseItem, style, { terms: termsForClause });
+  });
 
   const signatureTable = sections.signature.mode === 'two-party'
     ? twoPartySignatureTable(sections.signature, style, nilBorder, ruleBorder)
