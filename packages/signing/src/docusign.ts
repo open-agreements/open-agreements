@@ -6,14 +6,14 @@
  * Users authenticate with their own DocuSign accounts.
  *
  * Official docs:
- *   Auth:     https://developers.docusign.com/platform/auth/authcode/
+ *   Auth:      https://developers.docusign.com/platform/auth/authcode/
  *   Envelopes: https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/
  *   AutoPlace: https://developers.docusign.com/docs/esign-rest-api/esign101/concepts/tabs/auto-place/
  *   Sender:    https://developers.docusign.com/docs/esign-rest-api/reference/envelopes/envelopeviews/createsender/
  *   HMAC:      https://www.docusign.com/blog/developers/event-notifications-using-json-sim-and-hmac
  */
 
-import { createHmac, randomBytes } from 'node:crypto';
+import { createHash, createHmac, randomBytes } from 'node:crypto';
 import type {
   SigningProvider,
   ConnectionRecord,
@@ -28,31 +28,19 @@ import type {
 // ─── Configuration ──────────────────────────────────────────────────────────
 
 export interface DocuSignConfig {
-  /** Integration Key (client ID) from DocuSign Apps and Keys. */
   integrationKey: string;
-  /** Secret Key (client secret) from DocuSign Apps and Keys. */
   secretKey: string;
-  /** OAuth redirect URI — must match what's configured in DocuSign app settings. */
   redirectUri: string;
-  /** HMAC secret for webhook verification (configured in DocuSign Connect). */
   hmacSecret?: string;
-  /** Use demo environment. Default: true. */
   sandbox?: boolean;
 
-  // Storage callbacks — adapter doesn't own storage, caller provides these
-  /** Store a connection record (encrypted tokens). */
+  // Storage callbacks
   storeConnection: (record: ConnectionRecord) => Promise<void>;
-  /** Retrieve a connection record by API key. */
   getConnection: (apiKey: string) => Promise<ConnectionRecord | null>;
-  /** Remove a connection record. */
   removeConnection: (connectionId: string) => Promise<void>;
-  /** Store a document in cloud storage, return its URL. */
   storeDocument: (buffer: Buffer, filename: string) => Promise<string>;
-  /** Retrieve a document buffer from cloud storage URL. */
   getDocument: (storageUrl: string) => Promise<Buffer>;
-  /** Store envelope status locally. */
   storeEnvelopeStatus: (envelopeId: string, status: EnvelopeStatus) => Promise<void>;
-  /** Log an audit event. */
   auditLog: (event: { action: string; apiKey: string; envelopeId?: string; details?: Record<string, unknown> }) => Promise<void>;
 }
 
@@ -66,9 +54,8 @@ function generateCodeVerifier(): string {
   return randomBytes(32).toString('base64url');
 }
 
-async function sha256Base64Url(input: string): Promise<string> {
-  const hash = createHmac('sha256', '').update(input).digest();
-  return hash.toString('base64url');
+function computeCodeChallenge(verifier: string): string {
+  return createHash('sha256').update(verifier).digest('base64url');
 }
 
 // ─── DocuSign Provider ──────────────────────────────────────────────────────
@@ -85,20 +72,27 @@ export class DocuSignProvider implements SigningProvider {
 
   // ── OAuth ──────────────────────────────────────────────────────────────
 
+  /**
+   * Generate OAuth authorization URL with PKCE.
+   * Returns { url, codeVerifier } — caller must store codeVerifier for handleCallback.
+   */
   getAuthUrl(redirectUri: string, state: string): string {
     const codeVerifier = generateCodeVerifier();
-    // Note: caller must store codeVerifier in session for handleCallback
+    const codeChallenge = computeCodeChallenge(codeVerifier);
     const base = authBaseUrl(this.sandbox);
+
     const params = new URLSearchParams({
       response_type: 'code',
       scope: 'signature extended',
       client_id: this.config.integrationKey,
       redirect_uri: redirectUri || this.config.redirectUri,
       state,
+      code_challenge: codeChallenge,
       code_challenge_method: 'S256',
-      // code_challenge computed from codeVerifier — caller stores verifier
     });
-    return `${base}/oauth/auth?${params.toString()}&code_verifier_hint=${codeVerifier}`;
+
+    // Append code_verifier as a hint for the caller to extract and store
+    return `${base}/oauth/auth?${params.toString()}&_code_verifier=${codeVerifier}`;
   }
 
   async handleCallback(
@@ -106,13 +100,14 @@ export class DocuSignProvider implements SigningProvider {
     codeVerifier: string,
   ): Promise<ConnectionRecord> {
     const base = authBaseUrl(this.sandbox);
+    const basicAuth = Buffer.from(`${this.config.integrationKey}:${this.config.secretKey}`).toString('base64');
 
     // Exchange code for tokens
     const tokenResponse = await fetch(`${base}/oauth/token`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
-        'Authorization': `Basic ${Buffer.from(`${this.config.integrationKey}:${this.config.secretKey}`).toString('base64')}`,
+        'Authorization': `Basic ${basicAuth}`,
       },
       body: new URLSearchParams({
         grant_type: 'authorization_code',
@@ -131,7 +126,6 @@ export class DocuSignProvider implements SigningProvider {
       access_token: string;
       refresh_token: string;
       expires_in: number;
-      token_type: string;
     };
 
     // Get user info (accountId, baseUri)
@@ -151,22 +145,18 @@ export class DocuSignProvider implements SigningProvider {
       }>;
     };
 
-    const defaultAccount = userInfo.accounts.find(a => a.is_default) || userInfo.accounts[0];
-    if (!defaultAccount) {
-      throw new Error('No DocuSign accounts found for this user');
-    }
+    const account = userInfo.accounts.find(a => a.is_default) || userInfo.accounts[0];
+    if (!account) throw new Error('No DocuSign accounts found');
 
-    const record: ConnectionRecord = {
-      connectionId: `docusign-${defaultAccount.account_id}`,
+    return {
+      connectionId: `docusign-${account.account_id}`,
       provider: 'docusign',
-      accountId: defaultAccount.account_id,
-      baseUri: defaultAccount.base_uri,
+      accountId: account.account_id,
+      baseUri: account.base_uri,
       scopes: ['signature', 'extended'],
       expiresAt: new Date(Date.now() + tokens.expires_in * 1000).toISOString(),
       apiKey: '', // set by caller
     };
-
-    return record;
   }
 
   async disconnect(connectionId: string): Promise<void> {
@@ -175,15 +165,26 @@ export class DocuSignProvider implements SigningProvider {
 
   // ── Envelope Lifecycle ─────────────────────────────────────────────────
 
+  /**
+   * Create a draft envelope with anchor-based tab placement.
+   * Always creates in "created" status (never auto-sends).
+   *
+   * POST /v2.1/accounts/{accountId}/envelopes
+   */
   async createDraft(
     documentRef: DocumentRef,
     metadata: SigningMetadata,
+    connection?: ConnectionRecord,
+    accessToken?: string,
   ): Promise<DraftResult> {
-    // Get the document bytes from storage
+    if (!connection || !accessToken) {
+      throw new Error('Connection and access token required for createDraft');
+    }
+
     const docBuffer = await this.config.getDocument(documentRef.storageUrl);
     const base64Doc = docBuffer.toString('base64');
 
-    // Build recipients with anchor-based tabs
+    // Build signers with anchor-based tabs
     const signers = metadata.signers
       .filter(s => s.type === 'signer')
       .map((signer, i) => ({
@@ -214,57 +215,228 @@ export class DocuSignProvider implements SigningProvider {
         routingOrder: String(signer.routingOrder ?? signers.length + i + 1),
       }));
 
-    // Create envelope in "created" (draft) status
     const envelopeBody = {
       emailSubject: metadata.emailSubject,
       emailBlurb: metadata.emailBody || '',
-      status: 'created', // DRAFT — never auto-send
+      status: 'created',
       documents: [{
         documentId: '1',
         name: documentRef.filename,
-        fileExtension: 'docx',
+        fileExtension: documentRef.mimeType.includes('pdf') ? 'pdf' : 'docx',
         documentBase64: base64Doc,
       }],
       recipients: {
         signers,
-        carbonCopies: ccRecipients.length > 0 ? ccRecipients : undefined,
+        ...(ccRecipients.length > 0 ? { carbonCopies: ccRecipients } : {}),
       },
     };
 
-    // TODO: Add eventNotification for webhooks when webhook endpoint is ready
+    const apiUrl = `${connection.baseUri}/restapi/v2.1/accounts/${connection.accountId}/envelopes`;
 
-    const apiUrl = `${this.config.redirectUri.includes('localhost') ? 'https://demo.docusign.net' : 'https://demo.docusign.net'}/restapi/v2.1/accounts/${this.config.integrationKey}/envelopes`;
-    // Note: actual implementation will use the stored connection's baseUri + accountId
-    // This is a placeholder — the real call needs a valid access token from the connection record
+    const response = await fetch(apiUrl, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${accessToken}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(envelopeBody),
+    });
+
+    if (!response.ok) {
+      const err = await response.text();
+      throw new Error(`DocuSign create envelope failed: ${response.status} ${err}`);
+    }
+
+    const envelope = await response.json() as {
+      envelopeId: string;
+      status: string;
+      uri: string;
+    };
+
+    // Get embedded sender view URL
+    const senderViewUrl = `${connection.baseUri}/restapi/v2.1/accounts/${connection.accountId}/envelopes/${envelope.envelopeId}/views/sender`;
+
+    const senderResponse = await fetch(senderViewUrl, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${accessToken}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        returnUrl: `${this.config.redirectUri.replace('/callback', '/sent')}?envelopeId=${envelope.envelopeId}`,
+        viewAccess: 'envelope',
+      }),
+    });
+
+    let reviewUrl = '';
+    if (senderResponse.ok) {
+      const senderView = await senderResponse.json() as { url: string };
+      reviewUrl = senderView.url;
+    }
+
+    // Audit log
+    await this.config.auditLog({
+      action: 'envelope_created',
+      apiKey: connection.apiKey,
+      envelopeId: envelope.envelopeId,
+      details: {
+        signers: metadata.signers.map(s => ({ name: s.name, email: s.email })),
+        emailSubject: metadata.emailSubject,
+      },
+    });
 
     return {
-      draftId: 'placeholder',
-      reviewUrl: 'placeholder',
-      providerEnvelopeId: 'placeholder',
+      draftId: envelope.envelopeId,
+      reviewUrl,
+      providerEnvelopeId: envelope.envelopeId,
       documentRef,
       status: 'created',
     };
   }
 
-  async send(draftId: string): Promise<{ envelopeId: string; status: 'sent' }> {
-    // TODO: PUT /envelopes/{id} with status: "sent"
+  /**
+   * Transition a draft envelope to sent.
+   *
+   * PUT /v2.1/accounts/{accountId}/envelopes/{envelopeId}
+   */
+  async send(
+    draftId: string,
+    connection?: ConnectionRecord,
+    accessToken?: string,
+  ): Promise<{ envelopeId: string; status: 'sent' }> {
+    if (!connection || !accessToken) {
+      throw new Error('Connection and access token required for send');
+    }
+
+    const apiUrl = `${connection.baseUri}/restapi/v2.1/accounts/${connection.accountId}/envelopes/${draftId}`;
+
+    const response = await fetch(apiUrl, {
+      method: 'PUT',
+      headers: {
+        'Authorization': `Bearer ${accessToken}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ status: 'sent' }),
+    });
+
+    if (!response.ok) {
+      const err = await response.text();
+      throw new Error(`DocuSign send failed: ${response.status} ${err}`);
+    }
+
     return { envelopeId: draftId, status: 'sent' };
   }
 
-  async getStatus(envelopeId: string): Promise<EnvelopeStatus> {
-    // TODO: GET /envelopes/{id}
+  /**
+   * Get envelope and signer statuses.
+   *
+   * GET /v2.1/accounts/{accountId}/envelopes/{envelopeId}
+   */
+  async getStatus(
+    envelopeId: string,
+    connection?: ConnectionRecord,
+    accessToken?: string,
+  ): Promise<EnvelopeStatus> {
+    if (!connection || !accessToken) {
+      throw new Error('Connection and access token required for getStatus');
+    }
+
+    const apiUrl = `${connection.baseUri}/restapi/v2.1/accounts/${connection.accountId}/envelopes/${envelopeId}`;
+
+    const response = await fetch(apiUrl, {
+      headers: { 'Authorization': `Bearer ${accessToken}` },
+    });
+
+    if (!response.ok) {
+      const err = await response.text();
+      throw new Error(`DocuSign getStatus failed: ${response.status} ${err}`);
+    }
+
+    const env = await response.json() as {
+      envelopeId: string;
+      status: string;
+      recipients?: {
+        signers?: Array<{
+          name: string;
+          email: string;
+          status: string;
+          signedDateTime?: string;
+        }>;
+      };
+    };
+
+    const statusMap: Record<string, EnvelopeStatusCode> = {
+      created: 'created',
+      sent: 'sent',
+      delivered: 'delivered',
+      completed: 'completed',
+      declined: 'declined',
+      voided: 'voided',
+    };
+
+    // Fetch recipients if not included
+    let signerStatuses = env.recipients?.signers || [];
+    if (signerStatuses.length === 0) {
+      const recipUrl = `${apiUrl}/recipients`;
+      const recipResponse = await fetch(recipUrl, {
+        headers: { 'Authorization': `Bearer ${accessToken}` },
+      });
+      if (recipResponse.ok) {
+        const recips = await recipResponse.json() as {
+          signers?: Array<{
+            name: string;
+            email: string;
+            status: string;
+            signedDateTime?: string;
+          }>;
+        };
+        signerStatuses = recips.signers || [];
+      }
+    }
+
     return {
-      envelopeId,
-      status: 'created',
-      signers: [],
+      envelopeId: env.envelopeId,
+      status: statusMap[env.status] || 'created',
+      signers: signerStatuses.map(s => ({
+        name: s.name,
+        email: s.email,
+        status: s.status,
+        signedAt: s.signedDateTime,
+      })),
     };
   }
 
-  async fetchArtifact(envelopeId: string): Promise<ArtifactRef> {
-    // TODO: GET /envelopes/{id}/documents/combined → store in GCS → return signed URL
+  /**
+   * Download signed PDF, store in GCS, return presigned URL.
+   *
+   * GET /v2.1/accounts/{accountId}/envelopes/{envelopeId}/documents/combined
+   */
+  async fetchArtifact(
+    envelopeId: string,
+    connection?: ConnectionRecord,
+    accessToken?: string,
+  ): Promise<ArtifactRef> {
+    if (!connection || !accessToken) {
+      throw new Error('Connection and access token required for fetchArtifact');
+    }
+
+    const apiUrl = `${connection.baseUri}/restapi/v2.1/accounts/${connection.accountId}/envelopes/${envelopeId}/documents/combined?certificate=true`;
+
+    const response = await fetch(apiUrl, {
+      headers: { 'Authorization': `Bearer ${accessToken}` },
+    });
+
+    if (!response.ok) {
+      const err = await response.text();
+      throw new Error(`DocuSign fetchArtifact failed: ${response.status} ${err}`);
+    }
+
+    const pdfBuffer = Buffer.from(await response.arrayBuffer());
+    const storageUrl = await this.config.storeDocument(pdfBuffer, `signed-${envelopeId}.pdf`);
+
     return {
       id: `artifact-${envelopeId}`,
-      downloadUrl: 'placeholder',
+      downloadUrl: storageUrl,
       expiresAt: new Date(Date.now() + 3600000).toISOString(),
     };
   }
@@ -273,7 +445,6 @@ export class DocuSignProvider implements SigningProvider {
 
   verifyWebhook(headers: Record<string, string>, body: string): boolean {
     if (!this.config.hmacSecret) return false;
-
     const signature = headers['x-docusign-signature-1'];
     if (!signature) return false;
 

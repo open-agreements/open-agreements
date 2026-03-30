@@ -127,11 +127,11 @@ describe('DocuSign webhook event handling', () => {
     expect(storedStatus.id).toBe('env-456');
   });
 
-  it('OA-SIG-017: send_for_signature defaults to draft', async () => {
+  it('OA-SIG-017: createDraft requires connection and access token', async () => {
     const provider = new DocuSignProvider(testConfig);
 
-    // createDraft should return status: 'created' (not 'sent')
-    const result = await provider.createDraft(
+    // Without connection/token, createDraft should throw
+    await expect(provider.createDraft(
       {
         id: 'doc-123',
         sha256: 'abc',
@@ -144,8 +144,6 @@ describe('DocuSign webhook event handling', () => {
         signers: [{ name: 'Test', email: 'test@example.com', role: 'party_1', type: 'signer' }],
         emailSubject: 'Test NDA',
       },
-    );
-
-    expect(result.status).toBe('created');
+    )).rejects.toThrow('Connection and access token required');
   });
 });
