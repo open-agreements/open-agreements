@@ -471,7 +471,7 @@ function coverTable(rows, headingTitle, subtitle, style, nilBorder, ruleBorder, 
       new TableRow({ children: [rowHeadingCell(headingTitle, subtitle, style, nilBorder, ruleBorder)] }),
       ...rows.map((row) =>
         new TableRow({
-          height: { value: style.sizes.cover_row_height, rule: HeightRule.ATLEAST },
+          height: { value: opts.coverRowHeight ?? style.sizes.cover_row_height, rule: HeightRule.ATLEAST },
           children: [keyLabelCell(row, style, nilBorder, ruleBorder), keyValueCell(row, style, nilBorder, ruleBorder, opts)],
         })
       ),
@@ -910,7 +910,7 @@ export function renderCoverStandardSignatureV1(spec, style) {
             style,
             nilBorder,
             ruleBorder,
-            { terms: highlightMode === 'all_instances' ? undefined : [] }
+            { terms: highlightMode === 'all_instances' ? undefined : [], coverRowHeight: document.cover_row_height }
           ),
         ],
         style,

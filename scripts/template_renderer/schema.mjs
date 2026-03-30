@@ -80,6 +80,7 @@ export const contractSpecSchema = z.object({
     license: textSchema,
     include_cloud_doc_line: z.boolean().optional().default(false),
     defined_term_highlight_mode: z.enum(['all_instances', 'definition_site_only', 'none']).optional().default('all_instances'),
+    cover_row_height: z.number().int().positive().optional(),
   }),
   sections: z.object({
     cover_terms: z.object({
