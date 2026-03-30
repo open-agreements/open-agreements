@@ -24,3 +24,6 @@ export type {
   SignerRole,
   SigningConfig,
 } from './signing-config.js';
+
+export { DocuSignProvider } from './docusign.js';
+export type { DocuSignConfig } from './docusign.js';
