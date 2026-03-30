@@ -44,3 +44,6 @@ export type {
 
 export { createGCloudStorageCallbacks } from './gcloud-storage.js';
 export type { GCloudStorageConfig } from './gcloud-storage.js';
+
+export { createSigningContext } from './context.js';
+export type { SigningContext, SigningContextConfig } from './context.js';
