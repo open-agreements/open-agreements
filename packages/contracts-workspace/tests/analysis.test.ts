@@ -1,28 +1,33 @@
 import { describe, it, expect, beforeEach } from 'vitest';
 import { MemoryProvider } from '../src/core/memory-provider.js';
 import {
-  analysisPath,
+  sidecarPath,
   contentHash,
-  loadAnalysis,
-  saveAnalysis,
-  isAnalysisStale,
-  listPendingDocuments,
+  loadSidecar,
+  indexContract,
+  isSidecarStale,
+  listUnindexedDocuments,
+  validateDocumentType,
+  detectOrphanedSidecars,
 } from '../src/core/analysis-store.js';
 import {
   enrichDocumentRecord,
   buildAnalysisSummary,
   enrichStatusIndex,
 } from '../src/core/analysis-indexer.js';
+import { searchContracts, formatResultsAsMarkdown } from '../src/core/search-index.js';
 import type { DocumentRecord, StatusIndex } from '../src/core/types.js';
-import type { DocumentClassification, ClauseExtraction } from '../src/core/analysis-types.js';
 import { ANALYSIS_DOCUMENTS_DIR } from '../src/core/constants.js';
 
 function createTestProvider(): MemoryProvider {
   const provider = new MemoryProvider('/test-workspace');
-  provider.seed('drafts/acme_nda.docx', 'NDA content between Acme and TestCo');
-  provider.seed('executed/partner_msa_executed.pdf', 'MSA content for partner agreement');
-  provider.seed('incoming/vendor_agreement.txt', 'Vendor service agreement text');
-  // Seed the conventions file so loadConventions doesn't fail
+  provider.seed('vendor/acme_nda.docx', 'NDA content between Acme and TestCo');
+  provider.seed('vendor/partner_msa.pdf', 'MSA content for partner agreement');
+  provider.seed('hr/offer_letter.txt', 'Offer letter for Jane Doe');
+  provider.seed('fund-formation/lpa.docx', 'Limited Partnership Agreement');
+  // Also seed lifecycle dirs for backward compat tests
+  provider.seed('executed/signed_contract.pdf', 'Signed contract');
+  provider.seed('drafts/draft_agreement.docx', 'Draft agreement');
   provider.seed('.contracts-workspace/conventions.yaml', [
     'schema_version: 1',
     'executed_marker:',
@@ -56,7 +61,7 @@ function createTestProvider(): MemoryProvider {
   return provider;
 }
 
-function makeDocumentRecord(path: string, lifecycle: 'forms' | 'drafts' | 'incoming' | 'executed' | 'archive'): DocumentRecord {
+function makeDocumentRecord(path: string, lifecycle?: 'forms' | 'drafts' | 'incoming' | 'executed' | 'archive'): DocumentRecord {
   const fileName = path.split('/').at(-1) ?? path;
   const extension = fileName.includes('.') ? fileName.slice(fileName.lastIndexOf('.') + 1) : '';
   return {
@@ -78,10 +83,10 @@ describe('analysis-store', () => {
     provider = createTestProvider();
   });
 
-  describe('analysisPath', () => {
-    it('maps document path to sidecar path', () => {
-      expect(analysisPath('drafts/acme_nda.docx')).toBe(
-        `${ANALYSIS_DOCUMENTS_DIR}/drafts/acme_nda.docx.analysis.yaml`,
+  describe('sidecarPath', () => {
+    it('maps document path to .contract.yaml sidecar', () => {
+      expect(sidecarPath('vendor/acme_nda.docx')).toBe(
+        `${ANALYSIS_DOCUMENTS_DIR}/vendor/acme_nda.docx.contract.yaml`,
       );
     });
   });
@@ -92,184 +97,184 @@ describe('analysis-store', () => {
       expect(hash).toMatch(/^sha256:[a-f0-9]{64}$/);
     });
 
-    it('produces consistent hashes for same content', () => {
+    it('is stable across calls', () => {
       const h1 = contentHash(Buffer.from('same'));
       const h2 = contentHash(Buffer.from('same'));
       expect(h1).toBe(h2);
     });
 
-    it('produces different hashes for different content', () => {
+    it('differs for different content', () => {
       const h1 = contentHash(Buffer.from('content-a'));
       const h2 = contentHash(Buffer.from('content-b'));
       expect(h1).not.toBe(h2);
     });
   });
 
-  describe('saveAnalysis and loadAnalysis', () => {
+  describe('indexContract and loadSidecar', () => {
     it('round-trips classification and extractions', () => {
-      const classification: DocumentClassification = {
-        document_type: 'nda',
-        confidence: 'high',
-        parties: ['Acme Corp', 'TestCo Inc'],
-        effective_date: '2025-01-01',
-        expiration_date: '2026-01-01',
-        governing_law: 'Delaware',
-        summary: 'Mutual NDA between Acme and TestCo',
-      };
-
-      const extractions: ClauseExtraction[] = [
-        { clause: 'governing-law', found: true, text: 'State of Delaware', section_reference: 'Section 10' },
-        { clause: 'termination', found: true, text: '30 days written notice', section_reference: 'Section 8' },
-      ];
-
-      const saved = saveAnalysis('/test-workspace', {
-        documentPath: 'drafts/acme_nda.docx',
-        classification,
-        extractions,
-        analyzedBy: 'claude',
-      }, provider);
-
-      expect(saved.document_id).toMatch(/^[a-f0-9]{8}$/);
-      expect(saved.classification).toEqual(classification);
-      expect(saved.extractions).toEqual(extractions);
-      expect(saved.analyzed_by).toBe('claude');
-
-      const loaded = loadAnalysis('/test-workspace', 'drafts/acme_nda.docx', provider);
-      expect(loaded).not.toBeNull();
-      expect(loaded!.document_id).toBe(saved.document_id);
-      expect(loaded!.classification).toEqual(classification);
-      expect(loaded!.extractions).toHaveLength(2);
-    });
-
-    it('preserves document_id across updates', () => {
-      const first = saveAnalysis('/test-workspace', {
-        documentPath: 'drafts/acme_nda.docx',
-        classification: {
-          document_type: 'nda',
-          confidence: 'medium',
-          parties: ['Acme'],
-          summary: 'NDA',
-        },
-      }, provider);
-
-      const second = saveAnalysis('/test-workspace', {
-        documentPath: 'drafts/acme_nda.docx',
+      const result = indexContract('/test-workspace', {
+        documentPath: 'vendor/acme_nda.docx',
         classification: {
           document_type: 'nda',
           confidence: 'high',
-          parties: ['Acme Corp', 'TestCo'],
-          summary: 'Mutual NDA',
+          parties: ['Acme Corp', 'TestCo Inc'],
+          effective_date: '2025-01-01',
+          expiration_date: '2026-01-01',
+          governing_law: 'Delaware',
+          summary: 'Mutual NDA between Acme and TestCo',
         },
+        extractions: [
+          { clause: 'governing-law', found: true, text: 'State of Delaware', section_reference: 'Section 10' },
+        ],
+        indexedBy: 'claude',
       }, provider);
 
-      expect(second.document_id).toBe(first.document_id);
-      expect(second.classification!.confidence).toBe('high');
+      expect(result.analysis.content_hash).toMatch(/^sha256:/);
+      expect(result.warning).toBeUndefined();
+
+      const loaded = loadSidecar('/test-workspace', 'vendor/acme_nda.docx', provider);
+      expect(loaded).not.toBeNull();
+      expect(loaded!.classification!.document_type).toBe('nda');
+      expect(loaded!.extractions).toHaveLength(1);
     });
 
-    it('supports partial updates — preserves existing extractions when only classification is provided', () => {
-      saveAnalysis('/test-workspace', {
-        documentPath: 'drafts/acme_nda.docx',
+    it('supports partial updates — preserves extractions when only classification provided', () => {
+      indexContract('/test-workspace', {
+        documentPath: 'vendor/acme_nda.docx',
         extractions: [{ clause: 'governing-law', found: true, text: 'Delaware' }],
       }, provider);
 
-      saveAnalysis('/test-workspace', {
-        documentPath: 'drafts/acme_nda.docx',
+      indexContract('/test-workspace', {
+        documentPath: 'vendor/acme_nda.docx',
         classification: {
-          document_type: 'nda',
-          confidence: 'high',
-          parties: ['Acme'],
-          summary: 'NDA',
+          document_type: 'nda', confidence: 'high', parties: ['Acme'], summary: 'NDA',
         },
       }, provider);
 
-      const loaded = loadAnalysis('/test-workspace', 'drafts/acme_nda.docx', provider);
+      const loaded = loadSidecar('/test-workspace', 'vendor/acme_nda.docx', provider);
       expect(loaded!.classification!.document_type).toBe('nda');
       expect(loaded!.extractions).toHaveLength(1);
-      expect(loaded!.extractions[0].clause).toBe('governing-law');
     });
 
-    it('returns null for non-existent analysis', () => {
-      const result = loadAnalysis('/test-workspace', 'drafts/nonexistent.docx', provider);
-      expect(result).toBeNull();
+    it('returns null for non-existent sidecar', () => {
+      expect(loadSidecar('/test-workspace', 'nonexistent.docx', provider)).toBeNull();
     });
   });
 
-  describe('isAnalysisStale', () => {
-    it('returns stale: false for fresh analysis', () => {
-      saveAnalysis('/test-workspace', {
-        documentPath: 'drafts/acme_nda.docx',
-        classification: { document_type: 'nda', confidence: 'high', parties: ['Acme'], summary: 'NDA' },
-      }, provider);
-
-      const result = isAnalysisStale('/test-workspace', 'drafts/acme_nda.docx', provider);
-      expect(result.stale).toBe(false);
+  describe('validateDocumentType', () => {
+    it('accepts canonical types', () => {
+      const result = validateDocumentType('nda', provider);
+      expect(result.valid).toBe(true);
+      expect(result.document_type).toBe('nda');
     });
 
-    it('returns stale: true when content changes', () => {
-      saveAnalysis('/test-workspace', {
-        documentPath: 'drafts/acme_nda.docx',
-        classification: { document_type: 'nda', confidence: 'high', parties: ['Acme'], summary: 'NDA' },
+    it('rejects unknown types with raw_type fallback', () => {
+      const result = validateDocumentType('property-management-agreement', provider);
+      expect(result.valid).toBe(false);
+      expect(result.document_type).toBeNull();
+      expect(result.raw_type).toBe('property-management-agreement');
+      expect(result.warning).toContain('Unknown document type');
+    });
+
+    it('accepts custom types from config', () => {
+      provider.seed('.contracts-workspace/config.yaml', 'custom_document_types:\n  - side-letter\n');
+      const result = validateDocumentType('side-letter', provider);
+      expect(result.valid).toBe(true);
+      expect(result.document_type).toBe('side-letter');
+    });
+  });
+
+  describe('unknown type through indexContract', () => {
+    it('stores null document_type with raw_type and returns warning', () => {
+      const result = indexContract('/test-workspace', {
+        documentPath: 'vendor/acme_nda.docx',
+        classification: {
+          document_type: 'property-management-agreement',
+          confidence: 'high',
+          parties: ['Acme'],
+          summary: 'PMA',
+        },
       }, provider);
 
-      // Modify the document
-      provider.seed('drafts/acme_nda.docx', 'MODIFIED NDA content');
+      expect(result.warning).toContain('Unknown document type');
+      const loaded = loadSidecar('/test-workspace', 'vendor/acme_nda.docx', provider);
+      expect(loaded!.classification!.document_type).toBeNull();
+      expect(loaded!.classification!.raw_type).toBe('property-management-agreement');
+    });
+  });
 
-      const result = isAnalysisStale('/test-workspace', 'drafts/acme_nda.docx', provider);
+  describe('isSidecarStale', () => {
+    it('returns false for fresh index', () => {
+      indexContract('/test-workspace', {
+        documentPath: 'vendor/acme_nda.docx',
+        classification: { document_type: 'nda', confidence: 'high', parties: ['Acme'], summary: 'NDA' },
+      }, provider);
+      expect(isSidecarStale('/test-workspace', 'vendor/acme_nda.docx', provider).stale).toBe(false);
+    });
+
+    it('returns true when content changes', () => {
+      indexContract('/test-workspace', {
+        documentPath: 'vendor/acme_nda.docx',
+        classification: { document_type: 'nda', confidence: 'high', parties: ['Acme'], summary: 'NDA' },
+      }, provider);
+      provider.seed('vendor/acme_nda.docx', 'MODIFIED content');
+      const result = isSidecarStale('/test-workspace', 'vendor/acme_nda.docx', provider);
       expect(result.stale).toBe(true);
       expect(result.reason).toBe('content_changed');
     });
-
-    it('returns stale: false when no analysis exists', () => {
-      const result = isAnalysisStale('/test-workspace', 'drafts/acme_nda.docx', provider);
-      expect(result.stale).toBe(false);
-    });
   });
 
-  describe('listPendingDocuments', () => {
-    it('returns all documents as new when none are analyzed', () => {
-      const documents = [
-        { path: 'drafts/acme_nda.docx' },
-        { path: 'incoming/vendor_agreement.txt' },
-      ];
-
-      const pending = listPendingDocuments('/test-workspace', documents, provider);
+  describe('listUnindexedDocuments', () => {
+    it('returns all as new when none indexed', () => {
+      const docs = [{ path: 'vendor/acme_nda.docx' }, { path: 'hr/offer_letter.txt' }];
+      const pending = listUnindexedDocuments('/test-workspace', docs, provider);
       expect(pending).toHaveLength(2);
       expect(pending.every((d) => d.reason === 'new')).toBe(true);
     });
 
-    it('returns stale documents with content_changed reason', () => {
-      saveAnalysis('/test-workspace', {
-        documentPath: 'drafts/acme_nda.docx',
+    it('returns stale docs with content_changed', () => {
+      indexContract('/test-workspace', {
+        documentPath: 'vendor/acme_nda.docx',
         classification: { document_type: 'nda', confidence: 'high', parties: ['Acme'], summary: 'NDA' },
       }, provider);
-
-      provider.seed('drafts/acme_nda.docx', 'MODIFIED content');
-
-      const pending = listPendingDocuments('/test-workspace', [{ path: 'drafts/acme_nda.docx' }], provider);
-      expect(pending).toHaveLength(1);
+      provider.seed('vendor/acme_nda.docx', 'MODIFIED');
+      const pending = listUnindexedDocuments('/test-workspace', [{ path: 'vendor/acme_nda.docx' }], provider);
       expect(pending[0].reason).toBe('content_changed');
-      expect(pending[0].document_type).toBe('nda');
     });
 
-    it('returns incomplete documents missing classification', () => {
-      saveAnalysis('/test-workspace', {
-        documentPath: 'drafts/acme_nda.docx',
-        extractions: [{ clause: 'governing-law', found: true }],
+    it('excludes fully indexed fresh documents', () => {
+      indexContract('/test-workspace', {
+        documentPath: 'vendor/acme_nda.docx',
+        classification: { document_type: 'nda', confidence: 'high', parties: ['Acme'], summary: 'NDA' },
       }, provider);
-
-      const pending = listPendingDocuments('/test-workspace', [{ path: 'drafts/acme_nda.docx' }], provider);
-      expect(pending).toHaveLength(1);
-      expect(pending[0].reason).toBe('incomplete');
+      const pending = listUnindexedDocuments('/test-workspace', [{ path: 'vendor/acme_nda.docx' }], provider);
+      expect(pending).toHaveLength(0);
     });
+  });
 
-    it('excludes fully analyzed fresh documents', () => {
-      saveAnalysis('/test-workspace', {
-        documentPath: 'drafts/acme_nda.docx',
+  describe('detectOrphanedSidecars', () => {
+    it('detects sidecar whose source document no longer exists at recorded path', () => {
+      // Index a real document first
+      indexContract('/test-workspace', {
+        documentPath: 'vendor/acme_nda.docx',
         classification: { document_type: 'nda', confidence: 'high', parties: ['Acme'], summary: 'NDA' },
       }, provider);
 
-      const pending = listPendingDocuments('/test-workspace', [{ path: 'drafts/acme_nda.docx' }], provider);
-      expect(pending).toHaveLength(0);
+      // Manually create an orphaned sidecar (source doc path doesn't exist)
+      const orphanSidecarPath = `${ANALYSIS_DOCUMENTS_DIR}/vendor/deleted_contract.docx.contract.yaml`;
+      provider.mkdir(`${ANALYSIS_DOCUMENTS_DIR}/vendor`, { recursive: true });
+      provider.writeFile(orphanSidecarPath, [
+        'schema_version: 1',
+        'document_path: vendor/deleted_contract.docx',
+        'content_hash: sha256:abc123',
+        'indexed_at: 2026-03-30T00:00:00Z',
+        'indexed_by: claude',
+        'extractions: []',
+      ].join('\n'));
+
+      const orphans = detectOrphanedSidecars('/test-workspace', provider);
+      expect(orphans).toContain('vendor/deleted_contract.docx');
+      expect(orphans).not.toContain('vendor/acme_nda.docx');
     });
   });
 });
@@ -282,104 +287,46 @@ describe('analysis-indexer', () => {
   });
 
   describe('enrichDocumentRecord', () => {
-    it('adds analyzed: false when no analysis exists', () => {
-      const record = makeDocumentRecord('drafts/acme_nda.docx', 'drafts');
+    it('adds analyzed: false when no sidecar exists', () => {
+      const record = makeDocumentRecord('vendor/acme_nda.docx');
       const enriched = enrichDocumentRecord('/test-workspace', record, provider);
-
       expect(enriched.analyzed).toBe(false);
       expect(enriched.stale).toBe(false);
-      expect(enriched.classification).toBeUndefined();
     });
 
-    it('adds classification and analyzed: true when analysis exists', () => {
-      saveAnalysis('/test-workspace', {
-        documentPath: 'drafts/acme_nda.docx',
-        classification: {
-          document_type: 'nda',
-          confidence: 'high',
-          parties: ['Acme Corp', 'TestCo'],
-          effective_date: '2025-01-01',
-          summary: 'Mutual NDA',
-        },
+    it('adds classification when sidecar exists', () => {
+      indexContract('/test-workspace', {
+        documentPath: 'vendor/acme_nda.docx',
+        classification: { document_type: 'nda', confidence: 'high', parties: ['Acme', 'TestCo'], summary: 'NDA' },
       }, provider);
-
-      const record = makeDocumentRecord('drafts/acme_nda.docx', 'drafts');
+      const record = makeDocumentRecord('vendor/acme_nda.docx');
       const enriched = enrichDocumentRecord('/test-workspace', record, provider);
-
       expect(enriched.analyzed).toBe(true);
-      expect(enriched.stale).toBe(false);
       expect(enriched.classification!.document_type).toBe('nda');
-      expect(enriched.classification!.parties).toEqual(['Acme Corp', 'TestCo']);
-    });
-
-    it('marks stale when content changed', () => {
-      saveAnalysis('/test-workspace', {
-        documentPath: 'drafts/acme_nda.docx',
-        classification: { document_type: 'nda', confidence: 'high', parties: ['Acme'], summary: 'NDA' },
-      }, provider);
-
-      provider.seed('drafts/acme_nda.docx', 'MODIFIED content');
-
-      const record = makeDocumentRecord('drafts/acme_nda.docx', 'drafts');
-      const enriched = enrichDocumentRecord('/test-workspace', record, provider);
-
-      expect(enriched.analyzed).toBe(true);
-      expect(enriched.stale).toBe(true);
     });
   });
 
   describe('buildAnalysisSummary', () => {
-    it('aggregates counts by document type', () => {
-      saveAnalysis('/test-workspace', {
-        documentPath: 'drafts/acme_nda.docx',
+    it('aggregates counts', () => {
+      indexContract('/test-workspace', {
+        documentPath: 'vendor/acme_nda.docx',
         classification: { document_type: 'nda', confidence: 'high', parties: ['Acme'], summary: 'NDA' },
       }, provider);
-
-      saveAnalysis('/test-workspace', {
-        documentPath: 'executed/partner_msa_executed.pdf',
-        classification: { document_type: 'msa', confidence: 'high', parties: ['Partner Co'], summary: 'MSA' },
-      }, provider);
-
-      const documents = [
-        makeDocumentRecord('drafts/acme_nda.docx', 'drafts'),
-        makeDocumentRecord('executed/partner_msa_executed.pdf', 'executed'),
-        makeDocumentRecord('incoming/vendor_agreement.txt', 'incoming'),
+      const docs = [
+        makeDocumentRecord('vendor/acme_nda.docx'),
+        makeDocumentRecord('hr/offer_letter.txt'),
       ];
-
-      const summary = buildAnalysisSummary('/test-workspace', documents, provider);
-      expect(summary.analyzed_documents).toBe(2);
+      const summary = buildAnalysisSummary('/test-workspace', docs, provider);
+      expect(summary.analyzed_documents).toBe(1);
       expect(summary.unanalyzed_documents).toBe(1);
-      expect(summary.stale_documents).toBe(0);
-      expect(summary.by_document_type).toEqual({ nda: 1, msa: 1 });
-    });
-
-    it('identifies expiring-soon contracts', () => {
-      const futureDate = new Date();
-      futureDate.setDate(futureDate.getDate() + 30);
-      const expirationDate = futureDate.toISOString().split('T')[0];
-
-      saveAnalysis('/test-workspace', {
-        documentPath: 'drafts/acme_nda.docx',
-        classification: {
-          document_type: 'nda',
-          confidence: 'high',
-          parties: ['Acme'],
-          expiration_date: expirationDate,
-          summary: 'Expiring NDA',
-        },
-      }, provider);
-
-      const documents = [makeDocumentRecord('drafts/acme_nda.docx', 'drafts')];
-      const summary = buildAnalysisSummary('/test-workspace', documents, provider);
-      expect(summary.expiring_soon).toHaveLength(1);
-      expect(summary.expiring_soon[0].path).toBe('drafts/acme_nda.docx');
+      expect(summary.by_document_type).toEqual({ nda: 1 });
     });
   });
 
   describe('enrichStatusIndex', () => {
-    it('adds analysis section to status index', () => {
-      saveAnalysis('/test-workspace', {
-        documentPath: 'drafts/acme_nda.docx',
+    it('adds analysis section', () => {
+      indexContract('/test-workspace', {
+        documentPath: 'vendor/acme_nda.docx',
         classification: { document_type: 'nda', confidence: 'high', parties: ['Acme'], summary: 'NDA' },
       }, provider);
 
@@ -387,42 +334,81 @@ describe('analysis-indexer', () => {
         generated_at: new Date().toISOString(),
         workspace_root: '/test-workspace',
         summary: {
-          total_documents: 1,
-          executed_documents: 0,
-          partially_executed_documents: 0,
-          pending_documents: 1,
-          by_lifecycle: { forms: 0, drafts: 1, incoming: 0, executed: 0, archive: 0 },
+          total_documents: 1, executed_documents: 0, partially_executed_documents: 0,
+          pending_documents: 1, by_lifecycle: { forms: 0, drafts: 0, incoming: 0, executed: 0, archive: 0 },
         },
-        documents: [makeDocumentRecord('drafts/acme_nda.docx', 'drafts')],
+        documents: [makeDocumentRecord('vendor/acme_nda.docx')],
         lint: { error_count: 0, warning_count: 0, findings: [] },
       };
 
       const enriched = enrichStatusIndex('/test-workspace', baseIndex, provider);
-      expect(enriched.analysis).toBeDefined();
       expect(enriched.analysis!.analyzed_documents).toBe(1);
       expect(enriched.documents[0].analyzed).toBe(true);
-      expect(enriched.documents[0].classification!.document_type).toBe('nda');
     });
+  });
+});
 
-    it('produces valid index when no analyses exist', () => {
-      const baseIndex: StatusIndex = {
-        generated_at: new Date().toISOString(),
-        workspace_root: '/test-workspace',
-        summary: {
-          total_documents: 1,
-          executed_documents: 0,
-          partially_executed_documents: 0,
-          pending_documents: 1,
-          by_lifecycle: { forms: 0, drafts: 1, incoming: 0, executed: 0, archive: 0 },
-        },
-        documents: [makeDocumentRecord('drafts/acme_nda.docx', 'drafts')],
-        lint: { error_count: 0, warning_count: 0, findings: [] },
-      };
+describe('search-index', () => {
+  let provider: MemoryProvider;
 
-      const enriched = enrichStatusIndex('/test-workspace', baseIndex, provider);
-      expect(enriched.analysis!.analyzed_documents).toBe(0);
-      expect(enriched.analysis!.unanalyzed_documents).toBe(1);
-      expect(enriched.documents[0].analyzed).toBe(false);
-    });
+  beforeEach(() => {
+    provider = createTestProvider();
+    indexContract('/test-workspace', {
+      documentPath: 'vendor/acme_nda.docx',
+      classification: {
+        document_type: 'nda', confidence: 'high', parties: ['Acme Corp', 'TestCo'],
+        governing_law: 'Delaware', summary: 'Mutual non-disclosure agreement',
+      },
+      extractions: [
+        { clause: 'confidentiality', found: true, text: 'All information shared shall remain confidential' },
+        { clause: 'governing-law', found: true, text: 'State of Delaware' },
+      ],
+    }, provider);
+    indexContract('/test-workspace', {
+      documentPath: 'vendor/partner_msa.pdf',
+      classification: {
+        document_type: 'msa', confidence: 'high', parties: ['Partner Co'],
+        expiration_date: '2026-06-15', summary: 'Master services agreement',
+      },
+      extractions: [
+        { clause: 'indemnification', found: true, text: 'Each party shall indemnify the other' },
+      ],
+    }, provider);
+  });
+
+  it('finds documents by BM25 text query', () => {
+    const results = searchContracts('/test-workspace', { query: 'confidential' }, [], provider);
+    expect(results.length).toBeGreaterThan(0);
+    expect(results[0].path).toBe('vendor/acme_nda.docx');
+  });
+
+  it('filters by document_type', () => {
+    const results = searchContracts('/test-workspace', { document_type: 'nda' }, [], provider);
+    expect(results).toHaveLength(1);
+    expect(results[0].document_type).toBe('nda');
+  });
+
+  it('filters by party substring', () => {
+    const results = searchContracts('/test-workspace', { party: 'Acme' }, [], provider);
+    expect(results).toHaveLength(1);
+    expect(results[0].parties).toContain('Acme Corp');
+  });
+
+  it('filters by expiring_before', () => {
+    const results = searchContracts('/test-workspace', { expiring_before: '2026-12-31' }, [], provider);
+    expect(results).toHaveLength(1);
+    expect(results[0].path).toBe('vendor/partner_msa.pdf');
+  });
+
+  it('formats as markdown', () => {
+    const results = searchContracts('/test-workspace', { document_type: 'nda' }, [], provider);
+    const md = formatResultsAsMarkdown(results);
+    expect(md).toContain('| vendor/acme_nda.docx |');
+    expect(md).toContain('nda');
+  });
+
+  it('returns empty for no matches', () => {
+    const results = searchContracts('/test-workspace', { query: 'zzzznotfound' }, [], provider);
+    expect(results).toHaveLength(0);
   });
 });

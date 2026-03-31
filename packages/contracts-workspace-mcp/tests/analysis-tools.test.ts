@@ -1,4 +1,4 @@
-import { mkdtempSync, mkdirSync, writeFileSync, readFileSync } from 'node:fs';
+import { mkdtempSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { describe, expect, beforeEach } from 'vitest';
@@ -7,351 +7,215 @@ import { callTool, listToolDescriptors } from '../src/core/tools.js';
 
 const it = itAllure.epic('Platform & Distribution');
 
-function getStructuredContent(result: Awaited<ReturnType<typeof callTool>>): Record<string, unknown> {
+function getPayload(result: Awaited<ReturnType<typeof callTool>>): Record<string, unknown> {
   return (result.structuredContent ?? {}) as Record<string, unknown>;
 }
 
 function createTestWorkspace(): string {
-  const root = mkdtempSync(join(tmpdir(), 'oa-analysis-'));
-  for (const folder of ['forms', 'drafts', 'incoming', 'executed', 'archive']) {
-    mkdirSync(join(root, folder), { recursive: true });
-  }
-  writeFileSync(join(root, 'drafts', 'acme_nda.docx'), 'NDA content between Acme and TestCo');
-  writeFileSync(join(root, 'executed', 'partner_msa_executed.pdf'), 'MSA content');
-  writeFileSync(join(root, 'incoming', 'vendor_agreement.txt'), 'Vendor agreement text');
+  const root = mkdtempSync(join(tmpdir(), 'oa-idx-'));
+  // Lifecycle dirs
+  mkdirSync(join(root, 'drafts'), { recursive: true });
+  mkdirSync(join(root, 'executed'), { recursive: true });
+  // Custom dirs (non-lifecycle)
+  mkdirSync(join(root, 'vendor'), { recursive: true });
+  mkdirSync(join(root, 'fund-formation'), { recursive: true });
+  // Documents in all folder types
+  writeFileSync(join(root, 'vendor', 'acme_nda.docx'), 'NDA content');
+  writeFileSync(join(root, 'vendor', 'partner_msa.pdf'), 'MSA content');
+  writeFileSync(join(root, 'fund-formation', 'lpa.docx'), 'LPA content');
+  writeFileSync(join(root, 'executed', 'signed_agreement.pdf'), 'Signed');
+  writeFileSync(join(root, 'drafts', 'draft_sow.docx'), 'Draft SOW');
+  // Non-document file (should be excluded)
+  writeFileSync(join(root, 'vendor', 'logo.png'), 'fake image');
   return root;
 }
 
-describe('contract analysis MCP tools', () => {
+describe('contract indexing MCP tools', () => {
   let root: string;
 
   beforeEach(() => {
     root = createTestWorkspace();
   });
 
-  it('tool listing includes all 10 tools', () => {
+  it('lists all 9 tools including 4 indexing tools', () => {
     const names = listToolDescriptors().map((t) => t.name);
-    expect(names).toContain('save_contract_analysis');
-    expect(names).toContain('read_contract_analysis');
-    expect(names).toContain('list_pending_contracts');
+    expect(names).toContain('index_contract');
+    expect(names).toContain('get_contract_index');
+    expect(names).toContain('list_unindexed_contracts');
     expect(names).toContain('search_contracts');
-    expect(names).toContain('suggest_contract_rename');
-    expect(names).toHaveLength(10);
+    expect(names).toHaveLength(9);
   });
 
-  describe('save_contract_analysis', () => {
-    it.openspec('OA-WKS-032')('stores classification and returns document_id', async () => {
-      const result = await callTool('save_contract_analysis', {
+  describe('list_unindexed_contracts', () => {
+    it.openspec('OA-IDX-008')('lists documents from all folders including custom dirs', async () => {
+      const result = await callTool('list_unindexed_contracts', { root_dir: root });
+      const payload = getPayload(result);
+      // Should find docs in vendor/, fund-formation/, executed/, drafts/ — but NOT logo.png
+      expect(payload.total_documents).toBe(5);
+      expect(payload.unindexed_count).toBe(5);
+      const docs = payload.documents as Array<Record<string, unknown>>;
+      const paths = docs.map((d) => d.path);
+      expect(paths).toContain('vendor/acme_nda.docx');
+      expect(paths).toContain('fund-formation/lpa.docx');
+      expect(paths).not.toContain('vendor/logo.png');
+    });
+  });
+
+  describe('index_contract', () => {
+    it.openspec('OA-IDX-001')('stores classification and returns content_hash', async () => {
+      const result = await callTool('index_contract', {
         root_dir: root,
-        document_path: 'drafts/acme_nda.docx',
+        document_path: 'vendor/acme_nda.docx',
         classification: {
           document_type: 'nda',
           confidence: 'high',
           parties: ['Acme Corp', 'TestCo Inc'],
-          effective_date: '2025-01-01',
-          expiration_date: '2026-01-01',
-          governing_law: 'Delaware',
-          summary: 'Mutual NDA between Acme and TestCo',
-        },
-        extractions: [
-          { clause: 'governing-law', found: true, text: 'State of Delaware', section_reference: 'Section 10' },
-        ],
-        analyzed_by: 'claude',
-      });
-
-      expect(result.isError).toBeUndefined();
-      const payload = getStructuredContent(result);
-      expect(payload.document_id).toMatch(/^[a-f0-9]{8}$/);
-      expect(payload.content_hash).toMatch(/^sha256:/);
-    });
-
-    it.openspec('OA-WKS-033')('preserves document_id across updates', async () => {
-      const first = await callTool('save_contract_analysis', {
-        root_dir: root,
-        document_path: 'drafts/acme_nda.docx',
-        classification: {
-          document_type: 'nda',
-          confidence: 'medium',
-          parties: ['Acme'],
-          summary: 'NDA draft',
-        },
-      });
-
-      const second = await callTool('save_contract_analysis', {
-        root_dir: root,
-        document_path: 'drafts/acme_nda.docx',
-        classification: {
-          document_type: 'nda',
-          confidence: 'high',
-          parties: ['Acme Corp', 'TestCo'],
           summary: 'Mutual NDA',
         },
+        indexed_by: 'claude',
       });
-
-      const firstPayload = getStructuredContent(first);
-      const secondPayload = getStructuredContent(second);
-      expect(secondPayload.document_id).toBe(firstPayload.document_id);
+      expect(result.isError).toBeUndefined();
+      const payload = getPayload(result);
+      expect(payload.content_hash).toMatch(/^sha256:/);
+      expect(payload.warning).toBeUndefined();
     });
 
-    it.openspec('OA-WKS-034')('partial update preserves existing extractions', async () => {
-      await callTool('save_contract_analysis', {
+    it.openspec('OA-IDX-003')('accepts canonical document type', async () => {
+      const result = await callTool('index_contract', {
         root_dir: root,
-        document_path: 'drafts/acme_nda.docx',
-        extractions: [
-          { clause: 'governing-law', found: true, text: 'Delaware' },
-        ],
-      });
-
-      await callTool('save_contract_analysis', {
-        root_dir: root,
-        document_path: 'drafts/acme_nda.docx',
+        document_path: 'vendor/acme_nda.docx',
         classification: {
-          document_type: 'nda',
-          confidence: 'high',
-          parties: ['Acme'],
-          summary: 'NDA',
+          document_type: 'nda', confidence: 'high', parties: ['Acme'], summary: 'NDA',
         },
       });
+      expect(getPayload(result).warning).toBeUndefined();
+    });
 
-      const readResult = await callTool('read_contract_analysis', {
+    it.openspec('OA-IDX-004')('warns on unknown type with raw_type fallback', async () => {
+      const result = await callTool('index_contract', {
         root_dir: root,
-        document_path: 'drafts/acme_nda.docx',
+        document_path: 'vendor/acme_nda.docx',
+        classification: {
+          document_type: 'property-management-agreement',
+          confidence: 'high', parties: ['Acme'], summary: 'PMA',
+        },
       });
-      const payload = getStructuredContent(readResult);
-      const analysis = payload.analysis as Record<string, unknown>;
-      expect(analysis.classification).toBeDefined();
-      expect((analysis.extractions as unknown[]).length).toBe(1);
+      const payload = getPayload(result);
+      expect(payload.warning).toContain('Unknown document type');
+    });
+
+    it.openspec('OA-IDX-002')('partial update preserves existing extractions', async () => {
+      await callTool('index_contract', {
+        root_dir: root,
+        document_path: 'vendor/acme_nda.docx',
+        extractions: [{ clause: 'governing-law', found: true, text: 'Delaware' }],
+      });
+      await callTool('index_contract', {
+        root_dir: root,
+        document_path: 'vendor/acme_nda.docx',
+        classification: {
+          document_type: 'nda', confidence: 'high', parties: ['Acme'], summary: 'NDA',
+        },
+      });
+      const read = await callTool('get_contract_index', {
+        root_dir: root, document_path: 'vendor/acme_nda.docx',
+      });
+      const contract = (getPayload(read)).contract as Record<string, unknown>;
+      expect(contract.classification).toBeDefined();
+      expect((contract.extractions as unknown[]).length).toBe(1);
     });
   });
 
-  describe('read_contract_analysis', () => {
-    it.openspec('OA-WKS-036')('returns analysis with stale: false for fresh document', async () => {
-      await callTool('save_contract_analysis', {
+  describe('get_contract_index', () => {
+    it.openspec('OA-IDX-007')('returns fresh sidecar with stale: false', async () => {
+      await callTool('index_contract', {
         root_dir: root,
-        document_path: 'drafts/acme_nda.docx',
-        classification: {
-          document_type: 'nda',
-          confidence: 'high',
-          parties: ['Acme'],
-          summary: 'NDA',
-        },
+        document_path: 'vendor/acme_nda.docx',
+        classification: { document_type: 'nda', confidence: 'high', parties: ['Acme'], summary: 'NDA' },
       });
-
-      const result = await callTool('read_contract_analysis', {
-        root_dir: root,
-        document_path: 'drafts/acme_nda.docx',
+      const result = await callTool('get_contract_index', {
+        root_dir: root, document_path: 'vendor/acme_nda.docx',
       });
-      const payload = getStructuredContent(result);
+      const payload = getPayload(result);
       expect(payload.stale).toBe(false);
-      expect(payload.analysis).not.toBeNull();
+      expect(payload.contract).not.toBeNull();
     });
 
-    it.openspec('OA-WKS-035')('detects stale analysis when content changes', async () => {
-      await callTool('save_contract_analysis', {
+    it.openspec('OA-IDX-006')('detects stale sidecar', async () => {
+      await callTool('index_contract', {
         root_dir: root,
-        document_path: 'drafts/acme_nda.docx',
-        classification: {
-          document_type: 'nda',
-          confidence: 'high',
-          parties: ['Acme'],
-          summary: 'NDA',
-        },
+        document_path: 'vendor/acme_nda.docx',
+        classification: { document_type: 'nda', confidence: 'high', parties: ['Acme'], summary: 'NDA' },
       });
-
-      // Modify the document
-      writeFileSync(join(root, 'drafts', 'acme_nda.docx'), 'MODIFIED NDA content');
-
-      const result = await callTool('read_contract_analysis', {
-        root_dir: root,
-        document_path: 'drafts/acme_nda.docx',
+      writeFileSync(join(root, 'vendor', 'acme_nda.docx'), 'MODIFIED');
+      const result = await callTool('get_contract_index', {
+        root_dir: root, document_path: 'vendor/acme_nda.docx',
       });
-      const payload = getStructuredContent(result);
-      expect(payload.stale).toBe(true);
-      expect(payload.stale_reason).toBe('content_changed');
+      expect(getPayload(result).stale).toBe(true);
     });
 
-    it('returns null analysis for non-analyzed document', async () => {
-      const result = await callTool('read_contract_analysis', {
+    it.openspec('OA-IDX-015')('returns portfolio overview without document_path', async () => {
+      await callTool('index_contract', {
         root_dir: root,
-        document_path: 'drafts/acme_nda.docx',
+        document_path: 'vendor/acme_nda.docx',
+        classification: { document_type: 'nda', confidence: 'high', parties: ['Acme'], summary: 'NDA' },
       });
-      const payload = getStructuredContent(result);
-      expect(payload.analysis).toBeNull();
-      expect(payload.stale).toBe(false);
-    });
-  });
-
-  describe('list_pending_contracts', () => {
-    it.openspec('OA-WKS-037')('lists unanalyzed documents as new', async () => {
-      const result = await callTool('list_pending_contracts', { root_dir: root });
-      const payload = getStructuredContent(result);
-      expect(payload.pending_count).toBe(3);
-      const docs = payload.documents as Array<Record<string, unknown>>;
-      expect(docs.every((d) => d.reason === 'new')).toBe(true);
-    });
-
-    it.openspec('OA-WKS-038')('lists stale documents with content_changed reason', async () => {
-      await callTool('save_contract_analysis', {
-        root_dir: root,
-        document_path: 'drafts/acme_nda.docx',
-        classification: {
-          document_type: 'nda',
-          confidence: 'high',
-          parties: ['Acme'],
-          summary: 'NDA',
-        },
-      });
-
-      writeFileSync(join(root, 'drafts', 'acme_nda.docx'), 'MODIFIED content');
-
-      const result = await callTool('list_pending_contracts', { root_dir: root });
-      const payload = getStructuredContent(result);
-      const docs = payload.documents as Array<Record<string, unknown>>;
-      const staleDoc = docs.find((d) => d.path === 'drafts/acme_nda.docx');
-      expect(staleDoc).toBeDefined();
-      expect(staleDoc!.reason).toBe('content_changed');
+      const result = await callTool('get_contract_index', { root_dir: root });
+      const payload = getPayload(result);
+      expect(payload.indexed_count).toBe(1);
+      expect((payload.unindexed_count as number)).toBeGreaterThanOrEqual(4);
+      expect(payload.by_document_type).toEqual({ nda: 1 });
     });
   });
 
   describe('search_contracts', () => {
-    it.openspec('OA-WKS-039')('filters by document type', async () => {
-      await callTool('save_contract_analysis', {
+    beforeEach(async () => {
+      await callTool('index_contract', {
         root_dir: root,
-        document_path: 'drafts/acme_nda.docx',
+        document_path: 'vendor/acme_nda.docx',
         classification: {
-          document_type: 'nda',
-          confidence: 'high',
-          parties: ['Acme Corp'],
-          summary: 'NDA',
+          document_type: 'nda', confidence: 'high',
+          parties: ['Acme Corp'], summary: 'Mutual non-disclosure agreement',
+        },
+        extractions: [{ clause: 'confidentiality', found: true, text: 'All info shall be confidential' }],
+      });
+      await callTool('index_contract', {
+        root_dir: root,
+        document_path: 'vendor/partner_msa.pdf',
+        classification: {
+          document_type: 'msa', confidence: 'high',
+          parties: ['Partner Co'], expiration_date: '2026-06-15',
+          summary: 'Master services agreement',
         },
       });
-
-      await callTool('save_contract_analysis', {
-        root_dir: root,
-        document_path: 'executed/partner_msa_executed.pdf',
-        classification: {
-          document_type: 'msa',
-          confidence: 'high',
-          parties: ['Partner Co'],
-          summary: 'MSA',
-        },
-      });
-
-      const result = await callTool('search_contracts', {
-        root_dir: root,
-        document_type: 'nda',
-      });
-      const payload = getStructuredContent(result);
-      expect(payload.match_count).toBe(1);
-      const docs = payload.documents as Array<Record<string, unknown>>;
-      expect(docs[0].path).toBe('drafts/acme_nda.docx');
     });
 
-    it.openspec('OA-WKS-041')('filters by party name (substring match)', async () => {
-      await callTool('save_contract_analysis', {
-        root_dir: root,
-        document_path: 'drafts/acme_nda.docx',
-        classification: {
-          document_type: 'nda',
-          confidence: 'high',
-          parties: ['Acme Corp', 'TestCo'],
-          summary: 'NDA',
-        },
-      });
+    it.openspec('OA-IDX-010')('BM25 search by query text', async () => {
+      const result = await callTool('search_contracts', { root_dir: root, query: 'confidential' });
+      const payload = getPayload(result);
+      expect((payload.match_count as number)).toBeGreaterThan(0);
+    });
 
-      const result = await callTool('search_contracts', {
-        root_dir: root,
-        party: 'Acme',
-      });
-      const payload = getStructuredContent(result);
+    it.openspec('OA-IDX-011')('filters by document type', async () => {
+      const result = await callTool('search_contracts', { root_dir: root, document_type: 'nda' });
+      const payload = getPayload(result);
       expect(payload.match_count).toBe(1);
     });
 
-    it('filters by analyzed status', async () => {
-      await callTool('save_contract_analysis', {
-        root_dir: root,
-        document_path: 'drafts/acme_nda.docx',
-        classification: {
-          document_type: 'nda',
-          confidence: 'high',
-          parties: ['Acme'],
-          summary: 'NDA',
-        },
-      });
-
-      const analyzedResult = await callTool('search_contracts', {
-        root_dir: root,
-        analyzed: true,
-      });
-      expect((getStructuredContent(analyzedResult)).match_count).toBe(1);
-
-      const unanalyzedResult = await callTool('search_contracts', {
-        root_dir: root,
-        analyzed: false,
-      });
-      expect((getStructuredContent(unanalyzedResult)).match_count).toBe(2);
-    });
-  });
-
-  describe('suggest_contract_rename', () => {
-    it.openspec('OA-WKS-042')('suggests standardized filename from classification', async () => {
-      await callTool('save_contract_analysis', {
-        root_dir: root,
-        document_path: 'drafts/acme_nda.docx',
-        classification: {
-          document_type: 'nda',
-          confidence: 'high',
-          parties: ['Acme Corp'],
-          effective_date: '2025-06-01',
-          summary: 'NDA with Acme',
-        },
-      });
-
-      const result = await callTool('suggest_contract_rename', {
-        root_dir: root,
-        document_path: 'drafts/acme_nda.docx',
-      });
-      const payload = getStructuredContent(result);
-      expect(payload.suggested_name).toBe('2025-06-01_acme_corp_nda.docx');
+    it.openspec('OA-IDX-013')('filters by party', async () => {
+      const result = await callTool('search_contracts', { root_dir: root, party: 'Acme' });
+      expect(getPayload(result).match_count).toBe(1);
     });
 
-    it.openspec('OA-WKS-043')('returns null for unclassified document', async () => {
-      const result = await callTool('suggest_contract_rename', {
-        root_dir: root,
-        document_path: 'drafts/acme_nda.docx',
-      });
-      const payload = getStructuredContent(result);
-      expect(payload.suggested_name).toBeNull();
-    });
-  });
-
-  describe('status_generate with analysis enrichment', () => {
-    it.openspec('OA-WKS-044')('includes analysis summary in generated index', async () => {
-      await callTool('save_contract_analysis', {
-        root_dir: root,
-        document_path: 'drafts/acme_nda.docx',
-        classification: {
-          document_type: 'nda',
-          confidence: 'high',
-          parties: ['Acme Corp'],
-          summary: 'NDA',
-        },
-      });
-
-      const result = await callTool('status_generate', { root_dir: root });
-      const payload = getStructuredContent(result);
-      const analysis = payload.analysis as Record<string, unknown>;
-      expect(analysis).toBeDefined();
-      expect(analysis.analyzed_documents).toBe(1);
-      expect(analysis.unanalyzed_documents).toBe(2);
+    it.openspec('OA-IDX-012')('filters by expiring_before', async () => {
+      const result = await callTool('search_contracts', { root_dir: root, expiring_before: '2026-12-31' });
+      expect(getPayload(result).match_count).toBe(1);
     });
 
-    it.openspec('OA-WKS-045')('produces valid index with no analyses', async () => {
-      const result = await callTool('status_generate', { root_dir: root });
-      const payload = getStructuredContent(result);
-      const analysis = payload.analysis as Record<string, unknown>;
-      expect(analysis.analyzed_documents).toBe(0);
-      expect(analysis.unanalyzed_documents).toBe(3);
+    it.openspec('OA-IDX-014')('returns markdown format', async () => {
+      const result = await callTool('search_contracts', { root_dir: root, document_type: 'nda', format: 'markdown' });
+      const payload = getPayload(result);
+      expect(payload.markdown).toContain('| vendor/acme_nda.docx |');
     });
   });
 });

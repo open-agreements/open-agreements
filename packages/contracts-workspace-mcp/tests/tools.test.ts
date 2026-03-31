@@ -20,11 +20,10 @@ describe('contracts-workspace-mcp tools', () => {
       'catalog_fetch',
       'status_generate',
       'status_lint',
-      'save_contract_analysis',
-      'read_contract_analysis',
-      'list_pending_contracts',
+      'index_contract',
+      'get_contract_index',
+      'list_unindexed_contracts',
       'search_contracts',
-      'suggest_contract_rename',
     ]);
   });
 
