@@ -136,7 +136,8 @@ function detectDuplicateFiles(documents: ReturnType<typeof collectWorkspaceDocum
   const groups = new Map<string, typeof documents>();
 
   for (const doc of documents) {
-    const key = `${doc.lifecycle}/${normalizeForDuplicateCheck(doc.file_name)}`;
+    const folder = doc.path.slice(0, doc.path.lastIndexOf('/'));
+    const key = `${folder}/${normalizeForDuplicateCheck(doc.file_name)}`;
     const group = groups.get(key);
     if (group) {
       group.push(doc);

@@ -1,5 +1,9 @@
 import { dump } from 'js-yaml';
-import { EXECUTED_SUFFIX, PARTIALLY_EXECUTED_SUFFIX, INDEX_FILE, LIFECYCLE_DIRS, type LifecycleDir } from './constants.js';
+import {
+  EXECUTED_SUFFIX, PARTIALLY_EXECUTED_SUFFIX, INDEX_FILE,
+  LIFECYCLE_DIRS, type LifecycleDir,
+  IGNORED_DIRS, DOCUMENT_EXTENSIONS,
+} from './constants.js';
 import { loadConventions } from './convention-config.js';
 import { createProvider } from './filesystem-provider.js';
 import type { WorkspaceProvider } from './provider.js';
@@ -19,6 +23,8 @@ export function hasExecutedMarker(fileName: string, pattern = EXECUTED_SUFFIX): 
   return withoutExtension.toLowerCase().endsWith(pattern);
 }
 
+const lifecycleDirSet = new Set<string>(LIFECYCLE_DIRS);
+
 export function collectWorkspaceDocuments(rootDir: string, provider?: WorkspaceProvider): DocumentRecord[] {
   const p = provider ?? createProvider(rootDir);
   const records: DocumentRecord[] = [];
@@ -30,19 +36,35 @@ export function collectWorkspaceDocuments(rootDir: string, provider?: WorkspaceP
     conventions.documentation.folder_file,
   ]);
 
-  for (const lifecycle of LIFECYCLE_DIRS) {
-    const fileInfos = p.walk(lifecycle);
+  // Discover all top-level directories, skip ignored ones and dot-dirs
+  const rootEntries = p.readdir('.');
+  const topLevelDirs: string[] = [];
+  for (const entry of rootEntries) {
+    if (!entry.isDirectory) continue;
+    if (IGNORED_DIRS.has(entry.name)) continue;
+    if (entry.name.startsWith('.')) continue;
+    topLevelDirs.push(entry.name);
+  }
+
+  for (const dir of topLevelDirs) {
+    const isLifecycleDir = lifecycleDirSet.has(dir);
+    const lifecycle = isLifecycleDir ? (dir as LifecycleDir) : undefined;
+    const fileInfos = p.walk(dir);
 
     for (const info of fileInfos) {
       const fileName = info.name;
       if (excludedNames.has(fileName)) continue;
+
       const extension = fileName.includes('.')
         ? fileName.slice(fileName.lastIndexOf('.') + 1).toLowerCase()
         : '';
+
+      // Only collect files with document extensions
+      if (!DOCUMENT_EXTENSIONS.has(extension)) continue;
+
       const pathParts = info.relativePath.split('/');
-      const topic = lifecycle === 'forms'
-        ? pathParts[1] || undefined
-        : undefined;
+      const topic = pathParts[1] || undefined;
+
       const partialMarkerPattern = conventions.executed_marker.partially_executed_marker?.pattern ?? PARTIALLY_EXECUTED_SUFFIX;
       const partiallyExecuted = hasPartiallyExecutedMarker(fileName, partialMarkerPattern);
       const executed = partiallyExecuted ? false : hasExecutedMarker(fileName);
@@ -72,7 +94,9 @@ export function buildStatusIndex(rootDir: string, documents: DocumentRecord[], l
   ) as Record<LifecycleDir, number>;
 
   for (const document of documents) {
-    byLifecycle[document.lifecycle] += 1;
+    if (document.lifecycle) {
+      byLifecycle[document.lifecycle] += 1;
+    }
   }
 
   const executedCount = documents.filter((doc) => doc.executed).length;

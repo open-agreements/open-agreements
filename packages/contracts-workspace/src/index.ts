@@ -29,16 +29,20 @@ export type {
   FetchSummary,
   ConventionConfig,
 } from './core/types.js';
+export { DOCUMENT_TYPES } from './core/analysis-types.js';
 export type { DocumentType, DocumentClassification, ClauseExtraction, DocumentAnalysis } from './core/analysis-types.js';
 export {
-  analysisPath,
-  generateDocumentId,
+  sidecarPath,
   contentHash,
   computeContentHash,
-  loadAnalysis,
-  saveAnalysis,
-  isAnalysisStale,
-  listPendingDocuments,
+  loadSidecar,
+  indexContract,
+  isSidecarStale,
+  listUnindexedDocuments,
+  validateDocumentType,
+  loadCustomDocumentTypes,
+  getValidDocumentTypes,
+  detectOrphanedSidecars,
 } from './core/analysis-store.js';
-export type { SaveAnalysisInput, PendingDocument } from './core/analysis-store.js';
+export type { IndexContractInput, IndexContractResult, PendingDocument } from './core/analysis-store.js';
 export { enrichDocumentRecord, buildAnalysisSummary, enrichStatusIndex } from './core/analysis-indexer.js';

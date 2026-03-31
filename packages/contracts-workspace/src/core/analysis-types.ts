@@ -1,20 +1,17 @@
-export type DocumentType =
-  | 'nda'
-  | 'msa'
-  | 'sow'
-  | 'employment-agreement'
-  | 'consulting-agreement'
-  | 'saas-agreement'
-  | 'license-agreement'
-  | 'ip-assignment'
-  | 'stock-purchase-agreement'
-  | 'safe'
-  | 'amendment'
-  | 'addendum'
-  | 'other';
+export const DOCUMENT_TYPES = [
+  'nda', 'msa', 'sow',
+  'employment-agreement', 'consulting-agreement',
+  'saas-agreement', 'license-agreement',
+  'ip-assignment', 'stock-purchase-agreement', 'safe',
+  'lpa', 'ppm', 'subscription-agreement',
+  'amendment', 'addendum',
+] as const;
+
+export type DocumentType = (typeof DOCUMENT_TYPES)[number];
 
 export interface DocumentClassification {
-  document_type: DocumentType;
+  document_type: DocumentType | null;
+  raw_type?: string;
   confidence: 'high' | 'medium' | 'low';
   parties: string[];
   effective_date?: string;
@@ -33,11 +30,10 @@ export interface ClauseExtraction {
 
 export interface DocumentAnalysis {
   schema_version: 1;
-  document_id: string;
   document_path: string;
   content_hash: string;
-  analyzed_at: string;
-  analyzed_by: string;
+  indexed_at: string;
+  indexed_by: string;
   classification?: DocumentClassification;
   extractions: ClauseExtraction[];
 }

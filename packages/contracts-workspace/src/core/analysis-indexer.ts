@@ -1,12 +1,10 @@
-import { loadConventions } from './convention-config.js';
 import { createProvider } from './filesystem-provider.js';
-import { loadAnalysis, isAnalysisStale } from './analysis-store.js';
+import { loadSidecar, isSidecarStale, detectOrphanedSidecars } from './analysis-store.js';
 import type { WorkspaceProvider } from './provider.js';
 import type { DocumentRecord, StatusIndex, AnalysisSummary } from './types.js';
 
 /**
- * Enrich a DocumentRecord with analysis data (classification, analyzed, stale flags).
- * Returns the record unchanged if no analysis exists.
+ * Enrich a DocumentRecord with sidecar data (classification, analyzed, stale flags).
  */
 export function enrichDocumentRecord(
   rootDir: string,
@@ -14,23 +12,23 @@ export function enrichDocumentRecord(
   provider?: WorkspaceProvider,
 ): DocumentRecord {
   const p = provider ?? createProvider(rootDir);
-  const analysis = loadAnalysis(rootDir, record.path, p);
+  const sidecar = loadSidecar(rootDir, record.path, p);
 
-  if (!analysis) {
+  if (!sidecar) {
     return { ...record, analyzed: false, stale: false };
   }
 
-  const staleness = isAnalysisStale(rootDir, record.path, p);
+  const staleness = isSidecarStale(rootDir, record.path, p);
 
   return {
     ...record,
     analyzed: true,
     stale: staleness.stale,
-    classification: analysis.classification
+    classification: sidecar.classification
       ? {
-          document_type: analysis.classification.document_type,
-          parties: analysis.classification.parties,
-          summary: analysis.classification.summary,
+          document_type: sidecar.classification.document_type,
+          parties: sidecar.classification.parties,
+          summary: sidecar.classification.summary,
         }
       : undefined,
   };
@@ -38,7 +36,6 @@ export function enrichDocumentRecord(
 
 /**
  * Build an analysis summary for the status index.
- * Aggregates counts by document type, identifies expiring-soon contracts.
  */
 export function buildAnalysisSummary(
   rootDir: string,
@@ -55,24 +52,24 @@ export function buildAnalysisSummary(
   const ninetyDaysFromNow = new Date(now.getTime() + 90 * 24 * 60 * 60 * 1000);
 
   for (const doc of documents) {
-    const analysis = loadAnalysis(rootDir, doc.path, p);
-    if (!analysis) continue;
+    const sidecar = loadSidecar(rootDir, doc.path, p);
+    if (!sidecar) continue;
 
     analyzedCount++;
 
-    const staleness = isAnalysisStale(rootDir, doc.path, p);
+    const staleness = isSidecarStale(rootDir, doc.path, p);
     if (staleness.stale) staleCount++;
 
-    if (analysis.classification) {
-      const docType = analysis.classification.document_type;
+    if (sidecar.classification) {
+      const docType = sidecar.classification.document_type ?? 'unclassified';
       byDocumentType[docType] = (byDocumentType[docType] ?? 0) + 1;
 
-      if (analysis.classification.expiration_date) {
-        const expDate = new Date(analysis.classification.expiration_date);
+      if (sidecar.classification.expiration_date) {
+        const expDate = new Date(sidecar.classification.expiration_date);
         if (expDate <= ninetyDaysFromNow && expDate >= now) {
           expiringSoon.push({
             path: doc.path,
-            expiration_date: analysis.classification.expiration_date,
+            expiration_date: sidecar.classification.expiration_date,
             document_type: docType,
           });
         }
@@ -80,12 +77,15 @@ export function buildAnalysisSummary(
     }
   }
 
+  const orphans = detectOrphanedSidecars(rootDir, p);
+
   expiringSoon.sort((a, b) => a.expiration_date.localeCompare(b.expiration_date));
 
   return {
     analyzed_documents: analyzedCount,
     unanalyzed_documents: documents.length - analyzedCount,
     stale_documents: staleCount,
+    orphaned_sidecars: orphans.length,
     by_document_type: byDocumentType,
     expiring_soon: expiringSoon,
   };
@@ -93,7 +93,6 @@ export function buildAnalysisSummary(
 
 /**
  * Enrich an entire StatusIndex with analysis data.
- * Adds per-document classification and a global analysis summary.
  */
 export function enrichStatusIndex(
   rootDir: string,
