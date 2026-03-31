@@ -1,15 +1,13 @@
 import { isAbsolute, resolve } from 'node:path';
-import { load } from 'js-yaml';
 import { z } from 'zod';
 import { INDEX_FILE } from '../../../contracts-workspace/src/core/constants.js';
 import { catalogPath, fetchCatalogEntries, validateCatalog } from '../../../contracts-workspace/src/core/catalog.js';
 import { buildStatusIndex, collectWorkspaceDocuments, writeStatusIndex } from '../../../contracts-workspace/src/core/indexer.js';
 import { lintWorkspace } from '../../../contracts-workspace/src/core/lint.js';
 import { planWorkspaceInitialization } from '../../../contracts-workspace/src/core/workspace-structure.js';
-import { saveAnalysis, loadAnalysis, isAnalysisStale, listPendingDocuments } from '../../../contracts-workspace/src/core/analysis-store.js';
-import { enrichStatusIndex } from '../../../contracts-workspace/src/core/analysis-indexer.js';
-import { loadConventions } from '../../../contracts-workspace/src/core/convention-config.js';
-import type { StatusIndex } from '../../../contracts-workspace/src/core/types.js';
+import { indexContract, loadSidecar, isSidecarStale, listUnindexedDocuments, detectOrphanedSidecars } from '../../../contracts-workspace/src/core/analysis-store.js';
+import { enrichStatusIndex, buildAnalysisSummary } from '../../../contracts-workspace/src/core/analysis-indexer.js';
+import { searchContracts, formatResultsAsMarkdown } from '../../../contracts-workspace/src/core/search-index.js';
 
 type JsonSchema = Record<string, unknown>;
 
@@ -26,6 +24,8 @@ interface ToolDefinition {
   annotations?: { readOnlyHint?: boolean; destructiveHint?: boolean };
   invoke: (args: unknown) => Promise<ToolCallResult>;
 }
+
+// --- Zod schemas ---
 
 const WorkspaceInitSchema = z.object({
   root_dir: z.string().min(1).optional(),
@@ -53,11 +53,12 @@ const StatusLintSchema = z.object({
   root_dir: z.string().min(1).optional(),
 });
 
-const SaveContractAnalysisSchema = z.object({
+const IndexContractSchema = z.object({
   root_dir: z.string().min(1).optional(),
   document_path: z.string().min(1),
   classification: z.object({
     document_type: z.string().min(1),
+    raw_type: z.string().optional(),
     confidence: z.enum(['high', 'medium', 'low']),
     parties: z.array(z.string()),
     effective_date: z.string().optional(),
@@ -72,33 +73,33 @@ const SaveContractAnalysisSchema = z.object({
     section_reference: z.string().optional(),
     notes: z.string().optional(),
   })).optional(),
-  analyzed_by: z.string().min(1).optional(),
+  indexed_by: z.string().min(1).optional(),
 });
 
-const ReadContractAnalysisSchema = z.object({
+const GetContractIndexSchema = z.object({
   root_dir: z.string().min(1).optional(),
-  document_path: z.string().min(1),
+  document_path: z.string().min(1).optional(),
 });
 
-const ListPendingContractsSchema = z.object({
+const ListUnindexedContractsSchema = z.object({
   root_dir: z.string().min(1).optional(),
 });
 
 const SearchContractsSchema = z.object({
   root_dir: z.string().min(1).optional(),
+  query: z.string().optional(),
   document_type: z.string().optional(),
   party: z.string().optional(),
   expiring_before: z.string().optional(),
   stale: z.boolean().optional(),
-  analyzed: z.boolean().optional(),
+  indexed: z.boolean().optional(),
+  format: z.enum(['json', 'markdown']).optional(),
 });
 
-const SuggestContractRenameSchema = z.object({
-  root_dir: z.string().min(1).optional(),
-  document_path: z.string().min(1),
-});
+// --- Tool definitions ---
 
 const tools: ToolDefinition[] = [
+  // ========== Existing workspace tools ==========
   {
     name: 'workspace_init',
     description: 'Preview topic-first workspace setup and return missing folders/files without creating them.',
@@ -219,7 +220,7 @@ const tools: ToolDefinition[] = [
   },
   {
     name: 'status_generate',
-    description: 'Generate contracts-index.yaml and return lint/index summary.',
+    description: 'Generate contracts-index.yaml with document inventory, lint findings, and contract analysis summary.',
     inputSchema: {
       type: 'object',
       properties: {
@@ -282,9 +283,11 @@ const tools: ToolDefinition[] = [
       });
     },
   },
+
+  // ========== Contract indexing tools ==========
   {
-    name: 'save_contract_analysis',
-    description: 'Store document classification and/or clause extractions. Supports partial updates — provide only classification or only extractions to update one without overwriting the other.',
+    name: 'index_contract',
+    description: 'Index a contract — store classification (type, parties, dates, summary) and/or clause extractions. Validates document_type against canonical types + custom config. Supports partial updates.',
     inputSchema: {
       type: 'object',
       properties: {
@@ -292,87 +295,108 @@ const tools: ToolDefinition[] = [
         document_path: { type: 'string', description: 'Relative path to the document, e.g. "vendor/acme_msa.docx".' },
         classification: {
           type: 'object',
-          description: 'Document classification metadata.',
           properties: {
-            document_type: { type: 'string', description: 'Contract type: nda, msa, sow, employment-agreement, etc.' },
+            document_type: { type: 'string', description: 'Contract type: nda, msa, sow, lpa, ppm, etc.' },
+            raw_type: { type: 'string', description: 'Raw detected type if not in canonical list.' },
             confidence: { type: 'string', enum: ['high', 'medium', 'low'] },
-            parties: { type: 'array', items: { type: 'string' }, description: 'Parties to the agreement.' },
+            parties: { type: 'array', items: { type: 'string' } },
             effective_date: { type: 'string', description: 'ISO 8601 date.' },
             expiration_date: { type: 'string', description: 'ISO 8601 date.' },
-            governing_law: { type: 'string', description: 'Governing law jurisdiction.' },
-            summary: { type: 'string', description: 'Brief summary of the document.' },
+            governing_law: { type: 'string' },
+            summary: { type: 'string' },
           },
           required: ['document_type', 'confidence', 'parties', 'summary'],
         },
         extractions: {
           type: 'array',
-          description: 'Extracted clause provisions.',
           items: {
             type: 'object',
             properties: {
-              clause: { type: 'string', description: 'Clause identifier, e.g. "limitation-of-liability".' },
+              clause: { type: 'string' },
               found: { type: 'boolean' },
-              text: { type: 'string', description: 'Extracted clause text.' },
-              section_reference: { type: 'string', description: 'Section reference, e.g. "Section 8.2".' },
-              notes: { type: 'string', description: 'Additional notes.' },
+              text: { type: 'string' },
+              section_reference: { type: 'string' },
+              notes: { type: 'string' },
             },
             required: ['clause', 'found'],
           },
         },
-        analyzed_by: { type: 'string', description: 'Agent identifier, e.g. "claude" or "gemini".' },
+        indexed_by: { type: 'string', description: 'Agent identifier, e.g. "claude" or "gemini".' },
       },
       required: ['document_path'],
       additionalProperties: false,
     },
     annotations: { readOnlyHint: false, destructiveHint: false },
     invoke: async (args) => {
-      const input = SaveContractAnalysisSchema.parse(args);
+      const input = IndexContractSchema.parse(args);
       const rootDir = resolveRootDir(input.root_dir);
-      const analysis = saveAnalysis(rootDir, {
+      const result = indexContract(rootDir, {
         documentPath: input.document_path,
-        classification: input.classification as Parameters<typeof saveAnalysis>[1]['classification'],
-        extractions: input.extractions as Parameters<typeof saveAnalysis>[1]['extractions'],
-        analyzedBy: input.analyzed_by,
+        classification: input.classification,
+        extractions: input.extractions,
+        indexedBy: input.indexed_by,
       });
       return successResult({
         root_dir: rootDir,
         document_path: input.document_path,
-        document_id: analysis.document_id,
-        content_hash: analysis.content_hash,
-        analyzed_at: analysis.analyzed_at,
+        content_hash: result.analysis.content_hash,
+        indexed_at: result.analysis.indexed_at,
+        ...(result.warning ? { warning: result.warning } : {}),
       });
     },
   },
   {
-    name: 'read_contract_analysis',
-    description: 'Retrieve stored analysis for a document, including classification, clause extractions, and staleness status.',
+    name: 'get_contract_index',
+    description: 'Get contract index data. With document_path: returns that document\'s sidecar + staleness. Without: returns portfolio overview (indexed/unindexed/stale/orphan counts, type distribution, expiring-soon).',
     inputSchema: {
       type: 'object',
       properties: {
         root_dir: { type: 'string', description: 'Workspace root. Defaults to current working directory.' },
-        document_path: { type: 'string', description: 'Relative path to the document.' },
+        document_path: { type: 'string', description: 'Relative path. Omit for portfolio overview.' },
       },
-      required: ['document_path'],
       additionalProperties: false,
     },
     annotations: { readOnlyHint: true, destructiveHint: false },
     invoke: async (args) => {
-      const input = ReadContractAnalysisSchema.parse(args);
+      const input = GetContractIndexSchema.parse(args ?? {});
       const rootDir = resolveRootDir(input.root_dir);
-      const analysis = loadAnalysis(rootDir, input.document_path);
-      const staleness = isAnalysisStale(rootDir, input.document_path);
+
+      if (input.document_path) {
+        // Single document mode
+        const sidecar = loadSidecar(rootDir, input.document_path);
+        const staleness = isSidecarStale(rootDir, input.document_path);
+        return successResult({
+          root_dir: rootDir,
+          document_path: input.document_path,
+          contract: sidecar,
+          stale: staleness.stale,
+          stale_reason: staleness.reason ?? null,
+        });
+      }
+
+      // Portfolio overview mode
+      const documents = collectWorkspaceDocuments(rootDir);
+      const enrichedDocs = documents.map((doc) => ({
+        ...doc,
+        analyzed: false,
+        stale: false,
+      }));
+      const summary = buildAnalysisSummary(rootDir, enrichedDocs);
+
       return successResult({
         root_dir: rootDir,
-        document_path: input.document_path,
-        analysis,
-        stale: staleness.stale,
-        stale_reason: staleness.reason ?? null,
+        indexed_count: summary.analyzed_documents,
+        unindexed_count: summary.unanalyzed_documents,
+        stale_count: summary.stale_documents,
+        orphaned_sidecar_count: summary.orphaned_sidecars,
+        by_document_type: summary.by_document_type,
+        expiring_soon: summary.expiring_soon,
       });
     },
   },
   {
-    name: 'list_pending_contracts',
-    description: 'List documents needing analysis (new, content changed, or incomplete classification). Returns reason codes and prior metadata for subagent dispatch.',
+    name: 'list_unindexed_contracts',
+    description: 'List documents needing indexing (new, content changed, or incomplete). Returns reason codes and prior metadata for subagent dispatch.',
     inputSchema: {
       type: 'object',
       properties: {
@@ -382,13 +406,13 @@ const tools: ToolDefinition[] = [
     },
     annotations: { readOnlyHint: true, destructiveHint: false },
     invoke: async (args) => {
-      const input = ListPendingContractsSchema.parse(args ?? {});
+      const input = ListUnindexedContractsSchema.parse(args ?? {});
       const rootDir = resolveRootDir(input.root_dir);
       const documents = collectWorkspaceDocuments(rootDir);
-      const pending = listPendingDocuments(rootDir, documents);
+      const pending = listUnindexedDocuments(rootDir, documents);
       return successResult({
         root_dir: rootDir,
-        pending_count: pending.length,
+        unindexed_count: pending.length,
         total_documents: documents.length,
         documents: pending,
       });
@@ -396,16 +420,18 @@ const tools: ToolDefinition[] = [
   },
   {
     name: 'search_contracts',
-    description: 'Search the contract portfolio with filters. Reads from contracts-index.yaml for fast retrieval. Run status_generate first to ensure the index is current.',
+    description: 'Search the contract portfolio by BM25 full-text query and/or metadata filters. Index is built in-memory from sidecar files. Use format:"markdown" for copy-paste tables.',
     inputSchema: {
       type: 'object',
       properties: {
         root_dir: { type: 'string', description: 'Workspace root. Defaults to current working directory.' },
+        query: { type: 'string', description: 'BM25 full-text search query.' },
         document_type: { type: 'string', description: 'Filter by document type (nda, msa, sow, etc.).' },
         party: { type: 'string', description: 'Filter by party name (substring match).' },
-        expiring_before: { type: 'string', description: 'ISO date. Return only documents expiring before this date.' },
-        stale: { type: 'boolean', description: 'If true, return only documents with stale analyses.' },
-        analyzed: { type: 'boolean', description: 'If true, only analyzed; if false, only unanalyzed.' },
+        expiring_before: { type: 'string', description: 'ISO date. Return documents expiring before this date.' },
+        stale: { type: 'boolean', description: 'Filter by stale status.' },
+        indexed: { type: 'boolean', description: 'Filter by indexed status.' },
+        format: { type: 'string', enum: ['json', 'markdown'], description: 'Output format. Default: json.' },
       },
       additionalProperties: false,
     },
@@ -414,43 +440,28 @@ const tools: ToolDefinition[] = [
       const input = SearchContractsSchema.parse(args ?? {});
       const rootDir = resolveRootDir(input.root_dir);
 
-      // Read the enriched index
       const documents = collectWorkspaceDocuments(rootDir);
-      const lint = lintWorkspace(rootDir);
-      const baseIndex = buildStatusIndex(rootDir, documents, lint);
-      const index = enrichStatusIndex(rootDir, baseIndex);
+      const enrichedDocs = documents.map((doc) => {
+        const sidecar = loadSidecar(rootDir, doc.path);
+        const staleness = sidecar ? isSidecarStale(rootDir, doc.path) : { stale: false };
+        return { ...doc, analyzed: !!sidecar, stale: staleness.stale };
+      });
 
-      let results = index.documents;
+      const results = searchContracts(rootDir, {
+        query: input.query,
+        document_type: input.document_type,
+        party: input.party,
+        expiring_before: input.expiring_before,
+        stale: input.stale,
+        indexed: input.indexed,
+      }, enrichedDocs);
 
-      if (input.document_type) {
-        results = results.filter((doc) =>
-          doc.classification?.document_type === input.document_type,
-        );
-      }
-
-      if (input.party) {
-        const partyLower = input.party.toLowerCase();
-        results = results.filter((doc) =>
-          doc.classification?.parties.some((p) => p.toLowerCase().includes(partyLower)),
-        );
-      }
-
-      if (input.expiring_before) {
-        const cutoff = input.expiring_before;
-        results = results.filter((doc) => {
-          if (!doc.classification) return false;
-          const analysis = loadAnalysis(rootDir, doc.path);
-          return analysis?.classification?.expiration_date
-            && analysis.classification.expiration_date <= cutoff;
+      if (input.format === 'markdown') {
+        return successResult({
+          root_dir: rootDir,
+          match_count: results.length,
+          markdown: formatResultsAsMarkdown(results),
         });
-      }
-
-      if (input.stale !== undefined) {
-        results = results.filter((doc) => doc.stale === input.stale);
-      }
-
-      if (input.analyzed !== undefined) {
-        results = results.filter((doc) => doc.analyzed === input.analyzed);
       }
 
       return successResult({
@@ -460,65 +471,9 @@ const tools: ToolDefinition[] = [
       });
     },
   },
-  {
-    name: 'suggest_contract_rename',
-    description: 'Suggest a standardized filename for a classified document based on its metadata and workspace naming conventions.',
-    inputSchema: {
-      type: 'object',
-      properties: {
-        root_dir: { type: 'string', description: 'Workspace root. Defaults to current working directory.' },
-        document_path: { type: 'string', description: 'Relative path to the document.' },
-      },
-      required: ['document_path'],
-      additionalProperties: false,
-    },
-    annotations: { readOnlyHint: true, destructiveHint: false },
-    invoke: async (args) => {
-      const input = SuggestContractRenameSchema.parse(args);
-      const rootDir = resolveRootDir(input.root_dir);
-      const analysis = loadAnalysis(rootDir, input.document_path);
-
-      if (!analysis?.classification) {
-        return successResult({
-          root_dir: rootDir,
-          current_path: input.document_path,
-          suggested_name: null,
-          reason: 'Document has not been classified yet. Run save_contract_analysis first.',
-        });
-      }
-
-      const classification = analysis.classification;
-      const ext = input.document_path.includes('.')
-        ? input.document_path.slice(input.document_path.lastIndexOf('.'))
-        : '';
-
-      // Build standardized name: {date}_{party}_{type}.{ext}
-      const parts: string[] = [];
-      if (classification.effective_date) {
-        parts.push(classification.effective_date);
-      }
-      if (classification.parties.length > 0) {
-        // Use first party, sanitized for filename
-        const party = classification.parties[0]
-          .toLowerCase()
-          .replace(/[^a-z0-9]+/gu, '_')
-          .replace(/_+$/u, '');
-        parts.push(party);
-      }
-      parts.push(classification.document_type);
-
-      const suggestedName = parts.join('_') + ext;
-
-      return successResult({
-        root_dir: rootDir,
-        current_path: input.document_path,
-        suggested_name: suggestedName,
-        pattern_used: '{date}_{party}_{document_type}{ext}',
-        reason: `Based on classification: ${classification.document_type} with ${classification.parties.join(', ')}`,
-      });
-    },
-  },
 ];
+
+// --- Helpers ---
 
 export function listToolDescriptors(): Array<{ name: string; description: string; inputSchema: JsonSchema; annotations?: { readOnlyHint?: boolean; destructiveHint?: boolean } }> {
   return tools.map((tool) => ({
