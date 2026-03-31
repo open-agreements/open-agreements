@@ -5,13 +5,13 @@
   "output_docx_path": "content/templates/openagreements-restrictive-covenant-wyoming/template.docx",
   "output_markdown_path": "content/templates/openagreements-restrictive-covenant-wyoming/template.md",
   "document": {
-    "title": "Employee Restrictive Covenant Agreement (Wyoming)",
+    "title": "Employee Restrictive Covenant Agreement",
     "label": "OpenAgreements Employee Restrictive Covenant (Wyoming)",
     "version": "2.0",
     "license": "Free to use under CC BY 4.0",
     "include_cloud_doc_line": true,
     "defined_term_highlight_mode": "definition_site_only",
-    "cover_row_height": 403
+    "cover_row_height": 317
   },
   "sections": {
     "cover_terms": {

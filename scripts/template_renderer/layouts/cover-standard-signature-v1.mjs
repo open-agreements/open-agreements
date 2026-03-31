@@ -358,7 +358,7 @@ function rowHeadingCell(titleText, subtitleText, style, nilBorder, ruleBorder) {
       bottom: ruleBorder,
       right: nilBorder,
     },
-    margins: { top: 144, left: 115, bottom: 144, right: 115 },
+    margins: { top: 80, left: 115, bottom: 80, right: 115 },
     verticalAlign: VerticalAlign.CENTER,
     children: [
       new Paragraph({
@@ -393,9 +393,15 @@ function keyLabelCell(row, style, nilBorder, ruleBorder) {
   const isGroupHeader = !isSub && row.value === '';
   return new TableCell({
     borders: horizontalBorders(ruleBorder, nilBorder),
-    margins: { top: isGroupHeader ? 200 : 32, left: isSub ? 345 : 115, bottom: 32, right: 115 },
-    verticalAlign: isGroupHeader ? VerticalAlign.BOTTOM : VerticalAlign.CENTER,
+    margins: { top: 80, left: isSub ? 345 : 115, bottom: 80, right: 115 },
+    verticalAlign: VerticalAlign.CENTER,
     children: [
+      // Group headers get a line break paragraph before the label for consistent spacing
+      // (works regardless of single/multi-line wrapping; before-paragraph spacing only
+      // gets respected when there's an actual preceding paragraph)
+      ...(isGroupHeader
+        ? [new Paragraph({ spacing: { after: 0, line: 120 }, children: [new TextRun({ text: '\u200B', size: 4 })] })]
+        : []),
       // For conditional sub-rows, put {IF} in a separate zero-height paragraph so docx-templates
       // can remove it cleanly without leaving an empty paragraph artifact.
       // For group headers, put {IF} inline to avoid corrupting cell properties.
@@ -403,7 +409,7 @@ function keyLabelCell(row, style, nilBorder, ruleBorder) {
         ? [new Paragraph({ spacing: { after: 0, line: 0 }, children: [new TextRun({ text: `{IF ${row.condition}}`, size: 1 })] })]
         : []),
       new Paragraph({
-        spacing: { after: row.hint ? 10 : 0, line: style.spacing.line },
+        spacing: { before: 0, after: row.hint ? 10 : 0, line: isGroupHeader ? 240 : style.spacing.line },
         children: [
           new TextRun({
             text: (row.condition && !isSub) ? `{IF ${row.condition}}${row.label}` : row.label,
@@ -443,7 +449,7 @@ function keyValueCell(row, style, nilBorder, ruleBorder, opts = {}) {
   );
   return new TableCell({
     borders: horizontalBorders(ruleBorder, nilBorder),
-    margins: { top: isGroupHeader ? 200 : 32, left: 115, bottom: 32, right: 115 },
+    margins: { top: 80, left: 115, bottom: 80, right: 115 },
     verticalAlign: VerticalAlign.CENTER,
     children: [
       ...valueParagraphs,
@@ -467,11 +473,15 @@ function coverTable(rows, headingTitle, subtitle, style, nilBorder, ruleBorder, 
     },
     rows: [
       new TableRow({ children: [rowHeadingCell(headingTitle, subtitle, style, nilBorder, ruleBorder)] }),
-      ...rows.map((row) =>
-        new TableRow({
-          height: { value: opts.coverRowHeight ?? style.sizes.cover_row_height, rule: HeightRule.ATLEAST },
+      ...rows.map((row) => {
+        const isGroupHeader = !row.sub && row.value === '';
+        const baseHeight = opts.coverRowHeight ?? style.sizes.cover_row_height;
+        const rowHeight = isGroupHeader ? Math.round(baseHeight * 1.13) : baseHeight; // ~358 for group headers
+        return new TableRow({
+          height: { value: rowHeight, rule: HeightRule.ATLEAST },
           children: [keyLabelCell(row, style, nilBorder, ruleBorder), keyValueCell(row, style, nilBorder, ruleBorder, opts)],
-        })
+        });
+      }
       ),
     ],
   });

@@ -1,4 +1,4 @@
-# Employee Restrictive Covenant Agreement (Wyoming)
+# Employee Restrictive Covenant Agreement
 
 OpenAgreements Employee Restrictive Covenant (Wyoming) (v2.0). Free to use under CC BY 4.0.
 
