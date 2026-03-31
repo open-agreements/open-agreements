@@ -1,0 +1,18 @@
+namespace org.openagreements.custom.workinggrouplist@1.0.0
+
+import org.accordproject.contract.Contract from https://models.accordproject.org/accordproject/contract.cto
+
+/**
+ * Working Group List
+ *
+ * Standalone working group roster for a transaction. Tracks staffed deal team
+ * members and contact details outside the closing checklist document.
+ * Source: https://github.com/open-agreements/open-agreements
+ * License: CC0-1.0
+ */
+
+asset WorkingGroupList extends Contract {
+  o String deal_name
+  o String updated_at optional
+  o String[] working_group optional
+}

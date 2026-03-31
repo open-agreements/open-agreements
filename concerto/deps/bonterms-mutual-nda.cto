@@ -1,0 +1,27 @@
+namespace org.openagreements.nda.bonterms@1.0.0
+
+import org.accordproject.contract.Contract from https://models.accordproject.org/accordproject/contract.cto
+
+/**
+ * Bonterms Mutual NDA — Cover Page
+ *
+ * Source: https://github.com/Bonterms/Mutual-NDA
+ * License: CC0-1.0
+ *
+ * Standard terms are incorporated by reference from bonterms.com.
+ * This model defines the fill fields for the cover page.
+ *
+ * Follows Accord Project convention: all fields flat on the contract asset.
+ * Party names are strings (not --> Party references) because the fill
+ * pipeline needs literal values, not Concerto relationship URIs.
+ */
+asset BontermsMutualNDA extends Contract {
+  o String party_1_name
+  o String party_2_name
+  o String effective_date
+  o String purpose default="Evaluating a potential business relationship"
+  o String nda_term default="1 year"
+  o String confidentiality_period default="1 year"
+  o String governing_law default="California"
+  o String courts default="courts located in San Francisco, California"
+}

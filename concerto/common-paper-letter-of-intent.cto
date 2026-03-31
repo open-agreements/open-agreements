@@ -1,0 +1,42 @@
+namespace org.openagreements.commonpaper.commonpaperletterofintent@1.0.0
+
+import org.accordproject.contract.Contract from https://models.accordproject.org/accordproject/contract.cto
+
+/**
+ * Common Paper Letter of Intent
+ *
+ * A letter of intent template for SaaS and technology deals, based on Common
+ * Paper's standard form. Outlines product, timeline, fees, and references an
+ * existing NDA.
+ * Source: https://commonpaper.com/standards/letter-of-intent
+ * License: CC-BY-4.0
+ */
+
+enum Provider_signatory_typeType {
+  o entity
+  o individual
+}
+
+enum Customer_signatory_typeType {
+  o entity
+  o individual
+}
+
+asset CommonPaperLetterOfIntent extends Contract {
+  o String company_name
+  o String product_name
+  o String product_description
+  o String launch_date
+  o String fees_description
+  o String nda_date optional
+  o Provider_signatory_typeType provider_signatory_type default="entity"
+  o String provider_signatory_name optional
+  o String provider_signatory_title optional
+  o String provider_signatory_company optional
+  o String provider_signatory_email optional
+  o Customer_signatory_typeType customer_signatory_type default="entity"
+  o String customer_signatory_name optional
+  o String customer_signatory_title optional
+  o String customer_signatory_company optional
+  o String customer_signatory_email optional
+}

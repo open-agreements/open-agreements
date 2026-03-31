@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 [![Agent Skill](https://img.shields.io/badge/agent--skill-open--agreements-purple)](https://skills.sh)
 [![CI](https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml/badge.svg)](https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml)
-[![MCP Server Status](https://img.shields.io/endpoint?url=https%3A%2F%2Fopenagreements.ai%2Fapi%2Fstatus%3Fformat%3Dshields)](https://openagreements.openstatus.dev/)
+[![MCP Server Status](https://img.shields.io/endpoint?url=https%3A%2F%2Fopenagreements.org%2Fapi%2Fstatus%3Fformat%3Dshields)](https://openagreements.openstatus.dev/)
 [![codecov](https://img.shields.io/codecov/c/github/open-agreements/open-agreements/main)](https://app.codecov.io/gh/open-agreements/open-agreements)
 [![GitHub stargazers](https://img.shields.io/github/stars/open-agreements/open-agreements?style=social)](https://github.com/open-agreements/open-agreements/stargazers)
 [![Tests: Vitest](https://img.shields.io/badge/tests-vitest-6E9F18)](https://vitest.dev/)
@@ -51,7 +51,7 @@
 
 OpenAgreements 支持两种执行模式，信任边界不同：
 
-- 托管远程 MCP 连接器（`https://openagreements.ai/api/mcp`），便于在 Claude 中快速配置。
+- 托管远程 MCP 连接器（`https://openagreements.org/api/mcp`），便于在 Claude 中快速配置。
 - 完全本地包执行（`npx`、全局安装或本地 stdio MCP 包），用于本机本地工作流。
 
 没有全局默认模式推荐。请根据文档敏感度、内部策略和工作流速度需求进行选择。参见 `docs/trust-checklist.md` 获取 60 秒数据流概览。
@@ -127,7 +127,7 @@ open-agreements fill common-paper-mutual-nda -d values.json -o my-nda.docx
 
 `mcp.json` 中的默认 MCP 配置包含：
 
-- 托管 OpenAgreements MCP 连接器（`https://openagreements.ai/api/mcp`）
+- 托管 OpenAgreements MCP 连接器（`https://openagreements.org/api/mcp`）
 - 本地 workspace MCP 服务器（`npx -y @open-agreements/contracts-workspace-mcp`）
 - 本地模板起草 MCP 服务器（`npx -y @open-agreements/contract-templates-mcp`）
 

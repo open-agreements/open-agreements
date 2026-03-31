@@ -1,0 +1,128 @@
+namespace org.openagreements.commonpaper.commonpaperprofessionalservicesagreement@1.0.0
+
+import org.accordproject.contract.Contract from https://models.accordproject.org/accordproject/contract.cto
+
+/**
+ * Common Paper Professional Services Agreement
+ *
+ * A professional services agreement with key terms, statement of work, and
+ * standard terms, based on Common Paper's standard form. Covers consulting
+ * and professional services engagements including deliverables, IP ownership,
+ * fees, and liability.
+ * Source: https://commonpaper.com/standards/professional-services-agreement/1.1
+ * License: CC-BY-4.0
+ */
+
+enum General_cap_typeType {
+  o multiplier
+  o dollar
+  o greater_of
+}
+
+enum Increased_cap_typeType {
+  o multiplier
+  o dollar
+  o greater_of
+}
+
+enum Provider_signatory_typeType {
+  o entity
+  o individual
+}
+
+enum Customer_signatory_typeType {
+  o entity
+  o individual
+}
+
+asset CommonPaperProfessionalServicesAgreement extends Contract {
+  o String company_name
+  o String provider_name
+  o String customer_name
+  o String key_terms_effective_date
+  o String custom_effective_date optional
+  o String custom_sow_date optional
+  o String sow_number
+  o String term_duration_unit optional
+  o String custom_end_date optional
+  o String payment_terms
+  o String invoice_frequency_unit optional
+  o String services_description optional
+  o String provider_covered_claims_detail optional
+  o String customer_covered_claims_detail optional
+  o String dpa_description optional
+  o String term_duration_value optional
+  o String rejection_period_value optional
+  o String resubmission_period_value optional
+  o String sow_changes_to_standard_terms optional
+  o String changes_to_standard_terms optional
+  o String fee_description optional
+  o String invoice_cadence optional
+  o String customer_obligations optional
+  o String increased_claim_other_detail optional
+  o String unlimited_claim_other_detail optional
+  o String additional_warranty_provider_detail optional
+  o String additional_warranty_customer_detail optional
+  o String other_security_certification optional
+  o String payment_terms_days optional
+  o String non_renewal_notice_days optional
+  o String general_cap_amount optional
+  o String cap_multiplier optional
+  o String increased_cap_amount optional
+  o String greater_of_dollar optional
+  o Boolean include_in_progress_deliverables optional
+  o Boolean deliverables_meet_specs optional
+  o Boolean deliverables_acceptance_process optional
+  o Boolean ownership_upon_payment optional
+  o Boolean no_third_party_materials optional
+  o Boolean has_third_party_materials optional
+  o Boolean provider_procures_materials optional
+  o Boolean customer_procures_materials optional
+  o Boolean additional_terms_by_provider optional
+  o Boolean additional_terms_by_customer optional
+  o Boolean has_security_policy optional
+  o Boolean has_security_certifications optional
+  o Boolean cert_iso_27001 optional
+  o Boolean cert_penetration_testing optional
+  o Boolean cert_soc2_type1 optional
+  o Boolean cert_pci_level1 optional
+  o Boolean cert_soc2_type2 optional
+  o Boolean cert_pci_level2 optional
+  o Boolean cert_hitrust optional
+  o Boolean cert_fedramp optional
+  o Boolean cert_other optional
+  o Boolean provider_may_use_logo optional
+  o Boolean provider_may_identify_nonpublic optional
+  o General_cap_typeType general_cap_type optional
+  o Increased_cap_typeType increased_cap_type optional
+  o Boolean increased_claim_breach_privacy optional
+  o Boolean increased_claim_breach_conf optional
+  o Boolean increased_claim_indemnification optional
+  o Boolean increased_claim_breach_privacy_gross optional
+  o Boolean increased_claim_breach_conf_gross optional
+  o Boolean increased_claim_gross_willful optional
+  o Boolean increased_claim_other optional
+  o Boolean unlimited_claim_breach_privacy_gross optional
+  o Boolean unlimited_claim_breach_conf_gross optional
+  o Boolean unlimited_claim_indemnification optional
+  o Boolean unlimited_claim_breach_privacy optional
+  o Boolean unlimited_claim_breach_conf optional
+  o Boolean unlimited_claim_gross_willful optional
+  o Boolean unlimited_claim_other optional
+  o String governing_law default="Delaware"
+  o String jurisdiction default="courts in New Castle County, Delaware"
+  o String travel_expense_policy optional
+  o String customer_owned_deliverables optional
+  o String support_policy_reference optional
+  o String dpa_reference optional
+  o Provider_signatory_typeType provider_signatory_type default="entity"
+  o String provider_signatory_name optional
+  o String provider_signatory_title optional
+  o String provider_signatory_company optional
+  o String provider_signatory_email optional
+  o Customer_signatory_typeType customer_signatory_type default="entity"
+  o String customer_signatory_name optional
+  o String customer_signatory_title optional
+  o String customer_signatory_company optional
+  o String customer_signatory_email optional
+}

@@ -4,7 +4,7 @@
   "title": "Open Agreements",
   "description": "Fill standard legal agreement templates (NDAs, SAFEs, NVCA docs, employment) as DOCX files.",
   "version": "0.5.0",
-  "websiteUrl": "https://openagreements.ai",
+  "websiteUrl": "https://openagreements.org",
   "packages": [
     {
       "registryType": "npm",
@@ -18,7 +18,7 @@
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://openagreements.ai/api/mcp"
+      "url": "https://openagreements.org/api/mcp"
     }
   ],
   "repository": {

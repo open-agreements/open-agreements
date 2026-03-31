@@ -1,0 +1,110 @@
+namespace org.openagreements.commonpaper.commonpapercloudserviceagreement@1.0.0
+
+import org.accordproject.contract.Contract from https://models.accordproject.org/accordproject/contract.cto
+
+/**
+ * Common Paper Cloud Service Agreement
+ *
+ * A cloud service agreement with order form and framework terms, based on
+ * Common Paper's standard terms. Covers SaaS subscriptions, payment, SLAs,
+ * liability, and data processing. Includes full Standard Terms v2.1.
+ * Source: https://commonpaper.com/standards/cloud-service-agreement/2.1
+ * License: CC-BY-4.0
+ */
+
+enum Provider_signatory_typeType {
+  o entity
+  o individual
+}
+
+enum Customer_signatory_typeType {
+  o entity
+  o individual
+}
+
+asset CommonPaperCloudServiceAgreement extends Contract {
+  o String provider_name
+  o String customer_name
+  o String provider_legal_name
+  o String customer_legal_name
+  o String effective_date
+  o String cloud_service
+  o Boolean order_date_is_last_signature default=true
+  o String custom_order_date optional
+  o Boolean has_pilot default=false
+  o String pilot_period optional
+  o Boolean pilot_is_free default=true
+  o String pilot_fee optional
+  o String pilot_modifications optional
+  o String subscription_period default="12 months"
+  o Boolean fee_is_per_unit default=true
+  o String fees optional
+  o String fee_unit default="year"
+  o Boolean fee_is_other default=false
+  o String other_fee_structure optional
+  o Boolean fee_may_increase default=false
+  o String fee_increase_cap_pct optional
+  o Boolean fee_will_increase default=false
+  o String fee_increase_fixed_pct optional
+  o Boolean fee_inclusive_of_taxes default=false
+  o Boolean payment_by_invoice default=true
+  o String payment_frequency default="annually"
+  o String payment_terms_days default="30"
+  o String payment_due_from default="the invoice date"
+  o Boolean auto_renew default=true
+  o String non_renewal_notice_days default="30"
+  o Boolean has_use_limitations default=false
+  o String use_limitations optional
+  o Boolean has_technical_support default=false
+  o String technical_support optional
+  o Boolean has_sla default=false
+  o String sla_description optional
+  o Boolean has_professional_services default=false
+  o String professional_services_description optional
+  o Boolean effective_date_is_last_signature default=true
+  o String custom_effective_date optional
+  o String governing_law default="Delaware"
+  o String jurisdiction default="courts located in New Castle County, Delaware"
+  o Boolean has_covered_claims default=true
+  o Boolean has_provider_covered_claims default=true
+  o Boolean has_customer_covered_claims default=true
+  o Boolean general_cap_is_multiplier default=true
+  o String general_cap_multiplier default="2"
+  o Boolean general_cap_is_dollar default=false
+  o String general_cap_dollar optional
+  o Boolean general_cap_is_greater_of default=false
+  o String general_cap_greater_dollar optional
+  o String general_cap_greater_multiplier optional
+  o Boolean has_increased_claims default=false
+  o String increased_claims_description optional
+  o String increased_cap_description optional
+  o Boolean has_unlimited_claims default=false
+  o String unlimited_claims_description optional
+  o Boolean has_additional_warranties default=false
+  o String provider_warranty_description optional
+  o String customer_warranty_description optional
+  o Boolean has_dpa default=false
+  o String dpa_reference optional
+  o Boolean has_security_policy default=false
+  o String security_policy_description optional
+  o Boolean has_insurance default=false
+  o String insurance_description optional
+  o String order_date_display optional
+  o String pilot_fee_display optional
+  o String fees_display optional
+  o String payment_display optional
+  o String auto_renewal_display optional
+  o String effective_date_display optional
+  o String covered_claims_display optional
+  o String general_cap_display optional
+  o Provider_signatory_typeType provider_signatory_type default="entity"
+  o String provider_signatory_name optional
+  o String provider_signatory_title optional
+  o String provider_signatory_company optional
+  o String provider_signatory_email optional
+  o Customer_signatory_typeType customer_signatory_type default="entity"
+  o String customer_signatory_name optional
+  o String customer_signatory_title optional
+  o String customer_signatory_company optional
+  o String customer_signatory_email optional
+}

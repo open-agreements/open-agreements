@@ -1,0 +1,35 @@
+namespace org.openagreements.commonpaper.commonpaperonewaynda@1.0.0
+
+import org.accordproject.contract.Contract from https://models.accordproject.org/accordproject/contract.cto
+
+/**
+ * Common Paper One-Way NDA
+ *
+ * A one-way (unilateral) non-disclosure agreement cover page based on Common
+ * Paper's standard terms. The Discloser shares confidential information with
+ * the Receiver, but not vice versa. References the Standard Terms posted at
+ * commonpaper.com.
+ * Source: https://commonpaper.com/standards/one-way-nda/1.0
+ * License: CC-BY-4.0
+ */
+
+enum Recipient_signatory_typeType {
+  o entity
+  o individual
+}
+
+asset CommonPaperOneWayNda extends Contract {
+  o String discloser_name_and_address
+  o String effective_date
+  o String purpose default="Evaluating whether to enter into a business relationship with the other party."
+  o String nda_term default="1 year(s)"
+  o String confidentiality_term_start default="Effective Date"
+  o String governing_law default="Delaware"
+  o String jurisdiction default="courts located in New Castle County, Delaware"
+  o String changes_to_standard_terms default="None."
+  o Recipient_signatory_typeType recipient_signatory_type default="entity"
+  o String recipient_signatory_name optional
+  o String recipient_signatory_title optional
+  o String recipient_signatory_company optional
+  o String recipient_signatory_email optional
+}

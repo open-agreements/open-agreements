@@ -1,0 +1,22 @@
+namespace org.openagreements.yc.ycsafeproratasideletter@1.0.0
+
+import org.accordproject.contract.Contract from https://models.accordproject.org/accordproject/contract.cto
+
+/**
+ * YC Pro Rata Side Letter
+ *
+ * Y Combinator's Pro Rata Side Letter, granting the investor pro rata rights
+ * in connection with a Post-Money SAFE investment.
+ * Source: https://www.ycombinator.com/documents
+ * License: CC-BY-ND-4.0
+ */
+
+asset YcSafeProRataSideLetter extends Contract {
+  o String company_name
+  o String investor_name
+  o String date_of_safe
+  o String company_name_caps
+  o String investor_name_caps
+  o String name
+  o String title
+}

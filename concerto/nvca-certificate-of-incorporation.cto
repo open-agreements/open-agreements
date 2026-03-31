@@ -1,0 +1,58 @@
+namespace org.openagreements.nvca.nvcacertificateofincorporation@1.0.0
+
+import org.accordproject.contract.Contract from https://models.accordproject.org/accordproject/contract.cto
+
+/**
+ * NVCA Model Certificate of Incorporation
+ *
+ * Amended and restated certificate of incorporation for venture-backed
+ * Delaware corporations, defining preferred stock rights, preferences, and
+ * privileges.
+ * Source: https://nvca.org/wp-content/uploads/2025/10/NVCA-Model-COI-10-1-2025.docx
+ */
+
+asset NvcaCertificateOfIncorporation extends Contract {
+  o String company_name
+  o String registered_agent_address optional
+  o String registered_agent_city optional
+  o String registered_agent_county optional
+  o String registered_agent_name optional
+  o String total_authorized_shares
+  o String number_of_classes default="two"
+  o String common_shares_authorized
+  o String preferred_shares_authorized
+  o String series_designation default="A"
+  o String original_issue_price
+  o String initial_purchase_price
+  o String liquidation_preference_multiple default="1"
+  o String dividend_rate_percent default="8"
+  o String dividend_rate_per_share optional
+  o String preferred_shares_outstanding_threshold optional
+  o String preferred_director_seats optional
+  o String preferred_shares_designated_portion default="all"
+  o String original_incorporation_name optional
+  o String redemption_start_date optional
+  o String qualified_financing_notice_days optional
+  o Boolean no_cumulative_voting optional
+  o Boolean common_stock_voting_limitation optional
+  o Boolean authorized_shares_vote_provision optional
+  o Boolean include_officer_indemnification optional
+  o Boolean include_redemption_cross_ref optional
+  o String signature_page_marker default="Signature Page Follows"
+  o String time_zone default="Eastern"
+  o String par_value default="0.001"
+  o String specify_percentage
+  o String effective_date
+  o String adjustment_notice_days default="10"
+  o String redemption_interest_rate default="12"
+  o String conversion_notice_days default="10"
+  o String dividend_formula_prefix default="the greater of"
+  o String dividend_formula_alt default="the sum of"
+  o String acquisition_exception_shares optional
+  o String strategic_partnership_exception_shares optional
+  o String dividend_type default="non_cumulative_as_converted"
+  o String liquidation_participation default="non_participating"
+  o String anti_dilution_type default="broad_based_weighted_average"
+  o Boolean include_pay_to_play optional
+  o Boolean include_redemption optional
+}

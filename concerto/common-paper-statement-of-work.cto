@@ -1,0 +1,64 @@
+namespace org.openagreements.commonpaper.commonpaperstatementofwork@1.0.0
+
+import org.accordproject.contract.Contract from https://models.accordproject.org/accordproject/contract.cto
+
+/**
+ * Common Paper Statement of Work
+ *
+ * A statement of work template for professional services engagements, based
+ * on Common Paper's standard form. References a PSA or CSA Key Terms and
+ * covers scope, deliverables, timeline, fees, and expenses.
+ * Source: https://commonpaper.com/standards/statement-of-work
+ * License: CC-BY-4.0
+ */
+
+enum Provider_signatory_typeType {
+  o entity
+  o individual
+}
+
+enum Customer_signatory_typeType {
+  o entity
+  o individual
+}
+
+asset CommonPaperStatementOfWork extends Contract {
+  o String company_name
+  o String provider_name
+  o String customer_name
+  o String key_terms_effective_date
+  o String sow_number
+  o String custom_sow_date optional
+  o String custom_end_date optional
+  o String term_duration_unit optional
+  o String payment_terms
+  o String services_description optional
+  o String fee_description optional
+  o String invoice_cadence optional
+  o String customer_obligations optional
+  o String term_duration_value optional
+  o String rejection_period_value optional
+  o String resubmission_period_value optional
+  o String changes_to_standard_terms optional
+  o String invoice_frequency_unit optional
+  o String travel_expense_policy optional
+  o Boolean include_in_progress_deliverables optional
+  o Boolean deliverables_meet_specs optional
+  o Boolean deliverables_acceptance_process optional
+  o Boolean ownership_upon_payment optional
+  o Boolean no_third_party_materials optional
+  o Boolean has_third_party_materials optional
+  o Boolean provider_procures_materials optional
+  o Boolean customer_procures_materials optional
+  o String customer_owned_deliverables optional
+  o Provider_signatory_typeType provider_signatory_type default="entity"
+  o String provider_signatory_name optional
+  o String provider_signatory_title optional
+  o String provider_signatory_company optional
+  o String provider_signatory_email optional
+  o Customer_signatory_typeType customer_signatory_type default="entity"
+  o String customer_signatory_name optional
+  o String customer_signatory_title optional
+  o String customer_signatory_company optional
+  o String customer_signatory_email optional
+}

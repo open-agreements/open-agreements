@@ -1,0 +1,70 @@
+namespace org.openagreements.commonpaper.commonpaperorderform@1.0.0
+
+import org.accordproject.contract.Contract from https://models.accordproject.org/accordproject/contract.cto
+
+/**
+ * Common Paper Order Form
+ *
+ * An order form template for cloud service agreements, based on Common
+ * Paper's standard form. References existing Key Terms and covers
+ * subscription details, fees, pilot period, payment, and professional
+ * services.
+ * Source: https://commonpaper.com/standards/cloud-service-agreement/2.1
+ * License: CC-BY-4.0
+ */
+
+enum Provider_signatory_typeType {
+  o entity
+  o individual
+}
+
+enum Customer_signatory_typeType {
+  o entity
+  o individual
+}
+
+asset CommonPaperOrderForm extends Contract {
+  o String company_name
+  o String provider_name
+  o String customer_name
+  o String key_terms_effective_date
+  o String cloud_service
+  o String custom_start_date optional
+  o String subscription_period
+  o String pilot_period optional
+  o String fees optional
+  o String fee_unit optional
+  o String custom_fee_structure optional
+  o String use_limitations optional
+  o String professional_services_billing optional
+  o String payment_frequency optional
+  o String payment_terms_days optional
+  o String payment_due_from optional
+  o String sla_terms optional
+  o String technical_support optional
+  o String professional_services_description optional
+  o String professional_services_reference optional
+  o Boolean pilot_has_fee optional
+  o Boolean fee_is_per_unit optional
+  o Boolean fee_is_other optional
+  o Boolean fee_may_increase optional
+  o Boolean fee_will_increase optional
+  o String fee_increase_max_percent optional
+  o String fee_increase_percent optional
+  o Boolean fee_inclusive_of_taxes optional
+  o Boolean payment_by_invoice optional
+  o Boolean no_auto_renew optional
+  o Boolean professional_services_by_reference optional
+  o Boolean professional_services_described optional
+  o Boolean professional_services_payment optional
+  o Provider_signatory_typeType provider_signatory_type default="entity"
+  o String provider_signatory_name optional
+  o String provider_signatory_title optional
+  o String provider_signatory_company optional
+  o String provider_signatory_email optional
+  o Customer_signatory_typeType customer_signatory_type default="entity"
+  o String customer_signatory_name optional
+  o String customer_signatory_title optional
+  o String customer_signatory_company optional
+  o String customer_signatory_email optional
+}

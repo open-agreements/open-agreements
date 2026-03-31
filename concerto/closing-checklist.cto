@@ -1,0 +1,22 @@
+namespace org.openagreements.custom.closingchecklist@1.0.0
+
+import org.accordproject.contract.Contract from https://models.accordproject.org/accordproject/contract.cto
+
+/**
+ * Closing Checklist
+ *
+ * A stage-first, document-first closing checklist that tracks canonical
+ * documents, checklist entries, signatories, action items, and issues.
+ * Accepts structured JSON input and renders a formatted DOCX for
+ * distribution.
+ * Source: https://github.com/open-agreements/open-agreements
+ * License: CC0-1.0
+ */
+
+asset ClosingChecklist extends Contract {
+  o String deal_name
+  o String updated_at
+  o String[] documents optional
+  o String[] action_items optional
+  o String[] open_issues optional
+}
