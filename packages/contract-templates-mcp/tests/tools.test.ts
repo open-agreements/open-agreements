@@ -31,10 +31,8 @@ describe('contract-templates-mcp tools', () => {
       'fill_template',
       'connect_signing_provider',
       'disconnect_signing_provider',
-      'upload_signing_document',
       'send_for_signature',
       'check_signature_status',
-      'get_signed_document',
     ]);
   });
 
