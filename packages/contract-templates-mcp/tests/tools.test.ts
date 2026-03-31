@@ -29,6 +29,10 @@ describe('contract-templates-mcp tools', () => {
       'list_templates',
       'get_template',
       'fill_template',
+      'connect_signing_provider',
+      'disconnect_signing_provider',
+      'send_for_signature',
+      'check_signature_status',
     ]);
   });
 

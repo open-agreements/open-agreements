@@ -24,3 +24,26 @@ export type {
   SignerRole,
   SigningConfig,
 } from './signing-config.js';
+
+export { DocuSignProvider } from './docusign.js';
+export type { DocuSignConfig } from './docusign.js';
+
+export {
+  encrypt,
+  decrypt,
+  createDocumentRef,
+  createArtifactRef,
+} from './storage.js';
+
+export type {
+  StoredConnection,
+  AuditLogEntry,
+  StoredEnvelopeStatus,
+  GCSConfig,
+} from './storage.js';
+
+export { createGCloudStorageCallbacks } from './gcloud-storage.js';
+export type { GCloudStorageConfig } from './gcloud-storage.js';
+
+export { createSigningContext } from './context.js';
+export type { SigningContext, SigningContextConfig } from './context.js';

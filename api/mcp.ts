@@ -129,6 +129,180 @@ const TOOLS = [
 ];
 
 // ---------------------------------------------------------------------------
+// Signing tool definitions (4 tools — consolidated)
+// ---------------------------------------------------------------------------
+
+const TOOL_CONNECT_SIGNING = 'connect_signing_provider';
+const TOOL_DISCONNECT_SIGNING = 'disconnect_signing_provider';
+const TOOL_SEND_FOR_SIGNATURE = 'send_for_signature';
+const TOOL_CHECK_SIGNATURE_STATUS = 'check_signature_status';
+
+const SIGNING_TOOL_NAMES = new Set([
+  TOOL_CONNECT_SIGNING,
+  TOOL_DISCONNECT_SIGNING,
+  TOOL_SEND_FOR_SIGNATURE,
+  TOOL_CHECK_SIGNATURE_STATUS,
+]);
+
+const SIGNING_TOOLS = [
+  {
+    name: TOOL_CONNECT_SIGNING,
+    description:
+      'Connect your DocuSign account for sending agreements for signature. ' +
+      'Returns an OAuth authorization URL to open in your browser.',
+    inputSchema: {
+      type: 'object' as const,
+      properties: {
+        provider: { type: 'string', enum: ['docusign'], description: 'Signing provider.' },
+        redirect_uri: { type: 'string', description: 'OAuth redirect URI.' },
+      },
+      additionalProperties: false,
+    },
+    annotations: { readOnlyHint: false, destructiveHint: false },
+  },
+  {
+    name: TOOL_DISCONNECT_SIGNING,
+    description: 'Disconnect your signing provider account and revoke stored OAuth tokens.',
+    inputSchema: {
+      type: 'object' as const,
+      properties: {
+        connection_id: { type: 'string', description: 'Connection ID to disconnect.' },
+      },
+      required: ['connection_id'] as const,
+      additionalProperties: false,
+    },
+    annotations: { readOnlyHint: false, destructiveHint: true },
+  },
+  {
+    name: TOOL_SEND_FOR_SIGNATURE,
+    description:
+      'Upload a DOCX file and create a draft signing envelope. Returns a review URL — ' +
+      'the user must review and send from the signing provider UI. Never auto-sends.',
+    inputSchema: {
+      type: 'object' as const,
+      properties: {
+        file_path: { type: 'string', description: 'Path to the DOCX file to send for signature.' },
+        signers: {
+          type: 'array',
+          items: {
+            type: 'object',
+            properties: {
+              name: { type: 'string' },
+              email: { type: 'string' },
+              type: { type: 'string', enum: ['signer', 'cc'] },
+            },
+            required: ['name', 'email'],
+          },
+          description: 'Signers and CC recipients.',
+        },
+        email_subject: { type: 'string', description: 'Subject line for the signing invitation email.' },
+        api_key: { type: 'string', description: 'Your open_agreements_api_key.' },
+      },
+      required: ['file_path', 'signers', 'api_key'] as const,
+      additionalProperties: false,
+    },
+    annotations: { readOnlyHint: false, destructiveHint: false },
+  },
+  {
+    name: TOOL_CHECK_SIGNATURE_STATUS,
+    description:
+      'Check the status of a signing envelope. When status is "completed", ' +
+      'includes a download URL for the signed PDF.',
+    inputSchema: {
+      type: 'object' as const,
+      properties: {
+        envelope_id: { type: 'string' },
+        api_key: { type: 'string', description: 'Required to download the signed document when completed.' },
+      },
+      required: ['envelope_id'] as const,
+      additionalProperties: false,
+    },
+    annotations: { readOnlyHint: true, destructiveHint: false },
+  },
+];
+
+const ALL_TOOLS = [...TOOLS, ...SIGNING_TOOLS];
+
+// ---------------------------------------------------------------------------
+// Signing context — lazy initialization from env vars
+// ---------------------------------------------------------------------------
+
+let _signingModuleLoaded = false;
+
+async function handleSigningToolCall(
+  id: unknown,
+  name: string,
+  args: Record<string, unknown>,
+): Promise<ReturnType<typeof jsonRpcResult>> {
+  try {
+    if (!_signingModuleLoaded) {
+      // Dynamic import to avoid bundling when signing isn't configured
+      const { setSigningContext } = await import(
+        '../packages/contract-templates-mcp/src/core/signing-tools.js'
+      );
+      const { createSigningContext } = await import(
+        '../packages/signing/src/context.js'
+      );
+
+      const integrationKey = process.env.OA_DOCUSIGN_INTEGRATION_KEY;
+      const secretKey = process.env.OA_DOCUSIGN_SECRET_KEY;
+      const encryptionKeyHex = process.env.OA_GCLOUD_ENCRYPTION_KEY;
+
+      if (integrationKey && secretKey && encryptionKeyHex) {
+        // Parse SA credentials from env var (Vercel has no ADC)
+        let gcloudCredentials: { client_email: string; private_key: string; [key: string]: unknown } | undefined;
+        const credentialsJson = process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON;
+        if (credentialsJson) {
+          try {
+            gcloudCredentials = JSON.parse(credentialsJson);
+          } catch {
+            // Fall back to ADC if JSON is malformed
+          }
+        }
+
+        const ctx = createSigningContext({
+          docusign: {
+            integrationKey,
+            secretKey,
+            redirectUri: process.env.OA_DOCUSIGN_REDIRECT_URI
+              || 'https://openagreements.ai/api/auth/docusign/callback',
+            hmacSecret: process.env.OA_DOCUSIGN_HMAC_SECRET,
+            sandbox: process.env.OA_DOCUSIGN_SANDBOX !== 'false',
+          },
+          gcloud: {
+            projectId: process.env.GOOGLE_CLOUD_PROJECT || 'open-agreements',
+            bucketName: 'openagreements-signing-artifacts',
+            encryptionKey: Buffer.from(encryptionKeyHex, 'hex'),
+            ...(gcloudCredentials ? { credentials: gcloudCredentials } : {}),
+          },
+        });
+        setSigningContext(ctx);
+      }
+      _signingModuleLoaded = true;
+    }
+
+    const { callSigningTool } = await import(
+      '../packages/contract-templates-mcp/src/core/signing-tools.js'
+    );
+    const result = await callSigningTool(name, args);
+
+    if (!result) {
+      return toolErrorResult(id, name, ErrorCode.INVALID_ARGUMENT, `Unknown signing tool: "${name}"`);
+    }
+
+    return jsonRpcResult(id, result);
+  } catch (err) {
+    const message = err instanceof Error ? err.message : String(err);
+    return toolErrorResult(
+      id,
+      name,
+      ErrorCode.INVALID_ARGUMENT,
+      `Signing not configured: ${message}. Set OA_DOCUSIGN_INTEGRATION_KEY, OA_DOCUSIGN_SECRET_KEY, and OA_GCLOUD_ENCRYPTION_KEY environment variables.`,
+    );
+  }
+}
+
+// ---------------------------------------------------------------------------
 // JSON-RPC helpers
 // ---------------------------------------------------------------------------
 
@@ -429,12 +603,17 @@ function handleInitialize(id: unknown, params: Record<string, unknown>) {
 }
 
 function handleToolsList(id: unknown) {
-  return jsonRpcResult(id, { tools: TOOLS });
+  return jsonRpcResult(id, { tools: ALL_TOOLS });
 }
 
 async function handleToolsCall(id: unknown, params: Record<string, unknown>) {
   const name = params.name as string;
   const args = (params.arguments as Record<string, unknown>) ?? {};
+
+  // Delegate signing tools to the signing module
+  if (SIGNING_TOOL_NAMES.has(name)) {
+    return handleSigningToolCall(id, name, args);
+  }
 
   if (name === TOOL_LIST_TEMPLATES) {
     const parsed = ListTemplatesArgsSchema.safeParse(args);
@@ -569,7 +748,7 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>) {
     name || 'tools/call',
     ErrorCode.INVALID_ARGUMENT,
     `Unknown tool: "${name}"`,
-    { details: { available_tools: TOOLS.map((tool) => tool.name) } },
+    { details: { available_tools: ALL_TOOLS.map((tool) => tool.name) } },
   );
 }
 

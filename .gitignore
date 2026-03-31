@@ -2,6 +2,7 @@ node_modules/
 dist/
 *.tgz
 .DS_Store
+.env.local
 allure-results/
 allure-report/
 coverage/

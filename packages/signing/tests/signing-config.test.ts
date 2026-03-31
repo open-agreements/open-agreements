@@ -1,9 +1,12 @@
-import { describe, it, expect } from 'vitest';
+import { describe, expect } from 'vitest';
+import { itAllure } from '../../../integration-tests/helpers/allure-test.ts';
 import {
   SigningConfigSchema,
   getProviderAnchors,
   getSignatureTagFields,
 } from '../src/signing-config.js';
+
+const it = itAllure.epic('Agreement Signing');
 
 // ── Valid signing config fixture ────────────────────────────────────────────
 
@@ -56,7 +59,7 @@ const validConfig = {
 // ── OA-SIG-001: signing.yaml parses valid signer roles and anchor mappings ─
 
 describe('signing config parsing', () => {
-  it('OA-SIG-001: parses valid signer roles and anchor mappings', () => {
+  it.openspec('OA-SIG-001')('parses valid signer roles and anchor mappings', () => {
     const config = SigningConfigSchema.parse(validConfig);
 
     expect(config.signers).toHaveLength(2);
@@ -69,14 +72,14 @@ describe('signing config parsing', () => {
     expect(config.providerAnchors.pandadoc.sig_party_1).toBe('{{signature:party_1}}');
   });
 
-  it('OA-SIG-001: rejects config with no signers', () => {
+  it.openspec('OA-SIG-002')('rejects config with no signers', () => {
     expect(() => SigningConfigSchema.parse({
       signers: [],
       providerAnchors: {},
     })).toThrow();
   });
 
-  it('OA-SIG-001: defaults routingOrder to 1', () => {
+  it.openspec('OA-SIG-001')('defaults routingOrder to 1', () => {
     const config = SigningConfigSchema.parse({
       signers: [{
         role: 'party_1',
@@ -94,7 +97,7 @@ describe('signing config parsing', () => {
 describe('provider anchor lookup', () => {
   const config = SigningConfigSchema.parse(validConfig);
 
-  it('OA-SIG-003: returns DocuSign anchors', () => {
+  it.openspec('OA-SIG-003')('returns DocuSign anchors', () => {
     const anchors = getProviderAnchors(config, 'docusign');
     expect(anchors.sig_party_1).toBe('/sn1/');
     expect(anchors.sig_party_2).toBe('/sn2/');
@@ -102,22 +105,22 @@ describe('provider anchor lookup', () => {
     expect(anchors.date_party_2).toBe('/ds2/');
   });
 
-  it('OA-SIG-003: returns Dropbox Sign anchors', () => {
+  it.openspec('OA-SIG-003')('returns Dropbox Sign anchors', () => {
     const anchors = getProviderAnchors(config, 'dropboxsign');
     expect(anchors.sig_party_1).toBe('[sig|req|signer1]');
   });
 
-  it('OA-SIG-003: returns Adobe Sign anchors', () => {
+  it.openspec('OA-SIG-003')('returns Adobe Sign anchors', () => {
     const anchors = getProviderAnchors(config, 'adobesign');
     expect(anchors.sig_party_1).toBe('{{sig1_es_:signer1:signature}}');
   });
 
-  it('OA-SIG-003: returns PandaDoc anchors', () => {
+  it.openspec('OA-SIG-003')('returns PandaDoc anchors', () => {
     const anchors = getProviderAnchors(config, 'pandadoc');
     expect(anchors.sig_party_1).toBe('{{signature:party_1}}');
   });
 
-  it('OA-SIG-003: throws for unknown provider', () => {
+  it.openspec('OA-SIG-003')('throws for unknown provider', () => {
     expect(() => getProviderAnchors(config, 'unknownprovider')).toThrow(
       'No anchor configuration for provider "unknownprovider"',
     );
