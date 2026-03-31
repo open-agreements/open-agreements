@@ -129,7 +129,7 @@ export const signingTools: ToolDefinition[] = [
         const ctx = requireContext();
         const url = ctx.provider.getAuthUrl(
           input.redirect_uri
-            || process.env.OA_DOCUSIGN_REDIRECT_URI
+            || process.env.OA_DOCUSIGN_REDIRECT_URI?.trim()
             || 'https://openagreements.ai/api/auth/docusign/callback',
           `mcp-${Date.now()}`,
         );
