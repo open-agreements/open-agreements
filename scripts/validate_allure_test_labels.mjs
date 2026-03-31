@@ -7,7 +7,7 @@ const ROOT = process.cwd();
 
 const TEST_PATH_RE = /^(integration-tests|src|packages\/[^/]+\/tests)\/.+\.test\.ts$/;
 
-const helperImportRe = /from\s+['"][^'"]*helpers\/allure-test\.js['"]/;
+const helperImportRe = /from\s+['"][^'"]*helpers\/allure-test\.(?:js|ts)['"]/;
 const wrapperReferenceRe = /\b(itAllure|testAllure)\b/;
 const epicWrapperAssignmentRe =
   /(?:const|let|var)\s+\w+\s*=\s*(?:itAllure|testAllure)\.(?:epic\(\s*['"`][^'"`]+['"`]\s*\)|withLabels\(\s*\{[\s\S]*?\bepic\s*:)/m;
@@ -71,7 +71,7 @@ function validateFile(relativePath) {
   const errors = [];
 
   if (!helperImportRe.test(body)) {
-    errors.push('must import the Allure helper (`helpers/allure-test.js`).');
+    errors.push('must import the Allure helper (`helpers/allure-test.js` or `helpers/allure-test.ts`).');
   }
 
   if (!wrapperReferenceRe.test(body)) {

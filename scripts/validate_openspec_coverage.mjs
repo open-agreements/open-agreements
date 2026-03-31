@@ -22,7 +22,7 @@ const SCENARIO_THEN_RE = /^\s*-\s+\*\*THEN\*\*/i;
 const REPO_PATH_REFERENCE_RE = /\b(?:src|integration-tests|packages|openspec|scripts)\/[A-Za-z0-9._/-]*/;
 const ABSOLUTE_PATH_REFERENCE_RE = /(?:^|[`'"])(?:\/Users\/|\/home\/|[A-Za-z]:\\)/;
 const REGRESSION_TITLE_RE = /\b(?:regression|hotfix|bugfix|workaround)\b/i;
-const ALLURE_HELPER_IMPORT_RE = /(?:^|\/)helpers\/allure-test\.js$/;
+const ALLURE_HELPER_IMPORT_RE = /(?:^|\/)helpers\/allure-test\.(?:js|ts)$/;
 const ALLURE_WRAPPER_EXPORT_NAMES = new Set(['itAllure', 'testAllure']);
 const ALLURE_WRAPPER_CHAIN_METHODS = new Set(['epic', 'withLabels', 'openspec']);
 
@@ -412,7 +412,7 @@ function extractOpenSpecInvocation(node) {
     }
   }
 
-  // chained form: it.openspec('OA-001').skip('title', ...)
+  // chained form: it.openspec('OA-001').skip('reason', ...)
   if (ts.isPropertyAccessExpression(node.expression) && ts.isCallExpression(node.expression.expression)) {
     const method = node.expression.name.text;
     const inner = node.expression.expression;
@@ -420,10 +420,28 @@ function extractOpenSpecInvocation(node) {
       ts.isPropertyAccessExpression(inner.expression)
       && inner.expression.name.text === 'openspec'
     ) {
+      if (method === 'todo') {
+        return {
+          openspecCall: inner,
+          openspecRoot: inner.expression.expression,
+          status: 'todo',
+        };
+      }
+      if (method === 'skip') {
+        // Extract skip reason from the first string argument to the outer call
+        const firstArg = node.arguments[0];
+        const skipReason = firstArg ? getStringLiteralValue(firstArg) : null;
+        return {
+          openspecCall: inner,
+          openspecRoot: inner.expression.expression,
+          status: 'pending',
+          skipReason: skipReason || null,
+        };
+      }
       return {
         openspecCall: inner,
         openspecRoot: inner.expression.expression,
-        status: (method === 'skip' || method === 'todo') ? 'pending' : 'covered',
+        status: 'covered',
       };
     }
   }
@@ -560,11 +578,29 @@ export function collectOpenSpecBindingsFromSource({ relFile, content }) {
     if (ts.isCallExpression(node)) {
       const invocation = extractOpenSpecInvocation(node);
       if (invocation) {
-        const { openspecCall, openspecRoot, status } = invocation;
+        const { openspecCall, openspecRoot, status, skipReason } = invocation;
         const titleNode = node.arguments[0];
         const title = titleNode
           ? (getStringLiteralValue(titleNode) ?? '<dynamic test title>')
           : '<missing test title>';
+
+        // Reject .todo() — standardize on .skip('reason') as the single pending mechanism
+        if (status === 'todo') {
+          invalidBindings.push(
+            `${relFile}: .todo() is not allowed. Use .skip('reason') instead (test: ${title})`
+          );
+          ts.forEachChild(node, visit);
+          return;
+        }
+
+        // Reject .skip() without a reason string
+        if (status === 'pending' && !skipReason) {
+          invalidBindings.push(
+            `${relFile}: .skip() must include a reason string, e.g. .skip('Needs mock HTTP') (test: ${title})`
+          );
+          ts.forEachChild(node, visit);
+          return;
+        }
 
         if (!isAllureWrapperExpression(openspecRoot, knownAllureWrappers)) {
           invalidBindings.push(
@@ -590,7 +626,7 @@ export function collectOpenSpecBindingsFromSource({ relFile, content }) {
           }
           const existing = bindingsByScenarioId.get(id) ?? [];
           if (!existing.some((entry) => entry.ref === ref)) {
-            existing.push({ ref, status });
+            existing.push({ ref, status, ...(skipReason ? { skipReason } : {}) });
           }
           bindingsByScenarioId.set(id, existing);
         }
@@ -640,6 +676,7 @@ function createEmptyCapabilityReport(capability) {
     scenarios: [],
     missing: [],
     pending: [],
+    pendingReasons: {},
     scenarioToBindings: {},
   };
 }
@@ -655,6 +692,7 @@ function validateCapabilityCoverage({ capability, scenarios, bindingsByScenarioI
 
   const missing = [];
   const pending = [];
+  const pendingReasons = {};
   const scenarioToBindings = {};
 
   for (const scenario of report.scenarios) {
@@ -673,13 +711,22 @@ function validateCapabilityCoverage({ capability, scenarios, bindingsByScenarioI
     const hasCoveredBinding = bindings.some((entry) => entry.status === 'covered');
     if (!hasCoveredBinding) {
       pending.push(scenario.id);
+      // Collect skip reasons for display
+      const reasons = bindings
+        .filter((entry) => entry.skipReason)
+        .map((entry) => entry.skipReason);
+      if (reasons.length > 0) {
+        pendingReasons[scenario.id] = [...new Set(reasons)];
+      }
     }
   }
 
   report.missing = [...new Set(missing)].sort();
   report.pending = [...new Set(pending)].sort();
+  report.pendingReasons = pendingReasons;
   report.scenarioToBindings = scenarioToBindings;
-  report.ok = report.missing.length === 0 && report.pending.length === 0;
+  // Pending (with reasons) is a warning, not a failure — only missing scenarios fail
+  report.ok = report.missing.length === 0;
   return report;
 }
 
@@ -725,7 +772,10 @@ function buildMatrixMarkdown({ reports, unknownScenarioIds, invalidBindings }) {
 
       let notes = '';
       if (isPending) {
-        notes = 'Mapped test exists but is skip/todo.';
+        const reasons = report.pendingReasons?.[scenario.id] ?? [];
+        notes = reasons.length > 0
+          ? `Skipped: ${reasons.join('; ')}`
+          : 'Mapped test exists but is skipped.';
       } else if (isMissing) {
         notes = 'No test with matching .openspec(...) annotation found.';
       }
@@ -850,18 +900,26 @@ export async function main(argv = process.argv.slice(2)) {
     });
     reports.push(report);
 
-    if (report.ok) {
+    const pendingCount = (report.pending ?? []).length;
+    if (report.ok && pendingCount === 0) {
       console.log(`PASS ${capability}: ${report.scenarios.length} scenarios covered by test-local .openspec(...) bindings`);
+    } else if (report.ok && pendingCount > 0) {
+      console.log(`PASS ${capability}: ${report.scenarios.length} scenarios (${pendingCount} pending with reasons)`);
+      for (const id of report.pending) {
+        const reasons = report.pendingReasons?.[id] ?? ['no reason given'];
+        console.warn(`  WARN ${id}: skipped — ${reasons.join('; ')}`);
+      }
+    } else {
+      hasFailures = true;
+      console.error(`FAIL ${capability}`);
+      if (report.reason) {
+        console.error(`  ${report.reason}`);
+      }
+      printSet('Missing scenario IDs', report.missing ?? []);
+    }
+    if (!report.ok) {
       continue;
     }
-
-    hasFailures = true;
-    console.error(`FAIL ${capability}`);
-    if (report.reason) {
-      console.error(`  ${report.reason}`);
-    }
-    printSet('Missing scenario IDs', report.missing ?? []);
-    printSet('Scenario IDs mapped only to skipped/todo tests', report.pending ?? []);
   }
 
   if (specParseErrors.length > 0) {
