@@ -26,6 +26,8 @@ export interface GCloudStorageConfig {
   bucketName: string;
   /** 32-byte encryption key for AES-256-GCM token encryption. */
   encryptionKey: Buffer;
+  /** Optional SA credentials JSON object. When omitted, ADC is used. */
+  credentials?: { client_email: string; private_key: string; [key: string]: unknown };
 }
 
 // ─── Factory ────────────────────────────────────────────────────────────────
@@ -35,8 +37,11 @@ export interface GCloudStorageConfig {
  * Returns the callback functions that DocuSignProvider expects.
  */
 export function createGCloudStorageCallbacks(config: GCloudStorageConfig) {
-  const db = new Firestore({ projectId: config.projectId });
-  const gcs = new Storage({ projectId: config.projectId });
+  const clientOpts = config.credentials
+    ? { projectId: config.projectId, credentials: config.credentials }
+    : { projectId: config.projectId };
+  const db = new Firestore(clientOpts);
+  const gcs = new Storage(clientOpts);
   const bucket = gcs.bucket(config.bucketName);
 
   return {

@@ -249,6 +249,17 @@ async function handleSigningToolCall(
       const encryptionKeyHex = process.env.OA_GCLOUD_ENCRYPTION_KEY;
 
       if (integrationKey && secretKey && encryptionKeyHex) {
+        // Parse SA credentials from env var (Vercel has no ADC)
+        let gcloudCredentials: { client_email: string; private_key: string; [key: string]: unknown } | undefined;
+        const credentialsJson = process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON;
+        if (credentialsJson) {
+          try {
+            gcloudCredentials = JSON.parse(credentialsJson);
+          } catch {
+            // Fall back to ADC if JSON is malformed
+          }
+        }
+
         const ctx = createSigningContext({
           docusign: {
             integrationKey,
@@ -262,6 +273,7 @@ async function handleSigningToolCall(
             projectId: process.env.GOOGLE_CLOUD_PROJECT || 'open-agreements',
             bucketName: 'openagreements-signing-artifacts',
             encryptionKey: Buffer.from(encryptionKeyHex, 'hex'),
+            ...(gcloudCredentials ? { credentials: gcloudCredentials } : {}),
           },
         });
         setSigningContext(ctx);
