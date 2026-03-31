@@ -1,7 +1,10 @@
-import { describe, it, expect } from 'vitest';
+import { describe, expect } from 'vitest';
 import { createHmac } from 'node:crypto';
+import { itAllure } from '../../../integration-tests/helpers/allure-test.ts';
 import { DocuSignProvider } from '../src/docusign.js';
 import type { DocuSignConfig } from '../src/docusign.js';
+
+const it = itAllure.epic('Agreement Signing');
 
 // ── Minimal config for testing (no real API calls) ──────────────────────────
 
@@ -23,7 +26,7 @@ const testConfig: DocuSignConfig = {
 // ── OA-SIG-007: OAuth URL generation ────────────────────────────────────────
 
 describe('DocuSign OAuth', () => {
-  it('OA-SIG-007: getAuthUrl generates valid URL with PKCE params', () => {
+  it.openspec('OA-SIG-007')('getAuthUrl generates valid URL with PKCE params', () => {
     const provider = new DocuSignProvider(testConfig);
     const url = provider.getAuthUrl(testConfig.redirectUri, 'test-state-123');
 
@@ -36,13 +39,13 @@ describe('DocuSign OAuth', () => {
     expect(url).toContain(encodeURIComponent(testConfig.redirectUri));
   });
 
-  it('OA-SIG-007: uses demo auth URL for sandbox', () => {
+  it.openspec('OA-SIG-007')('uses demo auth URL for sandbox', () => {
     const provider = new DocuSignProvider({ ...testConfig, sandbox: true });
     const url = provider.getAuthUrl(testConfig.redirectUri, 'state');
     expect(url).toContain('account-d.docusign.com');
   });
 
-  it('OA-SIG-007: uses production auth URL when not sandbox', () => {
+  it.openspec('OA-SIG-007')('uses production auth URL when not sandbox', () => {
     const provider = new DocuSignProvider({ ...testConfig, sandbox: false });
     const url = provider.getAuthUrl(testConfig.redirectUri, 'state');
     expect(url).toContain('account.docusign.com');
@@ -50,10 +53,61 @@ describe('DocuSign OAuth', () => {
   });
 });
 
+// ── OA-SIG-009: Disconnect ─────────────────────────────────────────────────
+
+describe('DocuSign disconnect', () => {
+  it.openspec('OA-SIG-009')('disconnect calls removeConnection', async () => {
+    let removedId: string | null = null;
+    const provider = new DocuSignProvider({
+      ...testConfig,
+      removeConnection: async (id) => { removedId = id; },
+    });
+
+    await provider.disconnect('conn-abc-123');
+    expect(removedId).toBe('conn-abc-123');
+  });
+});
+
+// ── OA-SIG-010: createDraft preconditions ──────────────────────────────────
+
+describe('DocuSign createDraft', () => {
+  it.openspec('OA-SIG-010')('createDraft requires connection and access token', async () => {
+    const provider = new DocuSignProvider(testConfig);
+
+    // Without connection/token, createDraft should throw
+    await expect(provider.createDraft(
+      {
+        id: 'doc-123',
+        sha256: 'abc',
+        filename: 'test.docx',
+        mimeType: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+        storageUrl: 'https://storage.example.com/test.docx',
+        source: 'generated',
+      },
+      {
+        signers: [{ name: 'Test', email: 'test@example.com', role: 'party_1', type: 'signer' }],
+        emailSubject: 'Test NDA',
+      },
+    )).rejects.toThrow('Connection and access token required');
+  });
+
+  it.openspec('OA-SIG-011').skip('Requires DocuSign sandbox HTTP mock', () => {
+    // send() transitions envelope from created to sent
+  });
+
+  it.openspec('OA-SIG-012').skip('Requires DocuSign sandbox HTTP mock', () => {
+    // getStatus returns current signer statuses
+  });
+
+  it.openspec('OA-SIG-013').skip('Requires DocuSign sandbox HTTP mock', () => {
+    // fetchArtifact returns presigned download URL
+  });
+});
+
 // ── OA-SIG-014/015: Webhook HMAC verification ──────────────────────────────
 
 describe('DocuSign webhook verification', () => {
-  it('OA-SIG-014: verifyWebhook validates correct HMAC-SHA256 signature', () => {
+  it.openspec('OA-SIG-014')('verifyWebhook validates correct HMAC-SHA256 signature', () => {
     const provider = new DocuSignProvider(testConfig);
     const body = '{"envelopeId":"env-123","status":"completed"}';
 
@@ -69,7 +123,7 @@ describe('DocuSign webhook verification', () => {
     expect(result).toBe(true);
   });
 
-  it('OA-SIG-015: verifyWebhook rejects tampered payloads', () => {
+  it.openspec('OA-SIG-015')('verifyWebhook rejects tampered payloads', () => {
     const provider = new DocuSignProvider(testConfig);
     const body = '{"envelopeId":"env-123","status":"completed"}';
 
@@ -80,13 +134,13 @@ describe('DocuSign webhook verification', () => {
     expect(result).toBe(false);
   });
 
-  it('OA-SIG-015: verifyWebhook rejects missing signature header', () => {
+  it.openspec('OA-SIG-015')('verifyWebhook rejects missing signature header', () => {
     const provider = new DocuSignProvider(testConfig);
     const result = provider.verifyWebhook({}, 'body');
     expect(result).toBe(false);
   });
 
-  it('OA-SIG-015: verifyWebhook returns false when no HMAC secret configured', () => {
+  it.openspec('OA-SIG-015')('verifyWebhook returns false when no HMAC secret configured', () => {
     const provider = new DocuSignProvider({ ...testConfig, hmacSecret: undefined });
     const result = provider.verifyWebhook(
       { 'x-docusign-signature-1': 'some-sig' },
@@ -99,7 +153,7 @@ describe('DocuSign webhook verification', () => {
 // ── OA-SIG-016: Webhook event handling ──────────────────────────────────────
 
 describe('DocuSign webhook event handling', () => {
-  it('OA-SIG-016: handleWebhookEvent updates status on envelope-completed', async () => {
+  it.openspec('OA-SIG-016')('handleWebhookEvent updates status on envelope-completed', async () => {
     let storedStatus: any = null;
     const provider = new DocuSignProvider({
       ...testConfig,
@@ -125,25 +179,5 @@ describe('DocuSign webhook event handling', () => {
     // Verify it was stored
     expect(storedStatus).not.toBeNull();
     expect(storedStatus.id).toBe('env-456');
-  });
-
-  it('OA-SIG-017: createDraft requires connection and access token', async () => {
-    const provider = new DocuSignProvider(testConfig);
-
-    // Without connection/token, createDraft should throw
-    await expect(provider.createDraft(
-      {
-        id: 'doc-123',
-        sha256: 'abc',
-        filename: 'test.docx',
-        mimeType: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-        storageUrl: 'https://storage.example.com/test.docx',
-        source: 'generated',
-      },
-      {
-        signers: [{ name: 'Test', email: 'test@example.com', role: 'party_1', type: 'signer' }],
-        emailSubject: 'Test NDA',
-      },
-    )).rejects.toThrow('Connection and access token required');
   });
 });

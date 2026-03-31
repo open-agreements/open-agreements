@@ -2,13 +2,16 @@
  * Test the OAuth connect handler logic (without Vercel runtime).
  */
 
-import { describe, it, expect } from 'vitest';
+import { describe, expect } from 'vitest';
 import { randomBytes, createHash } from 'node:crypto';
+import { itAllure } from '../../../integration-tests/helpers/allure-test.ts';
+
+const it = itAllure.epic('Agreement Signing');
 
 describe('OAuth connect flow', () => {
   const INTEGRATION_KEY = 'd2b5e34b-aa16-4459-95c5-3f7650df6ff8';
 
-  it('generates a valid DocuSign OAuth URL with PKCE and state', () => {
+  it.openspec('OA-SIG-007')('generates a valid DocuSign OAuth URL with PKCE and state', () => {
     const apiKey = 'user-api-key-123';
     const codeVerifier = randomBytes(32).toString('base64url');
     const codeChallenge = createHash('sha256').update(codeVerifier).digest('base64url');
@@ -43,7 +46,7 @@ describe('OAuth connect flow', () => {
     expect(stateParam).toContain(apiKey);
   });
 
-  it('builds correct token exchange request body', () => {
+  it.openspec('OA-SIG-008')('builds correct token exchange request body', () => {
     const code = 'auth-code-from-docusign';
     const codeVerifier = randomBytes(32).toString('base64url');
     const basicAuth = Buffer.from(`${INTEGRATION_KEY}:test-secret`).toString('base64');
@@ -61,7 +64,7 @@ describe('OAuth connect flow', () => {
     expect(basicAuth).toContain('ZDJiNWUzNG'); // base64 of integration key prefix
   });
 
-  it('CSRF state can be split to extract api_key', () => {
+  it.openspec('OA-SIG-008')('CSRF state can be split to extract api_key', () => {
     const csrfToken = randomBytes(16).toString('hex');
     const apiKey = 'my-secret-api-key';
     const state = `${csrfToken}:${apiKey}`;

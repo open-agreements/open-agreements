@@ -4,22 +4,24 @@
  * Run with: npx vitest run packages/signing/tests/manual-e2e.test.ts
  */
 
-import { describe, it, expect } from 'vitest';
+import { describe, expect } from 'vitest';
 import { execSync } from 'node:child_process';
-import { readFileSync, writeFileSync, mkdtempSync } from 'node:fs';
+import { writeFileSync, mkdtempSync } from 'node:fs';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { createHmac, randomBytes } from 'node:crypto';
 import AdmZip from 'adm-zip';
-import { loadSigningConfig, getProviderAnchors, getSignatureTagFields } from '../src/signing-config.js';
-import { encrypt, decrypt, createDocumentRef } from '../src/storage.js';
+import { itAllure } from '../../../integration-tests/helpers/allure-test.ts';
+import { loadSigningConfig, getProviderAnchors } from '../src/signing-config.js';
+import { encrypt, decrypt } from '../src/storage.js';
 import { DocuSignProvider } from '../src/docusign.js';
 
+const it = itAllure.epic('Agreement Signing');
 const TEMPLATE_DIR = 'content/templates/bonterms-mutual-nda';
 
 describe('Manual E2E: signing config → fill → anchor verification', () => {
 
-  it('loads signing.yaml and resolves all 4 provider anchor formats', () => {
+  it.openspec('OA-SIG-003')('loads signing.yaml and resolves all 4 provider anchor formats', () => {
     const config = loadSigningConfig(TEMPLATE_DIR);
     expect(config).not.toBeNull();
     expect(config!.signers).toHaveLength(2);
@@ -30,14 +32,14 @@ describe('Manual E2E: signing config → fill → anchor verification', () => {
     }
   });
 
-  it('fills Bonterms NDA without sig data (no error, blank signature fields)', () => {
+  it.openspec('OA-SIG-005')('fills Bonterms NDA without sig data (no error, blank signature fields)', () => {
     const tempDir = mkdtempSync(join(tmpdir(), 'manual-e2e-'));
     const outputPath = join(tempDir, 'no-sig.docx');
 
     writeFileSync(join(tempDir, 'data.json'), '{}');
 
     // This should NOT throw — signature tags default to empty
-    const result = execSync(
+    execSync(
       `node bin/open-agreements.js fill bonterms-mutual-nda -d ${join(tempDir, 'data.json')} -o ${outputPath}`,
       { encoding: 'utf-8', stdio: ['pipe', 'pipe', 'pipe'] }
     );
@@ -49,7 +51,7 @@ describe('Manual E2E: signing config → fill → anchor verification', () => {
     expect(text).not.toContain('/sn2/');
   });
 
-  it('fills Bonterms NDA WITH DocuSign anchors — anchors appear in DOCX', () => {
+  it.openspec('OA-SIG-004')('fills Bonterms NDA WITH DocuSign anchors — anchors appear in DOCX', () => {
     const tempDir = mkdtempSync(join(tmpdir(), 'manual-e2e-'));
     const outputPath = join(tempDir, 'with-sig.docx');
 
@@ -84,7 +86,7 @@ describe('Manual E2E: signing config → fill → anchor verification', () => {
     expect(text).toContain('March 29, 2026');
   });
 
-  it('encryption round-trip preserves DocuSign secret key', () => {
+  it.openspec('OA-SIG-008')('encryption round-trip preserves DocuSign secret key', () => {
     const key = randomBytes(32);
     const secret = 'ab0472fd-fec1-40d3-8ef5-abf50676e47b';
 
@@ -95,7 +97,7 @@ describe('Manual E2E: signing config → fill → anchor verification', () => {
     expect(decrypted).toBe(secret);
   });
 
-  it('DocuSign OAuth URL uses real integration key and points to sandbox', () => {
+  it.openspec('OA-SIG-007')('DocuSign OAuth URL uses real integration key and points to sandbox', () => {
     const provider = new DocuSignProvider({
       integrationKey: 'd2b5e34b-aa16-4459-95c5-3f7650df6ff8',
       secretKey: 'test',
@@ -121,7 +123,7 @@ describe('Manual E2E: signing config → fill → anchor verification', () => {
     expect(url).toContain('signature'); // scope
   });
 
-  it('webhook HMAC accepts valid signature and rejects invalid', () => {
+  it.openspec('OA-SIG-014')('webhook HMAC accepts valid signature and rejects invalid', () => {
     const hmacSecret = 'manual-test-secret';
     const body = '{"envelopeId":"env-manual","status":"completed"}';
 
@@ -145,5 +147,9 @@ describe('Manual E2E: signing config → fill → anchor verification', () => {
     expect(provider.verifyWebhook({ 'x-docusign-signature-1': validSig }, body)).toBe(true);
     expect(provider.verifyWebhook({ 'x-docusign-signature-1': 'wrong' }, body)).toBe(false);
     expect(provider.verifyWebhook({}, body)).toBe(false);
+  });
+
+  it.openspec('OA-SIG-006').skip('Needs template with mismatched signing.yaml tag reference', () => {
+    // Fill pipeline should fail closed when signing.yaml references tags missing from DOCX
   });
 });

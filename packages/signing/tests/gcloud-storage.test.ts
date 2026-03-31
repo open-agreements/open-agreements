@@ -5,10 +5,12 @@
  * Skip in CI with: SKIP_GCLOUD_TESTS=1 npx vitest run
  */
 
-import { describe, it, expect, beforeAll, afterAll } from 'vitest';
+import { describe, expect, afterAll } from 'vitest';
 import { randomBytes } from 'node:crypto';
+import { itAllure } from '../../../integration-tests/helpers/allure-test.ts';
 import { createGCloudStorageCallbacks } from '../src/gcloud-storage.js';
 
+const it = itAllure.epic('Agreement Signing');
 const SKIP = process.env.SKIP_GCLOUD_TESTS === '1';
 
 const config = {
@@ -28,7 +30,7 @@ describe.skipIf(SKIP)('GCloud storage integration', () => {
     } catch { /* ignore */ }
   });
 
-  it('stores and retrieves a connection with encrypted tokens', async () => {
+  it.openspec('OA-SIG-008')('stores and retrieves a connection with encrypted tokens', async () => {
     const record = {
       connectionId: testConnectionId,
       provider: 'docusign',
@@ -51,18 +53,18 @@ describe.skipIf(SKIP)('GCloud storage integration', () => {
     expect(retrieved!.refreshToken).toBe('refresh-token-secret-value');
   });
 
-  it('returns null for unknown api key', async () => {
+  it.openspec('OA-SIG-008')('returns null for unknown api key', async () => {
     const result = await callbacks.getConnection('nonexistent-key');
     expect(result).toBeNull();
   });
 
-  it('removes a connection', async () => {
+  it.openspec('OA-SIG-009')('removes a connection', async () => {
     await callbacks.removeConnection(testConnectionId);
     const result = await callbacks.getConnection(`test-key-${Date.now()}`);
     expect(result).toBeNull();
   });
 
-  it('stores and retrieves a document from GCS', async () => {
+  it.openspec('OA-SIG-008')('stores and retrieves a document from GCS', async () => {
     const content = Buffer.from('test document content for signing integration');
     const storageUrl = await callbacks.storeDocument(content, 'test-nda.docx');
 
@@ -79,7 +81,7 @@ describe.skipIf(SKIP)('GCloud storage integration', () => {
     await gcs.bucket('openagreements-signing-artifacts').file(path).delete();
   });
 
-  it('stores and retrieves envelope status', async () => {
+  it.openspec('OA-SIG-008')('stores and retrieves envelope status', async () => {
     const envelopeId = `test-env-${Date.now()}`;
 
     await callbacks.storeEnvelopeStatus(envelopeId, {

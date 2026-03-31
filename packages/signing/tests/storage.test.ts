@@ -1,5 +1,6 @@
-import { describe, it, expect } from 'vitest';
+import { describe, expect } from 'vitest';
 import { randomBytes } from 'node:crypto';
+import { itAllure } from '../../../integration-tests/helpers/allure-test.ts';
 import {
   encrypt,
   decrypt,
@@ -7,10 +8,12 @@ import {
   createArtifactRef,
 } from '../src/storage.js';
 
+const it = itAllure.epic('Agreement Signing');
+
 describe('AES-256-GCM encryption', () => {
   const key = randomBytes(32); // 256-bit key
 
-  it('encrypts and decrypts a string round-trip', () => {
+  it.openspec('OA-SIG-008')('encrypts and decrypts a string round-trip', () => {
     const plaintext = 'ab0472fd-fec1-40d3-8ef5-abf50676e47b';
     const ciphertext = encrypt(plaintext, key);
 
@@ -21,7 +24,7 @@ describe('AES-256-GCM encryption', () => {
     expect(decrypted).toBe(plaintext);
   });
 
-  it('produces different ciphertexts for same plaintext (random IV)', () => {
+  it.openspec('OA-SIG-008')('produces different ciphertexts for same plaintext (random IV)', () => {
     const plaintext = 'same-value';
     const ct1 = encrypt(plaintext, key);
     const ct2 = encrypt(plaintext, key);
@@ -31,7 +34,7 @@ describe('AES-256-GCM encryption', () => {
     expect(decrypt(ct2, key)).toBe(plaintext);
   });
 
-  it('fails to decrypt with wrong key', () => {
+  it.openspec('OA-SIG-008')('fails to decrypt with wrong key', () => {
     const plaintext = 'secret-token';
     const ciphertext = encrypt(plaintext, key);
     const wrongKey = randomBytes(32);
@@ -39,7 +42,7 @@ describe('AES-256-GCM encryption', () => {
     expect(() => decrypt(ciphertext, wrongKey)).toThrow();
   });
 
-  it('fails to decrypt tampered ciphertext', () => {
+  it.openspec('OA-SIG-008')('fails to decrypt tampered ciphertext', () => {
     const plaintext = 'secret-token';
     const ciphertext = encrypt(plaintext, key);
     // Tamper by flipping bits in the encrypted payload (past IV + tag)
@@ -52,7 +55,7 @@ describe('AES-256-GCM encryption', () => {
 });
 
 describe('createDocumentRef', () => {
-  it('creates a ref with sha256 and correct metadata', () => {
+  it.openspec('OA-SIG-008')('creates a ref with sha256 and correct metadata', () => {
     const buffer = Buffer.from('test document content');
     const ref = createDocumentRef(buffer, 'test-nda.docx', 'generated');
 
@@ -73,7 +76,7 @@ describe('createDocumentRef', () => {
 });
 
 describe('createArtifactRef', () => {
-  it('creates a ref with expiration', () => {
+  it.openspec('OA-SIG-013')('creates a ref with expiration', () => {
     const ref = createArtifactRef('https://storage.example.com/signed.pdf', 7200000);
 
     expect(ref.downloadUrl).toBe('https://storage.example.com/signed.pdf');
