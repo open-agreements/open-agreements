@@ -45,27 +45,27 @@
 - [ ] 4.5 Implement polling fallback for `getStatus`
 - [ ] 4.6 Unit tests for OA-SIG-014 through OA-SIG-016
 
-## Phase 5: MCP Tools
+## Phase 5: MCP Tools (4 tools — consolidated)
 
 - [ ] 5.1 Implement `connect_signing_provider` tool
 - [ ] 5.2 Implement `disconnect_signing_provider` tool
-- [ ] 5.3 Implement `upload_signing_document` tool
-- [ ] 5.4 Implement `send_for_signature` tool (draft-only default)
-- [ ] 5.5 Implement `check_signature_status` tool
-- [ ] 5.6 Implement `get_signed_document` tool
-- [ ] 5.7 Unit tests for OA-SIG-017 through OA-SIG-020
-- [ ] 5.8 `npm run check:spec-coverage` green
+- [ ] 5.3 Implement `send_for_signature` tool (accepts file_path, creates draft, returns review URL)
+- [ ] 5.4 Implement `check_signature_status` tool (includes artifact when completed)
+- [ ] 5.5 Unit tests for OA-SIG-017 and OA-SIG-018
+- [ ] 5.6 `npm run check:spec-coverage` green
+- Note: `upload_signing_document` merged into `send_for_signature` (OA-SIG-019 retired)
+- Note: `get_signed_document` merged into `check_signature_status` (OA-SIG-020 retired)
 
 ## Phase 6: Manual End-to-End Verification
 
 - [ ] 6.1 Steven provides DocuSign sandbox credentials
 - [ ] 6.2 Fill bonterms-mutual-nda → verify `{sig_party_1}` replaced with `/sn1/`
 - [ ] 6.3 OAuth: connect to sandbox → verify connection in Firestore
-- [ ] 6.4 send_for_signature → verify draft envelope in DocuSign
+- [ ] 6.4 send_for_signature with file_path → verify draft envelope in DocuSign
 - [ ] 6.5 Visual verification: "Sign Here" tabs appear at anchor locations
 - [ ] 6.6 Sign in sandbox → verify webhook fires → status updated
-- [ ] 6.7 get_signed_document → verify signed PDF downloadable
-- [ ] 6.8 Edited DOCX flow: download → edit → upload → send → sign
+- [ ] 6.7 check_signature_status for completed → verify artifact with download URL
+- [ ] 6.8 Edited DOCX flow: download → edit → send_for_signature → sign
 - [ ] 6.9 Disconnect → verify subsequent calls fail with NO_SIGNING_PROVIDER
 - [ ] 6.10 Audit log: verify envelope creation logged
 

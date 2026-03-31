@@ -106,23 +106,17 @@ The signing package SHALL verify incoming webhook payloads using HMAC-SHA256 and
 ### Requirement: MCP Tool Behavior
 The signing MCP tools SHALL enforce safe defaults and provide clear error messages.
 
-#### Scenario: [OA-SIG-017] send_for_signature defaults to draft never auto-sends
-- **WHEN** `send_for_signature` is called without an explicit `send_immediately` flag
-- **THEN** a draft envelope is created
-- **AND** a review URL is returned
-- **AND** no signing invitations are sent
+#### Scenario: [OA-SIG-017] send_for_signature accepts file_path creates draft and returns review URL
+- **WHEN** `send_for_signature` is called with a `file_path` to a DOCX, signers, and `api_key`
+- **THEN** the file is uploaded to storage and a draft envelope is created
+- **AND** a review URL is returned for the user to review in the signing provider
+- **AND** no signing invitations are sent until the user sends from the provider UI
 
 #### Scenario: [OA-SIG-018] send_for_signature returns error when no provider connected
 - **WHEN** `send_for_signature` is called and no signing provider connection exists for the user's API key
 - **THEN** the tool returns a structured error with code `NO_SIGNING_PROVIDER`
 - **AND** includes instructions to connect via `connect_signing_provider`
+- **AND** no file upload is attempted
 
-#### Scenario: [OA-SIG-019] upload_signing_document stores file with sha256 and returns documentRef
-- **WHEN** a user uploads an edited DOCX via `upload_signing_document`
-- **THEN** the file is stored in Google Cloud Storage
-- **AND** a `documentRef` is returned with `sha256`, `filename`, `mimeType`, and `source: "uploaded"`
-
-#### Scenario: [OA-SIG-020] get_signed_document returns artifactRef with expiring URL
-- **WHEN** `get_signed_document` is called for a completed envelope
-- **THEN** it returns an `artifactRef` with a presigned `downloadUrl` and `expiresAt` timestamp
-- **AND** the URL is valid for download within the expiration window
+<!-- OA-SIG-019: RETIRED — upload_signing_document merged into send_for_signature (OA-SIG-017) -->
+<!-- OA-SIG-020: RETIRED — get_signed_document merged into check_signature_status (artifact included when completed) -->

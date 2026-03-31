@@ -12,7 +12,7 @@ We want the flow to be: user talks to Claude → AI fills the template → user 
 - **NEW**: DocuSign adapter implementing OAuth 2.0 (PKCE), envelope creation, embedded sender view, webhook ingestion, and signed PDF retrieval
 - **NEW**: Per-template `signing.yaml` defining signer roles, signature `{tag}` fields, and provider-specific anchor strings
 - **NEW**: Signature `{tag}` placeholders in DOCX templates (e.g., `{sig_party_1}`) filled by the signing adapter during the fill step — same mechanism as business field tags
-- **NEW**: MCP tools: `connect_signing_provider`, `disconnect_signing_provider`, `upload_signing_document`, `send_for_signature`, `check_signature_status`, `get_signed_document`
+- **NEW**: MCP tools: `connect_signing_provider`, `disconnect_signing_provider`, `send_for_signature`, `check_signature_status`
 - **NEW**: Google Cloud Firestore for encrypted OAuth token storage and audit logging
 - **NEW**: Google Cloud Storage for filled DOCX and signed PDF artifact storage
 - **NEW**: Webhook endpoint for DocuSign Connect status events with HMAC-SHA256 verification
@@ -42,7 +42,7 @@ Signature fields like `{sig_party_1}` are placed in the DOCX template alongside 
 OAuth 2.0 Authorization Code Grant with PKCE. We never store user passwords. Refresh tokens are AES-256 encrypted in Firestore. User identity is keyed by an `open_agreements_api_key` in their MCP config.
 
 ### Decision 3: Default to draft envelope, never auto-send
-`send_for_signature` always creates a draft and returns a DocuSign sender-view URL. The user reviews recipients, tabs, and cover email in DocuSign before sending. Immediate send is only available as an explicit override.
+`send_for_signature` always creates a draft and returns a DocuSign sender-view URL. The user reviews recipients, tabs, and cover email in DocuSign before sending. There is no auto-send override — the user must always review in DocuSign before sending.
 
 ### Decision 4: Provider-neutral adapter with DocuSign first
 The `SigningProvider` interface supports `connect`, `createDraft`, `send`, `getStatus`, `fetchArtifact`, `disconnect`. The DocuSign adapter is the first implementation. Anchor tag formats for Dropbox Sign, Adobe Sign, and PandaDoc are documented in `signing.yaml` but no adapters are built yet.
