@@ -1,22 +1,32 @@
-## 1. Core Analysis Layer (contracts-workspace)
-- [ ] 1.1 Add ANALYSIS_DIR and ANALYSIS_DOCUMENTS_DIR constants to constants.ts
-- [ ] 1.2 Create analysis-types.ts with DocumentType, DocumentClassification, ClauseExtraction, DocumentAnalysis
-- [ ] 1.3 Create analysis-store.ts with read/write/list/staleness/document_id generation
-- [ ] 1.4 Create analysis-indexer.ts with enrichDocumentRecord and buildAnalysisSummary
-- [ ] 1.5 Extend types.ts with optional classification, analyzed, stale fields on DocumentRecord and analysis summary on StatusIndex
-- [ ] 1.6 Update index.ts to re-export new modules
-- [ ] 1.7 Write tests/analysis.test.ts using MemoryProvider
+## 1. Make indexer walk all directories
+- [ ] 1.1 Add IGNORED_DIRS and DOCUMENT_EXTENSIONS to constants.ts
+- [ ] 1.2 Refactor collectWorkspaceDocuments to walk all non-ignored dirs
+- [ ] 1.3 Make DocumentRecord.lifecycle optional
+- [ ] 1.4 Update lint rules to be conditional on lifecycle presence
+- [ ] 1.5 Update existing tests
 
-## 2. MCP Tools (contracts-workspace-mcp)
-- [ ] 2.1 Add save_contract_analysis tool
-- [ ] 2.2 Add read_contract_analysis tool
-- [ ] 2.3 Add list_pending_contracts tool
-- [ ] 2.4 Add search_contracts tool
-- [ ] 2.5 Add suggest_contract_rename tool
-- [ ] 2.6 Wire enrichStatusIndex into status_generate tool
-- [ ] 2.7 Write tests/analysis-tools.test.ts
-- [ ] 2.8 Update tool listing tests
+## 2. Revise core analysis layer
+- [ ] 2.1 Drop document_id from types and store
+- [ ] 2.2 Rename sidecar to .contract.yaml
+- [ ] 2.3 Add document type validation (canonical 15 + custom + raw_type fallback)
+- [ ] 2.4 Add config loading for custom_document_types
+- [ ] 2.5 Implement atomic sidecar writes
+- [ ] 2.6 Add orphan detection
+- [ ] 2.7 Rename tools to index_contract, get_contract_index, list_unindexed_contracts
+- [ ] 2.8 Make get_contract_index dual-mode (single doc + portfolio overview)
+- [ ] 2.9 Update all tests
 
-## 3. Build and Verify
-- [ ] 3.1 Build both packages with tsc
-- [ ] 3.2 Run all tests for both packages
+## 3. BM25 search
+- [ ] 3.1 Add minisearch dependency
+- [ ] 3.2 Create search-index.ts (in-memory build from sidecars)
+- [ ] 3.3 Wire into search_contracts tool
+- [ ] 3.4 Add format:'markdown' option
+- [ ] 3.5 Write tests
+
+## 4. SKILL.md
+- [ ] 4.1 Create contract-indexer SKILL.md
+
+## 5. Build and verify
+- [ ] 5.1 Build both packages
+- [ ] 5.2 Run all tests
+- [ ] 5.3 E2E validation
