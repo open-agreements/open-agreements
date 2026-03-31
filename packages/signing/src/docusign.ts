@@ -74,9 +74,11 @@ export class DocuSignProvider implements SigningProvider {
 
   /**
    * Generate OAuth authorization URL with PKCE.
-   * Returns { url, codeVerifier } — caller must store codeVerifier for handleCallback.
+   * Returns { url, codeVerifier } — caller must store codeVerifier securely
+   * (e.g., in an HttpOnly cookie) for use in handleCallback.
+   * The code verifier is NEVER included in the URL.
    */
-  getAuthUrl(redirectUri: string, state: string): string {
+  getAuthUrl(redirectUri: string, state: string): { url: string; codeVerifier: string } {
     const codeVerifier = generateCodeVerifier();
     const codeChallenge = computeCodeChallenge(codeVerifier);
     const base = authBaseUrl(this.sandbox);
@@ -91,8 +93,10 @@ export class DocuSignProvider implements SigningProvider {
       code_challenge_method: 'S256',
     });
 
-    // Append code_verifier as a hint for the caller to extract and store
-    return `${base}/oauth/auth?${params.toString()}&_code_verifier=${codeVerifier}`;
+    return {
+      url: `${base}/oauth/auth?${params.toString()}`,
+      codeVerifier,
+    };
   }
 
   async handleCallback(
