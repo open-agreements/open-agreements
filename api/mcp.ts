@@ -149,13 +149,14 @@ const SIGNING_TOOLS = [
     name: TOOL_CONNECT_SIGNING,
     description:
       'Connect your DocuSign account for sending agreements for signature. ' +
-      'Returns an OAuth authorization URL to open in your browser.',
+      'Returns a secure OAuth URL to open in your browser.',
     inputSchema: {
       type: 'object' as const,
       properties: {
         provider: { type: 'string', enum: ['docusign'], description: 'Signing provider.' },
-        redirect_uri: { type: 'string', description: 'OAuth redirect URI.' },
+        api_key: { type: 'string', description: 'Your open_agreements_api_key.' },
       },
+      required: ['api_key'] as const,
       additionalProperties: false,
     },
     annotations: { readOnlyHint: false, destructiveHint: false },

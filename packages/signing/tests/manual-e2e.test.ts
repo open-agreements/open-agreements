@@ -112,7 +112,7 @@ describe('Manual E2E: signing config → fill → anchor verification', () => {
       auditLog: async () => {},
     });
 
-    const url = provider.getAuthUrl(
+    const { url, codeVerifier } = provider.getAuthUrl(
       'http://localhost:3000/api/auth/docusign/callback',
       'manual-test-state',
     );
@@ -121,6 +121,8 @@ describe('Manual E2E: signing config → fill → anchor verification', () => {
     expect(url).toContain('d2b5e34b'); // real integration key
     expect(url).toContain('code_challenge_method=S256'); // PKCE
     expect(url).toContain('signature'); // scope
+    expect(url).not.toContain('code_verifier'); // never in URL
+    expect(codeVerifier.length).toBeGreaterThan(0);
   });
 
   it.openspec('OA-SIG-014')('webhook HMAC accepts valid signature and rejects invalid', () => {

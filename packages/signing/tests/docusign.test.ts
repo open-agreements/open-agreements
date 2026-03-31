@@ -26,9 +26,9 @@ const testConfig: DocuSignConfig = {
 // ── OA-SIG-007: OAuth URL generation ────────────────────────────────────────
 
 describe('DocuSign OAuth', () => {
-  it.openspec('OA-SIG-007')('getAuthUrl generates valid URL with PKCE params', () => {
+  it.openspec('OA-SIG-007')('getAuthUrl returns URL with PKCE params and separate codeVerifier', () => {
     const provider = new DocuSignProvider(testConfig);
-    const url = provider.getAuthUrl(testConfig.redirectUri, 'test-state-123');
+    const { url, codeVerifier } = provider.getAuthUrl(testConfig.redirectUri, 'test-state-123');
 
     expect(url).toContain('https://account-d.docusign.com/oauth/auth');
     expect(url).toContain('response_type=code');
@@ -37,17 +37,21 @@ describe('DocuSign OAuth', () => {
     expect(url).toContain('state=test-state-123');
     expect(url).toContain('code_challenge_method=S256');
     expect(url).toContain(encodeURIComponent(testConfig.redirectUri));
+    // Code verifier must NOT be in the URL
+    expect(url).not.toContain('code_verifier');
+    expect(url).not.toContain(codeVerifier);
+    expect(codeVerifier.length).toBeGreaterThan(0);
   });
 
   it.openspec('OA-SIG-007')('uses demo auth URL for sandbox', () => {
     const provider = new DocuSignProvider({ ...testConfig, sandbox: true });
-    const url = provider.getAuthUrl(testConfig.redirectUri, 'state');
+    const { url } = provider.getAuthUrl(testConfig.redirectUri, 'state');
     expect(url).toContain('account-d.docusign.com');
   });
 
   it.openspec('OA-SIG-007')('uses production auth URL when not sandbox', () => {
     const provider = new DocuSignProvider({ ...testConfig, sandbox: false });
-    const url = provider.getAuthUrl(testConfig.redirectUri, 'state');
+    const { url } = provider.getAuthUrl(testConfig.redirectUri, 'state');
     expect(url).toContain('account.docusign.com');
     expect(url).not.toContain('account-d.docusign.com');
   });

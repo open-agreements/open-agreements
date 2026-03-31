@@ -16,7 +16,7 @@ import type { ToolCallResult } from './tools.js';
 type JsonSchema = Record<string, unknown>;
 type SigningContext = {
   provider: {
-    getAuthUrl(redirectUri: string, state: string): string;
+    getAuthUrl(redirectUri: string, state: string): { url: string; codeVerifier: string };
     createDraft(documentRef: unknown, metadata: unknown, connection?: unknown, accessToken?: string): Promise<unknown>;
     send(draftId: string, connection?: unknown, accessToken?: string): Promise<unknown>;
     getStatus(envelopeId: string, connection?: unknown, accessToken?: string): Promise<unknown>;
@@ -59,7 +59,7 @@ function requireContext(): SigningContext {
 
 const ConnectSchema = z.object({
   provider: z.enum(['docusign']).default('docusign'),
-  redirect_uri: z.string().url().optional(),
+  api_key: z.string().min(1),
 });
 
 const DisconnectSchema = z.object({
@@ -113,29 +113,28 @@ function validateDocxFile(filePath: string): string | null {
 export const signingTools: ToolDefinition[] = [
   {
     name: 'connect_signing_provider',
-    description: 'Connect your DocuSign account for sending agreements for signature. Returns an OAuth authorization URL to open in your browser.',
+    description: 'Connect your DocuSign account for sending agreements for signature. Returns a secure OAuth URL to open in your browser.',
     inputSchema: {
       type: 'object',
       properties: {
         provider: { type: 'string', enum: ['docusign'], description: 'Signing provider.' },
-        redirect_uri: { type: 'string', description: 'OAuth redirect URI.' },
+        api_key: { type: 'string', description: 'Your open_agreements_api_key.' },
       },
+      required: ['api_key'],
       additionalProperties: false,
     },
     annotations: { readOnlyHint: false, destructiveHint: false },
     invoke: async (args) => {
       const input = ConnectSchema.parse(args ?? {});
       try {
-        const ctx = requireContext();
-        const url = ctx.provider.getAuthUrl(
-          input.redirect_uri
-            || process.env.OA_DOCUSIGN_REDIRECT_URI?.trim()
-            || 'https://openagreements.ai/api/auth/docusign/callback',
-          `mcp-${Date.now()}`,
-        );
+        requireContext(); // Verify signing is configured
+        // Return the secure connect URL — PKCE verifier is stored in HttpOnly cookies,
+        // never exposed in the URL. The connect handler generates its own PKCE challenge.
+        const baseUrl = process.env.OA_BASE_URL?.trim() || 'https://openagreements.ai';
+        const connectUrl = `${baseUrl}/api/auth/docusign/connect?key=${encodeURIComponent(input.api_key)}`;
         return ok('connect_signing_provider', {
           message: 'Open this URL in your browser to connect DocuSign:',
-          auth_url: url,
+          auth_url: connectUrl,
           provider: input.provider,
         });
       } catch (e) {
