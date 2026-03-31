@@ -12,7 +12,6 @@ The terms below are incorporated into and form part of this agreement.
 | **Employee** | {employee_name} |
 | **Employee Title / Position** | {employee_title} |
 | **Effective Date** | {effective_date} |
-| **Governing Law** | {governing_law} |
 | **Confidentiality** | |
 | *Confidentiality — Trade Secrets Duration* | {confidentiality_trade_secret_duration} |
 | *Confidentiality — Other Confidential Information Duration* | {confidentiality_other_duration} |
@@ -130,7 +129,7 @@ Employee may not assign this agreement or any rights or obligations under it. Em
 
 ### 20. Governing Law, Venue, and Dispute Process
 
-This agreement is governed by the law listed in Cover Terms, including Wyo. Stat. § 1-23-108 for contracts entered into on or after July 1, 2025. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law.
+This agreement is governed by and construed in accordance with the laws of the State of Wyoming, including Wyo. Stat. § 1-23-108 for contracts entered into on or after July 1, 2025. Disputes will be resolved in the state and federal courts located in Wyoming, subject to non-waivable rights under applicable law.
 
 ### 21. Entire Agreement, Amendment, Waiver, and Electronic Signatures
 

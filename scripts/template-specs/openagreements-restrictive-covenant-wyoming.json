@@ -23,7 +23,6 @@
         { "label": "Employee", "value": "{employee_name}" },
         { "label": "Employee Title / Position", "value": "{employee_title}", "condition": "employee_title" },
         { "label": "Effective Date", "value": "{effective_date}" },
-        { "label": "Governing Law", "value": "{governing_law}" },
         { "label": "Confidentiality", "value": "" },
         { "label": "Trade Secrets Duration", "value": "{confidentiality_trade_secret_duration}", "sub": true },
         { "label": "Other Confidential Information Duration", "value": "{confidentiality_other_duration}", "sub": true },
@@ -148,7 +147,7 @@
         },
         {
           "heading": "Governing Law, Venue, and Dispute Process",
-          "body": "This agreement is governed by the law listed in Cover Terms, including Wyo. Stat. \u00a7 1-23-108 for contracts entered into on or after July 1, 2025. Disputes will be resolved in the courts of the Governing Law state, subject to non-waivable rights under applicable law."
+          "body": "This agreement is governed by and construed in accordance with the laws of the State of Wyoming, including Wyo. Stat. \u00a7 1-23-108 for contracts entered into on or after July 1, 2025. Disputes will be resolved in the state and federal courts located in Wyoming, subject to non-waivable rights under applicable law."
         },
         {
           "heading": "Entire Agreement, Amendment, Waiver, and Electronic Signatures",
