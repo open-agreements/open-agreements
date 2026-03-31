@@ -156,16 +156,22 @@
       ]
     },
     "signature": {
-      "mode": "two-party",
+      "mode": "stacked-two-party",
       "section_label": "Signature Page",
       "heading_title": "Signatures",
       "preamble": "By signing this agreement, each party acknowledges and agrees to the restrictive covenant obligations above. Employee confirms having read and understood each provision, including the Cover Terms.",
       "party_a": "Employer",
-      "party_b": "Employee",
-      "rows": [
+      "party_a_rows": [
+        { "label": "Company", "value": "{employer_name}" },
         { "label": "Signature" },
-        { "label": "Print Name", "left": "{employer_name}", "right": "{employee_name}" },
-        { "label": "Title", "left_only": true },
+        { "label": "Print Name" },
+        { "label": "Title" },
+        { "label": "Date" }
+      ],
+      "party_b": "Employee",
+      "party_b_rows": [
+        { "label": "Signature" },
+        { "label": "Print Name", "value": "{employee_name}" },
         { "label": "Date" }
       ]
     }

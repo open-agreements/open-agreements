@@ -52,15 +52,15 @@ fields:
     section: Signature Block
   - name: party_1_signatory_name
     type: string
-    description: Full legal name of the first party's signatory
+    description: Name of the human individual who signs on behalf of the first party (not the company name)
     section: Signature Block
   - name: party_1_signatory_title
     type: string
-    description: Title/role of the first party's signatory (entity only)
+    description: Title of the human individual signing on behalf of the first party (e.g., CEO). Entity signatories only
     section: Signature Block
   - name: party_1_signatory_company
     type: string
-    description: Company name for the first party signatory (entity only)
+    description: Legal entity name of the first party (not the person signing). Entity signatories only
     section: Signature Block
   - name: party_1_signatory_email
     type: string
@@ -76,15 +76,15 @@ fields:
     section: Signature Block
   - name: party_2_signatory_name
     type: string
-    description: Full legal name of the second party's signatory
+    description: Name of the human individual who signs on behalf of the second party (not the company name)
     section: Signature Block
   - name: party_2_signatory_title
     type: string
-    description: Title/role of the second party's signatory (entity only)
+    description: Title of the human individual signing on behalf of the second party (e.g., CEO). Entity signatories only
     section: Signature Block
   - name: party_2_signatory_company
     type: string
-    description: Company name for the second party signatory (entity only)
+    description: Legal entity name of the second party (not the person signing). Entity signatories only
     section: Signature Block
   - name: party_2_signatory_email
     type: string

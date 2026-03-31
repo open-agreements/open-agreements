@@ -795,6 +795,39 @@ function onePartySignatureTable(signatureSpec, style, nilBorder, ruleBorder) {
   });
 }
 
+function stackedSignatureBlock(partyName, rows, style, nilBorder, ruleBorder) {
+  return new Table({
+    width: { size: 10070, type: WidthType.DXA },
+    layout: TableLayoutType.FIXED,
+    columnWidths: style.table_widths.signature_one_party,
+    borders: {
+      top: nilBorder,
+      left: nilBorder,
+      bottom: nilBorder,
+      right: nilBorder,
+      insideH: nilBorder,
+      insideV: nilBorder,
+    },
+    rows: [
+      new TableRow({
+        children: [
+          signatureLabelCell('', '', style, nilBorder),
+          signatureHeaderCell(partyName.toUpperCase(), style, nilBorder),
+        ],
+      }),
+      ...rows.map((row) =>
+        new TableRow({
+          height: { value: style.sizes.signature_row_height, rule: HeightRule.ATLEAST },
+          children: [
+            signatureLabelCell(row.label, row.hint, style, nilBorder),
+            signatureLineCell(row.value ?? '', style, nilBorder, ruleBorder),
+          ],
+        })
+      ),
+    ],
+  });
+}
+
 function renderMarkdown(spec) {
   const lines = [];
   const { document, sections } = spec;
@@ -868,6 +901,18 @@ function renderMarkdown(spec) {
       }
       lines.push('');
     }
+  } else if (sections.signature.mode === 'stacked-two-party') {
+    for (const { party, rows } of [
+      { party: sections.signature.party_a, rows: sections.signature.party_a_rows },
+      { party: sections.signature.party_b, rows: sections.signature.party_b_rows },
+    ]) {
+      lines.push(`**${party}**`);
+      lines.push('');
+      for (const row of rows) {
+        lines.push(`${row.label}: ${row.value || '_______________'}`);
+      }
+      lines.push('');
+    }
   } else {
     lines.push(`**${sections.signature.party}**`);
     lines.push('');
@@ -905,9 +950,19 @@ export function renderCoverStandardSignatureV1(spec, style) {
     return clauseParagraphs(idx + 1, clauseItem, style, { terms: termsForClause });
   });
 
-  const signatureTable = sections.signature.mode === 'two-party'
-    ? twoPartySignatureTable(sections.signature, style, nilBorder, ruleBorder)
-    : onePartySignatureTable(sections.signature, style, nilBorder, ruleBorder);
+  let signatureElements;
+  if (sections.signature.mode === 'stacked-two-party') {
+    signatureElements = [
+      stackedSignatureBlock(sections.signature.party_a, sections.signature.party_a_rows, style, nilBorder, ruleBorder),
+      new Paragraph({ spacing: { before: 400, after: 0 }, children: [] }),
+      stackedSignatureBlock(sections.signature.party_b, sections.signature.party_b_rows, style, nilBorder, ruleBorder),
+    ];
+  } else {
+    const signatureTable = sections.signature.mode === 'two-party'
+      ? twoPartySignatureTable(sections.signature, style, nilBorder, ruleBorder)
+      : onePartySignatureTable(sections.signature, style, nilBorder, ruleBorder);
+    signatureElements = [signatureTable];
+  }
 
   const doc = new Document({
     styles: buildDocumentStyles(style),
@@ -953,7 +1008,7 @@ export function renderCoverStandardSignatureV1(spec, style) {
             terms: [],
             size: 16,
           }),
-          signatureTable,
+          ...signatureElements,
         ],
         style,
         nilBorder

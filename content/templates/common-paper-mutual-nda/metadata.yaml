@@ -59,15 +59,22 @@ fields:
     section: Signature Block
   - name: party_1_name
     type: string
-    description: Full legal name of the first party's signatory
+    description: >-
+      Name of the human individual who signs on behalf of the first party.
+      This is the person's name (e.g., Jane Smith), not the company name.
+      The company name goes in party_1_company.
     section: Signature Block
   - name: party_1_title
     type: string
-    description: Title/role of the first party's signatory (entity only)
+    description: >-
+      Title or role of the human individual signing (e.g., CEO, VP of Engineering).
+      Entity signatories only.
     section: Signature Block
   - name: party_1_company
     type: string
-    description: Company name for the first party (entity only)
+    description: >-
+      Legal entity name of the first party (e.g., Acme Corp, Inc.).
+      This is the company name, not the person signing.
     section: Signature Block
   - name: party_1_email
     type: string
@@ -83,15 +90,22 @@ fields:
     section: Signature Block
   - name: party_2_name
     type: string
-    description: Full legal name of the second party's signatory
+    description: >-
+      Name of the human individual who signs on behalf of the second party.
+      This is the person's name (e.g., John Doe), not the company name.
+      The company name goes in party_2_company.
     section: Signature Block
   - name: party_2_title
     type: string
-    description: Title/role of the second party's signatory (entity only)
+    description: >-
+      Title or role of the human individual signing (e.g., CEO, VP of Engineering).
+      Entity signatories only.
     section: Signature Block
   - name: party_2_company
     type: string
-    description: Company name for the second party (entity only)
+    description: >-
+      Legal entity name of the second party (e.g., Widget Inc.).
+      This is the company name, not the person signing.
     section: Signature Block
   - name: party_2_email
     type: string

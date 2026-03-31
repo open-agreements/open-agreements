@@ -18,11 +18,15 @@ fields:
   # --- Parties (on cover page) ---
   - name: employer_name
     type: string
-    description: Legal name of the employer
+    description: >-
+      Legal entity name of the employer (e.g., Rocky Mountain Software, Inc.).
+      This is the company name, not the person who signs on behalf of the company.
     section: Parties
   - name: employee_name
     type: string
-    description: Full legal name of the employee
+    description: >-
+      Full legal name of the employee (the human individual).
+      This person signs in their personal capacity.
     section: Parties
   - name: employee_title
     type: string

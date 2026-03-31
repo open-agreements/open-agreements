@@ -58,15 +58,15 @@ fields:
     section: Signature Block
   - name: company_signatory_name
     type: string
-    description: Full legal name of the Company's signatory
+    description: Name of the human individual who signs on behalf of the Company (not the company name)
     section: Signature Block
   - name: company_signatory_title
     type: string
-    description: Title/role of the Company's signatory (entity only)
+    description: Title of the human individual signing on behalf of the Company (e.g., CEO). Entity signatories only
     section: Signature Block
   - name: company_signatory_company
     type: string
-    description: Company name for the Company signatory (entity only)
+    description: Legal entity name of the Company (not the person signing). Entity signatories only
     section: Signature Block
   - name: company_signatory_email
     type: string
@@ -82,15 +82,15 @@ fields:
     section: Signature Block
   - name: contractor_signatory_name
     type: string
-    description: Full legal name of the Contractor's signatory
+    description: Name of the human individual who signs on behalf of the Contractor (not the company name)
     section: Signature Block
   - name: contractor_signatory_title
     type: string
-    description: Title/role of the Contractor's signatory (entity only)
+    description: Title of the human individual signing on behalf of the Contractor (e.g., CEO). Entity signatories only
     section: Signature Block
   - name: contractor_signatory_company
     type: string
-    description: Company name for the Contractor signatory (entity only)
+    description: Legal entity name of the Contractor (not the person signing). Entity signatories only
     section: Signature Block
   - name: contractor_signatory_email
     type: string

@@ -12,11 +12,11 @@ attribution_text: >-
 fields:
   - name: customer_name
     type: string
-    description: Full legal name of the customer
+    description: Full legal name of the customer (the entity name if a company, or the individual's name)
     section: Parties
   - name: provider_name
     type: string
-    description: Full legal name of the provider
+    description: Full legal name of the provider (the entity name if a company, or the individual's name)
     section: Parties
   - name: effective_date
     type: date

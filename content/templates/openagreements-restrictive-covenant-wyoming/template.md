@@ -141,8 +141,9 @@ By signing this agreement, each party acknowledges and agrees to the restrictive
 
 **Employer**
 
+Company: {employer_name}
 Signature: _______________
-Print Name: {employer_name}
+Print Name: _______________
 Title: _______________
 Date: _______________
 

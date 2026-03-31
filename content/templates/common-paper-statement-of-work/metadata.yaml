@@ -132,15 +132,15 @@ fields:
     section: Signature Block
   - name: provider_signatory_name
     type: string
-    description: Full legal name of the Provider's signatory
+    description: Name of the human individual who signs on behalf of the Provider (not the company name)
     section: Signature Block
   - name: provider_signatory_title
     type: string
-    description: Title/role of the Provider's signatory (entity only)
+    description: Title of the human individual signing on behalf of the Provider (e.g., CEO). Entity signatories only
     section: Signature Block
   - name: provider_signatory_company
     type: string
-    description: Company name for the Provider signatory (entity only)
+    description: Legal entity name of the Provider (not the person signing). Entity signatories only
     section: Signature Block
   - name: provider_signatory_email
     type: string
@@ -156,15 +156,15 @@ fields:
     section: Signature Block
   - name: customer_signatory_name
     type: string
-    description: Full legal name of the Customer's signatory
+    description: Name of the human individual who signs on behalf of the Customer (not the company name)
     section: Signature Block
   - name: customer_signatory_title
     type: string
-    description: Title/role of the Customer's signatory (entity only)
+    description: Title of the human individual signing on behalf of the Customer (e.g., CEO). Entity signatories only
     section: Signature Block
   - name: customer_signatory_company
     type: string
-    description: Company name for the Customer signatory (entity only)
+    description: Legal entity name of the Customer (not the person signing). Entity signatories only
     section: Signature Block
   - name: customer_signatory_email
     type: string

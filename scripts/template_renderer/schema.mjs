@@ -67,6 +67,17 @@ const onePartySignatureSchema = z.object({
   rows: z.array(onePartySignatureRowSchema).min(1),
 });
 
+const stackedTwoPartySignatureSchema = z.object({
+  mode: z.literal('stacked-two-party'),
+  section_label: textSchema,
+  heading_title: textSchema,
+  preamble: textSchema,
+  party_a: textSchema,
+  party_a_rows: z.array(onePartySignatureRowSchema).min(1),
+  party_b: textSchema,
+  party_b_rows: z.array(onePartySignatureRowSchema).min(1),
+});
+
 export const contractSpecSchema = z.object({
   template_id: z.string().regex(idPattern),
   layout_id: z.string().regex(idPattern),
@@ -94,7 +105,7 @@ export const contractSpecSchema = z.object({
       heading_title: textSchema,
       clauses: z.array(clauseSchema).min(1),
     }),
-    signature: z.union([twoPartySignatureSchema, onePartySignatureSchema]),
+    signature: z.union([twoPartySignatureSchema, onePartySignatureSchema, stackedTwoPartySignatureSchema]),
   }),
 });
 

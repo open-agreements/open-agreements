@@ -59,15 +59,15 @@ fields:
     section: Signature Block
   - name: recipient_signatory_name
     type: string
-    description: Full legal name of the Recipient's signatory
+    description: Name of the human individual who signs on behalf of the Recipient (not the company name)
     section: Signature Block
   - name: recipient_signatory_title
     type: string
-    description: Title/role of the Recipient's signatory (entity only)
+    description: Title of the human individual signing on behalf of the Recipient (e.g., CEO). Entity signatories only
     section: Signature Block
   - name: recipient_signatory_company
     type: string
-    description: Company name for the Recipient signatory (entity only)
+    description: Legal entity name of the Recipient (not the person signing). Entity signatories only
     section: Signature Block
   - name: recipient_signatory_email
     type: string
