@@ -244,14 +244,16 @@ async function handleSigningToolCall(
         '../packages/signing/src/context.js'
       );
 
-      const integrationKey = process.env.OA_DOCUSIGN_INTEGRATION_KEY;
-      const secretKey = process.env.OA_DOCUSIGN_SECRET_KEY;
-      const encryptionKeyHex = process.env.OA_GCLOUD_ENCRYPTION_KEY;
+      // Trim env vars — Vercel env vars may have trailing whitespace/newlines
+      const env = (key: string) => process.env[key]?.trim();
+      const integrationKey = env('OA_DOCUSIGN_INTEGRATION_KEY');
+      const secretKey = env('OA_DOCUSIGN_SECRET_KEY');
+      const encryptionKeyHex = env('OA_GCLOUD_ENCRYPTION_KEY');
 
       if (integrationKey && secretKey && encryptionKeyHex) {
         // Parse SA credentials from env var (Vercel has no ADC)
         let gcloudCredentials: { client_email: string; private_key: string; [key: string]: unknown } | undefined;
-        const credentialsJson = process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON;
+        const credentialsJson = env('GOOGLE_APPLICATION_CREDENTIALS_JSON');
         if (credentialsJson) {
           try {
             gcloudCredentials = JSON.parse(credentialsJson);
@@ -264,13 +266,13 @@ async function handleSigningToolCall(
           docusign: {
             integrationKey,
             secretKey,
-            redirectUri: process.env.OA_DOCUSIGN_REDIRECT_URI
+            redirectUri: env('OA_DOCUSIGN_REDIRECT_URI')
               || 'https://openagreements.ai/api/auth/docusign/callback',
-            hmacSecret: process.env.OA_DOCUSIGN_HMAC_SECRET,
-            sandbox: process.env.OA_DOCUSIGN_SANDBOX !== 'false',
+            hmacSecret: env('OA_DOCUSIGN_HMAC_SECRET'),
+            sandbox: env('OA_DOCUSIGN_SANDBOX') !== 'false',
           },
           gcloud: {
-            projectId: process.env.GOOGLE_CLOUD_PROJECT || 'open-agreements',
+            projectId: env('GOOGLE_CLOUD_PROJECT') || 'open-agreements',
             bucketName: 'openagreements-signing-artifacts',
             encryptionKey: Buffer.from(encryptionKeyHex, 'hex'),
             ...(gcloudCredentials ? { credentials: gcloudCredentials } : {}),
