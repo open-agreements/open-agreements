@@ -61,6 +61,13 @@ export interface GenerateEmploymentMemoOptions {
   baselineTemplateId?: string;
 }
 
+interface DurationValidation {
+  valid: boolean;
+  severity: FindingSeverity;
+  summary: string;
+  citation: string;
+}
+
 interface ClauseSignal {
   id: string;
   field: string;
@@ -70,18 +77,21 @@ interface ClauseSignal {
   presentSummary: string;
   followUpQuestionWhenMissing?: string;
   isPresent?: (value: string) => boolean;
+  validateValue?: (value: string) => DurationValidation | null;
 }
 
 const EMPLOYMENT_TEMPLATE_IDS = new Set<string>([
   'openagreements-employment-offer-letter',
   'openagreements-employee-ip-inventions-assignment',
   'openagreements-employment-confidentiality-acknowledgement',
+  'openagreements-restrictive-covenant-wyoming',
 ]);
 
 const TEMPLATE_SOURCE_DATES: Record<string, string> = {
   'openagreements-employment-offer-letter': '2026-02-10',
   'openagreements-employee-ip-inventions-assignment': '2026-02-10',
   'openagreements-employment-confidentiality-acknowledgement': '2026-02-10',
+  'openagreements-restrictive-covenant-wyoming': '2026-03-29',
 };
 
 const MEMO_VERSION = '1.0.0';
@@ -108,6 +118,48 @@ const ADVICE_BLOCK_PATTERNS: RegExp[] = [
   /\bi advise\b/i,
   /\bthe right strategy\b/i,
 ];
+
+function parseDurationMonths(value: string): number | null {
+  const normalized = value.toLowerCase().trim();
+  const yearsMatch = normalized.match(/^(\d+)\s*years?$/);
+  if (yearsMatch) return parseInt(yearsMatch[1], 10) * 12;
+  const monthsMatch = normalized.match(/^(\d+)\s*months?$/);
+  if (monthsMatch) return parseInt(monthsMatch[1], 10);
+  return null;
+}
+
+function validateCovenantDuration(value: string): DurationValidation | null {
+  const months = parseDurationMonths(value);
+  if (months === null) return null;
+  if (months > 60) {
+    return {
+      valid: false,
+      severity: 'high',
+      summary:
+        `Duration of ${value} is almost certainly unenforceable. No US jurisdiction routinely upholds employment non-competes exceeding 5 years. Wyoming courts may void the entire agreement rather than reform it (Hassler v. Circle C Resources, 2022 WY 28).`,
+      citation: 'Hassler v. Circle C Resources, 2022 WY 28; Mayer Brown US Restrictive Covenants guidance.',
+    };
+  }
+  if (months > 24) {
+    return {
+      valid: false,
+      severity: 'high',
+      summary:
+        `Duration of ${value} exceeds 24 months. No Wyoming court has upheld a non-compete exceeding 2 years. Hassler v. Circle C Resources (2022 WY 28) struck down a 24-month provision as overbroad. Mayer Brown guidance: 1-2 years is normally the outer range of reasonableness.`,
+      citation: 'Hassler v. Circle C Resources, 2022 WY 28; Mayer Brown US Restrictive Covenants (2024).',
+    };
+  }
+  if (months > 12) {
+    return {
+      valid: true,
+      severity: 'low',
+      summary:
+        `Duration of ${value} exceeds 12 months. While 12 months is the most common enforceable duration, 24-month periods have been used in executive agreements. Ensure scope is narrowly tailored to support the longer duration.`,
+      citation: 'Compass Minerals SEC filing (24-month CEO provision); Mayer Brown US Restrictive Covenants (2024).',
+    };
+  }
+  return null;
+}
 
 const CLAUSE_SIGNALS: Record<string, ClauseSignal[]> = {
   'openagreements-employment-offer-letter': [
@@ -247,6 +299,80 @@ const CLAUSE_SIGNALS: Record<string, ClauseSignal[]> = {
         'Post-employment obligations signal is present based on post_employment_obligations.',
       followUpQuestionWhenMissing:
         'Can licensed counsel confirm whether post-employment confidentiality language is complete?',
+    },
+  ],
+  'openagreements-restrictive-covenant-wyoming': [
+    {
+      id: 'restriction-pathways',
+      field: 'restriction_pathways',
+      missingSeverity: 'high',
+      missingSummary:
+        'Restriction pathway is blank. Under Wyoming Stat. section 1-23-108, non-compete-adjacent covenants require a lawful statutory pathway. The template cannot determine enforceability without this field.',
+      presentSummary:
+        'Restriction pathway is specified.',
+      followUpQuestionWhenMissing:
+        'Can licensed counsel confirm which Wyoming Stat. section 1-23-108 pathway applies to this employee?',
+    },
+    {
+      id: 'worker-category',
+      field: 'worker_category',
+      missingSeverity: 'high',
+      missingSummary:
+        'Worker category is blank. Wyoming Stat. section 1-23-108 enforceability depends on whether the employee is executive, management, professional staff, physician, or other.',
+      presentSummary:
+        'Worker category is specified.',
+      followUpQuestionWhenMissing:
+        'Can licensed counsel confirm the employee role classification under Wyoming Stat. section 1-23-108?',
+    },
+    {
+      id: 'competitive-business-definition',
+      field: 'competitive_business_definition',
+      missingSeverity: 'medium',
+      missingSummary:
+        'Competitive business definition is blank. An overbroad or missing definition weakens enforceability, especially given Wyoming courts may void the entire agreement rather than reform it.',
+      presentSummary:
+        'Competitive business definition is specified.',
+      followUpQuestionWhenMissing:
+        'Can licensed counsel confirm whether the competitive business definition is sufficiently narrow?',
+    },
+    {
+      id: 'covered-customer-period',
+      field: 'covered_customer_period',
+      missingSeverity: 'medium',
+      missingSummary:
+        'Covered customer lookback period is blank. The definition of Covered Customers requires a lookback period to determine scope.',
+      presentSummary:
+        'Covered customer lookback period is specified.',
+    },
+    {
+      id: 'noncompete-duration',
+      field: 'noncompete_duration',
+      missingSeverity: 'low',
+      missingSummary:
+        'Non-compete duration is blank.',
+      presentSummary:
+        'Non-compete duration is specified.',
+      validateValue: validateCovenantDuration,
+    },
+    {
+      id: 'employee-nonsolicit-duration',
+      field: 'employee_nonsolicit_duration',
+      missingSeverity: 'low',
+      missingSummary:
+        'Employee non-solicitation duration is blank.',
+      presentSummary:
+        'Employee non-solicitation duration is specified.',
+      validateValue: validateCovenantDuration,
+    },
+    {
+      id: 'customer-nonsolicit-duration',
+      field: 'customer_nonsolicit_duration',
+      missingSeverity: 'low',
+      missingSummary:
+        'Customer non-solicitation duration is blank.',
+      presentSummary:
+        'Customer non-solicitation duration is specified.',
+      validateValue: validateCovenantDuration,
     },
   ],
 };
@@ -471,6 +597,35 @@ function buildClauseFindings(args: {
         ? [signal.followUpQuestionWhenMissing]
         : [],
     });
+
+    if (isPresent && signal.validateValue) {
+      const validation = signal.validateValue(observedValue);
+      if (validation) {
+        findings.push({
+          id: `clause-${args.templateId}-${signal.id}-range`,
+          category: 'clause_presence',
+          severity: validation.severity,
+          confidence: 'high',
+          summary: validation.summary,
+          evidence: [
+            {
+              type: 'field',
+              reference: `${args.templateId}.${signal.field}`,
+              value: observedValue,
+            },
+          ],
+          citations: [
+            {
+              source: validation.citation,
+              source_date: sourceDate,
+            },
+          ],
+          follow_up_questions: validation.valid
+            ? []
+            : ['Can licensed counsel confirm whether this duration is enforceable under Wyoming law?'],
+        });
+      }
+    }
   }
 
   return findings;

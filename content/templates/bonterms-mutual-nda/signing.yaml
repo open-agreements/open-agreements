@@ -1,0 +1,35 @@
+signers:
+  - role: party_1
+    nameField: party_1_name
+    signatureField: sig_party_1
+    dateField: date_party_1
+    routingOrder: 1
+  - role: party_2
+    nameField: party_2_name
+    signatureField: sig_party_2
+    dateField: date_party_2
+    routingOrder: 2
+
+providerAnchors:
+  docusign:
+    sig_party_1: "/sn1/"
+    sig_party_2: "/sn2/"
+    date_party_1: "/ds1/"
+    date_party_2: "/ds2/"
+  dropboxsign:
+    sig_party_1: "[sig|req|signer1]"
+    sig_party_2: "[sig|req|signer2]"
+    date_party_1: "[date|req|signer1]"
+    date_party_2: "[date|req|signer2]"
+  adobesign:
+    sig_party_1: "{{sig1_es_:signer1:signature}}"
+    sig_party_2: "{{sig2_es_:signer2:signature}}"
+    date_party_1: "{{date1_es_:signer1:date}}"
+    date_party_2: "{{date2_es_:signer2:date}}"
+  pandadoc:
+    sig_party_1: "{{signature:party_1}}"
+    sig_party_2: "{{signature:party_2}}"
+    date_party_1: "{{date:party_1}}"
+    date_party_2: "{{date:party_2}}"
+
+emailSubjectTemplate: "Bonterms Mutual NDA — {{party_1_name}} / {{party_2_name}}"

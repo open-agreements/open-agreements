@@ -12,6 +12,7 @@ const SPEC_PATHS = [
   'scripts/template-specs/openagreements-employment-offer-letter.json',
   'scripts/template-specs/openagreements-employee-ip-inventions-assignment.json',
   'scripts/template-specs/openagreements-employment-confidentiality-acknowledgement.json',
+  'scripts/template-specs/openagreements-restrictive-covenant-wyoming.json',
 ];
 
 async function writeDocx(doc, outPath) {

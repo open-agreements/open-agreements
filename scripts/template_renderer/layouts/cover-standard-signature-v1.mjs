@@ -358,7 +358,7 @@ function rowHeadingCell(titleText, subtitleText, style, nilBorder, ruleBorder) {
       bottom: ruleBorder,
       right: nilBorder,
     },
-    margins: { top: 144, left: 115, bottom: 144, right: 115 },
+    margins: { top: COVER_CELL_MARGIN.top, left: COVER_CELL_MARGIN.outer, bottom: COVER_CELL_MARGIN.bottom, right: COVER_CELL_MARGIN.outer },
     verticalAlign: VerticalAlign.CENTER,
     children: [
       new Paragraph({
@@ -388,22 +388,46 @@ function rowHeadingCell(titleText, subtitleText, style, nilBorder, ruleBorder) {
   });
 }
 
+// Cover term row layout constants
+const COVER_CELL_MARGIN = { top: 80, bottom: 80, outer: 115, subIndent: 345 };
+const COVER_GROUP_HEADER_SPACER = { line: 120, fontSize: 4, char: '\u200B' };
+const COVER_GROUP_HEADER_LINE_SPACING = 240; // single spacing (240/240 = 1.0 lines)
+const COVER_GROUP_HEADER_HEIGHT_RATIO = 1.13;
+
+function isGroupHeaderRow(row) {
+  return !row.sub && row.value === '';
+}
+
 function keyLabelCell(row, style, nilBorder, ruleBorder) {
-  const labelText = row.condition ? `{IF ${row.condition}}${row.label}` : row.label;
+  const isSub = row.sub === true;
+  const isGroupHeader = isGroupHeaderRow(row);
   return new TableCell({
     borders: horizontalBorders(ruleBorder, nilBorder),
-    margins: { top: 144, left: 115, bottom: 144, right: 115 },
+    margins: { top: COVER_CELL_MARGIN.top, left: isSub ? COVER_CELL_MARGIN.subIndent : COVER_CELL_MARGIN.outer, bottom: COVER_CELL_MARGIN.bottom, right: COVER_CELL_MARGIN.outer },
     verticalAlign: VerticalAlign.CENTER,
     children: [
+      // Group headers get a line break paragraph before the label for consistent spacing
+      // (works regardless of single/multi-line wrapping; before-paragraph spacing only
+      // gets respected when there's an actual preceding paragraph)
+      ...(isGroupHeader
+        ? [new Paragraph({ spacing: { after: 0, line: COVER_GROUP_HEADER_SPACER.line }, children: [new TextRun({ text: COVER_GROUP_HEADER_SPACER.char, size: COVER_GROUP_HEADER_SPACER.fontSize })] })]
+        : []),
+      // For conditional sub-rows, put {IF} in a separate zero-height paragraph so docx-templates
+      // can remove it cleanly without leaving an empty paragraph artifact.
+      // For group headers, put {IF} inline to avoid corrupting cell properties.
+      ...(row.condition && isSub
+        ? [new Paragraph({ spacing: { after: 0, line: 0 }, children: [new TextRun({ text: `{IF ${row.condition}}`, size: 1 })] })]
+        : []),
       new Paragraph({
-        spacing: { after: row.hint ? 10 : 0, line: style.spacing.line },
+        spacing: { before: 0, after: row.hint ? 10 : 0, line: isGroupHeader ? COVER_GROUP_HEADER_LINE_SPACING : style.spacing.line },
         children: [
           new TextRun({
-            text: labelText,
+            text: (row.condition && !isSub) ? `{IF ${row.condition}}${row.label}` : row.label,
             font: style.fonts.body,
-            size: 22,
-            bold: true,
-            color: style.colors.ink,
+            size: isSub ? 20 : 22,
+            bold: !isSub,
+            italics: isSub,
+            color: isSub ? style.colors.ink_soft : style.colors.ink,
           }),
         ],
       }),
@@ -426,20 +450,25 @@ function keyLabelCell(row, style, nilBorder, ruleBorder) {
   });
 }
 
-function keyValueCell(row, style, nilBorder, ruleBorder) {
+function keyValueCell(row, style, nilBorder, ruleBorder, opts = {}) {
   const valueText = row.condition ? `${row.value}{END-IF}` : row.value;
+  const lines = valueText.split('\n');
+  const valueParagraphs = lines.map((line, i) =>
+    bodyParagraph(line, style, { size: 22, after: i < lines.length - 1 ? 40 : (row.note ? 40 : 0), terms: opts.terms })
+  );
   return new TableCell({
     borders: horizontalBorders(ruleBorder, nilBorder),
-    margins: { top: 144, left: 115, bottom: 144, right: 115 },
+    margins: { top: COVER_CELL_MARGIN.top, left: COVER_CELL_MARGIN.outer, bottom: COVER_CELL_MARGIN.bottom, right: COVER_CELL_MARGIN.outer },
     verticalAlign: VerticalAlign.CENTER,
     children: [
-      bodyParagraph(valueText, style, { size: 22, after: row.note ? 40 : 0 }),
+      ...valueParagraphs,
       ...(row.note ? [noteParagraph(row.note, style)] : []),
     ],
   });
 }
 
-function coverTable(rows, headingTitle, subtitle, style, nilBorder, ruleBorder) {
+function coverTable(rows, headingTitle, subtitle, style, nilBorder, ruleBorder, opts = {}) {
+  const baseHeight = opts.coverRowHeight ?? style.sizes.cover_row_height;
   return new Table({
     width: { size: 10070, type: WidthType.DXA },
     layout: TableLayoutType.FIXED,
@@ -454,40 +483,134 @@ function coverTable(rows, headingTitle, subtitle, style, nilBorder, ruleBorder) 
     },
     rows: [
       new TableRow({ children: [rowHeadingCell(headingTitle, subtitle, style, nilBorder, ruleBorder)] }),
-      ...rows.map((row) =>
-        new TableRow({
-          height: { value: style.sizes.cover_row_height, rule: HeightRule.ATLEAST },
-          children: [keyLabelCell(row, style, nilBorder, ruleBorder), keyValueCell(row, style, nilBorder, ruleBorder)],
-        })
-      ),
+      ...rows.map((row) => {
+        const rowHeight = isGroupHeaderRow(row) ? Math.round(baseHeight * COVER_GROUP_HEADER_HEIGHT_RATIO) : baseHeight;
+        return new TableRow({
+          height: { value: rowHeight, rule: HeightRule.ATLEAST },
+          children: [keyLabelCell(row, style, nilBorder, ruleBorder), keyValueCell(row, style, nilBorder, ruleBorder, opts)],
+        });
+      }),
     ],
   });
 }
 
-function clauseParagraphs(index, clauseItem, style) {
-  return [
-    new Paragraph({
-      style: 'OAClauseHeading',
-      contextualSpacing: false,
-      spacing: {
-        before: style.spacing.clause_heading_before,
-        after: style.spacing.clause_heading_after,
-        line: style.spacing.line,
-        beforeAutoSpacing: false,
-        afterAutoSpacing: false,
-      },
-      children: [
-        new TextRun({
-          text: `${index}. ${clauseItem.heading}.`,
-          font: style.fonts.body,
-          size: 22,
-          bold: true,
-          color: style.colors.ink,
-        }),
-      ],
-    }),
-    bodyParagraph(clauseItem.body, style, { size: 22, style: 'OAClauseBody' }),
-  ];
+function definitionSubParagraphs(parentIndex, terms, style) {
+  const sorted = [...terms].sort((a, b) => a.term.localeCompare(b.term));
+  const paragraphs = [];
+  for (let i = 0; i < sorted.length; i++) {
+    const { term, definition } = sorted[i];
+    const subIndex = `${parentIndex}.${i + 1}`;
+    paragraphs.push(
+      new Paragraph({
+        style: 'OAClauseBody',
+        contextualSpacing: false,
+        spacing: {
+          before: i === 0 ? 0 : style.spacing.clause_heading_before,
+          after: style.spacing.body_after,
+          line: style.spacing.line,
+          beforeAutoSpacing: false,
+          afterAutoSpacing: false,
+        },
+        children: [
+          new TextRun({
+            text: `${subIndex} `,
+            font: style.fonts.body,
+            size: 22,
+            color: style.colors.ink,
+          }),
+          new TextRun({
+            text: `\u201C${term}\u201D`,
+            font: style.fonts.body,
+            size: 22,
+            bold: true,
+            color: style.colors.accent,
+          }),
+          new TextRun({
+            text: ` ${definition}`,
+            font: style.fonts.body,
+            size: 22,
+            color: style.colors.ink,
+          }),
+        ],
+      })
+    );
+  }
+  return paragraphs;
+}
+
+function bodyParagraphsFromText(text, style, opts = {}) {
+  const lines = text.split('\n');
+  return lines.map((line, i) =>
+    bodyParagraph(line, style, {
+      ...opts,
+      after: i < lines.length - 1 ? (opts.after ?? style.spacing.body_after) : (opts.after ?? style.spacing.body_after),
+    })
+  );
+}
+
+function clauseParagraphs(index, clauseItem, style, opts = {}) {
+  // Definitions clause type
+  if (clauseItem.type === 'definitions') {
+    return [
+      new Paragraph({
+        style: 'OAClauseHeading',
+        contextualSpacing: false,
+        spacing: {
+          before: style.spacing.clause_heading_before,
+          after: style.spacing.clause_heading_after,
+          line: style.spacing.line,
+          beforeAutoSpacing: false,
+          afterAutoSpacing: false,
+        },
+        children: [
+          new TextRun({
+            text: `${index}. ${clauseItem.heading}.`,
+            font: style.fonts.body,
+            size: 22,
+            bold: true,
+            color: style.colors.ink,
+          }),
+        ],
+      }),
+      ...definitionSubParagraphs(index, clauseItem.terms, style),
+    ];
+  }
+
+  // Text clause with optional condition/omitted_body
+  const headingParagraph = new Paragraph({
+    style: 'OAClauseHeading',
+    contextualSpacing: false,
+    spacing: {
+      before: style.spacing.clause_heading_before,
+      after: style.spacing.clause_heading_after,
+      line: style.spacing.line,
+      beforeAutoSpacing: false,
+      afterAutoSpacing: false,
+    },
+    children: [
+      new TextRun({
+        text: `${index}. ${clauseItem.heading}.`,
+        font: style.fonts.body,
+        size: 22,
+        bold: true,
+        color: style.colors.ink,
+      }),
+    ],
+  });
+
+  const termsOpt = opts.terms;
+  const bodyParas = bodyParagraphsFromText(clauseItem.body, style, { size: 22, style: 'OAClauseBody', terms: termsOpt });
+
+  if (clauseItem.condition && clauseItem.omitted_body) {
+    // Wrap body in {IF condition} and omitted_body in {IF !condition}
+    const ifOpen = bodyParagraph(`{IF ${clauseItem.condition}}`, style, { size: 22, style: 'OAClauseBody', terms: [] });
+    const ifClose = bodyParagraph('{END-IF}', style, { size: 22, style: 'OAClauseBody', terms: [] });
+    const ifNotOpen = bodyParagraph(`{IF !${clauseItem.condition}}`, style, { size: 22, style: 'OAClauseBody', terms: [] });
+    const omittedPara = bodyParagraph(clauseItem.omitted_body, style, { size: 22, style: 'OAClauseBody', terms: [] });
+    return [headingParagraph, ifOpen, ...bodyParas, ifClose, ifNotOpen, omittedPara, ifClose];
+  }
+
+  return [headingParagraph, ...bodyParas];
 }
 
 function signatureLabelCell(label, hint, style, nilBorder) {
@@ -629,7 +752,9 @@ function twoPartySignatureTable(signatureSpec, style, nilBorder, ruleBorder) {
             signatureLabelCell(row.label, row.hint, style, nilBorder),
             signatureLineCell(row.left ?? '', style, nilBorder, ruleBorder),
             signatureSpacerCell(nilBorder),
-            signatureLineCell(row.right ?? '', style, nilBorder, ruleBorder),
+            row.left_only
+              ? signatureLineCell('', style, nilBorder, nilBorder)
+              : signatureLineCell(row.right ?? '', style, nilBorder, ruleBorder),
           ],
         })
       ),
@@ -685,8 +810,19 @@ function renderMarkdown(spec) {
   lines.push('');
   lines.push('| Term | Value |');
   lines.push('|------|-------|');
+  let lastParentLabel = '';
   for (const row of sections.cover_terms.rows) {
-    lines.push(`| **${row.label}** | ${row.value} |`);
+    if (row.sub) {
+      const mdLabel = lastParentLabel ? `${lastParentLabel} — ${row.label}` : row.label;
+      lines.push(`| *${mdLabel}* | ${row.value} |`);
+    } else {
+      lastParentLabel = row.label;
+      if (row.value) {
+        lines.push(`| **${row.label}** | ${row.value} |`);
+      } else {
+        lines.push(`| **${row.label}** | |`);
+      }
+    }
   }
   lines.push('');
 
@@ -696,8 +832,16 @@ function renderMarkdown(spec) {
     const clauseItem = sections.standard_terms.clauses[i];
     lines.push(`### ${i + 1}. ${clauseItem.heading}`);
     lines.push('');
-    lines.push(clauseItem.body);
-    lines.push('');
+    if (clauseItem.type === 'definitions') {
+      const sorted = [...clauseItem.terms].sort((a, b) => a.term.localeCompare(b.term));
+      for (let j = 0; j < sorted.length; j++) {
+        lines.push(`${i + 1}.${j + 1} **"${sorted[j].term}"** ${sorted[j].definition}`);
+        lines.push('');
+      }
+    } else {
+      lines.push(clauseItem.body);
+      lines.push('');
+    }
   }
 
   lines.push(`## ${sections.signature.heading_title}`);
@@ -713,7 +857,7 @@ function renderMarkdown(spec) {
       },
       {
         party: sections.signature.party_b,
-        rows: sections.signature.rows.map((row) => ({ label: row.label, value: row.right ?? '' })),
+        rows: sections.signature.rows.filter((row) => !row.left_only).map((row) => ({ label: row.label, value: row.right ?? '' })),
       },
     ];
     for (const section of sectionsOut) {
@@ -740,9 +884,26 @@ export function renderCoverStandardSignatureV1(spec, style) {
   const { nilBorder, ruleBorder } = createBorders(style);
   const { document, sections } = spec;
 
-  const standardClauseParagraphs = sections.standard_terms.clauses.flatMap((clauseItem, idx) =>
-    clauseParagraphs(idx + 1, clauseItem, style)
-  );
+  // Derive defined terms from definitions clause if present (DRY)
+  const highlightMode = document.defined_term_highlight_mode || 'all_instances';
+  const definitionsClause = sections.standard_terms.clauses.find((c) => c.type === 'definitions');
+  const derivedTerms = definitionsClause
+    ? definitionsClause.terms.map((t) => t.term)
+    : style.defined_terms;
+
+  const standardClauseParagraphs = sections.standard_terms.clauses.flatMap((clauseItem, idx) => {
+    const isDefinitionsClause = clauseItem.type === 'definitions';
+    let termsForClause;
+    if (highlightMode === 'none') {
+      termsForClause = [];
+    } else if (highlightMode === 'definition_site_only') {
+      // Only highlight in the definitions clause itself (handled internally by definitionSubParagraphs)
+      termsForClause = [];
+    } else {
+      termsForClause = derivedTerms;
+    }
+    return clauseParagraphs(idx + 1, clauseItem, style, { terms: termsForClause });
+  });
 
   const signatureTable = sections.signature.mode === 'two-party'
     ? twoPartySignatureTable(sections.signature, style, nilBorder, ruleBorder)
@@ -763,7 +924,8 @@ export function renderCoverStandardSignatureV1(spec, style) {
             sections.cover_terms.subtitle,
             style,
             nilBorder,
-            ruleBorder
+            ruleBorder,
+            { terms: highlightMode === 'all_instances' ? undefined : [], coverRowHeight: document.cover_row_height }
           ),
         ],
         style,

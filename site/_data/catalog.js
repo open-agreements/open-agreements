@@ -1,6 +1,6 @@
 import { execFileSync } from "node:child_process";
 import { resolve, dirname } from "node:path";
-import { copyFileSync, mkdirSync, existsSync, statSync, readdirSync } from "node:fs";
+import { copyFileSync, mkdirSync, existsSync, statSync, readdirSync, readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -48,8 +48,8 @@ const CATEGORIES = [
   {
     slug: "employment",
     label: "Employment",
-    description: "Offer letters, IP assignments, and confidentiality acknowledgements.",
-    match: (id) => /employment|employee-ip/.test(id),
+    description: "Offer letters, IP assignments, confidentiality acknowledgements, and restrictive covenants.",
+    match: (id) => /employment|employee-ip|restrictive-covenant/.test(id),
   },
   {
     slug: "safes",
@@ -226,6 +226,27 @@ export default function () {
           .filter((f) => f.endsWith(".png"))
           .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }))
           .map((f) => `/assets/previews/${item.name}/${f}`);
+      }
+
+      // Detect practice note
+      const practiceNotePath = resolve(templateDir, "practice-note.md");
+      if (existsSync(practiceNotePath)) {
+        const raw = readFileSync(practiceNotePath, "utf-8");
+        const fmMatch = raw.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
+        if (fmMatch) {
+          const fmLines = fmMatch[1].split("\n");
+          const fm = {};
+          for (const line of fmLines) {
+            const m = line.match(/^(\w[\w_]*):\s*(.+)$/);
+            if (m) fm[m[1]] = m[2].replace(/^["']|["']$/g, "");
+          }
+          templateData.practiceNote = {
+            firmCount: fm.firm_count || "0",
+            lastUpdated: fm.last_updated || "",
+            disclaimer: fm.disclaimer || "",
+            content: fmMatch[2],
+          };
+        }
       }
     }
 

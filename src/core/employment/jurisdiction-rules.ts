@@ -78,4 +78,81 @@ export const EMPLOYMENT_JURISDICTION_RULES: JurisdictionRule[] = [
     source_date: '2024-01-01',
     confidence: 'medium',
   },
+  {
+    rule_id: 'emp-jur-wy-s1-23-108-scope-001',
+    jurisdiction: 'Wyoming',
+    category: 'restrictive_covenants',
+    trigger: {
+      template_ids: [
+        'openagreements-restrictive-covenant-wyoming',
+        'openagreements-employment-offer-letter',
+      ],
+      field_includes: {
+        governing_law: 'wyoming',
+      },
+    },
+    message:
+      'Wyoming Stat. section 1-23-108 (SF 107, effective July 1, 2025) voids most non-compete covenants except via specific statutory pathways: executive or management personnel, trade secret protection, sale of business, or training-expense recovery. Confirm applicability with licensed counsel.',
+    source_reference:
+      'Wyoming Statute section 1-23-108 (Senate File 107, 2025 Session).',
+    source_date: '2025-07-01',
+    confidence: 'high',
+  },
+  {
+    rule_id: 'emp-jur-wy-hassler-no-reform-001',
+    jurisdiction: 'Wyoming',
+    category: 'restrictive_covenants',
+    trigger: {
+      template_ids: [
+        'openagreements-restrictive-covenant-wyoming',
+      ],
+      field_includes: {
+        governing_law: 'wyoming',
+      },
+    },
+    message:
+      'Wyoming courts may void overbroad restrictive covenants entirely rather than reform them. Hassler v. Circle C Resources, 2022 WY 28. Ensure each covenant is narrowly tailored to avoid full invalidation.',
+    source_reference:
+      'Hassler v. Circle C Resources, 2022 WY 28 (Wyoming Supreme Court).',
+    source_date: '2022-02-25',
+    confidence: 'high',
+  },
+  {
+    rule_id: 'emp-jur-wy-pathway-none-noncompete-001',
+    jurisdiction: 'Wyoming',
+    category: 'restrictive_covenants',
+    trigger: {
+      template_ids: [
+        'openagreements-restrictive-covenant-wyoming',
+      ],
+      field_one_of: {
+        restriction_pathways: ['None', 'none'],
+      },
+    },
+    message:
+      'Restriction pathway is set to none, but non-compete-adjacent covenants (non-competition, non-dealing, or non-investment) may be included. Under Wyoming Stat. section 1-23-108, these provisions are likely void without a lawful statutory pathway.',
+    source_reference:
+      'Wyoming Statute section 1-23-108 (Senate File 107, 2025 Session).',
+    source_date: '2025-07-01',
+    confidence: 'high',
+  },
+  {
+    rule_id: 'emp-jur-wy-nonsolicitation-uncertainty-001',
+    jurisdiction: 'Wyoming',
+    category: 'restrictive_covenants',
+    trigger: {
+      template_ids: [
+        'openagreements-restrictive-covenant-wyoming',
+      ],
+      field_includes: {
+        governing_law: 'wyoming',
+      },
+    },
+    message:
+      'Practitioner sources flag uncertainty about whether Wyoming Stat. section 1-23-108 could reach certain non-solicitation provisions depending on how they function. No separate Wyoming non-solicitation statute was identified in this review. Confirm enforceability with licensed counsel.',
+    source_reference:
+      'Littler Mendelson analysis of Wyoming SF 107; Faegre Drinker analysis noting broad "any person" statutory phrasing.',
+    source_date: '2025-07-01',
+    confidence: 'medium',
+  },
 ];

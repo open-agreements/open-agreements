@@ -1,0 +1,235 @@
+name: OpenAgreements Employee Restrictive Covenant (Wyoming)
+description: >-
+  Wyoming-specific employee restrictive covenant agreement with modular
+  covenant structure (non-compete, non-solicitation, non-dealing, non-investment,
+  confidentiality, non-disparagement). Incorporates Wyo. Stat. section 1-23-108
+  (SF 107, 2025) pathway gating for non-compete-adjacent covenants. Drafted as
+  a starting point for licensed counsel review.
+source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-wyoming
+version: '2.0'
+license: CC-BY-4.0
+allow_derivatives: true
+attribution_text: >-
+  Authored by OpenAgreements contributors. Wyoming-specific analysis informed
+  by publicly available commentary from Am Law firms including Ogletree Deakins,
+  Fisher Phillips, Littler Mendelson, Foley & Lardner, Faegre Drinker, and
+  Vinson & Elkins. See practice note for sources. Licensed under CC BY 4.0.
+fields:
+  # --- Parties (on cover page) ---
+  - name: employer_name
+    type: string
+    description: Legal name of the employer
+    section: Parties
+  - name: employee_name
+    type: string
+    description: Full legal name of the employee
+    section: Parties
+  - name: employee_title
+    type: string
+    description: Employee job title or position (optional)
+    default: ''
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Effective date of this agreement
+    section: Timing
+  - name: governing_law
+    type: string
+    description: Governing law state
+    default: Wyoming
+    section: Legal
+
+  # --- AI-only fields (drive memo warnings, never in output) ---
+  - name: worker_category
+    type: enum
+    description: >-
+      Employee role classification under Wyo. Stat. section 1-23-108.
+      AI-only field that drives memo warnings. Not shown in the output document.
+    options:
+      - Executive
+      - Management
+      - Professional Staff
+      - Physician
+      - Other
+    section: AI Analysis
+  - name: restriction_pathways
+    type: string
+    description: >-
+      Wyoming restriction pathway(s) under Wyo. Stat. section 1-23-108.
+      AI-only field that drives memo warnings and conditional gating.
+      Not shown in the output document. Options: Executive or Management
+      Personnel, Trade Secret Protection, None.
+    default: None
+    section: AI Analysis
+
+  # --- Confidentiality (on cover page, always visible) ---
+  - name: confidentiality_trade_secret_duration
+    type: string
+    description: Duration of confidentiality obligations for trade secrets
+    default: Perpetual
+    section: Confidentiality
+  - name: confidentiality_other_duration
+    type: string
+    description: Duration of confidentiality obligations for non-trade-secret information
+    default: 24 months
+    default_value_rationale: >-
+      24 months is common for non-trade-secret confidentiality obligations
+      in employment agreements.
+    section: Confidentiality
+
+  # --- Employee Non-Solicitation ---
+  - name: employee_nonsolicit_included
+    type: boolean
+    description: Whether the employee non-solicitation covenant is included
+    default: 'true'
+    section: Employee Non-Solicitation
+  - name: employee_nonsolicit_duration
+    type: string
+    description: Duration of employee non-solicitation restriction
+    default: 12 months
+    default_value_rationale: >-
+      12 months is the most common enforceable duration. Mayer Brown guidance
+      states 1-2 years is the outer range of reasonableness.
+    section: Employee Non-Solicitation
+  - name: covered_employee_period
+    type: string
+    description: >-
+      Lookback period for determining which employees are covered by
+      the non-solicitation restriction.
+    default: 12 months
+    default_value_rationale: >-
+      12 months is the most common lookback period for employee
+      non-solicitation scope.
+    section: Employee Non-Solicitation
+
+  # --- Customer Non-Solicitation ---
+  - name: customer_nonsolicit_included
+    type: boolean
+    description: Whether the customer/partner non-solicitation covenant is included
+    default: 'true'
+    section: Customer Non-Solicitation
+  - name: customer_nonsolicit_duration
+    type: string
+    description: Duration of customer/partner non-solicitation restriction
+    default: 12 months
+    default_value_rationale: >-
+      12 months is the most common enforceable duration. Compass Minerals uses
+      12 months for non-CEO employees and 24 months for CEO.
+    section: Customer Non-Solicitation
+  - name: covered_customer_period
+    type: string
+    description: >-
+      Lookback period for determining which customers are covered by
+      the non-solicitation and non-dealing restrictions.
+    default: 12 months
+    default_value_rationale: >-
+      12 months is the most common lookback period for customer
+      non-solicitation scope.
+    section: Customer Non-Solicitation
+
+  # --- Non-Competition (conditional on pathway) ---
+  - name: noncompete_included
+    type: boolean
+    description: >-
+      Whether the non-competition covenant is included. Requires a lawful
+      restriction pathway under Wyo. Stat. section 1-23-108.
+    default: 'false'
+    default_value_rationale: >-
+      Wyo. Stat. section 1-23-108 voids most non-compete covenants. The
+      drafter must affirmatively include this covenant only when a statutory
+      pathway applies.
+    section: Non-Competition
+  - name: noncompete_duration
+    type: string
+    description: Duration of non-competition restriction
+    default: 12 months
+    default_value_rationale: >-
+      12 months is the most common enforceable duration. Hassler v. Circle C
+      Resources (2022 WY 28) struck down a 24-month provision with broad
+      scope. No Wyoming court has upheld a non-compete exceeding 24 months.
+    section: Non-Competition
+  - name: territory
+    type: string
+    description: Geographic scope of the non-competition restriction
+    default: the geographic area in which Employee provided services
+    default_value_rationale: >-
+      Tied to the employee's actual service area. Narrower scope improves
+      enforceability under Wyoming's strict scrutiny.
+    section: Non-Competition
+  - name: competitive_business_definition
+    type: string
+    description: >-
+      Description of the business activities that constitute competition
+      with the employer.
+    section: Non-Competition
+  - name: specified_competitors
+    type: string
+    description: >-
+      Optional named list of specific competitors. Narrowing the restriction
+      to named competitors strengthens enforceability.
+    default: ''
+    section: Non-Competition
+
+  # --- No Business with Covered Customers (conditional) ---
+  - name: nondealing_included
+    type: boolean
+    description: >-
+      Whether the no-business-with-covered-customers covenant is included.
+      Requires a lawful restriction pathway under Wyo. Stat. section 1-23-108.
+    default: 'false'
+    section: No Business with Covered Customers
+  - name: nondealing_duration
+    type: string
+    description: Duration of the no-business-with-covered-customers restriction
+    default: 12 months
+    section: No Business with Covered Customers
+
+  # --- Passive Public Holdings ---
+  - name: passive_public_holdings_threshold
+    type: string
+    description: >-
+      Maximum ownership percentage of publicly traded securities permitted
+      under the Passive Public Holdings carveout.
+    default: five percent
+    default_value_rationale: >-
+      Five percent of any class of publicly traded securities is the standard
+      passive investment carveout across Fortune 500 restrictive covenant
+      agreements.
+    section: Definitions
+
+  # --- Non-Investment (conditional) ---
+  - name: noninvestment_included
+    type: boolean
+    description: >-
+      Whether the non-investment covenant is included. Requires a lawful
+      restriction pathway under Wyo. Stat. section 1-23-108.
+    default: 'false'
+    section: Non-Investment
+  - name: noninvestment_duration
+    type: string
+    description: Duration of non-investment restriction
+    default: 12 months
+    section: Non-Investment
+
+  # --- Non-Disparagement ---
+  - name: nondisparagement_duration
+    type: string
+    description: Duration of non-disparagement obligation (measured from termination)
+    default: 24 months
+    default_value_rationale: >-
+      24 months is common for employment non-disparagement provisions.
+    section: Non-Disparagement
+
+  # --- Document Management ---
+  - name: cloud_drive_id
+    type: string
+    description: Optional document-system URI or file ID for execution copy traceability
+    section: Document Management
+  - name: cloud_drive_id_footer
+    type: string
+    description: Internal computed footer text for document-system traceability
+    default: ''
+    section: Document Management
+priority_fields:
+  - employer_name
+  - employee_name

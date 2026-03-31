@@ -11,18 +11,35 @@ const coverRowSchema = z.object({
   hint: z.string().optional(),
   note: z.string().optional(),
   condition: z.string().regex(fieldNamePattern).optional(),
+  sub: z.boolean().optional().default(false),
 });
 
-const clauseSchema = z.object({
+const textClauseSchema = z.object({
   heading: textSchema,
   body: textSchema,
+  condition: z.string().regex(fieldNamePattern).optional(),
+  omitted_body: z.string().optional(),
 });
+
+const definitionTermSchema = z.object({
+  term: textSchema,
+  definition: textSchema,
+});
+
+const definitionsClauseSchema = z.object({
+  type: z.literal('definitions'),
+  heading: textSchema,
+  terms: z.array(definitionTermSchema).min(1),
+});
+
+const clauseSchema = z.union([textClauseSchema, definitionsClauseSchema]);
 
 const twoPartySignatureRowSchema = z.object({
   label: textSchema,
   hint: z.string().optional(),
   left: z.string().optional(),
   right: z.string().optional(),
+  left_only: z.boolean().optional().default(false),
 });
 
 const onePartySignatureRowSchema = z.object({
@@ -62,6 +79,8 @@ export const contractSpecSchema = z.object({
     version: textSchema,
     license: textSchema,
     include_cloud_doc_line: z.boolean().optional().default(false),
+    defined_term_highlight_mode: z.enum(['all_instances', 'definition_site_only', 'none']).optional().default('all_instances'),
+    cover_row_height: z.number().int().positive().optional(),
   }),
   sections: z.object({
     cover_terms: z.object({

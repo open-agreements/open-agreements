@@ -141,6 +141,161 @@ describe('employment memo generator', () => {
   });
 });
 
+describe('wyoming restrictive covenant memo', () => {
+  it.openspec('OA-FIL-016')('generates SF 107 jurisdiction warnings for Wyoming governing law', () => {
+    const templateId = 'openagreements-restrictive-covenant-wyoming';
+    const metadata = loadMetadata(mustFindTemplateDir(templateId));
+
+    const memo = generateEmploymentMemo({
+      templateId,
+      templateMetadata: metadata,
+      generatedAt: '2026-03-30T10:00:00.000Z',
+      values: {
+        employer_name: 'Mountain Corp',
+        employee_name: 'Jane Doe',
+        employee_title: 'VP Engineering',
+        worker_category: 'Executive',
+        restriction_pathways: 'Executive or Management Personnel',
+        competitive_business_definition: 'Software development services',
+        covered_customer_period: '24 months',
+        covered_employee_period: '12 months',
+        governing_law: 'Wyoming',
+      },
+    });
+
+    const jurisdictionWarnings = memo.findings.filter((f) => f.category === 'jurisdiction_warning');
+    expect(jurisdictionWarnings.length).toBeGreaterThan(0);
+
+    const sf107Warning = jurisdictionWarnings.find((f) => f.id.includes('wy-s1-23-108'));
+    expect(sf107Warning).toBeDefined();
+    expect(sf107Warning!.summary).toContain('1-23-108');
+
+    const hasslerWarning = jurisdictionWarnings.find((f) => f.id.includes('hassler'));
+    expect(hasslerWarning).toBeDefined();
+    expect(hasslerWarning!.summary).toContain('Hassler');
+  });
+
+  it.openspec('OA-FIL-016')('warns when restriction pathway is none but non-compete fields populated', () => {
+    const templateId = 'openagreements-restrictive-covenant-wyoming';
+    const metadata = loadMetadata(mustFindTemplateDir(templateId));
+
+    const memo = generateEmploymentMemo({
+      templateId,
+      templateMetadata: metadata,
+      generatedAt: '2026-03-30T10:00:00.000Z',
+      values: {
+        employer_name: 'Mountain Corp',
+        employee_name: 'Jane Doe',
+        worker_category: 'Other',
+        restriction_pathways: 'None',
+        governing_law: 'Wyoming',
+      },
+    });
+
+    const pathwayWarning = memo.findings.find((f) =>
+      f.category === 'jurisdiction_warning' && f.id.includes('pathway-none')
+    );
+    expect(pathwayWarning).toBeDefined();
+    expect(pathwayWarning!.summary).toContain('void');
+  });
+
+  it.openspec('OA-FIL-016')('flags high-severity finding when worker category is blank', () => {
+    const templateId = 'openagreements-restrictive-covenant-wyoming';
+    const metadata = loadMetadata(mustFindTemplateDir(templateId));
+
+    const memo = generateEmploymentMemo({
+      templateId,
+      templateMetadata: metadata,
+      generatedAt: '2026-03-30T10:00:00.000Z',
+      values: {
+        employer_name: 'Mountain Corp',
+        employee_name: 'Jane Doe',
+        governing_law: 'Wyoming',
+      },
+    });
+
+    const workerFinding = memo.findings.find((f) =>
+      f.id.includes('worker-category') && f.severity === 'high'
+    );
+    expect(workerFinding).toBeDefined();
+  });
+
+  it.openspec('OA-FIL-016')('generates duration range warning for non-compete exceeding 24 months', () => {
+    const templateId = 'openagreements-restrictive-covenant-wyoming';
+    const metadata = loadMetadata(mustFindTemplateDir(templateId));
+
+    const memo = generateEmploymentMemo({
+      templateId,
+      templateMetadata: metadata,
+      generatedAt: '2026-03-30T10:00:00.000Z',
+      values: {
+        employer_name: 'Mountain Corp',
+        employee_name: 'Jane Doe',
+        worker_category: 'Executive',
+        restriction_pathways: 'Executive or Management Personnel',
+        noncompete_duration: '3 years',
+        governing_law: 'Wyoming',
+      },
+    });
+
+    const durationWarning = memo.findings.find((f) =>
+      f.id.includes('noncompete-duration-range')
+    );
+    expect(durationWarning).toBeDefined();
+    expect(durationWarning!.severity).toBe('high');
+    expect(durationWarning!.summary).toContain('Hassler');
+  });
+
+  it.openspec('OA-FIL-016')('generates low-severity note for non-compete duration of 18 months', () => {
+    const templateId = 'openagreements-restrictive-covenant-wyoming';
+    const metadata = loadMetadata(mustFindTemplateDir(templateId));
+
+    const memo = generateEmploymentMemo({
+      templateId,
+      templateMetadata: metadata,
+      generatedAt: '2026-03-30T10:00:00.000Z',
+      values: {
+        employer_name: 'Mountain Corp',
+        employee_name: 'Jane Doe',
+        worker_category: 'Executive',
+        restriction_pathways: 'Executive or Management Personnel',
+        noncompete_duration: '18 months',
+        governing_law: 'Wyoming',
+      },
+    });
+
+    const durationNote = memo.findings.find((f) =>
+      f.id.includes('noncompete-duration-range')
+    );
+    expect(durationNote).toBeDefined();
+    expect(durationNote!.severity).toBe('low');
+  });
+
+  it.openspec('OA-FIL-016')('does not generate duration warning for 12 months', () => {
+    const templateId = 'openagreements-restrictive-covenant-wyoming';
+    const metadata = loadMetadata(mustFindTemplateDir(templateId));
+
+    const memo = generateEmploymentMemo({
+      templateId,
+      templateMetadata: metadata,
+      generatedAt: '2026-03-30T10:00:00.000Z',
+      values: {
+        employer_name: 'Mountain Corp',
+        employee_name: 'Jane Doe',
+        worker_category: 'Executive',
+        restriction_pathways: 'Executive or Management Personnel',
+        noncompete_duration: '12 months',
+        governing_law: 'Wyoming',
+      },
+    });
+
+    const durationWarning = memo.findings.find((f) =>
+      f.id.includes('noncompete-duration-range')
+    );
+    expect(durationWarning).toBeUndefined();
+  });
+});
+
 describe('employment memo language guard', () => {
   it.openspec('OA-FIL-017')('rewrites prescriptive wording and blocks prohibited phrases', () => {
     const rewritten = applyAdviceLanguageGuard('We recommend this plan. You should use the best strategy.');

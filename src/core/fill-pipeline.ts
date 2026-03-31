@@ -35,6 +35,15 @@ export interface PrepareFillDataOptions {
   coerceBooleans?: boolean;
 
   /**
+   * Default values for signature tag fields from signing.yaml.
+   * These are {tag}s in the DOCX that aren't in metadata.yaml (e.g., {sig_party_1}).
+   * When a signing provider is connected, these are filled with provider-specific
+   * anchor strings. When no provider is connected, they default to empty strings
+   * to prevent docx-templates from treating them as undefined JS expressions.
+   */
+  signingTagDefaults?: Record<string, string>;
+
+  /**
    * Optional callback for computing display fields (template-specific).
    * Called after defaults and boolean coercion are applied.
    */
@@ -81,11 +90,21 @@ export function prepareFillData(options: PrepareFillDataOptions): Record<string,
     useBlankPlaceholder = false,
     coerceBooleans = false,
     computeDisplayFields,
+    signingTagDefaults,
   } = options;
 
   // Apply defaults for fields not provided
   const defaultValue = useBlankPlaceholder ? BLANK_PLACEHOLDER : '';
   const data: Record<string, unknown> = { ...values };
+
+  // Inject signing tag defaults (empty strings unless provider anchors are supplied)
+  if (signingTagDefaults) {
+    for (const [key, val] of Object.entries(signingTagDefaults)) {
+      if (!(key in data)) {
+        data[key] = val;
+      }
+    }
+  }
   for (const field of fields) {
     if (!(field.name in data)) {
       // Array fields default to empty array, not blank placeholder
@@ -361,22 +380,72 @@ function stripEmptyTableRows(docxBuffer: Buffer): Buffer {
     for (let i = 0; i < rows.length; i++) {
       const row = rows[i];
       let hasCell = false;
+      let allCellsEmpty = true;
       for (let c = 0; c < row.childNodes.length; c++) {
         const child = row.childNodes[c];
         if (child?.nodeType === 1) {
           const childElement = child as Element;
           if (childElement.localName === 'tc' && childElement.namespaceURI === W_NS) {
             hasCell = true;
-            break;
+            const cellText = (childElement.textContent || '').trim();
+            if (cellText.length > 0) {
+              allCellsEmpty = false;
+            }
           }
         }
       }
-      if (!hasCell) {
+      if (!hasCell || (hasCell && allCellsEmpty)) {
         rowsToRemove.push(row);
       }
     }
 
-    if (rowsToRemove.length > 0) {
+    // Deduplicate tcPr elements within table cells (docx-templates {IF} processing
+    // can create duplicate <w:tcPr> blocks where the first has default properties
+    // that override the intended ones in the second)
+    const allCells = doc.getElementsByTagNameNS(W_NS, 'tc');
+    for (let i = 0; i < allCells.length; i++) {
+      const cell = allCells[i];
+      const tcPrs: Element[] = [];
+      for (let c = 0; c < cell.childNodes.length; c++) {
+        const child = cell.childNodes[c];
+        if (child.nodeType === 1 && (child as Element).localName === 'tcPr' && (child as Element).namespaceURI === W_NS) {
+          tcPrs.push(child as Element);
+        }
+      }
+      if (tcPrs.length > 1) {
+        modified = true;
+        // Keep only the last tcPr (has the correct properties from our renderer)
+        for (let t = 0; t < tcPrs.length - 1; t++) {
+          cell.removeChild(tcPrs[t]);
+        }
+      }
+    }
+
+    // Also strip empty paragraphs within table cells (artifacts from {IF} tag processing)
+    const cells = doc.getElementsByTagNameNS(W_NS, 'tc');
+    const parasToRemove: Element[] = [];
+    for (let i = 0; i < cells.length; i++) {
+      const cell = cells[i];
+      const paras = cell.getElementsByTagNameNS(W_NS, 'p');
+      // Only strip empty paras if the cell has at least 2 paragraphs
+      // (keep the last one — Word requires at least one <w:p> per cell)
+      if (paras.length < 2) continue;
+      let nonEmptyCount = 0;
+      for (let p = 0; p < paras.length; p++) {
+        if ((paras[p].textContent || '').trim().length > 0) nonEmptyCount++;
+      }
+      if (nonEmptyCount === 0) continue; // Don't strip if all are empty
+      for (let p = 0; p < paras.length; p++) {
+        if ((paras[p].textContent || '').trim().length === 0 && paras[p].parentNode === cell) {
+          parasToRemove.push(paras[p]);
+        }
+      }
+    }
+    for (const para of parasToRemove) {
+      para.parentNode?.removeChild(para);
+    }
+
+    if (rowsToRemove.length > 0 || parasToRemove.length > 0) {
       modified = true;
       for (const row of rowsToRemove) {
         row.parentNode?.removeChild(row);

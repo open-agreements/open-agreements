@@ -176,6 +176,20 @@ describe('validateTemplate', () => {
       expect(result.errors).toEqual([]);
     });
   });
+
+  it.openspec('OA-TMP-015')('validates openagreements-restrictive-covenant-wyoming without errors', async () => {
+    const dir = join(templatesDir, 'openagreements-restrictive-covenant-wyoming');
+    await allureParameter('template_id', 'openagreements-restrictive-covenant-wyoming');
+    const result = await allureStep('Validate template', () =>
+      validateTemplate(dir, 'openagreements-restrictive-covenant-wyoming')
+    );
+    await allureJsonAttachment('template-validation-result.json', result);
+
+    await allureStep('Assert template passes validation', () => {
+      expect(result.valid).toBe(true);
+      expect(result.errors).toEqual([]);
+    });
+  });
 });
 
 describe('validateMetadata', () => {
