@@ -358,7 +358,7 @@ function rowHeadingCell(titleText, subtitleText, style, nilBorder, ruleBorder) {
       bottom: ruleBorder,
       right: nilBorder,
     },
-    margins: { top: 80, left: 115, bottom: 80, right: 115 },
+    margins: { top: COVER_CELL_MARGIN.top, left: COVER_CELL_MARGIN.outer, bottom: COVER_CELL_MARGIN.bottom, right: COVER_CELL_MARGIN.outer },
     verticalAlign: VerticalAlign.CENTER,
     children: [
       new Paragraph({
@@ -388,19 +388,29 @@ function rowHeadingCell(titleText, subtitleText, style, nilBorder, ruleBorder) {
   });
 }
 
+// Cover term row layout constants
+const COVER_CELL_MARGIN = { top: 80, bottom: 80, outer: 115, subIndent: 345 };
+const COVER_GROUP_HEADER_SPACER = { line: 120, fontSize: 4, char: '\u200B' };
+const COVER_GROUP_HEADER_LINE_SPACING = 240; // single spacing (240/240 = 1.0 lines)
+const COVER_GROUP_HEADER_HEIGHT_RATIO = 1.13;
+
+function isGroupHeaderRow(row) {
+  return !row.sub && row.value === '';
+}
+
 function keyLabelCell(row, style, nilBorder, ruleBorder) {
   const isSub = row.sub === true;
-  const isGroupHeader = !isSub && row.value === '';
+  const isGroupHeader = isGroupHeaderRow(row);
   return new TableCell({
     borders: horizontalBorders(ruleBorder, nilBorder),
-    margins: { top: 80, left: isSub ? 345 : 115, bottom: 80, right: 115 },
+    margins: { top: COVER_CELL_MARGIN.top, left: isSub ? COVER_CELL_MARGIN.subIndent : COVER_CELL_MARGIN.outer, bottom: COVER_CELL_MARGIN.bottom, right: COVER_CELL_MARGIN.outer },
     verticalAlign: VerticalAlign.CENTER,
     children: [
       // Group headers get a line break paragraph before the label for consistent spacing
       // (works regardless of single/multi-line wrapping; before-paragraph spacing only
       // gets respected when there's an actual preceding paragraph)
       ...(isGroupHeader
-        ? [new Paragraph({ spacing: { after: 0, line: 120 }, children: [new TextRun({ text: '\u200B', size: 4 })] })]
+        ? [new Paragraph({ spacing: { after: 0, line: COVER_GROUP_HEADER_SPACER.line }, children: [new TextRun({ text: COVER_GROUP_HEADER_SPACER.char, size: COVER_GROUP_HEADER_SPACER.fontSize })] })]
         : []),
       // For conditional sub-rows, put {IF} in a separate zero-height paragraph so docx-templates
       // can remove it cleanly without leaving an empty paragraph artifact.
@@ -409,7 +419,7 @@ function keyLabelCell(row, style, nilBorder, ruleBorder) {
         ? [new Paragraph({ spacing: { after: 0, line: 0 }, children: [new TextRun({ text: `{IF ${row.condition}}`, size: 1 })] })]
         : []),
       new Paragraph({
-        spacing: { before: 0, after: row.hint ? 10 : 0, line: isGroupHeader ? 240 : style.spacing.line },
+        spacing: { before: 0, after: row.hint ? 10 : 0, line: isGroupHeader ? COVER_GROUP_HEADER_LINE_SPACING : style.spacing.line },
         children: [
           new TextRun({
             text: (row.condition && !isSub) ? `{IF ${row.condition}}${row.label}` : row.label,
@@ -441,7 +451,6 @@ function keyLabelCell(row, style, nilBorder, ruleBorder) {
 }
 
 function keyValueCell(row, style, nilBorder, ruleBorder, opts = {}) {
-  const isGroupHeader = !row.sub && row.value === '';
   const valueText = row.condition ? `${row.value}{END-IF}` : row.value;
   const lines = valueText.split('\n');
   const valueParagraphs = lines.map((line, i) =>
@@ -449,7 +458,7 @@ function keyValueCell(row, style, nilBorder, ruleBorder, opts = {}) {
   );
   return new TableCell({
     borders: horizontalBorders(ruleBorder, nilBorder),
-    margins: { top: 80, left: 115, bottom: 80, right: 115 },
+    margins: { top: COVER_CELL_MARGIN.top, left: COVER_CELL_MARGIN.outer, bottom: COVER_CELL_MARGIN.bottom, right: COVER_CELL_MARGIN.outer },
     verticalAlign: VerticalAlign.CENTER,
     children: [
       ...valueParagraphs,
@@ -459,6 +468,7 @@ function keyValueCell(row, style, nilBorder, ruleBorder, opts = {}) {
 }
 
 function coverTable(rows, headingTitle, subtitle, style, nilBorder, ruleBorder, opts = {}) {
+  const baseHeight = opts.coverRowHeight ?? style.sizes.cover_row_height;
   return new Table({
     width: { size: 10070, type: WidthType.DXA },
     layout: TableLayoutType.FIXED,
@@ -474,15 +484,12 @@ function coverTable(rows, headingTitle, subtitle, style, nilBorder, ruleBorder, 
     rows: [
       new TableRow({ children: [rowHeadingCell(headingTitle, subtitle, style, nilBorder, ruleBorder)] }),
       ...rows.map((row) => {
-        const isGroupHeader = !row.sub && row.value === '';
-        const baseHeight = opts.coverRowHeight ?? style.sizes.cover_row_height;
-        const rowHeight = isGroupHeader ? Math.round(baseHeight * 1.13) : baseHeight; // ~358 for group headers
+        const rowHeight = isGroupHeaderRow(row) ? Math.round(baseHeight * COVER_GROUP_HEADER_HEIGHT_RATIO) : baseHeight;
         return new TableRow({
           height: { value: rowHeight, rule: HeightRule.ATLEAST },
           children: [keyLabelCell(row, style, nilBorder, ruleBorder), keyValueCell(row, style, nilBorder, ruleBorder, opts)],
         });
-      }
-      ),
+      }),
     ],
   });
 }
