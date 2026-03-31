@@ -1,17 +1,23 @@
 /**
  * Integration tests for Google Cloud Firestore + Storage backend.
- * These hit real GCS and Firestore — run only in environments with ADC configured.
- *
- * Skip in CI with: SKIP_GCLOUD_TESTS=1 npx vitest run
+ * These hit real GCS and Firestore — auto-skipped when no credentials are available.
+ * Runs locally with `gcloud auth application-default login`.
  */
 
 import { describe, expect, afterAll } from 'vitest';
 import { randomBytes } from 'node:crypto';
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
 import { itAllure } from '../../../integration-tests/helpers/allure-test.ts';
 import { createGCloudStorageCallbacks } from '../src/gcloud-storage.js';
 
 const it = itAllure.epic('Agreement Signing');
-const SKIP = process.env.SKIP_GCLOUD_TESTS === '1';
+
+// Auto-detect: skip when explicitly requested OR when no ADC credentials exist
+const adcPath = process.env.GOOGLE_APPLICATION_CREDENTIALS
+  || join(process.env.HOME || process.env.USERPROFILE || '', '.config/gcloud/application_default_credentials.json');
+const hasCredentials = process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON || existsSync(adcPath);
+const SKIP = process.env.SKIP_GCLOUD_TESTS === '1' || !hasCredentials;
 
 const config = {
   projectId: 'open-agreements',
