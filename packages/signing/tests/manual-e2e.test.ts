@@ -32,23 +32,24 @@ describe('Manual E2E: signing config → fill → anchor verification', () => {
     }
   });
 
-  it.openspec('OA-SIG-005')('fills Bonterms NDA without sig data (no error, blank signature fields)', () => {
+  it.openspec('OA-SIG-005')('fills Bonterms NDA without sig data — anchors injected from signing.yaml', () => {
     const tempDir = mkdtempSync(join(tmpdir(), 'manual-e2e-'));
     const outputPath = join(tempDir, 'no-sig.docx');
 
     writeFileSync(join(tempDir, 'data.json'), '{}');
 
-    // This should NOT throw — signature tags default to empty
+    // This should NOT throw — signature tags default to DocuSign anchors
     execSync(
       `node bin/open-agreements.js fill bonterms-mutual-nda -d ${join(tempDir, 'data.json')} -o ${outputPath}`,
       { encoding: 'utf-8', stdio: ['pipe', 'pipe', 'pipe'] }
     );
 
-    // Verify no anchor strings in output
+    // Anchors from signing.yaml are always injected (invisible 2pt white)
+    // so documents are ready for DocuSign even without explicit sig data
     const zip = new AdmZip(outputPath);
     const text = zip.readAsText('word/document.xml').replace(/<[^>]+>/g, ' ');
-    expect(text).not.toContain('/sn1/');
-    expect(text).not.toContain('/sn2/');
+    expect(text).toContain('/sn1/');
+    expect(text).toContain('/sn2/');
   });
 
   it.openspec('OA-SIG-004')('fills Bonterms NDA WITH DocuSign anchors — anchors appear in DOCX', () => {
