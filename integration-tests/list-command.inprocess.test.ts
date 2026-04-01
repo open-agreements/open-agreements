@@ -42,7 +42,7 @@ interface ListHarnessOptions {
 }
 
 interface ListHarness {
-  runList: (opts?: { json?: boolean; jsonStrict?: boolean; templatesOnly?: boolean }) => void;
+  runList: (opts?: { json?: boolean; jsonStrict?: boolean }) => void;
   spies: {
     listTemplateEntries: ReturnType<typeof vi.fn>;
     listExternalEntries: ReturnType<typeof vi.fn>;
@@ -242,37 +242,6 @@ describe('runList in-process coverage', () => {
     expect(errorSpy).toHaveBeenCalledWith(expect.stringContaining('error: template bad-template: metadata parse failed'));
   });
 
-  itDiscovery.openspec('OA-CLI-014')('honors templates-only by skipping external and recipe metadata', async () => {
-    const harness = await loadListHarness({
-      templateEntries: [
-        { id: 'template-only', dir: '/templates/template-only', baseDir: '/templates' },
-      ],
-      externalEntries: [
-        { id: 'should-not-load-ext', dir: '/external/should-not-load-ext', baseDir: '/external' },
-      ],
-      recipeEntries: [
-        { id: 'should-not-load-recipe', dir: '/recipes/should-not-load-recipe', baseDir: '/recipes' },
-      ],
-      templateByDir: {
-        '/templates/template-only': templateMeta('Template Only', 'https://commonpaper.com/template-only'),
-      },
-    });
-
-    const logSpy = vi.spyOn(console, 'log').mockImplementation(() => {});
-
-    await allureStep('Run list --json --templates-only', async () => {
-      harness.runList({ json: true, templatesOnly: true });
-    });
-
-    const envelope = JSON.parse(String(logSpy.mock.calls[0][0]));
-    await allureJsonAttachment('list-templates-only-envelope.json', envelope);
-
-    expect(envelope.items).toHaveLength(1);
-    expect(envelope.items[0].name).toBe('template-only');
-    expect(harness.spies.loadExternalMetadata).not.toHaveBeenCalled();
-    expect(harness.spies.loadRecipeMetadata).not.toHaveBeenCalled();
-  });
-
   itDiscovery('collects external and recipe metadata errors in non-strict JSON mode', async () => {
     const harness = await loadListHarness({
       templateEntries: [
@@ -385,7 +354,7 @@ describe('runList in-process coverage', () => {
 
     const logSpy = vi.spyOn(console, 'log').mockImplementation(() => {});
 
-    harness.runList({ templatesOnly: true });
+    harness.runList({});
 
     expect(logSpy).toHaveBeenCalledWith('No agreements found.');
   });

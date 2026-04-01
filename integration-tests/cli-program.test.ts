@@ -228,10 +228,9 @@ describe('CLI program wiring', () => {
       'list',
       '--json',
       '--json-strict',
-      '--templates-only',
     ];
 
-    await allureStep('Given list argv includes json/json-strict/templates-only flags', async () => {
+    await allureStep('Given list argv includes json/json-strict flags', async () => {
       await allureJsonAttachment('cli-list-argv.json', argv);
     });
 
@@ -245,7 +244,6 @@ describe('CLI program wiring', () => {
       expect(runListMock).toHaveBeenCalledWith({
         json: true,
         jsonStrict: true,
-        templatesOnly: true,
       });
     });
   });

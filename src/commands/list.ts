@@ -10,7 +10,6 @@ const pkg = JSON.parse(readFileSync(pkgPath, 'utf-8'));
 export interface ListOptions {
   json?: boolean;
   jsonStrict?: boolean;
-  templatesOnly?: boolean;
 }
 
 interface ListItem {
@@ -29,8 +28,6 @@ export function runList(opts: ListOptions = {}): void {
 function runListJson(opts: ListOptions): void {
   const results: ListItem[] = [];
   const errors: string[] = [];
-  const templatesOnly = opts.templatesOnly === true;
-
   // Templates
   for (const entry of listTemplateEntries()) {
     const id = entry.id;
@@ -53,8 +50,7 @@ function runListJson(opts: ListOptions): void {
     }
   }
 
-  if (!templatesOnly) {
-    // External templates
+  // External templates
     for (const entry of listExternalEntries()) {
       const id = entry.id;
       const dir = entry.dir;
@@ -102,7 +98,6 @@ function runListJson(opts: ListOptions): void {
         errors.push(`recipe ${id}: ${err instanceof Error ? err.message : String(err)}`);
       }
     }
-  }
 
   results.sort((a, b) => a.name.localeCompare(b.name));
 
@@ -124,8 +119,6 @@ function runListJson(opts: ListOptions): void {
 function listAgreementsWithOptions(opts: ListOptions): void {
   interface Row { id: string; category: string; license: string; priority: number; total: number; source: string; sourceUrl: string }
   const rows: Row[] = [];
-  const templatesOnly = opts.templatesOnly === true;
-
   for (const entry of listTemplateEntries()) {
     const id = entry.id;
     const dir = entry.dir;
@@ -154,8 +147,7 @@ function listAgreementsWithOptions(opts: ListOptions): void {
     }
   }
 
-  if (!templatesOnly) {
-    for (const entry of listExternalEntries()) {
+  for (const entry of listExternalEntries()) {
       const id = entry.id;
       const dir = entry.dir;
       try {
@@ -211,7 +203,6 @@ function listAgreementsWithOptions(opts: ListOptions): void {
         });
       }
     }
-  }
 
   if (rows.length === 0) {
     console.log('No agreements found.');
