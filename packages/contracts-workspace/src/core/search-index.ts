@@ -58,8 +58,8 @@ function buildSearchIndex(rootDir: string, provider: WorkspaceProvider): { index
     sidecars.set(sidecar.document_path, sidecar);
 
     const clauseTexts = (sidecar.extractions ?? [])
-      .filter((e) => e.found && e.text)
-      .map((e) => e.text!)
+      .filter((e) => e.found)
+      .map((e) => [e.clause.replace(/-/g, ' '), e.text ?? ''].join(' '))
       .join(' ');
 
     index.add({
