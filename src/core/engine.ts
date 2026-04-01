@@ -273,12 +273,16 @@ export async function fillTemplate(options: FillOptions): Promise<FillResult> {
     console.warn(`Warning: unknown field(s) not in metadata: ${unknownKeys.join(', ')}`);
   }
 
-  // Build signing tag defaults: empty strings for any sig/date tags not in values
+  // Build signing tag defaults: use DocuSign anchor strings from signing.yaml
+  // so every filled document has anchors ready for electronic signature.
+  // The anchor text is styled 2pt white in the template, so it's invisible to readers.
   const signingTagDefaults: Record<string, string> = {};
   if (signingConfig) {
+    // Default to DocuSign anchors (primary provider)
+    const providerAnchors = signingConfig.providerAnchors?.docusign ?? {};
     for (const field of getSignatureTagFields(signingConfig)) {
       if (!(field in values)) {
-        signingTagDefaults[field] = '';
+        signingTagDefaults[field] = providerAnchors[field] ?? '';
       }
     }
   }
