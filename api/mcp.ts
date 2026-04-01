@@ -182,7 +182,8 @@ const SIGNING_TOOLS = [
     inputSchema: {
       type: 'object' as const,
       properties: {
-        file_path: { type: 'string', description: 'Path to the DOCX file to send for signature.' },
+        file_path: { type: 'string', description: 'Local path to the DOCX file (for stdio MCP server).' },
+        download_url: { type: 'string', description: 'URL to download the DOCX (for remote MCP). Use the download_url from fill_template.' },
         signers: {
           type: 'array',
           items: {
@@ -199,7 +200,7 @@ const SIGNING_TOOLS = [
         email_subject: { type: 'string', description: 'Subject line for the signing invitation email.' },
         api_key: { type: 'string', description: 'Your open_agreements_api_key.' },
       },
-      required: ['file_path', 'signers', 'api_key'] as const,
+      required: ['signers', 'api_key'] as const,
       additionalProperties: false,
     },
     annotations: { readOnlyHint: false, destructiveHint: false },

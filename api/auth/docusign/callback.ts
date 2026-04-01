@@ -227,8 +227,41 @@ export default async function handler(req: HttpRequest, res: HttpResponse): Prom
       return;
     }
 
-    // TODO: Encrypt tokens and store in Firestore via SigningContext
-    // For now, return success (tokens are NOT exposed to the browser)
+    // Store encrypted connection in Firestore
+    const encryptionKeyHex = process.env.OA_GCLOUD_ENCRYPTION_KEY?.trim();
+    const credentialsJson = process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON?.trim();
+    if (encryptionKeyHex) {
+      const { createGCloudStorageCallbacks } = await import(
+        '../../../packages/signing/src/gcloud-storage.js'
+      );
+      let credentials: { client_email: string; private_key: string; [key: string]: unknown } | undefined;
+      if (credentialsJson) {
+        try { credentials = JSON.parse(credentialsJson); } catch { /* ADC fallback */ }
+      }
+      const storage = createGCloudStorageCallbacks({
+        projectId: process.env.GOOGLE_CLOUD_PROJECT?.trim() || 'open-agreements',
+        bucketName: 'openagreements-signing-artifacts',
+        encryptionKey: Buffer.from(encryptionKeyHex, 'hex'),
+        ...(credentials ? { credentials } : {}),
+      });
+      const connectionId = `docusign-${account.account_id}`;
+      await storage.storeConnection({
+        connectionId,
+        provider: 'docusign',
+        accountId: account.account_id,
+        baseUri: account.base_uri,
+        scopes: ['signature', 'extended'],
+        expiresAt: new Date(Date.now() + tokens.expires_in * 1000).toISOString(),
+        apiKey,
+        accessToken: tokens.access_token,
+        refreshToken: tokens.refresh_token,
+      });
+      await storage.auditLog({
+        action: 'oauth_connect',
+        apiKey,
+        details: { connectionId, accountId: account.account_id, provider: 'docusign' },
+      });
+    }
 
     // Clear OAuth cookies
     res.setHeader('Set-Cookie', clearCookies);
