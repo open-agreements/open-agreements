@@ -69,7 +69,8 @@ const DisconnectSchema = z.object({
 const MAX_FILE_SIZE_BYTES = 25 * 1024 * 1024; // 25 MB (DocuSign limit)
 
 const SendSchema = z.object({
-  file_path: z.string().min(1),
+  file_path: z.string().min(1).optional(),
+  download_url: z.string().url().optional(),
   signers: z.array(z.object({
     name: z.string().min(1),
     email: z.string().email(),
@@ -77,6 +78,8 @@ const SendSchema = z.object({
   })).min(1),
   email_subject: z.string().min(1).optional(),
   api_key: z.string().min(1),
+}).refine((d) => d.file_path || d.download_url, {
+  message: 'Either file_path or download_url is required',
 });
 
 const StatusSchema = z.object({
@@ -174,7 +177,8 @@ export const signingTools: ToolDefinition[] = [
     inputSchema: {
       type: 'object',
       properties: {
-        file_path: { type: 'string', description: 'Path to the DOCX file to send for signature.' },
+        file_path: { type: 'string', description: 'Local path to the DOCX file (for stdio MCP server).' },
+        download_url: { type: 'string', description: 'URL to download the DOCX file (for remote MCP server). Use the download_url from fill_template.' },
         signers: {
           type: 'array',
           items: {
@@ -191,7 +195,7 @@ export const signingTools: ToolDefinition[] = [
         email_subject: { type: 'string', description: 'Subject line for the signing invitation email.' },
         api_key: { type: 'string', description: 'Your open_agreements_api_key for looking up the signing connection.' },
       },
-      required: ['file_path', 'signers', 'api_key'],
+      required: ['signers', 'api_key'],
       additionalProperties: false,
     },
     annotations: { readOnlyHint: false, destructiveHint: false },
@@ -207,17 +211,42 @@ export const signingTools: ToolDefinition[] = [
             'No DocuSign connection found. Use connect_signing_provider first.');
         }
 
-        // 2. Validate file
-        const fileError = validateDocxFile(input.file_path);
-        if (fileError) {
-          return err('send_for_signature', 'INVALID_DOCUMENT', fileError);
+        // 2. Get the document (local file or download URL)
+        let documentRef: unknown;
+        let filename: string;
+
+        if (input.download_url) {
+          // Fetch from URL (remote MCP server flow)
+          const response = await fetch(input.download_url);
+          if (!response.ok) {
+            return err('send_for_signature', 'INVALID_DOCUMENT',
+              `Failed to download document: HTTP ${response.status}`);
+          }
+          const buffer = Buffer.from(await response.arrayBuffer());
+          if (buffer.length > MAX_FILE_SIZE_BYTES) {
+            return err('send_for_signature', 'INVALID_DOCUMENT',
+              `Downloaded file too large (${(buffer.length / 1024 / 1024).toFixed(1)} MB). Maximum is 25 MB.`);
+          }
+          filename = new URL(input.download_url).pathname.split('/').pop() || 'document.docx';
+          // Upload the fetched buffer to GCS
+          const { createDocumentRef } = await import('../../../../packages/signing/src/storage.js');
+          const ref = createDocumentRef(buffer, filename, 'uploaded');
+          const storageUrl = await (ctx as any).storage.storeDocument(buffer, filename);
+          documentRef = { ...ref, storageUrl };
+        } else if (input.file_path) {
+          // Local file (stdio MCP server flow)
+          const fileError = validateDocxFile(input.file_path);
+          if (fileError) {
+            return err('send_for_signature', 'INVALID_DOCUMENT', fileError);
+          }
+          documentRef = await ctx.uploadLocalDocument(input.file_path);
+          filename = input.file_path.split('/').pop() || 'document.docx';
+        } else {
+          return err('send_for_signature', 'INVALID_DOCUMENT',
+            'Either file_path or download_url is required.');
         }
 
-        // 3. Upload file to storage
-        const documentRef = await ctx.uploadLocalDocument(input.file_path);
-
-        // 4. Build signing metadata
-        const filename = input.file_path.split('/').pop() || 'document.docx';
+        // 3. Build signing metadata
         const signingMetadata = {
           signers: input.signers.map((signer, index) => ({
             name: signer.name,
