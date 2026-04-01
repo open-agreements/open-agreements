@@ -1,4 +1,9 @@
+import { resolve } from 'node:path';
 import { callTool, listToolDescriptors, type ToolCallResult } from './tools.js';
+import { collectWorkspaceDocuments, buildStatusIndex } from '../../../contracts-workspace/src/core/indexer.js';
+import { lintWorkspace } from '../../../contracts-workspace/src/core/lint.js';
+import { enrichStatusIndex } from '../../../contracts-workspace/src/core/analysis-indexer.js';
+import { buildDashboardHtml } from './dashboard.js';
 
 type JsonRpcId = number | string | null;
 
@@ -68,6 +73,7 @@ async function handleMessage(message: unknown): Promise<void> {
         protocolVersion: pickProtocolVersion(request.params),
         capabilities: {
           tools: {},
+          resources: {},
         },
         serverInfo: SERVER_INFO,
       },
@@ -112,6 +118,56 @@ async function handleMessage(message: unknown): Promise<void> {
       id,
       result,
     });
+    return;
+  }
+
+  if (request.method === 'resources/list') {
+    sendResponse({
+      jsonrpc: '2.0',
+      id,
+      result: {
+        resources: [
+          {
+            uri: 'ui://contracts-workspace/dashboard',
+            name: 'Contract Portfolio Dashboard',
+            description: 'HTML dashboard showing indexed/unindexed counts, document type distribution, and expiring-soon contracts.',
+            mimeType: 'text/html',
+          },
+        ],
+      },
+    });
+    return;
+  }
+
+  if (request.method === 'resources/read') {
+    const params = (request.params ?? {}) as Record<string, unknown>;
+    const uri = typeof params.uri === 'string' ? params.uri : '';
+
+    if (uri === 'ui://contracts-workspace/dashboard') {
+      const rootDir = resolve(process.cwd());
+      const documents = collectWorkspaceDocuments(rootDir);
+      const lint = lintWorkspace(rootDir);
+      const baseIndex = buildStatusIndex(rootDir, documents, lint);
+      const enriched = enrichStatusIndex(rootDir, baseIndex);
+      const html = buildDashboardHtml(enriched.analysis!, documents.length);
+
+      sendResponse({
+        jsonrpc: '2.0',
+        id,
+        result: {
+          contents: [
+            {
+              uri,
+              mimeType: 'text/html',
+              text: html,
+            },
+          ],
+        },
+      });
+      return;
+    }
+
+    sendError(id, -32602, `Unknown resource URI: ${uri}`);
     return;
   }
 
