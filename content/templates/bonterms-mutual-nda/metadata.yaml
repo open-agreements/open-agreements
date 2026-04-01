@@ -48,6 +48,88 @@ fields:
     description: Courts with jurisdiction over disputes
     default: courts located in San Francisco, California
     section: Legal
+  - name: party_1_signatory_type
+    type: enum
+    description: Whether Party 1 signatory is an entity or individual
+    default: entity
+    options: [entity, individual]
+    section: Signatures
+  - name: party_1_signatory_name
+    type: string
+    description: Full name of the person signing for Party 1
+    section: Signatures
+  - name: party_1_signatory_title
+    type: string
+    description: Title of the person signing for Party 1
+    section: Signatures
+  - name: party_1_signatory_company
+    type: string
+    description: Company of the signatory for Party 1 (defaults to party_1_name)
+    section: Signatures
+  - name: party_1_email
+    type: string
+    description: Notice email address for Party 1
+    section: Signatures
+  - name: party_1_address
+    type: string
+    description: Notice postal address for Party 1
+    section: Signatures
+  - name: party_2_signatory_type
+    type: enum
+    description: Whether Party 2 signatory is an entity or individual
+    default: entity
+    options: [entity, individual]
+    section: Signatures
+  - name: party_2_signatory_name
+    type: string
+    description: Full name of the person signing for Party 2
+    section: Signatures
+  - name: party_2_signatory_title
+    type: string
+    description: Title of the person signing for Party 2
+    section: Signatures
+  - name: party_2_signatory_company
+    type: string
+    description: Company of the signatory for Party 2 (defaults to party_2_name)
+    section: Signatures
+  - name: party_2_email
+    type: string
+    description: Notice email address for Party 2
+    section: Signatures
+  - name: party_2_address
+    type: string
+    description: Notice postal address for Party 2
+    section: Signatures
+  - name: party_1_signatory_name_and_title
+    type: string
+    description: Computed display field (Name, Title)
+    required: false
+    section: Signatures
+  - name: party_2_signatory_name_and_title
+    type: string
+    description: Computed display field (Name, Title)
+    required: false
+    section: Signatures
+  - name: party_1_notice_email_check
+    type: string
+    description: Computed checkbox glyph for email notice
+    required: false
+    section: Signatures
+  - name: party_1_notice_postal_check
+    type: string
+    description: Computed checkbox glyph for postal notice
+    required: false
+    section: Signatures
+  - name: party_2_notice_email_check
+    type: string
+    description: Computed checkbox glyph for email notice
+    required: false
+    section: Signatures
+  - name: party_2_notice_postal_check
+    type: string
+    description: Computed checkbox glyph for postal notice
+    required: false
+    section: Signatures
 priority_fields:
   - party_1_name
   - party_2_name

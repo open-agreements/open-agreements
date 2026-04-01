@@ -108,6 +108,41 @@ function computeDisplayFields(data: Record<string, unknown>, fieldNames: Set<str
     }
   }
 
+  // ── Bonterms signatory defaults + computed fields ──
+  for (const n of [1, 2]) {
+    const p = `party_${n}`;
+
+    // Default signatory_company to party_name when not provided
+    const companyKey = `${p}_signatory_company`;
+    if (fieldNames.has(companyKey) && (!data[companyKey] || isBlankPlaceholder(data[companyKey]))) {
+      data[companyKey] = data[`${p}_name`] ?? '';
+    }
+
+    // Compute name_and_title display: "Jane Doe, GC" or just "Jane Doe"
+    const natKey = `${p}_signatory_name_and_title`;
+    if (fieldNames.has(natKey)) {
+      const name = str(`${p}_signatory_name`);
+      const title = str(`${p}_signatory_title`);
+      if (name && title) {
+        data[natKey] = `${name}, ${title}`;
+      } else {
+        data[natKey] = name || title || '';
+      }
+    }
+
+    // Compute notice checkbox glyphs from whether email/address are provided
+    const emailCheckKey = `${p}_notice_email_check`;
+    if (fieldNames.has(emailCheckKey)) {
+      const email = str(`${p}_email`);
+      data[emailCheckKey] = email ? '\u2611' : '\u2610';
+    }
+    const postalCheckKey = `${p}_notice_postal_check`;
+    if (fieldNames.has(postalCheckKey)) {
+      const address = str(`${p}_address`);
+      data[postalCheckKey] = address ? '\u2611' : '\u2610';
+    }
+  }
+
   // Optional cover-table rows in employment templates should disappear when blank.
   // The default blank placeholder is intentionally visible in most contexts,
   // but for these optional rows we normalize blank placeholders to empty strings
