@@ -1,4 +1,5 @@
 name: YC Post-Money SAFE — MFN
+category: safes
 description: >-
   Y Combinator's Post-Money SAFE (Simple Agreement for Future Equity) with a most favored nation (MFN) provision, no
   valuation cap, and no discount.

@@ -1,4 +1,5 @@
 name: Common Paper Order Form with SLA
+category: sales-licensing
 description: >-
   An order form template with service level agreement (SLA) provisions, based on Common Paper's standard form. Extends
   the standard order form with uptime targets, response times, and support schedules.

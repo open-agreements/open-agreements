@@ -26,6 +26,7 @@ export interface TemplateListField {
 
 export interface TemplateListItem {
   name: string;
+  display_name: string;
   category: string;
   description: string;
   license?: string;
@@ -106,7 +107,8 @@ export function listTemplateItems(opts?: { templatesOnly?: boolean }): TemplateL
       const meta = loadMetadata(entry.dir);
       items.push({
         name: entry.id,
-        category: categoryFromId(entry.id),
+        display_name: meta.name,
+        category: meta.category ?? categoryFromId(entry.id),
         description: meta.description ?? meta.name,
         license: meta.license,
         source_url: meta.source_url,

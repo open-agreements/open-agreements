@@ -39,7 +39,8 @@ function runListJson(opts: ListOptions): void {
       const meta = loadMetadata(dir);
       results.push({
         name: id,
-        category: categoryFromId(id),
+        display_name: meta.name,
+        category: meta.category ?? categoryFromId(id),
         description: meta.description ?? meta.name,
         license: meta.license,
         source_url: meta.source_url,
@@ -61,7 +62,8 @@ function runListJson(opts: ListOptions): void {
         const meta = loadExternalMetadata(dir);
         results.push({
           name: id,
-          category: categoryFromId(id),
+          display_name: meta.name,
+          category: (meta as Record<string, unknown>).category as string ?? categoryFromId(id),
           description: meta.description ?? meta.name,
           license: meta.license,
           source_url: meta.source_url,
@@ -82,7 +84,8 @@ function runListJson(opts: ListOptions): void {
         const meta = loadRecipeMetadata(dir);
         const item: ListItem = {
           name: id,
-          category: categoryFromId(id),
+          display_name: meta.name,
+          category: (meta as Record<string, unknown>).category as string ?? categoryFromId(id),
           description: meta.description ?? meta.name,
           license_note: meta.license_note,
           source_url: meta.source_url,
