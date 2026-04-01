@@ -1,4 +1,5 @@
 name: YC Post-Money SAFE — Discount
+category: safes
 description: Y Combinator's Post-Money SAFE (Simple Agreement for Future Equity) with a discount rate and no valuation cap.
 source_url: https://www.ycombinator.com/documents
 version: '2024.12'
