@@ -1,11 +1,11 @@
 signers:
   - role: party_1
-    nameField: party_1_name
+    nameField: party_1_signatory_name
     signatureField: sig_party_1
     dateField: date_party_1
     routingOrder: 1
   - role: party_2
-    nameField: party_2_name
+    nameField: party_2_signatory_name
     signatureField: sig_party_2
     dateField: date_party_2
     routingOrder: 2
