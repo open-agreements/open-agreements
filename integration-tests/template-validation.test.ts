@@ -75,6 +75,7 @@ function createTemplateFixture(opts: {
     join(dir, 'metadata.yaml'),
     [
       'name: Fixture Template',
+      'category: other',
       'source_url: https://example.com/template.docx',
       'version: "1.0"',
       'license: CC-BY-4.0',
@@ -377,6 +378,7 @@ describe('validateTemplate placeholder coverage', () => {
       join(dir, 'metadata.yaml'),
       [
         'name: Missing XML Fixture',
+        'category: other',
         'source_url: https://example.com/template.docx',
         'version: "1.0"',
         'license: CC-BY-4.0',

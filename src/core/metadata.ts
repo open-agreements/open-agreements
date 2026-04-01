@@ -59,7 +59,7 @@ function validatePriorityFields(
 const TemplateMetadataBaseSchema = z.object({
   name: z.string(),
   description: z.string().optional(),
-  category: z.string().optional(),
+  category: z.string(),
   source_url: z.string().url(),
   version: z.string(),
   license: LicenseEnum,

@@ -108,7 +108,7 @@ export function listTemplateItems(opts?: { templatesOnly?: boolean }): TemplateL
       items.push({
         name: entry.id,
         display_name: meta.name,
-        category: meta.category ?? categoryFromId(entry.id),
+        category: meta.category,
         description: meta.description ?? meta.name,
         license: meta.license,
         source_url: meta.source_url,

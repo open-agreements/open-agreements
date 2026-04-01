@@ -40,7 +40,7 @@ function runListJson(opts: ListOptions): void {
       results.push({
         name: id,
         display_name: meta.name,
-        category: meta.category ?? categoryFromId(id),
+        category: meta.category,
         description: meta.description ?? meta.name,
         license: meta.license,
         source_url: meta.source_url,
@@ -63,7 +63,7 @@ function runListJson(opts: ListOptions): void {
         results.push({
           name: id,
           display_name: meta.name,
-          category: (meta as Record<string, unknown>).category as string ?? categoryFromId(id),
+          category: (meta as Record<string, unknown>).category as string || 'other',
           description: meta.description ?? meta.name,
           license: meta.license,
           source_url: meta.source_url,
@@ -85,7 +85,7 @@ function runListJson(opts: ListOptions): void {
         const item: ListItem = {
           name: id,
           display_name: meta.name,
-          category: (meta as Record<string, unknown>).category as string ?? categoryFromId(id),
+          category: (meta as Record<string, unknown>).category as string || 'other',
           description: meta.description ?? meta.name,
           license_note: meta.license_note,
           source_url: meta.source_url,
