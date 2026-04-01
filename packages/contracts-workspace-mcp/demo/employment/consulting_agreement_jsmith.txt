@@ -1,0 +1,179 @@
+INDEPENDENT CONTRACTOR CONSULTING AGREEMENT
+
+This Independent Contractor Consulting Agreement ("Agreement") is entered into
+effective as of June 1, 2025 ("Effective Date"), by and between:
+
+TechStartup Inc., a Delaware corporation, with its principal place of business at
+1400 Innovation Drive, Suite 200, San Francisco, California 94107 ("Company"), and
+
+James Smith, an individual residing at 891 Maple Street, Portland, Oregon 97205
+("Consultant").
+
+RECITALS
+
+WHEREAS, the Company desires to engage Consultant to provide certain machine
+learning engineering and data science consulting services; and
+
+WHEREAS, Consultant has the requisite expertise and desires to provide such services
+on the terms and conditions set forth herein;
+
+NOW, THEREFORE, the parties agree as follows:
+
+1. SERVICES
+
+1.1 Scope of Work. Consultant shall provide the following services ("Services"):
+  (a) Design and implementation of recommendation engine models for the Company's
+      core product;
+  (b) Development of data pipelines for model training and evaluation;
+  (c) Technical documentation and knowledge transfer to Company's engineering team;
+  (d) Participation in weekly technical review meetings (remote attendance
+      acceptable).
+
+1.2 Standard of Performance. Consultant shall perform the Services in a
+professional and workmanlike manner consistent with industry standards. Consultant
+shall devote approximately twenty (20) hours per week to the Services.
+
+2. TERM AND TERMINATION
+
+2.1 Term. This Agreement shall commence on the Effective Date and shall continue
+for a period of six (6) months, expiring on November 30, 2025, unless earlier
+terminated or extended by mutual written agreement of the parties.
+
+2.2 Early Termination. Either party may terminate this Agreement upon fourteen (14)
+days' written notice to the other party for any reason or no reason. Upon
+termination, Company shall pay Consultant for all Services performed through the
+effective date of termination.
+
+2.3 Termination for Cause. Either party may terminate this Agreement immediately
+upon written notice if the other party materially breaches this Agreement and fails
+to cure such breach within seven (7) days of written notice of the breach.
+
+3. COMPENSATION
+
+3.1 Consulting Fee. Company shall pay Consultant at the rate of Two Hundred Fifty
+Dollars ($250.00) per hour for Services rendered.
+
+3.2 Invoicing. Consultant shall submit invoices on a bi-weekly basis, itemizing the
+hours worked and a brief description of Services performed. Company shall pay each
+invoice within fifteen (15) days of receipt.
+
+3.3 Expenses. Company shall reimburse Consultant for reasonable, pre-approved
+out-of-pocket expenses incurred in connection with the Services, provided that
+Consultant submits receipts and documentation with each invoice. Travel expenses
+require prior written approval from the Company.
+
+3.4 No Benefits. Consultant is an independent contractor and shall not be entitled
+to any employee benefits, including but not limited to health insurance, retirement
+plans, paid vacation, or workers' compensation.
+
+4. INDEPENDENT CONTRACTOR STATUS
+
+4.1 Consultant is an independent contractor and not an employee, agent, partner, or
+joint venturer of the Company. Consultant shall have no authority to bind the
+Company or represent that Consultant is an employee or agent of the Company.
+
+4.2 Consultant shall be solely responsible for all federal, state, and local taxes
+arising from compensation received under this Agreement, including self-employment
+taxes. The Company will issue Consultant an IRS Form 1099-NEC for compensation paid.
+
+4.3 Consultant retains the right to determine the manner and means of performing
+the Services, including the right to perform services for other clients, provided
+that such other engagements do not conflict with Consultant's obligations hereunder.
+
+5. INTELLECTUAL PROPERTY
+
+5.1 Work Product. All work product, deliverables, inventions, discoveries, designs,
+code, algorithms, documentation, and materials created by Consultant in the
+performance of the Services ("Work Product") shall be the sole and exclusive
+property of the Company. Consultant hereby irrevocably assigns to the Company all
+right, title, and interest in and to the Work Product, including all intellectual
+property rights therein.
+
+5.2 Pre-Existing IP. Consultant retains ownership of any tools, libraries,
+frameworks, or methodologies owned by Consultant prior to this Agreement or
+developed independently outside the scope of the Services ("Pre-Existing IP").
+To the extent any Pre-Existing IP is incorporated into the Work Product, Consultant
+hereby grants the Company a non-exclusive, perpetual, royalty-free, worldwide
+license to use, modify, and sublicense such Pre-Existing IP solely as part of the
+Work Product.
+
+5.3 Moral Rights. To the extent permitted by law, Consultant waives any moral
+rights in the Work Product.
+
+6. CONFIDENTIALITY
+
+6.1 Consultant acknowledges that in the course of performing the Services,
+Consultant may have access to confidential and proprietary information of the
+Company ("Confidential Information"). Consultant shall hold all Confidential
+Information in strict confidence and shall not disclose or use such information
+except as necessary to perform the Services.
+
+6.2 Upon termination of this Agreement or upon Company's request, Consultant shall
+promptly return or destroy all Confidential Information in Consultant's possession.
+
+6.3 The obligations under this Section 6 shall survive the termination of this
+Agreement for a period of three (3) years.
+
+7. NON-SOLICITATION
+
+During the term of this Agreement and for a period of twelve (12) months following
+its termination, Consultant shall not directly or indirectly solicit or hire any
+employee of the Company, or encourage any employee to leave the Company's employ.
+
+8. REPRESENTATIONS AND WARRANTIES
+
+8.1 Consultant represents and warrants that: (a) Consultant has the skills,
+qualifications, and experience necessary to perform the Services; (b) the Services
+and Work Product will not infringe any third-party intellectual property rights;
+(c) Consultant is not subject to any agreement that would prevent Consultant from
+performing the Services; and (d) Consultant will comply with all applicable laws.
+
+8.2 Company represents and warrants that it has the authority to enter into this
+Agreement and to engage Consultant to perform the Services.
+
+9. INDEMNIFICATION
+
+9.1 Consultant shall indemnify and hold harmless the Company from any third-party
+claims arising from: (a) Consultant's breach of this Agreement; (b) Consultant's
+negligence or willful misconduct; or (c) any claim that the Work Product infringes
+third-party intellectual property rights.
+
+9.2 Company shall indemnify and hold harmless Consultant from any third-party
+claims arising from Company's use of the Work Product in a manner not contemplated
+by this Agreement.
+
+10. LIMITATION OF LIABILITY
+
+IN NO EVENT SHALL EITHER PARTY BE LIABLE TO THE OTHER FOR ANY INDIRECT, INCIDENTAL,
+CONSEQUENTIAL, SPECIAL, OR PUNITIVE DAMAGES. CONSULTANT'S TOTAL LIABILITY UNDER
+THIS AGREEMENT SHALL NOT EXCEED THE TOTAL FEES PAID TO CONSULTANT DURING THE THREE
+(3) MONTH PERIOD PRECEDING THE CLAIM.
+
+11. GOVERNING LAW
+
+This Agreement shall be governed by and construed in accordance with the laws of
+the State of Oregon, without regard to its conflict of laws principles. Any
+disputes shall be resolved in the state or federal courts located in Multnomah
+County, Oregon.
+
+12. GENERAL PROVISIONS
+
+12.1 Entire Agreement. This Agreement constitutes the entire agreement between
+the parties regarding the subject matter hereof.
+
+12.2 Amendment. This Agreement may be amended only by written agreement signed
+by both parties.
+
+12.3 Severability. If any provision is held unenforceable, the remaining provisions
+shall remain in effect.
+
+12.4 Counterparts. This Agreement may be executed in counterparts.
+
+IN WITNESS WHEREOF, the parties have executed this Agreement as of the Effective Date.
+
+TECHSTARTUP INC.                    CONSULTANT
+
+By: _________________________       _________________________
+Name: Sarah Chen                    James Smith
+Title: CEO
+Date: June 1, 2025                  Date: June 1, 2025

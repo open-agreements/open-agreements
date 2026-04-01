@@ -1,10 +1,18 @@
 import { createHash } from 'node:crypto';
+import { resolve, relative } from 'node:path';
 import { dump, load } from 'js-yaml';
 import { ANALYSIS_DOCUMENTS_DIR, CONFIG_FILE } from './constants.js';
 import { DOCUMENT_TYPES } from './analysis-types.js';
 import { createProvider } from './filesystem-provider.js';
 import type { WorkspaceProvider } from './provider.js';
 import type { DocumentAnalysis, DocumentClassification, ClauseExtraction, DocumentType } from './analysis-types.js';
+
+/** Validate that a document path doesn't escape the workspace root. */
+function assertSafePath(documentPath: string): void {
+  if (documentPath.includes('..') || documentPath.startsWith('/')) {
+    throw new Error(`Unsafe document path: "${documentPath}". Path must be relative and within the workspace.`);
+  }
+}
 
 /** Map a document's relative path to its sidecar path. */
 export function sidecarPath(documentRelativePath: string): string {
@@ -68,6 +76,7 @@ export function loadSidecar(
   documentPath: string,
   provider?: WorkspaceProvider,
 ): DocumentAnalysis | null {
+  assertSafePath(documentPath);
   const p = provider ?? createProvider(rootDir);
   const path = sidecarPath(documentPath);
   if (!p.exists(path)) return null;
@@ -109,6 +118,7 @@ export function indexContract(
 ): IndexContractResult {
   const p = provider ?? createProvider(rootDir);
   const { documentPath, classification, extractions, indexedBy } = input;
+  assertSafePath(documentPath);
 
   const hash = computeContentHash(p, documentPath);
   const existing = loadSidecar(rootDir, documentPath, p);
@@ -142,15 +152,10 @@ export function indexContract(
   };
 
   const path = sidecarPath(documentPath);
-  const tmpPath = `${path}.tmp`;
   const dir = path.slice(0, path.lastIndexOf('/'));
   p.mkdir(dir, { recursive: true });
 
   const yaml = dump(analysis, { noRefs: true, lineWidth: 120, sortKeys: false });
-  p.writeFile(tmpPath, yaml);
-  // Atomic rename — for MemoryProvider this is just another write, but for
-  // FilesystemProvider this would ideally be fs.renameSync. Since the provider
-  // abstraction doesn't have rename, we write to final path and delete tmp.
   p.writeFile(path, yaml);
 
   return { analysis, warning };
@@ -162,6 +167,7 @@ export function isSidecarStale(
   documentPath: string,
   provider?: WorkspaceProvider,
 ): { stale: boolean; reason?: string } {
+  assertSafePath(documentPath);
   const p = provider ?? createProvider(rootDir);
   const sidecar = loadSidecar(rootDir, documentPath, p);
   if (!sidecar) return { stale: false };

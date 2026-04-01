@@ -1,0 +1,176 @@
+SAAS SUBSCRIPTION AGREEMENT
+
+This SaaS Subscription Agreement ("Agreement") is entered into effective as of
+March 1, 2025 ("Effective Date"), by and between:
+
+DataFlow Analytics Inc., a California corporation, with its principal office at
+2200 Mission Street, Suite 400, San Francisco, California 94110 ("Provider"), and
+
+TechStartup Inc., a Delaware corporation, with its principal place of business at
+1400 Innovation Drive, Suite 200, San Francisco, California 94107 ("Subscriber").
+
+1. SAAS SERVICES
+
+1.1 Subscription Grant. Subject to the terms of this Agreement, Provider hereby
+grants to Subscriber a non-exclusive, non-transferable right to access and use
+Provider's DataFlow Pro analytics platform (the "Platform") during the Subscription
+Term, solely for Subscriber's internal business purposes.
+
+1.2 Users. Subscriber may permit up to fifty (50) authorized users ("Users") to
+access the Platform. Subscriber shall ensure that all Users comply with the terms
+of this Agreement and shall be responsible for any breach by its Users.
+
+1.3 Service Levels. Provider shall use commercially reasonable efforts to maintain
+Platform availability of at least 99.5% measured monthly, excluding scheduled
+maintenance windows. Scheduled maintenance shall be performed between 2:00 AM and
+6:00 AM Pacific Time on Sundays with at least 48 hours' advance notice.
+
+2. SUBSCRIPTION TERM AND RENEWAL
+
+2.1 Initial Term. The initial subscription term shall commence on the Effective Date
+and continue for a period of one (1) year, expiring on February 28, 2026
+("Subscription Term").
+
+2.2 Renewal. This Agreement shall automatically renew for successive one (1) year
+periods unless either party provides written notice of non-renewal at least thirty
+(30) days prior to the expiration of the then-current Subscription Term.
+
+2.3 Effect of Termination. Upon termination or expiration of this Agreement,
+Subscriber's right to access the Platform shall immediately cease. Provider shall
+make Subscriber's data available for export for a period of thirty (30) days
+following termination, after which Provider may delete all Subscriber data.
+
+3. FEES AND PAYMENT
+
+3.1 Subscription Fees. Subscriber shall pay Provider an annual subscription fee of
+Seventy-Two Thousand Dollars ($72,000.00), payable in equal monthly installments of
+Six Thousand Dollars ($6,000.00) due on the first day of each calendar month.
+
+3.2 Fee Increases. Provider may increase subscription fees upon renewal by providing
+at least sixty (60) days' written notice prior to the start of the renewal term,
+provided that any increase shall not exceed five percent (5%) of the then-current
+fees.
+
+3.3 Payment Terms. All invoices are net thirty (30) days. Overdue amounts shall bear
+interest at one percent (1%) per month or the maximum rate permitted by law,
+whichever is less.
+
+4. DATA OWNERSHIP AND PRIVACY
+
+4.1 Subscriber Data. As between the parties, Subscriber retains all right, title,
+and interest in and to all data submitted to or collected through the Platform by
+Subscriber and its Users ("Subscriber Data"). Provider shall not access, use, or
+disclose Subscriber Data except as necessary to provide the Platform and related
+support services.
+
+4.2 Aggregated Data. Notwithstanding Section 4.1, Provider may collect and use
+aggregated, de-identified data derived from Subscriber's use of the Platform for
+purposes of improving the Platform, provided that such data cannot be used to
+identify Subscriber or any individual.
+
+4.3 Data Processing. Provider shall process Subscriber Data in accordance with its
+Data Processing Addendum attached hereto as Exhibit B, which complies with the
+requirements of the California Consumer Privacy Act (CCPA) and the General Data
+Protection Regulation (GDPR) to the extent applicable.
+
+4.4 Data Security. Provider maintains SOC 2 Type II certification and shall
+implement and maintain security measures consistent with industry best practices,
+including encryption of data in transit (TLS 1.2 or higher) and at rest (AES-256).
+
+5. INTELLECTUAL PROPERTY
+
+5.1 Provider IP. Provider retains all right, title, and interest in and to the
+Platform, including all software, algorithms, user interfaces, documentation, and
+any improvements or modifications thereto.
+
+5.2 Feedback. If Subscriber provides suggestions, feature requests, or other
+feedback regarding the Platform, Provider shall have a royalty-free, worldwide,
+perpetual license to use, modify, and incorporate such feedback into the Platform.
+
+6. CONFIDENTIALITY
+
+6.1 Each party shall maintain the confidentiality of the other party's Confidential
+Information using the same degree of care it uses to protect its own confidential
+information, but in no event less than a reasonable degree of care.
+
+6.2 Confidential Information includes, without limitation, business plans, pricing,
+technical specifications, customer lists, and any information marked as confidential.
+
+7. WARRANTIES AND DISCLAIMERS
+
+7.1 Provider warrants that: (a) the Platform will perform materially in accordance
+with the applicable documentation; (b) it has the right to grant the licenses
+hereunder; and (c) the Platform will not introduce any viruses or malicious code
+into Subscriber's systems.
+
+7.2 EXCEPT AS EXPRESSLY SET FORTH IN THIS AGREEMENT, THE PLATFORM IS PROVIDED "AS
+IS" AND PROVIDER DISCLAIMS ALL OTHER WARRANTIES, EXPRESS OR IMPLIED, INCLUDING
+WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND
+NON-INFRINGEMENT.
+
+8. LIMITATION OF LIABILITY
+
+8.1 IN NO EVENT SHALL EITHER PARTY BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL,
+CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING OUT OF OR RELATED TO THIS AGREEMENT.
+
+8.2 EACH PARTY'S TOTAL AGGREGATE LIABILITY UNDER THIS AGREEMENT SHALL NOT EXCEED
+THE TOTAL SUBSCRIPTION FEES PAID BY SUBSCRIBER DURING THE TWELVE (12) MONTHS
+IMMEDIATELY PRECEDING THE CLAIM.
+
+8.3 THE LIMITATIONS IN THIS SECTION 8 SHALL NOT APPLY TO: (A) EITHER PARTY'S
+INDEMNIFICATION OBLIGATIONS; (B) PROVIDER'S BREACH OF SECTION 4 (DATA OWNERSHIP
+AND PRIVACY); OR (C) EITHER PARTY'S WILLFUL MISCONDUCT.
+
+9. INDEMNIFICATION
+
+9.1 Provider shall indemnify, defend, and hold harmless Subscriber from any third-
+party claim that the Platform infringes any United States patent, copyright, or
+trade secret, provided that Subscriber: (a) gives prompt written notice of such
+claim; (b) grants Provider sole control of the defense and settlement; and
+(c) provides reasonable cooperation at Provider's expense.
+
+9.2 If the Platform becomes, or in Provider's opinion is likely to become, the
+subject of an infringement claim, Provider may, at its option: (a) obtain the right
+for Subscriber to continue using the Platform; (b) modify the Platform to make it
+non-infringing; or (c) terminate this Agreement and refund any prepaid fees for the
+unused portion of the Subscription Term.
+
+10. TERMINATION
+
+10.1 Termination for Cause. Either party may terminate this Agreement upon thirty
+(30) days' written notice if the other party commits a material breach and fails to
+cure such breach within such notice period.
+
+10.2 Termination for Insolvency. Either party may terminate this Agreement
+immediately upon written notice if the other party: (a) becomes insolvent; (b) files
+or has filed against it a petition in bankruptcy; or (c) makes an assignment for the
+benefit of creditors.
+
+11. GOVERNING LAW
+
+11.1 This Agreement shall be governed by and construed in accordance with the laws
+of the State of California, without regard to its conflict of laws provisions.
+
+11.2 Any legal action or proceeding relating to this Agreement shall be brought
+exclusively in the state or federal courts located in San Francisco County,
+California, and the parties consent to the personal jurisdiction of such courts.
+
+12. MISCELLANEOUS
+
+12.1 Entire Agreement. This Agreement, including all exhibits and addenda,
+constitutes the entire agreement between the parties.
+
+12.2 Waiver. No waiver of any provision shall be effective unless in writing and
+signed by the waiving party.
+
+12.3 Notices. All notices shall be in writing and delivered by email with
+confirmation of receipt, overnight courier, or certified mail.
+
+IN WITNESS WHEREOF, the parties have executed this Agreement as of the Effective Date.
+
+DATAFLOW ANALYTICS INC.             TECHSTARTUP INC.
+
+By: _________________________       By: _________________________
+Name: Priya Sharma                  Name: Sarah Chen
+Title: CEO                          Title: CEO
+Date: March 1, 2025                 Date: March 1, 2025

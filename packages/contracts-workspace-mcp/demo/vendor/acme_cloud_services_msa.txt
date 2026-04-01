@@ -1,0 +1,197 @@
+MASTER SERVICES AGREEMENT
+
+This Master Services Agreement ("Agreement") is entered into as of January 15, 2025
+("Effective Date"), by and between:
+
+TechStartup Inc., a Delaware corporation, with its principal place of business at
+1400 Innovation Drive, Suite 200, San Francisco, California 94107 ("Customer"), and
+
+Acme Cloud Services LLC, a Texas limited liability company, with its principal place
+of business at 8500 Enterprise Boulevard, Austin, Texas 78701 ("Provider").
+
+RECITALS
+
+WHEREAS, Provider is engaged in the business of providing cloud computing
+infrastructure, managed services, and related technical support; and
+
+WHEREAS, Customer desires to engage Provider to furnish such services on the terms
+and conditions set forth herein;
+
+NOW, THEREFORE, in consideration of the mutual covenants and agreements contained
+herein, the parties agree as follows:
+
+1. DEFINITIONS
+
+1.1 "Services" means the cloud infrastructure services, managed hosting, and
+technical support services described in one or more Statements of Work executed
+pursuant to this Agreement.
+
+1.2 "Confidential Information" means any non-public information disclosed by either
+party to the other, whether orally, in writing, or by inspection, that is designated
+as confidential or that a reasonable person would understand to be confidential given
+the nature of the information and circumstances of disclosure.
+
+1.3 "Service Level Agreement" or "SLA" means the performance standards and uptime
+commitments set forth in Exhibit A attached hereto.
+
+2. SERVICES AND STATEMENTS OF WORK
+
+2.1 Provider shall perform the Services described in each Statement of Work ("SOW")
+executed by both parties. Each SOW shall reference this Agreement and shall be
+subject to the terms hereof.
+
+2.2 Provider shall perform all Services in a professional and workmanlike manner,
+consistent with generally accepted industry standards and practices.
+
+3. TERM AND TERMINATION
+
+3.1 Term. This Agreement shall commence on the Effective Date and shall continue for
+an initial term of three (3) years, expiring on January 14, 2028 ("Initial Term"),
+unless earlier terminated in accordance with this Section 3.
+
+3.2 Renewal. Following the Initial Term, this Agreement shall automatically renew
+for successive one (1) year periods unless either party provides written notice of
+non-renewal at least ninety (90) days prior to the expiration of the then-current
+term.
+
+3.3 Termination for Cause. Either party may terminate this Agreement upon thirty
+(30) days' written notice if the other party materially breaches any provision of
+this Agreement and fails to cure such breach within such thirty (30) day period.
+
+3.4 Termination for Convenience. Customer may terminate this Agreement or any SOW
+for convenience upon sixty (60) days' prior written notice to Provider, subject to
+payment of any fees accrued through the effective date of termination and any
+applicable early termination fees specified in the relevant SOW.
+
+4. FEES AND PAYMENT
+
+4.1 Customer shall pay Provider the fees set forth in each SOW. Unless otherwise
+specified in a SOW, all invoices are due and payable within thirty (30) days of
+the date of invoice.
+
+4.2 Late payments shall accrue interest at the lesser of one and one-half percent
+(1.5%) per month or the maximum rate permitted by applicable law.
+
+4.3 All fees are exclusive of taxes. Customer shall be responsible for all sales,
+use, and excise taxes, and any other similar taxes, duties, and charges of any kind
+imposed by any governmental authority on any amounts payable by Customer hereunder.
+
+5. CONFIDENTIALITY
+
+5.1 Each party agrees to hold the other party's Confidential Information in strict
+confidence and not to disclose such information to any third party except as
+necessary to perform its obligations under this Agreement, provided that such third
+parties are bound by confidentiality obligations no less restrictive than those
+contained herein.
+
+5.2 The obligations of confidentiality shall not apply to information that: (a) is
+or becomes publicly available through no fault of the receiving party; (b) was
+rightfully in the receiving party's possession prior to disclosure; (c) is
+independently developed by the receiving party without use of the disclosing party's
+Confidential Information; or (d) is required to be disclosed by law.
+
+5.3 The confidentiality obligations set forth in this Section 5 shall survive the
+termination or expiration of this Agreement for a period of five (5) years.
+
+6. INTELLECTUAL PROPERTY
+
+6.1 Provider retains all right, title, and interest in and to its pre-existing
+intellectual property and any tools, methodologies, or know-how developed
+independently of this Agreement.
+
+6.2 Subject to full payment of all fees, Provider grants Customer a non-exclusive,
+worldwide, royalty-free license to use any deliverables created specifically for
+Customer under a SOW, solely for Customer's internal business purposes.
+
+7. INDEMNIFICATION
+
+7.1 Provider shall defend, indemnify, and hold harmless Customer and its officers,
+directors, employees, and agents from and against any and all third-party claims,
+damages, losses, and expenses (including reasonable attorneys' fees) arising out of
+or relating to: (a) Provider's negligence or willful misconduct; (b) any claim that
+the Services infringe or misappropriate any third-party intellectual property right;
+or (c) Provider's breach of its confidentiality obligations under Section 5.
+
+7.2 Customer shall defend, indemnify, and hold harmless Provider from any third-
+party claims arising out of Customer's use of the Services in violation of this
+Agreement or applicable law.
+
+8. LIMITATION OF LIABILITY
+
+8.1 EXCEPT FOR OBLIGATIONS UNDER SECTION 5 (CONFIDENTIALITY) AND SECTION 7
+(INDEMNIFICATION), IN NO EVENT SHALL EITHER PARTY BE LIABLE TO THE OTHER FOR ANY
+INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, REGARDLESS OF
+THE CAUSE OF ACTION OR THE THEORY OF LIABILITY, EVEN IF SUCH PARTY HAS BEEN ADVISED
+OF THE POSSIBILITY OF SUCH DAMAGES.
+
+8.2 EXCEPT FOR OBLIGATIONS UNDER SECTION 5 AND SECTION 7, EACH PARTY'S TOTAL
+AGGREGATE LIABILITY UNDER THIS AGREEMENT SHALL NOT EXCEED THE TOTAL FEES PAID OR
+PAYABLE BY CUSTOMER TO PROVIDER DURING THE TWELVE (12) MONTH PERIOD PRECEDING THE
+EVENT GIVING RISE TO THE CLAIM.
+
+9. DATA PROTECTION
+
+9.1 Provider shall implement and maintain reasonable administrative, technical, and
+physical safeguards to protect Customer data in accordance with industry standards
+and applicable data protection laws.
+
+9.2 Provider shall promptly notify Customer (and in no event later than seventy-two
+(72) hours) upon becoming aware of any security incident involving unauthorized
+access to Customer data.
+
+10. REPRESENTATIONS AND WARRANTIES
+
+10.1 Each party represents and warrants that: (a) it has the legal power and
+authority to enter into this Agreement; (b) the execution of this Agreement does not
+conflict with any other agreement to which it is a party; and (c) it shall comply
+with all applicable laws in performing its obligations hereunder.
+
+10.2 EXCEPT AS EXPRESSLY SET FORTH HEREIN, PROVIDER MAKES NO WARRANTIES, EXPRESS
+OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED WARRANTIES OF MERCHANTABILITY
+OR FITNESS FOR A PARTICULAR PURPOSE.
+
+11. GOVERNING LAW AND DISPUTE RESOLUTION
+
+11.1 This Agreement shall be governed by and construed in accordance with the laws
+of the State of Delaware, without regard to its conflict of laws principles.
+
+11.2 Any dispute arising out of or relating to this Agreement shall first be subject
+to good faith negotiation between the parties for a period of thirty (30) days. If
+the dispute cannot be resolved through negotiation, it shall be submitted to binding
+arbitration administered by the American Arbitration Association in accordance with
+its Commercial Arbitration Rules, with the arbitration to be conducted in
+Wilmington, Delaware.
+
+12. GENERAL PROVISIONS
+
+12.1 Entire Agreement. This Agreement, together with all SOWs and exhibits attached
+hereto, constitutes the entire agreement between the parties and supersedes all
+prior and contemporaneous understandings.
+
+12.2 Amendment. This Agreement may only be amended by a written instrument signed
+by both parties.
+
+12.3 Assignment. Neither party may assign this Agreement without the prior written
+consent of the other party, except that either party may assign this Agreement to
+a successor in connection with a merger, acquisition, or sale of all or
+substantially all of its assets.
+
+12.4 Notices. All notices shall be in writing and shall be sent to the addresses
+set forth above, or to such other address as a party may designate by written notice.
+
+12.5 Force Majeure. Neither party shall be liable for any failure or delay in
+performance due to causes beyond its reasonable control, including but not limited
+to acts of God, natural disasters, war, terrorism, strikes, or government action.
+
+12.6 Severability. If any provision of this Agreement is found to be unenforceable,
+the remaining provisions shall remain in full force and effect.
+
+IN WITNESS WHEREOF, the parties have caused this Agreement to be executed by their
+duly authorized representatives as of the Effective Date.
+
+TECHSTARTUP INC.                    ACME CLOUD SERVICES LLC
+
+By: _________________________       By: _________________________
+Name: Sarah Chen                    Name: Robert Martinez
+Title: Chief Executive Officer      Title: Vice President, Sales
+Date: January 15, 2025              Date: January 15, 2025

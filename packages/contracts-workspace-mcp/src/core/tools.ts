@@ -420,7 +420,7 @@ const tools: ToolDefinition[] = [
   },
   {
     name: 'search_contracts',
-    description: 'Search the contract portfolio by BM25 full-text query and/or metadata filters. Index is built in-memory from sidecar files. Use format:"markdown" for copy-paste tables.',
+    description: 'Search indexed contract metadata and extracted clauses by BM25 query and/or filters. Searches summaries, parties, clause text, and governing law — not the full document text. Use format:"markdown" for copy-paste tables.',
     inputSchema: {
       type: 'object',
       properties: {
@@ -441,10 +441,12 @@ const tools: ToolDefinition[] = [
       const rootDir = resolveRootDir(input.root_dir);
 
       const documents = collectWorkspaceDocuments(rootDir);
+      // Only compute staleness if the caller is filtering by stale status
+      const needsStale = input.stale !== undefined;
       const enrichedDocs = documents.map((doc) => {
         const sidecar = loadSidecar(rootDir, doc.path);
-        const staleness = sidecar ? isSidecarStale(rootDir, doc.path) : { stale: false };
-        return { ...doc, analyzed: !!sidecar, stale: staleness.stale };
+        const stale = needsStale && sidecar ? isSidecarStale(rootDir, doc.path).stale : false;
+        return { ...doc, analyzed: !!sidecar, stale };
       });
 
       const results = searchContracts(rootDir, {

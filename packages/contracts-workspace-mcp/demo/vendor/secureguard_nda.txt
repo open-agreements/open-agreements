@@ -1,0 +1,156 @@
+MUTUAL NON-DISCLOSURE AGREEMENT
+
+This Mutual Non-Disclosure Agreement ("Agreement") is entered into as of
+September 10, 2025 ("Effective Date"), by and between:
+
+TechStartup Inc., a Delaware corporation, with its principal place of business at
+1400 Innovation Drive, Suite 200, San Francisco, California 94107 ("TechStartup"),
+and
+
+SecureGuard Cybersecurity Corp., a Virginia corporation, with its principal place
+of business at 7700 Defense Parkway, Suite 300, Arlington, Virginia 22201
+("SecureGuard").
+
+Each individually a "Party" and collectively the "Parties."
+
+WHEREAS, the Parties wish to explore a potential business relationship relating to
+the integration of SecureGuard's endpoint detection and response technology into
+TechStartup's cloud platform (the "Purpose"), and in connection therewith, each
+Party may disclose to the other certain confidential and proprietary information;
+
+NOW, THEREFORE, in consideration of the mutual covenants herein, the Parties agree
+as follows:
+
+1. DEFINITION OF CONFIDENTIAL INFORMATION
+
+1.1 "Confidential Information" means any and all non-public, proprietary, or
+confidential information disclosed by either Party (the "Disclosing Party") to the
+other Party (the "Receiving Party"), whether orally, visually, in writing, or in
+electronic form, including without limitation:
+
+  (a) trade secrets, inventions, patents, copyrights, and know-how;
+  (b) business plans, strategies, forecasts, and financial information;
+  (c) product designs, specifications, source code, and technical data;
+  (d) customer lists, pricing information, and marketing plans;
+  (e) employee and personnel information; and
+  (f) any other information that is designated as "Confidential," "Proprietary,"
+      or with a similar legend, or that a reasonable person would understand to
+      be confidential given the nature of the information.
+
+1.2 Confidential Information does not include information that the Receiving Party
+can demonstrate: (a) was publicly known at the time of disclosure; (b) became
+publicly known after disclosure through no fault of the Receiving Party; (c) was
+already in the Receiving Party's possession without restriction prior to disclosure;
+(d) was independently developed by the Receiving Party without reference to the
+Disclosing Party's Confidential Information; or (e) was rightfully received from a
+third party without restriction on disclosure.
+
+2. OBLIGATIONS OF THE RECEIVING PARTY
+
+2.1 The Receiving Party shall: (a) hold the Disclosing Party's Confidential
+Information in strict confidence; (b) not disclose such information to any third
+party without the prior written consent of the Disclosing Party; (c) use such
+information solely for the Purpose; and (d) protect such information using the same
+degree of care it uses to protect its own confidential information, but in no event
+less than a reasonable degree of care.
+
+2.2 The Receiving Party may disclose Confidential Information to its employees,
+officers, directors, contractors, and advisors ("Representatives") who have a
+legitimate need to know for the Purpose, provided that such Representatives are
+bound by confidentiality obligations at least as protective as those in this
+Agreement.
+
+2.3 The Receiving Party shall be responsible for any breach of this Agreement by
+its Representatives.
+
+3. COMPELLED DISCLOSURE
+
+3.1 If the Receiving Party is compelled by law, regulation, or legal process to
+disclose Confidential Information, the Receiving Party shall: (a) provide prompt
+written notice to the Disclosing Party (to the extent legally permitted); (b)
+cooperate with the Disclosing Party's efforts to obtain a protective order or
+other appropriate remedy; and (c) disclose only the minimum amount of Confidential
+Information legally required.
+
+4. RETURN OF MATERIALS
+
+4.1 Upon the Disclosing Party's written request or upon termination of this
+Agreement, the Receiving Party shall promptly return or destroy all copies of the
+Disclosing Party's Confidential Information in its possession or control, and shall
+certify such return or destruction in writing.
+
+4.2 Notwithstanding the foregoing, the Receiving Party may retain copies of
+Confidential Information stored in routine backup systems or as required by law or
+regulation, provided that such retained information remains subject to the
+confidentiality obligations of this Agreement.
+
+5. NO LICENSE OR WARRANTY
+
+5.1 Nothing in this Agreement grants the Receiving Party any license, right, or
+interest in or to the Disclosing Party's Confidential Information, intellectual
+property, or other proprietary rights.
+
+5.2 ALL CONFIDENTIAL INFORMATION IS PROVIDED "AS IS." THE DISCLOSING PARTY MAKES
+NO WARRANTIES, EXPRESS OR IMPLIED, REGARDING THE ACCURACY, COMPLETENESS, OR
+PERFORMANCE OF ANY CONFIDENTIAL INFORMATION.
+
+6. TERM AND TERMINATION
+
+6.1 This Agreement shall remain in effect for a period of two (2) years from the
+Effective Date, expiring on September 9, 2027, unless earlier terminated by either
+Party upon thirty (30) days' written notice to the other Party.
+
+6.2 The obligations of confidentiality set forth in this Agreement shall survive
+the termination or expiration of this Agreement for a period of three (3) years
+following such termination or expiration.
+
+7. REMEDIES
+
+7.1 Each Party acknowledges that a breach of this Agreement may cause irreparable
+harm to the Disclosing Party for which monetary damages would be an inadequate
+remedy. Accordingly, the Disclosing Party shall be entitled to seek equitable
+relief, including injunction and specific performance, in addition to all other
+remedies available at law or in equity.
+
+8. NO OBLIGATION
+
+8.1 Nothing in this Agreement shall obligate either Party to enter into any further
+agreement or to proceed with any business transaction.
+
+8.2 Either Party may terminate discussions relating to the Purpose at any time
+without liability.
+
+9. GOVERNING LAW
+
+9.1 This Agreement shall be governed by and construed in accordance with the laws
+of the State of New York, without regard to its conflict of laws principles.
+
+9.2 Any dispute arising under this Agreement shall be resolved exclusively in the
+state or federal courts located in the Borough of Manhattan, New York, New York.
+
+10. GENERAL PROVISIONS
+
+10.1 Entire Agreement. This Agreement constitutes the entire agreement between the
+Parties with respect to the subject matter hereof and supersedes all prior
+negotiations, representations, and agreements relating thereto.
+
+10.2 Amendment. This Agreement may be amended only by a written instrument signed
+by both Parties.
+
+10.3 Assignment. Neither Party may assign this Agreement without the prior written
+consent of the other Party.
+
+10.4 Counterparts. This Agreement may be executed in counterparts, each of which
+shall be deemed an original.
+
+10.5 Severability. If any provision of this Agreement is held invalid or
+unenforceable, the remaining provisions shall continue in full force and effect.
+
+IN WITNESS WHEREOF, the Parties have executed this Agreement as of the Effective Date.
+
+TECHSTARTUP INC.                    SECUREGUARD CYBERSECURITY CORP.
+
+By: _________________________       By: _________________________
+Name: Sarah Chen                    Name: David Wilson
+Title: CEO                          Title: Chief Revenue Officer
+Date: September 10, 2025            Date: September 10, 2025

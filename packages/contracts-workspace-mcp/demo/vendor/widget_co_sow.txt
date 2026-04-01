@@ -1,0 +1,30 @@
+STATEMENT OF WORK #001
+
+Between: TechStartup Inc ("Client")
+And: Widget Manufacturing Co ("Contractor")
+Effective Date: February 15, 2026
+Expiration Date: May 15, 2026
+
+1. SCOPE OF WORK
+Contractor shall design and manufacture 50 custom PCB prototypes per specifications
+attached as Exhibit A.
+
+2. DELIVERABLES
+2.1 Initial design review: March 1, 2026
+2.2 First prototype batch (10 units): April 1, 2026
+2.3 Final batch (40 units): May 1, 2026
+
+3. COMPENSATION
+Total fixed fee: $125,000
+Payment: 50% upon execution, 25% on first delivery, 25% on final delivery.
+
+6. TERMINATION
+Either party may terminate for material breach with 10 business days written notice
+and opportunity to cure.
+
+8. LIMITATION OF LIABILITY
+Contractor's total liability shall not exceed the total SOW value ($125,000).
+Neither party shall be liable for indirect, incidental, or consequential damages.
+
+9. GOVERNING LAW
+This SOW shall be governed by the laws of the State of California.

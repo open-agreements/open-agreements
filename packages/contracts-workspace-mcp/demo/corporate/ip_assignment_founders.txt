@@ -1,0 +1,177 @@
+INTELLECTUAL PROPERTY ASSIGNMENT AGREEMENT
+
+This Intellectual Property Assignment Agreement ("Agreement") is entered into as of
+February 1, 2025 ("Effective Date"), by and between:
+
+TechStartup Inc., a Delaware corporation, with its principal place of business at
+1400 Innovation Drive, Suite 200, San Francisco, California 94107 ("Company"), and
+
+The undersigned individual ("Assignor"):
+
+Name: Michael Torres
+Address: 2210 Pacific Heights Road, San Francisco, California 94115
+Role: Co-Founder and Chief Technology Officer
+
+RECITALS
+
+WHEREAS, Assignor is a co-founder of the Company and has, prior to and since the
+Company's incorporation, conceived, developed, and reduced to practice certain
+intellectual property relating to the Company's business;
+
+WHEREAS, the Company desires to obtain full ownership of all such intellectual
+property to protect its business interests and satisfy the requirements of its
+investors; and
+
+WHEREAS, Assignor desires to assign such intellectual property to the Company on
+the terms set forth herein;
+
+NOW, THEREFORE, in consideration of the mutual covenants herein, Assignor's
+continued employment, and other good and valuable consideration, the receipt and
+sufficiency of which are hereby acknowledged, the parties agree as follows:
+
+1. DEFINITIONS
+
+1.1 "Assigned IP" means all intellectual property, inventions, discoveries, works
+of authorship, trade secrets, know-how, software, source code, algorithms, designs,
+specifications, documentation, data, and other proprietary materials that Assignor
+has conceived, created, developed, or reduced to practice, either alone or jointly
+with others, that relate to the Company's current or reasonably anticipated
+business, products, or services, including without limitation:
+
+  (a) The "Nexus" distributed data processing framework (initial prototype
+      developed from September 2024 through January 2025);
+  (b) The proprietary machine learning pipeline architecture for real-time
+      analytics;
+  (c) All associated documentation, specifications, test suites, and technical
+      notes;
+  (d) The "TechStartup" name, logo, and related branding materials; and
+  (e) All patent applications, copyright registrations, and other filings related
+      to any of the foregoing.
+
+1.2 "Excluded IP" means only the items listed on Exhibit A attached hereto, which
+Assignor represents constitute all intellectual property conceived or developed
+prior to Assignor's involvement with the Company and that are not related to the
+Company's business.
+
+2. ASSIGNMENT
+
+2.1 Assignment of Rights. Assignor hereby irrevocably assigns, transfers, and
+conveys to the Company all of Assignor's right, title, and interest in and to the
+Assigned IP, including without limitation all:
+
+  (a) patents and patent applications, including all provisionals, continuations,
+      continuations-in-part, divisionals, reissues, and extensions;
+  (b) copyrights and copyright registrations;
+  (c) trade secrets and confidential information;
+  (d) trademarks and service marks;
+  (e) all rights to sue for past, present, and future infringement; and
+  (f) all other intellectual property rights of any kind, in all jurisdictions
+      worldwide.
+
+2.2 Further Assurances. Assignor agrees to execute any additional documents and
+take any further actions reasonably requested by the Company to evidence, perfect,
+or enforce the assignment of rights hereunder, including executing patent
+applications, copyright registrations, and assignments as may be necessary.
+
+2.3 Power of Attorney. Assignor hereby irrevocably appoints the Company and its
+officers as Assignor's attorney-in-fact, with full power of substitution, to
+execute and file any documents and take any actions necessary to accomplish the
+purposes of this Agreement, should Assignor fail or refuse to do so within a
+reasonable time after request.
+
+3. CONSIDERATION
+
+3.1 In consideration for the assignment of the Assigned IP, the Company shall:
+  (a) continue Assignor's employment as CTO under the existing employment
+      agreement dated February 1, 2025;
+  (b) maintain Assignor's equity grant of 2,000,000 shares of common stock
+      subject to the Company's standard four-year vesting schedule with a
+      one-year cliff; and
+  (c) pay Assignor a one-time IP assignment fee of Ten Thousand Dollars
+      ($10,000.00) within thirty (30) days of the Effective Date.
+
+4. REPRESENTATIONS AND WARRANTIES
+
+4.1 Assignor represents and warrants that:
+
+  (a) Assignor is the sole owner of all right, title, and interest in and to the
+      Assigned IP, free and clear of any liens, encumbrances, or claims of any
+      third party;
+  (b) The Assigned IP does not infringe, misappropriate, or otherwise violate any
+      intellectual property or proprietary rights of any third party;
+  (c) Assignor has not previously assigned, transferred, licensed, or encumbered
+      any rights in the Assigned IP to any third party;
+  (d) Assignor has not used any intellectual property belonging to any former
+      employer or other third party in the development of the Assigned IP;
+  (e) Exhibit A is a complete and accurate list of all Excluded IP; and
+  (f) There are no pending or threatened claims or litigation relating to the
+      Assigned IP.
+
+5. ONGOING OBLIGATIONS
+
+5.1 Future Inventions. Assignor agrees that during the term of Assignor's
+employment with the Company, all inventions, works of authorship, and intellectual
+property that Assignor conceives, develops, or reduces to practice that relate to
+the Company's business shall be the sole property of the Company and are
+automatically assigned to the Company.
+
+5.2 Disclosure. Assignor shall promptly disclose to the Company all inventions and
+intellectual property developed during Assignor's employment that may relate to the
+Company's business.
+
+5.3 Notice Under California Labor Code Section 2870. Assignor is hereby notified
+that this Agreement does not apply to any invention that qualifies fully under
+California Labor Code Section 2870, which provides that an employee's invention
+is excluded if it was developed entirely on the employee's own time, without
+using the employer's equipment or trade secrets, and does not relate to the
+employer's business.
+
+6. CONFIDENTIALITY
+
+6.1 Assignor shall maintain the confidentiality of all Assigned IP and all other
+confidential information of the Company, and shall not disclose such information
+to any third party without the Company's prior written consent.
+
+6.2 This confidentiality obligation shall survive the termination of Assignor's
+employment with the Company indefinitely with respect to trade secrets, and for a
+period of five (5) years with respect to other Confidential Information.
+
+7. GOVERNING LAW
+
+7.1 This Agreement shall be governed by and construed in accordance with the laws
+of the State of Delaware, without regard to its conflict of laws principles.
+
+7.2 Any dispute arising out of this Agreement shall be resolved exclusively in the
+state or federal courts located in Delaware.
+
+8. MISCELLANEOUS
+
+8.1 Entire Agreement. This Agreement constitutes the entire agreement between the
+parties with respect to the assignment of the Assigned IP.
+
+8.2 Severability. If any provision is found unenforceable, the remaining provisions
+shall continue in full force.
+
+8.3 Binding Effect. This Agreement shall be binding upon and inure to the benefit
+of the parties and their respective heirs, successors, and assigns.
+
+IN WITNESS WHEREOF, the parties have executed this Agreement as of the Effective Date.
+
+TECHSTARTUP INC.                    ASSIGNOR
+
+By: _________________________       _________________________
+Name: Sarah Chen                    Michael Torres
+Title: CEO
+Date: February 1, 2025              Date: February 1, 2025
+
+
+EXHIBIT A - EXCLUDED INTELLECTUAL PROPERTY
+
+1. "QuantumSim" - Open source quantum computing simulator published under MIT
+   License on GitHub (github.com/mtorres/quantumsim), developed from 2021-2023.
+   Unrelated to Company's business.
+
+2. "PhotoMesh" - Personal photography portfolio application and associated code,
+   developed 2022-2024. Unrelated to Company's business.
+
+[END OF EXHIBIT A]

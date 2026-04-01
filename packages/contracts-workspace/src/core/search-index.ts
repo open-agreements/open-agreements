@@ -99,9 +99,13 @@ export function searchContracts(
   const { index, sidecars } = buildSearchIndex(rootDir, p);
 
   let resultPaths: string[];
+  const scoreMap = new Map<string, number>();
 
   if (options.query) {
     const searchResults = index.search(options.query);
+    for (const r of searchResults) {
+      scoreMap.set(r.id, r.score);
+    }
     resultPaths = searchResults.map((r) => r.id);
   } else {
     resultPaths = [...sidecars.keys()];
@@ -111,12 +115,9 @@ export function searchContracts(
     .flatMap((path) => {
       const sidecar = sidecars.get(path);
       if (!sidecar) return [];
-      const score = options.query
-        ? index.search(options.query).find((r) => r.id === path)?.score ?? 0
-        : 0;
       const result: SearchResult = {
         path,
-        score,
+        score: scoreMap.get(path) ?? 0,
         document_type: sidecar.classification?.document_type ?? null,
         parties: sidecar.classification?.parties ?? [],
         summary: sidecar.classification?.summary ?? '',
@@ -186,8 +187,12 @@ export function formatResultsAsMarkdown(results: SearchResult[]): string {
     const parties = r.parties.length > 0 ? r.parties.join(', ') : '—';
     const expires = r.expiration_date ?? '—';
     const summary = r.summary.length > 80 ? r.summary.slice(0, 77) + '...' : r.summary || '—';
-    lines.push(`| ${r.path} | ${type} | ${parties} | ${expires} | ${summary} |`);
+    lines.push(`| ${escapeMd(r.path)} | ${escapeMd(type)} | ${escapeMd(parties)} | ${escapeMd(expires)} | ${escapeMd(summary)} |`);
   }
 
   return lines.join('\n');
+}
+
+function escapeMd(text: string): string {
+  return text.replace(/\|/g, '\\|').replace(/\n/g, ' ');
 }
