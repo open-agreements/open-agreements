@@ -99,7 +99,7 @@ export function mapFields(
 // ---------------------------------------------------------------------------
 
 export function listTemplateItems(opts?: { templatesOnly?: boolean }): TemplateListItem[] {
-  const templatesOnly = opts?.templatesOnly !== false; // default true
+  const templatesOnly = opts?.templatesOnly === true; // default false — show all templates
   const items: TemplateListItem[] = [];
 
   for (const entry of listTemplateEntries()) {

@@ -347,7 +347,7 @@ export async function callTool(name: string, args: unknown): Promise<ToolCallRes
 
 async function loadTemplates(): Promise<TemplateRecord[]> {
   const mod = await importRepoModules();
-  if (mod) return mod.listTemplateItems({ templatesOnly: true });
+  if (mod) return mod.listTemplateItems();
 
   // Child process fallback
   const { stdout } = await runOpenAgreements(['list', '--json', '--templates-only']);
