@@ -130,16 +130,19 @@ function computeDisplayFields(data: Record<string, unknown>, fieldNames: Set<str
       }
     }
 
-    // Compute notice checkbox glyphs from whether email/address are provided
+    // Compute notice checkbox glyphs from whether email/address are actually provided
+    // (not blank placeholders or empty strings)
+    const hasValue = (key: string): boolean => {
+      const val = data[key];
+      return !!val && !isBlankPlaceholder(val) && String(val).trim() !== '';
+    };
     const emailCheckKey = `${p}_notice_email_check`;
     if (fieldNames.has(emailCheckKey)) {
-      const email = str(`${p}_email`);
-      data[emailCheckKey] = email ? '\u2611' : '\u2610';
+      data[emailCheckKey] = hasValue(`${p}_email`) ? '\u2611' : '\u2610';
     }
     const postalCheckKey = `${p}_notice_postal_check`;
     if (fieldNames.has(postalCheckKey)) {
-      const address = str(`${p}_address`);
-      data[postalCheckKey] = address ? '\u2611' : '\u2610';
+      data[postalCheckKey] = hasValue(`${p}_address`) ? '\u2611' : '\u2610';
     }
   }
 
