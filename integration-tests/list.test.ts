@@ -91,27 +91,6 @@ describe('list --json envelope', () => {
 });
 
 describe('list options', () => {
-  it.openspec('OA-CLI-014')('--templates-only filters to templates', () => {
-    const output = execSync(`node ${BIN} list --json --templates-only`, {
-      cwd: ROOT,
-      encoding: 'utf-8',
-      timeout: 10_000,
-    });
-    const parsed = JSON.parse(output) as ListResponse;
-    const names = parsed.items.map((item) => item.name);
-
-    expect(names.length).toBeGreaterThan(0);
-    expect(names).toContain('common-paper-mutual-nda');
-    expect(names).toContain('openagreements-employment-offer-letter');
-    expect(names).not.toContain('yc-safe-valuation-cap');
-    expect(names).not.toContain('nvca-voting-agreement');
-
-    const employmentItem = parsed.items.find((item: { name: string }) =>
-      item.name === 'openagreements-employment-offer-letter'
-    );
-    expect(employmentItem.category).toBe('employment');
-  });
-
   it.openspec('OA-CLI-013')('--json-strict exits non-zero on metadata errors', () => {
     const root = mkdtempSync(join(tmpdir(), 'oa-list-strict-'));
     const templatesDir = join(root, 'templates', 'bad-template');

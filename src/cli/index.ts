@@ -99,9 +99,8 @@ export function createProgram(): Command {
     .description('Show all available agreements (templates, external, and recipes)')
     .option('--json', 'Output machine-readable JSON with full field definitions')
     .option('--json-strict', 'Like --json but exit non-zero if any metadata fails')
-    .option('--templates-only', 'List only bundled templates (exclude external and recipes)')
-    .action((opts: { json?: boolean; jsonStrict?: boolean; templatesOnly?: boolean }) => {
-      runList({ json: opts.json, jsonStrict: opts.jsonStrict, templatesOnly: opts.templatesOnly });
+    .action((opts: { json?: boolean; jsonStrict?: boolean }) => {
+      runList({ json: opts.json, jsonStrict: opts.jsonStrict });
     });
 
   // --- Recipe command ---

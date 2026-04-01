@@ -66,7 +66,7 @@ interface ToolDefinition {
 // ---------------------------------------------------------------------------
 
 interface RepoModules {
-  listTemplateItems: (opts: { templatesOnly: boolean }) => TemplateRecord[];
+  listTemplateItems: () => TemplateRecord[];
   findTemplateDir: (id: string) => string | undefined;
   loadMetadata: (dir: string) => Record<string, unknown>;
   fillTemplate: (opts: { templateDir: string; values: Record<string, unknown>; outputPath: string }) => Promise<unknown>;
@@ -350,7 +350,7 @@ async function loadTemplates(): Promise<TemplateRecord[]> {
   if (mod) return mod.listTemplateItems();
 
   // Child process fallback
-  const { stdout } = await runOpenAgreements(['list', '--json', '--templates-only']);
+  const { stdout } = await runOpenAgreements(['list', '--json']);
   const parsed = JSON.parse(stdout);
   if (!Array.isArray(parsed.items)) {
     throw new Error('Invalid list output from open-agreements command.');
