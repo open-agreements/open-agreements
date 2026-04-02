@@ -123,9 +123,17 @@ async function handleAuthorizationCode(body: Record<string, string>, res: HttpRe
   // Mark code as used
   await codeDoc.ref.update({ used: true });
 
-  // Issue tokens — sub is the code's implicit user (set during authorize/callback)
-  const sub = codeData.sub || codeData.client_id; // sub set by callback when DS auth completes
-  const tokens = await issueTokens(sub, codeData.scope, codeData.client_id);
+  // sub is set by the DocuSign callback — it's the connectionId (e.g., docusign-{account_id})
+  // For signing scope, sub MUST be set (means DocuSign auth completed successfully)
+  const sub = codeData.sub;
+  if (!sub && codeData.scope?.includes('signing')) {
+    res.status(400).json({
+      error: 'invalid_grant',
+      error_description: 'DocuSign authorization not completed. The authorization code was not bound to a DocuSign account.',
+    });
+    return;
+  }
+  const tokens = await issueTokens(sub || codeData.client_id, codeData.scope, codeData.client_id);
 
   res.status(200).json(tokens);
 }
