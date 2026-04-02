@@ -315,8 +315,7 @@ export default async function handler(req: HttpRequest, res: HttpResponse): Prom
       if (decodedState) redirectUrl.searchParams.set('state', decodedState);
 
       res.setHeader('Set-Cookie', clearCookies);
-      res.writeHead(302, { Location: redirectUrl.toString() });
-      res.end();
+      res.redirect(302, redirectUrl.toString());
       return;
     }
 

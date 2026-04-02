@@ -19,9 +19,10 @@ import {
   importSPKI,
   exportJWK,
   calculateJwkThumbprint,
-  type KeyLike,
   type JWK,
 } from 'jose';
+
+type KeyLike = Awaited<ReturnType<typeof importPKCS8>>;
 
 let _privateKey: KeyLike | null = null;
 let _publicJwk: JWK | null = null;

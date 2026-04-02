@@ -163,6 +163,5 @@ export default async function handler(req: HttpRequest, res: HttpResponse): Prom
     state: dsState,
   });
 
-  res.writeHead(302, { Location: `${DOCUSIGN_AUTH_BASE}/oauth/auth?${params}` });
-  res.end();
+  res.redirect(302, `${DOCUSIGN_AUTH_BASE}/oauth/auth?${params}`);
 }
