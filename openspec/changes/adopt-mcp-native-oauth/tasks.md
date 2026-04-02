@@ -1,14 +1,21 @@
 # Tasks: adopt-mcp-native-oauth
 
+## Phase 0: Spike — Selective 401 Client Behavior
+- [ ] Build minimal test server that returns 200 for `tools/list` and 401 + `WWW-Authenticate` for a specific `tools/call`
+- [ ] Test with Claude Code: does it handle mid-session 401 and initiate OAuth?
+- [ ] Test with Claude Desktop/Cowork: same test
+- [ ] Test with Gemini CLI: same test
+- [ ] Decision gate: if clients handle mid-session 401 → proceed with single endpoint. If not → split into two MCP endpoints or require auth on entire endpoint.
+
 ## Phase 1: OAuth Server Foundation
-- [ ] Generate RS256 signing key pair; add JWKS endpoint at `/api/auth/jwks`
+- [ ] Generate RS256 signing key pair; add JWKS endpoint at `/api/auth/jwks` with `kid` from day one
 - [ ] Add `/.well-known/oauth-protected-resource` (RFC 9728): `resource`, `authorization_servers`, `scopes_supported`, `bearer_methods_supported`
 - [ ] Add `/.well-known/oauth-authorization-server` (RFC 8414): `issuer`, all endpoints, `grant_types_supported`, `response_types_supported`, `code_challenge_methods_supported`, `token_endpoint_auth_methods_supported: ["none"]`, `revocation_endpoint_auth_methods_supported: ["none"]`
 - [ ] Add `POST /api/auth/register` DCR endpoint (RFC 7591): store client in Firestore `oauth_clients` with exact `redirect_uris`, 90-day inactivity TTL
 - [ ] Add branded consent page at `GET /api/auth/authorize`: validate `resource`, `client_id`, `redirect_uri` (exact match), `code_challenge`, `state`, `scope`; render client name + permissions; store consent in `oauth_consents`
 - [ ] Add `POST /api/auth/token`: validate `resource`, exchange auth code for JWT access token (`iss`, `aud`, `sub`, `scope`, `exp`) + opaque refresh token; store refresh token in `oauth_refresh_tokens` with `family_id`
 - [ ] Add `POST /api/auth/revoke`: revoke OA tokens AND delete stored DocuSign connection from `signing_connections` (unlink/switch account)
-- [ ] Implement auth code issuance: store in `oauth_codes` with `resource`, `redirect_uri`, `code_challenge`, 10-min expiry, single-use flag
+- [ ] Implement auth code issuance: store in `oauth_codes` with `resource`, `redirect_uri`, `code_challenge`, 60-second expiry, single-use flag
 - [ ] Implement refresh token rotation: on use, invalidate old token, issue new token in same family; on reuse of invalidated token, revoke entire family
 - [ ] Implement upstream DocuSign token refresh: when stored DS access token expires, use DS refresh token to get new one, update Firestore
 

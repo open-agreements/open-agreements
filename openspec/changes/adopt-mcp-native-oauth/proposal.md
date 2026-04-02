@@ -46,13 +46,19 @@ Client adds openagreements.org/api/mcp
 - **Refresh token**: Opaque random string, stored in Firestore with token family ID. Used for silent re-auth without browser popup. Rotated on each use (old token invalidated). Reuse detection: if an already-used refresh token is presented, revoke the entire token family.
 - **DocuSign tokens**: Stored in Firestore, keyed by OA session ID. Never exposed to clients. Refreshed server-side when DocuSign access token expires.
 
+### JWT Details
+
+- Algorithm: RS256 (maximum client compatibility)
+- JWKS endpoint at `/api/auth/jwks` — include `kid` (Key ID) in JWT header from day one, even with a single key, to enable future key rotation without breaking clients
+- Claims: `iss` (OA issuer), `aud` (protected resource URI), `sub` (OA session ID), `scope`, `exp` (1hr), `iat`, `kid`
+
 ### Authorization Data Model (Firestore)
 
 | Collection | Key | Contents |
 |------------|-----|----------|
 | `oauth_clients` | `client_id` | `redirect_uris`, `client_name`, `grant_types`, `created_at`, `last_used_at` (90-day TTL on inactivity) |
 | `oauth_consents` | `client_id:sub` | `scope`, `granted_at`, client name/redirect at time of consent |
-| `oauth_codes` | `code` | `client_id`, `sub`, `resource`, `redirect_uri`, `code_challenge`, `expires_at` (10min), `used` flag |
+| `oauth_codes` | `code` | `client_id`, `sub`, `resource`, `redirect_uri`, `code_challenge`, `expires_at` (60s), `used` flag |
 | `oauth_refresh_tokens` | `token_hash` | `client_id`, `sub`, `resource`, `family_id`, `used` flag, `expires_at` |
 | `signing_connections` | `sub` (session ID) | `connectionId`, `provider`, `accountId`, `baseUri`, encrypted DocuSign tokens |
 | `envelope_status` | `envelope_id` | `owner_sub`, `status`, `signers`, `created_at` |
@@ -93,7 +99,7 @@ Both paths converge at the same `getConnection(sub_or_connection_id)` lookup.
 
 ### Redirect URI Strategy
 
-In the proxy model, DocuSign only needs OA's callback URI (`https://openagreements.org/api/auth/docusign/callback`). Client redirect URIs are registered with OA via DCR, stored exactly, and exact-matched during authorization — no wildcard matching.
+In the proxy model, DocuSign only needs OA's callback URI (`https://openagreements.org/api/auth/docusign/callback`). Client redirect URIs are registered with OA via DCR, not with DocuSign. For HTTPS redirect URIs, OA stores and exact-matches them. For loopback redirect URIs (`http://localhost:*` or `http://127.0.0.1:*`), OA matches scheme, host, and path but ignores port per RFC 8252 §7.3 — CLI clients use random ephemeral ports on each run.
 
 ### Selective 401 Handling
 
@@ -156,9 +162,11 @@ Tested client matrix: Claude Code, Claude Desktop, Gemini CLI, Codex CLI, VS Cod
 
 ## Risks
 
-1. **Proxy auth complexity** — OA becomes a full OAuth AS. Mitigated by well-defined specs and DocuSign's own connector using this pattern.
-2. **JWT signing key management** — Need to generate and rotate RS256 keys. Mitigated by standard `jose` library; key rotation via JWKS endpoint.
-3. **Codex token persistence bugs** — Codex may re-auth on restart. Refresh tokens make re-auth fast (no browser popup).
+1. **Selective 401 mid-session (HIGH)** — MCP clients may only handle auth challenges at connection time, not on `tools/call` mid-session. If a client establishes a connection, lists tools, then gets a 401 on `send_for_signature`, it may throw a transport error instead of initiating OAuth. **Requires spike test (Phase 0) before building full auth server.** Fallback: two separate MCP endpoints (public templates + auth-required signing) or require auth on entire endpoint.
+2. **Proxy auth complexity** — OA becomes a full OAuth AS. Mitigated by well-defined specs and DocuSign's own connector using this pattern.
+3. **JWT signing key management** — Need to generate and rotate RS256 keys. Mitigated by standard `jose` library; JWKS endpoint with `kid` from day one.
+4. **Codex token persistence bugs** — Codex may re-auth on restart. Refresh tokens make re-auth fast (no browser popup).
+5. **CORS headers on 401 responses** — Web frameworks often strip CORS headers on error responses. Must explicitly set `Access-Control-Allow-Origin`, `Access-Control-Expose-Headers`, and `Access-Control-Allow-Headers` on 401/403 responses.
 
 ## Scope Boundaries
 
