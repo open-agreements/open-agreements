@@ -77,7 +77,7 @@ const SendSchema = z.object({
     type: z.enum(['signer', 'cc']).default('signer'),
   })).min(1),
   email_subject: z.string().min(1).optional(),
-  api_key: z.string().min(1),
+  api_key: z.string().min(1).optional(), // Optional: injected from JWT sub on HTTP, passed explicitly on stdio
 }).refine((d) => d.file_path || d.download_url, {
   message: 'Either file_path or download_url is required',
 });

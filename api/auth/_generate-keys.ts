@@ -12,6 +12,7 @@ import { generateKeyPair, exportPKCS8, exportSPKI } from 'jose';
 async function main() {
   const { publicKey, privateKey } = await generateKeyPair('RS256', {
     modulusLength: 2048,
+    extractable: true,
   });
 
   const privatePem = await exportPKCS8(privateKey);
