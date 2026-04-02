@@ -141,11 +141,11 @@ export default async function handler(req: HttpRequest, res: HttpResponse): Prom
   // Store DS PKCE verifier + OA code in cookies for the callback to pick up
   const csrfToken = randomBytes(16).toString('hex');
   res.setHeader('Set-Cookie', [
-    `oa_ds_verifier=${dsCodeVerifier}; Path=/api/auth/docusign; HttpOnly; Secure; SameSite=Lax; Max-Age=300`,
-    `oa_ds_state=${csrfToken}; Path=/api/auth/docusign; HttpOnly; Secure; SameSite=Lax; Max-Age=300`,
-    `oa_auth_code=${oaCode}; Path=/api/auth/docusign; HttpOnly; Secure; SameSite=Lax; Max-Age=300`,
-    `oa_client_redirect=${encodeURIComponent(redirectUri)}; Path=/api/auth/docusign; HttpOnly; Secure; SameSite=Lax; Max-Age=300`,
-    `oa_client_state=${encodeURIComponent(state)}; Path=/api/auth/docusign; HttpOnly; Secure; SameSite=Lax; Max-Age=300`,
+    `oa_ds_verifier=${dsCodeVerifier}; Path=/api/auth; HttpOnly; Secure; SameSite=Lax; Max-Age=300`,
+    `oa_ds_state=${csrfToken}; Path=/api/auth; HttpOnly; Secure; SameSite=Lax; Max-Age=300`,
+    `oa_auth_code=${oaCode}; Path=/api/auth; HttpOnly; Secure; SameSite=Lax; Max-Age=300`,
+    `oa_client_redirect=${encodeURIComponent(redirectUri)}; Path=/api/auth; HttpOnly; Secure; SameSite=Lax; Max-Age=300`,
+    `oa_client_state=${encodeURIComponent(state)}; Path=/api/auth; HttpOnly; Secure; SameSite=Lax; Max-Age=300`,
   ]);
 
   // For now, skip consent page and redirect directly to DocuSign

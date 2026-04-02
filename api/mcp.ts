@@ -225,46 +225,18 @@ const SIGNING_TOOL_NAMES = new Set([
   TOOL_CHECK_SIGNATURE_STATUS,
 ]);
 
+// Remote MCP signing tools — no api_key, no connect/disconnect (auth via JWT Bearer)
 const SIGNING_TOOLS = [
-  {
-    name: TOOL_CONNECT_SIGNING,
-    description:
-      'Connect your DocuSign account for sending agreements for signature. ' +
-      'Returns a secure OAuth URL to open in your browser.',
-    inputSchema: {
-      type: 'object' as const,
-      properties: {
-        provider: { type: 'string', enum: ['docusign'], description: 'Signing provider.' },
-        api_key: { type: 'string', description: 'Your open_agreements_api_key.' },
-      },
-      required: ['api_key'] as const,
-      additionalProperties: false,
-    },
-    annotations: { readOnlyHint: false, destructiveHint: false },
-  },
-  {
-    name: TOOL_DISCONNECT_SIGNING,
-    description: 'Disconnect your signing provider account and revoke stored OAuth tokens.',
-    inputSchema: {
-      type: 'object' as const,
-      properties: {
-        connection_id: { type: 'string', description: 'Connection ID to disconnect.' },
-      },
-      required: ['connection_id'] as const,
-      additionalProperties: false,
-    },
-    annotations: { readOnlyHint: false, destructiveHint: true },
-  },
   {
     name: TOOL_SEND_FOR_SIGNATURE,
     description:
-      'Upload a DOCX file and create a draft signing envelope. Returns a review URL — ' +
-      'the user must review and send from the signing provider UI. Never auto-sends.',
+      'Upload a DOCX file and send it for electronic signature via DocuSign. ' +
+      'Authentication is handled automatically via OAuth — no API key needed. ' +
+      'Returns an envelope ID to track signing progress.',
     inputSchema: {
       type: 'object' as const,
       properties: {
-        file_path: { type: 'string', description: 'Local path to the DOCX file (for stdio MCP server).' },
-        download_url: { type: 'string', description: 'URL to download the DOCX (for remote MCP). Use the download_url from fill_template.' },
+        download_url: { type: 'string', description: 'URL to download the DOCX file. Use the download_url from fill_template.' },
         signers: {
           type: 'array',
           items: {
@@ -276,12 +248,11 @@ const SIGNING_TOOLS = [
             },
             required: ['name', 'email'],
           },
-          description: 'Signers and CC recipients.',
+          description: 'Signers and CC recipients. First signer maps to party_1, second to party_2.',
         },
         email_subject: { type: 'string', description: 'Subject line for the signing invitation email.' },
-        api_key: { type: 'string', description: 'Your open_agreements_api_key.' },
       },
-      required: ['signers', 'api_key'] as const,
+      required: ['signers'] as const,
       additionalProperties: false,
     },
     annotations: { readOnlyHint: false, destructiveHint: false },
@@ -294,8 +265,7 @@ const SIGNING_TOOLS = [
     inputSchema: {
       type: 'object' as const,
       properties: {
-        envelope_id: { type: 'string' },
-        api_key: { type: 'string', description: 'Required to download the signed document when completed.' },
+        envelope_id: { type: 'string', description: 'The envelope ID returned by send_for_signature.' },
       },
       required: ['envelope_id'] as const,
       additionalProperties: false,
@@ -696,7 +666,11 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>) {
   const args = (params.arguments as Record<string, unknown>) ?? {};
 
   // Delegate signing tools to the signing module
+  // Inject __auth_sub as api_key so downstream Zod validation passes
   if (SIGNING_TOOL_NAMES.has(name)) {
+    if (args.__auth_sub && !args.api_key) {
+      args.api_key = args.__auth_sub;
+    }
     return handleSigningToolCall(id, name, args);
   }
 
