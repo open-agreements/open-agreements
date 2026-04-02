@@ -41,6 +41,12 @@ Fill standard legal agreement templates and produce signable DOCX files. Templat
 - LibreOffice-powered DOCX visual rendering uses a pinned build config on macOS (`config/libreoffice-headless.json`); run `npm run check:libreoffice` before visual Allure evidence tests.
 - Maintainer: [Steven Obiajulu](https://www.linkedin.com/in/steven-obiajulu/) (MIT-trained mechanical engineer; Harvard Law trained lawyer).
 
+## Built With OpenAgreements
+
+- [Safe Clause](https://safeclause.deltaxy.ai) — AI-powered contract platform for startups. [#1 on vibecode.law, March 2026](https://vibecode.law/showcase/safe-clause-317416).
+
+*Building on OpenAgreements? Open a PR to add your project.*
+
 ## How It Works
 
 1. Step 1: Choose a template (36 standard agreements)
