@@ -18,13 +18,14 @@ import {
   generateRedlineFromFill,
 } from './_shared.js';
 import { ErrorCode, makeToolError, wrapError, wrapSuccess } from './_envelope.js';
+import { jwtVerify, createRemoteJWKSet } from 'jose';
 
 // ---------------------------------------------------------------------------
 // Zod schemas for MCP tool argument validation
 // ---------------------------------------------------------------------------
 
 const ListTemplatesArgsSchema = z.object({
-  mode: z.enum(['compact', 'full']).optional().default('full'),
+  mode: z.enum(['compact', 'full']).optional().default('compact'),
 });
 
 const GetTemplateArgsSchema = z.object({
@@ -44,7 +45,87 @@ const FillTemplateArgsSchema = z.object({
   .refine((v) => v.template.length > 0, { message: 'template or template_id is required' });
 
 // Base URL for download links — derived from the incoming request at call time
-let _baseUrl = 'https://openagreements.ai';
+let _baseUrl = 'https://openagreements.org';
+
+// ---------------------------------------------------------------------------
+// OAuth JWT verification for signing tools
+// ---------------------------------------------------------------------------
+
+const OA_ORIGIN = process.env.OA_ORIGIN?.trim() || 'https://openagreements.org';
+const MCP_RESOURCE = `${OA_ORIGIN}/api/mcp`;
+const JWKS_URI = `${OA_ORIGIN}/api/auth/jwks`;
+
+// Signing tools that require auth on the HTTP transport
+const AUTH_REQUIRED_TOOLS = new Set([
+  'connect_signing_provider',
+  'disconnect_signing_provider',
+  'send_for_signature',
+  'check_signature_status',
+]);
+
+let _jwks: ReturnType<typeof createRemoteJWKSet> | null = null;
+function getJwks() {
+  if (!_jwks) _jwks = createRemoteJWKSet(new URL(JWKS_URI));
+  return _jwks;
+}
+
+interface AuthResult {
+  authenticated: false;
+  status: 401 | 403;
+  error: string;
+  errorDescription: string;
+} | {
+  authenticated: true;
+  sub: string;
+  scope: string;
+}
+
+async function verifyAuth(req: HttpRequest): Promise<AuthResult> {
+  const authHeader = Array.isArray(req.headers['authorization'])
+    ? req.headers['authorization'][0]
+    : req.headers['authorization'];
+
+  if (!authHeader?.startsWith('Bearer ')) {
+    return {
+      authenticated: false,
+      status: 401,
+      error: 'invalid_token',
+      errorDescription: 'Bearer token required for signing tools',
+    };
+  }
+
+  const token = authHeader.slice(7);
+
+  try {
+    const { payload } = await jwtVerify(token, getJwks(), {
+      issuer: OA_ORIGIN,
+      audience: MCP_RESOURCE,
+    });
+
+    const scope = (payload.scope as string) || '';
+    if (!scope.includes('signing')) {
+      return {
+        authenticated: false,
+        status: 403,
+        error: 'insufficient_scope',
+        errorDescription: 'Token lacks "signing" scope',
+      };
+    }
+
+    return {
+      authenticated: true,
+      sub: payload.sub || '',
+      scope,
+    };
+  } catch (e) {
+    return {
+      authenticated: false,
+      status: 401,
+      error: 'invalid_token',
+      errorDescription: (e as Error).message,
+    };
+  }
+}
 
 const TOOL_LIST_TEMPLATES = 'list_templates';
 const TOOL_GET_TEMPLATE = 'get_template';
@@ -761,11 +842,11 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>) {
 // ---------------------------------------------------------------------------
 
 export default async function handler(req: HttpRequest, res: HttpResponse) {
-  // CORS for browser-based MCP clients.
+  // CORS for browser-based MCP clients (includes Authorization for OAuth).
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Mcp-Session-Id');
-  res.setHeader('Access-Control-Expose-Headers', 'Mcp-Session-Id');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Mcp-Session-Id, Authorization');
+  res.setHeader('Access-Control-Expose-Headers', 'Mcp-Session-Id, WWW-Authenticate');
 
   if (req.method === 'OPTIONS') return res.status(204).end();
 
@@ -808,9 +889,26 @@ export default async function handler(req: HttpRequest, res: HttpResponse) {
         return res.status(200).json(handleInitialize(body.id, params));
       case 'tools/list':
         return res.status(200).json(handleToolsList(body.id));
-      case 'tools/call':
-        // NOTE: Auth middleware would intercept protected routes before this point.
+      case 'tools/call': {
+        // Check if this tool requires authentication
+        const toolName = (params as { name?: string }).name;
+        if (toolName && AUTH_REQUIRED_TOOLS.has(toolName)) {
+          const auth = await verifyAuth(req);
+          if (!auth.authenticated) {
+            if (auth.status === 401) {
+              res.setHeader('WWW-Authenticate',
+                `Bearer resource_metadata="${OA_ORIGIN}/.well-known/oauth-protected-resource"`);
+              return res.status(401).json(
+                jsonRpcError(body.id, -32001, auth.errorDescription));
+            }
+            return res.status(403).json(
+              jsonRpcError(body.id, -32001, auth.errorDescription));
+          }
+          // Pass auth context to handler (sub available for ownership checks)
+          (params as Record<string, unknown>).__auth_sub = auth.sub;
+        }
         return res.status(200).json(await handleToolsCall(body.id, params));
+      }
       case 'ping':
         return res.status(200).json(jsonRpcResult(body.id, {}));
       default:
