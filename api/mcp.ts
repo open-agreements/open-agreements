@@ -841,7 +841,7 @@ export default async function handler(req: HttpRequest, res: HttpResponse) {
 
   // Capture base URL from request for building download links.
   const proto = req.headers['x-forwarded-proto'] ?? 'https';
-  const host = req.headers['x-forwarded-host'] ?? req.headers['host'] ?? 'openagreements.ai';
+  const host = req.headers['x-forwarded-host'] ?? req.headers['host'] ?? 'openagreements.org';
   _baseUrl = `${proto}://${host}`;
 
   const body = req.body as { jsonrpc?: string; id?: unknown; method?: string; params?: unknown };

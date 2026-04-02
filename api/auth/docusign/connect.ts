@@ -14,7 +14,7 @@ const DOCUSIGN_AUTH_BASE = (process.env.OA_DOCUSIGN_SANDBOX?.trim() === 'false')
   ? 'https://account.docusign.com'
   : 'https://account-d.docusign.com';
 const INTEGRATION_KEY = process.env.OA_DOCUSIGN_INTEGRATION_KEY?.trim() || '';
-const REDIRECT_URI = process.env.OA_DOCUSIGN_REDIRECT_URI?.trim() || 'https://openagreements.ai/api/auth/docusign/callback';
+const REDIRECT_URI = process.env.OA_DOCUSIGN_REDIRECT_URI?.trim() || 'https://openagreements.org/api/auth/docusign/callback';
 
 function getQuery(req: HttpRequest, key: string): string | undefined {
   const val = req.query[key];

@@ -131,7 +131,7 @@ export default async function handler(req: HttpRequest, res: HttpResponse): Prom
     scope: scope || 'signing',
     used: false,
     created_at: new Date().toISOString(),
-    expires_at: new Date(Date.now() + 60_000).toISOString(), // 60 seconds
+    expires_at: new Date(Date.now() + 10 * 60_000).toISOString(), // 10 minutes — covers DocuSign login + MFA + redirect chain
   });
 
   // Generate PKCE for DocuSign (separate from client's PKCE to OA)
