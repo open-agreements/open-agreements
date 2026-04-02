@@ -1,11 +1,11 @@
 # Tasks: adopt-mcp-native-oauth
 
 ## Phase 0: Spike — Selective 401 Client Behavior
-- [ ] Build minimal test server that returns 200 for `tools/list` and 401 + `WWW-Authenticate` for a specific `tools/call`
-- [ ] Test with Claude Code: does it handle mid-session 401 and initiate OAuth?
+- [x] Build minimal test server that returns 200 for `tools/list` and 401 + `WWW-Authenticate` for a specific `tools/call`
+- [x] Test with Claude Code: does it handle mid-session 401 and initiate OAuth?
 - [ ] Test with Claude Desktop/Cowork: same test
 - [ ] Test with Gemini CLI: same test
-- [ ] Decision gate: if clients handle mid-session 401 → proceed with single endpoint. If not → split into two MCP endpoints or require auth on entire endpoint.
+- [x] Decision gate: if clients handle mid-session 401 → proceed with single endpoint. If not → split into two MCP endpoints or require auth on entire endpoint.
 
 ## Phase 1: OAuth Server Foundation
 - [ ] Generate RS256 signing key pair; add JWKS endpoint at `/api/auth/jwks` with `kid` from day one
