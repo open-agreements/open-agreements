@@ -24,6 +24,8 @@ export interface SearchResult {
   governing_law?: string;
   effective_date?: string;
   expiration_date?: string;
+  status?: string;
+  auto_renewal?: boolean;
 }
 
 /**
@@ -124,6 +126,8 @@ export function searchContracts(
         governing_law: sidecar.classification?.governing_law,
         effective_date: sidecar.classification?.effective_date,
         expiration_date: sidecar.classification?.expiration_date,
+        status: sidecar.classification?.status,
+        auto_renewal: sidecar.classification?.auto_renewal,
       };
       return [result];
     });
@@ -195,4 +199,40 @@ export function formatResultsAsMarkdown(results: SearchResult[]): string {
 
 function escapeMd(text: string): string {
   return text.replace(/\|/g, '\\|').replace(/\n/g, ' ');
+}
+
+const CSV_COLUMNS = ['path', 'document_type', 'parties', 'effective_date', 'expiration_date', 'status', 'auto_renewal', 'governing_law', 'summary'] as const;
+
+/** Format search results as RFC 4180 CSV with formula-injection hardening. */
+export function formatResultsAsCsv(results: SearchResult[]): string {
+  const lines: string[] = [CSV_COLUMNS.join(',')];
+
+  for (const r of results) {
+    const row = [
+      r.path,
+      r.document_type ?? '',
+      r.parties.join('; '),
+      r.effective_date ?? '',
+      r.expiration_date ?? '',
+      r.status ?? '',
+      r.auto_renewal !== undefined ? String(r.auto_renewal) : '',
+      r.governing_law ?? '',
+      r.summary,
+    ].map(csvEscape);
+    lines.push(row.join(','));
+  }
+
+  return lines.join('\n');
+}
+
+function csvEscape(value: string): string {
+  // Formula injection hardening
+  if (/^[=+\-@]/.test(value)) {
+    value = `'${value}`;
+  }
+  // RFC 4180: quote if contains comma, quote, or newline
+  if (/[,"\n\r]/.test(value)) {
+    return `"${value.replace(/"/g, '""')}"`;
+  }
+  return value;
 }

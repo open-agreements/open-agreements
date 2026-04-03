@@ -10,6 +10,7 @@ import {
   validateDocumentType,
   detectOrphanedSidecars,
 } from '../src/core/analysis-store.js';
+import { formatResultsAsCsv } from '../src/core/search-index.js';
 import {
   enrichDocumentRecord,
   buildAnalysisSummary,
@@ -410,5 +411,128 @@ describe('search-index', () => {
   it('returns empty for no matches', () => {
     const results = searchContracts('/test-workspace', { query: 'zzzznotfound' }, [], provider);
     expect(results).toHaveLength(0);
+  });
+
+  it('includes status and auto_renewal in results', () => {
+    indexContract('/test-workspace', {
+      documentPath: 'fund-formation/lpa.docx',
+      classification: {
+        document_type: 'lpa', confidence: 'high', parties: ['Fund LP'],
+        summary: 'LPA', status: 'executed', auto_renewal: false,
+      },
+    }, provider);
+    const results = searchContracts('/test-workspace', { document_type: 'lpa' }, [], provider);
+    expect(results).toHaveLength(1);
+    expect(results[0].status).toBe('executed');
+    expect(results[0].auto_renewal).toBe(false);
+  });
+
+  it('formats as CSV with proper escaping', () => {
+    const results = searchContracts('/test-workspace', { document_type: 'nda' }, [], provider);
+    const csv = formatResultsAsCsv(results);
+    expect(csv).toContain('path,document_type,parties,effective_date,expiration_date,status,auto_renewal,governing_law,summary');
+    expect(csv).toContain('vendor/acme_nda.docx');
+    expect(csv).toContain('nda');
+  });
+
+  it('CSV escapes commas and quotes in values', () => {
+    indexContract('/test-workspace', {
+      documentPath: 'fund-formation/lpa.docx',
+      classification: {
+        document_type: 'lpa', confidence: 'high',
+        parties: ['Acme, Inc.', 'TestCo "Holdings" LLC'],
+        summary: 'Agreement with "special" terms, including commas',
+      },
+    }, provider);
+    const results = searchContracts('/test-workspace', { document_type: 'lpa' }, [], provider);
+    const csv = formatResultsAsCsv(results);
+    // Parties joined with semicolons should be quoted due to comma
+    expect(csv).toContain('"Acme, Inc.; TestCo ""Holdings"" LLC"');
+    // Summary with comma and quotes should be quoted
+    expect(csv).toContain('"Agreement with ""special"" terms, including commas"');
+  });
+
+  it('CSV hardens against formula injection', () => {
+    indexContract('/test-workspace', {
+      documentPath: 'fund-formation/lpa.docx',
+      classification: {
+        document_type: 'lpa', confidence: 'high', parties: ['=CMD()'],
+        summary: '+dangerous',
+      },
+    }, provider);
+    const results = searchContracts('/test-workspace', { document_type: 'lpa' }, [], provider);
+    const csv = formatResultsAsCsv(results);
+    expect(csv).toContain("'=CMD()");
+    expect(csv).toContain("'+dangerous");
+  });
+});
+
+describe('new classification fields', () => {
+  let provider: MemoryProvider;
+
+  beforeEach(() => {
+    provider = createTestProvider();
+  });
+
+  it('round-trips status, auto_renewal, notice_period_days, suggested_rename, key_terms', () => {
+    indexContract('/test-workspace', {
+      documentPath: 'vendor/acme_nda.docx',
+      classification: {
+        document_type: 'msa', confidence: 'high',
+        parties: ['Acme Corp', 'TestCo'],
+        summary: 'MSA',
+        status: 'pending',
+        auto_renewal: true,
+        notice_period_days: 30,
+        suggested_rename: '2026-01-01_acme_corp_msa.docx',
+        key_terms: { contract_value: '$120k/yr', payment_terms: 'Net 30' },
+      },
+    }, provider);
+
+    const loaded = loadSidecar('/test-workspace', 'vendor/acme_nda.docx', provider);
+    expect(loaded!.classification!.status).toBe('pending');
+    expect(loaded!.classification!.auto_renewal).toBe(true);
+    expect(loaded!.classification!.notice_period_days).toBe(30);
+    expect(loaded!.classification!.suggested_rename).toBe('2026-01-01_acme_corp_msa.docx');
+    expect(loaded!.classification!.key_terms).toEqual({ contract_value: '$120k/yr', payment_terms: 'Net 30' });
+  });
+
+  it('enrichDocumentRecord surfaces status and auto_renewal', () => {
+    indexContract('/test-workspace', {
+      documentPath: 'vendor/acme_nda.docx',
+      classification: {
+        document_type: 'nda', confidence: 'high', parties: ['Acme'],
+        summary: 'NDA', status: 'executed', auto_renewal: false,
+        suggested_rename: '2026_acme_nda.docx',
+      },
+    }, provider);
+    const record = makeDocumentRecord('vendor/acme_nda.docx');
+    const enriched = enrichDocumentRecord('/test-workspace', record, provider);
+    expect(enriched.classification!.status).toBe('executed');
+    expect(enriched.classification!.auto_renewal).toBe(false);
+    expect(enriched.classification!.suggested_rename).toBe('2026_acme_nda.docx');
+  });
+
+  it('buildAnalysisSummary counts pending_signature', () => {
+    indexContract('/test-workspace', {
+      documentPath: 'vendor/acme_nda.docx',
+      classification: {
+        document_type: 'nda', confidence: 'high', parties: ['Acme'],
+        summary: 'NDA', status: 'pending',
+      },
+    }, provider);
+    indexContract('/test-workspace', {
+      documentPath: 'vendor/partner_msa.pdf',
+      classification: {
+        document_type: 'msa', confidence: 'high', parties: ['Partner'],
+        summary: 'MSA', status: 'executed',
+      },
+    }, provider);
+    const docs = [
+      makeDocumentRecord('vendor/acme_nda.docx'),
+      makeDocumentRecord('vendor/partner_msa.pdf'),
+    ];
+    const summary = buildAnalysisSummary('/test-workspace', docs, provider);
+    expect(summary.pending_signature).toBe(1);
   });
 });

@@ -149,7 +149,7 @@ async function handleMessage(message: unknown): Promise<void> {
       const lint = lintWorkspace(rootDir);
       const baseIndex = buildStatusIndex(rootDir, documents, lint);
       const enriched = enrichStatusIndex(rootDir, baseIndex);
-      const html = buildDashboardHtml(enriched.analysis!, documents.length);
+      const html = buildDashboardHtml(enriched.analysis!, enriched.documents);
 
       sendResponse({
         jsonrpc: '2.0',

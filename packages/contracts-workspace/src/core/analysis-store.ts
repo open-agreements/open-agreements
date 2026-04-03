@@ -96,6 +96,11 @@ export interface IndexContractInput {
     expiration_date?: string;
     governing_law?: string;
     summary: string;
+    status?: 'draft' | 'pending' | 'executed' | 'unknown';
+    auto_renewal?: boolean;
+    notice_period_days?: number;
+    suggested_rename?: string;
+    key_terms?: Record<string, string>;
   };
   extractions?: ClauseExtraction[];
   indexedBy?: string;
@@ -137,6 +142,11 @@ export function indexContract(
       expiration_date: classification.expiration_date,
       governing_law: classification.governing_law,
       summary: classification.summary,
+      status: classification.status,
+      auto_renewal: classification.auto_renewal,
+      notice_period_days: classification.notice_period_days,
+      suggested_rename: classification.suggested_rename,
+      key_terms: classification.key_terms,
     };
     warning = typeResult.warning;
   }

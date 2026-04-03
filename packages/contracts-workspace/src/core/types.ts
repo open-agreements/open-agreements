@@ -1,5 +1,5 @@
 import type { LifecycleDir } from './constants.js';
-import type { DocumentType } from './analysis-types.js';
+import type { DocumentType, SignatureStatus } from './analysis-types.js';
 
 export type AgentName = 'claude' | 'gemini';
 
@@ -57,6 +57,10 @@ export interface DocumentRecord {
     document_type: DocumentType | null;
     parties: string[];
     summary: string;
+    status?: SignatureStatus;
+    auto_renewal?: boolean;
+    expiration_date?: string;
+    suggested_rename?: string;
   };
   analyzed?: boolean;
   stale?: boolean;
@@ -67,6 +71,9 @@ export interface AnalysisSummary {
   unanalyzed_documents: number;
   stale_documents: number;
   orphaned_sidecars: number;
+  pending_signature: number;
+  expiring_30_days: number;
+  expiring_30_90_days: number;
   by_document_type: Record<string, number>;
   expiring_soon: Array<{ path: string; expiration_date: string; document_type: string }>;
 }

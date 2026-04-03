@@ -9,6 +9,8 @@ export const DOCUMENT_TYPES = [
 
 export type DocumentType = (typeof DOCUMENT_TYPES)[number];
 
+export type SignatureStatus = 'draft' | 'pending' | 'executed' | 'unknown';
+
 export interface DocumentClassification {
   document_type: DocumentType | null;
   raw_type?: string;
@@ -18,6 +20,11 @@ export interface DocumentClassification {
   expiration_date?: string;
   governing_law?: string;
   summary: string;
+  status?: SignatureStatus;
+  auto_renewal?: boolean;
+  notice_period_days?: number;
+  suggested_rename?: string;
+  key_terms?: Record<string, string>;
 }
 
 export interface ClauseExtraction {

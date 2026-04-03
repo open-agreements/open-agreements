@@ -7,7 +7,8 @@ import { lintWorkspace } from '../../../contracts-workspace/src/core/lint.js';
 import { planWorkspaceInitialization } from '../../../contracts-workspace/src/core/workspace-structure.js';
 import { indexContract, loadSidecar, isSidecarStale, listUnindexedDocuments, detectOrphanedSidecars } from '../../../contracts-workspace/src/core/analysis-store.js';
 import { enrichStatusIndex, buildAnalysisSummary } from '../../../contracts-workspace/src/core/analysis-indexer.js';
-import { searchContracts, formatResultsAsMarkdown } from '../../../contracts-workspace/src/core/search-index.js';
+import { searchContracts, formatResultsAsMarkdown, formatResultsAsCsv } from '../../../contracts-workspace/src/core/search-index.js';
+import { buildDashboardHtml } from './dashboard.js';
 
 type JsonSchema = Record<string, unknown>;
 
@@ -65,6 +66,11 @@ const IndexContractSchema = z.object({
     expiration_date: z.string().optional(),
     governing_law: z.string().optional(),
     summary: z.string().min(1),
+    status: z.enum(['draft', 'pending', 'executed', 'unknown']).optional(),
+    auto_renewal: z.boolean().optional(),
+    notice_period_days: z.number().optional(),
+    suggested_rename: z.string().optional(),
+    key_terms: z.record(z.string(), z.string()).optional(),
   }).optional(),
   extractions: z.array(z.object({
     clause: z.string().min(1),
@@ -79,6 +85,7 @@ const IndexContractSchema = z.object({
 const GetContractIndexSchema = z.object({
   root_dir: z.string().min(1).optional(),
   document_path: z.string().min(1).optional(),
+  format: z.enum(['json', 'html']).optional(),
 });
 
 const ListUnindexedContractsSchema = z.object({
@@ -93,7 +100,7 @@ const SearchContractsSchema = z.object({
   expiring_before: z.string().optional(),
   stale: z.boolean().optional(),
   indexed: z.boolean().optional(),
-  format: z.enum(['json', 'markdown']).optional(),
+  format: z.enum(['json', 'markdown', 'csv']).optional(),
 });
 
 // --- Tool definitions ---
@@ -304,6 +311,11 @@ const tools: ToolDefinition[] = [
             expiration_date: { type: 'string', description: 'ISO 8601 date.' },
             governing_law: { type: 'string' },
             summary: { type: 'string' },
+            status: { type: 'string', enum: ['draft', 'pending', 'executed', 'unknown'], description: 'Signature status.' },
+            auto_renewal: { type: 'boolean', description: 'Whether the contract auto-renews.' },
+            notice_period_days: { type: 'number', description: 'Days of notice required for termination or non-renewal.' },
+            suggested_rename: { type: 'string', description: 'Suggested standardized filename.' },
+            key_terms: { type: 'object', additionalProperties: { type: 'string' }, description: 'Key commercial terms (e.g. payment_terms, contract_value).' },
           },
           required: ['document_type', 'confidence', 'parties', 'summary'],
         },
@@ -347,12 +359,13 @@ const tools: ToolDefinition[] = [
   },
   {
     name: 'get_contract_index',
-    description: 'Get contract index data. With document_path: returns that document\'s sidecar + staleness. Without: returns portfolio overview (indexed/unindexed/stale/orphan counts, type distribution, expiring-soon).',
+    description: 'Get contract index data. With document_path: returns that document\'s sidecar + staleness. Without: returns portfolio overview. Use format:"html" to get a rendered dashboard.',
     inputSchema: {
       type: 'object',
       properties: {
         root_dir: { type: 'string', description: 'Workspace root. Defaults to current working directory.' },
         document_path: { type: 'string', description: 'Relative path. Omit for portfolio overview.' },
+        format: { type: 'string', enum: ['json', 'html'], description: 'Output format. "html" returns a self-contained dashboard. Default: json.' },
       },
       additionalProperties: false,
     },
@@ -376,6 +389,17 @@ const tools: ToolDefinition[] = [
 
       // Portfolio overview mode
       const documents = collectWorkspaceDocuments(rootDir);
+
+      if (input.format === 'html') {
+        const lint = lintWorkspace(rootDir);
+        const baseIndex = buildStatusIndex(rootDir, documents, lint);
+        const enriched = enrichStatusIndex(rootDir, baseIndex);
+        const html = buildDashboardHtml(enriched.analysis!, enriched.documents);
+        return {
+          content: [{ type: 'text', text: html }],
+        };
+      }
+
       const enrichedDocs = documents.map((doc) => ({
         ...doc,
         analyzed: false,
@@ -389,6 +413,9 @@ const tools: ToolDefinition[] = [
         unindexed_count: summary.unanalyzed_documents,
         stale_count: summary.stale_documents,
         orphaned_sidecar_count: summary.orphaned_sidecars,
+        pending_signature: summary.pending_signature,
+        expiring_30_days: summary.expiring_30_days,
+        expiring_30_90_days: summary.expiring_30_90_days,
         by_document_type: summary.by_document_type,
         expiring_soon: summary.expiring_soon,
       });
@@ -431,7 +458,7 @@ const tools: ToolDefinition[] = [
         expiring_before: { type: 'string', description: 'ISO date. Return documents expiring before this date.' },
         stale: { type: 'boolean', description: 'Filter by stale status.' },
         indexed: { type: 'boolean', description: 'Filter by indexed status.' },
-        format: { type: 'string', enum: ['json', 'markdown'], description: 'Output format. Default: json.' },
+        format: { type: 'string', enum: ['json', 'markdown', 'csv'], description: 'Output format. Default: json. CSV uses RFC 4180 quoting.' },
       },
       additionalProperties: false,
     },
@@ -463,6 +490,14 @@ const tools: ToolDefinition[] = [
           root_dir: rootDir,
           match_count: results.length,
           markdown: formatResultsAsMarkdown(results),
+        });
+      }
+
+      if (input.format === 'csv') {
+        return successResult({
+          root_dir: rootDir,
+          match_count: results.length,
+          csv: formatResultsAsCsv(results),
         });
       }
 

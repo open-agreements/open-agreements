@@ -30,7 +30,7 @@ export type {
   ConventionConfig,
 } from './core/types.js';
 export { DOCUMENT_TYPES } from './core/analysis-types.js';
-export type { DocumentType, DocumentClassification, ClauseExtraction, DocumentAnalysis } from './core/analysis-types.js';
+export type { DocumentType, SignatureStatus, DocumentClassification, ClauseExtraction, DocumentAnalysis } from './core/analysis-types.js';
 export {
   sidecarPath,
   contentHash,
