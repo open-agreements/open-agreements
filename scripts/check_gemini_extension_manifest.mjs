@@ -50,4 +50,14 @@ for (const [name, packageName] of Object.entries(expectedServers)) {
   }
 }
 
+// Verify gemini files are in the npm package "files" array
+const pkgPath = resolve(process.cwd(), 'package.json');
+const pkg = JSON.parse(readFileSync(pkgPath, 'utf8'));
+const files = pkg.files || [];
+for (const required of ['gemini-extension.json', 'GEMINI.md']) {
+  if (!files.includes(required)) {
+    throw new Error(`package.json "files" array must include "${required}" or it will be excluded from the npm tarball.`);
+  }
+}
+
 console.log('PASS gemini extension manifest contract.');
