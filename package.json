@@ -1,6 +1,6 @@
 {
   "name": "open-agreements",
-  "version": "0.7.2",
+  "version": "0.7.3",
   "workspaces": [
     "packages/allure-test-factory",
     "packages/contract-templates-mcp",
@@ -37,7 +37,9 @@
     "skills/",
     "README.md",
     "LICENSE",
-    "server.json"
+    "server.json",
+    "gemini-extension.json",
+    "GEMINI.md"
   ],
   "bundleDependencies": [
     "@usejunior/docx-core"
