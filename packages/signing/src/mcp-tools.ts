@@ -11,7 +11,12 @@
 
 import { z } from 'zod';
 import { existsSync, statSync } from 'node:fs';
-import type { ToolCallResult } from './tools.js';
+/** MCP tool call result — simple type, no cross-package dependency. */
+interface ToolCallResult {
+  content: Array<{ type: string; text: string }>;
+  isError?: boolean;
+  structuredContent?: Record<string, unknown>;
+}
 
 type JsonSchema = Record<string, unknown>;
 type SigningContext = {
@@ -229,7 +234,7 @@ export const signingTools: ToolDefinition[] = [
           }
           filename = new URL(input.download_url).pathname.split('/').pop() || 'document.docx';
           // Upload the fetched buffer to GCS
-          const { createDocumentRef } = await import('../../../../packages/signing/src/storage.js');
+          const { createDocumentRef } = await import('./storage.js');
           const ref = createDocumentRef(buffer, filename, 'uploaded');
           const storageUrl = await (ctx as any).storage.storeDocument(buffer, filename);
           documentRef = { ...ref, storageUrl };

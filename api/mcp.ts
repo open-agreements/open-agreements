@@ -240,7 +240,7 @@ async function handleSigningToolCall(
     if (!_signingModuleLoaded) {
       // Dynamic import to avoid bundling when signing isn't configured
       const { setSigningContext } = await import(
-        '../packages/contract-templates-mcp/src/core/signing-tools.js'
+        '../packages/signing/src/mcp-tools.js'
       );
       const { createSigningContext } = await import(
         '../packages/signing/src/context.js'
@@ -286,7 +286,7 @@ async function handleSigningToolCall(
     }
 
     const { callSigningTool } = await import(
-      '../packages/contract-templates-mcp/src/core/signing-tools.js'
+      '../packages/signing/src/mcp-tools.js'
     );
     const result = await callSigningTool(name, args);
 

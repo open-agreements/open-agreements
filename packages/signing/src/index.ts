@@ -47,3 +47,6 @@ export type { GCloudStorageConfig } from './gcloud-storage.js';
 
 export { createSigningContext } from './context.js';
 export type { SigningContext, SigningContextConfig } from './context.js';
+
+// MCP tool definitions for signing (moved from contract-templates-mcp)
+export { signingTools, setSigningContext, listSigningToolDescriptors } from './mcp-tools.js';

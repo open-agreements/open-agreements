@@ -310,28 +310,18 @@ const tools: ToolDefinition[] = [
   },
 ];
 
-// ── Signing tools (from separate module) ──────────────────────────────────
-
-import { listSigningToolDescriptors, callSigningTool } from './signing-tools.js';
+// ── Template-only exports (signing tools moved to @open-agreements/signing) ──
 
 export function listToolDescriptors(): Array<{ name: string; description: string; inputSchema: JsonSchema; annotations?: { readOnlyHint?: boolean; destructiveHint?: boolean } }> {
-  return [
-    ...tools.map((tool) => ({
-      name: tool.name,
-      description: tool.description,
-      inputSchema: tool.inputSchema,
-      ...(tool.annotations ? { annotations: tool.annotations } : {}),
-    })),
-    ...listSigningToolDescriptors(),
-  ];
+  return tools.map((tool) => ({
+    name: tool.name,
+    description: tool.description,
+    inputSchema: tool.inputSchema,
+    ...(tool.annotations ? { annotations: tool.annotations } : {}),
+  }));
 }
 
 export async function callTool(name: string, args: unknown): Promise<ToolCallResult> {
-  // Try signing tools first
-  const signingResult = await callSigningTool(name, args);
-  if (signingResult) return signingResult;
-
-  // Then core tools
   const tool = tools.find((item) => item.name === name);
   if (!tool) {
     return toolError(name, 'INVALID_ARGUMENT', `Unknown tool: ${name}`);
