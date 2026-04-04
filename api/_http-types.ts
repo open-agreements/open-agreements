@@ -11,4 +11,6 @@ export type HttpResponse = {
   json(payload: unknown): HttpResponse;
   send(payload: unknown): HttpResponse;
   end(payload?: unknown): void;
+  redirect(url: string): void;
+  redirect(statusCode: number, url: string): void;
 };

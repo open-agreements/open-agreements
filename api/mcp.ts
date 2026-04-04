@@ -67,7 +67,7 @@ function getJwks() {
   return _jwks;
 }
 
-interface AuthResult {
+type AuthResult = {
   authenticated: false;
   status: 401 | 403;
   error: string;
@@ -76,7 +76,7 @@ interface AuthResult {
   authenticated: true;
   sub: string;
   scope: string;
-}
+};
 
 async function verifyAuth(req: HttpRequest): Promise<AuthResult> {
   const authHeader = Array.isArray(req.headers['authorization'])
