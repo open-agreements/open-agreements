@@ -382,7 +382,7 @@ describe('MCP endpoint — api/mcp.ts', () => {
     await allureJsonAttachment('mcp-tools-list.json', res.body);
 
     const tools = getResultObject(res).tools;
-    expect(tools).toHaveLength(7);
+    expect(tools).toHaveLength(8);
     expect(tools.map((t: { name: string }) => t.name).sort()).toEqual([
       'check_signature_status',
       'connect_signing_provider',
@@ -390,6 +390,7 @@ describe('MCP endpoint — api/mcp.ts', () => {
       'fill_template',
       'get_template',
       'list_templates',
+      'search_templates',
       'send_for_signature',
     ]);
   });

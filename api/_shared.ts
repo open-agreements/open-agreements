@@ -49,6 +49,7 @@ import {
   mapFields,
   type TemplateListItem,
 } from '../dist/core/template-listing.js';
+export { searchTemplates } from '../dist/core/template-search.js';
 
 // ---------------------------------------------------------------------------
 // Shared types
@@ -81,6 +82,7 @@ export type FillOutcome = FillSuccess | FillFailure;
 
 export interface TemplateItem {
   name: string;
+  display_name: string;
   category: string;
   description: string;
   license?: string;
@@ -108,6 +110,7 @@ export interface ListOutcome {
 
 interface RawTemplateMetadata {
   name: string;
+  category?: string;
   description?: string;
   license?: string;
   source_url: string;
@@ -125,7 +128,8 @@ interface RawTemplateMetadata {
 function toTemplateItem(templateId: string, meta: RawTemplateMetadata): TemplateItem {
   return {
     name: templateId,
-    category: categoryFromId(templateId),
+    display_name: meta.name,
+    category: meta.category ?? categoryFromId(templateId),
     description: meta.description ?? meta.name,
     license: meta.license,
     source_url: meta.source_url,
@@ -138,7 +142,8 @@ function toTemplateItem(templateId: string, meta: RawTemplateMetadata): Template
 function recipeToTemplateItem(recipeId: string, meta: RecipeMetadata): TemplateItem {
   return {
     name: recipeId,
-    category: categoryFromId(recipeId),
+    display_name: meta.name,
+    category: meta.category ?? categoryFromId(recipeId),
     description: meta.description ?? meta.name,
     license: meta.license_note,
     source_url: meta.source_url,
