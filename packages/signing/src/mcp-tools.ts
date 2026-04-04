@@ -210,6 +210,10 @@ export const signingTools: ToolDefinition[] = [
         const ctx = requireContext();
 
         // 1. Fail fast: check connection before any file I/O
+        if (!input.api_key) {
+          return err('send_for_signature', 'NO_SIGNING_PROVIDER',
+            'No signing connection. Authenticate first (OAuth on HTTP, or connect_signing_provider on stdio).');
+        }
         const conn = await ctx.getConnectionForKey(input.api_key);
         if (!conn) {
           return err('send_for_signature', 'NO_SIGNING_PROVIDER',
