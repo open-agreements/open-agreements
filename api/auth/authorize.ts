@@ -18,27 +18,8 @@
 
 import type { HttpRequest, HttpResponse } from '../_http-types.js';
 import { randomBytes, createHash } from 'node:crypto';
-
-const OA_ORIGIN = process.env.OA_ORIGIN?.trim() || 'https://openagreements.org';
-const MCP_RESOURCE = `${OA_ORIGIN}/api/mcp`;
-const DOCUSIGN_AUTH_BASE = (process.env.OA_DOCUSIGN_SANDBOX?.trim() === 'false')
-  ? 'https://account.docusign.com'
-  : 'https://account-d.docusign.com';
-const INTEGRATION_KEY = process.env.OA_DOCUSIGN_INTEGRATION_KEY?.trim() || '';
-const DS_REDIRECT_URI = process.env.OA_DOCUSIGN_REDIRECT_URI?.trim() || `${OA_ORIGIN}/api/auth/docusign/callback`;
-
-let _db: FirebaseFirestore.Firestore | null = null;
-async function getDb() {
-  if (_db) return _db;
-  const { Firestore } = await import('@google-cloud/firestore');
-  _db = new Firestore({ projectId: process.env.GCP_PROJECT_ID || process.env.GCLOUD_PROJECT });
-  return _db;
-}
-
-function getQuery(req: HttpRequest, key: string): string | undefined {
-  const val = req.query?.[key];
-  return Array.isArray(val) ? val[0] : val;
-}
+import { OA_ORIGIN, MCP_RESOURCE, DOCUSIGN_AUTH_BASE, INTEGRATION_KEY, DS_REDIRECT_URI, getQuery } from '../_config.js';
+import { getDb } from './_db.js';
 
 function matchRedirectUri(registered: string[], requested: string): boolean {
   const req = new URL(requested);

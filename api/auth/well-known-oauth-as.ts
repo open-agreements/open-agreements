@@ -7,8 +7,7 @@
  */
 
 import type { HttpRequest, HttpResponse } from '../_http-types.js';
-
-const OA_ORIGIN = process.env.OA_ORIGIN?.trim() || 'https://openagreements.org';
+import { OA_ORIGIN } from '../_config.js';
 
 const metadata = {
   issuer: OA_ORIGIN,

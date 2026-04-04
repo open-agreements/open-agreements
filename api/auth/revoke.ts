@@ -8,14 +8,7 @@
 
 import type { HttpRequest, HttpResponse } from '../_http-types.js';
 import { createHash } from 'node:crypto';
-
-let _db: FirebaseFirestore.Firestore | null = null;
-async function getDb() {
-  if (_db) return _db;
-  const { Firestore } = await import('@google-cloud/firestore');
-  _db = new Firestore({ projectId: process.env.GCP_PROJECT_ID || process.env.GCLOUD_PROJECT });
-  return _db;
-}
+import { getDb } from './_db.js';
 
 export default async function handler(req: HttpRequest, res: HttpResponse): Promise<void> {
   res.setHeader('Access-Control-Allow-Origin', '*');

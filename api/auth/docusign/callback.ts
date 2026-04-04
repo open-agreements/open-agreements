@@ -12,18 +12,8 @@
  */
 
 import type { HttpRequest, HttpResponse } from '../../_http-types.js';
-
-const DOCUSIGN_AUTH_BASE = (process.env.OA_DOCUSIGN_SANDBOX?.trim() === 'false')
-  ? 'https://account.docusign.com'
-  : 'https://account-d.docusign.com';
-const INTEGRATION_KEY = process.env.OA_DOCUSIGN_INTEGRATION_KEY?.trim() || '';
-const SECRET_KEY = process.env.OA_DOCUSIGN_SECRET_KEY?.trim() || '';
-const REDIRECT_URI = process.env.OA_DOCUSIGN_REDIRECT_URI?.trim() || 'https://openagreements.org/api/auth/docusign/callback';
-
-function getQuery(req: HttpRequest, key: string): string | undefined {
-  const val = req.query[key];
-  return Array.isArray(val) ? val[0] : val;
-}
+import { DOCUSIGN_AUTH_BASE, INTEGRATION_KEY, SECRET_KEY, DS_REDIRECT_URI as REDIRECT_URI, getQuery } from '../../_config.js';
+import { getDb } from '../_db.js';
 
 function getCookie(req: HttpRequest, name: string): string | undefined {
   const cookieHeader = req.headers['cookie'];
@@ -297,8 +287,7 @@ export default async function handler(req: HttpRequest, res: HttpResponse): Prom
 
       // Update the OA auth code with the sub (connectionId)
       try {
-        const { Firestore } = await import('@google-cloud/firestore');
-        const db = new Firestore({ projectId: process.env.GCP_PROJECT_ID || process.env.GCLOUD_PROJECT });
+        const db = await getDb();
         await db.collection('oauth_codes').doc(oaAuthCode).update({
           sub: connectionId,
         });

@@ -7,9 +7,7 @@
  */
 
 import type { HttpRequest, HttpResponse } from '../_http-types.js';
-
-const OA_ORIGIN = process.env.OA_ORIGIN?.trim() || 'https://openagreements.org';
-const MCP_RESOURCE = `${OA_ORIGIN}/api/mcp`;
+import { OA_ORIGIN, MCP_RESOURCE } from '../_config.js';
 
 const metadata = {
   resource: MCP_RESOURCE,

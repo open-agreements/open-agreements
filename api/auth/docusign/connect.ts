@@ -9,17 +9,7 @@
 
 import type { HttpRequest, HttpResponse } from '../../_http-types.js';
 import { randomBytes, createHash } from 'node:crypto';
-
-const DOCUSIGN_AUTH_BASE = (process.env.OA_DOCUSIGN_SANDBOX?.trim() === 'false')
-  ? 'https://account.docusign.com'
-  : 'https://account-d.docusign.com';
-const INTEGRATION_KEY = process.env.OA_DOCUSIGN_INTEGRATION_KEY?.trim() || '';
-const REDIRECT_URI = process.env.OA_DOCUSIGN_REDIRECT_URI?.trim() || 'https://openagreements.org/api/auth/docusign/callback';
-
-function getQuery(req: HttpRequest, key: string): string | undefined {
-  const val = req.query[key];
-  return Array.isArray(val) ? val[0] : val;
-}
+import { DOCUSIGN_AUTH_BASE, INTEGRATION_KEY, DS_REDIRECT_URI as REDIRECT_URI, getQuery } from '../../_config.js';
 
 export default function handler(req: HttpRequest, res: HttpResponse): void {
   if (req.method !== 'GET') {
@@ -48,8 +38,8 @@ export default function handler(req: HttpRequest, res: HttpResponse): void {
 
   // Store code_verifier in a short-lived httpOnly cookie (5 min TTL)
   res.setHeader('Set-Cookie', [
-    `oa_pkce_verifier=${codeVerifier}; Path=/api/auth/docusign; HttpOnly; Secure; SameSite=Lax; Max-Age=300`,
-    `oa_oauth_state=${csrfToken}; Path=/api/auth/docusign; HttpOnly; Secure; SameSite=Lax; Max-Age=300`,
+    `oa_pkce_verifier=${codeVerifier}; Path=/api/auth; HttpOnly; Secure; SameSite=Lax; Max-Age=300`,
+    `oa_oauth_state=${csrfToken}; Path=/api/auth; HttpOnly; Secure; SameSite=Lax; Max-Age=300`,
   ]);
 
   // Build DocuSign authorization URL

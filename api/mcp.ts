@@ -19,6 +19,7 @@ import {
 } from './_shared.js';
 import { ErrorCode, makeToolError, wrapError, wrapSuccess } from './_envelope.js';
 import { jwtVerify, createRemoteJWKSet } from 'jose';
+import { OA_ORIGIN, MCP_RESOURCE } from './_config.js';
 
 // ---------------------------------------------------------------------------
 // Zod schemas for MCP tool argument validation
@@ -45,14 +46,12 @@ const FillTemplateArgsSchema = z.object({
   .refine((v) => v.template.length > 0, { message: 'template or template_id is required' });
 
 // Base URL for download links — derived from the incoming request at call time
-let _baseUrl = 'https://openagreements.org';
+let _baseUrl = OA_ORIGIN;
 
 // ---------------------------------------------------------------------------
 // OAuth JWT verification for signing tools
 // ---------------------------------------------------------------------------
 
-const OA_ORIGIN = process.env.OA_ORIGIN?.trim() || 'https://openagreements.org';
-const MCP_RESOURCE = `${OA_ORIGIN}/api/mcp`;
 const JWKS_URI = `${OA_ORIGIN}/api/auth/jwks`;
 
 // Signing tools that require auth on the HTTP transport

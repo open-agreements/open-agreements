@@ -12,18 +12,11 @@ import type { HttpRequest, HttpResponse } from '../_http-types.js';
 import { SignJWT } from 'jose';
 import { randomBytes, createHash } from 'node:crypto';
 import { getPrivateKey, getKid } from './_keys.js';
+import { OA_ORIGIN, MCP_RESOURCE } from '../_config.js';
+import { getDb } from './_db.js';
 
-const OA_ORIGIN = process.env.OA_ORIGIN?.trim() || 'https://openagreements.org';
-const MCP_RESOURCE = `${OA_ORIGIN}/api/mcp`;
 const ACCESS_TOKEN_TTL = 3600; // 1 hour
 
-let _db: FirebaseFirestore.Firestore | null = null;
-async function getDb() {
-  if (_db) return _db;
-  const { Firestore } = await import('@google-cloud/firestore');
-  _db = new Firestore({ projectId: process.env.GCP_PROJECT_ID || process.env.GCLOUD_PROJECT });
-  return _db;
-}
 
 function parseBody(req: HttpRequest): Record<string, string> {
   if (typeof req.body === 'string') {
