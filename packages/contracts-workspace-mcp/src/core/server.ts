@@ -131,7 +131,7 @@ async function handleMessage(message: unknown): Promise<void> {
             uri: 'ui://contracts-workspace/dashboard',
             name: 'Contract Portfolio Dashboard',
             description: 'HTML dashboard showing indexed/unindexed counts, document type distribution, and expiring-soon contracts.',
-            mimeType: 'text/html',
+            mimeType: 'text/html;profile=mcp-app',
           },
         ],
       },
@@ -158,7 +158,7 @@ async function handleMessage(message: unknown): Promise<void> {
           contents: [
             {
               uri,
-              mimeType: 'text/html',
+              mimeType: 'text/html;profile=mcp-app',
               text: html,
             },
           ],
