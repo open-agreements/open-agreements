@@ -13,6 +13,7 @@ import {
   handleFill,
   handleGetTemplate,
   handleListTemplates,
+  searchTemplates,
   DOCX_MIME,
   createDownloadArtifact,
   generateRedlineFromFill,
@@ -44,6 +45,13 @@ const FillTemplateArgsSchema = z.object({
   redline_base: z.enum(['source', 'clean']).optional().default('source'),
 }).transform((v) => ({ ...v, template: v.template ?? v.template_id ?? '' }))
   .refine((v) => v.template.length > 0, { message: 'template or template_id is required' });
+
+const SearchTemplatesArgsSchema = z.object({
+  query: z.string().min(1),
+  category: z.string().optional(),
+  source: z.string().optional(),
+  max_results: z.number().int().min(1).max(50).optional().default(10),
+});
 
 // Base URL for download links — derived from the incoming request at call time
 let _baseUrl = OA_ORIGIN;
@@ -125,6 +133,7 @@ async function verifyAuth(req: HttpRequest): Promise<AuthResult> {
 }
 
 const TOOL_LIST_TEMPLATES = 'list_templates';
+const TOOL_SEARCH_TEMPLATES = 'search_templates';
 const TOOL_GET_TEMPLATE = 'get_template';
 const TOOL_FILL_TEMPLATE = 'fill_template';
 
@@ -137,7 +146,8 @@ const TOOLS = [
     name: TOOL_LIST_TEMPLATES,
     description:
       'List all available legal agreement templates. ' +
-      'Supports compact and full metadata modes for discovery.',
+      'Supports compact and full metadata modes for browsing. ' +
+      'For finding templates by topic, jurisdiction, or source, use search_templates instead.',
     inputSchema: {
       type: 'object' as const,
       properties: {
@@ -147,6 +157,44 @@ const TOOLS = [
           description: 'Response detail mode. Defaults to "full".',
         },
       },
+    },
+    annotations: { readOnlyHint: true, destructiveHint: false },
+  },
+  {
+    name: TOOL_SEARCH_TEMPLATES,
+    description:
+      'Search for legal agreement templates by keyword. Uses BM25 ranking to find ' +
+      'the most relevant templates matching your query. Searches across template names, ' +
+      'descriptions, categories, sources, and field definitions. ' +
+      'Use this instead of list_templates when you know what kind of agreement you need.',
+    inputSchema: {
+      type: 'object' as const,
+      properties: {
+        query: {
+          type: 'string',
+          description:
+            'Search query. Examples: "NDA", "employment offer letter", ' +
+            '"NVCA stock purchase", "data processing GDPR", "non-compete Wyoming".',
+        },
+        category: {
+          type: 'string',
+          description:
+            'Optional category filter (exact, case-insensitive). Values: confidentiality, ' +
+            'employment, sales-licensing, data-compliance, deals-partnerships, ' +
+            'professional-services, venture-financing, other.',
+        },
+        source: {
+          type: 'string',
+          description:
+            'Optional source filter (exact, case-insensitive). Values: "Common Paper", ' +
+            '"Bonterms", "Y Combinator", "NVCA", "OpenAgreements".',
+        },
+        max_results: {
+          type: 'number',
+          description: 'Maximum results to return (1-50, default 10).',
+        },
+      },
+      required: ['query'],
     },
     annotations: { readOnlyHint: true, destructiveHint: false },
   },
@@ -390,6 +438,7 @@ function isUnknownTemplateError(message: string): boolean {
 
 function normalizedTemplate(template: {
   name: string;
+  display_name: string;
   category: string;
   description: string;
   license?: string;
@@ -408,6 +457,7 @@ function normalizedTemplate(template: {
   return {
     template_id: template.name,
     name: template.name,
+    display_name: template.display_name,
     category: template.category,
     description: template.description,
     license: template.license ?? null,
@@ -418,10 +468,11 @@ function normalizedTemplate(template: {
   };
 }
 
-function compactTemplate(template: { name: string; fields: unknown[] }) {
+function compactTemplate(template: { name: string; display_name: string; fields: unknown[] }) {
   return {
     template_id: template.name,
     name: template.name,
+    display_name: template.display_name,
     field_count: template.fields.length,
   };
 }
@@ -692,6 +743,30 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>) {
     return toolSuccessResult(id, TOOL_LIST_TEMPLATES, {
       mode,
       templates: items.map((item) => normalizedTemplate(item)),
+    });
+  }
+
+  if (name === TOOL_SEARCH_TEMPLATES) {
+    const parsed = SearchTemplatesArgsSchema.safeParse(args);
+    if (!parsed.success) {
+      return toolErrorResult(
+        id,
+        TOOL_SEARCH_TEMPLATES,
+        ErrorCode.INVALID_ARGUMENT,
+        'Invalid arguments for search_templates.',
+        { details: issueDetails(parsed.error) },
+      );
+    }
+
+    const { items } = handleListTemplates();
+    const results = searchTemplates(items, parsed.data);
+
+    return toolSuccessResult(id, TOOL_SEARCH_TEMPLATES, {
+      query: parsed.data.query,
+      category_filter: parsed.data.category ?? null,
+      source_filter: parsed.data.source ?? null,
+      result_count: results.length,
+      results,
     });
   }
 

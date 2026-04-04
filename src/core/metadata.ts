@@ -141,6 +141,7 @@ const MarketDataCitationSchema = z.object({
 
 export const RecipeMetadataSchema = z.object({
   name: z.string(),
+  category: z.string().optional(),
   description: z.string().optional(),
   source_url: z.string().url(),
   source_version: z.string(),
