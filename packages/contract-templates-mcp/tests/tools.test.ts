@@ -25,14 +25,11 @@ function mockModules(overrides: Record<string, unknown> = {}): any {
 describe('contract-templates-mcp tools', () => {
   it.openspec('OA-DST-033')('lists expected tools', () => {
     const names = listToolDescriptors().map((tool) => tool.name);
+    // Signing tools moved to @open-agreements/signing (breaking change)
     expect(names).toEqual([
       'list_templates',
       'get_template',
       'fill_template',
-      'connect_signing_provider',
-      'disconnect_signing_provider',
-      'send_for_signature',
-      'check_signature_status',
     ]);
   });
 

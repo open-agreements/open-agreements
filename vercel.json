@@ -25,7 +25,7 @@
     },
     "api/mcp.ts": {
       "maxDuration": 30,
-      "includeFiles": "{content/templates,content/external,content/recipes,dist,node_modules/@usejunior/docx-core/dist}/**"
+      "includeFiles": "{content/templates,content/external,content/recipes,dist,node_modules/@usejunior/docx-core/dist,packages/signing/src}/**"
     },
     "api/download.ts": {
       "maxDuration": 30,
