@@ -57,8 +57,6 @@ const JWKS_URI = `${OA_ORIGIN}/api/auth/jwks`;
 
 // Signing tools that require auth on the HTTP transport
 const AUTH_REQUIRED_TOOLS = new Set([
-  'connect_signing_provider',
-  'disconnect_signing_provider',
   'send_for_signature',
   'check_signature_status',
 ]);
@@ -213,14 +211,10 @@ const TOOLS = [
 // Signing tool definitions (4 tools — consolidated)
 // ---------------------------------------------------------------------------
 
-const TOOL_CONNECT_SIGNING = 'connect_signing_provider';
-const TOOL_DISCONNECT_SIGNING = 'disconnect_signing_provider';
 const TOOL_SEND_FOR_SIGNATURE = 'send_for_signature';
 const TOOL_CHECK_SIGNATURE_STATUS = 'check_signature_status';
 
 const SIGNING_TOOL_NAMES = new Set([
-  TOOL_CONNECT_SIGNING,
-  TOOL_DISCONNECT_SIGNING,
   TOOL_SEND_FOR_SIGNATURE,
   TOOL_CHECK_SIGNATURE_STATUS,
 ]);
