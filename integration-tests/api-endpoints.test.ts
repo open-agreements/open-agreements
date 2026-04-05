@@ -412,7 +412,7 @@ describe('MCP endpoint — api/mcp.ts', () => {
     expect(envelope.ok).toBe(true);
     expect(envelope.tool).toBe('list_templates');
     expect(envelope.schema_version).toBe('2026-02-19');
-    expect(envelope.data.mode).toBe('full');
+    expect(envelope.data.mode).toBe('compact');
     expect(envelope.data.templates).toHaveLength(1);
     expect(envelope.data.rate_limit).toBeDefined();
   });
