@@ -382,11 +382,11 @@ describe('MCP endpoint — api/mcp.ts', () => {
     await allureJsonAttachment('mcp-tools-list.json', res.body);
 
     const tools = getResultObject(res).tools;
-    expect(tools).toHaveLength(8);
+    // connect_signing_provider and disconnect_signing_provider removed from remote MCP
+    // (signing auth now handled via MCP-native OAuth, not tool-based)
+    expect(tools).toHaveLength(6);
     expect(tools.map((t: { name: string }) => t.name).sort()).toEqual([
       'check_signature_status',
-      'connect_signing_provider',
-      'disconnect_signing_provider',
       'fill_template',
       'get_template',
       'list_templates',
