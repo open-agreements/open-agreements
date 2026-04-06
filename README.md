@@ -191,6 +191,12 @@ Choose based on document sensitivity and workflow needs. See [docs/trust-checkli
 
 See our [Privacy Policy](https://usejunior.com/privacy_policy) for details.
 
+## Built With OpenAgreements
+
+- [Safe Clause](https://safeclause.deltaxy.ai) — AI-powered contract platform for startups. [#1 on vibecode.law, March 2026](https://vibecode.law/showcase/safe-clause-317416).
+
+*Building on OpenAgreements? Open a PR to add your project.*
+
 ## See Also
 
 - [safe-docx](https://github.com/UseJunior/safe-docx) — surgical editing of existing Word documents with coding agents (MCP server)
