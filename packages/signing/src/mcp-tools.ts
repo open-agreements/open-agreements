@@ -82,7 +82,7 @@ const SendSchema = z.object({
     type: z.enum(['signer', 'cc']).default('signer'),
   })).min(1),
   email_subject: z.string().min(1).optional(),
-  api_key: z.string().min(1),
+  api_key: z.string().min(1).optional(), // Optional: injected from JWT sub on HTTP, passed explicitly on stdio
 }).refine((d) => d.file_path || d.download_url, {
   message: 'Either file_path or download_url is required',
 });
@@ -210,6 +210,10 @@ export const signingTools: ToolDefinition[] = [
         const ctx = requireContext();
 
         // 1. Fail fast: check connection before any file I/O
+        if (!input.api_key) {
+          return err('send_for_signature', 'NO_SIGNING_PROVIDER',
+            'No signing connection. Authenticate first (OAuth on HTTP, or connect_signing_provider on stdio).');
+        }
         const conn = await ctx.getConnectionForKey(input.api_key);
         if (!conn) {
           return err('send_for_signature', 'NO_SIGNING_PROVIDER',

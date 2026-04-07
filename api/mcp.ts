@@ -19,13 +19,15 @@ import {
   generateRedlineFromFill,
 } from './_shared.js';
 import { ErrorCode, makeToolError, wrapError, wrapSuccess } from './_envelope.js';
+import { jwtVerify, createRemoteJWKSet } from 'jose';
+import { OA_ORIGIN, MCP_RESOURCE } from './_config.js';
 
 // ---------------------------------------------------------------------------
 // Zod schemas for MCP tool argument validation
 // ---------------------------------------------------------------------------
 
 const ListTemplatesArgsSchema = z.object({
-  mode: z.enum(['compact', 'full']).optional().default('full'),
+  mode: z.enum(['compact', 'full']).optional().default('compact'),
 });
 
 const GetTemplateArgsSchema = z.object({
@@ -52,7 +54,83 @@ const SearchTemplatesArgsSchema = z.object({
 });
 
 // Base URL for download links — derived from the incoming request at call time
-let _baseUrl = 'https://openagreements.ai';
+let _baseUrl = OA_ORIGIN;
+
+// ---------------------------------------------------------------------------
+// OAuth JWT verification for signing tools
+// ---------------------------------------------------------------------------
+
+const JWKS_URI = `${OA_ORIGIN}/api/auth/jwks`;
+
+// Signing tools that require auth on the HTTP transport
+const AUTH_REQUIRED_TOOLS = new Set([
+  'send_for_signature',
+  'check_signature_status',
+]);
+
+let _jwks: ReturnType<typeof createRemoteJWKSet> | null = null;
+function getJwks() {
+  if (!_jwks) _jwks = createRemoteJWKSet(new URL(JWKS_URI));
+  return _jwks;
+}
+
+type AuthResult = {
+  authenticated: false;
+  status: 401 | 403;
+  error: string;
+  errorDescription: string;
+} | {
+  authenticated: true;
+  sub: string;
+  scope: string;
+};
+
+async function verifyAuth(req: HttpRequest): Promise<AuthResult> {
+  const authHeader = Array.isArray(req.headers['authorization'])
+    ? req.headers['authorization'][0]
+    : req.headers['authorization'];
+
+  if (!authHeader?.startsWith('Bearer ')) {
+    return {
+      authenticated: false,
+      status: 401,
+      error: 'invalid_token',
+      errorDescription: 'Bearer token required for signing tools',
+    };
+  }
+
+  const token = authHeader.slice(7);
+
+  try {
+    const { payload } = await jwtVerify(token, getJwks(), {
+      issuer: OA_ORIGIN,
+      audience: MCP_RESOURCE,
+    });
+
+    const scope = (payload.scope as string) || '';
+    if (!scope.includes('signing')) {
+      return {
+        authenticated: false,
+        status: 403,
+        error: 'insufficient_scope',
+        errorDescription: 'Token lacks "signing" scope',
+      };
+    }
+
+    return {
+      authenticated: true,
+      sub: payload.sub || '',
+      scope,
+    };
+  } catch (e) {
+    return {
+      authenticated: false,
+      status: 401,
+      error: 'invalid_token',
+      errorDescription: (e as Error).message,
+    };
+  }
+}
 
 const TOOL_LIST_TEMPLATES = 'list_templates';
 const TOOL_SEARCH_TEMPLATES = 'search_templates';
@@ -180,58 +258,26 @@ const TOOLS = [
 // Signing tool definitions (4 tools — consolidated)
 // ---------------------------------------------------------------------------
 
-const TOOL_CONNECT_SIGNING = 'connect_signing_provider';
-const TOOL_DISCONNECT_SIGNING = 'disconnect_signing_provider';
 const TOOL_SEND_FOR_SIGNATURE = 'send_for_signature';
 const TOOL_CHECK_SIGNATURE_STATUS = 'check_signature_status';
 
 const SIGNING_TOOL_NAMES = new Set([
-  TOOL_CONNECT_SIGNING,
-  TOOL_DISCONNECT_SIGNING,
   TOOL_SEND_FOR_SIGNATURE,
   TOOL_CHECK_SIGNATURE_STATUS,
 ]);
 
+// Remote MCP signing tools — no api_key, no connect/disconnect (auth via JWT Bearer)
 const SIGNING_TOOLS = [
-  {
-    name: TOOL_CONNECT_SIGNING,
-    description:
-      'Connect your DocuSign account for sending agreements for signature. ' +
-      'Returns a secure OAuth URL to open in your browser.',
-    inputSchema: {
-      type: 'object' as const,
-      properties: {
-        provider: { type: 'string', enum: ['docusign'], description: 'Signing provider.' },
-        api_key: { type: 'string', description: 'Your open_agreements_api_key.' },
-      },
-      required: ['api_key'] as const,
-      additionalProperties: false,
-    },
-    annotations: { readOnlyHint: false, destructiveHint: false },
-  },
-  {
-    name: TOOL_DISCONNECT_SIGNING,
-    description: 'Disconnect your signing provider account and revoke stored OAuth tokens.',
-    inputSchema: {
-      type: 'object' as const,
-      properties: {
-        connection_id: { type: 'string', description: 'Connection ID to disconnect.' },
-      },
-      required: ['connection_id'] as const,
-      additionalProperties: false,
-    },
-    annotations: { readOnlyHint: false, destructiveHint: true },
-  },
   {
     name: TOOL_SEND_FOR_SIGNATURE,
     description:
-      'Upload a DOCX file and create a draft signing envelope. Returns a review URL — ' +
-      'the user must review and send from the signing provider UI. Never auto-sends.',
+      'Upload a DOCX file and send it for electronic signature via DocuSign. ' +
+      'Authentication is handled automatically via OAuth — no API key needed. ' +
+      'Returns an envelope ID to track signing progress.',
     inputSchema: {
       type: 'object' as const,
       properties: {
-        file_path: { type: 'string', description: 'Local path to the DOCX file (for stdio MCP server).' },
-        download_url: { type: 'string', description: 'URL to download the DOCX (for remote MCP). Use the download_url from fill_template.' },
+        download_url: { type: 'string', description: 'URL to download the DOCX file. Use the download_url from fill_template.' },
         signers: {
           type: 'array',
           items: {
@@ -243,12 +289,11 @@ const SIGNING_TOOLS = [
             },
             required: ['name', 'email'],
           },
-          description: 'Signers and CC recipients.',
+          description: 'Signers and CC recipients. First signer maps to party_1, second to party_2.',
         },
         email_subject: { type: 'string', description: 'Subject line for the signing invitation email.' },
-        api_key: { type: 'string', description: 'Your open_agreements_api_key.' },
       },
-      required: ['signers', 'api_key'] as const,
+      required: ['signers'] as const,
       additionalProperties: false,
     },
     annotations: { readOnlyHint: false, destructiveHint: false },
@@ -261,8 +306,7 @@ const SIGNING_TOOLS = [
     inputSchema: {
       type: 'object' as const,
       properties: {
-        envelope_id: { type: 'string' },
-        api_key: { type: 'string', description: 'Required to download the signed document when completed.' },
+        envelope_id: { type: 'string', description: 'The envelope ID returned by send_for_signature.' },
       },
       required: ['envelope_id'] as const,
       additionalProperties: false,
@@ -666,7 +710,11 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>) {
   const args = (params.arguments as Record<string, unknown>) ?? {};
 
   // Delegate signing tools to the signing module
+  // Inject __auth_sub as api_key so downstream Zod validation passes
   if (SIGNING_TOOL_NAMES.has(name)) {
+    if (args.__auth_sub && !args.api_key) {
+      args.api_key = args.__auth_sub;
+    }
     return handleSigningToolCall(id, name, args);
   }
 
@@ -836,11 +884,11 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>) {
 // ---------------------------------------------------------------------------
 
 export default async function handler(req: HttpRequest, res: HttpResponse) {
-  // CORS for browser-based MCP clients.
+  // CORS for browser-based MCP clients (includes Authorization for OAuth).
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Mcp-Session-Id');
-  res.setHeader('Access-Control-Expose-Headers', 'Mcp-Session-Id');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Mcp-Session-Id, Authorization');
+  res.setHeader('Access-Control-Expose-Headers', 'Mcp-Session-Id, WWW-Authenticate');
 
   if (req.method === 'OPTIONS') return res.status(204).end();
 
@@ -861,7 +909,7 @@ export default async function handler(req: HttpRequest, res: HttpResponse) {
 
   // Capture base URL from request for building download links.
   const proto = req.headers['x-forwarded-proto'] ?? 'https';
-  const host = req.headers['x-forwarded-host'] ?? req.headers['host'] ?? 'openagreements.ai';
+  const host = req.headers['x-forwarded-host'] ?? req.headers['host'] ?? 'openagreements.org';
   _baseUrl = `${proto}://${host}`;
 
   const body = req.body as { jsonrpc?: string; id?: unknown; method?: string; params?: unknown };
@@ -883,9 +931,26 @@ export default async function handler(req: HttpRequest, res: HttpResponse) {
         return res.status(200).json(handleInitialize(body.id, params));
       case 'tools/list':
         return res.status(200).json(handleToolsList(body.id));
-      case 'tools/call':
-        // NOTE: Auth middleware would intercept protected routes before this point.
+      case 'tools/call': {
+        // Check if this tool requires authentication
+        const toolName = (params as { name?: string }).name;
+        if (toolName && AUTH_REQUIRED_TOOLS.has(toolName)) {
+          const auth = await verifyAuth(req);
+          if (!auth.authenticated) {
+            if (auth.status === 401) {
+              res.setHeader('WWW-Authenticate',
+                `Bearer resource_metadata="${OA_ORIGIN}/.well-known/oauth-protected-resource"`);
+              return res.status(401).json(
+                jsonRpcError(body.id, -32001, auth.errorDescription));
+            }
+            return res.status(403).json(
+              jsonRpcError(body.id, -32001, auth.errorDescription));
+          }
+          // Pass auth context to handler (sub available for ownership checks)
+          (params as Record<string, unknown>).__auth_sub = auth.sub;
+        }
         return res.status(200).json(await handleToolsCall(body.id, params));
+      }
       case 'ping':
         return res.status(200).json(jsonRpcResult(body.id, {}));
       default:

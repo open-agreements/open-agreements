@@ -203,6 +203,7 @@ See our [Privacy Policy](https://usejunior.com/privacy_policy) for details.
 
 ## Contributing
 
+
 See [CONTRIBUTING.md](CONTRIBUTING.md) for how to add templates, recipes, and other improvements.
 
 ## License

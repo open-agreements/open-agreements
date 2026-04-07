@@ -12,18 +12,8 @@
  */
 
 import type { HttpRequest, HttpResponse } from '../../_http-types.js';
-
-const DOCUSIGN_AUTH_BASE = (process.env.OA_DOCUSIGN_SANDBOX?.trim() === 'false')
-  ? 'https://account.docusign.com'
-  : 'https://account-d.docusign.com';
-const INTEGRATION_KEY = process.env.OA_DOCUSIGN_INTEGRATION_KEY?.trim() || '';
-const SECRET_KEY = process.env.OA_DOCUSIGN_SECRET_KEY?.trim() || '';
-const REDIRECT_URI = process.env.OA_DOCUSIGN_REDIRECT_URI?.trim() || 'https://openagreements.ai/api/auth/docusign/callback';
-
-function getQuery(req: HttpRequest, key: string): string | undefined {
-  const val = req.query[key];
-  return Array.isArray(val) ? val[0] : val;
-}
+import { DOCUSIGN_AUTH_BASE, INTEGRATION_KEY, SECRET_KEY, DS_REDIRECT_URI as REDIRECT_URI, getQuery } from '../../_config.js';
+import { getDb } from '../_db.js';
 
 function getCookie(req: HttpRequest, name: string): string | undefined {
   const cookieHeader = req.headers['cookie'];
@@ -87,10 +77,17 @@ function htmlPage(title: string, heading: string, body: string, isError = false)
 }
 
 export default async function handler(req: HttpRequest, res: HttpResponse): Promise<void> {
-  // Clear OAuth cookies on every callback (success or failure)
+  // Clear ALL OAuth cookies on every callback (both old and new flow names)
   const clearCookies = [
-    'oa_pkce_verifier=; Path=/api/auth/docusign; HttpOnly; Secure; SameSite=Lax; Max-Age=0',
-    'oa_oauth_state=; Path=/api/auth/docusign; HttpOnly; Secure; SameSite=Lax; Max-Age=0',
+    // Old flow cookies
+    'oa_pkce_verifier=; Path=/api/auth; HttpOnly; Secure; SameSite=Lax; Max-Age=0',
+    'oa_oauth_state=; Path=/api/auth; HttpOnly; Secure; SameSite=Lax; Max-Age=0',
+    // New MCP OAuth flow cookies
+    'oa_ds_verifier=; Path=/api/auth; HttpOnly; Secure; SameSite=Lax; Max-Age=0',
+    'oa_ds_state=; Path=/api/auth; HttpOnly; Secure; SameSite=Lax; Max-Age=0',
+    'oa_auth_code=; Path=/api/auth; HttpOnly; Secure; SameSite=Lax; Max-Age=0',
+    'oa_client_redirect=; Path=/api/auth; HttpOnly; Secure; SameSite=Lax; Max-Age=0',
+    'oa_client_state=; Path=/api/auth; HttpOnly; Secure; SameSite=Lax; Max-Age=0',
   ];
 
   if (req.method !== 'GET') {
@@ -127,9 +124,14 @@ export default async function handler(req: HttpRequest, res: HttpResponse): Prom
     return;
   }
 
-  // Verify CSRF state
-  const storedCsrf = getCookie(req, 'oa_oauth_state');
-  const [csrfFromState, apiKey] = state.split(':');
+  // Detect flow type from state format
+  const [csrfFromState, flowKey] = state.split(':');
+  const isMcpOAuth = flowKey === 'mcp-oauth';
+
+  // Read correct cookies based on flow type
+  const storedCsrf = isMcpOAuth ? getCookie(req, 'oa_ds_state') : getCookie(req, 'oa_oauth_state');
+  const codeVerifier = isMcpOAuth ? getCookie(req, 'oa_ds_verifier') : getCookie(req, 'oa_pkce_verifier');
+  const apiKey = isMcpOAuth ? undefined : flowKey; // old flow passes api_key in state
 
   if (!storedCsrf || storedCsrf !== csrfFromState) {
     res.setHeader('Set-Cookie', clearCookies);
@@ -143,8 +145,6 @@ export default async function handler(req: HttpRequest, res: HttpResponse): Prom
     return;
   }
 
-  // Get PKCE code verifier from cookie
-  const codeVerifier = getCookie(req, 'oa_pkce_verifier');
   if (!codeVerifier) {
     res.setHeader('Set-Cookie', clearCookies);
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
@@ -158,7 +158,7 @@ export default async function handler(req: HttpRequest, res: HttpResponse): Prom
   }
 
   try {
-    // Exchange code for tokens
+    // Exchange code for DocuSign tokens
     const basicAuth = Buffer.from(`${INTEGRATION_KEY}:${SECRET_KEY}`).toString('base64');
 
     const tokenResponse = await fetch(`${DOCUSIGN_AUTH_BASE}/oauth/token`, {
@@ -228,6 +228,7 @@ export default async function handler(req: HttpRequest, res: HttpResponse): Prom
     }
 
     // Store encrypted connection in Firestore
+    const connectionId = `docusign-${account.account_id}`;
     const encryptionKeyHex = process.env.OA_GCLOUD_ENCRYPTION_KEY?.trim();
     const credentialsJson = process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON?.trim();
     if (encryptionKeyHex) {
@@ -244,7 +245,8 @@ export default async function handler(req: HttpRequest, res: HttpResponse): Prom
         encryptionKey: Buffer.from(encryptionKeyHex, 'hex'),
         ...(credentials ? { credentials } : {}),
       });
-      const connectionId = `docusign-${account.account_id}`;
+      // For MCP OAuth, key by connectionId. For old flow, key by apiKey.
+      const storageKey = isMcpOAuth ? connectionId : (apiKey || connectionId);
       await storage.storeConnection({
         connectionId,
         provider: 'docusign',
@@ -252,18 +254,61 @@ export default async function handler(req: HttpRequest, res: HttpResponse): Prom
         baseUri: account.base_uri,
         scopes: ['signature', 'extended'],
         expiresAt: new Date(Date.now() + tokens.expires_in * 1000).toISOString(),
-        apiKey,
+        apiKey: storageKey,
         accessToken: tokens.access_token,
         refreshToken: tokens.refresh_token,
       });
       await storage.auditLog({
         action: 'oauth_connect',
-        apiKey,
-        details: { connectionId, accountId: account.account_id, provider: 'docusign' },
+        apiKey: storageKey,
+        details: { connectionId, accountId: account.account_id, provider: 'docusign', flow: isMcpOAuth ? 'mcp-oauth' : 'legacy' },
       });
     }
 
-    // Clear OAuth cookies
+    // --- Flow-specific response ---
+
+    if (isMcpOAuth) {
+      // MCP OAuth flow: update OA auth code with sub, redirect to client
+      const oaAuthCode = getCookie(req, 'oa_auth_code');
+      const clientRedirect = getCookie(req, 'oa_client_redirect');
+      const clientState = getCookie(req, 'oa_client_state');
+
+      if (!oaAuthCode || !clientRedirect) {
+        res.setHeader('Set-Cookie', clearCookies);
+        res.setHeader('Content-Type', 'text/html; charset=utf-8');
+        res.status(400).send(htmlPage(
+          'Session Error',
+          'Session Error',
+          '<p>Missing MCP OAuth session data. Please try connecting again.</p>',
+          true,
+        ));
+        return;
+      }
+
+      // Update the OA auth code with the sub (connectionId)
+      try {
+        const db = await getDb();
+        await db.collection('oauth_codes').doc(oaAuthCode).update({
+          sub: connectionId,
+        });
+      } catch (e) {
+        console.error('Failed to update OA auth code with sub:', e);
+        // Non-fatal — token exchange will use client_id as fallback sub
+      }
+
+      // Redirect back to the MCP client with OA auth code
+      const decodedRedirect = decodeURIComponent(clientRedirect);
+      const decodedState = clientState ? decodeURIComponent(clientState) : '';
+      const redirectUrl = new URL(decodedRedirect);
+      redirectUrl.searchParams.set('code', oaAuthCode);
+      if (decodedState) redirectUrl.searchParams.set('state', decodedState);
+
+      res.setHeader('Set-Cookie', clearCookies);
+      res.redirect(302, redirectUrl.toString());
+      return;
+    }
+
+    // Old flow: show HTML confirmation page
     res.setHeader('Set-Cookie', clearCookies);
     res.setHeader('Content-Type', 'text/html; charset=utf-8');
     res.status(200).send(htmlPage(
@@ -271,7 +316,7 @@ export default async function handler(req: HttpRequest, res: HttpResponse): Prom
       'DocuSign Connected',
       `<p>Your DocuSign account <strong>${account.account_name || account.account_id}</strong> has been connected.</p>
        <p>You can close this window and return to your conversation to send agreements for signature.</p>
-       <p class="subtle">Connection ID: docusign-${account.account_id}</p>`,
+       <p class="subtle">Connection ID: ${connectionId}</p>`,
     ));
   } catch (err) {
     const message = err instanceof Error ? err.message : String(err);
