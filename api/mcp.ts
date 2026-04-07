@@ -946,8 +946,10 @@ export default async function handler(req: HttpRequest, res: HttpResponse) {
             return res.status(403).json(
               jsonRpcError(body.id, -32001, auth.errorDescription));
           }
-          // Pass auth context to handler (sub available for ownership checks)
-          (params as Record<string, unknown>).__auth_sub = auth.sub;
+          // Pass auth context to handler via arguments (where signing tools read it)
+          const toolArgs = ((params as Record<string, unknown>).arguments ?? {}) as Record<string, unknown>;
+          toolArgs.__auth_sub = auth.sub;
+          (params as Record<string, unknown>).arguments = toolArgs;
         }
         return res.status(200).json(await handleToolsCall(body.id, params));
       }
