@@ -1,6 +1,7 @@
 {
   "name": "@open-agreements/signing",
-  "version": "0.1.0",
+  "version": "0.7.5",
+  "private": true,
   "description": "Provider-neutral signing adapter for sending filled agreements to DocuSign, Dropbox Sign, Adobe Sign, and PandaDoc",
   "type": "module",
   "main": "./dist/signing/src/index.js",
@@ -16,6 +17,8 @@
     "test": "vitest run"
   },
   "dependencies": {
+    "@google-cloud/firestore": "^8.3.0",
+    "@google-cloud/storage": "^7.19.0",
     "zod": "^4.0.0"
   },
   "devDependencies": {
