@@ -271,13 +271,14 @@ const SIGNING_TOOLS = [
   {
     name: TOOL_SEND_FOR_SIGNATURE,
     description:
-      'Upload a DOCX file and send it for electronic signature via DocuSign. ' +
-      'Authentication is handled automatically via OAuth — no API key needed. ' +
-      'Returns an envelope ID to track signing progress.',
+      'Upload a DOCX file and create a draft signing envelope via DocuSign. ' +
+      'Returns a review URL — the user must review and send from DocuSign. Never auto-sends. ' +
+      'Authentication is handled automatically via OAuth — no API key needed.',
     inputSchema: {
       type: 'object' as const,
       properties: {
         download_url: { type: 'string', description: 'URL to download the DOCX file. Use the download_url from fill_template.' },
+        document_name: { type: 'string', description: "Filename for the document (e.g. 'Bonterms Mutual NDA.docx'). Auto-detected from download URL if not provided." },
         signers: {
           type: 'array',
           items: {

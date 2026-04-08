@@ -10,6 +10,7 @@
  */
 
 import { z } from 'zod';
+import { basename } from 'node:path';
 import { existsSync, statSync } from 'node:fs';
 /** MCP tool call result — simple type, no cross-package dependency. */
 interface ToolCallResult {
@@ -76,6 +77,7 @@ const MAX_FILE_SIZE_BYTES = 25 * 1024 * 1024; // 25 MB (DocuSign limit)
 const SendSchema = z.object({
   file_path: z.string().min(1).optional(),
   download_url: z.string().url().optional(),
+  document_name: z.string().min(1).optional(),
   signers: z.array(z.object({
     name: z.string().min(1),
     email: z.string().email(),
@@ -184,6 +186,7 @@ export const signingTools: ToolDefinition[] = [
       properties: {
         file_path: { type: 'string', description: 'Local path to the DOCX file (for stdio MCP server).' },
         download_url: { type: 'string', description: 'URL to download the DOCX file (for remote MCP server). Use the download_url from fill_template.' },
+        document_name: { type: 'string', description: "Filename for the document (e.g. 'Bonterms Mutual NDA.docx'). Auto-detected from download URL if not provided." },
         signers: {
           type: 'array',
           items: {
@@ -236,7 +239,9 @@ export const signingTools: ToolDefinition[] = [
             return err('send_for_signature', 'INVALID_DOCUMENT',
               `Downloaded file too large (${(buffer.length / 1024 / 1024).toFixed(1)} MB). Maximum is 25 MB.`);
           }
-          filename = new URL(input.download_url).pathname.split('/').pop() || 'document.docx';
+          const disposition = response.headers.get('content-disposition') || '';
+          const cdMatch = disposition.match(/filename="?([^";\n]+)"?/);
+          filename = cdMatch?.[1] || input.document_name || 'document.docx';
           // Upload the fetched buffer to GCS
           const { createDocumentRef } = await import('./storage.js');
           const ref = createDocumentRef(buffer, filename, 'uploaded');
@@ -249,7 +254,7 @@ export const signingTools: ToolDefinition[] = [
             return err('send_for_signature', 'INVALID_DOCUMENT', fileError);
           }
           documentRef = await ctx.uploadLocalDocument(input.file_path);
-          filename = input.file_path.split('/').pop() || 'document.docx';
+          filename = input.document_name || basename(input.file_path) || 'document.docx';
         } else {
           return err('send_for_signature', 'INVALID_DOCUMENT',
             'Either file_path or download_url is required.');
