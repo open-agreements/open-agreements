@@ -11,6 +11,7 @@
  *   - packages/contracts-workspace-mcp/package.json
  *   - packages/contract-templates-mcp/package.json
  *   - packages/checklist-mcp/package.json
+ *   - packages/signing/package.json
  *   - gemini-extension.json
  *   - .cursor-plugin/plugin.json
  */
@@ -23,6 +24,7 @@ const VERSION_FILES = [
   "packages/contracts-workspace-mcp/package.json",
   "packages/contract-templates-mcp/package.json",
   "packages/checklist-mcp/package.json",
+  "packages/signing/package.json",
   "gemini-extension.json",
   ".cursor-plugin/plugin.json",
 ];
