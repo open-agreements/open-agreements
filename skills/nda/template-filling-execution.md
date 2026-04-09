@@ -52,14 +52,20 @@ Group fields by `section`. Ask the user for values in rounds of up to 4 question
 
 **If Remote MCP:** Collect values into a JSON object to pass to `fill_template`.
 
-**If Local CLI:** Write values to a temporary JSON file:
+**If Local CLI:** Write values to a per-run temporary JSON file with restrictive permissions:
 ```bash
-cat > /tmp/oa-values.json << 'FIELDS'
+VALUES_FILE="$(mktemp /tmp/oa-values.XXXXXX.json)"
+chmod 600 "$VALUES_FILE"
+trap 'rm -f "$VALUES_FILE"' EXIT
+
+cat > "$VALUES_FILE" << 'FIELDS'
 {
   "field_name": "value"
 }
 FIELDS
 ```
+
+Do not reuse a shared temp filename for confidential values.
 
 ## Step 5: Render DOCX
 
@@ -68,7 +74,7 @@ Use the `fill_template` tool with the template name and collected values. The se
 
 **If Local CLI:**
 ```bash
-open-agreements fill <template-name> -d /tmp/oa-values.json -o <output-name>.docx
+open-agreements fill <template-name> -d "$VALUES_FILE" -o <output-name>.docx
 ```
 
 **If Preview Only:**
@@ -82,7 +88,7 @@ Report the output (download URL or file path) to the user. Remind them to review
 
 If Local CLI was used, clean up:
 ```bash
-rm /tmp/oa-values.json
+rm -f "$VALUES_FILE"
 ```
 
 ## Bespoke edits (beyond template fields)
