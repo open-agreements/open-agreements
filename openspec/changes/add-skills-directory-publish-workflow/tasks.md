@@ -20,4 +20,4 @@
 - [x] 3.1 Run local dry-run checks for selected skills using the helper script.
 - [x] 3.2 Update release/process docs with the manual dispatch flow and secret
       requirements.
-- [ ] 3.3 Confirm the worktree is clean, commit, push, and open a draft PR.
+- [x] 3.3 Confirm the worktree is clean, commit, push, and open a draft PR.
