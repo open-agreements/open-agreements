@@ -1,0 +1,136 @@
+name: Publish Skills Directories
+
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: "Registry target to publish"
+        required: true
+        type: choice
+        default: both
+        options:
+          - both
+          - smithery
+          - clawhub
+      scope:
+        description: "Which skills to publish"
+        required: true
+        type: choice
+        default: changed
+        options:
+          - changed
+          - selected
+          - all
+      selected_skills:
+        description: "Comma-separated skill slugs when scope=selected"
+        required: false
+        type: string
+      base_ref:
+        description: "Git base ref for scope=changed"
+        required: false
+        type: string
+        default: HEAD^
+      clawhub_changelog:
+        description: "Optional ClawHub changelog text for updates"
+        required: false
+        type: string
+      dry_run:
+        description: "Print planned publishes without calling registries"
+        required: true
+        type: boolean
+        default: true
+
+jobs:
+  publish:
+    name: Publish selected skills
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    concurrency:
+      group: skills-directory-publish-${{ github.ref_name }}-${{ inputs.target }}-${{ inputs.scope }}
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Validate selected publish mode
+        run: |
+          if [ "${{ inputs.scope }}" = "selected" ] && [ -z "${{ inputs.selected_skills }}" ]; then
+            echo "selected_skills is required when scope=selected."
+            exit 1
+          fi
+
+      - name: Install directory publishing CLIs
+        if: ${{ !inputs.dry_run }}
+        run: npm install --global @smithery/cli@4.7.4 clawhub@0.9.0
+
+      - name: Require Smithery API key
+        if: ${{ !inputs.dry_run && (inputs.target == 'smithery' || inputs.target == 'both') }}
+        env:
+          SMITHERY_API_KEY: ${{ secrets.SMITHERY_API_KEY }}
+        run: |
+          if [ -z "$SMITHERY_API_KEY" ]; then
+            echo "Missing required secret: SMITHERY_API_KEY"
+            exit 1
+          fi
+
+      - name: Require ClawHub token
+        if: ${{ !inputs.dry_run && (inputs.target == 'clawhub' || inputs.target == 'both') }}
+        env:
+          CLAWHUB_TOKEN: ${{ secrets.CLAWHUB_TOKEN }}
+        run: |
+          if [ -z "$CLAWHUB_TOKEN" ]; then
+            echo "Missing required secret: CLAWHUB_TOKEN"
+            exit 1
+          fi
+
+      - name: Verify Smithery authentication
+        if: ${{ !inputs.dry_run && (inputs.target == 'smithery' || inputs.target == 'both') }}
+        env:
+          SMITHERY_API_KEY: ${{ secrets.SMITHERY_API_KEY }}
+        run: smithery auth whoami
+
+      - name: Log in to ClawHub
+        if: ${{ !inputs.dry_run && (inputs.target == 'clawhub' || inputs.target == 'both') }}
+        env:
+          CLAWHUB_TOKEN: ${{ secrets.CLAWHUB_TOKEN }}
+        run: clawhub login --token "$CLAWHUB_TOKEN" --no-browser
+
+      - name: Publish requested skills
+        env:
+          INPUT_TARGET: ${{ inputs.target }}
+          INPUT_SCOPE: ${{ inputs.scope }}
+          INPUT_BASE_REF: ${{ inputs.base_ref }}
+          INPUT_SELECTED_SKILLS: ${{ inputs.selected_skills }}
+          INPUT_CLAWHUB_CHANGELOG: ${{ inputs.clawhub_changelog }}
+          INPUT_DRY_RUN: ${{ inputs.dry_run }}
+          SMITHERY_API_KEY: ${{ secrets.SMITHERY_API_KEY }}
+          CLAWHUB_TOKEN: ${{ secrets.CLAWHUB_TOKEN }}
+        run: |
+          CMD=(node scripts/publish_skills_directories.mjs
+            --target "$INPUT_TARGET"
+            --scope "$INPUT_SCOPE"
+            --base-ref "$INPUT_BASE_REF"
+            --smithery-namespace "open-agreements")
+
+          if [ -n "$INPUT_SELECTED_SKILLS" ]; then
+            CMD+=(--selected-skills "$INPUT_SELECTED_SKILLS")
+          fi
+
+          if [ -n "$INPUT_CLAWHUB_CHANGELOG" ]; then
+            CMD+=(--clawhub-changelog "$INPUT_CLAWHUB_CHANGELOG")
+          fi
+
+          if [ "$INPUT_DRY_RUN" = "true" ]; then
+            CMD+=(--dry-run)
+          fi
+
+          printf 'Running:'
+          printf ' %q' "${CMD[@]}"
+          printf '\n'
+          "${CMD[@]}"

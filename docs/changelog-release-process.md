@@ -50,6 +50,41 @@ Allowed types include:
 4. During site builds, changelog data is generated from GitHub Releases and published on:
    - `/trust/changelog/`
 
+## Skills Directory Publishing
+
+`Smithery` and `ClawHub` are published through the manual GitHub Actions workflow
+`Publish Skills Directories`. This is intentionally separate from the npm release
+tag flow because skill directory publishing changes public listings and scanner
+surfaces.
+
+### Workflow inputs
+
+- `target`: `smithery`, `clawhub`, or `both`
+- `scope`: `changed`, `selected`, or `all`
+- `selected_skills`: comma-separated slugs when `scope=selected`
+- `base_ref`: git base ref for `scope=changed` (defaults to `HEAD^`)
+- `clawhub_changelog`: optional changelog text for ClawHub updates
+- `dry_run`: defaults to `true` for a safe preview
+
+### Required secrets
+
+- `SMITHERY_API_KEY`: service or restricted token for Smithery publishing
+- `CLAWHUB_TOKEN`: token for `clawhub login --token ... --no-browser`
+
+### How skill versions are chosen
+
+The workflow reads each skill's `metadata.version` directly from
+`skills/<slug>/SKILL.md` and passes that version to ClawHub. Do not hand-edit a
+separate registry version file.
+
+### Operational notes
+
+- Merge the skill changes to `main` first, then run the workflow from the main
+  branch.
+- Use `dry_run=true` first when publishing a new batch.
+- `skills.sh` is **not** a direct CI publish target. Treat it as a
+  discovery/indexing surface rather than a registry with a supported publish API.
+
 ## Required Gemini Local Extension Gate
 
 Before pushing a release tag, run a local Gemini extension install smoke test:
