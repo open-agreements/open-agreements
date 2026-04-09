@@ -129,7 +129,7 @@
   "license": "MIT",
   "dependencies": {
     "@usejunior/docx-core": ">=0.7.0",
-    "@xmldom/xmldom": "^0.9.5",
+    "@xmldom/xmldom": "^0.9.9",
     "adm-zip": "^0.5.16",
     "commander": "^13.1.0",
     "docx-templates": "^4.13.0",
