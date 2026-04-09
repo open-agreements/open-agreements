@@ -711,7 +711,6 @@ function processMarkerlessGroup(
       // Collect sub-clause paragraphs following the match
       const siblings: Element[] = [];
       const childNodes = parent.childNodes;
-      let foundMarker = false;
       for (let ci = 0; ci < childNodes.length; ci++) {
         const node = childNodes[ci];
         if (node.nodeType !== 1) continue;

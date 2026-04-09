@@ -1,12 +1,12 @@
 /**
  * Unit tests for selector.ts — standalone checkbox support.
  */
-import { mkdtempSync, rmSync, writeFileSync } from 'node:fs';
+import { mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { afterEach, describe, expect, it } from 'vitest';
 import AdmZip from 'adm-zip';
-import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
+import { DOMParser } from '@xmldom/xmldom';
 import { applySelections, SelectionsConfigSchema } from './selector.js';
 import type { SelectionsConfig } from './selector.js';
 

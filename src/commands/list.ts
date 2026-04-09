@@ -116,7 +116,7 @@ function runListJson(opts: ListOptions): void {
   console.log(JSON.stringify(envelope, null, 2));
 }
 
-function listAgreementsWithOptions(opts: ListOptions): void {
+function listAgreementsWithOptions(_opts: ListOptions): void {
   interface Row { id: string; category: string; license: string; priority: number; total: number; source: string; sourceUrl: string }
   const rows: Row[] = [];
   for (const entry of listTemplateEntries()) {

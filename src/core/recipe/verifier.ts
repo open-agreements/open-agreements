@@ -3,7 +3,7 @@ import { DOMParser } from '@xmldom/xmldom';
 import type { VerifyResult, VerifyCheck } from './types.js';
 import type { CleanConfig } from '../metadata.js';
 import { enumerateTextParts, getGeneralTextPartNames } from './ooxml-parts.js';
-import { extractSearchText, resolveReplacementValue } from './replacement-keys.js';
+import { extractSearchText } from './replacement-keys.js';
 import type { ReplacementValue } from './replacement-keys.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';

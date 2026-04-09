@@ -1,6 +1,6 @@
 {
-  "total_templates": 41,
-  "validated_count": 7,
+  "total_templates": 42,
+  "validated_count": 8,
   "not_covered_count": 27,
   "not_applicable_count": 7,
   "templates": [
@@ -13,7 +13,7 @@
       "distributable": true,
       "fillable": true,
       "priorityFields": 8,
-      "totalFields": 8,
+      "totalFields": 26,
       "validation_status": "validated",
       "validation_source": "test-source-scan",
       "hasPreview": false
@@ -27,7 +27,7 @@
       "distributable": true,
       "fillable": true,
       "priorityFields": 7,
-      "totalFields": 8,
+      "totalFields": 18,
       "validation_status": "validated",
       "validation_source": "test-source-scan",
       "hasPreview": false
@@ -70,6 +70,20 @@
       "fillable": true,
       "priorityFields": 0,
       "totalFields": 14,
+      "validation_status": "validated",
+      "validation_source": "test-source-scan",
+      "hasPreview": true
+    },
+    {
+      "id": "openagreements-restrictive-covenant-wyoming",
+      "displayName": "Restrictive Covenant Wyoming",
+      "sourceLabel": "OpenAgreements",
+      "sourceUrl": "https://openagreements.ai",
+      "license": "CC-BY-4.0",
+      "distributable": true,
+      "fillable": true,
+      "priorityFields": 2,
+      "totalFields": 28,
       "validation_status": "validated",
       "validation_source": "test-source-scan",
       "hasPreview": true
@@ -125,7 +139,7 @@
       "distributable": true,
       "fillable": true,
       "priorityFields": 2,
-      "totalFields": 8,
+      "totalFields": 5,
       "validation_status": "not_covered",
       "validation_source": "none",
       "hasPreview": true
@@ -139,7 +153,7 @@
       "distributable": true,
       "fillable": true,
       "priorityFields": 2,
-      "totalFields": 4,
+      "totalFields": 36,
       "validation_status": "not_covered",
       "validation_source": "none",
       "hasPreview": false
@@ -153,7 +167,7 @@
       "distributable": true,
       "fillable": true,
       "priorityFields": 0,
-      "totalFields": 2,
+      "totalFields": 24,
       "validation_status": "not_covered",
       "validation_source": "none",
       "hasPreview": false
@@ -167,7 +181,7 @@
       "distributable": true,
       "fillable": true,
       "priorityFields": 8,
-      "totalFields": 8,
+      "totalFields": 18,
       "validation_status": "not_covered",
       "validation_source": "none",
       "hasPreview": false
@@ -181,7 +195,7 @@
       "distributable": true,
       "fillable": true,
       "priorityFields": 3,
-      "totalFields": 10,
+      "totalFields": 35,
       "validation_status": "not_covered",
       "validation_source": "none",
       "hasPreview": false
@@ -195,7 +209,7 @@
       "distributable": true,
       "fillable": true,
       "priorityFields": 9,
-      "totalFields": 74,
+      "totalFields": 84,
       "validation_status": "not_covered",
       "validation_source": "none",
       "hasPreview": false
@@ -223,7 +237,7 @@
       "distributable": true,
       "fillable": true,
       "priorityFields": 8,
-      "totalFields": 30,
+      "totalFields": 115,
       "validation_status": "not_covered",
       "validation_source": "none",
       "hasPreview": false
@@ -237,7 +251,7 @@
       "distributable": true,
       "fillable": true,
       "priorityFields": 8,
-      "totalFields": 34,
+      "totalFields": 105,
       "validation_status": "not_covered",
       "validation_source": "none",
       "hasPreview": false
@@ -251,7 +265,7 @@
       "distributable": true,
       "fillable": true,
       "priorityFields": 8,
-      "totalFields": 28,
+      "totalFields": 98,
       "validation_status": "not_covered",
       "validation_source": "none",
       "hasPreview": false
@@ -265,7 +279,7 @@
       "distributable": true,
       "fillable": true,
       "priorityFields": 9,
-      "totalFields": 27,
+      "totalFields": 100,
       "validation_status": "not_covered",
       "validation_source": "none",
       "hasPreview": false
@@ -279,7 +293,7 @@
       "distributable": true,
       "fillable": true,
       "priorityFields": 4,
-      "totalFields": 10,
+      "totalFields": 31,
       "validation_status": "not_covered",
       "validation_source": "none",
       "hasPreview": false
@@ -293,7 +307,7 @@
       "distributable": true,
       "fillable": true,
       "priorityFields": 8,
-      "totalFields": 8,
+      "totalFields": 19,
       "validation_status": "not_covered",
       "validation_source": "none",
       "hasPreview": false
@@ -307,7 +321,7 @@
       "distributable": true,
       "fillable": true,
       "priorityFields": 5,
-      "totalFields": 6,
+      "totalFields": 16,
       "validation_status": "not_covered",
       "validation_source": "none",
       "hasPreview": false
@@ -321,7 +335,7 @@
       "distributable": true,
       "fillable": true,
       "priorityFields": 7,
-      "totalFields": 8,
+      "totalFields": 13,
       "validation_status": "not_covered",
       "validation_source": "none",
       "hasPreview": false
@@ -335,7 +349,7 @@
       "distributable": true,
       "fillable": true,
       "priorityFields": 6,
-      "totalFields": 17,
+      "totalFields": 43,
       "validation_status": "not_covered",
       "validation_source": "none",
       "hasPreview": false
@@ -349,7 +363,7 @@
       "distributable": true,
       "fillable": true,
       "priorityFields": 6,
-      "totalFields": 23,
+      "totalFields": 52,
       "validation_status": "not_covered",
       "validation_source": "none",
       "hasPreview": false
@@ -363,7 +377,7 @@
       "distributable": true,
       "fillable": true,
       "priorityFields": 3,
-      "totalFields": 15,
+      "totalFields": 77,
       "validation_status": "not_covered",
       "validation_source": "none",
       "hasPreview": false
@@ -377,7 +391,7 @@
       "distributable": true,
       "fillable": true,
       "priorityFields": 5,
-      "totalFields": 19,
+      "totalFields": 29,
       "validation_status": "not_covered",
       "validation_source": "none",
       "hasPreview": false
@@ -391,7 +405,7 @@
       "distributable": true,
       "fillable": true,
       "priorityFields": 8,
-      "totalFields": 25,
+      "totalFields": 89,
       "validation_status": "not_covered",
       "validation_source": "none",
       "hasPreview": false
@@ -419,7 +433,7 @@
       "distributable": true,
       "fillable": true,
       "priorityFields": 6,
-      "totalFields": 13,
+      "totalFields": 38,
       "validation_status": "not_covered",
       "validation_source": "none",
       "hasPreview": false
@@ -433,7 +447,7 @@
       "distributable": true,
       "fillable": true,
       "priorityFields": 3,
-      "totalFields": 3,
+      "totalFields": 13,
       "validation_status": "not_covered",
       "validation_source": "none",
       "hasPreview": false
@@ -488,8 +502,8 @@
       "license": "Recipe",
       "distributable": false,
       "fillable": false,
-      "priorityFields": 6,
-      "totalFields": 7,
+      "priorityFields": 9,
+      "totalFields": 43,
       "validation_status": "not_applicable",
       "validation_source": "none",
       "hasPreview": false
@@ -502,8 +516,8 @@
       "license": "Recipe",
       "distributable": false,
       "fillable": false,
-      "priorityFields": 10,
-      "totalFields": 15,
+      "priorityFields": 11,
+      "totalFields": 17,
       "validation_status": "not_applicable",
       "validation_source": "none",
       "hasPreview": false
@@ -545,7 +559,7 @@
       "distributable": false,
       "fillable": false,
       "priorityFields": 10,
-      "totalFields": 15,
+      "totalFields": 16,
       "validation_status": "not_applicable",
       "validation_source": "none",
       "hasPreview": false
@@ -559,7 +573,7 @@
       "distributable": false,
       "fillable": false,
       "priorityFields": 14,
-      "totalFields": 31,
+      "totalFields": 34,
       "validation_status": "not_applicable",
       "validation_source": "none",
       "hasPreview": false

@@ -9,7 +9,7 @@
 
 import AdmZip from 'adm-zip';
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
-import type { Document as XMLDocument, Element, Node } from '@xmldom/xmldom';
+import type { Document as XMLDocument, Element } from '@xmldom/xmldom';
 import {
   classifyRow,
   getDirectChildRows,

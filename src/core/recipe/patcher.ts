@@ -430,38 +430,6 @@ function replaceAtPositionLegacy(
  * Uses docx-core's replaceParagraphTextRange for correct formatting preservation,
  * with a legacy charMap fallback for container-boundary cases (hyperlinks, SDTs).
  */
-function replaceInParagraphOnce(
-  para: Element,
-  searchText: string,
-  value: string,
-  replacementColor?: string,
-): void {
-  const fullText = getParagraphText(para as unknown as globalThis.Element);
-  const matchStart = normalizeQuotes(fullText).indexOf(searchText);
-  if (matchStart === -1) return;
-
-  try {
-    replaceParagraphTextRange(
-      para as unknown as globalThis.Element,
-      matchStart,
-      matchStart + searchText.length,
-      replacementColor
-        ? [{ text: value, addRunProps: { color: replacementColor } }]
-        : value,
-    );
-  } catch (e) {
-    if (e instanceof SafeDocxError && (e.code === 'UNSAFE_CONTAINER_BOUNDARY' || e.code === 'UNSUPPORTED_EDIT')) {
-      const runs = getRunElements(para);
-      const { fullText: legacyText, charMap } = buildCharMap(runs);
-      const legacyPos = normalizeQuotes(legacyText).indexOf(searchText);
-      if (legacyPos === -1) return;
-      replaceAtPositionLegacy(runs, charMap, legacyPos, searchText.length, value, replacementColor);
-    } else {
-      throw e;
-    }
-  }
-}
-
 /**
  * Replace the first occurrence of searchText that appears AFTER contextText
  * in the same paragraph. Each call is self-contained — no chaining or order dependency.
