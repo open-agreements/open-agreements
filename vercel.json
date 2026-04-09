@@ -6,6 +6,10 @@
   "outputDirectory": "_site",
   "cleanUrls": true,
   "trailingSlash": false,
+  "rewrites": [
+    { "source": "/.well-known/oauth-protected-resource", "destination": "/api/auth/well-known-protected-resource" },
+    { "source": "/.well-known/oauth-authorization-server", "destination": "/api/auth/well-known-oauth-as" }
+  ],
   "redirects": [
     { "source": "/", "destination": "https://usejunior.com/developer-tools/open-agreements", "statusCode": 301 },
     { "source": "/templates", "destination": "https://usejunior.com/developer-tools/open-agreements/templates", "statusCode": 301 },
@@ -25,7 +29,7 @@
     },
     "api/mcp.ts": {
       "maxDuration": 30,
-      "includeFiles": "{content/templates,content/external,content/recipes,dist,node_modules/@usejunior/docx-core/dist}/**"
+      "includeFiles": "{content/templates,content/external,content/recipes,dist,node_modules/@usejunior/docx-core/dist,packages/signing/src}/**"
     },
     "api/download.ts": {
       "maxDuration": 30,

@@ -98,8 +98,7 @@ export function mapFields(
 // Main listing function
 // ---------------------------------------------------------------------------
 
-export function listTemplateItems(opts?: { templatesOnly?: boolean }): TemplateListItem[] {
-  const templatesOnly = opts?.templatesOnly === true; // default false — show all templates
+export function listTemplateItems(): TemplateListItem[] {
   const items: TemplateListItem[] = [];
 
   for (const entry of listTemplateEntries()) {
@@ -117,13 +116,8 @@ export function listTemplateItems(opts?: { templatesOnly?: boolean }): TemplateL
         fields: mapFields(meta.fields, meta.priority_fields),
       });
     } catch {
-      // Skip templates that fail to load (matches CLI --json behavior)
+      // Skip templates that fail to load
     }
-  }
-
-  if (!templatesOnly) {
-    // External and recipe entries are not included in templatesOnly mode.
-    // Callers that need them should use the full CLI list command.
   }
 
   items.sort((a, b) => a.name.localeCompare(b.name));

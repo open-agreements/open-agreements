@@ -10,6 +10,7 @@ import { createGCloudStorageCallbacks, type GCloudStorageConfig } from './gcloud
 import type { ConnectionRecord, DocumentRef, EnvelopeStatus } from './provider.js';
 import { createDocumentRef } from './storage.js';
 import { readFileSync } from 'node:fs';
+import { basename } from 'node:path';
 import { createHash } from 'node:crypto';
 
 export interface SigningContextConfig {
@@ -72,7 +73,7 @@ export function createSigningContext(config: SigningContextConfig): SigningConte
 
     async uploadLocalDocument(filePath: string): Promise<DocumentRef> {
       const buffer = readFileSync(filePath);
-      const filename = filePath.split('/').pop() || 'document.docx';
+      const filename = basename(filePath) || 'document.docx';
       const ref = createDocumentRef(buffer, filename, 'uploaded');
       const storageUrl = await storage.storeDocument(buffer, filename);
       return { ...ref, storageUrl };

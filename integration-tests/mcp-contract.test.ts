@@ -9,7 +9,8 @@ const it = itAllure.epic('Platform & Distribution');
 
 const MOCK_TEMPLATE = {
   name: 'common-paper-mutual-nda',
-  category: 'general',
+  display_name: 'Common Paper Mutual NDA',
+  category: 'confidentiality',
   description: 'Mutual NDA',
   license: 'CC-BY-4.0',
   source_url: 'https://commonpaper.com',
@@ -73,11 +74,21 @@ const createDownloadArtifactMock = vi.fn(() => ({
   expires_at_ms: Date.now() + 3600000,
 }));
 
+const searchTemplatesMock = vi.fn((templates: unknown[], options: { query: string }) => {
+  // Simple mock: return first template if query matches "nda", empty otherwise
+  if (options.query.toLowerCase().includes('nda')) {
+    const t = MOCK_TEMPLATE;
+    return [{ template_id: t.name, display_name: t.display_name, category: t.category, description: t.description, source: t.source, field_count: t.fields.length, score: 5.0 }];
+  }
+  return [];
+});
+
 vi.mock('../api/_shared.js', () => ({
   handleListTemplates: handleListTemplatesMock,
   handleGetTemplate: handleGetTemplateMock,
   handleFill: handleFillMock,
   createDownloadArtifact: createDownloadArtifactMock,
+  searchTemplates: searchTemplatesMock,
   DOCX_MIME: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
 }));
 
@@ -185,6 +196,7 @@ describe('MCP contract envelope behaviors', () => {
     expect(compactEnvelope.data.templates[0]).toEqual({
       template_id: 'common-paper-mutual-nda',
       name: 'common-paper-mutual-nda',
+      display_name: 'Common Paper Mutual NDA',
       field_count: 2,
     });
 
@@ -344,5 +356,76 @@ describe('MCP contract envelope behaviors', () => {
 
     expect(nonBrowserRes.statusCode).toBe(405);
     expect(String(asObject(nonBrowserRes.body).error)).toContain('Only POST');
+  });
+
+  it.openspec('OA-DST-032')('search_templates appears in tools/list', async () => {
+    const req = createMockReq({
+      body: { jsonrpc: '2.0', id: 20, method: 'tools/list', params: {} },
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+
+    const body = asObject(res.body);
+    const result = asObject(body.result);
+    const tools = Array.isArray(result.tools) ? result.tools : [];
+    const toolNames = tools.map((t: Record<string, unknown>) => t.name);
+    expect(toolNames).toContain('search_templates');
+  });
+
+  it.openspec('OA-DST-032')('search_templates returns success envelope for valid query', async () => {
+    const req = createMockReq({
+      body: {
+        jsonrpc: '2.0',
+        id: 21,
+        method: 'tools/call',
+        params: { name: 'search_templates', arguments: { query: 'nda' } },
+      },
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+
+    const envelope = parseEnvelope(res.body);
+    expect(envelope.ok).toBe(true);
+    expect(envelope.tool).toBe('search_templates');
+    expect(envelope.data.query).toBe('nda');
+    expect(envelope.data.result_count).toBe(1);
+    expect(Array.isArray(envelope.data.results)).toBe(true);
+    expect(envelope.data.results[0].template_id).toBe('common-paper-mutual-nda');
+    expect(envelope.data.results[0].display_name).toBe('Common Paper Mutual NDA');
+    expect(envelope.data.results[0].score).toBeGreaterThan(0);
+  });
+
+  it.openspec('OA-DST-032')('search_templates returns INVALID_ARGUMENT for missing query', async () => {
+    const req = createMockReq({
+      body: {
+        jsonrpc: '2.0',
+        id: 22,
+        method: 'tools/call',
+        params: { name: 'search_templates', arguments: {} },
+      },
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+
+    const envelope = parseEnvelope(res.body);
+    expect(envelope.ok).toBe(false);
+    expect(envelope.error.code).toBe('INVALID_ARGUMENT');
+  });
+
+  it.openspec('OA-DST-032')('list_templates full mode includes display_name', async () => {
+    const req = createMockReq({
+      body: {
+        jsonrpc: '2.0',
+        id: 23,
+        method: 'tools/call',
+        params: { name: 'list_templates', arguments: { mode: 'full' } },
+      },
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+
+    const envelope = parseEnvelope(res.body);
+    expect(envelope.ok).toBe(true);
+    expect(envelope.data.templates[0].display_name).toBe('Common Paper Mutual NDA');
   });
 });

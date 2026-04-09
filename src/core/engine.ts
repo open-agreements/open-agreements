@@ -108,6 +108,44 @@ function computeDisplayFields(data: Record<string, unknown>, fieldNames: Set<str
     }
   }
 
+  // ── Bonterms signatory defaults + computed fields ──
+  for (const n of [1, 2]) {
+    const p = `party_${n}`;
+
+    // Default signatory_company to party_name when not provided
+    const companyKey = `${p}_signatory_company`;
+    if (fieldNames.has(companyKey) && (!data[companyKey] || isBlankPlaceholder(data[companyKey]))) {
+      data[companyKey] = data[`${p}_name`] ?? '';
+    }
+
+    // Compute name_and_title display: "Jane Doe, GC" or just "Jane Doe"
+    const natKey = `${p}_signatory_name_and_title`;
+    if (fieldNames.has(natKey)) {
+      const name = str(`${p}_signatory_name`);
+      const title = str(`${p}_signatory_title`);
+      if (name && title) {
+        data[natKey] = `${name}, ${title}`;
+      } else {
+        data[natKey] = name || title || '';
+      }
+    }
+
+    // Compute notice checkbox glyphs from whether email/address are actually provided
+    // (not blank placeholders or empty strings)
+    const hasValue = (key: string): boolean => {
+      const val = data[key];
+      return !!val && !isBlankPlaceholder(val) && String(val).trim() !== '';
+    };
+    const emailCheckKey = `${p}_notice_email_check`;
+    if (fieldNames.has(emailCheckKey)) {
+      data[emailCheckKey] = hasValue(`${p}_email`) ? '\u2611' : '\u2610';
+    }
+    const postalCheckKey = `${p}_notice_postal_check`;
+    if (fieldNames.has(postalCheckKey)) {
+      data[postalCheckKey] = hasValue(`${p}_address`) ? '\u2611' : '\u2610';
+    }
+  }
+
   // Optional cover-table rows in employment templates should disappear when blank.
   // The default blank placeholder is intentionally visible in most contexts,
   // but for these optional rows we normalize blank placeholders to empty strings
@@ -238,12 +276,16 @@ export async function fillTemplate(options: FillOptions): Promise<FillResult> {
     console.warn(`Warning: unknown field(s) not in metadata: ${unknownKeys.join(', ')}`);
   }
 
-  // Build signing tag defaults: empty strings for any sig/date tags not in values
+  // Build signing tag defaults: use DocuSign anchor strings from signing.yaml
+  // so every filled document has anchors ready for electronic signature.
+  // The anchor text is styled 2pt white in the template, so it's invisible to readers.
   const signingTagDefaults: Record<string, string> = {};
   if (signingConfig) {
+    // Default to DocuSign anchors (primary provider)
+    const providerAnchors = signingConfig.providerAnchors?.docusign ?? {};
     for (const field of getSignatureTagFields(signingConfig)) {
       if (!(field in values)) {
-        signingTagDefaults[field] = '';
+        signingTagDefaults[field] = providerAnchors[field] ?? '';
       }
     }
   }

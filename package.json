@@ -1,6 +1,6 @@
 {
   "name": "open-agreements",
-  "version": "0.7.4",
+  "version": "0.7.5",
   "workspaces": [
     "packages/allure-test-factory",
     "packages/contract-templates-mcp",
@@ -37,7 +37,9 @@
     "skills/",
     "README.md",
     "LICENSE",
-    "server.json"
+    "server.json",
+    "gemini-extension.json",
+    "GEMINI.md"
   ],
   "bundleDependencies": [
     "@usejunior/docx-core"
@@ -126,14 +128,14 @@
   "author": "UseJunior <steven@usejunior.com>",
   "license": "MIT",
   "dependencies": {
-    "@google-cloud/firestore": "^8.3.0",
-    "@google-cloud/storage": "^7.19.0",
     "@usejunior/docx-core": ">=0.7.0",
     "@xmldom/xmldom": "^0.9.9",
     "adm-zip": "^0.5.16",
     "commander": "^13.1.0",
     "docx-templates": "^4.13.0",
+    "jose": "^6.2.2",
     "js-yaml": "^4.1.0",
+    "minisearch": "^7.2.0",
     "zod": "^4.0.0"
   },
   "devDependencies": {

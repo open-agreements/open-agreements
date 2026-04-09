@@ -13,18 +13,21 @@ import {
   handleFill,
   handleGetTemplate,
   handleListTemplates,
+  searchTemplates,
   DOCX_MIME,
   createDownloadArtifact,
   generateRedlineFromFill,
 } from './_shared.js';
 import { ErrorCode, makeToolError, wrapError, wrapSuccess } from './_envelope.js';
+import { jwtVerify, createRemoteJWKSet } from 'jose';
+import { OA_ORIGIN, MCP_RESOURCE } from './_config.js';
 
 // ---------------------------------------------------------------------------
 // Zod schemas for MCP tool argument validation
 // ---------------------------------------------------------------------------
 
 const ListTemplatesArgsSchema = z.object({
-  mode: z.enum(['compact', 'full']).optional().default('full'),
+  mode: z.enum(['compact', 'full']).optional().default('compact'),
 });
 
 const GetTemplateArgsSchema = z.object({
@@ -43,10 +46,94 @@ const FillTemplateArgsSchema = z.object({
 }).transform((v) => ({ ...v, template: v.template ?? v.template_id ?? '' }))
   .refine((v) => v.template.length > 0, { message: 'template or template_id is required' });
 
+const SearchTemplatesArgsSchema = z.object({
+  query: z.string().min(1),
+  category: z.string().optional(),
+  source: z.string().optional(),
+  max_results: z.number().int().min(1).max(50).optional().default(10),
+});
+
 // Base URL for download links — derived from the incoming request at call time
-let _baseUrl = 'https://openagreements.ai';
+let _baseUrl = OA_ORIGIN;
+
+// ---------------------------------------------------------------------------
+// OAuth JWT verification for signing tools
+// ---------------------------------------------------------------------------
+
+const JWKS_URI = `${OA_ORIGIN}/api/auth/jwks`;
+
+// Signing tools that require auth on the HTTP transport
+const AUTH_REQUIRED_TOOLS = new Set([
+  'send_for_signature',
+  'check_signature_status',
+]);
+
+let _jwks: ReturnType<typeof createRemoteJWKSet> | null = null;
+function getJwks() {
+  if (!_jwks) _jwks = createRemoteJWKSet(new URL(JWKS_URI));
+  return _jwks;
+}
+
+type AuthResult = {
+  authenticated: false;
+  status: 401 | 403;
+  error: string;
+  errorDescription: string;
+} | {
+  authenticated: true;
+  sub: string;
+  scope: string;
+};
+
+async function verifyAuth(req: HttpRequest): Promise<AuthResult> {
+  const authHeader = Array.isArray(req.headers['authorization'])
+    ? req.headers['authorization'][0]
+    : req.headers['authorization'];
+
+  if (!authHeader?.startsWith('Bearer ')) {
+    return {
+      authenticated: false,
+      status: 401,
+      error: 'invalid_token',
+      errorDescription: 'Bearer token required for signing tools',
+    };
+  }
+
+  const token = authHeader.slice(7);
+
+  try {
+    const { payload } = await jwtVerify(token, getJwks(), {
+      issuer: OA_ORIGIN,
+      audience: MCP_RESOURCE,
+    });
+
+    const scope = (payload.scope as string) || '';
+    if (!scope.includes('signing')) {
+      return {
+        authenticated: false,
+        status: 403,
+        error: 'insufficient_scope',
+        errorDescription: 'Token lacks "signing" scope',
+      };
+    }
+
+    return {
+      authenticated: true,
+      sub: payload.sub || '',
+      scope,
+    };
+  } catch (e) {
+    return {
+      authenticated: false,
+      status: 401,
+      error: 'invalid_token',
+      errorDescription: (e as Error).message,
+    };
+  }
+}
 
 const TOOL_LIST_TEMPLATES = 'list_templates';
+const TOOL_SEARCH_TEMPLATES = 'search_templates';
 const TOOL_GET_TEMPLATE = 'get_template';
 const TOOL_FILL_TEMPLATE = 'fill_template';
 
@@ -59,7 +146,8 @@ const TOOLS = [
     name: TOOL_LIST_TEMPLATES,
     description:
       'List all available legal agreement templates. ' +
-      'Supports compact and full metadata modes for discovery.',
+      'Supports compact and full metadata modes for browsing. ' +
+      'For finding templates by topic, jurisdiction, or source, use search_templates instead.',
     inputSchema: {
       type: 'object' as const,
       properties: {
@@ -69,6 +157,44 @@ const TOOLS = [
           description: 'Response detail mode. Defaults to "full".',
         },
       },
+    },
+    annotations: { readOnlyHint: true, destructiveHint: false },
+  },
+  {
+    name: TOOL_SEARCH_TEMPLATES,
+    description:
+      'Search for legal agreement templates by keyword. Uses BM25 ranking to find ' +
+      'the most relevant templates matching your query. Searches across template names, ' +
+      'descriptions, categories, sources, and field definitions. ' +
+      'Use this instead of list_templates when you know what kind of agreement you need.',
+    inputSchema: {
+      type: 'object' as const,
+      properties: {
+        query: {
+          type: 'string',
+          description:
+            'Search query. Examples: "NDA", "employment offer letter", ' +
+            '"NVCA stock purchase", "data processing GDPR", "non-compete Wyoming".',
+        },
+        category: {
+          type: 'string',
+          description:
+            'Optional category filter (exact, case-insensitive). Values: confidentiality, ' +
+            'employment, sales-licensing, data-compliance, deals-partnerships, ' +
+            'professional-services, venture-financing, other.',
+        },
+        source: {
+          type: 'string',
+          description:
+            'Optional source filter (exact, case-insensitive). Values: "Common Paper", ' +
+            '"Bonterms", "Y Combinator", "NVCA", "OpenAgreements".',
+        },
+        max_results: {
+          type: 'number',
+          description: 'Maximum results to return (1-50, default 10).',
+        },
+      },
+      required: ['query'],
     },
     annotations: { readOnlyHint: true, destructiveHint: false },
   },
@@ -132,58 +258,27 @@ const TOOLS = [
 // Signing tool definitions (4 tools — consolidated)
 // ---------------------------------------------------------------------------
 
-const TOOL_CONNECT_SIGNING = 'connect_signing_provider';
-const TOOL_DISCONNECT_SIGNING = 'disconnect_signing_provider';
 const TOOL_SEND_FOR_SIGNATURE = 'send_for_signature';
 const TOOL_CHECK_SIGNATURE_STATUS = 'check_signature_status';
 
 const SIGNING_TOOL_NAMES = new Set([
-  TOOL_CONNECT_SIGNING,
-  TOOL_DISCONNECT_SIGNING,
   TOOL_SEND_FOR_SIGNATURE,
   TOOL_CHECK_SIGNATURE_STATUS,
 ]);
 
+// Remote MCP signing tools — no api_key, no connect/disconnect (auth via JWT Bearer)
 const SIGNING_TOOLS = [
-  {
-    name: TOOL_CONNECT_SIGNING,
-    description:
-      'Connect your DocuSign account for sending agreements for signature. ' +
-      'Returns a secure OAuth URL to open in your browser.',
-    inputSchema: {
-      type: 'object' as const,
-      properties: {
-        provider: { type: 'string', enum: ['docusign'], description: 'Signing provider.' },
-        api_key: { type: 'string', description: 'Your open_agreements_api_key.' },
-      },
-      required: ['api_key'] as const,
-      additionalProperties: false,
-    },
-    annotations: { readOnlyHint: false, destructiveHint: false },
-  },
-  {
-    name: TOOL_DISCONNECT_SIGNING,
-    description: 'Disconnect your signing provider account and revoke stored OAuth tokens.',
-    inputSchema: {
-      type: 'object' as const,
-      properties: {
-        connection_id: { type: 'string', description: 'Connection ID to disconnect.' },
-      },
-      required: ['connection_id'] as const,
-      additionalProperties: false,
-    },
-    annotations: { readOnlyHint: false, destructiveHint: true },
-  },
   {
     name: TOOL_SEND_FOR_SIGNATURE,
     description:
-      'Upload a DOCX file and create a draft signing envelope. Returns a review URL — ' +
-      'the user must review and send from the signing provider UI. Never auto-sends.',
+      'Upload a DOCX file and create a draft signing envelope via DocuSign. ' +
+      'Returns a review URL — the user must review and send from DocuSign. Never auto-sends. ' +
+      'Authentication is handled automatically via OAuth — no API key needed.',
     inputSchema: {
       type: 'object' as const,
       properties: {
-        file_path: { type: 'string', description: 'Local path to the DOCX file (for stdio MCP server).' },
-        download_url: { type: 'string', description: 'URL to download the DOCX (for remote MCP). Use the download_url from fill_template.' },
+        download_url: { type: 'string', description: 'URL to download the DOCX file. Use the download_url from fill_template.' },
+        document_name: { type: 'string', description: "Filename for the document (e.g. 'Bonterms Mutual NDA.docx'). Auto-detected from download URL if not provided." },
         signers: {
           type: 'array',
           items: {
@@ -195,12 +290,11 @@ const SIGNING_TOOLS = [
             },
             required: ['name', 'email'],
           },
-          description: 'Signers and CC recipients.',
+          description: 'Signers and CC recipients. First signer maps to party_1, second to party_2.',
         },
         email_subject: { type: 'string', description: 'Subject line for the signing invitation email.' },
-        api_key: { type: 'string', description: 'Your open_agreements_api_key.' },
       },
-      required: ['signers', 'api_key'] as const,
+      required: ['signers'] as const,
       additionalProperties: false,
     },
     annotations: { readOnlyHint: false, destructiveHint: false },
@@ -213,8 +307,7 @@ const SIGNING_TOOLS = [
     inputSchema: {
       type: 'object' as const,
       properties: {
-        envelope_id: { type: 'string' },
-        api_key: { type: 'string', description: 'Required to download the signed document when completed.' },
+        envelope_id: { type: 'string', description: 'The envelope ID returned by send_for_signature.' },
       },
       required: ['envelope_id'] as const,
       additionalProperties: false,
@@ -240,7 +333,7 @@ async function handleSigningToolCall(
     if (!_signingModuleLoaded) {
       // Dynamic import to avoid bundling when signing isn't configured
       const { setSigningContext } = await import(
-        '../packages/contract-templates-mcp/src/core/signing-tools.js'
+        '../packages/signing/src/mcp-tools.js'
       );
       const { createSigningContext } = await import(
         '../packages/signing/src/context.js'
@@ -286,7 +379,7 @@ async function handleSigningToolCall(
     }
 
     const { callSigningTool } = await import(
-      '../packages/contract-templates-mcp/src/core/signing-tools.js'
+      '../packages/signing/src/mcp-tools.js'
     );
     const result = await callSigningTool(name, args);
 
@@ -346,6 +439,7 @@ function isUnknownTemplateError(message: string): boolean {
 
 function normalizedTemplate(template: {
   name: string;
+  display_name: string;
   category: string;
   description: string;
   license?: string;
@@ -364,6 +458,7 @@ function normalizedTemplate(template: {
   return {
     template_id: template.name,
     name: template.name,
+    display_name: template.display_name,
     category: template.category,
     description: template.description,
     license: template.license ?? null,
@@ -374,10 +469,11 @@ function normalizedTemplate(template: {
   };
 }
 
-function compactTemplate(template: { name: string; fields: unknown[] }) {
+function compactTemplate(template: { name: string; display_name: string; fields: unknown[] }) {
   return {
     template_id: template.name,
     name: template.name,
+    display_name: template.display_name,
     field_count: template.fields.length,
   };
 }
@@ -615,7 +711,11 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>) {
   const args = (params.arguments as Record<string, unknown>) ?? {};
 
   // Delegate signing tools to the signing module
+  // Inject __auth_sub as api_key so downstream Zod validation passes
   if (SIGNING_TOOL_NAMES.has(name)) {
+    if (args.__auth_sub && !args.api_key) {
+      args.api_key = args.__auth_sub;
+    }
     return handleSigningToolCall(id, name, args);
   }
 
@@ -644,6 +744,30 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>) {
     return toolSuccessResult(id, TOOL_LIST_TEMPLATES, {
       mode,
       templates: items.map((item) => normalizedTemplate(item)),
+    });
+  }
+
+  if (name === TOOL_SEARCH_TEMPLATES) {
+    const parsed = SearchTemplatesArgsSchema.safeParse(args);
+    if (!parsed.success) {
+      return toolErrorResult(
+        id,
+        TOOL_SEARCH_TEMPLATES,
+        ErrorCode.INVALID_ARGUMENT,
+        'Invalid arguments for search_templates.',
+        { details: issueDetails(parsed.error) },
+      );
+    }
+
+    const { items } = handleListTemplates();
+    const results = searchTemplates(items, parsed.data);
+
+    return toolSuccessResult(id, TOOL_SEARCH_TEMPLATES, {
+      query: parsed.data.query,
+      category_filter: parsed.data.category ?? null,
+      source_filter: parsed.data.source ?? null,
+      result_count: results.length,
+      results,
     });
   }
 
@@ -761,11 +885,11 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>) {
 // ---------------------------------------------------------------------------
 
 export default async function handler(req: HttpRequest, res: HttpResponse) {
-  // CORS for browser-based MCP clients.
+  // CORS for browser-based MCP clients (includes Authorization for OAuth).
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Mcp-Session-Id');
-  res.setHeader('Access-Control-Expose-Headers', 'Mcp-Session-Id');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Mcp-Session-Id, Authorization');
+  res.setHeader('Access-Control-Expose-Headers', 'Mcp-Session-Id, WWW-Authenticate');
 
   if (req.method === 'OPTIONS') return res.status(204).end();
 
@@ -786,7 +910,7 @@ export default async function handler(req: HttpRequest, res: HttpResponse) {
 
   // Capture base URL from request for building download links.
   const proto = req.headers['x-forwarded-proto'] ?? 'https';
-  const host = req.headers['x-forwarded-host'] ?? req.headers['host'] ?? 'openagreements.ai';
+  const host = req.headers['x-forwarded-host'] ?? req.headers['host'] ?? 'openagreements.org';
   _baseUrl = `${proto}://${host}`;
 
   const body = req.body as { jsonrpc?: string; id?: unknown; method?: string; params?: unknown };
@@ -808,9 +932,28 @@ export default async function handler(req: HttpRequest, res: HttpResponse) {
         return res.status(200).json(handleInitialize(body.id, params));
       case 'tools/list':
         return res.status(200).json(handleToolsList(body.id));
-      case 'tools/call':
-        // NOTE: Auth middleware would intercept protected routes before this point.
+      case 'tools/call': {
+        // Check if this tool requires authentication
+        const toolName = (params as { name?: string }).name;
+        if (toolName && AUTH_REQUIRED_TOOLS.has(toolName)) {
+          const auth = await verifyAuth(req);
+          if (!auth.authenticated) {
+            if (auth.status === 401) {
+              res.setHeader('WWW-Authenticate',
+                `Bearer resource_metadata="${OA_ORIGIN}/.well-known/oauth-protected-resource"`);
+              return res.status(401).json(
+                jsonRpcError(body.id, -32001, auth.errorDescription));
+            }
+            return res.status(403).json(
+              jsonRpcError(body.id, -32001, auth.errorDescription));
+          }
+          // Pass auth context to handler via arguments (where signing tools read it)
+          const toolArgs = ((params as Record<string, unknown>).arguments ?? {}) as Record<string, unknown>;
+          toolArgs.__auth_sub = auth.sub;
+          (params as Record<string, unknown>).arguments = toolArgs;
+        }
         return res.status(200).json(await handleToolsCall(body.id, params));
+      }
       case 'ping':
         return res.status(200).json(jsonRpcResult(body.id, {}));
       default:

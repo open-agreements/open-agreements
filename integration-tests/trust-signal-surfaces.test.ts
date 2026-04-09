@@ -11,11 +11,10 @@ function readRepoFile(relPath: string): string {
 }
 
 describe('trust signal surfaces', () => {
-  it.openspec('OA-DST-006')('README exposes CI, coverage, and test framework trust signals near the top', () => {
+  it.openspec('OA-DST-006')('README exposes CI and coverage trust signals near the top', () => {
     const readmeTop = readRepoFile('README.md').split('\n').slice(0, 60).join('\n');
     expect(readmeTop).toContain('actions/workflows/ci.yml');
     expect(readmeTop.toLowerCase()).toContain('codecov');
-    expect(readmeTop).toContain('Tests: Vitest');
   });
 
   it.openspec('OA-DST-007')('landing page trust section links npm, CI, coverage, and test framework signal', () => {

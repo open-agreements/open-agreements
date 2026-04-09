@@ -473,11 +473,6 @@ Output SHALL be sorted by name. Templates SHALL include `source_url` and `attrib
 - **WHEN** the user runs `open-agreements list --json-strict`
 - **THEN** the command prints errors to stderr and exits with non-zero status
 
-#### Scenario: [OA-CLI-014] --templates-only filters to templates
-- **GIVEN** internal and external templates are available
-- **WHEN** the user runs `open-agreements list --json --templates-only`
-- **THEN** the output contains only template entries (no recipes)
-
 ### Requirement: npm Package Integrity
 The npm tarball SHALL include `dist/`, `bin/`, `templates/`, `recipes/`, and `skills/`
 directories. The `prepack` script SHALL run the build before packing. The tarball
