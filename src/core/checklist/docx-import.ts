@@ -15,7 +15,7 @@ import {
   type ExtractedTable,
   type ExtractTablesResult,
 } from '@usejunior/docx-core';
-import type { ClosingChecklist, ChecklistEntry, ChecklistDocument, ActionItem, Issue } from './schemas.js';
+import type { ClosingChecklist } from './schemas.js';
 import type { ChecklistPatchOperation, ChecklistPatchEnvelope } from './patch-schemas.js';
 import { reverseHumanStatus } from './status-labels.js';
 import {
