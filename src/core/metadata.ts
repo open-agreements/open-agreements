@@ -6,6 +6,14 @@ import yaml from 'js-yaml';
 export const LicenseEnum = z.enum(['CC-BY-4.0', 'CC0-1.0', 'CC-BY-ND-4.0']);
 export type License = z.infer<typeof LicenseEnum>;
 
+export const TemplateAuthorSchema = z.object({
+  name: z.string(),
+  slug: z.string().regex(/^[a-z0-9-]+$/).optional(),
+  role: z.string().optional(),
+  profile_url: z.string().url().optional(),
+});
+export type TemplateAuthor = z.infer<typeof TemplateAuthorSchema>;
+
 export const FieldDefinitionSchema = z.object({
   name: z.string(),
   type: z.enum(['string', 'date', 'number', 'boolean', 'enum', 'array']),
@@ -65,6 +73,7 @@ const TemplateMetadataBaseSchema = z.object({
   license: LicenseEnum,
   allow_derivatives: z.boolean(),
   attribution_text: z.string(),
+  authors: z.array(TemplateAuthorSchema).optional(),
   fields: z.array(FieldDefinitionSchema),
   priority_fields: z.array(z.string()).default([]),
 });
