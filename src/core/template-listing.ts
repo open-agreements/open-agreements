@@ -7,7 +7,7 @@
  * - MCP `tools.ts` (via dynamic import or npm dependency)
  */
 
-import { loadMetadata } from './metadata.js';
+import { loadMetadata, type FieldDefinition } from './metadata.js';
 import { listTemplateEntries } from '../utils/paths.js';
 
 // ---------------------------------------------------------------------------
@@ -22,6 +22,7 @@ export interface TemplateListField {
   description: string;
   default: string | null;
   default_value_rationale: string | null;
+  items?: TemplateListField[];
 }
 
 export interface TemplateListItem {
@@ -79,7 +80,7 @@ export function sourceName(url: string): string | null {
 }
 
 export function mapFields(
-  fields: { name: string; type: string; section?: string; description: string; default?: string; default_value_rationale?: string }[],
+  fields: FieldDefinition[],
   priorityFields: string[],
 ): TemplateListField[] {
   const required = new Set(priorityFields);
@@ -91,6 +92,7 @@ export function mapFields(
     description: f.description,
     default: f.default ?? null,
     default_value_rationale: f.default_value_rationale ?? null,
+    ...(f.items ? { items: mapFields(f.items, []) } : {}),
   }));
 }
 

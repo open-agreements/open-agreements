@@ -67,6 +67,7 @@ priority_fields:
 | `number` | Numeric value |
 | `boolean` | true/false |
 | `enum` | One of a fixed set of options (use `options` array) |
+| `array` | Repeating list of objects or values (use nested `items` definitions when you need object fields) |
 
 #### License values
 
@@ -74,6 +75,61 @@ priority_fields:
 |-------|-------------|
 | `CC-BY-4.0` | Creative Commons Attribution 4.0 |
 | `CC0-1.0` | Creative Commons Zero (public domain) |
+
+#### Variable signer blocks
+
+Preferred pattern: array field plus `{FOR}` loop.
+
+```yaml
+fields:
+  - name: signers
+    type: array
+    description: Signers on the document
+    items:
+      - name: name
+        type: string
+        description: Printed signer name
+      - name: title
+        type: string
+        description: Printed signer title
+```
+
+```text
+{FOR signer IN signers}
+_________________________________
+{$signer.name}
+{$signer.title}
+Date: {effective_date}
+{END-FOR signer}
+```
+
+Use this whenever the document can have a variable number of parties, directors, investors, or signers. The fill pipeline already passes arrays through to `docx-templates`, and this pattern keeps the template honest for 1, 3, 7, or more entries without manual cleanup.
+
+Legacy-compatible pattern: fixed extra slots wrapped in `{IF}` blocks.
+
+```yaml
+fields:
+  - name: signer_1_name
+    type: string
+    description: Primary signer name
+  - name: signer_2_name
+    type: string
+    description: Optional second signer name
+    default: ""
+  - name: signer_2_date
+    type: date
+    description: Optional second signer date
+```
+
+```text
+{IF signer_2_name}
+_________________________________
+{signer_2_name}
+Date: {signer_2_date}
+{END-IF}
+```
+
+Use this only when you are preserving a legacy fixed-slot template and do not want to rewrite it around a loop yet. The `default: ""` on the optional slot anchor is required. Without it, the template-path blank placeholder (`_______`) is truthy and the extra block will not prune.
 
 ### 4. Create README.md
 

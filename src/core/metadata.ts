@@ -6,27 +6,66 @@ import yaml from 'js-yaml';
 export const LicenseEnum = z.enum(['CC-BY-4.0', 'CC0-1.0', 'CC-BY-ND-4.0']);
 export type License = z.infer<typeof LicenseEnum>;
 
-export const FieldDefinitionSchema = z.object({
-  name: z.string(),
-  type: z.enum(['string', 'date', 'number', 'boolean', 'enum', 'array']),
-  description: z.string(),
-  default: z.string().optional(),
-  default_value_rationale: z.string().optional(),
-  options: z.array(z.string()).optional(),
-  section: z.string().optional(),
-}).refine(
-  (f) => f.type !== 'enum' || (f.options !== undefined && f.options.length > 0),
-  { message: 'Fields with type "enum" must have a non-empty options array' }
-).refine(
-  (f) => {
-    if (f.default === undefined) return true;
-    if (f.type === 'number') return !isNaN(Number(f.default));
-    if (f.type === 'boolean') return f.default === 'true' || f.default === 'false';
-    return true;
-  },
-  { message: 'Default value must be valid for the declared field type' }
+const FieldTypeEnum = z.enum(['string', 'date', 'number', 'boolean', 'enum', 'array']);
+export type FieldType = z.infer<typeof FieldTypeEnum>;
+
+export interface FieldDefinition {
+  name: string;
+  type: FieldType;
+  description: string;
+  default?: string;
+  default_value_rationale?: string;
+  options?: string[];
+  section?: string;
+  items?: FieldDefinition[];
+}
+
+export const FieldDefinitionSchema: z.ZodType<FieldDefinition> = z.lazy(() =>
+  z.object({
+    name: z.string(),
+    type: FieldTypeEnum,
+    description: z.string(),
+    default: z.string().optional(),
+    default_value_rationale: z.string().optional(),
+    options: z.array(z.string()).optional(),
+    section: z.string().optional(),
+    items: z.array(FieldDefinitionSchema).nonempty().optional(),
+  }).superRefine((field, ctx) => {
+    if (field.type === 'enum' && (field.options === undefined || field.options.length === 0)) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['options'],
+        message: 'Fields with type "enum" must have a non-empty options array',
+      });
+    }
+
+    if (field.items !== undefined && field.type !== 'array') {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['items'],
+        message: 'Only fields with type "array" may define nested items',
+      });
+    }
+
+    if (field.default !== undefined) {
+      if (field.type === 'number' && isNaN(Number(field.default))) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ['default'],
+          message: 'Default value must be valid for the declared field type',
+        });
+      }
+
+      if (field.type === 'boolean' && field.default !== 'true' && field.default !== 'false') {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ['default'],
+          message: 'Default value must be valid for the declared field type',
+        });
+      }
+    }
+  })
 );
-export type FieldDefinition = z.infer<typeof FieldDefinitionSchema>;
 
 function validatePriorityFields(
   fields: FieldDefinition[],

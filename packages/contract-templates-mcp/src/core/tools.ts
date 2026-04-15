@@ -34,6 +34,8 @@ interface TemplateField {
   section: string | null;
   description: string;
   default: string | null;
+  default_value_rationale?: string | null;
+  items?: TemplateField[];
 }
 
 interface TemplateRecord {

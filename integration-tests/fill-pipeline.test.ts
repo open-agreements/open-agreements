@@ -301,6 +301,19 @@ describe('prepareFillData', () => {
     expect(result.amount).toBe('N/A');
   });
 
+  it('preserves an explicit empty-string default even when blank placeholders are enabled', () => {
+    const fieldsWithEmptyDefault = [
+      ...fields.slice(0, 1),
+      { name: 'amount', type: 'string' as const, description: 'Amount', default: '' },
+    ];
+    const result = prepareFillData({
+      values: { company: 'Acme' },
+      fields: fieldsWithEmptyDefault,
+      useBlankPlaceholder: true,
+    });
+    expect(result.amount).toBe('');
+  });
+
   it.openspec('OA-FIL-009')('coerces boolean fields when coerceBooleans is true', () => {
     const result = prepareFillData({
       values: { company: 'Acme', is_free: 'true' },

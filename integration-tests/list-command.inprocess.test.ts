@@ -17,7 +17,14 @@ interface TemplateMeta {
   license: string;
   source_url: string;
   attribution_text: string;
-  fields: Array<{ name: string; type: string; description: string; section?: string; default?: string }>;
+  fields: Array<{
+    name: string;
+    type: string;
+    description: string;
+    section?: string;
+    default?: string;
+    items?: Array<{ name: string; type: string; description: string; section?: string; default?: string }>;
+  }>;
   priority_fields: string[];
 }
 
@@ -240,6 +247,68 @@ describe('runList in-process coverage', () => {
 
     expect(exitSpy).toHaveBeenCalledWith(1);
     expect(errorSpy).toHaveBeenCalledWith(expect.stringContaining('error: template bad-template: metadata parse failed'));
+  });
+
+  itDiscovery.openspec('OA-CLI-024')('preserves nested array item schemas in JSON output', async () => {
+    const harness = await loadListHarness({
+      templateEntries: [
+        { id: 'array-template', dir: '/templates/array-template', baseDir: '/templates' },
+      ],
+      templateByDir: {
+        '/templates/array-template': {
+          ...templateMeta('Array Template', 'https://example.com/array-template'),
+          fields: [
+            {
+              name: 'signers',
+              type: 'array',
+              description: 'Signers on the document',
+              items: [
+                { name: 'name', type: 'string', description: 'Printed signer name' },
+                { name: 'title', type: 'string', description: 'Printed signer title', default: '' },
+              ],
+            },
+          ],
+          priority_fields: [],
+        },
+      },
+    });
+
+    const logSpy = vi.spyOn(console, 'log').mockImplementation(() => {});
+
+    await allureStep('Run list in JSON mode for array item schema', async () => {
+      harness.runList({ json: true });
+    });
+
+    const envelope = JSON.parse(String(logSpy.mock.calls[0][0]));
+    await allureJsonAttachment('list-json-array-item-schema.json', envelope);
+
+    const template = envelope.items.find((item: { name: string }) => item.name === 'array-template');
+    expect(template.fields).toHaveLength(1);
+    expect(template.fields[0]).toMatchObject({
+      name: 'signers',
+      type: 'array',
+      required: false,
+    });
+    expect(template.fields[0].items).toEqual([
+      {
+        name: 'name',
+        type: 'string',
+        required: false,
+        section: null,
+        description: 'Printed signer name',
+        default: null,
+        default_value_rationale: null,
+      },
+      {
+        name: 'title',
+        type: 'string',
+        required: false,
+        section: null,
+        description: 'Printed signer title',
+        default: '',
+        default_value_rationale: null,
+      },
+    ]);
   });
 
   itDiscovery('collects external and recipe metadata errors in non-strict JSON mode', async () => {
