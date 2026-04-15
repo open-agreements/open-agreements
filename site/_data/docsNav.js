@@ -15,7 +15,6 @@ export default function () {
       items: [
         { title: "Adding Templates", slug: "adding-templates" },
         { title: "Adding Recipes", slug: "adding-recipes" },
-        { title: "Branding Pipeline", slug: "template-branding-pipeline" },
       ],
     },
     {
