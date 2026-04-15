@@ -11,6 +11,11 @@ const SKILLS_ROOT = join(REPO_ROOT, 'skills');
 const VALID_TARGETS = new Set(['smithery', 'clawhub', 'both']);
 const VALID_SCOPES = new Set(['changed', 'all', 'selected']);
 
+// ClawHub's publish endpoint rejects re-publishes of an existing version with
+// a Convex error. Treat that as a skip instead of a hard failure so rerunning
+// a "publish everything" workflow is idempotent.
+const CLAWHUB_VERSION_EXISTS_PATTERN = /Version already exists/i;
+
 function main() {
   const options = parseArgs(process.argv.slice(2));
   const allSkills = listSkillDirectories();
@@ -57,9 +62,23 @@ function main() {
     return;
   }
 
+  const skipped = [];
+
   for (const skill of selectedSkills) {
     for (const command of buildCommands(skill, options, shortSha)) {
-      runCommand(command.bin, command.args);
+      const result = runCommand(command.bin, command.args, {
+        allowSkipOnPattern: command.allowSkipOnPattern,
+      });
+      if (result.status === 'skipped') {
+        skipped.push({ skill: skill.slug, target: command.target, reason: result.reason });
+      }
+    }
+  }
+
+  if (skipped.length > 0) {
+    summaryLines.push('', '- Skipped (already published):');
+    for (const entry of skipped) {
+      summaryLines.push(`  - \`${entry.skill}\` on \`${entry.target}\` — ${entry.reason}`);
     }
   }
 
@@ -231,6 +250,7 @@ function buildCommands(skill, options, shortSha) {
   if (options.target === 'smithery' || options.target === 'both') {
     commands.push({
       bin: 'smithery',
+      target: 'smithery',
       args: ['skill', 'publish', skill.directory, '--namespace', options.smitheryNamespace, '--name', skill.slug],
     });
   }
@@ -242,6 +262,7 @@ function buildCommands(skill, options, shortSha) {
     const changelog = options.clawhubChangelog.trim() || `Automated publish from ${shortSha} for ${skill.slug} ${skill.version}`;
     commands.push({
       bin: 'clawhub',
+      target: 'clawhub',
       args: [
         'publish',
         skill.directory,
@@ -254,23 +275,46 @@ function buildCommands(skill, options, shortSha) {
         '--tags',
         'latest',
       ],
+      allowSkipOnPattern: CLAWHUB_VERSION_EXISTS_PATTERN,
     });
   }
 
   return commands;
 }
 
-function runCommand(bin, args) {
+function runCommand(bin, args, { allowSkipOnPattern } = {}) {
   console.log(`Running: ${formatCommand(bin, args)}`);
+
+  // When a skip pattern is set we need to inspect stdout/stderr, so switch from
+  // 'inherit' to 'pipe' and re-emit the captured output after the process ends.
+  // Output is buffered rather than streamed — acceptable here because each
+  // publish call completes in a few seconds and prints <20 lines.
+  const capture = Boolean(allowSkipOnPattern);
   const result = spawnSync(bin, args, {
     cwd: REPO_ROOT,
-    stdio: 'inherit',
+    stdio: capture ? ['inherit', 'pipe', 'pipe'] : 'inherit',
     env: process.env,
+    encoding: capture ? 'utf8' : undefined,
   });
 
-  if (result.status !== 0) {
-    throw new Error(`${bin} exited with status ${result.status ?? 'unknown'}`);
+  if (capture) {
+    if (result.stdout) process.stdout.write(result.stdout);
+    if (result.stderr) process.stderr.write(result.stderr);
   }
+
+  if (result.status === 0) {
+    return { status: 'success' };
+  }
+
+  if (capture) {
+    const combined = `${result.stdout ?? ''}\n${result.stderr ?? ''}`;
+    if (allowSkipOnPattern.test(combined)) {
+      console.log(`  ↪ ${bin} reports version already exists; skipping and continuing.`);
+      return { status: 'skipped', reason: 'version-already-exists' };
+    }
+  }
+
+  throw new Error(`${bin} exited with status ${result.status ?? 'unknown'}`);
 }
 
 function validateTargetRequirements(selectedSkills, options) {
