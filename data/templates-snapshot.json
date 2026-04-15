@@ -10257,7 +10257,15 @@
       "license": "CC0-1.0",
       "source_url": "https://github.com/cooleyLLP/seriesseed",
       "source": "github.com",
-      "attribution_text": "Derived from the Cooley Series Seed Board Consent, available at https://github.com/cooleyLLP/seriesseed. Made available under CC0 1.0 Universal Public Domain Dedication.",
+      "attribution_text": "Adapted by Joey Tsang for OpenAgreements from the Cooley Series Seed Board Consent, available at https://github.com/cooleyLLP/seriesseed. Made available under CC0 1.0 Universal Public Domain Dedication.",
+      "authors": [
+        {
+          "name": "Joey Tsang",
+          "slug": "joey-tsang",
+          "role": "primary_author",
+          "profile_url": "https://www.linkedin.com/in/joey-t-b90912b1/"
+        }
+      ],
       "fields": [
         {
           "name": "company_name",
@@ -10323,7 +10331,15 @@
       "license": "CC0-1.0",
       "source_url": "https://github.com/cooleyLLP/seriesseed",
       "source": "github.com",
-      "attribution_text": "Derived from the Cooley Series Seed Stockholder Consent, available at https://github.com/cooleyLLP/seriesseed. Made available under CC0 1.0 Universal Public Domain Dedication.",
+      "attribution_text": "Adapted by Joey Tsang for OpenAgreements from the Cooley Series Seed Stockholder Consent, available at https://github.com/cooleyLLP/seriesseed. Made available under CC0 1.0 Universal Public Domain Dedication.",
+      "authors": [
+        {
+          "name": "Joey Tsang",
+          "slug": "joey-tsang",
+          "role": "primary_author",
+          "profile_url": "https://www.linkedin.com/in/joey-t-b90912b1/"
+        }
+      ],
       "fields": [
         {
           "name": "company_name",
@@ -11808,7 +11824,14 @@
       "license": "CC-BY-4.0",
       "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-employee-ip-inventions-assignment",
       "source": "OpenAgreements",
-      "attribution_text": "Authored by OpenAgreements contributors. Baseline structure inspired by permissive public references including the Balanced Employee IP Agreement (CC0) and Papertrail legal-docs (CC0). Licensed under CC BY 4.0.",
+      "attribution_text": "Drafted by Steven Obiajulu for OpenAgreements. Baseline structure inspired by permissive public references including the Balanced Employee IP Agreement (CC0) and Papertrail legal-docs (CC0). Licensed under CC BY 4.0.",
+      "authors": [
+        {
+          "name": "Steven Obiajulu",
+          "slug": "steven-obiajulu",
+          "role": "primary_author"
+        }
+      ],
       "fields": [
         {
           "name": "company_name",
@@ -11928,7 +11951,14 @@
       "license": "CC-BY-4.0",
       "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-employment-confidentiality-acknowledgement",
       "source": "OpenAgreements",
-      "attribution_text": "Authored by OpenAgreements contributors using permissive public reference patterns from Papertrail legal-docs (CC0) and open policy frameworks. Licensed under CC BY 4.0.",
+      "attribution_text": "Drafted by Steven Obiajulu for OpenAgreements using permissive public reference patterns from Papertrail legal-docs (CC0) and open policy frameworks. Licensed under CC BY 4.0.",
+      "authors": [
+        {
+          "name": "Steven Obiajulu",
+          "slug": "steven-obiajulu",
+          "role": "primary_author"
+        }
+      ],
       "fields": [
         {
           "name": "company_name",
@@ -12039,7 +12069,14 @@
       "license": "CC-BY-4.0",
       "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-employment-offer-letter",
       "source": "OpenAgreements",
-      "attribution_text": "Authored by OpenAgreements contributors. Drafting structure informed by publicly available permissive sources including the DocuSign template library (MIT) and Papertrail legal-docs (CC0). Licensed under CC BY 4.0.",
+      "attribution_text": "Drafted by Steven Obiajulu for OpenAgreements. Drafting structure informed by publicly available permissive sources including the DocuSign template library (MIT) and Papertrail legal-docs (CC0). Licensed under CC BY 4.0.",
+      "authors": [
+        {
+          "name": "Steven Obiajulu",
+          "slug": "steven-obiajulu",
+          "role": "primary_author"
+        }
+      ],
       "fields": [
         {
           "name": "employer_name",
@@ -12177,13 +12214,12 @@
       "license": "CC-BY-4.0",
       "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-wyoming",
       "source": "OpenAgreements",
-      "attribution_text": "Drafted by Joey Tsang for OpenAgreements. Wyoming-specific analysis informed by publicly available commentary from Am Law firms including Ogletree Deakins, Fisher Phillips, Littler Mendelson, Foley & Lardner, Faegre Drinker, and Vinson & Elkins. See practice note for sources. Licensed under CC BY 4.0.",
+      "attribution_text": "Drafted by Steven Obiajulu for OpenAgreements. Wyoming-specific analysis informed by publicly available commentary from Am Law firms including Ogletree Deakins, Fisher Phillips, Littler Mendelson, Foley & Lardner, Faegre Drinker, and Vinson & Elkins. See practice note for sources. Licensed under CC BY 4.0.",
       "authors": [
         {
-          "name": "Joey Tsang",
-          "slug": "joey-tsang",
-          "role": "primary_author",
-          "profile_url": "https://www.linkedin.com/in/joey-t-b90912b1/"
+          "name": "Steven Obiajulu",
+          "slug": "steven-obiajulu",
+          "role": "primary_author"
         }
       ],
       "fields": [

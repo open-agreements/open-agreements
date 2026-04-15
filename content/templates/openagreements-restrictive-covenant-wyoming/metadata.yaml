@@ -11,12 +11,11 @@ version: '2.0'
 license: CC-BY-4.0
 allow_derivatives: true
 authors:
-  - name: Joey Tsang
-    slug: joey-tsang
+  - name: Steven Obiajulu
+    slug: steven-obiajulu
     role: primary_author
-    profile_url: https://www.linkedin.com/in/joey-t-b90912b1/
 attribution_text: >-
-  Drafted by Joey Tsang for OpenAgreements. Wyoming-specific analysis informed
+  Drafted by Steven Obiajulu for OpenAgreements. Wyoming-specific analysis informed
   by publicly available commentary from Am Law firms including Ogletree Deakins,
   Fisher Phillips, Littler Mendelson, Foley & Lardner, Faegre Drinker, and
   Vinson & Elkins. See practice note for sources. Licensed under CC BY 4.0.
