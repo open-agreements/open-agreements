@@ -1,0 +1,60 @@
+groups:
+  - title: Agreement Drafting And Filling
+    skills:
+      - slug: open-agreements
+        label: open-agreements
+        description: Umbrella skill for filling standard legal agreement templates and optionally sending for signature.
+      - slug: nda
+        label: nda
+        description: Mutual and one-way NDAs from Common Paper and Bonterms.
+      - slug: cloud-service-agreement
+        label: cloud-service-agreement
+        description: SaaS agreements, MSAs, order forms, software licenses, pilot agreements, and design partner agreements.
+      - slug: services-agreement
+        label: services-agreement
+        description: Consulting contracts, contractor agreements, SOWs, and professional services agreements.
+      - slug: employment-contract
+        label: employment-contract
+        description: Offer letters, PIIAs, IP assignments, and confidentiality acknowledgements.
+      - slug: data-privacy-agreement
+        label: data-privacy-agreement
+        description: DPA, BAA, GDPR, HIPAA, and AI addendum workflows.
+      - slug: safe
+        label: safe
+        description: Y Combinator SAFE variants for startup fundraising.
+      - slug: venture-financing
+        label: venture-financing
+        description: NVCA venture financing documents for Series A and related rounds.
+
+  - title: Editing And Client Workflows
+    skills:
+      - slug: edit-docx-agreement
+        label: edit-docx-agreement
+        description: Surgical DOCX agreement edits with formatting-preserving changes and tracked-output workflows.
+      - slug: client-email
+        label: client-email
+        description: Client-facing cover notes, redline summaries, deliverable emails, and follow-ups.
+      - slug: delaware-franchise-tax
+        label: delaware-franchise-tax
+        description: Delaware annual franchise tax and annual report filing guidance.
+
+  - title: Compliance And Audit
+    skills:
+      - slug: soc2-readiness
+        label: soc2-readiness
+        description: SOC 2 readiness assessment, gap analysis, and remediation planning.
+      - slug: iso-27001-internal-audit
+        label: iso-27001-internal-audit
+        description: ISO 27001 internal audit walkthroughs with findings and control review.
+      - slug: iso-27001-evidence-collection
+        label: iso-27001-evidence-collection
+        description: Auditor-ready ISO 27001 and SOC 2 evidence collection workflows.
+
+  - title: Developer Workflows
+    skills:
+      - slug: recipe-quality-audit
+        label: recipe-quality-audit
+        description: NVCA recipe quality audits, maturity scoring, and coverage checks.
+      - slug: unit-test-philosophy
+        label: unit-test-philosophy
+        description: Risk-based test strategy and Allure or OpenSpec traceability conventions.
