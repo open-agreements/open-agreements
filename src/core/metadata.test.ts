@@ -219,6 +219,31 @@ describe('TemplateMetadataSchema', () => {
       false
     );
   });
+
+  it.openspec('OA-TMP-024')('accepts optional structured authors metadata', async () => {
+    await expectSafeParseOutcome(
+      'TemplateMetadataSchema',
+      TemplateMetadataSchema,
+      {
+        name: 'Test NDA',
+        source_url: 'https://example.com/nda',
+        version: '1.0',
+        license: 'CC-BY-4.0',
+        allow_derivatives: true,
+        attribution_text: 'Based on Example NDA',
+        authors: [
+          {
+            name: 'Joey Tsang',
+            slug: 'joey-tsang',
+            role: 'primary_author',
+            profile_url: 'https://www.linkedin.com/in/joey-t-b90912b1/',
+          },
+        ],
+        fields: [],
+      },
+      true
+    );
+  });
 });
 
 describe('RecipeMetadataSchema', () => {

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "cli_version": "0.7.2",
+  "cli_version": "0.7.5",
   "items": [
     {
       "name": "bonterms-mutual-nda",
@@ -82,6 +82,168 @@
           "section": "Legal",
           "description": "Courts with jurisdiction over disputes",
           "default": "courts located in San Francisco, California",
+          "default_value_rationale": null
+        },
+        {
+          "name": "party_1_signatory_type",
+          "type": "enum",
+          "required": false,
+          "section": "Signatures",
+          "description": "Whether Party 1 signatory is an entity or individual",
+          "default": "entity",
+          "default_value_rationale": null
+        },
+        {
+          "name": "party_1_signatory_name",
+          "type": "string",
+          "required": false,
+          "section": "Signatures",
+          "description": "Full name of the person signing for Party 1",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "party_1_signatory_title",
+          "type": "string",
+          "required": false,
+          "section": "Signatures",
+          "description": "Title of the person signing for Party 1",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "party_1_signatory_company",
+          "type": "string",
+          "required": false,
+          "section": "Signatures",
+          "description": "Company of the signatory for Party 1 (defaults to party_1_name)",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "party_1_email",
+          "type": "string",
+          "required": false,
+          "section": "Signatures",
+          "description": "Notice email address for Party 1",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "party_1_address",
+          "type": "string",
+          "required": false,
+          "section": "Signatures",
+          "description": "Notice postal address for Party 1",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "party_2_signatory_type",
+          "type": "enum",
+          "required": false,
+          "section": "Signatures",
+          "description": "Whether Party 2 signatory is an entity or individual",
+          "default": "entity",
+          "default_value_rationale": null
+        },
+        {
+          "name": "party_2_signatory_name",
+          "type": "string",
+          "required": false,
+          "section": "Signatures",
+          "description": "Full name of the person signing for Party 2",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "party_2_signatory_title",
+          "type": "string",
+          "required": false,
+          "section": "Signatures",
+          "description": "Title of the person signing for Party 2",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "party_2_signatory_company",
+          "type": "string",
+          "required": false,
+          "section": "Signatures",
+          "description": "Company of the signatory for Party 2 (defaults to party_2_name)",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "party_2_email",
+          "type": "string",
+          "required": false,
+          "section": "Signatures",
+          "description": "Notice email address for Party 2",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "party_2_address",
+          "type": "string",
+          "required": false,
+          "section": "Signatures",
+          "description": "Notice postal address for Party 2",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "party_1_signatory_name_and_title",
+          "type": "string",
+          "required": false,
+          "section": "Signatures",
+          "description": "Computed display field (Name, Title)",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "party_2_signatory_name_and_title",
+          "type": "string",
+          "required": false,
+          "section": "Signatures",
+          "description": "Computed display field (Name, Title)",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "party_1_notice_email_check",
+          "type": "string",
+          "required": false,
+          "section": "Signatures",
+          "description": "Computed checkbox glyph for email notice",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "party_1_notice_postal_check",
+          "type": "string",
+          "required": false,
+          "section": "Signatures",
+          "description": "Computed checkbox glyph for postal notice",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "party_2_notice_email_check",
+          "type": "string",
+          "required": false,
+          "section": "Signatures",
+          "description": "Computed checkbox glyph for email notice",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "party_2_notice_postal_check",
+          "type": "string",
+          "required": false,
+          "section": "Signatures",
+          "description": "Computed checkbox glyph for postal notice",
+          "default": null,
           "default_value_rationale": null
         }
       ]
@@ -10088,9 +10250,157 @@
       ]
     },
     {
+      "name": "cooley-board-consent-safe",
+      "display_name": "Board Consent for SAFE Financing",
+      "category": "corporate-governance",
+      "description": "Action by unanimous written consent of the board of directors of a Delaware corporation approving the issuance of one or more Simple Agreements for Future Equity (SAFEs). Derived from the Cooley Series Seed board consent, adapted for SAFE financing.",
+      "license": "CC0-1.0",
+      "source_url": "https://github.com/cooleyLLP/seriesseed",
+      "source": "github.com",
+      "attribution_text": "Adapted by Joey Tsang for OpenAgreements from the Cooley Series Seed Board Consent, available at https://github.com/cooleyLLP/seriesseed. Made available under CC0 1.0 Universal Public Domain Dedication.",
+      "authors": [
+        {
+          "name": "Joey Tsang",
+          "slug": "joey-tsang",
+          "role": "primary_author",
+          "profile_url": "https://www.linkedin.com/in/joey-t-b90912b1/"
+        }
+      ],
+      "fields": [
+        {
+          "name": "company_name",
+          "type": "string",
+          "required": true,
+          "section": "Parties",
+          "description": "Full legal name of the company",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "effective_date",
+          "type": "date",
+          "required": true,
+          "section": "Terms",
+          "description": "Date the consent is effective",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "purchase_amount",
+          "type": "string",
+          "required": true,
+          "section": "Deal Terms",
+          "description": "Aggregate SAFE purchase amount (e.g., \"500,000\")",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "board_member_1_name",
+          "type": "string",
+          "required": true,
+          "section": "Signatures",
+          "description": "Full name of the first board member",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "board_member_2_name",
+          "type": "string",
+          "required": true,
+          "section": "Signatures",
+          "description": "Full name of the second board member",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "board_member_3_name",
+          "type": "string",
+          "required": true,
+          "section": "Signatures",
+          "description": "Full name of the third board member",
+          "default": null,
+          "default_value_rationale": null
+        }
+      ]
+    },
+    {
+      "name": "cooley-stockholder-consent-safe",
+      "display_name": "Stockholder Consent for SAFE Financing",
+      "category": "corporate-governance",
+      "description": "Action by written consent of the stockholders of a Delaware corporation approving the issuance of one or more Simple Agreements for Future Equity (SAFEs). Derived from the Cooley Series Seed stockholder consent, adapted for SAFE financing.",
+      "license": "CC0-1.0",
+      "source_url": "https://github.com/cooleyLLP/seriesseed",
+      "source": "github.com",
+      "attribution_text": "Adapted by Joey Tsang for OpenAgreements from the Cooley Series Seed Stockholder Consent, available at https://github.com/cooleyLLP/seriesseed. Made available under CC0 1.0 Universal Public Domain Dedication.",
+      "authors": [
+        {
+          "name": "Joey Tsang",
+          "slug": "joey-tsang",
+          "role": "primary_author",
+          "profile_url": "https://www.linkedin.com/in/joey-t-b90912b1/"
+        }
+      ],
+      "fields": [
+        {
+          "name": "company_name",
+          "type": "string",
+          "required": true,
+          "section": "Parties",
+          "description": "Full legal name of the company",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "effective_date",
+          "type": "date",
+          "required": true,
+          "section": "Terms",
+          "description": "Date the consent is effective",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "purchase_amount",
+          "type": "string",
+          "required": true,
+          "section": "Deal Terms",
+          "description": "Aggregate SAFE purchase amount (e.g., \"500,000\")",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "stockholder_1_name",
+          "type": "string",
+          "required": true,
+          "section": "Signatures",
+          "description": "Full name of the first stockholder",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "stockholder_2_name",
+          "type": "string",
+          "required": true,
+          "section": "Signatures",
+          "description": "Full name of the second stockholder",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "stockholder_3_name",
+          "type": "string",
+          "required": true,
+          "section": "Signatures",
+          "description": "Full name of the third stockholder",
+          "default": null,
+          "default_value_rationale": null
+        }
+      ]
+    },
+    {
       "name": "nvca-certificate-of-incorporation",
       "display_name": "NVCA Model Certificate of Incorporation",
-      "category": "general",
+      "category": "venture-financing",
       "description": "Amended and restated certificate of incorporation for venture-backed Delaware corporations, defining preferred stock rights, preferences, and privileges.",
       "license_note": "NVCA model documents are freely downloadable but not redistributable. This recipe contains only transformation instructions, not the source document.",
       "source_url": "https://nvca.org/wp-content/uploads/2025/10/NVCA-Model-COI-10-1-2025.docx",
@@ -10504,7 +10814,7 @@
     {
       "name": "nvca-indemnification-agreement",
       "display_name": "NVCA Model Indemnification Agreement",
-      "category": "general",
+      "category": "venture-financing",
       "description": "Director and officer indemnification agreement for venture-backed companies, providing indemnification and advancement of expenses.",
       "license_note": "NVCA model documents are freely downloadable but not redistributable. This recipe contains only transformation instructions, not the source document.",
       "source_url": "https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx",
@@ -10670,7 +10980,7 @@
     {
       "name": "nvca-investors-rights-agreement",
       "display_name": "NVCA Model Investors' Rights Agreement",
-      "category": "general",
+      "category": "venture-financing",
       "description": "Investors' rights agreement for venture financings, covering registration rights, information rights, board observer rights, and protective provisions.",
       "license_note": "NVCA model documents are freely downloadable but not redistributable. This recipe contains only transformation instructions, not the source document.",
       "source_url": "https://nvca.org/wp-content/uploads/2025/10/NVCA-Model-IRA-10-1-2025-2-1.docx",
@@ -10809,7 +11119,7 @@
     {
       "name": "nvca-management-rights-letter",
       "display_name": "NVCA Model Management Rights Letter",
-      "category": "general",
+      "category": "venture-financing",
       "description": "Management rights letter granting ERISA-qualifying management rights to venture capital fund investors.",
       "license_note": "NVCA model documents are freely downloadable but not redistributable. This recipe contains only transformation instructions, not the source document.",
       "source_url": "https://nvca.org/wp-content/uploads/2025/12/NVCA-2020-Management-Rights-Letter-1-1.docx",
@@ -10903,7 +11213,7 @@
     {
       "name": "nvca-rofr-co-sale-agreement",
       "display_name": "NVCA Model Right of First Refusal and Co-Sale Agreement",
-      "category": "general",
+      "category": "venture-financing",
       "description": "Right of first refusal and co-sale agreement for venture financings, restricting transfer of founder shares and providing investor co-sale rights.",
       "license_note": "NVCA model documents are freely downloadable but not redistributable. This recipe contains only transformation instructions, not the source document.",
       "source_url": "https://nvca.org/wp-content/uploads/2025/10/NVCA-Model-ROFRA-10-1-2025.docx",
@@ -11060,7 +11370,7 @@
     {
       "name": "nvca-stock-purchase-agreement",
       "display_name": "NVCA Model Stock Purchase Agreement",
-      "category": "general",
+      "category": "venture-financing",
       "description": "Series preferred stock purchase agreement for venture capital financings, covering purchase terms, representations, and closing conditions.",
       "license_note": "NVCA model documents are freely downloadable but not redistributable. This recipe contains only transformation instructions, not the source document.",
       "source_url": "https://nvca.org/wp-content/uploads/2025/10/NVCA-Model-SPA-10-28-2025-1.docx",
@@ -11379,7 +11689,7 @@
     {
       "name": "nvca-voting-agreement",
       "display_name": "NVCA Model Voting Agreement",
-      "category": "general",
+      "category": "venture-financing",
       "description": "Standard-form voting agreement for venture capital financings, covering board composition, drag-along rights, and stockholder voting obligations.",
       "license_note": "NVCA model documents are freely downloadable but not redistributable. This recipe contains only transformation instructions, not the source document.",
       "source_url": "https://nvca.org/wp-content/uploads/2024/10/NVCA-Model-VA-10-1-2025.docx",
@@ -11514,7 +11824,14 @@
       "license": "CC-BY-4.0",
       "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-employee-ip-inventions-assignment",
       "source": "OpenAgreements",
-      "attribution_text": "Authored by OpenAgreements contributors. Baseline structure inspired by permissive public references including the Balanced Employee IP Agreement (CC0) and Papertrail legal-docs (CC0). Licensed under CC BY 4.0.",
+      "attribution_text": "Drafted by Steven Obiajulu for OpenAgreements. Baseline structure inspired by permissive public references including the Balanced Employee IP Agreement (CC0) and Papertrail legal-docs (CC0). Licensed under CC BY 4.0.",
+      "authors": [
+        {
+          "name": "Steven Obiajulu",
+          "slug": "steven-obiajulu",
+          "role": "primary_author"
+        }
+      ],
       "fields": [
         {
           "name": "company_name",
@@ -11634,7 +11951,14 @@
       "license": "CC-BY-4.0",
       "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-employment-confidentiality-acknowledgement",
       "source": "OpenAgreements",
-      "attribution_text": "Authored by OpenAgreements contributors using permissive public reference patterns from Papertrail legal-docs (CC0) and open policy frameworks. Licensed under CC BY 4.0.",
+      "attribution_text": "Drafted by Steven Obiajulu for OpenAgreements using permissive public reference patterns from Papertrail legal-docs (CC0) and open policy frameworks. Licensed under CC BY 4.0.",
+      "authors": [
+        {
+          "name": "Steven Obiajulu",
+          "slug": "steven-obiajulu",
+          "role": "primary_author"
+        }
+      ],
       "fields": [
         {
           "name": "company_name",
@@ -11745,7 +12069,14 @@
       "license": "CC-BY-4.0",
       "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-employment-offer-letter",
       "source": "OpenAgreements",
-      "attribution_text": "Authored by OpenAgreements contributors. Drafting structure informed by publicly available permissive sources including the DocuSign template library (MIT) and Papertrail legal-docs (CC0). Licensed under CC BY 4.0.",
+      "attribution_text": "Drafted by Steven Obiajulu for OpenAgreements. Drafting structure informed by publicly available permissive sources including the DocuSign template library (MIT) and Papertrail legal-docs (CC0). Licensed under CC BY 4.0.",
+      "authors": [
+        {
+          "name": "Steven Obiajulu",
+          "slug": "steven-obiajulu",
+          "role": "primary_author"
+        }
+      ],
       "fields": [
         {
           "name": "employer_name",
@@ -11883,7 +12214,14 @@
       "license": "CC-BY-4.0",
       "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-wyoming",
       "source": "OpenAgreements",
-      "attribution_text": "Authored by OpenAgreements contributors. Wyoming-specific analysis informed by publicly available commentary from Am Law firms including Ogletree Deakins, Fisher Phillips, Littler Mendelson, Foley & Lardner, Faegre Drinker, and Vinson & Elkins. See practice note for sources. Licensed under CC BY 4.0.",
+      "attribution_text": "Drafted by Steven Obiajulu for OpenAgreements. Wyoming-specific analysis informed by publicly available commentary from Am Law firms including Ogletree Deakins, Fisher Phillips, Littler Mendelson, Foley & Lardner, Faegre Drinker, and Vinson & Elkins. See practice note for sources. Licensed under CC BY 4.0.",
+      "authors": [
+        {
+          "name": "Steven Obiajulu",
+          "slug": "steven-obiajulu",
+          "role": "primary_author"
+        }
+      ],
       "fields": [
         {
           "name": "employer_name",

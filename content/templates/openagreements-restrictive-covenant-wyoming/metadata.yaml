@@ -10,8 +10,12 @@ source_url: https://github.com/open-agreements/open-agreements/tree/main/templat
 version: '2.0'
 license: CC-BY-4.0
 allow_derivatives: true
+authors:
+  - name: Steven Obiajulu
+    slug: steven-obiajulu
+    role: primary_author
 attribution_text: >-
-  Authored by OpenAgreements contributors. Wyoming-specific analysis informed
+  Drafted by Steven Obiajulu for OpenAgreements. Wyoming-specific analysis informed
   by publicly available commentary from Am Law firms including Ogletree Deakins,
   Fisher Phillips, Littler Mendelson, Foley & Lardner, Faegre Drinker, and
   Vinson & Elkins. See practice note for sources. Licensed under CC BY 4.0.

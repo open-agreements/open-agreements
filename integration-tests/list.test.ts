@@ -13,6 +13,12 @@ interface ListItem {
   name: string;
   attribution_text?: string;
   category?: string;
+  authors?: Array<{
+    name: string;
+    slug?: string;
+    role?: string;
+    profile_url?: string;
+  }>;
   [key: string]: unknown;
 }
 
@@ -87,6 +93,51 @@ describe('list --json envelope', () => {
         })
       );
     }
+  });
+
+  it.openspec('OA-CLI-024')('includes structured authors for authored templates', () => {
+    if (!available || !parsed) return;
+    const wyomingTemplate = parsed.items.find(
+      (item) => item.name === 'openagreements-restrictive-covenant-wyoming'
+    );
+    const boardConsentTemplate = parsed.items.find(
+      (item) => item.name === 'cooley-board-consent-safe'
+    );
+    const stockholderConsentTemplate = parsed.items.find(
+      (item) => item.name === 'cooley-stockholder-consent-safe'
+    );
+    expect(wyomingTemplate).toBeDefined();
+    expect(boardConsentTemplate).toBeDefined();
+    expect(stockholderConsentTemplate).toBeDefined();
+    expect(wyomingTemplate?.authors).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          name: 'Steven Obiajulu',
+          slug: 'steven-obiajulu',
+          role: 'primary_author',
+        }),
+      ])
+    );
+    expect(boardConsentTemplate?.authors).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          name: 'Joey Tsang',
+          slug: 'joey-tsang',
+          role: 'primary_author',
+          profile_url: 'https://www.linkedin.com/in/joey-t-b90912b1/',
+        }),
+      ])
+    );
+    expect(stockholderConsentTemplate?.authors).toEqual(
+      expect.arrayContaining([
+        expect.objectContaining({
+          name: 'Joey Tsang',
+          slug: 'joey-tsang',
+          role: 'primary_author',
+          profile_url: 'https://www.linkedin.com/in/joey-t-b90912b1/',
+        }),
+      ])
+    );
   });
 });
 
