@@ -5,17 +5,42 @@ import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 import { buildCatalog } from "./lib/catalog-data.mjs";
-import { loadPackagesCatalog } from "./lib/packages-data.mjs";
 import { loadSkillsCatalog } from "./lib/skills-data.mjs";
 import docsNav from "../site/_data/docsNav.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const root = resolve(__dirname, "..");
+const rootPackage = readJson(resolve(root, "package.json"));
 
 const README_TEMPLATE_PATH = resolve(root, "README.template.md");
 const README_PATH = resolve(root, "README.md");
-const SITE_URL = "https://usejunior.com";
 const REPO_BASE_URL = "https://github.com/open-agreements/open-agreements";
+const README_CONFIG = rootPackage.readmeConfig || {};
+const WEBSITE_URL = normalizeUrl(README_CONFIG.websiteUrl, "websiteUrl");
+const TEMPLATE_CATALOG_URL = normalizeUrl(
+  README_CONFIG.templateCatalogUrl,
+  "templateCatalogUrl",
+);
+const DOCUMENTATION_INDEX_URL = normalizeUrl(
+  README_CONFIG.documentationIndexUrl,
+  "documentationIndexUrl",
+);
+const DOCUMENTATION_BASE_URL = normalizeUrl(
+  README_CONFIG.documentationBaseUrl,
+  "documentationBaseUrl",
+);
+const TRUST_URL = normalizeUrl(README_CONFIG.trustUrl, "trustUrl");
+
+function readJson(path) {
+  return JSON.parse(readFileSync(path, "utf-8"));
+}
+
+function normalizeUrl(value, key) {
+  if (!value || typeof value !== "string") {
+    throw new Error(`package.json readmeConfig is missing '${key}'.`);
+  }
+  return value.replace(/\/$/, "");
+}
 
 const CONTENTS = [
   ["Install", "#install"],
@@ -111,8 +136,8 @@ function renderTemplates() {
         ["Template", "Website", "Repo"],
         templates.map((template) => {
           const websiteUrl = template.hasPreview
-            ? `${SITE_URL}/templates/${template.id}/`
-            : `${SITE_URL}/?template=${template.id}#start`;
+            ? `${TEMPLATE_CATALOG_URL}/${template.id}/`
+            : `${WEBSITE_URL}/?template=${template.id}#start`;
           return [
             makeTemplateLabel(template, duplicateCounts),
             `[Website](${websiteUrl})`,
@@ -128,10 +153,28 @@ function renderTemplates() {
 }
 
 function renderPackages() {
-  const rows = loadPackagesCatalog({ rootDir: root }).map((entry) => {
-    const href = entry.href || githubBlobUrl(entry.readmePath);
-    return [`[${entry.name}](${href})`, entry.description];
-  });
+  const rows = [
+    [
+      `[${rootPackage.name}](https://www.npmjs.com/package/${rootPackage.name})`,
+      rootPackage.readme_description || rootPackage.description,
+    ],
+  ];
+
+  for (const workspacePath of rootPackage.workspaces || []) {
+    const packageJsonPath = resolve(root, workspacePath, "package.json");
+    if (!existsSync(packageJsonPath)) {
+      continue;
+    }
+    const packageJson = readJson(packageJsonPath);
+    const readmeRepoPath = `${workspacePath}/README.md`;
+    if (!existsSync(resolve(root, readmeRepoPath))) {
+      continue;
+    }
+    rows.push([
+      `[${packageJson.name}](${githubBlobUrl(readmeRepoPath)})`,
+      packageJson.readme_description || packageJson.description,
+    ]);
+  }
 
   return renderTable(["Package", "Description"], rows);
 }
@@ -143,11 +186,15 @@ function renderDocumentation() {
     lines.push(`### ${group.section}`);
     lines.push("");
     for (const item of group.items) {
-      lines.push(`- [${item.title}](${SITE_URL}/docs/${item.slug}/)`);
+      lines.push(`- [${item.title}](${DOCUMENTATION_BASE_URL}/${item.slug}.md)`);
     }
     lines.push("");
   }
   return lines.join("\n").trim();
+}
+
+function renderLinks() {
+  return `**Links:** [Website](${WEBSITE_URL}) | [Template Catalog](${TEMPLATE_CATALOG_URL}) | [Docs](${DOCUMENTATION_INDEX_URL}) | [Trust](${TRUST_URL}) | [npm](https://www.npmjs.com/package/${rootPackage.name})`;
 }
 
 function renderTemplate(template, replacements) {
@@ -172,6 +219,7 @@ function main() {
     AVAILABLE_TEMPLATES: renderTemplates(),
     PACKAGES: renderPackages(),
     DOCUMENTATION: renderDocumentation(),
+    LINKS: renderLinks(),
   });
 
   const output = [

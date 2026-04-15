@@ -14,7 +14,14 @@
     "type": "git",
     "url": "https://github.com/open-agreements/open-agreements.git"
   },
-  "homepage": "https://usejunior.com/developer-tools/open-agreements",
+  "homepage": "https://usejunior.com",
+  "readmeConfig": {
+    "websiteUrl": "https://usejunior.com",
+    "templateCatalogUrl": "https://usejunior.com/templates",
+    "documentationIndexUrl": "https://github.com/open-agreements/open-agreements/tree/main/docs",
+    "documentationBaseUrl": "https://github.com/open-agreements/open-agreements/blob/main/docs",
+    "trustUrl": "https://usejunior.com/security"
+  },
   "bugs": {
     "url": "https://github.com/open-agreements/open-agreements/issues"
   },

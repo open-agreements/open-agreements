@@ -201,7 +201,7 @@ Choose based on document sensitivity and internal policy. See the trust checklis
 
 {{DOCUMENTATION}}
 
-**Links:** [Website](https://usejunior.com/developer-tools/open-agreements) | [Template Catalog](https://usejunior.com/templates) | [Docs](https://usejunior.com/docs/) | [Trust](https://usejunior.com/trust/) | [npm](https://www.npmjs.com/package/open-agreements)
+{{LINKS}}
 
 ## Privacy
 

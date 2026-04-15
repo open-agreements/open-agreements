@@ -116,37 +116,37 @@ open-agreements fill common-paper-mutual-nda --set party_1_name="Acme Corp" --se
 
 | Skill | Description |
 |-------|-------------|
-| [open-agreements](https://github.com/open-agreements/open-agreements/tree/main/skills/open-agreements) | Umbrella skill for filling standard legal agreement templates and optionally sending for signature. |
-| [nda](https://github.com/open-agreements/open-agreements/tree/main/skills/nda) | Mutual and one-way NDAs from Common Paper and Bonterms. |
-| [cloud-service-agreement](https://github.com/open-agreements/open-agreements/tree/main/skills/cloud-service-agreement) | SaaS agreements, MSAs, order forms, software licenses, pilot agreements, and design partner agreements. |
-| [services-agreement](https://github.com/open-agreements/open-agreements/tree/main/skills/services-agreement) | Consulting contracts, contractor agreements, SOWs, and professional services agreements. |
-| [employment-contract](https://github.com/open-agreements/open-agreements/tree/main/skills/employment-contract) | Offer letters, PIIAs, IP assignments, and confidentiality acknowledgements. |
-| [data-privacy-agreement](https://github.com/open-agreements/open-agreements/tree/main/skills/data-privacy-agreement) | DPA, BAA, GDPR, HIPAA, and AI addendum workflows. |
-| [safe](https://github.com/open-agreements/open-agreements/tree/main/skills/safe) | Y Combinator SAFE variants for startup fundraising. |
-| [venture-financing](https://github.com/open-agreements/open-agreements/tree/main/skills/venture-financing) | NVCA venture financing documents for Series A and related rounds. |
+| [open-agreements](https://github.com/open-agreements/open-agreements/tree/main/skills/open-agreements) | Fill standard legal agreement templates (NDAs, cloud service agreements, SAFEs, employment contracts, NVCA docs) and produce signable DOCX files. Supports 41 templates from Common Paper, Bonterms, Y Combinator, NVCA, and OpenAgreements. See also our category-specific skills for targeted workflows: nda, services-agreement, cloud-service-agreement, employment-contract, safe, venture-financing, data-privacy-agreement. Use when user says "fill a legal template," "generate a contract," "draft an agreement," "legal document," or "DOCX agreement." |
+| [nda](https://github.com/open-agreements/open-agreements/tree/main/skills/nda) | Draft and fill NDA templates — mutual NDA, one-way NDA, confidentiality agreement. Produces signable DOCX files from Common Paper and Bonterms standard forms. Use when user says "NDA," "non-disclosure agreement," "confidentiality agreement," "mutual NDA," or "one-way NDA." |
+| [cloud-service-agreement](https://github.com/open-agreements/open-agreements/tree/main/skills/cloud-service-agreement) | Draft and fill SaaS agreement templates — cloud contract, MSA, order form, software license, pilot agreement, design partner agreement. Includes variants with SLAs and AI terms. Produces signable DOCX from Common Paper standard forms. Use when user says "SaaS agreement," "cloud contract," "MSA," "order form," "software license," "pilot agreement," or "design partner agreement." |
+| [services-agreement](https://github.com/open-agreements/open-agreements/tree/main/skills/services-agreement) | Draft and fill services agreement templates — consulting contract, contractor agreement, SOW, statement of work, professional services agreement. Produces signable DOCX files from Common Paper and Bonterms standard forms. Use when user says "consulting contract," "contractor agreement," "SOW," "statement of work," "services agreement," or "freelancer contract." |
+| [employment-contract](https://github.com/open-agreements/open-agreements/tree/main/skills/employment-contract) | Draft and fill employment agreement templates — offer letter, IP assignment, PIIA, confidentiality acknowledgement. Produces signable DOCX files from OpenAgreements standard forms for hiring employees. Use when user says "offer letter," "employment agreement," "PIIA," "IP assignment," "hire someone," or "onboarding paperwork." |
+| [data-privacy-agreement](https://github.com/open-agreements/open-agreements/tree/main/skills/data-privacy-agreement) | Draft and fill data privacy agreement templates — DPA, data processing agreement, GDPR, HIPAA BAA, business associate agreement, AI addendum. Produces signable DOCX files from Common Paper standard forms. Use when user says "DPA," "data processing agreement," "HIPAA BAA," "business associate agreement," or "AI addendum." |
+| [safe](https://github.com/open-agreements/open-agreements/tree/main/skills/safe) | Draft and fill Y Combinator SAFE templates — valuation cap, discount, MFN, pro rata side letter. Standard startup fundraising documents for convertible equity. Produces signable DOCX files. Use when user says "SAFE," "simple agreement for future equity," "YC SAFE," "valuation cap," "seed round documents," or "fundraising paperwork." |
+| [venture-financing](https://github.com/open-agreements/open-agreements/tree/main/skills/venture-financing) | Draft and fill NVCA model documents — stock purchase agreement, certificate of incorporation, investors rights agreement, voting agreement, ROFR, co-sale, indemnification, management rights letter. Series A and venture financing templates. Produces signable DOCX files. Use when user says "Series A documents," "NVCA," "stock purchase agreement," "investors rights agreement," "voting agreement," or "venture financing docs." |
 
 ### Editing And Client Workflows
 
 | Skill | Description |
 |-------|-------------|
-| [edit-docx-agreement](https://github.com/open-agreements/open-agreements/tree/main/skills/edit-docx-agreement) | Surgical DOCX agreement edits with formatting-preserving changes and tracked-output workflows. |
-| [client-email](https://github.com/open-agreements/open-agreements/tree/main/skills/client-email) | Client-facing cover notes, redline summaries, deliverable emails, and follow-ups. |
-| [delaware-franchise-tax](https://github.com/open-agreements/open-agreements/tree/main/skills/delaware-franchise-tax) | Delaware annual franchise tax and annual report filing guidance. |
+| [edit-docx-agreement](https://github.com/open-agreements/open-agreements/tree/main/skills/edit-docx-agreement) | Make bespoke edits to a DOCX agreement generated by OpenAgreements (or any existing DOCX), using Safe Docx MCP tools for surgical, formatting-preserving edits and tracked-changes outputs. Use when user says "edit this contract," "change a clause," "modify the agreement," "custom edits to the docx," or "bespoke changes to the document." |
+| [client-email](https://github.com/open-agreements/open-agreements/tree/main/skills/client-email) | Draft client-facing emails for legal services — cover notes for contract deliverables, redline summaries, deal status updates, and follow-ups. Use when composing or revising outbound emails to clients about legal work product. Triggers on "draft reply," "email to client," "cover note," "write back to," or any outbound email accompanying a legal deliverable. |
+| [delaware-franchise-tax](https://github.com/open-agreements/open-agreements/tree/main/skills/delaware-franchise-tax) | File your Delaware annual franchise tax and annual report. Guides you through tax calculation (Authorized Shares and Assumed Par Value Capital methods), the eCorp portal filing process, and payment. For Delaware C-Corps (March 1 deadline) and LLCs/LPs/GPs (June 1 deadline). Use when user says "Delaware franchise tax," "annual report Delaware," "file franchise tax," or "eCorp portal." |
 
 ### Compliance And Audit
 
 | Skill | Description |
 |-------|-------------|
-| [soc2-readiness](https://github.com/open-agreements/open-agreements/tree/main/skills/soc2-readiness) | SOC 2 readiness assessment, gap analysis, and remediation planning. |
-| [iso-27001-internal-audit](https://github.com/open-agreements/open-agreements/tree/main/skills/iso-27001-internal-audit) | ISO 27001 internal audit walkthroughs with findings and control review. |
-| [iso-27001-evidence-collection](https://github.com/open-agreements/open-agreements/tree/main/skills/iso-27001-evidence-collection) | Auditor-ready ISO 27001 and SOC 2 evidence collection workflows. |
+| [soc2-readiness](https://github.com/open-agreements/open-agreements/tree/main/skills/soc2-readiness) | Assess SOC 2 Type II readiness. Map Trust Services Criteria to controls, identify gaps, and build a remediation plan. Uses NIST SP 800-53 (public domain) as canonical reference with SOC 2 criterion cross-mapping. Use when user says "SOC 2 readiness," "SOC 2 preparation," "SOC 2 gap analysis," or "prepare for SOC 2 audit." |
+| [iso-27001-internal-audit](https://github.com/open-agreements/open-agreements/tree/main/skills/iso-27001-internal-audit) | Run an ISO 27001 internal audit. Walk through controls by domain, identify gaps, collect evidence, and generate findings with corrective action recommendations. Uses NIST SP 800-53 (public domain) as canonical reference. Use when user says "run internal audit," "ISO 27001 audit," "control assessment," "audit findings," or "ISMS assessment." |
+| [iso-27001-evidence-collection](https://github.com/open-agreements/open-agreements/tree/main/skills/iso-27001-evidence-collection) | Collect, organize, and validate evidence for ISO 27001 and SOC 2 audits. API-first approach with CLI commands for major cloud platforms. Produces timestamped, auditor-ready evidence packages. Use when user says "collect audit evidence," "prepare evidence package," "evidence for the auditor," "refresh evidence," or "evidence gap analysis." |
 
 ### Developer Workflows
 
 | Skill | Description |
 |-------|-------------|
-| [recipe-quality-audit](https://github.com/open-agreements/open-agreements/tree/main/skills/recipe-quality-audit) | NVCA recipe quality audits, maturity scoring, and coverage checks. |
-| [unit-test-philosophy](https://github.com/open-agreements/open-agreements/tree/main/skills/unit-test-philosophy) | Risk-based test strategy and Allure or OpenSpec traceability conventions. |
+| [recipe-quality-audit](https://github.com/open-agreements/open-agreements/tree/main/skills/recipe-quality-audit) | Audit NVCA recipe quality: check file inventory, metadata schema, field-to-replacement coverage, ambiguous keys, smart quotes, test fixtures, and fill quality. Produces a structured scorecard per recipe with maturity tier classification. Use when user says "audit recipe quality," "check recipe coverage," "recipe scorecard," or "NVCA recipe quality." |
+| [unit-test-philosophy](https://github.com/open-agreements/open-agreements/tree/main/skills/unit-test-philosophy) | Risk-based unit testing and Allure-readable behavioral spec style for open-agreements. Use when user says "add tests," "test quality," "coverage expansion," "unit test style," or "Allure test spec." Applies when adding/updating tests, expanding coverage, or reviewing test quality across src, integration-tests, and workspace packages. |
 
 ## Available Templates
 
@@ -243,11 +243,11 @@ Website links open a dedicated template page when one exists, or a preselected i
 
 | Package | Description |
 |---------|-------------|
-| [open-agreements](https://www.npmjs.com/package/open-agreements) | Main CLI and library for template discovery, filling, and DOCX output generation. |
-| [@open-agreements/contracts-workspace](https://github.com/open-agreements/open-agreements/blob/main/packages/contracts-workspace/README.md) | Topic-first contracts workspace CLI for folder conventions, catalog fetches, and status generation. |
-| [@open-agreements/contract-templates-mcp](https://github.com/open-agreements/open-agreements/blob/main/packages/contract-templates-mcp/README.md) | Local stdio MCP server for `list_templates`, `get_template`, and `fill_template`. |
-| [@open-agreements/contracts-workspace-mcp](https://github.com/open-agreements/open-agreements/blob/main/packages/contracts-workspace-mcp/README.md) | Local stdio MCP server for workspace init, catalog, and status operations. |
-| [@open-agreements/checklist-mcp](https://github.com/open-agreements/open-agreements/blob/main/packages/checklist-mcp/README.md) | Local stdio MCP server for closing checklist creation, updates, DOCX rendering, and diffs. |
+| [open-agreements](https://www.npmjs.com/package/open-agreements) | Open-source legal template filling CLI and library |
+| [@open-agreements/contract-templates-mcp](https://github.com/open-agreements/open-agreements/blob/main/packages/contract-templates-mcp/README.md) | Local stdio MCP server for OpenAgreements template discovery and filling |
+| [@open-agreements/contracts-workspace](https://github.com/open-agreements/open-agreements/blob/main/packages/contracts-workspace/README.md) | Workspace-oriented CLI for organizing and tracking contract repositories |
+| [@open-agreements/contracts-workspace-mcp](https://github.com/open-agreements/open-agreements/blob/main/packages/contracts-workspace-mcp/README.md) | Local stdio MCP server for contracts workspace operations |
+| [@open-agreements/checklist-mcp](https://github.com/open-agreements/open-agreements/blob/main/packages/checklist-mcp/README.md) | Local stdio MCP server for OpenAgreements checklist memory operations |
 
 ### What Gets Installed
 
@@ -338,28 +338,27 @@ Choose based on document sensitivity and internal policy. See the trust checklis
 
 ### Start Here
 
-- [Getting Started](https://usejunior.com/docs/getting-started/)
+- [Getting Started](https://github.com/open-agreements/open-agreements/blob/main/docs/getting-started.md)
 
 ### Guides
 
-- [Adding Templates](https://usejunior.com/docs/adding-templates/)
-- [Adding Recipes](https://usejunior.com/docs/adding-recipes/)
-- [Branding Pipeline](https://usejunior.com/docs/template-branding-pipeline/)
+- [Adding Templates](https://github.com/open-agreements/open-agreements/blob/main/docs/adding-templates.md)
+- [Adding Recipes](https://github.com/open-agreements/open-agreements/blob/main/docs/adding-recipes.md)
 
 ### Other Packages
 
-- [Contracts Workspace CLI](https://usejunior.com/docs/contracts-workspace/)
+- [Contracts Workspace CLI](https://github.com/open-agreements/open-agreements/blob/main/docs/contracts-workspace.md)
 
 ### Reference
 
-- [Licensing](https://usejunior.com/docs/licensing/)
-- [Changelog & Release Process](https://usejunior.com/docs/changelog-release-process/)
-- [Trust Checklist](https://usejunior.com/docs/trust-checklist/)
-- [Supported Tools](https://usejunior.com/docs/supported-tools/)
-- [Assumptions](https://usejunior.com/docs/assumptions/)
-- [Employment Source Policy](https://usejunior.com/docs/employment-source-policy/)
+- [Licensing](https://github.com/open-agreements/open-agreements/blob/main/docs/licensing.md)
+- [Changelog & Release Process](https://github.com/open-agreements/open-agreements/blob/main/docs/changelog-release-process.md)
+- [Trust Checklist](https://github.com/open-agreements/open-agreements/blob/main/docs/trust-checklist.md)
+- [Supported Tools](https://github.com/open-agreements/open-agreements/blob/main/docs/supported-tools.md)
+- [Assumptions](https://github.com/open-agreements/open-agreements/blob/main/docs/assumptions.md)
+- [Employment Source Policy](https://github.com/open-agreements/open-agreements/blob/main/docs/employment-source-policy.md)
 
-**Links:** [Website](https://usejunior.com/developer-tools/open-agreements) | [Template Catalog](https://usejunior.com/templates) | [Docs](https://usejunior.com/docs/) | [Trust](https://usejunior.com/trust/) | [npm](https://www.npmjs.com/package/open-agreements)
+**Links:** [Website](https://usejunior.com) | [Template Catalog](https://usejunior.com/templates) | [Docs](https://github.com/open-agreements/open-agreements/tree/main/docs) | [Trust](https://usejunior.com/security) | [npm](https://www.npmjs.com/package/open-agreements)
 
 ## Privacy
 
