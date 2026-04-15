@@ -7,6 +7,10 @@ source_url: https://github.com/open-agreements/open-agreements/tree/main/templat
 version: '1.1'
 license: CC-BY-4.0
 allow_derivatives: true
+authors:
+  - name: Steven Obiajulu
+    slug: steven-obiajulu
+    role: primary_author
 attribution_text: >-
   Authored by OpenAgreements contributors using permissive public reference
   patterns from Papertrail legal-docs (CC0) and open policy frameworks.

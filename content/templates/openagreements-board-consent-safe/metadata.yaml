@@ -8,6 +8,11 @@ source_url: https://github.com/open-agreements/open-agreements/tree/main/content
 version: '1.0'
 license: CC-BY-4.0
 allow_derivatives: true
+authors:
+  - name: Joey Tsang
+    slug: joey-tsang
+    role: primary_author
+    profile_url: https://www.linkedin.com/in/joey-t-b90912b1/
 attribution_text: >-
   Authored by OpenAgreements contributors. Drafting structure informed by
   publicly available Series Seed SAFE board consent materials. Licensed under

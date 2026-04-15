@@ -9,6 +9,11 @@ source_url: https://github.com/cooleyLLP/seriesseed
 version: '1.0'
 license: CC0-1.0
 allow_derivatives: true
+authors:
+  - name: Joey Tsang
+    slug: joey-tsang
+    role: primary_author
+    profile_url: https://www.linkedin.com/in/joey-t-b90912b1/
 attribution_text: >-
   Adapted from publicly available Series Seed stockholder consent materials at
   https://github.com/cooleyLLP/seriesseed. Made available under CC0 1.0
