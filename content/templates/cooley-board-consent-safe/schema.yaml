@@ -1,0 +1,20 @@
+schema_id: cooley-board-consent-safe-v1
+variables:
+  company_name:
+    type: string
+    description: Full legal name of the company
+  effective_date:
+    type: date
+    description: Date the board consent is executed
+  purchase_amount:
+    type: string
+    description: Aggregate SAFE purchase amount, without the dollar sign
+  board_member_1_name:
+    type: string
+    description: Full name of the first director signing the consent
+  board_member_2_name:
+    type: string
+    description: Full name of the second director signing the consent
+  board_member_3_name:
+    type: string
+    description: Full name of the third director signing the consent

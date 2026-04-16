@@ -3,14 +3,13 @@ category: corporate-governance
 description: >-
   Action by unanimous written consent of the board of directors of a Delaware
   corporation approving the issuance of one or more Simple Agreements for Future
-  Equity (SAFEs). Derived from the Cooley Series Seed board consent, adapted for
-  SAFE financing.
+  Equity (SAFEs). Canonically authored in Contract IR and rendered to DOCX.
 source_url: https://github.com/cooleyLLP/seriesseed
 version: '1.0'
 license: CC0-1.0
 allow_derivatives: true
 attribution_text: >-
-  Derived from the Cooley Series Seed Board Consent, available at
+  Adapted for OpenAgreements from the Cooley Series Seed Board Consent, available at
   https://github.com/cooleyLLP/seriesseed. Made available under CC0 1.0
   Universal Public Domain Dedication.
 fields:
@@ -24,7 +23,7 @@ fields:
     section: Terms
   - name: purchase_amount
     type: string
-    description: Aggregate SAFE purchase amount (e.g., "500,000")
+    description: Aggregate SAFE purchase amount (for example, "500,000")
     section: Deal Terms
   - name: board_member_1_name
     type: string

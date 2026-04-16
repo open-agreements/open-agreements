@@ -1,0 +1,56 @@
+style_id: cooley-board-consent-safe-v1
+docx:
+  page_size:
+    width: 12240
+    height: 15840
+  page_margin:
+    top: 1440
+    right: 1440
+    bottom: 1440
+    left: 1440
+    header: 720
+    footer: 720
+    gutter: 0
+  defaults:
+    font: Times New Roman
+    font_size: 24
+    color: '000000'
+    line: 276
+    spacing_after: 120
+headings:
+  h1:
+    align: center
+    bold: true
+    font_size: 28
+    spacing_after: 120
+  h2:
+    align: center
+    bold: true
+    underline: true
+    spacing_after: 120
+  h3:
+    bold: true
+    spacing_after: 120
+block_styles:
+  note:
+    italic: true
+    font_size: 20
+    spacing_after: 120
+    preview_emphasis: italic
+  signature-follow:
+    align: center
+    spacing_after: 120
+  signature-intro:
+    page_break_before: true
+    spacing_after: 120
+  signature-line:
+    spacing_before: 480
+    spacing_after: 0
+  signature-name:
+    spacing_after: 120
+  signature-date:
+    spacing_after: 120
+inline_styles:
+  defined-term:
+    bold: true
+    preview_emphasis: bold
