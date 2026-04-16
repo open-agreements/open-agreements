@@ -24,11 +24,12 @@ Reference artifact:
 - `reference-source.docx` is Joey Tsang's current SAFE board consent source
   document, kept only for fidelity comparison.
 
-## Source
+## Drafting Provenance
 
-- **URL**: https://github.com/cooleyLLP/seriesseed
-- **Derived from**: Series Seed — Board Consent
-- **License**: CC0 1.0 Universal Public Domain Dedication
+- **OpenAgreements slug**: `openagreements-board-consent-safe`
+- **Reference source**: https://github.com/cooleyLLP/seriesseed
+- **Reference document**: Series Seed — Board Consent
+- **OpenAgreements license**: CC BY 4.0
 
 ## Notes
 

@@ -32,8 +32,8 @@ readable Markdown preview from the same normalized model.
   signature sections from the canonical content source
 
 ### Requirement: SAFE Board Consent Contract IR Backport
-The system SHALL include the Cooley SAFE board consent template as a canonical
-Contract IR-authored template under `content/templates/cooley-board-consent-safe/`.
+The system SHALL include the SAFE board consent template as a canonical
+Contract IR-authored template under `content/templates/openagreements-board-consent-safe/`.
 
 #### Scenario: [OA-TMP-025] SAFE board consent preserves source fidelity
 - **WHEN** the Contract IR SAFE board consent is rendered

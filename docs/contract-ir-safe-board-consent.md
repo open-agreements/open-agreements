@@ -10,7 +10,7 @@
 - A renderer that emits both `template.docx` and `template.md` from that same
   normalized model
 - A new canonical Contract IR template at
-  `content/templates/cooley-board-consent-safe/`
+  `content/templates/openagreements-board-consent-safe/`
 - A template-local `clean.json` so the introductory note is removed from filled
   output using the repo’s existing clean-before-fill pipeline
 
