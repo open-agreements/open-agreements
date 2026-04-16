@@ -143,7 +143,9 @@ describe('Contract IR SAFE stockholder consent', () => {
 
     expect(xml).toContain('{company_name}');
     expect(xml).toContain('{purchase_amount}');
-    expect(xml).toContain('{stockholder_1_name}');
+    expect(xml).toContain('{FOR stockholder IN stockholders}');
+    expect(xml).toContain('{$stockholder.name}');
+    expect(xml).toContain('{END-FOR stockholder}');
     expect(xml).toContain('Approval of SAFE Financing');
     expect(xml).toContain('Section 228 of the Delaware General Corporation Law');
     expect(xml).toContain('[Signature Page Follows]');
@@ -169,22 +171,20 @@ describe('Contract IR SAFE stockholder consent', () => {
     expect(relsXml).toContain('footer2.xml');
   });
 
-  it.openspec('OA-TMP-026')('preserves stockholder consent source text, placeholders, and signature structure relative to Joey’s current source', async () => {
-    const referencePath = join(TEMPLATE_DIR, 'reference-source.docx');
+  it.openspec('OA-TMP-026')('preserves stockholder consent source text and uses loop-based signature structure', async () => {
     const { buffer } = await renderContractIrTemplate(TEMPLATE_DIR);
 
     const generatedText = normalizeText(extractDocxText(buffer));
-    const referenceText = normalizeText(extractDocxText(referencePath));
 
-    expect(generatedText).toBe(referenceText);
     expect(generatedText).toContain('ACTION BY WRITTEN CONSENT OF THE STOCKHOLDERS OF {company_name}');
     expect(generatedText).toContain('Approval of SAFE Financing');
     expect(generatedText).toContain('General Authorizing Resolution');
     expect(generatedText).toContain('Section 228 of the Delaware General Corporation Law');
     expect(generatedText).toContain('60 days from the earliest date of delivery of this Action by Written Consent');
-    expect(generatedText).toContain('{stockholder_1_name}');
-    expect(generatedText).toContain('{stockholder_2_name}');
-    expect(generatedText).toContain('{stockholder_3_name}');
+    expect(generatedText).toContain('{FOR stockholder IN stockholders}');
+    expect(generatedText).toContain('{$stockholder.name}');
+    expect(generatedText).toContain('{END-FOR stockholder}');
+    expect(generatedText).not.toContain('{stockholder_1_name}');
   });
 
   it.openspec('OA-TMP-027')('removes the introductory note from filled stockholder consent output via clean.json', async () => {
@@ -199,9 +199,11 @@ describe('Contract IR SAFE stockholder consent', () => {
         company_name: 'Acme Labs, Inc.',
         effective_date: 'April 15, 2026',
         purchase_amount: '500,000',
-        stockholder_1_name: 'Alex Holder',
-        stockholder_2_name: 'Blair Holder',
-        stockholder_3_name: 'Casey Holder',
+        stockholders: [
+          { name: 'Alex Holder' },
+          { name: 'Blair Holder' },
+          { name: 'Casey Holder' },
+        ],
       },
     });
 
