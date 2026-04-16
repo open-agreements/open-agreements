@@ -20,7 +20,7 @@ const STOCKHOLDER_TEMPLATE_DIR = join(
   '..',
   'content',
   'templates',
-  'stockholder-consent-safe'
+  'openagreements-stockholder-consent-safe'
 );
 const tempDirs: string[] = [];
 
@@ -77,13 +77,26 @@ async function fillBoardConsent(signerCount: number): Promise<string[]> {
   return extractParagraphs(outputPath);
 }
 
+async function createRenderedStockholderTemplateFixture(): Promise<string> {
+  const dir = mkdtempSync(join(tmpdir(), 'oa-stockholder-rendered-'));
+  tempDirs.push(dir);
+
+  const { buffer } = await renderContractIrTemplate(STOCKHOLDER_TEMPLATE_DIR);
+  writeFileSync(join(dir, 'template.docx'), buffer);
+  writeFileSync(join(dir, 'metadata.yaml'), readFileSync(join(STOCKHOLDER_TEMPLATE_DIR, 'metadata.yaml')));
+  writeFileSync(join(dir, 'clean.json'), readFileSync(join(STOCKHOLDER_TEMPLATE_DIR, 'clean.json')));
+
+  return dir;
+}
+
 async function fillStockholderConsent(signerCount: number): Promise<string[]> {
+  const templateDir = await createRenderedStockholderTemplateFixture();
   const outputDir = mkdtempSync(join(tmpdir(), `oa-stockholder-filled-${signerCount}-`));
   tempDirs.push(outputDir);
   const outputPath = join(outputDir, 'filled.docx');
 
   await fillTemplate({
-    templateDir: STOCKHOLDER_TEMPLATE_DIR,
+    templateDir,
     outputPath,
     values: {
       company_name: 'Acme Labs, Inc.',
@@ -100,7 +113,7 @@ async function fillStockholderConsent(signerCount: number): Promise<string[]> {
 
 describe('SAFE consent variable signer rendering', () => {
   for (const signerCount of [1, 3, 7]) {
-    it.openspec('OA-FIL-017')(
+    it.openspec('OA-FIL-024')(
       `renders board consent with exactly ${signerCount} signature blocks from Contract IR output`,
       async () => {
         const paragraphs = await fillBoardConsent(signerCount);
@@ -124,8 +137,8 @@ describe('SAFE consent variable signer rendering', () => {
       }
     );
 
-    it.openspec('OA-FIL-017')(
-      `renders stockholder consent with exactly ${signerCount} signature blocks from the direct DOCX template`,
+    it.openspec('OA-FIL-024')(
+      `renders stockholder consent with exactly ${signerCount} signature blocks from Contract IR output`,
       async () => {
         const paragraphs = await fillStockholderConsent(signerCount);
 

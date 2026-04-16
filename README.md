@@ -238,8 +238,7 @@ Website links open a dedicated template page when one exists, or a preselected i
 |----------|---------|------|
 | Closing Checklist | [Website](https://usejunior.com/templates/closing-checklist/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/closing-checklist) |
 | Board Consent SAFE | [Website](https://usejunior.com/templates/openagreements-board-consent-safe/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-board-consent-safe) |
-| OpenAgreements Stockholder Consent SAFE | [Website](https://usejunior.com/templates/openagreements-stockholder-consent-safe/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-stockholder-consent-safe) |
-| Series Seed Stockholder Consent SAFE | [Website](https://usejunior.com/?template=stockholder-consent-safe#start) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/stockholder-consent-safe) |
+| Stockholder Consent SAFE | [Website](https://usejunior.com/templates/openagreements-stockholder-consent-safe/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-stockholder-consent-safe) |
 | Working Group List | [Website](https://usejunior.com/templates/working-group-list/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/working-group-list) |
 
 ## Packages
