@@ -10250,154 +10250,6 @@
       ]
     },
     {
-      "name": "cooley-board-consent-safe",
-      "display_name": "Board Consent for SAFE Financing",
-      "category": "corporate-governance",
-      "description": "Action by unanimous written consent of the board of directors of a Delaware corporation approving the issuance of one or more Simple Agreements for Future Equity (SAFEs). Derived from the Cooley Series Seed board consent, adapted for SAFE financing.",
-      "license": "CC0-1.0",
-      "source_url": "https://github.com/cooleyLLP/seriesseed",
-      "source": "github.com",
-      "attribution_text": "Adapted by Joey Tsang for OpenAgreements from the Cooley Series Seed Board Consent, available at https://github.com/cooleyLLP/seriesseed. Made available under CC0 1.0 Universal Public Domain Dedication.",
-      "authors": [
-        {
-          "name": "Joey Tsang",
-          "slug": "joey-tsang",
-          "role": "primary_author",
-          "profile_url": "https://www.linkedin.com/in/joey-t-b90912b1/"
-        }
-      ],
-      "fields": [
-        {
-          "name": "company_name",
-          "type": "string",
-          "required": true,
-          "section": "Parties",
-          "description": "Full legal name of the company",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "effective_date",
-          "type": "date",
-          "required": true,
-          "section": "Terms",
-          "description": "Date the consent is effective",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "purchase_amount",
-          "type": "string",
-          "required": true,
-          "section": "Deal Terms",
-          "description": "Aggregate SAFE purchase amount (e.g., \"500,000\")",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "board_member_1_name",
-          "type": "string",
-          "required": true,
-          "section": "Signatures",
-          "description": "Full name of the first board member",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "board_member_2_name",
-          "type": "string",
-          "required": true,
-          "section": "Signatures",
-          "description": "Full name of the second board member",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "board_member_3_name",
-          "type": "string",
-          "required": true,
-          "section": "Signatures",
-          "description": "Full name of the third board member",
-          "default": null,
-          "default_value_rationale": null
-        }
-      ]
-    },
-    {
-      "name": "cooley-stockholder-consent-safe",
-      "display_name": "Stockholder Consent for SAFE Financing",
-      "category": "corporate-governance",
-      "description": "Action by written consent of the stockholders of a Delaware corporation approving the issuance of one or more Simple Agreements for Future Equity (SAFEs). Derived from the Cooley Series Seed stockholder consent, adapted for SAFE financing.",
-      "license": "CC0-1.0",
-      "source_url": "https://github.com/cooleyLLP/seriesseed",
-      "source": "github.com",
-      "attribution_text": "Adapted by Joey Tsang for OpenAgreements from the Cooley Series Seed Stockholder Consent, available at https://github.com/cooleyLLP/seriesseed. Made available under CC0 1.0 Universal Public Domain Dedication.",
-      "authors": [
-        {
-          "name": "Joey Tsang",
-          "slug": "joey-tsang",
-          "role": "primary_author",
-          "profile_url": "https://www.linkedin.com/in/joey-t-b90912b1/"
-        }
-      ],
-      "fields": [
-        {
-          "name": "company_name",
-          "type": "string",
-          "required": true,
-          "section": "Parties",
-          "description": "Full legal name of the company",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "effective_date",
-          "type": "date",
-          "required": true,
-          "section": "Terms",
-          "description": "Date the consent is effective",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "purchase_amount",
-          "type": "string",
-          "required": true,
-          "section": "Deal Terms",
-          "description": "Aggregate SAFE purchase amount (e.g., \"500,000\")",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "stockholder_1_name",
-          "type": "string",
-          "required": true,
-          "section": "Signatures",
-          "description": "Full name of the first stockholder",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "stockholder_2_name",
-          "type": "string",
-          "required": true,
-          "section": "Signatures",
-          "description": "Full name of the second stockholder",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "stockholder_3_name",
-          "type": "string",
-          "required": true,
-          "section": "Signatures",
-          "description": "Full name of the third stockholder",
-          "default": null,
-          "default_value_rationale": null
-        }
-      ]
-    },
-    {
       "name": "nvca-certificate-of-incorporation",
       "display_name": "NVCA Model Certificate of Incorporation",
       "category": "venture-financing",
@@ -11817,6 +11669,80 @@
       ]
     },
     {
+      "name": "openagreements-board-consent-safe",
+      "display_name": "Board Consent for SAFE Financing",
+      "category": "corporate-governance",
+      "description": "Action by unanimous written consent of the board of directors of a Delaware corporation approving the issuance of one or more Simple Agreements for Future Equity (SAFEs). Canonically authored in Contract IR and rendered to DOCX.",
+      "license": "CC-BY-4.0",
+      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-board-consent-safe",
+      "source": "OpenAgreements",
+      "attribution_text": "Authored by OpenAgreements contributors. Drafting structure informed by publicly available Series Seed SAFE board consent materials. Licensed under CC BY 4.0.",
+      "authors": [
+        {
+          "name": "Joey Tsang",
+          "slug": "joey-tsang",
+          "role": "primary_author",
+          "profile_url": "https://www.linkedin.com/in/joey-t-b90912b1/"
+        }
+      ],
+      "fields": [
+        {
+          "name": "company_name",
+          "type": "string",
+          "required": true,
+          "section": "Parties",
+          "description": "Full legal name of the company",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "effective_date",
+          "type": "date",
+          "required": true,
+          "section": "Terms",
+          "description": "Date the consent is effective",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "purchase_amount",
+          "type": "string",
+          "required": true,
+          "section": "Deal Terms",
+          "description": "Aggregate SAFE purchase amount (for example, \"500,000\")",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "board_member_1_name",
+          "type": "string",
+          "required": true,
+          "section": "Signatures",
+          "description": "Full name of the first board member",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "board_member_2_name",
+          "type": "string",
+          "required": true,
+          "section": "Signatures",
+          "description": "Full name of the second board member",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "board_member_3_name",
+          "type": "string",
+          "required": true,
+          "section": "Signatures",
+          "description": "Full name of the third board member",
+          "default": null,
+          "default_value_rationale": null
+        }
+      ]
+    },
+    {
       "name": "openagreements-employee-ip-inventions-assignment",
       "display_name": "OpenAgreements Employee IP and Inventions Assignment",
       "category": "employment",
@@ -11824,7 +11750,7 @@
       "license": "CC-BY-4.0",
       "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-employee-ip-inventions-assignment",
       "source": "OpenAgreements",
-      "attribution_text": "Drafted by Steven Obiajulu for OpenAgreements. Baseline structure inspired by permissive public references including the Balanced Employee IP Agreement (CC0) and Papertrail legal-docs (CC0). Licensed under CC BY 4.0.",
+      "attribution_text": "Authored by OpenAgreements contributors. Baseline structure inspired by permissive public references including the Balanced Employee IP Agreement (CC0) and Papertrail legal-docs (CC0). Licensed under CC BY 4.0.",
       "authors": [
         {
           "name": "Steven Obiajulu",
@@ -11951,7 +11877,7 @@
       "license": "CC-BY-4.0",
       "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-employment-confidentiality-acknowledgement",
       "source": "OpenAgreements",
-      "attribution_text": "Drafted by Steven Obiajulu for OpenAgreements using permissive public reference patterns from Papertrail legal-docs (CC0) and open policy frameworks. Licensed under CC BY 4.0.",
+      "attribution_text": "Authored by OpenAgreements contributors using permissive public reference patterns from Papertrail legal-docs (CC0) and open policy frameworks. Licensed under CC BY 4.0.",
       "authors": [
         {
           "name": "Steven Obiajulu",
@@ -12069,7 +11995,7 @@
       "license": "CC-BY-4.0",
       "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-employment-offer-letter",
       "source": "OpenAgreements",
-      "attribution_text": "Drafted by Steven Obiajulu for OpenAgreements. Drafting structure informed by publicly available permissive sources including the DocuSign template library (MIT) and Papertrail legal-docs (CC0). Licensed under CC BY 4.0.",
+      "attribution_text": "Authored by OpenAgreements contributors. Drafting structure informed by publicly available permissive sources including the DocuSign template library (MIT) and Papertrail legal-docs (CC0). Licensed under CC BY 4.0.",
       "authors": [
         {
           "name": "Steven Obiajulu",
@@ -12214,7 +12140,7 @@
       "license": "CC-BY-4.0",
       "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-wyoming",
       "source": "OpenAgreements",
-      "attribution_text": "Drafted by Steven Obiajulu for OpenAgreements. Wyoming-specific analysis informed by publicly available commentary from Am Law firms including Ogletree Deakins, Fisher Phillips, Littler Mendelson, Foley & Lardner, Faegre Drinker, and Vinson & Elkins. See practice note for sources. Licensed under CC BY 4.0.",
+      "attribution_text": "Authored by OpenAgreements contributors. Wyoming-specific analysis informed by publicly available commentary from Am Law firms including Ogletree Deakins, Fisher Phillips, Littler Mendelson, Foley & Lardner, Faegre Drinker, and Vinson & Elkins. See practice note for sources. Licensed under CC BY 4.0.",
       "authors": [
         {
           "name": "Steven Obiajulu",
@@ -12473,6 +12399,80 @@
           "section": "Document Management",
           "description": "Internal computed footer text for document-system traceability",
           "default": "",
+          "default_value_rationale": null
+        }
+      ]
+    },
+    {
+      "name": "stockholder-consent-safe",
+      "display_name": "Stockholder Consent for SAFE Financing",
+      "category": "corporate-governance",
+      "description": "Action by written consent of the stockholders of a Delaware corporation approving the issuance of one or more Simple Agreements for Future Equity (SAFEs). Adapted for SAFE financing from publicly available Series Seed stockholder consent materials.",
+      "license": "CC0-1.0",
+      "source_url": "https://github.com/cooleyLLP/seriesseed",
+      "source": "github.com",
+      "attribution_text": "Adapted from publicly available Series Seed stockholder consent materials at https://github.com/cooleyLLP/seriesseed. Made available under CC0 1.0 Universal Public Domain Dedication.",
+      "authors": [
+        {
+          "name": "Joey Tsang",
+          "slug": "joey-tsang",
+          "role": "primary_author",
+          "profile_url": "https://www.linkedin.com/in/joey-t-b90912b1/"
+        }
+      ],
+      "fields": [
+        {
+          "name": "company_name",
+          "type": "string",
+          "required": true,
+          "section": "Parties",
+          "description": "Full legal name of the company",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "effective_date",
+          "type": "date",
+          "required": true,
+          "section": "Terms",
+          "description": "Date the consent is effective",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "purchase_amount",
+          "type": "string",
+          "required": true,
+          "section": "Deal Terms",
+          "description": "Aggregate SAFE purchase amount (e.g., \"500,000\")",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "stockholder_1_name",
+          "type": "string",
+          "required": true,
+          "section": "Signatures",
+          "description": "Full name of the first stockholder",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "stockholder_2_name",
+          "type": "string",
+          "required": true,
+          "section": "Signatures",
+          "description": "Full name of the second stockholder",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "stockholder_3_name",
+          "type": "string",
+          "required": true,
+          "section": "Signatures",
+          "description": "Full name of the third stockholder",
+          "default": null,
           "default_value_rationale": null
         }
       ]
