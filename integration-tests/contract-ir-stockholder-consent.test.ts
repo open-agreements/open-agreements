@@ -87,7 +87,7 @@ function writeFixtureTemplate(
 }
 
 describe('Contract IR SAFE stockholder consent', () => {
-  it.openspec('OA-TMP-022')('loads Contract IR stockholder consent with external schema and style registries', () => {
+  it.openspec('OA-TMP-029')('loads Contract IR stockholder consent with external schema and style registries', () => {
     const template = loadContractIrTemplate(TEMPLATE_DIR);
     const metadata = loadMetadata(TEMPLATE_DIR);
 
@@ -104,7 +104,7 @@ describe('Contract IR SAFE stockholder consent', () => {
     ).toEqual(new Set(metadata.fields.map((field) => field.name)));
   });
 
-  it.openspec('OA-TMP-023')('rejects bad stockholder consent variables, styles, and malformed style tags', () => {
+  it.openspec('OA-TMP-030')('rejects bad stockholder consent variables, styles, and malformed style tags', () => {
     const unknownVariableDir = writeFixtureTemplate((content) =>
       content.replace('{{purchase_amount}}', '{{missing_amount}}')
     );
@@ -126,7 +126,7 @@ describe('Contract IR SAFE stockholder consent', () => {
     expect(() => loadContractIrTemplate(malformedInlineStyleDir)).toThrow(/Malformed \{style=slug\} tag|Malformed inline \{style=slug\} tag/);
   });
 
-  it.openspec('OA-TMP-024')('renders DOCX and Markdown for the stockholder consent from the same normalized Contract IR model', async () => {
+  it.openspec('OA-TMP-031')('renders DOCX and Markdown for the stockholder consent from the same normalized Contract IR model', async () => {
     const { buffer, markdown } = await renderContractIrTemplate(TEMPLATE_DIR);
     const zip = new AdmZip(buffer);
     const xml = zip.getEntry('word/document.xml')?.getData().toString('utf-8') ?? '';

@@ -49,7 +49,7 @@ describe('FieldDefinitionSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-022')('accepts an array field with nested item schema', async () => {
+  it.openspec('OA-TMP-028')('accepts an array field with nested item schema', async () => {
     await expectSafeParseOutcome(
       'FieldDefinitionSchema',
       FieldDefinitionSchema,

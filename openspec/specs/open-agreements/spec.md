@@ -338,7 +338,12 @@ respecting the one-IF-per-row constraint in docx-templates.
 - **AND** individual-mode fill also produces clean output
 
 ### Requirement: Template Metadata Schema
-Each template directory SHALL contain a `metadata.yaml` validated by Zod schema with fields: `name`, `source_url`, `version`, `license` (enum: CC-BY-4.0, CC0-1.0), `allow_derivatives` (boolean), `attribution_text`, `fields` (array of field definitions with name, type, description, required).
+Each template directory SHALL contain a `metadata.yaml` validated by Zod schema
+with fields: `name`, `source_url`, `version`, `license` (enum: CC-BY-4.0,
+CC0-1.0), `allow_derivatives` (boolean), `attribution_text`, and `fields`
+(array of field definitions with `name`, `type`, `description`, and optional
+field metadata such as defaults, sections, enum options, and nested `items`
+definitions for array fields).
 
 #### Scenario: [OA-TMP-009] Valid metadata passes validation
 - **GIVEN** a template directory with a `metadata.yaml` containing all required fields with valid values
@@ -354,6 +359,12 @@ Each template directory SHALL contain a `metadata.yaml` validated by Zod schema 
 - **GIVEN** a template directory with `metadata.yaml` containing `license: MIT`
 - **WHEN** the system validates the metadata
 - **THEN** validation fails with an error indicating the license value is not in the allowed enum (CC-BY-4.0, CC0-1.0)
+
+#### Scenario: [OA-TMP-028] Array field item schemas pass validation
+- **GIVEN** a template metadata file with an array field that declares nested `items` field definitions
+- **WHEN** the metadata is validated
+- **THEN** validation accepts the array field schema
+- **AND** nested item field definitions use the same field-definition rules as top-level fields
 
 ### Requirement: License Compliance Validation
 The system SHALL refuse to generate derivatives of templates where `allow_derivatives` is false and SHALL fail CI if a PR modifies content of a CC BY-ND licensed template.
@@ -461,7 +472,9 @@ where the directory name matches the `name` field.
 ### Requirement: Machine-Readable Template Discovery
 The `list` command SHALL support a `--json` flag that outputs template metadata
 including all field definitions, enabling programmatic field discovery by agent skills.
-Output SHALL be sorted by name. Templates SHALL include `source_url` and `attribution_text`.
+Output SHALL be sorted by name. Templates SHALL include `source_url` and
+`attribution_text`. Array fields with nested item schemas SHALL include those
+nested item definitions in discovery output.
 
 #### Scenario: [OA-CLI-012] JSON output includes full metadata sorted by name
 - **GIVEN** templates are available
@@ -472,6 +485,12 @@ Output SHALL be sorted by name. Templates SHALL include `source_url` and `attrib
 - **GIVEN** a template with invalid metadata exists
 - **WHEN** the user runs `open-agreements list --json-strict`
 - **THEN** the command prints errors to stderr and exits with non-zero status
+
+#### Scenario: [OA-CLI-024] JSON output preserves array item schemas
+- **GIVEN** a template with an array field that declares nested `items`
+- **WHEN** the user runs `open-agreements list --json`
+- **THEN** the matching template entry includes the array field
+- **AND** the array field includes its nested item schema in the JSON output
 
 ### Requirement: npm Package Integrity
 The npm tarball SHALL include `dist/`, `bin/`, `templates/`, `recipes/`, and `skills/`
@@ -886,7 +905,8 @@ headers and footers.
 ### Requirement: Fill Data Preparation
 The `prepareFillData` function MUST apply default values for optional fields,
 coerce boolean string values when configured, and warn on missing required fields.
-The `computeDisplayFields` callback MUST be invoked when provided.
+The `computeDisplayFields` callback MUST be invoked when provided. Explicit
+field-level defaults MUST override the template-path blank placeholder behavior.
 
 #### Scenario: [OA-FIL-008] Optional field defaulting and blank placeholder
 - **WHEN** optional fields are not provided in fill values
@@ -900,6 +920,13 @@ The `computeDisplayFields` callback MUST be invoked when provided.
 - **AND** string values pass through unchanged when coercion is disabled
 - **AND** missing required fields emit a warning
 - **AND** computeDisplayFields callback is invoked when provided
+
+#### Scenario: [OA-FIL-023] Explicit empty-string defaults support conditional block pruning
+- **WHEN** an optional signer-slot anchor field declares `default: ""`
+- **AND** the template wraps that signer block in `{IF field}` / `{END-IF}`
+- **AND** the field is omitted from fill values
+- **THEN** `prepareFillData` preserves the explicit empty-string default
+- **AND** the signer block is removed cleanly during DOCX rendering
 
 ### Requirement: Fill Pipeline DOCX Rendering
 The `fillDocx` function MUST support smart quote normalization, multiline values
@@ -938,6 +965,17 @@ for optional field defaulting while allowing path-specific boolean coercion.
 #### Scenario: [OA-FIL-015] Currency sanitization prevents double-dollar in filled output
 - **WHEN** a template contains `${field}` and fill value is `$50,000`
 - **THEN** the filled output contains `$50,000` (not `$$50,000`)
+
+### Requirement: Loop-Based Array Rendering
+The template fill path SHALL support `docx-templates` `{FOR}` loops over array
+fields, including arrays of objects described by template metadata item schemas.
+
+#### Scenario: [OA-FIL-024] Array-driven signer blocks render exact counts
+- **GIVEN** a template with a `signers` array field and a `{FOR signer IN signers}` signature-block loop
+- **WHEN** the template is filled with 1, 3, or 7 signer objects
+- **THEN** the rendered DOCX contains exactly 1, 3, or 7 signature blocks respectively
+- **AND** no loop markers remain in the output
+- **AND** no dangling blank placeholders appear outside the rendered signer blocks
 
 ### Requirement: API Endpoint Protocol Compliance
 The hosted API endpoints (A2A, MCP, download) MUST handle CORS preflight,
@@ -997,6 +1035,48 @@ no errors. Metadata validation MUST pass independently.
 #### Scenario: [OA-TMP-016] Declarative replacement coverage validation
 - **WHEN** replacements reference metadata tags not declared in the template
 - **THEN** validation reports required-field errors for uncovered tags
+
+### Requirement: Contract IR Pointer-Based Template Authoring
+The system SHALL support a Contract IR authoring path where a canonical
+Markdown content document points, via YAML frontmatter, to an external schema
+registry and an external style registry.
+
+#### Scenario: [OA-TMP-029] Content document resolves external registries
+- **WHEN** a Contract IR template is loaded from `content.md`
+- **THEN** the loader resolves the referenced schema and style YAML files
+- **AND** the normalized template model retains document metadata, variables,
+  and style semantics from those external registries
+
+### Requirement: Contract IR Validation
+The system SHALL reject Contract IR templates that reference unknown variables,
+unknown style slugs, or malformed `{style=slug}` directives before rendering.
+
+#### Scenario: [OA-TMP-030] Contract IR validation rejects bad references
+- **WHEN** a Contract IR content document contains an unknown variable,
+  unknown style slug, or malformed style tag
+- **THEN** validation fails with an actionable error
+- **AND** no rendered artifacts are produced from the invalid template
+
+### Requirement: Contract IR Dual Rendering
+The system SHALL render a validated Contract IR template into both DOCX and a
+readable Markdown preview from the same normalized model.
+
+#### Scenario: [OA-TMP-031] Contract IR renders deterministic artifacts
+- **WHEN** a validated Contract IR template is generated into DOCX and Markdown artifacts
+- **THEN** the system writes `template.docx` and `template.md`
+- **AND** both artifacts contain the required headings, placeholders, and
+  signature sections from the canonical content source
+
+### Requirement: SAFE Board Consent Contract IR Backport
+The system SHALL include the SAFE board consent template as a canonical
+Contract IR-authored template under
+`content/templates/openagreements-board-consent-safe/`.
+
+#### Scenario: [OA-TMP-032] SAFE board consent preserves source fidelity
+- **WHEN** the Contract IR SAFE board consent is rendered
+- **THEN** the output preserves the Joey Tsang board consent legal text,
+  resolution flow, variable placeholders, and signature structure with
+  materially similar professional formatting
 
 ### Requirement: CLI Fill for All Template Types
 The CLI `fill` command MUST render valid DOCX output for all supported template
@@ -1072,6 +1152,15 @@ including list, fill, and get operations with proper error envelopes.
 - **AND** error responses use typed error codes (INVALID_ARGUMENT, TEMPLATE_NOT_FOUND)
 - **AND** compact and full payload modes are supported for list_templates
 - **AND** browser GET returns HTML, non-browser GET returns 405
+
+### Requirement: MCP Template Discovery Preserves Array Item Schemas
+The MCP `get_template` tool SHALL surface nested array item schemas so clients
+can construct valid object-array payloads for `{FOR}`-based templates.
+
+#### Scenario: [OA-DST-033] get_template returns array item schemas
+- **GIVEN** a template with an array field that declares nested `items`
+- **WHEN** a client calls `get_template`
+- **THEN** the returned field metadata includes the nested array item schema unchanged
 
 ### Requirement: Employment Memo Generation
 The employment memo generator MUST produce disclaimers, findings, jurisdiction
