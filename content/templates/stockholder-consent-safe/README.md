@@ -34,9 +34,7 @@ issuance of one or more Simple Agreements for Future Equity (SAFEs).
 
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
-| `stockholder_1_name` | string | yes | Full name of the first stockholder |
-| `stockholder_2_name` | string | yes | Full name of the second stockholder |
-| `stockholder_3_name` | string | yes | Full name of the third stockholder |
+| `stockholders` | array | yes | Stockholders signing the consent |
 
 ## Notes
 

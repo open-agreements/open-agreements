@@ -7,16 +7,69 @@ const hexColorPattern = /^[0-9A-Fa-f]{6}$/;
 
 const textSchema = z.string().min(1);
 
+const fieldTypeSchema = z.enum(['string', 'date', 'number', 'boolean', 'enum', 'array']);
+
+const contractIrFieldDefinitionSchema = z.lazy(() =>
+  z.object({
+    name: z.string().regex(variableNamePattern),
+    type: fieldTypeSchema,
+    description: textSchema,
+    options: z.array(textSchema).optional(),
+    items: z.array(contractIrFieldDefinitionSchema).nonempty().optional(),
+  }).superRefine((value, ctx) => {
+    if (value.type === 'enum' && (!value.options || value.options.length === 0)) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['options'],
+        message: 'Enum fields must declare at least one option',
+      });
+    }
+
+    if (value.items !== undefined && value.type !== 'array') {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['items'],
+        message: 'Only array fields may define nested items',
+      });
+    }
+
+    if (value.type === 'array' && (!value.items || value.items.length === 0)) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['items'],
+        message: 'Array fields must declare at least one nested item',
+      });
+    }
+  })
+);
+
 const variableDefinitionSchema = z.object({
-  type: z.enum(['string', 'date', 'number', 'boolean', 'enum']),
+  type: fieldTypeSchema,
   description: textSchema,
   options: z.array(textSchema).optional(),
+  items: z.array(contractIrFieldDefinitionSchema).nonempty().optional(),
 }).superRefine((value, ctx) => {
   if (value.type === 'enum' && (!value.options || value.options.length === 0)) {
     ctx.addIssue({
       code: z.ZodIssueCode.custom,
       path: ['options'],
       message: 'Enum variables must declare at least one option',
+    });
+  }
+
+  if (value.items !== undefined && value.type !== 'array') {
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ['items'],
+      message: 'Only array variables may define nested items',
+    });
+  }
+
+  if (value.type === 'array' && (!value.items || value.items.length === 0)) {
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ['items'],
+      message: 'Array variables must declare at least one nested item',
     });
   }
 });

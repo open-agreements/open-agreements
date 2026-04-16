@@ -137,7 +137,6 @@ describe('Contract IR SAFE board consent', () => {
 
     expect(xml).toContain('{company_name}');
     expect(xml).toContain('{purchase_amount}');
-    expect(xml).toContain('{board_member_1_name}');
     expect(xml).toContain('Approval of SAFE Financing');
     expect(xml).toContain('[Signature Page Follows]');
     expect(xml).toContain('w:pgSz w:w="12240" w:h="15840"');
@@ -168,14 +167,19 @@ describe('Contract IR SAFE board consent', () => {
 
     const generatedText = normalizeText(extractDocxText(buffer));
     const referenceText = normalizeText(extractDocxText(referencePath));
+    const signatureMarker = '[Signature Page Follows]';
 
-    expect(generatedText).toBe(referenceText);
+    expect(generatedText.split(signatureMarker)[0]).toBe(referenceText.split(signatureMarker)[0]);
     expect(generatedText).toContain('ACTION BY UNANIMOUS WRITTEN CONSENT OF THE BOARD OF DIRECTORS OF {company_name}');
     expect(generatedText).toContain('Approval of SAFE Financing');
     expect(generatedText).toContain('General Authorizing Resolution');
-    expect(generatedText).toContain('{board_member_1_name}');
-    expect(generatedText).toContain('{board_member_2_name}');
-    expect(generatedText).toContain('{board_member_3_name}');
+    expect(generatedText).toContain('{FOR member IN board_members}');
+    expect(generatedText).toContain('{$member.name}');
+    expect(generatedText).toContain('{END-FOR member}');
+    expect(generatedText).toContain(signatureMarker);
+    expect(generatedText).toContain(
+      'This Action by Written Consent shall be filed with the minutes of the proceedings of the Board of Directors of the Company.'
+    );
   });
 
   it.openspec('OA-TMP-025')('removes the introductory note from filled output via clean.json', async () => {
@@ -190,9 +194,11 @@ describe('Contract IR SAFE board consent', () => {
         company_name: 'Acme Labs, Inc.',
         effective_date: 'April 15, 2026',
         purchase_amount: '500,000',
-        board_member_1_name: 'Alex Director',
-        board_member_2_name: 'Blair Director',
-        board_member_3_name: 'Casey Director',
+        board_members: [
+          { name: 'Alex Director' },
+          { name: 'Blair Director' },
+          { name: 'Casey Director' },
+        ],
       },
     });
 
@@ -200,5 +206,27 @@ describe('Contract IR SAFE board consent', () => {
     expect(filledText).not.toContain('Note: The following resolutions');
     expect(filledText).toContain('ACTION BY UNANIMOUS WRITTEN CONSENT OF THE BOARD OF DIRECTORS OF Acme Labs, Inc.');
     expect(filledText).toContain('Approval of SAFE Financing');
+  });
+
+  it.openspec('OA-FIL-017')('renders only the provided board member signature blocks when filled', async () => {
+    const outputDir = mkdtempSync(join(tmpdir(), 'board-consent-one-signer-'));
+    tempDirs.push(outputDir);
+    const outputPath = join(outputDir, 'filled-one-signer.docx');
+
+    await fillTemplate({
+      templateDir: TEMPLATE_DIR,
+      outputPath,
+      values: {
+        company_name: 'Acme Labs, Inc.',
+        effective_date: 'April 16, 2026',
+        purchase_amount: '500,000',
+        board_members: [{ name: 'Alex Director' }],
+      },
+    });
+
+    const filledText = normalizeText(extractDocxText(outputPath));
+    expect(filledText.split('\n')).not.toContain('_______');
+    expect((filledText.match(/______________________________/g) ?? [])).toHaveLength(1);
+    expect((filledText.match(/Date: April 16, 2026/g) ?? [])).toHaveLength(1);
   });
 });

@@ -25,22 +25,16 @@ fields:
     type: string
     description: Aggregate SAFE purchase amount (for example, "500,000")
     section: Deal Terms
-  - name: board_member_1_name
-    type: string
-    description: Full name of the first board member
+  - name: board_members
+    type: array
+    description: Directors signing the consent
     section: Signatures
-  - name: board_member_2_name
-    type: string
-    description: Full name of the second board member
-    section: Signatures
-  - name: board_member_3_name
-    type: string
-    description: Full name of the third board member
-    section: Signatures
+    items:
+      - name: name
+        type: string
+        description: Full name of a director signing the consent
 priority_fields:
   - company_name
   - effective_date
   - purchase_amount
-  - board_member_1_name
-  - board_member_2_name
-  - board_member_3_name
+  - board_members
