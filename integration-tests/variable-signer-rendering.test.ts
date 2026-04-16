@@ -124,7 +124,7 @@ describe('variable signer rendering', () => {
     expect(paragraphs.filter((paragraph) => paragraph === '_______').length).toBeGreaterThan(1);
   });
 
-  it.openspec('OA-FIL-016')('prunes optional fixed signer slots wrapped in IF blocks', async () => {
+  it.openspec('OA-FIL-023')('prunes optional fixed signer slots wrapped in IF blocks', async () => {
     const templateDir = createTemplateFixture(
       [
         { name: 'signer_1_name', type: 'string', description: 'Signer 1 name' },
@@ -171,7 +171,7 @@ describe('variable signer rendering', () => {
     expect(paragraphs).not.toContain('Date: _______');
   });
 
-  it.openspec('OA-FIL-017')('renders exact signer-block counts from a signers array loop', async () => {
+  it.openspec('OA-FIL-024')('renders exact signer-block counts from a signers array loop', async () => {
     const templateDir = createTemplateFixture(
       [
         {

@@ -113,7 +113,7 @@ async function fillStockholderConsent(signerCount: number): Promise<string[]> {
 
 describe('SAFE consent variable signer rendering', () => {
   for (const signerCount of [1, 3, 7]) {
-    it.openspec('OA-FIL-017')(
+    it.openspec('OA-FIL-024')(
       `renders board consent with exactly ${signerCount} signature blocks from Contract IR output`,
       async () => {
         const paragraphs = await fillBoardConsent(signerCount);
@@ -137,7 +137,7 @@ describe('SAFE consent variable signer rendering', () => {
       }
     );
 
-    it.openspec('OA-FIL-017')(
+    it.openspec('OA-FIL-024')(
       `renders stockholder consent with exactly ${signerCount} signature blocks from Contract IR output`,
       async () => {
         const paragraphs = await fillStockholderConsent(signerCount);
