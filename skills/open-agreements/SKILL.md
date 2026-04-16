@@ -164,6 +164,10 @@ npx -y open-agreements@0.7.4 list --json
 
 Never use `@latest` — it pulls a fresh package on every cache miss and can introduce unexpected changes.
 
+## Shared Execution Reference
+
+For the full template-filling workflow (applicable to all agreement skills), see [template-filling-execution.md](../shared/template-filling-execution.md).
+
 ## Notes
 
 - All templates produce Word DOCX files that preserve original formatting
