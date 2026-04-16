@@ -58,6 +58,9 @@ export function sourceName(url: string): string | null {
     if (host === 'github.com' && pathname.startsWith('/open-agreements/')) {
       return 'OpenAgreements';
     }
+    if (host === 'github.com' && pathname.startsWith('/cooleyLLP/seriesseed')) {
+      return 'Series Seed';
+    }
     if (host === 'github.com' && pathname.startsWith('/papertrail/legal-docs')) {
       return 'Papertrail';
     }

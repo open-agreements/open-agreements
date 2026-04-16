@@ -37,5 +37,5 @@ Reference artifact:
   141(f) of the Delaware General Corporation Law.
 - The consent authorizes **one or more SAFEs** in a round. Individual investor
   names and economic terms remain in each SAFE itself, not this board consent.
-- The stockholder consent is intentionally left as follow-on work for a later
-  migration once this Contract IR path is stable.
+- The paired stockholder consent now lives at
+  `content/templates/openagreements-stockholder-consent-safe/`.
