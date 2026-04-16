@@ -188,6 +188,45 @@ describe('contract-templates-mcp tools', () => {
       expect(error.code).toBe('TEMPLATE_NOT_FOUND');
     });
 
+    it.openspec('OA-DST-034')('get_template preserves nested array item schemas', async () => {
+      _setModuleOverride(mockModules({
+        loadMetadata: () => ({
+          name: 'Array Template',
+          source_url: 'https://example.com/template.docx',
+          fields: [
+            {
+              name: 'signers',
+              type: 'array',
+              description: 'Signers on the document',
+              items: [
+                { name: 'name', type: 'string', description: 'Printed signer name' },
+                { name: 'title', type: 'string', description: 'Printed signer title', default: '' },
+              ],
+            },
+          ],
+          priority_fields: [],
+        }),
+        mapFields: (fields: unknown[]) => fields,
+      }));
+
+      const result = await callTool('get_template', { template_id: 'array-template' });
+      const payload = getPayload(result);
+
+      expect(result.isError).toBeUndefined();
+      expect(payload.ok).toBe(true);
+      const data = payload.data as Record<string, unknown>;
+      const template = data.template as Record<string, unknown>;
+      const fields = template.fields as Array<Record<string, unknown>>;
+      expect(fields[0]).toMatchObject({
+        name: 'signers',
+        type: 'array',
+      });
+      expect(fields[0].items).toEqual([
+        { name: 'name', type: 'string', description: 'Printed signer name' },
+        { name: 'title', type: 'string', description: 'Printed signer title', default: '' },
+      ]);
+    });
+
     it.openspec('OA-DST-032')('fill_template returns FILL_FAILED on engine error', async () => {
       _setModuleOverride(mockModules({
         fillTemplate: async () => { throw new Error('engine failure'); },

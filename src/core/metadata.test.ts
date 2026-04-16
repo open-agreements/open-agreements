@@ -49,6 +49,32 @@ describe('FieldDefinitionSchema', () => {
     );
   });
 
+  it.openspec('OA-TMP-022')('accepts an array field with nested item schema', async () => {
+    await expectSafeParseOutcome(
+      'FieldDefinitionSchema',
+      FieldDefinitionSchema,
+      {
+        name: 'signers',
+        type: 'array',
+        description: 'Signers on the document',
+        items: [
+          {
+            name: 'name',
+            type: 'string',
+            description: 'Printed signer name',
+          },
+          {
+            name: 'title',
+            type: 'string',
+            description: 'Printed signer title',
+            default: '',
+          },
+        ],
+      },
+      true
+    );
+  });
+
   it.openspec('OA-TMP-003')('rejects enum field without options', async () => {
     await expectSafeParseOutcome(
       'FieldDefinitionSchema',
@@ -127,6 +153,26 @@ describe('FieldDefinitionSchema', () => {
         type: 'boolean',
         description: 'Active',
         default: 'yes',
+      },
+      false
+    );
+  });
+
+  it('rejects nested items on non-array fields', async () => {
+    await expectSafeParseOutcome(
+      'FieldDefinitionSchema',
+      FieldDefinitionSchema,
+      {
+        name: 'company_name',
+        type: 'string',
+        description: 'Company name',
+        items: [
+          {
+            name: 'nested',
+            type: 'string',
+            description: 'Should not be allowed',
+          },
+        ],
       },
       false
     );
