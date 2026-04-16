@@ -26,22 +26,16 @@ fields:
     type: string
     description: Aggregate SAFE purchase amount (e.g., "500,000")
     section: Deal Terms
-  - name: stockholder_1_name
-    type: string
-    description: Full name of the first stockholder
+  - name: stockholders
+    type: array
+    description: Stockholders signing the consent
     section: Signatures
-  - name: stockholder_2_name
-    type: string
-    description: Full name of the second stockholder
-    section: Signatures
-  - name: stockholder_3_name
-    type: string
-    description: Full name of the third stockholder
-    section: Signatures
+    items:
+      - name: name
+        type: string
+        description: Full name of a stockholder signing the consent
 priority_fields:
   - company_name
   - effective_date
   - purchase_amount
-  - stockholder_1_name
-  - stockholder_2_name
-  - stockholder_3_name
+  - stockholders

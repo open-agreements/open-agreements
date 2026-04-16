@@ -9,12 +9,10 @@ variables:
   purchase_amount:
     type: string
     description: Aggregate SAFE purchase amount, without the dollar sign
-  board_member_1_name:
-    type: string
-    description: Full name of the first director signing the consent
-  board_member_2_name:
-    type: string
-    description: Full name of the second director signing the consent
-  board_member_3_name:
-    type: string
-    description: Full name of the third director signing the consent
+  board_members:
+    type: array
+    description: Directors signing the consent
+    items:
+      - name: name
+        type: string
+        description: Full name of a director signing the consent

@@ -30,20 +30,12 @@ This Action by Written Consent shall be filed with the minutes of the proceeding
 
 The undersigned has executed this Action by Written Consent as of the date set forth under such signatory’s name below. Any copy, facsimile, .PDF or other reliable reproduction of this Action by Written Consent may be substituted or used in lieu of the original writing for any and all purposes for which the original writing could be used, provided that such copy, facsimile, .PDF or other reproduction be a complete reproduction of the entire original writing.
 
-______________________________
-
-{board_member_1_name}
-
-Date: {effective_date}
+{FOR member IN board_members}
 
 ______________________________
 
-{board_member_2_name}
+{$member.name}
 
 Date: {effective_date}
 
-______________________________
-
-{board_member_3_name}
-
-Date: {effective_date}
+{END-FOR member}

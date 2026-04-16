@@ -13,6 +13,8 @@ import { renderContractIrToArtifacts } from './render.mjs';
 const FRONTMATTER_RE = /^---\n([\s\S]*?)\n---\n?([\s\S]*)$/;
 const STYLE_LINE_RE = /^\{style=([a-z0-9][a-z0-9-]*)\}$/;
 const EXACT_INLINE_STYLE_RE = /\{[^{}\n]+\}\{style=[a-z0-9][a-z0-9-]*\}/g;
+const DOCX_TEMPLATE_TAG_RE =
+  /^\{(?:IF !?[a-z_][a-z0-9_]*|END-IF|FOR [A-Za-z_]\w* IN [A-Za-z_]\w*|END-FOR [A-Za-z_]\w*|\$[A-Za-z_]\w*(?:\.[A-Za-z_]\w*)+)\}/;
 
 function readYaml(path, label) {
   const parsed = yaml.load(readFileSync(path, 'utf-8'));
@@ -198,6 +200,13 @@ function parseInline(text, styleRegistry, schemaRegistry, filePath) {
           children: parseInline(target, styleRegistry, schemaRegistry, filePath),
         });
         cursor += inlineMatch[0].length;
+        continue;
+      }
+
+      const docxTemplateTagMatch = text.slice(cursor).match(DOCX_TEMPLATE_TAG_RE);
+      if (docxTemplateTagMatch) {
+        nodes.push({ type: 'text', value: docxTemplateTagMatch[0] });
+        cursor += docxTemplateTagMatch[0].length;
         continue;
       }
 
