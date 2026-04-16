@@ -9,7 +9,7 @@ version: '1.0'
 license: CC-BY-4.0
 allow_derivatives: true
 attribution_text: >-
-  Authored by Joey Tsang for OpenAgreements. Drafting structure informed by the
+  Authored by OpenAgreements contributors. Drafting structure informed by the
   publicly available Cooley Series Seed SAFE board consent boilerplate.
   Licensed under CC BY 4.0.
 fields:
