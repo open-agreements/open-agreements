@@ -10,7 +10,7 @@
 
 ## 2. SAFE board consent backport
 
-- [x] 2.1 Add `content/templates/cooley-board-consent-safe/` with canonical
+- [x] 2.1 Add `content/templates/openagreements-board-consent-safe/` with canonical
       Contract IR authoring files, metadata, and generated artifacts.
 - [x] 2.2 Preserve the SAFE board consent legal text, headings, resolution
       formatting, placeholders, and signature structure from the current Joey

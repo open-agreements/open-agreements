@@ -1,4 +1,4 @@
-schema_id: cooley-board-consent-safe-v1
+schema_id: openagreements-board-consent-safe-v1
 variables:
   company_name:
     type: string

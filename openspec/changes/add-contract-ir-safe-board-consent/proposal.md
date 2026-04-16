@@ -27,7 +27,7 @@ scope narrow while proving the Contract IR architecture on one real form.
 
 - Affected specs: `open-agreements`
 - Affected code:
-  - `content/templates/cooley-board-consent-safe/*`
+  - `content/templates/openagreements-board-consent-safe/*`
   - `scripts/contract_ir/*`
   - `scripts/generate_contract_ir_templates.mjs`
   - `package.json`

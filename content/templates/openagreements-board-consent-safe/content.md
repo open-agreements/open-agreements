@@ -1,5 +1,5 @@
 ---
-template_id: cooley-board-consent-safe
+template_id: openagreements-board-consent-safe
 schema: ./schema.yaml
 docStyle: ./styles.yaml
 title: Board Consent for SAFE Financing

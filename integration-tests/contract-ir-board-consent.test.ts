@@ -9,7 +9,7 @@ import { fillTemplate } from '../src/core/engine.js';
 import { loadMetadata } from '../src/core/metadata.js';
 
 const it = itAllure.epic('Filling & Rendering');
-const TEMPLATE_DIR = join(import.meta.dirname, '..', 'content', 'templates', 'cooley-board-consent-safe');
+const TEMPLATE_DIR = join(import.meta.dirname, '..', 'content', 'templates', 'openagreements-board-consent-safe');
 const tempDirs: string[] = [];
 
 afterAll(() => {
@@ -85,9 +85,9 @@ describe('Contract IR SAFE board consent', () => {
     const template = loadContractIrTemplate(TEMPLATE_DIR);
     const metadata = loadMetadata(TEMPLATE_DIR);
 
-    expect(template.frontmatter.template_id).toBe('cooley-board-consent-safe');
-    expect(template.schemaRegistry.schema_id).toBe('cooley-board-consent-safe-v1');
-    expect(template.styleRegistry.style_id).toBe('cooley-board-consent-safe-v1');
+    expect(template.frontmatter.template_id).toBe('openagreements-board-consent-safe');
+    expect(template.schemaRegistry.schema_id).toBe('openagreements-board-consent-safe-v1');
+    expect(template.styleRegistry.style_id).toBe('openagreements-board-consent-safe-v1');
     expect(template.blocks.some((block) => block.blockStyle === 'note')).toBe(true);
     expect(
       template.blocks.filter((block) => block.type === 'heading' && block.level === 2)
@@ -179,7 +179,7 @@ describe('Contract IR SAFE board consent', () => {
   });
 
   it.openspec('OA-TMP-025')('removes the introductory note from filled output via clean.json', async () => {
-    const outputDir = mkdtempSync(join(tmpdir(), 'cooley-board-fill-'));
+    const outputDir = mkdtempSync(join(tmpdir(), 'board-consent-fill-'));
     tempDirs.push(outputDir);
     const outputPath = join(outputDir, 'filled.docx');
 
