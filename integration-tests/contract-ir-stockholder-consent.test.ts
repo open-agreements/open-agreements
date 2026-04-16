@@ -213,4 +213,28 @@ describe('Contract IR SAFE stockholder consent', () => {
     expect(filledText).toContain('Approval of SAFE Financing');
     expect(filledText).toContain('60 days from the earliest date of delivery of this Action by Written Consent');
   });
+
+  it.openspec('OA-TMP-027')('preserves PAGE and NUMPAGES footer field codes through fill', async () => {
+    const outputDir = mkdtempSync(join(tmpdir(), 'stockholder-consent-footer-fields-'));
+    tempDirs.push(outputDir);
+    const outputPath = join(outputDir, 'filled-footer.docx');
+
+    await fillTemplate({
+      templateDir: TEMPLATE_DIR,
+      outputPath,
+      values: {
+        company_name: 'Acme Labs, Inc.',
+        effective_date: 'April 15, 2026',
+        purchase_amount: '500,000',
+        stockholders: [{ name: 'Alex Holder' }],
+      },
+    });
+
+    const zip = new AdmZip(outputPath);
+    const footerXml = zip.getEntry('word/footer1.xml')?.getData().toString('utf-8') ?? '';
+
+    expect(footerXml).toContain('Stockholder Consent for SAFE Financing (v1.0). Free to use under CC BY 4.0.');
+    expect(footerXml).toMatch(/<w:instrText[^>]*>\s*PAGE\s*<\/w:instrText>/);
+    expect(footerXml).toMatch(/<w:instrText[^>]*>\s*NUMPAGES\s*<\/w:instrText>/);
+  });
 });
