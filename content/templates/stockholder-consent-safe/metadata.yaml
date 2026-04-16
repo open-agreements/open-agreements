@@ -3,14 +3,14 @@ category: corporate-governance
 description: >-
   Action by written consent of the stockholders of a Delaware corporation
   approving the issuance of one or more Simple Agreements for Future Equity
-  (SAFEs). Derived from the Cooley Series Seed stockholder consent, adapted for
-  SAFE financing.
+  (SAFEs). Adapted for SAFE financing from publicly available Series Seed
+  stockholder consent materials.
 source_url: https://github.com/cooleyLLP/seriesseed
 version: '1.0'
 license: CC0-1.0
 allow_derivatives: true
 attribution_text: >-
-  Derived from the Cooley Series Seed Stockholder Consent, available at
+  Adapted from publicly available Series Seed stockholder consent materials at
   https://github.com/cooleyLLP/seriesseed. Made available under CC0 1.0
   Universal Public Domain Dedication.
 fields:
