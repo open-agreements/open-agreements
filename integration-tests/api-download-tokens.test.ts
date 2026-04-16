@@ -8,7 +8,7 @@ import { itAllure, allureStep, allureJsonAttachment } from './helpers/allure-tes
 
 const it = itAllure.epic('Platform & Distribution');
 
-const { createDownloadArtifact, resolveDownloadArtifact } = await import('../api/_shared.js');
+const { createDownloadArtifact, resolveDownloadArtifact } = await import('../api/_download-artifacts.js');
 
 describe('Download IDs — sign / verify / expiry', () => {
   const TEMPLATE = 'common-paper-mutual-nda';
