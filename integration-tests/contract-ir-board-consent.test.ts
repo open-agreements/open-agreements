@@ -208,7 +208,7 @@ describe('Contract IR SAFE board consent', () => {
     expect(filledText).toContain('Approval of SAFE Financing');
   });
 
-  it.openspec('OA-TMP-025')('preserves PAGE and NUMPAGES footer field codes through fill', async () => {
+  it.openspec('OA-TMP-032')('preserves PAGE and NUMPAGES footer field codes through fill', async () => {
     const outputDir = mkdtempSync(join(tmpdir(), 'board-consent-footer-fields-'));
     tempDirs.push(outputDir);
     const outputPath = join(outputDir, 'filled-footer.docx');
