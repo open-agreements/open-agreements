@@ -1,12 +1,25 @@
 import {
   AlignmentType,
+  BorderStyle,
   Document,
+  Footer,
+  Header,
+  HeightRule,
   LineRuleType,
   PageBreak,
   Packer,
+  PageNumber,
   Paragraph,
+  Table,
+  TableCell,
+  TableLayoutType,
+  TableRow,
+  TabStopPosition,
+  TabStopType,
   TextRun,
   UnderlineType,
+  VerticalAlign,
+  WidthType,
 } from 'docx';
 
 function toAlignment(value) {
@@ -265,6 +278,179 @@ function buildDocumentStyles(styleRegistry) {
   };
 }
 
+function headerLabelForTemplate(template) {
+  if (template.frontmatter.running_header) {
+    return template.frontmatter.running_header;
+  }
+
+  if (template.frontmatter.title && template.frontmatter.jurisdiction) {
+    return `${template.frontmatter.title} (${template.frontmatter.jurisdiction})`;
+  }
+
+  return template.frontmatter.title ?? null;
+}
+
+function buildPageHeader(template) {
+  const headerConfig = template.styleRegistry.docx.header;
+  const label = headerLabelForTemplate(template);
+  if (!headerConfig?.enabled || !label) {
+    return undefined;
+  }
+
+  const nilBorder = {
+    style: BorderStyle.NIL,
+    color: 'FFFFFF',
+    size: 0,
+  };
+  const pageWidth = template.styleRegistry.docx.page_size.width;
+  const margins = template.styleRegistry.docx.page_margin;
+  const tableWidth = pageWidth - margins.left - margins.right;
+  const rightColumnWidth = Math.max(2400, Math.floor(tableWidth * 0.34));
+  const leftColumnWidth = tableWidth - rightColumnWidth;
+
+  return new Header({
+    children: [
+      new Table({
+        width: { size: tableWidth, type: WidthType.DXA },
+        layout: TableLayoutType.FIXED,
+        columnWidths: [leftColumnWidth, rightColumnWidth],
+        borders: {
+          top: {
+            style: BorderStyle.SINGLE,
+            color: headerConfig.rule_color,
+            size: headerConfig.rule_size,
+          },
+          left: nilBorder,
+          bottom: nilBorder,
+          right: nilBorder,
+          insideH: nilBorder,
+          insideV: nilBorder,
+        },
+        rows: [
+          new TableRow({
+            height: { value: 360, rule: HeightRule.ATLEAST },
+            children: [
+              new TableCell({
+                borders: { top: nilBorder, left: nilBorder, bottom: nilBorder, right: nilBorder },
+                margins: { top: 36, left: 0, bottom: 0, right: 0 },
+                children: [new Paragraph({ children: [new TextRun('')] })],
+              }),
+              new TableCell({
+                borders: { top: nilBorder, left: nilBorder, bottom: nilBorder, right: nilBorder },
+                margins: { top: 36, left: 0, bottom: 0, right: 0 },
+                verticalAlign: VerticalAlign.CENTER,
+                children: [
+                  new Paragraph({
+                    spacing: { before: 0, after: 0 },
+                    alignment: AlignmentType.RIGHT,
+                    children: [
+                      new TextRun({
+                        text: label.toUpperCase(),
+                        font: template.styleRegistry.docx.defaults.font,
+                        size: headerConfig.font_size,
+                        bold: true,
+                        color: headerConfig.color,
+                      }),
+                    ],
+                  }),
+                ],
+              }),
+            ],
+          }),
+        ],
+      }),
+      new Paragraph({
+        spacing: { after: headerConfig.spacing_after },
+        children: [new TextRun('')],
+      }),
+    ],
+  });
+}
+
+function buildHeaderSectionOptions(template, pageHeader) {
+  if (!pageHeader) {
+    return {};
+  }
+
+  const headerConfig = template.styleRegistry.docx.header;
+  if (headerConfig?.first_page_only) {
+    return {
+      headers: {
+        first: pageHeader,
+      },
+      properties: {
+        titlePage: true,
+      },
+    };
+  }
+
+  return {
+    headers: {
+      default: pageHeader,
+    },
+  };
+}
+
+function formatLicenseLabel(license) {
+  return String(license).replace(/-/g, ' ');
+}
+
+function buildPageFooter(template) {
+  const footerConfig = template.styleRegistry.docx.footer;
+  if (!footerConfig?.enabled) {
+    return undefined;
+  }
+
+  const baseRun = {
+    font: template.styleRegistry.docx.defaults.font,
+    size: footerConfig.font_size,
+    color: footerConfig.color,
+  };
+  const name = template.metadata?.name ?? template.frontmatter.title ?? 'OpenAgreements Template';
+  const version = template.metadata?.version ?? '1.0';
+  const license = formatLicenseLabel(template.metadata?.license ?? 'CC BY 4.0');
+
+  return new Footer({
+    children: [
+      new Paragraph({
+        tabStops: [{ type: TabStopType.RIGHT, position: TabStopPosition.MAX }],
+        children: [
+          new TextRun({
+            text: `${name} (v${version}). Free to use under ${license}.`,
+            ...baseRun,
+          }),
+          new TextRun({ text: '\tPage ', ...baseRun }),
+          new TextRun({ children: [PageNumber.CURRENT], ...baseRun }),
+          new TextRun({ text: ' of ', ...baseRun }),
+          new TextRun({ children: [PageNumber.TOTAL_PAGES], ...baseRun }),
+        ],
+      }),
+    ],
+  });
+}
+
+function buildFooterSectionOptions(template, pageFooter) {
+  if (!pageFooter) {
+    return {};
+  }
+
+  const headerConfig = template.styleRegistry.docx.header;
+  if (headerConfig?.first_page_only) {
+    return {
+      footers: {
+        first: pageFooter,
+        default: pageFooter,
+      },
+    };
+  }
+
+  return {
+    footers: {
+      default: pageFooter,
+    },
+  };
+}
+
 function flattenInlineNodes(nodes, styleRegistry, baseStyle, placeholderFormatter) {
   const runs = [];
   const paragraphBaseStyle = paragraphRunStyle(baseStyle);
@@ -428,6 +614,11 @@ export async function renderContractIrToArtifacts(template) {
     return paragraphs;
   });
 
+  const pageHeader = buildPageHeader(template);
+  const pageFooter = buildPageFooter(template);
+  const headerSectionOptions = buildHeaderSectionOptions(template, pageHeader);
+  const footerSectionOptions = buildFooterSectionOptions(template, pageFooter);
+
   const document = new Document({
     styles: buildDocumentStyles(template.styleRegistry),
     sections: [
@@ -437,7 +628,10 @@ export async function renderContractIrToArtifacts(template) {
             size: template.styleRegistry.docx.page_size,
             margin: template.styleRegistry.docx.page_margin,
           },
+          ...headerSectionOptions.properties,
         },
+        ...(headerSectionOptions.headers ? { headers: headerSectionOptions.headers } : {}),
+        ...(footerSectionOptions.footers ? { footers: footerSectionOptions.footers } : {}),
         children,
       },
     ],

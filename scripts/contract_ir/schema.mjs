@@ -54,6 +54,7 @@ export const contractIrFrontmatterSchema = z.object({
   docStyle: textSchema,
   title: textSchema.optional(),
   jurisdiction: textSchema.optional(),
+  running_header: textSchema.optional(),
 });
 
 export const contractIrSchemaRegistrySchema = z.object({
@@ -94,6 +95,20 @@ export const contractIrStyleRegistrySchema = z.object({
       line: z.number().int().positive(),
       spacing_after: z.number().int().nonnegative(),
     }),
+    header: z.object({
+      enabled: z.boolean().default(false),
+      first_page_only: z.boolean().default(false),
+      font_size: z.number().int().positive().default(18),
+      color: z.string().regex(hexColorPattern).default('107087'),
+      rule_color: z.string().regex(hexColorPattern).default('107087'),
+      rule_size: z.number().int().positive().default(14),
+      spacing_after: z.number().int().nonnegative().default(60),
+    }).optional(),
+    footer: z.object({
+      enabled: z.boolean().default(false),
+      font_size: z.number().int().positive().default(13),
+      color: z.string().regex(hexColorPattern).default('494A4B'),
+    }).optional(),
   }),
   headings: z.object({
     h1: paragraphStyleSchema,

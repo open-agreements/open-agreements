@@ -4,6 +4,7 @@ schema: ./schema.yaml
 docStyle: ./styles.yaml
 title: Board Consent for SAFE Financing
 jurisdiction: Delaware
+running_header: Board Consent for Approving SAFE (Delaware)
 ---
 
 # ACTION BY UNANIMOUS WRITTEN CONSENT OF THE BOARD OF DIRECTORS OF {{company_name}}

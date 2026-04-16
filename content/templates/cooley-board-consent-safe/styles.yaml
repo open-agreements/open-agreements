@@ -17,6 +17,18 @@ docx:
     color: '000000'
     line: 276
     spacing_after: 120
+  header:
+    enabled: true
+    first_page_only: true
+    font_size: 18
+    color: '107087'
+    rule_color: '107087'
+    rule_size: 14
+    spacing_after: 60
+  footer:
+    enabled: true
+    font_size: 20
+    color: '494A4B'
 headings:
   h1:
     align: center

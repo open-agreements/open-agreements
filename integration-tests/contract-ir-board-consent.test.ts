@@ -122,8 +122,12 @@ describe('Contract IR SAFE board consent', () => {
 
   it.openspec('OA-TMP-024')('renders DOCX and Markdown from the same normalized Contract IR model', async () => {
     const { buffer, markdown } = await renderContractIrTemplate(TEMPLATE_DIR);
-    const xml = new AdmZip(buffer).getEntry('word/document.xml')?.getData().toString('utf-8') ?? '';
-    const stylesXml = new AdmZip(buffer).getEntry('word/styles.xml')?.getData().toString('utf-8') ?? '';
+    const zip = new AdmZip(buffer);
+    const xml = zip.getEntry('word/document.xml')?.getData().toString('utf-8') ?? '';
+    const stylesXml = zip.getEntry('word/styles.xml')?.getData().toString('utf-8') ?? '';
+    const headerXml = zip.getEntry('word/header1.xml')?.getData().toString('utf-8') ?? '';
+    const footerXml = zip.getEntry('word/footer1.xml')?.getData().toString('utf-8') ?? '';
+    const relsXml = zip.getEntry('word/_rels/document.xml.rels')?.getData().toString('utf-8') ?? '';
 
     expect(buffer.length).toBeGreaterThan(5_000);
     expect(markdown).toContain('# ACTION BY UNANIMOUS WRITTEN CONSENT OF THE BOARD OF DIRECTORS OF {company_name}');
@@ -138,6 +142,10 @@ describe('Contract IR SAFE board consent', () => {
     expect(xml).toContain('[Signature Page Follows]');
     expect(xml).toContain('w:pgSz w:w="12240" w:h="15840"');
     expect(xml).toContain('w:br w:type="page"');
+    expect(xml).toContain('w:headerReference w:type="first"');
+    expect(xml).toContain('w:footerReference w:type="default"');
+    expect(xml).toContain('w:footerReference w:type="first"');
+    expect(xml).toContain('w:titlePg');
     expect(xml).toContain('w:pStyle w:val="Normal"');
     expect(xml).toContain('w:pStyle w:val="OAHeading2"');
     expect(xml).toContain('w:pStyle w:val="OABlockNote"');
@@ -146,6 +154,12 @@ describe('Contract IR SAFE board consent', () => {
     expect(stylesXml).toContain('w:styleId="OABlockNote"');
     expect(stylesXml).toContain('w:styleId="OABlockSignatureFollow"');
     expect(stylesXml).toContain('Times New Roman');
+    expect(headerXml).toContain('BOARD CONSENT FOR APPROVING SAFE (DELAWARE)');
+    expect(headerXml).toContain('107087');
+    expect(footerXml).toContain('Board Consent for SAFE Financing (v1.0). Free to use under CC BY 4.0.');
+    expect(relsXml).toContain('header1.xml');
+    expect(relsXml).toContain('footer1.xml');
+    expect(relsXml).toContain('footer2.xml');
   });
 
   it.openspec('OA-TMP-025')('preserves source text, placeholders, and signature structure relative to Joey’s current source', async () => {
