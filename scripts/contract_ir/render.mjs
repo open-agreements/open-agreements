@@ -147,6 +147,11 @@ function buildDocumentStyles(styleRegistry) {
     preview_emphasis: 'plain',
   };
 
+  // Pages was materially less forgiving than LibreOffice during SAFE board
+  // consent backport testing. It expects a concrete Normal paragraph style plus
+  // concrete custom paragraph styles for any style IDs referenced in
+  // document.xml. Keeping that style tree explicit is the compatibility floor.
+
   const buildParagraphStyle = (id, name, style) => {
     const paragraphOptions = {
       spacing: {

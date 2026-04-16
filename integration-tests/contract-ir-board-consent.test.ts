@@ -138,7 +138,13 @@ describe('Contract IR SAFE board consent', () => {
     expect(xml).toContain('[Signature Page Follows]');
     expect(xml).toContain('w:pgSz w:w="12240" w:h="15840"');
     expect(xml).toContain('w:br w:type="page"');
+    expect(xml).toContain('w:pStyle w:val="Normal"');
+    expect(xml).toContain('w:pStyle w:val="OAHeading2"');
+    expect(xml).toContain('w:pStyle w:val="OABlockNote"');
     expect(stylesXml).toContain('w:styleId="Normal"');
+    expect(stylesXml).toContain('w:styleId="OAHeading2"');
+    expect(stylesXml).toContain('w:styleId="OABlockNote"');
+    expect(stylesXml).toContain('w:styleId="OABlockSignatureFollow"');
     expect(stylesXml).toContain('Times New Roman');
   });
 

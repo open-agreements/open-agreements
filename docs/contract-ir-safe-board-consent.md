@@ -14,6 +14,57 @@
 - A template-local `clean.json` so the introductory note is removed from filled
   output using the repo’s existing clean-before-fill pipeline
 
+## Renderer compatibility notes
+
+The canonical renderer shape should remain the style-based version from the
+backport, not the more direct-format-heavy experiment variants.
+
+What the incremental Pages tests showed:
+
+- Letter vs A4 was not the deciding factor. `page_size` does wire through from
+  `styles.yaml`, but changing it alone did not fix the Pages mismatch.
+- `pStyle` references alone were not enough. Pages still mis-rendered centered
+  headings when the referenced paragraph styles were missing from `styles.xml`.
+- Custom paragraph styles without a concrete `Normal` base produced worse
+  inheritance behavior in Pages.
+- The compatibility floor was an explicit paragraph style tree:
+  - a real `Normal` style in `styles.xml`
+  - concrete custom paragraph styles for referenced IDs like `OAHeading2` and
+    `OABlockNote`
+  - paragraphs in `document.xml` pointing at those styles
+
+That means the renderer should favor explicit paragraph styles plus minimal
+inline overrides over “cleaner” direct formatting. The extra XML is acceptable
+because OpenAgreements already consumes DOCX through token-efficient tooling,
+and the style tree is the more robust cross-editor contract.
+
+## OOXML package notes
+
+The generated SAFE board consent is not unusually minimal relative to the
+`docx` library baseline. A fresh `docx`-generated file includes the same core
+package skeleton:
+
+- `_rels/.rels`
+- `word/_rels/document.xml.rels`
+- `[Content_Types].xml`
+- `word/styles.xml`
+- `word/settings.xml`
+- `word/fontTable.xml`
+- `word/comments.xml`
+- `word/footnotes.xml`
+- `word/endnotes.xml`
+
+Important nuance:
+
+- `rels` files and `[Content_Types].xml` are structural and required.
+- `comments.xml` is emitted as an empty container by `docx`; it does not mean
+  the document actually contains user-visible comments.
+- `footnotes.xml` and `endnotes.xml` are emitted with separator defaults even
+  when no user-authored notes exist.
+- Headers, footers, theme parts, and media parts are conditional. Templates
+  like the offer letter include header/footer rels because they use them; the
+  SAFE board consent does not.
+
 ## What remains unsupported
 
 - Lists, tables, and arbitrary nested Markdown structures
