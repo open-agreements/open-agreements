@@ -1,0 +1,20 @@
+schema_id: openagreements-stockholder-consent-safe-v1
+variables:
+  company_name:
+    type: string
+    description: Full legal name of the company
+  effective_date:
+    type: date
+    description: Date the stockholder consent is executed
+  purchase_amount:
+    type: string
+    description: Aggregate SAFE purchase amount, without the dollar sign
+  stockholder_1_name:
+    type: string
+    description: Full name of the first stockholder signing the consent
+  stockholder_2_name:
+    type: string
+    description: Full name of the second stockholder signing the consent
+  stockholder_3_name:
+    type: string
+    description: Full name of the third stockholder signing the consent

@@ -1,0 +1,46 @@
+name: Stockholder Consent for SAFE Financing
+category: corporate-governance
+description: >-
+  Action by written consent of the stockholders of a Delaware corporation
+  approving the issuance of one or more Simple Agreements for Future Equity
+  (SAFEs). Canonically authored in Contract IR and rendered to DOCX.
+source_url: https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-stockholder-consent-safe
+version: '1.0'
+license: CC-BY-4.0
+allow_derivatives: true
+attribution_text: >-
+  Authored by OpenAgreements contributors. Drafting structure informed by
+  publicly available Series Seed SAFE stockholder consent materials. Licensed
+  under CC BY 4.0.
+fields:
+  - name: company_name
+    type: string
+    description: Full legal name of the company
+    section: Parties
+  - name: effective_date
+    type: date
+    description: Date the stockholder consent is executed
+    section: Terms
+  - name: purchase_amount
+    type: string
+    description: Aggregate SAFE purchase amount (for example, "500,000")
+    section: Deal Terms
+  - name: stockholder_1_name
+    type: string
+    description: Full name of the first stockholder
+    section: Signatures
+  - name: stockholder_2_name
+    type: string
+    description: Full name of the second stockholder
+    section: Signatures
+  - name: stockholder_3_name
+    type: string
+    description: Full name of the third stockholder
+    section: Signatures
+priority_fields:
+  - company_name
+  - effective_date
+  - purchase_amount
+  - stockholder_1_name
+  - stockholder_2_name
+  - stockholder_3_name

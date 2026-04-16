@@ -74,19 +74,12 @@ Important nuance:
   file pointers
 - Automatic metadata generation from `schema.yaml`
 
-## Should the stockholder consent migrate next?
+## Stockholder consent follow-on
 
-Yes, but only after this board-consent path is stable in normal regeneration and
-validation workflows.
+The SAFE stockholder consent has now been migrated as the second Contract IR
+template under `content/templates/openagreements-stockholder-consent-safe/`.
 
-The stockholder consent is a reasonable next candidate because it shares the
-same broad structure:
-
-- title plus Delaware consent framing
-- centered section headings
-- resolution paragraphs with bold lead-ins
-- signature blocks
-
-That said, it should remain a separate follow-on change so the current proof of
-concept stays narrow and the parser is extended only when its real needs are
-clear.
+That follow-on reuse is the main signal that the board-consent backport was not
+a one-off. The same parser, registry pointers, renderer, clean-before-fill
+pipeline, and fidelity-test pattern carried over with only template-local
+content changes.

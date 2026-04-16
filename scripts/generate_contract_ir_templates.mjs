@@ -4,6 +4,7 @@ import { renderContractIrTemplate } from './contract_ir/index.mjs';
 
 const TEMPLATE_DIRS = [
   'content/templates/openagreements-board-consent-safe',
+  'content/templates/openagreements-stockholder-consent-safe',
 ];
 
 async function main() {
