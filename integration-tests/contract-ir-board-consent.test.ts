@@ -208,6 +208,30 @@ describe('Contract IR SAFE board consent', () => {
     expect(filledText).toContain('Approval of SAFE Financing');
   });
 
+  it.openspec('OA-TMP-025')('preserves PAGE and NUMPAGES footer field codes through fill', async () => {
+    const outputDir = mkdtempSync(join(tmpdir(), 'board-consent-footer-fields-'));
+    tempDirs.push(outputDir);
+    const outputPath = join(outputDir, 'filled-footer.docx');
+
+    await fillTemplate({
+      templateDir: TEMPLATE_DIR,
+      outputPath,
+      values: {
+        company_name: 'Acme Labs, Inc.',
+        effective_date: 'April 15, 2026',
+        purchase_amount: '500,000',
+        board_members: [{ name: 'Alex Director' }],
+      },
+    });
+
+    const zip = new AdmZip(outputPath);
+    const footerXml = zip.getEntry('word/footer1.xml')?.getData().toString('utf-8') ?? '';
+
+    expect(footerXml).toContain('Board Consent for SAFE Financing (v1.0). Free to use under CC BY 4.0.');
+    expect(footerXml).toMatch(/<w:instrText[^>]*>\s*PAGE\s*<\/w:instrText>/);
+    expect(footerXml).toMatch(/<w:instrText[^>]*>\s*NUMPAGES\s*<\/w:instrText>/);
+  });
+
   it.openspec('OA-FIL-017')('renders only the provided board member signature blocks when filled', async () => {
     const outputDir = mkdtempSync(join(tmpdir(), 'board-consent-one-signer-'));
     tempDirs.push(outputDir);

@@ -211,6 +211,11 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
  * Collapse runs of 2+ spaces into a single space within all text paragraphs.
  * Fixes double spaces left when empty field substitutions (e.g. {initial_word_lower} → "")
  * leave adjacent spaces in the DOCX.
+ *
+ * Paragraphs containing Word field characters (w:fldChar) are skipped because
+ * getParagraphText treats field-code runs as empty, so "Page " + PAGE field +
+ * " of " looks like "Page  of " and the replacement would delete the field run
+ * that sits between the two space-bearing runs.
  */
 async function collapseDoubleSpacesInDocx(docxPath: string): Promise<void> {
   const zip = new AdmZip(docxPath);
@@ -229,6 +234,9 @@ async function collapseDoubleSpacesInDocx(docxPath: string): Promise<void> {
 
     for (let i = 0; i < paragraphs.length; i++) {
       const para = paragraphs[i] as unknown as globalThis.Element;
+      if (para.getElementsByTagNameNS(W_NS, 'fldChar').length > 0) {
+        continue;
+      }
       let text = getParagraphText(para);
       let match: RegExpExecArray | null;
       while ((match = / {2,}/.exec(text)) !== null) {
