@@ -88,9 +88,6 @@ fields:
     type: string
     description: Duration of employee non-solicitation restriction
     default: 12 months
-    default_value_rationale: >-
-      12 months is the most common enforceable duration. Mayer Brown guidance
-      states 1-2 years is the outer range of reasonableness.
     section: Employee Non-Solicitation
   - name: covered_employee_period
     type: string
@@ -113,9 +110,6 @@ fields:
     type: string
     description: Duration of customer/partner non-solicitation restriction
     default: 12 months
-    default_value_rationale: >-
-      12 months is the most common enforceable duration. Compass Minerals uses
-      12 months for non-CEO employees and 24 months for CEO.
     section: Customer Non-Solicitation
   - name: covered_customer_period
     type: string
@@ -144,10 +138,6 @@ fields:
     type: string
     description: Duration of non-competition restriction
     default: 12 months
-    default_value_rationale: >-
-      12 months is the most common enforceable duration. Hassler v. Circle C
-      Resources (2022 WY 28) struck down a 24-month provision with broad
-      scope. No Wyoming court has upheld a non-compete exceeding 24 months.
     section: Non-Competition
   - name: territory
     type: string

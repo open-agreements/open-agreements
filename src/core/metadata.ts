@@ -195,13 +195,96 @@ export const RecipeMetadataSchema = z.object({
 });
 export type RecipeMetadata = z.infer<typeof RecipeMetadataSchema>;
 
+// --- legal-context sidecar ---
+//
+// When a template has a sibling metadata.legal-context.yaml, it is a GENERATED
+// artifact owned by the legal-context repo (see open-agreements/README.md §
+// "Two-sidecar ownership model" and legal-context scripts/sync_open_agreements.py).
+//
+// The sidecar may only set these keys per field, chosen so legal-context owns
+// the research-derived values and nothing else:
+//   - default
+//   - default_value_rationale
+//   - options
+//   - display
+//
+// At load time we deep-merge the sidecar on top of the hand-authored metadata.yaml:
+// for overlapping fields, the sidecar wins for the allowed keys only; every other
+// key (name, type, description, section, etc.) comes from metadata.yaml.
+//
+// Fields that only exist in metadata.yaml pass through unchanged (that's how
+// covenants not yet researched by legal-context keep their hand-authored defaults).
+// Fields that only exist in the sidecar are rejected by the CI lint
+// (scripts/validate_metadata_sidecar.mjs) — they imply a rename or typo.
+
+const OWNED_SIDECAR_KEYS = ['default', 'default_value_rationale', 'options', 'display'] as const;
+type OwnedSidecarKey = typeof OWNED_SIDECAR_KEYS[number];
+
+const SidecarFieldSchema = z.object({
+  name: z.string(),
+  default: z.string().optional(),
+  default_value_rationale: z.string().optional(),
+  options: z.array(z.string()).optional(),
+  display: z.record(z.string(), z.unknown()).optional(),
+}).strict();
+
+const SidecarSchema = z.object({
+  fields: z.array(SidecarFieldSchema).default([]),
+}).strict();
+
+export type LegalContextSidecar = z.infer<typeof SidecarSchema>;
+
+export function loadLegalContextSidecar(templateDir: string): LegalContextSidecar | null {
+  const sidecarPath = join(templateDir, 'metadata.legal-context.yaml');
+  if (!existsSync(sidecarPath)) {
+    return null;
+  }
+  const raw = readFileSync(sidecarPath, 'utf-8');
+  const parsed = yaml.load(raw);
+  return SidecarSchema.parse(parsed);
+}
+
+function mergeSidecarIntoFields(
+  fields: FieldDefinition[],
+  sidecar: LegalContextSidecar,
+): FieldDefinition[] {
+  const overrides = new Map<string, Record<OwnedSidecarKey, unknown>>();
+  for (const entry of sidecar.fields) {
+    const owned: Partial<Record<OwnedSidecarKey, unknown>> = {};
+    for (const key of OWNED_SIDECAR_KEYS) {
+      if (entry[key] !== undefined) {
+        owned[key] = entry[key];
+      }
+    }
+    overrides.set(entry.name, owned as Record<OwnedSidecarKey, unknown>);
+  }
+
+  return fields.map((field) => {
+    const override = overrides.get(field.name);
+    if (!override) return field;
+    const merged: Record<string, unknown> = { ...field };
+    for (const [k, v] of Object.entries(override)) {
+      merged[k] = v;
+    }
+    return merged as unknown as FieldDefinition;
+  });
+}
+
 // --- Template loaders ---
 
 export function loadMetadata(templateDir: string): TemplateMetadata {
   const metadataPath = join(templateDir, 'metadata.yaml');
   const raw = readFileSync(metadataPath, 'utf-8');
   const parsed = yaml.load(raw);
-  return TemplateMetadataSchema.parse(parsed);
+  const metadata = TemplateMetadataSchema.parse(parsed);
+
+  const sidecar = loadLegalContextSidecar(templateDir);
+  if (!sidecar) {
+    return metadata;
+  }
+
+  const mergedFields = mergeSidecarIntoFields(metadata.fields, sidecar);
+  return { ...metadata, fields: mergedFields };
 }
 
 export function validateMetadata(templateDir: string): { valid: boolean; errors: string[] } {

@@ -154,3 +154,19 @@ Before adding a template, classify the source as one of:
 Do not onboard `restricted-no-automation` sources into `content/templates/`, `content/external/`,
 or recipe auto-fetch flows without explicit written permission. Employment-pack
 classifications are tracked in `docs/employment-source-policy.md`.
+
+## Legal-Research-Derived Metadata (Two-Sidecar Ownership)
+
+Some templates ship with a sibling `metadata.legal-context.yaml` file in their
+template directory. This is a **generated artifact** synced from the
+`legal-context` repo — it carries research-derived values (`default`,
+`default_value_rationale`, `options`) for fields where law firms' analysis
+determines the right default.
+
+**Do not hand-edit `metadata.legal-context.yaml` files.** They are overwritten
+on every legal-context sync. If the rationale text is wrong, the fix lives in
+legal-context's practice note, not here.
+
+See [`two-sidecar-metadata-ownership.md`](./two-sidecar-metadata-ownership.md)
+for the full model, merge rules, and what to do when a field rename trips the
+CI lint at `scripts/validate_metadata_sidecar.mjs`.
