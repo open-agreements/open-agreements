@@ -12,10 +12,12 @@ This template is canonically authored in Contract IR:
 - `schema.yaml` defines the allowed variables.
 - `styles.yaml` defines the rendering semantics for DOCX and Markdown output.
 
-Generated artifacts:
+Generated artifact:
 
 - `template.docx`
-- `template.md`
+
+Markdown downloads are derived from `content.md` at build time so the canonical
+authoring source stays in one place.
 - `clean.json` removes the introductory drafting note from filled output while
   keeping it in the canonical authoring source and generated base template
 

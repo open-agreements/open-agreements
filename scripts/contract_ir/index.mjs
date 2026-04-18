@@ -8,7 +8,7 @@ import {
   validateContractIrStyleRegistry,
   variableNamePattern,
 } from './schema.mjs';
-import { renderContractIrToArtifacts } from './render.mjs';
+import { renderContractIrMarkdown as renderMarkdownFromTemplate, renderContractIrToArtifacts } from './render.mjs';
 
 const FRONTMATTER_RE = /^---\n([\s\S]*?)\n---\n?([\s\S]*)$/;
 const STYLE_LINE_RE = /^\{style=([a-z0-9][a-z0-9-]*)\}$/;
@@ -282,4 +282,9 @@ export async function renderContractIrTemplate(templateDir) {
     template,
     ...(await renderContractIrToArtifacts(template)),
   };
+}
+
+export function renderContractIrMarkdown(templateDir) {
+  const template = loadContractIrTemplate(templateDir);
+  return renderMarkdownFromTemplate(template);
 }

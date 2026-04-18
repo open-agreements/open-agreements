@@ -1063,7 +1063,8 @@ readable Markdown preview from the same normalized model.
 
 #### Scenario: [OA-TMP-031] Contract IR renders deterministic artifacts
 - **WHEN** a validated Contract IR template is generated into DOCX and Markdown artifacts
-- **THEN** the system writes `template.docx` and `template.md`
+- **THEN** the system writes `template.docx`
+- **AND** derives a readable Markdown preview from the same normalized model
 - **AND** both artifacts contain the required headings, placeholders, and
   signature sections from the canonical content source
 
