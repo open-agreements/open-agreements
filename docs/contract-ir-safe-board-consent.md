@@ -7,8 +7,8 @@
   - resolves external schema and style YAML registries
   - validates variables and style slugs
   - builds a normalized paragraph-oriented model
-- A renderer that emits both `template.docx` and `template.md` from that same
-  normalized model
+- A renderer that emits `template.docx` and derives the Markdown preview from
+  that same normalized model
 - A new canonical Contract IR template at
   `content/templates/openagreements-board-consent-safe/`
 - A template-local `clean.json` so the introductory note is removed from filled

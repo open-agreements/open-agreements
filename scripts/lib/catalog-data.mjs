@@ -6,9 +6,11 @@ import {
   readdirSync,
   readFileSync,
   statSync,
+  writeFileSync,
 } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { renderContractIrMarkdown } from "../contract_ir/index.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -152,6 +154,14 @@ function getContentRepoPath(id, contentTier) {
   return `content/templates/${id}`;
 }
 
+function hasContractIrSource(templateDir) {
+  return (
+    existsSync(resolve(templateDir, "content.md")) &&
+    existsSync(resolve(templateDir, "schema.yaml")) &&
+    existsSync(resolve(templateDir, "styles.yaml"))
+  );
+}
+
 function loadCatalogItems(rootDir) {
   const bin = resolve(rootDir, "bin/open-agreements.js");
   const raw = execFileSync("node", [bin, "list", "--json"], {
@@ -177,6 +187,7 @@ export function buildCatalog({ rootDir = REPO_ROOT } = {}) {
       item.name.startsWith("openagreements-") || sourceLabel === "OpenAgreements";
     const hasPreview = isOpenAgreements;
     const templateDir = resolve(rootDir, "content", "templates", item.name);
+    const hasContractIrMarkdownSource = hasContractIrSource(templateDir);
     const hasDocxDownload =
       hasPreview &&
       flags.distributable &&
@@ -184,7 +195,7 @@ export function buildCatalog({ rootDir = REPO_ROOT } = {}) {
     const hasMarkdownDownload =
       hasPreview &&
       flags.distributable &&
-      existsSync(resolve(templateDir, "template.md"));
+      (existsSync(resolve(templateDir, "template.md")) || hasContractIrMarkdownSource);
 
     const templateData = {
       id: item.name,
@@ -315,19 +326,25 @@ export function prepareCatalogDownloads({
     }
 
     if (template.hasMarkdownDownload) {
-      const sourcePath = resolve(
-        rootDir,
-        "content",
-        "templates",
-        template.id,
-        "template.md",
-      );
+      const templateDir = resolve(rootDir, "content", "templates", template.id);
+      const sourcePath = resolve(templateDir, "template.md");
+      const contentSourcePath = resolve(templateDir, "content.md");
       const destinationPath = resolve(downloadsDir, `${template.id}.md`);
-      if (
-        !existsSync(destinationPath) ||
-        statSync(destinationPath).mtimeMs < statSync(sourcePath).mtimeMs
+      if (existsSync(sourcePath)) {
+        if (
+          !existsSync(destinationPath) ||
+          statSync(destinationPath).mtimeMs < statSync(sourcePath).mtimeMs
+        ) {
+          copyFileSync(sourcePath, destinationPath);
+        }
+      } else if (
+        hasContractIrSource(templateDir) &&
+        (
+          !existsSync(destinationPath) ||
+          statSync(destinationPath).mtimeMs < statSync(contentSourcePath).mtimeMs
+        )
       ) {
-        copyFileSync(sourcePath, destinationPath);
+        writeFileSync(destinationPath, renderContractIrMarkdown(templateDir), "utf-8");
       }
     }
   }
