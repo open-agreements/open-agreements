@@ -562,7 +562,7 @@ function applyPreviewEmphasis(text, emphasis) {
   }
 }
 
-function renderMarkdown(template) {
+export function renderContractIrMarkdown(template) {
   const lines = [];
 
   for (const block of template.blocks) {
@@ -640,6 +640,6 @@ export async function renderContractIrToArtifacts(template) {
   return {
     document,
     buffer: await Packer.toBuffer(document),
-    markdown: renderMarkdown(template),
+    markdown: renderContractIrMarkdown(template),
   };
 }
