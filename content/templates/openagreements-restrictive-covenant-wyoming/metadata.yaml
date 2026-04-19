@@ -67,7 +67,6 @@ fields:
   - name: confidentiality_trade_secret_duration
     type: string
     description: Duration of confidentiality obligations for trade secrets
-    default: Perpetual
     section: Confidentiality
   - name: confidentiality_other_duration
     type: string
@@ -87,7 +86,6 @@ fields:
   - name: employee_nonsolicit_duration
     type: string
     description: Duration of employee non-solicitation restriction
-    default: 12 months
     section: Employee Non-Solicitation
   - name: covered_employee_period
     type: string
@@ -109,7 +107,6 @@ fields:
   - name: customer_nonsolicit_duration
     type: string
     description: Duration of customer/partner non-solicitation restriction
-    default: 12 months
     section: Customer Non-Solicitation
   - name: covered_customer_period
     type: string
@@ -137,7 +134,6 @@ fields:
   - name: noncompete_duration
     type: string
     description: Duration of non-competition restriction
-    default: 12 months
     section: Non-Competition
   - name: territory
     type: string

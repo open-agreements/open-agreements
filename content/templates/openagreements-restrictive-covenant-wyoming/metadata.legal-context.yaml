@@ -11,10 +11,14 @@
 
 fields:
 - name: noncompete_duration
-  default_value_rationale: For contracts entered on or after July 1, 2025, Wyo. Stat. 1-23-108 voids non-competes unless one of four statutory exceptions applies (executive/management personnel and their professional staff, trade-secret protection, sale-of-business, or capped expense-recovery). No Wyoming court has upheld a non-compete exceeding 24 months, and Hassler v. Circle C Resources eliminated blue-penciling. (Wyo. Stat. 1-23-108 (SF 107, 2025); Hassler v. Circle C Resources, 2022 WY 28)
+  default: "12 months"
+  default_value_rationale: "For contracts entered on or after July 1, 2025, Wyo. Stat. 1-23-108 voids non-competes unless one of four statutory exceptions applies (executive/management personnel and their professional staff, trade-secret protection, sale-of-business, or capped expense-recovery). No Wyoming court has upheld a non-compete exceeding 24 months, and Hassler v. Circle C Resources eliminated blue-penciling. (Wyo. Stat. 1-23-108 (SF 107, 2025); Hassler v. Circle C Resources, 2022 WY 28)"
 - name: customer_nonsolicit_duration
-  default_value_rationale: SF 107 does not expressly exempt customer non-solicits. Brownstein reads the statute as leaving them intact; Littler and Fisher Phillips caution that courts may treat broad customer non-solicits as de facto non-competes subject to the ban. (Wyo. Stat. 1-23-108 (SF 107, 2025) (no express non-solicit exception))
+  default: "12 months"
+  default_value_rationale: "SF 107 does not expressly exempt customer non-solicits. Brownstein reads the statute as leaving them intact; Littler and Fisher Phillips caution that courts may treat broad customer non-solicits as de facto non-competes subject to the ban. (Wyo. Stat. 1-23-108 (SF 107, 2025) (no express non-solicit exception))"
 - name: employee_nonsolicit_duration
-  default_value_rationale: 'Same unsettled posture as customer non-solicits: SF 107 does not expressly exempt employee non-solicitation, and firm commentary is split on whether courts will treat broad no-hire clauses as de facto non-competes. (Wyo. Stat. 1-23-108 (SF 107, 2025) (no express non-solicit exception))'
+  default: "12 months"
+  default_value_rationale: "Same unsettled posture as customer non-solicits: SF 107 does not expressly exempt employee non-solicitation, and firm commentary is split on whether courts will treat broad no-hire clauses as de facto non-competes. (Wyo. Stat. 1-23-108 (SF 107, 2025) (no express non-solicit exception))"
 - name: confidentiality_trade_secret_duration
-  default_value_rationale: Trade-secret protection is one of four enumerated statutory exceptions in SF 107 (Wyo. Stat. 1-23-108(a)(ii), citing W.S. 6-3-501(a)(xi)). Perpetual durations are standard, but the statute does not articulate a ceiling and Littler flags that the practical breadth of the trade-secret exception remains uncertain. (Wyo. Stat. 1-23-108(a)(ii) (SF 107, 2025); Wyo. Stat. 6-3-501(a)(xi) (Wyoming Uniform Trade Secrets Act))
+  default: "Perpetual"
+  default_value_rationale: "Trade-secret protection is one of four enumerated statutory exceptions in SF 107 (Wyo. Stat. 1-23-108(a)(ii), citing W.S. 6-3-501(a)(xi)). Perpetual durations are standard, but the statute does not articulate a ceiling and Littler flags that the practical breadth of the trade-secret exception remains uncertain. (Wyo. Stat. 1-23-108(a)(ii) (SF 107, 2025); Wyo. Stat. 6-3-501(a)(xi) (Wyoming Uniform Trade Secrets Act))"
