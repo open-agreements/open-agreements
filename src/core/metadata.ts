@@ -198,8 +198,8 @@ export type RecipeMetadata = z.infer<typeof RecipeMetadataSchema>;
 // --- legal-context sidecar ---
 //
 // When a template has a sibling metadata.legal-context.yaml, it is a GENERATED
-// artifact owned by the legal-context repo (see open-agreements/README.md §
-// "Two-sidecar ownership model" and legal-context scripts/sync_open_agreements.py).
+// artifact carrying curated defaults and rationales for a specific subset of
+// field keys (see docs/two-sidecar-metadata-ownership.md).
 //
 // The sidecar may only set these keys per field, chosen so legal-context owns
 // the research-derived values and nothing else:
@@ -208,14 +208,28 @@ export type RecipeMetadata = z.infer<typeof RecipeMetadataSchema>;
 //   - options
 //   - display
 //
-// At load time we deep-merge the sidecar on top of the hand-authored metadata.yaml:
-// for overlapping fields, the sidecar wins for the allowed keys only; every other
-// key (name, type, description, section, etc.) comes from metadata.yaml.
+// Merge contract (per-field, owned-key replace — NOT a deep merge):
+//   * Fields present in both files: sidecar REPLACES those four keys on
+//     metadata.yaml's field object; every other key (name, type, description,
+//     section, items, etc.) comes from metadata.yaml unchanged.
+//   * Fields present only in metadata.yaml: pass through unchanged (this is
+//     how fields not yet under editorial ownership keep their hand-authored
+//     shape).
+//   * Fields present only in the sidecar (i.e. name doesn't match any
+//     metadata.yaml field): THROWS. Silently dropping them would hide a real
+//     field rename or stale sidecar entry, re-creating the drift the two-file
+//     split is meant to prevent.
 //
-// Fields that only exist in metadata.yaml pass through unchanged (that's how
-// covenants not yet researched by legal-context keep their hand-authored defaults).
-// Fields that only exist in the sidecar are rejected by the CI lint
-// (scripts/validate_metadata_sidecar.mjs) — they imply a rename or typo.
+// Single-ownership rule: if the sidecar sets an owned key for a field, the
+// sibling metadata.yaml MUST NOT also set that same key on that field. This
+// rule is checked at merge time here and by the open-agreements CI lint at
+// scripts/validate_metadata_sidecar.mjs. Violating it means two files claim
+// ownership of the same value — the exact ambiguity this architecture exists
+// to prevent.
+//
+// After merge, the effective metadata is re-validated against the full
+// TemplateMetadataSchema so a sidecar can't inject values that violate the
+// field's declared type (e.g. a string default on a boolean-typed field).
 
 const OWNED_SIDECAR_KEYS = ['default', 'default_value_rationale', 'options', 'display'] as const;
 type OwnedSidecarKey = typeof OWNED_SIDECAR_KEYS[number];
@@ -230,7 +244,21 @@ const SidecarFieldSchema = z.object({
 
 const SidecarSchema = z.object({
   fields: z.array(SidecarFieldSchema).default([]),
-}).strict();
+}).strict().superRefine((sidecar, ctx) => {
+  const seen = new Set<string>();
+  sidecar.fields.forEach((entry, idx) => {
+    if (seen.has(entry.name)) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['fields', idx, 'name'],
+        message:
+          `Duplicate sidecar entry for field "${entry.name}". ` +
+          `Each field may appear at most once in metadata.legal-context.yaml.`,
+      });
+    }
+    seen.add(entry.name);
+  });
+});
 
 export type LegalContextSidecar = z.infer<typeof SidecarSchema>;
 
@@ -247,6 +275,7 @@ export function loadLegalContextSidecar(templateDir: string): LegalContextSideca
 function mergeSidecarIntoFields(
   fields: FieldDefinition[],
   sidecar: LegalContextSidecar,
+  templateDir: string,
 ): FieldDefinition[] {
   const overrides = new Map<string, Record<OwnedSidecarKey, unknown>>();
   for (const entry of sidecar.fields) {
@@ -259,15 +288,53 @@ function mergeSidecarIntoFields(
     overrides.set(entry.name, owned as Record<OwnedSidecarKey, unknown>);
   }
 
-  return fields.map((field) => {
+  const conflicts: string[] = [];
+  const applied = new Set<string>();
+  const fieldNames = new Set(fields.map((f) => f.name));
+  const merged = fields.map((field) => {
     const override = overrides.get(field.name);
     if (!override) return field;
-    const merged: Record<string, unknown> = { ...field };
-    for (const [k, v] of Object.entries(override)) {
-      merged[k] = v;
+    // Single-ownership rule: metadata.yaml must not also set an owned key
+    // for a field that the sidecar is managing. We don't "silently prefer
+    // the sidecar"; that would mask dead data in metadata.yaml and re-open
+    // the drift surface the two-file split exists to prevent.
+    for (const key of OWNED_SIDECAR_KEYS) {
+      if (Object.prototype.hasOwnProperty.call(field, key)) {
+        conflicts.push(`${field.name}.${key}`);
+      }
     }
-    return merged as unknown as FieldDefinition;
+    applied.add(field.name);
+    const mergedField: Record<string, unknown> = { ...field };
+    for (const [k, v] of Object.entries(override)) {
+      mergedField[k] = v;
+    }
+    return mergedField as unknown as FieldDefinition;
   });
+
+  if (conflicts.length > 0) {
+    throw new Error(
+      `Single-ownership violation in ${templateDir}: ` +
+      `metadata.yaml declares owned key(s) for sidecar-managed field(s): ` +
+      `${conflicts.join(', ')}. Remove these keys from metadata.yaml; the ` +
+      `sidecar is authoritative for them. See docs/two-sidecar-metadata-ownership.md.`,
+    );
+  }
+
+  const orphans = [...overrides.keys()].filter((name) => !applied.has(name));
+  if (orphans.length > 0) {
+    // Sidecar-only fields imply a rename or stale entry. Silently dropping
+    // them would mean the template appears to render cleanly while carrying
+    // dead sidecar content — exactly the drift we're preventing.
+    throw new Error(
+      `Sidecar at ${templateDir} references unknown field(s): ` +
+      `${orphans.join(', ')}. ` +
+      `Existing fields in metadata.yaml: ${[...fieldNames].join(', ')}. ` +
+      `Either the field was renamed/removed in metadata.yaml (regenerate the ` +
+      `sidecar) or the sidecar carries a stale entry.`,
+    );
+  }
+
+  return merged;
 }
 
 // --- Template loaders ---
@@ -283,8 +350,12 @@ export function loadMetadata(templateDir: string): TemplateMetadata {
     return metadata;
   }
 
-  const mergedFields = mergeSidecarIntoFields(metadata.fields, sidecar);
-  return { ...metadata, fields: mergedFields };
+  const mergedFields = mergeSidecarIntoFields(metadata.fields, sidecar, templateDir);
+  // Re-validate the effective metadata so a sidecar can't inject a value
+  // that violates the field's declared type (e.g. a string default on a
+  // boolean-typed field). Without this step, TemplateMetadataSchema checks
+  // only the raw metadata.yaml and returns success for invalid merged state.
+  return TemplateMetadataSchema.parse({ ...metadata, fields: mergedFields });
 }
 
 export function validateMetadata(templateDir: string): { valid: boolean; errors: string[] } {

@@ -99,6 +99,16 @@ function checkTemplate(templateId) {
 
   const declaredFieldNames = collectFieldNames(metadata?.fields);
 
+  // metadata.yaml indexed by field name, for the single-ownership check.
+  const metadataFieldByName = new Map();
+  if (Array.isArray(metadata?.fields)) {
+    for (const f of metadata.fields) {
+      if (f && typeof f.name === "string") metadataFieldByName.set(f.name, f);
+    }
+  }
+
+  const sidecarSeenNames = new Set();
+
   for (const [idx, entry] of sidecar.fields.entries()) {
     if (!entry || typeof entry !== "object") {
       errors.push(`metadata.legal-context.yaml: fields[${idx}] is not an object`);
@@ -109,12 +119,24 @@ function checkTemplate(templateId) {
       errors.push(`metadata.legal-context.yaml: fields[${idx}] missing "name"`);
       continue;
     }
+    // Duplicate sidecar entries are rejected. `Map`-style last-write-wins
+    // would silently hide whichever entry the sync intended to emit.
+    if (sidecarSeenNames.has(name)) {
+      errors.push(
+        `metadata.legal-context.yaml: fields[${idx}] duplicates an earlier entry for "${name}". ` +
+        `Each field may appear at most once in the sidecar.`
+      );
+      continue;
+    }
+    sidecarSeenNames.add(name);
+
     if (!declaredFieldNames.has(name)) {
       errors.push(
         `metadata.legal-context.yaml: fields[${idx}] "${name}" is not declared in metadata.yaml. ` +
         `Either the field was renamed/removed in metadata.yaml (regenerate the sidecar), ` +
         `or the sidecar was hand-edited to reference a nonexistent field.`
       );
+      continue;
     }
     for (const key of Object.keys(entry)) {
       if (key === "name") continue;
@@ -123,6 +145,23 @@ function checkTemplate(templateId) {
           `metadata.legal-context.yaml: fields[${idx}] "${name}" sets "${key}", which is not in ` +
           `the legal-context-owned key set (${[...ALLOWED_OWNED_KEYS].join(", ")}).`
         );
+      }
+    }
+
+    // Single-ownership: metadata.yaml must NOT also set any owned key for a
+    // sidecar-managed field. Otherwise the loader silently prefers the
+    // sidecar and the stale value in metadata.yaml looks live to anyone
+    // reading that file in isolation.
+    const metadataField = metadataFieldByName.get(name);
+    if (metadataField) {
+      for (const ownedKey of ALLOWED_OWNED_KEYS) {
+        if (Object.prototype.hasOwnProperty.call(metadataField, ownedKey)) {
+          errors.push(
+            `metadata.yaml: field "${name}" declares "${ownedKey}" while the sidecar also ` +
+            `manages this field. Remove "${ownedKey}" from metadata.yaml — the sidecar is ` +
+            `authoritative for these keys (default, default_value_rationale, options, display).`
+          );
+        }
       }
     }
   }

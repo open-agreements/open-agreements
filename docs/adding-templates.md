@@ -155,18 +155,20 @@ Do not onboard `restricted-no-automation` sources into `content/templates/`, `co
 or recipe auto-fetch flows without explicit written permission. Employment-pack
 classifications are tracked in `docs/employment-source-policy.md`.
 
-## Legal-Research-Derived Metadata (Two-Sidecar Ownership)
+## Maintainer-Generated Metadata Sidecars
 
-Some templates ship with a sibling `metadata.legal-context.yaml` file in their
-template directory. This is a **generated artifact** synced from the
-`legal-context` repo — it carries research-derived values (`default`,
-`default_value_rationale`, `options`) for fields where law firms' analysis
-determines the right default.
+Some templates ship with a sibling `metadata.legal-context.yaml` file next to
+their `metadata.yaml`. This is a **generated artifact** — the project's
+maintainers regenerate it from a separate editorial pipeline and it will be
+overwritten on every regeneration. It carries curated legal defaults and the
+rationales behind them (`default`, `default_value_rationale`, `options`) for
+fields where the right value depends on law-firm analysis.
 
-**Do not hand-edit `metadata.legal-context.yaml` files.** They are overwritten
-on every legal-context sync. If the rationale text is wrong, the fix lives in
-legal-context's practice note, not here.
+**Do not hand-edit `metadata.legal-context.yaml` files.** If you spot an
+incorrect rationale or an outdated default, open a PR or issue pointing at
+the specific field; a maintainer will fix it upstream and regenerate the
+sidecar.
 
 See [`two-sidecar-metadata-ownership.md`](./two-sidecar-metadata-ownership.md)
-for the full model, merge rules, and what to do when a field rename trips the
-CI lint at `scripts/validate_metadata_sidecar.mjs`.
+for the ownership model, merge rules, and what to do when a field rename
+trips the CI lint at `scripts/validate_metadata_sidecar.mjs`.
