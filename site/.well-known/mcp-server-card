@@ -7,8 +7,7 @@
   "websiteUrl": "https://openagreements.org",
   "repository": {
     "url": "https://github.com/open-agreements/open-agreements",
-    "source": "github",
-    "id": "open-agreements/open-agreements"
+    "source": "github"
   },
   "remotes": [
     {
