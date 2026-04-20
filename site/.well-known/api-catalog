@@ -1,0 +1,22 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://openagreements.org/api/mcp",
+      "service-desc": [
+        {
+          "href": "https://openagreements.org/.well-known/mcp-server-card",
+          "type": "application/json"
+        }
+      ]
+    },
+    {
+      "anchor": "https://openagreements.org/api/a2a",
+      "service-desc": [
+        {
+          "href": "https://openagreements.org/.well-known/agent-card.json",
+          "type": "application/json"
+        }
+      ]
+    }
+  ]
+}
