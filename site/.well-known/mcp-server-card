@@ -1,0 +1,20 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/v1/server-card.schema.json",
+  "name": "io.github.open-agreements/open-agreements",
+  "title": "Open Agreements",
+  "description": "MCP server to fill standard legal agreement templates (NDAs, SAFEs, NVCA docs, employment) and return signed-ready DOCX files.",
+  "version": "0.5.0",
+  "websiteUrl": "https://openagreements.org",
+  "repository": {
+    "url": "https://github.com/open-agreements/open-agreements",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://openagreements.org/api/mcp"
+    }
+  ],
+  "license": "MIT",
+  "tags": ["legal", "contracts", "templates", "docx", "nda", "safe", "nvca", "employment"]
+}
