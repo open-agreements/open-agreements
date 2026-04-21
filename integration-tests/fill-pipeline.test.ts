@@ -1,5 +1,6 @@
 import { describe, expect, vi } from 'vitest';
 import { itAllure } from './helpers/allure-test.js';
+import { seconds } from './helpers/timeouts.js';
 import { mkdtempSync, writeFileSync, readFileSync, rmSync, readdirSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { tmpdir } from 'node:os';
@@ -1036,7 +1037,7 @@ describe('Parametric smoke test — signatory fields across all templates', () =
     } finally {
       spy.mockRestore();
     }
-  }, 180_000);
+  }, seconds(60));
 
   it.openspec('OA-NDA-008')('all templates fill cleanly in individual mode', async () => {
     const spy = vi.spyOn(console, 'warn').mockImplementation(() => {});
@@ -1065,5 +1066,5 @@ describe('Parametric smoke test — signatory fields across all templates', () =
     } finally {
       spy.mockRestore();
     }
-  }, 180_000);
+  }, seconds(60));
 });
