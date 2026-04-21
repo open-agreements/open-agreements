@@ -36,6 +36,7 @@ function runListJson(opts: ListOptions): void {
       const meta = loadMetadata(dir);
       results.push({
         name: id,
+        tier: 'internal' as const,
         display_name: meta.name,
         category: meta.category ?? categoryFromId(id),
         description: meta.description ?? meta.name,
@@ -58,6 +59,7 @@ function runListJson(opts: ListOptions): void {
         const meta = loadExternalMetadata(dir);
         results.push({
           name: id,
+          tier: 'external' as const,
           display_name: meta.name,
           category: (meta as Record<string, unknown>).category as string ?? categoryFromId(id),
           description: meta.description ?? meta.name,
@@ -80,6 +82,7 @@ function runListJson(opts: ListOptions): void {
         const meta = loadRecipeMetadata(dir);
         const item: ListItem = {
           name: id,
+          tier: 'recipe' as const,
           display_name: meta.name,
           category: (meta as Record<string, unknown>).category as string ?? categoryFromId(id),
           description: meta.description ?? meta.name,

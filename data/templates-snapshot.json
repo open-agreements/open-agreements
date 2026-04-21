@@ -4,6 +4,7 @@
   "items": [
     {
       "name": "bonterms-mutual-nda",
+      "tier": "internal",
       "display_name": "Bonterms Mutual NDA",
       "category": "confidentiality",
       "description": "Cover page for the Bonterms Mutual NDA (Version 1.0). The standard terms are incorporated by reference from bonterms.com.",
@@ -250,6 +251,7 @@
     },
     {
       "name": "bonterms-professional-services-agreement",
+      "tier": "internal",
       "display_name": "Bonterms Professional Services Agreement",
       "category": "professional-services",
       "description": "Cover page for the Bonterms Professional Services Agreement (Version 1.2). The standard terms are incorporated by reference from bonterms.com.",
@@ -316,6 +318,7 @@
     },
     {
       "name": "closing-checklist",
+      "tier": "internal",
       "display_name": "Closing Checklist",
       "category": "other",
       "description": "A stage-first, document-first closing checklist that tracks canonical documents, checklist entries, signatories, action items, and issues. Accepts structured JSON input and renders a formatted DOCX for distribution.",
@@ -373,6 +376,7 @@
     },
     {
       "name": "common-paper-ai-addendum",
+      "tier": "internal",
       "display_name": "Common Paper AI Addendum",
       "category": "data-compliance",
       "description": "An AI addendum cover page and standard terms, based on Common Paper's standard form. Adds AI-specific provisions to an existing agreement, covering model training, input/output rights, and AI usage policies.",
@@ -709,6 +713,7 @@
     },
     {
       "name": "common-paper-ai-addendum-in-app",
+      "tier": "internal",
       "display_name": "Common Paper AI Addendum In-App",
       "category": "data-compliance",
       "description": "An in-app AI addendum based on Common Paper's standard form. A streamlined version of the AI addendum designed to be accepted electronically within an application.",
@@ -937,6 +942,7 @@
     },
     {
       "name": "common-paper-amendment",
+      "tier": "internal",
       "display_name": "Common Paper Amendment",
       "category": "deals-partnerships",
       "description": "An amendment template for modifying existing agreements, based on Common Paper's standard form. References the original agreement and details the specific changes being made.",
@@ -1111,6 +1117,7 @@
     },
     {
       "name": "common-paper-business-associate-agreement",
+      "tier": "internal",
       "display_name": "Common Paper Business Associate Agreement",
       "category": "data-compliance",
       "description": "A HIPAA business associate agreement cover page and standard terms, based on Common Paper's standard form. Covers the use and protection of protected health information (PHI) between a covered entity and a business associate.",
@@ -1438,6 +1445,7 @@
     },
     {
       "name": "common-paper-cloud-service-agreement",
+      "tier": "internal",
       "display_name": "Common Paper Cloud Service Agreement",
       "category": "sales-licensing",
       "description": "A cloud service agreement with order form and framework terms, based on Common Paper's standard terms. Covers SaaS subscriptions, payment, SLAs, liability, and data processing. Includes full Standard Terms v2.1.",
@@ -2206,6 +2214,7 @@
     },
     {
       "name": "common-paper-csa-click-through",
+      "tier": "internal",
       "display_name": "Common Paper CSA Click-Through",
       "category": "sales-licensing",
       "description": "A click-through cloud service agreement based on Common Paper's standard terms. Designed for self-serve SaaS products where the customer accepts terms online rather than negotiating a paper agreement.",
@@ -2344,6 +2353,7 @@
     },
     {
       "name": "common-paper-csa-with-ai",
+      "tier": "internal",
       "display_name": "Common Paper CSA With AI",
       "category": "sales-licensing",
       "description": "A cloud service agreement with AI provisions, key terms, and standard terms, based on Common Paper's standard form. Extends the standard CSA with AI-specific terms covering model training, input/output rights, and AI usage policies.",
@@ -3391,6 +3401,7 @@
     },
     {
       "name": "common-paper-csa-with-sla",
+      "tier": "internal",
       "display_name": "Common Paper CSA With SLA",
       "category": "sales-licensing",
       "description": "A cloud service agreement with SLA provisions, key terms, and standard terms, based on Common Paper's standard form. Includes uptime targets, response times, and support schedules alongside full CSA terms.",
@@ -4348,6 +4359,7 @@
     },
     {
       "name": "common-paper-csa-without-sla",
+      "tier": "internal",
       "display_name": "Common Paper CSA Without SLA",
       "category": "sales-licensing",
       "description": "A cloud service agreement with key terms and standard terms, based on Common Paper's standard form. Covers SaaS subscriptions, payment, liability, and data processing.",
@@ -5242,6 +5254,7 @@
     },
     {
       "name": "common-paper-data-processing-agreement",
+      "tier": "internal",
       "display_name": "Common Paper Data Processing Agreement",
       "category": "data-compliance",
       "description": "A data processing agreement cover page and standard terms, based on Common Paper's standard form. Covers GDPR and data protection compliance, including processor/controller roles, data transfers, subprocessors, and security measures.",
@@ -6154,6 +6167,7 @@
     },
     {
       "name": "common-paper-design-partner-agreement",
+      "tier": "internal",
       "display_name": "Common Paper Design Partner Agreement",
       "category": "deals-partnerships",
       "description": "A design partner agreement cover page and standard terms, based on Common Paper's standard form. Covers partnerships where a company provides early access to a product in development in exchange for feedback and collaboration.",
@@ -6445,6 +6459,7 @@
     },
     {
       "name": "common-paper-independent-contractor-agreement",
+      "tier": "internal",
       "display_name": "Common Paper Independent Contractor Agreement",
       "category": "professional-services",
       "description": "An independent contractor agreement based on Common Paper's standard form. Covers the engagement of an independent contractor, including scope of services, rates, payment, timeline, and governing law.",
@@ -6628,6 +6643,7 @@
     },
     {
       "name": "common-paper-letter-of-intent",
+      "tier": "internal",
       "display_name": "Common Paper Letter of Intent",
       "category": "deals-partnerships",
       "description": "A letter of intent template for SaaS and technology deals, based on Common Paper's standard form. Outlines product, timeline, fees, and references an existing NDA.",
@@ -6784,6 +6800,7 @@
     },
     {
       "name": "common-paper-mutual-nda",
+      "tier": "internal",
       "display_name": "Common Paper Mutual NDA",
       "category": "confidentiality",
       "description": "A mutual non-disclosure agreement cover page based on Common Paper's standard terms. The cover page references the Standard Terms posted at commonpaper.com.",
@@ -6958,6 +6975,7 @@
     },
     {
       "name": "common-paper-one-way-nda",
+      "tier": "internal",
       "display_name": "Common Paper One-Way NDA",
       "category": "confidentiality",
       "description": "A one-way (unilateral) non-disclosure agreement cover page based on Common Paper's standard terms. The Discloser shares confidential information with the Receiver, but not vice versa. References the Standard Terms posted at commonpaper.com.",
@@ -7087,6 +7105,7 @@
     },
     {
       "name": "common-paper-order-form",
+      "tier": "internal",
       "display_name": "Common Paper Order Form",
       "category": "sales-licensing",
       "description": "An order form template for cloud service agreements, based on Common Paper's standard form. References existing Key Terms and covers subscription details, fees, pilot period, payment, and professional services.",
@@ -7486,6 +7505,7 @@
     },
     {
       "name": "common-paper-order-form-with-sla",
+      "tier": "internal",
       "display_name": "Common Paper Order Form with SLA",
       "category": "sales-licensing",
       "description": "An order form template with service level agreement (SLA) provisions, based on Common Paper's standard form. Extends the standard order form with uptime targets, response times, and support schedules.",
@@ -7966,6 +7986,7 @@
     },
     {
       "name": "common-paper-partnership-agreement",
+      "tier": "internal",
       "display_name": "Common Paper Partnership Agreement",
       "category": "deals-partnerships",
       "description": "A partnership agreement cover page and standard terms, based on Common Paper's standard form. Covers business partnerships including obligations, fees, territory, liability, and data processing.",
@@ -8671,6 +8692,7 @@
     },
     {
       "name": "common-paper-pilot-agreement",
+      "tier": "internal",
       "display_name": "Common Paper Pilot Agreement",
       "category": "deals-partnerships",
       "description": "A pilot agreement cover page and standard terms, based on Common Paper's standard form. Covers trial or pilot periods for cloud services, including fees, support, and liability provisions.",
@@ -8944,6 +8966,7 @@
     },
     {
       "name": "common-paper-professional-services-agreement",
+      "tier": "internal",
       "display_name": "Common Paper Professional Services Agreement",
       "category": "professional-services",
       "description": "A professional services agreement with key terms, statement of work, and standard terms, based on Common Paper's standard form. Covers consulting and professional services engagements including deliverables, IP ownership, fees, and liability.",
@@ -9757,6 +9780,7 @@
     },
     {
       "name": "common-paper-software-license-agreement",
+      "tier": "internal",
       "display_name": "Common Paper Software License Agreement",
       "category": "sales-licensing",
       "description": "Standard terms for a software license agreement, based on Common Paper's standard form. Provides the framework terms for on-premise software licensing, to be used with a separate cover page and order form.",
@@ -9768,6 +9792,7 @@
     },
     {
       "name": "common-paper-statement-of-work",
+      "tier": "internal",
       "display_name": "Common Paper Statement of Work",
       "category": "professional-services",
       "description": "A statement of work template for professional services engagements, based on Common Paper's standard form. References a PSA or CSA Key Terms and covers scope, deliverables, timeline, fees, and expenses.",
@@ -10122,6 +10147,7 @@
     },
     {
       "name": "common-paper-term-sheet",
+      "tier": "internal",
       "display_name": "Common Paper Term Sheet",
       "category": "deals-partnerships",
       "description": "A term sheet template for outlining key business terms, based on Common Paper's standard form. A simple topic-and-details format for early-stage deal discussions.",
@@ -10251,6 +10277,7 @@
     },
     {
       "name": "nvca-certificate-of-incorporation",
+      "tier": "recipe",
       "display_name": "NVCA Model Certificate of Incorporation",
       "category": "venture-financing",
       "description": "Amended and restated certificate of incorporation for venture-backed Delaware corporations, defining preferred stock rights, preferences, and privileges.",
@@ -10665,6 +10692,7 @@
     },
     {
       "name": "nvca-indemnification-agreement",
+      "tier": "recipe",
       "display_name": "NVCA Model Indemnification Agreement",
       "category": "venture-financing",
       "description": "Director and officer indemnification agreement for venture-backed companies, providing indemnification and advancement of expenses.",
@@ -10831,6 +10859,7 @@
     },
     {
       "name": "nvca-investors-rights-agreement",
+      "tier": "recipe",
       "display_name": "NVCA Model Investors' Rights Agreement",
       "category": "venture-financing",
       "description": "Investors' rights agreement for venture financings, covering registration rights, information rights, board observer rights, and protective provisions.",
@@ -10970,6 +10999,7 @@
     },
     {
       "name": "nvca-management-rights-letter",
+      "tier": "recipe",
       "display_name": "NVCA Model Management Rights Letter",
       "category": "venture-financing",
       "description": "Management rights letter granting ERISA-qualifying management rights to venture capital fund investors.",
@@ -11064,6 +11094,7 @@
     },
     {
       "name": "nvca-rofr-co-sale-agreement",
+      "tier": "recipe",
       "display_name": "NVCA Model Right of First Refusal and Co-Sale Agreement",
       "category": "venture-financing",
       "description": "Right of first refusal and co-sale agreement for venture financings, restricting transfer of founder shares and providing investor co-sale rights.",
@@ -11221,6 +11252,7 @@
     },
     {
       "name": "nvca-stock-purchase-agreement",
+      "tier": "recipe",
       "display_name": "NVCA Model Stock Purchase Agreement",
       "category": "venture-financing",
       "description": "Series preferred stock purchase agreement for venture capital financings, covering purchase terms, representations, and closing conditions.",
@@ -11540,6 +11572,7 @@
     },
     {
       "name": "nvca-voting-agreement",
+      "tier": "recipe",
       "display_name": "NVCA Model Voting Agreement",
       "category": "venture-financing",
       "description": "Standard-form voting agreement for venture capital financings, covering board composition, drag-along rights, and stockholder voting obligations.",
@@ -11670,6 +11703,7 @@
     },
     {
       "name": "openagreements-board-consent-safe",
+      "tier": "internal",
       "display_name": "Board Consent for SAFE Financing",
       "category": "corporate-governance",
       "description": "Action by unanimous written consent of the board of directors of a Delaware corporation approving the issuance of one or more Simple Agreements for Future Equity (SAFEs). Canonically authored in Contract IR and rendered to DOCX.",
@@ -11712,12 +11746,24 @@
           "section": "Signatures",
           "description": "Directors signing the consent",
           "default": null,
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "items": [
+            {
+              "name": "name",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Full name of a director signing the consent",
+              "default": null,
+              "default_value_rationale": null
+            }
+          ]
         }
       ]
     },
     {
       "name": "openagreements-employee-ip-inventions-assignment",
+      "tier": "internal",
       "display_name": "OpenAgreements Employee IP and Inventions Assignment",
       "category": "employment",
       "description": "Employee proprietary information and inventions assignment agreement with explicit prior-inventions and personal-project carveout language placeholders.",
@@ -11838,6 +11884,7 @@
     },
     {
       "name": "openagreements-employment-confidentiality-acknowledgement",
+      "tier": "internal",
       "display_name": "OpenAgreements Employment Confidentiality Acknowledgement",
       "category": "employment",
       "description": "Employee confidentiality and acceptable-use acknowledgement companion for onboarding packets, including reporting and post-employment handling.",
@@ -11949,6 +11996,7 @@
     },
     {
       "name": "openagreements-employment-offer-letter",
+      "tier": "internal",
       "display_name": "OpenAgreements Employment Offer Letter",
       "category": "employment",
       "description": "A startup-focused employment offer letter template for full-time or part-time hiring with compensation, equity summary, and at-will framing.",
@@ -12087,6 +12135,7 @@
     },
     {
       "name": "openagreements-restrictive-covenant-wyoming",
+      "tier": "internal",
       "display_name": "OpenAgreements Employee Restrictive Covenant (Wyoming)",
       "category": "employment",
       "description": "Wyoming-specific employee restrictive covenant agreement with modular covenant structure (non-compete, non-solicitation, non-dealing, non-investment, confidentiality, non-disparagement). Incorporates Wyo. Stat. section 1-23-108 (SF 107, 2025) pathway gating for non-compete-adjacent covenants. Drafted as a starting point for licensed counsel review.",
@@ -12351,6 +12400,7 @@
     },
     {
       "name": "openagreements-stockholder-consent-safe",
+      "tier": "internal",
       "display_name": "Stockholder Consent for SAFE Financing",
       "category": "corporate-governance",
       "description": "Action by written consent of the stockholders of a Delaware corporation approving the issuance of one or more Simple Agreements for Future Equity (SAFEs). Canonically authored in Contract IR and rendered to DOCX.",
@@ -12393,12 +12443,24 @@
           "section": "Signatures",
           "description": "Stockholders signing the consent",
           "default": null,
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "items": [
+            {
+              "name": "name",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "Full name of a stockholder signing the consent",
+              "default": null,
+              "default_value_rationale": null
+            }
+          ]
         }
       ]
     },
     {
       "name": "working-group-list",
+      "tier": "internal",
       "display_name": "Working Group List",
       "category": "other",
       "description": "Standalone working group roster for a transaction. Tracks staffed deal team members and contact details outside the closing checklist document.",
@@ -12438,6 +12500,7 @@
     },
     {
       "name": "yc-safe-discount",
+      "tier": "external",
       "display_name": "YC Post-Money SAFE — Discount",
       "category": "safes",
       "description": "Y Combinator's Post-Money SAFE (Simple Agreement for Future Equity) with a discount rate and no valuation cap.",
@@ -12549,6 +12612,7 @@
     },
     {
       "name": "yc-safe-mfn",
+      "tier": "external",
       "display_name": "YC Post-Money SAFE — MFN",
       "category": "safes",
       "description": "Y Combinator's Post-Money SAFE (Simple Agreement for Future Equity) with a most favored nation (MFN) provision, no valuation cap, and no discount.",
@@ -12651,6 +12715,7 @@
     },
     {
       "name": "yc-safe-pro-rata-side-letter",
+      "tier": "external",
       "display_name": "YC Pro Rata Side Letter",
       "category": "safes",
       "description": "Y Combinator's Pro Rata Side Letter, granting the investor pro rata rights in connection with a Post-Money SAFE investment.",
@@ -12726,6 +12791,7 @@
     },
     {
       "name": "yc-safe-valuation-cap",
+      "tier": "external",
       "display_name": "YC Post-Money SAFE — Valuation Cap",
       "category": "safes",
       "description": "Y Combinator's Post-Money SAFE (Simple Agreement for Future Equity) with a valuation cap and no discount. The most common early-stage investment instrument.",
