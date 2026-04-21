@@ -1,15 +1,26 @@
 import { configDefaults, defineConfig } from 'vitest/config';
 
+// V8 coverage instrumentation adds ~2-3x CPU overhead, which on shared CI
+// runners pushes otherwise-fine tests past per-test timeouts. Scale all
+// timeouts uniformly when coverage is active, and expose the multiplier via
+// `test.env` so test files that hard-code per-test timeouts (which config-
+// level `testTimeout` does not override) can opt in via `seconds()` from
+// integration-tests/helpers/timeouts.ts.
+//
+// Non-coverage runs keep the vitest defaults (5s test, 10s hook) so real
+// performance regressions still surface immediately in `test (20)` /
+// `test (22)` CI jobs.
+const isCoverageRun =
+  process.argv.includes('--coverage') || process.env.VITEST_COVERAGE === '1';
+const timeoutMultiplier = isCoverageRun ? 3 : 1;
+
 export default defineConfig({
   test: {
-    // Vitest's default 5000ms is too tight under --coverage: v8 instrumentation
-    // adds ~2x overhead locally and 3-5x on CI runners, which causes tests that
-    // comfortably pass at ~500ms to time out on the coverage job. Raise the
-    // default to give headroom for coverage + Allure wrapper overhead without
-    // hiding genuinely-hung tests. Tests that need more can still pass an
-    // explicit timeout as the third arg to it()/test().
-    testTimeout: 30_000,
-    hookTimeout: 30_000,
+    testTimeout: 5_000 * timeoutMultiplier,
+    hookTimeout: 10_000 * timeoutMultiplier,
+    env: {
+      VITEST_TIMEOUT_MULTIPLIER: String(timeoutMultiplier),
+    },
     setupFiles: ['allure-vitest/setup'],
     exclude: [
       ...configDefaults.exclude,

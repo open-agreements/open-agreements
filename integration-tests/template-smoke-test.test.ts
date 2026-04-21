@@ -11,6 +11,7 @@ import { tmpdir } from 'node:os';
 import { afterAll, describe, expect } from 'vitest';
 import AdmZip from 'adm-zip';
 import { itAllure } from './helpers/allure-test.js';
+import { seconds } from './helpers/timeouts.js';
 import { fillTemplate } from '../src/core/engine.js';
 import { verifyTemplateFill } from '../src/core/fill-utils.js';
 
@@ -80,6 +81,6 @@ describe('E2E smoke test — fill all templates with complete field data', () =>
       expect(fullXml, `${templateId}: leftover {IF} blocks`).not.toContain('{IF ');
       expect(fullXml, `${templateId}: leftover {END-IF} blocks`).not.toContain('{END-IF}');
     },
-    30_000
+    seconds(30)
   );
 });

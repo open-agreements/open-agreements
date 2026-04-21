@@ -1,5 +1,6 @@
 import { describe, expect, beforeAll } from 'vitest';
 import { itAllure } from './helpers/allure-test.js';
+import { seconds } from './helpers/timeouts.js';
 import { execSync } from 'node:child_process';
 import { mkdtempSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
@@ -35,7 +36,7 @@ describe('npm packaging', () => {
       if (process.env.CI) throw err; // fail hard in CI
       available = false;
     }
-  }, 45_000);
+  }, seconds(45));
 
   it.openspec('OA-DST-029')('includes dist/cli/index.js', () => {
     if (!available) return;
@@ -129,5 +130,5 @@ describe('npm packaging', () => {
       }
       rmSync(sandbox, { recursive: true, force: true });
     }
-  }, 30_000);
+  }, seconds(30));
 });
