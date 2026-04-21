@@ -28,7 +28,7 @@ describe('npm packaging', () => {
         execSync('npm pack --dry-run --json --ignore-scripts 2>/dev/null', {
           cwd: new URL('..', import.meta.url).pathname,
           encoding: 'utf-8',
-          timeout: 30_000,
+          timeout: seconds(30),
         })
       );
       files = packResult[0].files.map((f) => f.path);
@@ -102,23 +102,23 @@ describe('npm packaging', () => {
       tarball = execSync('npm pack --ignore-scripts', {
         cwd: repoRoot,
         encoding: 'utf-8',
-        timeout: 30_000,
+        timeout: seconds(30),
       })
         .trim()
         .split('\n')
         .at(-1) ?? '';
 
-      execSync('npm init -y', { cwd: sandbox, encoding: 'utf-8', timeout: 10_000 });
+      execSync('npm init -y', { cwd: sandbox, encoding: 'utf-8', timeout: seconds(10) });
       execSync(`npm install --ignore-scripts "${join(repoRoot, tarball)}"`, {
         cwd: sandbox,
         encoding: 'utf-8',
-        timeout: 60_000,
+        timeout: seconds(60),
       });
 
       const output = execSync('npx open-agreements list --json', {
         cwd: sandbox,
         encoding: 'utf-8',
-        timeout: 30_000,
+        timeout: seconds(30),
       });
       const parsed = JSON.parse(output);
       expect(parsed.schema_version).toBe(1);
