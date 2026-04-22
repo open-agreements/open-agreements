@@ -1,0 +1,10 @@
+{
+  "algo": "ed25519",
+  "p": "ovs+BIM2nf2EVuembIRtWARHYW5pr5m9eQttZ/rDhMQ=",
+  "t": 1776894509,
+  "x": 1808430509,
+  "validFrom": "2026-04-22T21:48:29Z",
+  "validUntil": "2027-04-22T21:48:29Z",
+  "kid": "8e508d1976566d46",
+  "rotationPolicy": "Rotate annually or on suspected compromise. Publish replacement at /.well-known/arp/pubkey-next.json 30 days before cutover."
+}
