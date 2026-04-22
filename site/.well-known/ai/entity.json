@@ -1,0 +1,37 @@
+{
+  "name": "Open Agreements",
+  "alternateName": "OpenAgreements",
+  "legalEntity": "OM Innovation AI Inc.",
+  "type": "SoftwareApplication",
+  "description": "Creative Commons legal templates, including state-specific variants, with regular updates. Adapted for efficient filing by AI agents; every jurisdictional deviation carries a clickable citation to the underlying statute.",
+  "domains": [
+    "https://openagreements.org",
+    "https://openagreements.ai"
+  ],
+  "canonical": "https://usejunior.com/.well-known/ai/entity.json",
+  "sameAs": [
+    "https://usejunior.com",
+    "https://openagreements.org",
+    "https://openagreements.ai",
+    "https://github.com/open-agreements/open-agreements",
+    "https://www.linkedin.com/company/openagreements"
+  ],
+  "operator": {
+    "type": "Organization",
+    "name": "UseJunior",
+    "legalName": "OM Innovation AI Inc.",
+    "url": "https://usejunior.com"
+  },
+  "brand": [
+    {
+      "type": "Brand",
+      "name": "Open Agreements",
+      "url": "https://openagreements.org"
+    }
+  ],
+  "keyPages": [
+    "https://openagreements.org",
+    "https://openagreements.ai",
+    "https://openagreements.ai/api/mcp"
+  ]
+}
