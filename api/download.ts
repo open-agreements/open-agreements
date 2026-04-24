@@ -6,7 +6,15 @@
 
 import { createHash } from 'node:crypto';
 import type { HttpRequest, HttpResponse } from './_http-types.js';
-import { resolveDownloadArtifact, handleFill, generateRedlineFromFill, DOCX_MIME } from './_shared.js';
+import {
+  resolveDownloadArtifact,
+  handleFill,
+  generateRedlineFromFill,
+  DOCX_MIME,
+  DownloadStoreUnavailableError,
+  DownloadStoreConfigurationError,
+  getDownloadStorageMode,
+} from './_shared.js';
 
 /**
  * Hash the download id for log correlation. The raw id is a live signed bearer
@@ -23,7 +31,8 @@ type DownloadHttpErrorCode =
   | 'DOWNLOAD_SIGNATURE_INVALID'
   | 'DOWNLOAD_EXPIRED'
   | 'DOWNLOAD_NOT_FOUND'
-  | 'DOWNLOAD_RENDER_FAILED';
+  | 'DOWNLOAD_RENDER_FAILED'
+  | 'DOWNLOAD_STORE_UNAVAILABLE';
 
 function escapeHtml(value: string): string {
   return value
@@ -44,10 +53,14 @@ function acceptsHtml(req: HttpRequest): boolean {
 function renderDownloadErrorHtml(code: DownloadHttpErrorCode, message: string, status: number): string {
   const title = code === 'DOWNLOAD_EXPIRED' || code === 'DOWNLOAD_NOT_FOUND'
     ? 'Download Link Unavailable'
-    : 'Download Error';
+    : code === 'DOWNLOAD_STORE_UNAVAILABLE'
+      ? 'Download Service Unavailable'
+      : 'Download Error';
   const actionCopy = code === 'DOWNLOAD_EXPIRED' || code === 'DOWNLOAD_NOT_FOUND'
     ? 'Please generate a fresh document link and try again.'
-    : 'Please try generating the document again.';
+    : code === 'DOWNLOAD_STORE_UNAVAILABLE'
+      ? 'Download storage is temporarily unavailable. Please try again shortly.'
+      : 'Please try generating the document again.';
   const safeTitle = escapeHtml(title);
   const safeMessage = escapeHtml(message);
   const safeCode = escapeHtml(code);
@@ -101,15 +114,22 @@ function renderDownloadErrorHtml(code: DownloadHttpErrorCode, message: string, s
 </html>`;
 }
 
+function setStorageHeader(res: HttpResponse, override?: 'unavailable'): void {
+  const mode = override ?? getDownloadStorageMode() ?? 'unknown';
+  res.setHeader('X-Download-Store', mode);
+}
+
 function sendDownloadError(
   req: HttpRequest,
   res: HttpResponse,
   status: number,
   code: DownloadHttpErrorCode,
   message: string,
+  storeOverride?: 'unavailable',
 ) {
   res.setHeader('Cache-Control', 'no-store');
   res.setHeader('X-Download-Error-Code', code);
+  setStorageHeader(res, storeOverride);
   if (req.method === 'HEAD') {
     return res.status(status).end();
   }
@@ -189,9 +209,22 @@ export default async function handler(req: HttpRequest, res: HttpResponse) {
   try {
     resolved = await resolveDownloadArtifact(id);
   } catch (err) {
-    // Throws here typically mean the artifact store (KV/Upstash) is unavailable
-    // or returned a malformed payload. Either way, return the documented
-    // DOWNLOAD_RENDER_FAILED shape rather than a raw platform 500.
+    if (err instanceof DownloadStoreUnavailableError) {
+      const status = err instanceof DownloadStoreConfigurationError ? 500 : 503;
+      const cause = err instanceof DownloadStoreConfigurationError ? 'configuration' : 'runtime';
+      console.error({ endpoint: 'download', phase: 'resolve', idFp, cause, err });
+      return sendDownloadError(
+        req,
+        res,
+        status,
+        'DOWNLOAD_STORE_UNAVAILABLE',
+        cause === 'configuration'
+          ? 'Download storage is not configured for this deployment.'
+          : 'Download storage is temporarily unavailable.',
+        'unavailable',
+      );
+    }
+    // Unexpected throw: malformed payload, etc. Keep the documented contract.
     console.error({ endpoint: 'download', phase: 'resolve', idFp, err });
     return sendDownloadError(req, res, 500, 'DOWNLOAD_RENDER_FAILED', 'Download lookup failed.');
   }
@@ -255,6 +288,7 @@ export default async function handler(req: HttpRequest, res: HttpResponse) {
     res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
     res.setHeader('Content-Length', docxBuffer.length);
     res.setHeader('Cache-Control', 'no-store');
+    setStorageHeader(res);
     if (req.method === 'HEAD') {
       return res.status(200).end();
     }
