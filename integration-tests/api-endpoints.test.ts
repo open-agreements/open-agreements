@@ -156,6 +156,7 @@ function parseMcpEnvelope(body: unknown): Record<string, unknown> {
 
 afterEach(() => {
   vi.clearAllMocks();
+  vi.unstubAllEnvs();
 });
 
 // ---------------------------------------------------------------------------
@@ -396,6 +397,11 @@ describe('MCP endpoint — api/mcp.ts', () => {
   });
 
   it.openspec('OA-DST-024')('handles tools/list', async () => {
+    // Advertise the full tool surface (signing gated on DocuSign config — see #201).
+    vi.stubEnv('OA_DOCUSIGN_INTEGRATION_KEY', 'test-integration-key');
+    vi.stubEnv('OA_DOCUSIGN_SECRET_KEY', 'test-secret-key');
+    vi.stubEnv('OA_GCLOUD_ENCRYPTION_KEY', 'deadbeef');
+
     const req = createMockReq({
       body: { jsonrpc: '2.0', id: 2, method: 'tools/list' },
     });

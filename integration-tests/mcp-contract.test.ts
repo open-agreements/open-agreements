@@ -170,6 +170,7 @@ const { default: mcpHandler } = await import('../api/mcp.js');
 
 afterEach(() => {
   vi.clearAllMocks();
+  vi.unstubAllEnvs();
 });
 
 describe('MCP contract envelope behaviors', () => {
@@ -390,6 +391,76 @@ describe('MCP contract envelope behaviors', () => {
     const tools = Array.isArray(result.tools) ? result.tools : [];
     const toolNames = tools.map((t: Record<string, unknown>) => t.name);
     expect(toolNames).toContain('search_templates');
+  });
+
+  it.openspec('OA-DST-032')('tools/list omits signing tools when DocuSign is not configured', async () => {
+    vi.stubEnv('OA_DOCUSIGN_INTEGRATION_KEY', '');
+    vi.stubEnv('OA_DOCUSIGN_SECRET_KEY', '');
+    vi.stubEnv('OA_GCLOUD_ENCRYPTION_KEY', '');
+
+    const req = createMockReq({
+      body: { jsonrpc: '2.0', id: 30, method: 'tools/list', params: {} },
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+
+    const body = asObject(res.body);
+    const result = asObject(body.result);
+    const tools = Array.isArray(result.tools) ? result.tools : [];
+    const toolNames = tools.map((t: Record<string, unknown>) => t.name);
+
+    expect(toolNames).not.toContain('send_for_signature');
+    expect(toolNames).not.toContain('check_signature_status');
+    // Template tools remain available regardless of signing config.
+    expect(toolNames).toContain('search_templates');
+    expect(toolNames).toContain('list_templates');
+  });
+
+  it.openspec('OA-DST-032')('tools/list includes signing tools when DocuSign is configured', async () => {
+    vi.stubEnv('OA_DOCUSIGN_INTEGRATION_KEY', 'test-integration-key');
+    vi.stubEnv('OA_DOCUSIGN_SECRET_KEY', 'test-secret-key');
+    vi.stubEnv('OA_GCLOUD_ENCRYPTION_KEY', 'deadbeef');
+
+    const req = createMockReq({
+      body: { jsonrpc: '2.0', id: 31, method: 'tools/list', params: {} },
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+
+    const body = asObject(res.body);
+    const result = asObject(body.result);
+    const tools = Array.isArray(result.tools) ? result.tools : [];
+    const toolNames = tools.map((t: Record<string, unknown>) => t.name);
+
+    expect(toolNames).toContain('send_for_signature');
+    expect(toolNames).toContain('check_signature_status');
+  });
+
+  it.openspec('OA-DST-032')('unknown tools/call omits signing tools from available_tools when DocuSign is not configured', async () => {
+    vi.stubEnv('OA_DOCUSIGN_INTEGRATION_KEY', '');
+    vi.stubEnv('OA_DOCUSIGN_SECRET_KEY', '');
+    vi.stubEnv('OA_GCLOUD_ENCRYPTION_KEY', '');
+
+    const req = createMockReq({
+      body: {
+        jsonrpc: '2.0',
+        id: 32,
+        method: 'tools/call',
+        params: { name: 'nonexistent_tool', arguments: {} },
+      },
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+
+    const envelope = parseEnvelope(res.body);
+    expect(envelope.ok).toBe(false);
+    const error = asObject(envelope.error);
+    const details = asObject(error.details);
+    const available = Array.isArray(details.available_tools) ? details.available_tools : [];
+
+    expect(available).not.toContain('send_for_signature');
+    expect(available).not.toContain('check_signature_status');
+    expect(available).toContain('search_templates');
   });
 
   it.openspec('OA-DST-032')('search_templates returns success envelope for valid query', async () => {
