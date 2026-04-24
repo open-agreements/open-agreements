@@ -23,6 +23,14 @@ import {
 import { ErrorCode, makeToolError, wrapError, wrapSuccess } from './_envelope.js';
 import { jwtVerify, createRemoteJWKSet } from 'jose';
 import { OA_ORIGIN, MCP_RESOURCE } from './_config.js';
+import {
+  getRequestContext,
+  redactBearer,
+  normalizeError,
+  info as logInfo,
+  error as logError,
+  type RequestContext,
+} from './_log.js';
 
 // ---------------------------------------------------------------------------
 // Zod schemas for MCP tool argument validation
@@ -54,9 +62,6 @@ const SearchTemplatesArgsSchema = z.object({
   source: z.string().optional(),
   max_results: z.number().int().min(1).max(50).optional().default(10),
 });
-
-// Base URL for download links — derived from the incoming request at call time
-let _baseUrl = OA_ORIGIN;
 
 // ---------------------------------------------------------------------------
 // OAuth JWT verification for signing tools
@@ -330,6 +335,7 @@ async function handleSigningToolCall(
   id: unknown,
   name: string,
   args: Record<string, unknown>,
+  ctx: RequestContext,
 ): Promise<ReturnType<typeof jsonRpcResult>> {
   try {
     if (!_signingModuleLoaded) {
@@ -392,6 +398,15 @@ async function handleSigningToolCall(
     return jsonRpcResult(id, result);
   } catch (err) {
     const message = err instanceof Error ? err.message : String(err);
+    logError({
+      event: 'tool_internal_error',
+      endpoint: 'mcp',
+      tool: name,
+      phase: 'signing',
+      jsonrpcId: id,
+      ...normalizeError(err),
+      ...ctx,
+    });
     return toolErrorResult(
       id,
       name,
@@ -708,7 +723,7 @@ function handleToolsList(id: unknown) {
   return jsonRpcResult(id, { tools: ALL_TOOLS });
 }
 
-async function handleToolsCall(id: unknown, params: Record<string, unknown>) {
+async function handleToolsCall(id: unknown, params: Record<string, unknown>, ctx: RequestContext) {
   const name = params.name as string;
   const args = (params.arguments as Record<string, unknown>) ?? {};
 
@@ -718,7 +733,7 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>) {
     if (args.__auth_sub && !args.api_key) {
       args.api_key = args.__auth_sub;
     }
-    return handleSigningToolCall(id, name, args);
+    return handleSigningToolCall(id, name, args, ctx);
   }
 
   if (name === TOOL_LIST_TEMPLATES) {
@@ -819,7 +834,15 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>) {
       outcome = await handleFill(template, values);
     } catch (err) {
       const message = err instanceof Error ? err.message : String(err);
-      console.error({ tool: TOOL_FILL_TEMPLATE, phase: 'fill', id, err });
+      logError({
+        event: 'tool_internal_error',
+        endpoint: 'mcp',
+        tool: TOOL_FILL_TEMPLATE,
+        phase: 'fill',
+        jsonrpcId: id,
+        ...normalizeError(err),
+        ...ctx,
+      });
       return toolErrorResult(
         id,
         TOOL_FILL_TEMPLATE,
@@ -843,7 +866,16 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>) {
       const message = err instanceof Error ? err.message : String(err);
       if (err instanceof DownloadStoreUnavailableError) {
         const cause = err instanceof DownloadStoreConfigurationError ? 'configuration' : 'runtime';
-        console.error({ tool: TOOL_FILL_TEMPLATE, phase: 'artifact', id, cause, err });
+        logError({
+          event: 'tool_internal_error',
+          endpoint: 'mcp',
+          tool: TOOL_FILL_TEMPLATE,
+          phase: 'artifact',
+          cause,
+          jsonrpcId: id,
+          ...normalizeError(err),
+          ...ctx,
+        });
         return toolErrorResult(
           id,
           TOOL_FILL_TEMPLATE,
@@ -855,7 +887,15 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>) {
           },
         );
       }
-      console.error({ tool: TOOL_FILL_TEMPLATE, phase: 'artifact', id, err });
+      logError({
+        event: 'tool_internal_error',
+        endpoint: 'mcp',
+        tool: TOOL_FILL_TEMPLATE,
+        phase: 'artifact',
+        jsonrpcId: id,
+        ...normalizeError(err),
+        ...ctx,
+      });
       return toolErrorResult(
         id,
         TOOL_FILL_TEMPLATE,
@@ -864,7 +904,7 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>) {
         { retriable: false },
       );
     }
-    const downloadUrl = `${_baseUrl}/api/download?id=${encodeURIComponent(artifact.download_id)}`;
+    const downloadUrl = `${ctx.baseUrl}/api/download?id=${encodeURIComponent(artifact.download_id)}`;
     const expiresAt = artifact.expires_at;
 
     // Generate redline (track-changes) for recipe templates
@@ -877,7 +917,7 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>) {
             variant: 'redline',
             redline_base,
           });
-          const redlineUrl = `${_baseUrl}/api/download?id=${encodeURIComponent(redlineArtifact.download_id)}`;
+          const redlineUrl = `${ctx.baseUrl}/api/download?id=${encodeURIComponent(redlineArtifact.download_id)}`;
           redlineData = {
             redline_download_url: redlineUrl,
             redline_download_id: redlineArtifact.download_id,
@@ -886,8 +926,19 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>) {
           };
         }
       } catch (err) {
-        // Redline generation is best-effort; log but don't fail the fill
-        console.error({ tool: TOOL_FILL_TEMPLATE, phase: 'redline', id, err });
+        // Redline generation is best-effort; log but don't fail the fill.
+        // parentOk:true so dashboards can distinguish a redline-only blip
+        // from a hard fill failure.
+        logError({
+          event: 'tool_internal_error',
+          endpoint: 'mcp',
+          tool: TOOL_FILL_TEMPLATE,
+          phase: 'redline',
+          parentOk: true,
+          jsonrpcId: id,
+          ...normalizeError(err),
+          ...ctx,
+        });
       }
     }
 
@@ -934,7 +985,34 @@ export default async function handler(req: HttpRequest, res: HttpResponse) {
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Mcp-Session-Id, Authorization');
   res.setHeader('Access-Control-Expose-Headers', 'Mcp-Session-Id, WWW-Authenticate');
 
+  // OPTIONS preflight — no logging, just the platform-required CORS handshake.
   if (req.method === 'OPTIONS') return res.status(204).end();
+
+  const ctx = getRequestContext(req);
+  const startedAt = Date.now();
+
+  // Helper: emit request_complete and return the response. Every non-OPTIONS
+  // terminal path goes through this so we always have a record with status,
+  // ok, durationMs, and ctx for the request.
+  const complete = (
+    status: number,
+    ok: boolean,
+    extra: { jsonrpcMethod?: string; toolName?: string; jsonrpcId?: unknown },
+    payload: unknown,
+    sender: 'json' | 'send' = 'json',
+  ) => {
+    logInfo({
+      event: 'request_complete',
+      endpoint: 'mcp',
+      status,
+      ok,
+      durationMs: Date.now() - startedAt,
+      ...extra,
+      ...ctx,
+    });
+    if (sender === 'send') return res.status(status).send(payload);
+    return res.status(status).json(payload);
+  };
 
   if (req.method === 'GET') {
     const acceptHeader = req.headers['accept'];
@@ -942,28 +1020,59 @@ export default async function handler(req: HttpRequest, res: HttpResponse) {
     if (accept.includes('text/html')) {
       res.setHeader('Content-Type', 'text/html; charset=utf-8');
       res.setHeader('Cache-Control', 'no-store');
-      return res.status(200).send(mcpGetHtmlPage());
+      return complete(200, true, {}, mcpGetHtmlPage(), 'send');
     }
-    return res.status(405).json({ error: 'Only POST requests are accepted for MCP clients' });
+    logInfo({
+      event: 'request_rejected_http_method',
+      endpoint: 'mcp',
+      method: req.method,
+      status: 405,
+      ...ctx,
+    });
+    return complete(405, false, {}, { error: 'Only POST requests are accepted for MCP clients' });
   }
 
   if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Only POST requests are accepted for MCP clients' });
+    logInfo({
+      event: 'request_rejected_http_method',
+      endpoint: 'mcp',
+      method: req.method,
+      status: 405,
+      ...ctx,
+    });
+    return complete(405, false, {}, { error: 'Only POST requests are accepted for MCP clients' });
   }
-
-  // Capture base URL from request for building download links.
-  const proto = req.headers['x-forwarded-proto'] ?? 'https';
-  const host = req.headers['x-forwarded-host'] ?? req.headers['host'] ?? 'openagreements.org';
-  _baseUrl = `${proto}://${host}`;
 
   const body = req.body as { jsonrpc?: string; id?: unknown; method?: string; params?: unknown };
 
   if (!body || body.jsonrpc !== '2.0' || typeof body.method !== 'string') {
-    return res.status(400).json(jsonRpcError(body?.id, -32600, 'Invalid JSON-RPC 2.0 request'));
+    logError({
+      event: 'request_rejected_invalid_jsonrpc',
+      endpoint: 'mcp',
+      status: 400,
+      jsonrpcId: body?.id,
+      ...ctx,
+    });
+    return complete(400, false, { jsonrpcId: body?.id }, jsonRpcError(body?.id, -32600, 'Invalid JSON-RPC 2.0 request'));
   }
 
   // Notifications (no id) — acknowledge without response body.
   if (body.id === undefined || body.id === null) {
+    logInfo({
+      event: 'notification',
+      endpoint: 'mcp',
+      jsonrpcMethod: body.method,
+      ...ctx,
+    });
+    logInfo({
+      event: 'request_complete',
+      endpoint: 'mcp',
+      status: 202,
+      ok: true,
+      durationMs: Date.now() - startedAt,
+      jsonrpcMethod: body.method,
+      ...ctx,
+    });
     return res.status(202).end();
   }
 
@@ -977,46 +1086,79 @@ export default async function handler(req: HttpRequest, res: HttpResponse) {
       ? ((params as { name?: unknown }).name as string | undefined)
       : undefined;
 
+  logInfo({
+    event: 'request_start',
+    endpoint: 'mcp',
+    jsonrpcMethod: body.method,
+    toolName: requestedToolName,
+    jsonrpcId: body.id,
+    ...ctx,
+  });
+
+  const trace = { jsonrpcMethod: body.method, toolName: requestedToolName, jsonrpcId: body.id };
+
   try {
     switch (body.method) {
       case 'initialize':
-        return res.status(200).json(handleInitialize(body.id, params));
+        return complete(200, true, trace, handleInitialize(body.id, params));
       case 'tools/list':
-        return res.status(200).json(handleToolsList(body.id));
+        return complete(200, true, trace, handleToolsList(body.id));
       case 'tools/call': {
         // Check if this tool requires authentication
         const toolName = (params as { name?: string }).name;
         if (toolName && AUTH_REQUIRED_TOOLS.has(toolName)) {
           const auth = await verifyAuth(req);
           if (!auth.authenticated) {
+            logError({
+              event: 'auth_denied',
+              endpoint: 'mcp',
+              status: auth.status,
+              error: auth.error,
+              toolName,
+              jsonrpcId: body.id,
+              ...redactBearer(req.headers['authorization']),
+              ...ctx,
+            });
             if (auth.status === 401) {
               res.setHeader('WWW-Authenticate',
                 `Bearer resource_metadata="${OA_ORIGIN}/.well-known/oauth-protected-resource"`);
-              return res.status(401).json(
-                jsonRpcError(body.id, -32001, auth.errorDescription));
+              return complete(401, false, trace, jsonRpcError(body.id, -32001, auth.errorDescription));
             }
-            return res.status(403).json(
-              jsonRpcError(body.id, -32001, auth.errorDescription));
+            return complete(403, false, trace, jsonRpcError(body.id, -32001, auth.errorDescription));
           }
           // Pass auth context to handler via arguments (where signing tools read it)
           const toolArgs = ((params as Record<string, unknown>).arguments ?? {}) as Record<string, unknown>;
           toolArgs.__auth_sub = auth.sub;
           (params as Record<string, unknown>).arguments = toolArgs;
         }
-        return res.status(200).json(await handleToolsCall(body.id, params));
+        const toolResult = await handleToolsCall(body.id, params, ctx);
+        const toolOk = !(toolResult as { result?: { error?: unknown } })?.result?.error;
+        return complete(200, toolOk, trace, toolResult);
       }
       case 'ping':
-        return res.status(200).json(jsonRpcResult(body.id, {}));
+        return complete(200, true, trace, jsonRpcResult(body.id, {}));
       default:
-        return res.status(200).json(jsonRpcError(body.id, -32601, `Method not supported: "${body.method}"`));
+        return complete(200, false, trace, jsonRpcError(body.id, -32601, `Method not supported: "${body.method}"`));
     }
   } catch (err) {
     const message = err instanceof Error ? err.message : String(err);
-    console.error({ phase: 'outer', method: body.method, tool: requestedToolName, err });
+    logError({
+      event: 'unhandled_exception',
+      endpoint: 'mcp',
+      jsonrpcMethod: body.method,
+      toolName: requestedToolName,
+      jsonrpcId: body.id,
+      ...normalizeError(err),
+      durationMs: Date.now() - startedAt,
+      ...ctx,
+    });
     // For tools/call, preserve the documented envelope contract even on
     // unexpected throws. Other methods keep the JSON-RPC protocol error.
     if (body.method === 'tools/call') {
-      return res.status(200).json(
+      return complete(
+        200,
+        false,
+        trace,
         toolErrorResult(
           body.id,
           requestedToolName ?? 'tools/call',
@@ -1026,6 +1168,6 @@ export default async function handler(req: HttpRequest, res: HttpResponse) {
         ),
       );
     }
-    return res.status(200).json(jsonRpcError(body.id, -32603, `Internal error: ${message}`));
+    return complete(200, false, trace, jsonRpcError(body.id, -32603, `Internal error: ${message}`));
   }
 }
