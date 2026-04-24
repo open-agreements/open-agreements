@@ -180,7 +180,13 @@ export default async function handler(req: HttpRequest, res: HttpResponse) {
     return sendDownloadError(req, res, mapped.status, mapped.code, mapped.message);
   }
 
-  const outcome = await handleFill(resolved.artifact.template, resolved.artifact.values);
+  let outcome: Awaited<ReturnType<typeof handleFill>>;
+  try {
+    outcome = await handleFill(resolved.artifact.template, resolved.artifact.values);
+  } catch (err) {
+    console.error({ endpoint: 'download', phase: 'fill', id, err });
+    return sendDownloadError(req, res, 500, 'DOWNLOAD_RENDER_FAILED', 'Template render failed.');
+  }
   if (!outcome.ok) {
     return sendDownloadError(req, res, 500, 'DOWNLOAD_RENDER_FAILED', outcome.error);
   }
@@ -189,12 +195,18 @@ export default async function handler(req: HttpRequest, res: HttpResponse) {
   let filename: string;
 
   if (resolved.artifact.variant === 'redline') {
-    const redline = await generateRedlineFromFill(
-      resolved.artifact.template,
-      outcome.base64,
-      resolved.artifact.redline_base ?? 'source',
-      resolved.artifact.values,
-    );
+    let redline: Awaited<ReturnType<typeof generateRedlineFromFill>>;
+    try {
+      redline = await generateRedlineFromFill(
+        resolved.artifact.template,
+        outcome.base64,
+        resolved.artifact.redline_base ?? 'source',
+        resolved.artifact.values,
+      );
+    } catch (err) {
+      console.error({ endpoint: 'download', phase: 'redline', id, err });
+      return sendDownloadError(req, res, 500, 'DOWNLOAD_RENDER_FAILED', 'Redline generation failed.');
+    }
     if (!redline) {
       return sendDownloadError(req, res, 500, 'DOWNLOAD_RENDER_FAILED', 'Redline generation not available for this template.');
     }

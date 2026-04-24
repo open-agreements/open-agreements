@@ -66,6 +66,7 @@ curl -L "$DOWNLOAD_URL" -o filled.docx
 | `DOWNLOAD_LINK_INVALID` | Malformed or signature-invalid download ID | `false` |
 | `DOWNLOAD_LINK_EXPIRED` | Download link expired | `false` |
 | `DOWNLOAD_LINK_NOT_FOUND` | Download ID not found in TTL store | `false` |
+| `INTERNAL_ERROR` | Unexpected server error during tool execution | `false` |
 
 ## `/api/download` Contract
 
@@ -86,6 +87,7 @@ curl -L "$DOWNLOAD_URL" -o filled.docx
 - Success envelopes include placeholder rate metadata fields (`limit`, `remaining`, `reset_at`) as `null` until rate limiting is wired.
 - Auth and rate-limit error codes are defined for forward compatibility.
 - Clients should branch on error `code` and `retriable` instead of string matching.
+- Current carve-out: auth failures on protected `tools/call` requests are still returned at the HTTP boundary as `401`/`403` with a JSON-RPC `-32001` body, not as an `AUTH_REQUIRED` envelope. Migrating this boundary to the envelope is tracked as a follow-up.
 
 ## Browser GET Behavior
 
