@@ -422,7 +422,7 @@ describe('MCP endpoint — api/mcp.ts', () => {
 
     // Descriptor must advertise the same default the Zod schema enforces.
     const listTemplates = tools.find((t: { name: string }) => t.name === 'list_templates');
-    expect(listTemplates.inputSchema.properties.mode.description).toContain('"compact"');
+    expect(listTemplates.inputSchema.properties.mode.description).toContain('Defaults to "compact"');
   });
 
   it.openspec('OA-DST-024')('handles tools/call list_templates with envelope response', async () => {
