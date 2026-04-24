@@ -67,6 +67,19 @@ export const FieldDefinitionSchema: z.ZodType<FieldDefinition> = z.lazy(() =>
   })
 );
 
+const TemplateCreditRoleEnum = z.enum([
+  'drafter',
+  'drafting_editor',
+  'reviewer',
+  'maintainer',
+]);
+
+const TemplateCreditSchema = z.object({
+  name: z.string(),
+  role: TemplateCreditRoleEnum,
+  profile_url: z.string().url().optional(),
+});
+
 function validatePriorityFields(
   fields: FieldDefinition[],
   priorityFields: string[],
@@ -106,6 +119,8 @@ const TemplateMetadataBaseSchema = z.object({
   attribution_text: z.string(),
   fields: z.array(FieldDefinitionSchema),
   priority_fields: z.array(z.string()).default([]),
+  credits: z.array(TemplateCreditSchema).default([]),
+  derived_from: z.string().optional(),
 });
 
 export const TemplateMetadataSchema = TemplateMetadataBaseSchema.superRefine((meta, ctx) => {

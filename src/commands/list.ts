@@ -44,6 +44,8 @@ function runListJson(opts: ListOptions): void {
         source_url: meta.source_url,
         source: sourceName(meta.source_url),
         attribution_text: meta.attribution_text,
+        credits: meta.credits ?? [],
+        derived_from: meta.derived_from,
         fields: mapFields(meta.fields, meta.priority_fields),
       });
     } catch (err) {
@@ -67,6 +69,8 @@ function runListJson(opts: ListOptions): void {
           source_url: meta.source_url,
           source: sourceName(meta.source_url),
           attribution_text: meta.attribution_text,
+          credits: meta.credits ?? [],
+          derived_from: meta.derived_from,
           fields: mapFields(meta.fields, meta.priority_fields),
         });
       } catch (err) {

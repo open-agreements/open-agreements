@@ -265,6 +265,86 @@ describe('TemplateMetadataSchema', () => {
       false
     );
   });
+
+  it.openspec('OA-TMP-029')('accepts valid credits and derived_from', async () => {
+    await expectSafeParseOutcome(
+      'TemplateMetadataSchema',
+      TemplateMetadataSchema,
+      {
+        name: 'Test Consent',
+        source_url: 'https://example.com/consent',
+        version: '1.0',
+        license: 'CC-BY-4.0',
+        allow_derivatives: true,
+        attribution_text: 'Based on Example Consent',
+        fields: [],
+        credits: [
+          {
+            name: 'Joey Tsang',
+            role: 'drafting_editor',
+            profile_url: 'https://www.linkedin.com/in/joey-t-b90912b1/',
+          },
+        ],
+        derived_from: 'Publicly available Series Seed SAFE board consent materials',
+      },
+      true
+    );
+  });
+
+  it.openspec('OA-TMP-030')('defaults missing credits to empty array', async () => {
+    const parsed = await allureStep('Parse template metadata without credits', () =>
+      TemplateMetadataSchema.parse({
+        name: 'Test NDA',
+        source_url: 'https://example.com/nda',
+        version: '1.0',
+        license: 'CC-BY-4.0',
+        allow_derivatives: true,
+        attribution_text: 'Based on Example NDA',
+        fields: [],
+      })
+    );
+    await allureJsonAttachment('template-metadata-credits-default.json', parsed);
+    await allureStep('Assert credits defaults to empty array', () => {
+      expect(parsed.credits).toEqual([]);
+      expect(parsed.derived_from).toBeUndefined();
+    });
+  });
+
+  it.openspec('OA-TMP-031')('rejects credit role outside the closed enum', async () => {
+    await expectSafeParseOutcome(
+      'TemplateMetadataSchema',
+      TemplateMetadataSchema,
+      {
+        name: 'Test NDA',
+        source_url: 'https://example.com/nda',
+        version: '1.0',
+        license: 'CC-BY-4.0',
+        allow_derivatives: true,
+        attribution_text: 'Based on Example NDA',
+        fields: [],
+        credits: [{ name: 'Author X', role: 'author' }],
+      },
+      false
+    );
+  });
+
+  it.openspec('OA-TMP-031')('rejects non-string derived_from', async () => {
+    await expectSafeParseOutcome(
+      'TemplateMetadataSchema',
+      TemplateMetadataSchema,
+      {
+        name: 'Test NDA',
+        source_url: 'https://example.com/nda',
+        version: '1.0',
+        license: 'CC-BY-4.0',
+        allow_derivatives: true,
+        attribution_text: 'Based on Example NDA',
+        fields: [],
+        derived_from: 42,
+      },
+      false
+    );
+  });
 });
 
 describe('RecipeMetadataSchema', () => {
