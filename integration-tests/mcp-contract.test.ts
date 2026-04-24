@@ -428,4 +428,103 @@ describe('MCP contract envelope behaviors', () => {
     expect(envelope.ok).toBe(true);
     expect(envelope.data.templates[0].display_name).toBe('Common Paper Mutual NDA');
   });
+
+  // Regression coverage for issue #197: unhandled runtime exceptions in
+  // fill/download paths must still produce the v2 envelope, not a raw
+  // JSON-RPC -32603.
+  it.openspec('OA-DST-032')('returns INTERNAL_ERROR envelope when handleFill throws', async () => {
+    handleFillMock.mockRejectedValueOnce(new Error('render engine crashed'));
+
+    const req = createMockReq({
+      body: {
+        jsonrpc: '2.0',
+        id: 30,
+        method: 'tools/call',
+        params: {
+          name: 'fill_template',
+          arguments: {
+            template: 'common-paper-mutual-nda',
+            values: { company_name: 'Acme Corp' },
+          },
+        },
+      },
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+
+    expect(res.statusCode).toBe(200);
+    expect(getResultObject(res).isError).toBe(true);
+    const envelope = parseEnvelope(res.body);
+    expect(envelope.ok).toBe(false);
+    expect(envelope.tool).toBe('fill_template');
+    expect(envelope.schema_version).toBe('2026-02-19');
+    expect(envelope.error.code).toBe('INTERNAL_ERROR');
+    expect(envelope.error.retriable).toBe(false);
+    expect(envelope.error.message).toContain('Fill failed');
+    expect(envelope.error.message).toContain('render engine crashed');
+  });
+
+  it.openspec('OA-DST-032')('returns INTERNAL_ERROR envelope when createDownloadArtifact throws', async () => {
+    createDownloadArtifactMock.mockImplementationOnce(() => {
+      throw new Error('download store unavailable');
+    });
+
+    const req = createMockReq({
+      body: {
+        jsonrpc: '2.0',
+        id: 31,
+        method: 'tools/call',
+        params: {
+          name: 'fill_template',
+          arguments: {
+            template: 'common-paper-mutual-nda',
+            values: { company_name: 'Acme Corp' },
+          },
+        },
+      },
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+
+    expect(res.statusCode).toBe(200);
+    expect(getResultObject(res).isError).toBe(true);
+    const envelope = parseEnvelope(res.body);
+    expect(envelope.ok).toBe(false);
+    expect(envelope.tool).toBe('fill_template');
+    expect(envelope.error.code).toBe('INTERNAL_ERROR');
+    expect(envelope.error.retriable).toBe(false);
+    expect(envelope.error.message).toContain('Download artifact creation failed');
+    expect(envelope.error.message).toContain('download store unavailable');
+  });
+
+  it.openspec('OA-DST-032')('outer safety-net: returns INTERNAL_ERROR envelope when a non-fill tool handler throws', async () => {
+    handleGetTemplateMock.mockImplementationOnce(() => {
+      throw new Error('catalog corruption');
+    });
+
+    const req = createMockReq({
+      body: {
+        jsonrpc: '2.0',
+        id: 32,
+        method: 'tools/call',
+        params: {
+          name: 'get_template',
+          arguments: { template_id: 'common-paper-mutual-nda' },
+        },
+      },
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+
+    expect(res.statusCode).toBe(200);
+    // Outer catch routes through toolErrorResult, which sets isError on the result.
+    expect(getResultObject(res).isError).toBe(true);
+    const envelope = parseEnvelope(res.body);
+    expect(envelope.ok).toBe(false);
+    expect(envelope.tool).toBe('get_template');
+    expect(envelope.schema_version).toBe('2026-02-19');
+    expect(envelope.error.code).toBe('INTERNAL_ERROR');
+    expect(envelope.error.retriable).toBe(false);
+    expect(envelope.error.message).toContain('catalog corruption');
+  });
 });

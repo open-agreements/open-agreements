@@ -812,7 +812,20 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>) {
 
     const { template, values, return_mode, include_redline, redline_base } = parsed.data;
 
-    const outcome = await handleFill(template, values);
+    let outcome: Awaited<ReturnType<typeof handleFill>>;
+    try {
+      outcome = await handleFill(template, values);
+    } catch (err) {
+      const message = err instanceof Error ? err.message : String(err);
+      console.error({ tool: TOOL_FILL_TEMPLATE, phase: 'fill', id, err });
+      return toolErrorResult(
+        id,
+        TOOL_FILL_TEMPLATE,
+        ErrorCode.INTERNAL_ERROR,
+        `Fill failed: ${message}`,
+        { retriable: false },
+      );
+    }
 
     if (!outcome.ok) {
       const errorCode = isUnknownTemplateError(outcome.error)
@@ -821,7 +834,20 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>) {
       return toolErrorResult(id, TOOL_FILL_TEMPLATE, errorCode, outcome.error);
     }
 
-    const artifact = await createDownloadArtifact(template, values);
+    let artifact: Awaited<ReturnType<typeof createDownloadArtifact>>;
+    try {
+      artifact = await createDownloadArtifact(template, values);
+    } catch (err) {
+      const message = err instanceof Error ? err.message : String(err);
+      console.error({ tool: TOOL_FILL_TEMPLATE, phase: 'artifact', id, err });
+      return toolErrorResult(
+        id,
+        TOOL_FILL_TEMPLATE,
+        ErrorCode.INTERNAL_ERROR,
+        `Download artifact creation failed: ${message}`,
+        { retriable: false },
+      );
+    }
     const downloadUrl = `${_baseUrl}/api/download?id=${encodeURIComponent(artifact.download_id)}`;
     const expiresAt = artifact.expires_at;
 
@@ -843,8 +869,9 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>) {
             redline_stats: redline.stats,
           };
         }
-      } catch {
-        // Redline generation is best-effort; don't fail the fill
+      } catch (err) {
+        // Redline generation is best-effort; log but don't fail the fill
+        console.error({ tool: TOOL_FILL_TEMPLATE, phase: 'redline', id, err });
       }
     }
 
@@ -926,6 +953,14 @@ export default async function handler(req: HttpRequest, res: HttpResponse) {
 
   const params = (body.params ?? {}) as Record<string, unknown>;
 
+  // Capture tool name up front so the outer catch can envelope-wrap unexpected
+  // throws during tools/call handling. (auth injection at the tools/call case
+  // only mutates params.arguments, not params.name.)
+  const requestedToolName =
+    body.method === 'tools/call'
+      ? ((params as { name?: unknown }).name as string | undefined)
+      : undefined;
+
   try {
     switch (body.method) {
       case 'initialize':
@@ -961,6 +996,20 @@ export default async function handler(req: HttpRequest, res: HttpResponse) {
     }
   } catch (err) {
     const message = err instanceof Error ? err.message : String(err);
+    console.error({ phase: 'outer', method: body.method, tool: requestedToolName, err });
+    // For tools/call, preserve the documented envelope contract even on
+    // unexpected throws. Other methods keep the JSON-RPC protocol error.
+    if (body.method === 'tools/call') {
+      return res.status(200).json(
+        toolErrorResult(
+          body.id,
+          requestedToolName ?? 'tools/call',
+          ErrorCode.INTERNAL_ERROR,
+          `Internal error: ${message}`,
+          { retriable: false },
+        ),
+      );
+    }
     return res.status(200).json(jsonRpcError(body.id, -32603, `Internal error: ${message}`));
   }
 }

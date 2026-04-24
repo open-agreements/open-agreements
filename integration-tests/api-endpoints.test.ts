@@ -56,6 +56,7 @@ const createDownloadArtifactMock = vi.fn(() => ({
   expires_at_ms: Date.now() + 3600000,
 }));
 const resolveDownloadArtifactMock = vi.fn();
+const generateRedlineFromFillMock = vi.fn();
 
 vi.mock('../api/_shared.js', () => ({
   handleFill: handleFillMock,
@@ -63,6 +64,7 @@ vi.mock('../api/_shared.js', () => ({
   handleGetTemplate: handleGetTemplateMock,
   createDownloadArtifact: createDownloadArtifactMock,
   resolveDownloadArtifact: resolveDownloadArtifactMock,
+  generateRedlineFromFill: generateRedlineFromFillMock,
   DOCX_MIME: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
   PROJECT_ROOT: '/mock',
 }));
@@ -707,5 +709,56 @@ describe('Download endpoint — api/download.ts', () => {
     await downloadHandler(req, res);
 
     expect(res.statusCode).toBe(204);
+  });
+
+  // Regression coverage for issue #197: unhandled throws in the download
+  // render path must return DOWNLOAD_RENDER_FAILED with a generic message
+  // (no err.message leak into the browser-visible body).
+  it.openspec('OA-DST-025')('returns DOWNLOAD_RENDER_FAILED (generic message) when generateRedlineFromFill throws', async () => {
+    resolveDownloadArtifactMock.mockReturnValue({
+      ok: true,
+      artifact: {
+        template: 'common-paper-mutual-nda',
+        values: { company_name: 'Acme Corp' },
+        variant: 'redline',
+        redline_base: 'source',
+        expires_at_ms: Date.now() + 3600000,
+        created_at_ms: Date.now(),
+      },
+    });
+    handleFillMock.mockResolvedValue(MOCK_FILL_SUCCESS);
+    generateRedlineFromFillMock.mockRejectedValueOnce(new Error('sensitive internal details'));
+
+    const req = createMockReq({ method: 'GET', query: { id: 'valid-id.valid-sig' } });
+    const res = createMockRes();
+    await downloadHandler(req, res);
+
+    expect(res.statusCode).toBe(500);
+    expect(getErrorObject(res).code).toBe('DOWNLOAD_RENDER_FAILED');
+    expect(getErrorObject(res).message).toBe('Redline generation failed.');
+    // err.message must not leak into the response body
+    expect(JSON.stringify(res.body)).not.toContain('sensitive internal details');
+  });
+
+  it.openspec('OA-DST-025')('returns DOWNLOAD_RENDER_FAILED (generic message) when handleFill throws', async () => {
+    resolveDownloadArtifactMock.mockReturnValue({
+      ok: true,
+      artifact: {
+        template: 'common-paper-mutual-nda',
+        values: { company_name: 'Acme Corp' },
+        expires_at_ms: Date.now() + 3600000,
+        created_at_ms: Date.now(),
+      },
+    });
+    handleFillMock.mockRejectedValueOnce(new Error('sensitive fill trace'));
+
+    const req = createMockReq({ method: 'GET', query: { id: 'valid-id.valid-sig' } });
+    const res = createMockRes();
+    await downloadHandler(req, res);
+
+    expect(res.statusCode).toBe(500);
+    expect(getErrorObject(res).code).toBe('DOWNLOAD_RENDER_FAILED');
+    expect(getErrorObject(res).message).toBe('Template render failed.');
+    expect(JSON.stringify(res.body)).not.toContain('sensitive fill trace');
   });
 });
