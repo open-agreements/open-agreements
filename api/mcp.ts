@@ -17,6 +17,8 @@ import {
   DOCX_MIME,
   createDownloadArtifact,
   generateRedlineFromFill,
+  DownloadStoreUnavailableError,
+  DownloadStoreConfigurationError,
 } from './_shared.js';
 import { ErrorCode, makeToolError, wrapError, wrapSuccess } from './_envelope.js';
 import { jwtVerify, createRemoteJWKSet } from 'jose';
@@ -839,6 +841,20 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>) {
       artifact = await createDownloadArtifact(template, values);
     } catch (err) {
       const message = err instanceof Error ? err.message : String(err);
+      if (err instanceof DownloadStoreUnavailableError) {
+        const cause = err instanceof DownloadStoreConfigurationError ? 'configuration' : 'runtime';
+        console.error({ tool: TOOL_FILL_TEMPLATE, phase: 'artifact', id, cause, err });
+        return toolErrorResult(
+          id,
+          TOOL_FILL_TEMPLATE,
+          ErrorCode.INTERNAL_ERROR,
+          `Download storage is unavailable: ${message}`,
+          {
+            retriable: cause === 'runtime',
+            details: { reason: 'DOWNLOAD_STORE_UNAVAILABLE', cause },
+          },
+        );
+      }
       console.error({ tool: TOOL_FILL_TEMPLATE, phase: 'artifact', id, err });
       return toolErrorResult(
         id,

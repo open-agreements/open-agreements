@@ -83,6 +83,22 @@ const searchTemplatesMock = vi.fn((templates: unknown[], options: { query: strin
   return [];
 });
 
+// Stand-ins for the typed download-store error hierarchy so `instanceof`
+// checks in api/mcp.ts resolve against the mocked module.
+class MockDownloadStoreUnavailableError extends Error {
+  readonly cause_type: 'configuration' | 'runtime';
+  constructor(message: string, cause_type: 'configuration' | 'runtime') {
+    super(message);
+    this.cause_type = cause_type;
+  }
+}
+class MockDownloadStoreConfigurationError extends MockDownloadStoreUnavailableError {
+  constructor(message: string) { super(message, 'configuration'); }
+}
+class MockDownloadStoreRuntimeError extends MockDownloadStoreUnavailableError {
+  constructor(message: string) { super(message, 'runtime'); }
+}
+
 vi.mock('../api/_shared.js', () => ({
   handleListTemplates: handleListTemplatesMock,
   handleGetTemplate: handleGetTemplateMock,
@@ -90,6 +106,10 @@ vi.mock('../api/_shared.js', () => ({
   createDownloadArtifact: createDownloadArtifactMock,
   searchTemplates: searchTemplatesMock,
   DOCX_MIME: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
+  DownloadStoreUnavailableError: MockDownloadStoreUnavailableError,
+  DownloadStoreConfigurationError: MockDownloadStoreConfigurationError,
+  DownloadStoreRuntimeError: MockDownloadStoreRuntimeError,
+  getDownloadStorageMode: () => 'memory',
 }));
 
 interface MockRes {

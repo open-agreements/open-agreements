@@ -57,6 +57,23 @@ const createDownloadArtifactMock = vi.fn(() => ({
 }));
 const resolveDownloadArtifactMock = vi.fn();
 const generateRedlineFromFillMock = vi.fn();
+const getDownloadStorageModeMock = vi.fn<[], string | null>(() => 'memory');
+
+// Minimal stand-ins for the typed error hierarchy so `instanceof` checks in
+// download.ts and mcp.ts work against the mocked module.
+class MockDownloadStoreUnavailableError extends Error {
+  readonly cause_type: 'configuration' | 'runtime';
+  constructor(message: string, cause_type: 'configuration' | 'runtime') {
+    super(message);
+    this.cause_type = cause_type;
+  }
+}
+class MockDownloadStoreConfigurationError extends MockDownloadStoreUnavailableError {
+  constructor(message: string) { super(message, 'configuration'); }
+}
+class MockDownloadStoreRuntimeError extends MockDownloadStoreUnavailableError {
+  constructor(message: string) { super(message, 'runtime'); }
+}
 
 vi.mock('../api/_shared.js', () => ({
   handleFill: handleFillMock,
@@ -67,6 +84,10 @@ vi.mock('../api/_shared.js', () => ({
   generateRedlineFromFill: generateRedlineFromFillMock,
   DOCX_MIME: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
   PROJECT_ROOT: '/mock',
+  DownloadStoreUnavailableError: MockDownloadStoreUnavailableError,
+  DownloadStoreConfigurationError: MockDownloadStoreConfigurationError,
+  DownloadStoreRuntimeError: MockDownloadStoreRuntimeError,
+  getDownloadStorageMode: getDownloadStorageModeMock,
 }));
 
 // ---------------------------------------------------------------------------
@@ -519,6 +540,70 @@ describe('MCP endpoint — api/mcp.ts', () => {
     expect(envelope.error.message).toContain('nonexistent');
   });
 
+  it.openspec('OA-DST-036')('returns INTERNAL_ERROR with DOWNLOAD_STORE_UNAVAILABLE details when createDownloadArtifact fails (configuration)', async () => {
+    handleFillMock.mockResolvedValue(MOCK_FILL_SUCCESS);
+    createDownloadArtifactMock.mockImplementationOnce(() => {
+      throw new MockDownloadStoreConfigurationError('KV not configured');
+    });
+
+    const req = createMockReq({
+      headers: { 'content-type': 'application/json', host: 'openagreements.ai' },
+      body: {
+        jsonrpc: '2.0',
+        id: 70,
+        method: 'tools/call',
+        params: {
+          name: 'fill_template',
+          arguments: { template: 'common-paper-mutual-nda', values: {} },
+        },
+      },
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+
+    const result = getResultObject(res);
+    const envelope = parseMcpEnvelope(res.body);
+    expect(result.isError).toBe(true);
+    expect(envelope.ok).toBe(false);
+    expect(envelope.error.code).toBe('INTERNAL_ERROR');
+    expect(envelope.error.retriable).toBe(false);
+    expect(envelope.error.details).toMatchObject({
+      reason: 'DOWNLOAD_STORE_UNAVAILABLE',
+      cause: 'configuration',
+    });
+  });
+
+  it.openspec('OA-DST-036')('returns retriable INTERNAL_ERROR when createDownloadArtifact fails (runtime)', async () => {
+    handleFillMock.mockResolvedValue(MOCK_FILL_SUCCESS);
+    createDownloadArtifactMock.mockImplementationOnce(() => {
+      throw new MockDownloadStoreRuntimeError('upstash 5xx');
+    });
+
+    const req = createMockReq({
+      headers: { 'content-type': 'application/json', host: 'openagreements.ai' },
+      body: {
+        jsonrpc: '2.0',
+        id: 71,
+        method: 'tools/call',
+        params: {
+          name: 'fill_template',
+          arguments: { template: 'common-paper-mutual-nda', values: {} },
+        },
+      },
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+
+    const envelope = parseMcpEnvelope(res.body);
+    expect(envelope.ok).toBe(false);
+    expect(envelope.error.code).toBe('INTERNAL_ERROR');
+    expect(envelope.error.retriable).toBe(true);
+    expect(envelope.error.details).toMatchObject({
+      reason: 'DOWNLOAD_STORE_UNAVAILABLE',
+      cause: 'runtime',
+    });
+  });
+
   it.openspec('OA-DST-024')('returns INVALID_ARGUMENT envelope for unknown tool name', async () => {
     const req = createMockReq({
       body: {
@@ -828,5 +913,88 @@ describe('Download endpoint — api/download.ts', () => {
     expect(logged).toMatch(/"idFp":"[0-9a-f]{12}"/);
 
     consoleErrorSpy.mockRestore();
+  });
+
+  // Issue #198: classify download-store unavailability so a misconfigured
+  // deployment surfaces an explicit code instead of intermittent ghost 404s.
+  it.openspec('OA-DST-036')('returns 500 + DOWNLOAD_STORE_UNAVAILABLE on configuration error', async () => {
+    resolveDownloadArtifactMock.mockImplementationOnce(() => {
+      throw new MockDownloadStoreConfigurationError('KV not configured');
+    });
+    const consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+
+    const req = createMockReq({ method: 'GET', query: { id: 'valid-id.valid-sig' } });
+    const res = createMockRes();
+    await downloadHandler(req, res);
+
+    expect(res.statusCode).toBe(500);
+    expect(getErrorObject(res).code).toBe('DOWNLOAD_STORE_UNAVAILABLE');
+    expect(res.headers['X-Download-Error-Code']).toBe('DOWNLOAD_STORE_UNAVAILABLE');
+    expect(res.headers['X-Download-Store']).toBe('unavailable');
+    // err.message should not leak — the body uses a generic configured copy.
+    expect(JSON.stringify(res.body)).not.toContain('KV not configured');
+    // Cause must be logged so ops can distinguish config vs runtime in logs.
+    expect(JSON.stringify(consoleErrorSpy.mock.calls)).toContain('"cause":"configuration"');
+
+    consoleErrorSpy.mockRestore();
+  });
+
+  it.openspec('OA-DST-036')('returns 503 + DOWNLOAD_STORE_UNAVAILABLE on runtime error (Upstash outage)', async () => {
+    resolveDownloadArtifactMock.mockImplementationOnce(() => {
+      throw new MockDownloadStoreRuntimeError('upstash 5xx');
+    });
+    const consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+
+    const req = createMockReq({ method: 'GET', query: { id: 'valid-id.valid-sig' } });
+    const res = createMockRes();
+    await downloadHandler(req, res);
+
+    expect(res.statusCode).toBe(503);
+    expect(getErrorObject(res).code).toBe('DOWNLOAD_STORE_UNAVAILABLE');
+    expect(res.headers['X-Download-Error-Code']).toBe('DOWNLOAD_STORE_UNAVAILABLE');
+    expect(res.headers['X-Download-Store']).toBe('unavailable');
+    expect(JSON.stringify(res.body)).not.toContain('upstash 5xx');
+    expect(JSON.stringify(consoleErrorSpy.mock.calls)).toContain('"cause":"runtime"');
+
+    consoleErrorSpy.mockRestore();
+  });
+
+  it.openspec('OA-DST-036')('HEAD parity: 503 with DOWNLOAD_STORE_UNAVAILABLE header on runtime error', async () => {
+    resolveDownloadArtifactMock.mockImplementationOnce(() => {
+      throw new MockDownloadStoreRuntimeError('upstash unreachable');
+    });
+    const consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+
+    const req = createMockReq({ method: 'HEAD', query: { id: 'valid-id.valid-sig' } });
+    const res = createMockRes();
+    await downloadHandler(req, res);
+
+    expect(res.statusCode).toBe(503);
+    expect(res.body).toBeUndefined();
+    expect(res.headers['X-Download-Error-Code']).toBe('DOWNLOAD_STORE_UNAVAILABLE');
+    expect(res.headers['X-Download-Store']).toBe('unavailable');
+
+    consoleErrorSpy.mockRestore();
+  });
+
+  it.openspec('OA-DST-037')('emits X-Download-Store header on successful 200 response', async () => {
+    resolveDownloadArtifactMock.mockReturnValue({
+      ok: true,
+      artifact: {
+        template: 'common-paper-mutual-nda',
+        values: { company_name: 'Acme Corp' },
+        expires_at_ms: Date.now() + 3600000,
+        created_at_ms: Date.now(),
+      },
+    });
+    handleFillMock.mockResolvedValue(MOCK_FILL_SUCCESS);
+    getDownloadStorageModeMock.mockReturnValueOnce('upstash');
+
+    const req = createMockReq({ method: 'GET', query: { id: 'valid-id.valid-sig' } });
+    const res = createMockRes();
+    await downloadHandler(req, res);
+
+    expect(res.statusCode).toBe(200);
+    expect(res.headers['X-Download-Store']).toBe('upstash');
   });
 });
