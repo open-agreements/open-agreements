@@ -4,8 +4,18 @@
  * the filled template, and serves the DOCX as a browser download.
  */
 
+import { createHash } from 'node:crypto';
 import type { HttpRequest, HttpResponse } from './_http-types.js';
 import { resolveDownloadArtifact, handleFill, generateRedlineFromFill, DOCX_MIME } from './_shared.js';
+
+/**
+ * Hash the download id for log correlation. The raw id is a live signed bearer
+ * token — anyone with log access could replay it until expiry. Log only a
+ * non-reversible fingerprint instead.
+ */
+function idFingerprint(id: string): string {
+  return createHash('sha256').update(id).digest('hex').slice(0, 12);
+}
 
 type DownloadHttpErrorCode =
   | 'DOWNLOAD_ID_MISSING'
@@ -173,8 +183,18 @@ export default async function handler(req: HttpRequest, res: HttpResponse) {
   if (!id || typeof id !== 'string') {
     return sendDownloadError(req, res, 400, 'DOWNLOAD_ID_MISSING', 'Missing "id" query parameter.');
   }
+  const idFp = idFingerprint(id);
 
-  const resolved = await resolveDownloadArtifact(id);
+  let resolved: Awaited<ReturnType<typeof resolveDownloadArtifact>>;
+  try {
+    resolved = await resolveDownloadArtifact(id);
+  } catch (err) {
+    // Throws here typically mean the artifact store (KV/Upstash) is unavailable
+    // or returned a malformed payload. Either way, return the documented
+    // DOWNLOAD_RENDER_FAILED shape rather than a raw platform 500.
+    console.error({ endpoint: 'download', phase: 'resolve', idFp, err });
+    return sendDownloadError(req, res, 500, 'DOWNLOAD_RENDER_FAILED', 'Download lookup failed.');
+  }
   if (!resolved.ok) {
     const mapped = mapResolveErrorToHttp(resolved.code);
     return sendDownloadError(req, res, mapped.status, mapped.code, mapped.message);
@@ -184,45 +204,72 @@ export default async function handler(req: HttpRequest, res: HttpResponse) {
   try {
     outcome = await handleFill(resolved.artifact.template, resolved.artifact.values);
   } catch (err) {
-    console.error({ endpoint: 'download', phase: 'fill', id, err });
+    console.error({
+      endpoint: 'download',
+      phase: 'fill',
+      idFp,
+      template: resolved.artifact.template,
+      variant: resolved.artifact.variant ?? 'source',
+      err,
+    });
     return sendDownloadError(req, res, 500, 'DOWNLOAD_RENDER_FAILED', 'Template render failed.');
   }
   if (!outcome.ok) {
     return sendDownloadError(req, res, 500, 'DOWNLOAD_RENDER_FAILED', outcome.error);
   }
 
-  let docxBuffer: Buffer;
-  let filename: string;
+  try {
+    let docxBuffer: Buffer;
+    let filename: string;
 
-  if (resolved.artifact.variant === 'redline') {
-    let redline: Awaited<ReturnType<typeof generateRedlineFromFill>>;
-    try {
-      redline = await generateRedlineFromFill(
-        resolved.artifact.template,
-        outcome.base64,
-        resolved.artifact.redline_base ?? 'source',
-        resolved.artifact.values,
-      );
-    } catch (err) {
-      console.error({ endpoint: 'download', phase: 'redline', id, err });
-      return sendDownloadError(req, res, 500, 'DOWNLOAD_RENDER_FAILED', 'Redline generation failed.');
+    if (resolved.artifact.variant === 'redline') {
+      let redline: Awaited<ReturnType<typeof generateRedlineFromFill>>;
+      try {
+        redline = await generateRedlineFromFill(
+          resolved.artifact.template,
+          outcome.base64,
+          resolved.artifact.redline_base ?? 'source',
+          resolved.artifact.values,
+        );
+      } catch (err) {
+        console.error({
+          endpoint: 'download',
+          phase: 'redline',
+          idFp,
+          template: resolved.artifact.template,
+          err,
+        });
+        return sendDownloadError(req, res, 500, 'DOWNLOAD_RENDER_FAILED', 'Redline generation failed.');
+      }
+      if (!redline) {
+        return sendDownloadError(req, res, 500, 'DOWNLOAD_RENDER_FAILED', 'Redline generation not available for this template.');
+      }
+      docxBuffer = Buffer.from(redline.base64, 'base64');
+      filename = `${resolved.artifact.template}-redline.docx`;
+    } else {
+      docxBuffer = Buffer.from(outcome.base64, 'base64');
+      filename = `${resolved.artifact.template}.docx`;
     }
-    if (!redline) {
-      return sendDownloadError(req, res, 500, 'DOWNLOAD_RENDER_FAILED', 'Redline generation not available for this template.');
-    }
-    docxBuffer = Buffer.from(redline.base64, 'base64');
-    filename = `${resolved.artifact.template}-redline.docx`;
-  } else {
-    docxBuffer = Buffer.from(outcome.base64, 'base64');
-    filename = `${resolved.artifact.template}.docx`;
-  }
 
-  res.setHeader('Content-Type', DOCX_MIME);
-  res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
-  res.setHeader('Content-Length', docxBuffer.length);
-  res.setHeader('Cache-Control', 'no-store');
-  if (req.method === 'HEAD') {
-    return res.status(200).end();
+    res.setHeader('Content-Type', DOCX_MIME);
+    res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
+    res.setHeader('Content-Length', docxBuffer.length);
+    res.setHeader('Cache-Control', 'no-store');
+    if (req.method === 'HEAD') {
+      return res.status(200).end();
+    }
+    return res.status(200).send(docxBuffer);
+  } catch (err) {
+    // Catch any throw in Buffer.from / response assembly (malformed base64,
+    // header-write failure, etc.) so we still emit the documented contract.
+    console.error({
+      endpoint: 'download',
+      phase: 'assemble',
+      idFp,
+      template: resolved.artifact.template,
+      variant: resolved.artifact.variant ?? 'source',
+      err,
+    });
+    return sendDownloadError(req, res, 500, 'DOWNLOAD_RENDER_FAILED', 'Download assembly failed.');
   }
-  return res.status(200).send(docxBuffer);
 }

@@ -761,4 +761,72 @@ describe('Download endpoint — api/download.ts', () => {
     expect(getErrorObject(res).message).toBe('Template render failed.');
     expect(JSON.stringify(res.body)).not.toContain('sensitive fill trace');
   });
+
+  // Follow-up to #197 (#206): close the residual uncaught surfaces before
+  // the existing handleFill catch and around buffer/response assembly.
+  it.openspec('OA-DST-025')('returns DOWNLOAD_RENDER_FAILED when resolveDownloadArtifact throws (e.g. KV outage)', async () => {
+    resolveDownloadArtifactMock.mockImplementationOnce(() => {
+      throw new Error('upstash unreachable');
+    });
+
+    const req = createMockReq({ method: 'GET', query: { id: 'valid-id.valid-sig' } });
+    const res = createMockRes();
+    await downloadHandler(req, res);
+
+    expect(res.statusCode).toBe(500);
+    expect(getErrorObject(res).code).toBe('DOWNLOAD_RENDER_FAILED');
+    expect(getErrorObject(res).message).toBe('Download lookup failed.');
+    expect(JSON.stringify(res.body)).not.toContain('upstash unreachable');
+  });
+
+  it.openspec('OA-DST-025')('returns DOWNLOAD_RENDER_FAILED when Buffer assembly throws on malformed base64', async () => {
+    resolveDownloadArtifactMock.mockReturnValue({
+      ok: true,
+      artifact: {
+        template: 'common-paper-mutual-nda',
+        values: { company_name: 'Acme Corp' },
+        expires_at_ms: Date.now() + 3600000,
+        created_at_ms: Date.now(),
+      },
+    });
+    // Force the response-assembly path to throw via a setHeader stub.
+    handleFillMock.mockResolvedValue(MOCK_FILL_SUCCESS);
+
+    const req = createMockReq({ method: 'GET', query: { id: 'valid-id.valid-sig' } });
+    const res = createMockRes();
+    let triggered = false;
+    res.setHeader = ((k: string, v: string) => {
+      if (k === 'Content-Length' && !triggered) {
+        triggered = true;
+        throw new Error('header write failed');
+      }
+      res.headers[k] = v;
+      return res;
+    }) as MockRes['setHeader'];
+    await downloadHandler(req, res);
+
+    expect(res.statusCode).toBe(500);
+    expect(getErrorObject(res).code).toBe('DOWNLOAD_RENDER_FAILED');
+    expect(getErrorObject(res).message).toBe('Download assembly failed.');
+    expect(JSON.stringify(res.body)).not.toContain('header write failed');
+  });
+
+  it.openspec('OA-DST-025')('does not log the raw download id in error paths', async () => {
+    resolveDownloadArtifactMock.mockImplementationOnce(() => {
+      throw new Error('store error');
+    });
+    const consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+
+    const rawId = 'super-secret-bearer-token-abc123.sig-xyz';
+    const req = createMockReq({ method: 'GET', query: { id: rawId } });
+    const res = createMockRes();
+    await downloadHandler(req, res);
+
+    const logged = JSON.stringify(consoleErrorSpy.mock.calls);
+    expect(logged).not.toContain(rawId);
+    // We do log a fingerprint (idFp), so a 12-hex-char token replaces the raw id.
+    expect(logged).toMatch(/"idFp":"[0-9a-f]{12}"/);
+
+    consoleErrorSpy.mockRestore();
+  });
 });
