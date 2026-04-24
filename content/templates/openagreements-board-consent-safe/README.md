@@ -8,7 +8,7 @@ Equity (SAFEs).
 
 This template is canonically authored in Contract IR:
 
-- `content.md` contains the legal text and sparse style directives.
+- `template.md` contains the legal text and sparse style directives.
 - `schema.yaml` defines the allowed variables.
 - `styles.yaml` defines the rendering semantics for DOCX and Markdown output.
 
@@ -16,7 +16,7 @@ Generated artifact:
 
 - `template.docx`
 
-Markdown downloads are derived from `content.md` at build time so the canonical
+Markdown downloads are derived from `template.md` at build time so the canonical
 authoring source stays in one place.
 - `clean.json` removes the introductory drafting note from filled output while
   keeping it in the canonical authoring source and generated base template

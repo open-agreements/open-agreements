@@ -242,7 +242,7 @@ function parseInline(text, styleRegistry, schemaRegistry, filePath) {
 }
 
 export function loadContractIrTemplate(templateDir) {
-  const contentPath = resolve(templateDir, 'content.md');
+  const contentPath = resolve(templateDir, 'template.md');
   const metadataPath = resolve(templateDir, 'metadata.yaml');
   const rawContent = readFileSync(contentPath, 'utf-8');
   const { frontmatter, body } = parseFrontmatter(rawContent, contentPath);
