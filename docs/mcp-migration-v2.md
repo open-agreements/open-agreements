@@ -39,8 +39,8 @@ Error responses now use the same envelope shape with `ok: false` and a structure
 
 ## `list_templates` Modes
 
-- `mode: "full"` (default): full field metadata for each template
-- `mode: "compact"`: minimal index entries (`template_id`, `name`, `field_count`)
+- `mode: "compact"` (default): minimal index entries (`template_id`, `name`, `field_count`)
+- `mode: "full"`: full field metadata for each template
 
 ## `fill_template` Return Modes
 

@@ -3,6 +3,7 @@
  * Mocks the shared business logic so tests exercise only the protocol routing.
  */
 
+import { readFileSync } from 'node:fs';
 import { afterEach, describe, expect, vi } from 'vitest';
 import { itAllure, allureStep, allureJsonAttachment } from './helpers/allure-test.js';
 
@@ -381,6 +382,8 @@ describe('MCP endpoint — api/mcp.ts', () => {
     const result = getResultObject(res);
     expect(result.protocolVersion).toBe('2024-11-05');
     expect(result.serverInfo.name).toBe('OpenAgreements');
+    const pkg = JSON.parse(readFileSync(new URL('../package.json', import.meta.url), 'utf-8'));
+    expect(result.serverInfo.version).toBe(pkg.version);
     expect(result.capabilities.tools).toBeDefined();
   });
 
@@ -416,6 +419,10 @@ describe('MCP endpoint — api/mcp.ts', () => {
       'search_templates',
       'send_for_signature',
     ]);
+
+    // Descriptor must advertise the same default the Zod schema enforces.
+    const listTemplates = tools.find((t: { name: string }) => t.name === 'list_templates');
+    expect(listTemplates.inputSchema.properties.mode.description).toContain('"compact"');
   });
 
   it.openspec('OA-DST-024')('handles tools/call list_templates with envelope response', async () => {
