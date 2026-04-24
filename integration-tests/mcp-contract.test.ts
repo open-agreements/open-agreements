@@ -548,3 +548,203 @@ describe('MCP contract envelope behaviors', () => {
     expect(envelope.error.message).toContain('catalog corruption');
   });
 });
+
+describe('MCP structured logging', () => {
+  type LogCall = Record<string, unknown>;
+
+  function captureLogs() {
+    const infoSpy = vi.spyOn(console, 'log').mockImplementation(() => undefined);
+    const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+    const parsed = (spy: ReturnType<typeof vi.spyOn>): LogCall[] =>
+      spy.mock.calls
+        .map((call) => {
+          try {
+            return JSON.parse(String(call[0])) as LogCall;
+          } catch {
+            return null;
+          }
+        })
+        .filter((value): value is LogCall => value !== null);
+    return {
+      infoLogs: () => parsed(infoSpy),
+      errorLogs: () => parsed(errorSpy),
+      allRaw: () => JSON.stringify([...infoSpy.mock.calls, ...errorSpy.mock.calls]),
+      restore: () => {
+        infoSpy.mockRestore();
+        errorSpy.mockRestore();
+      },
+    };
+  }
+
+  it.openspec('OA-DST-038')('propagates x-vercel-id into request_start and request_complete', async () => {
+    const cap = captureLogs();
+    const req = createMockReq({
+      headers: {
+        'content-type': 'application/json',
+        host: 'openagreements.ai',
+        'x-vercel-id': 'fra1::abc123',
+      },
+      body: { jsonrpc: '2.0', id: 7, method: 'tools/list', params: {} },
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+
+    const start = cap.infoLogs().find((l) => l.event === 'request_start');
+    const done = cap.infoLogs().find((l) => l.event === 'request_complete');
+
+    expect(start).toMatchObject({
+      event: 'request_start',
+      endpoint: 'mcp',
+      level: 'info',
+      vercelId: 'fra1::abc123',
+      jsonrpcMethod: 'tools/list',
+      jsonrpcId: 7,
+    });
+    expect(done).toMatchObject({
+      event: 'request_complete',
+      endpoint: 'mcp',
+      vercelId: 'fra1::abc123',
+      ok: true,
+      status: 200,
+    });
+    expect(typeof done?.durationMs).toBe('number');
+    cap.restore();
+  });
+
+  it.openspec('OA-DST-039')('propagates vercelId and normalizes err in tool_internal_error', async () => {
+    handleFillMock.mockImplementationOnce(async () => {
+      throw new Error('synthetic fill failure');
+    });
+    const cap = captureLogs();
+    const req = createMockReq({
+      headers: {
+        'content-type': 'application/json',
+        host: 'openagreements.ai',
+        'x-vercel-id': 'iad1::xyz789',
+      },
+      body: {
+        jsonrpc: '2.0',
+        id: 11,
+        method: 'tools/call',
+        params: {
+          name: 'fill_template',
+          arguments: { template: 'common-paper-mutual-nda', values: { company_name: 'Acme' } },
+        },
+      },
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+
+    const errLog = cap.errorLogs().find((l) => l.event === 'tool_internal_error');
+    expect(errLog).toMatchObject({
+      event: 'tool_internal_error',
+      endpoint: 'mcp',
+      level: 'error',
+      vercelId: 'iad1::xyz789',
+      tool: 'fill_template',
+      phase: 'fill',
+      jsonrpcId: 11,
+      name: 'Error',
+      message: 'synthetic fill failure',
+    });
+    expect(typeof errLog?.stack).toBe('string');
+    cap.restore();
+  });
+
+  it.openspec('OA-DST-040')('redacts bearer token to a fingerprint on auth_denied', async () => {
+    const cap = captureLogs();
+    const rawToken = 'super-secret-bearer-zzz-do-not-leak';
+    const req = createMockReq({
+      headers: {
+        'content-type': 'application/json',
+        host: 'openagreements.ai',
+        authorization: `Bearer ${rawToken}`,
+      },
+      body: {
+        jsonrpc: '2.0',
+        id: 12,
+        method: 'tools/call',
+        params: {
+          name: 'send_for_signature',
+          arguments: {},
+        },
+      },
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+
+    const denied = cap.errorLogs().find((l) => l.event === 'auth_denied');
+    expect(denied).toBeDefined();
+    expect(denied).toMatchObject({
+      event: 'auth_denied',
+      endpoint: 'mcp',
+      toolName: 'send_for_signature',
+    });
+    expect(String(denied?.tokenFp)).toMatch(/^[0-9a-f]{12}$/);
+
+    // Critical: the raw bearer token must never appear in any captured log.
+    expect(cap.allRaw()).not.toContain(rawToken);
+    cap.restore();
+  });
+
+  it.openspec('OA-DST-041')('does not fingerprint bearer tokens on non-auth-required successful paths', async () => {
+    const cap = captureLogs();
+    const req = createMockReq({
+      headers: {
+        'content-type': 'application/json',
+        host: 'openagreements.ai',
+        // list_templates is not in AUTH_REQUIRED_TOOLS — verifyAuth is never called.
+        authorization: 'Bearer harmless-but-should-not-be-logged',
+      },
+      body: { jsonrpc: '2.0', id: 13, method: 'tools/list', params: {} },
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+
+    const all = [...cap.infoLogs(), ...cap.errorLogs()];
+    expect(all.find((l) => l.event === 'request_complete')?.ok).toBe(true);
+    // No log should carry tokenFp on a non-auth-required path.
+    expect(all.some((l) => 'tokenFp' in l)).toBe(false);
+    cap.restore();
+  });
+
+  it.openspec('OA-DST-042')('logs request_rejected_invalid_jsonrpc when envelope is malformed', async () => {
+    const cap = captureLogs();
+    const req = createMockReq({
+      body: { id: 14, method: 'tools/list' /* jsonrpc field missing */ },
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+
+    const rejected = cap.errorLogs().find((l) => l.event === 'request_rejected_invalid_jsonrpc');
+    expect(rejected).toMatchObject({
+      event: 'request_rejected_invalid_jsonrpc',
+      endpoint: 'mcp',
+      level: 'error',
+      status: 400,
+      jsonrpcId: 14,
+    });
+    expect(res.statusCode).toBe(400);
+    cap.restore();
+  });
+
+  it.openspec('OA-DST-043')('omits vercelId entirely when x-vercel-id header is absent', async () => {
+    const cap = captureLogs();
+    const req = createMockReq({
+      // No x-vercel-id header.
+      headers: { 'content-type': 'application/json', host: 'openagreements.ai' },
+      body: { jsonrpc: '2.0', id: 15, method: 'tools/list', params: {} },
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+
+    const start = cap.infoLogs().find((l) => l.event === 'request_start');
+    expect(start).toBeDefined();
+    // The key must be absent — not undefined, not null, not a synthetic id.
+    expect('vercelId' in (start as object)).toBe(false);
+
+    const done = cap.infoLogs().find((l) => l.event === 'request_complete');
+    expect('vercelId' in (done as object)).toBe(false);
+    cap.restore();
+  });
+});
