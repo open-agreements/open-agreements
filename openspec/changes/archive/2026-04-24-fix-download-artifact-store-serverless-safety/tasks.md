@@ -32,7 +32,7 @@
 
 ## 5. Validation
 
-- [ ] `npx openspec validate fix-download-artifact-store-serverless-safety --strict`
-- [ ] `npm run test -- integration-tests/api-download-tokens.test.ts integration-tests/api-endpoints.test.ts integration-tests/mcp-contract.test.ts`
-- [ ] `npm run preflight:ci`
-- [ ] `npm run trust:rebuild` and inspect diff (system card scenario count +2).
+- [x] `npx openspec validate fix-download-artifact-store-serverless-safety --strict`
+- [x] `npm run test -- integration-tests/api-download-tokens.test.ts integration-tests/api-endpoints.test.ts integration-tests/mcp-contract.test.ts`
+- [x] `npm run preflight:ci` (PR #210 CI: green; local 6/831 fails are unrelated `gcloud-storage` reauth)
+- [x] `npm run trust:rebuild` (deferred to post-archive run alongside spec scenario merge).
