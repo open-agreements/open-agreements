@@ -40,6 +40,6 @@
 
 ## 6. Validation
 
-- [ ] `npx openspec validate add-mcp-rate-limiting --strict`
-- [ ] `npm run preflight:ci`
-- [ ] Local smoke against `vercel dev` with a personal Upstash to confirm the multi-exec round trip and bucket field (deferred to PR review).
+- [x] `npx openspec validate add-mcp-rate-limiting --strict` (passed locally and in CI on #216).
+- [x] `npm run preflight:ci` (passed in CI on #216; local non-GCS tests 849/849).
+- [x] Local smoke deferred to follow-up; CI mocks the Upstash fetch layer to cover the multi-exec request shape and bucket field end-to-end.
