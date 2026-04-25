@@ -3,12 +3,24 @@
  * Single source of truth for OA origin, DocuSign settings, and common helpers.
  */
 
+import { readFileSync } from 'node:fs';
+import { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import type { HttpRequest } from './_http-types.js';
 
 // ── OA Identity ─────────────────────────────────────────────────────────────
 
 export const OA_ORIGIN = process.env.OA_ORIGIN?.trim() || 'https://openagreements.org';
 export const MCP_RESOURCE = `${OA_ORIGIN}/api/mcp`;
+
+const __config_dirname = dirname(fileURLToPath(import.meta.url));
+const PACKAGE_ROOT = join(__config_dirname, '..');
+
+let _pkgVersion = '0.0.0';
+try {
+  _pkgVersion = JSON.parse(readFileSync(join(PACKAGE_ROOT, 'package.json'), 'utf-8')).version;
+} catch { /* fallback */ }
+export const OA_PACKAGE_VERSION = _pkgVersion;
 
 // ── DocuSign ────────────────────────────────────────────────────────────────
 
