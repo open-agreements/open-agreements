@@ -31,6 +31,14 @@ import {
   error as logError,
   type RequestContext,
 } from './_log.js';
+import {
+  checkRateLimit,
+  combineState,
+  getClientIp,
+  readFillLimit,
+  readGlobalLimit,
+  type RateLimitState,
+} from './_ratelimit.js';
 
 // ---------------------------------------------------------------------------
 // Zod schemas for MCP tool argument validation
@@ -428,13 +436,25 @@ function jsonRpcError(id: unknown, code: number, message: string) {
   return { jsonrpc: '2.0', id: id ?? null, error: { code, message } };
 }
 
-function operationalMetadata() {
+function operationalMetadata(state: RateLimitState | null) {
+  if (state && state.configured) {
+    return {
+      rate_limit: {
+        limit: state.limit,
+        remaining: state.remaining,
+        reset_at: state.reset_at,
+        bucket: state.bucket,
+      },
+      auth: null,
+    };
+  }
+  // Limiter unconfigured (dev/test) or runtime-failed-open. Truthful nulls.
   return {
-    // Placeholder fields until auth/rate-limit middleware is wired.
     rate_limit: {
       limit: null,
       remaining: null,
       reset_at: null,
+      bucket: null,
     },
     auth: null,
   };
@@ -495,10 +515,15 @@ function compactTemplate(template: { name: string; display_name: string; fields:
   };
 }
 
-function toolSuccessResult(id: unknown, tool: string, data: Record<string, unknown>) {
+function toolSuccessResult(
+  id: unknown,
+  tool: string,
+  data: Record<string, unknown>,
+  state: RateLimitState | null = null,
+) {
   const envelope = wrapSuccess(tool, {
     ...data,
-    ...operationalMetadata(),
+    ...operationalMetadata(state),
   });
   return jsonRpcResult(id, {
     content: [{ type: 'text', text: JSON.stringify(envelope) }],
@@ -517,6 +542,37 @@ function toolErrorResult(
     content: [{ type: 'text', text: JSON.stringify(envelope) }],
     isError: true,
   });
+}
+
+/**
+ * Build a RATE_LIMITED envelope plus the seconds-to-reset for `Retry-After`.
+ * Always retriable. State must be `configured: true && allowed: false`.
+ */
+function buildRateLimitedResult(
+  id: unknown,
+  tool: string,
+  state: Extract<RateLimitState, { configured: true }>,
+): { result: ReturnType<typeof toolErrorResult>; retryAfterSec: number } {
+  const resetAtMs = Date.parse(state.reset_at);
+  const retryAfterSec = Math.max(1, Math.ceil((resetAtMs - Date.now()) / 1000));
+  const result = toolErrorResult(
+    id,
+    tool,
+    ErrorCode.RATE_LIMITED,
+    `Rate limit exceeded for bucket "${state.bucket}". Retry after ${state.reset_at}.`,
+    {
+      retriable: true,
+      details: {
+        rate_limit: {
+          limit: state.limit,
+          remaining: 0,
+          reset_at: state.reset_at,
+          bucket: state.bucket,
+        },
+      },
+    },
+  );
+  return { result, retryAfterSec };
 }
 
 function mcpGetHtmlPage(): string {
@@ -723,7 +779,12 @@ function handleToolsList(id: unknown) {
   return jsonRpcResult(id, { tools: ALL_TOOLS });
 }
 
-async function handleToolsCall(id: unknown, params: Record<string, unknown>, ctx: RequestContext) {
+async function handleToolsCall(
+  id: unknown,
+  params: Record<string, unknown>,
+  ctx: RequestContext,
+  rateState: RateLimitState | null,
+) {
   const name = params.name as string;
   const args = (params.arguments as Record<string, unknown>) ?? {};
 
@@ -755,13 +816,13 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>, ctx
       return toolSuccessResult(id, TOOL_LIST_TEMPLATES, {
         mode,
         templates: items.map((item) => compactTemplate(item)),
-      });
+      }, rateState);
     }
 
     return toolSuccessResult(id, TOOL_LIST_TEMPLATES, {
       mode,
       templates: items.map((item) => normalizedTemplate(item)),
-    });
+    }, rateState);
   }
 
   if (name === TOOL_SEARCH_TEMPLATES) {
@@ -785,7 +846,7 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>, ctx
       source_filter: parsed.data.source ?? null,
       result_count: results.length,
       results,
-    });
+    }, rateState);
   }
 
   if (name === TOOL_GET_TEMPLATE) {
@@ -812,7 +873,7 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>, ctx
 
     return toolSuccessResult(id, TOOL_GET_TEMPLATE, {
       template: normalizedTemplate(template),
-    });
+    }, rateState);
   }
 
   if (name === TOOL_FILL_TEMPLATE) {
@@ -952,7 +1013,7 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>, ctx
         resource_uri: `oa://filled/${artifact.download_id}`,
         return_mode,
         ...redlineData,
-      });
+      }, rateState);
     }
 
     return toolSuccessResult(id, TOOL_FILL_TEMPLATE, {
@@ -962,7 +1023,7 @@ async function handleToolsCall(id: unknown, params: Record<string, unknown>, ctx
       metadata: outcome.metadata,
       return_mode,
       ...redlineData,
-    });
+    }, rateState);
   }
 
   return toolErrorResult(
@@ -1056,7 +1117,30 @@ export default async function handler(req: HttpRequest, res: HttpResponse) {
     return complete(400, false, { jsonrpcId: body?.id }, jsonRpcError(body?.id, -32600, 'Invalid JSON-RPC 2.0 request'));
   }
 
-  // Notifications (no id) — acknowledge without response body.
+  // Rate limit check happens BEFORE the notification short-circuit so spammed
+  // notifications still count against the global bucket. We deliberately do
+  // not include OPTIONS/GET in the limiter — they're handled above.
+  const clientIp = getClientIp(req);
+  const globalState = await checkRateLimit('mcp:global', clientIp, readGlobalLimit());
+
+  if (globalState.configured && !globalState.allowed) {
+    const tool = body.method === 'tools/call'
+      ? (((body.params ?? {}) as { name?: string }).name ?? 'tools/call')
+      : body.method;
+    const { result, retryAfterSec } = buildRateLimitedResult(body.id, tool, globalState);
+    res.setHeader('Retry-After', String(retryAfterSec));
+    logInfo({
+      event: 'rate_limited',
+      endpoint: 'mcp',
+      bucket: 'mcp:global',
+      jsonrpcMethod: body.method,
+      jsonrpcId: body.id,
+      ...ctx,
+    });
+    return complete(200, false, { jsonrpcMethod: body.method, jsonrpcId: body.id }, result);
+  }
+
+  // Notifications (no id) — acknowledge without response body. Counted above.
   if (body.id === undefined || body.id === null) {
     logInfo({
       event: 'notification',
@@ -1131,7 +1215,30 @@ export default async function handler(req: HttpRequest, res: HttpResponse) {
           toolArgs.__auth_sub = auth.sub;
           (params as Record<string, unknown>).arguments = toolArgs;
         }
-        const toolResult = await handleToolsCall(body.id, params, ctx);
+
+        // fill_template gets a stricter sub-bucket on top of the global cap
+        // already passed above. Block here surfaces `bucket: 'mcp:fill'`.
+        let effectiveState: RateLimitState | null = globalState;
+        if (toolName === TOOL_FILL_TEMPLATE) {
+          const fillState = await checkRateLimit('mcp:fill', clientIp, readFillLimit());
+          if (fillState.configured && !fillState.allowed) {
+            const { result, retryAfterSec } = buildRateLimitedResult(body.id, TOOL_FILL_TEMPLATE, fillState);
+            res.setHeader('Retry-After', String(retryAfterSec));
+            logInfo({
+              event: 'rate_limited',
+              endpoint: 'mcp',
+              bucket: 'mcp:fill',
+              jsonrpcMethod: body.method,
+              toolName,
+              jsonrpcId: body.id,
+              ...ctx,
+            });
+            return complete(200, false, trace, result);
+          }
+          effectiveState = combineState(globalState, fillState);
+        }
+
+        const toolResult = await handleToolsCall(body.id, params, ctx, effectiveState);
         const toolOk = !(toolResult as { result?: { error?: unknown } })?.result?.error;
         return complete(200, toolOk, trace, toolResult);
       }

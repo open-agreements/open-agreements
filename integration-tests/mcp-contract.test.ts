@@ -112,6 +112,20 @@ vi.mock('../api/_shared.js', () => ({
   getDownloadStorageMode: () => 'memory',
 }));
 
+// Rate limiter is disabled by default in tests (returns `{ configured: false }`)
+// so existing envelope assertions keep passing. Individual rate-limit tests
+// override per-call via `checkRateLimitMock.mockResolvedValueOnce(...)`.
+const checkRateLimitMock = vi.fn<
+  (bucket: string, ip: string, limit: number) => Promise<unknown>
+>(async () => ({ configured: false }));
+vi.mock('../api/_ratelimit.js', async () => {
+  const actual = await vi.importActual<typeof import('../api/_ratelimit.js')>('../api/_ratelimit.js');
+  return {
+    ...actual,
+    checkRateLimit: checkRateLimitMock,
+  };
+});
+
 interface MockRes {
   statusCode: number;
   headers: Record<string, string>;
@@ -194,7 +208,7 @@ describe('MCP contract envelope behaviors', () => {
     expect(envelope.tool).toBe('list_templates');
     expect(envelope.schema_version).toBe('2026-02-19');
     expect(envelope.data.templates).toHaveLength(1);
-    expect(envelope.data.rate_limit).toEqual({ limit: null, remaining: null, reset_at: null });
+    expect(envelope.data.rate_limit).toEqual({ limit: null, remaining: null, reset_at: null, bucket: null });
     expect(envelope.data.auth).toBeNull();
   });
 
@@ -746,5 +760,176 @@ describe('MCP structured logging', () => {
     const done = cap.infoLogs().find((l) => l.event === 'request_complete');
     expect('vercelId' in (done as object)).toBe(false);
     cap.restore();
+  });
+});
+
+describe('MCP rate limiting', () => {
+  it.openspec('OA-DST-044')('reports truthful rate_limit metadata when limiter is active', async () => {
+    checkRateLimitMock.mockResolvedValueOnce({
+      configured: true,
+      allowed: true,
+      bucket: 'mcp:global',
+      limit: 600,
+      remaining: 599,
+      reset_at: '2026-04-24T00:01:00.000Z',
+    });
+
+    const req = createMockReq({
+      body: {
+        jsonrpc: '2.0',
+        id: 100,
+        method: 'tools/call',
+        params: { name: 'list_templates', arguments: {} },
+      },
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+
+    expect(res.statusCode).toBe(200);
+    const envelope = parseEnvelope(res.body);
+    expect(envelope.ok).toBe(true);
+    expect(envelope.data.rate_limit).toEqual({
+      limit: 600,
+      remaining: 599,
+      reset_at: '2026-04-24T00:01:00.000Z',
+      bucket: 'mcp:global',
+    });
+  });
+
+  it.openspec('OA-DST-045')('blocks tools/call with RATE_LIMITED envelope and Retry-After header on global cap', async () => {
+    const resetAt = new Date(Date.now() + 30_000).toISOString();
+    checkRateLimitMock.mockResolvedValueOnce({
+      configured: true,
+      allowed: false,
+      bucket: 'mcp:global',
+      limit: 600,
+      remaining: 0,
+      reset_at: resetAt,
+    });
+
+    const req = createMockReq({
+      body: {
+        jsonrpc: '2.0',
+        id: 101,
+        method: 'tools/call',
+        params: { name: 'list_templates', arguments: {} },
+      },
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+
+    expect(res.statusCode).toBe(200);
+    expect(res.headers['Retry-After']).toBeDefined();
+    const retryAfterSec = Number(res.headers['Retry-After']);
+    expect(retryAfterSec).toBeGreaterThanOrEqual(1);
+    expect(retryAfterSec).toBeLessThanOrEqual(30);
+
+    const envelope = parseEnvelope(res.body);
+    expect(getResultObject(res).isError).toBe(true);
+    expect(envelope.ok).toBe(false);
+    expect(envelope.error.code).toBe('RATE_LIMITED');
+    expect(envelope.error.retriable).toBe(true);
+    expect(envelope.error.details.rate_limit).toEqual({
+      limit: 600,
+      remaining: 0,
+      reset_at: resetAt,
+      bucket: 'mcp:global',
+    });
+  });
+
+  it.openspec('OA-DST-046')('enforces stricter mcp:fill bucket when global passes', async () => {
+    const fillResetAt = new Date(Date.now() + 45_000).toISOString();
+    // Global bucket: allowed. Fill bucket: blocked.
+    checkRateLimitMock
+      .mockResolvedValueOnce({
+        configured: true,
+        allowed: true,
+        bucket: 'mcp:global',
+        limit: 600,
+        remaining: 500,
+        reset_at: '2026-04-24T00:01:00.000Z',
+      })
+      .mockResolvedValueOnce({
+        configured: true,
+        allowed: false,
+        bucket: 'mcp:fill',
+        limit: 120,
+        remaining: 0,
+        reset_at: fillResetAt,
+      });
+
+    const req = createMockReq({
+      body: {
+        jsonrpc: '2.0',
+        id: 102,
+        method: 'tools/call',
+        params: {
+          name: 'fill_template',
+          arguments: { template: 'common-paper-mutual-nda', values: { company_name: 'Acme' } },
+        },
+      },
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+
+    expect(checkRateLimitMock).toHaveBeenCalledTimes(2);
+    expect(checkRateLimitMock.mock.calls[0][0]).toBe('mcp:global');
+    expect(checkRateLimitMock.mock.calls[1][0]).toBe('mcp:fill');
+
+    expect(res.statusCode).toBe(200);
+    const envelope = parseEnvelope(res.body);
+    expect(envelope.ok).toBe(false);
+    expect(envelope.tool).toBe('fill_template');
+    expect(envelope.error.code).toBe('RATE_LIMITED');
+    expect(envelope.error.details.rate_limit.bucket).toBe('mcp:fill');
+  });
+
+  it.openspec('OA-DST-047')('counts JSON-RPC notifications against the global bucket', async () => {
+    checkRateLimitMock.mockResolvedValueOnce({
+      configured: true,
+      allowed: true,
+      bucket: 'mcp:global',
+      limit: 600,
+      remaining: 598,
+      reset_at: '2026-04-24T00:01:00.000Z',
+    });
+
+    const req = createMockReq({
+      body: { jsonrpc: '2.0', method: 'notifications/initialized', params: {} },
+      // No id — this is a notification.
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+
+    // Limiter must have been consulted before the notification short-circuit.
+    expect(checkRateLimitMock).toHaveBeenCalledWith('mcp:global', expect.any(String), expect.any(Number));
+    // Notification still returns 202 when allowed.
+    expect(res.statusCode).toBe(202);
+    expect(res.ended).toBe(true);
+  });
+
+  it.openspec('OA-DST-048')('fails open with null rate_limit metadata when limiter is unconfigured', async () => {
+    // Default mock returns { configured: false } — emulates dev/test or runtime fail-open.
+    const req = createMockReq({
+      body: {
+        jsonrpc: '2.0',
+        id: 103,
+        method: 'tools/call',
+        params: { name: 'list_templates', arguments: {} },
+      },
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+
+    expect(res.statusCode).toBe(200);
+    expect(res.headers['Retry-After']).toBeUndefined();
+    const envelope = parseEnvelope(res.body);
+    expect(envelope.ok).toBe(true);
+    expect(envelope.data.rate_limit).toEqual({
+      limit: null,
+      remaining: null,
+      reset_at: null,
+      bucket: null,
+    });
   });
 });
