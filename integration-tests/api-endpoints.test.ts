@@ -56,6 +56,24 @@ const createDownloadArtifactMock = vi.fn(() => ({
   expires_at_ms: Date.now() + 3600000,
 }));
 const resolveDownloadArtifactMock = vi.fn();
+const generateRedlineFromFillMock = vi.fn();
+const getDownloadStorageModeMock = vi.fn<[], string | null>(() => 'memory');
+
+// Minimal stand-ins for the typed error hierarchy so `instanceof` checks in
+// download.ts and mcp.ts work against the mocked module.
+class MockDownloadStoreUnavailableError extends Error {
+  readonly cause_type: 'configuration' | 'runtime';
+  constructor(message: string, cause_type: 'configuration' | 'runtime') {
+    super(message);
+    this.cause_type = cause_type;
+  }
+}
+class MockDownloadStoreConfigurationError extends MockDownloadStoreUnavailableError {
+  constructor(message: string) { super(message, 'configuration'); }
+}
+class MockDownloadStoreRuntimeError extends MockDownloadStoreUnavailableError {
+  constructor(message: string) { super(message, 'runtime'); }
+}
 
 vi.mock('../api/_shared.js', () => ({
   handleFill: handleFillMock,
@@ -63,8 +81,13 @@ vi.mock('../api/_shared.js', () => ({
   handleGetTemplate: handleGetTemplateMock,
   createDownloadArtifact: createDownloadArtifactMock,
   resolveDownloadArtifact: resolveDownloadArtifactMock,
+  generateRedlineFromFill: generateRedlineFromFillMock,
   DOCX_MIME: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
   PROJECT_ROOT: '/mock',
+  DownloadStoreUnavailableError: MockDownloadStoreUnavailableError,
+  DownloadStoreConfigurationError: MockDownloadStoreConfigurationError,
+  DownloadStoreRuntimeError: MockDownloadStoreRuntimeError,
+  getDownloadStorageMode: getDownloadStorageModeMock,
 }));
 
 // ---------------------------------------------------------------------------
@@ -517,6 +540,70 @@ describe('MCP endpoint — api/mcp.ts', () => {
     expect(envelope.error.message).toContain('nonexistent');
   });
 
+  it.openspec('OA-DST-036')('returns INTERNAL_ERROR with DOWNLOAD_STORE_UNAVAILABLE details when createDownloadArtifact fails (configuration)', async () => {
+    handleFillMock.mockResolvedValue(MOCK_FILL_SUCCESS);
+    createDownloadArtifactMock.mockImplementationOnce(() => {
+      throw new MockDownloadStoreConfigurationError('KV not configured');
+    });
+
+    const req = createMockReq({
+      headers: { 'content-type': 'application/json', host: 'openagreements.ai' },
+      body: {
+        jsonrpc: '2.0',
+        id: 70,
+        method: 'tools/call',
+        params: {
+          name: 'fill_template',
+          arguments: { template: 'common-paper-mutual-nda', values: {} },
+        },
+      },
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+
+    const result = getResultObject(res);
+    const envelope = parseMcpEnvelope(res.body);
+    expect(result.isError).toBe(true);
+    expect(envelope.ok).toBe(false);
+    expect(envelope.error.code).toBe('INTERNAL_ERROR');
+    expect(envelope.error.retriable).toBe(false);
+    expect(envelope.error.details).toMatchObject({
+      reason: 'DOWNLOAD_STORE_UNAVAILABLE',
+      cause: 'configuration',
+    });
+  });
+
+  it.openspec('OA-DST-036')('returns retriable INTERNAL_ERROR when createDownloadArtifact fails (runtime)', async () => {
+    handleFillMock.mockResolvedValue(MOCK_FILL_SUCCESS);
+    createDownloadArtifactMock.mockImplementationOnce(() => {
+      throw new MockDownloadStoreRuntimeError('upstash 5xx');
+    });
+
+    const req = createMockReq({
+      headers: { 'content-type': 'application/json', host: 'openagreements.ai' },
+      body: {
+        jsonrpc: '2.0',
+        id: 71,
+        method: 'tools/call',
+        params: {
+          name: 'fill_template',
+          arguments: { template: 'common-paper-mutual-nda', values: {} },
+        },
+      },
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+
+    const envelope = parseMcpEnvelope(res.body);
+    expect(envelope.ok).toBe(false);
+    expect(envelope.error.code).toBe('INTERNAL_ERROR');
+    expect(envelope.error.retriable).toBe(true);
+    expect(envelope.error.details).toMatchObject({
+      reason: 'DOWNLOAD_STORE_UNAVAILABLE',
+      cause: 'runtime',
+    });
+  });
+
   it.openspec('OA-DST-024')('returns INVALID_ARGUMENT envelope for unknown tool name', async () => {
     const req = createMockReq({
       body: {
@@ -707,5 +794,207 @@ describe('Download endpoint — api/download.ts', () => {
     await downloadHandler(req, res);
 
     expect(res.statusCode).toBe(204);
+  });
+
+  // Regression coverage for issue #197: unhandled throws in the download
+  // render path must return DOWNLOAD_RENDER_FAILED with a generic message
+  // (no err.message leak into the browser-visible body).
+  it.openspec('OA-DST-025')('returns DOWNLOAD_RENDER_FAILED (generic message) when generateRedlineFromFill throws', async () => {
+    resolveDownloadArtifactMock.mockReturnValue({
+      ok: true,
+      artifact: {
+        template: 'common-paper-mutual-nda',
+        values: { company_name: 'Acme Corp' },
+        variant: 'redline',
+        redline_base: 'source',
+        expires_at_ms: Date.now() + 3600000,
+        created_at_ms: Date.now(),
+      },
+    });
+    handleFillMock.mockResolvedValue(MOCK_FILL_SUCCESS);
+    generateRedlineFromFillMock.mockRejectedValueOnce(new Error('sensitive internal details'));
+
+    const req = createMockReq({ method: 'GET', query: { id: 'valid-id.valid-sig' } });
+    const res = createMockRes();
+    await downloadHandler(req, res);
+
+    expect(res.statusCode).toBe(500);
+    expect(getErrorObject(res).code).toBe('DOWNLOAD_RENDER_FAILED');
+    expect(getErrorObject(res).message).toBe('Redline generation failed.');
+    // err.message must not leak into the response body
+    expect(JSON.stringify(res.body)).not.toContain('sensitive internal details');
+  });
+
+  it.openspec('OA-DST-025')('returns DOWNLOAD_RENDER_FAILED (generic message) when handleFill throws', async () => {
+    resolveDownloadArtifactMock.mockReturnValue({
+      ok: true,
+      artifact: {
+        template: 'common-paper-mutual-nda',
+        values: { company_name: 'Acme Corp' },
+        expires_at_ms: Date.now() + 3600000,
+        created_at_ms: Date.now(),
+      },
+    });
+    handleFillMock.mockRejectedValueOnce(new Error('sensitive fill trace'));
+
+    const req = createMockReq({ method: 'GET', query: { id: 'valid-id.valid-sig' } });
+    const res = createMockRes();
+    await downloadHandler(req, res);
+
+    expect(res.statusCode).toBe(500);
+    expect(getErrorObject(res).code).toBe('DOWNLOAD_RENDER_FAILED');
+    expect(getErrorObject(res).message).toBe('Template render failed.');
+    expect(JSON.stringify(res.body)).not.toContain('sensitive fill trace');
+  });
+
+  // Follow-up to #197 (#206): close the residual uncaught surfaces before
+  // the existing handleFill catch and around buffer/response assembly.
+  it.openspec('OA-DST-025')('returns DOWNLOAD_RENDER_FAILED when resolveDownloadArtifact throws (e.g. KV outage)', async () => {
+    resolveDownloadArtifactMock.mockImplementationOnce(() => {
+      throw new Error('upstash unreachable');
+    });
+
+    const req = createMockReq({ method: 'GET', query: { id: 'valid-id.valid-sig' } });
+    const res = createMockRes();
+    await downloadHandler(req, res);
+
+    expect(res.statusCode).toBe(500);
+    expect(getErrorObject(res).code).toBe('DOWNLOAD_RENDER_FAILED');
+    expect(getErrorObject(res).message).toBe('Download lookup failed.');
+    expect(JSON.stringify(res.body)).not.toContain('upstash unreachable');
+  });
+
+  it.openspec('OA-DST-025')('returns DOWNLOAD_RENDER_FAILED when Buffer assembly throws on malformed base64', async () => {
+    resolveDownloadArtifactMock.mockReturnValue({
+      ok: true,
+      artifact: {
+        template: 'common-paper-mutual-nda',
+        values: { company_name: 'Acme Corp' },
+        expires_at_ms: Date.now() + 3600000,
+        created_at_ms: Date.now(),
+      },
+    });
+    // Force the response-assembly path to throw via a setHeader stub.
+    handleFillMock.mockResolvedValue(MOCK_FILL_SUCCESS);
+
+    const req = createMockReq({ method: 'GET', query: { id: 'valid-id.valid-sig' } });
+    const res = createMockRes();
+    let triggered = false;
+    res.setHeader = ((k: string, v: string) => {
+      if (k === 'Content-Length' && !triggered) {
+        triggered = true;
+        throw new Error('header write failed');
+      }
+      res.headers[k] = v;
+      return res;
+    }) as MockRes['setHeader'];
+    await downloadHandler(req, res);
+
+    expect(res.statusCode).toBe(500);
+    expect(getErrorObject(res).code).toBe('DOWNLOAD_RENDER_FAILED');
+    expect(getErrorObject(res).message).toBe('Download assembly failed.');
+    expect(JSON.stringify(res.body)).not.toContain('header write failed');
+  });
+
+  it.openspec('OA-DST-025')('does not log the raw download id in error paths', async () => {
+    resolveDownloadArtifactMock.mockImplementationOnce(() => {
+      throw new Error('store error');
+    });
+    const consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+
+    const rawId = 'super-secret-bearer-token-abc123.sig-xyz';
+    const req = createMockReq({ method: 'GET', query: { id: rawId } });
+    const res = createMockRes();
+    await downloadHandler(req, res);
+
+    const logged = JSON.stringify(consoleErrorSpy.mock.calls);
+    expect(logged).not.toContain(rawId);
+    // We do log a fingerprint (idFp), so a 12-hex-char token replaces the raw id.
+    expect(logged).toMatch(/"idFp":"[0-9a-f]{12}"/);
+
+    consoleErrorSpy.mockRestore();
+  });
+
+  // Issue #198: classify download-store unavailability so a misconfigured
+  // deployment surfaces an explicit code instead of intermittent ghost 404s.
+  it.openspec('OA-DST-036')('returns 500 + DOWNLOAD_STORE_UNAVAILABLE on configuration error', async () => {
+    resolveDownloadArtifactMock.mockImplementationOnce(() => {
+      throw new MockDownloadStoreConfigurationError('KV not configured');
+    });
+    const consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+
+    const req = createMockReq({ method: 'GET', query: { id: 'valid-id.valid-sig' } });
+    const res = createMockRes();
+    await downloadHandler(req, res);
+
+    expect(res.statusCode).toBe(500);
+    expect(getErrorObject(res).code).toBe('DOWNLOAD_STORE_UNAVAILABLE');
+    expect(res.headers['X-Download-Error-Code']).toBe('DOWNLOAD_STORE_UNAVAILABLE');
+    expect(res.headers['X-Download-Store']).toBe('unavailable');
+    // err.message should not leak — the body uses a generic configured copy.
+    expect(JSON.stringify(res.body)).not.toContain('KV not configured');
+    // Cause must be logged so ops can distinguish config vs runtime in logs.
+    expect(JSON.stringify(consoleErrorSpy.mock.calls)).toContain('"cause":"configuration"');
+
+    consoleErrorSpy.mockRestore();
+  });
+
+  it.openspec('OA-DST-036')('returns 503 + DOWNLOAD_STORE_UNAVAILABLE on runtime error (Upstash outage)', async () => {
+    resolveDownloadArtifactMock.mockImplementationOnce(() => {
+      throw new MockDownloadStoreRuntimeError('upstash 5xx');
+    });
+    const consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+
+    const req = createMockReq({ method: 'GET', query: { id: 'valid-id.valid-sig' } });
+    const res = createMockRes();
+    await downloadHandler(req, res);
+
+    expect(res.statusCode).toBe(503);
+    expect(getErrorObject(res).code).toBe('DOWNLOAD_STORE_UNAVAILABLE');
+    expect(res.headers['X-Download-Error-Code']).toBe('DOWNLOAD_STORE_UNAVAILABLE');
+    expect(res.headers['X-Download-Store']).toBe('unavailable');
+    expect(JSON.stringify(res.body)).not.toContain('upstash 5xx');
+    expect(JSON.stringify(consoleErrorSpy.mock.calls)).toContain('"cause":"runtime"');
+
+    consoleErrorSpy.mockRestore();
+  });
+
+  it.openspec('OA-DST-036')('HEAD parity: 503 with DOWNLOAD_STORE_UNAVAILABLE header on runtime error', async () => {
+    resolveDownloadArtifactMock.mockImplementationOnce(() => {
+      throw new MockDownloadStoreRuntimeError('upstash unreachable');
+    });
+    const consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+
+    const req = createMockReq({ method: 'HEAD', query: { id: 'valid-id.valid-sig' } });
+    const res = createMockRes();
+    await downloadHandler(req, res);
+
+    expect(res.statusCode).toBe(503);
+    expect(res.body).toBeUndefined();
+    expect(res.headers['X-Download-Error-Code']).toBe('DOWNLOAD_STORE_UNAVAILABLE');
+    expect(res.headers['X-Download-Store']).toBe('unavailable');
+
+    consoleErrorSpy.mockRestore();
+  });
+
+  it.openspec('OA-DST-037')('emits X-Download-Store header on successful 200 response', async () => {
+    resolveDownloadArtifactMock.mockReturnValue({
+      ok: true,
+      artifact: {
+        template: 'common-paper-mutual-nda',
+        values: { company_name: 'Acme Corp' },
+        expires_at_ms: Date.now() + 3600000,
+        created_at_ms: Date.now(),
+      },
+    });
+    handleFillMock.mockResolvedValue(MOCK_FILL_SUCCESS);
+    getDownloadStorageModeMock.mockReturnValueOnce('upstash');
+
+    const req = createMockReq({ method: 'GET', query: { id: 'valid-id.valid-sig' } });
+    const res = createMockRes();
+    await downloadHandler(req, res);
+
+    expect(res.statusCode).toBe(200);
+    expect(res.headers['X-Download-Store']).toBe('upstash');
   });
 });
