@@ -112,6 +112,20 @@ vi.mock('../api/_shared.js', () => ({
   getDownloadStorageMode: () => 'memory',
 }));
 
+// Rate limiter is disabled by default in tests (returns `{ configured: false }`)
+// so existing envelope assertions keep passing. Individual rate-limit tests
+// override per-call via `checkRateLimitMock.mockResolvedValueOnce(...)`.
+const checkRateLimitMock = vi.fn<
+  (bucket: string, ip: string, limit: number) => Promise<unknown>
+>(async () => ({ configured: false }));
+vi.mock('../api/_ratelimit.js', async () => {
+  const actual = await vi.importActual<typeof import('../api/_ratelimit.js')>('../api/_ratelimit.js');
+  return {
+    ...actual,
+    checkRateLimit: checkRateLimitMock,
+  };
+});
+
 interface MockRes {
   statusCode: number;
   headers: Record<string, string>;
@@ -195,7 +209,7 @@ describe('MCP contract envelope behaviors', () => {
     expect(envelope.tool).toBe('list_templates');
     expect(envelope.schema_version).toBe('2026-02-19');
     expect(envelope.data.templates).toHaveLength(1);
-    expect(envelope.data.rate_limit).toEqual({ limit: null, remaining: null, reset_at: null });
+    expect(envelope.data.rate_limit).toEqual({ limit: null, remaining: null, reset_at: null, bucket: null });
     expect(envelope.data.auth).toBeNull();
   });
 
@@ -643,5 +657,376 @@ describe('MCP contract envelope behaviors', () => {
     expect(envelope.error.code).toBe('INTERNAL_ERROR');
     expect(envelope.error.retriable).toBe(false);
     expect(envelope.error.message).toContain('catalog corruption');
+  });
+});
+
+describe('MCP structured logging', () => {
+  type LogCall = Record<string, unknown>;
+
+  function captureLogs() {
+    const infoSpy = vi.spyOn(console, 'log').mockImplementation(() => undefined);
+    const errorSpy = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+    const parsed = (spy: ReturnType<typeof vi.spyOn>): LogCall[] =>
+      spy.mock.calls
+        .map((call) => {
+          try {
+            return JSON.parse(String(call[0])) as LogCall;
+          } catch {
+            return null;
+          }
+        })
+        .filter((value): value is LogCall => value !== null);
+    return {
+      infoLogs: () => parsed(infoSpy),
+      errorLogs: () => parsed(errorSpy),
+      allRaw: () => JSON.stringify([...infoSpy.mock.calls, ...errorSpy.mock.calls]),
+      restore: () => {
+        infoSpy.mockRestore();
+        errorSpy.mockRestore();
+      },
+    };
+  }
+
+  it.openspec('OA-DST-038')('propagates x-vercel-id into request_start and request_complete', async () => {
+    const cap = captureLogs();
+    const req = createMockReq({
+      headers: {
+        'content-type': 'application/json',
+        host: 'openagreements.ai',
+        'x-vercel-id': 'fra1::abc123',
+      },
+      body: { jsonrpc: '2.0', id: 7, method: 'tools/list', params: {} },
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+
+    const start = cap.infoLogs().find((l) => l.event === 'request_start');
+    const done = cap.infoLogs().find((l) => l.event === 'request_complete');
+
+    expect(start).toMatchObject({
+      event: 'request_start',
+      endpoint: 'mcp',
+      level: 'info',
+      vercelId: 'fra1::abc123',
+      jsonrpcMethod: 'tools/list',
+      jsonrpcId: 7,
+    });
+    expect(done).toMatchObject({
+      event: 'request_complete',
+      endpoint: 'mcp',
+      vercelId: 'fra1::abc123',
+      ok: true,
+      status: 200,
+    });
+    expect(typeof done?.durationMs).toBe('number');
+    cap.restore();
+  });
+
+  it.openspec('OA-DST-039')('propagates vercelId and normalizes err in tool_internal_error', async () => {
+    handleFillMock.mockImplementationOnce(async () => {
+      throw new Error('synthetic fill failure');
+    });
+    const cap = captureLogs();
+    const req = createMockReq({
+      headers: {
+        'content-type': 'application/json',
+        host: 'openagreements.ai',
+        'x-vercel-id': 'iad1::xyz789',
+      },
+      body: {
+        jsonrpc: '2.0',
+        id: 11,
+        method: 'tools/call',
+        params: {
+          name: 'fill_template',
+          arguments: { template: 'common-paper-mutual-nda', values: { company_name: 'Acme' } },
+        },
+      },
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+
+    const errLog = cap.errorLogs().find((l) => l.event === 'tool_internal_error');
+    expect(errLog).toMatchObject({
+      event: 'tool_internal_error',
+      endpoint: 'mcp',
+      level: 'error',
+      vercelId: 'iad1::xyz789',
+      tool: 'fill_template',
+      phase: 'fill',
+      jsonrpcId: 11,
+      name: 'Error',
+      message: 'synthetic fill failure',
+    });
+    expect(typeof errLog?.stack).toBe('string');
+    cap.restore();
+  });
+
+  it.openspec('OA-DST-040')('redacts bearer token to a fingerprint on auth_denied', async () => {
+    const cap = captureLogs();
+    const rawToken = 'super-secret-bearer-zzz-do-not-leak';
+    const req = createMockReq({
+      headers: {
+        'content-type': 'application/json',
+        host: 'openagreements.ai',
+        authorization: `Bearer ${rawToken}`,
+      },
+      body: {
+        jsonrpc: '2.0',
+        id: 12,
+        method: 'tools/call',
+        params: {
+          name: 'send_for_signature',
+          arguments: {},
+        },
+      },
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+
+    const denied = cap.errorLogs().find((l) => l.event === 'auth_denied');
+    expect(denied).toBeDefined();
+    expect(denied).toMatchObject({
+      event: 'auth_denied',
+      endpoint: 'mcp',
+      toolName: 'send_for_signature',
+    });
+    expect(String(denied?.tokenFp)).toMatch(/^[0-9a-f]{12}$/);
+
+    // Critical: the raw bearer token must never appear in any captured log.
+    expect(cap.allRaw()).not.toContain(rawToken);
+    cap.restore();
+  });
+
+  it.openspec('OA-DST-041')('does not fingerprint bearer tokens on non-auth-required successful paths', async () => {
+    const cap = captureLogs();
+    const req = createMockReq({
+      headers: {
+        'content-type': 'application/json',
+        host: 'openagreements.ai',
+        // list_templates is not in AUTH_REQUIRED_TOOLS — verifyAuth is never called.
+        authorization: 'Bearer harmless-but-should-not-be-logged',
+      },
+      body: { jsonrpc: '2.0', id: 13, method: 'tools/list', params: {} },
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+
+    const all = [...cap.infoLogs(), ...cap.errorLogs()];
+    expect(all.find((l) => l.event === 'request_complete')?.ok).toBe(true);
+    // No log should carry tokenFp on a non-auth-required path.
+    expect(all.some((l) => 'tokenFp' in l)).toBe(false);
+    cap.restore();
+  });
+
+  it.openspec('OA-DST-042')('logs request_rejected_invalid_jsonrpc when envelope is malformed', async () => {
+    const cap = captureLogs();
+    const req = createMockReq({
+      body: { id: 14, method: 'tools/list' /* jsonrpc field missing */ },
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+
+    const rejected = cap.errorLogs().find((l) => l.event === 'request_rejected_invalid_jsonrpc');
+    expect(rejected).toMatchObject({
+      event: 'request_rejected_invalid_jsonrpc',
+      endpoint: 'mcp',
+      level: 'error',
+      status: 400,
+      jsonrpcId: 14,
+    });
+    expect(res.statusCode).toBe(400);
+    cap.restore();
+  });
+
+  it.openspec('OA-DST-043')('omits vercelId entirely when x-vercel-id header is absent', async () => {
+    const cap = captureLogs();
+    const req = createMockReq({
+      // No x-vercel-id header.
+      headers: { 'content-type': 'application/json', host: 'openagreements.ai' },
+      body: { jsonrpc: '2.0', id: 15, method: 'tools/list', params: {} },
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+
+    const start = cap.infoLogs().find((l) => l.event === 'request_start');
+    expect(start).toBeDefined();
+    // The key must be absent — not undefined, not null, not a synthetic id.
+    expect('vercelId' in (start as object)).toBe(false);
+
+    const done = cap.infoLogs().find((l) => l.event === 'request_complete');
+    expect('vercelId' in (done as object)).toBe(false);
+    cap.restore();
+  });
+});
+
+describe('MCP rate limiting', () => {
+  it.openspec('OA-DST-044')('reports truthful rate_limit metadata when limiter is active', async () => {
+    checkRateLimitMock.mockResolvedValueOnce({
+      configured: true,
+      allowed: true,
+      bucket: 'mcp:global',
+      limit: 600,
+      remaining: 599,
+      reset_at: '2026-04-24T00:01:00.000Z',
+    });
+
+    const req = createMockReq({
+      body: {
+        jsonrpc: '2.0',
+        id: 100,
+        method: 'tools/call',
+        params: { name: 'list_templates', arguments: {} },
+      },
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+
+    expect(res.statusCode).toBe(200);
+    const envelope = parseEnvelope(res.body);
+    expect(envelope.ok).toBe(true);
+    expect(envelope.data.rate_limit).toEqual({
+      limit: 600,
+      remaining: 599,
+      reset_at: '2026-04-24T00:01:00.000Z',
+      bucket: 'mcp:global',
+    });
+  });
+
+  it.openspec('OA-DST-045')('blocks tools/call with RATE_LIMITED envelope and Retry-After header on global cap', async () => {
+    const resetAt = new Date(Date.now() + 30_000).toISOString();
+    checkRateLimitMock.mockResolvedValueOnce({
+      configured: true,
+      allowed: false,
+      bucket: 'mcp:global',
+      limit: 600,
+      remaining: 0,
+      reset_at: resetAt,
+    });
+
+    const req = createMockReq({
+      body: {
+        jsonrpc: '2.0',
+        id: 101,
+        method: 'tools/call',
+        params: { name: 'list_templates', arguments: {} },
+      },
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+
+    expect(res.statusCode).toBe(200);
+    expect(res.headers['Retry-After']).toBeDefined();
+    const retryAfterSec = Number(res.headers['Retry-After']);
+    expect(retryAfterSec).toBeGreaterThanOrEqual(1);
+    expect(retryAfterSec).toBeLessThanOrEqual(30);
+
+    const envelope = parseEnvelope(res.body);
+    expect(getResultObject(res).isError).toBe(true);
+    expect(envelope.ok).toBe(false);
+    expect(envelope.error.code).toBe('RATE_LIMITED');
+    expect(envelope.error.retriable).toBe(true);
+    expect(envelope.error.details.rate_limit).toEqual({
+      limit: 600,
+      remaining: 0,
+      reset_at: resetAt,
+      bucket: 'mcp:global',
+    });
+  });
+
+  it.openspec('OA-DST-046')('enforces stricter mcp:fill bucket when global passes', async () => {
+    const fillResetAt = new Date(Date.now() + 45_000).toISOString();
+    // Global bucket: allowed. Fill bucket: blocked.
+    checkRateLimitMock
+      .mockResolvedValueOnce({
+        configured: true,
+        allowed: true,
+        bucket: 'mcp:global',
+        limit: 600,
+        remaining: 500,
+        reset_at: '2026-04-24T00:01:00.000Z',
+      })
+      .mockResolvedValueOnce({
+        configured: true,
+        allowed: false,
+        bucket: 'mcp:fill',
+        limit: 120,
+        remaining: 0,
+        reset_at: fillResetAt,
+      });
+
+    const req = createMockReq({
+      body: {
+        jsonrpc: '2.0',
+        id: 102,
+        method: 'tools/call',
+        params: {
+          name: 'fill_template',
+          arguments: { template: 'common-paper-mutual-nda', values: { company_name: 'Acme' } },
+        },
+      },
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+
+    expect(checkRateLimitMock).toHaveBeenCalledTimes(2);
+    expect(checkRateLimitMock.mock.calls[0][0]).toBe('mcp:global');
+    expect(checkRateLimitMock.mock.calls[1][0]).toBe('mcp:fill');
+
+    expect(res.statusCode).toBe(200);
+    const envelope = parseEnvelope(res.body);
+    expect(envelope.ok).toBe(false);
+    expect(envelope.tool).toBe('fill_template');
+    expect(envelope.error.code).toBe('RATE_LIMITED');
+    expect(envelope.error.details.rate_limit.bucket).toBe('mcp:fill');
+  });
+
+  it.openspec('OA-DST-047')('counts JSON-RPC notifications against the global bucket', async () => {
+    checkRateLimitMock.mockResolvedValueOnce({
+      configured: true,
+      allowed: true,
+      bucket: 'mcp:global',
+      limit: 600,
+      remaining: 598,
+      reset_at: '2026-04-24T00:01:00.000Z',
+    });
+
+    const req = createMockReq({
+      body: { jsonrpc: '2.0', method: 'notifications/initialized', params: {} },
+      // No id — this is a notification.
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+
+    // Limiter must have been consulted before the notification short-circuit.
+    expect(checkRateLimitMock).toHaveBeenCalledWith('mcp:global', expect.any(String), expect.any(Number));
+    // Notification still returns 202 when allowed.
+    expect(res.statusCode).toBe(202);
+    expect(res.ended).toBe(true);
+  });
+
+  it.openspec('OA-DST-048')('fails open with null rate_limit metadata when limiter is unconfigured', async () => {
+    // Default mock returns { configured: false } — emulates dev/test or runtime fail-open.
+    const req = createMockReq({
+      body: {
+        jsonrpc: '2.0',
+        id: 103,
+        method: 'tools/call',
+        params: { name: 'list_templates', arguments: {} },
+      },
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+
+    expect(res.statusCode).toBe(200);
+    expect(res.headers['Retry-After']).toBeUndefined();
+    const envelope = parseEnvelope(res.body);
+    expect(envelope.ok).toBe(true);
+    expect(envelope.data.rate_limit).toEqual({
+      limit: null,
+      remaining: null,
+      reset_at: null,
+      bucket: null,
+    });
   });
 });

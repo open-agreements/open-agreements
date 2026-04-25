@@ -156,7 +156,7 @@ function getContentRepoPath(id, contentTier) {
 
 function hasContractIrSource(templateDir) {
   return (
-    existsSync(resolve(templateDir, "content.md")) &&
+    existsSync(resolve(templateDir, "template.md")) &&
     existsSync(resolve(templateDir, "schema.yaml")) &&
     existsSync(resolve(templateDir, "styles.yaml"))
   );
@@ -328,23 +328,21 @@ export function prepareCatalogDownloads({
     if (template.hasMarkdownDownload) {
       const templateDir = resolve(rootDir, "content", "templates", template.id);
       const sourcePath = resolve(templateDir, "template.md");
-      const contentSourcePath = resolve(templateDir, "content.md");
       const destinationPath = resolve(downloadsDir, `${template.id}.md`);
-      if (existsSync(sourcePath)) {
+      if (hasContractIrSource(templateDir)) {
+        if (
+          !existsSync(destinationPath) ||
+          statSync(destinationPath).mtimeMs < statSync(sourcePath).mtimeMs
+        ) {
+          writeFileSync(destinationPath, renderContractIrMarkdown(templateDir), "utf-8");
+        }
+      } else if (existsSync(sourcePath)) {
         if (
           !existsSync(destinationPath) ||
           statSync(destinationPath).mtimeMs < statSync(sourcePath).mtimeMs
         ) {
           copyFileSync(sourcePath, destinationPath);
         }
-      } else if (
-        hasContractIrSource(templateDir) &&
-        (
-          !existsSync(destinationPath) ||
-          statSync(destinationPath).mtimeMs < statSync(contentSourcePath).mtimeMs
-        )
-      ) {
-        writeFileSync(destinationPath, renderContractIrMarkdown(templateDir), "utf-8");
       }
     }
   }
