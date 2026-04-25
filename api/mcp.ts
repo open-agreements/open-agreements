@@ -22,7 +22,7 @@ import {
 } from './_shared.js';
 import { ErrorCode, makeToolError, wrapError, wrapSuccess } from './_envelope.js';
 import { jwtVerify, createRemoteJWKSet } from 'jose';
-import { OA_ORIGIN, MCP_RESOURCE, isMcpSigningConfigured } from './_config.js';
+import { OA_ORIGIN, MCP_RESOURCE, OA_PACKAGE_VERSION, isMcpSigningConfigured } from './_config.js';
 import {
   getRequestContext,
   redactBearer,
@@ -169,7 +169,7 @@ const TOOLS = [
         mode: {
           type: 'string',
           enum: ['compact', 'full'],
-          description: 'Response detail mode. Defaults to "full".',
+          description: 'Response detail mode. Defaults to "compact".',
         },
       },
     },
@@ -774,7 +774,7 @@ function handleInitialize(id: unknown, params: Record<string, unknown>) {
   return jsonRpcResult(id, {
     protocolVersion: clientVersion,
     capabilities: { tools: { listChanged: false } },
-    serverInfo: { name: 'OpenAgreements', version: '1.0.0' },
+    serverInfo: { name: 'OpenAgreements', version: OA_PACKAGE_VERSION },
   });
 }
 
