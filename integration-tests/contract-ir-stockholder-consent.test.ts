@@ -70,8 +70,8 @@ function writeFixtureTemplate(
   tempDirs.push(dir);
 
   writeFileSync(
-    join(dir, 'content.md'),
-    mutator(readFileSync(join(TEMPLATE_DIR, 'content.md'), 'utf-8')),
+    join(dir, 'template.md'),
+    mutator(readFileSync(join(TEMPLATE_DIR, 'template.md'), 'utf-8')),
     'utf-8'
   );
   writeFileSync(

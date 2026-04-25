@@ -34,6 +34,7 @@ export interface TemplateListItem {
   source_url: string;
   source: string | null;
   attribution_text?: string;
+  allow_derivatives: boolean;
   fields: TemplateListField[];
 }
 
@@ -134,6 +135,7 @@ export function listTemplateItems(): TemplateListItem[] {
         source_url: meta.source_url,
         source: sourceName(meta.source_url),
         attribution_text: meta.attribution_text,
+        allow_derivatives: meta.allow_derivatives,
         fields: mapFields(meta.fields, meta.priority_fields),
       });
     } catch {
