@@ -436,6 +436,32 @@ describe('MCP contract envelope behaviors', () => {
     expect(toolNames).toContain('check_signature_status');
   });
 
+  it.openspec('OA-DST-032')('signing tools/call returns 401 when unauthenticated, even with signing not configured', async () => {
+    // Documents the auth-fires-first invariant: AUTH_REQUIRED_TOOLS is enforced
+    // before handleSigningToolCall, so an unauthenticated stale client invoking
+    // a hidden signing tool sees an auth challenge rather than a
+    // signing-not-configured envelope. The list is not a security boundary.
+    vi.stubEnv('OA_DOCUSIGN_INTEGRATION_KEY', '');
+    vi.stubEnv('OA_DOCUSIGN_SECRET_KEY', '');
+    vi.stubEnv('OA_GCLOUD_ENCRYPTION_KEY', '');
+
+    const req = createMockReq({
+      body: {
+        jsonrpc: '2.0',
+        id: 33,
+        method: 'tools/call',
+        params: { name: 'send_for_signature', arguments: {} },
+      },
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+
+    expect(res.statusCode).toBe(401);
+    const body = asObject(res.body);
+    const error = asObject(body.error);
+    expect(error.code).toBe(-32001);
+  });
+
   it.openspec('OA-DST-032')('unknown tools/call omits signing tools from available_tools when DocuSign is not configured', async () => {
     vi.stubEnv('OA_DOCUSIGN_INTEGRATION_KEY', '');
     vi.stubEnv('OA_DOCUSIGN_SECRET_KEY', '');

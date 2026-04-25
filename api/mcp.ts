@@ -257,7 +257,7 @@ const TOOLS = [
 ];
 
 // ---------------------------------------------------------------------------
-// Signing tool definitions (4 tools — consolidated)
+// Signing tool definitions — gated on isMcpSigningConfigured()
 // ---------------------------------------------------------------------------
 
 const TOOL_SEND_FOR_SIGNATURE = 'send_for_signature';
