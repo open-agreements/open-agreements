@@ -22,7 +22,7 @@ import {
 } from './_shared.js';
 import { ErrorCode, makeToolError, wrapError, wrapSuccess } from './_envelope.js';
 import { jwtVerify, createRemoteJWKSet } from 'jose';
-import { OA_ORIGIN, MCP_RESOURCE, OA_PACKAGE_VERSION } from './_config.js';
+import { OA_ORIGIN, MCP_RESOURCE, OA_PACKAGE_VERSION, isMcpSigningConfigured } from './_config.js';
 import {
   getRequestContext,
   redactBearer,
@@ -270,7 +270,7 @@ const TOOLS = [
 ];
 
 // ---------------------------------------------------------------------------
-// Signing tool definitions (4 tools — consolidated)
+// Signing tool definitions — gated on isMcpSigningConfigured()
 // ---------------------------------------------------------------------------
 
 const TOOL_SEND_FOR_SIGNATURE = 'send_for_signature';
@@ -331,7 +331,9 @@ const SIGNING_TOOLS = [
   },
 ];
 
-const ALL_TOOLS = [...TOOLS, ...SIGNING_TOOLS];
+function getAvailableTools() {
+  return isMcpSigningConfigured() ? [...TOOLS, ...SIGNING_TOOLS] : [...TOOLS];
+}
 
 // ---------------------------------------------------------------------------
 // Signing context — lazy initialization from env vars
@@ -357,11 +359,12 @@ async function handleSigningToolCall(
 
       // Trim env vars — Vercel env vars may have trailing whitespace/newlines
       const env = (key: string) => process.env[key]?.trim();
-      const integrationKey = env('OA_DOCUSIGN_INTEGRATION_KEY');
-      const secretKey = env('OA_DOCUSIGN_SECRET_KEY');
-      const encryptionKeyHex = env('OA_GCLOUD_ENCRYPTION_KEY');
 
-      if (integrationKey && secretKey && encryptionKeyHex) {
+      if (isMcpSigningConfigured()) {
+        // Non-null assertions justified by isMcpSigningConfigured() contract.
+        const integrationKey = env('OA_DOCUSIGN_INTEGRATION_KEY')!;
+        const secretKey = env('OA_DOCUSIGN_SECRET_KEY')!;
+        const encryptionKeyHex = env('OA_GCLOUD_ENCRYPTION_KEY')!;
         // Parse SA credentials from env var (Vercel has no ADC)
         let gcloudCredentials: { client_email: string; private_key: string; [key: string]: unknown } | undefined;
         const credentialsJson = env('GOOGLE_APPLICATION_CREDENTIALS_JSON');
@@ -776,7 +779,7 @@ function handleInitialize(id: unknown, params: Record<string, unknown>) {
 }
 
 function handleToolsList(id: unknown) {
-  return jsonRpcResult(id, { tools: ALL_TOOLS });
+  return jsonRpcResult(id, { tools: getAvailableTools() });
 }
 
 async function handleToolsCall(
@@ -1031,7 +1034,7 @@ async function handleToolsCall(
     name || 'tools/call',
     ErrorCode.INVALID_ARGUMENT,
     `Unknown tool: "${name}"`,
-    { details: { available_tools: ALL_TOOLS.map((tool) => tool.name) } },
+    { details: { available_tools: getAvailableTools().map((tool) => tool.name) } },
   );
 }
 
