@@ -44,6 +44,7 @@ function runListJson(opts: ListOptions): void {
         source_url: meta.source_url,
         source: sourceName(meta.source_url),
         attribution_text: meta.attribution_text,
+        allow_derivatives: meta.allow_derivatives,
         fields: mapFields(meta.fields, meta.priority_fields),
       });
     } catch (err) {
@@ -67,6 +68,7 @@ function runListJson(opts: ListOptions): void {
           source_url: meta.source_url,
           source: sourceName(meta.source_url),
           attribution_text: meta.attribution_text,
+          allow_derivatives: meta.allow_derivatives,
           fields: mapFields(meta.fields, meta.priority_fields),
         });
       } catch (err) {
@@ -91,6 +93,7 @@ function runListJson(opts: ListOptions): void {
           source: sourceName(meta.source_url),
           source_version: meta.source_version,
           optional: meta.optional,
+          allow_derivatives: false,
           fields: mapFields(meta.fields, meta.priority_fields),
         };
         if (meta.market_data_citations) {
