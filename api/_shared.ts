@@ -7,6 +7,7 @@ import { randomUUID } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { OA_PACKAGE_VERSION } from './_config.js';
 
 // ---------------------------------------------------------------------------
 // Path resolution — must run before any dist/ function calls
@@ -54,9 +55,17 @@ export {
   DOWNLOAD_TTL_MS,
   createDownloadArtifact,
   resolveDownloadArtifact,
+  initDownloadArtifactStore,
+  getDownloadStorageMode,
+  DownloadStoreUnavailableError,
+  DownloadStoreConfigurationError,
+  DownloadStoreRuntimeError,
   type CreatedDownloadArtifact,
   type DownloadArtifact,
   type DownloadArtifactStore,
+  type DownloadStorageMode,
+  type DownloadStoreInitResult,
+  type InitDownloadArtifactStoreDeps,
   type ResolveDownloadArtifactErrorCode,
   type ResolveDownloadArtifactResult,
 } from './_download-artifacts.js';
@@ -358,10 +367,5 @@ export function handleListTemplates(): ListOutcome {
 
   const items = [...internal, ...external, ...recipes].sort((a, b) => a.name.localeCompare(b.name));
 
-  let cliVersion = '0.0.0';
-  try {
-    cliVersion = JSON.parse(readFileSync(join(PROJECT_ROOT, 'package.json'), 'utf-8')).version;
-  } catch { /* fallback */ }
-
-  return { cliVersion, items };
+  return { cliVersion: OA_PACKAGE_VERSION, items };
 }

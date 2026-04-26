@@ -3,7 +3,7 @@
 ## What was implemented
 
 - A narrow Contract IR loader under `scripts/contract_ir/` that:
-  - parses `content.md` frontmatter
+  - parses `template.md` frontmatter
   - resolves external schema and style YAML registries
   - validates variables and style slugs
   - builds a normalized paragraph-oriented model

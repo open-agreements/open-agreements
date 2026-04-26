@@ -34,6 +34,7 @@ export interface TemplateListItem {
   source_url: string;
   source: string | null;
   attribution_text?: string;
+  allow_derivatives: boolean;
   fields: TemplateListField[];
 }
 
@@ -76,6 +77,22 @@ export function sourceName(url: string): string | null {
       'nvca.org': 'NVCA',
       'openagreements.ai': 'OpenAgreements',
     };
+
+    // For github.com URLs without a special-cased path, surface the
+    // org/owner segment as the source — that's the publishing entity for
+    // CC-BY-style attribution (e.g. github.com/Bonterms/Mutual-NDA → Bonterms).
+    // A small org map normalizes display names where the github handle
+    // differs from the conventional brand (CommonPaper → Common Paper).
+    if (host === 'github.com') {
+      const org = pathname.split('/').filter(Boolean)[0];
+      if (org) {
+        const orgMap: Record<string, string> = {
+          CommonPaper: 'Common Paper',
+        };
+        return orgMap[org] ?? org;
+      }
+    }
+
     return map[host] ?? host;
   } catch {
     return null;
@@ -118,6 +135,7 @@ export function listTemplateItems(): TemplateListItem[] {
         source_url: meta.source_url,
         source: sourceName(meta.source_url),
         attribution_text: meta.attribution_text,
+        allow_derivatives: meta.allow_derivatives,
         fields: mapFields(meta.fields, meta.priority_fields),
       });
     } catch {

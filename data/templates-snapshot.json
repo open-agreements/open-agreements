@@ -10,8 +10,9 @@
       "description": "Cover page for the Bonterms Mutual NDA (Version 1.0). The standard terms are incorporated by reference from bonterms.com.",
       "license": "CC0-1.0",
       "source_url": "https://github.com/Bonterms/Mutual-NDA",
-      "source": "github.com",
+      "source": "Bonterms",
       "attribution_text": "Based on the Bonterms Mutual NDA Cover Page, available at https://bonterms.com/forms/bonterms-mutual-nda-v1/. Made available under CC0 1.0.",
+      "allow_derivatives": true,
       "credits": [],
       "fields": [
         {
@@ -258,8 +259,9 @@
       "description": "Cover page for the Bonterms Professional Services Agreement (Version 1.2). The standard terms are incorporated by reference from bonterms.com.",
       "license": "CC0-1.0",
       "source_url": "https://github.com/Bonterms/Professional-Services-Agreement",
-      "source": "github.com",
+      "source": "Bonterms",
       "attribution_text": "Based on the Bonterms Professional Services Agreement Cover Page, available at https://bonterms.com/forms/professional-services-agreement-v1.2/. Made available under CC0 1.0.",
+      "allow_derivatives": true,
       "credits": [],
       "fields": [
         {
@@ -328,6 +330,7 @@
       "source_url": "https://github.com/open-agreements/open-agreements",
       "source": "OpenAgreements",
       "attribution_text": "OpenAgreements Closing Checklist. Licensed under CC0 1.0.",
+      "allow_derivatives": true,
       "credits": [],
       "fields": [
         {
@@ -387,6 +390,7 @@
       "source_url": "https://commonpaper.com/standards/ai-addendum/1.0",
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper AI Addendum, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
+      "allow_derivatives": true,
       "credits": [],
       "fields": [
         {
@@ -725,6 +729,7 @@
       "source_url": "https://commonpaper.com/standards/ai-addendum/1.0",
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper AI Addendum In-App, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
+      "allow_derivatives": true,
       "credits": [],
       "fields": [
         {
@@ -955,6 +960,7 @@
       "source_url": "https://commonpaper.com/standards/amendment",
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper Amendment, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
+      "allow_derivatives": true,
       "credits": [],
       "fields": [
         {
@@ -1131,6 +1137,7 @@
       "source_url": "https://commonpaper.com/standards/business-associate-agreement/1.0",
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper Business Associate Agreement, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
+      "allow_derivatives": true,
       "credits": [],
       "fields": [
         {
@@ -1460,6 +1467,7 @@
       "source_url": "https://commonpaper.com/standards/cloud-service-agreement/2.1",
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper Cloud Service Agreement, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
+      "allow_derivatives": true,
       "credits": [],
       "fields": [
         {
@@ -2230,6 +2238,7 @@
       "source_url": "https://commonpaper.com/standards/cloud-service-agreement/2.1",
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper CSA Click-Through, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
+      "allow_derivatives": true,
       "credits": [],
       "fields": [
         {
@@ -2370,6 +2379,7 @@
       "source_url": "https://commonpaper.com/standards/cloud-service-agreement/2.1",
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper CSA With AI, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
+      "allow_derivatives": true,
       "credits": [],
       "fields": [
         {
@@ -3419,6 +3429,7 @@
       "source_url": "https://commonpaper.com/standards/cloud-service-agreement/2.1",
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper CSA With SLA, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
+      "allow_derivatives": true,
       "credits": [],
       "fields": [
         {
@@ -4378,6 +4389,7 @@
       "source_url": "https://commonpaper.com/standards/cloud-service-agreement/2.1",
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper CSA Without SLA, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
+      "allow_derivatives": true,
       "credits": [],
       "fields": [
         {
@@ -5274,6 +5286,7 @@
       "source_url": "https://commonpaper.com/standards/data-processing-agreement/1.1",
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper Data Processing Agreement, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
+      "allow_derivatives": true,
       "credits": [],
       "fields": [
         {
@@ -6188,6 +6201,7 @@
       "source_url": "https://commonpaper.com/standards/design-partner-agreement/1.3",
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper Design Partner Agreement, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
+      "allow_derivatives": true,
       "credits": [],
       "fields": [
         {
@@ -6481,6 +6495,7 @@
       "source_url": "https://commonpaper.com/standards/independent-contractor-agreement",
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper Independent Contractor Agreement, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
+      "allow_derivatives": true,
       "credits": [],
       "fields": [
         {
@@ -6666,6 +6681,7 @@
       "source_url": "https://commonpaper.com/standards/letter-of-intent",
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper Letter of Intent, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
+      "allow_derivatives": true,
       "credits": [],
       "fields": [
         {
@@ -6824,6 +6840,7 @@
       "source_url": "https://commonpaper.com/standards/mutual-nda/1.0",
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper Mutual NDA, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
+      "allow_derivatives": true,
       "credits": [],
       "fields": [
         {
@@ -7000,6 +7017,7 @@
       "source_url": "https://commonpaper.com/standards/one-way-nda/1.0",
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper One-Way NDA, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
+      "allow_derivatives": true,
       "credits": [],
       "fields": [
         {
@@ -7131,6 +7149,7 @@
       "source_url": "https://commonpaper.com/standards/cloud-service-agreement/2.1",
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper Order Form, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
+      "allow_derivatives": true,
       "credits": [],
       "fields": [
         {
@@ -7532,6 +7551,7 @@
       "source_url": "https://commonpaper.com/standards/cloud-service-agreement/2.1",
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper Order Form with SLA, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
+      "allow_derivatives": true,
       "credits": [],
       "fields": [
         {
@@ -8014,6 +8034,7 @@
       "source_url": "https://commonpaper.com/standards/partnership-agreement/1.1",
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper Partnership Agreement, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
+      "allow_derivatives": true,
       "credits": [],
       "fields": [
         {
@@ -8721,6 +8742,7 @@
       "source_url": "https://commonpaper.com/standards/pilot-agreement/1.1",
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper Pilot Agreement, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
+      "allow_derivatives": true,
       "credits": [],
       "fields": [
         {
@@ -8996,6 +9018,7 @@
       "source_url": "https://commonpaper.com/standards/professional-services-agreement/1.1",
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper Professional Services Agreement, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
+      "allow_derivatives": true,
       "credits": [],
       "fields": [
         {
@@ -9811,6 +9834,7 @@
       "source_url": "https://commonpaper.com/standards/software-license-agreement/1.1",
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper Software License Agreement, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
+      "allow_derivatives": true,
       "credits": [],
       "fields": []
     },
@@ -9824,6 +9848,7 @@
       "source_url": "https://commonpaper.com/standards/statement-of-work",
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper Statement of Work, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
+      "allow_derivatives": true,
       "credits": [],
       "fields": [
         {
@@ -10180,6 +10205,7 @@
       "source_url": "https://commonpaper.com/standards/term-sheet",
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper Term Sheet, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
+      "allow_derivatives": true,
       "credits": [],
       "fields": [
         {
@@ -10312,6 +10338,7 @@
       "source": "NVCA",
       "source_version": "10-1-2025",
       "optional": false,
+      "allow_derivatives": false,
       "fields": [
         {
           "name": "company_name",
@@ -10727,6 +10754,7 @@
       "source": "NVCA",
       "source_version": "2020",
       "optional": false,
+      "allow_derivatives": false,
       "fields": [
         {
           "name": "indemnitee_name",
@@ -10894,6 +10922,7 @@
       "source": "NVCA",
       "source_version": "10-1-2025",
       "optional": false,
+      "allow_derivatives": false,
       "fields": [
         {
           "name": "company_name",
@@ -11034,6 +11063,7 @@
       "source": "NVCA",
       "source_version": "2020",
       "optional": false,
+      "allow_derivatives": false,
       "fields": [
         {
           "name": "company_name_upper",
@@ -11129,6 +11159,7 @@
       "source": "NVCA",
       "source_version": "10-1-2025",
       "optional": false,
+      "allow_derivatives": false,
       "fields": [
         {
           "name": "company_name",
@@ -11287,6 +11318,7 @@
       "source": "NVCA",
       "source_version": "10-28-2025",
       "optional": false,
+      "allow_derivatives": false,
       "fields": [
         {
           "name": "company_name",
@@ -11607,6 +11639,7 @@
       "source": "NVCA",
       "source_version": "10-1-2025",
       "optional": false,
+      "allow_derivatives": false,
       "fields": [
         {
           "name": "company_name",
@@ -11737,6 +11770,7 @@
       "source_url": "https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-board-consent-safe",
       "source": "OpenAgreements",
       "attribution_text": "Authored by OpenAgreements contributors. Drafting structure informed by publicly available Series Seed SAFE board consent materials. Licensed under CC BY 4.0.",
+      "allow_derivatives": true,
       "credits": [
         {
           "name": "Joey Tsang",
@@ -11796,6 +11830,337 @@
       ]
     },
     {
+      "name": "openagreements-due-diligence-request-list",
+      "tier": "internal",
+      "display_name": "OpenAgreements Legal Due Diligence Request List",
+      "category": "deals-partnerships",
+      "description": "Modular legal due diligence request list (DDRL) for corporate transactions. Ships a base form covering organization, capitalization, contracts, IP, employment, litigation, compliance, tax, insurance, debt, property, and privacy/cybersecurity. Four optional industry riders gate via boolean toggles: tech / SaaS, life sciences, healthcare provider, and cross-border / trade compliance. Drafted clean-room from public-source consensus across 15 Am Law firm, bar association, and legal publisher DDRLs; no public source language is reused. Includes per-section AI-augmentable arrays so AI workflows can append target-specific custom questions to any rider.",
+      "license": "CC-BY-4.0",
+      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-due-diligence-request-list",
+      "source": "OpenAgreements",
+      "attribution_text": "Authored by OpenAgreements contributors. Category structure and consensus framing informed by publicly available DDRLs and commentary from Cooley, Skadden, Morgan Lewis, Gunderson Dettmer, Lowenstein Sandler, Holland & Knight, Foley & Lardner, Software Equity Group, the International Bar Association, the American Bar Association, Bass Berry & Sims, and Carta. See practice note for sources. Drafted clean-room; no source language was reused. Licensed under CC BY 4.0.",
+      "allow_derivatives": true,
+      "credits": [],
+      "fields": [
+        {
+          "name": "requesting_firm_name",
+          "type": "string",
+          "required": true,
+          "section": "Cover Sheet",
+          "description": "Legal name of the buyer's law firm sending the request",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "target_company_name",
+          "type": "string",
+          "required": true,
+          "section": "Cover Sheet",
+          "description": "Legal name of the target company receiving the request",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "project_code_name",
+          "type": "string",
+          "required": false,
+          "section": "Cover Sheet",
+          "description": "Project code name or pseudonym used to refer to the transaction",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "request_date",
+          "type": "date",
+          "required": false,
+          "section": "Cover Sheet",
+          "description": "Date the request list is delivered to the target",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "response_due_date",
+          "type": "date",
+          "required": false,
+          "section": "Cover Sheet",
+          "description": "Date by which the target's first-round response is due",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "lead_buyer_counsel_name",
+          "type": "string",
+          "required": false,
+          "section": "Cover Sheet",
+          "description": "Name of the lead attorney at the requesting firm",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "lead_buyer_counsel_email",
+          "type": "string",
+          "required": false,
+          "section": "Cover Sheet",
+          "description": "Email of the lead attorney at the requesting firm",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "primary_target_contact_name",
+          "type": "string",
+          "required": false,
+          "section": "Cover Sheet",
+          "description": "Name of the target's primary point of contact for diligence responses",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "currency",
+          "type": "enum",
+          "required": false,
+          "section": "Cover Sheet",
+          "description": "Currency for materiality and financial threshold inputs",
+          "default": "USD",
+          "default_value_rationale": null
+        },
+        {
+          "name": "data_room_url",
+          "type": "string",
+          "required": false,
+          "section": "Cover Sheet",
+          "description": "URL of the virtual data room (optional; included in cover-sheet instructions if provided)",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "materiality_threshold_usd",
+          "type": "string",
+          "required": true,
+          "section": "Materiality and Lookback",
+          "description": "Dollar floor for material-contracts requests. Stored as a pre-formatted string (e.g., \"$100,000\") because the fill engine has no currency formatter. Adjust upward for larger deals, downward for early-stage targets.",
+          "default": "$100,000",
+          "default_value_rationale": "$100,000 is the consensus dollar floor for mid-market deals across public DDRLs (Cooley, Skadden, Bloomberg). Tune up for larger targets (e.g., \"$1,000,000\" for $100M+ deals) or down for early-stage."
+        },
+        {
+          "name": "materiality_threshold_revenue_pct",
+          "type": "string",
+          "required": false,
+          "section": "Materiality and Lookback",
+          "description": "Relative materiality threshold expressed as a percentage of gross revenue. The lower of dollar floor and revenue percentage governs. Stored as a pre-formatted string for consistency with the dollar threshold.",
+          "default": "5%",
+          "default_value_rationale": "5% of gross revenue is the consensus relative-materiality qualifier in BigLaw practice. Tune down for asset-light targets where individual contract size is small but each one is operationally critical."
+        },
+        {
+          "name": "lookback_years",
+          "type": "number",
+          "required": true,
+          "section": "Materiality and Lookback",
+          "description": "Default lookback window in years for litigation, compliance, and operational history. Per-category overrides may extend specific sections.",
+          "default": "3",
+          "default_value_rationale": "3 years is consensus baseline for litigation, compliance, and operational history. Tax often warrants 6+ to mirror IRS statute of limitations; regulatory correspondence is conventionally open-ended."
+        },
+        {
+          "name": "litigation_lookback_years",
+          "type": "number",
+          "required": false,
+          "section": "Materiality and Lookback",
+          "description": "Optional per-category override for the litigation lookback window. If blank, falls through to lookback_years. 5 years is appropriate for regulated targets or where prior litigation revealed systemic process failures.",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "tax_lookback_years",
+          "type": "number",
+          "required": false,
+          "section": "Materiality and Lookback",
+          "description": "Optional per-category override for the tax lookback window. If blank, falls through to lookback_years. 6 years mirrors the IRS substantial- omission statute of limitations and is the safe default for most deals.",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "compliance_lookback_years",
+          "type": "number",
+          "required": false,
+          "section": "Materiality and Lookback",
+          "description": "Optional per-category override for routine compliance certifications. Regulatory correspondence regarding investigations, settlements, and consent decrees should be requested open-ended regardless of this value.",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "deal_type",
+          "type": "enum",
+          "required": true,
+          "section": "Deal Type",
+          "description": "Type of transaction the DDRL supports",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "transaction_stage",
+          "type": "enum",
+          "required": true,
+          "section": "Deal Type",
+          "description": "Stage of the transaction. Pre-LOI uses lighter scope; post-LOI uses the full base form plus all triggered riders.",
+          "default": "post_loi_pre_signing",
+          "default_value_rationale": null
+        },
+        {
+          "name": "tech_rider_enabled",
+          "type": "boolean",
+          "required": true,
+          "section": "Industry Riders",
+          "description": "Enable Section O (Tech / SaaS rider) covering OSS schedules with copyleft flagging, source-code escrow, hosted-services agreements, SOC 2 / ISO 27001 audits, data-flow architecture, SLAs, security- incident history, and cloud-agreement change-of-control. Recommended on for software, SaaS, platform, marketplace, or data-heavy targets.",
+          "default": "false",
+          "default_value_rationale": null
+        },
+        {
+          "name": "life_sciences_rider_enabled",
+          "type": "boolean",
+          "required": true,
+          "section": "Industry Riders",
+          "description": "Enable Section P (Life Sciences rider) covering FDA correspondence, clinical trials, CRO agreements, Form 483s, Warning Letters, CIA, and controlled-substance registrations. Recommended on for biotech, pharma, medical-device, and diagnostics targets with FDA-regulated pipelines.",
+          "default": "false",
+          "default_value_rationale": null
+        },
+        {
+          "name": "healthcare_provider_rider_enabled",
+          "type": "boolean",
+          "required": true,
+          "section": "Industry Riders",
+          "description": "Enable Section Q (Healthcare Provider rider) covering HIPAA breach logs, billing/coding compliance, payer audits, malpractice claims, and Anti-Kickback / Stark / Sunshine Act compliance. Recommended on for clinics, hospitals, physician groups, and telehealth providers with payer-reimbursement exposure.",
+          "default": "false",
+          "default_value_rationale": null
+        },
+        {
+          "name": "cross_border_rider_enabled",
+          "type": "boolean",
+          "required": true,
+          "section": "Industry Riders",
+          "description": "Enable Section R (Cross-Border / Trade Compliance rider) covering sanctions/OFAC screening, export-control classifications, AML/KYC, FCPA compliance, government-customer exposure, and foreign-investment- screening filings. Recommended on whenever the target has foreign subsidiaries, foreign customers, government customers, or sensitive- jurisdiction exposure. Increasingly mandatory after the 2023 DOJ M&A Safe Harbor Policy.",
+          "default": "false",
+          "default_value_rationale": null
+        },
+        {
+          "name": "countries_of_operation",
+          "type": "string",
+          "required": false,
+          "section": "Cross-Border Specifics",
+          "description": "Comma-separated list of countries where the target operates, sells, or has employees. Optional; populated when the cross-border rider is enabled to focus the request on specific jurisdictions.",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "government_customer_exposure",
+          "type": "boolean",
+          "required": false,
+          "section": "Cross-Border Specifics",
+          "description": "Set true if the target has government customers (federal, state, local, or foreign) where flow-down compliance obligations may apply. When true, additional government-contracts requests render in Section R.",
+          "default": "false",
+          "default_value_rationale": null
+        },
+        {
+          "name": "additional_questions_tech",
+          "type": "array",
+          "required": false,
+          "section": "AI Augmentation",
+          "description": "AI-augmentable list of target-specific custom questions appended to the Tech / SaaS rider. Each item is an object with a `question` field. Empty by default. Renders only when tech_rider_enabled is true.",
+          "default": "[]",
+          "default_value_rationale": null,
+          "items": [
+            {
+              "name": "question",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "The custom question text to render in Section O",
+              "default": null,
+              "default_value_rationale": null
+            }
+          ]
+        },
+        {
+          "name": "additional_questions_life_sciences",
+          "type": "array",
+          "required": false,
+          "section": "AI Augmentation",
+          "description": "AI-augmentable list of target-specific custom questions appended to the Life Sciences rider. Empty by default. Renders only when life_sciences_rider_enabled is true.",
+          "default": "[]",
+          "default_value_rationale": null,
+          "items": [
+            {
+              "name": "question",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "The custom question text to render in Section P",
+              "default": null,
+              "default_value_rationale": null
+            }
+          ]
+        },
+        {
+          "name": "additional_questions_healthcare_provider",
+          "type": "array",
+          "required": false,
+          "section": "AI Augmentation",
+          "description": "AI-augmentable list of target-specific custom questions appended to the Healthcare Provider rider. Empty by default. Renders only when healthcare_provider_rider_enabled is true.",
+          "default": "[]",
+          "default_value_rationale": null,
+          "items": [
+            {
+              "name": "question",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "The custom question text to render in Section Q",
+              "default": null,
+              "default_value_rationale": null
+            }
+          ]
+        },
+        {
+          "name": "additional_questions_cross_border",
+          "type": "array",
+          "required": false,
+          "section": "AI Augmentation",
+          "description": "AI-augmentable list of target-specific custom questions appended to the Cross-Border / Trade Compliance rider. Empty by default. Renders only when cross_border_rider_enabled is true.",
+          "default": "[]",
+          "default_value_rationale": null,
+          "items": [
+            {
+              "name": "question",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "The custom question text to render in Section R",
+              "default": null,
+              "default_value_rationale": null
+            }
+          ]
+        },
+        {
+          "name": "additional_questions_general",
+          "type": "array",
+          "required": false,
+          "section": "AI Augmentation",
+          "description": "AI-augmentable list of cross-cutting custom questions that do not belong to any specific rider. Renders at the end of the closing Response Protocol section. Empty by default.",
+          "default": "[]",
+          "default_value_rationale": null,
+          "items": [
+            {
+              "name": "question",
+              "type": "string",
+              "required": false,
+              "section": null,
+              "description": "The custom question text to render at end of document",
+              "default": null,
+              "default_value_rationale": null
+            }
+          ]
+        }
+      ]
+    },
+    {
       "name": "openagreements-employee-ip-inventions-assignment",
       "tier": "internal",
       "display_name": "OpenAgreements Employee IP and Inventions Assignment",
@@ -11805,6 +12170,7 @@
       "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-employee-ip-inventions-assignment",
       "source": "OpenAgreements",
       "attribution_text": "Authored by OpenAgreements contributors. Baseline structure inspired by permissive public references including the Balanced Employee IP Agreement (CC0) and Papertrail legal-docs (CC0). Licensed under CC BY 4.0.",
+      "allow_derivatives": true,
       "credits": [],
       "fields": [
         {
@@ -11927,6 +12293,7 @@
       "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-employment-confidentiality-acknowledgement",
       "source": "OpenAgreements",
       "attribution_text": "Authored by OpenAgreements contributors using permissive public reference patterns from Papertrail legal-docs (CC0) and open policy frameworks. Licensed under CC BY 4.0.",
+      "allow_derivatives": true,
       "credits": [],
       "fields": [
         {
@@ -12040,6 +12407,7 @@
       "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-employment-offer-letter",
       "source": "OpenAgreements",
       "attribution_text": "Authored by OpenAgreements contributors. Drafting structure informed by publicly available permissive sources including the DocuSign template library (MIT) and Papertrail legal-docs (CC0). Licensed under CC BY 4.0.",
+      "allow_derivatives": true,
       "credits": [],
       "fields": [
         {
@@ -12180,6 +12548,7 @@
       "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-wyoming",
       "source": "OpenAgreements",
       "attribution_text": "Authored by OpenAgreements contributors. Wyoming-specific analysis informed by publicly available commentary from Am Law firms including Ogletree Deakins, Fisher Phillips, Littler Mendelson, Foley & Lardner, Faegre Drinker, and Vinson & Elkins. See practice note for sources. Licensed under CC BY 4.0.",
+      "allow_derivatives": true,
       "credits": [],
       "fields": [
         {
@@ -12446,6 +12815,7 @@
       "source_url": "https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-stockholder-consent-safe",
       "source": "OpenAgreements",
       "attribution_text": "Authored by OpenAgreements contributors. Drafting structure informed by publicly available Series Seed SAFE stockholder consent materials. Licensed under CC BY 4.0.",
+      "allow_derivatives": true,
       "credits": [
         {
           "name": "Joey Tsang",
@@ -12514,6 +12884,7 @@
       "source_url": "https://github.com/open-agreements/open-agreements",
       "source": "OpenAgreements",
       "attribution_text": "OpenAgreements Working Group List. Licensed under CC0 1.0.",
+      "allow_derivatives": true,
       "credits": [],
       "fields": [
         {
@@ -12555,6 +12926,7 @@
       "source_url": "https://www.ycombinator.com/documents",
       "source": "Y Combinator",
       "attribution_text": "Based on the Y Combinator Post-Money SAFE, available at https://www.ycombinator.com/documents. Licensed under CC BY-ND 4.0. Copyright Y Combinator.",
+      "allow_derivatives": false,
       "credits": [],
       "fields": [
         {
@@ -12668,6 +13040,7 @@
       "source_url": "https://www.ycombinator.com/documents",
       "source": "Y Combinator",
       "attribution_text": "Based on the Y Combinator Post-Money SAFE, available at https://www.ycombinator.com/documents. Licensed under CC BY-ND 4.0. Copyright Y Combinator.",
+      "allow_derivatives": false,
       "credits": [],
       "fields": [
         {
@@ -12772,6 +13145,7 @@
       "source_url": "https://www.ycombinator.com/documents",
       "source": "Y Combinator",
       "attribution_text": "Based on the Y Combinator Pro Rata Side Letter, available at https://www.ycombinator.com/documents. Licensed under CC BY-ND 4.0. Copyright Y Combinator.",
+      "allow_derivatives": false,
       "credits": [],
       "fields": [
         {
@@ -12849,6 +13223,7 @@
       "source_url": "https://www.ycombinator.com/documents",
       "source": "Y Combinator",
       "attribution_text": "Based on the Y Combinator Post-Money SAFE, available at https://www.ycombinator.com/documents. Licensed under CC BY-ND 4.0. Copyright Y Combinator.",
+      "allow_derivatives": false,
       "credits": [],
       "fields": [
         {
