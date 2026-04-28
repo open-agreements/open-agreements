@@ -3,7 +3,7 @@ category: employment
 description: >-
   Employee proprietary information and inventions assignment agreement with
   explicit prior-inventions and personal-project carveout language placeholders.
-source_url: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-employee-ip-inventions-assignment
+source_url: https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-employee-ip-inventions-assignment
 version: '1.1'
 license: CC-BY-4.0
 allow_derivatives: true

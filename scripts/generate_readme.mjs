@@ -45,8 +45,8 @@ function normalizeUrl(value, key) {
 const CONTENTS = [
   ["Install", "#install"],
   ["Quick Start", "#quick-start"],
-  ["Available Skills", "#available-skills"],
   ["Available Templates", "#available-templates"],
+  ["Available Skills", "#available-skills"],
   ["Packages", "#packages"],
   ["Documentation", "#documentation"],
   ["Privacy", "#privacy"],
@@ -69,6 +69,24 @@ function renderTable(headers, rows) {
   const separatorLine = `|${headers.map((header) => "-".repeat(Math.max(3, header.length + 2))).join("|")}|`;
   const rowLines = rows.map((row) => `| ${row.join(" | ")} |`);
   return [headerLine, separatorLine, ...rowLines].join("\n");
+}
+
+const LICENSE_URLS = {
+  "CC-BY-4.0": "https://creativecommons.org/licenses/by/4.0/",
+  "CC0-1.0": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "CC-BY-ND-4.0": "https://creativecommons.org/licenses/by-nd/4.0/",
+};
+
+function formatLicenseCell(license) {
+  if (!license || license === "Recipe") return "Recipe";
+  const url = LICENSE_URLS[license];
+  return url ? `[${license}](${url})` : license;
+}
+
+function formatSourceCell(template) {
+  const url = template.sourceDocUrl || template.sourceUrl;
+  if (url) return `[${template.sourceLabel}](${url})`;
+  return template.sourceLabel;
 }
 
 function renderContents() {
@@ -133,14 +151,14 @@ function renderTemplates() {
     lines.push("");
     lines.push(
       renderTable(
-        ["Template", "Website", "Repo"],
+        ["Template", "Website", "Source", "License", "Repo"],
         templates.map((template) => {
-          const websiteUrl = template.hasPreview
-            ? `${TEMPLATE_CATALOG_URL}/${template.id}/`
-            : `${WEBSITE_URL}/?template=${template.id}#start`;
+          const websiteUrl = `${TEMPLATE_CATALOG_URL}/${template.id}`;
           return [
             makeTemplateLabel(template, duplicateCounts),
             `[Website](${websiteUrl})`,
+            formatSourceCell(template),
+            formatLicenseCell(template.license),
             `[Repo](${githubTreeUrl(template.repoPath)})`,
           ];
         }),
