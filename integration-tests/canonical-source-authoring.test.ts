@@ -50,9 +50,9 @@ The terms below are incorporated into and form part of this agreement.
 <!-- oa:clause id=defined-terms type=definitions -->
 ### Defined Terms
 
-the [[Company]] (Aliases: [[Companies]]) means the party identified as Company in Cover Terms.
+The [[Company]] (Aliases: [[Companies]]) means the party identified as Company in Cover Terms.
 
-an [[Affiliate]] (Aliases: [[Affiliates]]) means any person that directly or indirectly controls, is controlled by, or is under common control with the [[Company]].
+An [[Affiliate]] (Aliases: [[Affiliates]]) means any person that directly or indirectly controls, is controlled by, or is under common control with the [[Company]].
 
 [[Confidential Information]] means all non-public information disclosed by the [[Company]] to an [[Affiliate]].
 
