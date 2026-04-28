@@ -3,7 +3,6 @@ import markdownIt from "markdown-it";
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 
-const md = markdownIt({ html: true, linkify: true });
 const mdSafe = markdownIt({ html: false, linkify: false });
 
 export default function (eleventyConfig) {
@@ -32,12 +31,6 @@ export default function (eleventyConfig) {
     eleventyConfig.ignores.add("site/trust/**");
     eleventyConfig.ignores.add("site/docs/**");
   }
-
-  // renderMarkdown filter: convert markdown string to HTML
-  eleventyConfig.addNunjucksFilter("renderMarkdown", function (value) {
-    if (!value || typeof value !== "string") return "";
-    return md.render(value);
-  });
 
   // formatReleaseNotes filter: parse GitHub release notes into grouped, clean HTML
   eleventyConfig.addNunjucksFilter("formatReleaseNotes", function (notes) {

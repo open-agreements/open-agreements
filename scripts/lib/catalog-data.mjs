@@ -4,7 +4,6 @@ import {
   existsSync,
   mkdirSync,
   readdirSync,
-  readFileSync,
   statSync,
   writeFileSync,
 } from "node:fs";
@@ -251,29 +250,6 @@ export function buildCatalog({ rootDir = REPO_ROOT } = {}) {
           .map((file) => `/assets/previews/${item.name}/${file}`);
       }
 
-      const practiceNotePath = resolve(templateDir, "practice-note.md");
-      if (existsSync(practiceNotePath)) {
-        const rawPracticeNote = readFileSync(practiceNotePath, "utf-8");
-        const frontmatterMatch = rawPracticeNote.match(
-          /^---\n([\s\S]*?)\n---\n([\s\S]*)$/,
-        );
-        if (frontmatterMatch) {
-          const frontmatterLines = frontmatterMatch[1].split("\n");
-          const frontmatter = {};
-          for (const line of frontmatterLines) {
-            const match = line.match(/^(\w[\w_]*):\s*(.+)$/);
-            if (match) {
-              frontmatter[match[1]] = match[2].replace(/^["']|["']$/g, "");
-            }
-          }
-          templateData.practiceNote = {
-            firmCount: frontmatter.firm_count || "0",
-            lastUpdated: frontmatter.last_updated || "",
-            disclaimer: frontmatter.disclaimer || "",
-            content: frontmatterMatch[2],
-          };
-        }
-      }
     }
 
     return templateData;
