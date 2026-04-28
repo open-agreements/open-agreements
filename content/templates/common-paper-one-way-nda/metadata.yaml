@@ -4,7 +4,7 @@ description: >-
   A one-way (unilateral) non-disclosure agreement cover page based on Common Paper's standard terms. The Discloser
   shares confidential information with the Receiver, but not vice versa. References the Standard Terms posted at
   commonpaper.com.
-source_url: https://commonpaper.com/standards/one-way-nda/1.0
+source_url: https://commonpaper.com/standards/one-way-nda
 version: '1.0'
 license: CC-BY-4.0
 allow_derivatives: true

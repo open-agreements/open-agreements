@@ -13,7 +13,7 @@ Previous versions of the `open-agreements` skill instructed agents to run `npx -
 - Used `@latest` which meant the downloaded code could change between runs (flagged as REMOTE_CODE_EXECUTION)
 
 As of v0.2.0, all skills use one of three execution paths:
-1. **Remote MCP** (recommended): The hosted server at `openagreements.ai/api/mcp` handles DOCX generation server-side. No local dependencies needed.
+1. **Remote MCP** (recommended): The hosted server at `openagreements.org/api/mcp` handles DOCX generation server-side. No local dependencies needed.
 2. **Local CLI**: If `open-agreements` is already installed locally, use it directly.
 3. **Preview only**: Generate a markdown preview when neither MCP nor CLI is available.
 
