@@ -136,6 +136,39 @@ describe('contract-templates-mcp tools', () => {
     expect(data.inline_base64).toBeUndefined();
   });
 
+  it.openspec('OA-DST-033')('fill_template fills the Wyoming restrictive covenant template from canonical markdown source', async () => {
+    const result = await callTool('fill_template', {
+      template: 'openagreements-restrictive-covenant-wyoming',
+      values: {
+        employer_name: 'Acme Corporation',
+        employee_name: 'Jane Doe',
+        employee_title: 'Vice President of Sales',
+        effective_date: '2026-04-28',
+        worker_category: 'Executive',
+        restriction_pathways: 'Executive or Management Personnel, Trade Secret Protection',
+        employee_nonsolicit_included: 'true',
+        customer_nonsolicit_included: 'true',
+        noncompete_included: 'true',
+        territory: 'the states where Employee sold Employer services',
+        competitive_business_definition: 'the design, sale, implementation, or support of enterprise workflow software',
+        specified_competitors: 'Contoso, Globex',
+        nondealing_included: 'true',
+        noninvestment_included: 'true',
+        cloud_drive_id: 'workspace://agreements/wy-rca-001',
+      },
+      return_mode: 'inline_base64',
+    });
+    const payload = getPayload(result);
+    expect(result.isError).toBeUndefined();
+    expect(payload.ok).toBe(true);
+    const data = payload.data as Record<string, unknown>;
+    expect(data.template).toBe('openagreements-restrictive-covenant-wyoming');
+    expect(data.return_mode).toBe('inline_base64');
+    expect(typeof data.output_path).toBe('string');
+    expect(typeof data.inline_base64).toBe('string');
+    expect((data.inline_base64 as string).length).toBeGreaterThan(10_000);
+  });
+
   it.openspec('OA-DST-033')('fill_template returns TEMPLATE_NOT_FOUND for unknown template', async () => {
     const result = await callTool('fill_template', {
       template: 'nonexistent-template',

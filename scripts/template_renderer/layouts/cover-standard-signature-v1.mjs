@@ -723,6 +723,10 @@ function signatureSpacerCell(nilBorder) {
   });
 }
 
+function signerFieldMap(signer) {
+  return new Map(signer.rows.map((row) => [row.id, row]));
+}
+
 function twoPartySignatureTable(signatureSpec, style, nilBorder, ruleBorder) {
   return new Table({
     width: { size: 10075, type: WidthType.DXA },
@@ -795,6 +799,67 @@ function onePartySignatureTable(signatureSpec, style, nilBorder, ruleBorder) {
   });
 }
 
+function signerModeSignatureTable(signatureSpec, style, nilBorder, ruleBorder) {
+  if (signatureSpec.signers.length !== 2) {
+    throw new Error(
+      `cover-standard-signature-v1 requires exactly 2 signers for mode=signers; received ${signatureSpec.signers.length}`
+    );
+  }
+
+  const [leftSigner, rightSigner] = signatureSpec.signers;
+  const leftRows = signerFieldMap(leftSigner);
+  const rightRows = signerFieldMap(rightSigner);
+  const rowIds = [];
+
+  for (const signer of signatureSpec.signers) {
+    for (const row of signer.rows) {
+      if (!rowIds.includes(row.id)) {
+        rowIds.push(row.id);
+      }
+    }
+  }
+
+  return new Table({
+    width: { size: 10075, type: WidthType.DXA },
+    layout: TableLayoutType.FIXED,
+    columnWidths: style.table_widths.signature_two_party,
+    borders: {
+      top: nilBorder,
+      left: nilBorder,
+      bottom: nilBorder,
+      right: nilBorder,
+      insideH: nilBorder,
+      insideV: nilBorder,
+    },
+    rows: [
+      new TableRow({
+        children: [
+          signatureLabelCell('', '', style, nilBorder),
+          signatureHeaderCell(leftSigner.label.toUpperCase(), style, nilBorder),
+          signatureSpacerCell(nilBorder),
+          signatureHeaderCell(rightSigner.label.toUpperCase(), style, nilBorder),
+        ],
+      }),
+      ...rowIds.map((rowId) => {
+        const leftRow = leftRows.get(rowId);
+        const rightRow = rightRows.get(rowId);
+        const label = leftRow?.label ?? rightRow?.label ?? rowId;
+        const hint = leftRow?.hint ?? rightRow?.hint;
+
+        return new TableRow({
+          height: { value: style.sizes.signature_row_height, rule: HeightRule.ATLEAST },
+          children: [
+            signatureLabelCell(label, hint, style, nilBorder),
+            signatureLineCell(leftRow?.value ?? '', style, nilBorder, leftRow ? ruleBorder : nilBorder),
+            signatureSpacerCell(nilBorder),
+            signatureLineCell(rightRow?.value ?? '', style, nilBorder, rightRow ? ruleBorder : nilBorder),
+          ],
+        });
+      }),
+    ],
+  });
+}
+
 function renderMarkdown(spec) {
   const lines = [];
   const { document, sections } = spec;
@@ -833,9 +898,8 @@ function renderMarkdown(spec) {
     lines.push(`### ${i + 1}. ${clauseItem.heading}`);
     lines.push('');
     if (clauseItem.type === 'definitions') {
-      const sorted = [...clauseItem.terms].sort((a, b) => a.term.localeCompare(b.term));
-      for (let j = 0; j < sorted.length; j++) {
-        lines.push(`${i + 1}.${j + 1} **"${sorted[j].term}"** ${sorted[j].definition}`);
+      for (let j = 0; j < clauseItem.terms.length; j++) {
+        lines.push(`${i + 1}.${j + 1} **"${clauseItem.terms[j].term}"** ${clauseItem.terms[j].definition}`);
         lines.push('');
       }
     } else {
@@ -868,6 +932,15 @@ function renderMarkdown(spec) {
       }
       lines.push('');
     }
+  } else if (sections.signature.mode === 'signers') {
+    for (const signer of sections.signature.signers) {
+      lines.push(`**${signer.label}**`);
+      lines.push('');
+      for (const row of signer.rows) {
+        lines.push(`${row.label}: ${row.value || '_______________'}`);
+      }
+      lines.push('');
+    }
   } else {
     lines.push(`**${sections.signature.party}**`);
     lines.push('');
@@ -888,7 +961,7 @@ export function renderCoverStandardSignatureV1(spec, style) {
   const highlightMode = document.defined_term_highlight_mode || 'all_instances';
   const definitionsClause = sections.standard_terms.clauses.find((c) => c.type === 'definitions');
   const derivedTerms = definitionsClause
-    ? definitionsClause.terms.map((t) => t.term)
+    ? definitionsClause.terms.flatMap((t) => [t.term, ...(t.aliases ?? [])])
     : style.defined_terms;
 
   const standardClauseParagraphs = sections.standard_terms.clauses.flatMap((clauseItem, idx) => {
@@ -907,6 +980,8 @@ export function renderCoverStandardSignatureV1(spec, style) {
 
   const signatureTable = sections.signature.mode === 'two-party'
     ? twoPartySignatureTable(sections.signature, style, nilBorder, ruleBorder)
+    : sections.signature.mode === 'signers'
+      ? signerModeSignatureTable(sections.signature, style, nilBorder, ruleBorder)
     : onePartySignatureTable(sections.signature, style, nilBorder, ruleBorder);
 
   const doc = new Document({

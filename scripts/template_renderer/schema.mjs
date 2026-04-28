@@ -6,6 +6,8 @@ const fieldNamePattern = /^[a-z_][a-z0-9_]*$/;
 const textSchema = z.string().min(1);
 
 const coverRowSchema = z.object({
+  id: z.string().regex(idPattern).optional(),
+  kind: z.enum(['row', 'group', 'subrow']).optional(),
   label: textSchema,
   value: z.string(),
   hint: z.string().optional(),
@@ -15,6 +17,7 @@ const coverRowSchema = z.object({
 });
 
 const textClauseSchema = z.object({
+  id: z.string().regex(idPattern).optional(),
   heading: textSchema,
   body: textSchema,
   condition: z.string().regex(fieldNamePattern).optional(),
@@ -22,11 +25,14 @@ const textClauseSchema = z.object({
 });
 
 const definitionTermSchema = z.object({
+  id: z.string().regex(idPattern).optional(),
   term: textSchema,
+  aliases: z.array(textSchema).optional(),
   definition: textSchema,
 });
 
 const definitionsClauseSchema = z.object({
+  id: z.string().regex(idPattern).optional(),
   type: z.literal('definitions'),
   heading: textSchema,
   terms: z.array(definitionTermSchema).min(1),
@@ -67,12 +73,36 @@ const onePartySignatureSchema = z.object({
   rows: z.array(onePartySignatureRowSchema).min(1),
 });
 
+const signerRowSchema = z.object({
+  id: z.string().regex(idPattern),
+  label: textSchema,
+  hint: z.string().optional(),
+  value: z.string().optional().default(''),
+});
+
+const signerSchema = z.object({
+  id: z.string().regex(idPattern),
+  label: textSchema,
+  kind: z.enum(['entity', 'individual', 'acknowledging-individual']),
+  capacity: z.enum(['through_representative', 'personal', 'acknowledging']).optional(),
+  rows: z.array(signerRowSchema).min(1),
+});
+
+const signerModeSignatureSchema = z.object({
+  mode: z.literal('signers'),
+  arrangement: z.enum(['entity-plus-individual', 'stacked']).optional().default('stacked'),
+  section_label: textSchema,
+  heading_title: textSchema,
+  preamble: textSchema,
+  signers: z.array(signerSchema).min(1),
+});
+
 export const contractSpecSchema = z.object({
   template_id: z.string().regex(idPattern),
   layout_id: z.string().regex(idPattern),
   style_id: z.string().regex(idPattern),
   output_docx_path: textSchema,
-  output_markdown_path: textSchema,
+  output_markdown_path: textSchema.optional(),
   document: z.object({
     title: textSchema,
     label: textSchema,
@@ -94,7 +124,7 @@ export const contractSpecSchema = z.object({
       heading_title: textSchema,
       clauses: z.array(clauseSchema).min(1),
     }),
-    signature: z.union([twoPartySignatureSchema, onePartySignatureSchema]),
+    signature: z.union([twoPartySignatureSchema, onePartySignatureSchema, signerModeSignatureSchema]),
   }),
 });
 
