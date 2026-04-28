@@ -23,8 +23,8 @@ Works with Claude Code, Gemini CLI, Cursor, and local MCP or CLI workflows.
 
 - [Install](#install)
 - [Quick Start](#quick-start)
-- [Available Skills](#available-skills)
 - [Available Templates](#available-templates)
+- [Available Skills](#available-skills)
 - [Packages](#packages)
 - [Documentation](#documentation)
 - [Privacy](#privacy)
@@ -47,11 +47,23 @@ Works with Claude Code, Gemini CLI, Cursor, and local MCP or CLI workflows.
 npx skills add open-agreements/open-agreements
 ```
 
-### Claude Hosted MCP
+### Remote MCP
+
+Connect any MCP-compatible agent to the hosted server at `https://openagreements.org/api/mcp`.
+
+**Claude Code**
 
 ```bash
-claude mcp add --transport http open-agreements https://openagreements.ai/api/mcp
+claude mcp add --transport http open-agreements https://openagreements.org/api/mcp
 ```
+
+**Codex CLI**
+
+```bash
+codex mcp add open-agreements --url https://openagreements.org/api/mcp
+```
+
+**Other agents** — point your client at `https://openagreements.org/api/mcp` (streamable HTTP).
 
 ### Gemini CLI Extension
 
@@ -110,6 +122,99 @@ open-agreements fill common-paper-mutual-nda --set party_1_name="Acme Corp" --se
 3. It runs `fill <template>` to render a DOCX preserving the source formatting.
 4. You review and sign the output document.
 
+## Available Templates
+
+The Source column links to the upstream standard, source document, or canonical project page (varies by publisher). The License column shows redistribution terms. Repo links point to the GitHub content directory for each template or recipe.
+
+### Confidentiality
+
+| Template | Website | Source | License | Repo |
+|----------|---------|--------|---------|------|
+| Bonterms Mutual NDA | [Website](https://usejunior.com/templates/bonterms-mutual-nda) | [Bonterms](https://github.com/Bonterms/Mutual-NDA) | [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/bonterms-mutual-nda) |
+| Common Paper Mutual NDA | [Website](https://usejunior.com/templates/common-paper-mutual-nda) | [Common Paper](https://commonpaper.com/standards/mutual-nda/1.0) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-mutual-nda) |
+| One Way NDA | [Website](https://usejunior.com/templates/common-paper-one-way-nda) | [Common Paper](https://commonpaper.com/standards/one-way-nda) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-one-way-nda) |
+
+### Sales & Licensing
+
+| Template | Website | Source | License | Repo |
+|----------|---------|--------|---------|------|
+| Cloud Service Agreement | [Website](https://usejunior.com/templates/common-paper-cloud-service-agreement) | [Common Paper](https://commonpaper.com/standards/cloud-service-agreement/2.1) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-cloud-service-agreement) |
+| CSA Click Through | [Website](https://usejunior.com/templates/common-paper-csa-click-through) | [Common Paper](https://commonpaper.com/standards/cloud-service-agreement/2.1) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-csa-click-through) |
+| CSA With AI | [Website](https://usejunior.com/templates/common-paper-csa-with-ai) | [Common Paper](https://commonpaper.com/standards/cloud-service-agreement/2.1) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-csa-with-ai) |
+| CSA With SLA | [Website](https://usejunior.com/templates/common-paper-csa-with-sla) | [Common Paper](https://commonpaper.com/standards/cloud-service-agreement/2.1) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-csa-with-sla) |
+| CSA Without SLA | [Website](https://usejunior.com/templates/common-paper-csa-without-sla) | [Common Paper](https://commonpaper.com/standards/cloud-service-agreement/2.1) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-csa-without-sla) |
+| Order Form | [Website](https://usejunior.com/templates/common-paper-order-form) | [Common Paper](https://commonpaper.com/standards/cloud-service-agreement/2.1) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-order-form) |
+| Order Form With SLA | [Website](https://usejunior.com/templates/common-paper-order-form-with-sla) | [Common Paper](https://commonpaper.com/standards/cloud-service-agreement/2.1) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-order-form-with-sla) |
+| Software License Agreement | [Website](https://usejunior.com/templates/common-paper-software-license-agreement) | [Common Paper](https://commonpaper.com/standards/software-license-agreement/1.1) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-software-license-agreement) |
+
+### Data & Compliance
+
+| Template | Website | Source | License | Repo |
+|----------|---------|--------|---------|------|
+| AI Addendum | [Website](https://usejunior.com/templates/common-paper-ai-addendum) | [Common Paper](https://commonpaper.com/standards/ai-addendum/1.0) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-ai-addendum) |
+| AI Addendum In App | [Website](https://usejunior.com/templates/common-paper-ai-addendum-in-app) | [Common Paper](https://commonpaper.com/standards/ai-addendum/1.0) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-ai-addendum-in-app) |
+| Business Associate Agreement | [Website](https://usejunior.com/templates/common-paper-business-associate-agreement) | [Common Paper](https://commonpaper.com/standards/business-associate-agreement/1.0) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-business-associate-agreement) |
+| Data Processing Agreement | [Website](https://usejunior.com/templates/common-paper-data-processing-agreement) | [Common Paper](https://commonpaper.com/standards/data-processing-agreement/1.1) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-data-processing-agreement) |
+
+### Professional Services
+
+| Template | Website | Source | License | Repo |
+|----------|---------|--------|---------|------|
+| Bonterms Professional Services Agreement | [Website](https://usejunior.com/templates/bonterms-professional-services-agreement) | [Bonterms](https://github.com/Bonterms/Professional-Services-Agreement) | [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/bonterms-professional-services-agreement) |
+| Independent Contractor Agreement | [Website](https://usejunior.com/templates/common-paper-independent-contractor-agreement) | [Common Paper](https://commonpaper.com/standards/independent-contractor-agreement) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-independent-contractor-agreement) |
+| Common Paper Professional Services Agreement | [Website](https://usejunior.com/templates/common-paper-professional-services-agreement) | [Common Paper](https://commonpaper.com/standards/professional-services-agreement/1.1) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-professional-services-agreement) |
+| Statement Of Work | [Website](https://usejunior.com/templates/common-paper-statement-of-work) | [Common Paper](https://commonpaper.com/standards/statement-of-work) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-statement-of-work) |
+
+### Deals & Partnerships
+
+| Template | Website | Source | License | Repo |
+|----------|---------|--------|---------|------|
+| Amendment | [Website](https://usejunior.com/templates/common-paper-amendment) | [Common Paper](https://commonpaper.com/standards/amendment) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-amendment) |
+| Design Partner Agreement | [Website](https://usejunior.com/templates/common-paper-design-partner-agreement) | [Common Paper](https://commonpaper.com/standards/design-partner-agreement/1.3) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-design-partner-agreement) |
+| Letter Of Intent | [Website](https://usejunior.com/templates/common-paper-letter-of-intent) | [Common Paper](https://commonpaper.com/standards/letter-of-intent) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-letter-of-intent) |
+| Partnership Agreement | [Website](https://usejunior.com/templates/common-paper-partnership-agreement) | [Common Paper](https://commonpaper.com/standards/partnership-agreement/1.1) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-partnership-agreement) |
+| Pilot Agreement | [Website](https://usejunior.com/templates/common-paper-pilot-agreement) | [Common Paper](https://commonpaper.com/standards/pilot-agreement/1.1) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-pilot-agreement) |
+| Term Sheet | [Website](https://usejunior.com/templates/common-paper-term-sheet) | [Common Paper](https://commonpaper.com/standards/term-sheet) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-term-sheet) |
+
+### Employment
+
+| Template | Website | Source | License | Repo |
+|----------|---------|--------|---------|------|
+| Employee IP Inventions Assignment | [Website](https://usejunior.com/templates/openagreements-employee-ip-inventions-assignment) | [OpenAgreements](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-employee-ip-inventions-assignment) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-employee-ip-inventions-assignment) |
+| Employment Confidentiality Acknowledgement | [Website](https://usejunior.com/templates/openagreements-employment-confidentiality-acknowledgement) | [OpenAgreements](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-employment-confidentiality-acknowledgement) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-employment-confidentiality-acknowledgement) |
+| Employment Offer Letter | [Website](https://usejunior.com/templates/openagreements-employment-offer-letter) | [OpenAgreements](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-employment-offer-letter) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-employment-offer-letter) |
+| Restrictive Covenant Wyoming | [Website](https://usejunior.com/templates/openagreements-restrictive-covenant-wyoming) | [OpenAgreements](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-restrictive-covenant-wyoming) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-restrictive-covenant-wyoming) |
+
+### SAFEs
+
+| Template | Website | Source | License | Repo |
+|----------|---------|--------|---------|------|
+| Discount | [Website](https://usejunior.com/templates/yc-safe-discount) | [Y Combinator](https://www.ycombinator.com/documents) | [CC-BY-ND-4.0](https://creativecommons.org/licenses/by-nd/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/external/yc-safe-discount) |
+| MFN | [Website](https://usejunior.com/templates/yc-safe-mfn) | [Y Combinator](https://www.ycombinator.com/documents) | [CC-BY-ND-4.0](https://creativecommons.org/licenses/by-nd/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/external/yc-safe-mfn) |
+| Pro Rata Side Letter | [Website](https://usejunior.com/templates/yc-safe-pro-rata-side-letter) | [Y Combinator](https://www.ycombinator.com/documents) | [CC-BY-ND-4.0](https://creativecommons.org/licenses/by-nd/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/external/yc-safe-pro-rata-side-letter) |
+| Valuation Cap | [Website](https://usejunior.com/templates/yc-safe-valuation-cap) | [Y Combinator](https://www.ycombinator.com/documents) | [CC-BY-ND-4.0](https://creativecommons.org/licenses/by-nd/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/external/yc-safe-valuation-cap) |
+
+### Venture Financing
+
+| Template | Website | Source | License | Repo |
+|----------|---------|--------|---------|------|
+| Certificate Of Incorporation | [Website](https://usejunior.com/templates/nvca-certificate-of-incorporation) | [NVCA](https://nvca.org/wp-content/uploads/2025/10/NVCA-Model-COI-10-1-2025.docx) | Recipe | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/recipes/nvca-certificate-of-incorporation) |
+| Indemnification Agreement | [Website](https://usejunior.com/templates/nvca-indemnification-agreement) | [NVCA](https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx) | Recipe | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/recipes/nvca-indemnification-agreement) |
+| Investors Rights Agreement | [Website](https://usejunior.com/templates/nvca-investors-rights-agreement) | [NVCA](https://nvca.org/wp-content/uploads/2025/10/NVCA-Model-IRA-10-1-2025-2-1.docx) | Recipe | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/recipes/nvca-investors-rights-agreement) |
+| Management Rights Letter | [Website](https://usejunior.com/templates/nvca-management-rights-letter) | [NVCA](https://nvca.org/wp-content/uploads/2025/12/NVCA-2020-Management-Rights-Letter-1-1.docx) | Recipe | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/recipes/nvca-management-rights-letter) |
+| ROFR Co Sale Agreement | [Website](https://usejunior.com/templates/nvca-rofr-co-sale-agreement) | [NVCA](https://nvca.org/wp-content/uploads/2025/10/NVCA-Model-ROFRA-10-1-2025.docx) | Recipe | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/recipes/nvca-rofr-co-sale-agreement) |
+| Stock Purchase Agreement | [Website](https://usejunior.com/templates/nvca-stock-purchase-agreement) | [NVCA](https://nvca.org/wp-content/uploads/2025/10/NVCA-Model-SPA-10-28-2025-1.docx) | Recipe | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/recipes/nvca-stock-purchase-agreement) |
+| Voting Agreement | [Website](https://usejunior.com/templates/nvca-voting-agreement) | [NVCA](https://nvca.org/wp-content/uploads/2024/10/NVCA-Model-VA-10-1-2025.docx) | Recipe | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/recipes/nvca-voting-agreement) |
+
+### Other
+
+| Template | Website | Source | License | Repo |
+|----------|---------|--------|---------|------|
+| Closing Checklist | [Website](https://usejunior.com/templates/closing-checklist) | [OpenAgreements](https://github.com/open-agreements/open-agreements) | [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/closing-checklist) |
+| Board Consent SAFE | [Website](https://usejunior.com/templates/openagreements-board-consent-safe) | [OpenAgreements](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-board-consent-safe) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-board-consent-safe) |
+| Stockholder Consent SAFE | [Website](https://usejunior.com/templates/openagreements-stockholder-consent-safe) | [OpenAgreements](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-stockholder-consent-safe) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-stockholder-consent-safe) |
+| Working Group List | [Website](https://usejunior.com/templates/working-group-list) | [OpenAgreements](https://github.com/open-agreements/open-agreements) | [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/working-group-list) |
+
 ## Available Skills
 
 ### Agreement Drafting And Filling
@@ -147,99 +252,6 @@ open-agreements fill common-paper-mutual-nda --set party_1_name="Acme Corp" --se
 |-------|-------------|
 | [recipe-quality-audit](https://github.com/open-agreements/open-agreements/tree/main/skills/recipe-quality-audit) | Audit NVCA recipe quality: check file inventory, metadata schema, field-to-replacement coverage, ambiguous keys, smart quotes, test fixtures, and fill quality. Produces a structured scorecard per recipe with maturity tier classification. Use when user says "audit recipe quality," "check recipe coverage," "recipe scorecard," or "NVCA recipe quality." |
 | [unit-test-philosophy](https://github.com/open-agreements/open-agreements/tree/main/skills/unit-test-philosophy) | Risk-based unit testing and Allure-readable behavioral spec style for open-agreements. Use when user says "add tests," "test quality," "coverage expansion," "unit test style," or "Allure test spec." Applies when adding/updating tests, expanding coverage, or reviewing test quality across src, integration-tests, and workspace packages. |
-
-## Available Templates
-
-Website links open a dedicated template page when one exists, or a preselected install flow when it does not. Repo links point to the GitHub content directory for that template or recipe.
-
-### Confidentiality
-
-| Template | Website | Repo |
-|----------|---------|------|
-| Bonterms Mutual NDA | [Website](https://usejunior.com/?template=bonterms-mutual-nda#start) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/bonterms-mutual-nda) |
-| Common Paper Mutual NDA | [Website](https://usejunior.com/?template=common-paper-mutual-nda#start) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-mutual-nda) |
-| One Way NDA | [Website](https://usejunior.com/?template=common-paper-one-way-nda#start) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-one-way-nda) |
-
-### Sales & Licensing
-
-| Template | Website | Repo |
-|----------|---------|------|
-| Cloud Service Agreement | [Website](https://usejunior.com/?template=common-paper-cloud-service-agreement#start) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-cloud-service-agreement) |
-| CSA Click Through | [Website](https://usejunior.com/?template=common-paper-csa-click-through#start) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-csa-click-through) |
-| CSA With AI | [Website](https://usejunior.com/?template=common-paper-csa-with-ai#start) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-csa-with-ai) |
-| CSA With SLA | [Website](https://usejunior.com/?template=common-paper-csa-with-sla#start) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-csa-with-sla) |
-| CSA Without SLA | [Website](https://usejunior.com/?template=common-paper-csa-without-sla#start) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-csa-without-sla) |
-| Order Form | [Website](https://usejunior.com/?template=common-paper-order-form#start) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-order-form) |
-| Order Form With SLA | [Website](https://usejunior.com/?template=common-paper-order-form-with-sla#start) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-order-form-with-sla) |
-| Software License Agreement | [Website](https://usejunior.com/?template=common-paper-software-license-agreement#start) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-software-license-agreement) |
-
-### Data & Compliance
-
-| Template | Website | Repo |
-|----------|---------|------|
-| AI Addendum | [Website](https://usejunior.com/?template=common-paper-ai-addendum#start) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-ai-addendum) |
-| AI Addendum In App | [Website](https://usejunior.com/?template=common-paper-ai-addendum-in-app#start) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-ai-addendum-in-app) |
-| Business Associate Agreement | [Website](https://usejunior.com/?template=common-paper-business-associate-agreement#start) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-business-associate-agreement) |
-| Data Processing Agreement | [Website](https://usejunior.com/?template=common-paper-data-processing-agreement#start) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-data-processing-agreement) |
-
-### Professional Services
-
-| Template | Website | Repo |
-|----------|---------|------|
-| Bonterms Professional Services Agreement | [Website](https://usejunior.com/?template=bonterms-professional-services-agreement#start) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/bonterms-professional-services-agreement) |
-| Independent Contractor Agreement | [Website](https://usejunior.com/?template=common-paper-independent-contractor-agreement#start) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-independent-contractor-agreement) |
-| Common Paper Professional Services Agreement | [Website](https://usejunior.com/?template=common-paper-professional-services-agreement#start) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-professional-services-agreement) |
-| Statement Of Work | [Website](https://usejunior.com/?template=common-paper-statement-of-work#start) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-statement-of-work) |
-
-### Deals & Partnerships
-
-| Template | Website | Repo |
-|----------|---------|------|
-| Amendment | [Website](https://usejunior.com/?template=common-paper-amendment#start) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-amendment) |
-| Design Partner Agreement | [Website](https://usejunior.com/?template=common-paper-design-partner-agreement#start) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-design-partner-agreement) |
-| Letter Of Intent | [Website](https://usejunior.com/?template=common-paper-letter-of-intent#start) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-letter-of-intent) |
-| Partnership Agreement | [Website](https://usejunior.com/?template=common-paper-partnership-agreement#start) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-partnership-agreement) |
-| Pilot Agreement | [Website](https://usejunior.com/?template=common-paper-pilot-agreement#start) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-pilot-agreement) |
-| Term Sheet | [Website](https://usejunior.com/?template=common-paper-term-sheet#start) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-term-sheet) |
-
-### Employment
-
-| Template | Website | Repo |
-|----------|---------|------|
-| Employee IP Inventions Assignment | [Website](https://usejunior.com/templates/openagreements-employee-ip-inventions-assignment/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-employee-ip-inventions-assignment) |
-| Employment Confidentiality Acknowledgement | [Website](https://usejunior.com/templates/openagreements-employment-confidentiality-acknowledgement/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-employment-confidentiality-acknowledgement) |
-| Employment Offer Letter | [Website](https://usejunior.com/templates/openagreements-employment-offer-letter/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-employment-offer-letter) |
-| Restrictive Covenant Wyoming | [Website](https://usejunior.com/templates/openagreements-restrictive-covenant-wyoming/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-restrictive-covenant-wyoming) |
-
-### SAFEs
-
-| Template | Website | Repo |
-|----------|---------|------|
-| Discount | [Website](https://usejunior.com/?template=yc-safe-discount#start) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/external/yc-safe-discount) |
-| MFN | [Website](https://usejunior.com/?template=yc-safe-mfn#start) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/external/yc-safe-mfn) |
-| Pro Rata Side Letter | [Website](https://usejunior.com/?template=yc-safe-pro-rata-side-letter#start) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/external/yc-safe-pro-rata-side-letter) |
-| Valuation Cap | [Website](https://usejunior.com/?template=yc-safe-valuation-cap#start) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/external/yc-safe-valuation-cap) |
-
-### Venture Financing
-
-| Template | Website | Repo |
-|----------|---------|------|
-| Certificate Of Incorporation | [Website](https://usejunior.com/?template=nvca-certificate-of-incorporation#start) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/recipes/nvca-certificate-of-incorporation) |
-| Indemnification Agreement | [Website](https://usejunior.com/?template=nvca-indemnification-agreement#start) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/recipes/nvca-indemnification-agreement) |
-| Investors Rights Agreement | [Website](https://usejunior.com/?template=nvca-investors-rights-agreement#start) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/recipes/nvca-investors-rights-agreement) |
-| Management Rights Letter | [Website](https://usejunior.com/?template=nvca-management-rights-letter#start) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/recipes/nvca-management-rights-letter) |
-| ROFR Co Sale Agreement | [Website](https://usejunior.com/?template=nvca-rofr-co-sale-agreement#start) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/recipes/nvca-rofr-co-sale-agreement) |
-| Stock Purchase Agreement | [Website](https://usejunior.com/?template=nvca-stock-purchase-agreement#start) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/recipes/nvca-stock-purchase-agreement) |
-| Voting Agreement | [Website](https://usejunior.com/?template=nvca-voting-agreement#start) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/recipes/nvca-voting-agreement) |
-
-### Other
-
-| Template | Website | Repo |
-|----------|---------|------|
-| Closing Checklist | [Website](https://usejunior.com/templates/closing-checklist/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/closing-checklist) |
-| Board Consent SAFE | [Website](https://usejunior.com/templates/openagreements-board-consent-safe/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-board-consent-safe) |
-| Stockholder Consent SAFE | [Website](https://usejunior.com/templates/openagreements-stockholder-consent-safe/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-stockholder-consent-safe) |
-| Working Group List | [Website](https://usejunior.com/templates/working-group-list/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/working-group-list) |
 
 ## Packages
 
@@ -328,7 +340,7 @@ This repository includes a Cursor plugin manifest at `.cursor-plugin/plugin.json
 ### Local Vs Hosted Execution
 
 - **Local**: `npx`, global install, or stdio MCP. Processing happens on your machine.
-- **Hosted**: `https://openagreements.ai/api/mcp`. Template filling runs server-side for faster setup.
+- **Hosted**: `https://openagreements.org/api/mcp`. Template filling runs server-side for faster setup.
 
 Choose based on document sensitivity and internal policy. See the trust checklist below for the data-flow summary.
 
@@ -365,7 +377,7 @@ Choose based on document sensitivity and internal policy. See the trust checklis
 ## Privacy
 
 - **Local mode** (`npx`, global install, stdio MCP): all processing happens on your machine. No document content is sent externally.
-- **Hosted mode** (`https://openagreements.ai/api/mcp`): template filling runs server-side. No filled documents are stored after the response is returned.
+- **Hosted mode** (`https://openagreements.org/api/mcp`): template filling runs server-side. No filled documents are stored after the response is returned.
 
 See the [Privacy Policy](https://usejunior.com/privacy_policy) for details.
 

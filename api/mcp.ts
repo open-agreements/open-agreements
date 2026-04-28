@@ -4,7 +4,7 @@
  *
  * Add as a Claude custom connector:
  *   Name: OpenAgreements
- *   URL:  https://openagreements.ai/api/mcp
+ *   URL:  https://openagreements.org/api/mcp
  */
 
 import type { HttpRequest, HttpResponse } from './_http-types.js';
@@ -748,7 +748,7 @@ function mcpGetHtmlPage(): string {
         <p class="eyebrow">Open-source legal operations</p>
         <h1>OpenAgreements MCP endpoint</h1>
         <p>This route is for MCP clients (streamable HTTP), not direct browser use.</p>
-        <p>Endpoint: <code>https://openagreements.ai/api/mcp</code></p>
+        <p>Endpoint: <code>https://openagreements.org/api/mcp</code></p>
         <p>Use JSON-RPC over HTTP POST with methods like <code>initialize</code>, <code>tools/list</code>, and <code>tools/call</code>.</p>
         <div class="actions">
           <a class="btn btn-primary" href="https://openagreements.ai#start">Installation instructions</a>

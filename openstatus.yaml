@@ -11,7 +11,7 @@ openagreements-mcp:
   retry: 3
   kind: http
   request:
-    url: https://openagreements.ai/api/mcp
+    url: https://openagreements.org/api/mcp
     method: POST
     headers:
       Content-Type: application/json
