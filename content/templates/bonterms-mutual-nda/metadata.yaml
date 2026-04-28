@@ -3,13 +3,13 @@ category: confidentiality
 description: >-
   Cover page for the Bonterms Mutual NDA (Version 1.0). The standard terms are incorporated by reference from
   bonterms.com.
-source_url: https://github.com/Bonterms/Mutual-NDA
+source_url: https://bonterms.com/resources/mutual-nda-cover-page-example
 version: '1.0'
 license: CC0-1.0
 allow_derivatives: true
 attribution_text: >-
-  Based on the Bonterms Mutual NDA Cover Page, available at https://bonterms.com/forms/bonterms-mutual-nda-v1/. Made
-  available under CC0 1.0.
+  Based on the Bonterms Mutual NDA Cover Page, available at
+  https://bonterms.com/resources/mutual-nda-cover-page-example. Made available under CC0 1.0.
 fields:
   - name: party_1_name
     type: string

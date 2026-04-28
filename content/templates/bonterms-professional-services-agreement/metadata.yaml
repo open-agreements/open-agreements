@@ -3,13 +3,13 @@ category: professional-services
 description: >-
   Cover page for the Bonterms Professional Services Agreement (Version 1.2). The standard terms are incorporated by
   reference from bonterms.com.
-source_url: https://github.com/Bonterms/Professional-Services-Agreement
+source_url: https://bonterms.com/resources/psa-cover-page-example
 version: '1.2'
 license: CC0-1.0
 allow_derivatives: true
 attribution_text: >-
   Based on the Bonterms Professional Services Agreement Cover Page, available at
-  https://bonterms.com/forms/professional-services-agreement-v1.2/. Made available under CC0 1.0.
+  https://bonterms.com/resources/psa-cover-page-example. Made available under CC0 1.0.
 fields:
   - name: customer_name
     type: string

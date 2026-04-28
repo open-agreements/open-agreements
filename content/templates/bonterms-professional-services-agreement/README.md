@@ -4,7 +4,7 @@ Cover page for the [Bonterms Professional Services Agreement](https://bonterms.c
 
 ## Source
 
-- **URL**: https://github.com/Bonterms/Professional-Services-Agreement
+- **URL**: https://bonterms.com/resources/psa-cover-page-example
 - **Version**: 1.2
 - **License**: CC0 1.0
 
@@ -20,5 +20,5 @@ Cover page for the [Bonterms Professional Services Agreement](https://bonterms.c
 
 ## Attribution
 
-Based on the Bonterms Professional Services Agreement Cover Page, available at https://bonterms.com/forms/professional-services-agreement-v1.2/.
+Based on the Bonterms Professional Services Agreement Cover Page, available at https://bonterms.com/resources/psa-cover-page-example.
 Made available under CC0 1.0.
