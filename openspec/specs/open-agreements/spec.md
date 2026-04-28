@@ -787,7 +787,6 @@ The system SHALL reject the previous flat checklist payload shape once the docum
 - **WHEN** input includes only top-level legacy flat arrays and omits required document-first checklist entry structures
 - **THEN** validation fails with machine-readable contract errors
 
-
 ### Requirement: Atomic Checklist JSON Patch Transactions
 The system SHALL support checklist updates via JSON patch envelopes applied atomically. If any operation in a patch is invalid, the system SHALL apply none of the operations.
 
@@ -1147,12 +1146,24 @@ Tampered or malformed tokens MUST be rejected.
 The MCP endpoint MUST return consistent envelope shapes for all tool calls
 including list, fill, and get operations with proper error envelopes.
 
+Success envelopes MUST include `data.rate_limit` with the four-field shape
+`{ limit, remaining, reset_at, bucket }`. When the rate limiter is
+configured (Upstash env vars present at runtime), all four fields MUST
+reflect the binding bucket for the request: `limit` and `remaining` are
+non-negative integers, `reset_at` is an ISO 8601 timestamp at the end of
+the active window, and `bucket` is the bucket name (`"mcp:global"` for
+non-`fill_template` calls, or whichever of `"mcp:global"`/`"mcp:fill"`
+has fewer remaining requests for `fill_template`). When the limiter is
+unconfigured (dev/test) or has failed open after a Redis error, all four
+fields MUST be `null`.
+
 #### Scenario: [OA-DST-032] MCP contract envelope shapes
 - **WHEN** MCP tools are called (list_templates, get_template, fill_template)
 - **THEN** success responses have consistent envelope structure
 - **AND** error responses use typed error codes (INVALID_ARGUMENT, TEMPLATE_NOT_FOUND)
 - **AND** compact and full payload modes are supported for list_templates
 - **AND** browser GET returns HTML, non-browser GET returns 405
+- **AND** success envelopes include `data.rate_limit` with fields `limit`, `remaining`, `reset_at`, and `bucket` (all `null` when the limiter is unconfigured or fails open)
 
 ### Requirement: MCP Template Discovery Preserves Array Item Schemas
 The MCP `get_template` tool SHALL surface nested array item schemas so clients
@@ -1465,3 +1476,179 @@ Validation artifacts MUST expire after a configured TTL.
 #### Scenario: [OA-CKL-033] Validation artifact TTL expiry
 - **WHEN** a validation artifact exceeds its TTL
 - **THEN** it is no longer valid for apply requests
+
+### Requirement: Durable Download Storage Policy
+The download artifact store SHALL require a durable backend (Upstash REST KV) outside known-safe local/test contexts, and SHALL surface unavailability with a typed error so callers can return explicit machine-readable error codes instead of intermittent ghost 404s.
+
+In-memory storage is permitted only when one of the following holds:
+- `NODE_ENV === 'test'` (always — keeps tests deterministic and offline);
+- `NODE_ENV === 'development'`; or
+- `VERCEL_ENV === 'development'` (`vercel dev`).
+
+When `DOWNLOAD_ALLOW_IN_MEMORY=1` is set, it is honored as a self-hosted single-instance escape hatch only when `VERCEL_ENV` is not `production` or `preview`. In `VERCEL_ENV=production` or `preview` the flag is rejected and a configuration error is thrown.
+
+The store SHALL throw `DownloadStoreConfigurationError` (HTTP 500) when durable storage is required but not configured, and `DownloadStoreRuntimeError` (HTTP 503) when a configured durable store is reachable but transiently fails. Hosted endpoints SHALL map both to a `DOWNLOAD_STORE_UNAVAILABLE` machine-readable code, and the MCP `fill_template` envelope SHALL surface them as `INTERNAL_ERROR` with `details.reason='DOWNLOAD_STORE_UNAVAILABLE'` and `details.cause` of `'configuration'` or `'runtime'`.
+
+#### Scenario: [OA-DST-036] Durable store required when neither test/dev nor KV vars are present
+- **WHEN** `initDownloadArtifactStore` is called with `NODE_ENV='production'` and no `KV_REST_API_URL`/`KV_REST_API_TOKEN` (or `UPSTASH_REDIS_REST_URL`/`UPSTASH_REDIS_REST_TOKEN`) configured
+- **THEN** the call throws `DownloadStoreConfigurationError`
+- **AND** an error log is emitted with `event:'download_store_init'`, `mode:'error'`, and `reason:'durable_store_required'`
+- **AND** `DOWNLOAD_ALLOW_IN_MEMORY=1` set together with `VERCEL_ENV='production'` or `'preview'` is rejected with `reason:'allow_in_memory_rejected_in_production'`
+- **AND** `/api/download` responds to a request that triggers `DownloadStoreConfigurationError` from the resolve path with HTTP `500`, header `X-Download-Error-Code: DOWNLOAD_STORE_UNAVAILABLE`, and header `X-Download-Store: unavailable`
+- **AND** `/api/download` responds to a request that triggers `DownloadStoreRuntimeError` from the resolve path with HTTP `503` and the same headers (no `Retry-After`)
+- **AND** the MCP `fill_template` tool returns an `INTERNAL_ERROR` envelope with `details.reason='DOWNLOAD_STORE_UNAVAILABLE'`, `details.cause='configuration'|'runtime'`, and `retriable=false` for `configuration` or `retriable=true` for `runtime`
+
+### Requirement: Download Storage Mode Visibility
+The download artifact store SHALL expose its chosen storage mode through cold-start logs and HTTP response headers so that operators and clients can distinguish durable from non-durable backends without reading the runtime config.
+
+The cold-start log emitted on first store initialization SHALL include `event:'download_store_init'` plus the diagnostic fields `mode` (`'upstash'|'memory'|'error'`), `durable_required` (boolean), `allow_in_memory_honored` (boolean), `node_env`, and `vercel_env`. The log SHALL be emitted via `console.log` for `upstash`, `console.warn` for honored `memory`, and `console.error` immediately before throwing in the `error` case. Cold-start logs are suppressed under `NODE_ENV='test'` to keep test output deterministic.
+
+The `/api/download` endpoint SHALL set the response header `X-Download-Store: upstash|memory|unavailable` on every response (success and failure).
+
+#### Scenario: [OA-DST-037] Storage mode is surfaced in logs and HTTP responses
+- **WHEN** `initDownloadArtifactStore` initializes against an Upstash-configured environment
+- **THEN** a single structured log line is emitted with `event:'download_store_init'`, `mode:'upstash'`, `durable_required`, `allow_in_memory_honored:false`, `node_env`, and `vercel_env`
+- **AND** subsequent successful `/api/download` responses include the header `X-Download-Store: upstash`
+- **AND** when the escape hatch (`DOWNLOAD_ALLOW_IN_MEMORY=1`) is honored outside production/preview, a `console.warn` log is emitted with `allow_in_memory_honored:true` and a non-empty `warning` field naming serverless instance risk
+- **AND** when the resolve path throws `DownloadStoreUnavailableError`, the failure response carries `X-Download-Store: unavailable`
+
+### Requirement: MCP Rate Limiting on /api/mcp
+The `/api/mcp` HTTP handler SHALL enforce per-IP fixed-window rate limiting
+on every authoritative POST (including JSON-RPC notifications, but
+excluding `OPTIONS` preflight and `GET`). Two buckets SHALL apply:
+
+1. `mcp:global` — every authoritative POST. Default cap 600 requests per
+   minute per IP, overridable via env var `OA_MCP_RATE_LIMIT_GLOBAL`.
+2. `mcp:fill` — `tools/call` requests with `name === "fill_template"`,
+   checked **in addition to** the global bucket. Default cap 120 requests
+   per minute per IP, overridable via env var `OA_MCP_RATE_LIMIT_FILL`.
+
+Counters SHALL be backed by Upstash Redis using the REST `/multi-exec`
+endpoint with an atomic `INCR` + `PEXPIRE` transaction (single round trip,
+no race window). The implementation SHALL prefer
+`KV_REST_API_URL`/`KV_REST_API_TOKEN` over
+`UPSTASH_REDIS_REST_URL`/`UPSTASH_REDIS_REST_TOKEN`, mirroring the
+download-artifact store policy.
+
+When a request is blocked, the handler SHALL return HTTP `200` with a
+JSON-RPC tool envelope where `ok: false`, `error.code: "RATE_LIMITED"`,
+`error.retriable: true`, and `error.details.rate_limit` is populated with
+`{ limit, remaining: 0, reset_at, bucket }`. The HTTP response SHALL also
+carry a `Retry-After` header whose value is the number of seconds until the
+window resets (minimum `1`). HTTP 200 (not 429) preserves the JSON-RPC
+envelope contract used elsewhere in the endpoint and avoids known interop
+issues with HTTP 429 + `Retry-After` in current MCP clients.
+
+The handler SHALL extract the client IP from the headers
+`x-vercel-forwarded-for`, `x-real-ip`, and `x-forwarded-for` (first
+comma-separated entry) in that order, falling back to the literal string
+`"unknown"` so the limit still meaningfully caps degenerate requests.
+`x-forwarded-for` is the last fallback because it can be appended by
+clients before reaching Vercel.
+
+The limiter SHALL fail open on transient Redis errors (logged as
+`rate_limit_runtime_error` warnings) and SHALL emit a loud
+`rate_limiter_init` `console.error` at initialization when the durable
+store is unconfigured under `VERCEL_ENV=production|preview`. In dev/test
+contexts (no env vars) the limiter SHALL be silently disabled.
+
+#### Scenario: [OA-DST-044] Reports truthful rate_limit metadata when limiter is active
+- **WHEN** a `tools/call` succeeds and the limiter returns
+  `{ allowed: true, bucket: "mcp:global", limit: 600, remaining: 599, reset_at: "..." }`
+- **THEN** the success envelope's `data.rate_limit` equals
+  `{ limit: 600, remaining: 599, reset_at: "...", bucket: "mcp:global" }`
+
+#### Scenario: [OA-DST-045] Blocks tools/call with RATE_LIMITED envelope and Retry-After header on global cap
+- **WHEN** `tools/call` is invoked and the global bucket is over its limit
+- **THEN** the response status is HTTP 200
+- **AND** the response carries a `Retry-After` header with a positive integer value
+- **AND** the JSON-RPC envelope has `ok: false`, `error.code: "RATE_LIMITED"`, `error.retriable: true`
+- **AND** `error.details.rate_limit` equals
+  `{ limit: 600, remaining: 0, reset_at: "...", bucket: "mcp:global" }`
+
+#### Scenario: [OA-DST-046] Enforces stricter mcp:fill bucket when global passes
+- **WHEN** `fill_template` is invoked, the global bucket is allowed, and the fill bucket is over its limit
+- **THEN** the limiter is consulted twice: first for `mcp:global`, then for `mcp:fill`
+- **AND** the response is a `RATE_LIMITED` envelope with
+  `error.details.rate_limit.bucket === "mcp:fill"`
+- **AND** the envelope's `tool` field is `"fill_template"`
+
+#### Scenario: [OA-DST-047] Counts JSON-RPC notifications against the global bucket
+- **WHEN** an id-less JSON-RPC notification (e.g. `notifications/initialized`) reaches `/api/mcp`
+- **THEN** the limiter is consulted for `mcp:global` before the notification short-circuit
+- **AND** the response is HTTP 202 with no body when allowed
+
+#### Scenario: [OA-DST-048] Fails open with null rate_limit metadata when limiter is unconfigured
+- **WHEN** the rate limiter returns `{ configured: false }` (dev/test or runtime fail-open)
+- **THEN** the success envelope's `data.rate_limit` is
+  `{ limit: null, remaining: null, reset_at: null, bucket: null }`
+- **AND** the response carries no `Retry-After` header
+
+#### Scenario: [OA-DST-049] getClientIp prefers Vercel-trusted headers
+- **WHEN** a request carries `x-vercel-forwarded-for`, `x-real-ip`, and `x-forwarded-for`
+- **THEN** `getClientIp` returns the value from `x-vercel-forwarded-for`
+- **AND** when only `x-real-ip` is present, `getClientIp` returns that
+- **AND** when only `x-forwarded-for` is present, `getClientIp` returns its first comma-separated entry trimmed
+- **AND** when no IP-like header is present, `getClientIp` returns `"unknown"`
+- **AND** a spoofed `x-forwarded-for` is ignored when `x-vercel-forwarded-for` is set
+
+#### Scenario: [OA-DST-050] initRateLimiter env policy
+- **WHEN** the env has neither Upstash variable set and `NODE_ENV=test`
+- **THEN** the returned limiter has `mode: "disabled"` and silently returns `{ configured: false }` from `check()`
+- **AND** when `VERCEL_ENV=production` and Upstash variables are missing, a `rate_limiter_init` `console.error` is emitted with `reason: "durable_store_required_but_unconfigured"`
+- **AND** when both `KV_REST_API_*` and `UPSTASH_REDIS_REST_*` are set, the limiter posts to the URL from `KV_REST_API_URL` with the token from `KV_REST_API_TOKEN`
+
+#### Scenario: [OA-DST-051] Upstash limiter atomic multi-exec request shape
+- **WHEN** `check()` runs against a configured Upstash limiter
+- **THEN** exactly one `POST <restUrl>/multi-exec` is issued
+- **AND** the body is a two-command array `[["INCR", <key>], ["PEXPIRE", <key>, <windowMs>]]` where the second key matches the first
+- **AND** the key contains the bucket name and the IP
+- **AND** when the returned `INCR` result is below the limit, the state is `{ allowed: true, remaining: <limit - count> }`
+- **AND** when the returned `INCR` result exceeds the limit, the state is `{ allowed: false, remaining: 0 }`
+
+#### Scenario: [OA-DST-052] Fails open on Redis errors
+- **WHEN** `fetch` throws or returns a non-2xx HTTP status during a rate-limit check
+- **THEN** `check()` returns `{ configured: false }`
+- **AND** a `rate_limit_runtime_error` `console.warn` is emitted
+
+#### Scenario: [OA-DST-053] combineState picks the binding bucket
+- **WHEN** any input state is `{ allowed: false }`
+- **THEN** `combineState` returns that blocked state
+- **AND** when all inputs are allowed, the result is the input with the lowest `remaining`
+- **AND** when all inputs are `{ configured: false }`, the result is `{ configured: false }`
+- **AND** when one input is unconfigured and another is configured, the configured state is surfaced
+
+### Requirement: Structured Lifecycle Logs for MCP HTTP Transport
+The `/api/mcp` HTTP handler SHALL emit single-line structured JSON log records for every request lifecycle event, written to `stdout` for informational events and `stderr` for error events so that `vercel logs` filtering and downstream log drains can categorize them by severity. Every record SHALL include `endpoint:'mcp'`, an ISO-8601 `ts`, and a `level` of `'info'` or `'error'`. Every record from a request whose inbound `x-vercel-id` header is present SHALL include `vercelId` set to that value. When `x-vercel-id` is absent the record SHALL omit the `vercelId` field entirely (no synthetic fallback id).
+
+The handler SHALL emit `request_start` immediately before dispatch and `request_complete` on every non-OPTIONS terminal path (including `initialize`, `tools/list`, `tools/call`, `ping`, JSON-RPC method-not-found, malformed-envelope rejections, HTTP method rejections, and the outer unhandled-exception catch). `request_complete` records SHALL include `status`, `ok`, `durationMs`, `jsonrpcMethod` when known, and `toolName` when the request is `tools/call`.
+
+The handler SHALL emit additional discriminator events as appropriate: `request_rejected_http_method` (status 405), `request_rejected_invalid_jsonrpc` (status 400), `notification` (id-less envelope), `auth_denied`, `tool_internal_error`, and `unhandled_exception`. `tool_internal_error` records SHALL preserve the existing `phase` discriminator (`'fill'`, `'artifact'`, `'redline'`, or `'signing'`) and the `cause` discriminator (`'configuration'` or `'runtime'`) where applicable; the `redline` phase SHALL additionally carry `parentOk:true` so dashboards can distinguish a best-effort redline failure from a hard fill failure.
+
+#### Scenario: [OA-DST-038] x-vercel-id propagates into request_start and request_complete
+- **WHEN** a valid JSON-RPC `tools/list` request reaches `/api/mcp` with header `x-vercel-id: fra1::abc123`
+- **THEN** an info log line is written to `stdout` with `event:'request_start'`, `endpoint:'mcp'`, `level:'info'`, `vercelId:'fra1::abc123'`, `jsonrpcMethod:'tools/list'`, and the inbound `jsonrpcId`
+- **AND** an info log line is written to `stdout` with `event:'request_complete'`, `vercelId:'fra1::abc123'`, `ok:true`, `status:200`, and a numeric `durationMs`
+
+#### Scenario: [OA-DST-039] vercelId propagates into tool_internal_error and err is normalized
+- **WHEN** `fill_template` is invoked with header `x-vercel-id: iad1::xyz789` and the underlying fill throws an `Error('synthetic fill failure')`
+- **THEN** an error log line is written to `stderr` with `event:'tool_internal_error'`, `endpoint:'mcp'`, `level:'error'`, `vercelId:'iad1::xyz789'`, `tool:'fill_template'`, `phase:'fill'`, the inbound `jsonrpcId`, `name:'Error'`, `message:'synthetic fill failure'`, and a non-empty `stack`
+
+#### Scenario: [OA-DST-040] auth_denied logs a token fingerprint, never the raw bearer token
+- **WHEN** `tools/call` invokes a signing tool (e.g. `send_for_signature`) with `Authorization: Bearer <secret>` and the auth handshake fails
+- **THEN** an error log line is written with `event:'auth_denied'`, `endpoint:'mcp'`, `toolName:'send_for_signature'`, and a `tokenFp` field whose value matches the regex `^[0-9a-f]{12}$`
+- **AND** the raw bearer-token string SHALL NOT appear anywhere in any captured log record (regression guard against accidental token leakage)
+
+#### Scenario: [OA-DST-041] Successful non-auth-required paths do not fingerprint bearer tokens
+- **WHEN** a non-auth-required tool such as `tools/list` is invoked with an `Authorization: Bearer <token>` header present (the header is not consumed because the tool is not in the auth-required set)
+- **THEN** no log line emitted by the request SHALL contain a `tokenFp` field
+
+#### Scenario: [OA-DST-042] Malformed JSON-RPC envelopes are logged
+- **WHEN** the request body is missing the `jsonrpc:'2.0'` field
+- **THEN** an error log line is written with `event:'request_rejected_invalid_jsonrpc'`, `endpoint:'mcp'`, `level:'error'`, `status:400`, and the inbound `jsonrpcId` if present
+- **AND** the HTTP response is the existing `400 jsonRpcError(-32600, 'Invalid JSON-RPC 2.0 request')` payload
+
+#### Scenario: [OA-DST-043] vercelId is omitted (not synthesized) when x-vercel-id is absent
+- **WHEN** a valid JSON-RPC request reaches `/api/mcp` with no `x-vercel-id` header
+- **THEN** the `request_start` and `request_complete` records SHALL NOT contain a `vercelId` key (the field is omitted, not set to a generated UUID or any other fallback value)
+

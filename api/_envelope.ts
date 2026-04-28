@@ -15,6 +15,7 @@ export const ErrorCode = {
   DOWNLOAD_LINK_INVALID: 'DOWNLOAD_LINK_INVALID',
   DOWNLOAD_LINK_EXPIRED: 'DOWNLOAD_LINK_EXPIRED',
   DOWNLOAD_LINK_NOT_FOUND: 'DOWNLOAD_LINK_NOT_FOUND',
+  INTERNAL_ERROR: 'INTERNAL_ERROR',
 } as const;
 
 export type ErrorCodeValue = (typeof ErrorCode)[keyof typeof ErrorCode];

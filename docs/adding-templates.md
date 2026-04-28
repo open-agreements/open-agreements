@@ -56,6 +56,14 @@ fields:
 priority_fields:
   - party_name
   - effective_date
+# Optional: structured credits for contributors who materially shaped the template.
+# See CONTRIBUTING.md ("Template credits") for the policy.
+credits:
+  - name: Contributor Name
+    role: drafting_editor          # drafter | drafting_editor | reviewer | maintainer
+    profile_url: https://...        # optional
+# Optional: neutral prose identifying the source materials this template was derived from.
+derived_from: Publicly available materials from ...
 ```
 
 #### Field types

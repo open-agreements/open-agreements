@@ -38,3 +38,8 @@ priority_fields:
   - effective_date
   - purchase_amount
   - board_members
+credits:
+  - name: Joey Tsang
+    role: drafting_editor
+    profile_url: https://www.linkedin.com/in/joey-t-b90912b1/
+derived_from: Publicly available Series Seed SAFE board consent materials
