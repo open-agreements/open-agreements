@@ -23,6 +23,7 @@ import {
 import { ErrorCode, makeToolError, wrapError, wrapSuccess } from './_envelope.js';
 import { jwtVerify, createRemoteJWKSet } from 'jose';
 import { OA_ORIGIN, MCP_RESOURCE, OA_PACKAGE_VERSION, isMcpSigningConfigured } from './_config.js';
+import { SigningError } from '../packages/signing/src/mcp-tools.js';
 import {
   getRequestContext,
   redactBearer,
@@ -346,6 +347,7 @@ async function handleSigningToolCall(
   name: string,
   args: Record<string, unknown>,
   ctx: RequestContext,
+  rateState: RateLimitState | null,
 ): Promise<ReturnType<typeof jsonRpcResult>> {
   try {
     if (!_signingModuleLoaded) {
@@ -406,8 +408,30 @@ async function handleSigningToolCall(
       return toolErrorResult(id, name, ErrorCode.INVALID_ARGUMENT, `Unknown signing tool: "${name}"`);
     }
 
-    return jsonRpcResult(id, result);
+    return toolSuccessResult(id, name, result, rateState);
   } catch (err) {
+    // SigningError: domain-specific error with a discriminated code.
+    // Map to the appropriate v2 envelope error code.
+    if (err instanceof SigningError) {
+      const envelopeCode = err.code === 'INVALID_DOCUMENT'
+        ? ErrorCode.INVALID_ARGUMENT
+        : ErrorCode.INTERNAL_ERROR;
+      logError({
+        event: 'tool_internal_error',
+        endpoint: 'mcp',
+        tool: name,
+        phase: 'signing',
+        signingCode: err.code,
+        jsonrpcId: id,
+        ...normalizeError(err),
+        ...ctx,
+      });
+      return toolErrorResult(id, name, envelopeCode, err.message, {
+        retriable: err.retriable,
+        details: { reason: err.code },
+      });
+    }
+    // Non-SigningError: module init/import failure or unexpected runtime error.
     const message = err instanceof Error ? err.message : String(err);
     logError({
       event: 'tool_internal_error',
@@ -418,12 +442,14 @@ async function handleSigningToolCall(
       ...normalizeError(err),
       ...ctx,
     });
-    return toolErrorResult(
-      id,
-      name,
-      ErrorCode.INVALID_ARGUMENT,
-      `Signing not configured: ${message}. Set OA_DOCUSIGN_INTEGRATION_KEY, OA_DOCUSIGN_SECRET_KEY, and OA_GCLOUD_ENCRYPTION_KEY environment variables.`,
-    );
+    if (!isMcpSigningConfigured()) {
+      return toolErrorResult(id, name, ErrorCode.INTERNAL_ERROR,
+        'Signing is not configured for this deployment.',
+        { retriable: false, details: { reason: 'SIGNING_NOT_CONFIGURED' } });
+    }
+    return toolErrorResult(id, name, ErrorCode.INTERNAL_ERROR,
+      `Signing error: ${message}`,
+      { retriable: false });
   }
 }
 
@@ -797,7 +823,7 @@ async function handleToolsCall(
     if (args.__auth_sub && !args.api_key) {
       args.api_key = args.__auth_sub;
     }
-    return handleSigningToolCall(id, name, args, ctx);
+    return handleSigningToolCall(id, name, args, ctx, rateState);
   }
 
   if (name === TOOL_LIST_TEMPLATES) {
