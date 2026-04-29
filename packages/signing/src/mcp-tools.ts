@@ -5,18 +5,44 @@
  *
  * These tools use a SigningContext (initialized at server startup) to
  * call the DocuSign adapter with real GCloud storage. If no context
- * is available (e.g., credentials not configured), tools return
- * helpful error messages.
+ * is available (e.g., credentials not configured), tools throw
+ * SigningError with a discriminated code so the MCP layer can map
+ * them to v2 envelope error codes.
+ *
+ * IMPORTANT: Tools return raw business data (Record<string, unknown>),
+ * NOT pre-formatted ToolCallResult. The MCP layer (api/mcp.ts) is
+ * responsible for wrapping responses in the v2 envelope contract.
  */
 
 import { z } from 'zod';
 import { basename } from 'node:path';
 import { existsSync, statSync } from 'node:fs';
-/** MCP tool call result — simple type, no cross-package dependency. */
-interface ToolCallResult {
-  content: Array<{ type: string; text: string }>;
-  isError?: boolean;
-  structuredContent?: Record<string, unknown>;
+
+// ─── Signing Domain Error ───────────────────────────────────────────────────
+
+/** Signing domain error codes for v2 envelope mapping. */
+export type SigningErrorCode =
+  | 'NO_SIGNING_PROVIDER'
+  | 'INVALID_DOCUMENT'
+  | 'NOT_FOUND'
+  | 'SEND_FAILED'
+  | 'STATUS_FAILED'
+  | 'NOT_CONFIGURED'
+  | 'DISCONNECT_FAILED';
+
+/**
+ * Typed error for signing domain failures.
+ * The MCP layer maps these to v2 envelope error codes.
+ */
+export class SigningError extends Error {
+  constructor(
+    public readonly code: SigningErrorCode,
+    message: string,
+    public readonly retriable: boolean = false,
+  ) {
+    super(message);
+    this.name = 'SigningError';
+  }
 }
 
 type JsonSchema = Record<string, unknown>;
@@ -43,7 +69,7 @@ interface ToolDefinition {
   description: string;
   inputSchema: JsonSchema;
   annotations?: { readOnlyHint?: boolean; destructiveHint?: boolean };
-  invoke: (args: unknown) => Promise<ToolCallResult>;
+  invoke: (args: unknown) => Promise<Record<string, unknown>>;
 }
 
 // ─── Signing Context (injected at server startup) ───────────────────────────
@@ -96,14 +122,6 @@ const StatusSchema = z.object({
 
 // ─── Helpers ────────────────────────────────────────────────────────────────
 
-function ok(tool: string, data: Record<string, unknown>): ToolCallResult {
-  return { content: [{ type: 'text', text: JSON.stringify({ tool, status: 'ok', ...data }, null, 2) }] };
-}
-
-function err(tool: string, code: string, message: string): ToolCallResult {
-  return { content: [{ type: 'text', text: JSON.stringify({ tool, status: 'error', code, message }, null, 2) }], isError: true };
-}
-
 function validateDocxFile(filePath: string): string | null {
   if (!existsSync(filePath)) {
     return `File not found: ${filePath}`;
@@ -136,20 +154,16 @@ export const signingTools: ToolDefinition[] = [
     annotations: { readOnlyHint: false, destructiveHint: false },
     invoke: async (args) => {
       const input = ConnectSchema.parse(args ?? {});
-      try {
-        requireContext(); // Verify signing is configured
-        // Return the secure connect URL — PKCE verifier is stored in HttpOnly cookies,
-        // never exposed in the URL. The connect handler generates its own PKCE challenge.
-        const baseUrl = process.env.OA_BASE_URL?.trim() || 'https://openagreements.ai';
-        const connectUrl = `${baseUrl}/api/auth/docusign/connect?key=${encodeURIComponent(input.api_key)}`;
-        return ok('connect_signing_provider', {
-          message: 'Open this URL in your browser to connect DocuSign:',
-          auth_url: connectUrl,
-          provider: input.provider,
-        });
-      } catch (e) {
-        return err('connect_signing_provider', 'NOT_CONFIGURED', (e as Error).message);
-      }
+      requireContext(); // Throws Error if not configured — MCP layer catches
+      // Return the secure connect URL — PKCE verifier is stored in HttpOnly cookies,
+      // never exposed in the URL. The connect handler generates its own PKCE challenge.
+      const baseUrl = process.env.OA_BASE_URL?.trim() || 'https://openagreements.ai';
+      const connectUrl = `${baseUrl}/api/auth/docusign/connect?key=${encodeURIComponent(input.api_key)}`;
+      return {
+        message: 'Open this URL in your browser to connect DocuSign:',
+        auth_url: connectUrl,
+        provider: input.provider,
+      };
     },
   },
 
@@ -168,12 +182,12 @@ export const signingTools: ToolDefinition[] = [
       try {
         const ctx = requireContext();
         await ctx.provider.disconnect(input.connection_id);
-        return ok('disconnect_signing_provider', {
+        return {
           message: `Disconnected: ${input.connection_id}`,
           connection_id: input.connection_id,
-        });
+        };
       } catch (e) {
-        return err('disconnect_signing_provider', 'DISCONNECT_FAILED', (e as Error).message);
+        throw new SigningError('DISCONNECT_FAILED', (e as Error).message);
       }
     },
   },
@@ -209,82 +223,82 @@ export const signingTools: ToolDefinition[] = [
     annotations: { readOnlyHint: false, destructiveHint: false },
     invoke: async (args) => {
       const input = SendSchema.parse(args ?? {});
+      const ctx = requireContext();
+
+      // 1. Fail fast: check connection before any file I/O
+      if (!input.api_key) {
+        throw new SigningError('NO_SIGNING_PROVIDER',
+          'No signing connection. Authenticate first (OAuth on HTTP, or connect_signing_provider on stdio).');
+      }
+      const conn = await ctx.getConnectionForKey(input.api_key);
+      if (!conn) {
+        throw new SigningError('NO_SIGNING_PROVIDER',
+          'No DocuSign connection found. Use connect_signing_provider first.');
+      }
+
+      // 2. Get the document (local file or download URL)
+      let documentRef: unknown;
+      let filename: string;
+
+      if (input.download_url) {
+        // Fetch from URL (remote MCP server flow)
+        const response = await fetch(input.download_url);
+        if (!response.ok) {
+          throw new SigningError('INVALID_DOCUMENT',
+            `Failed to download document: HTTP ${response.status}`);
+        }
+        const buffer = Buffer.from(await response.arrayBuffer());
+        if (buffer.length > MAX_FILE_SIZE_BYTES) {
+          throw new SigningError('INVALID_DOCUMENT',
+            `Downloaded file too large (${(buffer.length / 1024 / 1024).toFixed(1)} MB). Maximum is 25 MB.`);
+        }
+        const disposition = response.headers.get('content-disposition') || '';
+        const cdMatch = disposition.match(/filename="?([^";\n]+)"?/);
+        filename = cdMatch?.[1] || input.document_name || 'document.docx';
+        // Upload the fetched buffer to GCS
+        const { createDocumentRef } = await import('./storage.js');
+        const ref = createDocumentRef(buffer, filename, 'uploaded');
+        const storageUrl = await (ctx as any).storage.storeDocument(buffer, filename);
+        documentRef = { ...ref, storageUrl };
+      } else if (input.file_path) {
+        // Local file (stdio MCP server flow)
+        const fileError = validateDocxFile(input.file_path);
+        if (fileError) {
+          throw new SigningError('INVALID_DOCUMENT', fileError);
+        }
+        documentRef = await ctx.uploadLocalDocument(input.file_path);
+        filename = input.document_name || basename(input.file_path) || 'document.docx';
+      } else {
+        throw new SigningError('INVALID_DOCUMENT',
+          'Either file_path or download_url is required.');
+      }
+
+      // 3. Build signing metadata
+      const signingMetadata = {
+        signers: input.signers.map((signer, index) => ({
+          name: signer.name,
+          email: signer.email,
+          role: `party_${index + 1}`,
+          type: signer.type,
+          routingOrder: index + 1,
+        })),
+        emailSubject: input.email_subject || `Signature requested: ${filename}`,
+      };
+
+      // 4. Create draft envelope (never auto-send)
       try {
-        const ctx = requireContext();
-
-        // 1. Fail fast: check connection before any file I/O
-        if (!input.api_key) {
-          return err('send_for_signature', 'NO_SIGNING_PROVIDER',
-            'No signing connection. Authenticate first (OAuth on HTTP, or connect_signing_provider on stdio).');
-        }
-        const conn = await ctx.getConnectionForKey(input.api_key);
-        if (!conn) {
-          return err('send_for_signature', 'NO_SIGNING_PROVIDER',
-            'No DocuSign connection found. Use connect_signing_provider first.');
-        }
-
-        // 2. Get the document (local file or download URL)
-        let documentRef: unknown;
-        let filename: string;
-
-        if (input.download_url) {
-          // Fetch from URL (remote MCP server flow)
-          const response = await fetch(input.download_url);
-          if (!response.ok) {
-            return err('send_for_signature', 'INVALID_DOCUMENT',
-              `Failed to download document: HTTP ${response.status}`);
-          }
-          const buffer = Buffer.from(await response.arrayBuffer());
-          if (buffer.length > MAX_FILE_SIZE_BYTES) {
-            return err('send_for_signature', 'INVALID_DOCUMENT',
-              `Downloaded file too large (${(buffer.length / 1024 / 1024).toFixed(1)} MB). Maximum is 25 MB.`);
-          }
-          const disposition = response.headers.get('content-disposition') || '';
-          const cdMatch = disposition.match(/filename="?([^";\n]+)"?/);
-          filename = cdMatch?.[1] || input.document_name || 'document.docx';
-          // Upload the fetched buffer to GCS
-          const { createDocumentRef } = await import('./storage.js');
-          const ref = createDocumentRef(buffer, filename, 'uploaded');
-          const storageUrl = await (ctx as any).storage.storeDocument(buffer, filename);
-          documentRef = { ...ref, storageUrl };
-        } else if (input.file_path) {
-          // Local file (stdio MCP server flow)
-          const fileError = validateDocxFile(input.file_path);
-          if (fileError) {
-            return err('send_for_signature', 'INVALID_DOCUMENT', fileError);
-          }
-          documentRef = await ctx.uploadLocalDocument(input.file_path);
-          filename = input.document_name || basename(input.file_path) || 'document.docx';
-        } else {
-          return err('send_for_signature', 'INVALID_DOCUMENT',
-            'Either file_path or download_url is required.');
-        }
-
-        // 3. Build signing metadata
-        const signingMetadata = {
-          signers: input.signers.map((signer, index) => ({
-            name: signer.name,
-            email: signer.email,
-            role: `party_${index + 1}`,
-            type: signer.type,
-            routingOrder: index + 1,
-          })),
-          emailSubject: input.email_subject || `Signature requested: ${filename}`,
-        };
-
-        // 5. Create draft envelope (never auto-send)
         const draft = await ctx.provider.createDraft(documentRef, signingMetadata, conn.connection, conn.accessToken);
         const draftResult = draft as Record<string, unknown>;
 
-        return ok('send_for_signature', {
+        return {
           message: 'Draft envelope created. Review and send from the link below.',
           envelope_id: draftResult.providerEnvelopeId,
           review_url: draftResult.reviewUrl,
           status: 'created',
           signers: input.signers,
-        });
+        };
       } catch (e) {
-        return err('send_for_signature', 'SEND_FAILED', (e as Error).message);
+        throw new SigningError('SEND_FAILED', (e as Error).message);
       }
     },
   },
@@ -304,50 +318,54 @@ export const signingTools: ToolDefinition[] = [
     annotations: { readOnlyHint: true },
     invoke: async (args) => {
       const input = StatusSchema.parse(args ?? {});
-      try {
-        const ctx = requireContext();
-        let statusData: Record<string, unknown> | null = null;
+      const ctx = requireContext();
+      let statusData: Record<string, unknown> | null = null;
 
-        // Try local status first (from webhook)
+      // Try local status first (from webhook)
+      try {
         const localStatus = await ctx.storage.getEnvelopeStatus(input.envelope_id);
         if (localStatus) {
           statusData = localStatus as Record<string, unknown>;
         }
+      } catch (e) {
+        throw new SigningError('STATUS_FAILED', (e as Error).message);
+      }
 
-        // Fall back to API call if we have a connection
-        if (!statusData && input.api_key) {
+      // Fall back to API call if we have a connection
+      if (!statusData && input.api_key) {
+        try {
           const conn = await ctx.getConnectionForKey(input.api_key);
           if (conn) {
             const apiStatus = await ctx.provider.getStatus(input.envelope_id, conn.connection, conn.accessToken);
             statusData = apiStatus as Record<string, unknown>;
           }
+        } catch (e) {
+          throw new SigningError('STATUS_FAILED', (e as Error).message);
         }
-
-        if (!statusData) {
-          return err('check_signature_status', 'NOT_FOUND',
-            'No status found. Provide api_key to query DocuSign directly.');
-        }
-
-        // If completed and we have a connection, include the signed document artifact
-        if (statusData.status === 'completed' && input.api_key) {
-          try {
-            const conn = await ctx.getConnectionForKey(input.api_key);
-            if (conn) {
-              const artifact = await ctx.provider.fetchArtifact(input.envelope_id, conn.connection, conn.accessToken);
-              statusData.artifact = artifact;
-            }
-          } catch {
-            // Artifact fetch failed — return status without artifact
-            statusData.artifact_note = 'Signed document could not be retrieved. Try again later.';
-          }
-        } else if (statusData.status === 'completed' && !input.api_key) {
-          statusData.artifact_note = 'Provide api_key to download the signed document.';
-        }
-
-        return ok('check_signature_status', statusData);
-      } catch (e) {
-        return err('check_signature_status', 'STATUS_FAILED', (e as Error).message);
       }
+
+      if (!statusData) {
+        throw new SigningError('NOT_FOUND',
+          'No status found. Provide api_key to query DocuSign directly.');
+      }
+
+      // If completed and we have a connection, include the signed document artifact
+      if (statusData.status === 'completed' && input.api_key) {
+        try {
+          const conn = await ctx.getConnectionForKey(input.api_key);
+          if (conn) {
+            const artifact = await ctx.provider.fetchArtifact(input.envelope_id, conn.connection, conn.accessToken);
+            statusData.artifact = artifact;
+          }
+        } catch {
+          // Artifact fetch failed — return status without artifact
+          statusData.artifact_note = 'Signed document could not be retrieved. Try again later.';
+        }
+      } else if (statusData.status === 'completed' && !input.api_key) {
+        statusData.artifact_note = 'Provide api_key to download the signed document.';
+      }
+
+      return statusData;
     },
   },
 ];
@@ -361,14 +379,10 @@ export function listSigningToolDescriptors(): Array<{ name: string; description:
   }));
 }
 
-export async function callSigningTool(name: string, args: unknown): Promise<ToolCallResult | null> {
+export async function callSigningTool(name: string, args: unknown): Promise<Record<string, unknown> | null> {
   const tool = signingTools.find((item) => item.name === name);
   if (!tool) return null;
-
-  try {
-    return await tool.invoke(args);
-  } catch (error) {
-    const message = error instanceof Error ? error.message : String(error);
-    return err(name, 'INVALID_ARGUMENT', message);
-  }
+  // Let SigningError and other errors propagate to the MCP layer
+  // for proper v2 envelope wrapping.
+  return await tool.invoke(args);
 }

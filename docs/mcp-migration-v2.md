@@ -4,7 +4,7 @@ This guide covers migration from prose-style MCP tool output to the versioned JS
 
 ## What Changed
 
-All template tools now return a single JSON envelope in `result.content[0].text`.
+All tools (template and signing) now return a single JSON envelope in `result.content[0].text`.
 
 ```json
 {
@@ -36,6 +36,8 @@ Error responses now use the same envelope shape with `ok: false` and a structure
 - `list_templates`
 - `get_template` (new)
 - `fill_template` (updated)
+- `send_for_signature` (updated)
+- `check_signature_status` (updated)
 
 ## `list_templates` Modes
 
@@ -141,3 +143,53 @@ Non-browser GET requests still return `405` JSON errors. MCP client behavior ove
 3. Handle `envelope.error.code` (avoid parsing free-form text).
 4. Use `fill_template.return_mode: "url"` and download via `download_url` out-of-band.
 5. Add support for `get_template`.
+6. Parse signing tool responses using the same envelope contract as template tools.
+
+## Migrating Signing-Tool Clients
+
+Before this change, signing tools returned a different shape:
+
+```json
+{
+  "tool": "send_for_signature",
+  "status": "ok",
+  "envelope_id": "abc-123",
+  "review_url": "https://app.docusign.com/..."
+}
+```
+
+After this change, they use the standard v2 envelope:
+
+```json
+{
+  "ok": true,
+  "tool": "send_for_signature",
+  "schema_version": "2026-02-19",
+  "data": {
+    "envelope_id": "abc-123",
+    "review_url": "https://app.docusign.com/...",
+    "status": "created",
+    "signers": [...],
+    "rate_limit": { "limit": null, "remaining": null, "reset_at": null, "bucket": null },
+    "auth": null
+  }
+}
+```
+
+Error responses also use the v2 envelope:
+
+```json
+{
+  "ok": false,
+  "tool": "send_for_signature",
+  "schema_version": "2026-02-19",
+  "error": {
+    "code": "INTERNAL_ERROR",
+    "message": "No DocuSign connection found. Use connect_signing_provider first.",
+    "retriable": false,
+    "details": { "reason": "NO_SIGNING_PROVIDER" }
+  }
+}
+```
+
+Signing error `details.reason` values: `NO_SIGNING_PROVIDER`, `INVALID_DOCUMENT`, `NOT_FOUND`, `SEND_FAILED`, `STATUS_FAILED`, `DISCONNECT_FAILED`, `SIGNING_NOT_CONFIGURED`.
