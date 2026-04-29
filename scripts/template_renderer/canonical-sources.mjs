@@ -1,8 +1,9 @@
 import { readdirSync, readFileSync, statSync } from 'node:fs';
 import { join, relative } from 'node:path';
-import yaml from 'js-yaml';
-
-const FRONTMATTER_RE = /^---\r?\n([\s\S]*?)\r?\n---/;
+import {
+  hasCanonicalIdentity,
+  tryParseCanonicalFrontmatter,
+} from './canonical-frontmatter.mjs';
 
 const TEMPLATES_DIR = 'content/templates';
 const CANONICAL_TEMPLATE_FILENAME = 'template.md';
@@ -24,20 +25,8 @@ function isCanonicalSource(filePath) {
   } catch {
     return false;
   }
-  const match = raw.match(FRONTMATTER_RE);
-  if (!match) return false;
-  let frontmatter;
-  try {
-    frontmatter = yaml.load(match[1]);
-  } catch {
-    return false;
-  }
-  if (!frontmatter || typeof frontmatter !== 'object') return false;
-  return (
-    typeof frontmatter.template_id === 'string' &&
-    typeof frontmatter.layout_id === 'string' &&
-    typeof frontmatter.style_id === 'string'
-  );
+  const parsed = tryParseCanonicalFrontmatter(raw);
+  return parsed !== null && hasCanonicalIdentity(parsed.frontmatter);
 }
 
 function fileExists(filePath) {
@@ -79,8 +68,4 @@ export function discoverTemplateSources(repoRoot) {
   }
 
   return sources.sort((a, b) => a.slug.localeCompare(b.slug));
-}
-
-export function discoverCanonicalTemplates(repoRoot) {
-  return discoverTemplateSources(repoRoot).filter((s) => s.type === 'canonical');
 }
