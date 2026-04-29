@@ -69,7 +69,7 @@
     "validate:concerto": "node scripts/validate_concerto_metadata_parity.mjs",
     "generate:schemas": "node scripts/generate_json_schemas.mjs",
     "generate:contract-ir-templates": "node scripts/generate_contract_ir_templates.mjs",
-    "generate:employment-templates": "node scripts/generate_employment_templates.mjs",
+    "generate:templates": "node scripts/generate_templates.mjs",
     "generate:employment-templates:libreoffice": "node scripts/generate_employment_templates_libreoffice.mjs",
     "generate:readme": "node scripts/generate_readme.mjs",
     "generate:template-previews": "node scripts/generate_template_previews.mjs",

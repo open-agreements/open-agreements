@@ -7,17 +7,9 @@ import {
   renderFromValidatedSpec,
 } from './template_renderer/index.mjs';
 import { compileCanonicalSourceFile } from './template_renderer/canonical-source.mjs';
+import { discoverTemplateSources } from './template_renderer/canonical-sources.mjs';
 
 const STYLE_PATH = 'scripts/template-specs/styles/openagreements-default-v1.json';
-const SOURCES = [
-  { type: 'json', path: 'scripts/template-specs/openagreements-employment-offer-letter.json' },
-  { type: 'json', path: 'scripts/template-specs/openagreements-employee-ip-inventions-assignment.json' },
-  { type: 'json', path: 'scripts/template-specs/openagreements-employment-confidentiality-acknowledgement.json' },
-  {
-    type: 'canonical',
-    path: 'content/templates/openagreements-restrictive-covenant-wyoming/template.md',
-  },
-];
 
 async function writeDocx(doc, outPath) {
   const buf = await Packer.toBuffer(doc);
@@ -35,18 +27,20 @@ function writeJson(value, outPath) {
 async function main() {
   const style = loadStyleProfile(STYLE_PATH);
   const seenTemplateIds = new Set();
+  const sources = discoverTemplateSources(process.cwd());
 
-  for (const source of SOURCES) {
-    const spec = source.type === 'json'
-      ? loadContractSpec(source.path)
-      : (() => {
-          const compiled = compileCanonicalSourceFile(source.path);
-          if (!compiled.sourceJsonPath) {
-            throw new Error(`Canonical source ${source.path} is missing source_json in frontmatter`);
-          }
-          writeJson(compiled.contractSpec, compiled.sourceJsonPath);
+  if (sources.length === 0) {
+    throw new Error('No template sources discovered under content/templates/');
+  }
+
+  for (const source of sources) {
+    const spec = source.type === 'canonical'
+      ? (() => {
+          const compiled = compileCanonicalSourceFile(source.templatePath);
+          writeJson(compiled.contractSpec, source.jsonPath);
           return compiled.contractSpec;
-        })();
+        })()
+      : loadContractSpec(source.jsonPath);
 
     if (seenTemplateIds.has(spec.template_id)) {
       throw new Error(`Duplicate template_id in spec list: ${spec.template_id}`);
@@ -60,11 +54,11 @@ async function main() {
     }
 
     console.log(
-      `Generated ${spec.template_id} with layout=${spec.layout_id} style=${spec.style_id}`
+      `Generated ${spec.template_id} (${source.type}) with layout=${spec.layout_id} style=${spec.style_id}`
     );
   }
 
-  console.log('Regenerated branded employment templates via JSON specs + shared renderer.');
+  console.log(`Regenerated ${sources.length} branded templates via shared renderer.`);
 }
 
 await main();

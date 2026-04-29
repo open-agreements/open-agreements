@@ -819,6 +819,23 @@ function signerModeSignatureTable(signatureSpec, style, nilBorder, ruleBorder) {
     }
   }
 
+  for (const rowId of rowIds) {
+    const leftRow = leftRows.get(rowId);
+    const rightRow = rightRows.get(rowId);
+    if (leftRow && rightRow) {
+      if (leftRow.label !== rightRow.label) {
+        throw new Error(
+          `Signer row "${rowId}" has mismatched labels: "${leftSigner.id}" → "${leftRow.label}", "${rightSigner.id}" → "${rightRow.label}"`
+        );
+      }
+      if ((leftRow.hint ?? '') !== (rightRow.hint ?? '')) {
+        throw new Error(
+          `Signer row "${rowId}" has mismatched hints: "${leftSigner.id}" → "${leftRow.hint ?? ''}", "${rightSigner.id}" → "${rightRow.hint ?? ''}"`
+        );
+      }
+    }
+  }
+
   return new Table({
     width: { size: 10075, type: WidthType.DXA },
     layout: TableLayoutType.FIXED,

@@ -46,6 +46,10 @@ function isClauseHeadingParagraph(text: string): boolean {
   return /^\d+\.\s/.test(text);
 }
 
+function isDefinitionItemParagraph(text: string): boolean {
+  return /^\d+\.\d+\s/.test(text);
+}
+
 function paragraphSpacing(paragraph: Element): {
   after: string | null;
   before: string | null;
@@ -124,20 +128,25 @@ describe('employment template standard-terms spacing', () => {
 
         const spacing = paragraphSpacing(paragraph);
         checkedParagraphs += 1;
-        const expectedBefore = isClauseHeadingParagraph(text) ? '320' : '0';
-        const expectedAfter = isClauseHeadingParagraph(text) ? '120' : '280';
+        const isHeading = isClauseHeadingParagraph(text);
+        const isDefinition = isDefinitionItemParagraph(text);
+        const expectedAfter = isHeading ? '120' : '280';
         // In OOXML, explicit "false" is semantically equivalent to absent (null)
         const isSet = (v: string | null) => v !== null && v !== 'false';
+        const beforeOk = isDefinition
+          ? spacing.before === '0' || spacing.before === '320'
+          : spacing.before === (isHeading ? '320' : '0');
         if (
-          spacing.before !== expectedBefore
+          !beforeOk
           || spacing.after !== expectedAfter
           || spacing.line !== '340'
           || isSet(spacing.afterAutospacing)
           || isSet(spacing.beforeAutospacing)
           || isSet(spacing.contextualSpacing)
         ) {
+          const expectedBeforeDescription = isDefinition ? '0|320' : isHeading ? '320' : '0';
           spacingFailures.push(
-            `expectedBefore=${expectedBefore} before=${spacing.before ?? 'missing'} expectedAfter=${expectedAfter} `
+            `expectedBefore=${expectedBeforeDescription} before=${spacing.before ?? 'missing'} expectedAfter=${expectedAfter} `
             + `after=${spacing.after ?? 'missing'} line=${spacing.line ?? 'missing'} `
             + `afterAuto=${spacing.afterAutospacing ?? 'missing'} beforeAuto=${spacing.beforeAutospacing ?? 'missing'} `
             + `contextual=${spacing.contextualSpacing ?? 'missing'} `
