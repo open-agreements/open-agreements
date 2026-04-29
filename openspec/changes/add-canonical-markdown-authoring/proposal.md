@@ -24,6 +24,6 @@ specs and rendered artifacts.
 
 ## Impact
 - Affected specs: `open-agreements`
-- Affected code: `scripts/template_renderer/`, `scripts/generate_employment_templates.mjs`,
+- Affected code: `scripts/template_renderer/`, `scripts/generate_templates.mjs`,
   `content/templates/openagreements-restrictive-covenant-wyoming/`,
   integration tests for template rendering and canonical authoring

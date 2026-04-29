@@ -1,6 +1,36 @@
+import AdmZip from 'adm-zip';
 import { afterEach, describe, expect } from 'vitest';
 import { itAllure } from '../../../integration-tests/helpers/allure-test.js';
 import { callTool, listToolDescriptors, _resetModuleCache, _setModuleOverride } from '../src/core/tools.js';
+
+const XML_ENTITIES: Record<string, string> = {
+  '&amp;': '&',
+  '&lt;': '<',
+  '&gt;': '>',
+  '&quot;': '"',
+  '&apos;': "'",
+};
+
+function decodeXmlEntities(value: string): string {
+  return value.replace(/&(?:amp|lt|gt|quot|apos);/g, (entity) => XML_ENTITIES[entity]);
+}
+
+function readDocxText(base64: string): string {
+  const buffer = Buffer.from(base64, 'base64');
+  const zip = new AdmZip(buffer);
+  const entry = zip.getEntry('word/document.xml');
+  if (!entry) {
+    throw new Error('word/document.xml not found in DOCX archive');
+  }
+  const xml = entry.getData().toString('utf-8');
+  const visibleText: string[] = [];
+  const runRe = /<w:t[^>]*>([\s\S]*?)<\/w:t>/g;
+  let match: RegExpExecArray | null;
+  while ((match = runRe.exec(xml)) !== null) {
+    visibleText.push(decodeXmlEntities(match[1]));
+  }
+  return visibleText.join('');
+}
 
 const it = itAllure.epic('Platform & Distribution');
 
@@ -167,6 +197,42 @@ describe('contract-templates-mcp tools', () => {
     expect(typeof data.output_path).toBe('string');
     expect(typeof data.inline_base64).toBe('string');
     expect((data.inline_base64 as string).length).toBeGreaterThan(10_000);
+  });
+
+  it.openspec('OA-DST-033')('fill_template fills the employee IP assignment template from canonical markdown source', async () => {
+    const result = await callTool('fill_template', {
+      template: 'openagreements-employee-ip-inventions-assignment',
+      values: {
+        company_name: 'Acme Corporation',
+        employee_name: 'Jane Doe',
+        effective_date: '2026-04-28',
+        confidential_information_definition: 'non-public information relating to Company business, products, roadmaps, customers, and trade secrets',
+        return_of_materials_timing: 'within 3 business days after termination of employment',
+        cloud_drive_id: 'workspace://agreements/piia-001',
+      },
+      return_mode: 'inline_base64',
+    });
+    const payload = getPayload(result);
+    expect(result.isError).toBeUndefined();
+    expect(payload.ok).toBe(true);
+    const data = payload.data as Record<string, unknown>;
+    expect(data.template).toBe('openagreements-employee-ip-inventions-assignment');
+    expect(data.return_mode).toBe('inline_base64');
+    expect(typeof data.output_path).toBe('string');
+    expect(typeof data.inline_base64).toBe('string');
+    expect((data.inline_base64 as string).length).toBeGreaterThan(10_000);
+
+    const documentXml = readDocxText(data.inline_base64 as string);
+    expect(documentXml).toContain('Acme Corporation');
+    expect(documentXml).toContain('Jane Doe');
+    expect(documentXml).toContain('2026-04-28');
+    expect(documentXml).not.toContain('{company_name}');
+    expect(documentXml).not.toContain('{employee_name}');
+    expect(documentXml).not.toContain('[[');
+    // Wyoming-alignment: the canonical Defined Terms clause must render with
+    // its heading and at least one defined term name from the clause.
+    expect(documentXml).toContain('Defined Terms');
+    expect(documentXml).toContain('Covered Inventions');
   });
 
   it.openspec('OA-DST-033')('fill_template returns TEMPLATE_NOT_FOUND for unknown template', async () => {

@@ -11,7 +11,6 @@ const stylePath = join(import.meta.dirname, '..', 'scripts', 'template-specs', '
 function buildCanonicalSource(extraBody = '') {
   return `---
 template_id: canonical-source-test
-source_json: scripts/template-specs/canonical-source-test.json
 layout_id: cover-standard-signature-v1
 style_id: openagreements-default-v1
 outputs:
@@ -153,6 +152,63 @@ describe('canonical Markdown authoring', () => {
         'inline canonical source with alias collision'
       )
     ).toThrow(/alias collision on "Companies"/);
+  });
+
+  it.openspec('OA-TMP-035')('rejects output_markdown_path on canonical sources', () => {
+    const baseSource = buildCanonicalSource();
+
+    expect(() =>
+      compileCanonicalSourceString(
+        baseSource.replace(
+          'outputs:\n  docx: /tmp/canonical-source-test.docx',
+          'outputs:\n  docx: /tmp/canonical-source-test.docx\n  markdown: /tmp/canonical-source-test.md'
+        ),
+        'inline canonical source with outputs.markdown'
+      )
+    ).toThrow(/must not declare output_markdown_path/);
+
+    expect(() =>
+      compileCanonicalSourceString(
+        baseSource.replace(
+          'outputs:\n  docx: /tmp/canonical-source-test.docx',
+          'outputs:\n  docx: /tmp/canonical-source-test.docx\noutput_markdown_path: /tmp/canonical-source-test.md'
+        ),
+        'inline canonical source with output_markdown_path'
+      )
+    ).toThrow(/must not declare output_markdown_path/);
+  });
+
+  it.openspec('OA-TMP-035')('schema accepts 1-signer signer-mode but cover-standard-signature-v1 throws at render', () => {
+    const style = loadStyleProfile(stylePath);
+    const oneSignerSource = buildCanonicalSource().replace(
+      /<!-- oa:signer id=recipient[\s\S]+?Date: _______________\n/,
+      ''
+    );
+
+    const compiled = compileCanonicalSourceString(oneSignerSource, 'inline 1-signer canonical source');
+    expect(compiled.contractSpec.sections.signature.signers).toHaveLength(1);
+
+    expect(() => renderFromValidatedSpec(compiled.contractSpec, style)).toThrow(
+      /cover-standard-signature-v1 requires exactly 2 signers/
+    );
+  });
+
+  it.openspec('OA-TMP-035')('compiles same-slug signer rows but rejects them at render with mismatched-label error', () => {
+    const style = loadStyleProfile(stylePath);
+    const collidingSource = buildCanonicalSource().replace(
+      'Print Name: {recipient_name}',
+      'Print-Name: {recipient_name}'
+    );
+
+    const compiled = compileCanonicalSourceString(collidingSource, 'inline same-slug canonical source');
+    const rowIds = compiled.contractSpec.sections.signature.signers.flatMap((s: { rows: { id: string }[] }) =>
+      s.rows.map((r) => r.id)
+    );
+    expect(rowIds.filter((id) => id === 'print-name')).toHaveLength(2);
+
+    expect(() => renderFromValidatedSpec(compiled.contractSpec, style)).toThrow(
+      /Signer row "print-name" has mismatched labels/
+    );
   });
 
   it.openspec('OA-TMP-035')('renders signer-mode output and omits alias metadata from legal text', () => {

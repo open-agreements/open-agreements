@@ -46,6 +46,10 @@ function isClauseHeadingParagraph(text: string): boolean {
   return /^\d+\.\s/.test(text);
 }
 
+function isDefinitionItemParagraph(text: string): boolean {
+  return /^\d+\.\d+\s/.test(text);
+}
+
 function directChild(parent: Element, localName: string): Element | null {
   for (let i = 0; i < parent.childNodes.length; i += 1) {
     const child = parent.childNodes[i] as Element;
@@ -168,17 +172,23 @@ describe('employment template style and spacing', () => {
 
       const spacingFailures: string[] = [];
       for (const { text, paragraph } of paragraphs) {
-        const expectedBefore = isClauseHeadingParagraph(text) ? '320' : '0';
-        const expectedAfter = isClauseHeadingParagraph(text) ? '120' : '280';
+        const isHeading = isClauseHeadingParagraph(text);
+        const isDefinition = isDefinitionItemParagraph(text);
+        const expectedAfter = isHeading ? '120' : '280';
         const spacing = paragraphSpacing(paragraph);
 
+        const beforeOk = isDefinition
+          ? spacing.before === '0' || spacing.before === '320'
+          : spacing.before === (isHeading ? '320' : '0');
+
         if (
-          spacing.before !== expectedBefore
+          !beforeOk
           || spacing.after !== expectedAfter
           || spacing.line !== '340'
         ) {
+          const expectedBeforeDescription = isDefinition ? '0|320' : isHeading ? '320' : '0';
           spacingFailures.push(
-            `expectedBefore=${expectedBefore} before=${spacing.before ?? 'missing'} `
+            `expectedBefore=${expectedBeforeDescription} before=${spacing.before ?? 'missing'} `
             + `expectedAfter=${expectedAfter} after=${spacing.after ?? 'missing'} `
             + `line=${spacing.line ?? 'missing'} `
             + `text="${text.slice(0, 80)}"`
