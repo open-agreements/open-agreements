@@ -1,14 +1,14 @@
 ---
-title: Employment Template Branding Pipeline
-description: How employment templates are generated, styled, and extended.
+title: Template Branding Pipeline
+description: How OpenAgreements branded templates are generated, styled, and extended.
 order: 9
 section: Guides
 ---
 
-# Employment Template Branding Pipeline
+# Template Branding Pipeline
 
 This repository uses an open-source-only pipeline to generate branded
-OpenAgreements employment templates.
+OpenAgreements templates that share the cover-standard-signature-v1 layout.
 
 ## Goals
 
@@ -21,47 +21,54 @@ OpenAgreements employment templates.
 Run:
 
 ```bash
-npm run generate:employment-templates
+npm run generate:templates
 ```
 
-This regenerates:
+This walks `content/templates/` and regenerates each template's `template.docx`
+artifact from its source. Sources are auto-discovered:
 
-- `content/templates/openagreements-employment-offer-letter/template.docx`
-- `content/templates/openagreements-employee-ip-inventions-assignment/template.docx`
-- `content/templates/openagreements-employment-confidentiality-acknowledgement/template.docx`
+- A `template.md` with canonical YAML frontmatter (containing `template_id`,
+  `layout_id`, `style_id`, etc.) is treated as a **canonical source**. Its
+  generated JSON spec is written to `content/templates/<slug>/.template.generated.json`
+  (a hidden, generated artifact — do not edit by hand).
+- A directory with `template.json` (and no canonical `template.md`) is treated
+  as a **JSON source**. The JSON is hand-authored.
 
-The generator is implemented in `scripts/generate_employment_templates.mjs` and
-uses the `docx` npm package.
+The generator is implemented in `scripts/generate_templates.mjs` and uses the
+`docx` npm package.
 
-### JSON-driven architecture
+### Architecture
 
-Employment generation now separates concerns:
+Generation separates concerns:
 
-- content specs: `scripts/template-specs/*.json`
+- canonical sources: `content/templates/<slug>/template.md` (YAML frontmatter + Markdown body)
+- generated specs: `content/templates/<slug>/.template.generated.json` (auto-written)
+- hand-authored specs: `content/templates/<slug>/template.json` (legacy; new templates should be canonical)
 - style profile: `scripts/template-specs/styles/openagreements-default-v1.json`
 - shared renderer: `scripts/template_renderer/`
 - layout module: `scripts/template_renderer/layouts/cover-standard-signature-v1.mjs`
+- discovery: `scripts/template_renderer/canonical-sources.mjs`
 
 This allows multiple contracts to share one renderer layout while keeping legal
-content in JSON.
+content close to the rendered DOCX it produces.
 
-### Add a new template using existing layout
+### Add a new canonical template
 
-1. Copy an existing spec in `scripts/template-specs/` and update:
-   - `template_id`
-   - `output_docx_path`
-   - `output_markdown_path`
-   - `document` metadata and section content
-2. Keep `layout_id` set to a registered layout (`cover-standard-signature-v1`)
-   when the structure is the same.
-3. Keep `style_id` set to `openagreements-default-v1` unless you intentionally
-   introduce a new style profile.
-4. Add the new spec path to `SPEC_PATHS` in
-   `scripts/generate_employment_templates.mjs`.
-5. Run `npm run generate:employment-templates`.
-6. Run targeted checks:
+1. Create `content/templates/<your-slug>/template.md` with YAML frontmatter:
+   - `template_id`: must equal `<your-slug>`
+   - `layout_id`: a registered layout (e.g. `cover-standard-signature-v1`)
+   - `style_id`: `openagreements-default-v1` unless you intentionally introduce a new style
+   - `document`: title/label/version/license metadata
+   - `outputs.docx`: path to the rendered DOCX (typically `content/templates/<slug>/template.docx`)
+   - `sections`: cover_terms, standard_terms, signature definitions
+2. Author cover terms, standard terms, and signature blocks as Markdown in the body.
+3. Run `npm run generate:templates`. The generator discovers the new canonical
+   source automatically and writes `content/templates/<your-slug>/.template.generated.json`
+   alongside the rendered `template.docx`.
+4. Run targeted checks:
    - `npm run test:run -- integration-tests/template-renderer-json-spec.test.ts`
-   - `npm run test:run -- integration-tests/employment-template-spacing.test.ts`
+   - `npm run test:run -- integration-tests/canonical-source-sync.test.ts`
+   - `npm run test:run -- integration-tests/canonical-source-authoring.test.ts`
 
 ### Add or extend styles and layouts
 
@@ -69,7 +76,7 @@ content in JSON.
   `scripts/template-specs/styles/openagreements-default-v1.json` for shared visual
   changes.
 - Add a new style profile file when you need a separate visual system and set
-  matching `style_id` in specs.
+  matching `style_id` in template frontmatter.
 - Add a new layout module under `scripts/template_renderer/layouts/` when the
   document structure differs. Register it in
   `scripts/template_renderer/index.mjs`.

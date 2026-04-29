@@ -1,6 +1,5 @@
 ---
 template_id: openagreements-employee-ip-inventions-assignment
-source_json: scripts/template-specs/openagreements-employee-ip-inventions-assignment.json
 layout_id: cover-standard-signature-v1
 style_id: openagreements-default-v1
 outputs:

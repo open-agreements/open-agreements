@@ -1,6 +1,5 @@
 ---
 template_id: openagreements-restrictive-covenant-wyoming
-source_json: scripts/template-specs/openagreements-restrictive-covenant-wyoming.json
 layout_id: cover-standard-signature-v1
 style_id: openagreements-default-v1
 outputs:

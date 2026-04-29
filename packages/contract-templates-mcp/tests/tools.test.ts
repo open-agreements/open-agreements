@@ -10,7 +10,21 @@ function readDocxText(base64: string): string {
   if (!entry) {
     throw new Error('word/document.xml not found in DOCX archive');
   }
-  return entry.getData().toString('utf-8');
+  const xml = entry.getData().toString('utf-8');
+  const visibleText: string[] = [];
+  const runRe = /<w:t[^>]*>([\s\S]*?)<\/w:t>/g;
+  let match: RegExpExecArray | null;
+  while ((match = runRe.exec(xml)) !== null) {
+    visibleText.push(
+      match[1]
+        .replace(/&amp;/g, '&')
+        .replace(/&lt;/g, '<')
+        .replace(/&gt;/g, '>')
+        .replace(/&quot;/g, '"')
+        .replace(/&apos;/g, "'")
+    );
+  }
+  return visibleText.join('');
 }
 
 const it = itAllure.epic('Platform & Distribution');

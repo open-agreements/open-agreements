@@ -609,7 +609,6 @@ function normalizeCanonicalTemplate(frontmatter, sections, filePath) {
 
   return {
     template_id: frontmatter.template_id,
-    source_json: frontmatter.source_json,
     layout_id: frontmatter.layout_id,
     style_id: frontmatter.style_id,
     outputs: frontmatter.outputs ?? {},
@@ -764,7 +763,6 @@ export function compileCanonicalSourceString(raw, filePath = 'canonical source')
   return {
     frontmatter,
     normalized,
-    sourceJsonPath: typeof frontmatter.source_json === 'string' ? frontmatter.source_json : null,
     contractSpec: projectToContractSpec(normalized, frontmatter, filePath),
   };
 }
