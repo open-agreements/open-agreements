@@ -1,9 +1,11 @@
 import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
-import yaml from 'js-yaml';
+import {
+  assertCanonicalIdentity,
+  parseCanonicalFrontmatter,
+} from './canonical-frontmatter.mjs';
 import { validateContractSpec } from './schema.mjs';
 
-const FRONTMATTER_RE = /^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/;
 const DIRECTIVE_RE = /^<!--\s*oa:([a-z-]+)(?:\s+([\s\S]*?))?\s*-->$/;
 const ATTR_RE = /([a-z_][a-z0-9_-]*)=(?:"([^"]*)"|([^\s]+))/g;
 const TOP_LEVEL_SECTION_RE = /^##\s+(.+)$/;
@@ -18,23 +20,6 @@ function invariant(condition, message) {
   if (!condition) {
     throw new Error(message);
   }
-}
-
-function parseFrontmatter(raw, filePath) {
-  const match = raw.match(FRONTMATTER_RE);
-  if (!match) {
-    throw new Error(`Canonical source (${filePath}) must start with YAML frontmatter`);
-  }
-
-  const frontmatter = yaml.load(match[1]);
-  if (!frontmatter || typeof frontmatter !== 'object') {
-    throw new Error(`Canonical source frontmatter (${filePath}) must be a YAML object`);
-  }
-
-  return {
-    frontmatter,
-    body: match[2],
-  };
 }
 
 function normalizeNumberedHeading(text) {
@@ -119,30 +104,7 @@ function splitTopLevelSections(body, filePath) {
   return byTitle;
 }
 
-function paragraphTextFromLines(lines) {
-  const paragraphs = [];
-  let current = [];
-
-  for (const rawLine of lines) {
-    const line = rawLine.trimEnd();
-    if (line.trim().length === 0) {
-      if (current.length > 0) {
-        paragraphs.push(current.map((part) => part.trim()).join(' '));
-        current = [];
-      }
-      continue;
-    }
-    current.push(line);
-  }
-
-  if (current.length > 0) {
-    paragraphs.push(current.map((part) => part.trim()).join(' '));
-  }
-
-  return paragraphs.join('\n\n');
-}
-
-function splitParagraphs(lines) {
+function paragraphsFromLines(lines) {
   const paragraphs = [];
   let current = [];
 
@@ -163,6 +125,10 @@ function splitParagraphs(lines) {
   }
 
   return paragraphs;
+}
+
+function paragraphTextFromLines(lines) {
+  return paragraphsFromLines(lines).join('\n\n');
 }
 
 function parseMarkdownTable(lines, filePath) {
@@ -321,7 +287,7 @@ function parseDefinitionParagraph(paragraph, filePath, index) {
 function parseDefinitionsClauseBody(lines, filePath) {
   const terms = [];
   const seenTerms = new Set();
-  const paragraphs = splitParagraphs(lines);
+  const paragraphs = paragraphsFromLines(lines);
 
   invariant(paragraphs.length > 0, `Canonical source (${filePath}) definitions clause has no definition paragraphs`);
 
@@ -744,12 +710,10 @@ function projectToContractSpec(normalized, frontmatter, filePath) {
 }
 
 export function compileCanonicalSourceString(raw, filePath = 'canonical source') {
-  const { frontmatter, body } = parseFrontmatter(raw, filePath);
+  const { frontmatter, body } = parseCanonicalFrontmatter(raw, filePath);
   const sectionLines = splitTopLevelSections(body, filePath);
 
-  invariant(frontmatter.template_id, `Canonical source (${filePath}) is missing template_id`);
-  invariant(frontmatter.layout_id, `Canonical source (${filePath}) is missing layout_id`);
-  invariant(frontmatter.style_id, `Canonical source (${filePath}) is missing style_id`);
+  assertCanonicalIdentity(frontmatter, filePath);
   invariant(frontmatter.document, `Canonical source (${filePath}) is missing document frontmatter`);
 
   const normalized = normalizeCanonicalTemplate(frontmatter, {

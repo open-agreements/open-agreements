@@ -3,7 +3,7 @@ import { join } from 'node:path';
 import { describe, expect } from 'vitest';
 import { itAllure } from './helpers/allure-test.js';
 import { compileCanonicalSourceFile } from '../scripts/template_renderer/canonical-source.mjs';
-import { discoverCanonicalTemplates } from '../scripts/template_renderer/canonical-sources.mjs';
+import { discoverTemplateSources } from '../scripts/template_renderer/canonical-sources.mjs';
 import { loadStyleProfile, renderFromValidatedSpec } from '../scripts/template_renderer/index.mjs';
 
 const it = itAllure.epic('Filling & Rendering');
@@ -17,7 +17,7 @@ const stylePath = join(
   'openagreements-default-v1.json'
 );
 
-const canonicalTemplates = discoverCanonicalTemplates(repoRoot);
+const canonicalTemplates = discoverTemplateSources(repoRoot).filter((s) => s.type === 'canonical');
 
 describe('canonical Markdown -> JSON spec sync', () => {
   it.openspec('OA-TMP-035')('discovers at least one canonical template under content/templates', () => {
