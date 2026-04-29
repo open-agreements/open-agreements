@@ -1,6 +1,17 @@
+import AdmZip from 'adm-zip';
 import { afterEach, describe, expect } from 'vitest';
 import { itAllure } from '../../../integration-tests/helpers/allure-test.js';
 import { callTool, listToolDescriptors, _resetModuleCache, _setModuleOverride } from '../src/core/tools.js';
+
+function readDocxText(base64: string): string {
+  const buffer = Buffer.from(base64, 'base64');
+  const zip = new AdmZip(buffer);
+  const entry = zip.getEntry('word/document.xml');
+  if (!entry) {
+    throw new Error('word/document.xml not found in DOCX archive');
+  }
+  return entry.getData().toString('utf-8');
+}
 
 const it = itAllure.epic('Platform & Distribution');
 
@@ -191,6 +202,14 @@ describe('contract-templates-mcp tools', () => {
     expect(typeof data.output_path).toBe('string');
     expect(typeof data.inline_base64).toBe('string');
     expect((data.inline_base64 as string).length).toBeGreaterThan(10_000);
+
+    const documentXml = readDocxText(data.inline_base64 as string);
+    expect(documentXml).toContain('Acme Corporation');
+    expect(documentXml).toContain('Jane Doe');
+    expect(documentXml).toContain('2026-04-28');
+    expect(documentXml).not.toContain('{company_name}');
+    expect(documentXml).not.toContain('{employee_name}');
+    expect(documentXml).not.toContain('[[');
   });
 
   it.openspec('OA-DST-033')('fill_template returns TEMPLATE_NOT_FOUND for unknown template', async () => {

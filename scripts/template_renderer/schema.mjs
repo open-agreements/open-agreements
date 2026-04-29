@@ -94,7 +94,7 @@ const signerModeSignatureSchema = z.object({
   section_label: textSchema,
   heading_title: textSchema,
   preamble: textSchema,
-  signers: z.array(signerSchema).min(1),
+  signers: z.array(signerSchema).length(2),
 });
 
 export const contractSpecSchema = z.object({
