@@ -878,8 +878,7 @@ function renderMarkdown(spec) {
   let lastParentLabel = '';
   for (const row of sections.cover_terms.rows) {
     if (row.sub) {
-      const mdLabel = lastParentLabel ? `${lastParentLabel} — ${row.label}` : row.label;
-      lines.push(`| *${mdLabel}* | ${row.value} |`);
+      lines.push(`| ${row.label} | ${row.value} |`);
     } else {
       lastParentLabel = row.label;
       if (row.value) {

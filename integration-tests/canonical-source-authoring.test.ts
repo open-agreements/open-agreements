@@ -166,6 +166,10 @@ describe('canonical Markdown authoring', () => {
     });
     expect(rendered.markdown).toContain('**Company**');
     expect(rendered.markdown).toContain('**Recipient**');
+    expect(rendered.markdown).toContain('| **Confidentiality** | |');
+    expect(rendered.markdown).toContain('| Purpose | {purpose} |');
+    expect(rendered.markdown).not.toContain('Confidentiality — Purpose');
+    expect(rendered.markdown).not.toContain('| *Purpose* |');
     expect(rendered.markdown).toContain('The Companies may disclose Confidential Information to their Affiliates.');
     expect(rendered.markdown).not.toContain('(Aliases:');
     expect(rendered.markdown).not.toContain('[[');
