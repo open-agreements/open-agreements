@@ -48,29 +48,19 @@ The key business terms of this assignment agreement are as follows.
 <!-- oa:clause id=defined-terms type=definitions -->
 ### Defined Terms
 
-[[Company]] means the entity identified as Company in Cover Terms.
-
-[[Employee]] means the individual identified as Employee in Cover Terms.
-
-[[Effective Date]] means the date specified in Cover Terms.
-
-[[Confidential Information]] has the meaning given in Cover Terms under Confidential Information Definition and includes information that Employee learns or develops during employment that is not publicly known.
-
 [[Covered Inventions]] means inventions, software, works of authorship, discoveries, designs, data models, and related intellectual property created during employment that arise from Company work, use Company resources, or relate to Company actual or anticipated business.
 
-[[Prior Inventions]] means inventions identified in Cover Terms under Prior Inventions Disclosure.
-
-[[Excluded Inventions]] means inventions described in Cover Terms under Excluded Inventions Statement.
+[[Confidential Information]] has the meaning given in Cover Terms under Confidential Information Definition.
 
 <!-- oa:clause id=assignment-of-inventions -->
 ### Assignment of Inventions
 
-Employee assigns and agrees to assign to Company all right, title, and interest in Covered Inventions, to the extent permitted by law.
+Employee hereby assigns and agrees to assign to Company all right, title, and interest in Covered Inventions, to the extent permitted by law.
 
 <!-- oa:clause id=work-made-for-hire-and-further-assurances -->
 ### Work Made for Hire and Further Assurances
 
-To the extent legally permitted, copyrightable works prepared within the scope of employment are works made for hire for Company. If any rights do not automatically vest in Company, Employee assigns those rights and will sign additional documents reasonably requested to confirm ownership and record assignments.
+To the extent legally permitted, copyrightable works prepared within the scope of employment are works made for hire for Company. If any rights do not automatically vest in Company, Employee hereby assigns those rights and will sign additional documents reasonably requested to confirm ownership and record assignments.
 
 <!-- oa:clause id=disclosure-and-documentation -->
 ### Disclosure and Documentation
