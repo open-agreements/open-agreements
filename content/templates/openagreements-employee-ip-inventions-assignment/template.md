@@ -50,7 +50,7 @@ The key business terms of this assignment agreement are as follows.
 
 [[Covered Inventions]] means inventions, software, works of authorship, discoveries, designs, data models, and related intellectual property created during employment that arise from Company work, use Company resources, or relate to Company actual or anticipated business.
 
-[[Confidential Information]] has the meaning given in Cover Terms under Confidential Information Definition.
+[[Confidential Information]] means non-public information that Employee learns, accesses, or develops during employment, including business strategies, customer and prospect data, trade secrets, technical and product information, financial information, personnel information, and any additional information described in Cover Terms under Confidential Information Definition. Confidential Information does not include information that (a) was publicly known when Employee learned it, (b) becomes publicly known through no fault of Employee, (c) was lawfully known to Employee before employment without confidentiality restriction, or (d) Employee independently develops outside the scope of employment without using Confidential Information.
 
 <!-- oa:clause id=assignment-of-inventions -->
 ### Assignment of Inventions
@@ -70,7 +70,7 @@ Employee will promptly disclose Covered Inventions and maintain reasonably compl
 <!-- oa:clause id=prior-and-excluded-inventions -->
 ### Prior and Excluded Inventions
 
-Prior Inventions and Excluded Inventions remain carved out only to the extent permitted by applicable law. Employee represents that the Prior Inventions disclosure in Cover Terms is complete to Employee knowledge as of the Effective Date.
+The Prior Inventions and Excluded Inventions identified in Cover Terms remain carved out only to the extent permitted by applicable law. Employee represents that the Prior Inventions disclosure in Cover Terms is complete to Employee knowledge as of the Effective Date.
 
 <!-- oa:clause id=confidential-information-and-trade-secrets -->
 ### Confidential Information and Trade Secrets

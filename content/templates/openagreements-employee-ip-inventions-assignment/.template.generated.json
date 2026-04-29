@@ -95,7 +95,7 @@
             },
             {
               "term": "Confidential Information",
-              "definition": "has the meaning given in Cover Terms under Confidential Information Definition."
+              "definition": "means non-public information that Employee learns, accesses, or develops during employment, including business strategies, customer and prospect data, trade secrets, technical and product information, financial information, personnel information, and any additional information described in Cover Terms under Confidential Information Definition. Confidential Information does not include information that (a) was publicly known when Employee learned it, (b) becomes publicly known through no fault of Employee, (c) was lawfully known to Employee before employment without confidentiality restriction, or (d) Employee independently develops outside the scope of employment without using Confidential Information."
             }
           ]
         },
@@ -117,7 +117,7 @@
         {
           "id": "prior-and-excluded-inventions",
           "heading": "Prior and Excluded Inventions",
-          "body": "Prior Inventions and Excluded Inventions remain carved out only to the extent permitted by applicable law. Employee represents that the Prior Inventions disclosure in Cover Terms is complete to Employee knowledge as of the Effective Date."
+          "body": "The Prior Inventions and Excluded Inventions identified in Cover Terms remain carved out only to the extent permitted by applicable law. Employee represents that the Prior Inventions disclosure in Cover Terms is complete to Employee knowledge as of the Effective Date."
         },
         {
           "id": "confidential-information-and-trade-secrets",
