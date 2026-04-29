@@ -210,6 +210,10 @@ describe('contract-templates-mcp tools', () => {
     expect(documentXml).not.toContain('{company_name}');
     expect(documentXml).not.toContain('{employee_name}');
     expect(documentXml).not.toContain('[[');
+    // Wyoming-alignment: the canonical Defined Terms clause must render with
+    // its heading and at least one defined term name from the clause.
+    expect(documentXml).toContain('Defined Terms');
+    expect(documentXml).toContain('Covered Inventions');
   });
 
   it.openspec('OA-DST-033')('fill_template returns TEMPLATE_NOT_FOUND for unknown template', async () => {

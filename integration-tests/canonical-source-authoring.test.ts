@@ -155,6 +155,30 @@ describe('canonical Markdown authoring', () => {
     ).toThrow(/alias collision on "Companies"/);
   });
 
+  it.openspec('OA-TMP-035')('rejects output_markdown_path on canonical sources', () => {
+    const baseSource = buildCanonicalSource();
+
+    expect(() =>
+      compileCanonicalSourceString(
+        baseSource.replace(
+          'outputs:\n  docx: /tmp/canonical-source-test.docx',
+          'outputs:\n  docx: /tmp/canonical-source-test.docx\n  markdown: /tmp/canonical-source-test.md'
+        ),
+        'inline canonical source with outputs.markdown'
+      )
+    ).toThrow(/must not declare output_markdown_path/);
+
+    expect(() =>
+      compileCanonicalSourceString(
+        baseSource.replace(
+          'outputs:\n  docx: /tmp/canonical-source-test.docx',
+          'outputs:\n  docx: /tmp/canonical-source-test.docx\noutput_markdown_path: /tmp/canonical-source-test.md'
+        ),
+        'inline canonical source with output_markdown_path'
+      )
+    ).toThrow(/must not declare output_markdown_path/);
+  });
+
   it.openspec('OA-TMP-035')('renders signer-mode output and omits alias metadata from legal text', () => {
     const style = loadStyleProfile(stylePath);
     const compiled = compileCanonicalSourceString(buildCanonicalSource(), 'inline canonical source');
