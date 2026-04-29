@@ -11,6 +11,7 @@ document:
   version: "1.1"
   license: Free to use under CC BY 4.0
   include_cloud_doc_line: true
+  defined_term_highlight_mode: definition_site_only
   cover_row_height: 700
 sections:
   cover_terms:
@@ -45,10 +46,27 @@ The key business terms of this assignment agreement are as follows.
 
 ## Standard Terms
 
+<!-- oa:clause id=defined-terms type=definitions -->
+### Defined Terms
+
+[[Company]] means the entity identified as Company in Cover Terms.
+
+[[Employee]] means the individual identified as Employee in Cover Terms.
+
+[[Effective Date]] means the date specified in Cover Terms.
+
+[[Confidential Information]] has the meaning given in Cover Terms under Confidential Information Definition and includes information that Employee learns or develops during employment that is not publicly known.
+
+[[Covered Inventions]] means inventions, software, works of authorship, discoveries, designs, data models, and related intellectual property created during employment that arise from Company work, use Company resources, or relate to Company actual or anticipated business.
+
+[[Prior Inventions]] means inventions identified in Cover Terms under Prior Inventions Disclosure.
+
+[[Excluded Inventions]] means inventions described in Cover Terms under Excluded Inventions Statement.
+
 <!-- oa:clause id=assignment-of-inventions -->
 ### Assignment of Inventions
 
-Employee assigns and agrees to assign to Company all right, title, and interest in inventions, software, works of authorship, discoveries, designs, data models, and related intellectual property created during employment that arise from Company work, use Company resources, or relate to Company actual or anticipated business, to the extent permitted by law.
+Employee assigns and agrees to assign to Company all right, title, and interest in Covered Inventions, to the extent permitted by law.
 
 <!-- oa:clause id=work-made-for-hire-and-further-assurances -->
 ### Work Made for Hire and Further Assurances
@@ -58,27 +76,27 @@ To the extent legally permitted, copyrightable works prepared within the scope o
 <!-- oa:clause id=disclosure-and-documentation -->
 ### Disclosure and Documentation
 
-Employee will promptly disclose covered inventions and maintain reasonably complete records needed to document conception, authorship, development, and transfer of rights for Company business, consistent with lawful policy and confidentiality obligations.
+Employee will promptly disclose Covered Inventions and maintain reasonably complete records needed to document conception, authorship, development, and transfer of rights for Company business, consistent with lawful policy and confidentiality obligations.
 
 <!-- oa:clause id=prior-and-excluded-inventions -->
 ### Prior and Excluded Inventions
 
-Inventions identified in Cover Terms as prior or excluded remain carved out only to the extent permitted by applicable law. Employee represents that the prior inventions disclosure in Cover Terms is complete to Employee knowledge as of the Effective Date.
+Prior Inventions and Excluded Inventions remain carved out only to the extent permitted by applicable law. Employee represents that the Prior Inventions disclosure in Cover Terms is complete to Employee knowledge as of the Effective Date.
 
 <!-- oa:clause id=confidential-information-and-trade-secrets -->
 ### Confidential Information and Trade Secrets
 
-Employee will use and protect confidential information solely for authorized Company purposes, will not misuse or disclose confidential information except as permitted by Company policy or law, and will follow the confidential information definition set out in Cover Terms.
+Employee will use and protect Confidential Information solely for authorized Company purposes, will not misuse or disclose Confidential Information except as permitted by Company policy or law, and will follow the Confidential Information definition set out in Cover Terms.
 
 <!-- oa:clause id=no-conflicting-obligations -->
 ### No Conflicting Obligations
 
-Employee represents that performing duties for Company does not knowingly conflict with binding obligations to another person or entity. Employee will not bring third-party confidential information into Company systems or use it in Company work without written authorization.
+Employee represents that performing duties for Company does not knowingly conflict with binding obligations to another person or entity. Employee will not bring third-party Confidential Information into Company systems or use it in Company work without written authorization.
 
 <!-- oa:clause id=records-cooperation-and-post-termination-assistance -->
 ### Records, Cooperation, and Post-Termination Assistance
 
-Employee will provide the post-termination assistance listed in Cover Terms, including reasonable cooperation with filings, declarations, and assignments needed to confirm or protect Company rights in covered inventions, subject to reimbursement of reasonable out-of-pocket expenses when required by policy.
+Employee will provide the post-termination assistance listed in Cover Terms, including reasonable cooperation with filings, declarations, and assignments needed to confirm or protect Company rights in Covered Inventions, subject to reimbursement of reasonable out-of-pocket expenses when required by policy.
 
 <!-- oa:clause id=return-and-deletion-of-materials -->
 ### Return and Deletion of Materials

@@ -673,9 +673,12 @@ function normalizeCanonicalTemplate(frontmatter, sections, filePath) {
 
 function projectToContractSpec(normalized, frontmatter, filePath) {
   const outputDocxPath = normalized.outputs.docx ?? frontmatter.output_docx_path;
-  const outputMarkdownPath = normalized.outputs.markdown ?? frontmatter.output_markdown_path;
 
   invariant(outputDocxPath, `Canonical source (${filePath}) is missing outputs.docx`);
+  invariant(
+    !normalized.outputs.markdown && !frontmatter.output_markdown_path,
+    `Canonical source (${filePath}) must not declare output_markdown_path; the canonical template.md is itself the source`
+  );
   invariant(frontmatter.sections?.cover_terms, `Canonical source (${filePath}) is missing frontmatter sections.cover_terms`);
   invariant(frontmatter.sections?.standard_terms, `Canonical source (${filePath}) is missing frontmatter sections.standard_terms`);
   invariant(frontmatter.sections?.signature, `Canonical source (${filePath}) is missing frontmatter sections.signature`);
@@ -685,7 +688,6 @@ function projectToContractSpec(normalized, frontmatter, filePath) {
     layout_id: normalized.layout_id,
     style_id: normalized.style_id,
     output_docx_path: outputDocxPath,
-    ...(outputMarkdownPath ? { output_markdown_path: outputMarkdownPath } : {}),
     document: normalized.document,
     sections: {
       cover_terms: {
