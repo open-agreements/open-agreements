@@ -3,13 +3,13 @@
   "layout_id": "cover-standard-signature-v1",
   "style_id": "openagreements-default-v1",
   "output_docx_path": "content/templates/openagreements-employee-ip-inventions-assignment/template.docx",
-  "output_markdown_path": "content/templates/openagreements-employee-ip-inventions-assignment/template.md",
   "document": {
     "title": "Employee IP and Inventions Assignment Agreement",
     "label": "OpenAgreements Employee IP and Inventions Assignment",
     "version": "1.1",
     "license": "Free to use under CC BY 4.0",
     "include_cloud_doc_line": true,
+    "defined_term_highlight_mode": "all_instances",
     "cover_row_height": 700
   },
   "sections": {
@@ -18,16 +18,66 @@
       "heading_title": "Cover Terms",
       "subtitle": "The key business terms of this assignment agreement are as follows.",
       "rows": [
-        { "label": "Company", "value": "{company_name}" },
-        { "label": "Employee", "value": "{employee_name}" },
-        { "label": "Effective Date", "value": "{effective_date}" },
-        { "label": "Prior Inventions Disclosure", "value": "{prior_inventions_disclosure}" },
-        { "label": "Excluded Inventions Statement", "value": "{excluded_inventions_statement}" },
-        { "label": "Confidential Information Definition", "value": "{confidential_information_definition}" },
-        { "label": "Return of Materials Timing", "value": "{return_of_materials_timing}" },
-        { "label": "Post-Termination Assistance", "value": "{post_termination_assistance}" },
-        { "label": "Governing Law", "value": "{governing_law}" },
-        { "label": "Venue", "value": "{venue}" }
+        {
+          "kind": "row",
+          "label": "Company",
+          "value": "{company_name}",
+          "sub": false
+        },
+        {
+          "kind": "row",
+          "label": "Employee",
+          "value": "{employee_name}",
+          "sub": false
+        },
+        {
+          "kind": "row",
+          "label": "Effective Date",
+          "value": "{effective_date}",
+          "sub": false
+        },
+        {
+          "kind": "row",
+          "label": "Prior Inventions Disclosure",
+          "value": "{prior_inventions_disclosure}",
+          "sub": false
+        },
+        {
+          "kind": "row",
+          "label": "Excluded Inventions Statement",
+          "value": "{excluded_inventions_statement}",
+          "sub": false
+        },
+        {
+          "kind": "row",
+          "label": "Confidential Information Definition",
+          "value": "{confidential_information_definition}",
+          "sub": false
+        },
+        {
+          "kind": "row",
+          "label": "Return of Materials Timing",
+          "value": "{return_of_materials_timing}",
+          "sub": false
+        },
+        {
+          "kind": "row",
+          "label": "Post-Termination Assistance",
+          "value": "{post_termination_assistance}",
+          "sub": false
+        },
+        {
+          "kind": "row",
+          "label": "Governing Law",
+          "value": "{governing_law}",
+          "sub": false
+        },
+        {
+          "kind": "row",
+          "label": "Venue",
+          "value": "{venue}",
+          "sub": false
+        }
       ]
     },
     "standard_terms": {
@@ -35,59 +85,120 @@
       "heading_title": "Standard Terms",
       "clauses": [
         {
+          "id": "assignment-of-inventions",
           "heading": "Assignment of Inventions",
           "body": "Employee assigns and agrees to assign to Company all right, title, and interest in inventions, software, works of authorship, discoveries, designs, data models, and related intellectual property created during employment that arise from Company work, use Company resources, or relate to Company actual or anticipated business, to the extent permitted by law."
         },
         {
+          "id": "work-made-for-hire-and-further-assurances",
           "heading": "Work Made for Hire and Further Assurances",
           "body": "To the extent legally permitted, copyrightable works prepared within the scope of employment are works made for hire for Company. If any rights do not automatically vest in Company, Employee assigns those rights and will sign additional documents reasonably requested to confirm ownership and record assignments."
         },
         {
+          "id": "disclosure-and-documentation",
           "heading": "Disclosure and Documentation",
           "body": "Employee will promptly disclose covered inventions and maintain reasonably complete records needed to document conception, authorship, development, and transfer of rights for Company business, consistent with lawful policy and confidentiality obligations."
         },
         {
+          "id": "prior-and-excluded-inventions",
           "heading": "Prior and Excluded Inventions",
           "body": "Inventions identified in Cover Terms as prior or excluded remain carved out only to the extent permitted by applicable law. Employee represents that the prior inventions disclosure in Cover Terms is complete to Employee knowledge as of the Effective Date."
         },
         {
+          "id": "confidential-information-and-trade-secrets",
           "heading": "Confidential Information and Trade Secrets",
           "body": "Employee will use and protect confidential information solely for authorized Company purposes, will not misuse or disclose confidential information except as permitted by Company policy or law, and will follow the confidential information definition set out in Cover Terms."
         },
         {
+          "id": "no-conflicting-obligations",
           "heading": "No Conflicting Obligations",
           "body": "Employee represents that performing duties for Company does not knowingly conflict with binding obligations to another person or entity. Employee will not bring third-party confidential information into Company systems or use it in Company work without written authorization."
         },
         {
+          "id": "records-cooperation-and-post-termination-assistance",
           "heading": "Records, Cooperation, and Post-Termination Assistance",
           "body": "Employee will provide the post-termination assistance listed in Cover Terms, including reasonable cooperation with filings, declarations, and assignments needed to confirm or protect Company rights in covered inventions, subject to reimbursement of reasonable out-of-pocket expenses when required by policy."
         },
         {
+          "id": "return-and-deletion-of-materials",
           "heading": "Return and Deletion of Materials",
           "body": "Employee will return, and where permitted delete, Company materials within the timing listed in Cover Terms, including devices, documents, credentials, and confidential files, except for records Employee is required to retain by law."
         },
         {
+          "id": "survival-and-limited-scope",
           "heading": "Survival and Limited Scope",
           "body": "Sections addressing assignment, confidentiality, return of materials, and assistance survive termination to the extent needed to enforce rights that arose during employment. This agreement does not transfer ownership of inventions that applicable law requires to remain with Employee."
         },
         {
+          "id": "governing-law-and-venue",
           "heading": "Governing Law and Venue",
           "body": "This agreement is governed by the law listed in Cover Terms, and disputes will be resolved in the venue listed in Cover Terms, subject to non-waivable rights under applicable law."
         }
       ]
     },
     "signature": {
-      "mode": "two-party",
+      "mode": "signers",
+      "arrangement": "entity-plus-individual",
       "section_label": "Signature Page",
       "heading_title": "Signatures",
       "preamble": "By signing this agreement, each party acknowledges and agrees to the assignment and confidentiality obligations above.",
-      "party_a": "Company",
-      "party_b": "Employee",
-      "rows": [
-        { "label": "Signature" },
-        { "label": "Print Name", "left": "{company_name}", "right": "{employee_name}" },
-        { "label": "Title" },
-        { "label": "Date" }
+      "signers": [
+        {
+          "id": "company",
+          "label": "Company",
+          "kind": "entity",
+          "capacity": "through_representative",
+          "rows": [
+            {
+              "id": "signature",
+              "label": "Signature",
+              "value": ""
+            },
+            {
+              "id": "print-name",
+              "label": "Print Name",
+              "value": "{company_name}"
+            },
+            {
+              "id": "title",
+              "label": "Title",
+              "value": ""
+            },
+            {
+              "id": "date",
+              "label": "Date",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "id": "employee",
+          "label": "Employee",
+          "kind": "individual",
+          "capacity": "personal",
+          "rows": [
+            {
+              "id": "signature",
+              "label": "Signature",
+              "value": ""
+            },
+            {
+              "id": "print-name",
+              "label": "Print Name",
+              "value": "{employee_name}"
+            },
+            {
+              "id": "title",
+              "label": "Title",
+              "value": ""
+            },
+            {
+              "id": "date",
+              "label": "Date",
+              "value": ""
+            }
+          ]
+        }
       ]
     }
   }

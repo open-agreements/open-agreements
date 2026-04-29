@@ -11,7 +11,10 @@ import { compileCanonicalSourceFile } from './template_renderer/canonical-source
 const STYLE_PATH = 'scripts/template-specs/styles/openagreements-default-v1.json';
 const SOURCES = [
   { type: 'json', path: 'scripts/template-specs/openagreements-employment-offer-letter.json' },
-  { type: 'json', path: 'scripts/template-specs/openagreements-employee-ip-inventions-assignment.json' },
+  {
+    type: 'canonical',
+    path: 'content/templates/openagreements-employee-ip-inventions-assignment/template.md',
+  },
   { type: 'json', path: 'scripts/template-specs/openagreements-employment-confidentiality-acknowledgement.json' },
   {
     type: 'canonical',

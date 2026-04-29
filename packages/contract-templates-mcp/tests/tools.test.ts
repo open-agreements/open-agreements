@@ -169,6 +169,30 @@ describe('contract-templates-mcp tools', () => {
     expect((data.inline_base64 as string).length).toBeGreaterThan(10_000);
   });
 
+  it.openspec('OA-DST-033')('fill_template fills the employee IP assignment template from canonical markdown source', async () => {
+    const result = await callTool('fill_template', {
+      template: 'openagreements-employee-ip-inventions-assignment',
+      values: {
+        company_name: 'Acme Corporation',
+        employee_name: 'Jane Doe',
+        effective_date: '2026-04-28',
+        confidential_information_definition: 'non-public information relating to Company business, products, roadmaps, customers, and trade secrets',
+        return_of_materials_timing: 'within 3 business days after termination of employment',
+        cloud_drive_id: 'workspace://agreements/piia-001',
+      },
+      return_mode: 'inline_base64',
+    });
+    const payload = getPayload(result);
+    expect(result.isError).toBeUndefined();
+    expect(payload.ok).toBe(true);
+    const data = payload.data as Record<string, unknown>;
+    expect(data.template).toBe('openagreements-employee-ip-inventions-assignment');
+    expect(data.return_mode).toBe('inline_base64');
+    expect(typeof data.output_path).toBe('string');
+    expect(typeof data.inline_base64).toBe('string');
+    expect((data.inline_base64 as string).length).toBeGreaterThan(10_000);
+  });
+
   it.openspec('OA-DST-033')('fill_template returns TEMPLATE_NOT_FOUND for unknown template', async () => {
     const result = await callTool('fill_template', {
       template: 'nonexistent-template',
