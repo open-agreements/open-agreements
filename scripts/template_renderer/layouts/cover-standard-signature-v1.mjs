@@ -548,36 +548,8 @@ function bodyParagraphsFromText(text, style, opts = {}) {
   );
 }
 
-function clauseParagraphs(index, clauseItem, style, opts = {}) {
-  // Definitions clause type
-  if (clauseItem.type === 'definitions') {
-    return [
-      new Paragraph({
-        style: 'OAClauseHeading',
-        contextualSpacing: false,
-        spacing: {
-          before: style.spacing.clause_heading_before,
-          after: style.spacing.clause_heading_after,
-          line: style.spacing.line,
-          beforeAutoSpacing: false,
-          afterAutoSpacing: false,
-        },
-        children: [
-          new TextRun({
-            text: `${index}. ${clauseItem.heading}.`,
-            font: style.fonts.body,
-            size: 22,
-            bold: true,
-            color: style.colors.ink,
-          }),
-        ],
-      }),
-      ...definitionSubParagraphs(index, clauseItem.terms, style),
-    ];
-  }
-
-  // Text clause with optional condition/omitted_body
-  const headingParagraph = new Paragraph({
+function clauseHeadingParagraph(index, heading, style) {
+  return new Paragraph({
     style: 'OAClauseHeading',
     contextualSpacing: false,
     spacing: {
@@ -589,7 +561,7 @@ function clauseParagraphs(index, clauseItem, style, opts = {}) {
     },
     children: [
       new TextRun({
-        text: `${index}. ${clauseItem.heading}.`,
+        text: `${index}. ${heading}.`,
         font: style.fonts.body,
         size: 22,
         bold: true,
@@ -597,7 +569,17 @@ function clauseParagraphs(index, clauseItem, style, opts = {}) {
       }),
     ],
   });
+}
 
+function clauseParagraphs(index, clauseItem, style, opts = {}) {
+  if (clauseItem.type === 'definitions') {
+    return [
+      clauseHeadingParagraph(index, clauseItem.heading, style),
+      ...definitionSubParagraphs(index, clauseItem.terms, style),
+    ];
+  }
+
+  const headingParagraph = clauseHeadingParagraph(index, clauseItem.heading, style);
   const termsOpt = opts.terms;
   const bodyParas = bodyParagraphsFromText(clauseItem.body, style, { size: 22, style: 'OAClauseBody', terms: termsOpt });
 
@@ -727,7 +709,11 @@ function signerFieldMap(signer) {
   return new Map(signer.rows.map((row) => [row.id, row]));
 }
 
-function twoPartySignatureTable(signatureSpec, style, nilBorder, ruleBorder) {
+// Shared shell for the 4-column dual-party signature table used by both
+// `signers`-mode and the legacy `two-party` mode. Callers normalize their
+// inputs into `{ leftHeader, rightHeader, rows }` where each row is
+// `{ label, hint?, leftValue, rightValue, leftLined?, rightLined? }`.
+function dualPartySignatureTable({ leftHeader, rightHeader, rows }, style, nilBorder, ruleBorder) {
   return new Table({
     width: { size: 10075, type: WidthType.DXA },
     layout: TableLayoutType.FIXED,
@@ -744,26 +730,43 @@ function twoPartySignatureTable(signatureSpec, style, nilBorder, ruleBorder) {
       new TableRow({
         children: [
           signatureLabelCell('', '', style, nilBorder),
-          signatureHeaderCell(signatureSpec.party_a.toUpperCase(), style, nilBorder),
+          signatureHeaderCell(leftHeader.toUpperCase(), style, nilBorder),
           signatureSpacerCell(nilBorder),
-          signatureHeaderCell(signatureSpec.party_b.toUpperCase(), style, nilBorder),
+          signatureHeaderCell(rightHeader.toUpperCase(), style, nilBorder),
         ],
       }),
-      ...signatureSpec.rows.map((row) =>
+      ...rows.map((row) =>
         new TableRow({
           height: { value: style.sizes.signature_row_height, rule: HeightRule.ATLEAST },
           children: [
             signatureLabelCell(row.label, row.hint, style, nilBorder),
-            signatureLineCell(row.left ?? '', style, nilBorder, ruleBorder),
+            signatureLineCell(row.leftValue ?? '', style, nilBorder, row.leftLined === false ? nilBorder : ruleBorder),
             signatureSpacerCell(nilBorder),
-            row.left_only
-              ? signatureLineCell('', style, nilBorder, nilBorder)
-              : signatureLineCell(row.right ?? '', style, nilBorder, ruleBorder),
+            signatureLineCell(row.rightValue ?? '', style, nilBorder, row.rightLined === false ? nilBorder : ruleBorder),
           ],
         })
       ),
     ],
   });
+}
+
+function twoPartySignatureTable(signatureSpec, style, nilBorder, ruleBorder) {
+  return dualPartySignatureTable(
+    {
+      leftHeader: signatureSpec.party_a,
+      rightHeader: signatureSpec.party_b,
+      rows: signatureSpec.rows.map((row) => ({
+        label: row.label,
+        hint: row.hint,
+        leftValue: row.left,
+        rightValue: row.left_only ? '' : row.right,
+        rightLined: !row.left_only,
+      })),
+    },
+    style,
+    nilBorder,
+    ruleBorder
+  );
 }
 
 function onePartySignatureTable(signatureSpec, style, nilBorder, ruleBorder) {
@@ -836,45 +839,27 @@ function signerModeSignatureTable(signatureSpec, style, nilBorder, ruleBorder) {
     }
   }
 
-  return new Table({
-    width: { size: 10075, type: WidthType.DXA },
-    layout: TableLayoutType.FIXED,
-    columnWidths: style.table_widths.signature_two_party,
-    borders: {
-      top: nilBorder,
-      left: nilBorder,
-      bottom: nilBorder,
-      right: nilBorder,
-      insideH: nilBorder,
-      insideV: nilBorder,
-    },
-    rows: [
-      new TableRow({
-        children: [
-          signatureLabelCell('', '', style, nilBorder),
-          signatureHeaderCell(leftSigner.label.toUpperCase(), style, nilBorder),
-          signatureSpacerCell(nilBorder),
-          signatureHeaderCell(rightSigner.label.toUpperCase(), style, nilBorder),
-        ],
-      }),
-      ...rowIds.map((rowId) => {
+  return dualPartySignatureTable(
+    {
+      leftHeader: leftSigner.label,
+      rightHeader: rightSigner.label,
+      rows: rowIds.map((rowId) => {
         const leftRow = leftRows.get(rowId);
         const rightRow = rightRows.get(rowId);
-        const label = leftRow?.label ?? rightRow?.label ?? rowId;
-        const hint = leftRow?.hint ?? rightRow?.hint;
-
-        return new TableRow({
-          height: { value: style.sizes.signature_row_height, rule: HeightRule.ATLEAST },
-          children: [
-            signatureLabelCell(label, hint, style, nilBorder),
-            signatureLineCell(leftRow?.value ?? '', style, nilBorder, leftRow ? ruleBorder : nilBorder),
-            signatureSpacerCell(nilBorder),
-            signatureLineCell(rightRow?.value ?? '', style, nilBorder, rightRow ? ruleBorder : nilBorder),
-          ],
-        });
+        return {
+          label: leftRow?.label ?? rightRow?.label ?? rowId,
+          hint: leftRow?.hint ?? rightRow?.hint,
+          leftValue: leftRow?.value,
+          rightValue: rightRow?.value,
+          leftLined: Boolean(leftRow),
+          rightLined: Boolean(rightRow),
+        };
       }),
-    ],
-  });
+    },
+    style,
+    nilBorder,
+    ruleBorder
+  );
 }
 
 function renderMarkdown(spec) {
