@@ -9,32 +9,30 @@ import {
   renderFromValidatedSpec,
 } from '../scripts/template_renderer/index.mjs';
 import { validateStyleProfile } from '../scripts/template_renderer/schema.mjs';
+import { discoverTemplateSources } from '../scripts/template_renderer/canonical-sources.mjs';
 
 const it = itAllure.epic('Filling & Rendering');
 
-const stylePath = join(import.meta.dirname, '..', 'scripts', 'template-specs', 'styles', 'openagreements-default-v1.json');
-const specPaths = [
-  join(import.meta.dirname, '..', 'scripts', 'template-specs', 'openagreements-employment-offer-letter.json'),
-  join(import.meta.dirname, '..', 'scripts', 'template-specs', 'openagreements-employee-ip-inventions-assignment.json'),
-  join(import.meta.dirname, '..', 'scripts', 'template-specs', 'openagreements-employment-confidentiality-acknowledgement.json'),
-  join(import.meta.dirname, '..', 'scripts', 'template-specs', 'openagreements-restrictive-covenant-wyoming.json'),
-];
+const repoRoot = join(import.meta.dirname, '..');
+const stylePath = join(repoRoot, 'scripts', 'template-specs', 'styles', 'openagreements-default-v1.json');
+const sources = discoverTemplateSources(repoRoot);
+const specPaths = sources.map((source) => join(repoRoot, source.jsonPath));
 
 describe('json template renderer', () => {
   it.openspec('OA-TMP-017')('supports multiple templates sharing the same layout id', () => {
     const style = loadStyleProfile(stylePath);
     const specs = specPaths.map((specPath) => loadContractSpec(specPath));
 
+    expect(specs.length).toBeGreaterThanOrEqual(2);
     const layoutIds = new Set(specs.map((spec) => spec.layout_id));
     expect(layoutIds.size).toBe(1);
     expect(layoutIds.has('cover-standard-signature-v1')).toBe(true);
 
     const outputs = specs.map((spec) => renderFromValidatedSpec(spec, style));
-    expect(outputs).toHaveLength(4);
-    expect(outputs[0].markdown).toContain('## Standard Terms');
-    expect(outputs[1].markdown).toContain('## Signatures');
-    expect(outputs[2].markdown).toContain('## Acknowledgement Signature');
-    expect(outputs[3].markdown).toContain('## Standard Terms');
+    expect(outputs.length).toBe(specs.length);
+    for (const output of outputs) {
+      expect(output.markdown.length).toBeGreaterThan(0);
+    }
   });
 
   it.openspec('OA-TMP-017')('rejects unknown layout ids with actionable error', () => {

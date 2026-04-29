@@ -75,19 +75,6 @@ eleventyComputed:
         </div>
         {% endif %}
 
-        {% if t.practiceNote %}
-        <section style="margin-top: 32px;">
-          <h2 style="font-size: 1.2rem; margin-bottom: 12px;">Practice Note</h2>
-          <div style="margin-bottom: 16px; padding: 12px; background: var(--bg-soft, #f8f8f8); border-radius: 8px; font-size: 0.84rem;">
-            <p style="margin: 0;">Based on analysis from <strong>{{ t.practiceNote.firmCount }} Am Law firms</strong> | Updated {{ t.practiceNote.lastUpdated }}</p>
-            <p style="margin: 4px 0 0; color: var(--ink-soft);">{{ t.practiceNote.disclaimer }}</p>
-          </div>
-          <div class="practice-note-content" style="font-size: 0.92rem; line-height: 1.6;">
-            {{ t.practiceNote.content | renderMarkdown | safe }}
-          </div>
-        </section>
-        {% endif %}
-
         {% if t.previewPages and t.previewPages.length %}
         <div class="template-preview">
           {%- for page in t.previewPages %}

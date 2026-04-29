@@ -548,36 +548,8 @@ function bodyParagraphsFromText(text, style, opts = {}) {
   );
 }
 
-function clauseParagraphs(index, clauseItem, style, opts = {}) {
-  // Definitions clause type
-  if (clauseItem.type === 'definitions') {
-    return [
-      new Paragraph({
-        style: 'OAClauseHeading',
-        contextualSpacing: false,
-        spacing: {
-          before: style.spacing.clause_heading_before,
-          after: style.spacing.clause_heading_after,
-          line: style.spacing.line,
-          beforeAutoSpacing: false,
-          afterAutoSpacing: false,
-        },
-        children: [
-          new TextRun({
-            text: `${index}. ${clauseItem.heading}.`,
-            font: style.fonts.body,
-            size: 22,
-            bold: true,
-            color: style.colors.ink,
-          }),
-        ],
-      }),
-      ...definitionSubParagraphs(index, clauseItem.terms, style),
-    ];
-  }
-
-  // Text clause with optional condition/omitted_body
-  const headingParagraph = new Paragraph({
+function clauseHeadingParagraph(index, heading, style) {
+  return new Paragraph({
     style: 'OAClauseHeading',
     contextualSpacing: false,
     spacing: {
@@ -589,7 +561,7 @@ function clauseParagraphs(index, clauseItem, style, opts = {}) {
     },
     children: [
       new TextRun({
-        text: `${index}. ${clauseItem.heading}.`,
+        text: `${index}. ${heading}.`,
         font: style.fonts.body,
         size: 22,
         bold: true,
@@ -597,7 +569,17 @@ function clauseParagraphs(index, clauseItem, style, opts = {}) {
       }),
     ],
   });
+}
 
+function clauseParagraphs(index, clauseItem, style, opts = {}) {
+  if (clauseItem.type === 'definitions') {
+    return [
+      clauseHeadingParagraph(index, clauseItem.heading, style),
+      ...definitionSubParagraphs(index, clauseItem.terms, style),
+    ];
+  }
+
+  const headingParagraph = clauseHeadingParagraph(index, clauseItem.heading, style);
   const termsOpt = opts.terms;
   const bodyParas = bodyParagraphsFromText(clauseItem.body, style, { size: 22, style: 'OAClauseBody', terms: termsOpt });
 
@@ -723,7 +705,15 @@ function signatureSpacerCell(nilBorder) {
   });
 }
 
-function twoPartySignatureTable(signatureSpec, style, nilBorder, ruleBorder) {
+function signerFieldMap(signer) {
+  return new Map(signer.rows.map((row) => [row.id, row]));
+}
+
+// Shared shell for the 4-column dual-party signature table used by both
+// `signers`-mode and the legacy `two-party` mode. Callers normalize their
+// inputs into `{ leftHeader, rightHeader, rows }` where each row is
+// `{ label, hint?, leftValue, rightValue, leftLined?, rightLined? }`.
+function dualPartySignatureTable({ leftHeader, rightHeader, rows }, style, nilBorder, ruleBorder) {
   return new Table({
     width: { size: 10075, type: WidthType.DXA },
     layout: TableLayoutType.FIXED,
@@ -740,26 +730,43 @@ function twoPartySignatureTable(signatureSpec, style, nilBorder, ruleBorder) {
       new TableRow({
         children: [
           signatureLabelCell('', '', style, nilBorder),
-          signatureHeaderCell(signatureSpec.party_a.toUpperCase(), style, nilBorder),
+          signatureHeaderCell(leftHeader.toUpperCase(), style, nilBorder),
           signatureSpacerCell(nilBorder),
-          signatureHeaderCell(signatureSpec.party_b.toUpperCase(), style, nilBorder),
+          signatureHeaderCell(rightHeader.toUpperCase(), style, nilBorder),
         ],
       }),
-      ...signatureSpec.rows.map((row) =>
+      ...rows.map((row) =>
         new TableRow({
           height: { value: style.sizes.signature_row_height, rule: HeightRule.ATLEAST },
           children: [
             signatureLabelCell(row.label, row.hint, style, nilBorder),
-            signatureLineCell(row.left ?? '', style, nilBorder, ruleBorder),
+            signatureLineCell(row.leftValue ?? '', style, nilBorder, row.leftLined === false ? nilBorder : ruleBorder),
             signatureSpacerCell(nilBorder),
-            row.left_only
-              ? signatureLineCell('', style, nilBorder, nilBorder)
-              : signatureLineCell(row.right ?? '', style, nilBorder, ruleBorder),
+            signatureLineCell(row.rightValue ?? '', style, nilBorder, row.rightLined === false ? nilBorder : ruleBorder),
           ],
         })
       ),
     ],
   });
+}
+
+function twoPartySignatureTable(signatureSpec, style, nilBorder, ruleBorder) {
+  return dualPartySignatureTable(
+    {
+      leftHeader: signatureSpec.party_a,
+      rightHeader: signatureSpec.party_b,
+      rows: signatureSpec.rows.map((row) => ({
+        label: row.label,
+        hint: row.hint,
+        leftValue: row.left,
+        rightValue: row.left_only ? '' : row.right,
+        rightLined: !row.left_only,
+      })),
+    },
+    style,
+    nilBorder,
+    ruleBorder
+  );
 }
 
 function onePartySignatureTable(signatureSpec, style, nilBorder, ruleBorder) {
@@ -795,6 +802,66 @@ function onePartySignatureTable(signatureSpec, style, nilBorder, ruleBorder) {
   });
 }
 
+function signerModeSignatureTable(signatureSpec, style, nilBorder, ruleBorder) {
+  if (signatureSpec.signers.length !== 2) {
+    throw new Error(
+      `cover-standard-signature-v1 requires exactly 2 signers for mode=signers; received ${signatureSpec.signers.length}`
+    );
+  }
+
+  const [leftSigner, rightSigner] = signatureSpec.signers;
+  const leftRows = signerFieldMap(leftSigner);
+  const rightRows = signerFieldMap(rightSigner);
+  const rowIds = [];
+
+  for (const signer of signatureSpec.signers) {
+    for (const row of signer.rows) {
+      if (!rowIds.includes(row.id)) {
+        rowIds.push(row.id);
+      }
+    }
+  }
+
+  for (const rowId of rowIds) {
+    const leftRow = leftRows.get(rowId);
+    const rightRow = rightRows.get(rowId);
+    if (leftRow && rightRow) {
+      if (leftRow.label !== rightRow.label) {
+        throw new Error(
+          `Signer row "${rowId}" has mismatched labels: "${leftSigner.id}" → "${leftRow.label}", "${rightSigner.id}" → "${rightRow.label}"`
+        );
+      }
+      if ((leftRow.hint ?? '') !== (rightRow.hint ?? '')) {
+        throw new Error(
+          `Signer row "${rowId}" has mismatched hints: "${leftSigner.id}" → "${leftRow.hint ?? ''}", "${rightSigner.id}" → "${rightRow.hint ?? ''}"`
+        );
+      }
+    }
+  }
+
+  return dualPartySignatureTable(
+    {
+      leftHeader: leftSigner.label,
+      rightHeader: rightSigner.label,
+      rows: rowIds.map((rowId) => {
+        const leftRow = leftRows.get(rowId);
+        const rightRow = rightRows.get(rowId);
+        return {
+          label: leftRow?.label ?? rightRow?.label ?? rowId,
+          hint: leftRow?.hint ?? rightRow?.hint,
+          leftValue: leftRow?.value,
+          rightValue: rightRow?.value,
+          leftLined: Boolean(leftRow),
+          rightLined: Boolean(rightRow),
+        };
+      }),
+    },
+    style,
+    nilBorder,
+    ruleBorder
+  );
+}
+
 function renderMarkdown(spec) {
   const lines = [];
   const { document, sections } = spec;
@@ -813,8 +880,7 @@ function renderMarkdown(spec) {
   let lastParentLabel = '';
   for (const row of sections.cover_terms.rows) {
     if (row.sub) {
-      const mdLabel = lastParentLabel ? `${lastParentLabel} — ${row.label}` : row.label;
-      lines.push(`| *${mdLabel}* | ${row.value} |`);
+      lines.push(`| ${row.label} | ${row.value} |`);
     } else {
       lastParentLabel = row.label;
       if (row.value) {
@@ -833,9 +899,8 @@ function renderMarkdown(spec) {
     lines.push(`### ${i + 1}. ${clauseItem.heading}`);
     lines.push('');
     if (clauseItem.type === 'definitions') {
-      const sorted = [...clauseItem.terms].sort((a, b) => a.term.localeCompare(b.term));
-      for (let j = 0; j < sorted.length; j++) {
-        lines.push(`${i + 1}.${j + 1} **"${sorted[j].term}"** ${sorted[j].definition}`);
+      for (let j = 0; j < clauseItem.terms.length; j++) {
+        lines.push(`${i + 1}.${j + 1} **"${clauseItem.terms[j].term}"** ${clauseItem.terms[j].definition}`);
         lines.push('');
       }
     } else {
@@ -868,6 +933,15 @@ function renderMarkdown(spec) {
       }
       lines.push('');
     }
+  } else if (sections.signature.mode === 'signers') {
+    for (const signer of sections.signature.signers) {
+      lines.push(`**${signer.label}**`);
+      lines.push('');
+      for (const row of signer.rows) {
+        lines.push(`${row.label}: ${row.value || '_______________'}`);
+      }
+      lines.push('');
+    }
   } else {
     lines.push(`**${sections.signature.party}**`);
     lines.push('');
@@ -888,7 +962,7 @@ export function renderCoverStandardSignatureV1(spec, style) {
   const highlightMode = document.defined_term_highlight_mode || 'all_instances';
   const definitionsClause = sections.standard_terms.clauses.find((c) => c.type === 'definitions');
   const derivedTerms = definitionsClause
-    ? definitionsClause.terms.map((t) => t.term)
+    ? definitionsClause.terms.flatMap((t) => [t.term, ...(t.aliases ?? [])])
     : style.defined_terms;
 
   const standardClauseParagraphs = sections.standard_terms.clauses.flatMap((clauseItem, idx) => {
@@ -907,6 +981,8 @@ export function renderCoverStandardSignatureV1(spec, style) {
 
   const signatureTable = sections.signature.mode === 'two-party'
     ? twoPartySignatureTable(sections.signature, style, nilBorder, ruleBorder)
+    : sections.signature.mode === 'signers'
+      ? signerModeSignatureTable(sections.signature, style, nilBorder, ruleBorder)
     : onePartySignatureTable(sections.signature, style, nilBorder, ruleBorder);
 
   const doc = new Document({

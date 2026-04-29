@@ -26,6 +26,8 @@ interface TemplateMeta {
     items?: Array<{ name: string; type: string; description: string; section?: string; default?: string }>;
   }>;
   priority_fields: string[];
+  credits?: Array<{ name: string; role: string; profile_url?: string }>;
+  derived_from?: string;
 }
 
 interface RecipeMeta {
@@ -309,6 +311,73 @@ describe('runList in-process coverage', () => {
         default_value_rationale: null,
       },
     ]);
+  });
+
+  itDiscovery.openspec('OA-TMP-032')('projects credits and derived_from onto internal and external templates; omits them on recipes', async () => {
+    const harness = await loadListHarness({
+      templateEntries: [
+        { id: 'credited-template', dir: '/templates/credited-template', baseDir: '/templates' },
+        { id: 'plain-template', dir: '/templates/plain-template', baseDir: '/templates' },
+      ],
+      externalEntries: [
+        { id: 'plain-external', dir: '/external/plain-external', baseDir: '/external' },
+      ],
+      recipeEntries: [
+        { id: 'plain-recipe', dir: '/recipes/plain-recipe', baseDir: '/recipes' },
+      ],
+      templateByDir: {
+        '/templates/credited-template': {
+          ...templateMeta('Credited Template', 'https://example.com/credited'),
+          credits: [
+            {
+              name: 'Joey Tsang',
+              role: 'drafting_editor',
+              profile_url: 'https://www.linkedin.com/in/joey-t-b90912b1/',
+            },
+          ],
+          derived_from: 'Publicly available Series Seed SAFE board consent materials',
+        },
+        '/templates/plain-template': templateMeta('Plain Template', 'https://example.com/plain'),
+      },
+      externalByDir: {
+        '/external/plain-external': templateMeta('Plain External', 'https://example.org/plain'),
+      },
+      recipeByDir: {
+        '/recipes/plain-recipe': recipeMeta('Plain Recipe', 'https://nvca.org/plain'),
+      },
+    });
+
+    const logSpy = vi.spyOn(console, 'log').mockImplementation(() => {});
+
+    await allureStep('Run list in JSON mode for credits projection', async () => {
+      harness.runList({ json: true });
+    });
+
+    const envelope = JSON.parse(String(logSpy.mock.calls[0][0]));
+    await allureJsonAttachment('list-json-credits-projection.json', envelope);
+
+    const credited = envelope.items.find((i: { name: string }) => i.name === 'credited-template');
+    expect(credited.credits).toEqual([
+      {
+        name: 'Joey Tsang',
+        role: 'drafting_editor',
+        profile_url: 'https://www.linkedin.com/in/joey-t-b90912b1/',
+      },
+    ]);
+    expect(credited.derived_from).toBe('Publicly available Series Seed SAFE board consent materials');
+
+    const plainTemplate = envelope.items.find((i: { name: string }) => i.name === 'plain-template');
+    expect(plainTemplate.credits).toEqual([]);
+    expect(plainTemplate.derived_from).toBeUndefined();
+    expect(Object.prototype.hasOwnProperty.call(plainTemplate, 'derived_from')).toBe(false);
+
+    const plainExternal = envelope.items.find((i: { name: string }) => i.name === 'plain-external');
+    expect(plainExternal.credits).toEqual([]);
+    expect(plainExternal.derived_from).toBeUndefined();
+
+    const plainRecipe = envelope.items.find((i: { name: string }) => i.name === 'plain-recipe');
+    expect(plainRecipe.credits).toBeUndefined();
+    expect(plainRecipe.derived_from).toBeUndefined();
   });
 
   itDiscovery('collects external and recipe metadata errors in non-strict JSON mode', async () => {

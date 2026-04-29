@@ -4,7 +4,6 @@ import {
   existsSync,
   mkdirSync,
   readdirSync,
-  readFileSync,
   statSync,
   writeFileSync,
 } from "node:fs";
@@ -156,7 +155,7 @@ function getContentRepoPath(id, contentTier) {
 
 function hasContractIrSource(templateDir) {
   return (
-    existsSync(resolve(templateDir, "content.md")) &&
+    existsSync(resolve(templateDir, "template.md")) &&
     existsSync(resolve(templateDir, "schema.yaml")) &&
     existsSync(resolve(templateDir, "styles.yaml"))
   );
@@ -251,29 +250,6 @@ export function buildCatalog({ rootDir = REPO_ROOT } = {}) {
           .map((file) => `/assets/previews/${item.name}/${file}`);
       }
 
-      const practiceNotePath = resolve(templateDir, "practice-note.md");
-      if (existsSync(practiceNotePath)) {
-        const rawPracticeNote = readFileSync(practiceNotePath, "utf-8");
-        const frontmatterMatch = rawPracticeNote.match(
-          /^---\n([\s\S]*?)\n---\n([\s\S]*)$/,
-        );
-        if (frontmatterMatch) {
-          const frontmatterLines = frontmatterMatch[1].split("\n");
-          const frontmatter = {};
-          for (const line of frontmatterLines) {
-            const match = line.match(/^(\w[\w_]*):\s*(.+)$/);
-            if (match) {
-              frontmatter[match[1]] = match[2].replace(/^["']|["']$/g, "");
-            }
-          }
-          templateData.practiceNote = {
-            firmCount: frontmatter.firm_count || "0",
-            lastUpdated: frontmatter.last_updated || "",
-            disclaimer: frontmatter.disclaimer || "",
-            content: frontmatterMatch[2],
-          };
-        }
-      }
     }
 
     return templateData;
@@ -328,23 +304,21 @@ export function prepareCatalogDownloads({
     if (template.hasMarkdownDownload) {
       const templateDir = resolve(rootDir, "content", "templates", template.id);
       const sourcePath = resolve(templateDir, "template.md");
-      const contentSourcePath = resolve(templateDir, "content.md");
       const destinationPath = resolve(downloadsDir, `${template.id}.md`);
-      if (existsSync(sourcePath)) {
+      if (hasContractIrSource(templateDir)) {
+        if (
+          !existsSync(destinationPath) ||
+          statSync(destinationPath).mtimeMs < statSync(sourcePath).mtimeMs
+        ) {
+          writeFileSync(destinationPath, renderContractIrMarkdown(templateDir), "utf-8");
+        }
+      } else if (existsSync(sourcePath)) {
         if (
           !existsSync(destinationPath) ||
           statSync(destinationPath).mtimeMs < statSync(sourcePath).mtimeMs
         ) {
           copyFileSync(sourcePath, destinationPath);
         }
-      } else if (
-        hasContractIrSource(templateDir) &&
-        (
-          !existsSync(destinationPath) ||
-          statSync(destinationPath).mtimeMs < statSync(contentSourcePath).mtimeMs
-        )
-      ) {
-        writeFileSync(destinationPath, renderContractIrMarkdown(templateDir), "utf-8");
       }
     }
   }

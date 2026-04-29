@@ -8,11 +8,11 @@ This skill uses `~~category` placeholders for optional integrations. The skill w
 
 | Category | Placeholder | Recommended server | Other options |
 |----------|-------------|-------------------|---------------|
-| Contract templates | `~~contract-templates` | [Open Agreements Remote MCP](https://openagreements.ai/api/mcp) (zero-install, recommended) | Local CLI: [`open-agreements` on npm](https://www.npmjs.com/package/open-agreements) |
+| Contract templates | `~~contract-templates` | [Open Agreements Remote MCP](https://openagreements.org/api/mcp) (zero-install, recommended) | Local CLI: [`open-agreements` on npm](https://www.npmjs.com/package/open-agreements) |
 
 ### Setting up the Remote MCP (recommended)
 
-The remote MCP handles all 41 templates server-side. No local dependencies needed. See the [Open Agreements product page](https://usejunior.com/developer-tools/open-agreements) for setup instructions.
+The remote MCP handles the full template catalog server-side. No local dependencies needed. See the [Open Agreements product page](https://usejunior.com/developer-tools/open-agreements) for setup instructions.
 
 ### Alternative: Local CLI
 

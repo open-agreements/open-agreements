@@ -1,7 +1,7 @@
 {
-  "total_templates": 42,
+  "total_templates": 44,
   "validated_count": 8,
-  "not_covered_count": 27,
+  "not_covered_count": 29,
   "not_applicable_count": 7,
   "templates": [
     {
@@ -451,6 +451,34 @@
       "validation_status": "not_covered",
       "validation_source": "none",
       "hasPreview": false
+    },
+    {
+      "id": "openagreements-board-consent-safe",
+      "displayName": "Board Consent SAFE",
+      "sourceLabel": "OpenAgreements",
+      "sourceUrl": "https://openagreements.ai",
+      "license": "CC-BY-4.0",
+      "distributable": true,
+      "fillable": true,
+      "priorityFields": 4,
+      "totalFields": 4,
+      "validation_status": "not_covered",
+      "validation_source": "none",
+      "hasPreview": true
+    },
+    {
+      "id": "openagreements-stockholder-consent-safe",
+      "displayName": "Stockholder Consent SAFE",
+      "sourceLabel": "OpenAgreements",
+      "sourceUrl": "https://openagreements.ai",
+      "license": "CC-BY-4.0",
+      "distributable": true,
+      "fillable": true,
+      "priorityFields": 4,
+      "totalFields": 4,
+      "validation_status": "not_covered",
+      "validation_source": "none",
+      "hasPreview": true
     },
     {
       "id": "working-group-list",
