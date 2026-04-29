@@ -3,9 +3,9 @@ category: corporate-governance
 description: >-
   Action by unanimous written consent of the board of directors of a Delaware
   corporation approving the issuance of one or more Simple Agreements for Future
-  Equity (SAFEs). Canonically authored in Contract IR and rendered to DOCX.
+  Equity (SAFEs).
 source_url: https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-board-consent-safe
-version: '1.0'
+version: '1.1'
 license: CC-BY-4.0
 allow_derivatives: true
 attribution_text: >-

@@ -1,0 +1,86 @@
+{
+  "template_id": "openagreements-board-consent-safe",
+  "layout_id": "cover-standard-signature-v1",
+  "style_id": "openagreements-default-v1",
+  "output_docx_path": "content/templates/openagreements-board-consent-safe/template.docx",
+  "output_markdown_path": "content/templates/openagreements-board-consent-safe/template.md",
+  "document": {
+    "title": "Board Consent for SAFE Financing",
+    "label": "OpenAgreements Board Consent for SAFE Financing",
+    "version": "1.1",
+    "license": "Free to use under CC BY 4.0",
+    "include_cloud_doc_line": false,
+    "cover_row_height": 700
+  },
+  "sections": {
+    "cover_terms": {
+      "section_label": "Cover Terms",
+      "heading_title": "Cover Terms",
+      "subtitle": "The key business terms of this board consent are as follows.",
+      "rows": [
+        { "label": "Company", "value": "{company_name}" },
+        { "label": "Effective Date", "value": "{effective_date}" },
+        { "label": "Aggregate SAFE Purchase Amount", "value": "${purchase_amount}" },
+        { "label": "Governing Law", "value": "Delaware" }
+      ]
+    },
+    "standard_terms": {
+      "section_label": "Standard Terms",
+      "heading_title": "Standard Terms",
+      "clauses": [
+        {
+          "heading": "Board Action Under Delaware Law",
+          "body": "All members of the Board of Directors of Company adopt this action by unanimous written consent pursuant to Section 141(f) of the Delaware General Corporation Law."
+        },
+        {
+          "heading": "Approval of SAFE Financing",
+          "body": "Board has determined that it is in the best interests of Company to enter into one or more Simple Agreements for Future Equity, or SAFEs, for the aggregate purchase amount listed in Cover Terms, and each SAFE in substantially the form presented to Board is approved."
+        },
+        {
+          "heading": "Officer Authority",
+          "body": "Each officer of Company is authorized and directed, for and on behalf of Company, to execute and deliver each SAFE and any related agreements, certificates, notices, or other documents required or contemplated by any SAFE or otherwise necessary or appropriate in connection with the SAFE financing."
+        },
+        {
+          "heading": "Negotiated Changes",
+          "body": "Each officer of Company is further authorized to negotiate and approve additions, modifications, amendments, or deletions to any SAFE or related document, and execution and delivery by that officer will be conclusive evidence of that approval."
+        },
+        {
+          "heading": "Reservation and Issuance of Shares",
+          "body": "Shares of Company capital stock issuable upon conversion of each SAFE are reserved for issuance, and when issued in accordance with the applicable SAFE, those shares will be duly and validly issued, fully paid, and nonassessable."
+        },
+        {
+          "heading": "Securities Law Compliance",
+          "body": "The SAFE financing is approved to be offered and sold in reliance on applicable exemptions from registration under the Securities Act of 1933, as amended, and applicable state securities laws. Each officer of Company is authorized to execute and file any forms, certificates, notices, or other documents that are necessary or appropriate in connection with that compliance."
+        },
+        {
+          "heading": "Further Actions",
+          "body": "Each officer of Company is authorized and directed to take any further actions and execute any additional documents necessary or appropriate to implement these approvals."
+        }
+      ]
+    },
+    "signature": {
+      "mode": "signers",
+      "arrangement": "stacked",
+      "repeat": {
+        "collection_field": "board_members",
+        "item_name": "member"
+      },
+      "section_label": "Signature Page",
+      "heading_title": "Board Signatures",
+      "preamble": "This Action by Written Consent shall be filed with the minutes of the proceedings of the Board of Directors of Company.\n\nBy signing below, each director adopts this board consent as of the effective date listed in Cover Terms. Any copy, facsimile, PDF, or other reliable reproduction of this board consent may be substituted or used in lieu of the original writing for any purpose for which the original writing could be used, provided that the reproduction is a complete reproduction of the entire original writing.",
+      "signers": [
+        {
+          "id": "director",
+          "label": "Director",
+          "kind": "individual",
+          "capacity": "personal",
+          "rows": [
+            { "id": "signature-line", "label": "Signature Line", "value": "______________________________" },
+            { "id": "print-name", "label": "Print Name", "value": "{$member.name}" },
+            { "id": "date", "label": "Date", "value": "Date: {effective_date}" }
+          ]
+        }
+      ]
+    }
+  }
+}
