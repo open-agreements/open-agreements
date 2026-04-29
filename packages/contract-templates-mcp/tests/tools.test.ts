@@ -3,6 +3,18 @@ import { afterEach, describe, expect } from 'vitest';
 import { itAllure } from '../../../integration-tests/helpers/allure-test.js';
 import { callTool, listToolDescriptors, _resetModuleCache, _setModuleOverride } from '../src/core/tools.js';
 
+const XML_ENTITIES: Record<string, string> = {
+  '&amp;': '&',
+  '&lt;': '<',
+  '&gt;': '>',
+  '&quot;': '"',
+  '&apos;': "'",
+};
+
+function decodeXmlEntities(value: string): string {
+  return value.replace(/&(?:amp|lt|gt|quot|apos);/g, (entity) => XML_ENTITIES[entity]);
+}
+
 function readDocxText(base64: string): string {
   const buffer = Buffer.from(base64, 'base64');
   const zip = new AdmZip(buffer);
@@ -15,14 +27,7 @@ function readDocxText(base64: string): string {
   const runRe = /<w:t[^>]*>([\s\S]*?)<\/w:t>/g;
   let match: RegExpExecArray | null;
   while ((match = runRe.exec(xml)) !== null) {
-    visibleText.push(
-      match[1]
-        .replace(/&amp;/g, '&')
-        .replace(/&lt;/g, '<')
-        .replace(/&gt;/g, '>')
-        .replace(/&quot;/g, '"')
-        .replace(/&apos;/g, "'")
-    );
+    visibleText.push(decodeXmlEntities(match[1]));
   }
   return visibleText.join('');
 }
