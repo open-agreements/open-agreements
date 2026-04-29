@@ -458,10 +458,10 @@ Date: _______________
 
 ## Notes
 
-- Canonical authoring is exercised by the topic-agnostic
-  `npm run generate:templates` pipeline. Other generator scripts (NVCA,
-  Contract IR consents, etc.) follow different pipelines and are out of scope
-  for this skill.
+- Canonical authoring is the standard authoring format for OpenAgreements
+  templates. New templates and migrations of existing JSON-source or
+  Contract-IR-source templates should land in canonical `template.md` form
+  and be picked up automatically by `npm run generate:templates`.
 - This tool does not provide legal advice — consult an attorney.
 
 ## Connectors
