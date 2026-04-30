@@ -219,7 +219,7 @@ export function buildCatalog({ rootDir = REPO_ROOT } = {}) {
     if (hasPreview) {
       templateData.fields = item.fields.map((field) => ({
         name: field.name,
-        displayName: formatFieldName(field.name),
+        displayName: field.display_label || formatFieldName(field.name),
         type: field.type,
         required: field.required,
         section: field.section || "General",

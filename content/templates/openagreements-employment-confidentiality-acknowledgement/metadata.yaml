@@ -15,47 +15,58 @@ fields:
   - name: company_name
     type: string
     description: Legal name of the company
+    display_label: Company
     section: Parties
   - name: employee_name
     type: string
     description: Full legal name of employee
+    display_label: Employee
     section: Parties
   - name: policy_effective_date
     type: date
     description: Effective date for this acknowledgement
+    display_label: Policy Effective Date
     section: Timing
   - name: approved_tools_scope
     type: string
     description: Approved tools/systems scope for company data
+    display_label: Approved Tools Scope
     section: Data Handling
   - name: data_access_scope
     type: string
     description: Permitted access scope and business purpose
+    display_label: Data Access Scope
     section: Data Handling
   - name: security_reporting_contact
     type: string
     description: Contact for reporting incidents or accidental disclosure
+    display_label: Security Reporting Contact
     section: Reporting
   - name: post_employment_obligations
     type: string
     description: Obligations after employment ends
+    display_label: Post-Employment Obligations
     default: no retention, sharing, or use of company confidential information after termination
     section: Post-Employment
   - name: acknowledgement_date
     type: date
     description: Date of employee acknowledgement
+    display_label: Acknowledgement Date
     section: Signature
   - name: signatory_name
     type: string
     description: Printed name used in signature block
+    display_label: Signatory Name
     section: Signature
   - name: cloud_drive_id
     type: string
     description: Optional document-system URI or file ID for execution copy traceability
+    display_label: Cloud Drive ID
     section: Document Management
   - name: cloud_drive_id_footer
     type: string
     description: Internal computed footer text for document-system traceability
+    display_label: Cloud Drive ID Footer
     default: ''
     section: Document Management
 priority_fields: []

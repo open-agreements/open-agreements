@@ -1,7 +1,12 @@
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { loadMetadata, loadRecipeMetadata, loadExternalMetadata } from '../core/metadata.js';
-import { categoryFromId, sourceName, mapFields } from '../core/template-listing.js';
+import {
+  categoryFromId,
+  sourceName,
+  mapFields,
+  hasTemplateMarkdownSource,
+} from '../core/template-listing.js';
 import { listExternalEntries, listRecipeEntries, listTemplateEntries } from '../utils/paths.js';
 
 const pkgPath = fileURLToPath(new URL('../../package.json', import.meta.url));
@@ -45,6 +50,7 @@ function runListJson(opts: ListOptions): void {
         source: sourceName(meta.source_url),
         attribution_text: meta.attribution_text,
         allow_derivatives: meta.allow_derivatives,
+        has_template_md: hasTemplateMarkdownSource(dir),
         credits: meta.credits ?? [],
         derived_from: meta.derived_from,
         fields: mapFields(meta.fields, meta.priority_fields),
@@ -71,6 +77,7 @@ function runListJson(opts: ListOptions): void {
           source: sourceName(meta.source_url),
           attribution_text: meta.attribution_text,
           allow_derivatives: meta.allow_derivatives,
+          has_template_md: false,
           credits: meta.credits ?? [],
           derived_from: meta.derived_from,
           fields: mapFields(meta.fields, meta.priority_fields),
@@ -98,6 +105,7 @@ function runListJson(opts: ListOptions): void {
           source_version: meta.source_version,
           optional: meta.optional,
           allow_derivatives: false,
+          has_template_md: false,
           fields: mapFields(meta.fields, meta.priority_fields),
         };
         if (meta.market_data_citations) {

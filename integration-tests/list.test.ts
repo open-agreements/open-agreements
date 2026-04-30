@@ -88,6 +88,18 @@ describe('list --json envelope', () => {
       );
     }
   });
+
+  it.openspec('OA-CLI-025')('first-party templates project has_template_md and curated display labels', () => {
+    if (!available || !parsed) return;
+
+    const offerLetter = parsed.items.find((item) => item.name === 'openagreements-employment-offer-letter');
+    expect(offerLetter).toBeDefined();
+    expect(offerLetter?.has_template_md).toBe(true);
+
+    const employerField = (offerLetter?.fields as Array<Record<string, unknown>>)
+      .find((field) => field.name === 'employer_name');
+    expect(employerField?.display_label).toBe('Employer');
+  });
 });
 
 describe('list options', () => {

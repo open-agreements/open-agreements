@@ -15,18 +15,22 @@ fields:
   - name: employer_name
     type: string
     description: Legal name of the employer
+    display_label: Employer
     section: Parties
   - name: employee_name
     type: string
     description: Full legal name of the employee
+    display_label: Employee
     section: Parties
   - name: position_title
     type: string
     description: Offered role title
+    display_label: Position Title
     section: Role
   - name: employment_type
     type: enum
     description: Employment basis
+    display_label: Employment Type
     options:
       - full-time
       - part-time
@@ -34,43 +38,53 @@ fields:
   - name: start_date
     type: date
     description: Employment start date
+    display_label: Start Date
     section: Timing
   - name: reporting_manager
     type: string
     description: Manager or role this position reports to
+    display_label: Reporting Manager
     section: Role
   - name: base_salary
     type: string
     description: Base salary or hourly amount
+    display_label: Base Salary
     section: Compensation
   - name: bonus_terms
     type: string
     description: Bonus eligibility summary
+    display_label: Bonus Terms
     section: Compensation
   - name: equity_terms
     type: string
     description: Equity grant summary, if any
+    display_label: Equity Terms
     section: Compensation
   - name: work_location
     type: string
     description: Primary work location and/or remote status
+    display_label: Primary Work Location
     section: Work Model
   - name: governing_law
     type: string
     description: Governing law state for the offer letter
+    display_label: Governing Law
     default: California
     section: Legal
   - name: offer_expiration_date
     type: date
     description: Date by which the offer must be accepted
+    display_label: Offer Expiration Date
     section: Timing
   - name: cloud_drive_id
     type: string
     description: Optional document-system URI or file ID for execution copy traceability
+    display_label: Cloud Drive ID
     section: Document Management
   - name: cloud_drive_id_footer
     type: string
     description: Internal computed footer text for document-system traceability
+    display_label: Cloud Drive ID Footer
     default: ''
     section: Document Management
 priority_fields: []

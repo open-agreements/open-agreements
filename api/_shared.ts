@@ -48,7 +48,7 @@ import {
   categoryFromId,
   sourceName,
   mapFields,
-  type TemplateListItem,
+  hasTemplateMarkdownSource,
 } from '../dist/core/template-listing.js';
 export { searchTemplates } from '../dist/core/template-search.js';
 export {
@@ -108,12 +108,14 @@ export interface TemplateItem {
   source_url: string;
   source: string | null;
   attribution_text?: string;
+  has_template_md: boolean;
   fields: {
     name: string;
     type: string;
     required: boolean;
     section: string | null;
     description: string;
+    display_label: string | null;
     default: string | null;
   }[];
 }
@@ -139,12 +141,13 @@ interface RawTemplateMetadata {
     type: string;
     section?: string;
     description: string;
+    display_label?: string;
     default?: string;
   }[];
   priority_fields: string[];
 }
 
-function toTemplateItem(templateId: string, meta: RawTemplateMetadata): TemplateItem {
+function toTemplateItem(templateId: string, meta: RawTemplateMetadata, hasTemplateMd = false): TemplateItem {
   return {
     name: templateId,
     display_name: meta.name,
@@ -154,6 +157,7 @@ function toTemplateItem(templateId: string, meta: RawTemplateMetadata): Template
     source_url: meta.source_url,
     source: sourceName(meta.source_url),
     attribution_text: meta.attribution_text,
+    has_template_md: hasTemplateMd,
     fields: mapFields(meta.fields, meta.priority_fields),
   };
 }
@@ -168,6 +172,7 @@ function recipeToTemplateItem(recipeId: string, meta: RecipeMetadata): TemplateI
     source_url: meta.source_url,
     source: sourceName(meta.source_url),
     attribution_text: undefined,
+    has_template_md: false,
     fields: mapFields(meta.fields, meta.priority_fields),
   };
 }
@@ -315,7 +320,7 @@ export function handleGetTemplate(templateId: string): TemplateItem | null {
   if (internalDir) {
     try {
       const meta = loadMetadata(internalDir) as RawTemplateMetadata;
-      return toTemplateItem(templateId, meta);
+      return toTemplateItem(templateId, meta, hasTemplateMarkdownSource(internalDir));
     } catch {
       return null;
     }
@@ -325,7 +330,7 @@ export function handleGetTemplate(templateId: string): TemplateItem | null {
   if (externalDir) {
     try {
       const meta = loadExternalMetadata(externalDir) as RawTemplateMetadata;
-      return toTemplateItem(templateId, meta);
+      return toTemplateItem(templateId, meta, false);
     } catch {
       return null;
     }
@@ -353,7 +358,7 @@ export function handleListTemplates(): ListOutcome {
   for (const entry of listExternalEntries()) {
     try {
       const meta = loadExternalMetadata(entry.dir) as RawTemplateMetadata;
-      external.push(toTemplateItem(entry.id, meta));
+      external.push(toTemplateItem(entry.id, meta, false));
     } catch { /* skip */ }
   }
 

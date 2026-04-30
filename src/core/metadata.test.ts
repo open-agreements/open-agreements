@@ -49,6 +49,23 @@ describe('FieldDefinitionSchema', () => {
     );
   });
 
+  it.openspec('OA-TMP-033')('accepts a field with a curated display_label', async () => {
+    const parsed = await allureStep('Parse field with curated display label', () =>
+      FieldDefinitionSchema.parse({
+        name: 'employer_name',
+        type: 'string',
+        description: 'Legal name of the employer',
+        display_label: 'Employer',
+      })
+    );
+
+    await allureJsonAttachment('field-definition-display-label.json', parsed);
+
+    await allureStep('Assert display_label is preserved', () => {
+      expect(parsed.display_label).toBe('Employer');
+    });
+  });
+
   it.openspec('OA-TMP-028')('accepts an array field with nested item schema', async () => {
     await expectSafeParseOutcome(
       'FieldDefinitionSchema',

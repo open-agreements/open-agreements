@@ -116,6 +116,18 @@ describe('_shared.ts — discovery (handleListTemplates / handleGetTemplate)', (
     },
   );
 
+  itDiscovery.openspec('OA-CLI-025')(
+    'handleGetTemplate surfaces has_template_md and curated field display labels for canonical OA templates',
+    () => {
+      const item = handleGetTemplate('openagreements-employment-offer-letter');
+      expect(item).not.toBeNull();
+      expect(item?.has_template_md).toBe(true);
+
+      const employerField = item?.fields.find((field) => field.name === 'employer_name');
+      expect(employerField?.display_label).toBe('Employer');
+    },
+  );
+
   // (unbound) Behaviour — handleFill rejects unknown templates with a
   // structured failure envelope. There is no canonical OpenSpec scenario
   // describing this surface explicitly; a binding would be padding.

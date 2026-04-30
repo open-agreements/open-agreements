@@ -1,4 +1,7 @@
 import { afterEach, describe, expect, vi } from 'vitest';
+import { mkdtempSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
 import {
   allureJsonAttachment,
   allureStep,
@@ -21,9 +24,10 @@ interface TemplateMeta {
     name: string;
     type: string;
     description: string;
+    display_label?: string;
     section?: string;
     default?: string;
-    items?: Array<{ name: string; type: string; description: string; section?: string; default?: string }>;
+    items?: Array<{ name: string; type: string; description: string; display_label?: string; section?: string; default?: string }>;
   }>;
   priority_fields: string[];
   credits?: Array<{ name: string; role: string; profile_url?: string }>;
@@ -208,11 +212,13 @@ describe('runList in-process coverage', () => {
     const aTemplate = envelope.items.find((item: { name: string }) => item.name === 'a-template');
     expect(zTemplate.source).toBe('Common Paper');
     expect(aTemplate.source).toBeNull();
+    expect(zTemplate.has_template_md).toBe(false);
 
     expect(zTemplate.fields[0]).toMatchObject({
       name: 'company_name',
       required: true,
       section: null,
+      display_label: null,
       default: null,
     });
     expect(zTemplate.fields[1]).toMatchObject({
@@ -311,6 +317,51 @@ describe('runList in-process coverage', () => {
         default_value_rationale: null,
       },
     ]);
+  });
+
+  itDiscovery.openspec('OA-CLI-025')('projects display_label and has_template_md in JSON output', async () => {
+    const root = mkdtempSync(join(tmpdir(), 'oa-list-display-label-'));
+    const templateDir = join(root, 'display-template');
+    mkdirSync(templateDir, { recursive: true });
+    writeFileSync(join(templateDir, 'template.md'), '# Display Template\n', 'utf-8');
+
+    try {
+      const harness = await loadListHarness({
+        templateEntries: [
+          { id: 'display-template', dir: templateDir, baseDir: root },
+        ],
+        templateByDir: {
+          [templateDir]: {
+            ...templateMeta('Display Template', 'https://example.com/display'),
+            fields: [
+              {
+                name: 'employer_name',
+                type: 'string',
+                description: 'Legal name of the employer',
+                display_label: 'Employer',
+              },
+            ],
+            priority_fields: [],
+          },
+        },
+      });
+
+      const logSpy = vi.spyOn(console, 'log').mockImplementation(() => {});
+
+      harness.runList({ json: true });
+
+      const envelope = JSON.parse(String(logSpy.mock.calls[0][0]));
+      await allureJsonAttachment('list-json-display-label-and-markdown.json', envelope);
+
+      const template = envelope.items.find((item: { name: string }) => item.name === 'display-template');
+      expect(template.has_template_md).toBe(true);
+      expect(template.fields[0]).toMatchObject({
+        name: 'employer_name',
+        display_label: 'Employer',
+      });
+    } finally {
+      rmSync(root, { recursive: true, force: true });
+    }
   });
 
   itDiscovery.openspec('OA-TMP-039')('projects credits and derived_from onto internal and external templates; omits them on recipes', async () => {

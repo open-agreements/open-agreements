@@ -326,6 +326,46 @@ describe('contract-templates-mcp tools', () => {
       ]);
     });
 
+    it.openspec('OA-CLI-025')('list_templates full mode preserves has_template_md and display_label', async () => {
+      _setModuleOverride(mockModules({
+        listTemplateItems: () => [
+          {
+            name: 'openagreements-employment-offer-letter',
+            category: 'employment',
+            description: 'Employment Offer Letter',
+            license: 'CC-BY-4.0',
+            source_url: 'https://github.com/open-agreements/open-agreements',
+            source: 'OpenAgreements',
+            attribution_text: 'Authored by OpenAgreements contributors.',
+            has_template_md: true,
+            fields: [
+              {
+                name: 'employer_name',
+                type: 'string',
+                required: true,
+                section: 'Parties',
+                description: 'Legal name of the employer',
+                display_label: 'Employer',
+                default: null,
+              },
+            ],
+          },
+        ],
+      }));
+
+      const result = await callTool('list_templates', { mode: 'full' });
+      const payload = getPayload(result);
+      expect(result.isError).toBeUndefined();
+      expect(payload.ok).toBe(true);
+
+      const data = payload.data as Record<string, unknown>;
+      const templates = data.templates as Array<Record<string, unknown>>;
+      expect(templates[0].has_template_md).toBe(true);
+
+      const fields = templates[0].fields as Array<Record<string, unknown>>;
+      expect(fields[0].display_label).toBe('Employer');
+    });
+
     it.openspec('OA-DST-032')('fill_template returns FILL_FAILED on engine error', async () => {
       _setModuleOverride(mockModules({
         fillTemplate: async () => { throw new Error('engine failure'); },

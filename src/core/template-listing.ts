@@ -7,6 +7,8 @@
  * - MCP `tools.ts` (via dynamic import or npm dependency)
  */
 
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
 import { loadMetadata, type FieldDefinition } from './metadata.js';
 import { listTemplateEntries } from '../utils/paths.js';
 
@@ -20,6 +22,7 @@ export interface TemplateListField {
   required: boolean;
   section: string | null;
   description: string;
+  display_label: string | null;
   default: string | null;
   default_value_rationale: string | null;
   items?: TemplateListField[];
@@ -35,6 +38,7 @@ export interface TemplateListItem {
   source: string | null;
   attribution_text?: string;
   allow_derivatives: boolean;
+  has_template_md: boolean;
   fields: TemplateListField[];
 }
 
@@ -110,10 +114,15 @@ export function mapFields(
     required: required.has(f.name),
     section: f.section ?? null,
     description: f.description,
+    display_label: f.display_label ?? null,
     default: f.default ?? null,
     default_value_rationale: f.default_value_rationale ?? null,
     ...(f.items ? { items: mapFields(f.items, []) } : {}),
   }));
+}
+
+export function hasTemplateMarkdownSource(templateDir: string): boolean {
+  return existsSync(join(templateDir, 'template.md'));
 }
 
 // ---------------------------------------------------------------------------
@@ -136,6 +145,7 @@ export function listTemplateItems(): TemplateListItem[] {
         source: sourceName(meta.source_url),
         attribution_text: meta.attribution_text,
         allow_derivatives: meta.allow_derivatives,
+        has_template_md: hasTemplateMarkdownSource(entry.dir),
         fields: mapFields(meta.fields, meta.priority_fields),
       });
     } catch {

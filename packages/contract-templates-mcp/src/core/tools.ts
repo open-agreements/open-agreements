@@ -33,6 +33,7 @@ interface TemplateField {
   required: boolean;
   section: string | null;
   description: string;
+  display_label?: string | null;
   default: string | null;
   default_value_rationale?: string | null;
   items?: TemplateField[];
@@ -46,6 +47,7 @@ interface TemplateRecord {
   source_url: string;
   source: string | null;
   attribution_text?: string;
+  has_template_md?: boolean;
   fields: TemplateField[];
 }
 
@@ -360,6 +362,7 @@ function normalizeTemplate(template: TemplateRecord): Record<string, unknown> {
     source_url: template.source_url,
     source: template.source,
     attribution_text: template.attribution_text ?? null,
+    has_template_md: template.has_template_md ?? false,
     fields: template.fields,
   };
 }
