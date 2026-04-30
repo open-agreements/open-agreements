@@ -6,7 +6,7 @@ clear, editable terms and source transparency.
 ## Source
 
 - **URL**: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-employment-offer-letter
-- **Version**: 1.0
+- **Version**: 1.1
 - **License**: CC BY 4.0
 
 ## Fields

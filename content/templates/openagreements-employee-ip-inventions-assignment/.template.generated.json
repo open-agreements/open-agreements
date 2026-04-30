@@ -218,11 +218,6 @@
               "value": "{employee_name}"
             },
             {
-              "id": "title",
-              "label": "Title",
-              "value": ""
-            },
-            {
               "id": "date",
               "label": "Date",
               "value": ""
