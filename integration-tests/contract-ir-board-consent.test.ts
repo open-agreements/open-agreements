@@ -1,15 +1,19 @@
-import { mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { mkdtempSync, rmSync } from 'node:fs';
 import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import AdmZip from 'adm-zip';
+import { Packer } from 'docx';
 import { afterAll, describe, expect } from 'vitest';
 import { itAllure } from './helpers/allure-test.js';
-import { loadContractIrTemplate, renderContractIrTemplate } from '../scripts/contract_ir/index.mjs';
+import { loadContractSpec, loadStyleProfile, renderFromValidatedSpec } from '../scripts/template_renderer/index.mjs';
 import { fillTemplate } from '../src/core/engine.js';
 import { loadMetadata } from '../src/core/metadata.js';
 
 const it = itAllure.epic('Filling & Rendering');
-const TEMPLATE_DIR = join(import.meta.dirname, '..', 'content', 'templates', 'openagreements-board-consent-safe');
+const REPO_ROOT = join(import.meta.dirname, '..');
+const TEMPLATE_DIR = join(REPO_ROOT, 'content', 'templates', 'openagreements-board-consent-safe');
+const SPEC_PATH = join(TEMPLATE_DIR, 'template.json');
+const STYLE_PATH = join(REPO_ROOT, 'scripts', 'template-specs', 'styles', 'openagreements-default-v1.json');
 const tempDirs: string[] = [];
 
 afterAll(() => {
@@ -56,133 +60,44 @@ function normalizeText(value: string): string {
     .trim();
 }
 
-function writeFixtureTemplate(
-  mutator: (content: string) => string,
-  templateName = 'invalid-contract-ir-fixture'
-): string {
-  const dir = mkdtempSync(join(tmpdir(), `${templateName}-`));
-  tempDirs.push(dir);
-
-  writeFileSync(
-    join(dir, 'template.md'),
-    mutator(readFileSync(join(TEMPLATE_DIR, 'template.md'), 'utf-8')),
-    'utf-8'
-  );
-  writeFileSync(
-    join(dir, 'schema.yaml'),
-    readFileSync(join(TEMPLATE_DIR, 'schema.yaml'))
-  );
-  writeFileSync(
-    join(dir, 'styles.yaml'),
-    readFileSync(join(TEMPLATE_DIR, 'styles.yaml'))
-  );
-
-  return dir;
-}
-
-describe('Contract IR SAFE board consent', () => {
-  it.openspec('OA-TMP-029')('loads Contract IR content with external schema and style registries', () => {
-    const template = loadContractIrTemplate(TEMPLATE_DIR);
+describe('JSON SAFE board consent', () => {
+  it.openspec('OA-TMP-032')('loads board consent JSON spec and metadata', () => {
+    const spec = loadContractSpec(SPEC_PATH);
     const metadata = loadMetadata(TEMPLATE_DIR);
 
-    expect(template.frontmatter.template_id).toBe('openagreements-board-consent-safe');
-    expect(template.schemaRegistry.schema_id).toBe('openagreements-board-consent-safe-v1');
-    expect(template.styleRegistry.style_id).toBe('openagreements-board-consent-safe-v1');
-    expect(template.blocks.some((block) => block.blockStyle === 'note')).toBe(true);
-    expect(
-      template.blocks.filter((block) => block.type === 'heading' && block.level === 2)
-    ).toHaveLength(2);
-
-    expect(
-      new Set(Object.keys(template.schemaRegistry.variables))
-    ).toEqual(new Set(metadata.fields.map((field) => field.name)));
+    expect(spec.template_id).toBe('openagreements-board-consent-safe');
+    expect(spec.layout_id).toBe('cover-standard-signature-v1');
+    expect(spec.sections.signature.repeat).toEqual({
+      collection_field: 'board_members',
+      item_name: 'member',
+    });
+    expect(new Set(metadata.fields.map((field) => field.name))).toEqual(
+      new Set(['company_name', 'effective_date', 'purchase_amount', 'board_members'])
+    );
   });
 
-  it.openspec('OA-TMP-030')('rejects unknown variables, unknown styles, and malformed style tags', () => {
-    const unknownVariableDir = writeFixtureTemplate((content) =>
-      content.replace('{{purchase_amount}}', '{{missing_amount}}')
-    );
-    expect(() => loadContractIrTemplate(unknownVariableDir)).toThrow(/Unknown variable "missing_amount"/);
-
-    const unknownStyleDir = writeFixtureTemplate((content) =>
-      content.replace('{style=note}', '{style=unknown-style}')
-    );
-    expect(() => loadContractIrTemplate(unknownStyleDir)).toThrow(/Unknown block style slug "unknown-style"/);
-
-    const malformedStyleDir = writeFixtureTemplate((content) =>
-      content.replace('{style=note}', '{style=note')
-    );
-    expect(() => loadContractIrTemplate(malformedStyleDir)).toThrow(/Malformed \{style=slug\} tag/);
-
-    const malformedInlineStyleDir = writeFixtureTemplate((content) =>
-      `${content}\n\nThis clause contains {SAFE}{style=defined-term.\n`
-    );
-    expect(() => loadContractIrTemplate(malformedInlineStyleDir)).toThrow(/Malformed \{style=slug\} tag|Malformed inline \{style=slug\} tag/);
-  });
-
-  it.openspec('OA-TMP-031')('renders DOCX and Markdown from the same normalized Contract IR model', async () => {
-    const { buffer, markdown } = await renderContractIrTemplate(TEMPLATE_DIR);
-    const zip = new AdmZip(buffer);
-    const xml = zip.getEntry('word/document.xml')?.getData().toString('utf-8') ?? '';
-    const stylesXml = zip.getEntry('word/styles.xml')?.getData().toString('utf-8') ?? '';
-    const headerXml = zip.getEntry('word/header1.xml')?.getData().toString('utf-8') ?? '';
-    const footerXml = zip.getEntry('word/footer1.xml')?.getData().toString('utf-8') ?? '';
-    const relsXml = zip.getEntry('word/_rels/document.xml.rels')?.getData().toString('utf-8') ?? '';
-
-    expect(buffer.length).toBeGreaterThan(5_000);
-    expect(markdown).toContain('# ACTION BY UNANIMOUS WRITTEN CONSENT OF THE BOARD OF DIRECTORS OF {company_name}');
-    expect(markdown).toContain('## Approval of SAFE Financing');
-    expect(markdown).toContain('${purchase_amount}');
-    expect(markdown).toContain('Date: {effective_date}');
-
-    expect(xml).toContain('{company_name}');
-    expect(xml).toContain('{purchase_amount}');
-    expect(xml).toContain('Approval of SAFE Financing');
-    expect(xml).toContain('[Signature Page Follows]');
-    expect(xml).toContain('w:pgSz w:w="12240" w:h="15840"');
-    expect(xml).toContain('w:br w:type="page"');
-    expect(xml).toContain('w:headerReference w:type="first"');
-    expect(xml).toContain('w:footerReference w:type="default"');
-    expect(xml).toContain('w:footerReference w:type="first"');
-    expect(xml).toContain('w:titlePg');
-    expect(xml).toContain('w:pStyle w:val="Normal"');
-    expect(xml).toContain('w:pStyle w:val="OAHeading2"');
-    expect(xml).toContain('w:pStyle w:val="OABlockNote"');
-    expect(stylesXml).toContain('w:styleId="Normal"');
-    expect(stylesXml).toContain('w:styleId="OAHeading2"');
-    expect(stylesXml).toContain('w:styleId="OABlockNote"');
-    expect(stylesXml).toContain('w:styleId="OABlockSignatureFollow"');
-    expect(stylesXml).toContain('Times New Roman');
-    expect(headerXml).toContain('BOARD CONSENT FOR APPROVING SAFE (DELAWARE)');
-    expect(headerXml).toContain('107087');
-    expect(footerXml).toContain('Board Consent for SAFE Financing (v1.0). Free to use under CC BY 4.0.');
-    expect(relsXml).toContain('header1.xml');
-    expect(relsXml).toContain('footer1.xml');
-    expect(relsXml).toContain('footer2.xml');
-  });
-
-  it.openspec('OA-TMP-032')('preserves source text, placeholders, and signature structure relative to Joey’s current source', async () => {
-    const referencePath = join(TEMPLATE_DIR, 'reference-source.docx');
-    const { buffer } = await renderContractIrTemplate(TEMPLATE_DIR);
-
+  it.openspec('OA-TMP-032')('renders DOCX and Markdown from the JSON spec with loop-backed signatures', async () => {
+    const style = loadStyleProfile(STYLE_PATH);
+    const spec = loadContractSpec(SPEC_PATH);
+    const rendered = renderFromValidatedSpec(spec, style);
+    const buffer = await Packer.toBuffer(rendered.document);
     const generatedText = normalizeText(extractDocxText(buffer));
-    const referenceText = normalizeText(extractDocxText(referencePath));
-    const signatureMarker = '[Signature Page Follows]';
 
-    expect(generatedText.split(signatureMarker)[0]).toBe(referenceText.split(signatureMarker)[0]);
-    expect(generatedText).toContain('ACTION BY UNANIMOUS WRITTEN CONSENT OF THE BOARD OF DIRECTORS OF {company_name}');
+    expect(rendered.markdown).toContain('# Board Consent for SAFE Financing');
+    expect(rendered.markdown).toContain('| **Company** | {company_name} |');
+    expect(rendered.markdown).toContain('{FOR member IN board_members}');
+    expect(rendered.markdown).toContain('{$member.name}');
+    expect(rendered.markdown).toContain('Date: {effective_date}');
+
+    expect(generatedText).toContain('Board Consent for SAFE Financing');
     expect(generatedText).toContain('Approval of SAFE Financing');
-    expect(generatedText).toContain('General Authorizing Resolution');
+    expect(generatedText).toContain('Board Action Under Delaware Law');
     expect(generatedText).toContain('{FOR member IN board_members}');
     expect(generatedText).toContain('{$member.name}');
     expect(generatedText).toContain('{END-FOR member}');
-    expect(generatedText).toContain(signatureMarker);
-    expect(generatedText).toContain(
-      'This Action by Written Consent shall be filed with the minutes of the proceedings of the Board of Directors of the Company.'
-    );
   });
 
-  it.openspec('OA-TMP-032')('removes the introductory note from filled output via clean.json', async () => {
+  it.openspec('OA-TMP-032')('fills board consent without leaving signer loop markers', async () => {
     const outputDir = mkdtempSync(join(tmpdir(), 'board-consent-fill-'));
     tempDirs.push(outputDir);
     const outputPath = join(outputDir, 'filled.docx');
@@ -203,9 +118,12 @@ describe('Contract IR SAFE board consent', () => {
     });
 
     const filledText = normalizeText(extractDocxText(outputPath));
-    expect(filledText).not.toContain('Note: The following resolutions');
-    expect(filledText).toContain('ACTION BY UNANIMOUS WRITTEN CONSENT OF THE BOARD OF DIRECTORS OF Acme Labs, Inc.');
+    expect(filledText).toContain('Board Consent for SAFE Financing');
     expect(filledText).toContain('Approval of SAFE Financing');
+    expect(filledText).toContain('Acme Labs, Inc.');
+    expect(filledText).not.toContain('{FOR ');
+    expect(filledText).not.toContain('{END-FOR ');
+    expect(filledText).not.toContain('{$member.name}');
   });
 
   it.openspec('OA-TMP-032')('preserves PAGE and NUMPAGES footer field codes through fill', async () => {
@@ -227,30 +145,8 @@ describe('Contract IR SAFE board consent', () => {
     const zip = new AdmZip(outputPath);
     const footerXml = zip.getEntry('word/footer1.xml')?.getData().toString('utf-8') ?? '';
 
-    expect(footerXml).toContain('Board Consent for SAFE Financing (v1.0). Free to use under CC BY 4.0.');
+    expect(footerXml).toContain('OpenAgreements Board Consent for SAFE Financing (v1.1). Free to use under CC BY 4.0.');
     expect(footerXml).toMatch(/<w:instrText[^>]*>\s*PAGE\s*<\/w:instrText>/);
     expect(footerXml).toMatch(/<w:instrText[^>]*>\s*NUMPAGES\s*<\/w:instrText>/);
-  });
-
-  it.openspec('OA-FIL-024')('renders only the provided board member signature blocks when filled', async () => {
-    const outputDir = mkdtempSync(join(tmpdir(), 'board-consent-one-signer-'));
-    tempDirs.push(outputDir);
-    const outputPath = join(outputDir, 'filled-one-signer.docx');
-
-    await fillTemplate({
-      templateDir: TEMPLATE_DIR,
-      outputPath,
-      values: {
-        company_name: 'Acme Labs, Inc.',
-        effective_date: 'April 16, 2026',
-        purchase_amount: '500,000',
-        board_members: [{ name: 'Alex Director' }],
-      },
-    });
-
-    const filledText = normalizeText(extractDocxText(outputPath));
-    expect(filledText.split('\n')).not.toContain('_______');
-    expect((filledText.match(/______________________________/g) ?? [])).toHaveLength(1);
-    expect((filledText.match(/Date: April 16, 2026/g) ?? [])).toHaveLength(1);
   });
 });

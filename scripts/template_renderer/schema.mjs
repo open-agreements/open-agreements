@@ -88,13 +88,35 @@ const signerSchema = z.object({
   rows: z.array(signerRowSchema).min(1),
 });
 
+const signerRepeatSchema = z.object({
+  collection_field: z.string().regex(fieldNamePattern),
+  item_name: z.string().regex(fieldNamePattern),
+});
+
 const signerModeSignatureSchema = z.object({
   mode: z.literal('signers'),
   arrangement: z.enum(['entity-plus-individual', 'stacked']).optional().default('stacked'),
   section_label: textSchema,
   heading_title: textSchema,
   preamble: textSchema,
+  repeat: signerRepeatSchema.optional(),
   signers: z.array(signerSchema).min(1),
+}).superRefine((value, ctx) => {
+  if (value.repeat && value.arrangement !== 'stacked') {
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ['repeat'],
+      message: 'repeat is only supported for signer arrangement "stacked"',
+    });
+  }
+
+  if (value.repeat && value.signers.length !== 1) {
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ['signers'],
+      message: 'repeat-backed stacked signer sections require exactly one signer prototype',
+    });
+  }
 });
 
 export const contractSpecSchema = z.object({
