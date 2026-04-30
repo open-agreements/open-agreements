@@ -9,9 +9,9 @@
       "category": "confidentiality",
       "description": "Cover page for the Bonterms Mutual NDA (Version 1.0). The standard terms are incorporated by reference from bonterms.com.",
       "license": "CC0-1.0",
-      "source_url": "https://github.com/Bonterms/Mutual-NDA",
+      "source_url": "https://bonterms.com/resources/mutual-nda-cover-page-example",
       "source": "Bonterms",
-      "attribution_text": "Based on the Bonterms Mutual NDA Cover Page, available at https://bonterms.com/forms/bonterms-mutual-nda-v1/. Made available under CC0 1.0.",
+      "attribution_text": "Based on the Bonterms Mutual NDA Cover Page, available at https://bonterms.com/resources/mutual-nda-cover-page-example. Made available under CC0 1.0.",
       "allow_derivatives": true,
       "credits": [],
       "fields": [
@@ -258,9 +258,9 @@
       "category": "professional-services",
       "description": "Cover page for the Bonterms Professional Services Agreement (Version 1.2). The standard terms are incorporated by reference from bonterms.com.",
       "license": "CC0-1.0",
-      "source_url": "https://github.com/Bonterms/Professional-Services-Agreement",
+      "source_url": "https://bonterms.com/resources/psa-cover-page-example",
       "source": "Bonterms",
-      "attribution_text": "Based on the Bonterms Professional Services Agreement Cover Page, available at https://bonterms.com/forms/professional-services-agreement-v1.2/. Made available under CC0 1.0.",
+      "attribution_text": "Based on the Bonterms Professional Services Agreement Cover Page, available at https://bonterms.com/resources/psa-cover-page-example. Made available under CC0 1.0.",
       "allow_derivatives": true,
       "credits": [],
       "fields": [
