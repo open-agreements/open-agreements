@@ -1,9 +1,6 @@
 import { readdirSync, readFileSync, statSync } from 'node:fs';
 import { join, relative } from 'node:path';
-import {
-  hasCanonicalIdentity,
-  tryParseCanonicalFrontmatter,
-} from './canonical-frontmatter.mjs';
+import { tryParseCanonicalFrontmatter } from './canonical-frontmatter.mjs';
 
 const TEMPLATES_DIR = 'content/templates';
 const CANONICAL_TEMPLATE_FILENAME = 'template.md';
@@ -18,6 +15,17 @@ function isDirectory(path) {
   }
 }
 
+// Discovery probes shape only (any string in the three identity fields).
+// Strict non-empty validation happens later in compileCanonicalSourceString()
+// via assertCanonicalIdentity().
+function hasCanonicalIdentityShape(frontmatter) {
+  return (
+    typeof frontmatter?.template_id === 'string' &&
+    typeof frontmatter?.layout_id === 'string' &&
+    typeof frontmatter?.style_id === 'string'
+  );
+}
+
 function isCanonicalSource(filePath) {
   let raw;
   try {
@@ -26,7 +34,7 @@ function isCanonicalSource(filePath) {
     return false;
   }
   const parsed = tryParseCanonicalFrontmatter(raw);
-  return parsed !== null && hasCanonicalIdentity(parsed.frontmatter);
+  return parsed !== null && hasCanonicalIdentityShape(parsed.frontmatter);
 }
 
 function fileExists(filePath) {
