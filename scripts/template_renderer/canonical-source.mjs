@@ -392,7 +392,15 @@ function normalizeSignatureValue(value) {
   return /^_+$/.test(value) ? '' : value;
 }
 
-function parseSignerRows(lines, signerLabel, filePath) {
+function normalizeRepeatingSignerReference(value, repeatItemName) {
+  if (!repeatItemName || !value) {
+    return value;
+  }
+
+  return value.replace(new RegExp(`\\{${repeatItemName}\\.`, 'g'), `{$${repeatItemName}.`);
+}
+
+function parseSignerRows(lines, signerLabel, filePath, opts = {}) {
   const rows = [];
   const seenIds = new Set();
 
@@ -422,7 +430,10 @@ function parseSignerRows(lines, signerLabel, filePath) {
     rows.push({
       id,
       label,
-      value: normalizeSignatureValue(line.slice(separatorIndex + 1).trim()),
+      value: normalizeRepeatingSignerReference(
+        normalizeSignatureValue(line.slice(separatorIndex + 1).trim()),
+        opts.repeatItemName
+      ),
     });
   }
 
@@ -434,6 +445,7 @@ function parseSignatures(lines, filePath) {
   const signers = [];
   const seenSignerIds = new Set();
   let signatureMode = null;
+  let repeat = null;
   let currentSigner = null;
   let currentLines = [];
   const preambleLines = [];
@@ -444,7 +456,9 @@ function parseSignatures(lines, filePath) {
     }
     signers.push({
       ...currentSigner,
-      rows: parseSignerRows(currentLines, currentSigner.label, filePath),
+      rows: parseSignerRows(currentLines, currentSigner.label, filePath, {
+        repeatItemName: repeat?.item_name,
+      }),
     });
     currentSigner = null;
     currentLines = [];
@@ -464,6 +478,30 @@ function parseSignatures(lines, filePath) {
     if (directive.name === 'signature-mode') {
       invariant(!signatureMode, `Canonical source (${filePath}) declares oa:signature-mode more than once`);
       signatureMode = directive.attrs.arrangement || directive.attrs.id || 'stacked';
+      const repeatCollection = directive.attrs.repeat;
+      const repeatItemName = directive.attrs.item;
+      invariant(
+        Boolean(repeatCollection) === Boolean(repeatItemName),
+        `Canonical source (${filePath}) repeat-backed oa:signature-mode must declare both repeat and item`
+      );
+      if (repeatCollection) {
+        invariant(
+          FIELD_NAME_RE.test(repeatCollection),
+          `Canonical source (${filePath}) uses invalid repeat collection "${repeatCollection}" in oa:signature-mode`
+        );
+        invariant(
+          FIELD_NAME_RE.test(repeatItemName),
+          `Canonical source (${filePath}) uses invalid repeat item "${repeatItemName}" in oa:signature-mode`
+        );
+        invariant(
+          signatureMode === 'stacked',
+          `Canonical source (${filePath}) repeat-backed oa:signature-mode requires arrangement=stacked`
+        );
+        repeat = {
+          collection_field: repeatCollection,
+          item_name: repeatItemName,
+        };
+      }
       continue;
     }
 
@@ -491,9 +529,16 @@ function parseSignatures(lines, filePath) {
   flushCurrentSigner();
   invariant(signatureMode, `Canonical source (${filePath}) is missing an oa:signature-mode directive`);
   invariant(signers.length > 0, `Canonical source (${filePath}) must declare at least one signer`);
+  if (repeat) {
+    invariant(
+      signers.length === 1,
+      `Canonical source (${filePath}) repeat-backed stacked signatures require exactly one signer prototype`
+    );
+  }
 
   return {
     arrangement: signatureMode,
+    ...(repeat ? { repeat } : {}),
     preamble: paragraphTextFromLines(preambleLines),
     signers,
   };
@@ -618,6 +663,7 @@ function normalizeCanonicalTemplate(frontmatter, sections, filePath) {
       },
       signature: {
         arrangement: sections.signature.arrangement,
+        ...(sections.signature.repeat ? { repeat: sections.signature.repeat } : {}),
         preamble: resolveExplicitReferences(
           sections.signature.preamble,
           definitionRegistry,
@@ -694,6 +740,7 @@ function projectToContractSpec(normalized, frontmatter, filePath) {
       signature: {
         mode: 'signers',
         arrangement: normalized.sections.signature.arrangement,
+        ...(normalized.sections.signature.repeat ? { repeat: normalized.sections.signature.repeat } : {}),
         section_label: frontmatter.sections.signature.section_label,
         heading_title: frontmatter.sections.signature.heading_title,
         preamble: normalized.sections.signature.preamble,

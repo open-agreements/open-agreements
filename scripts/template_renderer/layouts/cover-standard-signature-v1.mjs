@@ -862,6 +862,61 @@ function signerModeSignatureTable(signatureSpec, style, nilBorder, ruleBorder) {
   );
 }
 
+function repeatingSignatureRowText(row) {
+  const lowerLabel = row.label.toLowerCase();
+  if (lowerLabel === 'signature' || lowerLabel === 'signature line') {
+    return row.value || '______________________________';
+  }
+  if (lowerLabel === 'print name' || lowerLabel === 'name') {
+    return row.value || '_______________';
+  }
+  if (!row.value) {
+    return `${row.label}: _______________`;
+  }
+  return `${row.label}: ${row.value}`;
+}
+
+function repeatingStackedSignatureParagraphs(signatureSpec, style) {
+  if (!signatureSpec.repeat) {
+    throw new Error('cover-standard-signature-v1 stacked signer sections require repeat metadata');
+  }
+  if (signatureSpec.signers.length !== 1) {
+    throw new Error(
+      `cover-standard-signature-v1 repeat-backed stacked signer sections require exactly 1 signer prototype; received ${signatureSpec.signers.length}`
+    );
+  }
+
+  const signer = signatureSpec.signers[0];
+  const paragraphs = [
+    bodyParagraph(`{FOR ${signatureSpec.repeat.item_name} IN ${signatureSpec.repeat.collection_field}}`, style, {
+      size: 22,
+      after: 0,
+      terms: [],
+    }),
+  ];
+
+  signer.rows.forEach((row, index) => {
+    paragraphs.push(
+      bodyParagraph(repeatingSignatureRowText(row), style, {
+        size: 22,
+        before: index === 0 ? style.spacing.clause_heading_before : 0,
+        after: index === signer.rows.length - 1 ? style.spacing.body_after : 0,
+        terms: [],
+      })
+    );
+  });
+
+  paragraphs.push(
+    bodyParagraph(`{END-FOR ${signatureSpec.repeat.item_name}}`, style, {
+      size: 22,
+      after: style.spacing.body_after,
+      terms: [],
+    })
+  );
+
+  return paragraphs;
+}
+
 function renderMarkdown(spec) {
   const lines = [];
   const { document, sections } = spec;
@@ -933,6 +988,20 @@ function renderMarkdown(spec) {
       }
       lines.push('');
     }
+  } else if (
+    sections.signature.mode === 'signers' &&
+    sections.signature.arrangement === 'stacked' &&
+    sections.signature.repeat
+  ) {
+    const signer = sections.signature.signers[0];
+    lines.push(`{FOR ${sections.signature.repeat.item_name} IN ${sections.signature.repeat.collection_field}}`);
+    lines.push('');
+    for (const row of signer.rows) {
+      lines.push(repeatingSignatureRowText(row));
+      lines.push('');
+    }
+    lines.push(`{END-FOR ${sections.signature.repeat.item_name}}`);
+    lines.push('');
   } else if (sections.signature.mode === 'signers') {
     for (const signer of sections.signature.signers) {
       lines.push(`**${signer.label}**`);
@@ -979,11 +1048,15 @@ export function renderCoverStandardSignatureV1(spec, style) {
     return clauseParagraphs(idx + 1, clauseItem, style, { terms: termsForClause });
   });
 
-  const signatureTable = sections.signature.mode === 'two-party'
-    ? twoPartySignatureTable(sections.signature, style, nilBorder, ruleBorder)
-    : sections.signature.mode === 'signers'
-      ? signerModeSignatureTable(sections.signature, style, nilBorder, ruleBorder)
-    : onePartySignatureTable(sections.signature, style, nilBorder, ruleBorder);
+  const signatureContent = sections.signature.mode === 'two-party'
+    ? [twoPartySignatureTable(sections.signature, style, nilBorder, ruleBorder)]
+    : sections.signature.mode === 'signers' &&
+        sections.signature.arrangement === 'stacked' &&
+        sections.signature.repeat
+      ? repeatingStackedSignatureParagraphs(sections.signature, style)
+      : sections.signature.mode === 'signers'
+        ? [signerModeSignatureTable(sections.signature, style, nilBorder, ruleBorder)]
+        : [onePartySignatureTable(sections.signature, style, nilBorder, ruleBorder)];
 
   const doc = new Document({
     styles: buildDocumentStyles(style),
@@ -1025,11 +1098,11 @@ export function renderCoverStandardSignatureV1(spec, style) {
         document.version,
         [
           sectionTitleParagraph(sections.signature.heading_title, style),
-          bodyParagraph(sections.signature.preamble, style, {
+          ...bodyParagraphsFromText(sections.signature.preamble, style, {
             terms: [],
             size: 16,
           }),
-          signatureTable,
+          ...signatureContent,
         ],
         style,
         nilBorder
