@@ -313,7 +313,7 @@ describe('runList in-process coverage', () => {
     ]);
   });
 
-  itDiscovery.openspec('OA-TMP-032')('projects credits and derived_from onto internal and external templates; omits them on recipes', async () => {
+  itDiscovery.openspec('OA-TMP-039')('projects credits and derived_from onto internal and external templates; omits them on recipes', async () => {
     const harness = await loadListHarness({
       templateEntries: [
         { id: 'credited-template', dir: '/templates/credited-template', baseDir: '/templates' },
@@ -379,6 +379,12 @@ describe('runList in-process coverage', () => {
     expect(plainRecipe.credits).toBeUndefined();
     expect(plainRecipe.derived_from).toBeUndefined();
   });
+
+  itDiscovery.openspec('OA-TMP-036').skip('parse-time validation lives in the metadata loader; covered indirectly by list/fill flows that call loadMetadata, but a direct unit test is pending', () => {});
+
+  itDiscovery.openspec('OA-TMP-037').skip('default-empty-array behavior is enforced by the schema and exercised indirectly via list-command projection above; direct unit test is pending', () => {});
+
+  itDiscovery.openspec('OA-TMP-038').skip('invalid-role rejection is enforced by the metadata schema; a direct negative test is pending', () => {});
 
   itDiscovery('collects external and recipe metadata errors in non-strict JSON mode', async () => {
     const harness = await loadListHarness({
