@@ -50,6 +50,7 @@ function getSourceLabel(name, metadata) {
   // Fall back to source_url for non-prefixed OA templates
   const sourceUrl = String(metadata?.source_url || "").toLowerCase();
   if (
+    sourceUrl.includes("openagreements.org") ||
     sourceUrl.includes("openagreements.ai") ||
     sourceUrl.includes("github.com/open-agreements")
   ) {
@@ -64,7 +65,7 @@ function getSourceUrl(label) {
     Bonterms: "https://bonterms.com",
     NVCA: "https://nvca.org",
     "Y Combinator": "https://www.ycombinator.com/documents",
-    OpenAgreements: "https://openagreements.ai",
+    OpenAgreements: "https://openagreements.org",
   };
   return urls[label] || "#";
 }

@@ -7,7 +7,7 @@
  * See .github/workflows/ci.yml → deploy-allure job.
  *
  * The workflow uses OIDC (id-token: write) — no static secrets needed.
- * Push to main → CI deploys to https://tests.openagreements.ai
+ * Push to main → CI deploys to https://tests.openagreements.org
  *
  * To preview the report locally:
  *   npm run report:allure    # generates ./allure-report
@@ -16,7 +16,7 @@
 
 console.log("Allure report deployment is handled by CI via GitHub Pages.");
 console.log("");
-console.log("Push to main → CI auto-deploys to https://tests.openagreements.ai");
+console.log("Push to main → CI auto-deploys to https://tests.openagreements.org");
 console.log("");
 console.log("To preview locally:");
 console.log("  npm run report:allure");

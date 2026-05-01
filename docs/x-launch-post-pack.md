@@ -15,7 +15,7 @@ OpenAgreements is an open-source CLI + MCP that turns NDAs, contractor agreement
 
 
 ### First reply (all links)
-Website: https://openagreements.ai  
+Website: https://openagreements.org  
 GitHub: https://github.com/open-agreements/open-agreements  
 If you want a 60-second walkthrough, reply "demo".
 
@@ -33,7 +33,7 @@ AI-fluent builders: if you use Claude Code and hate contract busywork, OpenAgree
 If your workflow is Claude Code + terminal, OpenAgreements is an open-source CLI + MCP way to handle NDAs, contractor agreements, and other standard contracts in DOCX (Word format) without adding legal-tool overhead. 
 
 ### First reply
-Website: https://openagreements.ai  
+Website: https://openagreements.org  
 GitHub: https://github.com/open-agreements/open-agreements  
 If you want a 60-second walkthrough, reply "demo" or DM @StevenObiajulu.
 Built by @StevenObiajulu (MIT S.B. MechE '13; Harvard Law JD '18).
@@ -44,7 +44,7 @@ Built by @StevenObiajulu (MIT S.B. MechE '13; Harvard Law JD '18).
 Most builders do not want to become contract process managers. OpenAgreements is an open-source CLI + MCP workflow for turning standard agreements into signable DOCX (Word format), and it runs with Claude Code. Built by @StevenObiajulu.
 
 ### First reply
-Website: https://openagreements.ai  
+Website: https://openagreements.org  
 GitHub: https://github.com/open-agreements/open-agreements  
 Reply "demo" and I will share a short walkthrough.
 
@@ -54,7 +54,7 @@ Reply "demo" and I will share a short walkthrough.
 We built OpenAgreements for AI-fluent builders who want fewer contract headaches: open-source CLI + MCP, Claude Code-friendly, and focused on real agreement workflows in DOCX (Word format). Built by @StevenObiajulu.
 
 ### First reply
-Website: https://openagreements.ai  
+Website: https://openagreements.org  
 GitHub: https://github.com/open-agreements/open-agreements  
 Built with @team_handle.
 
@@ -72,7 +72,7 @@ If your workflow is Claude Code + terminal, OpenAgreements is an open-source CLI
 
 ### First reply
 
-Website + 60-second walkthrough: https://openagreements.ai
+Website + 60-second walkthrough: https://openagreements.org
 GitHub: https://github.com/open-agreements/open-agreements
 PRs and issues welcome — I respond quickly and can help with first contributions.
 Built by @StevenObiajulu (MIT S.B. MechE '13; Harvard Law J.D. '18).

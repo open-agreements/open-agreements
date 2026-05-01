@@ -160,7 +160,7 @@ function createMockReq(overrides: {
 } = {}) {
   return {
     method: overrides.method ?? 'POST',
-    headers: overrides.headers ?? { 'content-type': 'application/json', host: 'openagreements.ai' },
+    headers: overrides.headers ?? { 'content-type': 'application/json', host: 'openagreements.org' },
     body: overrides.body ?? {},
   };
 }
@@ -692,7 +692,7 @@ describe('MCP structured logging', () => {
     const req = createMockReq({
       headers: {
         'content-type': 'application/json',
-        host: 'openagreements.ai',
+        host: 'openagreements.org',
         'x-vercel-id': 'fra1::abc123',
       },
       body: { jsonrpc: '2.0', id: 7, method: 'tools/list', params: {} },
@@ -730,7 +730,7 @@ describe('MCP structured logging', () => {
     const req = createMockReq({
       headers: {
         'content-type': 'application/json',
-        host: 'openagreements.ai',
+        host: 'openagreements.org',
         'x-vercel-id': 'iad1::xyz789',
       },
       body: {
@@ -768,7 +768,7 @@ describe('MCP structured logging', () => {
     const req = createMockReq({
       headers: {
         'content-type': 'application/json',
-        host: 'openagreements.ai',
+        host: 'openagreements.org',
         authorization: `Bearer ${rawToken}`,
       },
       body: {
@@ -803,7 +803,7 @@ describe('MCP structured logging', () => {
     const req = createMockReq({
       headers: {
         'content-type': 'application/json',
-        host: 'openagreements.ai',
+        host: 'openagreements.org',
         // list_templates is not in AUTH_REQUIRED_TOOLS — verifyAuth is never called.
         authorization: 'Bearer harmless-but-should-not-be-logged',
       },
@@ -843,7 +843,7 @@ describe('MCP structured logging', () => {
     const cap = captureLogs();
     const req = createMockReq({
       // No x-vercel-id header.
-      headers: { 'content-type': 'application/json', host: 'openagreements.ai' },
+      headers: { 'content-type': 'application/json', host: 'openagreements.org' },
       body: { jsonrpc: '2.0', id: 15, method: 'tools/list', params: {} },
     });
     const res = createMockRes();

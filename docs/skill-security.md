@@ -47,7 +47,7 @@ Templates come from established legal industry sources:
 - **Bonterms** (bonterms.com) — CC0-1.0
 - **Y Combinator** (ycombinator.com) — CC-BY-ND-4.0
 - **NVCA** (nvca.org) — used with permission, SHA-256 integrity verification
-- **OpenAgreements** (openagreements.ai) — CC-BY-4.0
+- **OpenAgreements** (openagreements.org) — CC-BY-4.0
 
 All external templates include SHA-256 hash verification to detect tampering.
 
@@ -62,4 +62,4 @@ Our skills are listed on [skills.sh](https://skills.sh/open-agreements/open-agre
 
 ## Reporting security issues
 
-If you discover a security issue, please email security@openagreements.ai or open a GitHub issue.
+If you discover a security issue, please email security@openagreements.org or open a GitHub issue.
