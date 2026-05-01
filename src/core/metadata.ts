@@ -13,6 +13,7 @@ export interface FieldDefinition {
   name: string;
   type: FieldType;
   description: string;
+  display_label?: string;
   default?: string;
   default_value_rationale?: string;
   options?: string[];
@@ -25,6 +26,7 @@ export const FieldDefinitionSchema: z.ZodType<FieldDefinition> = z.lazy(() =>
     name: z.string(),
     type: FieldTypeEnum,
     description: z.string(),
+    display_label: z.string().optional(),
     default: z.string().optional(),
     default_value_rationale: z.string().optional(),
     options: z.array(z.string()).optional(),

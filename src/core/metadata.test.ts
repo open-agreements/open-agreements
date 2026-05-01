@@ -49,6 +49,20 @@ describe('FieldDefinitionSchema', () => {
     );
   });
 
+  it('accepts an optional display_label on fields', async () => {
+    await expectSafeParseOutcome(
+      'FieldDefinitionSchema',
+      FieldDefinitionSchema,
+      {
+        name: 'company_name',
+        type: 'string',
+        description: 'Company name',
+        display_label: 'Company Name',
+      },
+      true
+    );
+  });
+
   it.openspec('OA-TMP-028')('accepts an array field with nested item schema', async () => {
     await expectSafeParseOutcome(
       'FieldDefinitionSchema',

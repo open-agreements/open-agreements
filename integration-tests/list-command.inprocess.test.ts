@@ -21,9 +21,10 @@ interface TemplateMeta {
     name: string;
     type: string;
     description: string;
+    display_label?: string;
     section?: string;
     default?: string;
-    items?: Array<{ name: string; type: string; description: string; section?: string; default?: string }>;
+    items?: Array<{ name: string; type: string; description: string; display_label?: string; section?: string; default?: string }>;
   }>;
   priority_fields: string[];
   credits?: Array<{ name: string; role: string; profile_url?: string }>;
@@ -66,7 +67,7 @@ const itDiscovery = itAllure.epic('Discovery & Metadata');
 
 function baseFields() {
   return [
-    { name: 'company_name', type: 'string', description: 'Company legal name' },
+    { name: 'company_name', type: 'string', description: 'Company legal name', display_label: 'Company Name' },
     { name: 'effective_date', type: 'date', description: 'Effective date', default: '2026-02-12' },
   ];
 }
@@ -211,6 +212,7 @@ describe('runList in-process coverage', () => {
 
     expect(zTemplate.fields[0]).toMatchObject({
       name: 'company_name',
+      display_label: 'Company Name',
       required: true,
       section: null,
       default: null,
@@ -220,6 +222,7 @@ describe('runList in-process coverage', () => {
       required: false,
       default: '2026-02-12',
     });
+    expect(zTemplate.fields[1]).not.toHaveProperty('display_label');
   });
 
   itDiscovery.openspec('OA-CLI-013')('exits non-zero in --json-strict mode when metadata loading fails', async () => {
@@ -311,6 +314,8 @@ describe('runList in-process coverage', () => {
         default_value_rationale: null,
       },
     ]);
+    expect(template.fields[0].items[0]).not.toHaveProperty('display_label');
+    expect(template.fields[0].items[1]).not.toHaveProperty('display_label');
   });
 
   itDiscovery.openspec('OA-TMP-039')('projects credits and derived_from onto internal and external templates; omits them on recipes', async () => {
