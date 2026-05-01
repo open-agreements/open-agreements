@@ -33,7 +33,7 @@ interface TemplateField {
   required: boolean;
   section: string | null;
   description: string;
-  display_label?: string | null;
+  display_label?: string;
   default: string | null;
   default_value_rationale?: string | null;
   items?: TemplateField[];

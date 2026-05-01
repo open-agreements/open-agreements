@@ -12276,7 +12276,6 @@
           "required": false,
           "section": "AI Analysis",
           "description": "Employee role classification under Wyo. Stat. section 1-23-108. AI-only field that drives memo warnings. Not shown in the output document.",
-          "display_label": "Worker Category",
           "default": null,
           "default_value_rationale": null
         },
@@ -12286,7 +12285,6 @@
           "required": false,
           "section": "AI Analysis",
           "description": "Wyoming restriction pathway(s) under Wyo. Stat. section 1-23-108. AI-only field that drives memo warnings and conditional gating. Not shown in the output document. Options: Executive or Management Personnel, Trade Secret Protection, None.",
-          "display_label": "Restriction Pathways",
           "default": "None",
           "default_value_rationale": null
         },
@@ -12496,7 +12494,6 @@
           "required": false,
           "section": "Document Management",
           "description": "Internal computed footer text for document-system traceability",
-          "display_label": "Cloud Drive ID Footer",
           "default": "",
           "default_value_rationale": null
         }

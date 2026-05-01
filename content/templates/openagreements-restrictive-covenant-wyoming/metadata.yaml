@@ -51,7 +51,6 @@ fields:
     description: >-
       Employee role classification under Wyo. Stat. section 1-23-108.
       AI-only field that drives memo warnings. Not shown in the output document.
-    display_label: Worker Category
     options:
       - Executive
       - Management
@@ -66,7 +65,6 @@ fields:
       AI-only field that drives memo warnings and conditional gating.
       Not shown in the output document. Options: Executive or Management
       Personnel, Trade Secret Protection, None.
-    display_label: Restriction Pathways
     default: None
     section: AI Analysis
 
@@ -256,7 +254,6 @@ fields:
   - name: cloud_drive_id_footer
     type: string
     description: Internal computed footer text for document-system traceability
-    display_label: Cloud Drive ID Footer
     default: ''
     section: Document Management
 priority_fields:
