@@ -136,5 +136,4 @@ Date: _______________
 
 Signature: _______________
 Print Name: {employee_name}
-Title: _______________
 Date: _______________
