@@ -157,3 +157,52 @@ export function standardTermsParagraphs(
 
   return matches;
 }
+
+export function sectionNodesAfterHeading(documentXml: string, headingText: string): Element[] {
+  const doc = new DOMParser().parseFromString(documentXml, 'text/xml');
+  const bodyNodes = doc.getElementsByTagNameNS(W_NS, 'body');
+  if (bodyNodes.length === 0) {
+    throw new Error('word/body missing');
+  }
+
+  const body = bodyNodes[0];
+  let inSection = false;
+  const matches: Element[] = [];
+
+  for (let i = 0; i < body.childNodes.length; i += 1) {
+    const node = body.childNodes[i] as Element;
+    if (!node || node.nodeType !== 1 || node.namespaceURI !== W_NS) {
+      continue;
+    }
+
+    if (node.localName === 'p' && paragraphText(node) === headingText) {
+      inSection = true;
+      continue;
+    }
+    if (!inSection) {
+      continue;
+    }
+    if (node.localName === 'sectPr') {
+      break;
+    }
+
+    matches.push(node);
+  }
+
+  return matches;
+}
+
+export function nodeText(node: Element): string {
+  const textNodes = node.getElementsByTagNameNS(W_NS, 't');
+  let text = '';
+  for (let i = 0; i < textNodes.length; i += 1) {
+    text += textNodes[i].textContent ?? '';
+  }
+  return text.trim();
+}
+
+export function tableTextsAfterHeading(documentXml: string, headingText: string): string[] {
+  return sectionNodesAfterHeading(documentXml, headingText)
+    .filter((node) => node.localName === 'tbl')
+    .map((node) => nodeText(node));
+}

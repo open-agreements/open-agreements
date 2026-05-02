@@ -705,13 +705,9 @@ function signatureSpacerCell(nilBorder) {
   });
 }
 
-function signerFieldMap(signer) {
-  return new Map(signer.rows.map((row) => [row.id, row]));
-}
-
-// Shared shell for the 4-column dual-party signature table used by both
-// `signers`-mode and the legacy `two-party` mode. Callers normalize their
-// inputs into `{ leftHeader, rightHeader, rows }` where each row is
+// Shared shell for the 4-column dual-party signature table used by the legacy
+// `two-party` mode. Callers normalize inputs into `{ leftHeader, rightHeader, rows }`
+// where each row is
 // `{ label, hint?, leftValue, rightValue, leftLined?, rightLined? }`.
 function dualPartySignatureTable({ leftHeader, rightHeader, rows }, style, nilBorder, ruleBorder) {
   return new Table({
@@ -802,64 +798,70 @@ function onePartySignatureTable(signatureSpec, style, nilBorder, ruleBorder) {
   });
 }
 
-function signerModeSignatureTable(signatureSpec, style, nilBorder, ruleBorder) {
+function signerHasRowId(signer, rowId) {
+  return signer.rows.some((row) => row.id === rowId);
+}
+
+function validateSignerModeArrangement(signatureSpec) {
+  if (signatureSpec.arrangement !== 'entity-plus-individual') {
+    return;
+  }
+
   if (signatureSpec.signers.length !== 2) {
     throw new Error(
-      `cover-standard-signature-v1 requires exactly 2 signers for mode=signers; received ${signatureSpec.signers.length}`
+      `cover-standard-signature-v1 requires exactly 2 signers for arrangement=entity-plus-individual; received ${signatureSpec.signers.length}`
     );
   }
 
-  const [leftSigner, rightSigner] = signatureSpec.signers;
-  const leftRows = signerFieldMap(leftSigner);
-  const rightRows = signerFieldMap(rightSigner);
-  const rowIds = [];
-
-  for (const signer of signatureSpec.signers) {
-    for (const row of signer.rows) {
-      if (!rowIds.includes(row.id)) {
-        rowIds.push(row.id);
-      }
-    }
+  const [entitySigner, individualSigner] = signatureSpec.signers;
+  if (entitySigner.kind !== 'entity') {
+    throw new Error(
+      `cover-standard-signature-v1 arrangement=entity-plus-individual requires signer "${entitySigner.id}" to have kind=entity`
+    );
   }
-
-  for (const rowId of rowIds) {
-    const leftRow = leftRows.get(rowId);
-    const rightRow = rightRows.get(rowId);
-    if (leftRow && rightRow) {
-      if (leftRow.label !== rightRow.label) {
-        throw new Error(
-          `Signer row "${rowId}" has mismatched labels: "${leftSigner.id}" → "${leftRow.label}", "${rightSigner.id}" → "${rightRow.label}"`
-        );
-      }
-      if ((leftRow.hint ?? '') !== (rightRow.hint ?? '')) {
-        throw new Error(
-          `Signer row "${rowId}" has mismatched hints: "${leftSigner.id}" → "${leftRow.hint ?? ''}", "${rightSigner.id}" → "${rightRow.hint ?? ''}"`
-        );
-      }
-    }
+  if (individualSigner.kind !== 'individual' && individualSigner.kind !== 'acknowledging-individual') {
+    throw new Error(
+      `cover-standard-signature-v1 arrangement=entity-plus-individual requires signer "${individualSigner.id}" to have kind=individual or kind=acknowledging-individual`
+    );
   }
+  if (signerHasRowId(individualSigner, 'title')) {
+    throw new Error(
+      `cover-standard-signature-v1 arrangement=entity-plus-individual requires signer "${individualSigner.id}" to omit the Title row`
+    );
+  }
+}
 
-  return dualPartySignatureTable(
+function signerTableFromSigner(signer, style, nilBorder, ruleBorder) {
+  return onePartySignatureTable(
     {
-      leftHeader: leftSigner.label,
-      rightHeader: rightSigner.label,
-      rows: rowIds.map((rowId) => {
-        const leftRow = leftRows.get(rowId);
-        const rightRow = rightRows.get(rowId);
-        return {
-          label: leftRow?.label ?? rightRow?.label ?? rowId,
-          hint: leftRow?.hint ?? rightRow?.hint,
-          leftValue: leftRow?.value,
-          rightValue: rightRow?.value,
-          leftLined: Boolean(leftRow),
-          rightLined: Boolean(rightRow),
-        };
-      }),
+      party: signer.label,
+      rows: signer.rows.map((row) => ({
+        label: row.label,
+        hint: row.hint,
+        value: row.value,
+      })),
     },
     style,
     nilBorder,
     ruleBorder
   );
+}
+
+function signerTableSpacer(style) {
+  return new Paragraph({
+    spacing: { before: 0, after: style.spacing.body_after, line: style.spacing.line },
+    children: [new TextRun({ text: '' })],
+  });
+}
+
+function signerModeSignatureChildren(signatureSpec, style, nilBorder, ruleBorder) {
+  validateSignerModeArrangement(signatureSpec);
+
+  return signatureSpec.signers.flatMap((signer, index) => (
+    index === 0
+      ? [signerTableFromSigner(signer, style, nilBorder, ruleBorder)]
+      : [signerTableSpacer(style), signerTableFromSigner(signer, style, nilBorder, ruleBorder)]
+  ));
 }
 
 function renderMarkdown(spec) {
@@ -934,6 +936,7 @@ function renderMarkdown(spec) {
       lines.push('');
     }
   } else if (sections.signature.mode === 'signers') {
+    validateSignerModeArrangement(sections.signature);
     for (const signer of sections.signature.signers) {
       lines.push(`**${signer.label}**`);
       lines.push('');
@@ -979,11 +982,11 @@ export function renderCoverStandardSignatureV1(spec, style) {
     return clauseParagraphs(idx + 1, clauseItem, style, { terms: termsForClause });
   });
 
-  const signatureTable = sections.signature.mode === 'two-party'
-    ? twoPartySignatureTable(sections.signature, style, nilBorder, ruleBorder)
+  const signatureChildren = sections.signature.mode === 'two-party'
+    ? [twoPartySignatureTable(sections.signature, style, nilBorder, ruleBorder)]
     : sections.signature.mode === 'signers'
-      ? signerModeSignatureTable(sections.signature, style, nilBorder, ruleBorder)
-    : onePartySignatureTable(sections.signature, style, nilBorder, ruleBorder);
+      ? signerModeSignatureChildren(sections.signature, style, nilBorder, ruleBorder)
+      : [onePartySignatureTable(sections.signature, style, nilBorder, ruleBorder)];
 
   const doc = new Document({
     styles: buildDocumentStyles(style),
@@ -1029,7 +1032,7 @@ export function renderCoverStandardSignatureV1(spec, style) {
             terms: [],
             size: 16,
           }),
-          signatureTable,
+          ...signatureChildren,
         ],
         style,
         nilBorder

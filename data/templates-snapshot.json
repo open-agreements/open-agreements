@@ -7014,7 +7014,7 @@
       "category": "confidentiality",
       "description": "A one-way (unilateral) non-disclosure agreement cover page based on Common Paper's standard terms. The Discloser shares confidential information with the Receiver, but not vice versa. References the Standard Terms posted at commonpaper.com.",
       "license": "CC-BY-4.0",
-      "source_url": "https://commonpaper.com/standards/one-way-nda/1.0",
+      "source_url": "https://commonpaper.com/standards/one-way-nda",
       "source": "Common Paper",
       "attribution_text": "Based on the Common Paper One-Way NDA, available at https://commonpaper.com. Licensed under CC BY 4.0. Copyright Common Paper, Inc.",
       "allow_derivatives": true,
@@ -11830,344 +11830,13 @@
       ]
     },
     {
-      "name": "openagreements-due-diligence-request-list",
-      "tier": "internal",
-      "display_name": "OpenAgreements Legal Due Diligence Request List",
-      "category": "deals-partnerships",
-      "description": "Modular legal due diligence request list (DDRL) for corporate transactions. Ships a base form covering organization, capitalization, contracts, IP, employment, litigation, compliance, tax, insurance, debt, property, and privacy/cybersecurity. Four optional industry riders gate via boolean toggles: tech / SaaS, life sciences, healthcare provider, and cross-border / trade compliance. Drafted clean-room from public-source consensus across 15 Am Law firm, bar association, and legal publisher DDRLs; no public source language is reused. Includes per-section AI-augmentable arrays so AI workflows can append target-specific custom questions to any rider.",
-      "license": "CC-BY-4.0",
-      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-due-diligence-request-list",
-      "source": "OpenAgreements",
-      "attribution_text": "Authored by OpenAgreements contributors. Category structure and consensus framing informed by publicly available DDRLs and commentary from Cooley, Skadden, Morgan Lewis, Gunderson Dettmer, Lowenstein Sandler, Holland & Knight, Foley & Lardner, Software Equity Group, the International Bar Association, the American Bar Association, Bass Berry & Sims, and Carta. See practice note for sources. Drafted clean-room; no source language was reused. Licensed under CC BY 4.0.",
-      "allow_derivatives": true,
-      "credits": [],
-      "fields": [
-        {
-          "name": "requesting_firm_name",
-          "type": "string",
-          "required": true,
-          "section": "Cover Sheet",
-          "description": "Legal name of the buyer's law firm sending the request",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "target_company_name",
-          "type": "string",
-          "required": true,
-          "section": "Cover Sheet",
-          "description": "Legal name of the target company receiving the request",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "project_code_name",
-          "type": "string",
-          "required": false,
-          "section": "Cover Sheet",
-          "description": "Project code name or pseudonym used to refer to the transaction",
-          "default": "",
-          "default_value_rationale": null
-        },
-        {
-          "name": "request_date",
-          "type": "date",
-          "required": false,
-          "section": "Cover Sheet",
-          "description": "Date the request list is delivered to the target",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "response_due_date",
-          "type": "date",
-          "required": false,
-          "section": "Cover Sheet",
-          "description": "Date by which the target's first-round response is due",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "lead_buyer_counsel_name",
-          "type": "string",
-          "required": false,
-          "section": "Cover Sheet",
-          "description": "Name of the lead attorney at the requesting firm",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "lead_buyer_counsel_email",
-          "type": "string",
-          "required": false,
-          "section": "Cover Sheet",
-          "description": "Email of the lead attorney at the requesting firm",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "primary_target_contact_name",
-          "type": "string",
-          "required": false,
-          "section": "Cover Sheet",
-          "description": "Name of the target's primary point of contact for diligence responses",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "currency",
-          "type": "enum",
-          "required": false,
-          "section": "Cover Sheet",
-          "description": "Currency for materiality and financial threshold inputs",
-          "default": "USD",
-          "default_value_rationale": null
-        },
-        {
-          "name": "data_room_url",
-          "type": "string",
-          "required": false,
-          "section": "Cover Sheet",
-          "description": "URL of the virtual data room (optional; included in cover-sheet instructions if provided)",
-          "default": "",
-          "default_value_rationale": null
-        },
-        {
-          "name": "materiality_threshold_usd",
-          "type": "string",
-          "required": true,
-          "section": "Materiality and Lookback",
-          "description": "Dollar floor for material-contracts requests. Stored as a pre-formatted string (e.g., \"$100,000\") because the fill engine has no currency formatter. Adjust upward for larger deals, downward for early-stage targets.",
-          "default": "$100,000",
-          "default_value_rationale": "$100,000 is the consensus dollar floor for mid-market deals across public DDRLs (Cooley, Skadden, Bloomberg). Tune up for larger targets (e.g., \"$1,000,000\" for $100M+ deals) or down for early-stage."
-        },
-        {
-          "name": "materiality_threshold_revenue_pct",
-          "type": "string",
-          "required": false,
-          "section": "Materiality and Lookback",
-          "description": "Relative materiality threshold expressed as a percentage of gross revenue. The lower of dollar floor and revenue percentage governs. Stored as a pre-formatted string for consistency with the dollar threshold.",
-          "default": "5%",
-          "default_value_rationale": "5% of gross revenue is the consensus relative-materiality qualifier in BigLaw practice. Tune down for asset-light targets where individual contract size is small but each one is operationally critical."
-        },
-        {
-          "name": "lookback_years",
-          "type": "number",
-          "required": true,
-          "section": "Materiality and Lookback",
-          "description": "Default lookback window in years for litigation, compliance, and operational history. Per-category overrides may extend specific sections.",
-          "default": "3",
-          "default_value_rationale": "3 years is consensus baseline for litigation, compliance, and operational history. Tax often warrants 6+ to mirror IRS statute of limitations; regulatory correspondence is conventionally open-ended."
-        },
-        {
-          "name": "litigation_lookback_years",
-          "type": "number",
-          "required": false,
-          "section": "Materiality and Lookback",
-          "description": "Optional per-category override for the litigation lookback window. If blank, falls through to lookback_years. 5 years is appropriate for regulated targets or where prior litigation revealed systemic process failures.",
-          "default": "",
-          "default_value_rationale": null
-        },
-        {
-          "name": "tax_lookback_years",
-          "type": "number",
-          "required": false,
-          "section": "Materiality and Lookback",
-          "description": "Optional per-category override for the tax lookback window. If blank, falls through to lookback_years. 6 years mirrors the IRS substantial- omission statute of limitations and is the safe default for most deals.",
-          "default": "",
-          "default_value_rationale": null
-        },
-        {
-          "name": "compliance_lookback_years",
-          "type": "number",
-          "required": false,
-          "section": "Materiality and Lookback",
-          "description": "Optional per-category override for routine compliance certifications. Regulatory correspondence regarding investigations, settlements, and consent decrees should be requested open-ended regardless of this value.",
-          "default": "",
-          "default_value_rationale": null
-        },
-        {
-          "name": "deal_type",
-          "type": "enum",
-          "required": true,
-          "section": "Deal Type",
-          "description": "Type of transaction the DDRL supports",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "transaction_stage",
-          "type": "enum",
-          "required": true,
-          "section": "Deal Type",
-          "description": "Stage of the transaction. Pre-LOI uses lighter scope; post-LOI uses the full base form plus all triggered riders.",
-          "default": "post_loi_pre_signing",
-          "default_value_rationale": null
-        },
-        {
-          "name": "tech_rider_enabled",
-          "type": "boolean",
-          "required": true,
-          "section": "Industry Riders",
-          "description": "Enable Section O (Tech / SaaS rider) covering OSS schedules with copyleft flagging, source-code escrow, hosted-services agreements, SOC 2 / ISO 27001 audits, data-flow architecture, SLAs, security- incident history, and cloud-agreement change-of-control. Recommended on for software, SaaS, platform, marketplace, or data-heavy targets.",
-          "default": "false",
-          "default_value_rationale": null
-        },
-        {
-          "name": "life_sciences_rider_enabled",
-          "type": "boolean",
-          "required": true,
-          "section": "Industry Riders",
-          "description": "Enable Section P (Life Sciences rider) covering FDA correspondence, clinical trials, CRO agreements, Form 483s, Warning Letters, CIA, and controlled-substance registrations. Recommended on for biotech, pharma, medical-device, and diagnostics targets with FDA-regulated pipelines.",
-          "default": "false",
-          "default_value_rationale": null
-        },
-        {
-          "name": "healthcare_provider_rider_enabled",
-          "type": "boolean",
-          "required": true,
-          "section": "Industry Riders",
-          "description": "Enable Section Q (Healthcare Provider rider) covering HIPAA breach logs, billing/coding compliance, payer audits, malpractice claims, and Anti-Kickback / Stark / Sunshine Act compliance. Recommended on for clinics, hospitals, physician groups, and telehealth providers with payer-reimbursement exposure.",
-          "default": "false",
-          "default_value_rationale": null
-        },
-        {
-          "name": "cross_border_rider_enabled",
-          "type": "boolean",
-          "required": true,
-          "section": "Industry Riders",
-          "description": "Enable Section R (Cross-Border / Trade Compliance rider) covering sanctions/OFAC screening, export-control classifications, AML/KYC, FCPA compliance, government-customer exposure, and foreign-investment- screening filings. Recommended on whenever the target has foreign subsidiaries, foreign customers, government customers, or sensitive- jurisdiction exposure. Increasingly mandatory after the 2023 DOJ M&A Safe Harbor Policy.",
-          "default": "false",
-          "default_value_rationale": null
-        },
-        {
-          "name": "countries_of_operation",
-          "type": "string",
-          "required": false,
-          "section": "Cross-Border Specifics",
-          "description": "Comma-separated list of countries where the target operates, sells, or has employees. Optional; populated when the cross-border rider is enabled to focus the request on specific jurisdictions.",
-          "default": "",
-          "default_value_rationale": null
-        },
-        {
-          "name": "government_customer_exposure",
-          "type": "boolean",
-          "required": false,
-          "section": "Cross-Border Specifics",
-          "description": "Set true if the target has government customers (federal, state, local, or foreign) where flow-down compliance obligations may apply. When true, additional government-contracts requests render in Section R.",
-          "default": "false",
-          "default_value_rationale": null
-        },
-        {
-          "name": "additional_questions_tech",
-          "type": "array",
-          "required": false,
-          "section": "AI Augmentation",
-          "description": "AI-augmentable list of target-specific custom questions appended to the Tech / SaaS rider. Each item is an object with a `question` field. Empty by default. Renders only when tech_rider_enabled is true.",
-          "default": "[]",
-          "default_value_rationale": null,
-          "items": [
-            {
-              "name": "question",
-              "type": "string",
-              "required": false,
-              "section": null,
-              "description": "The custom question text to render in Section O",
-              "default": null,
-              "default_value_rationale": null
-            }
-          ]
-        },
-        {
-          "name": "additional_questions_life_sciences",
-          "type": "array",
-          "required": false,
-          "section": "AI Augmentation",
-          "description": "AI-augmentable list of target-specific custom questions appended to the Life Sciences rider. Empty by default. Renders only when life_sciences_rider_enabled is true.",
-          "default": "[]",
-          "default_value_rationale": null,
-          "items": [
-            {
-              "name": "question",
-              "type": "string",
-              "required": false,
-              "section": null,
-              "description": "The custom question text to render in Section P",
-              "default": null,
-              "default_value_rationale": null
-            }
-          ]
-        },
-        {
-          "name": "additional_questions_healthcare_provider",
-          "type": "array",
-          "required": false,
-          "section": "AI Augmentation",
-          "description": "AI-augmentable list of target-specific custom questions appended to the Healthcare Provider rider. Empty by default. Renders only when healthcare_provider_rider_enabled is true.",
-          "default": "[]",
-          "default_value_rationale": null,
-          "items": [
-            {
-              "name": "question",
-              "type": "string",
-              "required": false,
-              "section": null,
-              "description": "The custom question text to render in Section Q",
-              "default": null,
-              "default_value_rationale": null
-            }
-          ]
-        },
-        {
-          "name": "additional_questions_cross_border",
-          "type": "array",
-          "required": false,
-          "section": "AI Augmentation",
-          "description": "AI-augmentable list of target-specific custom questions appended to the Cross-Border / Trade Compliance rider. Empty by default. Renders only when cross_border_rider_enabled is true.",
-          "default": "[]",
-          "default_value_rationale": null,
-          "items": [
-            {
-              "name": "question",
-              "type": "string",
-              "required": false,
-              "section": null,
-              "description": "The custom question text to render in Section R",
-              "default": null,
-              "default_value_rationale": null
-            }
-          ]
-        },
-        {
-          "name": "additional_questions_general",
-          "type": "array",
-          "required": false,
-          "section": "AI Augmentation",
-          "description": "AI-augmentable list of cross-cutting custom questions that do not belong to any specific rider. Renders at the end of the closing Response Protocol section. Empty by default.",
-          "default": "[]",
-          "default_value_rationale": null,
-          "items": [
-            {
-              "name": "question",
-              "type": "string",
-              "required": false,
-              "section": null,
-              "description": "The custom question text to render at end of document",
-              "default": null,
-              "default_value_rationale": null
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "openagreements-employee-ip-inventions-assignment",
       "tier": "internal",
       "display_name": "OpenAgreements Employee IP and Inventions Assignment",
       "category": "employment",
       "description": "Employee proprietary information and inventions assignment agreement with explicit prior-inventions and personal-project carveout language placeholders.",
       "license": "CC-BY-4.0",
-      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-employee-ip-inventions-assignment",
+      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-employee-ip-inventions-assignment",
       "source": "OpenAgreements",
       "attribution_text": "Authored by OpenAgreements contributors. Baseline structure inspired by permissive public references including the Balanced Employee IP Agreement (CC0) and Papertrail legal-docs (CC0). Licensed under CC BY 4.0.",
       "allow_derivatives": true,
@@ -12290,7 +11959,7 @@
       "category": "employment",
       "description": "Employee confidentiality and acceptable-use acknowledgement companion for onboarding packets, including reporting and post-employment handling.",
       "license": "CC-BY-4.0",
-      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-employment-confidentiality-acknowledgement",
+      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-employment-confidentiality-acknowledgement",
       "source": "OpenAgreements",
       "attribution_text": "Authored by OpenAgreements contributors using permissive public reference patterns from Papertrail legal-docs (CC0) and open policy frameworks. Licensed under CC BY 4.0.",
       "allow_derivatives": true,
@@ -12404,7 +12073,7 @@
       "category": "employment",
       "description": "A startup-focused employment offer letter template for full-time or part-time hiring with compensation, equity summary, and at-will framing.",
       "license": "CC-BY-4.0",
-      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-employment-offer-letter",
+      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-employment-offer-letter",
       "source": "OpenAgreements",
       "attribution_text": "Authored by OpenAgreements contributors. Drafting structure informed by publicly available permissive sources including the DocuSign template library (MIT) and Papertrail legal-docs (CC0). Licensed under CC BY 4.0.",
       "allow_derivatives": true,
@@ -12545,7 +12214,7 @@
       "category": "employment",
       "description": "Wyoming-specific employee restrictive covenant agreement with modular covenant structure (non-compete, non-solicitation, non-dealing, non-investment, confidentiality, non-disparagement). Incorporates Wyo. Stat. section 1-23-108 (SF 107, 2025) pathway gating for non-compete-adjacent covenants. Drafted as a starting point for licensed counsel review.",
       "license": "CC-BY-4.0",
-      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-restrictive-covenant-wyoming",
+      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-restrictive-covenant-wyoming",
       "source": "OpenAgreements",
       "attribution_text": "Authored by OpenAgreements contributors. Wyoming-specific analysis informed by publicly available commentary from Am Law firms including Ogletree Deakins, Fisher Phillips, Littler Mendelson, Foley & Lardner, Faegre Drinker, and Vinson & Elkins. See practice note for sources. Licensed under CC BY 4.0.",
       "allow_derivatives": true,
@@ -12557,6 +12226,7 @@
           "required": true,
           "section": "Parties",
           "description": "Legal name of the employer",
+          "display_label": "Employer",
           "default": null,
           "default_value_rationale": null
         },
@@ -12566,6 +12236,7 @@
           "required": true,
           "section": "Parties",
           "description": "Full legal name of the employee",
+          "display_label": "Employee",
           "default": null,
           "default_value_rationale": null
         },
@@ -12575,6 +12246,7 @@
           "required": false,
           "section": "Parties",
           "description": "Employee job title or position (optional)",
+          "display_label": "Employee Title / Position",
           "default": "",
           "default_value_rationale": null
         },
@@ -12584,6 +12256,7 @@
           "required": false,
           "section": "Timing",
           "description": "Effective date of this agreement",
+          "display_label": "Effective Date",
           "default": null,
           "default_value_rationale": null
         },
@@ -12593,6 +12266,7 @@
           "required": false,
           "section": "Legal",
           "description": "Governing law state",
+          "display_label": "Governing Law",
           "default": "Wyoming",
           "default_value_rationale": null
         },
@@ -12620,6 +12294,7 @@
           "required": false,
           "section": "Confidentiality",
           "description": "Duration of confidentiality obligations for trade secrets",
+          "display_label": "Trade Secrets Duration",
           "default": "Perpetual",
           "default_value_rationale": null
         },
@@ -12629,6 +12304,7 @@
           "required": false,
           "section": "Confidentiality",
           "description": "Duration of confidentiality obligations for non-trade-secret information",
+          "display_label": "Other Confidential Information Duration",
           "default": "24 months",
           "default_value_rationale": "24 months is common for non-trade-secret confidentiality obligations in employment agreements."
         },
@@ -12638,6 +12314,7 @@
           "required": false,
           "section": "Employee Non-Solicitation",
           "description": "Whether the employee non-solicitation covenant is included",
+          "display_label": "Employee Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
         },
@@ -12647,6 +12324,7 @@
           "required": false,
           "section": "Employee Non-Solicitation",
           "description": "Duration of employee non-solicitation restriction",
+          "display_label": "Employee Non-Solicitation Duration",
           "default": "12 months",
           "default_value_rationale": "12 months is the most common enforceable duration. Mayer Brown guidance states 1-2 years is the outer range of reasonableness."
         },
@@ -12656,6 +12334,7 @@
           "required": false,
           "section": "Employee Non-Solicitation",
           "description": "Lookback period for determining which employees are covered by the non-solicitation restriction.",
+          "display_label": "Covered Employee Period",
           "default": "12 months",
           "default_value_rationale": "12 months is the most common lookback period for employee non-solicitation scope."
         },
@@ -12665,6 +12344,7 @@
           "required": false,
           "section": "Customer Non-Solicitation",
           "description": "Whether the customer/partner non-solicitation covenant is included",
+          "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
         },
@@ -12674,6 +12354,7 @@
           "required": false,
           "section": "Customer Non-Solicitation",
           "description": "Duration of customer/partner non-solicitation restriction",
+          "display_label": "Customer Non-Solicitation Duration",
           "default": "12 months",
           "default_value_rationale": "12 months is the most common enforceable duration. Compass Minerals uses 12 months for non-CEO employees and 24 months for CEO."
         },
@@ -12683,6 +12364,7 @@
           "required": false,
           "section": "Customer Non-Solicitation",
           "description": "Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.",
+          "display_label": "Covered Customer Period",
           "default": "12 months",
           "default_value_rationale": "12 months is the most common lookback period for customer non-solicitation scope."
         },
@@ -12692,6 +12374,7 @@
           "required": false,
           "section": "Non-Competition",
           "description": "Whether the non-competition covenant is included. Requires a lawful restriction pathway under Wyo. Stat. section 1-23-108.",
+          "display_label": "Non-Competition Included",
           "default": "false",
           "default_value_rationale": "Wyo. Stat. section 1-23-108 voids most non-compete covenants. The drafter must affirmatively include this covenant only when a statutory pathway applies."
         },
@@ -12701,6 +12384,7 @@
           "required": false,
           "section": "Non-Competition",
           "description": "Duration of non-competition restriction",
+          "display_label": "Non-Competition Duration",
           "default": "12 months",
           "default_value_rationale": "12 months is the most common enforceable duration. Hassler v. Circle C Resources (2022 WY 28) struck down a 24-month provision with broad scope. No Wyoming court has upheld a non-compete exceeding 24 months."
         },
@@ -12710,6 +12394,7 @@
           "required": false,
           "section": "Non-Competition",
           "description": "Geographic scope of the non-competition restriction",
+          "display_label": "Restricted Territory",
           "default": "the geographic area in which Employee provided services",
           "default_value_rationale": "Tied to the employee's actual service area. Narrower scope improves enforceability under Wyoming's strict scrutiny."
         },
@@ -12719,6 +12404,7 @@
           "required": false,
           "section": "Non-Competition",
           "description": "Description of the business activities that constitute competition with the employer.",
+          "display_label": "Competitive Business",
           "default": null,
           "default_value_rationale": null
         },
@@ -12728,6 +12414,7 @@
           "required": false,
           "section": "Non-Competition",
           "description": "Optional named list of specific competitors. Narrowing the restriction to named competitors strengthens enforceability.",
+          "display_label": "Specified Competitors",
           "default": "",
           "default_value_rationale": null
         },
@@ -12737,6 +12424,7 @@
           "required": false,
           "section": "No Business with Covered Customers",
           "description": "Whether the no-business-with-covered-customers covenant is included. Requires a lawful restriction pathway under Wyo. Stat. section 1-23-108.",
+          "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
         },
@@ -12746,6 +12434,7 @@
           "required": false,
           "section": "No Business with Covered Customers",
           "description": "Duration of the no-business-with-covered-customers restriction",
+          "display_label": "No Business with Covered Customers Duration",
           "default": "12 months",
           "default_value_rationale": null
         },
@@ -12755,6 +12444,7 @@
           "required": false,
           "section": "Definitions",
           "description": "Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.",
+          "display_label": "Passive Public Holdings Threshold",
           "default": "five percent",
           "default_value_rationale": "Five percent of any class of publicly traded securities is the standard passive investment carveout across Fortune 500 restrictive covenant agreements."
         },
@@ -12764,6 +12454,7 @@
           "required": false,
           "section": "Non-Investment",
           "description": "Whether the non-investment covenant is included. Requires a lawful restriction pathway under Wyo. Stat. section 1-23-108.",
+          "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
         },
@@ -12773,6 +12464,7 @@
           "required": false,
           "section": "Non-Investment",
           "description": "Duration of non-investment restriction",
+          "display_label": "Non-Investment Duration",
           "default": "12 months",
           "default_value_rationale": null
         },
@@ -12782,6 +12474,7 @@
           "required": false,
           "section": "Non-Disparagement",
           "description": "Duration of non-disparagement obligation (measured from termination)",
+          "display_label": "Non-Disparagement Duration",
           "default": "24 months",
           "default_value_rationale": "24 months is common for employment non-disparagement provisions."
         },
@@ -12791,6 +12484,7 @@
           "required": false,
           "section": "Document Management",
           "description": "Optional document-system URI or file ID for execution copy traceability",
+          "display_label": "Cloud Drive ID",
           "default": null,
           "default_value_rationale": null
         },
