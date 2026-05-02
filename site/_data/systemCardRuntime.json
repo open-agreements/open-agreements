@@ -2,7 +2,7 @@
   "schema_version": 1,
   "runtime_source": "build-metadata",
   "metrics_available": false,
-  "generated_at_utc": "2026-05-01T14:21:49.651Z",
+  "generated_at_utc": "2026-05-02T23:44:57.582Z",
   "report_url": "https://tests.openagreements.org",
   "status": "unknown",
   "stats": {
@@ -15,10 +15,10 @@
     "pass_rate_percent": 0
   },
   "run": {
-    "created_at_utc": "2026-05-01T14:21:49.651Z",
+    "created_at_utc": "2026-05-02T23:44:57.582Z",
     "duration_ms": null,
-    "commit_sha": "4a605c5",
-    "commit_url": "https://github.com/open-agreements/open-agreements/commit/4a605c56eec1bbec6109a933e4ee43c869e7298c",
+    "commit_sha": "7234adf",
+    "commit_url": "https://github.com/open-agreements/open-agreements/commit/7234adf1ab7b25c75cddff343b5f3d797912b33e",
     "ci_run_url": "https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml",
     "pull_request_url": null,
     "deployment_url": null
