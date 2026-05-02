@@ -76,6 +76,7 @@ export function sourceName(url: string): string | null {
       'ycombinator.com': 'Y Combinator',
       'bookface-static.ycombinator.com': 'Y Combinator',
       'nvca.org': 'NVCA',
+      'openagreements.org': 'OpenAgreements',
       'openagreements.ai': 'OpenAgreements',
     };
 

@@ -1,7 +1,7 @@
 import { readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { resolve, relative } from "node:path";
 
-const SITE_ORIGIN = (process.env.SITE_URL || "https://openagreements.ai").replace(/\/+$/, "");
+const SITE_ORIGIN = (process.env.SITE_URL || "https://openagreements.org").replace(/\/+$/, "");
 const OUTPUT_DIR = resolve(process.cwd(), "_site");
 const STATIC_EXTENSIONS = new Set([
   ".css",

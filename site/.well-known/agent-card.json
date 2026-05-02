@@ -1,12 +1,12 @@
 {
   "name": "OpenAgreements",
   "description": "Fill legal agreement templates (NDAs, SAFEs, cloud terms, employment) with field values. Returns signed-ready DOCX.",
-  "url": "https://openagreements.ai/api/a2a",
+  "url": "https://openagreements.org/api/a2a",
   "version": "1.0.0",
   "protocolVersion": "1.0",
   "provider": {
     "organization": "OpenAgreements",
-    "url": "https://openagreements.ai"
+    "url": "https://openagreements.org"
   },
   "capabilities": {
     "streaming": false,

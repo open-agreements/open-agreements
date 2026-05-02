@@ -22,7 +22,7 @@ import { execFileSync } from "node:child_process";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = resolve(__dirname, "..");
-const DEFAULT_REPORT_URL = "https://tests.openagreements.ai";
+const DEFAULT_REPORT_URL = "https://tests.openagreements.org";
 const MODE_ALLURE_SUMMARY = "allure-summary";
 const MODE_BUILD_METADATA = "build-metadata";
 

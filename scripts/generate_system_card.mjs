@@ -52,7 +52,7 @@ const ALLURE_WRAPPER_CHAIN_METHODS = new Set(["epic", "withLabels", "openspec"])
 const UNKNOWN_EPIC_LABEL = "No epic label";
 const UNMAPPED_EPIC_LABEL = "Unmapped";
 const MAPPED_TEST_REF_RE = /^(.+?):(\d+)\s+::\s+(.+)$/;
-const DEFAULT_ALLURE_REPORT_URL = "https://tests.openagreements.ai";
+const DEFAULT_ALLURE_REPORT_URL = "https://tests.openagreements.org";
 const GITHUB_BLOB_ROOT = "https://github.com/open-agreements/open-agreements/blob";
 const NEW_YORK_TZ = "America/New_York";
 
@@ -821,7 +821,7 @@ function makeSystemCardMarkdown({ traceability, runtimeTrust, linkContext }) {
       : []),
     `- Commit: ${runtime?.run?.commit_sha ? safeLink(runtime.run.commit_url, runtime.run.commit_sha) : "Unavailable"}`,
     `- CI run: ${safeLink(runtime?.run?.ci_run_url, "workflow run")}`,
-    `- Test report: ${safeLink(runtime?.report_url ?? DEFAULT_ALLURE_REPORT_URL, "tests.openagreements.ai")}`,
+    `- Test report: ${safeLink(runtime?.report_url ?? DEFAULT_ALLURE_REPORT_URL, "tests.openagreements.org")}`,
     "- Mapped test entries link to GitHub source lines; matching test-result links are shown when available.",
   ];
 
@@ -950,7 +950,7 @@ function makeSystemCardMarkdown({ traceability, runtimeTrust, linkContext }) {
   lines.push("| Signal | Link |");
   lines.push("|---|---|");
   lines.push(
-    "| Test report | [tests.openagreements.ai](https://tests.openagreements.ai) |",
+    "| Test report | [tests.openagreements.org](https://tests.openagreements.org) |",
   );
   lines.push(
     "| Code coverage (Codecov) | [![Coverage](https://img.shields.io/codecov/c/github/open-agreements/open-agreements/main)](https://app.codecov.io/gh/open-agreements/open-agreements) |",

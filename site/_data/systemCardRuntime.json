@@ -1,27 +1,30 @@
 {
   "schema_version": 1,
-  "generated_at_utc": "2026-02-25T03:29:49.691Z",
-  "report_url": "https://tests.openagreements.ai",
-  "status": "passed",
+  "runtime_source": "build-metadata",
+  "metrics_available": false,
+  "generated_at_utc": "2026-05-01T14:21:49.651Z",
+  "report_url": "https://tests.openagreements.org",
+  "status": "unknown",
   "stats": {
-    "total": 481,
-    "passed": 481,
+    "total": 0,
+    "passed": 0,
     "failed": 0,
     "broken": 0,
     "skipped": 0,
     "flaky": 0,
-    "pass_rate_percent": 100
+    "pass_rate_percent": 0
   },
   "run": {
-    "created_at_utc": "2026-02-24T19:26:02.421Z",
-    "duration_ms": 51334,
-    "commit_sha": "9b92669",
-    "commit_url": "https://github.com/open-agreements/open-agreements/commit/9b92669db73c9d42a76bec411fe1dafdd94292fc",
+    "created_at_utc": "2026-05-01T14:21:49.651Z",
+    "duration_ms": null,
+    "commit_sha": "4a605c5",
+    "commit_url": "https://github.com/open-agreements/open-agreements/commit/4a605c56eec1bbec6109a933e4ee43c869e7298c",
     "ci_run_url": "https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml",
-    "pull_request_url": null
+    "pull_request_url": null,
+    "deployment_url": null
   },
   "freshness": {
-    "age_minutes": 484,
+    "age_minutes": 0,
     "stale_after_hours": 24,
     "is_stale": false
   }
