@@ -326,6 +326,100 @@ describe('contract-templates-mcp tools', () => {
       ]);
     });
 
+    it.openspec('OA-TMP-045')('strips display_label from list_templates and get_template payloads (top-level + nested)', async () => {
+      _setModuleOverride(mockModules({
+        listTemplateItems: () => [
+          {
+            name: 'labeled-template',
+            category: 'general',
+            description: 'Labeled template',
+            license: null,
+            source_url: 'https://example.com/labeled-template',
+            source: null,
+            fields: [
+              {
+                name: 'company_name',
+                type: 'string',
+                required: true,
+                section: null,
+                description: 'Company name',
+                display_label: 'Company Name',
+                default: null,
+              },
+              {
+                name: 'signers',
+                type: 'array',
+                required: false,
+                section: null,
+                description: 'Signers',
+                display_label: 'Signers',
+                default: null,
+                items: [
+                  {
+                    name: 'printed_name',
+                    type: 'string',
+                    required: false,
+                    section: null,
+                    description: 'Printed signer name',
+                    display_label: 'Printed Name',
+                    default: null,
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+        loadMetadata: () => ({
+          name: 'Labeled Template',
+          source_url: 'https://example.com/labeled-template',
+          fields: [
+            {
+              name: 'company_name',
+              type: 'string',
+              description: 'Company name',
+              display_label: 'Company Name',
+            },
+            {
+              name: 'signers',
+              type: 'array',
+              description: 'Signers',
+              display_label: 'Signers',
+              items: [
+                {
+                  name: 'printed_name',
+                  type: 'string',
+                  description: 'Printed signer name',
+                  display_label: 'Printed Name',
+                },
+              ],
+            },
+          ],
+          priority_fields: [],
+        }),
+        mapFields: (fields: unknown[]) => fields,
+      }));
+
+      const listResult = await callTool('list_templates', { mode: 'full' });
+      const listPayload = getPayload(listResult);
+      const listData = listPayload.data as Record<string, unknown>;
+      const templates = listData.templates as Array<Record<string, unknown>>;
+      const listFields = templates[0].fields as Array<Record<string, unknown>>;
+      expect(listFields[0]).not.toHaveProperty('display_label');
+      expect(listFields[1]).not.toHaveProperty('display_label');
+      const listNestedItems = listFields[1].items as Array<Record<string, unknown>>;
+      expect(listNestedItems[0]).not.toHaveProperty('display_label');
+
+      const getResult = await callTool('get_template', { template_id: 'labeled-template' });
+      const getPayloadData = getPayload(getResult);
+      const getData = getPayloadData.data as Record<string, unknown>;
+      const template = getData.template as Record<string, unknown>;
+      const getFields = template.fields as Array<Record<string, unknown>>;
+      expect(getFields[0]).not.toHaveProperty('display_label');
+      expect(getFields[1]).not.toHaveProperty('display_label');
+      const getNestedItems = getFields[1].items as Array<Record<string, unknown>>;
+      expect(getNestedItems[0]).not.toHaveProperty('display_label');
+    });
+
     it.openspec('OA-DST-032')('fill_template returns FILL_FAILED on engine error', async () => {
       _setModuleOverride(mockModules({
         fillTemplate: async () => { throw new Error('engine failure'); },

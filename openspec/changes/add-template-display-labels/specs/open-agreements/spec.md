@@ -21,18 +21,21 @@ sub-field labels are surfaced under the same omit-when-absent rule. The
 committed `data/templates-snapshot.json` SHALL be regenerated from the
 CLI JSON output so the snapshot carries the same contract.
 
-Template authors SHALL NOT add `display_label` to fields whose
-`description` declares them "AI-only" or "Internal computed" (i.e.
-fields not intended to render in human-facing UIs or in the output
-document). The presence of a `display_label` is a signal to consumers
-that the field is safe to surface; absence on AI-only / internal fields
-preserves that signal.
+As an authoring guideline, template authors SHOULD NOT add a
+`display_label` to fields whose `description` declares them "AI-only"
+or "Internal computed" (i.e. fields not intended to render in
+human-facing UIs or in the output document). Curating a human label on
+those fields invites consumers to surface them, which the description
+already discourages. This is guidance only — the CLI does not enforce
+it, and absence-of-label on a user-facing field continues to mean
+"uncurated, fall back to title-case," not "unsafe to surface."
 
 The contract-templates MCP package SHALL keep type alignment with the
-new field on its local `TemplateField` interface, but MCP tool
-descriptions and remote A2A/MCP API responses SHALL NOT change in this
-requirement; surfacing `display_label` to LLM agents is out of scope and
-will be handled by a follow-up change.
+new field on its local `TemplateField` interface, but the MCP runtime
+SHALL strip `display_label` from `list_templates` and `get_template`
+tool payloads (including nested `items`) so MCP responses are unchanged
+in this requirement. Surfacing `display_label` to LLM agents is out of
+scope and will be handled by a follow-up change.
 
 #### Scenario: [OA-TMP-040] Field with display_label parses
 
@@ -70,6 +73,18 @@ will be handled by a follow-up change.
 - **GIVEN** a template `metadata.yaml` whose `description` for a field
   declares it "AI-only" or "Internal computed"
 - **WHEN** a contributor authors that field
-- **THEN** the field SHALL NOT include a `display_label`
-- **AND** the discovery contract treats absence-of-label as the signal
-  that the field is not safe to surface in human-facing UIs
+- **THEN** by the authoring guideline, the field SHOULD NOT include a
+  `display_label`
+- **AND** the discovery contract is unchanged for absent labels:
+  consumers fall back to title-casing the canonical `name`
+
+#### Scenario: [OA-TMP-045] MCP tool payloads strip display_label
+
+- **GIVEN** a template whose metadata declares `display_label` on one or
+  more fields (top-level or nested `items`)
+- **WHEN** an MCP client calls `list_templates` or `get_template`
+- **THEN** the returned tool payload SHALL NOT include a `display_label`
+  property on any field, at any depth
+- **AND** the type-only `TemplateField.display_label?` mirror in the
+  contract-templates MCP package remains for forward compatibility but
+  is not populated on the wire
