@@ -11808,33 +11808,6 @@
           "default_value_rationale": null
         },
         {
-          "name": "safe_valuation_cap",
-          "type": "string",
-          "required": false,
-          "section": "Deal Terms",
-          "description": "Post-money valuation cap reflected on the cover page",
-          "default": "None",
-          "default_value_rationale": null
-        },
-        {
-          "name": "safe_discount_rate",
-          "type": "string",
-          "required": false,
-          "section": "Deal Terms",
-          "description": "Discount rate reflected on the cover page",
-          "default": "None",
-          "default_value_rationale": null
-        },
-        {
-          "name": "safe_changes_to_standard_terms",
-          "type": "string",
-          "required": false,
-          "section": "Deal Terms",
-          "description": "Any non-standard SAFE terms that must be surfaced on the cover page",
-          "default": "None",
-          "default_value_rationale": null
-        },
-        {
           "name": "board_members",
           "type": "array",
           "required": true,
