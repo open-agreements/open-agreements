@@ -12,9 +12,6 @@
 - [x] 2.3 Update related docs, catalog/download plumbing, and generated
       artifacts to treat the canonical Markdown source as the only branded
       source of truth for these templates.
-- [x] 2.4 Surface SAFE-specific economics and deviations from standard SAFE
-      terms as cover-page sub-rows instead of an inline suffix on the
-      Instrument row.
 
 ## 3. Verification
 - [x] 3.1 Run `node scripts/generate_templates.mjs`.

@@ -11,10 +11,12 @@ non-canonical authoring model in the repo.
 - Add repeat-backed stacked signer authoring to canonical `template.md`.
 - Re-author the SAFE board and stockholder consents as canonical Markdown
   templates that generate `.template.generated.json` and `template.docx`.
-- Add SAFE-specific cover sub-rows so non-standard economics or changes to the
-  standard YC SAFE terms must be surfaced on page 1 instead of buried in the
-  attached resolutions.
 - Remove the consent-only Contract IR generator, sidecars, and related docs.
+
+A future change will add a "modern" variant of these consents (productized
+section labels, cover-page-controls override, SAFE economics surfaced as cover
+sub-rows, capacity language) as a coexistent opt-in template; that work is
+out of scope for this change.
 
 ## Impact
 - Affected specs: `open-agreements`

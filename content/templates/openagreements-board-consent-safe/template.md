@@ -13,13 +13,13 @@ document:
   cover_row_height: 700
 sections:
   cover_terms:
-    section_label: Board Consent (Approving SAFE Issuance) | Delaware
-    heading_title: Key Terms of Board Consent
+    section_label: Cover Terms
+    heading_title: Cover Terms
   standard_terms:
-    section_label: Resolutions
-    heading_title: Resolutions
+    section_label: Standard Terms
+    heading_title: Standard Terms
   signature:
-    section_label: Signature Page to Board Consent (Approving SAFE Issuance)
+    section_label: Signature Page
     heading_title: Signatures
 ---
 
@@ -27,74 +27,63 @@ sections:
 
 ## Cover Terms
 
-The key terms reflected on this cover page are as follows. In this Board Consent, {company_name}, a Delaware corporation, is referred to as the "Company". This action by written consent of the Board (this "Board Consent") consists of (a) this cover page (this "Cover Page") and (b) the resolutions attached hereto (the "Resolutions"). If there is any conflict between the Cover Page and the Resolutions, the Cover Page controls.
+The key business terms of this board consent are as follows.
 
 | Kind | Label | Value | Show When |
 | --- | --- | --- | --- |
 | row | Company | {company_name} | always |
 | row | Effective Date | {effective_date} | always |
-| row | SAFE | Simple Agreement for Future Equity ("SAFE") | always |
-| subrow | Valuation Cap (Post-Money) | {safe_valuation_cap} | always |
-| subrow | Discount Rate | {safe_discount_rate} | always |
-| subrow | Changes to Standard Terms | {safe_changes_to_standard_terms} | always |
-| row | Maximum Aggregate SAFE Purchase Amount | ${purchase_amount} | always |
+| row | Aggregate SAFE Purchase Amount | ${purchase_amount} | always |
+| row | Governing Law | Delaware | always |
 
 ## Standard Terms
 
 <!-- oa:clause id=board-action-under-delaware-law -->
-### Action by Written Consent of the Board
+### Board Action Under Delaware Law
 
-The undersigned, constituting all of the members of the Board of Directors (the "Board") of the Company, pursuant to Section 141(f) of the Delaware General Corporation Law, hereby adopt the following resolutions by written consent.
-
-This Board Consent records the approval reflected on the Cover Page and the resolutions below.
+All members of the Board of Directors of Company adopt this action by unanimous written consent pursuant to Section 141(f) of the Delaware General Corporation Law.
 
 <!-- oa:clause id=approval-of-safe-financing -->
 ### Approval of SAFE Financing
 
-WHEREAS, the Board believes it is in the best interests of the Company to approve the issuance by the Company of one or more SAFEs (each, a "SAFE", and together, the "SAFEs"), of the type described on the Cover Page, each of which gives its holder a future right to receive shares of the Company's capital stock in accordance with its terms, for an aggregate purchase amount of up to the Maximum Aggregate SAFE Purchase Amount listed on the Cover Page.
-
-RESOLVED, that the issuance by the Company of each SAFE, in substantially the form presented to the Board, be, and it hereby is, approved in all respects.
-
-RESOLVED FURTHER, that the officers of the Company be, and each of them hereby is, authorized and directed, for and on behalf of the Company, to execute and deliver each SAFE, and any and all other agreements, certificates or documents required or contemplated by any SAFE or deemed necessary or appropriate in connection therewith, and to take all actions deemed necessary or appropriate to cause the Company's obligations thereunder to be performed.
+Board has determined that it is in the best interests of Company to enter into one or more Simple Agreements for Future Equity, or SAFEs, for the aggregate purchase amount listed in Cover Terms, and each SAFE in substantially the form presented to Board is approved.
 
 <!-- oa:clause id=officer-authority -->
 ### Officer Authority
 
-Each officer of the Company is authorized and directed, for and on behalf of the Company, to execute and deliver each SAFE and any related agreements, certificates, notices, or other documents required or contemplated by any SAFE or otherwise necessary or appropriate in connection with the SAFE financing.
+Each officer of Company is authorized and directed, for and on behalf of Company, to execute and deliver each SAFE and any related agreements, certificates, notices, or other documents required or contemplated by any SAFE or otherwise necessary or appropriate in connection with the SAFE financing.
 
 <!-- oa:clause id=negotiated-changes -->
 ### Negotiated Changes
 
-Each officer of the Company is further authorized to negotiate and approve additions, modifications, amendments, or deletions to any SAFE or related document, and execution and delivery by that officer will be conclusive evidence of that approval.
+Each officer of Company is further authorized to negotiate and approve additions, modifications, amendments, or deletions to any SAFE or related document, and execution and delivery by that officer will be conclusive evidence of that approval.
 
 <!-- oa:clause id=reservation-and-issuance-of-shares -->
 ### Reservation and Issuance of Shares
 
-RESOLVED FURTHER, that shares of the Company's capital stock issuable upon conversion of each SAFE be, and they hereby are, reserved for issuance upon conversion of such SAFE in accordance with its terms.
-
-RESOLVED FURTHER, that when shares of the Company's capital stock are issued upon conversion of any SAFE in accordance with its terms, such shares shall be duly and validly issued, fully paid and nonassessable.
+Shares of Company capital stock issuable upon conversion of each SAFE are reserved for issuance, and when issued in accordance with the applicable SAFE, those shares will be duly and validly issued, fully paid, and nonassessable.
 
 <!-- oa:clause id=securities-law-compliance -->
 ### Securities Law Compliance
 
-RESOLVED FURTHER, that each SAFE shall be offered and sold in reliance on any applicable exemption from registration provided by the Securities Act of 1933, as amended, and any applicable exemption under applicable state blue sky laws, and that the officers of the Company be, and each of them hereby is, authorized and directed, for and on behalf of the Company, to execute and file any forms, certificates, notices or other documents that are necessary or appropriate pursuant to federal or state securities laws.
+The SAFE financing is approved to be offered and sold in reliance on applicable exemptions from registration under the Securities Act of 1933, as amended, and applicable state securities laws. Each officer of Company is authorized to execute and file any forms, certificates, notices, or other documents that are necessary or appropriate in connection with that compliance.
 
 <!-- oa:clause id=further-actions -->
-### General Authorizing Resolution
+### Further Actions
 
-RESOLVED, that the officers of the Company be, and each of them hereby is, authorized and directed, for and on behalf of the Company, to take such further actions and execute such documents as may be necessary or appropriate in order to implement the foregoing resolutions.
+Each officer of Company is authorized and directed to take any further actions and execute any additional documents necessary or appropriate to implement these approvals.
 
 ## Signatures
 
 <!-- oa:signature-mode arrangement=stacked repeat=board_members item=member -->
 
-This Board Consent shall be filed with the minutes of the proceedings of the Board.
+This Action by Written Consent shall be filed with the minutes of the proceedings of the Board of Directors of Company.
 
-By signing below, each director adopts this Board Consent, including the Cover Page and the Resolutions attached hereto.
-
-Each director signs this Board Consent solely in his or her capacity as a director of the Company, and not as a purchaser of any SAFE.
+By signing below, each director adopts this board consent as of the effective date listed in Cover Terms. Any copy, facsimile, PDF, or other reliable reproduction of this board consent may be substituted or used in lieu of the original writing for any purpose for which the original writing could be used, provided that the reproduction is a complete reproduction of the entire original writing.
 
 <!-- oa:signer id=director kind=individual capacity=personal label="Director" -->
+**Director**
+
 Signature: _______________
 Print Name: {member.name}
 Date: {effective_date}

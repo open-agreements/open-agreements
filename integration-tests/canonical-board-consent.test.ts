@@ -81,9 +81,6 @@ describe('Canonical SAFE board consent', () => {
         'company_name',
         'effective_date',
         'purchase_amount',
-        'safe_valuation_cap',
-        'safe_discount_rate',
-        'safe_changes_to_standard_terms',
         'board_members',
       ])
     );
@@ -97,29 +94,27 @@ describe('Canonical SAFE board consent', () => {
     const generatedText = normalizeText(extractDocxText(buffer));
 
     expect(rendered.markdown).toContain('# Board Consent for SAFE Financing');
-    expect(rendered.markdown).toContain('## Key Terms of Board Consent');
+    expect(rendered.markdown).toContain('## Cover Terms');
     expect(rendered.markdown).toContain('| **Company** | {company_name} |');
-    expect(rendered.markdown).toContain('| **SAFE** | Simple Agreement for Future Equity ("SAFE") |');
-    expect(rendered.markdown).toContain('| Valuation Cap (Post-Money) | {safe_valuation_cap} |');
-    expect(rendered.markdown).toContain('| Discount Rate | {safe_discount_rate} |');
-    expect(rendered.markdown).toContain('| Changes to Standard Terms | {safe_changes_to_standard_terms} |');
-    expect(rendered.markdown).toContain('is referred to as the "Company"');
-    expect(rendered.markdown).toContain('This Board Consent shall be filed with the minutes of the proceedings of the Board.');
-    expect(rendered.markdown).toContain('By signing below, each director adopts this Board Consent');
-    expect(rendered.markdown).toContain('solely in his or her capacity as a director of the Company, and not as a purchaser of any SAFE');
+    expect(rendered.markdown).toContain('| **Aggregate SAFE Purchase Amount** | ${purchase_amount} |');
+    expect(rendered.markdown).toContain('| **Governing Law** | Delaware |');
+    // Negative: the modern SAFE economics sub-rows must not appear in the traditional form.
+    expect(rendered.markdown).not.toContain('Valuation Cap');
+    expect(rendered.markdown).not.toContain('Discount Rate');
+    expect(rendered.markdown).not.toContain('Changes to Standard Terms');
+    expect(rendered.markdown).not.toContain('Cover Page controls');
     expect(rendered.markdown).toContain('{FOR member IN board_members}');
     expect(rendered.markdown).toContain('{$member.name}');
     expect(rendered.markdown).toContain('Date: {effective_date}');
     expect(rendered.markdown).toContain('{END-FOR member}');
 
     expect(generatedText).toContain('Board Consent for SAFE Financing');
-    expect(generatedText).toContain('Key Terms of Board Consent');
-    expect(generatedText).toContain('Action by Written Consent of the Board');
+    expect(generatedText).toContain('Cover Terms');
+    expect(generatedText).toContain('Standard Terms');
     expect(generatedText).toContain('Approval of SAFE Financing');
-    expect(generatedText).toMatch(/is referred to as the (?:&quot;|")Company(?:&quot;|")/);
-    expect(generatedText).toContain('This Board Consent shall be filed with the minutes of the proceedings of the Board.');
-    expect(generatedText).toContain('By signing below, each director adopts this Board Consent');
-    expect(generatedText).toContain('solely in his or her capacity as a director of the Company, and not as a purchaser of any SAFE');
+    expect(generatedText).not.toContain('Valuation Cap');
+    expect(generatedText).not.toContain('Discount Rate');
+    expect(generatedText).not.toContain('Cover Page controls');
     expect(generatedText).toContain('{FOR member IN board_members}');
     expect(generatedText).toContain('{$member.name}');
     expect(generatedText).toContain('{END-FOR member}');
@@ -147,22 +142,22 @@ describe('Canonical SAFE board consent', () => {
 
     const filledText = normalizeText(extractDocxText(outputPath));
     expect(filledText).toContain('Board Consent for SAFE Financing');
-    expect(filledText).toContain('Valuation Cap (Post-Money)');
-    expect(filledText).toContain('None');
     expect(filledText).toContain('Approval of SAFE Financing');
     expect(filledText).toContain('Acme Labs, Inc.');
-    expect(filledText).toMatch(/is referred to as the (?:&quot;|")Company(?:&quot;|")/);
-    expect(filledText).toContain('This Board Consent shall be filed with the minutes of the proceedings of the Board.');
-    expect(filledText).toContain('By signing below, each director adopts this Board Consent');
-    expect(filledText).toContain('solely in his or her capacity as a director of the Company, and not as a purchaser of any SAFE');
     expect(filledText).toContain('Alex Director');
     expect(filledText).toContain('Blair Director');
     expect(filledText).toContain('Casey Director');
     expect(filledText.match(/Print Name:/g)?.length).toBe(3);
     expect(filledText.match(/^Director$/gm)?.length).toBe(3);
+    // {effective_date} is a top-level field referenced inside the FOR scope; verify it resolves once per signer.
+    expect(filledText.match(/Date: April 15, 2026/g)?.length).toBe(3);
     expect(filledText).not.toContain('{FOR ');
     expect(filledText).not.toContain('{END-FOR ');
     expect(filledText).not.toContain('{$member.name}');
+    // Negative: traditional form must not surface SAFE economics sub-rows or the cover-controls override.
+    expect(filledText).not.toContain('Valuation Cap');
+    expect(filledText).not.toContain('Discount Rate');
+    expect(filledText).not.toContain('Cover Page controls');
   });
 
   it.openspec('OA-TMP-037')('rejects fills with empty board_members', async () => {

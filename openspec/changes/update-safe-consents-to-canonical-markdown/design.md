@@ -44,17 +44,6 @@ Why:
 - Avoids a consent-specific layout or signer DSL.
 - Reuses the existing fill pipeline behavior for array loops.
 
-### Decision: directors sign in their director capacity only
-
-The board-consent signature preamble states that each director signs solely in
-his or her capacity as a director, and not as a purchaser of any SAFE. Director
-investors often participate in their own company's SAFE rounds; this sentence
-makes the documentary record unambiguous about which capacity is being executed
-on the page. It does not by itself resolve interested-director conflicts under
-DGCL §144 — that is what the resolutions and any required disclosures are for —
-but it removes ambiguity that has come up in practice when a single physical
-page is later cited as evidence of approval.
-
 ### Decision: remove the consent-only Contract IR path
 
 Once the SAFE consents are canonical Markdown templates, the old Contract IR

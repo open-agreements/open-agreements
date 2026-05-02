@@ -46,7 +46,7 @@ The undersigned stockholders of Company adopt this action by written consent pur
 <!-- oa:clause id=safe-financing-approval -->
 ### SAFE Financing Approval
 
-The undersigned stockholders approve Company entering into one or more Simple Agreements for Future Equity, or SAFEs, for the aggregate purchase amount listed in Cover Terms. This approval is effective only after any required Board of Directors approvals are obtained, and in all cases no later than 60 days after the earliest date on which this stockholder consent is delivered.
+The undersigned stockholders approve Company entering into one or more Simple Agreements for Future Equity, or SAFEs, for the aggregate purchase amount listed in Cover Terms. This approval is effective only after any required Board of Directors approvals are obtained.
 
 <!-- oa:clause id=fairness-and-company-benefit -->
 ### Fairness and Company Benefit

@@ -25,21 +25,6 @@ fields:
     type: string
     description: Aggregate SAFE purchase amount (for example, "500,000")
     section: Deal Terms
-  - name: safe_valuation_cap
-    type: string
-    description: Post-money valuation cap reflected on the cover page
-    section: Deal Terms
-    default: None
-  - name: safe_discount_rate
-    type: string
-    description: Discount rate reflected on the cover page
-    section: Deal Terms
-    default: None
-  - name: safe_changes_to_standard_terms
-    type: string
-    description: Any non-standard SAFE terms that must be surfaced on the cover page
-    section: Deal Terms
-    default: None
   - name: board_members
     type: array
     description: Directors signing the consent

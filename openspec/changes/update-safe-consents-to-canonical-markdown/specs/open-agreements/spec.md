@@ -25,9 +25,6 @@ generated JSON spec and rendered DOCX derived from that source.
   filled
 - **THEN** the generated outputs preserve the board consent legal text,
   resolution flow, placeholders, and professional formatting
-- **AND** SAFE-specific economics or changes to the standard SAFE terms can be
-  surfaced as cover-page sub-rows without leaving stray inline punctuation when
-  omitted
 - **AND** the signature section expands `board_members` into the exact number
   of signer blocks without leaving loop markers in the filled output
 
