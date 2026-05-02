@@ -92,7 +92,7 @@ This Board Consent shall be filed with the minutes of the proceedings of the Boa
 
 By signing below, each director adopts this Board Consent, including the Cover Page and the Resolutions attached hereto.
 
-Each director signs this Board Consent solely in his or her capacity as a director of the Company.
+Each director signs this Board Consent solely in his or her capacity as a director of the Company, and not as a purchaser of any SAFE.
 
 <!-- oa:signer id=director kind=individual capacity=personal label="Director" -->
 Signature: _______________

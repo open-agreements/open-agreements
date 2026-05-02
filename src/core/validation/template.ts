@@ -185,11 +185,52 @@ export function validateTemplate(templateDir: string, templateId: string): Templ
       foundConditionalFields.add(condMatch[1]);
     }
 
-    // Extract array field names from FOR loop constructs
-    const forLoopRegex = /\{FOR \w+ IN (\w+)\}/g;
+    // Extract array field names + item bindings from FOR loop constructs.
+    // Each loop has shape `{FOR <item> IN <field>}` and references look like
+    // `{$<item>.<rowField>}`. Validate that <field> is declared array-typed in
+    // metadata and that <rowField> references resolve through the field's items.
+    const forLoopRegex = /\{FOR (\w+) IN (\w+)\}/g;
+    const repeatItemBindings = new Map<string, string>(); // item -> field
     let forMatch;
     while ((forMatch = forLoopRegex.exec(text)) !== null) {
-      foundTags.add(forMatch[1]);
+      const itemName = forMatch[1];
+      const collectionName = forMatch[2];
+      foundTags.add(collectionName);
+      repeatItemBindings.set(itemName, collectionName);
+
+      const field = metadata.fields.find((f) => f.name === collectionName);
+      if (!field) {
+        errors.push(
+          `{FOR ${itemName} IN ${collectionName}} references "${collectionName}" but it is not defined in metadata fields`
+        );
+      } else if (field.type !== 'array') {
+        errors.push(
+          `{FOR ${itemName} IN ${collectionName}} requires "${collectionName}" to be type=array in metadata; declared type=${field.type}`
+        );
+      }
+    }
+
+    // Validate {$item.rowField} references against metadata items shape.
+    const itemRefRegex = /\{\$(\w+)\.(\w+)\}/g;
+    let itemRefMatch;
+    while ((itemRefMatch = itemRefRegex.exec(text)) !== null) {
+      const itemName = itemRefMatch[1];
+      const rowFieldName = itemRefMatch[2];
+      const collectionName = repeatItemBindings.get(itemName);
+      if (!collectionName) {
+        errors.push(
+          `{$${itemName}.${rowFieldName}} references item "${itemName}" but no enclosing {FOR ${itemName} IN ...} was found`
+        );
+        continue;
+      }
+      const field = metadata.fields.find((f) => f.name === collectionName);
+      if (!field || !field.items) continue; // already errored above, or no shape declared
+      const itemField = field.items.find((sub) => sub.name === rowFieldName);
+      if (!itemField) {
+        errors.push(
+          `{$${itemName}.${rowFieldName}} references "${rowFieldName}" but "${collectionName}.items" does not declare it`
+        );
+      }
     }
 
     // Security: scan for docx-templates control/code tags that should not exist

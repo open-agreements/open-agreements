@@ -97,13 +97,14 @@ describe('SAFE consent variable signer rendering', () => {
         expect(paragraphs.filter((paragraph) => paragraph === `Date: April 16, 2026`)).toHaveLength(
           signerCount
         );
+        expect(paragraphs.filter((paragraph) => paragraph === 'Director')).toHaveLength(signerCount);
         expect(paragraphs).not.toContain('_______');
         expect(paragraphs.join('\n')).not.toContain('{FOR ');
         expect(paragraphs.join('\n')).not.toContain('{END-FOR ');
         expect(paragraphs.join('\n')).not.toContain('{$member.name}');
 
         for (let i = 1; i <= signerCount; i++) {
-          expect(paragraphs).toContain(`Director ${i}`);
+          expect(paragraphs).toContain(`Print Name: Director ${i}`);
         }
       }
     );
@@ -119,13 +120,14 @@ describe('SAFE consent variable signer rendering', () => {
         expect(paragraphs.filter((paragraph) => paragraph === `Date: April 16, 2026`)).toHaveLength(
           signerCount
         );
+        expect(paragraphs.filter((paragraph) => paragraph === 'Stockholder')).toHaveLength(signerCount);
         expect(paragraphs).not.toContain('_______');
         expect(paragraphs.join('\n')).not.toContain('{FOR ');
         expect(paragraphs.join('\n')).not.toContain('{END-FOR ');
         expect(paragraphs.join('\n')).not.toContain('{$stockholder.name}');
 
         for (let i = 1; i <= signerCount; i++) {
-          expect(paragraphs).toContain(`Stockholder ${i}`);
+          expect(paragraphs).toContain(`Print Name: Stockholder ${i}`);
         }
       }
     );

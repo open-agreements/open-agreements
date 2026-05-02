@@ -901,9 +901,6 @@ function repeatingSignatureRowText(row) {
   if (lowerLabel === 'signature' || lowerLabel === 'signature line') {
     return row.value || '______________________________';
   }
-  if (lowerLabel === 'print name' || lowerLabel === 'name') {
-    return row.value || '_______________';
-  }
   if (!row.value) {
     return `${row.label}: _______________`;
   }
@@ -929,11 +926,21 @@ function repeatingStackedSignatureParagraphs(signatureSpec, style, opts = {}) {
     }),
   ];
 
+  paragraphs.push(
+    bodyParagraph(signer.label, style, {
+      size: 22,
+      bold: true,
+      before: opts.firstRowBefore ?? style.spacing.clause_heading_before,
+      after: 0,
+      terms: [],
+    })
+  );
+
   signer.rows.forEach((row, index) => {
     paragraphs.push(
       bodyParagraph(repeatingSignatureRowText(row), style, {
         size: 22,
-        before: index === 0 ? (opts.firstRowBefore ?? style.spacing.clause_heading_before) : 0,
+        before: 0,
         after: index === signer.rows.length - 1 ? (opts.blockAfter ?? style.spacing.body_after) : (opts.rowAfter ?? 0),
         terms: [],
       })
@@ -982,6 +989,8 @@ function appendSignatureMarkdown(lines, signatureSection) {
   if (signatureSection.mode === 'signers' && signatureSection.arrangement === 'stacked' && signatureSection.repeat) {
     const signer = signatureSection.signers[0];
     lines.push(`{FOR ${signatureSection.repeat.item_name} IN ${signatureSection.repeat.collection_field}}`);
+    lines.push('');
+    lines.push(`**${signer.label}**`);
     lines.push('');
     for (const row of signer.rows) {
       lines.push(repeatingSignatureRowText(row));

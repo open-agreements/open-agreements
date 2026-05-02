@@ -106,7 +106,7 @@ describe('Canonical SAFE board consent', () => {
     expect(rendered.markdown).toContain('is referred to as the "Company"');
     expect(rendered.markdown).toContain('This Board Consent shall be filed with the minutes of the proceedings of the Board.');
     expect(rendered.markdown).toContain('By signing below, each director adopts this Board Consent');
-    expect(rendered.markdown).toContain('solely in his or her capacity as a director of the Company');
+    expect(rendered.markdown).toContain('solely in his or her capacity as a director of the Company, and not as a purchaser of any SAFE');
     expect(rendered.markdown).toContain('{FOR member IN board_members}');
     expect(rendered.markdown).toContain('{$member.name}');
     expect(rendered.markdown).toContain('Date: {effective_date}');
@@ -119,7 +119,7 @@ describe('Canonical SAFE board consent', () => {
     expect(generatedText).toMatch(/is referred to as the (?:&quot;|")Company(?:&quot;|")/);
     expect(generatedText).toContain('This Board Consent shall be filed with the minutes of the proceedings of the Board.');
     expect(generatedText).toContain('By signing below, each director adopts this Board Consent');
-    expect(generatedText).toContain('solely in his or her capacity as a director of the Company');
+    expect(generatedText).toContain('solely in his or her capacity as a director of the Company, and not as a purchaser of any SAFE');
     expect(generatedText).toContain('{FOR member IN board_members}');
     expect(generatedText).toContain('{$member.name}');
     expect(generatedText).toContain('{END-FOR member}');
@@ -154,10 +154,52 @@ describe('Canonical SAFE board consent', () => {
     expect(filledText).toMatch(/is referred to as the (?:&quot;|")Company(?:&quot;|")/);
     expect(filledText).toContain('This Board Consent shall be filed with the minutes of the proceedings of the Board.');
     expect(filledText).toContain('By signing below, each director adopts this Board Consent');
-    expect(filledText).toContain('solely in his or her capacity as a director of the Company');
+    expect(filledText).toContain('solely in his or her capacity as a director of the Company, and not as a purchaser of any SAFE');
+    expect(filledText).toContain('Alex Director');
+    expect(filledText).toContain('Blair Director');
+    expect(filledText).toContain('Casey Director');
+    expect(filledText.match(/Print Name:/g)?.length).toBe(3);
+    expect(filledText.match(/^Director$/gm)?.length).toBe(3);
     expect(filledText).not.toContain('{FOR ');
     expect(filledText).not.toContain('{END-FOR ');
     expect(filledText).not.toContain('{$member.name}');
+  });
+
+  it.openspec('OA-TMP-037')('rejects fills with empty board_members', async () => {
+    const outputDir = mkdtempSync(join(tmpdir(), 'board-consent-empty-'));
+    tempDirs.push(outputDir);
+    const outputPath = join(outputDir, 'filled.docx');
+
+    await expect(
+      fillTemplate({
+        templateDir: TEMPLATE_DIR,
+        outputPath,
+        values: {
+          company_name: 'Acme Labs, Inc.',
+          effective_date: 'April 15, 2026',
+          purchase_amount: '500,000',
+          board_members: [],
+        },
+      })
+    ).rejects.toThrow(/board_members/);
+  });
+
+  it.openspec('OA-TMP-037')('rejects fills missing board_members entirely', async () => {
+    const outputDir = mkdtempSync(join(tmpdir(), 'board-consent-missing-'));
+    tempDirs.push(outputDir);
+    const outputPath = join(outputDir, 'filled.docx');
+
+    await expect(
+      fillTemplate({
+        templateDir: TEMPLATE_DIR,
+        outputPath,
+        values: {
+          company_name: 'Acme Labs, Inc.',
+          effective_date: 'April 15, 2026',
+          purchase_amount: '500,000',
+        },
+      })
+    ).rejects.toThrow(/board_members/);
   });
 
   it.openspec('OA-TMP-037')('preserves PAGE and NUMPAGES footer field codes through fill', async () => {

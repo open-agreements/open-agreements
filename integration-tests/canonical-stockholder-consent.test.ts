@@ -127,9 +127,33 @@ describe('Canonical SAFE stockholder consent', () => {
     expect(filledText).toContain('Stockholder Consent for SAFE Financing');
     expect(filledText).toContain('SAFE Financing Approval');
     expect(filledText).toContain('Acme Labs, Inc.');
+    expect(filledText).toContain('Alex Holder');
+    expect(filledText).toContain('Blair Holder');
+    expect(filledText).toContain('Casey Holder');
+    expect(filledText.match(/Print Name:/g)?.length).toBe(3);
+    expect(filledText.match(/^Stockholder$/gm)?.length).toBe(3);
     expect(filledText).not.toContain('{FOR ');
     expect(filledText).not.toContain('{END-FOR ');
     expect(filledText).not.toContain('{$stockholder.name}');
+  });
+
+  it.openspec('OA-TMP-038')('rejects fills with empty stockholders', async () => {
+    const outputDir = mkdtempSync(join(tmpdir(), 'stockholder-consent-empty-'));
+    tempDirs.push(outputDir);
+    const outputPath = join(outputDir, 'filled.docx');
+
+    await expect(
+      fillTemplate({
+        templateDir: TEMPLATE_DIR,
+        outputPath,
+        values: {
+          company_name: 'Acme Labs, Inc.',
+          effective_date: 'April 15, 2026',
+          purchase_amount: '500,000',
+          stockholders: [],
+        },
+      })
+    ).rejects.toThrow(/stockholders/);
   });
 
   it.openspec('OA-TMP-038')('preserves PAGE and NUMPAGES footer field codes through fill', async () => {
