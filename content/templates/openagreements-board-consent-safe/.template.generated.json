@@ -14,9 +14,9 @@
   },
   "sections": {
     "cover_terms": {
-      "section_label": "Board Consent (Approving SAFE) | Delaware",
-      "heading_title": "Cover Terms",
-      "subtitle": "The key terms reflected on this cover page are as follows. This action by written consent of the Board (this \"Board Consent\") consists of (a) this cover page (this \"Cover Page\") and (b) the resolutions attached hereto (the \"Resolutions\"). If there is any conflict between the Cover Page and the Resolutions, the Cover Page controls.",
+      "section_label": "Board Consent (Approving SAFE Issuance) | Delaware",
+      "heading_title": "Key Terms of Board Consent",
+      "subtitle": "The key terms reflected on this cover page are as follows. In this Board Consent, {company_name}, a Delaware corporation, is referred to as the \"Company\". This action by written consent of the Board (this \"Board Consent\") consists of (a) this cover page (this \"Cover Page\") and (b) the resolutions attached hereto (the \"Resolutions\"). If there is any conflict between the Cover Page and the Resolutions, the Cover Page controls.",
       "rows": [
         {
           "kind": "row",
@@ -32,7 +32,7 @@
         },
         {
           "kind": "row",
-          "label": "Instrument",
+          "label": "SAFE",
           "value": "Simple Agreement for Future Equity (\"SAFE\")",
           "sub": false
         },
@@ -69,12 +69,12 @@
         {
           "id": "board-action-under-delaware-law",
           "heading": "Action by Written Consent of the Board",
-          "body": "The undersigned, constituting all of the members of the Board of Directors (the \"Board\") of {company_name}, a Delaware corporation (the \"Company\"), pursuant to Section 141(f) of the Delaware General Corporation Law, hereby adopt the following resolutions by written consent.\n\nThis action by written consent (this \"Board Consent\") records the approval reflected on the Cover Page and the resolutions below."
+          "body": "The undersigned, constituting all of the members of the Board of Directors (the \"Board\") of the Company, pursuant to Section 141(f) of the Delaware General Corporation Law, hereby adopt the following resolutions by written consent.\n\nThis Board Consent records the approval reflected on the Cover Page and the resolutions below."
         },
         {
           "id": "approval-of-safe-financing",
           "heading": "Approval of SAFE Financing",
-          "body": "WHEREAS, the Board believes it is in the best interests of the Company to approve the issuance by the Company of one or more SAFEs (each, a \"SAFE\", and together, the \"SAFEs\"), of the type described in the Cover Terms, for an aggregate purchase amount of up to the Maximum Aggregate SAFE Purchase Amount listed in the Cover Terms, in accordance with their terms.\n\nRESOLVED, that the issuance by the Company of each SAFE, in substantially the form presented to the Board, be, and it hereby is, approved in all respects.\n\nRESOLVED FURTHER, that the officers of the Company be, and each of them hereby is, authorized and directed, for and on behalf of the Company, to execute and deliver each SAFE, and any and all other agreements, certificates or documents required or contemplated by any SAFE or deemed necessary or appropriate in connection therewith, and to take all actions deemed necessary or appropriate to cause the Company's obligations thereunder to be performed."
+          "body": "WHEREAS, the Board believes it is in the best interests of the Company to approve the issuance by the Company of one or more SAFEs (each, a \"SAFE\", and together, the \"SAFEs\"), of the type described on the Cover Page, each of which gives its holder a future right to receive shares of the Company's capital stock in accordance with its terms, for an aggregate purchase amount of up to the Maximum Aggregate SAFE Purchase Amount listed on the Cover Page.\n\nRESOLVED, that the issuance by the Company of each SAFE, in substantially the form presented to the Board, be, and it hereby is, approved in all respects.\n\nRESOLVED FURTHER, that the officers of the Company be, and each of them hereby is, authorized and directed, for and on behalf of the Company, to execute and deliver each SAFE, and any and all other agreements, certificates or documents required or contemplated by any SAFE or deemed necessary or appropriate in connection therewith, and to take all actions deemed necessary or appropriate to cause the Company's obligations thereunder to be performed."
         },
         {
           "id": "officer-authority",
@@ -106,9 +106,9 @@
     "signature": {
       "mode": "signers",
       "arrangement": "stacked",
-      "section_label": "Signature Page",
+      "section_label": "Signature Page to Board Consent (Approving SAFE Issuance)",
       "heading_title": "Signatures",
-      "preamble": "This Board Consent shall be filed with the minutes of the proceedings of the Board.\n\nEach director signs this Board Consent solely in his or her capacity as a director of the Company, and not in any personal capacity as an investor, purchaser, or party to any SAFE.",
+      "preamble": "This Board Consent shall be filed with the minutes of the proceedings of the Board.\n\nBy signing below, each director adopts this Board Consent, including the Cover Page and the Resolutions attached hereto.\n\nEach director signs this Board Consent solely in his or her capacity as a director of the Company.",
       "signers": [
         {
           "id": "director",
