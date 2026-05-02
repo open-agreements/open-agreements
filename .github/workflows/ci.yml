@@ -1,6 +1,7 @@
+---
 name: CI
 
-on:
+"on":
   push:
     branches: [main]
   pull_request:
@@ -185,14 +186,18 @@ jobs:
     if: github.ref == 'refs/heads/main'
     needs: [test]
     runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    env:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID_TESTS_OPENAGREEMENTS }}
+      VERCEL_DEPLOY_ENABLED: >-
+        ${{
+          secrets.VERCEL_TOKEN != '' &&
+          secrets.VERCEL_ORG_ID != '' &&
+          secrets.VERCEL_PROJECT_ID_TESTS_OPENAGREEMENTS != ''
+        }}
     concurrency:
-      group: pages
+      group: deploy-allure-vercel
       cancel-in-progress: true
     steps:
       - uses: actions/checkout@v4
@@ -214,14 +219,25 @@ jobs:
       - name: Generate and brand Allure report
         run: npm run report:allure
 
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: allure-report
+      - name: Prepare static Vercel build output
+        if: ${{ env.VERCEL_DEPLOY_ENABLED == 'true' }}
+        run: |
+          output_dir="$RUNNER_TEMP/allure-vercel/.vercel/output"
+          rm -rf "$RUNNER_TEMP/allure-vercel"
+          mkdir -p "$output_dir/static"
+          cp -R allure-report/. "$output_dir/static/"
+          printf '%s\n' '{"version":3}' > "$output_dir/config.json"
 
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Install Vercel CLI
+        if: ${{ env.VERCEL_DEPLOY_ENABLED == 'true' }}
+        run: npm install --global vercel@latest
+
+      - name: Deploy Allure report to Vercel (tests-openagreements)
+        if: ${{ env.VERCEL_DEPLOY_ENABLED == 'true' }}
+        run: |
+          cd "$RUNNER_TEMP/allure-vercel"
+          vercel pull --yes --environment=production --token="$VERCEL_TOKEN"
+          vercel deploy --prebuilt --prod --token="$VERCEL_TOKEN"
 
   source-drift-canary:
     runs-on: ubuntu-latest
@@ -241,7 +257,8 @@ jobs:
 
       - name: Source drift canary (strict on main, permissive on PR)
         run: |
-          if [ "${{ github.event_name }}" = "push" ] && [ "${{ github.ref }}" = "refs/heads/main" ]; then
+          if [ "${{ github.event_name }}" = "push" ] &&
+             [ "${{ github.ref }}" = "refs/heads/main" ]; then
             echo "Running strict source drift canary on main."
             node scripts/source_drift_canary.mjs --download --strict-missing
           else
