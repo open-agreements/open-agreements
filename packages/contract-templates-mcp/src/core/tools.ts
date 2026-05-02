@@ -33,6 +33,7 @@ interface TemplateField {
   required: boolean;
   section: string | null;
   description: string;
+  display_label?: string;
   default: string | null;
   default_value_rationale?: string | null;
   items?: TemplateField[];
@@ -360,8 +361,15 @@ function normalizeTemplate(template: TemplateRecord): Record<string, unknown> {
     source_url: template.source_url,
     source: template.source,
     attribution_text: template.attribution_text ?? null,
-    fields: template.fields,
+    fields: stripDisplayLabels(template.fields),
   };
+}
+
+function stripDisplayLabels(fields: TemplateField[]): TemplateField[] {
+  return fields.map((field) => {
+    const { display_label: _label, items, ...rest } = field;
+    return items ? { ...rest, items: stripDisplayLabels(items) } : rest;
+  });
 }
 
 function compactTemplate(template: TemplateRecord): Record<string, unknown> {

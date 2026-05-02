@@ -21,9 +21,10 @@ interface TemplateMeta {
     name: string;
     type: string;
     description: string;
+    display_label?: string;
     section?: string;
     default?: string;
-    items?: Array<{ name: string; type: string; description: string; section?: string; default?: string }>;
+    items?: Array<{ name: string; type: string; description: string; display_label?: string; section?: string; default?: string }>;
   }>;
   priority_fields: string[];
   credits?: Array<{ name: string; role: string; profile_url?: string }>;
@@ -66,7 +67,7 @@ const itDiscovery = itAllure.epic('Discovery & Metadata');
 
 function baseFields() {
   return [
-    { name: 'company_name', type: 'string', description: 'Company legal name' },
+    { name: 'company_name', type: 'string', description: 'Company legal name', display_label: 'Company Name' },
     { name: 'effective_date', type: 'date', description: 'Effective date', default: '2026-02-12' },
   ];
 }
@@ -211,6 +212,7 @@ describe('runList in-process coverage', () => {
 
     expect(zTemplate.fields[0]).toMatchObject({
       name: 'company_name',
+      display_label: 'Company Name',
       required: true,
       section: null,
       default: null,
@@ -220,6 +222,7 @@ describe('runList in-process coverage', () => {
       required: false,
       default: '2026-02-12',
     });
+    expect(zTemplate.fields[1]).not.toHaveProperty('display_label');
   });
 
   itDiscovery.openspec('OA-CLI-013')('exits non-zero in --json-strict mode when metadata loading fails', async () => {
@@ -311,6 +314,61 @@ describe('runList in-process coverage', () => {
         default_value_rationale: null,
       },
     ]);
+    expect(template.fields[0].items[0]).not.toHaveProperty('display_label');
+    expect(template.fields[0].items[1]).not.toHaveProperty('display_label');
+  });
+
+  itDiscovery.openspec('OA-TMP-043')('projects display_label through nested items, omitting on unlabeled siblings', async () => {
+    const harness = await loadListHarness({
+      templateEntries: [
+        { id: 'array-template', dir: '/templates/array-template', baseDir: '/templates' },
+      ],
+      templateByDir: {
+        '/templates/array-template': {
+          ...templateMeta('Array Template', 'https://example.com/array-template'),
+          fields: [
+            {
+              name: 'signers',
+              type: 'array',
+              description: 'Signers on the document',
+              items: [
+                {
+                  name: 'printed_name',
+                  type: 'string',
+                  description: 'Printed signer name',
+                  display_label: 'Printed Name',
+                },
+                {
+                  name: 'title',
+                  type: 'string',
+                  description: 'Printed signer title',
+                  default: '',
+                },
+              ],
+            },
+          ],
+          priority_fields: [],
+        },
+      },
+    });
+
+    const logSpy = vi.spyOn(console, 'log').mockImplementation(() => {});
+
+    await allureStep('Run list in JSON mode for nested display_label projection', async () => {
+      harness.runList({ json: true });
+    });
+
+    const envelope = JSON.parse(String(logSpy.mock.calls[0][0]));
+    const template = envelope.items.find((item: { name: string }) => item.name === 'array-template');
+    expect(template.fields[0].items).toHaveLength(2);
+    expect(template.fields[0].items[0]).toMatchObject({
+      name: 'printed_name',
+      display_label: 'Printed Name',
+    });
+    expect(template.fields[0].items[1]).toMatchObject({
+      name: 'title',
+    });
+    expect(template.fields[0].items[1]).not.toHaveProperty('display_label');
   });
 
   itDiscovery.openspec('OA-TMP-039')('projects credits and derived_from onto internal and external templates; omits them on recipes', async () => {
