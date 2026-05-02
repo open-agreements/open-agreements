@@ -11,8 +11,11 @@ function readRepoFile(relPath: string): string {
   return readFileSync(join(ROOT, relPath), 'utf-8');
 }
 
-function readBuiltFile(relPath: string): string {
-  return readFileSync(join(ROOT, '_site', relPath), 'utf-8');
+// Static `site/<path>` files are passthrough-copied verbatim into `_site/<path>` at build
+// time, so reading from source is equivalent to reading from build output and avoids needing
+// the test to depend on a prior `npm run build:site:vercel` invocation in CI.
+function readStaticSiteFile(relPath: string): string {
+  return readFileSync(join(ROOT, 'site', relPath), 'utf-8');
 }
 
 describe('trust signal surfaces', () => {
@@ -23,9 +26,9 @@ describe('trust signal surfaces', () => {
   });
 
   it.openspec('OA-DST-007')('thin protocol host emits machine-readable trust surfaces while marketing routes redirect externally', () => {
-    const serverCard = JSON.parse(readBuiltFile('.well-known/mcp-server-card'));
-    const apiCatalog = JSON.parse(readBuiltFile('.well-known/api-catalog'));
-    const agentCard = JSON.parse(readBuiltFile('.well-known/agent-card.json'));
+    const serverCard = JSON.parse(readStaticSiteFile('.well-known/mcp-server-card'));
+    const apiCatalog = JSON.parse(readStaticSiteFile('.well-known/api-catalog'));
+    const agentCard = JSON.parse(readStaticSiteFile('.well-known/agent-card.json'));
     const vercelConfig = JSON.parse(readRepoFile('vercel.json'));
     const redirects = new Map(
       vercelConfig.redirects.map((entry: { source: string; destination: string }) => [entry.source, entry.destination]),
