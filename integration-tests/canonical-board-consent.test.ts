@@ -77,7 +77,15 @@ describe('Canonical SAFE board consent', () => {
       },
     });
     expect(new Set(metadata.fields.map((field) => field.name))).toEqual(
-      new Set(['company_name', 'effective_date', 'purchase_amount', 'board_members'])
+      new Set([
+        'company_name',
+        'effective_date',
+        'purchase_amount',
+        'safe_valuation_cap',
+        'safe_discount_rate',
+        'safe_changes_to_standard_terms',
+        'board_members',
+      ])
     );
   });
 
@@ -90,14 +98,22 @@ describe('Canonical SAFE board consent', () => {
 
     expect(rendered.markdown).toContain('# Board Consent for SAFE Financing');
     expect(rendered.markdown).toContain('| **Company** | {company_name} |');
+    expect(rendered.markdown).toContain('| Valuation Cap (Post-Money) | {safe_valuation_cap} |');
+    expect(rendered.markdown).toContain('| Discount Rate | {safe_discount_rate} |');
+    expect(rendered.markdown).toContain('| Changes to Standard Terms | {safe_changes_to_standard_terms} |');
+    expect(rendered.markdown).toContain('This Board Consent shall be filed with the minutes of the proceedings of the Board.');
+    expect(rendered.markdown).toContain('solely in his or her capacity as a director of the Company');
     expect(rendered.markdown).toContain('{FOR member IN board_members}');
     expect(rendered.markdown).toContain('{$member.name}');
     expect(rendered.markdown).toContain('Date: {effective_date}');
     expect(rendered.markdown).toContain('{END-FOR member}');
 
     expect(generatedText).toContain('Board Consent for SAFE Financing');
-    expect(generatedText).toContain('Board Action Under Delaware Law');
+    expect(generatedText).toContain('Cover Terms');
+    expect(generatedText).toContain('Action by Written Consent of the Board');
     expect(generatedText).toContain('Approval of SAFE Financing');
+    expect(generatedText).toContain('This Board Consent shall be filed with the minutes of the proceedings of the Board.');
+    expect(generatedText).toContain('solely in his or her capacity as a director of the Company');
     expect(generatedText).toContain('{FOR member IN board_members}');
     expect(generatedText).toContain('{$member.name}');
     expect(generatedText).toContain('{END-FOR member}');
@@ -125,8 +141,12 @@ describe('Canonical SAFE board consent', () => {
 
     const filledText = normalizeText(extractDocxText(outputPath));
     expect(filledText).toContain('Board Consent for SAFE Financing');
+    expect(filledText).toContain('Valuation Cap (Post-Money)');
+    expect(filledText).toContain('None');
     expect(filledText).toContain('Approval of SAFE Financing');
     expect(filledText).toContain('Acme Labs, Inc.');
+    expect(filledText).toContain('This Board Consent shall be filed with the minutes of the proceedings of the Board.');
+    expect(filledText).toContain('solely in his or her capacity as a director of the Company');
     expect(filledText).not.toContain('{FOR ');
     expect(filledText).not.toContain('{END-FOR ');
     expect(filledText).not.toContain('{$member.name}');

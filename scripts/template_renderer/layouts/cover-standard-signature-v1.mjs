@@ -539,13 +539,47 @@ function definitionSubParagraphs(parentIndex, terms, style) {
 }
 
 function bodyParagraphsFromText(text, style, opts = {}) {
-  const lines = text.split('\n');
+  const lines = text
+    .split('\n')
+    .filter((line) => line.trim().length > 0);
   return lines.map((line, i) =>
     bodyParagraph(line, style, {
       ...opts,
       after: i < lines.length - 1 ? (opts.after ?? style.spacing.body_after) : (opts.after ?? style.spacing.body_after),
     })
   );
+}
+
+function signaturePreambleParagraphs(text, style, opts = {}) {
+  const lines = text.split('\n');
+  const paragraphs = [];
+  let sawParagraph = false;
+  let pendingBlankLine = false;
+
+  for (const rawLine of lines) {
+    const line = rawLine.trim();
+    if (line.length === 0) {
+      pendingBlankLine = sawParagraph || pendingBlankLine;
+      continue;
+    }
+
+    paragraphs.push(
+      bodyParagraph(line, style, {
+        terms: [],
+        size: opts.size ?? 22,
+        before: !sawParagraph
+          ? (opts.firstParagraphBefore ?? 0)
+          : pendingBlankLine
+            ? (opts.blankLineBefore ?? style.spacing.body_after)
+            : 0,
+        after: opts.after ?? style.spacing.body_after,
+      })
+    );
+    sawParagraph = true;
+    pendingBlankLine = false;
+  }
+
+  return paragraphs;
 }
 
 function clauseHeadingParagraph(index, heading, style) {
@@ -876,7 +910,7 @@ function repeatingSignatureRowText(row) {
   return `${row.label}: ${row.value}`;
 }
 
-function repeatingStackedSignatureParagraphs(signatureSpec, style) {
+function repeatingStackedSignatureParagraphs(signatureSpec, style, opts = {}) {
   if (!signatureSpec.repeat) {
     throw new Error('cover-standard-signature-v1 stacked signer sections require repeat metadata');
   }
@@ -899,8 +933,8 @@ function repeatingStackedSignatureParagraphs(signatureSpec, style) {
     paragraphs.push(
       bodyParagraph(repeatingSignatureRowText(row), style, {
         size: 22,
-        before: index === 0 ? style.spacing.clause_heading_before : 0,
-        after: index === signer.rows.length - 1 ? style.spacing.body_after : 0,
+        before: index === 0 ? (opts.firstRowBefore ?? style.spacing.clause_heading_before) : 0,
+        after: index === signer.rows.length - 1 ? (opts.blockAfter ?? style.spacing.body_after) : (opts.rowAfter ?? 0),
         terms: [],
       })
     );
@@ -909,12 +943,73 @@ function repeatingStackedSignatureParagraphs(signatureSpec, style) {
   paragraphs.push(
     bodyParagraph(`{END-FOR ${signatureSpec.repeat.item_name}}`, style, {
       size: 22,
-      after: style.spacing.body_after,
+      after: opts.loopCloseAfter ?? style.spacing.body_after,
       terms: [],
     })
   );
 
   return paragraphs;
+}
+
+function appendSignatureMarkdown(lines, signatureSection) {
+  for (const preambleParagraph of signatureSection.preamble.split('\n').map((line) => line.trim()).filter(Boolean)) {
+    lines.push(preambleParagraph);
+    lines.push('');
+  }
+
+  if (signatureSection.mode === 'two-party') {
+    const sectionsOut = [
+      {
+        party: signatureSection.party_a,
+        rows: signatureSection.rows.map((row) => ({ label: row.label, value: row.left ?? '' })),
+      },
+      {
+        party: signatureSection.party_b,
+        rows: signatureSection.rows.filter((row) => !row.left_only).map((row) => ({ label: row.label, value: row.right ?? '' })),
+      },
+    ];
+    for (const section of sectionsOut) {
+      lines.push(`**${section.party}**`);
+      lines.push('');
+      for (const row of section.rows) {
+        lines.push(`${row.label}: ${row.value || '_______________'}`);
+      }
+      lines.push('');
+    }
+    return;
+  }
+
+  if (signatureSection.mode === 'signers' && signatureSection.arrangement === 'stacked' && signatureSection.repeat) {
+    const signer = signatureSection.signers[0];
+    lines.push(`{FOR ${signatureSection.repeat.item_name} IN ${signatureSection.repeat.collection_field}}`);
+    lines.push('');
+    for (const row of signer.rows) {
+      lines.push(repeatingSignatureRowText(row));
+      lines.push('');
+    }
+    lines.push(`{END-FOR ${signatureSection.repeat.item_name}}`);
+    lines.push('');
+    return;
+  }
+
+  if (signatureSection.mode === 'signers') {
+    for (const signer of signatureSection.signers) {
+      lines.push(`**${signer.label}**`);
+      lines.push('');
+      for (const row of signer.rows) {
+        lines.push(`${row.label}: ${row.value || '_______________'}`);
+      }
+      lines.push('');
+    }
+    return;
+  }
+
+  lines.push(`**${signatureSection.party}**`);
+  lines.push('');
+  for (const row of signatureSection.rows) {
+    lines.push(`${row.label}: ${row.value || '_______________'}`);
+  }
+  lines.push('');
 }
 
 function renderMarkdown(spec) {
@@ -932,12 +1027,10 @@ function renderMarkdown(spec) {
   lines.push('');
   lines.push('| Term | Value |');
   lines.push('|------|-------|');
-  let lastParentLabel = '';
   for (const row of sections.cover_terms.rows) {
     if (row.sub) {
       lines.push(`| ${row.label} | ${row.value} |`);
     } else {
-      lastParentLabel = row.label;
       if (row.value) {
         lines.push(`| **${row.label}** | ${row.value} |`);
       } else {
@@ -966,59 +1059,7 @@ function renderMarkdown(spec) {
 
   lines.push(`## ${sections.signature.heading_title}`);
   lines.push('');
-  lines.push(sections.signature.preamble);
-  lines.push('');
-
-  if (sections.signature.mode === 'two-party') {
-    const sectionsOut = [
-      {
-        party: sections.signature.party_a,
-        rows: sections.signature.rows.map((row) => ({ label: row.label, value: row.left ?? '' })),
-      },
-      {
-        party: sections.signature.party_b,
-        rows: sections.signature.rows.filter((row) => !row.left_only).map((row) => ({ label: row.label, value: row.right ?? '' })),
-      },
-    ];
-    for (const section of sectionsOut) {
-      lines.push(`**${section.party}**`);
-      lines.push('');
-      for (const row of section.rows) {
-        lines.push(`${row.label}: ${row.value || '_______________'}`);
-      }
-      lines.push('');
-    }
-  } else if (
-    sections.signature.mode === 'signers' &&
-    sections.signature.arrangement === 'stacked' &&
-    sections.signature.repeat
-  ) {
-    const signer = sections.signature.signers[0];
-    lines.push(`{FOR ${sections.signature.repeat.item_name} IN ${sections.signature.repeat.collection_field}}`);
-    lines.push('');
-    for (const row of signer.rows) {
-      lines.push(repeatingSignatureRowText(row));
-      lines.push('');
-    }
-    lines.push(`{END-FOR ${sections.signature.repeat.item_name}}`);
-    lines.push('');
-  } else if (sections.signature.mode === 'signers') {
-    for (const signer of sections.signature.signers) {
-      lines.push(`**${signer.label}**`);
-      lines.push('');
-      for (const row of signer.rows) {
-        lines.push(`${row.label}: ${row.value || '_______________'}`);
-      }
-      lines.push('');
-    }
-  } else {
-    lines.push(`**${sections.signature.party}**`);
-    lines.push('');
-    for (const row of sections.signature.rows) {
-      lines.push(`${row.label}: ${row.value || '_______________'}`);
-    }
-    lines.push('');
-  }
+  appendSignatureMarkdown(lines, sections.signature);
 
   return lines.join('\n');
 }
@@ -1098,9 +1139,8 @@ export function renderCoverStandardSignatureV1(spec, style) {
         document.version,
         [
           sectionTitleParagraph(sections.signature.heading_title, style),
-          ...bodyParagraphsFromText(sections.signature.preamble, style, {
-            terms: [],
-            size: 16,
+          ...signaturePreambleParagraphs(sections.signature.preamble, style, {
+            size: 22,
           }),
           ...signatureContent,
         ],
