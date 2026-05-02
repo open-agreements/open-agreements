@@ -461,7 +461,7 @@
       "distributable": true,
       "fillable": true,
       "priorityFields": 4,
-      "totalFields": 4,
+      "totalFields": 7,
       "validation_status": "not_covered",
       "validation_source": "none",
       "hasPreview": true
