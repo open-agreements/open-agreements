@@ -23,15 +23,6 @@ export default function (eleventyConfig) {
     return base;
   });
 
-  // REDIRECT_MODE: stop generating HTML pages when redirects are active
-  if (process.env.REDIRECT_MODE === "1") {
-    eleventyConfig.ignores.add("site/index.njk");
-    eleventyConfig.ignores.add("site/templates.njk");
-    eleventyConfig.ignores.add("site/template-detail.njk");
-    eleventyConfig.ignores.add("site/trust/**");
-    eleventyConfig.ignores.add("site/docs/**");
-  }
-
   // formatReleaseNotes filter: parse GitHub release notes into grouped, clean HTML
   eleventyConfig.addNunjucksFilter("formatReleaseNotes", function (notes) {
     if (!notes || typeof notes !== "string") return "";
@@ -192,16 +183,14 @@ export default function (eleventyConfig) {
     }
   });
   eleventyConfig.addPassthroughCopy("site/assets");
-  eleventyConfig.addPassthroughCopy("site/main.js");
-  eleventyConfig.addPassthroughCopy("site/templates-filter.js");
   eleventyConfig.addPassthroughCopy("site/.well-known");
-  eleventyConfig.addPassthroughCopy("site/styles.css");
   eleventyConfig.addPassthroughCopy("site/downloads");
   eleventyConfig.addPassthroughCopy("site/schemas");
   eleventyConfig.ignores.add("site/downloads/**/*.md");
+  eleventyConfig.ignores.add("site/trust/system-card.md");
 
-  // The docs .md files are gitignored (they're copied from docs/ at build time)
-  // but Eleventy needs to process them, so disable gitignore-based ignoring.
+  // site/downloads/ is generated at build time and gitignored, but Eleventy still
+  // needs to passthrough-copy those generated files into _site/.
   eleventyConfig.setUseGitIgnore(false);
 
   return {

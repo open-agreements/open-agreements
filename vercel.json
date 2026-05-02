@@ -2,7 +2,7 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
   "installCommand": "npm ci --include=dev",
-  "buildCommand": "REDIRECT_MODE=1 npm run build:site:vercel",
+  "buildCommand": "npm run build:site:vercel",
   "outputDirectory": "_site",
   "cleanUrls": true,
   "trailingSlash": false,
@@ -32,6 +32,7 @@
       ]
     }
   ],
+  "$comment": "Load-bearing redirects: the marketing and trust source pages were deleted from this repo, so these routes must keep forwarding to usejunior.com.",
   "redirects": [
     { "source": "/", "destination": "https://usejunior.com/developer-tools/open-agreements", "statusCode": 301 },
     { "source": "/templates", "destination": "https://usejunior.com/developer-tools/open-agreements/templates", "statusCode": 301 },
