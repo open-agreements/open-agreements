@@ -12,7 +12,7 @@ This skill uses `~~category` placeholders for optional integrations. The skill w
 
 ### Setting up the Remote MCP (recommended)
 
-The remote MCP handles the full template catalog server-side. No local dependencies needed. See [openagreements.ai](https://openagreements.ai) for setup instructions.
+The remote MCP handles the full template catalog server-side. No local dependencies needed. See [openagreements.org](https://openagreements.org) for setup instructions.
 
 ### Alternative: Local CLI
 
