@@ -193,6 +193,37 @@ describe('canonical Markdown authoring', () => {
     );
   });
 
+  it.openspec('OA-TMP-036')('renders repeat-backed stacked signer output from canonical source', () => {
+    const style = loadStyleProfile(stylePath);
+    const repeatingSource = buildCanonicalSource()
+      .replace(
+        '<!-- oa:signature-mode arrangement=entity-plus-individual -->',
+        '<!-- oa:signature-mode arrangement=stacked repeat=signers item=signer -->'
+      )
+      .replace(
+        /<!-- oa:signer id=company[\s\S]+?Date: _______________\n\n<!-- oa:signer id=recipient/,
+        '<!-- oa:signer id=signer kind=individual capacity=personal label="Signer" -->\n**Signer**\n\nSignature: _______________\nPrint Name: {signer.name}\nDate: {effective_date}\n\n<!-- oa:signer id=recipient'
+      )
+      .replace(/<!-- oa:signer id=recipient[\s\S]+?Date: _______________\n/, '');
+
+    const compiled = compileCanonicalSourceString(repeatingSource, 'inline repeating canonical source');
+    const rendered = renderFromValidatedSpec(compiled.contractSpec, style);
+
+    expect(compiled.contractSpec.sections.signature).toMatchObject({
+      mode: 'signers',
+      arrangement: 'stacked',
+      repeat: {
+        collection_field: 'signers',
+        item_name: 'signer',
+      },
+    });
+    expect(compiled.contractSpec.sections.signature.signers).toHaveLength(1);
+    expect(rendered.markdown).toContain('{FOR signer IN signers}');
+    expect(rendered.markdown).toContain('{$signer.name}');
+    expect(rendered.markdown).toContain('Date: {effective_date}');
+    expect(rendered.markdown).toContain('{END-FOR signer}');
+  });
+
   it.openspec('OA-TMP-036')('allows asymmetric signer rows within entity-plus-individual blocks', () => {
     const style = loadStyleProfile(stylePath);
     const asymmetricSource = buildCanonicalSource().replace(

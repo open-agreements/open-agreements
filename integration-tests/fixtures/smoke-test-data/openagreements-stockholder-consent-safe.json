@@ -1,0 +1,9 @@
+{
+  "company_name": "Acme Labs, Inc.",
+  "effective_date": "April 15, 2026",
+  "purchase_amount": "500,000",
+  "stockholders": [
+    { "name": "Alex Stockholder" },
+    { "name": "Blair Stockholder" }
+  ]
+}

@@ -116,10 +116,23 @@ export function prepareFillData(options: PrepareFillDataOptions): Record<string,
     }
   }
 
-  // Warn about priority fields that are still unfilled (no value, no default)
+  // Reject empty priority array fields outright. A consent template that loops
+  // over an empty signer array would silently render a Signatures heading with
+  // zero signatures — that's a correctness bug, not a soft warning.
   const prioritySet = new Set(priorityFieldNames);
+  const emptyPriorityArrays = fields
+    .filter((f) => prioritySet.has(f.name) && f.type === 'array')
+    .filter((f) => !Array.isArray(data[f.name]) || (data[f.name] as unknown[]).length === 0)
+    .map((f) => f.name);
+  if (emptyPriorityArrays.length > 0) {
+    throw new Error(
+      `Required array fields are empty: ${emptyPriorityArrays.join(', ')}. Provide at least one entry.`
+    );
+  }
+
+  // Warn about priority fields that are still unfilled (no value, no default)
   const missing = fields
-    .filter((f) => prioritySet.has(f.name) && (data[f.name] === '' || data[f.name] === BLANK_PLACEHOLDER))
+    .filter((f) => prioritySet.has(f.name) && f.type !== 'array' && (data[f.name] === '' || data[f.name] === BLANK_PLACEHOLDER))
     .map((f) => f.name);
   if (missing.length > 0) {
     console.warn(`Note: ${missing.length} priority fields are unfilled: ${missing.join(', ')}`);
