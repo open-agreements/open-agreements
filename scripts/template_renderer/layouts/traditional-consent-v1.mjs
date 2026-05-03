@@ -1,9 +1,7 @@
 import {
   AlignmentType,
-  BorderStyle,
   Document,
   Footer,
-  HeightRule,
   LineRuleType,
   PageNumber,
   Paragraph,
@@ -14,6 +12,12 @@ import {
 } from 'docx';
 
 const INLINE_BOLD_RE = /\*\*([^*]+)\*\*/g;
+
+// Traditional Delaware corporate consents use a serif body face. The shared
+// OpenAgreements default style profile is sans-serif (used by employment
+// templates), so this layout overrides fonts.body locally before any helper
+// reads it. See renderTraditionalConsentV1 for the override site.
+const TRADITIONAL_BODY_FONT = 'Times New Roman';
 
 function buildDocumentStyles(style) {
   return {
@@ -107,27 +111,11 @@ function titleParagraph(title, style) {
       new TextRun({
         text: title,
         font: style.fonts.body,
-        size: 24,
+        size: 22,
         bold: true,
         color: style.colors.ink,
       }),
     ],
-  });
-}
-
-function openingNoteParagraph(text, style) {
-  return new Paragraph({
-    spacing: {
-      before: style.spacing.body_after,
-      after: style.spacing.body_after,
-      line: style.spacing.line,
-    },
-    children: inlineBoldRuns(text, {
-      font: style.fonts.body,
-      size: 18,
-      italics: true,
-      color: style.colors.ink_soft,
-    }),
   });
 }
 
@@ -162,7 +150,11 @@ function paragraphsFromBody(body, style) {
 
 function clauseParagraphs(clauseItem, style) {
   if (clauseItem.type === 'definitions') {
-    throw new Error('traditional-consent-v1 does not support definitions clauses');
+    // Definitions clauses are uncommon in consents and the cover-standard layout's
+    // OAClauseHeading + definitionSubParagraphs infrastructure isn't trivially
+    // portable to centered/underlined headings. Add support when a consent
+    // template needs it.
+    throw new Error('traditional-consent-v1 does not yet support definitions clauses');
   }
   return [
     clauseHeadingParagraph(clauseItem.heading, style),
@@ -313,10 +305,8 @@ function renderMarkdown(spec) {
   lines.push('');
   lines.push(`${document.label} (v${document.version}). ${document.license}.`);
   lines.push('');
-  if (document.opening_note) {
-    lines.push(`*${document.opening_note}*`);
-    lines.push('');
-  }
+  // document.opening_note is intentionally not rendered into the document body.
+  // It remains available on the contract spec for MCP consumers to surface.
   if (document.opening_recital) {
     lines.push(document.opening_recital);
     lines.push('');
@@ -334,15 +324,17 @@ function renderMarkdown(spec) {
   return lines.join('\n');
 }
 
-export function renderTraditionalConsentV1(spec, style) {
+export function renderTraditionalConsentV1(spec, baseStyle) {
   const { document, sections } = spec;
-  const opts = {};
+  // Override the shared profile's body face just for this layout; every helper
+  // reads style.fonts.body, so this single substitution carries through.
+  const style = { ...baseStyle, fonts: { ...baseStyle.fonts, body: TRADITIONAL_BODY_FONT } };
 
   const bodyChildren = [];
   bodyChildren.push(titleParagraph(document.title, style));
-  if (document.opening_note) {
-    bodyChildren.push(openingNoteParagraph(document.opening_note, style));
-  }
+  // document.opening_note is exposed to MCP consumers via the contract spec
+  // but is deliberately not painted onto the DOCX body — traditional consents
+  // (Cooley/Joey reference) carry no in-document drafting note.
   if (document.opening_recital) {
     for (const para of paragraphsFromBody(document.opening_recital, style)) {
       bodyChildren.push(para);
@@ -362,9 +354,6 @@ export function renderTraditionalConsentV1(spec, style) {
   for (const para of repeatingStackedSignatureParagraphs(sections.signature, style)) {
     signatureChildren.push(para);
   }
-
-  const nilBorder = { style: BorderStyle.NIL, color: 'FFFFFF', size: 0 };
-  void nilBorder; // currently unused but kept for parallel structure with the v1 layout
 
   const docxDoc = new Document({
     styles: buildDocumentStyles(style),

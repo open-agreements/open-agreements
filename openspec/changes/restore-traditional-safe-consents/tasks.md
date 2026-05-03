@@ -16,7 +16,14 @@
 
 - [x] 3.1 Retarget `integration-tests/canonical-board-consent.test.ts` with OOXML structural assertions (no `<w:tbl>`, exact title text, WHEREAS/RESOLVED presence, signer-name+date counts, no leaked Cover Terms strings).
 - [x] 3.2 Retarget `integration-tests/canonical-stockholder-consent.test.ts` similarly.
-- [x] 3.3 Add new OpenSpec scenarios (OA-TMP-040, -041, -042).
+- [x] 3.3 Add new OpenSpec scenarios (OA-TMP-046, -047, -048).
+- [x] 3.4 Add canonical-source compiler regression tests for cover_terms mismatch (frontmatter has it but body lacks it, and the inverse).
+
+## 5. Visual fidelity revisions (round-2 peer review)
+
+- [x] 5.1 Switch `traditional-consent-v1` body face to Times New Roman (layout-local override).
+- [x] 5.2 Stop rendering `document.opening_note` into DOCX/markdown body; field stays optional in schema for MCP consumers.
+- [x] 5.3 Drop title-only size variation; render at uniform 11pt with bold/center/all-caps providing hierarchy.
 
 ## 4. Verification
 

@@ -3,11 +3,12 @@
 ### Requirement: Traditional Consent Layout Module
 The system SHALL provide a `traditional-consent-v1` canonical-Markdown layout
 module that renders consents with no cover-page table, a centered all-caps
-title, italic drafting note, opening recital, centered+bold+underlined
-section headings (no auto-numbering), inline-bold body text (e.g., for
-`**WHEREAS**` and `**RESOLVED**` lead-ins), a `[Signature Page Follows]`
-separator, and a separate signature page with preamble paragraphs followed by
-a repeating signature stack.
+title, opening recital, centered+bold+underlined section headings (no
+auto-numbering), inline-bold body text (e.g., for `**WHEREAS**` and
+`**RESOLVED**` lead-ins), a `[Signature Page Follows]` separator, and a
+separate signature page with preamble paragraphs followed by a repeating
+signature stack. The layout SHALL render the document body in a serif face
+(Times New Roman) at a uniform 11pt size.
 
 #### Scenario: [OA-TMP-046] Traditional layout renders no cover-page table
 - **WHEN** a template using `layout_id: traditional-consent-v1` is compiled
@@ -29,22 +30,23 @@ templates that omit both the `## Cover Terms` body section and the
 
 ### Requirement: Traditional SAFE Consent Authoring
 The SAFE board and SAFE stockholder consents SHALL be authored canonically
-using `layout_id: traditional-consent-v1`, with `document.opening_note`
-carrying the italic drafting note, `document.opening_recital` carrying the
-opening recital paragraph, and `sections.standard_terms` containing the
-WHEREAS/RESOLVED clause chain.
+using `layout_id: traditional-consent-v1`, with `document.opening_recital`
+carrying the opening recital paragraph and `sections.standard_terms`
+containing the WHEREAS/RESOLVED clause chain. The optional
+`document.opening_note` field MAY carry a drafting note for MCP consumers but
+SHALL NOT be rendered into the DOCX or markdown output.
 
 #### Scenario: [OA-TMP-048] Traditional SAFE consents render and fill faithfully
 - **WHEN** the SAFE board or stockholder consent is compiled, rendered, and
   filled with reasonable signer data
 - **THEN** the rendered DOCX has the centered all-caps title with the
   `{company_name}` placeholder substituted
-- **AND** the italic drafting note appears immediately after the title
+- **AND** no italic drafting note appears in the rendered output
 - **AND** the opening recital cites the appropriate DGCL section (§ 141(f) for
   the board consent, § 228 for the stockholder consent)
 - **AND** each clause heading (`Approval of SAFE Financing`, `General
   Authorizing Resolution`) renders centered, bold, and underlined
 - **AND** WHEREAS and RESOLVED lead-ins render as bold inline text
 - **AND** the signature page expands the signer array into one block per
-  signer with a `Print Name:` row carrying the signer name and a `Date:` row
-  carrying the effective date
+  signer with the signer name on its own line under the signature line and a
+  `Date:` row carrying the effective date (no `Print Name:` label prefix)

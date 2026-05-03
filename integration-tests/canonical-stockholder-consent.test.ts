@@ -104,7 +104,11 @@ describe('Canonical SAFE stockholder consent (traditional)', () => {
     const generatedXml = extractDocxXml(buffer);
 
     expect(generatedText).toContain('ACTION BY WRITTEN CONSENT OF THE STOCKHOLDERS OF {company_name}');
-    expect(generatedText).toContain('Note: The following resolutions do not cover all matters');
+    // The drafting note stays on the contract spec for MCP consumers but is deliberately
+    // not painted onto the DOCX body — traditional consents (Cooley/Joey) carry no
+    // in-document drafting note.
+    expect(compiled.contractSpec.document.opening_note).toContain('Note: The following resolutions');
+    expect(generatedText).not.toContain('Note: The following resolutions');
     expect(generatedText).toContain('pursuant to Section 228 of the Delaware General Corporation Law');
     expect(generatedText).toContain('such later effectiveness shall not exceed 60 days');
     expect(generatedText).toContain('Approval of SAFE Financing');

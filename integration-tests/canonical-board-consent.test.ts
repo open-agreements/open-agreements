@@ -111,7 +111,11 @@ describe('Canonical SAFE board consent (traditional)', () => {
 
     // Title is centered all-caps with company_name placeholder preserved.
     expect(generatedText).toContain('ACTION BY UNANIMOUS WRITTEN CONSENT OF THE BOARD OF DIRECTORS OF {company_name}');
-    expect(generatedText).toContain('Note: The following resolutions do not cover all matters');
+    // The drafting note stays on the contract spec for MCP consumers but is deliberately
+    // not painted onto the DOCX body — traditional consents (Cooley/Joey) carry no
+    // in-document drafting note.
+    expect(compiled.contractSpec.document.opening_note).toContain('Note: The following resolutions');
+    expect(generatedText).not.toContain('Note: The following resolutions');
     expect(generatedText).toContain('pursuant to Section 141(f) of the Delaware General Corporation Law');
     expect(generatedText).toContain('Approval of SAFE Financing');
     expect(generatedText).toContain('General Authorizing Resolution');
@@ -161,7 +165,7 @@ describe('Canonical SAFE board consent (traditional)', () => {
     const filledXml = extractDocxXml(outputPath);
 
     expect(filledText).toContain('ACTION BY UNANIMOUS WRITTEN CONSENT OF THE BOARD OF DIRECTORS OF Acme Labs, Inc.');
-    expect(filledText).toContain('Note: The following resolutions do not cover all matters');
+    expect(filledText).not.toContain('Note: The following resolutions');
     expect(filledText).toContain('pursuant to Section 141(f)');
     expect(filledText).toContain('Approval of SAFE Financing');
     expect(filledText).toContain('General Authorizing Resolution');
