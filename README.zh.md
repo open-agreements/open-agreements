@@ -261,12 +261,13 @@ node packages/contract-templates-mcp/bin/open-agreements-contract-templates-mcp.
 
 ## 网站（Vercel）
 
-静态营销站点通过 Eleventy 从 `site/` 生成。
+`site/` 是一个通过 Eleventy 构建的精简协议托管层。
 
-- Entry points: `site/index.njk`, `site/templates.njk`, `site/template-detail.njk`
-- Styles: `site/styles.css`
-- Demo media: `site/assets/demo-fill-nda.gif`
-- Deployment config: `vercel.json`
+- 发现元数据：`site/.well-known/`
+- 发布的 JSON Schema：`site/schemas/`
+- 静态空白 DOCX 下载：`site/downloads/`
+- 预览资源：`site/assets/previews/`
+- Serverless API 处理器：`api/`
 - Discovery outputs (generated during `npm run build:site`): `_site/llms.txt`, `_site/llms-full.txt`, `_site/sitemap.xml`, `_site/robots.txt`
 
 本地预览：
@@ -276,7 +277,7 @@ npm run build:site
 python3 -m http.server 8080 --directory _site
 ```
 
-然后打开 `http://localhost:8080`。
+然后检查例如 `http://localhost:8080/.well-known/mcp-server-card`、`http://localhost:8080/llms.txt`，或 `_site/` 中生成的文件。
 
 Vercel 部署说明：
 

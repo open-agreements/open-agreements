@@ -1,13 +1,21 @@
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { describe, expect } from 'vitest';
 import { itAllure } from './helpers/allure-test.js';
 
-const ROOT = new URL('..', import.meta.url).pathname;
+const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const it = itAllure.epic('Platform & Distribution').withLabels({ feature: 'Trust Signals' });
 
 function readRepoFile(relPath: string): string {
   return readFileSync(join(ROOT, relPath), 'utf-8');
+}
+
+// Static `site/<path>` files are passthrough-copied verbatim into `_site/<path>` at build
+// time, so reading from source is equivalent to reading from build output and avoids needing
+// the test to depend on a prior `npm run build:site:vercel` invocation in CI.
+function readStaticSiteFile(relPath: string): string {
+  return readFileSync(join(ROOT, 'site', relPath), 'utf-8');
 }
 
 describe('trust signal surfaces', () => {
@@ -17,12 +25,39 @@ describe('trust signal surfaces', () => {
     expect(readmeTop.toLowerCase()).toContain('codecov');
   });
 
-  it.openspec('OA-DST-007')('landing page trust section links npm, CI, coverage, and test framework signal', () => {
-    const indexTemplate = readRepoFile('site/index.njk');
-    expect(indexTemplate).toContain('npmjs.org/package/open-agreements');
-    expect(indexTemplate).toContain('actions/workflows/ci.yml/badge.svg');
-    expect(indexTemplate).toContain('app.codecov.io/gh/open-agreements/open-agreements');
-    expect(indexTemplate).toContain('Vitest-based test runs');
+  it.openspec('OA-DST-007')('thin protocol host emits machine-readable trust surfaces while marketing routes redirect externally', () => {
+    const serverCard = JSON.parse(readStaticSiteFile('.well-known/mcp-server-card'));
+    const apiCatalog = JSON.parse(readStaticSiteFile('.well-known/api-catalog'));
+    const agentCard = JSON.parse(readStaticSiteFile('.well-known/agent-card.json'));
+    const vercelConfig = JSON.parse(readRepoFile('vercel.json'));
+    const redirects = new Map(
+      vercelConfig.redirects.map((entry: { source: string; destination: string }) => [entry.source, entry.destination]),
+    );
+
+    expect(serverCard.websiteUrl).toBe('https://openagreements.org');
+    expect(serverCard.repository.url).toContain('github.com/open-agreements/open-agreements');
+    expect(apiCatalog.linkset.map((entry: { anchor: string }) => entry.anchor)).toEqual(
+      expect.arrayContaining([
+        'https://openagreements.org/api/mcp',
+        'https://openagreements.org/api/a2a',
+      ]),
+    );
+    expect(agentCard.url).toMatch(/\/api\/a2a$/);
+    expect(agentCard.skills.map((entry: { id: string }) => entry.id)).toEqual(
+      expect.arrayContaining(['fill-template', 'list-templates']),
+    );
+    expect(redirects.get('/')).toBe('https://usejunior.com/developer-tools/open-agreements');
+    expect(redirects.get('/trust')).toBe('https://usejunior.com/developer-tools/open-agreements');
+    expect(redirects.get('/templates/:name')).toBe('https://usejunior.com/developer-tools/open-agreements/templates/:name');
+  });
+
+  it.openspec('OA-DST-006b')('system card stays source-only and never ships as a rendered trust page', () => {
+    const systemCard = readRepoFile('site/trust/system-card.md');
+
+    expect(systemCard.startsWith('---\n')).toBe(false);
+    expect(systemCard).not.toContain('layout: trust-layout.njk');
+    expect(systemCard).toContain('# OpenAgreements System Card');
+    expect(existsSync(join(ROOT, '_site', 'trust'))).toBe(false);
   });
 
   it.openspec('OA-DST-008')('CI workflow uploads lcov coverage to Codecov', () => {

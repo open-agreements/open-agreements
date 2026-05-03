@@ -261,12 +261,13 @@ node packages/contract-templates-mcp/bin/open-agreements-contract-templates-mcp.
 
 ## Sitio web (Vercel)
 
-Un sitio de marketing estático se genera desde `site/` con Eleventy.
+`site/` es un host de protocolo delgado que se construye con Eleventy.
 
-- Entry points: `site/index.njk`, `site/templates.njk`, `site/template-detail.njk`
-- Styles: `site/styles.css`
-- Demo media: `site/assets/demo-fill-nda.gif`
-- Deployment config: `vercel.json`
+- Metadatos de descubrimiento: `site/.well-known/`
+- Esquemas JSON publicados: `site/schemas/`
+- Descargas estáticas de DOCX en blanco: `site/downloads/`
+- Assets de vista previa: `site/assets/previews/`
+- Handlers serverless de la API: `api/`
 - Discovery outputs (generated during `npm run build:site`): `_site/llms.txt`, `_site/llms-full.txt`, `_site/sitemap.xml`, `_site/robots.txt`
 
 Vista previa local:
@@ -276,7 +277,7 @@ npm run build:site
 python3 -m http.server 8080 --directory _site
 ```
 
-Luego abre `http://localhost:8080`.
+Luego verifica, por ejemplo, `http://localhost:8080/.well-known/mcp-server-card`, `http://localhost:8080/llms.txt` o los archivos generados dentro de `_site/`.
 
 Notas de despliegue en Vercel:
 

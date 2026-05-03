@@ -1,6 +1,6 @@
 ---
 title: Changelog & Release Process
-description: How release notes are generated and published to the public changelog
+description: How release notes are generated and maintained on GitHub Releases
 section: Reference
 ---
 
@@ -47,8 +47,8 @@ Allowed types include:
    - publish the npm package suite with trusted OIDC provenance, including both `open-agreements` and `@open-agreements/open-agreements`,
    - create a GitHub Release with auto-generated notes (if one does not exist),
    - deploy production to Vercel.
-4. During site builds, changelog data is generated from GitHub Releases and published on:
-   - `/trust/changelog/`
+4. GitHub Releases is the public changelog surface for published notes:
+   - `https://github.com/open-agreements/open-agreements/releases`
 
 ## Skills Directory Publishing
 
@@ -101,12 +101,11 @@ Tagging is blocked until this gate passes.
 ## Local Preview
 
 ```bash
-npm run generate:changelog-data
 npm run build:site
 ```
 
-Then open the generated Trust changelog page from `_site/trust/changelog/index.html`.
+This repo no longer renders a public changelog page in `_site/`. Review published notes on `https://github.com/open-agreements/open-agreements/releases`, and use `npm run build:site` only to verify the thin protocol-host output still builds cleanly.
 
 ## Editing Release Notes
 
-If a published note needs adjustment, edit the GitHub Release body. The next site build will pick up the updated notes automatically.
+If a published note needs adjustment, edit the GitHub Release body. The Releases page updates there directly; no site rebuild is required.
