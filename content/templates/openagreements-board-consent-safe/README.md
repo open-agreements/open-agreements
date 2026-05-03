@@ -1,43 +1,25 @@
-# Board Consent for SAFE Financing
+# OpenAgreements Board Consent for SAFE Financing
 
-Action by unanimous written consent of the board of directors of a Delaware
-corporation approving the issuance of one or more Simple Agreements for Future
-Equity (SAFEs).
+Board consent template for approving the issuance of one or more Simple
+Agreements for Future Equity (SAFEs) by a Delaware corporation.
 
-## Canonical Source
+## Source
 
-This template is canonically authored in Contract IR:
+- **URL**: https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-board-consent-safe
+- **Version**: 1.1
+- **License**: CC BY 4.0
 
-- `template.md` contains the legal text and sparse style directives.
-- `schema.yaml` defines the allowed variables.
-- `styles.yaml` defines the rendering semantics for DOCX and Markdown output.
+## Fields
 
-Generated artifact:
+| Field | Type | Required | Description |
+|-------|------|----------|-------------|
+| `company_name` | string | yes | Full legal name of the company |
+| `effective_date` | date | yes | Date the consent is effective |
+| `purchase_amount` | string | yes | Aggregate SAFE purchase amount |
+| `board_members` | array | yes | Directors signing the consent |
 
-- `template.docx`
+## Attribution
 
-Markdown downloads are derived from `template.md` at build time so the canonical
-authoring source stays in one place.
-- `clean.json` removes the introductory drafting note from filled output while
-  keeping it in the canonical authoring source and generated base template
-
-Reference artifact:
-
-- `reference-source.docx` is Joey Tsang's current SAFE board consent source
-  document, kept only for fidelity comparison.
-
-## Drafting Provenance
-
-- **OpenAgreements slug**: `openagreements-board-consent-safe`
-- **Reference source**: https://github.com/cooleyLLP/seriesseed
-- **Reference document**: Series Seed — Board Consent
-- **OpenAgreements license**: CC BY 4.0
-
-## Notes
-
-- This consent is scoped to **Delaware corporations** and references Section
-  141(f) of the Delaware General Corporation Law.
-- The consent authorizes **one or more SAFEs** in a round. Individual investor
-  names and economic terms remain in each SAFE itself, not this board consent.
-- The paired stockholder consent now lives at
-  `content/templates/openagreements-stockholder-consent-safe/`.
+Authored by OpenAgreements contributors. Drafting structure informed by
+publicly available Series Seed SAFE board consent materials. Licensed under
+CC BY 4.0.

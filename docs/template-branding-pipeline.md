@@ -62,6 +62,18 @@ content close to the rendered DOCX it produces.
    - `outputs.docx`: path to the rendered DOCX (typically `content/templates/<slug>/template.docx`)
    - `sections`: cover_terms, standard_terms, signature definitions
 2. Author cover terms, standard terms, and signature blocks as Markdown in the body.
+   For array-driven stacked signers, declare the repeat on `oa:signature-mode`
+   and author one signer prototype, for example:
+
+   ```html
+   <!-- oa:signature-mode arrangement=stacked repeat=board_members item=member -->
+   <!-- oa:signer id=director kind=individual capacity=personal label="Director" -->
+   **Director**
+
+   Signature: _______________
+   Print Name: {member.name}
+   Date: {effective_date}
+   ```
 3. Run `npm run generate:templates`. The generator discovers the new canonical
    source automatically and writes `content/templates/<your-slug>/.template.generated.json`
    alongside the rendered `template.docx`.

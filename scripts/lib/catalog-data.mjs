@@ -5,11 +5,9 @@ import {
   mkdirSync,
   readdirSync,
   statSync,
-  writeFileSync,
 } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { renderContractIrMarkdown } from "../contract_ir/index.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -153,14 +151,6 @@ function getContentRepoPath(id, contentTier) {
   return `content/templates/${id}`;
 }
 
-function hasContractIrSource(templateDir) {
-  return (
-    existsSync(resolve(templateDir, "template.md")) &&
-    existsSync(resolve(templateDir, "schema.yaml")) &&
-    existsSync(resolve(templateDir, "styles.yaml"))
-  );
-}
-
 function loadCatalogItems(rootDir) {
   const bin = resolve(rootDir, "bin/open-agreements.js");
   const raw = execFileSync("node", [bin, "list", "--json"], {
@@ -186,7 +176,6 @@ export function buildCatalog({ rootDir = REPO_ROOT } = {}) {
       item.name.startsWith("openagreements-") || sourceLabel === "OpenAgreements";
     const hasPreview = isOpenAgreements;
     const templateDir = resolve(rootDir, "content", "templates", item.name);
-    const hasContractIrMarkdownSource = hasContractIrSource(templateDir);
     const hasDocxDownload =
       hasPreview &&
       flags.distributable &&
@@ -194,7 +183,7 @@ export function buildCatalog({ rootDir = REPO_ROOT } = {}) {
     const hasMarkdownDownload =
       hasPreview &&
       flags.distributable &&
-      (existsSync(resolve(templateDir, "template.md")) || hasContractIrMarkdownSource);
+      existsSync(resolve(templateDir, "template.md"));
 
     const templateData = {
       id: item.name,
@@ -305,14 +294,7 @@ export function prepareCatalogDownloads({
       const templateDir = resolve(rootDir, "content", "templates", template.id);
       const sourcePath = resolve(templateDir, "template.md");
       const destinationPath = resolve(downloadsDir, `${template.id}.md`);
-      if (hasContractIrSource(templateDir)) {
-        if (
-          !existsSync(destinationPath) ||
-          statSync(destinationPath).mtimeMs < statSync(sourcePath).mtimeMs
-        ) {
-          writeFileSync(destinationPath, renderContractIrMarkdown(templateDir), "utf-8");
-        }
-      } else if (existsSync(sourcePath)) {
+      if (existsSync(sourcePath)) {
         if (
           !existsSync(destinationPath) ||
           statSync(destinationPath).mtimeMs < statSync(sourcePath).mtimeMs

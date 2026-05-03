@@ -336,13 +336,65 @@ describe('validateTemplate placeholder coverage', () => {
   it('accepts FOR loop placeholders in direct template scanning mode', () => {
     const dir = createTemplateFixture({
       docText: '{FOR row IN board_members}{$row.name}{END-FOR row}',
-      fieldsYaml: '  - name: board_members\n    type: array\n    description: Board members',
+      fieldsYaml: [
+        '  - name: board_members',
+        '    type: array',
+        '    description: Board members',
+        '    items:',
+        '      - name: name',
+        '        type: string',
+        '        description: Member name',
+      ].join('\n'),
     });
 
     const result = validateTemplate(dir, 'fixture-for-loop');
 
     expect(result.valid).toBe(true);
     expect(result.errors).toEqual([]);
+  });
+
+  it('rejects {FOR ... IN field} when field is not declared array', () => {
+    const dir = createTemplateFixture({
+      docText: '{FOR row IN board_members}{$row.name}{END-FOR row}',
+      fieldsYaml: '  - name: board_members\n    type: string\n    description: Board members',
+    });
+
+    const result = validateTemplate(dir, 'fixture-for-loop-bad-type');
+
+    expect(result.valid).toBe(false);
+    expect(result.errors.join(' ')).toContain('requires "board_members" to be type=array');
+  });
+
+  it('rejects {FOR ... IN field} when field is missing from metadata', () => {
+    const dir = createTemplateFixture({
+      docText: '{FOR row IN signatories}{$row.name}{END-FOR row}',
+      fieldsYaml: '  - name: company_name\n    type: string\n    description: Company name',
+    });
+
+    const result = validateTemplate(dir, 'fixture-for-loop-missing-field');
+
+    expect(result.valid).toBe(false);
+    expect(result.errors.join(' ')).toContain('not defined in metadata fields');
+  });
+
+  it('rejects {$item.field} when row field is not declared in items', () => {
+    const dir = createTemplateFixture({
+      docText: '{FOR row IN board_members}{$row.title}{END-FOR row}',
+      fieldsYaml: [
+        '  - name: board_members',
+        '    type: array',
+        '    description: Board members',
+        '    items:',
+        '      - name: name',
+        '        type: string',
+        '        description: Member name',
+      ].join('\n'),
+    });
+
+    const result = validateTemplate(dir, 'fixture-item-ref-bad');
+
+    expect(result.valid).toBe(false);
+    expect(result.errors.join(' ')).toContain('"board_members.items" does not declare it');
   });
 
   it('flags unsafe template control tags in template.docx', () => {
