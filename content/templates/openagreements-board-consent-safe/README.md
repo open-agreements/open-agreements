@@ -6,7 +6,7 @@ Agreements for Future Equity (SAFEs) by a Delaware corporation.
 ## Source
 
 - **URL**: https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-board-consent-safe
-- **Version**: 1.1
+- **Version**: 1.2
 - **License**: CC BY 4.0
 
 ## Fields

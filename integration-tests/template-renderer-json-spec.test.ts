@@ -24,9 +24,16 @@ describe('json template renderer', () => {
     const specs = specPaths.map((specPath) => loadContractSpec(specPath));
 
     expect(specs.length).toBeGreaterThanOrEqual(2);
-    const layoutIds = new Set(specs.map((spec) => spec.layout_id));
-    expect(layoutIds.size).toBe(1);
-    expect(layoutIds.has('cover-standard-signature-v1')).toBe(true);
+
+    const specsByLayout = new Map<string, typeof specs>();
+    for (const spec of specs) {
+      const bucket = specsByLayout.get(spec.layout_id) ?? [];
+      bucket.push(spec);
+      specsByLayout.set(spec.layout_id, bucket);
+    }
+    const sharedLayouts = [...specsByLayout.entries()].filter(([, group]) => group.length >= 2);
+    expect(sharedLayouts.length).toBeGreaterThanOrEqual(1);
+    expect(specsByLayout.has('cover-standard-signature-v1')).toBe(true);
 
     const outputs = specs.map((spec) => renderFromValidatedSpec(spec, style));
     expect(outputs.length).toBe(specs.length);

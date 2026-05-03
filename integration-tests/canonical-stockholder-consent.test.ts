@@ -61,13 +61,27 @@ function normalizeText(value: string): string {
     .trim();
 }
 
-describe('Canonical SAFE stockholder consent', () => {
-  it.openspec('OA-TMP-038')('compiles canonical stockholder consent source and metadata', () => {
+function extractDocxXml(docxPathOrBuffer: string | Buffer): string {
+  const zip = typeof docxPathOrBuffer === 'string'
+    ? new AdmZip(docxPathOrBuffer)
+    : new AdmZip(docxPathOrBuffer);
+  const documentXml = zip.getEntry('word/document.xml');
+  if (!documentXml) {
+    throw new Error('word/document.xml not found in DOCX');
+  }
+  return documentXml.getData().toString('utf-8');
+}
+
+describe('Canonical SAFE stockholder consent (traditional)', () => {
+  it.openspec(['OA-TMP-038', 'OA-TMP-047'])('compiles canonical stockholder consent source and metadata', () => {
     const compiled = compileCanonicalSourceFile(SOURCE_PATH);
     const metadata = loadMetadata(TEMPLATE_DIR);
 
     expect(compiled.contractSpec.template_id).toBe('openagreements-stockholder-consent-safe');
-    expect(compiled.contractSpec.layout_id).toBe('cover-standard-signature-v1');
+    expect(compiled.contractSpec.layout_id).toBe('traditional-consent-v1');
+    expect(compiled.contractSpec.document.version).toBe('1.2');
+    expect(compiled.contractSpec.document.opening_recital).toContain('Section 228');
+    expect(compiled.contractSpec.sections.cover_terms).toBeUndefined();
     expect(compiled.contractSpec.sections.signature).toMatchObject({
       mode: 'signers',
       arrangement: 'stacked',
@@ -81,29 +95,40 @@ describe('Canonical SAFE stockholder consent', () => {
     );
   });
 
-  it.openspec('OA-TMP-038')('renders DOCX and Markdown from the canonical stockholder consent source', async () => {
+  it.openspec(['OA-TMP-038', 'OA-TMP-046', 'OA-TMP-048'])('renders DOCX from the canonical stockholder consent source with traditional structure', async () => {
     const style = loadStyleProfile(STYLE_PATH);
     const compiled = compileCanonicalSourceFile(SOURCE_PATH);
     const rendered = renderFromValidatedSpec(compiled.contractSpec, style);
     const buffer = await Packer.toBuffer(rendered.document);
     const generatedText = normalizeText(extractDocxText(buffer));
+    const generatedXml = extractDocxXml(buffer);
 
-    expect(rendered.markdown).toContain('# Stockholder Consent for SAFE Financing');
-    expect(rendered.markdown).toContain('| **Company** | {company_name} |');
-    expect(rendered.markdown).toContain('{FOR stockholder IN stockholders}');
-    expect(rendered.markdown).toContain('{$stockholder.name}');
-    expect(rendered.markdown).toContain('Date: {effective_date}');
-    expect(rendered.markdown).toContain('{END-FOR stockholder}');
+    expect(generatedText).toContain('ACTION BY WRITTEN CONSENT OF THE STOCKHOLDERS OF {company_name}');
+    // The drafting note stays on the contract spec for MCP consumers but is deliberately
+    // not painted onto the DOCX body — traditional consents (Cooley/Joey) carry no
+    // in-document drafting note.
+    expect(compiled.contractSpec.document.opening_note).toContain('Note: The following resolutions');
+    expect(generatedText).not.toContain('Note: The following resolutions');
+    expect(generatedText).toContain('pursuant to Section 228 of the Delaware General Corporation Law');
+    expect(generatedText).toContain('such later effectiveness shall not exceed 60 days');
+    expect(generatedText).toContain('Approval of SAFE Financing');
+    expect(generatedText).toContain('General Authorizing Resolution');
+    expect(generatedText).toContain('WHEREAS, the Company');
+    expect(generatedText).toContain('RESOLVED, that each SAFE');
+    expect(generatedText).toContain('[Signature Page Follows]');
 
-    expect(generatedText).toContain('Stockholder Consent for SAFE Financing');
-    expect(generatedText).toContain('Stockholder Action Under Delaware Law');
-    expect(generatedText).toContain('SAFE Financing Approval');
     expect(generatedText).toContain('{FOR stockholder IN stockholders}');
     expect(generatedText).toContain('{$stockholder.name}');
+    expect(generatedText).toContain('Date: {effective_date}');
     expect(generatedText).toContain('{END-FOR stockholder}');
+
+    expect(generatedXml).not.toMatch(/<w:tbl[\s>]/);
+    expect(generatedText).not.toContain('Cover Terms');
+    expect(generatedText).not.toContain('Cover Page controls');
+    expect(generatedText).not.toContain('Governing Law');
   });
 
-  it.openspec('OA-TMP-038')('fills stockholder consent without leaving signer loop markers', async () => {
+  it.openspec(['OA-TMP-038', 'OA-TMP-048'])('fills stockholder consent without leaving signer loop markers', async () => {
     const outputDir = mkdtempSync(join(tmpdir(), 'stockholder-consent-fill-'));
     tempDirs.push(outputDir);
     const outputPath = join(outputDir, 'filled.docx');
@@ -124,17 +149,26 @@ describe('Canonical SAFE stockholder consent', () => {
     });
 
     const filledText = normalizeText(extractDocxText(outputPath));
-    expect(filledText).toContain('Stockholder Consent for SAFE Financing');
-    expect(filledText).toContain('SAFE Financing Approval');
+    const filledXml = extractDocxXml(outputPath);
+
+    expect(filledText).toContain('ACTION BY WRITTEN CONSENT OF THE STOCKHOLDERS OF Acme Labs, Inc.');
+    expect(filledText).toContain('Approval of SAFE Financing');
     expect(filledText).toContain('Acme Labs, Inc.');
     expect(filledText).toContain('Alex Holder');
     expect(filledText).toContain('Blair Holder');
     expect(filledText).toContain('Casey Holder');
-    expect(filledText.match(/Print Name:/g)?.length).toBe(3);
-    expect(filledText.match(/^Stockholder$/gm)?.length).toBe(3);
+    expect(filledText).not.toContain('Print Name:');
+    expect(filledText.match(/Date: April 15, 2026/g)?.length).toBe(3);
+
     expect(filledText).not.toContain('{FOR ');
     expect(filledText).not.toContain('{END-FOR ');
     expect(filledText).not.toContain('{$stockholder.name}');
+    expect(filledText).not.toContain('{company_name}');
+
+    expect(filledXml).not.toMatch(/<w:tbl[\s>]/);
+    expect(filledText).not.toContain('Cover Terms');
+    expect(filledText).not.toContain('Cover Page controls');
+    expect(filledText).not.toContain('Governing Law');
   });
 
   it.openspec('OA-TMP-038')('rejects fills with empty stockholders', async () => {
@@ -175,7 +209,7 @@ describe('Canonical SAFE stockholder consent', () => {
     const zip = new AdmZip(outputPath);
     const footerXml = zip.getEntry('word/footer1.xml')?.getData().toString('utf-8') ?? '';
 
-    expect(footerXml).toContain('OpenAgreements Stockholder Consent for SAFE Financing (v1.1). Free to use under CC BY 4.0.');
+    expect(footerXml).toContain('OpenAgreements Stockholder Consent for SAFE Financing (v1.2). Free to use under CC BY 4.0.');
     expect(footerXml).toMatch(/<w:instrText[^>]*>\s*PAGE\s*<\/w:instrText>/);
     expect(footerXml).toMatch(/<w:instrText[^>]*>\s*NUMPAGES\s*<\/w:instrText>/);
   });

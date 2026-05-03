@@ -258,4 +258,29 @@ describe('canonical Markdown authoring', () => {
     expect(rendered.markdown).not.toContain('(Aliases:');
     expect(rendered.markdown).not.toContain('[[');
   });
+
+  // Cover-page sections must be authored consistently: either declared in frontmatter
+  // and present in the body, or absent from both. The compiler should reject either
+  // half on its own. These cover that contract.
+  describe('optional cover_terms section', () => {
+    it.openspec('OA-TMP-047')('rejects sources that declare sections.cover_terms but omit the body section', () => {
+      const sourceWithoutBody = buildCanonicalSource().replace(
+        /## Cover Terms[\s\S]*?(?=## Standard Terms)/,
+        ''
+      );
+      expect(() =>
+        compileCanonicalSourceString(sourceWithoutBody, 'inline cover-frontmatter-only')
+      ).toThrow(/missing the "## Cover Terms" body section/);
+    });
+
+    it.openspec('OA-TMP-047')('rejects sources that include the body section but omit sections.cover_terms', () => {
+      const sourceWithoutFrontmatter = buildCanonicalSource().replace(
+        /  cover_terms:\n    section_label: Cover Terms\n    heading_title: Cover Terms\n/,
+        ''
+      );
+      expect(() =>
+        compileCanonicalSourceString(sourceWithoutFrontmatter, 'inline cover-body-only')
+      ).toThrow(/missing frontmatter sections\.cover_terms/);
+    });
+  });
 });

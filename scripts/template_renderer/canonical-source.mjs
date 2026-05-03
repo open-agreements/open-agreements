@@ -95,7 +95,7 @@ function splitTopLevelSections(body, filePath) {
   }
 
   const byTitle = new Map(sections.map((section) => [section.title, section.lines]));
-  for (const requiredTitle of ['Cover Terms', 'Standard Terms', 'Signatures']) {
+  for (const requiredTitle of ['Standard Terms', 'Signatures']) {
     if (!byTitle.has(requiredTitle)) {
       throw new Error(`Canonical source (${filePath}) is missing required "## ${requiredTitle}" section`);
     }
@@ -625,18 +625,20 @@ function normalizeCanonicalTemplate(frontmatter, sections, filePath) {
     outputs: frontmatter.outputs ?? {},
     document: frontmatter.document,
     sections: {
-      cover_terms: {
-        subtitle: resolveExplicitReferences(
-          sections.cover_terms.subtitle,
-          definitionRegistry,
-          clauseHeadings,
-          filePath
-        ),
-        rows: sections.cover_terms.rows.map((row) => ({
-          ...row,
-          value: resolveExplicitReferences(row.value, definitionRegistry, clauseHeadings, filePath),
-        })),
-      },
+      ...(sections.cover_terms ? {
+        cover_terms: {
+          subtitle: resolveExplicitReferences(
+            sections.cover_terms.subtitle,
+            definitionRegistry,
+            clauseHeadings,
+            filePath
+          ),
+          rows: sections.cover_terms.rows.map((row) => ({
+            ...row,
+            value: resolveExplicitReferences(row.value, definitionRegistry, clauseHeadings, filePath),
+          })),
+        },
+      } : {}),
       standard_terms: {
         clauses: sections.standard_terms.clauses.map((clause) => (
           clause.type === 'definitions'
@@ -690,9 +692,16 @@ function projectToContractSpec(normalized, frontmatter, filePath) {
     !normalized.outputs.markdown && !frontmatter.output_markdown_path,
     `Canonical source (${filePath}) must not declare output_markdown_path; the canonical template.md is itself the source`
   );
-  invariant(frontmatter.sections?.cover_terms, `Canonical source (${filePath}) is missing frontmatter sections.cover_terms`);
   invariant(frontmatter.sections?.standard_terms, `Canonical source (${filePath}) is missing frontmatter sections.standard_terms`);
   invariant(frontmatter.sections?.signature, `Canonical source (${filePath}) is missing frontmatter sections.signature`);
+  invariant(
+    !frontmatter.sections?.cover_terms || normalized.sections.cover_terms,
+    `Canonical source (${filePath}) declares frontmatter sections.cover_terms but is missing the "## Cover Terms" body section`
+  );
+  invariant(
+    !normalized.sections.cover_terms || frontmatter.sections?.cover_terms,
+    `Canonical source (${filePath}) has a "## Cover Terms" body section but is missing frontmatter sections.cover_terms`
+  );
 
   return validateContractSpec({
     template_id: normalized.template_id,
@@ -701,18 +710,20 @@ function projectToContractSpec(normalized, frontmatter, filePath) {
     output_docx_path: outputDocxPath,
     document: normalized.document,
     sections: {
-      cover_terms: {
-        section_label: frontmatter.sections.cover_terms.section_label,
-        heading_title: frontmatter.sections.cover_terms.heading_title,
-        subtitle: normalized.sections.cover_terms.subtitle,
-        rows: normalized.sections.cover_terms.rows.map((row) => ({
-          kind: row.kind,
-          label: row.label,
-          value: row.value,
-          ...(row.condition ? { condition: row.condition } : {}),
-          ...(row.kind === 'subrow' ? { sub: true } : {}),
-        })),
-      },
+      ...(normalized.sections.cover_terms ? {
+        cover_terms: {
+          section_label: frontmatter.sections.cover_terms.section_label,
+          heading_title: frontmatter.sections.cover_terms.heading_title,
+          subtitle: normalized.sections.cover_terms.subtitle,
+          rows: normalized.sections.cover_terms.rows.map((row) => ({
+            kind: row.kind,
+            label: row.label,
+            value: row.value,
+            ...(row.condition ? { condition: row.condition } : {}),
+            ...(row.kind === 'subrow' ? { sub: true } : {}),
+          })),
+        },
+      } : {}),
       standard_terms: {
         section_label: frontmatter.sections.standard_terms.section_label,
         heading_title: frontmatter.sections.standard_terms.heading_title,
@@ -764,7 +775,9 @@ export function compileCanonicalSourceString(raw, filePath = 'canonical source')
   invariant(frontmatter.document, `Canonical source (${filePath}) is missing document frontmatter`);
 
   const normalized = normalizeCanonicalTemplate(frontmatter, {
-    cover_terms: parseCoverTerms(sectionLines.get('Cover Terms'), filePath),
+    ...(sectionLines.has('Cover Terms')
+      ? { cover_terms: parseCoverTerms(sectionLines.get('Cover Terms'), filePath) }
+      : {}),
     standard_terms: {
       clauses: parseStandardTerms(sectionLines.get('Standard Terms'), filePath),
     },

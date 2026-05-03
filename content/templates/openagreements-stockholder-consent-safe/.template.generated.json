@@ -1,82 +1,32 @@
 {
   "template_id": "openagreements-stockholder-consent-safe",
-  "layout_id": "cover-standard-signature-v1",
+  "layout_id": "traditional-consent-v1",
   "style_id": "openagreements-default-v1",
   "output_docx_path": "content/templates/openagreements-stockholder-consent-safe/template.docx",
   "document": {
-    "title": "Stockholder Consent for SAFE Financing",
+    "title": "ACTION BY WRITTEN CONSENT OF THE STOCKHOLDERS OF {company_name}",
     "label": "OpenAgreements Stockholder Consent for SAFE Financing",
-    "version": "1.1",
+    "version": "1.2",
     "license": "Free to use under CC BY 4.0",
     "include_cloud_doc_line": false,
     "defined_term_highlight_mode": "none",
-    "cover_row_height": 700
+    "opening_note": "Note: The following resolutions do not cover all matters that may need to be addressed in connection with the SAFE financing. For example, if the Company is concurrently amending its certificate of incorporation, converting outstanding convertible notes, or granting pro rata or information rights pursuant to a side letter, additional resolutions will be needed. Always consult with counsel prior to using this consent.",
+    "opening_recital": "The undersigned stockholders of {company_name}, a Delaware corporation (the \"Company\"), pursuant to Section 228 of the Delaware General Corporation Law, hereby adopt and approve the following resolutions and the taking of the actions referred to in such resolutions, it being agreed that these resolutions will be effective only after such actions have been approved by the Company's Board of Directors to the extent that such actions require the approval of the Company's Board of Directors, provided that such later effectiveness shall not exceed 60 days from the earliest date of delivery of this Action by Written Consent:"
   },
   "sections": {
-    "cover_terms": {
-      "section_label": "Cover Terms",
-      "heading_title": "Cover Terms",
-      "subtitle": "The key business terms of this stockholder consent are as follows.",
-      "rows": [
-        {
-          "kind": "row",
-          "label": "Company",
-          "value": "{company_name}",
-          "sub": false
-        },
-        {
-          "kind": "row",
-          "label": "Effective Date",
-          "value": "{effective_date}",
-          "sub": false
-        },
-        {
-          "kind": "row",
-          "label": "Aggregate SAFE Purchase Amount",
-          "value": "${purchase_amount}",
-          "sub": false
-        },
-        {
-          "kind": "row",
-          "label": "Governing Law",
-          "value": "Delaware",
-          "sub": false
-        }
-      ]
-    },
     "standard_terms": {
-      "section_label": "Standard Terms",
-      "heading_title": "Standard Terms",
+      "section_label": "Resolutions",
+      "heading_title": "Resolutions",
       "clauses": [
         {
-          "id": "stockholder-action-under-delaware-law",
-          "heading": "Stockholder Action Under Delaware Law",
-          "body": "The undersigned stockholders of Company adopt this action by written consent pursuant to Section 228 of the Delaware General Corporation Law."
+          "id": "approval-of-safe-financing",
+          "heading": "Approval of SAFE Financing",
+          "body": "**WHEREAS**, the Company's Board of Directors (the \"Board\") believes it is in the best interest of the Company to enter into one or more Simple Agreements for Future Equity (each, a \"SAFE\"), providing for the sale of rights to future shares of the Company's capital stock for an aggregate purchase amount of up to ${purchase_amount} (the \"SAFE Financing\"); and\n\n**WHEREAS**, after careful consideration, the undersigned stockholders have determined that the terms and conditions of the SAFE Financing are just and equitable and fair as to the Company and that it is in the best interests of the Company and the stockholders of the Company to enter into the SAFE Financing subject to the terms and conditions set forth in each SAFE.\n\n**RESOLVED**, that each SAFE, in substantially the form presented to the stockholders, be, and it hereby is, approved in all respects;\n\n**RESOLVED FURTHER**, that the officers of the Company be, and each of them hereby is, authorized and directed, for and on behalf of the Company, to execute and deliver each SAFE, and any and all other agreements, certificates or documents required or contemplated by any SAFE or deemed necessary or appropriate in connection therewith, and to take all actions deemed necessary or appropriate to cause the Company's obligations thereunder to be performed; and\n\n**RESOLVED FURTHER**, that the officers of the Company be, and each of them hereby is, authorized and directed, for and on behalf of the Company, to negotiate or otherwise cause such additions, modifications, amendments or deletions to be made to any SAFE, and such other agreements, certificates or documents, as any such officer may approve, and the execution and delivery thereof by such officer shall be deemed conclusive evidence of the approval of any such addition, modification, amendment or deletion."
         },
         {
-          "id": "safe-financing-approval",
-          "heading": "SAFE Financing Approval",
-          "body": "The undersigned stockholders approve Company entering into one or more Simple Agreements for Future Equity, or SAFEs, for the aggregate purchase amount listed in Cover Terms. This approval is effective only after any required Board of Directors approvals are obtained."
-        },
-        {
-          "id": "fairness-and-company-benefit",
-          "heading": "Fairness and Company Benefit",
-          "body": "The undersigned stockholders determine that the SAFE financing is just, equitable, and fair to Company and its stockholders and is in the best interests of Company."
-        },
-        {
-          "id": "officer-authority",
-          "heading": "Officer Authority",
-          "body": "Each officer of Company is authorized and directed, for and on behalf of Company, to execute and deliver each SAFE and any related agreements, certificates, notices, or other documents required or contemplated by any SAFE or otherwise necessary or appropriate in connection with the SAFE financing."
-        },
-        {
-          "id": "negotiated-changes",
-          "heading": "Negotiated Changes",
-          "body": "Each officer of Company is further authorized to negotiate and approve additions, modifications, amendments, or deletions to any SAFE or related document, and execution and delivery by that officer will be conclusive evidence of that approval."
-        },
-        {
-          "id": "further-actions",
-          "heading": "Further Actions",
-          "body": "Each officer of Company is authorized and directed to take any further actions and execute any additional documents necessary or appropriate to implement these approvals."
+          "id": "general-authorizing-resolution",
+          "heading": "General Authorizing Resolution",
+          "body": "**RESOLVED**, that the officers of the Company be, and each of them hereby is, authorized and directed, for and on behalf of the Company, to take such further actions and execute such documents as may be necessary or appropriate in order to implement the foregoing resolutions."
         }
       ]
     },
@@ -85,7 +35,7 @@
       "arrangement": "stacked",
       "section_label": "Signature Page",
       "heading_title": "Signatures",
-      "preamble": "This Action by Written Consent shall be filed with the minutes of the proceedings of Company stockholders.\n\nBy signing below, each stockholder adopts this stockholder consent as of the effective date listed in Cover Terms. Any copy, facsimile, PDF, or other reliable reproduction of this stockholder consent may be substituted or used in lieu of the original writing for any purpose for which the original writing could be used, provided that the reproduction is a complete reproduction of the entire original writing.",
+      "preamble": "This Action by Written Consent shall be filed with the minutes of the proceedings of the Company's stockholders.\n\nThe undersigned have executed this Action by Written Consent as of the date set forth under his or her name below. Any copy, facsimile, .PDF or other reliable reproduction of this Action by Written Consent may be substituted or used in lieu of the original writing for any and all purposes for which the original writing could be used, provided that such copy, facsimile, .PDF or other reproduction be a complete reproduction of the entire original writing.",
       "signers": [
         {
           "id": "stockholder",
