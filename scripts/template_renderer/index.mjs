@@ -2,9 +2,11 @@ import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { validateContractSpec, validateStyleProfile } from './schema.mjs';
 import { renderCoverStandardSignatureV1 } from './layouts/cover-standard-signature-v1.mjs';
+import { renderTraditionalConsentV1 } from './layouts/traditional-consent-v1.mjs';
 
 const LAYOUTS = {
   'cover-standard-signature-v1': renderCoverStandardSignatureV1,
+  'traditional-consent-v1': renderTraditionalConsentV1,
 };
 
 function readJson(path) {

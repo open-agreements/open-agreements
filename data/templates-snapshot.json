@@ -12226,6 +12226,7 @@
           "required": true,
           "section": "Parties",
           "description": "Legal name of the employer",
+          "display_label": "Employer",
           "default": null,
           "default_value_rationale": null
         },
@@ -12235,6 +12236,7 @@
           "required": true,
           "section": "Parties",
           "description": "Full legal name of the employee",
+          "display_label": "Employee",
           "default": null,
           "default_value_rationale": null
         },
@@ -12244,6 +12246,7 @@
           "required": false,
           "section": "Parties",
           "description": "Employee job title or position (optional)",
+          "display_label": "Employee Title / Position",
           "default": "",
           "default_value_rationale": null
         },
@@ -12253,6 +12256,7 @@
           "required": false,
           "section": "Timing",
           "description": "Effective date of this agreement",
+          "display_label": "Effective Date",
           "default": null,
           "default_value_rationale": null
         },
@@ -12262,6 +12266,7 @@
           "required": false,
           "section": "Legal",
           "description": "Governing law state",
+          "display_label": "Governing Law",
           "default": "Wyoming",
           "default_value_rationale": null
         },
@@ -12289,6 +12294,7 @@
           "required": false,
           "section": "Confidentiality",
           "description": "Duration of confidentiality obligations for trade secrets",
+          "display_label": "Trade Secrets Duration",
           "default": "Perpetual",
           "default_value_rationale": null
         },
@@ -12298,6 +12304,7 @@
           "required": false,
           "section": "Confidentiality",
           "description": "Duration of confidentiality obligations for non-trade-secret information",
+          "display_label": "Other Confidential Information Duration",
           "default": "24 months",
           "default_value_rationale": "24 months is common for non-trade-secret confidentiality obligations in employment agreements."
         },
@@ -12307,6 +12314,7 @@
           "required": false,
           "section": "Employee Non-Solicitation",
           "description": "Whether the employee non-solicitation covenant is included",
+          "display_label": "Employee Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
         },
@@ -12316,6 +12324,7 @@
           "required": false,
           "section": "Employee Non-Solicitation",
           "description": "Duration of employee non-solicitation restriction",
+          "display_label": "Employee Non-Solicitation Duration",
           "default": "12 months",
           "default_value_rationale": "12 months is the most common enforceable duration. Mayer Brown guidance states 1-2 years is the outer range of reasonableness."
         },
@@ -12325,6 +12334,7 @@
           "required": false,
           "section": "Employee Non-Solicitation",
           "description": "Lookback period for determining which employees are covered by the non-solicitation restriction.",
+          "display_label": "Covered Employee Period",
           "default": "12 months",
           "default_value_rationale": "12 months is the most common lookback period for employee non-solicitation scope."
         },
@@ -12334,6 +12344,7 @@
           "required": false,
           "section": "Customer Non-Solicitation",
           "description": "Whether the customer/partner non-solicitation covenant is included",
+          "display_label": "Customer Non-Solicitation Included",
           "default": "true",
           "default_value_rationale": null
         },
@@ -12343,6 +12354,7 @@
           "required": false,
           "section": "Customer Non-Solicitation",
           "description": "Duration of customer/partner non-solicitation restriction",
+          "display_label": "Customer Non-Solicitation Duration",
           "default": "12 months",
           "default_value_rationale": "12 months is the most common enforceable duration. Compass Minerals uses 12 months for non-CEO employees and 24 months for CEO."
         },
@@ -12352,6 +12364,7 @@
           "required": false,
           "section": "Customer Non-Solicitation",
           "description": "Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.",
+          "display_label": "Covered Customer Period",
           "default": "12 months",
           "default_value_rationale": "12 months is the most common lookback period for customer non-solicitation scope."
         },
@@ -12361,6 +12374,7 @@
           "required": false,
           "section": "Non-Competition",
           "description": "Whether the non-competition covenant is included. Requires a lawful restriction pathway under Wyo. Stat. section 1-23-108.",
+          "display_label": "Non-Competition Included",
           "default": "false",
           "default_value_rationale": "Wyo. Stat. section 1-23-108 voids most non-compete covenants. The drafter must affirmatively include this covenant only when a statutory pathway applies."
         },
@@ -12370,6 +12384,7 @@
           "required": false,
           "section": "Non-Competition",
           "description": "Duration of non-competition restriction",
+          "display_label": "Non-Competition Duration",
           "default": "12 months",
           "default_value_rationale": "12 months is the most common enforceable duration. Hassler v. Circle C Resources (2022 WY 28) struck down a 24-month provision with broad scope. No Wyoming court has upheld a non-compete exceeding 24 months."
         },
@@ -12379,6 +12394,7 @@
           "required": false,
           "section": "Non-Competition",
           "description": "Geographic scope of the non-competition restriction",
+          "display_label": "Restricted Territory",
           "default": "the geographic area in which Employee provided services",
           "default_value_rationale": "Tied to the employee's actual service area. Narrower scope improves enforceability under Wyoming's strict scrutiny."
         },
@@ -12388,6 +12404,7 @@
           "required": false,
           "section": "Non-Competition",
           "description": "Description of the business activities that constitute competition with the employer.",
+          "display_label": "Competitive Business",
           "default": null,
           "default_value_rationale": null
         },
@@ -12397,6 +12414,7 @@
           "required": false,
           "section": "Non-Competition",
           "description": "Optional named list of specific competitors. Narrowing the restriction to named competitors strengthens enforceability.",
+          "display_label": "Specified Competitors",
           "default": "",
           "default_value_rationale": null
         },
@@ -12406,6 +12424,7 @@
           "required": false,
           "section": "No Business with Covered Customers",
           "description": "Whether the no-business-with-covered-customers covenant is included. Requires a lawful restriction pathway under Wyo. Stat. section 1-23-108.",
+          "display_label": "No Business with Covered Customers Included",
           "default": "false",
           "default_value_rationale": null
         },
@@ -12415,6 +12434,7 @@
           "required": false,
           "section": "No Business with Covered Customers",
           "description": "Duration of the no-business-with-covered-customers restriction",
+          "display_label": "No Business with Covered Customers Duration",
           "default": "12 months",
           "default_value_rationale": null
         },
@@ -12424,6 +12444,7 @@
           "required": false,
           "section": "Definitions",
           "description": "Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.",
+          "display_label": "Passive Public Holdings Threshold",
           "default": "five percent",
           "default_value_rationale": "Five percent of any class of publicly traded securities is the standard passive investment carveout across Fortune 500 restrictive covenant agreements."
         },
@@ -12433,6 +12454,7 @@
           "required": false,
           "section": "Non-Investment",
           "description": "Whether the non-investment covenant is included. Requires a lawful restriction pathway under Wyo. Stat. section 1-23-108.",
+          "display_label": "Non-Investment Included",
           "default": "false",
           "default_value_rationale": null
         },
@@ -12442,6 +12464,7 @@
           "required": false,
           "section": "Non-Investment",
           "description": "Duration of non-investment restriction",
+          "display_label": "Non-Investment Duration",
           "default": "12 months",
           "default_value_rationale": null
         },
@@ -12451,6 +12474,7 @@
           "required": false,
           "section": "Non-Disparagement",
           "description": "Duration of non-disparagement obligation (measured from termination)",
+          "display_label": "Non-Disparagement Duration",
           "default": "24 months",
           "default_value_rationale": "24 months is common for employment non-disparagement provisions."
         },
@@ -12460,6 +12484,7 @@
           "required": false,
           "section": "Document Management",
           "description": "Optional document-system URI or file ID for execution copy traceability",
+          "display_label": "Cloud Drive ID",
           "default": null,
           "default_value_rationale": null
         },

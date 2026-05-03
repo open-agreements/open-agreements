@@ -52,6 +52,17 @@ function extractDocxText(docxPathOrBuffer: string | Buffer): string {
   return paragraphs.join('\n');
 }
 
+function extractDocxXml(docxPathOrBuffer: string | Buffer): string {
+  const zip = typeof docxPathOrBuffer === 'string'
+    ? new AdmZip(docxPathOrBuffer)
+    : new AdmZip(docxPathOrBuffer);
+  const documentXml = zip.getEntry('word/document.xml');
+  if (!documentXml) {
+    throw new Error('word/document.xml not found in DOCX');
+  }
+  return documentXml.getData().toString('utf-8');
+}
+
 function normalizeText(value: string): string {
   return value
     .replace(/\r/g, '')
@@ -61,13 +72,17 @@ function normalizeText(value: string): string {
     .trim();
 }
 
-describe('Canonical SAFE board consent', () => {
-  it.openspec('OA-TMP-037')('compiles canonical board consent source and metadata', () => {
+describe('Canonical SAFE board consent (traditional)', () => {
+  it.openspec(['OA-TMP-037', 'OA-TMP-047'])('compiles canonical board consent source and metadata', () => {
     const compiled = compileCanonicalSourceFile(SOURCE_PATH);
     const metadata = loadMetadata(TEMPLATE_DIR);
 
     expect(compiled.contractSpec.template_id).toBe('openagreements-board-consent-safe');
-    expect(compiled.contractSpec.layout_id).toBe('cover-standard-signature-v1');
+    expect(compiled.contractSpec.layout_id).toBe('traditional-consent-v1');
+    expect(compiled.contractSpec.document.version).toBe('1.2');
+    expect(compiled.contractSpec.document.opening_note).toBeTruthy();
+    expect(compiled.contractSpec.document.opening_recital).toContain('Section 141(f)');
+    expect(compiled.contractSpec.sections.cover_terms).toBeUndefined();
     expect(compiled.contractSpec.sections.signature).toMatchObject({
       mode: 'signers',
       arrangement: 'stacked',
@@ -86,46 +101,43 @@ describe('Canonical SAFE board consent', () => {
     );
   });
 
-  it.openspec(['OA-TMP-032', 'OA-TMP-037'])('renders DOCX and Markdown from the canonical board consent source', async () => {
+  it.openspec(['OA-TMP-032', 'OA-TMP-037', 'OA-TMP-046', 'OA-TMP-048'])('renders DOCX from the canonical board consent source with traditional structure', async () => {
     const style = loadStyleProfile(STYLE_PATH);
     const compiled = compileCanonicalSourceFile(SOURCE_PATH);
     const rendered = renderFromValidatedSpec(compiled.contractSpec, style);
     const buffer = await Packer.toBuffer(rendered.document);
     const generatedText = normalizeText(extractDocxText(buffer));
+    const generatedXml = extractDocxXml(buffer);
 
-    expect(rendered.markdown).toContain('# Board Consent for SAFE Financing');
-    expect(rendered.markdown).toContain('## Cover Terms');
-    expect(rendered.markdown).toContain('| **Company** | {company_name} |');
-    expect(rendered.markdown).toContain('| **Aggregate SAFE Purchase Amount** | ${purchase_amount} |');
-    expect(rendered.markdown).toContain('| **Governing Law** | Delaware |');
-    // Negative: the modern SAFE economics sub-rows must not appear in the traditional form.
-    expect(rendered.markdown).not.toContain('Valuation Cap');
-    expect(rendered.markdown).not.toContain('Discount Rate');
-    expect(rendered.markdown).not.toContain('Changes to Standard Terms');
-    expect(rendered.markdown).not.toContain('Cover Page controls');
-    // Negative: the modern legal-text scaffolding must not leak through.
-    expect(rendered.markdown).not.toContain('WHEREAS');
-    expect(rendered.markdown).not.toContain('RESOLVED FURTHER');
-    expect(rendered.markdown).not.toContain('Key Terms of Board Consent');
-    expect(rendered.markdown).not.toContain('solely in his or her capacity');
-    expect(rendered.markdown).toContain('{FOR member IN board_members}');
-    expect(rendered.markdown).toContain('{$member.name}');
-    expect(rendered.markdown).toContain('Date: {effective_date}');
-    expect(rendered.markdown).toContain('{END-FOR member}');
-
-    expect(generatedText).toContain('Board Consent for SAFE Financing');
-    expect(generatedText).toContain('Cover Terms');
-    expect(generatedText).toContain('Standard Terms');
+    // Title is centered all-caps with company_name placeholder preserved.
+    expect(generatedText).toContain('ACTION BY UNANIMOUS WRITTEN CONSENT OF THE BOARD OF DIRECTORS OF {company_name}');
+    expect(generatedText).toContain('Note: The following resolutions do not cover all matters');
+    expect(generatedText).toContain('pursuant to Section 141(f) of the Delaware General Corporation Law');
     expect(generatedText).toContain('Approval of SAFE Financing');
-    expect(generatedText).not.toContain('Valuation Cap');
-    expect(generatedText).not.toContain('Discount Rate');
-    expect(generatedText).not.toContain('Cover Page controls');
+    expect(generatedText).toContain('General Authorizing Resolution');
+    expect(generatedText).toContain('WHEREAS, the Board believes');
+    expect(generatedText).toContain('RESOLVED, that each SAFE');
+    expect(generatedText).toContain('RESOLVED FURTHER, that the officers');
+    expect(generatedText).toContain('[Signature Page Follows]');
+
+    // Loop placeholders preserved before fill.
     expect(generatedText).toContain('{FOR member IN board_members}');
     expect(generatedText).toContain('{$member.name}');
+    expect(generatedText).toContain('Date: {effective_date}');
     expect(generatedText).toContain('{END-FOR member}');
+
+    // Negative structural anchors: no cover table, no productized labels, no modern language.
+    expect(generatedXml).not.toMatch(/<w:tbl[\s>]/);
+    expect(generatedText).not.toContain('Cover Terms');
+    expect(generatedText).not.toContain('Key Terms of Board Consent');
+    expect(generatedText).not.toContain('Cover Page controls');
+    expect(generatedText).not.toContain('Valuation Cap');
+    expect(generatedText).not.toContain('Discount Rate');
+    expect(generatedText).not.toContain('solely in his or her capacity');
+    expect(generatedText).not.toContain('Governing Law');
   });
 
-  it.openspec('OA-TMP-037')('fills board consent without leaving signer loop markers', async () => {
+  it.openspec(['OA-TMP-037', 'OA-TMP-048'])('fills board consent without leaving signer loop markers', async () => {
     const outputDir = mkdtempSync(join(tmpdir(), 'board-consent-fill-'));
     tempDirs.push(outputDir);
     const outputPath = join(outputDir, 'filled.docx');
@@ -146,27 +158,34 @@ describe('Canonical SAFE board consent', () => {
     });
 
     const filledText = normalizeText(extractDocxText(outputPath));
-    expect(filledText).toContain('Board Consent for SAFE Financing');
+    const filledXml = extractDocxXml(outputPath);
+
+    expect(filledText).toContain('ACTION BY UNANIMOUS WRITTEN CONSENT OF THE BOARD OF DIRECTORS OF Acme Labs, Inc.');
+    expect(filledText).toContain('Note: The following resolutions do not cover all matters');
+    expect(filledText).toContain('pursuant to Section 141(f)');
     expect(filledText).toContain('Approval of SAFE Financing');
+    expect(filledText).toContain('General Authorizing Resolution');
     expect(filledText).toContain('Acme Labs, Inc.');
     expect(filledText).toContain('Alex Director');
     expect(filledText).toContain('Blair Director');
     expect(filledText).toContain('Casey Director');
-    expect(filledText.match(/Print Name:/g)?.length).toBe(3);
-    expect(filledText.match(/^Director$/gm)?.length).toBe(3);
-    // {effective_date} is a top-level field referenced inside the FOR scope; verify it resolves once per signer.
+    // Joey/Cooley traditional places the bare name under the signature line — no "Print Name:" label.
+    expect(filledText).not.toContain('Print Name:');
     expect(filledText.match(/Date: April 15, 2026/g)?.length).toBe(3);
+
+    // No loop markers leak into the filled output.
     expect(filledText).not.toContain('{FOR ');
     expect(filledText).not.toContain('{END-FOR ');
     expect(filledText).not.toContain('{$member.name}');
-    // Negative: traditional form must not surface SAFE economics sub-rows or the cover-controls override.
+    expect(filledText).not.toContain('{company_name}');
+
+    // Negative: no cover table or modern artifacts.
+    expect(filledXml).not.toMatch(/<w:tbl[\s>]/);
+    expect(filledText).not.toContain('Cover Terms');
+    expect(filledText).not.toContain('Cover Page controls');
     expect(filledText).not.toContain('Valuation Cap');
     expect(filledText).not.toContain('Discount Rate');
-    expect(filledText).not.toContain('Cover Page controls');
-    expect(filledText).not.toContain('WHEREAS');
-    expect(filledText).not.toContain('RESOLVED FURTHER');
-    expect(filledText).not.toContain('Key Terms of Board Consent');
-    expect(filledText).not.toContain('solely in his or her capacity');
+    expect(filledText).not.toContain('Governing Law');
   });
 
   it.openspec('OA-TMP-037')('rejects fills with empty board_members', async () => {
@@ -225,7 +244,7 @@ describe('Canonical SAFE board consent', () => {
     const zip = new AdmZip(outputPath);
     const footerXml = zip.getEntry('word/footer1.xml')?.getData().toString('utf-8') ?? '';
 
-    expect(footerXml).toContain('OpenAgreements Board Consent for SAFE Financing (v1.1). Free to use under CC BY 4.0.');
+    expect(footerXml).toContain('OpenAgreements Board Consent for SAFE Financing (v1.2). Free to use under CC BY 4.0.');
     expect(footerXml).toMatch(/<w:instrText[^>]*>\s*PAGE\s*<\/w:instrText>/);
     expect(footerXml).toMatch(/<w:instrText[^>]*>\s*NUMPAGES\s*<\/w:instrText>/);
   });
