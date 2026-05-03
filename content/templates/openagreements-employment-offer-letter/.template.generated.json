@@ -3,13 +3,13 @@
   "layout_id": "cover-standard-signature-v1",
   "style_id": "openagreements-default-v1",
   "output_docx_path": "content/templates/openagreements-employment-offer-letter/template.docx",
-  "output_markdown_path": "content/templates/openagreements-employment-offer-letter/template.md",
   "document": {
     "title": "Employment Offer Letter",
     "label": "OpenAgreements Employment Offer Letter",
     "version": "1.1",
     "license": "Free to use under CC BY 4.0",
     "include_cloud_doc_line": true,
+    "defined_term_highlight_mode": "all_instances",
     "cover_row_height": 700
   },
   "sections": {
@@ -18,18 +18,80 @@
       "heading_title": "Cover Terms",
       "subtitle": "The key business terms of this Employment Offer Letter are as follows.",
       "rows": [
-        { "label": "Employer", "value": "{employer_name}" },
-        { "label": "Employee", "value": "{employee_name}" },
-        { "label": "Position Title", "value": "{position_title}" },
-        { "label": "Employment Type", "value": "{employment_type}" },
-        { "label": "Start Date", "value": "{start_date}" },
-        { "label": "Reporting Manager", "value": "{reporting_manager}" },
-        { "label": "Base Salary", "value": "{base_salary}" },
-        { "label": "Bonus Terms", "value": "{bonus_terms}", "condition": "bonus_terms" },
-        { "label": "Equity Terms", "value": "{equity_terms}", "condition": "equity_terms" },
-        { "label": "Primary Work Location", "value": "{work_location}" },
-        { "label": "Governing Law", "value": "{governing_law}" },
-        { "label": "Offer Expiration Date", "value": "{offer_expiration_date}" }
+        {
+          "kind": "row",
+          "label": "Employer",
+          "value": "{employer_name}",
+          "sub": false
+        },
+        {
+          "kind": "row",
+          "label": "Employee",
+          "value": "{employee_name}",
+          "sub": false
+        },
+        {
+          "kind": "row",
+          "label": "Position Title",
+          "value": "{position_title}",
+          "sub": false
+        },
+        {
+          "kind": "row",
+          "label": "Employment Type",
+          "value": "{employment_type}",
+          "sub": false
+        },
+        {
+          "kind": "row",
+          "label": "Start Date",
+          "value": "{start_date}",
+          "sub": false
+        },
+        {
+          "kind": "row",
+          "label": "Reporting Manager",
+          "value": "{reporting_manager}",
+          "sub": false
+        },
+        {
+          "kind": "row",
+          "label": "Base Salary",
+          "value": "{base_salary}",
+          "sub": false
+        },
+        {
+          "kind": "row",
+          "label": "Bonus Terms",
+          "value": "{bonus_terms}",
+          "condition": "bonus_terms",
+          "sub": false
+        },
+        {
+          "kind": "row",
+          "label": "Equity Terms",
+          "value": "{equity_terms}",
+          "condition": "equity_terms",
+          "sub": false
+        },
+        {
+          "kind": "row",
+          "label": "Primary Work Location",
+          "value": "{work_location}",
+          "sub": false
+        },
+        {
+          "kind": "row",
+          "label": "Governing Law",
+          "value": "{governing_law}",
+          "sub": false
+        },
+        {
+          "kind": "row",
+          "label": "Offer Expiration Date",
+          "value": "{offer_expiration_date}",
+          "sub": false
+        }
       ]
     },
     "standard_terms": {
@@ -37,67 +99,125 @@
       "heading_title": "Standard Terms",
       "clauses": [
         {
+          "id": "position-scope-and-reporting",
           "heading": "Position, Scope, and Reporting",
           "body": "If Employee accepts this offer, Employee will join Company in the position listed in Cover Terms and will report to the manager or function listed in Cover Terms, with duties and responsibilities that are reasonably aligned to the role and business needs."
         },
         {
+          "id": "employment-type-and-work-schedule",
           "heading": "Employment Type and Work Schedule",
           "body": "Employee will be employed on the employment basis listed in Cover Terms. Company may establish reasonable scheduling, attendance, and collaboration expectations for the role, including core hours and team coordination standards."
         },
         {
+          "id": "start-date-and-onboarding-conditions",
           "heading": "Start Date and Onboarding Conditions",
           "body": "Employment is expected to begin on the start date listed in Cover Terms, subject to completion of onboarding requirements such as identity and work authorization verification, policy acknowledgements, and execution of confidentiality and inventions assignment documents."
         },
         {
+          "id": "base-compensation-and-payroll",
           "heading": "Base Compensation and Payroll",
           "body": "Company will pay the base salary or hourly compensation listed in Cover Terms in accordance with Company payroll practices and applicable law, subject to required withholdings, deductions, and payroll tax obligations."
         },
         {
+          "id": "bonus-opportunity",
           "heading": "Bonus Opportunity",
           "body": "If bonus terms are listed in Cover Terms, those terms describe potential bonus eligibility. Bonus programs, metrics, and payout timing are administered under applicable Company plans and may depend on individual, team, and Company performance criteria."
         },
         {
+          "id": "equity-opportunity",
           "heading": "Equity Opportunity",
           "body": "If equity terms are listed in Cover Terms, any grant remains subject to board or committee approval, applicable equity plan documents, and separate award documentation. Vesting, exercise, and expiration terms are governed by those plan and award documents."
         },
         {
+          "id": "benefits-and-time-off-programs",
           "heading": "Benefits and Time-Off Programs",
           "body": "Employee may be eligible to participate in benefit and paid-time-off programs made available to similarly situated employees, in each case subject to plan terms, enrollment requirements, and Company policy updates permitted by law."
         },
         {
+          "id": "work-location-and-business-travel",
           "heading": "Work Location and Business Travel",
           "body": "Employee will primarily work from the location listed in Cover Terms. Company may require reasonable business travel and may update workplace expectations, including on-site or remote collaboration requirements, consistent with applicable law."
         },
         {
+          "id": "policies-confidentiality-and-company-property",
           "heading": "Policies, Confidentiality, and Company Property",
           "body": "As a condition of employment, Employee must comply with Company written policies, security requirements, confidentiality obligations, and lawful workplace rules, including policies covering information handling, code and device access, and return of Company property."
         },
         {
+          "id": "at-will-employment-relationship",
           "heading": "At-Will Employment Relationship",
           "body": "Unless otherwise required by law or a separate written agreement signed by an authorized Company representative, employment is at-will. This means either Employee or Company may end employment at any time, with or without advance notice, and with or without cause."
         },
         {
+          "id": "governing-law",
           "heading": "Governing Law",
           "body": "This offer letter and any dispute regarding its interpretation are governed by the law listed in Cover Terms, without applying conflicts-of-law principles to the extent not required by applicable law."
         },
         {
+          "id": "offer-expiration-acceptance-and-entire-offer",
           "heading": "Offer Expiration, Acceptance, and Entire Offer",
           "body": "This offer expires on the date listed in Cover Terms unless extended in writing by Company. By accepting, Employee acknowledges this letter summarizes key employment terms and that any changes must be set out in a later written document authorized by Company."
         }
       ]
     },
     "signature": {
-      "mode": "two-party",
+      "mode": "signers",
+      "arrangement": "entity-plus-individual",
       "section_label": "Signature Page",
       "heading_title": "Signatures",
       "preamble": "By signing this Employment Offer Letter, each party agrees to these Cover Terms and Standard Terms.",
-      "party_a": "Employer",
-      "party_b": "Employee",
-      "rows": [
-        { "label": "Signature" },
-        { "label": "Print Name", "left": "{employer_name}", "right": "{employee_name}" },
-        { "label": "Title" },
-        { "label": "Date" }
+      "signers": [
+        {
+          "id": "employer",
+          "label": "Employer",
+          "kind": "entity",
+          "capacity": "through_representative",
+          "rows": [
+            {
+              "id": "signature",
+              "label": "Signature",
+              "value": ""
+            },
+            {
+              "id": "print-name",
+              "label": "Print Name",
+              "value": "{employer_name}"
+            },
+            {
+              "id": "title",
+              "label": "Title",
+              "value": ""
+            },
+            {
+              "id": "date",
+              "label": "Date",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "id": "employee",
+          "label": "Employee",
+          "kind": "individual",
+          "capacity": "personal",
+          "rows": [
+            {
+              "id": "signature",
+              "label": "Signature",
+              "value": ""
+            },
+            {
+              "id": "print-name",
+              "label": "Print Name",
+              "value": "{employee_name}"
+            },
+            {
+              "id": "date",
+              "label": "Date",
+              "value": ""
+            }
+          ]
+        }
       ]
     }
   }

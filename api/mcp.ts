@@ -381,7 +381,7 @@ async function handleSigningToolCall(
             integrationKey,
             secretKey,
             redirectUri: env('OA_DOCUSIGN_REDIRECT_URI')
-              || 'https://openagreements.ai/api/auth/docusign/callback',
+              || 'https://openagreements.org/api/auth/docusign/callback',
             hmacSecret: env('OA_DOCUSIGN_HMAC_SECRET'),
             sandbox: env('OA_DOCUSIGN_SANDBOX') !== 'false',
           },
@@ -734,13 +734,13 @@ function mcpGetHtmlPage(): string {
   </head>
   <body>
     <header class="topbar">
-      <a class="brand" href="https://openagreements.ai">OpenAgreements</a>
+      <a class="brand" href="https://openagreements.org">OpenAgreements</a>
       <nav class="topnav">
-        <a href="https://openagreements.ai/templates">Template Library</a>
+        <a href="https://openagreements.org/templates">Template Library</a>
         <span>|</span>
-        <a href="https://openagreements.ai#start">Install Guide</a>
+        <a href="https://openagreements.org#start">Install Guide</a>
         <span>|</span>
-        <a href="https://openagreements.ai#faq">Q&A</a>
+        <a href="https://openagreements.org#faq">Q&A</a>
       </nav>
     </header>
     <main>
@@ -751,11 +751,11 @@ function mcpGetHtmlPage(): string {
         <p>Endpoint: <code>https://openagreements.org/api/mcp</code></p>
         <p>Use JSON-RPC over HTTP POST with methods like <code>initialize</code>, <code>tools/list</code>, and <code>tools/call</code>.</p>
         <div class="actions">
-          <a class="btn btn-primary" href="https://openagreements.ai#start">Installation instructions</a>
-          <a class="btn btn-ghost" href="https://openagreements.ai/templates">Browse templates</a>
+          <a class="btn btn-primary" href="https://openagreements.org#start">Installation instructions</a>
+          <a class="btn btn-ghost" href="https://openagreements.org/templates">Browse templates</a>
         </div>
         <ul>
-          <li>Website: <a href="https://openagreements.ai">openagreements.ai</a></li>
+          <li>Website: <a href="https://openagreements.org">openagreements.org</a></li>
           <li>GitHub: <a href="https://github.com/open-agreements/open-agreements">open-agreements/open-agreements</a></li>
         </ul>
       </section>

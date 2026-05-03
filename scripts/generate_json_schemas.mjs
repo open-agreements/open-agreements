@@ -43,7 +43,7 @@ try {
   process.exit(1);
 }
 
-const BASE_URL = 'https://openagreements.ai/schemas';
+const BASE_URL = 'https://openagreements.org/schemas';
 
 const schemas = [
   {

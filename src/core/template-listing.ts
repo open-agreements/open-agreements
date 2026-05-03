@@ -20,6 +20,7 @@ export interface TemplateListField {
   required: boolean;
   section: string | null;
   description: string;
+  display_label?: string;
   default: string | null;
   default_value_rationale: string | null;
   items?: TemplateListField[];
@@ -75,6 +76,7 @@ export function sourceName(url: string): string | null {
       'ycombinator.com': 'Y Combinator',
       'bookface-static.ycombinator.com': 'Y Combinator',
       'nvca.org': 'NVCA',
+      'openagreements.org': 'OpenAgreements',
       'openagreements.ai': 'OpenAgreements',
     };
 
@@ -110,6 +112,7 @@ export function mapFields(
     required: required.has(f.name),
     section: f.section ?? null,
     description: f.description,
+    ...(f.display_label !== undefined ? { display_label: f.display_label } : {}),
     default: f.default ?? null,
     default_value_rationale: f.default_value_rationale ?? null,
     ...(f.items ? { items: mapFields(f.items, []) } : {}),

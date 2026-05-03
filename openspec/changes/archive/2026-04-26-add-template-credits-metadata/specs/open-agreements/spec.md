@@ -26,7 +26,7 @@ The fields SHALL NOT be surfaced through the MCP package or the remote
 A2A/MCP API in their current shape; MCP and API consumers remain
 credits-unaware.
 
-#### Scenario: [OA-TMP-029] Valid credits and derived_from parse
+#### Scenario: [OA-TMP-036] Valid credits and derived_from parse
 
 - **GIVEN** a template `metadata.yaml` with
   `credits: [{ name: "Joey Tsang", role: "drafting_editor", profile_url: "https://www.linkedin.com/in/joey-t-b90912b1/" }]`
@@ -35,20 +35,20 @@ credits-unaware.
 - **THEN** validation passes with no errors
 - **AND** the parsed metadata contains the full credits array and `derived_from` string
 
-#### Scenario: [OA-TMP-030] Missing credits defaults to empty array
+#### Scenario: [OA-TMP-037] Missing credits defaults to empty array
 
 - **GIVEN** a template `metadata.yaml` that does not declare `credits`
 - **WHEN** the system loads and validates the metadata
 - **THEN** validation passes with no errors
 - **AND** the parsed metadata exposes `credits` as an empty array
 
-#### Scenario: [OA-TMP-031] Invalid credit role is rejected
+#### Scenario: [OA-TMP-038] Invalid credit role is rejected
 
 - **GIVEN** a template `metadata.yaml` with a credit entry whose `role` is `"author"`
 - **WHEN** the system validates the metadata
 - **THEN** validation fails with an error indicating the role value is not in the allowed enum
 
-#### Scenario: [OA-TMP-032] list --json projects credits and derived_from on templates
+#### Scenario: [OA-TMP-039] list --json projects credits and derived_from on templates
 
 - **GIVEN** templates and recipes exist, and two templates declare non-empty `credits` and `derived_from`
 - **WHEN** the user runs `open-agreements list --json`

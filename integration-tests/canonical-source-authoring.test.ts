@@ -224,22 +224,19 @@ describe('canonical Markdown authoring', () => {
     expect(rendered.markdown).toContain('{END-FOR signer}');
   });
 
-  it.openspec('OA-TMP-035')('compiles same-slug signer rows but rejects them at render with mismatched-label error', () => {
+  it.openspec('OA-TMP-036')('allows asymmetric signer rows within entity-plus-individual blocks', () => {
     const style = loadStyleProfile(stylePath);
-    const collidingSource = buildCanonicalSource().replace(
+    const asymmetricSource = buildCanonicalSource().replace(
       'Print Name: {recipient_name}',
-      'Print-Name: {recipient_name}'
+      'Name: {recipient_name}'
     );
 
-    const compiled = compileCanonicalSourceString(collidingSource, 'inline same-slug canonical source');
-    const rowIds = compiled.contractSpec.sections.signature.signers.flatMap((s: { rows: { id: string }[] }) =>
-      s.rows.map((r) => r.id)
-    );
-    expect(rowIds.filter((id) => id === 'print-name')).toHaveLength(2);
+    const compiled = compileCanonicalSourceString(asymmetricSource, 'inline asymmetric signer canonical source');
+    const rendered = renderFromValidatedSpec(compiled.contractSpec, style);
 
-    expect(() => renderFromValidatedSpec(compiled.contractSpec, style)).toThrow(
-      /Signer row "print-name" has mismatched labels/
-    );
+    expect(compiled.contractSpec.sections.signature.signers[0].rows.map((row: { id: string }) => row.id)).toContain('title');
+    expect(compiled.contractSpec.sections.signature.signers[1].rows.map((row: { id: string }) => row.id)).not.toContain('title');
+    expect(rendered.markdown).toContain('Name: {recipient_name}');
   });
 
   it.openspec('OA-TMP-035')('renders signer-mode output and omits alias metadata from legal text', () => {

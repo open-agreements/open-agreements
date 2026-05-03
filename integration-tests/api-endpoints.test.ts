@@ -479,7 +479,7 @@ describe('MCP endpoint — api/mcp.ts', () => {
     handleFillMock.mockResolvedValue(MOCK_FILL_SUCCESS);
 
     const req = createMockReq({
-      headers: { 'content-type': 'application/json', host: 'openagreements.ai' },
+      headers: { 'content-type': 'application/json', host: 'openagreements.org' },
       body: {
         jsonrpc: '2.0',
         id: 4,
@@ -560,7 +560,7 @@ describe('MCP endpoint — api/mcp.ts', () => {
     });
 
     const req = createMockReq({
-      headers: { 'content-type': 'application/json', host: 'openagreements.ai' },
+      headers: { 'content-type': 'application/json', host: 'openagreements.org' },
       body: {
         jsonrpc: '2.0',
         id: 70,
@@ -593,7 +593,7 @@ describe('MCP endpoint — api/mcp.ts', () => {
     });
 
     const req = createMockReq({
-      headers: { 'content-type': 'application/json', host: 'openagreements.ai' },
+      headers: { 'content-type': 'application/json', host: 'openagreements.org' },
       body: {
         jsonrpc: '2.0',
         id: 71,

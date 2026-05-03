@@ -86,7 +86,7 @@ describe('Canonical SAFE board consent', () => {
     );
   });
 
-  it.openspec('OA-TMP-037')('renders DOCX and Markdown from the canonical board consent source', async () => {
+  it.openspec(['OA-TMP-032', 'OA-TMP-037'])('renders DOCX and Markdown from the canonical board consent source', async () => {
     const style = loadStyleProfile(STYLE_PATH);
     const compiled = compileCanonicalSourceFile(SOURCE_PATH);
     const rendered = renderFromValidatedSpec(compiled.contractSpec, style);

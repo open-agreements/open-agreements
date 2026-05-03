@@ -4,7 +4,7 @@ Cover page for the [Bonterms Mutual NDA](https://bonterms.com/forms/bonterms-mut
 
 ## Source
 
-- **URL**: https://github.com/Bonterms/Mutual-NDA
+- **URL**: https://bonterms.com/resources/mutual-nda-cover-page-example
 - **Version**: 1.0
 - **License**: CC0 1.0
 
@@ -23,5 +23,5 @@ Cover page for the [Bonterms Mutual NDA](https://bonterms.com/forms/bonterms-mut
 
 ## Attribution
 
-Based on the Bonterms Mutual NDA Cover Page, available at https://bonterms.com/forms/bonterms-mutual-nda-v1/.
+Based on the Bonterms Mutual NDA Cover Page, available at https://bonterms.com/resources/mutual-nda-cover-page-example.
 Made available under CC0 1.0.

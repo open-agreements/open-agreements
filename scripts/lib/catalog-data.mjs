@@ -99,7 +99,7 @@ function getSourceUrl(item) {
     Bonterms: "https://bonterms.com",
     NVCA: "https://nvca.org",
     "Y Combinator": "https://www.ycombinator.com/documents",
-    OpenAgreements: "https://openagreements.ai",
+    OpenAgreements: "https://openagreements.org",
   };
   return urls[label] || item.source_url || "#";
 }

@@ -52,9 +52,7 @@ const ALLURE_WRAPPER_CHAIN_METHODS = new Set(["epic", "withLabels", "openspec"])
 const UNKNOWN_EPIC_LABEL = "No epic label";
 const UNMAPPED_EPIC_LABEL = "Unmapped";
 const MAPPED_TEST_REF_RE = /^(.+?):(\d+)\s+::\s+(.+)$/;
-const DEFAULT_ALLURE_REPORT_URL = "https://tests.openagreements.ai";
-const GITHUB_BLOB_ROOT = "https://github.com/open-agreements/open-agreements/blob";
-const NEW_YORK_TZ = "America/New_York";
+const DEFAULT_ALLURE_REPORT_URL = "https://tests.openagreements.org";
 
 function parseArgs() {
   const args = process.argv.slice(2);
@@ -576,49 +574,32 @@ function safeLink(url, label) {
   return `[${label}](${url})`;
 }
 
-function toUtcDisplay(value) {
-  if (!value) return "Unavailable";
-  const parsed = new Date(value);
-  if (Number.isNaN(parsed.getTime())) return "Unavailable";
-  return parsed.toISOString().replace("T", " ").replace(".000Z", "Z");
-}
+// Source-link target for mapped tests in the rendered system card.
+//
+// Previously this rendered `https://github.com/.../blob/<sha>/<path>#L<n>`,
+// which pinned every one of the ~200 mapped-test links to whichever commit SHA
+// was current when `npm run trust:rebuild` ran. That made the committed
+// `site/trust/system-card.md` flip hundreds of lines on every regeneration —
+// the dominant source of merge-conflict churn between PR branches and main.
+//
+// We now emit a repo-relative path from `site/trust/system-card.md` so:
+//   - GitHub renders the link relative to the file the reader is viewing,
+//     so it always resolves to the file/line in whichever commit/branch the
+//     reader landed on (correct for PR review and for the canonical main
+//     view).
+//   - Regeneration on different commits produces identical link strings as
+//     long as the test files at those paths/lines haven't changed.
+//
+// `system-card.md` lives at `site/trust/system-card.md`, so two `..` segments
+// are needed to reach repo root.
+const SYSTEM_CARD_TO_REPO_ROOT = "../..";
 
-function toNewYorkDisplay(value) {
-  if (!value) return "Unavailable";
-  const parsed = new Date(value);
-  if (Number.isNaN(parsed.getTime())) return "Unavailable";
-  return new Intl.DateTimeFormat("en-US", {
-    timeZone: NEW_YORK_TZ,
-    year: "numeric",
-    month: "short",
-    day: "2-digit",
-    hour: "numeric",
-    minute: "2-digit",
-    second: "2-digit",
-    hour12: true,
-    timeZoneName: "short",
-  }).format(parsed);
-}
-
-function resolveGithubBlobRef(runtimeTrust) {
-  const commitUrl = runtimeTrust?.run?.commit_url;
-  if (typeof commitUrl === "string") {
-    const match = commitUrl.match(/\/commit\/([0-9a-f]{7,40})/i);
-    if (match) return match[1];
-  }
-  const commitSha = runtimeTrust?.run?.commit_sha;
-  if (typeof commitSha === "string" && commitSha.trim().length > 0) {
-    return commitSha.trim();
-  }
-  return "main";
-}
-
-function toGithubSourceUrl({ filePath, line, blobRef }) {
+function toGithubSourceUrl({ filePath, line }) {
   const encodedPath = normalizeTestPath(filePath)
     .split("/")
     .map((part) => encodeURIComponent(part))
     .join("/");
-  return `${GITHUB_BLOB_ROOT}/${encodeURIComponent(blobRef)}/${encodedPath}#L${line}`;
+  return `${SYSTEM_CARD_TO_REPO_ROOT}/${encodedPath}#L${line}`;
 }
 
 function toAllureTestResultUrl({ reportUrl, testResultId }) {
@@ -653,7 +634,6 @@ function renderMappedTestReference(ref, linkContext) {
   const githubUrl = toGithubSourceUrl({
     filePath: parsed.filePath,
     line: parsed.line,
-    blobRef: linkContext.githubBlobRef,
   });
 
   const allureUrl = allureTestResultId
@@ -761,9 +741,6 @@ function makeSystemCardMarkdown({ traceability, runtimeTrust, linkContext }) {
   const latestTotal = runtime?.stats?.total;
   const latestPassed = runtime?.stats?.passed;
   const latestFailed = runtime?.stats?.failed;
-  const runtimeGeneratedAtUtc = runtime?.generated_at_utc;
-  const runtimeCreatedAtUtc = runtime?.run?.created_at_utc;
-  const runtimeGeneratedAtNy = toNewYorkDisplay(runtimeGeneratedAtUtc ?? runtimeCreatedAtUtc);
   const runtimeAgeMinutes = runtime?.freshness?.age_minutes;
   const runtimeIsStale = runtime?.freshness?.is_stale;
 
@@ -777,11 +754,17 @@ function makeSystemCardMarkdown({ traceability, runtimeTrust, linkContext }) {
     ? String(latestFailed)
     : "Unavailable";
   const mappingCoverageText = pct(traceability.covered, traceability.total);
+  // In build-metadata mode the published artifact is committed to git, so the freshness
+  // signal is the commit itself (visible via `git log`) rather than a wall-clock build
+  // time. In allure-summary mode the runtime data is regenerated from a live test run
+  // and the age-in-minutes metric still applies.
   const dataAgeText = Number.isFinite(runtimeAgeMinutes) ? `${runtimeAgeMinutes} min` : "Unavailable";
-  const dataMetricLabel = runtimeSource === "build-metadata" ? "Last generated" : "Data age";
-  const dataMetricValue = runtimeSource === "build-metadata" ? runtimeGeneratedAtNy : dataAgeText;
+  const dataMetricLabel = runtimeSource === "build-metadata" ? "Source" : "Data age";
+  const dataMetricValue = runtimeSource === "build-metadata"
+    ? "Committed artifact"
+    : dataAgeText;
   const dataMetricNote = runtimeSource === "build-metadata"
-    ? "Timestamp when deployment build metadata was generated (America/New_York)"
+    ? "Regenerated by `npm run trust:rebuild`; freshness tracks the committing commit"
     : "Minutes since the latest published test report snapshot";
 
   const runtimeSummary = hasRuntimeMetrics && Number.isFinite(latestPassed) && Number.isFinite(latestTotal)
@@ -789,7 +772,6 @@ function makeSystemCardMarkdown({ traceability, runtimeTrust, linkContext }) {
     : "runtime results are currently unavailable";
 
   const effectiveLinkContext = linkContext ?? {
-    githubBlobRef: resolveGithubBlobRef(runtime),
     allureReportUrl: runtime?.report_url ?? DEFAULT_ALLURE_REPORT_URL,
     useAllureDeepLinks: shouldUseAllureDeepLinks(runtime?.report_url ?? DEFAULT_ALLURE_REPORT_URL),
     allureByRef: new Map(),
@@ -811,23 +793,19 @@ function makeSystemCardMarkdown({ traceability, runtimeTrust, linkContext }) {
     }));
   }
 
+  // Wall-clock timestamps (Build timestamp / Last verified run / Data age) used to live
+  // here, but they caused this committed artifact to drift on every regeneration even
+  // when the underlying trust state was identical. Freshness signal is now carried by the
+  // `Commit:` line below — `git log <sha>` answers "when was this committed?" precisely,
+  // and the CI run URL points to the latest test execution. This keeps `system-card.md`
+  // diff-stable across PR branches that share the same commit.
   const proofLines = [
     `- Runtime source: ${runtimeSource === "build-metadata" ? "build metadata" : "allure summary"}`,
-    runtimeSource === "build-metadata"
-      ? `- Build timestamp (UTC): ${toUtcDisplay(runtimeGeneratedAtUtc ?? runtimeCreatedAtUtc)}`
-      : `- Last verified run (UTC): ${toUtcDisplay(runtimeCreatedAtUtc)}`,
-    ...(runtimeSource === "build-metadata"
-      ? [`- Build timestamp (America/New_York): ${runtimeGeneratedAtNy}`]
-      : []),
     `- Commit: ${runtime?.run?.commit_sha ? safeLink(runtime.run.commit_url, runtime.run.commit_sha) : "Unavailable"}`,
     `- CI run: ${safeLink(runtime?.run?.ci_run_url, "workflow run")}`,
-    `- Test report: ${safeLink(runtime?.report_url ?? DEFAULT_ALLURE_REPORT_URL, "tests.openagreements.ai")}`,
-    "- Mapped test entries link to GitHub source lines; matching test-result links are shown when available.",
+    `- Test report: ${safeLink(runtime?.report_url ?? DEFAULT_ALLURE_REPORT_URL, "tests.openagreements.org")}`,
+    "- Mapped test entries link to repo-relative source paths; matching test-result links are shown when available.",
   ];
-
-  if (runtimeSource !== "build-metadata" && Number.isFinite(runtimeAgeMinutes)) {
-    proofLines.push(`- Data age: ${runtimeAgeMinutes} minute(s)`);
-  }
 
   const lines = [];
   lines.push("---");
@@ -840,15 +818,13 @@ function makeSystemCardMarkdown({ traceability, runtimeTrust, linkContext }) {
   lines.push("");
   lines.push("# OpenAgreements System Card");
   lines.push("");
-  lines.push(`_Last updated (UTC): ${toUtcDisplay(runtimeGeneratedAtUtc ?? runtimeCreatedAtUtc)}_`);
-  lines.push("");
   lines.push("## Executive Summary");
   lines.push("");
   lines.push('<div class="trust-summary-banner">');
   lines.push("<h2>Traceability and runtime status</h2>");
   lines.push(
     runtimeSource === "build-metadata"
-      ? `<p>${traceability.covered}/${traceability.total} scenarios are mapped to automated tests across ${traceability.capabilities.length} capabilities, and runtime metadata is stamped at deployment build time.</p>`
+      ? `<p>${traceability.covered}/${traceability.total} scenarios are mapped to automated tests across ${traceability.capabilities.length} capabilities; runtime metrics are reproduced from the committed traceability matrix.</p>`
       : `<p>${traceability.covered}/${traceability.total} scenarios are mapped to automated tests across ${traceability.capabilities.length} capabilities, and the latest published run reports ${runtimeSummary}.</p>`,
   );
   lines.push("</div>");
@@ -950,7 +926,7 @@ function makeSystemCardMarkdown({ traceability, runtimeTrust, linkContext }) {
   lines.push("| Signal | Link |");
   lines.push("|---|---|");
   lines.push(
-    "| Test report | [tests.openagreements.ai](https://tests.openagreements.ai) |",
+    "| Test report | [tests.openagreements.org](https://tests.openagreements.org) |",
   );
   lines.push(
     "| Code coverage (Codecov) | [![Coverage](https://img.shields.io/codecov/c/github/open-agreements/open-agreements/main)](https://app.codecov.io/gh/open-agreements/open-agreements) |",
@@ -977,7 +953,7 @@ function makeSystemCardMarkdown({ traceability, runtimeTrust, linkContext }) {
   lines.push("");
   lines.push("- Scenario mapping coverage indicates linkage between scenarios and tests, not exhaustive code-path coverage.");
   if (runtimeSource === "build-metadata") {
-    lines.push("- Runtime pass/fail counters are not fetched in build-metadata mode; the last updated timestamp reflects deployment build time.");
+    lines.push("- Runtime pass/fail counters are not fetched in build-metadata mode; freshness tracks the commit that last ran `npm run trust:rebuild`.");
   } else {
     lines.push("- Runtime pass/fail values reflect the latest published test report run and can change with each CI run.");
   }
@@ -1042,7 +1018,6 @@ async function main() {
   const runtime = runtimeTrust.available ? runtimeTrust.data : null;
   const allureTestResultIndex = await loadAllureTestResultIndex();
   const linkContext = {
-    githubBlobRef: resolveGithubBlobRef(runtime),
     allureReportUrl: runtime?.report_url ?? DEFAULT_ALLURE_REPORT_URL,
     useAllureDeepLinks: shouldUseAllureDeepLinks(runtime?.report_url ?? DEFAULT_ALLURE_REPORT_URL),
     allureByRef: allureTestResultIndex.byRef,
