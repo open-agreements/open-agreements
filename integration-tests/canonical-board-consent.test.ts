@@ -103,6 +103,11 @@ describe('Canonical SAFE board consent', () => {
     expect(rendered.markdown).not.toContain('Discount Rate');
     expect(rendered.markdown).not.toContain('Changes to Standard Terms');
     expect(rendered.markdown).not.toContain('Cover Page controls');
+    // Negative: the modern legal-text scaffolding must not leak through.
+    expect(rendered.markdown).not.toContain('WHEREAS');
+    expect(rendered.markdown).not.toContain('RESOLVED FURTHER');
+    expect(rendered.markdown).not.toContain('Key Terms of Board Consent');
+    expect(rendered.markdown).not.toContain('solely in his or her capacity');
     expect(rendered.markdown).toContain('{FOR member IN board_members}');
     expect(rendered.markdown).toContain('{$member.name}');
     expect(rendered.markdown).toContain('Date: {effective_date}');
@@ -158,6 +163,10 @@ describe('Canonical SAFE board consent', () => {
     expect(filledText).not.toContain('Valuation Cap');
     expect(filledText).not.toContain('Discount Rate');
     expect(filledText).not.toContain('Cover Page controls');
+    expect(filledText).not.toContain('WHEREAS');
+    expect(filledText).not.toContain('RESOLVED FURTHER');
+    expect(filledText).not.toContain('Key Terms of Board Consent');
+    expect(filledText).not.toContain('solely in his or her capacity');
   });
 
   it.openspec('OA-TMP-037')('rejects fills with empty board_members', async () => {
