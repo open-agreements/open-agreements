@@ -72,6 +72,28 @@ function extractDocxXml(docxPathOrBuffer: string | Buffer): string {
   return documentXml.getData().toString('utf-8');
 }
 
+function extractStylesXml(docxPathOrBuffer: string | Buffer): string {
+  const zip = typeof docxPathOrBuffer === 'string'
+    ? new AdmZip(docxPathOrBuffer)
+    : new AdmZip(docxPathOrBuffer);
+  const stylesXml = zip.getEntry('word/styles.xml');
+  if (!stylesXml) {
+    throw new Error('word/styles.xml not found in DOCX');
+  }
+  return stylesXml.getData().toString('utf-8');
+}
+
+function extractStyleBlock(stylesXml: string, styleId: string): string {
+  const re = new RegExp(
+    `<w:style[^>]*w:styleId="${styleId}"[^>]*>([\\s\\S]*?)</w:style>`
+  );
+  const match = stylesXml.match(re);
+  if (!match) {
+    throw new Error(`style ${styleId} not found in styles.xml`);
+  }
+  return match[0];
+}
+
 describe('Canonical SAFE stockholder consent (traditional)', () => {
   it.openspec(['OA-TMP-038', 'OA-TMP-047'])('compiles canonical stockholder consent source and metadata', () => {
     const compiled = compileCanonicalSourceFile(SOURCE_PATH);
@@ -188,6 +210,68 @@ describe('Canonical SAFE stockholder consent (traditional)', () => {
         },
       })
     ).rejects.toThrow(/stockholders/);
+  });
+
+  // Apple Pages compatibility floor: see docs/contract-ir-safe-board-consent.md.
+  // Mirrors the board-consent test — the stockholder consent uses the same
+  // traditional-consent-v1 layout, so it must satisfy the same invariant.
+  it.openspec(['OA-TMP-046', 'OA-TMP-048'])('renders Pages-compatible explicit-style tree (stockholder)', async () => {
+    const style = loadStyleProfile(STYLE_PATH);
+    const compiled = compileCanonicalSourceFile(SOURCE_PATH);
+    const rendered = renderFromValidatedSpec(compiled.contractSpec, style);
+    const buffer = await Packer.toBuffer(rendered.document);
+    const stylesXml = extractStylesXml(buffer);
+    const documentXml = extractDocxXml(buffer);
+
+    const normalBlock = extractStyleBlock(stylesXml, 'Normal');
+    const titleBlock = extractStyleBlock(stylesXml, 'OATitle');
+    const headingBlock = extractStyleBlock(stylesXml, 'OAClauseHeading');
+    const sigFollowBlock = extractStyleBlock(stylesXml, 'OABlockSignatureFollow');
+
+    for (const [name, block] of [
+      ['OATitle', titleBlock],
+      ['OAClauseHeading', headingBlock],
+      ['OABlockSignatureFollow', sigFollowBlock],
+    ] as const) {
+      expect(block, `${name} must declare w:jc center in styles.xml`).toMatch(/<w:jc w:val="center"\/>/);
+      expect(block, `${name} must declare basedOn=Normal`).toMatch(/<w:basedOn w:val="Normal"\/>/);
+      expect(block, `${name} must declare next=Normal`).toMatch(/<w:next w:val="Normal"\/>/);
+    }
+
+    expect(titleBlock, 'OATitle must declare bold in styles.xml').toMatch(/<w:b\/>/);
+    expect(headingBlock, 'OAClauseHeading must declare bold in styles.xml').toMatch(/<w:b\/>/);
+    expect(headingBlock, 'OAClauseHeading must declare underline in styles.xml').toMatch(/<w:u /);
+    expect(normalBlock, 'Normal must define non-zero spacing-after').toMatch(/<w:spacing[^>]*w:after="(?!0")\d+"/);
+
+    const paraRegex = /<w:p[\s>][\s\S]*?<\/w:p>/g;
+    const unstyled: string[] = [];
+    let visibleTextParas = 0;
+    let m: RegExpExecArray | null;
+    while ((m = paraRegex.exec(documentXml)) !== null) {
+      const para = m[0];
+      const hasText = /<w:t[^>]*>[^<]/.test(para);
+      if (!hasText) continue;
+      visibleTextParas++;
+      if (!/<w:pStyle /.test(para)) {
+        const text = para.match(/<w:t[^>]*>([^<]+)/)?.[1] ?? '';
+        unstyled.push(text.slice(0, 80));
+      }
+    }
+    expect(unstyled, `every visible text <w:p> must reference a named style`).toEqual([]);
+    expect(visibleTextParas).toBeGreaterThan(0);
+
+    expect(documentXml).toMatch(
+      /<w:p>\s*<w:pPr><w:pStyle w:val="OATitle"\/>[\s\S]*?ACTION BY WRITTEN CONSENT OF THE STOCKHOLDERS OF/
+    );
+    expect(documentXml).toMatch(
+      /<w:pStyle w:val="OAClauseHeading"\/>[\s\S]*?Approval of SAFE Financing/
+    );
+    expect(documentXml).toMatch(
+      /<w:pStyle w:val="OAClauseHeading"\/>[\s\S]*?General Authorizing Resolution/
+    );
+    expect(documentXml).toMatch(
+      /<w:pStyle w:val="OABlockSignatureFollow"\/>[\s\S]*?\[Signature Page Follows\]/
+    );
   });
 
   it.openspec('OA-TMP-038')('preserves PAGE and NUMPAGES footer field codes through fill', async () => {
