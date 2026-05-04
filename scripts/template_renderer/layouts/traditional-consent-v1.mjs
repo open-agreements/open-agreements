@@ -31,7 +31,7 @@ function buildDocumentStyles(style) {
         paragraph: {
           spacing: {
             before: 0,
-            after: 0,
+            after: style.spacing.body_after,
             line: style.spacing.line,
             lineRule: LineRuleType.AUTO,
           },
@@ -52,7 +52,7 @@ function buildDocumentStyles(style) {
         paragraph: {
           spacing: {
             before: 0,
-            after: 0,
+            after: style.spacing.body_after,
             line: style.spacing.line,
             lineRule: LineRuleType.AUTO,
           },
