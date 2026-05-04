@@ -292,6 +292,7 @@ function plainFooter(docLabel, version, style) {
   return new Footer({
     children: [
       new Paragraph({
+        style: 'Normal',
         tabStops: [{ type: TabStopType.RIGHT, position: TabStopPosition.MAX }],
         children: [
           new TextRun({ text: `${docLabel} (v${version}). Free to use under CC BY 4.0.`, ...baseRun }),
