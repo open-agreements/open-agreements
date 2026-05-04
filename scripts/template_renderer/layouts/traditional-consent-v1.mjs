@@ -20,22 +20,26 @@ const INLINE_BOLD_RE = /\*\*([^*]+)\*\*/g;
 const TRADITIONAL_BODY_FONT = 'Times New Roman';
 
 function buildDocumentStyles(style) {
+  // Apple Pages requires explicit named paragraph styles — inline alignment
+  // (AlignmentType.CENTER without a referenced pStyle) renders left-aligned in
+  // Pages even though Word/LibreOffice honor it. See
+  // docs/contract-ir-safe-board-consent.md for the original incident.
+  const baseRun = {
+    font: style.fonts.body,
+    size: 22,
+    color: style.colors.ink,
+  };
+  const baseSpacing = {
+    before: 0,
+    after: style.spacing.body_after,
+    line: style.spacing.line,
+    lineRule: LineRuleType.AUTO,
+  };
   return {
     default: {
       document: {
-        run: {
-          font: style.fonts.body,
-          size: 22,
-          color: style.colors.ink,
-        },
-        paragraph: {
-          spacing: {
-            before: 0,
-            after: style.spacing.body_after,
-            line: style.spacing.line,
-            lineRule: LineRuleType.AUTO,
-          },
-        },
+        run: baseRun,
+        paragraph: { spacing: baseSpacing },
       },
     },
     paragraphStyles: [
@@ -44,17 +48,53 @@ function buildDocumentStyles(style) {
         name: 'Normal',
         next: 'Normal',
         quickFormat: true,
+        run: baseRun,
+        paragraph: { spacing: baseSpacing },
+      },
+      {
+        id: 'OATitle',
+        name: 'OA Title',
+        basedOn: 'Normal',
+        next: 'Normal',
+        quickFormat: true,
+        run: { ...baseRun, bold: true },
+        paragraph: {
+          alignment: AlignmentType.CENTER,
+          spacing: baseSpacing,
+        },
+      },
+      {
+        id: 'OAClauseHeading',
+        name: 'OA Clause Heading',
+        basedOn: 'Normal',
+        next: 'Normal',
+        quickFormat: true,
         run: {
-          font: style.fonts.body,
-          size: 22,
-          color: style.colors.ink,
+          ...baseRun,
+          bold: true,
+          underline: { type: UnderlineType.SINGLE, color: style.colors.ink },
         },
         paragraph: {
+          alignment: AlignmentType.CENTER,
           spacing: {
-            before: 0,
-            after: style.spacing.body_after,
-            line: style.spacing.line,
-            lineRule: LineRuleType.AUTO,
+            ...baseSpacing,
+            before: style.spacing.clause_heading_before,
+            after: style.spacing.clause_heading_after,
+          },
+        },
+      },
+      {
+        id: 'OABlockSignatureFollow',
+        name: 'OA Block Signature Follow',
+        basedOn: 'Normal',
+        next: 'Normal',
+        quickFormat: true,
+        run: baseRun,
+        paragraph: {
+          alignment: AlignmentType.CENTER,
+          spacing: {
+            ...baseSpacing,
+            before: style.spacing.body_after,
           },
         },
       },
@@ -83,6 +123,7 @@ function inlineBoldRuns(text, baseRun) {
 
 function bodyParagraph(text, style, opts = {}) {
   return new Paragraph({
+    style: 'Normal',
     spacing: {
       before: opts.before ?? 0,
       after: opts.after ?? style.spacing.body_after,
@@ -101,12 +142,7 @@ function bodyParagraph(text, style, opts = {}) {
 
 function titleParagraph(title, style) {
   return new Paragraph({
-    alignment: AlignmentType.CENTER,
-    spacing: {
-      before: 0,
-      after: style.spacing.body_after,
-      line: style.spacing.line,
-    },
+    style: 'OATitle',
     children: [
       new TextRun({
         text: title,
@@ -121,12 +157,7 @@ function titleParagraph(title, style) {
 
 function clauseHeadingParagraph(heading, style) {
   return new Paragraph({
-    alignment: AlignmentType.CENTER,
-    spacing: {
-      before: style.spacing.clause_heading_before,
-      after: style.spacing.clause_heading_after,
-      line: style.spacing.line,
-    },
+    style: 'OAClauseHeading',
     children: [
       new TextRun({
         text: heading,
@@ -164,12 +195,7 @@ function clauseParagraphs(clauseItem, style) {
 
 function signaturePageBreakParagraph(style) {
   return new Paragraph({
-    alignment: AlignmentType.CENTER,
-    spacing: {
-      before: style.spacing.body_after,
-      after: style.spacing.body_after,
-      line: style.spacing.line,
-    },
+    style: 'OABlockSignatureFollow',
     children: [
       new TextRun({
         text: '[Signature Page Follows]',
@@ -221,6 +247,7 @@ function repeatingStackedSignatureParagraphs(signatureSpec, style) {
     const isLastRow = index === signer.rows.length - 1;
     paragraphs.push(
       new Paragraph({
+        style: 'Normal',
         spacing: {
           before: index === 0 ? style.spacing.clause_heading_before : 0,
           after: isLastRow ? style.spacing.body_after : 0,
