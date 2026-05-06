@@ -7,6 +7,7 @@ import { tmpdir } from 'node:os';
 import AdmZip from 'adm-zip';
 import { detectCurrencyFields, sanitizeCurrencyValuesFromDocx, verifyTemplateFill, BLANK_PLACEHOLDER } from '../src/core/fill-utils.js';
 import { prepareFillData, fillDocx } from '../src/core/fill-pipeline.js';
+import { runFillPipeline } from '../src/core/unified-pipeline.js';
 import { loadMetadata } from '../src/core/metadata.js';
 import { fillTemplate } from '../src/core/engine.js';
 
@@ -258,6 +259,13 @@ describe('prepareFillData', () => {
     { name: 'is_free', type: 'boolean' as const, description: 'Is free' },
   ];
   const priorityFieldNames = ['company'];
+  const multiselectField = {
+    name: 'industry_modules',
+    type: 'multiselect' as const,
+    description: 'Industry riders',
+    options: ['a', 'b', 'c'],
+    derive_booleans: true,
+  };
 
   it.openspec('OA-FIL-008')('defaults optional fields to empty string when useBlankPlaceholder is false', () => {
     const result = prepareFillData({
@@ -365,6 +373,90 @@ describe('prepareFillData', () => {
       },
     });
     expect(callbackCalled).toBe(true);
+  });
+
+  it.openspec('OA-FIL-025')('normalizes multiselect arrays and derives booleans', () => {
+    const result = prepareFillData({
+      values: { industry_modules: ['a', 'c'] },
+      fields: [multiselectField],
+    });
+
+    expect(result.industry_modules).toEqual(['a', 'c']);
+    expect(result.a_enabled).toBe(true);
+    expect(result.b_enabled).toBe(false);
+    expect(result.c_enabled).toBe(true);
+  });
+
+  it.openspec('OA-FIL-025')('parses JSON-string multiselect input back into a real array', () => {
+    const result = prepareFillData({
+      values: { industry_modules: '["a","c"]' },
+      fields: [multiselectField],
+    });
+
+    expect(result.industry_modules).toEqual(['a', 'c']);
+    expect(Array.isArray(result.industry_modules)).toBe(true);
+    expect(result.a_enabled).toBe(true);
+    expect(result.c_enabled).toBe(true);
+  });
+
+  it.openspec('OA-FIL-025')('defaults omitted multiselect fields and derives false for every option', () => {
+    const result = prepareFillData({
+      values: {},
+      fields: [multiselectField],
+    });
+
+    expect(result.industry_modules).toEqual([]);
+    expect(result.a_enabled).toBe(false);
+    expect(result.b_enabled).toBe(false);
+    expect(result.c_enabled).toBe(false);
+  });
+
+  it.openspec('OA-FIL-025')('honors multiselect defaults declared in metadata', () => {
+    const result = prepareFillData({
+      values: {},
+      fields: [{ ...multiselectField, default: '["a"]' }],
+    });
+
+    expect(result.industry_modules).toEqual(['a']);
+    expect(result.a_enabled).toBe(true);
+    expect(result.b_enabled).toBe(false);
+    expect(result.c_enabled).toBe(false);
+  });
+
+  it('does not leak derived boolean keys when derive_booleans is absent', () => {
+    const field = {
+      ...multiselectField,
+      derive_booleans: undefined,
+    };
+    const result = prepareFillData({
+      values: { industry_modules: ['a'] },
+      fields: [field],
+    });
+
+    const metadataFieldNames = new Set([field.name]);
+    const leakedEnabledKeys = Object.keys(result).filter(
+      (key) => key.endsWith('_enabled') && !metadataFieldNames.has(key)
+    );
+    expect(leakedEnabledKeys).toEqual([]);
+  });
+
+  it.openspec('OA-FIL-025')('derives multiselect booleans before computeDisplayFields runs', () => {
+    let seenByCallback: Record<string, unknown> | undefined;
+
+    const result = prepareFillData({
+      values: { industry_modules: ['a'] },
+      fields: [multiselectField],
+      computeDisplayFields: (data) => {
+        seenByCallback = {
+          a_enabled: data.a_enabled,
+          b_enabled: data.b_enabled,
+        };
+        data['selection_summary'] = data.a_enabled === true ? 'A selected' : 'A missing';
+      },
+    });
+
+    expect(seenByCallback).toEqual({ a_enabled: true, b_enabled: false });
+    expect(result.selection_summary).toBe('A selected');
   });
 });
 
@@ -613,6 +705,37 @@ describe('Regression: behavioral divergence', () => {
     expect(spy).toHaveBeenCalledWith(expect.stringContaining('priority fields are unfilled'));
     expect(spy).toHaveBeenCalledWith(expect.stringContaining('name'));
     spy.mockRestore();
+  });
+});
+
+describe('runFillPipeline', () => {
+  it.openspec('OA-FIL-027')('excludes derived multiselect keys from fieldsUsed', async () => {
+    const tempDir = mkdtempSync(join(tmpdir(), 'fill-pipeline-fields-used-'));
+    const inputPath = join(tempDir, 'source.docx');
+    const outputPath = join(tempDir, 'output.docx');
+    writeFileSync(inputPath, buildDocxBuffer(docXml(['No placeholders needed'])));
+
+    try {
+      const result = await runFillPipeline({
+        inputPath,
+        outputPath,
+        values: { industry_modules: ['a'] },
+        fields: [
+          {
+            name: 'industry_modules',
+            type: 'multiselect',
+            description: 'Industry riders',
+            options: ['a', 'b'],
+            derive_booleans: true,
+          },
+        ],
+        verify: async () => ({ passed: true, checks: [] }),
+      });
+
+      expect(result.fieldsUsed).toEqual(['industry_modules']);
+    } finally {
+      rmSync(tempDir, { recursive: true, force: true });
+    }
   });
 });
 

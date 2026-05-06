@@ -5,7 +5,7 @@ export interface RecipeRunOptions {
   recipeId: string;
   inputPath?: string;
   outputPath: string;
-  values: Record<string, string | boolean>;
+  values: Record<string, unknown>;
   keepIntermediate?: boolean;
   computedOutPath?: string;
   normalizeBracketArtifacts?: boolean;

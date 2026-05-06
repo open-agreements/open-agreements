@@ -55,7 +55,7 @@ export interface EmploymentMemo {
 export interface GenerateEmploymentMemoOptions {
   templateId: string;
   templateMetadata: TemplateMetadata;
-  values: Record<string, string | boolean>;
+  values: Record<string, unknown>;
   generatedAt?: string;
   jurisdiction?: string;
   baselineTemplateId?: string;
@@ -532,7 +532,7 @@ export function renderEmploymentMemoMarkdown(memo: EmploymentMemo): string {
 
 function resolveEffectiveFieldValues(
   metadata: TemplateMetadata,
-  values: Record<string, string | boolean>
+  values: Record<string, unknown>
 ): Record<string, string> {
   const resolved: Record<string, string> = {};
 
@@ -544,6 +544,10 @@ function resolveEffectiveFieldValues(
     }
     if (typeof value === 'string' && value.trim().length > 0) {
       resolved[field.name] = value.trim();
+      continue;
+    }
+    if (Array.isArray(value) && value.every((entry) => typeof entry === 'string') && value.length > 0) {
+      resolved[field.name] = JSON.stringify(value);
       continue;
     }
     if (field.default && field.default.trim().length > 0) {

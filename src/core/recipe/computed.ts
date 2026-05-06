@@ -63,7 +63,7 @@ export const ComputedProfileSchema = z.object({
   rules: z.array(ComputedRuleSchema).min(1),
 });
 
-export type ComputedPrimitive = z.infer<typeof PrimitiveSchema>;
+export type ComputedPrimitive = z.infer<typeof PrimitiveSchema> | string[];
 export type ComputedValueMap = Record<string, ComputedPrimitive>;
 export type ComputedPredicate = z.infer<typeof ComputedPredicateSchema>;
 export type ComputedRule = z.infer<typeof ComputedRuleSchema>;

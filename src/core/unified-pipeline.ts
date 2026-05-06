@@ -93,6 +93,11 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
   } = options;
 
   const tempDir = mkdtempSync(join(tmpdir(), 'fill-pipeline-'));
+  const syntheticFieldKeys = new Set(
+    fields
+      .filter((field) => field.type === 'multiselect' && field.derive_booleans === true)
+      .flatMap((field) => (field.options ?? []).map((option) => `${option}_enabled`))
+  );
   let stages: PipelineResult['stages'] | undefined;
 
   try {
@@ -196,7 +201,7 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
 
     return {
       outputPath,
-      fieldsUsed: Object.keys(data),
+      fieldsUsed: Object.keys(data).filter((key) => !syntheticFieldKeys.has(key)),
       stages,
     };
   } finally {
