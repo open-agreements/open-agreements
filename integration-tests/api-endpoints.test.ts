@@ -432,6 +432,9 @@ describe('MCP endpoint — api/mcp.ts', () => {
     expect(listTemplates.inputSchema.properties.cursor).toBeDefined();
     expect(listTemplates.inputSchema.properties.limit).toBeDefined();
     expect(listTemplates.inputSchema.properties.limit.maximum).toBe(100);
+    // Advertised contract must match the runtime .strict() rejection so
+    // tools/list does not lie to clients introspecting the schema.
+    expect(listTemplates.inputSchema.additionalProperties).toBe(false);
   });
 
   it.openspec('OA-DST-024')('handles tools/call list_templates with envelope response', async () => {

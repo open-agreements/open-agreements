@@ -1,6 +1,6 @@
 # Hosted MCP Migration Guide (v2 Envelope Contract)
 
-This guide covers migration from prose-style MCP tool output to the versioned JSON envelope contract introduced on **February 19, 2026**.
+This guide covers migration from prose-style MCP tool output to the versioned JSON envelope contract introduced on **February 19, 2026** and updated on **May 6, 2026** to drop the `list_templates` `mode` parameter and add cursor pagination (issue #267).
 
 ## What Changed
 
@@ -10,7 +10,7 @@ All template tools now return a single JSON envelope in `result.content[0].text`
 {
   "ok": true,
   "tool": "fill_template",
-  "schema_version": "2026-02-19",
+  "schema_version": "2026-05-06",
   "data": {}
 }
 ```
@@ -21,7 +21,7 @@ Error responses now use the same envelope shape with `ok: false` and a structure
 {
   "ok": false,
   "tool": "get_template",
-  "schema_version": "2026-02-19",
+  "schema_version": "2026-05-06",
   "error": {
     "code": "TEMPLATE_NOT_FOUND",
     "message": "Template not found: \"...\"",

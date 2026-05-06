@@ -15,9 +15,11 @@ const DOCX_MIME = 'application/vnd.openxmlformats-officedocument.wordprocessingm
 const LIST_TEMPLATES_DEFAULT_LIMIT = 25;
 const LIST_TEMPLATES_MAX_LIMIT = 100;
 
+const LIST_TEMPLATES_CURSOR_MAX_LENGTH = 512;
+
 const ListTemplatesArgsSchema = z
   .object({
-    cursor: z.string().min(1).optional(),
+    cursor: z.string().min(1).max(LIST_TEMPLATES_CURSOR_MAX_LENGTH).optional(),
     limit: z
       .number()
       .int()

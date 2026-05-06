@@ -200,6 +200,17 @@ describe('contract-templates-mcp tools', () => {
     }
   });
 
+  it.openspec('OA-DST-058')('rejects oversized cursor before base64 decode', async () => {
+    // Defense-in-depth: 512-char cap rejects bloated cursors before allocating decode buffers.
+    const oversized = 'a'.repeat(1024);
+    const r = await callTool('list_templates', { cursor: oversized });
+    expect(r.isError).toBe(true);
+    const payload = getPayload(r);
+    expect(payload.ok).toBe(false);
+    const error = payload.error as Record<string, unknown>;
+    expect(error.code).toBe('INVALID_ARGUMENT');
+  });
+
   it.openspec('OA-DST-059')('rejects legacy mode parameter with INVALID_ARGUMENT', async () => {
     for (const args of [{ mode: 'full' }, { mode: 'compact' }, { mode: 'anything' }]) {
       const r = await callTool('list_templates', args);

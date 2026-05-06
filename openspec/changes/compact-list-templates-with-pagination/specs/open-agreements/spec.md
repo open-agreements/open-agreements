@@ -53,10 +53,12 @@ Each emitted template SHALL carry exactly these fields, in this shape:
 
 No `fields` array, no `license`, no `name` alias for `template_id`. The full
 per-field detail must be fetched via `get_template`. `display_name` MUST be
-non-empty: implementations SHALL fall back to `template_id` if upstream
-metadata lacks a name, and the build SHALL fail if any template's metadata
-omits `name` (build-time guard is the primary defense; runtime fallback is
-defense-in-depth).
+non-empty: implementations SHALL fall back to `template_id` at runtime if
+upstream metadata lacks a name, and the metadata schema SHALL reject empty
+or whitespace-only `name` so `npm run validate` (the CI preflight surface)
+fails before such metadata can be committed. The schema-level guard is the
+primary defense; the runtime fallback is defense-in-depth for unverified
+content sources.
 
 The catalog SHALL be returned in stable lexicographic order by `template_id`
 under `localeCompare`. Pagination uses a `template_id` boundary cursor:
@@ -106,4 +108,4 @@ estimate progress.
 #### Scenario: [OA-DST-060] display_name falls back to template_id when upstream metadata is empty
 - **WHEN** a template's upstream metadata has an empty `name`
 - **THEN** the emitted `display_name` equals the template's `template_id`
-- **AND** the build-time validator independently flags this as a metadata error so it never reaches production for committed templates
+- **AND** `npm run validate` (the CI preflight surface that runs `TemplateMetadataSchema`) independently flags an empty `name` as a metadata error so it cannot be committed
