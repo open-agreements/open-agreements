@@ -103,32 +103,26 @@ fields:
   - name: party_1_signatory_name_and_title
     type: string
     description: Computed display field (Name, Title)
-    required: false
     section: Signatures
   - name: party_2_signatory_name_and_title
     type: string
     description: Computed display field (Name, Title)
-    required: false
     section: Signatures
   - name: party_1_notice_email_check
     type: string
     description: Computed checkbox glyph for email notice
-    required: false
     section: Signatures
   - name: party_1_notice_postal_check
     type: string
     description: Computed checkbox glyph for postal notice
-    required: false
     section: Signatures
   - name: party_2_notice_email_check
     type: string
     description: Computed checkbox glyph for email notice
-    required: false
     section: Signatures
   - name: party_2_notice_postal_check
     type: string
     description: Computed checkbox glyph for postal notice
-    required: false
     section: Signatures
 priority_fields:
   - party_1_name
