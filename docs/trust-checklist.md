@@ -20,14 +20,14 @@ Out of scope for this checklist:
 ## Quick Decision
 
 - If your document is sensitive, use fully local package execution (`npx`, global install, or local stdio MCP package from this repo).
-- If you prioritize convenience, use the hosted remote MCP connector (`https://openagreements.ai/api/mcp`).
+- If you prioritize convenience, use the hosted remote MCP connector (`https://openagreements.org/api/mcp`).
 - No single mode is globally recommended; choose based on document sensitivity and internal policy.
 
 ## Data-Flow Modes (Trust Boundary Artifact)
 
 | Mode | Where processing runs | What leaves device | Logging/retention surface | Recommended use cases | Not recommended use cases |
 | --- | --- | --- | --- | --- | --- |
-| Hosted remote MCP connector (`https://openagreements.ai/api/mcp`) | Hosted service endpoint on `openagreements.ai` | Agreement request/response content sent to the hosted endpoint as part of connector use | Hosted service and client/provider logs outside this repo's local execution path; verify policy before sensitive use | Quick evaluation, first-time setup, convenience in Claude | High-sensitivity documents when policy requires local-only processing |
+| Hosted remote MCP connector (`https://openagreements.org/api/mcp`) | Hosted service endpoint on `openagreements.org` | Agreement request/response content sent to the hosted endpoint as part of connector use | Hosted service and client/provider logs outside this repo's local execution path; verify policy before sensitive use | Quick evaluation, first-time setup, convenience in Claude | High-sensitivity documents when policy requires local-only processing |
 | Fully local package execution (`open-agreements`, `@open-agreements/contracts-workspace-mcp`) | User-controlled machine/process | Agreement filling runs locally; no hosted connector hop. Normal package/source downloads you initiate (for example `npx` install or recipe source fetch) still use their own network paths | Local machine artifacts and any local tooling/shell logs configured by the user | Sensitive workflows, internal review paths that require local processing control | Teams that prioritize fastest hosted setup over local runtime control |
 
 ## Cross-Repo Scope

@@ -6,8 +6,6 @@ const DOWNLOAD_ID_SECRET =
   process.env['VERCEL_DEPLOYMENT_ID'] ??
   'open-agreements-dev-fallback';
 
-const DOWNLOAD_STORE_PREFIX = process.env['DOWNLOAD_STORE_PREFIX'] ?? 'oa:download:';
-
 export const DOWNLOAD_TTL_MS = 60 * 60 * 1000; // 1 hour
 
 function hmacSignDownloadId(rawId: string): string {
@@ -83,6 +81,41 @@ export interface DownloadArtifactStore {
   delete(rawId: string): Promise<void>;
 }
 
+export type DownloadStorageMode = 'upstash' | 'memory';
+
+/**
+ * Base class for situations where the download artifact store cannot serve a
+ * request. Subclassed into configuration vs runtime so HTTP/MCP consumers can
+ * map them to the right status (500 vs 503).
+ */
+export class DownloadStoreUnavailableError extends Error {
+  readonly cause_type: 'configuration' | 'runtime';
+  constructor(message: string, cause_type: 'configuration' | 'runtime') {
+    super(message);
+    this.name = 'DownloadStoreUnavailableError';
+    this.cause_type = cause_type;
+  }
+}
+
+/** Durable storage required but not configured (or escape hatch rejected). */
+export class DownloadStoreConfigurationError extends DownloadStoreUnavailableError {
+  constructor(message: string) {
+    super(message, 'configuration');
+    this.name = 'DownloadStoreConfigurationError';
+  }
+}
+
+/** Durable storage configured but unreachable / returned a transport error. */
+export class DownloadStoreRuntimeError extends DownloadStoreUnavailableError {
+  constructor(message: string, opts?: { cause?: unknown }) {
+    super(message, 'runtime');
+    this.name = 'DownloadStoreRuntimeError';
+    if (opts?.cause !== undefined) {
+      (this as Error & { cause?: unknown }).cause = opts.cause;
+    }
+  }
+}
+
 class InMemoryDownloadArtifactStore implements DownloadArtifactStore {
   private readonly map = new Map<string, DownloadArtifact>();
 
@@ -111,23 +144,54 @@ class UpstashRestDownloadArtifactStore implements DownloadArtifactStore {
   }
 
   private async command<T>(argv: string[]): Promise<T | null> {
-    const response = await fetch(this.restUrl, {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${this.restToken}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(argv),
-      cache: 'no-store',
-    });
-
-    if (!response.ok) {
-      throw new Error(`Upstash command failed: HTTP ${response.status}`);
+    const op = argv[0];
+    let response: Response;
+    try {
+      response = await fetch(this.restUrl, {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${this.restToken}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(argv),
+        cache: 'no-store',
+      });
+    } catch (cause) {
+      console.error(JSON.stringify({
+        event: 'download_store_command',
+        op,
+        reason: 'fetch_failed',
+      }));
+      throw new DownloadStoreRuntimeError('Upstash command failed: fetch error', { cause });
     }
 
-    const payload = await response.json() as { result?: T | null; error?: string };
+    if (!response.ok) {
+      console.error(JSON.stringify({
+        event: 'download_store_command',
+        op,
+        status: response.status,
+      }));
+      throw new DownloadStoreRuntimeError(`Upstash command failed: HTTP ${response.status}`);
+    }
+
+    let payload: { result?: T | null; error?: string };
+    try {
+      payload = await response.json() as { result?: T | null; error?: string };
+    } catch (cause) {
+      console.error(JSON.stringify({
+        event: 'download_store_command',
+        op,
+        reason: 'json_parse_failed',
+      }));
+      throw new DownloadStoreRuntimeError('Upstash command failed: invalid JSON response', { cause });
+    }
     if (payload.error) {
-      throw new Error(`Upstash command failed: ${payload.error}`);
+      console.error(JSON.stringify({
+        event: 'download_store_command',
+        op,
+        upstash_error: payload.error,
+      }));
+      throw new DownloadStoreRuntimeError(`Upstash command failed: ${payload.error}`);
     }
     return payload.result ?? null;
   }
@@ -162,30 +226,152 @@ class UpstashRestDownloadArtifactStore implements DownloadArtifactStore {
   }
 }
 
-let downloadArtifactStore: DownloadArtifactStore | null = null;
-
-function configuredUpstashStore(): DownloadArtifactStore | null {
-  const restUrl = process.env['KV_REST_API_URL'] ?? process.env['UPSTASH_REDIS_REST_URL'];
-  const restToken = process.env['KV_REST_API_TOKEN'] ?? process.env['UPSTASH_REDIS_REST_TOKEN'];
-  if (!restUrl || !restToken) {
-    return null;
-  }
-  return new UpstashRestDownloadArtifactStore(restUrl, restToken, DOWNLOAD_STORE_PREFIX);
+export interface DownloadStoreInitResult {
+  store: DownloadArtifactStore;
+  mode: DownloadStorageMode;
 }
 
+export interface InitDownloadArtifactStoreDeps {
+  upstashFactory?: (url: string, token: string, prefix: string) => DownloadArtifactStore;
+  /** Override the logger; defaults to `console`. Tests can pass a quiet stub. */
+  log?: Pick<Console, 'log' | 'warn' | 'error'>;
+}
+
+function inMemoryAllowed(env: NodeJS.ProcessEnv): boolean {
+  if (env['NODE_ENV'] === 'test') return true;
+  if (env['NODE_ENV'] === 'development') return true;
+  if (env['VERCEL_ENV'] === 'development') return true;
+  return false;
+}
+
+function isProductionLikeServerless(env: NodeJS.ProcessEnv): boolean {
+  return env['VERCEL_ENV'] === 'production' || env['VERCEL_ENV'] === 'preview';
+}
+
+/**
+ * Pure initializer: chooses a storage backend based on env without touching
+ * module-scoped state. Returns the store and the mode it was initialized in.
+ *
+ * Throws DownloadStoreConfigurationError when durable storage is required but
+ * unconfigured, or when the in-memory escape hatch is rejected (preview/prod).
+ *
+ * Policy:
+ * - Upstash KV vars present → durable mode, regardless of environment.
+ * - No durable + env is "known safe" (NODE_ENV=test|development or
+ *   VERCEL_ENV=development) → in-memory.
+ * - No durable + env unknown/production → throw.
+ * - DOWNLOAD_ALLOW_IN_MEMORY=1 honored only when VERCEL_ENV is not
+ *   production|preview (still emits a structured warn).
+ */
+export function initDownloadArtifactStore(
+  env: NodeJS.ProcessEnv = process.env,
+  deps: InitDownloadArtifactStoreDeps = {},
+): DownloadStoreInitResult {
+  const log = deps.log ?? console;
+  const isTest = env['NODE_ENV'] === 'test';
+
+  // Tests stay deterministic and offline regardless of local env.
+  if (isTest) {
+    return { store: new InMemoryDownloadArtifactStore(), mode: 'memory' };
+  }
+
+  const restUrl = env['KV_REST_API_URL'] ?? env['UPSTASH_REDIS_REST_URL'];
+  const restToken = env['KV_REST_API_TOKEN'] ?? env['UPSTASH_REDIS_REST_TOKEN'];
+  const keyPrefix = env['DOWNLOAD_STORE_PREFIX'] ?? 'oa:download:';
+  const allowInMemoryFlag = env['DOWNLOAD_ALLOW_IN_MEMORY'] === '1';
+  const productionLike = isProductionLikeServerless(env);
+  const memoryAllowed = inMemoryAllowed(env);
+
+  if (restUrl && restToken) {
+    const factory = deps.upstashFactory
+      ?? ((u, t, p) => new UpstashRestDownloadArtifactStore(u, t, p));
+    const store = factory(restUrl, restToken, keyPrefix);
+    log.log(JSON.stringify({
+      event: 'download_store_init',
+      mode: 'upstash',
+      durable_required: !memoryAllowed,
+      allow_in_memory_honored: false,
+      node_env: env['NODE_ENV'] ?? null,
+      vercel_env: env['VERCEL_ENV'] ?? null,
+    }));
+    return { store, mode: 'upstash' };
+  }
+
+  if (allowInMemoryFlag && productionLike) {
+    log.error(JSON.stringify({
+      event: 'download_store_init',
+      mode: 'error',
+      reason: 'allow_in_memory_rejected_in_production',
+      node_env: env['NODE_ENV'] ?? null,
+      vercel_env: env['VERCEL_ENV'] ?? null,
+    }));
+    throw new DownloadStoreConfigurationError(
+      'DOWNLOAD_ALLOW_IN_MEMORY=1 is rejected when VERCEL_ENV is production or preview. '
+      + 'Configure KV_REST_API_URL and KV_REST_API_TOKEN '
+      + '(or UPSTASH_REDIS_REST_URL/UPSTASH_REDIS_REST_TOKEN) instead.',
+    );
+  }
+
+  if (!memoryAllowed && !allowInMemoryFlag) {
+    log.error(JSON.stringify({
+      event: 'download_store_init',
+      mode: 'error',
+      reason: 'durable_store_required',
+      node_env: env['NODE_ENV'] ?? null,
+      vercel_env: env['VERCEL_ENV'] ?? null,
+    }));
+    throw new DownloadStoreConfigurationError(
+      'Durable download artifact store is required outside known-safe contexts '
+      + '(NODE_ENV=test|development or VERCEL_ENV=development). '
+      + 'Set KV_REST_API_URL and KV_REST_API_TOKEN '
+      + '(or UPSTASH_REDIS_REST_URL/UPSTASH_REDIS_REST_TOKEN).',
+    );
+  }
+
+  const store = new InMemoryDownloadArtifactStore();
+  if (allowInMemoryFlag) {
+    log.warn(JSON.stringify({
+      event: 'download_store_init',
+      mode: 'memory',
+      durable_required: !memoryAllowed,
+      allow_in_memory_honored: true,
+      node_env: env['NODE_ENV'] ?? null,
+      vercel_env: env['VERCEL_ENV'] ?? null,
+      warning: 'In-memory download store is not safe across serverless instances.',
+    }));
+  } else {
+    log.log(JSON.stringify({
+      event: 'download_store_init',
+      mode: 'memory',
+      durable_required: false,
+      allow_in_memory_honored: false,
+      node_env: env['NODE_ENV'] ?? null,
+      vercel_env: env['VERCEL_ENV'] ?? null,
+    }));
+  }
+  return { store, mode: 'memory' };
+}
+
+let cachedInit: DownloadStoreInitResult | null = null;
+
 function getDownloadArtifactStore(): DownloadArtifactStore {
-  if (downloadArtifactStore) {
-    return downloadArtifactStore;
-  }
+  if (cachedInit) return cachedInit.store;
+  cachedInit = initDownloadArtifactStore();
+  return cachedInit.store;
+}
 
-  // Keep tests deterministic and offline even if local env has KV vars.
-  if (process.env['NODE_ENV'] === 'test') {
-    downloadArtifactStore = new InMemoryDownloadArtifactStore();
-    return downloadArtifactStore;
-  }
+export function getDownloadStorageMode(): DownloadStorageMode | null {
+  return cachedInit?.mode ?? null;
+}
 
-  downloadArtifactStore = configuredUpstashStore() ?? new InMemoryDownloadArtifactStore();
-  return downloadArtifactStore;
+/**
+ * Test-only: clears the cached singleton so a subsequent call rebuilds against
+ * a different env. Used by endpoint tests that need to install a stub init.
+ */
+export function _resetDownloadArtifactStoreCacheForTests(
+  next?: DownloadStoreInitResult,
+): void {
+  cachedInit = next ?? null;
 }
 
 export interface CreatedDownloadArtifact {

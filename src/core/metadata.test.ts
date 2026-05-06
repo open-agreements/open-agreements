@@ -7,6 +7,7 @@ import {
 } from '../../integration-tests/helpers/allure-test.js';
 import {
   TemplateMetadataSchema,
+  ExternalMetadataSchema,
   RecipeMetadataSchema,
   FieldDefinitionSchema,
   CleanConfigSchema,
@@ -46,6 +47,34 @@ describe('FieldDefinitionSchema', () => {
         description: 'Company name',
       },
       true
+    );
+  });
+
+  it('accepts an optional display_label on fields', async () => {
+    await expectSafeParseOutcome(
+      'FieldDefinitionSchema',
+      FieldDefinitionSchema,
+      {
+        name: 'company_name',
+        type: 'string',
+        description: 'Company name',
+        display_label: 'Company Name',
+      },
+      true
+    );
+  });
+
+  it('rejects a null display_label on fields', async () => {
+    await expectSafeParseOutcome(
+      'FieldDefinitionSchema',
+      FieldDefinitionSchema,
+      {
+        name: 'company_name',
+        type: 'string',
+        description: 'Company name',
+        display_label: null,
+      },
+      false
     );
   });
 
@@ -116,6 +145,152 @@ describe('FieldDefinitionSchema', () => {
     );
   });
 
+  it.openspec('OA-TMP-049')('accepts a multiselect field with options, derive_booleans, and JSON default', async () => {
+    await expectSafeParseOutcome(
+      'FieldDefinitionSchema',
+      FieldDefinitionSchema,
+      {
+        name: 'industry_modules',
+        type: 'multiselect',
+        description: 'Industry riders',
+        options: ['tech_rider', 'cross_border_rider'],
+        derive_booleans: true,
+        default: '["tech_rider"]',
+      },
+      true
+    );
+  });
+
+  it.openspec('OA-TMP-050')('rejects multiselect fields without options', async () => {
+    await expectSafeParseOutcome(
+      'FieldDefinitionSchema',
+      FieldDefinitionSchema,
+      {
+        name: 'industry_modules',
+        type: 'multiselect',
+        description: 'Industry riders',
+      },
+      false
+    );
+  });
+
+  it.openspec('OA-TMP-050')('rejects multiselect options that are not valid identifiers', async () => {
+    await expectSafeParseOutcome(
+      'FieldDefinitionSchema',
+      FieldDefinitionSchema,
+      {
+        name: 'industry_modules',
+        type: 'multiselect',
+        description: 'Industry riders',
+        options: ['tech-rider', 'cross border'],
+      },
+      false
+    );
+  });
+
+  it.openspec('OA-TMP-050')('rejects duplicate multiselect options', async () => {
+    await expectSafeParseOutcome(
+      'FieldDefinitionSchema',
+      FieldDefinitionSchema,
+      {
+        name: 'industry_modules',
+        type: 'multiselect',
+        description: 'Industry riders',
+        options: ['tech_rider', 'tech_rider'],
+      },
+      false
+    );
+  });
+
+  it.openspec('OA-TMP-050')('rejects derive_booleans on non-multiselect fields', async () => {
+    await expectSafeParseOutcome(
+      'FieldDefinitionSchema',
+      FieldDefinitionSchema,
+      {
+        name: 'tech_rider_enabled',
+        type: 'boolean',
+        description: 'Tech rider toggle',
+        derive_booleans: true,
+      },
+      false
+    );
+  });
+
+  it.openspec('OA-TMP-049')('accepts an empty multiselect JSON default', async () => {
+    await expectSafeParseOutcome(
+      'FieldDefinitionSchema',
+      FieldDefinitionSchema,
+      {
+        name: 'industry_modules',
+        type: 'multiselect',
+        description: 'Industry riders',
+        options: ['tech_rider', 'cross_border_rider'],
+        default: '[]',
+      },
+      true
+    );
+  });
+
+  it.openspec('OA-TMP-050')('rejects multiselect defaults outside the options allowlist', async () => {
+    await expectSafeParseOutcome(
+      'FieldDefinitionSchema',
+      FieldDefinitionSchema,
+      {
+        name: 'industry_modules',
+        type: 'multiselect',
+        description: 'Industry riders',
+        options: ['tech_rider', 'cross_border_rider'],
+        default: '["unknown_rider"]',
+      },
+      false
+    );
+  });
+
+  it.openspec('OA-TMP-050')('rejects malformed multiselect JSON defaults', async () => {
+    await expectSafeParseOutcome(
+      'FieldDefinitionSchema',
+      FieldDefinitionSchema,
+      {
+        name: 'industry_modules',
+        type: 'multiselect',
+        description: 'Industry riders',
+        options: ['tech_rider', 'cross_border_rider'],
+        default: 'not-json',
+      },
+      false
+    );
+  });
+
+  it.openspec('OA-TMP-050')('rejects multiselect defaults with non-string entries', async () => {
+    await expectSafeParseOutcome(
+      'FieldDefinitionSchema',
+      FieldDefinitionSchema,
+      {
+        name: 'industry_modules',
+        type: 'multiselect',
+        description: 'Industry riders',
+        options: ['tech_rider', 'cross_border_rider'],
+        default: '[null]',
+      },
+      false
+    );
+  });
+
+  it.openspec('OA-TMP-050')('rejects multiselect defaults with duplicate entries', async () => {
+    await expectSafeParseOutcome(
+      'FieldDefinitionSchema',
+      FieldDefinitionSchema,
+      {
+        name: 'industry_modules',
+        type: 'multiselect',
+        description: 'Industry riders',
+        options: ['tech_rider', 'cross_border_rider'],
+        default: '["tech_rider","tech_rider"]',
+      },
+      false
+    );
+  });
+
   it.openspec('OA-TMP-004')('rejects number field with non-numeric default', async () => {
     await expectSafeParseOutcome(
       'FieldDefinitionSchema',
@@ -179,6 +354,40 @@ describe('FieldDefinitionSchema', () => {
   });
 });
 
+const BASE_TEMPLATE_METADATA = {
+  name: 'Test NDA',
+  source_url: 'https://example.com/nda',
+  version: '1.0',
+  license: 'CC-BY-4.0' as const,
+  allow_derivatives: true,
+  attribution_text: 'Based on Example NDA',
+};
+
+function buildTemplateMetadataPayload(fields: unknown[]) {
+  return {
+    ...BASE_TEMPLATE_METADATA,
+    fields,
+  };
+}
+
+function buildExternalMetadataPayload(fields: unknown[]) {
+  return {
+    ...BASE_TEMPLATE_METADATA,
+    source_sha256: 'a'.repeat(64),
+    fields,
+  };
+}
+
+function buildRecipeMetadataPayload(fields: unknown[]) {
+  return {
+    name: 'Fixture Recipe',
+    source_url: 'https://example.com/source.docx',
+    source_version: '1.0',
+    license_note: 'Not redistributable',
+    fields,
+  };
+}
+
 describe('TemplateMetadataSchema', () => {
   it.openspec('OA-TMP-009')('accepts valid template metadata', async () => {
     await expectSafeParseOutcome(
@@ -209,6 +418,52 @@ describe('TemplateMetadataSchema', () => {
         attribution_text: 'Based on Example NDA',
         fields: [],
       },
+      false
+    );
+  });
+
+  it.openspec('OA-TMP-051')('rejects top-level field collisions with derived boolean keys', async () => {
+    await expectSafeParseOutcome(
+      'TemplateMetadataSchema',
+      TemplateMetadataSchema,
+      buildTemplateMetadataPayload([
+        {
+          name: 'industry_modules',
+          type: 'multiselect',
+          description: 'Industry riders',
+          options: ['tech_rider'],
+          derive_booleans: true,
+        },
+        {
+          name: 'tech_rider_enabled',
+          type: 'boolean',
+          description: 'Conflicting top-level field',
+        },
+      ]),
+      false
+    );
+  });
+
+  it.openspec('OA-TMP-051')('rejects derived key collisions between multiselect fields', async () => {
+    await expectSafeParseOutcome(
+      'TemplateMetadataSchema',
+      TemplateMetadataSchema,
+      buildTemplateMetadataPayload([
+        {
+          name: 'industry_modules',
+          type: 'multiselect',
+          description: 'Industry riders',
+          options: ['tech_rider'],
+          derive_booleans: true,
+        },
+        {
+          name: 'additional_modules',
+          type: 'multiselect',
+          description: 'Additional riders',
+          options: ['tech_rider'],
+          derive_booleans: true,
+        },
+      ]),
       false
     );
   });
@@ -265,6 +520,86 @@ describe('TemplateMetadataSchema', () => {
       false
     );
   });
+
+  it.openspec('OA-TMP-029')('accepts valid credits and derived_from', async () => {
+    await expectSafeParseOutcome(
+      'TemplateMetadataSchema',
+      TemplateMetadataSchema,
+      {
+        name: 'Test Consent',
+        source_url: 'https://example.com/consent',
+        version: '1.0',
+        license: 'CC-BY-4.0',
+        allow_derivatives: true,
+        attribution_text: 'Based on Example Consent',
+        fields: [],
+        credits: [
+          {
+            name: 'Joey Tsang',
+            role: 'drafting_editor',
+            profile_url: 'https://www.linkedin.com/in/joey-t-b90912b1/',
+          },
+        ],
+        derived_from: 'Publicly available Series Seed SAFE board consent materials',
+      },
+      true
+    );
+  });
+
+  it.openspec('OA-TMP-030')('defaults missing credits to empty array', async () => {
+    const parsed = await allureStep('Parse template metadata without credits', () =>
+      TemplateMetadataSchema.parse({
+        name: 'Test NDA',
+        source_url: 'https://example.com/nda',
+        version: '1.0',
+        license: 'CC-BY-4.0',
+        allow_derivatives: true,
+        attribution_text: 'Based on Example NDA',
+        fields: [],
+      })
+    );
+    await allureJsonAttachment('template-metadata-credits-default.json', parsed);
+    await allureStep('Assert credits defaults to empty array', () => {
+      expect(parsed.credits).toEqual([]);
+      expect(parsed.derived_from).toBeUndefined();
+    });
+  });
+
+  it.openspec('OA-TMP-031')('rejects credit role outside the closed enum', async () => {
+    await expectSafeParseOutcome(
+      'TemplateMetadataSchema',
+      TemplateMetadataSchema,
+      {
+        name: 'Test NDA',
+        source_url: 'https://example.com/nda',
+        version: '1.0',
+        license: 'CC-BY-4.0',
+        allow_derivatives: true,
+        attribution_text: 'Based on Example NDA',
+        fields: [],
+        credits: [{ name: 'Author X', role: 'author' }],
+      },
+      false
+    );
+  });
+
+  it.openspec('OA-TMP-031')('rejects non-string derived_from', async () => {
+    await expectSafeParseOutcome(
+      'TemplateMetadataSchema',
+      TemplateMetadataSchema,
+      {
+        name: 'Test NDA',
+        source_url: 'https://example.com/nda',
+        version: '1.0',
+        license: 'CC-BY-4.0',
+        allow_derivatives: true,
+        attribution_text: 'Based on Example NDA',
+        fields: [],
+        derived_from: 42,
+      },
+      false
+    );
+  });
 });
 
 describe('RecipeMetadataSchema', () => {
@@ -309,6 +644,50 @@ describe('RecipeMetadataSchema', () => {
     await allureStep('Assert optional defaults to false', () => {
       expect(parsed.optional).toBe(false);
     });
+  });
+
+  it.openspec('OA-TMP-051')('rejects derived key collisions in external metadata', async () => {
+    await expectSafeParseOutcome(
+      'ExternalMetadataSchema',
+      ExternalMetadataSchema,
+      buildExternalMetadataPayload([
+        {
+          name: 'industry_modules',
+          type: 'multiselect',
+          description: 'Industry riders',
+          options: ['tech_rider'],
+          derive_booleans: true,
+        },
+        {
+          name: 'tech_rider_enabled',
+          type: 'boolean',
+          description: 'Conflicting top-level field',
+        },
+      ]),
+      false
+    );
+  });
+
+  it.openspec('OA-TMP-051')('rejects derived key collisions in recipe metadata', async () => {
+    await expectSafeParseOutcome(
+      'RecipeMetadataSchema',
+      RecipeMetadataSchema,
+      buildRecipeMetadataPayload([
+        {
+          name: 'industry_modules',
+          type: 'multiselect',
+          description: 'Industry riders',
+          options: ['tech_rider'],
+          derive_booleans: true,
+        },
+        {
+          name: 'tech_rider_enabled',
+          type: 'boolean',
+          description: 'Conflicting top-level field',
+        },
+      ]),
+      false
+    );
   });
 });
 

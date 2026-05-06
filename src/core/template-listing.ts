@@ -20,6 +20,7 @@ export interface TemplateListField {
   required: boolean;
   section: string | null;
   description: string;
+  display_label?: string;
   default: string | null;
   default_value_rationale: string | null;
   options?: string[];
@@ -35,6 +36,7 @@ export interface TemplateListItem {
   source_url: string;
   source: string | null;
   attribution_text?: string;
+  allow_derivatives: boolean;
   fields: TemplateListField[];
 }
 
@@ -75,8 +77,25 @@ export function sourceName(url: string): string | null {
       'ycombinator.com': 'Y Combinator',
       'bookface-static.ycombinator.com': 'Y Combinator',
       'nvca.org': 'NVCA',
+      'openagreements.org': 'OpenAgreements',
       'openagreements.ai': 'OpenAgreements',
     };
+
+    // For github.com URLs without a special-cased path, surface the
+    // org/owner segment as the source — that's the publishing entity for
+    // CC-BY-style attribution (e.g. github.com/Bonterms/Mutual-NDA → Bonterms).
+    // A small org map normalizes display names where the github handle
+    // differs from the conventional brand (CommonPaper → Common Paper).
+    if (host === 'github.com') {
+      const org = pathname.split('/').filter(Boolean)[0];
+      if (org) {
+        const orgMap: Record<string, string> = {
+          CommonPaper: 'Common Paper',
+        };
+        return orgMap[org] ?? org;
+      }
+    }
+
     return map[host] ?? host;
   } catch {
     return null;
@@ -94,9 +113,12 @@ export function mapFields(
     required: required.has(f.name),
     section: f.section ?? null,
     description: f.description,
+    ...(f.display_label !== undefined ? { display_label: f.display_label } : {}),
     default: f.default ?? null,
     default_value_rationale: f.default_value_rationale ?? null,
-    ...(f.type === 'enum' && f.options ? { options: [...f.options] } : {}),
+    ...((f.type === 'enum' || f.type === 'multiselect') && f.options
+      ? { options: [...f.options] }
+      : {}),
     ...(f.items ? { items: mapFields(f.items, []) } : {}),
   }));
 }
@@ -120,6 +142,7 @@ export function listTemplateItems(): TemplateListItem[] {
         source_url: meta.source_url,
         source: sourceName(meta.source_url),
         attribution_text: meta.attribution_text,
+        allow_derivatives: meta.allow_derivatives,
         fields: mapFields(meta.fields, meta.priority_fields),
       });
     } catch {

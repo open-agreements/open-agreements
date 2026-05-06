@@ -539,7 +539,9 @@ function definitionSubParagraphs(parentIndex, terms, style) {
 }
 
 function bodyParagraphsFromText(text, style, opts = {}) {
-  const lines = text.split('\n');
+  const lines = text
+    .split('\n')
+    .filter((line) => line.trim().length > 0);
   return lines.map((line, i) =>
     bodyParagraph(line, style, {
       ...opts,
@@ -548,36 +550,40 @@ function bodyParagraphsFromText(text, style, opts = {}) {
   );
 }
 
-function clauseParagraphs(index, clauseItem, style, opts = {}) {
-  // Definitions clause type
-  if (clauseItem.type === 'definitions') {
-    return [
-      new Paragraph({
-        style: 'OAClauseHeading',
-        contextualSpacing: false,
-        spacing: {
-          before: style.spacing.clause_heading_before,
-          after: style.spacing.clause_heading_after,
-          line: style.spacing.line,
-          beforeAutoSpacing: false,
-          afterAutoSpacing: false,
-        },
-        children: [
-          new TextRun({
-            text: `${index}. ${clauseItem.heading}.`,
-            font: style.fonts.body,
-            size: 22,
-            bold: true,
-            color: style.colors.ink,
-          }),
-        ],
-      }),
-      ...definitionSubParagraphs(index, clauseItem.terms, style),
-    ];
+function signaturePreambleParagraphs(text, style, opts = {}) {
+  const lines = text.split('\n');
+  const paragraphs = [];
+  let sawParagraph = false;
+  let pendingBlankLine = false;
+
+  for (const rawLine of lines) {
+    const line = rawLine.trim();
+    if (line.length === 0) {
+      pendingBlankLine = sawParagraph || pendingBlankLine;
+      continue;
+    }
+
+    paragraphs.push(
+      bodyParagraph(line, style, {
+        terms: [],
+        size: opts.size ?? 22,
+        before: !sawParagraph
+          ? (opts.firstParagraphBefore ?? 0)
+          : pendingBlankLine
+            ? (opts.blankLineBefore ?? style.spacing.body_after)
+            : 0,
+        after: opts.after ?? style.spacing.body_after,
+      })
+    );
+    sawParagraph = true;
+    pendingBlankLine = false;
   }
 
-  // Text clause with optional condition/omitted_body
-  const headingParagraph = new Paragraph({
+  return paragraphs;
+}
+
+function clauseHeadingParagraph(index, heading, style) {
+  return new Paragraph({
     style: 'OAClauseHeading',
     contextualSpacing: false,
     spacing: {
@@ -589,7 +595,7 @@ function clauseParagraphs(index, clauseItem, style, opts = {}) {
     },
     children: [
       new TextRun({
-        text: `${index}. ${clauseItem.heading}.`,
+        text: `${index}. ${heading}.`,
         font: style.fonts.body,
         size: 22,
         bold: true,
@@ -597,7 +603,17 @@ function clauseParagraphs(index, clauseItem, style, opts = {}) {
       }),
     ],
   });
+}
 
+function clauseParagraphs(index, clauseItem, style, opts = {}) {
+  if (clauseItem.type === 'definitions') {
+    return [
+      clauseHeadingParagraph(index, clauseItem.heading, style),
+      ...definitionSubParagraphs(index, clauseItem.terms, style),
+    ];
+  }
+
+  const headingParagraph = clauseHeadingParagraph(index, clauseItem.heading, style);
   const termsOpt = opts.terms;
   const bodyParas = bodyParagraphsFromText(clauseItem.body, style, { size: 22, style: 'OAClauseBody', terms: termsOpt });
 
@@ -723,7 +739,11 @@ function signatureSpacerCell(nilBorder) {
   });
 }
 
-function twoPartySignatureTable(signatureSpec, style, nilBorder, ruleBorder) {
+// Shared shell for the 4-column dual-party signature table used by the legacy
+// `two-party` mode. Callers normalize inputs into `{ leftHeader, rightHeader, rows }`
+// where each row is
+// `{ label, hint?, leftValue, rightValue, leftLined?, rightLined? }`.
+function dualPartySignatureTable({ leftHeader, rightHeader, rows }, style, nilBorder, ruleBorder) {
   return new Table({
     width: { size: 10075, type: WidthType.DXA },
     layout: TableLayoutType.FIXED,
@@ -740,26 +760,43 @@ function twoPartySignatureTable(signatureSpec, style, nilBorder, ruleBorder) {
       new TableRow({
         children: [
           signatureLabelCell('', '', style, nilBorder),
-          signatureHeaderCell(signatureSpec.party_a.toUpperCase(), style, nilBorder),
+          signatureHeaderCell(leftHeader.toUpperCase(), style, nilBorder),
           signatureSpacerCell(nilBorder),
-          signatureHeaderCell(signatureSpec.party_b.toUpperCase(), style, nilBorder),
+          signatureHeaderCell(rightHeader.toUpperCase(), style, nilBorder),
         ],
       }),
-      ...signatureSpec.rows.map((row) =>
+      ...rows.map((row) =>
         new TableRow({
           height: { value: style.sizes.signature_row_height, rule: HeightRule.ATLEAST },
           children: [
             signatureLabelCell(row.label, row.hint, style, nilBorder),
-            signatureLineCell(row.left ?? '', style, nilBorder, ruleBorder),
+            signatureLineCell(row.leftValue ?? '', style, nilBorder, row.leftLined === false ? nilBorder : ruleBorder),
             signatureSpacerCell(nilBorder),
-            row.left_only
-              ? signatureLineCell('', style, nilBorder, nilBorder)
-              : signatureLineCell(row.right ?? '', style, nilBorder, ruleBorder),
+            signatureLineCell(row.rightValue ?? '', style, nilBorder, row.rightLined === false ? nilBorder : ruleBorder),
           ],
         })
       ),
     ],
   });
+}
+
+function twoPartySignatureTable(signatureSpec, style, nilBorder, ruleBorder) {
+  return dualPartySignatureTable(
+    {
+      leftHeader: signatureSpec.party_a,
+      rightHeader: signatureSpec.party_b,
+      rows: signatureSpec.rows.map((row) => ({
+        label: row.label,
+        hint: row.hint,
+        leftValue: row.left,
+        rightValue: row.left_only ? '' : row.right,
+        rightLined: !row.left_only,
+      })),
+    },
+    style,
+    nilBorder,
+    ruleBorder
+  );
 }
 
 function onePartySignatureTable(signatureSpec, style, nilBorder, ruleBorder) {
@@ -795,6 +832,197 @@ function onePartySignatureTable(signatureSpec, style, nilBorder, ruleBorder) {
   });
 }
 
+function signerHasRowId(signer, rowId) {
+  return signer.rows.some((row) => row.id === rowId);
+}
+
+function validateSignerModeArrangement(signatureSpec) {
+  if (signatureSpec.arrangement !== 'entity-plus-individual') {
+    return;
+  }
+
+  if (signatureSpec.signers.length !== 2) {
+    throw new Error(
+      `cover-standard-signature-v1 requires exactly 2 signers for arrangement=entity-plus-individual; received ${signatureSpec.signers.length}`
+    );
+  }
+
+  const [entitySigner, individualSigner] = signatureSpec.signers;
+  if (entitySigner.kind !== 'entity') {
+    throw new Error(
+      `cover-standard-signature-v1 arrangement=entity-plus-individual requires signer "${entitySigner.id}" to have kind=entity`
+    );
+  }
+  if (individualSigner.kind !== 'individual' && individualSigner.kind !== 'acknowledging-individual') {
+    throw new Error(
+      `cover-standard-signature-v1 arrangement=entity-plus-individual requires signer "${individualSigner.id}" to have kind=individual or kind=acknowledging-individual`
+    );
+  }
+  if (signerHasRowId(individualSigner, 'title')) {
+    throw new Error(
+      `cover-standard-signature-v1 arrangement=entity-plus-individual requires signer "${individualSigner.id}" to omit the Title row`
+    );
+  }
+}
+
+function signerTableFromSigner(signer, style, nilBorder, ruleBorder) {
+  return onePartySignatureTable(
+    {
+      party: signer.label,
+      rows: signer.rows.map((row) => ({
+        label: row.label,
+        hint: row.hint,
+        value: row.value,
+      })),
+    },
+    style,
+    nilBorder,
+    ruleBorder
+  );
+}
+
+function repeatingSignatureRowText(row) {
+  const lowerLabel = row.label.toLowerCase();
+  if (lowerLabel === 'signature' || lowerLabel === 'signature line') {
+    return row.value || '______________________________';
+  }
+  if (!row.value) {
+    return `${row.label}: _______________`;
+  }
+  return `${row.label}: ${row.value}`;
+}
+
+function repeatingStackedSignatureParagraphs(signatureSpec, style, opts = {}) {
+  if (!signatureSpec.repeat) {
+    throw new Error('cover-standard-signature-v1 stacked signer sections require repeat metadata');
+  }
+  if (signatureSpec.signers.length !== 1) {
+    throw new Error(
+      `cover-standard-signature-v1 repeat-backed stacked signer sections require exactly 1 signer prototype; received ${signatureSpec.signers.length}`
+    );
+  }
+
+  const signer = signatureSpec.signers[0];
+  const paragraphs = [
+    bodyParagraph(`{FOR ${signatureSpec.repeat.item_name} IN ${signatureSpec.repeat.collection_field}}`, style, {
+      size: 22,
+      after: 0,
+      terms: [],
+    }),
+  ];
+
+  paragraphs.push(
+    bodyParagraph(signer.label, style, {
+      size: 22,
+      bold: true,
+      before: opts.firstRowBefore ?? style.spacing.clause_heading_before,
+      after: 0,
+      terms: [],
+    })
+  );
+
+  signer.rows.forEach((row, index) => {
+    paragraphs.push(
+      bodyParagraph(repeatingSignatureRowText(row), style, {
+        size: 22,
+        before: 0,
+        after: index === signer.rows.length - 1 ? (opts.blockAfter ?? style.spacing.body_after) : (opts.rowAfter ?? 0),
+        terms: [],
+      })
+    );
+  });
+
+  paragraphs.push(
+    bodyParagraph(`{END-FOR ${signatureSpec.repeat.item_name}}`, style, {
+      size: 22,
+      after: opts.loopCloseAfter ?? style.spacing.body_after,
+      terms: [],
+    })
+  );
+
+  return paragraphs;
+}
+
+function appendSignatureMarkdown(lines, signatureSection) {
+  for (const preambleParagraph of signatureSection.preamble.split('\n').map((line) => line.trim()).filter(Boolean)) {
+    lines.push(preambleParagraph);
+    lines.push('');
+  }
+
+  if (signatureSection.mode === 'two-party') {
+    const sectionsOut = [
+      {
+        party: signatureSection.party_a,
+        rows: signatureSection.rows.map((row) => ({ label: row.label, value: row.left ?? '' })),
+      },
+      {
+        party: signatureSection.party_b,
+        rows: signatureSection.rows.filter((row) => !row.left_only).map((row) => ({ label: row.label, value: row.right ?? '' })),
+      },
+    ];
+    for (const section of sectionsOut) {
+      lines.push(`**${section.party}**`);
+      lines.push('');
+      for (const row of section.rows) {
+        lines.push(`${row.label}: ${row.value || '_______________'}`);
+      }
+      lines.push('');
+    }
+    return;
+  }
+
+  if (signatureSection.mode === 'signers' && signatureSection.arrangement === 'stacked' && signatureSection.repeat) {
+    const signer = signatureSection.signers[0];
+    lines.push(`{FOR ${signatureSection.repeat.item_name} IN ${signatureSection.repeat.collection_field}}`);
+    lines.push('');
+    lines.push(`**${signer.label}**`);
+    lines.push('');
+    for (const row of signer.rows) {
+      lines.push(repeatingSignatureRowText(row));
+      lines.push('');
+    }
+    lines.push(`{END-FOR ${signatureSection.repeat.item_name}}`);
+    lines.push('');
+    return;
+  }
+
+  if (signatureSection.mode === 'signers') {
+    for (const signer of signatureSection.signers) {
+      lines.push(`**${signer.label}**`);
+      lines.push('');
+      for (const row of signer.rows) {
+        lines.push(`${row.label}: ${row.value || '_______________'}`);
+      }
+      lines.push('');
+    }
+    return;
+  }
+
+  lines.push(`**${signatureSection.party}**`);
+  lines.push('');
+  for (const row of signatureSection.rows) {
+    lines.push(`${row.label}: ${row.value || '_______________'}`);
+  }
+  lines.push('');
+}
+
+function signerTableSpacer(style) {
+  return new Paragraph({
+    spacing: { before: 0, after: style.spacing.body_after, line: style.spacing.line },
+    children: [new TextRun({ text: '' })],
+  });
+}
+
+function signerModeSignatureChildren(signatureSpec, style, nilBorder, ruleBorder) {
+  validateSignerModeArrangement(signatureSpec);
+
+  return signatureSpec.signers.flatMap((signer, index) => (
+    index === 0
+      ? [signerTableFromSigner(signer, style, nilBorder, ruleBorder)]
+      : [signerTableSpacer(style), signerTableFromSigner(signer, style, nilBorder, ruleBorder)]
+  ));
+}
+
 function renderMarkdown(spec) {
   const lines = [];
   const { document, sections } = spec;
@@ -810,13 +1038,10 @@ function renderMarkdown(spec) {
   lines.push('');
   lines.push('| Term | Value |');
   lines.push('|------|-------|');
-  let lastParentLabel = '';
   for (const row of sections.cover_terms.rows) {
     if (row.sub) {
-      const mdLabel = lastParentLabel ? `${lastParentLabel} — ${row.label}` : row.label;
-      lines.push(`| *${mdLabel}* | ${row.value} |`);
+      lines.push(`| ${row.label} | ${row.value} |`);
     } else {
-      lastParentLabel = row.label;
       if (row.value) {
         lines.push(`| **${row.label}** | ${row.value} |`);
       } else {
@@ -833,9 +1058,8 @@ function renderMarkdown(spec) {
     lines.push(`### ${i + 1}. ${clauseItem.heading}`);
     lines.push('');
     if (clauseItem.type === 'definitions') {
-      const sorted = [...clauseItem.terms].sort((a, b) => a.term.localeCompare(b.term));
-      for (let j = 0; j < sorted.length; j++) {
-        lines.push(`${i + 1}.${j + 1} **"${sorted[j].term}"** ${sorted[j].definition}`);
+      for (let j = 0; j < clauseItem.terms.length; j++) {
+        lines.push(`${i + 1}.${j + 1} **"${clauseItem.terms[j].term}"** ${clauseItem.terms[j].definition}`);
         lines.push('');
       }
     } else {
@@ -846,36 +1070,7 @@ function renderMarkdown(spec) {
 
   lines.push(`## ${sections.signature.heading_title}`);
   lines.push('');
-  lines.push(sections.signature.preamble);
-  lines.push('');
-
-  if (sections.signature.mode === 'two-party') {
-    const sectionsOut = [
-      {
-        party: sections.signature.party_a,
-        rows: sections.signature.rows.map((row) => ({ label: row.label, value: row.left ?? '' })),
-      },
-      {
-        party: sections.signature.party_b,
-        rows: sections.signature.rows.filter((row) => !row.left_only).map((row) => ({ label: row.label, value: row.right ?? '' })),
-      },
-    ];
-    for (const section of sectionsOut) {
-      lines.push(`**${section.party}**`);
-      lines.push('');
-      for (const row of section.rows) {
-        lines.push(`${row.label}: ${row.value || '_______________'}`);
-      }
-      lines.push('');
-    }
-  } else {
-    lines.push(`**${sections.signature.party}**`);
-    lines.push('');
-    for (const row of sections.signature.rows) {
-      lines.push(`${row.label}: ${row.value || '_______________'}`);
-    }
-    lines.push('');
-  }
+  appendSignatureMarkdown(lines, sections.signature);
 
   return lines.join('\n');
 }
@@ -888,7 +1083,7 @@ export function renderCoverStandardSignatureV1(spec, style) {
   const highlightMode = document.defined_term_highlight_mode || 'all_instances';
   const definitionsClause = sections.standard_terms.clauses.find((c) => c.type === 'definitions');
   const derivedTerms = definitionsClause
-    ? definitionsClause.terms.map((t) => t.term)
+    ? definitionsClause.terms.flatMap((t) => [t.term, ...(t.aliases ?? [])])
     : style.defined_terms;
 
   const standardClauseParagraphs = sections.standard_terms.clauses.flatMap((clauseItem, idx) => {
@@ -905,9 +1100,15 @@ export function renderCoverStandardSignatureV1(spec, style) {
     return clauseParagraphs(idx + 1, clauseItem, style, { terms: termsForClause });
   });
 
-  const signatureTable = sections.signature.mode === 'two-party'
-    ? twoPartySignatureTable(sections.signature, style, nilBorder, ruleBorder)
-    : onePartySignatureTable(sections.signature, style, nilBorder, ruleBorder);
+  const signatureChildren = sections.signature.mode === 'two-party'
+    ? [twoPartySignatureTable(sections.signature, style, nilBorder, ruleBorder)]
+    : sections.signature.mode === 'signers' &&
+        sections.signature.arrangement === 'stacked' &&
+        sections.signature.repeat
+      ? repeatingStackedSignatureParagraphs(sections.signature, style)
+      : sections.signature.mode === 'signers'
+        ? signerModeSignatureChildren(sections.signature, style, nilBorder, ruleBorder)
+        : [onePartySignatureTable(sections.signature, style, nilBorder, ruleBorder)];
 
   const doc = new Document({
     styles: buildDocumentStyles(style),
@@ -949,11 +1150,10 @@ export function renderCoverStandardSignatureV1(spec, style) {
         document.version,
         [
           sectionTitleParagraph(sections.signature.heading_title, style),
-          bodyParagraph(sections.signature.preamble, style, {
-            terms: [],
-            size: 16,
+          ...signaturePreambleParagraphs(sections.signature.preamble, style, {
+            size: 22,
           }),
-          signatureTable,
+          ...signatureChildren,
         ],
         style,
         nilBorder

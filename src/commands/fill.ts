@@ -31,11 +31,11 @@ interface FillMemoArgs {
 export interface FillArgs {
   template: string;
   output?: string;
-  values: Record<string, string>;
+  values: Record<string, unknown>;
   memo?: FillMemoArgs;
 }
 
-function validateTemplateFillRequest(templateDir: string, values: Record<string, string>): void {
+function validateTemplateFillRequest(templateDir: string, values: Record<string, unknown>): void {
   const metadata = loadMetadata(templateDir);
 
   if (!metadata.allow_derivatives) {
@@ -44,7 +44,10 @@ function validateTemplateFillRequest(templateDir: string, values: Record<string,
     );
   }
 
-  const missingPriority = metadata.priority_fields.filter((fieldName) => !values[fieldName]);
+  const missingPriority = metadata.priority_fields.filter((fieldName) => {
+    const value = values[fieldName];
+    return value === undefined || value === '' || (Array.isArray(value) && value.length === 0);
+  });
 
   if (missingPriority.length > 0) {
     console.warn(`Note: ${missingPriority.length} priority fields are unfilled: ${missingPriority.join(', ')}`);

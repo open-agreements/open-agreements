@@ -71,6 +71,38 @@ export function validateTemplate(templateDir: string, templateId: string): Templ
 
   const metadataFieldNames = new Set(metadata.fields.map((f) => f.name));
   const priorityFieldNames = new Set(metadata.priority_fields);
+  const multiselectFieldNames = new Set(
+    metadata.fields
+      .filter((field) => field.type === 'multiselect')
+      .map((field) => field.name)
+  );
+  const derivedBooleanMultiselects = metadata.fields.filter(
+    (field) => field.type === 'multiselect' && field.derive_booleans === true
+  );
+  // Map from multiselect field name → set of derived `<option>_enabled` keys.
+  // Used below to suppress the "field not in DOCX" warning ONLY when at least
+  // one of the field's derived keys is actually referenced in the template.
+  // A derive_booleans multiselect with zero derived references is genuinely
+  // unused and should still warn (or error if priority-listed).
+  const derivedKeysByField = new Map<string, Set<string>>(
+    derivedBooleanMultiselects.map((field) => [
+      field.name,
+      new Set((field.options ?? []).map((option) => `${option}_enabled`)),
+    ])
+  );
+
+  const rejectDirectMultiselectConditionals = (foundConditionalFields: Set<string>): void => {
+    for (const fieldName of multiselectFieldNames) {
+      if (!foundConditionalFields.has(fieldName)) {
+        continue;
+      }
+      errors.push(
+        `Multiselect field "${fieldName}" must not be referenced directly in {IF ${fieldName}} ` +
+        `(empty arrays are truthy); use derived <option>_enabled keys ` +
+        `(when derive_booleans: true) or restructure your template logic.`
+      );
+    }
+  };
 
   // Check if this template uses declarative replacements
   const replacementsPath = join(templateDir, 'replacements.json');
@@ -135,8 +167,22 @@ export function validateTemplate(templateDir: string, templateId: string): Templ
       foundConditionalFields.add(docxCondMatch[1]);
     }
 
+    rejectDirectMultiselectConditionals(foundConditionalFields);
+
     // Check metadata fields are covered by tags
     for (const fieldName of metadataFieldNames) {
+      const derivedKeys = derivedKeysByField.get(fieldName);
+      if (derivedKeys) {
+        // Suppress coverage warning ONLY if at least one derived key is
+        // actually referenced. Otherwise the multiselect is dead weight and
+        // the warning/error should fire normally.
+        const anyDerivedReferenced = [...derivedKeys].some(
+          (key) => foundTags.has(key) || foundConditionalFields.has(key)
+        );
+        if (anyDerivedReferenced) {
+          continue;
+        }
+      }
       const inTags = foundTags.has(fieldName) || foundConditionalFields.has(fieldName);
       if (!inTags) {
         if (priorityFieldNames.has(fieldName)) {
@@ -185,11 +231,54 @@ export function validateTemplate(templateDir: string, templateId: string): Templ
       foundConditionalFields.add(condMatch[1]);
     }
 
-    // Extract array field names from FOR loop constructs
-    const forLoopRegex = /\{FOR \w+ IN (\w+)\}/g;
+    rejectDirectMultiselectConditionals(foundConditionalFields);
+
+    // Extract array field names + item bindings from FOR loop constructs.
+    // Each loop has shape `{FOR <item> IN <field>}` and references look like
+    // `{$<item>.<rowField>}`. Validate that <field> is declared array-typed in
+    // metadata and that <rowField> references resolve through the field's items.
+    const forLoopRegex = /\{FOR (\w+) IN (\w+)\}/g;
+    const repeatItemBindings = new Map<string, string>(); // item -> field
     let forMatch;
     while ((forMatch = forLoopRegex.exec(text)) !== null) {
-      foundTags.add(forMatch[1]);
+      const itemName = forMatch[1];
+      const collectionName = forMatch[2];
+      foundTags.add(collectionName);
+      repeatItemBindings.set(itemName, collectionName);
+
+      const field = metadata.fields.find((f) => f.name === collectionName);
+      if (!field) {
+        errors.push(
+          `{FOR ${itemName} IN ${collectionName}} references "${collectionName}" but it is not defined in metadata fields`
+        );
+      } else if (field.type !== 'array') {
+        errors.push(
+          `{FOR ${itemName} IN ${collectionName}} requires "${collectionName}" to be type=array in metadata; declared type=${field.type}`
+        );
+      }
+    }
+
+    // Validate {$item.rowField} references against metadata items shape.
+    const itemRefRegex = /\{\$(\w+)\.(\w+)\}/g;
+    let itemRefMatch;
+    while ((itemRefMatch = itemRefRegex.exec(text)) !== null) {
+      const itemName = itemRefMatch[1];
+      const rowFieldName = itemRefMatch[2];
+      const collectionName = repeatItemBindings.get(itemName);
+      if (!collectionName) {
+        errors.push(
+          `{$${itemName}.${rowFieldName}} references item "${itemName}" but no enclosing {FOR ${itemName} IN ...} was found`
+        );
+        continue;
+      }
+      const field = metadata.fields.find((f) => f.name === collectionName);
+      if (!field || !field.items) continue; // already errored above, or no shape declared
+      const itemField = field.items.find((sub) => sub.name === rowFieldName);
+      if (!itemField) {
+        errors.push(
+          `{$${itemName}.${rowFieldName}} references "${rowFieldName}" but "${collectionName}.items" does not declare it`
+        );
+      }
     }
 
     // Security: scan for docx-templates control/code tags that should not exist
@@ -201,6 +290,17 @@ export function validateTemplate(templateDir: string, templateId: string): Templ
 
     // Check for fields in metadata but not in DOCX
     for (const fieldName of metadataFieldNames) {
+      const derivedKeys = derivedKeysByField.get(fieldName);
+      if (derivedKeys) {
+        // See the parallel branch above: only suppress when at least one
+        // derived key is actually referenced.
+        const anyDerivedReferenced = [...derivedKeys].some(
+          (key) => foundTags.has(key) || foundConditionalFields.has(key)
+        );
+        if (anyDerivedReferenced) {
+          continue;
+        }
+      }
       const inDocx = foundTags.has(fieldName) || foundConditionalFields.has(fieldName);
       if (!inDocx) {
         if (priorityFieldNames.has(fieldName)) {

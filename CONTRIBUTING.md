@@ -15,6 +15,18 @@ The most impactful contribution is adding a new template. Requirements:
 
 See [docs/adding-templates.md](docs/adding-templates.md) for the full guide.
 
+### Template credits
+
+Templates may carry a `credits` array naming individuals who materially shaped them. Credit is a form of recognition for substantive work.
+
+- **Credit requires a material, template-specific contribution.** Typo fixes, formatting, or metadata touch-ups don't qualify for template-level credit, even if merged.
+- **Consent is required.** No one is added to `credits` without their explicit agreement. Anyone named can ask to be removed at any time.
+- **Honest role labels:**
+  - `drafter` — originated the template or distinctive clause architecture
+  - `drafting_editor` — materially synthesized/adapted external sources into the published form
+  - `reviewer` — substantive legal review of drafted text
+  - `maintainer` — ongoing stewardship (not authorship)
+
 ### Add a Recipe
 
 Recipes handle documents that aren't redistributable (e.g., NVCA model documents). You author transformation instructions — never commit the source DOCX.

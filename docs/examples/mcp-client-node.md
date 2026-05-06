@@ -33,7 +33,7 @@ type ToolEnvelopeError = {
 
 type ToolEnvelope<T> = ToolEnvelopeSuccess<T> | ToolEnvelopeError;
 
-const MCP_URL = 'https://openagreements.ai/api/mcp';
+const MCP_URL = 'https://openagreements.org/api/mcp';
 
 async function rpc(id: number, method: string, params: Record<string, unknown> = {}) {
   const res = await fetch(MCP_URL, {

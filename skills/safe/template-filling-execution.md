@@ -24,7 +24,7 @@ else
 fi
 ```
 
-**To set up the Remote MCP** (one-time, recommended): See [openagreements.ai](https://openagreements.ai) or the CONNECTORS.md in the skill's directory for setup instructions.
+**To set up the Remote MCP** (one-time, recommended): See [openagreements.org](https://openagreements.org) or the CONNECTORS.md in the skill's directory for setup instructions.
 
 ## Step 2: Discover templates
 

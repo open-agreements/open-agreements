@@ -13,7 +13,7 @@ Previous versions of the `open-agreements` skill instructed agents to run `npx -
 - Used `@latest` which meant the downloaded code could change between runs (flagged as REMOTE_CODE_EXECUTION)
 
 As of v0.2.0, all skills use one of three execution paths:
-1. **Remote MCP** (recommended): The hosted server at `openagreements.ai/api/mcp` handles DOCX generation server-side. No local dependencies needed.
+1. **Remote MCP** (recommended): The hosted server at `openagreements.org/api/mcp` handles DOCX generation server-side. No local dependencies needed.
 2. **Local CLI**: If `open-agreements` is already installed locally, use it directly.
 3. **Preview only**: Generate a markdown preview when neither MCP nor CLI is available.
 
@@ -47,7 +47,7 @@ Templates come from established legal industry sources:
 - **Bonterms** (bonterms.com) — CC0-1.0
 - **Y Combinator** (ycombinator.com) — CC-BY-ND-4.0
 - **NVCA** (nvca.org) — used with permission, SHA-256 integrity verification
-- **OpenAgreements** (openagreements.ai) — CC-BY-4.0
+- **OpenAgreements** (openagreements.org) — CC-BY-4.0
 
 All external templates include SHA-256 hash verification to detect tampering.
 
@@ -62,4 +62,4 @@ Our skills are listed on [skills.sh](https://skills.sh/open-agreements/open-agre
 
 ## Reporting security issues
 
-If you discover a security issue, please email security@openagreements.ai or open a GitHub issue.
+If you discover a security issue, please email security@openagreements.org or open a GitHub issue.

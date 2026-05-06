@@ -44,7 +44,7 @@ export interface DeclarativeNormalizeConfig {
 
 export interface BracketNormalizationOptions {
   rules?: DeclarativeParagraphNormalizeRule[];
-  fieldValues?: Record<string, string | boolean>;
+  fieldValues?: Record<string, unknown>;
   blankPlaceholder?: string;
 }
 
@@ -233,7 +233,7 @@ function applyDeclarativeRulesToParagraph(params: {
   text: string;
   heading: string;
   rules: DeclarativeParagraphNormalizeRule[];
-  fieldValues: Record<string, string | boolean>;
+  fieldValues: Record<string, unknown>;
   blankPlaceholder: string;
 }): { text: string; applied: boolean; rule_id?: string } {
   const { text, heading, rules, fieldValues, blankPlaceholder } = params;
@@ -290,13 +290,16 @@ function matchesHeading(rule: DeclarativeParagraphNormalizeRule, heading: string
 
 function resolveTemplateValue(
   template: string,
-  fieldValues: Record<string, string | boolean>,
+  fieldValues: Record<string, unknown>,
   blankPlaceholder: string
 ): string {
   return template.replace(/\{([a-zA-Z0-9_]+)\}/g, (_full, key: string) => {
     const value = fieldValues[key];
     if (typeof value === 'boolean') return value ? 'true' : 'false';
     if (typeof value === 'string' && value.trim().length > 0) return value;
+    if (Array.isArray(value) && value.every((entry) => typeof entry === 'string') && value.length > 0) {
+      return value.join(', ');
+    }
     return blankPlaceholder;
   });
 }

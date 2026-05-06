@@ -33,6 +33,7 @@ function isOpenAgreementsOwned(templateId, metadata) {
   }
   const sourceUrl = String(metadata.source_url || "").toLowerCase();
   return (
+    sourceUrl.includes("openagreements.org") ||
     sourceUrl.includes("openagreements.ai") ||
     sourceUrl.includes("github.com/open-agreements/open-agreements")
   );

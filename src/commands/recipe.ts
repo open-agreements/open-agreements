@@ -27,7 +27,7 @@ export async function runRecipeCommand(args: RecipeRunArgs): Promise<void> {
     process.exit(1);
   }
 
-  let values: Record<string, string | boolean> = {};
+  let values: Record<string, unknown> = {};
   if (args.data) {
     values = JSON.parse(readFileSync(args.data, 'utf-8'));
   }

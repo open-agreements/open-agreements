@@ -5,6 +5,7 @@ import { tmpdir } from 'node:os';
 import AdmZip from 'adm-zip';
 import { validateTemplate } from '../src/core/validation/template.js';
 import { validateMetadata } from '../src/core/metadata.js';
+import { prepareFillData } from '../src/core/fill-pipeline.js';
 import {
   allureAttachment,
   allureJsonAttachment,
@@ -336,13 +337,65 @@ describe('validateTemplate placeholder coverage', () => {
   it('accepts FOR loop placeholders in direct template scanning mode', () => {
     const dir = createTemplateFixture({
       docText: '{FOR row IN board_members}{$row.name}{END-FOR row}',
-      fieldsYaml: '  - name: board_members\n    type: array\n    description: Board members',
+      fieldsYaml: [
+        '  - name: board_members',
+        '    type: array',
+        '    description: Board members',
+        '    items:',
+        '      - name: name',
+        '        type: string',
+        '        description: Member name',
+      ].join('\n'),
     });
 
     const result = validateTemplate(dir, 'fixture-for-loop');
 
     expect(result.valid).toBe(true);
     expect(result.errors).toEqual([]);
+  });
+
+  it('rejects {FOR ... IN field} when field is not declared array', () => {
+    const dir = createTemplateFixture({
+      docText: '{FOR row IN board_members}{$row.name}{END-FOR row}',
+      fieldsYaml: '  - name: board_members\n    type: string\n    description: Board members',
+    });
+
+    const result = validateTemplate(dir, 'fixture-for-loop-bad-type');
+
+    expect(result.valid).toBe(false);
+    expect(result.errors.join(' ')).toContain('requires "board_members" to be type=array');
+  });
+
+  it('rejects {FOR ... IN field} when field is missing from metadata', () => {
+    const dir = createTemplateFixture({
+      docText: '{FOR row IN signatories}{$row.name}{END-FOR row}',
+      fieldsYaml: '  - name: company_name\n    type: string\n    description: Company name',
+    });
+
+    const result = validateTemplate(dir, 'fixture-for-loop-missing-field');
+
+    expect(result.valid).toBe(false);
+    expect(result.errors.join(' ')).toContain('not defined in metadata fields');
+  });
+
+  it('rejects {$item.field} when row field is not declared in items', () => {
+    const dir = createTemplateFixture({
+      docText: '{FOR row IN board_members}{$row.title}{END-FOR row}',
+      fieldsYaml: [
+        '  - name: board_members',
+        '    type: array',
+        '    description: Board members',
+        '    items:',
+        '      - name: name',
+        '        type: string',
+        '        description: Member name',
+      ].join('\n'),
+    });
+
+    const result = validateTemplate(dir, 'fixture-item-ref-bad');
+
+    expect(result.valid).toBe(false);
+    expect(result.errors.join(' ')).toContain('"board_members.items" does not declare it');
   });
 
   it('flags unsafe template control tags in template.docx', () => {
@@ -397,5 +450,207 @@ describe('validateTemplate placeholder coverage', () => {
 
     expect(result.valid).toBe(true);
     expect(result.warnings.join(' ')).toContain('Optional field "optional_field"');
+  });
+});
+
+describe('validateTemplate multiselect coverage', () => {
+  const multiselectFieldsYaml = [
+    '  - name: industry_modules',
+    '    type: multiselect',
+    '    description: Industry riders',
+    '    options:',
+    '      - tech_rider',
+    '      - cross_border_rider',
+    '    derive_booleans: true',
+  ].join('\n');
+
+  const multiselectWithoutDerivationYaml = [
+    '  - name: industry_modules',
+    '    type: multiselect',
+    '    description: Industry riders',
+    '    options:',
+    '      - tech_rider',
+    '      - cross_border_rider',
+  ].join('\n');
+
+  it.openspec('OA-TMP-052')('does not warn about multiselect fields when direct DOCX conditionals use only derived keys', () => {
+    const dir = createTemplateFixture({
+      docText: '{IF tech_rider_enabled}{END-IF}',
+      fieldsYaml: multiselectFieldsYaml,
+    });
+
+    const result = validateTemplate(dir, 'fixture-direct-derived-multiselect');
+
+    expect(result.valid).toBe(true);
+    expect(result.errors).toEqual([]);
+    expect(result.warnings.join(' ')).not.toContain('industry_modules');
+  });
+
+  it.openspec('OA-TMP-052')('does not warn about multiselect fields when replacement values use only derived keys', () => {
+    const dir = createTemplateFixture({
+      docText: '[Industry riders]',
+      fieldsYaml: multiselectFieldsYaml,
+      replacements: {
+        '[Industry riders]': '{IF tech_rider_enabled}{END-IF}',
+      },
+    });
+
+    const result = validateTemplate(dir, 'fixture-replacements-derived-multiselect');
+
+    expect(result.valid).toBe(true);
+    expect(result.errors).toEqual([]);
+    expect(result.warnings.join(' ')).not.toContain('industry_modules');
+  });
+
+  it.openspec('OA-TMP-052')('rejects direct multiselect IF references in direct DOCX scanning mode', () => {
+    const dir = createTemplateFixture({
+      docText: '{IF industry_modules}{END-IF}',
+      fieldsYaml: multiselectFieldsYaml,
+    });
+
+    const result = validateTemplate(dir, 'fixture-direct-if-multiselect');
+
+    expect(result.valid).toBe(false);
+    expect(result.errors.join(' ')).toContain('must not be referenced directly in {IF industry_modules}');
+  });
+
+  it.openspec('OA-TMP-052')('rejects direct multiselect IF references in replacements mode even without derive_booleans', () => {
+    const dir = createTemplateFixture({
+      docText: '[Industry riders]',
+      fieldsYaml: multiselectWithoutDerivationYaml,
+      replacements: {
+        '[Industry riders]': '{IF industry_modules}{END-IF}',
+      },
+    });
+
+    const result = validateTemplate(dir, 'fixture-replacements-if-multiselect');
+
+    expect(result.valid).toBe(false);
+    expect(result.errors.join(' ')).toContain('must not be referenced directly in {IF industry_modules}');
+  });
+
+  it.openspec('OA-FIL-026')('throws a clear error for malformed multiselect JSON input', () => {
+    expect(() =>
+      prepareFillData({
+        values: { industry_modules: 'not-json' },
+        fields: [
+          {
+            name: 'industry_modules',
+            type: 'multiselect',
+            description: 'Industry riders',
+            options: ['tech_rider', 'cross_border_rider'],
+            derive_booleans: true,
+          },
+        ],
+      })
+    ).toThrow('Multiselect field "industry_modules" received malformed JSON input');
+  });
+
+  it('treats empty priority multiselect collections as unfilled after normalization', () => {
+    expect(() =>
+      prepareFillData({
+        values: { industry_modules: '[]' },
+        fields: [
+          {
+            name: 'industry_modules',
+            type: 'multiselect',
+            description: 'Industry riders',
+            options: ['tech_rider', 'cross_border_rider'],
+            derive_booleans: true,
+          },
+        ],
+        priorityFieldNames: ['industry_modules'],
+      })
+    ).toThrow('Required collection fields are empty: industry_modules');
+  });
+
+  it.openspec('OA-TMP-053')('warns when a derive_booleans multiselect is declared but no derived key is referenced (direct DOCX)', () => {
+    const dir = createTemplateFixture({
+      docText: 'Body text without any rider conditional.',
+      fieldsYaml: multiselectFieldsYaml,
+    });
+
+    const result = validateTemplate(dir, 'fixture-derive-booleans-unused-direct');
+
+    expect(result.valid).toBe(true);
+    expect(result.warnings.join(' ')).toContain('Optional field "industry_modules"');
+  });
+
+  it.openspec('OA-TMP-053')('errors when a priority derive_booleans multiselect is declared but no derived key is referenced (direct DOCX)', () => {
+    const dir = createTemplateFixture({
+      docText: 'Body text without any rider conditional.',
+      fieldsYaml: multiselectFieldsYaml,
+      priorityFields: ['industry_modules'],
+    });
+
+    const result = validateTemplate(dir, 'fixture-derive-booleans-unused-direct-priority');
+
+    expect(result.valid).toBe(false);
+    expect(result.errors.join(' ')).toContain('Priority field "industry_modules"');
+  });
+
+  it.openspec('OA-TMP-053')('warns when a derive_booleans multiselect is declared but no derived key is referenced (replacements mode)', () => {
+    const dir = createTemplateFixture({
+      docText: '[Industry riders]',
+      fieldsYaml: multiselectFieldsYaml,
+      replacements: {
+        '[Industry riders]': 'plain replacement text without any rider conditional',
+      },
+    });
+
+    const result = validateTemplate(dir, 'fixture-derive-booleans-unused-replacements');
+
+    expect(result.valid).toBe(true);
+    expect(result.warnings.join(' ')).toContain('Optional field "industry_modules"');
+  });
+
+  it.openspec('OA-TMP-053')('errors when a priority derive_booleans multiselect is declared but no derived key is referenced (replacements mode)', () => {
+    const dir = createTemplateFixture({
+      docText: '[Industry riders]',
+      fieldsYaml: multiselectFieldsYaml,
+      priorityFields: ['industry_modules'],
+      replacements: {
+        '[Industry riders]': 'plain replacement text without any rider conditional',
+      },
+    });
+
+    const result = validateTemplate(dir, 'fixture-derive-booleans-unused-replacements-priority');
+
+    expect(result.valid).toBe(false);
+    expect(result.errors.join(' ')).toContain('Priority field "industry_modules"');
+  });
+
+  it.openspec('OA-FIL-028')('rejects multiselect runtime input with non-string entries', () => {
+    expect(() =>
+      prepareFillData({
+        values: { industry_modules: ['tech_rider', 7] as unknown[] },
+        fields: [
+          {
+            name: 'industry_modules',
+            type: 'multiselect',
+            description: 'Industry riders',
+            options: ['tech_rider', 'cross_border_rider'],
+            derive_booleans: true,
+          },
+        ],
+      })
+    ).toThrow('entry at index 1 must be a string');
+  });
+
+  it.openspec('OA-FIL-028')('rejects multiselect runtime input with unknown options', () => {
+    expect(() =>
+      prepareFillData({
+        values: { industry_modules: ['tech_rider', 'unknown_option'] },
+        fields: [
+          {
+            name: 'industry_modules',
+            type: 'multiselect',
+            description: 'Industry riders',
+            options: ['tech_rider', 'cross_border_rider'],
+            derive_booleans: true,
+          },
+        ],
+      })
+    ).toThrow('received unknown option "unknown_option"');
   });
 });

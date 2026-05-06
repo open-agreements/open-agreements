@@ -15,6 +15,21 @@ import {
 import { normalizeBracketArtifacts } from './bracket-normalizer.js';
 import { runFillPipeline } from '../unified-pipeline.js';
 import type { RecipeRunOptions, RecipeRunResult } from './types.js';
+import type { ComputedValueMap } from './computed.js';
+
+function toComputedValueMap(values: Record<string, unknown>): ComputedValueMap {
+  const computedValues: ComputedValueMap = {};
+  for (const [key, value] of Object.entries(values)) {
+    if (typeof value === 'string' || typeof value === 'boolean') {
+      computedValues[key] = value;
+      continue;
+    }
+    if (Array.isArray(value) && value.every((entry) => typeof entry === 'string')) {
+      computedValues[key] = [...value];
+    }
+  }
+  return computedValues;
+}
 
 /**
  * Run the full recipe pipeline: clean → patch → fill → verify.
@@ -49,9 +64,14 @@ export async function runRecipe(options: RecipeRunOptions): Promise<RecipeRunRes
   }
 
   const inputValues = { ...values };
+  const computedInputValues = toComputedValueMap(inputValues);
   const computedProfile = loadComputedProfile(recipeDir);
-  const computedEvaluation = computedProfile ? evaluateComputedProfile(computedProfile, inputValues) : null;
-  const effectiveValues = computedEvaluation ? computedEvaluation.fillValues : inputValues;
+  const computedEvaluation = computedProfile
+    ? evaluateComputedProfile(computedProfile, computedInputValues)
+    : null;
+  const effectiveValues = computedEvaluation
+    ? { ...inputValues, ...computedEvaluation.fillValues }
+    : inputValues;
   const verificationValues: Record<string, string> = {};
   for (const field of metadata.fields) {
     if (!replacementFieldNames.has(field.name)) {
@@ -65,11 +85,11 @@ export async function runRecipe(options: RecipeRunOptions): Promise<RecipeRunRes
   const computedArtifact = computedEvaluation && computedProfile
     ? buildComputedArtifact({
       recipeId,
-      inputValues,
+      inputValues: computedInputValues,
       evaluated: computedEvaluation,
       profileVersion: computedProfile.version,
     })
-    : (computedOutPath ? buildPassthroughArtifact({ recipeId, inputValues }) : undefined);
+    : (computedOutPath ? buildPassthroughArtifact({ recipeId, inputValues: computedInputValues }) : undefined);
 
   if (computedOutPath && computedArtifact) {
     writeComputedArtifact(computedOutPath, computedArtifact);

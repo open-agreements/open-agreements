@@ -140,7 +140,7 @@ export const signingTools: ToolDefinition[] = [
         requireContext(); // Verify signing is configured
         // Return the secure connect URL — PKCE verifier is stored in HttpOnly cookies,
         // never exposed in the URL. The connect handler generates its own PKCE challenge.
-        const baseUrl = process.env.OA_BASE_URL?.trim() || 'https://openagreements.ai';
+        const baseUrl = process.env.OA_BASE_URL?.trim() || 'https://openagreements.org';
         const connectUrl = `${baseUrl}/api/auth/docusign/connect?key=${encodeURIComponent(input.api_key)}`;
         return ok('connect_signing_provider', {
           message: 'Open this URL in your browser to connect DocuSign:',

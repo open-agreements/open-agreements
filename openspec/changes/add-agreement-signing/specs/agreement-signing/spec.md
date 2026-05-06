@@ -28,10 +28,11 @@ The fill pipeline SHALL replace signature `{tag}` placeholders with provider-spe
 - **THEN** the filled DOCX contains the literal text `/sn1/` where `{sig_party_1}` was
 - **AND** business fields like `{party_1_name}` are filled with AI-provided values in the same pass
 
-#### Scenario: [OA-SIG-005] fill pipeline leaves signature tags blank when no provider connected
-- **WHEN** a template with `{sig_party_1}` is filled with no signing provider connected
-- **THEN** the filled DOCX replaces `{sig_party_1}` with an empty string or placeholder
+#### Scenario: [OA-SIG-005] fill pipeline injects DocuSign anchors by default when signing.yaml exists
+- **WHEN** a template with `{sig_party_1}` is filled without explicit signature values and a `signing.yaml` file is present
+- **THEN** the filled DOCX replaces `{sig_party_1}` with the configured DocuSign anchor from `providerAnchors.docusign`
 - **AND** the document is still valid and openable in Word
+- **AND** users can opt out by omitting `signing.yaml` or setting the relevant `providerAnchors.docusign` entries to empty strings
 
 #### Scenario: [OA-SIG-006] fill pipeline fails closed when signing.yaml references tags missing from DOCX
 - **WHEN** `signing.yaml` declares `signatureField: sig_party_1` but the DOCX template has no `{sig_party_1}` tag

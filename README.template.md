@@ -35,11 +35,23 @@ Works with Claude Code, Gemini CLI, Cursor, and local MCP or CLI workflows.
 npx skills add open-agreements/open-agreements
 ```
 
-### Claude Hosted MCP
+### Remote MCP
+
+Connect any MCP-compatible agent to the hosted server at `https://openagreements.org/api/mcp`.
+
+**Claude Code**
 
 ```bash
-claude mcp add --transport http open-agreements https://openagreements.ai/api/mcp
+claude mcp add --transport http open-agreements https://openagreements.org/api/mcp
 ```
+
+**Codex CLI**
+
+```bash
+codex mcp add open-agreements --url https://openagreements.org/api/mcp
+```
+
+**Other agents** — point your client at `https://openagreements.org/api/mcp` (streamable HTTP).
 
 ### Gemini CLI Extension
 
@@ -98,15 +110,15 @@ open-agreements fill common-paper-mutual-nda --set party_1_name="Acme Corp" --se
 3. It runs `fill <template>` to render a DOCX preserving the source formatting.
 4. You review and sign the output document.
 
+## Available Templates
+
+The Source column links to the upstream standard, source document, or canonical project page (varies by publisher). The License column shows redistribution terms. Repo links point to the GitHub content directory for each template or recipe.
+
+{{AVAILABLE_TEMPLATES}}
+
 ## Available Skills
 
 {{AVAILABLE_SKILLS}}
-
-## Available Templates
-
-Website links open a dedicated template page when one exists, or a preselected install flow when it does not. Repo links point to the GitHub content directory for that template or recipe.
-
-{{AVAILABLE_TEMPLATES}}
 
 ## Packages
 
@@ -189,7 +201,7 @@ This repository includes a Cursor plugin manifest at `.cursor-plugin/plugin.json
 ### Local Vs Hosted Execution
 
 - **Local**: `npx`, global install, or stdio MCP. Processing happens on your machine.
-- **Hosted**: `https://openagreements.ai/api/mcp`. Template filling runs server-side for faster setup.
+- **Hosted**: `https://openagreements.org/api/mcp`. Template filling runs server-side for faster setup.
 
 Choose based on document sensitivity and internal policy. See the trust checklist below for the data-flow summary.
 
@@ -206,7 +218,7 @@ Choose based on document sensitivity and internal policy. See the trust checklis
 ## Privacy
 
 - **Local mode** (`npx`, global install, stdio MCP): all processing happens on your machine. No document content is sent externally.
-- **Hosted mode** (`https://openagreements.ai/api/mcp`): template filling runs server-side. No filled documents are stored after the response is returned.
+- **Hosted mode** (`https://openagreements.org/api/mcp`): template filling runs server-side. No filled documents are stored after the response is returned.
 
 See the [Privacy Policy](https://usejunior.com/privacy_policy) for details.
 

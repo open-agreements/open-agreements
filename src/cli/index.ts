@@ -59,7 +59,7 @@ export function createProgram(): Command {
         memoBaseline?: string;
       }
     ) => {
-      let values: Record<string, string> = {};
+      let values: Record<string, unknown> = {};
       const dataPath = opts.data ?? opts.values;
 
       if (dataPath) {

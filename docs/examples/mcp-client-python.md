@@ -12,7 +12,7 @@ Minimal streamable HTTP flow for OpenAgreements hosted MCP.
 import json
 import httpx
 
-MCP_URL = "https://openagreements.ai/api/mcp"
+MCP_URL = "https://openagreements.org/api/mcp"
 
 
 def parse_tool_envelope(result: dict) -> dict:

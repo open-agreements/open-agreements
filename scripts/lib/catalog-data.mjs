@@ -4,13 +4,10 @@ import {
   existsSync,
   mkdirSync,
   readdirSync,
-  readFileSync,
   statSync,
-  writeFileSync,
 } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { renderContractIrMarkdown } from "../contract_ir/index.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -102,7 +99,7 @@ function getSourceUrl(item) {
     Bonterms: "https://bonterms.com",
     NVCA: "https://nvca.org",
     "Y Combinator": "https://www.ycombinator.com/documents",
-    OpenAgreements: "https://openagreements.ai",
+    OpenAgreements: "https://openagreements.org",
   };
   return urls[label] || item.source_url || "#";
 }
@@ -154,14 +151,6 @@ function getContentRepoPath(id, contentTier) {
   return `content/templates/${id}`;
 }
 
-function hasContractIrSource(templateDir) {
-  return (
-    existsSync(resolve(templateDir, "content.md")) &&
-    existsSync(resolve(templateDir, "schema.yaml")) &&
-    existsSync(resolve(templateDir, "styles.yaml"))
-  );
-}
-
 function loadCatalogItems(rootDir) {
   const bin = resolve(rootDir, "bin/open-agreements.js");
   const raw = execFileSync("node", [bin, "list", "--json"], {
@@ -187,7 +176,6 @@ export function buildCatalog({ rootDir = REPO_ROOT } = {}) {
       item.name.startsWith("openagreements-") || sourceLabel === "OpenAgreements";
     const hasPreview = isOpenAgreements;
     const templateDir = resolve(rootDir, "content", "templates", item.name);
-    const hasContractIrMarkdownSource = hasContractIrSource(templateDir);
     const hasDocxDownload =
       hasPreview &&
       flags.distributable &&
@@ -195,7 +183,7 @@ export function buildCatalog({ rootDir = REPO_ROOT } = {}) {
     const hasMarkdownDownload =
       hasPreview &&
       flags.distributable &&
-      (existsSync(resolve(templateDir, "template.md")) || hasContractIrMarkdownSource);
+      existsSync(resolve(templateDir, "template.md"));
 
     const templateData = {
       id: item.name,
@@ -251,29 +239,6 @@ export function buildCatalog({ rootDir = REPO_ROOT } = {}) {
           .map((file) => `/assets/previews/${item.name}/${file}`);
       }
 
-      const practiceNotePath = resolve(templateDir, "practice-note.md");
-      if (existsSync(practiceNotePath)) {
-        const rawPracticeNote = readFileSync(practiceNotePath, "utf-8");
-        const frontmatterMatch = rawPracticeNote.match(
-          /^---\n([\s\S]*?)\n---\n([\s\S]*)$/,
-        );
-        if (frontmatterMatch) {
-          const frontmatterLines = frontmatterMatch[1].split("\n");
-          const frontmatter = {};
-          for (const line of frontmatterLines) {
-            const match = line.match(/^(\w[\w_]*):\s*(.+)$/);
-            if (match) {
-              frontmatter[match[1]] = match[2].replace(/^["']|["']$/g, "");
-            }
-          }
-          templateData.practiceNote = {
-            firmCount: frontmatter.firm_count || "0",
-            lastUpdated: frontmatter.last_updated || "",
-            disclaimer: frontmatter.disclaimer || "",
-            content: frontmatterMatch[2],
-          };
-        }
-      }
     }
 
     return templateData;
@@ -328,7 +293,6 @@ export function prepareCatalogDownloads({
     if (template.hasMarkdownDownload) {
       const templateDir = resolve(rootDir, "content", "templates", template.id);
       const sourcePath = resolve(templateDir, "template.md");
-      const contentSourcePath = resolve(templateDir, "content.md");
       const destinationPath = resolve(downloadsDir, `${template.id}.md`);
       if (existsSync(sourcePath)) {
         if (
@@ -337,14 +301,6 @@ export function prepareCatalogDownloads({
         ) {
           copyFileSync(sourcePath, destinationPath);
         }
-      } else if (
-        hasContractIrSource(templateDir) &&
-        (
-          !existsSync(destinationPath) ||
-          statSync(destinationPath).mtimeMs < statSync(contentSourcePath).mtimeMs
-        )
-      ) {
-        writeFileSync(destinationPath, renderContractIrMarkdown(templateDir), "utf-8");
       }
     }
   }
