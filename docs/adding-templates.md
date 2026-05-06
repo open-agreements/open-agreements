@@ -76,6 +76,32 @@ derived_from: Publicly available materials from ...
 | `boolean` | true/false |
 | `enum` | One of a fixed set of options (use `options` array) |
 | `array` | Repeating list of objects or values (use nested `items` definitions when you need object fields) |
+| `multiselect` | Zero or more values from a fixed allowlist (use `options` array) |
+
+#### Multiselect fields
+
+Use `multiselect` when the user should choose zero or more values from a
+closed set and the template needs a shared allowlist.
+
+```yaml
+- name: industry_modules
+  type: multiselect
+  description: Industry riders to include
+  options: [tech_rider, life_sciences_rider, healthcare_provider_rider, cross_border_rider]
+  derive_booleans: true
+  default: '[]'
+  section: Industry Riders
+```
+
+When `derive_booleans: true` is set, the fill engine emits
+`<option>_enabled: boolean` keys for every option, based on whether that
+option appears in the selected array. DOCX templates can then gate
+sections with `{IF tech_rider_enabled}`-style conditionals without
+needing separate user-facing boolean fields.
+
+Do not reference the multiselect field itself directly in `{IF ...}`
+blocks. `{IF industry_modules}` is invalid because empty arrays are
+truthy in the template runtime; the validator will reject it.
 
 #### License values
 

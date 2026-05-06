@@ -71,6 +71,29 @@ export function validateTemplate(templateDir: string, templateId: string): Templ
 
   const metadataFieldNames = new Set(metadata.fields.map((f) => f.name));
   const priorityFieldNames = new Set(metadata.priority_fields);
+  const multiselectFieldNames = new Set(
+    metadata.fields
+      .filter((field) => field.type === 'multiselect')
+      .map((field) => field.name)
+  );
+  const derivedBooleanMultiselectFieldNames = new Set(
+    metadata.fields
+      .filter((field) => field.type === 'multiselect' && field.derive_booleans === true)
+      .map((field) => field.name)
+  );
+
+  const rejectDirectMultiselectConditionals = (foundConditionalFields: Set<string>): void => {
+    for (const fieldName of multiselectFieldNames) {
+      if (!foundConditionalFields.has(fieldName)) {
+        continue;
+      }
+      errors.push(
+        `Multiselect field "${fieldName}" must not be referenced directly in {IF ${fieldName}} ` +
+        `(empty arrays are truthy); use derived <option>_enabled keys ` +
+        `(when derive_booleans: true) or restructure your template logic.`
+      );
+    }
+  };
 
   // Check if this template uses declarative replacements
   const replacementsPath = join(templateDir, 'replacements.json');
@@ -135,8 +158,13 @@ export function validateTemplate(templateDir: string, templateId: string): Templ
       foundConditionalFields.add(docxCondMatch[1]);
     }
 
+    rejectDirectMultiselectConditionals(foundConditionalFields);
+
     // Check metadata fields are covered by tags
     for (const fieldName of metadataFieldNames) {
+      if (derivedBooleanMultiselectFieldNames.has(fieldName)) {
+        continue;
+      }
       const inTags = foundTags.has(fieldName) || foundConditionalFields.has(fieldName);
       if (!inTags) {
         if (priorityFieldNames.has(fieldName)) {
@@ -184,6 +212,8 @@ export function validateTemplate(templateDir: string, templateId: string): Templ
     while ((condMatch = conditionalRegex.exec(text)) !== null) {
       foundConditionalFields.add(condMatch[1]);
     }
+
+    rejectDirectMultiselectConditionals(foundConditionalFields);
 
     // Extract array field names + item bindings from FOR loop constructs.
     // Each loop has shape `{FOR <item> IN <field>}` and references look like
@@ -242,6 +272,9 @@ export function validateTemplate(templateDir: string, templateId: string): Templ
 
     // Check for fields in metadata but not in DOCX
     for (const fieldName of metadataFieldNames) {
+      if (derivedBooleanMultiselectFieldNames.has(fieldName)) {
+        continue;
+      }
       const inDocx = foundTags.has(fieldName) || foundConditionalFields.has(fieldName);
       if (!inDocx) {
         if (priorityFieldNames.has(fieldName)) {

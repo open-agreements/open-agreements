@@ -6,8 +6,9 @@ import yaml from 'js-yaml';
 export const LicenseEnum = z.enum(['CC-BY-4.0', 'CC0-1.0', 'CC-BY-ND-4.0']);
 export type License = z.infer<typeof LicenseEnum>;
 
-const FieldTypeEnum = z.enum(['string', 'date', 'number', 'boolean', 'enum', 'array']);
+const FieldTypeEnum = z.enum(['string', 'date', 'number', 'boolean', 'enum', 'array', 'multiselect']);
 export type FieldType = z.infer<typeof FieldTypeEnum>;
+const MULTISELECT_OPTION_RE = /^[A-Za-z_][A-Za-z0-9_]*$/;
 
 export interface FieldDefinition {
   name: string;
@@ -17,6 +18,7 @@ export interface FieldDefinition {
   default?: string;
   default_value_rationale?: string;
   options?: string[];
+  derive_booleans?: boolean;
   section?: string;
   items?: FieldDefinition[];
 }
@@ -30,14 +32,48 @@ export const FieldDefinitionSchema: z.ZodType<FieldDefinition> = z.lazy(() =>
     default: z.string().optional(),
     default_value_rationale: z.string().optional(),
     options: z.array(z.string()).optional(),
+    derive_booleans: z.boolean().optional(),
     section: z.string().optional(),
     items: z.array(FieldDefinitionSchema).nonempty().optional(),
   }).superRefine((field, ctx) => {
-    if (field.type === 'enum' && (field.options === undefined || field.options.length === 0)) {
+    if (
+      (field.type === 'enum' || field.type === 'multiselect') &&
+      (field.options === undefined || field.options.length === 0)
+    ) {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
         path: ['options'],
-        message: 'Fields with type "enum" must have a non-empty options array',
+        message: `Fields with type "${field.type}" must have a non-empty options array`,
+      });
+    }
+
+    if (field.type === 'multiselect' && field.options) {
+      const seenOptions = new Set<string>();
+      field.options.forEach((option, index) => {
+        if (!MULTISELECT_OPTION_RE.test(option)) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            path: ['options', index],
+            message: 'Multiselect options must be valid identifiers matching /^[A-Za-z_][A-Za-z0-9_]*$/',
+          });
+        }
+        if (seenOptions.has(option)) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            path: ['options', index],
+            message: `Duplicate multiselect option "${option}"`,
+          });
+          return;
+        }
+        seenOptions.add(option);
+      });
+    }
+
+    if (field.derive_booleans !== undefined && field.type !== 'multiselect') {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['derive_booleans'],
+        message: 'derive_booleans is only valid for fields with type "multiselect"',
       });
     }
 
@@ -63,6 +99,59 @@ export const FieldDefinitionSchema: z.ZodType<FieldDefinition> = z.lazy(() =>
           code: z.ZodIssueCode.custom,
           path: ['default'],
           message: 'Default value must be valid for the declared field type',
+        });
+      }
+
+      if (field.type === 'multiselect') {
+        let parsedDefault: unknown;
+        try {
+          parsedDefault = JSON.parse(field.default);
+        } catch {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            path: ['default'],
+            message: 'Default value must be a JSON-encoded array of strings for multiselect fields',
+          });
+          return;
+        }
+
+        if (!Array.isArray(parsedDefault)) {
+          ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            path: ['default'],
+            message: 'Default value must be a JSON-encoded array of strings for multiselect fields',
+          });
+          return;
+        }
+
+        const seenDefaults = new Set<string>();
+        parsedDefault.forEach((entry) => {
+          if (typeof entry !== 'string') {
+            ctx.addIssue({
+              code: z.ZodIssueCode.custom,
+              path: ['default'],
+              message: 'Default value must be a JSON-encoded array of strings for multiselect fields',
+            });
+            return;
+          }
+
+          if (seenDefaults.has(entry)) {
+            ctx.addIssue({
+              code: z.ZodIssueCode.custom,
+              path: ['default'],
+              message: `Default value contains duplicate multiselect option "${entry}"`,
+            });
+            return;
+          }
+          seenDefaults.add(entry);
+
+          if (field.options && !field.options.includes(entry)) {
+            ctx.addIssue({
+              code: z.ZodIssueCode.custom,
+              path: ['default'],
+              message: `Default value references option "${entry}" which is not declared in options`,
+            });
+          }
         });
       }
     }
@@ -110,6 +199,41 @@ function validatePriorityFields(
   });
 }
 
+function validateDerivedBooleanCollisions(fields: FieldDefinition[], ctx: z.RefinementCtx): void {
+  const topLevelFieldNames = new Set(fields.map((field) => field.name));
+  const derivedKeyOwners = new Map<string, string>();
+
+  fields.forEach((field, fieldIndex) => {
+    if (field.type !== 'multiselect' || field.derive_booleans !== true || !field.options) {
+      return;
+    }
+
+    field.options.forEach((option, optionIndex) => {
+      const derivedKey = `${option}_enabled`;
+
+      if (topLevelFieldNames.has(derivedKey)) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ['fields', fieldIndex, 'options', optionIndex],
+          message: `Derived boolean key "${derivedKey}" from multiselect "${field.name}" collides with another top-level field name`,
+        });
+      }
+
+      const existingOwner = derivedKeyOwners.get(derivedKey);
+      if (existingOwner) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ['fields', fieldIndex, 'options', optionIndex],
+          message: `Derived boolean key "${derivedKey}" from multiselect "${field.name}" collides with derived key from multiselect "${existingOwner}"`,
+        });
+        return;
+      }
+
+      derivedKeyOwners.set(derivedKey, field.name);
+    });
+  });
+}
+
 const TemplateMetadataBaseSchema = z.object({
   name: z.string(),
   description: z.string().optional(),
@@ -127,6 +251,7 @@ const TemplateMetadataBaseSchema = z.object({
 
 export const TemplateMetadataSchema = TemplateMetadataBaseSchema.superRefine((meta, ctx) => {
   validatePriorityFields(meta.fields, meta.priority_fields, ctx);
+  validateDerivedBooleanCollisions(meta.fields, ctx);
 });
 export type TemplateMetadata = z.infer<typeof TemplateMetadataSchema>;
 
@@ -136,6 +261,7 @@ export const ExternalMetadataSchema = TemplateMetadataBaseSchema.extend({
   source_sha256: z.string(),
 }).superRefine((meta, ctx) => {
   validatePriorityFields(meta.fields, meta.priority_fields, ctx);
+  validateDerivedBooleanCollisions(meta.fields, ctx);
 });
 export type ExternalMetadata = z.infer<typeof ExternalMetadataSchema>;
 
@@ -209,6 +335,7 @@ export const RecipeMetadataSchema = z.object({
   market_data_citations: z.array(MarketDataCitationSchema).optional(),
 }).superRefine((meta, ctx) => {
   validatePriorityFields(meta.fields, meta.priority_fields, ctx);
+  validateDerivedBooleanCollisions(meta.fields, ctx);
 });
 export type RecipeMetadata = z.infer<typeof RecipeMetadataSchema>;
 

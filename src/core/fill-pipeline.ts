@@ -77,10 +77,11 @@ const DEFAULT_STRIP_PATTERNS = [/\bDrafting note\b/i];
 
 /**
  * Prepare fill data with all normalization steps:
- * 1. Warn about unfilled priority fields
- * 2. Apply defaults for optional fields not provided
- * 3. Coerce boolean fields (optional)
- * 4. Compute display fields (optional, template-specific)
+ * 1. Apply defaults for optional fields not provided
+ * 2. Normalize multiselect fields and derive booleans (optional)
+ * 3. Warn about unfilled priority fields
+ * 4. Coerce boolean fields (optional)
+ * 5. Compute display fields (optional, template-specific)
  */
 export function prepareFillData(options: PrepareFillDataOptions): Record<string, unknown> {
   const {
@@ -107,32 +108,69 @@ export function prepareFillData(options: PrepareFillDataOptions): Record<string,
   }
   for (const field of fields) {
     if (!(field.name in data)) {
-      // Array fields default to empty array, not blank placeholder
       if (field.type === 'array') {
         data[field.name] = [];
+      } else if (field.type === 'multiselect') {
+        data[field.name] = field.default ? JSON.parse(field.default) : [];
       } else {
         data[field.name] = field.default ?? defaultValue;
       }
     }
   }
 
-  // Reject empty priority array fields outright. A consent template that loops
-  // over an empty signer array would silently render a Signatures heading with
-  // zero signatures — that's a correctness bug, not a soft warning.
+  for (const field of fields) {
+    if (field.type !== 'multiselect') continue;
+
+    let raw = data[field.name];
+    if (typeof raw === 'string') {
+      try {
+        raw = JSON.parse(raw);
+      } catch (err) {
+        throw new Error(
+          `Multiselect field "${field.name}" received malformed JSON input: ${(err as Error).message}`
+        );
+      }
+    }
+    if (!Array.isArray(raw)) {
+      throw new Error(
+        `Multiselect field "${field.name}" must be a JSON array of strings; got ${typeof raw}`
+      );
+    }
+    const normalized = raw.filter((value): value is string => typeof value === 'string');
+    data[field.name] = normalized;
+
+    if (field.derive_booleans === true) {
+      const selected = new Set(normalized);
+      for (const option of field.options ?? []) {
+        data[`${option}_enabled`] = selected.has(option);
+      }
+    }
+  }
+
+  // Reject empty priority collection fields outright. A consent template that
+  // loops over an empty signer array would silently render a Signatures
+  // heading with zero signatures — that's a correctness bug, not a soft warning.
   const prioritySet = new Set(priorityFieldNames);
   const emptyPriorityArrays = fields
-    .filter((f) => prioritySet.has(f.name) && f.type === 'array')
+    .filter((f) => prioritySet.has(f.name) && (f.type === 'array' || f.type === 'multiselect'))
     .filter((f) => !Array.isArray(data[f.name]) || (data[f.name] as unknown[]).length === 0)
     .map((f) => f.name);
   if (emptyPriorityArrays.length > 0) {
     throw new Error(
-      `Required array fields are empty: ${emptyPriorityArrays.join(', ')}. Provide at least one entry.`
+      `Required collection fields are empty: ${emptyPriorityArrays.join(', ')}. Provide at least one entry.`
     );
   }
 
   // Warn about priority fields that are still unfilled (no value, no default)
   const missing = fields
-    .filter((f) => prioritySet.has(f.name) && f.type !== 'array' && (data[f.name] === '' || data[f.name] === BLANK_PLACEHOLDER))
+    .filter((f) => prioritySet.has(f.name))
+    .filter((f) => {
+      const value = data[f.name];
+      if (Array.isArray(value)) {
+        return value.length === 0;
+      }
+      return value === '' || value === BLANK_PLACEHOLDER;
+    })
     .map((f) => f.name);
   if (missing.length > 0) {
     console.warn(`Note: ${missing.length} priority fields are unfilled: ${missing.join(', ')}`);
