@@ -148,6 +148,12 @@ open-agreements fill common-paper-mutual-nda --set party_1_name="Acme Corp" --se
 | [recipe-quality-audit](https://github.com/open-agreements/open-agreements/tree/main/skills/recipe-quality-audit) | Audit NVCA recipe quality: check file inventory, metadata schema, field-to-replacement coverage, ambiguous keys, smart quotes, test fixtures, and fill quality. Produces a structured scorecard per recipe with maturity tier classification. Use when user says "audit recipe quality," "check recipe coverage," "recipe scorecard," or "NVCA recipe quality." |
 | [unit-test-philosophy](https://github.com/open-agreements/open-agreements/tree/main/skills/unit-test-philosophy) | Risk-based unit testing and Allure-readable behavioral spec style for open-agreements. Use when user says "add tests," "test quality," "coverage expansion," "unit test style," or "Allure test spec." Applies when adding/updating tests, expanding coverage, or reviewing test quality across src, integration-tests, and workspace packages. |
 
+### Template Authoring
+
+| Skill | Description |
+|-------|-------------|
+| [canonical-markdown-authoring](https://github.com/open-agreements/open-agreements/tree/main/skills/canonical-markdown-authoring) | Convert plain markdown contract drafts into OpenAgreements' canonical template.md authoring format — YAML frontmatter, Kind|Label|Value|Show When cover-term tables, oa:clause directives, [[Defined Term]] paragraphs, and oa:signer directives that compile to validated JSON specs and DOCX artifacts. Use when the user says "convert this to canonical markdown," "author a new OpenAgreements template," "migrate template to template.md," or "write a canonical-form contract." |
+
 ## Available Templates
 
 Website links open a dedicated template page when one exists, or a preselected install flow when it does not. Repo links point to the GitHub content directory for that template or recipe.
@@ -238,6 +244,7 @@ Website links open a dedicated template page when one exists, or a preselected i
 |----------|---------|------|
 | Closing Checklist | [Website](https://usejunior.com/templates/closing-checklist/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/closing-checklist) |
 | Board Consent SAFE | [Website](https://usejunior.com/templates/openagreements-board-consent-safe/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-board-consent-safe) |
+| Due Diligence Request List | [Website](https://usejunior.com/templates/openagreements-due-diligence-request-list/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-due-diligence-request-list) |
 | Stockholder Consent SAFE | [Website](https://usejunior.com/templates/openagreements-stockholder-consent-safe/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-stockholder-consent-safe) |
 | Working Group List | [Website](https://usejunior.com/templates/working-group-list/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/working-group-list) |
 
