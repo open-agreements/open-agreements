@@ -76,7 +76,7 @@ multiselect whose field name is absent AND whose derived keys are all
 absent SHALL still trigger the standard missing-placeholder warning (or
 error if priority-listed), because the field is genuinely unused.
 
-#### Scenario: [OA-FIL-016] Multiselect selections derive booleans before display-field computation
+#### Scenario: [OA-FIL-025] Multiselect selections derive booleans before display-field computation
 
 - **GIVEN** fill input `{ industry_modules: ["tech_rider", "cross_border_rider"] }`
 - **AND** metadata declares `industry_modules` as a multiselect with
@@ -88,14 +88,14 @@ error if priority-listed), because the field is genuinely unused.
 - **AND** unselected options derive to `false`
 - **AND** later display-field computation can read those booleans
 
-#### Scenario: [OA-FIL-017] Malformed multiselect JSON input is rejected
+#### Scenario: [OA-FIL-026] Malformed multiselect JSON input is rejected
 
 - **GIVEN** fill input where a multiselect field is provided as malformed
   JSON text
 - **WHEN** the fill pipeline prepares the data
 - **THEN** it throws a clear error identifying the multiselect field
 
-#### Scenario: [OA-FIL-018] fieldsUsed excludes synthetic derived keys
+#### Scenario: [OA-FIL-027] fieldsUsed excludes synthetic derived keys
 
 - **GIVEN** a fill run with a multiselect field that derives booleans
 - **WHEN** the unified fill pipeline returns its result
@@ -125,7 +125,7 @@ error if priority-listed), because the field is genuinely unused.
   optional) for the multiselect field — coverage suppression does NOT
   fire when the field is genuinely unused
 
-#### Scenario: [OA-FIL-019] Multiselect runtime input enforces the closed allowlist
+#### Scenario: [OA-FIL-028] Multiselect runtime input enforces the closed allowlist
 
 - **GIVEN** a multiselect field with `options: [tech_rider, cross_border_rider]`
 - **WHEN** fill input contains a non-string entry or an option name not

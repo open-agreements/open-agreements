@@ -375,7 +375,7 @@ describe('prepareFillData', () => {
     expect(callbackCalled).toBe(true);
   });
 
-  it.openspec('OA-FIL-016')('normalizes multiselect arrays and derives booleans', () => {
+  it.openspec('OA-FIL-025')('normalizes multiselect arrays and derives booleans', () => {
     const result = prepareFillData({
       values: { industry_modules: ['a', 'c'] },
       fields: [multiselectField],
@@ -387,7 +387,7 @@ describe('prepareFillData', () => {
     expect(result.c_enabled).toBe(true);
   });
 
-  it.openspec('OA-FIL-016')('parses JSON-string multiselect input back into a real array', () => {
+  it.openspec('OA-FIL-025')('parses JSON-string multiselect input back into a real array', () => {
     const result = prepareFillData({
       values: { industry_modules: '["a","c"]' },
       fields: [multiselectField],
@@ -399,7 +399,7 @@ describe('prepareFillData', () => {
     expect(result.c_enabled).toBe(true);
   });
 
-  it.openspec('OA-FIL-016')('defaults omitted multiselect fields and derives false for every option', () => {
+  it.openspec('OA-FIL-025')('defaults omitted multiselect fields and derives false for every option', () => {
     const result = prepareFillData({
       values: {},
       fields: [multiselectField],
@@ -411,7 +411,7 @@ describe('prepareFillData', () => {
     expect(result.c_enabled).toBe(false);
   });
 
-  it.openspec('OA-FIL-016')('honors multiselect defaults declared in metadata', () => {
+  it.openspec('OA-FIL-025')('honors multiselect defaults declared in metadata', () => {
     const result = prepareFillData({
       values: {},
       fields: [{ ...multiselectField, default: '["a"]' }],
@@ -440,7 +440,7 @@ describe('prepareFillData', () => {
     expect(leakedEnabledKeys).toEqual([]);
   });
 
-  it.openspec('OA-FIL-016')('derives multiselect booleans before computeDisplayFields runs', () => {
+  it.openspec('OA-FIL-025')('derives multiselect booleans before computeDisplayFields runs', () => {
     let seenByCallback: Record<string, unknown> | undefined;
 
     const result = prepareFillData({
@@ -709,7 +709,7 @@ describe('Regression: behavioral divergence', () => {
 });
 
 describe('runFillPipeline', () => {
-  it.openspec('OA-FIL-018')('excludes derived multiselect keys from fieldsUsed', async () => {
+  it.openspec('OA-FIL-027')('excludes derived multiselect keys from fieldsUsed', async () => {
     const tempDir = mkdtempSync(join(tmpdir(), 'fill-pipeline-fields-used-'));
     const inputPath = join(tempDir, 'source.docx');
     const outputPath = join(tempDir, 'output.docx');

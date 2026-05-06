@@ -529,7 +529,7 @@ describe('validateTemplate multiselect coverage', () => {
     expect(result.errors.join(' ')).toContain('must not be referenced directly in {IF industry_modules}');
   });
 
-  it.openspec('OA-FIL-017')('throws a clear error for malformed multiselect JSON input', () => {
+  it.openspec('OA-FIL-026')('throws a clear error for malformed multiselect JSON input', () => {
     expect(() =>
       prepareFillData({
         values: { industry_modules: 'not-json' },
@@ -604,7 +604,23 @@ describe('validateTemplate multiselect coverage', () => {
     expect(result.warnings.join(' ')).toContain('Optional field "industry_modules"');
   });
 
-  it.openspec('OA-FIL-019')('rejects multiselect runtime input with non-string entries', () => {
+  it.openspec('OA-TMP-053')('errors when a priority derive_booleans multiselect is declared but no derived key is referenced (replacements mode)', () => {
+    const dir = createTemplateFixture({
+      docText: '[Industry riders]',
+      fieldsYaml: multiselectFieldsYaml,
+      priorityFields: ['industry_modules'],
+      replacements: {
+        '[Industry riders]': 'plain replacement text without any rider conditional',
+      },
+    });
+
+    const result = validateTemplate(dir, 'fixture-derive-booleans-unused-replacements-priority');
+
+    expect(result.valid).toBe(false);
+    expect(result.errors.join(' ')).toContain('Priority field "industry_modules"');
+  });
+
+  it.openspec('OA-FIL-028')('rejects multiselect runtime input with non-string entries', () => {
     expect(() =>
       prepareFillData({
         values: { industry_modules: ['tech_rider', 7] as unknown[] },
@@ -621,7 +637,7 @@ describe('validateTemplate multiselect coverage', () => {
     ).toThrow('entry at index 1 must be a string');
   });
 
-  it.openspec('OA-FIL-019')('rejects multiselect runtime input with unknown options', () => {
+  it.openspec('OA-FIL-028')('rejects multiselect runtime input with unknown options', () => {
     expect(() =>
       prepareFillData({
         values: { industry_modules: ['tech_rider', 'unknown_option'] },
