@@ -29,7 +29,7 @@ fi
 ## Step 2: Discover templates
 
 **If Remote MCP:**
-Use the `list_templates` tool. Filter results to the templates relevant to this skill (see the "Templates Available" section in the calling skill).
+Use the `list_templates` tool. It returns a paginated compact catalog — page through with the returned `next_cursor` (passing it back as `cursor`) until `next_cursor` is `null`. Default page size is 25; pass `limit` (max 100) to widen pages. If you already know the topic, prefer `search_templates`. Filter results to the templates relevant to this skill (see the "Templates Available" section in the calling skill).
 
 **If Local CLI:**
 ```bash

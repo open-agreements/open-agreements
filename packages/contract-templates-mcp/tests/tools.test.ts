@@ -65,18 +65,163 @@ describe('contract-templates-mcp tools', () => {
     ]);
   });
 
-  it.openspec('OA-DST-033')('returns a full template list payload', async () => {
-    const result = await callTool('list_templates', { mode: 'full' });
+  it.openspec('OA-DST-054')('returns compact-only template shape with pagination envelope', async () => {
+    const result = await callTool('list_templates', {});
     const payload = getPayload(result);
 
     expect(result.isError).toBeUndefined();
     expect(payload.ok).toBe(true);
     expect(payload.tool).toBe('list_templates');
     const data = payload.data as Record<string, unknown>;
-    expect(data.mode).toBe('full');
+    expect(data.mode).toBeUndefined();
     const templates = data.templates as Array<Record<string, unknown>>;
     expect(Array.isArray(templates)).toBe(true);
     expect(templates.length).toBeGreaterThan(0);
+    expect(typeof data.total_count).toBe('number');
+    const totalCount = data.total_count as number;
+    if (totalCount <= 25) {
+      // Catalog fits in default page
+      expect(templates.length).toBe(totalCount);
+      expect(data.next_cursor).toBeNull();
+    } else {
+      // Catalog exceeds default page; expect a full page and a cursor
+      expect(templates.length).toBe(25);
+      expect(typeof data.next_cursor).toBe('string');
+      expect((data.next_cursor as string).length).toBeGreaterThan(0);
+    }
+
+    // Compact shape exact-keys assertion
+    expect(Object.keys(templates[0]).sort()).toEqual([
+      'category',
+      'description',
+      'display_name',
+      'field_count',
+      'priority_field_count',
+      'template_id',
+    ]);
+    for (const t of templates) {
+      expect(typeof t.template_id).toBe('string');
+      expect(typeof t.display_name).toBe('string');
+      expect((t.display_name as string).length).toBeGreaterThan(0);
+      expect(typeof t.category).toBe('string');
+      expect(typeof t.description).toBe('string');
+      expect(typeof t.field_count).toBe('number');
+      expect(typeof t.priority_field_count).toBe('number');
+      expect(t.fields).toBeUndefined();
+      expect(t.license).toBeUndefined();
+      expect(t.name).toBeUndefined();
+    }
+  });
+
+  it.openspec('OA-DST-055')('paginates the catalog using cursor + limit roundtrip with no duplicates', async () => {
+    const allResult = await callTool('list_templates', { limit: 100 });
+    const allTemplates = ((getPayload(allResult).data as Record<string, unknown>).templates) as Array<{ template_id: string }>;
+    expect(allTemplates.length).toBeGreaterThan(2); // need enough to page through
+
+    const limit = 2;
+    const seen: string[] = [];
+    let cursor: string | undefined;
+    let totalCount: number | null = null;
+    let lastNextCursor: string | null | undefined;
+    for (let i = 0; i < 50; i += 1) {
+      const args: Record<string, unknown> = { limit };
+      if (cursor !== undefined) args.cursor = cursor;
+      const r = await callTool('list_templates', args);
+      const data = getPayload(r).data as Record<string, unknown>;
+      if (totalCount === null) totalCount = data.total_count as number;
+      else expect(data.total_count).toBe(totalCount); // total_count is stable
+      const page = data.templates as Array<{ template_id: string }>;
+      for (const t of page) seen.push(t.template_id);
+      lastNextCursor = data.next_cursor as string | null;
+      if (lastNextCursor === null) break;
+      cursor = lastNextCursor;
+    }
+
+    expect(lastNextCursor).toBeNull(); // terminal page
+    expect(seen.length).toBe(allTemplates.length); // no gaps
+    expect(new Set(seen).size).toBe(seen.length); // no duplicates
+    expect(seen).toEqual(allTemplates.map((t) => t.template_id)); // same order as full catalog
+  });
+
+  it.openspec('OA-DST-056')('maintains lexicographic continuity across page boundaries', async () => {
+    const limit = 2;
+    const pages: Array<Array<{ template_id: string }>> = [];
+    let cursor: string | undefined;
+    for (let i = 0; i < 50; i += 1) {
+      const args: Record<string, unknown> = { limit };
+      if (cursor !== undefined) args.cursor = cursor;
+      const r = await callTool('list_templates', args);
+      const data = getPayload(r).data as Record<string, unknown>;
+      pages.push(data.templates as Array<{ template_id: string }>);
+      const nc = data.next_cursor as string | null;
+      if (nc === null) break;
+      cursor = nc;
+    }
+    expect(pages.length).toBeGreaterThan(1); // we actually crossed at least one boundary
+
+    for (const page of pages) {
+      for (let i = 1; i < page.length; i += 1) {
+        expect(page[i - 1].template_id.localeCompare(page[i].template_id)).toBeLessThan(0);
+      }
+    }
+    for (let i = 1; i < pages.length; i += 1) {
+      const prev = pages[i - 1];
+      const next = pages[i];
+      if (prev.length > 0 && next.length > 0) {
+        expect(prev[prev.length - 1].template_id.localeCompare(next[0].template_id)).toBeLessThan(0);
+      }
+    }
+  });
+
+  it.openspec('OA-DST-057')('rejects out-of-range limit with INVALID_ARGUMENT', async () => {
+    for (const bad of [0, -1, 101, 1000]) {
+      const r = await callTool('list_templates', { limit: bad });
+      expect(r.isError).toBe(true);
+      const payload = getPayload(r);
+      expect(payload.ok).toBe(false);
+      const error = payload.error as Record<string, unknown>;
+      expect(error.code).toBe('INVALID_ARGUMENT');
+      expect((error.message as string).toLowerCase()).toContain('limit');
+    }
+  });
+
+  it.openspec('OA-DST-058')('rejects invalid cursor with INVALID_ARGUMENT', async () => {
+    const cases = [
+      'not-base64-+++',
+      Buffer.from('garbage:value', 'utf8').toString('base64'),
+      Buffer.from('after:zzz-template-that-does-not-exist-and-is-beyond-tail', 'utf8').toString('base64'),
+    ];
+    for (const cursor of cases) {
+      const r = await callTool('list_templates', { cursor });
+      expect(r.isError).toBe(true);
+      const payload = getPayload(r);
+      expect(payload.ok).toBe(false);
+      const error = payload.error as Record<string, unknown>;
+      expect(error.code).toBe('INVALID_ARGUMENT');
+      expect((error.message as string).toLowerCase()).toContain('cursor');
+    }
+  });
+
+  it.openspec('OA-DST-058')('rejects oversized cursor before base64 decode', async () => {
+    // Defense-in-depth: 512-char cap rejects bloated cursors before allocating decode buffers.
+    const oversized = 'a'.repeat(1024);
+    const r = await callTool('list_templates', { cursor: oversized });
+    expect(r.isError).toBe(true);
+    const payload = getPayload(r);
+    expect(payload.ok).toBe(false);
+    const error = payload.error as Record<string, unknown>;
+    expect(error.code).toBe('INVALID_ARGUMENT');
+  });
+
+  it.openspec('OA-DST-059')('rejects legacy mode parameter with INVALID_ARGUMENT', async () => {
+    for (const args of [{ mode: 'full' }, { mode: 'compact' }, { mode: 'anything' }]) {
+      const r = await callTool('list_templates', args);
+      expect(r.isError).toBe(true);
+      const payload = getPayload(r);
+      expect(payload.ok).toBe(false);
+      const error = payload.error as Record<string, unknown>;
+      expect(error.code).toBe('INVALID_ARGUMENT');
+    }
   });
 
   it.openspec('OA-DST-033')('get_template returns a known template by ID', async () => {
@@ -90,7 +235,7 @@ describe('contract-templates-mcp tools', () => {
     expect(Array.isArray(template.fields)).toBe(true);
   });
 
-  it.openspec('OA-DST-054')('get_template returns options for enum fields matching source metadata', async () => {
+  it.openspec('OA-DST-061')('get_template returns options for enum fields matching source metadata', async () => {
     const dir = findTemplateDir('common-paper-mutual-nda');
     if (!dir) throw new Error('common-paper-mutual-nda template not found on disk');
     const meta = loadMetadata(dir);
@@ -116,7 +261,7 @@ describe('contract-templates-mcp tools', () => {
     expect(actualEnumOptions).toEqual(expectedEnumOptions);
   });
 
-  it.openspec('OA-DST-055')('get_template omits options for non-enum field types', async () => {
+  it.openspec('OA-DST-062')('get_template omits options for non-enum field types', async () => {
     const result = await callTool('get_template', { template_id: 'common-paper-mutual-nda' });
     const payload = getPayload(result);
     expect(result.isError).toBeUndefined();
@@ -168,22 +313,6 @@ describe('contract-templates-mcp tools', () => {
   // -----------------------------------------------------------------------
   // Group A: Happy-path & envelope tests
   // -----------------------------------------------------------------------
-
-  it.openspec('OA-DST-032')('list_templates compact mode returns field_count', async () => {
-    const result = await callTool('list_templates', { mode: 'compact' });
-    const payload = getPayload(result);
-
-    expect(result.isError).toBeUndefined();
-    expect(payload.ok).toBe(true);
-    const data = payload.data as Record<string, unknown>;
-    expect(data.mode).toBe('compact');
-    const templates = data.templates as Array<Record<string, unknown>>;
-    expect(Array.isArray(templates)).toBe(true);
-    expect(templates.length).toBeGreaterThan(0);
-    // compact templates have field_count, not full field arrays
-    expect(typeof templates[0].field_count).toBe('number');
-    expect(templates[0].fields).toBeUndefined();
-  });
 
   it.openspec('OA-DST-033')('fill_template local_path return mode', async () => {
     const result = await callTool('fill_template', {
@@ -369,49 +498,10 @@ describe('contract-templates-mcp tools', () => {
       ]);
     });
 
-    it.openspec('OA-TMP-045')('strips display_label from list_templates and get_template payloads (top-level + nested)', async () => {
+    it.openspec('OA-TMP-045')('strips display_label from get_template payload (top-level + nested)', async () => {
+      // list_templates no longer carries `fields` on the wire (compact-only contract),
+      // so display_label stripping is asserted only on get_template.
       _setModuleOverride(mockModules({
-        listTemplateItems: () => [
-          {
-            name: 'labeled-template',
-            category: 'general',
-            description: 'Labeled template',
-            license: null,
-            source_url: 'https://example.com/labeled-template',
-            source: null,
-            fields: [
-              {
-                name: 'company_name',
-                type: 'string',
-                required: true,
-                section: null,
-                description: 'Company name',
-                display_label: 'Company Name',
-                default: null,
-              },
-              {
-                name: 'signers',
-                type: 'array',
-                required: false,
-                section: null,
-                description: 'Signers',
-                display_label: 'Signers',
-                default: null,
-                items: [
-                  {
-                    name: 'printed_name',
-                    type: 'string',
-                    required: false,
-                    section: null,
-                    description: 'Printed signer name',
-                    display_label: 'Printed Name',
-                    default: null,
-                  },
-                ],
-              },
-            ],
-          },
-        ],
         loadMetadata: () => ({
           name: 'Labeled Template',
           source_url: 'https://example.com/labeled-template',
@@ -442,16 +532,6 @@ describe('contract-templates-mcp tools', () => {
         mapFields: (fields: unknown[]) => fields,
       }));
 
-      const listResult = await callTool('list_templates', { mode: 'full' });
-      const listPayload = getPayload(listResult);
-      const listData = listPayload.data as Record<string, unknown>;
-      const templates = listData.templates as Array<Record<string, unknown>>;
-      const listFields = templates[0].fields as Array<Record<string, unknown>>;
-      expect(listFields[0]).not.toHaveProperty('display_label');
-      expect(listFields[1]).not.toHaveProperty('display_label');
-      const listNestedItems = listFields[1].items as Array<Record<string, unknown>>;
-      expect(listNestedItems[0]).not.toHaveProperty('display_label');
-
       const getResult = await callTool('get_template', { template_id: 'labeled-template' });
       const getPayloadData = getPayload(getResult);
       const getData = getPayloadData.data as Record<string, unknown>;
@@ -461,6 +541,50 @@ describe('contract-templates-mcp tools', () => {
       expect(getFields[1]).not.toHaveProperty('display_label');
       const getNestedItems = getFields[1].items as Array<Record<string, unknown>>;
       expect(getNestedItems[0]).not.toHaveProperty('display_label');
+    });
+
+    it.openspec('OA-DST-060')('display_name falls back to template_id when upstream metadata is empty', async () => {
+      _setModuleOverride(mockModules({
+        listTemplateItems: () => [
+          {
+            name: 'no-display-name-template',
+            display_name: '', // empty upstream display_name
+            category: 'general',
+            description: 'A template missing its display name',
+            license: null,
+            source_url: 'https://example.com/template',
+            source: null,
+            fields: [
+              { name: 'a', type: 'string', required: false, section: null, description: 'a', default: null },
+            ],
+          },
+          {
+            name: 'whitespace-display-name-template',
+            display_name: '   ', // whitespace-only upstream display_name
+            category: 'general',
+            description: 'A template with whitespace display name',
+            license: null,
+            source_url: 'https://example.com/template2',
+            source: null,
+            fields: [
+              { name: 'a', type: 'string', required: true, section: null, description: 'a', default: null },
+            ],
+          },
+        ],
+      }));
+
+      const result = await callTool('list_templates', {});
+      const payload = getPayload(result);
+      expect(payload.ok).toBe(true);
+      const data = payload.data as Record<string, unknown>;
+      const templates = data.templates as Array<Record<string, string | number>>;
+      expect(templates.length).toBe(2);
+      // Both templates should have display_name === template_id (fallback)
+      expect(templates[0].display_name).toBe(templates[0].template_id);
+      expect(templates[1].display_name).toBe(templates[1].template_id);
+      // priority_field_count derived from required fields
+      expect(templates[0].priority_field_count).toBe(0);
+      expect(templates[1].priority_field_count).toBe(1);
     });
 
     it.openspec('OA-DST-032')('fill_template returns FILL_FAILED on engine error', async () => {
@@ -539,13 +663,15 @@ describe('contract-templates-mcp tools', () => {
       _setModuleOverride(mockModules({
         listTemplateItems: () => [],
       }));
-      const result1 = await callTool('list_templates', { mode: 'compact' });
+      const result1 = await callTool('list_templates', {});
       const data1 = (getPayload(result1).data as Record<string, unknown>);
       expect((data1.templates as unknown[]).length).toBe(0);
+      expect(data1.total_count).toBe(0);
+      expect(data1.next_cursor).toBeNull();
 
       // Reset, override cleared — real modules load again
       _resetModuleCache();
-      const result2 = await callTool('list_templates', { mode: 'compact' });
+      const result2 = await callTool('list_templates', {});
       const data2 = (getPayload(result2).data as Record<string, unknown>);
       expect((data2.templates as unknown[]).length).toBeGreaterThan(0);
     });

@@ -24,7 +24,7 @@ fi
 
 ## Step 2: Discover templates
 
-**If Remote MCP:** use `list_templates` and filter to the templates relevant to this skill.
+**If Remote MCP:** use `list_templates` (paginated; pass back `next_cursor` as `cursor` until `null`, default `limit: 25`, max 100) and filter to the templates relevant to this skill. If you already know the topic, prefer `search_templates`.
 
 **If Local CLI:**
 ```bash

@@ -216,35 +216,47 @@ describe('MCP contract envelope behaviors', () => {
     expect(res.statusCode).toBe(200);
     expect(envelope.ok).toBe(true);
     expect(envelope.tool).toBe('list_templates');
-    expect(envelope.schema_version).toBe('2026-02-19');
+    expect(envelope.schema_version).toBe('2026-05-06');
     expect(envelope.data.templates).toHaveLength(1);
+    expect(envelope.data.total_count).toBe(1);
+    expect(envelope.data.next_cursor).toBeNull();
     expect(envelope.data.rate_limit).toEqual({ limit: null, remaining: null, reset_at: null, bucket: null });
     expect(envelope.data.auth).toBeNull();
   });
 
-  it.openspec('OA-DST-032')('returns compact and full list_templates payload modes', async () => {
-    const compactReq = createMockReq({
+  it.openspec('OA-DST-054')('returns compact-only list_templates payload with pagination envelope', async () => {
+    const req = createMockReq({
       body: {
         jsonrpc: '2.0',
         id: 2,
         method: 'tools/call',
-        params: { name: 'list_templates', arguments: { mode: 'compact' } },
+        params: { name: 'list_templates', arguments: {} },
       },
     });
-    const compactRes = createMockRes();
-    await mcpHandler(compactReq, compactRes);
+    const res = createMockRes();
+    await mcpHandler(req, res);
 
-    const compactEnvelope = parseEnvelope(compactRes.body);
-    expect(compactEnvelope.ok).toBe(true);
-    expect(compactEnvelope.data.mode).toBe('compact');
-    expect(compactEnvelope.data.templates[0]).toEqual({
+    const envelope = parseEnvelope(res.body);
+    expect(envelope.ok).toBe(true);
+    expect(envelope.data.mode).toBeUndefined();
+    expect(envelope.data.templates[0]).toEqual({
       template_id: 'common-paper-mutual-nda',
-      name: 'common-paper-mutual-nda',
       display_name: 'Common Paper Mutual NDA',
+      category: 'confidentiality',
+      description: 'Mutual NDA',
       field_count: 3,
+      priority_field_count: 1, // company_name is required, neither purpose nor signatory_type is
     });
+    expect(typeof envelope.data.total_count).toBe('number');
+    expect(envelope.data.next_cursor).toBeNull();
+    // No fields, license, name, or other detail fields leak into the compact shape.
+    expect(envelope.data.templates[0].fields).toBeUndefined();
+    expect(envelope.data.templates[0].license).toBeUndefined();
+    expect(envelope.data.templates[0].name).toBeUndefined();
+  });
 
-    const fullReq = createMockReq({
+  it.openspec('OA-DST-059')('rejects legacy mode parameter on list_templates', async () => {
+    const req = createMockReq({
       body: {
         jsonrpc: '2.0',
         id: 3,
@@ -252,14 +264,107 @@ describe('MCP contract envelope behaviors', () => {
         params: { name: 'list_templates', arguments: { mode: 'full' } },
       },
     });
-    const fullRes = createMockRes();
-    await mcpHandler(fullReq, fullRes);
+    const res = createMockRes();
+    await mcpHandler(req, res);
 
-    const fullEnvelope = parseEnvelope(fullRes.body);
-    expect(fullEnvelope.ok).toBe(true);
-    expect(fullEnvelope.data.mode).toBe('full');
-    expect(fullEnvelope.data.templates[0].template_id).toBe('common-paper-mutual-nda');
-    expect(fullEnvelope.data.templates[0].fields).toHaveLength(3);
+    const envelope = parseEnvelope(res.body);
+    expect(envelope.ok).toBe(false);
+    expect(envelope.error.code).toBe('INVALID_ARGUMENT');
+  });
+
+  it.openspec('OA-DST-055')('hosted list_templates pages a multi-template catalog end-to-end', async () => {
+    // Override the mock to return a catalog of multiple templates.
+    const fakeCatalog = ['alpha', 'bravo', 'charlie', 'delta', 'echo', 'foxtrot', 'golf'].map((id) => ({
+      ...MOCK_TEMPLATE,
+      name: id,
+      display_name: id.charAt(0).toUpperCase() + id.slice(1),
+    }));
+    handleListTemplatesMock.mockReturnValueOnce({ cliVersion: '0.1.1', items: fakeCatalog });
+    handleListTemplatesMock.mockReturnValueOnce({ cliVersion: '0.1.1', items: fakeCatalog });
+    handleListTemplatesMock.mockReturnValueOnce({ cliVersion: '0.1.1', items: fakeCatalog });
+
+    const page1Req = createMockReq({
+      body: {
+        jsonrpc: '2.0',
+        id: 70,
+        method: 'tools/call',
+        params: { name: 'list_templates', arguments: { limit: 3 } },
+      },
+    });
+    const page1Res = createMockRes();
+    await mcpHandler(page1Req, page1Res);
+    const page1 = parseEnvelope(page1Res.body);
+    expect(page1.ok).toBe(true);
+    expect(page1.data.total_count).toBe(7);
+    expect(page1.data.templates.map((t: { template_id: string }) => t.template_id)).toEqual(['alpha', 'bravo', 'charlie']);
+    expect(typeof page1.data.next_cursor).toBe('string');
+
+    const page2Req = createMockReq({
+      body: {
+        jsonrpc: '2.0',
+        id: 71,
+        method: 'tools/call',
+        params: { name: 'list_templates', arguments: { limit: 3, cursor: page1.data.next_cursor } },
+      },
+    });
+    const page2Res = createMockRes();
+    await mcpHandler(page2Req, page2Res);
+    const page2 = parseEnvelope(page2Res.body);
+    expect(page2.data.templates.map((t: { template_id: string }) => t.template_id)).toEqual(['delta', 'echo', 'foxtrot']);
+    // Lexicographic continuity across the page boundary.
+    expect('charlie'.localeCompare('delta')).toBeLessThan(0);
+
+    const page3Req = createMockReq({
+      body: {
+        jsonrpc: '2.0',
+        id: 72,
+        method: 'tools/call',
+        params: { name: 'list_templates', arguments: { limit: 3, cursor: page2.data.next_cursor } },
+      },
+    });
+    const page3Res = createMockRes();
+    await mcpHandler(page3Req, page3Res);
+    const page3 = parseEnvelope(page3Res.body);
+    expect(page3.data.templates.map((t: { template_id: string }) => t.template_id)).toEqual(['golf']);
+    expect(page3.data.next_cursor).toBeNull(); // terminal page
+  });
+
+  it.openspec('OA-DST-058')('hosted list_templates rejects cursor pointing beyond catalog tail', async () => {
+    handleListTemplatesMock.mockReturnValueOnce({
+      cliVersion: '0.1.1',
+      items: [{ ...MOCK_TEMPLATE, name: 'alpha', display_name: 'Alpha' }],
+    });
+    const beyondTailCursor = Buffer.from('after:zzz-template-beyond-tail', 'utf8').toString('base64');
+    const req = createMockReq({
+      body: {
+        jsonrpc: '2.0',
+        id: 73,
+        method: 'tools/call',
+        params: { name: 'list_templates', arguments: { cursor: beyondTailCursor } },
+      },
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+    const envelope = parseEnvelope(res.body);
+    expect(envelope.ok).toBe(false);
+    expect(envelope.error.code).toBe('INVALID_ARGUMENT');
+  });
+
+  it.openspec('OA-DST-057')('hosted list_templates rejects oversized cursor', async () => {
+    const oversized = 'a'.repeat(1024); // exceeds 512-char cap
+    const req = createMockReq({
+      body: {
+        jsonrpc: '2.0',
+        id: 74,
+        method: 'tools/call',
+        params: { name: 'list_templates', arguments: { cursor: oversized } },
+      },
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+    const envelope = parseEnvelope(res.body);
+    expect(envelope.ok).toBe(false);
+    expect(envelope.error.code).toBe('INVALID_ARGUMENT');
   });
 
   it.openspec('OA-DST-032')('returns get_template found and TEMPLATE_NOT_FOUND envelopes', async () => {
@@ -296,7 +401,7 @@ describe('MCP contract envelope behaviors', () => {
     expect(missingEnvelope.error.code).toBe('TEMPLATE_NOT_FOUND');
   });
 
-  it.openspec('OA-DST-054')('hosted MCP get_template preserves options on enum fields and omits for non-enum', async () => {
+  it.openspec('OA-DST-061')('hosted MCP get_template preserves options on enum fields and omits for non-enum', async () => {
     const req = createMockReq({
       body: {
         jsonrpc: '2.0',
@@ -577,13 +682,13 @@ describe('MCP contract envelope behaviors', () => {
     expect(envelope.error.code).toBe('INVALID_ARGUMENT');
   });
 
-  it.openspec('OA-DST-032')('list_templates full mode includes display_name', async () => {
+  it.openspec('OA-DST-054')('list_templates compact shape includes display_name', async () => {
     const req = createMockReq({
       body: {
         jsonrpc: '2.0',
         id: 23,
         method: 'tools/call',
-        params: { name: 'list_templates', arguments: { mode: 'full' } },
+        params: { name: 'list_templates', arguments: {} },
       },
     });
     const res = createMockRes();
@@ -622,7 +727,7 @@ describe('MCP contract envelope behaviors', () => {
     const envelope = parseEnvelope(res.body);
     expect(envelope.ok).toBe(false);
     expect(envelope.tool).toBe('fill_template');
-    expect(envelope.schema_version).toBe('2026-02-19');
+    expect(envelope.schema_version).toBe('2026-05-06');
     expect(envelope.error.code).toBe('INTERNAL_ERROR');
     expect(envelope.error.retriable).toBe(false);
     expect(envelope.error.message).toContain('Fill failed');
@@ -687,7 +792,7 @@ describe('MCP contract envelope behaviors', () => {
     const envelope = parseEnvelope(res.body);
     expect(envelope.ok).toBe(false);
     expect(envelope.tool).toBe('get_template');
-    expect(envelope.schema_version).toBe('2026-02-19');
+    expect(envelope.schema_version).toBe('2026-05-06');
     expect(envelope.error.code).toBe('INTERNAL_ERROR');
     expect(envelope.error.retriable).toBe(false);
     expect(envelope.error.message).toContain('catalog corruption');

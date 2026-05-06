@@ -44,9 +44,47 @@ import {
 // Zod schemas for MCP tool argument validation
 // ---------------------------------------------------------------------------
 
-const ListTemplatesArgsSchema = z.object({
-  mode: z.enum(['compact', 'full']).optional().default('compact'),
-});
+const LIST_TEMPLATES_DEFAULT_LIMIT = 25;
+const LIST_TEMPLATES_MAX_LIMIT = 100;
+const LIST_TEMPLATES_CURSOR_MAX_LENGTH = 512;
+
+const ListTemplatesArgsSchema = z
+  .object({
+    cursor: z.string().min(1).max(LIST_TEMPLATES_CURSOR_MAX_LENGTH).optional(),
+    limit: z
+      .number()
+      .int()
+      .min(1)
+      .max(LIST_TEMPLATES_MAX_LIMIT)
+      .optional()
+      .default(LIST_TEMPLATES_DEFAULT_LIMIT),
+  })
+  .strict();
+
+class InvalidCursorError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = 'InvalidCursorError';
+  }
+}
+
+function encodeListCursor(templateId: string): string {
+  return Buffer.from(`after:${templateId}`, 'utf8').toString('base64');
+}
+
+function decodeListCursor(cursor: string): string {
+  let decoded: string;
+  try {
+    decoded = Buffer.from(cursor, 'base64').toString('utf8');
+  } catch {
+    throw new InvalidCursorError('Invalid cursor: not base64-encoded');
+  }
+  const match = /^after:(.+)$/.exec(decoded);
+  if (!match) {
+    throw new InvalidCursorError('Invalid cursor: malformed payload');
+  }
+  return match[1];
+}
 
 const GetTemplateArgsSchema = z.object({
   template_id: z.string().min(1).optional(),
@@ -160,18 +198,25 @@ const TOOLS = [
   {
     name: TOOL_LIST_TEMPLATES,
     description:
-      'List all available legal agreement templates. ' +
-      'Supports compact and full metadata modes for browsing. ' +
+      'List all available legal agreement templates as a paginated compact catalog. ' +
+      'Returns lightweight metadata for discovery — call get_template for full per-field detail. ' +
+      'Templates are returned in stable lexicographic order by template_id. ' +
       'For finding templates by topic, jurisdiction, or source, use search_templates instead.',
     inputSchema: {
       type: 'object' as const,
       properties: {
-        mode: {
+        cursor: {
           type: 'string',
-          enum: ['compact', 'full'],
-          description: 'Response detail mode. Defaults to "compact".',
+          description: 'Opaque pagination cursor returned by a prior call. Omit on the first page.',
+        },
+        limit: {
+          type: 'integer',
+          minimum: 1,
+          maximum: LIST_TEMPLATES_MAX_LIMIT,
+          description: `Page size (default ${LIST_TEMPLATES_DEFAULT_LIMIT}, max ${LIST_TEMPLATES_MAX_LIMIT}).`,
         },
       },
+      additionalProperties: false,
     },
     annotations: { readOnlyHint: true, destructiveHint: false },
   },
@@ -510,12 +555,22 @@ function normalizedTemplate(template: {
   };
 }
 
-function compactTemplate(template: { name: string; display_name: string; fields: unknown[] }) {
+function compactTemplate(template: {
+  name: string;
+  display_name: string;
+  category: string;
+  description: string;
+  fields: { required: boolean }[];
+}) {
+  const trimmedDisplayName = template.display_name?.trim();
   return {
     template_id: template.name,
-    name: template.name,
-    display_name: template.display_name,
+    display_name:
+      trimmedDisplayName && trimmedDisplayName.length > 0 ? trimmedDisplayName : template.name,
+    category: template.category,
+    description: template.description,
     field_count: template.fields.length,
+    priority_field_count: template.fields.filter((field) => field.required).length,
   };
 }
 
@@ -813,20 +868,54 @@ async function handleToolsCall(
       );
     }
 
-    const { mode } = parsed.data;
+    const { cursor, limit } = parsed.data;
     const { items } = handleListTemplates();
 
-    if (mode === 'compact') {
-      return toolSuccessResult(id, TOOL_LIST_TEMPLATES, {
-        mode,
-        templates: items.map((item) => compactTemplate(item)),
-      }, rateState);
+    let startIndex = 0;
+    if (cursor !== undefined) {
+      let afterId: string;
+      try {
+        afterId = decodeListCursor(cursor);
+      } catch (err) {
+        if (err instanceof InvalidCursorError) {
+          return toolErrorResult(
+            id,
+            TOOL_LIST_TEMPLATES,
+            ErrorCode.INVALID_ARGUMENT,
+            err.message,
+          );
+        }
+        throw err;
+      }
+      const found = items.findIndex((t) => t.name.localeCompare(afterId) > 0);
+      if (found === -1) {
+        return toolErrorResult(
+          id,
+          TOOL_LIST_TEMPLATES,
+          ErrorCode.INVALID_ARGUMENT,
+          'Invalid cursor: points beyond catalog tail',
+        );
+      }
+      startIndex = found;
     }
 
-    return toolSuccessResult(id, TOOL_LIST_TEMPLATES, {
-      mode,
-      templates: items.map((item) => normalizedTemplate(item)),
-    }, rateState);
+    const page = items.slice(startIndex, startIndex + limit);
+    const consumed = startIndex + page.length;
+    const nextCursor =
+      page.length > 0 && consumed < items.length
+        ? encodeListCursor(page[page.length - 1].name)
+        : null;
+
+    return toolSuccessResult(
+      id,
+      TOOL_LIST_TEMPLATES,
+      {
+        templates: page.map((item) => compactTemplate(item)),
+        total_count: items.length,
+        next_cursor: nextCursor,
+      },
+      rateState,
+    );
   }
 
   if (name === TOOL_SEARCH_TEMPLATES) {

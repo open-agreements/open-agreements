@@ -7,7 +7,7 @@ An MCP or CLI agent calling `fill_template` for an `enum` or `multiselect` field
 - Project `options` for `type: 'enum'` and `type: 'multiselect'` fields in `mapFields()` so all consumers (CLI, MCP package, hosted shared service, hosted MCP, A2A) automatically gain option discoverability.
 - Update type mirrors in `packages/contract-templates-mcp/src/core/tools.ts`, `api/_shared.ts`, `api/mcp.ts`, and `integration-tests/list-command.inprocess.test.ts` to include the new optional `options` projection.
 - Regenerate `data/templates-snapshot.json` so the committed snapshot reflects the additive change.
-- Bind new test scenarios `OA-CLI-025`, `OA-DST-054`, `OA-DST-055`.
+- Bind new test scenarios `OA-CLI-025`, `OA-DST-061`, `OA-DST-062`.
 - Rename the existing MCP discovery requirement to reflect its broadened scope (now covers enum/multiselect option metadata in addition to array item schemas).
 
 ## Impact

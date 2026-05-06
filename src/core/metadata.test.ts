@@ -422,6 +422,53 @@ describe('TemplateMetadataSchema', () => {
     );
   });
 
+  it.openspec('OA-DST-060')('rejects metadata with empty or whitespace-only name', async () => {
+    // Empty name fails — schema-level guard for the list_templates display_name contract.
+    await expectSafeParseOutcome(
+      'TemplateMetadataSchema',
+      TemplateMetadataSchema,
+      {
+        name: '',
+        source_url: 'https://example.com/nda',
+        version: '1.0',
+        license: 'CC-BY-4.0',
+        allow_derivatives: true,
+        attribution_text: 'Based on Example NDA',
+        fields: [],
+      },
+      false
+    );
+    // Whitespace-only name also fails (.trim().min(1)).
+    await expectSafeParseOutcome(
+      'TemplateMetadataSchema',
+      TemplateMetadataSchema,
+      {
+        name: '   ',
+        source_url: 'https://example.com/nda',
+        version: '1.0',
+        license: 'CC-BY-4.0',
+        allow_derivatives: true,
+        attribution_text: 'Based on Example NDA',
+        fields: [],
+      },
+      false
+    );
+  });
+
+  it.openspec('OA-DST-060')('RecipeMetadataSchema rejects empty name', async () => {
+    await expectSafeParseOutcome(
+      'RecipeMetadataSchema',
+      RecipeMetadataSchema,
+      {
+        name: '',
+        source_url: 'https://example.com/recipe',
+        source_version: '1.0',
+        license_note: 'Public domain',
+      },
+      false
+    );
+  });
+
   it.openspec('OA-TMP-051')('rejects top-level field collisions with derived boolean keys', async () => {
     await expectSafeParseOutcome(
       'TemplateMetadataSchema',

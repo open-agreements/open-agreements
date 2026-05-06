@@ -11,10 +11,10 @@
 - [x] 2.4 Add `options?: string[]` to `TemplateMeta.fields` in `integration-tests/list-command.inprocess.test.ts`
 
 ## 3. Tests
-- [x] 3.1 Add `OA-DST-054` — `get_template` returns `options` for enum fields (real template, dynamic assertion)
-- [x] 3.2 Add `OA-DST-055` — `get_template` omits `options` for non-enum field types
+- [x] 3.1 Add `OA-DST-061` — `get_template` returns `options` for enum fields (real template, dynamic assertion)
+- [x] 3.2 Add `OA-DST-062` — `get_template` omits `options` for non-enum field types
 - [x] 3.3 Add `OA-CLI-025` — CLI `list --json` includes `options` for enum fields, omits for non-enum types
-- [x] 3.4 Add hosted MCP assertion in `integration-tests/mcp-contract.test.ts` (bound to `OA-DST-054`) that hosted `get_template` preserves `options` and omits for non-enum fields. (`integration-tests/api-shared.test.ts` does not exist in this repo; the existing `api-endpoints.test.ts` mocks `handleListTemplates`, so hosted shared-service coverage flows through `mcp-contract.test.ts` and the package-level `tools.test.ts` instead.)
+- [x] 3.4 Add hosted MCP assertion in `integration-tests/mcp-contract.test.ts` (bound to `OA-DST-061`) that hosted `get_template` preserves `options` and omits for non-enum fields. (`integration-tests/api-shared.test.ts` does not exist in this repo; the existing `api-endpoints.test.ts` mocks `handleListTemplates`, so hosted shared-service coverage flows through `mcp-contract.test.ts` and the package-level `tools.test.ts` instead.)
 - [x] 3.5 A2A coverage: `api/a2a.ts:63` calls `handleListTemplates()` from `_shared.js` with no surface-specific transformation. Coverage is inherited via the package-level + CLI tests; no new A2A scenario binding required.
 
 ## 4. Snapshot + verification

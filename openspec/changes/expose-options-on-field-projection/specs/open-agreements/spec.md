@@ -48,12 +48,12 @@ free-form descriptions or fetching `metadata.yaml` out of band.
 - **WHEN** a client calls `get_template`
 - **THEN** the returned field metadata includes the nested array item schema unchanged
 
-#### Scenario: [OA-DST-054] get_template returns options for enum and multiselect fields
+#### Scenario: [OA-DST-061] get_template returns options for enum and multiselect fields
 - **GIVEN** a template with an `enum` or `multiselect` field declaring an `options` array
 - **WHEN** a client calls `get_template`
 - **THEN** the returned field metadata includes the `options` array with the same values as the source metadata
 
-#### Scenario: [OA-DST-055] get_template omits options for non-enum/non-multiselect fields
+#### Scenario: [OA-DST-062] get_template omits options for non-enum/non-multiselect fields
 - **GIVEN** a template with `string`, `date`, `number`, `boolean`, or `array` fields
 - **WHEN** a client calls `get_template`
 - **THEN** none of those fields include an `options` key in the returned metadata
