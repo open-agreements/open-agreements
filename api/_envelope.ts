@@ -3,7 +3,7 @@
  * File starts with _ so Vercel does not create a route for it.
  */
 
-export const SCHEMA_VERSION = '2026-02-19';
+export const SCHEMA_VERSION = '2026-05-06';
 
 export const ErrorCode = {
   MISSING_REQUIRED_FIELDS: 'MISSING_REQUIRED_FIELDS',

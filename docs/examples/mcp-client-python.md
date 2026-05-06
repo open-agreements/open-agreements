@@ -45,13 +45,25 @@ with httpx.Client() as client:
     })
     print("Initialized:", init["result"]["serverInfo"])
 
-    list_resp = rpc(client, 2, "tools/call", {
-        "name": "list_templates",
-        "arguments": {"mode": "compact"},
-    })
-    list_env = parse_tool_envelope(list_resp["result"])
-    templates = list_env["data"]["templates"]
-    template_id = templates[0]["template_id"]
+    # list_templates returns a compact-only paginated catalog. Page through
+    # using the returned cursor; stop when next_cursor is None.
+    template_id = None
+    cursor = None
+    while True:
+        args = {"limit": 50}
+        if cursor is not None:
+            args["cursor"] = cursor
+        list_resp = rpc(client, 2, "tools/call", {
+            "name": "list_templates",
+            "arguments": args,
+        })
+        list_env = parse_tool_envelope(list_resp["result"])
+        page = list_env["data"]["templates"]
+        if template_id is None and page:
+            template_id = page[0]["template_id"]
+        cursor = list_env["data"]["next_cursor"]
+        if cursor is None:
+            break
     print("First template:", template_id)
 
     get_resp = rpc(client, 3, "tools/call", {

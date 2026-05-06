@@ -58,14 +58,26 @@ function parseEnvelope<T = any>(result: any): ToolEnvelope<T> {
     clientInfo: { name: 'node-example', version: '1.0.0' },
   });
 
-  const listResp = await rpc(2, 'tools/call', {
-    name: 'list_templates',
-    arguments: { mode: 'compact' },
-  });
-  const listEnv = parseEnvelope<{ templates: Array<{ template_id: string }> }>(listResp.result);
-  if (!listEnv.ok) throw new Error(`${listEnv.error.code}: ${listEnv.error.message}`);
-
-  const templateId = listEnv.data.templates[0]?.template_id;
+  // list_templates returns a compact-only paginated catalog. Page through
+  // using the returned cursor; stop when next_cursor is null.
+  let templateId: string | undefined;
+  let cursor: string | undefined;
+  for (;;) {
+    const args: Record<string, unknown> = { limit: 50 };
+    if (cursor !== undefined) args.cursor = cursor;
+    const listResp = await rpc(2, 'tools/call', { name: 'list_templates', arguments: args });
+    const listEnv = parseEnvelope<{
+      templates: Array<{ template_id: string }>;
+      total_count: number;
+      next_cursor: string | null;
+    }>(listResp.result);
+    if (!listEnv.ok) throw new Error(`${listEnv.error.code}: ${listEnv.error.message}`);
+    if (templateId === undefined && listEnv.data.templates[0]) {
+      templateId = listEnv.data.templates[0].template_id;
+    }
+    if (listEnv.data.next_cursor === null) break;
+    cursor = listEnv.data.next_cursor;
+  }
   if (!templateId) throw new Error('No templates returned');
 
   const getResp = await rpc(3, 'tools/call', {
