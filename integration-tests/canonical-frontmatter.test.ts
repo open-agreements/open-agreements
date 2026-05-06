@@ -38,8 +38,14 @@ describe('tryParseCanonicalFrontmatter', () => {
     expect(tryParseCanonicalFrontmatter('no frontmatter here')).toBeNull();
   });
 
-  it('returns frontmatter and body on success', () => {
+  it('returns frontmatter and body on LF success', () => {
     const result = tryParseCanonicalFrontmatter('---\ntemplate_id: foo\n---\nbody');
+    expect(result?.frontmatter).toEqual({ template_id: 'foo' });
+    expect(result?.body).toBe('body');
+  });
+
+  it('returns frontmatter and body on CRLF success', () => {
+    const result = tryParseCanonicalFrontmatter('---\r\ntemplate_id: foo\r\n---\r\nbody');
     expect(result?.frontmatter).toEqual({ template_id: 'foo' });
     expect(result?.body).toBe('body');
   });
