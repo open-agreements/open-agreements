@@ -35,6 +35,7 @@ interface TemplateField {
   description: string;
   default: string | null;
   default_value_rationale?: string | null;
+  options?: string[];
   items?: TemplateField[];
 }
 

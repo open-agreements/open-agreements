@@ -22,6 +22,7 @@ export interface TemplateListField {
   description: string;
   default: string | null;
   default_value_rationale: string | null;
+  options?: string[];
   items?: TemplateListField[];
 }
 
@@ -95,6 +96,7 @@ export function mapFields(
     description: f.description,
     default: f.default ?? null,
     default_value_rationale: f.default_value_rationale ?? null,
+    ...(f.type === 'enum' && f.options ? { options: [...f.options] } : {}),
     ...(f.items ? { items: mapFields(f.items, []) } : {}),
   }));
 }

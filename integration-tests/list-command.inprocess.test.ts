@@ -23,7 +23,8 @@ interface TemplateMeta {
     description: string;
     section?: string;
     default?: string;
-    items?: Array<{ name: string; type: string; description: string; section?: string; default?: string }>;
+    options?: string[];
+    items?: Array<{ name: string; type: string; description: string; section?: string; default?: string; options?: string[] }>;
   }>;
   priority_fields: string[];
 }
@@ -35,7 +36,7 @@ interface RecipeMeta {
   source_version: string;
   license_note: string;
   optional: boolean;
-  fields: Array<{ name: string; type: string; description: string; section?: string; default?: string }>;
+  fields: Array<{ name: string; type: string; description: string; section?: string; default?: string; options?: string[] }>;
   priority_fields: string[];
 }
 
@@ -309,6 +310,55 @@ describe('runList in-process coverage', () => {
         default_value_rationale: null,
       },
     ]);
+  });
+
+  itDiscovery.openspec('OA-CLI-025')('exposes options on enum fields in JSON output, omits for non-enum', async () => {
+    const harness = await loadListHarness({
+      templateEntries: [
+        { id: 'enum-template', dir: '/templates/enum-template', baseDir: '/templates' },
+      ],
+      templateByDir: {
+        '/templates/enum-template': {
+          ...templateMeta('Enum Template', 'https://example.com/enum-template'),
+          fields: [
+            {
+              name: 'signatory_type',
+              type: 'enum',
+              description: 'Whether signatory is an entity or individual',
+              options: ['entity', 'individual'],
+            } as TemplateMeta['fields'][number],
+            { name: 'signatory_name', type: 'string', description: 'Signatory printed name' },
+            { name: 'effective_date', type: 'date', description: 'Effective date' },
+          ],
+          priority_fields: [],
+        },
+      },
+    });
+
+    const logSpy = vi.spyOn(console, 'log').mockImplementation(() => {});
+
+    await allureStep('Run list in JSON mode for enum projection', async () => {
+      harness.runList({ json: true });
+    });
+
+    const envelope = JSON.parse(String(logSpy.mock.calls[0][0]));
+    await allureJsonAttachment('list-json-enum-options.json', envelope);
+
+    const template = envelope.items.find((item: { name: string }) => item.name === 'enum-template');
+    expect(template.fields).toHaveLength(3);
+
+    const enumField = template.fields.find((f: { name: string }) => f.name === 'signatory_type');
+    expect(enumField).toMatchObject({
+      name: 'signatory_type',
+      type: 'enum',
+      options: ['entity', 'individual'],
+    });
+
+    const stringField = template.fields.find((f: { name: string }) => f.name === 'signatory_name');
+    expect(stringField).not.toHaveProperty('options');
+
+    const dateField = template.fields.find((f: { name: string }) => f.name === 'effective_date');
+    expect(dateField).not.toHaveProperty('options');
   });
 
   itDiscovery('collects external and recipe metadata errors in non-strict JSON mode', async () => {
