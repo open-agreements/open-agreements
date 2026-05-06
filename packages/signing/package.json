@@ -2,7 +2,7 @@
   "name": "@open-agreements/signing",
   "version": "0.7.5",
   "private": true,
-  "description": "Provider-neutral signing adapter for sending filled agreements to DocuSign, Dropbox Sign, Adobe Sign, and PandaDoc",
+  "description": "DocuSign signing adapter for sending filled agreements; pluggable interface for additional providers.",
   "type": "module",
   "main": "./dist/signing/src/index.js",
   "types": "./dist/signing/src/index.d.ts",
