@@ -54,6 +54,11 @@ pipeline SHALL accept either an array value or a JSON-string value and
 SHALL throw a clear error when the provided JSON is malformed or does not
 decode to an array.
 
+The fill pipeline SHALL reject runtime multiselect input that contains
+non-string entries or values not present in the declared `options`
+allowlist. The closed allowlist applies symmetrically to schema-validated
+defaults and to runtime input.
+
 When a multiselect field also sets `derive_booleans: true`, the fill
 pipeline SHALL emit `<option>_enabled` boolean keys for every declared
 option based on membership in the normalized selection array. These
@@ -65,8 +70,11 @@ Templates SHALL NOT reference a multiselect field directly in
 `{IF <field>}` because empty arrays are truthy in the template runtime.
 Validation SHALL reject such direct conditional references. A multiselect
 field with `derive_booleans: true` MAY be absent from raw DOCX placeholder
-coverage when the template references only derived `<option>_enabled`
-keys.
+coverage ONLY when at least one derived `<option>_enabled` key for that
+field is actually referenced in the template. A `derive_booleans`
+multiselect whose field name is absent AND whose derived keys are all
+absent SHALL still trigger the standard missing-placeholder warning (or
+error if priority-listed), because the field is genuinely unused.
 
 #### Scenario: [OA-FIL-016] Multiselect selections derive booleans before display-field computation
 
@@ -105,3 +113,22 @@ keys.
 - **AND** a template that uses only derived `{IF tech_rider_enabled}`
   conditionals does not receive a missing-placeholder warning for
   `industry_modules`
+
+#### Scenario: [OA-TMP-053] Coverage suppression requires at least one derived key reference
+
+- **GIVEN** template metadata with a `derive_booleans: true` multiselect
+  field that is also priority-listed
+- **AND** a template that references neither the field name nor any of
+  its derived `<option>_enabled` keys
+- **WHEN** the validator runs
+- **THEN** the validator emits the priority-field error (or warning if
+  optional) for the multiselect field — coverage suppression does NOT
+  fire when the field is genuinely unused
+
+#### Scenario: [OA-FIL-019] Multiselect runtime input enforces the closed allowlist
+
+- **GIVEN** a multiselect field with `options: [tech_rider, cross_border_rider]`
+- **WHEN** fill input contains a non-string entry or an option name not
+  in the allowlist
+- **THEN** the fill pipeline throws a clear error identifying the
+  multiselect field and the offending entry

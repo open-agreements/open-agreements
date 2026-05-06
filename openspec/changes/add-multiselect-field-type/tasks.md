@@ -27,10 +27,14 @@
 
 ## 4. Validation and reporting
 
-- [x] 4.1 Skip missing-placeholder warnings for multiselect fields that
-      intentionally render only through derived keys
+- [x] 4.1 Skip missing-placeholder warnings for `derive_booleans`
+      multiselects ONLY when at least one derived `<option>_enabled` key
+      is actually referenced in the template; otherwise warn/error
+      normally so genuinely-unused multiselects still surface
 - [x] 4.2 Reject direct `{IF <multiselect_field>}` references
 - [x] 4.3 Filter synthetic derived keys out of `fieldsUsed`
+- [x] 4.4 Reject multiselect runtime input with non-string entries or
+      unknown options (closed-allowlist enforcement)
 
 ## 5. CLI and downstream typing
 

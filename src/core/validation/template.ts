@@ -76,10 +76,19 @@ export function validateTemplate(templateDir: string, templateId: string): Templ
       .filter((field) => field.type === 'multiselect')
       .map((field) => field.name)
   );
-  const derivedBooleanMultiselectFieldNames = new Set(
-    metadata.fields
-      .filter((field) => field.type === 'multiselect' && field.derive_booleans === true)
-      .map((field) => field.name)
+  const derivedBooleanMultiselects = metadata.fields.filter(
+    (field) => field.type === 'multiselect' && field.derive_booleans === true
+  );
+  // Map from multiselect field name → set of derived `<option>_enabled` keys.
+  // Used below to suppress the "field not in DOCX" warning ONLY when at least
+  // one of the field's derived keys is actually referenced in the template.
+  // A derive_booleans multiselect with zero derived references is genuinely
+  // unused and should still warn (or error if priority-listed).
+  const derivedKeysByField = new Map<string, Set<string>>(
+    derivedBooleanMultiselects.map((field) => [
+      field.name,
+      new Set((field.options ?? []).map((option) => `${option}_enabled`)),
+    ])
   );
 
   const rejectDirectMultiselectConditionals = (foundConditionalFields: Set<string>): void => {
@@ -162,8 +171,17 @@ export function validateTemplate(templateDir: string, templateId: string): Templ
 
     // Check metadata fields are covered by tags
     for (const fieldName of metadataFieldNames) {
-      if (derivedBooleanMultiselectFieldNames.has(fieldName)) {
-        continue;
+      const derivedKeys = derivedKeysByField.get(fieldName);
+      if (derivedKeys) {
+        // Suppress coverage warning ONLY if at least one derived key is
+        // actually referenced. Otherwise the multiselect is dead weight and
+        // the warning/error should fire normally.
+        const anyDerivedReferenced = [...derivedKeys].some(
+          (key) => foundTags.has(key) || foundConditionalFields.has(key)
+        );
+        if (anyDerivedReferenced) {
+          continue;
+        }
       }
       const inTags = foundTags.has(fieldName) || foundConditionalFields.has(fieldName);
       if (!inTags) {
@@ -272,8 +290,16 @@ export function validateTemplate(templateDir: string, templateId: string): Templ
 
     // Check for fields in metadata but not in DOCX
     for (const fieldName of metadataFieldNames) {
-      if (derivedBooleanMultiselectFieldNames.has(fieldName)) {
-        continue;
+      const derivedKeys = derivedKeysByField.get(fieldName);
+      if (derivedKeys) {
+        // See the parallel branch above: only suppress when at least one
+        // derived key is actually referenced.
+        const anyDerivedReferenced = [...derivedKeys].some(
+          (key) => foundTags.has(key) || foundConditionalFields.has(key)
+        );
+        if (anyDerivedReferenced) {
+          continue;
+        }
       }
       const inDocx = foundTags.has(fieldName) || foundConditionalFields.has(fieldName);
       if (!inDocx) {

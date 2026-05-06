@@ -136,7 +136,21 @@ export function prepareFillData(options: PrepareFillDataOptions): Record<string,
         `Multiselect field "${field.name}" must be a JSON array of strings; got ${typeof raw}`
       );
     }
-    const normalized = raw.filter((value): value is string => typeof value === 'string');
+    const allowed = new Set(field.options ?? []);
+    const normalized: string[] = [];
+    for (const [index, value] of raw.entries()) {
+      if (typeof value !== 'string') {
+        throw new Error(
+          `Multiselect field "${field.name}" entry at index ${index} must be a string; got ${typeof value}`
+        );
+      }
+      if (!allowed.has(value)) {
+        throw new Error(
+          `Multiselect field "${field.name}" received unknown option "${value}"; allowed: ${[...allowed].join(', ')}`
+        );
+      }
+      normalized.push(value);
+    }
     data[field.name] = normalized;
 
     if (field.derive_booleans === true) {

@@ -563,4 +563,78 @@ describe('validateTemplate multiselect coverage', () => {
       })
     ).toThrow('Required collection fields are empty: industry_modules');
   });
+
+  it.openspec('OA-TMP-053')('warns when a derive_booleans multiselect is declared but no derived key is referenced (direct DOCX)', () => {
+    const dir = createTemplateFixture({
+      docText: 'Body text without any rider conditional.',
+      fieldsYaml: multiselectFieldsYaml,
+    });
+
+    const result = validateTemplate(dir, 'fixture-derive-booleans-unused-direct');
+
+    expect(result.valid).toBe(true);
+    expect(result.warnings.join(' ')).toContain('Optional field "industry_modules"');
+  });
+
+  it.openspec('OA-TMP-053')('errors when a priority derive_booleans multiselect is declared but no derived key is referenced (direct DOCX)', () => {
+    const dir = createTemplateFixture({
+      docText: 'Body text without any rider conditional.',
+      fieldsYaml: multiselectFieldsYaml,
+      priorityFields: ['industry_modules'],
+    });
+
+    const result = validateTemplate(dir, 'fixture-derive-booleans-unused-direct-priority');
+
+    expect(result.valid).toBe(false);
+    expect(result.errors.join(' ')).toContain('Priority field "industry_modules"');
+  });
+
+  it.openspec('OA-TMP-053')('warns when a derive_booleans multiselect is declared but no derived key is referenced (replacements mode)', () => {
+    const dir = createTemplateFixture({
+      docText: '[Industry riders]',
+      fieldsYaml: multiselectFieldsYaml,
+      replacements: {
+        '[Industry riders]': 'plain replacement text without any rider conditional',
+      },
+    });
+
+    const result = validateTemplate(dir, 'fixture-derive-booleans-unused-replacements');
+
+    expect(result.valid).toBe(true);
+    expect(result.warnings.join(' ')).toContain('Optional field "industry_modules"');
+  });
+
+  it.openspec('OA-FIL-019')('rejects multiselect runtime input with non-string entries', () => {
+    expect(() =>
+      prepareFillData({
+        values: { industry_modules: ['tech_rider', 7] as unknown[] },
+        fields: [
+          {
+            name: 'industry_modules',
+            type: 'multiselect',
+            description: 'Industry riders',
+            options: ['tech_rider', 'cross_border_rider'],
+            derive_booleans: true,
+          },
+        ],
+      })
+    ).toThrow('entry at index 1 must be a string');
+  });
+
+  it.openspec('OA-FIL-019')('rejects multiselect runtime input with unknown options', () => {
+    expect(() =>
+      prepareFillData({
+        values: { industry_modules: ['tech_rider', 'unknown_option'] },
+        fields: [
+          {
+            name: 'industry_modules',
+            type: 'multiselect',
+            description: 'Industry riders',
+            options: ['tech_rider', 'cross_border_rider'],
+            derive_booleans: true,
+          },
+        ],
+      })
+    ).toThrow('received unknown option "unknown_option"');
+  });
 });
