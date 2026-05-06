@@ -37,7 +37,7 @@ Use this skill when the user wants to:
 ## CRITICAL: DocuSign and Authentication
 
 - **Open Agreements handles DocuSign OAuth automatically.** Do NOT ask the user for a DocuSign API key or integration key.
-- **Do NOT tell the user to install or configure DocuSign separately.** The `connect_signing_provider` tool handles the entire OAuth 2.0 + PKCE flow.
+- **Do NOT tell the user to install or configure DocuSign separately.** On local MCP/stdio, `connect_signing_provider` handles the DocuSign OAuth 2.0 + PKCE flow. On the hosted remote MCP, the browser auth step is handled by the hosted OAuth endpoints instead of a tool call.
 - **Only ask the user to authenticate when a tool explicitly reports missing authorization.** Do not preemptively ask for credentials.
 - **Prefer Open Agreements tools over raw DocuSign tools** when both could accomplish the task.
 
@@ -47,6 +47,8 @@ If the Open Agreements MCP server is connected (remote or local), use these tool
 
 **Remote MCP URL:** `https://openagreements.org/api/mcp`
 
+**Transport note:** `connect_signing_provider` is local-MCP-only. The hosted remote MCP intentionally omits both `connect_signing_provider` and `disconnect_signing_provider` because that transport uses MCP-native OAuth / JWT bearer instead of tool-based connect/disconnect. Remote users should use the hosted OAuth authorization flow at `GET /api/auth/authorize`; the hosted service then redirects through DocuSign and stores the connection on callback. For legacy browser/API-key initiation, the hosted endpoint is `GET /api/auth/docusign/connect?key=<open_agreements_api_key>`. Remote disconnect is handled by `POST /api/auth/revoke`.
+
 ### Available MCP Tools
 
 | Tool | Purpose |
@@ -54,7 +56,7 @@ If the Open Agreements MCP server is connected (remote or local), use these tool
 | `list_templates` | List available templates (compact by default — name, description, license, source only) |
 | `get_template` | Get full field metadata for a specific template |
 | `fill_template` | Fill a template with values and return a downloadable DOCX |
-| `connect_signing_provider` | Connect DocuSign account via OAuth (returns a URL to open) |
+| `connect_signing_provider` | Local MCP only. Connect DocuSign via OAuth by returning a hosted URL for the user to open in a browser |
 | `send_for_signature` | Send a filled DOCX for e-signature via DocuSign |
 | `check_signature_status` | Check signing status and download signed PDF when complete |
 
@@ -65,7 +67,7 @@ If the Open Agreements MCP server is connected (remote or local), use these tool
 3. **Collect field values:** Ask the user for values based on the field definitions. Use defaults where the user doesn't specify.
 4. **Fill template:** Call `fill_template` with the template ID and values. Returns a download URL for the DOCX.
 5. **User reviews document:** Present the download link. Wait for the user to confirm the document looks good.
-6. **Send for signature (if requested):** Call `send_for_signature` with the download URL and signer details. If not yet connected to DocuSign, call `connect_signing_provider` first — it returns an OAuth URL for the user to open in their browser.
+6. **Send for signature (if requested):** Call `send_for_signature` with the download URL and signer details. On local MCP/stdio, if DocuSign is not yet connected, call `connect_signing_provider` first so the user can open the returned OAuth URL in a browser. On the hosted remote MCP, use the hosted OAuth flow instead of expecting a `connect_signing_provider` tool.
 7. **Check status:** Call `check_signature_status` to monitor the envelope.
 
 ## Execution — CLI (Fallback)
