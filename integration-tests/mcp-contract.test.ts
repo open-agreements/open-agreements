@@ -33,6 +33,15 @@ const MOCK_TEMPLATE = {
       description: 'Purpose',
       default: null,
     },
+    {
+      name: 'signatory_type',
+      type: 'enum',
+      required: false,
+      section: null,
+      description: 'Whether signatory is an entity or individual',
+      default: 'entity',
+      options: ['entity', 'individual'],
+    },
   ],
 };
 
@@ -47,8 +56,8 @@ const MOCK_FILL_SUCCESS = {
   metadata: {
     template: 'common-paper-mutual-nda',
     filledFieldCount: 1,
-    totalFieldCount: 2,
-    missingFields: ['purpose'],
+    totalFieldCount: MOCK_TEMPLATE.fields.length,
+    missingFields: ['purpose', 'signatory_type'],
     license: 'CC-BY-4.0',
     attribution: 'Based on Common Paper Mutual NDA',
   },
@@ -235,8 +244,8 @@ describe('MCP contract envelope behaviors', () => {
       display_name: 'Common Paper Mutual NDA',
       category: 'confidentiality',
       description: 'Mutual NDA',
-      field_count: 2,
-      priority_field_count: 1, // company_name is required, purpose is not
+      field_count: 3,
+      priority_field_count: 1, // company_name is required, neither purpose nor signatory_type is
     });
     expect(typeof envelope.data.total_count).toBe('number');
     expect(envelope.data.next_cursor).toBeNull();
@@ -390,6 +399,31 @@ describe('MCP contract envelope behaviors', () => {
     expect(getResultObject(missingRes).isError).toBe(true);
     expect(missingEnvelope.ok).toBe(false);
     expect(missingEnvelope.error.code).toBe('TEMPLATE_NOT_FOUND');
+  });
+
+  it.openspec('OA-DST-061')('hosted MCP get_template preserves options on enum fields and omits for non-enum', async () => {
+    const req = createMockReq({
+      body: {
+        jsonrpc: '2.0',
+        id: 41,
+        method: 'tools/call',
+        params: { name: 'get_template', arguments: { template_id: 'common-paper-mutual-nda' } },
+      },
+    });
+    const res = createMockRes();
+    await mcpHandler(req, res);
+
+    const envelope = parseEnvelope(res.body);
+    expect(envelope.ok).toBe(true);
+    const fields = envelope.data.template.fields as Array<Record<string, unknown>>;
+
+    const enumField = fields.find((f) => f.name === 'signatory_type');
+    expect(enumField).toBeDefined();
+    expect(enumField!.options).toEqual(['entity', 'individual']);
+
+    const stringField = fields.find((f) => f.name === 'company_name');
+    expect(stringField).toBeDefined();
+    expect(stringField).not.toHaveProperty('options');
   });
 
   it.openspec('OA-DST-032')('returns fill_template envelopes for url and mcp_resource', async () => {

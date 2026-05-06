@@ -23,6 +23,7 @@ export interface TemplateListField {
   display_label?: string;
   default: string | null;
   default_value_rationale: string | null;
+  options?: string[];
   items?: TemplateListField[];
 }
 
@@ -115,6 +116,9 @@ export function mapFields(
     ...(f.display_label !== undefined ? { display_label: f.display_label } : {}),
     default: f.default ?? null,
     default_value_rationale: f.default_value_rationale ?? null,
+    ...((f.type === 'enum' || f.type === 'multiselect') && f.options
+      ? { options: [...f.options] }
+      : {}),
     ...(f.items ? { items: mapFields(f.items, []) } : {}),
   }));
 }

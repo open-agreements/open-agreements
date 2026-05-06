@@ -94,7 +94,11 @@
           "section": "Signatures",
           "description": "Whether Party 1 signatory is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "party_1_signatory_name",
@@ -148,7 +152,11 @@
           "section": "Signatures",
           "description": "Whether Party 2 signatory is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "party_2_signatory_name",
@@ -634,7 +642,11 @@
           "section": "Signature Block",
           "description": "Whether the Provider signatory is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "provider_signatory_name",
@@ -679,7 +691,11 @@
           "section": "Signature Block",
           "description": "Whether the Customer signatory is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "customer_signatory_name",
@@ -1042,7 +1058,11 @@
           "section": "Signature Block",
           "description": "Whether the first party signatory is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "party_1_signatory_name",
@@ -1087,7 +1107,11 @@
           "section": "Signature Block",
           "description": "Whether the second party signatory is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "party_2_signatory_name",
@@ -1372,7 +1396,11 @@
           "section": "Signature Block",
           "description": "Whether the Provider signatory is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "provider_signatory_name",
@@ -1417,7 +1445,11 @@
           "section": "Signature Block",
           "description": "Whether the Company signatory is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "company_signatory_name",
@@ -2143,7 +2175,11 @@
           "section": "Signature Block",
           "description": "Whether the Provider signatory is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "provider_signatory_name",
@@ -2188,7 +2224,11 @@
           "section": "Signature Block",
           "description": "Whether the Customer signatory is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "customer_signatory_name",
@@ -2857,7 +2897,12 @@
           "section": "Liability",
           "description": "How the General Cap Amount (baseline liability limit) is calculated. \"multiplier\" uses a multiple of fees, \"dollar\" uses a fixed amount, \"greater_of\" uses the greater of a dollar amount or a multiple of fees.",
           "default": null,
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "multiplier",
+            "dollar",
+            "greater_of"
+          ]
         },
         {
           "name": "increased_cap_type",
@@ -2866,7 +2911,12 @@
           "section": "Liability",
           "description": "How the Increased Cap Amount (higher liability limit for Increased Claims) is calculated. Same options as general_cap_type.",
           "default": null,
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "multiplier",
+            "dollar",
+            "greater_of"
+          ]
         },
         {
           "name": "increased_claim_breach_privacy",
@@ -3334,7 +3384,11 @@
           "section": "Signature Block",
           "description": "Whether the Provider signatory is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "provider_signatory_name",
@@ -3379,7 +3433,11 @@
           "section": "Signature Block",
           "description": "Whether the Customer signatory is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "customer_signatory_name",
@@ -3916,7 +3974,12 @@
           "section": "Liability",
           "description": "How the General Cap Amount (baseline liability limit) is calculated. \"multiplier\" uses a multiple of fees, \"dollar\" uses a fixed amount, \"greater_of\" uses the greater of a dollar amount or a multiple of fees.",
           "default": null,
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "multiplier",
+            "dollar",
+            "greater_of"
+          ]
         },
         {
           "name": "increased_cap_type",
@@ -3925,7 +3988,12 @@
           "section": "Liability",
           "description": "How the Increased Cap Amount (higher liability limit for Increased Claims) is calculated. Same options as general_cap_type.",
           "default": null,
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "multiplier",
+            "dollar",
+            "greater_of"
+          ]
         },
         {
           "name": "increased_claim_breach_privacy",
@@ -4294,7 +4362,11 @@
           "section": "Signature Block",
           "description": "Whether the Provider signatory is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "provider_signatory_name",
@@ -4339,7 +4411,11 @@
           "section": "Signature Block",
           "description": "Whether the Customer signatory is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "customer_signatory_name",
@@ -4867,7 +4943,12 @@
           "section": "Liability",
           "description": "How the General Cap Amount (baseline liability limit) is calculated. \"multiplier\" uses a multiple of fees, \"dollar\" uses a fixed amount, \"greater_of\" uses the greater of a dollar amount or a multiple of fees.",
           "default": null,
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "multiplier",
+            "dollar",
+            "greater_of"
+          ]
         },
         {
           "name": "increased_cap_type",
@@ -4876,7 +4957,12 @@
           "section": "Liability",
           "description": "How the Increased Cap Amount (higher liability limit for Increased Claims) is calculated. Same options as general_cap_type.",
           "default": null,
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "multiplier",
+            "dollar",
+            "greater_of"
+          ]
         },
         {
           "name": "increased_claim_breach_privacy",
@@ -5191,7 +5277,11 @@
           "section": "Signature Block",
           "description": "Whether the Provider signatory is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "provider_signatory_name",
@@ -5236,7 +5326,11 @@
           "section": "Signature Block",
           "description": "Whether the Customer signatory is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "customer_signatory_name",
@@ -6124,7 +6218,11 @@
           "section": "Signature Block",
           "description": "Whether the Provider signatory is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "provider_signatory_name",
@@ -6160,7 +6258,11 @@
           "section": "Signature Block",
           "description": "Whether the Customer signatory is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "customer_signatory_name",
@@ -6400,7 +6502,11 @@
           "section": "Signature Block",
           "description": "Whether the Provider signatory is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "provider_signatory_name",
@@ -6445,7 +6551,11 @@
           "section": "Signature Block",
           "description": "Whether the Partner signatory is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "partner_signatory_name",
@@ -6586,7 +6696,11 @@
           "section": "Signature Block",
           "description": "Whether the Company signatory is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "company_signatory_name",
@@ -6631,7 +6745,11 @@
           "section": "Signature Block",
           "description": "Whether the Contractor signatory is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "contractor_signatory_name",
@@ -6745,7 +6863,11 @@
           "section": "Signature Block",
           "description": "Whether the Provider signatory is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "provider_signatory_name",
@@ -6790,7 +6912,11 @@
           "section": "Signature Block",
           "description": "Whether the Customer signatory is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "customer_signatory_name",
@@ -6922,7 +7048,11 @@
           "section": "Signature Block",
           "description": "Whether the first party is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "party_1_name",
@@ -6967,7 +7097,11 @@
           "section": "Signature Block",
           "description": "Whether the second party is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "party_2_name",
@@ -7099,7 +7233,11 @@
           "section": "Signature Block",
           "description": "Whether the Recipient signatory is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "recipient_signatory_name",
@@ -7456,7 +7594,11 @@
           "section": "Signature Block",
           "description": "Whether the Provider signatory is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "provider_signatory_name",
@@ -7501,7 +7643,11 @@
           "section": "Signature Block",
           "description": "Whether the Customer signatory is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "customer_signatory_name",
@@ -7939,7 +8085,11 @@
           "section": "Signature Block",
           "description": "Whether the Provider signatory is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "provider_signatory_name",
@@ -7984,7 +8134,11 @@
           "section": "Signature Block",
           "description": "Whether the Customer signatory is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "customer_signatory_name",
@@ -8485,7 +8639,12 @@
           "section": "Liability",
           "description": "Set to true to select how the General Cap Amount (baseline liability limit) is calculated. \"multiplier\" uses a multiple of fees paid, \"dollar\" uses a fixed dollar amount, \"greater_of\" uses the greater of a dollar amount or a multiple of fees.",
           "default": null,
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "multiplier",
+            "dollar",
+            "greater_of"
+          ]
         },
         {
           "name": "increased_cap_type",
@@ -8494,7 +8653,12 @@
           "section": "Liability",
           "description": "Set to true to select how the Increased Cap Amount (higher liability limit for Increased Claims) is calculated. Same options as general_cap_type.",
           "default": null,
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "multiplier",
+            "dollar",
+            "greater_of"
+          ]
         },
         {
           "name": "increased_claim_breach_conf",
@@ -8647,7 +8811,11 @@
           "section": "Signature Block",
           "description": "Whether the Company signatory is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "company_signatory_name",
@@ -8692,7 +8860,11 @@
           "section": "Signature Block",
           "description": "Whether the Partner signatory is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "partner_signatory_name",
@@ -8923,7 +9095,11 @@
           "section": "Signature Block",
           "description": "Whether the Provider signatory is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "provider_signatory_name",
@@ -8968,7 +9144,11 @@
           "section": "Signature Block",
           "description": "Whether the Customer signatory is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "customer_signatory_name",
@@ -9541,7 +9721,12 @@
           "section": "Liability",
           "description": "How the General Cap Amount (baseline liability limit) is calculated. \"multiplier\" uses a multiple of fees, \"dollar\" uses a fixed amount, \"greater_of\" uses the greater of a dollar amount or a multiple of fees.",
           "default": null,
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "multiplier",
+            "dollar",
+            "greater_of"
+          ]
         },
         {
           "name": "increased_cap_type",
@@ -9550,7 +9735,12 @@
           "section": "Liability",
           "description": "How the Increased Cap Amount (higher liability limit for Increased Claims) is calculated. Same options as general_cap_type.",
           "default": null,
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "multiplier",
+            "dollar",
+            "greater_of"
+          ]
         },
         {
           "name": "increased_claim_breach_privacy",
@@ -9739,7 +9929,11 @@
           "section": "Signature Block",
           "description": "Whether the Provider signatory is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "provider_signatory_name",
@@ -9784,7 +9978,11 @@
           "section": "Signature Block",
           "description": "Whether the Customer signatory is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "customer_signatory_name",
@@ -10110,7 +10308,11 @@
           "section": "Signature Block",
           "description": "Whether the Provider signatory is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "provider_signatory_name",
@@ -10155,7 +10357,11 @@
           "section": "Signature Block",
           "description": "Whether the Customer signatory is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "customer_signatory_name",
@@ -10242,7 +10448,11 @@
           "section": "Signature Block",
           "description": "Whether the first party signatory is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "party_1_signatory_name",
@@ -10287,7 +10497,11 @@
           "section": "Signature Block",
           "description": "Whether the second party signatory is an entity or individual",
           "default": "entity",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "entity",
+            "individual"
+          ]
         },
         {
           "name": "party_2_signatory_name",
@@ -11507,7 +11721,11 @@
           "section": null,
           "description": "Single closing or additional closings",
           "default": "single",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "single",
+            "additional"
+          ]
         },
         {
           "name": "dispute_resolution_mode",
@@ -11516,7 +11734,11 @@
           "section": null,
           "description": "Dispute resolution alternative in SPA (Alternative 1 arbitration or Alternative 2 courts)",
           "default": "courts",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "arbitration",
+            "courts"
+          ]
         },
         {
           "name": "arbitration_location",
@@ -11921,7 +12143,14 @@
           "section": "Cover Sheet",
           "description": "Currency for materiality and financial threshold inputs",
           "default": "USD",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "USD",
+            "EUR",
+            "GBP",
+            "CAD",
+            "Other"
+          ]
         },
         {
           "name": "data_room_url",
@@ -11993,7 +12222,16 @@
           "section": "Deal Type",
           "description": "Type of transaction the DDRL supports",
           "default": null,
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "private_ma_stock_purchase",
+            "private_ma_asset_purchase",
+            "venture_financing",
+            "private_equity_buyout",
+            "ipo_preparation",
+            "public_ma",
+            "cross_border_ma"
+          ]
         },
         {
           "name": "transaction_stage",
@@ -12002,7 +12240,13 @@
           "section": "Deal Type",
           "description": "Stage of the transaction. Pre-LOI uses lighter scope; post-LOI uses the full base form plus all triggered riders.",
           "default": "post_loi_pre_signing",
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "pre_loi",
+            "post_loi_pre_signing",
+            "signing_to_closing",
+            "post_closing_review"
+          ]
         },
         {
           "name": "tech_rider_enabled",
@@ -12444,7 +12688,11 @@
           "section": "Role",
           "description": "Employment basis",
           "default": null,
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "full-time",
+            "part-time"
+          ]
         },
         {
           "name": "start_date",
@@ -12608,7 +12856,14 @@
           "section": "AI Analysis",
           "description": "Employee role classification under Wyo. Stat. section 1-23-108. AI-only field that drives memo warnings. Not shown in the output document.",
           "default": null,
-          "default_value_rationale": null
+          "default_value_rationale": null,
+          "options": [
+            "Executive",
+            "Management",
+            "Professional Staff",
+            "Physician",
+            "Other"
+          ]
         },
         {
           "name": "restriction_pathways",

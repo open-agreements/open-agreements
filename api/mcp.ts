@@ -538,6 +538,7 @@ function normalizedTemplate(template: {
     section: string | null;
     description: string;
     default: string | null;
+    options?: string[];
   }[];
 }) {
   return {

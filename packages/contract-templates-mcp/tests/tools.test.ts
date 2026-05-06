@@ -2,6 +2,8 @@ import AdmZip from 'adm-zip';
 import { afterEach, describe, expect } from 'vitest';
 import { itAllure } from '../../../integration-tests/helpers/allure-test.js';
 import { callTool, listToolDescriptors, _resetModuleCache, _setModuleOverride } from '../src/core/tools.js';
+import { loadMetadata } from '../../../dist/core/metadata.js';
+import { findTemplateDir } from '../../../dist/utils/paths.js';
 
 const XML_ENTITIES: Record<string, string> = {
   '&amp;': '&',
@@ -231,6 +233,47 @@ describe('contract-templates-mcp tools', () => {
     const template = data.template as Record<string, unknown>;
     expect(template.template_id).toBe('common-paper-mutual-nda');
     expect(Array.isArray(template.fields)).toBe(true);
+  });
+
+  it.openspec('OA-DST-061')('get_template returns options for enum fields matching source metadata', async () => {
+    const dir = findTemplateDir('common-paper-mutual-nda');
+    if (!dir) throw new Error('common-paper-mutual-nda template not found on disk');
+    const meta = loadMetadata(dir);
+    const expectedEnumOptions: Record<string, string[]> = Object.fromEntries(
+      meta.fields
+        .filter((f: { type: string }) => f.type === 'enum')
+        .map((f: { name: string; options?: string[] }) => [f.name, f.options ?? []])
+    );
+    expect(Object.keys(expectedEnumOptions).length).toBeGreaterThan(0);
+
+    const result = await callTool('get_template', { template_id: 'common-paper-mutual-nda' });
+    const payload = getPayload(result);
+    expect(result.isError).toBeUndefined();
+    const data = payload.data as Record<string, unknown>;
+    const template = data.template as Record<string, unknown>;
+    const fields = template.fields as Array<Record<string, unknown>>;
+
+    const actualEnumOptions: Record<string, string[]> = Object.fromEntries(
+      fields
+        .filter((f) => f.type === 'enum')
+        .map((f) => [f.name as string, f.options as string[]])
+    );
+    expect(actualEnumOptions).toEqual(expectedEnumOptions);
+  });
+
+  it.openspec('OA-DST-062')('get_template omits options for non-enum field types', async () => {
+    const result = await callTool('get_template', { template_id: 'common-paper-mutual-nda' });
+    const payload = getPayload(result);
+    expect(result.isError).toBeUndefined();
+    const data = payload.data as Record<string, unknown>;
+    const template = data.template as Record<string, unknown>;
+    const fields = template.fields as Array<Record<string, unknown>>;
+
+    const nonEnumFields = fields.filter((f) => f.type !== 'enum');
+    expect(nonEnumFields.length).toBeGreaterThan(0);
+    for (const field of nonEnumFields) {
+      expect(field).not.toHaveProperty('options');
+    }
   });
 
   it.openspec('OA-DST-033')('returns TEMPLATE_NOT_FOUND for an unknown template id', async () => {
