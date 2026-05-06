@@ -235,7 +235,7 @@ function validateDerivedBooleanCollisions(fields: FieldDefinition[], ctx: z.Refi
 }
 
 const TemplateMetadataBaseSchema = z.object({
-  name: z.string(),
+  name: z.string().trim().min(1, 'name must be a non-empty string (used as display_name on list_templates)'),
   description: z.string().optional(),
   category: z.string().optional(),
   source_url: z.string().url(),
@@ -322,7 +322,7 @@ const MarketDataCitationSchema = z.object({
 });
 
 export const RecipeMetadataSchema = z.object({
-  name: z.string(),
+  name: z.string().trim().min(1, 'name must be a non-empty string (used as display_name on list_templates)'),
   category: z.string().optional(),
   description: z.string().optional(),
   source_url: z.string().url(),

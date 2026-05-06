@@ -37,10 +37,43 @@ Error responses now use the same envelope shape with `ok: false` and a structure
 - `get_template` (new)
 - `fill_template` (updated)
 
-## `list_templates` Modes
+## `list_templates` Pagination
 
-- `mode: "compact"` (default): minimal index entries (`template_id`, `name`, `field_count`)
-- `mode: "full"`: full field metadata for each template
+`list_templates` returns a compact-only paginated catalog. The `mode` parameter
+was removed in `schema_version: 2026-05-06` — sending it now returns
+`INVALID_ARGUMENT`. Per-template detail (full field metadata, license, source)
+is available via `get_template`.
+
+**Input:**
+
+- `cursor` (optional): opaque pagination cursor returned by a prior call. Omit on the first page.
+- `limit` (optional): page size, integer in `[1, 100]`, default `25`. Out-of-range values return `INVALID_ARGUMENT`.
+
+**Output (success envelope `data`):**
+
+```jsonc
+{
+  "templates": [
+    {
+      "template_id": "openagreements-restrictive-covenant-wyoming",
+      "display_name": "Wyoming Restrictive Covenant",
+      "category": "employment",
+      "description": "…",
+      "field_count": 28,
+      "priority_field_count": 8
+    }
+  ],
+  "total_count": 45,
+  "next_cursor": null   // string on intermediate pages, null on the last page
+}
+```
+
+Templates are returned in stable lexicographic order by `template_id`. The
+cursor is anchored to the last `template_id` of the previous page, so
+pagination remains stable across catalog additions and removals. To paginate,
+pass the returned `next_cursor` back in `arguments.cursor` on the next call;
+stop when `next_cursor` is `null`. Invalid or expired cursors return
+`INVALID_ARGUMENT`.
 
 ## `fill_template` Return Modes
 

@@ -51,7 +51,7 @@ If the Open Agreements MCP server is connected (remote or local), use these tool
 
 | Tool | Purpose |
 |------|---------|
-| `list_templates` | List available templates (compact by default — name, description, license, source only) |
+| `list_templates` | List available templates as a paginated compact catalog (`template_id`, `display_name`, `category`, `description`, `field_count`, `priority_field_count`). Pages with `cursor` + `limit` (default 25, max 100). |
 | `get_template` | Get full field metadata for a specific template |
 | `fill_template` | Fill a template with values and return a downloadable DOCX |
 | `connect_signing_provider` | Connect DocuSign account via OAuth (returns a URL to open) |
@@ -60,7 +60,7 @@ If the Open Agreements MCP server is connected (remote or local), use these tool
 
 ### MCP Workflow
 
-1. **Discover templates:** Call `list_templates` (returns compact list). If user asked for a specific type (e.g. "NDA"), identify the right template from the list.
+1. **Discover templates:** Call `list_templates` (returns a compact, paginated catalog — page with `cursor` + `limit` until `next_cursor` is `null`). If you know the topic ahead of time, prefer `search_templates` over a full catalog walk. If user asked for a specific type (e.g. "NDA"), identify the right template from the list.
 2. **Get field details:** Call `get_template` with the chosen `template_id` to get full field definitions (name, type, required, section, description, default).
 3. **Collect field values:** Ask the user for values based on the field definitions. Use defaults where the user doesn't specify.
 4. **Fill template:** Call `fill_template` with the template ID and values. Returns a download URL for the DOCX.

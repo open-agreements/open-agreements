@@ -426,9 +426,12 @@ describe('MCP endpoint — api/mcp.ts', () => {
       'send_for_signature',
     ]);
 
-    // Descriptor must advertise the same default the Zod schema enforces.
+    // Descriptor exposes pagination inputs (cursor + limit); mode is removed.
     const listTemplates = tools.find((t: { name: string }) => t.name === 'list_templates');
-    expect(listTemplates.inputSchema.properties.mode.description).toContain('Defaults to "compact"');
+    expect(listTemplates.inputSchema.properties.mode).toBeUndefined();
+    expect(listTemplates.inputSchema.properties.cursor).toBeDefined();
+    expect(listTemplates.inputSchema.properties.limit).toBeDefined();
+    expect(listTemplates.inputSchema.properties.limit.maximum).toBe(100);
   });
 
   it.openspec('OA-DST-024')('handles tools/call list_templates with envelope response', async () => {
@@ -447,9 +450,11 @@ describe('MCP endpoint — api/mcp.ts', () => {
     const envelope = parseMcpEnvelope(res.body);
     expect(envelope.ok).toBe(true);
     expect(envelope.tool).toBe('list_templates');
-    expect(envelope.schema_version).toBe('2026-02-19');
-    expect(envelope.data.mode).toBe('compact');
+    expect(envelope.schema_version).toBe('2026-05-06');
+    expect(envelope.data.mode).toBeUndefined();
     expect(envelope.data.templates).toHaveLength(1);
+    expect(envelope.data.total_count).toBe(1);
+    expect(envelope.data.next_cursor).toBeNull();
     expect(envelope.data.rate_limit).toBeDefined();
   });
 

@@ -207,35 +207,47 @@ describe('MCP contract envelope behaviors', () => {
     expect(res.statusCode).toBe(200);
     expect(envelope.ok).toBe(true);
     expect(envelope.tool).toBe('list_templates');
-    expect(envelope.schema_version).toBe('2026-02-19');
+    expect(envelope.schema_version).toBe('2026-05-06');
     expect(envelope.data.templates).toHaveLength(1);
+    expect(envelope.data.total_count).toBe(1);
+    expect(envelope.data.next_cursor).toBeNull();
     expect(envelope.data.rate_limit).toEqual({ limit: null, remaining: null, reset_at: null, bucket: null });
     expect(envelope.data.auth).toBeNull();
   });
 
-  it.openspec('OA-DST-032')('returns compact and full list_templates payload modes', async () => {
-    const compactReq = createMockReq({
+  it.openspec('OA-DST-054')('returns compact-only list_templates payload with pagination envelope', async () => {
+    const req = createMockReq({
       body: {
         jsonrpc: '2.0',
         id: 2,
         method: 'tools/call',
-        params: { name: 'list_templates', arguments: { mode: 'compact' } },
+        params: { name: 'list_templates', arguments: {} },
       },
     });
-    const compactRes = createMockRes();
-    await mcpHandler(compactReq, compactRes);
+    const res = createMockRes();
+    await mcpHandler(req, res);
 
-    const compactEnvelope = parseEnvelope(compactRes.body);
-    expect(compactEnvelope.ok).toBe(true);
-    expect(compactEnvelope.data.mode).toBe('compact');
-    expect(compactEnvelope.data.templates[0]).toEqual({
+    const envelope = parseEnvelope(res.body);
+    expect(envelope.ok).toBe(true);
+    expect(envelope.data.mode).toBeUndefined();
+    expect(envelope.data.templates[0]).toEqual({
       template_id: 'common-paper-mutual-nda',
-      name: 'common-paper-mutual-nda',
       display_name: 'Common Paper Mutual NDA',
+      category: 'confidentiality',
+      description: 'Mutual NDA',
       field_count: 2,
+      priority_field_count: 1, // company_name is required, purpose is not
     });
+    expect(typeof envelope.data.total_count).toBe('number');
+    expect(envelope.data.next_cursor).toBeNull();
+    // No fields, license, name, or other detail fields leak into the compact shape.
+    expect(envelope.data.templates[0].fields).toBeUndefined();
+    expect(envelope.data.templates[0].license).toBeUndefined();
+    expect(envelope.data.templates[0].name).toBeUndefined();
+  });
 
-    const fullReq = createMockReq({
+  it.openspec('OA-DST-059')('rejects legacy mode parameter on list_templates', async () => {
+    const req = createMockReq({
       body: {
         jsonrpc: '2.0',
         id: 3,
@@ -243,14 +255,12 @@ describe('MCP contract envelope behaviors', () => {
         params: { name: 'list_templates', arguments: { mode: 'full' } },
       },
     });
-    const fullRes = createMockRes();
-    await mcpHandler(fullReq, fullRes);
+    const res = createMockRes();
+    await mcpHandler(req, res);
 
-    const fullEnvelope = parseEnvelope(fullRes.body);
-    expect(fullEnvelope.ok).toBe(true);
-    expect(fullEnvelope.data.mode).toBe('full');
-    expect(fullEnvelope.data.templates[0].template_id).toBe('common-paper-mutual-nda');
-    expect(fullEnvelope.data.templates[0].fields).toHaveLength(2);
+    const envelope = parseEnvelope(res.body);
+    expect(envelope.ok).toBe(false);
+    expect(envelope.error.code).toBe('INVALID_ARGUMENT');
   });
 
   it.openspec('OA-DST-032')('returns get_template found and TEMPLATE_NOT_FOUND envelopes', async () => {
@@ -543,13 +553,13 @@ describe('MCP contract envelope behaviors', () => {
     expect(envelope.error.code).toBe('INVALID_ARGUMENT');
   });
 
-  it.openspec('OA-DST-032')('list_templates full mode includes display_name', async () => {
+  it.openspec('OA-DST-054')('list_templates compact shape includes display_name', async () => {
     const req = createMockReq({
       body: {
         jsonrpc: '2.0',
         id: 23,
         method: 'tools/call',
-        params: { name: 'list_templates', arguments: { mode: 'full' } },
+        params: { name: 'list_templates', arguments: {} },
       },
     });
     const res = createMockRes();
@@ -588,7 +598,7 @@ describe('MCP contract envelope behaviors', () => {
     const envelope = parseEnvelope(res.body);
     expect(envelope.ok).toBe(false);
     expect(envelope.tool).toBe('fill_template');
-    expect(envelope.schema_version).toBe('2026-02-19');
+    expect(envelope.schema_version).toBe('2026-05-06');
     expect(envelope.error.code).toBe('INTERNAL_ERROR');
     expect(envelope.error.retriable).toBe(false);
     expect(envelope.error.message).toContain('Fill failed');
@@ -653,7 +663,7 @@ describe('MCP contract envelope behaviors', () => {
     const envelope = parseEnvelope(res.body);
     expect(envelope.ok).toBe(false);
     expect(envelope.tool).toBe('get_template');
-    expect(envelope.schema_version).toBe('2026-02-19');
+    expect(envelope.schema_version).toBe('2026-05-06');
     expect(envelope.error.code).toBe('INTERNAL_ERROR');
     expect(envelope.error.retriable).toBe(false);
     expect(envelope.error.message).toContain('catalog corruption');

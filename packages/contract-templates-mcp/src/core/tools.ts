@@ -9,12 +9,49 @@ import { z } from 'zod';
 type JsonSchema = Record<string, unknown>;
 
 const execFileAsync = promisify(execFile);
-const SCHEMA_VERSION = '2026-02-26';
+const SCHEMA_VERSION = '2026-05-06';
 const DOCX_MIME = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document';
 
-const ListTemplatesArgsSchema = z.object({
-  mode: z.enum(['compact', 'full']).optional().default('full'),
-});
+const LIST_TEMPLATES_DEFAULT_LIMIT = 25;
+const LIST_TEMPLATES_MAX_LIMIT = 100;
+
+const ListTemplatesArgsSchema = z
+  .object({
+    cursor: z.string().min(1).optional(),
+    limit: z
+      .number()
+      .int()
+      .min(1)
+      .max(LIST_TEMPLATES_MAX_LIMIT)
+      .optional()
+      .default(LIST_TEMPLATES_DEFAULT_LIMIT),
+  })
+  .strict();
+
+class InvalidCursorError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = 'InvalidCursorError';
+  }
+}
+
+function encodeCursor(templateId: string): string {
+  return Buffer.from(`after:${templateId}`, 'utf8').toString('base64');
+}
+
+function decodeCursor(cursor: string): string {
+  let decoded: string;
+  try {
+    decoded = Buffer.from(cursor, 'base64').toString('utf8');
+  } catch {
+    throw new InvalidCursorError('Invalid cursor: not base64-encoded');
+  }
+  const match = /^after:(.+)$/.exec(decoded);
+  if (!match) {
+    throw new InvalidCursorError('Invalid cursor: malformed payload');
+  }
+  return match[1];
+}
 
 const GetTemplateArgsSchema = z.object({
   template_id: z.string().min(1),
@@ -41,6 +78,7 @@ interface TemplateField {
 
 interface TemplateRecord {
   name: string;
+  display_name?: string;
   category: string;
   description: string;
   license: string | null;
@@ -151,14 +189,22 @@ export function _setModuleOverride(modules: RepoModules | null | undefined): voi
 const tools: ToolDefinition[] = [
   {
     name: 'list_templates',
-    description: 'List OpenAgreements templates with compact or full metadata.',
+    description:
+      'List OpenAgreements templates as a paginated compact catalog. ' +
+      'Returns lightweight metadata for discovery — call get_template for full per-field detail. ' +
+      'Templates are returned in stable lexicographic order by template_id.',
     inputSchema: {
       type: 'object',
       properties: {
-        mode: {
+        cursor: {
           type: 'string',
-          enum: ['compact', 'full'],
-          description: 'Response detail mode. Defaults to "full".',
+          description: 'Opaque pagination cursor returned by a prior call. Omit on the first page.',
+        },
+        limit: {
+          type: 'integer',
+          minimum: 1,
+          maximum: LIST_TEMPLATES_MAX_LIMIT,
+          description: `Page size (default ${LIST_TEMPLATES_DEFAULT_LIMIT}, max ${LIST_TEMPLATES_MAX_LIMIT}).`,
         },
       },
       additionalProperties: false,
@@ -167,16 +213,26 @@ const tools: ToolDefinition[] = [
     invoke: async (args) => {
       const input = ListTemplatesArgsSchema.parse(args ?? {});
       const items = await loadTemplates();
-      if (input.mode === 'compact') {
-        return successResult('list_templates', {
-          mode: 'compact',
-          templates: items.map((item) => compactTemplate(item)),
-        });
+
+      let startIndex = 0;
+      if (input.cursor !== undefined) {
+        const afterId = decodeCursor(input.cursor);
+        const found = items.findIndex((t) => t.name.localeCompare(afterId) > 0);
+        if (found === -1) {
+          throw new InvalidCursorError('Invalid cursor: points beyond catalog tail');
+        }
+        startIndex = found;
       }
 
+      const page = items.slice(startIndex, startIndex + input.limit);
+      const consumed = startIndex + page.length;
+      const nextCursor =
+        page.length > 0 && consumed < items.length ? encodeCursor(page[page.length - 1].name) : null;
+
       return successResult('list_templates', {
-        mode: 'full',
-        templates: items.map((item) => normalizeTemplate(item)),
+        templates: page.map((item) => compactTemplate(item)),
+        total_count: items.length,
+        next_cursor: nextCursor,
       });
     },
   },
@@ -333,9 +389,24 @@ export async function callTool(name: string, args: unknown): Promise<ToolCallRes
   try {
     return await tool.invoke(args);
   } catch (error) {
+    if (error instanceof z.ZodError) {
+      return toolError(name, 'INVALID_ARGUMENT', formatZodError(error));
+    }
+    if (error instanceof InvalidCursorError) {
+      return toolError(name, 'INVALID_ARGUMENT', error.message);
+    }
     const message = error instanceof Error ? error.message : String(error);
     return toolError(name, 'INVALID_ARGUMENT', message);
   }
+}
+
+function formatZodError(error: z.ZodError): string {
+  return error.issues
+    .map((issue) => {
+      const path = issue.path.length > 0 ? issue.path.join('.') : '<root>';
+      return `${path}: ${issue.message}`;
+    })
+    .join('; ');
 }
 
 async function loadTemplates(): Promise<TemplateRecord[]> {
@@ -373,10 +444,14 @@ function stripDisplayLabels(fields: TemplateField[]): TemplateField[] {
 }
 
 function compactTemplate(template: TemplateRecord): Record<string, unknown> {
+  const trimmedDisplayName = template.display_name?.trim();
   return {
     template_id: template.name,
-    name: template.name,
+    display_name: trimmedDisplayName && trimmedDisplayName.length > 0 ? trimmedDisplayName : template.name,
+    category: template.category,
+    description: template.description,
     field_count: template.fields.length,
+    priority_field_count: template.fields.filter((field) => field.required).length,
   };
 }
 
