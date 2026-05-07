@@ -1165,6 +1165,14 @@ fields MUST be `null`.
 - **AND** browser GET returns HTML, non-browser GET returns 405
 - **AND** success envelopes include `data.rate_limit` with fields `limit`, `remaining`, `reset_at`, and `bucket` (all `null` when the limiter is unconfigured or fails open)
 
+#### Scenario: [OA-DST-054] Signing tools emit v2 envelope contract
+- **WHEN** signing tools (`send_for_signature`, `check_signature_status`) are called through the MCP endpoint
+- **THEN** success responses use the same v2 envelope shape as template tools, with `ok: true`, `schema_version`, `tool`, and `data` containing business fields and `rate_limit` metadata
+- **AND** error responses use `ok: false` with `error.code`, `error.message`, `error.retriable`, and `error.details.reason` carrying the signing domain error code
+- **AND** `INVALID_DOCUMENT` errors map to `INVALID_ARGUMENT`, all other signing domain errors map to `INTERNAL_ERROR`
+- **AND** no response contains the legacy `{tool, status, code, message}` flat format
+- **AND** the auth gate (`AUTH_REQUIRED_TOOLS`) fires before `handleSigningToolCall`, returning HTTP 401 for unauthenticated requests
+
 ### Requirement: MCP Template Discovery Preserves Array Item Schemas
 The MCP `get_template` tool SHALL surface nested array item schemas so clients
 can construct valid object-array payloads for `{FOR}`-based templates.
