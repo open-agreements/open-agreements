@@ -1,6 +1,10 @@
 ---
 template_id: closing-checklist
 title: Closing Checklist
+document:
+  title: Closing Checklist
+  version: "2.1"
+  license: CC0-1.0
 ---
 
 # {deal_name} — Closing Checklist
