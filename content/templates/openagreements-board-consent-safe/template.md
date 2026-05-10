@@ -23,12 +23,16 @@ sections:
 
 # Board Consent for SAFE Financing
 
-## Standard Terms
+<!-- oa:section type=recitals -->
+## Recitals
+
+**WHEREAS**, the Board believes it is in the best interests of the Company to enter into one or more Simple Agreements for Future Equity (each, a "SAFE", and together, the "SAFEs"), providing for the sale of rights to future shares of the Company's capital stock for an aggregate purchase amount of up to ${purchase_amount}, in accordance with terms set forth therein.
+
+<!-- oa:section type=standard_terms -->
+## Resolutions
 
 <!-- oa:clause id=approval-of-safe-financing -->
 ### Approval of SAFE Financing
-
-**WHEREAS**, the Board believes it is in the best interests of the Company to enter into one or more Simple Agreements for Future Equity (each, a "SAFE", and together, the "SAFEs"), providing for the sale of rights to future shares of the Company's capital stock for an aggregate purchase amount of up to ${purchase_amount}, in accordance with terms set forth therein.
 
 **RESOLVED**, that each SAFE, in substantially the form presented to the Board, be, and it hereby is, approved in all respects;
 
@@ -47,6 +51,7 @@ sections:
 
 **RESOLVED**, that the officers of the Company be, and each of them hereby is, authorized and directed, for and on behalf of the Company, to take such further actions and execute such documents as may be necessary or appropriate in order to implement the foregoing resolutions.
 
+<!-- oa:section type=signature -->
 ## Signatures
 
 <!-- oa:signature-mode arrangement=stacked repeat=board_members item=member -->

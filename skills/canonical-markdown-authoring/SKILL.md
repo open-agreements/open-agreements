@@ -53,10 +53,16 @@ A canonical `template.md` has these parts in this order:
 3. **`## Cover Terms`** — short subtitle paragraph followed by a
    `Kind | Label | Value | Show When` table with `{snake_case}` field
    placeholders.
-4. **`## Standard Terms`** — clauses, each preceded by `<!-- oa:clause id=... -->`.
-   The first clause should be `Defined Terms` with `type=definitions`.
-5. **`## Signatures`** — `<!-- oa:signature-mode arrangement=... -->` followed by
-   exactly two `<!-- oa:signer ... -->` blocks.
+4. **Optional `recitals` section** — `<!-- oa:section type=recitals -->`
+   followed by an H2 such as `## Recitals` and one or more recital paragraphs.
+5. **Operative section** — `<!-- oa:section type=standard_terms -->` followed
+   by an author-chosen H2 such as `## Standard Terms`, `## Resolutions`, or
+   `## Terms`. Clauses live here, each preceded by `<!-- oa:clause id=... -->`.
+   The first clause should be `Defined Terms` with `type=definitions` when a
+   definitions clause is needed.
+6. **Signature section** — `<!-- oa:section type=signature -->` followed by the
+   signature H2 and then `<!-- oa:signature-mode arrangement=... -->` plus the
+   signer blocks.
 
 ## Step-by-step conversion
 
@@ -98,6 +104,10 @@ Notes:
   (a hidden, do-not-edit-by-hand artifact).
 - Do **not** add `output_markdown_path` or `outputs.markdown` — the canonical
   compiler rejects them. The canonical `template.md` *is* the source.
+- For directive-backed sections, the body H2 that follows `oa:section` is the
+  rendered heading source of truth. Keep the frontmatter `sections` metadata in
+  place, but treat the body heading as authoritative for the visible section
+  title.
 
 ### Step 2 — Title (H1)
 
@@ -141,11 +151,14 @@ Rules:
   - `<field_name>` — rendered only when the boolean field is truthy. The
     field's name must satisfy `^[a-z_][a-z0-9_]*$`.
 
-### Step 4 — Standard Terms clauses
+### Step 4 — Directive-anchored body sections
 
-Every clause gets a directive, then a `### Heading`, then prose paragraphs:
+Every operative section starts with an `oa:section` directive. The H2 that
+follows may be author-chosen. Every clause inside the operative section then
+gets an `oa:clause` directive, a `### Heading`, and prose paragraphs:
 
 ```markdown
+<!-- oa:section type=standard_terms -->
 ## Standard Terms
 
 <!-- oa:clause id=assignment-of-inventions -->
@@ -160,6 +173,26 @@ interest in Covered Inventions, to the extent permitted by law.
 During the Restricted Period, Employee must not engage in any Competitive Business
 within the Restricted Territory.
 ```
+
+If the document needs standalone WHEREAS-style recitals, author them in a
+separate `recitals` section before the operative section:
+
+```markdown
+<!-- oa:section type=recitals -->
+## Recitals
+
+**WHEREAS**, Company is considering a financing transaction.
+
+**WHEREAS**, the board has reviewed the proposed terms.
+
+<!-- oa:section type=standard_terms -->
+## Resolutions
+```
+
+`oa:section` types:
+- `standard_terms` — required operative clause section
+- `signature` — required signature section
+- `recitals` — optional recital-only section
 
 Directive attributes:
 - `id` — slug, kebab-case, unique within the document. Used for stable
@@ -192,9 +225,10 @@ other IP ownership, use a present-tense operative grant such as `hereby assigns`
 
 ### Step 5 — Defined Terms clause (use when it earns its keep)
 
-Use a Defined Terms clause as the **first** clause under `## Standard Terms`
-when a capitalized concept needs an explicit anchor or when a longer definition
-materially shortens later operative clauses.
+Use a Defined Terms clause as the **first** clause in the
+`oa:section type=standard_terms` operative section when a capitalized concept
+needs an explicit anchor or when a longer definition materially shortens later
+operative clauses.
 
 Before adding a definition, ask:
 
@@ -263,6 +297,7 @@ explicit linking semantics.
 ### Step 7 — Signatures section
 
 ```markdown
+<!-- oa:section type=signature -->
 ## Signatures
 
 <!-- oa:signature-mode arrangement=entity-plus-individual -->
@@ -408,6 +443,7 @@ The terms below are incorporated into and form part of this agreement.
 | row | Effective Date | {effective_date} | always |
 | row | Confidentiality Term | {confidentiality_term} | always |
 
+<!-- oa:section type=standard_terms -->
 ## Standard Terms
 
 <!-- oa:clause id=defined-terms type=definitions -->
@@ -433,6 +469,7 @@ Each party's confidentiality obligations apply for the Confidentiality Term
 listed in Cover Terms, beginning on the Effective Date. Trade-secret
 obligations survive indefinitely.
 
+<!-- oa:section type=signature -->
 ## Signatures
 
 <!-- oa:signature-mode arrangement=stacked -->

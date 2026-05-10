@@ -143,6 +143,10 @@ export const contractSpecSchema = z.object({
       subtitle: textSchema,
       rows: z.array(coverRowSchema).min(1),
     }).optional(),
+    recitals: z.object({
+      heading_title: textSchema,
+      body: textSchema,
+    }).optional(),
     standard_terms: z.object({
       section_label: textSchema,
       heading_title: textSchema,

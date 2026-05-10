@@ -56,6 +56,7 @@ The terms below are incorporated into and form part of this agreement.
 | group | Non-Disparagement |  | always |
 | subrow | Duration | {nondisparagement_duration} | always |
 
+<!-- oa:section type=standard_terms -->
 ## Standard Terms
 
 <!-- oa:clause id=defined-terms type=definitions -->
@@ -181,6 +182,7 @@ This agreement is governed by the law listed in Cover Terms, including Wyo. Stat
 
 This agreement constitutes the entire agreement between the parties regarding its subject matter and supersedes all prior agreements, understandings, and negotiations on this subject. This agreement may be amended only in writing signed by both parties. A party's failure to enforce any provision does not waive that party's right to enforce it later. This agreement may be executed in counterparts, including by electronic signature, each of which is an original.
 
+<!-- oa:section type=signature -->
 ## Signatures
 
 <!-- oa:signature-mode arrangement=entity-plus-individual -->

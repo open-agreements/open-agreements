@@ -171,6 +171,10 @@ function clauseHeadingParagraph(heading, style) {
   });
 }
 
+function sectionHeadingParagraph(heading, style) {
+  return clauseHeadingParagraph(heading, style);
+}
+
 function paragraphsFromBody(body, style) {
   return body
     .split('\n')
@@ -339,14 +343,24 @@ function renderMarkdown(spec) {
     lines.push(document.opening_recital);
     lines.push('');
   }
+  if (sections.recitals) {
+    lines.push(`## ${sections.recitals.heading_title}`);
+    lines.push('');
+    lines.push(sections.recitals.body);
+    lines.push('');
+  }
+  lines.push(`## ${sections.standard_terms.heading_title}`);
+  lines.push('');
   for (const clause of sections.standard_terms.clauses) {
     if (clause.type === 'definitions') continue;
-    lines.push(`## ${clause.heading}`);
+    lines.push(`### ${clause.heading}`);
     lines.push('');
     lines.push(clause.body);
     lines.push('');
   }
   lines.push('[Signature Page Follows]');
+  lines.push('');
+  lines.push(`## ${sections.signature.heading_title}`);
   lines.push('');
   appendSignatureMarkdown(lines, sections.signature);
   return lines.join('\n');
@@ -368,6 +382,13 @@ export function renderTraditionalConsentV1(spec, baseStyle) {
       bodyChildren.push(para);
     }
   }
+  if (sections.recitals) {
+    bodyChildren.push(sectionHeadingParagraph(sections.recitals.heading_title, style));
+    for (const para of paragraphsFromBody(sections.recitals.body, style)) {
+      bodyChildren.push(para);
+    }
+  }
+  bodyChildren.push(sectionHeadingParagraph(sections.standard_terms.heading_title, style));
   for (const clause of sections.standard_terms.clauses) {
     for (const para of clauseParagraphs(clause, style)) {
       bodyChildren.push(para);
@@ -376,6 +397,7 @@ export function renderTraditionalConsentV1(spec, baseStyle) {
   bodyChildren.push(signaturePageBreakParagraph(style));
 
   const signatureChildren = [];
+  signatureChildren.push(sectionHeadingParagraph(sections.signature.heading_title, style));
   for (const para of signaturePreambleParagraphs(sections.signature.preamble, style)) {
     signatureChildren.push(para);
   }
