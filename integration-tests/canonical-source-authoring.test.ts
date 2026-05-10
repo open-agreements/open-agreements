@@ -84,6 +84,29 @@ Date: _______________
 }
 
 describe('canonical Markdown authoring', () => {
+  it.openspec('OA-TMP-054')('renders directive-anchored sections from body H2 titles', () => {
+    const style = loadStyleProfile(stylePath);
+    const directiveAnchoredSource = buildCanonicalSource()
+      .replace('## Standard Terms', '<!-- oa:section type=standard_terms -->\n## Operative Terms')
+      .replace('## Signatures', '<!-- oa:section type=signature -->\n## Execution');
+
+    const compiled = compileCanonicalSourceString(directiveAnchoredSource, 'inline directive-anchored source');
+    const rendered = renderFromValidatedSpec(compiled.contractSpec, style);
+
+    expect(compiled.contractSpec.sections.standard_terms.heading_title).toBe('Operative Terms');
+    expect(compiled.contractSpec.sections.signature.heading_title).toBe('Execution');
+    expect(rendered.markdown).toContain('## Operative Terms');
+    expect(rendered.markdown).toContain('## Execution');
+    expect(rendered.markdown).not.toContain('## Standard Terms');
+  });
+
+  it.openspec('OA-TMP-055')('accepts legacy required section titles without section directives', () => {
+    const compiled = compileCanonicalSourceString(buildCanonicalSource(), 'inline legacy section source');
+
+    expect(compiled.contractSpec.sections.standard_terms.heading_title).toBe('Standard Terms');
+    expect(compiled.contractSpec.sections.signature.heading_title).toBe('Signatures');
+  });
+
   it.openspec('OA-TMP-033')('compiles label-keyed cover terms and paragraph-based definitions with aliases', () => {
     const compiled = compileCanonicalSourceString(buildCanonicalSource(), 'inline canonical source');
     const rows = compiled.contractSpec.sections.cover_terms.rows;

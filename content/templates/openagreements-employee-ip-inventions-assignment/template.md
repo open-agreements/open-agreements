@@ -43,6 +43,7 @@ The key business terms of this assignment agreement are as follows.
 | row | Governing Law | {governing_law} | always |
 | row | Venue | {venue} | always |
 
+<!-- oa:section type=standard_terms -->
 ## Standard Terms
 
 <!-- oa:clause id=defined-terms type=definitions -->
@@ -117,6 +118,7 @@ Employee may not assign this agreement. Company may assign it to an affiliate, s
 
 This agreement is governed by the law listed in Cover Terms, and disputes will be resolved in the venue listed in Cover Terms, subject to non-waivable rights under applicable law.
 
+<!-- oa:section type=signature -->
 ## Signatures
 
 <!-- oa:signature-mode arrangement=entity-plus-individual -->

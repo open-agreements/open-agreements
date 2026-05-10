@@ -95,7 +95,7 @@ function normalizeText(value: string): string {
 }
 
 describe('Canonical SAFE board consent (traditional)', () => {
-  it.openspec(['OA-TMP-037', 'OA-TMP-047'])('compiles canonical board consent source and metadata', () => {
+  it.openspec(['OA-TMP-037', 'OA-TMP-047', 'OA-TMP-056'])('compiles canonical board consent source and metadata', () => {
     const compiled = compileCanonicalSourceFile(SOURCE_PATH);
     const metadata = loadMetadata(TEMPLATE_DIR);
 
@@ -105,7 +105,12 @@ describe('Canonical SAFE board consent (traditional)', () => {
     expect(compiled.contractSpec.document.opening_note).toBeTruthy();
     expect(compiled.contractSpec.document.opening_recital).toContain('Section 141(f)');
     expect(compiled.contractSpec.sections.cover_terms).toBeUndefined();
+    expect(compiled.contractSpec.sections.recitals).toMatchObject({
+      heading_title: 'Recitals',
+    });
+    expect(compiled.contractSpec.sections.standard_terms.heading_title).toBe('Resolutions');
     expect(compiled.contractSpec.sections.signature).toMatchObject({
+      heading_title: 'Signatures',
       mode: 'signers',
       arrangement: 'stacked',
       repeat: {
@@ -123,7 +128,7 @@ describe('Canonical SAFE board consent (traditional)', () => {
     );
   });
 
-  it.openspec(['OA-TMP-032', 'OA-TMP-037', 'OA-TMP-046', 'OA-TMP-048'])('renders DOCX from the canonical board consent source with traditional structure', async () => {
+  it.openspec(['OA-TMP-032', 'OA-TMP-037', 'OA-TMP-046', 'OA-TMP-048', 'OA-TMP-056'])('renders DOCX from the canonical board consent source with traditional structure', async () => {
     const style = loadStyleProfile(STYLE_PATH);
     const compiled = compileCanonicalSourceFile(SOURCE_PATH);
     const rendered = renderFromValidatedSpec(compiled.contractSpec, style);
@@ -139,12 +144,16 @@ describe('Canonical SAFE board consent (traditional)', () => {
     expect(compiled.contractSpec.document.opening_note).toContain('Note: The following resolutions');
     expect(generatedText).not.toContain('Note: The following resolutions');
     expect(generatedText).toContain('pursuant to Section 141(f) of the Delaware General Corporation Law');
+    expect(generatedText).toContain('Recitals');
+    expect(generatedText).toContain('Resolutions');
     expect(generatedText).toContain('Approval of SAFE Financing');
     expect(generatedText).toContain('General Authorizing Resolution');
     expect(generatedText).toContain('WHEREAS, the Board believes');
     expect(generatedText).toContain('RESOLVED, that each SAFE');
     expect(generatedText).toContain('RESOLVED FURTHER, that the officers');
     expect(generatedText).toContain('[Signature Page Follows]');
+    expect(generatedText).toContain('Signatures');
+    expect(generatedText).not.toContain('Standard Terms');
 
     // Loop placeholders preserved before fill.
     expect(generatedText).toContain('{FOR member IN board_members}');
@@ -163,7 +172,7 @@ describe('Canonical SAFE board consent (traditional)', () => {
     expect(generatedText).not.toContain('Governing Law');
   });
 
-  it.openspec(['OA-TMP-037', 'OA-TMP-048'])('fills board consent without leaving signer loop markers', async () => {
+  it.openspec(['OA-TMP-037', 'OA-TMP-048', 'OA-TMP-056'])('fills board consent without leaving signer loop markers', async () => {
     const outputDir = mkdtempSync(join(tmpdir(), 'board-consent-fill-'));
     tempDirs.push(outputDir);
     const outputPath = join(outputDir, 'filled.docx');
@@ -189,6 +198,8 @@ describe('Canonical SAFE board consent (traditional)', () => {
     expect(filledText).toContain('ACTION BY UNANIMOUS WRITTEN CONSENT OF THE BOARD OF DIRECTORS OF Acme Labs, Inc.');
     expect(filledText).not.toContain('Note: The following resolutions');
     expect(filledText).toContain('pursuant to Section 141(f)');
+    expect(filledText).toContain('Recitals');
+    expect(filledText).toContain('Resolutions');
     expect(filledText).toContain('Approval of SAFE Financing');
     expect(filledText).toContain('General Authorizing Resolution');
     expect(filledText).toContain('Acme Labs, Inc.');
@@ -204,6 +215,7 @@ describe('Canonical SAFE board consent (traditional)', () => {
     expect(filledText).not.toContain('{END-FOR ');
     expect(filledText).not.toContain('{$member.name}');
     expect(filledText).not.toContain('{company_name}');
+    expect(filledText).toContain('Signatures');
 
     // Negative: no cover table or modern artifacts.
     expect(filledXml).not.toMatch(/<w:tbl[\s>]/);
