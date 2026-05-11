@@ -100,11 +100,75 @@ describe('canonical Markdown authoring', () => {
     expect(rendered.markdown).not.toContain('## Standard Terms');
   });
 
+  it.openspec('OA-TMP-055')('prefers directive-anchored standard terms when both anchor mechanisms are present', () => {
+    const sourceWithBothAnchors = buildCanonicalSource()
+      .replace(
+        /## Standard Terms[\s\S]*?(?=## Signatures)/,
+        `<!-- oa:section type=standard_terms -->
+## Resolutions
+
+<!-- oa:clause id=directive-clause -->
+### Directive Clause
+
+Directive body.
+
+## Standard Terms
+
+<!-- oa:clause id=legacy-clause -->
+### Legacy Clause
+
+Legacy body.
+
+`
+      );
+
+    const compiled = compileCanonicalSourceString(sourceWithBothAnchors, 'inline source with both standard terms anchors');
+
+    expect(compiled.contractSpec.sections.standard_terms.heading_title).toBe('Resolutions');
+    expect(compiled.contractSpec.sections.standard_terms.clauses).toMatchObject([
+      {
+        id: 'directive-clause',
+        heading: 'Directive Clause',
+        body: 'Directive body.',
+      },
+    ]);
+    expect(compiled.contractSpec.sections.standard_terms.clauses).not.toContainEqual(
+      expect.objectContaining({ id: 'legacy-clause' })
+    );
+  });
+
   it.openspec('OA-TMP-055')('accepts legacy required section titles without section directives', () => {
     const compiled = compileCanonicalSourceString(buildCanonicalSource(), 'inline legacy section source');
 
     expect(compiled.contractSpec.sections.standard_terms.heading_title).toBe('Standard Terms');
     expect(compiled.contractSpec.sections.signature.heading_title).toBe('Signatures');
+  });
+
+  it.openspec('OA-TMP-054')('rejects sources that omit both standard terms anchor mechanisms', () => {
+    expect(() =>
+      compileCanonicalSourceString(
+        buildCanonicalSource().replace('## Standard Terms', '## Resolutions'),
+        'inline source missing standard terms anchors'
+      )
+    ).toThrow(/missing required "<!-- oa:section type=standard_terms -->" directive or "## Standard Terms" section/);
+  });
+
+  it.openspec('OA-TMP-054')('rejects oa:section directives that are not followed by a top-level heading', () => {
+    expect(() =>
+      compileCanonicalSourceString(
+        buildCanonicalSource().replace('## Standard Terms', '<!-- oa:section type=standard_terms -->\nNot a heading'),
+        'inline source with dangling standard terms directive'
+      )
+    ).toThrow(/oa:section type=standard_terms must be followed by a top-level "## Heading"/);
+  });
+
+  it.openspec('OA-TMP-054')('rejects unsupported oa:section type values', () => {
+    expect(() =>
+      compileCanonicalSourceString(
+        buildCanonicalSource().replace('## Standard Terms', '<!-- oa:section type=bogus -->\n## Resolutions'),
+        'inline source with unsupported section type'
+      )
+    ).toThrow(/uses unsupported oa:section type "bogus"/);
   });
 
   it.openspec('OA-TMP-033')('compiles label-keyed cover terms and paragraph-based definitions with aliases', () => {
