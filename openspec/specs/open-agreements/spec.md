@@ -1165,7 +1165,7 @@ fields MUST be `null`.
 - **AND** browser GET returns HTML, non-browser GET returns 405
 - **AND** success envelopes include `data.rate_limit` with fields `limit`, `remaining`, `reset_at`, and `bucket` (all `null` when the limiter is unconfigured or fails open)
 
-#### Scenario: [OA-DST-054] Signing tools emit v2 envelope contract
+#### Scenario: [OA-DST-063] Signing tools emit v2 envelope contract
 - **WHEN** signing tools (`send_for_signature`, `check_signature_status`) are called through the MCP endpoint
 - **THEN** success responses use the same v2 envelope shape as template tools, with `ok: true`, `schema_version`, `tool`, and `data` containing business fields and `rate_limit` metadata
 - **AND** error responses use `ok: false` with `error.code`, `error.message`, `error.retriable`, and `error.details.reason` carrying the signing domain error code
