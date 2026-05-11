@@ -118,6 +118,10 @@ Notes:
 Keep the H1 text identical to `document.title`. There is no automatic
 cross-validation today, but drift between the two is a known footgun.
 
+If the rendered title or section heading differs from the raw markdown, see
+"Sharp edges and renderer transforms" below for the body-vs.-frontmatter
+source-of-truth map.
+
 ### Step 3 — Cover Terms section
 
 Open with one short subtitle paragraph, then the `Kind | Label | Value | Show When`
@@ -190,6 +194,7 @@ separate `recitals` section before the operative section:
 ```
 
 `oa:section` types:
+
 - `standard_terms` — required operative clause section
 - `signature` — required signature section
 - `recitals` — optional recital-only section
@@ -343,27 +348,35 @@ markdown, check these first:
 - **Body H1 is anchor-only.** Keep the `# ...` line readable for humans
   navigating the raw `.md`, but the rendered title comes from frontmatter
   `document.title`. If they drift, the artifact follows frontmatter.
-- **The H2 after `<!-- oa:section -->` is rendered.** Post-#285, that H2 is
-  the visible section heading, so choose names that read well in the output.
-  Example: `<!-- oa:section type=standard_terms -->` + `## Resolutions`
-  renders `Resolutions`; the same directive + `## Standard Terms` renders
-  `Standard Terms`.
+- **The H2 after `<!-- oa:section -->` becomes the in-document section
+  heading.** Post-#285, that H2 is the visible section title in the body, so
+  choose names that read well in the output. Example:
+  `<!-- oa:section type=standard_terms -->` + `## Resolutions` renders
+  `Resolutions` as the in-document heading; the same directive +
+  `## Standard Terms` renders `Standard Terms`. Note that on
+  `cover-standard-signature-v1`, the **running page header** is separately
+  driven by frontmatter `sections.<name>.section_label` — if you rename the
+  body H2 but leave `section_label` alone, the page header will not change.
 - **`[Signature Page Follows]` is renderer-inserted.** Authors do not write
   that string in canonical source. The `traditional-consent-v1` layout always
   inserts `[Signature Page Follows]` between the operative section and the
   signature section, so seeing it in output but not source is expected.
-- **Repeat-backed signer loop references get `$` auto-prefixed.** In repeated
-  signature blocks, write `{stockholder.name}` in the canonical source. The
-  parser rewrites it to `{$stockholder.name}` in generated artifacts, so do
-  not "fix" the `$` you see there.
+- **Signer row values in repeat-backed signature sections get `$`
+  auto-prefixed.** In a repeat-backed signature section, write
+  `{stockholder.name}` in canonical source. The parser rewrites it to
+  `{$stockholder.name}` in generated artifacts, so do not "fix" the `$`
+  you see there. This rewrite is scoped to signer row values; it does not
+  fire for other loop contexts.
 
 Use this quick source-of-truth map when deciding where authored text will show
 up:
 
 - Body `# <H1>` -> anchor-only for raw `.md`; not rendered in the artifact
 - Body `## <heading>` immediately after `<!-- oa:section type=... -->` ->
-  rendered as the section heading
+  rendered as the in-document section heading
 - Body `### <clause heading>` plus following paragraphs -> rendered
+- Frontmatter `sections.<name>.section_label` -> running page header in
+  `cover-standard-signature-v1` (independent of the body H2)
 - Body recital paragraphs under `<!-- oa:section type=recitals -->` ->
   rendered in the optional recital section (currently only `traditional-consent-v1`
   emits a recital section; `cover-standard-signature-v1` ignores it)
