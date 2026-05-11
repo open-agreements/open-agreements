@@ -2,7 +2,7 @@
  * Contract tests for MCP response envelopes and tool behaviors.
  */
 
-import { afterEach, describe, expect, vi } from 'vitest';
+import { afterEach, beforeEach, describe, expect, vi } from 'vitest';
 import { itAllure, allureJsonAttachment } from './helpers/allure-test.js';
 
 const it = itAllure.epic('Platform & Distribution');
@@ -134,6 +134,60 @@ vi.mock('../api/_ratelimit.js', async () => {
     checkRateLimit: checkRateLimitMock,
   };
 });
+
+// Mock jose so verifyAuth's jwtVerify resolves with a valid signing-scoped
+// payload. Without this, every signing request short-circuits at the auth
+// gate and the envelope assertions below never execute. The 401-invariant
+// test explicitly drops the Authorization header so verifyAuth bails before
+// reaching jwtVerify, keeping that path honest.
+const { SigningErrorMock, callSigningToolMock, setSigningContextMock } = vi.hoisted(() => {
+  type SigningErrorCode =
+    | 'NO_SIGNING_PROVIDER'
+    | 'INVALID_DOCUMENT'
+    | 'NOT_FOUND'
+    | 'SEND_FAILED'
+    | 'STATUS_FAILED'
+    | 'DISCONNECT_FAILED';
+  class SigningErrorMock extends Error {
+    constructor(
+      public readonly code: SigningErrorCode,
+      message: string,
+      public readonly retriable: boolean = false,
+    ) {
+      super(message);
+      this.name = 'SigningError';
+    }
+  }
+  return {
+    SigningErrorMock,
+    callSigningToolMock: vi.fn<(name: string, args: Record<string, unknown>) => Promise<Record<string, unknown> | null>>(),
+    setSigningContextMock: vi.fn(),
+  };
+});
+
+// Default: jwtVerify rejects, matching real behavior with an unrecognized
+// token. The signing envelope tests opt into a successful verification via
+// jwtVerifyMock.mockResolvedValueOnce(...) so existing auth_denied tests
+// stay honest.
+const jwtVerifyMock = vi.hoisted(() =>
+  vi.fn(async () => {
+    throw new Error('signature verification failed');
+  }),
+);
+vi.mock('jose', () => ({
+  jwtVerify: jwtVerifyMock,
+  createRemoteJWKSet: vi.fn(() => () => undefined),
+}));
+
+vi.mock('../packages/signing/src/mcp-tools.js', () => ({
+  SigningError: SigningErrorMock,
+  setSigningContext: setSigningContextMock,
+  callSigningTool: callSigningToolMock,
+}));
+
+vi.mock('../packages/signing/src/context.js', () => ({
+  createSigningContext: vi.fn(() => ({})),
+}));
 
 interface MockRes {
   statusCode: number;
@@ -1175,11 +1229,15 @@ describe('MCP rate limiting', () => {
 // ---------------------------------------------------------------------------
 
 describe('Signing tools v2 envelope contract (#225)', () => {
-  // These tests verify that signing tools (send_for_signature,
-  // check_signature_status) emit the same v2 envelope shape as template
-  // tools, with proper error code mapping via SigningError.
+  // Verify that signing tools (send_for_signature, check_signature_status)
+  // emit the same v2 envelope shape as template tools, with proper error-code
+  // mapping via SigningError. The signing package is mocked so callSigningTool
+  // returns deterministic success data or throws SigningError per test.
 
-  // Helper: create a request for a signing tool with valid JWT auth.
+  beforeEach(() => {
+    callSigningToolMock.mockReset();
+  });
+
   function createAuthenticatedSigningReq(toolName: string, toolArgs: Record<string, unknown>, id: number) {
     return createMockReq({
       headers: {
@@ -1196,10 +1254,16 @@ describe('Signing tools v2 envelope contract (#225)', () => {
     });
   }
 
-  it.openspec('OA-DST-054')('send_for_signature happy path returns v2 success envelope', async () => {
+  it.openspec('OA-DST-063')('send_for_signature happy path returns v2 success envelope', async () => {
     vi.stubEnv('OA_DOCUSIGN_INTEGRATION_KEY', 'test-ik');
     vi.stubEnv('OA_DOCUSIGN_SECRET_KEY', 'test-sk');
     vi.stubEnv('OA_GCLOUD_ENCRYPTION_KEY', 'deadbeef');
+    jwtVerifyMock.mockResolvedValueOnce({ payload: { sub: 'test-user', scope: 'signing' } } as never);
+    callSigningToolMock.mockResolvedValueOnce({
+      envelope_id: 'env-abc-123',
+      status: 'sent',
+      sign_url: 'https://example.com/sign/env-abc-123',
+    });
 
     const req = createAuthenticatedSigningReq('send_for_signature', {
       download_url: 'https://example.com/doc.docx',
@@ -1208,102 +1272,107 @@ describe('Signing tools v2 envelope contract (#225)', () => {
     const res = createMockRes();
     await mcpHandler(req, res);
 
-    // If auth gate fires (401), the test still validates the auth-first invariant.
-    // When auth is bypassed (200), we verify the full v2 envelope contract.
-    if (res.statusCode === 200) {
-      const envelope = parseEnvelope(res.body);
-      expect(envelope.ok).toBeDefined();
-      expect(envelope.schema_version).toBe('2026-02-19');
-      expect(envelope.tool).toBe('send_for_signature');
-      if (envelope.ok) {
-        expect(envelope.data).toBeDefined();
-        expect(typeof envelope.data).toBe('object');
-        expect(envelope.data.rate_limit).toBeDefined();
-        expect(envelope.data.auth).toBeNull();
-      }
-    } else {
-      // Auth gate fired first — 401 is acceptable (auth tests cover this).
-      expect(res.statusCode).toBe(401);
-    }
+    expect(callSigningToolMock).toHaveBeenCalledWith(
+      'send_for_signature',
+      expect.objectContaining({ download_url: 'https://example.com/doc.docx' }),
+    );
+    expect(res.statusCode).toBe(200);
+    const envelope = parseEnvelope(res.body);
+    expect(envelope.ok).toBe(true);
+    expect(envelope.schema_version).toBe('2026-05-06');
+    expect(envelope.tool).toBe('send_for_signature');
+    const data = asObject(envelope.data);
+    expect(data.envelope_id).toBe('env-abc-123');
+    expect(data.status).toBe('sent');
+    expect(data.rate_limit).toEqual({ limit: null, remaining: null, reset_at: null, bucket: null });
+    expect(data.auth).toBeNull();
+    expect(envelope).not.toHaveProperty('status');
   });
 
-  it.openspec('OA-DST-054')('signing tool error produces v2 error envelope (not legacy status:error)', async () => {
+  it.openspec('OA-DST-063')('signing tool error produces v2 error envelope (not legacy status:error)', async () => {
     vi.stubEnv('OA_DOCUSIGN_INTEGRATION_KEY', 'test-ik');
     vi.stubEnv('OA_DOCUSIGN_SECRET_KEY', 'test-sk');
     vi.stubEnv('OA_GCLOUD_ENCRYPTION_KEY', 'deadbeef');
+    jwtVerifyMock.mockResolvedValueOnce({ payload: { sub: 'test-user', scope: 'signing' } } as never);
+    callSigningToolMock.mockRejectedValueOnce(
+      new SigningErrorMock('SEND_FAILED', 'DocuSign returned 502', true),
+    );
 
     const req = createAuthenticatedSigningReq('send_for_signature', {
+      download_url: 'https://example.com/doc.docx',
       signers: [{ name: 'Bob', email: 'bob@example.com' }],
     }, 201);
     const res = createMockRes();
     await mcpHandler(req, res);
 
-    if (res.statusCode === 200) {
-      const envelope = parseEnvelope(res.body);
-      expect(envelope.schema_version).toBe('2026-02-19');
-      expect(typeof envelope.ok).toBe('boolean');
-
-      if (!envelope.ok) {
-        expect(envelope.error).toBeDefined();
-        expect(envelope.error.code).toBeDefined();
-        expect(envelope.error.message).toBeDefined();
-        expect(typeof envelope.error.retriable).toBe('boolean');
-        // Must NOT have legacy 'status' field at top level
-        expect((envelope as any).status).toBeUndefined();
-      }
-    } else {
-      expect(res.statusCode).toBe(401);
-    }
+    expect(callSigningToolMock).toHaveBeenCalledTimes(1);
+    const envelope = parseEnvelope(res.body);
+    expect(envelope.ok).toBe(false);
+    expect(envelope.schema_version).toBe('2026-05-06');
+    expect(envelope.tool).toBe('send_for_signature');
+    const error = asObject(envelope.error);
+    // SEND_FAILED → INTERNAL_ERROR (only INVALID_DOCUMENT maps to INVALID_ARGUMENT).
+    expect(error.code).toBe('INTERNAL_ERROR');
+    expect(error.message).toBe('DocuSign returned 502');
+    expect(error.retriable).toBe(true);
+    expect(asObject(error.details).reason).toBe('SEND_FAILED');
+    // No legacy {status, code, message} flat shape at envelope root.
+    expect(envelope).not.toHaveProperty('status');
   });
 
-  it.openspec('OA-DST-054')('signing auth gate fires before signing handler (401 invariant)', async () => {
-    // Without valid auth, signing tools return 401 before handleSigningToolCall.
+  it.openspec('OA-DST-063')('signing auth gate fires before signing handler (401 invariant)', async () => {
+    // No Authorization header → verifyAuth returns 401 before reaching jwtVerify
+    // or handleSigningToolCall. callSigningTool must never be invoked.
     vi.stubEnv('OA_DOCUSIGN_INTEGRATION_KEY', '');
     vi.stubEnv('OA_DOCUSIGN_SECRET_KEY', '');
     vi.stubEnv('OA_GCLOUD_ENCRYPTION_KEY', '');
 
-    const req = createAuthenticatedSigningReq('send_for_signature', {
-      signers: [{ name: 'Carol', email: 'carol@example.com' }],
-    }, 202);
+    const req = createMockReq({
+      body: {
+        jsonrpc: '2.0',
+        id: 202,
+        method: 'tools/call',
+        params: {
+          name: 'send_for_signature',
+          arguments: { signers: [{ name: 'Carol', email: 'carol@example.com' }] },
+        },
+      },
+    });
     const res = createMockRes();
     await mcpHandler(req, res);
 
-    // Auth gate fires first → 401. This is correct and expected.
     expect(res.statusCode).toBe(401);
+    expect(callSigningToolMock).not.toHaveBeenCalled();
     const body = asObject(res.body);
     const error = asObject(body.error);
     expect(error.code).toBe(-32001);
   });
 
-  it.openspec('OA-DST-054')('v2 envelope never contains legacy status:error format', async () => {
+  it.openspec('OA-DST-063')('INVALID_DOCUMENT maps to INVALID_ARGUMENT (and no legacy flat error shape)', async () => {
     vi.stubEnv('OA_DOCUSIGN_INTEGRATION_KEY', 'test-ik');
     vi.stubEnv('OA_DOCUSIGN_SECRET_KEY', 'test-sk');
     vi.stubEnv('OA_GCLOUD_ENCRYPTION_KEY', 'deadbeef');
+    jwtVerifyMock.mockResolvedValueOnce({ payload: { sub: 'test-user', scope: 'signing' } } as never);
+    callSigningToolMock.mockRejectedValueOnce(
+      new SigningErrorMock('INVALID_DOCUMENT', 'Document URL not reachable', false),
+    );
 
     const req = createAuthenticatedSigningReq('check_signature_status', {
-      envelope_id: 'nonexistent-envelope-id',
+      envelope_id: 'env-xyz',
     }, 203);
     const res = createMockRes();
     await mcpHandler(req, res);
 
-    if (res.statusCode === 200) {
-      const envelope = parseEnvelope(res.body);
-      // STRUCTURAL ASSERTION: v2 envelope must have these fields
-      expect(envelope).toHaveProperty('ok');
-      expect(envelope).toHaveProperty('schema_version');
-      expect(envelope).toHaveProperty('tool');
-
-      // STRUCTURAL ASSERTION: legacy fields must NOT be present
-      expect(envelope).not.toHaveProperty('status');
-
-      if (!envelope.ok) {
-        // Error shape must match v2 contract
-        expect(envelope.error).toHaveProperty('code');
-        expect(envelope.error).toHaveProperty('message');
-        expect(envelope.error).toHaveProperty('retriable');
-      }
-    } else {
-      expect(res.statusCode).toBe(401);
-    }
+    const envelope = parseEnvelope(res.body);
+    expect(envelope.ok).toBe(false);
+    const error = asObject(envelope.error);
+    expect(error.code).toBe('INVALID_ARGUMENT');
+    expect(error.retriable).toBe(false);
+    expect(asObject(error.details).reason).toBe('INVALID_DOCUMENT');
+    // Structural: required v2 fields present, legacy fields absent.
+    expect(envelope).toHaveProperty('ok', false);
+    expect(envelope).toHaveProperty('schema_version');
+    expect(envelope).toHaveProperty('tool', 'check_signature_status');
+    expect(envelope).not.toHaveProperty('status');
   });
 });
