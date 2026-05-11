@@ -334,6 +334,45 @@ Strict rules (the `cover-standard-signature-v1` layout enforces these):
 - `kind` is `entity`, `individual`, or `acknowledging-individual`.
 - `capacity` is `through_representative`, `personal`, or `acknowledging`.
 
+### Sharp edges and renderer transforms
+
+A few parts of canonical `template.md` are structural-only in source or
+normalized by the renderer. If the artifact looks different from the raw
+markdown, check these first:
+
+- **Body H1 is anchor-only.** Keep the `# ...` line readable for humans
+  navigating the raw `.md`, but the rendered title comes from frontmatter
+  `document.title`. If they drift, the artifact follows frontmatter.
+- **The H2 after `<!-- oa:section -->` is rendered.** Post-#285, that H2 is
+  the visible section heading, so choose names that read well in the output.
+  Example: `<!-- oa:section type=standard_terms -->` + `## Resolutions`
+  renders `Resolutions`; the same directive + `## Standard Terms` renders
+  `Standard Terms`.
+- **`[Signature Page Follows]` is renderer-inserted.** Authors do not write
+  that string in canonical source. The `traditional-consent-v1` layout always
+  inserts `[Signature Page Follows]` between the operative section and the
+  signature section, so seeing it in output but not source is expected.
+- **Repeat-backed signer loop references get `$` auto-prefixed.** In repeated
+  signature blocks, write `{stockholder.name}` in the canonical source. The
+  parser rewrites it to `{$stockholder.name}` in generated artifacts, so do
+  not "fix" the `$` you see there.
+
+Use this quick source-of-truth map when deciding where authored text will show
+up:
+
+- Body `# <H1>` -> anchor-only for raw `.md`; not rendered in the artifact
+- Body `## <heading>` immediately after `<!-- oa:section type=... -->` ->
+  rendered as the section heading
+- Body `### <clause heading>` plus following paragraphs -> rendered
+- Body recital paragraphs under `<!-- oa:section type=recitals -->` ->
+  rendered in the optional recital section
+- Frontmatter `document.title` -> rendered as the document title
+- Frontmatter `document.opening_recital` -> rendered before the operative
+  section
+- Frontmatter `document.label`, `document.version`, and `document.license` ->
+  rendered as layout metadata outside the clause body; exact placement varies
+  by layout
+
 ### Step 8 — Generate and verify
 
 ```bash
