@@ -100,7 +100,7 @@ describe('canonical Markdown authoring', () => {
     expect(rendered.markdown).not.toContain('## Standard Terms');
   });
 
-  it.openspec('OA-TMP-054')('prefers directive-anchored standard terms when both anchor mechanisms are present', () => {
+  it.openspec('OA-TMP-055')('prefers directive-anchored standard terms when both anchor mechanisms are present', () => {
     const sourceWithBothAnchors = buildCanonicalSource()
       .replace(
         /## Standard Terms[\s\S]*?(?=## Signatures)/,
