@@ -49,4 +49,5 @@ export { createSigningContext } from './context.js';
 export type { SigningContext, SigningContextConfig } from './context.js';
 
 // MCP tool definitions for signing (moved from contract-templates-mcp)
-export { signingTools, setSigningContext, listSigningToolDescriptors } from './mcp-tools.js';
+export { signingTools, setSigningContext, listSigningToolDescriptors, SigningError } from './mcp-tools.js';
+export type { SigningErrorCode } from './mcp-tools.js';
