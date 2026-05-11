@@ -1182,6 +1182,28 @@ fields MUST be `null`.
 - **AND** no response contains the legacy `{tool, status, code, message}` flat format
 - **AND** the auth gate (`AUTH_REQUIRED_TOOLS`) fires before `handleSigningToolCall`, returning HTTP 401 for unauthenticated requests
 
+### Requirement: MCP Template Discovery Preserves Field Metadata
+The MCP `get_template` tool SHALL surface field metadata details that agents
+need to construct valid fill payloads. This includes nested array item schemas
+for `{FOR}`-based templates and the `options` allowlist for `enum` and
+`multiselect` fields so agents can pick or validate values without parsing
+free-form descriptions or fetching `metadata.yaml` out of band.
+
+#### Scenario: [OA-DST-033] get_template returns array item schemas
+- **GIVEN** a template with an array field that declares nested `items`
+- **WHEN** a client calls `get_template`
+- **THEN** the returned field metadata includes the nested array item schema unchanged
+
+#### Scenario: [OA-DST-061] get_template returns options for enum and multiselect fields
+- **GIVEN** a template with an `enum` or `multiselect` field declaring an `options` array
+- **WHEN** a client calls `get_template`
+- **THEN** the returned field metadata includes the `options` array with the same values as the source metadata
+
+#### Scenario: [OA-DST-062] get_template omits options for non-enum/non-multiselect fields
+- **GIVEN** a template with `string`, `date`, `number`, `boolean`, or `array` fields
+- **WHEN** a client calls `get_template`
+- **THEN** none of those fields include an `options` key in the returned metadata
+
 ### Requirement: Employment Memo Generation
 The employment memo generator MUST produce disclaimers, findings, jurisdiction
 warnings, and language-guarded output for matching employment templates.
@@ -1753,26 +1775,3 @@ operative resolutions while preserving rendered legal content.
 - **AND** RESOLVED clauses compile into the operative section
 - **AND** the rendered traditional consent output preserves the recital text,
   resolution text, ordering, and signature behavior
-
-### Requirement: MCP Template Discovery Preserves Field Metadata
-The MCP `get_template` tool SHALL surface field metadata details that agents
-need to construct valid fill payloads. This includes nested array item schemas
-for `{FOR}`-based templates and the `options` allowlist for `enum` and
-`multiselect` fields so agents can pick or validate values without parsing
-free-form descriptions or fetching `metadata.yaml` out of band.
-
-#### Scenario: [OA-DST-033] get_template returns array item schemas
-- **GIVEN** a template with an array field that declares nested `items`
-- **WHEN** a client calls `get_template`
-- **THEN** the returned field metadata includes the nested array item schema unchanged
-
-#### Scenario: [OA-DST-061] get_template returns options for enum and multiselect fields
-- **GIVEN** a template with an `enum` or `multiselect` field declaring an `options` array
-- **WHEN** a client calls `get_template`
-- **THEN** the returned field metadata includes the `options` array with the same values as the source metadata
-
-#### Scenario: [OA-DST-062] get_template omits options for non-enum/non-multiselect fields
-- **GIVEN** a template with `string`, `date`, `number`, `boolean`, or `array` fields
-- **WHEN** a client calls `get_template`
-- **THEN** none of those fields include an `options` key in the returned metadata
-
