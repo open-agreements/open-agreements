@@ -15,6 +15,12 @@ const BRACKET_REFERENCE_RE = /\[\[([^[\]]+?)\]\]/g;
 const FIELD_NAME_RE = /^[a-z_][a-z0-9_]*$/;
 const ALWAYS = 'always';
 const LEADING_ARTICLE_RE = /^(?:a|an|the)$/i;
+const SECTION_TYPES = ['standard_terms', 'signature', 'recitals'];
+const SECTION_TYPE_SET = new Set(SECTION_TYPES);
+const LEGACY_REQUIRED_SECTION_TITLES = new Map([
+  ['standard_terms', 'Standard Terms'],
+  ['signature', 'Signatures'],
+]);
 
 function invariant(condition, message) {
   if (!condition) {
@@ -73,15 +79,48 @@ function splitTopLevelSections(body, filePath) {
   const lines = body.split(/\r?\n/);
   let currentTitle = null;
   let currentLines = [];
+  let currentType = null;
+  let pendingSectionType = null;
+
+  function flushCurrentSection() {
+    if (!currentTitle) {
+      return;
+    }
+    sections.push({ title: currentTitle, lines: currentLines, type: currentType });
+    currentTitle = null;
+    currentLines = [];
+    currentType = null;
+  }
 
   for (const line of lines) {
+    const directive = directiveFromLine(line);
+    if (directive?.name === 'section') {
+      flushCurrentSection();
+      invariant(!pendingSectionType, `Canonical source (${filePath}) declares oa:section more than once before the next top-level heading`);
+      invariant(directive.attrs.type, `Canonical source (${filePath}) oa:section directive is missing a type`);
+      invariant(
+        SECTION_TYPE_SET.has(directive.attrs.type),
+        `Canonical source (${filePath}) uses unsupported oa:section type "${directive.attrs.type}"`
+      );
+      pendingSectionType = directive.attrs.type;
+      continue;
+    }
+
     const match = line.match(TOP_LEVEL_SECTION_RE);
     if (match) {
-      if (currentTitle) {
-        sections.push({ title: currentTitle, lines: currentLines });
-      }
+      flushCurrentSection();
       currentTitle = normalizeNumberedHeading(match[1]);
       currentLines = [];
+      currentType = pendingSectionType;
+      pendingSectionType = null;
+      continue;
+    }
+
+    if (pendingSectionType) {
+      invariant(
+        line.trim().length === 0,
+        `Canonical source (${filePath}) oa:section type=${pendingSectionType} must be followed by a top-level "## Heading"`
+      );
       continue;
     }
 
@@ -90,18 +129,26 @@ function splitTopLevelSections(body, filePath) {
     }
   }
 
-  if (currentTitle) {
-    sections.push({ title: currentTitle, lines: currentLines });
-  }
+  invariant(
+    !pendingSectionType,
+    `Canonical source (${filePath}) has an oa:section directive that is not followed by a top-level "## Heading"`
+  );
+  flushCurrentSection();
 
-  const byTitle = new Map(sections.map((section) => [section.title, section.lines]));
-  for (const requiredTitle of ['Standard Terms', 'Signatures']) {
-    if (!byTitle.has(requiredTitle)) {
-      throw new Error(`Canonical source (${filePath}) is missing required "## ${requiredTitle}" section`);
+  const byTitle = new Map(sections.map((section) => [section.title, section]));
+  const byType = new Map();
+  for (const section of sections) {
+    if (!section.type) {
+      continue;
     }
+    invariant(
+      !byType.has(section.type),
+      `Canonical source (${filePath}) declares oa:section type=${section.type} more than once`
+    );
+    byType.set(section.type, section);
   }
 
-  return byTitle;
+  return { byTitle, byType };
 }
 
 function paragraphsFromLines(lines) {
@@ -388,6 +435,12 @@ function parseStandardTerms(lines, filePath) {
   return clauses;
 }
 
+function parseRecitals(lines, filePath) {
+  const body = paragraphTextFromLines(lines);
+  invariant(body.length > 0, `Canonical source (${filePath}) recitals section must not be empty`);
+  return body;
+}
+
 function normalizeSignatureValue(value) {
   return /^_+$/.test(value) ? '' : value;
 }
@@ -639,7 +692,19 @@ function normalizeCanonicalTemplate(frontmatter, sections, filePath) {
           })),
         },
       } : {}),
+      ...(sections.recitals ? {
+        recitals: {
+          heading_title: sections.recitals.heading_title,
+          body: resolveExplicitReferences(
+            sections.recitals.body,
+            definitionRegistry,
+            clauseHeadings,
+            filePath
+          ),
+        },
+      } : {}),
       standard_terms: {
+        heading_title: sections.standard_terms.heading_title,
         clauses: sections.standard_terms.clauses.map((clause) => (
           clause.type === 'definitions'
             ? {
@@ -664,6 +729,7 @@ function normalizeCanonicalTemplate(frontmatter, sections, filePath) {
         )),
       },
       signature: {
+        heading_title: sections.signature.heading_title,
         arrangement: sections.signature.arrangement,
         ...(sections.signature.repeat ? { repeat: sections.signature.repeat } : {}),
         preamble: resolveExplicitReferences(
@@ -724,9 +790,15 @@ function projectToContractSpec(normalized, frontmatter, filePath) {
           })),
         },
       } : {}),
+      ...(normalized.sections.recitals ? {
+        recitals: {
+          heading_title: normalized.sections.recitals.heading_title,
+          body: normalized.sections.recitals.body,
+        },
+      } : {}),
       standard_terms: {
         section_label: frontmatter.sections.standard_terms.section_label,
-        heading_title: frontmatter.sections.standard_terms.heading_title,
+        heading_title: normalized.sections.standard_terms.heading_title,
         clauses: normalized.sections.standard_terms.clauses.map((clause) => (
           clause.type === 'definitions'
             ? {
@@ -753,7 +825,7 @@ function projectToContractSpec(normalized, frontmatter, filePath) {
         arrangement: normalized.sections.signature.arrangement,
         ...(normalized.sections.signature.repeat ? { repeat: normalized.sections.signature.repeat } : {}),
         section_label: frontmatter.sections.signature.section_label,
-        heading_title: frontmatter.sections.signature.heading_title,
+        heading_title: normalized.sections.signature.heading_title,
         preamble: normalized.sections.signature.preamble,
         signers: normalized.sections.signature.signers.map((signer) => ({
           id: signer.id,
@@ -769,19 +841,52 @@ function projectToContractSpec(normalized, frontmatter, filePath) {
 
 export function compileCanonicalSourceString(raw, filePath = 'canonical source') {
   const { frontmatter, body } = parseCanonicalFrontmatter(raw, filePath);
-  const sectionLines = splitTopLevelSections(body, filePath);
+  const topLevelSections = splitTopLevelSections(body, filePath);
 
   assertCanonicalIdentity(frontmatter, filePath);
   invariant(frontmatter.document, `Canonical source (${filePath}) is missing document frontmatter`);
 
+  function requiredSection(sectionType) {
+    const directiveSection = topLevelSections.byType.get(sectionType);
+    if (directiveSection) {
+      return directiveSection;
+    }
+
+    const legacyTitle = LEGACY_REQUIRED_SECTION_TITLES.get(sectionType);
+    invariant(legacyTitle, `Canonical source (${filePath}) uses unsupported required section type "${sectionType}"`);
+    const legacySection = topLevelSections.byTitle.get(legacyTitle);
+    invariant(
+      legacySection,
+      `Canonical source (${filePath}) is missing required "<!-- oa:section type=${sectionType} -->" directive or "## ${legacyTitle}" section`
+    );
+    return legacySection;
+  }
+
+  const coverTermsSection = topLevelSections.byTitle.get('Cover Terms');
+  const recitalsSection = topLevelSections.byType.get('recitals');
+  const standardTermsSection = requiredSection('standard_terms');
+  const signatureSection = requiredSection('signature');
+
   const normalized = normalizeCanonicalTemplate(frontmatter, {
-    ...(sectionLines.has('Cover Terms')
-      ? { cover_terms: parseCoverTerms(sectionLines.get('Cover Terms'), filePath) }
+    ...(coverTermsSection
+      ? { cover_terms: parseCoverTerms(coverTermsSection.lines, filePath) }
+      : {}),
+    ...(recitalsSection
+      ? {
+          recitals: {
+            heading_title: recitalsSection.title,
+            body: parseRecitals(recitalsSection.lines, filePath),
+          },
+        }
       : {}),
     standard_terms: {
-      clauses: parseStandardTerms(sectionLines.get('Standard Terms'), filePath),
+      heading_title: standardTermsSection.title,
+      clauses: parseStandardTerms(standardTermsSection.lines, filePath),
     },
-    signature: parseSignatures(sectionLines.get('Signatures'), filePath),
+    signature: {
+      heading_title: signatureSection.title,
+      ...parseSignatures(signatureSection.lines, filePath),
+    },
   }, filePath);
 
   return {

@@ -44,6 +44,7 @@ The key business terms of this Employment Offer Letter are as follows.
 | row | Governing Law | {governing_law} | always |
 | row | Offer Expiration Date | {offer_expiration_date} | always |
 
+<!-- oa:section type=standard_terms -->
 ## Standard Terms
 
 <!-- oa:clause id=position-scope-and-reporting -->
@@ -106,6 +107,7 @@ This offer letter and any dispute regarding its interpretation are governed by t
 
 This offer expires on the date listed in Cover Terms unless extended in writing by Company. By accepting, Employee acknowledges this letter summarizes key employment terms and that any changes must be set out in a later written document authorized by Company.
 
+<!-- oa:section type=signature -->
 ## Signatures
 
 <!-- oa:signature-mode arrangement=entity-plus-individual -->

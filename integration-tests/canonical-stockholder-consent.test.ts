@@ -95,7 +95,7 @@ function extractStyleBlock(stylesXml: string, styleId: string): string {
 }
 
 describe('Canonical SAFE stockholder consent (traditional)', () => {
-  it.openspec(['OA-TMP-038', 'OA-TMP-047'])('compiles canonical stockholder consent source and metadata', () => {
+  it.openspec(['OA-TMP-038', 'OA-TMP-047', 'OA-TMP-056'])('compiles canonical stockholder consent source and metadata', () => {
     const compiled = compileCanonicalSourceFile(SOURCE_PATH);
     const metadata = loadMetadata(TEMPLATE_DIR);
 
@@ -104,7 +104,12 @@ describe('Canonical SAFE stockholder consent (traditional)', () => {
     expect(compiled.contractSpec.document.version).toBe('1.2');
     expect(compiled.contractSpec.document.opening_recital).toContain('Section 228');
     expect(compiled.contractSpec.sections.cover_terms).toBeUndefined();
+    expect(compiled.contractSpec.sections.recitals).toMatchObject({
+      heading_title: 'Recitals',
+    });
+    expect(compiled.contractSpec.sections.standard_terms.heading_title).toBe('Resolutions');
     expect(compiled.contractSpec.sections.signature).toMatchObject({
+      heading_title: 'Signatures',
       mode: 'signers',
       arrangement: 'stacked',
       repeat: {
@@ -117,7 +122,7 @@ describe('Canonical SAFE stockholder consent (traditional)', () => {
     );
   });
 
-  it.openspec(['OA-TMP-038', 'OA-TMP-046', 'OA-TMP-048'])('renders DOCX from the canonical stockholder consent source with traditional structure', async () => {
+  it.openspec(['OA-TMP-038', 'OA-TMP-046', 'OA-TMP-048', 'OA-TMP-056'])('renders DOCX from the canonical stockholder consent source with traditional structure', async () => {
     const style = loadStyleProfile(STYLE_PATH);
     const compiled = compileCanonicalSourceFile(SOURCE_PATH);
     const rendered = renderFromValidatedSpec(compiled.contractSpec, style);
@@ -133,11 +138,15 @@ describe('Canonical SAFE stockholder consent (traditional)', () => {
     expect(generatedText).not.toContain('Note: The following resolutions');
     expect(generatedText).toContain('pursuant to Section 228 of the Delaware General Corporation Law');
     expect(generatedText).toContain('such later effectiveness shall not exceed 60 days');
+    expect(generatedText).toContain('Recitals');
+    expect(generatedText).toContain('Resolutions');
     expect(generatedText).toContain('Approval of SAFE Financing');
     expect(generatedText).toContain('General Authorizing Resolution');
     expect(generatedText).toContain('WHEREAS, the Company');
     expect(generatedText).toContain('RESOLVED, that each SAFE');
     expect(generatedText).toContain('[Signature Page Follows]');
+    expect(generatedText).toContain('Signatures');
+    expect(generatedText).not.toContain('Standard Terms');
 
     expect(generatedText).toContain('{FOR stockholder IN stockholders}');
     expect(generatedText).toContain('{$stockholder.name}');
@@ -150,7 +159,7 @@ describe('Canonical SAFE stockholder consent (traditional)', () => {
     expect(generatedText).not.toContain('Governing Law');
   });
 
-  it.openspec(['OA-TMP-038', 'OA-TMP-048'])('fills stockholder consent without leaving signer loop markers', async () => {
+  it.openspec(['OA-TMP-038', 'OA-TMP-048', 'OA-TMP-056'])('fills stockholder consent without leaving signer loop markers', async () => {
     const outputDir = mkdtempSync(join(tmpdir(), 'stockholder-consent-fill-'));
     tempDirs.push(outputDir);
     const outputPath = join(outputDir, 'filled.docx');
@@ -174,6 +183,8 @@ describe('Canonical SAFE stockholder consent (traditional)', () => {
     const filledXml = extractDocxXml(outputPath);
 
     expect(filledText).toContain('ACTION BY WRITTEN CONSENT OF THE STOCKHOLDERS OF Acme Labs, Inc.');
+    expect(filledText).toContain('Recitals');
+    expect(filledText).toContain('Resolutions');
     expect(filledText).toContain('Approval of SAFE Financing');
     expect(filledText).toContain('Acme Labs, Inc.');
     expect(filledText).toContain('Alex Holder');
@@ -186,6 +197,7 @@ describe('Canonical SAFE stockholder consent (traditional)', () => {
     expect(filledText).not.toContain('{END-FOR ');
     expect(filledText).not.toContain('{$stockholder.name}');
     expect(filledText).not.toContain('{company_name}');
+    expect(filledText).toContain('Signatures');
 
     expect(filledXml).not.toMatch(/<w:tbl[\s>]/);
     expect(filledText).not.toContain('Cover Terms');

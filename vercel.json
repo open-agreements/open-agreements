@@ -32,7 +32,6 @@
       ]
     }
   ],
-  "$comment": "Load-bearing redirects: the marketing and trust source pages were deleted from this repo, so these routes must keep forwarding to usejunior.com.",
   "redirects": [
     { "source": "/", "destination": "https://usejunior.com/developer-tools/open-agreements", "statusCode": 301 },
     { "source": "/templates", "destination": "https://usejunior.com/developer-tools/open-agreements/templates", "statusCode": 301 },
