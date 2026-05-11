@@ -1272,9 +1272,15 @@ describe('Signing tools v2 envelope contract (#225)', () => {
     const res = createMockRes();
     await mcpHandler(req, res);
 
+    // Proves verified JWT sub → __auth_sub → api_key transport handoff
+    // (api/mcp.ts:879-880). Without this, signing tools would fail with
+    // NO_SIGNING_PROVIDER at packages/signing/src/mcp-tools.ts:228.
     expect(callSigningToolMock).toHaveBeenCalledWith(
       'send_for_signature',
-      expect.objectContaining({ download_url: 'https://example.com/doc.docx' }),
+      expect.objectContaining({
+        download_url: 'https://example.com/doc.docx',
+        api_key: 'test-user',
+      }),
     );
     expect(res.statusCode).toBe(200);
     const envelope = parseEnvelope(res.body);
@@ -1306,6 +1312,10 @@ describe('Signing tools v2 envelope contract (#225)', () => {
     await mcpHandler(req, res);
 
     expect(callSigningToolMock).toHaveBeenCalledTimes(1);
+    expect(callSigningToolMock).toHaveBeenCalledWith(
+      'send_for_signature',
+      expect.objectContaining({ api_key: 'test-user' }),
+    );
     const envelope = parseEnvelope(res.body);
     expect(envelope.ok).toBe(false);
     expect(envelope.schema_version).toBe('2026-05-06');
@@ -1316,6 +1326,9 @@ describe('Signing tools v2 envelope contract (#225)', () => {
     expect(error.message).toBe('DocuSign returned 502');
     expect(error.retriable).toBe(true);
     expect(asObject(error.details).reason).toBe('SEND_FAILED');
+    // Proves the `instanceof SigningError` branch fired, not the generic
+    // catch fallback ("Signing not configured" / "Signing error: ...").
+    expect(String(error.message)).not.toMatch(/Signing not configured|Signing error:/);
     // No legacy {status, code, message} flat shape at envelope root.
     expect(envelope).not.toHaveProperty('status');
   });
@@ -1363,6 +1376,10 @@ describe('Signing tools v2 envelope contract (#225)', () => {
     const res = createMockRes();
     await mcpHandler(req, res);
 
+    expect(callSigningToolMock).toHaveBeenCalledWith(
+      'check_signature_status',
+      expect.objectContaining({ api_key: 'test-user' }),
+    );
     const envelope = parseEnvelope(res.body);
     expect(envelope.ok).toBe(false);
     const error = asObject(envelope.error);
@@ -1374,5 +1391,29 @@ describe('Signing tools v2 envelope contract (#225)', () => {
     expect(envelope).toHaveProperty('schema_version');
     expect(envelope).toHaveProperty('tool', 'check_signature_status');
     expect(envelope).not.toHaveProperty('status');
+  });
+
+  it.openspec('OA-DST-063')('rejects signing call when Authorization header is present but token verification fails', async () => {
+    // Authorization header present, but jwtVerifyMock left on its default
+    // reject path → verifyAuth must return 401 and callSigningTool must
+    // never be invoked. Makes the default-rejecting `jose` mock's behavior
+    // explicit (not just implicit through the no-header test above).
+    vi.stubEnv('OA_DOCUSIGN_INTEGRATION_KEY', 'test-ik');
+    vi.stubEnv('OA_DOCUSIGN_SECRET_KEY', 'test-sk');
+    vi.stubEnv('OA_GCLOUD_ENCRYPTION_KEY', 'deadbeef');
+
+    const req = createAuthenticatedSigningReq('send_for_signature', {
+      download_url: 'https://example.com/doc.docx',
+      signers: [{ name: 'Dave', email: 'dave@example.com' }],
+    }, 204);
+    const res = createMockRes();
+    await mcpHandler(req, res);
+
+    expect(jwtVerifyMock).toHaveBeenCalled();
+    expect(res.statusCode).toBe(401);
+    expect(callSigningToolMock).not.toHaveBeenCalled();
+    const body = asObject(res.body);
+    const error = asObject(body.error);
+    expect(error.code).toBe(-32001);
   });
 });
