@@ -365,13 +365,20 @@ up:
   rendered as the section heading
 - Body `### <clause heading>` plus following paragraphs -> rendered
 - Body recital paragraphs under `<!-- oa:section type=recitals -->` ->
-  rendered in the optional recital section
+  rendered in the optional recital section (currently only `traditional-consent-v1`
+  emits a recital section; `cover-standard-signature-v1` ignores it)
 - Frontmatter `document.title` -> rendered as the document title
 - Frontmatter `document.opening_recital` -> rendered before the operative
-  section
-- Frontmatter `document.label`, `document.version`, and `document.license` ->
-  rendered as layout metadata outside the clause body; exact placement varies
-  by layout
+  section by `traditional-consent-v1`; not consumed by
+  `cover-standard-signature-v1`
+- Frontmatter `document.label` and `document.version` -> rendered in the
+  layout footer; exact placement varies by layout
+- Frontmatter `document.license` -> consumed in the Markdown export, but
+  both current DOCX layouts hardcode the footer license string as
+  "Free to use under CC BY 4.0." rather than reading frontmatter. All
+  first-party templates currently use that license so the output happens
+  to match, but don't expect a non-CC-BY-4.0 license to flow through to
+  the DOCX footer today.
 
 ### Step 8 — Generate and verify
 
