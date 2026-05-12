@@ -3,7 +3,7 @@
 ### Requirement: Claude and Gemini Integration Guidance
 The workspace tooling SHALL provide optional setup guidance for Claude Code and Gemini CLI that references `CONTRACTS.md` as the canonical collaboration ruleset, and SHALL support Gemini extension manifests that can declare multiple local MCP servers for separate capabilities.
 
-#### Scenario: [OA-WKS-004] Workspace init emits AI integration guidance
+#### Scenario: [OA-WKS-005] Workspace init emits AI integration guidance
 - **WHEN** a user runs `open-agreements-workspace init --agents claude,gemini`
 - **THEN** the tool emits or writes integration instructions for Claude Code and Gemini CLI
 - **AND** references `CONTRACTS.md` as required collaboration context

@@ -55,7 +55,7 @@ function mockModules(overrides: Record<string, unknown> = {}): any {
 }
 
 describe('contract-templates-mcp tools', () => {
-  it.openspec('OA-DST-033')('lists expected tools', () => {
+  it.openspec('OA-DST-078')('lists expected tools', () => {
     const names = listToolDescriptors().map((tool) => tool.name);
     // Signing tools moved to @open-agreements/signing (breaking change)
     expect(names).toEqual([
@@ -224,7 +224,7 @@ describe('contract-templates-mcp tools', () => {
     }
   });
 
-  it.openspec('OA-DST-033')('get_template returns a known template by ID', async () => {
+  it.openspec('OA-DST-078')('get_template returns a known template by ID', async () => {
     const result = await callTool('get_template', { template_id: 'common-paper-mutual-nda' });
     const payload = getPayload(result);
     expect(result.isError).toBeUndefined();
@@ -276,7 +276,7 @@ describe('contract-templates-mcp tools', () => {
     }
   });
 
-  it.openspec('OA-DST-033')('returns TEMPLATE_NOT_FOUND for an unknown template id', async () => {
+  it.openspec('OA-DST-078')('returns TEMPLATE_NOT_FOUND for an unknown template id', async () => {
     const result = await callTool('get_template', { template_id: 'nonexistent-template-id' });
     const payload = getPayload(result);
 
@@ -287,7 +287,7 @@ describe('contract-templates-mcp tools', () => {
     expect(error.code).toBe('TEMPLATE_NOT_FOUND');
   });
 
-  it.openspec('OA-DST-033')('fill_template fills a template in-process', async () => {
+  it.openspec('OA-DST-078')('fill_template fills a template in-process', async () => {
     const result = await callTool('fill_template', {
       template: 'common-paper-mutual-nda',
       values: {
@@ -314,7 +314,7 @@ describe('contract-templates-mcp tools', () => {
   // Group A: Happy-path & envelope tests
   // -----------------------------------------------------------------------
 
-  it.openspec('OA-DST-033')('fill_template local_path return mode', async () => {
+  it.openspec('OA-DST-078')('fill_template local_path return mode', async () => {
     const result = await callTool('fill_template', {
       template: 'common-paper-mutual-nda',
       values: {
@@ -338,7 +338,7 @@ describe('contract-templates-mcp tools', () => {
     expect(data.inline_base64).toBeUndefined();
   });
 
-  it.openspec('OA-DST-033')('fill_template fills the Wyoming restrictive covenant template from canonical markdown source', async () => {
+  it.openspec('OA-DST-078')('fill_template fills the Wyoming restrictive covenant template from canonical markdown source', async () => {
     const result = await callTool('fill_template', {
       template: 'openagreements-restrictive-covenant-wyoming',
       values: {
@@ -371,7 +371,7 @@ describe('contract-templates-mcp tools', () => {
     expect((data.inline_base64 as string).length).toBeGreaterThan(10_000);
   });
 
-  it.openspec('OA-DST-033')('fill_template fills the employee IP assignment template from canonical markdown source', async () => {
+  it.openspec('OA-DST-078')('fill_template fills the employee IP assignment template from canonical markdown source', async () => {
     const result = await callTool('fill_template', {
       template: 'openagreements-employee-ip-inventions-assignment',
       values: {
@@ -407,7 +407,7 @@ describe('contract-templates-mcp tools', () => {
     expect(documentXml).toContain('Covered Inventions');
   });
 
-  it.openspec('OA-DST-033')('fill_template returns TEMPLATE_NOT_FOUND for unknown template', async () => {
+  it.openspec('OA-DST-078')('fill_template returns TEMPLATE_NOT_FOUND for unknown template', async () => {
     const result = await callTool('fill_template', {
       template: 'nonexistent-template',
       values: {},
@@ -459,7 +459,7 @@ describe('contract-templates-mcp tools', () => {
       expect(error.code).toBe('TEMPLATE_NOT_FOUND');
     });
 
-    it.openspec('OA-DST-034')('get_template preserves nested array item schemas', async () => {
+    it.openspec('OA-DST-033')('get_template preserves nested array item schemas', async () => {
       _setModuleOverride(mockModules({
         loadMetadata: () => ({
           name: 'Array Template',
