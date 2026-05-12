@@ -3,7 +3,6 @@
 ## Purpose
 Define the canonical behavior for the standalone contracts workspace package and
 CLI used for filesystem-first contract repository operations.
-
 ## Requirements
 ### Requirement: Workspace Initialization Command
 The system SHALL provide an `init` command in a dedicated contracts workspace
@@ -42,13 +41,17 @@ catalog/status operations.
 - **AND** it documents lifecycle folders and status naming rules
 
 ### Requirement: Claude and Gemini Integration Guidance
-The workspace tooling SHALL provide optional setup guidance for Claude Code and
-Gemini CLI that references `CONTRACTS.md` as the canonical collaboration ruleset.
+The workspace tooling SHALL provide optional setup guidance for Claude Code and Gemini CLI that references `CONTRACTS.md` as the canonical collaboration ruleset, and SHALL support Gemini extension manifests that can declare multiple local MCP servers for separate capabilities.
 
-#### Scenario: [OA-WKS-005] Agent setup output
-- **WHEN** a user requests agent setup during initialization
+#### Scenario: [OA-WKS-005] Workspace init emits AI integration guidance
+- **WHEN** a user runs `open-agreements-workspace init --agents claude,gemini`
 - **THEN** the tool emits or writes integration instructions for Claude Code and Gemini CLI
-- **AND** both integrations reference `CONTRACTS.md`
+- **AND** references `CONTRACTS.md` as required collaboration context
+
+#### Scenario: [OA-WKS-032] Gemini manifest supports separate local MCP capabilities
+- **WHEN** Gemini extension configuration is generated/validated for OpenAgreements
+- **THEN** workspace operations and template drafting are represented as separate local MCP server entries
+- **AND** each entry uses explicit `npx` command wiring without repository `cwd` coupling
 
 ### Requirement: Forms Catalog With URL and Checksum
 The workspace tooling SHALL support a forms catalog format that records
