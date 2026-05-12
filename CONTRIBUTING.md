@@ -67,6 +67,28 @@ npm run test:run
 2. **Lint**: `npm run lint` passes
 3. **Test**: `npm run test:run` passes (all 81+ tests)
 4. **Validate**: `node bin/open-agreements.js validate` passes for all templates and recipes
+5. **Preview freshness** (OA-owned templates only): if you modified a template's
+   `template.md` (canonical templates), `template.json` (the JSON-spec template),
+   or `template.docx`, or any renderer/generator script (e.g., under
+   `scripts/template_renderer/`, `scripts/generate_templates.mjs`,
+   `scripts/template-specs/styles/openagreements-default-v1.json`,
+   `scripts/generate_checklist_template.mjs`,
+   `scripts/generate_working_group_template.mjs`), regenerate the affected
+   previews locally and commit them in the same PR:
+
+   ```
+   npm run generate:templates                              # if you edited template.md / template.json
+   npm run generate:template-previews -- --template <template-id>
+   # or for a renderer-pipeline change that fans out to many templates:
+   npm run generate:template-previews
+   ```
+
+   Commit the updated `site/assets/previews/<id>/page-*.png` (and any
+   regenerated `template.docx` / `.template.generated.json`). CI's
+   `preview-freshness-gate` enforces this on PRs.
+
+   Note: `metadata.yaml` is catalog-only (not a render input), so editing it
+   does **not** require a preview refresh.
 
 ## Project Structure
 
