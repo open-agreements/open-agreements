@@ -82,7 +82,7 @@ describe('trust signal surfaces', () => {
   it
     .openspec('OA-DST-072')
     .skip(
-      'No automated test yet validates the presence, required fields, and freshness window for `site/_data/systemCardRuntime.json`.',
+      'Partial: scripts/check_system_card_runtime.mjs validates presence + required fields and is wired into trust:check (package.json), but freshness is only enforced when invoked with `--max-age-hours`, which the trust:check wiring omits — so the freshness gate is currently a no-op. No vitest binding asserts either presence/shape or the freshness window.',
       () => {},
     );
 
