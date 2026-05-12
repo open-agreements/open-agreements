@@ -276,7 +276,7 @@ describe('contract-templates-mcp tools', () => {
     }
   });
 
-  it.openspec('OA-DST-078')('returns TEMPLATE_NOT_FOUND for an unknown template id', async () => {
+  it.openspec('OA-DST-024')('returns TEMPLATE_NOT_FOUND for an unknown template id', async () => {
     const result = await callTool('get_template', { template_id: 'nonexistent-template-id' });
     const payload = getPayload(result);
 
@@ -407,7 +407,7 @@ describe('contract-templates-mcp tools', () => {
     expect(documentXml).toContain('Covered Inventions');
   });
 
-  it.openspec('OA-DST-078')('fill_template returns TEMPLATE_NOT_FOUND for unknown template', async () => {
+  it.openspec('OA-DST-024')('fill_template returns TEMPLATE_NOT_FOUND for unknown template', async () => {
     const result = await callTool('fill_template', {
       template: 'nonexistent-template',
       values: {},
