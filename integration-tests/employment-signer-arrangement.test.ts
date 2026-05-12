@@ -44,7 +44,7 @@ function signatureMarkdownSection(markdown: string, headingTitle: string): strin
 
 describe('employment signer arrangement rendering', () => {
   for (const templatePath of CANONICAL_EMPLOYMENT_CASES) {
-    it.openspec('OA-FIL-025')(`${templatePath} renders entity-plus-individual signers as stacked asymmetric blocks`, async () => {
+    it.openspec('OA-FIL-029')(`${templatePath} renders entity-plus-individual signers as stacked asymmetric blocks`, async () => {
       const compiled = compileCanonicalSourceFile(join(repoRoot, templatePath));
       const style = loadStyleProfile(stylePath);
       const rendered = renderFromValidatedSpec(compiled.contractSpec, style);
