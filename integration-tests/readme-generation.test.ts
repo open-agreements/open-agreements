@@ -16,14 +16,14 @@ describe('README generation', () => {
   it
     .openspec('OA-DST-064')
     .skip(
-      'Covered by CI step "Validate generated README freshness" (npm run generate:readme && git diff --exit-code -- README.md). No vitest binding yet.',
+      'Partial: CI step "Validate generated README freshness" asserts committed README matches one generator run. Determinism across runs and the "stable headings + npm-safe absolute links" criteria are not separately verified — no dedicated vitest test yet.',
       () => {},
     );
 
   it
     .openspec('OA-DST-065')
     .skip(
-      'Covered indirectly by Eleventy site build remaining green while scripts/lib/catalog-data.mjs powers both site/_data/catalog.js and the README generator. No vitest binding yet.',
+      'No automated coverage yet. site/_data/catalog.js re-exports the pure shared helper scripts/lib/catalog-data.mjs, but neither the site build nor a vitest test asserts the no-side-effects property in CI.',
       () => {},
     );
 
