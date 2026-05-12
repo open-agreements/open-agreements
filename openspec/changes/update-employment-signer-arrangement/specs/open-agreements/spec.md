@@ -4,7 +4,7 @@ The employment template renderer SHALL honor signer-mode arrangements so
 canonical employment templates can express asymmetric entity/individual
 signature blocks without mirrored title rows or row-level suppression flags.
 
-#### Scenario: [OA-FIL-025] Entity-plus-individual signers render as stacked asymmetric blocks
+#### Scenario: [OA-FIL-029] Entity-plus-individual signers render as stacked asymmetric blocks
 - **WHEN** `cover-standard-signature-v1` renders a template with
   `mode: signers` and `arrangement=entity-plus-individual`
 - **THEN** it renders a stacked entity signer block followed by a stacked
