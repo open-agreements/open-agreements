@@ -311,7 +311,7 @@ Legacy body.
     expect(rendered.markdown).toContain('{END-FOR signer}');
   });
 
-  it.openspec('OA-TMP-057')('allows asymmetric signer rows within entity-plus-individual blocks', () => {
+  it.openspec('OA-FIL-029')('allows asymmetric signer rows within entity-plus-individual blocks', () => {
     const style = loadStyleProfile(stylePath);
     const asymmetricSource = buildCanonicalSource().replace(
       'Print Name: {recipient_name}',
