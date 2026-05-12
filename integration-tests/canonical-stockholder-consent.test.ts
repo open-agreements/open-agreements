@@ -95,7 +95,7 @@ function extractStyleBlock(stylesXml: string, styleId: string): string {
 }
 
 describe('Canonical SAFE stockholder consent (traditional)', () => {
-  it.openspec(['OA-TMP-038', 'OA-TMP-047', 'OA-TMP-056'])('compiles canonical stockholder consent source and metadata', () => {
+  it.openspec(['OA-TMP-060', 'OA-TMP-047', 'OA-TMP-056'])('compiles canonical stockholder consent source and metadata', () => {
     const compiled = compileCanonicalSourceFile(SOURCE_PATH);
     const metadata = loadMetadata(TEMPLATE_DIR);
 
@@ -122,7 +122,7 @@ describe('Canonical SAFE stockholder consent (traditional)', () => {
     );
   });
 
-  it.openspec(['OA-TMP-038', 'OA-TMP-046', 'OA-TMP-048', 'OA-TMP-056'])('renders DOCX from the canonical stockholder consent source with traditional structure', async () => {
+  it.openspec(['OA-TMP-060', 'OA-TMP-046', 'OA-TMP-048', 'OA-TMP-056'])('renders DOCX from the canonical stockholder consent source with traditional structure', async () => {
     const style = loadStyleProfile(STYLE_PATH);
     const compiled = compileCanonicalSourceFile(SOURCE_PATH);
     const rendered = renderFromValidatedSpec(compiled.contractSpec, style);
@@ -159,7 +159,7 @@ describe('Canonical SAFE stockholder consent (traditional)', () => {
     expect(generatedText).not.toContain('Governing Law');
   });
 
-  it.openspec(['OA-TMP-038', 'OA-TMP-048', 'OA-TMP-056'])('fills stockholder consent without leaving signer loop markers', async () => {
+  it.openspec(['OA-TMP-060', 'OA-TMP-048', 'OA-TMP-056'])('fills stockholder consent without leaving signer loop markers', async () => {
     const outputDir = mkdtempSync(join(tmpdir(), 'stockholder-consent-fill-'));
     tempDirs.push(outputDir);
     const outputPath = join(outputDir, 'filled.docx');
@@ -205,7 +205,7 @@ describe('Canonical SAFE stockholder consent (traditional)', () => {
     expect(filledText).not.toContain('Governing Law');
   });
 
-  it.openspec('OA-TMP-038')('rejects fills with empty stockholders', async () => {
+  it.openspec('OA-TMP-060')('rejects fills with empty stockholders', async () => {
     const outputDir = mkdtempSync(join(tmpdir(), 'stockholder-consent-empty-'));
     tempDirs.push(outputDir);
     const outputPath = join(outputDir, 'filled.docx');
@@ -286,7 +286,7 @@ describe('Canonical SAFE stockholder consent (traditional)', () => {
     );
   });
 
-  it.openspec('OA-TMP-038')('preserves PAGE and NUMPAGES footer field codes through fill', async () => {
+  it.openspec('OA-TMP-060')('preserves PAGE and NUMPAGES footer field codes through fill', async () => {
     const outputDir = mkdtempSync(join(tmpdir(), 'stockholder-consent-footer-fields-'));
     tempDirs.push(outputDir);
     const outputPath = join(outputDir, 'filled-footer.docx');

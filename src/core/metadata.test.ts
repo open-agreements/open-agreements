@@ -568,7 +568,7 @@ describe('TemplateMetadataSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-029')('accepts valid credits and derived_from', async () => {
+  it.openspec('OA-TMP-036')('accepts valid credits and derived_from', async () => {
     await expectSafeParseOutcome(
       'TemplateMetadataSchema',
       TemplateMetadataSchema,
@@ -593,7 +593,7 @@ describe('TemplateMetadataSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-030')('defaults missing credits to empty array', async () => {
+  it.openspec('OA-TMP-037')('defaults missing credits to empty array', async () => {
     const parsed = await allureStep('Parse template metadata without credits', () =>
       TemplateMetadataSchema.parse({
         name: 'Test NDA',
@@ -612,7 +612,7 @@ describe('TemplateMetadataSchema', () => {
     });
   });
 
-  it.openspec('OA-TMP-031')('rejects credit role outside the closed enum', async () => {
+  it.openspec('OA-TMP-038')('rejects credit role outside the closed enum', async () => {
     await expectSafeParseOutcome(
       'TemplateMetadataSchema',
       TemplateMetadataSchema,
@@ -630,7 +630,7 @@ describe('TemplateMetadataSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-031')('rejects non-string derived_from', async () => {
+  it('rejects non-string derived_from', async () => {
     await expectSafeParseOutcome(
       'TemplateMetadataSchema',
       TemplateMetadataSchema,
