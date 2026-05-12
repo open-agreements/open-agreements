@@ -1149,6 +1149,20 @@ fields, including arrays of objects described by template metadata item schemas.
 - **AND** no loop markers remain in the output
 - **AND** no dangling blank placeholders appear outside the rendered signer blocks
 
+### Requirement: Employment Signer Arrangement Rendering
+The employment template renderer SHALL honor signer-mode arrangements so
+canonical employment templates can express asymmetric entity/individual
+signature blocks without mirrored title rows or row-level suppression flags.
+
+#### Scenario: [OA-FIL-029] Entity-plus-individual signers render as stacked asymmetric blocks
+- **WHEN** `cover-standard-signature-v1` renders a template with
+  `mode: signers` and `arrangement=entity-plus-individual`
+- **THEN** it renders a stacked entity signer block followed by a stacked
+  individual signer block in DOCX
+- **AND** the Markdown output preserves the same signer order
+- **AND** the individual signer block omits any `Title` row
+- **AND** legacy `two-party` rendering remains unchanged
+
 ### Requirement: API Endpoint Protocol Compliance
 The hosted API endpoints (A2A, MCP, download) MUST handle CORS preflight,
 method restrictions, and protocol-specific error formats correctly.
@@ -1283,6 +1297,21 @@ validated contract spec and rendered artifacts.
 - **AND** the rendered signature section preserves the declared signer labels
   and rows
 - **AND** authoring-only alias metadata is omitted from rendered legal output
+
+### Requirement: Canonical Employment Templates Use the Signer Model
+First-party employment templates SHALL express asymmetric signer semantics
+through canonical signer metadata instead of mirrored `two-party` rows.
+
+#### Scenario: [OA-TMP-057] Offer letter and employment signer sources avoid mirrored individual title rows
+- **WHEN** the canonical employment template sources are compiled into contract
+  specs
+- **THEN** the employment offer letter is sourced from canonical `template.md`
+  with a committed derived JSON spec
+- **AND** the offer letter, Employee IP assignment, and Wyoming restrictive
+  covenant templates all use `mode: signers`
+- **AND** the entity signer may include `Title`
+- **AND** the individual signer does not include `Title`
+- **AND** no first-party employment template relies on `left_only`
 
 ### Requirement: CLI Fill for All Template Types
 The CLI `fill` command MUST render valid DOCX output for all supported template
@@ -1972,3 +2001,4 @@ operative resolutions while preserving rendered legal content.
 - **AND** RESOLVED clauses compile into the operative section
 - **AND** the rendered traditional consent output preserves the recital text,
   resolution text, ordering, and signature behavior
+
