@@ -51,6 +51,41 @@ describe('trust signal surfaces', () => {
     expect(redirects.get('/templates/:name')).toBe('https://usejunior.com/developer-tools/open-agreements/templates/:name');
   });
 
+  it
+    .openspec('OA-DST-068')
+    .skip(
+      'No dedicated vitest coverage yet for the rendered system card runtime metadata fields or the explicit unavailable-state fallback.',
+      () => {},
+    );
+
+  it
+    .openspec('OA-DST-069')
+    .skip(
+      'No automated test yet exercises the system card epic drill-down UI or verifies scenario-level rows and mapped-test expansion behavior.',
+      () => {},
+    );
+
+  it
+    .openspec('OA-DST-070')
+    .skip(
+      'No automated test yet verifies that skip/todo-only mappings are normalized to `missing` across trust-facing outputs.',
+      () => {},
+    );
+
+  it
+    .openspec('OA-DST-071')
+    .skip(
+      'No automated test yet verifies that at least one covered mapped test keeps the trust-facing scenario status at `covered`.',
+      () => {},
+    );
+
+  it
+    .openspec('OA-DST-072')
+    .skip(
+      'Partial: scripts/check_system_card_runtime.mjs validates presence + required fields and is wired into trust:check (package.json), but freshness is only enforced when invoked with `--max-age-hours`, which the trust:check wiring omits — so the freshness gate is currently a no-op. No vitest binding asserts either presence/shape or the freshness window.',
+      () => {},
+    );
+
   it.openspec('OA-DST-006b')('system card stays source-only and never ships as a rendered trust page', () => {
     const systemCard = readRepoFile('site/trust/system-card.md');
 
