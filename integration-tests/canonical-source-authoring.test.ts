@@ -280,7 +280,7 @@ Legacy body.
     );
   });
 
-  it.openspec('OA-TMP-036')('renders repeat-backed stacked signer output from canonical source', () => {
+  it.openspec('OA-TMP-058')('renders repeat-backed stacked signer output from canonical source', () => {
     const style = loadStyleProfile(stylePath);
     const repeatingSource = buildCanonicalSource()
       .replace(

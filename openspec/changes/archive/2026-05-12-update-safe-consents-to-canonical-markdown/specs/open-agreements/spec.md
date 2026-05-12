@@ -5,7 +5,7 @@ The canonical Markdown compiler and shared branded-template renderer SHALL
 support repeat-backed stacked signer sections declared on
 `oa:signature-mode`.
 
-#### Scenario: [OA-TMP-036] Repeat-backed stacked signer sections compile into loop-backed output
+#### Scenario: [OA-TMP-058] Repeat-backed stacked signer sections compile into loop-backed output
 - **WHEN** a canonical Markdown template declares
   `<!-- oa:signature-mode arrangement=stacked repeat=signers item=signer -->`
   and authors one signer prototype using `{signer.*}` references
@@ -20,7 +20,7 @@ The SAFE board consent SHALL be authored canonically in
 `content/templates/openagreements-board-consent-safe/template.md`, with the
 generated JSON spec and rendered DOCX derived from that source.
 
-#### Scenario: [OA-TMP-037] SAFE board consent canonical source preserves source fidelity
+#### Scenario: [OA-TMP-059] SAFE board consent canonical source preserves source fidelity
 - **WHEN** the SAFE board consent canonical source is compiled, rendered, and
   filled
 - **THEN** the generated outputs preserve the board consent legal text,
@@ -33,7 +33,7 @@ The SAFE stockholder consent SHALL be authored canonically in
 `content/templates/openagreements-stockholder-consent-safe/template.md`, with
 the generated JSON spec and rendered DOCX derived from that source.
 
-#### Scenario: [OA-TMP-038] SAFE stockholder consent canonical source preserves source fidelity
+#### Scenario: [OA-TMP-060] SAFE stockholder consent canonical source preserves source fidelity
 - **WHEN** the SAFE stockholder consent canonical source is compiled, rendered,
   and filled
 - **THEN** the generated outputs preserve the stockholder consent legal text,

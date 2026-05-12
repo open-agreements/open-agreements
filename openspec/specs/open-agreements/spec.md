@@ -1222,49 +1222,6 @@ no errors. Metadata validation MUST pass independently.
 - **WHEN** replacements reference metadata tags not declared in the template
 - **THEN** validation reports required-field errors for uncovered tags
 
-### Requirement: Contract IR Pointer-Based Template Authoring
-The system SHALL support a Contract IR authoring path where a canonical
-Markdown content document points, via YAML frontmatter, to an external schema
-registry and an external style registry.
-
-#### Scenario: [OA-TMP-029] Content document resolves external registries
-- **WHEN** a Contract IR template is loaded from `content.md`
-- **THEN** the loader resolves the referenced schema and style YAML files
-- **AND** the normalized template model retains document metadata, variables,
-  and style semantics from those external registries
-
-### Requirement: Contract IR Validation
-The system SHALL reject Contract IR templates that reference unknown variables,
-unknown style slugs, or malformed `{style=slug}` directives before rendering.
-
-#### Scenario: [OA-TMP-030] Contract IR validation rejects bad references
-- **WHEN** a Contract IR content document contains an unknown variable,
-  unknown style slug, or malformed style tag
-- **THEN** validation fails with an actionable error
-- **AND** no rendered artifacts are produced from the invalid template
-
-### Requirement: Contract IR Dual Rendering
-The system SHALL render a validated Contract IR template into both DOCX and a
-readable Markdown preview from the same normalized model.
-
-#### Scenario: [OA-TMP-031] Contract IR renders deterministic artifacts
-- **WHEN** a validated Contract IR template is generated into DOCX and Markdown artifacts
-- **THEN** the system writes `template.docx`
-- **AND** derives a readable Markdown preview from the same normalized model
-- **AND** both artifacts contain the required headings, placeholders, and
-  signature sections from the canonical content source
-
-### Requirement: SAFE Board Consent Contract IR Backport
-The system SHALL include the SAFE board consent template as a canonical
-Contract IR-authored template under
-`content/templates/openagreements-board-consent-safe/`.
-
-#### Scenario: [OA-TMP-032] SAFE board consent preserves source fidelity
-- **WHEN** the Contract IR SAFE board consent is rendered
-- **THEN** the output preserves the Joey Tsang board consent legal text,
-  resolution flow, variable placeholders, and signature structure with
-  materially similar professional formatting
-
 ### Requirement: Canonical Markdown Employment Template Authoring
 The employment template renderer SHALL support canonical Markdown authoring
 files that compile frontmatter, cover-term tables, clause directives,
@@ -1988,6 +1945,47 @@ SHALL include `standard_terms`, `signature`, and `recitals`.
 - **AND** a directive, when present for the same semantic section, takes
   precedence over title-based fallback
 
+### Requirement: Canonical Markdown Repeat-Backed Signer Authoring
+The canonical Markdown compiler and shared branded-template renderer SHALL
+support repeat-backed stacked signer sections declared on
+`oa:signature-mode`.
+
+#### Scenario: [OA-TMP-058] Repeat-backed stacked signer sections compile into loop-backed output
+- **WHEN** a canonical Markdown template declares
+  `<!-- oa:signature-mode arrangement=stacked repeat=signers item=signer -->`
+  and authors one signer prototype using `{signer.*}` references
+- **THEN** the compiler records repeat metadata in the contract spec
+- **AND** the rendered output emits `{FOR signer IN signers}`
+- **AND** signer row values render with loop-safe placeholders such as
+  `{$signer.name}`
+- **AND** the rendered output closes the loop with `{END-FOR signer}`
+
+### Requirement: SAFE Board Consent Canonical Markdown Authoring
+The SAFE board consent SHALL be authored canonically in
+`content/templates/openagreements-board-consent-safe/template.md`, with the
+generated JSON spec and rendered DOCX derived from that source.
+
+#### Scenario: [OA-TMP-059] SAFE board consent canonical source preserves source fidelity
+- **WHEN** the SAFE board consent canonical source is compiled, rendered, and
+  filled
+- **THEN** the generated outputs preserve the board consent legal text,
+  resolution flow, placeholders, and professional formatting
+- **AND** the signature section expands `board_members` into the exact number
+  of signer blocks without leaving loop markers in the filled output
+
+### Requirement: SAFE Stockholder Consent Canonical Markdown Authoring
+The SAFE stockholder consent SHALL be authored canonically in
+`content/templates/openagreements-stockholder-consent-safe/template.md`, with
+the generated JSON spec and rendered DOCX derived from that source.
+
+#### Scenario: [OA-TMP-060] SAFE stockholder consent canonical source preserves source fidelity
+- **WHEN** the SAFE stockholder consent canonical source is compiled, rendered,
+  and filled
+- **THEN** the generated outputs preserve the stockholder consent legal text,
+  Section 228 timing behavior, placeholders, and professional formatting
+- **AND** the signature section expands `stockholders` into the exact number of
+  signer blocks without leaving loop markers in the filled output
+
 ### Requirement: SAFE Consent Recitals Authoring
 The SAFE board and SAFE stockholder canonical consents SHALL support a separate
 `recitals` body section so WHEREAS clauses can be authored separately from the
@@ -2001,4 +1999,3 @@ operative resolutions while preserving rendered legal content.
 - **AND** RESOLVED clauses compile into the operative section
 - **AND** the rendered traditional consent output preserves the recital text,
   resolution text, ordering, and signature behavior
-

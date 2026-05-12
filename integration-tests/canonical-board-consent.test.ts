@@ -95,7 +95,7 @@ function normalizeText(value: string): string {
 }
 
 describe('Canonical SAFE board consent (traditional)', () => {
-  it.openspec(['OA-TMP-037', 'OA-TMP-047', 'OA-TMP-056'])('compiles canonical board consent source and metadata', () => {
+  it.openspec(['OA-TMP-059', 'OA-TMP-047', 'OA-TMP-056'])('compiles canonical board consent source and metadata', () => {
     const compiled = compileCanonicalSourceFile(SOURCE_PATH);
     const metadata = loadMetadata(TEMPLATE_DIR);
 
@@ -128,7 +128,7 @@ describe('Canonical SAFE board consent (traditional)', () => {
     );
   });
 
-  it.openspec(['OA-TMP-032', 'OA-TMP-037', 'OA-TMP-046', 'OA-TMP-048', 'OA-TMP-056'])('renders DOCX from the canonical board consent source with traditional structure', async () => {
+  it.openspec(['OA-TMP-059', 'OA-TMP-046', 'OA-TMP-048', 'OA-TMP-056'])('renders DOCX from the canonical board consent source with traditional structure', async () => {
     const style = loadStyleProfile(STYLE_PATH);
     const compiled = compileCanonicalSourceFile(SOURCE_PATH);
     const rendered = renderFromValidatedSpec(compiled.contractSpec, style);
@@ -172,7 +172,7 @@ describe('Canonical SAFE board consent (traditional)', () => {
     expect(generatedText).not.toContain('Governing Law');
   });
 
-  it.openspec(['OA-TMP-037', 'OA-TMP-048', 'OA-TMP-056'])('fills board consent without leaving signer loop markers', async () => {
+  it.openspec(['OA-TMP-059', 'OA-TMP-048', 'OA-TMP-056'])('fills board consent without leaving signer loop markers', async () => {
     const outputDir = mkdtempSync(join(tmpdir(), 'board-consent-fill-'));
     tempDirs.push(outputDir);
     const outputPath = join(outputDir, 'filled.docx');
@@ -226,7 +226,7 @@ describe('Canonical SAFE board consent (traditional)', () => {
     expect(filledText).not.toContain('Governing Law');
   });
 
-  it.openspec('OA-TMP-037')('rejects fills with empty board_members', async () => {
+  it.openspec('OA-TMP-059')('rejects fills with empty board_members', async () => {
     const outputDir = mkdtempSync(join(tmpdir(), 'board-consent-empty-'));
     tempDirs.push(outputDir);
     const outputPath = join(outputDir, 'filled.docx');
@@ -245,7 +245,7 @@ describe('Canonical SAFE board consent (traditional)', () => {
     ).rejects.toThrow(/board_members/);
   });
 
-  it.openspec('OA-TMP-037')('rejects fills missing board_members entirely', async () => {
+  it.openspec('OA-TMP-059')('rejects fills missing board_members entirely', async () => {
     const outputDir = mkdtempSync(join(tmpdir(), 'board-consent-missing-'));
     tempDirs.push(outputDir);
     const outputPath = join(outputDir, 'filled.docx');
@@ -339,7 +339,7 @@ describe('Canonical SAFE board consent (traditional)', () => {
     );
   });
 
-  it.openspec('OA-TMP-037')('preserves PAGE and NUMPAGES footer field codes through fill', async () => {
+  it.openspec('OA-TMP-059')('preserves PAGE and NUMPAGES footer field codes through fill', async () => {
     const outputDir = mkdtempSync(join(tmpdir(), 'board-consent-footer-fields-'));
     tempDirs.push(outputDir);
     const outputPath = join(outputDir, 'filled-footer.docx');
