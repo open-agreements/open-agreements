@@ -23,7 +23,7 @@ describe('skills directory publish workflow', () => {
   it
     .openspec('OA-DST-074')
     .skip(
-      'No automated coverage yet. scripts/publish_skills_directories.mjs resolves `scope=selected`, but no test asserts subset selection or the requested-skill validation path for a non-publishable skill directory.',
+      'No automated coverage yet. scripts/publish_skills_directories.mjs resolves `scope=selected` and rejects unknown skill names with an "Unknown selected skill(s)" error, but: (a) no test asserts subset selection, and (b) the script does not currently distinguish "directory does not exist" from "directory exists but lacks SKILL.md" — both fall through the same Unknown-skill path. The canonical scenario\'s "lacks a SKILL.md" branch is therefore partially implemented; tightening either the script or the scenario is a future follow-up.',
       () => {},
     );
 
