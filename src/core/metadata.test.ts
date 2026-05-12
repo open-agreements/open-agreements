@@ -630,7 +630,7 @@ describe('TemplateMetadataSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-036')('rejects non-string derived_from', async () => {
+  it('rejects non-string derived_from', async () => {
     await expectSafeParseOutcome(
       'TemplateMetadataSchema',
       TemplateMetadataSchema,
