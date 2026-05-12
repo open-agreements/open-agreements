@@ -17,7 +17,7 @@ signature blocks without mirrored title rows or row-level suppression flags.
 First-party employment templates SHALL express asymmetric signer semantics
 through canonical signer metadata instead of mirrored `two-party` rows.
 
-#### Scenario: [OA-TMP-036] Offer letter and employment signer sources avoid mirrored individual title rows
+#### Scenario: [OA-TMP-057] Offer letter and employment signer sources avoid mirrored individual title rows
 - **WHEN** the canonical employment template sources are compiled into contract
   specs
 - **THEN** the employment offer letter is sourced from canonical `template.md`
