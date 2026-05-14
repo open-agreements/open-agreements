@@ -188,6 +188,20 @@ describe('generator-family invalidation', () => {
     expect(triggered).toEqual(HEAD_OA_TEMPLATE_IDS);
   });
 
+  it('libreoffice_headless.mjs change → all OA-owned templates', () => {
+    const { triggered } = runRule([
+      { status: 'modified', path: 'scripts/libreoffice_headless.mjs' },
+    ]);
+    expect(triggered).toEqual(HEAD_OA_TEMPLATE_IDS);
+  });
+
+  it('generate_template_previews.mjs (orchestrator) change → no trigger (refactor-safe)', () => {
+    const { triggered } = runRule([
+      { status: 'modified', path: 'scripts/generate_template_previews.mjs' },
+    ]);
+    expect(triggered.size).toBe(0);
+  });
+
   it('legacy libreoffice script → no trigger', () => {
     const { triggered } = runRule([
       { status: 'modified', path: 'scripts/generate_employment_templates_libreoffice.mjs' },

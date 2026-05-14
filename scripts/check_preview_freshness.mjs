@@ -80,10 +80,19 @@ const SHARED_STYLE_TRIGGER_PATH =
 const CHECKLIST_GENERATOR_PATH = "scripts/generate_checklist_template.mjs";
 const WORKING_GROUP_GENERATOR_PATH = "scripts/generate_working_group_template.mjs";
 
-// Any change to the preview pipeline itself fans out to all OA-owned templates.
-// Computed dynamically against current HEAD so future templates are covered.
+// Any change to the actual rendering primitives fans out to all OA-owned
+// templates. Computed dynamically against current HEAD so future templates
+// are covered.
+//
+// Intentionally narrow: `scripts/generate_template_previews.mjs` is the
+// orchestrator (CLI parsing, template enumeration, Quick Look fallback). It
+// doesn't directly produce pixels — `render_docx_pages.mjs` and
+// `libreoffice_headless.mjs` do. Including the orchestrator would make pure
+// refactors (like the one that introduced this gate) require regenerating
+// every preview, which is busywork. The tradeoff: if someone bumps the
+// default DPI in the orchestrator, the gate won't catch it — but that's a
+// rare, reviewable change. See plan §"Determinism is best-effort".
 const PIPELINE_TRIGGER_PATHS = new Set([
-  "scripts/generate_template_previews.mjs",
   "scripts/render_docx_pages.mjs",
   "scripts/libreoffice_headless.mjs",
 ]);
