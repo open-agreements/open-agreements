@@ -6,20 +6,22 @@ import {
   mkdirSync,
   mkdtempSync,
   readdirSync,
-  readFileSync,
   rmSync,
   statSync,
 } from "node:fs";
-import { basename, dirname, join, resolve } from "node:path";
+import { basename, join, resolve } from "node:path";
 import { spawnSync } from "node:child_process";
 import { tmpdir } from "node:os";
-import { fileURLToPath } from "node:url";
-import yaml from "js-yaml";
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const ROOT = resolve(__dirname, "..");
-const TEMPLATES_DIR = resolve(ROOT, "content", "templates");
-const PREVIEWS_DIR = resolve(ROOT, "site", "assets", "previews");
+import {
+  PREVIEWS_DIR,
+  REPO_ROOT as ROOT,
+  TEMPLATES_DIR,
+  isOpenAgreementsOwned,
+  listTemplateIds,
+  loadTemplateMetadata,
+} from "./lib/template-utils.mjs";
+
 const RENDER_SCRIPT = resolve(ROOT, "scripts", "render_docx_pages.mjs");
 
 function parseArgs(argv) {
@@ -76,35 +78,6 @@ function printHelp() {
       "  --dpi <n>               Rasterization DPI passed to render_docx_pages (default: 170)",
       "  -h, --help              Show help",
     ].join("\n")
-  );
-}
-
-function listTemplateIds() {
-  return readdirSync(TEMPLATES_DIR, { withFileTypes: true })
-    .filter((entry) => entry.isDirectory())
-    .map((entry) => entry.name)
-    .sort();
-}
-
-function loadTemplateMetadata(templateId) {
-  const metadataPath = resolve(TEMPLATES_DIR, templateId, "metadata.yaml");
-  if (!existsSync(metadataPath)) {
-    return {};
-  }
-  const raw = readFileSync(metadataPath, "utf8");
-  const parsed = yaml.load(raw);
-  return parsed && typeof parsed === "object" ? parsed : {};
-}
-
-function isOpenAgreementsOwned(templateId, metadata) {
-  if (templateId.startsWith("openagreements-")) {
-    return true;
-  }
-  const sourceUrl = String(metadata.source_url || "").toLowerCase();
-  return (
-    sourceUrl.includes("openagreements.org") ||
-    sourceUrl.includes("openagreements.ai") ||
-    sourceUrl.includes("github.com/open-agreements/open-agreements")
   );
 }
 

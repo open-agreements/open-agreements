@@ -60,6 +60,7 @@
     "dev": "tsc --watch",
     "check:spec-coverage": "node scripts/validate_openspec_coverage.mjs",
     "check:template-previews": "node scripts/check_template_previews.mjs",
+    "check:preview-freshness": "node scripts/check_preview_freshness.mjs",
     "check:source-drift": "npm run build && node scripts/source_drift_canary.mjs",
     "check:allure-labels": "node scripts/validate_allure_test_labels.mjs",
     "check:libreoffice": "node scripts/check_libreoffice_headless.mjs",
@@ -105,7 +106,7 @@
     "check:template-evidence": "npm run generate:template-evidence && git diff --exit-code -- site/_data/templateEvidence.json",
     "trust:rebuild": "npm run export:system-card-runtime && npm run generate:system-card && npm run generate:template-evidence",
     "trust:check": "npm run check:system-card-runtime && npm run check:system-card && npm run check:template-evidence",
-    "preflight:ci": "npm run lint && npm run validate && npm run check:template-previews && npm run check:gemini-extension-manifest && npm run check:readme && npm run test:run && npm run trust:check"
+    "preflight:ci": "npm run lint && npm run validate && npm run check:template-previews && npm run check:preview-freshness && npm run check:gemini-extension-manifest && npm run check:readme && npm run test:run && npm run trust:check"
   },
   "keywords": [
     "legal",
