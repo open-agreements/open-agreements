@@ -222,6 +222,66 @@ Legacy body.
     ]);
   });
 
+  it('parses cover-term cells that contain escaped pipes', () => {
+    // A literal "|" inside a table cell is written "\|" in GFM/CommonMark.
+    // Regression: a naive split on "|" miscounts the cells and trips the
+    // cell-count invariant before this case was handled. Covers escaped
+    // pipes mid-cell, at a cell boundary, consecutively, and a backslash
+    // that is not before a pipe (which must survive verbatim).
+    const source = buildCanonicalSource()
+      .replace(
+        '| row | Company | {company_name} | always |',
+        '| row | Company | {company_name} \\| Acme \\| Inc | always |',
+      )
+      .replace(
+        '| subrow | Purpose | {purpose} | purpose_included |',
+        '| subrow | Purpose | \\| leads \\|\\| C:\\Temp | purpose_included |',
+      );
+
+    const compiled = compileCanonicalSourceString(
+      source,
+      'inline escaped-pipe source',
+    );
+    const rows = compiled.contractSpec.sections.cover_terms.rows;
+
+    expect(rows[0]).toMatchObject({
+      kind: 'row',
+      label: 'Company',
+      value: '{company_name} | Acme | Inc',
+    });
+    expect(rows[2]).toMatchObject({
+      kind: 'subrow',
+      label: 'Purpose',
+      value: '| leads || C:\\Temp',
+    });
+  });
+
+  it('treats an escaped backslash before a pipe as a real delimiter', () => {
+    // `\\|` is an escaped backslash followed by a delimiter (GFM), NOT an
+    // escaped pipe. The extra cell must trip the cell-count invariant
+    // rather than be silently absorbed.
+    const source = buildCanonicalSource().replace(
+      '| row | Company | {company_name} | always |',
+      '| row | Company | {company_name} \\\\| Acme | always |',
+    );
+
+    expect(() =>
+      compileCanonicalSourceString(source, 'inline escaped-backslash source'),
+    ).toThrow(/cells; expected/);
+  });
+
+  it('rejects a table row missing its trailing pipe', () => {
+    // `.slice(1, -1)` would otherwise silently drop the last character.
+    const source = buildCanonicalSource().replace(
+      '| row | Company | {company_name} | always |',
+      '| row | Company | {company_name} | always',
+    );
+
+    expect(() =>
+      compileCanonicalSourceString(source, 'inline missing-pipe source'),
+    ).toThrow(/must start and end with a pipe/);
+  });
+
   it.openspec('OA-TMP-034')('rejects unresolved explicit references and alias collisions', () => {
     expect(() =>
       compileCanonicalSourceString(
