@@ -178,12 +178,65 @@ function paragraphTextFromLines(lines) {
   return paragraphsFromLines(lines).join('\n\n');
 }
 
+/**
+ * Split the inner content of a markdown table row into trimmed cells.
+ *
+ * A literal `|` inside a cell is written `\|` in GFM/CommonMark tables; a
+ * naive `.split('|')` miscounts cells. This splitter is escape-aware: a `|`
+ * is a delimiter unless the backslash immediately before it is itself
+ * unescaped. So `\|` is a literal pipe, but `\\|` is a literal backslash
+ * followed by a delimiter. Only the pipe escape is unwound — other
+ * backslash sequences are left verbatim, since cell contents are treated as
+ * opaque strings (no inline-markdown processing happens here).
+ */
+function splitTableRowCells(inner) {
+  const cells = [];
+  let current = '';
+  let escaped = false;
+  for (let i = 0; i < inner.length; i += 1) {
+    const ch = inner[i];
+    if (escaped) {
+      // The preceding backslash escapes this character: unwind it for a
+      // pipe, otherwise keep the backslash so non-pipe escapes survive.
+      current += ch === '|' ? '|' : `\\${ch}`;
+      escaped = false;
+      continue;
+    }
+    if (ch === '\\') {
+      escaped = true;
+      continue;
+    }
+    if (ch === '|') {
+      cells.push(current.trim());
+      current = '';
+      continue;
+    }
+    current += ch;
+  }
+  if (escaped) {
+    // A trailing lone backslash is literal content.
+    current += '\\';
+  }
+  cells.push(current.trim());
+  return cells;
+}
+
 function parseMarkdownTable(lines, filePath) {
   invariant(lines.length >= 2, `Canonical source (${filePath}) has an incomplete markdown table`);
 
   const rows = lines
     .filter((line) => line.trim().startsWith('|'))
-    .map((line) => line.trim().slice(1, -1).split('|').map((cell) => cell.trim()));
+    .map((line) => {
+      const trimmed = line.trim();
+      // `splitTableRowCells` operates on the content between the outer
+      // pipes; require both so a missing trailing `|` fails loudly rather
+      // than silently dropping the last character.
+      invariant(
+        trimmed.endsWith('|'),
+        `Canonical source (${filePath}) table row must start and end with a pipe: "${trimmed}"`
+      );
+      return splitTableRowCells(trimmed.slice(1, -1));
+    });
 
   invariant(rows.length >= 2, `Canonical source (${filePath}) must include a header row and divider row`);
 
