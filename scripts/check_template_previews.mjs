@@ -1,49 +1,15 @@
 #!/usr/bin/env node
 
-import { existsSync, readdirSync, readFileSync } from "node:fs";
-import { dirname, resolve } from "node:path";
-import { fileURLToPath } from "node:url";
-import yaml from "js-yaml";
+import { existsSync, readdirSync } from "node:fs";
+import { resolve } from "node:path";
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const ROOT = resolve(__dirname, "..");
-const TEMPLATES_DIR = resolve(ROOT, "content", "templates");
-const PREVIEWS_DIR = resolve(ROOT, "site", "assets", "previews");
-
-function listTemplateIds() {
-  return readdirSync(TEMPLATES_DIR, { withFileTypes: true })
-    .filter((entry) => entry.isDirectory())
-    .map((entry) => entry.name)
-    .sort();
-}
-
-function loadTemplateMetadata(templateId) {
-  const metadataPath = resolve(TEMPLATES_DIR, templateId, "metadata.yaml");
-  if (!existsSync(metadataPath)) {
-    return {};
-  }
-  const raw = readFileSync(metadataPath, "utf8");
-  const parsed = yaml.load(raw);
-  return parsed && typeof parsed === "object" ? parsed : {};
-}
-
-function isOpenAgreementsOwned(templateId, metadata) {
-  if (templateId.startsWith("openagreements-")) {
-    return true;
-  }
-  const sourceUrl = String(metadata.source_url || "").toLowerCase();
-  return (
-    sourceUrl.includes("openagreements.org") ||
-    sourceUrl.includes("openagreements.ai") ||
-    sourceUrl.includes("github.com/open-agreements/open-agreements")
-  );
-}
+import {
+  PREVIEWS_DIR,
+  listOpenAgreementsTemplateIds,
+} from "./lib/template-utils.mjs";
 
 function main() {
-  const allTemplateIds = listTemplateIds();
-  const ownedTemplates = allTemplateIds.filter((templateId) =>
-    isOpenAgreementsOwned(templateId, loadTemplateMetadata(templateId))
-  );
+  const ownedTemplates = listOpenAgreementsTemplateIds();
 
   const missing = [];
   for (const templateId of ownedTemplates) {

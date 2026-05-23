@@ -74,6 +74,44 @@ jobs:
       - name: Validate template preview PNGs
         run: npm run check:template-previews
 
+  preview-freshness-gate:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies (retry)
+        uses: ./.github/actions/npm-ci-retry
+
+      - name: Collect changed files
+        id: diff
+        uses: actions/github-script@v7
+        with:
+          result-encoding: string
+          script: |
+            const files = await github.paginate(github.rest.pulls.listFiles, {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.payload.pull_request.number,
+              per_page: 100,
+            });
+            return JSON.stringify(files.map((f) => ({
+              status: f.status,
+              path: f.filename,
+              previousPath: f.previous_filename ?? null,
+            })));
+
+      - name: Validate preview freshness
+        env:
+          OA_CHANGED_FILES: ${{ steps.diff.outputs.result }}
+          OA_GATE_REQUIRE_INPUT: "1"
+        run: npm run check:preview-freshness
+
   gemini-extension-contract:
     runs-on: ubuntu-latest
     steps:
