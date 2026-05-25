@@ -90,6 +90,12 @@ npm run test:run
    Note: `metadata.yaml` is catalog-only (not a render input), so editing it
    does **not** require a preview refresh.
 
+6. **LLM-Based Quality Gate (advisory)**: same-repo PRs are reviewed by an
+   LLM-powered code-reuse detector in `.github/workflows/llm-based-quality-gate.yml`
+   and may receive a `STATE: WARN` comment suggesting reuse of an existing
+   helper. This is non-blocking in Phase 0 — consider the suggestion, but
+   dismiss the warning if it doesn't apply.
+
 ## Project Structure
 
 ```
