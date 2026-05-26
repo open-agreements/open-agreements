@@ -5,7 +5,7 @@ Free to use under CC BY 4.0.
 
 ## Structure
 
-The template ships a base form covering the eleven categories that appear in
+The template ships a base form covering the core categories that appear in
 90%+ of public-source DDRLs (corporate organization, capitalization,
 subsidiaries, financial/tax, debt, material contracts, property, IP,
 privacy/cybersecurity, employment, litigation, compliance, insurance,
@@ -54,17 +54,13 @@ Law firm, bar association, and legal publisher DDRLs (Cooley, Skadden,
 Morgan Lewis, Gunderson Dettmer, Lowenstein Sandler, Holland & Knight,
 Foley & Lardner, Software Equity Group, the International Bar Association,
 the American Bar Association, Bass Berry & Sims, and Carta). All language
-is original; no source language was reused. The companion practice note
-at `practice-notes/due-diligence/request-list/practice-note.md` in the
-`legal-context` repo (synced as `practice-note.md` in this directory)
-provides citations and consensus analysis.
+is original; no source language was reused.
 
 ## Files
 
 - `metadata.yaml` — field definitions and template metadata.
-- `template.docx` — fillable Word document with `{field}` placeholders and `{IF}` rider gates. (TODO: generate via the spec-driven renderer in a follow-up PR; the v1 release ships metadata + markdown only.)
+- `template.docx` — fillable Word document with `{field}` placeholders and `{IF}` rider gates.
 - `template.md` — flat human-readable mirror of the document body.
-- `practice-note.md` — synced from `legal-context`; provides citations and drafting context.
 - `README.md` — this file.
 
 ## License
