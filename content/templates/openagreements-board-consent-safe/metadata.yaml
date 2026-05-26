@@ -38,6 +38,14 @@ priority_fields:
   - effective_date
   - purchase_amount
   - board_members
+previewSampleValues:
+  company_name: Acme Labs, Inc.
+  effective_date: April 15, 2026
+  purchase_amount: '500,000'
+  board_members:
+    - name: Alex Director
+    - name: Blair Director
+    - name: Casey Director
 credits:
   - name: Joey Tsang
     role: drafting_editor
