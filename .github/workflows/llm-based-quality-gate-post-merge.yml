@@ -1,0 +1,248 @@
+name: LLM-Based Quality Gate Post-Merge Audit
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: '${{ github.workflow }}-${{ github.sha }}'
+  cancel-in-progress: false
+
+env:
+  # Keep these defaults aligned with the pre-merge gate.
+  GEMINI_CLI_VERSION: ${{ vars.LLM_GATE_CLI_VERSION || '0.39.1' }}
+  GEMINI_MODEL: ${{ vars.LLM_GATE_MODEL || 'gemini-3.5-flash' }}
+  LLM_GATE_PRICE_PER_M_INPUT: ${{ vars.LLM_GATE_PRICE_PER_M_INPUT || '0.30' }}
+  LLM_GATE_PRICE_PER_M_OUTPUT: ${{ vars.LLM_GATE_PRICE_PER_M_OUTPUT || '2.50' }}
+
+jobs:
+  identify-pr:
+    name: Identify merged PR
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: read
+    outputs:
+      has_pr: ${{ steps.pr.outputs.has_pr }}
+      pr_number: ${{ steps.pr.outputs.pr_number }}
+      labels: ${{ steps.pr.outputs.labels }}
+    steps:
+      - name: Look up PR for merge commit
+        id: pr
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          SHA: ${{ github.sha }}
+          HEAD_MESSAGE: ${{ github.event.head_commit.message }}
+        run: |
+          set -euo pipefail
+          gh api \
+            -H "Accept: application/vnd.github+json" \
+            "repos/${REPOSITORY}/commits/${SHA}/pulls" > "$RUNNER_TEMP/pulls.json"
+
+          count=$(jq 'length' "$RUNNER_TEMP/pulls.json")
+          if [ "$count" -eq 0 ]; then
+            echo "No pull request is associated with commit ${SHA}; skipping post-merge LLM audit."
+            echo "Head commit message: ${HEAD_MESSAGE}"
+            {
+              echo "has_pr=false"
+              echo "pr_number="
+              echo "labels=[]"
+            } >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          jq '.[0]' "$RUNNER_TEMP/pulls.json" > "$RUNNER_TEMP/pr.json"
+          {
+            echo "has_pr=true"
+            echo "pr_number=$(jq -r '.number' "$RUNNER_TEMP/pr.json")"
+            echo "labels=$(jq -c '[.labels[].name]' "$RUNNER_TEMP/pr.json")"
+          } >> "$GITHUB_OUTPUT"
+          echo "Found merged PR #$(jq -r '.number' "$RUNNER_TEMP/pr.json") for commit ${SHA}."
+
+  parse-checklist:
+    name: Parse checklist
+    needs: identify-pr
+    if: ${{ needs.identify-pr.outputs.has_pr == 'true' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      matrix: ${{ steps.parse.outputs.matrix }}
+      count: ${{ steps.parse.outputs.count }}
+    steps:
+      - name: Checkout merge commit
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: Parse checklist.md → matrix JSON
+        id: parse
+        run: |
+          set -euo pipefail
+          node <<'NODE' > "$RUNNER_TEMP/matrix.json"
+          const fs = require('fs');
+          const path = '.github/llm-based-quality-gate/checklist.md';
+          const text = fs.readFileSync(path, 'utf8');
+          const include = text.split(/\r?\n/)
+            .flatMap(line => {
+              const m = line.match(/^- \[ \] (.+)$/);
+              return m ? [m[1].trim()] : [];
+            })
+            .map((question, index) => ({
+              id: String(index + 1).padStart(2, '0'),
+              question,
+            }));
+          process.stdout.write(JSON.stringify({ include }));
+          NODE
+          jq -e . "$RUNNER_TEMP/matrix.json" >/dev/null
+          {
+            echo "matrix=$(cat "$RUNNER_TEMP/matrix.json")"
+            echo "count=$(jq '.include | length' "$RUNNER_TEMP/matrix.json")"
+          } >> "$GITHUB_OUTPUT"
+          echo "Parsed $(jq '.include | length' "$RUNNER_TEMP/matrix.json") checklist item(s)"
+          jq -r '.include[] | "- " + .id + ": " + .question' "$RUNNER_TEMP/matrix.json"
+
+  run-check:
+    name: Audit ${{ matrix.id }} — ${{ matrix.question }}
+    needs: [identify-pr, parse-checklist]
+    if: ${{ needs.parse-checklist.outputs.count != '0' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    strategy:
+      fail-fast: false
+      max-parallel: ${{ fromJSON(vars.LLM_GATE_MAX_PARALLEL || '2') }}
+      matrix: ${{ fromJSON(needs.parse-checklist.outputs.matrix) }}
+    steps:
+      - name: Checkout merge commit
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: Extract merged diff
+        run: |
+          set -euo pipefail
+          git diff "${{ github.event.before }}" "${{ github.event.after }}" > pr_diff.patch
+          wc -l pr_diff.patch
+
+      - name: Run LLM gate check
+        uses: ./.github/actions/llm-gate-check
+        with:
+          check-id: ${{ matrix.id }}
+          question: ${{ matrix.question }}
+          gemini-cli-version: ${{ env.GEMINI_CLI_VERSION }}
+          gemini-model: ${{ env.GEMINI_MODEL }}
+          gemini-api-key: ${{ secrets.GEMINI_API_KEY }}
+          price-per-m-input: ${{ env.LLM_GATE_PRICE_PER_M_INPUT }}
+          price-per-m-output: ${{ env.LLM_GATE_PRICE_PER_M_OUTPUT }}
+
+      - name: Upload per-item result
+        uses: actions/upload-artifact@v4
+        with:
+          name: audit-result-${{ matrix.id }}
+          path: results/result-${{ matrix.id }}.json
+          retention-days: 30
+
+  aggregate:
+    name: Aggregate and post audit
+    needs: [identify-pr, parse-checklist, run-check]
+    if: ${{ always() && needs.identify-pr.outputs.has_pr == 'true' && needs.parse-checklist.result == 'success' && needs.parse-checklist.outputs.count != '0' }}
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: Download all per-item results
+        uses: actions/download-artifact@v4
+        with:
+          path: results
+          pattern: audit-result-*
+          merge-multiple: true
+
+      - name: List downloaded artifacts
+        run: ls -la results/ || echo "no results downloaded"
+
+      - name: Compose and post post-merge audit comment
+        uses: actions/github-script@v7
+        env:
+          MODEL: ${{ env.GEMINI_MODEL }}
+          PR_NUMBER: ${{ needs.identify-pr.outputs.pr_number }}
+          PR_LABELS: ${{ needs.identify-pr.outputs.labels }}
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+
+            const dir = 'results';
+            const files = fs.existsSync(dir)
+              ? fs.readdirSync(dir).filter(f => /^result-\d+\.json$/.test(f)).sort()
+              : [];
+            const rows = files.map(f => JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')));
+
+            const icon = (status) => status === 'PASS' ? '✅' : (status === 'WARN' ? '⚠️' : '❓');
+            const escapePipes = (s) => String(s || '').replaceAll('|', '\\|').replaceAll('\n', ' ');
+
+            const titleOf = (question) => {
+              const m = String(question || '').match(/^\*\*([^*]+)\*\*/);
+              if (m) return m[1].trim();
+              const q = String(question || '').replace(/\s+/g, ' ').trim();
+              return q.length > 60 ? q.slice(0, 57) + '…' : q;
+            };
+
+            const totalUsd = rows.reduce((acc, r) => acc + parseFloat(r.estimated_usd || '0'), 0);
+            const totalIn = rows.reduce((acc, r) => acc + (r.estimated_input_tokens || 0), 0);
+            const totalOut = rows.reduce((acc, r) => acc + (r.estimated_output_tokens || 0), 0);
+            const totalAttempts = rows.reduce((acc, r) => acc + (r.attempts || 1), 0);
+            const warns = rows.filter(r => r.status === 'WARN').length;
+            const passes = rows.filter(r => r.status === 'PASS').length;
+            const overall = warns > 0 ? '⚠️ WARN' : (passes > 0 ? '✅ PASS' : '❓ NO RESULTS');
+            const labels = JSON.parse(process.env.PR_LABELS || '[]');
+            const overrideActive = labels.includes('llm-gate/override');
+
+            const header = '## LLM-Based Quality Gate — Post-Merge Audit';
+            const overrideBanner = overrideActive
+              ? '\n\n> ⚠️ This PR was merged with `llm-gate/override`; post-merge audit findings are shown for informational purposes.\n'
+              : '';
+            const summary = `**Overall:** ${overall} (${passes} pass · ${warns} warn · ${rows.length} total)`;
+
+            let table;
+            if (rows.length === 0) {
+              table = '_No results were produced. Check the workflow run for errors._';
+            } else {
+              table = [
+                '| | Check | Verdict |',
+                '|---|---|---|',
+                ...rows.map(r => `| ${icon(r.status)} | **${escapePipes(titleOf(r.question))}** | ${escapePipes(r.justification)} |`),
+              ].join('\n');
+            }
+
+            const fullQuestions = rows.length === 0
+              ? ''
+              : '\n\n<details><summary>Full checklist questions</summary>\n\n' +
+                rows.map(r => `${r.id}. ${r.question}`).join('\n\n') +
+                '\n\n</details>';
+
+            const model = process.env.MODEL || 'unknown';
+            const retryNote = totalAttempts > rows.length
+              ? ` · ${totalAttempts - rows.length} retry attempts`
+              : '';
+            const costLine = `_Estimated cost (this run): **$${totalUsd.toFixed(4)}** — ${totalIn.toLocaleString()} input + ${totalOut.toLocaleString()} output tokens (≈4 chars/token) on \`${model}\`${retryNote}. Char-count estimate, not provider telemetry._`;
+
+            const body = `${header}${overrideBanner}\n\n${summary}\n\n${table}${fullQuestions}\n\n${costLine}`;
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: Number(process.env.PR_NUMBER),
+              body,
+            });
+
+            await core.summary.addRaw(body).write();
