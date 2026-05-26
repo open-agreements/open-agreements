@@ -16,7 +16,6 @@ import { spawnSync } from "node:child_process";
 import { tmpdir } from "node:os";
 
 import AdmZip from "adm-zip";
-import { createReport } from "docx-templates";
 
 import {
   PREVIEWS_DIR,
@@ -26,6 +25,18 @@ import {
   listTemplateIds,
   loadTemplateMetadata,
 } from "./lib/template-utils.mjs";
+
+const FILL_PIPELINE_PATH = resolve(ROOT, "dist", "core", "fill-pipeline.js");
+
+async function loadFillDocx() {
+  if (!existsSync(FILL_PIPELINE_PATH)) {
+    throw new Error(
+      `Compiled fill pipeline not found at ${FILL_PIPELINE_PATH}. Run 'npm run build' first.`
+    );
+  }
+  const mod = await import(FILL_PIPELINE_PATH);
+  return mod.fillDocx;
+}
 
 const RENDER_SCRIPT = resolve(ROOT, "scripts", "render_docx_pages.mjs");
 
@@ -95,22 +106,18 @@ const FORBIDDEN_PREVIEW_TAGS = [
   /\{effective_date\}/,
 ];
 
-async function fillTemplateForPreview(docxPath, sampleValues) {
+async function fillTemplateForPreview(docxPath, sampleValues, fillDocx) {
   const templateBuffer = readFileSync(docxPath);
-  // Intentionally minimal createReport call: these consent templates have no
-  // leading `$`, no line-break-bearing fields in sample data, no IF blocks,
-  // no drafting notes in the signature section, and no table conditionals.
-  // Dynamic verification confirmed this produces clean output for both SAFE
-  // consent DOCXs. If a future opt-in template needs more, expand here.
-  const filled = await createReport({
-    template: templateBuffer,
+  // Reuse the canonical runtime fill helper so the preview path and the
+  // user-facing fill path share the same drafting-note stripping, highlight
+  // stripping, currency sanitization, empty-row cleanup, and createReport
+  // invocation. Avoids the duplication flagged by code-reuse review and
+  // future-proofs against new pipeline steps.
+  const buffer = await fillDocx({
+    templateBuffer,
     data: sampleValues,
-    cmdDelimiter: ["{", "}"],
     fixSmartQuotes: true,
-    processLineBreaks: true,
-    processLineBreaksAsNewText: true,
   });
-  const buffer = Buffer.from(filled);
 
   const docXml = new AdmZip(buffer).getEntry("word/document.xml")?.getData().toString("utf8") ?? "";
   for (const pattern of FORBIDDEN_PREVIEW_TAGS) {
@@ -233,8 +240,9 @@ async function renderPreviewPagesWithFallback(templateId, dpi) {
   let fillTempDir;
   try {
     if (hasFilledPreview) {
+      const fillDocx = await loadFillDocx();
       fillTempDir = mkdtempSync(join(tmpdir(), "oa-preview-fill-"));
-      const filledBuffer = await fillTemplateForPreview(sourceDocxPath, sampleValues);
+      const filledBuffer = await fillTemplateForPreview(sourceDocxPath, sampleValues, fillDocx);
       renderDocxPath = join(fillTempDir, "filled.docx");
       writeFileSync(renderDocxPath, filledBuffer);
     }
