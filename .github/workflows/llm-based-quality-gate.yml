@@ -82,7 +82,18 @@ jobs:
         run: |
           set -euo pipefail
           if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
-            gh pr view "$DISPATCH_PR_NUMBER" --repo "$GITHUB_REPOSITORY" --json headRefOid,headRefName,baseRefName,labels > "$RUNNER_TEMP/pr.json"
+            gh pr view "$DISPATCH_PR_NUMBER" --repo "$GITHUB_REPOSITORY" --json headRefOid,headRefName,baseRefName,labels,headRepository,headRepositoryOwner > "$RUNNER_TEMP/pr.json"
+            # SECURITY: the job-level `if:` permits workflow_dispatch
+            # unconditionally; the same-repo gate (`head.repo.full_name ==
+            # github.repository`) is only enforced for pull_request events. Without
+            # this check, a maintainer dispatching the gate against a fork PR's
+            # head SHA would check out fork-controlled content with
+            # GEMINI_API_KEY in env. Fail closed if head repo != this repo.
+            HEAD_REPO=$(jq -r '.headRepositoryOwner.login + "/" + .headRepository.name' "$RUNNER_TEMP/pr.json")
+            if [ "$HEAD_REPO" != "$GITHUB_REPOSITORY" ]; then
+              echo "::error::workflow_dispatch attempted on PR #${DISPATCH_PR_NUMBER} from ${HEAD_REPO} (expected ${GITHUB_REPOSITORY}). The gate only runs on same-repo PRs; refusing to expose GEMINI_API_KEY to fork-controlled content."
+              exit 1
+            fi
             {
               echo "pr_number=$DISPATCH_PR_NUMBER"
               echo "head_sha=$(jq -r '.headRefOid' "$RUNNER_TEMP/pr.json")"
