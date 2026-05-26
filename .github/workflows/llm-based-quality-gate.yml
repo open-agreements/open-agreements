@@ -2,7 +2,12 @@ name: LLM-Based Quality Gate
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened, ready_for_review]
+    # `labeled` and `unlabeled` are included so that adding/removing the
+    # `llm-gate/override` label after a failed gate run re-triggers the
+    # workflow and clears the failing check without requiring a push. The
+    # job-level `if:` below filters out unrelated label changes so we don't
+    # re-run the costly matrix on every label add.
+    types: [opened, synchronize, reopened, ready_for_review, labeled, unlabeled]
 
 permissions:
   contents: read
@@ -30,9 +35,17 @@ env:
 jobs:
   parse-checklist:
     name: Parse checklist
+    # Skip on label changes that aren't the override label (otherwise we'd
+    # re-run the whole 14-check matrix every time someone adds a
+    # `priority/*` or `area/*` label). For `labeled`/`unlabeled` events the
+    # gate only re-runs when the label change is `llm-gate/override`.
     if: >-
       github.event.pull_request.draft == false &&
-      github.event.pull_request.head.repo.full_name == github.repository
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      (
+        (github.event.action != 'labeled' && github.event.action != 'unlabeled') ||
+        github.event.label.name == 'llm-gate/override'
+      )
     runs-on: ubuntu-latest
     permissions:
       contents: read
