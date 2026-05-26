@@ -100,18 +100,15 @@ jobs:
             } >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Checkout PR head
-        if: ${{ github.event_name == 'pull_request' }}
+      # SECURITY: parse the checklist from the trusted base ref, not from the
+      # PR head. Reading `.github/llm-based-quality-gate/checklist.md` from
+      # PR-controlled content would let a PR empty the file (matrix=0 items,
+      # gate trivially "passes") or replace items with innocuous questions
+      # that bypass the real checks.
+      - name: Checkout gate source (trusted base ref)
         uses: actions/checkout@v4
         with:
-          persist-credentials: false
-          fetch-depth: 0
-
-      - name: Checkout dispatch PR head
-        if: ${{ github.event_name == 'workflow_dispatch' }}
-        uses: actions/checkout@v4
-        with:
-          ref: ${{ steps.pr.outputs.head_sha }}
+          ref: ${{ steps.pr.outputs.base_ref }}
           persist-credentials: false
           fetch-depth: 0
 
@@ -154,10 +151,16 @@ jobs:
       max-parallel: ${{ fromJSON(vars.LLM_GATE_MAX_PARALLEL || '2') }}
       matrix: ${{ fromJSON(needs.parse-checklist.outputs.matrix) }}
     steps:
-      - name: Checkout gate source
+      # SECURITY: always check out the PR's resolved base ref (trusted),
+      # regardless of event type. For workflow_dispatch the maintainer could
+      # otherwise run the dispatch from a PR branch via the Actions UI, which
+      # would pull the composite action and system-prompt.md from PR-controlled
+      # content. Using base_ref ensures the gate source is always the version
+      # the PR is being merged into.
+      - name: Checkout gate source (trusted base ref)
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event_name == 'workflow_dispatch' && github.ref || needs.parse-checklist.outputs.base_ref }}
+          ref: ${{ needs.parse-checklist.outputs.base_ref }}
           persist-credentials: false
           fetch-depth: 0
 
