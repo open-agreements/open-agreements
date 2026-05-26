@@ -101,7 +101,27 @@ curl -L "$DOWNLOAD_URL" -o filled.docx
 | `DOWNLOAD_LINK_INVALID` | Malformed or signature-invalid download ID | `false` |
 | `DOWNLOAD_LINK_EXPIRED` | Download link expired | `false` |
 | `DOWNLOAD_LINK_NOT_FOUND` | Download ID not found in TTL store | `false` |
-| `INTERNAL_ERROR` | Unexpected server error during tool execution | `false` |
+| `INTERNAL_ERROR` | Unexpected server error during tool execution | usually `false` (see note) |
+
+> **`INTERNAL_ERROR` retriability:** defaults to `false`. The exception is when `error.details.reason === 'DOWNLOAD_STORE_UNAVAILABLE'` and `error.details.cause === 'runtime'` — in that case `retriable` is `true` to signal a transient KV/Upstash outage. Persistent misconfiguration surfaces as the same `reason` with `cause === 'configuration'` and `retriable: false`. Clients should branch on `error.details.reason` for the most precise retry signal.
+
+Example envelope for a transient download-store outage during `fill_template`:
+
+```json
+{
+  "status": "error",
+  "tool": "fill_template",
+  "error": {
+    "code": "INTERNAL_ERROR",
+    "message": "Download storage is unavailable: <details>",
+    "retriable": true,
+    "details": {
+      "reason": "DOWNLOAD_STORE_UNAVAILABLE",
+      "cause": "runtime"
+    }
+  }
+}
+```
 
 ## `/api/download` Contract
 
