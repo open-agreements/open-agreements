@@ -1008,6 +1008,11 @@ async function handleToolsCall(
     }
 
     const { template, values, return_mode, include_redline, redline_base } = parsed.data;
+    // Distinguish explicit `include_redline: true` from the schema default,
+    // so we only surface `redline_unavailable_reason` for callers that
+    // actively opted in (preserves wire-shape back-compat for default-true
+    // callers — most callers, since the Zod default applies otherwise).
+    const includeRedlineExplicit = (args as Record<string, unknown>).include_redline === true;
 
     let outcome: Awaited<ReturnType<typeof handleFill>>;
     try {
@@ -1089,26 +1094,55 @@ async function handleToolsCall(
 
     // Generate redline (track-changes) for recipe templates
     let redlineData: Record<string, unknown> = {};
+    let redlineUnavailableReason:
+      | 'template_unsupported'
+      | 'store_unavailable'
+      | 'internal_error'
+      | undefined;
     if (include_redline) {
       try {
         const redline = await generateRedlineFromFill(template, outcome.base64, redline_base, values);
         if (redline) {
-          const redlineArtifact = await createDownloadArtifact(template, values, {
-            variant: 'redline',
-            redline_base,
-          });
-          const redlineUrl = `${ctx.baseUrl}/api/download?id=${encodeURIComponent(redlineArtifact.download_id)}`;
-          redlineData = {
-            redline_download_url: redlineUrl,
-            redline_download_id: redlineArtifact.download_id,
-            redline_expires_at: redlineArtifact.expires_at,
-            redline_stats: redline.stats,
-          };
+          try {
+            const redlineArtifact = await createDownloadArtifact(template, values, {
+              variant: 'redline',
+              redline_base,
+            });
+            const redlineUrl = `${ctx.baseUrl}/api/download?id=${encodeURIComponent(redlineArtifact.download_id)}`;
+            redlineData = {
+              redline_download_url: redlineUrl,
+              redline_download_id: redlineArtifact.download_id,
+              redline_expires_at: redlineArtifact.expires_at,
+              redline_stats: redline.stats,
+            };
+          } catch (err) {
+            // Redline-variant artifact write failed (e.g. KV outage). Best-effort:
+            // log and surface the reason, but don't fail the fill.
+            const isStoreUnavailable = err instanceof DownloadStoreUnavailableError;
+            redlineUnavailableReason = isStoreUnavailable ? 'store_unavailable' : 'internal_error';
+            logError({
+              event: 'tool_internal_error',
+              endpoint: 'mcp',
+              tool: TOOL_FILL_TEMPLATE,
+              phase: 'redline_artifact',
+              parentOk: true,
+              ...(isStoreUnavailable
+                ? { cause: err instanceof DownloadStoreConfigurationError ? 'configuration' : 'runtime' }
+                : {}),
+              jsonrpcId: id,
+              ...normalizeError(err),
+              ...ctx,
+            });
+          }
+        } else {
+          // Template has no redline recipe — routine outcome, no log.
+          redlineUnavailableReason = 'template_unsupported';
         }
       } catch (err) {
         // Redline generation is best-effort; log but don't fail the fill.
         // parentOk:true so dashboards can distinguish a redline-only blip
         // from a hard fill failure.
+        redlineUnavailableReason = 'internal_error';
         logError({
           event: 'tool_internal_error',
           endpoint: 'mcp',
@@ -1122,6 +1156,13 @@ async function handleToolsCall(
       }
     }
 
+    // Only surface the reason when the caller explicitly opted in. Default-true
+    // callers (the vast majority) see no envelope-shape change.
+    const redlineReasonField =
+      includeRedlineExplicit && redlineUnavailableReason
+        ? { redline_unavailable_reason: redlineUnavailableReason }
+        : {};
+
     if (return_mode === 'mcp_resource') {
       return toolSuccessResult(id, TOOL_FILL_TEMPLATE, {
         content_type: DOCX_MIME,
@@ -1132,6 +1173,7 @@ async function handleToolsCall(
         resource_uri: `oa://filled/${artifact.download_id}`,
         return_mode,
         ...redlineData,
+        ...redlineReasonField,
       }, rateState);
     }
 
@@ -1142,6 +1184,7 @@ async function handleToolsCall(
       metadata: outcome.metadata,
       return_mode,
       ...redlineData,
+      ...redlineReasonField,
     }, rateState);
   }
 

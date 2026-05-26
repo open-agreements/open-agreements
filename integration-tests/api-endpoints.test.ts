@@ -625,6 +625,174 @@ describe('MCP endpoint — api/mcp.ts', () => {
     });
   });
 
+  // ---------------------------------------------------------------------------
+  // fill_template redline_unavailable_reason — issue #227 / OA-DST-081..086
+  // The redline path is best-effort; failures must not break the parent fill.
+  // The reason field is gated on the caller explicitly opting in to redlines
+  // (literal `include_redline: true`) so default callers see no shape change.
+  // ---------------------------------------------------------------------------
+
+  function fillTemplateReq(id: number, redlineArg: true | false | undefined, returnMode?: 'url' | 'mcp_resource') {
+    const args: Record<string, unknown> = { template: 'common-paper-mutual-nda', values: { company_name: 'Acme Corp' } };
+    if (redlineArg !== undefined) args.include_redline = redlineArg;
+    if (returnMode) args.return_mode = returnMode;
+    return createMockReq({
+      headers: { 'content-type': 'application/json', host: 'openagreements.org' },
+      body: { jsonrpc: '2.0', id, method: 'tools/call', params: { name: 'fill_template', arguments: args } },
+    });
+  }
+
+  it.openspec('OA-DST-081')('explicit include_redline + template_unsupported → reason field present, no log', async () => {
+    handleFillMock.mockResolvedValue(MOCK_FILL_SUCCESS);
+    generateRedlineFromFillMock.mockResolvedValueOnce(null);
+    const consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+
+    const res = createMockRes();
+    await mcpHandler(fillTemplateReq(101, true), res);
+
+    const envelope = parseMcpEnvelope(res.body);
+    expect(envelope.ok).toBe(true);
+    expect(envelope.data.redline_unavailable_reason).toBe('template_unsupported');
+    expect(envelope.data.redline_download_url).toBeUndefined();
+    expect(envelope.data.redline_download_id).toBeUndefined();
+    expect(envelope.data.redline_stats).toBeUndefined();
+    // template_unsupported is routine, not an error — no log emitted.
+    const loggedRedline = consoleErrorSpy.mock.calls
+      .map((c) => JSON.stringify(c))
+      .filter((s) => s.includes('"phase":"redline"') || s.includes('"phase":"redline_artifact"'));
+    expect(loggedRedline).toHaveLength(0);
+
+    consoleErrorSpy.mockRestore();
+  });
+
+  function findRedlineLog(spy: ReturnType<typeof vi.spyOn>, phase: 'redline' | 'redline_artifact'): Record<string, unknown> | undefined {
+    return spy.mock.calls
+      .flat()
+      .map((s) => { try { return JSON.parse(String(s)) as Record<string, unknown>; } catch { return undefined; } })
+      .find((o): o is Record<string, unknown> => o !== undefined && o.phase === phase);
+  }
+
+  it.openspec('OA-DST-082')('explicit include_redline + generator throws → internal_error reason + log', async () => {
+    handleFillMock.mockResolvedValue(MOCK_FILL_SUCCESS);
+    generateRedlineFromFillMock.mockRejectedValueOnce(new Error('redline generator crash'));
+    const consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+
+    const res = createMockRes();
+    await mcpHandler(fillTemplateReq(102, true), res);
+
+    const envelope = parseMcpEnvelope(res.body);
+    expect(envelope.ok).toBe(true); // parent fill still succeeded
+    expect(envelope.data.redline_unavailable_reason).toBe('internal_error');
+    const log = findRedlineLog(consoleErrorSpy, 'redline');
+    expect(log).toBeDefined();
+    expect(log!.parentOk).toBe(true);
+    expect(log!.event).toBe('tool_internal_error');
+
+    consoleErrorSpy.mockRestore();
+  });
+
+  it.openspec('OA-DST-083')('explicit include_redline + redline artifact DownloadStoreRuntimeError → store_unavailable, cause:runtime', async () => {
+    handleFillMock.mockResolvedValue(MOCK_FILL_SUCCESS);
+    generateRedlineFromFillMock.mockResolvedValueOnce({
+      base64: Buffer.from('mock-redline').toString('base64'),
+      stats: { insertions: 1, deletions: 0, modifications: 0 },
+    });
+    // First createDownloadArtifact call → parent artifact (default success).
+    // Second call → redline variant, throws runtime store error.
+    createDownloadArtifactMock
+      .mockReturnValueOnce({ download_id: 'parent.sig', expires_at: new Date(Date.now() + 3600000).toISOString(), expires_at_ms: Date.now() + 3600000 })
+      .mockImplementationOnce(() => { throw new MockDownloadStoreRuntimeError('upstash 5xx'); });
+    const consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+
+    const res = createMockRes();
+    await mcpHandler(fillTemplateReq(103, true), res);
+
+    const envelope = parseMcpEnvelope(res.body);
+    expect(envelope.ok).toBe(true);
+    expect(envelope.data.redline_unavailable_reason).toBe('store_unavailable');
+    const log = findRedlineLog(consoleErrorSpy, 'redline_artifact');
+    expect(log).toBeDefined();
+    expect(log!.parentOk).toBe(true);
+    expect(log!.cause).toBe('runtime');
+
+    consoleErrorSpy.mockRestore();
+  });
+
+  it.openspec('OA-DST-084')('explicit include_redline + redline artifact DownloadStoreConfigurationError → store_unavailable, cause:configuration', async () => {
+    handleFillMock.mockResolvedValue(MOCK_FILL_SUCCESS);
+    generateRedlineFromFillMock.mockResolvedValueOnce({
+      base64: Buffer.from('mock-redline').toString('base64'),
+      stats: { insertions: 1, deletions: 0, modifications: 0 },
+    });
+    createDownloadArtifactMock
+      .mockReturnValueOnce({ download_id: 'parent.sig', expires_at: new Date(Date.now() + 3600000).toISOString(), expires_at_ms: Date.now() + 3600000 })
+      .mockImplementationOnce(() => { throw new MockDownloadStoreConfigurationError('KV not configured'); });
+    const consoleErrorSpy = vi.spyOn(console, 'error').mockImplementation(() => undefined);
+
+    const res = createMockRes();
+    await mcpHandler(fillTemplateReq(104, true), res);
+
+    const envelope = parseMcpEnvelope(res.body);
+    expect(envelope.ok).toBe(true);
+    expect(envelope.data.redline_unavailable_reason).toBe('store_unavailable');
+    const log = findRedlineLog(consoleErrorSpy, 'redline_artifact');
+    expect(log).toBeDefined();
+    expect(log!.parentOk).toBe(true);
+    expect(log!.cause).toBe('configuration');
+
+    consoleErrorSpy.mockRestore();
+  });
+
+  it.openspec('OA-DST-086')('explicit include_redline + happy path → no reason field, redline fields populated', async () => {
+    handleFillMock.mockResolvedValue(MOCK_FILL_SUCCESS);
+    generateRedlineFromFillMock.mockResolvedValueOnce({
+      base64: Buffer.from('mock-redline').toString('base64'),
+      stats: { insertions: 3, deletions: 1, modifications: 2 },
+    });
+    createDownloadArtifactMock
+      .mockReturnValueOnce({ download_id: 'parent.sig', expires_at: new Date(Date.now() + 3600000).toISOString(), expires_at_ms: Date.now() + 3600000 })
+      .mockReturnValueOnce({ download_id: 'redline.sig', expires_at: new Date(Date.now() + 3600000).toISOString(), expires_at_ms: Date.now() + 3600000 });
+
+    const res = createMockRes();
+    await mcpHandler(fillTemplateReq(105, true), res);
+
+    const envelope = parseMcpEnvelope(res.body);
+    expect(envelope.ok).toBe(true);
+    expect(envelope.data.redline_unavailable_reason).toBeUndefined();
+    expect(envelope.data.redline_download_url).toContain('id=redline.sig');
+    expect(envelope.data.redline_download_id).toBe('redline.sig');
+    expect(envelope.data.redline_stats).toEqual({ insertions: 3, deletions: 1, modifications: 2 });
+  });
+
+  it.openspec('OA-DST-085')('default-true include_redline (omitted) + null redline → reason field absent (back-compat)', async () => {
+    handleFillMock.mockResolvedValue(MOCK_FILL_SUCCESS);
+    generateRedlineFromFillMock.mockResolvedValueOnce(null);
+
+    const res = createMockRes();
+    // include_redline omitted from arguments — Zod default of `true` applies.
+    await mcpHandler(fillTemplateReq(106, undefined), res);
+
+    const envelope = parseMcpEnvelope(res.body);
+    expect(envelope.ok).toBe(true);
+    // Back-compat: default callers must NOT see the new field.
+    expect(envelope.data.redline_unavailable_reason).toBeUndefined();
+    expect(envelope.data.redline_download_url).toBeUndefined();
+  });
+
+  it.openspec('OA-DST-081')('explicit include_redline + template_unsupported in mcp_resource return mode → reason field on resource envelope', async () => {
+    handleFillMock.mockResolvedValue(MOCK_FILL_SUCCESS);
+    generateRedlineFromFillMock.mockResolvedValueOnce(null);
+
+    const res = createMockRes();
+    await mcpHandler(fillTemplateReq(107, true, 'mcp_resource'), res);
+
+    const envelope = parseMcpEnvelope(res.body);
+    expect(envelope.ok).toBe(true);
+    expect(envelope.data.return_mode).toBe('mcp_resource');
+    expect(envelope.data.resource_uri).toContain('oa://filled/');
+    expect(envelope.data.redline_unavailable_reason).toBe('template_unsupported');
+  });
+
   it.openspec('OA-DST-024')('returns INVALID_ARGUMENT envelope for unknown tool name', async () => {
     const req = createMockReq({
       body: {

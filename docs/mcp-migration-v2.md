@@ -89,6 +89,40 @@ For best performance and reliability, use `return_mode: "url"` and download byte
 curl -L "$DOWNLOAD_URL" -o filled.docx
 ```
 
+### Redline fields
+
+When the template has a redline recipe and `include_redline` is enabled (default
+`true`), the envelope additionally includes `redline_download_url`,
+`redline_download_id`, `redline_expires_at`, and `redline_stats`. These fields
+are absent when the template has no redline recipe or when the redline path
+failed (the parent fill still succeeds — redline generation is best-effort).
+
+### `redline_unavailable_reason` (opt-in only)
+
+When the caller **explicitly** passes `include_redline: true` on
+`arguments` (a literal explicit opt-in, not the schema default), the envelope
+surfaces an additional discriminator if the redline could not be produced:
+
+```jsonc
+{
+  "redline_unavailable_reason": "template_unsupported" // | "store_unavailable" | "internal_error"
+}
+```
+
+| Value | Meaning |
+| --- | --- |
+| `template_unsupported` | The resolved template has no redline recipe. Routine outcome, no server log emitted. |
+| `store_unavailable` | The redline-variant download-artifact write failed because durable storage is unavailable (`DownloadStoreUnavailableError`). The server log carries `phase: 'redline_artifact'`, `parentOk: true`, and `cause: 'configuration' | 'runtime'`. |
+| `internal_error` | The redline generator itself threw, or the redline artifact write failed with a non-store error. The server log carries `phase: 'redline'` or `'redline_artifact'`, both with `parentOk: true`. |
+
+**Back-compat note.** The field is **omitted entirely** when `include_redline`
+is absent from `arguments` (i.e. the Zod default of `true` applies). Callers
+that never explicitly opted in see no envelope-shape change. To start
+receiving the field, pass `arguments.include_redline: true` literally.
+
+Successful redline generation populates the `redline_*` fields and does NOT
+emit `redline_unavailable_reason`.
+
 ## Error Code Taxonomy
 
 | Code | Meaning | Retriable |
