@@ -96,7 +96,11 @@ jobs:
               echo "head_sha=$PR_HEAD_SHA"
               echo "head_ref=$PR_HEAD_REF"
               echo "base_ref=$PR_BASE_REF"
-              echo "labels=$PR_LABELS"
+              # `toJSON()` emits pretty-printed (multi-line) JSON, which
+              # $GITHUB_OUTPUT rejects without heredoc syntax. Collapse to
+              # single-line so the downstream `JSON.parse(PR_LABELS)` keeps
+              # working and the override label can be evaluated.
+              echo "labels=$(printf '%s' "$PR_LABELS" | jq -c .)"
             } >> "$GITHUB_OUTPUT"
           fi
 
@@ -231,6 +235,8 @@ jobs:
           PR_NUMBER: ${{ needs.parse-checklist.outputs.pr_number }}
           PR_LABELS: ${{ needs.parse-checklist.outputs.labels }}
           EVENT_NAME: ${{ github.event_name }}
+          HEAD_SHA: ${{ needs.parse-checklist.outputs.head_sha }}
+          REPO: ${{ github.repository }}
         with:
           script: |
             const fs = require('fs');
@@ -294,8 +300,32 @@ jobs:
               : '';
             const costLine = `_Estimated cost (this run): **$${totalUsd.toFixed(4)}** — ${totalIn.toLocaleString()} input + ${totalOut.toLocaleString()} output tokens (≈4 chars/token) on \`${model}\`${retryNote}. Char-count estimate, not provider telemetry._`;
 
-            const body = `${header}${overrideBanner}\n\n${summary}\n\n${table}${fullQuestions}\n\n${costLine}`;
-            const issue_number = Number(process.env.PR_NUMBER);
+            // Re-trigger guidance. The gate intentionally does NOT run on
+            // `synchronize` (push) events — too expensive. So a comment on
+            // an older commit can stay attached to the PR even after new
+            // pushes. Stamping the bound head SHA + the manual re-trigger
+            // command makes the staleness visible and gives reviewers and
+            // automation the exact command to re-fire.
+            const headSha = (process.env.HEAD_SHA || '').slice(0, 7);
+            const repo = process.env.REPO || '';
+            const issueNumber = Number(process.env.PR_NUMBER);
+            const reTriggerNote = [
+              // Blank line BEFORE the `---` is critical: without it, markdown
+              // parses `<costLine>\n---` as a setext H2 and promotes the cost
+              // line to a heading. The two empty strings produce the required
+              // `\n\n` separator after joining.
+              '',
+              '',
+              '---',
+              `_Gate verdict bound to head \`${headSha}\`. The gate does **not** auto-rerun on push (cost) — only on \`opened\`, \`ready_for_review\`, and \`llm-gate/override\` label toggles. After pushing fixes for a WARN above, or after a branch update that bypassed the gate, re-fire manually:_`,
+              '',
+              '```bash',
+              `gh workflow run llm-based-quality-gate.yml -R ${repo} -f pr_number=${issueNumber}`,
+              '```',
+            ].join('\n');
+
+            const body = `${header}${overrideBanner}\n\n${summary}\n\n${table}${fullQuestions}\n\n${costLine}${reTriggerNote}`;
+            const issue_number = issueNumber;
 
             if (process.env.EVENT_NAME === 'workflow_dispatch') {
               const marker = '## LLM-Based Quality Gate';

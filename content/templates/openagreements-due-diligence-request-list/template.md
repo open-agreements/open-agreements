@@ -53,7 +53,7 @@ A.5 Certificates of good standing from the state of formation and from each stat
 
 A.6 Officer and director list, including titles, dates of service, and any departures within the past {lookback_years} years.
 
-A.7 Beneficial Ownership Information (BOI) reports filed pursuant to the Corporate Transparency Act, including any updates.
+A.7 Beneficial Ownership Information (BOI) reports filed pursuant to the Corporate Transparency Act, and any updates, if applicable. Note: FinCEN's March 26, 2025 interim final rule exempts U.S.-formed entities and U.S. persons; only foreign reporting companies remain subject.
 
 ## Section B — Capitalization and Securities
 
@@ -293,13 +293,13 @@ R.2 Sanctions / OFAC screening procedures, screening tool documentation, and any
 
 R.3 Export-control classifications (ECCN, USML) for material technologies and products, plus any export licenses or commodity classification rulings.
 
-R.4 AML / KYC programs (where applicable to the target's industry), including any SARs filed.
+R.4 AML / KYC program documentation (where applicable to the target's industry), including written policies and procedures, training records, regulator examination findings, and non-privileged audit/correspondence files. Do not produce any SARs or materials that would reveal a SAR's existence (FinCEN confidentiality rules at 31 CFR 1020.320(e) bar disclosure to counterparties).
 
 R.5 FCPA compliance program documentation, including risk assessments, training records, third-party-intermediary diligence, and any prior internal investigations or third-party allegations.
 
 R.6 Government-customer relationships (federal, state, local, or foreign), including contract terms with flow-down compliance obligations and any audit history. Include any GSA Schedule contracts, FAR-flowdown analysis, and SBA representations.
 
-R.7 Operations or sales in higher-risk corruption-index jurisdictions, including Venezuela, Russia, Belarus, Iran, North Korea, Syria, and Cuba, plus any sub-Saharan African, Central Asian, or other high-risk regions identified by the buyer.
+R.7 Operations or sales in higher-risk corruption-index jurisdictions; specify each country in `{countries_of_operation}`.
 
 R.8 Foreign-investment-screening filings (CFIUS, foreign FDI regimes), including any prior CFIUS reviews of the target or its subsidiaries.
 
