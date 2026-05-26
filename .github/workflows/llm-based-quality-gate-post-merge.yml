@@ -75,7 +75,7 @@ jobs:
       count: ${{ steps.parse.outputs.count }}
     steps:
       - name: Checkout merge commit
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           ref: ${{ github.sha }}
           persist-credentials: false
@@ -121,7 +121,7 @@ jobs:
       matrix: ${{ fromJSON(needs.parse-checklist.outputs.matrix) }}
     steps:
       - name: Checkout merge commit
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           ref: ${{ github.sha }}
           persist-credentials: false
@@ -145,7 +145,7 @@ jobs:
           price-per-m-output: ${{ env.LLM_GATE_PRICE_PER_M_OUTPUT }}
 
       - name: Upload per-item result
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: audit-result-${{ matrix.id }}
           path: results/result-${{ matrix.id }}.json
@@ -161,7 +161,7 @@ jobs:
       pull-requests: write
     steps:
       - name: Download all per-item results
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           path: results
           pattern: audit-result-*
