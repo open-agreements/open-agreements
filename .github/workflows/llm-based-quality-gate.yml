@@ -306,6 +306,11 @@ jobs:
             const repo = process.env.REPO || '';
             const issueNumber = Number(process.env.PR_NUMBER);
             const reTriggerNote = [
+              // Blank line BEFORE the `---` is critical: without it, markdown
+              // parses `<costLine>\n---` as a setext H2 and promotes the cost
+              // line to a heading. The two empty strings produce the required
+              // `\n\n` separator after joining.
+              '',
               '',
               '---',
               `_Gate verdict bound to head \`${headSha}\`. The gate does **not** auto-rerun on push (cost) — only on \`opened\`, \`ready_for_review\`, and \`llm-gate/override\` label toggles. After pushing fixes for a WARN above, or after a branch update that bypassed the gate, re-fire manually:_`,
