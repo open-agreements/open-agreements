@@ -43,11 +43,11 @@ function normalizeUrl(value, key) {
 }
 
 const CONTENTS = [
-  ["Install", "#install"],
-  ["Quick Start", "#quick-start"],
   ["Available Templates", "#available-templates"],
   ["Available Skills", "#available-skills"],
   ["Packages", "#packages"],
+  ["Quick Start", "#quick-start"],
+  ["Install", "#install"],
   ["Documentation", "#documentation"],
   ["Privacy", "#privacy"],
   ["See Also", "#see-also"],

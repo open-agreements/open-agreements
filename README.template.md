@@ -27,89 +27,6 @@ Works with Claude Code, Gemini CLI, Cursor, and local MCP or CLI workflows.
 
 > *Demo: Claude fills a Common Paper Mutual NDA in under 2 minutes. Sped up for brevity.*
 
-## Install
-
-### Agent Skill (recommended)
-
-```bash
-npx skills add open-agreements/open-agreements
-```
-
-### Remote MCP
-
-Connect any MCP-compatible agent to the hosted server at `https://openagreements.org/api/mcp`.
-
-**Claude Code**
-
-```bash
-claude mcp add --transport http open-agreements https://openagreements.org/api/mcp
-```
-
-**Codex CLI**
-
-```bash
-codex mcp add open-agreements --url https://openagreements.org/api/mcp
-```
-
-**Other agents** — point your client at `https://openagreements.org/api/mcp` (streamable HTTP).
-
-### Gemini CLI Extension
-
-```bash
-gemini extensions install https://github.com/open-agreements/open-agreements
-```
-
-### CLI
-
-```bash
-npm install -g open-agreements
-```
-
-Or run directly with zero install:
-
-```bash
-npx -y open-agreements@latest list
-```
-
-## Quick Start
-
-### With Claude Code
-
-Ask Claude:
-
-```text
-Fill the Common Paper mutual NDA for my company
-```
-
-Claude can discover templates, interview you for field values, and render a signed-ready DOCX.
-
-### With the CLI
-
-```bash
-# See all available templates
-open-agreements list
-
-# Fill a template from a JSON data file
-open-agreements fill common-paper-mutual-nda -d values.json -o my-nda.docx
-
-# Fill with inline values
-open-agreements fill common-paper-mutual-nda --set party_1_name="Acme Corp" --set governing_law="Delaware"
-```
-
-### Example Prompts
-
-- "Draft an NDA for our construction subcontractor"
-- "Create a consulting agreement for our insurance agency"
-- "Fill the independent contractor agreement for a freelance designer"
-- "Generate a SAFE with a $5M valuation cap"
-
-### What Happens
-
-1. The agent runs `list --json` to discover templates and their fields.
-2. It interviews you for field values grouped by section.
-3. It runs `fill <template>` to render a DOCX preserving the source formatting.
-4. You review and sign the output document.
-
 ## Available Templates
 
 The Source column links to the upstream standard, source document, or canonical project page (varies by publisher). The License column shows redistribution terms. Repo links point to the GitHub content directory for each template or recipe.
@@ -206,6 +123,89 @@ This repository includes a Cursor plugin manifest at `.cursor-plugin/plugin.json
 Choose based on document sensitivity and internal policy. See the trust checklist below for the data-flow summary.
 
 </details>
+
+## Quick Start
+
+### With Claude Code
+
+Ask Claude:
+
+```text
+Fill the Common Paper mutual NDA for my company
+```
+
+Claude can discover templates, interview you for field values, and render a signed-ready DOCX.
+
+### With the CLI
+
+```bash
+# See all available templates
+open-agreements list
+
+# Fill a template from a JSON data file
+open-agreements fill common-paper-mutual-nda -d values.json -o my-nda.docx
+
+# Fill with inline values
+open-agreements fill common-paper-mutual-nda --set party_1_name="Acme Corp" --set governing_law="Delaware"
+```
+
+### Example Prompts
+
+- "Draft an NDA for our construction subcontractor"
+- "Create a consulting agreement for our insurance agency"
+- "Fill the independent contractor agreement for a freelance designer"
+- "Generate a SAFE with a $5M valuation cap"
+
+### What Happens
+
+1. The agent runs `list --json` to discover templates and their fields.
+2. It interviews you for field values grouped by section.
+3. It runs `fill <template>` to render a DOCX preserving the source formatting.
+4. You review and sign the output document.
+
+## Install
+
+### Agent Skill (recommended)
+
+```bash
+npx skills add open-agreements/open-agreements
+```
+
+### Remote MCP
+
+Connect any MCP-compatible agent to the hosted server at `https://openagreements.org/api/mcp`.
+
+**Claude Code**
+
+```bash
+claude mcp add --transport http open-agreements https://openagreements.org/api/mcp
+```
+
+**Codex CLI**
+
+```bash
+codex mcp add open-agreements --url https://openagreements.org/api/mcp
+```
+
+**Other agents** — point your client at `https://openagreements.org/api/mcp` (streamable HTTP).
+
+### Gemini CLI Extension
+
+```bash
+gemini extensions install https://github.com/open-agreements/open-agreements
+```
+
+### CLI
+
+```bash
+npm install -g open-agreements
+```
+
+Or run directly with zero install:
+
+```bash
+npx -y open-agreements@latest list
+```
 
 ---
 
