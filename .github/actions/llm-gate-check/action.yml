@@ -119,11 +119,17 @@ runs:
         PARSED=""
         ATTEMPTS=0
         MAX_ATTEMPTS=3
+        LAST_RAW=""
+        LAST_ERR=""
+        DIAG_LOG="$RUNNER_TEMP/diag-${CHECK_ID}.log"
+        : > "$DIAG_LOG"
 
         for attempt in 1 2 3; do
           ATTEMPTS=$attempt
           RAW="$RUNNER_TEMP/raw-${CHECK_ID}-${attempt}.json"
           ERR="$RUNNER_TEMP/err-${CHECK_ID}-${attempt}.log"
+          LAST_RAW="$RAW"
+          LAST_ERR="$ERR"
 
           # Direct CLI invocation: we control logging, retries, and what
           # ends up in $GITHUB_STEP_SUMMARY. The official action would
@@ -134,7 +140,12 @@ runs:
               --output-format json \
               --prompt "$(cat "$PROMPT_FILE")" \
               > "$RAW" 2> "$ERR"; then
+            GEMINI_EXIT=0
+          else
+            GEMINI_EXIT=$?
+          fi
 
+          if [ "$GEMINI_EXIT" -eq 0 ]; then
             # The CLI returns {"response": "<model text>", "stats": {...}}.
             # Extract response, then parse it as our {status, justification} JSON.
             if MODEL_TEXT=$(jq -er '.response' "$RAW" 2>/dev/null) && \
@@ -143,8 +154,12 @@ runs:
                    and (.justification | type == "string")
                    and (.justification | length > 0))
                ' 2>/dev/null); then
+              printf 'attempt %d: ok (CLI exit 0, parsed)\n' "$attempt" >> "$DIAG_LOG"
               break
             fi
+            printf 'attempt %d: CLI exit 0 but response JSON did not match {status,justification} contract\n' "$attempt" >> "$DIAG_LOG"
+          else
+            printf 'attempt %d: CLI exit %d (no parse attempted)\n' "$attempt" "$GEMINI_EXIT" >> "$DIAG_LOG"
           fi
 
           if [ "$attempt" -lt "$MAX_ATTEMPTS" ]; then
@@ -163,6 +178,33 @@ runs:
         if [ -z "$PARSED" ]; then
           echo "::warning::Check ${CHECK_ID} fell back to WARN after $MAX_ATTEMPTS malformed attempts"
           PARSED=$(jq -n '{status: "WARN", justification: "Unable to verify: the LLM produced malformed output across all retry attempts. Review this question manually."}')
+
+          # Surface the last-attempt diagnostic so we can root-cause why all
+          # retries failed (auth/quota, model availability, CLI/model
+          # incompatibility, response-envelope change, etc.). Bounded leak
+          # risk: only the model's error envelope and response head, never
+          # the prompt or PR diff.
+          if [ -n "${GITHUB_STEP_SUMMARY:-}" ]; then
+            {
+              printf '### Check %s — WARN fallback diagnostics\n\n' "$CHECK_ID"
+              printf 'All %d retry attempts failed. Per-attempt outcome:\n\n' "$MAX_ATTEMPTS"
+              printf '```\n'
+              cat "$DIAG_LOG"
+              printf '```\n\n'
+              if [ -s "$LAST_ERR" ]; then
+                printf '<details><summary>Last attempt stderr (head 4096 bytes)</summary>\n\n'
+                printf '```\n'
+                head -c 4096 "$LAST_ERR"
+                printf '\n```\n\n</details>\n\n'
+              fi
+              if [ -s "$LAST_RAW" ]; then
+                printf '<details><summary>Last attempt raw response (head 4096 bytes)</summary>\n\n'
+                printf '```\n'
+                head -c 4096 "$LAST_RAW"
+                printf '\n```\n\n</details>\n'
+              fi
+            } >> "$GITHUB_STEP_SUMMARY"
+          fi
         fi
 
         # Char-count cost estimation. Token counts aren't exposed by the
