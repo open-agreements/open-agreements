@@ -96,7 +96,11 @@ jobs:
               echo "head_sha=$PR_HEAD_SHA"
               echo "head_ref=$PR_HEAD_REF"
               echo "base_ref=$PR_BASE_REF"
-              echo "labels=$PR_LABELS"
+              # `toJSON()` emits pretty-printed (multi-line) JSON, which
+              # $GITHUB_OUTPUT rejects without heredoc syntax. Collapse to
+              # single-line so the downstream `JSON.parse(PR_LABELS)` keeps
+              # working and the override label can be evaluated.
+              echo "labels=$(printf '%s' "$PR_LABELS" | jq -c .)"
             } >> "$GITHUB_OUTPUT"
           fi
 
