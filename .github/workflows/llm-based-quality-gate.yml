@@ -82,7 +82,7 @@ jobs:
         run: |
           set -euo pipefail
           if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
-            gh pr view "$DISPATCH_PR_NUMBER" --json headRefOid,headRefName,baseRefName,labels > "$RUNNER_TEMP/pr.json"
+            gh pr view "$DISPATCH_PR_NUMBER" --repo "$GITHUB_REPOSITORY" --json headRefOid,headRefName,baseRefName,labels > "$RUNNER_TEMP/pr.json"
             {
               echo "pr_number=$DISPATCH_PR_NUMBER"
               echo "head_sha=$(jq -r '.headRefOid' "$RUNNER_TEMP/pr.json")"
