@@ -1,6 +1,6 @@
 # Employment Confidentiality Acknowledgement
 
-OpenAgreements Employment Confidentiality Acknowledgement (v1.1). Free to use under CC BY 4.0.
+OpenAgreements Employment Confidentiality Acknowledgement (v1.2). Free to use under CC BY 4.0.
 
 ## Cover Terms
 
@@ -28,15 +28,19 @@ Employee will use confidential information only for authorized business purposes
 
 Employee will access Company data only through approved tools and systems listed in Cover Terms unless written authorization is provided.
 
-### 3. Security Incident Reporting
+### 3. Protected Disclosures and Protected Activity
+
+Nothing in this acknowledgement restricts Employee from reporting possible violations of law to a government agency or attorney, making disclosures protected by whistleblower laws, or discussing wages, hours, or working conditions as protected by law. Employee does not need Company's prior approval to make those disclosures or to notify Company that they were made. Pursuant to the Defend Trade Secrets Act (18 U.S.C. § 1833(b)), Employee will not be held criminally or civilly liable under federal or state trade secret law for disclosing a trade secret in confidence to a government official or attorney solely to report or investigate a suspected violation of law, or in a court filing made under seal. Employee may also disclose a trade secret to Employee's attorney and use it in a retaliation lawsuit if any filing containing the trade secret is made under seal and the trade secret is not otherwise disclosed except by court order.
+
+### 4. Security Incident Reporting
 
 Employee will promptly report suspected incidents to the security reporting contact listed in Cover Terms.
 
-### 4. Post-Employment Obligations
+### 5. Post-Employment Obligations
 
 After employment ends, Employee will continue obligations listed in Cover Terms and as required by law.
 
-### 5. Policy Updates
+### 6. Policy Updates
 
 Company may update policies from time to time. Employee remains responsible for complying with current written policies communicated by Company.
 
