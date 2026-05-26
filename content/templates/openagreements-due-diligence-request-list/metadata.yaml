@@ -231,16 +231,6 @@ fields:
       enabled to focus the request on specific jurisdictions.
     default: ''
     section: Cross-Border Specifics
-  - name: government_customer_exposure
-    type: boolean
-    description: >-
-      Set true if the target has government customers (federal, state,
-      local, or foreign) where flow-down compliance obligations may apply.
-      When true, additional government-contracts requests render in
-      Section R.
-    default: 'false'
-    section: Cross-Border Specifics
-
   # --- AI-augmentable per-rider question arrays ---
   # Each array holds {question: string} items. The DOCX uses
   # {FOR q IN <array>}{$q.question}{END-FOR q} loops at the end of the
