@@ -283,7 +283,13 @@ jobs:
   aggregate:
     name: Aggregate and post review
     needs: [parse-checklist, run-check]
-    if: ${{ always() && needs.parse-checklist.outputs.count != '0' }}
+    # `always()` keeps the aggregate running even when individual matrix
+    # `run-check` jobs fail (we still want the comment). But `always()`
+    # bypasses the normal skipped-needs cascade, so we must explicitly
+    # require parse-checklist to have succeeded — otherwise an unrelated
+    # label-change event (where parse-checklist is skipped via its own
+    # `if:`) would still start the aggregate job with empty outputs.
+    if: ${{ always() && needs.parse-checklist.result == 'success' && needs.parse-checklist.outputs.count != '0' }}
     runs-on: ubuntu-latest
     permissions:
       contents: read
