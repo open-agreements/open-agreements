@@ -110,11 +110,16 @@ Requirements:
 Example (macOS):
 
 ```bash
-brew install --cask libreoffice
+brew install --cask libreoffice-still
 # Keep this file pinned in repo:
 # config/libreoffice-headless.json
 npm run check:libreoffice
 ```
+
+The `libreoffice-still` cask tracks the LTS (Still) branch and matches
+the `cask` value in `config/libreoffice-headless.json`. The mainline
+`libreoffice` cask currently ships the 26.2.x line, which will fail the
+pinned-version check.
 
 Temporary local opt-out (not recommended for CI): `OA_ALLOW_UNPINNED_SOFFICE=1`
 
