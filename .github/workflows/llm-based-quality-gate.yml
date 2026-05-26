@@ -2,7 +2,12 @@ name: LLM-Based Quality Gate
 
 on:
   pull_request:
-    types: [opened, synchronize, reopened, ready_for_review]
+    # `labeled` and `unlabeled` are included so that adding/removing the
+    # `llm-gate/override` label after a failed gate run re-triggers the
+    # workflow and clears the failing check without requiring a push. The
+    # job-level `if:` below filters out unrelated label changes so we don't
+    # re-run the costly matrix on every label add.
+    types: [opened, synchronize, reopened, ready_for_review, labeled, unlabeled]
 
 permissions:
   contents: read
@@ -17,8 +22,10 @@ env:
   #   gh variable set LLM_GATE_CLI_VERSION --body 0.40.0
   #   gh variable set LLM_GATE_MODEL --body gemini-3.5-flash
   #   gh variable set LLM_GATE_MAX_PARALLEL --body 3
+  #   gh variable set LLM_GATE_BLOCKING --body 1
   GEMINI_CLI_VERSION: ${{ vars.LLM_GATE_CLI_VERSION || '0.39.1' }}
   GEMINI_MODEL: ${{ vars.LLM_GATE_MODEL || 'gemini-3.5-flash' }}
+  LLM_GATE_BLOCKING: ${{ vars.LLM_GATE_BLOCKING || '0' }}
   # Estimated cost per 1M tokens — used only to compute a ballpark figure
   # for the PR-comment footer. Override per-repo via repo variables if
   # pricing drifts.
@@ -28,9 +35,17 @@ env:
 jobs:
   parse-checklist:
     name: Parse checklist
+    # Skip on label changes that aren't the override label (otherwise we'd
+    # re-run the whole 14-check matrix every time someone adds a
+    # `priority/*` or `area/*` label). For `labeled`/`unlabeled` events the
+    # gate only re-runs when the label change is `llm-gate/override`.
     if: >-
       github.event.pull_request.draft == false &&
-      github.event.pull_request.head.repo.full_name == github.repository
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      (
+        (github.event.action != 'labeled' && github.event.action != 'unlabeled') ||
+        github.event.label.name == 'llm-gate/override'
+      )
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -268,7 +283,13 @@ jobs:
   aggregate:
     name: Aggregate and post review
     needs: [parse-checklist, run-check]
-    if: ${{ always() && needs.parse-checklist.outputs.count != '0' }}
+    # `always()` keeps the aggregate running even when individual matrix
+    # `run-check` jobs fail (we still want the comment). But `always()`
+    # bypasses the normal skipped-needs cascade, so we must explicitly
+    # require parse-checklist to have succeeded — otherwise an unrelated
+    # label-change event (where parse-checklist is skipped via its own
+    # `if:`) would still start the aggregate job with empty outputs.
+    if: ${{ always() && needs.parse-checklist.result == 'success' && needs.parse-checklist.outputs.count != '0' }}
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -288,6 +309,7 @@ jobs:
         uses: actions/github-script@v7
         env:
           MODEL: ${{ env.GEMINI_MODEL }}
+          LLM_GATE_BLOCKING: ${{ env.LLM_GATE_BLOCKING }}
         with:
           script: |
             const fs = require('fs');
@@ -318,8 +340,13 @@ jobs:
             const warns = rows.filter(r => r.status === 'WARN').length;
             const passes = rows.filter(r => r.status === 'PASS').length;
             const overall = warns > 0 ? '⚠️ WARN' : (passes > 0 ? '✅ PASS' : '❓ NO RESULTS');
+            const labels = (context.payload.pull_request.labels || []).map(l => l.name);
+            const overrideActive = labels.includes('llm-gate/override');
 
             const header = '## LLM-Based Quality Gate';
+            const overrideBanner = overrideActive
+              ? '\n\n> ⚠️ **Override active** — `llm-gate/override` label is set; this gate\'s WARN findings are non-blocking on this PR.\n'
+              : '';
             const summary = `**Overall:** ${overall} (${passes} pass · ${warns} warn · ${rows.length} total)`;
 
             let table;
@@ -346,7 +373,7 @@ jobs:
               : '';
             const costLine = `_Estimated cost (this run): **$${totalUsd.toFixed(4)}** — ${totalIn.toLocaleString()} input + ${totalOut.toLocaleString()} output tokens (≈4 chars/token) on \`${model}\`${retryNote}. Char-count estimate, not provider telemetry._`;
 
-            const body = `${header}\n\n${summary}\n\n${table}${fullQuestions}\n\n${costLine}`;
+            const body = `${header}${overrideBanner}\n\n${summary}\n\n${table}${fullQuestions}\n\n${costLine}`;
 
             // Append a new comment on every run — preserves an audit trail
             // of how the gate's verdicts evolved across PR revisions.
@@ -359,3 +386,8 @@ jobs:
 
             // Also surface the same content in the Actions UI summary.
             await core.summary.addRaw(body).write();
+
+            const blockingMode = process.env.LLM_GATE_BLOCKING === '1';
+            if (blockingMode && warns > 0 && !overrideActive) {
+              core.setFailed(`LLM-Based Quality Gate found ${warns} WARN row(s). Add the \`llm-gate/override\` label to bypass (with justification in a PR comment).`);
+            }

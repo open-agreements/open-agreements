@@ -90,11 +90,13 @@ npm run test:run
    Note: `metadata.yaml` is catalog-only (not a render input), so editing it
    does **not** require a preview refresh.
 
-6. **LLM-Based Quality Gate (advisory)**: same-repo PRs are reviewed by an
-   LLM-powered code-reuse detector in `.github/workflows/llm-based-quality-gate.yml`
-   and may receive a `STATE: WARN` comment suggesting reuse of an existing
-   helper. This is non-blocking in Phase 0 — consider the suggestion, but
-   dismiss the warning if it doesn't apply.
+6. **LLM-Based Quality Gate**: same-repo PRs are reviewed by an LLM-powered
+   code-reuse detector in `.github/workflows/llm-based-quality-gate.yml`. By
+   default the gate is advisory: it posts PASS/WARN findings as a PR comment but
+   does not block merging. Maintainers can enable blocking mode with the
+   `LLM_GATE_BLOCKING=1` repo variable; in that mode any WARN row fails the
+   aggregate check unless the PR has the `llm-gate/override` label, which keeps
+   the findings visible while treating them as non-blocking for that PR.
 
 ## Project Structure
 
