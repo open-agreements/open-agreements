@@ -12294,15 +12294,6 @@
           "default_value_rationale": null
         },
         {
-          "name": "government_customer_exposure",
-          "type": "boolean",
-          "required": false,
-          "section": "Cross-Border Specifics",
-          "description": "Set true if the target has government customers (federal, state, local, or foreign) where flow-down compliance obligations may apply. When true, additional government-contracts requests render in Section R.",
-          "default": "false",
-          "default_value_rationale": null
-        },
-        {
           "name": "additional_questions_tech",
           "type": "array",
           "required": false,
