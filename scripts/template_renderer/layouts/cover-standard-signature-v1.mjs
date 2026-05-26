@@ -20,6 +20,15 @@ import {
 } from 'docx';
 
 function buildDocumentStyles(style) {
+  // Apple Pages requires explicit named paragraph styles — paragraphs without a
+  // referenced pStyle either drop inline alignment or inherit the previous
+  // paragraph's style properties. See #262, #263, and #339 for prior incidents.
+  const normalSpacing = {
+    before: 0,
+    after: style.spacing.body_after,
+    line: style.spacing.line,
+    lineRule: LineRuleType.AUTO,
+  };
   return {
     default: {
       document: {
@@ -28,14 +37,7 @@ function buildDocumentStyles(style) {
           size: 22,
           color: style.colors.ink,
         },
-        paragraph: {
-          spacing: {
-            before: 0,
-            after: 0,
-            line: style.spacing.line,
-            lineRule: LineRuleType.AUTO,
-          },
-        },
+        paragraph: { spacing: normalSpacing },
       },
     },
     paragraphStyles: [
@@ -49,10 +51,44 @@ function buildDocumentStyles(style) {
           size: 22,
           color: style.colors.ink,
         },
+        paragraph: { spacing: normalSpacing },
+      },
+      {
+        id: 'OATitle',
+        name: 'OA Title',
+        basedOn: 'Normal',
+        next: 'Normal',
+        quickFormat: true,
+        run: {
+          font: style.fonts.heading,
+          size: 44,
+          color: style.colors.ink,
+        },
+        paragraph: {
+          spacing: {
+            before: style.spacing.title_before,
+            after: style.spacing.title_after,
+            line: style.spacing.line,
+            lineRule: LineRuleType.AUTO,
+          },
+        },
+      },
+      {
+        id: 'OASectionTitle',
+        name: 'OA Section Title',
+        basedOn: 'Normal',
+        next: 'Normal',
+        quickFormat: true,
+        run: {
+          font: style.fonts.body,
+          size: 22,
+          bold: true,
+          color: style.colors.accent,
+        },
         paragraph: {
           spacing: {
             before: 0,
-            after: 0,
+            after: style.spacing.section_title_after,
             line: style.spacing.line,
             lineRule: LineRuleType.AUTO,
           },
@@ -274,7 +310,10 @@ function buildSection(sectionLabel, documentLabel, documentVersion, children, st
 
 function bodyParagraph(text, style, opts = {}) {
   return new Paragraph({
-    style: opts.style,
+    // Every visible-text paragraph in document.xml must reference a named style
+    // so Apple Pages doesn't drop inline properties or inherit from the previous
+    // paragraph. Default to 'Normal' when callers don't specify (#262, #339).
+    style: opts.style ?? 'Normal',
     contextualSpacing: false,
     spacing: {
       before: opts.before ?? 0,
@@ -306,6 +345,7 @@ function noteParagraph(text, style) {
 
 function titleParagraph(text, style) {
   return new Paragraph({
+    style: 'OATitle',
     spacing: { before: style.spacing.title_before, after: style.spacing.title_after },
     children: [
       new TextRun({
@@ -320,6 +360,7 @@ function titleParagraph(text, style) {
 
 function sectionTitleParagraph(text, style) {
   return new Paragraph({
+    style: 'OASectionTitle',
     contextualSpacing: false,
     spacing: {
       before: 0,
@@ -362,6 +403,7 @@ function rowHeadingCell(titleText, subtitleText, style, nilBorder, ruleBorder) {
     verticalAlign: VerticalAlign.CENTER,
     children: [
       new Paragraph({
+        style: 'Normal',
         spacing: { after: 30, line: style.spacing.line },
         children: [
           new TextRun({
@@ -374,6 +416,7 @@ function rowHeadingCell(titleText, subtitleText, style, nilBorder, ruleBorder) {
         ],
       }),
       new Paragraph({
+        style: 'Normal',
         spacing: { after: 20, line: style.spacing.line },
         children: [
           new TextRun({
@@ -410,15 +453,16 @@ function keyLabelCell(row, style, nilBorder, ruleBorder) {
       // (works regardless of single/multi-line wrapping; before-paragraph spacing only
       // gets respected when there's an actual preceding paragraph)
       ...(isGroupHeader
-        ? [new Paragraph({ spacing: { after: 0, line: COVER_GROUP_HEADER_SPACER.line }, children: [new TextRun({ text: COVER_GROUP_HEADER_SPACER.char, size: COVER_GROUP_HEADER_SPACER.fontSize })] })]
+        ? [new Paragraph({ style: 'Normal', spacing: { after: 0, line: COVER_GROUP_HEADER_SPACER.line }, children: [new TextRun({ text: COVER_GROUP_HEADER_SPACER.char, size: COVER_GROUP_HEADER_SPACER.fontSize })] })]
         : []),
       // For conditional sub-rows, put {IF} in a separate zero-height paragraph so docx-templates
       // can remove it cleanly without leaving an empty paragraph artifact.
       // For group headers, put {IF} inline to avoid corrupting cell properties.
       ...(row.condition && isSub
-        ? [new Paragraph({ spacing: { after: 0, line: 0 }, children: [new TextRun({ text: `{IF ${row.condition}}`, size: 1 })] })]
+        ? [new Paragraph({ style: 'Normal', spacing: { after: 0, line: 0 }, children: [new TextRun({ text: `{IF ${row.condition}}`, size: 1 })] })]
         : []),
       new Paragraph({
+        style: 'Normal',
         spacing: { before: 0, after: row.hint ? 10 : 0, line: isGroupHeader ? COVER_GROUP_HEADER_LINE_SPACING : style.spacing.line },
         children: [
           new TextRun({
@@ -434,6 +478,7 @@ function keyLabelCell(row, style, nilBorder, ruleBorder) {
       ...(row.hint
         ? [
             new Paragraph({
+              style: 'Normal',
               spacing: { after: 0, line: style.spacing.line },
               children: [
                 new TextRun({
@@ -641,6 +686,7 @@ function signatureLabelCell(label, hint, style, nilBorder) {
     verticalAlign: VerticalAlign.CENTER,
     children: [
       new Paragraph({
+        style: 'Normal',
         spacing: { after: hint ? 10 : 0, line: style.spacing.line },
         children: [
           new TextRun({
@@ -655,6 +701,7 @@ function signatureLabelCell(label, hint, style, nilBorder) {
       ...(hint
         ? [
             new Paragraph({
+              style: 'Normal',
               spacing: { after: 0, line: style.spacing.line },
               children: [
                 new TextRun({
@@ -683,6 +730,7 @@ function signatureHeaderCell(text, style, nilBorder) {
     verticalAlign: VerticalAlign.CENTER,
     children: [
       new Paragraph({
+        style: 'Normal',
         alignment: AlignmentType.CENTER,
         spacing: { after: 0, line: style.spacing.line },
         children: [
@@ -711,6 +759,7 @@ function signatureLineCell(value, style, nilBorder, ruleBorder) {
     verticalAlign: VerticalAlign.CENTER,
     children: [
       new Paragraph({
+        style: 'Normal',
         spacing: { after: 0, line: style.spacing.line },
         children: [
           new TextRun({
@@ -1008,6 +1057,7 @@ function appendSignatureMarkdown(lines, signatureSection) {
 
 function signerTableSpacer(style) {
   return new Paragraph({
+    style: 'Normal',
     spacing: { before: 0, after: style.spacing.body_after, line: style.spacing.line },
     children: [new TextRun({ text: '' })],
   });
