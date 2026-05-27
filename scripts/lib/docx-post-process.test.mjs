@@ -49,8 +49,11 @@ async function makeDocx(parts = {}) {
       '</Relationships>',
     ].join(''),
   );
-  zip.file('word/document.xml', documentXml('<w:p><w:r><w:t>OK</w:t></w:r></w:p>'));
+  zip.file('word/document.xml', parts.document ?? documentXml('<w:p><w:r><w:t>OK</w:t></w:r></w:p>'));
   zip.file('word/footer1.xml', parts.footer ?? '');
+  for (const [name, value] of Object.entries(parts.extra ?? {})) {
+    zip.file(name, value);
+  }
   if (parts.comments !== undefined) {
     zip.file('word/comments.xml', parts.comments);
   }
@@ -117,6 +120,48 @@ describe('docx post processing', () => {
 
     expect(zip.file('word/comments.xml')).not.toBeNull();
     await expect(zip.file('[Content_Types].xml').async('string')).resolves.toContain('/word/comments.xml');
+  });
+
+  /**
+   * @quirk Word for Mac's "unreadable content" repair dialog fires on
+   *   `&apos;` in body text. The entity is technically valid XML 1.0 (one
+   *   of the five predefined references) but Word rejects it where the
+   *   other four (`&amp;`, `&lt;`, `&gt;`, `&quot;`) are accepted. Bisected
+   *   in May 2026 against the dev-website-served file (which opens clean
+   *   because its xmldom round-trip incidentally decodes the entity) vs.
+   *   the OA repo file (which Word rejects).
+   *
+   * @misconception "An XML serializer that emits `&apos;` is correct, so
+   *   Word must be wrong to reject it." Both statements are true — and
+   *   neither helps the user, who sees a scary repair dialog on a file we
+   *   shipped. The post-processor swaps `&apos;` for the literal
+   *   apostrophe character in every `.xml` part to interoperate with
+   *   Word's quirk. Non-XML parts (e.g. `word/media/readme.txt`) are
+   *   intentionally untouched — `&apos;` in those is just text.
+   *
+   * @see https://github.com/dolanmiu/docx/issues/2443
+   *   "Corrupt Word document from patching with an XML attribute with an
+   *   ampersand" — same root cause: the docx library's underlying
+   *   `xml-js` serializer round-trips entity references inconsistently.
+   * @see https://github.com/dolanmiu/docx/issues/3314
+   *   "Word found unreadable content error" (Nov 2025) — recurring report
+   *   of the same dialog; no upstream fix yet.
+   * @see https://github.com/nashwaan/xml-js/issues/69 — upstream xml-js bug.
+   */
+  it('decodes &apos; entities in XML parts only', async () => {
+    const buffer = await makeDocx({
+      document: documentXml("<w:p><w:r><w:t>Company&apos;s option</w:t></w:r></w:p>"),
+      extra: {
+        'docProps/core.xml': '<cp:coreProperties><dc:title>Owner&apos;s copy</dc:title></cp:coreProperties>',
+        'word/media/readme.txt': 'Keep &apos; encoded here',
+      },
+    });
+    const processed = await postProcessGeneratedDocx(buffer);
+    const zip = await JSZip.loadAsync(processed);
+
+    await expect(zip.file('word/document.xml').async('string')).resolves.toContain("Company's option");
+    await expect(zip.file('docProps/core.xml').async('string')).resolves.toContain("Owner's copy");
+    await expect(zip.file('word/media/readme.txt').async('string')).resolves.toContain('Keep &apos; encoded here');
   });
 
   it('produces output that passes the structural linter', async () => {
