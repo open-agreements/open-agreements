@@ -147,7 +147,6 @@
     "docx-templates": "^4.13.0",
     "jose": "^6.2.2",
     "js-yaml": "^4.1.0",
-    "jszip": "^3.10.1",
     "minisearch": "^7.2.0",
     "zod": "^4.0.0"
   },
@@ -162,6 +161,7 @@
     "@vitest/coverage-v8": "^3.2.4",
     "allure-vitest": "^3.4.5",
     "docx": "^9.5.1",
+    "jszip": "^3.10.1",
     "eslint": "^9.19.0",
     "fast-xml-parser": "^4.5.3",
     "globals": "^14.0.0",

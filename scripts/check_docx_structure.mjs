@@ -28,6 +28,7 @@ function parseArgs(argv) {
     format: 'text',
     patterns: [],
     help: false,
+    allowEmpty: false,
   };
 
   for (const arg of argv) {
@@ -45,6 +46,10 @@ function parseArgs(argv) {
         throw new Error(`Unsupported format: ${format}`);
       }
       parsed.format = format;
+      continue;
+    }
+    if (arg === '--allow-empty') {
+      parsed.allowEmpty = true;
       continue;
     }
     if (arg.startsWith('-')) {
@@ -72,6 +77,7 @@ function printHelp() {
       'Options:',
       '      --format=json   Emit machine-readable JSON output',
       '      --json          Alias for --format=json',
+      '      --allow-empty   Exit 0 when no files match (default: exit 1)',
       '  -h, --help          Show help',
     ].join('\n'),
   );
@@ -178,7 +184,18 @@ function collectCommentIds(xml, tagName) {
 }
 
 function missingCachedResultOffsets(xml) {
-  const re = /<w:fldChar\b[^>]*(?:\bw:fldCharType="separate"|\bseparate\b)[^>]*\/>\s*<w:fldChar\b[^>]*(?:\bw:fldCharType="end"|\bend\b)[^>]*\/>/gi;
+  // Matches a w:fldChar separate marker immediately followed by a w:fldChar end
+  // marker with no cached result text between them. Tolerates:
+  //   - Self-closing and expanded-empty element forms (<w:fldChar .../> | <w:fldChar ...></w:fldChar>)
+  //   - One run-boundary between the two fldChars (</w:r> ... <w:r>) since some
+  //     serializers split adjacent fldChars across separate runs even when no
+  //     cached result is emitted between them.
+  // Does NOT match when any non-whitespace, non-run-boundary text appears in
+  // between (e.g. <w:r><w:t>1</w:t></w:r>), which is the valid cached-result case.
+  const fldChar = (type) =>
+    `<w:fldChar\\b[^>]*(?:\\bw:fldCharType="${type}"|\\b${type}\\b)[^>]*(?:\\/>|>\\s*</w:fldChar\\s*>)`;
+  const between = '\\s*(?:</w:r>\\s*<w:r\\b[^>]*>\\s*)?';
+  const re = new RegExp(`${fldChar('separate')}${between}${fldChar('end')}`, 'gi');
   return [...xml.matchAll(re)].map((match) => match.index ?? 0);
 }
 
@@ -244,7 +261,23 @@ export async function lintDocxInputs(inputs) {
   const results = [];
 
   for (const file of files) {
-    results.push(await lintDocx(file));
+    try {
+      results.push(await lintDocx(file));
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      results.push({
+        path: resolve(file),
+        issues: [
+          {
+            code: 'READ_ERROR',
+            name: 'READ_ERROR',
+            description: `Could not read docx: ${message}`,
+            part: file,
+            details: { error: message },
+          },
+        ],
+      });
+    }
   }
 
   return {
@@ -297,6 +330,15 @@ async function main() {
     console.log(JSON.stringify(summary, null, 2));
   } else {
     printText(summary);
+  }
+
+  if (summary.files.length === 0 && !args.allowEmpty) {
+    console.error(
+      `check_docx_structure: no docx files matched patterns ${JSON.stringify(args.patterns)}. ` +
+        'Pass --allow-empty to suppress this failure.',
+    );
+    process.exitCode = 1;
+    return;
   }
 
   if (summary.issueCount > 0) {

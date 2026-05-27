@@ -5,7 +5,7 @@ import { join } from 'node:path';
 import JSZip from 'jszip';
 import { afterEach, describe, expect, it } from 'vitest';
 
-import { lintDocx } from './check_docx_structure.mjs';
+import { lintDocx, lintDocxInputs } from './check_docx_structure.mjs';
 
 const tempDirs = [];
 
@@ -115,5 +115,47 @@ describe('check_docx_structure', () => {
 
     expect(await codesFor(broken)).toContain('ORPHAN_COMMENT_REFS');
     expect(await codesFor(good)).not.toContain('ORPHAN_COMMENT_REFS');
+  });
+
+  it('flags separate/end split across adjacent runs without cached result text', async () => {
+    const broken = await writeDocx({
+      extra: {
+        'word/footer1.xml': [
+          '<w:ftr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">',
+          '<w:p><w:r><w:fldChar w:fldCharType="begin"/></w:r>',
+          '<w:r><w:instrText> PAGE </w:instrText></w:r>',
+          '<w:r><w:fldChar w:fldCharType="separate"/></w:r>',
+          '<w:r><w:fldChar w:fldCharType="end"/></w:r></w:p>',
+          '</w:ftr>',
+        ].join(''),
+      },
+    });
+    expect(await codesFor(broken)).toContain('MISSING_CACHED_RESULT');
+  });
+
+  it('flags expanded-empty fldChar elements (non-self-closing) without cached result text', async () => {
+    const broken = await writeDocx({
+      extra: {
+        'word/footer1.xml': [
+          '<w:ftr xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">',
+          '<w:p><w:r><w:fldChar w:fldCharType="begin"></w:fldChar></w:r>',
+          '<w:r><w:instrText> PAGE </w:instrText></w:r>',
+          '<w:r><w:fldChar w:fldCharType="separate"></w:fldChar>',
+          '<w:fldChar w:fldCharType="end"></w:fldChar></w:r></w:p>',
+          '</w:ftr>',
+        ].join(''),
+      },
+    });
+    expect(await codesFor(broken)).toContain('MISSING_CACHED_RESULT');
+  });
+
+  it('records a READ_ERROR for missing files but continues processing the rest', async () => {
+    const good = await writeDocx({});
+    const summary = await lintDocxInputs(['/path/does/not/exist.docx', good]);
+    expect(summary.files.length).toBe(2);
+    const codes = summary.results.flatMap((r) => r.issues.map((i) => i.code));
+    expect(codes).toContain('READ_ERROR');
+    // The valid file was still inspected (no issues, but appears in results).
+    expect(summary.results.find((r) => r.path === good)?.issues).toEqual([]);
   });
 });
