@@ -7,7 +7,7 @@
   "document": {
     "title": "Employment Confidentiality Acknowledgement",
     "label": "OpenAgreements Employment Confidentiality Acknowledgement",
-    "version": "1.1",
+    "version": "1.2",
     "license": "Free to use under CC BY 4.0",
     "include_cloud_doc_line": true,
     "cover_row_height": 700
@@ -40,6 +40,10 @@
         {
           "heading": "Approved Tools and Systems",
           "body": "Employee will access Company data only through approved tools and systems listed in Cover Terms unless written authorization is provided."
+        },
+        {
+          "heading": "Protected Disclosures and Protected Activity",
+          "body": "Nothing in this acknowledgement restricts Employee from reporting possible violations of law to a government agency or attorney, making disclosures protected by whistleblower laws, or discussing wages, hours, or working conditions as protected by law. Employee does not need Company's prior approval to make those disclosures or to notify Company that they were made. Pursuant to the Defend Trade Secrets Act (18 U.S.C. § 1833(b)), Employee will not be held criminally or civilly liable under federal or state trade secret law for disclosing a trade secret in confidence to a government official or attorney solely to report or investigate a suspected violation of law, or in a court filing made under seal. Employee may also disclose a trade secret to Employee's attorney and use it in a retaliation lawsuit if any filing containing the trade secret is made under seal and the trade secret is not otherwise disclosed except by court order."
         },
         {
           "heading": "Security Incident Reporting",
