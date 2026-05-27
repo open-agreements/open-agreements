@@ -19,7 +19,16 @@
     { "source": "/sitemap.xml",   "has": [{"type": "host", "value": "openagreements.org"}],     "destination": "https://legal-explainer.vercel.app/sitemap.xml" },
     { "source": "/sitemap.xml",   "has": [{"type": "host", "value": "www.openagreements.org"}], "destination": "https://legal-explainer.vercel.app/sitemap.xml" },
     { "source": "/robots.txt",    "has": [{"type": "host", "value": "openagreements.org"}],     "destination": "https://legal-explainer.vercel.app/robots.txt" },
-    { "source": "/robots.txt",    "has": [{"type": "host", "value": "www.openagreements.org"}], "destination": "https://legal-explainer.vercel.app/robots.txt" }
+    { "source": "/robots.txt",    "has": [{"type": "host", "value": "www.openagreements.org"}], "destination": "https://legal-explainer.vercel.app/robots.txt" },
+
+    { "source": "/",              "has": [{"type": "host", "value": "openagreements.org"}],     "destination": "https://legal-explainer.vercel.app/" },
+    { "source": "/",              "has": [{"type": "host", "value": "www.openagreements.org"}], "destination": "https://legal-explainer.vercel.app/" },
+    { "source": "/privacy",       "has": [{"type": "host", "value": "openagreements.org"}],     "destination": "https://legal-explainer.vercel.app/privacy" },
+    { "source": "/privacy",       "has": [{"type": "host", "value": "www.openagreements.org"}], "destination": "https://legal-explainer.vercel.app/privacy" },
+    { "source": "/terms",         "has": [{"type": "host", "value": "openagreements.org"}],     "destination": "https://legal-explainer.vercel.app/terms" },
+    { "source": "/terms",         "has": [{"type": "host", "value": "www.openagreements.org"}], "destination": "https://legal-explainer.vercel.app/terms" },
+    { "source": "/disclaimer",    "has": [{"type": "host", "value": "openagreements.org"}],     "destination": "https://legal-explainer.vercel.app/disclaimer" },
+    { "source": "/disclaimer",    "has": [{"type": "host", "value": "www.openagreements.org"}], "destination": "https://legal-explainer.vercel.app/disclaimer" }
   ],
   "headers": [
     {
@@ -44,7 +53,7 @@
     }
   ],
   "redirects": [
-    { "source": "/", "destination": "https://usejunior.com/developer-tools/open-agreements", "statusCode": 301 },
+    { "source": "/", "missing": [{"type": "host", "value": "openagreements.org"}, {"type": "host", "value": "www.openagreements.org"}], "destination": "https://usejunior.com/developer-tools/open-agreements", "statusCode": 301 },
     { "source": "/templates", "destination": "https://usejunior.com/developer-tools/open-agreements/templates", "statusCode": 301 },
     { "source": "/templates/:name", "destination": "https://usejunior.com/developer-tools/open-agreements/templates/:name", "statusCode": 301 },
     { "source": "/docs", "destination": "https://usejunior.com/developer-tools/open-agreements", "statusCode": 301 },
