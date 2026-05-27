@@ -8,7 +8,18 @@
   "trailingSlash": false,
   "rewrites": [
     { "source": "/.well-known/oauth-protected-resource", "destination": "/api/auth/well-known-protected-resource" },
-    { "source": "/.well-known/oauth-authorization-server", "destination": "/api/auth/well-known-oauth-as" }
+    { "source": "/.well-known/oauth-authorization-server", "destination": "/api/auth/well-known-oauth-as" },
+
+    { "source": "/legal/:path*",  "has": [{"type": "host", "value": "openagreements.org"}],     "destination": "https://legal-explainer.vercel.app/legal/:path*" },
+    { "source": "/legal/:path*",  "has": [{"type": "host", "value": "www.openagreements.org"}], "destination": "https://legal-explainer.vercel.app/legal/:path*" },
+    { "source": "/_next/:path*",  "has": [{"type": "host", "value": "openagreements.org"}],     "destination": "https://legal-explainer.vercel.app/_next/:path*" },
+    { "source": "/_next/:path*",  "has": [{"type": "host", "value": "www.openagreements.org"}], "destination": "https://legal-explainer.vercel.app/_next/:path*" },
+    { "source": "/brand/:path*",  "has": [{"type": "host", "value": "openagreements.org"}],     "destination": "https://legal-explainer.vercel.app/brand/:path*" },
+    { "source": "/brand/:path*",  "has": [{"type": "host", "value": "www.openagreements.org"}], "destination": "https://legal-explainer.vercel.app/brand/:path*" },
+    { "source": "/sitemap.xml",   "has": [{"type": "host", "value": "openagreements.org"}],     "destination": "https://legal-explainer.vercel.app/sitemap.xml" },
+    { "source": "/sitemap.xml",   "has": [{"type": "host", "value": "www.openagreements.org"}], "destination": "https://legal-explainer.vercel.app/sitemap.xml" },
+    { "source": "/robots.txt",    "has": [{"type": "host", "value": "openagreements.org"}],     "destination": "https://legal-explainer.vercel.app/robots.txt" },
+    { "source": "/robots.txt",    "has": [{"type": "host", "value": "www.openagreements.org"}], "destination": "https://legal-explainer.vercel.app/robots.txt" }
   ],
   "headers": [
     {
