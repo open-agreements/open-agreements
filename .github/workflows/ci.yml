@@ -74,6 +74,29 @@ jobs:
       - name: Validate template preview PNGs
         run: npm run check:template-previews
 
+      # Advisory until #352 fixes the currently-broken generated templates;
+      # then remove continue-on-error so this becomes an enforcing gate.
+      - name: Validate DOCX structure (advisory)
+        continue-on-error: true
+        run: |
+          set +e
+          npm run check:docx-structure > docx-structure.txt 2>&1
+          status=$?
+          cat docx-structure.txt
+          {
+            echo "## DOCX structure advisory"
+            if [ "$status" -eq 0 ]; then
+              echo "No structural findings."
+            else
+              echo "Structural findings detected. This is report-only until #352 fixes the current templates."
+            fi
+            echo
+            echo '```'
+            cat docx-structure.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+          exit "$status"
+
   preview-freshness-gate:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
