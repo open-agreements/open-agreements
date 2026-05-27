@@ -45,15 +45,21 @@ runs:
       # runs `gemini` with GEMINI_API_KEY in env — the output sanitizer can't
       # defend against a malicious binary (it can exfil over network or stderr).
       # Install from $RUNNER_TEMP (no .npmrc), force per-user and global config
-      # to a forced-empty file, pin the registry explicitly.
+      # to forced-empty files, pin the registry explicitly.
+      #
+      # NOTE: the user-config and global-config paths must be DIFFERENT files.
+      # npm 11+ rejects loading the same file in both roles with:
+      #   "double-loading config '<path>' as 'global', previously loaded as 'user'"
+      # (Same bug landed in safe-docx then was caught here; the fix is portable.)
       env:
         GEMINI_CLI_VERSION: ${{ inputs.gemini-cli-version }}
-        NPM_CONFIG_USERCONFIG: ${{ runner.temp }}/llm-gate-empty-npmrc
-        NPM_CONFIG_GLOBALCONFIG: ${{ runner.temp }}/llm-gate-empty-npmrc
+        NPM_CONFIG_USERCONFIG: ${{ runner.temp }}/llm-gate-empty-userconfig
+        NPM_CONFIG_GLOBALCONFIG: ${{ runner.temp }}/llm-gate-empty-globalconfig
         NPM_CONFIG_REGISTRY: https://registry.npmjs.org/
       run: |
         set -euo pipefail
         : > "$NPM_CONFIG_USERCONFIG"
+        : > "$NPM_CONFIG_GLOBALCONFIG"
         cd "$RUNNER_TEMP"
         npm install --silent --no-audit --no-fund --global "@google/gemini-cli@${GEMINI_CLI_VERSION}"
         gemini --version
