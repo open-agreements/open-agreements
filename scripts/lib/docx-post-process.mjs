@@ -66,11 +66,14 @@ function addCachedFieldResults(xml) {
  */
 /**
  * Detect whether an XML part contains any single-quoted attribute values
- * (`<tag attr='...'>` style). Returns true if so.
+ * on element start tags (`<tag attr='...'>` style). Returns true if so.
  *
- * Heuristic: looks for `<...='` inside a tag opening. Treats matches inside
- * text content as no-op (so `<w:t>name='Alice'</w:t>` does NOT match because
- * the `=` is text, not inside a `<...>` tag opening).
+ * Matches only element start tags (start with `<` + letter), NOT:
+ *   - XML processing instructions: `<?xml version='1.0'?>`
+ *   - Comments: `<!-- ='single' -->`
+ *   - DOCTYPE: `<!DOCTYPE ...>`
+ *   - CDATA sections: `<![CDATA[...]]>`
+ *   - Text content with literal quotes: `<w:t>name='Alice'</w:t>`
  *
  * Used as a defensive precondition before {@link decodeApostropheEntities}
  * touches a part: replacing `&apos;` inside a single-quoted attribute
@@ -80,9 +83,14 @@ function addCachedFieldResults(xml) {
  * fires, the part is left untouched (preserving any `&apos;` it contains)
  * and the structural linter's `ENCODED_APOSTROPHE_IN_BODY` check will
  * surface the residual entity at the next CI run.
+ *
+ * @quirk Caught in #370 round-2 peer-review (Codex): the earlier
+ *   `<[^>]*=\s*'` form matched `<?xml version='1.0'?>` declarations and
+ *   suppressed decoding for the entire part. Constrained to `<[A-Za-z]`
+ *   (a real element-name start) to fix.
  */
 function hasSingleQuotedAttribute(xml) {
-  return /<[^>]*=\s*'/.test(xml);
+  return /<[A-Za-z][^>]*=\s*'/.test(xml);
 }
 
 async function decodeApostropheEntities(zip) {

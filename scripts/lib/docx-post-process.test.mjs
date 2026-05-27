@@ -199,6 +199,39 @@ describe('docx post processing', () => {
     expect(docXml).toContain("data-owner='Owner&apos;s'");
   });
 
+  /**
+   * @quirk Round-2 peer-review (Codex, May 2026) caught that an earlier
+   *   form of {@link hasSingleQuotedAttribute} matched the XML declaration
+   *   `<?xml version='1.0' encoding='UTF-8'?>` and suppressed `&apos;`
+   *   decoding for any part that happened to use single-quoted declaration
+   *   attributes (which is valid XML). The regex now requires `<` followed
+   *   by a letter (an element-name start), so processing instructions and
+   *   comments are excluded.
+   *
+   * @misconception "The XML declaration is just metadata; the regex doesn't
+   *   need to care about it." Wrong: the declaration is syntactically a
+   *   `<...>` tag, and a permissive `<[^>]*='` matches it. Test pins the
+   *   fix so future regex changes don't silently regress this case.
+   */
+  it('decodes &apos; even when the XML declaration uses single quotes', async () => {
+    const buffer = await makeDocx({
+      document:
+        "<?xml version='1.0' encoding='UTF-8' standalone='yes'?>" +
+        '<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">' +
+        '<w:body><w:p><w:r><w:t>Owner&apos;s option</w:t></w:r></w:p></w:body>' +
+        '</w:document>',
+    });
+    const processed = await postProcessGeneratedDocx(buffer);
+    const zip = await JSZip.loadAsync(processed);
+    const docXml = await zip.file('word/document.xml').async('string');
+
+    // &apos; in text content was decoded; the single-quoted XML declaration
+    // doesn't constitute a single-quoted element attribute, so the
+    // defensive guard correctly stayed out of the way.
+    expect(docXml).toContain("Owner's option");
+    expect(docXml).not.toContain('&apos;');
+  });
+
   it('produces output that passes the structural linter', async () => {
     const buffer = await makeDocx({
       comments: commentsXml(''),
