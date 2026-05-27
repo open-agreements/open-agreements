@@ -1,0 +1,64 @@
+name: Practice-note correction
+description: Report a factual error, broken citation, stale law update, or copy issue on a published practice-note page.
+title: "Practice-note correction: "
+labels:
+  - area/practice-notes
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Triage notes:
+        - Set issue Type to `Bug` for factual errors or broken citations; `Feature` for stale-law updates requiring a content rewrite.
+        - Maintainers assign `area/practice-notes`, `priority/*`, and `status/*` labels during triage.
+        - Keep Assignees, Projects, and Milestone empty unless ownership / scheduling is explicit.
+
+  - type: input
+    id: page_url
+    attributes:
+      label: Page URL
+      placeholder: https://legal-explainer.vercel.app/legal/non-compete/wyoming
+    validations:
+      required: true
+
+  - type: input
+    id: section
+    attributes:
+      label: Question / section
+      placeholder: e.g., "Are employee non-compete agreements enforceable in Wyoming?" or "Authority A.4"
+    validations:
+      required: false
+
+  - type: textarea
+    id: issue
+    attributes:
+      label: What is wrong?
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested_correction
+    attributes:
+      label: Suggested correction
+    validations:
+      required: false
+
+  - type: textarea
+    id: source_backing
+    attributes:
+      label: Source / authority backing the correction
+      placeholder: Statute citation, case citation, link to law-firm commentary, etc.
+    validations:
+      required: false
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Factual error (legal substance)
+        - Citation is broken or wrong
+        - Stale (law has changed)
+        - Copy / phrasing
+        - Other
+    validations:
+      required: false
