@@ -44,6 +44,7 @@
     "skills/",
     "README.md",
     "LICENSE",
+    "SECURITY.md",
     "server.json",
     "gemini-extension.json",
     "GEMINI.md"

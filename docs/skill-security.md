@@ -62,4 +62,4 @@ Our skills are listed on [skills.sh](https://skills.sh/open-agreements/open-agre
 
 ## Reporting security issues
 
-If you discover a security issue, please email security@openagreements.org or open a GitHub issue.
+Please follow the project's [Security Policy](../SECURITY.md). Primary intake is GitHub's private vulnerability advisory flow (https://github.com/open-agreements/open-agreements/security/advisories/new), with `steven@usejunior.com` as a fallback. Do not open a public GitHub issue for a suspected vulnerability.
