@@ -164,6 +164,41 @@ describe('docx post processing', () => {
     await expect(zip.file('word/media/readme.txt').async('string')).resolves.toContain('Keep &apos; encoded here');
   });
 
+  /**
+   * @quirk A naive `&apos;` → `'` swap would corrupt XML if the part used
+   *   single-quoted attribute values. For example,
+   *   `<w:p data-owner='Owner&apos;s'>` would become
+   *   `<w:p data-owner='Owner's'>` — unbalanced quotes, no longer parseable.
+   *
+   * @misconception "Single-quoted attributes don't appear in our output, so
+   *   we don't have to handle them." True today (the `docx` library
+   *   exclusively emits double-quoted attributes), but treating that as a
+   *   stable invariant relies on an upstream library's serialization choice.
+   *   The defensive precondition + linter check together preserve the
+   *   invariant explicitly: if single-quoted attributes ever appear, the
+   *   post-processor self-protects by leaving the part untouched, and the
+   *   `ENCODED_APOSTROPHE_IN_BODY` linter check surfaces the residual
+   *   `&apos;` at the next CI run so we know to investigate.
+   *
+   * Caught by Codex peer-review of #370 (May 2026); see review thread.
+   */
+  it('skips parts with single-quoted attributes (defensive, leaves &apos; in place)', async () => {
+    const buffer = await makeDocx({
+      document:
+        '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
+        '<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">' +
+        "<w:body><w:p data-owner='Owner&apos;s'><w:r><w:t>OK</w:t></w:r></w:p></w:body>" +
+        '</w:document>',
+    });
+    const processed = await postProcessGeneratedDocx(buffer);
+    const zip = await JSZip.loadAsync(processed);
+
+    // The single-quoted attribute is preserved, AND the &apos; inside it is
+    // left encoded — corrupting it would unbalance the attribute value.
+    const docXml = await zip.file('word/document.xml').async('string');
+    expect(docXml).toContain("data-owner='Owner&apos;s'");
+  });
+
   it('produces output that passes the structural linter', async () => {
     const buffer = await makeDocx({
       comments: commentsXml(''),

@@ -64,6 +64,27 @@ function addCachedFieldResults(xml) {
  * @param {import('jszip')} zip
  * @returns {Promise<boolean>} true if any part changed
  */
+/**
+ * Detect whether an XML part contains any single-quoted attribute values
+ * (`<tag attr='...'>` style). Returns true if so.
+ *
+ * Heuristic: looks for `<...='` inside a tag opening. Treats matches inside
+ * text content as no-op (so `<w:t>name='Alice'</w:t>` does NOT match because
+ * the `=` is text, not inside a `<...>` tag opening).
+ *
+ * Used as a defensive precondition before {@link decodeApostropheEntities}
+ * touches a part: replacing `&apos;` inside a single-quoted attribute
+ * (`<tag attr='Owner&apos;s'>`) would corrupt the XML (`<tag attr='Owner's'>`
+ * has an unbalanced quote). The `docx` library uses double-quoted attributes
+ * exclusively, so this branch should be unreachable in practice. If it ever
+ * fires, the part is left untouched (preserving any `&apos;` it contains)
+ * and the structural linter's `ENCODED_APOSTROPHE_IN_BODY` check will
+ * surface the residual entity at the next CI run.
+ */
+function hasSingleQuotedAttribute(xml) {
+  return /<[^>]*=\s*'/.test(xml);
+}
+
 async function decodeApostropheEntities(zip) {
   const updates = [];
   let changed = false;
@@ -73,6 +94,15 @@ async function decodeApostropheEntities(zip) {
     if (!part) continue;
     updates.push(
       part.async('string').then((xml) => {
+        // Defensive: a blind `&apos;` → `'` swap inside a single-quoted
+        // attribute (e.g. `attr='Owner&apos;s'`) would produce malformed XML
+        // (`attr='Owner's'` has a stray apostrophe terminating the value).
+        // Skip the swap on any part that uses single-quoted attributes; the
+        // structural linter will catch the residual `&apos;` so we know to
+        // fix the upstream emitter instead of silently corrupting output.
+        if (hasSingleQuotedAttribute(xml)) {
+          return;
+        }
         const updated = xml.replaceAll('&apos;', "'");
         if (updated !== xml) {
           changed = true;
