@@ -27,6 +27,12 @@ import {
 } from "./lib/template-utils.mjs";
 
 const FILL_PIPELINE_PATH = resolve(ROOT, "dist", "core", "fill-pipeline.js");
+const HUMANIZE_DOCX_PATH = resolve(ROOT, "dist", "core", "humanize-docx.js");
+const PUBLIC_FIELD_METADATA_PATH = resolve(
+  ROOT,
+  "scripts",
+  "template-public-field-metadata.yaml"
+);
 
 async function loadFillDocx() {
   if (!existsSync(FILL_PIPELINE_PATH)) {
@@ -36,6 +42,16 @@ async function loadFillDocx() {
   }
   const mod = await import(FILL_PIPELINE_PATH);
   return mod.fillDocx;
+}
+
+async function loadHumanizeDocx() {
+  if (!existsSync(HUMANIZE_DOCX_PATH)) {
+    throw new Error(
+      `Compiled humanize-docx module not found at ${HUMANIZE_DOCX_PATH}. Run 'npm run build' first.`
+    );
+  }
+  const mod = await import(HUMANIZE_DOCX_PATH);
+  return mod.humanizeDocx;
 }
 
 const RENDER_SCRIPT = resolve(ROOT, "scripts", "render_docx_pages.mjs");
@@ -229,6 +245,7 @@ function renderWithQuickLook(docxPath, outputDir, { allowSinglePage = true } = {
 
 async function renderPreviewPagesWithFallback(templateId, dpi) {
   const sourceDocxPath = resolve(TEMPLATES_DIR, templateId, "template.docx");
+  const templateDir = resolve(TEMPLATES_DIR, templateId);
   const outputDir = resolve(PREVIEWS_DIR, templateId);
 
   const metadata = loadTemplateMetadata(templateId);
@@ -245,6 +262,17 @@ async function renderPreviewPagesWithFallback(templateId, dpi) {
       const filledBuffer = await fillTemplateForPreview(sourceDocxPath, sampleValues, fillDocx);
       renderDocxPath = join(fillTempDir, "filled.docx");
       writeFileSync(renderDocxPath, filledBuffer);
+    } else {
+      // No previewSampleValues — apply the same bracket-prose-with-highlight
+      // transform that dev-website applies to template-downloads/<id>.docx so the
+      // catalog preview matches what users actually receive. Issue #354.
+      const humanizeDocx = await loadHumanizeDocx();
+      fillTempDir = mkdtempSync(join(tmpdir(), "oa-preview-humanize-"));
+      const humanizedBuffer = await humanizeDocx(templateDir, {
+        publicFieldMetadataPath: PUBLIC_FIELD_METADATA_PATH,
+      });
+      renderDocxPath = join(fillTempDir, "humanized.docx");
+      writeFileSync(renderDocxPath, humanizedBuffer);
     }
     try {
       return renderPreviewPages(renderDocxPath, outputDir, dpi);
