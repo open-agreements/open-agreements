@@ -404,6 +404,10 @@ npx -y open-agreements@latest list
 
 正在基于 OpenAgreements 进行构建？提交 PR 添加你的项目。
 
+## Star 历史趋势
+
+[![Star History Chart](https://api.star-history.com/svg?repos=open-agreements/open-agreements&type=Date)](https://star-history.com/#open-agreements/open-agreements&Date)
+
 ## 许可
 
 MIT。模板内容按各自作者授权：

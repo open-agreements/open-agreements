@@ -402,6 +402,10 @@ Siehe [CONTRIBUTING.md](https://github.com/open-agreements/open-agreements/blob/
 
 Baust du auf OpenAgreements auf? Eröffne einen PR, um dein Projekt aufzunehmen.
 
+## Star-Verlauf
+
+[![Star History Chart](https://api.star-history.com/svg?repos=open-agreements/open-agreements&type=Date)](https://star-history.com/#open-agreements/open-agreements&Date)
+
 ## Lizenz
 
 MIT. Vorlageninhalte werden von ihren jeweiligen Autor:innen lizenziert:
