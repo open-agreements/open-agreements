@@ -390,6 +390,8 @@ npx -y open-agreements@latest list
 
 详见 [Privacy Policy](https://usejunior.com/privacy_policy)。
 
+安全政策：请参阅 [SECURITY.md](https://github.com/open-agreements/open-agreements/blob/main/SECURITY.md)。
+
 ## 另请参阅
 
 - [safe-docx](https://github.com/UseJunior/safe-docx) — 使用编程代理对现有 Word 文档进行精准编辑

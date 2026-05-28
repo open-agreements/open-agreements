@@ -459,6 +459,8 @@ npx -y open-agreements@latest list
 
 See the [Privacy Policy](https://usejunior.com/privacy_policy) for details.
 
+Security policy: see [SECURITY.md](https://github.com/open-agreements/open-agreements/blob/main/SECURITY.md).
+
 ## See Also
 
 - [safe-docx](https://github.com/UseJunior/safe-docx) — surgical editing of existing Word documents with coding agents

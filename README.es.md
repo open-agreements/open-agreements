@@ -390,6 +390,8 @@ npx -y open-agreements@latest list
 
 Consulta la [Política de privacidad](https://usejunior.com/privacy_policy) para más detalles.
 
+Política de seguridad: consulta [SECURITY.md](https://github.com/open-agreements/open-agreements/blob/main/SECURITY.md).
+
 ## Ver también
 
 - [safe-docx](https://github.com/UseJunior/safe-docx) — edición quirúrgica de documentos Word existentes con agentes de programación
