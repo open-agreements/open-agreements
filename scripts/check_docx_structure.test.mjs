@@ -34,11 +34,30 @@ async function writeDocx(parts) {
   tempDirs.push(dir);
 
   const zip = new JSZip();
-  zip.file('[Content_Types].xml', '<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"/>');
+  // Default fixture: theme + webSettings present AND registered in
+  // [Content_Types].xml + document.xml.rels. Mirrors a real Word package so
+  // the new UNREGISTERED_PART check doesn't false-positive on every test.
+  // Individual tests that target MISSING_* / UNREGISTERED_PART build their
+  // own fixtures directly.
+  zip.file(
+    '[Content_Types].xml',
+    [
+      '<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types">',
+      '<Override PartName="/word/theme/theme1.xml" ContentType="application/vnd.openxmlformats-officedocument.theme+xml"/>',
+      '<Override PartName="/word/webSettings.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.webSettings+xml"/>',
+      '</Types>',
+    ].join(''),
+  );
+  zip.file(
+    'word/_rels/document.xml.rels',
+    [
+      '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">',
+      '<Relationship Id="rId10" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme" Target="theme/theme1.xml"/>',
+      '<Relationship Id="rId11" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/webSettings" Target="webSettings.xml"/>',
+      '</Relationships>',
+    ].join(''),
+  );
   zip.file('word/document.xml', parts.document ?? documentXml('<w:p><w:r><w:t>OK</w:t></w:r></w:p>'));
-  // Include theme + webSettings by default so the baseline fixture exercises
-  // the same shape Word for Mac accepts. Individual tests that target the
-  // MISSING_* linter checks can override these by passing an empty `extra`.
   zip.file('word/theme/theme1.xml', '<a:theme/>');
   zip.file('word/webSettings.xml', '<w:webSettings/>');
   for (const [name, xml] of Object.entries(parts.extra ?? {})) {
@@ -190,6 +209,39 @@ describe('check_docx_structure', () => {
     // Adding the parts clears the findings.
     expect(await codesFor(await writeDocx({}))).not.toContain('MISSING_THEME_PART');
     expect(await codesFor(await writeDocx({}))).not.toContain('MISSING_WEBSETTINGS_PART');
+  });
+
+  it('flags theme/webSettings parts that exist but are not registered in Content_Types or rels', async () => {
+    // Build a fixture with both files present but unregistered — the failure
+    // mode that survives a string-replace bug in the post-processor.
+    const dir = mkdtempSync(join(tmpdir(), 'oa-docx-structure-unregistered-'));
+    tempDirs.push(dir);
+    const zip = new JSZip();
+    zip.file(
+      '[Content_Types].xml',
+      '<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"/>',
+    );
+    zip.file(
+      'word/_rels/document.xml.rels',
+      '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"/>',
+    );
+    zip.file('word/document.xml', documentXml('<w:p><w:r><w:t>OK</w:t></w:r></w:p>'));
+    zip.file('word/theme/theme1.xml', '<a:theme/>');
+    zip.file('word/webSettings.xml', '<w:webSettings/>');
+    const buffer = await zip.generateAsync({ type: 'nodebuffer' });
+    const path = join(dir, 'fixture.docx');
+    writeFileSync(path, buffer);
+
+    const result = await lintDocx(path);
+    const unregistered = result.issues.filter((i) => i.code === 'UNREGISTERED_PART');
+    // Expect 4 findings: theme + webSettings, each missing from BOTH Content_Types and rels.
+    expect(unregistered.length).toBe(4);
+    expect(unregistered.map((i) => i.details.partPath)).toEqual(
+      expect.arrayContaining(['word/theme/theme1.xml', 'word/webSettings.xml']),
+    );
+
+    // The default fixture (where both are registered) produces no UNREGISTERED_PART.
+    expect(await codesFor(await writeDocx({}))).not.toContain('UNREGISTERED_PART');
   });
 
   it('records a READ_ERROR for missing files but continues processing the rest', async () => {
