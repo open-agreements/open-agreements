@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v5
 
       # No scope/registry on setup-node — we need to talk to BOTH registries:
-      # @usejunior/docx-core lives on public npm; @usejunior/openagreements-runtime
+      # @usejunior/docx-core lives on public npm; @open-agreements/openagreements-runtime
       # publishes to GitHub Packages. We configure each per-step via .npmrc.
       - uses: actions/setup-node@v5
         with:
