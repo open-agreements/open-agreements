@@ -1,4 +1,4 @@
-name: Publish openagreements-runtime to GitHub Packages
+name: Publish @open-agreements/openagreements-runtime to GitHub Packages
 
 on:
   workflow_dispatch:
@@ -48,11 +48,15 @@ jobs:
           # the install step run without --no-save, so npm pack sees it as bundled.
           node -e '
             const pkg = {
-              name: "@usejunior/openagreements-runtime",
+              name: "@open-agreements/openagreements-runtime",
               version: process.env.PKG_VERSION,
               type: "module",
               main: "./dist/index.js",
               types: "./dist/index.d.ts",
+              repository: {
+                type: "git",
+                url: "https://github.com/open-agreements/open-agreements.git"
+              },
               exports: {
                 ".": { "import": "./dist/index.js", "types": "./dist/index.d.ts" },
                 "./dist/*": "./dist/*",
@@ -99,7 +103,7 @@ jobs:
           # .npmrc for the publish step only. publishConfig in package.json
           # also pins the registry; having both is the documented GH Packages setup.
           cat > .npmrc <<'EOF'
-          @usejunior:registry=https://npm.pkg.github.com
+          @open-agreements:registry=https://npm.pkg.github.com
           //npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}
           always-auth=true
           EOF
