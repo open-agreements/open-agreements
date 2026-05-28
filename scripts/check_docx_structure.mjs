@@ -21,6 +21,10 @@ export const CHECKS = {
     name: 'ORPHAN_COMMENT_REFS',
     description: 'document.xml references comment IDs that are not defined in comments.xml.',
   },
+  ENCODED_APOSTROPHE_IN_BODY: {
+    name: 'ENCODED_APOSTROPHE_IN_BODY',
+    description: 'Body XML contains &apos; entity references that trigger Word repair prompts.',
+  },
 };
 
 function parseArgs(argv) {
@@ -203,6 +207,36 @@ function relevantXmlPart(name) {
   return /\.xml$/i.test(name) && /(?:^|\/)(document|header\d*|footer\d*)\.xml$/i.test(name);
 }
 
+function bodyXmlPart(name) {
+  return (
+    /\.xml$/i.test(name) &&
+    /(?:^|\/)(document|header\d*|footer\d*|endnotes|footnotes|comments)\.xml$/i.test(name)
+  );
+}
+
+/**
+ * Find offsets of `&apos;` entity references in a body XML part.
+ *
+ * @quirk Word for Mac's "unreadable content" repair dialog fires on
+ *   `&apos;` in body text even though it is a predefined XML 1.0 entity
+ *   reference. Bisected May 2026; the other four predefined entities
+ *   (`&amp;`, `&lt;`, `&gt;`, `&quot;`) are accepted without complaint.
+ *
+ * @misconception This is not catching invalid XML — the file is
+ *   well-formed and schema-valid. It is catching a Word interop pitfall.
+ *   Treat the rule as "ship docx files Word for Mac will open without
+ *   complaining", not "ship XML that meets the OOXML schema". See the
+ *   companion post-processor in `scripts/lib/docx-post-process.mjs` which
+ *   strips these on the way out.
+ *
+ * @see https://github.com/dolanmiu/docx/issues/2443
+ * @see https://github.com/dolanmiu/docx/issues/3314
+ * @see https://github.com/nashwaan/xml-js/issues/69
+ */
+function encodedApostropheOffsets(xml) {
+  return [...xml.matchAll(/&apos;/g)].map((match) => match.index ?? 0);
+}
+
 function issue(code, part, details = {}) {
   return {
     code,
@@ -228,12 +262,19 @@ export async function lintDocx(docxPath) {
   }
 
   for (const name of Object.keys(zip.files).sort()) {
-    if (!relevantXmlPart(name)) continue;
+    if (!relevantXmlPart(name) && !bodyXmlPart(name)) continue;
     const part = zip.file(name);
     if (!part) continue;
     const xml = await part.async('string');
-    for (const offset of missingCachedResultOffsets(xml)) {
-      issues.push(issue('MISSING_CACHED_RESULT', name, { offset }));
+    if (relevantXmlPart(name)) {
+      for (const offset of missingCachedResultOffsets(xml)) {
+        issues.push(issue('MISSING_CACHED_RESULT', name, { offset }));
+      }
+    }
+    if (bodyXmlPart(name)) {
+      for (const offset of encodedApostropheOffsets(xml)) {
+        issues.push(issue('ENCODED_APOSTROPHE_IN_BODY', name, { offset }));
+      }
     }
   }
 
