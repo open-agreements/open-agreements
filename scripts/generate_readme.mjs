@@ -43,6 +43,7 @@ function normalizeUrl(value, key) {
 }
 
 const CONTENTS = [
+  ["How It Works", "#how-it-works"],
   ["Available Templates", "#available-templates"],
   ["Available Skills", "#available-skills"],
   ["Packages", "#packages"],
