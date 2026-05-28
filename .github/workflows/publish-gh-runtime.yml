@@ -43,6 +43,9 @@ jobs:
           mkdir -p runtime-pkg
           cp -r dist runtime-pkg/dist
           cp -r content runtime-pkg/content
+          # bundleDependencies requires the dep to be declared in `dependencies`
+          # AND present in node_modules at pack time. Pre-declaring it here lets
+          # the install step run without --no-save, so npm pack sees it as bundled.
           node -e '
             const pkg = {
               name: "@usejunior/openagreements-runtime",
@@ -56,6 +59,7 @@ jobs:
                 "./content/*": "./content/*"
               },
               files: ["dist/", "content/"],
+              dependencies: { "@usejunior/docx-core": process.env.DOCX_CORE_VERSION },
               bundleDependencies: ["@usejunior/docx-core"],
               publishConfig: { registry: "https://npm.pkg.github.com" },
               engines: { node: ">=20" }
@@ -64,6 +68,7 @@ jobs:
           '
         env:
           PKG_VERSION: ${{ inputs.version }}
+          DOCX_CORE_VERSION: ${{ inputs.docx_core_version }}
 
       - name: Install @usejunior/docx-core (public npm) into runtime-pkg/ for bundleDependencies
         working-directory: runtime-pkg
@@ -72,9 +77,10 @@ jobs:
           # @usejunior/docx-core is published on public npm, NOT GitHub Packages.
           # Pin the install registry explicitly so neither setup-node nor the
           # publishConfig accidentally routes the install to npm.pkg.github.com.
-          npm install "@usejunior/docx-core@${DOCX_CORE_VERSION}" \
+          # Install from the dependencies field (already populated in the stage step).
+          npm install \
             --registry=https://registry.npmjs.org/ \
-            --no-save --ignore-scripts --package-lock=false
+            --ignore-scripts --package-lock=false
           echo "Verifying bundle contents..."
           npm pack --dry-run --json | node -e '
             const data = JSON.parse(require("fs").readFileSync(0, "utf8"));
@@ -85,8 +91,6 @@ jobs:
             }
             console.log("OK: @usejunior/docx-core is bundled");
           '
-        env:
-          DOCX_CORE_VERSION: ${{ inputs.docx_core_version }}
 
       - name: Publish to GitHub Packages
         working-directory: runtime-pkg
