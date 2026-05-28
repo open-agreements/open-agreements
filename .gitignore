@@ -15,6 +15,7 @@ openspec/private/*
 
 # Build artifacts
 _site/
+docs/assets/social-preview-candidates/
 site/docs/*.md
 site/downloads/
 site/schemas/
