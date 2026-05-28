@@ -473,6 +473,10 @@ See [CONTRIBUTING.md](https://github.com/open-agreements/open-agreements/blob/ma
 
 Building on OpenAgreements? Open a PR to add your project.
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=open-agreements/open-agreements&type=Date)](https://star-history.com/#open-agreements/open-agreements&Date)
+
 ## License
 
 MIT. Template content is licensed by its respective authors:
