@@ -9,6 +9,7 @@ import {
   NON_PREFIX_OA_TEMPLATE_IDS,
   SHARED_RENDERER_TEMPLATE_IDS,
   expandTriggers,
+  findManifestSatisfied,
   findMissingFreshness,
   parseChangedFiles,
 } from '../scripts/check_preview_freshness.mjs';
@@ -335,6 +336,42 @@ describe('parseChangedFiles', () => {
   });
 });
 
+// ── Manifest satisfaction ───────────────────────────────────────────────────
+
+describe('manifest satisfaction', () => {
+  it('satisfies a triggered template when the manifest SHA matches template.docx', () => {
+    const result = findManifestSatisfied(['openagreements-employment-offer-letter'], REPO_ROOT, [
+      {
+        templateId: 'openagreements-employment-offer-letter',
+        docxSha256: '2cceb36a2e5a45af97f9bda244b994f44d2290deba97188b2b9a13e99c44595b',
+        reason: 'test byte-identical render claim',
+      },
+    ]);
+
+    expect(result.satisfied).toEqual(new Set(['openagreements-employment-offer-letter']));
+    expect(result.stale).toEqual([]);
+  });
+
+  it('reports stale entries when the manifest SHA no longer matches template.docx', () => {
+    const result = findManifestSatisfied(['openagreements-employment-offer-letter'], REPO_ROOT, [
+      {
+        templateId: 'openagreements-employment-offer-letter',
+        docxSha256: '0000000000000000000000000000000000000000000000000000000000000000',
+        reason: 'test stale claim',
+      },
+    ]);
+
+    expect(result.satisfied.size).toBe(0);
+    expect(result.stale).toEqual([
+      {
+        templateId: 'openagreements-employment-offer-letter',
+        declaredSha: '0000000000000000000000000000000000000000000000000000000000000000',
+        currentSha: '2cceb36a2e5a45af97f9bda244b994f44d2290deba97188b2b9a13e99c44595b',
+      },
+    ]);
+  });
+});
+
 // ── CLI smoke test ───────────────────────────────────────────────────────────
 
 describe('CLI main-guard', () => {
@@ -377,6 +414,26 @@ describe('CLI main-guard', () => {
     });
     expect(result.status).toBe(0);
     expect(result.stdout).toMatch(/PASS preview-freshness/);
+  });
+
+  it('exits 0 on a docx change covered by a matching manifest entry', () => {
+    const result = spawnSync(process.execPath, [SCRIPT_PATH], {
+      cwd: REPO_ROOT,
+      env: {
+        ...process.env,
+        OA_CHANGED_FILES: JSON.stringify([
+          {
+            status: 'modified',
+            path: 'content/templates/openagreements-employment-offer-letter/template.docx',
+            previousPath: null,
+          },
+        ]),
+        OA_GATE_REQUIRE_INPUT: '1',
+      },
+      encoding: 'utf8',
+    });
+    expect(result.status).toBe(0);
+    expect(result.stdout).toMatch(/1 template\(s\) satisfied via manifest/);
   });
 
   it('exits 1 on empty OA_CHANGED_FILES with OA_GATE_REQUIRE_INPUT=1', () => {

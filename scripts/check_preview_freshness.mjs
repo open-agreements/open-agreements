@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 
 import { spawnSync } from "node:child_process";
+import { createHash } from "node:crypto";
+import { existsSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -101,6 +103,8 @@ const PIPELINE_TRIGGER_PATHS = new Set([
 const TEMPLATE_MD_FILE = "template.md";
 const TEMPLATE_JSON_FILE = "template.json";
 const TEMPLATE_DOCX_FILE = "template.docx";
+const PREVIEW_FRESHNESS_MANIFEST_PATH =
+  "scripts/preview-freshness-manifest.json";
 
 // ----- Wire format parsing --------------------------------------------------
 
@@ -356,6 +360,101 @@ export function findMissingFreshness(records, triggered) {
   return missing;
 }
 
+/**
+ * Load SHA-pinned byte-identical render claims from the manifest.
+ *
+ * Audit model: a manifest entry pins the current template.docx SHA so a
+ * reviewer can locally run
+ * `npm run generate:template-previews -- --template <id>` and confirm the
+ * rendered preview bytes are unchanged. If template.docx changes later, the
+ * stale SHA forces the contributor to re-verify that claim before the gate can
+ * pass without preview files in the diff.
+ *
+ * @param {string} repoRoot
+ * @returns {Array<{ templateId: string, docxSha256: string, reason?: string }>}
+ */
+export function loadPreviewFreshnessManifest(repoRoot = REPO_ROOT) {
+  const manifestPath = path.resolve(repoRoot, PREVIEW_FRESHNESS_MANIFEST_PATH);
+  if (!existsSync(manifestPath)) return [];
+
+  let parsed;
+  try {
+    parsed = JSON.parse(readFileSync(manifestPath, "utf8"));
+  } catch (err) {
+    throw new Error(
+      `Preview freshness manifest is not valid JSON: ${err.message}`
+    );
+  }
+
+  if (!parsed || typeof parsed !== "object" || !Array.isArray(parsed.entries)) {
+    throw new Error("Preview freshness manifest must contain an entries array");
+  }
+
+  return parsed.entries.map((entry, index) => {
+    const templateId = String(entry.templateId ?? "");
+    const docxSha256 = String(entry.docxSha256 ?? "").toLowerCase();
+    if (!templateId || !docxSha256) {
+      throw new Error(
+        `Preview freshness manifest entry ${index + 1} must include templateId and docxSha256`
+      );
+    }
+    return {
+      templateId,
+      docxSha256,
+      reason: entry.reason ? String(entry.reason) : "",
+    };
+  });
+}
+
+/**
+ * Match triggered templates against manifest entries whose docx SHA still
+ * matches the on-disk template.docx.
+ *
+ * @param {Iterable<string>} triggeredIds
+ * @param {string} repoRoot
+ * @param {Array<{ templateId: string, docxSha256: string, reason?: string }>} manifestEntries
+ * @returns {{
+ *   satisfied: Set<string>,
+ *   stale: Array<{ templateId: string, declaredSha: string, currentSha: string }>,
+ * }}
+ */
+export function findManifestSatisfied(
+  triggeredIds,
+  repoRoot = REPO_ROOT,
+  manifestEntries = []
+) {
+  const entriesById = new Map(
+    manifestEntries.map((entry) => [entry.templateId, entry])
+  );
+  const satisfied = new Set();
+  const stale = [];
+
+  for (const id of triggeredIds) {
+    const entry = entriesById.get(id);
+    if (!entry) continue;
+
+    const currentSha = sha256File(
+      path.resolve(repoRoot, "content", "templates", id, TEMPLATE_DOCX_FILE)
+    );
+    if (entry.docxSha256 === currentSha) {
+      satisfied.add(id);
+    } else {
+      stale.push({
+        templateId: id,
+        declaredSha: entry.docxSha256,
+        currentSha,
+      });
+    }
+  }
+
+  return { satisfied, stale };
+}
+
+function sha256File(filePath) {
+  if (!existsSync(filePath)) return "(missing)";
+  return createHash("sha256").update(readFileSync(filePath)).digest("hex");
+}
+
 // ----- Input acquisition ----------------------------------------------------
 
 function readChangedFilesFromInput(env) {
@@ -447,6 +546,24 @@ function formatFailureMessage(triggered, missing) {
     "Then commit the updated site/assets/previews/<id>/page-*.png files."
   );
   return lines.join("\n");
+}
+
+function formatManifestStaleMessage(stale) {
+  const lines = [];
+  lines.push(
+    `FAIL preview-freshness gate: ${stale.length} preview freshness manifest entr${stale.length === 1 ? "y is" : "ies are"} stale.`
+  );
+  lines.push("");
+  for (const entry of stale) {
+    lines.push(
+      `Manifest entry for ${entry.templateId} is stale: declares SHA ${entry.declaredSha}, current docx SHA is ${entry.currentSha}.`
+    );
+    lines.push(
+      `Re-verify byte-identical-render claim by re-running \`npm run generate:template-previews -- --template ${entry.templateId}\` and confirming no preview file changes; then update the manifest SHA.`
+    );
+    lines.push("");
+  }
+  return lines.join("\n").trimEnd();
 }
 
 function emitGithubAnnotations(triggered, missing) {
@@ -541,9 +658,28 @@ export async function main(env) {
     return;
   }
 
-  const missing = findMissingFreshness(input.records, triggered);
+  const manifestEntries = loadPreviewFreshnessManifest(REPO_ROOT);
+  const manifestCheck = findManifestSatisfied(
+    docxTriggeredIds(triggered),
+    REPO_ROOT,
+    manifestEntries
+  );
+  if (manifestCheck.stale.length > 0) {
+    console.error(formatManifestStaleMessage(manifestCheck.stale));
+    process.exit(1);
+  }
+
+  const missing = findMissingFreshness(input.records, triggered).filter(
+    (id) => !manifestCheck.satisfied.has(id)
+  );
 
   if (missing.length === 0) {
+    if (manifestCheck.satisfied.size > 0) {
+      console.log(
+        `PASS preview-freshness gate: ${manifestCheck.satisfied.size} template(s) satisfied via manifest (byte-identical render claim).`
+      );
+      return;
+    }
     console.log(
       `PASS preview-freshness gate: ${triggered.size} template(s) had matching preview updates.`
     );
@@ -553,6 +689,21 @@ export async function main(env) {
   emitGithubAnnotations(triggered, missing);
   console.error(formatFailureMessage(triggered, missing));
   process.exit(1);
+}
+
+function docxTriggeredIds(triggered) {
+  const ids = [];
+  for (const [id, records] of triggered) {
+    if (
+      records.some(
+        (record) =>
+          record.path === `content/templates/${id}/${TEMPLATE_DOCX_FILE}`
+      )
+    ) {
+      ids.push(id);
+    }
+  }
+  return ids;
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === __filename) {
