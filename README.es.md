@@ -404,6 +404,10 @@ Consulta [CONTRIBUTING.md](https://github.com/open-agreements/open-agreements/bl
 
 ¿Construyes algo con OpenAgreements? Abre un PR para añadir tu proyecto.
 
+## Historial de estrellas
+
+[![Star History Chart](https://api.star-history.com/svg?repos=open-agreements/open-agreements&type=Date)](https://star-history.com/#open-agreements/open-agreements&Date)
+
 ## Licencia
 
 MIT. El contenido de las plantillas está licenciado por sus respectivos autores:
