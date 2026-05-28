@@ -22,11 +22,12 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
+      # No scope/registry on setup-node — we need to talk to BOTH registries:
+      # @usejunior/docx-core lives on public npm; @usejunior/openagreements-runtime
+      # publishes to GitHub Packages. We configure each per-step via .npmrc.
       - uses: actions/setup-node@v5
         with:
           node-version: 22
-          registry-url: https://npm.pkg.github.com
-          scope: "@usejunior"
           cache: npm
 
       - name: Install dependencies (retry)
@@ -64,13 +65,15 @@ jobs:
         env:
           PKG_VERSION: ${{ inputs.version }}
 
-      - name: Install @usejunior/docx-core into runtime-pkg/ (required for bundleDependencies)
+      - name: Install @usejunior/docx-core (public npm) into runtime-pkg/ for bundleDependencies
         working-directory: runtime-pkg
         run: |
           set -euo pipefail
-          # .npmrc so the install resolves @usejunior/* from GitHub Packages
-          echo "@usejunior:registry=https://npm.pkg.github.com" > .npmrc
+          # @usejunior/docx-core is published on public npm, NOT GitHub Packages.
+          # Pin the install registry explicitly so neither setup-node nor the
+          # publishConfig accidentally routes the install to npm.pkg.github.com.
           npm install "@usejunior/docx-core@${DOCX_CORE_VERSION}" \
+            --registry=https://registry.npmjs.org/ \
             --no-save --ignore-scripts --package-lock=false
           echo "Verifying bundle contents..."
           npm pack --dry-run --json | node -e '
@@ -84,10 +87,18 @@ jobs:
           '
         env:
           DOCX_CORE_VERSION: ${{ inputs.docx_core_version }}
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Publish to GitHub Packages
         working-directory: runtime-pkg
-        run: npm publish
+        run: |
+          set -euo pipefail
+          # .npmrc for the publish step only. publishConfig in package.json
+          # also pins the registry; having both is the documented GH Packages setup.
+          cat > .npmrc <<'EOF'
+          @usejunior:registry=https://npm.pkg.github.com
+          //npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}
+          always-auth=true
+          EOF
+          npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
