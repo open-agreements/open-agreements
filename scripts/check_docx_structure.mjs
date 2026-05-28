@@ -25,6 +25,18 @@ export const CHECKS = {
     name: 'ENCODED_APOSTROPHE_IN_BODY',
     description: 'Body XML contains &apos; entity references that trigger Word repair prompts.',
   },
+  MISSING_THEME_PART: {
+    name: 'MISSING_THEME_PART',
+    description: 'docx package lacks word/theme/theme1.xml — Word for Mac flags absence and triggers the unreadable-content repair dialog.',
+  },
+  MISSING_WEBSETTINGS_PART: {
+    name: 'MISSING_WEBSETTINGS_PART',
+    description: 'docx package lacks word/webSettings.xml — Word for Mac flags absence and triggers the unreadable-content repair dialog.',
+  },
+  UNREGISTERED_PART: {
+    name: 'UNREGISTERED_PART',
+    description: 'A required part exists in the zip but is not registered in [Content_Types].xml or word/_rels/document.xml.rels — Word for Mac still flags the package because the part is unreachable.',
+  },
 };
 
 function parseArgs(argv) {
@@ -277,6 +289,39 @@ export async function lintDocx(docxPath) {
       }
     }
   }
+
+  const contentTypesPart = zip.file('[Content_Types].xml');
+  const documentRelsPart = zip.file('word/_rels/document.xml.rels');
+  const contentTypesXml = contentTypesPart ? await contentTypesPart.async('string') : '';
+  const documentRelsXml = documentRelsPart ? await documentRelsPart.async('string') : '';
+
+  const checkPackagePart = (partPath, missingCode, relType) => {
+    if (!zip.file(partPath)) {
+      issues.push(issue(missingCode, partPath));
+      return;
+    }
+    // File exists — confirm it's wired into Content_Types + .rels. A part that
+    // ships in the zip but isn't registered is unreachable; Word for Mac still
+    // flags the package. Catches a class of bug where injection writes the file
+    // but the registration-regex misses a non-canonical [Content_Types].xml shape.
+    if (contentTypesPart && !contentTypesXml.includes(`PartName="/${partPath}"`)) {
+      issues.push(issue('UNREGISTERED_PART', '[Content_Types].xml', { partPath, missing: 'Override' }));
+    }
+    if (documentRelsPart && !documentRelsXml.includes(`Type="${relType}"`)) {
+      issues.push(issue('UNREGISTERED_PART', 'word/_rels/document.xml.rels', { partPath, missing: 'Relationship' }));
+    }
+  };
+
+  checkPackagePart(
+    'word/theme/theme1.xml',
+    'MISSING_THEME_PART',
+    'http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme',
+  );
+  checkPackagePart(
+    'word/webSettings.xml',
+    'MISSING_WEBSETTINGS_PART',
+    'http://schemas.openxmlformats.org/officeDocument/2006/relationships/webSettings',
+  );
 
   const documentPart = zip.file('word/document.xml');
   if (documentPart) {
