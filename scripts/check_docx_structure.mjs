@@ -25,6 +25,14 @@ export const CHECKS = {
     name: 'ENCODED_APOSTROPHE_IN_BODY',
     description: 'Body XML contains &apos; entity references that trigger Word repair prompts.',
   },
+  MISSING_THEME_PART: {
+    name: 'MISSING_THEME_PART',
+    description: 'docx package lacks word/theme/theme1.xml — Word for Mac flags absence and triggers the unreadable-content repair dialog.',
+  },
+  MISSING_WEBSETTINGS_PART: {
+    name: 'MISSING_WEBSETTINGS_PART',
+    description: 'docx package lacks word/webSettings.xml — Word for Mac flags absence and triggers the unreadable-content repair dialog.',
+  },
 };
 
 function parseArgs(argv) {
@@ -276,6 +284,13 @@ export async function lintDocx(docxPath) {
         issues.push(issue('ENCODED_APOSTROPHE_IN_BODY', name, { offset }));
       }
     }
+  }
+
+  if (!zip.file('word/theme/theme1.xml')) {
+    issues.push(issue('MISSING_THEME_PART', 'word/theme/theme1.xml'));
+  }
+  if (!zip.file('word/webSettings.xml')) {
+    issues.push(issue('MISSING_WEBSETTINGS_PART', 'word/webSettings.xml'));
   }
 
   const documentPart = zip.file('word/document.xml');

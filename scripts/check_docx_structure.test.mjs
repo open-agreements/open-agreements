@@ -36,6 +36,11 @@ async function writeDocx(parts) {
   const zip = new JSZip();
   zip.file('[Content_Types].xml', '<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"/>');
   zip.file('word/document.xml', parts.document ?? documentXml('<w:p><w:r><w:t>OK</w:t></w:r></w:p>'));
+  // Include theme + webSettings by default so the baseline fixture exercises
+  // the same shape Word for Mac accepts. Individual tests that target the
+  // MISSING_* linter checks can override these by passing an empty `extra`.
+  zip.file('word/theme/theme1.xml', '<a:theme/>');
+  zip.file('word/webSettings.xml', '<w:webSettings/>');
   for (const [name, xml] of Object.entries(parts.extra ?? {})) {
     zip.file(name, xml);
   }
@@ -165,6 +170,26 @@ describe('check_docx_structure', () => {
       },
     });
     expect(await codesFor(broken)).toContain('MISSING_CACHED_RESULT');
+  });
+
+  it('flags missing theme1.xml and webSettings.xml package parts', async () => {
+    // Override the default fixture's theme/webSettings by removing them.
+    const dir = mkdtempSync(join(tmpdir(), 'oa-docx-structure-missing-'));
+    tempDirs.push(dir);
+    const zip = new JSZip();
+    zip.file('[Content_Types].xml', '<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"/>');
+    zip.file('word/document.xml', documentXml('<w:p><w:r><w:t>OK</w:t></w:r></w:p>'));
+    const buffer = await zip.generateAsync({ type: 'nodebuffer' });
+    const path = join(dir, 'fixture.docx');
+    writeFileSync(path, buffer);
+
+    const codes = await codesFor(path);
+    expect(codes).toContain('MISSING_THEME_PART');
+    expect(codes).toContain('MISSING_WEBSETTINGS_PART');
+
+    // Adding the parts clears the findings.
+    expect(await codesFor(await writeDocx({}))).not.toContain('MISSING_THEME_PART');
+    expect(await codesFor(await writeDocx({}))).not.toContain('MISSING_WEBSETTINGS_PART');
   });
 
   it('records a READ_ERROR for missing files but continues processing the rest', async () => {
