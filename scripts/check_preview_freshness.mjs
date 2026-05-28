@@ -390,7 +390,13 @@ export function loadPreviewFreshnessManifest(repoRoot = REPO_ROOT) {
     throw new Error("Preview freshness manifest must contain an entries array");
   }
 
+  const seen = new Set();
   return parsed.entries.map((entry, index) => {
+    if (!entry || typeof entry !== "object" || Array.isArray(entry)) {
+      throw new Error(
+        `Preview freshness manifest entry ${index + 1} must be an object`
+      );
+    }
     const templateId = String(entry.templateId ?? "");
     const docxSha256 = String(entry.docxSha256 ?? "").toLowerCase();
     if (!templateId || !docxSha256) {
@@ -398,6 +404,17 @@ export function loadPreviewFreshnessManifest(repoRoot = REPO_ROOT) {
         `Preview freshness manifest entry ${index + 1} must include templateId and docxSha256`
       );
     }
+    if (!/^[a-f0-9]{64}$/.test(docxSha256)) {
+      throw new Error(
+        `Preview freshness manifest entry ${index + 1} has invalid docxSha256 — must be 64 lowercase hex characters (SHA-256), got '${entry.docxSha256}'`
+      );
+    }
+    if (seen.has(templateId)) {
+      throw new Error(
+        `Preview freshness manifest has duplicate templateId '${templateId}' — each template may have at most one entry to preserve audit trail`
+      );
+    }
+    seen.add(templateId);
     return {
       templateId,
       docxSha256,
@@ -436,13 +453,13 @@ export function findManifestSatisfied(
     const currentSha = sha256File(
       path.resolve(repoRoot, "content", "templates", id, TEMPLATE_DOCX_FILE)
     );
-    if (entry.docxSha256 === currentSha) {
+    if (currentSha !== null && entry.docxSha256 === currentSha) {
       satisfied.add(id);
     } else {
       stale.push({
         templateId: id,
         declaredSha: entry.docxSha256,
-        currentSha,
+        currentSha: currentSha ?? "(template.docx missing on disk)",
       });
     }
   }
@@ -450,8 +467,19 @@ export function findManifestSatisfied(
   return { satisfied, stale };
 }
 
+/**
+ * Compute the SHA-256 of a file, or return null if absent.
+ *
+ * Important: null is intentionally NOT a valid SHA value and can never compare
+ * equal to a manifest entry's docxSha256 (which is validated as 64 hex chars).
+ * That closes a deletion-bypass shape where a manifest entry could otherwise
+ * claim a sentinel "(missing)" string and satisfy a removed template.docx.
+ *
+ * @param {string} filePath
+ * @returns {string | null}
+ */
 function sha256File(filePath) {
-  if (!existsSync(filePath)) return "(missing)";
+  if (!existsSync(filePath)) return null;
   return createHash("sha256").update(readFileSync(filePath)).digest("hex");
 }
 
@@ -660,44 +688,64 @@ export async function main(env) {
 
   const manifestEntries = loadPreviewFreshnessManifest(REPO_ROOT);
   const manifestCheck = findManifestSatisfied(
-    docxTriggeredIds(triggered),
+    docxOnlyTriggeredIds(triggered),
     REPO_ROOT,
     manifestEntries
   );
-  if (manifestCheck.stale.length > 0) {
-    console.error(formatManifestStaleMessage(manifestCheck.stale));
-    process.exit(1);
-  }
 
   const missing = findMissingFreshness(input.records, triggered).filter(
     (id) => !manifestCheck.satisfied.has(id)
   );
 
-  if (missing.length === 0) {
-    if (manifestCheck.satisfied.size > 0) {
-      console.log(
-        `PASS preview-freshness gate: ${manifestCheck.satisfied.size} template(s) satisfied via manifest (byte-identical render claim).`
-      );
-      return;
+  // Aggregate failures: emit both stale-manifest and missing-preview errors in
+  // one run so a contributor can fix everything in a single follow-up commit.
+  if (manifestCheck.stale.length > 0 || missing.length > 0) {
+    if (missing.length > 0) {
+      emitGithubAnnotations(triggered, missing);
+      console.error(formatFailureMessage(triggered, missing));
     }
+    if (manifestCheck.stale.length > 0) {
+      if (missing.length > 0) console.error("");
+      console.error(formatManifestStaleMessage(manifestCheck.stale));
+    }
+    process.exit(1);
+  }
+
+  if (manifestCheck.satisfied.size > 0) {
     console.log(
-      `PASS preview-freshness gate: ${triggered.size} template(s) had matching preview updates.`
+      `PASS preview-freshness gate: ${manifestCheck.satisfied.size} template(s) satisfied via manifest (byte-identical render claim).`
     );
     return;
   }
-
-  emitGithubAnnotations(triggered, missing);
-  console.error(formatFailureMessage(triggered, missing));
-  process.exit(1);
+  console.log(
+    `PASS preview-freshness gate: ${triggered.size} template(s) had matching preview updates.`
+  );
 }
 
-function docxTriggeredIds(triggered) {
+/**
+ * Return template IDs whose trigger records are EXCLUSIVELY a modification of
+ * `content/templates/<id>/template.docx`. Manifest satisfaction must not apply
+ * when a source-side trigger (template.md, template.json, renderer, layout,
+ * pipeline, etc.) also fires for the same template — the manifest only
+ * declares "this docx mutation is non-visual," it does NOT cover an
+ * accompanying source change.
+ *
+ * Note `every` over `some`: a PR that touches both template.docx AND
+ * template.md must still ship refreshed previews, even if the manifest's docx
+ * SHA matches.
+ *
+ * @param {Map<string, Array<{ status: string, path: string }>>} triggered
+ * @returns {string[]}
+ */
+function docxOnlyTriggeredIds(triggered) {
   const ids = [];
   for (const [id, records] of triggered) {
+    if (records.length === 0) continue;
     if (
-      records.some(
+      records.every(
         (record) =>
-          record.path === `content/templates/${id}/${TEMPLATE_DOCX_FILE}`
+          record.path === `content/templates/${id}/${TEMPLATE_DOCX_FILE}` &&
+          record.status !== "removed"
       )
     ) {
       ids.push(id);

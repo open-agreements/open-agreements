@@ -1,7 +1,9 @@
 import { spawnSync } from 'node:child_process';
-import { resolve } from 'node:path';
+import { mkdtempSync, rmSync, writeFileSync, mkdirSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { resolve, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it } from 'vitest';
 
 import {
   CANONICAL_TEMPLATE_IDS,
@@ -11,6 +13,7 @@ import {
   expandTriggers,
   findManifestSatisfied,
   findMissingFreshness,
+  loadPreviewFreshnessManifest,
   parseChangedFiles,
 } from '../scripts/check_preview_freshness.mjs';
 
@@ -336,6 +339,82 @@ describe('parseChangedFiles', () => {
   });
 });
 
+// ── Manifest loader validation ──────────────────────────────────────────────
+
+describe('loadPreviewFreshnessManifest validation', () => {
+  const tempDirs: string[] = [];
+  afterEach(() => {
+    while (tempDirs.length > 0) rmSync(tempDirs.pop()!, { recursive: true, force: true });
+  });
+
+  function fakeRepo(manifestBody: unknown): string {
+    const dir = mkdtempSync(join(tmpdir(), 'oa-pf-manifest-'));
+    tempDirs.push(dir);
+    mkdirSync(join(dir, 'scripts'), { recursive: true });
+    writeFileSync(
+      join(dir, 'scripts', 'preview-freshness-manifest.json'),
+      typeof manifestBody === 'string' ? manifestBody : JSON.stringify(manifestBody),
+    );
+    return dir;
+  }
+
+  it('rejects non-hex docxSha256 values', () => {
+    const repo = fakeRepo({
+      entries: [{ templateId: 'foo', docxSha256: 'not-a-sha', reason: 'x' }],
+    });
+    expect(() => loadPreviewFreshnessManifest(repo)).toThrow(/invalid docxSha256/);
+  });
+
+  it('rejects the (missing) sentinel as a docxSha256 value', () => {
+    const repo = fakeRepo({
+      entries: [{ templateId: 'foo', docxSha256: '(missing)', reason: 'deletion bypass attempt' }],
+    });
+    expect(() => loadPreviewFreshnessManifest(repo)).toThrow(/invalid docxSha256/);
+  });
+
+  it('rejects SHA values with the wrong length', () => {
+    const repo = fakeRepo({
+      entries: [{ templateId: 'foo', docxSha256: 'aabb', reason: 'too short' }],
+    });
+    expect(() => loadPreviewFreshnessManifest(repo)).toThrow(/invalid docxSha256/);
+  });
+
+  it('rejects duplicate templateId entries', () => {
+    const repo = fakeRepo({
+      entries: [
+        { templateId: 'foo', docxSha256: 'a'.repeat(64), reason: 'first' },
+        { templateId: 'foo', docxSha256: 'b'.repeat(64), reason: 'second hides first' },
+      ],
+    });
+    expect(() => loadPreviewFreshnessManifest(repo)).toThrow(/duplicate templateId/);
+  });
+
+  it('rejects non-object entries (string, array, null)', () => {
+    expect(() => loadPreviewFreshnessManifest(fakeRepo({ entries: ['hello'] }))).toThrow(
+      /must be an object/,
+    );
+    expect(() => loadPreviewFreshnessManifest(fakeRepo({ entries: [['a']] }))).toThrow(
+      /must be an object/,
+    );
+    expect(() => loadPreviewFreshnessManifest(fakeRepo({ entries: [null] }))).toThrow(
+      /must be an object/,
+    );
+  });
+
+  it('accepts a valid 64-char lowercase hex SHA', () => {
+    const repo = fakeRepo({
+      entries: [{ templateId: 'foo', docxSha256: 'a'.repeat(64), reason: 'ok' }],
+    });
+    expect(() => loadPreviewFreshnessManifest(repo)).not.toThrow();
+  });
+
+  it('returns [] when the manifest file is absent', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'oa-pf-manifest-absent-'));
+    tempDirs.push(dir);
+    expect(loadPreviewFreshnessManifest(dir)).toEqual([]);
+  });
+});
+
 // ── Manifest satisfaction ───────────────────────────────────────────────────
 
 describe('manifest satisfaction', () => {
@@ -367,6 +446,24 @@ describe('manifest satisfaction', () => {
         templateId: 'openagreements-employment-offer-letter',
         declaredSha: '0000000000000000000000000000000000000000000000000000000000000000',
         currentSha: '2cceb36a2e5a45af97f9bda244b994f44d2290deba97188b2b9a13e99c44595b',
+      },
+    ]);
+  });
+
+  it('flags a manifest entry as stale (not satisfied) when template.docx is missing on disk', () => {
+    const result = findManifestSatisfied(['template-that-does-not-exist'], REPO_ROOT, [
+      {
+        templateId: 'template-that-does-not-exist',
+        docxSha256: '0000000000000000000000000000000000000000000000000000000000000000',
+        reason: 'deletion-bypass guard',
+      },
+    ]);
+    expect(result.satisfied.size).toBe(0);
+    expect(result.stale).toEqual([
+      {
+        templateId: 'template-that-does-not-exist',
+        declaredSha: '0000000000000000000000000000000000000000000000000000000000000000',
+        currentSha: '(template.docx missing on disk)',
       },
     ]);
   });
@@ -414,6 +511,32 @@ describe('CLI main-guard', () => {
     });
     expect(result.status).toBe(0);
     expect(result.stdout).toMatch(/PASS preview-freshness/);
+  });
+
+  it('exits 1 when docx AND template.md change together (manifest cannot shield source-side change)', () => {
+    const result = spawnSync(process.execPath, [SCRIPT_PATH], {
+      cwd: REPO_ROOT,
+      env: {
+        ...process.env,
+        OA_CHANGED_FILES: JSON.stringify([
+          {
+            status: 'modified',
+            path: 'content/templates/openagreements-employment-offer-letter/template.docx',
+            previousPath: null,
+          },
+          {
+            status: 'modified',
+            path: 'content/templates/openagreements-employment-offer-letter/template.md',
+            previousPath: null,
+          },
+        ]),
+        OA_GATE_REQUIRE_INPUT: '1',
+      },
+      encoding: 'utf8',
+    });
+    expect(result.status).toBe(1);
+    expect(result.stderr).toMatch(/openagreements-employment-offer-letter/);
+    expect(result.stdout).not.toMatch(/satisfied via manifest/);
   });
 
   it('exits 0 on a docx change covered by a matching manifest entry', () => {
