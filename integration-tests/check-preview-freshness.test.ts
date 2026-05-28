@@ -513,6 +513,49 @@ describe('CLI main-guard', () => {
     expect(result.stdout).toMatch(/PASS preview-freshness/);
   });
 
+  it('exits 1 when template.docx is ADDED (manifest cannot vouch for byte-identity vs nonexistent baseline)', () => {
+    const result = spawnSync(process.execPath, [SCRIPT_PATH], {
+      cwd: REPO_ROOT,
+      env: {
+        ...process.env,
+        OA_CHANGED_FILES: JSON.stringify([
+          {
+            status: 'added',
+            path: 'content/templates/openagreements-employment-offer-letter/template.docx',
+            previousPath: null,
+          },
+        ]),
+        OA_GATE_REQUIRE_INPUT: '1',
+      },
+      encoding: 'utf8',
+    });
+    expect(result.status).toBe(1);
+    expect(result.stdout).not.toMatch(/satisfied via manifest/);
+    expect(result.stderr).toMatch(/openagreements-employment-offer-letter/);
+  });
+
+  it("'freshness/skip' label bypasses the gate even when manifest validation would fail", () => {
+    // A stale manifest entry would normally hard-fail. Asserts the label
+    // short-circuit fires BEFORE manifest loading, so the bypass is total —
+    // not conditional on manifest validity. Documents the precedence policy
+    // for future maintainers.
+    const result = spawnSync(process.execPath, [SCRIPT_PATH], {
+      cwd: REPO_ROOT,
+      env: {
+        ...process.env,
+        OA_PR_LABELS: 'freshness/skip',
+        // Empty OA_CHANGED_FILES would fail with OA_GATE_REQUIRE_INPUT=1, but
+        // the label short-circuit fires before that check too.
+        OA_CHANGED_FILES: '',
+        OA_GATE_REQUIRE_INPUT: '1',
+      },
+      encoding: 'utf8',
+    });
+    expect(result.status).toBe(0);
+    expect(result.stdout).toMatch(/freshness\/skip/);
+    expect(result.stdout).toMatch(/explicitly bypassed/);
+  });
+
   it('exits 1 when docx AND template.md change together (manifest cannot shield source-side change)', () => {
     const result = spawnSync(process.execPath, [SCRIPT_PATH], {
       cwd: REPO_ROOT,

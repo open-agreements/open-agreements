@@ -734,6 +734,12 @@ export async function main(env) {
  * template.md must still ship refreshed previews, even if the manifest's docx
  * SHA matches.
  *
+ * Note `status === "modified"`: a manifest entry asserts "byte-identical
+ * against the previously-committed previews." For an `added` template.docx
+ * there are no previously-committed previews to compare against, so the
+ * claim is vacuous; the gate must still require fresh previews to be
+ * committed alongside the new template. Same logic for `removed`.
+ *
  * @param {Map<string, Array<{ status: string, path: string }>>} triggered
  * @returns {string[]}
  */
@@ -745,7 +751,7 @@ function docxOnlyTriggeredIds(triggered) {
       records.every(
         (record) =>
           record.path === `content/templates/${id}/${TEMPLATE_DOCX_FILE}` &&
-          record.status !== "removed"
+          record.status === "modified"
       )
     ) {
       ids.push(id);
