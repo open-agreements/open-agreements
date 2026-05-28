@@ -49,8 +49,11 @@ async function makeDocx(parts = {}) {
       '</Relationships>',
     ].join(''),
   );
-  zip.file('word/document.xml', documentXml('<w:p><w:r><w:t>OK</w:t></w:r></w:p>'));
+  zip.file('word/document.xml', parts.document ?? documentXml('<w:p><w:r><w:t>OK</w:t></w:r></w:p>'));
   zip.file('word/footer1.xml', parts.footer ?? '');
+  for (const [name, value] of Object.entries(parts.extra ?? {})) {
+    zip.file(name, value);
+  }
   if (parts.comments !== undefined) {
     zip.file('word/comments.xml', parts.comments);
   }
@@ -117,6 +120,116 @@ describe('docx post processing', () => {
 
     expect(zip.file('word/comments.xml')).not.toBeNull();
     await expect(zip.file('[Content_Types].xml').async('string')).resolves.toContain('/word/comments.xml');
+  });
+
+  /**
+   * @quirk Word for Mac's "unreadable content" repair dialog fires on
+   *   `&apos;` in body text. The entity is technically valid XML 1.0 (one
+   *   of the five predefined references) but Word rejects it where the
+   *   other four (`&amp;`, `&lt;`, `&gt;`, `&quot;`) are accepted. Bisected
+   *   in May 2026 against the dev-website-served file (which opens clean
+   *   because its xmldom round-trip incidentally decodes the entity) vs.
+   *   the OA repo file (which Word rejects).
+   *
+   * @misconception "An XML serializer that emits `&apos;` is correct, so
+   *   Word must be wrong to reject it." Both statements are true — and
+   *   neither helps the user, who sees a scary repair dialog on a file we
+   *   shipped. The post-processor swaps `&apos;` for the literal
+   *   apostrophe character in every `.xml` part to interoperate with
+   *   Word's quirk. Non-XML parts (e.g. `word/media/readme.txt`) are
+   *   intentionally untouched — `&apos;` in those is just text.
+   *
+   * @see https://github.com/dolanmiu/docx/issues/2443
+   *   "Corrupt Word document from patching with an XML attribute with an
+   *   ampersand" — same root cause: the docx library's underlying
+   *   `xml-js` serializer round-trips entity references inconsistently.
+   * @see https://github.com/dolanmiu/docx/issues/3314
+   *   "Word found unreadable content error" (Nov 2025) — recurring report
+   *   of the same dialog; no upstream fix yet.
+   * @see https://github.com/nashwaan/xml-js/issues/69 — upstream xml-js bug.
+   */
+  it('decodes &apos; entities in XML parts only', async () => {
+    const buffer = await makeDocx({
+      document: documentXml("<w:p><w:r><w:t>Company&apos;s option</w:t></w:r></w:p>"),
+      extra: {
+        'docProps/core.xml': '<cp:coreProperties><dc:title>Owner&apos;s copy</dc:title></cp:coreProperties>',
+        'word/media/readme.txt': 'Keep &apos; encoded here',
+      },
+    });
+    const processed = await postProcessGeneratedDocx(buffer);
+    const zip = await JSZip.loadAsync(processed);
+
+    await expect(zip.file('word/document.xml').async('string')).resolves.toContain("Company's option");
+    await expect(zip.file('docProps/core.xml').async('string')).resolves.toContain("Owner's copy");
+    await expect(zip.file('word/media/readme.txt').async('string')).resolves.toContain('Keep &apos; encoded here');
+  });
+
+  /**
+   * @quirk A naive `&apos;` → `'` swap would corrupt XML if the part used
+   *   single-quoted attribute values. For example,
+   *   `<w:p data-owner='Owner&apos;s'>` would become
+   *   `<w:p data-owner='Owner's'>` — unbalanced quotes, no longer parseable.
+   *
+   * @misconception "Single-quoted attributes don't appear in our output, so
+   *   we don't have to handle them." True today (the `docx` library
+   *   exclusively emits double-quoted attributes), but treating that as a
+   *   stable invariant relies on an upstream library's serialization choice.
+   *   The defensive precondition + linter check together preserve the
+   *   invariant explicitly: if single-quoted attributes ever appear, the
+   *   post-processor self-protects by leaving the part untouched, and the
+   *   `ENCODED_APOSTROPHE_IN_BODY` linter check surfaces the residual
+   *   `&apos;` at the next CI run so we know to investigate.
+   *
+   * Caught by Codex peer-review of #370 (May 2026); see review thread.
+   */
+  it('skips parts with single-quoted attributes (defensive, leaves &apos; in place)', async () => {
+    const buffer = await makeDocx({
+      document:
+        '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>' +
+        '<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">' +
+        "<w:body><w:p data-owner='Owner&apos;s'><w:r><w:t>OK</w:t></w:r></w:p></w:body>" +
+        '</w:document>',
+    });
+    const processed = await postProcessGeneratedDocx(buffer);
+    const zip = await JSZip.loadAsync(processed);
+
+    // The single-quoted attribute is preserved, AND the &apos; inside it is
+    // left encoded — corrupting it would unbalance the attribute value.
+    const docXml = await zip.file('word/document.xml').async('string');
+    expect(docXml).toContain("data-owner='Owner&apos;s'");
+  });
+
+  /**
+   * @quirk Round-2 peer-review (Codex, May 2026) caught that an earlier
+   *   form of {@link hasSingleQuotedAttribute} matched the XML declaration
+   *   `<?xml version='1.0' encoding='UTF-8'?>` and suppressed `&apos;`
+   *   decoding for any part that happened to use single-quoted declaration
+   *   attributes (which is valid XML). The regex now requires `<` followed
+   *   by a letter (an element-name start), so processing instructions and
+   *   comments are excluded.
+   *
+   * @misconception "The XML declaration is just metadata; the regex doesn't
+   *   need to care about it." Wrong: the declaration is syntactically a
+   *   `<...>` tag, and a permissive `<[^>]*='` matches it. Test pins the
+   *   fix so future regex changes don't silently regress this case.
+   */
+  it('decodes &apos; even when the XML declaration uses single quotes', async () => {
+    const buffer = await makeDocx({
+      document:
+        "<?xml version='1.0' encoding='UTF-8' standalone='yes'?>" +
+        '<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">' +
+        '<w:body><w:p><w:r><w:t>Owner&apos;s option</w:t></w:r></w:p></w:body>' +
+        '</w:document>',
+    });
+    const processed = await postProcessGeneratedDocx(buffer);
+    const zip = await JSZip.loadAsync(processed);
+    const docXml = await zip.file('word/document.xml').async('string');
+
+    // &apos; in text content was decoded; the single-quoted XML declaration
+    // doesn't constitute a single-quoted element attribute, so the
+    // defensive guard correctly stayed out of the way.
+    expect(docXml).toContain("Owner's option");
+    expect(docXml).not.toContain('&apos;');
   });
 
   it('produces output that passes the structural linter', async () => {

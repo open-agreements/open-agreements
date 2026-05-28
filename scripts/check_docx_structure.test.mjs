@@ -117,6 +117,24 @@ describe('check_docx_structure', () => {
     expect(await codesFor(good)).not.toContain('ORPHAN_COMMENT_REFS');
   });
 
+  it('flags encoded apostrophe entities in body XML parts', async () => {
+    const broken = await writeDocx({
+      document: documentXml("<w:p><w:r><w:t>Company&apos;s option</w:t></w:r></w:p>"),
+      extra: {
+        'docProps/core.xml': '<cp:coreProperties><dc:title>Owner&apos;s copy</dc:title></cp:coreProperties>',
+      },
+    });
+    const good = await writeDocx({
+      document: documentXml("<w:p><w:r><w:t>Company's option</w:t></w:r></w:p>"),
+      extra: {
+        'docProps/core.xml': '<cp:coreProperties><dc:title>Owner&apos;s copy</dc:title></cp:coreProperties>',
+      },
+    });
+
+    expect(await codesFor(broken)).toContain('ENCODED_APOSTROPHE_IN_BODY');
+    expect(await codesFor(good)).not.toContain('ENCODED_APOSTROPHE_IN_BODY');
+  });
+
   it('flags separate/end split across adjacent runs without cached result text', async () => {
     const broken = await writeDocx({
       extra: {
