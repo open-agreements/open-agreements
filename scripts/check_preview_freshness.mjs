@@ -474,7 +474,26 @@ function escapeAnnotation(s) {
 
 // ----- CLI entrypoint -------------------------------------------------------
 
+const FRESHNESS_SKIP_LABEL = "freshness/skip";
+
+function hasFreshnessSkipLabel(env) {
+  const raw = env.OA_PR_LABELS;
+  if (typeof raw !== "string" || raw.length === 0) return false;
+  return raw
+    .split(",")
+    .map((name) => name.trim())
+    .filter(Boolean)
+    .includes(FRESHNESS_SKIP_LABEL);
+}
+
 export async function main(env) {
+  if (hasFreshnessSkipLabel(env)) {
+    console.log(
+      `PASS preview-freshness gate: '${FRESHNESS_SKIP_LABEL}' label applied — gate explicitly bypassed.`
+    );
+    return;
+  }
+
   const input = readChangedFilesFromInput(env);
 
   if (input.mode === "ci-missing") {
