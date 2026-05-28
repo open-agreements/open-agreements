@@ -1,0 +1,93 @@
+name: Publish openagreements-runtime to GitHub Packages
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version to publish (for example: 0.7.5)"
+        required: true
+        type: string
+      docx_core_version:
+        description: "Version of @usejunior/docx-core to bundle (must match the version installed in the public repo's node_modules)"
+        required: true
+        type: string
+
+jobs:
+  publish:
+    name: Publish runtime tarball
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          registry-url: https://npm.pkg.github.com
+          scope: "@usejunior"
+          cache: npm
+
+      - name: Install dependencies (retry)
+        uses: ./.github/actions/npm-ci-retry
+
+      - name: Build dist/
+        run: npm run build
+
+      - name: Stage runtime-pkg/
+        run: |
+          set -euo pipefail
+          rm -rf runtime-pkg
+          mkdir -p runtime-pkg
+          cp -r dist runtime-pkg/dist
+          cp -r content runtime-pkg/content
+          node -e '
+            const pkg = {
+              name: "@usejunior/openagreements-runtime",
+              version: process.env.PKG_VERSION,
+              type: "module",
+              main: "./dist/index.js",
+              types: "./dist/index.d.ts",
+              exports: {
+                ".": { "import": "./dist/index.js", "types": "./dist/index.d.ts" },
+                "./dist/*": "./dist/*",
+                "./content/*": "./content/*"
+              },
+              files: ["dist/", "content/"],
+              bundleDependencies: ["@usejunior/docx-core"],
+              publishConfig: { registry: "https://npm.pkg.github.com" },
+              engines: { node: ">=20" }
+            };
+            require("fs").writeFileSync("runtime-pkg/package.json", JSON.stringify(pkg, null, 2));
+          '
+        env:
+          PKG_VERSION: ${{ inputs.version }}
+
+      - name: Install @usejunior/docx-core into runtime-pkg/ (required for bundleDependencies)
+        working-directory: runtime-pkg
+        run: |
+          set -euo pipefail
+          # .npmrc so the install resolves @usejunior/* from GitHub Packages
+          echo "@usejunior:registry=https://npm.pkg.github.com" > .npmrc
+          npm install "@usejunior/docx-core@${DOCX_CORE_VERSION}" \
+            --no-save --ignore-scripts --package-lock=false
+          echo "Verifying bundle contents..."
+          npm pack --dry-run --json | node -e '
+            const data = JSON.parse(require("fs").readFileSync(0, "utf8"));
+            const bundled = data[0].bundled || [];
+            if (!bundled.includes("@usejunior/docx-core")) {
+              console.error("FAIL: @usejunior/docx-core not in bundled list:", bundled);
+              process.exit(1);
+            }
+            console.log("OK: @usejunior/docx-core is bundled");
+          '
+        env:
+          DOCX_CORE_VERSION: ${{ inputs.docx_core_version }}
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish to GitHub Packages
+        working-directory: runtime-pkg
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
