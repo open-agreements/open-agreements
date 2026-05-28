@@ -267,3 +267,94 @@ jobs:
             fi
           } >> "$GITHUB_STEP_SUMMARY"
 
+  publish-template-snapshot:
+    name: Publish template snapshot tarball + dispatch dev-website
+    needs: [preflight, publish-suite, publish-github-release]
+    if: needs.preflight.result == 'success' && needs.publish-suite.result == 'success' && needs.publish-github-release.result == 'success'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      RELEASE_TAG: ${{ github.event_name == 'workflow_dispatch' && inputs.release_tag || github.ref_name }}
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event_name == 'workflow_dispatch' && inputs.release_tag || github.ref }}
+
+      - name: Build templates tarball
+        id: build_tarball
+        run: |
+          TAG_REF="${RELEASE_TAG:-$GITHUB_REF_NAME}"
+          VERSION="${TAG_REF#v}"
+          TARBALL="templates-${VERSION}.tar.gz"
+
+          # Tarball contents track exactly what dev-website's consumer reads:
+          # content/templates/<slug>/{metadata.yaml,template.docx}, data/templates-snapshot.json,
+          # and scripts/template-specs/ (for label resolution). content/external is intentionally
+          # excluded — dev-website does not consume the YC SAFE templates from this path.
+          tar -czf "$TARBALL" \
+            content/templates \
+            data/templates-snapshot.json \
+            scripts/template-specs
+
+          SIZE_BYTES="$(stat -c%s "$TARBALL")"
+          echo "tarball=${TARBALL}" >> "$GITHUB_OUTPUT"
+          echo "size_bytes=${SIZE_BYTES}" >> "$GITHUB_OUTPUT"
+          echo "version=${VERSION}" >> "$GITHUB_OUTPUT"
+
+          # Hard cap at 10 MB to surface accidental binary creep early.
+          if [ "$SIZE_BYTES" -gt 10485760 ]; then
+            echo "Tarball exceeds 10 MB safety cap (size=${SIZE_BYTES}). Aborting." >&2
+            exit 1
+          fi
+
+      - name: Upload tarball as release asset
+        run: |
+          TAG_REF="${RELEASE_TAG:-$GITHUB_REF_NAME}"
+          gh release upload "$TAG_REF" "${{ steps.build_tarball.outputs.tarball }}" --clobber
+
+      - name: Dispatch dev-website snapshot bump
+        env:
+          DISPATCH_TOKEN: ${{ secrets.DEV_WEBSITE_DISPATCH_TOKEN }}
+        run: |
+          if [ -z "$DISPATCH_TOKEN" ]; then
+            echo "::warning::DEV_WEBSITE_DISPATCH_TOKEN secret is not set. Skipping dev-website dispatch."
+            echo "Provision a fine-grained PAT scoped to UseJunior/dev-website with contents:read and dispatches:write to enable downstream rebuild."
+            exit 0
+          fi
+
+          TAG_REF="${RELEASE_TAG:-$GITHUB_REF_NAME}"
+          VERSION="${{ steps.build_tarball.outputs.version }}"
+          REPO="${{ github.repository }}"
+          TARBALL_URL="https://github.com/${REPO}/releases/download/${TAG_REF}/${{ steps.build_tarball.outputs.tarball }}"
+
+          gh api \
+            --method POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: token ${DISPATCH_TOKEN}" \
+            /repos/UseJunior/dev-website/dispatches \
+            -f event_type=open-agreements-release \
+            -f "client_payload[tag]=${TAG_REF}" \
+            -f "client_payload[version]=${VERSION}" \
+            -f "client_payload[tarball_url]=${TARBALL_URL}"
+
+          echo "Dispatched open-agreements-release to UseJunior/dev-website for ${TAG_REF}."
+
+      - name: Snapshot summary
+        if: always()
+        run: |
+          TAG_REF="${RELEASE_TAG:-$GITHUB_REF_NAME}"
+          TARBALL="${{ steps.build_tarball.outputs.tarball }}"
+          SIZE_BYTES="${{ steps.build_tarball.outputs.size_bytes }}"
+          {
+            echo "### Template snapshot: ${TAG_REF}"
+            echo "- Tarball: \`${TARBALL}\` (${SIZE_BYTES} bytes)"
+            if [ -n "${{ secrets.DEV_WEBSITE_DISPATCH_TOKEN }}" ]; then
+              echo "- dev-website dispatch: SENT (\`open-agreements-release\` event_type)"
+            else
+              echo "- dev-website dispatch: SKIPPED — \`DEV_WEBSITE_DISPATCH_TOKEN\` secret not set"
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+
