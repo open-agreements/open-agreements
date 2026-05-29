@@ -317,9 +317,9 @@ jobs:
 
       - name: Dispatch dev-website snapshot bump
         env:
-          DISPATCH_TOKEN: ${{ secrets.DEV_WEBSITE_DISPATCH_TOKEN }}
+          GH_TOKEN: ${{ secrets.DEV_WEBSITE_DISPATCH_TOKEN }}
         run: |
-          if [ -z "$DISPATCH_TOKEN" ]; then
+          if [ -z "$GH_TOKEN" ]; then
             echo "::warning::DEV_WEBSITE_DISPATCH_TOKEN secret is not set. Skipping dev-website dispatch."
             echo "Provision a fine-grained PAT scoped to UseJunior/dev-website with contents:read and dispatches:write to enable downstream rebuild."
             exit 0
@@ -333,7 +333,6 @@ jobs:
           gh api \
             --method POST \
             -H "Accept: application/vnd.github+json" \
-            -H "Authorization: token ${DISPATCH_TOKEN}" \
             /repos/UseJunior/dev-website/dispatches \
             -f event_type=open-agreements-release \
             -f "client_payload[tag]=${TAG_REF}" \
