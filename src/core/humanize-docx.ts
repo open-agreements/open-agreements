@@ -35,6 +35,24 @@ const END_IF_MARKER_RE = /\{END-IF\}/g;
 const FIELD_RE = /\{([a-z0-9_]+)\}/g;
 const PLACEHOLDER_RE = /\{([a-z0-9_]+)\}/g;
 const MULTI_SPACE_RE = /\s{2,}/g;
+// Field-code elements whose content carries program-readable instructions
+// (PAGE, NUMPAGES, etc.) or field markers — MULTI_SPACE_RE must not touch
+// these or the rendered field can corrupt (#185, #109).
+const FIELD_CODE_PRESERVE_RE = /<(w:instrText|w:fldChar)(\s+[^>]*)?(?:\/>|>[\s\S]*?<\/\1>)/g;
+
+function collapseMultiSpaceOutsideFieldCodes(xml: string): string {
+  FIELD_CODE_PRESERVE_RE.lastIndex = 0;
+  const out: string[] = [];
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+  while ((match = FIELD_CODE_PRESERVE_RE.exec(xml)) !== null) {
+    out.push(xml.slice(lastIndex, match.index).replace(MULTI_SPACE_RE, ' '));
+    out.push(match[0]);
+    lastIndex = match.index + match[0].length;
+  }
+  out.push(xml.slice(lastIndex).replace(MULTI_SPACE_RE, ' '));
+  return out.join('');
+}
 const EXACT_IF_MARKER_RE = /^\{IF\s+(!?[^}]+)\}$/;
 const EXACT_END_IF_MARKER_RE = /^\{END-IF\}$/;
 const HIGHLIGHT_PLACEHOLDER_RE = /(\[[^\]]+\])/g;
@@ -295,7 +313,7 @@ function isWordElement(node: unknown, localName: string): boolean {
 }
 
 function cleanupConditionalParagraphs(text: string): string {
-  if (!text.includes(W_NS) || !text.includes('<w:p')) return text;
+  if (!text.includes('xmlns:w=') || !text.includes('<w:p')) return text;
 
   const parser = new DOMParser();
   let root: Document;
@@ -408,7 +426,7 @@ function replaceFieldTokens(
 }
 
 function highlightPlaceholderRuns(text: string): string {
-  if (!text.includes(W_NS) || !text.includes('<w:r')) return text;
+  if (!text.includes('xmlns:w=') || !text.includes('<w:r')) return text;
 
   const parser = new DOMParser();
   let root: Document;
@@ -513,7 +531,7 @@ export function prettifyTemplateXml(
   output = output.replace(IF_MARKER_RE, '');
   output = output.replace(END_IF_MARKER_RE, '');
   output = replaceFieldTokens(output, fieldLabels, fieldDefaults);
-  output = output.replace(MULTI_SPACE_RE, ' ');
+  output = collapseMultiSpaceOutsideFieldCodes(output);
   if (options.highlight !== false) {
     output = highlightPlaceholderRuns(output);
   }
@@ -532,7 +550,7 @@ export function humanizeDocxBuffer(input: Buffer, ctx: HumanizeContext): Buffer 
       text = text.replace(IF_MARKER_RE, '');
       text = text.replace(END_IF_MARKER_RE, '');
       text = replaceFieldTokens(text, ctx.fieldLabels, ctx.fieldDefaults);
-      text = text.replace(MULTI_SPACE_RE, ' ');
+      text = collapseMultiSpaceOutsideFieldCodes(text);
       if (entry.entryName.startsWith('word/')) {
         text = highlightPlaceholderRuns(text);
       }

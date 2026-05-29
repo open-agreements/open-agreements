@@ -4,6 +4,7 @@ import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 import AdmZip from 'adm-zip';
 import {
+  humanizeDocx,
   humanizeDocxBuffer,
   loadHumanizeContext,
   prettifyTemplateXml,
@@ -198,5 +199,223 @@ describe('humanize-docx — loadHumanizeContext (yaml integration)', () => {
       const ctx = loadHumanizeContext(templateDir);
       expect(ctx.fieldLabels.party_name).toBe('Name of the contracting party');
     });
+  });
+});
+
+describe('humanize-docx — field-code preservation (#185 / #109)', () => {
+  it('preserves whitespace inside <w:instrText> field-code instructions', () => {
+    // PAGE field code instruction with deliberate multi-space; must NOT collapse
+    // because Word parses the instruction string verbatim.
+    const input =
+      `<w:p xmlns:w="${W_NS}">` +
+      `<w:r><w:instrText xml:space="preserve">  PAGE   \\* MERGEFORMAT  </w:instrText></w:r>` +
+      `<w:r><w:t>Body  text  with  doubles.</w:t></w:r>` +
+      `</w:p>`;
+    const out = prettifyTemplateXml(input, {}, {}, { highlight: false });
+    // Field-code instruction whitespace preserved verbatim.
+    expect(out).toContain('  PAGE   \\* MERGEFORMAT  ');
+    // Body-text multi-space collapsed (outside field code).
+    expect(out).toContain('Body text with doubles.');
+  });
+
+  it('preserves self-closing <w:fldChar/> markers untouched', () => {
+    const input =
+      `<w:p xmlns:w="${W_NS}">` +
+      `<w:r><w:fldChar w:fldCharType="begin"/></w:r>` +
+      `<w:r><w:fldChar w:fldCharType="end"/></w:r>` +
+      `</w:p>`;
+    const out = prettifyTemplateXml(input, {}, {}, { highlight: false });
+    expect(out).toContain('<w:fldChar w:fldCharType="begin"/>');
+    expect(out).toContain('<w:fldChar w:fldCharType="end"/>');
+  });
+});
+
+describe('humanize-docx — humanizeDocx (file-based API)', () => {
+  it('reads template.docx from disk and returns a humanized buffer', async () => {
+    const dir = mkdtempSync(join(tmpdir(), 'humanize-file-test-'));
+    try {
+      const templateDir = join(dir, 'content', 'templates', 'sample-template');
+      mkdirSync(templateDir, { recursive: true });
+      writeFileSync(
+        join(templateDir, 'metadata.yaml'),
+        [
+          'fields:',
+          '  - name: party_name',
+          '    description: Party name',
+        ].join('\n'),
+        'utf8',
+      );
+      const docxBuffer = makeMinimalDocx(
+        `<w:p><w:r><w:t>Hello {party_name}.</w:t></w:r></w:p>`,
+      );
+      writeFileSync(join(templateDir, 'template.docx'), docxBuffer);
+
+      const out = await humanizeDocx(templateDir);
+      const documentXml = readPart(out, 'word/document.xml');
+      expect(documentXml).toContain('[Party name]');
+      expect(documentXml).not.toContain('{party_name}');
+    } finally {
+      rmSync(dir, { recursive: true, force: true });
+    }
+  });
+});
+
+describe('humanize-docx — fallback label derivation', () => {
+  it('falls back to the raw field name when no label/description is present', () => {
+    // fallbackFieldLabel returns the field name as-is; no snake_case → Title
+    // Case transform is applied. (If a humanized label is desired, supply one
+    // via metadata.yaml description or public-field-metadata.yaml.)
+    const input = `<w:p xmlns:w="${W_NS}"><w:r><w:t>For {acme_holdings_inc}.</w:t></w:r></w:p>`;
+    const out = prettifyTemplateXml(input, {}, {}, { highlight: false });
+    expect(out).toContain('[acme_holdings_inc]');
+  });
+});
+
+describe('humanize-docx — loadHumanizeContext (template-spec rows)', () => {
+  function withTempDir<T>(fn: (dir: string) => T): T {
+    const dir = mkdtempSync(join(tmpdir(), 'humanize-spec-test-'));
+    try {
+      return fn(dir);
+    } finally {
+      rmSync(dir, { recursive: true, force: true });
+    }
+  }
+
+  it('derives field labels from a template-spec rows tree (parent-row label propagates to sub-rows with generic sublabels)', () => {
+    withTempDir((dir) => {
+      const templateDir = join(dir, 'content', 'templates', 'spec-template');
+      const specsDir = join(dir, 'scripts', 'template-specs');
+      mkdirSync(templateDir, { recursive: true });
+      mkdirSync(specsDir, { recursive: true });
+
+      writeFileSync(
+        join(templateDir, 'metadata.yaml'),
+        [
+          'fields:',
+          '  - name: noncompete_scope',
+          '  - name: noncompete_duration',
+          '  - name: noncompete_address',
+          '  - name: effective_date',
+        ].join('\n'),
+        'utf8',
+      );
+
+      const spec = {
+        sections: [
+          {
+            rows: [
+              { label: 'Noncompete', value: '{noncompete_scope}' },
+              // "duration" is a GENERIC_SUBLABEL — gets parent-prefixed.
+              { sub: true, label: 'Duration', value: '{noncompete_duration}' },
+              // "Address" is NOT generic — keeps its own label.
+              { sub: true, label: 'Address', value: '{noncompete_address}' },
+            ],
+          },
+          { label: 'Effective Date', value: '{effective_date}' },
+        ],
+      };
+      writeFileSync(join(specsDir, 'spec-template.json'), JSON.stringify(spec), 'utf8');
+
+      const ctx = loadHumanizeContext(templateDir, { templateSpecsDir: specsDir });
+      // Parent row label
+      expect(ctx.fieldLabels.noncompete_scope).toBe('Noncompete');
+      // Generic sublabel 'Duration' gets parent-prefixed.
+      expect(ctx.fieldLabels.noncompete_duration).toBe('Noncompete Duration');
+      // Non-generic sublabel keeps its own label, no parent prefix.
+      expect(ctx.fieldLabels.noncompete_address).toBe('Address');
+      // Top-level structured label.
+      expect(ctx.fieldLabels.effective_date).toBe('Effective Date');
+    });
+  });
+
+  it('returns null spec gracefully when the spec file is missing', () => {
+    withTempDir((dir) => {
+      const templateDir = join(dir, 'content', 'templates', 'no-spec');
+      mkdirSync(templateDir, { recursive: true });
+      writeFileSync(
+        join(templateDir, 'metadata.yaml'),
+        ['fields:', '  - name: party_name', '    description: Party'].join('\n'),
+        'utf8',
+      );
+      // templateSpecsDir is set but the corresponding JSON file does NOT exist
+      const ctx = loadHumanizeContext(templateDir, { templateSpecsDir: join(dir, 'nonexistent') });
+      // Should fall back to metadata description for the label.
+      expect(ctx.fieldLabels.party_name).toBe('Party');
+    });
+  });
+
+  it('returns empty fields when metadata.yaml is missing', () => {
+    withTempDir((dir) => {
+      const templateDir = join(dir, 'content', 'templates', 'empty');
+      mkdirSync(templateDir, { recursive: true });
+      // NO metadata.yaml file written.
+      const ctx = loadHumanizeContext(templateDir);
+      expect(ctx.fieldLabels).toEqual({});
+      expect(ctx.fieldDefaults).toEqual({});
+    });
+  });
+
+  it('truncates long labels to the first sentence and strips trailing period', () => {
+    withTempDir((dir) => {
+      const templateDir = join(dir, 'content', 'templates', 'long-label');
+      mkdirSync(templateDir, { recursive: true });
+      writeFileSync(
+        join(templateDir, 'metadata.yaml'),
+        [
+          'fields:',
+          '  - name: long_field',
+          '    description: First sentence is the meaningful label. Then a second sentence with more verbose detail that pushes the total length past the 80-character truncation threshold.',
+        ].join('\n'),
+        'utf8',
+      );
+      const publicMeta = join(dir, 'template-public-field-metadata.yaml');
+      writeFileSync(
+        publicMeta,
+        [
+          'templates:',
+          '  long-label:',
+          '    long_field:',
+          '      label: First sentence is the meaningful label. Then a second sentence with more verbose detail that pushes the total length past the 80-character truncation threshold.',
+        ].join('\n'),
+        'utf8',
+      );
+
+      const ctx = loadHumanizeContext(templateDir, { publicFieldMetadataPath: publicMeta });
+      expect(ctx.fieldLabels.long_field).toBe('First sentence is the meaningful label');
+    });
+  });
+});
+
+describe('humanize-docx — non-OOXML inputs (early return)', () => {
+  it('returns string unchanged when input lacks OOXML namespace declaration', () => {
+    const input = '<plain>just some text with {token} that looks templatey.</plain>';
+    const out = prettifyTemplateXml(input, { token: 'Token Label' }, {}, { highlight: false });
+    // Without an xmlns:w= declaration, the highlight pass short-circuits; token
+    // replacement still runs (it does not require XML parsing).
+    expect(out).toContain('[Token Label]');
+    expect(out).not.toContain('w:val="yellow"');
+  });
+
+  it('humanizeDocxBuffer leaves non-XML zip entries untouched', () => {
+    const zip = new AdmZip();
+    // Non-XML entry should pass through unmodified.
+    zip.addFile('media/image1.png', Buffer.from([0x89, 0x50, 0x4e, 0x47]));
+    zip.addFile(
+      'word/document.xml',
+      Buffer.from(
+        `<?xml version="1.0" encoding="UTF-8"?>` +
+          `<w:document xmlns:w="${W_NS}"><w:body><w:p><w:r><w:t>{x}</w:t></w:r></w:p></w:body></w:document>`,
+        'utf-8',
+      ),
+    );
+    const ctx: HumanizeContext = {
+      fieldLabels: { x: 'X' },
+      fieldDefaults: {},
+    };
+    const out = humanizeDocxBuffer(zip.toBuffer(), ctx);
+    const png = new AdmZip(out).getEntry('media/image1.png');
+    expect(png).not.toBeNull();
+    expect(png!.getData()).toEqual(Buffer.from([0x89, 0x50, 0x4e, 0x47]));
+    expect(readPart(out, 'word/document.xml')).toContain('[X]');
   });
 });
