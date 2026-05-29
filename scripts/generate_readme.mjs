@@ -42,6 +42,21 @@ function normalizeUrl(value, key) {
   return value.replace(/\/$/, "");
 }
 
+// UTM-tag links to usejunior.com so README-driven traffic shows up as
+// utm_source=github (instead of collapsing into the GA4 Direct bucket).
+// Only tags usejunior.com hosts; pass-through for GitHub, Bonterms, CC, etc.
+const README_UTM_PARAMS = "utm_source=github&utm_medium=readme&utm_campaign=open-agreements";
+function withUtm(url) {
+  if (typeof url !== "string" || !/^https?:\/\/usejunior\.com(\/|$|\?|#)/.test(url)) {
+    return url;
+  }
+  const hashIndex = url.indexOf("#");
+  const base = hashIndex === -1 ? url : url.slice(0, hashIndex);
+  const hash = hashIndex === -1 ? "" : url.slice(hashIndex);
+  const sep = base.includes("?") ? "&" : "?";
+  return `${base}${sep}${README_UTM_PARAMS}${hash}`;
+}
+
 const CONTENTS = [
   ["How It Works", "#how-it-works"],
   ["Available Templates", "#available-templates"],
@@ -154,7 +169,7 @@ function renderTemplates() {
       renderTable(
         ["Template", "Website", "Source", "License", "Repo"],
         templates.map((template) => {
-          const websiteUrl = `${TEMPLATE_CATALOG_URL}/${template.id}`;
+          const websiteUrl = withUtm(`${TEMPLATE_CATALOG_URL}/${template.id}`);
           return [
             makeTemplateLabel(template, duplicateCounts),
             `[Website](${websiteUrl})`,
@@ -213,7 +228,7 @@ function renderDocumentation() {
 }
 
 function renderLinks() {
-  return `**Links:** [Website](${WEBSITE_URL}) | [Template Catalog](${TEMPLATE_CATALOG_URL}) | [Docs](${DOCUMENTATION_INDEX_URL}) | [Trust](${TRUST_URL}) | [npm](https://www.npmjs.com/package/${rootPackage.name})`;
+  return `**Links:** [Website](${withUtm(WEBSITE_URL)}) | [Template Catalog](${withUtm(TEMPLATE_CATALOG_URL)}) | [Docs](${DOCUMENTATION_INDEX_URL}) | [Trust](${withUtm(TRUST_URL)}) | [npm](https://www.npmjs.com/package/${rootPackage.name})`;
 }
 
 function renderTemplate(template, replacements) {
