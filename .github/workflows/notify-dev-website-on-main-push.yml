@@ -1,0 +1,42 @@
+name: Notify dev-website of main push
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  # Reduce duplicate dispatches when rapid successive main pushes happen.
+  # Note: cancel-in-progress does NOT undo an HTTP call that has already
+  # fired — receiving-side concurrency + the fixed automation branch in
+  # dev-website are what guarantee idempotency end-to-end.
+  group: notify-dev-website
+  cancel-in-progress: true
+
+jobs:
+  dispatch:
+    name: Dispatch open-agreements-main-push
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fire repository_dispatch
+        env:
+          GH_TOKEN: ${{ secrets.DEV_WEBSITE_DISPATCH_TOKEN }}
+          # Env indirection — do NOT interpolate ${{ github.event.head_commit.message }}
+          # directly into the run block. Commit messages are attacker-controlled and an
+          # inline expression would let a crafted message break out of the shell string.
+          HEAD_MESSAGE: ${{ github.event.head_commit.message }}
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::warning::DEV_WEBSITE_DISPATCH_TOKEN not set; skipping dispatch."
+            exit 0
+          fi
+          gh api --method POST \
+            -H "Accept: application/vnd.github+json" \
+            /repos/UseJunior/dev-website/dispatches \
+            -f event_type=open-agreements-main-push \
+            -f "client_payload[sha]=${GITHUB_SHA}" \
+            -f "client_payload[short_sha]=${GITHUB_SHA:0:7}" \
+            -f "client_payload[message]=${HEAD_MESSAGE}"
+          echo "Dispatched open-agreements-main-push to UseJunior/dev-website for ${GITHUB_SHA:0:7}."

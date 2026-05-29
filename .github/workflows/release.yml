@@ -268,7 +268,7 @@ jobs:
           } >> "$GITHUB_STEP_SUMMARY"
 
   publish-template-snapshot:
-    name: Publish template snapshot tarball + dispatch dev-website
+    name: Publish template snapshot tarball
     needs: [preflight, publish-suite, publish-github-release]
     if: needs.preflight.result == 'success' && needs.publish-suite.result == 'success' && needs.publish-github-release.result == 'success'
     runs-on: ubuntu-latest
@@ -315,32 +315,6 @@ jobs:
           TAG_REF="${RELEASE_TAG:-$GITHUB_REF_NAME}"
           gh release upload "$TAG_REF" "${{ steps.build_tarball.outputs.tarball }}" --clobber
 
-      - name: Dispatch dev-website snapshot bump
-        env:
-          GH_TOKEN: ${{ secrets.DEV_WEBSITE_DISPATCH_TOKEN }}
-        run: |
-          if [ -z "$GH_TOKEN" ]; then
-            echo "::warning::DEV_WEBSITE_DISPATCH_TOKEN secret is not set. Skipping dev-website dispatch."
-            echo "Provision a fine-grained PAT scoped to UseJunior/dev-website with contents:read and dispatches:write to enable downstream rebuild."
-            exit 0
-          fi
-
-          TAG_REF="${RELEASE_TAG:-$GITHUB_REF_NAME}"
-          VERSION="${{ steps.build_tarball.outputs.version }}"
-          REPO="${{ github.repository }}"
-          TARBALL_URL="https://github.com/${REPO}/releases/download/${TAG_REF}/${{ steps.build_tarball.outputs.tarball }}"
-
-          gh api \
-            --method POST \
-            -H "Accept: application/vnd.github+json" \
-            /repos/UseJunior/dev-website/dispatches \
-            -f event_type=open-agreements-release \
-            -f "client_payload[tag]=${TAG_REF}" \
-            -f "client_payload[version]=${VERSION}" \
-            -f "client_payload[tarball_url]=${TARBALL_URL}"
-
-          echo "Dispatched open-agreements-release to UseJunior/dev-website for ${TAG_REF}."
-
       - name: Snapshot summary
         if: always()
         run: |
@@ -350,10 +324,5 @@ jobs:
           {
             echo "### Template snapshot: ${TAG_REF}"
             echo "- Tarball: \`${TARBALL}\` (${SIZE_BYTES} bytes)"
-            if [ -n "${{ secrets.DEV_WEBSITE_DISPATCH_TOKEN }}" ]; then
-              echo "- dev-website dispatch: SENT (\`open-agreements-release\` event_type)"
-            else
-              echo "- dev-website dispatch: SKIPPED — \`DEV_WEBSITE_DISPATCH_TOKEN\` secret not set"
-            fi
           } >> "$GITHUB_STEP_SUMMARY"
 
