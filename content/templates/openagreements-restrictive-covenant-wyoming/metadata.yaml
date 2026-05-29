@@ -150,9 +150,17 @@ fields:
     display_label: Non-Competition Included
     default: 'false'
     default_value_rationale: >-
-      Wyo. Stat. section 1-23-108 voids most non-compete covenants. The
-      drafter must affirmatively include this covenant only when a statutory
-      pathway applies.
+      Wyo. Stat. section 1-23-108 (SF 107, 2025; effective July 1, 2025)
+      voids covered non-compete covenants unless a statutory exception
+      applies: (1) purchase and sale of a business or business assets,
+      (2) protection of trade secrets as defined by W.S. 6-3-501(a)(xi),
+      (3) recovery of relocation, education, and training expenses within
+      the statute's tenure-based caps, or (4) executive and management
+      personnel and officers / employees who constitute professional staff
+      to executive and management personnel. Physician practice restrictions
+      are separately void under subsection (b), not a permitted pathway.
+      The drafter must include this covenant only after documenting the
+      applicable pathway in the agreement.
     section: Non-Competition
   - name: noncompete_duration
     type: string
