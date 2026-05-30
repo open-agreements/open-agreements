@@ -69,7 +69,9 @@ jobs:
                 "adm-zip": "^0.5.16",
                 "commander": "^13.1.0",
                 "docx-templates": "^4.13.0",
-                "minisearch": "^7.2.0"
+                "js-yaml": "^4.1.0",
+                "minisearch": "^7.2.0",
+                "zod": "^4.0.0"
               },
               bundleDependencies: ["@usejunior/docx-core"],
               publishConfig: { registry: "https://npm.pkg.github.com" },
