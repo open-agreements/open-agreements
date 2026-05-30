@@ -239,6 +239,7 @@ jobs:
         run: ls -la results/ || echo "no results downloaded"
 
       - name: Compose and post checklist comment
+        id: compose
         uses: actions/github-script@v7
         env:
           MODEL: ${{ env.GEMINI_MODEL }}
@@ -382,3 +383,41 @@ jobs:
             if (blockingMode && warns > 0 && !overrideActive) {
               core.setFailed(`LLM-Based Quality Gate found ${warns} WARN row(s). Add the \`llm-gate/override\` label to bypass (with justification in a PR comment).`);
             }
+
+      # When this workflow is re-fired via `workflow_dispatch` (e.g. after a
+      # push that bypassed the `synchronize`-blind PR trigger), the auto-
+      # generated check_run for this job IS attached to the PR's head SHA,
+      # but GitHub's PR `statusCheckRollup` (which branch protection
+      # consults) does NOT include workflow_dispatch-triggered check_runs.
+      # The required check appears green via the Checks API but the PR stays
+      # `mergeStateStatus: BLOCKED`. POST an explicit check_run mirror so
+      # the rollup picks it up.
+      #
+      # `always()` is critical: when the gate finds WARN rows and the
+      # github-script step calls core.setFailed(), the default `if: success()`
+      # would skip this mirror. The mirror's own conclusion is derived from
+      # the prior step's outcome, so a failed gate produces a failed mirror.
+      - name: Mirror conclusion to PR head SHA (workflow_dispatch)
+        if: always() && github.event_name == 'workflow_dispatch' && needs.parse-checklist.outputs.head_sha != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HEAD_SHA: ${{ needs.parse-checklist.outputs.head_sha }}
+          COMPOSE_OUTCOME: ${{ steps.compose.outcome }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          if [ "$COMPOSE_OUTCOME" = "success" ]; then
+            CONCLUSION="success"
+            TITLE="LLM gate passed (re-fired via workflow_dispatch)"
+          else
+            CONCLUSION="failure"
+            TITLE="LLM gate FAILED (re-fired via workflow_dispatch)"
+          fi
+          gh api -X POST "repos/$GITHUB_REPOSITORY/check-runs" \
+            -f "name=Aggregate and post review" \
+            -f "head_sha=$HEAD_SHA" \
+            -f "status=completed" \
+            -f "conclusion=$CONCLUSION" \
+            -f "details_url=$RUN_URL" \
+            -f "output[title]=$TITLE" \
+            -f "output[summary]=Mirrored from workflow_dispatch run. Full output: $RUN_URL"
