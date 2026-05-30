@@ -227,6 +227,11 @@ jobs:
     permissions:
       contents: read
       pull-requests: write
+      # `checks: write` lets the workflow_dispatch mirror step POST an
+      # explicit check_run to /repos/.../check-runs. Without it, the mirror
+      # POST returns 403 and PRs re-fired via workflow_dispatch stay
+      # `mergeStateStatus: BLOCKED` (the bug this whole step exists to fix).
+      checks: write
     steps:
       - name: Download all per-item results
         uses: actions/download-artifact@v5
