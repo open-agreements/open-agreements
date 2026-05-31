@@ -17,6 +17,14 @@ Fill standard legal agreement templates and get signable DOCX files. OpenAgreeme
 
 Works with Claude Code, Gemini CLI, Cursor, and local MCP or CLI workflows.
 
+## Who this is for
+
+OpenAgreements starts with standard forms teams already recognize: Common
+Paper, Bonterms, NVCA model documents, and YC SAFE templates. It is for
+small-business legal teams, founders, and the agents helping them who need
+repeatable agreement filling with source, license, and validation context kept
+close to the document.
+
 ## Contents
 
 {{CONTENTS}}

@@ -74,11 +74,11 @@ describe('validate_openspec_coverage script', () => {
     );
   });
 
-  it.openspec('OA-DST-015')('keeps canonical OpenSpec-to-Allure mappings green for open-agreements capability', async () => {
+  it.openspec('OA-DST-015')('keeps canonical OpenSpec-to-Allure mappings green for modular capabilities', async () => {
     const previousExitCode = process.exitCode;
     try {
       process.exitCode = 0;
-      await main(['--capability', 'open-agreements', '--capability', 'contracts-workspace']);
+      await main(['--capability', 'engine', '--capability', 'mcp-contracts-workspace', '--capability', 'open-agreements']);
       expect(process.exitCode ?? 0).toBe(0);
     } finally {
       process.exitCode = previousExitCode;
@@ -123,10 +123,10 @@ describe('validate_openspec_coverage script', () => {
   it.openspec('OA-DST-028')('collects scenario IDs from active change-package specs', async () => {
     const tempDir = mkdtempSync(join(tmpdir(), 'oa-speccov-active-change-'));
     const changesRoot = join(tempDir, 'openspec', 'changes');
-    const specPath = join(changesRoot, 'add-demo-capability', 'specs', 'open-agreements', 'spec.md');
+    const specPath = join(changesRoot, 'add-demo-capability', 'specs', 'authoring', 'spec.md');
 
     try {
-      mkdirSync(join(changesRoot, 'add-demo-capability', 'specs', 'open-agreements'), { recursive: true });
+      mkdirSync(join(changesRoot, 'add-demo-capability', 'specs', 'authoring'), { recursive: true });
       writeFileSync(
         specPath,
         [
@@ -147,7 +147,7 @@ describe('validate_openspec_coverage script', () => {
 
       expect([...scenarioIdToSources.keys()]).toContain('OA-950');
       expect(scenarioIdToSources.get('OA-950')).toEqual([
-        'openspec/changes/add-demo-capability/specs/open-agreements/spec.md',
+        'openspec/changes/add-demo-capability/specs/authoring/spec.md',
       ]);
     } finally {
       rmSync(tempDir, { recursive: true, force: true });

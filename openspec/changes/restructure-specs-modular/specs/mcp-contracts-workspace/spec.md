@@ -1,9 +1,4 @@
-# contracts-workspace Specification
-
-## Purpose
-Define the canonical behavior for the standalone contracts workspace package and
-CLI used for filesystem-first contract repository operations.
-## Requirements
+## ADDED Requirements
 ### Requirement: Workspace Initialization Command
 The system SHALL provide an `init` command in a dedicated contracts workspace
 CLI that writes workspace guidance/config files and planning output in the

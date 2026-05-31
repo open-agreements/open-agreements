@@ -26,6 +26,28 @@ clear, editable terms and source transparency.
 | `governing_law` | string | yes | Governing law state for the offer letter |
 | `offer_expiration_date` | date | yes | Date by which the offer must be accepted |
 
+## Rendering and Memo Behavior
+
+The employment template renderer honors signer-mode arrangements so canonical
+employment templates can express asymmetric entity/individual signature blocks
+without mirrored title rows or row-level suppression flags.
+
+When `cover-standard-signature-v1` renders this template with `mode: signers`
+and `arrangement=entity-plus-individual`, it renders a stacked entity signer
+block followed by a stacked individual signer block in DOCX. Markdown output
+preserves the same signer order, the individual signer block omits any `Title`
+row, and legacy `two-party` rendering remains unchanged.
+
+When `fill` is invoked with `--emit-memo` for an employment template matching
+jurisdiction rules, JSON output includes disclaimer, findings, and jurisdiction
+warnings. When no rules match, jurisdiction warnings are not fabricated.
+Markdown output includes the mandatory disclaimer.
+
+The employment template formatting integrity check renders DOCX with the
+expected cover-page layout, section headings, signature block, and no leaked
+template directives. Formatting diff boundary checks distinguish intentional
+formatting differences from unintentional contract text drift.
+
 ## Attribution
 
 Authored by OpenAgreements contributors. Drafting structure informed by publicly

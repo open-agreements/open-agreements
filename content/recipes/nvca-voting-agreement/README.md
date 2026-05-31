@@ -51,3 +51,17 @@ Create a JSON file with the field values:
 2. **Patch**: Replaces 33 bracketed placeholders with template tags, handling Word's split-run XML
 3. **Fill**: Renders template tags with your values using docx-templates
 4. **Verify**: Confirms all values appear, no leftover placeholders or unrendered tags remain
+
+## Option Vesting Policy Computation
+
+The NVCA voting agreement recipe includes option-vesting policy computation
+coverage for deterministic derived values. When option-vesting inputs select a
+policy profile, computed outputs reflect the selected vesting treatment and the
+exported trace records the rule path used to derive those outputs.
+
+## Assumption Validation
+
+Template assumption validation confirms that required NVCA recipe assumptions
+are explicit and machine-checkable. When bundled NVCA recipe assumptions are
+validated, missing or inconsistent assumptions fail validation with actionable
+messages rather than silently producing a filled document.
