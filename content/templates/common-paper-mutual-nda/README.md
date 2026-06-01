@@ -57,6 +57,22 @@ term and confidentiality-term choices, while marking selected choices with
 - `until terminated` and `In perpetuity` choices mark those selected options
   with `[ x ]` and remove non-selected fixed-term alternatives.
 
+## Behavioral Scenarios
+
+### [OA-TMP-007] Fixed term selection removes non-selected options
+- **GIVEN** the user sets `mnda_term` to a fixed duration
+- **AND** sets `confidentiality_term` to fixed-term language
+- **WHEN** the template is filled
+- **THEN** fixed-term options are marked with `[ x ]`
+- **AND** conflicting alternatives (for example "until terminated" or "in perpetuity") are removed
+
+### [OA-TMP-008] Perpetual selection marks selected options
+- **GIVEN** the user sets `mnda_term` to `until terminated`
+- **AND** sets `confidentiality_term` to `In perpetuity`
+- **WHEN** the template is filled
+- **THEN** the selected until-terminated and perpetuity options are marked with `[ x ]`
+- **AND** non-selected fixed-term alternatives are removed
+
 ## Attribution
 
 Based on the Common Paper Mutual NDA, available at https://commonpaper.com.

@@ -256,7 +256,10 @@ function validateDerivedBooleanCollisions(fields: FieldDefinition[], ctx: z.Refi
  *
  * Template directories must provide `metadata.yaml` with a non-empty display
  * name, source URL, version, license, derivative flag, attribution text, and
- * field definitions. `priority_fields` reference required fill fields.
+ * field definitions. `category` is optional discovery grouping metadata.
+ * `priority_fields` reference required fill fields. `credits` records
+ * contributor provenance and defaults to an empty array; `derived_from` is
+ * expository provenance text and does not affect licensing.
  */
 const TemplateMetadataBaseSchema = z.object({
   name: z.string().trim().min(1, 'name must be a non-empty string (used as display_name on list_templates)'),
@@ -285,7 +288,8 @@ export type TemplateMetadata = z.infer<typeof TemplateMetadataSchema>;
  * Metadata for vendored external templates.
  *
  * `source_sha256` records the checksum of the unmodified upstream document so
- * validation can verify provenance for no-derivatives templates.
+ * validation can verify provenance for no-derivatives templates before local
+ * transient fills or CI license checks rely on that source.
  */
 export const ExternalMetadataSchema = TemplateMetadataBaseSchema.extend({
   source_sha256: z.string(),
@@ -359,7 +363,10 @@ const MarketDataCitationSchema = z.object({
  * Recipes point at non-redistributable upstream source DOCX files and ship only
  * transformation instructions. Required fields are `name`, `source_url`,
  * `source_version`, and `license_note`; `fields` and `priority_fields` reuse
- * the same field-definition semantics as template metadata.
+ * the same field-definition semantics as template metadata and default to
+ * empty arrays. `optional` defaults to `false`. `source_sha256` verifies
+ * provenance for upstream sources when present. `market_data_citations`
+ * records optional external citation metadata used by recipe guidance.
  */
 export const RecipeMetadataSchema = z.object({
   name: z.string().trim().min(1, 'name must be a non-empty string (used as display_name on list_templates)'),

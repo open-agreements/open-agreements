@@ -85,6 +85,20 @@ and no leftover source placeholders remain.
 - **WHEN** a `[bracketed placeholder]` from the replacement map remains
 - **THEN** the verifier reports it as a failure
 
+### Requirement: Recipe Verifier Edge Cases
+The verifier MUST normalize text (non-breaking spaces, smart quotes, whitespace)
+and skip empty/whitespace-only values during output verification.
+
+#### Scenario: [OA-RCP-040] Verifier text normalization
+- **WHEN** output text contains non-breaking spaces, smart quotes, or excess whitespace
+- **THEN** normalization converts them for matching purposes
+- **AND** newlines are preserved and text is trimmed
+
+#### Scenario: [OA-RCP-041] Verifier skips empty and whitespace-only values
+- **WHEN** fill values include empty strings or whitespace-only strings
+- **THEN** those values are skipped during verification (not flagged as missing)
+- **AND** values present only in header text are found via auxiliary part scanning
+
 ### Requirement: Recipe Patcher Operations
 The cross-run patcher MUST handle single-run, multi-run, and nested replacements,
 preserve run formatting, process longest matches first, handle multiple occurrences,

@@ -139,13 +139,36 @@ are not mapped in metadata-backed replacements.
 
 ### Requirement: Metadata Field Schema Validation
 Field definitions MUST enforce type-specific constraints: enum fields require
-non-empty options, default values must match declared type.
+non-empty options, default values must match declared type. Template metadata
+MUST validate required top-level fields, license enum values, and nested array
+item schemas.
 
 
 **See**: `FieldDefinitionSchema` in `src/core/metadata.ts`.
 #### Scenario: [OA-TMP-020] Field definition edge cases
 - **WHEN** field definitions include enum with options, enum with empty options, boolean with invalid default, or number with numeric default
 - **THEN** valid configurations pass and invalid ones are rejected with descriptive errors
+
+#### Scenario: [OA-TMP-009] Valid metadata passes validation
+- **GIVEN** a template directory with a `metadata.yaml` containing all required fields with valid values
+- **WHEN** the system validates the metadata
+- **THEN** validation passes with no errors
+
+#### Scenario: [OA-TMP-010] Missing metadata field fails validation
+- **GIVEN** a template directory with a `metadata.yaml` missing the `license` field
+- **WHEN** the system validates the metadata
+- **THEN** validation fails with an error identifying the missing field
+
+#### Scenario: [OA-TMP-011] Invalid license enum fails validation
+- **GIVEN** a template directory with `metadata.yaml` containing `license: MIT`
+- **WHEN** the system validates the metadata
+- **THEN** validation fails with an error indicating the license value is not in the allowed enum (CC-BY-4.0, CC0-1.0)
+
+#### Scenario: [OA-TMP-028] Array field item schemas pass validation
+- **GIVEN** a template metadata file with an array field that declares nested `items` field definitions
+- **WHEN** the metadata is validated
+- **THEN** validation accepts the array field schema
+- **AND** nested item field definitions use the same field-definition rules as top-level fields
 
 ### Requirement: Template Metadata Required Fields
 Template metadata MUST reject `priority_fields` entries that reference undeclared
@@ -165,6 +188,20 @@ Recipe metadata MUST default `optional` to `false` when not explicitly set.
 #### Scenario: [OA-RCP-042] Recipe metadata optional field default
 - **WHEN** recipe metadata omits the `optional` field
 - **THEN** it defaults to `false`
+
+### Requirement: Recipe Metadata Schema Validation
+Recipe metadata MUST be defined in `metadata.yaml` and validate against the
+recipe metadata Zod schema, including required source metadata and field
+definitions.
+
+**See**: `RecipeMetadataSchema` in `src/core/metadata.ts`.
+#### Scenario: [OA-RCP-014] Valid recipe metadata
+- **WHEN** a recipe has `metadata.yaml` with all required fields
+- **THEN** schema validation passes
+
+#### Scenario: [OA-RCP-015] Missing source_url
+- **WHEN** a recipe metadata omits `source_url`
+- **THEN** schema validation fails with a descriptive error
 
 ### Requirement: Clean Configuration Schema
 The clean configuration schema MUST accept valid configs and apply sensible
@@ -186,52 +223,6 @@ The guidance output schema MUST validate extracted guidance structure including
 - **WHEN** guidance output is validated
 - **THEN** valid output with proper extractedFrom metadata passes
 - **AND** missing extractedFrom or invalid source types are rejected
-
-### Requirement: Checklist Schema Structural Rules
-The checklist schema MUST enforce parent-stage consistency, related document
-reference validity, status enum values, signature artifact requirements, and
-default arrays for related documents.
-
-#### Scenario: [OA-CKL-030] Checklist structural validation rules
-- **WHEN** checklist entries reference parent entries in different stages, unknown document IDs in action items or issues, or invalid status values
-- **THEN** validation rejects with structured errors
-- **AND** valid stage, entry status, action item status, and signatory status values are accepted
-- **AND** signature artifacts require uri or path
-- **AND** related_document_ids defaults to empty array on action items and issues
-
-#### Scenario: [OA-CKL-031] Checklist citation evidence validation
-- **WHEN** checklist entries include citation text-only evidence payloads
-- **THEN** validation accepts them
-
-### Requirement: Patch Schema Validation Rules
-Patch schemas MUST reject empty operation arrays, invalid JSON pointer paths,
-and enforce operation/value compatibility.
-
-#### Scenario: [OA-CKL-032] Patch schema structural validation
-- **WHEN** a patch envelope has empty operations, invalid JSON pointer paths, or incompatible operation/value pairs
-- **THEN** validation rejects with structured errors
-- **AND** valid patch envelopes with default APPLY mode are accepted
-
-### Requirement: Patch Validator Artifact Expiry
-Validation artifacts MUST expire after a configured TTL.
-
-#### Scenario: [OA-CKL-033] Validation artifact TTL expiry
-- **WHEN** a validation artifact exceeds its TTL
-- **THEN** it is no longer valid for apply requests
-
-### Requirement: Recipe Verifier Edge Cases
-The verifier MUST normalize text (non-breaking spaces, smart quotes, whitespace)
-and skip empty/whitespace-only values during output verification.
-
-#### Scenario: [OA-RCP-040] Verifier text normalization
-- **WHEN** output text contains non-breaking spaces, smart quotes, or excess whitespace
-- **THEN** normalization converts them for matching purposes
-- **AND** newlines are preserved and text is trimmed
-
-#### Scenario: [OA-RCP-041] Verifier skips empty and whitespace-only values
-- **WHEN** fill values include empty strings or whitespace-only strings
-- **THEN** those values are skipped during verification (not flagged as missing)
-- **AND** values present only in header text are found via auxiliary part scanning
 
 ### Requirement: Template Credits and Provenance
 

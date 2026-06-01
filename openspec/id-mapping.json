@@ -1774,6 +1774,132 @@
       "title": "list --json projects credits and derived_from on templates",
       "requirement": "Template Credits and Provenance",
       "specFile": "openspec/specs/validation/spec.md"
+    },
+    "OA-RCP-014": {
+      "newId": "OA-RCP-014",
+      "type": "moved",
+      "destination": "openspec/specs/validation/spec.md#oa-rcp-014-valid-recipe-metadata",
+      "reason": "Shape-only metadata scenario restored to validation capability during modular spec restructure"
+    },
+    "OA-RCP-015": {
+      "newId": "OA-RCP-015",
+      "type": "moved",
+      "destination": "openspec/specs/validation/spec.md#oa-rcp-015-missing-source-url",
+      "reason": "Shape-only metadata scenario restored to validation capability during modular spec restructure"
+    },
+    "OA-TMP-009": {
+      "newId": "OA-TMP-009",
+      "type": "moved",
+      "destination": "openspec/specs/validation/spec.md#oa-tmp-009-valid-metadata-passes-validation",
+      "reason": "Shape-only metadata scenario restored to validation capability during modular spec restructure"
+    },
+    "OA-TMP-010": {
+      "newId": "OA-TMP-010",
+      "type": "moved",
+      "destination": "openspec/specs/validation/spec.md#oa-tmp-010-missing-metadata-field-fails-validation",
+      "reason": "Shape-only metadata scenario restored to validation capability during modular spec restructure"
+    },
+    "OA-TMP-011": {
+      "newId": "OA-TMP-011",
+      "type": "moved",
+      "destination": "openspec/specs/validation/spec.md#oa-tmp-011-invalid-license-enum-fails-validation",
+      "reason": "Shape-only metadata scenario restored to validation capability during modular spec restructure"
+    },
+    "OA-TMP-028": {
+      "newId": "OA-TMP-028",
+      "type": "moved",
+      "destination": "openspec/specs/validation/spec.md#oa-tmp-028-array-field-item-schemas-pass-validation",
+      "reason": "Shape-only metadata scenario restored to validation capability during modular spec restructure"
+    },
+    "OA-TMP-007": {
+      "newId": "OA-TMP-007",
+      "type": "extracted",
+      "destination": "content/templates/common-paper-mutual-nda/README.md#oa-tmp-007-fixed-term-selection-removes-non-selected-options",
+      "reason": "Template-family content extracted from monolith spec to per-template README"
+    },
+    "OA-TMP-008": {
+      "newId": "OA-TMP-008",
+      "type": "extracted",
+      "destination": "content/templates/common-paper-mutual-nda/README.md#oa-tmp-008-perpetual-selection-marks-selected-options",
+      "reason": "Template-family content extracted from monolith spec to per-template README"
+    },
+    "OA-FIL-002": {
+      "newId": "OA-FIL-002",
+      "type": "extracted",
+      "destination": "content/recipes/nvca-stock-purchase-agreement/README.md#oa-fil-002-dispute-resolution-interaction-produces-required-computed-outputs",
+      "reason": "Template-family content extracted from monolith spec to per-template README"
+    },
+    "OA-FIL-016": {
+      "newId": "OA-FIL-016",
+      "type": "extracted",
+      "destination": "content/templates/openagreements-employment-offer-letter/README.md#oa-fil-016-employment-memo-content-generation",
+      "reason": "Template-family content extracted from monolith spec to per-template README"
+    },
+    "OA-FIL-017": {
+      "newId": "OA-FIL-017",
+      "type": "extracted",
+      "destination": "content/templates/openagreements-employment-offer-letter/README.md#oa-fil-017-employment-memo-language-guard",
+      "reason": "Template-family content extracted from monolith spec to per-template README"
+    },
+    "OA-FIL-018": {
+      "newId": "OA-FIL-018",
+      "type": "extracted",
+      "destination": "content/recipes/nvca-voting-agreement/README.md#oa-fil-018-nvca-clause-policy-resolution",
+      "reason": "Template-family content extracted from monolith spec to per-template README"
+    },
+    "OA-FIL-019": {
+      "newId": "OA-FIL-019",
+      "type": "extracted",
+      "destination": "content/recipes/nvca-voting-agreement/README.md#oa-fil-019-unresolved-legal-alternatives-preserved",
+      "reason": "Template-family content extracted from monolith spec to per-template README"
+    },
+    "OA-TMP-018": {
+      "newId": "OA-TMP-018",
+      "type": "extracted",
+      "destination": "content/recipes/nvca-voting-agreement/README.md#oa-tmp-018-nvca-clean-and-normalize-assumptions",
+      "reason": "Template-family content extracted from monolith spec to per-template README"
+    },
+    "OA-FIL-020": {
+      "newId": "OA-FIL-020",
+      "type": "extracted",
+      "destination": "content/templates/openagreements-employment-offer-letter/README.md#oa-fil-020-employment-template-paragraph-styles-and-spacing",
+      "reason": "Template-family content extracted from monolith spec to per-template README"
+    },
+    "OA-FIL-021": {
+      "newId": "OA-FIL-021",
+      "type": "extracted",
+      "destination": "content/templates/openagreements-employment-offer-letter/README.md#oa-fil-021-formatting-boundary-preservation",
+      "reason": "Template-family content extracted from monolith spec to per-template README"
+    },
+    "OA-FIL-022": {
+      "newId": "OA-FIL-022",
+      "type": "extracted",
+      "destination": "content/recipes/nvca-stock-purchase-agreement/README.md#oa-fil-022-nvca-rendered-preview-evidence",
+      "reason": "Template-family content extracted from monolith spec to per-template README"
+    },
+    "OA-FIL-029": {
+      "newId": "OA-FIL-029",
+      "type": "extracted",
+      "destination": "content/templates/openagreements-employment-offer-letter/README.md#oa-fil-029-entity-plus-individual-signers-render-as-stacked-asymmetric-blocks",
+      "reason": "Template-family content extracted from monolith spec to per-template README"
+    },
+    "OA-TMP-056": {
+      "newId": "OA-TMP-056",
+      "type": "extracted",
+      "destination": "content/templates/openagreements-board-consent-safe/README.md#oa-tmp-056-safe-consents-separate-whereas-and-resolved-content",
+      "reason": "Template-family content extracted from monolith spec to per-template README"
+    },
+    "OA-TMP-059": {
+      "newId": "OA-TMP-059",
+      "type": "extracted",
+      "destination": "content/templates/openagreements-board-consent-safe/README.md#oa-tmp-059-safe-board-consent-canonical-source-preserves-source-fidelity",
+      "reason": "Template-family content extracted from monolith spec to per-template README"
+    },
+    "OA-TMP-060": {
+      "newId": "OA-TMP-060",
+      "type": "extracted",
+      "destination": "content/templates/openagreements-stockholder-consent-safe/README.md#oa-tmp-060-safe-stockholder-consent-canonical-source-preserves-source-fidelity",
+      "reason": "Template-family content extracted from monolith spec to per-template README"
     }
   }
 }

@@ -124,12 +124,15 @@ respecting the one-IF-per-row constraint in docx-templates.
 - **AND** individual-mode fill also produces clean output
 
 ### Requirement: External Template Support
-The system SHALL support external templates -- documents whose licenses (e.g. CC BY-ND 4.0) prohibit redistribution of modified versions. External templates are vendored unchanged under `external/` with a `metadata.yaml` containing `source_sha256` for integrity verification. The `fill` command fills them the same way as internal templates. The filled output is a transient derivative that exists only on the user's machine.
+The system SHALL support external templates. External templates are vendored
+unchanged under `external/` with `metadata.yaml`. The `fill` command fills them
+the same way as internal templates; license-specific redistribution,
+integrity, and notice rules are owned by the ip-license capability.
 
 #### Scenario: [OA-TMP-012] External template fill
 - **GIVEN** an external template `yc-safe-valuation-cap` with `license: CC-BY-ND-4.0` and `allow_derivatives: false`
 - **WHEN** the user invokes `fill yc-safe-valuation-cap` with valid field values
-- **THEN** the system fills the template and produces a DOCX, printing a license notice that the output must not be redistributed in modified form
+- **THEN** the system fills the template and produces a DOCX using the same fill mechanics as internal templates
 
 #### Scenario: [OA-TMP-013] External metadata requires source_sha256
 - **GIVEN** an external template directory with `metadata.yaml` missing `source_sha256`

@@ -191,3 +191,34 @@ The working group list renderer MUST output one line per working group member.
 - **WHEN** a working group list payload contains multiple members
 - **THEN** rendering outputs one line per member
 
+### Requirement: Checklist Schema Structural Rules
+The checklist schema MUST enforce parent-stage consistency, related document
+reference validity, status enum values, signature artifact requirements, and
+default arrays for related documents.
+
+#### Scenario: [OA-CKL-030] Checklist structural validation rules
+- **WHEN** checklist entries reference parent entries in different stages, unknown document IDs in action items or issues, or invalid status values
+- **THEN** validation rejects with structured errors
+- **AND** valid stage, entry status, action item status, and signatory status values are accepted
+- **AND** signature artifacts require uri or path
+- **AND** related_document_ids defaults to empty array on action items and issues
+
+#### Scenario: [OA-CKL-031] Checklist citation evidence validation
+- **WHEN** checklist entries include citation text-only evidence payloads
+- **THEN** validation accepts them
+
+### Requirement: Patch Schema Validation Rules
+Patch schemas MUST reject empty operation arrays, invalid JSON pointer paths,
+and enforce operation/value compatibility.
+
+#### Scenario: [OA-CKL-032] Patch schema structural validation
+- **WHEN** a patch envelope has empty operations, invalid JSON pointer paths, or incompatible operation/value pairs
+- **THEN** validation rejects with structured errors
+- **AND** valid patch envelopes with default APPLY mode are accepted
+
+### Requirement: Patch Validator Artifact Expiry
+Validation artifacts MUST expire after a configured TTL.
+
+#### Scenario: [OA-CKL-033] Validation artifact TTL expiry
+- **WHEN** a validation artifact exceeds its TTL
+- **THEN** it is no longer valid for apply requests

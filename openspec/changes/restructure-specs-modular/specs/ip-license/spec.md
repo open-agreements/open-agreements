@@ -14,14 +14,21 @@ checks the most recent commit and misses earlier commits in multi-commit PRs.
 - **THEN** the CI check diffs against `HEAD~1` (single-commit context)
 
 ### Requirement: License Compliance Validation
-The system SHALL refuse to generate derivatives of templates where `allow_derivatives` is false and SHALL fail CI if a PR modifies content of a CC BY-ND licensed template.
+The system SHALL permit local fills of CC BY-ND templates as transient local
+outputs while prohibiting redistribution or repository modification of
+no-derivatives template content. External template metadata SHALL include
+`source_sha256` so validation can verify the vendored source document has not
+changed from upstream.
 
-#### Scenario: [OA-DST-003] Derivative blocked for non-derivative license
-- **GIVEN** a template with `allow_derivatives: false` in its metadata
-- **WHEN** the user invokes `fill` on that template
-- **THEN** the system refuses to render the template and returns an error explaining the license restriction
+#### Scenario: [OA-DST-003] CI blocks repository-time derivatives for non-derivative license
+- **GIVEN** a repository change modifies generated or source-controlled content for a template with `allow_derivatives: false`
+- **WHEN** the CI license validation step runs
+- **THEN** the CI check fails with an error explaining that repository-time derivatives of no-derivatives templates are prohibited
+- **AND** local fill outputs that exist only on the user's machine remain permitted
+- **AND** local fills print a license notice that the output must not be redistributed in modified form
 
 #### Scenario: [OA-DST-004] CI blocks modification of CC BY-ND template
 - **GIVEN** a CI workflow running on a PR that modifies a template DOCX file where `allow_derivatives` is false
 - **WHEN** the CI validation step runs
 - **THEN** the CI check fails with an error indicating that modifying non-derivative templates is prohibited
+- **AND** source-controlled external templates must match the declared `source_sha256`

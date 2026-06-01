@@ -21,7 +21,19 @@ dependency chain in the exported trace.
 
 ## Preview Rendering
 
-Preview rendering for the SPA recipe runs the recipe pipeline with a fixture
-payload and stores a stable rendered preview artifact. The preview must reflect
-computed-field outputs and must not leave unrendered template tags or bracket
-artifacts in the generated document.
+The system supports rendering NVCA SPA template output as PNG evidence pages for
+human review. When NVCA template prerequisites are available, rendered pages are
+attached as PNG evidence for human review.
+
+## Behavioral Scenarios
+
+### [OA-FIL-002] Dispute resolution interaction produces required computed outputs
+- **WHEN** NVCA SPA computed inputs select courts vs arbitration and include a forum state
+- **THEN** computed outputs indicate the selected dispute-resolution track
+- **AND** computed outputs include forum vs governing-law alignment status
+- **AND** when courts are selected and judicial district is omitted, computed outputs derive judicial district defaults
+- **AND** the exported trace shows the dependency chain
+
+### [OA-FIL-022] NVCA rendered preview evidence
+- **WHEN** NVCA template prerequisites are available
+- **THEN** rendered pages are attached as PNG evidence for human review
