@@ -57,6 +57,12 @@ fields:
       - Professional Staff
       - Physician
       - Other
+    default: Other
+    default_value_rationale: >-
+      Other is the conservative default when worker category cannot be
+      determined from context. The calling LLM may set this explicitly
+      based on title, scope, and duties; absent that signal, Other avoids
+      asserting a statutory pathway that may not apply.
     section: AI Analysis
   - name: restriction_pathways
     type: string
@@ -66,6 +72,23 @@ fields:
       Not shown in the output document. Options: Executive or Management
       Personnel, Trade Secret Protection, None.
     default: None
+    section: AI Analysis
+  - name: restrictive_covenant_entered_after_employment_started
+    type: boolean
+    description: >-
+      Whether the restrictive covenant is signed AFTER the employee already
+      started working (post-hire) vs at or before the first day of employment
+      (at-hire). Wyoming case law (Brown v. Best Home Health & Hospice,
+      2021 WY 83) requires separate consideration beyond continued employment
+      for post-hire restrictive covenants. AI-only field that drives memo
+      warnings and conditional drafting of the separate-consideration recital.
+      Not shown in the output document.
+    default: 'true'
+    default_value_rationale: >-
+      Defaulting to post-hire (true) is the conservative posture: it triggers
+      the separate-consideration recital required by Brown. If the covenant
+      is genuinely at-hire, the calling LLM should set this to false to
+      suppress the recital.
     section: AI Analysis
 
   # --- Confidentiality (on cover page, always visible) ---
