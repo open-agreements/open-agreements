@@ -318,11 +318,15 @@ const CLAUSE_SIGNALS: Record<string, ClauseSignal[]> = {
       field: 'worker_category',
       missingSeverity: 'high',
       missingSummary:
-        'Worker category is blank. Wyoming Stat. section 1-23-108 enforceability depends on whether the employee is executive, management, professional staff, physician, or other.',
+        'Worker category is unclassified. Wyoming Stat. section 1-23-108 enforceability depends on whether the employee is executive, management, professional staff, physician, or other; the "Other" default does not satisfy any subsection (a)(iv) pathway.',
       presentSummary:
         'Worker category is specified.',
       followUpQuestionWhenMissing:
         'Can licensed counsel confirm the employee role classification under Wyoming Stat. section 1-23-108?',
+      isPresent: (value) => {
+        const normalized = normalizeForCompare(value);
+        return normalized.length > 0 && normalized !== 'other';
+      },
     },
     {
       id: 'competitive-business-definition',
