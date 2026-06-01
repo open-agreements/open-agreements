@@ -3,13 +3,28 @@ import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import yaml from 'js-yaml';
 
+/**
+ * License values accepted by template metadata.
+ *
+ * CC-BY-4.0 and CC0-1.0 templates may be redistributed as OpenAgreements
+ * content. CC-BY-ND-4.0 templates are vendored only when unmodified and must
+ * declare `allow_derivatives: false`.
+ */
 export const LicenseEnum = z.enum(['CC-BY-4.0', 'CC0-1.0', 'CC-BY-ND-4.0']);
 export type License = z.infer<typeof LicenseEnum>;
 
+/** Field kinds supported by template, external-template, and recipe metadata. */
 const FieldTypeEnum = z.enum(['string', 'date', 'number', 'boolean', 'enum', 'array', 'multiselect']);
 export type FieldType = z.infer<typeof FieldTypeEnum>;
 const MULTISELECT_OPTION_RE = /^[A-Za-z_][A-Za-z0-9_]*$/;
 
+/**
+ * Metadata definition for a fillable field.
+ *
+ * `name`, `type`, and `description` are required. `enum` and `multiselect`
+ * fields must declare non-empty `options`; `array` fields may declare nested
+ * `items`; `display_label` is a presentation hint and never replaces `name`.
+ */
 export interface FieldDefinition {
   name: string;
   type: FieldType;
@@ -158,6 +173,7 @@ export const FieldDefinitionSchema: z.ZodType<FieldDefinition> = z.lazy(() =>
   })
 );
 
+/** Closed set of provenance roles accepted in template `credits` entries. */
 const TemplateCreditRoleEnum = z.enum([
   'drafter',
   'drafting_editor',
@@ -165,6 +181,7 @@ const TemplateCreditRoleEnum = z.enum([
   'maintainer',
 ]);
 
+/** Optional template provenance entry surfaced by CLI discovery output. */
 const TemplateCreditSchema = z.object({
   name: z.string(),
   role: TemplateCreditRoleEnum,
@@ -234,6 +251,16 @@ function validateDerivedBooleanCollisions(fields: FieldDefinition[], ctx: z.Refi
   });
 }
 
+/**
+ * Base metadata required for first-party and external templates.
+ *
+ * Template directories must provide `metadata.yaml` with a non-empty display
+ * name, source URL, version, license, derivative flag, attribution text, and
+ * field definitions. `category` is optional discovery grouping metadata.
+ * `priority_fields` reference required fill fields. `credits` records
+ * contributor provenance and defaults to an empty array; `derived_from` is
+ * expository provenance text and does not affect licensing.
+ */
 const TemplateMetadataBaseSchema = z.object({
   name: z.string().trim().min(1, 'name must be a non-empty string (used as display_name on list_templates)'),
   description: z.string().optional(),
@@ -257,6 +284,13 @@ export type TemplateMetadata = z.infer<typeof TemplateMetadataSchema>;
 
 // --- External template schemas ---
 
+/**
+ * Metadata for vendored external templates.
+ *
+ * `source_sha256` records the checksum of the unmodified upstream document so
+ * validation can verify provenance for no-derivatives templates before local
+ * transient fills or CI license checks rely on that source.
+ */
 export const ExternalMetadataSchema = TemplateMetadataBaseSchema.extend({
   source_sha256: z.string(),
 }).superRefine((meta, ctx) => {
@@ -267,6 +301,7 @@ export type ExternalMetadata = z.infer<typeof ExternalMetadataSchema>;
 
 // --- Recipe schemas ---
 
+/** Declarative cleaner configuration for recipe DOCX preprocessing. */
 export const CleanConfigSchema = z.object({
   removeFootnotes: z.boolean().default(false),
   removeBeforePattern: z.string().optional(),
@@ -306,6 +341,7 @@ export const GuidanceEntrySchema = z.object({
 });
 export type GuidanceEntry = z.infer<typeof GuidanceEntrySchema>;
 
+/** Machine-readable guidance artifact produced from recipe cleaning inputs. */
 export const GuidanceOutputSchema = z.object({
   extractedFrom: z.object({
     sourceHash: z.string(),
@@ -321,6 +357,17 @@ const MarketDataCitationSchema = z.object({
   url: z.string().optional(),
 });
 
+/**
+ * Metadata required for recipe-based templates.
+ *
+ * Recipes point at non-redistributable upstream source DOCX files and ship only
+ * transformation instructions. Required fields are `name`, `source_url`,
+ * `source_version`, and `license_note`; `fields` and `priority_fields` reuse
+ * the same field-definition semantics as template metadata and default to
+ * empty arrays. `optional` defaults to `false`. `source_sha256` verifies
+ * provenance for upstream sources when present. `market_data_citations`
+ * records optional external citation metadata used by recipe guidance.
+ */
 export const RecipeMetadataSchema = z.object({
   name: z.string().trim().min(1, 'name must be a non-empty string (used as display_name on list_templates)'),
   category: z.string().optional(),

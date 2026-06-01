@@ -45,6 +45,34 @@ A mutual non-disclosure agreement based on [Common Paper's](https://commonpaper.
 
 > **Note:** `party_N_title` and `party_N_company` are only rendered when `party_N_type` is `entity` (default). When set to `individual`, those cells are left blank even if values are provided.
 
+## Selection Semantics
+
+The fill flow preserves only selected option text for checkbox-style Mutual NDA
+term and confidentiality-term choices, while marking selected choices with
+`[ x ]`.
+
+- Fixed-duration `mnda_term` and fixed-term `confidentiality_term` choices mark
+  the fixed-term options with `[ x ]` and remove conflicting alternatives such
+  as "until terminated" or "in perpetuity".
+- `until terminated` and `In perpetuity` choices mark those selected options
+  with `[ x ]` and remove non-selected fixed-term alternatives.
+
+## Behavioral Scenarios
+
+### [OA-TMP-007] Fixed term selection removes non-selected options
+- **GIVEN** the user sets `mnda_term` to a fixed duration
+- **AND** sets `confidentiality_term` to fixed-term language
+- **WHEN** the template is filled
+- **THEN** fixed-term options are marked with `[ x ]`
+- **AND** conflicting alternatives (for example "until terminated" or "in perpetuity") are removed
+
+### [OA-TMP-008] Perpetual selection marks selected options
+- **GIVEN** the user sets `mnda_term` to `until terminated`
+- **AND** sets `confidentiality_term` to `In perpetuity`
+- **WHEN** the template is filled
+- **THEN** the selected until-terminated and perpetuity options are marked with `[ x ]`
+- **AND** non-selected fixed-term alternatives are removed
+
 ## Attribution
 
 Based on the Common Paper Mutual NDA, available at https://commonpaper.com.
