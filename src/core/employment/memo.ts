@@ -303,15 +303,15 @@ const CLAUSE_SIGNALS: Record<string, ClauseSignal[]> = {
   ],
   'openagreements-restrictive-covenant-wyoming': [
     {
-      id: 'restriction-pathways',
+      id: 'applicable-noncompete-exceptions',
       field: 'applicable_noncompete_exceptions',
       missingSeverity: 'high',
       missingSummary:
-        'Restriction pathway is blank. Under Wyoming Stat. section 1-23-108, non-compete-adjacent covenants require a lawful statutory pathway. The template cannot determine enforceability without this field.',
+        'No applicable non-compete exception is specified. Under Wyoming Stat. section 1-23-108, non-compete-adjacent covenants are unenforceable unless they fall within an enumerated statutory exception. The template cannot determine enforceability without this field.',
       presentSummary:
-        'Restriction pathway is specified.',
+        'Applicable non-compete exception is specified.',
       followUpQuestionWhenMissing:
-        'Can licensed counsel confirm which Wyoming Stat. section 1-23-108 pathway applies to this employee?',
+        'Can licensed counsel confirm which Wyoming Stat. section 1-23-108 exception applies to this employee?',
     },
     {
       id: 'worker-category',
