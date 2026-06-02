@@ -12857,7 +12857,7 @@
           ]
         },
         {
-          "name": "restriction_pathways",
+          "name": "applicable_noncompete_exceptions",
           "type": "string",
           "required": false,
           "section": "AI Analysis",
