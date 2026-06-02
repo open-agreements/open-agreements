@@ -67,10 +67,12 @@ fields:
   - name: applicable_noncompete_exceptions
     type: string
     description: >-
-      Wyoming restriction pathway(s) under Wyo. Stat. section 1-23-108.
-      AI-only field that drives memo warnings and conditional gating.
-      Not shown in the output document. Options: Executive or Management
-      Personnel, Trade Secret Protection, None.
+      Applicable statutory exception(s) under Wyo. Stat. section 1-23-108
+      that would permit an otherwise-prohibited non-compete-adjacent
+      covenant. AI-only field that drives memo warnings and conditional
+      gating. Not shown in the output document. Options: Executive or
+      Management Personnel, Trade Secret Protection, Training Cost
+      Recovery, Sale of Business, None.
     default: None
     section: AI Analysis
   - name: restrictive_covenant_entered_after_employment_started
