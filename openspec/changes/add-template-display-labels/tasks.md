@@ -23,7 +23,7 @@
 
 - [x] 4.1 Populate `display_label` on every user-facing field of
       `content/templates/openagreements-restrictive-covenant-wyoming/metadata.yaml`
-- [x] 4.2 Confirm AI-only fields (`worker_category`, `restriction_pathways`)
+- [x] 4.2 Confirm AI-only fields (`worker_category`, `applicable_noncompete_exceptions`)
       and internal computed fields (`cloud_drive_id_footer`) do NOT carry
       a `display_label`
 

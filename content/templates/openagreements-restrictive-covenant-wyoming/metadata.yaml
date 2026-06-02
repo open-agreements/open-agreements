@@ -64,7 +64,7 @@ fields:
       based on title, scope, and duties; absent that signal, Other avoids
       asserting a statutory pathway that may not apply.
     section: AI Analysis
-  - name: restriction_pathways
+  - name: applicable_noncompete_exceptions
     type: string
     description: >-
       Wyoming restriction pathway(s) under Wyo. Stat. section 1-23-108.

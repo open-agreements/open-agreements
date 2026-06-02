@@ -304,7 +304,7 @@ const CLAUSE_SIGNALS: Record<string, ClauseSignal[]> = {
   'openagreements-restrictive-covenant-wyoming': [
     {
       id: 'restriction-pathways',
-      field: 'restriction_pathways',
+      field: 'applicable_noncompete_exceptions',
       missingSeverity: 'high',
       missingSummary:
         'Restriction pathway is blank. Under Wyoming Stat. section 1-23-108, non-compete-adjacent covenants require a lawful statutory pathway. The template cannot determine enforceability without this field.',
