@@ -12,9 +12,8 @@ license: CC-BY-4.0
 allow_derivatives: true
 attribution_text: >-
   Authored by OpenAgreements contributors. Wyoming-specific analysis informed
-  by publicly available commentary from Am Law firms including Ogletree Deakins,
-  Fisher Phillips, Littler Mendelson, Foley & Lardner, Faegre Drinker, and
-  Vinson & Elkins. See practice note for sources. Licensed under CC BY 4.0.
+  by publicly available legal commentary cited in the related practice note.
+  Licensed under CC BY 4.0.
 fields:
   # --- Parties (on cover page) ---
   - name: employer_name
