@@ -33,6 +33,7 @@ The terms below are incorporated into and form part of this agreement.
 | Kind | Label | Value | Show When |
 | --- | --- | --- | --- |
 | row | Employer | {employer_name} | always |
+| row | Employer Parent Entity | {employer_parent_name} | employer_parent_name |
 | row | Employee | {employee_name} | always |
 | row | Employee Title / Position | {employee_title} | employee_title |
 | row | Effective Date | {effective_date} | always |
@@ -53,6 +54,8 @@ The terms below are incorporated into and form part of this agreement.
 | subrow | Duration | {nondealing_duration} | nondealing_included |
 | group | Non-Investment |  | noninvestment_included |
 | subrow | Duration | {noninvestment_duration} | noninvestment_included |
+| group | Covered Employee Garden Leave (CHOICE Act) |  | garden_leave_included |
+| subrow | Garden Leave Notice Period | {garden_leave_notice_duration} | garden_leave_included |
 | group | Non-Disparagement |  | always |
 | subrow | Duration | {nondisparagement_duration} | always |
 
@@ -61,6 +64,8 @@ The terms below are incorporated into and form part of this agreement.
 
 <!-- oa:clause id=defined-terms type=definitions -->
 ### Defined Terms
+
+[[Affiliates]] means, with respect to Employer, any entity that directly or indirectly controls, is controlled by, or is under common control with Employer, including Employer's direct and indirect parent entities, subsidiaries, and any sister or operating entity under common control (for example, where the named Employer is a dedicated employment entity and the operating business is conducted through a commonly controlled affiliate). For this purpose, "control" means the power to direct the management and policies of an entity, whether through ownership of voting securities, by contract, or otherwise.
 
 [[Competitive Business]] means the business activities described in Cover Terms under Competitive Business.
 
@@ -144,20 +149,20 @@ During the Restricted Period specified in Cover Terms for Non-Disparagement, Emp
 
 If Employee is a physician licensed under chapter 458 or chapter 459 of the Florida Statutes, then notwithstanding any other provision of this agreement, the non-compete restrictions in this agreement do not apply, and are void and unenforceable, to the extent that Fla. Stat. § 542.336 so provides. Under Fla. Stat. § 542.336, a restrictive covenant is void and unenforceable against such a physician who practices a medical specialty in a county where one entity (directly or through one or more related or affiliated entities) employs or contracts with all physicians who practice that specialty in that county, and the covenant remains void for three years after a second entity that employs or contracts with one or more physicians who practice that specialty begins offering that specialty in that county. Nothing in this agreement may be construed to restrict a physician Employee in violation of Fla. Stat. § 542.336.
 
-<!-- oa:clause id=choice-act-counsel-notice when=covered_employee omitted="[Intentionally Omitted.]" -->
+<!-- oa:clause id=choice-act-counsel-notice when=choice_act_advance_notice_confirmed omitted="[Intentionally Omitted.]" -->
 ### CHOICE Act Counsel Advisal and Notice (Covered Employee)
 
-Employee is a covered employee under the Florida Contracts Honoring Opportunity, Investment, Confidentiality, and Economic Growth (CHOICE) Act, Fla. Stat. §§ 542.41–542.45. Employer advised Employee, in writing, of the right to seek the advice of independent legal counsel before executing this agreement, and Employee acknowledges receiving that written advisal, in satisfaction of Fla. Stat. § 542.45(2)(a). Employer provided Employee with this proposed agreement at least seven days before the offer of employment was to expire (for a prospective covered employee) or at least seven days before the offer to enter into this agreement was to expire (for a current covered employee), in satisfaction of the notice requirement of Fla. Stat. § 542.45(3).
+Employer advised Employee, in writing, of the right to seek the advice of independent legal counsel before executing this agreement, and Employee acknowledges receiving that written advisal, in satisfaction of Fla. Stat. § 542.45(2)(a). Employer provided Employee with this proposed agreement at least seven days before the offer of employment was to expire (for a prospective covered employee) or at least seven days before the offer to enter into this agreement was to expire (for a current covered employee), in satisfaction of the notice requirement of Fla. Stat. § 542.45(3).
 
 <!-- oa:clause id=choice-act-confidential-info-acknowledgement when=covered_employee omitted="[Intentionally Omitted.]" -->
 ### CHOICE Act Confidential Information Acknowledgement (Covered Employee)
 
-Employee acknowledges in writing that, in the course of Employee's employment with Employer, Employee will receive confidential information or customer relationships, in satisfaction of Fla. Stat. § 542.45(2)(b). This acknowledgement is in addition to, and does not limit, the recital of Employer's Legitimate Business Interests above.
+Employee is a covered employee under the Florida Contracts Honoring Opportunity, Investment, Confidentiality, and Economic Growth (CHOICE) Act, Fla. Stat. §§ 542.41–542.45. Employee acknowledges in writing that, in the course of Employee's employment with Employer, Employee will receive confidential information or customer relationships, in satisfaction of Fla. Stat. § 542.45(2)(b). This acknowledgement is in addition to, and does not limit, the recital of Employer's Legitimate Business Interests above.
 
 <!-- oa:clause id=choice-act-garden-leave when=garden_leave_included omitted="[Intentionally Omitted.]" -->
 ### CHOICE Act Garden Leave and Day-for-Day Offset (Covered Employee)
 
-This agreement includes a covered garden leave agreement within the meaning of Fla. Stat. § 542.43(5), under which Employer and Employee agree to a notice period before the termination of employment, not to exceed four years. The non-compete Restricted Period is reduced day-for-day by any nonworking portion of the garden-leave notice period, pursuant to Fla. Stat. § 542.45(2)(c). After the first 90 days of the notice period, Employee need not provide services to Employer and may pursue nonwork activities, including for another employer, subject to Fla. Stat. § 542.44 and the other terms of this agreement. The counsel-advisal, seven-day-notice, and confidential-information-acknowledgement requirements of Fla. Stat. § 542.44(2)–(3) apply to this garden leave agreement and are satisfied by the corresponding provisions of this agreement.
+This agreement includes a covered garden leave agreement within the meaning of Fla. Stat. § 542.43(5), under which Employer and Employee agree to a garden-leave notice period of {garden_leave_notice_duration} before the termination of employment, which may not exceed four years (Fla. Stat. § 542.43(5)). The non-compete Restricted Period is reduced day-for-day by any nonworking portion of the garden-leave notice period, pursuant to Fla. Stat. § 542.45(2)(c). After the first 90 days of the notice period, Employee need not provide services to Employer and may pursue nonwork activities, including for another employer, subject to Fla. Stat. § 542.44 and the other terms of this agreement. The counsel-advisal, seven-day-notice, and written confidential-information-acknowledgement requirements of Fla. Stat. § 542.44(2)–(3) apply to this garden leave agreement; the corresponding provisions of this agreement (the CHOICE Act Counsel Advisal and Notice provision, if included, and the CHOICE Act Confidential Information Acknowledgement provision) are intended to address them.
 
 <!-- oa:clause id=no-conflicting-obligations -->
 ### No Conflicting Obligations
@@ -192,7 +197,7 @@ Each restrictive covenant in this agreement survives the termination of Employee
 <!-- oa:clause id=assignment-and-successors -->
 ### Assignment and Successors
 
-Employee may not assign this agreement or any rights or obligations under it. Employer may assign this agreement, and the restrictive covenants in it, to any affiliate, successor, or acquirer of all or substantially all of Employer's business or assets. Pursuant to Fla. Stat. § 542.335(1)(f), Employer expressly authorizes enforcement of the restrictive covenants in this agreement by Employer's assignee or successor, and the parties expressly intend that any such assignee or successor, and any affiliate of Employer on whose behalf Employee performs services or that holds the Protected Interests, is a third-party beneficiary of this agreement, expressly identified as such and entitled to enforce the restrictive covenants for its own benefit. This agreement is binding on and inures to the benefit of the parties and their respective heirs, successors, third-party beneficiaries, and permitted assigns.
+Employee may not assign this agreement or any rights or obligations under it. Employer may assign this agreement, and the restrictive covenants in it, to Employer's direct corporate parent (identified in Cover Terms under Employer Parent Entity, if any), to any of Employer's Affiliates, or to any successor or acquirer of all or substantially all of Employer's business or assets. Pursuant to Fla. Stat. § 542.335(1)(f), Employer expressly authorizes enforcement of the restrictive covenants in this agreement by Employer's assignee or successor. The parties further expressly identify, as third-party beneficiaries of this agreement entitled to enforce the restrictive covenants for their own benefit, each of the following: Employer's direct corporate parent (as identified in Cover Terms, if any); Employer's Affiliates, including any operating company or commonly controlled entity on whose behalf Employee performs services or that holds any of the Protected Interests; and any successor or assignee of Employer. The parties expressly state that the restrictive covenants are intended for the benefit of each such expressly-identified person, as required by Fla. Stat. § 542.335(1)(f)1. This agreement is binding on and inures to the benefit of the parties and their respective heirs, successors, third-party beneficiaries, and permitted assigns.
 
 <!-- oa:clause id=governing-law-venue-and-dispute-process -->
 ### Governing Law, Venue, and Dispute Process

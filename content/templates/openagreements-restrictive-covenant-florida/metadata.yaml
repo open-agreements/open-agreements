@@ -35,6 +35,18 @@ fields:
     display_label: Employee Title / Position
     default: ''
     section: Parties
+  - name: employer_parent_name
+    type: string
+    description: >-
+      Legal name of Employer's direct corporate parent entity, if any (optional).
+      Named alongside "Employer and its Affiliates" as an expressly-identified
+      third-party beneficiary entitled to enforce the restrictive covenants under
+      Fla. Stat. section 542.335(1)(f). Common in PE / holding-company structures
+      where the named Employer entity is a dedicated employment entity distinct
+      from the operating company.
+    display_label: Employer Parent Entity
+    default: ''
+    section: Parties
   - name: effective_date
     type: date
     description: Effective date of this agreement
@@ -91,6 +103,27 @@ fields:
       care practitioner). Over-asserting CHOICE Act status risks reciting
       compliance with procedural prerequisites the employer did not perform.
     section: AI Analysis
+  - name: choice_act_advance_notice_confirmed
+    type: boolean
+    description: >-
+      Whether the user has CONFIRMED that the CHOICE Act pre-execution
+      compliance steps were actually performed: the covered employee was
+      advised, in writing, of the right to seek counsel, and was given at least
+      7 days' advance notice of the proposed agreement (Fla. Stat. section
+      542.45(2)(a), (3)). Gates the past-tense counsel-advisal-and-notice
+      recital so the document does not assert compliance that did not occur.
+      INTERIM SAFE DEFAULT pending the chosen mechanism in
+      open-agreements#408 (compliance-representation handling). Not shown as a
+      cover-term row.
+    default: 'false'
+    default_value_rationale: >-
+      Conservative default false: the counsel-advisal/advance-notice recital is
+      a past-tense representation of real-world compliance the employer must
+      actually have performed. Defaulting to false omits the recital unless the
+      user affirmatively confirms the advisal and 7-day notice were given,
+      avoiding an accidental false representation. The calling LLM should ask
+      the human to confirm before setting this true.
+    section: AI Analysis
   - name: garden_leave_included
     type: boolean
     description: >-
@@ -105,6 +138,24 @@ fields:
       garden-leave clause is meaningful only on the CHOICE Act covered-employee
       track and is omitted unless garden leave is actually structured.
     section: AI Analysis
+  - name: garden_leave_notice_duration
+    type: string
+    description: >-
+      Length of the covered garden leave notice period (e.g. "6 months",
+      "1 year"). Under Fla. Stat. section 542.43(5) a covered garden leave
+      agreement may provide for up to, but no more than, 4 years of advance
+      notice; after the first 90 days of the notice period the employee need not
+      provide services. Shown in Cover Terms and recited in the garden-leave
+      clause when garden_leave_included is true. The non-compete Restricted
+      Period is reduced day-for-day by the nonworking portion of this period
+      (section 542.45(2)(c)).
+    display_label: Garden Leave Notice Period
+    default: 6 months
+    default_value_rationale: >-
+      6 months is a moderate notice period well within the section 542.43(5)
+      4-year statutory ceiling. The employer should set this to the actual
+      negotiated notice period; it must not exceed 4 years.
+    section: Garden Leave
   - name: covenant_relationship_type
     type: enum
     description: >-
