@@ -47,6 +47,21 @@ fields:
     display_label: Employer Parent Entity
     default: ''
     section: Parties
+  - name: employer_operating_affiliate_name
+    type: string
+    description: >-
+      Legal name of the operating or service-recipient Affiliate, if different
+      from the named Employer (optional). Use this where the named Employer is a
+      dedicated employment entity but the operating business — the entity for
+      whom Employee actually performs services or that holds the Protected
+      Interests — is a separate commonly controlled Affiliate (common in PE /
+      holding-company structures). When provided, this entity is expressly named
+      in the Fla. Stat. section 542.335(1)(f) third-party-beneficiary list, in
+      addition to the "Employer and its Affiliates" class language, for higher
+      enforcement certainty.
+    display_label: Operating / Service-Recipient Affiliate
+    default: ''
+    section: Parties
   - name: effective_date
     type: date
     description: Effective date of this agreement

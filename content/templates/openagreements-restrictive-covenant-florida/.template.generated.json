@@ -33,6 +33,13 @@
         },
         {
           "kind": "row",
+          "label": "Operating / Service-Recipient Affiliate",
+          "value": "{employer_operating_affiliate_name}",
+          "condition": "employer_operating_affiliate_name",
+          "sub": false
+        },
+        {
+          "kind": "row",
           "label": "Employee",
           "value": "{employee_name}",
           "sub": false
@@ -376,7 +383,7 @@
         {
           "id": "assignment-and-successors",
           "heading": "Assignment and Successors",
-          "body": "Employee may not assign this agreement or any rights or obligations under it. Employer may assign this agreement, and the restrictive covenants in it, to Employer's direct corporate parent (identified in Cover Terms under Employer Parent Entity, if any), to any of Employer's Affiliates, or to any successor or acquirer of all or substantially all of Employer's business or assets. Pursuant to Fla. Stat. § 542.335(1)(f), Employer expressly authorizes enforcement of the restrictive covenants in this agreement by Employer's assignee or successor. The parties further expressly identify, as third-party beneficiaries of this agreement entitled to enforce the restrictive covenants for their own benefit, each of the following: Employer's direct corporate parent (as identified in Cover Terms, if any); Employer's Affiliates, including any operating company or commonly controlled entity on whose behalf Employee performs services or that holds any of the Protected Interests; and any successor or assignee of Employer. The parties expressly state that the restrictive covenants are intended for the benefit of each such expressly-identified person, as required by Fla. Stat. § 542.335(1)(f)1. This agreement is binding on and inures to the benefit of the parties and their respective heirs, successors, third-party beneficiaries, and permitted assigns."
+          "body": "Employee may not assign this agreement or any rights or obligations under it. Employer may assign this agreement, and the restrictive covenants in it, to Employer's direct corporate parent (identified in Cover Terms under Employer Parent Entity, if any), to any of Employer's Affiliates, or to any successor or acquirer of all or substantially all of Employer's business or assets. Pursuant to Fla. Stat. § 542.335(1)(f), Employer expressly authorizes enforcement of the restrictive covenants in this agreement by Employer's assignee or successor. The parties further expressly identify, as third-party beneficiaries of this agreement entitled to enforce the restrictive covenants for their own benefit, each of the following: Employer's direct corporate parent (as identified in Cover Terms, if any); the operating or service-recipient Affiliate identified in Cover Terms (if any) on whose behalf Employee performs services or that holds any of the Protected Interests; Employer's Affiliates, including any operating company or commonly controlled entity on whose behalf Employee performs services or that holds any of the Protected Interests; and any successor or assignee of Employer. The parties expressly state that the restrictive covenants are intended for the benefit of each such expressly-identified person, as required by Fla. Stat. § 542.335(1)(f)1. This agreement is binding on and inures to the benefit of the parties and their respective heirs, successors, third-party beneficiaries, and permitted assigns."
         },
         {
           "id": "governing-law-venue-and-dispute-process",
