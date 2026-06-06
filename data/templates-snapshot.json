@@ -75,7 +75,7 @@
           "required": true,
           "section": "Legal",
           "description": "State or jurisdiction whose laws govern the agreement",
-          "default": "California",
+          "default": "Delaware",
           "default_value_rationale": null
         },
         {
@@ -84,7 +84,7 @@
           "required": true,
           "section": "Legal",
           "description": "Courts with jurisdiction over disputes",
-          "default": "courts located in San Francisco, California",
+          "default": "courts located in New Castle County, Delaware",
           "default_value_rationale": null
         },
         {

@@ -107,8 +107,11 @@ describe('Concerto flat model → fill pipeline integration', () => {
     const text = zip.readAsText('word/document.xml').replace(/<[^>]+>/g, ' ');
     expect(text).toContain('Alpha LLC');
     expect(text).toContain('Beta Corp');
-    // Defaults from metadata.yaml should fill in
-    expect(text).toContain('California');
+    // Defaults from metadata.yaml should fill in. The Bonterms MNDA defaults to
+    // Delaware governing law + New Castle County venue (matching Common Paper;
+    // Bonterms' own cover leaves these blank) — see metadata.yaml.
+    expect(text).toContain('Delaware');
+    expect(text).toContain('New Castle County, Delaware');
 
     unlinkSync(outputPath);
   });
