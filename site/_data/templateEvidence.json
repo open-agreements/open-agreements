@@ -1,7 +1,7 @@
 {
-  "total_templates": 44,
+  "total_templates": 46,
   "validated_count": 8,
-  "not_covered_count": 29,
+  "not_covered_count": 31,
   "not_applicable_count": 7,
   "templates": [
     {
@@ -83,7 +83,7 @@
       "distributable": true,
       "fillable": true,
       "priorityFields": 2,
-      "totalFields": 28,
+      "totalFields": 29,
       "validation_status": "validated",
       "validation_source": "test-source-scan",
       "hasPreview": true
@@ -462,6 +462,34 @@
       "fillable": true,
       "priorityFields": 4,
       "totalFields": 4,
+      "validation_status": "not_covered",
+      "validation_source": "none",
+      "hasPreview": true
+    },
+    {
+      "id": "openagreements-due-diligence-request-list",
+      "displayName": "Due Diligence Request List",
+      "sourceLabel": "OpenAgreements",
+      "sourceUrl": "https://openagreements.org",
+      "license": "CC-BY-4.0",
+      "distributable": true,
+      "fillable": true,
+      "priorityFields": 10,
+      "totalFields": 28,
+      "validation_status": "not_covered",
+      "validation_source": "none",
+      "hasPreview": true
+    },
+    {
+      "id": "openagreements-restrictive-covenant-florida",
+      "displayName": "Restrictive Covenant Florida",
+      "sourceLabel": "OpenAgreements",
+      "sourceUrl": "https://openagreements.org",
+      "license": "CC-BY-4.0",
+      "distributable": true,
+      "fillable": true,
+      "priorityFields": 2,
+      "totalFields": 35,
       "validation_status": "not_covered",
       "validation_source": "none",
       "hasPreview": true
