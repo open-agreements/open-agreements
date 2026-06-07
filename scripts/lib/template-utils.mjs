@@ -17,14 +17,21 @@ export function listTemplateIds() {
     .sort();
 }
 
-export function loadTemplateMetadata(templateId) {
-  const metadataPath = resolve(TEMPLATES_DIR, templateId, "metadata.yaml");
+// Load and parse a template's metadata.yaml given its directory. Returns {} when
+// the file is absent. Single js-yaml parse site shared by loadTemplateMetadata
+// and the canonical-source compiler so the two cannot drift.
+export function loadMetadataFromDir(dir) {
+  const metadataPath = resolve(dir, "metadata.yaml");
   if (!existsSync(metadataPath)) {
     return {};
   }
   const raw = readFileSync(metadataPath, "utf8");
   const parsed = yaml.load(raw);
   return parsed && typeof parsed === "object" ? parsed : {};
+}
+
+export function loadTemplateMetadata(templateId) {
+  return loadMetadataFromDir(resolve(TEMPLATES_DIR, templateId));
 }
 
 function hostMatches(host, domain) {

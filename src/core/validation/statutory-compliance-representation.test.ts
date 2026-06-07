@@ -10,6 +10,11 @@ const FIELD = {
   authority_url: 'https://www.flsenate.gov/Laws/Statutes/2025/542.45',
 };
 
+const FIELD_WITH_NOTE = {
+  ...FIELD,
+  confirm_note: 'the required notice was actually given',
+};
+
 // extractDocxText joins paragraph runs with '' and paragraphs with '\n', so the
 // rendered confirm block looks like the negated marker, the bracket, then END-IF
 // on consecutive lines.
@@ -80,6 +85,25 @@ describe('checkStatutoryComplianceReps', () => {
     ].join('\n');
     checkStatutoryComplianceReps(withBracketNote, [FIELD], errors);
     expect(errors).toEqual([]);
+  });
+
+  it.openspec('OA-TMP-064')('passes when the bracket note matches the metadata confirm_note', () => {
+    const errors: string[] = [];
+    checkStatutoryComplianceReps(renderedConfirmText(), [FIELD_WITH_NOTE], errors);
+    expect(errors).toEqual([]);
+  });
+
+  it.openspec('OA-TMP-064')('fails when the bracket note drifts from the metadata confirm_note', () => {
+    const errors: string[] = [];
+    const drifted = [
+      'Body.',
+      '{IF !notice_confirmed}',
+      `[CONFIRM before signing: a different note than metadata; see ${FIELD.authority_url}]`,
+      '{END-IF}',
+    ].join('\n');
+    checkStatutoryComplianceReps(drifted, [FIELD_WITH_NOTE], errors);
+    expect(errors).toHaveLength(1);
+    expect(errors[0]).toMatch(/confirm_note .* does not match the note in its rendered \[CONFIRM …\] bracket/);
   });
 
   it.openspec('OA-TMP-064')('is a no-op when no field is a statutory_compliance_representation', () => {

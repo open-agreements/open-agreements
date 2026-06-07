@@ -12,19 +12,25 @@ on a reusable mechanism that keeps the open item **visible** instead of dropping
 
 ## What Changes
 - Add a narrow metadata field category `statutory_compliance_representation: true`
-  (with a required `authority_url`) marking a boolean field whose `true` value asserts a
-  statutory precondition to enforceability. Deliberately NOT a general
-  `compliance_representation` category — reserved for the few reps that gate
+  (with a required `authority_url` and `confirm_note`) marking a boolean field whose
+  `true` value asserts a statutory precondition to enforceability. Deliberately NOT a
+  general `compliance_representation` category — reserved for the few reps that gate
   enforceability so ordinary reps are not forced through per-rep confirmation.
 - Add a renderer `confirm=<field>` clause directive (distinct from `when=`): the clause
   body always renders, and when `<field>` is false the layout appends a
   yellow-highlighted `[CONFIRM before signing: <note>; see <authority_url>]` bracket
   (never a silent omit, never future-tense). When `<field>` is true the clause renders
-  clean.
+  clean. Per issue #413, `metadata.yaml` is the single source of truth: the directive
+  names only the field, and the canonical compiler resolves `confirm_note`/`authority_url`
+  from that field's `metadata.yaml` entry (reading the sibling metadata). Restating either
+  in the directive is a compile error.
 - Strengthen the template validator: a `statutory_compliance_representation` field MUST
-  be boolean, default `'false'`, declare an http(s) `authority_url`, and be rendered as a
-  `{IF !<field>}` + `[CONFIRM before signing: …]` bracket whose URL matches the field's
-  `authority_url` (guards metadata.yaml ↔ template.md drift).
+  be boolean, default `'false'`, declare an http(s) `authority_url` and a non-empty
+  `confirm_note`, and be rendered as a `{IF !<field>}` + `[CONFIRM before signing: …]`
+  bracket whose URL and note match the field's `authority_url`/`confirm_note`. Because
+  these now have one authoring source, the equality check guards the committed rendered
+  artifact (a stale, un-regenerated `template.docx`) and hand-authored JSON templates
+  rather than two hand-edited files.
 - The `get_template` confirmation warning rides in the field's own `description`
   (no separate `requiresConfirmation` array — everything a user fills requires
   confirmation, so a dedicated array would wrongly imply the others do not). The
@@ -42,5 +48,6 @@ output.
 - Affected code: `scripts/template_renderer/canonical-source.mjs`,
   `scripts/template_renderer/schema.mjs`,
   `scripts/template_renderer/layouts/cover-standard-signature-v1.mjs`,
+  `scripts/lib/template-utils.mjs` (shared `loadMetadataFromDir`),
   `src/core/metadata.ts`, `src/core/validation/template.ts`,
   `content/templates/openagreements-restrictive-covenant-florida/{template.md,metadata.yaml}`

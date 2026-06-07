@@ -62,10 +62,16 @@ function decodeXmlEntities(value: string): string {
  *     sufficient (the legacy `when=field omitted="…"` mechanism also emits one),
  *     so the negated conditional MUST be immediately followed by the literal
  *     bracket.
- *  2. The URL inside the bracket EQUALS the field's metadata `authority_url`
- *     (the two are authored in separate files — template.md and metadata.yaml —
- *     so this guards against drift). Equality, not substring: a URL with an
- *     extra suffix must fail.
+ *  2. The URL and note inside the bracket EQUAL the field's metadata
+ *     `authority_url` / `confirm_note`. These now have a single authoring source
+ *     (metadata.yaml — the directive no longer restates them), so this is no
+ *     longer an author-drift check between two hand-edited files. It is an
+ *     integrity check between metadata.yaml and the COMMITTED rendered artifact:
+ *     `validateTemplate` scans the committed `template.docx`, so a stale DOCX (or
+ *     `.template.generated.json`) — e.g. a metadata edit shipped without
+ *     regenerating — is caught here, as are hand-authored JSON templates that
+ *     carry `confirm`/`authority_url`/`confirm_note` directly. Equality, not
+ *     substring: a value with an extra suffix must fail.
  *  3. The clause body always renders — i.e. the affirmative `{IF <field>}` form
  *     is absent. A `confirm=` clause only ever emits `{IF !<field>}`; a legacy
  *     `when=<field>` clause wraps its body in `{IF <field>}`. Asserting the
@@ -74,36 +80,47 @@ function decodeXmlEntities(value: string): string {
  */
 export function checkStatutoryComplianceReps(
   searchableText: string,
-  fields: { name: string; statutory_compliance_representation?: boolean; authority_url?: string }[],
+  fields: { name: string; statutory_compliance_representation?: boolean; authority_url?: string; confirm_note?: string }[],
   errors: string[],
 ): void {
   const scrFields = fields.filter((f) => f.statutory_compliance_representation === true);
   if (scrFields.length === 0) return;
 
-  // Capture the field, the (possibly bracket-containing) note, and the URL. The
-  // note uses a lazy `[\s\S]*?` so a literal `]` inside it does not truncate the
-  // match; the URL is the non-space, non-`]` run after "; see ".
-  const confirmRe = /\{IF !(\w+)\}\s*\[CONFIRM before signing: [\s\S]*?; see ([^\]\s]+)\]/g;
-  const urlByField = new Map<string, string>();
+  // Capture the field, the note, and the URL. The note uses a lazy `[\s\S]*?` so
+  // a literal `]` inside it does not truncate the match; the URL is the
+  // non-space, non-`]` run after "; see ".
+  const confirmRe = /\{IF !(\w+)\}\s*\[CONFIRM before signing: ([\s\S]*?); see ([^\]\s]+)\]/g;
+  const bracketByField = new Map<string, { note: string; url: string }>();
   let match: RegExpExecArray | null;
   while ((match = confirmRe.exec(searchableText)) !== null) {
-    urlByField.set(match[1], decodeXmlEntities(match[2]));
+    bracketByField.set(match[1], {
+      note: decodeXmlEntities(match[2]),
+      url: decodeXmlEntities(match[3]),
+    });
   }
 
   for (const field of scrFields) {
-    const url = urlByField.get(field.name);
-    if (url === undefined) {
+    const bracket = bracketByField.get(field.name);
+    if (bracket === undefined) {
       errors.push(
         `statutory_compliance_representation field "${field.name}" must be gated by a clause confirm= — ` +
         `no "{IF !${field.name}} [CONFIRM before signing: …; see <url>]" bracket found in the rendered template`
       );
       continue;
     }
+    const { note, url } = bracket;
     if (field.authority_url && url !== field.authority_url) {
       errors.push(
         `statutory_compliance_representation field "${field.name}" authority_url ` +
         `("${field.authority_url}") does not match the URL in its rendered [CONFIRM …] bracket ` +
-        `("${url}") — metadata.yaml and template.md have drifted`
+        `("${url}") — metadata.yaml and the committed rendered template have drifted (regenerate the template)`
+      );
+    }
+    if (field.confirm_note && note !== field.confirm_note) {
+      errors.push(
+        `statutory_compliance_representation field "${field.name}" confirm_note ` +
+        `("${field.confirm_note}") does not match the note in its rendered [CONFIRM …] bracket ` +
+        `("${note}") — metadata.yaml and the committed rendered template have drifted (regenerate the template)`
       );
     }
     // The recital body must render unconditionally: a confirm= clause never

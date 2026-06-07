@@ -49,7 +49,9 @@ export interface FieldDefinition {
    * and MUST declare `authority_url`. A template clause references it via the
    * renderer's `confirm=` directive, which renders the recital clean when the
    * field is true and as a highlighted `[CONFIRM …]` bracket when it is false
-   * (never silently dropped). The confirmation warning rides in `description`.
+   * (never silently dropped). The broad confirmation warning rides in
+   * `description`; the short reason shown inside the rendered bracket rides in
+   * `confirm_note`.
    */
   statutory_compliance_representation?: boolean;
   /**
@@ -59,6 +61,15 @@ export interface FieldDefinition {
    * Only valid on a `statutory_compliance_representation` field.
    */
   authority_url?: string;
+  /**
+   * Short, human-readable reason rendered inside the
+   * `[CONFIRM before signing: <confirm_note>; see <authority_url>]` bracket of a
+   * `statutory_compliance_representation` field. This is the single source of
+   * truth for the bracket note — a `confirm=<field>` clause directive resolves
+   * it from here rather than restating it. Only valid on (and required for) a
+   * `statutory_compliance_representation` field.
+   */
+  confirm_note?: string;
 }
 
 export const FieldDefinitionSchema: z.ZodType<FieldDefinition> = z.lazy(() =>
@@ -75,6 +86,7 @@ export const FieldDefinitionSchema: z.ZodType<FieldDefinition> = z.lazy(() =>
     items: z.array(FieldDefinitionSchema).nonempty().optional(),
     statutory_compliance_representation: z.boolean().optional(),
     authority_url: z.string().optional(),
+    confirm_note: z.string().optional(),
   }).superRefine((field, ctx) => {
     if (
       (field.type === 'enum' || field.type === 'multiselect') &&
@@ -157,14 +169,32 @@ export const FieldDefinitionSchema: z.ZodType<FieldDefinition> = z.lazy(() =>
           message: 'authority_url must be an http(s) URL',
         });
       }
-    } else if (field.authority_url !== undefined) {
-      // Keep the property scoped: authority_url has no meaning outside the
+      // confirm_note is the SSOT for the rendered `[CONFIRM …]` bracket note, so
+      // it must be present and non-empty (after trimming) on these fields.
+      if (field.confirm_note === undefined || field.confirm_note.trim().length === 0) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ['confirm_note'],
+          message: 'statutory_compliance_representation fields must declare a non-empty confirm_note (the short reason shown in the rendered [CONFIRM …] bracket)',
+        });
+      }
+    } else {
+      // Keep these properties scoped: they have no meaning outside the
       // statutory_compliance_representation category.
-      ctx.addIssue({
-        code: z.ZodIssueCode.custom,
-        path: ['authority_url'],
-        message: 'authority_url is only valid on a statutory_compliance_representation field',
-      });
+      if (field.authority_url !== undefined) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ['authority_url'],
+          message: 'authority_url is only valid on a statutory_compliance_representation field',
+        });
+      }
+      if (field.confirm_note !== undefined) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ['confirm_note'],
+          message: 'confirm_note is only valid on a statutory_compliance_representation field',
+        });
+      }
     }
 
     if (field.default !== undefined) {
