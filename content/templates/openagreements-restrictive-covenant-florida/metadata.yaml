@@ -124,6 +124,9 @@ fields:
     type: boolean
     statutory_compliance_representation: true
     authority_url: https://www.flsenate.gov/Laws/Statutes/2025/542.45
+    confirm_note: >-
+      the written right-to-counsel advisal and at least 7-day advance notice were
+      actually given before signing
     description: >-
       CONFIRM-BEFORE-SIGNING: set true ONLY if a human has verified that the
       CHOICE Act pre-execution compliance steps actually occurred — the covered

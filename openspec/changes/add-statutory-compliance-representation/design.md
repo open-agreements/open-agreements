@@ -16,11 +16,16 @@ highlight stripped.
 ## Decisions
 - **Boolean flag, not an enum `field_category`.** A single narrow opt-in category; an enum
   would be premature abstraction that invites broader use than #408 wants.
-- **`authority_url` and `confirm_note` are duplicated** between `metadata.yaml` (API/
-  description surface) and the `confirm=` directive (in-document bracket) rather than
-  teaching `generate_templates.mjs` to read sibling metadata. Duplication keeps the build
-  pipeline decoupled; drift is caught by the validator asserting the bracket's URL equals
-  the metadata `authority_url`.
+- **`metadata.yaml` is the single source of truth for `authority_url` and `confirm_note`**
+  (issue #413). The canonical compiler resolves a `confirm=<field>` clause's note and URL
+  from that field's `metadata.yaml` entry via a field lookup built in
+  `compileCanonicalSourceFile` (sharing the `loadMetadataFromDir` loader), so the directive
+  shrinks to `confirm=<field>` and MUST NOT restate `confirm_note`/`authority_url`.
+  `confirm_note` is a metadata field property scoped (like `authority_url`) to
+  `statutory_compliance_representation` fields. The validator's URL/note equality check is
+  retained but reframed: it no longer guards two hand-edited files, it guards the committed
+  rendered artifact (`template.docx`) against the metadata (catching a stale, un-regenerated
+  DOCX) and hand-authored JSON templates.
 - **Validator scans for the literal bracket, not just `{IF !field}`.** The legacy
   `when=field omitted="…"` path also emits `{IF !field}`, so presence of the conditional
   is insufficient proof the CONFIRM bracket is wired. The validator requires

@@ -114,6 +114,7 @@ describe('FieldDefinitionSchema', () => {
         description: 'CONFIRM-BEFORE-SIGNING: set true only if the advance notice was actually given.',
         statutory_compliance_representation: true,
         authority_url: 'https://www.flsenate.gov/Laws/Statutes/2025/542.45',
+        confirm_note: 'the advance notice was actually given before signing',
         default: 'false',
       },
       true
@@ -130,6 +131,7 @@ describe('FieldDefinitionSchema', () => {
         description: 'Should be boolean',
         statutory_compliance_representation: true,
         authority_url: 'https://example.com/statute',
+        confirm_note: 'note',
         default: 'false',
       },
       false
@@ -146,6 +148,7 @@ describe('FieldDefinitionSchema', () => {
         description: 'Must default false',
         statutory_compliance_representation: true,
         authority_url: 'https://example.com/statute',
+        confirm_note: 'note',
         default: 'true',
       },
       false
@@ -161,6 +164,7 @@ describe('FieldDefinitionSchema', () => {
         type: 'boolean',
         description: 'Missing authority_url',
         statutory_compliance_representation: true,
+        confirm_note: 'note',
         default: 'false',
       },
       false
@@ -177,6 +181,7 @@ describe('FieldDefinitionSchema', () => {
         description: 'Bad URL',
         statutory_compliance_representation: true,
         authority_url: 'flsenate.gov/542.45',
+        confirm_note: 'note',
         default: 'false',
       },
       false
@@ -192,6 +197,54 @@ describe('FieldDefinitionSchema', () => {
         type: 'boolean',
         description: 'authority_url is scoped to statutory_compliance_representation fields',
         authority_url: 'https://example.com/statute',
+        default: 'false',
+      },
+      false
+    );
+  });
+
+  it.openspec('OA-TMP-063')('rejects a statutory_compliance_representation field without confirm_note', async () => {
+    await expectSafeParseOutcome(
+      'FieldDefinitionSchema',
+      FieldDefinitionSchema,
+      {
+        name: 'advance_notice_confirmed',
+        type: 'boolean',
+        description: 'Missing confirm_note',
+        statutory_compliance_representation: true,
+        authority_url: 'https://example.com/statute',
+        default: 'false',
+      },
+      false
+    );
+  });
+
+  it.openspec('OA-TMP-063')('rejects a blank confirm_note on a statutory_compliance_representation field', async () => {
+    await expectSafeParseOutcome(
+      'FieldDefinitionSchema',
+      FieldDefinitionSchema,
+      {
+        name: 'advance_notice_confirmed',
+        type: 'boolean',
+        description: 'Blank confirm_note',
+        statutory_compliance_representation: true,
+        authority_url: 'https://example.com/statute',
+        confirm_note: '   ',
+        default: 'false',
+      },
+      false
+    );
+  });
+
+  it.openspec('OA-TMP-063')('rejects confirm_note on a field that is not a statutory_compliance_representation', async () => {
+    await expectSafeParseOutcome(
+      'FieldDefinitionSchema',
+      FieldDefinitionSchema,
+      {
+        name: 'some_flag',
+        type: 'boolean',
+        description: 'confirm_note is scoped to statutory_compliance_representation fields',
+        confirm_note: 'orphan note',
         default: 'false',
       },
       false

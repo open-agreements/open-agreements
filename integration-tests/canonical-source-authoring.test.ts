@@ -1,12 +1,34 @@
+import { mkdtempSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { describe, expect } from 'vitest';
 import { itAllure } from './helpers/allure-test.js';
-import { compileCanonicalSourceString } from '../scripts/template_renderer/canonical-source.mjs';
+import {
+  buildFieldLookup,
+  compileCanonicalSourceFile,
+  compileCanonicalSourceString,
+} from '../scripts/template_renderer/canonical-source.mjs';
 import { loadStyleProfile, renderFromValidatedSpec } from '../scripts/template_renderer/index.mjs';
 
 const it = itAllure.epic('Filling & Rendering');
 
 const stylePath = join(import.meta.dirname, '..', 'scripts', 'template-specs', 'styles', 'openagreements-default-v1.json');
+
+// A valid statutory-compliance-representation field as it would appear in
+// metadata.yaml. confirm= clauses resolve confirm_note/authority_url from here
+// (SSOT), so tests supply it via { fieldLookup }.
+const SCR_FIELD = {
+  name: 'notice_confirmed',
+  type: 'boolean',
+  statutory_compliance_representation: true,
+  confirm_note: 'the required notice was actually given before signing',
+  authority_url: 'https://example.com/statute/542.45',
+  default: 'false',
+};
+
+function fieldLookupFor(fields) {
+  return buildFieldLookup({ fields });
+}
 
 function buildCanonicalSource(extraBody = '') {
   return `---
@@ -137,12 +159,14 @@ Legacy body.
     );
   });
 
-  it.openspec('OA-TMP-061')('compiles a confirm= clause into a statutory-compliance representation and renders a highlighted CONFIRM bracket gated on {IF !field}', async () => {
+  it.openspec('OA-TMP-061')('compiles a confirm= clause into a statutory-compliance representation, resolving note/url from metadata, and renders a highlighted CONFIRM bracket gated on {IF !field}', async () => {
     const { Packer } = await import('docx');
     const AdmZip = (await import('adm-zip')).default;
     const style = loadStyleProfile(stylePath);
+    // SSOT: the directive names only the field; confirm_note/authority_url come
+    // from metadata.yaml via the field lookup.
     const source = buildCanonicalSource(
-      `<!-- oa:clause id=compliance-recital confirm=notice_confirmed confirm_note="the required notice was actually given before signing" authority_url="https://example.com/statute/542.45" -->
+      `<!-- oa:clause id=compliance-recital confirm=notice_confirmed -->
 ### Compliance Recital
 
 The party gave the required notice before signing.
@@ -150,7 +174,9 @@ The party gave the required notice before signing.
 `
     );
 
-    const compiled = compileCanonicalSourceString(source, 'inline confirm source');
+    const compiled = compileCanonicalSourceString(source, 'inline confirm source', {
+      fieldLookup: fieldLookupFor([SCR_FIELD]),
+    });
     const clause = compiled.contractSpec.sections.standard_terms.clauses.find(
       (c) => c.id === 'compliance-recital'
     );
@@ -175,49 +201,155 @@ The party gave the required notice before signing.
     expect(xml).toContain('w:val="yellow"');
   });
 
+  it.openspec('OA-TMP-065')('compileCanonicalSourceFile resolves confirm= note/url from the sibling metadata.yaml', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'oa-canonical-confirm-'));
+    writeFileSync(
+      join(dir, 'template.md'),
+      buildCanonicalSource(
+        `<!-- oa:clause id=compliance-recital confirm=notice_confirmed -->
+### Compliance Recital
+
+The party gave the required notice before signing.
+
+`
+      )
+    );
+    writeFileSync(
+      join(dir, 'metadata.yaml'),
+      `name: Sibling Metadata Test
+source_url: https://example.com
+version: "1.0"
+license: CC0-1.0
+allow_derivatives: true
+attribution_text: test
+fields:
+  - name: notice_confirmed
+    type: boolean
+    statutory_compliance_representation: true
+    confirm_note: the required notice was actually given before signing
+    authority_url: https://example.com/statute/542.45
+    description: confirm before signing
+    default: 'false'
+`
+    );
+
+    const compiled = compileCanonicalSourceFile(join(dir, 'template.md'));
+    const clause = compiled.contractSpec.sections.standard_terms.clauses.find(
+      (c) => c.id === 'compliance-recital'
+    );
+    expect(clause).toMatchObject({
+      confirm: 'notice_confirmed',
+      confirm_note: 'the required notice was actually given before signing',
+      authority_url: 'https://example.com/statute/542.45',
+    });
+  });
+
+  it.openspec('OA-TMP-065')('renders a confirm_note containing special characters (quotes/brackets) without breaking the layout', async () => {
+    const { Packer } = await import('docx');
+    const AdmZip = (await import('adm-zip')).default;
+    const style = loadStyleProfile(stylePath);
+    const trickyNote = `the "advisal" [and notice] were given before signing`;
+    const source = buildCanonicalSource(
+      `<!-- oa:clause id=compliance-recital confirm=notice_confirmed -->
+### Compliance Recital
+
+The party gave the required notice before signing.
+
+`
+    );
+
+    const compiled = compileCanonicalSourceString(source, 'inline confirm special-chars source', {
+      fieldLookup: fieldLookupFor([{ ...SCR_FIELD, confirm_note: trickyNote }]),
+    });
+    const rendered = renderFromValidatedSpec(compiled.contractSpec, style);
+    const buffer = await Packer.toBuffer(rendered.document);
+    const xml = new AdmZip(buffer).getEntry('word/document.xml').getData().toString('utf-8');
+    expect(xml).toContain('{IF !notice_confirmed}');
+    expect(xml).toContain('w:val="yellow"');
+    // The bracket renders with the special-character note intact (XML-escaped).
+    expect(xml).toContain('[CONFIRM before signing: the &quot;advisal&quot; [and notice] were given before signing; see https://example.com/statute/542.45]');
+  });
+
   it.openspec('OA-TMP-062')('rejects confirm= combined with when/omitted', () => {
     const source = buildCanonicalSource(
-      `<!-- oa:clause id=bad-confirm confirm=notice_confirmed when=notice_confirmed confirm_note="x" authority_url="https://example.com/s" -->
+      `<!-- oa:clause id=bad-confirm confirm=notice_confirmed when=notice_confirmed -->
 ### Bad Confirm
 
 Body.
 
 `
     );
-    expect(() => compileCanonicalSourceString(source, 'inline confirm+when source')).toThrow(
-      /cannot combine confirm with when\/omitted/
-    );
+    expect(() =>
+      compileCanonicalSourceString(source, 'inline confirm+when source', { fieldLookup: fieldLookupFor([SCR_FIELD]) })
+    ).toThrow(/cannot combine confirm with when\/omitted/);
   });
 
-  it.openspec('OA-TMP-062')('rejects confirm= missing confirm_note or authority_url', () => {
-    const missingNote = buildCanonicalSource(
-      `<!-- oa:clause id=no-note confirm=notice_confirmed authority_url="https://example.com/s" -->
-### No Note
+  it.openspec('OA-TMP-062')('rejects confirm= that restates confirm_note/authority_url in the directive (SSOT: they belong in metadata.yaml)', () => {
+    const restatesNote = buildCanonicalSource(
+      `<!-- oa:clause id=restate-note confirm=notice_confirmed confirm_note="x" -->
+### Restate Note
 
 Body.
 
 `
     );
-    expect(() => compileCanonicalSourceString(missingNote, 'inline confirm missing note')).toThrow(
-      /confirm requires a confirm_note/
-    );
+    expect(() =>
+      compileCanonicalSourceString(restatesNote, 'inline confirm restate note', { fieldLookup: fieldLookupFor([SCR_FIELD]) })
+    ).toThrow(/must not restate confirm_note\/authority_url/);
 
-    const missingUrl = buildCanonicalSource(
-      `<!-- oa:clause id=no-url confirm=notice_confirmed confirm_note="x" -->
-### No URL
+    const restatesUrl = buildCanonicalSource(
+      `<!-- oa:clause id=restate-url confirm=notice_confirmed authority_url="https://example.com/s" -->
+### Restate Url
 
 Body.
 
 `
     );
-    expect(() => compileCanonicalSourceString(missingUrl, 'inline confirm missing url')).toThrow(
-      /confirm requires an http\(s\) authority_url/
+    expect(() =>
+      compileCanonicalSourceString(restatesUrl, 'inline confirm restate url', { fieldLookup: fieldLookupFor([SCR_FIELD]) })
+    ).toThrow(/must not restate confirm_note\/authority_url/);
+  });
+
+  it.openspec('OA-TMP-062')('rejects confirm= whose field is missing from metadata, is not an SCR field, or lacks note/url', () => {
+    const base = buildCanonicalSource(
+      `<!-- oa:clause id=compliance-recital confirm=notice_confirmed -->
+### Compliance Recital
+
+Body.
+
+`
     );
+
+    // (a) field missing from metadata
+    expect(() =>
+      compileCanonicalSourceString(base, 'inline confirm missing field', { fieldLookup: fieldLookupFor([]) })
+    ).toThrow(/has no matching field in metadata\.yaml/);
+
+    // (b) field present but not a statutory_compliance_representation
+    expect(() =>
+      compileCanonicalSourceString(base, 'inline confirm not-scr', {
+        fieldLookup: fieldLookupFor([{ name: 'notice_confirmed', type: 'boolean' }]),
+      })
+    ).toThrow(/must reference a field with statutory_compliance_representation: true/);
+
+    // (c) SCR field missing confirm_note
+    expect(() =>
+      compileCanonicalSourceString(base, 'inline confirm missing note', {
+        fieldLookup: fieldLookupFor([{ ...SCR_FIELD, confirm_note: '   ' }]),
+      })
+    ).toThrow(/requires a non-empty confirm_note/);
+
+    // (d) SCR field missing/invalid authority_url
+    expect(() =>
+      compileCanonicalSourceString(base, 'inline confirm missing url', {
+        fieldLookup: fieldLookupFor([{ ...SCR_FIELD, authority_url: undefined }]),
+      })
+    ).toThrow(/requires an http\(s\) authority_url/);
   });
 
   it.openspec('OA-TMP-062')('rejects confirm= with a non-field-name value (strict parser; "always" is not a sentinel)', () => {
     const source = buildCanonicalSource(
-      `<!-- oa:clause id=bad-name-confirm confirm=NoticeConfirmed confirm_note="x" authority_url="https://example.com/s" -->
+      `<!-- oa:clause id=bad-name-confirm confirm=NoticeConfirmed -->
 ### Bad Name Confirm
 
 Body.
@@ -229,7 +361,7 @@ Body.
     );
 
     const always = buildCanonicalSource(
-      `<!-- oa:clause id=always-confirm confirm=always confirm_note="x" authority_url="https://example.com/s" -->
+      `<!-- oa:clause id=always-confirm confirm=always -->
 ### Always Confirm
 
 Body.
