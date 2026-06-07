@@ -107,9 +107,11 @@ fields:
       practitioner as defined in s. 456.001 (Fla. Stat. section 542.43;
       health care practitioners are categorically excluded regardless of pay).
       When worker_category is Physician this MUST resolve to false. Gates the
-      CHOICE Act counsel-notice, confidential-information-acknowledgement, and
-      garden-leave clauses. AI-only field that drives conditional gating. Not
-      shown as a cover-term row.
+      CHOICE Act confidential-information-acknowledgement clause. (The
+      counsel-advisal-and-notice recital is separately gated by the
+      choice_act_advance_notice_confirmed statutory-compliance representation,
+      and garden leave by garden_leave_included.) AI-only field that drives
+      conditional gating. Not shown as a cover-term row.
     default: 'false'
     default_value_rationale: >-
       Defaulting to false keeps the CHOICE Act enhanced-enforcement procedural

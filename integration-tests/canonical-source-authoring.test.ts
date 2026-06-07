@@ -227,6 +227,18 @@ Body.
     expect(() => compileCanonicalSourceString(source, 'inline confirm bad-name source')).toThrow(
       /invalid field name "NoticeConfirmed"/
     );
+
+    const always = buildCanonicalSource(
+      `<!-- oa:clause id=always-confirm confirm=always confirm_note="x" authority_url="https://example.com/s" -->
+### Always Confirm
+
+Body.
+
+`
+    );
+    expect(() => compileCanonicalSourceString(always, 'inline confirm always source')).toThrow(
+      /invalid field name "always".*not a sentinel/
+    );
   });
 
   it.openspec('OA-TMP-055')('accepts legacy required section titles without section directives', () => {

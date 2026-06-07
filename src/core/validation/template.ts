@@ -40,18 +40,37 @@ function extractDocxText(docxPath: string): string {
   return paragraphs.join('\n');
 }
 
+/** Decode the handful of XML entities that OOXML escaping can introduce into
+ *  `<w:t>` text (notably `&amp;` for `&` in a URL), so a captured bracket URL
+ *  compares equal to the raw `authority_url` from metadata.yaml. */
+function decodeXmlEntities(value: string): string {
+  return value
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&apos;/g, "'")
+    .replace(/&amp;/g, '&');
+}
+
 /**
  * Enforce the `statutory_compliance_representation` contract against the rendered
- * template text.
+ * template text. This is the load-bearing guard that the decided `confirm=`
+ * behavior actually shipped — three checks per field:
  *
- * Presence of a `{IF !field}` conditional alone is NOT sufficient — the legacy
- * `when=field omitted="…"` mechanism also emits `{IF !field}`, so a field that
- * was wrongly left on `when=` (no CONFIRM bracket) would otherwise pass. We
- * therefore require the negated conditional to be immediately followed by the
- * literal highlighted `[CONFIRM before signing: …]` bracket, and we assert the
- * URL inside that bracket matches the field's metadata `authority_url` (the two
- * are authored in separate files — template.md and metadata.yaml — so this guards
- * against drift).
+ *  1. The clause renders the highlighted `[CONFIRM before signing: …; see <url>]`
+ *     bracket gated on `{IF !<field>}`. Presence of a bare `{IF !field}` is NOT
+ *     sufficient (the legacy `when=field omitted="…"` mechanism also emits one),
+ *     so the negated conditional MUST be immediately followed by the literal
+ *     bracket.
+ *  2. The URL inside the bracket EQUALS the field's metadata `authority_url`
+ *     (the two are authored in separate files — template.md and metadata.yaml —
+ *     so this guards against drift). Equality, not substring: a URL with an
+ *     extra suffix must fail.
+ *  3. The clause body always renders — i.e. the affirmative `{IF <field>}` form
+ *     is absent. A `confirm=` clause only ever emits `{IF !<field>}`; a legacy
+ *     `when=<field>` clause wraps its body in `{IF <field>}`. Asserting the
+ *     affirmative form is absent proves the body is unconditional and closes the
+ *     spoof where an `omitted="[CONFIRM …]"` string mimics the bracket.
  */
 export function checkStatutoryComplianceReps(
   searchableText: string,
@@ -61,27 +80,38 @@ export function checkStatutoryComplianceReps(
   const scrFields = fields.filter((f) => f.statutory_compliance_representation === true);
   if (scrFields.length === 0) return;
 
-  const confirmRe = /\{IF !(\w+)\}\s*(\[CONFIRM before signing:[^\]]*\])/g;
-  const bracketsByField = new Map<string, string>();
+  // Capture the field, the (possibly bracket-containing) note, and the URL. The
+  // note uses a lazy `[\s\S]*?` so a literal `]` inside it does not truncate the
+  // match; the URL is the non-space, non-`]` run after "; see ".
+  const confirmRe = /\{IF !(\w+)\}\s*\[CONFIRM before signing: [\s\S]*?; see ([^\]\s]+)\]/g;
+  const urlByField = new Map<string, string>();
   let match: RegExpExecArray | null;
   while ((match = confirmRe.exec(searchableText)) !== null) {
-    bracketsByField.set(match[1], match[2]);
+    urlByField.set(match[1], decodeXmlEntities(match[2]));
   }
 
   for (const field of scrFields) {
-    const bracket = bracketsByField.get(field.name);
-    if (!bracket) {
+    const url = urlByField.get(field.name);
+    if (url === undefined) {
       errors.push(
         `statutory_compliance_representation field "${field.name}" must be gated by a clause confirm= — ` +
-        `no "{IF !${field.name}} [CONFIRM before signing: …]" bracket found in the rendered template`
+        `no "{IF !${field.name}} [CONFIRM before signing: …; see <url>]" bracket found in the rendered template`
       );
       continue;
     }
-    if (field.authority_url && !bracket.includes(field.authority_url)) {
+    if (field.authority_url && url !== field.authority_url) {
       errors.push(
         `statutory_compliance_representation field "${field.name}" authority_url ` +
-        `("${field.authority_url}") does not match the URL in its rendered [CONFIRM …] bracket — ` +
-        `metadata.yaml and template.md have drifted`
+        `("${field.authority_url}") does not match the URL in its rendered [CONFIRM …] bracket ` +
+        `("${url}") — metadata.yaml and template.md have drifted`
+      );
+    }
+    // The recital body must render unconditionally: a confirm= clause never
+    // wraps its body in an affirmative {IF <field>}.
+    if (searchableText.includes(`{IF ${field.name}}`)) {
+      errors.push(
+        `statutory_compliance_representation field "${field.name}" must use confirm= (the recital body ` +
+        `always renders); found an affirmative "{IF ${field.name}}" indicating legacy when=/omitted gating`
       );
     }
   }

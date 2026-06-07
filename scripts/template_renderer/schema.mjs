@@ -29,7 +29,7 @@ const textClauseSchema = z.object({
   // dropped).
   confirm: z.string().regex(fieldNamePattern).optional(),
   confirm_note: textSchema.optional(),
-  authority_url: z.string().url().optional(),
+  authority_url: z.string().regex(/^https?:\/\/\S+$/, 'authority_url must be an http(s) URL').optional(),
 }).superRefine((clause, ctx) => {
   if (clause.confirm === undefined) {
     if (clause.confirm_note !== undefined || clause.authority_url !== undefined) {

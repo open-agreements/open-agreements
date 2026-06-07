@@ -55,9 +55,10 @@ template models both; which one applies is driven by `covered_employee`.
    preliminarily enjoin a covered employee from competing, dissolvable only by the
    employee's clear-and-convincing evidence (§ 542.45(5)). The enhanced track is
    available only if procedural prerequisites are met, which this template
-   surfaces in three gated clauses:
+   surfaces in three clauses:
    - `choice-act-counsel-notice` — written counsel advisal + ≥7-day notice
-     (§ 542.45(2)(a), (3)).
+     (§ 542.45(2)(a), (3)). A statutory-compliance representation gated by
+     `confirm=choice_act_advance_notice_confirmed` (see below).
    - `choice-act-confidential-info-acknowledgement` — written acknowledgement of
      receipt of confidential information or customer relationships
      (§ 542.45(2)(b)).

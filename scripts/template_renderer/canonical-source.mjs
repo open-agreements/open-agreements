@@ -276,6 +276,10 @@ function conditionFromValue(raw, filePath, label) {
 function fieldNameFromValue(raw, filePath, label) {
   const value = typeof raw === 'string' ? raw.trim() : '';
   invariant(
+    value.toLowerCase() !== ALWAYS,
+    `Canonical source (${filePath}) uses invalid field name "${value}" on ${label} ("always" is not a sentinel here; name a real boolean field)`
+  );
+  invariant(
     FIELD_NAME_RE.test(value),
     `Canonical source (${filePath}) uses invalid field name "${value}" on ${label}`
   );

@@ -45,6 +45,43 @@ describe('checkStatutoryComplianceReps', () => {
     expect(errors[0]).toMatch(/does not match the URL in its rendered \[CONFIRM …\] bracket/);
   });
 
+  it.openspec('OA-TMP-064')('fails when the bracket URL has an extra suffix (equality, not substring)', () => {
+    const errors: string[] = [];
+    checkStatutoryComplianceReps(renderedConfirmText(`${FIELD.authority_url}-extra`), [FIELD], errors);
+    expect(errors).toHaveLength(1);
+    expect(errors[0]).toMatch(/does not match the URL/);
+  });
+
+  it.openspec('OA-TMP-064')('fails when the body is gated by an affirmative {IF field} (legacy when=/omitted spoof)', () => {
+    const errors: string[] = [];
+    // A legacy when=/omitted clause wraps the body in {IF field} and could put a
+    // look-alike bracket (with the right URL) in omitted="…". The affirmative
+    // conditional proves the body is NOT unconditional.
+    const spoof = [
+      '{IF notice_confirmed}',
+      'Employer advised Employee in writing of the right to seek counsel.',
+      '{END-IF}',
+      '{IF !notice_confirmed}',
+      `[CONFIRM before signing: spoof; see ${FIELD.authority_url}]`,
+      '{END-IF}',
+    ].join('\n');
+    checkStatutoryComplianceReps(spoof, [FIELD], errors);
+    expect(errors).toHaveLength(1);
+    expect(errors[0]).toMatch(/must use confirm= \(the recital body always renders\)/);
+  });
+
+  it.openspec('OA-TMP-064')('tolerates a literal "]" inside the confirm_note', () => {
+    const errors: string[] = [];
+    const withBracketNote = [
+      'Body.',
+      '{IF !notice_confirmed}',
+      `[CONFIRM before signing: the advisal [memo] was given; see ${FIELD.authority_url}]`,
+      '{END-IF}',
+    ].join('\n');
+    checkStatutoryComplianceReps(withBracketNote, [FIELD], errors);
+    expect(errors).toEqual([]);
+  });
+
   it.openspec('OA-TMP-064')('is a no-op when no field is a statutory_compliance_representation', () => {
     const errors: string[] = [];
     checkStatutoryComplianceReps('any text', [{ name: 'ordinary_flag' }], errors);
