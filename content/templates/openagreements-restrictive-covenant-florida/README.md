@@ -65,8 +65,14 @@ template models both; which one applies is driven by `covered_employee`.
      (§ 542.43(5)), the noncompete period is reduced day-for-day by any nonworking
      portion of the notice period (§ 542.45(2)(c); see § 542.44).
 
-   The ≥7-day notice is an operational step the employer must actually perform;
-   reciting it does not by itself satisfy it.
+   The written counsel advisal and ≥7-day notice are operational steps the
+   employer must actually perform; reciting them does not by itself satisfy
+   them. The `choice-act-counsel-notice` recital is therefore a
+   *statutory compliance representation*: the `choice_act_advance_notice_confirmed`
+   field defaults to `false`, and until a human confirms the advisal and notice
+   were actually given, the recital renders followed by a yellow-highlighted
+   `[CONFIRM before signing: …; see § 542.45]` bracket rather than asserting
+   clean compliance (it is never silently dropped).
 
 ## Fields
 

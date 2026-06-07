@@ -333,8 +333,9 @@
           "id": "choice-act-counsel-notice",
           "heading": "CHOICE Act Counsel Advisal and Notice (Covered Employee)",
           "body": "Employer advised Employee, in writing, of the right to seek the advice of independent legal counsel before executing this agreement, and Employee acknowledges receiving that written advisal, in satisfaction of Fla. Stat. § 542.45(2)(a). Employer provided Employee with this proposed agreement at least seven days before the offer of employment was to expire (for a prospective covered employee) or at least seven days before the offer to enter into this agreement was to expire (for a current covered employee), in satisfaction of the notice requirement of Fla. Stat. § 542.45(3).",
-          "condition": "choice_act_advance_notice_confirmed",
-          "omitted_body": "[Intentionally Omitted.]"
+          "confirm": "choice_act_advance_notice_confirmed",
+          "confirm_note": "the written right-to-counsel advisal and at least 7-day advance notice were actually given before signing",
+          "authority_url": "https://www.flsenate.gov/Laws/Statutes/2025/542.45"
         },
         {
           "id": "choice-act-confidential-info-acknowledgement",

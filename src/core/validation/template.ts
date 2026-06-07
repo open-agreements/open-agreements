@@ -41,6 +41,53 @@ function extractDocxText(docxPath: string): string {
 }
 
 /**
+ * Enforce the `statutory_compliance_representation` contract against the rendered
+ * template text.
+ *
+ * Presence of a `{IF !field}` conditional alone is NOT sufficient — the legacy
+ * `when=field omitted="…"` mechanism also emits `{IF !field}`, so a field that
+ * was wrongly left on `when=` (no CONFIRM bracket) would otherwise pass. We
+ * therefore require the negated conditional to be immediately followed by the
+ * literal highlighted `[CONFIRM before signing: …]` bracket, and we assert the
+ * URL inside that bracket matches the field's metadata `authority_url` (the two
+ * are authored in separate files — template.md and metadata.yaml — so this guards
+ * against drift).
+ */
+export function checkStatutoryComplianceReps(
+  searchableText: string,
+  fields: { name: string; statutory_compliance_representation?: boolean; authority_url?: string }[],
+  errors: string[],
+): void {
+  const scrFields = fields.filter((f) => f.statutory_compliance_representation === true);
+  if (scrFields.length === 0) return;
+
+  const confirmRe = /\{IF !(\w+)\}\s*(\[CONFIRM before signing:[^\]]*\])/g;
+  const bracketsByField = new Map<string, string>();
+  let match: RegExpExecArray | null;
+  while ((match = confirmRe.exec(searchableText)) !== null) {
+    bracketsByField.set(match[1], match[2]);
+  }
+
+  for (const field of scrFields) {
+    const bracket = bracketsByField.get(field.name);
+    if (!bracket) {
+      errors.push(
+        `statutory_compliance_representation field "${field.name}" must be gated by a clause confirm= — ` +
+        `no "{IF !${field.name}} [CONFIRM before signing: …]" bracket found in the rendered template`
+      );
+      continue;
+    }
+    if (field.authority_url && !bracket.includes(field.authority_url)) {
+      errors.push(
+        `statutory_compliance_representation field "${field.name}" authority_url ` +
+        `("${field.authority_url}") does not match the URL in its rendered [CONFIRM …] bracket — ` +
+        `metadata.yaml and template.md have drifted`
+      );
+    }
+  }
+}
+
+/**
  * Validate that a template's metadata fields match the placeholders in its DOCX file.
  */
 export function validateTemplate(templateDir: string, templateId: string): TemplateValidationResult {
@@ -214,6 +261,14 @@ export function validateTemplate(templateDir: string, templateId: string): Templ
         }
       }
     }
+
+    // Confirm brackets may be injected via replacement values, so search both
+    // the original DOCX text and the replacement values.
+    checkStatutoryComplianceReps(
+      `${docxText}\n${Object.values(replacements).join('\n')}`,
+      metadata.fields,
+      errors,
+    );
   } else {
     // Original behavior: scan DOCX text directly for {tags}
     const text = extractDocxText(templatePath);
@@ -325,6 +380,8 @@ export function validateTemplate(templateDir: string, templateId: string): Templ
         );
       }
     }
+
+    checkStatutoryComplianceReps(text, metadata.fields, errors);
   }
 
   return { templateId, valid: errors.length === 0, errors, warnings };

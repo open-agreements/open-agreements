@@ -103,6 +103,54 @@ Do not reference the multiselect field itself directly in `{IF ...}`
 blocks. `{IF industry_modules}` is invalid because empty arrays are
 truthy in the template runtime; the validator will reject it.
 
+#### Statutory compliance representations
+
+Use `statutory_compliance_representation: true` for the rare boolean field
+whose `true` value asserts a *past real-world fact that is a statutory
+precondition to enforceability* — for example, that a required advance
+notice or written advisal was actually given before signing. This is a
+NARROW, opt-in category: it is only for reps that gate enforceability, not
+for ordinary representations (a purchase agreement may carry dozens of
+ordinary reps that should not all demand per-rep confirmation).
+
+```yaml
+- name: advance_notice_confirmed
+  type: boolean
+  statutory_compliance_representation: true
+  authority_url: https://www.flsenate.gov/Laws/Statutes/2025/542.45
+  description: >-
+    CONFIRM-BEFORE-SIGNING: set true only if a human has verified the
+    required advance notice was actually given (see <authority_url>). …
+  default: 'false'
+```
+
+Such a field MUST be `boolean`, MUST declare `default: 'false'`, and MUST
+declare an http(s) `authority_url` (the statute / practice-note link).
+`authority_url` is only valid on this category of field. Surface the
+confirmation warning in the field's own `description` (there is no separate
+"requires confirmation" array — everything a user fills requires
+confirmation).
+
+Bind the field to a clause with the renderer's `confirm=` directive (canonical
+`template.md`):
+
+```md
+<!-- oa:clause id=compliance-recital confirm=advance_notice_confirmed confirm_note="the required advance notice was actually given before signing" authority_url="https://www.flsenate.gov/Laws/Statutes/2025/542.45" -->
+### Compliance Recital
+
+<the past-tense recital body>
+```
+
+The clause body always renders. When the field is `false` (the default,
+unconfirmed) the renderer appends a yellow-highlighted
+`[CONFIRM before signing: <confirm_note>; see <authority_url>]` bracket so a
+human notices the open item; when the field is `true` the clause renders
+clean. `confirm=` names a single boolean field, requires both `confirm_note`
+and `authority_url`, and cannot be combined with `when=`/`omitted`. The
+validator enforces that every `statutory_compliance_representation` field is
+rendered as such a bracket and that the bracket URL matches the metadata
+`authority_url`.
+
 #### License values
 
 | Value | Description |

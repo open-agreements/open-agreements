@@ -22,6 +22,39 @@ const textClauseSchema = z.object({
   body: textSchema,
   condition: z.string().regex(fieldNamePattern).optional(),
   omitted_body: z.string().optional(),
+  // Statutory-compliance-representation gate (renderer `confirm=` directive).
+  // The clause body always renders; when `confirm` is false the layout appends
+  // a highlighted `[CONFIRM …; see <authority_url>]` bracket. Mutually exclusive
+  // with `condition`/`omitted_body` (a confirm clause is never conditionally
+  // dropped).
+  confirm: z.string().regex(fieldNamePattern).optional(),
+  confirm_note: textSchema.optional(),
+  authority_url: z.string().url().optional(),
+}).superRefine((clause, ctx) => {
+  if (clause.confirm === undefined) {
+    if (clause.confirm_note !== undefined || clause.authority_url !== undefined) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['confirm'],
+        message: 'confirm_note/authority_url are only valid on a clause with confirm',
+      });
+    }
+    return;
+  }
+  if (clause.confirm_note === undefined || clause.authority_url === undefined) {
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ['confirm'],
+      message: 'a confirm clause must declare both confirm_note and authority_url',
+    });
+  }
+  if (clause.condition !== undefined || clause.omitted_body !== undefined) {
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ['confirm'],
+      message: 'confirm is mutually exclusive with condition/omitted_body (a confirm clause always renders its body)',
+    });
+  }
 });
 
 const definitionTermSchema = z.object({

@@ -36,6 +36,29 @@ export interface FieldDefinition {
   derive_booleans?: boolean;
   section?: string;
   items?: FieldDefinition[];
+  /**
+   * Marks this boolean field as a *statutory compliance representation*: its
+   * `true` value asserts a past real-world fact that is a statutory precondition
+   * to the agreement's enforceability/validity (e.g. a required advance notice
+   * or written advisal that must actually have been given before signing).
+   *
+   * Deliberately NARROW — opt-in per field and reserved for the few reps that
+   * gate enforceability, NOT general representations (a purchase agreement may
+   * carry dozens of ordinary reps that should not all demand per-rep
+   * confirmation). When set, the field MUST be boolean with `default: 'false'`
+   * and MUST declare `authority_url`. A template clause references it via the
+   * renderer's `confirm=` directive, which renders the recital clean when the
+   * field is true and as a highlighted `[CONFIRM …]` bracket when it is false
+   * (never silently dropped). The confirmation warning rides in `description`.
+   */
+  statutory_compliance_representation?: boolean;
+  /**
+   * Statute / practice-note link used as the learn-more reference for a
+   * `statutory_compliance_representation` field (surfaced in the field
+   * description and the rendered `[CONFIRM …; see <authority_url>]` bracket).
+   * Only valid on a `statutory_compliance_representation` field.
+   */
+  authority_url?: string;
 }
 
 export const FieldDefinitionSchema: z.ZodType<FieldDefinition> = z.lazy(() =>
@@ -50,6 +73,8 @@ export const FieldDefinitionSchema: z.ZodType<FieldDefinition> = z.lazy(() =>
     derive_booleans: z.boolean().optional(),
     section: z.string().optional(),
     items: z.array(FieldDefinitionSchema).nonempty().optional(),
+    statutory_compliance_representation: z.boolean().optional(),
+    authority_url: z.string().optional(),
   }).superRefine((field, ctx) => {
     if (
       (field.type === 'enum' || field.type === 'multiselect') &&
@@ -97,6 +122,48 @@ export const FieldDefinitionSchema: z.ZodType<FieldDefinition> = z.lazy(() =>
         code: z.ZodIssueCode.custom,
         path: ['items'],
         message: 'Only fields with type "array" may define nested items',
+      });
+    }
+
+    // `statutory_compliance_representation` is a NARROW opt-in category for the
+    // few boolean reps whose truth is a statutory precondition to
+    // enforceability. Enforce its shape so the renderer's `confirm=` mechanism
+    // and the get_template confirmation surface stay sound.
+    if (field.statutory_compliance_representation === true) {
+      if (field.type !== 'boolean') {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ['statutory_compliance_representation'],
+          message: 'statutory_compliance_representation is only valid on a boolean field',
+        });
+      }
+      if (field.default !== 'false') {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ['default'],
+          message: "statutory_compliance_representation fields must declare default: 'false' (a compliance fact is unconfirmed until a human confirms it)",
+        });
+      }
+      if (field.authority_url === undefined) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ['authority_url'],
+          message: 'statutory_compliance_representation fields must declare an authority_url (statute / practice-note link)',
+        });
+      } else if (!/^https?:\/\/\S+$/.test(field.authority_url)) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ['authority_url'],
+          message: 'authority_url must be an http(s) URL',
+        });
+      }
+    } else if (field.authority_url !== undefined) {
+      // Keep the property scoped: authority_url has no meaning outside the
+      // statutory_compliance_representation category.
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['authority_url'],
+        message: 'authority_url is only valid on a statutory_compliance_representation field',
       });
     }
 
