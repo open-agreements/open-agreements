@@ -137,6 +137,110 @@ Legacy body.
     );
   });
 
+  it.openspec('OA-TMP-061')('compiles a confirm= clause into a statutory-compliance representation and renders a highlighted CONFIRM bracket gated on {IF !field}', async () => {
+    const { Packer } = await import('docx');
+    const AdmZip = (await import('adm-zip')).default;
+    const style = loadStyleProfile(stylePath);
+    const source = buildCanonicalSource(
+      `<!-- oa:clause id=compliance-recital confirm=notice_confirmed confirm_note="the required notice was actually given before signing" authority_url="https://example.com/statute/542.45" -->
+### Compliance Recital
+
+The party gave the required notice before signing.
+
+`
+    );
+
+    const compiled = compileCanonicalSourceString(source, 'inline confirm source');
+    const clause = compiled.contractSpec.sections.standard_terms.clauses.find(
+      (c) => c.id === 'compliance-recital'
+    );
+    expect(clause).toMatchObject({
+      id: 'compliance-recital',
+      confirm: 'notice_confirmed',
+      confirm_note: 'the required notice was actually given before signing',
+      authority_url: 'https://example.com/statute/542.45',
+    });
+    // A confirm clause is never conditionally dropped — it carries no when/omitted.
+    expect(clause).not.toHaveProperty('condition');
+    expect(clause).not.toHaveProperty('omitted_body');
+
+    const rendered = renderFromValidatedSpec(compiled.contractSpec, style);
+    const buffer = await Packer.toBuffer(rendered.document);
+    const xml = new AdmZip(buffer).getEntry('word/document.xml').getData().toString('utf-8');
+    // Body renders unconditionally; the bracket is gated on the negated field
+    // and highlighted yellow so a human notices the open item.
+    expect(xml).toContain('The party gave the required notice before signing.');
+    expect(xml).toContain('{IF !notice_confirmed}');
+    expect(xml).toContain('[CONFIRM before signing: the required notice was actually given before signing; see https://example.com/statute/542.45]');
+    expect(xml).toContain('w:val="yellow"');
+  });
+
+  it.openspec('OA-TMP-062')('rejects confirm= combined with when/omitted', () => {
+    const source = buildCanonicalSource(
+      `<!-- oa:clause id=bad-confirm confirm=notice_confirmed when=notice_confirmed confirm_note="x" authority_url="https://example.com/s" -->
+### Bad Confirm
+
+Body.
+
+`
+    );
+    expect(() => compileCanonicalSourceString(source, 'inline confirm+when source')).toThrow(
+      /cannot combine confirm with when\/omitted/
+    );
+  });
+
+  it.openspec('OA-TMP-062')('rejects confirm= missing confirm_note or authority_url', () => {
+    const missingNote = buildCanonicalSource(
+      `<!-- oa:clause id=no-note confirm=notice_confirmed authority_url="https://example.com/s" -->
+### No Note
+
+Body.
+
+`
+    );
+    expect(() => compileCanonicalSourceString(missingNote, 'inline confirm missing note')).toThrow(
+      /confirm requires a confirm_note/
+    );
+
+    const missingUrl = buildCanonicalSource(
+      `<!-- oa:clause id=no-url confirm=notice_confirmed confirm_note="x" -->
+### No URL
+
+Body.
+
+`
+    );
+    expect(() => compileCanonicalSourceString(missingUrl, 'inline confirm missing url')).toThrow(
+      /confirm requires an http\(s\) authority_url/
+    );
+  });
+
+  it.openspec('OA-TMP-062')('rejects confirm= with a non-field-name value (strict parser; "always" is not a sentinel)', () => {
+    const source = buildCanonicalSource(
+      `<!-- oa:clause id=bad-name-confirm confirm=NoticeConfirmed confirm_note="x" authority_url="https://example.com/s" -->
+### Bad Name Confirm
+
+Body.
+
+`
+    );
+    expect(() => compileCanonicalSourceString(source, 'inline confirm bad-name source')).toThrow(
+      /invalid field name "NoticeConfirmed"/
+    );
+
+    const always = buildCanonicalSource(
+      `<!-- oa:clause id=always-confirm confirm=always confirm_note="x" authority_url="https://example.com/s" -->
+### Always Confirm
+
+Body.
+
+`
+    );
+    expect(() => compileCanonicalSourceString(always, 'inline confirm always source')).toThrow(
+      /invalid field name "always".*not a sentinel/
+    );
+  });
+
   it.openspec('OA-TMP-055')('accepts legacy required section titles without section directives', () => {
     const compiled = compileCanonicalSourceString(buildCanonicalSource(), 'inline legacy section source');
 

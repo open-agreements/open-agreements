@@ -107,9 +107,11 @@ fields:
       practitioner as defined in s. 456.001 (Fla. Stat. section 542.43;
       health care practitioners are categorically excluded regardless of pay).
       When worker_category is Physician this MUST resolve to false. Gates the
-      CHOICE Act counsel-notice, confidential-information-acknowledgement, and
-      garden-leave clauses. AI-only field that drives conditional gating. Not
-      shown as a cover-term row.
+      CHOICE Act confidential-information-acknowledgement clause. (The
+      counsel-advisal-and-notice recital is separately gated by the
+      choice_act_advance_notice_confirmed statutory-compliance representation,
+      and garden leave by garden_leave_included.) AI-only field that drives
+      conditional gating. Not shown as a cover-term row.
     default: 'false'
     default_value_rationale: >-
       Defaulting to false keeps the CHOICE Act enhanced-enforcement procedural
@@ -120,24 +122,31 @@ fields:
     section: AI Analysis
   - name: choice_act_advance_notice_confirmed
     type: boolean
+    statutory_compliance_representation: true
+    authority_url: https://www.flsenate.gov/Laws/Statutes/2025/542.45
     description: >-
-      Whether the user has CONFIRMED that the CHOICE Act pre-execution
-      compliance steps were actually performed: the covered employee was
-      advised, in writing, of the right to seek counsel, and was given at least
-      7 days' advance notice of the proposed agreement (Fla. Stat. section
-      542.45(2)(a), (3)). Gates the past-tense counsel-advisal-and-notice
-      recital so the document does not assert compliance that did not occur.
-      INTERIM SAFE DEFAULT pending the chosen mechanism in
-      open-agreements#408 (compliance-representation handling). Not shown as a
-      cover-term row.
+      CONFIRM-BEFORE-SIGNING: set true ONLY if a human has verified that the
+      CHOICE Act pre-execution compliance steps actually occurred — the covered
+      employee was advised, in writing, of the right to seek counsel, and was
+      given at least 7 days' advance notice of the proposed agreement (Fla. Stat.
+      section 542.45(2)(a), (3); see
+      https://www.flsenate.gov/Laws/Statutes/2025/542.45). This is a statutory-
+      compliance representation: its truth is a precondition to CHOICE Act
+      enforceability, so setting it true asserts a past fact that must really
+      have happened. When false (the default), the counsel-advisal-and-notice
+      recital still renders but is followed by a yellow-highlighted
+      "[CONFIRM before signing: …]" bracket flagging the open item for human
+      review — the clause is never silently dropped. The calling LLM MUST ask the
+      human to confirm the advisal and 7-day notice were given before setting
+      this true. Not shown as a cover-term row.
     default: 'false'
     default_value_rationale: >-
       Conservative default false: the counsel-advisal/advance-notice recital is
-      a past-tense representation of real-world compliance the employer must
-      actually have performed. Defaulting to false omits the recital unless the
-      user affirmatively confirms the advisal and 7-day notice were given,
-      avoiding an accidental false representation. The calling LLM should ask
-      the human to confirm before setting this true.
+      a past-tense representation of real-world statutory compliance the employer
+      must actually have performed. Defaulting to false keeps the recital
+      flagged with a highlighted CONFIRM bracket (rather than asserting clean
+      compliance) until a human affirmatively confirms the advisal and 7-day
+      notice were given, avoiding an accidental false representation.
     section: AI Analysis
   - name: garden_leave_included
     type: boolean

@@ -269,6 +269,25 @@ function conditionFromValue(raw, filePath, label) {
   return value;
 }
 
+// Strict single field-name parser for `confirm=`. Unlike conditionFromValue,
+// `always` is NOT a sentinel here — a confirm gate must name a real boolean
+// field, so any non-field-name value (including "always") is an error rather
+// than a silent no-op.
+function fieldNameFromValue(raw, filePath, label) {
+  const value = typeof raw === 'string' ? raw.trim() : '';
+  invariant(
+    value.toLowerCase() !== ALWAYS,
+    `Canonical source (${filePath}) uses invalid field name "${value}" on ${label} ("always" is not a sentinel here; name a real boolean field)`
+  );
+  invariant(
+    FIELD_NAME_RE.test(value),
+    `Canonical source (${filePath}) uses invalid field name "${value}" on ${label}`
+  );
+  return value;
+}
+
+const AUTHORITY_URL_RE = /^https?:\/\/\S+$/;
+
 function parseCoverTerms(lines, filePath) {
   const tableStart = lines.findIndex((line) => line.trim().startsWith('|'));
   invariant(tableStart >= 0, `Canonical source (${filePath}) is missing the Cover Terms table`);
@@ -475,6 +494,42 @@ function parseStandardTerms(lines, filePath) {
       `clause "${id}"`
     );
     const omittedBody = clauseDirective.attrs.omitted ?? clauseDirective.attrs.omitted_body;
+
+    // `confirm=<field>` marks a statutory-compliance-representation recital: the
+    // body always renders, and the layout appends a highlighted
+    // `[CONFIRM …; see <authority_url>]` bracket when <field> is false. It is
+    // mutually exclusive with when=/omitted (a confirm clause is never dropped).
+    let confirm;
+    if (clauseDirective.attrs.confirm !== undefined) {
+      confirm = fieldNameFromValue(
+        clauseDirective.attrs.confirm,
+        filePath,
+        `clause "${id}" confirm`
+      );
+      invariant(
+        !condition && omittedBody === undefined,
+        `Canonical source (${filePath}) clause "${id}" cannot combine confirm with when/omitted`
+      );
+      const confirmNote = (clauseDirective.attrs.confirm_note ?? '').trim();
+      const authorityUrl = (clauseDirective.attrs.authority_url ?? '').trim();
+      invariant(
+        confirmNote.length > 0,
+        `Canonical source (${filePath}) clause "${id}" confirm requires a confirm_note`
+      );
+      invariant(
+        AUTHORITY_URL_RE.test(authorityUrl),
+        `Canonical source (${filePath}) clause "${id}" confirm requires an http(s) authority_url`
+      );
+      clauses.push({
+        id,
+        heading,
+        body: paragraphTextFromLines(clauseLines),
+        confirm,
+        confirm_note: confirmNote,
+        authority_url: authorityUrl,
+      });
+      continue;
+    }
 
     clauses.push({
       id,
@@ -870,6 +925,9 @@ function projectToContractSpec(normalized, frontmatter, filePath) {
                 body: clause.body,
                 ...(clause.condition ? { condition: clause.condition } : {}),
                 ...(clause.omitted_body ? { omitted_body: clause.omitted_body } : {}),
+                ...(clause.confirm ? { confirm: clause.confirm } : {}),
+                ...(clause.confirm_note ? { confirm_note: clause.confirm_note } : {}),
+                ...(clause.authority_url ? { authority_url: clause.authority_url } : {}),
               }
         )),
       },

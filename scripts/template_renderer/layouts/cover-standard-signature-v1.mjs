@@ -650,6 +650,34 @@ function clauseHeadingParagraph(index, heading, style) {
   });
 }
 
+// Highlighted bracket flagging a statutory-compliance representation that has
+// not yet been human-confirmed. Static text (no {field} tag), so the fill
+// pipeline leaves the yellow highlight intact; it only appears inside the
+// {IF !<confirm>} block, so a confirmed fill drops it cleanly.
+function confirmBracketParagraph(note, authorityUrl, style) {
+  return new Paragraph({
+    style: 'OAClauseBody',
+    contextualSpacing: false,
+    spacing: {
+      before: 0,
+      after: style.spacing.body_after,
+      line: style.spacing.line,
+      beforeAutoSpacing: false,
+      afterAutoSpacing: false,
+    },
+    children: [
+      new TextRun({
+        text: `[CONFIRM before signing: ${note}; see ${authorityUrl}]`,
+        font: style.fonts.body,
+        size: 22,
+        bold: true,
+        color: style.colors.ink,
+        highlight: 'yellow',
+      }),
+    ],
+  });
+}
+
 function clauseParagraphs(index, clauseItem, style, opts = {}) {
   if (clauseItem.type === 'definitions') {
     return [
@@ -661,6 +689,17 @@ function clauseParagraphs(index, clauseItem, style, opts = {}) {
   const headingParagraph = clauseHeadingParagraph(index, clauseItem.heading, style);
   const termsOpt = opts.terms;
   const bodyParas = bodyParagraphsFromText(clauseItem.body, style, { size: 22, style: 'OAClauseBody', terms: termsOpt });
+
+  if (clauseItem.confirm) {
+    // Statutory-compliance representation: render the recital body
+    // unconditionally, then append a highlighted [CONFIRM …] bracket gated on
+    // {IF !<confirm>} so it shows only while the fact is unconfirmed. Never a
+    // silent omit; never future-tense.
+    const ifNotOpen = bodyParagraph(`{IF !${clauseItem.confirm}}`, style, { size: 22, style: 'OAClauseBody', terms: [] });
+    const ifClose = bodyParagraph('{END-IF}', style, { size: 22, style: 'OAClauseBody', terms: [] });
+    const confirmPara = confirmBracketParagraph(clauseItem.confirm_note, clauseItem.authority_url, style);
+    return [headingParagraph, ...bodyParas, ifNotOpen, confirmPara, ifClose];
+  }
 
   if (clauseItem.condition && clauseItem.omitted_body) {
     // Wrap body in {IF condition} and omitted_body in {IF !condition}

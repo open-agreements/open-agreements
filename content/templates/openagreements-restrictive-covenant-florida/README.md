@@ -55,9 +55,10 @@ template models both; which one applies is driven by `covered_employee`.
    preliminarily enjoin a covered employee from competing, dissolvable only by the
    employee's clear-and-convincing evidence (§ 542.45(5)). The enhanced track is
    available only if procedural prerequisites are met, which this template
-   surfaces in three gated clauses:
+   surfaces in three clauses:
    - `choice-act-counsel-notice` — written counsel advisal + ≥7-day notice
-     (§ 542.45(2)(a), (3)).
+     (§ 542.45(2)(a), (3)). A statutory-compliance representation gated by
+     `confirm=choice_act_advance_notice_confirmed` (see below).
    - `choice-act-confidential-info-acknowledgement` — written acknowledgement of
      receipt of confidential information or customer relationships
      (§ 542.45(2)(b)).
@@ -65,8 +66,14 @@ template models both; which one applies is driven by `covered_employee`.
      (§ 542.43(5)), the noncompete period is reduced day-for-day by any nonworking
      portion of the notice period (§ 542.45(2)(c); see § 542.44).
 
-   The ≥7-day notice is an operational step the employer must actually perform;
-   reciting it does not by itself satisfy it.
+   The written counsel advisal and ≥7-day notice are operational steps the
+   employer must actually perform; reciting them does not by itself satisfy
+   them. The `choice-act-counsel-notice` recital is therefore a
+   *statutory compliance representation*: the `choice_act_advance_notice_confirmed`
+   field defaults to `false`, and until a human confirms the advisal and notice
+   were actually given, the recital renders followed by a yellow-highlighted
+   `[CONFIRM before signing: …; see § 542.45]` bracket rather than asserting
+   clean compliance (it is never silently dropped).
 
 ## Fields
 
