@@ -103,6 +103,117 @@ Do not reference the multiselect field itself directly in `{IF ...}`
 blocks. `{IF industry_modules}` is invalid because empty arrays are
 truthy in the template runtime; the validator will reject it.
 
+#### Statutory compliance representations
+
+Use `statutory_compliance_representation: true` for the rare boolean field
+whose `true` value asserts a *past real-world fact that is a statutory
+precondition to enforceability* — for example, that a required advance
+notice or written advisal was actually given before signing. This is a
+NARROW, opt-in category: it is only for reps that gate enforceability, not
+for ordinary representations (a purchase agreement may carry dozens of
+ordinary reps that should not all demand per-rep confirmation).
+
+```yaml
+- name: advance_notice_confirmed
+  type: boolean
+  statutory_compliance_representation: true
+  authority_url: https://www.flsenate.gov/Laws/Statutes/2025/542.45
+  confirm_note: the required advance notice was actually given before signing
+  description: >-
+    CONFIRM-BEFORE-SIGNING: set true only if a human has verified the
+    required advance notice was actually given (see <authority_url>). …
+  default: 'false'
+```
+
+Such a field MUST be `boolean`, MUST declare `default: 'false'`, MUST declare
+an http(s) `authority_url` (the statute / practice-note link), and MUST declare
+a non-empty `confirm_note` (the short reason shown inside the rendered
+`[CONFIRM …]` bracket). `authority_url` and `confirm_note` are only valid on
+this category of field. Surface the broader confirmation warning in the field's
+own `description` (there is no separate "requires confirmation" array —
+everything a user fills requires confirmation).
+
+Bind the field to a clause with the renderer's `confirm=` directive (canonical
+`template.md`):
+
+```md
+<!-- oa:clause id=compliance-recital confirm=advance_notice_confirmed -->
+### Compliance Recital
+
+<the past-tense recital body>
+```
+
+The directive names **only** the field. The `confirm_note` and `authority_url`
+shown in the bracket are pulled from that field's `metadata.yaml` entry — the
+canonical compiler reads the sibling `metadata.yaml` — so they live in exactly
+one place (see "Single source of truth" below). Restating `confirm_note` or
+`authority_url` in the directive is a compile error.
+
+The clause body always renders. When the field is `false` (the default,
+unconfirmed) the renderer appends a yellow-highlighted
+`[CONFIRM before signing: <confirm_note>; see <authority_url>]` bracket so a
+human notices the open item; when the field is `true` the clause renders
+clean. The validator enforces that every `statutory_compliance_representation`
+field is rendered as such a bracket and that the bracket's URL and note match
+the metadata `authority_url`/`confirm_note`.
+
+`confirm=` names a single boolean field. It MAY also carry a `when=<gate>`
+applicability gate (e.g. `confirm=advance_notice_confirmed when=covered_employee`),
+in which case the whole clause — body and CONFIRM bracket — is fully absent
+unless the gate is true; this is how a compliance recital that only applies in
+some configurations avoids appearing (with a stray bracket) in the others.
+`confirm=` cannot be combined with `omitted=` (a confirm clause is never replaced
+by a placeholder).
+
+**Cover-page notice.** Whenever a template has any `confirm=` clause, the
+renderer also places a yellow confirmation notice on page one (above the Cover
+Terms) listing each still-unconfirmed *applicable* item, gated on a derived
+`any_confirmation_pending` boolean. A reader who reviews only the Cover Terms
+still sees that confirmations are outstanding. No authoring is required — it is
+emitted automatically from the `confirm=` clauses.
+
+For the `authority_url`, prefer a curated reference page (e.g. an
+`https://openagreements.org/legal/...` card) over a raw statute URL where one
+exists: the card is easier for a layperson to read and keeps the current
+primary-law links in a single place, so the in-document link does not rot.
+
+#### Conditional clauses: clean omission vs. placeholder
+
+A `when=<field>` clause renders only when the field is true. There are two
+exclusion styles:
+
+- **`when=<field>` with NO `omitted=`** → the clause is **fully absent** (no
+  heading, no placeholder) when the field is false. Prefer this for optional
+  covenants and elective terms, so an excluded clause does not imply it was
+  expected (e.g. an absent garden-leave or non-compete clause should simply not
+  appear rather than advertise itself as "[Intentionally Omitted.]").
+- **`when=<field> omitted="<text>"`** → the heading always renders and the body
+  is swapped for `<text>` when the field is false. Use only when a numbered
+  placeholder is genuinely desired.
+
+Clause numbers are assigned by the renderer (not hand-authored) and the fill
+pipeline **renumbers the surviving clauses sequentially** after a clause is
+omitted, so a fully-absent clause leaves no gap. Cross-references use the
+`[[clause:<id>]]` mechanism (which resolves to the clause's heading text, not its
+number), so renumbering never breaks a reference.
+
+#### Single source of truth: `metadata.yaml` vs `template.md`
+
+OpenAgreements templates keep field metadata and document prose in separate
+files, with one owner each:
+
+- **`metadata.yaml` owns field-level metadata** — field names, types, defaults,
+  descriptions, and per-field properties like `authority_url` and `confirm_note`.
+  The renderer and the MCP/`get_template` surface both read from here.
+- **`template.md` (canonical authoring) owns document content** — clause prose,
+  recital text, headings, and the directives that bind fields to that prose.
+
+Do not restate a field's metadata in `template.md`. A `confirm=<field>`
+directive references the field by name; the renderer resolves the field's
+`confirm_note`/`authority_url` from `metadata.yaml` rather than having them
+repeated in the directive. This keeps a single authoring source, so there is
+nothing to drift between the two files.
+
 #### License values
 
 | Value | Description |

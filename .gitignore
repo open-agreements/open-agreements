@@ -56,3 +56,8 @@ integration-tests/OPENSPEC_TRACEABILITY.md
 *.dxt
 .env*.local
 .env
+
+# Word for Mac / Office lockfiles
+~$*.docx
+~$*.xlsx
+~$*.pptx

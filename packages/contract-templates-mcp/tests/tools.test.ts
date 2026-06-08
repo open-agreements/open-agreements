@@ -347,7 +347,7 @@ describe('contract-templates-mcp tools', () => {
         employee_title: 'Vice President of Sales',
         effective_date: '2026-04-28',
         worker_category: 'Executive',
-        restriction_pathways: 'Executive or Management Personnel, Trade Secret Protection',
+        applicable_noncompete_exceptions: 'Executive or Management Personnel, Trade Secret Protection',
         employee_nonsolicit_included: 'true',
         customer_nonsolicit_included: 'true',
         noncompete_included: 'true',

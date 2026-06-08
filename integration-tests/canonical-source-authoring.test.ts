@@ -1,12 +1,34 @@
+import { mkdtempSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { describe, expect } from 'vitest';
 import { itAllure } from './helpers/allure-test.js';
-import { compileCanonicalSourceString } from '../scripts/template_renderer/canonical-source.mjs';
+import {
+  buildFieldLookup,
+  compileCanonicalSourceFile,
+  compileCanonicalSourceString,
+} from '../scripts/template_renderer/canonical-source.mjs';
 import { loadStyleProfile, renderFromValidatedSpec } from '../scripts/template_renderer/index.mjs';
 
 const it = itAllure.epic('Filling & Rendering');
 
 const stylePath = join(import.meta.dirname, '..', 'scripts', 'template-specs', 'styles', 'openagreements-default-v1.json');
+
+// A valid statutory-compliance-representation field as it would appear in
+// metadata.yaml. confirm= clauses resolve confirm_note/authority_url from here
+// (SSOT), so tests supply it via { fieldLookup }.
+const SCR_FIELD = {
+  name: 'notice_confirmed',
+  type: 'boolean',
+  statutory_compliance_representation: true,
+  confirm_note: 'the required notice was actually given before signing',
+  authority_url: 'https://example.com/statute/542.45',
+  default: 'false',
+};
+
+function fieldLookupFor(fields) {
+  return buildFieldLookup({ fields });
+}
 
 function buildCanonicalSource(extraBody = '') {
   return `---
@@ -134,6 +156,315 @@ Legacy body.
     ]);
     expect(compiled.contractSpec.sections.standard_terms.clauses).not.toContainEqual(
       expect.objectContaining({ id: 'legacy-clause' })
+    );
+  });
+
+  it.openspec('OA-TMP-061')('compiles a confirm= clause into a statutory-compliance representation, resolving note/url from metadata, and renders a highlighted CONFIRM bracket gated on {IF !field}', async () => {
+    const { Packer } = await import('docx');
+    const AdmZip = (await import('adm-zip')).default;
+    const style = loadStyleProfile(stylePath);
+    // SSOT: the directive names only the field; confirm_note/authority_url come
+    // from metadata.yaml via the field lookup.
+    const source = buildCanonicalSource(
+      `<!-- oa:clause id=compliance-recital confirm=notice_confirmed -->
+### Compliance Recital
+
+The party gave the required notice before signing.
+
+`
+    );
+
+    const compiled = compileCanonicalSourceString(source, 'inline confirm source', {
+      fieldLookup: fieldLookupFor([SCR_FIELD]),
+    });
+    const clause = compiled.contractSpec.sections.standard_terms.clauses.find(
+      (c) => c.id === 'compliance-recital'
+    );
+    expect(clause).toMatchObject({
+      id: 'compliance-recital',
+      confirm: 'notice_confirmed',
+      confirm_note: 'the required notice was actually given before signing',
+      authority_url: 'https://example.com/statute/542.45',
+    });
+    // A confirm clause is never conditionally dropped — it carries no when/omitted.
+    expect(clause).not.toHaveProperty('condition');
+    expect(clause).not.toHaveProperty('omitted_body');
+
+    const rendered = renderFromValidatedSpec(compiled.contractSpec, style);
+    const buffer = await Packer.toBuffer(rendered.document);
+    const xml = new AdmZip(buffer).getEntry('word/document.xml').getData().toString('utf-8');
+    // Body renders unconditionally; the bracket is gated on the negated field
+    // and highlighted yellow so a human notices the open item.
+    expect(xml).toContain('The party gave the required notice before signing.');
+    expect(xml).toContain('{IF !notice_confirmed}');
+    expect(xml).toContain('[CONFIRM before signing: the required notice was actually given before signing; see https://example.com/statute/542.45]');
+    expect(xml).toContain('w:val="yellow"');
+  });
+
+  it.openspec('OA-TMP-065')('compileCanonicalSourceFile resolves confirm= note/url from the sibling metadata.yaml', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'oa-canonical-confirm-'));
+    writeFileSync(
+      join(dir, 'template.md'),
+      buildCanonicalSource(
+        `<!-- oa:clause id=compliance-recital confirm=notice_confirmed -->
+### Compliance Recital
+
+The party gave the required notice before signing.
+
+`
+      )
+    );
+    writeFileSync(
+      join(dir, 'metadata.yaml'),
+      `name: Sibling Metadata Test
+source_url: https://example.com
+version: "1.0"
+license: CC0-1.0
+allow_derivatives: true
+attribution_text: test
+fields:
+  - name: notice_confirmed
+    type: boolean
+    statutory_compliance_representation: true
+    confirm_note: the required notice was actually given before signing
+    authority_url: https://example.com/statute/542.45
+    description: confirm before signing
+    default: 'false'
+`
+    );
+
+    const compiled = compileCanonicalSourceFile(join(dir, 'template.md'));
+    const clause = compiled.contractSpec.sections.standard_terms.clauses.find(
+      (c) => c.id === 'compliance-recital'
+    );
+    expect(clause).toMatchObject({
+      confirm: 'notice_confirmed',
+      confirm_note: 'the required notice was actually given before signing',
+      authority_url: 'https://example.com/statute/542.45',
+    });
+  });
+
+  it.openspec('OA-TMP-065')('renders a confirm_note containing special characters (quotes/brackets) without breaking the layout', async () => {
+    const { Packer } = await import('docx');
+    const AdmZip = (await import('adm-zip')).default;
+    const style = loadStyleProfile(stylePath);
+    const trickyNote = `the "advisal" [and notice] were given before signing`;
+    const source = buildCanonicalSource(
+      `<!-- oa:clause id=compliance-recital confirm=notice_confirmed -->
+### Compliance Recital
+
+The party gave the required notice before signing.
+
+`
+    );
+
+    const compiled = compileCanonicalSourceString(source, 'inline confirm special-chars source', {
+      fieldLookup: fieldLookupFor([{ ...SCR_FIELD, confirm_note: trickyNote }]),
+    });
+    const rendered = renderFromValidatedSpec(compiled.contractSpec, style);
+    const buffer = await Packer.toBuffer(rendered.document);
+    const xml = new AdmZip(buffer).getEntry('word/document.xml').getData().toString('utf-8');
+    expect(xml).toContain('{IF !notice_confirmed}');
+    expect(xml).toContain('w:val="yellow"');
+    // The bracket renders with the special-character note intact (XML-escaped).
+    expect(xml).toContain('[CONFIRM before signing: the &quot;advisal&quot; [and notice] were given before signing; see https://example.com/statute/542.45]');
+  });
+
+  it.openspec('OA-TMP-068')('allows confirm= combined with when= as an applicability gate and wraps the whole clause (body + CONFIRM bracket) in {IF condition}', async () => {
+    const { Packer } = await import('docx');
+    const AdmZip = (await import('adm-zip')).default;
+    const style = loadStyleProfile(stylePath);
+    const source = buildCanonicalSource(
+      `<!-- oa:clause id=gated-recital when=covered_party confirm=notice_confirmed -->
+### Gated Recital
+
+The party gave the required notice before signing.
+
+`
+    );
+
+    const compiled = compileCanonicalSourceString(source, 'inline confirm+when source', {
+      fieldLookup: fieldLookupFor([SCR_FIELD]),
+    });
+    const clause = compiled.contractSpec.sections.standard_terms.clauses.find(
+      (c) => c.id === 'gated-recital'
+    );
+    expect(clause).toMatchObject({ confirm: 'notice_confirmed', condition: 'covered_party' });
+    expect(clause).not.toHaveProperty('omitted_body');
+
+    const rendered = renderFromValidatedSpec(compiled.contractSpec, style);
+    const buffer = await Packer.toBuffer(rendered.document);
+    const xml = new AdmZip(buffer).getEntry('word/document.xml').getData().toString('utf-8');
+    const text = xml.replace(/<[^>]+>/g, '');
+    // The applicability gate wraps the heading, body and the CONFIRM bracket; the
+    // inner {IF !field} + bracket survives so the compliance validator still matches.
+    expect(text).toContain('{IF covered_party}');
+    expect(text).toContain('{IF !notice_confirmed}');
+    expect(text).toContain('[CONFIRM before signing: the required notice was actually given before signing; see https://example.com/statute/542.45]');
+    // {IF covered_party} opens before the {IF !notice_confirmed} bracket gate.
+    expect(text.indexOf('{IF covered_party}')).toBeLessThan(text.indexOf('{IF !notice_confirmed}'));
+  });
+
+  it.openspec('OA-TMP-069')('rejects confirm= combined with omitted (a confirm clause is never replaced by a placeholder)', () => {
+    const source = buildCanonicalSource(
+      `<!-- oa:clause id=bad-confirm confirm=notice_confirmed omitted="[Intentionally Omitted.]" -->
+### Bad Confirm
+
+Body.
+
+`
+    );
+    expect(() =>
+      compileCanonicalSourceString(source, 'inline confirm+omitted source', { fieldLookup: fieldLookupFor([SCR_FIELD]) })
+    ).toThrow(/cannot combine confirm with omitted/);
+  });
+
+  it.openspec('OA-TMP-066')('when= without omitted= wraps heading and body in {IF condition} so the clause is fully absent', async () => {
+    const { Packer } = await import('docx');
+    const AdmZip = (await import('adm-zip')).default;
+    const style = loadStyleProfile(stylePath);
+    const source = buildCanonicalSource(
+      `<!-- oa:clause id=optional-clause when=clause_included -->
+### Optional Clause
+
+This optional clause body only appears when included.
+
+`
+    );
+
+    const compiled = compileCanonicalSourceString(source, 'inline clean-omission source');
+    const clause = compiled.contractSpec.sections.standard_terms.clauses.find(
+      (c) => c.id === 'optional-clause'
+    );
+    expect(clause).toMatchObject({ condition: 'clause_included' });
+    expect(clause).not.toHaveProperty('omitted_body');
+
+    const rendered = renderFromValidatedSpec(compiled.contractSpec, style);
+    const buffer = await Packer.toBuffer(rendered.document);
+    const xml = new AdmZip(buffer).getEntry('word/document.xml').getData().toString('utf-8');
+    const text = xml.replace(/<[^>]+>/g, '');
+    // The {IF clause_included} gate opens BEFORE the heading text (heading is
+    // inside the gate) and there is no [Intentionally Omitted.] placeholder.
+    expect(text).toContain('{IF clause_included}');
+    expect(text).not.toContain('Intentionally Omitted');
+    expect(text.indexOf('{IF clause_included}')).toBeLessThan(text.indexOf('Optional Clause'));
+  });
+
+  it.openspec('OA-TMP-067')('when= with omitted= keeps the heading and a placeholder', async () => {
+    const { Packer } = await import('docx');
+    const AdmZip = (await import('adm-zip')).default;
+    const style = loadStyleProfile(stylePath);
+    const source = buildCanonicalSource(
+      `<!-- oa:clause id=placeholder-clause when=clause_included omitted="[Intentionally Omitted.]" -->
+### Placeholder Clause
+
+This body is swapped for a placeholder when excluded.
+
+`
+    );
+
+    const compiled = compileCanonicalSourceString(source, 'inline placeholder source');
+    const clause = compiled.contractSpec.sections.standard_terms.clauses.find(
+      (c) => c.id === 'placeholder-clause'
+    );
+    expect(clause).toMatchObject({ condition: 'clause_included', omitted_body: '[Intentionally Omitted.]' });
+
+    const rendered = renderFromValidatedSpec(compiled.contractSpec, style);
+    const buffer = await Packer.toBuffer(rendered.document);
+    const xml = new AdmZip(buffer).getEntry('word/document.xml').getData().toString('utf-8');
+    const text = xml.replace(/<[^>]+>/g, '');
+    // The heading is OUTSIDE the gate (always renders) and the placeholder is present.
+    expect(text).toContain('Placeholder Clause');
+    expect(text).toContain('[Intentionally Omitted.]');
+    expect(text.indexOf('Placeholder Clause')).toBeLessThan(text.indexOf('{IF clause_included}'));
+  });
+
+  it.openspec('OA-TMP-062')('rejects confirm= that restates confirm_note/authority_url in the directive (SSOT: they belong in metadata.yaml)', () => {
+    const restatesNote = buildCanonicalSource(
+      `<!-- oa:clause id=restate-note confirm=notice_confirmed confirm_note="x" -->
+### Restate Note
+
+Body.
+
+`
+    );
+    expect(() =>
+      compileCanonicalSourceString(restatesNote, 'inline confirm restate note', { fieldLookup: fieldLookupFor([SCR_FIELD]) })
+    ).toThrow(/must not restate confirm_note\/authority_url/);
+
+    const restatesUrl = buildCanonicalSource(
+      `<!-- oa:clause id=restate-url confirm=notice_confirmed authority_url="https://example.com/s" -->
+### Restate Url
+
+Body.
+
+`
+    );
+    expect(() =>
+      compileCanonicalSourceString(restatesUrl, 'inline confirm restate url', { fieldLookup: fieldLookupFor([SCR_FIELD]) })
+    ).toThrow(/must not restate confirm_note\/authority_url/);
+  });
+
+  it.openspec('OA-TMP-062')('rejects confirm= whose field is missing from metadata, is not an SCR field, or lacks note/url', () => {
+    const base = buildCanonicalSource(
+      `<!-- oa:clause id=compliance-recital confirm=notice_confirmed -->
+### Compliance Recital
+
+Body.
+
+`
+    );
+
+    // (a) field missing from metadata
+    expect(() =>
+      compileCanonicalSourceString(base, 'inline confirm missing field', { fieldLookup: fieldLookupFor([]) })
+    ).toThrow(/has no matching field in metadata\.yaml/);
+
+    // (b) field present but not a statutory_compliance_representation
+    expect(() =>
+      compileCanonicalSourceString(base, 'inline confirm not-scr', {
+        fieldLookup: fieldLookupFor([{ name: 'notice_confirmed', type: 'boolean' }]),
+      })
+    ).toThrow(/must reference a field with statutory_compliance_representation: true/);
+
+    // (c) SCR field missing confirm_note
+    expect(() =>
+      compileCanonicalSourceString(base, 'inline confirm missing note', {
+        fieldLookup: fieldLookupFor([{ ...SCR_FIELD, confirm_note: '   ' }]),
+      })
+    ).toThrow(/requires a non-empty confirm_note/);
+
+    // (d) SCR field missing/invalid authority_url
+    expect(() =>
+      compileCanonicalSourceString(base, 'inline confirm missing url', {
+        fieldLookup: fieldLookupFor([{ ...SCR_FIELD, authority_url: undefined }]),
+      })
+    ).toThrow(/requires an http\(s\) authority_url/);
+  });
+
+  it.openspec('OA-TMP-062')('rejects confirm= with a non-field-name value (strict parser; "always" is not a sentinel)', () => {
+    const source = buildCanonicalSource(
+      `<!-- oa:clause id=bad-name-confirm confirm=NoticeConfirmed -->
+### Bad Name Confirm
+
+Body.
+
+`
+    );
+    expect(() => compileCanonicalSourceString(source, 'inline confirm bad-name source')).toThrow(
+      /invalid field name "NoticeConfirmed"/
+    );
+
+    const always = buildCanonicalSource(
+      `<!-- oa:clause id=always-confirm confirm=always -->
+### Always Confirm
+
+Body.
+
+`
+    );
+    expect(() => compileCanonicalSourceString(always, 'inline confirm always source')).toThrow(
+      /invalid field name "always".*not a sentinel/
     );
   });
 

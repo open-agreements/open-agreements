@@ -163,6 +163,18 @@ runs:
         DIAG_LOG="$RUNNER_TEMP/diag-${CHECK_ID}.log"
         : > "$DIAG_LOG"
 
+        # Stagger concurrent matrix jobs so they don't fire their first LLM
+        # call at the same instant. With max-parallel > 1 the jobs in a wave
+        # otherwise hit the API simultaneously; a burst of large requests is
+        # what provokes rate-limit / quota / empty-response failures (observed:
+        # all checks returning empty JSON, retries firing ~6ms apart). Sleep a
+        # deterministic 1-5s keyed on the check id (so each wave's jobs are
+        # offset) plus a small random jitter to break any residual alignment.
+        STAGGER_BASE=$(( (10#$CHECK_ID - 1) % 5 + 1 ))
+        STAGGER=$(awk -v b="$STAGGER_BASE" 'BEGIN { srand(); printf "%.1f", b + rand() }')
+        echo "Staggering check ${CHECK_ID} start by ${STAGGER}s (avoid LLM API bursts)"
+        sleep "$STAGGER"
+
         for attempt in 1 2 3; do
           ATTEMPTS=$attempt
           RAW="$RUNNER_TEMP/raw-${CHECK_ID}-${attempt}.json"
@@ -203,6 +215,14 @@ runs:
 
           if [ "$attempt" -lt "$MAX_ATTEMPTS" ]; then
             echo "::warning::Attempt $attempt for check ${CHECK_ID} produced malformed output; retrying"
+            # Back off before retrying (jittered, escalating: ~2-3s then ~4-5s).
+            # An empty/error CLI response returns near-instantly, so without a
+            # sleep the 3 attempts fire within milliseconds and just re-hit the
+            # same transient rate-limit/quota wall. Spacing the retries lets a
+            # transient condition clear before the next call.
+            BACKOFF=$(awk -v a="$attempt" 'BEGIN { srand(); printf "%.1f", a * 2 + rand() }')
+            echo "Backing off ${BACKOFF}s before retry $((attempt + 1)) for check ${CHECK_ID}"
+            sleep "$BACKOFF"
             # Append a short corrective note for the next attempt so the
             # model knows what went wrong.
             {

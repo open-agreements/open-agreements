@@ -41,12 +41,12 @@ fields:
   - name: governing_law
     type: string
     description: State or jurisdiction whose laws govern the agreement
-    default: California
+    default: Delaware
     section: Legal
   - name: courts
     type: string
     description: Courts with jurisdiction over disputes
-    default: courts located in San Francisco, California
+    default: courts located in New Castle County, Delaware
     section: Legal
   - name: party_1_signatory_type
     type: enum

@@ -75,7 +75,7 @@
           "required": true,
           "section": "Legal",
           "description": "State or jurisdiction whose laws govern the agreement",
-          "default": "California",
+          "default": "Delaware",
           "default_value_rationale": null
         },
         {
@@ -84,7 +84,7 @@
           "required": true,
           "section": "Legal",
           "description": "Courts with jurisdiction over disputes",
-          "default": "courts located in San Francisco, California",
+          "default": "courts located in New Castle County, Delaware",
           "default_value_rationale": null
         },
         {
@@ -12778,6 +12778,377 @@
       ]
     },
     {
+      "name": "openagreements-restrictive-covenant-florida",
+      "tier": "internal",
+      "display_name": "OpenAgreements Employee Restrictive Covenant (Florida)",
+      "category": "employment",
+      "description": "Florida-specific employee restrictive covenant agreement with modular covenant structure (non-compete, non-solicitation, non-dealing, non-investment, confidentiality, non-disparagement). Implements Fla. Stat. section 542.335 (legitimate-business-interest recital, mandatory judicial modification of overbroad restraints, express assignee / successor / third-party-beneficiary enforcement), the section 542.336 physician specialty-monopoly carve-out, and the 2025 CHOICE Act (sections 542.41-542.45) covered-employee enhanced- enforcement track. Drafted as a starting point for licensed counsel review.",
+      "license": "CC-BY-4.0",
+      "source_url": "https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-restrictive-covenant-florida",
+      "source": "OpenAgreements",
+      "attribution_text": "Authored by OpenAgreements contributors. Florida-specific analysis informed by publicly available legal commentary cited in the related practice note. Licensed under CC BY 4.0.",
+      "allow_derivatives": true,
+      "credits": [],
+      "fields": [
+        {
+          "name": "employer_name",
+          "type": "string",
+          "required": true,
+          "section": "Parties",
+          "description": "Legal name of the employer",
+          "display_label": "Employer",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "employee_name",
+          "type": "string",
+          "required": true,
+          "section": "Parties",
+          "description": "Full legal name of the employee",
+          "display_label": "Employee",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "employee_title",
+          "type": "string",
+          "required": false,
+          "section": "Parties",
+          "description": "Employee job title or position (optional)",
+          "display_label": "Employee Title / Position",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "employer_parent_name",
+          "type": "string",
+          "required": false,
+          "section": "Parties",
+          "description": "Legal name of Employer's direct corporate parent entity, if any (optional). Named alongside \"Employer and its Affiliates\" as an expressly-identified third-party beneficiary entitled to enforce the restrictive covenants under Fla. Stat. section 542.335(1)(f). Common in PE / holding-company structures where the named Employer entity is a dedicated employment entity distinct from the operating company.",
+          "display_label": "Employer Parent Entity",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "employer_operating_affiliate_name",
+          "type": "string",
+          "required": false,
+          "section": "Parties",
+          "description": "Legal name of the operating or service-recipient Affiliate, if different from the named Employer (optional). Use this where the named Employer is a dedicated employment entity but the operating business — the entity for whom Employee actually performs services or that holds the Protected Interests — is a separate commonly controlled Affiliate (common in PE / holding-company structures). When provided, this entity is expressly named in the Fla. Stat. section 542.335(1)(f) third-party-beneficiary list, in addition to the \"Employer and its Affiliates\" class language, for higher enforcement certainty.",
+          "display_label": "Operating / Service-Recipient Affiliate",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "effective_date",
+          "type": "date",
+          "required": false,
+          "section": "Timing",
+          "description": "Effective date of this agreement",
+          "display_label": "Effective Date",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "governing_law",
+          "type": "string",
+          "required": false,
+          "section": "Legal",
+          "description": "Governing law state",
+          "display_label": "Governing Law",
+          "default": "Florida",
+          "default_value_rationale": null
+        },
+        {
+          "name": "worker_category",
+          "type": "enum",
+          "required": false,
+          "section": "AI Analysis",
+          "description": "Employee role classification. AI-only field that drives memo warnings. Not shown in the output document. A Physician worker triggers the Fla. Stat. section 542.336 specialty-monopoly carve-out and can never be a CHOICE Act covered employee (health care practitioners are categorically excluded under Fla. Stat. section 542.43 / s. 456.001).",
+          "default": "Other",
+          "default_value_rationale": "Other is the conservative default when worker category cannot be determined from context. The calling LLM may set this explicitly based on title, scope, and duties. Setting Physician applies the section 542.336 carve-out conservatively (the specialty-monopoly condition turns on county-level market facts the drafter cannot know at signing).",
+          "options": [
+            "Executive",
+            "Management",
+            "Professional Staff",
+            "Physician",
+            "Other"
+          ]
+        },
+        {
+          "name": "covered_employee",
+          "type": "boolean",
+          "required": false,
+          "section": "AI Analysis",
+          "description": "Whether the employee is a \"covered employee\" under the 2025 CHOICE Act (Fla. Stat. sections 542.41-542.45). FULL legal-status flag, NOT a salary-only toggle: true only when the worker earns a salary greater than twice the annual mean wage of the county AND is NOT a health care practitioner as defined in s. 456.001 (Fla. Stat. section 542.43; health care practitioners are categorically excluded regardless of pay). When worker_category is Physician this MUST resolve to false. Gates the CHOICE Act confidential-information-acknowledgement clause. (The counsel-advisal-and-notice recital is separately gated by the choice_act_advance_notice_confirmed statutory-compliance representation, and garden leave by garden_leave_included.) AI-only field that drives conditional gating. Not shown as a cover-term row.",
+          "default": "false",
+          "default_value_rationale": "Defaulting to false keeps the CHOICE Act enhanced-enforcement procedural clauses off until the calling LLM affirmatively establishes covered- employee status (salary > 2x county annual mean wage AND not a health care practitioner). Over-asserting CHOICE Act status risks reciting compliance with procedural prerequisites the employer did not perform."
+        },
+        {
+          "name": "choice_act_advance_notice_confirmed",
+          "type": "boolean",
+          "required": false,
+          "section": "AI Analysis",
+          "description": "CONFIRM-BEFORE-SIGNING: set true ONLY if a human has verified that the CHOICE Act pre-execution compliance steps actually occurred — the covered employee was advised, in writing, of the right to seek counsel, and was given at least 7 days' advance notice of the proposed agreement (Fla. Stat. section 542.45(2)(a), (3); see the OpenAgreements Florida non-compete reference card at https://openagreements.org/legal/non-compete/florida, which keeps the current statute links). This is a statutory-compliance representation: its truth is a precondition to CHOICE Act enforceability, so setting it true asserts a past fact that must really have happened. This recital applies only to a covered employee; when it applies and this is false (the default), the counsel-advisal-and-notice recital renders followed by a yellow-highlighted \"[CONFIRM before signing: …]\" bracket and a matching item on the page-one confirmation notice — the clause is never silently dropped. The calling LLM MUST ask the human to confirm the advisal and 7-day notice were given before setting this true. Not shown as a cover-term row.",
+          "default": "false",
+          "default_value_rationale": "Conservative default false: the counsel-advisal/advance-notice recital is a past-tense representation of real-world statutory compliance the employer must actually have performed. Defaulting to false keeps the recital flagged with a highlighted CONFIRM bracket (rather than asserting clean compliance) until a human affirmatively confirms the advisal and 7-day notice were given, avoiding an accidental false representation."
+        },
+        {
+          "name": "garden_leave_included",
+          "type": "boolean",
+          "required": false,
+          "section": "AI Analysis",
+          "description": "Whether a covered garden leave agreement (Fla. Stat. section 542.43(5), up-to-4-year notice period) is paired with the covered-employee non-compete. Gates the CHOICE Act garden-leave day-for-day offset clause (Fla. Stat. section 542.45(2)(c)). AI-only field that drives conditional gating. Not shown as a cover-term row.",
+          "default": "false",
+          "default_value_rationale": "Default false: the employer elects garden leave affirmatively. The garden-leave clause is meaningful only on the CHOICE Act covered-employee track and is omitted unless garden leave is actually structured."
+        },
+        {
+          "name": "garden_leave_notice_duration",
+          "type": "string",
+          "required": false,
+          "section": "Garden Leave",
+          "description": "Length of the covered garden leave notice period (e.g. \"6 months\", \"1 year\"). Under Fla. Stat. section 542.43(5) a covered garden leave agreement may provide for up to, but no more than, 4 years of advance notice; after the first 90 days of the notice period the employee need not provide services. Shown in Cover Terms and recited in the garden-leave clause when garden_leave_included is true. The non-compete Restricted Period is reduced day-for-day by the nonworking portion of this period (section 542.45(2)(c)).",
+          "display_label": "Garden Leave Notice Period",
+          "default": "6 months",
+          "default_value_rationale": "6 months is a moderate notice period well within the section 542.43(5) 4-year statutory ceiling. The employer should set this to the actual negotiated notice period; it must not exceed 4 years."
+        },
+        {
+          "name": "covenant_relationship_type",
+          "type": "enum",
+          "required": false,
+          "section": "AI Analysis",
+          "description": "The relationship the non-compete arises from. Selects the presumptively- reasonable duration window under Fla. Stat. section 542.335(1)(d)-(e): employee/agent/contractor (<=6mo reasonable / >2yr unreasonable); distributor/dealer/franchisee/licensee (<=1yr / >3yr); sale of business (<=3yr / >7yr); trade-secret-predicated (<=5yr / >10yr). AI-only field consumed for duration evaluation ONLY; never used to include or omit a clause. Not shown in the output document.",
+          "default": "employee",
+          "default_value_rationale": "employee is the most common and most strictly scrutinized window (presumptively reasonable at <=6 months, presumptively unreasonable above 2 years).",
+          "options": [
+            "employee",
+            "distributor_dealer_franchisee_licensee",
+            "sale_of_business",
+            "trade_secret_predicated"
+          ]
+        },
+        {
+          "name": "covenant_duration_months",
+          "type": "number",
+          "required": false,
+          "section": "AI Analysis",
+          "description": "The non-compete Restricted Period length in months, as an integer, for machine-checkable duration evaluation against the Fla. Stat. section 542.335(1)(d)-(e) presumption window selected by covenant_relationship_type. AI-only field. Not shown in the output document.",
+          "default": "",
+          "default_value_rationale": "No conservative default. When empty the duration check is advisory only (the numeric value is required to evaluate the statutory window). The human-readable noncompete_duration string drives the Cover Terms row."
+        },
+        {
+          "name": "confidentiality_trade_secret_duration",
+          "type": "string",
+          "required": false,
+          "section": "Confidentiality",
+          "description": "Duration of confidentiality obligations for trade secrets",
+          "display_label": "Trade Secrets Duration",
+          "default": "Perpetual",
+          "default_value_rationale": null
+        },
+        {
+          "name": "confidentiality_other_duration",
+          "type": "string",
+          "required": false,
+          "section": "Confidentiality",
+          "description": "Duration of confidentiality obligations for non-trade-secret information",
+          "display_label": "Other Confidential Information Duration",
+          "default": "24 months",
+          "default_value_rationale": "24 months is common for non-trade-secret confidentiality obligations in employment agreements."
+        },
+        {
+          "name": "employee_nonsolicit_included",
+          "type": "boolean",
+          "required": false,
+          "section": "Employee Non-Solicitation",
+          "description": "Whether the employee non-solicitation covenant is included",
+          "display_label": "Employee Non-Solicitation Included",
+          "default": "true",
+          "default_value_rationale": null
+        },
+        {
+          "name": "employee_nonsolicit_duration",
+          "type": "string",
+          "required": false,
+          "section": "Employee Non-Solicitation",
+          "description": "Duration of employee non-solicitation restriction",
+          "display_label": "Employee Non-Solicitation Duration",
+          "default": "12 months",
+          "default_value_rationale": "12 months is a common enforceable duration and sits within the Fla. Stat. section 542.335(1)(d) presumptively-reasonable window for former-employee covenants (<=6 months presumed reasonable; >2 years presumed unreasonable)."
+        },
+        {
+          "name": "covered_employee_period",
+          "type": "string",
+          "required": false,
+          "section": "Employee Non-Solicitation",
+          "description": "Lookback period for determining which employees are covered by the non-solicitation restriction.",
+          "display_label": "Covered Employee Period",
+          "default": "12 months",
+          "default_value_rationale": "12 months is the most common lookback period for employee non-solicitation scope."
+        },
+        {
+          "name": "customer_nonsolicit_included",
+          "type": "boolean",
+          "required": false,
+          "section": "Customer Non-Solicitation",
+          "description": "Whether the customer/partner non-solicitation covenant is included",
+          "display_label": "Customer Non-Solicitation Included",
+          "default": "true",
+          "default_value_rationale": null
+        },
+        {
+          "name": "customer_nonsolicit_duration",
+          "type": "string",
+          "required": false,
+          "section": "Customer Non-Solicitation",
+          "description": "Duration of customer/partner non-solicitation restriction",
+          "display_label": "Customer Non-Solicitation Duration",
+          "default": "12 months",
+          "default_value_rationale": "12 months sits within the Fla. Stat. section 542.335(1)(d) presumptively-reasonable window for former-employee covenants."
+        },
+        {
+          "name": "covered_customer_period",
+          "type": "string",
+          "required": false,
+          "section": "Customer Non-Solicitation",
+          "description": "Lookback period for determining which customers are covered by the non-solicitation and non-dealing restrictions.",
+          "display_label": "Covered Customer Period",
+          "default": "12 months",
+          "default_value_rationale": "12 months is the most common lookback period for customer non-solicitation scope."
+        },
+        {
+          "name": "noncompete_included",
+          "type": "boolean",
+          "required": false,
+          "section": "Non-Competition",
+          "description": "Whether the non-competition covenant is included. Under Fla. Stat. section 542.335 a non-compete is enforceable when supported by a legitimate business interest and reasonable in time, area, and line of business; this template recites the legitimate-business-interest basis and biases the duration into the presumptively-reasonable window.",
+          "display_label": "Non-Competition Included",
+          "default": "false",
+          "default_value_rationale": "Conservative default. Non-competes are the most heavily scrutinized covenant; include only after confirming a Fla. Stat. section 542.335(1)(b) legitimate business interest exists, the duration is within the presumptively-reasonable window, and (for a Physician) the section 542.336 specialty-monopoly carve-out is addressed."
+        },
+        {
+          "name": "noncompete_duration",
+          "type": "string",
+          "required": false,
+          "section": "Non-Competition",
+          "description": "Duration of non-competition restriction",
+          "display_label": "Non-Competition Duration",
+          "default": "12 months",
+          "default_value_rationale": "12 months sits within the Fla. Stat. section 542.335(1)(d) presumptively-reasonable window for former-employee covenants (<=6 months presumed reasonable; >2 years presumed unreasonable). The tool should not default to a presumptively-unreasonable term."
+        },
+        {
+          "name": "territory",
+          "type": "string",
+          "required": false,
+          "section": "Non-Competition",
+          "description": "Geographic scope of the non-competition restriction",
+          "display_label": "Restricted Territory",
+          "default": "the geographic area in which Employee provided services",
+          "default_value_rationale": "Tied to the employee's actual service area. Narrower geographic scope is more readily found reasonable; Florida courts will modify rather than void an overbroad territory under Fla. Stat. section 542.335(1)(c)."
+        },
+        {
+          "name": "competitive_business_definition",
+          "type": "string",
+          "required": false,
+          "section": "Non-Competition",
+          "description": "Description of the business activities that constitute competition with the employer.",
+          "display_label": "Competitive Business",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "specified_competitors",
+          "type": "string",
+          "required": false,
+          "section": "Non-Competition",
+          "description": "Optional named list of specific competitors. Narrowing the restriction to named competitors strengthens enforceability.",
+          "display_label": "Specified Competitors",
+          "default": "",
+          "default_value_rationale": null
+        },
+        {
+          "name": "nondealing_included",
+          "type": "boolean",
+          "required": false,
+          "section": "No Business with Covered Customers",
+          "description": "Whether the no-business-with-covered-customers covenant is included.",
+          "display_label": "No Business with Covered Customers Included",
+          "default": "false",
+          "default_value_rationale": null
+        },
+        {
+          "name": "nondealing_duration",
+          "type": "string",
+          "required": false,
+          "section": "No Business with Covered Customers",
+          "description": "Duration of the no-business-with-covered-customers restriction",
+          "display_label": "No Business with Covered Customers Duration",
+          "default": "12 months",
+          "default_value_rationale": null
+        },
+        {
+          "name": "passive_public_holdings_threshold",
+          "type": "string",
+          "required": false,
+          "section": "Definitions",
+          "description": "Maximum ownership percentage of publicly traded securities permitted under the Passive Public Holdings carveout.",
+          "display_label": "Passive Public Holdings Threshold",
+          "default": "five percent",
+          "default_value_rationale": "Five percent of any class of publicly traded securities is the standard passive investment carveout across restrictive covenant agreements."
+        },
+        {
+          "name": "noninvestment_included",
+          "type": "boolean",
+          "required": false,
+          "section": "Non-Investment",
+          "description": "Whether the non-investment covenant is included.",
+          "display_label": "Non-Investment Included",
+          "default": "false",
+          "default_value_rationale": null
+        },
+        {
+          "name": "noninvestment_duration",
+          "type": "string",
+          "required": false,
+          "section": "Non-Investment",
+          "description": "Duration of non-investment restriction",
+          "display_label": "Non-Investment Duration",
+          "default": "12 months",
+          "default_value_rationale": null
+        },
+        {
+          "name": "nondisparagement_duration",
+          "type": "string",
+          "required": false,
+          "section": "Non-Disparagement",
+          "description": "Duration of non-disparagement obligation (measured from termination)",
+          "display_label": "Non-Disparagement Duration",
+          "default": "24 months",
+          "default_value_rationale": "24 months is common for employment non-disparagement provisions."
+        },
+        {
+          "name": "cloud_drive_id",
+          "type": "string",
+          "required": false,
+          "section": "Document Management",
+          "description": "Optional document-system URI or file ID for execution copy traceability",
+          "display_label": "Cloud Drive ID",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "cloud_drive_id_footer",
+          "type": "string",
+          "required": false,
+          "section": "Document Management",
+          "description": "Internal computed footer text for document-system traceability",
+          "default": "",
+          "default_value_rationale": null
+        }
+      ]
+    },
+    {
       "name": "openagreements-restrictive-covenant-wyoming",
       "tier": "internal",
       "display_name": "OpenAgreements Employee Restrictive Covenant (Wyoming)",
@@ -12786,7 +13157,7 @@
       "license": "CC-BY-4.0",
       "source_url": "https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-restrictive-covenant-wyoming",
       "source": "OpenAgreements",
-      "attribution_text": "Authored by OpenAgreements contributors. Wyoming-specific analysis informed by publicly available commentary from Am Law firms including Ogletree Deakins, Fisher Phillips, Littler Mendelson, Foley & Lardner, Faegre Drinker, and Vinson & Elkins. See practice note for sources. Licensed under CC BY 4.0.",
+      "attribution_text": "Authored by OpenAgreements contributors. Wyoming-specific analysis informed by publicly available legal commentary cited in the related practice note. Licensed under CC BY 4.0.",
       "allow_derivatives": true,
       "credits": [],
       "fields": [
@@ -12846,8 +13217,8 @@
           "required": false,
           "section": "AI Analysis",
           "description": "Employee role classification under Wyo. Stat. section 1-23-108. AI-only field that drives memo warnings. Not shown in the output document.",
-          "default": null,
-          "default_value_rationale": null,
+          "default": "Other",
+          "default_value_rationale": "Other is the conservative default when worker category cannot be determined from context. The calling LLM may set this explicitly based on title, scope, and duties; absent that signal, Other avoids asserting a statutory pathway that may not apply.",
           "options": [
             "Executive",
             "Management",
@@ -12857,13 +13228,22 @@
           ]
         },
         {
-          "name": "restriction_pathways",
+          "name": "applicable_noncompete_exceptions",
           "type": "string",
           "required": false,
           "section": "AI Analysis",
-          "description": "Wyoming restriction pathway(s) under Wyo. Stat. section 1-23-108. AI-only field that drives memo warnings and conditional gating. Not shown in the output document. Options: Executive or Management Personnel, Trade Secret Protection, None.",
+          "description": "Applicable statutory exception(s) under Wyo. Stat. section 1-23-108 that would permit an otherwise-prohibited non-compete-adjacent covenant. AI-only field that drives memo warnings and conditional gating. Not shown in the output document. Options: Executive or Management Personnel, Trade Secret Protection, Training Cost Recovery, Sale of Business, None.",
           "default": "None",
           "default_value_rationale": null
+        },
+        {
+          "name": "restrictive_covenant_entered_after_employment_started",
+          "type": "boolean",
+          "required": false,
+          "section": "AI Analysis",
+          "description": "Whether the restrictive covenant is signed AFTER the employee already started working (post-hire) vs at or before the first day of employment (at-hire). Wyoming case law (Brown v. Best Home Health & Hospice, 2021 WY 83) requires separate consideration beyond continued employment for post-hire restrictive covenants. AI-only field that drives memo warnings and conditional drafting of the separate-consideration recital. Not shown in the output document.",
+          "default": "true",
+          "default_value_rationale": "Defaulting to post-hire (true) is the conservative posture: it triggers the separate-consideration recital required by Brown. If the covenant is genuinely at-hire, the calling LLM should set this to false to suppress the recital."
         },
         {
           "name": "confidentiality_trade_secret_duration",
@@ -12953,7 +13333,7 @@
           "description": "Whether the non-competition covenant is included. Requires a lawful restriction pathway under Wyo. Stat. section 1-23-108.",
           "display_label": "Non-Competition Included",
           "default": "false",
-          "default_value_rationale": "Wyo. Stat. section 1-23-108 voids most non-compete covenants. The drafter must affirmatively include this covenant only when a statutory pathway applies."
+          "default_value_rationale": "Wyo. Stat. section 1-23-108 (SF 107, 2025; effective July 1, 2025) voids covered non-compete covenants unless a statutory exception applies: (1) purchase and sale of a business or business assets, (2) protection of trade secrets as defined by W.S. 6-3-501(a)(xi), (3) recovery of relocation, education, and training expenses within the statute's tenure-based caps, or (4) executive and management personnel and officers / employees who constitute professional staff to executive and management personnel. Physician practice restrictions are separately void under subsection (b), not a permitted pathway. The drafter must include this covenant only after documenting the applicable pathway in the agreement."
         },
         {
           "name": "noncompete_duration",

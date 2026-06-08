@@ -1,10 +1,27 @@
 import { readFileSync } from 'node:fs';
-import { resolve } from 'node:path';
+import { dirname, resolve } from 'node:path';
 import {
   assertCanonicalIdentity,
   parseCanonicalFrontmatter,
 } from './canonical-frontmatter.mjs';
 import { validateContractSpec } from './schema.mjs';
+import { loadMetadataFromDir } from '../lib/template-utils.mjs';
+
+// Build a name → field-definition lookup from parsed metadata.yaml fields. The
+// `confirm=` clause branch consults this to resolve a statutory-compliance
+// representation's `authority_url`/`confirm_note` (SSOT: metadata.yaml owns
+// field metadata; template.md owns prose). Returns an empty map when metadata
+// has no fields, which is fine for canonical sources that use no confirm= clause.
+export function buildFieldLookup(metadata) {
+  const lookup = new Map();
+  const fields = Array.isArray(metadata?.fields) ? metadata.fields : [];
+  for (const field of fields) {
+    if (field && typeof field.name === 'string') {
+      lookup.set(field.name, field);
+    }
+  }
+  return lookup;
+}
 
 const DIRECTIVE_RE = /^<!--\s*oa:([a-z-]+)(?:\s+([\s\S]*?))?\s*-->$/;
 const ATTR_RE = /([a-z_][a-z0-9_-]*)=(?:"([^"]*)"|([^\s]+))/g;
@@ -269,6 +286,25 @@ function conditionFromValue(raw, filePath, label) {
   return value;
 }
 
+// Strict single field-name parser for `confirm=`. Unlike conditionFromValue,
+// `always` is NOT a sentinel here — a confirm gate must name a real boolean
+// field, so any non-field-name value (including "always") is an error rather
+// than a silent no-op.
+function fieldNameFromValue(raw, filePath, label) {
+  const value = typeof raw === 'string' ? raw.trim() : '';
+  invariant(
+    value.toLowerCase() !== ALWAYS,
+    `Canonical source (${filePath}) uses invalid field name "${value}" on ${label} ("always" is not a sentinel here; name a real boolean field)`
+  );
+  invariant(
+    FIELD_NAME_RE.test(value),
+    `Canonical source (${filePath}) uses invalid field name "${value}" on ${label}`
+  );
+  return value;
+}
+
+const AUTHORITY_URL_RE = /^https?:\/\/\S+$/;
+
 function parseCoverTerms(lines, filePath) {
   const tableStart = lines.findIndex((line) => line.trim().startsWith('|'));
   invariant(tableStart >= 0, `Canonical source (${filePath}) is missing the Cover Terms table`);
@@ -407,7 +443,7 @@ function parseDefinitionsClauseBody(lines, filePath) {
   return terms;
 }
 
-function parseStandardTerms(lines, filePath) {
+function parseStandardTerms(lines, filePath, fieldLookup = new Map()) {
   const clauses = [];
   const seenClauseIds = new Set();
   let pendingDirective = null;
@@ -475,6 +511,64 @@ function parseStandardTerms(lines, filePath) {
       `clause "${id}"`
     );
     const omittedBody = clauseDirective.attrs.omitted ?? clauseDirective.attrs.omitted_body;
+
+    // `confirm=<field>` marks a statutory-compliance-representation recital: the
+    // body always renders within its applicability scope, and the layout appends a
+    // highlighted `[CONFIRM …; see <authority_url>]` bracket when <field> is false.
+    // It MAY carry a `when=` applicability gate, but is mutually exclusive with
+    // `omitted` (a confirm clause is never replaced by a placeholder).
+    // SSOT: the directive names only the field; the short note (`confirm_note`)
+    // and the statute link (`authority_url`) are resolved from that field's
+    // metadata.yaml entry, never restated in the directive.
+    let confirm;
+    if (clauseDirective.attrs.confirm !== undefined) {
+      confirm = fieldNameFromValue(
+        clauseDirective.attrs.confirm,
+        filePath,
+        `clause "${id}" confirm`
+      );
+      invariant(
+        omittedBody === undefined,
+        `Canonical source (${filePath}) clause "${id}" cannot combine confirm with omitted (a confirm clause is never replaced by a placeholder; a when= applicability gate is allowed)`
+      );
+      invariant(
+        clauseDirective.attrs.confirm_note === undefined &&
+          clauseDirective.attrs.authority_url === undefined,
+        `Canonical source (${filePath}) clause "${id}" confirm= must not restate confirm_note/authority_url — define them on the "${confirm}" field in metadata.yaml instead`
+      );
+
+      const field = fieldLookup.get(confirm);
+      invariant(
+        field !== undefined,
+        `Canonical source (${filePath}) clause "${id}" confirm=${confirm} has no matching field in metadata.yaml`
+      );
+      invariant(
+        field.statutory_compliance_representation === true,
+        `Canonical source (${filePath}) clause "${id}" confirm=${confirm} must reference a field with statutory_compliance_representation: true in metadata.yaml`
+      );
+      const confirmNote = (typeof field.confirm_note === 'string' ? field.confirm_note : '').trim();
+      const authorityUrl = (typeof field.authority_url === 'string' ? field.authority_url : '').trim();
+      invariant(
+        confirmNote.length > 0,
+        `Canonical source (${filePath}) clause "${id}" confirm=${confirm} requires a non-empty confirm_note on the field in metadata.yaml`
+      );
+      invariant(
+        AUTHORITY_URL_RE.test(authorityUrl),
+        `Canonical source (${filePath}) clause "${id}" confirm=${confirm} requires an http(s) authority_url on the field in metadata.yaml`
+      );
+      clauses.push({
+        id,
+        heading,
+        body: paragraphTextFromLines(clauseLines),
+        confirm,
+        confirm_note: confirmNote,
+        authority_url: authorityUrl,
+        // A confirm clause MAY carry a when= applicability gate; the layout
+        // wraps the whole clause (body + CONFIRM bracket) in {IF condition}.
+        ...(condition ? { condition } : {}),
+      });
+      continue;
+    }
 
     clauses.push({
       id,
@@ -870,6 +964,9 @@ function projectToContractSpec(normalized, frontmatter, filePath) {
                 body: clause.body,
                 ...(clause.condition ? { condition: clause.condition } : {}),
                 ...(clause.omitted_body ? { omitted_body: clause.omitted_body } : {}),
+                ...(clause.confirm ? { confirm: clause.confirm } : {}),
+                ...(clause.confirm_note ? { confirm_note: clause.confirm_note } : {}),
+                ...(clause.authority_url ? { authority_url: clause.authority_url } : {}),
               }
         )),
       },
@@ -892,7 +989,7 @@ function projectToContractSpec(normalized, frontmatter, filePath) {
   }, filePath);
 }
 
-export function compileCanonicalSourceString(raw, filePath = 'canonical source') {
+export function compileCanonicalSourceString(raw, filePath = 'canonical source', { fieldLookup = new Map() } = {}) {
   const { frontmatter, body } = parseCanonicalFrontmatter(raw, filePath);
   const topLevelSections = splitTopLevelSections(body, filePath);
 
@@ -934,7 +1031,7 @@ export function compileCanonicalSourceString(raw, filePath = 'canonical source')
       : {}),
     standard_terms: {
       heading_title: standardTermsSection.title,
-      clauses: parseStandardTerms(standardTermsSection.lines, filePath),
+      clauses: parseStandardTerms(standardTermsSection.lines, filePath, fieldLookup),
     },
     signature: {
       heading_title: signatureSection.title,
@@ -951,5 +1048,9 @@ export function compileCanonicalSourceString(raw, filePath = 'canonical source')
 
 export function compileCanonicalSourceFile(path) {
   const filePath = resolve(path);
-  return compileCanonicalSourceString(readFileSync(filePath, 'utf-8'), filePath);
+  // The file-aware API reads its own siblings: resolve the template's
+  // metadata.yaml so confirm= clauses can pull authority_url/confirm_note from
+  // the field metadata (SSOT). Reuses the shared loader so there is one parse path.
+  const fieldLookup = buildFieldLookup(loadMetadataFromDir(dirname(filePath)));
+  return compileCanonicalSourceString(readFileSync(filePath, 'utf-8'), filePath, { fieldLookup });
 }
