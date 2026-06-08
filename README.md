@@ -251,6 +251,12 @@ The Source column links to the upstream standard, source document, or canonical 
 | [recipe-quality-audit](https://github.com/open-agreements/open-agreements/tree/main/skills/recipe-quality-audit) | Audit NVCA recipe quality: check file inventory, metadata schema, field-to-replacement coverage, ambiguous keys, smart quotes, test fixtures, and fill quality. Produces a structured scorecard per recipe with maturity tier classification. Use when user says "audit recipe quality," "check recipe coverage," "recipe scorecard," or "NVCA recipe quality." |
 | [unit-test-philosophy](https://github.com/open-agreements/open-agreements/tree/main/skills/unit-test-philosophy) | Risk-based unit testing and Allure-readable behavioral spec style for open-agreements. Use when user says "add tests," "test quality," "coverage expansion," "unit test style," or "Allure test spec." Applies when adding/updating tests, expanding coverage, or reviewing test quality across src, integration-tests, and workspace packages. |
 
+### Legal Explainers
+
+| Skill | Description |
+|-------|-------------|
+| [non-compete-contract-explainer](https://github.com/open-agreements/open-agreements/tree/main/skills/non-compete-contract-explainer) | Explain U.S. state-by-state (and select international) non-compete and restrictive-covenant law — whether a non-compete is enforceable, blue-pencil reformation, tolling, choice of law, independent-contractor reach, and recent bans. Reads a bundled, source-cited snapshot per jurisdiction. Use when the user says "non-compete," "noncompete contract," "restrictive covenant," "non-solicit," "garden leave," "covenant not to compete," "employment agreement," asks "is my non-compete enforceable," or names a U.S. state. |
+
 ### Template Authoring
 
 | Skill | Description |
