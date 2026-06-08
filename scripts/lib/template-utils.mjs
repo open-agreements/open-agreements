@@ -17,8 +17,11 @@ export function listTemplateIds() {
     .sort();
 }
 
-export function loadTemplateMetadata(templateId) {
-  const metadataPath = resolve(TEMPLATES_DIR, templateId, "metadata.yaml");
+// Load and parse a template's metadata.yaml given its directory. Returns {} when
+// the file is absent. Single js-yaml parse site shared by loadTemplateMetadata
+// and the canonical-source compiler so the two cannot drift.
+export function loadMetadataFromDir(dir) {
+  const metadataPath = resolve(dir, "metadata.yaml");
   if (!existsSync(metadataPath)) {
     return {};
   }
@@ -27,16 +30,37 @@ export function loadTemplateMetadata(templateId) {
   return parsed && typeof parsed === "object" ? parsed : {};
 }
 
+export function loadTemplateMetadata(templateId) {
+  return loadMetadataFromDir(resolve(TEMPLATES_DIR, templateId));
+}
+
+function hostMatches(host, domain) {
+  return host === domain || host.endsWith(`.${domain}`);
+}
+
 export function isOpenAgreementsOwned(templateId, metadata) {
   if (templateId.startsWith("openagreements-")) {
     return true;
   }
-  const sourceUrl = String(metadata.source_url || "").toLowerCase();
-  return (
-    sourceUrl.includes("openagreements.org") ||
-    sourceUrl.includes("openagreements.ai") ||
-    sourceUrl.includes("github.com/open-agreements/open-agreements")
-  );
+  const rawUrl = String(metadata.source_url || "").trim();
+  if (!rawUrl) {
+    return false;
+  }
+  let url;
+  try {
+    url = new URL(rawUrl);
+  } catch {
+    return false;
+  }
+  const host = url.hostname.toLowerCase();
+  if (hostMatches(host, "openagreements.org") || hostMatches(host, "openagreements.ai")) {
+    return true;
+  }
+  if (hostMatches(host, "github.com")) {
+    const path = url.pathname.toLowerCase().replace(/^\/+/, "");
+    return path === "open-agreements/open-agreements" || path.startsWith("open-agreements/open-agreements/");
+  }
+  return false;
 }
 
 export function listOpenAgreementsTemplateIds() {

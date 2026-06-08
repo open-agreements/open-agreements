@@ -6,12 +6,16 @@ import {
   mkdirSync,
   mkdtempSync,
   readdirSync,
+  readFileSync,
   rmSync,
   statSync,
+  writeFileSync,
 } from "node:fs";
 import { basename, join, resolve } from "node:path";
 import { spawnSync } from "node:child_process";
 import { tmpdir } from "node:os";
+
+import AdmZip from "adm-zip";
 
 import {
   PREVIEWS_DIR,
@@ -21,6 +25,34 @@ import {
   listTemplateIds,
   loadTemplateMetadata,
 } from "./lib/template-utils.mjs";
+
+const FILL_PIPELINE_PATH = resolve(ROOT, "dist", "core", "fill-pipeline.js");
+const HUMANIZE_DOCX_PATH = resolve(ROOT, "dist", "core", "humanize-docx.js");
+const PUBLIC_FIELD_METADATA_PATH = resolve(
+  ROOT,
+  "scripts",
+  "template-public-field-metadata.yaml"
+);
+
+async function loadFillDocx() {
+  if (!existsSync(FILL_PIPELINE_PATH)) {
+    throw new Error(
+      `Compiled fill pipeline not found at ${FILL_PIPELINE_PATH}. Run 'npm run build' first.`
+    );
+  }
+  const mod = await import(FILL_PIPELINE_PATH);
+  return mod.fillDocx;
+}
+
+async function loadHumanizeDocx() {
+  if (!existsSync(HUMANIZE_DOCX_PATH)) {
+    throw new Error(
+      `Compiled humanize-docx module not found at ${HUMANIZE_DOCX_PATH}. Run 'npm run build' first.`
+    );
+  }
+  const mod = await import(HUMANIZE_DOCX_PATH);
+  return mod.humanizeDocx;
+}
 
 const RENDER_SCRIPT = resolve(ROOT, "scripts", "render_docx_pages.mjs");
 
@@ -81,11 +113,48 @@ function printHelp() {
   );
 }
 
-function renderPreviewPages(templateId, dpi) {
-  const docxPath = resolve(TEMPLATES_DIR, templateId, "template.docx");
+// Tags that must never survive a filled preview. Catches the regression in
+// issue #259 — loop scaffolding leaking onto the catalog signature page.
+const FORBIDDEN_PREVIEW_TAGS = [
+  /\{FOR\s/,
+  /\{END-FOR\s/,
+  /\{\$/,
+  /\{effective_date\}/,
+];
+
+async function fillTemplateForPreview(docxPath, sampleValues, fillDocx) {
+  const templateBuffer = readFileSync(docxPath);
+  // Reuse the canonical runtime fill helper so the preview path and the
+  // user-facing fill path share the same drafting-note stripping, highlight
+  // stripping, currency sanitization, empty-row cleanup, and createReport
+  // invocation. Avoids the duplication flagged by code-reuse review and
+  // future-proofs against new pipeline steps.
+  // The cover confirmation notice is gated on the derived `any_confirmation_pending`,
+  // normally computed by prepareFillData in the product fill path. Preview fills call
+  // fillDocx directly with raw sample values, so default the synthetic field (a sample
+  // set may override it) — otherwise docx-templates throws on the undefined
+  // {IF any_confirmation_pending} variable for any confirm= template.
+  const buffer = await fillDocx({
+    templateBuffer,
+    data: { any_confirmation_pending: false, ...sampleValues },
+    fixSmartQuotes: true,
+  });
+
+  const docXml = new AdmZip(buffer).getEntry("word/document.xml")?.getData().toString("utf8") ?? "";
+  for (const pattern of FORBIDDEN_PREVIEW_TAGS) {
+    const match = pattern.exec(docXml);
+    if (match) {
+      throw new Error(
+        `Filled preview for ${basename(docxPath)} still contains template control marker matching ${pattern}: "${match[0]}"`
+      );
+    }
+  }
+  return buffer;
+}
+
+function renderPreviewPages(docxPath, outputDir, dpi) {
   statSync(docxPath);
 
-  const outputDir = resolve(PREVIEWS_DIR, templateId);
   mkdirSync(outputDir, { recursive: true });
 
   for (const name of readdirSync(outputDir)) {
@@ -113,11 +182,11 @@ function renderPreviewPages(templateId, dpi) {
   });
 
   if (run.error) {
-    throw new Error(`Failed to execute renderer for ${templateId}: ${run.error.message}`);
+    throw new Error(`Failed to execute renderer for ${basename(docxPath)}: ${run.error.message}`);
   }
   if (run.status !== 0) {
     const details = [run.stderr, run.stdout].filter(Boolean).join("\n").trim();
-    throw new Error(`Render failed for ${templateId}: ${details || `exit ${run.status}`}`);
+    throw new Error(`Render failed for ${basename(docxPath)}: ${details || `exit ${run.status}`}`);
   }
 
   const pages = readdirSync(outputDir)
@@ -125,15 +194,23 @@ function renderPreviewPages(templateId, dpi) {
     .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
 
   if (pages.length === 0) {
-    throw new Error(`No PNG pages produced for ${templateId}`);
+    throw new Error(`No PNG pages produced for ${basename(docxPath)}`);
   }
 
   return pages.length;
 }
 
-function renderWithQuickLook(docxPath, outputDir) {
+function renderWithQuickLook(docxPath, outputDir, { allowSinglePage = true } = {}) {
   if (process.platform !== "darwin") {
     throw new Error("Quick Look fallback is only available on macOS");
+  }
+  if (!allowSinglePage) {
+    // Filled previews for repeat-loop templates can span multiple pages. The
+    // Quick Look fallback only emits a single PNG, which would silently
+    // truncate the signature page that issue #259 is specifically about.
+    throw new Error(
+      `Quick Look fallback truncates to single-page output; ${basename(docxPath)} is a filled multi-page preview. Fix LibreOffice and retry.`
+    );
   }
 
   const tempDir = mkdtempSync(join(tmpdir(), "oa-ql-preview-"));
@@ -171,24 +248,59 @@ function renderWithQuickLook(docxPath, outputDir) {
   return 1;
 }
 
-function renderPreviewPagesWithFallback(templateId, dpi) {
-  const docxPath = resolve(TEMPLATES_DIR, templateId, "template.docx");
+async function renderPreviewPagesWithFallback(templateId, dpi) {
+  const sourceDocxPath = resolve(TEMPLATES_DIR, templateId, "template.docx");
+  const templateDir = resolve(TEMPLATES_DIR, templateId);
   const outputDir = resolve(PREVIEWS_DIR, templateId);
+
+  const metadata = loadTemplateMetadata(templateId);
+  const sampleValues = metadata.previewSampleValues;
+  const hasFilledPreview =
+    sampleValues && typeof sampleValues === "object" && !Array.isArray(sampleValues);
+
+  let renderDocxPath = sourceDocxPath;
+  let fillTempDir;
   try {
-    return renderPreviewPages(templateId, dpi);
-  } catch (error) {
-    if (process.platform !== "darwin") {
-      throw error;
+    if (hasFilledPreview) {
+      const fillDocx = await loadFillDocx();
+      fillTempDir = mkdtempSync(join(tmpdir(), "oa-preview-fill-"));
+      const filledBuffer = await fillTemplateForPreview(sourceDocxPath, sampleValues, fillDocx);
+      renderDocxPath = join(fillTempDir, "filled.docx");
+      writeFileSync(renderDocxPath, filledBuffer);
+    } else {
+      // No previewSampleValues — apply the same bracket-prose-with-highlight
+      // transform that dev-website applies to template-downloads/<id>.docx so the
+      // catalog preview matches what users actually receive. Issue #354.
+      const humanizeDocx = await loadHumanizeDocx();
+      fillTempDir = mkdtempSync(join(tmpdir(), "oa-preview-humanize-"));
+      const humanizedBuffer = await humanizeDocx(templateDir, {
+        publicFieldMetadataPath: PUBLIC_FIELD_METADATA_PATH,
+      });
+      renderDocxPath = join(fillTempDir, "humanized.docx");
+      writeFileSync(renderDocxPath, humanizedBuffer);
     }
-    const message = error instanceof Error ? error.message : String(error);
-    console.warn(
-      `LibreOffice render failed for ${templateId}; retrying with Quick Look fallback: ${message}`
-    );
-    return renderWithQuickLook(docxPath, outputDir);
+    try {
+      return renderPreviewPages(renderDocxPath, outputDir, dpi);
+    } catch (error) {
+      if (process.platform !== "darwin") {
+        throw error;
+      }
+      const message = error instanceof Error ? error.message : String(error);
+      console.warn(
+        `LibreOffice render failed for ${templateId}; retrying with Quick Look fallback: ${message}`
+      );
+      return renderWithQuickLook(renderDocxPath, outputDir, {
+        allowSinglePage: !hasFilledPreview,
+      });
+    }
+  } finally {
+    if (fillTempDir) {
+      rmSync(fillTempDir, { recursive: true, force: true });
+    }
   }
 }
 
-function main() {
+async function main() {
   const args = parseArgs(process.argv.slice(2));
   if (args.help) {
     printHelp();
@@ -220,7 +332,7 @@ function main() {
 
   for (const templateId of targets) {
     try {
-      const pageCount = renderPreviewPagesWithFallback(templateId, args.dpi);
+      const pageCount = await renderPreviewPagesWithFallback(templateId, args.dpi);
       rendered.push({ templateId, pageCount });
       console.log(`Rendered ${templateId}: ${pageCount} page(s)`);
     } catch (error) {
@@ -240,9 +352,7 @@ function main() {
   console.log(`Generated previews for ${rendered.length} template(s).`);
 }
 
-try {
-  main();
-} catch (error) {
+main().catch((error) => {
   console.error(error instanceof Error ? error.message : String(error));
   process.exit(1);
-}
+});

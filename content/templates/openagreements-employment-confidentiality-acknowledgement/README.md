@@ -6,7 +6,7 @@ and approved-use obligations in plain language.
 ## Source
 
 - **URL**: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-employment-confidentiality-acknowledgement
-- **Version**: 1.0
+- **Version**: 1.2
 - **License**: CC BY 4.0
 
 ## Fields

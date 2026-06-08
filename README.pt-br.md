@@ -1,201 +1,214 @@
+<!-- This file is generated from README.template.md by scripts/generate_readme.mjs. Do not edit README.md directly. -->
+
 # OpenAgreements
 
 [![npm version](https://img.shields.io/npm/v/open-agreements)](https://www.npmjs.com/package/open-agreements)
 [![npm downloads](https://img.shields.io/npm/dm/open-agreements.svg)](https://npmjs.org/package/open-agreements)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Agent Skill](https://img.shields.io/badge/agent--skill-open--agreements-purple)](https://skills.sh)
 [![CI](https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml/badge.svg)](https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml)
-[![MCP Server Status](https://img.shields.io/endpoint?url=https%3A%2F%2Fopenagreements.org%2Fapi%2Fstatus%3Fformat%3Dshields)](https://openagreements.openstatus.dev/)
 [![codecov](https://img.shields.io/codecov/c/github/open-agreements/open-agreements/main)](https://app.codecov.io/gh/open-agreements/open-agreements)
-[![GitHub stargazers](https://img.shields.io/github/stars/open-agreements/open-agreements?style=social)](https://github.com/open-agreements/open-agreements/stargazers)
-[![Tests: Vitest](https://img.shields.io/badge/tests-vitest-6E9F18)](https://vitest.dev/)
-[![OpenSpec Traceability](https://img.shields.io/badge/openspec-traceability%20gate-brightgreen)](./scripts/validate_openspec_coverage.mjs)
 [![Socket Badge](https://socket.dev/api/badge/npm/package/open-agreements)](https://socket.dev/npm/package/open-agreements)
+[![GitHub stargazers](https://img.shields.io/github/stars/open-agreements/open-agreements?style=social)](https://github.com/open-agreements/open-agreements/stargazers)
+[![Agent Skill](https://img.shields.io/badge/agent--skill-open--agreements-purple)](https://skills.sh)
+[![MCP Server Status](https://img.shields.io/endpoint?url=https%3A%2F%2Fopenagreements.org%2Fapi%2Fstatus%3Fformat%3Dshields)](https://openagreements.openstatus.dev/)
 [![install size](https://packagephobia.com/badge?p=open-agreements)](https://packagephobia.com/result?p=open-agreements)
 
-[English](./README.md) | [Español](./README.es.md) | [简体中文](./README.zh.md) | [Português (Brasil)](./README.pt-br.md) | [Deutsch](./README.de.md)
+[English](https://github.com/open-agreements/open-agreements/blob/main/README.md) | [Español](https://github.com/open-agreements/open-agreements/blob/main/README.es.md) | [简体中文](https://github.com/open-agreements/open-agreements/blob/main/README.zh.md) | [Português (Brasil)](https://github.com/open-agreements/open-agreements/blob/main/README.pt-br.md) | [Deutsch](https://github.com/open-agreements/open-agreements/blob/main/README.de.md)
 
 > **Aviso de tradução:** o `README.md` em inglês é a fonte canônica de verdade. Esta tradução pode ter pequeno atraso. Atualizações importantes do README em inglês devem ser propagadas em até 72 horas.
 
-<!-- TODO: Add OpenSSF Scorecard badge once repo is indexed at securityscorecards.dev -->
-<!-- TODO: Add OpenSSF Best Practices badge after registration at bestpractices.dev -->
-<!-- TODO: Re-evaluate Snyk badge — Advisor migrated to security.snyk.io (July 2024) -->
+Preencha modelos padrão de acordos legais e gere arquivos DOCX prontos para assinatura. O OpenAgreements inclui mais de 40 modelos cobrindo NDAs, acordos de serviço em nuvem, documentos de trabalho, acordos com contratados, SAFEs e documentos de financiamento NVCA.
+
+Funciona com Claude Code, Gemini CLI, Cursor e fluxos locais de MCP ou CLI.
+
+## Conteúdo
+
+- [Modelos Disponíveis](#modelos-disponíveis)
+- [Skills Disponíveis](#skills-disponíveis)
+- [Pacotes](#pacotes)
+- [Início Rápido](#início-rápido)
+- [Instalação](#instalação)
+- [Documentação](#documentação)
+- [Privacidade](#privacidade)
+- [Veja Também](#veja-também)
+- [Contribuindo](#contribuindo)
+- [Construído com OpenAgreements](#construído-com-openagreements)
+- [Licença](#licença)
 
 <p align="center">
-  <img src="docs/assets/demo-fill-nda.gif" alt="Fill a Mutual NDA in Claude Code — prompt, answer questions, get a signed-ready DOCX" width="720">
+  <img src="https://raw.githubusercontent.com/open-agreements/open-agreements/main/docs/assets/demo-fill-nda.gif" alt="Fill a Mutual NDA in Claude Code — prompt, answer questions, get a signed-ready DOCX" width="720">
 </p>
 
 > *Demo: Claude preenche um NDA mútuo da Common Paper em menos de 2 minutos. Acelerado para brevidade.*
 
-Preencha modelos padrão de acordos legais e gere arquivos DOCX prontos para assinatura. Os modelos cobrem NDAs, termos de cloud, documentos de trabalho, acordos com contratados, SAFEs e documentos de financiamento NVCA.
+## Modelos Disponíveis
 
-**Open Agreements** por [UseJunior](https://usejunior.com) — parte das [ferramentas para desenvolvedores da UseJunior](https://usejunior.com/developer-tools/open-agreements). Em produção em escritórios Am Law 100.
+A coluna Fonte aponta para o padrão upstream, documento de origem ou página canônica do projeto (varia por editor). A coluna Licença mostra os termos de redistribuição. Os links de Repo apontam para o diretório de conteúdo no GitHub de cada modelo ou recipe.
 
-## Qualidade e sinais de confiança
+### Confidencialidade
 
-- O CI roda em pull requests e em pushes para `main`.
-- A saúde do serviço em produção é publicada via OpenStatus em `openagreements.openstatus.dev`.
-- A cobertura é publicada no Codecov com gates de patch/projeto definidos no repositório em `codecov.yml`.
-- O framework de testes JS ativo é Vitest, com resultados JUnit enviados para analytics de testes no Codecov.
-- A rastreabilidade de cenários OpenSpec é aplicada com `npm run check:spec-coverage`. Para exportar uma matriz local, rode `npm run check:spec-coverage -- --write-matrix integration-tests/OPENSPEC_TRACEABILITY.md`.
-- O canário de source drift de recipes (`npm run check:source-drift`) valida o hash de origem esperado e âncoras estruturais de replace/normalize.
-- Regressões em nível de suposição são rastreadas em `docs/assumptions.md` e validadas por testes de regressão direcionados + gates de CI.
-- A renderização visual de DOCX com LibreOffice usa configuração fixada no macOS (`config/libreoffice-headless.json`); rode `npm run check:libreoffice` antes de testes visuais de evidência do Allure.
-- Maintainer: [Steven Obiajulu](https://www.linkedin.com/in/steven-obiajulu/) (engenheiro mecânico formado no MIT; advogado com formação em Harvard Law).
+| Modelo | Site | Fonte | Licença | Repo |
+|----------|---------|--------|---------|------|
+| Bonterms Mutual NDA | [Site](https://usejunior.com/templates/bonterms-mutual-nda) | [Bonterms](https://bonterms.com/resources/mutual-nda-cover-page-example) | [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/bonterms-mutual-nda) |
+| Common Paper Mutual NDA | [Site](https://usejunior.com/templates/common-paper-mutual-nda) | [Common Paper](https://commonpaper.com/standards/mutual-nda/1.0) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-mutual-nda) |
+| One Way NDA | [Site](https://usejunior.com/templates/common-paper-one-way-nda) | [Common Paper](https://commonpaper.com/standards/one-way-nda) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-one-way-nda) |
 
-## Como funciona
+### Vendas e Licenciamento
 
-1. Etapa 1: escolha um modelo (36 acordos padrão)
-2. Etapa 2: preencha seus dados (prompts interativos ou MCP)
-3. Etapa 3: receba um DOCX com formatação profissional
+| Modelo | Site | Fonte | Licença | Repo |
+|----------|---------|--------|---------|------|
+| Cloud Service Agreement | [Site](https://usejunior.com/templates/common-paper-cloud-service-agreement) | [Common Paper](https://commonpaper.com/standards/cloud-service-agreement/2.1) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-cloud-service-agreement) |
+| CSA Click Through | [Site](https://usejunior.com/templates/common-paper-csa-click-through) | [Common Paper](https://commonpaper.com/standards/cloud-service-agreement/2.1) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-csa-click-through) |
+| CSA With AI | [Site](https://usejunior.com/templates/common-paper-csa-with-ai) | [Common Paper](https://commonpaper.com/standards/cloud-service-agreement/2.1) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-csa-with-ai) |
+| CSA With SLA | [Site](https://usejunior.com/templates/common-paper-csa-with-sla) | [Common Paper](https://commonpaper.com/standards/cloud-service-agreement/2.1) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-csa-with-sla) |
+| CSA Without SLA | [Site](https://usejunior.com/templates/common-paper-csa-without-sla) | [Common Paper](https://commonpaper.com/standards/cloud-service-agreement/2.1) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-csa-without-sla) |
+| Order Form | [Site](https://usejunior.com/templates/common-paper-order-form) | [Common Paper](https://commonpaper.com/standards/cloud-service-agreement/2.1) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-order-form) |
+| Order Form With SLA | [Site](https://usejunior.com/templates/common-paper-order-form-with-sla) | [Common Paper](https://commonpaper.com/standards/cloud-service-agreement/2.1) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-order-form-with-sla) |
+| Software License Agreement | [Site](https://usejunior.com/templates/common-paper-software-license-agreement) | [Common Paper](https://commonpaper.com/standards/software-license-agreement/1.1) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-software-license-agreement) |
 
-O OpenAgreements oferece dois modos de execução com limites de confiança diferentes:
+### Dados e Conformidade
 
-- Conector MCP remoto hospedado (`https://openagreements.org/api/mcp`) para setup rápido no Claude.
-- Execução totalmente local do pacote (`npx`, instalação global ou pacote MCP local por stdio) para fluxos de trabalho na própria máquina.
+| Modelo | Site | Fonte | Licença | Repo |
+|----------|---------|--------|---------|------|
+| AI Addendum | [Site](https://usejunior.com/templates/common-paper-ai-addendum) | [Common Paper](https://commonpaper.com/standards/ai-addendum/1.0) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-ai-addendum) |
+| AI Addendum In App | [Site](https://usejunior.com/templates/common-paper-ai-addendum-in-app) | [Common Paper](https://commonpaper.com/standards/ai-addendum/1.0) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-ai-addendum-in-app) |
+| Business Associate Agreement | [Site](https://usejunior.com/templates/common-paper-business-associate-agreement) | [Common Paper](https://commonpaper.com/standards/business-associate-agreement/1.0) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-business-associate-agreement) |
+| Data Processing Agreement | [Site](https://usejunior.com/templates/common-paper-data-processing-agreement) | [Common Paper](https://commonpaper.com/standards/data-processing-agreement/1.1) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-data-processing-agreement) |
 
-Não há recomendação global de modo padrão. Escolha com base na sensibilidade do documento, política interna e velocidade desejada no fluxo de trabalho. Veja `docs/trust-checklist.md` para um resumo de fluxo de dados em 60 segundos.
+### Serviços Profissionais
 
-### Decisão rápida
+| Modelo | Site | Fonte | Licença | Repo |
+|----------|---------|--------|---------|------|
+| Bonterms Professional Services Agreement | [Site](https://usejunior.com/templates/bonterms-professional-services-agreement) | [Bonterms](https://bonterms.com/resources/psa-cover-page-example) | [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/bonterms-professional-services-agreement) |
+| Independent Contractor Agreement | [Site](https://usejunior.com/templates/common-paper-independent-contractor-agreement) | [Common Paper](https://commonpaper.com/standards/independent-contractor-agreement) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-independent-contractor-agreement) |
+| Common Paper Professional Services Agreement | [Site](https://usejunior.com/templates/common-paper-professional-services-agreement) | [Common Paper](https://commonpaper.com/standards/professional-services-agreement/1.1) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-professional-services-agreement) |
+| Statement Of Work | [Site](https://usejunior.com/templates/common-paper-statement-of-work) | [Common Paper](https://commonpaper.com/standards/statement-of-work) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-statement-of-work) |
 
-- Se seu documento é sensível, use execução totalmente local do pacote.
-- Se você prioriza conveniência, use o conector MCP remoto hospedado.
+### Negócios e Parcerias
 
-## Uso com Claude Code
+| Modelo | Site | Fonte | Licença | Repo |
+|----------|---------|--------|---------|------|
+| Amendment | [Site](https://usejunior.com/templates/common-paper-amendment) | [Common Paper](https://commonpaper.com/standards/amendment) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-amendment) |
+| Design Partner Agreement | [Site](https://usejunior.com/templates/common-paper-design-partner-agreement) | [Common Paper](https://commonpaper.com/standards/design-partner-agreement/1.3) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-design-partner-agreement) |
+| Letter Of Intent | [Site](https://usejunior.com/templates/common-paper-letter-of-intent) | [Common Paper](https://commonpaper.com/standards/letter-of-intent) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-letter-of-intent) |
+| Partnership Agreement | [Site](https://usejunior.com/templates/common-paper-partnership-agreement) | [Common Paper](https://commonpaper.com/standards/partnership-agreement/1.1) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-partnership-agreement) |
+| Pilot Agreement | [Site](https://usejunior.com/templates/common-paper-pilot-agreement) | [Common Paper](https://commonpaper.com/standards/pilot-agreement/1.1) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-pilot-agreement) |
+| Term Sheet | [Site](https://usejunior.com/templates/common-paper-term-sheet) | [Common Paper](https://commonpaper.com/standards/term-sheet) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-term-sheet) |
 
-OpenAgreements funciona como [plugin do Claude Code](https://docs.anthropic.com/en/docs/claude-code/plugins) e [Agent Skill](https://agentskills.io). Não é necessária pré-instalação: o Claude baixa e executa o CLI sob demanda via `npx`.
+### Emprego
 
-### Opção 1: Agent Skill (recomendado)
+| Modelo | Site | Fonte | Licença | Repo |
+|----------|---------|--------|---------|------|
+| Employee IP Inventions Assignment | [Site](https://usejunior.com/templates/openagreements-employee-ip-inventions-assignment) | [OpenAgreements](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-employee-ip-inventions-assignment) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-employee-ip-inventions-assignment) |
+| Employment Confidentiality Acknowledgement | [Site](https://usejunior.com/templates/openagreements-employment-confidentiality-acknowledgement) | [OpenAgreements](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-employment-confidentiality-acknowledgement) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-employment-confidentiality-acknowledgement) |
+| Employment Offer Letter | [Site](https://usejunior.com/templates/openagreements-employment-offer-letter) | [OpenAgreements](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-employment-offer-letter) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-employment-offer-letter) |
+| Restrictive Covenant Wyoming | [Site](https://usejunior.com/templates/openagreements-restrictive-covenant-wyoming) | [OpenAgreements](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-restrictive-covenant-wyoming) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-restrictive-covenant-wyoming) |
 
-```bash
-npx skills add open-agreements/open-agreements
+### SAFEs
+
+| Modelo | Site | Fonte | Licença | Repo |
+|----------|---------|--------|---------|------|
+| Discount | [Site](https://usejunior.com/templates/yc-safe-discount) | [Y Combinator](https://www.ycombinator.com/documents) | [CC-BY-ND-4.0](https://creativecommons.org/licenses/by-nd/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/external/yc-safe-discount) |
+| MFN | [Site](https://usejunior.com/templates/yc-safe-mfn) | [Y Combinator](https://www.ycombinator.com/documents) | [CC-BY-ND-4.0](https://creativecommons.org/licenses/by-nd/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/external/yc-safe-mfn) |
+| Pro Rata Side Letter | [Site](https://usejunior.com/templates/yc-safe-pro-rata-side-letter) | [Y Combinator](https://www.ycombinator.com/documents) | [CC-BY-ND-4.0](https://creativecommons.org/licenses/by-nd/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/external/yc-safe-pro-rata-side-letter) |
+| Valuation Cap | [Site](https://usejunior.com/templates/yc-safe-valuation-cap) | [Y Combinator](https://www.ycombinator.com/documents) | [CC-BY-ND-4.0](https://creativecommons.org/licenses/by-nd/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/external/yc-safe-valuation-cap) |
+
+### Financiamento de Venture Capital
+
+| Modelo | Site | Fonte | Licença | Repo |
+|----------|---------|--------|---------|------|
+| Certificate Of Incorporation | [Site](https://usejunior.com/templates/nvca-certificate-of-incorporation) | [NVCA](https://nvca.org/wp-content/uploads/2025/10/NVCA-Model-COI-10-1-2025.docx) | Recipe | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/recipes/nvca-certificate-of-incorporation) |
+| Indemnification Agreement | [Site](https://usejunior.com/templates/nvca-indemnification-agreement) | [NVCA](https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx) | Recipe | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/recipes/nvca-indemnification-agreement) |
+| Investors Rights Agreement | [Site](https://usejunior.com/templates/nvca-investors-rights-agreement) | [NVCA](https://nvca.org/wp-content/uploads/2025/10/NVCA-Model-IRA-10-1-2025-2-1.docx) | Recipe | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/recipes/nvca-investors-rights-agreement) |
+| Management Rights Letter | [Site](https://usejunior.com/templates/nvca-management-rights-letter) | [NVCA](https://nvca.org/wp-content/uploads/2025/12/NVCA-2020-Management-Rights-Letter-1-1.docx) | Recipe | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/recipes/nvca-management-rights-letter) |
+| ROFR Co Sale Agreement | [Site](https://usejunior.com/templates/nvca-rofr-co-sale-agreement) | [NVCA](https://nvca.org/wp-content/uploads/2025/10/NVCA-Model-ROFRA-10-1-2025.docx) | Recipe | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/recipes/nvca-rofr-co-sale-agreement) |
+| Stock Purchase Agreement | [Site](https://usejunior.com/templates/nvca-stock-purchase-agreement) | [NVCA](https://nvca.org/wp-content/uploads/2025/10/NVCA-Model-SPA-10-28-2025-1.docx) | Recipe | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/recipes/nvca-stock-purchase-agreement) |
+| Voting Agreement | [Site](https://usejunior.com/templates/nvca-voting-agreement) | [NVCA](https://nvca.org/wp-content/uploads/2024/10/NVCA-Model-VA-10-1-2025.docx) | Recipe | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/recipes/nvca-voting-agreement) |
+
+### Outros
+
+| Modelo | Site | Fonte | Licença | Repo |
+|----------|---------|--------|---------|------|
+| Closing Checklist | [Site](https://usejunior.com/templates/closing-checklist) | [OpenAgreements](https://github.com/open-agreements/open-agreements) | [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/closing-checklist) |
+| Board Consent SAFE | [Site](https://usejunior.com/templates/openagreements-board-consent-safe) | [OpenAgreements](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-board-consent-safe) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-board-consent-safe) |
+| Due Diligence Request List | [Site](https://usejunior.com/templates/openagreements-due-diligence-request-list) | [OpenAgreements](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-due-diligence-request-list) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-due-diligence-request-list) |
+| Stockholder Consent SAFE | [Site](https://usejunior.com/templates/openagreements-stockholder-consent-safe) | [OpenAgreements](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-stockholder-consent-safe) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-stockholder-consent-safe) |
+| Working Group List | [Site](https://usejunior.com/templates/working-group-list) | [OpenAgreements](https://github.com/open-agreements/open-agreements) | [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/working-group-list) |
+
+## Skills Disponíveis
+
+### Redação e Preenchimento de Acordos
+
+| Skill | Descrição |
+|-------|-------------|
+| [open-agreements](https://github.com/open-agreements/open-agreements/tree/main/skills/open-agreements) | Preencha modelos padrão de acordos legais (NDAs, acordos de serviço em nuvem, SAFEs) e gere arquivos DOCX prontos para assinatura. Suporta modelos da Common Paper, Bonterms e Y Combinator. Use quando o usuário precisar redigir um acordo legal, criar um NDA, preencher um modelo de contrato ou gerar um SAFE. Também pode enviar acordos para assinatura eletrônica via DocuSign. |
+| [nda](https://github.com/open-agreements/open-agreements/tree/main/skills/nda) | Redija e preencha modelos de NDA — NDA mútuo, NDA unilateral, acordo de confidencialidade. Gera arquivos DOCX prontos para assinatura a partir de formulários padrão da Common Paper e Bonterms. Use quando o usuário disser "NDA", "acordo de não divulgação", "acordo de confidencialidade", "NDA mútuo" ou "NDA unilateral". |
+| [cloud-service-agreement](https://github.com/open-agreements/open-agreements/tree/main/skills/cloud-service-agreement) | Redija e preencha modelos de acordo SaaS — contrato de nuvem, MSA, formulário de pedido, licença de software, acordo piloto, acordo de parceiro de design. Inclui variantes com SLAs e termos de IA. Gera DOCX pronto para assinatura a partir de formulários padrão da Common Paper. Use quando o usuário disser "acordo SaaS", "contrato de nuvem", "MSA", "formulário de pedido", "licença de software", "acordo piloto" ou "acordo de parceiro de design". |
+| [services-agreement](https://github.com/open-agreements/open-agreements/tree/main/skills/services-agreement) | Redija e preencha modelos de acordo de serviços — contrato de consultoria, acordo de contratado, SOW, statement of work, acordo de serviços profissionais. Gera arquivos DOCX prontos para assinatura a partir de formulários padrão da Common Paper e Bonterms. Use quando o usuário disser "contrato de consultoria", "acordo de contratado", "SOW", "statement of work", "acordo de serviços" ou "contrato de freelancer". |
+| [employment-contract](https://github.com/open-agreements/open-agreements/tree/main/skills/employment-contract) | Redija e preencha modelos de acordo de trabalho — carta-proposta, cessão de PI, PIIA, declaração de confidencialidade. Gera arquivos DOCX prontos para assinatura a partir de formulários padrão do OpenAgreements para contratação de funcionários. Use quando o usuário disser "carta-proposta", "acordo de trabalho", "PIIA", "cessão de PI", "contratar alguém" ou "documentação de onboarding". |
+| [data-privacy-agreement](https://github.com/open-agreements/open-agreements/tree/main/skills/data-privacy-agreement) | Redija e preencha modelos de acordo de privacidade de dados — DPA, acordo de processamento de dados, GDPR, HIPAA BAA, acordo de associado comercial, adendo de IA. Gera arquivos DOCX prontos para assinatura a partir de formulários padrão da Common Paper. Use quando o usuário disser "DPA", "acordo de processamento de dados", "HIPAA BAA", "acordo de associado comercial" ou "adendo de IA". |
+| [safe](https://github.com/open-agreements/open-agreements/tree/main/skills/safe) | Redija e preencha modelos de SAFE do Y Combinator — valuation cap, discount, MFN, pro rata side letter. Documentos padrão de captação para startups, voltados para equity conversível. Gera arquivos DOCX prontos para assinatura. Use quando o usuário disser "SAFE", "simple agreement for future equity", "YC SAFE", "valuation cap", "documentos de seed round" ou "papelada de fundraising". |
+| [venture-financing](https://github.com/open-agreements/open-agreements/tree/main/skills/venture-financing) | Redija e preencha documentos modelo da NVCA — stock purchase agreement, certificate of incorporation, investors rights agreement, voting agreement, ROFR, co-sale, indenização, management rights letter. Modelos de Series A e financiamento de venture capital. Gera arquivos DOCX prontos para assinatura. Use quando o usuário disser "documentos de Series A", "NVCA", "stock purchase agreement", "investors rights agreement", "voting agreement" ou "documentos de financiamento de venture". |
+
+### Edição e Fluxos com Clientes
+
+| Skill | Descrição |
+|-------|-------------|
+| [edit-docx-agreement](https://github.com/open-agreements/open-agreements/tree/main/skills/edit-docx-agreement) | Faça edições sob medida em um acordo DOCX gerado pelo OpenAgreements (ou qualquer DOCX existente), usando ferramentas MCP do Safe Docx para edições cirúrgicas que preservam a formatação e saídas com track changes. Use quando o usuário disser "editar este contrato", "alterar uma cláusula", "modificar o acordo", "edições personalizadas no docx" ou "alterações sob medida no documento". |
+| [client-email](https://github.com/open-agreements/open-agreements/tree/main/skills/client-email) | Redija e-mails voltados ao cliente para serviços jurídicos — cover notes para entregas de contratos, resumos de redlines, atualizações de status do deal e follow-ups. Use ao compor ou revisar e-mails de saída para clientes sobre trabalho jurídico. Disparado por "redigir resposta", "e-mail para cliente", "cover note", "responder para" ou qualquer e-mail de saída acompanhando uma entrega jurídica. |
+| [delaware-franchise-tax](https://github.com/open-agreements/open-agreements/tree/main/skills/delaware-franchise-tax) | Faça a declaração anual do Delaware franchise tax e do annual report. Orienta no cálculo do imposto (métodos Authorized Shares e Assumed Par Value Capital), no processo de submissão pelo portal eCorp e no pagamento. Para Delaware C-Corps (prazo 1 de março) e LLCs/LPs/GPs (prazo 1 de junho). Use quando o usuário disser "Delaware franchise tax", "annual report Delaware", "declarar franchise tax" ou "portal eCorp". |
+
+### Conformidade e Auditoria
+
+| Skill | Descrição |
+|-------|-------------|
+| [soc2-readiness](https://github.com/open-agreements/open-agreements/tree/main/skills/soc2-readiness) | Avalie a prontidão para SOC 2 Type II. Mapeie Trust Services Criteria para controles, identifique gaps e construa um plano de remediação. Usa NIST SP 800-53 (domínio público) como referência canônica com mapeamento cruzado para critérios SOC 2. Use quando o usuário disser "prontidão para SOC 2", "preparação para SOC 2", "análise de gaps SOC 2" ou "preparar para auditoria SOC 2". |
+| [iso-27001-internal-audit](https://github.com/open-agreements/open-agreements/tree/main/skills/iso-27001-internal-audit) | Conduza uma auditoria interna ISO 27001. Percorra controles por domínio, identifique gaps, colete evidências e gere achados com recomendações de ações corretivas. Usa NIST SP 800-53 (domínio público) como referência canônica. Use quando o usuário disser "rodar auditoria interna", "auditoria ISO 27001", "avaliação de controles", "achados de auditoria" ou "avaliação de ISMS". |
+| [iso-27001-evidence-collection](https://github.com/open-agreements/open-agreements/tree/main/skills/iso-27001-evidence-collection) | Colete, organize e valide evidências para auditorias ISO 27001 e SOC 2. Abordagem API-first com comandos CLI para grandes plataformas em nuvem. Gera pacotes de evidência com timestamp prontos para auditor. Use quando o usuário disser "coletar evidências de auditoria", "preparar pacote de evidências", "evidências para o auditor", "atualizar evidências" ou "análise de gaps de evidências". |
+
+### Fluxos para Desenvolvedores
+
+| Skill | Descrição |
+|-------|-------------|
+| [recipe-quality-audit](https://github.com/open-agreements/open-agreements/tree/main/skills/recipe-quality-audit) | Audite a qualidade de recipes da NVCA: verifique o inventário de arquivos, o schema de metadados, a cobertura de campos para substituições, chaves ambíguas, smart quotes, fixtures de teste e qualidade de preenchimento. Gera um scorecard estruturado por recipe com classificação de nível de maturidade. Use quando o usuário disser "auditar qualidade de recipe", "verificar cobertura de recipe", "scorecard de recipe" ou "qualidade de recipe NVCA". |
+| [unit-test-philosophy](https://github.com/open-agreements/open-agreements/tree/main/skills/unit-test-philosophy) | Testes unitários baseados em risco e estilo de spec comportamental legível pelo Allure para o open-agreements. Use quando o usuário disser "adicionar testes", "qualidade dos testes", "expansão de cobertura", "estilo de teste unitário" ou "spec de teste Allure". Aplica-se ao adicionar/atualizar testes, expandir cobertura ou revisar a qualidade de testes em src, integration-tests e pacotes do workspace. |
+
+### Autoria de Modelos
+
+| Skill | Descrição |
+|-------|-------------|
+| [canonical-markdown-authoring](https://github.com/open-agreements/open-agreements/tree/main/skills/canonical-markdown-authoring) | Converta rascunhos de contratos em markdown comum para o formato canônico template.md do OpenAgreements — frontmatter YAML, tabelas de termos da capa Kind|Label|Value|Show When, diretivas oa:clause, parágrafos com [[Termo Definido]] e diretivas oa:signer que compilam para JSON specs validados e artefatos DOCX. Use quando o usuário disser "converter isto para markdown canônico", "criar um novo modelo OpenAgreements", "migrar modelo para template.md" ou "escrever um contrato em formato canônico". |
+
+## Pacotes
+
+| Pacote | Descrição |
+|---------|-------------|
+| [open-agreements](https://www.npmjs.com/package/open-agreements) | CLI e biblioteca open-source para preenchimento de modelos legais |
+| [@open-agreements/contract-templates-mcp](https://github.com/open-agreements/open-agreements/blob/main/packages/contract-templates-mcp/README.md) | Servidor MCP local por stdio para descoberta e preenchimento de modelos do OpenAgreements |
+| [@open-agreements/contracts-workspace](https://github.com/open-agreements/open-agreements/blob/main/packages/contracts-workspace/README.md) | CLI orientado a workspace para organizar e acompanhar repositórios de contratos |
+| [@open-agreements/contracts-workspace-mcp](https://github.com/open-agreements/open-agreements/blob/main/packages/contracts-workspace-mcp/README.md) | Servidor MCP local por stdio para operações de contracts workspace |
+| [@open-agreements/checklist-mcp](https://github.com/open-agreements/open-agreements/blob/main/packages/checklist-mcp/README.md) | Servidor MCP local por stdio para operações de memória de checklist do OpenAgreements |
+
+### O Que É Instalado
+
+```text
+open-agreements/
+  bin/                    # CLI entry point
+  dist/                   # Compiled TypeScript
+  content/
+    templates/            # Fillable DOCX templates with {tag} placeholders
+    external/             # YC SAFE templates vendored unchanged
+    recipes/              # Recipe instructions for non-redistributable sources
+  skills/                 # Agent skill definitions
+  server.json             # MCP server manifest
+  gemini-extension.json   # Gemini CLI extension config
+  README.md, LICENSE
 ```
 
-Depois, peça ao Claude para redigir um acordo:
+Os modelos de recipe da NVCA são baixados em tempo de execução e não são empacotados no pacote.
 
-```
-> Draft an NDA between Acme Corp and Beta Inc
-```
-
-O Claude descobre os modelos disponíveis, entrevista você para coletar valores de campos e gera um DOCX pronto para assinatura.
-
-### Opção 2: Extensão Gemini CLI
-
-```bash
-gemini extensions install https://github.com/open-agreements/open-agreements
-```
-
-Depois, peça ao Gemini para redigir um acordo. A extensão fornece ferramentas MCP, arquivos de contexto e skills para descoberta e preenchimento de modelos.
-
-### Opção 3: Direto com Claude Code
-
-Se você tiver Node.js >= 20, basta pedir ao Claude:
-
-```
-> Fill the Common Paper mutual NDA for my company
-```
-
-O Claude executa `npx -y open-agreements@latest list --json` para descobrir modelos e depois `npx -y open-agreements@latest fill <template>` para gerar a saída. Sem instalação.
-
-### Opção 4: CLI
-
-```bash
-# Install globally
-npm install -g open-agreements
-
-# List available templates
-open-agreements list
-
-# Fill a template
-open-agreements fill common-paper-mutual-nda -d values.json -o my-nda.docx
-```
-
-### O que acontece
-
-1. O Claude executa `list --json` para descobrir modelos disponíveis e seus campos
-2. O Claude entrevista você para coletar valores de campos (agrupados por seção, até 4 perguntas por rodada)
-3. O Claude executa `fill <template>` para gerar um DOCX preservando toda a formatação original
-4. Você revisa e assina o documento de saída
-
-## Uso com Cursor
-
-Este repositório inclui um manifesto de plugin do Cursor com integração MCP:
-
-- Plugin manifest: `.cursor-plugin/plugin.json`
-- MCP config: `mcp.json`
-- Skill: `skills/open-agreements/SKILL.md`
-
-A configuração MCP padrão em `mcp.json` inclui:
-
-- Conector MCP OpenAgreements hospedado (`https://openagreements.org/api/mcp`)
-- Servidor MCP local de workspace (`npx -y @open-agreements/contracts-workspace-mcp`)
-- Servidor MCP local para drafting de modelos (`npx -y @open-agreements/contract-templates-mcp`)
-
-Para publicar este plugin no Cursor Marketplace, envie este repositório em:
-
-- https://cursor.com/marketplace/publish
-
-## Modelos
-
-28 modelos em três níveis. Rode `open-agreements list` para ver o inventário completo.
-
-| Nível | Quantidade | Fonte | Como funciona |
-|------|-------|--------|--------------|
-| Modelos internos | 17 | [Common Paper](https://commonpaper.com), [Bonterms](https://bonterms.com), OpenAgreements | Empacotados no pacote, CC BY 4.0 |
-| Modelos externos | 4 | [Y Combinator](https://www.ycombinator.com/documents) | Vendorizados sem alterações, CC BY-ND 4.0 |
-| Recipes | 7 | [NVCA](https://nvca.org/model-legal-documents/) | Baixados sob demanda (não redistribuíveis) |
-
-**Modelos internos** (NDAs, termos cloud, formulários de trabalho, acordos com contratados etc.) são CC BY 4.0 — enviamos o DOCX com placeholders `{tag}`.
-
-**Modelos externos** (YC SAFEs) são CC BY-ND 4.0 — vendorizamos o original sem alterações. A saída preenchida é um derivado transitório na sua máquina.
-
-**Recipes** (documentos de financiamento NVCA) são livremente baixáveis, mas não redistribuíveis — enviamos apenas instruções de transformação e baixamos o DOCX de origem de nvca.org em tempo de execução.
-
-### Extração de guidance
-
-Documentos de origem contêm comentários especializados — notas de rodapé, notas de redação, blocos `[Comment: ...]` — escritos por especialistas de domínio (por exemplo, advogados de mercado de capitais). O limpador de recipes remove esse conteúdo para produzir um documento preenchível, mas também pode extraí-lo como JSON estruturado:
-
-```bash
-open-agreements recipe clean source.docx -o cleaned.docx \
-  --recipe nvca-indemnification-agreement \
-  --extract-guidance guidance.json
-```
-
-Isso produz um `guidance.json` com cada nota de rodapé, comentário e nota de redação removidos, marcados por tipo de fonte e posição no documento. O guidance é um artefato somente local (não é commitado nem distribuído) que agentes de IA ou autores humanos podem consultar ao preencher o formulário. Veja [Adding Recipes — Guidance Extraction](docs/adding-recipes.md#guidance-extraction) para detalhes de formato.
-
-**Por que extração programática?** O documento de origem é a única fonte de verdade. Reexecutar a extração após uma atualização do editor gera guidance atualizado sem esforço manual, preserva a linguagem exata de especialistas e captura tudo — uma IA pode resumir em tempo real, mas não pode recuperar conteúdo descartado.
-
-Cada modelo é um diretório autocontido:
-
-```
-content/templates/<name>/
-├── template.docx     # DOCX with {tag} placeholders
-├── metadata.yaml     # Fields, license, source, attribution
-└── README.md         # Template-specific documentation
-```
-
-## Comandos CLI
-
-### `fill <template>`
-
-Renderiza um DOCX preenchido a partir de um modelo.
-
-```bash
-# Using a JSON data file
-open-agreements fill common-paper-mutual-nda -d data.json -o output.docx
-
-# Using inline --set flags
-open-agreements fill common-paper-mutual-nda --set party_1_name="Acme Corp" --set governing_law="Delaware"
-```
-
-### `validate [template]`
-
-Executa o pipeline de validação em um ou todos os modelos.
-
-```bash
-open-agreements validate                          # All templates
-open-agreements validate common-paper-mutual-nda  # One template
-```
+<details>
+<summary><strong>Referência da CLI</strong></summary>
 
 ### `list`
 
@@ -204,174 +217,207 @@ Mostra modelos disponíveis com informações de licença e contagem de campos.
 ```bash
 open-agreements list
 
-# Machine-readable JSON output (for agent skills and automation)
+# Machine-readable JSON for agent skills and automation
 open-agreements list --json
 ```
 
-## Contracts Workspace CLI (pacote separado)
+### `fill <template>`
 
-O OpenAgreements agora inclui um pacote irmão para operações de repositório/workspace:
-
-- Package: `@open-agreements/contracts-workspace`
-- Binary: `open-agreements-workspace`
-- Docs: `docs/contracts-workspace.md`
-
-Este pacote é propositalmente separado de `open-agreements`, permitindo que equipes adotem:
-
-- apenas preenchimento de modelos
-- apenas gerenciamento de workspace
-- ou ambos juntos
-
-Recursos principais de workspace:
-
-- planejamento `init` orientado por tópicos (estrutura mínima sugerida com domínios de nível superior)
-- catálogo de formulários com validação de URL + SHA-256
-- indexação e lint de status YAML com status `_executed` orientado por nome de arquivo
-
-O modelo v1 é apenas filesystem e funciona em pastas de nuvem sincronizadas localmente (por exemplo, sync do Google Drive). Não requer integração com Drive API/OAuth.
-
-## MCP local para demo de workspace
-
-Para demos de conectores locais, há um pacote MCP local por stdio:
-
-- Package: `@open-agreements/contracts-workspace-mcp`
-- Binary: `open-agreements-workspace-mcp`
-- Docs: `docs/contracts-workspace.md`
-
-Início rápido:
+Renderiza um DOCX preenchido a partir de um modelo.
 
 ```bash
-npm run build:workspace-mcp
-node packages/contracts-workspace-mcp/bin/open-agreements-workspace-mcp.js
+# From a JSON data file
+open-agreements fill common-paper-mutual-nda -d data.json -o output.docx
+
+# With inline --set flags
+open-agreements fill common-paper-mutual-nda --set party_1_name="Acme Corp" --set governing_law="Delaware"
 ```
 
-## MCP local para drafting de modelos
+### `validate [template]`
 
-Para fluxos locais de drafting de modelos em Gemini/Cursor, use:
-
-- Package: `@open-agreements/contract-templates-mcp`
-- Binary: `open-agreements-contract-templates-mcp`
-
-Início rápido:
+Executa o pipeline de validação em um ou todos os modelos.
 
 ```bash
-npm run build:contract-templates-mcp
-node packages/contract-templates-mcp/bin/open-agreements-contract-templates-mcp.js
+open-agreements validate
+open-agreements validate common-paper-mutual-nda
 ```
 
-## Website (Vercel)
+</details>
 
-`site/` é um protocol host enxuto construído com Eleventy.
+<details>
+<summary><strong>Detalhes de Configuração do Agente</strong></summary>
 
-- Metadados de discovery: `site/.well-known/`
-- JSON Schemas publicados: `site/schemas/`
-- Downloads estáticos de DOCX em branco: `site/downloads/`
-- Assets de preview: `site/assets/previews/`
-- Handlers serverless da API: `api/`
-- Discovery outputs (generated during `npm run build:site`): `_site/llms.txt`, `_site/llms-full.txt`, `_site/sitemap.xml`, `_site/robots.txt`
-
-Pré-visualização local:
+### Claude Code
 
 ```bash
-npm run build:site
-python3 -m http.server 8080 --directory _site
+npx skills add open-agreements/open-agreements
 ```
 
-Depois verifique, por exemplo, `http://localhost:8080/.well-known/mcp-server-card`, `http://localhost:8080/llms.txt` ou os arquivos gerados dentro de `_site/`.
+### Gemini CLI
 
-Notas de deploy na Vercel:
+```bash
+gemini extensions install https://github.com/open-agreements/open-agreements
+```
 
-- Importe este repositório na Vercel
-- Mantenha a raiz do projeto como a raiz do repositório
-- O `vercel.json` incluído publica `_site/` como saída estática
+### Cursor
 
-## Raízes opcionais de conteúdo (preparação para o futuro)
+Este repositório inclui um manifesto de plugin do Cursor em `.cursor-plugin/plugin.json` com integração MCP em `mcp.json`.
 
-Para suportar desacoplamento lógico conforme bibliotecas de formulários crescem, `open-agreements` pode carregar conteúdo de raízes adicionais via:
+### Execução Local vs Hospedada
 
-- env var: `OPEN_AGREEMENTS_CONTENT_ROOTS`
-- format: lista delimitada por separador de caminho de diretórios absolutos/relativos (por exemplo, `dirA:dirB` em macOS/Linux)
-- estrutura esperada em cada raiz: `templates/`, `external/` e/ou `recipes/` (ou aninhados em `content/`)
+- **Local**: `npx`, instalação global ou MCP por stdio. O processamento acontece na sua máquina.
+- **Hospedado**: `https://openagreements.org/api/mcp`. O preenchimento de modelos roda do lado do servidor para um setup mais rápido.
 
-A precedência de busca é:
+Escolha com base na sensibilidade do documento e na política interna. Veja a trust checklist abaixo para um resumo do fluxo de dados.
 
-1. raízes em `OPEN_AGREEMENTS_CONTENT_ROOTS` (na ordem listada)
-2. conteúdo empacotado padrão (fallback)
+</details>
 
-Isso mantém instalações padrão simples e permite que usuários avançados movam bibliotecas de conteúdo grandes para fora do pacote principal.
+## Início Rápido
 
-## Veja também
+### Com Claude Code
 
-- [safe-docx](https://github.com/UseJunior/safe-docx) — edição cirúrgica de documentos Word existentes com agentes de código (servidor MCP)
-- [UseJunior Developer Tools](https://usejunior.com/developer-tools/open-agreements) — página do produto com opções de instalação e catálogo de modelos
+Peça ao Claude:
+
+```text
+Fill the Common Paper mutual NDA for my company
+```
+
+O Claude pode descobrir modelos, entrevistar você para valores de campos e gerar um DOCX pronto para assinatura.
+
+### Com a CLI
+
+```bash
+# See all available templates
+open-agreements list
+
+# Fill a template from a JSON data file
+open-agreements fill common-paper-mutual-nda -d values.json -o my-nda.docx
+
+# Fill with inline values
+open-agreements fill common-paper-mutual-nda --set party_1_name="Acme Corp" --set governing_law="Delaware"
+```
+
+### Exemplos de Prompts
+
+- "Redija um NDA para nosso subcontratado de construção"
+- "Crie um acordo de consultoria para nossa agência de seguros"
+- "Preencha o acordo de contratado independente para um designer freelancer"
+- "Gere um SAFE com valuation cap de $5M"
+
+### O Que Acontece
+
+1. O agente roda `list --json` para descobrir modelos e seus campos.
+2. Ele entrevista você para coletar valores de campos agrupados por seção.
+3. Ele roda `fill <template>` para gerar um DOCX preservando a formatação de origem.
+4. Você revisa e assina o documento de saída.
+
+## Instalação
+
+### Agent Skill (recomendado)
+
+```bash
+npx skills add open-agreements/open-agreements
+```
+
+### MCP Remoto
+
+Conecte qualquer agente compatível com MCP ao servidor hospedado em `https://openagreements.org/api/mcp`.
+
+**Claude Code**
+
+```bash
+claude mcp add --transport http open-agreements https://openagreements.org/api/mcp
+```
+
+**Codex CLI**
+
+```bash
+codex mcp add open-agreements --url https://openagreements.org/api/mcp
+```
+
+**Outros agentes** — aponte seu cliente para `https://openagreements.org/api/mcp` (streamable HTTP).
+
+### Extensão Gemini CLI
+
+```bash
+gemini extensions install https://github.com/open-agreements/open-agreements
+```
+
+### CLI
+
+```bash
+npm install -g open-agreements
+```
+
+Ou rode diretamente sem instalar nada:
+
+```bash
+npx -y open-agreements@latest list
+```
+
+---
+
+## Documentação
+
+### Comece Aqui
+
+- [Getting Started](https://github.com/open-agreements/open-agreements/blob/main/docs/getting-started.md)
+
+### Guias
+
+- [Adding Templates](https://github.com/open-agreements/open-agreements/blob/main/docs/adding-templates.md)
+- [Adding Recipes](https://github.com/open-agreements/open-agreements/blob/main/docs/adding-recipes.md)
+
+### Outros Pacotes
+
+- [Contracts Workspace CLI](https://github.com/open-agreements/open-agreements/blob/main/docs/contracts-workspace.md)
+
+### Referência
+
+- [Licensing](https://github.com/open-agreements/open-agreements/blob/main/docs/licensing.md)
+- [Changelog & Release Process](https://github.com/open-agreements/open-agreements/blob/main/docs/changelog-release-process.md)
+- [Trust Checklist](https://github.com/open-agreements/open-agreements/blob/main/docs/trust-checklist.md)
+- [Supported Tools](https://github.com/open-agreements/open-agreements/blob/main/docs/supported-tools.md)
+- [Assumptions](https://github.com/open-agreements/open-agreements/blob/main/docs/assumptions.md)
+- [Employment Source Policy](https://github.com/open-agreements/open-agreements/blob/main/docs/employment-source-policy.md)
+
+**Links:** [Site](https://usejunior.com) | [Catálogo de Modelos](https://usejunior.com/templates) | [Docs](https://github.com/open-agreements/open-agreements/tree/main/docs) | [Trust](https://usejunior.com/security) | [npm](https://www.npmjs.com/package/open-agreements)
+
+## Privacidade
+
+- **Modo local** (`npx`, instalação global, MCP por stdio): todo o processamento acontece na sua máquina. Nenhum conteúdo de documento é enviado para fora.
+- **Modo hospedado** (`https://openagreements.org/api/mcp`): o preenchimento de modelos roda do lado do servidor. Nenhum documento preenchido é armazenado depois que a resposta é retornada.
+
+Veja a [Política de Privacidade](https://usejunior.com/privacy_policy) para detalhes.
+
+Política de segurança: veja [SECURITY.md](https://github.com/open-agreements/open-agreements/blob/main/SECURITY.md).
+
+## Veja Também
+
+- [safe-docx](https://github.com/UseJunior/safe-docx) — edição cirúrgica de documentos Word existentes com agentes de código
 
 ## Contribuindo
 
-Veja [CONTRIBUTING.md](CONTRIBUTING.md) para saber como adicionar modelos, recipes e outras melhorias.
+Veja [CONTRIBUTING.md](https://github.com/open-agreements/open-agreements/blob/main/CONTRIBUTING.md) para saber como adicionar modelos, recipes e outras melhorias.
 
-- [Adding templates](docs/adding-templates.md) (fontes CC BY 4.0 / CC0)
-- [Adding recipes](docs/adding-recipes.md) (fontes não redistribuíveis)
-- [Employment source policy](docs/employment-source-policy.md) (classificações de confiança e termos)
-- [Code of Conduct](CODE_OF_CONDUCT.md) (expectativas da comunidade e aplicação)
+## Construído com OpenAgreements
 
-## Releases
+- [Safe Clause](https://safeclause.deltaxy.ai) — plataforma de contratos com IA para startups. [#1 no vibecode.law, março de 2026](https://vibecode.law/showcase/safe-clause-317416).
 
-Releases são automatados via GitHub Actions usando publicação confiável da npm (OIDC) com provenance habilitada.
+Está construindo algo sobre o OpenAgreements? Abra um PR para adicionar seu projeto.
 
-1. Atualize versões no pacote raiz + pacotes MCP publicáveis.
-2. Faça push do commit + tag com `git push origin main --tags`
-3. Rode o gate local da extensão Gemini (copiar/symlink para `~/.gemini/extensions/open-agreements` e verificar que ambos servidores MCP locais iniciam/respondem).
-4. O workflow `Release` publica a partir da tag após rodar build, validação, testes, smoke de runtime isolado e checks de pacote.
+## Histórico de estrelas
 
-Guardrails do workflow:
-
-- a tag deve corresponder às versões do pacote raiz + pacotes publicáveis
-- o commit de release deve estar contido em `origin/main`
-- a publicação falha se qualquer versão alvo na npm já existir
-
-## Arquitetura
-
-- **Language**: TypeScript
-- **DOCX Engine**: [docx-templates](https://www.npmjs.com/package/docx-templates) (MIT)
-- **CLI**: [Commander.js](https://www.npmjs.com/package/commander)
-- **Validation**: [Zod](https://www.npmjs.com/package/zod) schemas
-- **Skill Pattern**: Agent-agnostic `ToolCommandAdapter` interface
-
-```
-content/                    # All content directories
-├── templates/              # Internal templates (CC BY 4.0)
-├── external/               # External templates (CC BY-ND 4.0)
-└── recipes/                # Recipes (downloaded at runtime)
-
-src/                        # TypeScript source + collocated unit tests
-├── cli/                    # Commander.js CLI
-├── commands/               # fill, validate, list, recipe, scan
-├── core/
-│   ├── engine.ts           # docx-templates wrapper
-│   ├── metadata.ts         # Zod schemas + loader
-│   ├── recipe/             # Recipe pipeline (clean → patch → fill → verify)
-│   ├── external/           # External template support
-│   ├── validation/         # template, license, output, recipe
-│   └── command-generation/
-│       ├── types.ts        # ToolCommandAdapter interface
-│       └── adapters/       # Claude Code adapter
-└── index.ts                # Public API
-
-integration-tests/          # Integration and end-to-end tests
-```
-
-## Recursos
-
-- [Claude Code Documentation](https://docs.anthropic.com/en/docs/claude-code)
-- [Claude Code Plugins Guide](https://docs.anthropic.com/en/docs/claude-code/plugins)
-- [Agent Skills Specification](https://agentskills.io)
+[![Star History Chart](https://api.star-history.com/svg?repos=open-agreements/open-agreements&type=Date)](https://star-history.com/#open-agreements/open-agreements&Date)
 
 ## Licença
 
-MIT
+MIT. O conteúdo dos modelos é licenciado por seus respectivos autores:
 
-O conteúdo dos modelos é licenciado por seus respectivos autores — CC BY 4.0 (Common Paper, Bonterms), CC BY-ND 4.0 (Y Combinator) ou proprietário (NVCA, baixado em tempo de execução). Veja `metadata.yaml` de cada modelo para detalhes.
+- CC BY 4.0 para modelos da Common Paper, Bonterms e modelos autorais do OpenAgreements
+- CC BY-ND 4.0 para modelos de SAFE do Y Combinator vendorizados sem alterações
+- proprietário ou não redistribuível para documentos de origem da NVCA tratados via recipes
 
-## Aviso legal
+Veja o `metadata.yaml` de cada modelo para detalhes específicos da fonte.
 
-Esta ferramenta gera documentos a partir de modelos padrão. Ela não fornece assessoria jurídica. Não há afiliação com ou endosso por Common Paper, Bonterms, Y Combinator, NVCA ou qualquer fonte de modelo. Consulte um advogado para orientação jurídica.
+Esta ferramenta gera documentos a partir de modelos padrão. Ela não fornece assessoria jurídica. Consulte um advogado para orientação jurídica.

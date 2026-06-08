@@ -20,6 +20,15 @@ import {
 } from 'docx';
 
 function buildDocumentStyles(style) {
+  // Apple Pages requires explicit named paragraph styles — paragraphs without a
+  // referenced pStyle either drop inline alignment or inherit the previous
+  // paragraph's style properties. See #262, #263, and #339 for prior incidents.
+  const normalSpacing = {
+    before: 0,
+    after: style.spacing.body_after,
+    line: style.spacing.line,
+    lineRule: LineRuleType.AUTO,
+  };
   return {
     default: {
       document: {
@@ -28,14 +37,7 @@ function buildDocumentStyles(style) {
           size: 22,
           color: style.colors.ink,
         },
-        paragraph: {
-          spacing: {
-            before: 0,
-            after: 0,
-            line: style.spacing.line,
-            lineRule: LineRuleType.AUTO,
-          },
-        },
+        paragraph: { spacing: normalSpacing },
       },
     },
     paragraphStyles: [
@@ -49,10 +51,44 @@ function buildDocumentStyles(style) {
           size: 22,
           color: style.colors.ink,
         },
+        paragraph: { spacing: normalSpacing },
+      },
+      {
+        id: 'OATitle',
+        name: 'OA Title',
+        basedOn: 'Normal',
+        next: 'Normal',
+        quickFormat: true,
+        run: {
+          font: style.fonts.heading,
+          size: 44,
+          color: style.colors.ink,
+        },
+        paragraph: {
+          spacing: {
+            before: style.spacing.title_before,
+            after: style.spacing.title_after,
+            line: style.spacing.line,
+            lineRule: LineRuleType.AUTO,
+          },
+        },
+      },
+      {
+        id: 'OASectionTitle',
+        name: 'OA Section Title',
+        basedOn: 'Normal',
+        next: 'Normal',
+        quickFormat: true,
+        run: {
+          font: style.fonts.body,
+          size: 22,
+          bold: true,
+          color: style.colors.accent,
+        },
         paragraph: {
           spacing: {
             before: 0,
-            after: 0,
+            after: style.spacing.section_title_after,
             line: style.spacing.line,
             lineRule: LineRuleType.AUTO,
           },
@@ -274,7 +310,10 @@ function buildSection(sectionLabel, documentLabel, documentVersion, children, st
 
 function bodyParagraph(text, style, opts = {}) {
   return new Paragraph({
-    style: opts.style,
+    // Every visible-text paragraph in document.xml must reference a named style
+    // so Apple Pages doesn't drop inline properties or inherit from the previous
+    // paragraph. Default to 'Normal' when callers don't specify (#262, #339).
+    style: opts.style ?? 'Normal',
     contextualSpacing: false,
     spacing: {
       before: opts.before ?? 0,
@@ -306,6 +345,7 @@ function noteParagraph(text, style) {
 
 function titleParagraph(text, style) {
   return new Paragraph({
+    style: 'OATitle',
     spacing: { before: style.spacing.title_before, after: style.spacing.title_after },
     children: [
       new TextRun({
@@ -320,6 +360,7 @@ function titleParagraph(text, style) {
 
 function sectionTitleParagraph(text, style) {
   return new Paragraph({
+    style: 'OASectionTitle',
     contextualSpacing: false,
     spacing: {
       before: 0,
@@ -362,6 +403,7 @@ function rowHeadingCell(titleText, subtitleText, style, nilBorder, ruleBorder) {
     verticalAlign: VerticalAlign.CENTER,
     children: [
       new Paragraph({
+        style: 'Normal',
         spacing: { after: 30, line: style.spacing.line },
         children: [
           new TextRun({
@@ -374,6 +416,7 @@ function rowHeadingCell(titleText, subtitleText, style, nilBorder, ruleBorder) {
         ],
       }),
       new Paragraph({
+        style: 'Normal',
         spacing: { after: 20, line: style.spacing.line },
         children: [
           new TextRun({
@@ -410,15 +453,16 @@ function keyLabelCell(row, style, nilBorder, ruleBorder) {
       // (works regardless of single/multi-line wrapping; before-paragraph spacing only
       // gets respected when there's an actual preceding paragraph)
       ...(isGroupHeader
-        ? [new Paragraph({ spacing: { after: 0, line: COVER_GROUP_HEADER_SPACER.line }, children: [new TextRun({ text: COVER_GROUP_HEADER_SPACER.char, size: COVER_GROUP_HEADER_SPACER.fontSize })] })]
+        ? [new Paragraph({ style: 'Normal', spacing: { after: 0, line: COVER_GROUP_HEADER_SPACER.line }, children: [new TextRun({ text: COVER_GROUP_HEADER_SPACER.char, size: COVER_GROUP_HEADER_SPACER.fontSize })] })]
         : []),
       // For conditional sub-rows, put {IF} in a separate zero-height paragraph so docx-templates
       // can remove it cleanly without leaving an empty paragraph artifact.
       // For group headers, put {IF} inline to avoid corrupting cell properties.
       ...(row.condition && isSub
-        ? [new Paragraph({ spacing: { after: 0, line: 0 }, children: [new TextRun({ text: `{IF ${row.condition}}`, size: 1 })] })]
+        ? [new Paragraph({ style: 'Normal', spacing: { after: 0, line: 0 }, children: [new TextRun({ text: `{IF ${row.condition}}`, size: 1 })] })]
         : []),
       new Paragraph({
+        style: 'Normal',
         spacing: { before: 0, after: row.hint ? 10 : 0, line: isGroupHeader ? COVER_GROUP_HEADER_LINE_SPACING : style.spacing.line },
         children: [
           new TextRun({
@@ -434,6 +478,7 @@ function keyLabelCell(row, style, nilBorder, ruleBorder) {
       ...(row.hint
         ? [
             new Paragraph({
+              style: 'Normal',
               spacing: { after: 0, line: style.spacing.line },
               children: [
                 new TextRun({
@@ -605,6 +650,87 @@ function clauseHeadingParagraph(index, heading, style) {
   });
 }
 
+// Highlighted bracket flagging a statutory-compliance representation that has
+// not yet been human-confirmed. Static text (no {field} tag), so the fill
+// pipeline leaves the yellow highlight intact; it only appears inside the
+// {IF !<confirm>} block, so a confirmed fill drops it cleanly.
+function confirmBracketParagraph(note, authorityUrl, style) {
+  return new Paragraph({
+    style: 'OAClauseBody',
+    contextualSpacing: false,
+    spacing: {
+      before: 0,
+      after: style.spacing.body_after,
+      line: style.spacing.line,
+      beforeAutoSpacing: false,
+      afterAutoSpacing: false,
+    },
+    children: [
+      new TextRun({
+        text: `[CONFIRM before signing: ${note}; see ${authorityUrl}]`,
+        font: style.fonts.body,
+        size: 22,
+        bold: true,
+        color: style.colors.ink,
+        highlight: 'yellow',
+      }),
+    ],
+  });
+}
+
+// Cover-page confirmation notice (page one). When a template has any `confirm=`
+// clause, a yellow banner lists each still-unconfirmed *applicable* item so a
+// reader who reviews only the Cover Terms still sees the open item. The whole
+// banner is gated on the derived `{IF any_confirmation_pending}`; each bullet is
+// gated on its own `{IF <gate>}{IF !<confirm>}` so confirmed or inapplicable
+// items drop out. The text never contains the literal "[CONFIRM before signing:"
+// token, so it cannot satisfy or spoof the in-body compliance-bracket validator.
+function confirmationNoticeParagraphs(clauses, style) {
+  const confirmClauses = (clauses ?? []).filter((c) => c && c.confirm);
+  if (confirmClauses.length === 0) return [];
+
+  const ctrl = (text) =>
+    new Paragraph({ style: 'Normal', spacing: { after: 0, line: 0 }, children: [new TextRun({ text, size: 1 })] });
+  const yellow = (text, bold = false) =>
+    new Paragraph({
+      style: 'OAClauseBody',
+      contextualSpacing: false,
+      spacing: {
+        before: 0,
+        after: style.spacing.body_after,
+        line: style.spacing.line,
+        beforeAutoSpacing: false,
+        afterAutoSpacing: false,
+      },
+      children: [
+        new TextRun({ text, font: style.fonts.body, size: 22, bold, color: style.colors.ink, highlight: 'yellow' }),
+      ],
+    });
+
+  const out = [ctrl('{IF any_confirmation_pending}')];
+  out.push(yellow('CONFIRMATION REQUIRED BEFORE SIGNING', true));
+  // "Explicit index" framing: make unmistakable that the yellow bracket to
+  // review/delete lives in the named Standard Terms section, NOT in this page-one
+  // list (which is only an index). Must not contain the literal
+  // "[CONFIRM before signing:" token so it can't spoof the in-body bracket validator.
+  out.push(
+    yellow(
+      'This page lists statutory-compliance items a person must verify before signing. Each appears in full within the Standard Terms below, flagged there with a yellow "CONFIRM before signing" bracket. This list is only an index: for each item, find the named section in the Standard Terms, confirm the stated fact occurred, and delete the yellow bracket there. Delete this entire notice before signing.'
+    )
+  );
+  out.push(yellow('Items requiring confirmation (see the named section of the Standard Terms):'));
+  for (const clause of confirmClauses) {
+    const bullet = `• ${clause.heading} — for more details see ${clause.authority_url}`;
+    if (clause.condition) out.push(ctrl(`{IF ${clause.condition}}`));
+    out.push(ctrl(`{IF !${clause.confirm}}`));
+    out.push(yellow(bullet));
+    out.push(ctrl('{END-IF}'));
+    if (clause.condition) out.push(ctrl('{END-IF}'));
+  }
+  out.push(ctrl('{END-IF}'));
+  return out;
+}
+
 function clauseParagraphs(index, clauseItem, style, opts = {}) {
   if (clauseItem.type === 'definitions') {
     return [
@@ -617,16 +743,50 @@ function clauseParagraphs(index, clauseItem, style, opts = {}) {
   const termsOpt = opts.terms;
   const bodyParas = bodyParagraphsFromText(clauseItem.body, style, { size: 22, style: 'OAClauseBody', terms: termsOpt });
 
+  // A control-tag paragraph ({IF …}/{END-IF}) in the clause-body style.
+  const tag = (text) => bodyParagraph(text, style, { size: 22, style: 'OAClauseBody', terms: [] });
+  // A zero-height control-tag paragraph for wrappers that sit ABOVE a clause
+  // heading (clean-omission / applicability gate). Keeping the {IF}/{END-IF}
+  // marker zero-height avoids a stray blank line above the heading once
+  // docx-templates strips the tag (same precedent as the cover-table sub-rows).
+  const wrapTag = (text) =>
+    new Paragraph({ style: 'Normal', spacing: { after: 0, line: 0 }, children: [new TextRun({ text, size: 1 })] });
+
   if (clauseItem.condition && clauseItem.omitted_body) {
-    // Wrap body in {IF condition} and omitted_body in {IF !condition}
-    const ifOpen = bodyParagraph(`{IF ${clauseItem.condition}}`, style, { size: 22, style: 'OAClauseBody', terms: [] });
-    const ifClose = bodyParagraph('{END-IF}', style, { size: 22, style: 'OAClauseBody', terms: [] });
-    const ifNotOpen = bodyParagraph(`{IF !${clauseItem.condition}}`, style, { size: 22, style: 'OAClauseBody', terms: [] });
-    const omittedPara = bodyParagraph(clauseItem.omitted_body, style, { size: 22, style: 'OAClauseBody', terms: [] });
-    return [headingParagraph, ifOpen, ...bodyParas, ifClose, ifNotOpen, omittedPara, ifClose];
+    // Placeholder mode (back-compat): the heading always renders; the body is
+    // shown gated on {IF condition} and swapped for the [Intentionally Omitted.]
+    // placeholder gated on {IF !condition}. (Not combinable with confirm — the
+    // schema/parser forbid that.)
+    const omittedPara = tag(clauseItem.omitted_body);
+    return [
+      headingParagraph,
+      tag(`{IF ${clauseItem.condition}}`), ...bodyParas, tag('{END-IF}'),
+      tag(`{IF !${clauseItem.condition}}`), omittedPara, tag('{END-IF}'),
+    ];
   }
 
-  return [headingParagraph, ...bodyParas];
+  let core;
+  if (clauseItem.confirm) {
+    // Statutory-compliance representation: render the recital body
+    // unconditionally, then append a highlighted [CONFIRM …] bracket gated on
+    // {IF !<confirm>} so it shows only while the fact is unconfirmed. Never a
+    // silent omit; never future-tense.
+    const confirmPara = confirmBracketParagraph(clauseItem.confirm_note, clauseItem.authority_url, style);
+    core = [headingParagraph, ...bodyParas, tag(`{IF !${clauseItem.confirm}}`), confirmPara, tag('{END-IF}')];
+  } else {
+    core = [headingParagraph, ...bodyParas];
+  }
+
+  if (clauseItem.condition) {
+    // Clean omission / applicability gate: a `when=<field>` clause WITHOUT an
+    // `omitted=` placeholder wraps the entire clause (heading + body, plus any
+    // confirm bracket) in {IF condition} so it is FULLY absent — no heading, no
+    // placeholder — when the condition is false. Downstream clauses are
+    // renumbered after fill so no gap remains.
+    return [wrapTag(`{IF ${clauseItem.condition}}`), ...core, wrapTag('{END-IF}')];
+  }
+
+  return core;
 }
 
 function signatureLabelCell(label, hint, style, nilBorder) {
@@ -641,6 +801,7 @@ function signatureLabelCell(label, hint, style, nilBorder) {
     verticalAlign: VerticalAlign.CENTER,
     children: [
       new Paragraph({
+        style: 'Normal',
         spacing: { after: hint ? 10 : 0, line: style.spacing.line },
         children: [
           new TextRun({
@@ -655,6 +816,7 @@ function signatureLabelCell(label, hint, style, nilBorder) {
       ...(hint
         ? [
             new Paragraph({
+              style: 'Normal',
               spacing: { after: 0, line: style.spacing.line },
               children: [
                 new TextRun({
@@ -683,6 +845,7 @@ function signatureHeaderCell(text, style, nilBorder) {
     verticalAlign: VerticalAlign.CENTER,
     children: [
       new Paragraph({
+        style: 'Normal',
         alignment: AlignmentType.CENTER,
         spacing: { after: 0, line: style.spacing.line },
         children: [
@@ -711,6 +874,7 @@ function signatureLineCell(value, style, nilBorder, ruleBorder) {
     verticalAlign: VerticalAlign.CENTER,
     children: [
       new Paragraph({
+        style: 'Normal',
         spacing: { after: 0, line: style.spacing.line },
         children: [
           new TextRun({
@@ -1008,6 +1172,7 @@ function appendSignatureMarkdown(lines, signatureSection) {
 
 function signerTableSpacer(style) {
   return new Paragraph({
+    style: 'Normal',
     spacing: { before: 0, after: style.spacing.body_after, line: style.spacing.line },
     children: [new TextRun({ text: '' })],
   });
@@ -1119,6 +1284,7 @@ export function renderCoverStandardSignatureV1(spec, style) {
         document.version,
         [
           titleParagraph(document.title, style),
+          ...confirmationNoticeParagraphs(sections.standard_terms.clauses, style),
           coverTable(
             sections.cover_terms.rows,
             sections.cover_terms.heading_title,

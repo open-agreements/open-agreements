@@ -7,6 +7,13 @@ OpenAgreements is an open-source TypeScript CLI and library for filling standard
 2. **External templates** (CC BY-ND 4.0): Vendored unchanged under `external/`, shipped in the npm package. CC BY-ND allows redistribution of unmodified copies.
 3. **Recipes** (not redistributable): Transformation instructions only under `recipes/`. Source DOCX downloaded at runtime from publisher URL (e.g., nvca.org). No copyrighted content in the repo.
 
+## Audience
+OpenAgreements is built first for overworked general counsel and legal-ops
+owners at small businesses who need reliable standard agreements without a
+bespoke tooling team. The public specs should be rigorous enough for AI agents
+to discover behavior, map tests, and operate safely; lawyer-readable prose is
+useful, but secondary to precise machine-readable contracts and scenarios.
+
 ## Tech Stack
 - TypeScript (Node.js >=20, ESM)
 - Commander.js (CLI framework)

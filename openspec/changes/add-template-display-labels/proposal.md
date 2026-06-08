@@ -39,7 +39,7 @@ narrowly-scoped CLI projection and no MCP/A2A propagation.
 - Curate `display_label` on every user-facing field of
   `content/templates/openagreements-restrictive-covenant-wyoming/metadata.yaml`.
   Author guidance: AI-only fields (e.g. `worker_category`,
-  `restriction_pathways`) and internal computed fields (e.g.
+  `applicable_noncompete_exceptions`) and internal computed fields (e.g.
   `cloud_drive_id_footer`) SHOULD NOT carry a `display_label` — their
   description already says "Not shown in the output document," and
   curating a human label would invite consumers to surface them.

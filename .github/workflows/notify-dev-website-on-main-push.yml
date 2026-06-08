@@ -1,0 +1,66 @@
+name: Notify dev-website of main push
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      sha:
+        description: "OA SHA to dispatch (defaults to main HEAD if blank)"
+        required: false
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  # Reduce duplicate dispatches when rapid successive main pushes happen.
+  # Note: cancel-in-progress does NOT undo an HTTP call that has already
+  # fired — receiving-side concurrency + the fixed automation branch in
+  # dev-website are what guarantee idempotency end-to-end.
+  group: notify-dev-website
+  cancel-in-progress: true
+
+jobs:
+  dispatch:
+    name: Dispatch open-agreements-main-push
+    runs-on: ubuntu-latest
+    steps:
+      - name: Resolve dispatch SHA
+        id: resolve
+        env:
+          INPUT_SHA: ${{ inputs.sha }}
+        run: |
+          # On push events GITHUB_SHA is already the new HEAD. On workflow_dispatch,
+          # the user can override (e.g., for replay-from-a-prior-SHA testing); blank
+          # input falls back to whatever GITHUB_SHA resolves to (main HEAD for the run).
+          if [ -n "$INPUT_SHA" ]; then
+            DISPATCH_SHA="$INPUT_SHA"
+          else
+            DISPATCH_SHA="$GITHUB_SHA"
+          fi
+          echo "sha=${DISPATCH_SHA}" >> "$GITHUB_OUTPUT"
+          echo "short_sha=${DISPATCH_SHA:0:7}" >> "$GITHUB_OUTPUT"
+
+      - name: Fire repository_dispatch
+        env:
+          GH_TOKEN: ${{ secrets.DEV_WEBSITE_DISPATCH_TOKEN }}
+          # Env indirection — do NOT interpolate ${{ github.event.head_commit.message }}
+          # directly into the run block. Commit messages are attacker-controlled and an
+          # inline expression would let a crafted message break out of the shell string.
+          HEAD_MESSAGE: ${{ github.event.head_commit.message || format('Manual dispatch from {0}', github.actor) }}
+          DISPATCH_SHA: ${{ steps.resolve.outputs.sha }}
+          DISPATCH_SHORT: ${{ steps.resolve.outputs.short_sha }}
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::warning::DEV_WEBSITE_DISPATCH_TOKEN not set; skipping dispatch."
+            exit 0
+          fi
+          gh api --method POST \
+            -H "Accept: application/vnd.github+json" \
+            /repos/UseJunior/dev-website/dispatches \
+            -f event_type=open-agreements-main-push \
+            -f "client_payload[sha]=${DISPATCH_SHA}" \
+            -f "client_payload[short_sha]=${DISPATCH_SHORT}" \
+            -f "client_payload[message]=${HEAD_MESSAGE}"
+          echo "Dispatched open-agreements-main-push to UseJunior/dev-website for ${DISPATCH_SHORT}."

@@ -40,6 +40,100 @@ function extractDocxText(docxPath: string): string {
   return paragraphs.join('\n');
 }
 
+/** Decode the handful of XML entities that OOXML escaping can introduce into
+ *  `<w:t>` text (notably `&amp;` for `&` in a URL), so a captured bracket URL
+ *  compares equal to the raw `authority_url` from metadata.yaml. */
+function decodeXmlEntities(value: string): string {
+  return value
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&apos;/g, "'")
+    .replace(/&amp;/g, '&');
+}
+
+/**
+ * Enforce the `statutory_compliance_representation` contract against the rendered
+ * template text. This is the load-bearing guard that the decided `confirm=`
+ * behavior actually shipped — three checks per field:
+ *
+ *  1. The clause renders the highlighted `[CONFIRM before signing: …; see <url>]`
+ *     bracket gated on `{IF !<field>}`. Presence of a bare `{IF !field}` is NOT
+ *     sufficient (the legacy `when=field omitted="…"` mechanism also emits one),
+ *     so the negated conditional MUST be immediately followed by the literal
+ *     bracket.
+ *  2. The URL and note inside the bracket EQUAL the field's metadata
+ *     `authority_url` / `confirm_note`. These now have a single authoring source
+ *     (metadata.yaml — the directive no longer restates them), so this is no
+ *     longer an author-drift check between two hand-edited files. It is an
+ *     integrity check between metadata.yaml and the COMMITTED rendered artifact:
+ *     `validateTemplate` scans the committed `template.docx`, so a stale DOCX (or
+ *     `.template.generated.json`) — e.g. a metadata edit shipped without
+ *     regenerating — is caught here, as are hand-authored JSON templates that
+ *     carry `confirm`/`authority_url`/`confirm_note` directly. Equality, not
+ *     substring: a value with an extra suffix must fail.
+ *  3. The clause body always renders — i.e. the affirmative `{IF <field>}` form
+ *     is absent. A `confirm=` clause only ever emits `{IF !<field>}`; a legacy
+ *     `when=<field>` clause wraps its body in `{IF <field>}`. Asserting the
+ *     affirmative form is absent proves the body is unconditional and closes the
+ *     spoof where an `omitted="[CONFIRM …]"` string mimics the bracket.
+ */
+export function checkStatutoryComplianceReps(
+  searchableText: string,
+  fields: { name: string; statutory_compliance_representation?: boolean; authority_url?: string; confirm_note?: string }[],
+  errors: string[],
+): void {
+  const scrFields = fields.filter((f) => f.statutory_compliance_representation === true);
+  if (scrFields.length === 0) return;
+
+  // Capture the field, the note, and the URL. The note uses a lazy `[\s\S]*?` so
+  // a literal `]` inside it does not truncate the match; the URL is the
+  // non-space, non-`]` run after "; see ".
+  const confirmRe = /\{IF !(\w+)\}\s*\[CONFIRM before signing: ([\s\S]*?); see ([^\]\s]+)\]/g;
+  const bracketByField = new Map<string, { note: string; url: string }>();
+  let match: RegExpExecArray | null;
+  while ((match = confirmRe.exec(searchableText)) !== null) {
+    bracketByField.set(match[1], {
+      note: decodeXmlEntities(match[2]),
+      url: decodeXmlEntities(match[3]),
+    });
+  }
+
+  for (const field of scrFields) {
+    const bracket = bracketByField.get(field.name);
+    if (bracket === undefined) {
+      errors.push(
+        `statutory_compliance_representation field "${field.name}" must be gated by a clause confirm= — ` +
+        `no "{IF !${field.name}} [CONFIRM before signing: …; see <url>]" bracket found in the rendered template`
+      );
+      continue;
+    }
+    const { note, url } = bracket;
+    if (field.authority_url && url !== field.authority_url) {
+      errors.push(
+        `statutory_compliance_representation field "${field.name}" authority_url ` +
+        `("${field.authority_url}") does not match the URL in its rendered [CONFIRM …] bracket ` +
+        `("${url}") — metadata.yaml and the committed rendered template have drifted (regenerate the template)`
+      );
+    }
+    if (field.confirm_note && note !== field.confirm_note) {
+      errors.push(
+        `statutory_compliance_representation field "${field.name}" confirm_note ` +
+        `("${field.confirm_note}") does not match the note in its rendered [CONFIRM …] bracket ` +
+        `("${note}") — metadata.yaml and the committed rendered template have drifted (regenerate the template)`
+      );
+    }
+    // The recital body must render unconditionally: a confirm= clause never
+    // wraps its body in an affirmative {IF <field>}.
+    if (searchableText.includes(`{IF ${field.name}}`)) {
+      errors.push(
+        `statutory_compliance_representation field "${field.name}" must use confirm= (the recital body ` +
+        `always renders); found an affirmative "{IF ${field.name}}" indicating legacy when=/omitted gating`
+      );
+    }
+  }
+}
+
 /**
  * Validate that a template's metadata fields match the placeholders in its DOCX file.
  */
@@ -214,6 +308,14 @@ export function validateTemplate(templateDir: string, templateId: string): Templ
         }
       }
     }
+
+    // Confirm brackets may be injected via replacement values, so search both
+    // the original DOCX text and the replacement values.
+    checkStatutoryComplianceReps(
+      `${docxText}\n${Object.values(replacements).join('\n')}`,
+      metadata.fields,
+      errors,
+    );
   } else {
     // Original behavior: scan DOCX text directly for {tags}
     const text = extractDocxText(templatePath);
@@ -325,6 +427,8 @@ export function validateTemplate(templateDir: string, templateId: string): Templ
         );
       }
     }
+
+    checkStatutoryComplianceReps(text, metadata.fields, errors);
   }
 
   return { templateId, valid: errors.length === 0, errors, warnings };

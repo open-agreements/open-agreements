@@ -3,13 +3,28 @@ import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import yaml from 'js-yaml';
 
+/**
+ * License values accepted by template metadata.
+ *
+ * CC-BY-4.0 and CC0-1.0 templates may be redistributed as OpenAgreements
+ * content. CC-BY-ND-4.0 templates are vendored only when unmodified and must
+ * declare `allow_derivatives: false`.
+ */
 export const LicenseEnum = z.enum(['CC-BY-4.0', 'CC0-1.0', 'CC-BY-ND-4.0']);
 export type License = z.infer<typeof LicenseEnum>;
 
+/** Field kinds supported by template, external-template, and recipe metadata. */
 const FieldTypeEnum = z.enum(['string', 'date', 'number', 'boolean', 'enum', 'array', 'multiselect']);
 export type FieldType = z.infer<typeof FieldTypeEnum>;
 const MULTISELECT_OPTION_RE = /^[A-Za-z_][A-Za-z0-9_]*$/;
 
+/**
+ * Metadata definition for a fillable field.
+ *
+ * `name`, `type`, and `description` are required. `enum` and `multiselect`
+ * fields must declare non-empty `options`; `array` fields may declare nested
+ * `items`; `display_label` is a presentation hint and never replaces `name`.
+ */
 export interface FieldDefinition {
   name: string;
   type: FieldType;
@@ -21,6 +36,40 @@ export interface FieldDefinition {
   derive_booleans?: boolean;
   section?: string;
   items?: FieldDefinition[];
+  /**
+   * Marks this boolean field as a *statutory compliance representation*: its
+   * `true` value asserts a past real-world fact that is a statutory precondition
+   * to the agreement's enforceability/validity (e.g. a required advance notice
+   * or written advisal that must actually have been given before signing).
+   *
+   * Deliberately NARROW — opt-in per field and reserved for the few reps that
+   * gate enforceability, NOT general representations (a purchase agreement may
+   * carry dozens of ordinary reps that should not all demand per-rep
+   * confirmation). When set, the field MUST be boolean with `default: 'false'`
+   * and MUST declare `authority_url`. A template clause references it via the
+   * renderer's `confirm=` directive, which renders the recital clean when the
+   * field is true and as a highlighted `[CONFIRM …]` bracket when it is false
+   * (never silently dropped). The broad confirmation warning rides in
+   * `description`; the short reason shown inside the rendered bracket rides in
+   * `confirm_note`.
+   */
+  statutory_compliance_representation?: boolean;
+  /**
+   * Statute / practice-note link used as the learn-more reference for a
+   * `statutory_compliance_representation` field (surfaced in the field
+   * description and the rendered `[CONFIRM …; see <authority_url>]` bracket).
+   * Only valid on a `statutory_compliance_representation` field.
+   */
+  authority_url?: string;
+  /**
+   * Short, human-readable reason rendered inside the
+   * `[CONFIRM before signing: <confirm_note>; see <authority_url>]` bracket of a
+   * `statutory_compliance_representation` field. This is the single source of
+   * truth for the bracket note — a `confirm=<field>` clause directive resolves
+   * it from here rather than restating it. Only valid on (and required for) a
+   * `statutory_compliance_representation` field.
+   */
+  confirm_note?: string;
 }
 
 export const FieldDefinitionSchema: z.ZodType<FieldDefinition> = z.lazy(() =>
@@ -35,6 +84,9 @@ export const FieldDefinitionSchema: z.ZodType<FieldDefinition> = z.lazy(() =>
     derive_booleans: z.boolean().optional(),
     section: z.string().optional(),
     items: z.array(FieldDefinitionSchema).nonempty().optional(),
+    statutory_compliance_representation: z.boolean().optional(),
+    authority_url: z.string().optional(),
+    confirm_note: z.string().optional(),
   }).superRefine((field, ctx) => {
     if (
       (field.type === 'enum' || field.type === 'multiselect') &&
@@ -83,6 +135,66 @@ export const FieldDefinitionSchema: z.ZodType<FieldDefinition> = z.lazy(() =>
         path: ['items'],
         message: 'Only fields with type "array" may define nested items',
       });
+    }
+
+    // `statutory_compliance_representation` is a NARROW opt-in category for the
+    // few boolean reps whose truth is a statutory precondition to
+    // enforceability. Enforce its shape so the renderer's `confirm=` mechanism
+    // and the get_template confirmation surface stay sound.
+    if (field.statutory_compliance_representation === true) {
+      if (field.type !== 'boolean') {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ['statutory_compliance_representation'],
+          message: 'statutory_compliance_representation is only valid on a boolean field',
+        });
+      }
+      if (field.default !== 'false') {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ['default'],
+          message: "statutory_compliance_representation fields must declare default: 'false' (a compliance fact is unconfirmed until a human confirms it)",
+        });
+      }
+      if (field.authority_url === undefined) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ['authority_url'],
+          message: 'statutory_compliance_representation fields must declare an authority_url (statute / practice-note link)',
+        });
+      } else if (!/^https?:\/\/\S+$/.test(field.authority_url)) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ['authority_url'],
+          message: 'authority_url must be an http(s) URL',
+        });
+      }
+      // confirm_note is the SSOT for the rendered `[CONFIRM …]` bracket note, so
+      // it must be present and non-empty (after trimming) on these fields.
+      if (field.confirm_note === undefined || field.confirm_note.trim().length === 0) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ['confirm_note'],
+          message: 'statutory_compliance_representation fields must declare a non-empty confirm_note (the short reason shown in the rendered [CONFIRM …] bracket)',
+        });
+      }
+    } else {
+      // Keep these properties scoped: they have no meaning outside the
+      // statutory_compliance_representation category.
+      if (field.authority_url !== undefined) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ['authority_url'],
+          message: 'authority_url is only valid on a statutory_compliance_representation field',
+        });
+      }
+      if (field.confirm_note !== undefined) {
+        ctx.addIssue({
+          code: z.ZodIssueCode.custom,
+          path: ['confirm_note'],
+          message: 'confirm_note is only valid on a statutory_compliance_representation field',
+        });
+      }
     }
 
     if (field.default !== undefined) {
@@ -158,6 +270,7 @@ export const FieldDefinitionSchema: z.ZodType<FieldDefinition> = z.lazy(() =>
   })
 );
 
+/** Closed set of provenance roles accepted in template `credits` entries. */
 const TemplateCreditRoleEnum = z.enum([
   'drafter',
   'drafting_editor',
@@ -165,6 +278,7 @@ const TemplateCreditRoleEnum = z.enum([
   'maintainer',
 ]);
 
+/** Optional template provenance entry surfaced by CLI discovery output. */
 const TemplateCreditSchema = z.object({
   name: z.string(),
   role: TemplateCreditRoleEnum,
@@ -234,6 +348,16 @@ function validateDerivedBooleanCollisions(fields: FieldDefinition[], ctx: z.Refi
   });
 }
 
+/**
+ * Base metadata required for first-party and external templates.
+ *
+ * Template directories must provide `metadata.yaml` with a non-empty display
+ * name, source URL, version, license, derivative flag, attribution text, and
+ * field definitions. `category` is optional discovery grouping metadata.
+ * `priority_fields` reference required fill fields. `credits` records
+ * contributor provenance and defaults to an empty array; `derived_from` is
+ * expository provenance text and does not affect licensing.
+ */
 const TemplateMetadataBaseSchema = z.object({
   name: z.string().trim().min(1, 'name must be a non-empty string (used as display_name on list_templates)'),
   description: z.string().optional(),
@@ -257,6 +381,13 @@ export type TemplateMetadata = z.infer<typeof TemplateMetadataSchema>;
 
 // --- External template schemas ---
 
+/**
+ * Metadata for vendored external templates.
+ *
+ * `source_sha256` records the checksum of the unmodified upstream document so
+ * validation can verify provenance for no-derivatives templates before local
+ * transient fills or CI license checks rely on that source.
+ */
 export const ExternalMetadataSchema = TemplateMetadataBaseSchema.extend({
   source_sha256: z.string(),
 }).superRefine((meta, ctx) => {
@@ -267,6 +398,7 @@ export type ExternalMetadata = z.infer<typeof ExternalMetadataSchema>;
 
 // --- Recipe schemas ---
 
+/** Declarative cleaner configuration for recipe DOCX preprocessing. */
 export const CleanConfigSchema = z.object({
   removeFootnotes: z.boolean().default(false),
   removeBeforePattern: z.string().optional(),
@@ -306,6 +438,7 @@ export const GuidanceEntrySchema = z.object({
 });
 export type GuidanceEntry = z.infer<typeof GuidanceEntrySchema>;
 
+/** Machine-readable guidance artifact produced from recipe cleaning inputs. */
 export const GuidanceOutputSchema = z.object({
   extractedFrom: z.object({
     sourceHash: z.string(),
@@ -321,6 +454,17 @@ const MarketDataCitationSchema = z.object({
   url: z.string().optional(),
 });
 
+/**
+ * Metadata required for recipe-based templates.
+ *
+ * Recipes point at non-redistributable upstream source DOCX files and ship only
+ * transformation instructions. Required fields are `name`, `source_url`,
+ * `source_version`, and `license_note`; `fields` and `priority_fields` reuse
+ * the same field-definition semantics as template metadata and default to
+ * empty arrays. `optional` defaults to `false`. `source_sha256` verifies
+ * provenance for upstream sources when present. `market_data_citations`
+ * records optional external citation metadata used by recipe guidance.
+ */
 export const RecipeMetadataSchema = z.object({
   name: z.string().trim().min(1, 'name must be a non-empty string (used as display_name on list_templates)'),
   category: z.string().optional(),

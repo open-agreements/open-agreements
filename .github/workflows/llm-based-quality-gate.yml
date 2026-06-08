@@ -82,7 +82,18 @@ jobs:
         run: |
           set -euo pipefail
           if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
-            gh pr view "$DISPATCH_PR_NUMBER" --json headRefOid,headRefName,baseRefName,labels > "$RUNNER_TEMP/pr.json"
+            gh pr view "$DISPATCH_PR_NUMBER" --repo "$GITHUB_REPOSITORY" --json headRefOid,headRefName,baseRefName,labels,headRepository,headRepositoryOwner > "$RUNNER_TEMP/pr.json"
+            # SECURITY: the job-level `if:` permits workflow_dispatch
+            # unconditionally; the same-repo gate (`head.repo.full_name ==
+            # github.repository`) is only enforced for pull_request events. Without
+            # this check, a maintainer dispatching the gate against a fork PR's
+            # head SHA would check out fork-controlled content with
+            # GEMINI_API_KEY in env. Fail closed if head repo != this repo.
+            HEAD_REPO=$(jq -r '.headRepositoryOwner.login + "/" + .headRepository.name' "$RUNNER_TEMP/pr.json")
+            if [ "$HEAD_REPO" != "$GITHUB_REPOSITORY" ]; then
+              echo "::error::workflow_dispatch attempted on PR #${DISPATCH_PR_NUMBER} from ${HEAD_REPO} (expected ${GITHUB_REPOSITORY}). The gate only runs on same-repo PRs; refusing to expose GEMINI_API_KEY to fork-controlled content."
+              exit 1
+            fi
             {
               echo "pr_number=$DISPATCH_PR_NUMBER"
               echo "head_sha=$(jq -r '.headRefOid' "$RUNNER_TEMP/pr.json")"
@@ -96,7 +107,11 @@ jobs:
               echo "head_sha=$PR_HEAD_SHA"
               echo "head_ref=$PR_HEAD_REF"
               echo "base_ref=$PR_BASE_REF"
-              echo "labels=$PR_LABELS"
+              # `toJSON()` emits pretty-printed (multi-line) JSON, which
+              # $GITHUB_OUTPUT rejects without heredoc syntax. Collapse to
+              # single-line so the downstream `JSON.parse(PR_LABELS)` keeps
+              # working and the override label can be evaluated.
+              echo "labels=$(printf '%s' "$PR_LABELS" | jq -c .)"
             } >> "$GITHUB_OUTPUT"
           fi
 
@@ -106,7 +121,7 @@ jobs:
       # gate trivially "passes") or replace items with innocuous questions
       # that bypass the real checks.
       - name: Checkout gate source (trusted base ref)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           ref: ${{ steps.pr.outputs.base_ref }}
           persist-credentials: false
@@ -158,14 +173,14 @@ jobs:
       # content. Using base_ref ensures the gate source is always the version
       # the PR is being merged into.
       - name: Checkout gate source (trusted base ref)
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           ref: ${{ needs.parse-checklist.outputs.base_ref }}
           persist-credentials: false
           fetch-depth: 0
 
       - name: Checkout PR head
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           ref: ${{ needs.parse-checklist.outputs.head_sha }}
           path: review
@@ -192,7 +207,7 @@ jobs:
           working-directory: review
 
       - name: Upload per-item result
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: result-${{ matrix.id }}
           path: review/results/result-${{ matrix.id }}.json
@@ -212,9 +227,14 @@ jobs:
     permissions:
       contents: read
       pull-requests: write
+      # `checks: write` lets the workflow_dispatch mirror step POST an
+      # explicit check_run to /repos/.../check-runs. Without it, the mirror
+      # POST returns 403 and PRs re-fired via workflow_dispatch stay
+      # `mergeStateStatus: BLOCKED` (the bug this whole step exists to fix).
+      checks: write
     steps:
       - name: Download all per-item results
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v5
         with:
           path: results
           pattern: result-*
@@ -224,6 +244,7 @@ jobs:
         run: ls -la results/ || echo "no results downloaded"
 
       - name: Compose and post checklist comment
+        id: compose
         uses: actions/github-script@v7
         env:
           MODEL: ${{ env.GEMINI_MODEL }}
@@ -231,6 +252,8 @@ jobs:
           PR_NUMBER: ${{ needs.parse-checklist.outputs.pr_number }}
           PR_LABELS: ${{ needs.parse-checklist.outputs.labels }}
           EVENT_NAME: ${{ github.event_name }}
+          HEAD_SHA: ${{ needs.parse-checklist.outputs.head_sha }}
+          REPO: ${{ github.repository }}
         with:
           script: |
             const fs = require('fs');
@@ -294,8 +317,32 @@ jobs:
               : '';
             const costLine = `_Estimated cost (this run): **$${totalUsd.toFixed(4)}** — ${totalIn.toLocaleString()} input + ${totalOut.toLocaleString()} output tokens (≈4 chars/token) on \`${model}\`${retryNote}. Char-count estimate, not provider telemetry._`;
 
-            const body = `${header}${overrideBanner}\n\n${summary}\n\n${table}${fullQuestions}\n\n${costLine}`;
-            const issue_number = Number(process.env.PR_NUMBER);
+            // Re-trigger guidance. The gate intentionally does NOT run on
+            // `synchronize` (push) events — too expensive. So a comment on
+            // an older commit can stay attached to the PR even after new
+            // pushes. Stamping the bound head SHA + the manual re-trigger
+            // command makes the staleness visible and gives reviewers and
+            // automation the exact command to re-fire.
+            const headSha = (process.env.HEAD_SHA || '').slice(0, 7);
+            const repo = process.env.REPO || '';
+            const issueNumber = Number(process.env.PR_NUMBER);
+            const reTriggerNote = [
+              // Blank line BEFORE the `---` is critical: without it, markdown
+              // parses `<costLine>\n---` as a setext H2 and promotes the cost
+              // line to a heading. The two empty strings produce the required
+              // `\n\n` separator after joining.
+              '',
+              '',
+              '---',
+              `_Gate verdict bound to head \`${headSha}\`. The gate does **not** auto-rerun on push (cost) — only on \`opened\`, \`ready_for_review\`, and \`llm-gate/override\` label toggles. After pushing fixes for a WARN above, or after a branch update that bypassed the gate, re-fire manually:_`,
+              '',
+              '```bash',
+              `gh workflow run llm-based-quality-gate.yml -R ${repo} -f pr_number=${issueNumber}`,
+              '```',
+            ].join('\n');
+
+            const body = `${header}${overrideBanner}\n\n${summary}\n\n${table}${fullQuestions}\n\n${costLine}${reTriggerNote}`;
+            const issue_number = issueNumber;
 
             if (process.env.EVENT_NAME === 'workflow_dispatch') {
               const marker = '## LLM-Based Quality Gate';
@@ -341,3 +388,41 @@ jobs:
             if (blockingMode && warns > 0 && !overrideActive) {
               core.setFailed(`LLM-Based Quality Gate found ${warns} WARN row(s). Add the \`llm-gate/override\` label to bypass (with justification in a PR comment).`);
             }
+
+      # When this workflow is re-fired via `workflow_dispatch` (e.g. after a
+      # push that bypassed the `synchronize`-blind PR trigger), the auto-
+      # generated check_run for this job IS attached to the PR's head SHA,
+      # but GitHub's PR `statusCheckRollup` (which branch protection
+      # consults) does NOT include workflow_dispatch-triggered check_runs.
+      # The required check appears green via the Checks API but the PR stays
+      # `mergeStateStatus: BLOCKED`. POST an explicit check_run mirror so
+      # the rollup picks it up.
+      #
+      # `always()` is critical: when the gate finds WARN rows and the
+      # github-script step calls core.setFailed(), the default `if: success()`
+      # would skip this mirror. The mirror's own conclusion is derived from
+      # the prior step's outcome, so a failed gate produces a failed mirror.
+      - name: Mirror conclusion to PR head SHA (workflow_dispatch)
+        if: always() && github.event_name == 'workflow_dispatch' && needs.parse-checklist.outputs.head_sha != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HEAD_SHA: ${{ needs.parse-checklist.outputs.head_sha }}
+          COMPOSE_OUTCOME: ${{ steps.compose.outcome }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          if [ "$COMPOSE_OUTCOME" = "success" ]; then
+            CONCLUSION="success"
+            TITLE="LLM gate passed (re-fired via workflow_dispatch)"
+          else
+            CONCLUSION="failure"
+            TITLE="LLM gate FAILED (re-fired via workflow_dispatch)"
+          fi
+          gh api -X POST "repos/$GITHUB_REPOSITORY/check-runs" \
+            -f "name=Aggregate and post review" \
+            -f "head_sha=$HEAD_SHA" \
+            -f "status=completed" \
+            -f "conclusion=$CONCLUSION" \
+            -f "details_url=$RUN_URL" \
+            -f "output[title]=$TITLE" \
+            -f "output[summary]=Mirrored from workflow_dispatch run. Full output: $RUN_URL"

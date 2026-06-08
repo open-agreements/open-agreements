@@ -22,6 +22,44 @@ const textClauseSchema = z.object({
   body: textSchema,
   condition: z.string().regex(fieldNamePattern).optional(),
   omitted_body: z.string().optional(),
+  // Statutory-compliance-representation gate (renderer `confirm=` directive).
+  // The clause body always renders within its applicability scope; when `confirm`
+  // is false the layout appends a highlighted `[CONFIRM …; see <authority_url>]`
+  // bracket. A confirm clause MAY carry a `condition` (when=) applicability gate,
+  // but is mutually exclusive with `omitted_body` (it is never replaced by a
+  // placeholder).
+  confirm: z.string().regex(fieldNamePattern).optional(),
+  confirm_note: textSchema.optional(),
+  authority_url: z.string().regex(/^https?:\/\/\S+$/, 'authority_url must be an http(s) URL').optional(),
+}).superRefine((clause, ctx) => {
+  if (clause.confirm === undefined) {
+    if (clause.confirm_note !== undefined || clause.authority_url !== undefined) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        path: ['confirm'],
+        message: 'confirm_note/authority_url are only valid on a clause with confirm',
+      });
+    }
+    return;
+  }
+  if (clause.confirm_note === undefined || clause.authority_url === undefined) {
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ['confirm'],
+      message: 'a confirm clause must declare both confirm_note and authority_url',
+    });
+  }
+  // A confirm clause MAY carry a `condition` (when=) applicability gate — the
+  // layout wraps the whole clause (body + CONFIRM bracket) in {IF condition}.
+  // It is still mutually exclusive with `omitted_body`: a confirm clause is
+  // never replaced by an "[Intentionally Omitted.]" placeholder.
+  if (clause.omitted_body !== undefined) {
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ['confirm'],
+      message: 'confirm is mutually exclusive with omitted_body (a confirm clause always renders its body, never a placeholder)',
+    });
+  }
 });
 
 const definitionTermSchema = z.object({
