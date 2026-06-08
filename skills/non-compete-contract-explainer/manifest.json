@@ -1,0 +1,18 @@
+{
+  "topic": "non-compete",
+  "snapshotAsOf": "2026-06-08",
+  "sourceCommit": "c39e21869fa6ba59aa8e8707366c37ab4f9f97e1",
+  "canonicalBase": "https://openagreements.org/legal/non-compete",
+  "license": "CC BY 4.0",
+  "jurisdictions": [
+    {
+      "jurisdiction": "Wyoming",
+      "slug": "wyoming",
+      "countryCode": "US",
+      "file": "content/wyoming.md",
+      "lastReviewed": "2026-04-14",
+      "snapshotAsOf": "2026-06-08",
+      "stale": false
+    }
+  ]
+}
