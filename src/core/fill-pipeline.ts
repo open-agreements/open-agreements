@@ -74,7 +74,13 @@ export interface FillDocxOptions {
   /** Template DOCX buffer (already patched with {tags}). */
   templateBuffer: Buffer;
 
-  /** Prepared fill data from prepareFillData(). */
+  /**
+   * Prepared fill data from prepareFillData(). Every `{IF <var>}` referenced by
+   * the template DOCX must have a corresponding key here, or docx-templates throws
+   * on the undefined variable. In particular, a template with a `confirm=` clause
+   * carries `{IF any_confirmation_pending}` (the cover notice) — prepareFillData
+   * derives it; direct fillDocx callers must supply it (default false).
+   */
   data: Record<string, unknown>;
 
   /** Apply docx-templates smart quote normalization. */
@@ -232,7 +238,9 @@ export function prepareFillData(options: PrepareFillDataOptions): Record<string,
     const truthy = (v: unknown) => v === true || v === 'true';
     data.any_confirmation_pending = confirmClauses.some((clause) => {
       const applicable = clause.condition ? truthy(data[clause.condition]) : true;
-      return applicable && data[clause.confirm] !== true;
+      // Use the same truthy() coercion for the confirm field as for the gate, so
+      // a string "true" counts as confirmed even when coerceBooleans is off.
+      return applicable && !truthy(data[clause.confirm]);
     });
   }
 

@@ -513,9 +513,10 @@ function parseStandardTerms(lines, filePath, fieldLookup = new Map()) {
     const omittedBody = clauseDirective.attrs.omitted ?? clauseDirective.attrs.omitted_body;
 
     // `confirm=<field>` marks a statutory-compliance-representation recital: the
-    // body always renders, and the layout appends a highlighted
-    // `[CONFIRM …; see <authority_url>]` bracket when <field> is false. It is
-    // mutually exclusive with when=/omitted (a confirm clause is never dropped).
+    // body always renders within its applicability scope, and the layout appends a
+    // highlighted `[CONFIRM …; see <authority_url>]` bracket when <field> is false.
+    // It MAY carry a `when=` applicability gate, but is mutually exclusive with
+    // `omitted` (a confirm clause is never replaced by a placeholder).
     // SSOT: the directive names only the field; the short note (`confirm_note`)
     // and the statute link (`authority_url`) are resolved from that field's
     // metadata.yaml entry, never restated in the directive.

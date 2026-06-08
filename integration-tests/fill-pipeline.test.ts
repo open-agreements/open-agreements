@@ -1221,6 +1221,19 @@ describe('confirmation cover notice + clause renumbering', () => {
     expect(run('true', 'true')).toBe(false);
   });
 
+  it.openspec('OA-TMP-070')('treats a string "true" confirm value as confirmed even when coerceBooleans is off', () => {
+    const confirmClauses = [{ id: 'recital', confirm: 'notice_confirmed' }];
+    // coerceBooleans:false leaves the value as the string "true"; the derivation
+    // must still read it as confirmed (not pending).
+    const pending = prepareFillData({
+      values: { notice_confirmed: 'true' },
+      fields: confirmFields,
+      coerceBooleans: false,
+      confirmClauses,
+    })['any_confirmation_pending'];
+    expect(pending).toBe(false);
+  });
+
   it.openspec('OA-TMP-070')('treats a confirm clause with no when= gate as always applicable', () => {
     const confirmClauses = [{ id: 'recital', confirm: 'notice_confirmed' }];
     const run = (confirmed: string) =>

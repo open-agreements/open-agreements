@@ -28,14 +28,15 @@ unconfirmed. Three gaps surfaced in real use of the Florida restrictive-covenant
   retains today's placeholder behavior (back-compat).
 - **Confirmation cover notice (engine).** When a template has ≥1 `confirm` clause, the cover
   page carries a yellow notice gated on a derived `any_confirmation_pending` boolean, listing
-  each still-unconfirmed *applicable* item (a per-clause `<id>_confirm_pending` derived
-  boolean). The notice is plain text (no literal `[CONFIRM before signing:`), so it cannot
-  satisfy or spoof the in-body bracket validator.
+  each still-unconfirmed *applicable* item (each bullet gated by nested `{IF <gate>}{IF !<confirm>}`,
+  so no per-clause derived key is needed). The notice is plain text (no literal
+  `[CONFIRM before signing:`), so it cannot satisfy or spoof the in-body bracket validator.
 - **Clause renumbering (engine).** After conditional resolution at fill time, clause headings
   are renumbered sequentially so fully-omitted clauses leave no numbering gap. Cross-references
   are name-based (`[[clause:<id>]]` resolves to heading text), so renumbering breaks none.
-- **Reserved derived tags (validation).** `any_confirmation_pending` and `<id>_confirm_pending`
-  are recognized control identifiers, not flagged as unknown DOCX placeholders.
+- **Reserved derived tag (validation).** `any_confirmation_pending` is tolerated by the template
+  validator (the conditional-tag path has no unknown-field check), not flagged as an unknown
+  DOCX placeholder.
 - **Single-source link (Florida).** Repoint the `choice_act_advance_notice_confirmed`
   `authority_url` to the OpenAgreements reference card
   (`https://openagreements.org/legal/non-compete/florida`), which curates current primary-law
