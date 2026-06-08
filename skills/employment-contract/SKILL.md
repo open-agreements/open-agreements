@@ -1,18 +1,21 @@
 ---
 name: employment-contract
 description: >-
-  Draft and fill employment agreement templates — offer letter, IP assignment,
-  PIIA, confidentiality acknowledgement. Produces signable DOCX files from
-  OpenAgreements standard forms for hiring employees. Use when user says
-  "offer letter," "employment agreement," "PIIA," "IP assignment," "hire
-  someone," or "onboarding paperwork."
+  Draft and fill employment contract templates — offer letter, employment
+  agreement, IP/inventions assignment (PIIA), and confidentiality
+  acknowledgement — producing signable DOCX files from OpenAgreements standard
+  forms for hiring employees. Use when the user says "employment contract,"
+  "employment agreement," "offer letter," "PIIA," "IP assignment," "hire
+  someone," "new hire paperwork," or "onboarding paperwork." To explain
+  non-compete or restrictive-covenant law rather than draft a document, see the
+  non-compete-contract-explainer skill.
 license: MIT
 compatibility: >-
   Works with any agent. Remote MCP requires no local dependencies.
   Local CLI requires Node.js >=20.
 metadata:
   author: open-agreements
-  version: "0.2.0"
+  version: "0.3.0"
 catalog_group: Agreement Drafting And Filling
 catalog_order: 50
 ---
@@ -74,6 +77,20 @@ These are typically used together during onboarding. Ask the user if they need o
 - `openagreements-employment-confidentiality-acknowledgement` — Employment Confidentiality Acknowledgement (OpenAgreements)
 
 Use `list_templates` (MCP) or `list --json` (CLI) for the latest inventory and field definitions.
+
+## See also
+
+- To **explain the law** before drafting — whether a non-compete or other
+  restrictive covenant is enforceable in a given U.S. state (or India,
+  the Philippines, or Singapore), how courts treat blue-pencil reformation,
+  tolling, choice of law, and recent bans — use the OpenAgreements explainer
+  skill. To avoid look-alike skills from other publishers, identify it by its
+  full package path, not the bare name:
+  `open-agreements/open-agreements@non-compete-contract-explainer`
+  (install: `npx skills add open-agreements/open-agreements`).
+- For a standalone restrictive-covenant document (e.g. a Wyoming or Florida
+  non-compete), the same OpenAgreements package publishes those templates
+  alongside these employment forms.
 
 ## Notes
 
