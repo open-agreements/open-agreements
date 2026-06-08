@@ -126,11 +126,11 @@ export const EMPLOYMENT_JURISDICTION_RULES: JurisdictionRule[] = [
         'openagreements-restrictive-covenant-wyoming',
       ],
       field_one_of: {
-        restriction_pathways: ['None', 'none'],
+        applicable_noncompete_exceptions: ['None', 'none'],
       },
     },
     message:
-      'Restriction pathway is set to none, but non-compete-adjacent covenants (non-competition, non-dealing, or non-investment) may be included. Under Wyoming Stat. section 1-23-108, these provisions are likely void without a lawful statutory pathway.',
+      'No applicable non-compete exception is selected, but non-compete-adjacent covenants (non-competition, non-dealing, or non-investment) may be included. Under Wyoming Stat. section 1-23-108, these provisions are likely void without an enumerated statutory exception.',
     source_reference:
       'Wyoming Statute section 1-23-108 (Senate File 107, 2025 Session).',
     source_date: '2025-07-01',

@@ -48,13 +48,39 @@ export interface PrepareFillDataOptions {
    * Called after defaults and boolean coercion are applied.
    */
   computeDisplayFields?: (data: Record<string, unknown>) => void;
+
+  /**
+   * Statutory-compliance-representation (`confirm=`) clauses in the template,
+   * distilled from the compiled spec. Used to derive `any_confirmation_pending`
+   * for the cover-page confirmation notice: true when any APPLICABLE confirm
+   * clause (its `condition`/`when=` gate is true, or it has none) is still
+   * unconfirmed (its boolean confirm field is not true). Omit for templates
+   * without confirm clauses.
+   */
+  confirmClauses?: ConfirmClauseDescriptor[];
+}
+
+/** A `confirm=` clause distilled from the compiled contract spec. */
+export interface ConfirmClauseDescriptor {
+  /** Clause id (e.g. `choice-act-counsel-notice`). */
+  id: string;
+  /** Boolean confirm field gating the in-body CONFIRM bracket. */
+  confirm: string;
+  /** Optional `when=` applicability gate field; clause is absent when false. */
+  condition?: string;
 }
 
 export interface FillDocxOptions {
   /** Template DOCX buffer (already patched with {tags}). */
   templateBuffer: Buffer;
 
-  /** Prepared fill data from prepareFillData(). */
+  /**
+   * Prepared fill data from prepareFillData(). Every `{IF <var>}` referenced by
+   * the template DOCX must have a corresponding key here, or docx-templates throws
+   * on the undefined variable. In particular, a template with a `confirm=` clause
+   * carries `{IF any_confirmation_pending}` (the cover notice) — prepareFillData
+   * derives it; direct fillDocx callers must supply it (default false).
+   */
   data: Record<string, unknown>;
 
   /** Apply docx-templates smart quote normalization. */
@@ -92,6 +118,7 @@ export function prepareFillData(options: PrepareFillDataOptions): Record<string,
     coerceBooleans = false,
     computeDisplayFields,
     signingTagDefaults,
+    confirmClauses,
   } = options;
 
   // Apply defaults for fields not provided
@@ -199,6 +226,22 @@ export function prepareFillData(options: PrepareFillDataOptions): Record<string,
         data[field.name] = v === true || v === 'true';
       }
     }
+  }
+
+  // Derive `any_confirmation_pending` for the cover-page confirmation notice.
+  // True when any APPLICABLE confirm clause (its `when=` gate is true, or it has
+  // none) is still unconfirmed. The per-bullet visibility is handled in the DOCX
+  // by nesting `{IF condition}{IF !confirm}…`; only the banner wrapper needs this
+  // OR-of-applicable-clauses boolean (the {IF} grammar is single-field). Computed
+  // after coercion so gate/confirm values are real booleans.
+  if (confirmClauses && confirmClauses.length > 0) {
+    const truthy = (v: unknown) => v === true || v === 'true';
+    data.any_confirmation_pending = confirmClauses.some((clause) => {
+      const applicable = clause.condition ? truthy(data[clause.condition]) : true;
+      // Use the same truthy() coercion for the confirm field as for the gate, so
+      // a string "true" counts as confirmed even when coerceBooleans is off.
+      return applicable && !truthy(data[clause.confirm]);
+    });
   }
 
   // Compute display fields (template-specific: radio/checkbox groups)
@@ -579,5 +622,103 @@ export async function fillDocx(options: FillDocxOptions): Promise<Uint8Array> {
 
   // Step 5: Remove malformed empty table rows from conditional rendering
   const cleaned = stripEmptyTableRows(Buffer.from(filled));
-  return cleaned;
+  // Step 6: Renumber clause headings so fully-omitted clauses leave no gap
+  return renumberClauseHeadings(cleaned);
+}
+
+/** The OAClauseHeading style marks the numbered standard-terms clause headings. */
+const CLAUSE_HEADING_STYLE = 'OAClauseHeading';
+
+/** Read a paragraph's direct pStyle value (or null). */
+function paragraphStyle(p: Element): string | null {
+  for (let i = 0; i < p.childNodes.length; i++) {
+    const child = p.childNodes[i] as Element;
+    if (child?.nodeType === 1 && child.localName === 'pPr' && child.namespaceURI === W_NS) {
+      const styles = child.getElementsByTagNameNS(W_NS, 'pStyle');
+      return styles.length > 0 ? styles[0].getAttribute('w:val') : null;
+    }
+  }
+  return null;
+}
+
+/**
+ * Replace the characters in [start, end) across an ordered list of <w:t> text
+ * nodes with `replacement` (inserted at `start`). Preserves run formatting by
+ * editing only the affected runs' text. Used to swap a clause heading's leading
+ * number even if it is split across runs.
+ */
+function rewriteTextRange(
+  segments: { node: Element; text: string }[],
+  start: number,
+  end: number,
+  replacement: string,
+): void {
+  let offset = 0;
+  let inserted = false;
+  for (const seg of segments) {
+    const segStart = offset;
+    const segEnd = offset + seg.text.length;
+    offset = segEnd;
+    if (segEnd <= start || segStart >= end) continue; // untouched run
+    const localStart = Math.max(0, start - segStart);
+    const localEnd = Math.min(seg.text.length, end - segStart);
+    const before = seg.text.slice(0, localStart);
+    const after = seg.text.slice(localEnd);
+    seg.text = before + (inserted ? '' : replacement) + after;
+    seg.node.textContent = seg.text;
+    inserted = true;
+  }
+}
+
+/**
+ * Renumber standard-terms clause headings (style OAClauseHeading) sequentially
+ * (1..N) in `word/document.xml` after {IF} resolution, so a fully-omitted clause
+ * leaves no gap. Clause numbers are literal text (not Word list numbering), so a
+ * dropped clause would otherwise skip a number. Idempotent: a heading already
+ * carrying its sequential number is untouched. Cross-references are name-based
+ * (`[[clause:id]]` → heading text), so renumbering breaks no references.
+ */
+function renumberClauseHeadings(docxBuffer: Buffer): Buffer {
+  const zip = new AdmZip(docxBuffer);
+  const docEntry = zip.getEntry('word/document.xml');
+  if (!docEntry) return docxBuffer;
+
+  const parser = new DOMParser();
+  const serializer = new XMLSerializer();
+  const doc = parser.parseFromString(docEntry.getData().toString('utf-8'), 'text/xml');
+
+  const paragraphs = doc.getElementsByTagNameNS(W_NS, 'p');
+  let counter = 0;
+  let changed = false;
+
+  for (let i = 0; i < paragraphs.length; i++) {
+    const p = paragraphs[i];
+    if (paragraphStyle(p) !== CLAUSE_HEADING_STYLE) continue;
+
+    const tEls = p.getElementsByTagNameNS(W_NS, 't');
+    const segments: { node: Element; text: string }[] = [];
+    for (let j = 0; j < tEls.length; j++) {
+      segments.push({ node: tEls[j], text: tEls[j].textContent ?? '' });
+    }
+    const full = segments.map((s) => s.text).join('');
+    const m = full.match(/^(\s*)(\d+)\./);
+    if (!m) continue; // a heading without a leading "N." — leave it alone
+
+    counter += 1;
+    const newDigits = String(counter);
+    if (m[2] === newDigits) continue; // already correct (idempotent)
+
+    const start = m[1].length;
+    rewriteTextRange(segments, start, start + m[2].length, newDigits);
+    changed = true;
+  }
+
+  if (!changed) return docxBuffer;
+  zip.updateFile('word/document.xml', Buffer.from(serializer.serializeToString(doc), 'utf-8'));
+
+  const outZip = new AdmZip();
+  for (const entry of zip.getEntries()) {
+    outZip.addFile(entry.entryName, entry.getData());
+  }
+  return outZip.toBuffer();
 }

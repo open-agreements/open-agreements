@@ -70,6 +70,24 @@ If the Open Agreements MCP server is connected (remote or local), use these tool
 6. **Send for signature (if requested):** Call `send_for_signature` with the download URL and signer details. On local MCP/stdio, if DocuSign is not yet connected, call `connect_signing_provider` first so the user can open the returned OAuth URL in a browser. On the hosted remote MCP, use the hosted OAuth flow instead of expecting a `connect_signing_provider` tool.
 7. **Check status:** Call `check_signature_status` to monitor the envelope.
 
+## Confirm-before-signing fields (statutory compliance representations)
+
+A few templates have boolean fields that recite a **past statutory-compliance
+fact someone must actually have performed** (e.g. "the required advance notice
+was given before signing"). Their `get_template` description begins with
+`CONFIRM-BEFORE-SIGNING`, and they default to `false`.
+
+- **You MUST ask the human to confirm the fact actually happened before setting
+  one of these fields to `true`.** Setting it true asserts a real-world fact; do
+  not infer it from context.
+- When such a field is left `false` (unconfirmed) and the clause applies, the
+  filled DOCX is **not** broken — the recital renders followed by a yellow
+  `[CONFIRM before signing: …]` bracket, and a matching yellow notice appears on
+  **page one** listing each item still needing confirmation. Tell the user these
+  yellow brackets must be confirmed and deleted before the agreement is signed.
+- Once the human confirms, set the field to `true` and the document renders
+  clean (no bracket, no page-one notice).
+
 ## Execution — CLI (Fallback)
 
 If no MCP server is connected, fall back to the CLI.

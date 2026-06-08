@@ -1,0 +1,36 @@
+# Structured public placeholder metadata for catalog preview rendering.
+#
+# Mirrors the same file in dev-website at scripts/template-public-field-metadata.yaml.
+# The preview generator and dev-website's template-downloads generator both consume
+# this file so the catalog PNGs match the .docx users download from usejunior.com.
+#
+# Use this file only for cases where the public-facing humanized download should
+# differ from the raw upstream field description / default in metadata.yaml.
+
+global:
+  employer_name:
+    label: Employer Legal Name
+  employee_name:
+    label: Employee Full Name
+  cloud_drive_id:
+    default: ''
+  cloud_drive_id_footer:
+    default: ''
+
+templates:
+  openagreements-employee-ip-inventions-assignment:
+    confidential_information_definition:
+      default: >-
+        non-public information about Employer's business, technology,
+        customers, personnel, or finances, excluding information that becomes
+        public without Employee's breach or is lawfully received without a
+        confidentiality duty
+    return_of_materials_timing:
+      default: >-
+        promptly upon request and, in any event, no later than 5 business days
+        after termination of employment
+  openagreements-restrictive-covenant-wyoming:
+    competitive_business_definition:
+      default: the business that Employer currently conducts or plans to conduct
+    specified_competitors:
+      default: None.

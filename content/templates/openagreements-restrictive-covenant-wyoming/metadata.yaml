@@ -12,9 +12,8 @@ license: CC-BY-4.0
 allow_derivatives: true
 attribution_text: >-
   Authored by OpenAgreements contributors. Wyoming-specific analysis informed
-  by publicly available commentary from Am Law firms including Ogletree Deakins,
-  Fisher Phillips, Littler Mendelson, Foley & Lardner, Faegre Drinker, and
-  Vinson & Elkins. See practice note for sources. Licensed under CC BY 4.0.
+  by publicly available legal commentary cited in the related practice note.
+  Licensed under CC BY 4.0.
 fields:
   # --- Parties (on cover page) ---
   - name: employer_name
@@ -57,15 +56,40 @@ fields:
       - Professional Staff
       - Physician
       - Other
+    default: Other
+    default_value_rationale: >-
+      Other is the conservative default when worker category cannot be
+      determined from context. The calling LLM may set this explicitly
+      based on title, scope, and duties; absent that signal, Other avoids
+      asserting a statutory pathway that may not apply.
     section: AI Analysis
-  - name: restriction_pathways
+  - name: applicable_noncompete_exceptions
     type: string
     description: >-
-      Wyoming restriction pathway(s) under Wyo. Stat. section 1-23-108.
-      AI-only field that drives memo warnings and conditional gating.
-      Not shown in the output document. Options: Executive or Management
-      Personnel, Trade Secret Protection, None.
+      Applicable statutory exception(s) under Wyo. Stat. section 1-23-108
+      that would permit an otherwise-prohibited non-compete-adjacent
+      covenant. AI-only field that drives memo warnings and conditional
+      gating. Not shown in the output document. Options: Executive or
+      Management Personnel, Trade Secret Protection, Training Cost
+      Recovery, Sale of Business, None.
     default: None
+    section: AI Analysis
+  - name: restrictive_covenant_entered_after_employment_started
+    type: boolean
+    description: >-
+      Whether the restrictive covenant is signed AFTER the employee already
+      started working (post-hire) vs at or before the first day of employment
+      (at-hire). Wyoming case law (Brown v. Best Home Health & Hospice,
+      2021 WY 83) requires separate consideration beyond continued employment
+      for post-hire restrictive covenants. AI-only field that drives memo
+      warnings and conditional drafting of the separate-consideration recital.
+      Not shown in the output document.
+    default: 'true'
+    default_value_rationale: >-
+      Defaulting to post-hire (true) is the conservative posture: it triggers
+      the separate-consideration recital required by Brown. If the covenant
+      is genuinely at-hire, the calling LLM should set this to false to
+      suppress the recital.
     section: AI Analysis
 
   # --- Confidentiality (on cover page, always visible) ---
@@ -150,9 +174,17 @@ fields:
     display_label: Non-Competition Included
     default: 'false'
     default_value_rationale: >-
-      Wyo. Stat. section 1-23-108 voids most non-compete covenants. The
-      drafter must affirmatively include this covenant only when a statutory
-      pathway applies.
+      Wyo. Stat. section 1-23-108 (SF 107, 2025; effective July 1, 2025)
+      voids covered non-compete covenants unless a statutory exception
+      applies: (1) purchase and sale of a business or business assets,
+      (2) protection of trade secrets as defined by W.S. 6-3-501(a)(xi),
+      (3) recovery of relocation, education, and training expenses within
+      the statute's tenure-based caps, or (4) executive and management
+      personnel and officers / employees who constitute professional staff
+      to executive and management personnel. Physician practice restrictions
+      are separately void under subsection (b), not a permitted pathway.
+      The drafter must include this covenant only after documenting the
+      applicable pathway in the agreement.
     section: Non-Competition
   - name: noncompete_duration
     type: string

@@ -3,6 +3,16 @@
 // Template engine
 export { fillTemplate, type FillOptions, type FillResult } from './core/engine.js';
 
+// Humanize transform (bracket-prose with yellow highlights for catalog preview parity)
+export {
+  humanizeDocx,
+  humanizeDocxBuffer,
+  loadHumanizeContext,
+  prettifyTemplateXml,
+  type HumanizeContext,
+  type HumanizeOptions,
+} from './core/humanize-docx.js';
+
 // Metadata schemas and loaders
 export {
   loadMetadata,

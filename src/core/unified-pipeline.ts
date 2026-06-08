@@ -14,7 +14,7 @@ import { tmpdir } from 'node:os';
 import AdmZip from 'adm-zip';
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
 import { getParagraphText, replaceParagraphTextRange } from '@usejunior/docx-core';
-import { prepareFillData, fillDocx } from './fill-pipeline.js';
+import { prepareFillData, fillDocx, type ConfirmClauseDescriptor } from './fill-pipeline.js';
 import { cleanDocument } from './recipe/cleaner.js';
 import { patchDocument } from './recipe/patcher.js';
 import { applySelections } from './selector.js';
@@ -45,6 +45,7 @@ export interface PipelineOptions {
   coerceBooleans?: boolean;             // default: false
   computeDisplayFields?: (data: Record<string, unknown>) => void;
   signingTagDefaults?: Record<string, string>;  // defaults for {sig_*} tags
+  confirmClauses?: ConfirmClauseDescriptor[];    // confirm= clauses → any_confirmation_pending
 
   // fillDocx options
   fixSmartQuotes?: boolean;             // default: false
@@ -98,6 +99,10 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
       .filter((field) => field.type === 'multiselect' && field.derive_booleans === true)
       .flatMap((field) => (field.options ?? []).map((option) => `${option}_enabled`))
   );
+  // The cover-notice derived boolean is synthetic — exclude it from fieldsUsed.
+  if (options.confirmClauses && options.confirmClauses.length > 0) {
+    syntheticFieldKeys.add('any_confirmation_pending');
+  }
   let stages: PipelineResult['stages'] | undefined;
 
   try {
@@ -149,6 +154,7 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
       coerceBooleans,
       computeDisplayFields,
       signingTagDefaults: options.signingTagDefaults,
+      confirmClauses: options.confirmClauses,
     });
 
     // Step 5: Read current buffer; apply selections if configured

@@ -390,6 +390,8 @@ npx -y open-agreements@latest list
 
 Veja a [Política de Privacidade](https://usejunior.com/privacy_policy) para detalhes.
 
+Política de segurança: veja [SECURITY.md](https://github.com/open-agreements/open-agreements/blob/main/SECURITY.md).
+
 ## Veja Também
 
 - [safe-docx](https://github.com/UseJunior/safe-docx) — edição cirúrgica de documentos Word existentes com agentes de código
@@ -403,6 +405,10 @@ Veja [CONTRIBUTING.md](https://github.com/open-agreements/open-agreements/blob/m
 - [Safe Clause](https://safeclause.deltaxy.ai) — plataforma de contratos com IA para startups. [#1 no vibecode.law, março de 2026](https://vibecode.law/showcase/safe-clause-317416).
 
 Está construindo algo sobre o OpenAgreements? Abra um PR para adicionar seu projeto.
+
+## Histórico de estrelas
+
+[![Star History Chart](https://api.star-history.com/svg?repos=open-agreements/open-agreements&type=Date)](https://star-history.com/#open-agreements/open-agreements&Date)
 
 ## Licença
 

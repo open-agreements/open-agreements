@@ -390,6 +390,8 @@ npx -y open-agreements@latest list
 
 详见 [Privacy Policy](https://usejunior.com/privacy_policy)。
 
+安全政策：请参阅 [SECURITY.md](https://github.com/open-agreements/open-agreements/blob/main/SECURITY.md)。
+
 ## 另请参阅
 
 - [safe-docx](https://github.com/UseJunior/safe-docx) — 使用编程代理对现有 Word 文档进行精准编辑
@@ -403,6 +405,10 @@ npx -y open-agreements@latest list
 - [Safe Clause](https://safeclause.deltaxy.ai) — 面向创业公司的 AI 驱动合同平台。[2026 年 3 月 vibecode.law 第 1 名](https://vibecode.law/showcase/safe-clause-317416)。
 
 正在基于 OpenAgreements 进行构建？提交 PR 添加你的项目。
+
+## Star 历史趋势
+
+[![Star History Chart](https://api.star-history.com/svg?repos=open-agreements/open-agreements&type=Date)](https://star-history.com/#open-agreements/open-agreements&Date)
 
 ## 许可
 

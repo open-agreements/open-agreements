@@ -1,0 +1,121 @@
+name: Publish @open-agreements/openagreements-runtime to GitHub Packages
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version to publish (for example: 0.7.5)"
+        required: true
+        type: string
+      docx_core_version:
+        description: "Version of @usejunior/docx-core to bundle (must match the version installed in the public repo's node_modules)"
+        required: true
+        type: string
+
+jobs:
+  publish:
+    name: Publish runtime tarball
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v5
+
+      # No scope/registry on setup-node — we need to talk to BOTH registries:
+      # @usejunior/docx-core lives on public npm; @open-agreements/openagreements-runtime
+      # publishes to GitHub Packages. We configure each per-step via .npmrc.
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies (retry)
+        uses: ./.github/actions/npm-ci-retry
+
+      - name: Build dist/
+        run: npm run build
+
+      - name: Stage runtime-pkg/
+        run: |
+          set -euo pipefail
+          rm -rf runtime-pkg
+          mkdir -p runtime-pkg
+          cp -r dist runtime-pkg/dist
+          cp -r content runtime-pkg/content
+          # bundleDependencies requires the dep to be declared in `dependencies`
+          # AND present in node_modules at pack time. Pre-declaring it here lets
+          # the install step run without --no-save, so npm pack sees it as bundled.
+          node -e '
+            const pkg = {
+              name: "@open-agreements/openagreements-runtime",
+              version: process.env.PKG_VERSION,
+              type: "module",
+              main: "./dist/index.js",
+              types: "./dist/index.d.ts",
+              repository: {
+                type: "git",
+                url: "https://github.com/open-agreements/open-agreements.git"
+              },
+              exports: {
+                ".": { "import": "./dist/index.js", "types": "./dist/index.d.ts" },
+                "./dist/*": "./dist/*",
+                "./content/*": "./content/*"
+              },
+              files: ["dist/", "content/"],
+              dependencies: {
+                "@usejunior/docx-core": process.env.DOCX_CORE_VERSION,
+                "@xmldom/xmldom": "^0.9.9",
+                "adm-zip": "^0.5.16",
+                "commander": "^13.1.0",
+                "docx-templates": "^4.13.0",
+                "js-yaml": "^4.1.0",
+                "minisearch": "^7.2.0",
+                "zod": "^4.0.0"
+              },
+              bundleDependencies: ["@usejunior/docx-core"],
+              publishConfig: { registry: "https://npm.pkg.github.com" },
+              engines: { node: ">=20" }
+            };
+            require("fs").writeFileSync("runtime-pkg/package.json", JSON.stringify(pkg, null, 2));
+          '
+        env:
+          PKG_VERSION: ${{ inputs.version }}
+          DOCX_CORE_VERSION: ${{ inputs.docx_core_version }}
+
+      - name: Install @usejunior/docx-core (public npm) into runtime-pkg/ for bundleDependencies
+        working-directory: runtime-pkg
+        run: |
+          set -euo pipefail
+          # @usejunior/docx-core is published on public npm, NOT GitHub Packages.
+          # Pin the install registry explicitly so neither setup-node nor the
+          # publishConfig accidentally routes the install to npm.pkg.github.com.
+          # Install from the dependencies field (already populated in the stage step).
+          npm install \
+            --registry=https://registry.npmjs.org/ \
+            --ignore-scripts --package-lock=false
+          echo "Verifying bundle contents..."
+          npm pack --dry-run --json | node -e '
+            const data = JSON.parse(require("fs").readFileSync(0, "utf8"));
+            const bundled = data[0].bundled || [];
+            if (!bundled.includes("@usejunior/docx-core")) {
+              console.error("FAIL: @usejunior/docx-core not in bundled list:", bundled);
+              process.exit(1);
+            }
+            console.log("OK: @usejunior/docx-core is bundled");
+          '
+
+      - name: Publish to GitHub Packages
+        working-directory: runtime-pkg
+        run: |
+          set -euo pipefail
+          # .npmrc for the publish step only. publishConfig in package.json
+          # also pins the registry; having both is the documented GH Packages setup.
+          cat > .npmrc <<'EOF'
+          @open-agreements:registry=https://npm.pkg.github.com
+          //npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}
+          always-auth=true
+          EOF
+          npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

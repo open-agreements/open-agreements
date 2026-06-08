@@ -74,6 +74,9 @@ jobs:
       - name: Validate template preview PNGs
         run: npm run check:template-previews
 
+      - name: Validate DOCX structure
+        run: npm run check:docx-structure
+
   preview-freshness-gate:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
@@ -110,6 +113,7 @@ jobs:
         env:
           OA_CHANGED_FILES: ${{ steps.diff.outputs.result }}
           OA_GATE_REQUIRE_INPUT: "1"
+          OA_PR_LABELS: ${{ join(github.event.pull_request.labels.*.name, ',') }}
         run: npm run check:preview-freshness
 
   gemini-extension-contract:
