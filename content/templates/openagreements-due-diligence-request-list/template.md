@@ -293,7 +293,7 @@ R.2 Sanctions / OFAC screening procedures, screening tool documentation, and any
 
 R.3 Export-control classifications (ECCN, USML) for material technologies and products, plus any export licenses or commodity classification rulings.
 
-R.4 AML / KYC program documentation (where applicable to the target's industry), including written policies and procedures, training records, regulator examination findings, and non-privileged audit/correspondence files. Do not produce any SARs or materials that would reveal a SAR's existence (FinCEN confidentiality rules at 31 CFR 1020.320(e) bar disclosure to counterparties).
+R.4 AML / KYC program documentation (where applicable to the target's industry), including written policies and procedures, training records, regulator examination findings, and non-privileged audit/correspondence files. Do not produce any SARs or materials that would reveal a SAR's existence — FinCEN's SAR confidentiality rules bar disclosure to counterparties under whichever subpart applies to the target's institution type (e.g., 31 CFR 1020.320(e) for banks; 1023.320(e) for broker-dealers; 1022.320(e) for MSBs; 1021.320(e) for casinos; 1024.320(e) for mutual funds; 1025.320(e) for insurance companies; 1029.320(e) for loan/finance companies).
 
 R.5 FCPA compliance program documentation, including risk assessments, training records, third-party-intermediary diligence, and any prior internal investigations or third-party allegations.
 
