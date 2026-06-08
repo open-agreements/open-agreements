@@ -5,6 +5,32 @@ import { loadSelectionsConfig } from './selector.js';
 import { runFillPipeline } from './unified-pipeline.js';
 import { BLANK_PLACEHOLDER, verifyTemplateFill } from './fill-utils.js';
 import { loadSigningConfig, getSignatureTagFields } from './signing-config.js';
+import type { ConfirmClauseDescriptor } from './fill-pipeline.js';
+
+/**
+ * Distill `confirm=` clauses from a canonical template's compiled spec
+ * (`.template.generated.json`) so the fill pipeline can derive
+ * `any_confirmation_pending` for the cover confirmation notice. Returns [] for
+ * templates without a compiled spec or without confirm clauses.
+ */
+function loadConfirmClauses(templateDir: string): ConfirmClauseDescriptor[] {
+  const specPath = join(templateDir, '.template.generated.json');
+  if (!existsSync(specPath)) return [];
+  try {
+    const spec = JSON.parse(readFileSync(specPath, 'utf-8'));
+    const clauses = spec?.sections?.standard_terms?.clauses;
+    if (!Array.isArray(clauses)) return [];
+    return clauses
+      .filter((c: { confirm?: unknown }) => typeof c?.confirm === 'string')
+      .map((c: { id: string; confirm: string; condition?: string }) => ({
+        id: c.id,
+        confirm: c.confirm,
+        ...(c.condition ? { condition: c.condition } : {}),
+      }));
+  } catch {
+    return [];
+  }
+}
 
 
 export interface FillOptions {
@@ -325,6 +351,7 @@ export async function fillTemplate(options: FillOptions): Promise<FillResult> {
     verify: (p) => verifyTemplateFill(p),
     postProcess: options.postProcess,
     signingTagDefaults: Object.keys(signingTagDefaults).length > 0 ? signingTagDefaults : undefined,
+    confirmClauses: loadConfirmClauses(templateDir),
   });
 
   return {

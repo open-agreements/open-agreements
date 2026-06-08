@@ -57,8 +57,9 @@ template models both; which one applies is driven by `covered_employee`.
    available only if procedural prerequisites are met, which this template
    surfaces in three clauses:
    - `choice-act-counsel-notice` — written counsel advisal + ≥7-day notice
-     (§ 542.45(2)(a), (3)). A statutory-compliance representation gated by
-     `confirm=choice_act_advance_notice_confirmed` (see below).
+     (§ 542.45(2)(a), (3)). A statutory-compliance representation
+     (`confirm=choice_act_advance_notice_confirmed`) that applies only to a
+     covered employee (`when=covered_employee`); see below.
    - `choice-act-confidential-info-acknowledgement` — written acknowledgement of
      receipt of confidential information or customer relationships
      (§ 542.45(2)(b)).
@@ -72,8 +73,13 @@ template models both; which one applies is driven by `covered_employee`.
    *statutory compliance representation*: the `choice_act_advance_notice_confirmed`
    field defaults to `false`, and until a human confirms the advisal and notice
    were actually given, the recital renders followed by a yellow-highlighted
-   `[CONFIRM before signing: …; see § 542.45]` bracket rather than asserting
-   clean compliance (it is never silently dropped).
+   `[CONFIRM before signing: …]` bracket — and a matching item on the page-one
+   confirmation notice — rather than asserting clean compliance (it is never
+   silently dropped). The bracket links to the OpenAgreements Florida non-compete
+   reference card (`https://openagreements.org/legal/non-compete/florida`), which
+   keeps the current statute links in one place. Because the recital is gated
+   `when=covered_employee`, it is fully absent (no heading, no bracket) for a
+   non-covered employee.
 
 ## Fields
 
@@ -119,9 +125,11 @@ rendered as cover-term rows in the output document.
 The agreement is authored canonically in
 `content/templates/openagreements-restrictive-covenant-florida/template.md`, with
 the generated JSON spec and rendered DOCX derived from that source. Conditionally
-included covenants render `[Intentionally Omitted.]` in their section position when
-their inclusion boolean is false, preserving section structure. Every gated clause
-is conditioned on a single boolean field name (`covered_employee`,
+included covenants are **fully absent** (no heading, no placeholder) when their
+inclusion boolean is false, and the surviving clauses are renumbered sequentially
+so no gap remains — an excluded clause does not advertise itself, so it cannot
+imply a term (garden leave, a non-compete) was expected. Every gated clause is
+conditioned on a single boolean field name (`covered_employee`,
 `garden_leave_included`, or a covenant inclusion toggle); the renderer does not
 support compound conditions, so `covenant_relationship_type` is consumed for the
 duration value only and never used to include or omit a clause.

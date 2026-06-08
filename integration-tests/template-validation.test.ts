@@ -653,4 +653,19 @@ describe('validateTemplate multiselect coverage', () => {
       })
     ).toThrow('received unknown option "unknown_option"');
   });
+
+  it.openspec('OA-TMP-073')('tolerates the derived {IF any_confirmation_pending} cover-notice tag without an unknown-placeholder finding', () => {
+    // The Florida template's regenerated template.docx carries the cover-page
+    // confirmation notice gated on {IF any_confirmation_pending} (a derived
+    // synthetic key, not a metadata field). Validation must not flag it.
+    const flDir = join(templatesDir, 'openagreements-restrictive-covenant-florida');
+    const result = validateTemplate(flDir, 'openagreements-restrictive-covenant-florida');
+    const mentions = [...result.errors, ...result.warnings].filter((m) =>
+      m.includes('any_confirmation_pending')
+    );
+    expect(mentions).toEqual([]);
+    expect(result.errors).toEqual([]);
+    // Sanity: the in-body statutory-compliance bracket still validates (no SCR error).
+    expect(result.errors.filter((e) => e.includes('statutory_compliance_representation'))).toEqual([]);
+  });
 });

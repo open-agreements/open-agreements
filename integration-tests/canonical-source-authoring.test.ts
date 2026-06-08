@@ -270,9 +270,44 @@ The party gave the required notice before signing.
     expect(xml).toContain('[CONFIRM before signing: the &quot;advisal&quot; [and notice] were given before signing; see https://example.com/statute/542.45]');
   });
 
-  it.openspec('OA-TMP-062')('rejects confirm= combined with when/omitted', () => {
+  it.openspec('OA-TMP-068')('allows confirm= combined with when= as an applicability gate and wraps the whole clause (body + CONFIRM bracket) in {IF condition}', async () => {
+    const { Packer } = await import('docx');
+    const AdmZip = (await import('adm-zip')).default;
+    const style = loadStyleProfile(stylePath);
     const source = buildCanonicalSource(
-      `<!-- oa:clause id=bad-confirm confirm=notice_confirmed when=notice_confirmed -->
+      `<!-- oa:clause id=gated-recital when=covered_party confirm=notice_confirmed -->
+### Gated Recital
+
+The party gave the required notice before signing.
+
+`
+    );
+
+    const compiled = compileCanonicalSourceString(source, 'inline confirm+when source', {
+      fieldLookup: fieldLookupFor([SCR_FIELD]),
+    });
+    const clause = compiled.contractSpec.sections.standard_terms.clauses.find(
+      (c) => c.id === 'gated-recital'
+    );
+    expect(clause).toMatchObject({ confirm: 'notice_confirmed', condition: 'covered_party' });
+    expect(clause).not.toHaveProperty('omitted_body');
+
+    const rendered = renderFromValidatedSpec(compiled.contractSpec, style);
+    const buffer = await Packer.toBuffer(rendered.document);
+    const xml = new AdmZip(buffer).getEntry('word/document.xml').getData().toString('utf-8');
+    const text = xml.replace(/<[^>]+>/g, '');
+    // The applicability gate wraps the heading, body and the CONFIRM bracket; the
+    // inner {IF !field} + bracket survives so the compliance validator still matches.
+    expect(text).toContain('{IF covered_party}');
+    expect(text).toContain('{IF !notice_confirmed}');
+    expect(text).toContain('[CONFIRM before signing: the required notice was actually given before signing; see https://example.com/statute/542.45]');
+    // {IF covered_party} opens before the {IF !notice_confirmed} bracket gate.
+    expect(text.indexOf('{IF covered_party}')).toBeLessThan(text.indexOf('{IF !notice_confirmed}'));
+  });
+
+  it.openspec('OA-TMP-069')('rejects confirm= combined with omitted (a confirm clause is never replaced by a placeholder)', () => {
+    const source = buildCanonicalSource(
+      `<!-- oa:clause id=bad-confirm confirm=notice_confirmed omitted="[Intentionally Omitted.]" -->
 ### Bad Confirm
 
 Body.
@@ -280,8 +315,68 @@ Body.
 `
     );
     expect(() =>
-      compileCanonicalSourceString(source, 'inline confirm+when source', { fieldLookup: fieldLookupFor([SCR_FIELD]) })
-    ).toThrow(/cannot combine confirm with when\/omitted/);
+      compileCanonicalSourceString(source, 'inline confirm+omitted source', { fieldLookup: fieldLookupFor([SCR_FIELD]) })
+    ).toThrow(/cannot combine confirm with omitted/);
+  });
+
+  it.openspec('OA-TMP-066')('when= without omitted= wraps heading and body in {IF condition} so the clause is fully absent', async () => {
+    const { Packer } = await import('docx');
+    const AdmZip = (await import('adm-zip')).default;
+    const style = loadStyleProfile(stylePath);
+    const source = buildCanonicalSource(
+      `<!-- oa:clause id=optional-clause when=clause_included -->
+### Optional Clause
+
+This optional clause body only appears when included.
+
+`
+    );
+
+    const compiled = compileCanonicalSourceString(source, 'inline clean-omission source');
+    const clause = compiled.contractSpec.sections.standard_terms.clauses.find(
+      (c) => c.id === 'optional-clause'
+    );
+    expect(clause).toMatchObject({ condition: 'clause_included' });
+    expect(clause).not.toHaveProperty('omitted_body');
+
+    const rendered = renderFromValidatedSpec(compiled.contractSpec, style);
+    const buffer = await Packer.toBuffer(rendered.document);
+    const xml = new AdmZip(buffer).getEntry('word/document.xml').getData().toString('utf-8');
+    const text = xml.replace(/<[^>]+>/g, '');
+    // The {IF clause_included} gate opens BEFORE the heading text (heading is
+    // inside the gate) and there is no [Intentionally Omitted.] placeholder.
+    expect(text).toContain('{IF clause_included}');
+    expect(text).not.toContain('Intentionally Omitted');
+    expect(text.indexOf('{IF clause_included}')).toBeLessThan(text.indexOf('Optional Clause'));
+  });
+
+  it.openspec('OA-TMP-067')('when= with omitted= keeps the heading and a placeholder', async () => {
+    const { Packer } = await import('docx');
+    const AdmZip = (await import('adm-zip')).default;
+    const style = loadStyleProfile(stylePath);
+    const source = buildCanonicalSource(
+      `<!-- oa:clause id=placeholder-clause when=clause_included omitted="[Intentionally Omitted.]" -->
+### Placeholder Clause
+
+This body is swapped for a placeholder when excluded.
+
+`
+    );
+
+    const compiled = compileCanonicalSourceString(source, 'inline placeholder source');
+    const clause = compiled.contractSpec.sections.standard_terms.clauses.find(
+      (c) => c.id === 'placeholder-clause'
+    );
+    expect(clause).toMatchObject({ condition: 'clause_included', omitted_body: '[Intentionally Omitted.]' });
+
+    const rendered = renderFromValidatedSpec(compiled.contractSpec, style);
+    const buffer = await Packer.toBuffer(rendered.document);
+    const xml = new AdmZip(buffer).getEntry('word/document.xml').getData().toString('utf-8');
+    const text = xml.replace(/<[^>]+>/g, '');
+    // The heading is OUTSIDE the gate (always renders) and the placeholder is present.
+    expect(text).toContain('Placeholder Clause');
+    expect(text).toContain('[Intentionally Omitted.]');
+    expect(text.indexOf('Placeholder Clause')).toBeLessThan(text.indexOf('{IF clause_included}'));
   });
 
   it.openspec('OA-TMP-062')('rejects confirm= that restates confirm_note/authority_url in the directive (SSOT: they belong in metadata.yaml)', () => {

@@ -23,10 +23,11 @@ const textClauseSchema = z.object({
   condition: z.string().regex(fieldNamePattern).optional(),
   omitted_body: z.string().optional(),
   // Statutory-compliance-representation gate (renderer `confirm=` directive).
-  // The clause body always renders; when `confirm` is false the layout appends
-  // a highlighted `[CONFIRM …; see <authority_url>]` bracket. Mutually exclusive
-  // with `condition`/`omitted_body` (a confirm clause is never conditionally
-  // dropped).
+  // The clause body always renders within its applicability scope; when `confirm`
+  // is false the layout appends a highlighted `[CONFIRM …; see <authority_url>]`
+  // bracket. A confirm clause MAY carry a `condition` (when=) applicability gate,
+  // but is mutually exclusive with `omitted_body` (it is never replaced by a
+  // placeholder).
   confirm: z.string().regex(fieldNamePattern).optional(),
   confirm_note: textSchema.optional(),
   authority_url: z.string().regex(/^https?:\/\/\S+$/, 'authority_url must be an http(s) URL').optional(),
@@ -48,11 +49,15 @@ const textClauseSchema = z.object({
       message: 'a confirm clause must declare both confirm_note and authority_url',
     });
   }
-  if (clause.condition !== undefined || clause.omitted_body !== undefined) {
+  // A confirm clause MAY carry a `condition` (when=) applicability gate — the
+  // layout wraps the whole clause (body + CONFIRM bracket) in {IF condition}.
+  // It is still mutually exclusive with `omitted_body`: a confirm clause is
+  // never replaced by an "[Intentionally Omitted.]" placeholder.
+  if (clause.omitted_body !== undefined) {
     ctx.addIssue({
       code: z.ZodIssueCode.custom,
       path: ['confirm'],
-      message: 'confirm is mutually exclusive with condition/omitted_body (a confirm clause always renders its body)',
+      message: 'confirm is mutually exclusive with omitted_body (a confirm clause always renders its body, never a placeholder)',
     });
   }
 });

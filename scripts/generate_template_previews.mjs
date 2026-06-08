@@ -129,9 +129,14 @@ async function fillTemplateForPreview(docxPath, sampleValues, fillDocx) {
   // stripping, currency sanitization, empty-row cleanup, and createReport
   // invocation. Avoids the duplication flagged by code-reuse review and
   // future-proofs against new pipeline steps.
+  // The cover confirmation notice is gated on the derived `any_confirmation_pending`,
+  // normally computed by prepareFillData in the product fill path. Preview fills call
+  // fillDocx directly with raw sample values, so default the synthetic field (a sample
+  // set may override it) — otherwise docx-templates throws on the undefined
+  // {IF any_confirmation_pending} variable for any confirm= template.
   const buffer = await fillDocx({
     templateBuffer,
-    data: sampleValues,
+    data: { any_confirmation_pending: false, ...sampleValues },
     fixSmartQuotes: true,
   });
 
