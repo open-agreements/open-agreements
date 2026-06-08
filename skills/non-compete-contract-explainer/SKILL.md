@@ -51,7 +51,8 @@ Use this skill when the user wants to understand restrictive-covenant law, e.g.:
 ## How to answer
 
 1. **Resolve the jurisdiction.** Map the user's state/country to a slug using
-   `content/manifest.json`. If they don't name one, ask which jurisdiction.
+   `manifest.json` (at this skill's root). If they don't name one, ask which
+   jurisdiction.
 2. **Read the one matching file.** Open `content/<slug>.md` — and only that file.
    Do not load other jurisdictions. (References stay one level deep.)
 3. **Lead with the snapshot date.** State the note's `snapshotAsOf` and
@@ -79,7 +80,8 @@ they can leave / join a competitor:
 
 ## Coverage
 
-The bundled jurisdictions are listed in `content/manifest.json` (each entry has
+The bundled jurisdictions are listed in `manifest.json` at this skill's root
+(each entry has
 `slug`, `jurisdiction`, `countryCode`, `snapshotAsOf`, `lastReviewed`, and a
 `stale` flag). Read that file to enumerate what's available before answering a
 "which states do you cover?" question.
