@@ -1191,3 +1191,103 @@ describe('Parametric smoke test — signatory fields across all templates', () =
     }
   }, seconds(60));
 });
+
+describe('confirmation cover notice + clause renumbering', () => {
+  const confirmFields = [
+    { name: 'covered', type: 'boolean', default: 'false' },
+    {
+      name: 'notice_confirmed',
+      type: 'boolean',
+      statutory_compliance_representation: true,
+      default: 'false',
+    },
+  ] as unknown as Parameters<typeof prepareFillData>[0]['fields'];
+
+  it.openspec('OA-TMP-070')('derives any_confirmation_pending only for applicable, unconfirmed confirm clauses', () => {
+    const confirmClauses = [{ id: 'counsel', confirm: 'notice_confirmed', condition: 'covered' }];
+    const run = (covered: string, confirmed: string) =>
+      prepareFillData({
+        values: { covered, notice_confirmed: confirmed },
+        fields: confirmFields,
+        coerceBooleans: true,
+        confirmClauses,
+      })['any_confirmation_pending'];
+
+    // Gate false → clause is inapplicable → not pending regardless of confirm.
+    expect(run('false', 'false')).toBe(false);
+    // Gate true + unconfirmed → pending.
+    expect(run('true', 'false')).toBe(true);
+    // Gate true + confirmed → not pending.
+    expect(run('true', 'true')).toBe(false);
+  });
+
+  it.openspec('OA-TMP-070')('treats a confirm clause with no when= gate as always applicable', () => {
+    const confirmClauses = [{ id: 'recital', confirm: 'notice_confirmed' }];
+    const run = (confirmed: string) =>
+      prepareFillData({
+        values: { notice_confirmed: confirmed },
+        fields: confirmFields,
+        coerceBooleans: true,
+        confirmClauses,
+      })['any_confirmation_pending'];
+    expect(run('false')).toBe(true);
+    expect(run('true')).toBe(false);
+  });
+
+  function headingPara(n: number, title: string): string {
+    return `<w:p><w:pPr><w:pStyle w:val="OAClauseHeading"/></w:pPr><w:r><w:t xml:space="preserve">${n}. ${title}</w:t></w:r></w:p>`;
+  }
+  function docFromHeadings(...headings: string[]): Buffer {
+    const body = `<w:body>${headings.join('')}</w:body>`;
+    return buildDocxBuffer(`<?xml version="1.0"?><w:document xmlns:w="${W_NS}">${body}</w:document>`);
+  }
+  async function filledHeadingText(buf: Buffer): Promise<string> {
+    const out = await fillDocx({ templateBuffer: buf, data: {} });
+    const xml = new AdmZip(Buffer.from(out)).getEntry('word/document.xml')!.getData().toString('utf-8');
+    return xml.replace(/<[^>]+>/g, '');
+  }
+
+  it.openspec('OA-TMP-072')('renumbers OAClauseHeading paragraphs sequentially, closing a gap left by an omitted clause', async () => {
+    const text = await filledHeadingText(
+      docFromHeadings(headingPara(1, 'Alpha'), headingPara(2, 'Beta'), headingPara(16, 'Gamma'))
+    );
+    expect(text).toContain('1. Alpha');
+    expect(text).toContain('2. Beta');
+    expect(text).toContain('3. Gamma'); // 16 → 3, gap closed
+    expect(text).not.toContain('16. Gamma');
+  });
+
+  it.openspec('OA-TMP-072')('renumber pass is idempotent for already-sequential headings', async () => {
+    const text = await filledHeadingText(docFromHeadings(headingPara(1, 'Alpha'), headingPara(2, 'Beta')));
+    expect(text).toContain('1. Alpha');
+    expect(text).toContain('2. Beta');
+    expect(text).not.toContain('3.');
+  });
+
+  it.openspec('OA-TMP-071')('renders the cover confirmation notice only when an applicable confirm field is unconfirmed', async () => {
+    const flDir = resolve(import.meta.dirname, '..', 'content', 'templates', 'openagreements-restrictive-covenant-florida');
+    const fillFl = async (values: Record<string, unknown>): Promise<string> => {
+      const dir = mkdtempSync(join(tmpdir(), 'oa-fl-notice-'));
+      const out = join(dir, 'out.docx');
+      await fillTemplate({ templateDir: flDir, values, outputPath: out });
+      const xml = new AdmZip(readFileSync(out)).getEntry('word/document.xml')!.getData().toString('utf-8');
+      return xml.replace(/<[^>]+>/g, '');
+    };
+
+    // Covered employee, advance notice NOT confirmed → notice + in-body bracket present.
+    const unconfirmed = await fillFl({ covered_employee: 'true', choice_act_advance_notice_confirmed: 'false' });
+    expect(unconfirmed).toContain('CONFIRMATION REQUIRED BEFORE SIGNING');
+    expect(unconfirmed).toContain('[CONFIRM before signing');
+    expect(unconfirmed).toContain('openagreements.org/legal/non-compete/florida');
+
+    // Covered employee, confirmed → no notice, no bracket.
+    const confirmed = await fillFl({ covered_employee: 'true', choice_act_advance_notice_confirmed: 'true' });
+    expect(confirmed).not.toContain('CONFIRMATION REQUIRED BEFORE SIGNING');
+    expect(confirmed).not.toContain('[CONFIRM before signing');
+
+    // Non-covered employee → recital and notice are both fully absent (applicability gate).
+    const nonCovered = await fillFl({ covered_employee: 'false' });
+    expect(nonCovered).not.toContain('CONFIRMATION REQUIRED BEFORE SIGNING');
+    expect(nonCovered).not.toContain('CHOICE Act Counsel Advisal');
+  });
+});

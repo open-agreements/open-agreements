@@ -115,27 +115,27 @@ Nothing in this agreement prohibits Employee from: (a) reporting possible violat
 
 Upon termination of employment, Employee must promptly return to Employer all documents, devices, files, credentials, and other materials containing or relating to Confidential Information. Where permitted, Employee must permanently delete electronic copies of Confidential Information from personal devices and accounts. Employee must certify compliance with this section in writing upon Employer's request.
 
-<!-- oa:clause id=non-solicitation-of-employees when=employee_nonsolicit_included omitted="[Intentionally Omitted.]" -->
+<!-- oa:clause id=non-solicitation-of-employees when=employee_nonsolicit_included -->
 ### Non-Solicitation of Employees
 
 During the Restricted Period, Employee must not Solicit, recruit, hire, or attempt to hire any Covered Employee. This restriction does not prohibit Employee from providing a professional reference upon request or from hiring a person who responds to a general advertisement not directed specifically at Employer's employees.
 
-<!-- oa:clause id=non-solicitation-of-customers-vendors-referral-sources-and-business-partners when=customer_nonsolicit_included omitted="[Intentionally Omitted.]" -->
+<!-- oa:clause id=non-solicitation-of-customers-vendors-referral-sources-and-business-partners when=customer_nonsolicit_included -->
 ### Non-Solicitation of Customers, Patients, Vendors, Referral Sources, and Business Partners
 
 During the Restricted Period, Employee must not Solicit the business of any Covered Customer. This covenant is intended to protect Employer's substantial relationships with specific prospective or existing customers, patients, or clients and the associated goodwill, which are Legitimate Business Interests under Fla. Stat. § 542.335(1)(b).
 
-<!-- oa:clause id=no-business-with-covered-customers when=nondealing_included omitted="[Intentionally Omitted.]" -->
+<!-- oa:clause id=no-business-with-covered-customers when=nondealing_included -->
 ### No Business with Covered Customers
 
 During the Restricted Period, Employee must not accept, service, or do business with any Covered Customer, regardless of whether Employee or the Covered Customer first initiated contact. This restriction is broader than non-solicitation because it applies even if the Covered Customer approaches Employee. It is intended to protect Employer's substantial relationships with specific prospective or existing customers, patients, or clients and the associated goodwill, which are Legitimate Business Interests under Fla. Stat. § 542.335(1)(b).
 
-<!-- oa:clause id=non-competition when=noncompete_included omitted="[Intentionally Omitted.]" -->
+<!-- oa:clause id=non-competition when=noncompete_included -->
 ### Non-Competition
 
 During the Restricted Period, Employee must not engage in, be employed by, consult for, or have an active ownership interest in any Competitive Business within the Restricted Territory. This covenant is reasonably necessary to protect Employer's Legitimate Business Interests under Fla. Stat. § 542.335(1)(b), and its duration is intended to fall within the presumptively reasonable window under Fla. Stat. § 542.335(1)(d)–(e) for the applicable relationship. Passive Public Holdings are permitted.
 
-<!-- oa:clause id=non-investment when=noninvestment_included omitted="[Intentionally Omitted.]" -->
+<!-- oa:clause id=non-investment when=noninvestment_included -->
 ### Non-Investment
 
 During the Restricted Period, Employee must not acquire or hold any active ownership interest in, serve as a director, officer, manager, or advisor to, or have material economic participation in any Competitive Business. This restriction primarily targets active or material ownership in private competitors. Passive Public Holdings are permitted.
@@ -150,17 +150,17 @@ During the Restricted Period specified in Cover Terms for Non-Disparagement, Emp
 
 If Employee is a physician licensed under chapter 458 or chapter 459 of the Florida Statutes, then notwithstanding any other provision of this agreement, the non-compete restrictions in this agreement do not apply, and are void and unenforceable, to the extent that Fla. Stat. § 542.336 so provides. Under Fla. Stat. § 542.336, a restrictive covenant is void and unenforceable against such a physician who practices a medical specialty in a county where one entity (directly or through one or more related or affiliated entities) employs or contracts with all physicians who practice that specialty in that county, and the covenant remains void for three years after a second entity that employs or contracts with one or more physicians who practice that specialty begins offering that specialty in that county. Nothing in this agreement may be construed to restrict a physician Employee in violation of Fla. Stat. § 542.336.
 
-<!-- oa:clause id=choice-act-counsel-notice confirm=choice_act_advance_notice_confirmed -->
+<!-- oa:clause id=choice-act-counsel-notice when=covered_employee confirm=choice_act_advance_notice_confirmed -->
 ### CHOICE Act Counsel Advisal and Notice (Covered Employee)
 
 Employer advised Employee, in writing, of the right to seek the advice of independent legal counsel before executing this agreement, and Employee acknowledges receiving that written advisal, in satisfaction of Fla. Stat. § 542.45(2)(a). Employer provided Employee with this proposed agreement at least seven days before the offer of employment was to expire (for a prospective covered employee) or at least seven days before the offer to enter into this agreement was to expire (for a current covered employee), in satisfaction of the notice requirement of Fla. Stat. § 542.45(3).
 
-<!-- oa:clause id=choice-act-confidential-info-acknowledgement when=covered_employee omitted="[Intentionally Omitted.]" -->
+<!-- oa:clause id=choice-act-confidential-info-acknowledgement when=covered_employee -->
 ### CHOICE Act Confidential Information Acknowledgement (Covered Employee)
 
 Employee is a covered employee under the Florida Contracts Honoring Opportunity, Investment, Confidentiality, and Economic Growth (CHOICE) Act, Fla. Stat. §§ 542.41–542.45. Employee acknowledges in writing that, in the course of Employee's employment with Employer, Employee will receive confidential information or customer relationships, in satisfaction of Fla. Stat. § 542.45(2)(b). This acknowledgement is in addition to, and does not limit, the recital of Employer's Legitimate Business Interests above.
 
-<!-- oa:clause id=choice-act-garden-leave when=garden_leave_included omitted="[Intentionally Omitted.]" -->
+<!-- oa:clause id=choice-act-garden-leave when=garden_leave_included -->
 ### CHOICE Act Garden Leave and Day-for-Day Offset (Covered Employee)
 
 This agreement includes a covered garden leave agreement within the meaning of Fla. Stat. § 542.43(5), under which Employer and Employee agree to a garden-leave notice period of {garden_leave_notice_duration} before the termination of employment, which may not exceed four years (Fla. Stat. § 542.43(5)). The non-compete Restricted Period is reduced day-for-day by any nonworking portion of the garden-leave notice period, pursuant to Fla. Stat. § 542.45(2)(c). After the first 90 days of the notice period, Employee need not provide services to Employer and may engage in nonwork activities during the remainder of the notice period; Employee may work for another employer during the remainder of the notice period only with Employer's permission, as provided in Fla. Stat. § 542.44(2)(c). The counsel-advisal, seven-day-notice, and written confidential-information-acknowledgement requirements of Fla. Stat. § 542.44(2)–(3) apply to this garden leave agreement; the corresponding provisions of this agreement (the CHOICE Act Counsel Advisal and Notice provision, if included, and the CHOICE Act Confidential Information Acknowledgement provision) are intended to address them.

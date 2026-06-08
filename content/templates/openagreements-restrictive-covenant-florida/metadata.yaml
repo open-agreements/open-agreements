@@ -123,7 +123,7 @@ fields:
   - name: choice_act_advance_notice_confirmed
     type: boolean
     statutory_compliance_representation: true
-    authority_url: https://www.flsenate.gov/Laws/Statutes/2025/542.45
+    authority_url: https://openagreements.org/legal/non-compete/florida
     confirm_note: >-
       the written right-to-counsel advisal and at least 7-day advance notice were
       actually given before signing
@@ -132,16 +132,18 @@ fields:
       CHOICE Act pre-execution compliance steps actually occurred — the covered
       employee was advised, in writing, of the right to seek counsel, and was
       given at least 7 days' advance notice of the proposed agreement (Fla. Stat.
-      section 542.45(2)(a), (3); see
-      https://www.flsenate.gov/Laws/Statutes/2025/542.45). This is a statutory-
-      compliance representation: its truth is a precondition to CHOICE Act
-      enforceability, so setting it true asserts a past fact that must really
-      have happened. When false (the default), the counsel-advisal-and-notice
-      recital still renders but is followed by a yellow-highlighted
-      "[CONFIRM before signing: …]" bracket flagging the open item for human
-      review — the clause is never silently dropped. The calling LLM MUST ask the
-      human to confirm the advisal and 7-day notice were given before setting
-      this true. Not shown as a cover-term row.
+      section 542.45(2)(a), (3); see the OpenAgreements Florida non-compete
+      reference card at https://openagreements.org/legal/non-compete/florida,
+      which keeps the current statute links). This is a statutory-compliance
+      representation: its truth is a precondition to CHOICE Act enforceability,
+      so setting it true asserts a past fact that must really have happened. This
+      recital applies only to a covered employee; when it applies and this is
+      false (the default), the counsel-advisal-and-notice recital renders
+      followed by a yellow-highlighted "[CONFIRM before signing: …]" bracket and
+      a matching item on the page-one confirmation notice — the clause is never
+      silently dropped. The calling LLM MUST ask the human to confirm the advisal
+      and 7-day notice were given before setting this true. Not shown as a
+      cover-term row.
     default: 'false'
     default_value_rationale: >-
       Conservative default false: the counsel-advisal/advance-notice recital is

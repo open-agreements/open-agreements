@@ -48,11 +48,15 @@ const textClauseSchema = z.object({
       message: 'a confirm clause must declare both confirm_note and authority_url',
     });
   }
-  if (clause.condition !== undefined || clause.omitted_body !== undefined) {
+  // A confirm clause MAY carry a `condition` (when=) applicability gate — the
+  // layout wraps the whole clause (body + CONFIRM bracket) in {IF condition}.
+  // It is still mutually exclusive with `omitted_body`: a confirm clause is
+  // never replaced by an "[Intentionally Omitted.]" placeholder.
+  if (clause.omitted_body !== undefined) {
     ctx.addIssue({
       code: z.ZodIssueCode.custom,
       path: ['confirm'],
-      message: 'confirm is mutually exclusive with condition/omitted_body (a confirm clause always renders its body)',
+      message: 'confirm is mutually exclusive with omitted_body (a confirm clause always renders its body, never a placeholder)',
     });
   }
 });

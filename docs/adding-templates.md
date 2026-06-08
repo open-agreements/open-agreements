@@ -153,10 +153,49 @@ The clause body always renders. When the field is `false` (the default,
 unconfirmed) the renderer appends a yellow-highlighted
 `[CONFIRM before signing: <confirm_note>; see <authority_url>]` bracket so a
 human notices the open item; when the field is `true` the clause renders
-clean. `confirm=` names a single boolean field and cannot be combined with
-`when=`/`omitted`. The validator enforces that every
-`statutory_compliance_representation` field is rendered as such a bracket and
-that the bracket's URL and note match the metadata `authority_url`/`confirm_note`.
+clean. The validator enforces that every `statutory_compliance_representation`
+field is rendered as such a bracket and that the bracket's URL and note match
+the metadata `authority_url`/`confirm_note`.
+
+`confirm=` names a single boolean field. It MAY also carry a `when=<gate>`
+applicability gate (e.g. `confirm=advance_notice_confirmed when=covered_employee`),
+in which case the whole clause — body and CONFIRM bracket — is fully absent
+unless the gate is true; this is how a compliance recital that only applies in
+some configurations avoids appearing (with a stray bracket) in the others.
+`confirm=` cannot be combined with `omitted=` (a confirm clause is never replaced
+by a placeholder).
+
+**Cover-page notice.** Whenever a template has any `confirm=` clause, the
+renderer also places a yellow confirmation notice on page one (above the Cover
+Terms) listing each still-unconfirmed *applicable* item, gated on a derived
+`any_confirmation_pending` boolean. A reader who reviews only the Cover Terms
+still sees that confirmations are outstanding. No authoring is required — it is
+emitted automatically from the `confirm=` clauses.
+
+For the `authority_url`, prefer a curated reference page (e.g. an
+`https://openagreements.org/legal/...` card) over a raw statute URL where one
+exists: the card is easier for a layperson to read and keeps the current
+primary-law links in a single place, so the in-document link does not rot.
+
+#### Conditional clauses: clean omission vs. placeholder
+
+A `when=<field>` clause renders only when the field is true. There are two
+exclusion styles:
+
+- **`when=<field>` with NO `omitted=`** → the clause is **fully absent** (no
+  heading, no placeholder) when the field is false. Prefer this for optional
+  covenants and elective terms, so an excluded clause does not imply it was
+  expected (e.g. an absent garden-leave or non-compete clause should simply not
+  appear rather than advertise itself as "[Intentionally Omitted.]").
+- **`when=<field> omitted="<text>"`** → the heading always renders and the body
+  is swapped for `<text>` when the field is false. Use only when a numbered
+  placeholder is genuinely desired.
+
+Clause numbers are assigned by the renderer (not hand-authored) and the fill
+pipeline **renumbers the surviving clauses sequentially** after a clause is
+omitted, so a fully-absent clause leaves no gap. Cross-references use the
+`[[clause:<id>]]` mechanism (which resolves to the clause's heading text, not its
+number), so renumbering never breaks a reference.
 
 #### Single source of truth: `metadata.yaml` vs `template.md`
 

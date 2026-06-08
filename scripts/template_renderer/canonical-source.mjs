@@ -527,8 +527,8 @@ function parseStandardTerms(lines, filePath, fieldLookup = new Map()) {
         `clause "${id}" confirm`
       );
       invariant(
-        !condition && omittedBody === undefined,
-        `Canonical source (${filePath}) clause "${id}" cannot combine confirm with when/omitted`
+        omittedBody === undefined,
+        `Canonical source (${filePath}) clause "${id}" cannot combine confirm with omitted (a confirm clause is never replaced by a placeholder; a when= applicability gate is allowed)`
       );
       invariant(
         clauseDirective.attrs.confirm_note === undefined &&
@@ -562,6 +562,9 @@ function parseStandardTerms(lines, filePath, fieldLookup = new Map()) {
         confirm,
         confirm_note: confirmNote,
         authority_url: authorityUrl,
+        // A confirm clause MAY carry a when= applicability gate; the layout
+        // wraps the whole clause (body + CONFIRM bracket) in {IF condition}.
+        ...(condition ? { condition } : {}),
       });
       continue;
     }
