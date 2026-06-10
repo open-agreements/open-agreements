@@ -241,6 +241,7 @@ The Source column links to the upstream standard, source document, or canonical 
 | Skill | Description |
 |-------|-------------|
 | [non-compete-contract-explainer](https://github.com/open-agreements/open-agreements/tree/main/skills/non-compete-contract-explainer) | Explain U.S. state-by-state (and select international) non-compete and restrictive-covenant law — whether a non-compete is enforceable, blue-pencil reformation, tolling, choice of law, independent-contractor reach, and recent bans. Reads a bundled, source-cited snapshot per jurisdiction. Use when the user says "non-compete," "noncompete contract," "restrictive covenant," "non-solicit," "garden leave," "covenant not to compete," "employment agreement," asks "is my non-compete enforceable," or names a U.S. state. |
+| [data-privacy-law-explainer](https://github.com/open-agreements/open-agreements/tree/main/skills/data-privacy-law-explainer) | Explain U.S. state-by-state consumer data-privacy law (CCPA/CPRA, TDPSA, VCDPA, CPA, and the other comprehensive state acts) — who a law covers, applicability thresholds, privacy-policy requirements, consumer rights and opt-outs, private rights of action, and who enforces. Reads a bundled, source-cited snapshot per state. Use when the user says "CCPA," "CPRA," "state privacy law," "privacy policy," "data subject request," "consumer rights request," "opt-out of sale," "data broker," "sensitive data," asks "do I need to comply with <state>'s privacy law," or names a U.S. state together with privacy. |
 
 ### Compliance And Audit
 

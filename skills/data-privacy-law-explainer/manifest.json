@@ -1,0 +1,189 @@
+{
+  "topic": "privacy",
+  "snapshotAsOf": "2026-06-10",
+  "sourceCommit": "261376409d3ea1e7092aae85fced4c70a780c4ff",
+  "canonicalBase": "https://openagreements.org/legal/privacy",
+  "license": "CC BY 4.0",
+  "jurisdictions": [
+    {
+      "jurisdiction": "California",
+      "slug": "california",
+      "countryCode": "US",
+      "file": "content/california.md",
+      "lastReviewed": "2026-06-03",
+      "snapshotAsOf": "2026-06-10",
+      "stale": false
+    },
+    {
+      "jurisdiction": "Colorado",
+      "slug": "colorado",
+      "countryCode": "US",
+      "file": "content/colorado.md",
+      "lastReviewed": "2026-06-04",
+      "snapshotAsOf": "2026-06-10",
+      "stale": false
+    },
+    {
+      "jurisdiction": "Connecticut",
+      "slug": "connecticut",
+      "countryCode": "US",
+      "file": "content/connecticut.md",
+      "lastReviewed": "2026-06-04",
+      "snapshotAsOf": "2026-06-10",
+      "stale": false
+    },
+    {
+      "jurisdiction": "Delaware",
+      "slug": "delaware",
+      "countryCode": "US",
+      "file": "content/delaware.md",
+      "lastReviewed": "2026-06-06",
+      "snapshotAsOf": "2026-06-10",
+      "stale": false
+    },
+    {
+      "jurisdiction": "Indiana",
+      "slug": "indiana",
+      "countryCode": "US",
+      "file": "content/indiana.md",
+      "lastReviewed": "2026-06-06",
+      "snapshotAsOf": "2026-06-10",
+      "stale": false
+    },
+    {
+      "jurisdiction": "Iowa",
+      "slug": "iowa",
+      "countryCode": "US",
+      "file": "content/iowa.md",
+      "lastReviewed": "2026-06-05",
+      "snapshotAsOf": "2026-06-10",
+      "stale": false
+    },
+    {
+      "jurisdiction": "Kentucky",
+      "slug": "kentucky",
+      "countryCode": "US",
+      "file": "content/kentucky.md",
+      "lastReviewed": "2026-06-06",
+      "snapshotAsOf": "2026-06-10",
+      "stale": false
+    },
+    {
+      "jurisdiction": "Maryland",
+      "slug": "maryland",
+      "countryCode": "US",
+      "file": "content/maryland.md",
+      "lastReviewed": "2026-06-06",
+      "snapshotAsOf": "2026-06-10",
+      "stale": false
+    },
+    {
+      "jurisdiction": "Minnesota",
+      "slug": "minnesota",
+      "countryCode": "US",
+      "file": "content/minnesota.md",
+      "lastReviewed": "2026-06-06",
+      "snapshotAsOf": "2026-06-10",
+      "stale": false
+    },
+    {
+      "jurisdiction": "Montana",
+      "slug": "montana",
+      "countryCode": "US",
+      "file": "content/montana.md",
+      "lastReviewed": "2026-06-05",
+      "snapshotAsOf": "2026-06-10",
+      "stale": false
+    },
+    {
+      "jurisdiction": "Nebraska",
+      "slug": "nebraska",
+      "countryCode": "US",
+      "file": "content/nebraska.md",
+      "lastReviewed": "2026-06-06",
+      "snapshotAsOf": "2026-06-10",
+      "stale": false
+    },
+    {
+      "jurisdiction": "New Hampshire",
+      "slug": "new-hampshire",
+      "countryCode": "US",
+      "file": "content/new-hampshire.md",
+      "lastReviewed": "2026-06-06",
+      "snapshotAsOf": "2026-06-10",
+      "stale": false
+    },
+    {
+      "jurisdiction": "New Jersey",
+      "slug": "new-jersey",
+      "countryCode": "US",
+      "file": "content/new-jersey.md",
+      "lastReviewed": "2026-06-06",
+      "snapshotAsOf": "2026-06-10",
+      "stale": false
+    },
+    {
+      "jurisdiction": "Oregon",
+      "slug": "oregon",
+      "countryCode": "US",
+      "file": "content/oregon.md",
+      "lastReviewed": "2026-06-05",
+      "snapshotAsOf": "2026-06-10",
+      "stale": false
+    },
+    {
+      "jurisdiction": "Pennsylvania",
+      "slug": "pennsylvania",
+      "countryCode": "US",
+      "file": "content/pennsylvania.md",
+      "lastReviewed": "2026-06-07",
+      "snapshotAsOf": "2026-06-10",
+      "stale": false
+    },
+    {
+      "jurisdiction": "Rhode Island",
+      "slug": "rhode-island",
+      "countryCode": "US",
+      "file": "content/rhode-island.md",
+      "lastReviewed": "2026-06-06",
+      "snapshotAsOf": "2026-06-10",
+      "stale": false
+    },
+    {
+      "jurisdiction": "Tennessee",
+      "slug": "tennessee",
+      "countryCode": "US",
+      "file": "content/tennessee.md",
+      "lastReviewed": "2026-06-06",
+      "snapshotAsOf": "2026-06-10",
+      "stale": false
+    },
+    {
+      "jurisdiction": "Texas",
+      "slug": "texas",
+      "countryCode": "US",
+      "file": "content/texas.md",
+      "lastReviewed": "2026-06-04",
+      "snapshotAsOf": "2026-06-10",
+      "stale": false
+    },
+    {
+      "jurisdiction": "Utah",
+      "slug": "utah",
+      "countryCode": "US",
+      "file": "content/utah.md",
+      "lastReviewed": "2026-06-04",
+      "snapshotAsOf": "2026-06-10",
+      "stale": false
+    },
+    {
+      "jurisdiction": "Virginia",
+      "slug": "virginia",
+      "countryCode": "US",
+      "file": "content/virginia.md",
+      "lastReviewed": "2026-06-04",
+      "snapshotAsOf": "2026-06-10",
+      "stale": false
+    }
+  ]
+}
