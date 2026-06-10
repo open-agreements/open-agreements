@@ -1352,6 +1352,7 @@ describe('confirmation cover notice + clause renumbering', () => {
     // (Collapse the serializer's inter-element whitespace first.)
     const unconfirmedFlat = unconfirmed.replace(/\s+/g, ' ');
     expect(unconfirmedFlat).toContain('For the item below, confirm the stated fact occurred');
+    expect(unconfirmedFlat).not.toContain('For each item below, confirm the stated fact occurred');
     expect(unconfirmedFlat).toContain('Item requiring confirmation:');
     expect(unconfirmedFlat).not.toContain('Items requiring confirmation:');
     expect(unconfirmedXml).not.toMatch(/xref:oa_xref_/); // no raw sentinel left
