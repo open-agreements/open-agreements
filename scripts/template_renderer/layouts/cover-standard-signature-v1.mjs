@@ -1,10 +1,14 @@
+import { createHash } from 'node:crypto';
 import {
   AlignmentType,
+  Bookmark,
   BorderStyle,
   Document,
+  ExternalHyperlink,
   Footer,
   Header,
   HeightRule,
+  InternalHyperlink,
   LineRuleType,
   PageNumber,
   Paragraph,
@@ -15,9 +19,21 @@ import {
   TabStopPosition,
   TabStopType,
   TextRun,
+  UnderlineType,
   VerticalAlign,
   WidthType,
 } from 'docx';
+
+// Internal bookmark name for a clause heading, used as the anchor target of the
+// cover-notice cross-reference jump. Hashed (not the raw clause id) to stay
+// within Word's bookmark-name rules (<=40 chars, letters/digits/underscore,
+// must start with a letter) regardless of how long or hyphenated the id is.
+// Deterministic so rendered output is stable across runs. The same name is
+// embedded in the cover-notice `<<xref:…>>` sentinel, so the post-fill linking
+// pass never needs to know this scheme.
+function clauseBookmarkName(id) {
+  return `oa_xref_${createHash('sha1').update(id).digest('hex').slice(0, 16)}`;
+}
 
 function buildDocumentStyles(style) {
   // Apple Pages requires explicit named paragraph styles — paragraphs without a
@@ -627,7 +643,19 @@ function signaturePreambleParagraphs(text, style, opts = {}) {
   return paragraphs;
 }
 
-function clauseHeadingParagraph(index, heading, style) {
+// `bookmarkName` (optional) wraps the heading text in a bookmark so the
+// cover-notice cross-reference can jump to it. Only emitted for clauses the
+// notice links to (confirm clauses); the leading "N." number is still literal
+// text re-sequenced by the post-fill renumber pass, which leaves the bookmark
+// intact.
+function clauseHeadingParagraph(index, heading, style, bookmarkName) {
+  const headingRun = new TextRun({
+    text: `${index}. ${heading}.`,
+    font: style.fonts.body,
+    size: 22,
+    bold: true,
+    color: style.colors.ink,
+  });
   return new Paragraph({
     style: 'OAClauseHeading',
     contextualSpacing: false,
@@ -639,13 +667,9 @@ function clauseHeadingParagraph(index, heading, style) {
       afterAutoSpacing: false,
     },
     children: [
-      new TextRun({
-        text: `${index}. ${heading}.`,
-        font: style.fonts.body,
-        size: 22,
-        bold: true,
-        color: style.colors.ink,
-      }),
+      bookmarkName
+        ? new Bookmark({ id: bookmarkName, children: [headingRun] })
+        : headingRun,
     ],
   });
 }
@@ -691,21 +715,56 @@ function confirmationNoticeParagraphs(clauses, style) {
 
   const ctrl = (text) =>
     new Paragraph({ style: 'Normal', spacing: { after: 0, line: 0 }, children: [new TextRun({ text, size: 1 })] });
+  const bulletSpacing = {
+    before: 0,
+    after: style.spacing.body_after,
+    line: style.spacing.line,
+    beforeAutoSpacing: false,
+    afterAutoSpacing: false,
+  };
   const yellow = (text, bold = false) =>
     new Paragraph({
       style: 'OAClauseBody',
       contextualSpacing: false,
-      spacing: {
-        before: 0,
-        after: style.spacing.body_after,
-        line: style.spacing.line,
-        beforeAutoSpacing: false,
-        afterAutoSpacing: false,
-      },
+      spacing: bulletSpacing,
       children: [
         new TextRun({ text, font: style.fonts.body, size: 22, bold, color: style.colors.ink, highlight: 'yellow' }),
       ],
     });
+
+  // Runs for an item bullet: plain (yellow-highlighted) text vs a clickable
+  // (blue, underlined) link run. Both keep the yellow highlight so the whole
+  // notice reads as one banner.
+  const plainRun = (text) =>
+    new TextRun({ text, font: style.fonts.body, size: 22, color: style.colors.ink, highlight: 'yellow' });
+  const linkRun = (text) =>
+    new TextRun({
+      text,
+      font: style.fonts.body,
+      size: 22,
+      color: '0563C1',
+      underline: { type: UnderlineType.SINGLE },
+      highlight: 'yellow',
+    });
+  // One item bullet: "• <Section N jump> — <heading> — for more details see <url>".
+  // The section number is a `<<xref:…>>` sentinel resolved to the live, post-
+  // renumber "Section N" by the fill pipeline; it is wrapped in an internal
+  // hyperlink that jumps to the clause's heading bookmark. The URL is a real
+  // external hyperlink. Never emits the literal "[CONFIRM before signing:" token.
+  const bulletParagraph = (clause) => {
+    const bm = clauseBookmarkName(clause.id);
+    return new Paragraph({
+      style: 'OAClauseBody',
+      contextualSpacing: false,
+      spacing: bulletSpacing,
+      children: [
+        plainRun('• '),
+        new InternalHyperlink({ anchor: bm, children: [linkRun(`<<xref:${bm}>>`)] }),
+        plainRun(` — ${clause.heading} — for more details see `),
+        new ExternalHyperlink({ link: clause.authority_url, children: [linkRun(clause.authority_url)] }),
+      ],
+    });
+  };
 
   const out = [ctrl('{IF any_confirmation_pending}')];
   out.push(yellow('CONFIRMATION REQUIRED BEFORE SIGNING', true));
@@ -720,10 +779,9 @@ function confirmationNoticeParagraphs(clauses, style) {
   );
   out.push(yellow('Items requiring confirmation (see the named section of the Standard Terms):'));
   for (const clause of confirmClauses) {
-    const bullet = `• ${clause.heading} — for more details see ${clause.authority_url}`;
     if (clause.condition) out.push(ctrl(`{IF ${clause.condition}}`));
     out.push(ctrl(`{IF !${clause.confirm}}`));
-    out.push(yellow(bullet));
+    out.push(bulletParagraph(clause));
     out.push(ctrl('{END-IF}'));
     if (clause.condition) out.push(ctrl('{END-IF}'));
   }
@@ -739,7 +797,10 @@ function clauseParagraphs(index, clauseItem, style, opts = {}) {
     ];
   }
 
-  const headingParagraph = clauseHeadingParagraph(index, clauseItem.heading, style);
+  // Bookmark the heading only when the cover-notice cross-reference targets it
+  // (confirm clauses), keeping the anchor footprint to clauses that need it.
+  const headingBookmark = clauseItem.confirm ? clauseBookmarkName(clauseItem.id) : undefined;
+  const headingParagraph = clauseHeadingParagraph(index, clauseItem.heading, style, headingBookmark);
   const termsOpt = opts.terms;
   const bodyParas = bodyParagraphsFromText(clauseItem.body, style, { size: 22, style: 'OAClauseBody', terms: termsOpt });
 

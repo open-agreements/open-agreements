@@ -35,6 +35,13 @@ const END_IF_MARKER_RE = /\{END-IF\}/g;
 const FIELD_RE = /\{([a-z0-9_]+)\}/g;
 const PLACEHOLDER_RE = /\{([a-z0-9_]+)\}/g;
 const MULTI_SPACE_RE = /\s{2,}/g;
+// Cover-notice cross-reference sentinel. The filled pipeline resolves it to the
+// live "Section N". In the catalog preview the only sentinels live inside the
+// notice's conditional bullets, which cleanupConditionalParagraphs already
+// drops — so this is defense-in-depth: if a sentinel ever reaches the preview,
+// render a neutral placeholder instead of leaking the raw token. Matches the
+// XML-escaped form (`&lt;&lt;…&gt;&gt;`) and, defensively, the raw form.
+const XREF_SENTINEL_RE = /(?:&lt;&lt;|<<)xref:oa_xref_[0-9a-f]+(?:&gt;&gt;|>>)/g;
 // Field-code elements whose content carries program-readable instructions
 // (PAGE, NUMPAGES, etc.) or field markers — MULTI_SPACE_RE must not touch
 // these or the rendered field can corrupt (#185, #109).
@@ -530,6 +537,7 @@ export function prettifyTemplateXml(
   let output = cleanupConditionalParagraphs(text);
   output = output.replace(IF_MARKER_RE, '');
   output = output.replace(END_IF_MARKER_RE, '');
+  output = output.replace(XREF_SENTINEL_RE, 'Section [#]');
   output = replaceFieldTokens(output, fieldLabels, fieldDefaults);
   output = collapseMultiSpaceOutsideFieldCodes(output);
   if (options.highlight !== false) {
@@ -549,6 +557,7 @@ export function humanizeDocxBuffer(input: Buffer, ctx: HumanizeContext): Buffer 
       text = cleanupConditionalParagraphs(text);
       text = text.replace(IF_MARKER_RE, '');
       text = text.replace(END_IF_MARKER_RE, '');
+      text = text.replace(XREF_SENTINEL_RE, 'Section [#]');
       text = replaceFieldTokens(text, ctx.fieldLabels, ctx.fieldDefaults);
       text = collapseMultiSpaceOutsideFieldCodes(text);
       if (entry.entryName.startsWith('word/')) {
