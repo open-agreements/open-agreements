@@ -772,12 +772,15 @@ function confirmationNoticeParagraphs(clauses, style) {
   // the notice no longer needs to tell the reader to find the section or click
   // the link. Must not contain the literal "[CONFIRM before signing:" token so
   // it can't spoof the in-body bracket validator.
+  const isSingular = confirmClauses.length === 1;
   out.push(
     yellow(
-      'For each item below, confirm the stated fact occurred, then delete its yellow "CONFIRM before signing" bracket in the Standard Terms. Delete this notice before signing.'
+      isSingular
+        ? 'For the item below, confirm the stated fact occurred, then delete its yellow "CONFIRM before signing" bracket in the Standard Terms. Delete this notice before signing.'
+        : 'For each item below, confirm the stated fact occurred, then delete its yellow "CONFIRM before signing" bracket in the Standard Terms. Delete this notice before signing.'
     )
   );
-  out.push(yellow('Items requiring confirmation:'));
+  out.push(yellow(isSingular ? 'Item requiring confirmation:' : 'Items requiring confirmation:'));
   for (const clause of confirmClauses) {
     if (clause.condition) out.push(ctrl(`{IF ${clause.condition}}`));
     out.push(ctrl(`{IF !${clause.confirm}}`));

@@ -1351,6 +1351,9 @@ describe('confirmation cover notice + clause renumbering', () => {
     // matching that clause's own renumbered heading, and the sentinel is resolved.
     // (Collapse the serializer's inter-element whitespace first.)
     const unconfirmedFlat = unconfirmed.replace(/\s+/g, ' ');
+    expect(unconfirmedFlat).toContain('For the item below, confirm the stated fact occurred');
+    expect(unconfirmedFlat).toContain('Item requiring confirmation:');
+    expect(unconfirmedFlat).not.toContain('Items requiring confirmation:');
     expect(unconfirmedXml).not.toMatch(/xref:oa_xref_/); // no raw sentinel left
     const bulletNum = unconfirmedFlat.match(/• Section (\d+) — CHOICE Act Counsel Advisal/)?.[1];
     expect(bulletNum).toBeDefined();
