@@ -25,12 +25,6 @@
       "addedInPR": "#378"
     },
     {
-      "templateId": "openagreements-restrictive-covenant-florida",
-      "docxSha256": "955b312bfb33f8cffa9381ca1e48fa641aa8e4d02e06e980c3e4a4ee39b904cb",
-      "reason": "The cover-notice cross-reference heading bookmark, <<xref:...>> sentinel, and internal/external hyperlinks live only inside the {IF !choice_act_advance_notice_confirmed} conditional bullet, which humanizeDocx strips from the catalog preview; regenerating previews produces byte-identical output (#416/#426)",
-      "addedInPR": "#426"
-    },
-    {
       "templateId": "openagreements-restrictive-covenant-wyoming",
       "docxSha256": "04991b77311d8a6ded26d7b5c6584dc5803d92b1290080e501b38198b3f3e13c",
       "reason": "theme/webSettings injection has no visual effect on cover-standard layout with explicit fonts (PR #378)",
