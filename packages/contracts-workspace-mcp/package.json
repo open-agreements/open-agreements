@@ -1,6 +1,6 @@
 {
   "name": "@open-agreements/contracts-workspace-mcp",
-  "version": "0.7.5",
+  "version": "0.7.7",
   "description": "Local stdio MCP server for contracts workspace operations",
   "type": "module",
   "bin": {

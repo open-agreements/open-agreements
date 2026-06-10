@@ -1,6 +1,6 @@
 {
   "name": "@open-agreements/signing",
-  "version": "0.7.5",
+  "version": "0.7.7",
   "private": true,
   "description": "DocuSign signing adapter for sending filled agreements; pluggable interface for additional providers.",
   "type": "module",
