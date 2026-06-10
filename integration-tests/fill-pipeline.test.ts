@@ -1277,21 +1277,91 @@ describe('confirmation cover notice + clause renumbering', () => {
     expect(text).not.toContain('3.');
   });
 
+  // A clause heading carrying an `oa_xref_*` bookmark, used as a cover-notice
+  // cross-reference target.
+  const BM = 'oa_xref_deadbeef00000000';
+  function bookmarkedHeadingPara(n: number, title: string, bm: string): string {
+    return (
+      `<w:p><w:pPr><w:pStyle w:val="OAClauseHeading"/></w:pPr>` +
+      `<w:bookmarkStart w:name="${bm}" w:id="1"/>` +
+      `<w:r><w:t xml:space="preserve">${n}. ${title}</w:t></w:r>` +
+      `<w:bookmarkEnd w:id="1"/></w:p>`
+    );
+  }
+  // A cover-notice bullet carrying the cross-reference sentinel (XML-escaped, as
+  // the renderer emits it) inside an internal hyperlink to the same bookmark.
+  function sentinelBulletPara(bm: string): string {
+    return (
+      `<w:p><w:r><w:t xml:space="preserve">• </w:t></w:r>` +
+      `<w:hyperlink w:history="1" w:anchor="${bm}">` +
+      `<w:r><w:t xml:space="preserve">&lt;&lt;xref:${bm}&gt;&gt;</w:t></w:r></w:hyperlink>` +
+      `<w:r><w:t xml:space="preserve"> — see clause</w:t></w:r></w:p>`
+    );
+  }
+
+  // Tag-stripped text keeps the serializer's inter-element indentation; collapse
+  // it so multi-run bullet text can be matched as it visually reads.
+  const flat = (s: string): string => s.replace(/\s+/g, ' ');
+
+  it.openspec('OA-TMP-074')('resolves a cover-notice <<xref:…>> sentinel to the target heading\'s post-renumber "Section N"', async () => {
+    const text = flat(await filledHeadingText(
+      docFromHeadings(
+        headingPara(1, 'Alpha'),
+        bookmarkedHeadingPara(7, 'Beta', BM), // authored "7." renumbers to 2
+        sentinelBulletPara(BM),
+      )
+    ));
+    expect(text).toContain('2. Beta'); // heading renumbered
+    expect(text).toContain('• Section 2 — see clause'); // sentinel → live number
+    expect(text).not.toContain('xref:'); // raw sentinel fully resolved
+  });
+
+  it.openspec('OA-TMP-074')('xref number tracks renumbering when an earlier clause is omitted', async () => {
+    // Same target clause, but Alpha is absent → target heading becomes 1, and the
+    // bullet must follow to "Section 1" (no stale/gapped number).
+    const text = flat(await filledHeadingText(
+      docFromHeadings(bookmarkedHeadingPara(7, 'Beta', BM), sentinelBulletPara(BM))
+    ));
+    expect(text).toContain('1. Beta');
+    expect(text).toContain('• Section 1 — see clause');
+  });
+
   it.openspec('OA-TMP-071')('renders the cover confirmation notice only when an applicable confirm field is unconfirmed', async () => {
     const flDir = resolve(import.meta.dirname, '..', 'content', 'templates', 'openagreements-restrictive-covenant-florida');
-    const fillFl = async (values: Record<string, unknown>): Promise<string> => {
+    const fillFlZip = async (values: Record<string, unknown>): Promise<AdmZip> => {
       const dir = mkdtempSync(join(tmpdir(), 'oa-fl-notice-'));
       const out = join(dir, 'out.docx');
       await fillTemplate({ templateDir: flDir, values, outputPath: out });
-      const xml = new AdmZip(readFileSync(out)).getEntry('word/document.xml')!.getData().toString('utf-8');
-      return xml.replace(/<[^>]+>/g, '');
+      return new AdmZip(readFileSync(out));
     };
+    const docXmlOf = (zip: AdmZip): string =>
+      zip.getEntry('word/document.xml')!.getData().toString('utf-8');
+    const fillFl = async (values: Record<string, unknown>): Promise<string> =>
+      docXmlOf(await fillFlZip(values)).replace(/<[^>]+>/g, '');
 
     // Covered employee, advance notice NOT confirmed → notice + in-body bracket present.
-    const unconfirmed = await fillFl({ covered_employee: 'true', choice_act_advance_notice_confirmed: 'false' });
+    const unconfirmedZip = await fillFlZip({ covered_employee: 'true', choice_act_advance_notice_confirmed: 'false' });
+    const unconfirmedXml = docXmlOf(unconfirmedZip);
+    const unconfirmed = unconfirmedXml.replace(/<[^>]+>/g, '');
     expect(unconfirmed).toContain('CONFIRMATION REQUIRED BEFORE SIGNING');
     expect(unconfirmed).toContain('[CONFIRM before signing');
     expect(unconfirmed).toContain('openagreements.org/legal/non-compete/florida');
+
+    // The cover bullet names the live "Section N" of the CHOICE Act counsel clause,
+    // matching that clause's own renumbered heading, and the sentinel is resolved.
+    // (Collapse the serializer's inter-element whitespace first.)
+    const unconfirmedFlat = unconfirmed.replace(/\s+/g, ' ');
+    expect(unconfirmedXml).not.toMatch(/xref:oa_xref_/); // no raw sentinel left
+    const bulletNum = unconfirmedFlat.match(/• Section (\d+) — CHOICE Act Counsel Advisal/)?.[1];
+    expect(bulletNum).toBeDefined();
+    expect(unconfirmedFlat).toContain(`${bulletNum}. CHOICE Act Counsel Advisal`); // heading carries the same number
+    // The number is an internal hyperlink to the clause heading's bookmark…
+    expect(unconfirmedXml).toMatch(/<w:hyperlink[^>]*w:anchor="oa_xref_[0-9a-f]+"/);
+    // …and the URL is a real external hyperlink relationship.
+    const relsXml = unconfirmedZip.getEntry('word/_rels/document.xml.rels')!.getData().toString('utf-8');
+    expect(relsXml).toMatch(
+      /Target="https:\/\/openagreements\.org\/legal\/non-compete\/florida"[^>]*TargetMode="External"/
+    );
 
     // Covered employee, confirmed → no notice, no bracket.
     const confirmed = await fillFl({ covered_employee: 'true', choice_act_advance_notice_confirmed: 'true' });

@@ -670,13 +670,32 @@ function rewriteTextRange(
   }
 }
 
+/** Read the `<w:t>` text nodes of a paragraph as an ordered, editable segment list. */
+function paragraphTextSegments(p: Element): { node: Element; text: string }[] {
+  const tEls = p.getElementsByTagNameNS(W_NS, 't');
+  const segments: { node: Element; text: string }[] = [];
+  for (let j = 0; j < tEls.length; j++) {
+    segments.push({ node: tEls[j], text: tEls[j].textContent ?? '' });
+  }
+  return segments;
+}
+
+/** Matches a cover-notice cross-reference sentinel "<<xref:oa_xref_…>>". */
+const XREF_SENTINEL_RE = /<<xref:(oa_xref_[0-9a-f]+)>>/;
+
 /**
  * Renumber standard-terms clause headings (style OAClauseHeading) sequentially
  * (1..N) in `word/document.xml` after {IF} resolution, so a fully-omitted clause
  * leaves no gap. Clause numbers are literal text (not Word list numbering), so a
  * dropped clause would otherwise skip a number. Idempotent: a heading already
- * carrying its sequential number is untouched. Cross-references are name-based
- * (`[[clause:id]]` → heading text), so renumbering breaks no references.
+ * carrying its sequential number is untouched.
+ *
+ * Same pass resolves the cover confirmation notice's cross-reference sentinels:
+ * each `<<xref:<bookmark>>>` is rewritten to the live, post-renumber "Section N"
+ * of the clause whose heading carries that bookmark (the renderer wraps the
+ * sentinel in an internal hyperlink to the same bookmark, so the visible number
+ * also becomes the clickable jump target). Name-based `[[clause:id]]` references
+ * resolve to heading text upstream, so renumbering breaks no references.
  */
 function renumberClauseHeadings(docxBuffer: Buffer): Buffer {
   const zip = new AdmZip(docxBuffer);
@@ -691,26 +710,51 @@ function renumberClauseHeadings(docxBuffer: Buffer): Buffer {
   let counter = 0;
   let changed = false;
 
+  // First pass: assign sequential numbers and map each heading's xref bookmark
+  // (if any) to its resolved number, so the cover-notice sentinels can link to it.
+  const numberByBookmark = new Map<string, number>();
+
   for (let i = 0; i < paragraphs.length; i++) {
     const p = paragraphs[i];
     if (paragraphStyle(p) !== CLAUSE_HEADING_STYLE) continue;
 
-    const tEls = p.getElementsByTagNameNS(W_NS, 't');
-    const segments: { node: Element; text: string }[] = [];
-    for (let j = 0; j < tEls.length; j++) {
-      segments.push({ node: tEls[j], text: tEls[j].textContent ?? '' });
-    }
+    const segments = paragraphTextSegments(p);
     const full = segments.map((s) => s.text).join('');
     const m = full.match(/^(\s*)(\d+)\./);
     if (!m) continue; // a heading without a leading "N." — leave it alone
 
     counter += 1;
+
+    const bookmarkStarts = p.getElementsByTagNameNS(W_NS, 'bookmarkStart');
+    for (let k = 0; k < bookmarkStarts.length; k++) {
+      const name = bookmarkStarts[k].getAttribute('w:name');
+      if (name && name.startsWith('oa_xref_')) numberByBookmark.set(name, counter);
+    }
+
     const newDigits = String(counter);
     if (m[2] === newDigits) continue; // already correct (idempotent)
 
     const start = m[1].length;
     rewriteTextRange(segments, start, start + m[2].length, newDigits);
     changed = true;
+  }
+
+  // Second pass: resolve cover-notice cross-reference sentinels to "Section N".
+  // A present bullet always has a present (un-omitted) target heading, so the
+  // bookmark is in the map; the empty-string fallback is purely defensive.
+  for (let i = 0; i < paragraphs.length; i++) {
+    const p = paragraphs[i];
+    const segments = paragraphTextSegments(p);
+    if (segments.length === 0) continue;
+
+    let match = segments.map((s) => s.text).join('').match(XREF_SENTINEL_RE);
+    while (match && match.index !== undefined) {
+      const num = numberByBookmark.get(match[1]);
+      const replacement = num !== undefined ? `Section ${num}` : '';
+      rewriteTextRange(segments, match.index, match.index + match[0].length, replacement);
+      changed = true;
+      match = segments.map((s) => s.text).join('').match(XREF_SENTINEL_RE);
+    }
   }
 
   if (!changed) return docxBuffer;
