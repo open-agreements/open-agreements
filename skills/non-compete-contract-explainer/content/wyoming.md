@@ -44,6 +44,21 @@ The statute covers covenants that restrict the right of any person to receive co
 
 The practical reading is that a standard post-employment employee non-compete should not be reused in Wyoming after the effective date unless it is deliberately drafted into one of the remaining statutory categories.
 
+The statute does not erase every Wyoming non-compete. Two categories fall outside the void and remain governed by Wyoming common law and its demanding reasonableness baseline: agreements entered into before July 1, 2025, which the act does not alter[^sf107-prospective-savings], and non-compete covenants drafted to fit a statutory exception. Fitting an exception keeps a non-compete out of the statutory void but does not make it automatically enforceable — such a covenant must still satisfy the common-law reasonableness elements[^malave-reasonableness-baseline], and Wyoming courts strictly construe[^brown-strict-construction-baseline] restraints against the employer. The next question covers what law still governs those covenants; the pre-2025 cohort also shrinks as those agreements age out.
+
+## What law governs Wyoming non-compete covenants the 2025 statute does not void? {#pre-2025-agreements}
+
+**Short answer.** Wyoming common law governs them, applying the same demanding reasonableness baseline that predated the statute. Two cohorts fall outside the statutory void: agreements entered into before July 1, 2025, which the act does not alter[^sf107-savings-clause], and non-compete covenants that fit a statutory exception.
+
+Falling outside the statutory void does not make either cohort easy to enforce. Wyoming common law uses traditional enforceability elements[^malave-five-elements]: the covenant must be written, part of an employment contract, supported by reasonable consideration, reasonable in duration and geography, and not against public policy.
+
+Wyoming cases also strictly construe non-competes[^brown-strict-construction] and put the burden on the employer to prove special circumstances that make the restraint reasonably necessary. For a post-hire covenant, continued employment alone is not enough consideration[^brown-separate-consideration]. The pre-2025 cohort shrinks as those agreements age out. Among the statutory exceptions, the ones that operate as non-competes — such as the executive-and-management carve-out — remain subject to this same reasonableness analysis, while the capped repayment carve-out is an expense-recovery mechanism judged on the statutory schedule rather than the reasonableness test. A later question covers the four exceptions in detail, and a separate question covers whether a court will narrow an overbroad covenant.
+
+> [!CAUTION]
+> **Drafting note.**
+>
+> No published Wyoming authority addresses tolling a non-compete during a breach. Wyoming strictly construes restrictive covenants and puts the burden on the employer to justify the restraint [^brown-strict-construction]. A tolling provision adds duration that faces the same reasonableness scrutiny as the original term — without judicial willingness to trim — so the realistic downside is voiding the covenant, not narrowing it.
+
 ## Does Wyoming's non-compete ban apply to independent contractors? {#independent-contractors}
 
 **Short answer.** Likely yes under the dominant 2025 law-firm commentary, but that is still an interpretation rather than a Wyoming appellate holding.
@@ -52,40 +67,29 @@ The reason is the statutory phrase "any person"[^wyo-1-23-any-person]. State-spe
 
 That is a strong drafting assumption for Wyoming templates, but a careful note should still say that Wyoming courts have not yet issued a controlling appellate decision on the contractor question.
 
-## What law governs Wyoming non-compete agreements signed before July 1, 2025? {#pre-2025-agreements}
+## Can a Wyoming court narrow an overbroad non-compete? {#court-narrowing}
 
-**Short answer.** Older agreements continue to be judged under Wyoming common law, because the 2025 act does not alter earlier contracts[^sf107-savings-clause].
-
-That does not mean older Wyoming non-competes are easy to enforce. Wyoming common law uses traditional enforceability elements[^malave-five-elements]: the covenant must be written, part of an employment contract, supported by reasonable consideration, reasonable in duration and geography, and not against public policy.
-
-Wyoming cases also strictly construe non-competes[^brown-strict-construction] and put the burden on the employer to prove special circumstances that make the restraint reasonably necessary. For a post-hire covenant, continued employment alone is not enough consideration[^brown-separate-consideration].
-
-> [!CAUTION]
-> **Drafting note.**
->
-> No published Wyoming authority addresses tolling a non-compete during a breach. Wyoming strictly construes restrictive covenants and puts the burden on the employer to justify the restraint [^brown-strict-construction]. A tolling provision adds duration that faces the same reasonableness scrutiny as the original term — without judicial willingness to trim — so the realistic downside is voiding the covenant, not narrowing it.
-
-## Can Wyoming courts blue-pencil or narrow an overbroad non-compete? {#court-narrowing}
-
-**Short answer.** No. The Wyoming Supreme Court rejected blue-penciling[^hassler-no-blue-pencil] for non-compete agreements.
+**Short answer.** No. The Wyoming Supreme Court will not rewrite an overbroad covenant[^hassler-no-blue-pencil] to bring it within the bounds of reason.
 
 The court held that the entire agreement was void because the duration and geographic terms were unreasonable. That makes overbreadth more expensive in Wyoming than in states where courts may trim an unreasonable covenant down to an enforceable scope.
 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Do not assume a Wyoming court will rescue an overbroad covenant by narrowing it later. That caution applies to legacy agreements and to new agreements drafted inside a statutory exception [^holland-blue-pencil-warning].
+> A Wyoming court is unlikely to rescue an overbroad covenant by narrowing it later. That risk applies both to legacy agreements and to new agreements drafted inside a statutory exception [^holland-blue-pencil-warning].
 
 > [!CAUTION]
 > **Drafting note.**
 >
-> Tie duration and geography to specific business needs and document the reasonableness analysis at drafting time. Wyoming's no-blue-pencil rule means an overbroad covenant is voided whole rather than trimmed [^hassler-no-blue-pencil], so the upside of an aggressive scope is small relative to the risk of losing the covenant entirely.
+> Where a covenant falls within a statutory exception and enforceability matters, enforceability is more likely when duration and geography are tied to specific business needs and the reasonableness analysis is documented at drafting time. Because a Wyoming court will void an overbroad covenant whole rather than trim it [^hassler-no-blue-pencil], the upside of an aggressive scope is small relative to the risk of losing the covenant entirely.
 
 ## What non-compete restrictions are still allowed in Wyoming after July 1, 2025? {#available-restrictions}
 
 **Short answer.** Four categories remain in play: sale-of-business covenants, trade-secret covenants, capped repayment provisions, and covenants with executive and management personnel and their professional staff.
 
 The four statutory carveouts[^wyo-1-23-four-carveouts] are listed in Wyo. Stat. § 1-23-108(a). The repayment carveout is not a blank check; it is capped by the employee's tenure, with lower recovery percentages as service length increases.
+
+Fitting one of these categories keeps a covenant out of the statutory void, but it does not make the covenant automatically enforceable — an exception covenant that operates as a non-compete is still judged under the common-law reasonableness baseline covered in the earlier question on what law governs covenants the statute does not void.
 
 > [!CAUTION]
 > **Drafting note.**
@@ -95,7 +99,7 @@ The four statutory carveouts[^wyo-1-23-four-carveouts] are listed in Wyo. Stat. 
 > [!CAUTION]
 > **Drafting note.**
 >
-> The trade-secret exception covers covenants only to the extent they protect information that meets Wyoming's statutory trade-secret definition. Tie the contractual definition of protected information to that statutory bar and document why each category meets it, since how broadly Wyoming courts read the carveout remains an open question [^littler-trade-secret-unsettled].
+> The trade-secret exception covers covenants only to the extent they protect information that meets Wyoming's statutory trade-secret definition. Enforceability is more likely when the contractual definition of protected information is tied to that statutory bar and each category is documented as meeting it, since how broadly Wyoming courts read the carveout remains an open question [^littler-trade-secret-unsettled].
 
 ## Are customer non-solicitation agreements enforceable in Wyoming? {#customer-nonsolicits}
 
@@ -106,7 +110,7 @@ Brownstein takes the employer-friendly view that customer non-solicitation coven
 > [!CAUTION]
 > **Drafting note.**
 >
-> For drafting, separate a narrow customer-relationship restriction from language that prevents the person from earning compensation in a field, territory, or role. The closer the clause gets to a work ban, the more non-compete risk it carries [^fisher-classification-question].
+> A narrow customer-relationship restriction carries less risk than language that prevents the person from earning compensation in a field, territory, or role. The closer the clause gets to a work ban, the more non-compete risk it carries [^fisher-classification-question].
 
 ## Are employee non-solicitation agreements enforceable in Wyoming? {#employee-nonsolicits}
 
@@ -125,15 +129,15 @@ Brownstein says the statute does not affect nondisclosure or confidentiality agr
 > [!CAUTION]
 > **Drafting note.**
 >
-> Use confidentiality clauses to protect confidential information, not to prevent someone from working in a role, industry, or geography. The broader the definition of protected information, the more the clause begins to look like a non-compete substitute [^fisher-nda-question].
+> A confidentiality clause that protects confidential information carries less risk than one drafted to prevent someone from working in a role, industry, or geography. The broader the definition of protected information, the more the clause begins to look like a non-compete substitute [^fisher-nda-question].
 
-## Are anti-moonlighting clauses risky under Wyoming's non-compete law? {#anti-moonlighting}
+## Can Wyoming employers bind executives or managers to non-competes under the statutory exception? {#executives-managers}
 
-**Short answer.** Potentially. A narrow conflict-of-interest rule is different from a broad ban on outside work, but the statutory text creates risk for clauses that restrict compensation for labor.
+**Short answer.** Possibly, but the exception is not self-defining. Wyoming allows covenants with executive and management personnel and their professional staff, but the statute does not define those terms.
 
-The statute focuses on covenants that restrict compensation for skilled or unskilled labor [^wyo-1-23-compensation-focus]. Fisher Phillips specifically flags anti-moonlighting provisions as one of the adjacent covenant types Wyoming courts may need to classify under the 2025 statute [^fisher-anti-moonlighting].
+The statutory exception covers executive and management personnel[^wyo-1-23-exec-staff]. Law-firm commentary flags the drafting gap [^faegre-exec-undefined], and other law-firm commentary points to Colorado cases as possible nonbinding guidance because Colorado once used similar language [^fisher-actual-duties][^holland-colorado-analogy].
 
-This is useful to keep separate from non-competes because many employers do not call those clauses *non-competes*, even when they restrict outside work in a way that starts to resemble one.
+Those comparisons point toward function over title: supervision, autonomy, hiring or firing authority, and a meaningful role in implementing management functions. A *manager* label alone is not the safest basis for the Wyoming exception.
 
 ## Can a Wyoming non-compete prevent a physician from practicing medicine? {#physicians}
 
@@ -146,15 +150,15 @@ The harder question is the phrase "between physicians"[^wyo-1-23-between-physici
 > [!CAUTION]
 > **Drafting note.**
 >
-> Wyoming voids physician-to-physician practice restraints and protects the departing physician's right to share continuing-practice information with rare-disorder patients [^wyo-1-23-physician-bc]. Mirror that statutory protection in the clause itself, and avoid relying on the broader exec/management exception for physicians employed by non-physician entities — the "between physicians"[^wyo-1-23-between-physicians] language leaves that scope unsettled [^holland-between-physicians].
+> Wyoming voids physician-to-physician practice restraints and protects the departing physician's right to share continuing-practice information with rare-disorder patients [^wyo-1-23-physician-bc]. Mirroring that statutory protection in the clause itself reduces risk, and relying on the broader exec/management exception for physicians employed by non-physician entities is riskier — the "between physicians"[^wyo-1-23-between-physicians] language leaves that scope unsettled [^holland-between-physicians].
 
-## Can Wyoming employers bind executives or managers to non-competes under the statutory exception? {#executives-managers}
+## Are anti-moonlighting clauses risky under Wyoming's non-compete law? {#anti-moonlighting}
 
-**Short answer.** Possibly, but the exception is not self-defining. Wyoming allows covenants with executive and management personnel and their professional staff, but the statute does not define those terms.
+**Short answer.** Potentially. A narrow conflict-of-interest rule is different from a broad ban on outside work, but the statutory text creates risk for clauses that restrict compensation for labor.
 
-The statutory exception covers executive and management personnel[^wyo-1-23-exec-staff]. Law-firm commentary flags the drafting gap [^faegre-exec-undefined], and other law-firm commentary points to Colorado cases as possible nonbinding guidance because Colorado once used similar language [^fisher-actual-duties][^holland-colorado-analogy].
+The statute focuses on covenants that restrict compensation for skilled or unskilled labor [^wyo-1-23-compensation-focus]. Fisher Phillips specifically flags anti-moonlighting provisions as one of the adjacent covenant types Wyoming courts may need to classify under the 2025 statute [^fisher-anti-moonlighting].
 
-Those comparisons point toward function over title: supervision, autonomy, hiring or firing authority, and a meaningful role in implementing management functions. A *manager* label alone is not the safest basis for the Wyoming exception.
+This is useful to keep separate from non-competes because many employers do not call those clauses *non-competes*, even when they restrict outside work in a way that starts to resemble one.
 
 ## Can Wyoming employers recover relocation, education, or training expenses from departing employees? {#repayment-clauses}
 
@@ -165,13 +169,13 @@ Wyoming permits recovery of up to 100% of relocation, education, and training ex
 > [!CAUTION]
 > **Drafting note.**
 >
-> Draft this as an expense-recovery provision, not as a disguised penalty for competition. Tie the amount to actual relocation, education, or training expense and the statutory percentages [^ogletree-repayment-tier][^faegre-repayment-tier].
+> A clause drafted as an expense-recovery provision carries less risk than one that operates as a disguised penalty for competition. Enforceability is more likely when the amount is tied to actual relocation, education, or training expense and the statutory percentages [^ogletree-repayment-tier][^faegre-repayment-tier].
 
-## Do employers need to update Wyoming restrictive covenant templates after July 1, 2025? {#template-updates}
+## Should employers update or re-review Wyoming restrictive covenant templates after July 1, 2025? {#template-updates}
 
-**Short answer.** Yes. The new statute turns template rollover into a legal risk point, especially if an older covenant might have remained enforceable under common law.
+**Short answer.** Probably yes — and at least re-review. Any form that contains a non-compete outside a statutory exception should be updated, while a form with no non-compete may already conform; either way the new statute turns unreviewed template rollover into a legal risk point, especially where an older covenant might have remained enforceable under common law.
 
-Wyoming-specific commentary treats SF 107 as a major narrowing of employer practice, not a minor drafting tweak [^ogletree-review-revise]. Employers should review non-compete templates, offer letters, incentive agreements, physician agreements, non-solicits, NDAs, anti-moonlighting clauses, and repayment provisions together.
+Wyoming-specific commentary treats SF 107 as a major narrowing of employer practice, not a minor drafting tweak [^ogletree-review-revise]. A complete re-review usually covers non-compete templates, offer letters, incentive agreements, physician agreements, non-solicits, NDAs, anti-moonlighting clauses, and repayment provisions together.
 
 Commentary specifically warns employers to evaluate routine replacement or updating programs because a new agreement after July 1, 2025 may replace something that was enforceable with something void [^littler-rollover-warning]. Where a grandfathered covenant needs changes, commentary suggests amending or renewing it rather than signing a fresh agreement, when the existing terms allow that, so the covenant is not treated as newly entered into after the effective date [^holland-amend-not-replace]. The common-law cases also mean that even old-law Wyoming covenants required careful drafting [^brown-baseline][^malave-baseline][^hassler-baseline].
 
@@ -183,7 +187,7 @@ Commentary specifically warns employers to evaluate routine replacement or updat
 
 **July 1, 2025:** The new statute took effect for contracts entered into on or after that date. Earlier contracts were not altered, amended, or impaired by the act [^sf107-effective-date].
 
-**2021–2022 backdrop:** Wyoming's common-law baseline was already demanding because of strict construction, consideration, and no-blue-pencil cases [^brown-prima-facie][^malave-common-law-elements][^hassler-void-public-policy].
+**2021–2022 backdrop:** Wyoming's common-law baseline was already demanding because of strict construction, consideration, and no-narrowing cases [^brown-prima-facie][^malave-common-law-elements][^hassler-void-public-policy].
 
 [^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-04-14. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Wyoming. This article synthesizes Wyoming primary law and is not legal advice from a Wyoming-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
@@ -199,13 +203,11 @@ Commentary specifically warns employers to evaluate routine replacement or updat
 
 [^holland-uphill-battle]: **Holland & Hart commentary** — "Employers still have an uphill battle to enforce a covenant not to compete in court." *Holland & Hart, Wyoming Legislature Takes a Bite Out of Covenants Not to Compete (2025).* <https://www.hollandhart.com/wyoming-legislature-takes-a-bite-out-of-covenants-not-to-compete-1>
 
-[^wyo-1-23-any-person]: **Wyo. Stat. § 1-23-108(a)** — "Any covenant not to compete that restricts the right of any person to receive compensation for performance of skilled or unskilled labor shall be void." *Wyo. Stat. § 1-23-108(a) (2025).* <https://wyoleg.gov/2025/Enroll/SF0107.pdf>
+[^sf107-prospective-savings]: **SF 107 § 2(b)** — "Nothing in this act shall be construed to alter, amend or impair any contract or agreement entered into before July 1, 2025." *S.F. 107, Enrolled Act No. 87, § 2(b), 68th Leg., Gen. Sess. (Wyo. 2025).* <https://wyoleg.gov/2025/Enroll/SF0107.pdf>
 
-[^littler-any-status]: **Littler Mendelson commentary** — "The Act contains language broad enough to make most non-compete covenants with workers void regardless of a worker's status as an employee or an independent contractor" *Littler Mendelson, Wyoming Bans Non-Compete Covenants with Some Exceptions (2025).* <https://www.littler.com/news-analysis/asap/wyoming-bans-non-compete-covenants-some-exceptions>
+[^malave-reasonableness-baseline]: **Malave v. Western Wyoming Beverages, Inc.** — "A valid and enforceable covenant not to compete requires a showing that the covenant is: (1) in writing; (2) part of a contract of employment; (3) based on reasonable consideration; (4) reasonable in durational and geographical limitations; and (5) not against public policy." *Malave v. Western Wyoming Beverages, Inc., 2022 WY 14, 503 P.3d 36.* <https://law.justia.com/cases/wyoming/supreme-court/2022/s-21-0140.html#:~:text=A%20valid%20and%20enforceable%20covenant,(5)%20not%20against%20public%20policy.>
 
-[^faegre-includes-contractors]: **Faegre Drinker commentary** — "Given that the law applies this restriction to agreements with any ‘person,’ this bans noncompete agreements with both employees and independent contractors" *Faegre Drinker, Wyoming Enacts Significant Restrictions on Noncompete Agreements (2025).* <https://www.faegredrinker.com/en/insights/publications/2025/3/wyoming-enacts-significant-restrictions-on-noncompete-agreements>
-
-[^fisher-colorado-any-person]: **Fisher Phillips commentary** — "any covenant not to compete that restricts the right of any person to receive compensation for performance of skilled or unskilled labor...several provisions closely mirror language found in Colorado's prior non-compete statute" *Fisher Phillips, New Law Voids Most Wyoming Non-Compete Agreements (2025).* <https://www.fisherphillips.com/en/insights/insights/new-law-voids-most-wyoming-non-compete-agreements>
+[^brown-strict-construction-baseline]: **Brown v. Best Home Health & Hospice, LLC** — "Contracts which hinder them from doing so are ‘strictly construed and rigidly scanned and are declared void unless necessary for the reasonable protection of the employer.’" *Brown v. Best Home Health & Hospice, LLC, 2021 WY 83, 491 P.3d 1021.* <https://www.courtlistener.com/opinion/9998787/jennifer-brown-fka-jennifer-stringer-nora-youngren-and-carol-wolfe-v/#:~:text=Contracts%20which%20hinder%20them%20from,reasonable%20protection%20of%20the%20employer.%22>
 
 [^sf107-savings-clause]: **SF 107 § 2(b)** — "Nothing in this act shall be construed to alter, amend or impair any contract or agreement entered into before July 1, 2025." *S.F. 107, Enrolled Act No. 87, § 2(b), 68th Leg., Gen. Sess. (Wyo. 2025).* <https://wyoleg.gov/2025/Enroll/SF0107.pdf>
 
@@ -214,6 +216,14 @@ Commentary specifically warns employers to evaluate routine replacement or updat
 [^brown-strict-construction]: **Brown v. Best Home Health & Hospice, LLC** — "Contracts which hinder them from doing so are ‘strictly construed and rigidly scanned and are declared void unless necessary for the reasonable protection of the employer.’" *Brown v. Best Home Health & Hospice, LLC, 2021 WY 83, 491 P.3d 1021.* <https://www.courtlistener.com/opinion/9998787/jennifer-brown-fka-jennifer-stringer-nora-youngren-and-carol-wolfe-v/#:~:text=Contracts%20which%20hinder%20them%20from,reasonable%20protection%20of%20the%20employer.%22>
 
 [^brown-separate-consideration]: **Brown v. Best Home Health & Hospice, LLC** — "when an employer requests an existing employee sign a non-compete agreement, the employer must provide ‘separate contemporaneous consideration’ for the new promise" *Brown v. Best Home Health & Hospice, LLC, 2021 WY 83, 491 P.3d 1021.* <https://www.courtlistener.com/opinion/9998787/jennifer-brown-fka-jennifer-stringer-nora-youngren-and-carol-wolfe-v/#:~:text=when%20an%20employer%20requests%20an,consideration%22%20for%20the%20new%20promise>
+
+[^wyo-1-23-any-person]: **Wyo. Stat. § 1-23-108(a)** — "Any covenant not to compete that restricts the right of any person to receive compensation for performance of skilled or unskilled labor shall be void." *Wyo. Stat. § 1-23-108(a) (2025).* <https://wyoleg.gov/2025/Enroll/SF0107.pdf>
+
+[^littler-any-status]: **Littler Mendelson commentary** — "The Act contains language broad enough to make most non-compete covenants with workers void regardless of a worker's status as an employee or an independent contractor" *Littler Mendelson, Wyoming Bans Non-Compete Covenants with Some Exceptions (2025).* <https://www.littler.com/news-analysis/asap/wyoming-bans-non-compete-covenants-some-exceptions>
+
+[^faegre-includes-contractors]: **Faegre Drinker commentary** — "Given that the law applies this restriction to agreements with any ‘person,’ this bans noncompete agreements with both employees and independent contractors" *Faegre Drinker, Wyoming Enacts Significant Restrictions on Noncompete Agreements (2025).* <https://www.faegredrinker.com/en/insights/publications/2025/3/wyoming-enacts-significant-restrictions-on-noncompete-agreements>
+
+[^fisher-colorado-any-person]: **Fisher Phillips commentary** — "any covenant not to compete that restricts the right of any person to receive compensation for performance of skilled or unskilled labor...several provisions closely mirror language found in Colorado's prior non-compete statute" *Fisher Phillips, New Law Voids Most Wyoming Non-Compete Agreements (2025).* <https://www.fisherphillips.com/en/insights/insights/new-law-voids-most-wyoming-non-compete-agreements>
 
 [^hassler-no-blue-pencil]: **Hassler v. Circle C Resources** — "Wyoming courts will no longer exceed the scope of their traditional authority in contract interpretation by redrafting noncompete agreements to bring them within the bounds of reason." *Hassler v. Circle C Resources, 2022 WY 28, 505 P.3d 169.* <https://www.courtlistener.com/opinion/9998701/charlene-hassler-v-circle-c-resources/#:~:text=Wyoming%20courts%20will%20no%20longer,within%20the%20bounds%20of%20reason.>
 
@@ -237,9 +247,13 @@ Commentary specifically warns employers to evaluate routine replacement or updat
 
 [^fisher-nda-question]: **Fisher Phillips commentary** — "What is not clear, however, is whether other common forms of restrictive covenants will likewise be interpreted to constitute ‘covenants not to compete.’" *Fisher Phillips, New Law Voids Most Wyoming Non-Compete Agreements (2025).* <https://www.fisherphillips.com/en/insights/insights/new-law-voids-most-wyoming-non-compete-agreements>
 
-[^wyo-1-23-compensation-focus]: **Wyo. Stat. § 1-23-108(a)** — "Any covenant not to compete that restricts the right of any person to receive compensation for performance of skilled or unskilled labor shall be void." *Wyo. Stat. § 1-23-108(a) (2025).* <https://wyoleg.gov/2025/Enroll/SF0107.pdf>
+[^wyo-1-23-exec-staff]: **Wyo. Stat. § 1-23-108(a)(iv)** — "Executive and management personnel and officers and employees who constitute professional staff to executive and management personnel." *Wyo. Stat. § 1-23-108(a)(iv) (2025).* <https://wyoleg.gov/2025/Enroll/SF0107.pdf>
 
-[^fisher-anti-moonlighting]: **Fisher Phillips commentary** — "For instance, will customer non-solicitation covenants fall into this definition? Employee non-solicitation covenants? Broad confidentiality agreements? ‘Anti-moonlighting’ agreements" *Fisher Phillips, New Law Voids Most Wyoming Non-Compete Agreements (2025).* <https://www.fisherphillips.com/en/insights/insights/new-law-voids-most-wyoming-non-compete-agreements>
+[^faegre-exec-undefined]: **Faegre Drinker commentary** — "The statute does not define the terms ‘executive and personnel management’ or ‘professional staff,’ so which specific employees would qualify for this exemption is an open question" *Faegre Drinker, Wyoming Enacts Significant Restrictions on Noncompete Agreements (2025).* <https://www.faegredrinker.com/en/insights/publications/2025/3/wyoming-enacts-significant-restrictions-on-noncompete-agreements>
+
+[^fisher-actual-duties]: **Fisher Phillips commentary** — "This analysis should focus on actual job responsibilities – not just job titles." *Fisher Phillips, New Law Voids Most Wyoming Non-Compete Agreements (2025).* <https://www.fisherphillips.com/en/insights/insights/new-law-voids-most-wyoming-non-compete-agreements>
+
+[^holland-colorado-analogy]: **Holland & Hart commentary** — "Whether Wyoming courts will follow those definitions remains to be seen." *Holland & Hart, Wyoming Legislature Takes a Bite Out of Covenants Not to Compete (2025).* <https://www.hollandhart.com/wyoming-legislature-takes-a-bite-out-of-covenants-not-to-compete-1>
 
 [^wyo-1-23-physician-bc]: **Wyo. Stat. § 1-23-108(b)–(c)** — "Any covenant not to compete provision of an employment, partnership or corporate agreement between physicians that restricts the right of a physician to practice medicine ... is void" *Wyo. Stat. § 1-23-108(b)–(c) (2025).* <https://wyoleg.gov/2025/Enroll/SF0107.pdf>
 
@@ -249,13 +263,9 @@ Commentary specifically warns employers to evaluate routine replacement or updat
 
 [^holland-between-physicians]: **Holland & Hart commentary** — "This language suggests that the law intends to invalidate covenants not to compete entered into between physicians who are members of or employed by a medical practice owned by physicians, and not those contracts with hospitals or other types of entities." *Holland & Hart, Wyoming Legislature Takes a Bite Out of Covenants Not to Compete (2025).* <https://www.hollandhart.com/wyoming-legislature-takes-a-bite-out-of-covenants-not-to-compete-1>
 
-[^wyo-1-23-exec-staff]: **Wyo. Stat. § 1-23-108(a)(iv)** — "Executive and management personnel and officers and employees who constitute professional staff to executive and management personnel." *Wyo. Stat. § 1-23-108(a)(iv) (2025).* <https://wyoleg.gov/2025/Enroll/SF0107.pdf>
+[^wyo-1-23-compensation-focus]: **Wyo. Stat. § 1-23-108(a)** — "Any covenant not to compete that restricts the right of any person to receive compensation for performance of skilled or unskilled labor shall be void." *Wyo. Stat. § 1-23-108(a) (2025).* <https://wyoleg.gov/2025/Enroll/SF0107.pdf>
 
-[^faegre-exec-undefined]: **Faegre Drinker commentary** — "The statute does not define the terms ‘executive and personnel management’ or ‘professional staff,’ so which specific employees would qualify for this exemption is an open question" *Faegre Drinker, Wyoming Enacts Significant Restrictions on Noncompete Agreements (2025).* <https://www.faegredrinker.com/en/insights/publications/2025/3/wyoming-enacts-significant-restrictions-on-noncompete-agreements>
-
-[^fisher-actual-duties]: **Fisher Phillips commentary** — "This analysis should focus on actual job responsibilities – not just job titles." *Fisher Phillips, New Law Voids Most Wyoming Non-Compete Agreements (2025).* <https://www.fisherphillips.com/en/insights/insights/new-law-voids-most-wyoming-non-compete-agreements>
-
-[^holland-colorado-analogy]: **Holland & Hart commentary** — "Whether Wyoming courts will follow those definitions remains to be seen." *Holland & Hart, Wyoming Legislature Takes a Bite Out of Covenants Not to Compete (2025).* <https://www.hollandhart.com/wyoming-legislature-takes-a-bite-out-of-covenants-not-to-compete-1>
+[^fisher-anti-moonlighting]: **Fisher Phillips commentary** — "For instance, will customer non-solicitation covenants fall into this definition? Employee non-solicitation covenants? Broad confidentiality agreements? ‘Anti-moonlighting’ agreements" *Fisher Phillips, New Law Voids Most Wyoming Non-Compete Agreements (2025).* <https://www.fisherphillips.com/en/insights/insights/new-law-voids-most-wyoming-non-compete-agreements>
 
 [^wyo-1-23-repayment-schedule]: **Wyo. Stat. § 1-23-108(a)(iii)** — "Any contractual provision providing for the recovery of all or a portion of the expense of relocating, educating and training an employee as follows" *Wyo. Stat. § 1-23-108(a)(iii) (2025).* <https://wyoleg.gov/2025/Enroll/SF0107.pdf>
 
