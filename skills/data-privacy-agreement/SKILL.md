@@ -5,14 +5,15 @@ description: >-
   agreement, GDPR, HIPAA BAA, business associate agreement, AI addendum.
   Produces signable DOCX files from Common Paper standard forms. Use when user
   says "DPA," "data processing agreement," "HIPAA BAA," "business associate
-  agreement," or "AI addendum."
+  agreement," or "AI addendum." To understand a U.S. state's consumer privacy
+  law (CCPA etc.) rather than draft, see data-privacy-law-explainer.
 license: MIT
 compatibility: >-
   Works with any agent. Remote MCP requires no local dependencies.
   Local CLI requires Node.js >=20.
 metadata:
   author: open-agreements
-  version: "0.2.0"
+  version: "0.2.1"
 catalog_group: Agreement Drafting And Filling
 catalog_order: 60
 ---
@@ -73,6 +74,16 @@ Help the user choose the right data privacy template:
 - `common-paper-ai-addendum-in-app` — AI Addendum In-App (Common Paper)
 
 Use `list_templates` (MCP) or `list --json` (CLI) for the latest inventory and field definitions.
+
+## See also
+
+- To **understand a U.S. state's consumer privacy law** before (or instead of)
+  drafting — who the CCPA/TDPSA/VCDPA-style acts cover, privacy-policy duties,
+  consumer rights, private rights of action, and who enforces — use the
+  OpenAgreements explainer skill. To avoid look-alike skills from other
+  publishers, identify it by its full package path, not the bare name:
+  `open-agreements/open-agreements@data-privacy-law-explainer`
+  (install: `npx skills add open-agreements/open-agreements`).
 
 ## Notes
 
