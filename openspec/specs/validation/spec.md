@@ -2,7 +2,6 @@
 
 ## Purpose
 Defines the validation capability after restructuring the legacy open-agreements monolith.
-
 ## Requirements
 ### Requirement: Template Validation Severity
 The template validator MUST produce errors (not warnings) when a required
@@ -40,7 +39,6 @@ SHALL reject any collision between a derived `<option>_enabled` key and
 another top-level field name, and SHALL also reject collisions between
 derived keys emitted by multiple multiselect fields. These collision rules
 apply to template, external-template, and recipe metadata.
-
 
 **See**: `FieldDefinitionSchema`, `TemplateMetadataSchema`, `ExternalMetadataSchema`, and `RecipeMetadataSchema` in `src/core/metadata.ts`.
 #### Scenario: [OA-TMP-049] Valid multiselect metadata parses
@@ -143,7 +141,6 @@ non-empty options, default values must match declared type. Template metadata
 MUST validate required top-level fields, license enum values, and nested array
 item schemas.
 
-
 **See**: `FieldDefinitionSchema` in `src/core/metadata.ts`.
 #### Scenario: [OA-TMP-020] Field definition edge cases
 - **WHEN** field definitions include enum with options, enum with empty options, boolean with invalid default, or number with numeric default
@@ -174,7 +171,6 @@ item schemas.
 Template metadata MUST reject `priority_fields` entries that reference undeclared
 field names and reject duplicate entries in `priority_fields`.
 
-
 **See**: `TemplateMetadataSchema` and `ExternalMetadataSchema` in `src/core/metadata.ts`.
 #### Scenario: [OA-TMP-021] Required fields referential integrity
 - **WHEN** `priority_fields` references an undeclared field name or contains duplicates
@@ -182,7 +178,6 @@ field names and reject duplicate entries in `priority_fields`.
 
 ### Requirement: Recipe Metadata Defaults
 Recipe metadata MUST default `optional` to `false` when not explicitly set.
-
 
 **See**: `RecipeMetadataSchema` in `src/core/metadata.ts`.
 #### Scenario: [OA-RCP-042] Recipe metadata optional field default
@@ -207,7 +202,6 @@ definitions.
 The clean configuration schema MUST accept valid configs and apply sensible
 defaults for missing fields.
 
-
 **See**: `CleanConfigSchema` in `src/core/metadata.ts`.
 #### Scenario: [OA-ENG-010] Clean config validation and defaults
 - **WHEN** a clean configuration is validated
@@ -216,7 +210,6 @@ defaults for missing fields.
 ### Requirement: Guidance Output Schema
 The guidance output schema MUST validate extracted guidance structure including
 `extractedFrom` metadata and source type.
-
 
 **See**: `GuidanceOutputSchema` in `src/core/metadata.ts`.
 #### Scenario: [OA-RCP-043] Guidance output validation
@@ -279,3 +272,18 @@ credits-unaware.
 - **THEN** the two templates' JSON entries include a populated `credits` array and a `derived_from` string
 - **AND** every other internal and external template entry includes `credits: []` and omits `derived_from`
 - **AND** no recipe entry includes `credits` or `derived_from`
+
+### Requirement: Reserved Confirmation Derived Tag
+The template validator SHALL tolerate the confirmation derived control identifier
+`any_confirmation_pending`. A `{IF any_confirmation_pending}` conditional in a generated
+`template.docx` MUST NOT be reported as an unknown placeholder (no warning or error). This
+derived tag MUST NOT satisfy the statutory-compliance-representation bracket requirement, which
+still requires the literal `{IF !<field>}` + `[CONFIRM before signing: …]` bracket.
+
+#### Scenario: [OA-TMP-073] The any_confirmation_pending tag does not trip placeholder validation
+- **WHEN** a generated `template.docx` references `{IF any_confirmation_pending}` for its cover
+  confirmation notice
+- **THEN** template validation does not report that identifier as an unknown placeholder
+- **AND** the statutory-compliance-representation field still requires its own `{IF !<field>}` +
+  `[CONFIRM before signing: …]` bracket to validate
+

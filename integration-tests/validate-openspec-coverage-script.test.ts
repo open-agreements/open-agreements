@@ -78,7 +78,17 @@ describe('validate_openspec_coverage script', () => {
     const previousExitCode = process.exitCode;
     try {
       process.exitCode = 0;
-      await main(['--capability', 'engine', '--capability', 'mcp-contracts-workspace', '--capability', 'open-agreements']);
+      // authoring + validation are included so that scenarios archived from
+      // active changes into the canonical authoring/validation specs (e.g. the
+      // cover-notice OA-TMP-066..075 mappings) remain strictly validated — once
+      // a change is archived they are no longer covered by the active-change scan.
+      await main([
+        '--capability', 'engine',
+        '--capability', 'mcp-contracts-workspace',
+        '--capability', 'open-agreements',
+        '--capability', 'authoring',
+        '--capability', 'validation',
+      ]);
       expect(process.exitCode ?? 0).toBe(0);
     } finally {
       process.exitCode = previousExitCode;
