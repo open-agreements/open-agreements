@@ -768,16 +768,16 @@ function confirmationNoticeParagraphs(clauses, style) {
 
   const out = [ctrl('{IF any_confirmation_pending}')];
   out.push(yellow('CONFIRMATION REQUIRED BEFORE SIGNING', true));
-  // "Explicit index" framing: make unmistakable that the yellow bracket to
-  // review/delete lives in the named Standard Terms section, NOT in this page-one
-  // list (which is only an index). Must not contain the literal
-  // "[CONFIRM before signing:" token so it can't spoof the in-body bracket validator.
+  // The clickable "Section N" link makes the in-body location self-evident, so
+  // the notice no longer needs to tell the reader to find the section or click
+  // the link. Must not contain the literal "[CONFIRM before signing:" token so
+  // it can't spoof the in-body bracket validator.
   out.push(
     yellow(
-      'This page lists statutory-compliance items a person must verify before signing. Each appears in full within the Standard Terms below, flagged there with a yellow "CONFIRM before signing" bracket. This list is only an index: for each item, find the named section in the Standard Terms, confirm the stated fact occurred, and delete the yellow bracket there. Delete this entire notice before signing.'
+      'For each item below, confirm the stated fact occurred, then delete its yellow "CONFIRM before signing" bracket in the Standard Terms. Delete this notice before signing.'
     )
   );
-  out.push(yellow('Items requiring confirmation (see the named section of the Standard Terms):'));
+  out.push(yellow('Items requiring confirmation:'));
   for (const clause of confirmClauses) {
     if (clause.condition) out.push(ctrl(`{IF ${clause.condition}}`));
     out.push(ctrl(`{IF !${clause.confirm}}`));
