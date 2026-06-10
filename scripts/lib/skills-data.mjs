@@ -10,6 +10,7 @@ export const REPO_ROOT = resolve(__dirname, "../..");
 const GROUP_ORDER = [
   "Agreement Drafting And Filling",
   "Editing And Client Workflows",
+  "Legal Explainers",
   "Compliance And Audit",
   "Developer Workflows",
 ];
