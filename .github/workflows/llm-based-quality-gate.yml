@@ -7,7 +7,7 @@ on:
     # workflow and clears the failing check without requiring a push. The
     # job-level `if:` below filters out unrelated label changes so we don't
     # re-run the costly matrix on every label add.
-    types: [opened, ready_for_review, labeled, unlabeled]
+    types: [opened, ready_for_review, synchronize, labeled, unlabeled]
   workflow_dispatch:
     inputs:
       pr_number:
@@ -59,9 +59,14 @@ jobs:
     permissions:
       contents: read
       pull-requests: read
+      checks: read
     outputs:
       matrix: ${{ steps.parse.outputs.matrix }}
       count: ${{ steps.parse.outputs.count }}
+      mode: ${{ steps.stamp.outputs.mode }}
+      gated_sha: ${{ steps.stamp.outputs.gated_sha }}
+      gated_run_id: ${{ steps.stamp.outputs.gated_run_id }}
+      gated_run_url: ${{ steps.stamp.outputs.gated_run_url }}
       pr_number: ${{ steps.pr.outputs.pr_number }}
       base_ref: ${{ steps.pr.outputs.base_ref }}
       head_ref: ${{ steps.pr.outputs.head_ref }}
@@ -154,10 +159,123 @@ jobs:
           echo "Parsed $(jq '.include | length' "$RUNNER_TEMP/matrix.json") checklist item(s)"
           jq -r '.include[] | "- " + .id + ": " + .question' "$RUNNER_TEMP/matrix.json"
 
+      - name: Decide stamp-or-rerun mode
+        id: stamp
+        env:
+          GH_TOKEN: ${{ github.token }}
+          EVENT_ACTION: ${{ github.event.action }}
+          PR_NUMBER: ${{ steps.pr.outputs.pr_number }}
+          HEAD_SHA: ${{ steps.pr.outputs.head_sha }}
+        run: |
+          set -euo pipefail
+
+          {
+            echo "mode=full"
+            echo "gated_sha="
+            echo "gated_run_id="
+            echo "gated_run_url="
+          } >> "$GITHUB_OUTPUT"
+
+          if [ "$EVENT_ACTION" != "synchronize" ]; then
+            echo "Non-synchronize event; running full matrix."
+            exit 0
+          fi
+
+          if ! gh api --paginate "repos/$GITHUB_REPOSITORY/pulls/${PR_NUMBER}/commits?per_page=100" \
+              --jq '.[].sha' > "$RUNNER_TEMP/pr-commits.txt"; then
+            echo "::warning::Unable to list PR commits; running full matrix."
+            exit 0
+          fi
+          mapfile -t commits < "$RUNNER_TEMP/pr-commits.txt"
+
+          last_gated_sha=""
+          last_gated_run_id=""
+          last_gated_run_url=""
+
+          for ((idx=${#commits[@]}-1; idx>=0; idx--)); do
+            sha="${commits[$idx]}"
+            if [ "$sha" = "$HEAD_SHA" ]; then
+              continue
+            fi
+
+            # Judge each commit by its MOST RECENT run only (filter=all: every
+            # workflow re-run is a separate check suite, so older successes
+            # stay visible alongside a newer failure). Picking "any success"
+            # would let a stale one — e.g. earned with llm-gate/override and
+            # invalidated by a post-label-removal re-run — be stamped onto a
+            # later head. If the latest verdict is anything but success
+            # (failure, cancelled, in-progress), re-earn the check.
+            if ! check_run=$(
+              gh api "repos/$GITHUB_REPOSITORY/commits/${sha}/check-runs?check_name=Aggregate%20and%20post%20review&filter=all&per_page=100" \
+                --jq '.check_runs
+                  | map(select(.name == "Aggregate and post review"))
+                  | sort_by(.started_at)
+                  | last // empty
+                  | [(.conclusion // "in_progress"), .head_sha, (.id | tostring), (.html_url // .details_url // "")]
+                  | @tsv'
+            ); then
+              echo "::warning::Unable to query check-runs for ${sha}; running full matrix."
+              exit 0
+            fi
+
+            if [ -n "$check_run" ]; then
+              IFS=$'\t' read -r conclusion last_gated_sha last_gated_run_id last_gated_run_url <<< "$check_run"
+              if [ "$conclusion" != "success" ]; then
+                echo "Most recent 'Aggregate and post review' run on ${sha} concluded '${conclusion}'; running full matrix."
+                exit 0
+              fi
+              break
+            fi
+          done
+
+          if [ -z "$last_gated_sha" ]; then
+            echo "No prior successful Aggregate and post review check-run found; running full matrix."
+            exit 0
+          fi
+
+          # The checkout above uses `persist-credentials: false`. This repo is
+          # public today, so an anonymous fetch would work — but authenticate
+          # anyway so the stamp path keeps working if visibility ever changes
+          # (an anonymous fetch on a private repo always fails, which would
+          # silently disable stamping). Authenticate this one fetch
+          # with the job token via an http.extraheader passed through
+          # GIT_CONFIG_* env vars — same header actions/checkout uses, but
+          # kept out of git's argv (process lists) and off disk.
+          if ! GIT_CONFIG_COUNT=1 \
+               GIT_CONFIG_KEY_0="http.https://github.com/.extraheader" \
+               GIT_CONFIG_VALUE_0="AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 | tr -d '\n')" \
+               git fetch --no-tags origin "$last_gated_sha" "$HEAD_SHA"; then
+            echo "::warning::Unable to fetch ${last_gated_sha} and/or ${HEAD_SHA}; running full matrix."
+            exit 0
+          fi
+
+          if ! git cat-file -e "${last_gated_sha}^{commit}" || ! git cat-file -e "${HEAD_SHA}^{commit}"; then
+            echo "::warning::Fetched refs did not resolve to commits; running full matrix."
+            exit 0
+          fi
+
+          # This checklist reviews code and content repo-wide and has no
+          # excluded-scope rule, so stamping is safe only when the snapshot
+          # delta from the last gated commit to head is completely empty.
+          changes=$(git diff --name-only "$last_gated_sha" "$HEAD_SHA")
+          if [ -n "$changes" ]; then
+            echo "Gate-scope changes since ${last_gated_sha}; running full matrix."
+            printf '%s\n' "$changes"
+            exit 0
+          fi
+
+          {
+            echo "mode=stamp"
+            echo "gated_sha=$last_gated_sha"
+            echo "gated_run_id=$last_gated_run_id"
+            echo "gated_run_url=$last_gated_run_url"
+          } >> "$GITHUB_OUTPUT"
+          echo "Stamping: no gate-scope changes since ${last_gated_sha}."
+
   run-check:
     name: Check ${{ matrix.id }} — ${{ matrix.question }}
     needs: parse-checklist
-    if: ${{ needs.parse-checklist.outputs.count != '0' }}
+    if: ${{ needs.parse-checklist.outputs.mode != 'stamp' && needs.parse-checklist.outputs.count != '0' }}
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -222,7 +340,7 @@ jobs:
     # require parse-checklist to have succeeded — otherwise an unrelated
     # label-change event (where parse-checklist is skipped via its own
     # `if:`) would still start the aggregate job with empty outputs.
-    if: ${{ always() && needs.parse-checklist.result == 'success' && needs.parse-checklist.outputs.count != '0' }}
+    if: ${{ always() && needs.parse-checklist.result == 'success' && (needs.parse-checklist.outputs.mode == 'stamp' || needs.parse-checklist.outputs.count != '0') }}
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -234,6 +352,7 @@ jobs:
       checks: write
     steps:
       - name: Download all per-item results
+        if: ${{ needs.parse-checklist.outputs.mode != 'stamp' }}
         uses: actions/download-artifact@v5
         with:
           path: results
@@ -241,6 +360,7 @@ jobs:
           merge-multiple: true
 
       - name: List downloaded artifacts
+        if: ${{ needs.parse-checklist.outputs.mode != 'stamp' }}
         run: ls -la results/ || echo "no results downloaded"
 
       - name: Compose and post checklist comment
@@ -254,10 +374,33 @@ jobs:
           EVENT_NAME: ${{ github.event_name }}
           HEAD_SHA: ${{ needs.parse-checklist.outputs.head_sha }}
           REPO: ${{ github.repository }}
+          GATE_MODE: ${{ needs.parse-checklist.outputs.mode }}
+          GATED_SHA: ${{ needs.parse-checklist.outputs.gated_sha }}
+          GATED_RUN_URL: ${{ needs.parse-checklist.outputs.gated_run_url }}
         with:
           script: |
             const fs = require('fs');
             const path = require('path');
+
+            const header = '## LLM-Based Quality Gate';
+            const issue_number = Number(process.env.PR_NUMBER);
+
+            if (process.env.GATE_MODE === 'stamp') {
+              const gatedSha = process.env.GATED_SHA || 'unknown';
+              const gatedRunUrl = process.env.GATED_RUN_URL || '';
+              const runText = gatedRunUrl ? `run ${gatedRunUrl}` : 'a prior successful run';
+              const body = `${header}\n\n✅ **Stamped** — no gate-scope changes since ${gatedSha} (gated in ${runText}). Matrix skipped.`;
+
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number,
+                body,
+              });
+
+              await core.summary.addRaw(body).write();
+              return;
+            }
 
             const dir = 'results';
             const files = fs.existsSync(dir)
@@ -287,7 +430,6 @@ jobs:
             const labels = JSON.parse(process.env.PR_LABELS || '[]');
             const overrideActive = labels.includes('llm-gate/override');
 
-            const header = '## LLM-Based Quality Gate';
             const overrideBanner = overrideActive
               ? '\n\n> ⚠️ **Override active** — `llm-gate/override` label is set; this gate\'s WARN findings are non-blocking on this PR.\n'
               : '';
@@ -317,12 +459,9 @@ jobs:
               : '';
             const costLine = `_Estimated cost (this run): **$${totalUsd.toFixed(4)}** — ${totalIn.toLocaleString()} input + ${totalOut.toLocaleString()} output tokens (≈4 chars/token) on \`${model}\`${retryNote}. Char-count estimate, not provider telemetry._`;
 
-            // Re-trigger guidance. The gate intentionally does NOT run on
-            // `synchronize` (push) events — too expensive. So a comment on
-            // an older commit can stay attached to the PR even after new
-            // pushes. Stamping the bound head SHA + the manual re-trigger
-            // command makes the staleness visible and gives reviewers and
-            // automation the exact command to re-fire.
+            // Re-trigger guidance. The gate now handles `synchronize`
+            // through stamp-or-rerun, but a manual command is still useful
+            // when maintainers need to re-fire the required check explicitly.
             const headSha = (process.env.HEAD_SHA || '').slice(0, 7);
             const repo = process.env.REPO || '';
             const issueNumber = Number(process.env.PR_NUMBER);
@@ -334,7 +473,7 @@ jobs:
               '',
               '',
               '---',
-              `_Gate verdict bound to head \`${headSha}\`. The gate does **not** auto-rerun on push (cost) — only on \`opened\`, \`ready_for_review\`, and \`llm-gate/override\` label toggles. After pushing fixes for a WARN above, or after a branch update that bypassed the gate, re-fire manually:_`,
+              `_Gate verdict bound to head \`${headSha}\`. Pushes use stamp-or-rerun: unchanged snapshots stamp the required check, while gate-scope changes run the full matrix. To re-fire manually:_`,
               '',
               '```bash',
               `gh workflow run llm-based-quality-gate.yml -R ${repo} -f pr_number=${issueNumber}`,
@@ -342,7 +481,6 @@ jobs:
             ].join('\n');
 
             const body = `${header}${overrideBanner}\n\n${summary}\n\n${table}${fullQuestions}\n\n${costLine}${reTriggerNote}`;
-            const issue_number = issueNumber;
 
             if (process.env.EVENT_NAME === 'workflow_dispatch') {
               const marker = '## LLM-Based Quality Gate';
