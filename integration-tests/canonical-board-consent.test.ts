@@ -101,7 +101,7 @@ describe('Canonical SAFE board consent (traditional)', () => {
 
     expect(compiled.contractSpec.template_id).toBe('openagreements-board-consent-safe');
     expect(compiled.contractSpec.layout_id).toBe('traditional-consent-v1');
-    expect(compiled.contractSpec.document.version).toBe('1.2');
+    expect(compiled.contractSpec.document.version).toBe('0.1.2');
     expect(compiled.contractSpec.document.opening_note).toBeTruthy();
     expect(compiled.contractSpec.document.opening_recital).toContain('Section 141(f)');
     expect(compiled.contractSpec.sections.cover_terms).toBeUndefined();

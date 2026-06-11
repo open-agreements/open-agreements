@@ -3,7 +3,7 @@ template_id: working-group-list
 title: Working Group List
 document:
   title: Working Group List
-  version: "1.0"
+  version: "0.1.0"
   license: CC0-1.0
 ---
 

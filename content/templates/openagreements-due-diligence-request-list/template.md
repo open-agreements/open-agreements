@@ -1,6 +1,6 @@
 # Legal Due Diligence Request List
 
-OpenAgreements Legal Due Diligence Request List (v1.0). Free to use under CC BY 4.0.
+OpenAgreements Legal Due Diligence Request List (v0.1.0). Free to use under CC BY 4.0.
 
 ## Cover Sheet
 

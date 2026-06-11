@@ -4,7 +4,7 @@ description: >-
   Standalone working group roster for a transaction. Tracks staffed deal team
   members and contact details outside the closing checklist document.
 source_url: https://github.com/open-agreements/open-agreements
-version: '1.0'
+version: '0.1.0'
 license: CC0-1.0
 allow_derivatives: true
 attribution_text: >-

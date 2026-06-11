@@ -198,7 +198,7 @@ function pageFooter() {
       new Paragraph({
         tabStops: [{ type: TabStopType.RIGHT, position: TabStopPosition.MAX }],
         children: [
-          new TextRun({ text: 'OpenAgreements Working Group List (v1.0). Free to use under CC0 1.0.', ...baseRun }),
+          new TextRun({ text: 'OpenAgreements Working Group List (v0.1.0). Free to use under CC0 1.0.', ...baseRun }),
           new TextRun({ text: '\tPage ', ...baseRun }),
           new TextRun({ children: [PageNumber.CURRENT], ...baseRun }),
           new TextRun({ text: ' of ', ...baseRun }),

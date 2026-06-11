@@ -7,7 +7,7 @@ outputs:
 document:
   title: ACTION BY WRITTEN CONSENT OF THE STOCKHOLDERS OF {company_name}
   label: OpenAgreements Stockholder Consent for SAFE Financing
-  version: "1.2"
+  version: "0.1.2"
   license: Free to use under CC BY 4.0
   defined_term_highlight_mode: none
   opening_note: "Note: The following resolutions do not cover all matters that may need to be addressed in connection with the SAFE financing. For example, if the Company is concurrently amending its certificate of incorporation, converting outstanding convertible notes, or granting pro rata or information rights pursuant to a side letter, additional resolutions will be needed. Always consult with counsel prior to using this consent."

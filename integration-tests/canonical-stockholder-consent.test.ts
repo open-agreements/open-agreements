@@ -101,7 +101,7 @@ describe('Canonical SAFE stockholder consent (traditional)', () => {
 
     expect(compiled.contractSpec.template_id).toBe('openagreements-stockholder-consent-safe');
     expect(compiled.contractSpec.layout_id).toBe('traditional-consent-v1');
-    expect(compiled.contractSpec.document.version).toBe('1.2');
+    expect(compiled.contractSpec.document.version).toBe('0.1.2');
     expect(compiled.contractSpec.document.opening_recital).toContain('Section 228');
     expect(compiled.contractSpec.sections.cover_terms).toBeUndefined();
     expect(compiled.contractSpec.sections.recitals).toMatchObject({

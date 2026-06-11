@@ -12,7 +12,7 @@ This is a drafting starting point for licensed counsel, not legal advice.
 ## Source
 
 - **URL**: https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-restrictive-covenant-florida
-- **Version**: 1.0
+- **Version**: 0.1.0
 - **License**: CC BY 4.0
 - **Legal requirement set**: the Florida restrictive-covenant overlay (`restrictive-covenant.florida`, v0.3.0), itself a delta over the `restrictive-covenant.core` base spec, stewarded in `UseJunior/legal-context`.
 

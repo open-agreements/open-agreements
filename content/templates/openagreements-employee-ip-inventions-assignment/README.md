@@ -6,7 +6,7 @@ transparent startup hiring and onboarding workflows.
 ## Source
 
 - **URL**: https://github.com/open-agreements/open-agreements/tree/main/templates/openagreements-employee-ip-inventions-assignment
-- **Version**: 1.0
+- **Version**: 0.1.1
 - **License**: CC BY 4.0
 
 ## Fields

@@ -1,6 +1,6 @@
 # Employment Confidentiality Acknowledgement
 
-OpenAgreements Employment Confidentiality Acknowledgement (v1.2). Free to use under CC BY 4.0.
+OpenAgreements Employment Confidentiality Acknowledgement (v0.1.2). Free to use under CC BY 4.0.
 
 ## Cover Terms
 

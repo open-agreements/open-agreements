@@ -7,7 +7,7 @@ outputs:
 document:
   title: Employee Restrictive Covenant Agreement
   label: OpenAgreements Employee Restrictive Covenant (Wyoming)
-  version: "2.0"
+  version: "0.2.0"
   license: Free to use under CC BY 4.0
   include_cloud_doc_line: true
   defined_term_highlight_mode: definition_site_only

@@ -3,7 +3,7 @@ template_id: closing-checklist
 title: Closing Checklist
 document:
   title: Closing Checklist
-  version: "2.1"
+  version: "0.2.1"
   license: CC0-1.0
 ---
 

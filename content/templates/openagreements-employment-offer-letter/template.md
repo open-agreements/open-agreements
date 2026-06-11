@@ -7,7 +7,7 @@ outputs:
 document:
   title: Employment Offer Letter
   label: OpenAgreements Employment Offer Letter
-  version: "1.1"
+  version: "0.1.1"
   license: Free to use under CC BY 4.0
   include_cloud_doc_line: true
   cover_row_height: 700

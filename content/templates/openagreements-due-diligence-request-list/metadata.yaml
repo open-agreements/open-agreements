@@ -11,7 +11,7 @@ description: >-
   source language is reused. Includes per-section AI-augmentable arrays so
   AI workflows can append target-specific custom questions to any rider.
 source_url: https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-due-diligence-request-list
-version: '1.0'
+version: '0.1.0'
 license: CC-BY-4.0
 allow_derivatives: true
 attribution_text: >-
