@@ -15,6 +15,6 @@
       "url": "https://openagreements.org/api/mcp"
     }
   ],
-  "license": "MIT",
+  "license": "Apache-2.0",
   "tags": ["legal", "contracts", "templates", "docx", "nda", "safe", "nvca", "employment"]
 }

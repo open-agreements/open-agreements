@@ -4,7 +4,7 @@
 
 [![npm version](https://img.shields.io/npm/v/open-agreements)](https://www.npmjs.com/package/open-agreements)
 [![npm downloads](https://img.shields.io/npm/dm/open-agreements.svg)](https://npmjs.org/package/open-agreements)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![CI](https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml/badge.svg)](https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml)
 [![codecov](https://img.shields.io/codecov/c/github/open-agreements/open-agreements/main)](https://app.codecov.io/gh/open-agreements/open-agreements)
 [![Socket Badge](https://socket.dev/api/badge/npm/package/open-agreements)](https://socket.dev/npm/package/open-agreements)
@@ -410,7 +410,7 @@ Baust du auf OpenAgreements auf? Eröffne einen PR, um dein Projekt aufzunehmen.
 
 ## Lizenz
 
-MIT. Vorlageninhalte werden von ihren jeweiligen Autor:innen lizenziert:
+Der Projektcode ist unter der [Apache License 2.0](LICENSE) lizenziert. Die Apache-Lizenz gilt nur für den Code — mitgelieferte Vorlageninhalte behalten ihre Upstream-Lizenzen, festgelegt von ihren jeweiligen Autor:innen:
 
 - CC BY 4.0 für Common Paper-, Bonterms- und OpenAgreements-erstellte Vorlagen
 - CC BY-ND 4.0 für unverändert vendored Y-Combinator-SAFE-Vorlagen

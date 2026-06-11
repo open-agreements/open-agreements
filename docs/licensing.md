@@ -11,7 +11,7 @@ section: Reference
 
 ## Tool License
 
-OpenAgreements itself is licensed under the **MIT License**. You can use, modify, and distribute the tool freely.
+OpenAgreements itself is licensed under the **Apache License 2.0**, which includes an express patent grant from each contributor. You can use, modify, and distribute the tool freely. The Apache license covers the project code only — bundled template content retains the upstream licenses described below.
 
 ## Template Licenses
 

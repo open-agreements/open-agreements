@@ -8,7 +8,7 @@ description: >-
   artifacts. Use when the user says "convert this to canonical markdown,"
   "author a new OpenAgreements template," "migrate template to template.md,"
   or "write a canonical-form contract."
-license: MIT
+license: Apache-2.0
 compatibility: >-
   Requires read/write access to an OpenAgreements repo checkout (the canonical
   compiler at scripts/template_renderer/canonical-source.mjs and the

@@ -4,7 +4,7 @@
 
 [![npm version](https://img.shields.io/npm/v/open-agreements)](https://www.npmjs.com/package/open-agreements)
 [![npm downloads](https://img.shields.io/npm/dm/open-agreements.svg)](https://npmjs.org/package/open-agreements)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![CI](https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml/badge.svg)](https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml)
 [![codecov](https://img.shields.io/codecov/c/github/open-agreements/open-agreements/main)](https://app.codecov.io/gh/open-agreements/open-agreements)
 [![Socket Badge](https://socket.dev/api/badge/npm/package/open-agreements)](https://socket.dev/npm/package/open-agreements)
@@ -412,7 +412,7 @@ Consulta [CONTRIBUTING.md](https://github.com/open-agreements/open-agreements/bl
 
 ## Licencia
 
-MIT. El contenido de las plantillas está licenciado por sus respectivos autores:
+El código del proyecto está licenciado bajo la [Apache License 2.0](LICENSE). La licencia Apache cubre solo el código — el contenido de plantillas incluido conserva sus licencias originales, establecidas por sus respectivos autores:
 
 - CC BY 4.0 para plantillas de Common Paper, Bonterms y de autoría OpenAgreements
 - CC BY-ND 4.0 para plantillas SAFE de Y Combinator vendorizadas sin cambios

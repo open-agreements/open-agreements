@@ -9,7 +9,7 @@ description: >-
   someone," "new hire paperwork," or "onboarding paperwork." To explain
   non-compete or restrictive-covenant law rather than draft a document, see the
   non-compete-contract-explainer skill.
-license: MIT
+license: Apache-2.0
 compatibility: >-
   Works with any agent. Remote MCP requires no local dependencies.
   Local CLI requires Node.js >=20.

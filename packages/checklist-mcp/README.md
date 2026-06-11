@@ -33,4 +33,4 @@ Or add to your MCP client config:
 
 ## License
 
-MIT
+Apache-2.0

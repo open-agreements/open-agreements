@@ -6,7 +6,7 @@ description: >-
   structured scorecard per recipe with maturity tier classification. Use when user says
   "audit recipe quality," "check recipe coverage," "recipe scorecard," or "NVCA recipe
   quality."
-license: MIT
+license: Apache-2.0
 compatibility: >-
   Internal skill for the open-agreements development workflow.
   Requires local CLI and repository access.

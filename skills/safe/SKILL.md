@@ -6,7 +6,7 @@ description: >-
   equity. Produces signable DOCX files. Use when user says "SAFE," "simple
   agreement for future equity," "YC SAFE," "valuation cap," "seed round
   documents," or "fundraising paperwork."
-license: MIT
+license: Apache-2.0
 compatibility: >-
   Works with any agent. Remote MCP requires no local dependencies.
   Local CLI requires Node.js >=20.

@@ -6,7 +6,7 @@ description: >-
   Use when composing or revising outbound emails to clients about legal
   work product. Triggers on "draft reply," "email to client," "cover note,"
   "write back to," or any outbound email accompanying a legal deliverable.
-license: MIT
+license: Apache-2.0
 metadata:
   author: open-agreements
   version: "0.1.0"

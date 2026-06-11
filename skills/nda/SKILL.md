@@ -5,7 +5,7 @@ description: >-
   agreement. Produces signable DOCX files from Common Paper and Bonterms
   standard forms. Use when user says "NDA," "non-disclosure agreement,"
   "confidentiality agreement," "mutual NDA," or "one-way NDA."
-license: MIT
+license: Apache-2.0
 compatibility: >-
   Works with any agent. Remote MCP requires no local dependencies.
   Local CLI requires Node.js >=20.

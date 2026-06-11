@@ -6,7 +6,7 @@ description: >-
   timestamped, auditor-ready evidence packages. Use when user says "collect
   audit evidence," "prepare evidence package," "evidence for the auditor,"
   "refresh evidence," or "evidence gap analysis."
-license: MIT
+license: Apache-2.0
 compatibility: >-
   Works with any AI agent. Enhanced with compliance MCP server for automated
   gap detection. Falls back to embedded checklists when no live data available.
