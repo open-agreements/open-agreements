@@ -48,6 +48,7 @@ Allowed types include:
    origin vX.Y.Z`).
 3. The tag push triggers the release workflow, which will:
    - publish the npm package suite with trusted OIDC provenance, including both `open-agreements` and `@open-agreements/open-agreements`,
+   - publish `server.json` to the official MCP registry (`io.github.open-agreements/open-agreements`) so the registry's `isLatest` tracks npm,
    - create a GitHub Release with auto-generated notes (if one does not exist),
    - deploy production to Vercel.
 4. GitHub Releases is the public changelog surface for published notes:
