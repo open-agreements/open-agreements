@@ -231,6 +231,80 @@ jobs:
             fi
           done
 
+  # Keeps the official MCP registry (what VS Code's MCP gallery and the
+  # aggregators index) in lockstep with npm. continue-on-error: a registry
+  # outage must never block the npm release; preflight already validated
+  # server.json's version pin and description cap.
+  publish-mcp-registry:
+    name: Publish to MCP Registry
+    needs: [publish-suite]
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    permissions:
+      contents: read
+      id-token: write
+    env:
+      RELEASE_TAG: ${{ github.event_name == 'workflow_dispatch' && inputs.release_tag || github.ref_name }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event_name == 'workflow_dispatch' && inputs.release_tag || github.ref }}
+
+      - name: Wait for npm propagation
+        run: |
+          TAG_REF="${RELEASE_TAG:-$GITHUB_REF_NAME}"
+          VERSION="${TAG_REF#v}"
+          # The registry validates ownership by reading mcpName from the npm
+          # package named in server.json — wait until the registry can see
+          # the same bits we just published.
+          for attempt in 1 2 3 4 5 6; do
+            echo "npm propagation check attempt ${attempt}/6"
+            RESULT="$(npm view "@open-agreements/contract-templates-mcp@${VERSION}" version mcpName --json 2>/dev/null || true)"
+            PKG_VERSION="$(echo "$RESULT" | jq -r '.version // empty' 2>/dev/null)"
+            PKG_MCP="$(echo "$RESULT" | jq -r '.mcpName // empty' 2>/dev/null)"
+            if [ "$PKG_VERSION" = "$VERSION" ] && [ "$PKG_MCP" = "io.github.open-agreements/open-agreements" ]; then
+              echo "@open-agreements/contract-templates-mcp@${VERSION} is available on npm with correct mcpName."
+              exit 0
+            fi
+            if [ "$attempt" -lt 6 ]; then
+              sleep $((attempt * 10))
+            fi
+          done
+          echo "@open-agreements/contract-templates-mcp@${VERSION} not found on npm after 6 attempts (~150s)."
+          exit 1
+
+      - name: Download mcp-publisher
+        run: |
+          OS="$(uname -s | tr '[:upper:]' '[:lower:]')"
+          ARCH="$(uname -m)"
+          case "$ARCH" in
+            x86_64)  ARCH="amd64" ;;
+            aarch64) ARCH="arm64" ;;
+          esac
+          URL="https://github.com/modelcontextprotocol/registry/releases/latest/download/mcp-publisher_${OS}_${ARCH}.tar.gz"
+          echo "Downloading mcp-publisher from: $URL"
+          curl -fsSL "$URL" | tar xz mcp-publisher
+          chmod +x mcp-publisher
+          pwd >> "$GITHUB_PATH"
+
+      - name: Authenticate with GitHub OIDC
+        run: mcp-publisher login github-oidc
+
+      - name: Publish to MCP Registry
+        run: |
+          for attempt in 1 2 3; do
+            echo "mcp-publisher publish attempt ${attempt}/3"
+            if mcp-publisher publish server.json; then
+              echo "Published to MCP Registry successfully."
+              exit 0
+            fi
+            if [ "$attempt" -lt 3 ]; then
+              sleep $((attempt * 15))
+            fi
+          done
+          echo "::warning::MCP Registry publish failed after 3 attempts. Manual publish may be required."
+          exit 1
+
   publish-github-release:
     name: Publish GitHub release notes
     needs: [preflight, publish-suite]
