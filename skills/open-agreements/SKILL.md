@@ -6,7 +6,7 @@ description: >-
   Y Combinator templates. Use when the user needs to draft a legal agreement,
   create an NDA, fill a contract template, or generate a SAFE.
   Can also send agreements for electronic signature via DocuSign.
-license: MIT
+license: Apache-2.0
 homepage: https://github.com/open-agreements/open-agreements
 compatibility: >-
   Two execution paths: (1) Remote MCP at openagreements.org (template fill
@@ -128,7 +128,7 @@ Clean up: `rm /tmp/oa-values.json`
 
 ## Source Code and Audit
 
-Open Agreements is fully open source (MIT license). Review the complete source before installing:
+Open Agreements is fully open source (Apache-2.0 license). Review the complete source before installing:
 
 - **GitHub**: https://github.com/open-agreements/open-agreements
 - **npm registry**: https://www.npmjs.com/package/open-agreements

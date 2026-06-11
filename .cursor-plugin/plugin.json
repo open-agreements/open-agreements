@@ -10,7 +10,7 @@
   "publisher": "Open Agreements",
   "homepage": "https://github.com/open-agreements/open-agreements#readme",
   "repository": "https://github.com/open-agreements/open-agreements",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "logo": "site/assets/openagreements_logo.jpg",
   "keywords": [
     "cursor",

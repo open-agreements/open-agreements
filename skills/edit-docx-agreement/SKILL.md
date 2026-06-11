@@ -6,7 +6,7 @@ description: >-
   edits and tracked-changes outputs. Use when user says "edit this contract,"
   "change a clause," "modify the agreement," "custom edits to the docx," or
   "bespoke changes to the document."
-license: MIT
+license: Apache-2.0
 compatibility: >-
   Works with any agent. Requires a separately configured Safe Docx MCP server for document editing.
   OpenAgreements fill capabilities require the OpenAgreements remote MCP or local CLI.

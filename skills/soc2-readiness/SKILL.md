@@ -6,7 +6,7 @@ description: >-
   domain) as canonical reference with SOC 2 criterion cross-mapping. Use when
   user says "SOC 2 readiness," "SOC 2 preparation," "SOC 2 gap analysis," or
   "prepare for SOC 2 audit."
-license: MIT
+license: Apache-2.0
 compatibility: >-
   Works with any AI agent. Enhanced with compliance MCP server for live
   status data. Falls back to embedded reference material when no live data

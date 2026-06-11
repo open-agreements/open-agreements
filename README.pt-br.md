@@ -4,7 +4,7 @@
 
 [![npm version](https://img.shields.io/npm/v/open-agreements)](https://www.npmjs.com/package/open-agreements)
 [![npm downloads](https://img.shields.io/npm/dm/open-agreements.svg)](https://npmjs.org/package/open-agreements)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![CI](https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml/badge.svg)](https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml)
 [![codecov](https://img.shields.io/codecov/c/github/open-agreements/open-agreements/main)](https://app.codecov.io/gh/open-agreements/open-agreements)
 [![Socket Badge](https://socket.dev/api/badge/npm/package/open-agreements)](https://socket.dev/npm/package/open-agreements)
@@ -412,7 +412,7 @@ Está construindo algo sobre o OpenAgreements? Abra um PR para adicionar seu pro
 
 ## Licença
 
-MIT. O conteúdo dos modelos é licenciado por seus respectivos autores:
+O código do projeto está licenciado sob a [Apache License 2.0](LICENSE). A licença Apache cobre apenas o código — o conteúdo dos modelos incluídos mantém suas licenças originais, definidas por seus respectivos autores:
 
 - CC BY 4.0 para modelos da Common Paper, Bonterms e modelos autorais do OpenAgreements
 - CC BY-ND 4.0 para modelos de SAFE do Y Combinator vendorizados sem alterações

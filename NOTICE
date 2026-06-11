@@ -1,0 +1,12 @@
+OpenAgreements
+Copyright 2026 OM Innovation AI Inc. (UseJunior), a Delaware corporation
+
+This product includes software developed by OM Innovation AI Inc.
+(UseJunior) and the OpenAgreements contributors
+(https://github.com/open-agreements/open-agreements).
+
+Bundled agreement template content under content/templates/ and
+content/external/ is licensed separately by its respective authors
+(e.g. CC BY 4.0, CC0 1.0, CC BY-ND 4.0), as recorded in each
+template's metadata.yaml. This NOTICE and the Apache License, Version
+2.0 apply to the project code, not to that template content.

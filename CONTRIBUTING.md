@@ -167,4 +167,4 @@ integration-tests/          # Integration and end-to-end tests
 
 ## License
 
-By contributing, you agree that your contributions will be licensed under the MIT License. Template content retains the license of its source (CC BY 4.0, CC0, or CC BY-ND 4.0).
+By contributing, you agree that your contributions will be licensed under the Apache License 2.0. Template content retains the license of its source (CC BY 4.0, CC0, or CC BY-ND 4.0).

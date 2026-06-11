@@ -6,7 +6,7 @@ description: >-
   recommendations. Uses NIST SP 800-53 (public domain) as canonical reference.
   Use when user says "run internal audit," "ISO 27001 audit," "control
   assessment," "audit findings," or "ISMS assessment."
-license: MIT
+license: Apache-2.0
 compatibility: >-
   Works with any AI agent. Enhanced with compliance MCP server for live
   dashboard data. Falls back to embedded reference files when no live data

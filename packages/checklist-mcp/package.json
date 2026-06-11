@@ -32,7 +32,7 @@
     "url": "https://github.com/open-agreements/open-agreements.git",
     "directory": "packages/checklist-mcp"
   },
-  "license": "MIT",
+  "license": "Apache-2.0",
   "dependencies": {
     "open-agreements": ">=0.3.1",
     "zod": "^4.0.0"

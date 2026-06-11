@@ -7,7 +7,7 @@ description: >-
   deadline) and LLCs/LPs/GPs (June 1 deadline). Use when user says "Delaware
   franchise tax," "annual report Delaware," "file franchise tax," or "eCorp
   portal."
-license: MIT
+license: Apache-2.0
 metadata:
   author: open-agreements
   version: "0.1.0"

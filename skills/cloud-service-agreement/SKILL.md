@@ -7,7 +7,7 @@ description: >-
   standard forms. Use when user says "SaaS agreement," "cloud contract,"
   "MSA," "order form," "software license," "pilot agreement," or "design
   partner agreement."
-license: MIT
+license: Apache-2.0
 compatibility: >-
   Works with any agent. Remote MCP requires no local dependencies.
   Local CLI requires Node.js >=20.

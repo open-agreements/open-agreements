@@ -32,7 +32,7 @@
     "url": "https://github.com/open-agreements/open-agreements.git",
     "directory": "packages/contracts-workspace-mcp"
   },
-  "license": "MIT",
+  "license": "Apache-2.0",
   "dependencies": {
     "js-yaml": "^4.1.0",
     "zod": "^4.0.0"
