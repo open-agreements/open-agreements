@@ -6,7 +6,7 @@
   "document": {
     "title": "ACTION BY UNANIMOUS WRITTEN CONSENT OF THE BOARD OF DIRECTORS OF {company_name}",
     "label": "OpenAgreements Board Consent for SAFE Financing",
-    "version": "1.2",
+    "version": "0.1.2",
     "license": "Free to use under CC BY 4.0",
     "include_cloud_doc_line": false,
     "defined_term_highlight_mode": "none",

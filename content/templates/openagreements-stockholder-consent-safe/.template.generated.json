@@ -6,7 +6,7 @@
   "document": {
     "title": "ACTION BY WRITTEN CONSENT OF THE STOCKHOLDERS OF {company_name}",
     "label": "OpenAgreements Stockholder Consent for SAFE Financing",
-    "version": "1.2",
+    "version": "0.1.2",
     "license": "Free to use under CC BY 4.0",
     "include_cloud_doc_line": false,
     "defined_term_highlight_mode": "none",
