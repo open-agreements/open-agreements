@@ -63,6 +63,21 @@ jobs:
             exit 1
           fi
 
+          SERVER_VERSION="$(node -p "require('./server.json').version")"
+          if [ "$TAG_VERSION" != "$SERVER_VERSION" ]; then
+            echo "Tag version ($TAG_VERSION) must match server.json version ($SERVER_VERSION)."
+            exit 1
+          fi
+
+          SERVER_PKG_VERSION="$(node -p "require('./server.json').packages[0].version")"
+          if [ "$TAG_VERSION" != "$SERVER_PKG_VERSION" ]; then
+            echo "Tag version ($TAG_VERSION) must match server.json packages[0].version ($SERVER_PKG_VERSION)."
+            exit 1
+          fi
+
+      - name: Verify version lockstep and MCP registry constraints
+        run: node scripts/bump_version.mjs --check
+
       - name: Verify release commit is on main
         run: |
           git fetch origin main
