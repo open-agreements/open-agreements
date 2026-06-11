@@ -422,7 +422,7 @@ describe('manifest satisfaction', () => {
     const result = findManifestSatisfied(['openagreements-employment-offer-letter'], REPO_ROOT, [
       {
         templateId: 'openagreements-employment-offer-letter',
-        docxSha256: '2cceb36a2e5a45af97f9bda244b994f44d2290deba97188b2b9a13e99c44595b',
+        docxSha256: '82c2ea33e1632509f12f449e7ae11ee32a3c8a5d535d2e09a7c3f376261694e1',
         reason: 'test byte-identical render claim',
       },
     ]);
@@ -445,7 +445,7 @@ describe('manifest satisfaction', () => {
       {
         templateId: 'openagreements-employment-offer-letter',
         declaredSha: '0000000000000000000000000000000000000000000000000000000000000000',
-        currentSha: '2cceb36a2e5a45af97f9bda244b994f44d2290deba97188b2b9a13e99c44595b',
+        currentSha: '82c2ea33e1632509f12f449e7ae11ee32a3c8a5d535d2e09a7c3f376261694e1',
       },
     ]);
   });

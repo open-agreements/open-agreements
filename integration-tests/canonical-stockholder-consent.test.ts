@@ -305,7 +305,7 @@ describe('Canonical SAFE stockholder consent (traditional)', () => {
     const zip = new AdmZip(outputPath);
     const footerXml = zip.getEntry('word/footer1.xml')?.getData().toString('utf-8') ?? '';
 
-    expect(footerXml).toContain('OpenAgreements Stockholder Consent for SAFE Financing (v1.2). Free to use under CC BY 4.0.');
+    expect(footerXml).toContain('OpenAgreements Stockholder Consent for SAFE Financing (v0.1.2). Free to use under CC BY 4.0.');
     expect(footerXml).toMatch(/<w:instrText[^>]*>\s*PAGE\s*<\/w:instrText>/);
     expect(footerXml).toMatch(/<w:instrText[^>]*>\s*NUMPAGES\s*<\/w:instrText>/);
   });

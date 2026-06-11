@@ -2,44 +2,44 @@
   "entries": [
     {
       "templateId": "openagreements-board-consent-safe",
-      "docxSha256": "79b92e64648c453f512f2cb013af33e17bd12f61561fc420771a6b2351d51185",
-      "reason": "theme/webSettings injection has no visual effect on traditional consent layout with explicit fonts (PR #378)",
+      "docxSha256": "4f86e8b10b23551fbbd32afb12629a8ad07c5baea94752681395fa5c16662501",
+      "reason": "theme/webSettings injection has no visual effect on traditional consent layout with explicit fonts (PR #378); SHA refreshed after 0.x.x version renumber regeneration (previews updated in the same PR)",
       "addedInPR": "#378"
     },
     {
       "templateId": "openagreements-employee-ip-inventions-assignment",
-      "docxSha256": "0f4a9a04feaaae737e430c8aa8a3be8adb1c74b48ab32a5da7e5c72cda2dfc3d",
-      "reason": "theme/webSettings injection has no visual effect on cover-standard layout with explicit fonts (PR #378)",
+      "docxSha256": "37ebde926aeb5051cab7eaef858d1f9723aa3e8582cd9344ebb735a9b4e24f55",
+      "reason": "theme/webSettings injection has no visual effect on cover-standard layout with explicit fonts (PR #378); SHA refreshed after 0.x.x version renumber regeneration (previews updated in the same PR)",
       "addedInPR": "#378"
     },
     {
       "templateId": "openagreements-employment-confidentiality-acknowledgement",
-      "docxSha256": "98e161a3b6413162f7f41337baf1c8f85a9bd297a8c0891bf48a1c53c8ec9f9f",
-      "reason": "theme/webSettings injection has no visual effect on cover-standard layout with explicit fonts (PR #378)",
+      "docxSha256": "9956c3546ded38821fef54c0400ccb9ea6b2e2729c4d0d5b4174a0ef4566abeb",
+      "reason": "theme/webSettings injection has no visual effect on cover-standard layout with explicit fonts (PR #378); SHA refreshed after 0.x.x version renumber regeneration (previews updated in the same PR)",
       "addedInPR": "#378"
     },
     {
       "templateId": "openagreements-employment-offer-letter",
-      "docxSha256": "2cceb36a2e5a45af97f9bda244b994f44d2290deba97188b2b9a13e99c44595b",
-      "reason": "theme/webSettings injection has no visual effect on cover-standard layout with explicit fonts (PR #378)",
+      "docxSha256": "82c2ea33e1632509f12f449e7ae11ee32a3c8a5d535d2e09a7c3f376261694e1",
+      "reason": "theme/webSettings injection has no visual effect on cover-standard layout with explicit fonts (PR #378); SHA refreshed after 0.x.x version renumber regeneration (previews updated in the same PR)",
       "addedInPR": "#378"
     },
     {
       "templateId": "openagreements-restrictive-covenant-wyoming",
-      "docxSha256": "04991b77311d8a6ded26d7b5c6584dc5803d92b1290080e501b38198b3f3e13c",
-      "reason": "theme/webSettings injection has no visual effect on cover-standard layout with explicit fonts (PR #378)",
+      "docxSha256": "e778ac428a3c3f1234060403f105fca21265ddb26ec67d0e0984aa3d0c30b733",
+      "reason": "theme/webSettings injection has no visual effect on cover-standard layout with explicit fonts (PR #378); SHA refreshed after 0.x.x version renumber regeneration (previews updated in the same PR)",
       "addedInPR": "#378"
     },
     {
       "templateId": "openagreements-stockholder-consent-safe",
-      "docxSha256": "6c795ec3060c52b96b22163666ce793abe9da17c942199a115d9f049114b994c",
-      "reason": "theme/webSettings injection has no visual effect on traditional consent layout with explicit fonts (PR #378)",
+      "docxSha256": "288d2eb76960f48c49efceb910ad803b1050a96a4b32bec51b82fcea579f88d6",
+      "reason": "theme/webSettings injection has no visual effect on traditional consent layout with explicit fonts (PR #378); SHA refreshed after 0.x.x version renumber regeneration (previews updated in the same PR)",
       "addedInPR": "#378"
     },
     {
       "templateId": "working-group-list",
-      "docxSha256": "4be6c30efc52b9a5a7b610a765753002382afeb53d10d48705f93b121cf45dc3",
-      "reason": "theme/webSettings injection has no visual effect on working-group list layout with explicit fonts (PR #378)",
+      "docxSha256": "35698623cfce2e8d08964218ddb568e0ca2ad535584cb12cc41eb3a67a656113",
+      "reason": "theme/webSettings injection has no visual effect on working-group list layout with explicit fonts (PR #378); SHA refreshed after 0.x.x version renumber regeneration (previews updated in the same PR)",
       "addedInPR": "#378"
     }
   ]
