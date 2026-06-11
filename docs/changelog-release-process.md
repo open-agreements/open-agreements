@@ -42,8 +42,11 @@ Allowed types include:
 ## Release Workflow
 
 1. Merge approved PRs into `main`.
-2. Bump `package.json` version and create a matching tag (`vX.Y.Z`).
-3. Push the tag. The release workflow will:
+2. Run `node scripts/bump_version.mjs <new-version>` and merge the version-bump
+   PR to `main`. The `Auto-tag release` workflow then pushes the matching
+   `vX.Y.Z` tag automatically (manual fallback: `git tag vX.Y.Z && git push
+   origin vX.Y.Z`).
+3. The tag push triggers the release workflow, which will:
    - publish the npm package suite with trusted OIDC provenance, including both `open-agreements` and `@open-agreements/open-agreements`,
    - publish `server.json` to the official MCP registry (`io.github.open-agreements/open-agreements`) so the registry's `isLatest` tracks npm,
    - create a GitHub Release with auto-generated notes (if one does not exist),

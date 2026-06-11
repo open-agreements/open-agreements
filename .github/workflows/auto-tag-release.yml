@@ -1,0 +1,95 @@
+# Auto-tag version-bump merges so a release can never strand untagged.
+#
+# When a merge to main changes the root package.json version, this workflow
+# creates and pushes the matching `v<version>` tag. The tag push then triggers
+# release.yml exactly as a manually pushed tag does today.
+#
+# Two constraints shape this file (ported from safe-docx, see #434):
+#
+# - The tag is pushed with the release-bot GitHub App token, NOT the
+#   workflow-scoped GITHUB_TOKEN: events created by GITHUB_TOKEN do not start
+#   downstream workflow runs, so a GITHUB_TOKEN-pushed tag would never fire
+#   release.yml.
+# - This workflow must only ever create the tag. npm trusted publishing (OIDC)
+#   is pinned to the release.yml workflow filename; running `npm publish` or
+#   `mcp-publisher publish` from any other workflow file fails the
+#   trusted-publisher claim match and the publish is rejected.
+name: Auto-tag release
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: auto-tag-release
+  cancel-in-progress: false
+
+jobs:
+  auto-tag:
+    name: Tag version-bump merges
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Detect a merged version bump without a tag
+        id: detect
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+        run: |
+          VERSION="$(node -p "require('./package.json').version")"
+          TAG="v${VERSION}"
+
+          # Only act when this push actually changed the version field, so
+          # reverts and cherry-picks of unrelated work cannot mint accidental
+          # releases. The before-sha can be missing locally after a force
+          # push; fall back to the parent commit.
+          if [ -z "$BEFORE_SHA" ] || ! git cat-file -e "${BEFORE_SHA}^{commit}" 2>/dev/null; then
+            BEFORE_SHA="$(git rev-parse HEAD~1)"
+          fi
+          git show "${BEFORE_SHA}:package.json" > /tmp/package.before.json
+          PREVIOUS_VERSION="$(node -p "require('/tmp/package.before.json').version")"
+
+          if [ "$VERSION" = "$PREVIOUS_VERSION" ]; then
+            echo "Root package.json version unchanged by this push (${VERSION}) — not a version-bump merge."
+            echo "release=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          if git ls-remote --exit-code --tags origin "refs/tags/${TAG}" >/dev/null 2>&1; then
+            echo "Tag ${TAG} already exists — nothing to do."
+            echo "release=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # Refuse to tag a half-bumped commit. Release preflight would catch
+          # the mismatch anyway, but failing here keeps the bad tag from ever
+          # existing.
+          node scripts/bump_version.mjs --check
+
+          echo "Version bump ${PREVIOUS_VERSION} -> ${VERSION} merged with no ${TAG} tag — tagging."
+          echo "release=true" >> "$GITHUB_OUTPUT"
+          echo "tag=${TAG}" >> "$GITHUB_OUTPUT"
+
+      - name: Generate GitHub App token
+        if: steps.detect.outputs.release == 'true'
+        id: app-token
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ secrets.RELEASE_BOT_APP_ID }}
+          private-key: ${{ secrets.RELEASE_BOT_PRIVATE_KEY }}
+
+      - name: Create and push tag (triggers release.yml)
+        if: steps.detect.outputs.release == 'true'
+        env:
+          TAG: ${{ steps.detect.outputs.tag }}
+          APP_TOKEN: ${{ steps.app-token.outputs.token }}
+        run: |
+          git tag "${TAG}" "${GITHUB_SHA}"
+          git push "https://x-access-token:${APP_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "refs/tags/${TAG}"
+          echo "Pushed ${TAG} at ${GITHUB_SHA} — release.yml takes it from here."
