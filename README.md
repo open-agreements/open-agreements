@@ -251,18 +251,7 @@ The Source column links to the upstream standard, source document, or canonical 
 | [iso-27001-internal-audit](https://github.com/open-agreements/open-agreements/tree/main/skills/iso-27001-internal-audit) | Run an ISO 27001 internal audit. Walk through controls by domain, identify gaps, collect evidence, and generate findings with corrective action recommendations. Uses NIST SP 800-53 (public domain) as canonical reference. Use when user says "run internal audit," "ISO 27001 audit," "control assessment," "audit findings," or "ISMS assessment." |
 | [iso-27001-evidence-collection](https://github.com/open-agreements/open-agreements/tree/main/skills/iso-27001-evidence-collection) | Collect, organize, and validate evidence for ISO 27001 and SOC 2 audits. API-first approach with CLI commands for major cloud platforms. Produces timestamped, auditor-ready evidence packages. Use when user says "collect audit evidence," "prepare evidence package," "evidence for the auditor," "refresh evidence," or "evidence gap analysis." |
 
-### Developer Workflows
-
-| Skill | Description |
-|-------|-------------|
-| [recipe-quality-audit](https://github.com/open-agreements/open-agreements/tree/main/skills/recipe-quality-audit) | Audit NVCA recipe quality: check file inventory, metadata schema, field-to-replacement coverage, ambiguous keys, smart quotes, test fixtures, and fill quality. Produces a structured scorecard per recipe with maturity tier classification. Use when user says "audit recipe quality," "check recipe coverage," "recipe scorecard," or "NVCA recipe quality." |
-| [unit-test-philosophy](https://github.com/open-agreements/open-agreements/tree/main/skills/unit-test-philosophy) | Risk-based unit testing and Allure-readable behavioral spec style for open-agreements. Use when user says "add tests," "test quality," "coverage expansion," "unit test style," or "Allure test spec." Applies when adding/updating tests, expanding coverage, or reviewing test quality across src, integration-tests, and workspace packages. |
-
-### Template Authoring
-
-| Skill | Description |
-|-------|-------------|
-| [canonical-markdown-authoring](https://github.com/open-agreements/open-agreements/tree/main/skills/canonical-markdown-authoring) | Convert plain markdown contract drafts into OpenAgreements' canonical template.md authoring format — YAML frontmatter, Kind|Label|Value|Show When cover-term tables, oa:clause directives, [[Defined Term]] paragraphs, and oa:signer directives that compile to validated JSON specs and DOCX artifacts. Use when the user says "convert this to canonical markdown," "author a new OpenAgreements template," "migrate template to template.md," or "write a canonical-form contract." |
+Internal repo-maintenance skills (marked `internal: true` in their SKILL.md metadata) are excluded from this catalog and from default `npx skills add` installs.
 
 ## Packages
 

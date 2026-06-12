@@ -17,6 +17,7 @@ compatibility: >-
 metadata:
   author: open-agreements
   version: "0.1.0"
+  internal: true
 catalog_group: Template Authoring
 catalog_order: 10
 ---

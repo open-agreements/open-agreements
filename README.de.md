@@ -164,19 +164,6 @@ Die Spalte „Quelle“ verweist auf den Upstream-Standard, das Quelldokument od
 | [iso-27001-internal-audit](https://github.com/open-agreements/open-agreements/tree/main/skills/iso-27001-internal-audit) | Ein ISO-27001-internes Audit durchführen. Controls nach Domäne durchgehen, Lücken identifizieren, Evidenz sammeln und Findings mit Korrekturmaßnahmen-Empfehlungen erzeugen. Nutzt NIST SP 800-53 (Public Domain) als kanonische Referenz. Verwende, wenn der Nutzer „internes Audit durchführen“, „ISO-27001-Audit“, „Control-Assessment“, „Audit-Findings“ oder „ISMS-Assessment“ sagt. |
 | [iso-27001-evidence-collection](https://github.com/open-agreements/open-agreements/tree/main/skills/iso-27001-evidence-collection) | Evidenz für ISO-27001- und SOC-2-Audits sammeln, organisieren und validieren. API-First-Ansatz mit CLI-Befehlen für große Cloud-Plattformen. Erzeugt zeitgestempelte, auditbereite Evidenzpakete. Verwende, wenn der Nutzer „Audit-Evidenz sammeln“, „Evidenzpaket vorbereiten“, „Evidenz für den Auditor“, „Evidenz aktualisieren“ oder „Evidenz-Gap-Analyse“ sagt. |
 
-### Developer-Workflows
-
-| Skill | Beschreibung |
-|-------|-------------|
-| [recipe-quality-audit](https://github.com/open-agreements/open-agreements/tree/main/skills/recipe-quality-audit) | NVCA-Recipe-Qualität auditieren: Dateiinventar, Metadatenschema, Field-zu-Replacement-Coverage, mehrdeutige Keys, Smart Quotes, Testfixtures und Befüllungsqualität prüfen. Erzeugt eine strukturierte Scorecard pro Recipe mit Reifegrad-Klassifikation. Verwende, wenn der Nutzer „Recipe-Qualität auditieren“, „Recipe-Coverage prüfen“, „Recipe-Scorecard“ oder „NVCA-Recipe-Qualität“ sagt. |
-| [unit-test-philosophy](https://github.com/open-agreements/open-agreements/tree/main/skills/unit-test-philosophy) | Risikobasiertes Unit-Testing und Allure-lesbarer Behavioral-Spec-Stil für open-agreements. Verwende, wenn der Nutzer „Tests hinzufügen“, „Testqualität“, „Coverage erweitern“, „Unit-Test-Stil“ oder „Allure-Test-Spec“ sagt. Gilt beim Hinzufügen/Aktualisieren von Tests, beim Ausbau der Coverage oder beim Review der Testqualität in src, integration-tests und Workspace-Paketen. |
-
-### Template-Erstellung
-
-| Skill | Beschreibung |
-|-------|-------------|
-| [canonical-markdown-authoring](https://github.com/open-agreements/open-agreements/tree/main/skills/canonical-markdown-authoring) | Konvertiere einfache Markdown-Vertragsentwürfe in OpenAgreements’ kanonisches template.md-Authoring-Format — YAML-Frontmatter, Kind|Label|Value|Show-When-Cover-Term-Tabellen, oa:clause-Direktiven, [[Defined Term]]-Absätze und oa:signer-Direktiven, die zu validierten JSON-Specs und DOCX-Artefakten kompiliert werden. Verwende, wenn der Nutzer „in kanonisches Markdown konvertieren“, „eine neue OpenAgreements-Vorlage erstellen“, „Vorlage auf template.md migrieren“ oder „einen Vertrag in kanonischer Form schreiben“ sagt. |
-
 ## Pakete
 
 | Paket | Beschreibung |

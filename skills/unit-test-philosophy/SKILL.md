@@ -9,6 +9,7 @@ description: >-
 metadata:
   short-description: Open Agreements testing philosophy
   version: "0.1.0"
+  internal: true
 catalog_group: Developer Workflows
 catalog_order: 20
 ---

@@ -191,20 +191,30 @@ function readSkillMetadata(fallbackSlug) {
   const slug = stripQuotes(matchRequired(frontmatter, /^name:\s*(.+)$/m, `Missing frontmatter name in ${skillFile}`)) || fallbackSlug;
   const versionMatch = frontmatter.match(/^  version:\s*(.+)$/m);
   const version = versionMatch ? stripQuotes(versionMatch[1].trim()) : null;
+  const internal = /^ {2}internal:\s*true\s*$/m.test(frontmatter);
 
   return {
     slug,
     version,
+    internal,
     directory,
     skillFile,
   };
+}
+
+function dropInternalSkills(skills) {
+  const internal = skills.filter((skill) => skill.internal);
+  for (const skill of internal) {
+    console.warn(`Skipping internal skill "${skill.slug}" — internal skills are never published to registries.`);
+  }
+  return skills.filter((skill) => !skill.internal);
 }
 
 function resolveSelectedSkills(allSkills, options) {
   const skillsBySlug = new Map(allSkills.map((skill) => [skill.slug, skill]));
 
   if (options.scope === 'all') {
-    return allSkills;
+    return dropInternalSkills(allSkills);
   }
 
   if (options.scope === 'selected') {
@@ -218,7 +228,7 @@ function resolveSelectedSkills(allSkills, options) {
       throw new Error(`Unknown selected skill(s): ${missing.join(', ')}`);
     }
 
-    return slugs.map((slug) => skillsBySlug.get(slug));
+    return dropInternalSkills(slugs.map((slug) => skillsBySlug.get(slug)));
   }
 
   const changedPaths = git([
@@ -241,7 +251,7 @@ function resolveSelectedSkills(allSkills, options) {
     }
   }
 
-  return allSkills.filter((skill) => changedSlugs.has(skill.slug));
+  return dropInternalSkills(allSkills.filter((skill) => changedSlugs.has(skill.slug)));
 }
 
 function buildCommands(skill, options, shortSha) {

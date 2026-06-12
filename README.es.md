@@ -166,19 +166,6 @@ La columna Fuente enlaza al estándar original, documento fuente o página canó
 | [iso-27001-internal-audit](https://github.com/open-agreements/open-agreements/tree/main/skills/iso-27001-internal-audit) | Ejecuta una auditoría interna ISO 27001. Recorre los controles por dominio, identifica brechas, recopila evidencia y genera hallazgos con recomendaciones de acción correctiva. Usa NIST SP 800-53 (dominio público) como referencia canónica. Úsalo cuando el usuario diga "ejecutar auditoría interna", "auditoría ISO 27001", "evaluación de controles", "hallazgos de auditoría" o "evaluación del ISMS". |
 | [iso-27001-evidence-collection](https://github.com/open-agreements/open-agreements/tree/main/skills/iso-27001-evidence-collection) | Recopila, organiza y valida evidencia para auditorías ISO 27001 y SOC 2. Enfoque API-first con comandos CLI para las principales plataformas cloud. Produce paquetes de evidencia con marcas de tiempo y listos para auditor. Úsalo cuando el usuario diga "recopilar evidencia de auditoría", "preparar paquete de evidencia", "evidencia para el auditor", "refrescar evidencia" o "análisis de brechas de evidencia". |
 
-### Flujos para desarrolladores
-
-| Skill | Descripción |
-|-------|-------------|
-| [recipe-quality-audit](https://github.com/open-agreements/open-agreements/tree/main/skills/recipe-quality-audit) | Audita la calidad de los recipes NVCA: comprueba inventario de archivos, esquema de metadatos, cobertura de campo a reemplazo, claves ambiguas, comillas tipográficas, fixtures de pruebas y calidad del llenado. Produce un scorecard estructurado por recipe con clasificación de nivel de madurez. Úsalo cuando el usuario diga "auditar calidad de recipe", "comprobar cobertura del recipe", "scorecard de recipe" o "calidad de recipe NVCA". |
-| [unit-test-philosophy](https://github.com/open-agreements/open-agreements/tree/main/skills/unit-test-philosophy) | Pruebas unitarias basadas en riesgo y estilo de especificación de comportamiento legible por Allure para open-agreements. Úsalo cuando el usuario diga "añadir pruebas", "calidad de pruebas", "expansión de cobertura", "estilo de pruebas unitarias" o "spec de prueba Allure". Aplica al añadir/actualizar pruebas, expandir cobertura o revisar calidad de pruebas en src, integration-tests y paquetes del workspace. |
-
-### Autoría de plantillas
-
-| Skill | Descripción |
-|-------|-------------|
-| [canonical-markdown-authoring](https://github.com/open-agreements/open-agreements/tree/main/skills/canonical-markdown-authoring) | Convierte borradores de contrato en markdown plano al formato canónico de autoría template.md de OpenAgreements — YAML frontmatter, tablas Kind|Label|Value|Show When de cover-terms, directivas oa:clause, párrafos [[Defined Term]] y directivas oa:signer que compilan a specs JSON validados y artefactos DOCX. Úsalo cuando el usuario diga "convierte esto a markdown canónico", "crea una nueva plantilla de OpenAgreements", "migra plantilla a template.md" o "escribe un contrato en forma canónica". |
-
 ## Paquetes
 
 | Paquete | Descripción |

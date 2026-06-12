@@ -166,19 +166,6 @@ A coluna Fonte aponta para o padrão upstream, documento de origem ou página ca
 | [iso-27001-internal-audit](https://github.com/open-agreements/open-agreements/tree/main/skills/iso-27001-internal-audit) | Conduza uma auditoria interna ISO 27001. Percorra controles por domínio, identifique gaps, colete evidências e gere achados com recomendações de ações corretivas. Usa NIST SP 800-53 (domínio público) como referência canônica. Use quando o usuário disser "rodar auditoria interna", "auditoria ISO 27001", "avaliação de controles", "achados de auditoria" ou "avaliação de ISMS". |
 | [iso-27001-evidence-collection](https://github.com/open-agreements/open-agreements/tree/main/skills/iso-27001-evidence-collection) | Colete, organize e valide evidências para auditorias ISO 27001 e SOC 2. Abordagem API-first com comandos CLI para grandes plataformas em nuvem. Gera pacotes de evidência com timestamp prontos para auditor. Use quando o usuário disser "coletar evidências de auditoria", "preparar pacote de evidências", "evidências para o auditor", "atualizar evidências" ou "análise de gaps de evidências". |
 
-### Fluxos para Desenvolvedores
-
-| Skill | Descrição |
-|-------|-------------|
-| [recipe-quality-audit](https://github.com/open-agreements/open-agreements/tree/main/skills/recipe-quality-audit) | Audite a qualidade de recipes da NVCA: verifique o inventário de arquivos, o schema de metadados, a cobertura de campos para substituições, chaves ambíguas, smart quotes, fixtures de teste e qualidade de preenchimento. Gera um scorecard estruturado por recipe com classificação de nível de maturidade. Use quando o usuário disser "auditar qualidade de recipe", "verificar cobertura de recipe", "scorecard de recipe" ou "qualidade de recipe NVCA". |
-| [unit-test-philosophy](https://github.com/open-agreements/open-agreements/tree/main/skills/unit-test-philosophy) | Testes unitários baseados em risco e estilo de spec comportamental legível pelo Allure para o open-agreements. Use quando o usuário disser "adicionar testes", "qualidade dos testes", "expansão de cobertura", "estilo de teste unitário" ou "spec de teste Allure". Aplica-se ao adicionar/atualizar testes, expandir cobertura ou revisar a qualidade de testes em src, integration-tests e pacotes do workspace. |
-
-### Autoria de Modelos
-
-| Skill | Descrição |
-|-------|-------------|
-| [canonical-markdown-authoring](https://github.com/open-agreements/open-agreements/tree/main/skills/canonical-markdown-authoring) | Converta rascunhos de contratos em markdown comum para o formato canônico template.md do OpenAgreements — frontmatter YAML, tabelas de termos da capa Kind|Label|Value|Show When, diretivas oa:clause, parágrafos com [[Termo Definido]] e diretivas oa:signer que compilam para JSON specs validados e artefatos DOCX. Use quando o usuário disser "converter isto para markdown canônico", "criar um novo modelo OpenAgreements", "migrar modelo para template.md" ou "escrever um contrato em formato canônico". |
-
 ## Pacotes
 
 | Pacote | Descrição |
