@@ -33,7 +33,7 @@ Vermont regulates privacy today through breach-notice, data-broker, and consumer
 | **Who does it cover?** | Breach duties reach any data collector that handles computerized personal information of Vermont residents, with no size threshold; data-broker duties reach businesses that knowingly collect and sell or license data about consumers with whom they have no direct relationship |
 | **Can consumers sue?** | Limited path |
 | **Privacy policy rule** | Policy required only for specific data |
-| **Consent for sensitive data?** | Only for certain data types |
+| **Consent for sensitive data?** | No special rule |
 | **Browser opt-out signals?** | Not required |
 | **Lawsuit detail** | Not under the privacy statutes themselves, which route enforcement to the Attorney General; but the Consumer Protection Act, 9 V.S.A. § 2461(b), lets a consumer who contracts in reliance on, or sustains damages from, a prohibited practice sue for damages, attorney's fees, and exemplary damages up to three times the consideration |
 | **Who enforces it?** | Vermont Attorney General (Department of Financial Regulation for its licensees) |

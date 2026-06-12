@@ -26,17 +26,18 @@ Alabama's Personal Data Protection Act (Act No. 2026-552) takes effect May 1, 20
 
 | Question | Alabama |
 | --- | --- |
-| **Law coverage** | Comprehensive law |
+| **Law coverage** | No comprehensive law |
 | **Summary** | Alabama's new Personal Data Protection Act takes effect May 1, 2027 with an unusually low consumer-count trigger but a sweeping under-500-employee exemption; until then, compliance means the 2018 Data Breach Notification Act, the Deceptive Trade Practices Act, and the federal overlay. |
 | **Main law** | Alabama Personal Data Protection Act, Ala. Act No. 2026-552 (HB 351, effective May 1, 2027 — not yet codified); operative today, the Alabama Data Breach Notification Act of 2018, Ala. Code §§ 8-38-1 to 8-38-12, enforced through the Alabama Deceptive Trade Practices Act |
 | **Privacy policy required?** | Yes from May 1, 2027 — a reasonably accurate, clear, and meaningful privacy notice with six statutorily listed items; outside sector-specific Alabama privacy statutes, no generally applicable Alabama consumer-privacy statute fixes privacy-policy contents today, but a policy that misstates practices is actionable under FTC Act § 5 and the ADTPA |
 | **Who does it cover?** | From May 1, 2027 — businesses operating in Alabama (or targeting Alabama residents) that control or process personal data of more than 25,000 consumers or derive more than 25% of gross revenue from selling personal data; businesses with fewer than 500 employees (nonprofits under 100) are exempt unless they sell personal data |
 | **Can consumers sue?** | Limited path |
-| **Privacy policy rule** | Policy contents fixed by law |
-| **Consent for sensitive data?** | Consent required first |
+| **Privacy policy rule** | No state policy checklist |
+| **Consent for sensitive data?** | No special rule |
 | **Browser opt-out signals?** | Not required |
 | **Lawsuit detail** | The APDPA contains no express private right of action and authorizes Attorney General enforcement after notice and cure; the breach act expressly states that a violation does not establish a private cause of action; the ADTPA carries only a narrow individual remedy with a statutory class-action bar |
 | **Who enforces it?** | Alabama Attorney General |
+| **Future effective law** | Alabama Personal Data Protection Act, effective 2027-05-01 (Law coverage: Comprehensive law; Privacy policy rule: Policy contents fixed by law; Consent for sensitive data?: Consent required first) — Current buckets stay on Alabama's breach-notification and ADTPA baseline until the APDPA takes effect. |
 
 ## Which privacy laws apply to your business in Alabama? {#which-privacy-laws-apply}
 
