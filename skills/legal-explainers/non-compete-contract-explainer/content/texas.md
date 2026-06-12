@@ -2,7 +2,7 @@
 jurisdiction: "Texas"
 slug: texas
 countryCode: US
-snapshotAsOf: "2026-06-10"
+snapshotAsOf: "2026-06-12"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/legal/non-compete/texas
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/texas · **Snapshot as of:** 2026-06-10 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/texas · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
 
 # Non-Competes in Texas[^about]
 
@@ -43,7 +43,7 @@ Unlike states that void most worker non-competes outright, Texas enforces them w
 
 "a covenant not to compete is enforceable if it is ancillary to or part of an otherwise enforceable agreement at the time the agreement is made to the extent that it contains limitations as to time, geographical area, and scope of activity to be restrained that are reasonable and do not impose a greater restraint than is necessary to protect the goodwill or other business interest of the promisee."[^bc-1550a-test]
 
-Both halves of that sentence carry weight. A covenant that is reasonable in its limits still fails if it is not tied to an otherwise enforceable agreement, and a covenant that is properly ancillary still fails to the extent its limits are unreasonable. The sections that follow walk through how Texas courts apply each requirement.
+Both halves of that sentence carry weight. A covenant that is reasonable in its limits still fails if it is not tied to an otherwise enforceable agreement, and a covenant that is properly ancillary still fails to the extent its limits are unreasonable. The sections that follow walk through how Texas courts apply each requirement. For a clause-by-clause pass over a specific agreement against these rules, the [Texas non-compete review checklist](/legal/non-compete/texas-review-checklist) walks the full covenant suite item by item with each requirement's force level.
 
 ## What framework governs Texas non-competes, and does it displace the common law? {#governing-framework}
 

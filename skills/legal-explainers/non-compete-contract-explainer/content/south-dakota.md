@@ -2,7 +2,7 @@
 jurisdiction: "South Dakota"
 slug: south-dakota
 countryCode: US
-snapshotAsOf: "2026-06-10"
+snapshotAsOf: "2026-06-12"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/legal/non-compete/south-dakota
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/south-dakota · **Snapshot as of:** 2026-06-10 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/south-dakota · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
 
 # Non-Competes in South Dakota[^about]
 
@@ -114,7 +114,7 @@ South Dakota also recognizes a parallel exception for partnerships. On or in ant
 
 In *Franklin*, the court held that the sale-of-business covenant was broader than SDCL 53-9-9 allowed, but it did not invalidate the entire provision. It remanded for relief consistent with the narrower statutory construction [^franklin-partial-enforcement].
 
-For employment covenants, *Rezatto* also matters because SDCL 53-9-8 voids a contract only to the extent it restrains trade, and divisible nondisclosure or confidentiality promises can survive even when a non-compete fails [^rezatto-divisible-nda].
+For employment covenants, *Rezatto* also matters because SDCL 53-9-8 voids a contract only to the extent it restrains trade, and divisible nondisclosure or confidentiality promises can survive even when a non-compete fails [^rezatto-divisible-nda]. For a clause-by-clause pass over a specific agreement against these rules, the [South Dakota non-compete review checklist](/legal/non-compete/south-dakota-review-checklist) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**

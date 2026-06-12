@@ -26,11 +26,16 @@ The Virginia Consumer Data Protection Act gives Virginia consumers rights over t
 
 | Question | Virginia |
 | --- | --- |
+| **Law coverage** | Comprehensive law |
 | **Summary** | If you meet the 100,000-consumer (or 25,000 plus majority-data-sale) threshold in Virginia, the VCDPA requires a privacy notice, opt-in consent to process sensitive data, and processor contracts — enforced by the Attorney General with a permanent 30-day cure period and no consumer lawsuits. |
 | **Main law** | Va. Code §§ 59.1-575 et seq. (Virginia Consumer Data Protection Act) |
 | **Privacy policy required?** | Yes — a reasonably accessible, clear, and meaningful notice with statutorily fixed contents |
 | **Who does it cover?** | Persons doing business in Virginia (or targeting residents) that control or process the data of 100,000+ consumers a year, or 25,000+ while deriving over 50% of gross revenue from selling data — no revenue floor; nonprofits exempt |
-| **Can consumers sue?** | No — enforcement is exclusively the Attorney General's |
+| **Can consumers sue?** | No |
+| **Privacy policy rule** | Policy contents fixed by law |
+| **Consent for sensitive data?** | Consent required first |
+| **Browser opt-out signals?** | Not required |
+| **Lawsuit detail** | No — enforcement is exclusively the Attorney General's |
 | **Who enforces it?** | Virginia Attorney General (exclusive) |
 
 ## Does the Virginia Consumer Data Protection Act apply to your business? {#does-vcdpa-apply}

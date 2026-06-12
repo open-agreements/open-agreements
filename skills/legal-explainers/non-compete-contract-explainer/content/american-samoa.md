@@ -2,7 +2,7 @@
 jurisdiction: "American Samoa"
 slug: american-samoa
 countryCode: US
-snapshotAsOf: "2026-06-10"
+snapshotAsOf: "2026-06-12"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/legal/non-compete/american-samoa
 license: CC BY 4.0
@@ -15,11 +15,11 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/american-samoa · **Snapshot as of:** 2026-06-10 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/american-samoa · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
 
 # Non-Competes in American Samoa[^about]
 
-American Samoa has no non-compete statute and no on-point case law; its High Court would gap-fill through the imported common law of A.S.C.A. § 1.0201 and the Restatement reasonableness test, while local public policy and a tiny island economy make aggressive covenants hard to enforce.
+American Samoa has no non-compete statute and no on-point case law found in our review; its High Court would gap-fill through the imported common law of A.S.C.A. § 1.0201 and the Restatement reasonableness test, while local public policy and a tiny island economy make aggressive covenants hard to enforce.
 
 
 ## At a glance
@@ -27,7 +27,7 @@ American Samoa has no non-compete statute and no on-point case law; its High Cou
 | Question | American Samoa |
 | --- | --- |
 | **Are non-competes enforceable?** | Unsettled |
-| **Bottom line** | No non-compete statute and no on-point case law; a court would likely apply the Restatement reasonableness test, with local public policy disfavoring broad restraints. |
+| **Bottom line** | No non-compete statute and no on-point case law found in our review; a court would likely apply the Restatement reasonableness test, with local public policy disfavoring broad restraints. |
 | **Main law or case** | A.S.C.A. § 1.0201 (imported common law); Restatement (Second) of Contracts § 188 |
 | **Can a court narrow it?** | Unsettled |
 | **Applies to contractors?** | Unclear |

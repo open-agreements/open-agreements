@@ -2,7 +2,7 @@
 jurisdiction: "Oregon"
 slug: oregon
 countryCode: US
-snapshotAsOf: "2026-06-10"
+snapshotAsOf: "2026-06-12"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/legal/non-compete/oregon
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/oregon · **Snapshot as of:** 2026-06-10 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/oregon · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
 
 # Non-Competes in Oregon[^about]
 
@@ -150,7 +150,7 @@ The distinction is consequential. Under the prior law, a defective covenant was 
 
 "As explained below, we conclude that plaintiffs evidence established, at most, that the noncompetition agreement was voidable (not void) but remained valid and in effect at the time that defendant invoked it."[^q8-bernard-voidable]
 
-The 2021 amendments changed the default to void. A covenant that misses a statutory requirement is now unenforceable from the start, without any need for the employee to act. The statute does sever an over-long term, voiding only the portion beyond 12 months, but that targeted severance is not a general license for courts to rewrite an otherwise non-conforming covenant.
+The 2021 amendments changed the default to void. A covenant that misses a statutory requirement is now unenforceable from the start, without any need for the employee to act. The statute does sever an over-long term, voiding only the portion beyond 12 months, but that targeted severance is not a general license for courts to rewrite an otherwise non-conforming covenant. For a clause-by-clause pass over a specific agreement against these statutory conditions, the [Oregon non-compete review checklist](/legal/non-compete/oregon-review-checklist) walks the full covenant suite item by item with each requirement's force level.
 
 "The remainder of a term of a noncompetition agreement in excess of 12 months is void and may not be enforced by a court of this state."[^q8-ors-653-295-void]
 

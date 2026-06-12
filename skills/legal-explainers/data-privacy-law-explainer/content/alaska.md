@@ -26,11 +26,16 @@ Alaska has no comprehensive consumer-privacy statute. Article 1 of the Personal 
 
 | Question | Alaska |
 | --- | --- |
+| **Law coverage** | No comprehensive law |
 | **Summary** | Alaska has not enacted a comprehensive consumer-privacy law, so there are no general data-rights, notice-at-collection, consent, or processor-contract duties under state law. The operative law covered here is Article 1 of the Personal Information Protection Act, which requires breach notice in the most expeditious time possible and makes a violation an unfair trade practice — but caps private damages at $500 of actual economic loss. The Genetic Privacy Act is the sharp edge of Alaska law, conditioning DNA collection on informed written consent and backing that with $5,000 or $100,000 statutory damages. Everything else in this Alaska-facing program note comes from the federal and sectoral overlay — FTC Act § 5, GLBA, HIPAA, and COPPA — so build to those plus the breach statute, and the program upgrades rather than restarts if Alaska enacts an omnibus law later. |
 | **Main law** | Alaska Personal Information Protection Act Article 1, AS 45.48.010–.090 — breach notification plus a deemed unfair-trade-practice enforcement bridge; Alaska has no comprehensive consumer-privacy law |
 | **Privacy policy required?** | No Alaska statute mandates a general consumer privacy policy or fixes its contents; contents are driven by FTC Act § 5 (a policy that misstates practices is deceptive) and by GLBA, HIPAA, and COPPA where the business is in scope |
 | **Who does it cover?** | Any covered person — a person doing business, a governmental agency, or a person with more than 10 employees — that owns or licenses personal information on Alaska residents; no revenue or consumer-volume threshold |
-| **Can consumers sue?** | Yes, but tightly capped — a breach-notice violation is an unfair trade practice under AS 45.50.471, with private damages limited to actual economic damages not exceeding $500; the Genetic Privacy Act (AS 18.13) separately allows $5,000 or $100,000 statutory damages |
+| **Can consumers sue?** | Limited path |
+| **Privacy policy rule** | No state policy checklist |
+| **Consent for sensitive data?** | No special rule |
+| **Browser opt-out signals?** | Not required |
+| **Lawsuit detail** | Yes, but tightly capped — a breach-notice violation is an unfair trade practice under AS 45.50.471, with private damages limited to actual economic damages not exceeding $500; the Genetic Privacy Act (AS 18.13) separately allows $5,000 or $100,000 statutory damages |
 | **Who enforces it?** | Alaska Attorney General (Department of Law); the Department of Administration enforces breach-notice violations by state agencies |
 
 ## Which privacy laws apply to your business in Alaska? {#which-privacy-laws-apply}

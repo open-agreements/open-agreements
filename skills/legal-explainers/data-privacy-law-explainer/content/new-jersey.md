@@ -26,11 +26,16 @@ The New Jersey Data Privacy Act gives New Jersey consumers rights over their per
 
 | Question | New Jersey |
 | --- | --- |
+| **Law coverage** | Comprehensive law |
 | **Summary** | If you meet the 100,000-consumer (or 25,000 plus any data-sale revenue) threshold in New Jersey, the NJDPA requires a privacy notice, opt-in consent to process sensitive data, and processor contracts — enforced by the Attorney General as an unlawful practice under the Consumer Fraud Act, with no consumer lawsuits and a cure period that sunsets after the law's first 18 months. |
 | **Main law** | N.J.S.A. 56:8-166.4 et seq. (New Jersey Data Privacy Act), effective January 15, 2025 |
 | **Privacy policy required?** | Yes — a reasonably accessible, clear, and meaningful notice with seven statutorily fixed contents |
 | **Who does it cover?** | Controllers doing business in New Jersey (or targeting residents) that control or process the data of 100,000+ consumers a year (excluding payment-only data), or 25,000+ while deriving any revenue or a discount from selling data — no revenue floor, and no exemption for nonprofits |
-| **Can consumers sue?** | No — enforcement is exclusively the Attorney General's |
+| **Can consumers sue?** | No |
+| **Privacy policy rule** | Policy contents fixed by law |
+| **Consent for sensitive data?** | Consent required first |
+| **Browser opt-out signals?** | Not required |
+| **Lawsuit detail** | No — enforcement is exclusively the Attorney General's |
 | **Who enforces it?** | New Jersey Attorney General, through the Division of Consumer Affairs (exclusive) |
 
 ## Does the New Jersey Data Privacy Act apply to your business? {#does-njdpa-apply}

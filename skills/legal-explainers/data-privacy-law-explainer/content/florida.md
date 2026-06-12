@@ -26,11 +26,16 @@ Florida's Digital Bill of Rights binds only billion-dollar big-tech controllers,
 
 | Question | Florida |
 | --- | --- |
+| **Law coverage** | Limited-scope law |
 | **Summary** | Florida's Digital Bill of Rights (effective July 1, 2024) imposes full data-rights duties only on billion-dollar big-tech controllers, but its no-threshold sensitive-data-sale consent rule and the Florida Information Protection Act's 30-day breach-notice duties reach virtually every business that handles Floridians' data. |
 | **Main law** | Florida Digital Bill of Rights, Fla. Stat. §§ 501.701–501.722, plus the Florida Information Protection Act (FIPA), Fla. Stat. § 501.171, and FDUTPA, Fla. Stat. §§ 501.201–501.213 |
 | **Privacy policy required?** | Yes for FDBR controllers — § 501.711 fixes the contents, requires at least annual updates, and scripts exact word-for-word sale notices; for everyone else, FDUTPA and FTC Act § 5 make a policy that misstates actual practices a deceptive-practice risk |
 | **Who does it cover?** | The FDBR's full rights-and-notice core covers only for-profit controllers with over $1 billion in global revenue that also run a major online-ad business, a consumer smart-speaker voice-assistant service, or a 250,000-app store — but its sensitive-data-sale consent rule has no revenue threshold, and FIPA's security and breach duties reach essentially any business holding Floridians' personal information |
-| **Can consumers sue?** | No under the FDBR (§ 501.72(8)) and no under FIPA (§ 501.171(10)); FDUTPA (§ 501.211) gives private plaintiffs declaratory, injunctive, and actual-damages remedies, and § 501.1736 lets minor account holders recover up to $10,000 from social media platforms |
+| **Can consumers sue?** | Limited path |
+| **Privacy policy rule** | Policy contents fixed by law |
+| **Consent for sensitive data?** | Consent required first |
+| **Browser opt-out signals?** | Not required |
+| **Lawsuit detail** | No under the FDBR (§ 501.72(8)) and no under FIPA (§ 501.171(10)); FDUTPA (§ 501.211) gives private plaintiffs declaratory, injunctive, and actual-damages remedies, and § 501.1736 lets minor account holders recover up to $10,000 from social media platforms |
 | **Who enforces it?** | Florida Attorney General (Department of Legal Affairs) |
 
 ## Which privacy laws apply to your business in Florida? {#which-privacy-laws-apply}

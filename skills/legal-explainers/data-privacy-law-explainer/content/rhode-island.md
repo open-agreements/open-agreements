@@ -26,11 +26,16 @@ The Rhode Island Data Transparency and Privacy Protection Act, effective January
 
 | Question | Rhode Island |
 | --- | --- |
+| **Law coverage** | Limited-scope law |
 | **Summary** | If your commercial website sells Rhode Island customers' personal information, RIDTPPA requires an information-sharing-practices notice; meeting the 35,000-customer (or 10,000-plus-20%-data-sale) threshold adds opt-in consent for sensitive data and binding processor contracts — all enforced by the Attorney General, with no consumer lawsuits. |
 | **Main law** | R.I. Gen. Laws ch. 6-48.1 (Rhode Island Data Transparency and Privacy Protection Act), effective January 1, 2026 |
 | **Privacy policy required?** | Yes — a commercial website or ISP that collects, stores, and sells customers' personal information must conspicuously disclose data categories, the third parties it sells to, and a contact mechanism |
 | **Who does it cover?** | Two tracks: any commercial website or internet service provider that collects, stores, and sells customers' personal information must post information-sharing disclosures; the broader controller duties reach for-profit entities that control or process the data of 35,000+ Rhode Island customers, or 10,000+ while deriving over 20% of gross revenue from data sales. Financial institutions, GLBA/HIPAA data, nonprofits, and government bodies are exempt. |
-| **Can consumers sue?** | No — the statute expressly forbids any private right of action; the Attorney General is the sole enforcer |
+| **Can consumers sue?** | No |
+| **Privacy policy rule** | Policy contents fixed by law |
+| **Consent for sensitive data?** | Consent required first |
+| **Browser opt-out signals?** | Not required |
+| **Lawsuit detail** | No — the statute expressly forbids any private right of action; the Attorney General is the sole enforcer |
 | **Who enforces it?** | Rhode Island Attorney General (sole enforcement authority) |
 
 ## Does the Rhode Island privacy law apply to your business? {#does-ridtppa-apply}

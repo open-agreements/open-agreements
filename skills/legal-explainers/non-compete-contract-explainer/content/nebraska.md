@@ -2,7 +2,7 @@
 jurisdiction: "Nebraska"
 slug: nebraska
 countryCode: US
-snapshotAsOf: "2026-06-10"
+snapshotAsOf: "2026-06-12"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/legal/non-compete/nebraska
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/nebraska · **Snapshot as of:** 2026-06-10 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/nebraska · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
 
 # Non-Competes in Nebraska[^about]
 
@@ -81,7 +81,7 @@ Older cases sometimes enforced geographic language, and sale-of-business covenan
 
 **Short answer.** No, not for ordinary employment covenants. Nebraska rejects blue-pencil rewriting and generally enforces the covenant as written or not at all [^q5-waadah-blue-pencil].
 
-This is one of Nebraska's most important drafting rules. If the covenant reaches too far, the court does not trim the term, delete the bad customer category, or rewrite the geography to something reasonable. *Waadah* also confirms that when integrated restraints are not severable, one invalid part can make the whole non-compete agreement unenforceable [^q5-waadah-entire-covenant].
+This is one of Nebraska's most important drafting rules. If the covenant reaches too far, the court does not trim the term, delete the bad customer category, or rewrite the geography to something reasonable. *Waadah* also confirms that when integrated restraints are not severable, one invalid part can make the whole non-compete agreement unenforceable [^q5-waadah-entire-covenant]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Nebraska non-compete review checklist](/legal/non-compete/nebraska-review-checklist) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**

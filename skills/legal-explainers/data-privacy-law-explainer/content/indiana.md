@@ -26,11 +26,16 @@ The Indiana Consumer Data Protection Act, effective January 1, 2026, gives India
 
 | Question | Indiana |
 | --- | --- |
+| **Law coverage** | Comprehensive law |
 | **Summary** | If you meet the 100,000-consumer (or 25,000 plus majority-data-sale) threshold in Indiana, the INCDPA requires a privacy notice, opt-in consent to process sensitive data, and processor contracts — enforced by the Attorney General with a permanent 30-day cure period and no consumer lawsuits. Its broad entity-level exemptions (nonprofits, HIPAA entities, higher education, utilities) keep many organizations out entirely. |
 | **Main law** | Ind. Code §§ 24-15 et seq. (Indiana Consumer Data Protection Act), effective January 1, 2026 |
 | **Privacy policy required?** | Yes — a reasonably accessible, clear, and meaningful notice with statutorily fixed contents |
 | **Who does it cover?** | Persons doing business in Indiana (or targeting residents) that control or process the data of 100,000+ Indiana consumers a year, or 25,000+ while deriving over 50% of gross revenue from selling data — no revenue floor, and entity-level exemptions for nonprofits, HIPAA covered entities, higher education, GLBA institutions, and public utilities |
-| **Can consumers sue?** | No — enforcement is exclusively the Attorney General's |
+| **Can consumers sue?** | No |
+| **Privacy policy rule** | Policy contents fixed by law |
+| **Consent for sensitive data?** | Consent required first |
+| **Browser opt-out signals?** | Not required |
+| **Lawsuit detail** | No — enforcement is exclusively the Attorney General's |
 | **Who enforces it?** | Indiana Attorney General (exclusive) |
 
 ## Does the Indiana Consumer Data Protection Act apply to your business? {#does-incdpa-apply}

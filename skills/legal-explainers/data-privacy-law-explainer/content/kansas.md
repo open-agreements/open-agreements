@@ -26,11 +26,16 @@ Kansas has no comprehensive consumer-privacy statute. The operative framework is
 
 | Question | Kansas |
 | --- | --- |
+| **Law coverage** | No comprehensive law |
 | **Summary** | Kansas has not enacted a comprehensive consumer-privacy law, so there are no general data-rights, notice-at-collection, consent, or processor-contract duties under state law. The operative statutes are the 2006 data-breach notification law — a twice-gated, identity-theft-keyed notice duty with no fixed day-count — and the Kansas Consumer Protection Act, whose deception and unconscionability rules are what make a published privacy policy enforceable against the business that wrote it. Everything else rides the federal and sectoral overlay, so build to FTC Act § 5, GLBA, HIPAA, and COPPA and the program will be easier to adapt if Kansas later enacts an omnibus law. |
 | **Main law** | Kansas data-breach notification statute, K.S.A. 50-7a01 and 50-7a02, plus the Kansas Consumer Protection Act, K.S.A. 50-623 et seq. — Kansas has no comprehensive consumer-privacy law |
 | **Privacy policy required?** | No Kansas statute mandates a consumer privacy policy or fixes its contents; a policy that misstates actual practices is reachable as a deceptive act under the KCPA and FTC Act § 5, and GLBA, HIPAA, and COPPA supply notice duties where they apply |
 | **Who does it cover?** | The breach statute reaches any person that conducts business in Kansas and owns or licenses computerized personal information of Kansas residents; the KCPA reaches any supplier in consumer transactions — no revenue or consumer-volume thresholds |
-| **Can consumers sue?** | The breach statute creates no express private remedy; the KCPA gives an aggrieved consumer an individual action for damages or a civil penalty, whichever is greater, with damages class actions sharply limited |
+| **Can consumers sue?** | Limited path |
+| **Privacy policy rule** | No state policy checklist |
+| **Consent for sensitive data?** | No special rule |
+| **Browser opt-out signals?** | Not required |
+| **Lawsuit detail** | The breach statute creates no express private remedy; the KCPA gives an aggrieved consumer an individual action for damages or a civil penalty, whichever is greater, with damages class actions sharply limited |
 | **Who enforces it?** | Kansas Attorney General (the insurance commissioner has sole authority over breach violations by licensed insurers) |
 
 ## Which privacy laws apply to your business in Kansas? {#which-privacy-laws-apply}

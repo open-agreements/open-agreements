@@ -26,11 +26,16 @@ South Dakota has no comprehensive consumer-privacy statute. The operative state 
 
 | Question | South Dakota |
 | --- | --- |
+| **Law coverage** | Specific data types only |
 | **Summary** | South Dakota has no comprehensive consumer-privacy law — compliance today means the 60-day breach-notification statute, truthful privacy statements under a knowledge-gated deceptive-practices law, and the federal overlay; direct-to-consumer genetic-testing companies face a consent-heavy Genetic Data Privacy Act on July 1, 2026, and the largest social-media platforms face data-portability duties on July 1, 2027. |
 | **Main law** | No comprehensive consumer-privacy statute — the operative framework is the breach-notification act (S.D. Codified Laws §§ 22-40-19 to 22-40-26), the deceptive-trade-practices chapter (ch. 37-24), and the Genetic Data Privacy Act (§§ 37-24-59 to 37-24-64, effective July 1, 2026) |
 | **Privacy policy required?** | No general mandate — from July 1, 2026 only direct-to-consumer genetic-testing companies must publish a plain-language privacy policy plus a prominent privacy notice; everyone else's policy contents are driven by FTC Act § 5 and the sectoral federal rules |
 | **Who does it cover?** | Breach duties reach any person or business that conducts business in South Dakota and owns or licenses computerized personal or protected information of residents — no size or revenue threshold; the Genetic Data Privacy Act reaches direct-to-consumer genetic-testing companies; the 2027 portability law reaches only social-media services with more than 100 million monthly users |
-| **Can consumers sue?** | None in the breach act or the Genetic Data Privacy Act — the only consumer path is S.D. Codified Laws § 37-24-31, which allows actual-damages suits solely for knowing deceptive acts under § 37-24-6 |
+| **Can consumers sue?** | Limited path |
+| **Privacy policy rule** | Policy required only for specific data |
+| **Consent for sensitive data?** | Only for certain data types |
+| **Browser opt-out signals?** | Not required |
+| **Lawsuit detail** | None in the breach act or the Genetic Data Privacy Act — the only consumer path is S.D. Codified Laws § 37-24-31, which allows actual-damages suits solely for knowing deceptive acts under § 37-24-6 |
 | **Who enforces it?** | South Dakota Attorney General (Consumer Protection division) |
 
 ## Which privacy laws apply to your business in South Dakota? {#which-privacy-laws-apply}

@@ -26,11 +26,16 @@ The Minnesota Consumer Data Privacy Act gives Minnesota consumers rights over th
 
 | Question | Minnesota |
 | --- | --- |
+| **Law coverage** | Comprehensive law |
 | **Summary** | If you control or process the data of 100,000+ Minnesota consumers (or 25,000+ plus over 25% of revenue from data sales), the MCDPA requires a privacy notice, opt-in consent to process sensitive data, and processor contracts — plus a uniquely strict list-of-third-parties right and profiling-reevaluation rights. The Attorney General enforces it; there are no consumer lawsuits, and the 30-day cure period has already expired. |
 | **Main law** | Minn. Stat. §§ 325M.10–325M.21 (Minnesota Consumer Data Privacy Act), effective July 31, 2025 |
 | **Privacy policy required?** | Yes — a reasonably accessible, clear, and meaningful notice with statutorily fixed contents |
 | **Who does it cover?** | Legal entities doing business in Minnesota (or targeting residents) that control or process the data of 100,000+ consumers a year (excluding payment-only data), or 25,000+ while deriving over 25% of gross revenue from selling data — no general nonprofit exemption; small businesses exempt except they still cannot sell sensitive data without consent |
-| **Can consumers sue?** | No — enforcement is exclusively the Attorney General's |
+| **Can consumers sue?** | No |
+| **Privacy policy rule** | Policy contents fixed by law |
+| **Consent for sensitive data?** | Consent required first |
+| **Browser opt-out signals?** | Must be honored |
+| **Lawsuit detail** | No — enforcement is exclusively the Attorney General's |
 | **Who enforces it?** | Minnesota Attorney General (exclusive) |
 
 ## Does the Minnesota Consumer Data Privacy Act apply to your business? {#does-mcdpa-apply}

@@ -26,11 +26,16 @@ West Virginia has no comprehensive consumer-privacy statute. The operative state
 
 | Question | West Virginia |
 | --- | --- |
+| **Law coverage** | No comprehensive law |
 | **Summary** | West Virginia has not enacted a comprehensive consumer-privacy law, so there are no general data-rights, notice-at-collection, consent, or processor-contract duties under state law. The operative state statutes are the breach-notification article — enforced exclusively by the Attorney General, with civil penalties capped at $150,000 per breach and available only for repeated and willful violations — and the West Virginia Consumer Credit and Protection Act, whose deceptive-practices article carries a consumer private right of action for actual damages or $200 after a 45-day pre-suit cure window. Everything else in a West Virginia-facing privacy program comes from the federal and sectoral overlay — FTC Act § 5, GLBA, HIPAA, and COPPA — so build to those and to the breach statute, and the program upgrades rather than restarts if West Virginia later enacts an omnibus law. |
 | **Main law** | West Virginia breach-notification article, W. Va. Code §§ 46A-2A-101 to 46A-2A-105, plus the WVCCPA unfair-or-deceptive-practices article (W. Va. Code § 46A-6-104) — West Virginia has no comprehensive consumer-privacy law |
 | **Privacy policy required?** | No West Virginia statute mandates a general consumer privacy policy or fixes its contents; a policy that misstates actual practices invites FTC Act § 5 and WVCCPA deception exposure, and GLBA, HIPAA, and COPPA supply the contents where those regimes apply |
 | **Who does it cover?** | Any individual or entity — corporations, partnerships, limited liability companies, associations, governments, for profit or not — that owns or licenses computerized personal information of West Virginia residents; no revenue or consumer-volume threshold |
-| **Can consumers sue?** | Not under the breach-notification article — the Attorney General has exclusive enforcement authority; but WVCCPA § 46A-6-106 gives a consumer a private action for actual damages or $200, whichever is greater, subject to the 45-day right-to-cure notice in § 46A-5-108 |
+| **Can consumers sue?** | Limited path |
+| **Privacy policy rule** | No state policy checklist |
+| **Consent for sensitive data?** | No special rule |
+| **Browser opt-out signals?** | Not required |
+| **Lawsuit detail** | Not under the breach-notification article — the Attorney General has exclusive enforcement authority; but WVCCPA § 46A-6-106 gives a consumer a private action for actual damages or $200, whichever is greater, subject to the 45-day right-to-cure notice in § 46A-5-108 |
 | **Who enforces it?** | West Virginia Attorney General |
 
 ## Which privacy laws apply to your business in West Virginia? {#which-privacy-laws-apply}

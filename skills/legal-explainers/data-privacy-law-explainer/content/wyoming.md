@@ -26,11 +26,16 @@ Wyoming has no comprehensive consumer-privacy statute. The operative state laws 
 
 | Question | Wyoming |
 | --- | --- |
+| **Law coverage** | Specific data types only |
 | **Summary** | Wyoming has not enacted a comprehensive consumer-privacy law, so there are no general data-rights, notice-at-collection, consent, or processor-contract duties under state law. The operative state laws are the data-breach notification statute (Wyo. Stat. §§ 40-12-501 et seq.), the Wyoming Consumer Protection Act, and a genetic-data privacy chapter that imposes consent, notice, and deletion duties on direct-to-consumer genetic testing companies and carries a private right of action. Everything else in a Wyoming-facing privacy program comes from the federal and sectoral overlay — FTC Act § 5, GLBA, HIPAA, and COPPA. |
 | **Main law** | Wyo. Stat. §§ 40-12-501 et seq. (breach of the security of the data system), the Wyoming Consumer Protection Act, §§ 40-12-101 et seq., and the genetic data privacy chapter, §§ 35-32-101 et seq. — Wyoming has no comprehensive consumer-privacy law |
 | **Privacy policy required?** | No general Wyoming statute mandates a consumer privacy policy or fixes its contents; direct-to-consumer genetic testing companies must post a high-level privacy-policy overview and a prominent privacy notice, and FTC Act § 5, GLBA, HIPAA, and COPPA drive contents for everyone else |
 | **Who does it cover?** | Any individual or commercial entity that conducts business in Wyoming and owns or licenses computerized personal identifying information about Wyoming residents — no revenue or consumer-volume threshold; the genetic-data chapter reaches direct-to-consumer genetic testing companies |
-| **Can consumers sue?** | Not under the breach statute, which the Attorney General enforces; the Wyoming Consumer Protection Act lets a consumer sue over an uncured deceptive trade practice (§ 40-12-108), and the genetic-data chapter gives individuals a civil action after a 60-day cure window (§ 35-32-104) |
+| **Can consumers sue?** | Limited path |
+| **Privacy policy rule** | Policy required only for specific data |
+| **Consent for sensitive data?** | Only for certain data types |
+| **Browser opt-out signals?** | Not required |
+| **Lawsuit detail** | Not under the breach statute, which the Attorney General enforces; the Wyoming Consumer Protection Act lets a consumer sue over an uncured deceptive trade practice (§ 40-12-108), and the genetic-data chapter gives individuals a civil action after a 60-day cure window (§ 35-32-104) |
 | **Who enforces it?** | Wyoming Attorney General (the enforcing authority under the Wyoming Consumer Protection Act) |
 
 ## Which privacy laws apply to your business in Wyoming? {#which-privacy-laws-apply}

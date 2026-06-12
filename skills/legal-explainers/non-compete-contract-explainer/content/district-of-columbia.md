@@ -2,7 +2,7 @@
 jurisdiction: "District of Columbia"
 slug: district-of-columbia
 countryCode: US
-snapshotAsOf: "2026-06-10"
+snapshotAsOf: "2026-06-12"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/legal/non-compete/district-of-columbia
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/district-of-columbia · **Snapshot as of:** 2026-06-10 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/district-of-columbia · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
 
 # Non-Competes in the District of Columbia[^about]
 
@@ -150,7 +150,7 @@ The statute sets graduated monetary relief: an employer that subjects an employe
 
 The chapter also forbids retaliation: an employer may not retaliate or threaten to retaliate against a covered employee for refusing, failing to comply with, or complaining about a banned non-compete, and an employer that retaliates owes each affected employee between $1,000 and $2,500 [^retaliation-ban][^retaliation-relief].
 
-Enforcement is real. In November 2023, the Attorney General announced settlements with three employers and described the ban as making it illegal to impose non-compete agreements on most District workers earning less than $150,000 a year [^oag-enforcement]. The Attorney General has also treated a franchise *no-poach* clause as violating both the ban and the District's Antitrust Act, which declares contracts in restraint of trade illegal [^oag-nopoach][^antitrust].
+Enforcement is real. In November 2023, the Attorney General announced settlements with three employers and described the ban as making it illegal to impose non-compete agreements on most District workers earning less than $150,000 a year [^oag-enforcement]. The Attorney General has also treated a franchise *no-poach* clause as violating both the ban and the District's Antitrust Act, which declares contracts in restraint of trade illegal [^oag-nopoach][^antitrust]. For a clause-by-clause exposure screen of a specific agreement against these rules, the [District of Columbia non-compete review checklist](/legal/non-compete/district-of-columbia-review-checklist) walks the full covenant suite item by item with each requirement's force level.
 
 > [!NOTE]
 > **Practice note.**

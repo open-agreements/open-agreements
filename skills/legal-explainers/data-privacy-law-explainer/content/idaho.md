@@ -26,11 +26,16 @@ Idaho has no comprehensive consumer-privacy statute. The operative state framewo
 
 | Question | Idaho |
 | --- | --- |
+| **Law coverage** | No comprehensive law |
 | **Summary** | Idaho has not enacted a comprehensive consumer-privacy law, so there are no general data-rights, notice-at-collection, consent, or processor-contract duties under state law. The operative state statutes are the breach-notification provisions in the identity-theft chapter — a misuse-triggered notice duty with no day-count deadline and no regulator notice for private businesses — and the Idaho Consumer Protection Act, which makes a privacy policy you publish but do not follow a deceptive practice. Build to the federal overlay (FTC Act § 5, GLBA, HIPAA, COPPA) and the breach statute, and watch two narrow 2026 enactments, one on social-media minors and one on conversational AI. |
 | **Main law** | Idaho Code §§ 28-51-104 to 28-51-107 (data-breach notification) plus the Idaho Consumer Protection Act, Idaho Code § 48-601 et seq. — Idaho has no comprehensive consumer-privacy statute |
 | **Privacy policy required?** | No Idaho statute requires a consumer privacy policy or fixes its contents; the binding constraints are FTC Act § 5 and the Idaho Consumer Protection Act's ban on misleading or deceptive practices, plus GLBA, HIPAA, and COPPA where the business is in scope |
 | **Who does it cover?** | Any agency, individual, or commercial entity (for profit or not) that conducts business in Idaho and owns or licenses computerized personal information about Idaho residents; no revenue or consumer-volume threshold |
-| **Can consumers sue?** | Not under the breach statute — enforcement runs through each entity's primary regulator; the Idaho Consumer Protection Act gives purchasers a private action for actual damages or $1,000 (Idaho Code § 48-608), with narrow 2026 sectoral enactments to track separately |
+| **Can consumers sue?** | Limited path |
+| **Privacy policy rule** | No state policy checklist |
+| **Consent for sensitive data?** | No special rule |
+| **Browser opt-out signals?** | Not required |
+| **Lawsuit detail** | Not under the breach statute — enforcement runs through each entity's primary regulator; the Idaho Consumer Protection Act gives purchasers a private action for actual damages or $1,000 (Idaho Code § 48-608), with narrow 2026 sectoral enactments to track separately |
 | **Who enforces it?** | Idaho Attorney General (the primary regulator for most businesses; the Department of Finance and Department of Insurance for their licensees) |
 
 ## Which privacy laws apply to your business in Idaho? {#which-privacy-laws-apply}
@@ -107,7 +112,7 @@ Public enforcement faces none of those limits. The Attorney General may sue for 
 
 [^rights-breach-notice]: **Idaho Code § 28-51-105** — "If the investigation determines that the misuse of information about an Idaho resident has occurred or is reasonably likely to occur, the agency, individual or the commercial entity shall give notice as soon as possible to the affected Idaho resident." *Idaho Code § 28-51-105(1).* <https://legislature.idaho.gov/statutesrules/idstat/Title28/T28CH51/SECT28-51-105/>
 
-[^glba-optout]: **GLBA opt-out** — "A financial institution may not disclose nonpublic personal information to a nonaffiliated third party unless— (A) such financial institution clearly and conspicuously discloses to the consumer, in writing or in electronic form or other form permitted by the regulations prescribed under section 6804 of this title, that such information may be disclosed to such third party; (B) the consumer is given the opportunity, before the time that such information is initially disclosed, to direct that such information not be disclosed to such third party; and (C) the consumer is given an explanation of how the consumer can exercise that nondisclosure option." *15 U.S.C. § 6802(b)(1).* <https://www.law.cornell.edu/uscode/text/15/6802#:~:text=A%20financial%20institution%20may%20not,can%20exercise%20that%20nondisclosure%20option.>
+[^glba-optout]: **GLBA opt-out** — "A financial institution may not disclose nonpublic personal information to a nonaffiliated third party unless— (A) such financial institution clearly and conspicuously discloses to the consumer, in writing or in electronic form or other form permitted by the regulations prescribed under section 6804 of this title, that such information may be disclosed to such third party; (B) the consumer is given the opportunity, before the time that such information is initially disclosed, to direct that such information not be disclosed to such third party; and (C) the consumer is given an explanation of how the consumer can exercise that nondisclosure option." *15 U.S.C. § 6802(b)(1).* <https://www.law.cornell.edu/uscode/text/15/6802#:~:text=A%20financial%20institution%20may%20not%20disclose,can%20exercise%20that%20nondisclosure%20option.>
 
 [^coppa-parental]: **COPPA parental rights** — "the opportunity at any time to refuse to permit the operator’s further use or maintenance in retrievable form, or future online collection, of personal information from that child" *15 U.S.C. § 6502(b)(1)(B)(ii).* <https://www.law.cornell.edu/uscode/text/15/6502#:~:text=the%20opportunity%20at%20any%20time,personal%20information%20from%20that%20child>
 

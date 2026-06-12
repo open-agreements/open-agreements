@@ -17,7 +17,7 @@ compatibility: >-
   canonical URL.
 metadata:
   author: open-agreements
-  version: "0.2.0"
+  version: "0.1.0"
 catalog_group: Legal Explainers
 catalog_order: 20
 ---
@@ -62,10 +62,10 @@ Use this skill when the user wants to understand state consumer-privacy law, e.g
 3. **Lead with the snapshot date.** State the note's `snapshotAsOf` and
    `lastReviewed`, and surface any baked `> [!WARNING]` staleness block verbatim.
 4. **Answer from the note.** Use the **At a glance** table for the bottom line
-   (applicability, key law, privacy-policy duty, private right of action,
-   regulator), then the question sections for detail. **Cite the footnoted
-   sources** (statutes, regulations, commentary) when you state a rule. Stay
-   neutral.
+   (law coverage, applicability, key law, privacy-policy duty, whether consumers
+   can sue, the lawsuit detail, privacy-policy rule, sensitive-data consent,
+   browser opt-out signals, regulator), then the question sections for detail. **Cite the footnoted sources** (statutes,
+   regulations, commentary) when you state a rule. Stay neutral.
 5. **Offer an optional refresh.** If currency matters, offer to fetch the note's
    `canonicalUrl` with the host agent's web access to check for changes. **Ask
    each time**, and **never send the user's facts, data inventory, or policies

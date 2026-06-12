@@ -2,7 +2,7 @@
 jurisdiction: "Tennessee"
 slug: tennessee
 countryCode: US
-snapshotAsOf: "2026-06-10"
+snapshotAsOf: "2026-06-12"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/legal/non-compete/tennessee
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/tennessee · **Snapshot as of:** 2026-06-10 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/tennessee · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
 
 # Non-Competes in Tennessee[^about]
 
@@ -91,7 +91,7 @@ The court enforced covenants signed after employment began because each employee
 
 In *Central Adjustment Bureau*, the Tennessee Supreme Court adopted the rule of reasonableness, under which a court may enforce an overbroad covenant to the extent it is reasonable rather than rewriting only severable words [^central-reasonableness]. *Vantage Technology, LLC v. Cross* shows the rule in action: the court modified an overbroad territory and limited the restriction to the customer locations where the employee had actually worked [^vantage-modify]. The 2026 statute carries the same idea forward for covenants it governs, expressly authorizing a court to modify a restrictive covenant to render it reasonable and enforceable [^s50-1-210-modify].
 
-Reformation is discretionary, not guaranteed. A court may decline to save an oppressive covenant, and it may refuse enforcement entirely where the hardship to the employee and the harm to the public outweigh the employer's interest, as the court did in *Columbus Medical Services, LLC v. Thomas* [^central-oppressive][^columbus-refused].
+Reformation is discretionary, not guaranteed. A court may decline to save an oppressive covenant, and it may refuse enforcement entirely where the hardship to the employee and the harm to the public outweigh the employer's interest, as the court did in *Columbus Medical Services, LLC v. Thomas* [^central-oppressive][^columbus-refused]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Tennessee non-compete review checklist](/legal/non-compete/tennessee-review-checklist) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**

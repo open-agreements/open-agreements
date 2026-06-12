@@ -26,11 +26,16 @@ Missouri has no omnibus consumer-privacy statute; the main commercial spine is b
 
 | Question | Missouri |
 | --- | --- |
+| **Law coverage** | No comprehensive law |
 | **Summary** | Missouri has not enacted a comprehensive consumer-privacy law. The 2026 session saw biometric and privacy-adjacent bills, but no omnibus access/delete/correct/opt-out framework passed before the May 15, 2026 adjournment, so the main commercial state framework is the breach-notification statute, the MMPA's deception rules and qualified private right of action, and, for insurance licensees, the Insurance Data Security Act's phased duties; everything else rides the federal overlay. |
 | **Main law** | Mo. Rev. Stat. § 407.1500 (breach notification) plus the Merchandising Practices Act (§§ 407.010–407.025) and, for insurance licensees, the Insurance Data Security Act (§§ 375.1400–375.1427, effective January 1, 2026) — Missouri has no comprehensive consumer-privacy statute |
 | **Privacy policy required?** | No general Missouri mandate fixes a privacy policy's contents — they are driven by FTC Act § 5 and the sectoral overlay (GLBA, HIPAA, COPPA), with the MMPA supplying the state deception hook for a policy that misstates actual practices; an insurance licensee must hand its privacy policy to the insurance director after a cybersecurity event |
 | **Who does it cover?** | Breach statute: any person that owns or licenses personal information of Missouri residents, or that conducts business in Missouri and owns or licenses a resident's personal information, with no size threshold. MMPA: anyone selling or advertising merchandise — defined to include services and intangibles — in or from Missouri. Insurance Data Security Act: persons licensed or registered under Missouri insurance law |
-| **Can consumers sue?** | Not under the breach statute (the Attorney General has exclusive authority, with a civil penalty up to $150,000 per breach) and expressly none under the Insurance Data Security Act; but MMPA § 407.025 gives consumers a private action — punitive damages, fee-shifting, and class actions included — subject to heightened reasonable-consumer and objective-damages proof requirements added in 2020 |
+| **Can consumers sue?** | Yes |
+| **Privacy policy rule** | No state policy checklist |
+| **Consent for sensitive data?** | No special rule |
+| **Browser opt-out signals?** | Not required |
+| **Lawsuit detail** | Not under the breach statute (the Attorney General has exclusive authority, with a civil penalty up to $150,000 per breach) and expressly none under the Insurance Data Security Act; but MMPA § 407.025 gives consumers a private action — punitive damages, fee-shifting, and class actions included — subject to heightened reasonable-consumer and objective-damages proof requirements added in 2020 |
 | **Who enforces it?** | Missouri Attorney General (breach statute and MMPA); Director of the Department of Commerce and Insurance (Insurance Data Security Act) |
 
 ## Which privacy laws apply to your business in Missouri? {#which-privacy-laws-apply}

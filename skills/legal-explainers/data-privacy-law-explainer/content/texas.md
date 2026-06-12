@@ -26,11 +26,16 @@ The Texas Data Privacy and Security Act gives Texas consumers rights over their 
 
 | Question | Texas |
 | --- | --- |
+| **Law coverage** | Comprehensive law |
 | **Summary** | If you do business in Texas and are not an SBA small business, the TDPSA requires a specific privacy notice, opt-in consent to process sensitive data, and processor contracts — enforced solely by the Attorney General, with no consumer lawsuits. |
 | **Main law** | Tex. Bus. & Com. Code ch. 541 (Texas Data Privacy and Security Act) |
 | **Privacy policy required?** | Yes — a reasonably accessible and clear notice with statutorily fixed contents |
 | **Who does it cover?** | Anyone who does business in Texas (or sells products/services to Texans), processes or sells personal data, and is not a small business as defined by the U.S. Small Business Administration — no revenue or data-volume threshold |
-| **Can consumers sue?** | No — the statute bars any private right of action |
+| **Can consumers sue?** | No |
+| **Privacy policy rule** | Policy contents fixed by law |
+| **Consent for sensitive data?** | Consent required first |
+| **Browser opt-out signals?** | Not required |
+| **Lawsuit detail** | No — the statute bars any private right of action |
 | **Who enforces it?** | Texas Attorney General (exclusive) |
 
 ## Does the Texas Data Privacy and Security Act apply to your business? {#does-tdpsa-apply}

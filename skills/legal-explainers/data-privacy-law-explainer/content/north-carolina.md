@@ -26,11 +26,16 @@ North Carolina has no comprehensive consumer-privacy statute. The Identity Theft
 
 | Question | North Carolina |
 | --- | --- |
+| **Law coverage** | No comprehensive law |
 | **Summary** | North Carolina has not enacted a comprehensive consumer-privacy law; the operative statute is the Identity Theft Protection Act, whose breach-notification, Social Security number, disposal, and security-freeze sections expressly bridge violations into § 75-1.1. |
 | **Main law** | Identity Theft Protection Act, N.C. Gen. Stat. §§ 75-60 to 75-66 (Article 2A of Chapter 75) — North Carolina has no comprehensive consumer-privacy law; breach-notification, Social Security number, disposal, and security-freeze sections contain express § 75-1.1 bridges |
 | **Privacy policy required?** | No North Carolina statute mandates a general consumer privacy policy or fixes its contents; a materially misleading statement can support a § 75-1.1 or FTC Act § 5 deception theory if the required elements are met, alongside GLBA, HIPAA, and COPPA where those apply |
 | **Who does it cover?** | Any business that owns, licenses, maintains, or possesses personal information of North Carolina residents — in any form, computerized or paper — with no revenue or consumer-volume threshold |
-| **Can consumers sue?** | Yes for specific bridged ITPA sections — an injured consumer can use § 75-16 for mandatory treble damages where the section expressly makes the violation a § 75-1.1 violation; § 75-66 separately allows civil damages under G.S. 1-539.2C |
+| **Can consumers sue?** | Limited path |
+| **Privacy policy rule** | No state policy checklist |
+| **Consent for sensitive data?** | No special rule |
+| **Browser opt-out signals?** | Not required |
+| **Lawsuit detail** | Yes for specific bridged ITPA sections — an injured consumer can use § 75-16 for mandatory treble damages where the section expressly makes the violation a § 75-1.1 violation; § 75-66 separately allows civil damages under G.S. 1-539.2C |
 | **Who enforces it?** | North Carolina Attorney General (Consumer Protection Division) |
 
 ## Which privacy laws apply to your business in North Carolina? {#which-privacy-laws-apply}

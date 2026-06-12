@@ -26,11 +26,16 @@ Washington has no comprehensive consumer-privacy statute, but the My Health My D
 
 | Question | Washington |
 | --- | --- |
+| **Law coverage** | Specific data types only |
 | **Summary** | Washington never passed a comprehensive privacy act, but the My Health My Data Act functions like one for a wide swath of businesses — consumer health data includes biometrics, precise location, and inferences, every covered business needs a separate homepage-linked health-data privacy policy, selling that data requires a signed authorization, and violations carry class-action exposure through the Consumer Protection Act. |
 | **Main law** | My Health My Data Act, ch. 19.373 RCW (main regulated-entity duties operative March 31, 2024; small-business duties generally June 30, 2024; geofencing ban separately in force), alongside the breach-notification statute (ch. 19.255 RCW) and the biometric-identifier statute (ch. 19.375 RCW) — Washington has no comprehensive consumer-privacy act |
 | **Privacy policy required?** | Yes — a dedicated consumer health data privacy policy with statutorily fixed contents and a prominently published homepage link (RCW 19.373.020); no Washington statute fixes the contents of a general privacy policy |
 | **Who does it cover?** | Any legal entity that conducts business in Washington or targets products or services to Washington consumers and determines how consumer health data is handled — a category that sweeps in biometrics, genetic data, precise location near health services, and health inferences derived from non-health data, so many non-health businesses are covered; small businesses generally had later dates, not an exemption |
-| **Can consumers sue?** | Yes — an MHMDA violation is a per se Consumer Protection Act violation (RCW 19.373.090), so consumers injured in their business or property can sue under RCW 19.86.090; the biometric chapter, by contrast, is Attorney General-only |
+| **Can consumers sue?** | Yes |
+| **Privacy policy rule** | Policy required only for specific data |
+| **Consent for sensitive data?** | Only for certain data types |
+| **Browser opt-out signals?** | Not required |
+| **Lawsuit detail** | Yes — an MHMDA violation is a per se Consumer Protection Act violation (RCW 19.373.090), so consumers injured in their business or property can sue under RCW 19.86.090; the biometric chapter, by contrast, is Attorney General-only |
 | **Who enforces it?** | Washington Attorney General (under the Consumer Protection Act), alongside private CPA suits |
 
 ## Which privacy laws apply to your business in Washington? {#which-privacy-laws-apply}

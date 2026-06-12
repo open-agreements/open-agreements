@@ -2,7 +2,7 @@
 jurisdiction: "Rhode Island"
 slug: rhode-island
 countryCode: US
-snapshotAsOf: "2026-06-10"
+snapshotAsOf: "2026-06-12"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/legal/non-compete/rhode-island
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/rhode-island · **Snapshot as of:** 2026-06-10 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/rhode-island · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
 
 # Non-Competes in Rhode Island[^about]
 
@@ -84,7 +84,7 @@ The restraint in *Walls* was customer-focused. It barred solicitation and pest-c
 
 **Short answer.** Usually yes if equitable. *Durapin* adopted partial enforcement rather than an all-or-nothing or mechanical blue-pencil rule, absent bad faith or deliberate overreaching [^durapin-partial-enforcement].
 
-Partial enforcement is not a drafting strategy. Even under *Durapin*, the court should go no further than reasonably necessary to protect the promisee's legitimate interests [^durapin-no-further-than-necessary]. Overbreadth still creates litigation risk and may leave the employer without meaningful relief if the employee did not jeopardize a protectable interest.
+Partial enforcement is not a drafting strategy. Even under *Durapin*, the court should go no further than reasonably necessary to protect the promisee's legitimate interests [^durapin-no-further-than-necessary]. Overbreadth still creates litigation risk and may leave the employer without meaningful relief if the employee did not jeopardize a protectable interest. For a clause-by-clause pass over a specific agreement against these limits, the [Rhode Island non-compete review checklist](/legal/non-compete/rhode-island-review-checklist) walks the full covenant suite item by item with each requirement's force level.
 
 RINAA also has a severability rule for contracts containing a non-compete that is unenforceable under § 28-59-3. That rule preserves the remainder of the contract and allows a court to impose a non-compete restriction as a remedy for breach of another agreement or duty [^rinaa-severability-remedy].
 

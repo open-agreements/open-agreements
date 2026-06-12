@@ -2,7 +2,7 @@
 jurisdiction: "New Hampshire"
 slug: new-hampshire
 countryCode: US
-snapshotAsOf: "2026-06-10"
+snapshotAsOf: "2026-06-12"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/legal/non-compete/new-hampshire
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/new-hampshire · **Snapshot as of:** 2026-06-10 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/new-hampshire · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
 
 # Non-Competes in New Hampshire[^about]
 
@@ -42,7 +42,7 @@ New Hampshire enforces reasonable non-competes under a common-law test, but RSA 
 
 The practical starting point is common law plus statutory gates. Even a reasonable covenant can fail if it was not disclosed before the employee accepted the offer, if the employee is covered by the low-wage ban, or if a profession-specific healthcare statute voids the restriction.
 
-New Hampshire also construes restraints narrowly. The court starts with the employer interest being protected, then asks whether the chosen time, geography, customer, and activity limits are broader than that interest requires [^foster-three-part-test].
+New Hampshire also construes restraints narrowly. The court starts with the employer interest being protected, then asks whether the chosen time, geography, customer, and activity limits are broader than that interest requires [^foster-three-part-test]. For a clause-by-clause pass over a specific agreement, the [New Hampshire non-compete review checklist](/legal/non-compete/new-hampshire-review-checklist) walks the full covenant suite item by item with each requirement's force level.
 
 > [!NOTE]
 > **Practice note.**

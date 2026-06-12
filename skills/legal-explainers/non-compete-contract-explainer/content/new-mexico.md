@@ -2,7 +2,7 @@
 jurisdiction: "New Mexico"
 slug: new-mexico
 countryCode: US
-snapshotAsOf: "2026-06-10"
+snapshotAsOf: "2026-06-12"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/legal/non-compete/new-mexico
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/new-mexico · **Snapshot as of:** 2026-06-10 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/new-mexico · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
 
 # Non-Competes in New Mexico[^about]
 
@@ -93,7 +93,7 @@ For employment covenants, the safer drafting pattern is to match the radius to t
 
 New Mexico's reformation rule is narrow. In *KidsKare*, the court of appeals expressly avoided deciding the broader argument about New Mexico case law on reformation because the contract itself supplied the basis for modifying the covenant [^kidskare-no-general-ruling].
 
-The drafting takeaway is direct: include an express severability and reformation clause if the employer wants a court to enforce the covenant to the maximum reasonable extent. Even then, reformation is not a substitute for drafting a reasonable covenant in the first place.
+The drafting takeaway is direct: include an express severability and reformation clause if the employer wants a court to enforce the covenant to the maximum reasonable extent. Even then, reformation is not a substitute for drafting a reasonable covenant in the first place. For a clause-by-clause pass over a specific agreement against these drafting rules, the [New Mexico non-compete review checklist](/legal/non-compete/new-mexico-review-checklist) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**

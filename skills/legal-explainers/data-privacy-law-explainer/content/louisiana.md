@@ -26,11 +26,16 @@ The Louisiana Data Privacy Act (Act No. 502 of 2026) takes effect January 1, 202
 
 | Question | Louisiana |
 | --- | --- |
+| **Law coverage** | Comprehensive law |
 | **Summary** | Louisiana enacted the Louisiana Data Privacy Act (Act No. 502 of 2026) effective January 1, 2027, requiring covered businesses to publish a six-item privacy notice, obtain consent for sensitive data, sign processor contracts, and honor consumer rights — enforced solely by the Attorney General with a cure period that sunsets July 31, 2027; until the act starts, the breach-notification law (with its own private right of action) and LUTPA govern. |
 | **Main law** | Louisiana Data Privacy Act, La. R.S. 51:1780.1–1780.5 (Act No. 502 of 2026), effective January 1, 2027; until then the Database Security Breach Notification Law (La. R.S. 51:3071–3077) and LUTPA (La. R.S. 51:1401 et seq.) are the operative state framework |
 | **Privacy policy required?** | From January 1, 2027, yes — a reasonably accessible and clear privacy notice with six fixed contents, plus scripted word-for-word notices if the business sells sensitive or biometric data; today no state checklist exists and the governing rule is that whatever the policy says must be true |
 | **Who does it cover?** | From January 1, 2027 — a person or entity doing business in Louisiana that has over $25 million in annual gross revenue, or annually handles the personal information of 75,000+ consumers, households, or devices, or derives 50%+ of annual revenue from selling personal information; state agencies, GLBA financial institutions, HIPAA entities, nonprofits, and higher education are exempt |
-| **Can consumers sue?** | No under the LDPA — it routes violations into LUTPA while expressly excluding the private actions in La. R.S. 51:1409 and 1409.1; but the breach law keeps its own private action for actual damages from untimely breach notice (La. R.S. 51:3075), and LUTPA § 1409 remains a general private-action hook for actual damages, with trebling only after Attorney General notice and knowing continuation |
+| **Can consumers sue?** | Limited path |
+| **Privacy policy rule** | Policy contents fixed by law |
+| **Consent for sensitive data?** | Consent required first |
+| **Browser opt-out signals?** | Not required |
+| **Lawsuit detail** | No under the LDPA — it routes violations into LUTPA while expressly excluding the private actions in La. R.S. 51:1409 and 1409.1; but the breach law keeps its own private action for actual damages from untimely breach notice (La. R.S. 51:3075), and LUTPA § 1409 remains a general private-action hook for actual damages, with trebling only after Attorney General notice and knowing continuation |
 | **Who enforces it?** | Louisiana Attorney General (exclusive for the LDPA) |
 
 ## Which privacy laws apply to your business in Louisiana? {#which-privacy-laws-apply}
