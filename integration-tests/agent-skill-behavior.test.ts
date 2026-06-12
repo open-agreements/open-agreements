@@ -83,9 +83,9 @@ describe('Claude skill generation', () => {
   });
 });
 
-describe('published skills/open-agreements/SKILL.md execution paths', () => {
+describe('published skills/agreements/open-agreements/SKILL.md execution paths', () => {
   it.openspec('OA-CLI-009')('documents remote MCP as primary zero-install path', () => {
-    // Execution steps now live in shared/template-filling-execution.md,
+    // Execution steps live in the skill's own template-filling-execution.md,
     // referenced from SKILL.md via relative link
     expect(SKILL_MD).toContain('template-filling-execution.md');
     expect(SHARED_EXECUTION_MD).toContain('Remote MCP');
