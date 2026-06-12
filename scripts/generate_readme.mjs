@@ -113,6 +113,15 @@ function renderSkills() {
   const catalog = loadSkillsCatalog({ rootDir: root });
   const lines = [];
 
+  lines.push(
+    "Install any skill by name (paths below are for browsing only — installs are name-based and survive reorganization):",
+  );
+  lines.push("");
+  lines.push("```bash");
+  lines.push("npx skills add open-agreements/open-agreements --skill <skill-name>");
+  lines.push("```");
+  lines.push("");
+
   for (const group of catalog.groups) {
     lines.push(`### ${group.title}`);
     lines.push("");
@@ -120,12 +129,12 @@ function renderSkills() {
       renderTable(
         ["Skill", "Description"],
         group.skills.map((skill) => {
-          const skillPath = resolve(root, "skills", skill.slug, "SKILL.md");
+          const skillPath = resolve(root, skill.path, "SKILL.md");
           if (!existsSync(skillPath)) {
-            throw new Error(`skills/catalog.yaml references missing skill '${skill.slug}'.`);
+            throw new Error(`Skills catalog references missing skill '${skill.slug}'.`);
           }
           return [
-            `[${skill.label}](${githubTreeUrl(`skills/${skill.slug}`)})`,
+            `[${skill.label}](${githubTreeUrl(skill.path)})`,
             skill.description,
           ];
         }),
