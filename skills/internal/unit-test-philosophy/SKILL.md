@@ -6,6 +6,7 @@ description: >-
   expansion," "unit test style," or "Allure test spec." Applies when
   adding/updating tests, expanding coverage, or reviewing test quality across
   src, integration-tests, and workspace packages.
+license: Apache-2.0
 metadata:
   short-description: Open Agreements testing philosophy
   version: "0.1.0"

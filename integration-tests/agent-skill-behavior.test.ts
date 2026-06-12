@@ -11,7 +11,8 @@ const it = itAllure.epic('Platform & Distribution');
 const ROOT = new URL('..', import.meta.url).pathname;
 const SKILL_MD = readFileSync(join(ROOT, 'skills/agreements/open-agreements/SKILL.md'), 'utf-8');
 const SHARED_EXECUTION_MD = readFileSync(
-  join(ROOT, 'skills/agreements/shared/template-filling-execution.md'),
+  // Per-skill copy; all copies are identical (enforced by skills-data.test.mjs).
+  join(ROOT, 'skills/agreements/open-agreements/template-filling-execution.md'),
   'utf-8'
 );
 

@@ -15,7 +15,7 @@ compatibility: >-
   Local CLI requires Node.js >=20.
 metadata:
   author: open-agreements
-  version: "0.3.0"
+  version: "0.3.1"
 catalog_group: Agreement Drafting And Filling
 catalog_order: 50
 ---
@@ -43,7 +43,7 @@ Use this skill when the user wants to:
 
 ## Execution
 
-Follow the [standard template-filling workflow](../shared/template-filling-execution.md) with these skill-specific details:
+Follow the [standard template-filling workflow](template-filling-execution.md) with these skill-specific details:
 
 ### Template options
 

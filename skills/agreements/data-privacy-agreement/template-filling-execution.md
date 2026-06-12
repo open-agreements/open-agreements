@@ -1,6 +1,6 @@
 # Template Filling Execution Workflow
 
-Standard 6-step workflow shared by all template-filling skills. Each skill's SKILL.md provides skill-specific details (template options and example values) that plug into these steps.
+Standard 6-step workflow shared by all template-filling skills. Each skill's SKILL.md provides skill-specific details (template options and example values) that plug into these steps. Each skill carries its own copy of this file so the published bundle stays self-contained; CI enforces that all copies are identical, so edit them together.
 
 > **Interactivity note**: Always ask the user for missing inputs.
 > If your agent has an `AskUserQuestion` tool (Claude Code, Cursor, etc.),
@@ -52,14 +52,20 @@ Group fields by `section`. Ask the user for values in rounds of up to 4 question
 
 **If Remote MCP:** Collect values into a JSON object to pass to `fill_template`.
 
-**If Local CLI:** Write values to a temporary JSON file:
+**If Local CLI:** Write values to a per-run temporary JSON file with restrictive permissions:
 ```bash
-cat > /tmp/oa-values.json << 'FIELDS'
+VALUES_FILE="$(mktemp /tmp/oa-values.XXXXXX.json)"
+chmod 600 "$VALUES_FILE"
+trap 'rm -f "$VALUES_FILE"' EXIT
+
+cat > "$VALUES_FILE" << 'FIELDS'
 {
   "field_name": "value"
 }
 FIELDS
 ```
+
+Do not reuse a shared temp filename for confidential values.
 
 ## Step 5: Render DOCX
 
@@ -68,7 +74,7 @@ Use the `fill_template` tool with the template name and collected values. The se
 
 **If Local CLI:**
 ```bash
-open-agreements fill <template-name> -d /tmp/oa-values.json -o <output-name>.docx
+open-agreements fill <template-name> -d "$VALUES_FILE" -o <output-name>.docx
 ```
 
 **If Preview Only:**
@@ -80,9 +86,9 @@ Generate a markdown preview using the collected values. Label clearly as `PREVIE
 
 Report the output (download URL or file path) to the user. Remind them to review the document before signing.
 
-If Local CLI was used, clean up:
+If Local CLI was used, the `trap` from Step 4 removes the values file on shell exit; remove it sooner with:
 ```bash
-rm /tmp/oa-values.json
+rm -f "$VALUES_FILE"
 ```
 
 ## Bespoke edits (beyond template fields)

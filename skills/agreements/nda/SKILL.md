@@ -11,7 +11,7 @@ compatibility: >-
   Local CLI requires Node.js >=20.
 metadata:
   author: open-agreements
-  version: "0.2.2"
+  version: "0.2.3"
 catalog_group: Agreement Drafting And Filling
 catalog_order: 20
 ---
