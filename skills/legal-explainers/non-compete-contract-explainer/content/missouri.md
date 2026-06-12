@@ -2,7 +2,7 @@
 jurisdiction: "Missouri"
 slug: missouri
 countryCode: US
-snapshotAsOf: "2026-06-10"
+snapshotAsOf: "2026-06-12"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/legal/non-compete/missouri
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/missouri · **Snapshot as of:** 2026-06-10 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/missouri · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
 
 # Non-Competes in Missouri[^about]
 
@@ -99,7 +99,7 @@ Because *Baker* arose in the arbitration context and the Missouri Supreme Court 
 
 **Short answer.** It can, but it does not have to. Missouri courts have authority to refuse to enforce unreasonable terms or to modify an overbroad covenant to make it reasonable, yet modification is discretionary — a court may instead decline to enforce the covenant at all [^whelan-modification][^sigma-refused-modification].
 
-In *Sigma-Aldrich*, the court of appeals affirmed both the trial court's refusal to enforce a covenant that lacked any geographic or other non-temporal limit and its discretionary decision not to rewrite it [^sigma-refused-modification]. There is also a litigation-economics trap: an employer that needs the court to blue-pencil its overbroad agreement may not qualify as the prevailing party and can lose its contractual right to attorney's fees [^paradise-prevailing-party].
+In *Sigma-Aldrich*, the court of appeals affirmed both the trial court's refusal to enforce a covenant that lacked any geographic or other non-temporal limit and its discretionary decision not to rewrite it [^sigma-refused-modification]. There is also a litigation-economics trap: an employer that needs the court to blue-pencil its overbroad agreement may not qualify as the prevailing party and can lose its contractual right to attorney's fees [^paradise-prevailing-party]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Missouri non-compete review checklist](/legal/non-compete/missouri-review-checklist) walks the full covenant suite item by item with each requirement's force level.
 
 "Accordingly, when the provisions of a non-compete clause impose a restraint that is unreasonably broad, appellate courts still can give effect to its purpose by refusing to give effect to the unreasonable terms or modifying the terms of the contract to be reasonable."[^whelan-modification]
 

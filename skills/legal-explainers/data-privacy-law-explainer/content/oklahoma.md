@@ -26,11 +26,16 @@ The Oklahoma Consumer Data Privacy Act (SB 546) takes effect January 1, 2027, br
 
 | Question | Oklahoma |
 | --- | --- |
+| **Law coverage** | Comprehensive law |
 | **Summary** | The Oklahoma Consumer Data Privacy Act (SB 546) does not take effect until January 1, 2027, but the state's rewritten Security Breach Notification Act — Attorney General notice for breaches affecting 500 or more residents, biometric and credential data elements, and penalties keyed to reasonable safeguards — has applied since January 1, 2026, so breach readiness is due now and OKCDPA compliance next January. |
 | **Main law** | Oklahoma Consumer Data Privacy Act, 75A O.S. §§ 300–320 (SB 546, effective January 1, 2027); until then, the Security Breach Notification Act, 24 O.S. §§ 161–166 (as rewritten effective January 1, 2026) plus the Oklahoma Consumer Protection Act |
 | **Privacy policy required?** | Yes from January 1, 2027 — a reasonably accessible and clear privacy notice with statutorily fixed contents, plus conspicuous opt-out disclosures for data sales and targeted advertising |
 | **Who does it cover?** | From 2027, controllers and processors doing business in Oklahoma (or targeting Oklahoma residents) that process personal data of 100,000+ consumers a year — or 25,000+ consumers while deriving over half of gross revenue from selling personal data; the breach act already covers any individual or entity owning, licensing, or maintaining computerized personal information, with duties depending on that role |
-| **Can consumers sue?** | No — the OKCDPA expressly bars private suits and the breach act is enforced by the Attorney General or district attorneys, but the Oklahoma Consumer Protection Act gives consumers a private damages action for deceptive practices |
+| **Can consumers sue?** | Limited path |
+| **Privacy policy rule** | Policy contents fixed by law |
+| **Consent for sensitive data?** | Consent required first |
+| **Browser opt-out signals?** | Not required |
+| **Lawsuit detail** | No — the OKCDPA expressly bars private suits and the breach act is enforced by the Attorney General or district attorneys, but the Oklahoma Consumer Protection Act gives consumers a private damages action for deceptive practices |
 | **Who enforces it?** | Oklahoma Attorney General (exclusive under the OKCDPA; district attorneys share breach-act and consumer-protection enforcement) |
 
 ## Which privacy laws apply to your business in Oklahoma — and when? {#which-privacy-laws-apply}

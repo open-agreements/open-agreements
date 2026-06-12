@@ -26,11 +26,16 @@ The Connecticut Data Privacy Act gives Connecticut consumers rights over their p
 
 | Question | Connecticut |
 | --- | --- |
+| **Law coverage** | Comprehensive law |
 | **Summary** | If you meet the 100,000-consumer (or 25,000 plus data-sale) threshold in Connecticut, the CTDPA requires a privacy notice, recognition of universal opt-out signals, processor contracts, and consent for sensitive data — enforced by the Attorney General, with no consumer lawsuits and a cure period that expired at the end of 2024. |
 | **Main law** | Conn. Gen. Stat. §§ 42-515 et seq. (Connecticut Data Privacy Act) |
 | **Privacy policy required?** | Yes — a reasonably accessible, clear, and meaningful notice with statutorily fixed contents |
 | **Who does it cover?** | Persons doing business in Connecticut (or targeting residents) that control or process the data of 100,000+ consumers a year, or 25,000+ while deriving 25%+ of gross revenue from selling data — no revenue floor; nonprofits exempt |
-| **Can consumers sue?** | No — the statute bars any private right of action |
+| **Can consumers sue?** | No |
+| **Privacy policy rule** | Policy contents fixed by law |
+| **Consent for sensitive data?** | Consent required first |
+| **Browser opt-out signals?** | Must be honored |
+| **Lawsuit detail** | No — the statute bars any private right of action |
 | **Who enforces it?** | Connecticut Attorney General (exclusive) |
 
 ## Does the Connecticut Data Privacy Act apply to your business? {#does-ctdpa-apply}

@@ -2,7 +2,7 @@
 jurisdiction: "Kansas"
 slug: kansas
 countryCode: US
-snapshotAsOf: "2026-06-10"
+snapshotAsOf: "2026-06-12"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/legal/non-compete/kansas
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/kansas · **Snapshot as of:** 2026-06-10 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/kansas · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
 
 # Non-Competes in Kansas[^about]
 
@@ -67,7 +67,7 @@ The modern rule has a common-law root. In *Eastern Distributing*, the Kansas Sup
 
 Reformation has a ceiling, though. A court reforms an *unreasonable* term; it may not rewrite a term that was already reasonable. In *Doan*, the Court of Appeals held the trial court erred when it cut a reasonable two-year term down to one year [^doan-no-rewrite].
 
-The 2025 statutory amendments add a separate, mandatory reformation command, but it is aimed at the covenants the Kansas Restraint of Trade Act actually governs. K.S.A. 50-163 directs a court to modify and enforce an overbroad covenant that is *not* conclusively presumed enforceable [^q3-ksa-50-163-reform], yet the same statute excludes covenants not to compete from the Act altogether [^q3-ksa-50-163-noncompete-exclusion]. For a traditional non-compete, the operative reformation authority remains the common-law equity power recognized in *Eastern Distributing*, not the statute. No published Kansas decision has yet construed that exclusion as applied to a non-compete, so this reading rests on the statute's plain text.
+The 2025 statutory amendments add a separate, mandatory reformation command, but it is aimed at the covenants the Kansas Restraint of Trade Act actually governs. K.S.A. 50-163 directs a court to modify and enforce an overbroad covenant that is *not* conclusively presumed enforceable [^q3-ksa-50-163-reform], yet the same statute excludes covenants not to compete from the Act altogether [^q3-ksa-50-163-noncompete-exclusion]. For a traditional non-compete, the operative reformation authority remains the common-law equity power recognized in *Eastern Distributing*, not the statute. No published Kansas decision has yet construed that exclusion as applied to a non-compete, so this reading rests on the statute's plain text. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Kansas non-compete review checklist](/legal/non-compete/kansas-review-checklist) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**

@@ -26,11 +26,16 @@ Nevada regulates consumer privacy through scoped statutes in NRS chapter 603A: w
 
 | Question | Nevada |
 | --- | --- |
+| **Law coverage** | Limited-scope law |
 | **Summary** | Nevada has no omnibus privacy law, but NRS chapter 603A requires a website privacy notice with five fixed elements, honors opt-outs of monetary-consideration sales of covered information, and requires opt-in consent and a dedicated privacy policy for consumer health data. |
 | **Main law** | NRS ch. 603A — internet privacy notice and sale opt-out (NRS 603A.300–.360), consumer health data (NRS 603A.400–.550, effective March 31, 2024), and data security and breach notification (NRS 603A.010–.290); Nevada has no comprehensive consumer-privacy act |
 | **Privacy policy required?** | Yes — website operators need an accessible privacy notice with five fixed content elements under NRS 603A.340, and a business handling consumer health data needs a separate health-data privacy policy under NRS 603A.495 |
 | **Who does it cover?** | Operators of commercial websites and online services that collect covered information from Nevada consumers (constitutional-nexus test, no revenue or volume threshold), data brokers that resell that information, regulated entities that handle consumer health data, and any data collector holding Nevadans' personal information |
-| **Can consumers sue?** | No private right against operators under NRS 603A.360(4) and none under the health-data regime; data-broker and security/breach private-action theories are open or untested |
+| **Can consumers sue?** | No |
+| **Privacy policy rule** | Policy contents fixed by law |
+| **Consent for sensitive data?** | Consent required first |
+| **Browser opt-out signals?** | Not required |
+| **Lawsuit detail** | No private right against operators under NRS 603A.360(4) and none under the health-data regime; data-broker and security/breach private-action theories are open or untested |
 | **Who enforces it?** | Nevada Attorney General for the internet regime; Attorney General or district attorneys for security/breach injunctions; public DTPA enforcers for deceptive-trade-practice violations |
 
 ## Which privacy laws apply to your business in Nevada? {#which-privacy-laws-apply}

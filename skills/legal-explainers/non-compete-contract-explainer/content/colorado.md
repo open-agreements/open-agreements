@@ -2,7 +2,7 @@
 jurisdiction: "Colorado"
 slug: colorado
 countryCode: US
-snapshotAsOf: "2026-06-10"
+snapshotAsOf: "2026-06-12"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/legal/non-compete/colorado
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/colorado · **Snapshot as of:** 2026-06-10 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/colorado · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
 
 # Non-Competes in Colorado[^about]
 
@@ -147,7 +147,7 @@ That common-law rule survives the statute, but it now operates alongside the pro
 
 **Short answer.** Do not count on it. Colorado courts have discretion to blue-pencil an overbroad covenant but are not required to, and parties cannot contractually force a court to rewrite one [^twentythree-ltd-discretion][^twentythree-ltd-no-contractual-compulsion].
 
-In *23 LTD v. Herman*, the court explained that it is not a court's function to rewrite a contract to enable enforcement of terms that violate Colorado public policy, and a severability clause cannot compel the court to do so [^twentythree-ltd-no-rewrite][^twentythree-ltd-no-contractual-compulsion]. The risk is compounded by the penalty regime: because merely presenting a void covenant is unlawful, an employer cannot safely assume a court will trim an overbroad covenant into a lawful one [^crs-present-void-narrowing].
+In *23 LTD v. Herman*, the court explained that it is not a court's function to rewrite a contract to enable enforcement of terms that violate Colorado public policy, and a severability clause cannot compel the court to do so [^twentythree-ltd-no-rewrite][^twentythree-ltd-no-contractual-compulsion]. The risk is compounded by the penalty regime: because merely presenting a void covenant is unlawful, an employer cannot safely assume a court will trim an overbroad covenant into a lawful one [^crs-present-void-narrowing]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Colorado non-compete review checklist](/legal/non-compete/colorado-review-checklist) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**

@@ -26,11 +26,16 @@ Maine has no comprehensive consumer-privacy statute — LD 1822 was placed in th
 
 | Question | Maine |
 | --- | --- |
+| **Law coverage** | Specific data types only |
 | **Summary** | Maine has no comprehensive consumer-privacy law — the Maine Online Data Privacy Act (LD 1822) was placed in the Legislative Files (DEAD) on April 13, 2026 after the chambers insisted on opposing enactment positions — but it does have the nation's strictest ISP privacy statute, which since July 1, 2020 has required broadband providers serving Maine customers to get opt-in consent before using, disclosing, or selling customer personal information. Every other business builds to the Notice of Risk to Personal Data Act's 30-day breach-notice clock, the Maine Unfair Trade Practices Act, and the federal overlay. |
 | **Main law** | 35-A M.R.S. § 9301 (broadband ISP opt-in privacy law, eff. July 1, 2020) plus the Notice of Risk to Personal Data Act, 10 M.R.S. §§ 1346–1350-B — Maine has no comprehensive consumer-privacy statute |
 | **Privacy policy required?** | No general mandate — broadband providers must post a clear notice of customers' opt-in rights at the point of sale and on their website; for everyone else, policy contents are driven by FTC Act § 5 and the GLBA, HIPAA, and COPPA overlay |
 | **Who does it cover?** | The ISP law reaches only broadband providers serving customers physically located and billed in Maine; the breach act reaches any person maintaining computerized personal information of Maine residents — including state agencies, municipalities, and universities — with no revenue or volume threshold |
-| **Can consumers sue?** | None under the breach act (regulator/AG-enforced) and none stated in the ISP law; Maine UTPA § 213 gives consumer purchasers a restitution-oriented action for loss of money or property from unfair or deceptive practices |
+| **Can consumers sue?** | No |
+| **Privacy policy rule** | Policy required only for specific data |
+| **Consent for sensitive data?** | Only for certain data types |
+| **Browser opt-out signals?** | Not required |
+| **Lawsuit detail** | None under the breach act (regulator/AG-enforced) and none stated in the ISP law; Maine UTPA § 213 gives consumer purchasers a restitution-oriented action for loss of money or property from unfair or deceptive practices |
 | **Who enforces it?** | Maine Attorney General; Department of Professional and Financial Regulation regulators for licensed entities (Bureau of Insurance superintendent for insurance licensees) |
 
 ## Which privacy laws apply to your business in Maine? {#which-privacy-laws-apply}

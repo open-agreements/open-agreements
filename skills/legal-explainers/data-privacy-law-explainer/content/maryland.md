@@ -26,11 +26,16 @@ The Maryland Online Data Privacy Act gives Maryland consumers rights over their 
 
 | Question | Maryland |
 | --- | --- |
+| **Law coverage** | Comprehensive law |
 | **Summary** | If you meet the 35,000-consumer (or 10,000 plus 20%-data-sale) threshold in Maryland, MODPA requires a detailed privacy notice and processor contracts, limits sensitive-data collection to what is strictly necessary, and bans the sale of sensitive data and of a minor's data outright — enforced by the Attorney General, with a cure period that sunsets for violations after April 1, 2027 and no consumer lawsuits. |
 | **Main law** | Md. Code Ann., Com. Law §§ 14-4701 et seq. (Maryland Online Data Privacy Act) |
 | **Privacy policy required?** | Yes — a reasonably accessible, clear, and meaningful notice with statutorily fixed contents, including detailed third-party disclosures |
 | **Who does it cover?** | Persons doing business in Maryland (or targeting residents) that, in the prior calendar year, controlled or processed the data of 35,000+ consumers, or 10,000+ consumers while deriving more than 20% of gross revenue from selling data — a low threshold with only a narrow nonprofit carve-out |
-| **Can consumers sue?** | No — enforcement is exclusively the Attorney General's Consumer Protection Division |
+| **Can consumers sue?** | No |
+| **Privacy policy rule** | Policy contents fixed by law |
+| **Consent for sensitive data?** | Opt-out right or limits instead |
+| **Browser opt-out signals?** | Not required |
+| **Lawsuit detail** | No — enforcement is exclusively the Attorney General's Consumer Protection Division |
 | **Who enforces it?** | Maryland Attorney General, Consumer Protection Division (exclusive) |
 
 ## Does the Maryland Online Data Privacy Act apply to your business? {#does-modpa-apply}

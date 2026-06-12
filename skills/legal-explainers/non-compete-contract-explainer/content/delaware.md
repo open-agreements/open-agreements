@@ -2,7 +2,7 @@
 jurisdiction: "Delaware"
 slug: delaware
 countryCode: US
-snapshotAsOf: "2026-06-10"
+snapshotAsOf: "2026-06-12"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/legal/non-compete/delaware
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/delaware · **Snapshot as of:** 2026-06-10 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/delaware · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
 
 # Non-Competes in Delaware[^about]
 
@@ -55,7 +55,7 @@ That is not a safe harbor for nationwide clauses. It is a procedural and factual
 
 **Short answer.** Usually not as a litigation strategy. Delaware courts retain equitable discretion, but recent Chancery and Supreme Court decisions warn that overbroad covenants may fall rather than be rewritten [^sunder-supreme-blue-pencil-discretion].
 
-The modern no-blue-pencil spine comes from *Kodiak*, *Intertek*, and *Sunder*. The reason is incentive-based: if courts routinely trim overbroad restrictions, employers can draft broadly, chill workers, and still get a lawful restraint if challenged [^kodiak-blue-pencil-inequity][^intertek-no-rescue][^sunder-supreme-perverse-incentives].
+The modern no-blue-pencil spine comes from *Kodiak*, *Intertek*, and *Sunder*. The reason is incentive-based: if courts routinely trim overbroad restrictions, employers can draft broadly, chill workers, and still get a lawful restraint if challenged [^kodiak-blue-pencil-inequity][^intertek-no-rescue][^sunder-supreme-perverse-incentives]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Delaware non-compete review checklist](/legal/non-compete/delaware-review-checklist) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**

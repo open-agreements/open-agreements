@@ -2,7 +2,7 @@
 jurisdiction: "Utah"
 slug: utah
 countryCode: US
-snapshotAsOf: "2026-06-10"
+snapshotAsOf: "2026-06-12"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/legal/non-compete/utah
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/utah · **Snapshot as of:** 2026-06-10 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/utah · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
 
 # Non-Competes in Utah[^about]
 
@@ -146,7 +146,7 @@ The bans reach beyond pure non-competes. From the same date, a healthcare nonsol
 
 **Short answer.** Probably not for the duration problem, and the broader reformation question is unsettled. The statute makes an over-length covenant void rather than voidable, which most commentary reads as stripping courts of the power to trim it to a lawful term [^narrow-void].
 
-For overbreadth in scope or activity, Utah's common law has historically been reluctant to rewrite restraints, preferring to enforce only covenants that were carefully drawn in the first place [^narrow-careful-drafting]. There is no modern Utah Supreme Court decision squarely reconciling the equitable blue-pencil doctrine with the 2016 statute's *void* language, so the safest assumption is that a Utah court will not rescue a defective covenant.
+For overbreadth in scope or activity, Utah's common law has historically been reluctant to rewrite restraints, preferring to enforce only covenants that were carefully drawn in the first place [^narrow-careful-drafting]. There is no modern Utah Supreme Court decision squarely reconciling the equitable blue-pencil doctrine with the 2016 statute's *void* language, so the safest assumption is that a Utah court will not rescue a defective covenant. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Utah non-compete review checklist](/legal/non-compete/utah-review-checklist) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**

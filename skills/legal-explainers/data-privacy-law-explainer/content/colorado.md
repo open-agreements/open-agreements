@@ -26,11 +26,16 @@ The Colorado Privacy Act gives Colorado consumers rights over their personal dat
 
 | Question | Colorado |
 | --- | --- |
+| **Law coverage** | Comprehensive law |
 | **Summary** | If you do business in Colorado and meet the 100,000-consumer (or 25,000 plus data-sale) threshold — nonprofits included — the CPA requires a privacy notice, a universal opt-out mechanism, processor contracts, and consent to process sensitive data, enforced by the Attorney General with no consumer lawsuits and no cure period. |
 | **Main law** | Colo. Rev. Stat. §§ 6-1-1301 et seq. (Colorado Privacy Act) |
 | **Privacy policy required?** | Yes — a reasonably accessible, clear, and meaningful notice with statutorily fixed contents |
 | **Who does it cover?** | Controllers doing business in Colorado (or targeting Coloradans) that control or process the data of 100,000+ consumers a year, or 25,000+ while deriving revenue from selling data — nonprofits included; no revenue floor |
-| **Can consumers sue?** | No — the statute bars any private right of action |
+| **Can consumers sue?** | No |
+| **Privacy policy rule** | Policy contents fixed by law |
+| **Consent for sensitive data?** | Consent required first |
+| **Browser opt-out signals?** | Must be honored |
+| **Lawsuit detail** | No — the statute bars any private right of action |
 | **Who enforces it?** | Colorado Attorney General and district attorneys |
 
 ## Does the Colorado Privacy Act apply to your business? {#does-cpa-apply}

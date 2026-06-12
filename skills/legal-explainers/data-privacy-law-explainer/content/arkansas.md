@@ -26,11 +26,16 @@ Arkansas has no comprehensive consumer-privacy statute. The Personal Information
 
 | Question | Arkansas |
 | --- | --- |
+| **Law coverage** | Specific data types only |
 | **Summary** | Arkansas has not enacted a comprehensive consumer-privacy law, so there are no general data-rights, consent, or processor-contract duties under state law today. The operative statute is the Personal Information Protection Act, which requires reasonable security, secure disposal, and breach notification — including Attorney General notice for breaches affecting more than 1,000 people — and is enforced exclusively by the Attorney General through the Deceptive Trade Practices Act, with no private right of action. The big change is imminent — the Arkansas Children and Teens' Online Privacy Protection Act (Act 952 of 2025) takes effect July 1, 2026, banning targeted advertising to children and teens, imposing data-minimization, notice, consent, deletion, and security duties on covered operators, and giving the Attorney General exclusive enforcement authority. |
 | **Main law** | Personal Information Protection Act, Ark. Code Ann. §§ 4-110-101 to 4-110-108 — Arkansas has no comprehensive consumer-privacy law; PIPA (safeguards, disposal, breach notice) plus the Deceptive Trade Practices Act and the federal overlay is the operative framework, with the Arkansas Children and Teens' Online Privacy Protection Act (Act 952 of 2025) effective July 1, 2026 |
 | **Privacy policy required?** | No Arkansas statute mandates a general consumer privacy policy or fixes its contents; whatever is posted must be true under the ADTPA catch-all and FTC Act § 5, and from July 1, 2026 covered operators must give clear and conspicuous notice with six required elements for children's and teens' data |
 | **Who does it cover?** | Any person or business — however organized, for profit or not, expressly including state agencies — that acquires, owns, or licenses personal information about Arkansas residents; no revenue or consumer-volume threshold. From July 1, 2026, for-profit operators of websites, online services, or apps directed at children or teens, or with actual knowledge of collecting their data, are also covered |
-| **Can consumers sue?** | Not under PIPA — every violation is punishable by action of the Attorney General under the ADTPA; the ADTPA's own private remedy requires actual financial loss caused by individual reliance and bans private class actions, and Act 952 of 2025 expressly disclaims any private right of action |
+| **Can consumers sue?** | No |
+| **Privacy policy rule** | Policy required only for specific data |
+| **Consent for sensitive data?** | Only for certain data types |
+| **Browser opt-out signals?** | Not required |
+| **Lawsuit detail** | Not under PIPA — every violation is punishable by action of the Attorney General under the ADTPA; the ADTPA's own private remedy requires actual financial loss caused by individual reliance and bans private class actions, and Act 952 of 2025 expressly disclaims any private right of action |
 | **Who enforces it?** | Arkansas Attorney General |
 
 ## Which privacy laws apply to your business in Arkansas? {#which-privacy-laws-apply}

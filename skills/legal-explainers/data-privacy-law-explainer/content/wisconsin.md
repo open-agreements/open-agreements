@@ -26,11 +26,16 @@ Wisconsin has no comprehensive consumer-privacy statute — the 2025–26 Wiscon
 
 | Question | Wisconsin |
 | --- | --- |
+| **Law coverage** | No comprehensive law |
 | **Summary** | Wisconsin has no comprehensive consumer-privacy law — the 2025–26 Wisconsin Data Privacy Act bills (AB 172/SB 166) failed on March 23, 2026 — so there are no general data-rights, consent, or processor-contract duties under state law. The operative state statute is the breach-notification law, Wis. Stat. § 134.98, which sets a 45-day notice clock but prescribes no penalty, names no enforcer, and creates no private right of action; its practical teeth are evidentiary use in negligence suits plus possible federal FTC Act exposure for unfair or deceptive conduct. The rest of a Wisconsin program rides sectoral statutes — record disposal, patient health records, insurance data security — and the federal overlay, with the codified § 995.50 right of privacy supplying Wisconsin's only general privacy private action. |
 | **Main law** | No comprehensive consumer-privacy law — Wis. Stat. § 134.98 (breach notification) is the operative general statute, alongside sectoral rules (§§ 134.97, 146.84, ch. 601 subch. IX), the § 995.50 right of privacy, and the federal overlay |
 | **Privacy policy required?** | No Wisconsin statute mandates a consumer privacy policy or fixes its contents; the operative rules are FTC Act § 5 (unfair or deceptive conduct can create federal exposure), § 100.18 (untrue, deceptive or misleading public representations), and the GLBA, HIPAA, and COPPA notice rules where the business is in scope |
 | **Who does it cover?** | § 134.98 covers any entity — expressly including state and local government — that conducts business in Wisconsin and maintains personal information, licenses personal information in the state, maintains depository accounts for residents, or lends money to residents; no size or revenue threshold |
-| **Can consumers sue?** | Not under § 134.98 — noncompliance is only potential evidence of negligence; § 100.18(11)(b)2. requires pecuniary loss; the codified right of privacy, § 995.50, is Wisconsin's only general privacy private action, and § 146.84 adds a strong one for patient health-care records |
+| **Can consumers sue?** | Yes |
+| **Privacy policy rule** | No state policy checklist |
+| **Consent for sensitive data?** | No special rule |
+| **Browser opt-out signals?** | Not required |
+| **Lawsuit detail** | Not under § 134.98 — noncompliance is only potential evidence of negligence; § 100.18(11)(b)2. requires pecuniary loss; the codified right of privacy, § 995.50, is Wisconsin's only general privacy private action, and § 146.84 adds a strong one for patient health-care records |
 | **Who enforces it?** | No designated privacy regulator — § 134.98 names no enforcement agency; DATCP enforces § 100.18, and the Commissioner of Insurance enforces insurance data security |
 
 ## Which privacy laws apply to your business in Wisconsin? {#which-privacy-laws-apply}

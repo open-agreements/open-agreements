@@ -26,11 +26,16 @@ New York has no comprehensive consumer-privacy act. The SHIELD Act (GBL §§ 899
 
 | Question | New York |
 | --- | --- |
+| **Law coverage** | Specific data types only |
 | **Summary** | New York has not enacted a comprehensive consumer-privacy law, but the SHIELD Act already requires almost every business holding New Yorkers' private information — with no revenue or in-state-presence threshold — to run a reasonable data-security program, to report breaches within 30 days, and to expect Attorney General enforcement under separate SHIELD and breach-notice provisions. Since June 20, 2025 the Child Data Protection Act has added a default-deny regime for processing personal data of users under 18, including a sale ban subject to statutory exceptions. There is no general privacy-policy mandate, so the policy slice is governed by the rule that whatever you publish must be true; the moving piece to watch is the twice-passed Health Information Privacy Act, which would add a strict consumer-health-data regime if it becomes law. |
 | **Main law** | SHIELD Act — N.Y. Gen. Bus. Law § 899-bb (reasonable-safeguards duty) and § 899-aa (breach notification) — plus the Child Data Protection Act (GBL art. 39-FF, in force since June 20, 2025) and GBL § 349; New York has no comprehensive consumer-privacy statute |
 | **Privacy policy required?** | No general New York statute mandates a consumer privacy policy or fixes its contents; a published policy that misstates practices is actionable under GBL § 349 and FTC Act § 5, and GLBA, HIPAA, and COPPA supply required contents where they apply |
 | **Who does it cover?** | Any person or business, wherever located, that owns or licenses computerized data including the private information of a New York resident — no in-state-presence, revenue, or volume threshold; small businesses get scaled (not waived) duties; the Child Data Protection Act covers operators of online services with New York users under 18 |
-| **Can consumers sue?** | Not under the SHIELD Act — § 899-bb expressly creates none and § 899-aa runs through the Attorney General; but GBL § 349(h) lets a consumer injured by a deceptive practice sue for actual damages or $50 (treble to $1,000) plus attorney's fees |
+| **Can consumers sue?** | Limited path |
+| **Privacy policy rule** | Policy required only for specific data |
+| **Consent for sensitive data?** | Only for certain data types |
+| **Browser opt-out signals?** | Must be honored |
+| **Lawsuit detail** | Not under the SHIELD Act — § 899-bb expressly creates none and § 899-aa runs through the Attorney General; but GBL § 349(h) lets a consumer injured by a deceptive practice sue for actual damages or $50 (treble to $1,000) plus attorney's fees |
 | **Who enforces it?** | New York Attorney General (Commissioner of Labor for employee personal-identifying-information violations under Labor Law § 203-d) |
 
 ## Which privacy laws apply to your business in New York? {#which-privacy-laws-apply}

@@ -26,11 +26,16 @@ Michigan has no comprehensive consumer-privacy act. The operative state laws are
 
 | Question | Michigan |
 | --- | --- |
+| **Law coverage** | Specific data types only |
 | **Summary** | Michigan has not enacted a comprehensive consumer-privacy law, so there are no general data-rights, notice-at-collection, consent, or processor-contract duties under state law. What Michigan has instead is a distinctive set of sectoral exposures. The Preservation of Personal Privacy Act bars businesses from disclosing records that identify what a customer bought, rented, or borrowed in books, music, or video without a statutory exception, such as permission, marketing notice and opt-out, ordinary course, or legal process, and it carries a private right of action that has produced an active class-action industry — with $5,000-per-customer statutory damages still in play for disclosures predating its July 31, 2016 amendment. The Identity Theft Protection Act requires breach notice without unreasonable delay, backed by civil fines up to $750,000 per breach. Build the rest of the program to the federal overlay — FTC Act § 5, GLBA, HIPAA, and COPPA — and it auto-upgrades if Michigan later enacts an omnibus law. |
 | **Main law** | Sectoral framework — Preservation of Personal Privacy Act (PPPA), MCL 445.1711–445.1715; Identity Theft Protection Act breach-notice duty, MCL 445.72; Michigan Consumer Protection Act, MCL 445.901 et seq.; Michigan has no comprehensive consumer-privacy law |
 | **Privacy policy required?** | No general website privacy-policy mandate and no state-fixed website contents — but a person obtaining Social Security numbers in the ordinary course of business must create an internal SSN privacy policy, a PPPA-covered business disclosing customer reading or viewing data for marketing may give the required opt-out notice in an online privacy policy, and a policy that misstates practices is deceptive under the MCPA and FTC Act § 5 |
 | **Who does it cover?** | No omnibus thresholds. The PPPA reaches any business selling at retail, renting, or lending books or other written materials, sound recordings, or video recordings; the breach statute reaches any person or agency that owns, licenses, or maintains computerized personal information of Michigan residents |
-| **Can consumers sue?** | Yes, under the PPPA — a customer who suffers actual damages may sue (MCL 445.1715), and disclosures predating the July 31, 2016 amendment carry $5,000 statutory damages; the MCPA right of action (MCL 445.911) survives but Smith v. Globe Life's regulated-conduct exemption narrows it; none under the breach statute |
+| **Can consumers sue?** | Yes |
+| **Privacy policy rule** | Policy required only for specific data |
+| **Consent for sensitive data?** | Only for certain data types |
+| **Browser opt-out signals?** | Not required |
+| **Lawsuit detail** | Yes, under the PPPA — a customer who suffers actual damages may sue (MCL 445.1715), and disclosures predating the July 31, 2016 amendment carry $5,000 statutory damages; the MCPA right of action (MCL 445.911) survives but Smith v. Globe Life's regulated-conduct exemption narrows it; none under the breach statute |
 | **Who enforces it?** | Michigan Attorney General (MCPA enforcement; breach-notice civil fines, which a county prosecuting attorney may also recover), with the FTC behind the federal overlay |
 
 ## Which privacy laws apply to your business in Michigan? {#which-privacy-laws-apply}

@@ -26,11 +26,16 @@ The Utah Consumer Privacy Act gives Utah consumers rights over their personal da
 
 | Question | Utah |
 | --- | --- |
+| **Law coverage** | Comprehensive law |
 | **Summary** | The UCPA covers only larger businesses ($25M+ revenue plus a volume threshold). Covered controllers must post a privacy notice, give notice and an opt-out before processing sensitive data, sign processor contracts, and honor opt-outs — enforced by the Attorney General after a 30-day cure, with no consumer lawsuits. |
 | **Main law** | Utah Code §§ 13-61-101 et seq. (Utah Consumer Privacy Act) |
 | **Privacy policy required?** | Yes — a reasonably accessible and clear notice with statutorily fixed contents |
 | **Who does it cover?** | Controllers or processors doing business in Utah (or targeting Utahns) with $25,000,000+ annual revenue that also process the data of 100,000+ consumers a year, or 25,000+ while deriving 50%+ of revenue from selling data |
-| **Can consumers sue?** | No — enforcement is exclusively the Attorney General's |
+| **Can consumers sue?** | No |
+| **Privacy policy rule** | Policy contents fixed by law |
+| **Consent for sensitive data?** | Opt-out right or limits instead |
+| **Browser opt-out signals?** | Not required |
+| **Lawsuit detail** | No — enforcement is exclusively the Attorney General's |
 | **Who enforces it?** | Utah Attorney General (after Division of Consumer Protection investigation) |
 
 ## Does the Utah Consumer Privacy Act apply to your business? {#does-ucpa-apply}

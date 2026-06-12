@@ -26,11 +26,16 @@ Ohio has no comprehensive consumer-privacy statute. The operative framework is t
 
 | Question | Ohio |
 | --- | --- |
+| **Law coverage** | No comprehensive law |
 | **Summary** | Ohio regulates consumer data by sector, not comprehensively — the operative duties are 45-day breach notification under Ohio Rev. Code § 1349.19 (Attorney General enforced, no private right of action) and truthful data practices under the Consumer Sales Practices Act, while the Ohio Data Protection Act (ch. 1354) gives a business that maintains a written cybersecurity program conforming to a recognized framework an affirmative defense to data-breach tort claims. |
 | **Main law** | Ohio Rev. Code § 1349.19 (data-breach notification) plus ch. 1354 (Ohio Data Protection Act cybersecurity safe harbor) and ch. 1345 (Consumer Sales Practices Act) — Ohio has no comprehensive consumer-privacy law |
 | **Privacy policy required?** | No Ohio statute mandates a consumer privacy policy or fixes its contents; the federal overlay (FTC Act § 5, GLBA, HIPAA, COPPA) supplies the notice duties, and a policy that misstates practices is a deceptive act under the Consumer Sales Practices Act |
 | **Who does it cover?** | Any person or business entity that conducts business in Ohio and owns or licenses computerized personal information of Ohio residents — no revenue or data-volume threshold; HIPAA covered entities and federally regulated financial institutions are exempt from the breach statute |
-| **Can consumers sue?** | Not under the breach statute — Ohio Rev. Code § 1349.192 gives the Attorney General exclusive enforcement authority; the Consumer Sales Practices Act allows individual suits, but treble damages and class actions are gated on a prior rule or published court decision |
+| **Can consumers sue?** | Limited path |
+| **Privacy policy rule** | No state policy checklist |
+| **Consent for sensitive data?** | No special rule |
+| **Browser opt-out signals?** | Not required |
+| **Lawsuit detail** | Not under the breach statute — Ohio Rev. Code § 1349.192 gives the Attorney General exclusive enforcement authority; the Consumer Sales Practices Act allows individual suits, but treble damages and class actions are gated on a prior rule or published court decision |
 | **Who enforces it?** | Ohio Attorney General (breach notification and Consumer Sales Practices Act); superintendent of insurance for insurance licensees under ch. 3965 |
 
 ## Which privacy laws apply to your business in Ohio? {#which-privacy-laws-apply}

@@ -26,11 +26,16 @@ Vermont regulates privacy today through breach-notice, data-broker, and consumer
 
 | Question | Vermont |
 | --- | --- |
+| **Law coverage** | Specific data types only |
 | **Summary** | Vermont today is a sectoral-statute state — the Security Breach Notice Act, the data-broker registration law, and the Consumer Protection Act are the operative framework — but that could change within days: S.71, the Vermont Data Privacy and Online Surveillance Act, passed both chambers and was delivered to the Governor on June 10, 2026, with a constitutional deadline to act on or about June 16, 2026, and the enacted Age-Appropriate Design Code takes effect January 1, 2027. |
 | **Main law** | Security Breach Notice Act, 9 V.S.A. § 2435, plus the data-broker law, 9 V.S.A. §§ 2446–2447 — Vermont has no comprehensive consumer-privacy act in force; S.71 (comprehensive) is awaiting action by the Governor, and the Age-Appropriate Design Code, 9 V.S.A. §§ 2449a–2449i, takes effect January 1, 2027 |
 | **Privacy policy required?** | No Vermont statute requires a general consumer privacy policy today or fixes its contents; notice duties arise only in scoped settings — breach notices, data-broker registry disclosures, and (from January 1, 2027) the design code's transparency duties — with FTC Act § 5 and the Consumer Protection Act policing whatever a business publishes |
 | **Who does it cover?** | Breach duties reach any data collector that handles computerized personal information of Vermont residents, with no size threshold; data-broker duties reach businesses that knowingly collect and sell or license data about consumers with whom they have no direct relationship |
-| **Can consumers sue?** | Not under the privacy statutes themselves, which route enforcement to the Attorney General; but the Consumer Protection Act, 9 V.S.A. § 2461(b), lets a consumer who contracts in reliance on, or sustains damages from, a prohibited practice sue for damages, attorney's fees, and exemplary damages up to three times the consideration |
+| **Can consumers sue?** | Limited path |
+| **Privacy policy rule** | Policy required only for specific data |
+| **Consent for sensitive data?** | Only for certain data types |
+| **Browser opt-out signals?** | Not required |
+| **Lawsuit detail** | Not under the privacy statutes themselves, which route enforcement to the Attorney General; but the Consumer Protection Act, 9 V.S.A. § 2461(b), lets a consumer who contracts in reliance on, or sustains damages from, a prohibited practice sue for damages, attorney's fees, and exemplary damages up to three times the consideration |
 | **Who enforces it?** | Vermont Attorney General (Department of Financial Regulation for its licensees) |
 
 ## Which privacy laws apply to your business in Vermont? {#which-privacy-laws-apply}

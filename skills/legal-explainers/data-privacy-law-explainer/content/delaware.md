@@ -26,11 +26,16 @@ The Delaware Personal Data Privacy Act gives Delaware residents rights over thei
 
 | Question | Delaware |
 | --- | --- |
+| **Law coverage** | Comprehensive law |
 | **Summary** | If you control or process the data of 35,000 Delaware residents (or 10,000 plus a fifth of revenue from selling data), the DPDPA requires a privacy notice, opt-in consent to process sensitive data, and processor contracts — enforced by the Department of Justice, whose temporary right-to-cure expired at the end of 2025, with no consumer lawsuits. |
 | **Main law** | Del. Code tit. 6 §§ 12D-101 et seq. (Delaware Personal Data Privacy Act) |
 | **Privacy policy required?** | Yes — a reasonably accessible, clear, and meaningful notice with statutorily fixed contents |
 | **Who does it cover?** | Persons doing business in Delaware (or targeting residents) that control or process the data of 35,000+ consumers a year, or 10,000+ while deriving more than 20% of gross revenue from selling data — no revenue floor, and only insurance-crime nonprofits are exempt |
-| **Can consumers sue?** | No — enforcement belongs solely to the Delaware Department of Justice |
+| **Can consumers sue?** | No |
+| **Privacy policy rule** | Policy contents fixed by law |
+| **Consent for sensitive data?** | Consent required first |
+| **Browser opt-out signals?** | Must be honored |
+| **Lawsuit detail** | No — enforcement belongs solely to the Delaware Department of Justice |
 | **Who enforces it?** | Delaware Department of Justice (exclusive) |
 
 ## Does the Delaware Personal Data Privacy Act apply to your business? {#does-dpdpa-apply}

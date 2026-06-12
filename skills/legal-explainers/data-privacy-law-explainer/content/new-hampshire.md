@@ -26,11 +26,16 @@ The New Hampshire Privacy Act gives New Hampshire consumers rights over their pe
 
 | Question | New Hampshire |
 | --- | --- |
+| **Law coverage** | Comprehensive law |
 | **Summary** | If you meet the 35,000-consumer (or 10,000 plus majority-share-of-revenue-from-data-sale) threshold in New Hampshire, ch. 507-H requires a privacy notice, opt-in consent to process sensitive data, and processor contracts — enforced by the Attorney General with no consumer lawsuits and a cure period that became discretionary on January 1, 2026. |
 | **Main law** | N.H. Rev. Stat. Ann. ch. 507-H (New Hampshire Privacy Act), effective January 1, 2025 |
 | **Privacy policy required?** | Yes — a clear and meaningful privacy notice in a reasonably accessible format with statutorily fixed contents |
 | **Who does it cover?** | Persons doing business in New Hampshire (or targeting residents) that in a one-year period control or process the data of 35,000+ unique consumers (excluding payment-only data), or 10,000+ consumers while deriving more than 25% of gross revenue from selling data — no revenue floor; nonprofits, higher education, and GLBA- and HIPAA-regulated entities exempt |
-| **Can consumers sue?** | No — enforcement is exclusively the Attorney General's |
+| **Can consumers sue?** | No |
+| **Privacy policy rule** | Policy contents fixed by law |
+| **Consent for sensitive data?** | Consent required first |
+| **Browser opt-out signals?** | Must be honored |
+| **Lawsuit detail** | No — enforcement is exclusively the Attorney General's |
 | **Who enforces it?** | New Hampshire Attorney General (exclusive) |
 
 ## Does the New Hampshire Privacy Act apply to your business? {#does-nhpa-apply}

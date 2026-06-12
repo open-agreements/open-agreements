@@ -26,11 +26,16 @@ Arizona has no comprehensive consumer-privacy statute. The operative state laws 
 
 | Question | Arizona |
 | --- | --- |
+| **Law coverage** | Specific data types only |
 | **Summary** | Arizona has no comprehensive consumer-privacy law — despite a circulating vendor claim, none took effect on January 1, 2026 — so the operative state framework is the 45-day breach-notification statute, the Consumer Fraud Act, and the 2021 Genetic Information Privacy Act for DNA testing companies. |
 | **Main law** | A.R.S. §§ 18-551 to 18-552 (data-breach notification) plus the Consumer Fraud Act, A.R.S. §§ 44-1521 et seq. — Arizona has no comprehensive consumer-privacy law; sectoral statutes and a federal overlay are the operative framework |
 | **Privacy policy required?** | No Arizona statute requires a commercial privacy policy — the only state mandates cover state-agency websites and direct-to-consumer genetic testing companies; contents are otherwise driven by FTC Act § 5 and Consumer Fraud Act deception risk |
 | **Who does it cover?** | Any person conducting business in Arizona that owns, maintains, or licenses computerized personal information of Arizona residents — no revenue or consumer-volume threshold; the Genetic Information Privacy Act adds duties for direct-to-consumer genetic testing companies |
-| **Can consumers sue?** | Not under the breach statute or the Genetic Information Privacy Act — both are Attorney General-enforced; other consumer theories, including Consumer Fraud Act or common-law claims, remain fact-specific and untested for pure privacy claims |
+| **Can consumers sue?** | No |
+| **Privacy policy rule** | Policy required only for specific data |
+| **Consent for sensitive data?** | Only for certain data types |
+| **Browser opt-out signals?** | Not required |
+| **Lawsuit detail** | Not under the breach statute or the Genetic Information Privacy Act — both are Attorney General-enforced; other consumer theories, including Consumer Fraud Act or common-law claims, remain fact-specific and untested for pure privacy claims |
 | **Who enforces it?** | Arizona Attorney General |
 
 ## Which privacy laws apply to your business in Arizona? {#which-privacy-laws-apply}

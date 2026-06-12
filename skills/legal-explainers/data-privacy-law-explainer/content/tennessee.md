@@ -26,11 +26,16 @@ The Tennessee Information Protection Act gives Tennessee consumers rights over t
 
 | Question | Tennessee |
 | --- | --- |
+| **Law coverage** | Comprehensive law |
 | **Summary** | If you exceed the $25 million revenue floor and meet Tennessee's large consumer-volume tests, TIPA requires a privacy notice, opt-in consent to process sensitive data, and processor contracts — enforced by the Attorney General with a 60-day cure period and no consumer lawsuits, and uniquely offering an affirmative defense to businesses that maintain a written privacy program conforming to the NIST privacy framework. |
 | **Main law** | Tenn. Code Ann. §§ 47-18-3301 et seq. (Tennessee Information Protection Act) |
 | **Privacy policy required?** | Yes — a reasonably accessible, clear, and meaningful notice with statutorily fixed contents |
 | **Who does it cover?** | Persons doing business in Tennessee (or targeting residents) that exceed $25 million in revenue AND either process the information of 175,000+ consumers a year, or 25,000+ while deriving over 50% of gross revenue from selling personal information — a high entry bar; nonprofits, government, GLBA, HIPAA, and higher-education entities exempt |
-| **Can consumers sue?** | No — enforcement is exclusively the Attorney General's |
+| **Can consumers sue?** | No |
+| **Privacy policy rule** | Policy contents fixed by law |
+| **Consent for sensitive data?** | Consent required first |
+| **Browser opt-out signals?** | Not required |
+| **Lawsuit detail** | No — enforcement is exclusively the Attorney General's |
 | **Who enforces it?** | Tennessee Attorney General and Reporter (exclusive) |
 
 ## Does the Tennessee Information Protection Act apply to your business? {#does-tipa-apply}

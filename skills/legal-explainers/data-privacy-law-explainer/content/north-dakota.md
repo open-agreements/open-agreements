@@ -26,11 +26,16 @@ North Dakota has no comprehensive consumer-privacy statute. Chapter 51-30 govern
 
 | Question | North Dakota |
 | --- | --- |
+| **Law coverage** | No comprehensive law |
 | **Summary** | North Dakota has not enacted a comprehensive consumer-privacy law — the operative state framework is the ch. 51-30 breach-notification statute, enforced by the Attorney General through the ch. 51-15 consumer-fraud law, plus a 2025 information-security chapter for state-regulated financial corporations, with everything else riding the federal and sectoral overlay. |
 | **Main law** | N.D. Cent. Code ch. 51-30 (breach notification) — North Dakota has no comprehensive consumer-privacy law; ch. 51-30 plus the consumer-fraud law (ch. 51-15) and the 2025 financial-corporation data-security chapter (ch. 13-01.2) are the operative state framework |
 | **Privacy policy required?** | No North Dakota statute mandates a consumer privacy policy or fixes its contents; a policy that misstates practices can be a deceptive practice under N.D. Cent. Code ch. 51-15 and FTC Act § 5, with GLBA, HIPAA, and COPPA supplying contents where those regimes apply |
 | **Who does it cover?** | Any person that owns or licenses computerized data including personal information of North Dakota residents — no revenue or consumer-volume threshold; the 2025 data-security chapter reaches financial corporations regulated by the Department of Financial Institutions |
-| **Can consumers sue?** | Not expressly under ch. 51-30 — the Attorney General enforces it — but a ch. 51-30 violation is deemed a ch. 51-15 violation, and § 51-15-09 preserves private claims, with treble damages for knowing conduct, against a defendant who acquired money or property through an unlawful practice |
+| **Can consumers sue?** | Limited path |
+| **Privacy policy rule** | No state policy checklist |
+| **Consent for sensitive data?** | No special rule |
+| **Browser opt-out signals?** | Not required |
+| **Lawsuit detail** | Not expressly under ch. 51-30 — the Attorney General enforces it — but a ch. 51-30 violation is deemed a ch. 51-15 violation, and § 51-15-09 preserves private claims, with treble damages for knowing conduct, against a defendant who acquired money or property through an unlawful practice |
 | **Who enforces it?** | North Dakota Attorney General; Commissioner of the Department of Financial Institutions for the 2025 financial-corporation data-security chapter |
 
 ## Which privacy laws apply to your business in North Dakota? {#which-privacy-laws-apply}

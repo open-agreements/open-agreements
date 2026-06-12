@@ -26,11 +26,16 @@ New Mexico has no comprehensive consumer-privacy statute — the 2026 omnibus bi
 
 | Question | New Mexico |
 | --- | --- |
+| **Law coverage** | No comprehensive law |
 | **Summary** | New Mexico has not enacted a comprehensive consumer-privacy law — the Consumer Information and Data Protection Act (HB 214) died in the 2026 session, and aggregator pages reporting a July 1, 2026 effective date are describing a dead bill. What governs today is the Data Breach Notification Act (45-day breach notice, reasonable-security, disposal, and vendor-contract duties) plus the Unfair Practices Act, which can create private damages exposure when a covered privacy-policy or breach-response misstatement causes money or property loss. |
 | **Main law** | Data Breach Notification Act, NMSA 1978, §§ 57-12C-1 to -12, plus the Unfair Practices Act, NMSA 1978, §§ 57-12-1 to -26 — New Mexico has no comprehensive consumer-privacy statute |
 | **Privacy policy required?** | No New Mexico statute mandates a consumer privacy policy or fixes its contents; what you publish is policed by FTC Act § 5 and the Unfair Practices Act, so a knowing policy misstatement tied to a covered transaction can create private exposure if a person loses money or property |
 | **Who does it cover?** | Any person that owns or licenses personal identifying information of New Mexico residents — no revenue or volume threshold; persons subject to GLBA or HIPAA are exempt from the breach act entirely |
-| **Can consumers sue?** | Not under the Data Breach Notification Act — enforcement is Attorney General-only; but the Unfair Practices Act gives a private action to a person who loses money or property from an unlawful practice, with a $100 statutory floor, possible treble damages for willful conduct, mandatory fee-shifting, and class actions |
+| **Can consumers sue?** | Limited path |
+| **Privacy policy rule** | No state policy checklist |
+| **Consent for sensitive data?** | No special rule |
+| **Browser opt-out signals?** | Not required |
+| **Lawsuit detail** | Not under the Data Breach Notification Act — enforcement is Attorney General-only; but the Unfair Practices Act gives a private action to a person who loses money or property from an unlawful practice, with a $100 statutory floor, possible treble damages for willful conduct, mandatory fee-shifting, and class actions |
 | **Who enforces it?** | New Mexico Attorney General (New Mexico Department of Justice) |
 
 ## Which privacy laws apply to your business in New Mexico? {#which-privacy-laws-apply}

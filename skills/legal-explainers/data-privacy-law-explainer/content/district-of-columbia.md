@@ -26,11 +26,16 @@ The District of Columbia has no comprehensive consumer-privacy statute; privacy 
 
 | Question | District of Columbia |
 | --- | --- |
+| **Law coverage** | No comprehensive law |
 | **Summary** | The District of Columbia has no omnibus privacy act, but its Consumer Protection Procedures Act lets consumers, testers, nonprofits, and public-interest organizations sue over deceptive data practices, and its breach law adds a reasonable-security duty, Attorney General notice at 50 affected residents, and 18 months of free identity-theft protection when a released Social Security or taxpayer identification number triggers that remedy. |
 | **Main law** | Consumer Protection Procedures Act (CPPA), D.C. Code §§ 28-3901 et seq., plus the consumer security-breach subchapter, D.C. Code §§ 28-3851–3853 — the District has no comprehensive consumer-privacy law |
 | **Privacy policy required?** | No District statute mandates a consumer privacy policy or fixes its contents; a policy that misstates practices is an unfair or deceptive trade practice under CPPA § 28-3904(e)–(f), and GLBA, HIPAA, and COPPA supply contents where they apply |
 | **Who does it cover?** | Breach notice reaches a person or entity conducting business in the District that owns or licenses covered electronic data; security, destruction, and vendor-contract duties use the separate conduct triggers in § 28-3852.01; the CPPA reaches merchants supplying consumer goods or services; the District government itself is carved out |
-| **Can consumers sue?** | Yes — CPPA § 28-3905(k)(1) grants standing to consumers, qualifying individual testers, nonprofits, and public-interest organizations, with treble or $1,500-per-violation damages; for § 28-3904(kk), the damages remedy is actual damages rather than treble or statutory damages |
+| **Can consumers sue?** | Yes |
+| **Privacy policy rule** | No state policy checklist |
+| **Consent for sensitive data?** | No special rule |
+| **Browser opt-out signals?** | Not required |
+| **Lawsuit detail** | Yes — CPPA § 28-3905(k)(1) grants standing to consumers, qualifying individual testers, nonprofits, and public-interest organizations, with treble or $1,500-per-violation damages; for § 28-3904(kk), the damages remedy is actual damages rather than treble or statutory damages |
 | **Who enforces it?** | Office of the Attorney General for the District of Columbia (CPPA consumer complaints run through the Department of Licensing and Consumer Protection) |
 
 ## Which privacy laws apply to your business in the District of Columbia? {#which-privacy-laws-apply}

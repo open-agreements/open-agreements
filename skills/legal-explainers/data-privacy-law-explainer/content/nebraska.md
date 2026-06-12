@@ -26,11 +26,16 @@ The Nebraska Data Privacy Act gives Nebraska consumers rights over their persona
 
 | Question | Nebraska |
 | --- | --- |
+| **Law coverage** | Comprehensive law |
 | **Summary** | If you do business in Nebraska (or serve its residents), process or sell personal data, and are not a federal small business, the Data Privacy Act requires a privacy notice, opt-in consent to process sensitive data, and processor contracts — enforced by the Attorney General with a 30-day cure period and no consumer lawsuits. |
 | **Main law** | Neb. Rev. Stat. §§ 87-1101 et seq. (Nebraska Data Privacy Act, effective Jan. 1, 2025) |
 | **Privacy policy required?** | Yes — a reasonably accessible and clear privacy notice with statutorily fixed contents |
 | **Who does it cover?** | Persons that conduct business in Nebraska or produce a product or service consumed by Nebraska residents, that process or sell personal data, and that are not a small business under the federal Small Business Act — no consumer-count or revenue threshold; state agencies, GLBA, HIPAA, nonprofits, and higher-education institutions exempt |
-| **Can consumers sue?** | No — the Act cannot be construed as a basis for a private right of action |
+| **Can consumers sue?** | No |
+| **Privacy policy rule** | Policy contents fixed by law |
+| **Consent for sensitive data?** | Consent required first |
+| **Browser opt-out signals?** | Not required |
+| **Lawsuit detail** | No — the Act cannot be construed as a basis for a private right of action |
 | **Who enforces it?** | Nebraska Attorney General (exclusive) |
 
 ## Does the Nebraska Data Privacy Act apply to your business? {#does-ndpa-apply}

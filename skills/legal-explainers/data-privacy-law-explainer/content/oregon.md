@@ -26,11 +26,16 @@ The Oregon Consumer Privacy Act gives Oregon consumers rights over their persona
 
 | Question | Oregon |
 | --- | --- |
+| **Law coverage** | Comprehensive law |
 | **Summary** | If you meet the 100,000-consumer (or 25,000 plus 25%-data-sale-revenue) threshold in Oregon, the OCPA requires a privacy notice with prescribed contents, opt-in consent to process sensitive data, recognition of a universal opt-out signal, and processor contracts — enforced by the Attorney General with civil penalties up to $7,500 per violation, no consumer lawsuits, and no general right to cure after January 1, 2026. |
 | **Main law** | Or. Rev. Stat. §§ 646A.570–646A.589 (Oregon Consumer Privacy Act) |
 | **Privacy policy required?** | Yes — a reasonably accessible, clear, and meaningful notice with statutorily fixed contents |
 | **Who does it cover?** | Persons doing business in Oregon (or targeting residents) that, in a calendar year, control or process the personal data of 100,000+ consumers, or 25,000+ while deriving 25% or more of annual gross revenue from selling personal data — no dollar revenue floor; nonprofits covered; GLBA financial institutions, insurers, and public bodies are exempt at the entity level, while HIPAA-regulated health data is exempt only at the data level (so HIPAA-covered businesses still comply for non-exempt data) |
-| **Can consumers sue?** | No — enforcement is exclusively the Attorney General's |
+| **Can consumers sue?** | No |
+| **Privacy policy rule** | Policy contents fixed by law |
+| **Consent for sensitive data?** | Consent required first |
+| **Browser opt-out signals?** | Must be honored |
+| **Lawsuit detail** | No — enforcement is exclusively the Attorney General's |
 | **Who enforces it?** | Oregon Attorney General (exclusive) |
 
 ## Does the OCPA apply to your business? {#does-ocpa-apply}

@@ -1,7 +1,7 @@
 {
   "topic": "privacy",
   "snapshotAsOf": "2026-06-12",
-  "sourceCommit": "0229e60e076c8330ab9bdda7dbed31783093e64f",
+  "sourceCommit": "aa7161d1ab1a98d72c5b28e4f8eb619fa9ee02f4",
   "canonicalBase": "https://openagreements.org/legal/privacy",
   "license": "CC BY 4.0",
   "jurisdictions": [
@@ -96,6 +96,15 @@
       "stale": false
     },
     {
+      "jurisdiction": "Georgia",
+      "slug": "georgia",
+      "countryCode": "US",
+      "file": "content/georgia.md",
+      "lastReviewed": "2026-06-12",
+      "snapshotAsOf": "2026-06-12",
+      "stale": false
+    },
+    {
       "jurisdiction": "Hawaii",
       "slug": "hawaii",
       "countryCode": "US",
@@ -186,6 +195,15 @@
       "stale": false
     },
     {
+      "jurisdiction": "Massachusetts",
+      "slug": "massachusetts",
+      "countryCode": "US",
+      "file": "content/massachusetts.md",
+      "lastReviewed": "2026-06-12",
+      "snapshotAsOf": "2026-06-12",
+      "stale": false
+    },
+    {
       "jurisdiction": "Michigan",
       "slug": "michigan",
       "countryCode": "US",
@@ -200,6 +218,15 @@
       "countryCode": "US",
       "file": "content/minnesota.md",
       "lastReviewed": "2026-06-06",
+      "snapshotAsOf": "2026-06-12",
+      "stale": false
+    },
+    {
+      "jurisdiction": "Mississippi",
+      "slug": "mississippi",
+      "countryCode": "US",
+      "file": "content/mississippi.md",
+      "lastReviewed": "2026-06-12",
       "snapshotAsOf": "2026-06-12",
       "stale": false
     },

@@ -26,11 +26,16 @@ California's Consumer Privacy Act, as amended by the CPRA, gives consumers right
 
 | Question | California |
 | --- | --- |
+| **Law coverage** | Comprehensive law |
 | **Summary** | If your business meets a CCPA threshold, you must post a CCPA-compliant privacy policy, honor consumer rights and opt-out signals, put statutory terms in your vendor contracts, and maintain reasonable security — or face CPPA/AG enforcement and, after a breach, consumer suits. |
 | **Main law** | Cal. Civ. Code § 1798.100 et seq. (CCPA, as amended by the CPRA) |
 | **Privacy policy required?** | Yes — an online privacy policy with statutorily fixed contents, updated at least every 12 months |
 | **Who does it cover?** | For-profit businesses doing business in California that meet a threshold — e.g., over $25,000,000 in annual gross revenue (CPI-adjusted to $26,625,000 for 2025–2026) |
-| **Can consumers sue?** | Narrow — data breaches only (§ 1798.150) |
+| **Can consumers sue?** | Limited path |
+| **Privacy policy rule** | Policy contents fixed by law |
+| **Consent for sensitive data?** | Opt-out right or limits instead |
+| **Browser opt-out signals?** | Must be honored |
+| **Lawsuit detail** | Narrow — data breaches only (§ 1798.150) |
 | **Who enforces it?** | California Privacy Protection Agency (CPPA) and the Attorney General |
 
 ## Does the CCPA apply to your business? {#does-ccpa-apply}
