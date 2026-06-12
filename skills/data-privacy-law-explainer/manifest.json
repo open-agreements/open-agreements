@@ -1,7 +1,7 @@
 {
   "topic": "privacy",
   "snapshotAsOf": "2026-06-12",
-  "sourceCommit": "d5b5c31ab4f74726a60947dda4f1a5c02e3c47a4",
+  "sourceCommit": "0229e60e076c8330ab9bdda7dbed31783093e64f",
   "canonicalBase": "https://openagreements.org/legal/privacy",
   "license": "CC BY 4.0",
   "jurisdictions": [
@@ -29,6 +29,15 @@
       "countryCode": "US",
       "file": "content/arizona.md",
       "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-06-12",
+      "stale": false
+    },
+    {
+      "jurisdiction": "Arkansas",
+      "slug": "arkansas",
+      "countryCode": "US",
+      "file": "content/arkansas.md",
+      "lastReviewed": "2026-06-12",
       "snapshotAsOf": "2026-06-12",
       "stale": false
     },
@@ -83,6 +92,15 @@
       "countryCode": "US",
       "file": "content/florida.md",
       "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-06-12",
+      "stale": false
+    },
+    {
+      "jurisdiction": "Hawaii",
+      "slug": "hawaii",
+      "countryCode": "US",
+      "file": "content/hawaii.md",
+      "lastReviewed": "2026-06-12",
       "snapshotAsOf": "2026-06-12",
       "stale": false
     },
@@ -267,6 +285,15 @@
       "stale": false
     },
     {
+      "jurisdiction": "North Dakota",
+      "slug": "north-dakota",
+      "countryCode": "US",
+      "file": "content/north-dakota.md",
+      "lastReviewed": "2026-06-12",
+      "snapshotAsOf": "2026-06-12",
+      "stale": false
+    },
+    {
       "jurisdiction": "Ohio",
       "slug": "ohio",
       "countryCode": "US",
@@ -357,6 +384,15 @@
       "stale": false
     },
     {
+      "jurisdiction": "Vermont",
+      "slug": "vermont",
+      "countryCode": "US",
+      "file": "content/vermont.md",
+      "lastReviewed": "2026-06-12",
+      "snapshotAsOf": "2026-06-12",
+      "stale": false
+    },
+    {
       "jurisdiction": "Virginia",
       "slug": "virginia",
       "countryCode": "US",
@@ -375,11 +411,29 @@
       "stale": false
     },
     {
+      "jurisdiction": "West Virginia",
+      "slug": "west-virginia",
+      "countryCode": "US",
+      "file": "content/west-virginia.md",
+      "lastReviewed": "2026-06-12",
+      "snapshotAsOf": "2026-06-12",
+      "stale": false
+    },
+    {
       "jurisdiction": "Wisconsin",
       "slug": "wisconsin",
       "countryCode": "US",
       "file": "content/wisconsin.md",
       "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-06-12",
+      "stale": false
+    },
+    {
+      "jurisdiction": "Wyoming",
+      "slug": "wyoming",
+      "countryCode": "US",
+      "file": "content/wyoming.md",
+      "lastReviewed": "2026-06-12",
       "snapshotAsOf": "2026-06-12",
       "stale": false
     }
