@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/open-agreements/open-agreements/main/docs/assets/oa-seal.svg" alt="OpenAgreements seal" width="140">
+</p>
+
 # OpenAgreements
 
 [![npm version](https://img.shields.io/npm/v/open-agreements)](https://www.npmjs.com/package/open-agreements)
@@ -16,6 +20,8 @@
 Fill standard legal agreement templates and get signable DOCX files. OpenAgreements includes 40+ templates across NDAs, cloud service agreements, employment docs, contractor agreements, SAFEs, and NVCA financing documents.
 
 Works with Claude Code, Gemini CLI, Cursor, and local MCP or CLI workflows.
+
+[Propose a Form Source](https://github.com/open-agreements/open-agreements/issues/new?template=form-source-proposal.yml) · [Request a Feature](https://github.com/open-agreements/open-agreements/issues/new?template=general-enhancement.yml) · [Report an Issue](https://github.com/open-agreements/open-agreements/issues/new/choose)
 
 ## Who this is for
 
@@ -305,6 +311,10 @@ Security policy: see [SECURITY.md](https://github.com/open-agreements/open-agree
 ## See Also
 
 - [safe-docx](https://github.com/UseJunior/safe-docx) — surgical editing of existing Word documents with coding agents
+
+## Roadmap
+
+Planned work is tracked in [open issues](https://github.com/open-agreements/open-agreements/issues). Larger changes are designed first as proposals in [`openspec/changes/`](https://github.com/open-agreements/open-agreements/tree/main/openspec/changes).
 
 ## Contributing
 
