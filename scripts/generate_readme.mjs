@@ -67,6 +67,7 @@ const CONTENTS = [
   ["Documentation", "#documentation"],
   ["Privacy", "#privacy"],
   ["See Also", "#see-also"],
+  ["Roadmap", "#roadmap"],
   ["Contributing", "#contributing"],
   ["Built With OpenAgreements", "#built-with-openagreements"],
   ["License", "#license"],
