@@ -94,7 +94,7 @@ On the Consumer Sales Practices Act side, the Attorney General may seek declarat
 
 [^q1-insurance-program]: **Ohio Rev. Code § 3965.02** — "Each licensee shall develop, implement, and maintain a comprehensive written information security program based on the licensee's risk assessment." *Ohio Rev. Code § 3965.02(A).* <https://codes.ohio.gov/ohio-revised-code/section-3965.02>
 
-[^q1-payment-recording]: **Ohio Rev. Code § 1349.17** — "(A) No person shall record or cause to be recorded either of the following ... (1) A credit card account number of the other party to a transaction, when a check, bill of exchange, or other draft is presented for payment ... (2) The telephone number or social security account number of the other party to a transaction, when payment is made by credit card charge agreement, check, bill of exchange, or other draft." *Ohio Rev. Code § 1349.17(A).* <https://codes.ohio.gov/ohio-revised-code/section-1349.17>
+[^q1-payment-recording]: **Ohio Rev. Code § 1349.17** — "(A) No person shall record or cause to be recorded either of the following" *Ohio Rev. Code § 1349.17(A).* <https://codes.ohio.gov/ohio-revised-code/section-1349.17>
 
 [^q2-ftc5]: **FTC Act § 5** — "Unfair methods of competition in or affecting commerce, and unfair or deceptive acts or practices in or affecting commerce, are hereby declared unlawful." *15 U.S.C. § 45(a)(1).* <https://www.law.cornell.edu/uscode/text/15/45#:~:text=Unfair%20methods%20of%20competition%20in,commerce%2C%20are%20hereby%20declared%20unlawful.>
 

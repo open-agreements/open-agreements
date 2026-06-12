@@ -101,7 +101,7 @@ The Unfair Practices Act is where private exposure lives. The private remedy car
 
 [^q1-dbna-exemptions]: **NMSA 1978, § 57-12C-8** — "The provisions of the Data Breach Notification Act shall not apply to a person subject to the federal Gramm-Leach-Bliley Act or the federal Health Insurance Portability and Accountability Act of 1996." *NMSA 1978, § 57-12C-8.* <https://nmonesource.com/nmos/nmsa/en/4423/1/document.do>
 
-[^q1-hb214-status]: **New Mexico Legislature HB 214 (2026 Regular Session)** — "2026 Regular Session - HB 214 ID HB 214 Title CONSUMER INFORMATION AND DATA PROTECTION ACT ... Current Location Died (API.) ... ActionText: [3] not prntd-HRC API ... Action Postponed Indefinitely" *New Mexico Legislature, HB 214 (2026 Regular Session).* <https://www.nmlegis.gov/Legislation/Legislation?chamber=H&legType=B&legNo=214&year=26>
+[^q1-hb214-status]: **New Mexico Legislature HB 214 (2026 Regular Session)** — "Current Location Died (API.)" *New Mexico Legislature, HB 214 (2026 Regular Session).* <https://www.nmlegis.gov/Legislation/Legislation?chamber=H&legType=B&legNo=214&year=26>
 
 [^q1-hb214-effective-dates]: **HB 214 (2026), § 16** — "SECTION 16. EFFECTIVE DATES.-- A. The effective date of the provisions of Sections 1, 2 and 13 through 15 of this act is July 1, 2026. B. The effective date of the provisions of Sections 3 through 12 of this act is July 1, 2027." *HB 214 (2026), § 16.* <https://www.nmlegis.gov/Sessions/26%20Regular/bills/house/HB0214.HTML>
 
@@ -169,6 +169,6 @@ The Unfair Practices Act is where private exposure lives. The private remedy car
 
 [^q6-upa-civil-penalty]: **NMSA 1978, § 57-12-11** — "In any action brought under Section 57-12-8 NMSA 1978, if the court finds that a person is willfully using or has willfully used a method, act or practice declared unlawful by the Unfair Practices Act, the attorney general, upon petition to the court, may recover, on behalf of the state of New Mexico, a civil penalty of not exceeding five thousand dollars ($5,000) per violation." *NMSA 1978, § 57-12-11.* <https://nmonesource.com/nmos/nmsa/en/4423/1/document.do>
 
-[^q6-hb214-status]: **New Mexico Legislature HB 214 (2026 Regular Session)** — "2026 Regular Session - HB 214 ID HB 214 Title CONSUMER INFORMATION AND DATA PROTECTION ACT ... Current Location Died (API.) ... ActionText: [3] not prntd-HRC API ... Action Postponed Indefinitely" *New Mexico Legislature, HB 214 (2026 Regular Session).* <https://www.nmlegis.gov/Legislation/Legislation?chamber=H&legType=B&legNo=214&year=26>
+[^q6-hb214-status]: **New Mexico Legislature HB 214 (2026 Regular Session)** — "Current Location Died (API.)" *New Mexico Legislature, HB 214 (2026 Regular Session).* <https://www.nmlegis.gov/Legislation/Legislation?chamber=H&legType=B&legNo=214&year=26>
 
 [^q6-hb214-effective-dates]: **HB 214 (2026), § 16** — "SECTION 16. EFFECTIVE DATES.-- A. The effective date of the provisions of Sections 1, 2 and 13 through 15 of this act is July 1, 2026. B. The effective date of the provisions of Sections 3 through 12 of this act is July 1, 2027." *HB 214 (2026), § 16.* <https://www.nmlegis.gov/Sessions/26%20Regular/bills/house/HB0214.HTML>

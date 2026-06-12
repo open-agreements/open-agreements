@@ -32,9 +32,9 @@ New York has no comprehensive consumer-privacy act. The SHIELD Act (GBL §§ 899
 | **Privacy policy required?** | No general New York statute mandates a consumer privacy policy or fixes its contents; a published policy that misstates practices is actionable under GBL § 349 and FTC Act § 5, and GLBA, HIPAA, and COPPA supply required contents where they apply |
 | **Who does it cover?** | Any person or business, wherever located, that owns or licenses computerized data including the private information of a New York resident — no in-state-presence, revenue, or volume threshold; small businesses get scaled (not waived) duties; the Child Data Protection Act covers operators of online services with New York users under 18 |
 | **Can consumers sue?** | Limited path |
-| **Privacy policy rule** | Policy required only for specific data |
+| **Privacy policy rule** | No state policy checklist |
 | **Consent for sensitive data?** | Only for certain data types |
-| **Browser opt-out signals?** | Must be honored |
+| **Browser opt-out signals?** | Not required |
 | **Lawsuit detail** | Not under the SHIELD Act — § 899-bb expressly creates none and § 899-aa runs through the Attorney General; but GBL § 349(h) lets a consumer injured by a deceptive practice sue for actual damages or $50 (treble to $1,000) plus attorney's fees |
 | **Who enforces it?** | New York Attorney General (Commissioner of Labor for employee personal-identifying-information violations under Labor Law § 203-d) |
 

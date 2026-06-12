@@ -48,7 +48,7 @@ The combination is what makes Utah narrow: it requires a $25M revenue floor on t
 
 **Short answer.** A covered controller must provide a reasonably accessible and clear privacy notice that lists the categories of personal data processed, the purposes of processing, how consumers exercise their rights, the categories of personal data shared with third parties, and the categories of those third parties [^stat-302-notice].
 
-For a template privacy policy, section 13-61-302 is the content checklist. Utah's list is close to the other states' but lighter in two ways worth noting: the UCPA does not require a separate appeal process the way Colorado and Texas do, and it imposes no data-protection-assessment obligation. A controller that sells personal data or processes it for targeted advertising must still clearly disclose that and how to opt out.
+For a template privacy policy, section 13-61-302 is the content checklist. Utah's list is close to the other states' but lighter in two ways worth noting: the UCPA does not require a separate appeal process the way Colorado and Texas do, and it imposes no data-protection-assessment obligation. A controller that sells personal data or processes it for targeted advertising must still clearly disclose that and how to opt out, but the UCPA does not require controllers to honor universal browser or global device opt-out signals.
 
 ## What must your contracts with processors say? {#vendor-contracts}
 
