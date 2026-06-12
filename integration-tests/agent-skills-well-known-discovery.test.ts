@@ -96,12 +96,26 @@ describe('agent skills well-known discovery', () => {
         expect(archive.file('template-filling-execution.md')).toBeTruthy();
         expect(archive.file('agreements/nda/SKILL.md')).toBeNull();
 
+        const nestedEntry = index.skills.find(
+          (skill: { name: string }) => skill.name === 'data-privacy-law-explainer',
+        );
+        const nestedArchive = await JSZip.loadAsync(
+          readFileSync(join(outputDir, 'data-privacy-law-explainer.zip')),
+        );
+        expect(nestedArchive.file(/^content\//).length).toBeGreaterThan(0);
+        const folderEntries = Object.values(nestedArchive.files).filter((entry) => entry.dir);
+        expect(folderEntries).toEqual([]);
+
         runGenerator(root);
         const regeneratedIndex = JSON.parse(readFileSync(indexPath, 'utf8'));
         const regeneratedNda = regeneratedIndex.skills.find(
           (skill: { name: string }) => skill.name === 'nda',
         );
         expect(regeneratedNda.digest).toBe(ndaEntry.digest);
+        const regeneratedNested = regeneratedIndex.skills.find(
+          (skill: { name: string }) => skill.name === 'data-privacy-law-explainer',
+        );
+        expect(regeneratedNested.digest).toBe(nestedEntry.digest);
       } finally {
         rmSync(root, { recursive: true, force: true });
       }

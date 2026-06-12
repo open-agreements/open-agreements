@@ -237,6 +237,9 @@ async function buildSkillArchive(skillDir) {
     zip.file(file, readFileSync(join(skillDir, file)), {
       date: FIXED_ZIP_DATE,
       unixPermissions: 0o100644,
+      // Implicit folder entries get stamped with the current time, which breaks
+      // byte-determinism; the skills CLI ignores directory entries on extraction.
+      createFolders: false,
     });
   }
 
