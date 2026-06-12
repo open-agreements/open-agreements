@@ -1,6 +1,6 @@
 # Template Filling Execution Workflow
 
-Standard 6-step workflow shared by all template-filling skills. Each skill's SKILL.md provides skill-specific details (template options and example values) that plug into these steps.
+Standard 6-step workflow shared by all template-filling skills. Each skill's SKILL.md provides skill-specific details (template options and example values) that plug into these steps. Each skill carries its own copy of this file so the published bundle stays self-contained; CI enforces that all copies are identical, so edit them together.
 
 > **Interactivity note**: Always ask the user for missing inputs.
 > If your agent has an `AskUserQuestion` tool (Claude Code, Cursor, etc.),
@@ -86,7 +86,7 @@ Generate a markdown preview using the collected values. Label clearly as `PREVIE
 
 Report the output (download URL or file path) to the user. Remind them to review the document before signing.
 
-If Local CLI was used, clean up:
+If Local CLI was used, the `trap` from Step 4 removes the values file on shell exit; remove it sooner with:
 ```bash
 rm -f "$VALUES_FILE"
 ```

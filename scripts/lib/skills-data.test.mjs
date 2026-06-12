@@ -43,6 +43,25 @@ describe('skills directory layout', () => {
     expect([...skillDirs].sort()).toEqual(allOnDisk);
   });
 
+  it('keeps every per-skill copy of template-filling-execution.md identical (self-contained bundles)', () => {
+    const copies = skillDirs
+      .map((dir) => join(dir, 'template-filling-execution.md'))
+      .filter((file) => existsSync(file));
+    expect(copies.length).toBeGreaterThan(0);
+    const canonical = readFileSync(copies[0], 'utf-8');
+    for (const file of copies.slice(1)) {
+      expect(readFileSync(file, 'utf-8'), `${relative(REPO_ROOT, file)} drifted from ${relative(REPO_ROOT, copies[0])}`).toBe(canonical);
+    }
+  });
+
+  it('publishes no skill that references files outside its own directory', () => {
+    for (const dir of skillDirs) {
+      const skillMd = readFileSync(join(dir, 'SKILL.md'), 'utf-8');
+      const crossRefs = skillMd.match(/\]\(\.\.\/[^)]+\)/g) ?? [];
+      expect(crossRefs, `${relative(REPO_ROOT, dir)} links outside its publish boundary`).toEqual([]);
+    }
+  });
+
   it('keeps frontmatter name equal to its directory name (agentskills.io spec)', () => {
     for (const dir of skillDirs) {
       expect(readFrontmatter(dir).name, dir).toBe(basename(dir));

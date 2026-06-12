@@ -11,7 +11,8 @@ const it = itAllure.epic('Platform & Distribution');
 const ROOT = new URL('..', import.meta.url).pathname;
 const SKILL_MD = readFileSync(join(ROOT, 'skills/agreements/open-agreements/SKILL.md'), 'utf-8');
 const SHARED_EXECUTION_MD = readFileSync(
-  join(ROOT, 'skills/agreements/shared/template-filling-execution.md'),
+  // Per-skill copy; all copies are identical (enforced by skills-data.test.mjs).
+  join(ROOT, 'skills/agreements/open-agreements/template-filling-execution.md'),
   'utf-8'
 );
 
@@ -82,9 +83,9 @@ describe('Claude skill generation', () => {
   });
 });
 
-describe('published skills/open-agreements/SKILL.md execution paths', () => {
+describe('published skills/agreements/open-agreements/SKILL.md execution paths', () => {
   it.openspec('OA-CLI-009')('documents remote MCP as primary zero-install path', () => {
-    // Execution steps now live in shared/template-filling-execution.md,
+    // Execution steps live in the skill's own template-filling-execution.md,
     // referenced from SKILL.md via relative link
     expect(SKILL_MD).toContain('template-filling-execution.md');
     expect(SHARED_EXECUTION_MD).toContain('Remote MCP');

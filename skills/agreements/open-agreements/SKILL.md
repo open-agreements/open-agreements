@@ -16,7 +16,7 @@ compatibility: >-
   time. Use the CLI path for guaranteed offline behavior.
 metadata:
   author: open-agreements
-  version: "0.2.3"
+  version: "0.2.4"
 catalog_group: Agreement Drafting And Filling
 catalog_order: 10
 ---
@@ -186,7 +186,7 @@ Never use `@latest` — it pulls a fresh package on every cache miss and can int
 
 ## Shared Execution Reference
 
-For the full template-filling workflow (applicable to all agreement skills), see [template-filling-execution.md](../shared/template-filling-execution.md).
+For the full template-filling workflow (applicable to all agreement skills), see [template-filling-execution.md](template-filling-execution.md).
 
 ## Notes
 
