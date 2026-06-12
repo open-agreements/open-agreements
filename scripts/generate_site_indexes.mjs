@@ -1,8 +1,23 @@
-import { readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
-import { resolve, relative } from "node:path";
+import { createHash } from "node:crypto";
+import {
+  lstatSync,
+  mkdirSync,
+  readdirSync,
+  readFileSync,
+  statSync,
+  writeFileSync,
+} from "node:fs";
+import { join, relative, resolve } from "node:path";
+
+import JSZip from "jszip";
+
+import { REPO_ROOT, loadSkillsCatalog } from "./lib/skills-data.mjs";
 
 const SITE_ORIGIN = (process.env.SITE_URL || "https://openagreements.org").replace(/\/+$/, "");
 const OUTPUT_DIR = resolve(process.cwd(), "_site");
+const AGENT_SKILLS_SCHEMA = "https://schemas.agentskills.io/discovery/0.2.0/schema.json";
+const AGENT_SKILLS_ROUTE = "/.well-known/agent-skills";
+const FIXED_ZIP_DATE = new Date("2000-01-01T00:00:00.000Z");
 const STATIC_EXTENSIONS = new Set([
   ".css",
   ".js",
@@ -40,6 +55,26 @@ function walkFiles(dirPath) {
   }
 
   return files;
+}
+
+function walkRelativeFiles(dirPath, basePath = dirPath) {
+  const files = [];
+  const entries = readdirSync(dirPath, { withFileTypes: true });
+
+  for (const entry of entries) {
+    const fullPath = join(dirPath, entry.name);
+    const entryStats = lstatSync(fullPath);
+    if (entryStats.isSymbolicLink()) {
+      throw new Error(`Refusing to archive symlink in skill directory: ${fullPath}`);
+    }
+    if (entry.isDirectory()) {
+      files.push(...walkRelativeFiles(fullPath, basePath));
+    } else if (entry.isFile()) {
+      files.push(toPosixPath(relative(basePath, fullPath)));
+    }
+  }
+
+  return files.sort();
 }
 
 function toPosixPath(pathValue) {
@@ -191,6 +226,60 @@ function xmlEscape(value) {
     .replace(/'/g, "&apos;");
 }
 
+async function buildSkillArchive(skillDir) {
+  const files = walkRelativeFiles(skillDir);
+  if (!files.includes("SKILL.md")) {
+    throw new Error(`${skillDir} does not contain a root SKILL.md`);
+  }
+
+  const zip = new JSZip();
+  for (const file of files) {
+    zip.file(file, readFileSync(join(skillDir, file)), {
+      date: FIXED_ZIP_DATE,
+      unixPermissions: 0o100644,
+    });
+  }
+
+  return zip.generateAsync({
+    type: "nodebuffer",
+    compression: "DEFLATE",
+    compressionOptions: { level: 9 },
+    platform: "UNIX",
+  });
+}
+
+async function writeAgentSkillsDiscovery() {
+  const outputDir = resolve(OUTPUT_DIR, ".well-known", "agent-skills");
+  mkdirSync(outputDir, { recursive: true });
+
+  const catalog = loadSkillsCatalog();
+  const publicSkills = catalog.groups
+    .flatMap((group) => group.skills)
+    .sort((left, right) => left.slug.localeCompare(right.slug));
+
+  const entries = [];
+  for (const skill of publicSkills) {
+    const archiveName = `${skill.slug}.zip`;
+    const archiveBytes = await buildSkillArchive(resolve(REPO_ROOT, skill.path));
+    writeFileSync(resolve(outputDir, archiveName), archiveBytes);
+    entries.push({
+      name: skill.slug,
+      type: "archive",
+      description: skill.description,
+      url: `${SITE_ORIGIN}${AGENT_SKILLS_ROUTE}/${archiveName}`,
+      digest: `sha256:${createHash("sha256").update(archiveBytes).digest("hex")}`,
+    });
+  }
+
+  const index = {
+    $schema: AGENT_SKILLS_SCHEMA,
+    skills: entries,
+  };
+  writeFileSync(resolve(outputDir, "index.json"), `${JSON.stringify(index, null, 2)}\n`, "utf8");
+
+  return entries.length;
+}
+
 const allFiles = walkFiles(OUTPUT_DIR);
 const htmlFiles = allFiles.filter((filePath) => filePath.endsWith(".html"));
 
@@ -337,7 +426,8 @@ writeFileSync(resolve(OUTPUT_DIR, "llms.txt"), `${llmsLines.join("\n")}\n`, "utf
 writeFileSync(resolve(OUTPUT_DIR, "llms-full.txt"), `${llmsFullLines.join("\n")}\n`, "utf8");
 writeFileSync(resolve(OUTPUT_DIR, "sitemap.xml"), sitemapLines.join("\n"), "utf8");
 writeFileSync(resolve(OUTPUT_DIR, "robots.txt"), robotsTxt, "utf8");
+const agentSkillsCount = await writeAgentSkillsDiscovery();
 
 console.log(
-  `[generate_site_indexes] Wrote llms.txt, llms-full.txt, sitemap.xml, and robots.txt for ${pages.length} pages.`,
+  `[generate_site_indexes] Wrote llms.txt, llms-full.txt, sitemap.xml, robots.txt, and ${agentSkillsCount} agent skill archives for ${pages.length} pages.`,
 );
