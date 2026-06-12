@@ -2,7 +2,7 @@
 jurisdiction: "Texas"
 slug: texas
 countryCode: US
-snapshotAsOf: "2026-06-10"
+snapshotAsOf: "2026-06-12"
 lastReviewed: "2026-06-04"
 canonicalUrl: https://openagreements.org/legal/privacy/texas
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/privacy/texas · **Snapshot as of:** 2026-06-10 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/privacy/texas · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
 
 # Texas Consumer Privacy Law (TDPSA)[^about]
 
