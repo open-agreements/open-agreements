@@ -1,17 +1,44 @@
 {
   "topic": "privacy",
-  "snapshotAsOf": "2026-06-10",
-  "sourceCommit": "261376409d3ea1e7092aae85fced4c70a780c4ff",
+  "snapshotAsOf": "2026-06-12",
+  "sourceCommit": "d5b5c31ab4f74726a60947dda4f1a5c02e3c47a4",
   "canonicalBase": "https://openagreements.org/legal/privacy",
   "license": "CC BY 4.0",
   "jurisdictions": [
+    {
+      "jurisdiction": "Alabama",
+      "slug": "alabama",
+      "countryCode": "US",
+      "file": "content/alabama.md",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-06-12",
+      "stale": false
+    },
+    {
+      "jurisdiction": "Alaska",
+      "slug": "alaska",
+      "countryCode": "US",
+      "file": "content/alaska.md",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-06-12",
+      "stale": false
+    },
+    {
+      "jurisdiction": "Arizona",
+      "slug": "arizona",
+      "countryCode": "US",
+      "file": "content/arizona.md",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-06-12",
+      "stale": false
+    },
     {
       "jurisdiction": "California",
       "slug": "california",
       "countryCode": "US",
       "file": "content/california.md",
       "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-06-10",
+      "snapshotAsOf": "2026-06-12",
       "stale": false
     },
     {
@@ -20,7 +47,7 @@
       "countryCode": "US",
       "file": "content/colorado.md",
       "lastReviewed": "2026-06-04",
-      "snapshotAsOf": "2026-06-10",
+      "snapshotAsOf": "2026-06-12",
       "stale": false
     },
     {
@@ -29,7 +56,7 @@
       "countryCode": "US",
       "file": "content/connecticut.md",
       "lastReviewed": "2026-06-04",
-      "snapshotAsOf": "2026-06-10",
+      "snapshotAsOf": "2026-06-12",
       "stale": false
     },
     {
@@ -38,7 +65,43 @@
       "countryCode": "US",
       "file": "content/delaware.md",
       "lastReviewed": "2026-06-06",
-      "snapshotAsOf": "2026-06-10",
+      "snapshotAsOf": "2026-06-12",
+      "stale": false
+    },
+    {
+      "jurisdiction": "District of Columbia",
+      "slug": "district-of-columbia",
+      "countryCode": "US",
+      "file": "content/district-of-columbia.md",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-06-12",
+      "stale": false
+    },
+    {
+      "jurisdiction": "Florida",
+      "slug": "florida",
+      "countryCode": "US",
+      "file": "content/florida.md",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-06-12",
+      "stale": false
+    },
+    {
+      "jurisdiction": "Idaho",
+      "slug": "idaho",
+      "countryCode": "US",
+      "file": "content/idaho.md",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-06-12",
+      "stale": false
+    },
+    {
+      "jurisdiction": "Illinois",
+      "slug": "illinois",
+      "countryCode": "US",
+      "file": "content/illinois.md",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-06-12",
       "stale": false
     },
     {
@@ -47,7 +110,7 @@
       "countryCode": "US",
       "file": "content/indiana.md",
       "lastReviewed": "2026-06-06",
-      "snapshotAsOf": "2026-06-10",
+      "snapshotAsOf": "2026-06-12",
       "stale": false
     },
     {
@@ -56,7 +119,16 @@
       "countryCode": "US",
       "file": "content/iowa.md",
       "lastReviewed": "2026-06-05",
-      "snapshotAsOf": "2026-06-10",
+      "snapshotAsOf": "2026-06-12",
+      "stale": false
+    },
+    {
+      "jurisdiction": "Kansas",
+      "slug": "kansas",
+      "countryCode": "US",
+      "file": "content/kansas.md",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-06-12",
       "stale": false
     },
     {
@@ -65,7 +137,25 @@
       "countryCode": "US",
       "file": "content/kentucky.md",
       "lastReviewed": "2026-06-06",
-      "snapshotAsOf": "2026-06-10",
+      "snapshotAsOf": "2026-06-12",
+      "stale": false
+    },
+    {
+      "jurisdiction": "Louisiana",
+      "slug": "louisiana",
+      "countryCode": "US",
+      "file": "content/louisiana.md",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-06-12",
+      "stale": false
+    },
+    {
+      "jurisdiction": "Maine",
+      "slug": "maine",
+      "countryCode": "US",
+      "file": "content/maine.md",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-06-12",
       "stale": false
     },
     {
@@ -74,7 +164,16 @@
       "countryCode": "US",
       "file": "content/maryland.md",
       "lastReviewed": "2026-06-06",
-      "snapshotAsOf": "2026-06-10",
+      "snapshotAsOf": "2026-06-12",
+      "stale": false
+    },
+    {
+      "jurisdiction": "Michigan",
+      "slug": "michigan",
+      "countryCode": "US",
+      "file": "content/michigan.md",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-06-12",
       "stale": false
     },
     {
@@ -83,7 +182,16 @@
       "countryCode": "US",
       "file": "content/minnesota.md",
       "lastReviewed": "2026-06-06",
-      "snapshotAsOf": "2026-06-10",
+      "snapshotAsOf": "2026-06-12",
+      "stale": false
+    },
+    {
+      "jurisdiction": "Missouri",
+      "slug": "missouri",
+      "countryCode": "US",
+      "file": "content/missouri.md",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-06-12",
       "stale": false
     },
     {
@@ -92,7 +200,7 @@
       "countryCode": "US",
       "file": "content/montana.md",
       "lastReviewed": "2026-06-05",
-      "snapshotAsOf": "2026-06-10",
+      "snapshotAsOf": "2026-06-12",
       "stale": false
     },
     {
@@ -101,7 +209,16 @@
       "countryCode": "US",
       "file": "content/nebraska.md",
       "lastReviewed": "2026-06-06",
-      "snapshotAsOf": "2026-06-10",
+      "snapshotAsOf": "2026-06-12",
+      "stale": false
+    },
+    {
+      "jurisdiction": "Nevada",
+      "slug": "nevada",
+      "countryCode": "US",
+      "file": "content/nevada.md",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-06-12",
       "stale": false
     },
     {
@@ -110,7 +227,7 @@
       "countryCode": "US",
       "file": "content/new-hampshire.md",
       "lastReviewed": "2026-06-06",
-      "snapshotAsOf": "2026-06-10",
+      "snapshotAsOf": "2026-06-12",
       "stale": false
     },
     {
@@ -119,7 +236,52 @@
       "countryCode": "US",
       "file": "content/new-jersey.md",
       "lastReviewed": "2026-06-06",
-      "snapshotAsOf": "2026-06-10",
+      "snapshotAsOf": "2026-06-12",
+      "stale": false
+    },
+    {
+      "jurisdiction": "New Mexico",
+      "slug": "new-mexico",
+      "countryCode": "US",
+      "file": "content/new-mexico.md",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-06-12",
+      "stale": false
+    },
+    {
+      "jurisdiction": "New York",
+      "slug": "new-york",
+      "countryCode": "US",
+      "file": "content/new-york.md",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-06-12",
+      "stale": false
+    },
+    {
+      "jurisdiction": "North Carolina",
+      "slug": "north-carolina",
+      "countryCode": "US",
+      "file": "content/north-carolina.md",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-06-12",
+      "stale": false
+    },
+    {
+      "jurisdiction": "Ohio",
+      "slug": "ohio",
+      "countryCode": "US",
+      "file": "content/ohio.md",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-06-12",
+      "stale": false
+    },
+    {
+      "jurisdiction": "Oklahoma",
+      "slug": "oklahoma",
+      "countryCode": "US",
+      "file": "content/oklahoma.md",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-06-12",
       "stale": false
     },
     {
@@ -128,7 +290,7 @@
       "countryCode": "US",
       "file": "content/oregon.md",
       "lastReviewed": "2026-06-05",
-      "snapshotAsOf": "2026-06-10",
+      "snapshotAsOf": "2026-06-12",
       "stale": false
     },
     {
@@ -137,7 +299,7 @@
       "countryCode": "US",
       "file": "content/pennsylvania.md",
       "lastReviewed": "2026-06-07",
-      "snapshotAsOf": "2026-06-10",
+      "snapshotAsOf": "2026-06-12",
       "stale": false
     },
     {
@@ -146,7 +308,25 @@
       "countryCode": "US",
       "file": "content/rhode-island.md",
       "lastReviewed": "2026-06-06",
-      "snapshotAsOf": "2026-06-10",
+      "snapshotAsOf": "2026-06-12",
+      "stale": false
+    },
+    {
+      "jurisdiction": "South Carolina",
+      "slug": "south-carolina",
+      "countryCode": "US",
+      "file": "content/south-carolina.md",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-06-12",
+      "stale": false
+    },
+    {
+      "jurisdiction": "South Dakota",
+      "slug": "south-dakota",
+      "countryCode": "US",
+      "file": "content/south-dakota.md",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-06-12",
       "stale": false
     },
     {
@@ -155,7 +335,7 @@
       "countryCode": "US",
       "file": "content/tennessee.md",
       "lastReviewed": "2026-06-06",
-      "snapshotAsOf": "2026-06-10",
+      "snapshotAsOf": "2026-06-12",
       "stale": false
     },
     {
@@ -164,7 +344,7 @@
       "countryCode": "US",
       "file": "content/texas.md",
       "lastReviewed": "2026-06-04",
-      "snapshotAsOf": "2026-06-10",
+      "snapshotAsOf": "2026-06-12",
       "stale": false
     },
     {
@@ -173,7 +353,7 @@
       "countryCode": "US",
       "file": "content/utah.md",
       "lastReviewed": "2026-06-04",
-      "snapshotAsOf": "2026-06-10",
+      "snapshotAsOf": "2026-06-12",
       "stale": false
     },
     {
@@ -182,7 +362,25 @@
       "countryCode": "US",
       "file": "content/virginia.md",
       "lastReviewed": "2026-06-04",
-      "snapshotAsOf": "2026-06-10",
+      "snapshotAsOf": "2026-06-12",
+      "stale": false
+    },
+    {
+      "jurisdiction": "Washington",
+      "slug": "washington",
+      "countryCode": "US",
+      "file": "content/washington.md",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-06-12",
+      "stale": false
+    },
+    {
+      "jurisdiction": "Wisconsin",
+      "slug": "wisconsin",
+      "countryCode": "US",
+      "file": "content/wisconsin.md",
+      "lastReviewed": "2026-06-11",
+      "snapshotAsOf": "2026-06-12",
       "stale": false
     }
   ]

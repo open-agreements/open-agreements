@@ -2,7 +2,7 @@
 jurisdiction: "Minnesota"
 slug: minnesota
 countryCode: US
-snapshotAsOf: "2026-06-10"
+snapshotAsOf: "2026-06-12"
 lastReviewed: "2026-06-06"
 canonicalUrl: https://openagreements.org/legal/privacy/minnesota
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/privacy/minnesota · **Snapshot as of:** 2026-06-10 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/privacy/minnesota · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
 
 # Minnesota Consumer Privacy Law (MCDPA)[^about]
 
