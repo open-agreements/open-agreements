@@ -134,6 +134,11 @@ function renderSkills() {
     lines.push("");
   }
 
+  lines.push(
+    "Internal repo-maintenance skills (marked `internal: true` in their SKILL.md metadata) are excluded from this catalog and from default `npx skills add` installs.",
+  );
+  lines.push("");
+
   return lines.join("\n").trim();
 }
 

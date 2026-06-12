@@ -46,6 +46,11 @@ export function loadSkillsCatalog({ rootDir = REPO_ROOT } = {}) {
     try {
       const raw = readFileSync(skillPath, "utf-8");
       const frontmatter = parseFrontmatter(raw);
+      // Internal skills (repo maintenance, authoring guidance) are hidden from
+      // the public catalog; the skills CLI also skips them on default installs.
+      if (frontmatter.metadata?.internal === true) {
+        continue;
+      }
       const group =
         frontmatter.catalog_group || frontmatter.metadata?.catalog_group || null;
       if (!group) {
