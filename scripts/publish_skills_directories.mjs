@@ -2,7 +2,7 @@
 
 import { appendFileSync, existsSync, readdirSync, readFileSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
-import { dirname, join, resolve } from 'node:path';
+import { basename, dirname, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
@@ -164,18 +164,38 @@ function requireValue(flag, argv, index) {
   return value;
 }
 
-function listSkillDirectories() {
-  const entries = readdirSync(SKILLS_ROOT, { withFileTypes: true })
-    .filter((entry) => entry.isDirectory())
-    .map((entry) => entry.name)
-    .filter((slug) => existsSync(join(SKILLS_ROOT, slug, 'SKILL.md')))
-    .sort((left, right) => left.localeCompare(right));
+// Skills live at skills/<category>/<slug>/ (one category level; a top-level
+// skills/<slug>/ is also tolerated). A directory is a skill iff it contains
+// SKILL.md; category directories never do.
+const MAX_SKILL_DEPTH = 2;
 
-  return entries.map((slug) => readSkillMetadata(slug));
+function listSkillDirectories() {
+  return findSkillDirs(SKILLS_ROOT, 0)
+    .sort((left, right) => left.localeCompare(right))
+    .map((directory) => readSkillMetadata(directory));
 }
 
-function readSkillMetadata(fallbackSlug) {
-  const directory = join(SKILLS_ROOT, fallbackSlug);
+function findSkillDirs(dir, depth) {
+  if (depth >= MAX_SKILL_DEPTH) {
+    return [];
+  }
+  const found = [];
+  for (const entry of readdirSync(dir, { withFileTypes: true })) {
+    if (!entry.isDirectory()) {
+      continue;
+    }
+    const child = join(dir, entry.name);
+    if (existsSync(join(child, 'SKILL.md'))) {
+      found.push(child);
+    } else {
+      found.push(...findSkillDirs(child, depth + 1));
+    }
+  }
+  return found;
+}
+
+function readSkillMetadata(directory) {
+  const fallbackSlug = basename(directory);
   const skillFile = join(directory, 'SKILL.md');
   if (!existsSync(skillFile)) {
     throw new Error(`Expected ${skillFile} to exist.`);
@@ -245,9 +265,11 @@ function resolveSelectedSkills(allSkills, options) {
 
   const changedSlugs = new Set();
   for (const path of changedPaths) {
-    const match = path.match(/^skills\/([^/]+)\//);
-    if (match) {
-      changedSlugs.add(match[1]);
+    const skill = allSkills.find((candidate) =>
+      path.startsWith(`${relative(REPO_ROOT, candidate.directory)}/`),
+    );
+    if (skill) {
+      changedSlugs.add(skill.slug);
     }
   }
 

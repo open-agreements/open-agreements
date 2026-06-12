@@ -21,7 +21,7 @@ OpenAgreements uses an agent-agnostic `ToolCommandAdapter` interface for generat
 
 - **Plugin manifest**: `.cursor-plugin/plugin.json`
 - **MCP config**: `mcp.json`
-- **Skill file**: `skills/open-agreements/SKILL.md`
+- **Skill file**: `skills/agreements/open-agreements/SKILL.md`
 - **How it works**: Cursor can load OpenAgreements MCP servers from `mcp.json` and use the OpenAgreements skill for guided template filling
 - **Publish URL**: `https://cursor.com/marketplace/publish`
 

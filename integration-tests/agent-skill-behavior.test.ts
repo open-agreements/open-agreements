@@ -9,9 +9,9 @@ import type { TemplateMetadata } from '../src/core/metadata.js';
 const it = itAllure.epic('Platform & Distribution');
 
 const ROOT = new URL('..', import.meta.url).pathname;
-const SKILL_MD = readFileSync(join(ROOT, 'skills/open-agreements/SKILL.md'), 'utf-8');
+const SKILL_MD = readFileSync(join(ROOT, 'skills/agreements/open-agreements/SKILL.md'), 'utf-8');
 const SHARED_EXECUTION_MD = readFileSync(
-  join(ROOT, 'skills/shared/template-filling-execution.md'),
+  join(ROOT, 'skills/agreements/shared/template-filling-execution.md'),
   'utf-8'
 );
 
