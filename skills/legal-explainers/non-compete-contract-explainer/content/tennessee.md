@@ -2,7 +2,7 @@
 jurisdiction: "Tennessee"
 slug: tennessee
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/legal/non-compete/tennessee
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/tennessee · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/tennessee · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Tennessee[^about]
 
@@ -168,7 +168,7 @@ Those requirements limit the common tactic of using an out-of-state choice-of-la
 >
 > Treat July 1, 2026 as a hard line. Agreements entered into, renewed, or amended on or after that date are subject to the new $70,000 bar and the time presumptions, so review form non-competes and any covenant up for renewal before that date, and confirm each covered employee clears the compensation threshold [^dev-effective][^dev-threshold].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Tennessee. This article synthesizes Tennessee primary law and is not legal advice from a Tennessee-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Tennessee. This article synthesizes Tennessee primary law and is not legal advice from a Tennessee-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^hasty-disfavored]: **Hasty v. Rent-A-Driver, Inc.** — "They are not, however, invalid per se and may be enforced, provided, they are reasonable under the particular circumstances." *Hasty v. Rent-A-Driver, Inc., 671 S.W.2d 471, 472 (Tenn. 1984).* <https://www.courtlistener.com/opinion/2366827/hasty-v-rent-a-driver-inc/#:~:text=They%20are%20not%2C%20however%2C%20invalid,reasonable%20under%20the%20particular%20circumstances.>
 

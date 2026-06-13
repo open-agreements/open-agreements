@@ -2,7 +2,7 @@
 jurisdiction: "Maryland"
 slug: maryland
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-06"
 canonicalUrl: https://openagreements.org/legal/privacy/maryland
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/privacy/maryland · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/privacy/maryland · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Maryland Consumer Privacy Law (MODPA)[^about]
 
@@ -68,7 +68,7 @@ This strictly necessary ceiling is the headline difference from the consent-base
 
 There is no standalone private right of action — consumers cannot sue controllers or processors directly for MODPA violations, though the statute preserves any other remedy provided by law. The cure window is discretionary, not automatic, and it is time-limited: it applies only to violations on or before April 1, 2027, after which the Division can act without a notice-and-cure step. Because penalties run under the Consumer Protection Act and can be assessed per violation, the practical posture is to build the notice, minimization, sensitive-data, and contracting controls up front rather than relying on the cure period.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-06. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Maryland. This article synthesizes Maryland primary law and is not legal advice from a Maryland-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-06. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Maryland. This article synthesizes Maryland primary law and is not legal advice from a Maryland-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^stat-4702-apply]: **Md. Code Ann., Com. Law § 14-4702** — "(1) Controlled or processed the personal data of at least 35,000 consumers, excluding personal data controlled or processed solely for the purpose of completing a payment transaction; or (2) Controlled or processed the personal data of at least 10,000 consumers and derived more than 20% of its gross revenue from the sale of personal data." *Md. Code Ann., Com. Law § 14-4702.* <https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gcl&section=14-4702>
 

@@ -2,7 +2,7 @@
 jurisdiction: "Oregon"
 slug: oregon
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-05"
 canonicalUrl: https://openagreements.org/legal/privacy/oregon
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/privacy/oregon · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/privacy/oregon · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Oregon Consumer Privacy Law (OCPA)[^about]
 
@@ -68,7 +68,7 @@ Consent must be a freely given, specific, informed and unambiguous affirmative a
 
 There is also no longer a general right to cure. The OCPA's pre-suit notice-and-cure provision sunset on January 1, 2026 for ordinary covered businesses; from that date the 30-day cure survived only for a controller that is a noncommercial educational broadcast station and that meets two further conditions — it receives Corporation for Public Broadcasting funding or is a designated emergency-alert primary entry point, and it distributes its journalism content without cost to recipients [^stat-589-cure]. Even that narrow carve-out is temporary: the legislature repealed the cure section in full effective July 1, 2026, after which no controller has a statutory right to cure [^stat-589-cure-repeal]. The practical takeaway is to build the notice, consent, contracting, and opt-out controls before a complaint arrives, because covered businesses no longer have a statutory window to fix a violation after the Attorney General identifies it. The Attorney General must bring an action within five years after the last act constituting the violation.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-05. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Oregon. This article synthesizes Oregon primary law and is not legal advice from a Oregon-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-05. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Oregon. This article synthesizes Oregon primary law and is not legal advice from a Oregon-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^stat-572-apply]: **Or. Rev. Stat. § 646A.572** — "ORS 646A.570 to 646A.589 apply to any person that conducts business in this state, or that provides products or services to residents of this state, and that during a calendar year, controls or processes: (A) The personal data of 100,000 or more consumers, other than personal data controlled or processed solely for the purpose of completing a payment transaction; or (B) The personal data of 25,000 or more consumers, while deriving 25 percent or more of the person’s annual gross revenue from selling personal data." *Or. Rev. Stat. § 646A.572(1)(a).* <https://www.oregonlegislature.gov/bills_laws/ors/ors646A.html>
 

@@ -2,7 +2,7 @@
 jurisdiction: "Alaska"
 slug: alaska
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-11"
 canonicalUrl: https://openagreements.org/legal/privacy/alaska
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/privacy/alaska · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/privacy/alaska · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Alaska Consumer Privacy Law[^about]
 
@@ -88,7 +88,7 @@ The cap is what makes Alaska's enforcement architecture distinctive. In an ordin
 
 Two further doors stay open. First, the UTPCPA separately allows any victim of an unlawful act — whether or not the person suffered actual damages — to seek an injunction against its continuation after written notice to the seller [^utpa-injunction], a remedy the PIPA cap does not erase. Second, the Genetic Privacy Act's private action has no PIPA-style limitation: statutory damages of $5,000 per violation, or $100,000 where the violator profited, accrue on top of actual damages [^q6-gpa-pra], which is why genetic data, not breach response, is where Alaska private-suit exposure concentrates. For violations by state and local agencies, enforcement runs through the Department of Administration rather than the UTPCPA. The durable takeaway: build the incident-response program for the attorney general and the per-resident penalty math, and treat any genetic-data processing as the place where plaintiffs, not regulators, set the price.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Alaska. This article synthesizes Alaska primary law and is not legal advice from a Alaska-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Alaska. This article synthesizes Alaska primary law and is not legal advice from a Alaska-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^pipa-covered-person]: **AS 45.48.090** — "‘covered person’ means a (A) person doing business; (B) governmental agency; or (C) person with more than 10 employees;" *AS 45.48.090(2).* <https://www.akleg.gov/basis/statutes.asp?media=print&secStart=45.48.010&secEnd=45.48.090>
 

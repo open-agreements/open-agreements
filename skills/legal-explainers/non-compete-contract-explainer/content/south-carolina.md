@@ -2,7 +2,7 @@
 jurisdiction: "South Carolina"
 slug: south-carolina
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/legal/non-compete/south-carolina
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/south-carolina · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/south-carolina · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in South Carolina[^about]
 
@@ -165,7 +165,7 @@ The bill is physician-specific — not a general healthcare-worker ban — and i
 
 "The Non-Compete Rule, 16 C.F.R. § 910.1–.6, is hereby SET ASIDE and shall not be enforced or otherwise take effect on September 4, 2024, or thereafter."[^ryan-ftc-set-aside]
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not South Carolina. This article synthesizes South Carolina primary law and is not legal advice from a South Carolina-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not South Carolina. This article synthesizes South Carolina primary law and is not legal advice from a South Carolina-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^team-ia-five-factor-test]: **Team IA, Inc. v. Lucas** — "A covenant not to compete will be upheld only if it is: (1) necessary for the protection of the legitimate interest of the employer; (2) reasonably limited in its operation with respect to time and place; (3) not unduly harsh and oppressive in curtailing the legitimate efforts of the employee to earn a livelihood; (4) reasonable from the standpoint of sound public policy; and (5) supported by valuable consideration." *Team IA, Inc. v. Lucas, 395 S.C. 237, 717 S.E.2d 103 (Ct. App. 2011).* <https://www.courtlistener.com/opinion/2507693/team-ia-inc-v-lucas/#:~:text=A%20covenant%20not%20to%20compete,(5)%20supported%20by%20valuable%20consideration.>
 

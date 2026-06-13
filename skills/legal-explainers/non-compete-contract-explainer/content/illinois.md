@@ -2,7 +2,7 @@
 jurisdiction: "Illinois"
 slug: illinois
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/legal/non-compete/illinois
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/illinois · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/illinois · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Illinois[^about]
 
@@ -209,7 +209,7 @@ It is easy to conflate two different things: a covenant an *employee* signs, and
 
 So an inter-employer no-poach or wage-fixing arrangement can draw antitrust exposure independent of the IFWA's rules for employee covenants.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Illinois. This article synthesizes Illinois primary law and is not legal advice from a Illinois-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Illinois. This article synthesizes Illinois primary law and is not legal advice from a Illinois-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^ifwa-15-enforceability]: **820 ILCS 90/15** — "A covenant not to compete or a covenant not to solicit is illegal and void unless (1) the employee receives adequate consideration, (2) the covenant is ancillary to a valid employment relationship, (3) the covenant is no greater than is required for the protection of a legitimate business interest of the employer, (4) the covenant does not impose undue hardship on the employee, and (5) the covenant is not injurious to the public." *820 ILCS 90/15.* <https://www.ilga.gov/documents/legislation/ilcs/documents/082000900K15.htm>
 

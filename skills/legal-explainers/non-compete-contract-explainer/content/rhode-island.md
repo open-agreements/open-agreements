@@ -2,7 +2,7 @@
 jurisdiction: "Rhode Island"
 slug: rhode-island
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/legal/non-compete/rhode-island
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/rhode-island · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/rhode-island · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Rhode Island[^about]
 
@@ -124,7 +124,7 @@ The federal FTC Non-Compete Rule is also background rather than an operative Rho
 >
 > Rhode Island non-compete law may change through future legislation, but un-enacted bills do not replace the enacted worker-category statute. Check Chapter 28-59 and any active bill text before reusing a Rhode Island form [^rinaa-current-baseline].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Rhode Island. This article synthesizes Rhode Island primary law and is not legal advice from a Rhode Island-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Rhode Island. This article synthesizes Rhode Island primary law and is not legal advice from a Rhode Island-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^rinaa-covered-workers]: **R.I. Gen. Laws § 28-59-3** — "A noncompetition agreement shall not be enforceable against the following types of workers:" *R.I. Gen. Laws § 28-59-3(a).* <https://webserver.rilegislature.gov/Statutes/TITLE28/28-59/28-59-3.htm>
 

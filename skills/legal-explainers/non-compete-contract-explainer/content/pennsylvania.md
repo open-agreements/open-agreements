@@ -2,7 +2,7 @@
 jurisdiction: "Pennsylvania"
 slug: pennsylvania
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/legal/non-compete/pennsylvania
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/pennsylvania · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/pennsylvania · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Pennsylvania[^about]
 
@@ -191,7 +191,7 @@ Because the enacted baseline remains common-law reasonableness plus the Act 74 h
 >
 > Treat Senate Bill 142 and Senate Bill 680 as monitoring items, not present Pennsylvania law, and do not assume any general statewide non-compete ban has passed. Recheck the General Assembly's bill status before changing forms, because only Act 74's health care restriction is currently enacted [^q12-act74-applicability].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Pennsylvania. This article synthesizes Pennsylvania primary law and is not legal advice from a Pennsylvania-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Pennsylvania. This article synthesizes Pennsylvania primary law and is not legal advice from a Pennsylvania-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^socko-four-part-test]: **Socko v. Mid-Atlantic Systems of CPA, Inc.** — "Consistent with this legal background, currently in Pennsylvania, restrictive covenants are enforceable only if they are: (1) ancillary to an employment relationship between an employee and an employer; (2) supported by adequate consideration; (3) the restrictions are reasonably limited in duration and geographic extent; and (4) the restrictions are designed to protect the legitimate interests of the employer." *Socko v. Mid-Atlantic Systems of CPA, Inc., 126 A.3d 1266 (Pa. 2015).* <https://www.courtlistener.com/opinion/3155889/socko-d-v-mid-atantic-systems-of-cpa-inc-aplt/#:~:text=Consistent%20with%20this%20legal%20background%2C,legitimate%20interests%20of%20the%20employer.>
 

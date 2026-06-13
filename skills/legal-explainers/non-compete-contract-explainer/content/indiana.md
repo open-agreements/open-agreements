@@ -2,7 +2,7 @@
 jurisdiction: "Indiana"
 slug: indiana
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/legal/non-compete/indiana
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/indiana · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/indiana · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Indiana[^about]
 
@@ -192,7 +192,7 @@ In *Ryan LLC v. Federal Trade Commission*, a federal court set the rule aside wi
 
 "The Non-Compete Rule, 16 C.F.R. § 910.1–.6, is hereby SET ASIDE and shall not be enforced or otherwise take effect on September 4, 2024, or thereafter."[^ryan-ftc-set-aside]
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Indiana. This article synthesizes Indiana primary law and is not legal advice from a Indiana-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Indiana. This article synthesizes Indiana primary law and is not legal advice from a Indiana-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^krueger-strict-construction]: **Central Indiana Podiatry, P.C. v. Krueger** — "We construe these covenants strictly against the employer and will not enforce an unreasonable restriction." *Central Indiana Podiatry, P.C. v. Krueger, 882 N.E.2d 723 (Ind. 2008).* <https://www.courtlistener.com/opinion/852486/central-indiana-podiatry-pc-v-krueger/#:~:text=We%20construe%20these%20covenants%20strictly,not%20enforce%20an%20unreasonable%20restriction.>
 

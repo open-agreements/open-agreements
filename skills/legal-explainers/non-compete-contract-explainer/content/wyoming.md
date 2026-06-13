@@ -2,7 +2,7 @@
 jurisdiction: "Wyoming"
 slug: wyoming
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-04-14"
 canonicalUrl: https://openagreements.org/legal/non-compete/wyoming
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/wyoming · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/wyoming · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Wyoming[^about]
 
@@ -189,7 +189,7 @@ Commentary specifically warns employers to evaluate routine replacement or updat
 
 **2021–2022 backdrop:** Wyoming's common-law baseline was already demanding because of strict construction, consideration, and no-narrowing cases [^brown-prima-facie][^malave-common-law-elements][^hassler-void-public-policy].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-04-14. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Wyoming. This article synthesizes Wyoming primary law and is not legal advice from a Wyoming-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-04-14. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Wyoming. This article synthesizes Wyoming primary law and is not legal advice from a Wyoming-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^wyo-1-23-voids-labor-noncompetes]: **Wyo. Stat. § 1-23-108(a)** — "Any covenant not to compete that restricts the right of any person to receive compensation for performance of skilled or unskilled labor shall be void." *Wyo. Stat. § 1-23-108(a) (2025) (SF 107, Enrolled Act No. 87).* <https://wyoleg.gov/2025/Enroll/SF0107.pdf>
 

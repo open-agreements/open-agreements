@@ -2,7 +2,7 @@
 jurisdiction: "West Virginia"
 slug: west-virginia
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/legal/non-compete/west-virginia
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/west-virginia · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/west-virginia · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in West Virginia[^about]
 
@@ -120,7 +120,7 @@ For physicians, the non-compete statute expressly preserves nondisclosure provis
 
 For non-physician employees, ordinary contract and trade-secret tools are often cleaner than a work ban. *Reddy* identifies trade secrets and customer lists as classic protectable interests, but a confidentiality covenant should still be tied to actual confidential information rather than used as a practical non-compete [^reddy-trade-secrets-customer-lists].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not West Virginia. This article synthesizes West Virginia primary law and is not legal advice from a West Virginia-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not West Virginia. This article synthesizes West Virginia primary law and is not legal advice from a West Virginia-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^reddy-employee-rule-of-reason]: **Reddy v. Community Health Foundation of Man** — "The three-dimensional method of inquiry has been summarized in a leading article: ‘A restraint is reasonable only if it (1) is no greater than is required for the protection of the employer, (2) does not impose undue hardship on the employee, and (3) is not injurious to the public,’ H.M. Blake, ‘Employee Agreements Not to Compete,’ supra, at 648." *Reddy v. Cmty. Health Found. of Man, 171 W. Va. 368, 298 S.E.2d 906 (1982).* <https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/#:~:text=The%20three%2Ddimensional%20method%20of%20inquiry,to%20Compete%2C%E2%80%9D%20supra%2C%20at%20648.>
 

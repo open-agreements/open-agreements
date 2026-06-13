@@ -2,7 +2,7 @@
 jurisdiction: "Colorado"
 slug: colorado
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-04"
 canonicalUrl: https://openagreements.org/legal/privacy/colorado
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/privacy/colorado · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/privacy/colorado · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Colorado Consumer Privacy Law (CPA)[^about]
 
@@ -68,7 +68,7 @@ In practice that means honoring browser-level signals such as the Global Privacy
 
 One Colorado wrinkle raises the stakes: the CPA's right-to-cure provision was repealed effective January 1, 2025, so a controller can no longer count on a guaranteed notice-and-cure window before an enforcement action. Violations are deceptive trade practices subject to the Colorado Consumer Protection Act's penalties. The compliance posture, then, is to build the privacy notice, opt-out, and contracting controls in advance rather than relying on a cure period that no longer exists.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-04. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Colorado. This article synthesizes Colorado primary law and is not legal advice from a Colorado-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-04. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Colorado. This article synthesizes Colorado primary law and is not legal advice from a Colorado-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^stat-1304-apply]: **Colo. Rev. Stat. § 6-1-1304** — "this part 13 applies to a controller that: (a) Conducts business in Colorado or produces or delivers commercial products or services that are intentionally targeted to residents of Colorado; and (b) Satisfies one or both of the following thresholds:" *Colo. Rev. Stat. § 6-1-1304(1).* <https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-06.pdf>
 

@@ -2,7 +2,7 @@
 jurisdiction: "Alabama"
 slug: alabama
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-11"
 canonicalUrl: https://openagreements.org/legal/privacy/alabama
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/privacy/alabama · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/privacy/alabama · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Alabama Consumer Privacy Law[^about]
 
@@ -106,7 +106,7 @@ The APDPA's cure right is unusually strong: it never sunsets, and after a contro
 
 The breach act has real penalty teeth despite the no-private-action rule: knowing violations of its notice provisions draw ADTPA penalties capped at $500,000 per breach [^breach-500k-cap], and a separate provision adds up to $5,000 per day for each consecutive day an entity fails to take reasonable action to comply with the notice duties [^breach-per-day]. The ADTPA itself does carry a limited private remedy — a consumer who suffers monetary damage from an unlawful trade practice may recover actual damages or $100, whichever is greater, with discretionary trebling [^adtpa-private-remedy] — but it is individual-only: the statute bars class actions as a substantive limitation [^adtpa-class-bar], and it requires a 15-day pre-suit demand [^adtpa-demand]. Expect that narrow route to stay closed for APDPA claims as well: where the Legislature wants ADTPA treatment it cross-references the ADTPA expressly, as the breach act does, and the APDPA contains no such cross-reference — it gives the enforcement role to the Attorney General instead.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Alabama. This article synthesizes Alabama primary law and is not legal advice from a Alabama-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Alabama. This article synthesizes Alabama primary law and is not legal advice from a Alabama-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^apdpa-short-title]: **Ala. Act No. 2026-552, § 1 (APDPA short title)** — "Section 1. This act shall be known as the Alabama Personal Data Protection Act." *Ala. Act No. 2026-552, § 1.* <https://alison.legislature.state.al.us/files/pdf/SearchableInstruments/2026RS/HB351-enr.pdf>
 

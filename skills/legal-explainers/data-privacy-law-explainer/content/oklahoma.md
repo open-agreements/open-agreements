@@ -2,7 +2,7 @@
 jurisdiction: "Oklahoma"
 slug: oklahoma
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-11"
 canonicalUrl: https://openagreements.org/legal/privacy/oklahoma
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/privacy/oklahoma · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/privacy/oklahoma · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Oklahoma Consumer Privacy Law (OKCDPA)[^about]
 
@@ -89,7 +89,7 @@ Three Oklahoma-specific features round out the picture. First, the 30-day cure r
 
 The structure matters for scoping. The GLBA carve-out is written as *a financial institution or data subject to* Title V — both the institution and the data are out — and the HIPAA carve-out removes the covered entity or business associate wholesale, not just its health records [^stat-314-exemptions]. The data-level list in the companion section then covers federally regulated information held by businesses that are otherwise in scope: health records and research data, credit-report information under the FCRA, motor-vehicle data under the DPPA, education records under FERPA, Farm Credit Act data, and employment-context data [^stat-315-data-exempt]. For children's data the act borrows the federal standard outright: a controller or processor that complies with COPPA's verifiable parental consent requirements is deemed compliant with any parental-consent requirement under the act [^stat-316-coppa]. For businesses within FTC jurisdiction, Section 5 of the FTC Act remains a federal backdrop for unfair or deceptive acts or practices in or affecting commerce [^fed-ftc5]. The practical scoping exercise for 2027: first check whether your entity is carved out wholesale; if not, segment the federally regulated data streams out of OKCDPA scope and run the act's rights, notice, consent, and contracting duties on the remainder.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Oklahoma. This article synthesizes Oklahoma primary law and is not legal advice from a Oklahoma-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Oklahoma. This article synthesizes Oklahoma primary law and is not legal advice from a Oklahoma-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^stat-314-apply]: **75A O.S. § 314(A) (SB 546)** — "The provisions of this act apply only to a controller or processor who: 1. Conducts business in this state or produces a product or service targeted to the residents of this state; and 2. During a calendar year, either: a. controls or processes personal data of at least one hundred thousand (100,000) consumers, or b. controls or processes personal data of at least twenty-five thousand (25,000) consumers and derives over fifty percent (50%) of gross revenue from the sale of personal data." *75A O.S. § 314(A) (SB 546, eff. Jan. 1, 2027).* <https://www.oklegislature.gov/cf_pdf/2025-26%20ENR/SB/SB546%20ENR.PDF>
 

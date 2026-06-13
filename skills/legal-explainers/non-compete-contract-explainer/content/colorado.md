@@ -2,7 +2,7 @@
 jurisdiction: "Colorado"
 slug: colorado
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/legal/non-compete/colorado
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/colorado · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/colorado · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Colorado[^about]
 
@@ -190,7 +190,7 @@ The best Colorado authority points toward caution. In *Phoenix Capital, Inc. v. 
 >
 > Because the wage thresholds reset every year and the health-care and minority-owner rules apply to agreements entered into or renewed on or after their effective dates, recheck the current C.R.S. § 8-2-113 text and the latest PAY CALC Order before relying on a Colorado covenant or updating a form [^dev-sb25-083][^ebg-recent-thresholds].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Colorado. This article synthesizes Colorado primary law and is not legal advice from a Colorado-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Colorado. This article synthesizes Colorado primary law and is not legal advice from a Colorado-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^crs-void-rule]: **C.R.S. § 8-2-113** — "Except as provided in subsections (2)(b) and (3) of this section, any covenant not to compete that restricts the right of any person to receive compensation for performance of labor for any employer is void." *C.R.S. § 8-2-113(2)(a).* <https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-08.pdf>
 

@@ -2,7 +2,7 @@
 jurisdiction: "Texas"
 slug: texas
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/legal/non-compete/texas
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/texas · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/texas · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Texas[^about]
 
@@ -230,7 +230,7 @@ That statutory carve-out for *general knowledge, skill, and experience* is impor
 >
 > Do not draft a Texas confidentiality or non-disclosure clause so broadly that it operates as a covert non-compete. The trade-secret statute supports an injunction against misappropriation but excludes general knowledge, skill, and experience, and an NDA that effectively prevents the employee from working can be recharacterized as a non-compete subject to § 15.50 [^tutsa-injunction][^q13-bc-1550a-disguised].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Texas. This article synthesizes Texas primary law and is not legal advice from a Texas-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Texas. This article synthesizes Texas primary law and is not legal advice from a Texas-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^bc-1550a-test]: **Tex. Bus. & Com. Code § 15.50** — "a covenant not to compete is enforceable if it is ancillary to or part of an otherwise enforceable agreement at the time the agreement is made to the extent that it contains limitations as to time, geographical area, and scope of activity to be restrained that are reasonable and do not impose a greater restraint than is necessary to protect the goodwill or other business interest of the promisee." *Tex. Bus. & Com. Code § 15.50(a).* <https://statutes.capitol.texas.gov/Docs/BC/htm/BC.15.htm>
 
