@@ -16,9 +16,9 @@
  *   --output-dir <dir>  Report output dir (default: .nvca-hardening-output/)
  */
 
-import { existsSync, mkdirSync, readFileSync, writeFileSync, readdirSync, rmSync, appendFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readFileSync, writeFileSync, readdirSync, appendFileSync } from 'node:fs';
 import { join, resolve } from 'node:path';
-import { execSync, spawnSync } from 'node:child_process';
+import { execSync, execFileSync, spawnSync } from 'node:child_process';
 import { gradeRecipe } from './lib/recipe-grader.js';
 import { buildCodexPrompt, loadCoiFixture } from './lib/codex-prompt.js';
 import { loadRecipeMetadata, loadCleanConfig } from '../src/core/metadata.js';
@@ -45,6 +45,11 @@ const PROJECT_ROOT = resolve(import.meta.dirname!, '..');
 const DEFAULT_OUTPUT_DIR = join(PROJECT_ROOT, '.nvca-hardening-output');
 const QUALITY_TRACKER_PATH = join(PROJECT_ROOT, 'content', 'recipes', 'QUALITY_TRACKER.md');
 const FIXTURES_DIR = join(PROJECT_ROOT, 'integration-tests', 'fixtures');
+
+/** Escape regex metacharacters so a value can be safely interpolated into a RegExp. */
+function escapeRegExp(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
 
 // Set by main() before any recipe processing
 let outputDirGlobal = DEFAULT_OUTPUT_DIR;
@@ -321,20 +326,21 @@ function runTests(): { passed: boolean; output: string } {
 
 function invokeCodex(prompt: string): { success: boolean; output: string } {
   console.log('  Invoking Codex CLI...');
-  // Write prompt to a unique temp file, pass via shell expansion (per /peer-review pattern)
-  const promptFile = `/tmp/hardening-prompt-${Date.now()}-${process.pid}.md`;
-  writeFileSync(promptFile, prompt);
-  // Also save a copy for debugging
+  // Save a copy of the prompt for debugging
   writeFileSync(join(outputDirGlobal, 'codex-prompt.md'), prompt);
 
   try {
-    const result = execSync(
-      `codex exec --full-auto -C ${JSON.stringify(PROJECT_ROOT)} "$(cat ${JSON.stringify(promptFile)})"`,
+    // Pass the prompt as a direct argument (no shell) so neither the prompt
+    // text nor PROJECT_ROOT is interpreted by a shell.
+    const result = execFileSync(
+      'codex',
+      ['exec', '--full-auto', '-C', PROJECT_ROOT, prompt],
       {
         cwd: PROJECT_ROOT,
         timeout: 10 * 60 * 1000,
         env: { ...process.env },
         stdio: ['pipe', 'pipe', 'pipe'],
+        maxBuffer: 64 * 1024 * 1024,
       },
     );
     const output = result.toString();
@@ -346,8 +352,6 @@ function invokeCodex(prompt: string): { success: boolean; output: string } {
     console.log(`  Codex exit code: ${e.status ?? 'unknown'}`);
     if (stderr) console.log(`  Codex stderr (last 500): ${stderr.slice(-500)}`);
     return { success: false, output: stdout + stderr };
-  } finally {
-    try { rmSync(promptFile); } catch { /* ignore */ }
   }
 }
 
@@ -1152,7 +1156,7 @@ function updateQualityTracker(reports: RecipeReport[]): void {
       : '—';
 
     // Replace the row for this recipe
-    const rowPattern = new RegExp(`^\\| ${report.recipeId} \\|.*$`, 'm');
+    const rowPattern = new RegExp(`^\\| ${escapeRegExp(report.recipeId)} \\|.*$`, 'm');
     const newRow = `| ${report.recipeId} | ${structural} | ${behavioral} | ${fill} | ${lastScorecard.scores.total} | ${tier} | ${fixtureStr} | ${today} |`;
 
     if (rowPattern.test(content)) {
