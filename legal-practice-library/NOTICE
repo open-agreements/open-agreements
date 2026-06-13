@@ -1,7 +1,7 @@
 This bundle contains legal practice-note content licensed under the Creative
 Commons Attribution 4.0 International Public License (CC BY 4.0).
 
-Published and maintained by openagreements.org (UseJunior). It is a generated,
+Published and maintained by openagreements.org. It is a generated,
 one-way Open Knowledge Format projection from UseJunior/legal-explainer — open
 a content issue upstream rather than editing files here. Each concept links back
 to its canonical openagreements.org page via its `resource` field.
