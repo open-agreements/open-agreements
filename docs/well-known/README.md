@@ -18,7 +18,7 @@ Why:
 
 - The product-facing host and API origin are `openagreements.org`.
 - The repo and published artifacts are branded as OpenAgreements even when operated by UseJunior.
-- Internal namespace precedent already uses `org.openagreements.*` in repo-managed identifiers such as `concerto/*.cto` and `scripts/migrate_metadata_to_concerto.mjs`.
+- Internal namespace precedent already uses `org.openagreements.*` in repo-managed identifiers such as the `concerto/*.cto` models.
 - `site/.well-known/ai/entity.json` still names `https://usejunior.com/.well-known/ai/entity.json` as the canonical entity URL and identifies UseJunior as the operator, but that reads as operator ownership, not the stronger reverse-DNS naming convention for the OpenAgreements product namespace.
 
 ## Inventory
