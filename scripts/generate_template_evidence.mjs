@@ -29,6 +29,7 @@ import {
 } from "node:fs";
 import { resolve, join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { isOpenAgreementsOwned } from "./lib/template-utils.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const REPO_ROOT = resolve(__dirname, "..");
@@ -47,13 +48,10 @@ function getSourceLabel(name, metadata) {
   if (name.startsWith("nvca-")) return "NVCA";
   if (name.startsWith("yc-safe-")) return "Y Combinator";
   if (name.startsWith("openagreements-")) return "OpenAgreements";
-  // Fall back to source_url for non-prefixed OA templates
-  const sourceUrl = String(metadata?.source_url || "").toLowerCase();
-  if (
-    sourceUrl.includes("openagreements.org") ||
-    sourceUrl.includes("openagreements.ai") ||
-    sourceUrl.includes("github.com/open-agreements")
-  ) {
+  // Fall back to source_url host for non-prefixed OA templates. Parse the URL
+  // host instead of substring-matching so arbitrary hosts can't impersonate an
+  // OA domain (see scripts/lib/template-utils.mjs).
+  if (isOpenAgreementsOwned(name, metadata || {})) {
     return "OpenAgreements";
   }
   return "Unknown";
