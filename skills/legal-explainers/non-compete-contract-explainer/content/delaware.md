@@ -2,7 +2,7 @@
 jurisdiction: "Delaware"
 slug: delaware
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/legal/non-compete/delaware
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/delaware · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/delaware · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Delaware[^about]
 
@@ -143,7 +143,7 @@ This is a narrow licensing rule, not a general employee non-compete statute. It 
 
 The through-line is not that Delaware became anti-enforcement. It is that Delaware separates contract forms carefully and demands fact-specific tailoring before enforcing true restraints on work.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Delaware. This article synthesizes Delaware primary law and is not legal advice from a Delaware-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Delaware. This article synthesizes Delaware primary law and is not legal advice from a Delaware-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^fp-uc-reasonableness-test]: **FP UC Holdings, LLC v. Hamilton** — "Instead, our courts carefully review the covenants to assure they ‘(1) [are] reasonable in geographic scope and temporal duration, (2) advance a legitimate economic interest of the party seeking its enforcement, and (3) survive a balancing of the equities.’" *FP UC Holdings, LLC v. Hamilton, 2020 WL 1492783, at *6 (Del. Ch. Mar. 27, 2020).* <https://www.courtlistener.com/opinion/4739986/fp-uc-holdings-llc-fpmcm-llc-and-fast-pace-medical-clinic-pllc-v/#:~:text=Instead%2C%20our%20courts%20carefully%20review,a%20balancing%20of%20the%20equities.%E2%80%9D>
 

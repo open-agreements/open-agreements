@@ -2,7 +2,7 @@
 jurisdiction: "Louisiana"
 slug: louisiana
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-11"
 canonicalUrl: https://openagreements.org/legal/privacy/louisiana
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/privacy/louisiana · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/privacy/louisiana · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Louisiana Consumer Privacy Law (LDPA)[^about]
 
@@ -114,7 +114,7 @@ The architecture is worth stating plainly because the pieces cut in different di
 
 The durable takeaway for risk modeling: Louisiana has no omnibus-privacy class-action exposure on the horizon, but breach-notification timeliness and privacy-statement accuracy both carry genuine private-suit risk under statutes already in force.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Louisiana. This article synthesizes Louisiana primary law and is not legal advice from a Louisiana-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Louisiana. This article synthesizes Louisiana primary law and is not legal advice from a Louisiana-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^ldpa-thresholds]: **La. R.S. 51:1780.2(A)** — "The provisions of this Chapter shall apply only to a person or entity that does business in the state and that satisfies one or more of the following thresholds: (1) Has annual gross revenues in excess of twenty-five million dollars. (2) Annually buys, receives for the business's commercial purposes, sells, or shares for commercial purposes the personal information of seventy-five thousand or more consumers, households, or devices. (3) Derives fifty percent or more of its annual revenues from selling consumers' personal information." *La. R.S. 51:1780.2(A) (Act No. 502 of 2026, eff. Jan. 1, 2027).* <https://legis.la.gov/legis/ViewDocument.aspx?d=1475339>
 

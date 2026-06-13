@@ -2,7 +2,7 @@
 jurisdiction: "Arkansas"
 slug: arkansas
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/legal/non-compete/arkansas
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/arkansas · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/arkansas · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Arkansas[^about]
 
@@ -158,7 +158,7 @@ Pre-Act cases show the difference in practice. *Bendinger* rejected the non-comp
 >
 > Do not label every customer, employee, confidentiality, or NDA restriction as a non-compete. Arkansas separates covered competition restraints from other agreements, and the governing standards can differ [^q10-aca-related-covenants].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Arkansas. This article synthesizes Arkansas primary law and is not legal advice from a Arkansas-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Arkansas. This article synthesizes Arkansas primary law and is not legal advice from a Arkansas-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^q1-aca-enforceable]: **Ark. Code Ann. § 4-75-101** — "A covenant not to compete agreement is enforceable if the agreement is ancillary to an employment relationship or part of an otherwise enforceable employment agreement or contract to the extent that: (1) The employer has a protectable business interest; and (2) The covenant not to compete agreement is limited with respect to time and scope in a manner that is not greater than necessary to defend the protectable business interest of the employer." *Ark. Code Ann. § 4-75-101(a).* <https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=/shared/document/statutes-legislation/urn:contentItem:6F8J-XPN0-R03K-P3X3-00008-00>
 

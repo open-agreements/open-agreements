@@ -2,7 +2,7 @@
 jurisdiction: "North Carolina"
 slug: north-carolina
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/legal/non-compete/north-carolina
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/north-carolina · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/north-carolina · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in North Carolina[^about]
 
@@ -265,7 +265,7 @@ SB 673 would impose a categorical ban for hospital-employed health-care professi
 >
 > Track HB 269 and SB 673 before relying on a covenant for a lower-paid worker or a hospital-employed clinician, but draft to current law. Both bills remain pending in committee and have not been enacted, so the existing common-law test still controls [^q12-hb269-policy][^q12-sb673].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not North Carolina. This article synthesizes North Carolina primary law and is not legal advice from a North Carolina-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not North Carolina. This article synthesizes North Carolina primary law and is not legal advice from a North Carolina-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^q1-ridgway-five-factor]: **Medical Staffing Network, Inc. v. Ridgway** — "To be enforceable under North Carolina law, a non-competition agreement must be: (1) in writing; (2) part of an employment contract; (3) based on valuable consideration; (4) reasonable as to time and territory; and (5) designed to protect a legitimate business interest." *Med. Staffing Network, Inc. v. Ridgway, 194 N.C. App. 649 (2009).* <https://www.courtlistener.com/opinion/1156110/medical-staffing-network-inc-v-ridgway/#:~:text=To%20be%20enforceable%20under%20North,protect%20a%20legitimate%20business%20interest.>
 

@@ -2,7 +2,7 @@
 jurisdiction: "New Jersey"
 slug: new-jersey
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-06"
 canonicalUrl: https://openagreements.org/legal/privacy/new-jersey
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/privacy/new-jersey · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/privacy/new-jersey · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # New Jersey Consumer Privacy Law (NJDPA)[^about]
 
@@ -68,7 +68,7 @@ This is the opt-in model: consent must be a clear affirmative act, and the statu
 
 What makes New Jersey distinctive is the enforcement channel: rather than a freestanding penalty scheme, the NJDPA folds violations into the long-standing Consumer Fraud Act, so the Attorney General brings them with the remedies and penalties that statute already supplies. The right to cure is only temporary. For the law's first 18 months, the Division of Consumer Affairs must send notice and allow 30 days to fix a violation it deems curable before bringing an action [^stat-166-17-cure]; after that window closes the Attorney General can proceed directly. Day-to-day rulemaking sits with the Director of the Division of Consumer Affairs, who is charged with promulgating regulations to carry out the act [^stat-166-18-rules]. The practical posture is to build the notice, consent, and contracting controls up front, because the cure off-ramp will not last.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-06. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not New Jersey. This article synthesizes New Jersey primary law and is not legal advice from a New Jersey-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-06. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not New Jersey. This article synthesizes New Jersey primary law and is not legal advice from a New Jersey-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^stat-166-5-apply]: **N.J.S.A. 56:8-166.5** — "the provisions of P.L.2023, c.266 (C.56:8-166.4 et seq.) shall only apply to controllers that conduct business in the State or produce products or services that are targeted to residents of the State, and that during a calendar year either: a. control or process the personal data of at least 100,000 consumers, excluding personal data processed solely for the purpose of completing a payment transaction; or b. control or process the personal data of at least 25,000 consumers and the controller derives revenue, or receives a discount on the price of any goods or services, from the sale of personal data." *N.J.S.A. 56:8-166.5.* <https://pub.njleg.gov/bills/2022/PL23/266_.PDF>
 

@@ -2,7 +2,7 @@
 jurisdiction: "New York"
 slug: new-york
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-11"
 canonicalUrl: https://openagreements.org/legal/privacy/new-york
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/privacy/new-york · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/privacy/new-york · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # New York Consumer Privacy Law[^about]
 
@@ -96,7 +96,7 @@ The practical consequence is that New York privacy litigation by consumers is fr
 
 One forward-looking caveat belongs here. Revised S9269/A10357 passed both houses on June 3-4, 2026 and would create a Health Information Privacy Act if signed; until signature, veto, or chapter amendment, it is not in force. In its passed form, it would keep enforcement exclusively with the Attorney General — no private right of action — at civil penalties of up to fifteen thousand dollars per violation.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York. This article synthesizes New York primary law and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York. This article synthesizes New York primary law and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^q1-shield-duty]: **N.Y. Gen. Bus. Law § 899-bb(2)(a)** — "Any person or business that owns or licenses computerized data which includes private information of a resident of New York shall develop, implement and maintain reasonable safeguards to protect the security, confidentiality and integrity of the private information including, but not limited to, disposal of data." *N.Y. Gen. Bus. Law § 899-bb(2)(a).* <https://www.nysenate.gov/legislation/laws/GBS/899-BB>
 

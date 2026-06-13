@@ -2,7 +2,7 @@
 jurisdiction: "Arkansas"
 slug: arkansas
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-12"
 canonicalUrl: https://openagreements.org/legal/privacy/arkansas
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/privacy/arkansas · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/privacy/arkansas · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Arkansas Consumer Privacy Law[^about]
 
@@ -94,7 +94,7 @@ The ADTPA chassis has real teeth beyond the headline penalty. Controlling person
 
 Operationally, that means the Arkansas regulator-relations file is a single file: the Attorney General is the breach-notice recipient for incidents over 1,000 residents, the holder of the written-determination demand power, and the exclusive enforcer of both PIPA and the children-and-teens act. Businesses planning for July 1, 2026 should expect first-mover enforcement attention on the targeted-advertising ban and the six-element notice, since those are the act's most visible, audit-friendly duties.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Arkansas. This article synthesizes Arkansas primary law and is not legal advice from a Arkansas-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Arkansas. This article synthesizes Arkansas primary law and is not legal advice from a Arkansas-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^pipa-title]: **Ark. Code Ann. § 4-110-101** — "This chapter shall be known and cited as the ‘Personal Information Protection Act’." *Ark. Code Ann. § 4-110-101.* <https://law.justia.com/codes/arkansas/2024/title-4/subtitle-7/chapter-110/section-4-110-101/#:~:text=This%20chapter%20shall%20be%20known,the%20%22Personal%20Information%20Protection%20Act%22.>
 

@@ -2,7 +2,7 @@
 jurisdiction: "Arizona"
 slug: arizona
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-11"
 canonicalUrl: https://openagreements.org/legal/privacy/arizona
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/privacy/arizona · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/privacy/arizona · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Arizona Consumer Privacy Law[^about]
 
@@ -86,7 +86,7 @@ None of these statutes gives a business a cure period — there is no statutory 
 
 Private litigation is not entirely off the table, but the privacy-specific statutes quoted here do not create a consumer action. A plaintiff trying to plead a statutory privacy-misrepresentation theory would likely start with the Consumer Fraud Act's unlawful-practice language [^q7-cfa-unlawful]; whether that theory works for a pure privacy misrepresentation — a privacy policy that overpromises, a broken security commitment — is untested in Arizona's appellate courts, and the breach statute's text leaves breach-notification enforcement to the Attorney General [^q7-breach-penalty]. Plaintiffs can also plead common-law theories such as negligence or invasion of privacy after an incident, but those face the usual standing and damages hurdles absent actual misuse of the data. The operational takeaway: Arizona privacy exposure today is regulator-shaped — manage it by keeping the privacy policy truthful, hitting the 45-day breach clock, and treating genetic data under its dedicated consent regime.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Arizona. This article synthesizes Arizona primary law and is not legal advice from a Arizona-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Arizona. This article synthesizes Arizona primary law and is not legal advice from a Arizona-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^stat-breach-scope]: **A.R.S. § 18-552** — "If a person that conducts business in this state and that owns, maintains or licenses unencrypted and unredacted computerized personal information becomes aware of a security incident, the person shall conduct an investigation to promptly determine whether there has been a security system breach." *A.R.S. § 18-552(A).* <https://www.azleg.gov/ars/18/00552.htm>
 

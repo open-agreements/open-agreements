@@ -2,7 +2,7 @@
 jurisdiction: "Illinois"
 slug: illinois
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-11"
 canonicalUrl: https://openagreements.org/legal/privacy/illinois
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/privacy/illinois · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/privacy/illinois · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Illinois Consumer Privacy Law (BIPA)[^about]
 
@@ -135,7 +135,7 @@ The biometric-vendor scenario deserves specific attention because it is the stan
 
 Where a federal sectoral regime applies, it supplies the contract terms directly: the GLBA Safeguards Rule requires financial institutions to oversee service providers by contract — requiring your service providers by contract to implement and maintain appropriate safeguards [^fed-glba-safeguards] — and HIPAA requires a business-associate agreement with mandatory data-protection, breach-reporting, and subcontractor terms before protected health information moves [^fed-hipaa-baa]. Outside those verticals, carry the same architecture forward as best practice: processing limited to documented instructions, confidentiality, reasonable security, breach notification back to you on PIPA's immediate-notice clock [^stat-pipa-10b-vendor], return or deletion at the end of the engagement, and — for any Illinois-facing biometric or genetic data — express compliance with BIPA and GIPA by name.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Illinois. This article synthesizes Illinois primary law and is not legal advice from a Illinois-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Illinois. This article synthesizes Illinois primary law and is not legal advice from a Illinois-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^stat-bipa-5-findings]: **740 ILCS 14/5** — "The public welfare, security, and safety will be served by regulating the collection, use, safeguarding, handling, storage, retention, and destruction of biometric identifiers and information." *740 ILCS 14/5(g).* <https://www.ilga.gov/documents/legislation/ilcs/documents/074000140K5.htm>
 

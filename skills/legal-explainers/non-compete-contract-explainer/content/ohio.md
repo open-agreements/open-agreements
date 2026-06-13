@@ -2,7 +2,7 @@
 jurisdiction: "Ohio"
 slug: ohio
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/legal/non-compete/ohio
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/ohio · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/ohio · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Ohio[^about]
 
@@ -162,7 +162,7 @@ The enacted baseline therefore remains common-law reasonableness under *Raimonde
 >
 > Treat Senate Bill 11 as a monitoring item, not present Ohio law. Recheck the Ohio General Assembly's bill status before changing forms or telling workers that Ohio has banned non-competes, and note that S.B. 11 as drafted would apply only to agreements made or modified after its effective date [^sb11-prohibition][^sb11-prospective].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Ohio. This article synthesizes Ohio primary law and is not legal advice from a Ohio-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Ohio. This article synthesizes Ohio primary law and is not legal advice from a Ohio-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^raimonde-reasonableness-test]: **Raimonde v. Van Vlerah** — "A covenant restraining an employee from competing with his former employer upon termination of employment is reasonable if it is no greater than is required for the protection of the employer, does not impose undue hardship on the employee, and is not injurious to the public." *Raimonde v. Van Vlerah, 42 Ohio St. 2d 21, 325 N.E.2d 544 (1975).* <https://www.courtlistener.com/opinion/6865409/raimonde-v-van-vlerah/#:~:text=A%20covenant%20restraining%20an%20employee,not%20injurious%20to%20the%20public.>
 

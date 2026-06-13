@@ -2,7 +2,7 @@
 jurisdiction: "New Hampshire"
 slug: new-hampshire
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/legal/non-compete/new-hampshire
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/new-hampshire · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/new-hampshire · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in New Hampshire[^about]
 
@@ -170,7 +170,7 @@ In the sale-of-business setting, *Gosselin* rejected a court-ordered extension o
 >
 > A tolling or extension-during-breach clause is a drafting choice of uncertain enforceability in New Hampshire. If you include one, tie it to the protected interest and the covenant's overall duration, and do not assume a court will extend the period beyond the contract's fair and natural meaning [^gosselin-no-extension][^near-reformation-narrowing].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not New Hampshire. This article synthesizes New Hampshire primary law and is not legal advice from a New Hampshire-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not New Hampshire. This article synthesizes New Hampshire primary law and is not legal advice from a New Hampshire-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^foster-three-part-test]: **Smith, Batchelder & Rugg v. Foster** — "In scrutinizing restrictive covenants, this court employs the following three-pronged test: ‘[a] restraint on employment is reasonable only if it is no greater than necessary for the protection of the employer’s legitimate interest, does not impose undue hardship on the employee and is not injurious to the public interest.’" *Smith, Batchelder & Rugg v. Foster, 119 N.H. 679 (1979).* <https://www.courtlistener.com/opinion/2375592/smith-batchelder-rugg-v-foster/#:~:text=In%20scrutinizing%20restrictive%20covenants%2C%20this,injurious%20to%20the%20public%20interest.%E2%80%9D>
 

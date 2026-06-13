@@ -17,7 +17,7 @@ compatibility: >-
   canonical URL.
 metadata:
   author: open-agreements
-  version: "0.3.0"
+  version: "0.1.0"
 catalog_group: Legal Explainers
 catalog_order: 20
 ---
@@ -106,7 +106,7 @@ do you cover?" question.
 
 ## Notes
 
-- Content is licensed **CC BY 4.0** (© UseJunior); each `content/<slug>.md`
+- Content is licensed **CC BY 4.0** (© openagreements.org); each `content/<slug>.md`
   carries its own attribution and canonical link.
 - This skill does **not** download or execute network code. The only network
   action is the optional, user-approved canonical-URL refresh in step 5.

@@ -2,7 +2,7 @@
 jurisdiction: "California"
 slug: california
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/legal/privacy/california
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/privacy/california · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/privacy/california · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # California Consumer Privacy Law (CCPA/CPRA)[^about]
 
@@ -80,7 +80,7 @@ There are three thresholds to map against your operations. First, a risk assessm
 >
 > For a template privacy program, inventory now where automated tools drive significant decisions and where high-risk processing occurs. The documentation obligations are dated: ADMT compliance by January 1, 2027 and the first cybersecurity-audit reports and risk-assessment submissions from April 1, 2028 — so the records need to exist before those dates, not after [^reg-7121-timing].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not California. This article synthesizes California primary law and is not legal advice from a California-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not California. This article synthesizes California primary law and is not legal advice from a California-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^stat-140-business]: **Cal. Civ. Code § 1798.140** — "had annual gross revenues in excess of twenty-five million dollars ($25,000,000) in the preceding calendar year, as adjusted pursuant to subdivision (d) of Section 1798.199.95." *Cal. Civ. Code § 1798.140(d)(1)(A).* <https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.140>
 

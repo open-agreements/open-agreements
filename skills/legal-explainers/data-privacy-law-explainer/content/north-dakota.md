@@ -2,7 +2,7 @@
 jurisdiction: "North Dakota"
 slug: north-dakota
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-12"
 canonicalUrl: https://openagreements.org/legal/privacy/north-dakota
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/privacy/north-dakota · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/privacy/north-dakota · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # North Dakota Consumer Privacy Law[^about]
 
@@ -84,7 +84,7 @@ Public enforcement is the primary channel. The Attorney General may seek and obt
 
 The private path is narrower than the public one, and its boundary comes from the statutory text. Section 51-15-09 conditions private recovery on the defendant having acquired money or property by means of the unlawful practice, so the claim fits most naturally where a data-related misrepresentation induced a purchase — a privacy promise that helped sell the product — and less naturally where the only wrong is a bare failure to notify after a breach. No quoted authority in this note resolves how far courts will take that bridge from the breach chapter into § 51-15-09, so treat the private exposure as real but untested at its edges. A private claim under the consumer-fraud law must be brought within four years, and the clock does not start until the aggrieved party discovers the facts constituting the violation [^stat-51-15-12-limitations]. The treble-damages and fee-shifting provisions make even individually small claims economically viable for plaintiffs when knowing conduct can be shown [^stat-51-15-09-private], which is the practical reason to treat published privacy statements in North Dakota with the same care as advertising copy.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not North Dakota. This article synthesizes North Dakota primary law and is not legal advice from a North Dakota-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not North Dakota. This article synthesizes North Dakota primary law and is not legal advice from a North Dakota-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^stat-51-30-02-duty]: **N.D. Cent. Code § 51-30-02** — "Any person that owns or licenses computerized data that includes personal information, shall disclose any breach of the security system following discovery or notification of the breach in the security of the data to any resident of the state whose unencrypted personal information was, or is reasonably believed to have been, acquired by an unauthorized person." *N.D. Cent. Code § 51-30-02.* <https://ndlegis.gov/cencode/t51c30.pdf>
 

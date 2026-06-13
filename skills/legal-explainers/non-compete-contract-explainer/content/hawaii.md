@@ -2,7 +2,7 @@
 jurisdiction: "Hawaii"
 slug: hawaii
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/legal/non-compete/hawaii
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/hawaii · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/hawaii · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Hawaii[^about]
 
@@ -145,7 +145,7 @@ That is not the same as permission to draft broadly. *Gagnon* refused enforcemen
 >
 > Draft Hawaii restrictions at the minimum scope supported by the protected interest. A court may limit an injunction to the contract and record before it, but *Gagnon* shows that a covenant lacking a legitimate ancillary purpose can fail rather than be saved by narrower wording [^narrowing-del-rosario-honolulu-limit][^narrowing-gagnon-legitimate-purpose-required].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Hawaii. This article synthesizes Hawaii primary law and is not legal advice from a Hawaii-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Hawaii. This article synthesizes Hawaii primary law and is not legal advice from a Hawaii-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^employee-hrs-480-4-baseline]: **HRS 480-4** — "Every contract, combination in the form of trust or otherwise, or conspiracy, in restraint of trade or commerce in the State, or in any section of this State is illegal." *Haw. Rev. Stat. 480-4(a).* <https://www.capitol.hawaii.gov/hrscurrent/Vol11_Ch0476-0490/HRS0480/HRS_0480-0004.htm>
 

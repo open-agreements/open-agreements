@@ -2,7 +2,7 @@
 jurisdiction: "New Mexico"
 slug: new-mexico
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/legal/non-compete/new-mexico
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/new-mexico · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/new-mexico · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in New Mexico[^about]
 
@@ -167,7 +167,7 @@ The sale context does not eliminate reasonableness. It changes the facts that su
 >
 > Do not use an employment covenant form for a New Mexico business sale. Draft the covenant around the purchased goodwill, the seller's role, the buyer's actual market, the purchase price, and the payout structure, because those facts drove the result in *Bowen* [^q10-bowen-sale-valid][^q10-bowen-enforced-written].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not New Mexico. This article synthesizes New Mexico primary law and is not legal advice from a New Mexico-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not New Mexico. This article synthesizes New Mexico primary law and is not legal advice from a New Mexico-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^lovelace-reasonableness-test]: **Lovelace Clinic v. Murphy** — "All of the physician and surgeon cases either expressly hold or clearly indicate that the rights and duties created by the contract of employment or association are enforceable, if the restrictions thus imposed on the employee or the associate are reasonable." *Lovelace Clinic v. Murphy, 76 N.M. 645, 417 P.2d 450 (1966).* <https://www.courtlistener.com/opinion/1196089/lovelace-clinic-v-murphy/#:~:text=All%20of%20the%20physician%20and,or%20the%20associate%20are%20reasonable.>
 

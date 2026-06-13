@@ -2,7 +2,7 @@
 jurisdiction: "Oregon"
 slug: oregon
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/legal/non-compete/oregon
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/oregon · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/oregon · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Oregon[^about]
 
@@ -294,7 +294,7 @@ Confidentiality and non-disparagement clauses have their own statutory limit. Th
 >
 > Use confidentiality and trade-secret tools for secrecy interests, and scope nondisclosure and nondisparagement clauses to avoid the Workplace Fairness Act. ORS 653.295 preserves trade-secret remedies, but ORS 659A.370 bars provisions that prevent an employee from discussing discrimination or harassment [^q14-ors-653-295-preserve][^q14-ors-659a-370-wfa].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Oregon. This article synthesizes Oregon primary law and is not legal advice from a Oregon-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Oregon. This article synthesizes Oregon primary law and is not legal advice from a Oregon-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^q1-ors-653-295-void-unless]: **ORS 653.295** — "A noncompetition agreement entered into between an employer and employee is void and unenforceable unless: (a)(A) The employer informs the employee in a written employment offer received by the employee at least two weeks before the first day of the employee's employment that a noncompetition agreement is required as a condition of employment; or (B) The noncompetition agreement is entered into upon a subsequent bona fide advancement of the employee by the employer" *ORS 653.295(1).* <https://www.oregonlegislature.gov/bills_laws/ors/ors653.html>
 

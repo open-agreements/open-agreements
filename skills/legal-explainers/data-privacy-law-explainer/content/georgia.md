@@ -2,7 +2,7 @@
 jurisdiction: "Georgia"
 slug: georgia
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-12"
 canonicalUrl: https://openagreements.org/legal/privacy/georgia
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/privacy/georgia · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/privacy/georgia · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Georgia Consumer Privacy Law[^about]
 
@@ -94,7 +94,7 @@ The FBPA remedy can be meaningful where a privacy theory fits the statute. A cou
 
 The constraint is scope. The FBPA reaches unfair or deceptive practices in consumer transactions and consumer acts or practices in trade or commerce [^q5-fbpa-unlawful]. A privacy-policy misrepresentation in a consumer-facing service is the natural Georgia theory; a purely internal employment-data issue, a one-off private dispute, or an incident outside the consumer marketplace is a harder fit. For data-breach-only claims, Georgia's identity-theft article supplies the notice standard, but not an express damages remedy in these sections.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Georgia. This article synthesizes Georgia primary law and is not legal advice from a Georgia-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-12. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Georgia. This article synthesizes Georgia primary law and is not legal advice from a Georgia-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^ga-breach-duty]: **O.C.G.A. § 10-1-912** — "Any information broker or data collector that maintains computerized data that includes personal information of individuals shall give notice of any breach of the security of the system following discovery or notification of the breach in the security of the data to any resident of this state whose unencrypted personal information was, or is reasonably believed to have been, acquired by an unauthorized person." *O.C.G.A. § 10-1-912(a).* <https://advance.lexis.com/document/?pdmfid=1000516&pddocfullpath=%2Fshared%2Fdocument%2Fstatutes-legislation%2Furn%3AcontentItem%3A6348-FSJ1-DYB7-W1RP-00008-00>
 

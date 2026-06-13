@@ -2,7 +2,7 @@
 jurisdiction: "Maine"
 slug: maine
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/legal/non-compete/maine
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/maine · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/maine · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Maine[^about]
 
@@ -125,7 +125,7 @@ The 2026 healthcare development is now law. Governor Mills signed L.D. 2200 on A
 >
 > Confirm the codified text before relying on the § 599-A page alone for healthcare covenants. L.D. 2200 was signed on April 15, 2026 but does not take effect until July 13, 2026, so the Revisor's current § 599-A text may still show only the wage-floor and veterinarian prohibitions until the amendment is codified [^maine-599a-current-prohibited-workers][^ebg-ld2200-effective].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Maine. This article synthesizes Maine primary law and is not legal advice from a Maine-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Maine. This article synthesizes Maine primary law and is not legal advice from a Maine-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^maine-599a-public-policy-narrow-interests]: **26 M.R.S. § 599-A — Noncompete agreements** — "Noncompete agreements are contrary to public policy and are enforceable only to the extent that they are reasonable and are no broader than necessary to protect one or more of the following legitimate business interests of the employer:" *26 M.R.S. § 599-A(2).* <https://legislature.maine.gov/statutes/26/title26sec599-A.html>
 

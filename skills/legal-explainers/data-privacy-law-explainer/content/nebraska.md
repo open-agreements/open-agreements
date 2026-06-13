@@ -2,7 +2,7 @@
 jurisdiction: "Nebraska"
 slug: nebraska
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-06"
 canonicalUrl: https://openagreements.org/legal/privacy/nebraska
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/privacy/nebraska · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/privacy/nebraska · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Nebraska Consumer Privacy Law (Data Privacy Act)[^about]
 
@@ -68,7 +68,7 @@ This is the opt-in model shared by Virginia, Colorado, Connecticut, and Texas �
 
 A controller that cures within the 30-day window and provides the required written statements — confirming the cure and promising no repeat violation — avoids the action. An uncured violation after the cure period exposes the business to a civil penalty of up to $7,500 for each violation, plus injunctive relief and the Attorney General's reasonable fees. The practical posture is to build the notice, consent, and contracting controls up front, but a covered business that receives a notice has a genuine window to fix the issue.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-06. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Nebraska. This article synthesizes Nebraska primary law and is not legal advice from a Nebraska-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-06. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Nebraska. This article synthesizes Nebraska primary law and is not legal advice from a Nebraska-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^stat-1103-apply]: **Neb. Rev. Stat. § 87-1103** — "The Data Privacy Act applies only to a person that: (a) Conducts business in this state or produces a product or service consumed by residents of this state; (b) Processes or engages in the sale of personal data; and (c) Is not a small business as determined under the federal Small Business Act, as such act existed on January 1, 2024, except to the extent that section 87-1118 applies to a person described by this subdivision." *Neb. Rev. Stat. § 87-1103(1).* <https://nebraskalegislature.gov/laws/statutes.php?statute=87-1103>
 

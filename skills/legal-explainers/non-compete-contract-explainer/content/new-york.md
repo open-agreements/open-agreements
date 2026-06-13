@@ -2,7 +2,7 @@
 jurisdiction: "New York"
 slug: new-york
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/legal/non-compete/new-york
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/new-york · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/new-york · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in New York[^about]
 
@@ -151,7 +151,7 @@ This is the one place New York has a statutory non-compete prohibition rather th
 >
 > Do not advise clients that New York has *banned* non-competes. As of this review, no statewide ban is in effect — S3100A was vetoed and S4641A has not passed the Assembly — so the common-law reasonableness test still governs. Re-check the status of S4641A before relying on the current rule [^s3100a-vetoed-ban][^s4641a-pending-ban].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York. This article synthesizes New York primary law and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York. This article synthesizes New York primary law and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^bdo-reasonableness-standard]: **BDO Seidman v. Hirshberg** — "The modern, prevailing common-law standard of reasonableness for employee agreements not to compete applies a three-pronged test." *BDO Seidman v. Hirshberg, 93 N.Y.2d 382, 388 (1999).* <https://www.courtlistener.com/opinion/2117265/bdo-seidman-v-hirshberg/#:~:text=The%20modern%2C%20prevailing%20common%2Dlaw%20standard,compete%20applies%20a%20three%2Dpronged%20test.>
 

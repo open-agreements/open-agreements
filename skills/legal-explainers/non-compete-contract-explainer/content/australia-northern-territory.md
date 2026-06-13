@@ -2,7 +2,7 @@
 jurisdiction: "Northern Territory, Australia"
 slug: australia-northern-territory
 countryCode: AU
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-10"
 canonicalUrl: https://openagreements.org/legal/non-compete/australia-northern-territory
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/australia-northern-territory · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/australia-northern-territory · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Compete Enforceability in the Northern Territory[^about]
 
@@ -151,7 +151,7 @@ Because this is a future legislative matter, employers should treat the timeline
 >
 > Do not draft to a federal ban that does not yet exist. As of June 2026 no Commonwealth statute bans employee non-competes, so enforceability in the Northern Territory still turns on the common-law reasonableness test — under which an unreasonable restraint is simply void [^oamps-still-governs]. Track the proposal through to enacted legislation before changing practice, because its threshold, scope, and commencement remain proposals subject to change.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-10. License: CC BY 4.0. Steven Obiajulu, J.D. is not admitted to practise law in Northern Territory, Australia. This article summarizes publicly available Northern Territory, Australia legal sources for general information only — it is not legal advice and does not create a lawyer–client relationship. It may not reflect the most recent legal developments and is provided without warranty as to accuracy or completeness; verify against the primary sources cited and consult a locally qualified lawyer before relying on it.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-10. License: CC BY 4.0. Steven Obiajulu, J.D. is not admitted to practise law in Northern Territory, Australia. This article summarizes publicly available Northern Territory, Australia legal sources for general information only — it is not legal advice and does not create a lawyer–client relationship. It may not reflect the most recent legal developments and is provided without warranty as to accuracy or completeness; verify against the primary sources cited and consult a locally qualified lawyer before relying on it.
 
 [^henderson-presumed-invalid]: **Henderson v Purairclean Pty Ltd** — "There is a presumption that a restraint of trade clause is invalid. This is for public policy reasons." *Henderson v Purairclean Pty Ltd [2013] NTSC 29 (Riley CJ).* <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/nt/NTSC/2013/29.html>
 

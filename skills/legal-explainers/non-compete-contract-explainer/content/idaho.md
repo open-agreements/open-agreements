@@ -2,7 +2,7 @@
 jurisdiction: "Idaho"
 slug: idaho
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/legal/non-compete/idaho
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/idaho · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/idaho · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Idaho[^about]
 
@@ -195,7 +195,7 @@ The remedy is also different. A trade-secret injunction targets actual or threat
 >
 > Separate confidentiality, trade-secret, and non-compete obligations. If the real risk is misuse of secret information, an Idaho Trade Secrets Act claim may be better tailored than a broad work ban, but the employer still needs secrecy efforts and misappropriation evidence [^idaho-48-801-trade-secret-definition][^idaho-48-802-injunction].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Idaho. This article synthesizes Idaho primary law and is not legal advice from a Idaho-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Idaho. This article synthesizes Idaho primary law and is not legal advice from a Idaho-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^idaho-44-2701-key-employee-enforceable]: **Idaho Code § 44-2701** — "A key employee or key independent contractor may enter into a written agreement or covenant that protects the employer’s legitimate business interests and prohibits the key employee or key independent contractor from engaging in employment or a line of business that is in direct competition with the employer’s business after termination of employment, and the same shall be enforceable, if the agreement or covenant is reasonable as to its duration, geographical area, type of employment or line of business, and does not impose a greater restraint than is reasonably necessary to protect the employer’s legitimate business interests." *Idaho Code § 44-2701.* <https://legislature.idaho.gov/statutesrules/idstat/Title44/T44CH27/SECT44-2701/>
 
