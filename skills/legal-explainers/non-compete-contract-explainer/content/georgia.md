@@ -2,7 +2,7 @@
 jurisdiction: "Georgia"
 slug: georgia
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/legal/non-compete/georgia
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/georgia · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/georgia · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Georgia[^about]
 
@@ -260,7 +260,7 @@ The Act was signed and took effect on May 11, 2011. A covenant signed before tha
 >
 > Check the signing date before applying the GRCA. A covenant entered before May 11, 2011 is judged under Georgia's stricter pre-Act common law, where modification was unavailable for employment non-competes, so the modern reasonableness and blue-pencil rules do not apply to it [^q13-grca-effective-date][^q13-grca-13-8-52-application].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Georgia. This article synthesizes Georgia primary law and is not legal advice from a Georgia-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Georgia. This article synthesizes Georgia primary law and is not legal advice from a Georgia-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^q1-grca-13-8-53a-reasonable]: **O.C.G.A. § 13-8-53** — "Notwithstanding any other provision of this chapter, enforcement of contracts that restrict competition during the term of a restrictive covenant, so long as such restrictions are reasonable in time, geographic area, and scope of prohibited activities, shall be permitted." *O.C.G.A. § 13-8-53(a).* <https://www.legis.ga.gov/api/legislation/document/20112012/114248>
 

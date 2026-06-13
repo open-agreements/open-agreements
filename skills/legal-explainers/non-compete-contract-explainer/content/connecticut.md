@@ -2,7 +2,7 @@
 jurisdiction: "Connecticut"
 slug: connecticut
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/legal/non-compete/connecticut
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/connecticut · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/connecticut · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Connecticut[^about]
 
@@ -153,7 +153,7 @@ HB 5492 would have made a covenant void and unenforceable against employees earn
 >
 > Treat a failed bill like HB 5492 as a monitoring item, not as present Connecticut law. Recheck the official Connecticut General Assembly bill status each session before changing forms or telling workers that Connecticut has enacted a general wage-threshold non-compete statute [^hb-5492-wage-threshold-bill].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Connecticut. This article synthesizes Connecticut primary law and is not legal advice from a Connecticut-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Connecticut. This article synthesizes Connecticut primary law and is not legal advice from a Connecticut-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^scott-employee-noncompete-reasonableness]: **Scott v. General Iron & Welding Co.** — "In order to be valid and binding, a covenant which restricts the activities of an employee following the termination of his employment must be partial and restricted in its operation ‘in respect either to time or place, . . . and must be reasonable — that is, it should afford only a fair protection to the interest of the party in whose favor it is made and must not be so large in its operation as to interfere with the interests of the public." *Scott v. Gen. Iron & Welding Co., 171 Conn. 132 (1976).* <https://www.courtlistener.com/opinion/2268855/scott-v-general-iron-welding-co/#:~:text=In%20order%20to%20be%20valid,the%20interests%20of%20the%20public.>
 

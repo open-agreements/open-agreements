@@ -2,7 +2,7 @@
 jurisdiction: "Minnesota"
 slug: minnesota
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-06"
 canonicalUrl: https://openagreements.org/legal/privacy/minnesota
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/privacy/minnesota · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/privacy/minnesota · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Minnesota Consumer Privacy Law (MCDPA)[^about]
 
@@ -68,7 +68,7 @@ This is the opt-in model shared by most of the newer state laws — sensitive da
 
 This makes Minnesota's posture stricter than the states whose cure periods are permanent. An uncured violation exposes a controller or processor to an injunction and a civil penalty of up to $7,500 per violation, and the state may also recover its litigation expenses. Because the grace period is gone, the practical move is to stand up the notice, consent, and contracting controls before the Attorney General comes calling rather than counting on a chance to remediate after a complaint.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-06. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Minnesota. This article synthesizes Minnesota primary law and is not legal advice from a Minnesota-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-06. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Minnesota. This article synthesizes Minnesota primary law and is not legal advice from a Minnesota-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^stat-12-scope]: **Minn. Stat. § 325M.12** — "Sections 325M.10 to 325M.21 apply to legal entities that conduct business in Minnesota or produce products or services that are targeted to residents of Minnesota, and that satisfy one or more of the following thresholds: (1) during a calendar year, controls or processes personal data of 100,000 consumers or more, excluding personal data controlled or processed solely for the purpose of completing a payment transaction; or (2) derives over 25 percent of gross revenue from the sale of personal data and processes or controls personal data of 25,000 consumers or more." *Minn. Stat. § 325M.12, subd. 1(a).* <https://www.revisor.mn.gov/statutes/cite/325M.12>
 

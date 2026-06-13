@@ -2,7 +2,7 @@
 jurisdiction: "Western Australia, Australia"
 slug: australia-western-australia
 countryCode: AU
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-10"
 canonicalUrl: https://openagreements.org/legal/non-compete/australia-western-australia
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/australia-western-australia · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/australia-western-australia · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Compete Enforceability in Western Australia[^about]
 
@@ -155,7 +155,7 @@ Because this is a future legislative matter, employers should treat the timeline
 >
 > Do not draft to a federal ban that does not yet exist. As of June 2026 no Commonwealth statute bans employee non-competes, so enforceability in Western Australia still turns on the common-law reasonableness test and the blue-pencil-only severance rule [^smith-still-governs]. Track the proposal through to enacted legislation before changing practice, because its threshold, scope, and commencement remain proposals subject to change.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-10. License: CC BY 4.0. Steven Obiajulu, J.D. is not admitted to practise law in Western Australia, Australia. This article summarizes publicly available Western Australia, Australia legal sources for general information only — it is not legal advice and does not create a lawyer–client relationship. It may not reflect the most recent legal developments and is provided without warranty as to accuracy or completeness; verify against the primary sources cited and consult a locally qualified lawyer before relying on it.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-10. License: CC BY 4.0. Steven Obiajulu, J.D. is not admitted to practise law in Western Australia, Australia. This article summarizes publicly available Western Australia, Australia legal sources for general information only — it is not legal advice and does not create a lawyer–client relationship. It may not reflect the most recent legal developments and is provided without warranty as to accuracy or completeness; verify against the primary sources cited and consult a locally qualified lawyer before relying on it.
 
 [^austal-presumed-void]: **Austal Ships Pty Ltd v Clay** — "Although contracts in restraint of trade are presumed to be contrary to public policy and therefore void, they may be justified by the special circumstances of the particular case." *Austal Ships Pty Ltd v Clay [2018] WASC 178 (Smith AJ).* <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASC/2018/178.html>
 

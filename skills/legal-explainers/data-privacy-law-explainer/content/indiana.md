@@ -2,7 +2,7 @@
 jurisdiction: "Indiana"
 slug: indiana
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-06"
 canonicalUrl: https://openagreements.org/legal/privacy/indiana
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/privacy/indiana · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/privacy/indiana · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Indiana Consumer Privacy Law (INCDPA)[^about]
 
@@ -68,7 +68,7 @@ This is the opt-in model shared by Virginia, Colorado, and Texas — the opposit
 
 Indiana's 30-day cure period has no sunset date — it remains a permanent, built-in off-ramp, unlike states that let an early cure window expire. A controller that cures within the window and certifies in writing that the violation is fixed and will not recur avoids the action; an uncured violation exposes it to civil penalties of up to $7,500 per violation. The practical posture is still to build the notice, consent, and contracting controls up front, but a covered business that receives a notice has a genuine window to fix the issue.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-06. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Indiana. This article synthesizes Indiana primary law and is not legal advice from a Indiana-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-06. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Indiana. This article synthesizes Indiana primary law and is not legal advice from a Indiana-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^stat-1-1-apply]: **Ind. Code § 24-15-1-1** — "This article applies to a person that conducts business in Indiana or produces products or services that are targeted to residents of Indiana and that during a calendar year: (1) controls or processes personal data of at least one hundred thousand (100,000) consumers who are Indiana residents; or (2) controls or processes personal data of at least twenty-five thousand (25,000) consumers who are Indiana residents and derives more than fifty percent (50%) of gross revenue from the sale of personal data." *Ind. Code § 24-15-1-1(a).* <https://iga.in.gov/ic/2024/Title_24/Article_15.pdf>
 

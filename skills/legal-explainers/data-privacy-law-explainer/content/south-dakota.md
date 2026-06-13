@@ -2,7 +2,7 @@
 jurisdiction: "South Dakota"
 slug: south-dakota
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-11"
 canonicalUrl: https://openagreements.org/legal/privacy/south-dakota
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/privacy/south-dakota · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/privacy/south-dakota · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # South Dakota Consumer Privacy Law[^about]
 
@@ -97,7 +97,7 @@ That combination makes South Dakota one of the least hospitable states for priva
 
 The law, codified at S.D. Codified Laws §§ 53-12-51 to 53-12-55, goes beyond a one-time download. Covered platforms must implement a transparent, third-party-accessible interoperability interface that lets users expose a common set of personal data to other services and lets permissioned third parties access the user's content [^q7-interop], and must offer social-graph exports in a machine-readable, license-fee-free format — as a single export or as continuous exports running at least every twenty-four hours [^q7-graph-export]. Personal data obtained through the interface must be secured in accordance with the company's own privacy notice and security practices [^q7-security]. One structural gap stands out: the codified sections impose duties but contain no enforcement provision — no civil penalty, no private right of action, and no express grant of authority to the attorney general appears in §§ 53-12-51 to 53-12-55 — so how the mandate will be enforced remains an open question ahead of the effective date. Given the hundred-million-user gate, the law is a monitoring item for platform counsel and a non-event for nearly every other South Dakota business.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not South Dakota. This article synthesizes South Dakota primary law and is not legal advice from a South Dakota-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not South Dakota. This article synthesizes South Dakota primary law and is not legal advice from a South Dakota-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^q1-breach-scope]: **S.D. Codified Laws § 22-40-19** — "(3) ‘Information holder,’ any person or business that conducts business in this state, and that owns or licenses computerized personal or protected information of residents of this state;" *S.D. Codified Laws § 22-40-19(3).* <https://sdlegislature.gov/Statutes/22-40-19>
 

@@ -2,7 +2,7 @@
 jurisdiction: "Alaska"
 slug: alaska
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-01"
 canonicalUrl: https://openagreements.org/legal/non-compete/alaska
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/alaska · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/alaska · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Alaska[^about]
 
@@ -115,7 +115,7 @@ Confidentiality and trade-secret clauses should be drafted separately from non-c
 
 Garden leave is a general option rather than an Alaska-specific doctrine; no published Alaska decision squarely addresses it. If used, it should pay the worker during a short transition, be tied to defined customer, confidentiality, or trade-secret risk, and be tested against the same Alaska reasonableness factors that govern other restraints [^data-management-reasonableness-factors-alternatives].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-01. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Alaska. This article synthesizes Alaska primary law and is not legal advice from a Alaska-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-01. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Alaska. This article synthesizes Alaska primary law and is not legal advice from a Alaska-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^decristofaro-disfavored-strictly-construed]: **DeCristofaro v. Security Nat. Bank** — "They are, therefore, strictly construed." *DeCristofaro v. Sec. Nat'l Bank, 664 P.2d 167, 168-69 (Alaska 1983).* <https://www.courtlistener.com/opinion/1234367/decristofaro-v-security-national-bank/#:~:text=They%20are%2C%20therefore%2C%20strictly%20construed.>
 

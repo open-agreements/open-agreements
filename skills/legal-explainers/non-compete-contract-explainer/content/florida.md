@@ -2,7 +2,7 @@
 jurisdiction: "Florida"
 slug: florida
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/legal/non-compete/florida
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/florida · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/florida · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Florida[^about]
 
@@ -170,7 +170,7 @@ The Federal Register notice records that a federal court held the rule unlawful 
 
 "In the third case, the court held that the Non-Compete Rule was unlawful and set it aside."[^q14-fr-removal]
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Florida. This article synthesizes Florida primary law and is not legal advice from a Florida-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Florida. This article synthesizes Florida primary law and is not legal advice from a Florida-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^q1-542018-baseline]: **Fla. Stat. § 542.18** — "Every contract, combination, or conspiracy in restraint of trade or commerce in this state is unlawful." *Fla. Stat. § 542.18 (2025).* <https://www.flsenate.gov/Laws/Statutes/2025/542.18>
 

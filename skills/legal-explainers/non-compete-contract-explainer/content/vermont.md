@@ -2,7 +2,7 @@
 jurisdiction: "Vermont"
 slug: vermont
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-01"
 canonicalUrl: https://openagreements.org/legal/non-compete/vermont
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/vermont · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/vermont · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Vermont[^about]
 
@@ -140,7 +140,7 @@ Healthcare-professional non-competes are not yet categorically void, but [H.583]
 >
 > Do not rely on a Vermont *inevitable disclosure* theory as a primary trade-secret strategy. The Vermont Supreme Court has never adopted inevitable disclosure as a standalone basis for enjoining a former employee, and the VTSA's *actual or threatened* misappropriation standard in § 4602 requires conduct- or threat-specific proof rather than a presumption from new employment alone [^vtsa-4602-injunctive-caution].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-01. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Vermont. This article synthesizes Vermont primary law and is not legal advice from a Vermont-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-01. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Vermont. This article synthesizes Vermont primary law and is not legal advice from a Vermont-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^andrus-reasonableness-test]: **Vermont Electric Supply Co. v. Andrus** — "enforcement will be ordered unless the agreement is found to be contrary to public policy, unnecessary for protection of the employer, or unnecessarily restrictive of the rights of the employee, with due regard being given to the subject matter of the contract and the circumstances and conditions under which it is to be performed." *Vt. Elec. Supply Co. v. Andrus, 132 Vt. 195, 315 A.2d 456 (1974).* <https://www.courtlistener.com/opinion/1972913/vermont-electric-supply-company-inc-v-andrus/#:~:text=enforcement%20will%20be%20ordered%20unless,it%20is%20to%20be%20performed.>
 

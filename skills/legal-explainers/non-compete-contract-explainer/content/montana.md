@@ -2,7 +2,7 @@
 jurisdiction: "Montana"
 slug: montana
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/legal/non-compete/montana
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/montana · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/montana · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Montana[^about]
 
@@ -139,7 +139,7 @@ Section 28-2-604 gives Montana courts a partial-void rule when a contract has di
 >
 > Do not assume Montana will rewrite an overbroad covenant into a narrower one. Draft separate confidentiality, trade-secret, customer, repayment, and competition provisions so lawful objects can stand on their own if a restraint fails [^montana-partial-void][^curl-void-covenant].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Montana. This article synthesizes Montana primary law and is not legal advice from a Montana-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Montana. This article synthesizes Montana primary law and is not legal advice from a Montana-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^montana-restraint-baseline]: **Mont. Code Ann. § 28-2-703** — "28-2-703. Contracts in restraint of trade generally void. Any contract by which anyone is restrained from exercising a lawful profession, trade, or business of any kind, otherwise than is provided for by 28-2-704 or 28-2-705, is to that extent void." *Mont. Code Ann. § 28-2-703.* <https://mca.legmt.gov/bills/mca/title_0280/chapter_0020/part_0070/section_0030/0280-0020-0070-0030.html>
 

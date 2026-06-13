@@ -2,7 +2,7 @@
 jurisdiction: "Nebraska"
 slug: nebraska
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/legal/non-compete/nebraska
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/nebraska · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/nebraska · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Nebraska[^about]
 
@@ -153,7 +153,7 @@ For modern media, technology, and sales roles, *Sisk* is the practical warning. 
 >
 > One overbroad term can be fatal. Nebraska drafting should be conservative at the front end because a court may not trim the covenant after the dispute starts [^q12-gaver-no-reform-check][^q12-sisk-modern-warning].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Nebraska. This article synthesizes Nebraska primary law and is not legal advice from a Nebraska-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Nebraska. This article synthesizes Nebraska primary law and is not legal advice from a Nebraska-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^q1-brown-three-part-test]: **Securities Acceptance Corp. v. Brown** — "There are three general requirements relating to partial restraints of trade: First, is the restriction reasonable in the sense that it is not injurious to the public; second, is the restriction reasonable in the sense that it is no greater than is reasonably necessary to protect the employer in some legitimate interest; and, third, is the restriction reasonable in the sense that it is not unduly harsh and oppressive on the employee." *Securities Acceptance Corp. v. Brown, 171 Neb. 406, 417, 106 N.W.2d 456 (1960).* <https://www.courtlistener.com/opinion/1948918/securities-acceptance-corporation-v-brown/#:~:text=There%20are%20three%20general%20requirements,and%20oppressive%20on%20the%20employee.>
 

@@ -2,7 +2,7 @@
 jurisdiction: "Alabama"
 slug: alabama
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/legal/non-compete/alabama
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/alabama · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/alabama · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Alabama[^about]
 
@@ -194,7 +194,7 @@ Because the legislature labeled its restrictive-covenant rules fundamental publi
 >
 > Do not count on a Delaware, Florida, or other foreign choice-of-law clause to make an otherwise void Alabama covenant enforceable. Section 8-1-197 designates the Act as fundamental public policy and directs courts to apply Alabama law instead of a conflicting foreign law, so a choice-of-law workaround is unreliable for covenants Alabama would void [^ala-8-1-197-govern].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Alabama. This article synthesizes Alabama primary law and is not legal advice from a Alabama-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Alabama. This article synthesizes Alabama primary law and is not legal advice from a Alabama-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^ala-8-1-190-void]: **Ala. Code § 8-1-190** — "Every contract by which anyone is restrained from exercising a lawful profession, trade, or business of any kind otherwise than is provided by this section is to that extent void." *Ala. Code § 8-1-190(a).* <https://alison.legislature.state.al.us/code-of-alabama/8-1-190>
 

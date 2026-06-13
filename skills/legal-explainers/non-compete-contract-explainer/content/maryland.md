@@ -2,7 +2,7 @@
 jurisdiction: "Maryland"
 slug: maryland
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/legal/non-compete/maryland
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/maryland · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/maryland · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Maryland[^about]
 
@@ -171,7 +171,7 @@ A broader 2025 effort to clarify that § 3-716 reaches only post-separation rest
 >
 > Treat the § 3-716 categories as a moving target. Re-check the worker's wage band and occupation against the current statute each session, and remember the architect provision is enacted but does not begin until agreements executed on or after October 1, 2026 [^hb1016-architect-out-of-state].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Maryland. This article synthesizes Maryland primary law and is not legal advice from a Maryland-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Maryland. This article synthesizes Maryland primary law and is not legal advice from a Maryland-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^seneca-four-part-test]: **Seneca One Finance, Inc. v. Bloshuk** — "In Maryland, a restrictive employment covenant will only be enforced if it meets four requirements: ‘(1) the employer must have a legally protected interest, (2) the restrictive covenant must be no wider in scope and duration than is reasonably necessary to protect the employer’s interest, (3) the covenant cannot impose an undue hardship on the employee, and (4) the covenant cannot violate public policy.’" *Seneca One Fin., Inc. v. Bloshuk, 214 F. Supp. 3d 457 (D. Md. 2016).* <https://www.courtlistener.com/opinion/7322313/seneca-one-finance-inc-v-bloshuk/#:~:text=In%20Maryland%2C%20a%20restrictive%20employment,covenant%20cannot%20violate%20public%20policy.%E2%80%9D>
 

@@ -106,7 +106,7 @@ do you cover?" question.
 
 ## Notes
 
-- Content is licensed **CC BY 4.0** (© UseJunior); each `content/<slug>.md`
+- Content is licensed **CC BY 4.0** (© openagreements.org); each `content/<slug>.md`
   carries its own attribution and canonical link.
 - This skill does **not** download or execute network code. The only network
   action is the optional, user-approved canonical-URL refresh in step 5.

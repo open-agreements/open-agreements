@@ -2,7 +2,7 @@
 jurisdiction: "Kansas"
 slug: kansas
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/legal/non-compete/kansas
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/kansas · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/kansas · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Kansas[^about]
 
@@ -174,7 +174,7 @@ The statute defines owner broadly to include sellers of business assets and equi
 
 A 2026 bill, HB 2650, would have voided non-competes on the sale or change in control of an employer, but it also died in the 2025 to 2026 session and is not law.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Kansas. This article synthesizes Kansas primary law and is not legal advice from a Kansas-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Kansas. This article synthesizes Kansas primary law and is not legal advice from a Kansas-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^weber-governing-standard]: **Weber v. Tillman** — "A noncompetition covenant ancillary to an employment contract is valid and enforceable if the restraint is reasonable under the circumstances and not adverse to the public welfare." *Weber v. Tillman, 259 Kan. 457, 913 P.2d 84 (1996).* <https://www.courtlistener.com/opinion/7969238/weber-v-tillman/#:~:text=A%20noncompetition%20covenant%20ancillary%20to,adverse%20to%20the%20public%20welfare.>
 

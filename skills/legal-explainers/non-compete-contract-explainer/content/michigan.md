@@ -2,7 +2,7 @@
 jurisdiction: "Michigan"
 slug: michigan
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/legal/non-compete/michigan
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/michigan · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/michigan · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Michigan[^about]
 
@@ -165,7 +165,7 @@ A separate 2025 development affects onboarding paperwork that bundles covenants.
 >
 > Treat HB 4040 as a monitoring item, not as present Michigan law. Recheck the official Michigan Legislature bill status before changing forms or telling workers that Michigan has enacted a general non-compete ban [^hb-4040-worker-ban].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Michigan. This article synthesizes Michigan primary law and is not legal advice from a Michigan-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Michigan. This article synthesizes Michigan primary law and is not legal advice from a Michigan-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^mcl-774a-employer-may-obtain]: **MCL § 445.774a** — "An employer may obtain from an employee an agreement or covenant which protects an employer's reasonable competitive business interests and expressly prohibits an employee from engaging in employment or a line of business after termination of employment if the agreement or covenant is reasonable as to its duration, geographical area, and the type of employment or line of business." *MCL § 445.774a(1).* <https://legislature.mi.gov/Laws/MCL?objectName=mcl-445-774a>
 

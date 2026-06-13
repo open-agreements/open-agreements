@@ -2,7 +2,7 @@
 jurisdiction: "Minnesota"
 slug: minnesota
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-05-27"
 canonicalUrl: https://openagreements.org/legal/non-compete/minnesota
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/minnesota · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/minnesota · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Employment Non-Competes in Minnesota[^about]
 
@@ -114,7 +114,7 @@ The statute includes independent contractors in its employee definition and requ
 
 **2025 legislative context:** A 2025 bill proposed additional exceptions to section 181.988 for certain high-compensation employees [^minn-hf1768-proposed-exceptions]; it has not been enacted as of this article's publication.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-05-27. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Minnesota. This article synthesizes Minnesota primary law and is not legal advice from a Minnesota-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-05-27. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Minnesota. This article synthesizes Minnesota primary law and is not legal advice from a Minnesota-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^minn-181-988-voids-employment-noncompetes]: **Minn. Stat. § 181.988, subd. 2(a)** — "Any covenant not to compete contained in a contract or agreement is void and unenforceable." *Minn. Stat. § 181.988, subd. 2(a) (2025).* <https://www.revisor.mn.gov/statutes/cite/181.988>
 

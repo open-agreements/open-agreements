@@ -2,7 +2,7 @@
 jurisdiction: "New Hampshire"
 slug: new-hampshire
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-06"
 canonicalUrl: https://openagreements.org/legal/privacy/new-hampshire
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/privacy/new-hampshire · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/privacy/new-hampshire · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # New Hampshire Consumer Privacy Law (NHPA)[^about]
 
@@ -68,7 +68,7 @@ This is the opt-in model shared by Virginia, Connecticut, and Colorado — the o
 
 The cure period worked differently before and after 2025. Through December 31, 2025, the Attorney General had to issue a notice of violation and give the controller 60 days to cure where a cure was possible; beginning January 1, 2026, that opportunity to cure became discretionary, weighed against factors such as the number of violations and the size of the controller [^stat-507h11-cure]. A violation is treated as an unfair or deceptive practice under New Hampshire's consumer-protection statute. The practical posture is to build the notice, consent, and contracting controls up front rather than to rely on a cure window that may no longer be available.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-06. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not New Hampshire. This article synthesizes New Hampshire primary law and is not legal advice from a New Hampshire-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-06. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not New Hampshire. This article synthesizes New Hampshire primary law and is not legal advice from a New Hampshire-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^stat-507h2-apply]: **N.H. Rev. Stat. Ann. § 507-H:2** — "This chapter applies to persons that conduct business in this state or persons that produce products or services that are targeted to residents of this state that during a one year period: (a) Controlled or processed the personal data of not less than 35,000 unique consumers, excluding personal data controlled or processed solely for the purpose of completing a payment transaction; or (b) Controlled or processed the personal data of not less than 10,000 unique consumers and derived more than 25 percent of their gross revenue from the sale of personal data." *N.H. Rev. Stat. Ann. § 507-H:2, I.* <https://gc.nh.gov/rsa/html/LII/507-H/507-H-2.htm>
 

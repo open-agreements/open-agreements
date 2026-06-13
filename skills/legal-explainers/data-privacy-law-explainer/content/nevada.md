@@ -2,7 +2,7 @@
 jurisdiction: "Nevada"
 slug: nevada
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-11"
 canonicalUrl: https://openagreements.org/legal/privacy/nevada
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/privacy/nevada · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/privacy/nevada · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Nevada Consumer Privacy Law[^about]
 
@@ -105,7 +105,7 @@ The seam to watch is private enforcement through Nevada's consumer-fraud statute
 >
 > Open question — private suits over data-broker, security, and breach violations. NRS 603A.360 bars private actions against operators, but its text does not name data brokers [^q7-no-pra]. The security and breach sub-chapter contains no express bar on private actions; it says only that a violation constitutes a deceptive trade practice for the purposes of NRS 598.0903 to 598.0999 [^q7-sec-dtp]. A plaintiff may argue that a knowing violation is a deceptive trade practice under the DTPA's statutory-violation prong [^q7-dtpa-hook] and therefore consumer fraud actionable under the private vehicle, which incorporates deceptive trade practices as defined in NRS 598.0915 to 598.0925 [^q7-fraud]. The defense reading is textual: the designation runs to the DTPA's public-enforcement span, while the private vehicle incorporates only the definitional sections, and no controlling Nevada Supreme Court decision resolves whether a chapter 603A violation qualifies. Until a court rules, treat data-broker and post-breach private exposure as possible rather than established.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Nevada. This article synthesizes Nevada primary law and is not legal advice from a Nevada-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Nevada. This article synthesizes Nevada primary law and is not legal advice from a Nevada-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^q1-operator]: **NRS 603A.330** — "‘Operator’ means a person who: (a) Owns or operates an Internet website or online service for commercial purposes; (b) Collects and maintains covered information from consumers who reside in this State and use or visit the Internet website or online service; and (c) Purposefully directs its activities toward this State, consummates some transaction with this State or a resident thereof, purposefully avails itself of the privilege of conducting activities in this State or otherwise engages in any activity that constitutes sufficient nexus with this State to satisfy the requirements of the United States Constitution." *NRS 603A.330(1).* <https://www.leg.state.nv.us/nrs/NRS-603A.html>
 

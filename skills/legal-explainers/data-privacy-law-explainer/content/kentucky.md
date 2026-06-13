@@ -2,7 +2,7 @@
 jurisdiction: "Kentucky"
 slug: kentucky
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-06"
 canonicalUrl: https://openagreements.org/legal/privacy/kentucky
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/privacy/kentucky · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/privacy/kentucky · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Kentucky Consumer Privacy Law (KCDPA)[^about]
 
@@ -68,7 +68,7 @@ This is the opt-in model shared by Virginia, California, Colorado, and Texas —
 
 Like Virginia, and unlike Colorado and Connecticut, Kentucky's 30-day cure period has not sunset — it remains a permanent, built-in off-ramp. A controller that cures within the window and certifies it in writing avoids the action; an uncured violation exposes it to damages of up to $7,500 per continued violation, plus the Attorney General's expenses and costs. The practical posture is still to build the notice, consent, and contracting controls up front, but a covered business that receives a notice has a genuine window to fix the issue.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-06. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Kentucky. This article synthesizes Kentucky primary law and is not legal advice from a Kentucky-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-06. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Kentucky. This article synthesizes Kentucky primary law and is not legal advice from a Kentucky-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^stat-3613-apply]: **KRS 367.3613** — "KRS 367.3611 to 367.3629 apply to persons that conduct business in the Commonwealth or produce products or services that are targeted to residents of the Commonwealth and that during a calendar year control or process personal data of at least: (a) One hundred thousand (100,000) consumers; or (b) Twenty-five thousand (25,000) consumers and derive over fifty percent (50%) of gross revenue from the sale of personal data." *KRS 367.3613(1).* <https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=56648>
 

@@ -2,7 +2,7 @@
 jurisdiction: "Nevada"
 slug: nevada
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/legal/non-compete/nevada
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/nevada · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/nevada · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Nevada[^about]
 
@@ -225,7 +225,7 @@ NRS 613.200 separately makes it unlawful to willfully prevent a discharged or de
 >
 > Use confidentiality and trade-secret covenants for secrecy interests, not as a disguised non-compete. NRS 613.200 preserves reasonable NDAs, but it also prohibits willful interference with a former worker's ability to obtain other employment [^q12-nrs-613-200-nda][^q12-nrs-613-200-mobility].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Nevada. This article synthesizes Nevada primary law and is not legal advice from a Nevada-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Nevada. This article synthesizes Nevada primary law and is not legal advice from a Nevada-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^q1-nrs-613-195-enforceability]: **NRS 613.195** — "A noncompetition covenant is void and unenforceable unless the noncompetition covenant: (a) Is supported by valuable consideration; (b) Does not impose any restraint that is greater than is required for the protection of the employer for whose benefit the restraint is imposed; (c) Does not impose any undue hardship on the employee; and (d) Imposes restrictions that are appropriate in relation to the valuable consideration supporting the noncompetition covenant." *NRS 613.195(1).* <https://www.leg.state.nv.us/nrs/NRS-613.html>
 

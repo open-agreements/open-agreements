@@ -2,7 +2,7 @@
 jurisdiction: "Arizona"
 slug: arizona
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/legal/non-compete/arizona
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/arizona · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/arizona · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Arizona[^about]
 
@@ -224,7 +224,7 @@ Key developments:
 
 Because neither ban has become law, an Arizona non-compete is still governed by the reasonableness and strict no-rewrite rules described above, not by any statutory ban outside the broadcast-employee context.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Arizona. This article synthesizes Arizona primary law and is not legal advice from a Arizona-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Arizona. This article synthesizes Arizona primary law and is not legal advice from a Arizona-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^q1-amex-disfavored]: **Amex Distributing Co. v. Mascari** — "Restrictive covenants which tend to prevent an employee from pursuing a similar vocation after termination of employment are disfavored." *Amex Distributing Co. v. Mascari, 150 Ariz. 510, 724 P.2d 596 (Ct. App. 1986).* <https://www.courtlistener.com/opinion/1211495/amex-distributing-co-inc-v-mascari/#:~:text=Restrictive%20covenants%20which%20tend%20to,termination%20of%20employment%20are%20disfavored.>
 

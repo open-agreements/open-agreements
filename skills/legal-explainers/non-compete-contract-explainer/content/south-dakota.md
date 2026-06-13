@@ -2,7 +2,7 @@
 jurisdiction: "South Dakota"
 slug: south-dakota
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/legal/non-compete/south-dakota
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/south-dakota · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/south-dakota · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in South Dakota[^about]
 
@@ -163,7 +163,7 @@ The case is a drafting warning, not a new statutory exception. In the acquisitio
 
 For templates, align the duration clause, agreement term, termination language, and restrictive-covenant survival clause. A covenant that appears enforceable under SDCL 53-9-11 may still fail if the contract itself ends before the restriction is triggered.
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not South Dakota. This article synthesizes South Dakota primary law and is not legal advice from a South Dakota-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not South Dakota. This article synthesizes South Dakota primary law and is not legal advice from a South Dakota-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^sdcl-53-9-8-void-baseline]: **S.D. Codified Laws § 53-9-8** — "Any contract restraining exercise of a lawful profession, trade, or business is void to that extent, except as provided by §§ 53-9-9 to 53-9-12, inclusive." *S.D. Codified Laws § 53-9-8.* <https://sdlegislature.gov/Statutes/53-9-8>
 

@@ -2,7 +2,7 @@
 jurisdiction: "Guam"
 slug: guam
 countryCode: US
-snapshotAsOf: "2026-06-12"
+snapshotAsOf: "2026-06-13"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/legal/non-compete/guam
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/guam · **Snapshot as of:** 2026-06-12 · License: CC BY 4.0 · © UseJunior
+> **Canonical:** https://openagreements.org/legal/non-compete/guam · **Snapshot as of:** 2026-06-13 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Guam[^about]
 
@@ -143,7 +143,7 @@ The court drew that line itself. *Island Eye* rejected the *inevitable disclosur
 >
 > Do not define *confidential information* so broadly that it sweeps in the employee's general skills, knowledge, and industry experience — a confidentiality clause that effectively prevents the worker from practicing their profession is a non-compete in substance and void under section 88105. Tie confidentiality to genuine secrets that meet the 9 GCA § 43.10(f) definition the Supreme Court of Guam adopted, and remember that hiring a former competitor's at-will staff is not itself misappropriation absent an identifiable trade secret [^q6-ie-tradesecret][^q6-ie-shield].
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org) · Maintained by [UseJunior](https://usejunior.com). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Guam. This article synthesizes Guam primary law and is not legal advice from a Guam-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Guam. This article synthesizes Guam primary law and is not legal advice from a Guam-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^stat-88105]: **18 GCA § 88105 — Contracts in Restraint of Trade** — "Every contract, by which anyone is restrained from exercising a lawful profession, trade, or business of any kind, otherwise than is provided in the next two sections, is to that extent void." *18 GCA § 88105.* <https://col.guamcourts.gov/sites/default/files/18gc088.pdf>
 
