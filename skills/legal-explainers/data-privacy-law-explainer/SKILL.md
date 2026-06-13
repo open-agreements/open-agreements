@@ -17,7 +17,7 @@ compatibility: >-
   canonical URL.
 metadata:
   author: open-agreements
-  version: "0.1.0"
+  version: "0.3.0"
 catalog_group: Legal Explainers
 catalog_order: 20
 ---
