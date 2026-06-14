@@ -1,5 +1,8 @@
 # Non Compete Update Log
 
+## 2026-06-14
+* **Update**: fix(ui+content): declutter related-form card + clearer Florida checklist labels (#769) ([640cc98](https://github.com/UseJunior/legal-explainer/commit/640cc987bbb223c159efd6af29b9cb205a71750d))
+
 ## 2026-06-12
 * **Update**: content(checklist): New Jersey, Ohio, Michigan, Pennsylvania review-checklist pages (#591 batch 8) (#648) ([09a0725](https://github.com/UseJunior/legal-explainer/commit/09a0725098d8cc1360dc0c16b3390c01b5a49585))
 * **Update**: content(checklist): Louisiana, Wisconsin, Alabama, Connecticut review-checklist pages (#591 batch 6) (#640) ([6fa0a0d](https://github.com/UseJunior/legal-explainer/commit/6fa0a0d15d15dbd9cb0ccfa8aed1477627e3be94))
@@ -26,10 +29,13 @@
 * **Update**: content(checklist): OR/VA/DC/UT review-checklist pages + overlay specs (#591) (#625) ([ce2d35d](https://github.com/UseJunior/legal-explainer/commit/ce2d35d7d5803e03003fd39133bb40e1979fbb20))
 
 ## 2026-06-10
+* **Update**: feat(non-compete): base/pillar practice note at /legal/non-compete (#512) (#543) ([06fb76f](https://github.com/UseJunior/legal-explainer/commit/06fb76f82dac955d755dcc30c30f609b46332ee2))
 * **Update**: content(non-compete): Northern Territory practice note (#496) (#574) ([0c64863](https://github.com/UseJunior/legal-explainer/commit/0c648635480abf296fab967983f8d9cae6ef201d))
 * **Update**: content(non-compete): Queensland, Australia practice note (#496) (#544) ([2bfd76d](https://github.com/UseJunior/legal-explainer/commit/2bfd76d01b173804339f99960f56d8bc9fa4c79c))
 * **Update**: content(non-compete): South Australia practice note (#496) (#563) ([35cdd7f](https://github.com/UseJunior/legal-explainer/commit/35cdd7f42f9c966c599874de3a3220d226468a42))
+* **Update**: feat(ia): homepage micro-blurbs, paired survey links + SSOT teaser, /surveys regroup (#561) ([3768666](https://github.com/UseJunior/legal-explainer/commit/3768666e13e660eaf221cb3065d9aebbc7666db1))
 * **Update**: content(non-compete): Tasmania practice note (#496) (#573) ([516538b](https://github.com/UseJunior/legal-explainer/commit/516538b13db3823fe2a9bd0ad416f3c2c826ca0a))
+* **Update**: feat(ia): rename US survey route to /legal/<topic>/us-survey + link groupings note (#557) ([5fee1d7](https://github.com/UseJunior/legal-explainer/commit/5fee1d70ecbbe72834c4a41fc6fd6a7ba35d944d))
 * **Update**: content(non-compete): Australian Capital Territory practice note (#496) (#575) ([8e8198d](https://github.com/UseJunior/legal-explainer/commit/8e8198d3caa93e57144c6675e7b80322a2823aaa))
 * **Update**: content(non-compete): New South Wales, Australia practice note (#496) (#534) ([a5936ef](https://github.com/UseJunior/legal-explainer/commit/a5936ef894cec3686f0599fca966e0805b1a1b89))
 * **Update**: content(non-compete): Western Australia practice note (#496) (#558) ([b1f6437](https://github.com/UseJunior/legal-explainer/commit/b1f64379f33a4e3be1b0093ec1b3878ab059a171))

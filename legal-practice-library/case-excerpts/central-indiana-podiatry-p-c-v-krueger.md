@@ -1,0 +1,54 @@
+---
+type: Case Excerpt
+title: 'Central Indiana Podiatry, P.C. v. Krueger'
+description: >-
+  Central Indiana Podiatry, P.C. v. Krueger, 882 N.E.2d 723 (Ind. 2008). —
+  quoted in 2 document(s).
+citation: 'Central Indiana Podiatry, P.C. v. Krueger, 882 N.E.2d 723 (Ind. 2008).'
+resource: >-
+  https://www.courtlistener.com/opinion/852486/central-indiana-podiatry-pc-v-krueger/
+timestamp: '2026-06-12'
+document_references:
+  - type: Review Checklist
+    resource: 'https://openagreements.org/legal/non-compete/indiana-review-checklist'
+  - type: State Law Practice Note
+    resource: 'https://openagreements.org/legal/non-compete/indiana'
+tags:
+  - case-law
+  - non-compete
+---
+
+# Central Indiana Podiatry, P.C. v. Krueger
+
+*Central Indiana Podiatry, P.C. v. Krueger, 882 N.E.2d 723 (Ind. 2008).*
+
+Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements legal practice library.
+
+## Quoted passages
+
+### central-indiana-podiatry-p-c-v-krueger-in-arguing-the-reasonableness-of-a-bcb3340e {#central-indiana-podiatry-p-c-v-krueger-in-arguing-the-reasonableness-of-a-bcb3340e}
+
+> In arguing the reasonableness of a non-competition agreement, the employer must first show that it has a legitimate interest to be protected by the agreement.
+
+- supports: `definitions`, `indiana-statutory-gates`, `non-solicitation`, `protectable-interests`, `restrictive-covenants-each-independently-includable`
+- source_cards: `krueger-interest-covenants`, `krueger-interest-defs`, `krueger-interest-gate`, `krueger-legitimate-interest`, `q6-krueger-interest`
+- cited_by: [Non-Compete Agreement Review Checklist — Indiana](../non-compete/indiana-review-checklist.md), [Non-Competes in Indiana](../non-compete/indiana.md)
+- link_to_source: <https://www.courtlistener.com/opinion/852486/central-indiana-podiatry-pc-v-krueger/#:~:text=In%20arguing%20the%20reasonableness%20of,be%20protected%20by%20the%20agreement.>
+
+### central-indiana-podiatry-p-c-v-krueger-the-employer-also-bears-the-burden-591f8156 {#central-indiana-podiatry-p-c-v-krueger-the-employer-also-bears-the-burden-591f8156}
+
+> The employer also bears the burden of establishing that the agreement is reasonable in scope as to the time, activity, and geographic area restricted.
+
+- supports: `definitions`, `duration-geography-scope`, `indiana-statutory-gates`, `restrictive-covenants-each-independently-includable`, `tolling-during-breach`, `tolling-extension`
+- source_cards: `krueger-scope-burden`, `krueger-scope-covenants`, `krueger-scope-defs`, `krueger-scope-gate`, `krueger-scope-tolling`, `q8-krueger-reasonableness`
+- cited_by: [Non-Compete Agreement Review Checklist — Indiana](../non-compete/indiana-review-checklist.md), [Non-Competes in Indiana](../non-compete/indiana.md)
+- link_to_source: <https://www.courtlistener.com/opinion/852486/central-indiana-podiatry-pc-v-krueger/#:~:text=The%20employer%20also%20bears%20the,activity%2C%20and%20geographic%20area%20restricted.>
+
+### central-indiana-podiatry-p-c-v-krueger-we-construe-these-covenants-strictly-d0d5d361 {#central-indiana-podiatry-p-c-v-krueger-we-construe-these-covenants-strictly-d0d5d361}
+
+> We construe these covenants strictly against the employer and will not enforce an unreasonable restriction.
+
+- supports: `employee-noncompetes`, `remedies`, `restrictive-covenants-each-independently-includable`
+- source_cards: `krueger-strict-construction`, `krueger-strict-covenants`, `krueger-unreasonable-remedies`
+- cited_by: [Non-Compete Agreement Review Checklist — Indiana](../non-compete/indiana-review-checklist.md), [Non-Competes in Indiana](../non-compete/indiana.md)
+- link_to_source: <https://www.courtlistener.com/opinion/852486/central-indiana-podiatry-pc-v-krueger/#:~:text=We%20construe%20these%20covenants%20strictly,not%20enforce%20an%20unreasonable%20restriction.>

@@ -1,0 +1,47 @@
+---
+type: Case Excerpt
+title: 'Dobbins, DeGuire & Tucker, P.C. v. Rutherford, MacDonald & Olson'
+description: >-
+  Dobbins, DeGuire & Tucker, P.C. v. Rutherford, MacDonald & Olson, 218 Mont.
+  392, 708 P.2d 577 (1985). — quoted in 2 document(s).
+citation: >-
+  Dobbins, DeGuire & Tucker, P.C. v. Rutherford, MacDonald & Olson, 218 Mont.
+  392, 708 P.2d 577 (1985).
+resource: >-
+  https://www.courtlistener.com/opinion/1183224/dobbins-deguire-tucker-pc-v-rutherford-macdonald-olson/
+timestamp: '2026-06-12'
+document_references:
+  - type: Review Checklist
+    resource: 'https://openagreements.org/legal/non-compete/montana-review-checklist'
+  - type: State Law Practice Note
+    resource: 'https://openagreements.org/legal/non-compete/montana'
+tags:
+  - case-law
+  - non-compete
+---
+
+# Dobbins, DeGuire & Tucker, P.C. v. Rutherford, MacDonald & Olson
+
+*Dobbins, DeGuire & Tucker, P.C. v. Rutherford, MacDonald & Olson, 218 Mont. 392, 708 P.2d 577 (1985).*
+
+Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements legal practice library.
+
+## Quoted passages
+
+### dobbins-deguire-tucker-p-c-v-rutherford-macdonald-olson-1-the-covenant-should-be-limited-26999cc2 {#dobbins-deguire-tucker-p-c-v-rutherford-macdonald-olson-1-the-covenant-should-be-limited-26999cc2}
+
+> “(1) the covenant should be limited in operation either as to time or place; (2) the covenant should be based on some good consideration; and (3) the covenant should afford a reasonable protection for and not impose an unreasonable burden upon the employer, the employee or the public.”
+
+- supports: `definitions`, `dobbins-test`, `montana-statutory-gates`, `tolling-during-breach`
+- source_cards: `dobbins-three-part-test`, `mt-dobbins-gate`, `mt-dobbins-test-defs`, `mt-dobbins-tolling`
+- cited_by: [Non-Compete Agreement Review Checklist — Montana](../non-compete/montana-review-checklist.md), [Non-Competes in Montana](../non-compete/montana.md)
+- link_to_source: <https://www.courtlistener.com/opinion/1183224/dobbins-deguire-tucker-pc-v-rutherford-macdonald-olson/#:~:text=%E2%80%9C(1)%20the%20covenant%20should%20be,the%20employee%20or%20the%20public.%E2%80%9D>
+
+### dobbins-deguire-tucker-p-c-v-rutherford-macdonald-olson-we-hold-that-the-written-contract-893477c2 {#dobbins-deguire-tucker-p-c-v-rutherford-macdonald-olson-we-hold-that-the-written-contract-893477c2}
+
+> We hold that the written contract provisions do not constitute a restraint prohibited by Section 28-2-703, MCA.
+
+- supports: `employee-noncompetes`
+- source_cards: `dobbins-partial-restraint`
+- cited_by: [Non-Competes in Montana](../non-compete/montana.md)
+- link_to_source: <https://www.courtlistener.com/opinion/1183224/dobbins-deguire-tucker-pc-v-rutherford-macdonald-olson/#:~:text=We%20hold%20that%20the%20written,prohibited%20by%20Section%2028%2D2%2D703%2C%20MCA.>

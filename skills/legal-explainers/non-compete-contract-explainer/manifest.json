@@ -1,7 +1,7 @@
 {
   "topic": "non-compete",
-  "snapshotAsOf": "2026-06-13",
-  "sourceCommit": "b5882a410c1be5881901465d23fafc8ab1b58e3a",
+  "snapshotAsOf": "2026-06-14",
+  "sourceCommit": "640cc987bbb223c159efd6af29b9cb205a71750d",
   "canonicalBase": "https://openagreements.org/legal/non-compete",
   "license": "CC BY 4.0",
   "jurisdictions": [
@@ -11,7 +11,7 @@
       "countryCode": "US",
       "file": "content/alabama.md",
       "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -20,7 +20,7 @@
       "countryCode": "US",
       "file": "content/alaska.md",
       "lastReviewed": "2026-06-01",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -29,7 +29,7 @@
       "countryCode": "US",
       "file": "content/american-samoa.md",
       "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -38,7 +38,7 @@
       "countryCode": "US",
       "file": "content/arizona.md",
       "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -47,7 +47,7 @@
       "countryCode": "US",
       "file": "content/arkansas.md",
       "lastReviewed": "2026-06-02",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -56,7 +56,7 @@
       "countryCode": "AU",
       "file": "content/australia-australian-capital-territory.md",
       "lastReviewed": "2026-06-10",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -65,7 +65,7 @@
       "countryCode": "AU",
       "file": "content/australia-new-south-wales.md",
       "lastReviewed": "2026-06-10",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -74,7 +74,7 @@
       "countryCode": "AU",
       "file": "content/australia-northern-territory.md",
       "lastReviewed": "2026-06-10",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -83,7 +83,7 @@
       "countryCode": "AU",
       "file": "content/australia-queensland.md",
       "lastReviewed": "2026-06-10",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -92,7 +92,7 @@
       "countryCode": "AU",
       "file": "content/australia-south-australia.md",
       "lastReviewed": "2026-06-10",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -101,7 +101,7 @@
       "countryCode": "AU",
       "file": "content/australia-tasmania.md",
       "lastReviewed": "2026-06-10",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -110,7 +110,7 @@
       "countryCode": "AU",
       "file": "content/australia-victoria.md",
       "lastReviewed": "2026-06-10",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -119,7 +119,7 @@
       "countryCode": "AU",
       "file": "content/australia-western-australia.md",
       "lastReviewed": "2026-06-10",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -128,7 +128,7 @@
       "countryCode": "US",
       "file": "content/california.md",
       "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -137,7 +137,7 @@
       "countryCode": "US",
       "file": "content/cnmi.md",
       "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -146,7 +146,7 @@
       "countryCode": "US",
       "file": "content/colorado.md",
       "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -155,7 +155,7 @@
       "countryCode": "US",
       "file": "content/connecticut.md",
       "lastReviewed": "2026-06-02",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -164,7 +164,7 @@
       "countryCode": "US",
       "file": "content/delaware.md",
       "lastReviewed": "2026-06-02",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -173,7 +173,7 @@
       "countryCode": "US",
       "file": "content/district-of-columbia.md",
       "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -182,7 +182,7 @@
       "countryCode": "US",
       "file": "content/florida.md",
       "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -191,7 +191,7 @@
       "countryCode": "US",
       "file": "content/georgia.md",
       "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -200,7 +200,7 @@
       "countryCode": "US",
       "file": "content/guam.md",
       "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -209,7 +209,7 @@
       "countryCode": "US",
       "file": "content/hawaii.md",
       "lastReviewed": "2026-06-02",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -218,7 +218,7 @@
       "countryCode": "US",
       "file": "content/idaho.md",
       "lastReviewed": "2026-06-02",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -227,7 +227,7 @@
       "countryCode": "US",
       "file": "content/illinois.md",
       "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -236,7 +236,7 @@
       "countryCode": "IN",
       "file": "content/india.md",
       "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -245,7 +245,7 @@
       "countryCode": "US",
       "file": "content/indiana.md",
       "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -254,7 +254,7 @@
       "countryCode": "US",
       "file": "content/iowa.md",
       "lastReviewed": "2026-06-02",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -263,7 +263,7 @@
       "countryCode": "US",
       "file": "content/kansas.md",
       "lastReviewed": "2026-06-02",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -272,7 +272,7 @@
       "countryCode": "US",
       "file": "content/kentucky.md",
       "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -281,7 +281,7 @@
       "countryCode": "US",
       "file": "content/louisiana.md",
       "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -290,7 +290,7 @@
       "countryCode": "US",
       "file": "content/maine.md",
       "lastReviewed": "2026-06-02",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -299,7 +299,7 @@
       "countryCode": "US",
       "file": "content/maryland.md",
       "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -308,7 +308,7 @@
       "countryCode": "US",
       "file": "content/massachusetts.md",
       "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -317,7 +317,7 @@
       "countryCode": "US",
       "file": "content/michigan.md",
       "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -326,7 +326,7 @@
       "countryCode": "US",
       "file": "content/minnesota.md",
       "lastReviewed": "2026-05-27",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -335,7 +335,7 @@
       "countryCode": "US",
       "file": "content/mississippi.md",
       "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -344,7 +344,7 @@
       "countryCode": "US",
       "file": "content/missouri.md",
       "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -353,7 +353,7 @@
       "countryCode": "US",
       "file": "content/montana.md",
       "lastReviewed": "2026-06-02",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -362,7 +362,7 @@
       "countryCode": "US",
       "file": "content/nebraska.md",
       "lastReviewed": "2026-06-02",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -371,7 +371,7 @@
       "countryCode": "US",
       "file": "content/nevada.md",
       "lastReviewed": "2026-06-02",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -380,7 +380,7 @@
       "countryCode": "US",
       "file": "content/new-hampshire.md",
       "lastReviewed": "2026-06-02",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -389,7 +389,7 @@
       "countryCode": "US",
       "file": "content/new-jersey.md",
       "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -398,7 +398,7 @@
       "countryCode": "US",
       "file": "content/new-mexico.md",
       "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -407,7 +407,7 @@
       "countryCode": "US",
       "file": "content/new-york.md",
       "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -416,7 +416,7 @@
       "countryCode": "US",
       "file": "content/north-carolina.md",
       "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -425,7 +425,7 @@
       "countryCode": "US",
       "file": "content/north-dakota.md",
       "lastReviewed": "2026-06-02",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -434,7 +434,7 @@
       "countryCode": "US",
       "file": "content/ohio.md",
       "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -443,7 +443,7 @@
       "countryCode": "US",
       "file": "content/oklahoma.md",
       "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -452,7 +452,7 @@
       "countryCode": "US",
       "file": "content/oregon.md",
       "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -461,7 +461,7 @@
       "countryCode": "US",
       "file": "content/pennsylvania.md",
       "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -470,7 +470,7 @@
       "countryCode": "PH",
       "file": "content/philippines.md",
       "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -479,7 +479,7 @@
       "countryCode": "US",
       "file": "content/puerto-rico.md",
       "lastReviewed": "2026-06-02",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -488,7 +488,7 @@
       "countryCode": "US",
       "file": "content/rhode-island.md",
       "lastReviewed": "2026-06-02",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -497,7 +497,7 @@
       "countryCode": "SG",
       "file": "content/singapore.md",
       "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -506,7 +506,7 @@
       "countryCode": "US",
       "file": "content/south-carolina.md",
       "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -515,7 +515,7 @@
       "countryCode": "US",
       "file": "content/south-dakota.md",
       "lastReviewed": "2026-06-02",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -524,7 +524,7 @@
       "countryCode": "US",
       "file": "content/tennessee.md",
       "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -533,7 +533,7 @@
       "countryCode": "US",
       "file": "content/texas.md",
       "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -542,7 +542,7 @@
       "countryCode": "US",
       "file": "content/us-virgin-islands.md",
       "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -551,7 +551,7 @@
       "countryCode": "US",
       "file": "content/utah.md",
       "lastReviewed": "2026-06-02",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -560,7 +560,7 @@
       "countryCode": "US",
       "file": "content/vermont.md",
       "lastReviewed": "2026-06-01",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -569,7 +569,7 @@
       "countryCode": "US",
       "file": "content/virginia.md",
       "lastReviewed": "2026-06-02",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -578,7 +578,7 @@
       "countryCode": "US",
       "file": "content/washington.md",
       "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -587,7 +587,7 @@
       "countryCode": "US",
       "file": "content/west-virginia.md",
       "lastReviewed": "2026-06-02",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -596,7 +596,7 @@
       "countryCode": "US",
       "file": "content/wisconsin.md",
       "lastReviewed": "2026-06-03",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     },
     {
@@ -605,7 +605,7 @@
       "countryCode": "US",
       "file": "content/wyoming.md",
       "lastReviewed": "2026-04-14",
-      "snapshotAsOf": "2026-06-13",
+      "snapshotAsOf": "2026-06-14",
       "stale": false
     }
   ]
