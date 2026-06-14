@@ -4,6 +4,7 @@
 * **Update**: [codex] Add privacy summary enums and table plumbing (#642) ([381d3b6](https://github.com/UseJunior/legal-explainer/commit/381d3b6106bf4b4862b8f6306bc4fd820ebf2b09))
 * **Update**: fix(quote-verify): pullQuoteLocator overrides for 3 mislanding deep links (HI/ID GLBA, IL Gregg) (#655) ([403fc9c](https://github.com/UseJunior/legal-explainer/commit/403fc9cd1bd78ee14b272198f0453d1a8c85aba6))
 * **Update**: content(privacy): North Dakota consumer-privacy practice note (#632) ([4fb22a7](https://github.com/UseJunior/legal-explainer/commit/4fb22a7128faf67037f00c0a0776f368cdbcb069))
+* **Update**: feat(privacy): pillar practice note at /legal/privacy; survey moves to /legal/privacy/us-survey (#709) ([6a2f09c](https://github.com/UseJunior/legal-explainer/commit/6a2f09c6f33dafae3bb4e6b6645129c23172126b))
 * **Update**: content(privacy): Massachusetts consumer-privacy practice note (#644) ([7fd33a7](https://github.com/UseJunior/legal-explainer/commit/7fd33a7c71f4de9dac3b60e7fc4e11390e7eb27b))
 * **Update**: content(privacy): Arkansas consumer-privacy practice note (#636) ([8d26d8e](https://github.com/UseJunior/legal-explainer/commit/8d26d8ef36f7b4622537cb34ba2f555ec73ff35c))
 * **Update**: content(privacy): West Virginia consumer-privacy practice note (#634) ([a556cac](https://github.com/UseJunior/legal-explainer/commit/a556cac6bc1d99184f74341f894d16b50d706444))
