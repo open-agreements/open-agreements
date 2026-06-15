@@ -1,5 +1,8 @@
 # Non Compete Update Log
 
+## 2026-06-15
+* **Update**: feat(templates): bidirectional template → practice-note Related Content (#177) (#767) ([ca44bf2](https://github.com/UseJunior/legal-explainer/commit/ca44bf2d29a0068332dd4178738cce715c63bf86))
+
 ## 2026-06-14
 * **Update**: fix(ui+content): declutter related-form card + clearer Florida checklist labels (#769) ([640cc98](https://github.com/UseJunior/legal-explainer/commit/640cc987bbb223c159efd6af29b9cb205a71750d))
 

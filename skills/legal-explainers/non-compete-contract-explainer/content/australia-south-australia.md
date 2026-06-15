@@ -2,7 +2,7 @@
 jurisdiction: "South Australia, Australia"
 slug: australia-south-australia
 countryCode: AU
-snapshotAsOf: "2026-06-14"
+snapshotAsOf: "2026-06-15"
 lastReviewed: "2026-06-10"
 canonicalUrl: https://openagreements.org/legal/non-compete/australia-south-australia
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/australia-south-australia · **Snapshot as of:** 2026-06-14 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/legal/non-compete/australia-south-australia · **Snapshot as of:** 2026-06-15 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Compete Enforceability in South Australia[^about]
 
