@@ -9,7 +9,6 @@ document:
   label: OpenAgreements Employment Offer Letter
   version: "1.1"
   license: Free to use under CC BY 4.0
-  include_cloud_doc_line: true
   cover_row_height: 700
 sections:
   cover_terms:

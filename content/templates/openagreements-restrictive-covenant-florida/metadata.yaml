@@ -402,18 +402,6 @@ fields:
     default_value_rationale: >-
       24 months is common for employment non-disparagement provisions.
     section: Non-Disparagement
-
-  # --- Document Management ---
-  - name: cloud_drive_id
-    type: string
-    description: Optional document-system URI or file ID for execution copy traceability
-    display_label: Cloud Drive ID
-    section: Document Management
-  - name: cloud_drive_id_footer
-    type: string
-    description: Internal computed footer text for document-system traceability
-    default: ''
-    section: Document Management
 priority_fields:
   - employer_name
   - employee_name

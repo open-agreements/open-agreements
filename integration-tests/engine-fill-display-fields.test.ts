@@ -142,7 +142,6 @@ describe('fillTemplate display field coverage', () => {
         'effective_date_display',
         'covered_claims_display',
         'general_cap_display',
-        'cloud_drive_id_footer',
       ],
     });
 
@@ -151,7 +150,6 @@ describe('fillTemplate display field coverage', () => {
     const values: Record<string, unknown> = {
       bonus_terms: harness.BLANK_PLACEHOLDER,
       equity_terms: harness.BLANK_PLACEHOLDER,
-      cloud_drive_id: harness.BLANK_PLACEHOLDER,
       order_date_is_last_signature: true,
       pilot_is_free: true,
       fee_is_per_unit: true,
@@ -206,8 +204,6 @@ describe('fillTemplate display field coverage', () => {
     expect(pipelineCall.selectionsConfig).toBeTruthy();
     expect(values.bonus_terms).toBe('');
     expect(values.equity_terms).toBe('');
-    expect(values.cloud_drive_id).toBe('');
-    expect(values.cloud_drive_id_footer).toBe('');
     expect(values.order_date_display).toBe('( x )\tDate of last signature on this Order Form');
     expect(values.pilot_fee_display).toBe('( x )\tFree trial');
     expect(String(values.fees_display)).toContain('[ x ] $10 per seat/month');
@@ -226,7 +222,7 @@ describe('fillTemplate display field coverage', () => {
     expect(harness.spies.verifyTemplateFill).toHaveBeenCalledWith('/tmp/engine-fill-output-1.docx');
   });
 
-  it('computes automatic-payment, custom date, dollar cap, and cloud drive URL variants', async () => {
+  it('computes automatic-payment, custom date, and dollar cap variants', async () => {
     const harness = await loadEngineHarness({
       metadataFields: [
         'order_date_display',
@@ -235,7 +231,6 @@ describe('fillTemplate display field coverage', () => {
         'auto_renewal_display',
         'effective_date_display',
         'general_cap_display',
-        'cloud_drive_id_footer',
         'covered_claims_display',
       ],
     });
@@ -243,7 +238,6 @@ describe('fillTemplate display field coverage', () => {
     const templateDir = createTemplateFixture({ withReplacements: false, withSelections: false });
 
     const values: Record<string, unknown> = {
-      cloud_drive_id: 'docs.google.com/document/d/abc12345678901234567',
       order_date_is_last_signature: false,
       custom_order_date: 'March 1, 2026',
       pilot_is_free: false,
@@ -278,7 +272,6 @@ describe('fillTemplate display field coverage', () => {
 
     expect(pipelineCall.cleanPatch).toBeUndefined();
     expect(pipelineCall.selectionsConfig).toBeUndefined();
-    expect(values.cloud_drive_id_footer).toBe('Document URL: https://docs.google.com/document/d/abc12345678901234567');
     expect(values.order_date_display).toBe('( x )\tMarch 1, 2026');
     expect(values.pilot_fee_display).toBe('( x )\tFee for Pilot Period: $1000');
     expect(String(values.payment_display)).toContain('Automatic payment');
@@ -288,19 +281,17 @@ describe('fillTemplate display field coverage', () => {
     expect(values.general_cap_display).toBe('( x )\t$50000');
   });
 
-  it('supports google-doc-id expansion and preserves precomputed display fields', async () => {
+  it('preserves precomputed display fields', async () => {
     const harness = await loadEngineHarness({
       metadataFields: [
         'general_cap_display',
         'payment_display',
-        'cloud_drive_id_footer',
       ],
     });
 
     const templateDir = createTemplateFixture({ withReplacements: false, withSelections: false });
 
     const values: Record<string, unknown> = {
-      cloud_drive_id: 'abcdefghijklmnopqrstuvwxyz123456',
       payment_display: 'PRESET PAYMENT DISPLAY',
       payment_by_invoice: false,
       payment_frequency: 'monthly',
@@ -321,7 +312,6 @@ describe('fillTemplate display field coverage', () => {
       pipelineCall: harness.spies.runFillPipeline.mock.calls[0]?.[0],
     });
 
-    expect(values.cloud_drive_id_footer).toBe('Document URL: https://docs.google.com/document/d/abcdefghijklmnopqrstuvwxyz123456/');
     expect(values.payment_display).toBe('PRESET PAYMENT DISPLAY');
     expect(values.general_cap_display).toBe('PRESET CAP DISPLAY');
   });

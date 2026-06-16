@@ -9,7 +9,6 @@ document:
   label: OpenAgreements Employee Restrictive Covenant (Florida)
   version: "1.0"
   license: Free to use under CC BY 4.0
-  include_cloud_doc_line: true
   defined_term_highlight_mode: definition_site_only
   cover_row_height: 317
 sections:

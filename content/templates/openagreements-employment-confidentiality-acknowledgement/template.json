@@ -9,7 +9,6 @@
     "label": "OpenAgreements Employment Confidentiality Acknowledgement",
     "version": "1.2",
     "license": "Free to use under CC BY 4.0",
-    "include_cloud_doc_line": true,
     "cover_row_height": 700
   },
   "sections": {

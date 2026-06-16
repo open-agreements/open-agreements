@@ -81,7 +81,6 @@ document:
   label: <Catalog label, e.g. "OpenAgreements XYZ">
   version: "1.0"
   license: Free to use under CC BY 4.0
-  include_cloud_doc_line: true
   defined_term_highlight_mode: definition_site_only   # see "Highlight modes"
   cover_row_height: 700
 sections:
@@ -475,7 +474,6 @@ document:
   label: OpenAgreements Example Mutual NDA
   version: "1.0"
   license: Free to use under CC BY 4.0
-  include_cloud_doc_line: true
   defined_term_highlight_mode: definition_site_only
   cover_row_height: 600
 sections:

@@ -117,8 +117,6 @@ rendered as cover-term rows in the output document.
 | `noninvestment_included` | boolean | no | Include the non-investment covenant. Default false |
 | `noninvestment_duration` | string | no | Non-investment duration. Default 12 months |
 | `nondisparagement_duration` | string | no | Non-disparagement duration. Default 24 months |
-| `cloud_drive_id` | string | no | Optional document-system URI / file ID |
-| `cloud_drive_id_footer` | string | no | Internal computed footer text |
 
 ## Canonical Markdown Authoring
 

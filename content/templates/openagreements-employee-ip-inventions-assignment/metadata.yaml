@@ -60,13 +60,4 @@ fields:
     description: Venue for disputes
     default: state and federal courts in the governing law state
     section: Legal
-  - name: cloud_drive_id
-    type: string
-    description: Optional document-system URI or file ID for execution copy traceability
-    section: Document Management
-  - name: cloud_drive_id_footer
-    type: string
-    description: Internal computed footer text for document-system traceability
-    default: ''
-    section: Document Management
 priority_fields: []

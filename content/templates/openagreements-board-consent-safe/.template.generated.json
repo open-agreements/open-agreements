@@ -8,7 +8,6 @@
     "label": "OpenAgreements Board Consent for SAFE Financing",
     "version": "1.2",
     "license": "Free to use under CC BY 4.0",
-    "include_cloud_doc_line": false,
     "defined_term_highlight_mode": "none",
     "opening_note": "Note: The following resolutions do not cover all matters that may need to be addressed in connection with the SAFE financing. For example, if the Company is concurrently amending its certificate of incorporation, converting outstanding convertible notes, or granting pro rata or information rights pursuant to a side letter, additional resolutions will be needed. Always consult with counsel prior to using this consent.",
     "opening_recital": "The undersigned, constituting all of the members of the Board of Directors (the \"Board\") of {company_name}, a Delaware corporation (the \"Company\"), pursuant to Section 141(f) of the Delaware General Corporation Law, hereby adopt the following resolutions by written consent:"

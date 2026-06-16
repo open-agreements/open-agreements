@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "cli_version": "0.7.5",
+  "cli_version": "0.7.7",
   "items": [
     {
       "name": "bonterms-mutual-nda",
@@ -12497,24 +12497,6 @@
           "description": "Venue for disputes",
           "default": "state and federal courts in the governing law state",
           "default_value_rationale": null
-        },
-        {
-          "name": "cloud_drive_id",
-          "type": "string",
-          "required": false,
-          "section": "Document Management",
-          "description": "Optional document-system URI or file ID for execution copy traceability",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "cloud_drive_id_footer",
-          "type": "string",
-          "required": false,
-          "section": "Document Management",
-          "description": "Internal computed footer text for document-system traceability",
-          "default": "",
-          "default_value_rationale": null
         }
       ]
     },
@@ -12610,24 +12592,6 @@
           "section": "Signature",
           "description": "Printed name used in signature block",
           "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "cloud_drive_id",
-          "type": "string",
-          "required": false,
-          "section": "Document Management",
-          "description": "Optional document-system URI or file ID for execution copy traceability",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "cloud_drive_id_footer",
-          "type": "string",
-          "required": false,
-          "section": "Document Management",
-          "description": "Internal computed footer text for document-system traceability",
-          "default": "",
           "default_value_rationale": null
         }
       ]
@@ -12755,24 +12719,6 @@
           "section": "Timing",
           "description": "Date by which the offer must be accepted",
           "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "cloud_drive_id",
-          "type": "string",
-          "required": false,
-          "section": "Document Management",
-          "description": "Optional document-system URI or file ID for execution copy traceability",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "cloud_drive_id_footer",
-          "type": "string",
-          "required": false,
-          "section": "Document Management",
-          "description": "Internal computed footer text for document-system traceability",
-          "default": "",
           "default_value_rationale": null
         }
       ]
@@ -13126,25 +13072,6 @@
           "display_label": "Non-Disparagement Duration",
           "default": "24 months",
           "default_value_rationale": "24 months is common for employment non-disparagement provisions."
-        },
-        {
-          "name": "cloud_drive_id",
-          "type": "string",
-          "required": false,
-          "section": "Document Management",
-          "description": "Optional document-system URI or file ID for execution copy traceability",
-          "display_label": "Cloud Drive ID",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "cloud_drive_id_footer",
-          "type": "string",
-          "required": false,
-          "section": "Document Management",
-          "description": "Internal computed footer text for document-system traceability",
-          "default": "",
-          "default_value_rationale": null
         }
       ]
     },
@@ -13434,25 +13361,6 @@
           "display_label": "Non-Disparagement Duration",
           "default": "24 months",
           "default_value_rationale": "24 months is common for employment non-disparagement provisions."
-        },
-        {
-          "name": "cloud_drive_id",
-          "type": "string",
-          "required": false,
-          "section": "Document Management",
-          "description": "Optional document-system URI or file ID for execution copy traceability",
-          "display_label": "Cloud Drive ID",
-          "default": null,
-          "default_value_rationale": null
-        },
-        {
-          "name": "cloud_drive_id_footer",
-          "type": "string",
-          "required": false,
-          "section": "Document Management",
-          "description": "Internal computed footer text for document-system traceability",
-          "default": "",
-          "default_value_rationale": null
         }
       ]
     },

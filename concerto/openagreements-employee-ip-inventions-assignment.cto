@@ -23,6 +23,4 @@ asset OpenagreementsEmployeeIpInventionsAssignment extends Contract {
   o String post_termination_assistance default="reasonable assistance with filings and signatures related to assigned inventions"
   o String governing_law default="California"
   o String venue default="state and federal courts in the governing law state"
-  o String cloud_drive_id optional
-  o String cloud_drive_id_footer default=""
 }

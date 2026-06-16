@@ -8,7 +8,6 @@
     "label": "OpenAgreements Employment Offer Letter",
     "version": "1.1",
     "license": "Free to use under CC BY 4.0",
-    "include_cloud_doc_line": true,
     "defined_term_highlight_mode": "all_instances",
     "cover_row_height": 700
   },

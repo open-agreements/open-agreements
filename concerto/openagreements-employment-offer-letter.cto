@@ -29,6 +29,4 @@ asset OpenagreementsEmploymentOfferLetter extends Contract {
   o String work_location optional
   o String governing_law default="California"
   o String offer_expiration_date optional
-  o String cloud_drive_id optional
-  o String cloud_drive_id_footer default=""
 }
