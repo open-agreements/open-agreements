@@ -11,8 +11,6 @@
 - [x] 2.3 `specs/cli/spec.md` — fill/list/validate/scan/recipe/checklist subcommands, JSON envelope, content-root resolution
 - [x] 2.4 `specs/mcp-contract-templates/spec.md` — list_templates/get_template/fill_template, pagination, MCP envelope contract
 - [x] 2.5 `specs/closing-checklist/spec.md` — checklist data model, JSON Patch lifecycle, rendering, MCP tools
-- [x] 2.6 `specs/signing/spec.md` — SigningProvider interface, envelope lifecycle
-- [x] 2.7 `specs/provider-docusign/spec.md` — DocuSign PKCE OAuth, anchor strings, HMAC webhook
 - [x] 2.8 `specs/distribution/spec.md` — npm packaging, tarball, skill publishing, runtime tarball, registry auth
 - [x] 2.9 `specs/authoring/spec.md` — canonical Markdown DSL, DOCX placeholder semantics
 - [x] 2.10 `specs/validation/spec.md` — template/recipe/metadata validation, severity, patch schema

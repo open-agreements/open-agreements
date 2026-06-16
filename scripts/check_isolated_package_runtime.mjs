@@ -8,13 +8,13 @@ import { fileURLToPath } from 'node:url';
 
 /**
  * Backend-only packages that must NEVER be pulled in by a fresh install of
- * `open-agreements` from its published tarball. These are used by the hosted
- * signing backend (packages/signing/, api/auth/) and must stay declared
- * inside packages/signing/package.json, not at the repo root.
+ * `open-agreements` from its published tarball. These cloud SDKs were
+ * introduced by the now-removed DocuSign signing backend; the guardrail
+ * remains as a regression guard so they cannot creep back into the root
+ * runtime deps.
  *
  * Guardrail added after 0.7.0–0.7.4 shipped these as root runtime deps,
  * inflating CLI install size 3.5× and introducing 6 new npm audit findings.
- * See plan: wobbly-bouncing-glacier.md
  */
 const BANNED_CLI_RUNTIME_DEPS = [
   '@google-cloud/firestore',
@@ -123,7 +123,7 @@ function main() {
         throw new Error(
           `Backend-only SDK "${dep}" was pulled into the CLI tarball install at ${depPath}. ` +
             `It must not be a runtime dep of the root \`open-agreements\` package. ` +
-            `Move it to packages/signing/package.json or another workspace-internal manifest.`,
+            `Move it to a workspace-internal manifest, not the repo root.`,
         );
       }
     }

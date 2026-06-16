@@ -372,7 +372,7 @@ const tools: ToolDefinition[] = [
   },
 ];
 
-// ── Template-only exports (signing tools moved to @open-agreements/signing) ──
+// ── Template-only exports (signing feature removed) ──
 
 export function listToolDescriptors(): Array<{ name: string; description: string; inputSchema: JsonSchema; annotations?: { readOnlyHint?: boolean; destructiveHint?: boolean } }> {
   return tools.map((tool) => ({

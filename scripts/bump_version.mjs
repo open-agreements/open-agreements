@@ -12,7 +12,6 @@
  *   - packages/contracts-workspace-mcp/package.json
  *   - packages/contract-templates-mcp/package.json
  *   - packages/checklist-mcp/package.json
- *   - packages/signing/package.json
  *   - gemini-extension.json
  *   - .cursor-plugin/plugin.json
  *   - server.json (top-level version AND packages[].version)
@@ -30,7 +29,6 @@ export const VERSION_FILES = [
   "packages/contracts-workspace-mcp/package.json",
   "packages/contract-templates-mcp/package.json",
   "packages/checklist-mcp/package.json",
-  "packages/signing/package.json",
   "gemini-extension.json",
   ".cursor-plugin/plugin.json",
 ];

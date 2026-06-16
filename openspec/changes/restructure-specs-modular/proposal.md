@@ -14,8 +14,8 @@ This change splits the monolith along a **hybrid axis** (surface specs + concern
 
 ## What Changes
 
-- **ADDED** 12 new capability specs:
-  - Surface: `engine`, `recipes`, `cli`, `mcp-contract-templates`, `closing-checklist`, `signing`, `provider-docusign`, `distribution`
+- **ADDED** 10 new capability specs:
+  - Surface: `engine`, `recipes`, `cli`, `mcp-contract-templates`, `closing-checklist`, `distribution`
   - Concern: `authoring`, `validation`, `ip-license`, `quality-gates`
 - **RENAMED** capability `contracts-workspace` → `mcp-contracts-workspace` (contents unchanged).
 - **MOVED** all 106 requirements from the `open-agreements` capability to their new homes (mapping captured in `design.md`).
