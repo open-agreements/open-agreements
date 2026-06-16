@@ -7,30 +7,6 @@
       "addedInPR": "#378"
     },
     {
-      "templateId": "openagreements-employee-ip-inventions-assignment",
-      "docxSha256": "0f4a9a04feaaae737e430c8aa8a3be8adb1c74b48ab32a5da7e5c72cda2dfc3d",
-      "reason": "theme/webSettings injection has no visual effect on cover-standard layout with explicit fonts (PR #378)",
-      "addedInPR": "#378"
-    },
-    {
-      "templateId": "openagreements-employment-confidentiality-acknowledgement",
-      "docxSha256": "98e161a3b6413162f7f41337baf1c8f85a9bd297a8c0891bf48a1c53c8ec9f9f",
-      "reason": "theme/webSettings injection has no visual effect on cover-standard layout with explicit fonts (PR #378)",
-      "addedInPR": "#378"
-    },
-    {
-      "templateId": "openagreements-employment-offer-letter",
-      "docxSha256": "2cceb36a2e5a45af97f9bda244b994f44d2290deba97188b2b9a13e99c44595b",
-      "reason": "theme/webSettings injection has no visual effect on cover-standard layout with explicit fonts (PR #378)",
-      "addedInPR": "#378"
-    },
-    {
-      "templateId": "openagreements-restrictive-covenant-wyoming",
-      "docxSha256": "04991b77311d8a6ded26d7b5c6584dc5803d92b1290080e501b38198b3f3e13c",
-      "reason": "theme/webSettings injection has no visual effect on cover-standard layout with explicit fonts (PR #378)",
-      "addedInPR": "#378"
-    },
-    {
       "templateId": "openagreements-stockholder-consent-safe",
       "docxSha256": "6c795ec3060c52b96b22163666ce793abe9da17c942199a115d9f049114b994c",
       "reason": "theme/webSettings injection has no visual effect on traditional consent layout with explicit fonts (PR #378)",

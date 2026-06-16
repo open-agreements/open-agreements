@@ -356,7 +356,6 @@ describe('contract-templates-mcp tools', () => {
         specified_competitors: 'Contoso, Globex',
         nondealing_included: 'true',
         noninvestment_included: 'true',
-        cloud_drive_id: 'workspace://agreements/wy-rca-001',
       },
       return_mode: 'inline_base64',
     });
@@ -380,7 +379,6 @@ describe('contract-templates-mcp tools', () => {
         effective_date: '2026-04-28',
         confidential_information_definition: 'non-public information relating to Company business, products, roadmaps, customers, and trade secrets',
         return_of_materials_timing: 'within 3 business days after termination of employment',
-        cloud_drive_id: 'workspace://agreements/piia-001',
       },
       return_mode: 'inline_base64',
     });

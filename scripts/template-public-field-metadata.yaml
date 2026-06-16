@@ -12,10 +12,6 @@ global:
     label: Employer Legal Name
   employee_name:
     label: Employee Full Name
-  cloud_drive_id:
-    default: ''
-  cloud_drive_id_footer:
-    default: ''
 
 templates:
   openagreements-employee-ip-inventions-assignment:

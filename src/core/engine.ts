@@ -107,14 +107,6 @@ function computeDisplayFields(data: Record<string, unknown>, fieldNames: Set<str
     const val = data[key];
     return !val || isBlankPlaceholder(val);
   };
-  const toGoogleDocUrl = (value: string): string => {
-    const raw = value.trim();
-    if (raw === '') return '';
-    if (/^https?:\/\//i.test(raw)) return raw;
-    if (/^docs\.google\.com\/document\/d\//i.test(raw)) return `https://${raw}`;
-    if (/^[A-Za-z0-9_-]{20,}$/.test(raw)) return `https://docs.google.com/document/d/${raw}/`;
-    return raw;
-  };
 
   // ── Signatory type derivation ──
   // Auto-discover role-based prefixes: match *_signatory_type
@@ -181,14 +173,6 @@ function computeDisplayFields(data: Record<string, unknown>, fieldNames: Set<str
   }
   if (isBlankPlaceholder(data['equity_terms'])) {
     data['equity_terms'] = '';
-  }
-  if (isBlankPlaceholder(data['cloud_drive_id'])) {
-    data['cloud_drive_id'] = '';
-  }
-  const cloudDriveId = typeof data['cloud_drive_id'] === 'string' ? data['cloud_drive_id'].trim() : '';
-  if (fieldNames.has('cloud_drive_id_footer')) {
-    const docUrl = cloudDriveId ? toGoogleDocUrl(cloudDriveId) : '';
-    data['cloud_drive_id_footer'] = docUrl ? `Document URL: ${docUrl}` : '';
   }
 
   // Order Date: "Date of last signature" or custom date

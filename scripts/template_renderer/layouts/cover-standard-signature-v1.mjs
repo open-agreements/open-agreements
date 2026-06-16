@@ -266,7 +266,7 @@ function sectionHeader(label, style, nilBorder) {
   });
 }
 
-function sectionFooter(docLabel, version, includeCloudDocLine, style) {
+function sectionFooter(docLabel, version, style) {
   const baseRun = {
     font: style.fonts.body,
     size: 13,
@@ -288,26 +288,11 @@ function sectionFooter(docLabel, version, includeCloudDocLine, style) {
           new TextRun({ children: [PageNumber.TOTAL_PAGES], ...baseRun }),
         ],
       }),
-      ...(includeCloudDocLine
-        ? [
-            new Paragraph({
-              spacing: { before: 0, after: 0 },
-              children: [
-                new TextRun({
-                  text: '{cloud_drive_id_footer}',
-                  font: style.fonts.body,
-                  size: 12,
-                  color: style.colors.ink_soft,
-                }),
-              ],
-            }),
-          ]
-        : []),
     ],
   });
 }
 
-function buildSection(sectionLabel, documentLabel, documentVersion, children, style, nilBorder, opts = {}) {
+function buildSection(sectionLabel, documentLabel, documentVersion, children, style, nilBorder) {
   return {
     properties: {
       page: {
@@ -318,7 +303,7 @@ function buildSection(sectionLabel, documentLabel, documentVersion, children, st
       default: sectionHeader(sectionLabel, style, nilBorder),
     },
     footers: {
-      default: sectionFooter(documentLabel, documentVersion, opts.include_cloud_doc_line === true, style),
+      default: sectionFooter(documentLabel, documentVersion, style),
     },
     children,
   };
@@ -1361,7 +1346,6 @@ export function renderCoverStandardSignatureV1(spec, style) {
         ],
         style,
         nilBorder,
-        { include_cloud_doc_line: document.include_cloud_doc_line }
       ),
       buildSection(
         sections.standard_terms.section_label,

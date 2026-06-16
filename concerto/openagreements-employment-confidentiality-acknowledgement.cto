@@ -21,6 +21,4 @@ asset OpenagreementsEmploymentConfidentialityAcknowledgement extends Contract {
   o String post_employment_obligations default="no retention, sharing, or use of company confidential information after termination"
   o String acknowledgement_date optional
   o String signatory_name optional
-  o String cloud_drive_id optional
-  o String cloud_drive_id_footer default=""
 }

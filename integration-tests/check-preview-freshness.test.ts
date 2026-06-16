@@ -419,22 +419,22 @@ describe('loadPreviewFreshnessManifest validation', () => {
 
 describe('manifest satisfaction', () => {
   it('satisfies a triggered template when the manifest SHA matches template.docx', () => {
-    const result = findManifestSatisfied(['openagreements-employment-offer-letter'], REPO_ROOT, [
+    const result = findManifestSatisfied(['openagreements-board-consent-safe'], REPO_ROOT, [
       {
-        templateId: 'openagreements-employment-offer-letter',
-        docxSha256: '2cceb36a2e5a45af97f9bda244b994f44d2290deba97188b2b9a13e99c44595b',
+        templateId: 'openagreements-board-consent-safe',
+        docxSha256: '79b92e64648c453f512f2cb013af33e17bd12f61561fc420771a6b2351d51185',
         reason: 'test byte-identical render claim',
       },
     ]);
 
-    expect(result.satisfied).toEqual(new Set(['openagreements-employment-offer-letter']));
+    expect(result.satisfied).toEqual(new Set(['openagreements-board-consent-safe']));
     expect(result.stale).toEqual([]);
   });
 
   it('reports stale entries when the manifest SHA no longer matches template.docx', () => {
-    const result = findManifestSatisfied(['openagreements-employment-offer-letter'], REPO_ROOT, [
+    const result = findManifestSatisfied(['openagreements-board-consent-safe'], REPO_ROOT, [
       {
-        templateId: 'openagreements-employment-offer-letter',
+        templateId: 'openagreements-board-consent-safe',
         docxSha256: '0000000000000000000000000000000000000000000000000000000000000000',
         reason: 'test stale claim',
       },
@@ -443,9 +443,9 @@ describe('manifest satisfaction', () => {
     expect(result.satisfied.size).toBe(0);
     expect(result.stale).toEqual([
       {
-        templateId: 'openagreements-employment-offer-letter',
+        templateId: 'openagreements-board-consent-safe',
         declaredSha: '0000000000000000000000000000000000000000000000000000000000000000',
-        currentSha: '2cceb36a2e5a45af97f9bda244b994f44d2290deba97188b2b9a13e99c44595b',
+        currentSha: '79b92e64648c453f512f2cb013af33e17bd12f61561fc420771a6b2351d51185',
       },
     ]);
   });
@@ -590,7 +590,7 @@ describe('CLI main-guard', () => {
         OA_CHANGED_FILES: JSON.stringify([
           {
             status: 'modified',
-            path: 'content/templates/openagreements-employment-offer-letter/template.docx',
+            path: 'content/templates/openagreements-board-consent-safe/template.docx',
             previousPath: null,
           },
         ]),

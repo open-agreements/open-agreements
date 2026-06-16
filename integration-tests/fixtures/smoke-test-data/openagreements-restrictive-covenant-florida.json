@@ -31,7 +31,5 @@
   "passive_public_holdings_threshold": "five percent",
   "noninvestment_included": true,
   "noninvestment_duration": "12 months",
-  "nondisparagement_duration": "24 months",
-  "cloud_drive_id": "",
-  "cloud_drive_id_footer": ""
+  "nondisparagement_duration": "24 months"
 }
