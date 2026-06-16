@@ -2,7 +2,7 @@
 jurisdiction: "Colorado"
 slug: colorado
 countryCode: US
-snapshotAsOf: "2026-06-15"
+snapshotAsOf: "2026-06-16"
 lastReviewed: "2026-06-04"
 canonicalUrl: https://openagreements.org/legal/privacy/colorado
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/privacy/colorado · **Snapshot as of:** 2026-06-15 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/legal/privacy/colorado · **Snapshot as of:** 2026-06-16 · License: CC BY 4.0 · © openagreements.org
 
 # Colorado Consumer Privacy Law (CPA)[^about]
 

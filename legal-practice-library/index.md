@@ -18,5 +18,6 @@ Published by [openagreements.org](https://openagreements.org). Licensed CC BY 4.
 * [Non Compete](non-compete/)
 * [Outside Counsel](outside-counsel/)
 * [Privacy](privacy/)
+* [Privacy Policy](privacy-policy/)
 
 Supporting evidence — [verbatim passages our notes rely on](case-excerpts/), each linked to the full opinion on CourtListener (Free Law Project). Not a case database.
