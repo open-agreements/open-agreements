@@ -136,7 +136,7 @@ O.C.G.A. § 13-8-54 frames the interpretive posture. Courts construe covenants i
 
 "A court shall construe a restrictive covenant to comport with the reasonable intent and expectations of the parties to the covenant and in favor of providing reasonable protection to all legitimate business interests established by the person seeking enforcement."[^q7-grca-13-8-54-construe]
 
-The modification power is discretionary, not automatic. In *Belt Power, LLC v. Reed*, the Court of Appeals held the trial court did not abuse its discretion in declining to blue-pencil the covenants at all, leaving them unenforceable as written [^q7-beltpower-modify]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Georgia non-compete review checklist](/legal/non-compete/georgia-review-checklist) walks the full covenant suite item by item with each requirement's force level.
+The modification power is discretionary, not automatic. In *Belt Power, LLC v. Reed*, the Court of Appeals held the trial court did not abuse its discretion in declining to blue-pencil the covenants at all, leaving them unenforceable as written [^q7-beltpower-modify]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Georgia non-compete review checklist](/checklists/non-compete/us/georgia) walks the full covenant suite item by item with each requirement's force level.
 
 "We nevertheless conclude that the trial court did not abuse its discretion in declining to apply the ‘blue pencil’ provision in the Act to modify the terms of the covenants."[^q7-beltpower-modify]
 

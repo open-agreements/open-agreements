@@ -10,7 +10,7 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/new-jersey-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/new-jersey'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/new-jersey'
 tags:
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `tolling-during-breach`, `tolling-extension`
 - source_cards: `kusins-tolling`, `nj-kusins-tolling`
-- cited_by: [Non-Compete Agreement Review Checklist — New Jersey](../checklists/non-compete/new-jersey-review-checklist.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New Jersey](../checklists/non-compete/us/new-jersey.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4650682/adp-llc-vs-erik-kusins-adp-llc-vs-ryan-hopper-adp-llc-vs-anthony-m/#:~:text=In%20all%20of%20the%20matters,the%20period%20of%20defendants'%20violations.>
 
 ### adp-llc-v-kusins-the-term-blue-pencil-ing-refers-to-5327b678 {#adp-llc-v-kusins-the-term-blue-pencil-ing-refers-to-5327b678}
@@ -41,5 +41,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `non-solicitation`, `restrictive-covenants-each-independently-includable`
 - source_cards: `kusins-blue-pencil-definition`, `nj-kusins-blue-pencil`
-- cited_by: [Non-Compete Agreement Review Checklist — New Jersey](../checklists/non-compete/new-jersey-review-checklist.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New Jersey](../checklists/non-compete/us/new-jersey.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4650682/adp-llc-vs-erik-kusins-adp-llc-vs-ryan-hopper-adp-llc-vs-anthony-m/#:~:text=The%20term%20%22blue%20pencil%5Bing%5D%22%20refers,tailoring%20of%20a%20restrictive%20covenant.>

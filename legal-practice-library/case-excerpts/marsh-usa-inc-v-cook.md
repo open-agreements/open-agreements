@@ -7,7 +7,7 @@ resource: 'https://www.courtlistener.com/opinion/2541088/marsh-usa-inc-v-cook/'
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/texas-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/texas'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/texas'
 tags:
@@ -29,5 +29,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`, `definitions`, `texas-statutory-gates`
 - source_cards: `marsh-reasonably-related`, `tx-marsh-gate`, `tx-marsh-goodwill-defs`
-- cited_by: [Non-Compete Agreement Review Checklist — Texas](../checklists/non-compete/texas-review-checklist.md), [Non-Competes in Texas](../non-compete/us/texas.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Texas](../checklists/non-compete/us/texas.md), [Non-Competes in Texas](../non-compete/us/texas.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2541088/marsh-usa-inc-v-cook/#:~:text=We%20hold%20that%2C%20under%20the,recognizes%20as%20worthy%20of%20protection.>

@@ -10,7 +10,7 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/mississippi-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/mississippi'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/mississippi'
 tags:
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `heatherly-partial-enforcement-issue`, `ms-heatherly-question`
-- cited_by: [Non-Compete Agreement Review Checklist — Mississippi](../checklists/non-compete/mississippi-review-checklist.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Mississippi](../checklists/non-compete/us/mississippi.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1851641/redd-pest-control-co-v-heatherly/#:~:text=The%20second%20question%20raised%20by,as%20to%20the%20reasonable%20part.>
 
 ### redd-pest-control-co-v-heatherly-there-is-no-sound-reason-why-d5ff0eb1 {#redd-pest-control-co-v-heatherly-there-is-no-sound-reason-why-d5ff0eb1}
@@ -41,7 +41,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `heatherly-enforce-reasonable-part`, `ms-heatherly-reasonable-part`
-- cited_by: [Non-Compete Agreement Review Checklist — Mississippi](../checklists/non-compete/mississippi-review-checklist.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Mississippi](../checklists/non-compete/us/mississippi.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1851641/redd-pest-control-co-v-heatherly/#:~:text=There%20is%20no%20sound%20reason,protects%20a%20legitimate%20business%20interest.>
 
 ### redd-pest-control-co-v-heatherly-we-are-of-the-opinion-that-ab2cd8de {#redd-pest-control-co-v-heatherly-we-are-of-the-opinion-that-ab2cd8de}
@@ -50,5 +50,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `duration-geography`, `mississippi-statutory-gates`, `parties-and-cover-term-identification`
 - source_cards: `heatherly-statewide-unreasonable`, `ms-heatherly-gate`, `ms-heatherly-territory`, `ms-heatherly-title`
-- cited_by: [Non-Compete Agreement Review Checklist — Mississippi](../checklists/non-compete/mississippi-review-checklist.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Mississippi](../checklists/non-compete/us/mississippi.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1851641/redd-pest-control-co-v-heatherly/#:~:text=We%20are%20of%20the%20opinion,except%20in%20the%20Tupelo%20area.>

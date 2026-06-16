@@ -10,7 +10,7 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/michigan-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/michigan'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/michigan'
 tags:
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `continued-employment-consideration`, `michigan-statutory-gates`, `timing-and-execution-acknowledgements`
 - source_cards: `mi-qis-holding-gate`, `mi-qis-holding-timing`, `qis-just-cause`
-- cited_by: [Non-Compete Agreement Review Checklist — Michigan](../checklists/non-compete/michigan-review-checklist.md), [Non-Competes in Michigan](../non-compete/us/michigan.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Michigan](../checklists/non-compete/us/michigan.md), [Non-Competes in Michigan](../non-compete/us/michigan.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1591214/qis-inc-v-industrial-quality-control-inc/#:~:text=Because%20defendants%20were%20%E2%80%9Cjust%20cause%E2%80%9D,%E2%80%9Cjust%20cause%E2%80%9D%20for%20their%20termination.>
 
 ### qis-inc-v-industrial-quality-control-inc-mere-continuation-of-employment-is-eafe77f7 {#qis-inc-v-industrial-quality-control-inc-mere-continuation-of-employment-is-eafe77f7}
@@ -41,5 +41,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `continued-employment-consideration`, `michigan-statutory-gates`, `timing-and-execution-acknowledgements`
 - source_cards: `mi-qis-rule-gate`, `mi-qis-rule-timing`, `qis-continued-employment`
-- cited_by: [Non-Compete Agreement Review Checklist — Michigan](../checklists/non-compete/michigan-review-checklist.md), [Non-Competes in Michigan](../non-compete/us/michigan.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Michigan](../checklists/non-compete/us/michigan.md), [Non-Competes in Michigan](../non-compete/us/michigan.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1591214/qis-inc-v-industrial-quality-control-inc/#:~:text=Mere%20continuation%20of%20employment%20is,in%20an%20at%2Dwill%20employment%20setting.>

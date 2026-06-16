@@ -14,7 +14,7 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/montana-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/montana'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/montana'
 tags:
@@ -45,5 +45,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `customer-fee-restraints`, `definitions`, `restrictive-covenants-each-independently-includable`
 - source_cards: `alborn-partial-customer-fee`, `mt-alborn-feeclause-cov`, `mt-alborn-feeclause-defs`
-- cited_by: [Non-Compete Agreement Review Checklist — Montana](../checklists/non-compete/montana-review-checklist.md), [Non-Competes in Montana](../non-compete/us/montana.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Montana](../checklists/non-compete/us/montana.md), [Non-Competes in Montana](../non-compete/us/montana.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4254366/junkermier-clark-campanella-stevens-pc-v-alborn-uithoven/#:~:text=Rather%2C%20the%20Covenant%20requires%20Former,their%20departure%20from%20the%20firm.>

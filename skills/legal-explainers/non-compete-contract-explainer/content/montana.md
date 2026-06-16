@@ -132,7 +132,7 @@ The 2025 amendments matter for timing. HB 198 added naturopathic physicians, RNs
 
 MUTSA defines trade secrets as information or software that has independent economic value from not being generally known or readily ascertainable and is subject to reasonable secrecy efforts [^mutsa-trade-secret-definition]. It also authorizes injunctions for actual or threatened misappropriation, with limited royalty and affirmative-act remedies in appropriate cases [^mutsa-injunction].
 
-Section 28-2-604 gives Montana courts a partial-void rule when a contract has distinct lawful and unlawful objects. But restrictive covenants are strictly construed, and cases like *Curl* void overbroad restraints rather than rewriting them into better covenants. Treat severability as a cleanup rule for distinct promises, not a drafting strategy for an aggressive non-compete. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Montana non-compete review checklist](/legal/non-compete/montana-review-checklist) walks the full covenant suite item by item with each requirement's force level.
+Section 28-2-604 gives Montana courts a partial-void rule when a contract has distinct lawful and unlawful objects. But restrictive covenants are strictly construed, and cases like *Curl* void overbroad restraints rather than rewriting them into better covenants. Treat severability as a cleanup rule for distinct promises, not a drafting strategy for an aggressive non-compete. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Montana non-compete review checklist](/checklists/non-compete/us/montana) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**

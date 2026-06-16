@@ -9,7 +9,7 @@ resource: 'https://www.courtlistener.com/opinion/895669/earthworks-inc-v-sehn/'
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/north-dakota-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/north-dakota'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/north-dakota'
 tags:
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `north-dakota-statutory-gates`, `statutory-exceptions`
 - source_cards: `earthworks-goodwill-connection`, `nd-earthworks-connection-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — North Dakota](../checklists/non-compete/north-dakota-review-checklist.md), [Non-Competes in North Dakota](../non-compete/us/north-dakota.md)
+- cited_by: [Non-Compete Agreement Review Checklist — North Dakota](../checklists/non-compete/us/north-dakota.md), [Non-Competes in North Dakota](../non-compete/us/north-dakota.md)
 - link_to_source: <https://www.courtlistener.com/opinion/895669/earthworks-inc-v-sehn/#:~:text=The%20exception%20relied%20on%20here,the%20goodwill%20of%20a%20business.>
 
 ### earthworks-inc-v-sehn-the-statute-represents-one-of-the-2b095829 {#earthworks-inc-v-sehn-the-statute-represents-one-of-the-2b095829}
@@ -40,5 +40,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `forfeiture-for-competition`, `north-dakota-statutory-gates`, `restrictive-covenants-each-independently-includable`, `tolling-during-breach`
 - source_cards: `earthworks-penalty-restraint`, `nd-earthworks-penalty-cov`, `nd-earthworks-penalty-gate`, `nd-earthworks-penalty-toll`
-- cited_by: [Non-Compete Agreement Review Checklist — North Dakota](../checklists/non-compete/north-dakota-review-checklist.md), [Non-Competes in North Dakota](../non-compete/us/north-dakota.md)
+- cited_by: [Non-Compete Agreement Review Checklist — North Dakota](../checklists/non-compete/us/north-dakota.md), [Non-Competes in North Dakota](../non-compete/us/north-dakota.md)
 - link_to_source: <https://www.courtlistener.com/opinion/895669/earthworks-inc-v-sehn/#:~:text=The%20statute%20represents%20one%20of,penalty%20if%20he%20does%20so.>

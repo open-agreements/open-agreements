@@ -12,7 +12,7 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/indiana-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/indiana'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/indiana'
 tags:
@@ -34,7 +34,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `indiana-statutory-gates`, `liquidated-damages`
 - source_cards: `amconsulting-holding`, `amconsulting-holding-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — Indiana](../checklists/non-compete/indiana-review-checklist.md), [Non-Competes in Indiana](../non-compete/us/indiana.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Indiana](../checklists/non-compete/us/indiana.md), [Non-Competes in Indiana](../non-compete/us/indiana.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4688172/american-consulting-inc-dba-american-structurepoint-inc-v-hannum/#:~:text=In%20sum%2C%20we%20find%20that,at%20issue%20are%20unenforceable%20penalties.>
 
 ### american-consulting-inc-v-hannum-wagle-cline-engineering-inc-when-liquidated-damages-are-grossly-601aa96a {#american-consulting-inc-v-hannum-wagle-cline-engineering-inc-when-liquidated-damages-are-grossly-601aa96a}
@@ -43,5 +43,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `indiana-statutory-gates`, `liquidated-damages`
 - source_cards: `amconsulting-penalty`, `amconsulting-penalty-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — Indiana](../checklists/non-compete/indiana-review-checklist.md), [Non-Competes in Indiana](../non-compete/us/indiana.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Indiana](../checklists/non-compete/us/indiana.md), [Non-Competes in Indiana](../non-compete/us/indiana.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4688172/american-consulting-inc-dba-american-structurepoint-inc-v-hannum/#:~:text=When%20liquidated%20damages%20are%20grossly,rather%20than%20as%20liquidated%20damages.>

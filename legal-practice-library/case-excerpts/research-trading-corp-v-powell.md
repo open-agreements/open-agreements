@@ -9,7 +9,7 @@ resource: 'https://www.courtlistener.com/opinion/2275060/research-trading-corp-v
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/delaware-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/delaware'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/delaware'
 tags:
@@ -40,5 +40,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`, `timing-and-execution-acknowledgements`
 - source_cards: `de-powell-continued-timing`, `powell-continued-employment`
-- cited_by: [Non-Compete Agreement Review Checklist — Delaware](../checklists/non-compete/delaware-review-checklist.md), [Non-Competes in Delaware](../non-compete/us/delaware.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Delaware](../checklists/non-compete/us/delaware.md), [Non-Competes in Delaware](../non-compete/us/delaware.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2275060/research-trading-corp-v-powell/#:~:text=The%20Court%20finds%20there%20was,support%20an%20enforceable%20restrictive%20covenant.>

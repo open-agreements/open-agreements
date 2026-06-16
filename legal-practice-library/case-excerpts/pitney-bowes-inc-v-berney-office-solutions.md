@@ -10,7 +10,7 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/alabama-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/alabama'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/alabama'
 tags:
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `alabama-statutory-gates`, `assignment-and-successors`, `timing-of-signing`
 - source_cards: `pitney-timing`, `pitney-timing-assignment`, `pitney-timing-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — Alabama](../checklists/non-compete/alabama-review-checklist.md), [Non-Competes in Alabama](../non-compete/us/alabama.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Alabama](../checklists/non-compete/us/alabama.md), [Non-Competes in Alabama](../non-compete/us/alabama.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1099624/pitney-bowes-inc-v-berney-office-solutions/#:~:text=The%20voidness%20of%20the%20agreement,a%20month%20after%20the%20signing.>
 
 ### pitney-bowes-inc-v-berney-office-solutions-this-statute-however-presupposes-33f652f5 {#pitney-bowes-inc-v-berney-office-solutions-this-statute-however-presupposes-33f652f5}
@@ -41,5 +41,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `alabama-statutory-gates`, `timing-and-execution-acknowledgements`, `timing-of-signing`
 - source_cards: `pitney-consideration`, `pitney-consideration-gate`, `pitney-consideration-timing`
-- cited_by: [Non-Compete Agreement Review Checklist — Alabama](../checklists/non-compete/alabama-review-checklist.md), [Non-Competes in Alabama](../non-compete/us/alabama.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Alabama](../checklists/non-compete/us/alabama.md), [Non-Competes in Alabama](../non-compete/us/alabama.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1099624/pitney-bowes-inc-v-berney-office-solutions/#:~:text=This%20statute%2C%20however%2C%20presupposes%20noncompete%20agreements%20supported%20by%20consideration.>

@@ -10,7 +10,7 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/pennsylvania-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/pennsylvania'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/pennsylvania'
 tags:
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`, `timing-and-execution-acknowledgements`
 - source_cards: `maintenance-continued-employment`, `pa-maintenance-continued`
-- cited_by: [Non-Compete Agreement Review Checklist — Pennsylvania](../checklists/non-compete/pennsylvania-review-checklist.md), [Non-Competes in Pennsylvania](../non-compete/us/pennsylvania.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Pennsylvania](../checklists/non-compete/us/pennsylvania.md), [Non-Competes in Pennsylvania](../non-compete/us/pennsylvania.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1925441/maintenance-specialties-inc-v-gottus/#:~:text=An%20employee's%20continued%20employment%20is,employment%20for%20a%20definite%20term.>

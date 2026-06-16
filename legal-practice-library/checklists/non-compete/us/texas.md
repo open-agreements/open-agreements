@@ -1,0 +1,251 @@
+---
+type: Review Checklist
+title: Non-Compete Agreement Review Checklist — Texas
+description: >-
+  A clause-by-clause reviewer checklist for Texas employee restrictive covenant
+  agreements — confidentiality, non-solicits, non-competes, and
+  non-disparagement under Tex. Bus. & Com. Code § 15.50's ancillary-agreement
+  test, mandatory reformation, and the physician and health-care-practitioner
+  buyout rules.
+resource: 'https://openagreements.org/checklists/non-compete/us/texas'
+timestamp: '2026-06-11'
+tags:
+  - non-compete
+  - checklist
+---
+
+# Non-Compete Agreement Review Checklist — Texas[^about]
+
+A clause-by-clause reviewer checklist for Texas employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under Tex. Bus. & Com. Code § 15.50's ancillary-agreement test, mandatory reformation, and the physician and health-care-practitioner buyout rules.
+
+## Parties and cover-term identification {#parties-and-cover-term-identification}
+
+Work through every item the way a Texas court would: one statute — the Covenants Not to Compete Act — supplies the only test, ties every restraint to a protectable business interest, and orders courts to trim overbroad covenants instead of voiding them, at the price of the employer's damages claim. For the question-by-question legal analysis behind these items, see the [Texas non-compete practice note](/practice-guides/non-compete/us/texas).
+
+- [ ] **Parties identified by name** (Recommended) — Confirm the named employer is the entity that owns the goodwill or confidential information the covenant claims to protect. Texas ties every restraint to the promisee's own business interest, and in a personal-services agreement that same entity carries the burden of proving the covenant fits the statute — a covenant running to a parent or affiliate with no protectable interest of its own starts the analysis in a hole. [#identify-parties]
+
+- [ ] **Effective date** (Recommended) — In Texas the signing date does not finish the timeline. The statute asks whether the covenant was ancillary to an otherwise enforceable agreement at the time the agreement was made, and an at-will covenant resting on an employer promise binds only once the employer performs — so the dates that matter are when the agreement was made and when the promised consideration actually arrived. [^tx-sheshunoff-cover] [#identify-effective-date]
+
+- [ ] **Employee title** (Recommended) — The title routes the agreement to the right statutory track. A physician is reviewed under the physician-specific conditions of section 15.50(b); a dentist, professional or vocational nurse, or physician assistant triggers the parallel section 15.501 regime; everyone else is judged under the general reasonableness test. Misreading the role means reviewing against the wrong statute. [^tx-15501-class-cover] [#identify-employee-title]
+
+- [ ] **Governing law state named** (Recommended) — Check that the governing state is named — and weigh any clause selecting another state's law with care. Texas treats non-compete enforcement as fundamental policy, and its supreme court has applied Texas law to strike a covenant despite the parties' contrary contractual choice. [^tx-desantis-cover] [#identify-governing-law]
+
+## Definitions {#definitions}
+
+- [ ] **Confidential information** (Recommended) — Match the definition to what the employer actually provides. Promised and delivered confidential information is the classic consideration supporting a Texas covenant — implied where the job cannot be done without it — so a definition describing categories the worker genuinely receives does double duty as a confidentiality term and as formation evidence. [^tx-mann-frankfort-defs] [#define-confidential-information]
+
+- [ ] **Trade secrets** (Recommended) — Keep Trade Secrets separate from ordinary confidential information. The Texas trade-secret statute supplies injunctive relief independent of any covenant, but only for genuine secrets — it expressly leaves the worker's general knowledge, skill, and experience untouched — so the definition should describe protectable material rather than everything the worker learned on the job. [^tx-tutsa-injunction-defs] [#define-trade-secrets]
+
+- [ ] **Restricted period** (Recommended) — One defined Restricted Period keeps every duration auditable against the statutory yardstick: the time limit must be reasonable and impose no greater restraint than necessary to protect the employer's interest. Texas publishes no numeric ceiling for ordinary workers, so the period has to be justified by the interest it protects — and a one-year statutory ceiling applies where the worker is a covered physician or health-care practitioner. [^tx-1550a-defs] [#define-restricted-period]
+
+- [ ] **Restricted territory** (Recommended) — Tie the geography to where the employee actually worked or where the employer genuinely competes. The Act requires the geographic limit to be reasonable and no broader than the interest it protects, and an everywhere-the-company-operates territory is the classic reformation trigger — with the damages forfeit that follows. [^tx-1550a-defs] [#define-restricted-territory]
+
+- [ ] **Covered customers** (Recommended) — Bound the class to customers the worker actually served during a stated look-back window. Texas courts run customer non-solicits through the same Act and the same reasonableness test as non-competes, so an entire-book-of-business definition gets judged as a restraint on competition, not as a softer alternative to one. [^tx-1550a-defs] [#define-covered-customers]
+
+- [ ] **Covered employees** (Recommended) — Keep the no-poach class to colleagues the departing worker actually worked with or supervised during the look-back window. The Texas authorities collected here do not separately address employee non-solicits, so the safest reading is that an overbuilt clause invites the same reasonableness scrutiny as the rest of the covenant suite; a modest, relationship-based class avoids testing the question. [#define-covered-employees]
+
+- [ ] **Protected business interests** (Recommended) — Name the interests in the statute's own vocabulary: goodwill or another business interest of the promisee is what the Act protects, and the Texas Supreme Court has accepted consideration as adequate precisely because it was reasonably related to goodwill. A recital mapping the claimed interests to the consideration given makes both halves of the statutory test easier to carry. [^tx-marsh-goodwill-defs] [#define-protected-interests]
+
+- [ ] **Competitive business** (Recommended) — Describe the competing activity concretely — the products, services, or line of business the worker actually touched. Scope of activity is one of the three statutory axes, and a definition reaching anything the employer might someday do imposes a greater restraint than necessary on its face. [^tx-1550a-defs] [#define-competitive-business]
+
+- [ ] **Small public-stock carve-out** (Recommended) — Where the covenant restricts owning or investing in competitors, look for a passive-holdings carve-out below a stated percentage. A clause that technically forbids index funds and ordinary public shares restrains far more than any goodwill interest requires — gratuitous overbreadth in a state whose courts must trim whatever they find unreasonable, at the employer's cost. [^tx-1550a-defs] [#permit-de-minimis-passive-public-investment-carveout]
+
+- [ ] **Passive public holdings** (Optional) — A drafting convenience rather than a legal requirement — many agreements inline the carve-out language instead of defining a capitalized term. If the term appears, confirm its percentage matches the operative carve-out it supports. [#define-passive-public-holdings]
+
+- [ ] **What counts as soliciting** (Recommended) — Pin down whether the term covers only initiated contact or also responding to inquiries that arrive unprompted. The wider reading expands the scope of activity restrained, and in Texas every expansion has to answer to the no-greater-restraint-than-necessary standard. [#define-solicit]
+
+- [ ] **Termination of employment** (Recommended) — Verify the trigger treats resignation, dismissal, and expiration of a fixed term consistently. Texas clocks run from this event — including the physician buyout, which is priced at the worker's total annual salary and wages at the time of termination — so an ambiguous trigger leaves both the restricted period and the buyout number contestable. [^tx-1550b-buyout-defs] [#define-termination-of-employment]
+
+## Timing and execution acknowledgements {#timing-and-execution-acknowledgements}
+
+- [ ] **When the agreement was signed** (Recommended) — Texas formation is a performance story, so the acknowledgement should record more than a date: what consideration was promised, when it was delivered, and that the covenant accompanied an otherwise enforceable agreement when made. An at-will covenant is illusory until the employer performs, and an implied promise of confidential information fills the gap only where the job requires it — contemporaneous recitals beat reconstructing that timeline in litigation. [^tx-sheshunoff-timing][^tx-mann-frankfort-timing] [#acknowledge-timing]
+
+- [ ] **Chance to consult a lawyer** (Recommended) — No Texas statute demands it for ordinary workers, but it is cheap procedural-fairness evidence — and for physician and practitioner covenants, whose terms must be clearly and conspicuously stated, a counsel acknowledgement reinforces that the statutory conditions were genuinely surfaced rather than buried. [#acknowledge-opportunity-to-consult-counsel]
+
+## Confidentiality and trade-secret treatment {#confidentiality-and-trade-secret-treatment}
+
+- [ ] **Trade-secret protection without an end date** (Required) — Trade-secret obligations should last as long as secrecy does — that is how federal law defines the right, and Texas trade-secret remedies assume it. A fixed expiry on trade-secret protection hands back the strongest covenant-independent protection the employer has in this state. [^tx-dtsa-trade-secret-definition] [#treat-trade-secret-protection-as-perpetual]
+
+- [ ] **Confidentiality end date** (Recommended) — Give ordinary confidential information its own finite term. Beyond the usual reasonableness concern, Texas adds a recharacterization risk: a confidentiality clause broad enough to keep the worker from functioning in the field can be treated as a non-compete and tested under the Act, reformation and all. A two-track structure — perpetual for secrets, finite for the rest — stays clear of that line. [^tx-1550a-disguised-duration] [#state-confidentiality-duration]
+
+## Permitted disclosures and protected conduct {#permitted-disclosures-and-protected-conduct}
+
+- [ ] **DTSA whistleblower notice** (Required) — Federal law, fully applicable in Texas: omit the immunity notice and the employer forfeits exemplary damages and attorney fees in a later trade-secret suit against the worker. Texas employers lean on trade-secret claims to backstop covenants — and as the only dependable fee path — so the notice protects remedies that matter here. [^tx-dtsa-immunity-notice] [#disclose-dtsa-notice]
+
+- [ ] **Wage-discussion carve-out** (Required) — Confidentiality and non-disparagement language must leave wages, hours, and working conditions discussable. Federal labor law protects that speech no matter which state's law governs the agreement, and the Board has been striking overbroad terms in employee agreements. [^tx-nlra-section-7][^tx-mclaren-protected-activity] [#carve-out-nlra-protected-discussion]
+
+- [ ] **Court-ordered disclosure allowed** (Recommended) — Confirm the carve-out for disclosure required by law, court order, or a government investigation, with notice to the employer where lawful. No confidentiality clause can outrun a subpoena, and the carve-out keeps the worker from being contractually penalized for complying. [#permit-compelled-disclosure]
+
+## Property return and certification {#property-return-and-certification}
+
+- [ ] **Property return and sign-off** (Recommended) — Return-or-delete at separation, certified in writing. In a state where the trade-secret statute is the employer's strongest covenant-independent tool, the certification is the cleanest contemporaneous evidence if protected material later surfaces at a competitor. [#require-property-return-and-certification]
+
+## Restrictive covenants (each independently includable) {#restrictive-covenants-each-independently-includable}
+
+- [ ] **Employee non-solicit** (Optional) — Optional, and the least regulated covenant in the Texas suite — the authorities here say nothing specific about restraints on recruiting former colleagues. Keep it inside the Covered Employees class and the Restricted Period, and do not let it grow into a hiring ban that tests how far the Act's reasonableness scrutiny extends. [#permit-employee-nonsolicit]
+
+- [ ] **Customer non-solicit** (Optional) — Optional — but not a loophole. Texas courts analyze customer non-solicits under the Covenants Not to Compete Act and the same reasonableness test, so the clause needs the same ancillary footing and the same tailoring to actual customer relationships as a full non-compete. [^tx-1550a-covenants] [#permit-customer-nonsolicit]
+
+- [ ] **Non-dealing covenant** (Optional) — Non-dealing bars serving covered customers even when they arrive unsolicited — a wider restraint on the same relationships a non-solicit covers. Treat the extra width as something the employer must justify under the no-greater-restraint standard, not as boilerplate. [^tx-1550a-covenants] [#permit-non-dealing]
+
+- [ ] **Non-compete covenant** (Optional) — Optional, and in Texas reviewable on two axes at once: the covenant must ride an otherwise enforceable agreement with qualifying consideration, and its time, geography, and scope must each be no broader than the protected interest. In a personal-services agreement the employer bears the burden of proving both. Route the clause through the Texas statutory gates at the end of this checklist before evaluating any of its terms. [^tx-1550a-covenants][^tx-1551b-burden] [#permit-non-compete]
+
+- [ ] **Named-competitor narrowing** (Recommended) — When the employer can name its real competitors, the covenant should bind those instead of leaning on the open-ended Competitive Business definition. A named list is strong evidence the restraint is no greater than necessary — the exact phrase the statute tests against — and it shrinks the surface a court would otherwise have to reform. [^tx-1550a-covenants] [#narrow-non-compete-by-specified-competitors-when-provided]
+
+- [ ] **Non-investment covenant** (Optional) — Rare and deliberate. Confirm the passive-holdings carve-out is intact and the clause shares the defined Restricted Period; an investment ban with no carve-out restrains conduct far from any goodwill interest and widens the reformation target. [#permit-non-investment]
+
+## Non-disparagement {#non-disparagement}
+
+- [ ] **Non-disparagement** (Recommended) — Standard to include with a stated term, but audit the carve-outs: truthful testimony, statements to government agencies, and protected workplace speech must sit outside the clause. Federal labor law polices overbroad versions regardless of the governing state. [^tx-mclaren-nondisparagement] [#require-non-disparagement]
+
+## Physician-specific notices and carve-outs {#physician-specific-notices-and-carve-outs}
+
+- [ ] **Physician rights and notices** (Recommended) — The dedicated clause earns its place in Texas: a physician covenant carries statutory conditions including patient-list access, medical-record access, continuity-of-care protection, and a buyout capped at the physician's total annual salary and wages, and since September 1, 2025 dentists, nurses, and physician assistants have their own buyout-and-limits regime under section 15.501. The clause should either implement those conditions or state plainly that the agreement is not to be used for covered practitioners — the detailed gates sit at the end of this checklist. [^tx-1550b-buyout-physician][^tx-15501-hcp-physician] [#address-physician-specific-rights]
+
+## No conflicting obligations {#no-conflicting-obligations}
+
+- [ ] **No conflicting obligations** (Recommended) — The worker's representation that no earlier agreement blocks the new role. Texas enforces reasonable covenants, so incoming hires genuinely may carry live restraints; surfacing them at signing protects the employer from tortious-interference exposure and tells the reviewer which side of an enforcement fight the company may end up on. [#require-no-conflicting-obligations-representation]
+
+## Notice to future employers and other third parties {#notice-to-future-employers-and-other-third-parties}
+
+- [ ] **Notice to future employers** (Optional) — A genuine drafting choice. A notice letter can support enforcement, but it is also where over-enforcement starts: the Act reserves its only express fee award for the worker whose employer knowingly pressed an overbroad covenant beyond what was necessary. If the clause appears, keep any disclosure factual and tied to the covenant as written. [#address-notice-to-future-employers]
+
+## Tolling during breach {#tolling-during-breach}
+
+- [ ] **Restriction extended during a breach** (Recommended) — The agreement should say whether the clock pauses during a breach — but treat any Texas tolling clause as unsettled rather than standard. No statute or controlling decision blesses adding time back, and an extension still has to survive the requirement that the time limit be reasonable and no greater than necessary. The dependable protection against ongoing violations is an injunction, which the Act expressly authorizes. [^tx-1550a-tolling][^tx-1551a-injunction-tolling] [#address-tolling-during-breach]
+
+## Remedies {#remedies}
+
+- [ ] **Injunction availability** (Recommended) — Look for the irreparable-harm acknowledgement and the consent to injunctive relief — then note the Texas stakes: if the covenant turns out overbroad, injunctive relief after reformation is all the employer gets, because damages for pre-reformation breaches are statutorily off the table. [^tx-1551a-remedies][^tx-1551c-damages-bar] [#require-injunctive-relief-availability]
+
+- [ ] **Attorney fees and costs** (Optional) — Read any fee clause against a statute that points the other way: the Act's only express fee award runs to the worker who proves knowing over-enforcement, and whether the general contract-fee statute can supply enforcement fees despite the Act's exclusivity is unresolved. The dependable employer fee path is a trade-secret claim under the Texas UTSA. Check that any fee-shifting is mutual and does not promise what the statute may not deliver. [^tx-1551c-fee-shift][^tx-tutsa-fees] [#address-attorneys-fees-and-costs]
+
+## Severability and reformation {#severability-and-reformation}
+
+- [ ] **Drafted to final scope, not for court repair** (Avoid) — Read the severability clause knowing the statute already does its work: a Texas court must reform an overbroad-but-ancillary covenant down to the minimum reasonable restraint and enforce it as reformed, whatever the contract says. The catch is the price — no damages for any breach before reformation, injunction only, and a since-withdrawn federal opinion would have courts take up reformation as early as the preliminary-injunction stage. An agreement drafted broad on the theory that the court will fix it trades away the damages claim and flirts with the fee award for knowing over-enforcement. Each covenant should arrive at its final intended scope. [^tx-1551c-reform][^tx-calhoun-pi-reform] [#draft-to-final-scope-rather-than-rely-on-mandatory-reformation]
+
+## Survival {#survival}
+
+- [ ] **Survival after the agreement ends** (Recommended) — Per-covenant survival keeps each clock independently checkable — perpetual for trade secrets, finite for everything else, and never past the one-year statutory ceiling for covered physicians and health-care practitioners. A bundled survival clause is where an unexamined duration hides, and in Texas an unexamined duration is a reformation trigger. [#address-survival-per-covenant]
+
+## Assignment and successors {#assignment-and-successors}
+
+- [ ] **Assignment and successors** (Recommended) — Confirm employer-side assignability to successors and that the worker cannot assign. Whoever enforces a Texas covenant inherits the statutory posture with it: the assignee must still tie the restraint to a protectable interest of its own and, in a personal-services agreement, carry the burden of proving the covenant fits the Act. [#address-assignment-and-successors]
+
+## Governing law, venue, dispute process {#governing-law-venue-dispute-process}
+
+- [ ] **Choice of law and forum that hold up** (Avoid) — The clause should name a governing law, a venue, and a dispute process — but do not let a foreign choice-of-law selection carry the enforceability analysis for a Texas worker. Texas treats covenant enforcement as fundamental policy and has applied its own law over the parties' contrary choice, and the same conflicts machinery can hand the question to another state whose policy is stronger. Forum selection is the half that holds: Texas courts enforce a mandatory forum-selection clause, by mandamus if necessary. Review the pair as a unit — a realistic forum plus Texas law is the combination that operates as written. [^tx-desantis-gov][^tx-autonation-forum][^tx-cardoni-conflicts] [#expect-texas-fundamental-policy-to-control-choice-of-law]
+
+## Entire agreement, amendment, waiver, e-signatures {#entire-agreement-amendment-waiver-e-signatures}
+
+- [ ] **Entire agreement, amendments, e-signatures** (Recommended) — Boilerplate with a Texas wrinkle: the covenant must be ancillary to an otherwise enforceable agreement at the time that agreement is made, so an amendment that re-papers the covenants should restate the consideration story rather than incorporate it by silence. Confirm the merger clause does not accidentally extinguish the very promises — confidential information, training, equity — that make the covenant enforceable. [#address-entire-agreement-amendment-waiver-and-e-signatures]
+
+## Texas statutory gates (Tex. Bus. & Com. Code ch. 15) {#texas-statutory-gates}
+
+The six items below exist only on this Texas page: they implement the Covenants Not to Compete Act's formation gates, the physician and health-care-practitioner buyout regimes, and the boundary between confidentiality drafting and a covert non-compete.
+
+- [ ] **Ancillary to an enforceable agreement** (Required) — Before reviewing any term, confirm the covenant rides an otherwise enforceable agreement and that the supporting consideration is reasonably related to a protectable interest — promised confidential information that is actually provided, or equity tied to goodwill. The two halves are independent: tight limits cannot save a covenant with no qualifying agreement under it, and a solid agreement cannot save limits broader than the interest. The early case law shows covenants failing this gate outright even where an employment agreement existed. [^tx-1550a-ancillary-gate][^tx-marsh-gate][^tx-light-gate] [#gate-non-compete-by-ancillary-otherwise-enforceable-agreement]
+
+- [ ] **Promised consideration actually delivered** (Required) — For an at-will worker, ask what the employer actually delivered. A covenant resting on a revocable promise is illusory when signed and binds only once the employer performs — hands over the confidential information, the training, the equity. Where the job cannot be done without confidential information, the promise to provide it is implied, but the reviewer should still look for evidence of delivery, because enforceability dates from performance rather than from signatures. [^tx-sheshunoff-gate][^tx-mann-frankfort-gate] [#make-at-will-consideration-non-illusory-through-performance]
+
+- [ ] **Physician buyout and statutory limits** (Required) — A covenant touching the practice of medicine must satisfy the section 15.50(b) conditions: a buyout option priced no higher than the physician's total annual salary and wages at termination, expiry within one year, a territory of at most a five-mile radius around the primary practice location, and terms stated clearly and conspicuously in writing — ceilings, not safe harbors. A general-purpose form rarely carries the physician-specific conditions, so reusing one for a physician fails the package even when its limits look modest. [^tx-1550b2-buyout-gate][^tx-1550b4-limits-gate] Check the carve-outs before applying the regime: a physician's ownership interest in a licensed hospital or ambulatory surgical center sits outside it, as does managing or directing medical services in a purely administrative capacity. [^tx-1550c-ownership-gate][^tx-1550b1-admin-gate] [#provide-physician-covenant-buyout-and-statutory-limits]
+
+- [ ] **Void if the physician is fired without good cause** (Prohibited) — For agreements on or after September 1, 2025, the covenant must not be written or enforced as if it survives every termination: a physician involuntarily discharged without good cause walks free of it by statute, and good cause means a reasonable basis tied to the physician's conduct, job performance, or employment record. Flag any physician covenant that purports to apply regardless of the reason for separation — the no-fault termination is exactly the case it gets wrong. [^tx-1550d-goodcause-gate] [#void-physician-covenant-on-discharge-without-good-cause]
+
+- [ ] **Dentist, nurse, and physician-assistant caps** (Required) — Since September 1, 2025, dentists, professional and vocational nurses, and physician assistants have their own statutory floor: the covenant is unenforceable unless it provides a salary-capped buyout, expires within one year, stays within a five-mile radius of where the practitioner primarily practiced, and states its terms clearly and conspicuously. The structure mirrors the physician rules, so a compliant physician form is the natural starting point — but the section is new, and terms like the primary practice location have little appellate gloss yet. [^tx-15501-hcp-gate][^tx-15501a-class-gate] [#cap-health-care-practitioner-covenants-with-buyout-and-limits]
+
+- [ ] **Confidentiality is not a covert non-compete** (Avoid) — Test the confidentiality clause for covert-non-compete behavior: if honoring it would keep the worker from functioning in the field at all, a court can recharacterize it and run it through the Act's ancillary-and-reasonableness test. The trade-secret statute draws the same line from the other side — an injunction cannot reach the general knowledge, skill, and experience the worker acquired on the job — so sweeping that ordinary expertise into the definition buys exposure, not protection. [^tx-1550a-disguised-gate][^tx-tutsa-knowledge-gate] [#avoid-confidentiality-that-functions-as-a-disguised-non-compete]
+
+
+
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-11. License: CC BY 4.0. Steven Obiajulu, J.D. edits this review checklist for Texas (US) coverage. It synthesizes legal sources and is not legal advice. This article is for informational purposes only and does not create an attorney-client relationship.
+
+[^tx-sheshunoff-cover]: **Alex Sheshunoff Management Services, L.P. v. Johnson** — "The fact that the employer was not bound to perform because he could have fired the employee is irrelevant; if he has performed, he has accepted the employee's offer and created a binding unilateral contract." *Alex Sheshunoff Mgmt. Servs., L.P. v. Johnson, 209 S.W.3d 644 (Tex. 2006).* <https://www.courtlistener.com/opinion/894789/alex-sheshunoff-management-services-lp-v-johnson/#:~:text=The%20fact%20that%20the%20employer,created%20a%20binding%20unilateral%20contract.>
+
+[^tx-15501-class-cover]: **Tex. Bus. & Com. Code § 15.501** — "(1) a person licensed by the State Board of Dental Examiners to practice dentistry in this state; (2) a person licensed under Chapter 301 , Occupations Code, to engage in professional or vocational nursing; or (3) a physician assistant licensed under Chapter 204 , Occupations Code." *Tex. Bus. & Com. Code § 15.501(a).* <https://statutes.capitol.texas.gov/Docs/BC/htm/BC.15.htm>
+
+[^tx-desantis-cover]: **DeSantis v. Wackenhut Corp.** — "We hold that Texas law, not Florida law, applies in this case, and that under Texas law, the noncompetition agreement is unenforceable." *DeSantis v. Wackenhut Corp., 793 S.W.2d 670 (Tex. 1990).* <https://www.courtlistener.com/opinion/2376061/desantis-v-wackenhut-corp/#:~:text=We%20hold%20that%20Texas%20law%2C,the%20noncompetition%20agreement%20is%20unenforceable.>
+
+[^tx-mann-frankfort-defs]: **Mann Frankfort Stein & Lipp Advisors, Inc. v. Fielding** — "When the nature of the work the employee is hired to perform requires confidential information to be provided for the work to be performed by the employee, the employer impliedly promises confidential information will be provided." *Mann Frankfort Stein & Lipp Advisors, Inc. v. Fielding, 289 S.W.3d 844 (Tex. 2009).* <https://www.courtlistener.com/opinion/895104/mann-frankfort-stein-lipp-advisors-inc-v-fielding/#:~:text=When%20the%20nature%20of%20the,confidential%20information%20will%20be%20provided.>
+
+[^tx-tutsa-injunction-defs]: **Tex. Civ. Prac. & Rem. Code § 134A.003** — "Actual or threatened misappropriation may be enjoined if the order does not prohibit a person from using general knowledge, skill, and experience that person acquired during employment." *Tex. Civ. Prac. & Rem. Code § 134A.003.* <https://statutes.capitol.texas.gov/Docs/CP/htm/CP.134A.htm>
+
+[^tx-1550a-defs]: **Tex. Bus. & Com. Code § 15.50** — "a covenant not to compete is enforceable if it is ancillary to or part of an otherwise enforceable agreement at the time the agreement is made to the extent that it contains limitations as to time, geographical area, and scope of activity to be restrained that are reasonable and do not impose a greater restraint than is necessary to protect the goodwill or other business interest of the promisee." *Tex. Bus. & Com. Code § 15.50(a).* <https://statutes.capitol.texas.gov/Docs/BC/htm/BC.15.htm>
+
+[^tx-marsh-goodwill-defs]: **Marsh USA Inc. v. Cook** — "We hold that, under the terms of the Covenants Not to Compete Act (Act), the consideration for the noncompete agreement (stock options) is reasonably related to the company's interest in protecting its goodwill, a business interest the Act recognizes as worthy of protection." *Marsh USA Inc. v. Cook, 354 S.W.3d 764 (Tex. 2011).* <https://www.courtlistener.com/opinion/2541088/marsh-usa-inc-v-cook/#:~:text=We%20hold%20that%2C%20under%20the,recognizes%20as%20worthy%20of%20protection.>
+
+[^tx-1550b-buyout-defs]: **Tex. Bus. & Com. Code § 15.50** — "the covenant must provide for a buyout of the covenant by the physician in an amount that is not greater than the physician's total annual salary and wages at the time of termination of the contract or employment;" *Tex. Bus. & Com. Code § 15.50(b)(2).* <https://statutes.capitol.texas.gov/Docs/BC/htm/BC.15.htm>
+
+[^tx-sheshunoff-timing]: **Alex Sheshunoff Management Services, L.P. v. Johnson** — "The fact that the employer was not bound to perform because he could have fired the employee is irrelevant; if he has performed, he has accepted the employee's offer and created a binding unilateral contract." *Alex Sheshunoff Mgmt. Servs., L.P. v. Johnson, 209 S.W.3d 644 (Tex. 2006).* <https://www.courtlistener.com/opinion/894789/alex-sheshunoff-management-services-lp-v-johnson/#:~:text=The%20fact%20that%20the%20employer,created%20a%20binding%20unilateral%20contract.>
+
+[^tx-mann-frankfort-timing]: **Mann Frankfort Stein & Lipp Advisors, Inc. v. Fielding** — "When the nature of the work the employee is hired to perform requires confidential information to be provided for the work to be performed by the employee, the employer impliedly promises confidential information will be provided." *Mann Frankfort Stein & Lipp Advisors, Inc. v. Fielding, 289 S.W.3d 844 (Tex. 2009).* <https://www.courtlistener.com/opinion/895104/mann-frankfort-stein-lipp-advisors-inc-v-fielding/#:~:text=When%20the%20nature%20of%20the,confidential%20information%20will%20be%20provided.>
+
+[^tx-dtsa-trade-secret-definition]: **Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839** — "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information" *18 U.S.C. § 1839(3)(B) (2018).* <https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information>
+
+[^tx-1550a-disguised-duration]: **Tex. Bus. & Com. Code § 15.50** — "a covenant not to compete is enforceable if it is ancillary to or part of an otherwise enforceable agreement at the time the agreement is made to the extent that it contains limitations as to time, geographical area, and scope of activity to be restrained that are reasonable and do not impose a greater restraint than is necessary to protect the goodwill or other business interest of the promisee." *Tex. Bus. & Com. Code § 15.50(a).* <https://statutes.capitol.texas.gov/Docs/BC/htm/BC.15.htm>
+
+[^tx-dtsa-immunity-notice]: **Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)** — "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information." *18 U.S.C. § 1833(b)(3)(A) (2018).* <https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.>
+
+[^tx-nlra-section-7]: **NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157** — "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection" *29 U.S.C. § 157 (NLRA § 7).* <https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection>
+
+[^tx-mclaren-protected-activity]: **NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)** — "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act." *McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).* <https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring>
+
+[^tx-1550a-covenants]: **Tex. Bus. & Com. Code § 15.50** — "a covenant not to compete is enforceable if it is ancillary to or part of an otherwise enforceable agreement at the time the agreement is made to the extent that it contains limitations as to time, geographical area, and scope of activity to be restrained that are reasonable and do not impose a greater restraint than is necessary to protect the goodwill or other business interest of the promisee." *Tex. Bus. & Com. Code § 15.50(a).* <https://statutes.capitol.texas.gov/Docs/BC/htm/BC.15.htm>
+
+[^tx-1551b-burden]: **Tex. Bus. & Com. Code § 15.51** — "If the primary purpose of the agreement to which the covenant is ancillary is to obligate the promisor to render personal services, for a term or at will, the promisee has the burden of establishing that the covenant meets the criteria specified by Section 15.50 of this code." *Tex. Bus. & Com. Code § 15.51(b).* <https://statutes.capitol.texas.gov/Docs/BC/htm/BC.15.htm>
+
+[^tx-mclaren-nondisparagement]: **NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)** — "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act." *McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).* <https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring>
+
+[^tx-1550b-buyout-physician]: **Tex. Bus. & Com. Code § 15.50** — "the covenant must provide for a buyout of the covenant by the physician in an amount that is not greater than the physician's total annual salary and wages at the time of termination of the contract or employment;" *Tex. Bus. & Com. Code § 15.50(b)(2).* <https://statutes.capitol.texas.gov/Docs/BC/htm/BC.15.htm>
+
+[^tx-15501-hcp-physician]: **Tex. Bus. & Com. Code § 15.501** — "A covenant not to compete relating to the practice of dentistry or nursing, or practice as a physician assistant, as applicable, is not enforceable against a health care practitioner unless the covenant: (1) provides for a buyout of the covenant by the health care practitioner in an amount that is not greater than the practitioner's total annual salary and wages at the time of termination of the practitioner's contract or employment; (2) expires not later than the one-year anniversary of the date the contract or employment has been terminated; (3) limits the geographical area subject to the covenant to no more than a five-mile radius from the location at which the health care practitioner primarily practiced before the contract or employment terminated; and (4) has terms and conditions that are clearly and conspicuously stated in writing." *Tex. Bus. & Com. Code § 15.501(b).* <https://statutes.capitol.texas.gov/Docs/BC/htm/BC.15.htm>
+
+[^tx-1550a-tolling]: **Tex. Bus. & Com. Code § 15.50** — "a covenant not to compete is enforceable if it is ancillary to or part of an otherwise enforceable agreement at the time the agreement is made to the extent that it contains limitations as to time, geographical area, and scope of activity to be restrained that are reasonable and do not impose a greater restraint than is necessary to protect the goodwill or other business interest of the promisee." *Tex. Bus. & Com. Code § 15.50(a).* <https://statutes.capitol.texas.gov/Docs/BC/htm/BC.15.htm>
+
+[^tx-1551a-injunction-tolling]: **Tex. Bus. & Com. Code § 15.51** — "a court may award the promisee under a covenant not to compete damages, injunctive relief, or both damages and injunctive relief for a breach by the promisor of the covenant." *Tex. Bus. & Com. Code § 15.51(a).* <https://statutes.capitol.texas.gov/Docs/BC/htm/BC.15.htm>
+
+[^tx-1551a-remedies]: **Tex. Bus. & Com. Code § 15.51** — "a court may award the promisee under a covenant not to compete damages, injunctive relief, or both damages and injunctive relief for a breach by the promisor of the covenant." *Tex. Bus. & Com. Code § 15.51(a).* <https://statutes.capitol.texas.gov/Docs/BC/htm/BC.15.htm>
+
+[^tx-1551c-damages-bar]: **Tex. Bus. & Com. Code § 15.51** — "the court may not award the promisee damages for a breach of the covenant before its reformation and the relief granted to the promisee shall be limited to injunctive relief." *Tex. Bus. & Com. Code § 15.51(c).* <https://statutes.capitol.texas.gov/Docs/BC/htm/BC.15.htm>
+
+[^tx-1551c-fee-shift]: **Tex. Bus. & Com. Code § 15.51** — "the court may award the promisor the costs, including reasonable attorney's fees, actually and reasonably incurred by the promisor in defending the action to enforce the covenant." *Tex. Bus. & Com. Code § 15.51(c).* <https://statutes.capitol.texas.gov/Docs/BC/htm/BC.15.htm>
+
+[^tx-tutsa-fees]: **Tex. Civ. Prac. & Rem. Code § 134A.005** — "The court may award reasonable attorney's fees to the prevailing party if: (1) a claim of misappropriation is made in bad faith; (2) a motion to terminate an injunction is made or resisted in bad faith; or (3) willful and malicious misappropriation exists." *Tex. Civ. Prac. & Rem. Code § 134A.005.* <https://statutes.capitol.texas.gov/Docs/CP/htm/CP.134A.htm>
+
+[^tx-1551c-reform]: **Tex. Bus. & Com. Code § 15.51** — "the court shall reform the covenant to the extent necessary to cause the limitations contained in the covenant as to time, geographical area, and scope of activity to be restrained to be reasonable and to impose a restraint that is not greater than necessary to protect the goodwill or other business interest of the promisee and enforce the covenant as reformed, except that the court may not award the promisee damages for a breach of the covenant before its reformation and the relief granted to the promisee shall be limited to injunctive relief." *Tex. Bus. & Com. Code § 15.51(c).* <https://statutes.capitol.texas.gov/Docs/BC/htm/BC.15.htm>
+
+[^tx-calhoun-pi-reform]: **Calhoun v. Jack Doheny Companies, Inc.** — "As we shall show, it should have considered reformation of the agreement in the process of deciding the preliminary injunction motion." *Calhoun v. Jack Doheny Cos., 969 F.3d 232 (5th Cir. 2020) (later withdrawn as moot).* <https://www.courtlistener.com/opinion/4773823/donald-calhoun-v-jack-doheny-companies-inc/#:~:text=As%20we%20shall%20show%2C%20it,deciding%20the%20preliminary%20injunction%20motion.>
+
+[^tx-desantis-gov]: **DeSantis v. Wackenhut Corp.** — "We hold that Texas law, not Florida law, applies in this case, and that under Texas law, the noncompetition agreement is unenforceable." *DeSantis v. Wackenhut Corp., 793 S.W.2d 670 (Tex. 1990).* <https://www.courtlistener.com/opinion/2376061/desantis-v-wackenhut-corp/#:~:text=We%20hold%20that%20Texas%20law%2C,the%20noncompetition%20agreement%20is%20unenforceable.>
+
+[^tx-autonation-forum]: **In re AutoNation, Inc.** — "AutoNation now seeks mandamus relief to enforce the mandatory forum-selection clause, and we conditionally grant it." *In re AutoNation, Inc., 228 S.W.3d 663 (Tex. 2007).* <https://www.courtlistener.com/opinion/894883/in-re-autonation-inc/#:~:text=AutoNation%20now%20seeks%20mandamus%20relief,and%20we%20conditionally%20grant%20it.>
+
+[^tx-cardoni-conflicts]: **Cardoni v. Prosperity Bank** — "Texas generally allows them so long as they are limited both geographically and temporally." *Cardoni v. Prosperity Bank, 805 F.3d 573 (5th Cir. 2015).* <https://www.courtlistener.com/opinion/3150844/chris-cardoni-v-prosperity-bank/#:~:text=Texas%20generally%20allows%20them%20so,limited%20both%20geographically%20and%20temporally.>
+
+[^tx-1550a-ancillary-gate]: **Tex. Bus. & Com. Code § 15.50** — "a covenant not to compete is enforceable if it is ancillary to or part of an otherwise enforceable agreement at the time the agreement is made to the extent that it contains limitations as to time, geographical area, and scope of activity to be restrained that are reasonable and do not impose a greater restraint than is necessary to protect the goodwill or other business interest of the promisee." *Tex. Bus. & Com. Code § 15.50(a).* <https://statutes.capitol.texas.gov/Docs/BC/htm/BC.15.htm>
+
+[^tx-marsh-gate]: **Marsh USA Inc. v. Cook** — "We hold that, under the terms of the Covenants Not to Compete Act (Act), the consideration for the noncompete agreement (stock options) is reasonably related to the company's interest in protecting its goodwill, a business interest the Act recognizes as worthy of protection." *Marsh USA Inc. v. Cook, 354 S.W.3d 764 (Tex. 2011).* <https://www.courtlistener.com/opinion/2541088/marsh-usa-inc-v-cook/#:~:text=We%20hold%20that%2C%20under%20the,recognizes%20as%20worthy%20of%20protection.>
+
+[^tx-light-gate]: **Light v. Centel Cellular Co. of Texas** — "Although Light and United did have an otherwise enforceable agreement between them, the covenant was not ancillary to or a part of that otherwise enforceable agreement." *Light v. Centel Cellular Co. of Tex., 883 S.W.2d 642 (Tex. 1994).* <https://www.courtlistener.com/opinion/1525150/light-v-centel-cellular-co-of-texas/#:~:text=Although%20Light%20and%20United%20did,of%20that%20otherwise%20enforceable%20agreement.>
+
+[^tx-sheshunoff-gate]: **Alex Sheshunoff Management Services, L.P. v. Johnson** — "The fact that the employer was not bound to perform because he could have fired the employee is irrelevant; if he has performed, he has accepted the employee's offer and created a binding unilateral contract." *Alex Sheshunoff Mgmt. Servs., L.P. v. Johnson, 209 S.W.3d 644 (Tex. 2006).* <https://www.courtlistener.com/opinion/894789/alex-sheshunoff-management-services-lp-v-johnson/#:~:text=The%20fact%20that%20the%20employer,created%20a%20binding%20unilateral%20contract.>
+
+[^tx-mann-frankfort-gate]: **Mann Frankfort Stein & Lipp Advisors, Inc. v. Fielding** — "When the nature of the work the employee is hired to perform requires confidential information to be provided for the work to be performed by the employee, the employer impliedly promises confidential information will be provided." *Mann Frankfort Stein & Lipp Advisors, Inc. v. Fielding, 289 S.W.3d 844 (Tex. 2009).* <https://www.courtlistener.com/opinion/895104/mann-frankfort-stein-lipp-advisors-inc-v-fielding/#:~:text=When%20the%20nature%20of%20the,confidential%20information%20will%20be%20provided.>
+
+[^tx-1550b2-buyout-gate]: **Tex. Bus. & Com. Code § 15.50** — "the covenant must provide for a buyout of the covenant by the physician in an amount that is not greater than the physician's total annual salary and wages at the time of termination of the contract or employment;" *Tex. Bus. & Com. Code § 15.50(b)(2).* <https://statutes.capitol.texas.gov/Docs/BC/htm/BC.15.htm>
+
+[^tx-1550b4-limits-gate]: **Tex. Bus. & Com. Code § 15.50** — "(A) expire not later than the one-year anniversary of the date the contract or employment has been terminated; (B) limit the geographical area subject to the covenant to no more than a five-mile radius from the location at which the physician primarily practiced before the contract or employment terminated; and (C) have terms and conditions clearly and conspicuously stated in writing." *Tex. Bus. & Com. Code § 15.50(b)(4).* <https://statutes.capitol.texas.gov/Docs/BC/htm/BC.15.htm>
+
+[^tx-1550c-ownership-gate]: **Tex. Bus. & Com. Code § 15.50** — "Subsection (b) does not apply to a physician's business ownership interest in a licensed hospital or licensed ambulatory surgical center." *Tex. Bus. & Com. Code § 15.50(c).* <https://statutes.capitol.texas.gov/Docs/BC/htm/BC.15.htm>
+
+[^tx-1550b1-admin-gate]: **Tex. Bus. & Com. Code § 15.50** — "the practice of medicine does not include managing or directing medical services in an administrative capacity for a medical practice or other health care provider." *Tex. Bus. & Com. Code § 15.50(b-1).* <https://statutes.capitol.texas.gov/Docs/BC/htm/BC.15.htm>
+
+[^tx-1550d-goodcause-gate]: **Tex. Bus. & Com. Code § 15.50** — "a covenant not to compete relating to the practice of medicine is void and unenforceable against a person licensed as a physician by the Texas Medical Board if the physician is involuntarily discharged from contract or employment without good cause. For purposes of this subsection, ‘good cause’ means a reasonable basis for discharge of a physician from contract or employment that is directly related to the physician's conduct, including the physician's conduct on the job or otherwise, job performance, and contract or employment record." *Tex. Bus. & Com. Code § 15.50(d).* <https://statutes.capitol.texas.gov/Docs/BC/htm/BC.15.htm>
+
+[^tx-15501-hcp-gate]: **Tex. Bus. & Com. Code § 15.501** — "A covenant not to compete relating to the practice of dentistry or nursing, or practice as a physician assistant, as applicable, is not enforceable against a health care practitioner unless the covenant: (1) provides for a buyout of the covenant by the health care practitioner in an amount that is not greater than the practitioner's total annual salary and wages at the time of termination of the practitioner's contract or employment; (2) expires not later than the one-year anniversary of the date the contract or employment has been terminated; (3) limits the geographical area subject to the covenant to no more than a five-mile radius from the location at which the health care practitioner primarily practiced before the contract or employment terminated; and (4) has terms and conditions that are clearly and conspicuously stated in writing." *Tex. Bus. & Com. Code § 15.501(b).* <https://statutes.capitol.texas.gov/Docs/BC/htm/BC.15.htm>
+
+[^tx-15501a-class-gate]: **Tex. Bus. & Com. Code § 15.501** — "(1) a person licensed by the State Board of Dental Examiners to practice dentistry in this state; (2) a person licensed under Chapter 301 , Occupations Code, to engage in professional or vocational nursing; or (3) a physician assistant licensed under Chapter 204 , Occupations Code." *Tex. Bus. & Com. Code § 15.501(a).* <https://statutes.capitol.texas.gov/Docs/BC/htm/BC.15.htm>
+
+[^tx-1550a-disguised-gate]: **Tex. Bus. & Com. Code § 15.50** — "a covenant not to compete is enforceable if it is ancillary to or part of an otherwise enforceable agreement at the time the agreement is made to the extent that it contains limitations as to time, geographical area, and scope of activity to be restrained that are reasonable and do not impose a greater restraint than is necessary to protect the goodwill or other business interest of the promisee." *Tex. Bus. & Com. Code § 15.50(a).* <https://statutes.capitol.texas.gov/Docs/BC/htm/BC.15.htm>
+
+[^tx-tutsa-knowledge-gate]: **Tex. Civ. Prac. & Rem. Code § 134A.003** — "Actual or threatened misappropriation may be enjoined if the order does not prohibit a person from using general knowledge, skill, and experience that person acquired during employment." *Tex. Civ. Prac. & Rem. Code § 134A.003.* <https://statutes.capitol.texas.gov/Docs/CP/htm/CP.134A.htm>

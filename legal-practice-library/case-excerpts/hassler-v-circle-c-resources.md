@@ -10,9 +10,9 @@ resource: >-
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us'
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/wyoming-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/wyoming'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/wyoming'
 tags:
@@ -34,7 +34,7 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `restrictive-covenants-each-independently-includable`, `template-updates`
 - source_cards: `hassler-baseline`, `hassler-draft-narrow`, `hassler-narrow-incentive`
-- cited_by: [Non-Compete Agreement Review Checklist — Wyoming](../checklists/non-compete/wyoming-review-checklist.md), [Non-Competes in Wyoming](../non-compete/us/wyoming.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Wyoming](../checklists/non-compete/us/wyoming.md), [Non-Competes in Wyoming](../non-compete/us/wyoming.md)
 - link_to_source: <https://www.courtlistener.com/opinion/9998701/charlene-hassler-v-circle-c-resources/#:~:text=By%20rejecting%20the%20liberal%20blue,restraints%20into%20their%20employment%20contracts>
 
 ### hassler-v-circle-c-resources-the-entire-agreement-is-void-in-ae6caf2b {#hassler-v-circle-c-resources-the-entire-agreement-is-void-in-ae6caf2b}
@@ -52,5 +52,5 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `hassler-no-blue-pencil`
-- cited_by: [Non-Compete Agreement Review Checklist](../checklists/non-compete/review-checklist.md), [Non-Compete Agreement Review Checklist — Wyoming](../checklists/non-compete/wyoming-review-checklist.md), [Non-Competes in Wyoming](../non-compete/us/wyoming.md)
+- cited_by: [Non-Compete Agreement Review Checklist](../checklists/non-compete/us.md), [Non-Compete Agreement Review Checklist — Wyoming](../checklists/non-compete/us/wyoming.md), [Non-Competes in Wyoming](../non-compete/us/wyoming.md)
 - link_to_source: <https://www.courtlistener.com/opinion/9998701/charlene-hassler-v-circle-c-resources/#:~:text=Wyoming%20courts%20will%20no%20longer,within%20the%20bounds%20of%20reason.>

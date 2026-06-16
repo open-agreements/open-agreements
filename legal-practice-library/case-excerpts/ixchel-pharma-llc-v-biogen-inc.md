@@ -9,7 +9,7 @@ resource: 'https://www.courtlistener.com/opinion/4772471/ixchel-pharma-llc-v-bio
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/california'
 tags:
@@ -40,5 +40,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `restrictive-covenants-each-independently-includable`
 - source_cards: `california-void-pole-ixchel`
-- cited_by: [Non-Compete Agreement Review Checklist](../checklists/non-compete/review-checklist.md)
+- cited_by: [Non-Compete Agreement Review Checklist](../checklists/non-compete/us.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4772471/ixchel-pharma-llc-v-biogen-inc/#:~:text=We%20do%20not%20disturb%20the,of%20interest%20in%20a%20business.>

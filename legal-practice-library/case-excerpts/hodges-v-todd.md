@@ -7,7 +7,7 @@ resource: 'https://www.courtlistener.com/opinion/1781513/hodges-v-todd/'
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/kentucky-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/kentucky'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/kentucky'
 tags:
@@ -29,5 +29,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `definitions`, `severability-and-reformation`
 - source_cards: `hodges-reformation-geography`, `ky-hodges-defs`, `ky-hodges-sev`
-- cited_by: [Non-Compete Agreement Review Checklist — Kentucky](../checklists/non-compete/kentucky-review-checklist.md), [Non-Competes in Kentucky](../non-compete/us/kentucky.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Kentucky](../checklists/non-compete/us/kentucky.md), [Non-Competes in Kentucky](../non-compete/us/kentucky.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1781513/hodges-v-todd/#:~:text=we%20hold%20that%20the%20trial,time%20the%20contract%20was%20executed.>

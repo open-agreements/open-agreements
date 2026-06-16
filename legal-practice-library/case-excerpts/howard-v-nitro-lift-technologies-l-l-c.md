@@ -13,7 +13,7 @@ resource: >-
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/oklahoma-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/oklahoma'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/oklahoma'
 tags:
@@ -35,5 +35,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `employee-noncompetes`, `restrictive-covenants-each-independently-includable`
 - source_cards: `howard-noncompete-void`, `howard-void-covenants`
-- cited_by: [Non-Compete Agreement Review Checklist — Oklahoma](../checklists/non-compete/oklahoma-review-checklist.md), [Non-Competes in Oklahoma](../non-compete/us/oklahoma.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Oklahoma](../checklists/non-compete/us/oklahoma.md), [Non-Competes in Oklahoma](../non-compete/us/oklahoma.md)
 - link_to_source: <https://www.courtlistener.com/opinion/5327051/howard-v-nitro-lift-technologies-llc/#:~:text=The%20non%2Dcompetition%20contracts%20go%20well,the%20legislatively%20expressed%20public%20policy.>

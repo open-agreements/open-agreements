@@ -10,7 +10,7 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/new-jersey-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/new-jersey'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/new-jersey'
 tags:
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `physician-covenants`, `physician-specific-notices-and-carve-outs`
 - source_cards: `nj-pierson-standard`, `pierson-physician-standard`
-- cited_by: [Non-Compete Agreement Review Checklist — New Jersey](../checklists/non-compete/new-jersey-review-checklist.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New Jersey](../checklists/non-compete/us/new-jersey.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1957686/pierson-v-medical-health-centers/#:~:text=Rather%2C%20the%20trial%20court%20must,adverse%20to%20the%20public%20interest.>

@@ -42,7 +42,7 @@ New Hampshire enforces reasonable non-competes under a common-law test, but RSA 
 
 The practical starting point is common law plus statutory gates. Even a reasonable covenant can fail if it was not disclosed before the employee accepted the offer, if the employee is covered by the low-wage ban, or if a profession-specific healthcare statute voids the restriction.
 
-New Hampshire also construes restraints narrowly. The court starts with the employer interest being protected, then asks whether the chosen time, geography, customer, and activity limits are broader than that interest requires [^foster-three-part-test]. For a clause-by-clause pass over a specific agreement, the [New Hampshire non-compete review checklist](/legal/non-compete/new-hampshire-review-checklist) walks the full covenant suite item by item with each requirement's force level.
+New Hampshire also construes restraints narrowly. The court starts with the employer interest being protected, then asks whether the chosen time, geography, customer, and activity limits are broader than that interest requires [^foster-three-part-test]. For a clause-by-clause pass over a specific agreement, the [New Hampshire non-compete review checklist](/checklists/non-compete/us/new-hampshire) walks the full covenant suite item by item with each requirement's force level.
 
 > [!NOTE]
 > **Practice note.**

@@ -10,7 +10,7 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/arkansas-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/arkansas'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/arkansas'
 tags:
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-reformation`, `severability-and-reformation`
 - source_cards: `bendinger-valid-as-written`, `q5-bendinger-no-rewrite`
-- cited_by: [Non-Compete Agreement Review Checklist — Arkansas](../checklists/non-compete/arkansas-review-checklist.md), [Non-Competes in Arkansas](../non-compete/us/arkansas.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Arkansas](../checklists/non-compete/us/arkansas.md), [Non-Competes in Arkansas](../non-compete/us/arkansas.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2454655/bendinger-v-marshalltown-trowell-co/#:~:text=The%20court%20has%20held%20that,it%20might%20be%20considered%20reasonable.>
 
 ### bendinger-v-marshalltown-trowel-co-we-hold-that-the-failure-of-eb69a922 {#bendinger-v-marshalltown-trowel-co-we-hold-that-the-failure-of-eb69a922}

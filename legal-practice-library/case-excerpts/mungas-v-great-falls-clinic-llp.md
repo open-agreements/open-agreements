@@ -9,7 +9,7 @@ resource: 'https://www.courtlistener.com/opinion/888694/mungas-v-great-falls-cli
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/montana-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/montana'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/montana'
 tags:
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `absolute-restraints`, `montana-statutory-gates`
 - source_cards: `mt-mungas-nosale-gate`, `mungas-no-goodwill-sale`
-- cited_by: [Non-Compete Agreement Review Checklist — Montana](../checklists/non-compete/montana-review-checklist.md), [Non-Competes in Montana](../non-compete/us/montana.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Montana](../checklists/non-compete/us/montana.md), [Non-Competes in Montana](../non-compete/us/montana.md)
 - link_to_source: <https://www.courtlistener.com/opinion/888694/mungas-v-great-falls-clinic-llp/#:~:text=Section%2028%2D2%2D704(1)%2C%20MCA%2C%20the%20sale,at%20issue%20in%20this%20case.>
 
 ### mungas-v-great-falls-clinic-llp-the-dobbins-court-concluded-that-in-7c730092 {#mungas-v-great-falls-clinic-llp-the-dobbins-court-concluded-that-in-7c730092}
@@ -40,5 +40,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `absolute-restraints`, `restrictive-covenants-each-independently-includable`
 - source_cards: `mt-mungas-partial`, `mungas-absolute-prohibition`
-- cited_by: [Non-Compete Agreement Review Checklist — Montana](../checklists/non-compete/montana-review-checklist.md), [Non-Competes in Montana](../non-compete/us/montana.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Montana](../checklists/non-compete/us/montana.md), [Non-Competes in Montana](../non-compete/us/montana.md)
 - link_to_source: <https://www.courtlistener.com/opinion/888694/mungas-v-great-falls-clinic-llp/#:~:text=The%20Dobbins%20Court%20concluded%20that,not%20to%20compete%20is%20reasonable.>

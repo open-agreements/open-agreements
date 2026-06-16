@@ -9,7 +9,7 @@ resource: 'https://www.courtlistener.com/opinion/896854/warner-co-v-solberg/'
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/north-dakota-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/north-dakota'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/north-dakota'
 tags:
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `customer-nonsolicits`, `definitions`, `north-dakota-statutory-gates`
 - source_cards: `nd-warner-trade-secret-defs`, `nd-warner-ts-rationale-gate`, `warner-trade-secret-rationale`
-- cited_by: [Non-Compete Agreement Review Checklist — North Dakota](../checklists/non-compete/north-dakota-review-checklist.md), [Non-Competes in North Dakota](../non-compete/us/north-dakota.md)
+- cited_by: [Non-Compete Agreement Review Checklist — North Dakota](../checklists/non-compete/us/north-dakota.md), [Non-Competes in North Dakota](../non-compete/us/north-dakota.md)
 - link_to_source: <https://www.courtlistener.com/opinion/896854/warner-co-v-solberg/#:~:text=Because%20of%20the%20plain%20language,we%20decline%20to%20do%20so.>
 
 ### warner-co-v-solberg-the-statute-contains-no-exception-for-45d12b76 {#warner-co-v-solberg-the-statute-contains-no-exception-for-45d12b76}
@@ -40,7 +40,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `customer-nonsolicits`, `restrictive-covenants-each-independently-includable`
 - source_cards: `nd-warner-customer-void-cov`, `warner-customer-restriction-void`
-- cited_by: [Non-Compete Agreement Review Checklist — North Dakota](../checklists/non-compete/north-dakota-review-checklist.md), [Non-Competes in North Dakota](../non-compete/us/north-dakota.md)
+- cited_by: [Non-Compete Agreement Review Checklist — North Dakota](../checklists/non-compete/us/north-dakota.md), [Non-Competes in North Dakota](../non-compete/us/north-dakota.md)
 - link_to_source: <https://www.courtlistener.com/opinion/896854/warner-co-v-solberg/#:~:text=The%20statute%20contains%20no%20exception,and%20(b)%20of%20the%20contract.>
 
 ### warner-co-v-solberg-these-limitations-constitute-a-restraint-9bf6019f {#warner-co-v-solberg-these-limitations-constitute-a-restraint-9bf6019f}
@@ -49,7 +49,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `restrictive-covenants-each-independently-includable`
 - source_cards: `nd-warner-replacement-void-cov`, `warner-replacement-clause-void`
-- cited_by: [Non-Compete Agreement Review Checklist — North Dakota](../checklists/non-compete/north-dakota-review-checklist.md), [Non-Competes in North Dakota](../non-compete/us/north-dakota.md)
+- cited_by: [Non-Compete Agreement Review Checklist — North Dakota](../checklists/non-compete/us/north-dakota.md), [Non-Competes in North Dakota](../non-compete/us/north-dakota.md)
 - link_to_source: <https://www.courtlistener.com/opinion/896854/warner-co-v-solberg/#:~:text=These%20limitations%20constitute%20a%20restraint,is%20%E2%80%9Cto%20that%20extent%20void.%E2%80%9D>
 
 ### warner-co-v-solberg-this-prohibition-is-narrowly-drawn-to-1a246d9b {#warner-co-v-solberg-this-prohibition-is-narrowly-drawn-to-1a246d9b}
@@ -58,7 +58,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `employee-nonsolicits`, `restrictive-covenants-each-independently-includable`
 - source_cards: `nd-warner-antiraiding-cov`, `nd-warner-antiraiding-defs`, `warner-employee-nonsolicit-not-void`
-- cited_by: [Non-Compete Agreement Review Checklist — North Dakota](../checklists/non-compete/north-dakota-review-checklist.md), [Non-Competes in North Dakota](../non-compete/us/north-dakota.md)
+- cited_by: [Non-Compete Agreement Review Checklist — North Dakota](../checklists/non-compete/us/north-dakota.md), [Non-Competes in North Dakota](../non-compete/us/north-dakota.md)
 - link_to_source: <https://www.courtlistener.com/opinion/896854/warner-co-v-solberg/#:~:text=This%20prohibition%20is%20narrowly%20drawn,as%20a%20restraint%20of%20trade.>
 
 ### warner-co-v-solberg-we-agree-with-the-trial-court-352a3def {#warner-co-v-solberg-we-agree-with-the-trial-court-352a3def}
@@ -67,5 +67,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `north-dakota-statutory-gates`, `statutory-exceptions`
 - source_cards: `nd-warner-small-stock-gate`, `warner-small-stock-goodwill`
-- cited_by: [Non-Compete Agreement Review Checklist — North Dakota](../checklists/non-compete/north-dakota-review-checklist.md), [Non-Competes in North Dakota](../non-compete/us/north-dakota.md)
+- cited_by: [Non-Compete Agreement Review Checklist — North Dakota](../checklists/non-compete/us/north-dakota.md), [Non-Competes in North Dakota](../non-compete/us/north-dakota.md)
 - link_to_source: <https://www.courtlistener.com/opinion/896854/warner-co-v-solberg/#:~:text=We%20agree%20with%20the%20trial,the%20goodwill%20of%20the%20business.>

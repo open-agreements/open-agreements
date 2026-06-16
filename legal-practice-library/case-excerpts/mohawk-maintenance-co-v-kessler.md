@@ -9,7 +9,7 @@ resource: 'https://www.courtlistener.com/opinion/5684701/mohawk-maintenance-co-v
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/new-york-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/new-york'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/new-york'
 tags:
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `restrictive-covenants-each-independently-includable`, `sale-of-business`
 - source_cards: `mohawk-acceptance-covenants`, `mohawk-permanent-duty`, `mohawk-solicitation-line`
-- cited_by: [Non-Compete Agreement Review Checklist — New York](../checklists/non-compete/new-york-review-checklist.md), [Non-Competes in New York](../non-compete/us/new-york.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New York](../checklists/non-compete/us/new-york.md), [Non-Competes in New York](../non-compete/us/new-york.md)
 - link_to_source: <https://www.courtlistener.com/opinion/5684701/mohawk-maintenance-co-v-kessler/#:~:text=Although%20defendants%20may%20accept%20the,acquisition%20of%20Mohawk%E2%80%99s%20%E2%80%9Cgood%20will%E2%80%9D.>
 
 ### mohawk-maintenance-co-v-kessler-as-such-the-implied-covenant-imposes-5a61e332 {#mohawk-maintenance-co-v-kessler-as-such-the-implied-covenant-imposes-5a61e332}
@@ -40,5 +40,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `new-york-doctrine-gates`, `sale-of-business`
 - source_cards: `mohawk-narrower-duty`, `mohawk-narrower-duty-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — New York](../checklists/non-compete/new-york-review-checklist.md), [Non-Competes in New York](../non-compete/us/new-york.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New York](../checklists/non-compete/us/new-york.md), [Non-Competes in New York](../non-compete/us/new-york.md)
 - link_to_source: <https://www.courtlistener.com/opinion/5684701/mohawk-maintenance-co-v-kessler/#:~:text=As%20such%2C%20the%20%E2%80%9Cimplied%20covenant%E2%80%9D,area%20or%20field%20of%20endeavor.>

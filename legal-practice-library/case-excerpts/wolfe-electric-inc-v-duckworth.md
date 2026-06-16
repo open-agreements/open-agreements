@@ -9,7 +9,7 @@ resource: 'https://www.courtlistener.com/opinion/7970813/wolfe-electric-inc-v-du
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/kansas-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/kansas'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/kansas'
 tags:
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `kansas-statutory-gates`, `trade-secrets`
 - source_cards: `wolfe-exclusive-remedy-gate`, `wolfe-kutsa-exclusive`
-- cited_by: [Non-Compete Agreement Review Checklist — Kansas](../checklists/non-compete/kansas-review-checklist.md), [Non-Competes in Kansas](../non-compete/us/kansas.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Kansas](../checklists/non-compete/us/kansas.md), [Non-Competes in Kansas](../non-compete/us/kansas.md)
 - link_to_source: <https://www.courtlistener.com/opinion/7970813/wolfe-electric-inc-v-duckworth/#:~:text=This%20is%20error%20because%20tort,KUTSA%20is%20the%20exclusive%20remedy.>

@@ -38,7 +38,7 @@ That makes reasonableness fact-bound. A statewide or long covenant is not automa
 
 Alaska does not follow a mechanical blue-pencil rule. *Data Management* rejected word-deletion formalism and adopted a reasonableness-based alteration approach that lets the court tailor a covenant to the facts.
 
-That doctrine is not a drafting license. If the employer willfully overreached, the court should refuse alteration [^data-management-overreach-good-faith]. The safest drafting posture is to write the covenant as narrowly as the evidence will support, then treat reasonable alteration as a backstop for good-faith excess. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Alaska non-compete review checklist](/legal/non-compete/alaska-review-checklist) walks the full covenant suite item by item with each requirement's force level.
+That doctrine is not a drafting license. If the employer willfully overreached, the court should refuse alteration [^data-management-overreach-good-faith]. The safest drafting posture is to write the covenant as narrowly as the evidence will support, then treat reasonable alteration as a backstop for good-faith excess. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Alaska non-compete review checklist](/checklists/non-compete/us/alaska) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**

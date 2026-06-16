@@ -10,8 +10,7 @@ resource: >-
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: >-
-      https://openagreements.org/legal/non-compete/massachusetts-review-checklist
+    resource: 'https://openagreements.org/checklists/non-compete/us/massachusetts'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/massachusetts'
 tags:
@@ -33,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `massachusetts-statutory-gates`, `parent-company-enforcement`, `parties-and-cover-term-identification`
 - source_cards: `anaplan-employer`, `anaplan-parent-not-employer`, `anaplan-wrong-entity`
-- cited_by: [Non-Compete Agreement Review Checklist — Massachusetts](../checklists/non-compete/massachusetts-review-checklist.md), [Non-Competes in Massachusetts](../non-compete/us/massachusetts.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Massachusetts](../checklists/non-compete/us/massachusetts.md), [Non-Competes in Massachusetts](../non-compete/us/massachusetts.md)
 - link_to_source: <https://www.mintz.com/sites/default/files/media/documents/2025-11-07/Anaplan-Parent%2C-LP-v.-Brennan-Noncompete%20Order.pdf>

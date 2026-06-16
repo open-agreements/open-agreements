@@ -9,8 +9,7 @@ resource: 'https://www.courtlistener.com/opinion/1328666/weaver-v-ritchie/'
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: >-
-      https://openagreements.org/legal/non-compete/west-virginia-review-checklist
+    resource: 'https://openagreements.org/checklists/non-compete/us/west-virginia'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/west-virginia'
 tags:
@@ -32,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `sale-of-business`, `west-virginia-statutory-gates`
 - source_cards: `weaver-sale-policy`, `wv-weaver-policy-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — West Virginia](../checklists/non-compete/west-virginia-review-checklist.md), [Non-Competes in West Virginia](../non-compete/us/west-virginia.md)
+- cited_by: [Non-Compete Agreement Review Checklist — West Virginia](../checklists/non-compete/us/west-virginia.md), [Non-Competes in West Virginia](../non-compete/us/west-virginia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1328666/weaver-v-ritchie/#:~:text=A%20restriction%20imposed%20upon%20the,at%20the%20highest%20possible%20price.>
 
 ### weaver-v-ritchie-after-a-bench-trial-of-several-a80f6d60 {#weaver-v-ritchie-after-a-bench-trial-of-several-a80f6d60}
@@ -50,7 +49,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `sale-of-business`, `west-virginia-statutory-gates`
 - source_cards: `weaver-lesser-scrutiny-sale`, `wv-weaver-lesser-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — West Virginia](../checklists/non-compete/west-virginia-review-checklist.md), [Non-Competes in West Virginia](../non-compete/us/west-virginia.md)
+- cited_by: [Non-Compete Agreement Review Checklist — West Virginia](../checklists/non-compete/us/west-virginia.md), [Non-Competes in West Virginia](../non-compete/us/west-virginia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1328666/weaver-v-ritchie/#:~:text=Because%20the%20motivation%20and%20purpose,ancillary%20to%20an%20employment%20agreement.>
 
 ### weaver-v-ritchie-to-determine-if-a-covenant-not-cf9bc375 {#weaver-v-ritchie-to-determine-if-a-covenant-not-cf9bc375}
@@ -59,5 +58,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `sale-of-business`, `west-virginia-statutory-gates`
 - source_cards: `weaver-sale-three-part-test`, `wv-weaver-test-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — West Virginia](../checklists/non-compete/west-virginia-review-checklist.md), [Non-Competes in West Virginia](../non-compete/us/west-virginia.md)
+- cited_by: [Non-Compete Agreement Review Checklist — West Virginia](../checklists/non-compete/us/west-virginia.md), [Non-Competes in West Virginia](../non-compete/us/west-virginia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1328666/weaver-v-ritchie/#:~:text=To%20determine%20if%20a%20covenant,not%20injurious%20to%20the%20public.>

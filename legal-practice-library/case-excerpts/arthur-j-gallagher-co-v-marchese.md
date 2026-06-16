@@ -10,7 +10,7 @@ resource: >-
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/new-york-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/new-york'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/new-york'
 tags:
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `new-york-doctrine-gates`, `protectable-interests`
 - source_cards: `gallagher-interest-gate`, `gallagher-limited-interests`, `gallagher-protectable-categories`
-- cited_by: [Non-Compete Agreement Review Checklist — New York](../checklists/non-compete/new-york-review-checklist.md), [Non-Competes in New York](../non-compete/us/new-york.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New York](../checklists/non-compete/us/new-york.md), [Non-Competes in New York](../non-compete/us/new-york.md)
 - link_to_source: <https://www.courtlistener.com/opinion/5999301/arthur-j-gallagher-co-v-marchese/#:~:text=An%20employer%E2%80%99s%20interests%20justifying%20a,services%20are%20unique%20or%20extraordinary%E2%80%9D>

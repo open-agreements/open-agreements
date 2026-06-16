@@ -9,7 +9,7 @@ resource: 'https://www.courtlistener.com/opinion/852724/dicen-v-new-sesco-inc/'
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/indiana-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/indiana'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/indiana'
 tags:
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `employee-noncompetes`, `other-workers`, `restrictive-covenants-each-independently-includable`
 - source_cards: `dicen-disfavored`, `dicen-disfavored-covenants`, `q11-dicen-common-law`
-- cited_by: [Non-Compete Agreement Review Checklist — Indiana](../checklists/non-compete/indiana-review-checklist.md), [Non-Competes in Indiana](../non-compete/us/indiana.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Indiana](../checklists/non-compete/us/indiana.md), [Non-Competes in Indiana](../non-compete/us/indiana.md)
 - link_to_source: <https://www.courtlistener.com/opinion/852724/dicen-v-new-sesco-inc/#:~:text=Covenants%20not%20to%20compete%20are,not%20favored%20in%20the%20law.>
 
 ### dicen-v-new-sesco-inc-we-hold-that-such-promises-not-6999d4e8 {#dicen-v-new-sesco-inc-we-hold-that-such-promises-not-6999d4e8}

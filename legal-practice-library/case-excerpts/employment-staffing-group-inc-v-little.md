@@ -9,8 +9,7 @@ resource: 'https://www.courtlistener.com/opinion/3007343/empt-staffing-grp-inc-v
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: >-
-      https://openagreements.org/legal/non-compete/north-carolina-review-checklist
+    resource: 'https://openagreements.org/checklists/non-compete/us/north-carolina'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/north-carolina'
 tags:
@@ -32,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`, `north-carolina-statutory-gates`, `timing-and-execution-acknowledgements`
 - source_cards: `nc-empt-staffing-milner`, `nc-empt-staffing-new-consideration`, `q2-empt-staffing-milner`
-- cited_by: [Non-Compete Agreement Review Checklist — North Carolina](../checklists/non-compete/north-carolina-review-checklist.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
+- cited_by: [Non-Compete Agreement Review Checklist — North Carolina](../checklists/non-compete/us/north-carolina.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/3007343/empt-staffing-grp-inc-v-little/#:~:text=%E2%80%9C%5BI%5Df%20an%20employment%20relationship%20already,be%20based%20upon%20new%20consideration.%E2%80%9D>
 
 ### employment-staffing-group-inc-v-little-accordingly-we-hold-that-defendant-s-7e8ef0a8 {#employment-staffing-group-inc-v-little-accordingly-we-hold-that-defendant-s-7e8ef0a8}

@@ -10,8 +10,7 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: >-
-      https://openagreements.org/legal/non-compete/north-carolina-review-checklist
+    resource: 'https://openagreements.org/checklists/non-compete/us/north-carolina'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/north-carolina'
 tags:
@@ -33,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `legitimate-interest`
 - source_cards: `nc-kuykendall-interest`, `q4-kuykendall-interest`
-- cited_by: [Non-Compete Agreement Review Checklist — North Carolina](../checklists/non-compete/north-carolina-review-checklist.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
+- cited_by: [Non-Compete Agreement Review Checklist — North Carolina](../checklists/non-compete/us/north-carolina.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1294109/united-laboratories-inc-v-kuykendall/#:~:text=Before%20a%20covenant%20can%20be,generally%20available%20to%20the%20public.>
 
 ### united-laboratories-inc-v-kuykendall-however-this-position-was-modified-and-b750053a {#united-laboratories-inc-v-kuykendall-however-this-position-was-modified-and-b750053a}
@@ -42,5 +41,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `enforceable`, `restrictive-covenants-each-independently-includable`
 - source_cards: `nc-kuykendall-partial-restraint`, `q1-kuykendall-partial-restraint`
-- cited_by: [Non-Compete Agreement Review Checklist — North Carolina](../checklists/non-compete/north-carolina-review-checklist.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
+- cited_by: [Non-Compete Agreement Review Checklist — North Carolina](../checklists/non-compete/us/north-carolina.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1294109/united-laboratories-inc-v-kuykendall/#:~:text=However%2C%20this%20position%20was%20modified,and%20not%20against%20public%20policy.>

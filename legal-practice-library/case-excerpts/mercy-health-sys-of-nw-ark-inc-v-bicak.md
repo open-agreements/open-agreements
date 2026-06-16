@@ -12,7 +12,7 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/arkansas-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/arkansas'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/arkansas'
 tags:
@@ -52,5 +52,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `arkansas-statutory-gates`, `definitions`, `reasonableness-test`
 - source_cards: `mercy-ordinary-competition-defs`, `mercy-ordinary-competition-gate`, `q2-mercy-no-ordinary-competition`
-- cited_by: [Non-Compete Agreement Review Checklist — Arkansas](../checklists/non-compete/arkansas-review-checklist.md), [Non-Competes in Arkansas](../non-compete/us/arkansas.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Arkansas](../checklists/non-compete/us/arkansas.md), [Non-Competes in Arkansas](../non-compete/us/arkansas.md)
 - link_to_source: <https://www.courtlistener.com/opinion/5283436/mercy-health-system-of-northwest-arkansas-inc-v-bicak/#:~:text=Unless%20the%20covenantee%20has%20a,would%20merely%20prohibit%20ordinary%20competition.>

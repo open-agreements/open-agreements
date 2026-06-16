@@ -10,7 +10,7 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/vermont-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/vermont'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/vermont'
 tags:
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `alternatives`, `sale-of-business`, `vermont-statutory-gates`
 - source_cards: `alternatives-foti-fuels-sale-consideration`, `foti-fuels-five-year-sale`, `foti-fuels-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — Vermont](../checklists/non-compete/vermont-review-checklist.md), [Non-Competes in Vermont](../non-compete/us/vermont.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Vermont](../checklists/non-compete/us/vermont.md), [Non-Competes in Vermont](../non-compete/us/vermont.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2646010/foti-fuels-inc-and-robert-a-foti-v-kurrle-corporation-payjack-llc-and/#:~:text=The%20asset%2Dpurchase%20agreement%20contained%20a,in%20five%20equal%20annual%20installments.>

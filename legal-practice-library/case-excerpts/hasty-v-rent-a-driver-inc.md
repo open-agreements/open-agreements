@@ -9,7 +9,7 @@ resource: 'https://www.courtlistener.com/opinion/2366827/hasty-v-rent-a-driver-i
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/tennessee-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/tennessee'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/tennessee'
 tags:
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `reasonableness-test`
 - source_cards: `hasty-no-ordinary-competition`, `hasty-ordinary-competition`
-- cited_by: [Non-Compete Agreement Review Checklist — Tennessee](../checklists/non-compete/tennessee-review-checklist.md), [Non-Competes in Tennessee](../non-compete/us/tennessee.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Tennessee](../checklists/non-compete/us/tennessee.md), [Non-Competes in Tennessee](../non-compete/us/tennessee.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2366827/hasty-v-rent-a-driver-inc/#:~:text=An%20employer%2C%20however%2C%20cannot%20by%20contract%20restrain%20ordinary%20competition.>
 
 ### hasty-v-rent-a-driver-inc-in-order-for-an-employer-to-17b29ca2 {#hasty-v-rent-a-driver-inc-in-order-for-an-employer-to-17b29ca2}
@@ -40,7 +40,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `reasonableness-test`, `tennessee-statutory-gates`
 - source_cards: `hasty-protectable-facts`, `hasty-special-facts`, `tn-gate-special-facts`
-- cited_by: [Non-Compete Agreement Review Checklist — Tennessee](../checklists/non-compete/tennessee-review-checklist.md), [Non-Competes in Tennessee](../non-compete/us/tennessee.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Tennessee](../checklists/non-compete/us/tennessee.md), [Non-Competes in Tennessee](../non-compete/us/tennessee.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2366827/hasty-v-rent-a-driver-inc/#:~:text=In%20order%20for%20an%20employer,over%20and%20above%20ordinary%20competition.>
 
 ### hasty-v-rent-a-driver-inc-they-are-not-however-invalid-per-7764029f {#hasty-v-rent-a-driver-inc-they-are-not-however-invalid-per-7764029f}
@@ -49,5 +49,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `enforceability`, `restrictive-covenants-each-independently-includable`
 - source_cards: `hasty-disfavored`, `hasty-disfavored-enforceable`
-- cited_by: [Non-Compete Agreement Review Checklist — Tennessee](../checklists/non-compete/tennessee-review-checklist.md), [Non-Competes in Tennessee](../non-compete/us/tennessee.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Tennessee](../checklists/non-compete/us/tennessee.md), [Non-Competes in Tennessee](../non-compete/us/tennessee.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2366827/hasty-v-rent-a-driver-inc/#:~:text=They%20are%20not%2C%20however%2C%20invalid,reasonable%20under%20the%20particular%20circumstances.>

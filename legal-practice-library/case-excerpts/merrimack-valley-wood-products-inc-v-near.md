@@ -10,8 +10,7 @@ resource: >-
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: >-
-      https://openagreements.org/legal/non-compete/new-hampshire-review-checklist
+    resource: 'https://openagreements.org/checklists/non-compete/us/new-hampshire'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/new-hampshire'
 tags:
@@ -33,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-reformation`, `severability-and-reformation`, `timing-and-execution-acknowledgements`, `tolling-during-breach`
 - source_cards: `near-good-faith-reformation`, `near-reformation-narrowing`, `nh-near-good-faith`, `nh-near-good-faith-reformation`, `nh-near-narrowing-remedy`
-- cited_by: [Non-Compete Agreement Review Checklist — New Hampshire](../checklists/non-compete/new-hampshire-review-checklist.md), [Non-Competes in New Hampshire](../non-compete/us/new-hampshire.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New Hampshire](../checklists/non-compete/us/new-hampshire.md), [Non-Competes in New Hampshire](../non-compete/us/new-hampshire.md)
 - link_to_source: <https://www.courtlistener.com/opinion/8093022/merrimack-valley-wood-products-inc-v-near/#:~:text=Courts%20have%20the%20power%20to,execution%20of%20the%20employment%20contract.>
 
 ### merrimack-valley-wood-products-inc-v-near-thus-the-restrictive-covenant-goes-far-589b7d04 {#merrimack-valley-wood-products-inc-v-near-thus-the-restrictive-covenant-goes-far-589b7d04}
@@ -42,5 +41,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `new-hampshire-statutory-gates`, `restrictive-covenants-each-independently-includable`, `scope-duration-geography`
 - source_cards: `near-customer-sphere`, `nh-near-customer-sphere`, `nh-near-goodwill-gate`, `nh-near-sphere-covenant`
-- cited_by: [Non-Compete Agreement Review Checklist — New Hampshire](../checklists/non-compete/new-hampshire-review-checklist.md), [Non-Competes in New Hampshire](../non-compete/us/new-hampshire.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New Hampshire](../checklists/non-compete/us/new-hampshire.md), [Non-Competes in New Hampshire](../non-compete/us/new-hampshire.md)
 - link_to_source: <https://www.courtlistener.com/opinion/8093022/merrimack-valley-wood-products-inc-v-near/#:~:text=Thus%2C%20the%20restrictive%20covenant%20goes,protect%20the%20plaintiffs%E2%80%99%20legitimate%20interests.>

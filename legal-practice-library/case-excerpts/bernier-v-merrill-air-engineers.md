@@ -9,7 +9,7 @@ resource: 'https://www.courtlistener.com/opinion/2361851/bernier-v-merrill-air-e
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/maine-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/maine'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/maine'
 tags:
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `alternatives`, `confidentiality-and-trade-secret-treatment`, `definitions`, `maine-statutory-gates`
 - source_cards: `bernier-confidential-not-general-skill`, `bernier-gate`, `bernier-general-skill-defs`, `bernier-skill-duration`
-- cited_by: [Non-Compete Agreement Review Checklist — Maine](../checklists/non-compete/maine-review-checklist.md), [Non-Competes in Maine](../non-compete/us/maine.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Maine](../checklists/non-compete/us/maine.md), [Non-Competes in Maine](../non-compete/us/maine.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2361851/bernier-v-merrill-air-engineers/#:~:text=The%20nondisclosure%20clause%20does%20not,during%20his%20employment%20with%20Merrill.>

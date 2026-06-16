@@ -116,7 +116,7 @@ Alabama gives courts a limited blue-pencil power. If the problem is an unreasona
 
 "If a contractually specified restraint is overly broad or unreasonable in its duration, a court may void the restraint in part and reform it to preserve the protectable interest or interests."[^ala-8-1-193-reform]
 
-But reformation has a hard limit. A court can fix an overbroad term inside a valid category; it cannot rewrite a covenant that never fit a statutory exception to begin with [^ala-8-1-193-void]. For a restraint that is not tethered to a protectable interest, or that falls outside the six categories, the statute authorizes a court to void it in its entirety rather than narrow it. For a clause-by-clause pass over a specific agreement against these rules, the [Alabama non-compete review checklist](/legal/non-compete/alabama-review-checklist) walks the full covenant suite item by item with each requirement's force level.
+But reformation has a hard limit. A court can fix an overbroad term inside a valid category; it cannot rewrite a covenant that never fit a statutory exception to begin with [^ala-8-1-193-void]. For a restraint that is not tethered to a protectable interest, or that falls outside the six categories, the statute authorizes a court to void it in its entirety rather than narrow it. For a clause-by-clause pass over a specific agreement against these rules, the [Alabama non-compete review checklist](/checklists/non-compete/us/alabama) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**

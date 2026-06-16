@@ -10,7 +10,7 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/mississippi-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/mississippi'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/mississippi'
 tags:
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `parties-and-cover-term-identification`, `sale-of-business`
 - source_cards: `ms-wiggins-parties`, `wiggins-bound-after-buyout`
-- cited_by: [Non-Compete Agreement Review Checklist — Mississippi](../checklists/non-compete/mississippi-review-checklist.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Mississippi](../checklists/non-compete/us/mississippi.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10840985/robert-c-wiggins-v-southern-securities-group-llc-and-brandi-hoover/#:~:text=Thus%2C%20based%20on%20the%20evidence,enjoined%20from%20competing%20with%20SSG>

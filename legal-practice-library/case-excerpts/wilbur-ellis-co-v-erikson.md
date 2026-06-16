@@ -10,7 +10,7 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/south-dakota-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/south-dakota'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/south-dakota'
 tags:
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `survival`, `survival-drafting`
 - source_cards: `sd-wilbur-surv`, `wilbur-ellis-no-survival`
-- cited_by: [Non-Compete Agreement Review Checklist — South Dakota](../checklists/non-compete/south-dakota-review-checklist.md), [Non-Competes in South Dakota](../non-compete/us/south-dakota.md)
+- cited_by: [Non-Compete Agreement Review Checklist — South Dakota](../checklists/non-compete/us/south-dakota.md), [Non-Competes in South Dakota](../non-compete/us/south-dakota.md)
 - link_to_source: <https://www.courtlistener.com/opinion/9511796/wilbur-ellis-company-v-kevin-erikson/#:~:text=Here%2C%20however%2C%20Erikson%20and%20Wilbur%2DEllis,as%20did%20the%20Restrictive%20Covenants.>
 
 ### wilbur-ellis-co-v-erikson-this-gives-wilbur-ellis-time-to-00092e9d {#wilbur-ellis-co-v-erikson-this-gives-wilbur-ellis-time-to-00092e9d}
@@ -41,5 +41,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `survival`, `survival-drafting`
 - source_cards: `sd-wilbur-context-surv`, `wilbur-ellis-statutory-context`
-- cited_by: [Non-Compete Agreement Review Checklist — South Dakota](../checklists/non-compete/south-dakota-review-checklist.md), [Non-Competes in South Dakota](../non-compete/us/south-dakota.md)
+- cited_by: [Non-Compete Agreement Review Checklist — South Dakota](../checklists/non-compete/us/south-dakota.md), [Non-Competes in South Dakota](../non-compete/us/south-dakota.md)
 - link_to_source: <https://www.courtlistener.com/opinion/9511796/wilbur-ellis-company-v-kevin-erikson/#:~:text=This%20gives%20Wilbur%2DEllis%20time%20to,leave%20during%20the%20specified%20duration.>

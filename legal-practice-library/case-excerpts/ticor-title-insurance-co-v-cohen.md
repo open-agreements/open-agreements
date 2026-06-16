@@ -10,7 +10,7 @@ resource: >-
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/new-york-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/new-york'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/new-york'
 tags:
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `parties-and-cover-term-identification`, `protectable-interests`
 - source_cards: `ticor-case-by-case`, `ticor-role-inquiry`
-- cited_by: [Non-Compete Agreement Review Checklist — New York](../checklists/non-compete/new-york-review-checklist.md), [Non-Competes in New York](../non-compete/us/new-york.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New York](../checklists/non-compete/us/new-york.md), [Non-Competes in New York](../non-compete/us/new-york.md)
 - link_to_source: <https://www.courtlistener.com/opinion/763095/ticor-title-insurance-co-chicago-title-insurance-co-v-kenneth-c-cohen/#:~:text=Instead%2C%20now%20the%20inquiry%20is,be%20on%20a%20case%2Dby%2Dcase%20basis.>
 
 ### ticor-title-insurance-co-v-cohen-services-that-are-not-simply-of-f82ad78e {#ticor-title-insurance-co-v-cohen-services-that-are-not-simply-of-f82ad78e}
@@ -41,5 +41,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `protectable-interests`, `remedies`
 - source_cards: `ticor-injunctive-relief`, `ticor-unique-services`
-- cited_by: [Non-Compete Agreement Review Checklist — New York](../checklists/non-compete/new-york-review-checklist.md), [Non-Competes in New York](../non-compete/us/new-york.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New York](../checklists/non-compete/us/new-york.md), [Non-Competes in New York](../non-compete/us/new-york.md)
 - link_to_source: <https://www.courtlistener.com/opinion/763095/ticor-title-insurance-co-chicago-title-insurance-co-v-kenneth-c-cohen/#:~:text=Services%20that%20are%20not%20simply,an%20employer%20to%20injunctive%20relief.>
