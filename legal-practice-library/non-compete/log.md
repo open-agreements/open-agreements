@@ -1,6 +1,7 @@
 # Non Compete Update Log
 
 ## 2026-06-16
+* **Update**: feat(practice-guides): Australia national non-compete page (closes #805) (#817) ([1b0f887](https://github.com/UseJunior/legal-explainer/commit/1b0f887beb34af6e661f8f94c9e85fed0c30b889))
 * **Update**: feat(ia): checklists as a top-level product line — country-first /checklists (closes #803) (#804) ([2602c18](https://github.com/UseJunior/legal-explainer/commit/2602c18434aef56cbc170c8061d60c29c0c41954))
 
 ## 2026-06-15
