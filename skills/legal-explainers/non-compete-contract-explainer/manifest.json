@@ -1,7 +1,7 @@
 {
   "topic": "non-compete",
   "snapshotAsOf": "2026-06-16",
-  "sourceCommit": "51570fa2268964242590d5273d2ec04805235803",
+  "sourceCommit": "1b0f887beb34af6e661f8f94c9e85fed0c30b889",
   "canonicalBase": "https://openagreements.org/practice-guides/non-compete",
   "license": "CC BY 4.0",
   "jurisdictions": [
@@ -52,6 +52,16 @@
       "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/us/arkansas",
       "file": "content/arkansas.md",
       "lastReviewed": "2026-06-02",
+      "snapshotAsOf": "2026-06-16",
+      "stale": false
+    },
+    {
+      "jurisdiction": "Australia",
+      "slug": "au",
+      "countryCode": "AU",
+      "canonicalUrl": "https://openagreements.org/practice-guides/non-compete/au",
+      "file": "content/au.md",
+      "lastReviewed": "2026-06-16",
       "snapshotAsOf": "2026-06-16",
       "stale": false
     },

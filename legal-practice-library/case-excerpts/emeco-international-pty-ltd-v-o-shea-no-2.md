@@ -3,11 +3,13 @@ type: Case Excerpt
 title: 'Emeco International Pty Ltd v O''Shea [No 2]'
 description: >-
   Emeco International Pty Ltd v O'Shea [No 2] [2012] WASC 348 (Edelman J). —
-  quoted in 1 document(s).
+  quoted in 2 document(s).
 citation: 'Emeco International Pty Ltd v O''Shea [No 2] [2012] WASC 348 (Edelman J).'
 resource: 'https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASC/2012/348.html'
-timestamp: '2026-06-10'
+timestamp: '2026-06-16'
 document_references:
+  - type: Practice Note
+    resource: 'https://openagreements.org/practice-guides/non-compete/au'
   - type: Practice Note
     resource: >-
       https://openagreements.org/practice-guides/non-compete/au/western-australia
@@ -20,7 +22,7 @@ tags:
 
 *Emeco International Pty Ltd v O'Shea [No 2] [2012] WASC 348 (Edelman J).*
 
-Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -66,14 +68,14 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `cascading-clauses`, `court-narrowing`
 - source_cards: `emeco-client-definition`, `emeco-definition-not-severable`
-- cited_by: [Non-Compete Enforceability in Western Australia](../non-compete/au/western-australia.md)
+- cited_by: [Non-Competes in Australia](../non-compete/au.md), [Non-Compete Enforceability in Western Australia](../non-compete/au/western-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASC/2012/348.html>
 
 ### emeco-international-pty-ltd-v-o-shea-no-2-to-blue-pencil-part-of-the-9e231169 {#emeco-international-pty-ltd-v-o-shea-no-2-to-blue-pencil-part-of-the-9e231169}
 
 > To 'blue pencil' part of the definition of Client would be to rewrite each of those restraints.
 
-- supports: `court-narrowing`
+- supports: `cascading-clauses`, `court-narrowing`
 - source_cards: `emeco-rewrite-restraints`
-- cited_by: [Non-Compete Enforceability in Western Australia](../non-compete/au/western-australia.md)
+- cited_by: [Non-Competes in Australia](../non-compete/au.md), [Non-Compete Enforceability in Western Australia](../non-compete/au/western-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASC/2012/348.html>

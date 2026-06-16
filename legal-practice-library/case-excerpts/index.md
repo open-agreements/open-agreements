@@ -56,7 +56,7 @@
 * [Beilfuss v. Huffy Corp.](beilfuss-v-huffy-corp.md) - Beilfuss v. Huffy Corp., 2004 WI App 118. — quoted in 2 document(s).
 * [Belt Power, LLC v. Reed](belt-power-llc-v-reed.md) - Belt Power, LLC v. Reed, 354 Ga. App. 289 (2020). — quoted in 2 document(s).
 * [Benchmark Medical Holdings, Inc. v. Barnes](benchmark-medical-holdings-inc-v-barnes.md) - Benchmark Med. Holdings, Inc. v. Barnes, 328 F. Supp. 2d 1236 (M.D. Ala. 2004). — quoted in 2 document(s).
-* [Bend-Tech Group (A Firm) v Beek](bend-tech-group-a-firm-v-beek.md) - Bend-Tech Group (A Firm) v Beek [2015] WASC 491 (Pritchard J). — quoted in 1 document(s).
+* [Bend-Tech Group (A Firm) v Beek](bend-tech-group-a-firm-v-beek.md) - Bend-Tech Group (A Firm) v Beek [2015] WASC 491 (Pritchard J). — quoted in 2 document(s).
 * [Bendinger v. Marshalltown Trowel Co.](bendinger-v-marshalltown-trowel-co.md) - Bendinger v. Marshalltown Trowel Co., 338 Ark. 410, 994 S.W.2d 468 (1999). — quoted in 2 document(s).
 * [Bennett v. Storz Broadcasting Co.](bennett-v-storz-broadcasting-co.md) - Bennett v. Storz Broadcasting Co., 270 Minn. 525, 134 N.W.2d 892 (1965). — quoted in 2 document(s).
 * [Berkadia Real Estate Advisors LLC v. Wadlund](berkadia-real-estate-advisors-llc-v-wadlund.md) - Berkadia Real Estate Advisors LLC v. Wadlund, No. CV-22-00049-TUC-CKJ, 2024 WL 4125533 (D. Ariz. June 27, 2024). — quoted in 2 document(s).
@@ -154,7 +154,7 @@
 * [Ehlers v. Iowa Warehouse Co.](ehlers-v-iowa-warehouse-co.md) - Ehlers v. Iowa Warehouse Co., 188 N.W.2d 368 (Iowa 1971). — quoted in 2 document(s).
 * [Ellis v. James V. Hurson Associates, Inc.](ellis-v-james-v-hurson-associates-inc.md) - Ellis v. James V. Hurson Assocs., Inc., 565 A.2d 615 (D.C. 1989). — quoted in 2 document(s).
 * [EMC Corp. v. Arturi](emc-corp-v-arturi.md) - EMC Corp. v. Arturi, 655 F.3d 75 (1st Cir. 2011). — quoted in 5 document(s).
-* [Emeco International Pty Ltd v O'Shea [No 2]](emeco-international-pty-ltd-v-o-shea-no-2.md) - Emeco International Pty Ltd v O'Shea [No 2] [2012] WASC 348 (Edelman J). — quoted in 1 document(s).
+* [Emeco International Pty Ltd v O'Shea [No 2]](emeco-international-pty-ltd-v-o-shea-no-2.md) - Emeco International Pty Ltd v O'Shea [No 2] [2012] WASC 348 (Edelman J). — quoted in 2 document(s).
 * [Emerick v. Cardiac Study Center, Inc.](emerick-v-cardiac-study-center-inc.md) - Emerick v. Cardiac Study Ctr., Inc., 189 Wn. App. 711 (2015). — quoted in 2 document(s).
 * [Empiregas, Inc. of Kosciusko v. Bain](empiregas-inc-of-kosciusko-v-bain.md) - Empiregas, Inc. of Kosciusko v. Bain, 599 So. 2d 971 (Miss. 1992). — quoted in 2 document(s).
 * [Employment Staffing Group, Inc. v. Little](employment-staffing-group-inc-v-little.md) - Emp't Staffing Grp., Inc. v. Little, 243 N.C. App. 266 (2015). — quoted in 2 document(s).
@@ -196,7 +196,7 @@
 * [Groff v. DeJoy, 600 U.S. 447 (2023)](groff-v-dejoy-600-u-s-447-2023.md) - Groff v. DeJoy, 600 U.S. 447 (2023). — quoted in 2 document(s).
 * [Gujarat Bottling Co. Ltd. v. Coca Cola Co.](gujarat-bottling-co-ltd-v-coca-cola-co.md) - Gujarat Bottling Co. Ltd. v. Coca Cola Co., (1995) 5 SCC 545. — quoted in 1 document(s).
 * [H&R Block Eastern Enters., Inc. v. Swenson](h-r-block-eastern-enters-inc-v-swenson.md) - H&R Block Eastern Enters., Inc. v. Swenson, 2008 WI App 3. — quoted in 2 document(s).
-* [Hanna v OAMPS Insurance Brokers Ltd](hanna-v-oamps-insurance-brokers-ltd.md) - Hanna v OAMPS Insurance Brokers Ltd [2010] NSWCA 267. — quoted in 1 document(s).
+* [Hanna v OAMPS Insurance Brokers Ltd](hanna-v-oamps-insurance-brokers-ltd.md) - Hanna v OAMPS Insurance Brokers Ltd [2010] NSWCA 267. — quoted in 2 document(s).
 * [Hartman v. W.H. Odell & Associates, Inc.](hartman-v-w-h-odell-associates-inc.md) - Hartman v. W.H. Odell & Assocs., 117 N.C. App. 307 (1994). — quoted in 2 document(s).
 * [Hassler v. Circle C Resources](hassler-v-circle-c-resources.md) - Hassler v. Circle C Resources, 2022 WY 28, 505 P.3d 169. — quoted in 3 document(s).
 * [Hasty v. Rent-A-Driver, Inc.](hasty-v-rent-a-driver-inc.md) - Hasty v. Rent-A-Driver, Inc., 671 S.W.2d 471, 472 (Tenn. 1984). — quoted in 2 document(s).
@@ -249,7 +249,7 @@
 * [JumboSack Corp. v. Buyck](jumbosack-corp-v-buyck.md) - JumboSack Corp. v. Buyck, 407 S.W.3d 51 (Mo. App. E.D. 2013). — quoted in 2 document(s).
 * [Junkermier, Clark, Campanella, Stevens, P.C. v. Alborn, Uithoven, Riekenberg, P.C.](junkermier-clark-campanella-stevens-p-c-v-alborn-uithoven-riekenberg-p-c.md) - Junkermier, Clark, Campanella, Stevens, P.C. v. Alborn, Uithoven, Riekenberg, P.C., 2016 MT 218, 384 Mont. 464, 380 P.3d 747. — quoted in 2 document(s).
 * [Junkermier, Clark, Campanella, Stevens, P.C. v. Alborn](junkermier-clark-campanella-stevens-p-c-v-alborn.md) - Junkermier, Clark, Campanella, Stevens, P.C. v. Alborn, 2020 MT 179. — quoted in 2 document(s).
-* [Just Group Ltd v Peck](just-group-ltd-v-peck.md) - Just Group Ltd v Peck [2016] VSCA 334 (the Court). — quoted in 1 document(s).
+* [Just Group Ltd v Peck](just-group-ltd-v-peck.md) - Just Group Ltd v Peck [2016] VSCA 334 (the Court). — quoted in 2 document(s).
 * [Kallok v. Medtronic, Inc.](kallok-v-medtronic-inc.md) - Kallok v. Medtronic, Inc., 573 N.W.2d 356 (Minn. 1998). — quoted in 2 document(s).
 * [Kegel v. Tillotson](kegel-v-tillotson.md) - Kegel v. Tillotson, 297 S.W.3d 908 (Ky. App. 2009). — quoted in 2 document(s).
 * [Kennedy v. Metropolitan Life Insurance Co.](kennedy-v-metropolitan-life-insurance-co.md) - Kennedy v. Metropolitan Life Ins. Co., 759 So. 2d 362 (Miss. 2000). — quoted in 2 document(s).
@@ -262,7 +262,7 @@
 * [Leaana v. Laban](leaana-v-laban.md) - Leaana v. Laban, 12 A.S.R.2d 93 (Land & Titles Div. 1989). — quoted in 1 document(s).
 * [Light v. Centel Cellular Co. of Texas](light-v-centel-cellular-co-of-texas.md) - Light v. Centel Cellular Co. of Tex., 883 S.W.2d 642 (Tex. 1994). — quoted in 2 document(s).
 * [Lindgren v. Betham](lindgren-v-betham.md) - Lindgren v. Betham, 20 A.S.R.2d 98 (App. Div. 1992). — quoted in 1 document(s).
-* [Lindner v Murdock's Garage](lindner-v-murdock-s-garage.md) - Lindner v Murdock's Garage [1950] HCA 48; (1950) 83 CLR 628 (per McTiernan J). — quoted in 8 document(s).
+* [Lindner v Murdock's Garage](lindner-v-murdock-s-garage.md) - Lindner v Murdock's Garage [1950] HCA 48; (1950) 83 CLR 628 (per Kitto J). — quoted in 9 document(s).
 * [LKQ Corp. v. Rutledge](lkq-corp-v-rutledge.md) - LKQ Corp. v. Rutledge, No. 110, 2024 (Del. Dec. 18, 2024). — quoted in 2 document(s).
 * [Loral Corp. v. Moyes](loral-corp-v-moyes.md) - Loral Corp. v. Moyes, 174 Cal. App. 3d 268 (1985). — quoted in 2 document(s).
 * [Lord v. Lord](lord-v-lord.md) - Lord v. Lord, 454 A.2d 830, 834 (Me. 1983). — quoted in 2 document(s).
@@ -440,7 +440,7 @@
 * [Star Direct, Inc. v. Dal Pra](star-direct-inc-v-dal-pra.md) - Star Direct, Inc. v. Dal Pra, 2009 WI 76, 319 Wis. 2d 274, 767 N.W.2d 898. — quoted in 2 document(s).
 * [State ex rel. Industrial Commission v. Sky Down Skydiving, LLC](state-ex-rel-industrial-commission-v-sky-down-skydiving-llc.md) - Indus. Comm'n v. Sky Down Skydiving, LLC, 166 Idaho 564, 462 P.3d 92 (2020). — quoted in 2 document(s).
 * [State ex rel. Raoul v. Elite Staffing, Inc.](state-ex-rel-raoul-v-elite-staffing-inc.md) - State ex rel. Raoul v. Elite Staffing, Inc., 2024 IL 128763. — quoted in 1 document(s).
-* [Steadfast ICT Security Pty Ltd v Peak](steadfast-ict-security-pty-ltd-v-peak.md) - Steadfast ICT Security Pty Ltd v Peak [2021] ACTSC 199 (Mossop J). — quoted in 1 document(s).
+* [Steadfast ICT Security Pty Ltd v Peak](steadfast-ict-security-pty-ltd-v-peak.md) - Steadfast ICT Security Pty Ltd v Peak [2021] ACTSC 199 (Mossop J), citing Emeco International Pty Ltd v O'Shea [No 2] [2012] WASC 348; 225 IR 423. — quoted in 2 document(s).
 * [Steiner v. American Friends of Lubavitch (Chabad)](steiner-v-american-friends-of-lubavitch-chabad.md) - Steiner v. Am. Friends of Lubavitch (Chabad), 177 A.3d 1246 (D.C. 2018). — quoted in 3 document(s).
 * [Stonhard, Inc. v. Carolina Flooring Specialists, Inc.](stonhard-inc-v-carolina-flooring-specialists-inc.md) - Stonhard, Inc. v. Carolina Flooring Specialists, Inc., 366 S.C. 156, 621 S.E.2d 352 (2005). — quoted in 2 document(s).
 * [Stratech Systems Ltd v Nyam Chiu Shin](stratech-systems-ltd-v-nyam-chiu-shin.md) - Stratech Systems Ltd v Nyam Chiu Shin (alias Yan Qiuxin) [2005] SGCA 17; [2005] 2 SLR(R) 579. — quoted in 1 document(s).
@@ -511,7 +511,7 @@
 * [Wolfe Electric, Inc. v. Duckworth](wolfe-electric-inc-v-duckworth.md) - Wolfe Electric, Inc. v. Duckworth, 293 Kan. 375, 266 P.3d 516 (2011). — quoted in 2 document(s).
 * [Wood v. Acordia of West Virginia, Inc.](wood-v-acordia-of-west-virginia-inc.md) - Wood v. Acordia of W. Va., Inc., 217 W. Va. 406, 618 S.E.2d 415 (2005). — quoted in 2 document(s).
 * [Wood v. May](wood-v-may.md) - Wood v. May, 73 Wn.2d 307 (1968). — quoted in 2 document(s).
-* [Woolworths Ltd v Olson](woolworths-ltd-v-olson.md) - Woolworths Ltd v Olson [2004] NSWCA 372. — quoted in 1 document(s).
+* [Woolworths Ltd v Olson](woolworths-ltd-v-olson.md) - Woolworths Ltd v Olson [2004] NSWCA 372. — quoted in 2 document(s).
 * [Wrigg v. Junkermier, Clark, Campanella, Stevens, P.C.](wrigg-v-junkermier-clark-campanella-stevens-p-c.md) - Wrigg v. Junkermier, Clark, Campanella, Stevens, P.C., 2011 MT 290, 362 Mont. 496, 265 P.3d 646. — quoted in 2 document(s).
 * [Yusen Air & Sea Service Phils., Inc. v. Villamor](yusen-air-sea-service-phils-inc-v-villamor.md) - Yusen Air & Sea Service Phils., Inc. v. Villamor, G.R. No. 154060, Aug. 16, 2005. — quoted in 1 document(s).
 * [Zellner v. Stephen D. Conrad, M.D., P.C.](zellner-v-stephen-d-conrad-m-d-p-c.md) - Zellner v. Stephen D. Conrad, M.D., P.C., 183 A.D.2d 250 (2d Dep't 1992). — quoted in 2 document(s).
