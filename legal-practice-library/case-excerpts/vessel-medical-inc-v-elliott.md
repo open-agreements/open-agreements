@@ -16,7 +16,7 @@ document_references:
     resource: >-
       https://openagreements.org/legal/non-compete/south-carolina-review-checklist
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/south-carolina'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/south-carolina'
 tags:
   - case-law
   - non-compete
@@ -36,5 +36,5 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `customer-non-solicitation`, `definitions`, `restrictive-covenants-each-independently-includable`, `south-carolina-statutory-gates`
 - source_cards: `sc-vessel-contact-def`, `sc-vessel-cov`, `sc-vessel-gate`, `vessel-personal-contact`
-- cited_by: [Non-Compete Agreement Review Checklist](../non-compete/review-checklist.md), [Non-Compete Agreement Review Checklist — South Carolina](../non-compete/south-carolina-review-checklist.md), [Non-Competes in South Carolina](../non-compete/south-carolina.md)
+- cited_by: [Non-Compete Agreement Review Checklist](../checklists/non-compete/review-checklist.md), [Non-Compete Agreement Review Checklist — South Carolina](../checklists/non-compete/south-carolina-review-checklist.md), [Non-Competes in South Carolina](../non-compete/us/south-carolina.md)
 - link_to_source: <https://www.courtlistener.com/docket/5358739/vessel-medical-inc-v-elliott/#:~:text=Here%2C%20Elliott%20is%20restricted%20from,covenants%20have%20withstood%20overbreadth%20challenges.>

@@ -4,7 +4,7 @@ slug: wyoming
 countryCode: US
 snapshotAsOf: "2026-06-16"
 lastReviewed: "2026-04-14"
-canonicalUrl: https://openagreements.org/legal/non-compete/wyoming
+canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/wyoming
 license: CC BY 4.0
 stale: false
 ---
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/wyoming · **Snapshot as of:** 2026-06-16 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/wyoming · **Snapshot as of:** 2026-06-16 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Wyoming[^about]
 
@@ -63,7 +63,7 @@ Wyoming cases also strictly construe non-competes[^brown-strict-construction] an
 
 **Short answer.** Likely yes under the dominant 2025 law-firm commentary, but that is still an interpretation rather than a Wyoming appellate holding.
 
-The reason is the statutory phrase "any person"[^wyo-1-23-any-person]. State-specific law-firm commentary reads that wording broadly enough to reach independent contractors, not only W-2 employees [^littler-any-status][^faegre-includes-contractors][^fisher-colorado-any-person]. That same broad phrasing closely mirrors Colorado's void-for-compensation rule, which is why commentary points to Colorado as the analogue. *See our companion note on [whether Colorado employee non-competes are enforceable](/legal/non-compete/colorado#enforceability).*
+The reason is the statutory phrase "any person"[^wyo-1-23-any-person]. State-specific law-firm commentary reads that wording broadly enough to reach independent contractors, not only W-2 employees [^littler-any-status][^faegre-includes-contractors][^fisher-colorado-any-person]. That same broad phrasing closely mirrors Colorado's void-for-compensation rule, which is why commentary points to Colorado as the analogue. *See our companion note on [whether Colorado employee non-competes are enforceable](/practice-guides/non-compete/us/colorado#enforceability).*
 
 That is a strong drafting assumption for Wyoming templates, but a careful note should still say that Wyoming courts have not yet issued a controlling appellate decision on the contractor question.
 

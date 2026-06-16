@@ -9,7 +9,8 @@ resource: 'https://scocal.stanford.edu/opinion/schatz-v-allen-matkins-etc-33089'
 timestamp: '2026-04-20'
 document_references:
   - type: Practice Note
-    resource: 'https://openagreements.org/legal/outside-counsel/fee-dispute-on-transition'
+    resource: >-
+      https://openagreements.org/practice-guides/outside-counsel/fee-dispute-on-transition
 tags:
   - case-law
   - outside-counsel

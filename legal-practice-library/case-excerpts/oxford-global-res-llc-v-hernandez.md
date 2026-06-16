@@ -13,7 +13,7 @@ document_references:
     resource: >-
       https://openagreements.org/legal/non-compete/massachusetts-review-checklist
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/massachusetts'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/massachusetts'
 tags:
   - case-law
   - non-compete
@@ -33,5 +33,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `choice-of-law`, `governing-law-venue-dispute-process`
 - source_cards: `oxford-choice-of-law`, `oxford-reverse-direction`
-- cited_by: [Non-Compete Agreement Review Checklist — Massachusetts](../non-compete/massachusetts-review-checklist.md), [Non-Competes in Massachusetts](../non-compete/massachusetts.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Massachusetts](../checklists/non-compete/massachusetts-review-checklist.md), [Non-Competes in Massachusetts](../non-compete/us/massachusetts.md)
 - link_to_source: <https://www.courtlistener.com/opinion/7175264/oxford-global-res-llc-v-hernandez/#:~:text=We%20conclude%20that%20the%20Massachusetts,open%20competition%20and%20employee%20mobility.>

@@ -9,7 +9,7 @@ resource: 'https://www.courtlistener.com/opinion/5061403/depuy-orthopaedics-inc-
 timestamp: '2026-06-03'
 document_references:
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/florida'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/florida'
 tags:
   - case-law
   - non-compete
@@ -29,5 +29,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `injunctions-fees`
 - source_cards: `q11-depuy-injunction`
-- cited_by: [Non-Competes in Florida](../non-compete/florida.md)
+- cited_by: [Non-Competes in Florida](../non-compete/us/florida.md)
 - link_to_source: <https://www.courtlistener.com/opinion/5061403/depuy-orthopaedics-inc-v-waxman/#:~:text=we%20reverse%20the%20trial%20court%E2%80%99s,a%20temporary%20injunction%20against%20Appellees>

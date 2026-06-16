@@ -4,7 +4,8 @@ title: Trade-secret leakage into public AI models
 description: >-
   How public and enterprise AI use affects trade-secret protection, including
   vendor terms, policies, containment steps, and model memorization.
-resource: 'https://openagreements.org/legal/ai-vendors/trade-secret-leakage-containment'
+resource: >-
+  https://openagreements.org/practice-guides/ai-vendors/trade-secret-leakage-containment
 timestamp: '2026-04-20'
 tags:
   - ai-vendors

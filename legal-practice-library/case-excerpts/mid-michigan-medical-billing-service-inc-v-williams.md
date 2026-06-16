@@ -14,7 +14,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/michigan-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/michigan'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/michigan'
 tags:
   - case-law
   - non-compete
@@ -34,7 +34,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `duration-geography`, `michigan-statutory-gates`, `restrictive-covenants-each-independently-includable`
 - source_cards: `mi-midmichigan-covenants`, `mi-midmichigan-defs`, `mi-midmichigan-gate`, `mid-michigan-unlimited`
-- cited_by: [Non-Compete Agreement Review Checklist — Michigan](../non-compete/michigan-review-checklist.md), [Non-Competes in Michigan](../non-compete/michigan.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Michigan](../checklists/non-compete/michigan-review-checklist.md), [Non-Competes in Michigan](../non-compete/us/michigan.md)
 - link_to_source: <https://www.courts.michigan.gov/siteassets/case-documents/uploads/opinions/final/coa/20160218_c323890_37_323890.opn.pdf>
 
 ### mid-michigan-medical-billing-service-inc-v-williams-if-the-terms-of-a-noncompetition-32247b2c {#mid-michigan-medical-billing-service-inc-v-williams-if-the-terms-of-a-noncompetition-32247b2c}
@@ -43,5 +43,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `mi-midmichigan-narrowing`, `mid-michigan-limited`
-- cited_by: [Non-Compete Agreement Review Checklist — Michigan](../non-compete/michigan-review-checklist.md), [Non-Competes in Michigan](../non-compete/michigan.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Michigan](../checklists/non-compete/michigan-review-checklist.md), [Non-Competes in Michigan](../non-compete/us/michigan.md)
 - link_to_source: <https://www.courts.michigan.gov/siteassets/case-documents/uploads/opinions/final/coa/20160218_c323890_37_323890.opn.pdf>

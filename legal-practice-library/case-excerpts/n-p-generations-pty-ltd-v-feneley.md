@@ -11,7 +11,7 @@ resource: 'https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASC/2001/185.
 timestamp: '2026-06-10'
 document_references:
   - type: Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/australia-south-australia'
+    resource: 'https://openagreements.org/practice-guides/non-compete/au/south-australia'
 tags:
   - case-law
   - non-compete
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `legitimate-interest`
 - source_cards: `feneley-diary`
-- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/australia-south-australia.md)
+- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/au/south-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASC/2001/185.html>
 
 ### n-p-generations-pty-ltd-v-feneley-given-that-the-address-book-was-353a2d00 {#n-p-generations-pty-ltd-v-feneley-given-that-the-address-book-was-353a2d00}
@@ -40,5 +40,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `legitimate-interest`
 - source_cards: `feneley-address-book`
-- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/australia-south-australia.md)
+- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/au/south-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASC/2001/185.html>

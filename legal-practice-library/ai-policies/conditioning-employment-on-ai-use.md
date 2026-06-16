@@ -4,7 +4,8 @@ title: When companies make AI use a condition of employment
 description: >-
   When employers can make AI use a condition of employment, and how ADA
   accommodation, discrimination, state AI laws, and monitoring rules apply.
-resource: 'https://openagreements.org/legal/ai-policies/conditioning-employment-on-ai-use'
+resource: >-
+  https://openagreements.org/practice-guides/ai-policies/conditioning-employment-on-ai-use
 timestamp: '2026-04-20'
 tags:
   - ai-policies

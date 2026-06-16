@@ -11,7 +11,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/ohio-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/ohio'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/ohio'
 tags:
   - case-law
   - non-compete
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `industry-specific-limits`, `physician-specific-notices-and-carve-outs`
 - source_cards: `oh-williams-public-injury`, `williams-public-injury`
-- cited_by: [Non-Compete Agreement Review Checklist — Ohio](../non-compete/ohio-review-checklist.md), [Non-Competes in Ohio](../non-compete/ohio.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Ohio](../checklists/non-compete/ohio-review-checklist.md), [Non-Competes in Ohio](../non-compete/us/ohio.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4007467/williams-v-hobbs/#:~:text=The%20covenant%20imposes%20an%20undue,is%20injurious%20to%20the%20public.>

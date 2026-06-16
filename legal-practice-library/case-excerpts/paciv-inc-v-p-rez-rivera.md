@@ -7,7 +7,7 @@ resource: 'https://www.lexjuris.com/LEXJURIS/tspr2003/lexj2003084.htm'
 timestamp: '2026-06-02'
 document_references:
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/puerto-rico'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/puerto-rico'
 tags:
   - case-law
   - non-compete
@@ -27,5 +27,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`
 - source_cards: `paciv-nullity`
-- cited_by: [Non-Competes in Puerto Rico](../non-compete/puerto-rico.md)
+- cited_by: [Non-Competes in Puerto Rico](../non-compete/us/puerto-rico.md)
 - link_to_source: <https://www.lexjuris.com/LEXJURIS/tspr2003/lexj2003084.htm>

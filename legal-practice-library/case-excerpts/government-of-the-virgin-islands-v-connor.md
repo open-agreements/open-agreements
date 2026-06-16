@@ -10,7 +10,7 @@ resource: >-
 timestamp: '2026-06-03'
 document_references:
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/us-virgin-islands'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/virgin-islands'
 tags:
   - case-law
   - non-compete
@@ -30,5 +30,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `common-law-source`
 - source_cards: `connor-factors`
-- cited_by: [Non-Competes in the U.S. Virgin Islands](../non-compete/us-virgin-islands.md)
+- cited_by: [Non-Competes in the U.S. Virgin Islands](../non-compete/us/virgin-islands.md)
 - link_to_source: <https://cdnsm5-hosted.civiclive.com/UserFiles/Servers/Server_12810860/File/Opinions/Published/2014/File16.pdf>

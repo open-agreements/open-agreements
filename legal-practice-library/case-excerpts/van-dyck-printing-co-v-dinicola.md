@@ -11,7 +11,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/connecticut-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/connecticut'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/connecticut'
 tags:
   - case-law
   - non-compete
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `duration-geography`
 - source_cards: `van-dyck-time-geography-intertwined`
-- cited_by: [Non-Competes in Connecticut](../non-compete/connecticut.md)
+- cited_by: [Non-Competes in Connecticut](../non-compete/us/connecticut.md)
 - link_to_source: <https://www.courtlistener.com/opinion/3334840/van-dyck-printing-co-v-dinicola/#:~:text=A%20restriction%20covering%20a%20large,reasonable%20for%20a%20longer%20time.>
 
 ### van-dyck-printing-co-v-dinicola-because-the-plaintiffs-claim-concerning-efa920e9 {#van-dyck-printing-co-v-dinicola-because-the-plaintiffs-claim-concerning-efa920e9}
@@ -40,5 +40,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `tolling-during-breach`, `tolling-extension`
 - source_cards: `van-dyck-injunction-moot-after-period`, `van-dyck-moot`
-- cited_by: [Non-Compete Agreement Review Checklist — Connecticut](../non-compete/connecticut-review-checklist.md), [Non-Competes in Connecticut](../non-compete/connecticut.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Connecticut](../checklists/non-compete/connecticut-review-checklist.md), [Non-Competes in Connecticut](../non-compete/us/connecticut.md)
 - link_to_source: <https://www.courtlistener.com/opinion/3334840/van-dyck-printing-co-v-dinicola/#:~:text=Because%20the%20plaintiffs%20claim%20concerning,injunctive%20relief%20has%20become%20moot.>

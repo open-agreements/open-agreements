@@ -11,10 +11,10 @@ resource: >-
   https://www.courtlistener.com/opinion/4769672/tls-mgmt-and-mktg-ser-llc-v-rodriguez-toledo/
 timestamp: '2026-06-11'
 document_references:
-  - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/puerto-rico'
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/review-checklist'
+  - type: State Law Practice Note
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/puerto-rico'
 tags:
   - case-law
   - non-compete
@@ -34,7 +34,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`
 - source_cards: `overbroad-nda-de-facto-noncompete`
-- cited_by: [Non-Compete Agreement Review Checklist](../non-compete/review-checklist.md)
+- cited_by: [Non-Compete Agreement Review Checklist](../checklists/non-compete/review-checklist.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4769672/tls-mgmt-and-mktg-ser-llc-v-rodriguez-toledo/#:~:text=But%20overly%20broad%20nondisclosure%20agreements%2C,from%20competing%20with%20the%20plaintiff.>
 
 ### tls-management-marketing-services-llc-v-rodr-guez-toledo-we-decline-to-rewrite-the-nondisclosure-69c0cea9 {#tls-management-marketing-services-llc-v-rodr-guez-toledo-we-decline-to-rewrite-the-nondisclosure-69c0cea9}
@@ -43,5 +43,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `other-covenants`
 - source_cards: `tls-decline`, `tls-decline-2`
-- cited_by: [Non-Competes in Puerto Rico](../non-compete/puerto-rico.md)
+- cited_by: [Non-Competes in Puerto Rico](../non-compete/us/puerto-rico.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4769672/tls-mgmt-and-mktg-ser-llc-v-rodriguez-toledo/#:~:text=We%20decline%20to%20rewrite%20the,their%20scope%20to%20be%20reasonable.>

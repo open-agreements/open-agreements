@@ -12,7 +12,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/new-jersey-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/new-jersey'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/new-jersey'
 tags:
   - case-law
   - non-compete
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `new-jersey-statutory-gates`, `professional-carveouts`
 - source_cards: `jacob-indirect-restriction`, `nj-jacob-indirect`
-- cited_by: [Non-Compete Agreement Review Checklist — New Jersey](../non-compete/new-jersey-review-checklist.md), [Non-Competes in New Jersey](../non-compete/new-jersey.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New Jersey](../checklists/non-compete/new-jersey-review-checklist.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1984610/jacob-v-norris-mclaughlin-marcus/#:~:text=We%20believe%20that%20indirect%20restrictions,the%20spirit%20of%20RPC%205.6.>
 
 ### jacob-v-norris-mclaughlin-marcus-we-conclude-that-the-agreement-s-b7168b70 {#jacob-v-norris-mclaughlin-marcus-we-conclude-that-the-agreement-s-b7168b70}
@@ -41,5 +41,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `professional-carveouts`
 - source_cards: `jacob-public-policy`
-- cited_by: [Non-Competes in New Jersey](../non-compete/new-jersey.md)
+- cited_by: [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1984610/jacob-v-norris-mclaughlin-marcus/#:~:text=We%20conclude%20that%20the%20Agreement's,unenforceable%20as%20against%20public%20policy.>

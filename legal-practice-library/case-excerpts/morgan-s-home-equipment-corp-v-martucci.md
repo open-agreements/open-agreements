@@ -12,7 +12,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/pennsylvania-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/pennsylvania'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/pennsylvania'
 tags:
   - case-law
   - non-compete
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `protectable-interests`
 - source_cards: `morgans-specialized-training`, `pa-morgans-specialized-training`
-- cited_by: [Non-Compete Agreement Review Checklist — Pennsylvania](../non-compete/pennsylvania-review-checklist.md), [Non-Competes in Pennsylvania](../non-compete/pennsylvania.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Pennsylvania](../checklists/non-compete/pennsylvania-review-checklist.md), [Non-Competes in Pennsylvania](../non-compete/us/pennsylvania.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2330966/morgans-home-equipment-corp-v-martucci/#:~:text=An%20employe%20may%20receive%20specialized,secrets%20of%20a%20particular%20enterprise.>
 
 ### morgan-s-home-equipment-corp-v-martucci-they-are-enforced-by-the-courts-946e69f0 {#morgan-s-home-equipment-corp-v-martucci-they-are-enforced-by-the-courts-946e69f0}
@@ -41,7 +41,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `protectable-interests`
 - source_cards: `pa-morgans-necessary-defs`, `q3-morgans-reasonably-necessary`
-- cited_by: [Non-Compete Agreement Review Checklist — Pennsylvania](../non-compete/pennsylvania-review-checklist.md), [Non-Competes in Pennsylvania](../non-compete/pennsylvania.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Pennsylvania](../checklists/non-compete/pennsylvania-review-checklist.md), [Non-Competes in Pennsylvania](../non-compete/us/pennsylvania.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2330966/morgans-home-equipment-corp-v-martucci/#:~:text=They%20are%20enforced%20by%20the,the%20protection%20of%20the%20employer.>
 
 ### morgan-s-home-equipment-corp-v-martucci-we-have-held-that-employment-contracts-1d4b09b4 {#morgan-s-home-equipment-corp-v-martucci-we-have-held-that-employment-contracts-1d4b09b4}
@@ -50,5 +50,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `employee-noncompetes`, `pennsylvania-statutory-gates`, `tolling-during-breach`, `tolling-extension`
 - source_cards: `morgans-prima-facie`, `pa-morgans-prima-facie`, `pa-morgans-prima-facie-gate`, `pa-morgans-tolling`, `q8-morgans-prima-facie`
-- cited_by: [Non-Compete Agreement Review Checklist — Pennsylvania](../non-compete/pennsylvania-review-checklist.md), [Non-Competes in Pennsylvania](../non-compete/pennsylvania.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Pennsylvania](../checklists/non-compete/pennsylvania-review-checklist.md), [Non-Competes in Pennsylvania](../non-compete/us/pennsylvania.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2330966/morgans-home-equipment-corp-v-martucci/#:~:text=We%20have%20held%20that%20employment,of%20time%20and%20geographical%20extent.>

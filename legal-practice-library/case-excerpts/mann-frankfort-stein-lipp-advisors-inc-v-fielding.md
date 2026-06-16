@@ -14,7 +14,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/texas-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/texas'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/texas'
 tags:
   - case-law
   - non-compete
@@ -34,5 +34,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `at-will-enforceability`, `definitions`, `texas-statutory-gates`, `timing-and-execution-acknowledgements`
 - source_cards: `mann-frankfort-implied`, `tx-mann-frankfort-defs`, `tx-mann-frankfort-gate`, `tx-mann-frankfort-timing`
-- cited_by: [Non-Compete Agreement Review Checklist — Texas](../non-compete/texas-review-checklist.md), [Non-Competes in Texas](../non-compete/texas.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Texas](../checklists/non-compete/texas-review-checklist.md), [Non-Competes in Texas](../non-compete/us/texas.md)
 - link_to_source: <https://www.courtlistener.com/opinion/895104/mann-frankfort-stein-lipp-advisors-inc-v-fielding/#:~:text=When%20the%20nature%20of%20the,confidential%20information%20will%20be%20provided.>

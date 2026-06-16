@@ -11,7 +11,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/california-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/california'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/california'
 tags:
   - case-law
   - non-compete
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `california-statutory-gates`, `confidentiality-and-trade-secret-treatment`, `definitions`, `trade-secrets`
 - source_cards: `brown-de-facto`, `ca-brown-de-facto-defs`, `ca-brown-duration`, `ca-brown-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — California](../non-compete/california-review-checklist.md), [Non-Competes in California](../non-compete/california.md)
+- cited_by: [Non-Compete Agreement Review Checklist — California](../checklists/non-compete/california-review-checklist.md), [Non-Competes in California](../non-compete/us/california.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4805583/brown-v-tgs-management-co-llc/#:~:text=Collectively%2C%20these%20overly%20restrictive%20provisions,chosen%20profession%20of%20statistical%20arbitrage.>

@@ -12,10 +12,10 @@ timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/ohio-review-checklist'
-  - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/ohio'
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/review-checklist'
+  - type: State Law Practice Note
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/ohio'
 tags:
   - case-law
   - non-compete
@@ -35,5 +35,5 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `assignment-and-successors`, `successor-enforcement`
 - source_cards: `acordia-successor`, `oh-acordia-successor`
-- cited_by: [Non-Compete Agreement Review Checklist — Ohio](../non-compete/ohio-review-checklist.md), [Non-Competes in Ohio](../non-compete/ohio.md), [Non-Compete Agreement Review Checklist](../non-compete/review-checklist.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Ohio](../checklists/non-compete/ohio-review-checklist.md), [Non-Compete Agreement Review Checklist](../checklists/non-compete/review-checklist.md), [Non-Competes in Ohio](../non-compete/us/ohio.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2690659/acordia-of-ohio-llc-v-fishel/#:~:text=We%20hold%20that%20the%20L.L.C.,the%20circumstances%20of%20this%20case.>

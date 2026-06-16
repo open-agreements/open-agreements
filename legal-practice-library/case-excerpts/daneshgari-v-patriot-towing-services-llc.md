@@ -12,7 +12,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/georgia-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/georgia'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/georgia'
 tags:
   - case-law
   - non-compete
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `tolling-during-breach`
 - source_cards: `ga-daneshgari-equity`, `q10-daneshgari-equity`
-- cited_by: [Non-Compete Agreement Review Checklist — Georgia](../non-compete/georgia-review-checklist.md), [Non-Competes in Georgia](../non-compete/georgia.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Georgia](../checklists/non-compete/georgia-review-checklist.md), [Non-Competes in Georgia](../non-compete/us/georgia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/5295364/khosrow-daneshgari-v-patriot-towing-services-llc/#:~:text=But%20the%20Supreme%20Court%20of,period%20of%20a%20non%2Dcompete%20agreement.%E2%80%9D>
 
 ### daneshgari-v-patriot-towing-services-llc-on-appeal-the-defendants-contend-that-c1277c4a {#daneshgari-v-patriot-towing-services-llc-on-appeal-the-defendants-contend-that-c1277c4a}
@@ -41,5 +41,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `tolling-during-breach`
 - source_cards: `ga-daneshgari-no-extend`, `q10-daneshgari-no-extend`
-- cited_by: [Non-Compete Agreement Review Checklist — Georgia](../non-compete/georgia-review-checklist.md), [Non-Competes in Georgia](../non-compete/georgia.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Georgia](../checklists/non-compete/georgia-review-checklist.md), [Non-Competes in Georgia](../non-compete/us/georgia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/5295364/khosrow-daneshgari-v-patriot-towing-services-llc/#:~:text=On%20appeal%2C%20the%20defendants%20contend,infra%2C%20we%20agree%20and%20reverse.>

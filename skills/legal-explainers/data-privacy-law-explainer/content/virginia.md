@@ -4,7 +4,7 @@ slug: virginia
 countryCode: US
 snapshotAsOf: "2026-06-16"
 lastReviewed: "2026-06-04"
-canonicalUrl: https://openagreements.org/legal/privacy/virginia
+canonicalUrl: https://openagreements.org/practice-guides/privacy/us/virginia
 license: CC BY 4.0
 stale: false
 ---
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/privacy/virginia · **Snapshot as of:** 2026-06-16 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/virginia · **Snapshot as of:** 2026-06-16 · License: CC BY 4.0 · © openagreements.org
 
 # Virginia Consumer Privacy Law (VCDPA)[^about]
 

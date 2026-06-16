@@ -9,7 +9,7 @@ resource: 'https://caselaw.findlaw.com/court/us-dis-crt-e-d-mic-nor-div/2162951.
 timestamp: '2026-06-11'
 document_references:
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/privacy/michigan'
+    resource: 'https://openagreements.org/practice-guides/privacy/us/michigan'
 tags:
   - case-law
   - privacy
@@ -29,5 +29,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `consumer-lawsuit`
 - source_cards: `q6-pratt-limitations`
-- cited_by: [Michigan Consumer Privacy Law](../privacy/michigan.md)
+- cited_by: [Michigan Consumer Privacy Law](../privacy/us/michigan.md)
 - link_to_source: <https://caselaw.findlaw.com/court/us-dis-crt-e-d-mic-nor-div/2162951.html>

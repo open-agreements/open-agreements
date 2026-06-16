@@ -4,7 +4,7 @@ title: Vendor lock-in risk in AI service agreements
 description: >-
   Legal and technical AI vendor lock-in risks, including prompts, fine-tunes,
   embeddings, audit logs, residency terms, and portability rights.
-resource: 'https://openagreements.org/legal/ai-vendors/vendor-lock-in-risk'
+resource: 'https://openagreements.org/practice-guides/ai-vendors/vendor-lock-in-risk'
 timestamp: '2026-04-20'
 tags:
   - ai-vendors

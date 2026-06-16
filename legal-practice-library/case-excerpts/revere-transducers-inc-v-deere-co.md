@@ -12,7 +12,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/iowa-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/iowa'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/iowa'
 tags:
   - case-law
   - non-compete
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `employee-noncompetes`, `iowa-statutory-gates`
 - source_cards: `ia-revere-test`, `q1-revere-three-prong`
-- cited_by: [Non-Compete Agreement Review Checklist — Iowa](../non-compete/iowa-review-checklist.md), [Non-Competes in Iowa](../non-compete/iowa.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Iowa](../checklists/non-compete/iowa-review-checklist.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1989929/revere-transducers-inc-v-deere-co/#:~:text=(1)%20Is%20the%20restriction%20reasonably,prejudicial%20to%20the%20public%20interest%3F>
 
 ### revere-transducers-inc-v-deere-co-factors-we-consider-in-determining-the-7493f9b8 {#revere-transducers-inc-v-deere-co-factors-we-consider-in-determining-the-7493f9b8}
@@ -41,5 +41,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `legitimate-business-interest`
 - source_cards: `ia-revere-factors`, `q3-revere-factors`
-- cited_by: [Non-Compete Agreement Review Checklist — Iowa](../non-compete/iowa-review-checklist.md), [Non-Competes in Iowa](../non-compete/iowa.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Iowa](../checklists/non-compete/iowa-review-checklist.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1989929/revere-transducers-inc-v-deere-co/#:~:text=Factors%20we%20consider%20in%20determining,the%20occupation%20which%20is%20restrained.>

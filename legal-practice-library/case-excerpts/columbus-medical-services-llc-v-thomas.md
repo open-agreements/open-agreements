@@ -14,7 +14,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/tennessee-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/tennessee'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/tennessee'
 tags:
   - case-law
   - non-compete
@@ -34,5 +34,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `remedies`
 - source_cards: `columbus-enforcement-refused`, `columbus-refused`
-- cited_by: [Non-Compete Agreement Review Checklist — Tennessee](../non-compete/tennessee-review-checklist.md), [Non-Competes in Tennessee](../non-compete/tennessee.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Tennessee](../checklists/non-compete/tennessee-review-checklist.md), [Non-Competes in Tennessee](../non-compete/us/tennessee.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1050674/columbus-medical-services-llc-v-thomas/#:~:text=We%20reverse%2C%20concluding%20that%2C%20while,impact%20on%20the%20public%20interest.>

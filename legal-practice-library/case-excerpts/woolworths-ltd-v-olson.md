@@ -7,7 +7,7 @@ resource: 'https://www.caselaw.nsw.gov.au/decision/549fb2db3004262463b8633d'
 timestamp: '2026-06-10'
 document_references:
   - type: Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/australia-new-south-wales'
+    resource: 'https://openagreements.org/practice-guides/non-compete/au/new-south-wales'
 tags:
   - case-law
   - non-compete
@@ -27,7 +27,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `enforceability`
 - source_cards: `olson-justifiable-reasonable`
-- cited_by: [Non-Compete Enforceability in New South Wales](../non-compete/australia-new-south-wales.md)
+- cited_by: [Non-Compete Enforceability in New South Wales](../non-compete/au/new-south-wales.md)
 - link_to_source: <https://www.caselaw.nsw.gov.au/decision/549fb2db3004262463b8633d>
 
 ### woolworths-ltd-v-olson-a-restraint-validated-by-the-section-a74ce883 {#woolworths-ltd-v-olson-a-restraint-validated-by-the-section-a74ce883}
@@ -36,7 +36,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`
 - source_cards: `olson-amputation`
-- cited_by: [Non-Compete Enforceability in New South Wales](../non-compete/australia-new-south-wales.md)
+- cited_by: [Non-Compete Enforceability in New South Wales](../non-compete/au/new-south-wales.md)
 - link_to_source: <https://www.caselaw.nsw.gov.au/decision/549fb2db3004262463b8633d>
 
 ### woolworths-ltd-v-olson-section-4-1-allows-the-court-to-e44275c8 {#woolworths-ltd-v-olson-section-4-1-allows-the-court-to-e44275c8}
@@ -45,7 +45,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`
 - source_cards: `olson-s4-ignore-excess`
-- cited_by: [Non-Compete Enforceability in New South Wales](../non-compete/australia-new-south-wales.md)
+- cited_by: [Non-Compete Enforceability in New South Wales](../non-compete/au/new-south-wales.md)
 - link_to_source: <https://www.caselaw.nsw.gov.au/decision/549fb2db3004262463b8633d>
 
 ### woolworths-ltd-v-olson-section-4-1-of-the-restraints-of-728cb2cf {#woolworths-ltd-v-olson-section-4-1-of-the-restraints-of-728cb2cf}
@@ -54,7 +54,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`
 - source_cards: `olson-s4-overturned`
-- cited_by: [Non-Compete Enforceability in New South Wales](../non-compete/australia-new-south-wales.md)
+- cited_by: [Non-Compete Enforceability in New South Wales](../non-compete/au/new-south-wales.md)
 - link_to_source: <https://www.caselaw.nsw.gov.au/decision/549fb2db3004262463b8633d>
 
 ### woolworths-ltd-v-olson-the-common-law-did-not-countenance-b9e25d83 {#woolworths-ltd-v-olson-the-common-law-did-not-countenance-b9e25d83}
@@ -63,7 +63,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`
 - source_cards: `olson-common-law-no-severance`
-- cited_by: [Non-Compete Enforceability in New South Wales](../non-compete/australia-new-south-wales.md)
+- cited_by: [Non-Compete Enforceability in New South Wales](../non-compete/au/new-south-wales.md)
 - link_to_source: <https://www.caselaw.nsw.gov.au/decision/549fb2db3004262463b8633d>
 
 ### woolworths-ltd-v-olson-the-court-gives-considerable-weight-to-c805288a {#woolworths-ltd-v-olson-the-court-gives-considerable-weight-to-c805288a}
@@ -72,7 +72,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `garden-leave`
 - source_cards: `olson-negotiated-weight`
-- cited_by: [Non-Compete Enforceability in New South Wales](../non-compete/australia-new-south-wales.md)
+- cited_by: [Non-Compete Enforceability in New South Wales](../non-compete/au/new-south-wales.md)
 - link_to_source: <https://www.caselaw.nsw.gov.au/decision/549fb2db3004262463b8633d>
 
 ### woolworths-ltd-v-olson-the-court-may-not-rewrite-the-84b5e3e7 {#woolworths-ltd-v-olson-the-court-may-not-rewrite-the-84b5e3e7}
@@ -81,7 +81,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`
 - source_cards: `olson-no-remake`
-- cited_by: [Non-Compete Enforceability in New South Wales](../non-compete/australia-new-south-wales.md)
+- cited_by: [Non-Compete Enforceability in New South Wales](../non-compete/au/new-south-wales.md)
 - link_to_source: <https://www.caselaw.nsw.gov.au/decision/549fb2db3004262463b8633d>
 
 ### woolworths-ltd-v-olson-the-courts-in-general-take-a-bfe16059 {#woolworths-ltd-v-olson-the-courts-in-general-take-a-bfe16059}
@@ -90,7 +90,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `enforceability`
 - source_cards: `olson-stricter-employment`
-- cited_by: [Non-Compete Enforceability in New South Wales](../non-compete/australia-new-south-wales.md)
+- cited_by: [Non-Compete Enforceability in New South Wales](../non-compete/au/new-south-wales.md)
 - link_to_source: <https://www.caselaw.nsw.gov.au/decision/549fb2db3004262463b8633d>
 
 ### woolworths-ltd-v-olson-the-validity-of-the-restraint-is-f2aa9f26 {#woolworths-ltd-v-olson-the-validity-of-the-restraint-is-f2aa9f26}
@@ -99,5 +99,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `reasonableness-factors`, `tolling`
 - source_cards: `olson-tested-at-contract`, `olson-tested-at-contract-tolling`
-- cited_by: [Non-Compete Enforceability in New South Wales](../non-compete/australia-new-south-wales.md)
+- cited_by: [Non-Compete Enforceability in New South Wales](../non-compete/au/new-south-wales.md)
 - link_to_source: <https://www.caselaw.nsw.gov.au/decision/549fb2db3004262463b8633d>

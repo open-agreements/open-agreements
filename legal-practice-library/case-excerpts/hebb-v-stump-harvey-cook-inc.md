@@ -11,7 +11,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/maryland-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/maryland'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/maryland'
 tags:
   - case-law
   - non-compete
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `hebb-severable-partial-enforcement`, `md-hebb-severable`
-- cited_by: [Non-Compete Agreement Review Checklist — Maryland](../non-compete/maryland-review-checklist.md), [Non-Competes in Maryland](../non-compete/maryland.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Maryland](../checklists/non-compete/maryland-review-checklist.md), [Non-Competes in Maryland](../non-compete/us/maryland.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2195970/hebb-v-stump-harvey-cook-inc/#:~:text=In%20the%20instant%20case%20the,severable%20and%20thus%20partially%20enforceable.>

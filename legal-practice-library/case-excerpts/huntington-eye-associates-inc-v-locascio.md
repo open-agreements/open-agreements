@@ -15,7 +15,7 @@ document_references:
     resource: >-
       https://openagreements.org/legal/non-compete/west-virginia-review-checklist
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/west-virginia'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/west-virginia'
 tags:
   - case-law
   - non-compete
@@ -35,5 +35,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `definitions`, `restrictive-covenants-each-independently-includable`, `severability-and-reformation`, `tolling`, `tolling-during-breach`
 - source_cards: `huntington-eye-no-partial-enforcement`, `huntington-eye-tolling-no-partial-enforcement`, `wv-huntington-cov`, `wv-huntington-def`, `wv-huntington-sev`, `wv-huntington-toll`
-- cited_by: [Non-Compete Agreement Review Checklist — West Virginia](../non-compete/west-virginia-review-checklist.md), [Non-Competes in West Virginia](../non-compete/west-virginia.md)
+- cited_by: [Non-Compete Agreement Review Checklist — West Virginia](../checklists/non-compete/west-virginia-review-checklist.md), [Non-Competes in West Virginia](../non-compete/us/west-virginia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1298767/huntington-eye-associates-inc-v-locascio/#:~:text=An%20employee%20covenant%20not%20to,restrictive%20covenants%20are%20naturally%20prone.>

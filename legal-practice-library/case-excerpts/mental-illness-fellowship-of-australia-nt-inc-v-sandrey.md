@@ -11,7 +11,8 @@ resource: 'https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/nt/NTSC/2025/57.h
 timestamp: '2026-06-10'
 document_references:
   - type: Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/australia-northern-territory'
+    resource: >-
+      https://openagreements.org/practice-guides/non-compete/au/northern-territory
 tags:
   - case-law
   - non-compete
@@ -31,7 +32,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `legitimate-interest`
 - source_cards: `sandrey-no-inference`
-- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/australia-northern-territory.md)
+- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/au/northern-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/nt/NTSC/2025/57.html>
 
 ### mental-illness-fellowship-of-australia-nt-inc-v-sandrey-if-it-were-necessary-for-me-f0eb1d28 {#mental-illness-fellowship-of-australia-nt-inc-v-sandrey-if-it-were-necessary-for-me-f0eb1d28}
@@ -40,7 +41,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `garden-leave`
 - source_cards: `sandrey-variation-enforceable`
-- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/australia-northern-territory.md)
+- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/au/northern-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/nt/NTSC/2025/57.html>
 
 ### mental-illness-fellowship-of-australia-nt-inc-v-sandrey-it-does-not-have-a-defined-6273691c {#mental-illness-fellowship-of-australia-nt-inc-v-sandrey-it-does-not-have-a-defined-6273691c}
@@ -49,7 +50,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `reasonableness-factors`
 - source_cards: `sandrey-limited-restriction`
-- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/australia-northern-territory.md)
+- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/au/northern-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/nt/NTSC/2025/57.html>
 
 ### mental-illness-fellowship-of-australia-nt-inc-v-sandrey-the-restraint-of-trade-clause-restricts-0d05caa5 {#mental-illness-fellowship-of-australia-nt-inc-v-sandrey-the-restraint-of-trade-clause-restricts-0d05caa5}
@@ -58,5 +59,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `legitimate-interest`
 - source_cards: `sandrey-clients-choice`
-- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/australia-northern-territory.md)
+- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/au/northern-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/nt/NTSC/2025/57.html>

@@ -13,7 +13,7 @@ document_references:
     resource: >-
       https://openagreements.org/legal/non-compete/north-carolina-review-checklist
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/north-carolina'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/north-carolina'
 tags:
   - case-law
   - non-compete
@@ -33,7 +33,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `non-solicitation`
 - source_cards: `q6-crockett-solicit`
-- cited_by: [Non-Competes in North Carolina](../non-compete/north-carolina.md)
+- cited_by: [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2504879/inland-american-winston-hotels-inc-v-crockett/#:~:text=After%20a%20thorough%20review%20of,as%20a%20matter%20of%20law.>
 
 ### inland-american-winston-hotels-inc-v-crockett-we-note-that-all-of-the-08cf5f34 {#inland-american-winston-hotels-inc-v-crockett-we-note-that-all-of-the-08cf5f34}
@@ -42,5 +42,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `non-solicitation`, `restrictive-covenants-each-independently-includable`
 - source_cards: `nc-crockett-active-persuasion`, `nc-crockett-definitions`, `q6-crockett-definitions`
-- cited_by: [Non-Compete Agreement Review Checklist — North Carolina](../non-compete/north-carolina-review-checklist.md), [Non-Competes in North Carolina](../non-compete/north-carolina.md)
+- cited_by: [Non-Compete Agreement Review Checklist — North Carolina](../checklists/non-compete/north-carolina-review-checklist.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2504879/inland-american-winston-hotels-inc-v-crockett/#:~:text=We%20note%20that%20all%20of,active%20persuasion%2C%20request%2C%20or%20petition.>

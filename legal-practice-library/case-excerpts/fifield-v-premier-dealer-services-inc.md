@@ -12,7 +12,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/illinois-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/illinois'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/illinois'
 tags:
   - case-law
   - non-compete
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `adequate-consideration`, `illinois-statutory-gates`
 - source_cards: `fifield-2yr`, `il-fifield-two-years`
-- cited_by: [Non-Compete Agreement Review Checklist — Illinois](../non-compete/illinois-review-checklist.md), [Non-Competes in Illinois](../non-compete/illinois.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Illinois](../checklists/non-compete/illinois-review-checklist.md), [Non-Competes in Illinois](../non-compete/us/illinois.md)
 - link_to_source: <https://www.courtlistener.com/opinion/3148347/fifield-v-premier-dealer-services-inc/#:~:text=Generally%2C%20Illinois%20courts%20have%20held,or%20more%20constitutes%20adequate%20consideration.>

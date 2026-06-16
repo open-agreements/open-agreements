@@ -11,7 +11,7 @@ resource: 'https://archive.sclqld.org.au/qjudgment/2025/QCA25-243.pdf'
 timestamp: '2026-06-10'
 document_references:
   - type: Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/australia-queensland'
+    resource: 'https://openagreements.org/practice-guides/non-compete/au/queensland'
 tags:
   - case-law
   - non-compete
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `enforceability`, `federal-reform`
 - source_cards: `reims-invalid-unless-reasonable`, `reims-still-governs`
-- cited_by: [Non-Compete Enforceability in Queensland](../non-compete/australia-queensland.md)
+- cited_by: [Non-Compete Enforceability in Queensland](../non-compete/au/queensland.md)
 - link_to_source: <https://archive.sclqld.org.au/qjudgment/2025/QCA25-243.pdf>
 
 ### reims-investments-pty-ltd-v-city-fertility-sydney-cbd-pty-ltd-the-latter-is-more-readily-described-6c5bc054 {#reims-investments-pty-ltd-v-city-fertility-sydney-cbd-pty-ltd-the-latter-is-more-readily-described-6c5bc054}
@@ -40,5 +40,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `contractors-and-sale`
 - source_cards: `reims-anticompetitive`
-- cited_by: [Non-Compete Enforceability in Queensland](../non-compete/australia-queensland.md)
+- cited_by: [Non-Compete Enforceability in Queensland](../non-compete/au/queensland.md)
 - link_to_source: <https://archive.sclqld.org.au/qjudgment/2025/QCA25-243.pdf>

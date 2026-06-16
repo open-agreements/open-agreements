@@ -12,7 +12,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/michigan-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/michigan'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/michigan'
 tags:
   - case-law
   - non-compete
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `business-to-business`, `michigan-statutory-gates`
 - source_cards: `innovation-rule-of-reason`, `mi-innovation-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — Michigan](../non-compete/michigan-review-checklist.md), [Non-Competes in Michigan](../non-compete/michigan.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Michigan](../checklists/non-compete/michigan-review-checklist.md), [Non-Competes in Michigan](../non-compete/us/michigan.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4239128/innovation-ventures-v-liquid-manufacturing/#:~:text=Commercial%20noncompete%20agreements%20between%20businesses,should%20be%20given%20due%20deference.>

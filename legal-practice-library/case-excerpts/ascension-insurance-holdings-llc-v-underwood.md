@@ -14,7 +14,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/delaware-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/delaware'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/delaware'
 tags:
   - case-law
   - non-compete
@@ -34,5 +34,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `delaware-choice-of-law`, `governing-law-venue-dispute-process`
 - source_cards: `ascension-public-policy-limit`, `de-ascension-gov`
-- cited_by: [Non-Compete Agreement Review Checklist — Delaware](../non-compete/delaware-review-checklist.md), [Non-Competes in Delaware](../non-compete/delaware.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Delaware](../checklists/non-compete/delaware-review-checklist.md), [Non-Competes in Delaware](../non-compete/us/delaware.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2774269/ascension-insurance-holdings-llc-v-roberts-f-under/#:~:text=I%20cannot%20agree%20with%20the,the%20default%20state%E2%80%99s%20public%20policy.>

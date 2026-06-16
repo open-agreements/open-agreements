@@ -16,7 +16,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/montana-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/montana'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/montana'
 tags:
   - case-law
   - non-compete
@@ -36,7 +36,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `dobbins-test`
 - source_cards: `alborn-dobbins-partial`
-- cited_by: [Non-Competes in Montana](../non-compete/montana.md)
+- cited_by: [Non-Competes in Montana](../non-compete/us/montana.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4254366/junkermier-clark-campanella-stevens-pc-v-alborn-uithoven/#:~:text=Because%20the%20Covenant%20is%20not,as%20a%20matter%20of%20law.>
 
 ### junkermier-clark-campanella-stevens-p-c-v-alborn-uithoven-riekenberg-p-c-rather-the-covenant-requires-former-8456b8f5 {#junkermier-clark-campanella-stevens-p-c-v-alborn-uithoven-riekenberg-p-c-rather-the-covenant-requires-former-8456b8f5}
@@ -45,5 +45,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `customer-fee-restraints`, `definitions`, `restrictive-covenants-each-independently-includable`
 - source_cards: `alborn-partial-customer-fee`, `mt-alborn-feeclause-cov`, `mt-alborn-feeclause-defs`
-- cited_by: [Non-Compete Agreement Review Checklist — Montana](../non-compete/montana-review-checklist.md), [Non-Competes in Montana](../non-compete/montana.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Montana](../checklists/non-compete/montana-review-checklist.md), [Non-Competes in Montana](../non-compete/us/montana.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4254366/junkermier-clark-campanella-stevens-pc-v-alborn-uithoven/#:~:text=Rather%2C%20the%20Covenant%20requires%20Former,their%20departure%20from%20the%20firm.>

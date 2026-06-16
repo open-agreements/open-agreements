@@ -7,7 +7,8 @@ resource: 'https://www.courtlistener.com/opinion/1439721/deutsch-v-barsky/'
 timestamp: '2026-06-03'
 document_references:
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/district-of-columbia'
+    resource: >-
+      https://openagreements.org/practice-guides/non-compete/us/district-of-columbia
 tags:
   - case-law
   - non-compete
@@ -27,5 +28,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `older-agreements-common-law`
 - source_cards: `deutsch-factors`
-- cited_by: [Non-Competes in the District of Columbia](../non-compete/district-of-columbia.md)
+- cited_by: [Non-Competes in the District of Columbia](../non-compete/us/district-of-columbia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1439721/deutsch-v-barsky/#:~:text=we%20reverse%20that%20part%20of,and%20enforceability%20of%20the%20covenant>

@@ -13,7 +13,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/missouri-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/missouri'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/missouri'
 tags:
   - case-law
   - non-compete
@@ -33,5 +33,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`, `missouri-statutory-gates`
 - source_cards: `durrell-at-will`, `mo-durrell-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — Missouri](../non-compete/missouri-review-checklist.md), [Non-Competes in Missouri](../non-compete/missouri.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Missouri](../checklists/non-compete/missouri-review-checklist.md), [Non-Competes in Missouri](../non-compete/us/missouri.md)
 - link_to_source: <https://www.govinfo.gov/app/details/USCOURTS-moed-4_16-cv-01367>

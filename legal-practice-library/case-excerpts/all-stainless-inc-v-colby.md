@@ -10,7 +10,7 @@ document_references:
     resource: >-
       https://openagreements.org/legal/non-compete/massachusetts-review-checklist
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/massachusetts'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/massachusetts'
 tags:
   - case-law
   - non-compete
@@ -30,5 +30,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `legitimate-interests`
 - source_cards: `allstainless-ordinary`, `allstainless-ordinary-competition`
-- cited_by: [Non-Compete Agreement Review Checklist — Massachusetts](../non-compete/massachusetts-review-checklist.md), [Non-Competes in Massachusetts](../non-compete/massachusetts.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Massachusetts](../checklists/non-compete/massachusetts-review-checklist.md), [Non-Competes in Massachusetts](../non-compete/us/massachusetts.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2151844/all-stainless-inc-v-colby/#:~:text=A%20former%20employer%20is%20not,contract%20to%20restrain%20ordinary%20competition.>

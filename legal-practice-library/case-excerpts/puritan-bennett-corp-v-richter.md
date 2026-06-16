@@ -11,7 +11,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/kansas-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/kansas'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/kansas'
 tags:
   - case-law
   - non-compete
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`, `entire-agreement-amendment-waiver-e-signatures`, `timing-and-execution-acknowledgements`
 - source_cards: `puritan-bennett-amendments`, `puritan-bennett-consideration`, `puritan-bennett-continued-employment`
-- cited_by: [Non-Compete Agreement Review Checklist — Kansas](../non-compete/kansas-review-checklist.md), [Non-Competes in Kansas](../non-compete/kansas.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Kansas](../checklists/non-compete/kansas-review-checklist.md), [Non-Competes in Kansas](../non-compete/us/kansas.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1159191/puritan-bennett-corp-v-richter/#:~:text=After%20reviewing%20these%20authorities%2C%20we,a%20covenant%20not%20to%20compete.>

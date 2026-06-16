@@ -11,7 +11,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/iowa-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/iowa'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/iowa'
 tags:
   - case-law
   - non-compete
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `time-and-geography`
 - source_cards: `ia-pro-edge-duration`, `q4-pro-edge-one-year`
-- cited_by: [Non-Compete Agreement Review Checklist — Iowa](../non-compete/iowa-review-checklist.md), [Non-Competes in Iowa](../non-compete/iowa.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Iowa](../checklists/non-compete/iowa-review-checklist.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2397219/pro-edge-lp-v-gue/#:~:text=Further%2C%20the%20court%20finds%20that,following%20his%20separation%20from%20employment.>

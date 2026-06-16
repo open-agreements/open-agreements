@@ -13,7 +13,7 @@ document_references:
     resource: >-
       https://openagreements.org/legal/non-compete/new-hampshire-review-checklist
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/new-hampshire'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/new-hampshire'
 tags:
   - case-law
   - non-compete
@@ -33,7 +33,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `new-hampshire-statutory-gates`, `scope-duration-geography`
 - source_cards: `forbes-duration-geography`, `nh-forbes-narrow-tailoring`, `nh-forbes-tailoring-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — New Hampshire](../non-compete/new-hampshire-review-checklist.md), [Non-Competes in New Hampshire](../non-compete/new-hampshire.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New Hampshire](../checklists/non-compete/new-hampshire-review-checklist.md), [Non-Competes in New Hampshire](../non-compete/us/new-hampshire.md)
 - link_to_source: <https://www.courtlistener.com/opinion/8091834/concord-orthopaedics-professional-assn-v-forbes/#:~:text=A%20restraint%20on%20competition%20must,legitimate%20interest%20in%20its%20goodwill.>
 
 ### concord-orthopaedics-professional-ass-n-v-forbes-copa-has-a-legitimate-interest-in-ebf3e61a {#concord-orthopaedics-professional-ass-n-v-forbes-copa-has-a-legitimate-interest-in-ebf3e61a}
@@ -42,5 +42,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `legitimate-interests`
 - source_cards: `forbes-patient-goodwill`
-- cited_by: [Non-Competes in New Hampshire](../non-compete/new-hampshire.md)
+- cited_by: [Non-Competes in New Hampshire](../non-compete/us/new-hampshire.md)
 - link_to_source: <https://www.courtlistener.com/opinion/8091834/concord-orthopaedics-professional-assn-v-forbes/#:~:text=COPA%20has%20a%20legitimate%20interest,capacity%20as%20a%20COPA%20physician.>

@@ -11,7 +11,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/kentucky-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/kentucky'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/kentucky'
 tags:
   - case-law
   - non-compete
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `choice-of-law`, `governing-law-venue-dispute-process`
 - source_cards: `ky-senture-gov`, `senture-applies-kentucky-law`
-- cited_by: [Non-Compete Agreement Review Checklist — Kentucky](../non-compete/kentucky-review-checklist.md), [Non-Competes in Kentucky](../non-compete/kentucky.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Kentucky](../checklists/non-compete/kentucky-review-checklist.md), [Non-Competes in Kentucky](../non-compete/us/kentucky.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2465686/senture-llc-v-dietrich/#:~:text=With%20respect%20to%20the%20first,Kentucky%20law%20to%20this%20case.>

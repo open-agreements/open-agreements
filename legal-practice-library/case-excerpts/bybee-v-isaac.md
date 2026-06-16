@@ -9,7 +9,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/idaho-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/idaho'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/idaho'
 tags:
   - case-law
   - non-compete
@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `idaho-statutory-gates`, `sale-of-business`
 - source_cards: `bybee-not-overbroad`, `idaho-bybee-not-overbroad-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — Idaho](../non-compete/idaho-review-checklist.md), [Non-Competes in Idaho](../non-compete/idaho.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Idaho](../checklists/non-compete/idaho-review-checklist.md), [Non-Competes in Idaho](../non-compete/us/idaho.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2507705/bybee-v-isaac/#:~:text=However%2C%20when%20viewing%20the%20non%2Dcompete,as%20a%20matter%20of%20law.>
 
 ### bybee-v-isaac-when-the-covenant-not-to-compete-3bc88639 {#bybee-v-isaac-when-the-covenant-not-to-compete-3bc88639}
@@ -38,5 +38,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `idaho-statutory-gates`, `sale-of-business`
 - source_cards: `bybee-sale-goodwill`, `idaho-bybee-goodwill-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — Idaho](../non-compete/idaho-review-checklist.md), [Non-Competes in Idaho](../non-compete/idaho.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Idaho](../checklists/non-compete/idaho-review-checklist.md), [Non-Competes in Idaho](../non-compete/us/idaho.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2507705/bybee-v-isaac/#:~:text=When%20the%20covenant%20not%20to,from%20competition%20by%20the%20seller.%E2%80%9D>

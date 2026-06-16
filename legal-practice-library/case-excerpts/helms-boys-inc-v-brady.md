@@ -12,7 +12,7 @@ document_references:
     resource: >-
       https://openagreements.org/legal/non-compete/west-virginia-review-checklist
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/west-virginia'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/west-virginia'
 tags:
   - case-law
   - non-compete
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `employee-noncompetes`, `low-wage-workers`, `parties-and-cover-term-identification`, `west-virginia-statutory-gates`
 - source_cards: `helms-general-managerial-skills`, `helms-low-wage-general-skills`, `wv-helms-cover`, `wv-helms-def`, `wv-helms-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — West Virginia](../non-compete/west-virginia-review-checklist.md), [Non-Competes in West Virginia](../non-compete/west-virginia.md)
+- cited_by: [Non-Compete Agreement Review Checklist — West Virginia](../checklists/non-compete/west-virginia-review-checklist.md), [Non-Competes in West Virginia](../non-compete/us/west-virginia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1356394/helms-boys-inc-v-brady/#:~:text=When%20the%20skills%20and%20information,are%20not%20protectible%20employer%20interests.>

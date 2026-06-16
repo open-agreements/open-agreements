@@ -7,7 +7,7 @@ description: >-
   How employers prove AI-related redundancy across the EU, UK, Canada, and
   Australia, including consultation, redeployment, and selection risk.
 resource: >-
-  https://openagreements.org/legal/ai-layoffs/proving-redundancy-ai-roles-cross-border
+  https://openagreements.org/practice-guides/ai-layoffs/proving-redundancy-ai-roles-cross-border
 timestamp: '2026-04-20'
 tags:
   - ai-layoffs

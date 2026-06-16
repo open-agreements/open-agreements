@@ -12,7 +12,7 @@ document_references:
     resource: >-
       https://openagreements.org/legal/non-compete/massachusetts-review-checklist
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/massachusetts'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/massachusetts'
 tags:
   - case-law
   - non-compete
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `enforceability`
 - source_cards: `boulanger-reasonableness`, `boulanger-time-and-space`
-- cited_by: [Non-Compete Agreement Review Checklist — Massachusetts](../non-compete/massachusetts-review-checklist.md), [Non-Competes in Massachusetts](../non-compete/massachusetts.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Massachusetts](../checklists/non-compete/massachusetts-review-checklist.md), [Non-Competes in Massachusetts](../non-compete/us/massachusetts.md)
 - link_to_source: <https://www.courtlistener.com/opinion/6579005/boulanger-v-dunkin-donuts-inc/#:~:text=A%20covenant%20not%20to%20compete%20is,consonant%20with%20the%20public%20interest.>
 
 ### boulanger-v-dunkin-donuts-inc-legitimate-business-interests-include-39aaa7de {#boulanger-v-dunkin-donuts-inc-legitimate-business-interests-include-39aaa7de}
@@ -41,5 +41,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `legitimate-interests`, `massachusetts-statutory-gates`
 - source_cards: `boulanger-codified-interests`, `boulanger-interest-list`, `boulanger-interests`
-- cited_by: [Non-Compete Agreement Review Checklist — Massachusetts](../non-compete/massachusetts-review-checklist.md), [Non-Competes in Massachusetts](../non-compete/massachusetts.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Massachusetts](../checklists/non-compete/massachusetts-review-checklist.md), [Non-Competes in Massachusetts](../non-compete/us/massachusetts.md)
 - link_to_source: <https://www.courtlistener.com/opinion/6579005/boulanger-v-dunkin-donuts-inc/#:~:text=Legitimate%20business%20interests%20include%20protection,confidential%20information%2C%20and%20good%20will.>

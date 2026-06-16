@@ -5,7 +5,7 @@ description: >-
   Consequences of switching outside counsel, including active matters, file
   return, privilege, AI-forward transitions, delays, and unpaid bills.
 resource: >-
-  https://openagreements.org/legal/outside-counsel/switching-counsel-consequences
+  https://openagreements.org/practice-guides/outside-counsel/switching-counsel-consequences
 timestamp: '2026-04-20'
 tags:
   - outside-counsel

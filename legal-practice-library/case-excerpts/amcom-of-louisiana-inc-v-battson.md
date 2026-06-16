@@ -12,7 +12,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/louisiana-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/louisiana'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/louisiana'
 tags:
   - case-law
   - non-compete
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `geography-duration`
 - source_cards: `amcom-radius`, `la-amcom-defs`
-- cited_by: [Non-Compete Agreement Review Checklist — Louisiana](../non-compete/louisiana-review-checklist.md), [Non-Competes in Louisiana](../non-compete/louisiana.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Louisiana](../checklists/non-compete/louisiana-review-checklist.md), [Non-Competes in Louisiana](../non-compete/us/louisiana.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1094717/amcom-of-louisiana-inc-v-battson/#:~:text=We%20agree%20with%20the%20trial,this%20employment%20agreement%20overly%20broad.>

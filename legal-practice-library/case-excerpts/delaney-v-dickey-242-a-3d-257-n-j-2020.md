@@ -7,7 +7,8 @@ resource: 'https://law.justia.com/cases/new-jersey/supreme-court/2020/a-30-19.ht
 timestamp: '2026-04-20'
 document_references:
   - type: Practice Note
-    resource: 'https://openagreements.org/legal/outside-counsel/fee-dispute-on-transition'
+    resource: >-
+      https://openagreements.org/practice-guides/outside-counsel/fee-dispute-on-transition
 tags:
   - case-law
   - outside-counsel

@@ -10,7 +10,7 @@ resource: >-
 timestamp: '2026-06-03'
 document_references:
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/us-virgin-islands'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/virgin-islands'
 tags:
   - case-law
   - non-compete
@@ -30,7 +30,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `common-law-source`
 - source_cards: `banks-section4`
-- cited_by: [Non-Competes in the U.S. Virgin Islands](../non-compete/us-virgin-islands.md)
+- cited_by: [Non-Competes in the U.S. Virgin Islands](../non-compete/us/virgin-islands.md)
 - link_to_source: <https://www.courtlistener.com/opinion/8676262/banks-v-international-rental-leasing-corp/#:~:text=The%20rules%20of%20the%20common,local%20laws%20to%20the%20contrary.>
 
 ### banks-v-international-rental-leasing-corp-we-conclude-that-the-legislature-did-edcbd8f2 {#banks-v-international-rental-leasing-corp-we-conclude-that-the-legislature-did-edcbd8f2}
@@ -39,5 +39,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `common-law-source`
 - source_cards: `banks-method`
-- cited_by: [Non-Competes in the U.S. Virgin Islands](../non-compete/us-virgin-islands.md)
+- cited_by: [Non-Competes in the U.S. Virgin Islands](../non-compete/us/virgin-islands.md)
 - link_to_source: <https://www.courtlistener.com/opinion/8676262/banks-v-international-rental-leasing-corp/#:~:text=We%20conclude%20that%20the%20Legislature,apply%20the%20most%20recent%20Restatement.>

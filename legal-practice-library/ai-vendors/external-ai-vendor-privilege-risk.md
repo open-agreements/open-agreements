@@ -4,7 +4,8 @@ title: Privilege risk when legal teams use external AI vendors
 description: >-
   Privilege risks when legal teams use external AI vendors, including public
   tools, work product, enterprise terms, Kovel agents, and controls.
-resource: 'https://openagreements.org/legal/ai-vendors/external-ai-vendor-privilege-risk'
+resource: >-
+  https://openagreements.org/practice-guides/ai-vendors/external-ai-vendor-privilege-risk
 timestamp: '2026-04-20'
 tags:
   - ai-vendors

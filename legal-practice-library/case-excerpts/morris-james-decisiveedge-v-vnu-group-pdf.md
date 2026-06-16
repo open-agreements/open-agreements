@@ -9,7 +9,7 @@ timestamp: '2026-04-20'
 document_references:
   - type: Practice Note
     resource: >-
-      https://openagreements.org/legal/ai-layoffs/contractor-displacement-ai-efficiency
+      https://openagreements.org/practice-guides/ai-layoffs/contractor-displacement-ai-efficiency
 tags:
   - case-law
   - ai-layoffs

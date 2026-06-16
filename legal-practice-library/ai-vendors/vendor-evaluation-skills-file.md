@@ -4,7 +4,8 @@ title: AI vendor evaluation as an executable skills file
 description: >-
   Key AI vendor diligence questions for legal teams, including training data,
   output rights, privacy promises, contract terms, and risk tiers.
-resource: 'https://openagreements.org/legal/ai-vendors/vendor-evaluation-skills-file'
+resource: >-
+  https://openagreements.org/practice-guides/ai-vendors/vendor-evaluation-skills-file
 timestamp: '2026-04-20'
 tags:
   - ai-vendors

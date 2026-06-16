@@ -13,7 +13,7 @@ document_references:
     resource: >-
       https://openagreements.org/legal/non-compete/north-carolina-review-checklist
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/north-carolina'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/north-carolina'
 tags:
   - case-law
   - non-compete
@@ -33,7 +33,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `legitimate-interest`, `north-carolina-statutory-gates`
 - source_cards: `nc-ridgway-actual-duties`, `nc-ridgway-duties`, `q4-ridgway-duties`
-- cited_by: [Non-Compete Agreement Review Checklist — North Carolina](../non-compete/north-carolina-review-checklist.md), [Non-Competes in North Carolina](../non-compete/north-carolina.md)
+- cited_by: [Non-Compete Agreement Review Checklist — North Carolina](../checklists/non-compete/north-carolina-review-checklist.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1156110/medical-staffing-network-inc-v-ridgway/#:~:text=However%2C%20we%20have%20held%20that,actually%20performed%20by%20the%20employee.>
 
 ### medical-staffing-network-inc-v-ridgway-to-be-enforceable-under-north-carolina-681c794f {#medical-staffing-network-inc-v-ridgway-to-be-enforceable-under-north-carolina-681c794f}
@@ -42,5 +42,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `enforceable`, `restrictive-covenants-each-independently-includable`
 - source_cards: `nc-ridgway-five-factor`, `q1-ridgway-five-factor`
-- cited_by: [Non-Compete Agreement Review Checklist — North Carolina](../non-compete/north-carolina-review-checklist.md), [Non-Competes in North Carolina](../non-compete/north-carolina.md)
+- cited_by: [Non-Compete Agreement Review Checklist — North Carolina](../checklists/non-compete/north-carolina-review-checklist.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1156110/medical-staffing-network-inc-v-ridgway/#:~:text=To%20be%20enforceable%20under%20North,protect%20a%20legitimate%20business%20interest.>

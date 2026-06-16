@@ -12,7 +12,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/new-york-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/new-york'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/new-york'
 tags:
   - case-law
   - non-compete
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`, `new-york-doctrine-gates`
 - source_cards: `zellner-adequate-consideration-gate`, `zellner-consideration-required`
-- cited_by: [Non-Compete Agreement Review Checklist — New York](../non-compete/new-york-review-checklist.md), [Non-Competes in New York](../non-compete/new-york.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New York](../checklists/non-compete/new-york-review-checklist.md), [Non-Competes in New York](../non-compete/us/new-york.md)
 - link_to_source: <https://www.courtlistener.com/opinion/6084767/zellner-v-stephen-d-conrad-md-p-c/#:~:text=As%20with%20any%20contract%2C%20the,the%20part%20of%20the%20promisee.>
 
 ### zellner-v-stephen-d-conrad-m-d-p-c-because-in-at-will-employment-the-3f930261 {#zellner-v-stephen-d-conrad-m-d-p-c-because-in-at-will-employment-the-3f930261}
@@ -41,7 +41,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`, `timing-and-execution-acknowledgements`
 - source_cards: `zellner-forbearance`, `zellner-forbearance-consideration`
-- cited_by: [Non-Compete Agreement Review Checklist — New York](../non-compete/new-york-review-checklist.md), [Non-Competes in New York](../non-compete/new-york.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New York](../checklists/non-compete/new-york-review-checklist.md), [Non-Competes in New York](../non-compete/us/new-york.md)
 - link_to_source: <https://www.courtlistener.com/opinion/6084767/zellner-v-stephen-d-conrad-md-p-c/#:~:text=Because%20in%20at%2Dwill%20employment%20the,consideration%20for%20a%20restrictive%20covenant.>
 
 ### zellner-v-stephen-d-conrad-m-d-p-c-however-where-as-here-a-relationship-ae10120f {#zellner-v-stephen-d-conrad-m-d-p-c-however-where-as-here-a-relationship-ae10120f}
@@ -50,7 +50,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`, `new-york-doctrine-gates`, `timing-and-execution-acknowledgements`
 - source_cards: `zellner-substantial-period`, `zellner-substantial-period-gate`, `zellner-tenure-validates`
-- cited_by: [Non-Compete Agreement Review Checklist — New York](../non-compete/new-york-review-checklist.md), [Non-Competes in New York](../non-compete/new-york.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New York](../checklists/non-compete/new-york-review-checklist.md), [Non-Competes in New York](../non-compete/us/new-york.md)
 - link_to_source: <https://www.courtlistener.com/opinion/6084767/zellner-v-stephen-d-conrad-md-p-c/#:~:text=However%2C%20where%2C%20as%20here%2C%20a,for%20the%20promise%20is%20validated.>
 
 ### zellner-v-stephen-d-conrad-m-d-p-c-we-believe-however-that-at-will-aad3921c {#zellner-v-stephen-d-conrad-m-d-p-c-we-believe-however-that-at-will-aad3921c}
@@ -59,5 +59,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`
 - source_cards: `zellner-at-will-supports-covenant`
-- cited_by: [Non-Competes in New York](../non-compete/new-york.md)
+- cited_by: [Non-Competes in New York](../non-compete/us/new-york.md)
 - link_to_source: <https://www.courtlistener.com/opinion/6084767/zellner-v-stephen-d-conrad-md-p-c/#:~:text=We%20believe%2C%20however%2C%20that%20at%2Dwill,will%20support%20a%20restrictive%20covenant.>

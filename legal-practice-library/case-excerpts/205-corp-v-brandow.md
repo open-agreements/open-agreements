@@ -9,7 +9,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/iowa-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/iowa'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/iowa'
 tags:
   - case-law
   - non-compete
@@ -29,5 +29,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `iowa-statutory-gates`, `trade-secrets-confidentiality`
 - source_cards: `ia-brandow-gate`, `q11-brandow-nonpreemption`
-- cited_by: [Non-Compete Agreement Review Checklist — Iowa](../non-compete/iowa-review-checklist.md), [Non-Competes in Iowa](../non-compete/iowa.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Iowa](../checklists/non-compete/iowa-review-checklist.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1312295/205-corp-v-brandow/#:~:text=Chapter%20550%20has%20not%20preempted,tort%20theories%20involving%20trade%20secrets.>

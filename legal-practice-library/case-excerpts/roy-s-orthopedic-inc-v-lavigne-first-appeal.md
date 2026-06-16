@@ -11,7 +11,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/vermont-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/vermont'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/vermont'
 tags:
   - case-law
   - non-compete
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `reasonableness-test`, `vermont-statutory-gates`
 - source_cards: `roys-82-no-findings-on-place`, `roys-82-place-defs`, `roys-82-place-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — Vermont](../non-compete/vermont-review-checklist.md), [Non-Competes in Vermont](../non-compete/vermont.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Vermont](../checklists/non-compete/vermont-review-checklist.md), [Non-Competes in Vermont](../non-compete/us/vermont.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2367186/roys-orthopedic-inc-v-lavigne/#:~:text=the%20trial%20court%20concluded%20that%20the,was%20covered%20by%20the%20agreement.>

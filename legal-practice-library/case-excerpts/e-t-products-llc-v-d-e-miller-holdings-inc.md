@@ -12,7 +12,7 @@ resource: >-
 timestamp: '2026-06-03'
 document_references:
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/indiana'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/indiana'
 tags:
   - case-law
   - non-compete
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `sale-of-business`
 - source_cards: `etproducts-goodwill`
-- cited_by: [Non-Competes in Indiana](../non-compete/indiana.md)
+- cited_by: [Non-Competes in Indiana](../non-compete/us/indiana.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4427509/et-products-llc-v-de-miller-holdings-inc/#:~:text=Indiana%20courts%20recognize%20that%20in,receives%20that%20which%20he%20purchased.%22>

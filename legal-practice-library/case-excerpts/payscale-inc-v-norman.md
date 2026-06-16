@@ -14,7 +14,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/delaware-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/delaware'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/delaware'
 tags:
   - case-law
   - non-compete
@@ -34,7 +34,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `recent-developments`
 - source_cards: `payscale-recent-track`
-- cited_by: [Non-Competes in Delaware](../non-compete/delaware.md)
+- cited_by: [Non-Competes in Delaware](../non-compete/us/delaware.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10811247/payscale-inc-v-erin-norman-and-bettercomp-inc/#:~:text=Accordingly%2C%20the%20trial%20court%20erred,Norman%20breached%20the%20non%2Dcompete%20provision.>
 
 ### payscale-inc-v-norman-for-a-restrictive-covenant-l-egitimate-347287eb {#payscale-inc-v-norman-for-a-restrictive-covenant-l-egitimate-347287eb}
@@ -43,7 +43,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `delaware-statutory-gates`, `parties-and-cover-term-identification`, `reasonableness-test`
 - source_cards: `de-payscale-interests-cover`, `de-payscale-interests-def`, `de-payscale-interests-gate`, `payscale-legitimate-interests`
-- cited_by: [Non-Compete Agreement Review Checklist — Delaware](../non-compete/delaware-review-checklist.md), [Non-Competes in Delaware](../non-compete/delaware.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Delaware](../checklists/non-compete/delaware-review-checklist.md), [Non-Competes in Delaware](../non-compete/us/delaware.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10811247/payscale-inc-v-erin-norman-and-bettercomp-inc/#:~:text=For%20a%20restrictive%20covenant%2C%20%E2%80%9C%E2%80%98%5Bl%5Degitimate,employer%20confidential%20information%20from%20misuse.%E2%80%9D>
 
 ### payscale-inc-v-norman-payscale-alleges-that-the-non-compete-s-84b867c7 {#payscale-inc-v-norman-payscale-alleges-that-the-non-compete-s-84b867c7}
@@ -52,7 +52,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `reasonableness-test`, `restrictive-covenants-each-independently-includable`
 - source_cards: `de-payscale-pleaded-cov`, `de-payscale-pleaded-def`, `payscale-specific-interests-pleaded`
-- cited_by: [Non-Compete Agreement Review Checklist — Delaware](../non-compete/delaware-review-checklist.md), [Non-Competes in Delaware](../non-compete/delaware.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Delaware](../checklists/non-compete/delaware-review-checklist.md), [Non-Competes in Delaware](../non-compete/us/delaware.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10811247/payscale-inc-v-erin-norman-and-bettercomp-inc/#:~:text=Payscale%20alleges%20that%20the%20non%2Dcompete%E2%80%99s,Payscale%E2%80%99s%20%E2%80%9Cparticularly%20strong%20economic%20interest.%E2%80%9D>
 
 ### payscale-inc-v-norman-that-is-not-to-suggest-that-1d4e7bb5 {#payscale-inc-v-norman-that-is-not-to-suggest-that-1d4e7bb5}
@@ -61,5 +61,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`, `timing-and-execution-acknowledgements`
 - source_cards: `de-payscale-adequacy-timing`, `payscale-adequacy-equities`
-- cited_by: [Non-Compete Agreement Review Checklist — Delaware](../non-compete/delaware-review-checklist.md), [Non-Competes in Delaware](../non-compete/delaware.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Delaware](../checklists/non-compete/delaware-review-checklist.md), [Non-Competes in Delaware](../non-compete/us/delaware.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10811247/payscale-inc-v-erin-norman-and-bettercomp-inc/#:~:text=That%20is%20not%20to%20suggest,the%20consideration%20that%20supports%20it.>

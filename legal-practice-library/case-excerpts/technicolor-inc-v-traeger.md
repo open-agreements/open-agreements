@@ -9,7 +9,7 @@ resource: 'https://www.courtlistener.com/opinion/1175722/technicolor-inc-v-traeg
 timestamp: '2026-06-02'
 document_references:
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/hawaii'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/hawaii'
 tags:
   - case-law
   - non-compete
@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `protectable-interests`
 - source_cards: `interests-traeger-not-exclusive`
-- cited_by: [Non-Competes in Hawaii](../non-compete/hawaii.md)
+- cited_by: [Non-Competes in Hawaii](../non-compete/us/hawaii.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1175722/technicolor-inc-v-traeger/#:~:text=Our%20understanding%20of%20the%20above,exclusive%20in%20their%20respective%20fields.>
 
 ### technicolor-inc-v-traeger-this-reasonableness-analysis-is-done-by-b1b5241c {#technicolor-inc-v-traeger-this-reasonableness-analysis-is-done-by-b1b5241c}
@@ -38,5 +38,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`
 - source_cards: `narrowing-traeger-reasonableness-factors`
-- cited_by: [Non-Competes in Hawaii](../non-compete/hawaii.md)
+- cited_by: [Non-Competes in Hawaii](../non-compete/us/hawaii.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1175722/technicolor-inc-v-traeger/#:~:text=This%20%E2%80%9Creasonableness%20analysis%E2%80%9D%20is%20done,as%20a%20matter%20of%20fact.>

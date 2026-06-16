@@ -12,7 +12,7 @@ resource: >-
 timestamp: '2026-06-10'
 document_references:
   - type: Law Topic
-    resource: 'https://openagreements.org/legal/non-compete/us'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us'
 tags:
   - case-law
   - non-compete

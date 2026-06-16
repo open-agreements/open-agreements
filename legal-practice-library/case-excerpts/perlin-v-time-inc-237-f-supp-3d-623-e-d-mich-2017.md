@@ -9,7 +9,7 @@ resource: 'https://www.courtlistener.com/opinion/7324387/perlin-v-time-inc/'
 timestamp: '2026-06-11'
 document_references:
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/privacy/michigan'
+    resource: 'https://openagreements.org/practice-guides/privacy/us/michigan'
 tags:
   - case-law
   - privacy
@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `consumer-lawsuit`
 - source_cards: `q6-perlin-retroactivity`
-- cited_by: [Michigan Consumer Privacy Law](../privacy/michigan.md)
+- cited_by: [Michigan Consumer Privacy Law](../privacy/us/michigan.md)
 - link_to_source: <https://www.courtlistener.com/opinion/7324387/perlin-v-time-inc/#:~:text=Based%20on%20the%20first%2C%20third%2C,Bill%20490%20is%20not%20retroactive.>
 
 ### perlin-v-time-inc-237-f-supp-3d-623-e-d-mich-2017-senate-bill-490-became-effective-on-926220e1 {#perlin-v-time-inc-237-f-supp-3d-623-e-d-mich-2017-senate-bill-490-became-effective-on-926220e1}
@@ -38,5 +38,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `consumer-lawsuit`
 - source_cards: `q6-perlin-effective`
-- cited_by: [Michigan Consumer Privacy Law](../privacy/michigan.md)
+- cited_by: [Michigan Consumer Privacy Law](../privacy/us/michigan.md)
 - link_to_source: <https://www.courtlistener.com/opinion/7324387/perlin-v-time-inc/#:~:text=Senate%20Bill%20490%20became%20effective%20on%20July%2031%2C%202016.>

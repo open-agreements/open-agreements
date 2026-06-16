@@ -9,7 +9,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/georgia-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/georgia'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/georgia'
 tags:
   - case-law
   - non-compete
@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `employee-nonsolicit`, `georgia-statutory-gates`, `restrictive-covenants-each-independently-includable`
 - source_cards: `ga-beltpower-ambit`, `ga-beltpower-gate`, `q6-beltpower-grca`
-- cited_by: [Non-Compete Agreement Review Checklist — Georgia](../non-compete/georgia-review-checklist.md), [Non-Competes in Georgia](../non-compete/georgia.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Georgia](../checklists/non-compete/georgia-review-checklist.md), [Non-Competes in Georgia](../non-compete/us/georgia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4735721/belt-power-llc-v-steve-reed/#:~:text=Upon%20a%20close%20reading%20of,the%20ambit%20of%20the%20Act.>
 
 ### belt-power-llc-v-reed-we-nevertheless-conclude-that-the-trial-8b1fe808 {#belt-power-llc-v-reed-we-nevertheless-conclude-that-the-trial-8b1fe808}
@@ -38,5 +38,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `blue-pencil`, `severability-and-reformation`
 - source_cards: `ga-beltpower-decline-modify`, `q7-beltpower-modify`
-- cited_by: [Non-Compete Agreement Review Checklist — Georgia](../non-compete/georgia-review-checklist.md), [Non-Competes in Georgia](../non-compete/georgia.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Georgia](../checklists/non-compete/georgia-review-checklist.md), [Non-Competes in Georgia](../non-compete/us/georgia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4735721/belt-power-llc-v-steve-reed/#:~:text=We%20nevertheless%20conclude%20that%20the,the%20terms%20of%20the%20covenants.>

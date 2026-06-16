@@ -11,7 +11,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/virginia-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/virginia'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/virginia'
 tags:
   - case-law
   - non-compete
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `remedies`
 - source_cards: `assurance-data-evidence`, `assurance-data-factual-vacuum`
-- cited_by: [Non-Compete Agreement Review Checklist — Virginia](../non-compete/virginia-review-checklist.md), [Non-Competes in Virginia](../non-compete/virginia.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Virginia](../checklists/non-compete/virginia-review-checklist.md), [Non-Competes in Virginia](../non-compete/us/virginia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1057728/assurance-data-inc-v-malyevac/#:~:text=The%20premise%20running%20through%20Simmons%2C,unenforceable%20in%20a%20factual%20vacuum.>

@@ -14,7 +14,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/montana-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/montana'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/montana'
 tags:
   - case-law
   - non-compete
@@ -34,7 +34,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `termination-without-cause`
 - source_cards: `mt-wrigg-misconduct`, `wrigg-misconduct-exception`
-- cited_by: [Non-Compete Agreement Review Checklist — Montana](../non-compete/montana-review-checklist.md), [Non-Competes in Montana](../non-compete/montana.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Montana](../checklists/non-compete/montana-review-checklist.md), [Non-Competes in Montana](../non-compete/us/montana.md)
 - link_to_source: <https://www.courtlistener.com/opinion/889623/wrigg-v-junkermier-clark-campanella-stevens-pc/#:~:text=A%20court%20should%20analyze%20whether,employee%20with%20an%20unfair%20advantage.>
 
 ### wrigg-v-junkermier-clark-campanella-stevens-p-c-jccs-never-alleges-that-wrigg-acquired-8d1f40e3 {#wrigg-v-junkermier-clark-campanella-stevens-p-c-jccs-never-alleges-that-wrigg-acquired-8d1f40e3}
@@ -43,7 +43,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `termination-without-cause`
 - source_cards: `wrigg-trade-secret-analysis`
-- cited_by: [Non-Competes in Montana](../non-compete/montana.md)
+- cited_by: [Non-Competes in Montana](../non-compete/us/montana.md)
 - link_to_source: <https://www.courtlistener.com/opinion/889623/wrigg-v-junkermier-clark-campanella-stevens-pc/#:~:text=JCCS%20never%20alleges%20that%20Wrigg,accounting%20needs%20of%20JCCS%E2%80%99s%20clients.>
 
 ### wrigg-v-junkermier-clark-campanella-stevens-p-c-this-disfavor-only-heightens-when-an-84d40ac6 {#wrigg-v-junkermier-clark-campanella-stevens-p-c-this-disfavor-only-heightens-when-an-84d40ac6}
@@ -52,5 +52,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `notice-to-future-employers-and-other-third-parties`, `termination-without-cause`
 - source_cards: `mt-wrigg-notice`, `mt-wrigg-termination`, `wrigg-employer-termination`
-- cited_by: [Non-Compete Agreement Review Checklist — Montana](../non-compete/montana-review-checklist.md), [Non-Competes in Montana](../non-compete/montana.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Montana](../checklists/non-compete/montana-review-checklist.md), [Non-Competes in Montana](../non-compete/us/montana.md)
 - link_to_source: <https://www.courtlistener.com/opinion/889623/wrigg-v-junkermier-clark-campanella-stevens-pc/#:~:text=This%20disfavor%20only%20heightens%20when,the%20covenant%20not%20to%20compete.>

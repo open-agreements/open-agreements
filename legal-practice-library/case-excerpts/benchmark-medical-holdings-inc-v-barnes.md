@@ -14,7 +14,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/alabama-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/alabama'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/alabama'
 tags:
   - case-law
   - non-compete
@@ -34,7 +34,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `professional-exemption`, `restrictive-covenants-each-independently-includable`
 - source_cards: `benchmark-scope`, `benchmark-scope-cov`
-- cited_by: [Non-Compete Agreement Review Checklist — Alabama](../non-compete/alabama-review-checklist.md), [Non-Competes in Alabama](../non-compete/alabama.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Alabama](../checklists/non-compete/alabama-review-checklist.md), [Non-Competes in Alabama](../non-compete/us/alabama.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2438759/benchmark-medical-holdings-inc-v-barnes/#:~:text=A%20doctor%20is%2C%20instead%2C%20protected,receive%20the%20doctor's%20professional%20services.>
 
 ### benchmark-medical-holdings-inc-v-barnes-because-a-physical-therapist-as-a-a29c44cf {#benchmark-medical-holdings-inc-v-barnes-because-a-physical-therapist-as-a-a29c44cf}
@@ -43,5 +43,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `alabama-statutory-gates`, `physician-specific-notices-and-carve-outs`, `professional-exemption`
 - source_cards: `benchmark-pt`, `benchmark-pt-gate`, `benchmark-pt-physician`
-- cited_by: [Non-Compete Agreement Review Checklist — Alabama](../non-compete/alabama-review-checklist.md), [Non-Competes in Alabama](../non-compete/alabama.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Alabama](../checklists/non-compete/alabama-review-checklist.md), [Non-Competes in Alabama](../non-compete/us/alabama.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2438759/benchmark-medical-holdings-inc-v-barnes/#:~:text=Because%20a%20physical%20therapist%20as,not%20subject%20to%20non%2Dcompetition%20agreements.>

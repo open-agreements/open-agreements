@@ -9,7 +9,7 @@ resource: 'https://lawphil.net/judjuris/juri1994/nov1994/gr_112940_1994.html'
 timestamp: '2026-06-03'
 document_references:
   - type: Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/philippines'
+    resource: 'https://openagreements.org/practice-guides/non-compete/ph'
 tags:
   - case-law
   - non-compete
@@ -29,5 +29,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `which-court`
 - source_cards: `daichi-civil`
-- cited_by: [Non-Competes in the Philippines](../non-compete/philippines.md)
+- cited_by: [Non-Competes in the Philippines](../non-compete/ph.md)
 - link_to_source: <https://lawphil.net/judjuris/juri1994/nov1994/gr_112940_1994.html>

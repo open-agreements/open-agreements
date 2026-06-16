@@ -9,7 +9,7 @@ resource: 'https://www.courtlistener.com/opinion/9372460/tims-v-black-horse-carr
 timestamp: '2026-06-11'
 document_references:
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/privacy/illinois'
+    resource: 'https://openagreements.org/practice-guides/privacy/us/illinois'
 tags:
   - case-law
   - privacy
@@ -29,5 +29,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `bipa-lawsuit-exposure`
 - source_cards: `case-tims`
-- cited_by: [Illinois Consumer Privacy Law (BIPA)](../privacy/illinois.md)
+- cited_by: [Illinois Consumer Privacy Law (BIPA)](../privacy/us/illinois.md)
 - link_to_source: <https://www.courtlistener.com/opinion/9372460/tims-v-black-horse-carriers-inc/#:~:text=For%20the%20aforementioned%20reasons%2C%20we,controls%20claims%20under%20the%20Act.>

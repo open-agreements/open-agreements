@@ -5,7 +5,7 @@ description: >-
   How to structure retention bonuses for AI talent pressure, including Section
   409A timing, stay-or-pay limits, mobility law, M&A, and equity.
 resource: >-
-  https://openagreements.org/legal/ai-layoffs/retention-bonus-competitor-ai-pressure
+  https://openagreements.org/practice-guides/ai-layoffs/retention-bonus-competitor-ai-pressure
 timestamp: '2026-04-20'
 tags:
   - ai-layoffs

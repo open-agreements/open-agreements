@@ -10,7 +10,7 @@ resource: >-
 timestamp: '2026-06-03'
 document_references:
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/illinois'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/illinois'
 tags:
   - case-law
   - non-compete
@@ -30,5 +30,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `no-poach`
 - source_cards: `elite-nopoach`
-- cited_by: [Non-Competes in Illinois](../non-compete/illinois.md)
+- cited_by: [Non-Competes in Illinois](../non-compete/us/illinois.md)
 - link_to_source: <https://www.courtlistener.com/opinion/9467526/state-ex-rel-raoul-v-elite-staffing-inc/#:~:text=We%20hold%20that%20the%20Illinois,employment%20opportunities%20for%20their%20employees.>

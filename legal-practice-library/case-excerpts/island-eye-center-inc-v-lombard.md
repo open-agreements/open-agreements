@@ -7,7 +7,7 @@ resource: 'https://case-law.vlex.com/vid/island-eye-ctr-v-1039283384'
 timestamp: '2026-06-03'
 document_references:
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/guam'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/guam'
 tags:
   - case-law
   - non-compete
@@ -27,7 +27,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `non-solicitation`
 - source_cards: `q2-ie-facial`
-- cited_by: [Non-Competes in Guam](../non-compete/guam.md)
+- cited_by: [Non-Competes in Guam](../non-compete/us/guam.md)
 - link_to_source: <https://case-law.vlex.com/vid/island-eye-ctr-v-1039283384>
 
 ### island-eye-center-inc-v-lombard-california-courts-interpret-post-employm-13809918 {#island-eye-center-inc-v-lombard-california-courts-interpret-post-employm-13809918}
@@ -36,7 +36,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `non-solicitation`
 - source_cards: `q2-ie-postemp`
-- cited_by: [Non-Competes in Guam](../non-compete/guam.md)
+- cited_by: [Non-Competes in Guam](../non-compete/us/guam.md)
 - link_to_source: <https://case-law.vlex.com/vid/island-eye-ctr-v-1039283384>
 
 ### island-eye-center-inc-v-lombard-island-eye-concedes-that-employee-247135fb {#island-eye-center-inc-v-lombard-island-eye-concedes-that-employee-247135fb}
@@ -45,7 +45,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `non-solicitation`
 - source_cards: `q2-ie-concede`
-- cited_by: [Non-Competes in Guam](../non-compete/guam.md)
+- cited_by: [Non-Competes in Guam](../non-compete/us/guam.md)
 - link_to_source: <https://case-law.vlex.com/vid/island-eye-ctr-v-1039283384>
 
 ### island-eye-center-inc-v-lombard-our-statute-is-derived-from-california-31421202 {#island-eye-center-inc-v-lombard-our-statute-is-derived-from-california-31421202}
@@ -54,7 +54,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `employee-noncompetes`
 - source_cards: `ie-derived`
-- cited_by: [Non-Competes in Guam](../non-compete/guam.md)
+- cited_by: [Non-Competes in Guam](../non-compete/us/guam.md)
 - link_to_source: <https://case-law.vlex.com/vid/island-eye-ctr-v-1039283384>
 
 ### island-eye-center-inc-v-lombard-therefore-we-hold-that-section-88105-378cb126 {#island-eye-center-inc-v-lombard-therefore-we-hold-that-section-88105-378cb126}
@@ -63,7 +63,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `employee-noncompetes`
 - source_cards: `ie-policy`
-- cited_by: [Non-Competes in Guam](../non-compete/guam.md)
+- cited_by: [Non-Competes in Guam](../non-compete/us/guam.md)
 - link_to_source: <https://case-law.vlex.com/vid/island-eye-ctr-v-1039283384>
 
 ### island-eye-center-inc-v-lombard-therefore-we-hold-that-the-definition-dfc4f4c4 {#island-eye-center-inc-v-lombard-therefore-we-hold-that-the-definition-dfc4f4c4}
@@ -72,7 +72,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `trade-secrets`
 - source_cards: `q6-ie-tradesecret`
-- cited_by: [Non-Competes in Guam](../non-compete/guam.md)
+- cited_by: [Non-Competes in Guam](../non-compete/us/guam.md)
 - link_to_source: <https://case-law.vlex.com/vid/island-eye-ctr-v-1039283384>
 
 ### island-eye-center-inc-v-lombard-these-post-employment-terms-are-a76dd01b {#island-eye-center-inc-v-lombard-these-post-employment-terms-are-a76dd01b}
@@ -81,7 +81,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `employee-noncompetes`
 - source_cards: `ie-void-holding`
-- cited_by: [Non-Competes in Guam](../non-compete/guam.md)
+- cited_by: [Non-Competes in Guam](../non-compete/us/guam.md)
 - link_to_source: <https://case-law.vlex.com/vid/island-eye-ctr-v-1039283384>
 
 ### island-eye-center-inc-v-lombard-this-is-the-first-time-we-57db4321 {#island-eye-center-inc-v-lombard-this-is-the-first-time-we-57db4321}
@@ -90,7 +90,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `employee-noncompetes`
 - source_cards: `ie-first-time`
-- cited_by: [Non-Competes in Guam](../non-compete/guam.md)
+- cited_by: [Non-Competes in Guam](../non-compete/us/guam.md)
 - link_to_source: <https://case-law.vlex.com/vid/island-eye-ctr-v-1039283384>
 
 ### island-eye-center-inc-v-lombard-trade-secret-protection-should-be-a-81f46e80 {#island-eye-center-inc-v-lombard-trade-secret-protection-should-be-a-81f46e80}
@@ -99,5 +99,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `trade-secrets`
 - source_cards: `q6-ie-shield`
-- cited_by: [Non-Competes in Guam](../non-compete/guam.md)
+- cited_by: [Non-Competes in Guam](../non-compete/us/guam.md)
 - link_to_source: <https://case-law.vlex.com/vid/island-eye-ctr-v-1039283384>

@@ -4,7 +4,7 @@ slug: massachusetts
 countryCode: US
 snapshotAsOf: "2026-06-16"
 lastReviewed: "2026-06-12"
-canonicalUrl: https://openagreements.org/legal/privacy/massachusetts
+canonicalUrl: https://openagreements.org/practice-guides/privacy/us/massachusetts
 license: CC BY 4.0
 stale: false
 ---
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/privacy/massachusetts · **Snapshot as of:** 2026-06-16 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/massachusetts · **Snapshot as of:** 2026-06-16 · License: CC BY 4.0 · © openagreements.org
 
 # Massachusetts Consumer Privacy Law[^about]
 

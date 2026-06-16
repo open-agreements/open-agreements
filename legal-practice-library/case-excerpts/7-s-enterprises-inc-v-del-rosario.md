@@ -12,7 +12,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/hawaii-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/hawaii'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/hawaii'
 tags:
   - case-law
   - non-compete
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `sale-of-business`, `tolling`, `tolling-during-breach`
 - source_cards: `hi-tolling-scope`, `hi-traeger-scope-factors`, `sale-traeger-scope-factors`, `tolling-traeger-scope-factors`
-- cited_by: [Non-Compete Agreement Review Checklist — Hawaii](../non-compete/hawaii-review-checklist.md), [Non-Competes in Hawaii](../non-compete/hawaii.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Hawaii](../checklists/non-compete/hawaii-review-checklist.md), [Non-Competes in Hawaii](../non-compete/us/hawaii.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2626419/7s-enterprises-inc-v-del-rosario/#:~:text=A%20court%20%E2%80%9Cmust%20examine%20such,placed%20on%20a%20given%20activity.%E2%80%9D>
 
 ### 7-s-enterprises-inc-v-del-rosario-as-observed-in-traeger-courts-will-79ffe199 {#7-s-enterprises-inc-v-del-rosario-as-observed-in-traeger-courts-will-79ffe199}
@@ -41,7 +41,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `employee-noncompetes`, `hawaii-statutory-gates`, `sale-of-business`, `tolling`
 - source_cards: `employee-traeger-reasonableness-factors`, `hi-gate-reasonableness`, `hi-traeger-reasonableness`, `sale-traeger-reasonableness-factors`, `tolling-traeger-reasonableness-factors`
-- cited_by: [Non-Compete Agreement Review Checklist — Hawaii](../non-compete/hawaii-review-checklist.md), [Non-Competes in Hawaii](../non-compete/hawaii.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Hawaii](../checklists/non-compete/hawaii-review-checklist.md), [Non-Competes in Hawaii](../non-compete/us/hawaii.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2626419/7s-enterprises-inc-v-del-rosario/#:~:text=As%20observed%20in%20Traeger%2C%20courts,injury%20to%20the%20public.%E2%80%99%20%E2%80%9D>
 
 ### 7-s-enterprises-inc-v-del-rosario-hence-as-a-matter-of-law-bf02eef6 {#7-s-enterprises-inc-v-del-rosario-hence-as-a-matter-of-law-bf02eef6}
@@ -50,7 +50,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `employee-noncompetes`, `protectable-interests`
 - source_cards: `employee-del-rosario-special-training`, `hi-del-rosario-protectable`, `interests-del-rosario-special-training`
-- cited_by: [Non-Compete Agreement Review Checklist — Hawaii](../non-compete/hawaii-review-checklist.md), [Non-Competes in Hawaii](../non-compete/hawaii.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Hawaii](../checklists/non-compete/hawaii-review-checklist.md), [Non-Competes in Hawaii](../non-compete/us/hawaii.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2626419/7s-enterprises-inc-v-del-rosario/#:~:text=Hence%2C%20as%20a%20matter%20of,information%2C%20or%20special%20customer%20relationships.>
 
 ### 7-s-enterprises-inc-v-del-rosario-the-case-is-remanded-to-the-0f0045fe {#7-s-enterprises-inc-v-del-rosario-the-case-is-remanded-to-the-0f0045fe}
@@ -59,5 +59,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `definitions`, `severability-and-reformation`
 - source_cards: `hi-del-rosario-honolulu`, `hi-narrowing-honolulu`, `narrowing-del-rosario-honolulu-limit`
-- cited_by: [Non-Compete Agreement Review Checklist — Hawaii](../non-compete/hawaii-review-checklist.md), [Non-Competes in Hawaii](../non-compete/hawaii.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Hawaii](../checklists/non-compete/hawaii-review-checklist.md), [Non-Competes in Hawaii](../non-compete/us/hawaii.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2626419/7s-enterprises-inc-v-del-rosario/#:~:text=The%20case%20is%20remanded%20to,to%20the%20County%20of%20Honolulu.>

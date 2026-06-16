@@ -11,7 +11,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/idaho-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/idaho'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/idaho'
 tags:
   - case-law
   - non-compete
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `healthcare-providers`, `physician-specific-notices-and-carve-outs`
 - source_cards: `dick-public-welfare`, `idaho-dick-welfare-hc`
-- cited_by: [Non-Compete Agreement Review Checklist — Idaho](../non-compete/idaho-review-checklist.md), [Non-Competes in Idaho](../non-compete/idaho.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Idaho](../checklists/non-compete/idaho-review-checklist.md), [Non-Competes in Idaho](../non-compete/us/idaho.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1173077/dick-v-geist/#:~:text=It%20has%20been%20shown%2C%20in,Miles%20from%20practicing%20their%20specialty.>

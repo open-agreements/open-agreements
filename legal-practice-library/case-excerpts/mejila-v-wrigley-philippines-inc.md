@@ -11,7 +11,7 @@ resource: 'https://lawphil.net/judjuris/juri2019/sep2019/gr_199469_2019.html'
 timestamp: '2026-06-03'
 document_references:
   - type: Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/philippines'
+    resource: 'https://openagreements.org/practice-guides/non-compete/ph'
 tags:
   - case-law
   - non-compete
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `garden-leave`
 - source_cards: `mejila-garden-leave`
-- cited_by: [Non-Competes in the Philippines](../non-compete/philippines.md)
+- cited_by: [Non-Competes in the Philippines](../non-compete/ph.md)
 - link_to_source: <https://lawphil.net/judjuris/juri2019/sep2019/gr_199469_2019.html>

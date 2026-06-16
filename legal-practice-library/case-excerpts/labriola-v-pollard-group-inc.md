@@ -11,7 +11,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/washington-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/washington'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/washington'
 tags:
   - case-law
   - non-compete
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `disclosure-and-consideration`, `timing-and-execution-acknowledgements`
 - source_cards: `labriola-independent-consideration`, `wa-labriola-1`
-- cited_by: [Non-Compete Agreement Review Checklist — Washington](../non-compete/washington-review-checklist.md), [Non-Competes in Washington](../non-compete/washington.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Washington](../checklists/non-compete/washington-review-checklist.md), [Non-Competes in Washington](../non-compete/us/washington.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4908367/labriola-v-pollard-group-inc/#:~:text=A%20noncompete%20agreement%20entered%20into,time%20the%20agreement%20is%20reached.>
 
 ### labriola-v-pollard-group-inc-we-hold-that-continued-employment-in-662f8c92 {#labriola-v-pollard-group-inc-we-hold-that-continued-employment-in-662f8c92}
@@ -40,5 +40,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `disclosure-and-consideration`, `washington-statutory-gates`
 - source_cards: `labriola-continued-employment`, `wa-labriola-continued-g`
-- cited_by: [Non-Compete Agreement Review Checklist — Washington](../non-compete/washington-review-checklist.md), [Non-Competes in Washington](../non-compete/washington.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Washington](../checklists/non-compete/washington-review-checklist.md), [Non-Competes in Washington](../non-compete/us/washington.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4908367/labriola-v-pollard-group-inc/#:~:text=We%20hold%20that%20continued%20employment,Employee's%20promise%20not%20to%20compete.>

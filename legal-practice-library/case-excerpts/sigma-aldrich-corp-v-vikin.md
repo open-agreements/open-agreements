@@ -12,7 +12,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/missouri-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/missouri'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/missouri'
 tags:
   - case-law
   - non-compete
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-modification`, `severability-and-reformation`
 - source_cards: `mo-sigma-refusal`, `sigma-refused-modification`
-- cited_by: [Non-Compete Agreement Review Checklist — Missouri](../non-compete/missouri-review-checklist.md), [Non-Competes in Missouri](../non-compete/missouri.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Missouri](../checklists/non-compete/missouri-review-checklist.md), [Non-Competes in Missouri](../non-compete/us/missouri.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2741957/sigma-aldrich-corporation-v-omar-vikin/#:~:text=The%20trial%20court%20also%20did,refusing%20to%20modify%20the%20Agreement.>

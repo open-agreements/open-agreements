@@ -12,7 +12,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/north-dakota-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/north-dakota'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/north-dakota'
 tags:
   - case-law
   - non-compete
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `employee-nonsolicits`, `remedies`, `restrictive-covenants-each-independently-includable`
 - source_cards: `nd-pruco-evidence-defs`, `nd-pruco-injunction-rem`, `nd-pruco-proof-cov`, `pruco-no-clear-solicitation`
-- cited_by: [Non-Compete Agreement Review Checklist — North Dakota](../non-compete/north-dakota-review-checklist.md), [Non-Competes in North Dakota](../non-compete/north-dakota.md)
+- cited_by: [Non-Compete Agreement Review Checklist — North Dakota](../checklists/non-compete/north-dakota-review-checklist.md), [Non-Competes in North Dakota](../non-compete/us/north-dakota.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2507357/pruco-securities-corp-v-montgomery/#:~:text=Simply%20stated%2C%20the%20record%20at,follow%20him%20to%20Minnesota%20Life.>

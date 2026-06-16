@@ -11,7 +11,7 @@ resource: 'https://www.elitigation.sg/gdviewer/s/2007_SGCA_53'
 timestamp: '2026-06-03'
 document_references:
   - type: Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/singapore'
+    resource: 'https://openagreements.org/practice-guides/non-compete/sg'
 tags:
   - case-law
   - non-compete
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `employee-noncompetes`
 - source_cards: `mf-prima-facie-void`
-- cited_by: [Non-Competes in Singapore](../non-compete/singapore.md)
+- cited_by: [Non-Competes in Singapore](../non-compete/sg.md)
 - link_to_source: <https://www.elitigation.sg/gdviewer/s/2007_SGCA_53>
 
 ### man-financial-s-pte-ltd-v-wong-bark-chuan-david-but-an-employer-has-no-legitimate-1671b41a {#man-financial-s-pte-ltd-v-wong-bark-chuan-david-but-an-employer-has-no-legitimate-1671b41a}
@@ -40,7 +40,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `legitimate-interest`
 - source_cards: `mf-no-competition`
-- cited_by: [Non-Competes in Singapore](../non-compete/singapore.md)
+- cited_by: [Non-Competes in Singapore](../non-compete/sg.md)
 - link_to_source: <https://www.elitigation.sg/gdviewer/s/2007_SGCA_53>
 
 ### man-financial-s-pte-ltd-v-wong-bark-chuan-david-in-other-words-the-court-will-9713cee4 {#man-financial-s-pte-ltd-v-wong-bark-chuan-david-in-other-words-the-court-will-9713cee4}
@@ -49,7 +49,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`
 - source_cards: `mf-blue-pencil`
-- cited_by: [Non-Competes in Singapore](../non-compete/singapore.md)
+- cited_by: [Non-Competes in Singapore](../non-compete/sg.md)
 - link_to_source: <https://www.elitigation.sg/gdviewer/s/2007_SGCA_53>
 
 ### man-financial-s-pte-ltd-v-wong-bark-chuan-david-the-second-proprietary-interest-that-is-3677f672 {#man-financial-s-pte-ltd-v-wong-bark-chuan-david-the-second-proprietary-interest-that-is-3677f672}
@@ -58,7 +58,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `legitimate-interest`
 - source_cards: `mf-trade-connection`
-- cited_by: [Non-Competes in Singapore](../non-compete/singapore.md)
+- cited_by: [Non-Competes in Singapore](../non-compete/sg.md)
 - link_to_source: <https://www.elitigation.sg/gdviewer/s/2007_SGCA_53>
 
 ### man-financial-s-pte-ltd-v-wong-bark-chuan-david-there-must-always-and-this-d4030549 {#man-financial-s-pte-ltd-v-wong-bark-chuan-david-there-must-always-and-this-d4030549}
@@ -67,7 +67,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `employee-noncompetes`
 - source_cards: `mf-interest-required`
-- cited_by: [Non-Competes in Singapore](../non-compete/singapore.md)
+- cited_by: [Non-Competes in Singapore](../non-compete/sg.md)
 - link_to_source: <https://www.elitigation.sg/gdviewer/s/2007_SGCA_53>
 
 ### man-financial-s-pte-ltd-v-wong-bark-chuan-david-to-recapitulate-clause-c-1-must-be-d81da161 {#man-financial-s-pte-ltd-v-wong-bark-chuan-david-to-recapitulate-clause-c-1-must-be-d81da161}
@@ -76,5 +76,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `employee-noncompetes`
 - source_cards: `mf-parties-public`
-- cited_by: [Non-Competes in Singapore](../non-compete/singapore.md)
+- cited_by: [Non-Competes in Singapore](../non-compete/sg.md)
 - link_to_source: <https://www.elitigation.sg/gdviewer/s/2007_SGCA_53>

@@ -9,7 +9,7 @@ resource: 'https://www.elitigation.sg/gd/s/2010_SGCA_3'
 timestamp: '2026-06-03'
 document_references:
   - type: Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/singapore'
+    resource: 'https://openagreements.org/practice-guides/non-compete/sg'
 tags:
   - case-law
   - non-compete
@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `sale-of-business`
 - source_cards: `claas-no-further`
-- cited_by: [Non-Competes in Singapore](../non-compete/singapore.md)
+- cited_by: [Non-Competes in Singapore](../non-compete/sg.md)
 - link_to_source: <https://www.elitigation.sg/gd/s/2010_SGCA_3>
 
 ### claas-medical-centre-pte-ltd-v-ng-boon-ching-these-aforesaid-considerations-must-be-f193590c {#claas-medical-centre-pte-ltd-v-ng-boon-ching-these-aforesaid-considerations-must-be-f193590c}
@@ -38,7 +38,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `sale-of-business`
 - source_cards: `claas-three-year`
-- cited_by: [Non-Competes in Singapore](../non-compete/singapore.md)
+- cited_by: [Non-Competes in Singapore](../non-compete/sg.md)
 - link_to_source: <https://www.elitigation.sg/gd/s/2010_SGCA_3>
 
 ### claas-medical-centre-pte-ltd-v-ng-boon-ching-these-being-the-general-principles-f6d9f373 {#claas-medical-centre-pte-ltd-v-ng-boon-ching-these-being-the-general-principles-f6d9f373}
@@ -47,7 +47,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `sale-of-business`
 - source_cards: `claas-liberal`
-- cited_by: [Non-Competes in Singapore](../non-compete/singapore.md)
+- cited_by: [Non-Competes in Singapore](../non-compete/sg.md)
 - link_to_source: <https://www.elitigation.sg/gd/s/2010_SGCA_3>
 
 ### claas-medical-centre-pte-ltd-v-ng-boon-ching-where-parties-stipulate-in-a-contract-58e7a40b {#claas-medical-centre-pte-ltd-v-ng-boon-ching-where-parties-stipulate-in-a-contract-58e7a40b}
@@ -56,5 +56,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `sale-of-business`
 - source_cards: `claas-liquidated`
-- cited_by: [Non-Competes in Singapore](../non-compete/singapore.md)
+- cited_by: [Non-Competes in Singapore](../non-compete/sg.md)
 - link_to_source: <https://www.elitigation.sg/gd/s/2010_SGCA_3>

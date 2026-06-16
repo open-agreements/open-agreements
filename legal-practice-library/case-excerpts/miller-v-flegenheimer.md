@@ -12,7 +12,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/vermont-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/vermont'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/vermont'
 tags:
   - case-law
   - non-compete
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `alternatives`, `assignment-and-successors`, `entire-agreement-amendment-waiver-e-signatures`, `parties-and-cover-term-identification`, `sale-of-business`, `vermont-statutory-gates`
 - source_cards: `alternatives-miller-sale-term-open`, `miller-distinct-term-assignment`, `miller-distinct-term-parties`, `miller-gate`, `miller-non-compete-not-essential`, `miller-open-terms-formation`
-- cited_by: [Non-Compete Agreement Review Checklist — Vermont](../non-compete/vermont-review-checklist.md), [Non-Competes in Vermont](../non-compete/vermont.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Vermont](../checklists/non-compete/vermont-review-checklist.md), [Non-Competes in Vermont](../non-compete/us/vermont.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4328779/kenneth-w-miller-ii-v-eric-flegenheimer/#:~:text=whether%20or%20not%20the%20contract,structure%20of%20the%20claw%2Dback%20provision.>

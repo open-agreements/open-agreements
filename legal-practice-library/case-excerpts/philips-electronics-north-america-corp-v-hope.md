@@ -13,7 +13,7 @@ document_references:
     resource: >-
       https://openagreements.org/legal/non-compete/north-carolina-review-checklist
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/north-carolina'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/north-carolina'
 tags:
   - case-law
   - non-compete
@@ -33,7 +33,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `tolling`, `tolling-during-breach`
 - source_cards: `nc-philips-valid`, `q7-philips-valid`
-- cited_by: [Non-Compete Agreement Review Checklist — North Carolina](../non-compete/north-carolina-review-checklist.md), [Non-Competes in North Carolina](../non-compete/north-carolina.md)
+- cited_by: [Non-Compete Agreement Review Checklist — North Carolina](../checklists/non-compete/north-carolina-review-checklist.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2579285/philips-electronics-north-america-corp-v-hope/#:~:text=Such%20tolling%20provisions%20appear%20to,valid%20under%20North%20Carolina%20law.>
 
 ### philips-electronics-north-america-corp-v-hope-thus-the-expiration-of-the-111e4b8c {#philips-electronics-north-america-corp-v-hope-thus-the-expiration-of-the-111e4b8c}
@@ -42,5 +42,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `tolling`
 - source_cards: `q7-philips-tolled`
-- cited_by: [Non-Competes in North Carolina](../non-compete/north-carolina.md)
+- cited_by: [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2579285/philips-electronics-north-america-corp-v-hope/#:~:text=Thus%2C%20the%20expiration%20of%20the,months%2C%20until%20April%209%2C%202010.>

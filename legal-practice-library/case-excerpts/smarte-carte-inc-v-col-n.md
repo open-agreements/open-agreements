@@ -9,7 +9,7 @@ resource: 'https://www.courtlistener.com/opinion/2527549/smarte-carte-inc-v-colo
 timestamp: '2026-06-02'
 document_references:
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/puerto-rico'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/puerto-rico'
 tags:
   - case-law
   - non-compete
@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `reasonableness-requirements`
 - source_cards: `sc-elements`
-- cited_by: [Non-Competes in Puerto Rico](../non-compete/puerto-rico.md)
+- cited_by: [Non-Competes in Puerto Rico](../non-compete/us/puerto-rico.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2527549/smarte-carte-inc-v-colon/#:~:text=The%20elements%20of%20a%20valid,covenants%20must%20be%20in%20writing.>
 
 ### smarte-carte-inc-v-col-n-this-invalidation-is-strictly-enforced-fb4f7315 {#smarte-carte-inc-v-col-n-this-invalidation-is-strictly-enforced-fb4f7315}
@@ -38,5 +38,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`
 - source_cards: `sc-noreform`
-- cited_by: [Non-Competes in Puerto Rico](../non-compete/puerto-rico.md)
+- cited_by: [Non-Competes in Puerto Rico](../non-compete/us/puerto-rico.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2527549/smarte-carte-inc-v-colon/#:~:text=This%20invalidation%20is%20strictly%20enforced%2C,order%20to%20modify%20the%20provision.>

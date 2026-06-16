@@ -9,7 +9,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/maryland-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/maryland'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/maryland'
 tags:
   - case-law
   - non-compete
@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `employee-noncompetes`, `healthcare-high-earners`, `maryland-statutory-gates`, `restrictive-covenants-each-independently-includable`, `tolling-during-breach`, `tolling-extension`
 - source_cards: `becker-general-rule`, `becker-highearner-reasonableness`, `becker-reasonableness-backdrop`, `md-becker-general-rule`, `md-becker-highearner-gate`, `md-becker-reasonableness-backdrop`
-- cited_by: [Non-Compete Agreement Review Checklist — Maryland](../non-compete/maryland-review-checklist.md), [Non-Competes in Maryland](../non-compete/maryland.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Maryland](../checklists/non-compete/maryland-review-checklist.md), [Non-Competes in Maryland](../non-compete/us/maryland.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2322561/becker-v-bailey/#:~:text=The%20general%20rule%20in%20Maryland,the%20interests%20of%20the%20public.%E2%80%9D>
 
 ### becker-v-bailey-these-decisions-demonstrate-that-f1edf270 {#becker-v-bailey-these-decisions-demonstrate-that-f1edf270}
@@ -38,5 +38,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `protectable-interests`
 - source_cards: `becker-protectable-interests`, `md-becker-protectable-interests`
-- cited_by: [Non-Compete Agreement Review Checklist — Maryland](../non-compete/maryland-review-checklist.md), [Non-Competes in Maryland](../non-compete/maryland.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Maryland](../checklists/non-compete/maryland-review-checklist.md), [Non-Competes in Maryland](../non-compete/us/maryland.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2322561/becker-v-bailey/#:~:text=These%20decisions%20demonstrate%20that%20Maryland,clients%2C%20or%20solicitation%20of%20customers.>

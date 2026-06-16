@@ -11,7 +11,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/iowa-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/iowa'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/iowa'
 tags:
   - case-law
   - non-compete
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `reasonableness-test`, `restrictive-covenants-each-independently-includable`
 - source_cards: `ia-lamp-test`, `q2-lamp-three-prong`
-- cited_by: [Non-Compete Agreement Review Checklist — Iowa](../non-compete/iowa-review-checklist.md), [Non-Competes in Iowa](../non-compete/iowa.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Iowa](../checklists/non-compete/iowa-review-checklist.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1601399/lamp-v-american-prosthetics-inc/#:~:text=Because%20this%20case%20was%20tried,prejudicial%20to%20the%20public%20interest%3F>

@@ -4,7 +4,7 @@ title: Adverse-action procedures when AI drives the decision
 description: >-
   FCRA and state adverse-action rules for AI hiring decisions, including
   notices, vendor CRA status, auto-reject screens, and explanations.
-resource: 'https://openagreements.org/legal/ai-hiring/adverse-action-ai-driven'
+resource: 'https://openagreements.org/practice-guides/ai-hiring/adverse-action-ai-driven'
 timestamp: '2026-04-19'
 tags:
   - ai-hiring

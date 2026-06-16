@@ -12,7 +12,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/arkansas-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/arkansas'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/arkansas'
 tags:
   - case-law
   - non-compete
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-reformation`, `severability-and-reformation`
 - source_cards: `bendinger-valid-as-written`, `q5-bendinger-no-rewrite`
-- cited_by: [Non-Compete Agreement Review Checklist — Arkansas](../non-compete/arkansas-review-checklist.md), [Non-Competes in Arkansas](../non-compete/arkansas.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Arkansas](../checklists/non-compete/arkansas-review-checklist.md), [Non-Competes in Arkansas](../non-compete/us/arkansas.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2454655/bendinger-v-marshalltown-trowell-co/#:~:text=The%20court%20has%20held%20that,it%20might%20be%20considered%20reasonable.>
 
 ### bendinger-v-marshalltown-trowel-co-we-hold-that-the-failure-of-eb69a922 {#bendinger-v-marshalltown-trowel-co-we-hold-that-the-failure-of-eb69a922}
@@ -41,7 +41,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `geographic-limit`
 - source_cards: `q3-bendinger-geography`
-- cited_by: [Non-Competes in Arkansas](../non-compete/arkansas.md)
+- cited_by: [Non-Competes in Arkansas](../non-compete/us/arkansas.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2454655/bendinger-v-marshalltown-trowell-co/#:~:text=We%20hold%20that%20the%20failure,this%20case%20renders%20it%20overbroad.>
 
 ### bendinger-v-marshalltown-trowel-co-we-next-turn-to-marshalltown-s-11c531e0 {#bendinger-v-marshalltown-trowel-co-we-next-turn-to-marshalltown-s-11c531e0}
@@ -50,5 +50,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `related-covenants`
 - source_cards: `q10-bendinger-trade-secrets`
-- cited_by: [Non-Competes in Arkansas](../non-compete/arkansas.md)
+- cited_by: [Non-Competes in Arkansas](../non-compete/us/arkansas.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2454655/bendinger-v-marshalltown-trowell-co/#:~:text=We%20next%20turn%20to%20Marshalltown%E2%80%99s,to%20enforce%20the%20restrictive%20covenant.>

@@ -14,7 +14,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/arkansas-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/arkansas'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/arkansas'
 tags:
   - case-law
   - non-compete
@@ -34,7 +34,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `injunction-remedies`
 - source_cards: `q9-porters-after-2015`
-- cited_by: [Non-Competes in Arkansas](../non-compete/arkansas.md)
+- cited_by: [Non-Competes in Arkansas](../non-compete/us/arkansas.md)
 - link_to_source: <https://www.courtlistener.com/opinion/9490284/porters-commercial-refrigeration-inc-v-danny-a-brewer-jason-spears/#:~:text=The%20grounds%20for%20establishing%20the,noncompete%20agreements%20executed%20after%202015.>
 
 ### porter-s-commercial-refrigeration-inc-v-brewer-this-means-that-a-party-seeking-c8dcf15c {#porter-s-commercial-refrigeration-inc-v-brewer-this-means-that-a-party-seeking-c8dcf15c}
@@ -43,5 +43,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `injunction-remedies`, `remedies`
 - source_cards: `porters-statutory-harm`, `q9-porters-statutory-harm`
-- cited_by: [Non-Compete Agreement Review Checklist — Arkansas](../non-compete/arkansas-review-checklist.md), [Non-Competes in Arkansas](../non-compete/arkansas.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Arkansas](../checklists/non-compete/arkansas-review-checklist.md), [Non-Competes in Arkansas](../non-compete/us/arkansas.md)
 - link_to_source: <https://www.courtlistener.com/opinion/9490284/porters-commercial-refrigeration-inc-v-danny-a-brewer-jason-spears/#:~:text=This%20means%20that%20a%20party,a%20breach%20of%20the%20noncompete.>

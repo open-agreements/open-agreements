@@ -4,7 +4,8 @@ title: Business rationale documentation for AI-driven layoffs
 description: >-
   How to document the business rationale for AI-driven layoffs, including
   decisional units, selection records, privileged review, and public statements.
-resource: 'https://openagreements.org/legal/ai-layoffs/business-rationale-documentation'
+resource: >-
+  https://openagreements.org/practice-guides/ai-layoffs/business-rationale-documentation
 timestamp: '2026-04-19'
 tags:
   - ai-layoffs

@@ -12,7 +12,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/michigan-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/michigan'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/michigan'
 tags:
   - case-law
   - non-compete
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `choice-of-law-forum`, `governing-law-venue-dispute-process`
 - source_cards: `barshaw-michigan-forum-law`, `mi-barshaw-forum`
-- cited_by: [Non-Compete Agreement Review Checklist — Michigan](../non-compete/michigan-review-checklist.md), [Non-Competes in Michigan](../non-compete/michigan.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Michigan](../checklists/non-compete/michigan-review-checklist.md), [Non-Competes in Michigan](../non-compete/us/michigan.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4833431/steven-barshaw-v-allegheny-performance-plastics-llc/#:~:text=Hence%2C%20in%20the%20absence%20of,effect%20of%20the%20forum%2Dselection%20clause.>

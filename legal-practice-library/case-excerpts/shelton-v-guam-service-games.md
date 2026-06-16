@@ -10,7 +10,7 @@ resource: >-
 timestamp: '2026-06-03'
 document_references:
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/guam'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/guam'
 tags:
   - case-law
   - non-compete
@@ -30,7 +30,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `sale-of-business`
 - source_cards: `shelton-goodwill`
-- cited_by: [Non-Competes in Guam](../non-compete/guam.md)
+- cited_by: [Non-Competes in Guam](../non-compete/us/guam.md)
 - link_to_source: <https://www.courtlistener.com/opinion/241093/austin-j-shelton-v-guam-service-games-a-copartnership/#:~:text=By%20no%20theory%20could%20it,or%20any%20major%20portion%20thereof.>
 
 ### shelton-v-guam-service-games-since-this-agreement-attempted-to-make-70e028b1 {#shelton-v-guam-service-games-since-this-agreement-attempted-to-make-70e028b1}
@@ -39,5 +39,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `employee-noncompetes`
 - source_cards: `shelton-void`
-- cited_by: [Non-Competes in Guam](../non-compete/guam.md)
+- cited_by: [Non-Competes in Guam](../non-compete/us/guam.md)
 - link_to_source: <https://www.courtlistener.com/opinion/241093/austin-j-shelton-v-guam-service-games-a-copartnership/#:~:text=Since%20this%20agreement%20attempted%20to,is%20to%20that%20extent%20void.>
