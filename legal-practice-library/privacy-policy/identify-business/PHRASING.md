@@ -14,7 +14,7 @@ tags:
 
 # Identify business — example phrasings
 
-Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://openagreements.org/legal/privacy/us#what-the-policy-must-say). 12 conforming exemplar(s) plus contrast cases, mined from the public privacy-policy corpus and labeled by the detector. Excerpts are the detector-matched (normalized) spans of each source policy.
+Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://openagreements.org/legal/privacy/us#what-the-policy-must-say). 12 conforming exemplar(s) plus contrast cases, mined from the public privacy-policy corpus and labeled by the detector. Each excerpt is the span the detector matched, quoted verbatim from the source policy (whitespace normalized) where the original text could be recovered (#758), otherwise the detector's normalized span.
 
 ## Example phrasings
 
@@ -50,7 +50,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 
 ### AECOM {#aecom}
 
-> questions regarding this notice or general privacy-related questions or concerns related to your "personal data" should be addressed to the aecom privacy office at: privacyquestions@aecom.com
+> questions regarding this Notice or general privacy-related questions or concerns related to your “Personal Data” should be addressed to the AECOM Privacy Office at: privacyquestions@aecom.com
 
 - conformance: conforming
 - source: [AECOM](https://aecom.com/en-ca/privacy-policy/)
@@ -60,7 +60,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 
 ### AES {#aes}
 
-> contact us if you have questions or comments regarding this policy or our privacy practices, please contact us at: privacy office 4300 wilson blvd
+> Contact Us If you have questions or comments regarding this Policy or our privacy practices, please contact us at: Privacy Office 4300 Wilson Blvd
 
 - conformance: conforming
 - source: [AES](https://aes.com/privacy-policy)
@@ -80,7 +80,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 
 ### APA {#apa}
 
-> questions regarding this privacy policy, you may write to us at: apa corporation attn: legal department 2000 post oak blvd
+> questions regarding this privacy policy, you may write to us at: APA Corporation Attn: Legal Department 2000 Post Oak Blvd
 
 - conformance: conforming
 - source: [APA](https://apacorp.com/privacy)
@@ -100,7 +100,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 
 ### AbbVie {#abbvie}
 
-> contact and other personal information to send you marketing information. instructions on how you can opt-out from marketing communications are included in each marketing communication you receive. you can also email us atprivacyoffice@abbvie.com
+> contact and other Personal Information to send you marketing information. Instructions on how you can opt-out from marketing communications are included in each marketing communication you receive. You can also email us atprivacyoffice@abbvie.com
 
 - conformance: conforming
 - source: [AbbVie](https://privacy-id.abbvie.com/abbvie-id/)
@@ -110,7 +110,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 
 ### Abbott Laboratories {#abbott-laboratories}
 
-> questions about your personal information, please contact us by clicking on the "contact us" link on the website you are visiting or by emailing us at privacy@abbott.com
+> questions about your Personal Information, please contact us by clicking on the “Contact Us” link on the website you are visiting or by emailing us at privacy@abbott.com
 
 - conformance: conforming
 - source: [Abbott Laboratories](https://abbott.com/privacy-policy)
@@ -120,7 +120,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 
 ### Adobe {#adobe}
 
-> contact with questions or concerns? if you have a privacy question, concern, or request, please fill out a privacy inquiry form. if you are outside north america, you can also get in touch with adobe ireland's data protection officer at dpo@adobe.com
+> contact with questions or concerns? If you have a privacy question, concern, or request, please fill out a privacy inquiry form. If you are outside North America, you can also get in touch with Adobe Ireland's data protection officer at DPO@Adobe.com
 
 - conformance: conforming
 - source: [Adobe](https://www.adobe.com/privacy/policy.html)
@@ -130,7 +130,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 
 ### Advanced Micro Devices {#advanced-micro-devices}
 
-> contact the communication preference centre. - data protection officer ("dpo"): we have appointed a dpo in germany who may be contacted for information relating to that jurisdiction at privacy.germany@amd.com
+> contact the Communication Preference Centre. - Data Protection Officer (“DPO”): We have appointed a DPO in Germany who may be contacted for information relating to that jurisdiction at privacy.germany@amd.com
 
 - conformance: conforming
 - source: [Advanced Micro Devices](https://www.amd.com/en/legal/privacy.html)
@@ -140,7 +140,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 
 ### Ace Hardware {#ace-hardware}
 
-> contact customer care at
+> contact Customer Care at
 
 - conformance: partial
 - source: [Ace Hardware](https://www.acehardware.com/privacy/california)
@@ -150,7 +150,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 
 ### Albertsons {#albertsons}
 
-> contact us
+> Contact Us
 
 - conformance: partial
 - source: [Albertsons](https://www.albertsonscompanies.com/policies-and-disclosures/privacy-policy/default.aspx)
@@ -160,7 +160,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 
 ### Ally Financial {#ally-financial}
 
-> questions about personal information you provided on an ally website, select the "contact us
+> questions about personal information you provided on an Ally website, select the "Contact Us
 
 - conformance: partial
 - source: [Ally Financial](https://ally.com/privacy)
