@@ -14,13 +14,13 @@ tags:
 
 # Disclose rights catalog — example phrasings
 
-Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](https://openagreements.org/legal/privacy/us#consumer-rights-disclosures). 12 conforming exemplar(s) plus contrast cases, mined from the public privacy-policy corpus and labeled by the detector. Excerpts are the detector-matched (normalized) spans of each source policy.
+Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](https://openagreements.org/legal/privacy/us#consumer-rights-disclosures). 12 conforming exemplar(s) plus contrast cases, mined from the public privacy-policy corpus and labeled by the detector. Each excerpt is the span the detector matched, quoted verbatim from the source policy (whitespace normalized) where the original text could be recovered (#758), otherwise the detector's normalized span.
 
 ## Example phrasings
 
 ### 3M {#3m}
 
-> your rights subject to certain conditions and exceptions, and depending on the applicable laws in your jurisdiction, you may have the right to make the following requests with respect to your personal data, free of charge.. we will not discriminate against you for exercising any of your rights.. access / copy you may request (i) to access your personal data
+> Your Rights Subject to certain conditions and exceptions, and depending on the applicable laws in your jurisdiction, you may have the right to make the following requests with respect to your Personal Data, free of charge … We will not discriminate against you for exercising any of your rights … Access / Copy You may request (i) to access your Personal Data
 
 - conformance: conforming
 - source: [3M](https://www.3m.com/3M/en_US/company-us/privacy-policy/)
@@ -30,7 +30,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 
 ### A-Mark Precious Metals {#a-mark-precious-metals}
 
-> right to deny any requests made pursuant to the rights listed below if the law does not allow or require us to comply with them.your privacy rightsdata subject requests.. you may have the right to (1) request to know more about the categories and specific pieces of personal data
+> right to deny any requests made pursuant to the rights listed below if the law does not allow or require us to comply with them.Your Privacy RightsData Subject Requests … You may have the right to (1) request to know more about the categories and specific pieces of Personal Data
 
 - conformance: conforming
 - source: [A-Mark Precious Metals](https://amark.com/privacy)
@@ -40,7 +40,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 
 ### AECOM {#aecom}
 
-> right to request access.. you have the right to request aecom for copies of your personal data
+> right to request access … You have the right to request AECOM for copies of your Personal Data
 
 - conformance: conforming
 - source: [AECOM](https://aecom.com/en-ca/privacy-policy/)
@@ -50,7 +50,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 
 ### AES {#aes}
 
-> right to request the deletion of your personal information that we have collected;the right to request the correction of your personal information that we collected;the right to opt-out of targeted advertising
+> right to request the deletion of your personal information that we have collected;The right to request the correction of your personal information that we collected;The right to opt-out of targeted advertising
 
 - conformance: conforming
 - source: [AES](https://aes.com/privacy-policy)
@@ -60,7 +60,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 
 ### AGCO {#agco}
 
-> your rights as noted in the statement, you have certain rights under the privacy act 2020 in new zealand.. you may request access to any personal data
+> Your Rights As noted in the Statement, you have certain rights under the Privacy Act 2020 in New Zealand … You may request access to any Personal Data
 
 - conformance: conforming
 - source: [AGCO](https://www.agcocorp.com/int/en/home/privacy-center/privacy-statement/privacy-statement-en.html)
@@ -80,7 +80,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 
 ### AT&T {#at-t}
 
-> you have the right to opt-out of our disclosing your information
+> You have the right to opt-out of our disclosing your information
 
 - conformance: conforming
 - source: [AT&T](https://about.att.com/ecms/dam/csr/privacy-redesign/ATT_Privacy_Policy-220606.pdf)
@@ -90,7 +90,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 
 ### AbbVie {#abbvie}
 
-> your rights, you may lose access to certain aspects of abbvie services that require your personal information
+> your rights, you may lose access to certain aspects of AbbVie Services that require your Personal Information
 
 - conformance: conforming
 - source: [AbbVie](https://privacy-id.abbvie.com/abbvie-id/)
@@ -100,7 +100,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 
 ### Abbott Laboratories {#abbott-laboratories}
 
-> your privacy rights and choices depending on where you reside, you may have certain rights and choices (with certain limitations and exceptions) regarding our processing of your personal information.. please note that some of these rights may vary depending on your state of residence and whether your state has an applicable u.s.. state privacy law.. you may have the right to opt-out of the "sale" of your personal information
+> Your Privacy Rights And Choices Depending on where you reside, you may have certain rights and choices (with certain limitations and exceptions) regarding our processing of your Personal Information … Please note that some of these rights may vary depending on your state of residence and whether your state has an applicable U.S … State Privacy Law … You may have the right to opt-out of the “sale” of your Personal Information
 
 - conformance: conforming
 - source: [Abbott Laboratories](https://abbott.com/privacy-policy)
@@ -110,7 +110,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 
 ### Ace Hardware {#ace-hardware}
 
-> right to opt out of sales and sharing section below.. we do not sell or share sensitive personal information
+> Right to Opt Out of Sales and Sharing section below … We do not sell or share sensitive personal information
 
 - conformance: conforming
 - source: [Ace Hardware](https://www.acehardware.com/privacy/california)
@@ -130,7 +130,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 
 ### Advanced Micro Devices {#advanced-micro-devices}
 
-> your privacy rights certain jurisdictions have specific legal requirements and grant privacy rights with respect to personal information, and we will comply with restrictions and any requests you submit as required by applicable law.. for example, you may have the right to review, correct, and delete personal information
+> Your Privacy Rights Certain jurisdictions have specific legal requirements and grant privacy rights with respect to personal information, and we will comply with restrictions and any requests you submit as required by applicable law … For example, you may have the right to review, correct, and delete personal information
 
 - conformance: conforming
 - source: [Advanced Micro Devices](https://www.amd.com/en/legal/privacy.html)
@@ -140,7 +140,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 
 ### Bank of America {#bank-of-america}
 
-> your rights and obligations with regard to such content.. we may allow social share buttons ("widgets") on our sites that enable users to easily share information on social media platforms.. the non-affiliated third parties that own these widgets may have access
+> your rights and obligations with regard to such content … We may allow social share buttons ("widgets") on our sites that enable users to easily share information on social media platforms … The non-affiliated third parties that own these widgets may have access
 
 - conformance: partial
 - source: [Bank of America](https://bankofamerica.com/privacy)
@@ -160,7 +160,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 
 ### Boston Scientific {#boston-scientific}
 
-> your rights request, including your name, email address, phone number, and the nature of your request.. verification process.. we are required to verify your identity, your right to access
+> your rights request, including your name, email address, phone number, and the nature of your request … Verification Process … We are required to verify your identity, your right to access
 
 - conformance: partial
 - source: [Boston Scientific](https://bostonscientific.com/privacy)
