@@ -2,7 +2,7 @@
 jurisdiction: "Oregon"
 slug: oregon
 countryCode: US
-snapshotAsOf: "2026-06-15"
+snapshotAsOf: "2026-06-16"
 lastReviewed: "2026-06-05"
 canonicalUrl: https://openagreements.org/legal/privacy/oregon
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/privacy/oregon · **Snapshot as of:** 2026-06-15 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/legal/privacy/oregon · **Snapshot as of:** 2026-06-16 · License: CC BY 4.0 · © openagreements.org
 
 # Oregon Consumer Privacy Law (OCPA)[^about]
 
