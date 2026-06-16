@@ -9,8 +9,7 @@ resource: 'https://www.courtlistener.com/opinion/1896769/syncom-industries-inc-v
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: >-
-      https://openagreements.org/legal/non-compete/new-hampshire-review-checklist
+    resource: 'https://openagreements.org/checklists/non-compete/us/new-hampshire'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/new-hampshire'
 tags:
@@ -41,5 +40,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-reformation`, `severability-and-reformation`, `timing-and-execution-acknowledgements`
 - source_cards: `nh-syncom-bad-faith`, `nh-syncom-reformation-bad-faith`, `syncom-bad-faith-reformation`
-- cited_by: [Non-Compete Agreement Review Checklist — New Hampshire](../checklists/non-compete/new-hampshire-review-checklist.md), [Non-Competes in New Hampshire](../non-compete/us/new-hampshire.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New Hampshire](../checklists/non-compete/us/new-hampshire.md), [Non-Competes in New Hampshire](../non-compete/us/new-hampshire.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1896769/syncom-industries-inc-v-wood/#:~:text=If%20the%20trial%20court%20were,to%20further%20address%20their%20enforceability.>

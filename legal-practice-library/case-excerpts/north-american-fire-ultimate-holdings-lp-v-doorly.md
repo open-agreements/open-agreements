@@ -12,7 +12,7 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/delaware-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/delaware'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/delaware'
 tags:
@@ -43,5 +43,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`, `parties-and-cover-term-identification`, `timing-and-execution-acknowledgements`
 - source_cards: `de-doorly-formation-cover`, `de-doorly-formation-timing`, `doorly-not-reevaluated`
-- cited_by: [Non-Compete Agreement Review Checklist — Delaware](../checklists/non-compete/delaware-review-checklist.md), [Non-Competes in Delaware](../non-compete/us/delaware.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Delaware](../checklists/non-compete/us/delaware.md), [Non-Competes in Delaware](../non-compete/us/delaware.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10783312/north-american-fire-ultimate-holdings-lp-v-alan-doorly/#:~:text=Consideration%20is%20measured%20at%20the%20time%20of%20formation,at%20the%20time%20of%20enforcement.>

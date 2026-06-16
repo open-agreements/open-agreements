@@ -9,7 +9,7 @@ resource: 'https://www.ca5.uscourts.gov/opinions/unpub/21/21-30293.0.pdf'
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/louisiana-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/louisiana'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/louisiana'
 tags:
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `louisiana-statutory-gates`, `prospective-employee`, `timing-and-execution-acknowledgements`
 - source_cards: `la-rouses-gate`, `la-rouses-timing`, `rouses-prospective`
-- cited_by: [Non-Compete Agreement Review Checklist — Louisiana](../checklists/non-compete/louisiana-review-checklist.md), [Non-Competes in Louisiana](../non-compete/us/louisiana.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Louisiana](../checklists/non-compete/us/louisiana.md), [Non-Competes in Louisiana](../non-compete/us/louisiana.md)
 - link_to_source: <https://www.ca5.uscourts.gov/opinions/unpub/21/21-30293.0.pdf>

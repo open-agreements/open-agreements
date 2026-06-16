@@ -10,7 +10,7 @@ resource: >-
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/florida-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/florida'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/florida'
 tags:
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `non-solicitation-no-hire`, `restrictive-covenants-each-independently-includable`
 - source_cards: `carter-solicit-initiation`, `q8-carter-nonsolicit`
-- cited_by: [Non-Compete Agreement Review Checklist — Florida](../checklists/non-compete/florida-review-checklist.md), [Non-Competes in Florida](../non-compete/us/florida.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Florida](../checklists/non-compete/us/florida.md), [Non-Competes in Florida](../non-compete/us/florida.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1645720/environmental-services-inc-v-carter/#:~:text=While%20the%20court%20ruled%20that,without%20any%20solicitation%20from%20them.>

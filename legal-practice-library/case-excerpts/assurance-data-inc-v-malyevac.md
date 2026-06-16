@@ -9,7 +9,7 @@ resource: 'https://www.courtlistener.com/opinion/1057728/assurance-data-inc-v-ma
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/virginia-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/virginia'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/virginia'
 tags:
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `remedies`
 - source_cards: `assurance-data-evidence`, `assurance-data-factual-vacuum`
-- cited_by: [Non-Compete Agreement Review Checklist — Virginia](../checklists/non-compete/virginia-review-checklist.md), [Non-Competes in Virginia](../non-compete/us/virginia.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Virginia](../checklists/non-compete/us/virginia.md), [Non-Competes in Virginia](../non-compete/us/virginia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1057728/assurance-data-inc-v-malyevac/#:~:text=The%20premise%20running%20through%20Simmons%2C,unenforceable%20in%20a%20factual%20vacuum.>

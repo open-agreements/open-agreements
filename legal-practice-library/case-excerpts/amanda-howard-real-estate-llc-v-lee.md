@@ -10,7 +10,7 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/alabama-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/alabama'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/alabama'
 tags:
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `alabama-statutory-gates`, `signature-requirement`
 - source_cards: `howard-thing-signed`, `howard-thing-signed-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — Alabama](../checklists/non-compete/alabama-review-checklist.md), [Non-Competes in Alabama](../non-compete/us/alabama.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Alabama](../checklists/non-compete/us/alabama.md), [Non-Competes in Alabama](../non-compete/us/alabama.md)
 - link_to_source: <https://www.cunninghambounds.com/documents/appellate-blog-category-/Howard-Real-Estate-LLC-v-Lee-and-JRHBW-Realty-Inc..pdf>
 
 ### amanda-howard-real-estate-llc-v-lee-we-affirm-the-judgment-because-none-3e7c534f {#amanda-howard-real-estate-llc-v-lee-we-affirm-the-judgment-because-none-3e7c534f}
@@ -41,5 +41,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `alabama-statutory-gates`, `signature-requirement`
 - source_cards: `howard-affirm`, `howard-affirm-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — Alabama](../checklists/non-compete/alabama-review-checklist.md), [Non-Competes in Alabama](../non-compete/us/alabama.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Alabama](../checklists/non-compete/us/alabama.md), [Non-Competes in Alabama](../non-compete/us/alabama.md)
 - link_to_source: <https://www.cunninghambounds.com/documents/appellate-blog-category-/Howard-Real-Estate-LLC-v-Lee-and-JRHBW-Realty-Inc..pdf>

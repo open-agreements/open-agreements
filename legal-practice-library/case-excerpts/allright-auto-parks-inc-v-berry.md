@@ -9,7 +9,7 @@ resource: 'https://www.courtlistener.com/opinion/1784276/allright-auto-parks-inc
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/tennessee-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/tennessee'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/tennessee'
 tags:
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `reasonableness-test`, `tennessee-statutory-gates`
 - source_cards: `allright-factors`, `tn-gate-allright-factors`
-- cited_by: [Non-Compete Agreement Review Checklist — Tennessee](../checklists/non-compete/tennessee-review-checklist.md), [Non-Competes in Tennessee](../non-compete/us/tennessee.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Tennessee](../checklists/non-compete/us/tennessee.md), [Non-Competes in Tennessee](../non-compete/us/tennessee.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1784276/allright-auto-parks-inc-v-berry/#:~:text=Among%20these%20are%3A%20the%20consideration,be%20inimical%20to%20public%20interest.>
 
 ### allright-auto-parks-inc-v-berry-based-upon-the-foregoing-the-ultimate-8686cffb {#allright-auto-parks-inc-v-berry-based-upon-the-foregoing-the-ultimate-8686cffb}
@@ -40,5 +40,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `reasonableness-test`, `time-limits`
 - source_cards: `allright-territory`, `allright-ultimate-question`, `allright-ultimate-question-time`
-- cited_by: [Non-Compete Agreement Review Checklist — Tennessee](../checklists/non-compete/tennessee-review-checklist.md), [Non-Competes in Tennessee](../non-compete/us/tennessee.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Tennessee](../checklists/non-compete/us/tennessee.md), [Non-Competes in Tennessee](../non-compete/us/tennessee.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1784276/allright-auto-parks-inc-v-berry/#:~:text=Based%20upon%20the%20foregoing%2C%20the,business%20interest%20of%20the%20complainant.>

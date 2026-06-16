@@ -12,7 +12,7 @@ resource: >-
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/nevada-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/nevada'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/nevada'
 tags:
@@ -34,5 +34,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `assignment-and-successors`, `assignment-sale-merger`
 - source_cards: `nv-hd-supply-merger`, `q10-hd-supply-merger`
-- cited_by: [Non-Compete Agreement Review Checklist — Nevada](../checklists/non-compete/nevada-review-checklist.md), [Non-Competes in Nevada](../non-compete/us/nevada.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Nevada](../checklists/non-compete/us/nevada.md), [Non-Competes in Nevada](../non-compete/us/nevada.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2575254/hd-supply-facilities-maintenance-ltd-v-bymoen/#:~:text=Traffic%20Control's%20rule%20of%20nonassignability,the%20result%20of%20a%20merger.>

@@ -12,7 +12,7 @@ resource: >-
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/florida-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/florida'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/florida'
 tags:
@@ -34,5 +34,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `legitimate-business-interest`
 - source_cards: `q2-white-referral`
-- cited_by: [Non-Compete Agreement Review Checklist — Florida](../checklists/non-compete/florida-review-checklist.md), [Non-Competes in Florida](../non-compete/us/florida.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Florida](../checklists/non-compete/us/florida.md), [Non-Competes in Florida](../non-compete/us/florida.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4426106/sc16-400-elizabeth-white-v-mederi-caretenders-visiting-services-of/#:~:text=In%20light%20of%20the%20foregoing%2C,the%20context%20and%20proof%20adduced.>

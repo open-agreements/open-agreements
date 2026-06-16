@@ -9,7 +9,7 @@ resource: 'https://www.courtlistener.com/opinion/1154814/cellular-one-inc-v-boyd
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/louisiana-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/louisiana'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/louisiana'
 tags:
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `prospective-employee`, `timing-and-execution-acknowledgements`
 - source_cards: `cellone-continued-employment`, `la-cellone-timing`
-- cited_by: [Non-Compete Agreement Review Checklist — Louisiana](../checklists/non-compete/louisiana-review-checklist.md), [Non-Competes in Louisiana](../non-compete/us/louisiana.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Louisiana](../checklists/non-compete/us/louisiana.md), [Non-Competes in Louisiana](../non-compete/us/louisiana.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1154814/cellular-one-inc-v-boyd/#:~:text=Defendants%20signed%20these%20agreements%20as,condition%20of%20their%20continued%20employment.>

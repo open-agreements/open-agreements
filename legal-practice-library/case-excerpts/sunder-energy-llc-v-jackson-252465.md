@@ -11,7 +11,7 @@ resource: 'https://www.courtlistener.com/opinion/9444424/sunder-energy-llc-v-jac
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/delaware-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/delaware'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/delaware'
 tags:
@@ -33,5 +33,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `delaware-statutory-gates`, `employee-noncompetes`, `restrictive-covenants-each-independently-includable`, `tolling-during-breach`
 - source_cards: `de-sunder-holistic-cov`, `de-sunder-holistic-def`, `de-sunder-holistic-gate`, `de-sunder-holistic-toll`, `sunder-chancery-holistic-review`
-- cited_by: [Non-Compete Agreement Review Checklist — Delaware](../checklists/non-compete/delaware-review-checklist.md), [Non-Competes in Delaware](../non-compete/us/delaware.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Delaware](../checklists/non-compete/us/delaware.md), [Non-Competes in Delaware](../non-compete/us/delaware.md)
 - link_to_source: <https://www.courtlistener.com/opinion/9444424/sunder-energy-llc-v-jackson/#:~:text=When%20evaluating%20the%20reasonableness%20of,other%20restrictions%20in%20the%20contract.>

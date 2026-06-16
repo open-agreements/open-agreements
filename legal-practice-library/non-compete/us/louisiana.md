@@ -79,7 +79,7 @@ A note on vocabulary: some Louisiana opinions use the word *reform* to describe 
 
 "Restrictive covenants are unfavored in Louisiana and are narrowly and strictly construed."[^brock-severance]
 
-The drafting lesson is the opposite of the strategy that works in reformation states. Casting a wide net in the hope a judge will trim it down is a high-risk approach in Louisiana, where the more likely outcome is total nullity of the non-compliant provision. For a clause-by-clause pass over a specific agreement against these rules, the [Louisiana non-compete review checklist](/legal/non-compete/louisiana-review-checklist) walks the full covenant suite item by item with each requirement's force level.
+The drafting lesson is the opposite of the strategy that works in reformation states. Casting a wide net in the hope a judge will trim it down is a high-risk approach in Louisiana, where the more likely outcome is total nullity of the non-compliant provision. For a clause-by-clause pass over a specific agreement against these rules, the [Louisiana non-compete review checklist](/checklists/non-compete/us/louisiana) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**

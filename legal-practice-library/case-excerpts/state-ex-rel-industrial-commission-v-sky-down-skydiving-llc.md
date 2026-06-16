@@ -10,7 +10,7 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/idaho-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/idaho'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/idaho'
 tags:
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `idaho-statutory-gates`, `key-employees`
 - source_cards: `idaho-sky-down-gate`, `sky-down-independent-contractors`
-- cited_by: [Non-Compete Agreement Review Checklist — Idaho](../checklists/non-compete/idaho-review-checklist.md), [Non-Competes in Idaho](../non-compete/us/idaho.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Idaho](../checklists/non-compete/us/idaho.md), [Non-Competes in Idaho](../non-compete/us/idaho.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10732876/industrial-commission-v-sky-down-skydiving/#:~:text=Although%20non%2Dcompetition%20clauses%20are%20permitted,typically%20exercises%20over%20an%20employee.>

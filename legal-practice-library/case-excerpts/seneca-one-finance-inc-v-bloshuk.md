@@ -10,7 +10,7 @@ resource: >-
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/maryland-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/maryland'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/maryland'
 tags:
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `duration-geography`
 - source_cards: `md-seneca-overbroad`, `seneca-overbroad`
-- cited_by: [Non-Compete Agreement Review Checklist — Maryland](../checklists/non-compete/maryland-review-checklist.md), [Non-Competes in Maryland](../non-compete/us/maryland.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Maryland](../checklists/non-compete/us/maryland.md), [Non-Competes in Maryland](../non-compete/us/maryland.md)
 - link_to_source: <https://www.courtlistener.com/opinion/7322313/seneca-one-finance-inc-v-bloshuk/#:~:text=A%20restrictive%20covenant%20is%20overbroad,the%20employer%E2%80%99s%20legally%20protected%20interest.>
 
 ### seneca-one-finance-inc-v-bloshuk-in-maryland-a-restrictive-employment-dbb4c914 {#seneca-one-finance-inc-v-bloshuk-in-maryland-a-restrictive-employment-dbb4c914}

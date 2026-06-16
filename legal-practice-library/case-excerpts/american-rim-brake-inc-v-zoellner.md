@@ -10,7 +10,7 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/south-dakota-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/south-dakota'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/south-dakota'
 tags:
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `employee-noncompetes`, `south-dakota-statutory-gates`
 - source_cards: `american-rim-narrow-exception`, `sd-amrim-defs`, `sd-amrim-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — South Dakota](../checklists/non-compete/south-dakota-review-checklist.md), [Non-Competes in South Dakota](../non-compete/us/south-dakota.md)
+- cited_by: [Non-Compete Agreement Review Checklist — South Dakota](../checklists/non-compete/us/south-dakota.md), [Non-Competes in South Dakota](../non-compete/us/south-dakota.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1585102/american-rim-brake-inc-v-zoellner/#:~:text=In%20reading%20the%20exception%2C%20we,against%20general%20restraints%20on%20trade.>

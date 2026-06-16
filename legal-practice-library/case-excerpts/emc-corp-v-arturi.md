@@ -7,10 +7,9 @@ resource: 'https://www.courtlistener.com/opinion/612666/emc-corp-v-arturi/'
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: >-
-      https://openagreements.org/legal/non-compete/massachusetts-review-checklist
+    resource: 'https://openagreements.org/checklists/non-compete/us'
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/massachusetts'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/cnmi'
   - type: State Law Practice Note
@@ -36,7 +35,7 @@ Supporting case-law excerpt. Quoted across 5 document(s) in the OpenAgreements l
 
 - supports: `tolling`, `tolling-during-breach`, `tolling-extension`
 - source_cards: `emc-contract`, `emc-contract-for-tolling`, `emc-no-extension`, `emc-tolling`
-- cited_by: [Non-Compete Agreement Review Checklist — Massachusetts](../checklists/non-compete/massachusetts-review-checklist.md), [Non-Competes in the Northern Mariana Islands](../non-compete/us/cnmi.md), [Non-Competes in Massachusetts](../non-compete/us/massachusetts.md), [Non-Competes in Puerto Rico](../non-compete/us/puerto-rico.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Massachusetts](../checklists/non-compete/us/massachusetts.md), [Non-Competes in the Northern Mariana Islands](../non-compete/us/cnmi.md), [Non-Competes in Massachusetts](../non-compete/us/massachusetts.md), [Non-Competes in Puerto Rico](../non-compete/us/puerto-rico.md)
 - link_to_source: <https://www.courtlistener.com/opinion/612666/emc-corp-v-arturi/#:~:text=Being%20forewarned%2C%20EMC%20could%20have,upon%20preliminary%20finding%20of%20breach.>
 
 ### emc-corp-v-arturi-being-forewarned-emc-could-have-e749bf77 {#emc-corp-v-arturi-being-forewarned-emc-could-have-e749bf77}
@@ -45,7 +44,7 @@ Supporting case-law excerpt. Quoted across 5 document(s) in the OpenAgreements l
 
 - supports: `tolling-during-breach`
 - source_cards: `no-equitable-extension-absent-tolling-clause`
-- cited_by: [Non-Compete Agreement Review Checklist](../checklists/non-compete/review-checklist.md)
+- cited_by: [Non-Compete Agreement Review Checklist](../checklists/non-compete/us.md)
 - link_to_source: <https://www.courtlistener.com/opinion/612666/emc-corp-v-arturi/#:~:text=Being%20forewarned%2C%20EMC%20could%20have,breach.%20But%20it%20did%20not.>
 
 ### emc-corp-v-arturi-we-explained-that-when-the-period-ed23e194 {#emc-corp-v-arturi-we-explained-that-when-the-period-ed23e194}
@@ -54,5 +53,5 @@ Supporting case-law excerpt. Quoted across 5 document(s) in the OpenAgreements l
 
 - supports: `remedies`, `tolling-extension`
 - source_cards: `emc-expired`, `emc-expired-restraint`
-- cited_by: [Non-Compete Agreement Review Checklist — Massachusetts](../checklists/non-compete/massachusetts-review-checklist.md), [Non-Competes in Massachusetts](../non-compete/us/massachusetts.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Massachusetts](../checklists/non-compete/us/massachusetts.md), [Non-Competes in Massachusetts](../non-compete/us/massachusetts.md)
 - link_to_source: <https://www.courtlistener.com/opinion/612666/emc-corp-v-arturi/#:~:text=We%20explained%20that%20%22when%20the,left%20to%20his%20damages%20remedy.>

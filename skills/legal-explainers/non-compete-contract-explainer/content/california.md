@@ -105,7 +105,7 @@ AB 1076 layered on a compliance duty: it is unlawful to include the clause at al
 
 "It shall be unlawful to include a noncompete clause in an employment contract, or to require an employee to enter a noncompete agreement, that does not satisfy an exception in this chapter."[^stat-16600-1-unlawful]
 
-There is a further trap for employers who present void terms. Labor Code section 432.5 forbids requiring an employee to agree in writing to any term the employer knows to be prohibited by law — which a void non-compete now plainly is — exposing the employer to representative penalty claims [^stat-432-5]. California's Attorney General has publicly reinforced that noncompetes are generally illegal and that workers can act on these rights [^ag-alert]. For a clause-by-clause exposure screen of a specific agreement against these rules, the [California non-compete review checklist](/legal/non-compete/california-review-checklist) walks the full covenant suite item by item with each requirement's force level.
+There is a further trap for employers who present void terms. Labor Code section 432.5 forbids requiring an employee to agree in writing to any term the employer knows to be prohibited by law — which a void non-compete now plainly is — exposing the employer to representative penalty claims [^stat-432-5]. California's Attorney General has publicly reinforced that noncompetes are generally illegal and that workers can act on these rights [^ag-alert]. For a clause-by-clause exposure screen of a specific agreement against these rules, the [California non-compete review checklist](/checklists/non-compete/us/california) walks the full covenant suite item by item with each requirement's force level.
 
 > [!NOTE]
 > **Practice note.**

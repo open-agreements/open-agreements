@@ -1,5 +1,8 @@
 # Non Compete Update Log
 
+## 2026-06-16
+* **Update**: feat(ia): checklists as a top-level product line — country-first /checklists (closes #803) (#804) ([2602c18](https://github.com/UseJunior/legal-explainer/commit/2602c18434aef56cbc170c8061d60c29c0c41954))
+
 ## 2026-06-15
 * **Update**: feat(ia): country-first jurisdiction paths + /practice-guides & /surveys roots (closes #790) (#800) ([01b7b50](https://github.com/UseJunior/legal-explainer/commit/01b7b5028fe5cdd75b5ff4652151f0c9b19d0545))
 

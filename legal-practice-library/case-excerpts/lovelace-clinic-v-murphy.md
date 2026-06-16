@@ -9,7 +9,7 @@ resource: 'https://www.courtlistener.com/opinion/1196089/lovelace-clinic-v-murph
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/new-mexico-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/new-mexico'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/new-mexico'
 tags:
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `employee-noncompetes`, `federal-ftc-overlay`, `new-mexico-statutory-gates`
 - source_cards: `lovelace-reasonableness-defs`, `lovelace-reasonableness-gate`, `lovelace-reasonableness-test`, `q9-lovelace-state-law`
-- cited_by: [Non-Compete Agreement Review Checklist — New Mexico](../checklists/non-compete/new-mexico-review-checklist.md), [Non-Competes in New Mexico](../non-compete/us/new-mexico.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New Mexico](../checklists/non-compete/us/new-mexico.md), [Non-Competes in New Mexico](../non-compete/us/new-mexico.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1196089/lovelace-clinic-v-murphy/#:~:text=All%20of%20the%20physician%20and,or%20the%20associate%20are%20reasonable.>
 
 ### lovelace-clinic-v-murphy-at-the-conclusion-of-the-trial-4f4373ba {#lovelace-clinic-v-murphy-at-the-conclusion-of-the-trial-4f4373ba}
@@ -58,5 +58,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `choice-of-law`, `employee-noncompetes`, `restrictive-covenants-each-independently-includable`
 - source_cards: `lovelace-public-interest`, `lovelace-public-interest-balance`, `q8-lovelace-public-policy`
-- cited_by: [Non-Compete Agreement Review Checklist — New Mexico](../checklists/non-compete/new-mexico-review-checklist.md), [Non-Competes in New Mexico](../non-compete/us/new-mexico.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New Mexico](../checklists/non-compete/us/new-mexico.md), [Non-Competes in New Mexico](../non-compete/us/new-mexico.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1196089/lovelace-clinic-v-murphy/#:~:text=The%20public%20has%20an%20interest,enforcing%20contractual%20rights%20and%20obligations.>

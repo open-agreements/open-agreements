@@ -9,7 +9,7 @@ resource: 'https://www.courtlistener.com/opinion/2317852/compass-bank-v-hartley/
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/arizona-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/arizona'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/arizona'
 tags:
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`, `timing-and-execution-acknowledgements`
 - source_cards: `compass-consideration-timing`, `q6-compass-continued`
-- cited_by: [Non-Compete Agreement Review Checklist — Arizona](../checklists/non-compete/arizona-review-checklist.md), [Non-Competes in Arizona](../non-compete/us/arizona.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Arizona](../checklists/non-compete/us/arizona.md), [Non-Competes in Arizona](../non-compete/us/arizona.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2317852/compass-bank-v-hartley/#:~:text=In%20addition%2C%20the%20promise%20of,be%20on%20an%20at%2Dwill%20basis.>

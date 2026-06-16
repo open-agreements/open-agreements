@@ -9,7 +9,7 @@ resource: 'https://www.courtlistener.com/opinion/1190912/bayly-martin-fay-inc-v-
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/oklahoma-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/oklahoma'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/oklahoma'
 tags:
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `oklahoma-statutory-gates`, `sale-of-business`
 - source_cards: `bayly-appreciable-gate`, `bayly-appreciable-interest`
-- cited_by: [Non-Compete Agreement Review Checklist — Oklahoma](../checklists/non-compete/oklahoma-review-checklist.md), [Non-Competes in Oklahoma](../non-compete/us/oklahoma.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Oklahoma](../checklists/non-compete/us/oklahoma.md), [Non-Competes in Oklahoma](../non-compete/us/oklahoma.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1190912/bayly-martin-fay-inc-v-pickard/#:~:text=Court%20held%20that%20the%20sale,the%20meaning%20of%20%C2%A7%20218.>

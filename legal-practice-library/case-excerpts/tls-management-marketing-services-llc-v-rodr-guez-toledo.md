@@ -12,7 +12,7 @@ resource: >-
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/puerto-rico'
 tags:
@@ -34,7 +34,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`
 - source_cards: `overbroad-nda-de-facto-noncompete`
-- cited_by: [Non-Compete Agreement Review Checklist](../checklists/non-compete/review-checklist.md)
+- cited_by: [Non-Compete Agreement Review Checklist](../checklists/non-compete/us.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4769672/tls-mgmt-and-mktg-ser-llc-v-rodriguez-toledo/#:~:text=But%20overly%20broad%20nondisclosure%20agreements%2C,from%20competing%20with%20the%20plaintiff.>
 
 ### tls-management-marketing-services-llc-v-rodr-guez-toledo-we-decline-to-rewrite-the-nondisclosure-69c0cea9 {#tls-management-marketing-services-llc-v-rodr-guez-toledo-we-decline-to-rewrite-the-nondisclosure-69c0cea9}

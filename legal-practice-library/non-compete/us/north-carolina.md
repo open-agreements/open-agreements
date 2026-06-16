@@ -111,7 +111,7 @@ The Court of Appeals draws the same line: a court may decline to enforce a disti
 
 "A court at most may choose not to enforce a distinctly separable part of a covenant in order to render the provision reasonable."[^q5-hartman-separable]
 
-Critically, a contractual clause purporting to authorize the court to revise the covenant does not work. The Supreme Court held that parties cannot confer a power the court does not possess. For a clause-by-clause pass over a specific agreement against these drafting rules, the [North Carolina non-compete review checklist](/legal/non-compete/north-carolina-review-checklist) walks the full covenant suite item by item with each requirement's force level.
+Critically, a contractual clause purporting to authorize the court to revise the covenant does not work. The Supreme Court held that parties cannot confer a power the court does not possess. For a clause-by-clause pass over a specific agreement against these drafting rules, the [North Carolina non-compete review checklist](/checklists/non-compete/us/north-carolina) walks the full covenant suite item by item with each requirement's force level.
 
 "However, parties cannot contract to give a court power that it does not have."[^q5-beverage-contract]
 

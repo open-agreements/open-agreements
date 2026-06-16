@@ -60,7 +60,7 @@ Where the unreasonable language cannot be cleanly struck, the covenant is unenfo
 
 "Neither the contract itself nor other evidence in the record indicates that this unreasonable portion of the contract was severable."[^q3-bryceland-severable]
 
-For a clause-by-clause pass over a specific agreement against these drafting rules, the [Arizona non-compete review checklist](/legal/non-compete/arizona-review-checklist) walks the full covenant suite item by item with each requirement's force level.
+For a clause-by-clause pass over a specific agreement against these drafting rules, the [Arizona non-compete review checklist](/checklists/non-compete/us/arizona) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**

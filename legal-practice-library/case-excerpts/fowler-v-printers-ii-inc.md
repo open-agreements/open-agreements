@@ -9,7 +9,7 @@ resource: 'https://www.courtlistener.com/opinion/1930228/fowler-v-printers-ii-in
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/maryland-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/maryland'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/maryland'
 tags:
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `protectable-interests`, `restrictive-covenants-each-independently-includable`
 - source_cards: `fowler-no-broader-than-necessary`, `md-fowler-no-broader`, `md-fowler-no-broader-covenants`
-- cited_by: [Non-Compete Agreement Review Checklist — Maryland](../checklists/non-compete/maryland-review-checklist.md), [Non-Competes in Maryland](../non-compete/us/maryland.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Maryland](../checklists/non-compete/us/maryland.md), [Non-Competes in Maryland](../non-compete/us/maryland.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1930228/fowler-v-printers-ii-inc/#:~:text=Of%20course%2C%20even%20a%20restrictive,necessary%20to%20effectuate%20that%20interest.>

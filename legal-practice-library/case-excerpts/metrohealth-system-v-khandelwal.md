@@ -9,7 +9,7 @@ resource: 'https://www.courtlistener.com/opinion/6205147/metrohealth-sys-v-khand
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/ohio-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/ohio'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/ohio'
 tags:
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `industry-specific-limits`, `physician-specific-notices-and-carve-outs`
 - source_cards: `metrohealth-physician-standard`, `oh-metrohealth-physician-standard`
-- cited_by: [Non-Compete Agreement Review Checklist — Ohio](../checklists/non-compete/ohio-review-checklist.md), [Non-Competes in Ohio](../non-compete/us/ohio.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Ohio](../checklists/non-compete/us/ohio.md), [Non-Competes in Ohio](../non-compete/us/ohio.md)
 - link_to_source: <https://www.courtlistener.com/opinion/6205147/metrohealth-sys-v-khandelwal/#:~:text=A%20covenant%20restraining%20a%20physician%2Demployee,the%20people%20in%20the%20community.>
 
 ### metrohealth-system-v-khandelwal-in-short-evidence-presented-at-the-eb3e9442 {#metrohealth-system-v-khandelwal-in-short-evidence-presented-at-the-eb3e9442}
@@ -40,5 +40,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `duration-geography`, `ohio-statutory-gates`
 - source_cards: `metrohealth-modified`, `oh-metrohealth-trimmed`
-- cited_by: [Non-Compete Agreement Review Checklist — Ohio](../checklists/non-compete/ohio-review-checklist.md), [Non-Competes in Ohio](../non-compete/us/ohio.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Ohio](../checklists/non-compete/us/ohio.md), [Non-Competes in Ohio](../non-compete/us/ohio.md)
 - link_to_source: <https://www.courtlistener.com/opinion/6205147/metrohealth-sys-v-khandelwal/#:~:text=In%20short%2C%20evidence%20presented%20at,protect%20MetroHealth%E2%80%99s%20legitimate%20business%20interests.>

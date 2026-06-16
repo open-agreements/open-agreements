@@ -7,7 +7,7 @@ resource: 'https://www.courtlistener.com/opinion/1898073/cooper-v-gidden/'
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/mississippi-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/mississippi'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/mississippi'
 tags:
@@ -29,5 +29,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `assignment-and-successors`, `restrictive-covenants-each-independently-includable`, `sale-of-business`
 - source_cards: `cooper-general-application`, `ms-cooper-assignment`, `ms-cooper-covenants`
-- cited_by: [Non-Compete Agreement Review Checklist — Mississippi](../checklists/non-compete/mississippi-review-checklist.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Mississippi](../checklists/non-compete/us/mississippi.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1898073/cooper-v-gidden/#:~:text=A%20covenant%20not%20to%20compete%20will,only%20to%20the%20original%20obligee.>

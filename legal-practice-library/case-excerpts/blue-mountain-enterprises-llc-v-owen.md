@@ -10,7 +10,7 @@ resource: >-
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/california-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/california'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/california'
 tags:
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `california-statutory-gates`, `sale-of-business`
 - source_cards: `blue-mountain-16601`, `ca-blue-mountain-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — California](../checklists/non-compete/california-review-checklist.md), [Non-Competes in California](../non-compete/us/california.md)
+- cited_by: [Non-Compete Agreement Review Checklist — California](../checklists/non-compete/us/california.md), [Non-Competes in California](../non-compete/us/california.md)
 - link_to_source: <https://www.courtlistener.com/opinion/6246635/blue-mountain-enterprises-llc-v-owen/#:~:text=Here%2C%20the%20trial%20court%20correctly,which%20the%20business%20so%20sold.%E2%80%9D>

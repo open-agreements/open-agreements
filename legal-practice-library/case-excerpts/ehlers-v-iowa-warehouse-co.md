@@ -9,7 +9,7 @@ resource: 'https://www.courtlistener.com/opinion/2117830/ehlers-v-iowa-warehouse
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/iowa-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/iowa'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/iowa'
 tags:
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-reformation`, `severability-and-reformation`, `tolling-during-breach`
 - source_cards: `ia-ehlers-not-tolling`, `ia-ehlers-partial`, `q5-ehlers-reform`, `q6-ehlers-reform`
-- cited_by: [Non-Compete Agreement Review Checklist — Iowa](../checklists/non-compete/iowa-review-checklist.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Iowa](../checklists/non-compete/us/iowa.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2117830/ehlers-v-iowa-warehouse-company/#:~:text=I.%20In%20view%20of%20the,interest%20is%20not%20adversely%20affected.>
 
 ### ehlers-v-iowa-warehouse-co-no-covenant-placed-in-the-contract-635df44f {#ehlers-v-iowa-warehouse-co-no-covenant-placed-in-the-contract-635df44f}
@@ -40,5 +40,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-reformation`, `severability-and-reformation`
 - source_cards: `ia-ehlers-bad-faith`, `q5-ehlers-bad-faith`
-- cited_by: [Non-Compete Agreement Review Checklist — Iowa](../checklists/non-compete/iowa-review-checklist.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Iowa](../checklists/non-compete/us/iowa.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2117830/ehlers-v-iowa-warehouse-company/#:~:text=No%20covenant%20placed%20in%20the,should%20be%20enforced%20in%20equity.>

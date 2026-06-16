@@ -9,7 +9,7 @@ resource: 'https://www.courtlistener.com/opinion/4449595/osborne-v-brown-saenger
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/north-dakota-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/north-dakota'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/north-dakota'
 tags:
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `choice-of-law-forum`, `governing-law-venue-dispute-process`, `parties-and-cover-term-identification`
 - source_cards: `nd-osborne-cover`, `nd-osborne-gl`, `osborne-choice-forum-unenforceable`
-- cited_by: [Non-Compete Agreement Review Checklist — North Dakota](../checklists/non-compete/north-dakota-review-checklist.md), [Non-Competes in North Dakota](../non-compete/us/north-dakota.md)
+- cited_by: [Non-Compete Agreement Review Checklist — North Dakota](../checklists/non-compete/us/north-dakota.md), [Non-Competes in North Dakota](../non-compete/us/north-dakota.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4449595/osborne-v-brown-saenger-inc/#:~:text=Simply%20put%2C%20one%20may%20not,public%20policy%20against%20non%2Dcompete%20agreements.>

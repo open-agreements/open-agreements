@@ -60,7 +60,7 @@ The conservative anchor is *Roy's Orthopedic '85*. There, the Vermont Supreme Co
 
 The opposite signal comes from *Summits 7* and the Second Circuit. The Vermont Supreme Court observed that most modern courts agree that a trial court can enforce restrictive covenants to the extent that they are reasonable[^summits7-extent-reasonable], and cited *A.N. Deringer, Inc. v. Strough* — the Second Circuit's *Erie* prediction that Vermont would permit enforcement of a defective restrictive covenant to the limit of its validity[^deringer-vt-prediction].
 
-The two strands can be reconciled: Vermont will not rewrite a contract by inventing new terms (no extending time, no judicially imposed geographic line), but a court may enforce only that subset of an overbroad covenant the conduct actually breaches when that subset is plainly within a reasonable restraint. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Vermont non-compete review checklist](/legal/non-compete/vermont-review-checklist) walks the full covenant suite item by item with each requirement's force level.
+The two strands can be reconciled: Vermont will not rewrite a contract by inventing new terms (no extending time, no judicially imposed geographic line), but a court may enforce only that subset of an overbroad covenant the conduct actually breaches when that subset is plainly within a reasonable restraint. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Vermont non-compete review checklist](/checklists/non-compete/us/vermont) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**

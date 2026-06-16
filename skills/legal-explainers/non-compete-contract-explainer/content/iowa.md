@@ -85,7 +85,7 @@ This is Iowa's version of a *purple pencil* rule. In *Ehlers*, the Iowa Supreme 
 
 "I. In view of the position we take here, it is unnecessary to discuss these propositions separately. We now overrule Brecher v. Brown (1945), 235 Iowa 627 , 17 N.W.2d 377 , and adopt the rule that unless the facts and circumstances indicate bad faith on the part of the employer, we will enforce noncompetitive covenants to the extent they are reasonably necessary to protect his legitimate interests without imposing undue hardship on the employee when the public interest is not adversely affected."[^q5-ehlers-reform]
 
-*Farm Bureau* then applied the rule, narrowing a petroleum delivery covenant to the activities and six-township territory the employee actually served [^q5-farm-bureau-partial]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Iowa non-compete review checklist](/legal/non-compete/iowa-review-checklist) walks the full covenant suite item by item with each requirement's force level.
+*Farm Bureau* then applied the rule, narrowing a petroleum delivery covenant to the activities and six-township territory the employee actually served [^q5-farm-bureau-partial]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Iowa non-compete review checklist](/checklists/non-compete/us/iowa) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**

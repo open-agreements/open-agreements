@@ -93,7 +93,7 @@ Because the standard is holistic, geography and duration are evaluated together 
 
 *Kegel v. Tillotson* states the rule directly: Kentucky courts are empowered to reform or amend restrictions in a non-compete clause when the initial terms are overly broad or burdensome [^kegel-blue-pencil]. *Hodges v. Todd* shows how far that power can reach — there, in the sale-of-a-business context, the court held that a trial court could enforce a covenant that omitted any geographic limit by establishing a reasonable one based on the parties' intent [^hodges-reformation-geography].
 
-That equitable power is not a license to overreach. Reformation is discretionary, and an employer that drafts an abusively broad covenant cannot assume a court will simply rewrite it into something enforceable. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Kentucky non-compete review checklist](/legal/non-compete/kentucky-review-checklist) walks the full covenant suite item by item with each requirement's force level.
+That equitable power is not a license to overreach. Reformation is discretionary, and an employer that drafts an abusively broad covenant cannot assume a court will simply rewrite it into something enforceable. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Kentucky non-compete review checklist](/checklists/non-compete/us/kentucky) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**

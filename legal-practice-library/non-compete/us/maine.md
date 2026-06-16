@@ -56,7 +56,7 @@ The delayed-effectiveness rule is separate from the signing rule. A compliant ag
 
 That makes Maine different from a strict red-pencil jurisdiction and from a mechanical blue-pencil state. The court can focus on the actual enforcement request, but the requested restraint still must be reasonable in duration, geography, and protected interest.
 
-*Lord* gives the limiting principle. The court may require specificity about what goodwill or business value needs protection before imposing or enforcing a severe restraint [^lord-specificity-goodwill-restraint]. For a clause-by-clause pass over a specific agreement against these rules, the [Maine non-compete review checklist](/legal/non-compete/maine-review-checklist) walks the full covenant suite item by item with each requirement's force level.
+*Lord* gives the limiting principle. The court may require specificity about what goodwill or business value needs protection before imposing or enforcing a severe restraint [^lord-specificity-goodwill-restraint]. For a clause-by-clause pass over a specific agreement against these rules, the [Maine non-compete review checklist](/checklists/non-compete/us/maine) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**

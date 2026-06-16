@@ -10,7 +10,7 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/indiana-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/indiana'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/indiana'
 tags:
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `restrictive-covenants-each-independently-includable`, `sale-of-business`
 - source_cards: `zollinger-sale-covenants`, `zollinger-sale-standard`
-- cited_by: [Non-Compete Agreement Review Checklist — Indiana](../checklists/non-compete/indiana-review-checklist.md), [Non-Competes in Indiana](../non-compete/us/indiana.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Indiana](../checklists/non-compete/us/indiana.md), [Non-Competes in Indiana](../non-compete/us/indiana.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4747784/wayne-doug-zollinger-v-wagner-meinert-engineering-llc/#:~:text=Covenants%20in%20typical%20employment%20contracts,to%20a%20more%20liberal%20standard.>

@@ -42,7 +42,7 @@ Florida enforces non-competes by statute and is among the most employer-friendly
 
 Florida courts treat section 542.335 as a comprehensive statutory framework for restrictive covenants. As the Fifth District put it, the statute is built on an unfair-competition approach, rather than the older common-law hostility to restraints [^q1-henao-framework].
 
-Since July 2025, Florida has run two parallel tracks. Most agreements are governed by the traditional section 542.335 standard described throughout this note. A second, even more employer-favorable track — the CHOICE Act, sections 542.41 through 542.45 — applies only to defined high-earning *covered employees*; covenants that do not fit the CHOICE Act definitions fall back to section 542.335 [^q1-choice-fallback]. Reviewers working through a specific draft can apply this framework clause by clause with the [Florida non-compete review checklist](/legal/non-compete/florida-review-checklist).
+Since July 2025, Florida has run two parallel tracks. Most agreements are governed by the traditional section 542.335 standard described throughout this note. A second, even more employer-favorable track — the CHOICE Act, sections 542.41 through 542.45 — applies only to defined high-earning *covered employees*; covenants that do not fit the CHOICE Act definitions fall back to section 542.335 [^q1-choice-fallback]. Reviewers working through a specific draft can apply this framework clause by clause with the [Florida non-compete review checklist](/checklists/non-compete/us/florida).
 
 > [!NOTE]
 > **Practice note.**

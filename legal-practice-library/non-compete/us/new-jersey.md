@@ -76,7 +76,7 @@ Because the analysis is holistic, a restraint matched to the employee's actual t
 
 *Solari* is the foundational statement: New Jersey rejected the rule that an overbroad covenant is wholly void and adopted partial enforcement to the extent reasonable under the circumstances [^solari-partial-enforcement]. Applying New Jersey law, the Third Circuit in *ADP, LLC v. Rafferty* described curtailing an overbroad covenant's scope as the approach prescribed by the New Jersey Supreme Court [^rafferty-curtail-scope].
 
-That reformation power is not a license to overreach. Reformation is an equitable remedy, and an employer that drafts an abusively broad covenant cannot assume a court will rewrite it into something enforceable. For a clause-by-clause pass over a specific agreement, the [New Jersey non-compete review checklist](/legal/non-compete/new-jersey-review-checklist) walks the full covenant suite item by item with each requirement's force level.
+That reformation power is not a license to overreach. Reformation is an equitable remedy, and an employer that drafts an abusively broad covenant cannot assume a court will rewrite it into something enforceable. For a clause-by-clause pass over a specific agreement, the [New Jersey non-compete review checklist](/checklists/non-compete/us/new-jersey) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**

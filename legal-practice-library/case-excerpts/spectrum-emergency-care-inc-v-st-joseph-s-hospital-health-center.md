@@ -12,7 +12,7 @@ resource: >-
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/north-dakota-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/north-dakota'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/north-dakota'
 tags:
@@ -34,7 +34,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `physician-healthcare-noncompetes`, `physician-specific-notices-and-carve-outs`
 - source_cards: `nd-spectrum-negotiation-phys`, `spectrum-physician-negotiation-protected`
-- cited_by: [Non-Compete Agreement Review Checklist — North Dakota](../checklists/non-compete/north-dakota-review-checklist.md), [Non-Competes in North Dakota](../non-compete/us/north-dakota.md)
+- cited_by: [Non-Compete Agreement Review Checklist — North Dakota](../checklists/non-compete/us/north-dakota.md), [Non-Competes in North Dakota](../non-compete/us/north-dakota.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1229922/spectrum-emergency-care-inc-v-st-josephs-hospital-health-center/#:~:text=The%20ability%20to%20negotiate%20and,lawful%20profession%2C%20trade%2C%20or%20business.>
 
 ### spectrum-emergency-care-inc-v-st-joseph-s-hospital-health-center-there-can-be-no-doubt-that-a38ac993 {#spectrum-emergency-care-inc-v-st-joseph-s-hospital-health-center-there-can-be-no-doubt-that-a38ac993}
@@ -43,5 +43,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `employee-noncompetes`, `parties-and-cover-term-identification`
 - source_cards: `nd-spectrum-physician-void-cover`, `spectrum-physician-employment-void`
-- cited_by: [Non-Compete Agreement Review Checklist — North Dakota](../checklists/non-compete/north-dakota-review-checklist.md), [Non-Competes in North Dakota](../non-compete/us/north-dakota.md)
+- cited_by: [Non-Compete Agreement Review Checklist — North Dakota](../checklists/non-compete/us/north-dakota.md), [Non-Competes in North Dakota](../non-compete/us/north-dakota.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1229922/spectrum-emergency-care-inc-v-st-josephs-hospital-health-center/#:~:text=There%20can%20be%20no%20doubt,the%20contract%20period%20with%20Spectrum.>

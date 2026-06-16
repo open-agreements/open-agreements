@@ -8,7 +8,7 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/new-jersey-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/new-jersey'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/new-jersey'
 tags:
@@ -30,7 +30,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `confidentiality-lad`, `new-jersey-statutory-gates`
 - source_cards: `nj-savage-labels`, `savage-labels-dont-control`
-- cited_by: [Non-Compete Agreement Review Checklist — New Jersey](../checklists/non-compete/new-jersey-review-checklist.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New Jersey](../checklists/non-compete/us/new-jersey.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
 - link_to_source: <https://www.courtlistener.com/opinion/9499942/christine-savage-v-township-of-neptune/#:~:text=As%20a%20result%2C%20labels%20like,the%20meaning%20of%20section%2012.8.>
 
 ### savage-v-township-of-neptune-the-non-disparagement-clause-in-the-92f9cb00 {#savage-v-township-of-neptune-the-non-disparagement-clause-in-the-92f9cb00}
@@ -39,5 +39,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `confidentiality-lad`, `non-disparagement`
 - source_cards: `nj-savage-void`, `savage-nondisparagement-void`
-- cited_by: [Non-Compete Agreement Review Checklist — New Jersey](../checklists/non-compete/new-jersey-review-checklist.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New Jersey](../checklists/non-compete/us/new-jersey.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
 - link_to_source: <https://www.courtlistener.com/opinion/9499942/christine-savage-v-township-of-neptune/#:~:text=The%20non%2Ddisparagement%20clause%20in%20the,policy%20and%20cannot%20be%20enforced.>

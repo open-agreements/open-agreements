@@ -12,8 +12,7 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: >-
-      https://openagreements.org/legal/non-compete/north-carolina-review-checklist
+    resource: 'https://openagreements.org/checklists/non-compete/us/north-carolina'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/north-carolina'
 tags:
@@ -35,7 +34,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `blue-pencil`, `severability-and-reformation`
 - source_cards: `nc-beverage-contract`, `q5-beverage-contract`
-- cited_by: [Non-Compete Agreement Review Checklist — North Carolina](../checklists/non-compete/north-carolina-review-checklist.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
+- cited_by: [Non-Compete Agreement Review Checklist — North Carolina](../checklists/non-compete/us/north-carolina.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/3186954/beverage-systems-of-the-carolinas-llc-v-associated-beverage-repair-llc/#:~:text=However%2C%20parties%20cannot%20contract%20to,that%20it%20does%20not%20have.>
 
 ### beverage-systems-of-the-carolinas-llc-v-associated-beverage-repair-llc-north-carolina-has-adopted-the-strict-2b9f9233 {#beverage-systems-of-the-carolinas-llc-v-associated-beverage-repair-llc-north-carolina-has-adopted-the-strict-2b9f9233}
@@ -44,5 +43,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `blue-pencil`, `severability-and-reformation`
 - source_cards: `nc-beverage-strict`, `q5-beverage-strict`
-- cited_by: [Non-Compete Agreement Review Checklist — North Carolina](../checklists/non-compete/north-carolina-review-checklist.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
+- cited_by: [Non-Compete Agreement Review Checklist — North Carolina](../checklists/non-compete/us/north-carolina.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/3186954/beverage-systems-of-the-carolinas-llc-v-associated-beverage-repair-llc/#:~:text=North%20Carolina%20has%20adopted%20the,while%20striking%20the%20unenforceable%20portions.>

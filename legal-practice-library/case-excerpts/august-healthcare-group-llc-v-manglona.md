@@ -11,7 +11,7 @@ resource: 'https://www.govinfo.gov/app/details/USCOURTS-nmid-1_12-cv-00008'
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us'
   - type: Law Topic
     resource: 'https://openagreements.org/practice-guides/non-compete/us'
   - type: State Law Practice Note
@@ -44,7 +44,7 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `reasonableness-standard`, `reasonableness-test`, `severability-and-reformation`, `tolling`, `tolling-reformation-consideration`
 - source_cards: `aug-188`, `reformation-188-rule`, `restatement-188-ancillary-restraints`, `tolling-188`
-- cited_by: [Non-Compete Agreement Review Checklist](../checklists/non-compete/review-checklist.md), [Restrictive Covenants: How Non-Competes, Non-Solicits, and Confidentiality Clauses Work Across the United States](../non-compete/us.md), [Non-Competes in the Northern Mariana Islands](../non-compete/us/cnmi.md)
+- cited_by: [Non-Compete Agreement Review Checklist](../checklists/non-compete/us.md), [Restrictive Covenants: How Non-Competes, Non-Solicits, and Confidentiality Clauses Work Across the United States](../non-compete/us.md), [Non-Competes in the Northern Mariana Islands](../non-compete/us/cnmi.md)
 - link_to_source: <https://www.govinfo.gov/app/details/USCOURTS-nmid-1_12-cv-00008>
 
 ### august-healthcare-group-llc-v-manglona-an-injunction-that-bars-pelisamen-and-1cb75293 {#august-healthcare-group-llc-v-manglona-an-injunction-that-bars-pelisamen-and-1cb75293}

@@ -10,7 +10,7 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/arizona-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/arizona'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/arizona'
 tags:
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `arizona-statutory-gates`, `definitions`, `enforceability`, `remedies`, `restrictive-covenants-each-independently-includable`, `tolling`, `tolling-during-breach`
 - source_cards: `farber-reasonableness-covenants`, `farber-reasonableness-defs`, `farber-reasonableness-gate`, `farber-reasonableness-remedies`, `farber-reasonableness-tolling`, `q1-farber-reasonableness`, `q10-farber-reasonableness`
-- cited_by: [Non-Compete Agreement Review Checklist — Arizona](../checklists/non-compete/arizona-review-checklist.md), [Non-Competes in Arizona](../non-compete/us/arizona.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Arizona](../checklists/non-compete/us/arizona.md), [Non-Competes in Arizona](../non-compete/us/arizona.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1253291/valley-medical-specialists-v-farber/#:~:text=A%20restriction%20is%20unreasonable%20and,likely%20injury%20to%20the%20public.>
 
 ### valley-medical-specialists-v-farber-in-light-of-the-great-public-d104ca80 {#valley-medical-specialists-v-farber-in-light-of-the-great-public-d104ca80}
@@ -41,7 +41,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `parties-and-cover-term-identification`, `physician-rules`, `physician-specific-notices-and-carve-outs`
 - source_cards: `farber-strict-cover`, `farber-strict-physician`, `q4-farber-strict`
-- cited_by: [Non-Compete Agreement Review Checklist — Arizona](../checklists/non-compete/arizona-review-checklist.md), [Non-Competes in Arizona](../non-compete/us/arizona.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Arizona](../checklists/non-compete/us/arizona.md), [Non-Competes in Arizona](../non-compete/us/arizona.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1253291/valley-medical-specialists-v-farber/#:~:text=In%20light%20of%20the%20great,be%20strictly%20construed%20for%20reasonableness.>
 
 ### valley-medical-specialists-v-farber-public-policy-concerns-in-this-case-4c0e7c81 {#valley-medical-specialists-v-farber-public-policy-concerns-in-this-case-4c0e7c81}
@@ -50,5 +50,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `physician-rules`, `physician-specific-notices-and-carve-outs`
 - source_cards: `farber-publicpolicy-physician`, `q4-farber-publicpolicy`
-- cited_by: [Non-Compete Agreement Review Checklist — Arizona](../checklists/non-compete/arizona-review-checklist.md), [Non-Competes in Arizona](../non-compete/us/arizona.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Arizona](../checklists/non-compete/us/arizona.md), [Non-Competes in Arizona](../non-compete/us/arizona.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1253291/valley-medical-specialists-v-farber/#:~:text=Public%20policy%20concerns%20in%20this,interests%20in%20enforcing%20the%20agreement.>

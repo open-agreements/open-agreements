@@ -10,7 +10,7 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/connecticut-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/connecticut'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/connecticut'
 tags:
@@ -41,5 +41,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `thoma-against-drafter`, `thoma-ambiguous-duration-against-drafter`
-- cited_by: [Non-Compete Agreement Review Checklist — Connecticut](../checklists/non-compete/connecticut-review-checklist.md), [Non-Competes in Connecticut](../non-compete/us/connecticut.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Connecticut](../checklists/non-compete/us/connecticut.md), [Non-Competes in Connecticut](../non-compete/us/connecticut.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2733143/thoma-v-oxford-performance-materials-inc/#:~:text=Such%20a%20reasonable%20construction%20is,not%20possible%20in%20this%20case.>

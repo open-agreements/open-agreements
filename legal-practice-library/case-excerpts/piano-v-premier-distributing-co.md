@@ -9,7 +9,7 @@ resource: 'https://www.courtlistener.com/opinion/2509475/piano-v-premier-distrib
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/new-mexico-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/new-mexico'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/new-mexico'
 tags:
@@ -40,7 +40,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`, `timing-and-execution-acknowledgements`
 - source_cards: `piano-contract-never-formed`, `piano-never-formed`
-- cited_by: [Non-Compete Agreement Review Checklist — New Mexico](../checklists/non-compete/new-mexico-review-checklist.md), [Non-Competes in New Mexico](../non-compete/us/new-mexico.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New Mexico](../checklists/non-compete/us/new-mexico.md), [Non-Competes in New Mexico](../non-compete/us/new-mexico.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2509475/piano-v-premier-distributing-co/#:~:text=Because%20we%20conclude%20that%20the,a%20contract%20was%20never%20formed.>
 
 ### piano-v-premier-distributing-co-continued-at-will-employment-is-an-2d77c13e {#piano-v-premier-distributing-co-continued-at-will-employment-is-an-2d77c13e}
@@ -49,7 +49,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`, `timing-and-execution-acknowledgements`
 - source_cards: `piano-continued-employment-illusory`, `piano-illusory`
-- cited_by: [Non-Compete Agreement Review Checklist — New Mexico](../checklists/non-compete/new-mexico-review-checklist.md), [Non-Competes in New Mexico](../non-compete/us/new-mexico.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New Mexico](../checklists/non-compete/us/new-mexico.md), [Non-Competes in New Mexico](../non-compete/us/new-mexico.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2509475/piano-v-premier-distributing-co/#:~:text=Continued%20at%2Dwill%20employment%20is%20an,promise%20that%20cannot%20be%20consideration.>
 
 ### piano-v-premier-distributing-co-the-implied-promise-of-continued-at-will-da5719fd {#piano-v-premier-distributing-co-the-implied-promise-of-continued-at-will-da5719fd}

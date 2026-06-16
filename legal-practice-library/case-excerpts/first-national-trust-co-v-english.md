@@ -12,7 +12,7 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/pennsylvania-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/pennsylvania'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/pennsylvania'
 tags:
@@ -34,7 +34,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `customer-nonsolicit`, `definitions`
 - source_cards: `english-predated-customers`, `pa-english-predated-defs`
-- cited_by: [Non-Compete Agreement Review Checklist — Pennsylvania](../checklists/non-compete/pennsylvania-review-checklist.md), [Non-Competes in Pennsylvania](../non-compete/us/pennsylvania.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Pennsylvania](../checklists/non-compete/us/pennsylvania.md), [Non-Competes in Pennsylvania](../non-compete/us/pennsylvania.md)
 - link_to_source: <https://www.pacourts.us/assets/opinions/Superior/out/J-A02018-26m%20-%20106684106347494370.pdf>
 
 ### first-national-trust-co-v-english-significantly-the-terms-solicit-divert-906d4ab7 {#first-national-trust-co-v-english-significantly-the-terms-solicit-divert-906d4ab7}
@@ -43,7 +43,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `customer-nonsolicit`, `definitions`, `restrictive-covenants-each-independently-includable`
 - source_cards: `english-affirmative-act`, `pa-english-acceptance-covs`, `pa-english-affirmative-defs`
-- cited_by: [Non-Compete Agreement Review Checklist — Pennsylvania](../checklists/non-compete/pennsylvania-review-checklist.md), [Non-Competes in Pennsylvania](../non-compete/us/pennsylvania.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Pennsylvania](../checklists/non-compete/us/pennsylvania.md), [Non-Competes in Pennsylvania](../non-compete/us/pennsylvania.md)
 - link_to_source: <https://www.pacourts.us/assets/opinions/Superior/out/J-A02018-26m%20-%20106684106347494370.pdf>
 
 ### first-national-trust-co-v-english-thus-the-non-solicitation-clause-is-0ceff38f {#first-national-trust-co-v-english-thus-the-non-solicitation-clause-is-0ceff38f}
@@ -52,5 +52,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `customer-nonsolicit`, `definitions`
 - source_cards: `english-no-geo`, `pa-english-no-geo-defs`
-- cited_by: [Non-Compete Agreement Review Checklist — Pennsylvania](../checklists/non-compete/pennsylvania-review-checklist.md), [Non-Competes in Pennsylvania](../non-compete/us/pennsylvania.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Pennsylvania](../checklists/non-compete/us/pennsylvania.md), [Non-Competes in Pennsylvania](../non-compete/us/pennsylvania.md)
 - link_to_source: <https://www.pacourts.us/assets/opinions/Superior/out/J-A02018-26m%20-%20106684106347494370.pdf>

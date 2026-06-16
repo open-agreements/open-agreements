@@ -9,7 +9,7 @@ resource: 'https://www.courtlistener.com/opinion/5285458/jumbosack-corp-v-buyck/
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/missouri-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/missouri'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/missouri'
 tags:
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`, `timing-and-execution-acknowledgements`
 - source_cards: `jumbosack-consideration`, `mo-jumbosack-timing`
-- cited_by: [Non-Compete Agreement Review Checklist — Missouri](../checklists/non-compete/missouri-review-checklist.md), [Non-Competes in Missouri](../non-compete/us/missouri.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Missouri](../checklists/non-compete/us/missouri.md), [Non-Competes in Missouri](../non-compete/us/missouri.md)
 - link_to_source: <https://www.courtlistener.com/opinion/5285458/jumbosack-corp-v-buyck/#:~:text=In%20the%20instant%20case%2C%20Employee,at%2Dwill%20employment%2C%20salary%2C%20and%20commissions.>

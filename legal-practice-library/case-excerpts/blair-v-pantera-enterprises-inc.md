@@ -11,7 +11,7 @@ resource: 'https://www.courtlistener.com/opinion/4601931/blair-v-pantera-enterpr
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/georgia-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/georgia'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/georgia'
 tags:
@@ -33,5 +33,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `covered-employees`, `georgia-statutory-gates`
 - source_cards: `ga-blair-key-employee`, `q2-blair-key-employee`
-- cited_by: [Non-Compete Agreement Review Checklist — Georgia](../checklists/non-compete/georgia-review-checklist.md), [Non-Competes in Georgia](../non-compete/us/georgia.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Georgia](../checklists/non-compete/us/georgia.md), [Non-Competes in Georgia](../non-compete/us/georgia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4601931/blair-v-pantera-enterprises-inc/#:~:text=Thus%2C%20Blair%20is%20not%20a,issuing%20injunctive%20relief%20to%20Pantera.>

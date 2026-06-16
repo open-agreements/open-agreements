@@ -41,7 +41,7 @@ North Dakota voids employee non-competes under N.D. Cent. Code § 9-08-06, one o
 
 For employees, that is a prohibition, not a reasonableness test. The two statutory exceptions cover sale-of-goodwill and owner dissociation settings; ordinary employment non-competes do not fit either exception. North Dakota cases apply the rule strictly, including to insurance agents and emergency-room physicians [^werlinger-employee-noncompete-void][^spectrum-physician-employment-void].
 
-That does not make every workplace covenant invalid. A confidentiality clause, trade-secret remedy, or during-employment loyalty claim may stand on different law. But a post-employment covenant that keeps a worker from practicing the same lawful trade is usually void. For a clause-by-clause pass over a specific agreement under these rules, the [North Dakota non-compete review checklist](/legal/non-compete/north-dakota-review-checklist) walks the surviving covenant suite item by item with each requirement's force level.
+That does not make every workplace covenant invalid. A confidentiality clause, trade-secret remedy, or during-employment loyalty claim may stand on different law. But a post-employment covenant that keeps a worker from practicing the same lawful trade is usually void. For a clause-by-clause pass over a specific agreement under these rules, the [North Dakota non-compete review checklist](/checklists/non-compete/us/north-dakota) walks the surviving covenant suite item by item with each requirement's force level.
 
 ## What statutory exceptions permit North Dakota non-competes? {#statutory-exceptions}
 

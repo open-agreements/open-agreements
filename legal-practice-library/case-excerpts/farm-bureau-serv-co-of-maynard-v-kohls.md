@@ -10,7 +10,7 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/iowa-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/iowa'
   - type: State Law Practice Note
     resource: 'https://openagreements.org/practice-guides/non-compete/us/iowa'
 tags:
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `non-solicitation-no-business`, `restrictive-covenants-each-independently-includable`
 - source_cards: `ia-farm-bureau-scope`, `ia-farm-bureau-territory`, `q7-farm-bureau-activities`
-- cited_by: [Non-Compete Agreement Review Checklist — Iowa](../checklists/non-compete/iowa-review-checklist.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Iowa](../checklists/non-compete/us/iowa.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1935888/farm-bureau-service-co-of-maynard-v-kohls/#:~:text=First%20it%20appears%20the%20activities,as%20to%20scope%20and%20area.>
 
 ### farm-bureau-serv-co-of-maynard-v-kohls-in-ehlers-the-contract-was-not-f6f850b5 {#farm-bureau-serv-co-of-maynard-v-kohls-in-ehlers-the-contract-was-not-f6f850b5}
@@ -41,7 +41,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`, `timing-and-execution-acknowledgements`
 - source_cards: `ia-farm-bureau-consideration`, `q8-farm-bureau-consideration`
-- cited_by: [Non-Compete Agreement Review Checklist — Iowa](../checklists/non-compete/iowa-review-checklist.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Iowa](../checklists/non-compete/us/iowa.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1935888/farm-bureau-service-co-of-maynard-v-kohls/#:~:text=In%20Ehlers%20the%20contract%20was,a%20covenant%20not%20to%20compete.>
 
 ### farm-bureau-serv-co-of-maynard-v-kohls-the-cause-is-remanded-for-entry-c389b325 {#farm-bureau-serv-co-of-maynard-v-kohls-the-cause-is-remanded-for-entry-c389b325}
@@ -50,5 +50,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-reformation`, `definitions`, `severability-and-reformation`, `tolling-during-breach`
 - source_cards: `ia-farm-bureau-fixed-period`, `ia-farm-bureau-no-addback`, `ia-farm-bureau-trimmed`, `q5-farm-bureau-partial`, `q6-farm-bureau-fixed-period`
-- cited_by: [Non-Compete Agreement Review Checklist — Iowa](../checklists/non-compete/iowa-review-checklist.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Iowa](../checklists/non-compete/us/iowa.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1935888/farm-bureau-service-co-of-maynard-v-kohls/#:~:text=The%20cause%20is%20remanded%20for,date%20that%20employment%20was%20terminated.>
