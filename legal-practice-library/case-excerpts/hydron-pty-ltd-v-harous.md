@@ -7,7 +7,7 @@ resource: 'https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASC/2005/176.
 timestamp: '2026-06-10'
 document_references:
   - type: Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/australia-south-australia'
+    resource: 'https://openagreements.org/practice-guides/non-compete/au/south-australia'
 tags:
   - case-law
   - non-compete
@@ -27,7 +27,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `cascading-clauses`
 - source_cards: `hydron-wootten-total-covenant`
-- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/australia-south-australia.md)
+- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/au/south-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASC/2005/176.html>
 
 ### hydron-pty-ltd-v-harous-even-if-this-were-possible-without-3b202e1c {#hydron-pty-ltd-v-harous-even-if-this-were-possible-without-3b202e1c}
@@ -36,7 +36,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`
 - source_cards: `hydron-no-rewriting`
-- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/australia-south-australia.md)
+- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/au/south-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASC/2005/176.html>
 
 ### hydron-pty-ltd-v-harous-in-any-event-hydron-bears-the-45306870 {#hydron-pty-ltd-v-harous-in-any-event-hydron-bears-the-45306870}
@@ -45,7 +45,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `enforceability`
 - source_cards: `hydron-onus`
-- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/australia-south-australia.md)
+- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/au/south-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASC/2005/176.html>
 
 ### hydron-pty-ltd-v-harous-on-their-face-the-clauses-appear-b57df5d4 {#hydron-pty-ltd-v-harous-on-their-face-the-clauses-appear-b57df5d4}
@@ -54,7 +54,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `cascading-clauses`
 - source_cards: `hydron-genuine-attempt`
-- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/australia-south-australia.md)
+- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/au/south-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASC/2005/176.html>
 
 ### hydron-pty-ltd-v-harous-the-courts-in-general-take-a-d4a604e8 {#hydron-pty-ltd-v-harous-the-courts-in-general-take-a-d4a604e8}
@@ -63,7 +63,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `contractors-and-sale`
 - source_cards: `hydron-stricter-view`
-- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/australia-south-australia.md)
+- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/au/south-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASC/2005/176.html>
 
 ### hydron-pty-ltd-v-harous-the-period-specified-shows-no-real-73664780 {#hydron-pty-ltd-v-harous-the-period-specified-shows-no-real-73664780}
@@ -72,5 +72,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `contractors-and-sale`
 - source_cards: `hydron-goodwill-connection`
-- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/australia-south-australia.md)
+- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/au/south-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASC/2005/176.html>

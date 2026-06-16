@@ -9,7 +9,8 @@ resource: 'https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/nt/NTSC/2013/29.h
 timestamp: '2026-06-10'
 document_references:
   - type: Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/australia-northern-territory'
+    resource: >-
+      https://openagreements.org/practice-guides/non-compete/au/northern-territory
 tags:
   - case-law
   - non-compete
@@ -29,7 +30,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`
 - source_cards: `henderson-readdown-term`
-- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/australia-northern-territory.md)
+- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/au/northern-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/nt/NTSC/2013/29.html>
 
 ### henderson-v-purairclean-pty-ltd-generally-speaking-the-validity-of-the-8127bf03 {#henderson-v-purairclean-pty-ltd-generally-speaking-the-validity-of-the-8127bf03}
@@ -38,7 +39,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `tolling`
 - source_cards: `henderson-tested-at-date`
-- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/australia-northern-territory.md)
+- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/au/northern-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/nt/NTSC/2013/29.html>
 
 ### henderson-v-purairclean-pty-ltd-in-my-opinion-the-lesser-period-397d8e0a {#henderson-v-purairclean-pty-ltd-in-my-opinion-the-lesser-period-397d8e0a}
@@ -47,7 +48,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `cascading-clauses`
 - source_cards: `henderson-one-year`
-- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/australia-northern-territory.md)
+- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/au/northern-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/nt/NTSC/2013/29.html>
 
 ### henderson-v-purairclean-pty-ltd-in-my-opinion-there-was-at-27509e84 {#henderson-v-purairclean-pty-ltd-in-my-opinion-there-was-at-27509e84}
@@ -56,7 +57,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `contractors-and-sale`
 - source_cards: `henderson-basis-at-entry`
-- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/australia-northern-territory.md)
+- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/au/northern-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/nt/NTSC/2013/29.html>
 
 ### henderson-v-purairclean-pty-ltd-it-has-been-recognised-that-the-577ddf70 {#henderson-v-purairclean-pty-ltd-it-has-been-recognised-that-the-577ddf70}
@@ -65,7 +66,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `legitimate-interest`
 - source_cards: `henderson-franchisor-interest`
-- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/australia-northern-territory.md)
+- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/au/northern-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/nt/NTSC/2013/29.html>
 
 ### henderson-v-purairclean-pty-ltd-the-restraint-of-trade-clauses-in-b0103122 {#henderson-v-purairclean-pty-ltd-the-restraint-of-trade-clauses-in-b0103122}
@@ -74,7 +75,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `cascading-clauses`, `contractors-and-sale`
 - source_cards: `henderson-franchise-upheld`, `henderson-twelve-months`
-- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/australia-northern-territory.md)
+- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/au/northern-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/nt/NTSC/2013/29.html>
 
 ### henderson-v-purairclean-pty-ltd-the-restraint-period-was-expressed-as-74b96914 {#henderson-v-purairclean-pty-ltd-the-restraint-period-was-expressed-as-74b96914}
@@ -83,7 +84,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `cascading-clauses`
 - source_cards: `henderson-graduated-period`
-- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/australia-northern-territory.md)
+- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/au/northern-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/nt/NTSC/2013/29.html>
 
 ### henderson-v-purairclean-pty-ltd-there-is-a-presumption-that-a-d2f1f339 {#henderson-v-purairclean-pty-ltd-there-is-a-presumption-that-a-d2f1f339}
@@ -92,5 +93,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `enforceability`
 - source_cards: `henderson-presumed-invalid`
-- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/australia-northern-territory.md)
+- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/au/northern-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/nt/NTSC/2013/29.html>

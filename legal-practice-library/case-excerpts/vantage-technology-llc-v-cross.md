@@ -11,7 +11,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/tennessee-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/tennessee'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/tennessee'
 tags:
   - case-law
   - non-compete
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `tolling-during-breach`, `tolling-extension`
 - source_cards: `tolling-reasonableness`, `vantage-modify`, `vantage-reasonableness-check`
-- cited_by: [Non-Compete Agreement Review Checklist — Tennessee](../non-compete/tennessee-review-checklist.md), [Non-Competes in Tennessee](../non-compete/tennessee.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Tennessee](../checklists/non-compete/tennessee-review-checklist.md), [Non-Competes in Tennessee](../non-compete/us/tennessee.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1561156/vantage-technology-llc-v-cross/#:~:text=Hence%2C%20a%20court%20may%20modify,as%20to%20render%20it%20reasonable.>
 
 ### vantage-technology-llc-v-cross-if-the-parties-manifest-an-intent-97188ca3 {#vantage-technology-llc-v-cross-if-the-parties-manifest-an-intent-97188ca3}
@@ -40,7 +40,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `choice-of-law`, `governing-law-venue-dispute-process`, `parties-and-cover-term-identification`
 - source_cards: `vantage-choice-intent`, `vantage-choice-requirements`, `vantage-intent-honored`
-- cited_by: [Non-Compete Agreement Review Checklist — Tennessee](../non-compete/tennessee-review-checklist.md), [Non-Competes in Tennessee](../non-compete/tennessee.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Tennessee](../checklists/non-compete/tennessee-review-checklist.md), [Non-Competes in Tennessee](../non-compete/us/tennessee.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1561156/vantage-technology-llc-v-cross/#:~:text=If%20the%20parties%20manifest%20an,provided%20certain%20requirements%20are%20met.>
 
 ### vantage-technology-llc-v-cross-the-choice-of-law-provision-must-8855feb1 {#vantage-technology-llc-v-cross-the-choice-of-law-provision-must-8855feb1}
@@ -49,5 +49,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `choice-of-law`, `governing-law-venue-dispute-process`
 - source_cards: `vantage-good-faith`, `vantage-good-faith-execution`
-- cited_by: [Non-Compete Agreement Review Checklist — Tennessee](../non-compete/tennessee-review-checklist.md), [Non-Competes in Tennessee](../non-compete/tennessee.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Tennessee](../checklists/non-compete/tennessee-review-checklist.md), [Non-Competes in Tennessee](../non-compete/us/tennessee.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1561156/vantage-technology-llc-v-cross/#:~:text=The%20choice%20of%20law%20provision,be%20executed%20in%20good%20faith.>

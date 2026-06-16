@@ -7,7 +7,7 @@ resource: 'https://www.courtlistener.com/opinion/10124676/pangelinan-v-pangelina
 timestamp: '2026-06-03'
 document_references:
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/cnmi'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/cnmi'
 tags:
   - case-law
   - non-compete
@@ -27,7 +27,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`
 - source_cards: `pang-gapfill`
-- cited_by: [Non-Competes in the Northern Mariana Islands](../non-compete/cnmi.md)
+- cited_by: [Non-Competes in the Northern Mariana Islands](../non-compete/us/cnmi.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10124676/pangelinan-v-pangelinan/#:~:text=first%20look%20to%20local%20written,the%20Restatement%20fills%20the%20gaps.>
 
 ### pangelinan-v-pangelinan-shall-be-the-rules-of-decision-07db66f9 {#pangelinan-v-pangelinan-shall-be-the-rules-of-decision-07db66f9}
@@ -36,5 +36,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `recent-developments`
 - source_cards: `pang-current`
-- cited_by: [Non-Competes in the Northern Mariana Islands](../non-compete/cnmi.md)
+- cited_by: [Non-Competes in the Northern Mariana Islands](../non-compete/us/cnmi.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10124676/pangelinan-v-pangelinan/#:~:text=shall%20be%20the%20rules%20of,customary%20law%20to%20the%20contrary.>

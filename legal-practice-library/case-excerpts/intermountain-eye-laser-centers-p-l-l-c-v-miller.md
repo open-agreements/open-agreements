@@ -14,7 +14,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/idaho-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/idaho'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/idaho'
 tags:
   - case-law
   - non-compete
@@ -34,7 +34,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `healthcare-providers`, `physician-specific-notices-and-carve-outs`
 - source_cards: `idaho-intermountain-patients-hc`, `intermountain-patient-choice`
-- cited_by: [Non-Compete Agreement Review Checklist — Idaho](../non-compete/idaho-review-checklist.md), [Non-Competes in Idaho](../non-compete/idaho.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Idaho](../checklists/non-compete/idaho-review-checklist.md), [Non-Competes in Idaho](../non-compete/us/idaho.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2510251/intermountain-eye-laser-centers-pllc-v-miller/#:~:text=The%20extent%20of%20Intermountain%20Eye%E2%80%99s%20interest%20in%20those,care%20provider%20of%20their%20choice.>
 
 ### intermountain-eye-laser-centers-p-l-l-c-v-miller-while-the-court-may-blue-pencil-if-603dd842 {#intermountain-eye-laser-centers-p-l-l-c-v-miller-while-the-court-may-blue-pencil-if-603dd842}
@@ -43,5 +43,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-modification`, `severability-and-reformation`
 - source_cards: `idaho-simple-blue-pencil-sev`, `intermountain-simple-blue-pencil`
-- cited_by: [Non-Compete Agreement Review Checklist — Idaho](../non-compete/idaho-review-checklist.md), [Non-Competes in Idaho](../non-compete/idaho.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Idaho](../checklists/non-compete/idaho-review-checklist.md), [Non-Competes in Idaho](../non-compete/us/idaho.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2510251/intermountain-eye-laser-centers-pllc-v-miller/#:~:text=While%20the%20court%20may%20blue%2Dpencil%2C,substantial%20rewrite%20of%20the%20contract.>

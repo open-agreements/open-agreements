@@ -9,7 +9,7 @@ resource: 'https://www.elitigation.sg/gd/s/2017_SGCA_55'
 timestamp: '2026-06-03'
 document_references:
   - type: Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/singapore'
+    resource: 'https://openagreements.org/practice-guides/non-compete/sg'
 tags:
   - case-law
   - non-compete
@@ -29,5 +29,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `enforcement-remedies`
 - source_cards: `rga-injunction`
-- cited_by: [Non-Competes in Singapore](../non-compete/singapore.md)
+- cited_by: [Non-Competes in Singapore](../non-compete/sg.md)
 - link_to_source: <https://www.elitigation.sg/gd/s/2017_SGCA_55>

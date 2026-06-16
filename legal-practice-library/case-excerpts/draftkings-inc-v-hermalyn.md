@@ -11,7 +11,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/california-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/california'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/california'
 tags:
   - case-law
   - non-compete
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `choice-of-law`, `governing-law-venue-dispute-process`
 - source_cards: `ca-draftkings`, `draftkings-stand`
-- cited_by: [Non-Compete Agreement Review Checklist — California](../non-compete/california-review-checklist.md), [Non-Competes in California](../non-compete/california.md)
+- cited_by: [Non-Compete Agreement Review Checklist — California](../checklists/non-compete/california-review-checklist.md), [Non-Competes in California](../non-compete/us/california.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10125471/draftkings-inc-v-hermalyn/#:~:text=Having%20considered%20the%20matter%20on,let%20the%20challenged%20order%20stand.>

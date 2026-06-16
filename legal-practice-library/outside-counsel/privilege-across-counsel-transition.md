@@ -5,7 +5,7 @@ description: >-
   How to preserve privilege during a counsel transition, including file
   transfers, AI search, matter summaries, billing narratives, and disputes.
 resource: >-
-  https://openagreements.org/legal/outside-counsel/privilege-across-counsel-transition
+  https://openagreements.org/practice-guides/outside-counsel/privilege-across-counsel-transition
 timestamp: '2026-04-20'
 tags:
   - outside-counsel

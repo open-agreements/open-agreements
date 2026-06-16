@@ -10,7 +10,7 @@ timestamp: '2026-04-20'
 document_references:
   - type: Practice Note
     resource: >-
-      https://openagreements.org/legal/outside-counsel/privilege-across-counsel-transition
+      https://openagreements.org/practice-guides/outside-counsel/privilege-across-counsel-transition
 tags:
   - case-law
   - outside-counsel

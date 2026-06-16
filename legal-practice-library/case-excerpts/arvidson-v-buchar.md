@@ -10,7 +10,7 @@ resource: >-
 timestamp: '2026-06-03'
 document_references:
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/us-virgin-islands'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/virgin-islands'
 tags:
   - case-law
   - non-compete
@@ -30,7 +30,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `consideration`
 - source_cards: `arvidson-wda`, `q5-arvidson-wda`
-- cited_by: [Non-Competes in the U.S. Virgin Islands](../non-compete/us-virgin-islands.md)
+- cited_by: [Non-Competes in the U.S. Virgin Islands](../non-compete/us/virgin-islands.md)
 - link_to_source: <https://usvipublicportal-api.vicourts.org/courts/87edff36-c02b-4073-aea4-c0652bc123d9/cms/case/7432A3F8-AD71-45C5-B028-B4471D746A4E/docketentrydocuments/27b98266-7d9f-405f-b7ba-c221f8db0a97>
 
 ### arvidson-v-buchar-a-contract-which-is-only-in-243f1fcc {#arvidson-v-buchar-a-contract-which-is-only-in-243f1fcc}
@@ -39,7 +39,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `other-covenants`
 - source_cards: `q10-arvidson`
-- cited_by: [Non-Competes in the U.S. Virgin Islands](../non-compete/us-virgin-islands.md)
+- cited_by: [Non-Competes in the U.S. Virgin Islands](../non-compete/us/virgin-islands.md)
 - link_to_source: <https://usvipublicportal-api.vicourts.org/courts/87edff36-c02b-4073-aea4-c0652bc123d9/cms/case/7432A3F8-AD71-45C5-B028-B4471D746A4E/docketentrydocuments/27b98266-7d9f-405f-b7ba-c221f8db0a97>
 
 ### arvidson-v-buchar-accordingly-the-arvidsons-have-met-their-e27aa8e0 {#arvidson-v-buchar-accordingly-the-arvidsons-have-met-their-e27aa8e0}
@@ -48,7 +48,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `employee-noncompetes`
 - source_cards: `arvidson-enforceable`
-- cited_by: [Non-Competes in the U.S. Virgin Islands](../non-compete/us-virgin-islands.md)
+- cited_by: [Non-Competes in the U.S. Virgin Islands](../non-compete/us/virgin-islands.md)
 - link_to_source: <https://usvipublicportal-api.vicourts.org/courts/87edff36-c02b-4073-aea4-c0652bc123d9/cms/case/7432A3F8-AD71-45C5-B028-B4471D746A4E/docketentrydocuments/27b98266-7d9f-405f-b7ba-c221f8db0a97>
 
 ### arvidson-v-buchar-accordingly-the-court-implements-this-c594a77d {#arvidson-v-buchar-accordingly-the-court-implements-this-c594a77d}
@@ -57,7 +57,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `overbroad-narrowing`
 - source_cards: `q6-arvidson-strict`
-- cited_by: [Non-Competes in the U.S. Virgin Islands](../non-compete/us-virgin-islands.md)
+- cited_by: [Non-Competes in the U.S. Virgin Islands](../non-compete/us/virgin-islands.md)
 - link_to_source: <https://usvipublicportal-api.vicourts.org/courts/87edff36-c02b-4073-aea4-c0652bc123d9/cms/case/7432A3F8-AD71-45C5-B028-B4471D746A4E/docketentrydocuments/27b98266-7d9f-405f-b7ba-c221f8db0a97>
 
 ### arvidson-v-buchar-in-accordance-this-court-similarly-40556d5c {#arvidson-v-buchar-in-accordance-this-court-similarly-40556d5c}
@@ -66,7 +66,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `governing-test`
 - source_cards: `arvidson-rule`
-- cited_by: [Non-Competes in the U.S. Virgin Islands](../non-compete/us-virgin-islands.md)
+- cited_by: [Non-Competes in the U.S. Virgin Islands](../non-compete/us/virgin-islands.md)
 - link_to_source: <https://usvipublicportal-api.vicourts.org/courts/87edff36-c02b-4073-aea4-c0652bc123d9/cms/case/7432A3F8-AD71-45C5-B028-B4471D746A4E/docketentrydocuments/27b98266-7d9f-405f-b7ba-c221f8db0a97>
 
 ### arvidson-v-buchar-is-supported-by-valid-consideration-58361f07 {#arvidson-v-buchar-is-supported-by-valid-consideration-58361f07}
@@ -75,7 +75,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `consideration`
 - source_cards: `arvidson-consideration`
-- cited_by: [Non-Competes in the U.S. Virgin Islands](../non-compete/us-virgin-islands.md)
+- cited_by: [Non-Competes in the U.S. Virgin Islands](../non-compete/us/virgin-islands.md)
 - link_to_source: <https://usvipublicportal-api.vicourts.org/courts/87edff36-c02b-4073-aea4-c0652bc123d9/cms/case/7432A3F8-AD71-45C5-B028-B4471D746A4E/docketentrydocuments/27b98266-7d9f-405f-b7ba-c221f8db0a97>
 
 ### arvidson-v-buchar-reasonableness-is-a-fact-intensive-649c33f6 {#arvidson-v-buchar-reasonableness-is-a-fact-intensive-649c33f6}
@@ -84,7 +84,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `governing-test`, `tolling`
 - source_cards: `arvidson-factintensive`, `q7-arvidson`
-- cited_by: [Non-Competes in the U.S. Virgin Islands](../non-compete/us-virgin-islands.md)
+- cited_by: [Non-Competes in the U.S. Virgin Islands](../non-compete/us/virgin-islands.md)
 - link_to_source: <https://usvipublicportal-api.vicourts.org/courts/87edff36-c02b-4073-aea4-c0652bc123d9/cms/case/7432A3F8-AD71-45C5-B028-B4471D746A4E/docketentrydocuments/27b98266-7d9f-405f-b7ba-c221f8db0a97>
 
 ### arvidson-v-buchar-the-covenant-to-not-compete-does-ea9054d6 {#arvidson-v-buchar-the-covenant-to-not-compete-does-ea9054d6}
@@ -93,7 +93,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `duration-geography-scope`
 - source_cards: `arvidson-scope`
-- cited_by: [Non-Competes in the U.S. Virgin Islands](../non-compete/us-virgin-islands.md)
+- cited_by: [Non-Competes in the U.S. Virgin Islands](../non-compete/us/virgin-islands.md)
 - link_to_source: <https://usvipublicportal-api.vicourts.org/courts/87edff36-c02b-4073-aea4-c0652bc123d9/cms/case/7432A3F8-AD71-45C5-B028-B4471D746A4E/docketentrydocuments/27b98266-7d9f-405f-b7ba-c221f8db0a97>
 
 ### arvidson-v-buchar-the-soundest-rule-for-the-virgin-0948880e {#arvidson-v-buchar-the-soundest-rule-for-the-virgin-0948880e}
@@ -102,7 +102,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `overbroad-narrowing`
 - source_cards: `q6-arvidson`
-- cited_by: [Non-Competes in the U.S. Virgin Islands](../non-compete/us-virgin-islands.md)
+- cited_by: [Non-Competes in the U.S. Virgin Islands](../non-compete/us/virgin-islands.md)
 - link_to_source: <https://usvipublicportal-api.vicourts.org/courts/87edff36-c02b-4073-aea4-c0652bc123d9/cms/case/7432A3F8-AD71-45C5-B028-B4471D746A4E/docketentrydocuments/27b98266-7d9f-405f-b7ba-c221f8db0a97>
 
 ### arvidson-v-buchar-this-test-of-reasonableness-must-be-dc4bb7c9 {#arvidson-v-buchar-this-test-of-reasonableness-must-be-dc4bb7c9}
@@ -111,5 +111,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `governing-test`
 - source_cards: `arvidson-factors`
-- cited_by: [Non-Competes in the U.S. Virgin Islands](../non-compete/us-virgin-islands.md)
+- cited_by: [Non-Competes in the U.S. Virgin Islands](../non-compete/us/virgin-islands.md)
 - link_to_source: <https://usvipublicportal-api.vicourts.org/courts/87edff36-c02b-4073-aea4-c0652bc123d9/cms/case/7432A3F8-AD71-45C5-B028-B4471D746A4E/docketentrydocuments/27b98266-7d9f-405f-b7ba-c221f8db0a97>

@@ -13,7 +13,7 @@ document_references:
     resource: >-
       https://openagreements.org/legal/non-compete/west-virginia-review-checklist
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/west-virginia'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/west-virginia'
 tags:
   - case-law
   - non-compete
@@ -33,7 +33,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `customer-nonsolicits`, `definitions`, `restrictive-covenants-each-independently-includable`, `west-virginia-statutory-gates`
 - source_cards: `wood-nonpiracy-definition`, `wv-wood-definition-cov`, `wv-wood-definition-def`, `wv-wood-definition-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — West Virginia](../non-compete/west-virginia-review-checklist.md), [Non-Competes in West Virginia](../non-compete/west-virginia.md)
+- cited_by: [Non-Compete Agreement Review Checklist — West Virginia](../checklists/non-compete/west-virginia-review-checklist.md), [Non-Competes in West Virginia](../non-compete/us/west-virginia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1289040/wood-v-acordia-of-west-virginia-inc/#:~:text=Accordingly%2C%20this%20Court%20holds%20that,of%20the%20employer's%20confidential%20information.>
 
 ### wood-v-acordia-of-west-virginia-inc-although-both-covenants-not-to-compete-4bcd2044 {#wood-v-acordia-of-west-virginia-inc-although-both-covenants-not-to-compete-4bcd2044}
@@ -42,7 +42,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `customer-nonsolicits`, `definitions`, `restrictive-covenants-each-independently-includable`, `west-virginia-statutory-gates`
 - source_cards: `wood-no-territorial-limits`, `wv-wood-territorial-cov`, `wv-wood-territorial-def`, `wv-wood-territorial-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — West Virginia](../non-compete/west-virginia-review-checklist.md), [Non-Competes in West Virginia](../non-compete/west-virginia.md)
+- cited_by: [Non-Compete Agreement Review Checklist — West Virginia](../checklists/non-compete/west-virginia-review-checklist.md), [Non-Competes in West Virginia](../non-compete/us/west-virginia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1289040/wood-v-acordia-of-west-virginia-inc/#:~:text=Although%20both%20covenants%20not%20to,economic%20forces%20of%20the%20marketplace.>
 
 ### wood-v-acordia-of-west-virginia-inc-in-addition-we-hold-that-although-7df8c48f {#wood-v-acordia-of-west-virginia-inc-in-addition-we-hold-that-although-7df8c48f}
@@ -51,5 +51,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `customer-nonsolicits`, `west-virginia-statutory-gates`
 - source_cards: `wood-three-factor-test`, `wv-wood-three-factor-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — West Virginia](../non-compete/west-virginia-review-checklist.md), [Non-Competes in West Virginia](../non-compete/west-virginia.md)
+- cited_by: [Non-Compete Agreement Review Checklist — West Virginia](../checklists/non-compete/west-virginia-review-checklist.md), [Non-Competes in West Virginia](../non-compete/us/west-virginia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1289040/wood-v-acordia-of-west-virginia-inc/#:~:text=In%20addition%2C%20we%20hold%20that,or%20she%20seeks%20to%20pursue.>

@@ -9,7 +9,7 @@ resource: 'https://indiankanoon.org/doc/445135/'
 timestamp: '2026-06-03'
 document_references:
   - type: Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/india'
+    resource: 'https://openagreements.org/practice-guides/non-compete/in'
 tags:
   - case-law
   - non-compete
@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `what-to-protect`
 - source_cards: `amex-freedom`
-- cited_by: [Non-Competes in India](../non-compete/india.md)
+- cited_by: [Non-Competes in India](../non-compete/in.md)
 - link_to_source: <https://indiankanoon.org/doc/445135/>
 
 ### american-express-bank-ltd-v-priya-puri-in-my-opinion-no-bank-should-226f4ce8 {#american-express-bank-ltd-v-priya-puri-in-my-opinion-no-bank-should-226f4ce8}
@@ -38,5 +38,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `non-solicitation`
 - source_cards: `amex-monopoly`
-- cited_by: [Non-Competes in India](../non-compete/india.md)
+- cited_by: [Non-Competes in India](../non-compete/in.md)
 - link_to_source: <https://indiankanoon.org/doc/445135/>

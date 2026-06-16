@@ -12,7 +12,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/new-york-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/new-york'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/new-york'
 tags:
   - case-law
   - non-compete
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `enforceability`, `new-york-doctrine-gates`, `physician-specific-notices-and-carve-outs`, `restrictive-covenants-each-independently-includable`
 - source_cards: `natural-organics-public-prong`, `natural-organics-restraint-test`, `natural-organics-three-prong-gate`, `natural-organics-three-prong-test`
-- cited_by: [Non-Compete Agreement Review Checklist — New York](../non-compete/new-york-review-checklist.md), [Non-Competes in New York](../non-compete/new-york.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New York](../checklists/non-compete/new-york-review-checklist.md), [Non-Competes in New York](../non-compete/us/new-york.md)
 - link_to_source: <https://www.courtlistener.com/opinion/5897806/natural-organics-inc-v-kirkendall/#:~:text=%22A%20restraint%20is%20reasonable%20only,not%20injurious%20to%20the%20public%22>
 
 ### natural-organics-inc-v-kirkendall-since-there-is-no-legitimate-employer-1444fe2b {#natural-organics-inc-v-kirkendall-since-there-is-no-legitimate-employer-1444fe2b}
@@ -41,5 +41,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `protectable-interests`, `severability-and-reformation`
 - source_cards: `natural-organics-no-interest`, `natural-organics-no-severance`, `natural-organics-nothing-to-sever`
-- cited_by: [Non-Compete Agreement Review Checklist — New York](../non-compete/new-york-review-checklist.md), [Non-Competes in New York](../non-compete/new-york.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New York](../checklists/non-compete/new-york-review-checklist.md), [Non-Competes in New York](../non-compete/us/new-york.md)
 - link_to_source: <https://www.courtlistener.com/opinion/5897806/natural-organics-inc-v-kirkendall/#:~:text=Since%20there%20is%20no%20legitimate,partial%20enforcement%20does%20not%20arise>

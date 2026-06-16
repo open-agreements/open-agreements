@@ -15,7 +15,7 @@ timestamp: '2026-04-20'
 document_references:
   - type: Practice Note
     resource: >-
-      https://openagreements.org/legal/ai-vendors/external-ai-vendor-privilege-risk
+      https://openagreements.org/practice-guides/ai-vendors/external-ai-vendor-privilege-risk
 tags:
   - case-law
   - ai-vendors

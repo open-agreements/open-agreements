@@ -11,7 +11,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/oklahoma-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/oklahoma'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/oklahoma'
 tags:
   - case-law
   - non-compete
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `choice-of-law`, `governing-law-venue-dispute-process`, `parties-and-cover-term-identification`
 - source_cards: `eakle-public-policy`, `eakle-public-policy-cover`, `eakle-public-policy-gov`
-- cited_by: [Non-Compete Agreement Review Checklist — Oklahoma](../non-compete/oklahoma-review-checklist.md), [Non-Competes in Oklahoma](../non-compete/oklahoma.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Oklahoma](../checklists/non-compete/oklahoma-review-checklist.md), [Non-Competes in Oklahoma](../non-compete/us/oklahoma.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2296282/eakle-v-grinnell-corp/#:~:text=As%20this%20general%20rule%20recognizes%2C,policy%20of%20the%20forum%20state.>
 
 ### eakle-v-grinnell-corp-the-oklahoma-supreme-court-has-held-8e2f9efe {#eakle-v-grinnell-corp-the-oklahoma-supreme-court-has-held-8e2f9efe}
@@ -40,5 +40,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `sale-of-business`
 - source_cards: `eakle-218-reform`
-- cited_by: [Non-Competes in Oklahoma](../non-compete/oklahoma.md)
+- cited_by: [Non-Competes in Oklahoma](../non-compete/us/oklahoma.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2296282/eakle-v-grinnell-corp/#:~:text=The%20Oklahoma%20Supreme%20Court%20has,restrictions%20found%20in%20section%20218.>

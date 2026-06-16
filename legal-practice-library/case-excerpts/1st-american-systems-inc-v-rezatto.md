@@ -12,7 +12,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/south-dakota-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/south-dakota'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/south-dakota'
 tags:
   - case-law
   - non-compete
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `confidentiality-and-trade-secret-treatment`, `definitions`, `trade-secrets-ndas`
 - source_cards: `rezatto-confidentiality-public-policy`, `sd-rezatto-conf`, `sd-rezatto-defs`
-- cited_by: [Non-Compete Agreement Review Checklist — South Dakota](../non-compete/south-dakota-review-checklist.md), [Non-Competes in South Dakota](../non-compete/south-dakota.md)
+- cited_by: [Non-Compete Agreement Review Checklist — South Dakota](../checklists/non-compete/south-dakota-review-checklist.md), [Non-Competes in South Dakota](../non-compete/us/south-dakota.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2193337/1st-american-systems-inc-v-rezatto/#:~:text=Because%20this%20dialectic%20exists%2C%20covenants%2C,employer%E2%80%99s%20interest%20in%20confidential%20information.>
 
 ### 1st-american-systems-inc-v-rezatto-the-trial-court-erred-in-completely-4c988419 {#1st-american-systems-inc-v-rezatto-the-trial-court-erred-in-completely-4c988419}
@@ -41,5 +41,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `overbroad-covenants`, `severability-and-reformation`
 - source_cards: `rezatto-divisible-nda`, `sd-rezatto-div-sev`
-- cited_by: [Non-Compete Agreement Review Checklist — South Dakota](../non-compete/south-dakota-review-checklist.md), [Non-Competes in South Dakota](../non-compete/south-dakota.md)
+- cited_by: [Non-Compete Agreement Review Checklist — South Dakota](../checklists/non-compete/south-dakota-review-checklist.md), [Non-Competes in South Dakota](../non-compete/us/south-dakota.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2193337/1st-american-systems-inc-v-rezatto/#:~:text=The%20trial%20court%20erred%20in,a%20general%20restraint%20on%20trade.>

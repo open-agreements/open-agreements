@@ -11,7 +11,8 @@ resource: 'https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASCA/2004/82.
 timestamp: '2026-06-10'
 document_references:
   - type: Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/australia-western-australia'
+    resource: >-
+      https://openagreements.org/practice-guides/non-compete/au/western-australia
 tags:
   - case-law
   - non-compete
@@ -31,7 +32,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `contractors-and-sale`
 - source_cards: `cream-ten-year-excessive`
-- cited_by: [Non-Compete Enforceability in Western Australia](../non-compete/australia-western-australia.md)
+- cited_by: [Non-Compete Enforceability in Western Australia](../non-compete/au/western-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASCA/2004/82.html>
 
 ### cream-v-bushcolt-pty-ltd-in-this-context-it-has-been-41cc11af {#cream-v-bushcolt-pty-ltd-in-this-context-it-has-been-41cc11af}
@@ -40,7 +41,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `contractors-and-sale`
 - source_cards: `cream-iraf-duration`
-- cited_by: [Non-Compete Enforceability in Western Australia](../non-compete/australia-western-australia.md)
+- cited_by: [Non-Compete Enforceability in Western Australia](../non-compete/au/western-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASCA/2004/82.html>
 
 ### cream-v-bushcolt-pty-ltd-the-cumulative-or-combined-effect-of-b5fdeac5 {#cream-v-bushcolt-pty-ltd-the-cumulative-or-combined-effect-of-b5fdeac5}
@@ -49,7 +50,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `contractors-and-sale`
 - source_cards: `cream-cumulative-effect`
-- cited_by: [Non-Compete Enforceability in Western Australia](../non-compete/australia-western-australia.md)
+- cited_by: [Non-Compete Enforceability in Western Australia](../non-compete/au/western-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASCA/2004/82.html>
 
 ### cream-v-bushcolt-pty-ltd-the-objective-question-is-whether-the-da0c7c2e {#cream-v-bushcolt-pty-ltd-the-objective-question-is-whether-the-da0c7c2e}
@@ -58,5 +59,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `reasonableness-factors`
 - source_cards: `cream-objective-duration`
-- cited_by: [Non-Compete Enforceability in Western Australia](../non-compete/australia-western-australia.md)
+- cited_by: [Non-Compete Enforceability in Western Australia](../non-compete/au/western-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASCA/2004/82.html>

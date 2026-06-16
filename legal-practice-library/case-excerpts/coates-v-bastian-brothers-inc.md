@@ -11,7 +11,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/michigan-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/michigan'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/michigan'
 tags:
   - case-law
   - non-compete
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `duration-geography`, `michigan-statutory-gates`, `tolling-during-breach`, `tolling-extension`
 - source_cards: `coates-question-of-law`, `coates-tolling-backdrop`, `mi-coates-gate`, `mi-coates-tolling`
-- cited_by: [Non-Compete Agreement Review Checklist — Michigan](../non-compete/michigan-review-checklist.md), [Non-Competes in Michigan](../non-compete/michigan.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Michigan](../checklists/non-compete/michigan-review-checklist.md), [Non-Competes in Michigan](../non-compete/us/michigan.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2220514/coates-v-bastian-brothers-inc/#:~:text=The%20reasonableness%20of%20a%20noncompetition,the%20relevant%20facts%20are%20undisputed.>

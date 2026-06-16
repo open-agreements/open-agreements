@@ -9,7 +9,8 @@ resource: 'https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASCA/2007/169
 timestamp: '2026-06-10'
 document_references:
   - type: Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/australia-western-australia'
+    resource: >-
+      https://openagreements.org/practice-guides/non-compete/au/western-australia
 tags:
   - case-law
   - non-compete
@@ -29,7 +30,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `enforceability`, `federal-reform`
 - source_cards: `smith-still-governs`, `smith-void-unless`
-- cited_by: [Non-Compete Enforceability in Western Australia](../non-compete/australia-western-australia.md)
+- cited_by: [Non-Compete Enforceability in Western Australia](../non-compete/au/western-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASCA/2007/169.html>
 
 ### smith-v-nomad-modular-building-pty-ltd-the-validity-of-the-restraint-must-c747dcb7 {#smith-v-nomad-modular-building-pty-ltd-the-validity-of-the-restraint-must-c747dcb7}
@@ -38,5 +39,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `garden-leave`, `reasonableness-factors`, `tolling`
 - source_cards: `smith-tested-at-contract`, `smith-tested-at-contract-gl`, `smith-tested-at-contract-tolling`
-- cited_by: [Non-Compete Enforceability in Western Australia](../non-compete/australia-western-australia.md)
+- cited_by: [Non-Compete Enforceability in Western Australia](../non-compete/au/western-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASCA/2007/169.html>

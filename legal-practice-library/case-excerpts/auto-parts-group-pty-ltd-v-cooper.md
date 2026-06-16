@@ -11,7 +11,7 @@ resource: 'https://archive.sclqld.org.au/qjudgment/2015/QSC15-155.pdf'
 timestamp: '2026-06-10'
 document_references:
   - type: Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/australia-queensland'
+    resource: 'https://openagreements.org/practice-guides/non-compete/au/queensland'
 tags:
   - case-law
   - non-compete
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `cascading-clauses`, `court-narrowing`
 - source_cards: `autoparts-cascading`, `autoparts-no-rewrite`
-- cited_by: [Non-Compete Enforceability in Queensland](../non-compete/australia-queensland.md)
+- cited_by: [Non-Compete Enforceability in Queensland](../non-compete/au/queensland.md)
 - link_to_source: <https://archive.sclqld.org.au/qjudgment/2015/QSC15-155.pdf>
 
 ### auto-parts-group-pty-ltd-v-cooper-however-a-declaration-by-a-party-cbaee7e3 {#auto-parts-group-pty-ltd-v-cooper-however-a-declaration-by-a-party-cbaee7e3}
@@ -40,7 +40,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `garden-leave`, `reasonableness-factors`
 - source_cards: `autoparts-acknowledgement-not-binding`, `autoparts-acknowledgement-not-binding-gl`
-- cited_by: [Non-Compete Enforceability in Queensland](../non-compete/australia-queensland.md)
+- cited_by: [Non-Compete Enforceability in Queensland](../non-compete/au/queensland.md)
 - link_to_source: <https://archive.sclqld.org.au/qjudgment/2015/QSC15-155.pdf>
 
 ### auto-parts-group-pty-ltd-v-cooper-one-test-is-to-ask-how-e78a6102 {#auto-parts-group-pty-ltd-v-cooper-one-test-is-to-ask-how-e78a6102}
@@ -49,7 +49,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `reasonableness-factors`
 - source_cards: `autoparts-die-away`
-- cited_by: [Non-Compete Enforceability in Queensland](../non-compete/australia-queensland.md)
+- cited_by: [Non-Compete Enforceability in Queensland](../non-compete/au/queensland.md)
 - link_to_source: <https://archive.sclqld.org.au/qjudgment/2015/QSC15-155.pdf>
 
 ### auto-parts-group-pty-ltd-v-cooper-provisions-in-a-restrictive-covenant-may-2e3aae34 {#auto-parts-group-pty-ltd-v-cooper-provisions-in-a-restrictive-covenant-may-2e3aae34}
@@ -58,7 +58,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `cascading-clauses`, `court-narrowing`
 - source_cards: `autoparts-severance`, `autoparts-severance-cascade`
-- cited_by: [Non-Compete Enforceability in Queensland](../non-compete/australia-queensland.md)
+- cited_by: [Non-Compete Enforceability in Queensland](../non-compete/au/queensland.md)
 - link_to_source: <https://archive.sclqld.org.au/qjudgment/2015/QSC15-155.pdf>
 
 ### auto-parts-group-pty-ltd-v-cooper-the-party-who-seeks-to-enforce-ecd529a5 {#auto-parts-group-pty-ltd-v-cooper-the-party-who-seeks-to-enforce-ecd529a5}
@@ -67,7 +67,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `enforceability`
 - source_cards: `autoparts-onus`
-- cited_by: [Non-Compete Enforceability in Queensland](../non-compete/australia-queensland.md)
+- cited_by: [Non-Compete Enforceability in Queensland](../non-compete/au/queensland.md)
 - link_to_source: <https://archive.sclqld.org.au/qjudgment/2015/QSC15-155.pdf>
 
 ### auto-parts-group-pty-ltd-v-cooper-the-reasonableness-of-the-restraint-is-e441b57e {#auto-parts-group-pty-ltd-v-cooper-the-reasonableness-of-the-restraint-is-e441b57e}
@@ -76,5 +76,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `garden-leave`, `reasonableness-factors`, `tolling`
 - source_cards: `autoparts-tested-at-contract`, `autoparts-tested-at-contract-gl`, `autoparts-tested-at-contract-tolling`
-- cited_by: [Non-Compete Enforceability in Queensland](../non-compete/australia-queensland.md)
+- cited_by: [Non-Compete Enforceability in Queensland](../non-compete/au/queensland.md)
 - link_to_source: <https://archive.sclqld.org.au/qjudgment/2015/QSC15-155.pdf>

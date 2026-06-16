@@ -14,7 +14,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/delaware-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/delaware'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/delaware'
 tags:
   - case-law
   - non-compete
@@ -34,7 +34,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `delaware-statutory-gates`, `sale-of-business`
 - source_cards: `de-derge-less-searching-gate`, `derge-sale-less-searching`
-- cited_by: [Non-Compete Agreement Review Checklist — Delaware](../non-compete/delaware-review-checklist.md), [Non-Competes in Delaware](../non-compete/delaware.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Delaware](../checklists/non-compete/delaware-review-checklist.md), [Non-Competes in Delaware](../non-compete/us/delaware.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10749078/william-brian-derge-v-dh-united-fueling-solutions-inc/#:~:text=By%20comparison%2C%20%E2%80%9Ccovenants%20not%20to,contained%20in%20an%20employment%20contract.%E2%80%99%E2%80%9D>
 
 ### derge-v-d-h-united-fueling-solutions-inc-plaintiff-received-substantial-considera-d5248399 {#derge-v-d-h-united-fueling-solutions-inc-plaintiff-received-substantial-considera-d5248399}
@@ -43,7 +43,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `sale-of-business`
 - source_cards: `derge-substantial-consideration`
-- cited_by: [Non-Competes in Delaware](../non-compete/delaware.md)
+- cited_by: [Non-Competes in Delaware](../non-compete/us/delaware.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10749078/william-brian-derge-v-dh-united-fueling-solutions-inc/#:~:text=Plaintiff%20received%20substantial%20consideration,conditioned%20on%20his%20agreement%20to%20the%20Non%2DCompete.>
 
 ### derge-v-d-h-united-fueling-solutions-inc-the-record-here-shows-that-tanknology-7ede5c70 {#derge-v-d-h-united-fueling-solutions-inc-the-record-here-shows-that-tanknology-7ede5c70}
@@ -52,5 +52,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `delaware-statutory-gates`, `sale-of-business`
 - source_cards: `de-derge-scope-gate`, `derge-reasonable-sale-scope`
-- cited_by: [Non-Compete Agreement Review Checklist — Delaware](../non-compete/delaware-review-checklist.md), [Non-Competes in Delaware](../non-compete/delaware.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Delaware](../checklists/non-compete/delaware-review-checklist.md), [Non-Competes in Delaware](../non-compete/us/delaware.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10749078/william-brian-derge-v-dh-united-fueling-solutions-inc/#:~:text=The%20record%20here%20shows%20that,interest%20in%20the%20Protected%20Area.>

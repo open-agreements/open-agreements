@@ -13,7 +13,7 @@ resource: 'https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/tas/TASSC/1993/11
 timestamp: '2026-06-10'
 document_references:
   - type: Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/australia-tasmania'
+    resource: 'https://openagreements.org/practice-guides/non-compete/au/tasmania'
 tags:
   - case-law
   - non-compete
@@ -33,7 +33,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`
 - source_cards: `jeffress-clients-only`
-- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/australia-tasmania.md)
+- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/au/tasmania.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/tas/TASSC/1993/113.html>
 
 ### neville-jeffress-advertising-pty-ltd-v-barlow-no-2-if-a-man-is-dismissed-without-cfc732a7 {#neville-jeffress-advertising-pty-ltd-v-barlow-no-2-if-a-man-is-dismissed-without-cfc732a7}
@@ -42,7 +42,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `employer-breach`
 - source_cards: `jeffress-money-in-lieu`
-- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/australia-tasmania.md)
+- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/au/tasmania.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/tas/TASSC/1993/113.html>
 
 ### neville-jeffress-advertising-pty-ltd-v-barlow-no-2-in-considering-the-primary-question-as-6c5ed09f {#neville-jeffress-advertising-pty-ltd-v-barlow-no-2-in-considering-the-primary-question-as-6c5ed09f}
@@ -51,7 +51,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `enforceability`, `federal-reform`
 - source_cards: `jeffress-adequate-protection`, `jeffress-still-governs`
-- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/australia-tasmania.md)
+- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/au/tasmania.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/tas/TASSC/1993/113.html>
 
 ### neville-jeffress-advertising-pty-ltd-v-barlow-no-2-insofar-as-the-covenant-relates-to-876c51bc {#neville-jeffress-advertising-pty-ltd-v-barlow-no-2-insofar-as-the-covenant-relates-to-876c51bc}
@@ -60,7 +60,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `contractors-and-sale`
 - source_cards: `jeffress-alter-ego`
-- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/australia-tasmania.md)
+- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/au/tasmania.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/tas/TASSC/1993/113.html>
 
 ### neville-jeffress-advertising-pty-ltd-v-barlow-no-2-it-does-not-follow-that-the-671214a3 {#neville-jeffress-advertising-pty-ltd-v-barlow-no-2-it-does-not-follow-that-the-671214a3}
@@ -69,7 +69,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`
 - source_cards: `jeffress-no-toto`
-- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/australia-tasmania.md)
+- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/au/tasmania.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/tas/TASSC/1993/113.html>
 
 ### neville-jeffress-advertising-pty-ltd-v-barlow-no-2-nevertheless-i-do-not-consider-it-bc5f470b {#neville-jeffress-advertising-pty-ltd-v-barlow-no-2-nevertheless-i-do-not-consider-it-bc5f470b}
@@ -78,7 +78,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `employer-breach`
 - source_cards: `jeffress-no-repudiation`
-- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/australia-tasmania.md)
+- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/au/tasmania.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/tas/TASSC/1993/113.html>
 
 ### neville-jeffress-advertising-pty-ltd-v-barlow-no-2-secondly-as-it-was-a-term-db680544 {#neville-jeffress-advertising-pty-ltd-v-barlow-no-2-secondly-as-it-was-a-term-db680544}
@@ -87,7 +87,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `employer-breach`
 - source_cards: `jeffress-insignificant-breach`
-- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/australia-tasmania.md)
+- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/au/tasmania.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/tas/TASSC/1993/113.html>
 
 ### neville-jeffress-advertising-pty-ltd-v-barlow-no-2-the-blue-pencil-test-is-misleading-a3791871 {#neville-jeffress-advertising-pty-ltd-v-barlow-no-2-the-blue-pencil-test-is-misleading-a3791871}
@@ -96,7 +96,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`
 - source_cards: `jeffress-blue-pencil`
-- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/australia-tasmania.md)
+- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/au/tasmania.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/tas/TASSC/1993/113.html>
 
 ### neville-jeffress-advertising-pty-ltd-v-barlow-no-2-the-accepted-proposition-that-an-d3257563 {#neville-jeffress-advertising-pty-ltd-v-barlow-no-2-the-accepted-proposition-that-an-d3257563}
@@ -105,7 +105,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `legitimate-interest`
 - source_cards: `jeffress-skill-experience`
-- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/australia-tasmania.md)
+- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/au/tasmania.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/tas/TASSC/1993/113.html>
 
 ### neville-jeffress-advertising-pty-ltd-v-barlow-no-2-the-covenant-goes-much-further-and-39d5d1be {#neville-jeffress-advertising-pty-ltd-v-barlow-no-2-the-covenant-goes-much-further-and-39d5d1be}
@@ -114,7 +114,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `reasonableness-factors`
 - source_cards: `jeffress-mere-competition`
-- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/australia-tasmania.md)
+- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/au/tasmania.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/tas/TASSC/1993/113.html>
 
 ### neville-jeffress-advertising-pty-ltd-v-barlow-no-2-the-justification-for-taking-a-less-a3ee44ae {#neville-jeffress-advertising-pty-ltd-v-barlow-no-2-the-justification-for-taking-a-less-a3ee44ae}
@@ -123,7 +123,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `contractors-and-sale`
 - source_cards: `jeffress-stringent-justification`
-- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/australia-tasmania.md)
+- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/au/tasmania.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/tas/TASSC/1993/113.html>
 
 ### neville-jeffress-advertising-pty-ltd-v-barlow-no-2-the-law-treats-unreasonable-restraints-f0cd0e6f {#neville-jeffress-advertising-pty-ltd-v-barlow-no-2-the-law-treats-unreasonable-restraints-f0cd0e6f}
@@ -132,7 +132,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `enforceability`
 - source_cards: `jeffress-public-welfare`
-- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/australia-tasmania.md)
+- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/au/tasmania.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/tas/TASSC/1993/113.html>
 
 ### neville-jeffress-advertising-pty-ltd-v-barlow-no-2-the-obtaining-of-the-enhanced-price-1b0cda68 {#neville-jeffress-advertising-pty-ltd-v-barlow-no-2-the-obtaining-of-the-enhanced-price-1b0cda68}
@@ -141,5 +141,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `garden-leave`
 - source_cards: `jeffress-enhanced-price`
-- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/australia-tasmania.md)
+- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/au/tasmania.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/tas/TASSC/1993/113.html>

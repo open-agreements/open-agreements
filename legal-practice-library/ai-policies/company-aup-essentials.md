@@ -4,7 +4,7 @@ title: What company AI acceptable use policies need to cover
 description: >-
   What company AI acceptable use policies should cover for hiring, monitoring,
   privileged work, notetakers, vendor terms, and employee use.
-resource: 'https://openagreements.org/legal/ai-policies/company-aup-essentials'
+resource: 'https://openagreements.org/practice-guides/ai-policies/company-aup-essentials'
 timestamp: '2026-04-20'
 tags:
   - ai-policies

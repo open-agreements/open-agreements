@@ -4,7 +4,8 @@ title: Can AI make hiring decisions?
 description: >-
   When employers can use AI in hiring decisions under federal, state, and FCRA
   rules, including human review, vendor liability, and remote roles.
-resource: 'https://openagreements.org/legal/ai-hiring/can-ai-make-hiring-decisions'
+resource: >-
+  https://openagreements.org/practice-guides/ai-hiring/can-ai-make-hiring-decisions
 timestamp: '2026-04-20'
 tags:
   - ai-hiring

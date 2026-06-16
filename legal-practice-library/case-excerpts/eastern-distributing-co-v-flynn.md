@@ -12,7 +12,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/kansas-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/kansas'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/kansas'
 tags:
   - case-law
   - non-compete
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `modification-blue-pencil`, `severability-and-reformation`
 - source_cards: `eastern-equitable-narrowing`, `eastern-equitable-reduction`, `eastern-territory-reduction-defs`
-- cited_by: [Non-Compete Agreement Review Checklist — Kansas](../non-compete/kansas-review-checklist.md), [Non-Competes in Kansas](../non-compete/kansas.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Kansas](../checklists/non-compete/kansas-review-checklist.md), [Non-Competes in Kansas](../non-compete/us/kansas.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1195583/eastern-distributing-co-inc-v-flynn/#:~:text=We%20think%20the%20trial%20court,necessary%20to%20protect%20plaintiff's%20interest.>

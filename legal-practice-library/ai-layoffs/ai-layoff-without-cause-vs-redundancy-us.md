@@ -5,7 +5,7 @@ description: >-
   How U.S. law treats AI-driven layoffs, including without-cause termination,
   redundancy, WARN Act notice, severance, and non-compete effects.
 resource: >-
-  https://openagreements.org/legal/ai-layoffs/ai-layoff-without-cause-vs-redundancy-us
+  https://openagreements.org/practice-guides/ai-layoffs/ai-layoff-without-cause-vs-redundancy-us
 timestamp: '2026-04-19'
 tags:
   - ai-layoffs

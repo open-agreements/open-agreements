@@ -12,7 +12,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/rhode-island-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/rhode-island'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/rhode-island'
 tags:
   - case-law
   - non-compete
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `continued-employment-termination`, `entire-agreement-amendment-waiver-e-signatures`, `timing-and-execution-acknowledgements`
 - source_cards: `walls-consideration-ea`, `walls-consideration-timing`, `walls-continued-employment`
-- cited_by: [Non-Compete Agreement Review Checklist — Rhode Island](../non-compete/rhode-island-review-checklist.md), [Non-Competes in Rhode Island](../non-compete/rhode-island.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Rhode Island](../checklists/non-compete/rhode-island-review-checklist.md), [Non-Competes in Rhode Island](../non-compete/us/rhode-island.md)
 - link_to_source: <https://www.courtlistener.com/opinion/9457984/griggs-browne-pest-control-co-inc-v-brian-walls/#:~:text=employment%20relationship%20with%20plaintiff%3A%20In%20consideration%20for%20continued%20employment>
 
 ### griggs-browne-pest-control-co-v-walls-month-period-and-extends-only-to-52ba3956 {#griggs-browne-pest-control-co-v-walls-month-period-and-extends-only-to-52ba3956}
@@ -41,7 +41,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `continued-employment-termination`, `definitions`, `restrictive-covenants-each-independently-includable`
 - source_cards: `walls-customer-scope`, `walls-customer-scope-defs`, `walls-scope-cov`
-- cited_by: [Non-Compete Agreement Review Checklist — Rhode Island](../non-compete/rhode-island-review-checklist.md), [Non-Competes in Rhode Island](../non-compete/rhode-island.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Rhode Island](../checklists/non-compete/rhode-island-review-checklist.md), [Non-Competes in Rhode Island](../non-compete/us/rhode-island.md)
 - link_to_source: <https://www.courtlistener.com/opinion/9457984/griggs-browne-pest-control-co-inc-v-brian-walls/#:~:text=month%20period%2C%20and%20extends%20only,and%20previous%20clients%2C%20rather%20than>
 
 ### griggs-browne-pest-control-co-v-walls-this-court-reviews-a-trial-justice-s-8497349f {#griggs-browne-pest-control-co-v-walls-this-court-reviews-a-trial-justice-s-8497349f}
@@ -50,7 +50,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `continued-employment-termination`, `remedies`, `timing-and-execution-acknowledgements`
 - source_cards: `walls-pi-posture`, `walls-posture-rem`, `walls-posture-timing`
-- cited_by: [Non-Compete Agreement Review Checklist — Rhode Island](../non-compete/rhode-island-review-checklist.md), [Non-Competes in Rhode Island](../non-compete/rhode-island.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Rhode Island](../checklists/non-compete/rhode-island-review-checklist.md), [Non-Competes in Rhode Island](../non-compete/us/rhode-island.md)
 - link_to_source: <https://www.courtlistener.com/opinion/9457984/griggs-browne-pest-control-co-inc-v-brian-walls/#:~:text=This%20Court%20reviews%20a%20trial,for%20an%20abuse%20of%20discretion.>
 
 ### griggs-browne-pest-control-co-v-walls-walls-s-argument-that-an-involuntary-2b5dcdef {#griggs-browne-pest-control-co-v-walls-walls-s-argument-that-an-involuntary-2b5dcdef}
@@ -59,5 +59,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `continued-employment-termination`, `definitions`
 - source_cards: `walls-involuntary-defs`, `walls-involuntary-termination`
-- cited_by: [Non-Compete Agreement Review Checklist — Rhode Island](../non-compete/rhode-island-review-checklist.md), [Non-Competes in Rhode Island](../non-compete/rhode-island.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Rhode Island](../checklists/non-compete/rhode-island-review-checklist.md), [Non-Competes in Rhode Island](../non-compete/us/rhode-island.md)
 - link_to_source: <https://www.courtlistener.com/opinion/9457984/griggs-browne-pest-control-co-inc-v-brian-walls/#:~:text=Walls%E2%80%99s%20argument%20that%20an%20involuntary,termination%20would%20preclude%20enforcement%20of>

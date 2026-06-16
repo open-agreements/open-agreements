@@ -12,7 +12,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/connecticut-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/connecticut'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/connecticut'
 tags:
   - case-law
   - non-compete
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `continued-employment-consideration`, `timing-and-execution-acknowledgements`
 - source_cards: `schimenti-connected-consideration`, `schimenti-connection`
-- cited_by: [Non-Compete Agreement Review Checklist — Connecticut](../non-compete/connecticut-review-checklist.md), [Non-Competes in Connecticut](../non-compete/connecticut.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Connecticut](../checklists/non-compete/connecticut-review-checklist.md), [Non-Competes in Connecticut](../non-compete/us/connecticut.md)
 - link_to_source: <https://www.courtlistener.com/opinion/9367427/schimenti-construction-co-llc-v-schimenti/#:~:text=At%20trial%2C%20as%20the%20plaintiff,consideration%20for%20a%20restrictive%20covenant.>
 
 ### schimenti-construction-co-llc-v-schimenti-its-holding-that-consideration-in-the-5e2769bd {#schimenti-construction-co-llc-v-schimenti-its-holding-that-consideration-in-the-5e2769bd}
@@ -41,5 +41,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `continued-employment-consideration`, `timing-and-execution-acknowledgements`
 - source_cards: `schimenti-continued-employment-rule`, `schimenti-rule`
-- cited_by: [Non-Compete Agreement Review Checklist — Connecticut](../non-compete/connecticut-review-checklist.md), [Non-Competes in Connecticut](../non-compete/connecticut.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Connecticut](../checklists/non-compete/connecticut-review-checklist.md), [Non-Competes in Connecticut](../non-compete/us/connecticut.md)
 - link_to_source: <https://www.courtlistener.com/opinion/9367427/schimenti-construction-co-llc-v-schimenti/#:~:text=Its%20holding%20that%20consideration%20in,of%20employment%20remains%20binding%20precedent.>

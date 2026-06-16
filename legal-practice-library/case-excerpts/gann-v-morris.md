@@ -11,7 +11,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/arizona-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/arizona'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/arizona'
 tags:
   - case-law
   - non-compete
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `arizona-statutory-gates`, `sale-of-business`
 - source_cards: `gann-goodwill-gate`, `q9-gann-goodwill`
-- cited_by: [Non-Compete Agreement Review Checklist — Arizona](../non-compete/arizona-review-checklist.md), [Non-Competes in Arizona](../non-compete/arizona.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Arizona](../checklists/non-compete/arizona-review-checklist.md), [Non-Competes in Arizona](../non-compete/us/arizona.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1362794/gann-v-morris/#:~:text=The%20sale%20of%20such%20a,transfer%20of%20the%20good%20will.>
 
 ### gann-v-morris-where-limited-as-to-time-and-962e4dad {#gann-v-morris-where-limited-as-to-time-and-962e4dad}
@@ -40,5 +40,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `arizona-statutory-gates`, `sale-of-business`
 - source_cards: `gann-validity-gate`, `q9-gann-validity`
-- cited_by: [Non-Compete Agreement Review Checklist — Arizona](../non-compete/arizona-review-checklist.md), [Non-Competes in Arizona](../non-compete/arizona.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Arizona](../checklists/non-compete/arizona-review-checklist.md), [Non-Competes in Arizona](../non-compete/us/arizona.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1362794/gann-v-morris/#:~:text=Where%20limited%20as%20to%20time,refrain%20from%20all%20business%20whatsoever.>

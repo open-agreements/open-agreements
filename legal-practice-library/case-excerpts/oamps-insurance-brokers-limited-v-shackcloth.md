@@ -9,7 +9,8 @@ resource: 'https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/nt/NTSC/2008/29.h
 timestamp: '2026-06-10'
 document_references:
   - type: Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/australia-northern-territory'
+    resource: >-
+      https://openagreements.org/practice-guides/non-compete/au/northern-territory
 tags:
   - case-law
   - non-compete
@@ -29,7 +30,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `enforceability`
 - source_cards: `oamps-adequate-protection`
-- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/australia-northern-territory.md)
+- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/au/northern-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/nt/NTSC/2008/29.html>
 
 ### oamps-insurance-brokers-limited-v-shackcloth-clause-8-will-be-unreasonable-if-3849ae02 {#oamps-insurance-brokers-limited-v-shackcloth-clause-8-will-be-unreasonable-if-3849ae02}
@@ -38,7 +39,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`
 - source_cards: `oamps-too-long`
-- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/australia-northern-territory.md)
+- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/au/northern-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/nt/NTSC/2008/29.html>
 
 ### oamps-insurance-brokers-limited-v-shackcloth-i-accept-the-plaintiff-s-submission-that-2fd8980d {#oamps-insurance-brokers-limited-v-shackcloth-i-accept-the-plaintiff-s-submission-that-2fd8980d}
@@ -47,7 +48,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `reasonableness-factors`
 - source_cards: `oamps-renewal-cycle`
-- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/australia-northern-territory.md)
+- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/au/northern-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/nt/NTSC/2008/29.html>
 
 ### oamps-insurance-brokers-limited-v-shackcloth-i-find-that-the-plaintiff-was-6f8a267d {#oamps-insurance-brokers-limited-v-shackcloth-i-find-that-the-plaintiff-was-6f8a267d}
@@ -56,7 +57,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `employer-breach`
 - source_cards: `oamps-dismissal-justified`
-- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/australia-northern-territory.md)
+- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/au/northern-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/nt/NTSC/2008/29.html>
 
 ### oamps-insurance-brokers-limited-v-shackcloth-in-all-of-the-circumstances-i-5773a108 {#oamps-insurance-brokers-limited-v-shackcloth-in-all-of-the-circumstances-i-5773a108}
@@ -65,7 +66,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `reasonableness-factors`
 - source_cards: `oamps-clause-void`, `oamps-fifteen-months`
-- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/australia-northern-territory.md)
+- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/au/northern-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/nt/NTSC/2008/29.html>
 
 ### oamps-insurance-brokers-limited-v-shackcloth-the-common-law-prohibits-unreasonable-c6e568b9 {#oamps-insurance-brokers-limited-v-shackcloth-the-common-law-prohibits-unreasonable-c6e568b9}
@@ -74,7 +75,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `enforceability`, `federal-reform`
 - source_cards: `oamps-still-governs`, `oamps-void-unenforceable`
-- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/australia-northern-territory.md)
+- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/au/northern-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/nt/NTSC/2008/29.html>
 
 ### oamps-insurance-brokers-limited-v-shackcloth-the-onus-of-proof-that-the-e3ea447c {#oamps-insurance-brokers-limited-v-shackcloth-the-onus-of-proof-that-the-e3ea447c}
@@ -83,7 +84,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `enforceability`
 - source_cards: `oamps-onus`
-- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/australia-northern-territory.md)
+- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/au/northern-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/nt/NTSC/2008/29.html>
 
 ### oamps-insurance-brokers-limited-v-shackcloth-the-question-is-whether-the-covenant-7fa53bad {#oamps-insurance-brokers-limited-v-shackcloth-the-question-is-whether-the-covenant-7fa53bad}
@@ -92,7 +93,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `garden-leave`
 - source_cards: `oamps-best-estimate`
-- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/australia-northern-territory.md)
+- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/au/northern-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/nt/NTSC/2008/29.html>
 
 ### oamps-insurance-brokers-limited-v-shackcloth-the-reasonableness-of-the-restraint-is-92a46a16 {#oamps-insurance-brokers-limited-v-shackcloth-the-reasonableness-of-the-restraint-is-92a46a16}
@@ -101,7 +102,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `reasonableness-factors`
 - source_cards: `oamps-tested-at-contract`
-- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/australia-northern-territory.md)
+- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/au/northern-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/nt/NTSC/2008/29.html>
 
 ### oamps-insurance-brokers-limited-v-shackcloth-where-an-employee-is-in-a-a0706850 {#oamps-insurance-brokers-limited-v-shackcloth-where-an-employee-is-in-a-a0706850}
@@ -110,5 +111,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `legitimate-interest`
 - source_cards: `oamps-customer-connection`
-- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/australia-northern-territory.md)
+- cited_by: [Non-Compete Enforceability in the Northern Territory](../non-compete/au/northern-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/nt/NTSC/2008/29.html>

@@ -13,7 +13,7 @@ document_references:
     resource: >-
       https://openagreements.org/legal/non-compete/massachusetts-review-checklist
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/massachusetts'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/massachusetts'
 tags:
   - case-law
   - non-compete
@@ -33,7 +33,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `massachusetts-statutory-gates`, `material-change`
 - source_cards: `bartlett-abandoned-arrangement`, `bartlett-abandonment`
-- cited_by: [Non-Compete Agreement Review Checklist — Massachusetts](../non-compete/massachusetts-review-checklist.md), [Non-Competes in Massachusetts](../non-compete/massachusetts.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Massachusetts](../checklists/non-compete/massachusetts-review-checklist.md), [Non-Competes in Massachusetts](../non-compete/us/massachusetts.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2013561/f-a-bartlett-tree-expert-co-v-barrington/#:~:text=Such%20far%20reaching%20changes%20strongly,entered%20into%20a%20new%20relationship.>
 
 ### f-a-bartlett-tree-expert-co-v-barrington-the-judge-concluded-that-the-conduct-ee883e62 {#f-a-bartlett-tree-expert-co-v-barrington-the-judge-concluded-that-the-conduct-ee883e62}
@@ -42,5 +42,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `entire-agreement-amendment-waiver-e-signatures`, `material-change`
 - source_cards: `bartlett-new-contract`, `bartlett-newcontract`
-- cited_by: [Non-Compete Agreement Review Checklist — Massachusetts](../non-compete/massachusetts-review-checklist.md), [Non-Competes in Massachusetts](../non-compete/massachusetts.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Massachusetts](../checklists/non-compete/massachusetts-review-checklist.md), [Non-Competes in Massachusetts](../non-compete/us/massachusetts.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2013561/f-a-bartlett-tree-expert-co-v-barrington/#:~:text=The%20judge%20concluded%20that%20the,and%20rescinded%20by%20mutual%20consent.>

@@ -10,7 +10,7 @@ resource: >-
 timestamp: '2026-06-02'
 document_references:
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/puerto-rico'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/puerto-rico'
 tags:
   - case-law
   - non-compete
@@ -30,5 +30,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `consideration`
 - source_cards: `soto-scope`
-- cited_by: [Non-Competes in Puerto Rico](../non-compete/puerto-rico.md)
+- cited_by: [Non-Competes in Puerto Rico](../non-compete/us/puerto-rico.md)
 - link_to_source: <https://www.courtlistener.com/opinion/214787/soto-v-state-industrial-products-inc/#:~:text=For%20these%20reasons%2C%20we%20reject,consideration%20for%20an%20arbitration%20agreement.>

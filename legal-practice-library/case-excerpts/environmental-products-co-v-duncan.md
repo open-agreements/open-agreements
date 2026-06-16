@@ -13,7 +13,7 @@ document_references:
     resource: >-
       https://openagreements.org/legal/non-compete/west-virginia-review-checklist
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/west-virginia'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/west-virginia'
 tags:
   - case-law
   - non-compete
@@ -33,7 +33,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `mid-employment-consideration`, `west-virginia-statutory-gates`
 - source_cards: `environmental-products-only-limitations`, `wv-envprod-unchanged-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — West Virginia](../non-compete/west-virginia-review-checklist.md), [Non-Competes in West Virginia](../non-compete/west-virginia.md)
+- cited_by: [Non-Compete Agreement Review Checklist — West Virginia](../checklists/non-compete/west-virginia-review-checklist.md), [Non-Competes in West Virginia](../non-compete/us/west-virginia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/8217635/environmental-products-co-v-duncan/#:~:text=His%20contract%2C%20therefore%2C%20did%20not,employment%3B%20it%20only%20imposed%20limitations.>
 
 ### environmental-products-co-v-duncan-if-a-covenant-not-to-compete-e62898db {#environmental-products-co-v-duncan-if-a-covenant-not-to-compete-e62898db}
@@ -42,5 +42,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `entire-agreement-amendment-waiver-e-signatures`, `mid-employment-consideration`, `timing-and-execution-acknowledgements`, `west-virginia-statutory-gates`
 - source_cards: `environmental-products-new-consideration`, `wv-envprod-entire`, `wv-envprod-rule-gate`, `wv-envprod-rule-timing`
-- cited_by: [Non-Compete Agreement Review Checklist — West Virginia](../non-compete/west-virginia-review-checklist.md), [Non-Competes in West Virginia](../non-compete/west-virginia.md)
+- cited_by: [Non-Compete Agreement Review Checklist — West Virginia](../checklists/non-compete/west-virginia-review-checklist.md), [Non-Competes in West Virginia](../non-compete/us/west-virginia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/8217635/environmental-products-co-v-duncan/#:~:text=If%20a%20covenant%20not%20to,new%20consideration%20to%20support%20it.>

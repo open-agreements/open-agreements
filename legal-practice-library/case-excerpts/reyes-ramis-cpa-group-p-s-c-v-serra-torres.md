@@ -9,7 +9,7 @@ resource: 'http://www.lexjuris.com/lexjuris/tspr2016/lexj2016126.htm'
 timestamp: '2026-06-02'
 document_references:
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/puerto-rico'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/puerto-rico'
 tags:
   - case-law
   - non-compete
@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `scope-territory-clients`
 - source_cards: `rr-scope`
-- cited_by: [Non-Competes in Puerto Rico](../non-compete/puerto-rico.md)
+- cited_by: [Non-Competes in Puerto Rico](../non-compete/us/puerto-rico.md)
 - link_to_source: <http://www.lexjuris.com/lexjuris/tspr2016/lexj2016126.htm>
 
 ### reyes-ramis-cpa-group-p-s-c-v-serra-torres-por-lo-tanto-contrario-a-la-7090a485 {#reyes-ramis-cpa-group-p-s-c-v-serra-torres-por-lo-tanto-contrario-a-la-7090a485}
@@ -38,7 +38,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `scope-territory-clients`
 - source_cards: `rr-stock`
-- cited_by: [Non-Competes in Puerto Rico](../non-compete/puerto-rico.md)
+- cited_by: [Non-Competes in Puerto Rico](../non-compete/us/puerto-rico.md)
 - link_to_source: <http://www.lexjuris.com/lexjuris/tspr2016/lexj2016126.htm>
 
 ### reyes-ramis-cpa-group-p-s-c-v-serra-torres-por-lo-tanto-no-es-correcto-997a649f {#reyes-ramis-cpa-group-p-s-c-v-serra-torres-por-lo-tanto-no-es-correcto-997a649f}
@@ -47,5 +47,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `recent-developments`, `scope-territory-clients`
 - source_cards: `rr-current`, `rr-disjunctive`
-- cited_by: [Non-Competes in Puerto Rico](../non-compete/puerto-rico.md)
+- cited_by: [Non-Competes in Puerto Rico](../non-compete/us/puerto-rico.md)
 - link_to_source: <http://www.lexjuris.com/lexjuris/tspr2016/lexj2016126.htm>

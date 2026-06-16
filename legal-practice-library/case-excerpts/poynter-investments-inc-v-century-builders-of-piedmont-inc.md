@@ -15,7 +15,7 @@ document_references:
     resource: >-
       https://openagreements.org/legal/non-compete/south-carolina-review-checklist
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/south-carolina'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/south-carolina'
 tags:
   - case-law
   - non-compete
@@ -35,7 +35,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `restrictive-covenants-each-independently-includable`, `severability-and-reformation`
 - source_cards: `poynter-no-blue-pencil`, `sc-poynter-cov`, `sc-poynter-sev`
-- cited_by: [Non-Compete Agreement Review Checklist — South Carolina](../non-compete/south-carolina-review-checklist.md), [Non-Competes in South Carolina](../non-compete/south-carolina.md)
+- cited_by: [Non-Compete Agreement Review Checklist — South Carolina](../checklists/non-compete/south-carolina-review-checklist.md), [Non-Competes in South Carolina](../non-compete/us/south-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1316178/poynter-investments-inc-v-century-builders-of-piedmont-inc/#:~:text=These%20cases%20stand%20for%20the,fall%20on%20their%20own%20terms.>
 
 ### poynter-investments-inc-v-century-builders-of-piedmont-inc-we-reverse-the-order-which-purports-99fe4cfc {#poynter-investments-inc-v-century-builders-of-piedmont-inc-we-reverse-the-order-which-purports-99fe4cfc}
@@ -44,5 +44,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`
 - source_cards: `poynter-rewrite-error`
-- cited_by: [Non-Competes in South Carolina](../non-compete/south-carolina.md)
+- cited_by: [Non-Competes in South Carolina](../non-compete/us/south-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1316178/poynter-investments-inc-v-century-builders-of-piedmont-inc/#:~:text=We%20reverse%20the%20order%20which,agreed%20upon%20by%20the%20parties.>

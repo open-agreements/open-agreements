@@ -11,7 +11,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/nevada-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/nevada'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/nevada'
 tags:
   - case-law
   - non-compete
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-revision`, `severability-and-reformation`
 - source_cards: `nv-tough-turtle-mandatory`, `q3-tough-turtle-mandatory`
-- cited_by: [Non-Compete Agreement Review Checklist — Nevada](../non-compete/nevada-review-checklist.md), [Non-Competes in Nevada](../non-compete/nevada.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Nevada](../checklists/non-compete/nevada-review-checklist.md), [Non-Competes in Nevada](../non-compete/us/nevada.md)
 - link_to_source: <https://www.courtlistener.com/opinion/9456796/tough-turtle-turf-llc-v-scott/#:~:text=It%20nonetheless%20mandates%20judicial%20revision,subjecting%20employees%20to%20unreasonable%20terms.>
 
 ### tough-turtle-turf-llc-v-scott-reading-subsection-1-harmoniously-with-68cb812d {#tough-turtle-turf-llc-v-scott-reading-subsection-1-harmoniously-with-68cb812d}
@@ -40,7 +40,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-revision`, `definitions`, `severability-and-reformation`
 - source_cards: `nv-rewrite-limit-defs`, `nv-tough-turtle-no-rewrite`, `q3-tough-turtle-rewrite`
-- cited_by: [Non-Compete Agreement Review Checklist — Nevada](../non-compete/nevada-review-checklist.md), [Non-Competes in Nevada](../non-compete/nevada.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Nevada](../checklists/non-compete/nevada-review-checklist.md), [Non-Competes in Nevada](../non-compete/us/nevada.md)
 - link_to_source: <https://www.courtlistener.com/opinion/9456796/tough-turtle-turf-llc-v-scott/#:~:text=Reading%20subsection%20(1)%20harmoniously%20with,than%20revise%20the%20noncompete%20covenant.>
 
 ### tough-turtle-turf-llc-v-scott-this-provision-overruled-golden-road-s-d066f32b {#tough-turtle-turf-llc-v-scott-this-provision-overruled-golden-road-s-d066f32b}
@@ -49,5 +49,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-revision`
 - source_cards: `q3-tough-turtle-overruled`
-- cited_by: [Non-Competes in Nevada](../non-compete/nevada.md)
+- cited_by: [Non-Competes in Nevada](../non-compete/us/nevada.md)
 - link_to_source: <https://www.courtlistener.com/opinion/9456796/tough-turtle-turf-llc-v-scott/#:~:text=This%20provision%20overruled%20Golden%20Road's,covenant%20can%20never%20be%20revised.>

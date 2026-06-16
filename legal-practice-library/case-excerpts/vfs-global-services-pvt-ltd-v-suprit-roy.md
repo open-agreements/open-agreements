@@ -9,7 +9,7 @@ resource: 'https://indiankanoon.org/doc/1547420/'
 timestamp: '2026-06-03'
 document_references:
   - type: Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/india'
+    resource: 'https://openagreements.org/practice-guides/non-compete/in'
 tags:
   - case-law
   - non-compete
@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `what-to-protect`
 - source_cards: `vfs-confidentiality`
-- cited_by: [Non-Competes in India](../non-compete/india.md)
+- cited_by: [Non-Competes in India](../non-compete/in.md)
 - link_to_source: <https://indiankanoon.org/doc/1547420/>
 
 ### vfs-global-services-pvt-ltd-v-suprit-roy-the-garden-leave-clause-is-therefore-c35b58d2 {#vfs-global-services-pvt-ltd-v-suprit-roy-the-garden-leave-clause-is-therefore-c35b58d2}
@@ -38,7 +38,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `garden-leave`
 - source_cards: `vfs-garden-leave`
-- cited_by: [Non-Competes in India](../non-compete/india.md)
+- cited_by: [Non-Competes in India](../non-compete/in.md)
 - link_to_source: <https://indiankanoon.org/doc/1547420/>
 
 ### vfs-global-services-pvt-ltd-v-suprit-roy-to-obstruct-on-employee-who-has-8a8440de {#vfs-global-services-pvt-ltd-v-suprit-roy-to-obstruct-on-employee-who-has-8a8440de}
@@ -47,5 +47,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `garden-leave`
 - source_cards: `vfs-obstruct`
-- cited_by: [Non-Competes in India](../non-compete/india.md)
+- cited_by: [Non-Competes in India](../non-compete/in.md)
 - link_to_source: <https://indiankanoon.org/doc/1547420/>

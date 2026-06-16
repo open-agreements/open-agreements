@@ -12,7 +12,7 @@ document_references:
     resource: >-
       https://openagreements.org/legal/non-compete/west-virginia-review-checklist
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/west-virginia'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/west-virginia'
 tags:
   - case-law
   - non-compete
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `mid-employment-consideration`, `west-virginia-statutory-gates`
 - source_cards: `pemco-new-contract-new-consideration`, `wv-pemco-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — West Virginia](../non-compete/west-virginia-review-checklist.md), [Non-Competes in West Virginia](../non-compete/west-virginia.md)
+- cited_by: [Non-Compete Agreement Review Checklist — West Virginia](../checklists/non-compete/west-virginia-review-checklist.md), [Non-Competes in West Virginia](../non-compete/us/west-virginia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/8217515/pemco-corp-v-rose/#:~:text=We%20believe%20Virginia%E2%80%99s%20highest%20court,based%20upon%20a%20new%20consideration.>

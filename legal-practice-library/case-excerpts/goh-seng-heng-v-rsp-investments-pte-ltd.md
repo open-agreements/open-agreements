@@ -9,7 +9,7 @@ resource: 'https://www.elitigation.sg/gd/s/2016_SGHC_275'
 timestamp: '2026-06-03'
 document_references:
   - type: Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/singapore'
+    resource: 'https://openagreements.org/practice-guides/non-compete/sg'
 tags:
   - case-law
   - non-compete
@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `tolling`
 - source_cards: `springboard-goh`
-- cited_by: [Non-Competes in Singapore](../non-compete/singapore.md)
+- cited_by: [Non-Competes in Singapore](../non-compete/sg.md)
 - link_to_source: <https://www.elitigation.sg/gd/s/2016_SGHC_275>
 
 ### goh-seng-heng-v-rsp-investments-pte-ltd-there-was-also-no-doubt-that-f3407c48 {#goh-seng-heng-v-rsp-investments-pte-ltd-there-was-also-no-doubt-that-f3407c48}
@@ -38,5 +38,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `enforcement-remedies`
 - source_cards: `q10-springboard`
-- cited_by: [Non-Competes in Singapore](../non-compete/singapore.md)
+- cited_by: [Non-Competes in Singapore](../non-compete/sg.md)
 - link_to_source: <https://www.elitigation.sg/gd/s/2016_SGHC_275>

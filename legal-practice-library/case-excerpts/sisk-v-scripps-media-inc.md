@@ -13,7 +13,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/nebraska-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/nebraska'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/nebraska'
 tags:
   - case-law
   - non-compete
@@ -33,7 +33,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `drafting-checklist`, `restrictive-covenants-each-independently-includable`
 - source_cards: `ne-sisk-modern-cov`, `ne-sisk-modern-def`, `q12-sisk-modern-warning`
-- cited_by: [Non-Compete Agreement Review Checklist — Nebraska](../non-compete/nebraska-review-checklist.md), [Non-Competes in Nebraska](../non-compete/nebraska.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Nebraska](../checklists/non-compete/nebraska-review-checklist.md), [Non-Competes in Nebraska](../non-compete/us/nebraska.md)
 - link_to_source: <https://www.govinfo.gov/app/details/USCOURTS-ned-8_24-cv-00086>
 
 ### sisk-v-scripps-media-inc-this-provision-greatly-exceeds-the-f4d81553 {#sisk-v-scripps-media-inc-this-provision-greatly-exceeds-the-f4d81553}
@@ -42,5 +42,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `customer-specific-rule`, `definitions`, `nebraska-statutory-gates`
 - source_cards: `ne-sisk-prospective-def`, `ne-sisk-prospective-gate`, `q3-sisk-prospective-clients`
-- cited_by: [Non-Compete Agreement Review Checklist — Nebraska](../non-compete/nebraska-review-checklist.md), [Non-Competes in Nebraska](../non-compete/nebraska.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Nebraska](../checklists/non-compete/nebraska-review-checklist.md), [Non-Competes in Nebraska](../non-compete/us/nebraska.md)
 - link_to_source: <https://www.govinfo.gov/app/details/USCOURTS-ned-8_24-cv-00086>

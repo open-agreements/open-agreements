@@ -11,7 +11,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/oklahoma-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/oklahoma'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/oklahoma'
 tags:
   - case-law
   - non-compete
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `customer-nonsolicitation`, `restrictive-covenants-each-independently-includable`
 - source_cards: `autry-void`, `autry-void-covenants`
-- cited_by: [Non-Compete Agreement Review Checklist — Oklahoma](../non-compete/oklahoma-review-checklist.md), [Non-Competes in Oklahoma](../non-compete/oklahoma.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Oklahoma](../checklists/non-compete/oklahoma-review-checklist.md), [Non-Competes in Oklahoma](../non-compete/us/oklahoma.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4520541/autry-v-acosta-inc/#:~:text=Examined%20under%20the%20lens%20of,Legislature's%20enactment%20of%20that%20section.>
 
 ### autry-v-acosta-inc-we-find-that-the-remedy-for-397a3498 {#autry-v-acosta-inc-we-find-that-the-remedy-for-397a3498}
@@ -40,5 +40,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `customer-nonsolicitation`, `definitions`, `severability-and-reformation`
 - source_cards: `autry-no-sever`, `autry-no-sever-defs`, `autry-no-sever-severability`
-- cited_by: [Non-Compete Agreement Review Checklist — Oklahoma](../non-compete/oklahoma-review-checklist.md), [Non-Competes in Oklahoma](../non-compete/oklahoma.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Oklahoma](../checklists/non-compete/oklahoma-review-checklist.md), [Non-Competes in Oklahoma](../non-compete/us/oklahoma.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4520541/autry-v-acosta-inc/#:~:text=We%20find%20that%20the%20remedy,merely%20deleting%20the%20word%20%E2%80%9Cindirectly.%E2%80%9D>

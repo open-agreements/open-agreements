@@ -14,7 +14,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/pennsylvania-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/pennsylvania'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/pennsylvania'
 tags:
   - case-law
   - non-compete
@@ -34,7 +34,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `duration-geography`
 - source_cards: `beemac-geo-duration`
-- cited_by: [Non-Competes in Pennsylvania](../non-compete/pennsylvania.md)
+- cited_by: [Non-Competes in Pennsylvania](../non-compete/us/pennsylvania.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4878381/pgh-logistics-aplt-v-beemac-trucking/#:~:text=As%20part%20of%20this%20balancing,as%20its%20duration%20of%20time.>
 
 ### pittsburgh-logistics-systems-inc-v-beemac-trucking-llc-balancing-pls-s-interest-against-the-a5f60748 {#pittsburgh-logistics-systems-inc-v-beemac-trucking-llc-balancing-pls-s-interest-against-the-a5f60748}
@@ -43,7 +43,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `b2b-no-hire`, `pennsylvania-statutory-gates`
 - source_cards: `beemac-unenforceable`, `pa-beemac-unenforceable-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — Pennsylvania](../non-compete/pennsylvania-review-checklist.md), [Non-Competes in Pennsylvania](../non-compete/pennsylvania.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Pennsylvania](../checklists/non-compete/pennsylvania-review-checklist.md), [Non-Competes in Pennsylvania](../non-compete/us/pennsylvania.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4878381/pgh-logistics-aplt-v-beemac-trucking/#:~:text=Balancing%20PLS%E2%80%99s%20interest%20against%20the,of%20trade%20and%20therefore%20unenforceable.>
 
 ### pittsburgh-logistics-systems-inc-v-beemac-trucking-llc-however-the-no-hire-provision-is-both-124c9b13 {#pittsburgh-logistics-systems-inc-v-beemac-trucking-llc-however-the-no-hire-provision-is-both-124c9b13}
@@ -52,5 +52,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `b2b-no-hire`, `pennsylvania-statutory-gates`
 - source_cards: `beemac-overbroad`, `pa-beemac-overbroad-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — Pennsylvania](../non-compete/pennsylvania-review-checklist.md), [Non-Competes in Pennsylvania](../non-compete/pennsylvania.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Pennsylvania](../checklists/non-compete/pennsylvania-review-checklist.md), [Non-Competes in Pennsylvania](../non-compete/us/pennsylvania.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4878381/pgh-logistics-aplt-v-beemac-trucking/#:~:text=However%2C%20the%20no%2Dhire%20provision%20is,of%20harm%20to%20the%20public.>

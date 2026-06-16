@@ -5,7 +5,7 @@ description: >-
   How AI-driven performance review can create disparate impact, validation,
   human review, proxy discrimination, and pay-equity risks.
 resource: >-
-  https://openagreements.org/legal/ai-hiring/disparate-impact-ai-performance-review
+  https://openagreements.org/practice-guides/ai-hiring/disparate-impact-ai-performance-review
 timestamp: '2026-04-20'
 tags:
   - ai-hiring

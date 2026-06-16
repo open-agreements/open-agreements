@@ -14,7 +14,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/ohio-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/ohio'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/ohio'
 tags:
   - case-law
   - non-compete
@@ -34,5 +34,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `kross-discretionary`, `oh-kross-discretionary`
-- cited_by: [Non-Compete Agreement Review Checklist — Ohio](../non-compete/ohio-review-checklist.md), [Non-Competes in Ohio](../non-compete/ohio.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Ohio](../checklists/non-compete/ohio-review-checklist.md), [Non-Competes in Ohio](../non-compete/us/ohio.md)
 - link_to_source: <https://www.courtlistener.com/opinion/9475789/kross-acquisition-co-llc-v-groundworks-ohio-llc/#:~:text=We%20agree%20that%20it%20is,for%20an%20abuse%20of%20discretion.>

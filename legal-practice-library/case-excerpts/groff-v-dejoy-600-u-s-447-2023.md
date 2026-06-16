@@ -8,10 +8,10 @@ timestamp: '2026-04-20'
 document_references:
   - type: Practice Note
     resource: >-
-      https://openagreements.org/legal/ai-policies/conditioning-employment-on-ai-use
+      https://openagreements.org/practice-guides/ai-policies/conditioning-employment-on-ai-use
   - type: Practice Note
     resource: >-
-      https://openagreements.org/legal/ai-policies/mandatory-ai-use-accommodation-risk
+      https://openagreements.org/practice-guides/ai-policies/mandatory-ai-use-accommodation-risk
 tags:
   - case-law
   - ai-policies

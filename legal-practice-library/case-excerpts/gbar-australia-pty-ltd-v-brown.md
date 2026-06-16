@@ -9,7 +9,7 @@ resource: 'https://archive.sclqld.org.au/qjudgment/2020/QSC20-014.pdf'
 timestamp: '2026-06-10'
 document_references:
   - type: Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/australia-queensland'
+    resource: 'https://openagreements.org/practice-guides/non-compete/au/queensland'
 tags:
   - case-law
   - non-compete
@@ -29,5 +29,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `legitimate-interest`
 - source_cards: `gbar-not-slave`
-- cited_by: [Non-Compete Enforceability in Queensland](../non-compete/australia-queensland.md)
+- cited_by: [Non-Compete Enforceability in Queensland](../non-compete/au/queensland.md)
 - link_to_source: <https://archive.sclqld.org.au/qjudgment/2020/QSC20-014.pdf>

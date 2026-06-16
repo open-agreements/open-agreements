@@ -12,10 +12,11 @@ document_references:
   - type: Review Checklist
     resource: >-
       https://openagreements.org/legal/non-compete/district-of-columbia-review-checklist
-  - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/district-of-columbia'
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/review-checklist'
+  - type: State Law Practice Note
+    resource: >-
+      https://openagreements.org/practice-guides/non-compete/us/district-of-columbia
 tags:
   - case-law
   - non-compete
@@ -35,7 +36,7 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `restrictive-covenants-each-independently-includable`, `severability-and-reformation`
 - source_cards: `overbroad-covenant-three-approaches`, `three-state-approaches-overbroad-covenants`
-- cited_by: [Non-Compete Agreement Review Checklist](../non-compete/review-checklist.md)
+- cited_by: [Non-Compete Agreement Review Checklist](../checklists/non-compete/review-checklist.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4464037/yehuda-steiner-v-american-friends-of-lubavitch-chaabad/#:~:text=Most%20courts%20take%20one%20of,to%20enforce%20an%20overbroad%20covenant.>
 
 ### steiner-v-american-friends-of-lubavitch-chabad-we-also-formally-adopt-the-doctrine-c9894e42 {#steiner-v-american-friends-of-lubavitch-chabad-we-also-formally-adopt-the-doctrine-c9894e42}
@@ -44,5 +45,5 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `dc-steiner-sev`, `steiner-reformation`
-- cited_by: [Non-Compete Agreement Review Checklist — District of Columbia](../non-compete/district-of-columbia-review-checklist.md), [Non-Competes in the District of Columbia](../non-compete/district-of-columbia.md)
+- cited_by: [Non-Compete Agreement Review Checklist — District of Columbia](../checklists/non-compete/district-of-columbia-review-checklist.md), [Non-Competes in the District of Columbia](../non-compete/us/district-of-columbia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4464037/yehuda-steiner-v-american-friends-of-lubavitch-chaabad/#:~:text=We%20also%20formally%20adopt%20the,contained%20in%20the%20noncompete%20clause.>

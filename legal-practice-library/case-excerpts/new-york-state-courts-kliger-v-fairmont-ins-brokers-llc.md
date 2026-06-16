@@ -10,7 +10,7 @@ timestamp: '2026-04-19'
 document_references:
   - type: Practice Note
     resource: >-
-      https://openagreements.org/legal/ai-layoffs/ai-layoff-without-cause-vs-redundancy-us
+      https://openagreements.org/practice-guides/ai-layoffs/ai-layoff-without-cause-vs-redundancy-us
 tags:
   - case-law
   - ai-layoffs

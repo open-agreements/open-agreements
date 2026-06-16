@@ -10,7 +10,7 @@ resource: >-
 timestamp: '2026-06-11'
 document_references:
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/privacy/michigan'
+    resource: 'https://openagreements.org/practice-guides/privacy/us/michigan'
 tags:
   - case-law
   - privacy
@@ -30,7 +30,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `consumer-lawsuit`
 - source_cards: `q6-boelter-5000`
-- cited_by: [Michigan Consumer Privacy Law](../privacy/michigan.md)
+- cited_by: [Michigan Consumer Privacy Law](../privacy/us/michigan.md)
 - link_to_source: <https://www.courtlistener.com/opinion/7320807/boelter-v-hearst-communications-inc/#:~:text=may%20bring%20a%20civil%20action,as%20costs%20and%20attorneys%E2%80%99%20fees>
 
 ### boelter-v-hearst-communications-inc-192-f-supp-3d-427-s-d-n-y-2016-plaintiffs-boelter-and-edwards-are-ca06ba8e {#boelter-v-hearst-communications-inc-192-f-supp-3d-427-s-d-n-y-2016-plaintiffs-boelter-and-edwards-are-ca06ba8e}
@@ -39,7 +39,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `customer-reading-viewing-records`
 - source_cards: `q2-boelter-magazines`
-- cited_by: [Michigan Consumer Privacy Law](../privacy/michigan.md)
+- cited_by: [Michigan Consumer Privacy Law](../privacy/us/michigan.md)
 - link_to_source: <https://www.courtlistener.com/opinion/7320807/boelter-v-hearst-communications-inc/#:~:text=Plaintiffs%20Boelter%20and%20Edwards%20are,two%20magazines%20published%20by%20Defendant.>
 
 ### boelter-v-hearst-communications-inc-192-f-supp-3d-427-s-d-n-y-2016-the-parties-dispute-whether-the-amended-fe0fbfac {#boelter-v-hearst-communications-inc-192-f-supp-3d-427-s-d-n-y-2016-the-parties-dispute-whether-the-amended-fe0fbfac}
@@ -48,5 +48,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `consumer-lawsuit`
 - source_cards: `q6-boelter-retroactivity`
-- cited_by: [Michigan Consumer Privacy Law](../privacy/michigan.md)
+- cited_by: [Michigan Consumer Privacy Law](../privacy/us/michigan.md)
 - link_to_source: <https://www.courtlistener.com/opinion/7320807/boelter-v-hearst-communications-inc/#:~:text=The%20parties%20dispute%20whether%20the,finds%20that%20it%20does%20not.>

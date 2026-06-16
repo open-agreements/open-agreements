@@ -15,7 +15,7 @@ document_references:
     resource: >-
       https://openagreements.org/legal/non-compete/south-carolina-review-checklist
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/south-carolina'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/south-carolina'
 tags:
   - case-law
   - non-compete
@@ -35,7 +35,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `confidentiality-ndas`, `definitions`, `south-carolina-statutory-gates`
 - source_cards: `fay-functional-noncompete`, `sc-fay-functional-def`, `sc-fay-functional-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — South Carolina](../non-compete/south-carolina-review-checklist.md), [Non-Competes in South Carolina](../non-compete/south-carolina.md)
+- cited_by: [Non-Compete Agreement Review Checklist — South Carolina](../checklists/non-compete/south-carolina-review-checklist.md), [Non-Competes in South Carolina](../non-compete/us/south-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/8328279/fay-v-total-quality-logistics-llc/#:~:text=Because%20the%20nondisclosure%20provisions%20had,like%20any%20other%20noncompete%20agreement.>
 
 ### fay-v-total-quality-logistics-llc-the-nondisclosure-provisions-in-62ee5d45 {#fay-v-total-quality-logistics-llc-the-nondisclosure-provisions-in-62ee5d45}
@@ -44,5 +44,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `confidentiality-and-trade-secret-treatment`, `confidentiality-ndas`, `definitions`, `south-carolina-statutory-gates`
 - source_cards: `fay-no-time-limit`, `sc-fay-no-time-conf`, `sc-fay-no-time-def`, `sc-fay-no-time-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — South Carolina](../non-compete/south-carolina-review-checklist.md), [Non-Competes in South Carolina](../non-compete/south-carolina.md)
+- cited_by: [Non-Compete Agreement Review Checklist — South Carolina](../checklists/non-compete/south-carolina-review-checklist.md), [Non-Competes in South Carolina](../non-compete/us/south-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/8328279/fay-v-total-quality-logistics-llc/#:~:text=The%20nondisclosure%20provisions%20in%20paragraphs,public%20policy%20of%20South%20Carolina.>

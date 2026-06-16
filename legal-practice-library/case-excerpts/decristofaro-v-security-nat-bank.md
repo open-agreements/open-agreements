@@ -12,7 +12,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/alaska-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/alaska'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/alaska'
 tags:
   - case-law
   - non-compete
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `alaska-statutory-gates`, `employee-noncompetes`, `governing-law-venue-dispute-process`, `parties-and-cover-term-identification`, `restrictive-covenants-each-independently-includable`
 - source_cards: `ak-decristofaro-strict-cov`, `ak-decristofaro-strict-cover`, `ak-decristofaro-strict-gate`, `ak-decristofaro-strict-law`, `decristofaro-disfavored-strictly-construed`
-- cited_by: [Non-Compete Agreement Review Checklist — Alaska](../non-compete/alaska-review-checklist.md), [Non-Competes in Alaska](../non-compete/alaska.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Alaska](../checklists/non-compete/alaska-review-checklist.md), [Non-Competes in Alaska](../non-compete/us/alaska.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1234367/decristofaro-v-security-national-bank/#:~:text=They%20are%2C%20therefore%2C%20strictly%20construed.>

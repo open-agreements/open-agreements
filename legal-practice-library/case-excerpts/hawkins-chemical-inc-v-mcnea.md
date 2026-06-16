@@ -11,7 +11,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/north-dakota-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/north-dakota'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/north-dakota'
 tags:
   - case-law
   - non-compete
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `hawkins-sale-covenant-severability`, `nd-hawkins-sale-sev`
-- cited_by: [Non-Compete Agreement Review Checklist — North Dakota](../non-compete/north-dakota-review-checklist.md), [Non-Competes in North Dakota](../non-compete/north-dakota.md)
+- cited_by: [Non-Compete Agreement Review Checklist — North Dakota](../checklists/non-compete/north-dakota-review-checklist.md), [Non-Competes in North Dakota](../non-compete/us/north-dakota.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1586088/hawkins-chemical-inc-v-mcnea/#:~:text=Because%20the%20property%20and%20business,be%20enforceable%20in%20that%20county.>

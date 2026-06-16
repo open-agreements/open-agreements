@@ -4,7 +4,8 @@ title: Cross-provider zero-data-retention commitments
 description: >-
   How zero data retention works in AI provider contracts, what ZDR covers, and
   which gaps legal teams should check before using AI tools.
-resource: 'https://openagreements.org/legal/ai-vendors/zdr-cross-provider-comparison'
+resource: >-
+  https://openagreements.org/practice-guides/ai-vendors/zdr-cross-provider-comparison
 timestamp: '2026-04-20'
 tags:
   - ai-vendors

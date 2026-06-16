@@ -4,7 +4,8 @@ title: Defensible bias audits for HR AI tools
 description: >-
   When HR AI tools need bias audits under NYC law, Title VII, Colorado rules,
   and the EU AI Act, plus what vendor audits should prove.
-resource: 'https://openagreements.org/legal/ai-hiring/hr-ai-bias-audit-requirements'
+resource: >-
+  https://openagreements.org/practice-guides/ai-hiring/hr-ai-bias-audit-requirements
 timestamp: '2026-04-20'
 tags:
   - ai-hiring

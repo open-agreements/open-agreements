@@ -4,7 +4,8 @@ title: Token economics for legal teams
 description: >-
   How legal teams should budget AI token usage, compare API and seat pricing,
   assess long-context costs, and account for privilege controls.
-resource: 'https://openagreements.org/legal/ai-vendors/token-economics-for-legal-teams'
+resource: >-
+  https://openagreements.org/practice-guides/ai-vendors/token-economics-for-legal-teams
 timestamp: '2026-04-20'
 tags:
   - ai-vendors

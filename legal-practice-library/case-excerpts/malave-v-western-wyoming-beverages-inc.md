@@ -11,7 +11,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/wyoming-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/wyoming'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/wyoming'
 tags:
   - case-law
   - non-compete
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `employee-noncompetes`, `pre-2025-agreements`, `recent-developments`, `template-updates`
 - source_cards: `malave-baseline`, `malave-common-law-elements`, `malave-five-elements`, `malave-reasonableness-baseline`
-- cited_by: [Non-Compete Agreement Review Checklist — Wyoming](../non-compete/wyoming-review-checklist.md), [Non-Competes in Wyoming](../non-compete/wyoming.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Wyoming](../checklists/non-compete/wyoming-review-checklist.md), [Non-Competes in Wyoming](../non-compete/us/wyoming.md)
 - link_to_source: <https://law.justia.com/cases/wyoming/supreme-court/2022/s-21-0140.html#:~:text=A%20valid%20and%20enforceable%20covenant,(5)%20not%20against%20public%20policy.>

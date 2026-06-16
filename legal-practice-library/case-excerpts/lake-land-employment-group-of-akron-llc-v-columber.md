@@ -14,7 +14,7 @@ document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/legal/non-compete/ohio-review-checklist'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/ohio'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/ohio'
 tags:
   - case-law
   - non-compete
@@ -34,5 +34,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`, `timing-and-execution-acknowledgements`
 - source_cards: `lakeland-continued-employment`, `oh-lakeland-consideration`
-- cited_by: [Non-Compete Agreement Review Checklist — Ohio](../non-compete/ohio-review-checklist.md), [Non-Competes in Ohio](../non-compete/ohio.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Ohio](../checklists/non-compete/ohio-review-checklist.md), [Non-Competes in Ohio](../non-compete/us/ohio.md)
 - link_to_source: <https://www.courtlistener.com/opinion/6892723/lake-land-employment-group-of-akron-llc-v-columber/#:~:text=We%20therefore%20hold%20that%20consideration,legally%20be%20terminated%20without%20cause.>

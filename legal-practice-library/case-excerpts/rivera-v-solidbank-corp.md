@@ -9,7 +9,7 @@ resource: 'https://lawphil.net/judjuris/juri2006/apr2006/gr_163269_2006.html'
 timestamp: '2026-06-03'
 document_references:
   - type: Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/philippines'
+    resource: 'https://openagreements.org/practice-guides/non-compete/ph'
 tags:
   - case-law
   - non-compete
@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `duration-geography`, `tolling`
 - source_cards: `q11-rivera-certainty`, `rivera-territorial`
-- cited_by: [Non-Competes in the Philippines](../non-compete/philippines.md)
+- cited_by: [Non-Competes in the Philippines](../non-compete/ph.md)
 - link_to_source: <https://lawphil.net/judjuris/juri2006/apr2006/gr_163269_2006.html>
 
 ### rivera-v-solidbank-corp-there-is-no-factual-basis-for-6915586d {#rivera-v-solidbank-corp-there-is-no-factual-basis-for-6915586d}
@@ -38,7 +38,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `reasonableness-test`
 - source_cards: `rivera-summary-judgment`
-- cited_by: [Non-Competes in the Philippines](../non-compete/philippines.md)
+- cited_by: [Non-Competes in the Philippines](../non-compete/ph.md)
 - link_to_source: <https://lawphil.net/judjuris/juri2006/apr2006/gr_163269_2006.html>
 
 ### rivera-v-solidbank-corp-thus-in-determining-whether-the-contract-ea6fb236 {#rivera-v-solidbank-corp-thus-in-determining-whether-the-contract-ea6fb236}
@@ -47,5 +47,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `legitimate-interest`, `reasonableness-test`
 - source_cards: `q4-rivera-interest`, `rivera-five-factors`
-- cited_by: [Non-Competes in the Philippines](../non-compete/philippines.md)
+- cited_by: [Non-Competes in the Philippines](../non-compete/ph.md)
 - link_to_source: <https://lawphil.net/judjuris/juri2006/apr2006/gr_163269_2006.html>

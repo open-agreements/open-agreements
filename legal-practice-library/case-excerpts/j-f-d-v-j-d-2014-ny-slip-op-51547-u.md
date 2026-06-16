@@ -8,7 +8,7 @@ timestamp: '2026-04-20'
 document_references:
   - type: Practice Note
     resource: >-
-      https://openagreements.org/legal/outside-counsel/counsel-file-withholding-on-unpaid-invoices
+      https://openagreements.org/practice-guides/outside-counsel/counsel-file-withholding-on-unpaid-invoices
 tags:
   - case-law
   - outside-counsel

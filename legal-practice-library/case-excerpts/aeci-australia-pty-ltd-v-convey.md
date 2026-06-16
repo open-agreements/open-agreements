@@ -11,7 +11,7 @@ resource: 'https://archive.sclqld.org.au/qjudgment/2020/QSC20-207.pdf'
 timestamp: '2026-06-10'
 document_references:
   - type: Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/australia-queensland'
+    resource: 'https://openagreements.org/practice-guides/non-compete/au/queensland'
 tags:
   - case-law
   - non-compete
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `enforceability`
 - source_cards: `aeci-competition-per-se`
-- cited_by: [Non-Compete Enforceability in Queensland](../non-compete/australia-queensland.md)
+- cited_by: [Non-Compete Enforceability in Queensland](../non-compete/au/queensland.md)
 - link_to_source: <https://archive.sclqld.org.au/qjudgment/2020/QSC20-207.pdf>
 
 ### aeci-australia-pty-ltd-v-convey-a-term-in-a-contract-which-15975763 {#aeci-australia-pty-ltd-v-convey-a-term-in-a-contract-which-15975763}
@@ -40,7 +40,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `enforceability`
 - source_cards: `aeci-presumed-void`
-- cited_by: [Non-Compete Enforceability in Queensland](../non-compete/australia-queensland.md)
+- cited_by: [Non-Compete Enforceability in Queensland](../non-compete/au/queensland.md)
 - link_to_source: <https://archive.sclqld.org.au/qjudgment/2020/QSC20-207.pdf>
 
 ### aeci-australia-pty-ltd-v-convey-aeci-was-prepared-to-pay-a-3f99d0c4 {#aeci-australia-pty-ltd-v-convey-aeci-was-prepared-to-pay-a-3f99d0c4}
@@ -49,7 +49,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `garden-leave`
 - source_cards: `aeci-paid-restraint`
-- cited_by: [Non-Compete Enforceability in Queensland](../non-compete/australia-queensland.md)
+- cited_by: [Non-Compete Enforceability in Queensland](../non-compete/au/queensland.md)
 - link_to_source: <https://archive.sclqld.org.au/qjudgment/2020/QSC20-207.pdf>
 
 ### aeci-australia-pty-ltd-v-convey-it-is-not-permissible-for-the-5ddb8d4c {#aeci-australia-pty-ltd-v-convey-it-is-not-permissible-for-the-5ddb8d4c}
@@ -58,7 +58,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`
 - source_cards: `aeci-no-read-down`
-- cited_by: [Non-Compete Enforceability in Queensland](../non-compete/australia-queensland.md)
+- cited_by: [Non-Compete Enforceability in Queensland](../non-compete/au/queensland.md)
 - link_to_source: <https://archive.sclqld.org.au/qjudgment/2020/QSC20-207.pdf>
 
 ### aeci-australia-pty-ltd-v-convey-it-may-restrain-the-employee-from-869b508a {#aeci-australia-pty-ltd-v-convey-it-may-restrain-the-employee-from-869b508a}
@@ -67,5 +67,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `legitimate-interest`
 - source_cards: `aeci-confidential-restraint`
-- cited_by: [Non-Compete Enforceability in Queensland](../non-compete/australia-queensland.md)
+- cited_by: [Non-Compete Enforceability in Queensland](../non-compete/au/queensland.md)
 - link_to_source: <https://archive.sclqld.org.au/qjudgment/2020/QSC20-207.pdf>
