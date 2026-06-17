@@ -10,7 +10,7 @@ resource: >-
 timestamp: '2026-06-03'
 document_references:
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/florida'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/florida'
 tags:
   - case-law
   - non-compete
@@ -30,5 +30,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `employee-noncompetes`
 - source_cards: `q1-henao-framework`
-- cited_by: [Non-Competes in Florida](../non-compete/florida.md)
+- cited_by: [Non-Competes in Florida](../non-compete/us/florida.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1825627/henao-v-professional-shoe-repair-inc/#:~:text=Section%20542.335%20contains%20a%20comprehensive,on%20an%20%22unfair%20competition%22%20analysis.>

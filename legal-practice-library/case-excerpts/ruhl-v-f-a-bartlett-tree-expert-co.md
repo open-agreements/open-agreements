@@ -10,9 +10,9 @@ resource: >-
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/maryland-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/maryland'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/maryland'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/maryland'
 tags:
   - case-law
   - non-compete
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `tolling-during-breach`, `tolling-extension`
 - source_cards: `md-ruhl-reasonableness-backdrop`, `ruhl-reasonableness-backdrop`
-- cited_by: [Non-Compete Agreement Review Checklist — Maryland](../non-compete/maryland-review-checklist.md), [Non-Competes in Maryland](../non-compete/maryland.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Maryland](../checklists/non-compete/us/maryland.md), [Non-Competes in Maryland](../non-compete/us/maryland.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2292892/ruhl-v-f-a-bartlett-tree-expert-co/#:~:text=Covenants%20of%20this%20nature%20are,reasonable%20on%20the%20specific%20facts.>
 
 ### ruhl-v-f-a-bartlett-tree-expert-co-there-is-no-arbitrary-yardstick-as-83e3db2f {#ruhl-v-f-a-bartlett-tree-expert-co-there-is-no-arbitrary-yardstick-as-83e3db2f}
@@ -41,5 +41,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `duration-geography`
 - source_cards: `md-ruhl-no-yardstick`, `ruhl-no-yardstick`
-- cited_by: [Non-Compete Agreement Review Checklist — Maryland](../non-compete/maryland-review-checklist.md), [Non-Competes in Maryland](../non-compete/maryland.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Maryland](../checklists/non-compete/us/maryland.md), [Non-Competes in Maryland](../non-compete/us/maryland.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2292892/ruhl-v-f-a-bartlett-tree-expert-co/#:~:text=There%20is%20no%20arbitrary%20yardstick,the%20interest%20of%20the%20public.>

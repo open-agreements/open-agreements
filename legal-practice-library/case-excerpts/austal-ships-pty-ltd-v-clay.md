@@ -9,7 +9,8 @@ resource: 'https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASC/2018/178.
 timestamp: '2026-06-10'
 document_references:
   - type: Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/australia-western-australia'
+    resource: >-
+      https://openagreements.org/practice-guides/non-compete/au/western-australia
 tags:
   - case-law
   - non-compete
@@ -29,7 +30,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `enforceability`
 - source_cards: `austal-presumed-void`
-- cited_by: [Non-Compete Enforceability in Western Australia](../non-compete/australia-western-australia.md)
+- cited_by: [Non-Compete Enforceability in Western Australia](../non-compete/au/western-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASC/2018/178.html>
 
 ### austal-ships-pty-ltd-v-clay-in-these-circumstances-i-am-satisfied-d5e5837b {#austal-ships-pty-ltd-v-clay-in-these-circumstances-i-am-satisfied-d5e5837b}
@@ -38,7 +39,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `cascading-clauses`
 - source_cards: `austal-prima-facie`
-- cited_by: [Non-Compete Enforceability in Western Australia](../non-compete/australia-western-australia.md)
+- cited_by: [Non-Compete Enforceability in Western Australia](../non-compete/au/western-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASC/2018/178.html>
 
 ### austal-ships-pty-ltd-v-clay-the-legitimate-interests-about-which-a-5ef8112f {#austal-ships-pty-ltd-v-clay-the-legitimate-interests-about-which-a-5ef8112f}
@@ -47,5 +48,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `legitimate-interest`
 - source_cards: `austal-recognised-interests`
-- cited_by: [Non-Compete Enforceability in Western Australia](../non-compete/australia-western-australia.md)
+- cited_by: [Non-Compete Enforceability in Western Australia](../non-compete/au/western-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASC/2018/178.html>

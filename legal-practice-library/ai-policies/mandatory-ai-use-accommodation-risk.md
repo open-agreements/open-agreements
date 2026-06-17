@@ -5,7 +5,7 @@ description: >-
   How mandatory AI use affects essential job functions, ADA and Title VII
   accommodations, review processes, and workplace AI tool design.
 resource: >-
-  https://openagreements.org/legal/ai-policies/mandatory-ai-use-accommodation-risk
+  https://openagreements.org/practice-guides/ai-policies/mandatory-ai-use-accommodation-risk
 timestamp: '2026-04-20'
 tags:
   - ai-policies

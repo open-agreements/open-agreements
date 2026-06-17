@@ -10,9 +10,9 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/pennsylvania-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/pennsylvania'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/pennsylvania'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/pennsylvania'
 tags:
   - case-law
   - non-compete
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `employee-noncompetes`, `pennsylvania-statutory-gates`, `restrictive-covenants-each-independently-includable`
 - source_cards: `pa-socko-four-part-gate`, `pa-socko-test-covs`, `socko-four-part-test`
-- cited_by: [Non-Compete Agreement Review Checklist — Pennsylvania](../non-compete/pennsylvania-review-checklist.md), [Non-Competes in Pennsylvania](../non-compete/pennsylvania.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Pennsylvania](../checklists/non-compete/us/pennsylvania.md), [Non-Competes in Pennsylvania](../non-compete/us/pennsylvania.md)
 - link_to_source: <https://www.courtlistener.com/opinion/3155889/socko-d-v-mid-atantic-systems-of-cpa-inc-aplt/#:~:text=Consistent%20with%20this%20legal%20background%2C,legitimate%20interests%20of%20the%20employer.>
 
 ### socko-v-mid-atlantic-systems-of-cpa-inc-in-the-context-of-requiring-an-68fe583e {#socko-v-mid-atlantic-systems-of-cpa-inc-in-the-context-of-requiring-an-68fe583e}
@@ -41,7 +41,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`, `timing-and-execution-acknowledgements`
 - source_cards: `pa-socko-mid-employment`, `socko-mid-employment`
-- cited_by: [Non-Compete Agreement Review Checklist — Pennsylvania](../non-compete/pennsylvania-review-checklist.md), [Non-Competes in Pennsylvania](../non-compete/pennsylvania.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Pennsylvania](../checklists/non-compete/us/pennsylvania.md), [Non-Competes in Pennsylvania](../non-compete/us/pennsylvania.md)
 - link_to_source: <https://www.courtlistener.com/opinion/3155889/socko-d-v-mid-atantic-systems-of-cpa-inc-aplt/#:~:text=In%20the%20context%20of%20requiring,to%20support%20the%20restrictive%20clause.>
 
 ### socko-v-mid-atlantic-systems-of-cpa-inc-we-conclude-that-a-construction-of-41b4c704 {#socko-v-mid-atlantic-systems-of-cpa-inc-we-conclude-that-a-construction-of-41b4c704}
@@ -50,5 +50,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`, `timing-and-execution-acknowledgements`
 - source_cards: `pa-socko-uwoa`, `socko-uwoa`
-- cited_by: [Non-Compete Agreement Review Checklist — Pennsylvania](../non-compete/pennsylvania-review-checklist.md), [Non-Competes in Pennsylvania](../non-compete/pennsylvania.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Pennsylvania](../checklists/non-compete/us/pennsylvania.md), [Non-Competes in Pennsylvania](../non-compete/us/pennsylvania.md)
 - link_to_source: <https://www.courtlistener.com/opinion/3155889/socko-d-v-mid-atantic-systems-of-cpa-inc-aplt/#:~:text=we%20conclude%20that%20a%20construction,of%20employment%20would%20be%20unreasonable.>

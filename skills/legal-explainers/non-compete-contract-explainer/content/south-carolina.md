@@ -2,9 +2,9 @@
 jurisdiction: "South Carolina"
 slug: south-carolina
 countryCode: US
-snapshotAsOf: "2026-06-15"
+snapshotAsOf: "2026-06-17"
 lastReviewed: "2026-06-03"
-canonicalUrl: https://openagreements.org/legal/non-compete/south-carolina
+canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/south-carolina
 license: CC BY 4.0
 stale: false
 ---
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/south-carolina · **Snapshot as of:** 2026-06-15 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/south-carolina · **Snapshot as of:** 2026-06-17 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in South Carolina[^about]
 
@@ -100,7 +100,7 @@ Geography is tied to the employer's actual customer base. A territorial restrict
 
 In *Poynter Investments, Inc. v. Century Builders of Piedmont, Inc.*, the South Carolina Supreme Court held that the restrictions in a non-compete cannot be rewritten by a court or limited by the parties' later agreement, but must stand or fall on their own terms [^poynter-no-blue-pencil]. The court reversed an order that had purported to enforce the covenant on narrower terms than the parties wrote [^poynter-rewrite-error]. *Stonhard, Inc. v. Carolina Flooring Specialists, Inc.* refused to supply a missing territorial limitation, reasoning that adding a term the parties never negotiated would itself violate public policy [^stonhard-no-reformation].
 
-There is one narrow lever: an alternative, *already-drafted* fallback. In *Team IA, Inc. v. Lucas*, the Court of Appeals indicated that a narrower alternative territory written into the original agreement could remain enforceable even when the primary territory was overbroad — because the court would be enforcing language the parties actually agreed to, not inventing it [^team-ia-step-down]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [South Carolina non-compete review checklist](/legal/non-compete/south-carolina-review-checklist) walks the full covenant suite item by item with each requirement's force level.
+There is one narrow lever: an alternative, *already-drafted* fallback. In *Team IA, Inc. v. Lucas*, the Court of Appeals indicated that a narrower alternative territory written into the original agreement could remain enforceable even when the primary territory was overbroad — because the court would be enforcing language the parties actually agreed to, not inventing it [^team-ia-step-down]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [South Carolina non-compete review checklist](/checklists/non-compete/us/south-carolina) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**

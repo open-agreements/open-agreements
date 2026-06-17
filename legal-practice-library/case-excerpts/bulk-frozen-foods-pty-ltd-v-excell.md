@@ -11,7 +11,7 @@ resource: 'https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/tas/TASSC/2014/58
 timestamp: '2026-06-10'
 document_references:
   - type: Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/australia-tasmania'
+    resource: 'https://openagreements.org/practice-guides/non-compete/au/tasmania'
 tags:
   - case-law
   - non-compete
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `legitimate-interest`
 - source_cards: `bulk-property-interest`
-- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/australia-tasmania.md)
+- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/au/tasmania.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/tas/TASSC/2014/58.html>
 
 ### bulk-frozen-foods-pty-ltd-v-excell-although-the-result-is-a-very-946cbe45 {#bulk-frozen-foods-pty-ltd-v-excell-although-the-result-is-a-very-946cbe45}
@@ -40,7 +40,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `cascading-clauses`
 - source_cards: `bulk-genuine-attempt`
-- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/australia-tasmania.md)
+- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/au/tasmania.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/tas/TASSC/2014/58.html>
 
 ### bulk-frozen-foods-pty-ltd-v-excell-because-of-that-willingness-item-8-1cf673d9 {#bulk-frozen-foods-pty-ltd-v-excell-because-of-that-willingness-item-8-1cf673d9}
@@ -49,7 +49,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `cascading-clauses`
 - source_cards: `bulk-cascade-structure`
-- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/australia-tasmania.md)
+- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/au/tasmania.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/tas/TASSC/2014/58.html>
 
 ### bulk-frozen-foods-pty-ltd-v-excell-having-regard-to-the-evidence-as-12d3463f {#bulk-frozen-foods-pty-ltd-v-excell-having-regard-to-the-evidence-as-12d3463f}
@@ -58,7 +58,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `reasonableness-factors`
 - source_cards: `bulk-narrow-rung`
-- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/australia-tasmania.md)
+- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/au/tasmania.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/tas/TASSC/2014/58.html>
 
 ### bulk-frozen-foods-pty-ltd-v-excell-i-was-satisfied-that-the-plaintiff-ac935e6c {#bulk-frozen-foods-pty-ltd-v-excell-i-was-satisfied-that-the-plaintiff-ac935e6c}
@@ -67,7 +67,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `legitimate-interest`
 - source_cards: `bulk-confidential-satisfied`
-- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/australia-tasmania.md)
+- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/au/tasmania.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/tas/TASSC/2014/58.html>
 
 ### bulk-frozen-foods-pty-ltd-v-excell-it-followed-that-cl-8-2-b-is-a7762f66 {#bulk-frozen-foods-pty-ltd-v-excell-it-followed-that-cl-8-2-b-is-a7762f66}
@@ -76,7 +76,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `cascading-clauses`
 - source_cards: `bulk-any-one-reasonable`
-- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/australia-tasmania.md)
+- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/au/tasmania.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/tas/TASSC/2014/58.html>
 
 ### bulk-frozen-foods-pty-ltd-v-excell-on-30-october-2014-i-determined-c3bf9a86 {#bulk-frozen-foods-pty-ltd-v-excell-on-30-october-2014-i-determined-c3bf9a86}
@@ -85,7 +85,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `cascading-clauses`
 - source_cards: `bulk-outcome`
-- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/australia-tasmania.md)
+- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/au/tasmania.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/tas/TASSC/2014/58.html>
 
 ### bulk-frozen-foods-pty-ltd-v-excell-the-general-skill-and-knowledge-that-634f169a {#bulk-frozen-foods-pty-ltd-v-excell-the-general-skill-and-knowledge-that-634f169a}
@@ -94,7 +94,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `legitimate-interest`
 - source_cards: `bulk-skill-not-property`
-- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/australia-tasmania.md)
+- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/au/tasmania.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/tas/TASSC/2014/58.html>
 
 ### bulk-frozen-foods-pty-ltd-v-excell-the-reasonableness-or-otherwise-of-a-9bab20e8 {#bulk-frozen-foods-pty-ltd-v-excell-the-reasonableness-or-otherwise-of-a-9bab20e8}
@@ -103,7 +103,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `garden-leave`, `reasonableness-factors`, `tolling`
 - source_cards: `bulk-tested-at-contract`, `bulk-tested-at-contract-gl`, `bulk-tested-at-contract-tolling`
-- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/australia-tasmania.md)
+- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/au/tasmania.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/tas/TASSC/2014/58.html>
 
 ### bulk-frozen-foods-pty-ltd-v-excell-the-result-as-pointed-out-by-044c198e {#bulk-frozen-foods-pty-ltd-v-excell-the-result-as-pointed-out-by-044c198e}
@@ -112,5 +112,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `cascading-clauses`
 - source_cards: `bulk-8190`
-- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/australia-tasmania.md)
+- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/au/tasmania.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/tas/TASSC/2014/58.html>

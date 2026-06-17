@@ -12,9 +12,9 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/delaware-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/delaware'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/delaware'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/delaware'
 tags:
   - case-law
   - non-compete
@@ -34,7 +34,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `delaware-statutory-gates`, `sale-of-business`
 - source_cards: `de-kodiak-goodwill-gate`, `kodiak-goodwill-limit`
-- cited_by: [Non-Compete Agreement Review Checklist — Delaware](../non-compete/delaware-review-checklist.md), [Non-Competes in Delaware](../non-compete/delaware.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Delaware](../checklists/non-compete/us/delaware.md), [Non-Competes in Delaware](../non-compete/us/delaware.md)
 - link_to_source: <https://www.courtlistener.com/opinion/8247185/kodiak-building-partners-llc-v-philip-d-adams/#:~:text=In%20sum%2C%20Kodiak%20has%20a,Adams%20knows%20or%20could%20access.>
 
 ### kodiak-building-partners-llc-v-adams-the-inequities-inherent-in-92801fec {#kodiak-building-partners-llc-v-adams-the-inequities-inherent-in-92801fec}
@@ -43,5 +43,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `restrictive-covenants-each-independently-includable`, `severability-and-reformation`
 - source_cards: `de-kodiak-inequity-cov`, `de-kodiak-sev`, `kodiak-blue-pencil-inequity`
-- cited_by: [Non-Compete Agreement Review Checklist — Delaware](../non-compete/delaware-review-checklist.md), [Non-Competes in Delaware](../non-compete/delaware.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Delaware](../checklists/non-compete/us/delaware.md), [Non-Competes in Delaware](../non-compete/us/delaware.md)
 - link_to_source: <https://www.courtlistener.com/opinion/8247185/kodiak-building-partners-llc-v-philip-d-adams/#:~:text=The%20inequities%20inherent%20in%20blue%2Dpenciling,to%20have%20violated%20those%20portions.>

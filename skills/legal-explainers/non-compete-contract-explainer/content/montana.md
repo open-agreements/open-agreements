@@ -2,9 +2,9 @@
 jurisdiction: "Montana"
 slug: montana
 countryCode: US
-snapshotAsOf: "2026-06-15"
+snapshotAsOf: "2026-06-17"
 lastReviewed: "2026-06-02"
-canonicalUrl: https://openagreements.org/legal/non-compete/montana
+canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/montana
 license: CC BY 4.0
 stale: false
 ---
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/montana · **Snapshot as of:** 2026-06-15 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/montana · **Snapshot as of:** 2026-06-17 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Montana[^about]
 
@@ -132,7 +132,7 @@ The 2025 amendments matter for timing. HB 198 added naturopathic physicians, RNs
 
 MUTSA defines trade secrets as information or software that has independent economic value from not being generally known or readily ascertainable and is subject to reasonable secrecy efforts [^mutsa-trade-secret-definition]. It also authorizes injunctions for actual or threatened misappropriation, with limited royalty and affirmative-act remedies in appropriate cases [^mutsa-injunction].
 
-Section 28-2-604 gives Montana courts a partial-void rule when a contract has distinct lawful and unlawful objects. But restrictive covenants are strictly construed, and cases like *Curl* void overbroad restraints rather than rewriting them into better covenants. Treat severability as a cleanup rule for distinct promises, not a drafting strategy for an aggressive non-compete. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Montana non-compete review checklist](/legal/non-compete/montana-review-checklist) walks the full covenant suite item by item with each requirement's force level.
+Section 28-2-604 gives Montana courts a partial-void rule when a contract has distinct lawful and unlawful objects. But restrictive covenants are strictly construed, and cases like *Curl* void overbroad restraints rather than rewriting them into better covenants. Treat severability as a cleanup rule for distinct promises, not a drafting strategy for an aggressive non-compete. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Montana non-compete review checklist](/checklists/non-compete/us/montana) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**

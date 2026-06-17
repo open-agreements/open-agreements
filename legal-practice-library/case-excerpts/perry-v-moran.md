@@ -7,7 +7,7 @@ resource: 'https://www.courtlistener.com/opinion/1453982/perry-v-moran/'
 timestamp: '2026-06-03'
 document_references:
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/washington'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/washington'
 tags:
   - case-law
   - non-compete
@@ -27,5 +27,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `common-law-reasonableness`
 - source_cards: `perry-three-factors`
-- cited_by: [Non-Competes in Washington](../non-compete/washington.md)
+- cited_by: [Non-Competes in Washington](../non-compete/us/washington.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1453982/perry-v-moran/#:~:text=Whether%20a%20covenant%20is%20reasonable,warrant%20nonenforcement%20of%20the%20covenant.>

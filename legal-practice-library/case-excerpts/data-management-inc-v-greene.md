@@ -9,9 +9,9 @@ resource: 'https://www.courtlistener.com/opinion/1350283/data-management-inc-v-g
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/alaska-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/alaska'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/alaska'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/alaska'
 tags:
   - case-law
   - non-compete
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `alaska-statutory-gates`, `alternatives`, `definitions`, `employee-noncompetes`, `parties-and-cover-term-identification`, `reasonableness-test`, `restrictive-covenants-each-independently-includable`, `tolling-during-breach`, `writing-requirement`
 - source_cards: `ak-data-management-factors-cov`, `ak-data-management-factors-cover`, `ak-data-management-factors-defs`, `ak-data-management-factors-gate`, `ak-data-management-factors-tolling`, `data-management-reasonableness-factors`, `data-management-reasonableness-factors-alternatives`, `data-management-reasonableness-factors-reasonable`, `data-management-reasonableness-factors-writing`
-- cited_by: [Non-Compete Agreement Review Checklist — Alaska](../non-compete/alaska-review-checklist.md), [Non-Competes in Alaska](../non-compete/alaska.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Alaska](../checklists/non-compete/us/alaska.md), [Non-Competes in Alaska](../non-compete/us/alaska.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/#:~:text=Among%20the%20factors%20properly%20to,incidental%20to%20the%20main%20employment.%E2%80%9D>
 
 ### data-management-inc-v-greene-the-third-approach-and-the-one-ac287b2c {#data-management-inc-v-greene-the-third-approach-and-the-one-ac287b2c}
@@ -40,7 +40,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`, `timing-and-execution-acknowledgements`
 - source_cards: `ak-data-management-alteration-sev`, `ak-data-management-good-faith-timing`, `data-management-reasonable-alteration`
-- cited_by: [Non-Compete Agreement Review Checklist — Alaska](../non-compete/alaska-review-checklist.md), [Non-Competes in Alaska](../non-compete/alaska.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Alaska](../checklists/non-compete/us/alaska.md), [Non-Competes in Alaska](../non-compete/us/alaska.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/#:~:text=The%20third%20approach%2C%20and%20the,faith%20is%20on%20the%20employer.>
 
 ### data-management-inc-v-greene-the-trial-court-must-determine-whether-2053a178 {#data-management-inc-v-greene-the-trial-court-must-determine-whether-2053a178}
@@ -49,5 +49,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `ak-data-management-overreach-sev`, `data-management-overreach-good-faith`
-- cited_by: [Non-Compete Agreement Review Checklist — Alaska](../non-compete/alaska-review-checklist.md), [Non-Competes in Alaska](../non-compete/alaska.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Alaska](../checklists/non-compete/us/alaska.md), [Non-Competes in Alaska](../non-compete/us/alaska.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/#:~:text=The%20trial%20court%20must%20determine,refuse%20to%20alter%20the%20covenant.>

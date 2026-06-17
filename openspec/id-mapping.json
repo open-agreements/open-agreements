@@ -47,11 +47,6 @@
       "capability": "open-agreements",
       "range": "OA-LEG-001 to OA-LEG-001"
     },
-    "DSG": {
-      "count": 1,
-      "capability": "provider-docusign",
-      "range": "OA-DSG-000 to OA-DSG-000"
-    },
     "QGT": {
       "count": 22,
       "capability": "quality-gates",
@@ -61,11 +56,6 @@
       "count": 27,
       "capability": "recipes",
       "range": "OA-ENG-005 to OA-RCP-039"
-    },
-    "SIG": {
-      "count": 1,
-      "capability": "signing",
-      "range": "OA-SIG-000 to OA-SIG-000"
     },
     "VAL": {
       "count": 30,
@@ -1208,13 +1198,6 @@
       "requirement": "Legacy Monolith Tombstone",
       "specFile": "openspec/specs/open-agreements/spec.md"
     },
-    "OA-DSG-000": {
-      "newId": "OA-DSG-000",
-      "namespace": "DSG",
-      "title": "DocuSign requirements remain in active change",
-      "requirement": "DocuSign Provider Capability Stub",
-      "specFile": "openspec/specs/provider-docusign/spec.md"
-    },
     "OA-DST-006": {
       "newId": "OA-DST-006",
       "namespace": "QGT",
@@ -1557,13 +1540,6 @@
       "title": "Source drift structure signature",
       "requirement": "Source Drift Detection",
       "specFile": "openspec/specs/recipes/spec.md"
-    },
-    "OA-SIG-000": {
-      "newId": "OA-SIG-000",
-      "namespace": "SIG",
-      "title": "Signing requirements remain in active change",
-      "requirement": "Signing Capability Stub",
-      "specFile": "openspec/specs/signing/spec.md"
     },
     "OA-TMP-001": {
       "newId": "OA-TMP-001",

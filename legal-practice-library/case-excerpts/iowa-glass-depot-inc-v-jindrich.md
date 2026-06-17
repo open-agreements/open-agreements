@@ -9,9 +9,9 @@ resource: 'https://www.courtlistener.com/opinion/2223795/iowa-glass-depot-inc-v-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/iowa-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/iowa'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/iowa'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/iowa'
 tags:
   - case-law
   - non-compete
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `legitimate-business-interest`
 - source_cards: `ia-glass-general-skill`, `q3-iowa-glass-general-skill`
-- cited_by: [Non-Compete Agreement Review Checklist — Iowa](../non-compete/iowa-review-checklist.md), [Non-Competes in Iowa](../non-compete/iowa.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Iowa](../checklists/non-compete/us/iowa.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2223795/iowa-glass-depot-inc-v-jindrich/#:~:text=An%20employee%20cannot%20be%20precluded,instruction%20while%20in%20the%20employment.>
 
 ### iowa-glass-depot-inc-v-jindrich-the-burden-of-proving-reasonableness-is-c2d8fc75 {#iowa-glass-depot-inc-v-jindrich-the-burden-of-proving-reasonableness-is-c2d8fc75}
@@ -40,7 +40,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `iowa-statutory-gates`, `reasonableness-test`
 - source_cards: `ia-glass-burden`, `q2-iowa-glass-burden`
-- cited_by: [Non-Compete Agreement Review Checklist — Iowa](../non-compete/iowa-review-checklist.md), [Non-Competes in Iowa](../non-compete/iowa.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Iowa](../checklists/non-compete/us/iowa.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2223795/iowa-glass-depot-inc-v-jindrich/#:~:text=The%20burden%20of%20proving%20reasonableness,to%20enforce%20such%20a%20covenant.>
 
 ### iowa-glass-depot-inc-v-jindrich-thus-while-his-continued-employment-b4e5a784 {#iowa-glass-depot-inc-v-jindrich-thus-while-his-continued-employment-b4e5a784}
@@ -49,5 +49,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`, `timing-and-execution-acknowledgements`
 - source_cards: `ia-glass-consideration`, `q8-iowa-glass-consideration`
-- cited_by: [Non-Compete Agreement Review Checklist — Iowa](../non-compete/iowa-review-checklist.md), [Non-Competes in Iowa](../non-compete/iowa.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Iowa](../checklists/non-compete/us/iowa.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2223795/iowa-glass-depot-inc-v-jindrich/#:~:text=Thus%2C%20while%20his%20continued%20employment,enforcement%20of%20the%20restrictive%20covenant.>

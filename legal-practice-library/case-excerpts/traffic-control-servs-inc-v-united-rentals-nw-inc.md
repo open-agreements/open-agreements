@@ -12,9 +12,9 @@ resource: >-
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/nevada-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/nevada'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/nevada'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/nevada'
 tags:
   - case-law
   - non-compete
@@ -34,5 +34,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `assignment-and-successors`, `assignment-sale-merger`
 - source_cards: `nv-traffic-control-consent`, `q10-traffic-control-consent`
-- cited_by: [Non-Compete Agreement Review Checklist — Nevada](../non-compete/nevada-review-checklist.md), [Non-Competes in Nevada](../non-compete/nevada.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Nevada](../checklists/non-compete/us/nevada.md), [Non-Competes in Nevada](../non-compete/us/nevada.md)
 - link_to_source: <https://www.courtlistener.com/opinion/8085820/traffic-control-services-inc-v-united-rentals-northwest-inc/#:~:text=Covenants%20not%20to%20compete%20are,to%20support%20the%20underlying%20covenant.>

@@ -2,9 +2,9 @@
 jurisdiction: "Virginia"
 slug: virginia
 countryCode: US
-snapshotAsOf: "2026-06-15"
+snapshotAsOf: "2026-06-17"
 lastReviewed: "2026-06-02"
-canonicalUrl: https://openagreements.org/legal/non-compete/virginia
+canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/virginia
 license: CC BY 4.0
 stale: false
 ---
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/virginia · **Snapshot as of:** 2026-06-15 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/virginia · **Snapshot as of:** 2026-06-17 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Virginia[^about]
 
@@ -41,7 +41,7 @@ Virginia non-compete law combines Va. Code § 40.1-28.7:8, a common-law reasonab
 
 **Short answer.** Sometimes. Virginia remains a reasonableness state for workers outside the statutory ban, but Va. Code § 40.1-28.7:8 flatly prohibits employers from entering into, enforcing, or threatening to enforce non-competes with covered *low-wage employees* [^statutory-ban-baseline].
 
-The result is a dual track. For covered workers, the statute controls first. For everyone else, the common-law test controls, and the employer must prove a restraint is narrowly drawn, not unduly burdensome on earning a living, and consistent with public policy [^omniplex-basic-test]. For a clause-by-clause pass over a specific agreement against both tracks, the [Virginia non-compete review checklist](/legal/non-compete/virginia-review-checklist) walks the full covenant suite item by item with each requirement's force level.
+The result is a dual track. For covered workers, the statute controls first. For everyone else, the common-law test controls, and the employer must prove a restraint is narrowly drawn, not unduly burdensome on earning a living, and consistent with public policy [^omniplex-basic-test]. For a clause-by-clause pass over a specific agreement against both tracks, the [Virginia non-compete review checklist](/checklists/non-compete/us/virginia) walks the full covenant suite item by item with each requirement's force level.
 
 The statutory track is broad after the 2025 amendment. The Virginia Department of Workforce Development and Advancement calculates the 2026 wage threshold at less than $1,507.01 per week, and the protected class also includes FLSA non-exempt employees regardless of earnings [^doli-current-threshold].
 

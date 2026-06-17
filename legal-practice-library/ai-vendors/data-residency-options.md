@@ -4,7 +4,7 @@ title: Data residency options for AI-assisted legal review
 description: >-
   Data residency issues for AI-assisted legal review, including EU, UK, Canada,
   and Australia transfer rules, vendor regions, and metadata logs.
-resource: 'https://openagreements.org/legal/ai-vendors/data-residency-options'
+resource: 'https://openagreements.org/practice-guides/ai-vendors/data-residency-options'
 timestamp: '2026-04-20'
 tags:
   - ai-vendors

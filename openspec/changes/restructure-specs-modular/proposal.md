@@ -5,7 +5,6 @@
 `openspec/specs/open-agreements/spec.md` has grown to 1,869 lines / 106 requirements covering everything from DOCX bracket normalization to npm tarball contents to closing-checklist JSON Patch idempotency to SAFE Consent recital authoring. It is no longer a useful unit of review, planning, or comprehension:
 
 - Reviewers can't tell from a diff whether a change touches the CLI, the engine, or a content rule.
-- A future DocuSign-style provider has nowhere natural to live.
 - The capability namespace conflates entry-point surfaces (CLI / MCP) with cross-cutting concerns (license / validation / quality gates).
 - Data-model "requirements" prose-duplicate the Zod schemas in `src/core/metadata.ts` and rot whenever the schema changes.
 - Template-family specifics (SAFE / NVCA / Employment) pollute the engine spec.
@@ -14,8 +13,8 @@ This change splits the monolith along a **hybrid axis** (surface specs + concern
 
 ## What Changes
 
-- **ADDED** 12 new capability specs:
-  - Surface: `engine`, `recipes`, `cli`, `mcp-contract-templates`, `closing-checklist`, `signing`, `provider-docusign`, `distribution`
+- **ADDED** 10 new capability specs:
+  - Surface: `engine`, `recipes`, `cli`, `mcp-contract-templates`, `closing-checklist`, `distribution`
   - Concern: `authoring`, `validation`, `ip-license`, `quality-gates`
 - **RENAMED** capability `contracts-workspace` → `mcp-contracts-workspace` (contents unchanged).
 - **MOVED** all 106 requirements from the `open-agreements` capability to their new homes (mapping captured in `design.md`).
@@ -29,7 +28,7 @@ This change splits the monolith along a **hybrid axis** (surface specs + concern
 
 ## Impact
 
-- Affected specs: `open-agreements` (emptied), `contracts-workspace` (renamed), 12 new capabilities (created).
+- Affected specs: `open-agreements` (emptied), `contracts-workspace` (renamed), 10 new capabilities (created).
 - Affected code: JSDoc enrichment on `src/core/metadata.ts` Zod schemas; new per-template READMEs under `content/templates/<id>/`; updates to `openspec/project.md`, root `README.md`, `openspec/id-mapping.json`.
 - Affected in-flight changes: 4 near-done changes rebased; 6 stalled changes deferred to a separate cleanup pass.
 - CI: `openspec validate --strict` must pass on every capability.

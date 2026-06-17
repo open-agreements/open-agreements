@@ -12,9 +12,9 @@ resource: >-
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/virginia-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/virginia'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/virginia'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/virginia'
 tags:
   - case-law
   - non-compete
@@ -34,7 +34,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `reasonableness-test`, `virginia-statutory-gates`
 - source_cards: `home-paramount-any-capacity`, `home-paramount-gate-any-capacity`
-- cited_by: [Non-Compete Agreement Review Checklist — Virginia](../non-compete/virginia-review-checklist.md), [Non-Competes in Virginia](../non-compete/virginia.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Virginia](../checklists/non-compete/us/virginia.md), [Non-Competes in Virginia](../non-compete/us/virginia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1057978/home-paramount-pest-control-v-shaffer/#:~:text=Because%20Home%20Paramount%20did%20not,while%20employed%20by%20a%20competitor.>
 
 ### home-paramount-pest-control-cos-v-shaffer-home-paramount-thus-was-limited-to-77320031 {#home-paramount-pest-control-cos-v-shaffer-home-paramount-thus-was-limited-to-77320031}
@@ -43,7 +43,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `home-paramount-language-chosen`, `home-paramount-no-extrinsic-narrowing`
-- cited_by: [Non-Compete Agreement Review Checklist — Virginia](../non-compete/virginia-review-checklist.md), [Non-Competes in Virginia](../non-compete/virginia.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Virginia](../checklists/non-compete/us/virginia.md), [Non-Competes in Virginia](../non-compete/us/virginia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1057978/home-paramount-pest-control-v-shaffer/#:~:text=Home%20Paramount%20thus%20was%20limited,not%20contrary%20to%20public%20policy.>
 
 ### home-paramount-pest-control-cos-v-shaffer-the-clear-overbreadth-of-the-function-da7b06ce {#home-paramount-pest-control-cos-v-shaffer-the-clear-overbreadth-of-the-function-da7b06ce}
@@ -52,5 +52,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `definitions`, `reasonableness-test`, `tolling-during-breach`, `tolling-extension`
 - source_cards: `home-paramount-no-save`, `home-paramount-overbreadth`, `home-paramount-overbreadth-no-save`, `home-paramount-overbreadth-tolling`, `tolling-home-paramount-overbreadth`
-- cited_by: [Non-Compete Agreement Review Checklist — Virginia](../non-compete/virginia-review-checklist.md), [Non-Competes in Virginia](../non-compete/virginia.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Virginia](../checklists/non-compete/us/virginia.md), [Non-Competes in Virginia](../non-compete/us/virginia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1057978/home-paramount-pest-control-v-shaffer/#:~:text=the%20clear%20overbreadth%20of%20the,of%20geographic%20scope%20and%20duration.>

@@ -11,7 +11,7 @@ timestamp: '2026-04-20'
 document_references:
   - type: Practice Note
     resource: >-
-      https://openagreements.org/legal/ai-layoffs/retention-bonus-competitor-ai-pressure
+      https://openagreements.org/practice-guides/ai-layoffs/retention-bonus-competitor-ai-pressure
 tags:
   - case-law
   - ai-layoffs

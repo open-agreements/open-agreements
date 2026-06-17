@@ -2,9 +2,9 @@
 jurisdiction: "Massachusetts"
 slug: massachusetts
 countryCode: US
-snapshotAsOf: "2026-06-15"
+snapshotAsOf: "2026-06-17"
 lastReviewed: "2026-06-03"
-canonicalUrl: https://openagreements.org/legal/non-compete/massachusetts
+canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/massachusetts
 license: CC BY 4.0
 stale: false
 ---
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/massachusetts · **Snapshot as of:** 2026-06-15 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/massachusetts · **Snapshot as of:** 2026-06-17 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Massachusetts[^about]
 
@@ -137,7 +137,7 @@ This is a discretionary power, not a guarantee. The statute lets a court rewrite
 
 **Short answer.** It can, under the material-change doctrine. Massachusetts courts have long held that far-reaching changes to the employment relationship can show the parties abandoned the old agreement and formed a new one — voiding a covenant signed under the earlier terms [^bartlett-abandonment][^bartlett-newcontract].
 
-In *F.A. Bartlett Tree Expert Co. v. Barrington*, the Supreme Judicial Court treated successive material changes in pay and position as evidence that the original contract — and its non-compete — had been abandoned and replaced [^bartlett-newcontract]. The doctrine's force after the 2018 act is unsettled, so the conservative practice is to have the employee sign a fresh, statute-compliant covenant on each material promotion or change in terms rather than rely on an old one. When re-papering or reviewing a specific agreement clause by clause, the [Massachusetts non-compete review checklist](/legal/non-compete/massachusetts-review-checklist) walks the full covenant suite item by item with each requirement's force level.
+In *F.A. Bartlett Tree Expert Co. v. Barrington*, the Supreme Judicial Court treated successive material changes in pay and position as evidence that the original contract — and its non-compete — had been abandoned and replaced [^bartlett-newcontract]. The doctrine's force after the 2018 act is unsettled, so the conservative practice is to have the employee sign a fresh, statute-compliant covenant on each material promotion or change in terms rather than rely on an old one. When re-papering or reviewing a specific agreement clause by clause, the [Massachusetts non-compete review checklist](/checklists/non-compete/us/massachusetts) walks the full covenant suite item by item with each requirement's force level.
 
 > [!NOTE]
 > **Practice note.**

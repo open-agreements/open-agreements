@@ -4,7 +4,6 @@ import { loadMetadata, loadCleanConfig, type TemplateMetadata } from './metadata
 import { loadSelectionsConfig } from './selector.js';
 import { runFillPipeline } from './unified-pipeline.js';
 import { BLANK_PLACEHOLDER, verifyTemplateFill } from './fill-utils.js';
-import { loadSigningConfig, getSignatureTagFields } from './signing-config.js';
 import type { ConfirmClauseDescriptor } from './fill-pipeline.js';
 
 /**
@@ -276,28 +275,10 @@ export async function fillTemplate(options: FillOptions): Promise<FillResult> {
   const metadata = loadMetadata(templateDir);
   const fieldNames = new Set(metadata.fields.map((f) => f.name));
 
-  // Load signing config if present — needed to inject defaults for {sig_*} tags
-  const signingConfig = loadSigningConfig(templateDir);
-  const signingTagFields = signingConfig ? new Set(getSignatureTagFields(signingConfig)) : new Set<string>();
-
-  // Warn about unknown keys not in metadata (exclude signing tag fields)
-  const unknownKeys = Object.keys(values).filter((k) => !fieldNames.has(k) && !signingTagFields.has(k));
+  // Warn about unknown keys not in metadata
+  const unknownKeys = Object.keys(values).filter((k) => !fieldNames.has(k));
   if (unknownKeys.length > 0) {
     console.warn(`Warning: unknown field(s) not in metadata: ${unknownKeys.join(', ')}`);
-  }
-
-  // Build signing tag defaults: use DocuSign anchor strings from signing.yaml
-  // so every filled document has anchors ready for electronic signature.
-  // The anchor text is styled 2pt white in the template, so it's invisible to readers.
-  const signingTagDefaults: Record<string, string> = {};
-  if (signingConfig) {
-    // Default to DocuSign anchors (primary provider)
-    const providerAnchors = signingConfig.providerAnchors?.docusign ?? {};
-    for (const field of getSignatureTagFields(signingConfig)) {
-      if (!(field in values)) {
-        signingTagDefaults[field] = providerAnchors[field] ?? '';
-      }
-    }
   }
 
   // Build cleanPatch if replacements.json or clean.json exists
@@ -334,7 +315,6 @@ export async function fillTemplate(options: FillOptions): Promise<FillResult> {
     fixSmartQuotes: true,
     verify: (p) => verifyTemplateFill(p),
     postProcess: options.postProcess,
-    signingTagDefaults: Object.keys(signingTagDefaults).length > 0 ? signingTagDefaults : undefined,
     confirmClauses: loadConfirmClauses(templateDir),
   });
 

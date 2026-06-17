@@ -5,7 +5,7 @@ description: >-
   How AI-skill requirements can create disparate impact risk in hiring and
   promotions under Title VII, the ADEA, and national-origin laws.
 resource: >-
-  https://openagreements.org/legal/ai-hiring/disparate-impact-ai-skill-requirements
+  https://openagreements.org/practice-guides/ai-hiring/disparate-impact-ai-skill-requirements
 timestamp: '2026-04-20'
 tags:
   - ai-hiring

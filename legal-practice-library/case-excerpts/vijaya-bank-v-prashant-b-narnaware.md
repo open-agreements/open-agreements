@@ -9,7 +9,7 @@ resource: 'https://indiankanoon.org/doc/42763766/'
 timestamp: '2026-06-03'
 document_references:
   - type: Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/india'
+    resource: 'https://openagreements.org/practice-guides/non-compete/in'
 tags:
   - case-law
   - non-compete
@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `employment-bonds`
 - source_cards: `vijaya-holding`
-- cited_by: [Non-Competes in India](../non-compete/india.md)
+- cited_by: [Non-Competes in India](../non-compete/in.md)
 - link_to_source: <https://indiankanoon.org/doc/42763766/>
 
 ### vijaya-bank-v-prashant-b-narnaware-the-object-of-the-restrictive-covenant-11a114b5 {#vijaya-bank-v-prashant-b-narnaware-the-object-of-the-restrictive-covenant-11a114b5}
@@ -38,5 +38,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `employment-bonds`
 - source_cards: `vijaya-furtherance`
-- cited_by: [Non-Competes in India](../non-compete/india.md)
+- cited_by: [Non-Competes in India](../non-compete/in.md)
 - link_to_source: <https://indiankanoon.org/doc/42763766/>

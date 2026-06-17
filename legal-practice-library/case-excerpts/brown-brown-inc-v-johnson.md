@@ -9,17 +9,17 @@ resource: 'https://www.courtlistener.com/opinion/2807346/brown-brown-v-theresa-a
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/florida-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us'
+  - type: Review Checklist
+    resource: 'https://openagreements.org/checklists/non-compete/us/florida'
+  - type: Review Checklist
+    resource: 'https://openagreements.org/checklists/non-compete/us/new-york'
+  - type: Review Checklist
+    resource: 'https://openagreements.org/checklists/non-compete/us/wyoming'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/florida'
-  - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/new-york-review-checklist'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/florida'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/new-york'
-  - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/review-checklist'
-  - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/wyoming-review-checklist'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/new-york'
 tags:
   - case-law
   - non-compete
@@ -39,7 +39,7 @@ Supporting case-law excerpt. Quoted across 6 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `new-york-doctrine-gates`, `nonsolicitation`, `restrictive-covenants-each-independently-includable`
 - source_cards: `brown-brown-never-served-covenants`, `brown-brown-never-served-defs`, `brown-brown-never-served-gate`, `brown-brown-overbroad-customers`
-- cited_by: [Non-Compete Agreement Review Checklist — New York](../non-compete/new-york-review-checklist.md), [Non-Competes in New York](../non-compete/new-york.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New York](../checklists/non-compete/us/new-york.md), [Non-Competes in New York](../non-compete/us/new-york.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2807346/brown-brown-v-theresa-a-johnson/#:~:text=even%20those%20Johnson%20had%20never,she%20had%20done%20no%20work>
 
 ### brown-brown-inc-v-johnson-on-this-appeal-we-hold-that-d05d2d21 {#brown-brown-inc-v-johnson-on-this-appeal-we-hold-that-d05d2d21}
@@ -48,5 +48,5 @@ Supporting case-law excerpt. Quoted across 6 document(s) in the OpenAgreements l
 
 - supports: `choice-of-law`, `choice-of-law-multistate`, `governing-law-venue-dispute-process`, `parties-and-cover-term-identification`
 - source_cards: `brown-brown-choice-of-law`, `brown-brown-policy-cover`, `brown-brown-policy-override`, `brown-brown-publicpolicy`, `q12-brown-publicpolicy`
-- cited_by: [Non-Compete Agreement Review Checklist — Florida](../non-compete/florida-review-checklist.md), [Non-Competes in Florida](../non-compete/florida.md), [Non-Compete Agreement Review Checklist — New York](../non-compete/new-york-review-checklist.md), [Non-Competes in New York](../non-compete/new-york.md), [Non-Compete Agreement Review Checklist](../non-compete/review-checklist.md), [Non-Compete Agreement Review Checklist — Wyoming](../non-compete/wyoming-review-checklist.md)
+- cited_by: [Non-Compete Agreement Review Checklist](../checklists/non-compete/us.md), [Non-Compete Agreement Review Checklist — Florida](../checklists/non-compete/us/florida.md), [Non-Compete Agreement Review Checklist — New York](../checklists/non-compete/us/new-york.md), [Non-Compete Agreement Review Checklist — Wyoming](../checklists/non-compete/us/wyoming.md), [Non-Competes in Florida](../non-compete/us/florida.md), [Non-Competes in New York](../non-compete/us/new-york.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2807346/brown-brown-v-theresa-a-johnson/#:~:text=On%20this%20appeal%2C%20we%20hold,public%20policy%20of%20this%20state.>

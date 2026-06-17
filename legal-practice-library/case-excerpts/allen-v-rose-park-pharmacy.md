@@ -9,9 +9,9 @@ resource: 'https://www.courtlistener.com/opinion/1199226/allen-v-rose-park-pharm
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/utah-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/utah'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/utah'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/utah'
 tags:
   - case-law
   - non-compete
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`, `timing-and-execution-acknowledgements`
 - source_cards: `consid-allen`, `ut-allen-timing`
-- cited_by: [Non-Compete Agreement Review Checklist — Utah](../non-compete/utah-review-checklist.md), [Non-Competes in Utah](../non-compete/utah.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Utah](../checklists/non-compete/us/utah.md), [Non-Competes in Utah](../non-compete/us/utah.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1199226/allen-v-rose-park-pharmacy/#:~:text=a%20contract%20does%20not%20lack,obligation%20of%20the%20other%20party.>

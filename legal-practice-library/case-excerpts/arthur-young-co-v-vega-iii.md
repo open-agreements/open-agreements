@@ -9,7 +9,7 @@ resource: 'https://aldia.microjuris.com/wp-content/uploads/2022/09/136DPR157.pdf
 timestamp: '2026-06-02'
 document_references:
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/puerto-rico'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/puerto-rico'
 tags:
   - case-law
   - non-compete
@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `reasonableness-requirements`, `tolling`
 - source_cards: `ay-duration`, `ay-duration-2`
-- cited_by: [Non-Competes in Puerto Rico](../non-compete/puerto-rico.md)
+- cited_by: [Non-Competes in Puerto Rico](../non-compete/us/puerto-rico.md)
 - link_to_source: <https://aldia.microjuris.com/wp-content/uploads/2022/09/136DPR157.pdf>
 
 ### arthur-young-co-v-vega-iii-finalmente-es-indispensable-que-los-eef30158 {#arthur-young-co-v-vega-iii-finalmente-es-indispensable-que-los-eef30158}
@@ -38,7 +38,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `reasonableness-requirements`
 - source_cards: `ay-writing`
-- cited_by: [Non-Competes in Puerto Rico](../non-compete/puerto-rico.md)
+- cited_by: [Non-Competes in Puerto Rico](../non-compete/us/puerto-rico.md)
 - link_to_source: <https://aldia.microjuris.com/wp-content/uploads/2022/09/136DPR157.pdf>
 
 ### arthur-young-co-v-vega-iii-para-ser-razonable-un-acuerdo-de-6bdc5ab9 {#arthur-young-co-v-vega-iii-para-ser-razonable-un-acuerdo-de-6bdc5ab9}
@@ -47,7 +47,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `employee-noncompetes`
 - source_cards: `ay-test`
-- cited_by: [Non-Competes in Puerto Rico](../non-compete/puerto-rico.md)
+- cited_by: [Non-Competes in Puerto Rico](../non-compete/us/puerto-rico.md)
 - link_to_source: <https://aldia.microjuris.com/wp-content/uploads/2022/09/136DPR157.pdf>
 
 ### arthur-young-co-v-vega-iii-por-tal-raz-n-en-vez-de-28daa36b {#arthur-young-co-v-vega-iii-por-tal-raz-n-en-vez-de-28daa36b}
@@ -56,7 +56,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`
 - source_cards: `ay-nullity`
-- cited_by: [Non-Competes in Puerto Rico](../non-compete/puerto-rico.md)
+- cited_by: [Non-Competes in Puerto Rico](../non-compete/us/puerto-rico.md)
 - link_to_source: <https://aldia.microjuris.com/wp-content/uploads/2022/09/136DPR157.pdf>
 
 ### arthur-young-co-v-vega-iii-sin-embargo-no-se-admitir-como-3d4a8ff7 {#arthur-young-co-v-vega-iii-sin-embargo-no-se-admitir-como-3d4a8ff7}
@@ -65,5 +65,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `consideration`
 - source_cards: `ay-consideration`
-- cited_by: [Non-Competes in Puerto Rico](../non-compete/puerto-rico.md)
+- cited_by: [Non-Competes in Puerto Rico](../non-compete/us/puerto-rico.md)
 - link_to_source: <https://aldia.microjuris.com/wp-content/uploads/2022/09/136DPR157.pdf>

@@ -10,9 +10,9 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/south-dakota-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/south-dakota'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/south-dakota'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/south-dakota'
 tags:
   - case-law
   - non-compete
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration-termination`, `timing-and-execution-acknowledgements`
 - source_cards: `sd-zakinski-nofault-timing`, `zakinski-fired-no-fault`
-- cited_by: [Non-Compete Agreement Review Checklist — South Dakota](../non-compete/south-dakota-review-checklist.md), [Non-Competes in South Dakota](../non-compete/south-dakota.md)
+- cited_by: [Non-Compete Agreement Review Checklist — South Dakota](../checklists/non-compete/us/south-dakota.md), [Non-Competes in South Dakota](../non-compete/us/south-dakota.md)
 - link_to_source: <https://www.courtlistener.com/opinion/899991/central-monitoring-service-inc-v-zakinski/#:~:text=However%2C%20if%20an%20employee%20is,whether%20the%20agreement%20is%20reasonable.>
 
 ### central-monitoring-service-inc-v-zakinski-that-the-non-compete-and-confidentiality-a867097e {#central-monitoring-service-inc-v-zakinski-that-the-non-compete-and-confidentiality-a867097e}
@@ -41,5 +41,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration-termination`, `timing-and-execution-acknowledgements`
 - source_cards: `sd-zakinski-consid-timing`, `zakinski-continued-employment`
-- cited_by: [Non-Compete Agreement Review Checklist — South Dakota](../non-compete/south-dakota-review-checklist.md), [Non-Competes in South Dakota](../non-compete/south-dakota.md)
+- cited_by: [Non-Compete Agreement Review Checklist — South Dakota](../checklists/non-compete/us/south-dakota.md), [Non-Competes in South Dakota](../non-compete/us/south-dakota.md)
 - link_to_source: <https://www.courtlistener.com/opinion/899991/central-monitoring-service-inc-v-zakinski/#:~:text=That%20the%20Non%2DCompete%20and%20Confidentiality,to%20be%20binding%20and%20enforceable.>

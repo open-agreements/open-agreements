@@ -4,7 +4,7 @@ title: 'AI hiring law compliance across NYC, Illinois, and Colorado'
 description: >-
   AI hiring law compliance across NYC, Illinois, Colorado, and California,
   including audits, notices, human review, vendors, and EEOC risk.
-resource: 'https://openagreements.org/legal/ai-hiring/ai-hiring-law-compliance'
+resource: 'https://openagreements.org/practice-guides/ai-hiring/ai-hiring-law-compliance'
 timestamp: '2026-04-19'
 tags:
   - ai-hiring

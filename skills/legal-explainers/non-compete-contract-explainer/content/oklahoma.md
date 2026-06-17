@@ -2,9 +2,9 @@
 jurisdiction: "Oklahoma"
 slug: oklahoma
 countryCode: US
-snapshotAsOf: "2026-06-15"
+snapshotAsOf: "2026-06-17"
 lastReviewed: "2026-06-03"
-canonicalUrl: https://openagreements.org/legal/non-compete/oklahoma
+canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/oklahoma
 license: CC BY 4.0
 stale: false
 ---
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/oklahoma · **Snapshot as of:** 2026-06-15 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/oklahoma · **Snapshot as of:** 2026-06-17 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Oklahoma[^about]
 
@@ -45,7 +45,7 @@ This makes Oklahoma one of the most employee-protective jurisdictions in the cou
 
 The U.S. Supreme Court later vacated that 2011 decision on arbitration-procedure grounds, so the void rule's firmest anchors are the statute itself and the Court of Civil Appeals' decision in *Autry v. Acosta, Inc.*, discussed below [^stat-217-general-void].
 
-What an Oklahoma employer *can* protect instead is a defined slice: direct solicitation of established customers, raiding of its workforce, the goodwill it buys when it acquires a business, and its trade secrets and confidential information. Each of those is addressed in its own question below. For a clause-by-clause pass over a specific agreement against these rules, the [Oklahoma non-compete review checklist](/legal/non-compete/oklahoma-review-checklist) walks the surviving covenant suite item by item with each requirement's force level.
+What an Oklahoma employer *can* protect instead is a defined slice: direct solicitation of established customers, raiding of its workforce, the goodwill it buys when it acquires a business, and its trade secrets and confidential information. Each of those is addressed in its own question below. For a clause-by-clause pass over a specific agreement against these rules, the [Oklahoma non-compete review checklist](/checklists/non-compete/us/oklahoma) walks the surviving covenant suite item by item with each requirement's force level.
 
 > [!NOTE]
 > **Practice note.**

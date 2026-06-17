@@ -9,9 +9,9 @@ resource: 'https://www.courtlistener.com/opinion/7374715/solari-industries-inc-v
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/new-jersey-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/new-jersey'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/new-jersey'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/new-jersey'
 tags:
   - case-law
   - non-compete
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `employee-noncompetes`, `restrictive-covenants-each-independently-includable`
 - source_cards: `nj-solari-effect`, `solari-given-effect`
-- cited_by: [Non-Compete Agreement Review Checklist — New Jersey](../non-compete/new-jersey-review-checklist.md), [Non-Competes in New Jersey](../non-compete/new-jersey.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New Jersey](../checklists/non-compete/us/new-jersey.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
 - link_to_source: <https://www.courtlistener.com/opinion/7374715/solari-industries-inc-v-malady/#:~:text=And%20while%20a%20covenant%20by,circumstances%20of%20the%20particular%20case.>
 
 ### solari-industries-inc-v-malady-it-will-generally-be-found-to-f81285e1 {#solari-industries-inc-v-malady-it-will-generally-be-found-to-f81285e1}
@@ -40,7 +40,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `employee-noncompetes`, `new-jersey-statutory-gates`
 - source_cards: `nj-solari-test`, `solari-three-prong`
-- cited_by: [Non-Compete Agreement Review Checklist — New Jersey](../non-compete/new-jersey-review-checklist.md), [Non-Competes in New Jersey](../non-compete/new-jersey.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New Jersey](../checklists/non-compete/us/new-jersey.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
 - link_to_source: <https://www.courtlistener.com/opinion/7374715/solari-industries-inc-v-malady/#:~:text=It%20will%20generally%20be%20found,not%20injurious%20to%20the%20public.>
 
 ### solari-industries-inc-v-malady-we-are-entirely-satisfied-that-the-f557b2bf {#solari-industries-inc-v-malady-we-are-entirely-satisfied-that-the-f557b2bf}
@@ -49,5 +49,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `nj-solari-partial`, `solari-partial-enforcement`
-- cited_by: [Non-Compete Agreement Review Checklist — New Jersey](../non-compete/new-jersey-review-checklist.md), [Non-Competes in New Jersey](../non-compete/new-jersey.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New Jersey](../checklists/non-compete/us/new-jersey.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
 - link_to_source: <https://www.courtlistener.com/opinion/7374715/solari-industries-inc-v-malady/#:~:text=We%20are%20entirely%20satisfied%20that,extent%20reasonable%20under%20the%20circumstances.>

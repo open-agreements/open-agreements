@@ -10,23 +10,23 @@ resource: >-
 timestamp: '2026-06-03'
 document_references:
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/connecticut'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/connecticut'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/indiana'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/indiana'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/kentucky'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/kentucky'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/maryland'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/maryland'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/mississippi'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/mississippi'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/new-jersey'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/new-jersey'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/new-mexico'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/new-mexico'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/ohio'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/ohio'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/south-carolina'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/south-carolina'
 tags:
   - case-law
   - non-compete
@@ -46,7 +46,7 @@ Supporting case-law excerpt. Quoted across 9 document(s) in the OpenAgreements l
 
 - supports: `federal-ftc-overlay`
 - source_cards: `ryan-ftc-authority`, `ryan-ftc-unlawful`, `ryan-ftc-unlawful-agency-action`
-- cited_by: [Non-Competes in Connecticut](../non-compete/connecticut.md), [Non-Competes in Kentucky](../non-compete/kentucky.md), [Non-Competes in New Jersey](../non-compete/new-jersey.md), [Non-Competes in Ohio](../non-compete/ohio.md), [Non-Competes in South Carolina](../non-compete/south-carolina.md)
+- cited_by: [Non-Competes in Connecticut](../non-compete/us/connecticut.md), [Non-Competes in Kentucky](../non-compete/us/kentucky.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md), [Non-Competes in Ohio](../non-compete/us/ohio.md), [Non-Competes in South Carolina](../non-compete/us/south-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10205745/ryan-llc-v-federal-trade-commission/#:~:text=In%20sum%2C%20the%20Court%20concludes%20that,Rule%20is%20arbitrary%20and%20capricious.>
 
 ### ryan-llc-v-federal-trade-commission-the-non-compete-rule-16-c-f-r-f917b862 {#ryan-llc-v-federal-trade-commission-the-non-compete-rule-16-c-f-r-f917b862}
@@ -55,7 +55,7 @@ Supporting case-law excerpt. Quoted across 9 document(s) in the OpenAgreements l
 
 - supports: `federal-ftc-overlay`
 - source_cards: `q9-ftc-rule-set-aside`, `ryan-ftc-rule-set-aside`, `ryan-ftc-set-aside`
-- cited_by: [Non-Competes in Connecticut](../non-compete/connecticut.md), [Non-Competes in Indiana](../non-compete/indiana.md), [Non-Competes in Kentucky](../non-compete/kentucky.md), [Non-Competes in Mississippi](../non-compete/mississippi.md), [Non-Competes in New Jersey](../non-compete/new-jersey.md), [Non-Competes in New Mexico](../non-compete/new-mexico.md), [Non-Competes in Ohio](../non-compete/ohio.md), [Non-Competes in South Carolina](../non-compete/south-carolina.md)
+- cited_by: [Non-Competes in Connecticut](../non-compete/us/connecticut.md), [Non-Competes in Indiana](../non-compete/us/indiana.md), [Non-Competes in Kentucky](../non-compete/us/kentucky.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md), [Non-Competes in New Mexico](../non-compete/us/new-mexico.md), [Non-Competes in Ohio](../non-compete/us/ohio.md), [Non-Competes in South Carolina](../non-compete/us/south-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10205745/ryan-llc-v-federal-trade-commission/#:~:text=The%20Non%2DCompete%20Rule%2C%2016%20C.F.R.,September%204%2C%202024%2C%20or%20thereafter.>
 
 ### ryan-llc-v-federal-trade-commission-the-rule-shall-not-be-enforced-df5030ac {#ryan-llc-v-federal-trade-commission-the-rule-shall-not-be-enforced-df5030ac}
@@ -64,5 +64,5 @@ Supporting case-law excerpt. Quoted across 9 document(s) in the OpenAgreements l
 
 - supports: `federal-ftc-overlay`
 - source_cards: `ryan-rule-set-aside`
-- cited_by: [Non-Competes in Maryland](../non-compete/maryland.md)
+- cited_by: [Non-Competes in Maryland](../non-compete/us/maryland.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10205745/ryan-llc-v-federal-trade-commission/#:~:text=The%20Rule%20shall%20not%20be%20enforced%20or%20otherwise%20take%20effect%20on%20its%20effective%20date%20of%20September%204%2C%202024%2C%20or%20thereafter.>

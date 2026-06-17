@@ -12,10 +12,9 @@ resource: >-
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: >-
-      https://openagreements.org/legal/non-compete/new-hampshire-review-checklist
+    resource: 'https://openagreements.org/checklists/non-compete/us/new-hampshire'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/new-hampshire'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/new-hampshire'
 tags:
   - case-law
   - non-compete
@@ -35,5 +34,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `legitimate-interests`, `new-hampshire-statutory-gates`, `restrictive-covenants-each-independently-includable`
 - source_cards: `nh-olsten-cost-gate`, `nh-olsten-no-poach-interest`, `nh-olsten-recruiting-costs`, `olsten-recruiting-costs`
-- cited_by: [Non-Compete Agreement Review Checklist — New Hampshire](../non-compete/new-hampshire-review-checklist.md), [Non-Competes in New Hampshire](../non-compete/new-hampshire.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New Hampshire](../checklists/non-compete/us/new-hampshire.md), [Non-Competes in New Hampshire](../non-compete/us/new-hampshire.md)
 - link_to_source: <https://www.courtlistener.com/opinion/8092147/national-employment-service-corp-v-olsten-staffing-service-inc/#:~:text=Thus%2C%20we%20hold%20that%20although,covenant%20in%20an%20employment%20contract.>

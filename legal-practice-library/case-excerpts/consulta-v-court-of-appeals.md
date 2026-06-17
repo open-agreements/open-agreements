@@ -9,7 +9,7 @@ resource: 'https://lawphil.net/judjuris/juri2005/mar2005/gr_145443_2005.html'
 timestamp: '2026-06-03'
 document_references:
   - type: Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/philippines'
+    resource: 'https://openagreements.org/practice-guides/non-compete/ph'
 tags:
   - case-law
   - non-compete
@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `contractors`
 - source_cards: `consulta-status`
-- cited_by: [Non-Competes in the Philippines](../non-compete/philippines.md)
+- cited_by: [Non-Competes in the Philippines](../non-compete/ph.md)
 - link_to_source: <https://lawphil.net/judjuris/juri2005/mar2005/gr_145443_2005.html>
 
 ### consulta-v-court-of-appeals-the-exclusivity-provision-was-a-eb4d8130 {#consulta-v-court-of-appeals-the-exclusivity-provision-was-a-eb4d8130}
@@ -38,5 +38,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `contractors`
 - source_cards: `consulta-reasonable`
-- cited_by: [Non-Competes in the Philippines](../non-compete/philippines.md)
+- cited_by: [Non-Competes in the Philippines](../non-compete/ph.md)
 - link_to_source: <https://lawphil.net/judjuris/juri2005/mar2005/gr_145443_2005.html>

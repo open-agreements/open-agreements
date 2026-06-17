@@ -12,9 +12,9 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/michigan-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/michigan'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/michigan'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/michigan'
 tags:
   - case-law
   - non-compete
@@ -34,5 +34,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `entire-agreement-amendment-waiver-e-signatures`, `pending-reform`, `timing-and-execution-acknowledgements`
 - source_cards: `mi-rayford-bundle`, `mi-rayford-timing`, `rayford-adhesion-reasonableness`
-- cited_by: [Non-Compete Agreement Review Checklist — Michigan](../non-compete/michigan-review-checklist.md), [Non-Competes in Michigan](../non-compete/michigan.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Michigan](../checklists/non-compete/us/michigan.md), [Non-Competes in Michigan](../non-compete/us/michigan.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10645648/timika-rayford-v-american-house-roseville-i-llc/#:~:text=A%20shortened%20limitations%20provision%20contained,must%20be%20examined%20for%20reasonableness.>

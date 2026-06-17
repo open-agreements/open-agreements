@@ -7,9 +7,9 @@ resource: 'https://www.courtlistener.com/opinion/2169063/kegel-v-tillotson/'
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/kentucky-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/kentucky'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/kentucky'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/kentucky'
 tags:
   - case-law
   - non-compete
@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `duration-geography`, `employee-noncompetes`, `kentucky-statutory-gates`, `restrictive-covenants-each-independently-includable`, `tolling-during-breach`, `tolling-extension`
 - source_cards: `kegel-reasonableness-test`, `ky-kegel-covs`, `ky-kegel-defs`, `ky-kegel-gate`, `ky-kegel-tolling-standard`, `q4-kegel-reasonableness`, `q6-kegel-reasonableness-backdrop`
-- cited_by: [Non-Compete Agreement Review Checklist — Kentucky](../non-compete/kentucky-review-checklist.md), [Non-Competes in Kentucky](../non-compete/kentucky.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Kentucky](../checklists/non-compete/us/kentucky.md), [Non-Competes in Kentucky](../non-compete/us/kentucky.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2169063/kegel-v-tillotson/#:~:text=agreements%20on%20restraint%20of%20trade,hardship%20on%20the%20party%20restricted.>
 
 ### kegel-v-tillotson-our-courts-have-adopted-a-blue-85fba3fd {#kegel-v-tillotson-our-courts-have-adopted-a-blue-85fba3fd}
@@ -38,5 +38,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`, `tolling-during-breach`, `tolling-extension`
 - source_cards: `kegel-blue-pencil`, `ky-kegel-bluepencil-sev`, `ky-kegel-tolling-reform`, `q6-kegel-blue-pencil`
-- cited_by: [Non-Compete Agreement Review Checklist — Kentucky](../non-compete/kentucky-review-checklist.md), [Non-Competes in Kentucky](../non-compete/kentucky.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Kentucky](../checklists/non-compete/us/kentucky.md), [Non-Competes in Kentucky](../non-compete/us/kentucky.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2169063/kegel-v-tillotson/#:~:text=our%20courts%20have%20adopted%20a,are%20overly%20broad%20or%20burdensome.>

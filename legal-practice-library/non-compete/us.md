@@ -8,7 +8,7 @@ description: >-
   reasonableness standard, protected interests, trade-secret and confidentiality
   duties, tolling, reformation, and consideration — with links to every state's
   practice note and the 50-state survey.
-resource: 'https://openagreements.org/legal/non-compete/us'
+resource: 'https://openagreements.org/practice-guides/non-compete/us'
 timestamp: '2026-06-10'
 tags:
   - non-compete
@@ -18,7 +18,7 @@ tags:
 
 The cross-state framework for employee restrictive covenants — the reasonableness standard, protected interests, trade-secret and confidentiality duties, tolling, reformation, and consideration — with links to every state's practice note and the 50-state survey.
 
-Restrictive covenants are the promises an employer asks a worker to make about competing, soliciting, and handling information after the working relationship ends. The most common are the **non-compete** (don't work for a competitor), the **customer non-solicit** (don't pursue the employer's customers), the **employee non-solicit / no-poach** (don't recruit former colleagues), and the **confidentiality / trade-secret** covenant (don't use or disclose protected information). How far each can reach — and whether it is enforceable at all — turns on the law of the governing state, but a common analytical spine runs through almost every US jurisdiction. This note explains that spine and links to the per-state practice notes and the [50-state survey](/legal/non-compete/us-survey) for the jurisdiction-specific detail. If you are reviewing someone else's draft clause by clause, the [Non-Compete Agreement Review Checklist](/legal/non-compete/review-checklist) walks the full covenant suite item by item with each requirement's force level and citations.
+Restrictive covenants are the promises an employer asks a worker to make about competing, soliciting, and handling information after the working relationship ends. The most common are the **non-compete** (don't work for a competitor), the **customer non-solicit** (don't pursue the employer's customers), the **employee non-solicit / no-poach** (don't recruit former colleagues), and the **confidentiality / trade-secret** covenant (don't use or disclose protected information). How far each can reach — and whether it is enforceable at all — turns on the law of the governing state, but a common analytical spine runs through almost every US jurisdiction. This note explains that spine and links to the per-state practice notes and the [50-state survey](/surveys/non-compete/us) for the jurisdiction-specific detail. If you are reviewing someone else's draft clause by clause, the [Non-Compete Agreement Review Checklist](/checklists/non-compete/us) walks the full covenant suite item by item with each requirement's force level and citations.
 
 ## What standard do courts use to decide whether a restrictive covenant is enforceable? {#reasonableness-standard}
 
@@ -31,7 +31,7 @@ This is a two-sided balancing test, not a checklist of fixed numbers. An employe
 > [!NOTE]
 > **Practice note.**
 >
-> A handful of states — and a growing number for lower-wage workers — ban employee non-competes outright, so reasonableness never enters the analysis. Always start with the governing state's rule before tailoring terms; consult the per-state note and the [50-state survey](/legal/non-compete/us-survey) rather than assuming the common-law reasonableness test applies [^restatement-188-ancillary-restraints].
+> A handful of states — and a growing number for lower-wage workers — ban employee non-competes outright, so reasonableness never enters the analysis. Always start with the governing state's rule before tailoring terms; consult the per-state note and the [50-state survey](/surveys/non-compete/us) rather than assuming the common-law reasonableness test applies [^restatement-188-ancillary-restraints].
 
 ## What legitimate business interests can a restrictive covenant protect? {#protected-interests}
 
@@ -61,7 +61,7 @@ The immunity-notice requirement is easy to miss and carries a real penalty: an e
 
 **Short answer.** States diverge sharply on three recurring mechanics, so the base rule is that the governing state's law controls each one. Courts split on whether they will **reform** an overbroad covenant — rewriting it to a reasonable scope, striking only the offending words (blue-pencil), or refusing to enforce it at all. They split on whether the restricted period is **tolled** while the worker is in breach. And they split on what **consideration** supports a covenant signed after employment begins, with some states accepting continued at-will employment and others requiring something more. The common thread is the reasonableness ceiling: a restraint may be enforced only so far as it is no greater than needed to protect a legitimate interest [^reformation-188-rule].
 
-Because reformation, tolling, and post-hire consideration each turn on state law, the [50-state survey](/legal/non-compete/us-survey) records the rule for every jurisdiction. What is uniform is the analytical limit a reforming court applies: even where a court will narrow rather than void, it enforces only the portion of the restraint that is reasonably necessary, measured against the same rule of reason that governs enforceability in the first place [^reformation-188-rule].
+Because reformation, tolling, and post-hire consideration each turn on state law, the [50-state survey](/surveys/non-compete/us) records the rule for every jurisdiction. What is uniform is the analytical limit a reforming court applies: even where a court will narrow rather than void, it enforces only the portion of the restraint that is reasonably necessary, measured against the same rule of reason that governs enforceability in the first place [^reformation-188-rule].
 
 > [!NOTE]
 > **Practice note.**

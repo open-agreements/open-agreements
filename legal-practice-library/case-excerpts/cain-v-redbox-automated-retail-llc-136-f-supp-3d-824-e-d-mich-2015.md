@@ -10,7 +10,7 @@ resource: >-
 timestamp: '2026-06-11'
 document_references:
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/privacy/michigan'
+    resource: 'https://openagreements.org/practice-guides/privacy/us/michigan'
 tags:
   - case-law
   - privacy
@@ -30,7 +30,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `privacy-policy-contents`
 - source_cards: `q3-cain-permission`
-- cited_by: [Michigan Consumer Privacy Law](../privacy/michigan.md)
+- cited_by: [Michigan Consumer Privacy Law](../privacy/us/michigan.md)
 - link_to_source: <https://www.courtlistener.com/opinion/7316121/cain-v-redbox-automated-retail-llc/#:~:text=Defendant%20has%20shown%20that%20its,permission%20required%20by%20the%20VRPA.>
 
 ### cain-v-redbox-automated-retail-llc-136-f-supp-3d-824-e-d-mich-2015-redbox-clearly-could-not-for-example-7a3f9314 {#cain-v-redbox-automated-retail-llc-136-f-supp-3d-824-e-d-mich-2015-redbox-clearly-could-not-for-example-7a3f9314}
@@ -39,5 +39,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `vendor-contracts`
 - source_cards: `q4-cain-external`
-- cited_by: [Michigan Consumer Privacy Law](../privacy/michigan.md)
+- cited_by: [Michigan Consumer Privacy Law](../privacy/us/michigan.md)
 - link_to_source: <https://www.courtlistener.com/opinion/7316121/cain-v-redbox-automated-retail-llc/#:~:text=Redbox%20clearly%20could%20not%2C%20for,unrelated%20to%20Redbox%E2%80%99s%20own%20business.>

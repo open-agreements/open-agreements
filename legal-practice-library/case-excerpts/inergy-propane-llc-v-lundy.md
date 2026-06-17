@@ -9,9 +9,9 @@ resource: 'https://www.courtlistener.com/opinion/2629577/inergy-propane-llc-v-lu
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/oklahoma-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/oklahoma'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/oklahoma'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/oklahoma'
 tags:
   - case-law
   - non-compete
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `customer-nonsolicitation`, `definitions`, `oklahoma-statutory-gates`, `tolling-during-breach`
 - source_cards: `inergy-rule-of-reason`, `inergy-rule-of-reason-defs`, `inergy-rule-of-reason-gate`, `inergy-rule-of-reason-tolling`
-- cited_by: [Non-Compete Agreement Review Checklist — Oklahoma](../non-compete/oklahoma-review-checklist.md), [Non-Competes in Oklahoma](../non-compete/oklahoma.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Oklahoma](../checklists/non-compete/us/oklahoma.md), [Non-Competes in Oklahoma](../non-compete/us/oklahoma.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2629577/inergy-propane-llc-v-lundy/#:~:text=That%20does%20not%2C%20however%2C%20require,by%20previously%20established%20case%20law.>

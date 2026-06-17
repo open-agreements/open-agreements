@@ -10,7 +10,7 @@ timestamp: '2026-04-20'
 document_references:
   - type: Practice Note
     resource: >-
-      https://openagreements.org/legal/ai-vendors/trade-secret-leakage-containment
+      https://openagreements.org/practice-guides/ai-vendors/trade-secret-leakage-containment
 tags:
   - case-law
   - ai-vendors

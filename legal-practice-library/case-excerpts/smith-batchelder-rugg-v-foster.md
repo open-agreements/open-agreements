@@ -9,10 +9,9 @@ resource: 'https://www.courtlistener.com/opinion/2375592/smith-batchelder-rugg-v
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: >-
-      https://openagreements.org/legal/non-compete/new-hampshire-review-checklist
+    resource: 'https://openagreements.org/checklists/non-compete/us/new-hampshire'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/new-hampshire'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/new-hampshire'
 tags:
   - case-law
   - non-compete
@@ -32,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration-after-hire`, `entire-agreement-amendment-waiver-e-signatures`, `new-hampshire-statutory-gates`, `timing-and-execution-acknowledgements`
 - source_cards: `foster-continued-employment`, `nh-foster-consideration-gate`, `nh-foster-continued-employment`, `nh-foster-midstream-consideration`
-- cited_by: [Non-Compete Agreement Review Checklist — New Hampshire](../non-compete/new-hampshire-review-checklist.md), [Non-Competes in New Hampshire](../non-compete/new-hampshire.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New Hampshire](../checklists/non-compete/us/new-hampshire.md), [Non-Competes in New Hampshire](../non-compete/us/new-hampshire.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2375592/smith-batchelder-rugg-v-foster/#:~:text=Continued%20employment%20after%20signing%20an,not%20to%20compete%20contained%20therein.>
 
 ### smith-batchelder-rugg-v-foster-in-scrutinizing-restrictive-covenants-c1615c02 {#smith-batchelder-rugg-v-foster-in-scrutinizing-restrictive-covenants-c1615c02}
@@ -41,5 +40,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `employee-noncompetes`, `new-hampshire-statutory-gates`, `restrictive-covenants-each-independently-includable`
 - source_cards: `foster-three-part-test`, `nh-foster-restraint-test`, `nh-foster-three-part`, `nh-foster-three-prong-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — New Hampshire](../non-compete/new-hampshire-review-checklist.md), [Non-Competes in New Hampshire](../non-compete/new-hampshire.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New Hampshire](../checklists/non-compete/us/new-hampshire.md), [Non-Competes in New Hampshire](../non-compete/us/new-hampshire.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2375592/smith-batchelder-rugg-v-foster/#:~:text=In%20scrutinizing%20restrictive%20covenants%2C%20this,injurious%20to%20the%20public%20interest.%E2%80%9D>

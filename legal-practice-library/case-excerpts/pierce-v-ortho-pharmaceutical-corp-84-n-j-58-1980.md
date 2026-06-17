@@ -10,7 +10,7 @@ timestamp: '2026-04-20'
 document_references:
   - type: Practice Note
     resource: >-
-      https://openagreements.org/legal/ai-policies/conditioning-employment-on-ai-use
+      https://openagreements.org/practice-guides/ai-policies/conditioning-employment-on-ai-use
 tags:
   - case-law
   - ai-policies

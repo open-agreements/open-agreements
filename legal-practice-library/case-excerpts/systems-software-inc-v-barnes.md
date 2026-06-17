@@ -10,9 +10,9 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/vermont-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/vermont'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/vermont'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/vermont'
 tags:
   - case-law
   - non-compete
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `alternatives`, `confidentiality-and-trade-secret-treatment`, `definitions`, `employee-noncompetes`, `restrictive-covenants-each-independently-includable`, `vermont-statutory-gates`
 - source_cards: `alternatives-barnes-restatement-framing`, `barnes-reasonableness-public-policy`, `barnes-restatement-confidentiality`, `barnes-restatement-covenants`, `barnes-restatement-defs`, `barnes-restatement-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — Vermont](../non-compete/vermont-review-checklist.md), [Non-Competes in Vermont](../non-compete/vermont.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Vermont](../checklists/non-compete/us/vermont.md), [Non-Competes in Vermont](../non-compete/us/vermont.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2264199/systems-and-software-inc-v-barnes/#:~:text=Like%20many%20other%20courts%2C%20this,likely%20injury%20to%20the%20public.%E2%80%9D>
 
 ### systems-software-inc-v-barnes-noncompetition-agreements-may-protect-76eea322 {#systems-software-inc-v-barnes-noncompetition-agreements-may-protect-76eea322}
@@ -41,7 +41,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `reasonableness-test`, `restrictive-covenants-each-independently-includable`
 - source_cards: `barnes-goodwill-covenants`, `barnes-goodwill-defs`, `barnes-legitimate-interest-not-only-trade-secrets`
-- cited_by: [Non-Compete Agreement Review Checklist — Vermont](../non-compete/vermont-review-checklist.md), [Non-Competes in Vermont](../non-compete/vermont.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Vermont](../checklists/non-compete/us/vermont.md), [Non-Competes in Vermont](../non-compete/us/vermont.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2264199/systems-and-software-inc-v-barnes/#:~:text=noncompetition%20agreements%20may%20protect%20legitimate,secrets%20and%20confidential%20customer%20information.>
 
 ### systems-software-inc-v-barnes-the-trial-court-found-that-during-93a3fd5b {#systems-software-inc-v-barnes-the-trial-court-found-that-during-93a3fd5b}
@@ -50,7 +50,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `reasonableness-test`
 - source_cards: `barnes-inside-knowledge`
-- cited_by: [Non-Competes in Vermont](../non-compete/vermont.md)
+- cited_by: [Non-Competes in Vermont](../non-compete/us/vermont.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2264199/systems-and-software-inc-v-barnes/#:~:text=The%20trial%20court%20found%20that%20during,use%20to%20compete%20against%20plaintiff.>
 
 ### systems-software-inc-v-barnes-we-have-stated-that-we-will-24412969 {#systems-software-inc-v-barnes-we-have-stated-that-we-will-24412969}
@@ -59,5 +59,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `employee-noncompetes`, `restrictive-covenants-each-independently-includable`
 - source_cards: `barnes-proceed-with-caution`, `barnes-restatement-framing`
-- cited_by: [Non-Compete Agreement Review Checklist — Vermont](../non-compete/vermont-review-checklist.md), [Non-Competes in Vermont](../non-compete/vermont.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Vermont](../checklists/non-compete/us/vermont.md), [Non-Competes in Vermont](../non-compete/us/vermont.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2264199/systems-and-software-inc-v-barnes/#:~:text=We%20have%20stated%20that%20%E2%80%9Cwe,commercial%20activity%20of%20their%20choice.>

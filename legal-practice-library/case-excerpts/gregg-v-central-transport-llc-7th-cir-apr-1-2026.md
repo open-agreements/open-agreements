@@ -12,7 +12,7 @@ resource: >-
 timestamp: '2026-06-11'
 document_references:
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/privacy/illinois'
+    resource: 'https://openagreements.org/practice-guides/privacy/us/illinois'
 tags:
   - case-law
   - privacy
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `per-scan-damages`
 - source_cards: `case-gregg-remedial`
-- cited_by: [Illinois Consumer Privacy Law (BIPA)](../privacy/illinois.md)
+- cited_by: [Illinois Consumer Privacy Law (BIPA)](../privacy/us/illinois.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10831566/john-gregg-v-central-transport-llc/#:~:text=The%20amendment%20to%20BIPA%20Section,time%20the%20statute%20was%20enacted.>
 
 ### gregg-v-central-transport-llc-7th-cir-apr-1-2026-we-hold-that-this-amendment-applies-173ac32a {#gregg-v-central-transport-llc-7th-cir-apr-1-2026-we-hold-that-this-amendment-applies-173ac32a}
@@ -41,5 +41,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `per-scan-damages`
 - source_cards: `case-gregg-retroactive`
-- cited_by: [Illinois Consumer Privacy Law (BIPA)](../privacy/illinois.md)
+- cited_by: [Illinois Consumer Privacy Law (BIPA)](../privacy/us/illinois.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10831566/john-gregg-v-central-transport-llc/#:~:text=We%20hold%20that%20this%20amendment%20applies,BIPA%E2%80%99s%20substantive%20standards%20of%20liability.>

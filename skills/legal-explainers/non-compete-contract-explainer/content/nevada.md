@@ -2,9 +2,9 @@
 jurisdiction: "Nevada"
 slug: nevada
 countryCode: US
-snapshotAsOf: "2026-06-15"
+snapshotAsOf: "2026-06-17"
 lastReviewed: "2026-06-02"
-canonicalUrl: https://openagreements.org/legal/non-compete/nevada
+canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/nevada
 license: CC BY 4.0
 stale: false
 ---
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/nevada · **Snapshot as of:** 2026-06-15 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/nevada · **Snapshot as of:** 2026-06-17 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Nevada[^about]
 
@@ -70,7 +70,7 @@ That was a statutory change from the prior *Golden Road* rule. In 2016, before N
 
 "Under Nevada law, such an unreasonable provision renders the noncompete agreement wholly unenforceable."[^q3-golden-road-old-rule]
 
-The Legislature then superseded that no-reformation rule. *Tough Turtle Turf* explains the history and the current limit: the court must revise when possible, but it need not supply missing essential terms or create a new contract. For a clause-by-clause pass over a specific agreement against these rules, the [Nevada non-compete review checklist](/legal/non-compete/nevada-review-checklist) walks the full covenant suite item by item with each requirement's force level.
+The Legislature then superseded that no-reformation rule. *Tough Turtle Turf* explains the history and the current limit: the court must revise when possible, but it need not supply missing essential terms or create a new contract. For a clause-by-clause pass over a specific agreement against these rules, the [Nevada non-compete review checklist](/checklists/non-compete/us/nevada) walks the full covenant suite item by item with each requirement's force level.
 
 "This provision overruled Golden Road's holding that an unreasonable noncompete covenant can never be revised."[^q3-tough-turtle-overruled]
 

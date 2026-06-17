@@ -2,9 +2,9 @@
 jurisdiction: "Connecticut"
 slug: connecticut
 countryCode: US
-snapshotAsOf: "2026-06-15"
+snapshotAsOf: "2026-06-17"
 lastReviewed: "2026-06-02"
-canonicalUrl: https://openagreements.org/legal/non-compete/connecticut
+canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/connecticut
 license: CC BY 4.0
 stale: false
 ---
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/connecticut · **Snapshot as of:** 2026-06-15 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/connecticut · **Snapshot as of:** 2026-06-17 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Connecticut[^about]
 
@@ -93,7 +93,7 @@ The important limitation is connection. *Schimenti* held that continued employme
 
 **Short answer.** Do not count on judicial rewriting. Connecticut authority gives employers no reliable rule that a court will rewrite an overbroad covenant into an enforceable one — internally inconsistent restraint language can be construed against the drafter, and the one statutory severance rule in this area preserves only the *non-covenant* provisions of a contract when the covenant itself is void [^thoma-ambiguous-duration-against-drafter][^physician-void-covenant-remainder-survives].
 
-The practical lesson is to draft severable and tiered restrictions. If the contract states one indivisible radius or one indivisible activity ban, a court may have no narrower text to preserve. Separable tiers, customer-specific alternatives, and a severability clause give a court cleaner text to enforce or strike. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Connecticut non-compete review checklist](/legal/non-compete/connecticut-review-checklist) walks the full covenant suite item by item with each requirement's force level.
+The practical lesson is to draft severable and tiered restrictions. If the contract states one indivisible radius or one indivisible activity ban, a court may have no narrower text to preserve. Separable tiers, customer-specific alternatives, and a severability clause give a court cleaner text to enforce or strike. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Connecticut non-compete review checklist](/checklists/non-compete/us/connecticut) walks the full covenant suite item by item with each requirement's force level.
 
 *Thoma* illustrates the risk of internally inconsistent noncompetition language: the court could not reasonably reconcile the conflicting terms and construed the ambiguity against the drafter [^thoma-ambiguous-duration-against-drafter]. The physician statute separately shows a narrow statutory severance model — when a physician covenant is void in whole or in part, the contract's remaining provisions survive [^physician-void-covenant-remainder-survives].
 

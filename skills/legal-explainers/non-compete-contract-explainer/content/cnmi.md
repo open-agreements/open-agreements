@@ -2,9 +2,9 @@
 jurisdiction: "Northern Mariana Islands"
 slug: cnmi
 countryCode: US
-snapshotAsOf: "2026-06-15"
+snapshotAsOf: "2026-06-17"
 lastReviewed: "2026-06-03"
-canonicalUrl: https://openagreements.org/legal/non-compete/cnmi
+canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/cnmi
 license: CC BY 4.0
 stale: false
 ---
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/cnmi · **Snapshot as of:** 2026-06-15 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/cnmi · **Snapshot as of:** 2026-06-17 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in the Northern Mariana Islands[^about]
 

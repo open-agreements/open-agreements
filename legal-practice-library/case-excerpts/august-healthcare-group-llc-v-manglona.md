@@ -10,12 +10,12 @@ citation: >-
 resource: 'https://www.govinfo.gov/app/details/USCOURTS-nmid-1_12-cv-00008'
 timestamp: '2026-06-11'
 document_references:
-  - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/cnmi'
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us'
   - type: Law Topic
-    resource: 'https://openagreements.org/legal/non-compete/us'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us'
+  - type: State Law Practice Note
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/cnmi'
 tags:
   - case-law
   - non-compete
@@ -35,7 +35,7 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `healthcare-public-interest`
 - source_cards: `aug-extraordinary`
-- cited_by: [Non-Competes in the Northern Mariana Islands](../non-compete/cnmi.md)
+- cited_by: [Non-Competes in the Northern Mariana Islands](../non-compete/us/cnmi.md)
 - link_to_source: <https://www.govinfo.gov/app/details/USCOURTS-nmid-1_12-cv-00008>
 
 ### august-healthcare-group-llc-v-manglona-a-promise-to-refrain-from-competition-d938f699 {#august-healthcare-group-llc-v-manglona-a-promise-to-refrain-from-competition-d938f699}
@@ -44,7 +44,7 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `reasonableness-standard`, `reasonableness-test`, `severability-and-reformation`, `tolling`, `tolling-reformation-consideration`
 - source_cards: `aug-188`, `reformation-188-rule`, `restatement-188-ancillary-restraints`, `tolling-188`
-- cited_by: [Non-Competes in the Northern Mariana Islands](../non-compete/cnmi.md), [Non-Compete Agreement Review Checklist](../non-compete/review-checklist.md), [Restrictive Covenants: How Non-Competes, Non-Solicits, and Confidentiality Clauses Work Across the United States](../non-compete/us.md)
+- cited_by: [Non-Compete Agreement Review Checklist](../checklists/non-compete/us.md), [Restrictive Covenants: How Non-Competes, Non-Solicits, and Confidentiality Clauses Work Across the United States](../non-compete/us.md), [Non-Competes in the Northern Mariana Islands](../non-compete/us/cnmi.md)
 - link_to_source: <https://www.govinfo.gov/app/details/USCOURTS-nmid-1_12-cv-00008>
 
 ### august-healthcare-group-llc-v-manglona-an-injunction-that-bars-pelisamen-and-1cb75293 {#august-healthcare-group-llc-v-manglona-an-injunction-that-bars-pelisamen-and-1cb75293}
@@ -53,7 +53,7 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `healthcare-public-interest`
 - source_cards: `aug-deprive`
-- cited_by: [Non-Competes in the Northern Mariana Islands](../non-compete/cnmi.md)
+- cited_by: [Non-Competes in the Northern Mariana Islands](../non-compete/us/cnmi.md)
 - link_to_source: <https://www.govinfo.gov/app/details/USCOURTS-nmid-1_12-cv-00008>
 
 ### august-healthcare-group-llc-v-manglona-at-this-stage-of-the-proceedings-1114a112 {#august-healthcare-group-llc-v-manglona-at-this-stage-of-the-proceedings-1114a112}
@@ -62,7 +62,7 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `consideration`
 - source_cards: `aug-saves`
-- cited_by: [Non-Competes in the Northern Mariana Islands](../non-compete/cnmi.md)
+- cited_by: [Non-Competes in the Northern Mariana Islands](../non-compete/us/cnmi.md)
 - link_to_source: <https://www.govinfo.gov/app/details/USCOURTS-nmid-1_12-cv-00008>
 
 ### august-healthcare-group-llc-v-manglona-in-the-absence-of-written-law-7e5192d9 {#august-healthcare-group-llc-v-manglona-in-the-absence-of-written-law-7e5192d9}
@@ -71,7 +71,7 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `employee-noncompetes`
 - source_cards: `aug-restatements`
-- cited_by: [Non-Competes in the Northern Mariana Islands](../non-compete/cnmi.md)
+- cited_by: [Non-Competes in the Northern Mariana Islands](../non-compete/us/cnmi.md)
 - link_to_source: <https://www.govinfo.gov/app/details/USCOURTS-nmid-1_12-cv-00008>
 
 ### august-healthcare-group-llc-v-manglona-the-plaintiff-must-establish-that-1-3a6c1fac {#august-healthcare-group-llc-v-manglona-the-plaintiff-must-establish-that-1-3a6c1fac}
@@ -80,7 +80,7 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `healthcare-public-interest`
 - source_cards: `aug-four-prong`
-- cited_by: [Non-Competes in the Northern Mariana Islands](../non-compete/cnmi.md)
+- cited_by: [Non-Competes in the Northern Mariana Islands](../non-compete/us/cnmi.md)
 - link_to_source: <https://www.govinfo.gov/app/details/USCOURTS-nmid-1_12-cv-00008>
 
 ### august-healthcare-group-llc-v-manglona-there-are-no-other-private-medical-9ef88a1b {#august-healthcare-group-llc-v-manglona-there-are-no-other-private-medical-9ef88a1b}
@@ -89,7 +89,7 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `healthcare-public-interest`
 - source_cards: `aug-no-providers`
-- cited_by: [Non-Competes in the Northern Mariana Islands](../non-compete/cnmi.md)
+- cited_by: [Non-Competes in the Northern Mariana Islands](../non-compete/us/cnmi.md)
 - link_to_source: <https://www.govinfo.gov/app/details/USCOURTS-nmid-1_12-cv-00008>
 
 ### august-healthcare-group-llc-v-manglona-there-is-no-specific-law-statute-9d622b96 {#august-healthcare-group-llc-v-manglona-there-is-no-specific-law-statute-9d622b96}
@@ -98,7 +98,7 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `employee-noncompetes`
 - source_cards: `aug-no-statute`
-- cited_by: [Non-Competes in the Northern Mariana Islands](../non-compete/cnmi.md)
+- cited_by: [Non-Competes in the Northern Mariana Islands](../non-compete/us/cnmi.md)
 - link_to_source: <https://www.govinfo.gov/app/details/USCOURTS-nmid-1_12-cv-00008>
 
 ### august-healthcare-group-llc-v-manglona-therefore-the-list-of-customers-is-7d001d04 {#august-healthcare-group-llc-v-manglona-therefore-the-list-of-customers-is-7d001d04}
@@ -107,7 +107,7 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `trade-secrets-nonsolicit`
 - source_cards: `aug-not-trade-secret`
-- cited_by: [Non-Competes in the Northern Mariana Islands](../non-compete/cnmi.md)
+- cited_by: [Non-Competes in the Northern Mariana Islands](../non-compete/us/cnmi.md)
 - link_to_source: <https://www.govinfo.gov/app/details/USCOURTS-nmid-1_12-cv-00008>
 
 ### august-healthcare-group-llc-v-manglona-while-a-customer-list-and-data-022b04ba {#august-healthcare-group-llc-v-manglona-while-a-customer-list-and-data-022b04ba}
@@ -116,5 +116,5 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 - supports: `trade-secrets-nonsolicit`
 - source_cards: `aug-customer-list`
-- cited_by: [Non-Competes in the Northern Mariana Islands](../non-compete/cnmi.md)
+- cited_by: [Non-Competes in the Northern Mariana Islands](../non-compete/us/cnmi.md)
 - link_to_source: <https://www.govinfo.gov/app/details/USCOURTS-nmid-1_12-cv-00008>

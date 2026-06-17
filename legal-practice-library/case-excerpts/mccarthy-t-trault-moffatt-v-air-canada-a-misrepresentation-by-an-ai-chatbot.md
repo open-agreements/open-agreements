@@ -12,7 +12,8 @@ resource: >-
 timestamp: '2026-04-20'
 document_references:
   - type: Practice Note
-    resource: 'https://openagreements.org/legal/ai-vendors/hallucination-indemnification'
+    resource: >-
+      https://openagreements.org/practice-guides/ai-vendors/hallucination-indemnification
 tags:
   - case-law
   - ai-vendors

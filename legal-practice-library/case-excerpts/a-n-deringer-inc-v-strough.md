@@ -10,9 +10,9 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/vermont-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/vermont'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/vermont'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/vermont'
 tags:
   - case-law
   - non-compete
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `deringer-limit-of-validity`, `deringer-vt-prediction`
-- cited_by: [Non-Compete Agreement Review Checklist — Vermont](../non-compete/vermont-review-checklist.md), [Non-Competes in Vermont](../non-compete/vermont.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Vermont](../checklists/non-compete/us/vermont.md), [Non-Competes in Vermont](../non-compete/us/vermont.md)
 - link_to_source: <https://www.courtlistener.com/opinion/732308/an-deringer-inc-v-john-m-strough-and-fritz-companies-inc/#:~:text=we%20conclude%20that%20Vermont%20would,the%20limit%20of%20its%20validity.>

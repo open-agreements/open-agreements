@@ -9,9 +9,9 @@ resource: 'https://www.courtlistener.com/opinion/1235956/polly-v-ray-d-hilderman
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/nebraska-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/nebraska'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/nebraska'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/nebraska'
 tags:
   - case-law
   - non-compete
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `drafting-checklist`, `nebraska-statutory-gates`
 - source_cards: `ne-polly-personal-gate`, `q12-polly-customer-check`
-- cited_by: [Non-Compete Agreement Review Checklist — Nebraska](../non-compete/nebraska-review-checklist.md), [Non-Competes in Nebraska](../non-compete/nebraska.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Nebraska](../checklists/non-compete/us/nebraska.md), [Non-Competes in Nebraska](../non-compete/us/nebraska.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1235956/polly-v-ray-d-hilderman-co/#:~:text=Because%20the%20covenant%20not%20to,is%20thus%20unreasonable%20and%20unenforceable.>
 
 ### polly-v-ray-d-hilderman-co-such-a-covenant-may-be-valid-6dd1cbf4 {#polly-v-ray-d-hilderman-co-such-a-covenant-may-be-valid-6dd1cbf4}
@@ -40,5 +40,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `customer-specific-rule`, `definitions`, `parties-and-cover-term-identification`, `restrictive-covenants-each-independently-includable`
 - source_cards: `ne-polly-personal-cov`, `ne-polly-personal-cover`, `ne-polly-personal-def`, `q3-polly-customer-rule`
-- cited_by: [Non-Compete Agreement Review Checklist — Nebraska](../non-compete/nebraska-review-checklist.md), [Non-Competes in Nebraska](../non-compete/nebraska.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Nebraska](../checklists/non-compete/us/nebraska.md), [Non-Competes in Nebraska](../non-compete/us/nebraska.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1235956/polly-v-ray-d-hilderman-co/#:~:text=Such%20a%20covenant%20may%20be,business%20and%20has%20personal%20contact.>

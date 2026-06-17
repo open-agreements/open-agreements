@@ -11,9 +11,9 @@ resource: 'https://scholar.google.com/scholar_case?case=17995886739076358627'
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/arizona-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/arizona'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/arizona'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/arizona'
 tags:
   - case-law
   - non-compete
@@ -33,7 +33,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `governing-law-venue-dispute-process`, `out-of-state-law`, `parties-and-cover-term-identification`
 - source_cards: `pathway-policy-cover`, `pathway-policy-gov`, `qcol-pathway-policy`
-- cited_by: [Non-Compete Agreement Review Checklist — Arizona](../non-compete/arizona-review-checklist.md), [Non-Competes in Arizona](../non-compete/arizona.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Arizona](../checklists/non-compete/us/arizona.md), [Non-Competes in Arizona](../non-compete/us/arizona.md)
 - link_to_source: <https://scholar.google.com/scholar_case?case=17995886739076358627>
 
 ### pathway-medical-technologies-inc-v-nelson-the-agreement-s-choice-of-washington-law-5f136099 {#pathway-medical-technologies-inc-v-nelson-the-agreement-s-choice-of-washington-law-5f136099}
@@ -42,5 +42,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `governing-law-venue-dispute-process`, `out-of-state-law`
 - source_cards: `pathway-187-gov`, `qcol-pathway-187`
-- cited_by: [Non-Compete Agreement Review Checklist — Arizona](../non-compete/arizona-review-checklist.md), [Non-Competes in Arizona](../non-compete/arizona.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Arizona](../checklists/non-compete/us/arizona.md), [Non-Competes in Arizona](../non-compete/us/arizona.md)
 - link_to_source: <https://scholar.google.com/scholar_case?case=17995886739076358627>

@@ -9,7 +9,7 @@ resource: 'https://www.courtlistener.com/opinion/2423610/cherena-v-coors-brewing
 timestamp: '2026-06-02'
 document_references:
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/puerto-rico'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/puerto-rico'
 tags:
   - case-law
   - non-compete
@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `consideration`
 - source_cards: `cherena-timing`
-- cited_by: [Non-Competes in Puerto Rico](../non-compete/puerto-rico.md)
+- cited_by: [Non-Competes in Puerto Rico](../non-compete/us/puerto-rico.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2423610/cherena-v-coors-brewing-co/#:~:text=Such%20a%20consideration%20in%20this,moment%20of%20discharge%20from%20employment.>
 
 ### cherena-v-coors-brewing-co-thus-although-the-non-competition-clause-a9f33265 {#cherena-v-coors-brewing-co-thus-although-the-non-competition-clause-a9f33265}
@@ -38,5 +38,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `other-covenants`
 - source_cards: `cherena-severable`
-- cited_by: [Non-Competes in Puerto Rico](../non-compete/puerto-rico.md)
+- cited_by: [Non-Competes in Puerto Rico](../non-compete/us/puerto-rico.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2423610/cherena-v-coors-brewing-co/#:~:text=Thus%2C%20although%20the%20non%2Dcompetition%20clause,provisions%2C%20are%20valid%20and%20enforceable.>

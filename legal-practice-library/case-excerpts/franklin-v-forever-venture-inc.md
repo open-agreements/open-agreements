@@ -9,9 +9,9 @@ resource: 'https://www.courtlistener.com/opinion/901375/franklin-v-forever-ventu
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/south-dakota-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/south-dakota'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/south-dakota'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/south-dakota'
 tags:
   - case-law
   - non-compete
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `sale-of-business`, `south-dakota-statutory-gates`
 - source_cards: `franklin-overbroad-goodwill`, `sd-franklin-similar-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — South Dakota](../non-compete/south-dakota-review-checklist.md), [Non-Competes in South Dakota](../non-compete/south-dakota.md)
+- cited_by: [Non-Compete Agreement Review Checklist — South Dakota](../checklists/non-compete/us/south-dakota.md), [Non-Competes in South Dakota](../non-compete/us/south-dakota.md)
 - link_to_source: <https://www.courtlistener.com/opinion/901375/franklin-v-forever-venture-inc/#:~:text=Therefore%2C%20to%20the%20extent%20that,void%20as%20against%20public%20policy.>
 
 ### franklin-v-forever-venture-inc-we-conclude-that-a-determination-of-ebcbf27a {#franklin-v-forever-venture-inc-we-conclude-that-a-determination-of-ebcbf27a}
@@ -40,7 +40,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `sale-of-business`
 - source_cards: `franklin-similar-business`
-- cited_by: [Non-Competes in South Dakota](../non-compete/south-dakota.md)
+- cited_by: [Non-Competes in South Dakota](../non-compete/us/south-dakota.md)
 - link_to_source: <https://www.courtlistener.com/opinion/901375/franklin-v-forever-venture-inc/#:~:text=We%20conclude%20that%20a%20determination,are%20isolated%2C%20insubstantial%2C%20or%20non%2Ddetrimental.>
 
 ### franklin-v-forever-venture-inc-yet-despite-the-covenant-being-overbroad-8e2d184c {#franklin-v-forever-venture-inc-yet-despite-the-covenant-being-overbroad-8e2d184c}
@@ -49,5 +49,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `overbroad-covenants`, `severability-and-reformation`
 - source_cards: `franklin-partial-enforcement`, `sd-franklin-partial-sev`
-- cited_by: [Non-Compete Agreement Review Checklist — South Dakota](../non-compete/south-dakota-review-checklist.md), [Non-Competes in South Dakota](../non-compete/south-dakota.md)
+- cited_by: [Non-Compete Agreement Review Checklist — South Dakota](../checklists/non-compete/us/south-dakota.md), [Non-Competes in South Dakota](../non-compete/us/south-dakota.md)
 - link_to_source: <https://www.courtlistener.com/opinion/901375/franklin-v-forever-venture-inc/#:~:text=Yet%2C%20despite%20the%20covenant%20being,not%20invalidate%20the%20entire%20provision.>

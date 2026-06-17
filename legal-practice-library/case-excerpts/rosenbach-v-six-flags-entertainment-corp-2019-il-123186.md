@@ -9,10 +9,10 @@ resource: >-
   https://www.courtlistener.com/opinion/4658484/rosenbach-v-six-flags-entertainment-corp/
 timestamp: '2026-06-12'
 document_references:
-  - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/privacy/illinois'
   - type: Law Topic
-    resource: 'https://openagreements.org/legal/privacy/us'
+    resource: 'https://openagreements.org/practice-guides/privacy/us'
+  - type: State Law Practice Note
+    resource: 'https://openagreements.org/practice-guides/privacy/us/illinois'
 tags:
   - case-law
   - privacy
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `bipa-lawsuit-exposure`, `enforcement-and-lawsuits`
 - source_cards: `case-rosenbach`, `il-rosenbach`
-- cited_by: [Illinois Consumer Privacy Law (BIPA)](../privacy/illinois.md), [Privacy Policies: What U.S. State Privacy Laws Require a Business to Post, Say, and Honor](../privacy/us.md)
+- cited_by: [Privacy Policies: What U.S. State Privacy Laws Require a Business to Post, Say, and Honor](../privacy/us.md), [Illinois Consumer Privacy Law (BIPA)](../privacy/us/illinois.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4658484/rosenbach-v-six-flags-entertainment-corp/#:~:text=Contrary%20to%20the%20appellate%20court%E2%80%99s,relief%20pursuant%20to%20the%20Act.>
 
 ### rosenbach-v-six-flags-entertainment-corp-2019-il-123186-other-than-the-private-right-of-0c0673c0 {#rosenbach-v-six-flags-entertainment-corp-2019-il-123186-other-than-the-private-right-of-0c0673c0}
@@ -41,7 +41,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `bipa-lawsuit-exposure`
 - source_cards: `case-rosenbach-no-agency`
-- cited_by: [Illinois Consumer Privacy Law (BIPA)](../privacy/illinois.md)
+- cited_by: [Illinois Consumer Privacy Law (BIPA)](../privacy/us/illinois.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4658484/rosenbach-v-six-flags-entertainment-corp/#:~:text=Other%20than%20the%20private%20right,other%20enforcement%20mechanism%20is%20available.>
 
 ### rosenbach-v-six-flags-entertainment-corp-2019-il-123186-when-private-entities-face-liability-for-bae4db13 {#rosenbach-v-six-flags-entertainment-corp-2019-il-123186-when-private-entities-face-liability-for-bae4db13}
@@ -50,5 +50,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `bipa-lawsuit-exposure`
 - source_cards: `case-rosenbach-deterrence`
-- cited_by: [Illinois Consumer Privacy Law (BIPA)](../privacy/illinois.md)
+- cited_by: [Illinois Consumer Privacy Law (BIPA)](../privacy/us/illinois.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4658484/rosenbach-v-six-flags-entertainment-corp/#:~:text=When%20private%20entities%20face%20liability,occur%20and%20cannot%20be%20undone.>

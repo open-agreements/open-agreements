@@ -8,9 +8,9 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/wisconsin-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/wisconsin'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/wisconsin'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/wisconsin'
 tags:
   - case-law
   - non-compete
@@ -30,5 +30,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`, `timing-and-execution-acknowledgements`
 - source_cards: `q5-runzheimer`, `wi-runzheimer-consideration`
-- cited_by: [Non-Compete Agreement Review Checklist — Wisconsin](../non-compete/wisconsin-review-checklist.md), [Non-Competes in Wisconsin](../non-compete/wisconsin.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Wisconsin](../checklists/non-compete/us/wisconsin.md), [Non-Competes in Wisconsin](../non-compete/us/wisconsin.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2797640/runzheimer-international-ltd-v-david-friedlen/#:~:text=We%20hold%20that%20an%20employer's,for%20signing%20a%20restrictive%20covenant.>

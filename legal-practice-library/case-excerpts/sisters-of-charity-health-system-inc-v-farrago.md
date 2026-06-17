@@ -12,9 +12,9 @@ resource: >-
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/maine-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/maine'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/maine'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/maine'
 tags:
   - case-law
   - non-compete
@@ -34,5 +34,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `employee-noncompetes`, `tolling-during-breach`
 - source_cards: `sisters-duration-geography-interest`, `sisters-factors-defs`, `sisters-factors-tolling`
-- cited_by: [Non-Compete Agreement Review Checklist — Maine](../non-compete/maine-review-checklist.md), [Non-Competes in Maine](../non-compete/maine.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Maine](../checklists/non-compete/us/maine.md), [Non-Competes in Maine](../non-compete/us/maine.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2444708/sisters-of-charity-health-system-inc-v-farrago/#:~:text=Although%20reasonableness%20is%20a%20question,the%20interest%20to%20be%20protected.>

@@ -7,9 +7,9 @@ resource: 'https://www.courtlistener.com/opinion/8238275/selmer-co-v-rinn/'
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/wisconsin-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/wisconsin'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/wisconsin'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/wisconsin'
 tags:
   - case-law
   - non-compete
@@ -29,5 +29,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `sale-of-business`, `wisconsin-statutory-gates`
 - source_cards: `q8-selmer`, `wi-selmer-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — Wisconsin](../non-compete/wisconsin-review-checklist.md), [Non-Competes in Wisconsin](../non-compete/wisconsin.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Wisconsin](../checklists/non-compete/us/wisconsin.md), [Non-Competes in Wisconsin](../non-compete/us/wisconsin.md)
 - link_to_source: <https://www.courtlistener.com/opinion/8238275/selmer-co-v-rinn/#:~:text=Having%20determined%20Wis.%20Stat.%20%C2%A7,common%20law's%20rule%20of%20reason.>

@@ -9,9 +9,9 @@ resource: 'https://www.courtlistener.com/opinion/2026165/st-clair-medical-pc-v-b
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/michigan-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/michigan'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/michigan'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/michigan'
 tags:
   - case-law
   - non-compete
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `employee-noncompetes`, `michigan-statutory-gates`, `parties-and-cover-term-identification`, `protectable-interests`, `restrictive-covenants-each-independently-includable`
 - source_cards: `borgiel-general-skill`, `borgiel-unfair-advantage`, `mi-borgiel-covenants`, `mi-borgiel-cover`, `mi-borgiel-defs`, `mi-borgiel-gate`, `mi-borgiel-skill-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — Michigan](../non-compete/michigan-review-checklist.md), [Non-Competes in Michigan](../non-compete/michigan.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Michigan](../checklists/non-compete/us/michigan.md), [Non-Competes in Michigan](../non-compete/us/michigan.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2026165/st-clair-medical-pc-v-borgiel/#:~:text=To%20be%20reasonable%20in%20relation,using%20general%20knowledge%20or%20skill.>
 
 ### st-clair-medical-p-c-v-borgiel-we-conclude-that-the-covenant-protected-20179e57 {#st-clair-medical-p-c-v-borgiel-we-conclude-that-the-covenant-protected-20179e57}
@@ -40,5 +40,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `physician-rules`, `physician-specific-notices-and-carve-outs`
 - source_cards: `borgiel-physician-upheld`, `mi-borgiel-physician`
-- cited_by: [Non-Compete Agreement Review Checklist — Michigan](../non-compete/michigan-review-checklist.md), [Non-Competes in Michigan](../non-compete/michigan.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Michigan](../checklists/non-compete/us/michigan.md), [Non-Competes in Michigan](../non-compete/us/michigan.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2026165/st-clair-medical-pc-v-borgiel/#:~:text=We%20conclude%20that%20the%20covenant,as%20required%20by%20MCL%20445.774a(1).>

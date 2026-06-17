@@ -2,9 +2,9 @@
 jurisdiction: "Michigan"
 slug: michigan
 countryCode: US
-snapshotAsOf: "2026-06-15"
+snapshotAsOf: "2026-06-17"
 lastReviewed: "2026-06-03"
-canonicalUrl: https://openagreements.org/legal/non-compete/michigan
+canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/michigan
 license: CC BY 4.0
 stale: false
 ---
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/michigan · **Snapshot as of:** 2026-06-15 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/michigan · **Snapshot as of:** 2026-06-17 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Michigan[^about]
 
@@ -39,7 +39,7 @@ Michigan enforces employee non-competes only when they are reasonable under MCL 
 
 **Short answer.** Yes, sometimes. Michigan is a reasonableness state, not a general-ban state: MCL 445.774a lets an employer enforce a covenant that protects a reasonable competitive business interest and is reasonable in duration, geographic area, and the type of employment restricted [^mcl-774a-employer-may-obtain][^borgiel-unfair-advantage].
 
-The governing statute is part of the Michigan Antitrust Reform Act. A covenant is valid only if it does more than block ordinary competition — under *St. Clair Medical, P.C. v. Borgiel* it must protect against the employee gaining an *unfair* competitive advantage and may not stop the employee from using general knowledge or skill [^borgiel-unfair-advantage]. For a clause-by-clause pass over a specific agreement against these rules, the [Michigan non-compete review checklist](/legal/non-compete/michigan-review-checklist) walks the full covenant suite item by item with each requirement's force level.
+The governing statute is part of the Michigan Antitrust Reform Act. A covenant is valid only if it does more than block ordinary competition — under *St. Clair Medical, P.C. v. Borgiel* it must protect against the employee gaining an *unfair* competitive advantage and may not stop the employee from using general knowledge or skill [^borgiel-unfair-advantage]. For a clause-by-clause pass over a specific agreement against these rules, the [Michigan non-compete review checklist](/checklists/non-compete/us/michigan) walks the full covenant suite item by item with each requirement's force level.
 
 "To be reasonable in relation to an employer's competitive business interest, a restrictive covenant must protect against the employee's gaining some unfair advantage in competition with the employer, but not prohibit the employee from using general knowledge or skill."[^borgiel-unfair-advantage]
 

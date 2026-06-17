@@ -2,9 +2,9 @@
 jurisdiction: "Wyoming"
 slug: wyoming
 countryCode: US
-snapshotAsOf: "2026-06-15"
+snapshotAsOf: "2026-06-17"
 lastReviewed: "2026-04-14"
-canonicalUrl: https://openagreements.org/legal/non-compete/wyoming
+canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/wyoming
 license: CC BY 4.0
 stale: false
 ---
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/wyoming · **Snapshot as of:** 2026-06-15 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/wyoming · **Snapshot as of:** 2026-06-17 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Wyoming[^about]
 
@@ -63,7 +63,7 @@ Wyoming cases also strictly construe non-competes[^brown-strict-construction] an
 
 **Short answer.** Likely yes under the dominant 2025 law-firm commentary, but that is still an interpretation rather than a Wyoming appellate holding.
 
-The reason is the statutory phrase "any person"[^wyo-1-23-any-person]. State-specific law-firm commentary reads that wording broadly enough to reach independent contractors, not only W-2 employees [^littler-any-status][^faegre-includes-contractors][^fisher-colorado-any-person]. That same broad phrasing closely mirrors Colorado's void-for-compensation rule, which is why commentary points to Colorado as the analogue. *See our companion note on [whether Colorado employee non-competes are enforceable](/legal/non-compete/colorado#enforceability).*
+The reason is the statutory phrase "any person"[^wyo-1-23-any-person]. State-specific law-firm commentary reads that wording broadly enough to reach independent contractors, not only W-2 employees [^littler-any-status][^faegre-includes-contractors][^fisher-colorado-any-person]. That same broad phrasing closely mirrors Colorado's void-for-compensation rule, which is why commentary points to Colorado as the analogue. *See our companion note on [whether Colorado employee non-competes are enforceable](/practice-guides/non-compete/us/colorado#enforceability).*
 
 That is a strong drafting assumption for Wyoming templates, but a careful note should still say that Wyoming courts have not yet issued a controlling appellate decision on the contractor question.
 
@@ -175,7 +175,7 @@ Wyoming permits recovery of up to 100% of relocation, education, and training ex
 
 **Short answer.** Probably yes — and at least re-review. Any form that contains a non-compete outside a statutory exception should be updated, while a form with no non-compete may already conform; either way the new statute turns unreviewed template rollover into a legal risk point, especially where an older covenant might have remained enforceable under common law.
 
-Wyoming-specific commentary treats SF 107 as a major narrowing of employer practice, not a minor drafting tweak [^ogletree-review-revise]. A complete re-review usually covers non-compete templates, offer letters, incentive agreements, physician agreements, non-solicits, NDAs, anti-moonlighting clauses, and repayment provisions together. For a clause-by-clause pass over a specific agreement, the [Wyoming non-compete review checklist](/legal/non-compete/wyoming-review-checklist) walks the full covenant suite item by item with each requirement's force level.
+Wyoming-specific commentary treats SF 107 as a major narrowing of employer practice, not a minor drafting tweak [^ogletree-review-revise]. A complete re-review usually covers non-compete templates, offer letters, incentive agreements, physician agreements, non-solicits, NDAs, anti-moonlighting clauses, and repayment provisions together. For a clause-by-clause pass over a specific agreement, the [Wyoming non-compete review checklist](/checklists/non-compete/us/wyoming) walks the full covenant suite item by item with each requirement's force level.
 
 Commentary specifically warns employers to evaluate routine replacement or updating programs because a new agreement after July 1, 2025 may replace something that was enforceable with something void [^littler-rollover-warning]. Where a grandfathered covenant needs changes, commentary suggests amending or renewing it rather than signing a fresh agreement, when the existing terms allow that, so the covenant is not treated as newly entered into after the effective date [^holland-amend-not-replace]. The common-law cases also mean that even old-law Wyoming covenants required careful drafting [^brown-baseline][^malave-baseline][^hassler-baseline].
 

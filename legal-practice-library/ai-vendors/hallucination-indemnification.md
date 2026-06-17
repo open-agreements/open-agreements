@@ -4,7 +4,8 @@ title: Hallucination indemnification in AI vendor contracts
 description: >-
   How AI vendor contracts handle hallucination losses, output indemnity, IP
   claims, exclusions, court sanctions, and risk allocation.
-resource: 'https://openagreements.org/legal/ai-vendors/hallucination-indemnification'
+resource: >-
+  https://openagreements.org/practice-guides/ai-vendors/hallucination-indemnification
 timestamp: '2026-04-20'
 tags:
   - ai-vendors

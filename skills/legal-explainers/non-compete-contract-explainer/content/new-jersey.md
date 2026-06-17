@@ -2,9 +2,9 @@
 jurisdiction: "New Jersey"
 slug: new-jersey
 countryCode: US
-snapshotAsOf: "2026-06-15"
+snapshotAsOf: "2026-06-17"
 lastReviewed: "2026-06-03"
-canonicalUrl: https://openagreements.org/legal/non-compete/new-jersey
+canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/new-jersey
 license: CC BY 4.0
 stale: false
 ---
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/new-jersey · **Snapshot as of:** 2026-06-15 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/new-jersey · **Snapshot as of:** 2026-06-17 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in New Jersey[^about]
 
@@ -95,7 +95,7 @@ Because the analysis is holistic, a restraint matched to the employee's actual t
 
 *Solari* is the foundational statement: New Jersey rejected the rule that an overbroad covenant is wholly void and adopted partial enforcement to the extent reasonable under the circumstances [^solari-partial-enforcement]. Applying New Jersey law, the Third Circuit in *ADP, LLC v. Rafferty* described curtailing an overbroad covenant's scope as the approach prescribed by the New Jersey Supreme Court [^rafferty-curtail-scope].
 
-That reformation power is not a license to overreach. Reformation is an equitable remedy, and an employer that drafts an abusively broad covenant cannot assume a court will rewrite it into something enforceable. For a clause-by-clause pass over a specific agreement, the [New Jersey non-compete review checklist](/legal/non-compete/new-jersey-review-checklist) walks the full covenant suite item by item with each requirement's force level.
+That reformation power is not a license to overreach. Reformation is an equitable remedy, and an employer that drafts an abusively broad covenant cannot assume a court will rewrite it into something enforceable. For a clause-by-clause pass over a specific agreement, the [New Jersey non-compete review checklist](/checklists/non-compete/us/new-jersey) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**

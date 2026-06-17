@@ -9,9 +9,9 @@ resource: 'https://caselaw.findlaw.com/court/la-court-of-appeal/116318576.html'
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/louisiana-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/louisiana'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/louisiana'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/louisiana'
 tags:
   - case-law
   - non-compete
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `employee-nonsolicitation`, `restrictive-covenants-each-independently-includable`
 - source_cards: `farris-not-governed`, `la-farris-not-governed-cov`, `la-farris-not-governed-defs`
-- cited_by: [Non-Compete Agreement Review Checklist — Louisiana](../non-compete/louisiana-review-checklist.md), [Non-Competes in Louisiana](../non-compete/louisiana.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Louisiana](../checklists/non-compete/us/louisiana.md), [Non-Competes in Louisiana](../non-compete/us/louisiana.md)
 - link_to_source: <https://caselaw.findlaw.com/court/la-court-of-appeal/116318576.html>
 
 ### brown-root-industrial-services-llc-v-farris-in-fact-the-entire-agreement-is-905e5935 {#brown-root-industrial-services-llc-v-farris-in-fact-the-entire-agreement-is-905e5935}
@@ -40,7 +40,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `employee-nonsolicitation`, `louisiana-statutory-gates`
 - source_cards: `farris-no-duration`, `la-farris-no-duration-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — Louisiana](../non-compete/louisiana-review-checklist.md), [Non-Competes in Louisiana](../non-compete/louisiana.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Louisiana](../checklists/non-compete/us/louisiana.md), [Non-Competes in Louisiana](../non-compete/us/louisiana.md)
 - link_to_source: <https://caselaw.findlaw.com/court/la-court-of-appeal/116318576.html>
 
 ### brown-root-industrial-services-llc-v-farris-nevertheless-a-review-of-the-limited-6f888d72 {#brown-root-industrial-services-llc-v-farris-nevertheless-a-review-of-the-limited-6f888d72}
@@ -49,5 +49,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `employee-nonsolicitation`, `louisiana-statutory-gates`, `restrictive-covenants-each-independently-includable`
 - source_cards: `farris-reasonable`, `la-farris-reasonable-cov`, `la-farris-reasonable-defs`, `la-farris-reasonable-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — Louisiana](../non-compete/louisiana-review-checklist.md), [Non-Competes in Louisiana](../non-compete/louisiana.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Louisiana](../checklists/non-compete/us/louisiana.md), [Non-Competes in Louisiana](../non-compete/us/louisiana.md)
 - link_to_source: <https://caselaw.findlaw.com/court/la-court-of-appeal/116318576.html>

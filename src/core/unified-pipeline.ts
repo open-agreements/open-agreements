@@ -17,6 +17,7 @@ import { getParagraphText, replaceParagraphTextRange } from '@usejunior/docx-cor
 import { prepareFillData, fillDocx, type ConfirmClauseDescriptor } from './fill-pipeline.js';
 import { cleanDocument } from './recipe/cleaner.js';
 import { patchDocument } from './recipe/patcher.js';
+import { applySelectorContracts, type FieldSelectorManifest, type FieldResolution } from './selectors/index.js';
 import { applySelections } from './selector.js';
 import { enumerateTextParts, getGeneralTextPartNames } from './recipe/ooxml-parts.js';
 import type { FieldDefinition, CleanConfig } from './metadata.js';
@@ -38,13 +39,20 @@ export interface PipelineOptions {
     replacements: Record<string, string | { value: string; format?: Record<string, unknown> }>;
   };
 
+  // Selector contracts — deterministic locator patching that runs AFTER clean
+  // and BEFORE the legacy patch. Omit (or pass []) to skip. The replacements
+  // dict above must already have these fields' migrated_keys removed; the
+  // verifier still receives the full key set so missed occurrences are caught.
+  selectorManifests?: FieldSelectorManifest[];
+  // Optional sink for selector resolution results (drift reporting).
+  onSelectorResolved?: (fields: FieldResolution[]) => void;
+
   // Selections — omit to skip (only templates with selections.json)
   selectionsConfig?: SelectionsConfig;
 
   // prepareFillData options
   coerceBooleans?: boolean;             // default: false
   computeDisplayFields?: (data: Record<string, unknown>) => void;
-  signingTagDefaults?: Record<string, string>;  // defaults for {sig_*} tags
   confirmClauses?: ConfirmClauseDescriptor[];    // confirm= clauses → any_confirmation_pending
 
   // fillDocx options
@@ -84,6 +92,8 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
     fields,
     priorityFieldNames = [],
     cleanPatch,
+    selectorManifests,
+    onSelectorResolved,
     selectionsConfig,
     coerceBooleans = false,
     computeDisplayFields,
@@ -116,8 +126,23 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
       const cleanedPath = join(tempDir, 'cleaned.docx');
       await cleanDocument(sourcePath, cleanedPath, cleanPatch.cleanConfig);
 
+      // Selector-contract patch (deterministic locators) runs between clean and
+      // the legacy patch. It rewrites resolved occurrences to {field_id} tags;
+      // those fields' keys have already been removed from cleanPatch.replacements
+      // (the declarative migrated_keys cutover) so each field is patched once.
+      let patchInputPath = cleanedPath;
+      if (selectorManifests && selectorManifests.length > 0) {
+        const selectedPath = join(tempDir, 'selected.docx');
+        const selectorResult = await applySelectorContracts(cleanedPath, selectedPath, selectorManifests);
+        onSelectorResolved?.(selectorResult.fields);
+        for (const warning of selectorResult.warnings) {
+          console.warn(`Selector warning: ${warning}`);
+        }
+        patchInputPath = selectedPath;
+      }
+
       const patchedPath = join(tempDir, 'patched.docx');
-      const patchResult = await patchDocument(cleanedPath, patchedPath, cleanPatch.replacements);
+      const patchResult = await patchDocument(patchInputPath, patchedPath, cleanPatch.replacements);
 
       // Suppress zero-match warnings for keys whose search text appears in
       // cleaned content (removeRanges, removeParagraphPatterns, removeBeforePattern).
@@ -153,7 +178,6 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
       useBlankPlaceholder: true,
       coerceBooleans,
       computeDisplayFields,
-      signingTagDefaults: options.signingTagDefaults,
       confirmClauses: options.confirmClauses,
     });
 

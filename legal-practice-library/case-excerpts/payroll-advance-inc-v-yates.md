@@ -9,9 +9,9 @@ resource: 'https://www.courtlistener.com/opinion/1590178/payroll-advance-inc-v-y
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/missouri-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/missouri'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/missouri'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/missouri'
 tags:
   - case-law
   - non-compete
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `employee-noncompetes`, `restrictive-covenants-each-independently-includable`
 - source_cards: `mo-yates-presumptive-void`, `yates-presumptively-void`
-- cited_by: [Non-Compete Agreement Review Checklist — Missouri](../non-compete/missouri-review-checklist.md), [Non-Competes in Missouri](../non-compete/missouri.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Missouri](../checklists/non-compete/us/missouri.md), [Non-Competes in Missouri](../non-compete/us/missouri.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1590178/payroll-advance-inc-v-yates/#:~:text=Generally%2C%20because%20covenants%20not%20to,that%20they%20are%20demonstratively%20reasonable.>

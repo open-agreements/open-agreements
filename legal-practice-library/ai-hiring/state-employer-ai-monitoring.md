@@ -4,7 +4,8 @@ title: State laws on employer AI monitoring
 description: >-
   State rules for employer AI monitoring, including California ADMT governance,
   New York notice laws, Delaware consent, and Illinois BIPA risk.
-resource: 'https://openagreements.org/legal/ai-hiring/state-employer-ai-monitoring'
+resource: >-
+  https://openagreements.org/practice-guides/ai-hiring/state-employer-ai-monitoring
 timestamp: '2026-04-20'
 tags:
   - ai-hiring

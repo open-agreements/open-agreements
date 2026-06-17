@@ -8,9 +8,9 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/new-jersey-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/new-jersey'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/new-jersey'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/new-jersey'
 tags:
   - case-law
   - non-compete
@@ -30,7 +30,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `nj-rafferty-curtail`, `rafferty-curtail-scope`
-- cited_by: [Non-Compete Agreement Review Checklist — New Jersey](../non-compete/new-jersey-review-checklist.md), [Non-Competes in New Jersey](../non-compete/new-jersey.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New Jersey](../checklists/non-compete/us/new-jersey.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4614026/adp-llc-v-nicole-rafferty-adp-llc/#:~:text=Accordingly%2C%20we%20will%20remand%20for,restrictive%20covenants%20such%20as%20these.>
 
 ### adp-llc-v-rafferty-applying-new-jersey-law-we-conclude-8a393d2f {#adp-llc-v-rafferty-applying-new-jersey-law-we-conclude-8a393d2f}
@@ -39,5 +39,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `non-solicitation`, `restrictive-covenants-each-independently-includable`
 - source_cards: `nj-rafferty-tiered`, `rafferty-legitimate-interests`
-- cited_by: [Non-Compete Agreement Review Checklist — New Jersey](../non-compete/new-jersey-review-checklist.md), [Non-Competes in New Jersey](../non-compete/new-jersey.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New Jersey](../checklists/non-compete/us/new-jersey.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4614026/adp-llc-v-nicole-rafferty-adp-llc/#:~:text=Applying%20New%20Jersey%20law%2C%20we,with%20the%20state%E2%80%99s%20public%20policy.>

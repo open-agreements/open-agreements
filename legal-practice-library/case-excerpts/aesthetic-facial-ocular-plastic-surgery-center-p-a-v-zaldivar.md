@@ -12,10 +12,9 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: >-
-      https://openagreements.org/legal/non-compete/north-carolina-review-checklist
+    resource: 'https://openagreements.org/checklists/non-compete/us/north-carolina'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/north-carolina'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/north-carolina'
 tags:
   - case-law
   - non-compete
@@ -35,7 +34,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `physicians`
 - source_cards: `q8-zaldivar-publicpolicy`
-- cited_by: [Non-Competes in North Carolina](../non-compete/north-carolina.md)
+- cited_by: [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4601038/aesthetic-facial-ocular-plastic-surgery-ctr-pa-v-zaldivar/#:~:text=After%20carefully%20reviewing%20the%20covenants%2C,of%20summary%20judgment%20for%20defendants.>
 
 ### aesthetic-facial-ocular-plastic-surgery-center-p-a-v-zaldivar-if-ordering-the-covenantor-to-honor-44e83f61 {#aesthetic-facial-ocular-plastic-surgery-center-p-a-v-zaldivar-if-ordering-the-covenantor-to-honor-44e83f61}
@@ -44,7 +43,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `physician-specific-notices-and-carve-outs`, `physicians`
 - source_cards: `nc-zaldivar-balance`, `q8-zaldivar-balance`
-- cited_by: [Non-Compete Agreement Review Checklist — North Carolina](../non-compete/north-carolina-review-checklist.md), [Non-Competes in North Carolina](../non-compete/north-carolina.md)
+- cited_by: [Non-Compete Agreement Review Checklist — North Carolina](../checklists/non-compete/us/north-carolina.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4601038/aesthetic-facial-ocular-plastic-surgery-ctr-pa-v-zaldivar/#:~:text=If%20ordering%20the%20covenantor%20to,refuse%20to%20enforce%20the%20covenant.>
 
 ### aesthetic-facial-ocular-plastic-surgery-center-p-a-v-zaldivar-this-court-considers-the-following-37fb565e {#aesthetic-facial-ocular-plastic-surgery-center-p-a-v-zaldivar-this-court-considers-the-following-37fb565e}
@@ -53,5 +52,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `physician-specific-notices-and-carve-outs`, `physicians`
 - source_cards: `nc-zaldivar-factors`, `q8-zaldivar-factors`
-- cited_by: [Non-Compete Agreement Review Checklist — North Carolina](../non-compete/north-carolina-review-checklist.md), [Non-Competes in North Carolina](../non-compete/north-carolina.md)
+- cited_by: [Non-Compete Agreement Review Checklist — North Carolina](../checklists/non-compete/us/north-carolina.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4601038/aesthetic-facial-ocular-plastic-surgery-ctr-pa-v-zaldivar/#:~:text=This%20Court%20considers%20the%20following,the%20selection%20of%20a%20physician.>

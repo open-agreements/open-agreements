@@ -9,7 +9,7 @@ resource: 'https://indiankanoon.org/doc/452434/'
 timestamp: '2026-06-03'
 document_references:
   - type: Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/india'
+    resource: 'https://openagreements.org/practice-guides/non-compete/in'
 tags:
   - case-law
   - non-compete
@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `during-employment`, `garden-leave`
 - source_cards: `golikari-in-term`, `q5-golikari-in-term`
-- cited_by: [Non-Competes in India](../non-compete/india.md)
+- cited_by: [Non-Competes in India](../non-compete/in.md)
 - link_to_source: <https://indiankanoon.org/doc/452434/>
 
 ### niranjan-shankar-golikari-v-century-spinning-mfg-co-the-result-of-the-above-discussion-2eb4ac7f {#niranjan-shankar-golikari-v-century-spinning-mfg-co-the-result-of-the-above-discussion-2eb4ac7f}
@@ -38,5 +38,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `during-employment`
 - source_cards: `q3-golikari-distinction`
-- cited_by: [Non-Competes in India](../non-compete/india.md)
+- cited_by: [Non-Competes in India](../non-compete/in.md)
 - link_to_source: <https://indiankanoon.org/doc/452434/>

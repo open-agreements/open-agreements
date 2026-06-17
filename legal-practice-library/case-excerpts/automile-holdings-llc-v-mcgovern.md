@@ -9,10 +9,9 @@ resource: 'https://caselaw.findlaw.com/court/ma-supreme-judicial-court/2042227.h
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: >-
-      https://openagreements.org/legal/non-compete/massachusetts-review-checklist
+    resource: 'https://openagreements.org/checklists/non-compete/us/massachusetts'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/massachusetts'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/massachusetts'
 tags:
   - case-law
   - non-compete
@@ -32,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `tolling-during-breach`, `tolling-extension`
 - source_cards: `automile-extension`, `automile-extension-disfavored`
-- cited_by: [Non-Compete Agreement Review Checklist — Massachusetts](../non-compete/massachusetts-review-checklist.md), [Non-Competes in Massachusetts](../non-compete/massachusetts.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Massachusetts](../checklists/non-compete/us/massachusetts.md), [Non-Competes in Massachusetts](../non-compete/us/massachusetts.md)
 - link_to_source: <https://caselaw.findlaw.com/court/ma-supreme-judicial-court/2042227.html>

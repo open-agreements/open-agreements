@@ -7,10 +7,9 @@ resource: 'https://www.courtlistener.com/opinion/2059042/gosselin-v-archibald/'
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: >-
-      https://openagreements.org/legal/non-compete/new-hampshire-review-checklist
+    resource: 'https://openagreements.org/checklists/non-compete/us/new-hampshire'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/new-hampshire'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/new-hampshire'
 tags:
   - case-law
   - non-compete
@@ -30,7 +29,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `sale-of-business`
 - source_cards: `gosselin-sale-covenant`
-- cited_by: [Non-Competes in New Hampshire](../non-compete/new-hampshire.md)
+- cited_by: [Non-Competes in New Hampshire](../non-compete/us/new-hampshire.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2059042/gosselin-v-archibald/#:~:text=The%20terms%20of%20the%20agreement%2C,contract%2C%20are%20reasonable%20and%20enforceable.>
 
 ### gosselin-v-archibald-we-cannot-agree-with-the-master-s-90a3f0dc {#gosselin-v-archibald-we-cannot-agree-with-the-master-s-90a3f0dc}
@@ -39,5 +38,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `tolling-during-breach`
 - source_cards: `gosselin-no-extension`, `nh-gosselin-no-extension`
-- cited_by: [Non-Compete Agreement Review Checklist — New Hampshire](../non-compete/new-hampshire-review-checklist.md), [Non-Competes in New Hampshire](../non-compete/new-hampshire.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New Hampshire](../checklists/non-compete/us/new-hampshire.md), [Non-Competes in New Hampshire](../non-compete/us/new-hampshire.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2059042/gosselin-v-archibald/#:~:text=We%20cannot%20agree%20with%20the%20master%E2%80%99s%20extension,the%20covenant%20not%20to%20compete.>

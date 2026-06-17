@@ -10,9 +10,9 @@ resource: >-
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/rhode-island-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/rhode-island'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/rhode-island'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/rhode-island'
 tags:
   - case-law
   - non-compete
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `common-law-reasonableness`, `definitions`, `remedies`, `rhode-island-statutory-gates`
 - source_cards: `durapin-elements-defs`, `durapin-elements-gates`, `durapin-elements-rem`, `durapin-enforcement-elements`
-- cited_by: [Non-Compete Agreement Review Checklist — Rhode Island](../non-compete/rhode-island-review-checklist.md), [Non-Competes in Rhode Island](../non-compete/rhode-island.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Rhode Island](../checklists/non-compete/us/rhode-island.md), [Non-Competes in Rhode Island](../non-compete/us/rhode-island.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2334248/durapin-inc-v-american-products-inc/#:~:text=Before%20a%20court%20reaches%20this,of%20a%20business%2C%20Restatement%20(Second)>
 
 ### durapin-inc-v-american-products-inc-even-under-this-approach-a-court-ac4bc09e {#durapin-inc-v-american-products-inc-even-under-this-approach-a-court-ac4bc09e}
@@ -41,7 +41,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `durapin-no-further-sev`, `durapin-no-further-than-necessary`
-- cited_by: [Non-Compete Agreement Review Checklist — Rhode Island](../non-compete/rhode-island-review-checklist.md), [Non-Competes in Rhode Island](../non-compete/rhode-island.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Rhode Island](../checklists/non-compete/us/rhode-island.md), [Non-Competes in Rhode Island](../non-compete/us/rhode-island.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2334248/durapin-inc-v-american-products-inc/#:~:text=Even%20under%20this%20approach%20a,protect%20a%20promisee%E2%80%99s%20legitimate%20interests.>
 
 ### durapin-inc-v-american-products-inc-however-since-such-provisions-are-not-07e9f397 {#durapin-inc-v-american-products-inc-however-since-such-provisions-are-not-07e9f397}
@@ -50,7 +50,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `employee-noncompetes`, `restrictive-covenants-each-independently-includable`
 - source_cards: `durapin-baseline-cov`, `durapin-reasonableness-baseline`
-- cited_by: [Non-Compete Agreement Review Checklist — Rhode Island](../non-compete/rhode-island-review-checklist.md), [Non-Competes in Rhode Island](../non-compete/rhode-island.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Rhode Island](../checklists/non-compete/us/rhode-island.md), [Non-Competes in Rhode Island](../non-compete/us/rhode-island.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2334248/durapin-inc-v-american-products-inc/#:~:text=However%2C%20since%20such%20provisions%20are,in%20whose%20favor%20it%20runs.>
 
 ### durapin-inc-v-american-products-inc-we-believe-this-is-the-appropriate-59c4d814 {#durapin-inc-v-american-products-inc-we-believe-this-is-the-appropriate-59c4d814}
@@ -59,5 +59,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `durapin-partial-enforcement`, `durapin-partial-sev`
-- cited_by: [Non-Compete Agreement Review Checklist — Rhode Island](../non-compete/rhode-island-review-checklist.md), [Non-Competes in Rhode Island](../non-compete/rhode-island.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Rhode Island](../checklists/non-compete/us/rhode-island.md), [Non-Competes in Rhode Island](../non-compete/us/rhode-island.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2334248/durapin-inc-v-american-products-inc/#:~:text=We%20believe%20this%20is%20the,the%20part%20of%20the%20promisee.>

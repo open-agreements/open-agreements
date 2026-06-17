@@ -25,8 +25,7 @@ type EpicName =
   | 'Filling & Rendering'
   | 'Verification & Drift'
   | 'Compliance & Governance'
-  | 'NVCA SPA Template'
-  | 'Agreement Signing';
+  | 'NVCA SPA Template';
 
 // ── Assertion capture constants ─────────────────────────────────────────────
 

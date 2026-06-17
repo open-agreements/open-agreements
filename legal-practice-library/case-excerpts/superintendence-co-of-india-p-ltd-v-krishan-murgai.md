@@ -9,7 +9,7 @@ resource: 'https://indiankanoon.org/doc/1186410/'
 timestamp: '2026-06-03'
 document_references:
   - type: Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/india'
+    resource: 'https://openagreements.org/practice-guides/non-compete/in'
 tags:
   - case-law
   - non-compete
@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `reasonable-noncompete`
 - source_cards: `krishan-murgai-no-reasonableness`
-- cited_by: [Non-Competes in India](../non-compete/india.md)
+- cited_by: [Non-Competes in India](../non-compete/in.md)
 - link_to_source: <https://indiankanoon.org/doc/1186410/>
 
 ### superintendence-co-of-india-p-ltd-v-krishan-murgai-under-section-27-of-the-contract-5ed50ec6 {#superintendence-co-of-india-p-ltd-v-krishan-murgai-under-section-27-of-the-contract-5ed50ec6}
@@ -38,5 +38,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `post-employment-noncompetes`
 - source_cards: `krishan-murgai-void`
-- cited_by: [Non-Competes in India](../non-compete/india.md)
+- cited_by: [Non-Competes in India](../non-compete/in.md)
 - link_to_source: <https://indiankanoon.org/doc/1186410/>

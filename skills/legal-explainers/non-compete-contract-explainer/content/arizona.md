@@ -2,9 +2,9 @@
 jurisdiction: "Arizona"
 slug: arizona
 countryCode: US
-snapshotAsOf: "2026-06-15"
+snapshotAsOf: "2026-06-17"
 lastReviewed: "2026-06-03"
-canonicalUrl: https://openagreements.org/legal/non-compete/arizona
+canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/arizona
 license: CC BY 4.0
 stale: false
 ---
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/arizona · **Snapshot as of:** 2026-06-15 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/arizona · **Snapshot as of:** 2026-06-17 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Arizona[^about]
 
@@ -75,7 +75,7 @@ Where the unreasonable language cannot be cleanly struck, the covenant is unenfo
 
 "Neither the contract itself nor other evidence in the record indicates that this unreasonable portion of the contract was severable."[^q3-bryceland-severable]
 
-For a clause-by-clause pass over a specific agreement against these drafting rules, the [Arizona non-compete review checklist](/legal/non-compete/arizona-review-checklist) walks the full covenant suite item by item with each requirement's force level.
+For a clause-by-clause pass over a specific agreement against these drafting rules, the [Arizona non-compete review checklist](/checklists/non-compete/us/arizona) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**

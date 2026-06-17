@@ -10,9 +10,9 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/new-mexico-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/new-mexico'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/new-mexico'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/new-mexico'
 tags:
   - case-law
   - non-compete
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `duration-geography`, `new-mexico-statutory-gates`, `sale-of-business`
 - source_cards: `bowen-sale-deference-gate`, `bowen-sale-more-deference`, `q10-bowen-sale-deference`
-- cited_by: [Non-Compete Agreement Review Checklist — New Mexico](../non-compete/new-mexico-review-checklist.md), [Non-Competes in New Mexico](../non-compete/new-mexico.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New Mexico](../checklists/non-compete/us/new-mexico.md), [Non-Competes in New Mexico](../non-compete/us/new-mexico.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1211410/bowen-v-carlsbad-insurance-real-estate-inc/#:~:text=Courts%20are%20more%20reluctant%20to,than%20those%20in%20employment%20contracts.>
 
 ### bowen-v-carlsbad-insurance-real-estate-inc-it-is-well-settled-that-a-restrictive-598b32b1 {#bowen-v-carlsbad-insurance-real-estate-inc-it-is-well-settled-that-a-restrictive-598b32b1}
@@ -41,7 +41,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `duration-geography`, `new-mexico-statutory-gates`, `sale-of-business`
 - source_cards: `bowen-sale-valid`, `bowen-sale-valid-gate`, `q10-bowen-sale-valid`
-- cited_by: [Non-Compete Agreement Review Checklist — New Mexico](../non-compete/new-mexico-review-checklist.md), [Non-Competes in New Mexico](../non-compete/new-mexico.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New Mexico](../checklists/non-compete/us/new-mexico.md), [Non-Competes in New Mexico](../non-compete/us/new-mexico.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1211410/bowen-v-carlsbad-insurance-real-estate-inc/#:~:text=It%20is%20well%2Dsettled%20that%20a,a%20sale%20of%20a%20business.>
 
 ### bowen-v-carlsbad-insurance-real-estate-inc-the-covenant-should-be-enforced-as-8eb612ec {#bowen-v-carlsbad-insurance-real-estate-inc-the-covenant-should-be-enforced-as-8eb612ec}
@@ -50,7 +50,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `new-mexico-statutory-gates`, `sale-of-business`
 - source_cards: `bowen-enforced-written-gate`, `q10-bowen-enforced-written`
-- cited_by: [Non-Compete Agreement Review Checklist — New Mexico](../non-compete/new-mexico-review-checklist.md), [Non-Competes in New Mexico](../non-compete/new-mexico.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New Mexico](../checklists/non-compete/us/new-mexico.md), [Non-Competes in New Mexico](../non-compete/us/new-mexico.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1211410/bowen-v-carlsbad-insurance-real-estate-inc/#:~:text=The%20covenant%20should%20be%20enforced,into%20voluntarily%20and%20for%20consideration.>
 
 ### bowen-v-carlsbad-insurance-real-estate-inc-whether-there-is-a-reasonable-restraint-987495f3 {#bowen-v-carlsbad-insurance-real-estate-inc-whether-there-is-a-reasonable-restraint-987495f3}
@@ -59,5 +59,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `duration-geography`
 - source_cards: `bowen-facts-of-case`, `bowen-facts-particular-case`
-- cited_by: [Non-Compete Agreement Review Checklist — New Mexico](../non-compete/new-mexico-review-checklist.md), [Non-Competes in New Mexico](../non-compete/new-mexico.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New Mexico](../checklists/non-compete/us/new-mexico.md), [Non-Competes in New Mexico](../non-compete/us/new-mexico.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1211410/bowen-v-carlsbad-insurance-real-estate-inc/#:~:text=Whether%20there%20is%20a%20reasonable,for%20the%20courts%20to%20decide.>

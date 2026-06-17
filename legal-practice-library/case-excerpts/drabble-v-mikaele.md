@@ -7,7 +7,7 @@ resource: 'https://asbar.org/case-law/drabble-v-mikaele/'
 timestamp: '2026-06-03'
 document_references:
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/american-samoa'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/american-samoa'
 tags:
   - case-law
   - non-compete
@@ -27,5 +27,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `remedies`
 - source_cards: `drabble-standard`
-- cited_by: [Non-Competes in American Samoa](../non-compete/american-samoa.md)
+- cited_by: [Non-Competes in American Samoa](../non-compete/us/american-samoa.md)
 - link_to_source: <https://asbar.org/case-law/drabble-v-mikaele/>

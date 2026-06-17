@@ -2,9 +2,9 @@
 jurisdiction: "Indiana"
 slug: indiana
 countryCode: US
-snapshotAsOf: "2026-06-15"
+snapshotAsOf: "2026-06-17"
 lastReviewed: "2026-06-03"
-canonicalUrl: https://openagreements.org/legal/non-compete/indiana
+canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/indiana
 license: CC BY 4.0
 stale: false
 ---
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/indiana · **Snapshot as of:** 2026-06-15 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/indiana · **Snapshot as of:** 2026-06-17 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Indiana[^about]
 
@@ -86,7 +86,7 @@ The activity dimension is where covenants most often fail. In *Med-1 Solutions*,
 
 The Indiana Supreme Court reaffirmed this in *Heraeus Medical, LLC v. Zimmer, Inc.* (2019). A court may excise offending words from a divisible covenant, but it may not rewrite the agreement, and a contractual reformation or modification clause does not expand that power [^heraeus-reformation-clause]. The blue pencil is available only where the covenant is *clearly divisible* and a reasonable restriction survives after the unreasonable parts are removed [^heraeus-divisibility].
 
-That divisibility requirement is decisive. In *Clark's Sales and Service, Inc. v. Smith*, an overbroad restriction that was written as an interconnected whole could not be saved, because there was no severable language a court could strike to leave a reasonable covenant behind [^clarks-indivisible]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Indiana non-compete review checklist](/legal/non-compete/indiana-review-checklist) walks the full covenant suite item by item with each requirement's force level.
+That divisibility requirement is decisive. In *Clark's Sales and Service, Inc. v. Smith*, an overbroad restriction that was written as an interconnected whole could not be saved, because there was no severable language a court could strike to leave a reasonable covenant behind [^clarks-indivisible]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Indiana non-compete review checklist](/checklists/non-compete/us/indiana) walks the full covenant suite item by item with each requirement's force level.
 
 "The doctrine, however, does not allow a court to rewrite a noncompetition agreement by adding, changing, or rearranging terms."[^heraeus-eraser]
 

@@ -9,9 +9,9 @@ resource: 'https://www.courtlistener.com/opinion/4441363/box-v-jb-hunt-transport
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/arkansas-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/arkansas'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/arkansas'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/arkansas'
 tags:
   - case-law
   - non-compete
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `employee-noncompetes`, `parties-and-cover-term-identification`, `timing-and-execution-acknowledgements`
 - source_cards: `box-act-921-cover`, `box-act-921-timing`, `q1-box-effective-date`
-- cited_by: [Non-Compete Agreement Review Checklist — Arkansas](../non-compete/arkansas-review-checklist.md), [Non-Competes in Arkansas](../non-compete/arkansas.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Arkansas](../checklists/non-compete/us/arkansas.md), [Non-Competes in Arkansas](../non-compete/us/arkansas.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4441363/box-v-jb-hunt-transport-inc/#:~:text=Arkansas%20Code%20Annotated%20section%204%2D75%2D101,of%20Act%20921%20of%202015.>
 
 ### box-v-j-b-hunt-transport-inc-however-in-the-present-case-the-2cc9ac26 {#box-v-j-b-hunt-transport-inc-however-in-the-present-case-the-2cc9ac26}
@@ -40,5 +40,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-reformation`, `entire-agreement-amendment-waiver-e-signatures`
 - source_cards: `box-amendment-track`, `q5-box-effective-date`
-- cited_by: [Non-Compete Agreement Review Checklist — Arkansas](../non-compete/arkansas-review-checklist.md), [Non-Competes in Arkansas](../non-compete/arkansas.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Arkansas](../checklists/non-compete/us/arkansas.md), [Non-Competes in Arkansas](../non-compete/us/arkansas.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4441363/box-v-jb-hunt-transport-inc/#:~:text=However%2C%20in%20the%20present%20case,after%20Act%20921%20became%20effective.>

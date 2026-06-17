@@ -2,9 +2,9 @@
 jurisdiction: "Wisconsin"
 slug: wisconsin
 countryCode: US
-snapshotAsOf: "2026-06-15"
+snapshotAsOf: "2026-06-17"
 lastReviewed: "2026-06-03"
-canonicalUrl: https://openagreements.org/legal/non-compete/wisconsin
+canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/wisconsin
 license: CC BY 4.0
 stale: false
 ---
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/wisconsin · **Snapshot as of:** 2026-06-15 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/wisconsin · **Snapshot as of:** 2026-06-17 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Wisconsin[^about]
 
@@ -57,7 +57,7 @@ This is the defining feature of Wisconsin restrictive-covenant law. In most reas
 
 "Any covenant, described in this section, imposing an unreasonable restraint is illegal, void and unenforceable even as to any part of the covenant or performance that would be a reasonable restraint."[^q2-103465-void]
 
-Employers sometimes try to engineer around the rule with a clause authorizing a court to modify the covenant to whatever scope is enforceable. Wisconsin courts give such clauses no effect, because a provision that conflicts with § 103.465 cannot itself supply the missing reasonableness. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Wisconsin non-compete review checklist](/legal/non-compete/wisconsin-review-checklist) walks the full covenant suite item by item with each requirement's force level.
+Employers sometimes try to engineer around the rule with a clause authorizing a court to modify the covenant to whatever scope is enforceable. Wisconsin courts give such clauses no effect, because a provision that conflicts with § 103.465 cannot itself supply the missing reasonableness. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Wisconsin non-compete review checklist](/checklists/non-compete/us/wisconsin) walks the full covenant suite item by item with each requirement's force level.
 
 "Given that the modification provision is contrary to WIS. STAT. § 103.465, it could have no effect here."[^q2-diamond-modification]
 

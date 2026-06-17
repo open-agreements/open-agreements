@@ -9,9 +9,9 @@ resource: 'https://www.courtlistener.com/opinion/1482686/george-w-kistler-inc-v-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/pennsylvania-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/pennsylvania'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/pennsylvania'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/pennsylvania'
 tags:
   - case-law
   - non-compete
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`, `entire-agreement-amendment-waiver-e-signatures`
 - source_cards: `kistler-new-consideration`, `pa-kistler-later`
-- cited_by: [Non-Compete Agreement Review Checklist — Pennsylvania](../non-compete/pennsylvania-review-checklist.md), [Non-Competes in Pennsylvania](../non-compete/pennsylvania.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Pennsylvania](../checklists/non-compete/us/pennsylvania.md), [Non-Competes in Pennsylvania](../non-compete/us/pennsylvania.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1482686/george-w-kistler-inc-v-obrien/#:~:text=While%20a%20restrictive%20covenant%2C%20in,be%20supported%20by%20new%20consideration.>

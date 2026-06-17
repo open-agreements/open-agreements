@@ -10,9 +10,9 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/wisconsin-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/wisconsin'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/wisconsin'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/wisconsin'
 tags:
   - case-law
   - non-compete
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `choice-of-law`, `governing-law-venue-dispute-process`
 - source_cards: `q9-bush`, `wi-bush-policy`
-- cited_by: [Non-Compete Agreement Review Checklist — Wisconsin](../non-compete/wisconsin-review-checklist.md), [Non-Competes in Wisconsin](../non-compete/wisconsin.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Wisconsin](../checklists/non-compete/us/wisconsin.md), [Non-Competes in Wisconsin](../non-compete/us/wisconsin.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1236111/bush-v-national-school-studios-inc/#:~:text=In%20general%2C%20however%2C%20statutes%20or,an%20important%20state%20public%20policy.>

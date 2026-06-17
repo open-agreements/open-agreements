@@ -12,9 +12,9 @@ resource: >-
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/virginia-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/virginia'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/virginia'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/virginia'
 tags:
   - case-law
   - non-compete
@@ -34,5 +34,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `employee-noncompetes`, `reasonableness-test`, `virginia-statutory-gates`
 - source_cards: `omniplex-basic-test`, `omniplex-gate-test`, `omniplex-three-part-test`
-- cited_by: [Non-Compete Agreement Review Checklist — Virginia](../non-compete/virginia-review-checklist.md), [Non-Competes in Virginia](../non-compete/virginia.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Virginia](../checklists/non-compete/us/virginia.md), [Non-Competes in Virginia](../non-compete/us/virginia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1058921/omniplex-world-services-v-us-inv/#:~:text=These%20considerations%20form%20the%20basis,of%20a%20sound%20public%20policy%3F>

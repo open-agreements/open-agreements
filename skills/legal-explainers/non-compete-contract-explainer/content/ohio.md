@@ -2,9 +2,9 @@
 jurisdiction: "Ohio"
 slug: ohio
 countryCode: US
-snapshotAsOf: "2026-06-15"
+snapshotAsOf: "2026-06-17"
 lastReviewed: "2026-06-03"
-canonicalUrl: https://openagreements.org/legal/non-compete/ohio
+canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/ohio
 license: CC BY 4.0
 stale: false
 ---
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/ohio · **Snapshot as of:** 2026-06-15 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/ohio · **Snapshot as of:** 2026-06-17 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Ohio[^about]
 
@@ -93,7 +93,7 @@ When a covenant overshoots, an Ohio court may trim it. In *MetroHealth System v.
 
 *Raimonde* holds that a covenant imposing unreasonable restrictions will be enforced to the extent necessary to protect the employer's legitimate interests, giving Ohio courts the power to modify rather than void [^raimonde-reformation]. But that power is not automatic. In *Kross Acquisition Co. v. Groundworks Ohio, LLC*, the First District confirmed that modifying a covenant is within the trial court's discretion, and it affirmed a refusal to rewrite a covenant so overbroad that reforming it would require the court to rebuild the agreement from scratch [^kross-discretionary].
 
-There is also a real cost to overreaching. In *Cintas Corp. v. Perry*, applying Ohio law, the employer's own prevailing-party fee clause boomeranged: after the covenant failed, the court held the former employee was entitled to recover his attorney's fees and litigation costs under that contract [^cintas-fee-shift]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Ohio non-compete review checklist](/legal/non-compete/ohio-review-checklist) walks the full covenant suite item by item with each requirement's force level.
+There is also a real cost to overreaching. In *Cintas Corp. v. Perry*, applying Ohio law, the employer's own prevailing-party fee clause boomeranged: after the covenant failed, the court held the former employee was entitled to recover his attorney's fees and litigation costs under that contract [^cintas-fee-shift]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Ohio non-compete review checklist](/checklists/non-compete/us/ohio) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**

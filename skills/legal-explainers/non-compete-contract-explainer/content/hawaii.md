@@ -2,9 +2,9 @@
 jurisdiction: "Hawaii"
 slug: hawaii
 countryCode: US
-snapshotAsOf: "2026-06-15"
+snapshotAsOf: "2026-06-17"
 lastReviewed: "2026-06-02"
-canonicalUrl: https://openagreements.org/legal/non-compete/hawaii
+canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/hawaii
 license: CC BY 4.0
 stale: false
 ---
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/hawaii · **Snapshot as of:** 2026-06-15 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/hawaii · **Snapshot as of:** 2026-06-17 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Hawaii[^about]
 
@@ -138,7 +138,7 @@ The reason is practical. A contractual extension-on-breach clause lengthens the 
 
 *Del Rosario* is the best example in the staged sources of a court correcting the enforced scope. The trial court had enjoined work as a briefer statewide, but the covenant itself was limited to the County of Honolulu, and the appellate court remanded to amend the judgment to that county limit [^narrowing-del-rosario-honolulu-limit].
 
-That is not the same as permission to draft broadly. *Gagnon* refused enforcement of a non-compete that lacked a legitimate ancillary purpose, even though the employer argued confidentiality and competition concerns [^narrowing-gagnon-legitimate-purpose-required][^narrowing-gagnon-competition-not-purpose]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Hawaii non-compete review checklist](/legal/non-compete/hawaii-review-checklist) walks the full covenant suite item by item with each requirement's force level.
+That is not the same as permission to draft broadly. *Gagnon* refused enforcement of a non-compete that lacked a legitimate ancillary purpose, even though the employer argued confidentiality and competition concerns [^narrowing-gagnon-legitimate-purpose-required][^narrowing-gagnon-competition-not-purpose]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Hawaii non-compete review checklist](/checklists/non-compete/us/hawaii) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**

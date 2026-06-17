@@ -9,9 +9,9 @@ resource: 'https://www.courtlistener.com/opinion/1835915/star-direct-inc-v-dal-p
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/wisconsin-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/wisconsin'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/wisconsin'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/wisconsin'
 tags:
   - case-law
   - non-compete
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `employee-noncompetes`, `parties-and-cover-term-identification`, `remedies`, `restrictive-covenants-each-independently-includable`, `wisconsin-statutory-gates`
 - source_cards: `q1-star-direct-test`, `wi-star-five-factor-cov`, `wi-star-five-factor-cover`, `wi-star-five-factor-def`, `wi-star-five-factor-gate`, `wi-star-five-factor-rem`
-- cited_by: [Non-Compete Agreement Review Checklist — Wisconsin](../non-compete/wisconsin-review-checklist.md), [Non-Competes in Wisconsin](../non-compete/wisconsin.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Wisconsin](../checklists/non-compete/us/wisconsin.md), [Non-Competes in Wisconsin](../non-compete/us/wisconsin.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1835915/star-direct-inc-v-dal-pra/#:~:text=A%20restrictive%20covenant%20must%3A%20(1),be%20contrary%20to%20public%20policy.>
 
 ### star-direct-inc-v-dal-pra-restrictive-covenants-are-divisible-when-b6e1ff78 {#star-direct-inc-v-dal-pra-restrictive-covenants-are-divisible-when-b6e1ff78}
@@ -40,5 +40,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `divisibility`, `severability-and-reformation`, `survival`
 - source_cards: `q3-star-direct-divisible`, `wi-star-divisible-sev`, `wi-star-divisible-surv`
-- cited_by: [Non-Compete Agreement Review Checklist — Wisconsin](../non-compete/wisconsin-review-checklist.md), [Non-Competes in Wisconsin](../non-compete/wisconsin.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Wisconsin](../checklists/non-compete/us/wisconsin.md), [Non-Competes in Wisconsin](../non-compete/us/wisconsin.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1835915/star-direct-inc-v-dal-pra/#:~:text=Restrictive%20covenants%20are%20divisible%20when,be%20independently%20read%20and%20enforced.>

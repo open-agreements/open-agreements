@@ -10,7 +10,7 @@ resource: >-
 timestamp: '2026-06-03'
 document_references:
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/privacy/california'
+    resource: 'https://openagreements.org/practice-guides/privacy/us/california'
 tags:
   - case-law
   - privacy
@@ -30,5 +30,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `data-breach-lawsuits`
 - source_cards: `cpk-9th`
-- cited_by: [California Consumer Privacy Law (CCPA/CPRA)](../privacy/california.md)
+- cited_by: [California Consumer Privacy Law (CCPA/CPRA)](../privacy/us/california.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10338139/in-re-aviva-kirsten-v-california-pizza-kitchen-inc/#:~:text=The%20district%20court%20also%20considered,the%20adequacy%20of%20the%20settlement.>

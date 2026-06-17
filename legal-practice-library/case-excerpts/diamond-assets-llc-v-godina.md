@@ -8,9 +8,9 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/wisconsin-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/wisconsin'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/wisconsin'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/wisconsin'
 tags:
   - case-law
   - non-compete
@@ -30,7 +30,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `confidentiality-and-trade-secret-treatment`, `confidentiality-ndas`, `definitions`, `wisconsin-statutory-gates`
 - source_cards: `q7-diamond-nda`, `wi-diamond-nda-def`, `wi-diamond-nda-duration`, `wi-diamond-nda-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — Wisconsin](../non-compete/wisconsin-review-checklist.md), [Non-Competes in Wisconsin](../non-compete/wisconsin.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Wisconsin](../checklists/non-compete/us/wisconsin.md), [Non-Competes in Wisconsin](../non-compete/us/wisconsin.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10110688/diamond-assets-llc-v-carlos-godina/#:~:text=As%20to%20the%20confidentiality%20covenant%2C,might%20be%20able%20to%20submit.>
 
 ### diamond-assets-llc-v-godina-given-that-the-modification-provision-is-501fe360 {#diamond-assets-llc-v-godina-given-that-the-modification-provision-is-501fe360}
@@ -39,5 +39,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `blue-pencil`, `severability-and-reformation`
 - source_cards: `q2-diamond-modification`, `wi-diamond-modification-sev`
-- cited_by: [Non-Compete Agreement Review Checklist — Wisconsin](../non-compete/wisconsin-review-checklist.md), [Non-Competes in Wisconsin](../non-compete/wisconsin.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Wisconsin](../checklists/non-compete/us/wisconsin.md), [Non-Competes in Wisconsin](../non-compete/us/wisconsin.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10110688/diamond-assets-llc-v-carlos-godina/#:~:text=Given%20that%20the%20modification%20provision,could%20have%20no%20effect%20here.>

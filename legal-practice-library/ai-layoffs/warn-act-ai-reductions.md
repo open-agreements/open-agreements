@@ -4,7 +4,7 @@ title: WARN Act exposure in AI-driven workforce reductions
 description: >-
   WARN Act issues in AI-driven workforce reductions, including remote-worker
   counting, mini-WARN laws, exceptions, acquisitions, and notice duties.
-resource: 'https://openagreements.org/legal/ai-layoffs/warn-act-ai-reductions'
+resource: 'https://openagreements.org/practice-guides/ai-layoffs/warn-act-ai-reductions'
 timestamp: '2026-04-20'
 tags:
   - ai-layoffs

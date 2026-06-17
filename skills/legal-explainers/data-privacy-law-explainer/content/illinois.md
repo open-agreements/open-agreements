@@ -2,9 +2,9 @@
 jurisdiction: "Illinois"
 slug: illinois
 countryCode: US
-snapshotAsOf: "2026-06-15"
+snapshotAsOf: "2026-06-17"
 lastReviewed: "2026-06-11"
-canonicalUrl: https://openagreements.org/legal/privacy/illinois
+canonicalUrl: https://openagreements.org/practice-guides/privacy/us/illinois
 license: CC BY 4.0
 stale: false
 ---
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/privacy/illinois · **Snapshot as of:** 2026-06-15 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/illinois · **Snapshot as of:** 2026-06-17 · License: CC BY 4.0 · © openagreements.org
 
 # Illinois Consumer Privacy Law (BIPA)[^about]
 

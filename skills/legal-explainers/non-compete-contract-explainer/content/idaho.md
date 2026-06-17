@@ -2,9 +2,9 @@
 jurisdiction: "Idaho"
 slug: idaho
 countryCode: US
-snapshotAsOf: "2026-06-15"
+snapshotAsOf: "2026-06-17"
 lastReviewed: "2026-06-02"
-canonicalUrl: https://openagreements.org/legal/non-compete/idaho
+canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/idaho
 license: CC BY 4.0
 stale: false
 ---
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/idaho · **Snapshot as of:** 2026-06-15 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/idaho · **Snapshot as of:** 2026-06-17 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Idaho[^about]
 
@@ -39,7 +39,7 @@ A question-by-question summary of Idaho non-compete law under Idaho Code title 4
 
 **Short answer.** Yes, but only for key employees or key independent contractors and only if the covenant is reasonable. Idaho Code § 44-2701 makes a qualifying covenant enforceable if reasonable[^idaho-44-2701-key-employee-enforceable] as to duration, geography, work scope, and business need.
 
-Idaho is a statute-first jurisdiction for employment non-competes. The chapter 44-27 framework is employer-friendly, but it is not open-ended: the worker must be key, the restraint must protect legitimate business interests, and it cannot impose more restraint than reasonably necessary [^idaho-44-2701-key-employee-enforceable]. For a clause-by-clause pass over a specific agreement against these rules, the [Idaho non-compete review checklist](/legal/non-compete/idaho-review-checklist) walks the full covenant suite item by item with each requirement's force level.
+Idaho is a statute-first jurisdiction for employment non-competes. The chapter 44-27 framework is employer-friendly, but it is not open-ended: the worker must be key, the restraint must protect legitimate business interests, and it cannot impose more restraint than reasonably necessary [^idaho-44-2701-key-employee-enforceable]. For a clause-by-clause pass over a specific agreement against these rules, the [Idaho non-compete review checklist](/checklists/non-compete/us/idaho) walks the full covenant suite item by item with each requirement's force level.
 
 Idaho courts still treat employment covenants as disfavored and strictly construed against the employer. *Blaskiewicz* reversed summary judgment because the district court skipped the Idaho statutes, while also preserving the older reasonableness and public-policy limits [^blaskiewicz-statute-first].
 

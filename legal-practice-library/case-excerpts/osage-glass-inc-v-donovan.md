@@ -9,7 +9,7 @@ resource: 'https://www.courtlistener.com/opinion/1781769/osage-glass-inc-v-donov
 timestamp: '2026-06-03'
 document_references:
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/missouri'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/missouri'
 tags:
   - case-law
   - non-compete
@@ -29,5 +29,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `protectable-interests`
 - source_cards: `osage-customer-contacts`
-- cited_by: [Non-Competes in Missouri](../non-compete/missouri.md)
+- cited_by: [Non-Competes in Missouri](../non-compete/us/missouri.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1781769/osage-glass-inc-v-donovan/#:~:text=If%20the%20covenant%20is%20lawful,customers%20exists%2C%20enforcement%20is%20appropriate.>

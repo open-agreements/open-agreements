@@ -11,7 +11,7 @@ resource: 'https://lawphil.net/judjuris/juri2005/aug2005/gr_154060_2005.html'
 timestamp: '2026-06-03'
 document_references:
   - type: Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/philippines'
+    resource: 'https://openagreements.org/practice-guides/non-compete/ph'
 tags:
   - case-law
   - non-compete
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `which-court`
 - source_cards: `yusen-civil`
-- cited_by: [Non-Competes in the Philippines](../non-compete/philippines.md)
+- cited_by: [Non-Competes in the Philippines](../non-compete/ph.md)
 - link_to_source: <https://lawphil.net/judjuris/juri2005/aug2005/gr_154060_2005.html>
 
 ### yusen-air-sea-service-phils-inc-v-villamor-necessarily-upon-the-expiration-of-said-8addb5f1 {#yusen-air-sea-service-phils-inc-v-villamor-necessarily-upon-the-expiration-of-said-8addb5f1}
@@ -40,5 +40,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `remedies`
 - source_cards: `yusen-moot`
-- cited_by: [Non-Competes in the Philippines](../non-compete/philippines.md)
+- cited_by: [Non-Competes in the Philippines](../non-compete/ph.md)
 - link_to_source: <https://lawphil.net/judjuris/juri2005/aug2005/gr_154060_2005.html>

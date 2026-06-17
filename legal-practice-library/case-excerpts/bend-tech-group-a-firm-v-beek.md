@@ -2,14 +2,17 @@
 type: Case Excerpt
 title: Bend-Tech Group (A Firm) v Beek
 description: >-
-  Bend-Tech Group (A Firm) v Beek [2015] WASC 491 (Pritchard J). — quoted in 1
+  Bend-Tech Group (A Firm) v Beek [2015] WASC 491 (Pritchard J). — quoted in 2
   document(s).
 citation: 'Bend-Tech Group (A Firm) v Beek [2015] WASC 491 (Pritchard J).'
 resource: 'https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASC/2015/491.html'
-timestamp: '2026-06-10'
+timestamp: '2026-06-16'
 document_references:
   - type: Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/australia-western-australia'
+    resource: 'https://openagreements.org/practice-guides/non-compete/au'
+  - type: Practice Note
+    resource: >-
+      https://openagreements.org/practice-guides/non-compete/au/western-australia
 tags:
   - case-law
   - non-compete
@@ -19,7 +22,7 @@ tags:
 
 *Bend-Tech Group (A Firm) v Beek [2015] WASC 491 (Pritchard J).*
 
-Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -27,9 +30,9 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 > A restraint will be reasonable in relation to the restraining party if it is necessary for the adequate protection of that party and reasonable in relation to the party restrained if it preserves the fullest liberty of action consistent with that protection.
 
-- supports: `enforceability`, `garden-leave`
+- supports: `enforceability`, `garden-leave`, `reasonableness`
 - source_cards: `bendtech-reasonableness-test`, `bendtech-twin-test-gl`
-- cited_by: [Non-Compete Enforceability in Western Australia](../non-compete/australia-western-australia.md)
+- cited_by: [Non-Competes in Australia](../non-compete/au.md), [Non-Compete Enforceability in Western Australia](../non-compete/au/western-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASC/2015/491.html>
 
 ### bend-tech-group-a-firm-v-beek-although-the-question-of-reasonableness-70a51eb0 {#bend-tech-group-a-firm-v-beek-although-the-question-of-reasonableness-70a51eb0}
@@ -38,7 +41,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `reasonableness-factors`
 - source_cards: `bendtech-subsequent-developments`
-- cited_by: [Non-Compete Enforceability in Western Australia](../non-compete/australia-western-australia.md)
+- cited_by: [Non-Compete Enforceability in Western Australia](../non-compete/au/western-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASC/2015/491.html>
 
 ### bend-tech-group-a-firm-v-beek-as-for-the-non-competition-clause-this-d58a09da {#bend-tech-group-a-firm-v-beek-as-for-the-non-competition-clause-this-d58a09da}
@@ -47,7 +50,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `legitimate-interest`
 - source_cards: `bendtech-working-life`
-- cited_by: [Non-Compete Enforceability in Western Australia](../non-compete/australia-western-australia.md)
+- cited_by: [Non-Compete Enforceability in Western Australia](../non-compete/au/western-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASC/2015/491.html>
 
 ### bend-tech-group-a-firm-v-beek-having-said-that-i-have-nevertheless-854eb957 {#bend-tech-group-a-firm-v-beek-having-said-that-i-have-nevertheless-854eb957}
@@ -56,7 +59,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`
 - source_cards: `bendtech-no-prima-facie`
-- cited_by: [Non-Compete Enforceability in Western Australia](../non-compete/australia-western-australia.md)
+- cited_by: [Non-Compete Enforceability in Western Australia](../non-compete/au/western-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASC/2015/491.html>
 
 ### bend-tech-group-a-firm-v-beek-severance-is-not-permissible-simply-86678c71 {#bend-tech-group-a-firm-v-beek-severance-is-not-permissible-simply-86678c71}
@@ -65,7 +68,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`
 - source_cards: `bendtech-no-blue-pencil`
-- cited_by: [Non-Compete Enforceability in Western Australia](../non-compete/australia-western-australia.md)
+- cited_by: [Non-Compete Enforceability in Western Australia](../non-compete/au/western-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASC/2015/491.html>
 
 ### bend-tech-group-a-firm-v-beek-the-doctrine-of-severance-has-not-0a0c03cc {#bend-tech-group-a-firm-v-beek-the-doctrine-of-severance-has-not-0a0c03cc}
@@ -74,7 +77,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `cascading-clauses`
 - source_cards: `bendtech-attwood`
-- cited_by: [Non-Compete Enforceability in Western Australia](../non-compete/australia-western-australia.md)
+- cited_by: [Non-Compete Enforceability in Western Australia](../non-compete/au/western-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASC/2015/491.html>
 
 ### bend-tech-group-a-firm-v-beek-the-role-of-severance-in-the-d9d035c5 {#bend-tech-group-a-firm-v-beek-the-role-of-severance-in-the-d9d035c5}
@@ -83,5 +86,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`
 - source_cards: `bendtech-severance-circumscribed`
-- cited_by: [Non-Compete Enforceability in Western Australia](../non-compete/australia-western-australia.md)
+- cited_by: [Non-Compete Enforceability in Western Australia](../non-compete/au/western-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASC/2015/491.html>

@@ -12,9 +12,9 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/mississippi-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/mississippi'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/mississippi'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/mississippi'
 tags:
   - case-law
   - non-compete
@@ -34,5 +34,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `tolling-during-breach`, `tolling-extension`
 - source_cards: `frierson-no-extension`, `ms-frierson-period`, `ms-frierson-tolling`
-- cited_by: [Non-Compete Agreement Review Checklist — Mississippi](../non-compete/mississippi-review-checklist.md), [Non-Competes in Mississippi](../non-compete/mississippi.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Mississippi](../checklists/non-compete/us/mississippi.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1722477/frierson-v-sheppard-building-supply-co/#:~:text=Having%20made%20the%20contract%20limiting,the%20time%20beyond%20that%20date.>

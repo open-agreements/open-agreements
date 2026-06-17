@@ -9,9 +9,9 @@ resource: 'https://caselaw.findlaw.com/court/la-court-of-appeal/116265798.html'
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/louisiana-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/louisiana'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/louisiana'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/louisiana'
 tags:
   - case-law
   - non-compete
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `louisiana-statutory-gates`, `parties-and-cover-term-identification`, `prospective-employee`, `timing-and-execution-acknowledgements`
 - source_cards: `annison-effective-date`, `la-annison-cover`, `la-annison-gate`, `la-annison-timing`
-- cited_by: [Non-Compete Agreement Review Checklist — Louisiana](../non-compete/louisiana-review-checklist.md), [Non-Competes in Louisiana](../non-compete/louisiana.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Louisiana](../checklists/non-compete/us/louisiana.md), [Non-Competes in Louisiana](../non-compete/us/louisiana.md)
 - link_to_source: <https://caselaw.findlaw.com/court/la-court-of-appeal/116265798.html>

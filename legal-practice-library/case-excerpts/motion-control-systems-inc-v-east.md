@@ -10,9 +10,9 @@ resource: >-
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/virginia-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/virginia'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/virginia'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/virginia'
 tags:
   - case-law
   - non-compete
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `reasonableness-test`, `restrictive-covenants-each-independently-includable`
 - source_cards: `motion-control-named-competitors`, `motion-control-overreach`, `motion-control-similar-business`
-- cited_by: [Non-Compete Agreement Review Checklist — Virginia](../non-compete/virginia-review-checklist.md), [Non-Competes in Virginia](../non-compete/virginia.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Virginia](../checklists/non-compete/us/virginia.md), [Non-Competes in Virginia](../non-compete/us/virginia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1059467/motion-control-systems-inc-v-east/#:~:text=Accordingly%2C%20we%20conclude%20that%20the,MCS%20and%2C%20therefore%2C%20was%20unenforceable.>
 
 ### motion-control-systems-inc-v-east-as-a-restraint-of-trade-the-4f6845a8 {#motion-control-systems-inc-v-east-as-a-restraint-of-trade-the-4f6845a8}
@@ -41,5 +41,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`, `tolling-during-breach`, `tolling-extension`
 - source_cards: `motion-control-strict-construction`, `motion-control-strict-severability`, `motion-control-strict-tolling`, `tolling-motion-control-strict`
-- cited_by: [Non-Compete Agreement Review Checklist — Virginia](../non-compete/virginia-review-checklist.md), [Non-Competes in Virginia](../non-compete/virginia.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Virginia](../checklists/non-compete/us/virginia.md), [Non-Competes in Virginia](../non-compete/us/virginia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1059467/motion-control-systems-inc-v-east/#:~:text=As%20a%20restraint%20of%20trade%2C,in%20favor%20of%20the%20employee.>

@@ -9,7 +9,7 @@ resource: 'https://indiankanoon.org/doc/571375/'
 timestamp: '2026-06-03'
 document_references:
   - type: Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/india'
+    resource: 'https://openagreements.org/practice-guides/non-compete/in'
 tags:
   - case-law
   - non-compete
@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `during-employment`, `what-to-protect`
 - source_cards: `q3-percept-not-confined`, `q8-percept-not-confined`
-- cited_by: [Non-Competes in India](../non-compete/india.md)
+- cited_by: [Non-Competes in India](../non-compete/in.md)
 - link_to_source: <https://indiankanoon.org/doc/571375/>
 
 ### percept-d-mark-india-pvt-ltd-v-zaheer-khan-the-legal-position-with-regard-to-98073a2d {#percept-d-mark-india-pvt-ltd-v-zaheer-khan-the-legal-position-with-regard-to-98073a2d}
@@ -38,7 +38,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `post-employment-noncompetes`
 - source_cards: `percept-settled`
-- cited_by: [Non-Competes in India](../non-compete/india.md)
+- cited_by: [Non-Competes in India](../non-compete/in.md)
 - link_to_source: <https://indiankanoon.org/doc/571375/>
 
 ### percept-d-mark-india-pvt-ltd-v-zaheer-khan-under-section-27-of-the-contract-a772ca37 {#percept-d-mark-india-pvt-ltd-v-zaheer-khan-under-section-27-of-the-contract-a772ca37}
@@ -47,5 +47,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `reasonable-noncompete`
 - source_cards: `q2-percept-s27`
-- cited_by: [Non-Competes in India](../non-compete/india.md)
+- cited_by: [Non-Competes in India](../non-compete/in.md)
 - link_to_source: <https://indiankanoon.org/doc/571375/>

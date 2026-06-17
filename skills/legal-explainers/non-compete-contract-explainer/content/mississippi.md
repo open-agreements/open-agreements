@@ -2,9 +2,9 @@
 jurisdiction: "Mississippi"
 slug: mississippi
 countryCode: US
-snapshotAsOf: "2026-06-15"
+snapshotAsOf: "2026-06-17"
 lastReviewed: "2026-06-03"
-canonicalUrl: https://openagreements.org/legal/non-compete/mississippi
+canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/mississippi
 license: CC BY 4.0
 stale: false
 ---
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/mississippi · **Snapshot as of:** 2026-06-15 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/mississippi · **Snapshot as of:** 2026-06-17 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Mississippi[^about]
 
@@ -80,7 +80,7 @@ Remote work does not dissolve a geographic limit. In *Timber Lake Foods v. Estes
 
 *Redd Pest Control Co. v. Heatherly* is the classic example. The covenant on its face barred competition across the entire state, but the court enforced it only within Tupelo and a fifty-mile radius — the area where the employee actually held customer relationships — and remanded for an injunction limited to that reasonable scope [^heatherly-enforce-reasonable-part]. The court framed the issue as whether a restraint reasonable in part and unreasonable in the rest should be enforced as to the reasonable part, and answered yes [^heatherly-partial-enforcement-issue].
 
-This power is broader than a strict blue pencil that only crosses out severable words, but it is not a safety net for abusive drafting. Reformation rests on the chancellor's equitable discretion, and a grossly overbroad covenant invites a court to decline enforcement rather than rewrite it. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Mississippi non-compete review checklist](/legal/non-compete/mississippi-review-checklist) walks the full covenant suite item by item with each requirement's force level.
+This power is broader than a strict blue pencil that only crosses out severable words, but it is not a safety net for abusive drafting. Reformation rests on the chancellor's equitable discretion, and a grossly overbroad covenant invites a court to decline enforcement rather than rewrite it. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Mississippi non-compete review checklist](/checklists/non-compete/us/mississippi) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**

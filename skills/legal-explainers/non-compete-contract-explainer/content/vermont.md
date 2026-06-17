@@ -2,9 +2,9 @@
 jurisdiction: "Vermont"
 slug: vermont
 countryCode: US
-snapshotAsOf: "2026-06-15"
+snapshotAsOf: "2026-06-17"
 lastReviewed: "2026-06-01"
-canonicalUrl: https://openagreements.org/legal/non-compete/vermont
+canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/vermont
 license: CC BY 4.0
 stale: false
 ---
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/vermont · **Snapshot as of:** 2026-06-15 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/vermont · **Snapshot as of:** 2026-06-17 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Vermont[^about]
 
@@ -79,7 +79,7 @@ The conservative anchor is *Roy's Orthopedic '85*. There, the Vermont Supreme Co
 
 The opposite signal comes from *Summits 7* and the Second Circuit. The Vermont Supreme Court observed that most modern courts agree that a trial court can enforce restrictive covenants to the extent that they are reasonable[^summits7-extent-reasonable], and cited *A.N. Deringer, Inc. v. Strough* — the Second Circuit's *Erie* prediction that Vermont would permit enforcement of a defective restrictive covenant to the limit of its validity[^deringer-vt-prediction].
 
-The two strands can be reconciled: Vermont will not rewrite a contract by inventing new terms (no extending time, no judicially imposed geographic line), but a court may enforce only that subset of an overbroad covenant the conduct actually breaches when that subset is plainly within a reasonable restraint. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Vermont non-compete review checklist](/legal/non-compete/vermont-review-checklist) walks the full covenant suite item by item with each requirement's force level.
+The two strands can be reconciled: Vermont will not rewrite a contract by inventing new terms (no extending time, no judicially imposed geographic line), but a court may enforce only that subset of an overbroad covenant the conduct actually breaches when that subset is plainly within a reasonable restraint. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Vermont non-compete review checklist](/checklists/non-compete/us/vermont) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**

@@ -12,7 +12,7 @@ resource: >-
 timestamp: '2026-06-03'
 document_references:
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/us-virgin-islands'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/virgin-islands'
 tags:
   - case-law
   - non-compete
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `trade-secrets`
 - source_cards: `dixon-notrade`
-- cited_by: [Non-Competes in the U.S. Virgin Islands](../non-compete/us-virgin-islands.md)
+- cited_by: [Non-Competes in the U.S. Virgin Islands](../non-compete/us/virgin-islands.md)
 - link_to_source: <https://cdnsm5-hosted.civiclive.com/UserFiles/Servers/Server_12810747/File/Opinions/Archive/VI%20Diving%20Sch%20v.%20Dixon%20%28IAM%29.pdf>
 
 ### v-i-diving-schools-supplies-inc-v-dixon-restrictive-clauses-of-the-agreement-are-6da6b55b {#v-i-diving-schools-supplies-inc-v-dixon-restrictive-clauses-of-the-agreement-are-6da6b55b}
@@ -41,5 +41,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `duration-geography-scope`, `overbroad-narrowing`
 - source_cards: `dixon-void`, `q6-dixon`
-- cited_by: [Non-Competes in the U.S. Virgin Islands](../non-compete/us-virgin-islands.md)
+- cited_by: [Non-Competes in the U.S. Virgin Islands](../non-compete/us/virgin-islands.md)
 - link_to_source: <https://cdnsm5-hosted.civiclive.com/UserFiles/Servers/Server_12810747/File/Opinions/Archive/VI%20Diving%20Sch%20v.%20Dixon%20%28IAM%29.pdf>

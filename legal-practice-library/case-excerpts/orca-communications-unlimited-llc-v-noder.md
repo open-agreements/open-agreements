@@ -12,7 +12,7 @@ resource: >-
 timestamp: '2026-06-03'
 document_references:
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/arizona'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/arizona'
 tags:
   - case-law
   - non-compete
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `trade-secrets`
 - source_cards: `q8-orca2014-nondisplacement`
-- cited_by: [Non-Competes in Arizona](../non-compete/arizona.md)
+- cited_by: [Non-Competes in Arizona](../non-compete/us/arizona.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2752976/orca-communications-v-ann-noder-et-virpitch-public/#:~:text=We%20hold%20that%20AUTSA%20does,is%20not%20a%20trade%20secret.>

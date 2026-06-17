@@ -7,9 +7,9 @@ resource: 'https://www.courtlistener.com/opinion/2061132/whitmyer-bros-inc-v-doy
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/new-jersey-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/new-jersey'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/new-jersey'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/new-jersey'
 tags:
   - case-law
   - non-compete
@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `protectable-interests`
 - source_cards: `nj-whitmyer-protectable`, `whitmyer-legitimate-interest`
-- cited_by: [Non-Compete Agreement Review Checklist — New Jersey](../non-compete/new-jersey-review-checklist.md), [Non-Competes in New Jersey](../non-compete/new-jersey.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New Jersey](../checklists/non-compete/us/new-jersey.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2061132/whitmyer-bros-inc-v-doyle/#:~:text=But%20the%20employer%20has%20a,in%20protecting%20his%20customer%20relationships.>
 
 ### whitmyer-bros-inc-v-doyle-we-pointed-out-that-while-a-c215c9ef {#whitmyer-bros-inc-v-doyle-we-pointed-out-that-while-a-c215c9ef}
@@ -38,5 +38,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `employee-noncompetes`, `restrictive-covenants-each-independently-includable`
 - source_cards: `nj-whitmyer-sale`, `whitmyer-sale-of-business`
-- cited_by: [Non-Compete Agreement Review Checklist — New Jersey](../non-compete/new-jersey-review-checklist.md), [Non-Competes in New Jersey](../non-compete/new-jersey.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New Jersey](../checklists/non-compete/us/new-jersey.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2061132/whitmyer-bros-inc-v-doyle/#:~:text=we%20pointed%20out%20that%20while,well%20recognized%20countervailing%20policy%20considerations.>

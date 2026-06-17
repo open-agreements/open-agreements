@@ -2,9 +2,9 @@
 jurisdiction: "New York"
 slug: new-york
 countryCode: US
-snapshotAsOf: "2026-06-15"
+snapshotAsOf: "2026-06-17"
 lastReviewed: "2026-06-03"
-canonicalUrl: https://openagreements.org/legal/non-compete/new-york
+canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/new-york
 license: CC BY 4.0
 stale: false
 ---
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/new-york · **Snapshot as of:** 2026-06-15 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/new-york · **Snapshot as of:** 2026-06-17 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in New York[^about]
 
@@ -69,7 +69,7 @@ The *unique or extraordinary services* category is demanding. It is not enough t
 
 **Short answer.** Sometimes, but partial enforcement is discretionary, not automatic. New York rejects a per se rule voiding every overbroad covenant, yet a court will rewrite one to a reasonable scope only when the employer acted in good faith and did not overreach [^bdo-rejects-per-se][^bdo-partial-enforcement-standard].
 
-The decisive factor is the employer's conduct. If the employer shows an absence of overreaching, coercive use of bargaining power, or other anti-competitive misconduct, and sought in good faith to protect a legitimate interest, partial enforcement may be justified [^bdo-partial-enforcement-standard]. The Attorney General's guidance describes the same possibility — a court may enforce some parts of a covenant for a shorter time or smaller area while disregarding unreasonable portions [^ag-faq-partial-enforcement]. For a clause-by-clause pass over a specific agreement under these drafting constraints, the [New York non-compete review checklist](/legal/non-compete/new-york-review-checklist) walks the full covenant suite item by item with each requirement's force level.
+The decisive factor is the employer's conduct. If the employer shows an absence of overreaching, coercive use of bargaining power, or other anti-competitive misconduct, and sought in good faith to protect a legitimate interest, partial enforcement may be justified [^bdo-partial-enforcement-standard]. The Attorney General's guidance describes the same possibility — a court may enforce some parts of a covenant for a shorter time or smaller area while disregarding unreasonable portions [^ag-faq-partial-enforcement]. For a clause-by-clause pass over a specific agreement under these drafting constraints, the [New York non-compete review checklist](/checklists/non-compete/us/new-york) walks the full covenant suite item by item with each requirement's force level.
 
 But there is no severance to perform when the covenant protects no legitimate interest at all; in that case the agreement is simply unenforceable [^natural-organics-no-severance].
 

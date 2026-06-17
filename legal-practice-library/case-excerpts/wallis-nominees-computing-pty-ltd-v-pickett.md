@@ -11,7 +11,7 @@ resource: 'https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/vic/VSCA/2013/24.
 timestamp: '2026-06-10'
 document_references:
   - type: Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/australia-victoria'
+    resource: 'https://openagreements.org/practice-guides/non-compete/au/victoria'
 tags:
   - case-law
   - non-compete
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `cascading-clauses`
 - source_cards: `wallis-remove-not-rewrite`
-- cited_by: [Non-Compete Enforceability in Victoria](../non-compete/australia-victoria.md)
+- cited_by: [Non-Compete Enforceability in Victoria](../non-compete/au/victoria.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/vic/VSCA/2013/24.html>
 
 ### wallis-nominees-computing-pty-ltd-v-pickett-the-assessment-of-whether-a-legitimate-1137f0a0 {#wallis-nominees-computing-pty-ltd-v-pickett-the-assessment-of-whether-a-legitimate-1137f0a0}
@@ -40,7 +40,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `garden-leave`, `reasonableness-factors`, `tolling`
 - source_cards: `wallis-assessed-at-time`, `wallis-assessed-at-time-garden`, `wallis-assessed-at-time-tolling`
-- cited_by: [Non-Compete Enforceability in Victoria](../non-compete/australia-victoria.md)
+- cited_by: [Non-Compete Enforceability in Victoria](../non-compete/au/victoria.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/vic/VSCA/2013/24.html>
 
 ### wallis-nominees-computing-pty-ltd-v-pickett-the-commonly-used-form-of-a-dd1ee4d6 {#wallis-nominees-computing-pty-ltd-v-pickett-the-commonly-used-form-of-a-dd1ee4d6}
@@ -49,7 +49,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `cascading-clauses`
 - source_cards: `wallis-cascading`
-- cited_by: [Non-Compete Enforceability in Victoria](../non-compete/australia-victoria.md)
+- cited_by: [Non-Compete Enforceability in Victoria](../non-compete/au/victoria.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/vic/VSCA/2013/24.html>
 
 ### wallis-nominees-computing-pty-ltd-v-pickett-the-legitimate-interest-alleged-by-dws-4918d131 {#wallis-nominees-computing-pty-ltd-v-pickett-the-legitimate-interest-alleged-by-dws-4918d131}
@@ -58,7 +58,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `legitimate-interest`
 - source_cards: `wallis-customer-connection`
-- cited_by: [Non-Compete Enforceability in Victoria](../non-compete/australia-victoria.md)
+- cited_by: [Non-Compete Enforceability in Victoria](../non-compete/au/victoria.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/vic/VSCA/2013/24.html>
 
 ### wallis-nominees-computing-pty-ltd-v-pickett-the-test-is-whether-the-restraint-ce2ef48b {#wallis-nominees-computing-pty-ltd-v-pickett-the-test-is-whether-the-restraint-ce2ef48b}
@@ -67,7 +67,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `contractors-and-sale`, `garden-leave`, `legitimate-interest`
 - source_cards: `wallis-test`, `wallis-test-contractors`, `wallis-test-garden`
-- cited_by: [Non-Compete Enforceability in Victoria](../non-compete/australia-victoria.md)
+- cited_by: [Non-Compete Enforceability in Victoria](../non-compete/au/victoria.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/vic/VSCA/2013/24.html>
 
 ### wallis-nominees-computing-pty-ltd-v-pickett-we-conclude-that-while-dws-did-51c223b5 {#wallis-nominees-computing-pty-ltd-v-pickett-we-conclude-that-while-dws-did-51c223b5}
@@ -76,5 +76,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `legitimate-interest`, `reasonableness-factors`
 - source_cards: `wallis-conclude-unreasonable`, `wallis-conclude-unreasonable-scope`
-- cited_by: [Non-Compete Enforceability in Victoria](../non-compete/australia-victoria.md)
+- cited_by: [Non-Compete Enforceability in Victoria](../non-compete/au/victoria.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/vic/VSCA/2013/24.html>

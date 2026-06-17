@@ -9,9 +9,9 @@ resource: 'https://www.courtlistener.com/opinion/7315898/medispec-ltd-v-chouinar
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/maryland-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/maryland'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/maryland'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/maryland'
 tags:
   - case-law
   - non-compete
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `duration-geography`
 - source_cards: `md-medispec-facially-overbroad`, `medispec-facially-overbroad`
-- cited_by: [Non-Compete Agreement Review Checklist — Maryland](../non-compete/maryland-review-checklist.md), [Non-Competes in Maryland](../non-compete/maryland.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Maryland](../checklists/non-compete/us/maryland.md), [Non-Competes in Maryland](../non-compete/us/maryland.md)
 - link_to_source: <https://www.courtlistener.com/opinion/7315898/medispec-ltd-v-chouinard/#:~:text=Here%2C%20an%20examination%20of%20the,overly%20broad%20on%20its%20face.>

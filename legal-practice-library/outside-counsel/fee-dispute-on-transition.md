@@ -4,7 +4,8 @@ title: How attorney-fee dispute programs work when changing counsel
 description: >-
   How attorney-fee dispute programs work when changing counsel, including state
   fee arbitration, costs, malpractice limits, and engagement terms.
-resource: 'https://openagreements.org/legal/outside-counsel/fee-dispute-on-transition'
+resource: >-
+  https://openagreements.org/practice-guides/outside-counsel/fee-dispute-on-transition
 timestamp: '2026-04-20'
 tags:
   - outside-counsel

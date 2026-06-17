@@ -2,9 +2,9 @@
 jurisdiction: "Montana"
 slug: montana
 countryCode: US
-snapshotAsOf: "2026-06-15"
+snapshotAsOf: "2026-06-17"
 lastReviewed: "2026-06-05"
-canonicalUrl: https://openagreements.org/legal/privacy/montana
+canonicalUrl: https://openagreements.org/practice-guides/privacy/us/montana
 license: CC BY 4.0
 stale: false
 ---
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/privacy/montana · **Snapshot as of:** 2026-06-15 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/montana · **Snapshot as of:** 2026-06-17 · License: CC BY 4.0 · © openagreements.org
 
 # Montana Consumer Privacy Law (MCDPA)[^about]
 

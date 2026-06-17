@@ -7,9 +7,9 @@ resource: 'https://www.courtlistener.com/opinion/2381411/brignull-v-albert/'
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/maine-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/maine'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/maine'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/maine'
 tags:
   - case-law
   - non-compete
@@ -29,5 +29,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `brignull-as-applied-review`, `brignull-as-applied-sev`
-- cited_by: [Non-Compete Agreement Review Checklist — Maine](../non-compete/maine-review-checklist.md), [Non-Competes in Maine](../non-compete/maine.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Maine](../checklists/non-compete/us/maine.md), [Non-Competes in Maine](../non-compete/us/maine.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2381411/brignull-v-albert/#:~:text=Finally%2C%20because%20the%20reasonableness%20of,been%20enforced%20on%20its%20terms.>

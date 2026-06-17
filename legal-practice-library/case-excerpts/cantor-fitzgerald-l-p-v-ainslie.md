@@ -9,9 +9,9 @@ resource: 'https://www.courtlistener.com/opinion/9469727/cantor-fitzgerald-lp-v-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/delaware-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/delaware'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/delaware'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/delaware'
 tags:
   - case-law
   - non-compete
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `forfeiture-for-competition`
 - source_cards: `ainslie-condition-precedent`
-- cited_by: [Non-Competes in Delaware](../non-compete/delaware.md)
+- cited_by: [Non-Competes in Delaware](../non-compete/us/delaware.md)
 - link_to_source: <https://www.courtlistener.com/opinion/9469727/cantor-fitzgerald-lp-v-ainslie/#:~:text=It%20found%2C%20instead%2C%20that%20the,not%20contest%20it%20on%20appeal.>
 
 ### cantor-fitzgerald-l-p-v-ainslie-thus-the-competitive-activity-condition-81aaf6e4 {#cantor-fitzgerald-l-p-v-ainslie-thus-the-competitive-activity-condition-81aaf6e4}
@@ -40,7 +40,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `delaware-statutory-gates`, `forfeiture-for-competition`, `recent-developments`
 - source_cards: `ainslie-employee-choice-distinction`, `ainslie-recent-track`, `de-ainslie-distinction-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — Delaware](../non-compete/delaware-review-checklist.md), [Non-Competes in Delaware](../non-compete/delaware.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Delaware](../checklists/non-compete/us/delaware.md), [Non-Competes in Delaware](../non-compete/us/delaware.md)
 - link_to_source: <https://www.courtlistener.com/opinion/9469727/cantor-fitzgerald-lp-v-ainslie/#:~:text=Thus%2C%20the%20Competitive%20Activity%20Condition,does%20competition%20support%20injunctive%20relief.>
 
 ### cantor-fitzgerald-l-p-v-ainslie-to-sum-up-we-disagree-with-318a515c {#cantor-fitzgerald-l-p-v-ainslie-to-sum-up-we-disagree-with-318a515c}
@@ -49,5 +49,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `delaware-statutory-gates`, `forfeiture-for-competition`
 - source_cards: `ainslie-summary-rule`, `de-ainslie-summary-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — Delaware](../non-compete/delaware-review-checklist.md), [Non-Competes in Delaware](../non-compete/delaware.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Delaware](../checklists/non-compete/us/delaware.md), [Non-Competes in Delaware](../non-compete/us/delaware.md)
 - link_to_source: <https://www.courtlistener.com/opinion/9469727/cantor-fitzgerald-lp-v-ainslie/#:~:text=To%20sum%20up%2C%20we%20disagree,subject%20to%20review%20for%20reasonableness.>

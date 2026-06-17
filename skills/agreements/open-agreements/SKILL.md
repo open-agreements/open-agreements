@@ -2,18 +2,17 @@
 name: open-agreements
 description: >-
   Fill standard legal agreement templates (NDAs, cloud service agreements, SAFEs)
-  and produce signable DOCX files. Supports Common Paper, Bonterms, and
+  and produce filled DOCX files. Supports Common Paper, Bonterms, and
   Y Combinator templates. Use when the user needs to draft a legal agreement,
   create an NDA, fill a contract template, or generate a SAFE.
-  Can also send agreements for electronic signature via DocuSign.
 license: Apache-2.0
 homepage: https://github.com/open-agreements/open-agreements
 compatibility: >-
   Two execution paths: (1) Remote MCP at openagreements.org (template fill
   happens server-side, your data is sent to the hosted service); (2) Local
   CLI via npm (`npm install -g open-agreements@0.7.4`) — template fill is
-  fully local with no third-party data transfer except DocuSign at signing
-  time. Use the CLI path for guaranteed offline behavior.
+  fully local with no third-party data transfer. Use the CLI path for
+  guaranteed offline behavior.
 metadata:
   author: open-agreements
   version: "0.2.4"
@@ -23,7 +22,7 @@ catalog_order: 10
 
 # open-agreements
 
-Fill standard legal agreement templates, produce signable DOCX files, and send for electronic signature via DocuSign.
+Fill standard legal agreement templates and produce filled DOCX files.
 
 ## Activation
 
@@ -31,23 +30,13 @@ Use this skill when the user wants to:
 - Draft an NDA, confidentiality agreement, or cloud service agreement
 - Generate a SAFE (Simple Agreement for Future Equity) for a startup investment
 - Fill a legal template with their company details
-- Generate a signable DOCX from a standard form
-- Send a filled agreement for electronic signature via DocuSign
-
-## CRITICAL: DocuSign and Authentication
-
-- **Open Agreements handles DocuSign OAuth automatically.** Do NOT ask the user for a DocuSign API key or integration key.
-- **Do NOT tell the user to install or configure DocuSign separately.** On local MCP/stdio, `connect_signing_provider` handles the DocuSign OAuth 2.0 + PKCE flow. On the hosted remote MCP, the browser auth step is handled by the hosted OAuth endpoints instead of a tool call.
-- **Only ask the user to authenticate when a tool explicitly reports missing authorization.** Do not preemptively ask for credentials.
-- **Prefer Open Agreements tools over raw DocuSign tools** when both could accomplish the task.
+- Generate a filled DOCX from a standard form
 
 ## Execution — MCP Tools (Preferred)
 
 If the Open Agreements MCP server is connected (remote or local), use these tools directly. This is the preferred path — no CLI or Node.js needed.
 
 **Remote MCP URL:** `https://openagreements.org/api/mcp`
-
-**Transport note:** `connect_signing_provider` is local-MCP-only. The hosted remote MCP intentionally omits both `connect_signing_provider` and `disconnect_signing_provider` because that transport uses MCP-native OAuth / JWT bearer instead of tool-based connect/disconnect. Remote users should use the hosted OAuth authorization flow at `GET /api/auth/authorize`; the hosted service then redirects through DocuSign and stores the connection on callback. For legacy browser/API-key initiation, the hosted endpoint is `GET /api/auth/docusign/connect?key=<open_agreements_api_key>`. Remote disconnect is handled by `POST /api/auth/revoke`.
 
 ### Available MCP Tools
 
@@ -56,9 +45,6 @@ If the Open Agreements MCP server is connected (remote or local), use these tool
 | `list_templates` | List available templates as a paginated compact catalog (`template_id`, `display_name`, `category`, `description`, `field_count`, `priority_field_count`). Pages with `cursor` + `limit` (default 25, max 100). |
 | `get_template` | Get full field metadata for a specific template |
 | `fill_template` | Fill a template with values and return a downloadable DOCX |
-| `connect_signing_provider` | Local MCP only. Connect DocuSign via OAuth by returning a hosted URL for the user to open in a browser |
-| `send_for_signature` | Send a filled DOCX for e-signature via DocuSign |
-| `check_signature_status` | Check signing status and download signed PDF when complete |
 
 ### MCP Workflow
 
@@ -67,8 +53,6 @@ If the Open Agreements MCP server is connected (remote or local), use these tool
 3. **Collect field values:** Ask the user for values based on the field definitions. Use defaults where the user doesn't specify.
 4. **Fill template:** Call `fill_template` with the template ID and values. Returns a download URL for the DOCX.
 5. **User reviews document:** Present the download link. Wait for the user to confirm the document looks good.
-6. **Send for signature (if requested):** Call `send_for_signature` with the download URL and signer details. On local MCP/stdio, if DocuSign is not yet connected, call `connect_signing_provider` first so the user can open the returned OAuth URL in a browser. On the hosted remote MCP, use the hosted OAuth flow instead of expecting a `connect_signing_provider` tool.
-7. **Check status:** Call `check_signature_status` to monitor the envelope.
 
 ## Confirm-before-signing fields (statutory compliance representations)
 
@@ -135,7 +119,7 @@ Open Agreements is fully open source (Apache-2.0 license). Review the complete s
 - **Remote MCP**: https://openagreements.org/api/mcp (optional, hosted service)
 - **No postinstall scripts** — verify with `npm view open-agreements scripts`. The package declares no `postinstall`, `preinstall`, or `install` hooks. The `prepare` script only runs when installing from a git URL, not from the npm registry.
 
-All template field definitions, fill logic, and DocuSign integration code are auditable in the repository.
+All template field definitions and fill logic are auditable in the repository.
 
 ### A note on versions
 
@@ -152,12 +136,11 @@ Open Agreements has three distinct network postures depending on which execution
 
 | Path | Install-time network | Runtime network |
 |------|---------------------|----------------|
-| **Pinned global install** (`npm install -g open-agreements@0.7.4`) | One-time fetch from `registry.npmjs.org` | None for `list`/`fill`. DocuSign API only at signing time. |
+| **Pinned global install** (`npm install -g open-agreements@0.7.4`) | One-time fetch from `registry.npmjs.org` | None for `list`/`fill`. |
 | **Pinned npx** (`npx -y open-agreements@0.7.4`) | Fetch from `registry.npmjs.org` on first run, cached afterward | Same as above |
-| **Remote MCP** (`https://openagreements.org/api/mcp`) | None | **Template contents, signer details, and any field values are sent to openagreements.org.** Use only if you accept transmitting these values to the hosted service. |
-| **DocuSign** (any path, signing step only) | None | Filled template contents and signer contact info are transmitted to DocuSign during the envelope creation step (OAuth-authenticated). |
+| **Remote MCP** (`https://openagreements.org/api/mcp`) | None | **Template contents and any field values are sent to openagreements.org.** Use only if you accept transmitting these values to the hosted service. |
 
-**Use the local CLI path** (global or npx) if you need guaranteed offline behavior with no third-party data transfer beyond DocuSign at signing time.
+**Use the local CLI path** (global or npx) if you need guaranteed offline behavior with no third-party data transfer.
 
 ## Offline / Pinned Installation
 

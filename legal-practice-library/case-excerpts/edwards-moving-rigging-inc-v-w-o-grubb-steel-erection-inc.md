@@ -11,9 +11,9 @@ resource: 'https://www.casemine.com/judgement/us/5914ae80add7b04934747bf6'
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/kentucky-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/kentucky'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/kentucky'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/kentucky'
 tags:
   - case-law
   - non-compete
@@ -33,5 +33,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `choice-of-law`, `governing-law-venue-dispute-process`
 - source_cards: `edwards-public-policy-not-repugnant`, `ky-edwards-gov`
-- cited_by: [Non-Compete Agreement Review Checklist — Kentucky](../non-compete/kentucky-review-checklist.md), [Non-Competes in Kentucky](../non-compete/kentucky.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Kentucky](../checklists/non-compete/us/kentucky.md), [Non-Competes in Kentucky](../non-compete/us/kentucky.md)
 - link_to_source: <https://www.casemine.com/judgement/us/5914ae80add7b04934747bf6>

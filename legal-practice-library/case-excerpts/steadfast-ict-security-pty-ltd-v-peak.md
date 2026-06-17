@@ -2,15 +2,20 @@
 type: Case Excerpt
 title: Steadfast ICT Security Pty Ltd v Peak
 description: >-
-  Steadfast ICT Security Pty Ltd v Peak [2021] ACTSC 199 (Mossop J). — quoted in
-  1 document(s).
-citation: 'Steadfast ICT Security Pty Ltd v Peak [2021] ACTSC 199 (Mossop J).'
+  Steadfast ICT Security Pty Ltd v Peak [2021] ACTSC 199 (Mossop J), citing
+  Emeco International Pty Ltd v O'Shea [No 2] [2012] WASC 348; 225 IR 423. —
+  quoted in 2 document(s).
+citation: >-
+  Steadfast ICT Security Pty Ltd v Peak [2021] ACTSC 199 (Mossop J), citing
+  Emeco International Pty Ltd v O'Shea [No 2] [2012] WASC 348; 225 IR 423.
 resource: 'https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/act/ACTSC/2021/199.html'
-timestamp: '2026-06-10'
+timestamp: '2026-06-16'
 document_references:
   - type: Practice Note
+    resource: 'https://openagreements.org/practice-guides/non-compete/au'
+  - type: Practice Note
     resource: >-
-      https://openagreements.org/legal/non-compete/australia-australian-capital-territory
+      https://openagreements.org/practice-guides/non-compete/au/australian-capital-territory
 tags:
   - case-law
   - non-compete
@@ -18,9 +23,9 @@ tags:
 
 # Steadfast ICT Security Pty Ltd v Peak
 
-*Steadfast ICT Security Pty Ltd v Peak [2021] ACTSC 199 (Mossop J).*
+*Steadfast ICT Security Pty Ltd v Peak [2021] ACTSC 199 (Mossop J), citing Emeco International Pty Ltd v O'Shea [No 2] [2012] WASC 348; 225 IR 423.*
 
-Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -30,7 +35,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `cascading-clauses`
 - source_cards: `steadfast-duration-qualified`
-- cited_by: [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/australia-australian-capital-territory.md)
+- cited_by: [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/au/australian-capital-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/act/ACTSC/2021/199.html>
 
 ### steadfast-ict-security-pty-ltd-v-peak-because-the-definition-is-not-temporally-a2d0fa76 {#steadfast-ict-security-pty-ltd-v-peak-because-the-definition-is-not-temporally-a2d0fa76}
@@ -39,7 +44,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`
 - source_cards: `steadfast-client-not-confined`
-- cited_by: [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/australia-australian-capital-territory.md)
+- cited_by: [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/au/australian-capital-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/act/ACTSC/2021/199.html>
 
 ### steadfast-ict-security-pty-ltd-v-peak-each-of-those-is-as-a-9861e226 {#steadfast-ict-security-pty-ltd-v-peak-each-of-those-is-as-a-9861e226}
@@ -48,7 +53,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `enforceability`
 - source_cards: `steadfast-embedded-invalid`, `steadfast-unreasonable-invalid`
-- cited_by: [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/australia-australian-capital-territory.md)
+- cited_by: [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/au/australian-capital-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/act/ACTSC/2021/199.html>
 
 ### steadfast-ict-security-pty-ltd-v-peak-i-am-also-satisfied-that-mr-f2af2da4 {#steadfast-ict-security-pty-ltd-v-peak-i-am-also-satisfied-that-mr-f2af2da4}
@@ -57,7 +62,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `legitimate-interest`
 - source_cards: `steadfast-confidential-breach`
-- cited_by: [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/australia-australian-capital-territory.md)
+- cited_by: [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/au/australian-capital-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/act/ACTSC/2021/199.html>
 
 ### steadfast-ict-security-pty-ltd-v-peak-in-assessing-the-reasonableness-of-the-72babad1 {#steadfast-ict-security-pty-ltd-v-peak-in-assessing-the-reasonableness-of-the-72babad1}
@@ -66,7 +71,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `reasonableness-factors`
 - source_cards: `steadfast-combined-effect`
-- cited_by: [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/australia-australian-capital-territory.md)
+- cited_by: [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/au/australian-capital-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/act/ACTSC/2021/199.html>
 
 ### steadfast-ict-security-pty-ltd-v-peak-in-my-view-the-24-month-restraint-72c66005 {#steadfast-ict-security-pty-ltd-v-peak-in-my-view-the-24-month-restraint-72c66005}
@@ -75,7 +80,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `cascading-clauses`, `enforceability`, `legitimate-interest`, `reasonableness-factors`
 - source_cards: `steadfast-24-month-upheld`, `steadfast-cascade-top-rung`, `steadfast-direct-dealings`, `steadfast-two-year-upheld`
-- cited_by: [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/australia-australian-capital-territory.md)
+- cited_by: [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/au/australian-capital-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/act/ACTSC/2021/199.html>
 
 ### steadfast-ict-security-pty-ltd-v-peak-in-my-view-it-is-not-e34d2b25 {#steadfast-ict-security-pty-ltd-v-peak-in-my-view-it-is-not-e34d2b25}
@@ -84,7 +89,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `employer-breach`
 - source_cards: `steadfast-own-breach-response`
-- cited_by: [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/australia-australian-capital-territory.md)
+- cited_by: [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/au/australian-capital-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/act/ACTSC/2021/199.html>
 
 ### steadfast-ict-security-pty-ltd-v-peak-in-other-words-it-would-not-f8352ceb {#steadfast-ict-security-pty-ltd-v-peak-in-other-words-it-would-not-f8352ceb}
@@ -93,7 +98,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `garden-leave`
 - source_cards: `steadfast-real-remuneration`
-- cited_by: [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/australia-australian-capital-territory.md)
+- cited_by: [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/au/australian-capital-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/act/ACTSC/2021/199.html>
 
 ### steadfast-ict-security-pty-ltd-v-peak-it-also-submitted-that-as-mr-733d8f41 {#steadfast-ict-security-pty-ltd-v-peak-it-also-submitted-that-as-mr-733d8f41}
@@ -102,7 +107,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `cascading-clauses`
 - source_cards: `steadfast-cascade-attack`
-- cited_by: [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/australia-australian-capital-territory.md)
+- cited_by: [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/au/australian-capital-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/act/ACTSC/2021/199.html>
 
 ### steadfast-ict-security-pty-ltd-v-peak-mr-peak-s-course-of-conduct-amounted-1f0a44c2 {#steadfast-ict-security-pty-ltd-v-peak-mr-peak-s-course-of-conduct-amounted-1f0a44c2}
@@ -111,7 +116,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `legitimate-interest`
 - source_cards: `steadfast-fiduciary`
-- cited_by: [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/australia-australian-capital-territory.md)
+- cited_by: [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/au/australian-capital-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/act/ACTSC/2021/199.html>
 
 ### steadfast-ict-security-pty-ltd-v-peak-no-question-of-severance-can-arise-8e065e63 {#steadfast-ict-security-pty-ltd-v-peak-no-question-of-severance-can-arise-8e065e63}
@@ -120,7 +125,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `cascading-clauses`, `court-narrowing`
 - source_cards: `steadfast-no-read-down`, `steadfast-no-severance-cascade`
-- cited_by: [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/australia-australian-capital-territory.md)
+- cited_by: [Non-Competes in Australia](../non-compete/au.md), [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/au/australian-capital-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/act/ACTSC/2021/199.html>
 
 ### steadfast-ict-security-pty-ltd-v-peak-one-factual-issue-relevant-to-the-e7c25477 {#steadfast-ict-security-pty-ltd-v-peak-one-factual-issue-relevant-to-the-e7c25477}
@@ -129,7 +134,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `garden-leave`, `reasonableness-factors`
 - source_cards: `steadfast-salary`, `steadfast-salary-gl`
-- cited_by: [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/australia-australian-capital-territory.md)
+- cited_by: [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/au/australian-capital-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/act/ACTSC/2021/199.html>
 
 ### steadfast-ict-security-pty-ltd-v-peak-reasonableness-does-not-require-precise-053c4bd8 {#steadfast-ict-security-pty-ltd-v-peak-reasonableness-does-not-require-precise-053c4bd8}
@@ -138,7 +143,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `reasonableness-factors`
 - source_cards: `steadfast-precise-concordance`
-- cited_by: [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/australia-australian-capital-territory.md)
+- cited_by: [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/au/australian-capital-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/act/ACTSC/2021/199.html>
 
 ### steadfast-ict-security-pty-ltd-v-peak-so-far-as-the-soliciting-of-58c744aa {#steadfast-ict-security-pty-ltd-v-peak-so-far-as-the-soliciting-of-58c744aa}
@@ -147,7 +152,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `enforceability`
 - source_cards: `steadfast-breach-established`
-- cited_by: [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/australia-australian-capital-territory.md)
+- cited_by: [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/au/australian-capital-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/act/ACTSC/2021/199.html>
 
 ### steadfast-ict-security-pty-ltd-v-peak-the-account-of-profits-is-the-c4b1caf9 {#steadfast-ict-security-pty-ltd-v-peak-the-account-of-profits-is-the-c4b1caf9}
@@ -156,7 +161,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `tolling`
 - source_cards: `steadfast-account-remedy`
-- cited_by: [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/australia-australian-capital-territory.md)
+- cited_by: [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/au/australian-capital-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/act/ACTSC/2021/199.html>
 
 ### steadfast-ict-security-pty-ltd-v-peak-the-claim-for-an-injunction-was-4631e28e {#steadfast-ict-security-pty-ltd-v-peak-the-claim-for-an-injunction-was-4631e28e}
@@ -165,7 +170,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `tolling`
 - source_cards: `steadfast-injunction-elapsed`
-- cited_by: [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/australia-australian-capital-territory.md)
+- cited_by: [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/au/australian-capital-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/act/ACTSC/2021/199.html>
 
 ### steadfast-ict-security-pty-ltd-v-peak-the-validity-of-a-restraint-is-fc2b3e86 {#steadfast-ict-security-pty-ltd-v-peak-the-validity-of-a-restraint-is-fc2b3e86}
@@ -174,5 +179,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `federal-reform`, `garden-leave`, `reasonableness-factors`, `tolling`
 - source_cards: `steadfast-still-governs`, `steadfast-tested-at-contract`, `steadfast-tested-at-contract-gl`, `steadfast-tested-at-contract-tolling`
-- cited_by: [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/australia-australian-capital-territory.md)
+- cited_by: [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/au/australian-capital-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/act/ACTSC/2021/199.html>

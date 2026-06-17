@@ -12,10 +12,9 @@ resource: >-
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: >-
-      https://openagreements.org/legal/non-compete/new-hampshire-review-checklist
+    resource: 'https://openagreements.org/checklists/non-compete/us/new-hampshire'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/new-hampshire'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/new-hampshire'
 tags:
   - case-law
   - non-compete
@@ -35,7 +34,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `independent-contractors`, `remedies`
 - source_cards: `hcc-persuasive-limits`, `nh-hcc-irreparable-injury`
-- cited_by: [Non-Compete Agreement Review Checklist — New Hampshire](../non-compete/new-hampshire-review-checklist.md), [Non-Competes in New Hampshire](../non-compete/new-hampshire.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New Hampshire](../checklists/non-compete/us/new-hampshire.md), [Non-Competes in New Hampshire](../non-compete/us/new-hampshire.md)
 - link_to_source: <https://www.courtlistener.com/opinion/7328330/hcc-specialty-underwriters-inc-v-woodbury/#:~:text=However%2C%20with%20respect%20to%20Woodbury's,favorable%20balance%20of%20the%20equities.>
 
 ### hcc-specialty-underwriters-inc-v-woodbury-therefore-the-court-issues-a-preliminary-35a8e89d {#hcc-specialty-underwriters-inc-v-woodbury-therefore-the-court-issues-a-preliminary-35a8e89d}
@@ -44,5 +43,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `independent-contractors`, `remedies`
 - source_cards: `hcc-nondisclosure-granted`, `nh-hcc-nondisclosure`
-- cited_by: [Non-Compete Agreement Review Checklist — New Hampshire](../non-compete/new-hampshire-review-checklist.md), [Non-Competes in New Hampshire](../non-compete/new-hampshire.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New Hampshire](../checklists/non-compete/us/new-hampshire.md), [Non-Competes in New Hampshire](../non-compete/us/new-hampshire.md)
 - link_to_source: <https://www.courtlistener.com/opinion/7328330/hcc-specialty-underwriters-inc-v-woodbury/#:~:text=Therefore%2C%20the%20court%20issues%20a,provisions%20of%20the%201996%20Agreement.>

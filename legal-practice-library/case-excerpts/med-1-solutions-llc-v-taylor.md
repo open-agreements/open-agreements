@@ -10,9 +10,9 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/indiana-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/indiana'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/indiana'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/indiana'
 tags:
   - case-law
   - non-compete
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `duration-geography-scope`, `indiana-statutory-gates`
 - source_cards: `med1-any-capacity`, `med1-any-capacity-defs`, `med1-any-capacity-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — Indiana](../non-compete/indiana-review-checklist.md), [Non-Competes in Indiana](../non-compete/indiana.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Indiana](../checklists/non-compete/us/indiana.md), [Non-Competes in Indiana](../non-compete/us/indiana.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10283022/med-1-solutions-llc-v-jennifer-taylor/#:~:text=We%20find%20that%20the%20scope,the%20covenant%20is%20unreasonably%20broad.>
 
 ### med-1-solutions-llc-v-taylor-we-hold-that-where-an-at-will-7ca689b0 {#med-1-solutions-llc-v-taylor-we-hold-that-where-an-at-will-7ca689b0}
@@ -41,5 +41,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`, `entire-agreement-amendment-waiver-e-signatures`, `timing-and-execution-acknowledgements`
 - source_cards: `med1-consideration`, `med1-consideration-boilerplate`, `med1-consideration-timing`
-- cited_by: [Non-Compete Agreement Review Checklist — Indiana](../non-compete/indiana-review-checklist.md), [Non-Competes in Indiana](../non-compete/indiana.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Indiana](../checklists/non-compete/us/indiana.md), [Non-Competes in Indiana](../non-compete/us/indiana.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10283022/med-1-solutions-llc-v-jennifer-taylor/#:~:text=We%20hold%20that%2C%20where%20an,consideration%20for%20the%20latter%20agreement.>

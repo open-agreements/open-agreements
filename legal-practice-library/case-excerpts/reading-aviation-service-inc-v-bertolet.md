@@ -10,9 +10,9 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/pennsylvania-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/pennsylvania'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/pennsylvania'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/pennsylvania'
 tags:
   - case-law
   - non-compete
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `definitions`, `restrictive-covenants-each-independently-includable`
 - source_cards: `pa-reading-scrutiny-covs`, `pa-reading-scrutiny-defs`, `reading-aviation-close-scrutiny`
-- cited_by: [Non-Compete Agreement Review Checklist — Pennsylvania](../non-compete/pennsylvania-review-checklist.md), [Non-Competes in Pennsylvania](../non-compete/pennsylvania.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Pennsylvania](../checklists/non-compete/us/pennsylvania.md), [Non-Competes in Pennsylvania](../non-compete/us/pennsylvania.md)
 - link_to_source: <https://www.courtlistener.com/opinion/6390927/reading-aviation-service-inc-v-bertolet/#:~:text=Because%20of%20the%20inherently%20unequal,their%20employers%20to%20close%20scrutiny.>
 
 ### reading-aviation-service-inc-v-bertolet-the-objection-to-such-a-practice-4718aa81 {#reading-aviation-service-inc-v-bertolet-the-objection-to-such-a-practice-4718aa81}
@@ -41,5 +41,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `pa-reading-overreach`, `reading-aviation-overreach`
-- cited_by: [Non-Compete Agreement Review Checklist — Pennsylvania](../non-compete/pennsylvania-review-checklist.md), [Non-Competes in Pennsylvania](../non-compete/pennsylvania.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Pennsylvania](../checklists/non-compete/us/pennsylvania.md), [Non-Competes in Pennsylvania](../non-compete/us/pennsylvania.md)
 - link_to_source: <https://www.courtlistener.com/opinion/6390927/reading-aviation-service-inc-v-bertolet/#:~:text=The%20objection%20to%20such%20a,part%2C%20if%20not%20in%20full.>

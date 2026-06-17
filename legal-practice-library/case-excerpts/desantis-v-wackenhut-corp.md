@@ -9,9 +9,9 @@ resource: 'https://www.courtlistener.com/opinion/2376061/desantis-v-wackenhut-co
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/texas-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/texas'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/texas'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/texas'
 tags:
   - case-law
   - non-compete
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `choice-of-law-forum`, `governing-law-venue-dispute-process`, `parties-and-cover-term-identification`
 - source_cards: `desantis-texas-law`, `tx-desantis-cover`, `tx-desantis-gov`
-- cited_by: [Non-Compete Agreement Review Checklist — Texas](../non-compete/texas-review-checklist.md), [Non-Competes in Texas](../non-compete/texas.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Texas](../checklists/non-compete/us/texas.md), [Non-Competes in Texas](../non-compete/us/texas.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2376061/desantis-v-wackenhut-corp/#:~:text=We%20hold%20that%20Texas%20law%2C,the%20noncompetition%20agreement%20is%20unenforceable.>

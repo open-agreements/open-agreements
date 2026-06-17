@@ -2,9 +2,9 @@
 jurisdiction: "Arkansas"
 slug: arkansas
 countryCode: US
-snapshotAsOf: "2026-06-15"
+snapshotAsOf: "2026-06-17"
 lastReviewed: "2026-06-02"
-canonicalUrl: https://openagreements.org/legal/non-compete/arkansas
+canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/arkansas
 license: CC BY 4.0
 stale: false
 ---
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/arkansas · **Snapshot as of:** 2026-06-15 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/arkansas · **Snapshot as of:** 2026-06-17 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Arkansas[^about]
 
@@ -39,7 +39,7 @@ Arkansas non-compete law under Ark. Code Ann. § 4-75-101, enacted by Act 921 of
 
 **Short answer.** Yes, if the covenant is ancillary to employment, protects a statutory business interest, and is no broader in time and scope than necessary to defend that interest [^q1-aca-enforceable].
 
-For agreements governed by the current statute, Arkansas is a permissible, enforce-if-reasonable state rather than a ban state. Ark. Code Ann. § 4-75-101 lists protectable interests, supplies a two-year duration presumption, allows no defined geographic restriction in some cases, and requires reformation of overbroad covenants [^q1-aca-enforceable][^q1-aca-protectable][^q1-aca-reformation]. For a clause-by-clause pass over a specific agreement against these rules, the [Arkansas non-compete review checklist](/legal/non-compete/arkansas-review-checklist) walks the full covenant suite item by item with each requirement's force level.
+For agreements governed by the current statute, Arkansas is a permissible, enforce-if-reasonable state rather than a ban state. Ark. Code Ann. § 4-75-101 lists protectable interests, supplies a two-year duration presumption, allows no defined geographic restriction in some cases, and requires reformation of overbroad covenants [^q1-aca-enforceable][^q1-aca-protectable][^q1-aca-reformation]. For a clause-by-clause pass over a specific agreement against these rules, the [Arkansas non-compete review checklist](/checklists/non-compete/us/arkansas) walks the full covenant suite item by item with each requirement's force level.
 
 The effective-date line matters. *Box* treated Act 921 as effective July 22, 2015, and said the statute only arguably applied to the agreement executed after that date, while older agreements remained on the pre-Act common-law track [^q1-box-effective-date].
 

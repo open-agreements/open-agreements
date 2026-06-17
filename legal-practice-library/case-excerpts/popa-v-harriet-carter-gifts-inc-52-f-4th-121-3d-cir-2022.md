@@ -10,7 +10,7 @@ resource: >-
 timestamp: '2026-06-07'
 document_references:
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/privacy/pennsylvania'
+    resource: 'https://openagreements.org/practice-guides/privacy/us/pennsylvania'
 tags:
   - case-law
   - privacy
@@ -30,5 +30,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `consumer-lawsuit`
 - source_cards: `case-popa`
-- cited_by: [Pennsylvania Consumer Privacy Law](../privacy/pennsylvania.md)
+- cited_by: [Pennsylvania Consumer Privacy Law](../privacy/us/pennsylvania.md)
 - link_to_source: <https://www.courtlistener.com/opinion/8403630/ashley-popa-v-harriet-carter-gifts-inc/#:~:text=Thus%20if%20someone%20consents%20to,WESCA%20does%20not%20impose%20liability.>

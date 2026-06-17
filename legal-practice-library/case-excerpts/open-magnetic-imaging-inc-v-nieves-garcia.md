@@ -11,9 +11,9 @@ resource: 'https://www.courtlistener.com/opinion/1630166/omi-inc-v-nieves-garcia
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/florida-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/florida'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/florida'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/florida'
 tags:
   - case-law
   - non-compete
@@ -33,5 +33,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`, `timing-and-execution-acknowledgements`
 - source_cards: `q9-omi-consideration`
-- cited_by: [Non-Compete Agreement Review Checklist — Florida](../non-compete/florida-review-checklist.md), [Non-Competes in Florida](../non-compete/florida.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Florida](../checklists/non-compete/us/florida.md), [Non-Competes in Florida](../non-compete/us/florida.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1630166/omi-inc-v-nieves-garcia/#:~:text=In%20fact%2C%20we%20have%20located,it%20after%20employment%20has%20commenced.>

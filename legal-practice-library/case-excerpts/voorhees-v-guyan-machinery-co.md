@@ -9,7 +9,7 @@ resource: 'https://www.courtlistener.com/opinion/1347675/voorhees-v-guyan-machin
 timestamp: '2026-06-02'
 document_references:
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/west-virginia'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/west-virginia'
 tags:
   - case-law
   - non-compete
@@ -29,5 +29,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `employee-noncompetes`
 - source_cards: `voorhees-no-protectable-interest`
-- cited_by: [Non-Competes in West Virginia](../non-compete/west-virginia.md)
+- cited_by: [Non-Competes in West Virginia](../non-compete/us/west-virginia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1347675/voorhees-v-guyan-machinery-co/#:~:text=In%20such%20circumstances%2C%20any%20information,protection%20by%20the%20restrictive%20covenant.>

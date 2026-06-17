@@ -10,9 +10,9 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/vermont-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/vermont'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/vermont'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/vermont'
 tags:
   - case-law
   - non-compete
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `alternatives`, `definitions`, `employee-noncompetes`, `mid-employment-consideration`, `pending-legislation`, `physician-specific-notices-and-carve-outs`, `vermont-statutory-gates`
 - source_cards: `alternatives-andrus-reasonableness-test`, `andrus-health-framework`, `andrus-nda-scrutiny`, `andrus-reasonableness-test`, `andrus-reasonableness-test-drafting`, `andrus-reasonableness-test-pending`, `andrus-test-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — Vermont](../non-compete/vermont-review-checklist.md), [Non-Competes in Vermont](../non-compete/vermont.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Vermont](../checklists/non-compete/us/vermont.md), [Non-Competes in Vermont](../non-compete/us/vermont.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1972913/vermont-electric-supply-company-inc-v-andrus/#:~:text=enforcement%20will%20be%20ordered%20unless,it%20is%20to%20be%20performed.>
 
 ### vermont-electric-supply-co-v-andrus-the-area-involved-was-rutland-county-a617548a {#vermont-electric-supply-co-v-andrus-the-area-involved-was-rutland-county-a617548a}
@@ -41,5 +41,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `reasonableness-test`, `survival`
 - source_cards: `andrus-expiry-survival`, `andrus-five-year-county`, `andrus-five-year-defs`
-- cited_by: [Non-Compete Agreement Review Checklist — Vermont](../non-compete/vermont-review-checklist.md), [Non-Competes in Vermont](../non-compete/vermont.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Vermont](../checklists/non-compete/us/vermont.md), [Non-Competes in Vermont](../non-compete/us/vermont.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1972913/vermont-electric-supply-company-inc-v-andrus/#:~:text=The%20area%20involved%20was%20Rutland,restrictions%20were%20at%20an%20end.>

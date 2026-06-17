@@ -7,7 +7,7 @@ description: >-
   Whether outside counsel can withhold client files, work product, or SaaS
   exports for unpaid invoices, and how retaining liens vary by state.
 resource: >-
-  https://openagreements.org/legal/outside-counsel/counsel-file-withholding-on-unpaid-invoices
+  https://openagreements.org/practice-guides/outside-counsel/counsel-file-withholding-on-unpaid-invoices
 timestamp: '2026-04-20'
 tags:
   - outside-counsel

@@ -9,9 +9,9 @@ resource: 'https://www.courtlistener.com/opinion/2189174/chambers-dobson-inc-v-s
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/nebraska-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/nebraska'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/nebraska'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/nebraska'
 tags:
   - case-law
   - non-compete
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `nebraska-statutory-gates`, `sale-of-business`
 - source_cards: `ne-chambers-pool-gate`, `q6-chambers-reasonable-customer-pool`
-- cited_by: [Non-Compete Agreement Review Checklist — Nebraska](../non-compete/nebraska-review-checklist.md), [Non-Competes in Nebraska](../non-compete/nebraska.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Nebraska](../checklists/non-compete/us/nebraska.md), [Non-Competes in Nebraska](../non-compete/us/nebraska.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2189174/chambers-dobson-inc-v-squier/#:~:text=A%20noncompetition%20covenant%20is%20a,the%20property%20acquired%20by%20Chambers%2DDobson.>
 
 ### chambers-dobson-inc-v-squier-thus-a-covenant-not-to-compete-d14047eb {#chambers-dobson-inc-v-squier-thus-a-covenant-not-to-compete-d14047eb}
@@ -40,5 +40,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `nebraska-statutory-gates`, `sale-of-business`
 - source_cards: `ne-chambers-goodwill-gate`, `q6-chambers-goodwill-sale`
-- cited_by: [Non-Compete Agreement Review Checklist — Nebraska](../non-compete/nebraska-review-checklist.md), [Non-Competes in Nebraska](../non-compete/nebraska.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Nebraska](../checklists/non-compete/us/nebraska.md), [Non-Competes in Nebraska](../non-compete/us/nebraska.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2189174/chambers-dobson-inc-v-squier/#:~:text=Thus%2C%20a%20covenant%20not%20to,full%20value%20of%20acquired%20goodwill.>

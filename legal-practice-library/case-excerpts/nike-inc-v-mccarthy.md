@@ -9,9 +9,9 @@ resource: 'https://www.courtlistener.com/opinion/787342/nike-inc-v-eugene-mccart
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/oregon-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/oregon'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/oregon'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/oregon'
 tags:
   - case-law
   - non-compete
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `oregon-statutory-gates`, `timing-advancement`, `timing-and-execution-acknowledgements`
 - source_cards: `or-gate-nike`, `or-nike-timing`, `q6-nike-timing`
-- cited_by: [Non-Compete Agreement Review Checklist — Oregon](../non-compete/oregon-review-checklist.md), [Non-Competes in Oregon](../non-compete/oregon.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Oregon](../checklists/non-compete/us/oregon.md), [Non-Competes in Oregon](../non-compete/us/oregon.md)
 - link_to_source: <https://www.courtlistener.com/opinion/787342/nike-inc-v-eugene-mccarthy/#:~:text=Construing%20the%20Oregon%20statute%20and,statutory%20requirements%20to%20be%20enforceable.>
 
 ### nike-inc-v-mccarthy-we-also-hold-that-nike-has-c5735e3e {#nike-inc-v-mccarthy-we-also-hold-that-nike-has-c5735e3e}
@@ -40,5 +40,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `protectable-interest`, `restrictive-covenants-each-independently-includable`
 - source_cards: `or-nike-interest-covenants`, `or-nike-interest-defs`, `q7-nike-interest`
-- cited_by: [Non-Compete Agreement Review Checklist — Oregon](../non-compete/oregon-review-checklist.md), [Non-Competes in Oregon](../non-compete/oregon.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Oregon](../checklists/non-compete/us/oregon.md), [Non-Competes in Oregon](../non-compete/us/oregon.md)
 - link_to_source: <https://www.courtlistener.com/opinion/787342/nike-inc-v-eugene-mccarthy/#:~:text=We%20also%20hold%20that%20Nike,information%20McCarthy%20acquired%20at%20Nike.>

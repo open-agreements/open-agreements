@@ -7,9 +7,9 @@ resource: 'https://www.courtlistener.com/opinion/2084488/beilfuss-v-huffy-corp/'
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/wisconsin-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/wisconsin'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/wisconsin'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/wisconsin'
 tags:
   - case-law
   - non-compete
@@ -29,5 +29,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `choice-of-law`, `governing-law-venue-dispute-process`, `parties-and-cover-term-identification`
 - source_cards: `q9-beilfuss`, `wi-beilfuss-choice`, `wi-beilfuss-cover`
-- cited_by: [Non-Compete Agreement Review Checklist — Wisconsin](../non-compete/wisconsin-review-checklist.md), [Non-Competes in Wisconsin](../non-compete/wisconsin.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Wisconsin](../checklists/non-compete/us/wisconsin.md), [Non-Competes in Wisconsin](../non-compete/us/wisconsin.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2084488/beilfuss-v-huffy-corp/#:~:text=We%20hold%20the%20choice%20of%20law%20provision%20is,public%20policy%2C%20while%20Ohio%20does.>

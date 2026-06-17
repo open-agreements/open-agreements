@@ -11,7 +11,7 @@ resource: 'https://indiankanoon.org/doc/187332526/'
 timestamp: '2026-06-03'
 document_references:
   - type: Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/india'
+    resource: 'https://openagreements.org/practice-guides/non-compete/in'
 tags:
   - case-law
   - non-compete
@@ -31,5 +31,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `reasonable-noncompete`
 - source_cards: `varun-tyagi-void`
-- cited_by: [Non-Competes in India](../non-compete/india.md)
+- cited_by: [Non-Competes in India](../non-compete/in.md)
 - link_to_source: <https://indiankanoon.org/doc/187332526/>

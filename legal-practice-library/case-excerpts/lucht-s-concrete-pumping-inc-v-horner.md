@@ -10,9 +10,9 @@ resource: >-
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/colorado-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/colorado'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/colorado'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/colorado'
 tags:
   - case-law
   - non-compete
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `continued-employment-consideration`, `timing-and-execution-acknowledgements`
 - source_cards: `luchts-consideration`, `luchts-continued-employment`
-- cited_by: [Non-Compete Agreement Review Checklist — Colorado](../non-compete/colorado-review-checklist.md), [Non-Competes in Colorado](../non-compete/colorado.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Colorado](../checklists/non-compete/us/colorado.md), [Non-Competes in Colorado](../non-compete/us/colorado.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2454091/luchts-concrete-pumping-inc-v-horner/#:~:text=We%20hold%20that%20an%20employer,consideration%20for%20a%20noncompetition%20agreement>

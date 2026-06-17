@@ -11,7 +11,7 @@ resource: 'https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASC/2020/222.
 timestamp: '2026-06-10'
 document_references:
   - type: Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/australia-south-australia'
+    resource: 'https://openagreements.org/practice-guides/non-compete/au/south-australia'
 tags:
   - case-law
   - non-compete
@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `enforceability`
 - source_cards: `dmytrenko-stricter-view`
-- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/australia-south-australia.md)
+- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/au/south-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASC/2020/222.html>
 
 ### international-cleaning-services-australia-pty-ltd-v-dmytrenko-an-employer-is-not-entitled-to-0b642456 {#international-cleaning-services-australia-pty-ltd-v-dmytrenko-an-employer-is-not-entitled-to-0b642456}
@@ -40,7 +40,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `legitimate-interest`
 - source_cards: `dmytrenko-mere-competition`
-- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/australia-south-australia.md)
+- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/au/south-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASC/2020/222.html>
 
 ### international-cleaning-services-australia-pty-ltd-v-dmytrenko-at-common-law-a-restraint-of-347217f4 {#international-cleaning-services-australia-pty-ltd-v-dmytrenko-at-common-law-a-restraint-of-347217f4}
@@ -49,7 +49,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `enforceability`, `federal-reform`
 - source_cards: `dmytrenko-presumed-void`, `dmytrenko-still-governs`
-- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/australia-south-australia.md)
+- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/au/south-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASC/2020/222.html>
 
 ### international-cleaning-services-australia-pty-ltd-v-dmytrenko-generally-the-existence-of-an-obligation-1b237aea {#international-cleaning-services-australia-pty-ltd-v-dmytrenko-generally-the-existence-of-an-obligation-1b237aea}
@@ -58,7 +58,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `garden-leave`
 - source_cards: `dmytrenko-payment-bargain`
-- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/australia-south-australia.md)
+- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/au/south-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASC/2020/222.html>
 
 ### international-cleaning-services-australia-pty-ltd-v-dmytrenko-if-the-court-is-satisfied-that-5a71c441 {#international-cleaning-services-australia-pty-ltd-v-dmytrenko-if-the-court-is-satisfied-that-5a71c441}
@@ -67,7 +67,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`
 - source_cards: `dmytrenko-greater-protection`
-- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/australia-south-australia.md)
+- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/au/south-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASC/2020/222.html>
 
 ### international-cleaning-services-australia-pty-ltd-v-dmytrenko-in-my-view-clause-10-8-1-is-1364198d {#international-cleaning-services-australia-pty-ltd-v-dmytrenko-in-my-view-clause-10-8-1-is-1364198d}
@@ -76,7 +76,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`
 - source_cards: `dmytrenko-severance-worked`
-- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/australia-south-australia.md)
+- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/au/south-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASC/2020/222.html>
 
 ### international-cleaning-services-australia-pty-ltd-v-dmytrenko-in-the-circumstances-a-12-month-1e358aca {#international-cleaning-services-australia-pty-ltd-v-dmytrenko-in-the-circumstances-a-12-month-1e358aca}
@@ -85,7 +85,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `reasonableness-factors`
 - source_cards: `dmytrenko-twelve-months`
-- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/australia-south-australia.md)
+- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/au/south-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASC/2020/222.html>
 
 ### international-cleaning-services-australia-pty-ltd-v-dmytrenko-in-the-context-of-these-cases-4cf88ec4 {#international-cleaning-services-australia-pty-ltd-v-dmytrenko-in-the-context-of-these-cases-4cf88ec4}
@@ -94,7 +94,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`
 - source_cards: `dmytrenko-blue-pencil`
-- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/australia-south-australia.md)
+- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/au/south-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASC/2020/222.html>
 
 ### international-cleaning-services-australia-pty-ltd-v-dmytrenko-it-does-not-reflect-a-rule-8bd49c06 {#international-cleaning-services-australia-pty-ltd-v-dmytrenko-it-does-not-reflect-a-rule-8bd49c06}
@@ -103,7 +103,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `garden-leave`
 - source_cards: `dmytrenko-no-payment-rule`
-- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/australia-south-australia.md)
+- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/au/south-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASC/2020/222.html>
 
 ### international-cleaning-services-australia-pty-ltd-v-dmytrenko-so-far-as-the-parties-interests-974956a1 {#international-cleaning-services-australia-pty-ltd-v-dmytrenko-so-far-as-the-parties-interests-974956a1}
@@ -112,7 +112,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `reasonableness-factors`
 - source_cards: `dmytrenko-adequate-protection`
-- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/australia-south-australia.md)
+- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/au/south-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASC/2020/222.html>
 
 ### international-cleaning-services-australia-pty-ltd-v-dmytrenko-the-court-should-not-be-the-5eb6f408 {#international-cleaning-services-australia-pty-ltd-v-dmytrenko-the-court-should-not-be-the-5eb6f408}
@@ -121,7 +121,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`
 - source_cards: `dmytrenko-destroyer`
-- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/australia-south-australia.md)
+- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/au/south-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASC/2020/222.html>
 
 ### international-cleaning-services-australia-pty-ltd-v-dmytrenko-the-validity-of-the-covenant-in-8826d474 {#international-cleaning-services-australia-pty-ltd-v-dmytrenko-the-validity-of-the-covenant-in-8826d474}
@@ -130,5 +130,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `garden-leave`, `tolling`
 - source_cards: `dmytrenko-tested-at-contract`, `dmytrenko-tested-at-contract-tolling`
-- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/australia-south-australia.md)
+- cited_by: [Non-Compete Enforceability in South Australia](../non-compete/au/south-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/sa/SASC/2020/222.html>

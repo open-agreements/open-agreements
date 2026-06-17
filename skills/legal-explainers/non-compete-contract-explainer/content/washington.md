@@ -2,9 +2,9 @@
 jurisdiction: "Washington"
 slug: washington
 countryCode: US
-snapshotAsOf: "2026-06-15"
+snapshotAsOf: "2026-06-17"
 lastReviewed: "2026-06-03"
-canonicalUrl: https://openagreements.org/legal/non-compete/washington
+canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/washington
 license: CC BY 4.0
 stale: false
 ---
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/washington · **Snapshot as of:** 2026-06-15 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/washington · **Snapshot as of:** 2026-06-17 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Washington[^about]
 
@@ -159,7 +159,7 @@ The Act expressly does not revoke or impede the development of the common law [^
 
 Washington follows the reasonable-extent rule from *Wood v. May*: a court of equity enforces a restraint against a former employee only to the extent it is reasonable and necessary to protect a legitimate business interest [^woodmay-reasonable-extent-court-narrowing]. *Emerick* applies that to modern covenants, holding that when some terms are unreasonable the entire covenant does not fail — the court may modify it [^emerick-partial].
 
-But under the current statute, reformation is not free. RCW 49.62.080 imposes the $5,000 penalty (or greater actual damages) plus fees whenever a court reforms, rewrites, modifies, or only partially enforces a covenant [^rcw-080-reformation-penalty-court-narrowing]. For a clause-by-clause pass over a specific agreement drafted to these rules, the [Washington non-compete review checklist](/legal/non-compete/washington-review-checklist) walks the full covenant suite item by item with each requirement's force level.
+But under the current statute, reformation is not free. RCW 49.62.080 imposes the $5,000 penalty (or greater actual damages) plus fees whenever a court reforms, rewrites, modifies, or only partially enforces a covenant [^rcw-080-reformation-penalty-court-narrowing]. For a clause-by-clause pass over a specific agreement drafted to these rules, the [Washington non-compete review checklist](/checklists/non-compete/us/washington) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**

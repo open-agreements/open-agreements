@@ -10,9 +10,9 @@ resource: >-
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/new-york-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/new-york'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/new-york'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/new-york'
 tags:
   - case-law
   - non-compete
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `definitions`, `new-york-doctrine-gates`, `protectable-interests`
 - source_cards: `reed-roberts-gate`, `reed-roberts-general-knowledge`, `reed-roberts-routine-knowledge`
-- cited_by: [Non-Compete Agreement Review Checklist — New York](../non-compete/new-york-review-checklist.md), [Non-Competes in New York](../non-compete/new-york.md)
+- cited_by: [Non-Compete Agreement Review Checklist — New York](../checklists/non-compete/us/new-york.md), [Non-Competes in New York](../non-compete/us/new-york.md)
 - link_to_source: <https://www.courtlistener.com/opinion/5682269/reed-roberts-associates-inc-v-strauman/#:~:text=Where%20the%20knowledge%20does%20not,by%20availing%20himself%20of%20opportunity.>

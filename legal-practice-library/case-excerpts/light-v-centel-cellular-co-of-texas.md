@@ -10,9 +10,9 @@ resource: >-
 timestamp: '2026-06-11'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/texas-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/texas'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/texas'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/texas'
 tags:
   - case-law
   - non-compete
@@ -32,5 +32,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `consideration`, `texas-statutory-gates`
 - source_cards: `light-ancillary`, `tx-light-gate`
-- cited_by: [Non-Compete Agreement Review Checklist — Texas](../non-compete/texas-review-checklist.md), [Non-Competes in Texas](../non-compete/texas.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Texas](../checklists/non-compete/us/texas.md), [Non-Competes in Texas](../non-compete/us/texas.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1525150/light-v-centel-cellular-co-of-texas/#:~:text=Although%20Light%20and%20United%20did,of%20that%20otherwise%20enforceable%20agreement.>

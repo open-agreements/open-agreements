@@ -2,9 +2,9 @@
 jurisdiction: "West Virginia"
 slug: west-virginia
 countryCode: US
-snapshotAsOf: "2026-06-15"
+snapshotAsOf: "2026-06-17"
 lastReviewed: "2026-06-02"
-canonicalUrl: https://openagreements.org/legal/non-compete/west-virginia
+canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/west-virginia
 license: CC BY 4.0
 stale: false
 ---
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/west-virginia · **Snapshot as of:** 2026-06-15 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/west-virginia · **Snapshot as of:** 2026-06-17 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in West Virginia[^about]
 
@@ -49,7 +49,7 @@ Recent application points the same way. In *Special Services Bureau*, the court 
 
 **Short answer.** Only after the covenant passes the first screen. West Virginia's signature trap is that a covenant unreasonable on its face is void, and the court will not rescue it by rewriting or partially enforcing it [^reddy-facially-unreasonable-void].
 
-*Reddy* allows tailoring only after a covenant is facially reasonable and the employer proves legitimate interests. If the restraint is facially excessive in time, territory, or apparent purpose, the covenant is out before the court reaches partial enforcement [^reddy-facially-unreasonable-void][^huntington-eye-no-partial-enforcement]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [West Virginia non-compete review checklist](/legal/non-compete/west-virginia-review-checklist) walks the full covenant suite item by item with each requirement's force level.
+*Reddy* allows tailoring only after a covenant is facially reasonable and the employer proves legitimate interests. If the restraint is facially excessive in time, territory, or apparent purpose, the covenant is out before the court reaches partial enforcement [^reddy-facially-unreasonable-void][^huntington-eye-no-partial-enforcement]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [West Virginia non-compete review checklist](/checklists/non-compete/us/west-virginia) walks the full covenant suite item by item with each requirement's force level.
 
 "An employee covenant not to compete is unreasonable on its face if its time or area limitations are excessively broad, or where the covenant appears designed to intimidate employees rather than to protect the employer’s business, and a court should hold any such covenant void and unenforceable, and not undertake even a partial enforcement of it, bearing in mind, however, that a standard of ‘unreasonable on its face’ is to be distinguished from the standard of ‘reasonableness’ used in inquiries adopted by other authorities to address the minor instances of overbreadth to which restrictive covenants are naturally prone."[^huntington-eye-no-partial-enforcement]
 

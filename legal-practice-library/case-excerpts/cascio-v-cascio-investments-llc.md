@@ -10,9 +10,9 @@ resource: >-
 timestamp: '2026-06-12'
 document_references:
   - type: Review Checklist
-    resource: 'https://openagreements.org/legal/non-compete/mississippi-review-checklist'
+    resource: 'https://openagreements.org/checklists/non-compete/us/mississippi'
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/mississippi'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/mississippi'
 tags:
   - case-law
   - non-compete
@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `sale-of-business`
 - source_cards: `cascio-extension-clause-x`
-- cited_by: [Non-Competes in Mississippi](../non-compete/mississippi.md)
+- cited_by: [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10627857/philip-t-cascio-jr-v-cascio-investments-llc-jackie-cascio-pearson-and/#:~:text=%5BCascio%5D%20will%20execute%20a%20non%2Dcompete,Arkansas%2C%20Louisiana%2C%20Tennessee%2C%20and%20Missouri.>
 
 ### cascio-v-cascio-investments-llc-also-injunctive-relief-was-awarded-by-dcfe7cdd {#cascio-v-cascio-investments-llc-also-injunctive-relief-was-awarded-by-dcfe7cdd}
@@ -41,7 +41,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `tolling-during-breach`, `tolling-extension`
 - source_cards: `cascio-extension-effect`, `ms-cascio-effect`
-- cited_by: [Non-Compete Agreement Review Checklist — Mississippi](../non-compete/mississippi-review-checklist.md), [Non-Competes in Mississippi](../non-compete/mississippi.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Mississippi](../checklists/non-compete/us/mississippi.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10627857/philip-t-cascio-jr-v-cascio-investments-llc-jackie-cascio-pearson-and/#:~:text=Also%2C%20injunctive%20relief%20was%20awarded,the%20C%2D%20Rental%20trade%20name.>
 
 ### cascio-v-cascio-investments-llc-further-in-the-event-of-any-84c1c51e {#cascio-v-cascio-investments-llc-further-in-the-event-of-any-84c1c51e}
@@ -50,7 +50,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `tolling-during-breach`, `tolling-extension`
 - source_cards: `cascio-extension-clause`, `ms-cascio-clause`
-- cited_by: [Non-Compete Agreement Review Checklist — Mississippi](../non-compete/mississippi-review-checklist.md), [Non-Competes in Mississippi](../non-compete/mississippi.md)
+- cited_by: [Non-Compete Agreement Review Checklist — Mississippi](../checklists/non-compete/us/mississippi.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10627857/philip-t-cascio-jr-v-cascio-investments-llc-jackie-cascio-pearson-and/#:~:text=Further%2C%20in%20the%20event%20of,terms%20of%20this%20Non%2DCompetition%20Agreement.>
 
 ### cascio-v-cascio-investments-llc-regarding-the-direct-appeal-we-conclude-8a66208e {#cascio-v-cascio-investments-llc-regarding-the-direct-appeal-we-conclude-8a66208e}
@@ -59,5 +59,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `sale-of-business`
 - source_cards: `cascio-affirmed`
-- cited_by: [Non-Competes in Mississippi](../non-compete/mississippi.md)
+- cited_by: [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10627857/philip-t-cascio-jr-v-cascio-investments-llc-jackie-cascio-pearson-and/#:~:text=Regarding%20the%20direct%20appeal%2C%20we,Jackie%20and%20Phyllis%20as%20plaintiffs.>

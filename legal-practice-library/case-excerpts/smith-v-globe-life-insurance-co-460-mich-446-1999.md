@@ -7,7 +7,7 @@ resource: 'https://www.courtlistener.com/opinion/1693300/smith-v-globe-life-insu
 timestamp: '2026-06-11'
 document_references:
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/privacy/michigan'
+    resource: 'https://openagreements.org/practice-guides/privacy/us/michigan'
 tags:
   - case-law
   - privacy
@@ -27,5 +27,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `consumer-lawsuit`
 - source_cards: `q6-smith-exemption`
-- cited_by: [Michigan Consumer Privacy Law](../privacy/michigan.md)
+- cited_by: [Michigan Consumer Privacy Law](../privacy/us/michigan.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1693300/smith-v-globe-life-insurance/#:~:text=Contrary%20to%20the%20%E2%80%9Ccommon%2Dsense%20reading%E2%80%9D,specific%20misconduct%20alleged%20is%20prohibited.>

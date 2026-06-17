@@ -1,13 +1,15 @@
 ---
 type: Case Excerpt
 title: Just Group Ltd v Peck
-description: 'Just Group Ltd v Peck [2016] VSCA 334 (the Court). — quoted in 1 document(s).'
+description: 'Just Group Ltd v Peck [2016] VSCA 334 (the Court). — quoted in 2 document(s).'
 citation: 'Just Group Ltd v Peck [2016] VSCA 334 (the Court).'
 resource: 'https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/vic/VSCA/2016/334.html'
-timestamp: '2026-06-10'
+timestamp: '2026-06-16'
 document_references:
   - type: Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/australia-victoria'
+    resource: 'https://openagreements.org/practice-guides/non-compete/au'
+  - type: Practice Note
+    resource: 'https://openagreements.org/practice-guides/non-compete/au/victoria'
 tags:
   - case-law
   - non-compete
@@ -17,7 +19,7 @@ tags:
 
 *Just Group Ltd v Peck [2016] VSCA 334 (the Court).*
 
-Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -27,16 +29,16 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `enforceability`, `federal-reform`
 - source_cards: `just-presumed-void`, `just-presumed-void-reform`
-- cited_by: [Non-Compete Enforceability in Victoria](../non-compete/australia-victoria.md)
+- cited_by: [Non-Competes in Australia](../non-compete/au.md), [Non-Compete Enforceability in Victoria](../non-compete/au/victoria.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/vic/VSCA/2016/334.html>
 
 ### just-group-ltd-v-peck-however-it-is-not-permissible-for-d60b041b {#just-group-ltd-v-peck-however-it-is-not-permissible-for-d60b041b}
 
 > However, it is not permissible for a court to read down an unduly wide clause in order to preserve its validity.
 
-- supports: `cascading-clauses`, `court-narrowing`, `tolling`
-- source_cards: `just-no-readdown`, `just-no-readdown-cascade`, `just-no-readdown-tolling`
-- cited_by: [Non-Compete Enforceability in Victoria](../non-compete/australia-victoria.md)
+- supports: `cascading-clauses`, `court-narrowing`, `tolling`, `which-jurisdiction`
+- source_cards: `just-no-readdown`, `just-no-readdown-cascade`, `just-no-readdown-jurisdiction`, `just-no-readdown-tolling`
+- cited_by: [Non-Competes in Australia](../non-compete/au.md), [Non-Compete Enforceability in Victoria](../non-compete/au/victoria.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/vic/VSCA/2016/334.html>
 
 ### just-group-ltd-v-peck-it-is-not-for-the-court-d8150e39 {#just-group-ltd-v-peck-it-is-not-for-the-court-d8150e39}
@@ -45,7 +47,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `cascading-clauses`, `court-narrowing`
 - source_cards: `just-no-new-agreement`, `just-no-new-agreement-cascade`
-- cited_by: [Non-Compete Enforceability in Victoria](../non-compete/australia-victoria.md)
+- cited_by: [Non-Competes in Australia](../non-compete/au.md), [Non-Compete Enforceability in Victoria](../non-compete/au/victoria.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/vic/VSCA/2016/334.html>
 
 ### just-group-ltd-v-peck-the-first-limb-of-the-restraint-4e9ccb32 {#just-group-ltd-v-peck-the-first-limb-of-the-restraint-4e9ccb32}
@@ -54,7 +56,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`
 - source_cards: `just-first-limb-invalid`
-- cited_by: [Non-Compete Enforceability in Victoria](../non-compete/australia-victoria.md)
+- cited_by: [Non-Compete Enforceability in Victoria](../non-compete/au/victoria.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/vic/VSCA/2016/334.html>
 
 ### just-group-ltd-v-peck-to-read-down-the-first-limb-3bb2bb6b {#just-group-ltd-v-peck-to-read-down-the-first-limb-3bb2bb6b}
@@ -63,7 +65,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`
 - source_cards: `just-rewrite`
-- cited_by: [Non-Compete Enforceability in Victoria](../non-compete/australia-victoria.md)
+- cited_by: [Non-Competes in Australia](../non-compete/au.md), [Non-Compete Enforceability in Victoria](../non-compete/au/victoria.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/vic/VSCA/2016/334.html>
 
 ### just-group-ltd-v-peck-we-will-grant-leave-to-appeal-0ac5924c {#just-group-ltd-v-peck-we-will-grant-leave-to-appeal-0ac5924c}
@@ -72,5 +74,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`
 - source_cards: `just-dismiss`
-- cited_by: [Non-Compete Enforceability in Victoria](../non-compete/australia-victoria.md)
+- cited_by: [Non-Compete Enforceability in Victoria](../non-compete/au/victoria.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/vic/VSCA/2016/334.html>

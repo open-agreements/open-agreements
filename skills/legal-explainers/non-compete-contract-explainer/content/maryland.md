@@ -2,9 +2,9 @@
 jurisdiction: "Maryland"
 slug: maryland
 countryCode: US
-snapshotAsOf: "2026-06-15"
+snapshotAsOf: "2026-06-17"
 lastReviewed: "2026-06-03"
-canonicalUrl: https://openagreements.org/legal/non-compete/maryland
+canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/maryland
 license: CC BY 4.0
 stale: false
 ---
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/legal/non-compete/maryland · **Snapshot as of:** 2026-06-15 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/maryland · **Snapshot as of:** 2026-06-17 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Maryland[^about]
 
@@ -119,7 +119,7 @@ Scope of the prohibited activity matters as much as miles and months. In *Medisp
 
 *Holloway* describes the typical Maryland response to an invalid portion of a covenant: blue-pencil the violative words and, if what is excised is severable, enforce the rest; otherwise the entire agreement is void [^holloway-blue-pencil]. The traditional, strict version of that rule is mechanical — a court strikes words and enforces what is left only if the remainder still stands as a complete, valid contract [^holloway-mechanical-rule]. Maryland's focus is therefore on severability: the *Holloway* litigation, affirmed in part by the Maryland Supreme Court, turned on whether the covenant could be severed (there, on a client-by-client basis) rather than on a court rewriting the bargain.
 
-*Hebb v. Stump, Harvey & Cook* shows the partial-enforcement side in practice. Where an overbroad restriction is not so interwoven as to be logically inseparable from the rest of the contract, a Maryland court will sever it and enforce the lawful remainder when partial enforcement works no injury to the public and no injustice to the parties [^hebb-severable-partial-enforcement]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Maryland non-compete review checklist](/legal/non-compete/maryland-review-checklist) walks the full covenant suite item by item with each requirement's force level.
+*Hebb v. Stump, Harvey & Cook* shows the partial-enforcement side in practice. Where an overbroad restriction is not so interwoven as to be logically inseparable from the rest of the contract, a Maryland court will sever it and enforce the lawful remainder when partial enforcement works no injury to the public and no injustice to the parties [^hebb-severable-partial-enforcement]. For a clause-by-clause pass over a specific agreement against these drafting rules, the [Maryland non-compete review checklist](/checklists/non-compete/us/maryland) walks the full covenant suite item by item with each requirement's force level.
 
 > [!CAUTION]
 > **Drafting note.**

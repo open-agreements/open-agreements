@@ -5,7 +5,7 @@ description: >-
   Legal risks when replacing contractors with AI, including notice duties,
   misclassification, WARN Act exposure, benefits claims, and tool control.
 resource: >-
-  https://openagreements.org/legal/ai-layoffs/contractor-displacement-ai-efficiency
+  https://openagreements.org/practice-guides/ai-layoffs/contractor-displacement-ai-efficiency
 timestamp: '2026-04-20'
 tags:
   - ai-layoffs

@@ -9,7 +9,7 @@ resource: 'https://www.courtlistener.com/opinion/152690/mayer-hoffman-mccann-pc-
 timestamp: '2026-06-03'
 document_references:
   - type: State Law Practice Note
-    resource: 'https://openagreements.org/legal/non-compete/missouri'
+    resource: 'https://openagreements.org/practice-guides/non-compete/us/missouri'
 tags:
   - case-law
   - non-compete
@@ -29,5 +29,5 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `remedies`
 - source_cards: `mayer-liquidated-damages`
-- cited_by: [Non-Competes in Missouri](../non-compete/missouri.md)
+- cited_by: [Non-Competes in Missouri](../non-compete/us/missouri.md)
 - link_to_source: <https://www.courtlistener.com/opinion/152690/mayer-hoffman-mccann-pc-v-barton/#:~:text=If%20both%20requirements%20are%20met%2C,liquidated%20damages%20provision%20is%20valid.>

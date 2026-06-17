@@ -10,7 +10,7 @@ timestamp: '2026-04-19'
 document_references:
   - type: Practice Note
     resource: >-
-      https://openagreements.org/legal/ai-layoffs/business-rationale-documentation
+      https://openagreements.org/practice-guides/ai-layoffs/business-rationale-documentation
 tags:
   - case-law
   - ai-layoffs

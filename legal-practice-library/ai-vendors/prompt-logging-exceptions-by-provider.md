@@ -5,7 +5,7 @@ description: >-
   Which AI providers offer prompt logging exceptions, what zero data retention
   changes, and what abuse-monitoring logs still remain.
 resource: >-
-  https://openagreements.org/legal/ai-vendors/prompt-logging-exceptions-by-provider
+  https://openagreements.org/practice-guides/ai-vendors/prompt-logging-exceptions-by-provider
 timestamp: '2026-04-20'
 tags:
   - ai-vendors
