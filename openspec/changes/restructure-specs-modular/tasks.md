@@ -1,18 +1,16 @@
 ## 1. Map requirements to new capabilities
 
 - [x] 1.1 Read full `openspec/specs/open-agreements/spec.md` (1,869 lines, 106 requirements)
-- [x] 1.2 Assign each `### Requirement: ...` block to one of: engine, recipes, cli, mcp-contract-templates, closing-checklist, signing, provider-docusign, distribution, authoring, validation, ip-license, quality-gates — OR mark for DELETION (data-model shape-only) — OR mark for EXTRACTION (template-family content → per-template README)
+- [x] 1.2 Assign each `### Requirement: ...` block to one of: engine, recipes, cli, mcp-contract-templates, closing-checklist, distribution, authoring, validation, ip-license, quality-gates — OR mark for DELETION (data-model shape-only) — OR mark for EXTRACTION (template-family content → per-template README)
 - [x] 1.3 Record the mapping in `design.md` for review traceability
 
-## 2. Write ADDED Requirements delta files (12 new capabilities)
+## 2. Write ADDED Requirements delta files (10 new capabilities)
 
 - [x] 2.1 `specs/engine/spec.md` — fill pipeline, sandboxing, DOCX text extraction, computed/derived fields
 - [x] 2.2 `specs/recipes/spec.md` — cleaner, patcher, verifier, source-drift, recipe metadata
 - [x] 2.3 `specs/cli/spec.md` — fill/list/validate/scan/recipe/checklist subcommands, JSON envelope, content-root resolution
 - [x] 2.4 `specs/mcp-contract-templates/spec.md` — list_templates/get_template/fill_template, pagination, MCP envelope contract
 - [x] 2.5 `specs/closing-checklist/spec.md` — checklist data model, JSON Patch lifecycle, rendering, MCP tools
-- [x] 2.6 `specs/signing/spec.md` — SigningProvider interface, envelope lifecycle
-- [x] 2.7 `specs/provider-docusign/spec.md` — DocuSign PKCE OAuth, anchor strings, HMAC webhook
 - [x] 2.8 `specs/distribution/spec.md` — npm packaging, tarball, skill publishing, runtime tarball, registry auth
 - [x] 2.9 `specs/authoring/spec.md` — canonical Markdown DSL, DOCX placeholder semantics
 - [x] 2.10 `specs/validation/spec.md` — template/recipe/metadata validation, severity, patch schema

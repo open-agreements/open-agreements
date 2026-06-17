@@ -76,36 +76,20 @@ flowchart LR
             FillTool["<code>fill_template(<br/>&nbsp;&nbsp;template, values,<br/>&nbsp;&nbsp;output_path, return_mode)</code>"]
         end
 
-        subgraph Sign["<b>3. Sign</b>"]
-            direction TB
-            SignTool["<code>send_for_signature(<br/>&nbsp;&nbsp;file_path, signers,<br/>&nbsp;&nbsp;document_name, api_key)</code>"]
-        end
-
-        subgraph Track["<b>4. Track</b>"]
-            direction TB
-            TrackTool["<code>check_signature_status(<br/>&nbsp;&nbsp;envelope_id, api_key)</code>"]
-        end
-
         Discover --> Fill
-        Fill --> Sign
-        Sign -->|envelope_id| Track
     end
 
-    OutputRight["<b>Signable .docx</b><br/>then <b>signed .pdf</b><br/>on envelope completion"]
-
-    DocuSign["<b>DocuSign</b><br/>draft · review · signers · artifact"]
+    OutputRight["<b>Filled .docx</b><br/>ready to review, sign, and send"]
 
     subgraph Client [" "]
         direction TB
-        Prompt["<b>Prompt</b><br/>'Send a Mutual NDA to acme@example.com'"]
+        Prompt["<b>Prompt</b><br/>'Fill a Mutual NDA for Acme and Beta'"]
         Agent["<b>Coding agent / MCP client</b><br/>Claude Code · Cursor · Gemini CLI"]
         Prompt --> Agent
     end
 
     InputLeft --> Discover
-    Track --> OutputRight
-    SignTool <--> DocuSign
-    TrackTool <--> DocuSign
+    Fill --> OutputRight
     Agent <-->|tool call / tool result| Server
 
     classDef io fill:#f5f5f5,stroke:#888,color:#222
@@ -116,14 +100,14 @@ flowchart LR
     classDef hidden fill:none,stroke:none
     class InputLeft,OutputRight io
     class Server server
-    class Discover,Fill,Sign,Track stage
-    class DiscTool,FillTool,SignTool,TrackTool tools
-    class Prompt,Agent,DocuSign ext
+    class Discover,Fill stage
+    class DiscTool,FillTool tools
+    class Prompt,Agent ext
     class Client hidden
 ```
 <!-- SYNC:architecture-diagram END -->
 
-> *Local stdio MCP shown. The hosted HTTP server at `openagreements.org/api/mcp` exposes the same workflow plus a `search_templates` tool, with JWT-based auth replacing the one-time `connect_signing_provider` step.*
+> *Local stdio MCP shown. The hosted HTTP server at `openagreements.org/api/mcp` exposes the same workflow plus a `search_templates` tool.*
 
 ## Available Templates
 
@@ -232,7 +216,7 @@ npx skills add open-agreements/open-agreements --skill <skill-name>
 
 | Skill | Description |
 |-------|-------------|
-| [open-agreements](https://github.com/open-agreements/open-agreements/tree/main/skills/agreements/open-agreements) | Fill standard legal agreement templates (NDAs, cloud service agreements, SAFEs) and produce signable DOCX files. Supports Common Paper, Bonterms, and Y Combinator templates. Use when the user needs to draft a legal agreement, create an NDA, fill a contract template, or generate a SAFE. Can also send agreements for electronic signature via DocuSign. |
+| [open-agreements](https://github.com/open-agreements/open-agreements/tree/main/skills/agreements/open-agreements) | Fill standard legal agreement templates (NDAs, cloud service agreements, SAFEs) and produce filled DOCX files. Supports Common Paper, Bonterms, and Y Combinator templates. Use when the user needs to draft a legal agreement, create an NDA, fill a contract template, or generate a SAFE. |
 | [nda](https://github.com/open-agreements/open-agreements/tree/main/skills/agreements/nda) | Draft and fill NDA templates — mutual NDA, one-way NDA, confidentiality agreement. Produces signable DOCX files from Common Paper and Bonterms standard forms. Use when user says "NDA," "non-disclosure agreement," "confidentiality agreement," "mutual NDA," or "one-way NDA." |
 | [cloud-service-agreement](https://github.com/open-agreements/open-agreements/tree/main/skills/agreements/cloud-service-agreement) | Draft and fill SaaS agreement templates — cloud contract, MSA, order form, software license, pilot agreement, design partner agreement. Includes variants with SLAs and AI terms. Produces signable DOCX from Common Paper standard forms. Use when user says "SaaS agreement," "cloud contract," "MSA," "order form," "software license," "pilot agreement," or "design partner agreement." |
 | [services-agreement](https://github.com/open-agreements/open-agreements/tree/main/skills/agreements/services-agreement) | Draft and fill services agreement templates — consulting contract, contractor agreement, SOW, statement of work, professional services agreement. Produces signable DOCX files from Common Paper and Bonterms standard forms. Use when user says "consulting contract," "contractor agreement," "SOW," "statement of work," "services agreement," or "freelancer contract." |

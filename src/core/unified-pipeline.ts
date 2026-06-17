@@ -44,7 +44,6 @@ export interface PipelineOptions {
   // prepareFillData options
   coerceBooleans?: boolean;             // default: false
   computeDisplayFields?: (data: Record<string, unknown>) => void;
-  signingTagDefaults?: Record<string, string>;  // defaults for {sig_*} tags
   confirmClauses?: ConfirmClauseDescriptor[];    // confirm= clauses → any_confirmation_pending
 
   // fillDocx options
@@ -153,7 +152,6 @@ export async function runFillPipeline(options: PipelineOptions): Promise<Pipelin
       useBlankPlaceholder: true,
       coerceBooleans,
       computeDisplayFields,
-      signingTagDefaults: options.signingTagDefaults,
       confirmClauses: options.confirmClauses,
     });
 
