@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "template_id": "nvca-stock-purchase-agreement",
+  "template_version": "10-28-2025",
+  "source_sha256": "b2c76452fa82dcda72f1fa9f82ba0ce28ea9445441c897f9cb7ac6663930dcab",
+  "migrated_keys": [
+    "[Insert Company Name]",
+    "[Company name]",
+    "[____________]"
+  ]
+}

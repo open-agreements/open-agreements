@@ -3,7 +3,8 @@ import { homedir } from 'node:os';
 import { join } from 'node:path';
 import { loadRecipeMetadata, loadNormalizeConfig } from '../dist/core/metadata.js';
 import { ensureSourceDocx } from '../dist/core/recipe/downloader.js';
-import { checkRecipeSourceDrift } from '../dist/core/recipe/source-drift.js';
+import { checkRecipeSourceDrift, checkSelectorDrift } from '../dist/core/recipe/source-drift.js';
+import { loadSelectorContracts } from '../dist/core/selectors/index.js';
 
 function parseArgs(argv) {
   const parsed = {
@@ -113,12 +114,22 @@ async function main() {
       continue;
     }
 
+    // Selector-contract drift: resolve each field's occurrence locators against
+    // the source DOCX via safe-docx; any unresolved occurrence / failed assertion
+    // is upstream-form drift and FAILs the canary.
+    const { manifests } = loadSelectorContracts(
+      recipeDir,
+      metadata.fields.map((f) => f.name),
+    );
+    const selectorDrift = await checkSelectorDrift(sourcePath, manifests);
+
     const result = checkRecipeSourceDrift({
       recipeId,
       sourcePath,
       metadata,
       replacements,
       normalizeConfig,
+      selectorDrift,
     });
     report.checked.push(result);
   }
@@ -143,6 +154,12 @@ async function main() {
       }
       if (result.diff.missing_normalize_paragraph_anchors.length > 0) {
         console.log(`    missing normalize paragraphs: ${result.diff.missing_normalize_paragraph_anchors.length}`);
+      }
+      if (result.diff.unresolved_selector_fields.length > 0) {
+        console.log(`    unresolved selector fields: ${result.diff.unresolved_selector_fields.join(', ')}`);
+      }
+      if (result.diff.assertion_failures.length > 0) {
+        console.log(`    selector assertion failures: ${result.diff.assertion_failures.length}`);
       }
       if (result.diff.missing_normalize_paragraph_end_anchors.length > 0) {
         console.log(`    missing normalize paragraph-end anchors: ${result.diff.missing_normalize_paragraph_end_anchors.length}`);

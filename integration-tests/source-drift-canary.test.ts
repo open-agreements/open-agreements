@@ -5,7 +5,8 @@ import { join } from 'node:path';
 import AdmZip from 'adm-zip';
 import { afterEach, describe, expect } from 'vitest';
 import type { NormalizeConfig, RecipeMetadata } from '../src/core/metadata.js';
-import { checkRecipeSourceDrift, computeSourceStructureSignature } from '../src/core/recipe/source-drift.js';
+import { checkRecipeSourceDrift, checkSelectorDrift, computeSourceStructureSignature } from '../src/core/recipe/source-drift.js';
+import type { FieldSelectorManifest } from '../src/core/selectors/index.js';
 import { itAllure } from './helpers/allure-test.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
@@ -193,5 +194,95 @@ describe('source drift canary', () => {
     expect(signature.short_placeholder_count).toBe(1);
     expect(signature.long_clause_count).toBe(1);
     expect(signature.unique_short_placeholders).toContain('[Insert Company Name]');
+  });
+});
+
+const oneAnchorManifest = (assertions?: FieldSelectorManifest['occurrences'][number]['assertions']): FieldSelectorManifest => ({
+  schema_version: 1,
+  field_id: 'company_name',
+  field_label: 'Company Name',
+  description: '',
+  source_template_version: 'v1',
+  occurrences: [{ primary: { kind: 'regex', pattern: '\\[Insert Company Name\\]' }, assertions }],
+  postconditions: [],
+  failure_behavior: 'warn',
+  fixtures: [],
+});
+
+describe('selector drift detection (safe-docx parse path)', () => {
+  it.openspec('OA-SEL-016')('reports no selector drift when every occurrence resolves', async () => {
+    const dir = mkdtempSync(join(tmpdir(), 'oa-selector-drift-ok-'));
+    tempDirs.push(dir);
+    const sourcePath = join(dir, 'source.docx');
+    // Same paragraph set as the passing structural-drift case, so the only
+    // variable under test is the selector drift slice.
+    writeFileSync(sourcePath, buildDocx([
+      '[Insert Company Name]',
+      'Costs of Enforcement',
+      '[Each party will bear its own costs in respect of any disputes arising under this Agreement.]',
+    ]));
+
+    const drift = await checkSelectorDrift(sourcePath, [oneAnchorManifest()]);
+    expect(drift.unresolved_selector_fields).toEqual([]);
+    expect(drift.assertion_failures).toEqual([]);
+
+    const result = checkRecipeSourceDrift({
+      recipeId: 'synthetic',
+      sourcePath,
+      metadata: makeMetadata(sha256Hex(sourcePath)),
+      replacements: { '[Insert Company Name]': '{company_name}' },
+      normalizeConfig: NORMALIZE_CONFIG,
+      selectorDrift: drift,
+    });
+    expect(result.ok).toBe(true);
+  });
+
+  it.openspec('OA-SEL-017')('flags an unresolved field as drift and flips ok to false', async () => {
+    const dir = mkdtempSync(join(tmpdir(), 'oa-selector-drift-missing-'));
+    tempDirs.push(dir);
+    const sourcePath = join(dir, 'source.docx');
+    // Upstream reworded the anchor away — the selector can no longer find it.
+    writeFileSync(sourcePath, buildDocx(['Entered into by the Company (no bracketed anchor).']));
+
+    const drift = await checkSelectorDrift(sourcePath, [oneAnchorManifest()]);
+    expect(drift.unresolved_selector_fields).toContain('company_name');
+
+    const result = checkRecipeSourceDrift({
+      recipeId: 'synthetic',
+      sourcePath,
+      metadata: makeMetadata(sha256Hex(sourcePath)),
+      replacements: { '[Insert Company Name]': '{company_name}' },
+      normalizeConfig: NORMALIZE_CONFIG,
+      selectorDrift: drift,
+    });
+    expect(result.diff.unresolved_selector_fields).toContain('company_name');
+    expect(result.ok).toBe(false);
+  });
+
+  it.openspec('OA-SEL-018')('treats a duplicated anchor (more than one match) as drift', async () => {
+    const dir = mkdtempSync(join(tmpdir(), 'oa-selector-drift-dup-'));
+    tempDirs.push(dir);
+    const sourcePath = join(dir, 'source.docx');
+    writeFileSync(sourcePath, buildDocx([
+      'First [Insert Company Name] here.',
+      'Second [Insert Company Name] there.',
+    ]));
+
+    const drift = await checkSelectorDrift(sourcePath, [oneAnchorManifest()]);
+    expect(drift.unresolved_selector_fields).toContain('company_name');
+  });
+
+  it.openspec('OA-SEL-019')('reports an assertion failure as drift', async () => {
+    const dir = mkdtempSync(join(tmpdir(), 'oa-selector-drift-assert-'));
+    tempDirs.push(dir);
+    const sourcePath = join(dir, 'source.docx');
+    writeFileSync(sourcePath, buildDocx(['Entered into by [Insert Company Name] and [Other Anchor].']));
+
+    // Primary resolves, but the assertion targets a different span → drift.
+    const drift = await checkSelectorDrift(sourcePath, [
+      oneAnchorManifest([{ kind: 'regex', pattern: '\\[Other Anchor\\]' }]),
+    ]);
+    expect(drift.unresolved_selector_fields).toEqual([]);
+    expect(drift.assertion_failures.length).toBeGreaterThan(0);
   });
 });
