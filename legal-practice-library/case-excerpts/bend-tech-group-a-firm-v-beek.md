@@ -2,12 +2,14 @@
 type: Case Excerpt
 title: Bend-Tech Group (A Firm) v Beek
 description: >-
-  Bend-Tech Group (A Firm) v Beek [2015] WASC 491 (Pritchard J). — quoted in 1
+  Bend-Tech Group (A Firm) v Beek [2015] WASC 491 (Pritchard J). — quoted in 2
   document(s).
 citation: 'Bend-Tech Group (A Firm) v Beek [2015] WASC 491 (Pritchard J).'
 resource: 'https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASC/2015/491.html'
-timestamp: '2026-06-10'
+timestamp: '2026-06-16'
 document_references:
+  - type: Practice Note
+    resource: 'https://openagreements.org/practice-guides/non-compete/au'
   - type: Practice Note
     resource: >-
       https://openagreements.org/practice-guides/non-compete/au/western-australia
@@ -20,7 +22,7 @@ tags:
 
 *Bend-Tech Group (A Firm) v Beek [2015] WASC 491 (Pritchard J).*
 
-Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -28,9 +30,9 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 > A restraint will be reasonable in relation to the restraining party if it is necessary for the adequate protection of that party and reasonable in relation to the party restrained if it preserves the fullest liberty of action consistent with that protection.
 
-- supports: `enforceability`, `garden-leave`
+- supports: `enforceability`, `garden-leave`, `reasonableness`
 - source_cards: `bendtech-reasonableness-test`, `bendtech-twin-test-gl`
-- cited_by: [Non-Compete Enforceability in Western Australia](../non-compete/au/western-australia.md)
+- cited_by: [Non-Competes in Australia](../non-compete/au.md), [Non-Compete Enforceability in Western Australia](../non-compete/au/western-australia.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASC/2015/491.html>
 
 ### bend-tech-group-a-firm-v-beek-although-the-question-of-reasonableness-70a51eb0 {#bend-tech-group-a-firm-v-beek-although-the-question-of-reasonableness-70a51eb0}

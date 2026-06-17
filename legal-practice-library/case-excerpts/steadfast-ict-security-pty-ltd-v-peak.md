@@ -2,12 +2,17 @@
 type: Case Excerpt
 title: Steadfast ICT Security Pty Ltd v Peak
 description: >-
-  Steadfast ICT Security Pty Ltd v Peak [2021] ACTSC 199 (Mossop J). — quoted in
-  1 document(s).
-citation: 'Steadfast ICT Security Pty Ltd v Peak [2021] ACTSC 199 (Mossop J).'
+  Steadfast ICT Security Pty Ltd v Peak [2021] ACTSC 199 (Mossop J), citing
+  Emeco International Pty Ltd v O'Shea [No 2] [2012] WASC 348; 225 IR 423. —
+  quoted in 2 document(s).
+citation: >-
+  Steadfast ICT Security Pty Ltd v Peak [2021] ACTSC 199 (Mossop J), citing
+  Emeco International Pty Ltd v O'Shea [No 2] [2012] WASC 348; 225 IR 423.
 resource: 'https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/act/ACTSC/2021/199.html'
-timestamp: '2026-06-10'
+timestamp: '2026-06-16'
 document_references:
+  - type: Practice Note
+    resource: 'https://openagreements.org/practice-guides/non-compete/au'
   - type: Practice Note
     resource: >-
       https://openagreements.org/practice-guides/non-compete/au/australian-capital-territory
@@ -18,9 +23,9 @@ tags:
 
 # Steadfast ICT Security Pty Ltd v Peak
 
-*Steadfast ICT Security Pty Ltd v Peak [2021] ACTSC 199 (Mossop J).*
+*Steadfast ICT Security Pty Ltd v Peak [2021] ACTSC 199 (Mossop J), citing Emeco International Pty Ltd v O'Shea [No 2] [2012] WASC 348; 225 IR 423.*
 
-Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -120,7 +125,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 - supports: `cascading-clauses`, `court-narrowing`
 - source_cards: `steadfast-no-read-down`, `steadfast-no-severance-cascade`
-- cited_by: [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/au/australian-capital-territory.md)
+- cited_by: [Non-Competes in Australia](../non-compete/au.md), [Non-Compete Enforceability in the Australian Capital Territory](../non-compete/au/australian-capital-territory.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/act/ACTSC/2021/199.html>
 
 ### steadfast-ict-security-pty-ltd-v-peak-one-factual-issue-relevant-to-the-e7c25477 {#steadfast-ict-security-pty-ltd-v-peak-one-factual-issue-relevant-to-the-e7c25477}

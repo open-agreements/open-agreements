@@ -2,7 +2,7 @@
 jurisdiction: "Nebraska"
 slug: nebraska
 countryCode: US
-snapshotAsOf: "2026-06-16"
+snapshotAsOf: "2026-06-17"
 lastReviewed: "2026-06-06"
 canonicalUrl: https://openagreements.org/practice-guides/privacy/us/nebraska
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/nebraska · **Snapshot as of:** 2026-06-16 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/nebraska · **Snapshot as of:** 2026-06-17 · License: CC BY 4.0 · © openagreements.org
 
 # Nebraska Consumer Privacy Law (Data Privacy Act)[^about]
 
