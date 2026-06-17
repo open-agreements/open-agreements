@@ -89,11 +89,11 @@ ${extraBody}
 By signing this agreement, each party agrees to the obligations above.
 
 <!-- oa:signer id=company kind=entity capacity=through_representative label="Company" -->
-**Company**
+Company: {company_name}
 
 Signature: _______________
-Print Name: {company_name}
-Title: _______________
+Signatory Name: {company_signatory_name}
+Title: {company_signatory_title}
 Date: _______________
 
 <!-- oa:signer id=recipient kind=individual capacity=personal label="Recipient" -->
@@ -702,19 +702,51 @@ Body.
     expect(rendered.markdown).toContain('{END-FOR signer}');
   });
 
-  it.openspec('OA-FIL-029')('allows asymmetric signer rows within entity-plus-individual blocks', () => {
+  it.openspec('OA-FIL-029')('draws the entity legal name above the signature line; individual keeps Print Name', () => {
     const style = loadStyleProfile(stylePath);
-    const asymmetricSource = buildCanonicalSource().replace(
-      'Print Name: {recipient_name}',
-      'Name: {recipient_name}'
-    );
+    const compiled = compileCanonicalSourceString(buildCanonicalSource(), 'inline entity-name canonical source');
+    const [entitySigner, individualSigner] = compiled.contractSpec.sections.signature.signers;
 
-    const compiled = compileCanonicalSourceString(asymmetricSource, 'inline asymmetric signer canonical source');
+    // The entity's legal name is authored as a `<Label>: {field}` row whose label
+    // equals the signer label; distinct Signatory Name + Title rows replace the
+    // old `Print Name: {entity_name}` conflation. The individual keeps Print Name.
+    expect(entitySigner.rows.map((row: { id: string }) => row.id)).toEqual([
+      'company',
+      'signature',
+      'signatory-name',
+      'title',
+      'date',
+    ]);
+    expect(individualSigner.rows.map((row: { id: string }) => row.id)).toEqual([
+      'signature',
+      'print-name',
+      'date',
+    ]);
+
     const rendered = renderFromValidatedSpec(compiled.contractSpec, style);
+    // Markdown: the entity name leads the block above the line (no bold header);
+    // the individual block keeps the bold header and Print Name. (Scope to the
+    // signature section — Defined Terms legitimately renders `**Company**`.)
+    const signatureMarkdown = rendered.markdown.slice(rendered.markdown.indexOf('## Signatures'));
+    expect(signatureMarkdown).toContain('Company: {company_name}');
+    expect(signatureMarkdown).toContain('Signatory Name: {company_signatory_name}');
+    expect(signatureMarkdown).toContain('Title: {company_signatory_title}');
+    expect(signatureMarkdown).not.toContain('**Company**');
+    expect(signatureMarkdown).not.toContain('Print Name: {company_name}');
+    expect(signatureMarkdown).toContain('**Recipient**');
+    expect(signatureMarkdown).toContain('Print Name: {recipient_name}');
+  });
 
-    expect(compiled.contractSpec.sections.signature.signers[0].rows.map((row: { id: string }) => row.id)).toContain('title');
-    expect(compiled.contractSpec.sections.signature.signers[1].rows.map((row: { id: string }) => row.id)).not.toContain('title');
-    expect(rendered.markdown).toContain('Name: {recipient_name}');
+  it.openspec('OA-FIL-029')('fails loud when an entity signer has no label-matching legal-name line to promote', () => {
+    const style = loadStyleProfile(stylePath);
+    // Drop the `Company: {company_name}` line so the entity signer has no
+    // legal-name line to draw above the signature line.
+    const missingHeaderSource = buildCanonicalSource().replace('Company: {company_name}\n\n', '');
+
+    const compiled = compileCanonicalSourceString(missingHeaderSource, 'inline missing-header canonical source');
+    expect(() => renderFromValidatedSpec(compiled.contractSpec, style)).toThrow(
+      /entity signer "Company" must author exactly one line labelled "Company:"/
+    );
   });
 
   it.openspec('OA-TMP-035')('renders signer-mode output and omits alias metadata from legal text', () => {
@@ -726,8 +758,13 @@ Body.
       mode: 'signers',
       arrangement: 'entity-plus-individual',
     });
-    expect(rendered.markdown).toContain('**Company**');
-    expect(rendered.markdown).toContain('**Recipient**');
+    // Entity signer draws the legal name above the line: no bold party header,
+    // the promoted `<Label>: {field}` line leads the block instead. (Scope to the
+    // signature section — Defined Terms legitimately renders `**Company**`.)
+    const signatureMarkdown = rendered.markdown.slice(rendered.markdown.indexOf('## Signatures'));
+    expect(signatureMarkdown).not.toContain('**Company**');
+    expect(signatureMarkdown).toContain('Company: {company_name}');
+    expect(signatureMarkdown).toContain('**Recipient**');
     expect(rendered.markdown).toContain('| **Confidentiality** | |');
     expect(rendered.markdown).toContain('| Purpose | {purpose} |');
     expect(rendered.markdown).not.toContain('Confidentiality — Purpose');

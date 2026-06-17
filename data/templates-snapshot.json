@@ -12418,6 +12418,24 @@
           "default_value_rationale": null
         },
         {
+          "name": "company_signatory_name",
+          "type": "string",
+          "required": false,
+          "section": "Parties",
+          "description": "Full name of the authorized signatory signing for the company",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "company_signatory_title",
+          "type": "string",
+          "required": false,
+          "section": "Parties",
+          "description": "Title of the authorized signatory signing for the company",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
           "name": "employee_name",
           "type": "string",
           "required": false,
@@ -12619,6 +12637,24 @@
           "default_value_rationale": null
         },
         {
+          "name": "employer_signatory_name",
+          "type": "string",
+          "required": false,
+          "section": "Parties",
+          "description": "Full name of the authorized signatory signing for the employer",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "employer_signatory_title",
+          "type": "string",
+          "required": false,
+          "section": "Parties",
+          "description": "Title of the authorized signatory signing for the employer",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
           "name": "employee_name",
           "type": "string",
           "required": false,
@@ -12743,6 +12779,26 @@
           "section": "Parties",
           "description": "Legal name of the employer",
           "display_label": "Employer",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "employer_signatory_name",
+          "type": "string",
+          "required": false,
+          "section": "Parties",
+          "description": "Full name of the authorized signatory signing for the employer",
+          "display_label": "Employer Signatory",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "employer_signatory_title",
+          "type": "string",
+          "required": false,
+          "section": "Parties",
+          "description": "Title of the authorized signatory signing for the employer",
+          "display_label": "Employer Signatory Title",
           "default": null,
           "default_value_rationale": null
         },
@@ -13095,6 +13151,26 @@
           "section": "Parties",
           "description": "Legal name of the employer",
           "display_label": "Employer",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "employer_signatory_name",
+          "type": "string",
+          "required": false,
+          "section": "Parties",
+          "description": "Full name of the authorized signatory signing for the employer",
+          "display_label": "Employer Signatory",
+          "default": null,
+          "default_value_rationale": null
+        },
+        {
+          "name": "employer_signatory_title",
+          "type": "string",
+          "required": false,
+          "section": "Parties",
+          "description": "Title of the authorized signatory signing for the employer",
+          "display_label": "Employer Signatory Title",
           "default": null,
           "default_value_rationale": null
         },

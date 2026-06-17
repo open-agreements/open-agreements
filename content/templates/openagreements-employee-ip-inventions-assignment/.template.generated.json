@@ -179,19 +179,24 @@
           "capacity": "through_representative",
           "rows": [
             {
+              "id": "company",
+              "label": "Company",
+              "value": "{company_name}"
+            },
+            {
               "id": "signature",
               "label": "Signature",
               "value": ""
             },
             {
-              "id": "print-name",
-              "label": "Print Name",
-              "value": "{company_name}"
+              "id": "signatory-name",
+              "label": "Signatory Name",
+              "value": "{company_signatory_name}"
             },
             {
               "id": "title",
               "label": "Title",
-              "value": ""
+              "value": "{company_signatory_title}"
             },
             {
               "id": "date",
