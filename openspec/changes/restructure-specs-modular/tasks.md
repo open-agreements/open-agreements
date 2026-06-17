@@ -1,10 +1,10 @@
 ## 1. Map requirements to new capabilities
 
 - [x] 1.1 Read full `openspec/specs/open-agreements/spec.md` (1,869 lines, 106 requirements)
-- [x] 1.2 Assign each `### Requirement: ...` block to one of: engine, recipes, cli, mcp-contract-templates, closing-checklist, signing, provider-docusign, distribution, authoring, validation, ip-license, quality-gates — OR mark for DELETION (data-model shape-only) — OR mark for EXTRACTION (template-family content → per-template README)
+- [x] 1.2 Assign each `### Requirement: ...` block to one of: engine, recipes, cli, mcp-contract-templates, closing-checklist, distribution, authoring, validation, ip-license, quality-gates — OR mark for DELETION (data-model shape-only) — OR mark for EXTRACTION (template-family content → per-template README)
 - [x] 1.3 Record the mapping in `design.md` for review traceability
 
-## 2. Write ADDED Requirements delta files (12 new capabilities)
+## 2. Write ADDED Requirements delta files (10 new capabilities)
 
 - [x] 2.1 `specs/engine/spec.md` — fill pipeline, sandboxing, DOCX text extraction, computed/derived fields
 - [x] 2.2 `specs/recipes/spec.md` — cleaner, patcher, verifier, source-drift, recipe metadata

@@ -96,6 +96,7 @@ flowchart LR
     classDef server fill:#eff6ff,stroke:#3b82f6,color:#1e3a8a
     classDef stage fill:#eef2ff,stroke:#6366f1,color:#1e1b4b
     classDef tools fill:#ecfdf5,stroke:#10b981,color:#064e3b
+    classDef ext fill:#ddd6fe,stroke:#7c3aed,color:#3b0764
     classDef hidden fill:none,stroke:none
     class InputLeft,OutputRight io
     class Server server
