@@ -6,7 +6,7 @@ import { basename, dirname, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
-const REPO_ROOT = resolve(SCRIPT_DIR, '..');
+export const REPO_ROOT = resolve(SCRIPT_DIR, '..');
 const SKILLS_ROOT = join(REPO_ROOT, 'skills');
 const VALID_TARGETS = new Set(['smithery', 'clawhub', 'both']);
 const VALID_SCOPES = new Set(['changed', 'all', 'selected']);
@@ -169,7 +169,7 @@ function requireValue(flag, argv, index) {
 // SKILL.md; category directories never do.
 const MAX_SKILL_DEPTH = 2;
 
-function listSkillDirectories() {
+export function listSkillDirectories() {
   return findSkillDirs(SKILLS_ROOT, 0)
     .sort((left, right) => left.localeCompare(right))
     .map((directory) => readSkillMetadata(directory));
@@ -230,7 +230,7 @@ function dropInternalSkills(skills) {
   return skills.filter((skill) => !skill.internal);
 }
 
-function resolveSelectedSkills(allSkills, options) {
+export function resolveSelectedSkills(allSkills, options) {
   const skillsBySlug = new Map(allSkills.map((skill) => [skill.slug, skill]));
 
   if (options.scope === 'all') {
@@ -263,6 +263,12 @@ function resolveSelectedSkills(allSkills, options) {
     .map((line) => line.trim())
     .filter(Boolean);
 
+  return selectChangedSkills(allSkills, changedPaths);
+}
+
+// Map a list of changed repo-relative paths to the skills they belong to.
+// Pure (no git/I/O) so the changed-scope filtering can be tested directly.
+export function selectChangedSkills(allSkills, changedPaths) {
   const changedSlugs = new Set();
   for (const path of changedPaths) {
     const skill = allSkills.find((candidate) =>
@@ -276,7 +282,7 @@ function resolveSelectedSkills(allSkills, options) {
   return dropInternalSkills(allSkills.filter((skill) => changedSlugs.has(skill.slug)));
 }
 
-function buildCommands(skill, options, shortSha) {
+export function buildCommands(skill, options, shortSha) {
   const commands = [];
 
   if (options.target === 'smithery' || options.target === 'both') {
@@ -407,9 +413,11 @@ function shellQuote(value) {
   return `'${value.replace(/'/g, `'\\''`)}'`;
 }
 
-try {
-  main();
-} catch (error) {
-  console.error(error instanceof Error ? error.message : String(error));
-  process.exit(1);
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  try {
+    main();
+  } catch (error) {
+    console.error(error instanceof Error ? error.message : String(error));
+    process.exit(1);
+  }
 }

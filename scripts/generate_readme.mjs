@@ -260,7 +260,10 @@ function renderTemplate(template, replacements) {
   return output;
 }
 
-function main() {
+// Assemble the full README markdown from the template plus live repo metadata
+// and return it as a string. Pure (no file writes) so tests can call it
+// repeatedly to assert determinism and compare against the committed README.
+export function buildReadme() {
   const template = readFileSync(README_TEMPLATE_PATH, "utf-8").trim();
   const rendered = renderTemplate(template, {
     CONTENTS: renderContents(),
@@ -271,15 +274,19 @@ function main() {
     LINKS: renderLinks(),
   });
 
-  const output = [
+  return [
     "<!-- This file is generated from README.template.md by scripts/generate_readme.mjs. Do not edit README.md directly. -->",
     "",
     rendered,
     "",
   ].join("\n");
+}
 
-  writeFileSync(README_PATH, output);
+function main() {
+  writeFileSync(README_PATH, buildReadme());
   console.log(`Generated ${README_PATH}`);
 }
 
-main();
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  main();
+}
