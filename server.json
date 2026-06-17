@@ -3,13 +3,13 @@
   "name": "io.github.open-agreements/open-agreements",
   "title": "Open Agreements",
   "description": "Fill standard legal agreement templates (NDAs, SAFEs, NVCA docs, employment) as DOCX files.",
-  "version": "0.7.7",
+  "version": "0.8.0",
   "websiteUrl": "https://openagreements.org",
   "packages": [
     {
       "registryType": "npm",
       "identifier": "@open-agreements/contract-templates-mcp",
-      "version": "0.7.7",
+      "version": "0.8.0",
       "transport": { "type": "stdio" },
       "runtimeHint": "npx",
       "environmentVariables": []
