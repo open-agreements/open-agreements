@@ -5,7 +5,8 @@ description: >-
   Real-world privacy-policy phrasings labeled by the detector for
   REQ-privacy-law.privacy-policy.disclose-rights-catalog, mined from the public
   Fortune 500 corpus.
-resource: 'https://openagreements.org/legal/privacy/us#consumer-rights-disclosures'
+resource: >-
+  https://openagreements.org/practice-guides/privacy/us#consumer-rights-disclosures
 tags:
   - privacy-policy
   - disclose-rights-catalog
@@ -14,7 +15,7 @@ tags:
 
 # Disclose rights catalog — example phrasings
 
-Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](https://openagreements.org/legal/privacy/us#consumer-rights-disclosures). 12 conforming exemplar(s) plus contrast cases, mined from the public privacy-policy corpus and labeled by the detector. Each excerpt is the span the detector matched, quoted verbatim from the source policy (whitespace normalized) where the original text could be recovered (#758), otherwise the detector's normalized span.
+Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](https://openagreements.org/practice-guides/privacy/us#consumer-rights-disclosures). 12 conforming exemplar(s) plus contrast cases, mined from the public privacy-policy corpus and labeled by the detector. Each excerpt is the span the detector matched, quoted verbatim from the source policy (whitespace normalized) where the original text could be recovered (#758), otherwise the detector's normalized span.
 
 ## Example phrasings
 

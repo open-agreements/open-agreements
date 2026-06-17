@@ -2,7 +2,7 @@
 jurisdiction: "Louisiana"
 slug: louisiana
 countryCode: US
-snapshotAsOf: "2026-06-16"
+snapshotAsOf: "2026-06-17"
 lastReviewed: "2026-06-11"
 canonicalUrl: https://openagreements.org/practice-guides/privacy/us/louisiana
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/louisiana · **Snapshot as of:** 2026-06-16 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/louisiana · **Snapshot as of:** 2026-06-17 · License: CC BY 4.0 · © openagreements.org
 
 # Louisiana Consumer Privacy Law (LDPA)[^about]
 
