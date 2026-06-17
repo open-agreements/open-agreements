@@ -12,9 +12,6 @@
       "primary": { "kind": "regex", "pattern": "\\[Company name\\]" }
     },
     {
-      "scope": [
-        { "kind": "section", "headingRegex": "PREFERRED STOCK PURCHASE AGREEMENT" }
-      ],
       "primary": { "kind": "regex", "pattern": "\\[____________\\]" }
     }
   ],
@@ -23,6 +20,6 @@
   "fixtures": [
     { "occurrence": 0, "anchor": "[Insert Company Name]", "note": "bracketed insert anchor" },
     { "occurrence": 1, "anchor": "[Company name]", "note": "defined-term occurrence" },
-    { "occurrence": 2, "anchor": "[____________]", "note": "preamble blank, scoped to the agreement title section to disambiguate from other blanks" }
+    { "occurrence": 2, "anchor": "[____________]", "note": "preamble blank; globally unique 12-underscore token in the source, so a bare regex resolves it deterministically (a section scope would not exist in synthetic fixtures and is unnecessary while it stays unique — a future duplicate would surface as drift)" }
   ]
 }
