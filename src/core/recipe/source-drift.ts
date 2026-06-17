@@ -3,6 +3,7 @@ import { createHash } from 'node:crypto';
 import AdmZip from 'adm-zip';
 import type { NormalizeConfig, RecipeMetadata } from '../metadata.js';
 import { parseReplacementKey } from './replacement-keys.js';
+import { resolveSelectorContracts, type FieldSelectorManifest } from '../selectors/index.js';
 
 const SHORT_PLACEHOLDER_MAX = 80;
 
@@ -19,6 +20,46 @@ export interface SourceDriftDiff {
   missing_normalize_heading_anchors: string[];
   missing_normalize_paragraph_anchors: string[];
   missing_normalize_paragraph_end_anchors: string[];
+  /** Selector fields with at least one occurrence that did not resolve in the source. */
+  unresolved_selector_fields: string[];
+  /** Human-readable assertion failures (field → kind/detail) from selector resolution. */
+  assertion_failures: string[];
+}
+
+/** Selector-drift slice resolved against the source DOCX via safe-docx. */
+export interface SelectorDriftResult {
+  unresolved_selector_fields: string[];
+  assertion_failures: string[];
+}
+
+/**
+ * Resolve every selector field's occurrence locators against the SOURCE DOCX
+ * (safe-docx parse path) and report drift: any unresolved occurrence or failed
+ * assertion means an upstream change broke a selector. This is the standing
+ * "did the form change under us?" gate; it runs at canary time, not fill time.
+ */
+export async function checkSelectorDrift(
+  sourcePath: string,
+  manifests: FieldSelectorManifest[],
+): Promise<SelectorDriftResult> {
+  if (manifests.length === 0) {
+    return { unresolved_selector_fields: [], assertion_failures: [] };
+  }
+  const { fields } = await resolveSelectorContracts(sourcePath, manifests);
+  const unresolved: string[] = [];
+  const assertionFailures: string[] = [];
+  for (const field of fields) {
+    if (field.unresolved) unresolved.push(field.field_id);
+    for (const failure of field.assertionFailures) {
+      assertionFailures.push(
+        `${field.field_id}[occ ${failure.occurrenceIndex}] ${failure.kind}: ${failure.detail ?? 'mismatch'}`,
+      );
+    }
+  }
+  return {
+    unresolved_selector_fields: [...new Set(unresolved)].sort(),
+    assertion_failures: assertionFailures.sort(),
+  };
 }
 
 export interface SourceDriftCheckResult {
@@ -97,8 +138,10 @@ export function checkRecipeSourceDrift(input: {
   metadata: RecipeMetadata;
   replacements: Record<string, string>;
   normalizeConfig?: NormalizeConfig;
+  /** Pre-computed selector drift (from {@link checkSelectorDrift}); folded into diff + ok. */
+  selectorDrift?: SelectorDriftResult;
 }): SourceDriftCheckResult {
-  const { recipeId, sourcePath, metadata, replacements, normalizeConfig } = input;
+  const { recipeId, sourcePath, metadata, replacements, normalizeConfig, selectorDrift } = input;
   const paragraphs = extractDocumentParagraphs(sourcePath);
   const documentText = paragraphs.join('\n');
   const actualSha = computeSha256Hex(sourcePath);
@@ -150,13 +193,17 @@ export function checkRecipeSourceDrift(input: {
     missing_normalize_heading_anchors: missingNormalizeHeadingAnchors,
     missing_normalize_paragraph_anchors: missingNormalizeParagraphAnchors,
     missing_normalize_paragraph_end_anchors: missingNormalizeParagraphEndAnchors,
+    unresolved_selector_fields: selectorDrift?.unresolved_selector_fields ?? [],
+    assertion_failures: selectorDrift?.assertion_failures ?? [],
   };
 
   const ok = hashMatch
     && diff.missing_replacement_anchor_groups.length === 0
     && diff.missing_normalize_heading_anchors.length === 0
     && diff.missing_normalize_paragraph_anchors.length === 0
-    && diff.missing_normalize_paragraph_end_anchors.length === 0;
+    && diff.missing_normalize_paragraph_end_anchors.length === 0
+    && diff.unresolved_selector_fields.length === 0
+    && diff.assertion_failures.length === 0;
 
   return {
     recipe_id: recipeId,

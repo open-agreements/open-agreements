@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "field_id": "company_name",
+  "field_label": "Company Name",
+  "description": "Full legal name of the company. Appears in the NVCA SPA via three heterogeneous placeholders: the preamble blank, the bracketed 'Insert Company Name' anchor, and the defined-term '[Company name]'.",
+  "source_template_version": "10-28-2025",
+  "occurrences": [
+    {
+      "primary": { "kind": "regex", "pattern": "\\[Insert Company Name\\]" }
+    },
+    {
+      "primary": { "kind": "regex", "pattern": "\\[Company name\\]" }
+    },
+    {
+      "scope": [
+        { "kind": "section", "headingRegex": "PREFERRED STOCK PURCHASE AGREEMENT" }
+      ],
+      "primary": { "kind": "regex", "pattern": "\\[____________\\]" }
+    }
+  ],
+  "postconditions": ["no_unresolved_placeholder", "all_occurrences_identical", "no_double_dollar"],
+  "failure_behavior": "warn",
+  "fixtures": [
+    { "occurrence": 0, "anchor": "[Insert Company Name]", "note": "bracketed insert anchor" },
+    { "occurrence": 1, "anchor": "[Company name]", "note": "defined-term occurrence" },
+    { "occurrence": 2, "anchor": "[____________]", "note": "preamble blank, scoped to the agreement title section to disambiguate from other blanks" }
+  ]
+}
