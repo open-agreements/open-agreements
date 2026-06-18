@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "field_id": "minimum_shares_initial_closing",
+  "field_label": "Minimum Shares at Initial Closing",
+  "description": "Minimum number of Shares that must be sold at the Initial Closing. Appears in two optional condition clauses (Purchasers' and Company's obligations) with different blank widths; each occurrence is captured by its exact underscore count.",
+  "source_template_version": "10-28-2025",
+  "occurrences": [
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "A minimum of\\s(\\[_________\\])\\sShares",
+        "group": 1
+      }
+    },
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "A minimum of\\s(\\[_______\\])\\sShares",
+        "group": 1
+      }
+    }
+  ],
+  "postconditions": [
+    "no_unresolved_placeholder",
+    "no_double_dollar"
+  ],
+  "failure_behavior": "warn",
+  "fixtures": [
+    {
+      "occurrence": 0,
+      "anchor": "A minimum of [_________] Shares",
+      "note": "Purchasers' conditions clause; 9-underscore blank"
+    },
+    {
+      "occurrence": 1,
+      "anchor": "A minimum of [_______] Shares",
+      "note": "Company's conditions clause; 7-underscore blank"
+    }
+  ]
+}
