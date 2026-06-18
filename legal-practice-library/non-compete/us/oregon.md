@@ -224,7 +224,7 @@ The reach is also retroactive. The 2025 law applies to qualifying medical-licens
 
 **Short answer.** It is a separate, expressly lawful tool that penalizes competition only by forfeiting unpaid bonus compensation. ORS 653.295 excludes bonus restriction agreements from the non-compete checklist and defines them so that the only penalty for competing is forfeiture of profit sharing or other bonus compensation not yet paid [^q12-ors-653-295-bonus-carveout][^q12-ors-653-295-bonus-def].
 
-Because a bonus restriction agreement does not bar the employee from working, it sits outside the non-compete requirements. The statute confirms these agreements are lawful and enforceable.
+Because a bonus restriction agreement does not bar the employee from working, it sits outside the non-compete requirements. The statute makes these agreements lawful and allows Oregon courts to enforce them, but that statutory permission does not by itself guarantee enforceability — the agreement still has to satisfy the ordinary contract-law limits that apply to any term.
 
 "Subsections (1) and (3) of this section do not apply to: (a) Bonus restriction agreements, which are lawful agreements that may be enforced by the courts in this state; or (b) A covenant not to solicit employees of the employer or solicit or transact business with customers of the employer."[^q12-ors-653-295-bonus-carveout]
 
