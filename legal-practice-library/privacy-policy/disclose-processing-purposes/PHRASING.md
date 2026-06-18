@@ -83,10 +83,10 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-processing-purpose
 > We may use temporary session cookies, which are terminated when you close your browser session, to store certain personal information you provide
 
 - conformance: conforming
-- source: [APA](https://apacorp.com/privacy)
+- source: [APA](https://apacorp.com/privacy-policy/)
 - detected_by: A→B→C within gap
 - captured: 2026-06-15T19:34:23.938Z
-- link_to_source: <https://apacorp.com/privacy>
+- link_to_source: <https://apacorp.com/privacy-policy/>
 
 ### AT&T {#at-t}
 
@@ -103,10 +103,10 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-processing-purpose
 > we use Personal Information When we share Personal Information Additional information for California residents Additional information for health care professionals Privacy of children Your privacy choices Data security
 
 - conformance: conforming
-- source: [AbbVie](https://privacy-id.abbvie.com/abbvie-id/)
+- source: [AbbVie](https://privacy.abbvie/privacy-policies/us-privacy-policy.html)
 - detected_by: A→B→C within gap
 - captured: 2026-06-15T19:34:23.938Z
-- link_to_source: <https://privacy-id.abbvie.com/abbvie-id/>
+- link_to_source: <https://privacy.abbvie/privacy-policies/us-privacy-policy.html>
 
 ### Abbott Laboratories {#abbott-laboratories}
 

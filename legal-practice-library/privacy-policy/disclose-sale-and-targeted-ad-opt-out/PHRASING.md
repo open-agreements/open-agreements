@@ -173,10 +173,10 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-sale-and-targeted-
 > opt-out
 
 - conformance: non-conforming
-- source: [APA](https://apacorp.com/privacy)
+- source: [APA](https://apacorp.com/privacy-policy/)
 - detected_by: A only; no action
 - captured: 2026-06-15T19:34:23.938Z
-- link_to_source: <https://apacorp.com/privacy>
+- link_to_source: <https://apacorp.com/privacy-policy/>
 
 ### Alcoa {#alcoa}
 
