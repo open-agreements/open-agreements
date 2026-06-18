@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "field_id": "dividend_rate_percent",
+  "field_label": "Dividend Rate Percent",
+  "description": "Annual dividend rate percentage on Preferred Stock",
+  "source_template_version": "10-1-2025",
+  "occurrences": [
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "Stock,\\s+(\\[8\\])",
+        "group": 1
+      }
+    }
+  ],
+  "postconditions": [
+    "no_unresolved_placeholder",
+    "no_double_dollar"
+  ],
+  "failure_behavior": "warn",
+  "fixtures": []
+}

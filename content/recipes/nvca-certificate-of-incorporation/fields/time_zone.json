@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "field_id": "time_zone",
+  "field_label": "Time Zone",
+  "description": "Time zone for notices and deadlines (e.g., Eastern, Pacific)",
+  "source_template_version": "10-1-2025",
+  "occurrences": [
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "p\\.m\\.\\s+(\\[Eastern/Pacific\\])",
+        "group": 1
+      }
+    }
+  ],
+  "postconditions": [
+    "no_unresolved_placeholder",
+    "no_double_dollar"
+  ],
+  "failure_behavior": "warn",
+  "fixtures": []
+}

@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "field_id": "par_value",
+  "field_label": "Par Value",
+  "description": "Par value per share of common and preferred stock",
+  "source_template_version": "10-1-2025",
+  "occurrences": [
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "Stock,\\s+\\$(\\[_____\\])",
+        "group": 1
+      }
+    },
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "Stock,\\s+\\$(\\[______\\])",
+        "group": 1
+      }
+    },
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "of\\s+(\\[\\$0\\.001\\])",
+        "group": 1
+      }
+    }
+  ],
+  "postconditions": [
+    "no_unresolved_placeholder",
+    "no_double_dollar"
+  ],
+  "failure_behavior": "warn",
+  "fixtures": []
+}

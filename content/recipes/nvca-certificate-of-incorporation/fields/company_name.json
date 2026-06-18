@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "field_id": "company_name",
+  "field_label": "Company Name",
+  "description": "Full legal name of the corporation",
+  "source_template_version": "10-1-2025",
+  "occurrences": [
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "the\\s+name\\s+of\\s+this\\s+corporation\\s+is\\s+(\\[_______________\\])",
+        "group": 1
+      }
+    },
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "The\\s+name\\s+of\\s+this\\s+corporation\\s+is\\s+(\\[_______________\\])",
+        "group": 1
+      }
+    }
+  ],
+  "postconditions": [
+    "no_unresolved_placeholder",
+    "no_double_dollar"
+  ],
+  "failure_behavior": "warn",
+  "fixtures": []
+}

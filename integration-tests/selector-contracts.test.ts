@@ -7,6 +7,7 @@ import AdmZip from 'adm-zip';
 import { resolveRecipeDir } from '../src/utils/paths.js';
 import { loadCleanConfig, loadRecipeMetadata } from '../src/core/metadata.js';
 import replacements from '../content/recipes/nvca-stock-purchase-agreement/replacements.json' with { type: 'json' };
+import coiReplacements from '../content/recipes/nvca-certificate-of-incorporation/replacements.json' with { type: 'json' };
 import { cleanDocument } from '../src/core/recipe/cleaner.js';
 import { patchDocument } from '../src/core/recipe/patcher.js';
 import {
@@ -51,8 +52,17 @@ function textOf(docxPath: string): string {
   return [...xml.matchAll(/<w:t[^>]*>([^<]*)<\/w:t>/g)].map((m) => m[1]).join('');
 }
 
+function cachedSourcePathFor(recipeId: string): string {
+  return join(homedir(), '.open-agreements', 'cache', recipeId, 'source.docx');
+}
+
 function cachedSourcePath(): string {
-  return join(homedir(), '.open-agreements', 'cache', 'nvca-stock-purchase-agreement', 'source.docx');
+  return cachedSourcePathFor('nvca-stock-purchase-agreement');
+}
+
+/** First `{field_id}` tag in a replacement value (CoI values may carry trailing literal text). */
+function fieldOfValue(value: string): string | null {
+  return value.match(/\{([a-zA-Z0-9_]+)\}/)?.[1] ?? null;
 }
 
 describe('loadSelectorContracts', () => {
@@ -204,6 +214,99 @@ describeWithSource('SPA `>`-anchor field migration parity (#476)', () => {
       try {
         const cleaned = join(dir, 'cleaned.docx');
         await cleanDocument(cachedSourcePath(), cleaned, loadCleanConfig(recipeDir));
+
+        const legacy = join(dir, 'legacy.docx');
+        await patchDocument(cleaned, legacy, legacyKeys);
+
+        const selector = join(dir, 'selector.docx');
+        await applySelectorContracts(cleaned, selector, [manifest]);
+
+        const legacyText = textOf(legacy);
+        const selectorText = textOf(selector);
+        const tag = new RegExp(`\\{${field}\\}`, 'g');
+        expect((legacyText.match(tag) ?? []).length).toBe(expectedSpans);
+        // The strong gate: identical whole-document text ⇒ selector hit the exact legacy spans.
+        expect(selectorText).toBe(legacyText);
+      } finally {
+        rmSync(dir, { recursive: true, force: true });
+      }
+    });
+  }
+});
+
+// ---------------------------------------------------------------------------
+// NVCA Certificate of Incorporation (CoI) `>`-anchor migration.
+//
+// The CoI's auto-generated replacements.json is messier than the SPA's: many `>` keys are dead
+// duplicates (their bracketed context never co-locates with the target, so the legacy
+// `replaceFirstAfterContext` never fires) and several fields are actually filled by a co-located
+// SIMPLE (non-`>`) key. So `migrated_keys` groups by the field a key targets (the first `{tag}` in
+// its value), spanning both `>` and simple keys. Two fields are PARTIALLY migrated (only their
+// byte-parity-expressible occurrence): `series_designation` and `strategic_partnership_exception_shares`.
+// Fields whose every fill rewrites surrounding literal text (`liquidation_preference_multiple`,
+// `dividend_formula_prefix`), a span crossing a Word field (`no_redemption_clause`), or a computed
+// non-metadata field (`or_officer_clause`) are deliberately left on the legacy path — see PR scope.
+// ---------------------------------------------------------------------------
+const COI = 'nvca-certificate-of-incorporation';
+
+describe('loadSelectorContracts (CoI)', () => {
+  it('loads every real nvca CoI field manifest + template manifest', () => {
+    const recipeDir = resolveRecipeDir(COI);
+    const fieldNames = loadRecipeMetadata(recipeDir).fields.map((f) => f.name);
+    const { manifests, templateManifest } = loadSelectorContracts(recipeDir, fieldNames);
+    // 28 fields migrated (content-only); see header note for the deferrals.
+    expect(manifests).toHaveLength(28);
+    expect(templateManifest?.migrated_keys).toHaveLength(74);
+    // every field_id is a real metadata field (loadSelectorContracts already enforces this, but assert
+    // the join key explicitly) and every migrated key is a real replacements.json key (no drift/typos).
+    const metaFields = new Set(fieldNames);
+    for (const m of manifests) {
+      expect(metaFields, `${m.field_id} not in metadata.yaml`).toContain(m.field_id);
+    }
+    for (const key of templateManifest!.migrated_keys) {
+      expect(coiReplacements, `migrated key ${JSON.stringify(key)} missing`).toHaveProperty([key]);
+    }
+    // every migrated key resolves to exactly one of the 28 manifest fields via its first `{tag}`.
+    const manifestIds = new Set(manifests.map((m) => m.field_id));
+    for (const key of templateManifest!.migrated_keys) {
+      const field = fieldOfValue((coiReplacements as Record<string, string>)[key]);
+      expect(manifestIds, `migrated key ${JSON.stringify(key)} → ${field}`).toContain(field);
+    }
+  });
+});
+
+const describeWithCoiSource = existsSync(cachedSourcePathFor(COI)) ? describe : describe.skip;
+
+describeWithCoiSource('CoI `>`-anchor field migration parity', () => {
+  const recipeDir = resolveRecipeDir(COI);
+  const fieldNames = loadRecipeMetadata(recipeDir).fields.map((f) => f.name);
+  const { manifests, templateManifest } = loadSelectorContracts(recipeDir, fieldNames);
+  const migratedKeys = new Set(templateManifest?.migrated_keys ?? []);
+  // All migrated keys (>'s AND simple) grouped by the field they target (first `{tag}` in the value).
+  const legacyKeysByField = new Map<string, Record<string, string>>();
+  for (const [key, value] of Object.entries(coiReplacements as Record<string, string>)) {
+    if (!migratedKeys.has(key)) continue;
+    const field = fieldOfValue(value);
+    if (!field) continue;
+    legacyKeysByField.set(field, { ...(legacyKeysByField.get(field) ?? {}), [key]: value });
+  }
+
+  for (const manifest of manifests) {
+    const field = manifest.field_id;
+    const expectedSpans = manifest.occurrences.length;
+    it(`[${field}] selector patch is byte-identical to legacy patch (${expectedSpans} span(s))`, async () => {
+      const legacyKeys = legacyKeysByField.get(field)!;
+      expect(legacyKeys, `no migrated legacy keys for ${field}`).toBeDefined();
+
+      // Drift surface: every occurrence must resolve against the raw source.
+      const rawRes = await resolveSelectorContracts(cachedSourcePathFor(COI), [manifest]);
+      expect(rawRes.fields[0].unresolved, `${field} unresolved against raw source`).toBe(false);
+      expect(rawRes.fields[0].assertionFailures, `${field} assertion failures`).toHaveLength(0);
+
+      const dir = mkdtempSync(join(tmpdir(), `coi-parity-${field}-`));
+      try {
+        const cleaned = join(dir, 'cleaned.docx');
+        await cleanDocument(cachedSourcePathFor(COI), cleaned, loadCleanConfig(recipeDir));
 
         const legacy = join(dir, 'legacy.docx');
         await patchDocument(cleaned, legacy, legacyKeys);
