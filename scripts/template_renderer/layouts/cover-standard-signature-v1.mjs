@@ -838,6 +838,17 @@ function clauseParagraphs(index, clauseItem, style, opts = {}) {
   return core;
 }
 
+// Signature-table vertical rhythm. Defined as renderer constants (not in the
+// shared style profile) so tightening them does not fan the preview-freshness
+// trigger out to templates that don't render signature tables. The original
+// values rendered too airy / loosely spaced; these roughly halve the per-row
+// vertical space.
+const SIG_CELL_VMARGIN_TWIPS = 80; // cell top/bottom padding (was 216)
+const SIG_HEADER_BOTTOM_MARGIN_TWIPS = 48; // header/name cell bottom padding (was 120)
+const SIG_LINE_SPACING_TWIPS = 264; // line height inside signature cells (was style.spacing.line = 340)
+const SIGNATURE_ROW_HEIGHT_TWIPS = 340; // non-signing rows, ATLEAST (was style.sizes.signature_row_height = 690)
+const SIGNATURE_LINE_ROW_HEIGHT_TWIPS = 500; // taller signing row, ATLEAST (was 864)
+
 function signatureLabelCell(label, hint, style, nilBorder) {
   return new TableCell({
     borders: {
@@ -846,12 +857,12 @@ function signatureLabelCell(label, hint, style, nilBorder) {
       bottom: nilBorder,
       right: nilBorder,
     },
-    margins: { top: 216, left: 115, bottom: 216, right: 115 },
+    margins: { top: SIG_CELL_VMARGIN_TWIPS, left: 115, bottom: SIG_CELL_VMARGIN_TWIPS, right: 115 },
     verticalAlign: VerticalAlign.CENTER,
     children: [
       new Paragraph({
         style: 'Normal',
-        spacing: { after: hint ? 10 : 0, line: style.spacing.line },
+        spacing: { after: hint ? 10 : 0, line: SIG_LINE_SPACING_TWIPS },
         children: [
           new TextRun({
             text: label,
@@ -866,7 +877,7 @@ function signatureLabelCell(label, hint, style, nilBorder) {
         ? [
             new Paragraph({
               style: 'Normal',
-              spacing: { after: 0, line: style.spacing.line },
+              spacing: { after: 0, line: SIG_LINE_SPACING_TWIPS },
               children: [
                 new TextRun({
                   text: hint,
@@ -890,13 +901,13 @@ function signatureHeaderCell(text, style, nilBorder) {
       bottom: nilBorder,
       right: nilBorder,
     },
-    margins: { top: 216, left: 115, bottom: 120, right: 115 },
+    margins: { top: SIG_CELL_VMARGIN_TWIPS, left: 115, bottom: SIG_HEADER_BOTTOM_MARGIN_TWIPS, right: 115 },
     verticalAlign: VerticalAlign.CENTER,
     children: [
       new Paragraph({
         style: 'Normal',
         alignment: AlignmentType.CENTER,
-        spacing: { after: 0, line: style.spacing.line },
+        spacing: { after: 0, line: SIG_LINE_SPACING_TWIPS },
         children: [
           new TextRun({
             text,
@@ -919,12 +930,12 @@ function signatureLineCell(value, style, nilBorder, ruleBorder, topBorder = rule
       bottom: ruleBorder,
       right: nilBorder,
     },
-    margins: { top: 216, left: 115, bottom: 216, right: 115 },
+    margins: { top: SIG_CELL_VMARGIN_TWIPS, left: 115, bottom: SIG_CELL_VMARGIN_TWIPS, right: 115 },
     verticalAlign: VerticalAlign.CENTER,
     children: [
       new Paragraph({
         style: 'Normal',
-        spacing: { after: 0, line: style.spacing.line },
+        spacing: { after: 0, line: SIG_LINE_SPACING_TWIPS },
         children: [
           new TextRun({
             text: value,
@@ -946,7 +957,7 @@ function signatureSpacerCell(nilBorder) {
       bottom: nilBorder,
       right: nilBorder,
     },
-    margins: { top: 216, left: 0, bottom: 216, right: 0 },
+    margins: { top: SIG_CELL_VMARGIN_TWIPS, left: 0, bottom: SIG_CELL_VMARGIN_TWIPS, right: 0 },
     verticalAlign: VerticalAlign.CENTER,
     children: [new Paragraph('')],
   });
@@ -980,7 +991,7 @@ function dualPartySignatureTable({ leftHeader, rightHeader, rows }, style, nilBo
       }),
       ...rows.map((row) =>
         new TableRow({
-          height: { value: style.sizes.signature_row_height, rule: HeightRule.ATLEAST },
+          height: { value: SIGNATURE_ROW_HEIGHT_TWIPS, rule: HeightRule.ATLEAST },
           children: [
             signatureLabelCell(row.label, row.hint, style, nilBorder),
             signatureLineCell(row.leftValue ?? '', style, nilBorder, row.leftLined === false ? nilBorder : ruleBorder),
@@ -1019,14 +1030,12 @@ function twoPartySignatureTable(signatureSpec, style, nilBorder, ruleBorder) {
 // fan the preview-freshness trigger out to every template that merely references
 // the style (consent, checklist, working-group) even though their rendering is
 // unaffected. Twips; ATLEAST so content can still expand.
-const SIGNATURE_LINE_ROW_HEIGHT_TWIPS = 864;
-
 // The `Signature` row is taller than the other signature rows so the ruled ink
 // line has room to actually sign on; every other row keeps the standard height.
-function signatureRowHeight(row, style) {
+function signatureRowHeight(row) {
   return row.label.trim().toLowerCase() === 'signature'
     ? SIGNATURE_LINE_ROW_HEIGHT_TWIPS
-    : style.sizes.signature_row_height;
+    : SIGNATURE_ROW_HEIGHT_TWIPS;
 }
 
 // Right-hand cell for the promoted entity-name row: the entity's legal name sits
@@ -1035,12 +1044,12 @@ function signatureRowHeight(row, style) {
 function entityNameCell(value, style, nilBorder) {
   return new TableCell({
     borders: { top: nilBorder, left: nilBorder, bottom: nilBorder, right: nilBorder },
-    margins: { top: 216, left: 115, bottom: 120, right: 115 },
+    margins: { top: SIG_CELL_VMARGIN_TWIPS, left: 115, bottom: SIG_HEADER_BOTTOM_MARGIN_TWIPS, right: 115 },
     verticalAlign: VerticalAlign.CENTER,
     children: [
       new Paragraph({
         style: 'Normal',
-        spacing: { after: 0, line: style.spacing.line },
+        spacing: { after: 0, line: SIG_LINE_SPACING_TWIPS },
         children: [
           new TextRun({
             text: value,
@@ -1082,7 +1091,7 @@ function onePartySignatureTable(signatureSpec, style, nilBorder, ruleBorder) {
       }),
       ...signatureSpec.rows.map((row, index) =>
         new TableRow({
-          height: { value: signatureRowHeight(row, style), rule: HeightRule.ATLEAST },
+          height: { value: signatureRowHeight(row), rule: HeightRule.ATLEAST },
           children: [
             signatureLabelCell(row.label, row.hint, style, nilBorder),
             signatureLineCell(
@@ -1138,7 +1147,7 @@ function entitySignerTable(signer, style, nilBorder, ruleBorder) {
       }),
       ...ruledRows.map((row) =>
         new TableRow({
-          height: { value: signatureRowHeight(row, style), rule: HeightRule.ATLEAST },
+          height: { value: signatureRowHeight(row), rule: HeightRule.ATLEAST },
           children: [
             signatureLabelCell(row.label, row.hint, style, nilBorder),
             signatureLineCell(row.value ?? '', style, nilBorder, ruleBorder),
