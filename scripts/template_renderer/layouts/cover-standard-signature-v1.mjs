@@ -1012,6 +1012,49 @@ function twoPartySignatureTable(signatureSpec, style, nilBorder, ruleBorder) {
   );
 }
 
+// The `Signature` row is taller than the other signature rows so the ruled ink
+// line has room to actually sign on. Defined here as a layout constant rather
+// than in the shared style profile on purpose: the taller line is specific to
+// cover-standard signature tables, and putting it in the shared style JSON would
+// fan the preview-freshness trigger out to every template that merely references
+// the style (consent, checklist, working-group) even though their rendering is
+// unaffected. Twips; ATLEAST so content can still expand.
+const SIGNATURE_LINE_ROW_HEIGHT_TWIPS = 864;
+
+// The `Signature` row is taller than the other signature rows so the ruled ink
+// line has room to actually sign on; every other row keeps the standard height.
+function signatureRowHeight(row, style) {
+  return row.label.trim().toLowerCase() === 'signature'
+    ? SIGNATURE_LINE_ROW_HEIGHT_TWIPS
+    : style.sizes.signature_row_height;
+}
+
+// Right-hand cell for the promoted entity-name row: the entity's legal name sits
+// ABOVE the signature line, so it carries no rule (top or bottom) and is bold to
+// read as the bound party rather than a fill-in.
+function entityNameCell(value, style, nilBorder) {
+  return new TableCell({
+    borders: { top: nilBorder, left: nilBorder, bottom: nilBorder, right: nilBorder },
+    margins: { top: 216, left: 115, bottom: 120, right: 115 },
+    verticalAlign: VerticalAlign.CENTER,
+    children: [
+      new Paragraph({
+        style: 'Normal',
+        spacing: { after: 0, line: style.spacing.line },
+        children: [
+          new TextRun({
+            text: value,
+            font: style.fonts.body,
+            size: 18,
+            bold: true,
+            color: style.colors.ink,
+          }),
+        ],
+      }),
+    ],
+  });
+}
+
 function onePartySignatureTable(signatureSpec, style, nilBorder, ruleBorder) {
   return new Table({
     width: { size: 10070, type: WidthType.DXA },
@@ -1034,7 +1077,57 @@ function onePartySignatureTable(signatureSpec, style, nilBorder, ruleBorder) {
       }),
       ...signatureSpec.rows.map((row) =>
         new TableRow({
-          height: { value: style.sizes.signature_row_height, rule: HeightRule.ATLEAST },
+          height: { value: signatureRowHeight(row, style), rule: HeightRule.ATLEAST },
+          children: [
+            signatureLabelCell(row.label, row.hint, style, nilBorder),
+            signatureLineCell(row.value ?? '', style, nilBorder, ruleBorder),
+          ],
+        })
+      ),
+    ],
+  });
+}
+
+// Entity signer block: the entity's legal name is drawn ABOVE the signature line
+// (a no-rule header row whose left cell is the caps party label), and the human
+// who signs on the entity's behalf is captured by the remaining ruled rows
+// (`Signature`, `Signatory Name`, `Title`, `Date`). The entity-name line is
+// authored in the template as a `Label: value` row whose label equals the signer
+// `label` (e.g. `Employer: {employer_name}`); exactly one such row is required.
+function entitySignerTable(signer, style, nilBorder, ruleBorder) {
+  const isHeaderRow = (row) => row.label.trim().toLowerCase() === signer.label.trim().toLowerCase();
+  const headerRows = signer.rows.filter(isHeaderRow);
+  if (headerRows.length !== 1) {
+    throw new Error(
+      `cover-standard-signature-v1 entity signer "${signer.label}" must author exactly one line ` +
+        `labelled "${signer.label}:" carrying the entity legal name (drawn above the signature ` +
+        `line); found ${headerRows.length}.`
+    );
+  }
+  const ruledRows = signer.rows.filter((row) => !isHeaderRow(row));
+
+  return new Table({
+    width: { size: 10070, type: WidthType.DXA },
+    layout: TableLayoutType.FIXED,
+    columnWidths: style.table_widths.signature_one_party,
+    borders: {
+      top: nilBorder,
+      left: nilBorder,
+      bottom: nilBorder,
+      right: nilBorder,
+      insideH: nilBorder,
+      insideV: nilBorder,
+    },
+    rows: [
+      new TableRow({
+        children: [
+          signatureLabelCell(signer.label.toUpperCase(), '', style, nilBorder),
+          entityNameCell(headerRows[0].value ?? '', style, nilBorder),
+        ],
+      }),
+      ...ruledRows.map((row) =>
+        new TableRow({
+          height: { value: signatureRowHeight(row, style), rule: HeightRule.ATLEAST },
           children: [
             signatureLabelCell(row.label, row.hint, style, nilBorder),
             signatureLineCell(row.value ?? '', style, nilBorder, ruleBorder),
@@ -1079,6 +1172,9 @@ function validateSignerModeArrangement(signatureSpec) {
 }
 
 function signerTableFromSigner(signer, style, nilBorder, ruleBorder) {
+  if (signer.kind === 'entity') {
+    return entitySignerTable(signer, style, nilBorder, ruleBorder);
+  }
   return onePartySignatureTable(
     {
       party: signer.label,
@@ -1201,8 +1297,13 @@ function appendSignatureMarkdown(lines, signatureSection) {
 
   if (signatureSection.mode === 'signers') {
     for (const signer of signatureSection.signers) {
-      lines.push(`**${signer.label}**`);
-      lines.push('');
+      // Entity signers draw the legal name above the line: the authored
+      // `Label: {entity_name}` row (label === signer label) leads the block and
+      // there is no bold party header. Individual signers keep the bold header.
+      if (signer.kind !== 'entity') {
+        lines.push(`**${signer.label}**`);
+        lines.push('');
+      }
       for (const row of signer.rows) {
         lines.push(`${row.label}: ${row.value || '_______________'}`);
       }

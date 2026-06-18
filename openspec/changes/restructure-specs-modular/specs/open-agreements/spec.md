@@ -369,13 +369,20 @@ The employment template renderer SHALL honor signer-mode arrangements so
 canonical employment templates can express asymmetric entity/individual
 signature blocks without mirrored title rows or row-level suppression flags.
 
-#### Scenario: [OA-FIL-029] Entity-plus-individual signers render as stacked asymmetric blocks
+#### Scenario: [OA-FIL-029] Entity-plus-individual signers draw the entity name above the line and distinguish the human signatory
 - **WHEN** `cover-standard-signature-v1` renders a template with
   `mode: signers` and `arrangement=entity-plus-individual`
-- **THEN** it renders a stacked entity signer block followed by a stacked
-  individual signer block in DOCX
-- **AND** the Markdown output preserves the same signer order
-- **AND** the individual signer block omits any `Title` row
+- **THEN** the entity signer block draws the entity's legal name in a header row
+  **above** the signature line — caps party label left, entity legal-name value
+  right, with **no rule** under it
+- **AND** the entity block renders distinct `Signatory Name` and `Title` rows for
+  the human signatory (no `Print Name` row) and a taller `Signature` row
+- **AND** exactly one entity legal-name line is required (label equals the signer
+  `label`); zero or duplicate fails the render
+- **AND** the individual signer block is unchanged — bold party header plus a
+  `Print Name` row — and it omits any `Title` row
+- **AND** the Markdown output likewise shows the entity name above the line and
+  preserves signer order
 - **AND** legacy `two-party` rendering remains unchanged
 
 **Reason**: Template-family content extracted to content/templates/openagreements-employment-offer-letter/README.md.

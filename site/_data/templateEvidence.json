@@ -55,7 +55,7 @@
       "distributable": true,
       "fillable": true,
       "priorityFields": 0,
-      "totalFields": 11,
+      "totalFields": 9,
       "validation_status": "validated",
       "validation_source": "test-source-scan",
       "hasPreview": true

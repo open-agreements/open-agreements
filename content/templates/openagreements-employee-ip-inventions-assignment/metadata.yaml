@@ -16,6 +16,14 @@ fields:
     type: string
     description: Legal name of employer
     section: Parties
+  - name: company_signatory_name
+    type: string
+    description: Full name of the authorized signatory signing for the company
+    section: Parties
+  - name: company_signatory_title
+    type: string
+    description: Title of the authorized signatory signing for the company
+    section: Parties
   - name: employee_name
     type: string
     description: Full legal name of employee
