@@ -73,10 +73,10 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-personal-data-cate
 > types of personal information in connection with the Site, including: contact and identification information, such as name
 
 - conformance: conforming
-- source: [APA](https://apacorp.com/privacy)
+- source: [APA](https://apacorp.com/privacy-policy/)
 - detected_by: A→B→C within gap
 - captured: 2026-06-15T19:34:23.938Z
-- link_to_source: <https://apacorp.com/privacy>
+- link_to_source: <https://apacorp.com/privacy-policy/>
 
 ### AT&T {#at-t}
 
@@ -93,10 +93,10 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-personal-data-cate
 > categories of Personal Information: Direct identifiers, including name
 
 - conformance: conforming
-- source: [AbbVie](https://privacy-id.abbvie.com/abbvie-id/)
+- source: [AbbVie](https://privacy.abbvie/privacy-policies/us-privacy-policy.html)
 - detected_by: A→B→C within gap
 - captured: 2026-06-15T19:34:23.938Z
-- link_to_source: <https://privacy-id.abbvie.com/abbvie-id/>
+- link_to_source: <https://privacy.abbvie/privacy-policies/us-privacy-policy.html>
 
 ### Abbott Laboratories {#abbott-laboratories}
 

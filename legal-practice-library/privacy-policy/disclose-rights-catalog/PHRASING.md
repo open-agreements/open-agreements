@@ -74,10 +74,10 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 > right to access, as well as to search for and provide you with the personal information
 
 - conformance: conforming
-- source: [APA](https://apacorp.com/privacy)
+- source: [APA](https://apacorp.com/privacy-policy/)
 - detected_by: A→B→C within gap
 - captured: 2026-06-15T19:34:23.938Z
-- link_to_source: <https://apacorp.com/privacy>
+- link_to_source: <https://apacorp.com/privacy-policy/>
 
 ### AT&T {#at-t}
 
@@ -94,10 +94,10 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 > your rights, you may lose access to certain aspects of AbbVie Services that require your Personal Information
 
 - conformance: conforming
-- source: [AbbVie](https://privacy-id.abbvie.com/abbvie-id/)
+- source: [AbbVie](https://privacy.abbvie/privacy-policies/us-privacy-policy.html)
 - detected_by: A→B→C within gap
 - captured: 2026-06-15T19:34:23.938Z
-- link_to_source: <https://privacy-id.abbvie.com/abbvie-id/>
+- link_to_source: <https://privacy.abbvie/privacy-policies/us-privacy-policy.html>
 
 ### Abbott Laboratories {#abbott-laboratories}
 
