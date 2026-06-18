@@ -4,7 +4,7 @@
 
 * [1st American Systems, Inc. v. Rezatto](1st-american-systems-inc-v-rezatto.md) - 1st American Systems, Inc. v. Rezatto, 311 N.W.2d 51, 57 (S.D. 1981). — quoted in 2 document(s).
 * [205 Corp. v. Brandow](205-corp-v-brandow.md) - 205 Corp. v. Brandow, 517 N.W.2d 548 (Iowa 1994). — quoted in 2 document(s).
-* [23 LTD v. Herman](23-ltd-v-herman.md) - 23 LTD v. Herman, 2019 COA 113. — quoted in 2 document(s).
+* [23 LTD v. Herman](23-ltd-v-herman.md) - 23 LTD v. Herman, 2019 COA 113. — quoted in 3 document(s).
 * [7's Enterprises, Inc. v. Del Rosario](7-s-enterprises-inc-v-del-rosario.md) - 7's Enterprises, Inc. v. Del Rosario, 111 Haw. 484, 143 P.3d 23 (2006). — quoted in 2 document(s).
 * [A.N. Deringer, Inc. v. Strough](a-n-deringer-inc-v-strough.md) - A.N. Deringer, Inc. v. Strough, 103 F.3d 243, 247-48 (2d Cir. 1996). — quoted in 2 document(s).
 * [ACAS Acquisitions (Precitech) Inc. v. Hobert](acas-acquisitions-precitech-inc-v-hobert.md) - ACAS Acquisitions (Precitech) Inc. v. Hobert, 155 N.H. 381 (2007). — quoted in 2 document(s).
@@ -54,7 +54,7 @@
 * [BDO Seidman v. Hirshberg](bdo-seidman-v-hirshberg.md) - BDO Seidman v. Hirshberg, 93 N.Y.2d 382, 388 (1999). — quoted in 2 document(s).
 * [Becker v. Bailey](becker-v-bailey.md) - Becker v. Bailey, 268 Md. 93 (1973). — quoted in 2 document(s).
 * [Beilfuss v. Huffy Corp.](beilfuss-v-huffy-corp.md) - Beilfuss v. Huffy Corp., 2004 WI App 118. — quoted in 2 document(s).
-* [Belt Power, LLC v. Reed](belt-power-llc-v-reed.md) - Belt Power, LLC v. Reed, 354 Ga. App. 289 (2020). — quoted in 2 document(s).
+* [Belt Power, LLC v. Reed](belt-power-llc-v-reed.md) - Belt Power, LLC v. Reed, 354 Ga. App. 289 (2020). — quoted in 3 document(s).
 * [Benchmark Medical Holdings, Inc. v. Barnes](benchmark-medical-holdings-inc-v-barnes.md) - Benchmark Med. Holdings, Inc. v. Barnes, 328 F. Supp. 2d 1236 (M.D. Ala. 2004). — quoted in 2 document(s).
 * [Bend-Tech Group (A Firm) v Beek](bend-tech-group-a-firm-v-beek.md) - Bend-Tech Group (A Firm) v Beek [2015] WASC 491 (Pritchard J). — quoted in 2 document(s).
 * [Bendinger v. Marshalltown Trowel Co.](bendinger-v-marshalltown-trowel-co.md) - Bendinger v. Marshalltown Trowel Co., 338 Ark. 410, 994 S.W.2d 468 (1999). — quoted in 2 document(s).
@@ -155,7 +155,7 @@
 * [Ellis v. James V. Hurson Associates, Inc.](ellis-v-james-v-hurson-associates-inc.md) - Ellis v. James V. Hurson Assocs., Inc., 565 A.2d 615 (D.C. 1989). — quoted in 2 document(s).
 * [EMC Corp. v. Arturi](emc-corp-v-arturi.md) - EMC Corp. v. Arturi, 655 F.3d 75 (1st Cir. 2011). — quoted in 5 document(s).
 * [Emeco International Pty Ltd v O'Shea [No 2]](emeco-international-pty-ltd-v-o-shea-no-2.md) - Emeco International Pty Ltd v O'Shea [No 2] [2012] WASC 348 (Edelman J). — quoted in 2 document(s).
-* [Emerick v. Cardiac Study Center, Inc.](emerick-v-cardiac-study-center-inc.md) - Emerick v. Cardiac Study Ctr., Inc., 189 Wn. App. 711 (2015). — quoted in 2 document(s).
+* [Emerick v. Cardiac Study Center, Inc.](emerick-v-cardiac-study-center-inc.md) - Emerick v. Cardiac Study Ctr., Inc., 189 Wn. App. 711 (2015). — quoted in 3 document(s).
 * [Empiregas, Inc. of Kosciusko v. Bain](empiregas-inc-of-kosciusko-v-bain.md) - Empiregas, Inc. of Kosciusko v. Bain, 599 So. 2d 971 (Miss. 1992). — quoted in 2 document(s).
 * [Employment Staffing Group, Inc. v. Little](employment-staffing-group-inc-v-little.md) - Emp't Staffing Grp., Inc. v. Little, 243 N.C. App. 266 (2015). — quoted in 2 document(s).
 * [England Logistics, Inc. v. Kelle's Transport Service, LLC](england-logistics-inc-v-kelle-s-transport-service-llc.md) - England Logistics, Inc. v. Kelle's Transp. Serv., LLC, 2024 UT App 137. — quoted in 2 document(s).
@@ -200,7 +200,7 @@
 * [Hartman v. W.H. Odell & Associates, Inc.](hartman-v-w-h-odell-associates-inc.md) - Hartman v. W.H. Odell & Assocs., 117 N.C. App. 307 (1994). — quoted in 2 document(s).
 * [Hassler v. Circle C Resources](hassler-v-circle-c-resources.md) - Hassler v. Circle C Resources, 2022 WY 28, 505 P.3d 169. — quoted in 3 document(s).
 * [Hasty v. Rent-A-Driver, Inc.](hasty-v-rent-a-driver-inc.md) - Hasty v. Rent-A-Driver, Inc., 671 S.W.2d 471, 472 (Tenn. 1984). — quoted in 2 document(s).
-* [Hawkins Chemical, Inc. v. McNea](hawkins-chemical-inc-v-mcnea.md) - Hawkins Chem., Inc. v. McNea, 321 N.W.2d 918, 920 (N.D. 1982). — quoted in 2 document(s).
+* [Hawkins Chemical, Inc. v. McNea](hawkins-chemical-inc-v-mcnea.md) - Hawkins Chem., Inc. v. McNea, 321 N.W.2d 918, 920 (N.D. 1982). — quoted in 3 document(s).
 * [HCC Specialty Underwriters, Inc. v. Woodbury](hcc-specialty-underwriters-inc-v-woodbury.md) - HCC Specialty Underwriters, Inc. v. Woodbury, 289 F. Supp. 3d 303 (D.N.H. 2018). — quoted in 2 document(s).
 * [HD Supply Facilities Maint., Ltd. v. Bymoen](hd-supply-facilities-maint-ltd-v-bymoen.md) - HD Supply Facilities Maint., Ltd. v. Bymoen, 125 Nev. 200, 210 P.3d 183 (2009). — quoted in 2 document(s).
 * [Healthcare Services of the Ozarks, Inc. v. Copeland](healthcare-services-of-the-ozarks-inc-v-copeland.md) - Healthcare Servs. of the Ozarks, Inc. v. Copeland, 198 S.W.3d 604 (Mo. banc 2006). — quoted in 2 document(s).

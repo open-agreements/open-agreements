@@ -1,11 +1,13 @@
 ---
 type: Case Excerpt
 title: 23 LTD v. Herman
-description: '23 LTD v. Herman, 2019 COA 113. — quoted in 2 document(s).'
+description: '23 LTD v. Herman, 2019 COA 113. — quoted in 3 document(s).'
 citation: '23 LTD v. Herman, 2019 COA 113.'
 resource: 'https://www.courtlistener.com/opinion/4644233/23-ltd-v-herman/'
 timestamp: '2026-06-11'
 document_references:
+  - type: Review Checklist
+    resource: 'https://openagreements.org/checklists/non-compete/us'
   - type: Review Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/colorado'
   - type: State Law Practice Note
@@ -19,7 +21,7 @@ tags:
 
 *23 LTD v. Herman, 2019 COA 113.*
 
-Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -47,5 +49,5 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 - supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `twentythree-ltd-no-contractual-compulsion`, `twentythree-no-compulsion`
-- cited_by: [Non-Compete Agreement Review Checklist — Colorado](../checklists/non-compete/us/colorado.md), [Non-Competes in Colorado](../non-compete/us/colorado.md)
+- cited_by: [Non-Compete Agreement Review Checklist](../checklists/non-compete/us.md), [Non-Compete Agreement Review Checklist — Colorado](../checklists/non-compete/us/colorado.md), [Non-Competes in Colorado](../non-compete/us/colorado.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4644233/23-ltd-v-herman/#:~:text=Thus%2C%20parties%20to%20an%20employment,that%20it%20determines%20are%20unreasonable.>
