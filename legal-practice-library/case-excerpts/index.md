@@ -473,6 +473,7 @@
 * [Tung v. Ah Sam](tung-v-ah-sam.md) - Tung v. Ah Sam, 4 A.S.R. 764 (Trial Div. 1971). — quoted in 1 document(s).
 * [United Laboratories, Inc. v. Kuykendall](united-laboratories-inc-v-kuykendall.md) - United Labs., Inc. v. Kuykendall, 322 N.C. 643 (1988). — quoted in 2 document(s).
 * [United States v. Heppner, No. 25 Cr. 503 (JSR), 2026 WL 436479 (S.D.N.Y. Feb....](united-states-v-heppner-no-25-cr-503-jsr-2026-wl-436479-s-d-n-y-feb.md) - United States v. Heppner, No. 25 Cr. 503 (JSR), 2026 WL 436479 (S.D.N.Y. Feb. 17, 2026), discussed in Reuters. — quoted in 1 document(s).
+* [United States v. Heppner (S.D.N.Y.)](united-states-v-heppner-s-d-n-y.md) - United States v. Heppner, No. 25 Cr. 503 (JSR), 2026 WL 436479 (S.D.N.Y. Feb. 19, 2026). — quoted in 1 document(s).
 * [United States v. Kovel, 296 F.2d 918 (2d Cir. 1961)](united-states-v-kovel-296-f-2d-918-2d-cir-1961.md) - United States v. Kovel, 296 F.2d 918 (2d Cir. 1961). — quoted in 2 document(s).
 * [United States v. Massachusetts Institute of Technology, 129 F.3d 681 (1st Cir...](united-states-v-massachusetts-institute-of-technology-129-f-3d-681-1st-cir.md) - United States v. Massachusetts Institute of Technology, 129 F.3d 681 (1st Cir. 1997). — quoted in 1 document(s).
 * [Unlimited Opportunity, Inc. v. Waadah](unlimited-opportunity-inc-v-waadah.md) - Unlimited Opportunity, Inc. v. Waadah, 290 Neb. 629, 637, 861 N.W.2d 437 (2015). — quoted in 2 document(s).
@@ -493,6 +494,7 @@
 * [Voorhees v. Guyan Machinery Co.](voorhees-v-guyan-machinery-co.md) - Voorhees v. Guyan Mach. Co., 191 W. Va. 450, 446 S.E.2d 672 (1994). — quoted in 1 document(s).
 * [Wallis Nominees (Computing) Pty Ltd v Pickett](wallis-nominees-computing-pty-ltd-v-pickett.md) - Wallis Nominees (Computing) Pty Ltd v Pickett [2013] VSCA 24 (Warren CJ and Davies AJA). — quoted in 1 document(s).
 * [Warner & Co. v. Solberg](warner-co-v-solberg.md) - Warner & Co. v. Solberg, 2001 ND 156, ¶ 29, 634 N.W.2d 65. — quoted in 2 document(s).
+* [Warner v. Gilbarco, Inc. (E.D. Mich.)](warner-v-gilbarco-inc-e-d-mich.md) - Warner v. Gilbarco, Inc., No. 2:24-cv-12333, 2026 WL 373043 (E.D. Mich. Feb. 10, 2026). — quoted in 1 document(s).
 * [Warner v. Gilbarco Inc. et al., Case No. 2:24-cv-12333 (E.D. Mich. Feb. 10, 2...](warner-v-gilbarco-inc-et-al-case-no-2-24-cv-12333-e-d-mich-feb-10-2.md) - Warner v. Gilbarco Inc. et al., Case No. 2:24-cv-12333 (E.D. Mich. Feb. 10, 2026). — quoted in 2 document(s).
 * [Watercolor Salon, LLC v. Hixon](watercolor-salon-llc-v-hixon.md) - Watercolor Salon, LLC v. Hixon, No. 2021-IA-01151-SCT (Miss. 2022). — quoted in 2 document(s).
 * [Watson v. Fort Worth Bank & Trust, 487 U.S. 977 (1988)](watson-v-fort-worth-bank-trust-487-u-s-977-1988.md) - Watson v. Fort Worth Bank & Trust, 487 U.S. 977 (1988). — quoted in 2 document(s).
