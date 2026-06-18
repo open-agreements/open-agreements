@@ -911,10 +911,10 @@ function signatureHeaderCell(text, style, nilBorder) {
   });
 }
 
-function signatureLineCell(value, style, nilBorder, ruleBorder) {
+function signatureLineCell(value, style, nilBorder, ruleBorder, topBorder = ruleBorder) {
   return new TableCell({
     borders: {
-      top: ruleBorder,
+      top: topBorder,
       left: nilBorder,
       bottom: ruleBorder,
       right: nilBorder,
@@ -1069,18 +1069,29 @@ function onePartySignatureTable(signatureSpec, style, nilBorder, ruleBorder) {
       insideV: nilBorder,
     },
     rows: [
+      // Party header: left-aligned caps label in black (the muted/centered look is
+      // retired), matching the entity block's header. The header cell carries no
+      // rule, and the first ruled row below drops its top border, so there is no
+      // hairline immediately under the party label — only the single ruled line
+      // the party actually signs on.
       new TableRow({
         children: [
-          signatureLabelCell('', '', style, nilBorder),
-          signatureHeaderCell(signatureSpec.party.toUpperCase(), style, nilBorder),
+          signatureLabelCell(signatureSpec.party.toUpperCase(), '', style, nilBorder),
+          signatureLineCell('', style, nilBorder, nilBorder),
         ],
       }),
-      ...signatureSpec.rows.map((row) =>
+      ...signatureSpec.rows.map((row, index) =>
         new TableRow({
           height: { value: signatureRowHeight(row, style), rule: HeightRule.ATLEAST },
           children: [
             signatureLabelCell(row.label, row.hint, style, nilBorder),
-            signatureLineCell(row.value ?? '', style, nilBorder, ruleBorder),
+            signatureLineCell(
+              row.value ?? '',
+              style,
+              nilBorder,
+              ruleBorder,
+              index === 0 ? nilBorder : ruleBorder,
+            ),
           ],
         })
       ),
