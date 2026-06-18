@@ -668,6 +668,9 @@ function replaceParagraphText(para: Element, newText: string): void {
     if (doc) {
       const r = doc.createElementNS(W_NS, 'w:r');
       const t = doc.createElementNS(W_NS, 'w:t');
+      // Preserve any leading/trailing whitespace in the placeholder, matching
+      // how authored runs carry xml:space="preserve".
+      t.setAttribute('xml:space', 'preserve');
       t.textContent = newText;
       r.appendChild(t);
       para.appendChild(r);
