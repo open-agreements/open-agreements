@@ -100,7 +100,7 @@ The source set is fairly consistent that it changed enforcement posture more tha
 
 [^hunton-andrews-kurth-eeoc-issues-guidance-on-use]: **Hunton Andrews Kurth commentary** — "the EEOC’s Recent Guidance provides broad definitions of key terms—software, algorithms, and artificial intelligence—and explains that the Uniform Guidelines on Employee Selection Procedures (‘Guidelines’), which the EEOC adopted way back in 1978" *Hunton Andrews Kurth, EEOC Issues Guidance on Use of AI in Employment Decisions.* <https://www.hunton.com/hunton-employment-labor-perspectives/eeoc-issues-guidance-on-use-of-ai-in-employment-decisions>
 
-[^29-c-f-r-part-1607-2]: **29 C.F.R. Part 1607** — "less than four-fifths" *29 C.F.R. Part 1607.* <https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XIV/part-1607>
+[^29-c-f-r-part-1607-2]: **29 C.F.R. Part 1607** — "users may rely upon criterion-related validity studies, content validity studies or construct validity studies, in accordance with the standards set forth in the technical standards of these guidelines" *29 C.F.R. Part 1607.* <https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XIV/part-1607>
 
 [^eeoc-questions-and-answers-to-clarify-and-provid-2]: **EEOC, Questions and Answers to Clarify and Provide a Common Interpretation of...** — "The material included is intended to interpret and clarify, but not to modify, the provisions of the Uniform Guidelines." *EEOC, Questions and Answers to Clarify and Provide a Common Interpretation of the Uniform Guidelines.* <https://www.eeoc.gov/laws/guidance/questions-and-answers-clarify-and-provide-common-interpretation-uniform-guidelines>
 

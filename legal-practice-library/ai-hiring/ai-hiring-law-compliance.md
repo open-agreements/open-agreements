@@ -117,7 +117,7 @@ The source set still contains official EEOC materials tying AI to existing discr
 
 [^fisher-phillips-a-current-overview-of-ai-regulat]: **Fisher Phillips, A Current Overview of AI Regulation Across the Country** — "NYC’s Local Law 144 – the first local AI law in the country that regulated the workplace – has been requiring employers using automated employment decision tools (AEDTs) to conduct annual bias audits and notify candidates and employees about their use since 2023." *Fisher Phillips, A Current Overview of AI Regulation Across the Country.* <https://www.fisherphillips.com/en/insights/insights/a-current-overview-of-ai-regulation-across-the-country>
 
-[^new-york-city-administrative-code-20-871-2]: **New York City Administrative Code § 20-871** — "it shall be unlawful" *New York City Administrative Code § 20-871.* <https://codelibrary.amlegal.com/codes/newyorkcity/latest/NYCadmin/0-0-0-135843>
+[^new-york-city-administrative-code-20-871-2]: **New York City Administrative Code § 20-871** — "it shall be unlawful for an employer or an employment agency to use an automated employment decision tool to screen a candidate or employee for an employment decision unless:" *New York City Administrative Code § 20-871.* <https://codelibrary.amlegal.com/codes/newyorkcity/latest/NYCadmin/0-0-0-135843>
 
 [^820-ilcs-42-5-2]: **820 ILCS 42/5** — "positions based in Illinois" *820 ILCS 42/5.* <https://www.ilga.gov/ftp/ILCS/Ch%200820/Act%200042/082000420K5.html>
 
