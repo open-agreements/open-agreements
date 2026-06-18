@@ -86,12 +86,14 @@ describe('employment signer arrangement rendering', () => {
       expect(tableTexts[1]).toContain('Print Name');
       expect(tableTexts[1]).not.toContain('Title');
 
-      // The `Signature` rows must render at the taller layout-constant height
-      // (864 twips) so the ruled line has room to sign on — taller than the 690
-      // default used by the other signature rows. Asserting the rendered DOCX
-      // (not a style value) guards the row height end-to-end.
-      expect(documentXml).toContain('<w:trHeight w:val="864" w:hRule="atLeast"/>');
-      expect(documentXml).toContain('<w:trHeight w:val="690" w:hRule="atLeast"/>');
+      // The `Signature` rows must render at the taller signature-line height
+      // (500 twips) so the ruled line has room to sign on — taller than the 340
+      // height used by the other signature rows. (Both are renderer layout
+      // constants in cover-standard-signature-v1.mjs, tuned tighter than the
+      // original 864/690 to remove excess vertical airiness.) Asserting the
+      // rendered DOCX guards the row heights end-to-end.
+      expect(documentXml).toContain('<w:trHeight w:val="500" w:hRule="atLeast"/>');
+      expect(documentXml).toContain('<w:trHeight w:val="340" w:hRule="atLeast"/>');
     });
   }
 });
