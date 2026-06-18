@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "field_id": "series_designation",
+  "field_label": "Series Designation",
+  "description": "The Series letter/name of the preferred stock (e.g. \"A\"), written into every \"Series [___] Preferred Stock\" reference. The legacy replacements.json filled exactly 12 of the document's 14 series-style blanks (the legacy patcher replaces only the first blank after each context per paragraph), so this field declares exactly those 12 occurrences. Two blanks are deliberately left unmigrated to preserve parity with the legacy output: the third \"[___]\" in the purchase clause and the second \"[___]\" in the capitalization clause. Each occurrence anchors on distinctive preceding context; \\s matches the non-breaking space the source uses between \"Series\" and the blank.",
+  "source_template_version": "10-28-2025",
+  "occurrences": [
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "^SERIES\\s(\\[___\\])\\sPREFERRED",
+        "group": 1
+      }
+    },
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "THIS SERIES\\s(\\[___\\])\\sPREFERRED",
+        "group": 1
+      }
+    },
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "that number of shares of Series\\s(\\[___\\])\\sPreferred",
+        "group": 1
+      }
+    },
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "par value per share \\(the “Series\\s(\\[___\\])\\sPreferred",
+        "group": 1
+      }
+    },
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "such shares\\)\\] of Series\\s(\\[___\\])\\sPreferred",
+        "group": 1
+      }
+    },
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "with respect to the Series\\s(\\[___\\])\\sPreferred",
+        "group": 1
+      }
+    },
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "transfer of a Purchaser’s Series\\s(\\[___\\])\\sPreferred",
+        "group": 1
+      }
+    },
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "receive such Series\\s(\\[__\\])\\sPreferred",
+        "group": 1
+      }
+    },
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "the number of shares of Series\\s(\\[___\\])\\sPreferred",
+        "group": 1
+      }
+    },
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "designated Series\\s(\\[___\\])\\sPreferred",
+        "group": 1
+      }
+    },
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "executed this Series\\s(\\[___\\])\\sPreferred",
+        "group": 1
+      }
+    },
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "Section 2 of the Series\\s(\\[___\\])\\sPreferred",
+        "group": 1
+      }
+    }
+  ],
+  "postconditions": [
+    "no_unresolved_placeholder",
+    "no_double_dollar"
+  ],
+  "failure_behavior": "warn",
+  "fixtures": [
+    {
+      "occurrence": 0,
+      "anchor": "SERIES [___] PREFERRED STOCK PURCHASE AGREEMENT",
+      "note": "title heading (regular space)"
+    },
+    {
+      "occurrence": 1,
+      "anchor": "THIS SERIES [___] PREFERRED",
+      "note": "preamble"
+    },
+    {
+      "occurrence": 2,
+      "anchor": "that number of shares of Series [___] Preferred",
+      "note": "purchase clause, first series blank"
+    },
+    {
+      "occurrence": 3,
+      "anchor": "(the “Series [___] Preferred Stock”)",
+      "note": "purchase clause, defined-term (curly-quote variant)"
+    },
+    {
+      "occurrence": 4,
+      "anchor": "shares)] of Series [___] Preferred",
+      "note": "additional-closings clause"
+    },
+    {
+      "occurrence": 5,
+      "anchor": "with respect to the Series [___] Preferred",
+      "note": "special mandatory conversion"
+    },
+    {
+      "occurrence": 6,
+      "anchor": "transfer of a Purchaser’s Series [___] Preferred",
+      "note": "transfer condition"
+    },
+    {
+      "occurrence": 7,
+      "anchor": "receive such Series [__] Preferred",
+      "note": "transfer condition (2-underscore \"such Series\" variant)"
+    },
+    {
+      "occurrence": 8,
+      "anchor": "the number of shares of Series [___] Preferred",
+      "note": "convertible-securities conversion"
+    },
+    {
+      "occurrence": 9,
+      "anchor": "designated Series [___] Preferred",
+      "note": "capitalization clause, first series blank"
+    },
+    {
+      "occurrence": 10,
+      "anchor": "executed this Series [___] Preferred",
+      "note": "signature recital"
+    },
+    {
+      "occurrence": 11,
+      "anchor": "Section 2 of the Series [___] Preferred",
+      "note": "disclosure schedule recital"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "field_id": "purchase_price_per_share",
+  "field_label": "Purchase Price Per Share",
+  "description": "Per-share purchase price in the purchase clause (\"purchase price of $[__] per share\"). A bare contextual locator on $[__] resolves to zero, so a regex with surrounding context captures the exact 2-underscore blank (distinct from the 3-underscore convertible-securities price later in the same paragraph).",
+  "source_template_version": "10-28-2025",
+  "occurrences": [
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "purchase price of \\$(\\[__\\])\\sper share",
+        "group": 1
+      }
+    }
+  ],
+  "postconditions": [
+    "no_unresolved_placeholder",
+    "no_double_dollar"
+  ],
+  "failure_behavior": "warn",
+  "fixtures": [
+    {
+      "occurrence": 0,
+      "anchor": "purchase price of $[__] per share",
+      "note": "purchase clause; regex captures only the [__] blank, not the later [___] convertible price"
+    }
+  ]
+}

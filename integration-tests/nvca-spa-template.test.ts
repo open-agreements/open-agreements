@@ -65,6 +65,21 @@ interface FieldAssertionPolicy {
 
 const RECIPE_ID = 'nvca-stock-purchase-agreement';
 const RECIPE_DIR = join(import.meta.dirname, '..', 'content', 'recipes', RECIPE_ID);
+
+/**
+ * Context-qualified (`>`-anchor) replacement keys that have been migrated to selector contracts
+ * (`template-manifest.json.migrated_keys`). These resolve against the real document's prose context,
+ * so the flat `Marker N: <key>` synthetic fixture below cannot exercise them — they are covered by the
+ * whole-document parity tests in selector-contracts.test.ts against the real cached source. Literal
+ * migrated keys (e.g. company_name's `[Insert Company Name]`) are NOT excluded: their selectors match
+ * verbatim and still render in the synthetic harness.
+ */
+function loadMigratedContextKeys(): Set<string> {
+  const manifest = JSON.parse(readFileSync(join(RECIPE_DIR, 'template-manifest.json'), 'utf-8')) as {
+    migrated_keys?: string[];
+  };
+  return new Set((manifest.migrated_keys ?? []).filter((key) => key.includes('>')));
+}
 const it = itAllure.withLabels({
   epic: 'NVCA SPA Template',
   feature: 'NVCA SPA Legal QA',
@@ -595,7 +610,11 @@ describe('NVCA SPA Template', () => {
     const { metadata, replacements, cleanConfig } = await allureStep('Load NVCA recipe artifacts', () =>
       loadNvcaRecipeArtifacts()
     );
-    const sourcePlaceholders = Object.keys(replacements).filter((key) => !isNthReplacementKey(key));
+    const migratedContextKeys = loadMigratedContextKeys();
+    const legacyReplacements = Object.fromEntries(
+      Object.entries(replacements).filter(([key]) => !migratedContextKeys.has(key))
+    );
+    const sourcePlaceholders = Object.keys(legacyReplacements).filter((key) => !isNthReplacementKey(key));
     const values = buildScenarioValues(metadata.fields ?? [], {
       company_name: 'Acme Robotics, Inc.',
       investor_name: 'North Star Ventures LLC',
@@ -603,7 +622,7 @@ describe('NVCA SPA Template', () => {
       director_names: 'Jane Founder; Pat Director',
       applicable_purchasers: 'North Star Ventures LLC',
     });
-    const verificationValues = buildVerificationValues(values, sourcePlaceholders, replacements);
+    const verificationValues = buildVerificationValues(values, sourcePlaceholders, legacyReplacements);
 
     const fixture = createSyntheticRecipeFixture(sourcePlaceholders);
     await applyLawyerReviewContext(
@@ -625,7 +644,7 @@ describe('NVCA SPA Template', () => {
 
       const outputText = await allureStep('Extract output text', () => extractAllText(fixture.outputPath));
       const verifyResult = await allureStep('Run recipe verifier against output', () =>
-        verifyOutput(fixture.outputPath, verificationValues, replacements, cleanConfig)
+        verifyOutput(fixture.outputPath, verificationValues, legacyReplacements, cleanConfig)
       );
 
       const fullCorpusMatrixHtml = renderClauseEvidenceMatrixHtml(
@@ -676,9 +695,13 @@ describe('NVCA SPA Template', () => {
     const policyFieldNames = Object.keys(FIELD_ASSERTION_POLICY).sort();
     const fieldsMissingPolicy = metadataFieldNames.filter((fieldName) => !(fieldName in FIELD_ASSERTION_POLICY));
     const policyWithoutField = policyFieldNames.filter((fieldName) => !metadataFieldNames.includes(fieldName));
-    const sourcePlaceholders = Object.keys(replacements).filter((key) => !isNthReplacementKey(key));
+    const migratedContextKeys = loadMigratedContextKeys();
+    const legacyReplacements = Object.fromEntries(
+      Object.entries(replacements).filter(([key]) => !migratedContextKeys.has(key))
+    );
+    const sourcePlaceholders = Object.keys(legacyReplacements).filter((key) => !isNthReplacementKey(key));
     const sourcePlaceholderSet = new Set(sourcePlaceholders);
-    const placeholdersByField = buildPlaceholdersByField(replacements);
+    const placeholdersByField = buildPlaceholdersByField(legacyReplacements);
 
     await applyLawyerReviewContext(
       policyContext,
@@ -702,7 +725,7 @@ describe('NVCA SPA Template', () => {
       director_names: 'Jane Founder; Pat Director',
       applicable_purchasers: 'North Star Ventures LLC',
     });
-    const verificationValues = buildVerificationValues(values, sourcePlaceholders, replacements);
+    const verificationValues = buildVerificationValues(values, sourcePlaceholders, legacyReplacements);
     const fixture = createSyntheticRecipeFixture(sourcePlaceholders);
     await applyLawyerReviewContext(
       policyContext,
@@ -722,7 +745,7 @@ describe('NVCA SPA Template', () => {
 
       const outputText = await allureStep('Extract rendered text', () => extractAllText(fixture.outputPath));
       const verifyResult = await allureStep('Verify output consistency', () =>
-        verifyOutput(fixture.outputPath, verificationValues, replacements, cleanConfig)
+        verifyOutput(fixture.outputPath, verificationValues, legacyReplacements, cleanConfig)
       );
 
       const policyMatrixHtml = renderClauseEvidenceMatrixHtml(

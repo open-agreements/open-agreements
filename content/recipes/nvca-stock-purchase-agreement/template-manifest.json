@@ -6,6 +6,19 @@
   "migrated_keys": [
     "[Insert Company Name]",
     "[Company name]",
-    "[____________]"
+    "[____________]",
+    "SERIES > [___]",
+    "Series > [___]",
+    "such Series > [__]",
+    "“Series > [___]",
+    "\"Series > [___]",
+    "is made as of > [________]",
+    ", 20 > [__]",
+    "Stock, $ > [__]",
+    "purchase price of $ > [__]",
+    "Closing > [s]",
+    "A minimum of > [_________]",
+    "A minimum of > [_______]",
+    "expenses of > [_______]"
   ]
 }
