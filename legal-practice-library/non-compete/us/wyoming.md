@@ -66,7 +66,7 @@ The court held that the entire agreement was void because the duration and geogr
 
 **Short answer.** Four categories remain in play: sale-of-business covenants, trade-secret covenants, capped repayment provisions, and covenants with executive and management personnel and their professional staff.
 
-The four statutory carveouts[^wyo-1-23-four-carveouts] are listed in Wyo. Stat. § 1-23-108(a). The repayment carveout is not a blank check; it is capped by the employee's tenure, with lower recovery percentages as service length increases.
+The four statutory carveouts[^wyo-1-23-four-carveouts] are listed in Wyo. Stat. § 1-23-108(a), the last of which is the carve-out for executive and management personnel [^wyo-1-23-carveout-exec]. The repayment carveout is not a blank check; it is capped by the employee's tenure, with lower recovery percentages as service length increases.
 
 Fitting one of these categories keeps a covenant out of the statutory void, but it does not make the covenant automatically enforceable — an exception covenant that operates as a non-compete is still judged under the common-law reasonableness baseline covered in the earlier question on what law governs covenants the statute does not void.
 
@@ -143,7 +143,7 @@ This is useful to keep separate from non-competes because many employers do not 
 
 **Short answer.** Yes, but only within the statutory schedule. The longer the employee stays, the less the employer can recover.
 
-Wyoming permits recovery of up to 100% of relocation, education, and training expenses if the employee served less than two years; up to 66% after at least two but less than three years; and up to 33% after at least three but less than four years. The repayment schedule[^wyo-1-23-repayment-schedule] does not provide an additional recovery tier after that.
+Wyoming permits recovery of up to 100% of relocation, education, and training expenses if the employee served less than two years; up to 66% after at least two but less than three years; and up to 33% after at least three but less than four years. The repayment schedule[^wyo-1-23-repayment-schedule] [^wyo-1-23-repayment-schedule-bc] does not provide an additional recovery tier after that.
 
 > [!CAUTION]
 > **Drafting note.**
@@ -166,7 +166,7 @@ Commentary specifically warns employers to evaluate routine replacement or updat
 
 **July 1, 2025:** The new statute took effect for contracts entered into on or after that date. Earlier contracts were not altered, amended, or impaired by the act [^sf107-effective-date].
 
-**2021–2022 backdrop:** Wyoming's common-law baseline was already demanding because of strict construction, consideration, and no-narrowing cases [^brown-prima-facie][^malave-common-law-elements][^hassler-void-public-policy].
+**2021–2022 backdrop:** Wyoming's common-law baseline was already demanding because of strict construction, consideration, and no-narrowing cases [^brown-consideration-backdrop][^malave-common-law-elements][^hassler-void-public-policy].
 
 
 
@@ -210,7 +210,9 @@ Commentary specifically warns employers to evaluate routine replacement or updat
 
 [^holland-blue-pencil-warning]: **Holland & Hart commentary** — "Since a 2022 Wyoming Supreme Court decision, Wyoming courts are no longer authorized to revise an unreasonable covenant to make it reasonable." *Holland & Hart, Wyoming Legislature Takes a Bite Out of Covenants Not to Compete (2025).* <https://www.hollandhart.com/wyoming-legislature-takes-a-bite-out-of-covenants-not-to-compete-1>
 
-[^wyo-1-23-four-carveouts]: **Wyo. Stat. § 1-23-108(a)(i)–(iv)** — "This subsection shall not apply to: (i) Any covenant not to compete contained in a contract for the purchase and sale of a business or the assets of a business; (ii) Any covenant not to compete to the extent the covenant provides for the protection of trade secrets as defined by W.S. 6-3-501(a)(xi);" *Wyo. Stat. § 1-23-108(a)(i)–(iv) (2025).* <https://wyoleg.gov/2025/Enroll/SF0107.pdf>
+[^wyo-1-23-four-carveouts]: **Wyo. Stat. § 1-23-108(a)(i)–(iii)** — "This subsection shall not apply to: (i) Any covenant not to compete contained in a contract for the purchase and sale of a business or the assets of a business; (ii) Any covenant not to compete to the extent the covenant provides for the protection of trade secrets as defined by W.S. 6-3-501(a)(xi); (iii) Any contractual provision providing for the recovery of all or a portion of the expense of relocating, educating and training an employee as follows: (A) Recovery of not more than one hundred percent (100%) of the expense for an employee who has served an employer for a period of less than two (2) years;" *Wyo. Stat. § 1-23-108(a)(i)–(iii) (2025).* <https://wyoleg.gov/2025/Enroll/SF0107.pdf>
+
+[^wyo-1-23-carveout-exec]: **Wyo. Stat. § 1-23-108(a)(iv)** — "Executive and management personnel and officers and employees who constitute professional staff to executive and management personnel." *Wyo. Stat. § 1-23-108(a)(iv) (2025).* <https://wyoleg.gov/2025/Enroll/SF0107.pdf>
 
 [^holland-options-remain]: **Holland & Hart commentary** — "the new law leaves Wyoming businesses with a few options to continue to use those covenants, employers need to move quickly" *Holland & Hart, Wyoming Legislature Takes a Bite Out of Covenants Not to Compete (2025).* <https://www.hollandhart.com/wyoming-legislature-takes-a-bite-out-of-covenants-not-to-compete-1>
 
@@ -248,7 +250,9 @@ Commentary specifically warns employers to evaluate routine replacement or updat
 
 [^fisher-anti-moonlighting]: **Fisher Phillips commentary** — "For instance, will customer non-solicitation covenants fall into this definition? Employee non-solicitation covenants? Broad confidentiality agreements? ‘Anti-moonlighting’ agreements" *Fisher Phillips, New Law Voids Most Wyoming Non-Compete Agreements (2025).* <https://www.fisherphillips.com/en/insights/insights/new-law-voids-most-wyoming-non-compete-agreements>
 
-[^wyo-1-23-repayment-schedule]: **Wyo. Stat. § 1-23-108(a)(iii)** — "Any contractual provision providing for the recovery of all or a portion of the expense of relocating, educating and training an employee as follows" *Wyo. Stat. § 1-23-108(a)(iii) (2025).* <https://wyoleg.gov/2025/Enroll/SF0107.pdf>
+[^wyo-1-23-repayment-schedule]: **Wyo. Stat. § 1-23-108(a)(iii)(A)** — "Any contractual provision providing for the recovery of all or a portion of the expense of relocating, educating and training an employee as follows: (A) Recovery of not more than one hundred percent (100%) of the expense for an employee who has served an employer for a period of less than two (2) years;" *Wyo. Stat. § 1-23-108(a)(iii)(A) (2025).* <https://wyoleg.gov/2025/Enroll/SF0107.pdf>
+
+[^wyo-1-23-repayment-schedule-bc]: **Wyo. Stat. § 1-23-108(a)(iii)(B)–(C)** — "(B) Recovery of not more than sixty-six percent (66%) of the expense for an employee who has served an employer for between two (2) and less than three (3) years; (C) Recovery of not more than thirty-three percent (33%) of the expense for an employee who has served an employer for between three (3) and less than four (4) years." *Wyo. Stat. § 1-23-108(a)(iii)(B)–(C) (2025).* <https://wyoleg.gov/2025/Enroll/SF0107.pdf>
 
 [^ogletree-repayment-tier]: **Ogletree Deakins commentary** — "The law permits employers to include provisions in employment contracts allowing them to recover relocation, education, and training expenses" *Ogletree Deakins, Wyoming Enacts Law to Restrict the Use of Noncompete Agreements (2025).* <https://ogletree.com/insights-resources/blog-posts/wyoming-enacts-law-to-restrict-the-use-of-noncompete-agreements/>
 
@@ -270,7 +274,7 @@ Commentary specifically warns employers to evaluate routine replacement or updat
 
 [^sf107-effective-date]: **SF 107 §§ 1–3** — "This act shall apply to contracts entered into on and after July 1, 2025." *S.F. 107, Enrolled Act No. 87, §§ 1–3, 68th Leg., Gen. Sess. (Wyo. 2025).* <https://wyoleg.gov/2025/Enroll/SF0107.pdf>
 
-[^brown-prima-facie]: **Brown v. Best Home Health & Hospice, LLC** — "A non-compete provision ‘is prima facie invalid" *Brown v. Best Home Health & Hospice, LLC, 2021 WY 83, 491 P.3d 1021.* <https://www.courtlistener.com/opinion/9998787/jennifer-brown-fka-jennifer-stringer-nora-youngren-and-carol-wolfe-v/#:~:text=A%20non%2Dcompete%20provision%20%22is%20prima%20facie%20invalid>
+[^brown-consideration-backdrop]: **Brown v. Best Home Health & Hospice, LLC** — "Continued employment is not sufficient consideration to support a non-compete agreement." *Brown v. Best Home Health & Hospice, LLC, 2021 WY 83, 491 P.3d 1021.* <https://www.courtlistener.com/opinion/9998787/jennifer-brown-fka-jennifer-stringer-nora-youngren-and-carol-wolfe-v/#:~:text=Continued%20employment%20is%20not%20sufficient,to%20support%20a%20non%2Dcompete%20agreement.>
 
 [^malave-common-law-elements]: **Malave v. Western Wyoming Beverages, Inc.** — "A valid and enforceable covenant not to compete requires a showing that the covenant is: (1) in writing; (2) part of a contract of employment; (3) based on reasonable consideration; (4) reasonable in durational and geographical limitations; and (5) not against public policy." *Malave v. Western Wyoming Beverages, Inc., 2022 WY 14, 503 P.3d 36.* <https://law.justia.com/cases/wyoming/supreme-court/2022/s-21-0140.html#:~:text=A%20valid%20and%20enforceable%20covenant,(5)%20not%20against%20public%20policy.>
 

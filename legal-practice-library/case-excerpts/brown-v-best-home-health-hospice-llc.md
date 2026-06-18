@@ -26,21 +26,12 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 ## Quoted passages
 
-### brown-v-best-home-health-hospice-llc-a-non-compete-provision-is-prima-facie-8efb61b8 {#brown-v-best-home-health-hospice-llc-a-non-compete-provision-is-prima-facie-8efb61b8}
-
-> A non-compete provision "is prima facie invalid
-
-- supports: `recent-developments`
-- source_cards: `brown-prima-facie`
-- cited_by: [Non-Competes in Wyoming](../non-compete/us/wyoming.md)
-- link_to_source: <https://www.courtlistener.com/opinion/9998787/jennifer-brown-fka-jennifer-stringer-nora-youngren-and-carol-wolfe-v/#:~:text=A%20non%2Dcompete%20provision%20%22is%20prima%20facie%20invalid>
-
 ### brown-v-best-home-health-hospice-llc-continued-employment-is-not-sufficient-96d50d09 {#brown-v-best-home-health-hospice-llc-continued-employment-is-not-sufficient-96d50d09}
 
 > Continued employment is not sufficient consideration to support a non-compete agreement.
 
-- supports: `template-updates`
-- source_cards: `brown-baseline`
+- supports: `recent-developments`, `template-updates`
+- source_cards: `brown-baseline`, `brown-consideration-backdrop`
 - cited_by: [Non-Competes in Wyoming](../non-compete/us/wyoming.md)
 - link_to_source: <https://www.courtlistener.com/opinion/9998787/jennifer-brown-fka-jennifer-stringer-nora-youngren-and-carol-wolfe-v/#:~:text=Continued%20employment%20is%20not%20sufficient,to%20support%20a%20non%2Dcompete%20agreement.>
 
