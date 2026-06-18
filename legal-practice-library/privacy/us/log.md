@@ -1,5 +1,8 @@
 # Us Update Log
 
+## 2026-06-18
+* **Update**: fix(content): close citation/coverage gaps in privacy notes (16 states) [#838] (#850) ([446acad](https://github.com/UseJunior/legal-explainer/commit/446acadc6ce8f536bdae05ea39e34c3852359bad))
+
 ## 2026-06-15
 * **Update**: feat(ia): country-first jurisdiction paths + /practice-guides & /surveys roots (closes #790) (#800) ([01b7b50](https://github.com/UseJunior/legal-explainer/commit/01b7b5028fe5cdd75b5ff4652151f0c9b19d0545))
 

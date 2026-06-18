@@ -22,7 +22,7 @@ California's Consumer Privacy Act, as amended by the CPRA, gives consumers right
 
 **Short answer.** Only if you meet a threshold. The CCPA applies to a for-profit entity that does business in California, determines the purposes and means of processing consumers' personal information, and satisfies at least one statutory threshold — the most common being annual gross revenue over $25,000,000, a figure the CPPA adjusts for inflation (currently $26,625,000) [^stat-140-business].
 
-The revenue test is not the only trigger — the statute also reaches businesses that buy, sell, or share the personal information of 100,000 or more consumers or households, or that derive 50 percent or more of their annual revenue from selling or sharing personal information. Meeting any one threshold brings the whole CCPA to bear.
+The revenue test is not the only trigger — the statute also reaches businesses that buy, sell, or share the personal information of 100,000 or more consumers or households, or that derive 50 percent or more of their annual revenue from selling or sharing personal information [^stat-140-business]. Meeting any one threshold brings the whole CCPA to bear.
 
 ## What must your California privacy policy contain? {#privacy-policy-contents}
 
@@ -64,7 +64,7 @@ There are three thresholds to map against your operations. First, a risk assessm
 
 [^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-03. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not California. This article synthesizes California primary law and is not legal advice from a California-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
-[^stat-140-business]: **Cal. Civ. Code § 1798.140** — "had annual gross revenues in excess of twenty-five million dollars ($25,000,000) in the preceding calendar year, as adjusted pursuant to subdivision (d) of Section 1798.199.95." *Cal. Civ. Code § 1798.140(d)(1)(A).* <https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.140>
+[^stat-140-business]: **Cal. Civ. Code § 1798.140** — "that does business in the State of California, and that satisfies one or more of the following thresholds: (A) As of January 1 of the calendar year, had annual gross revenues in excess of twenty-five million dollars ($25,000,000) in the preceding calendar year, as adjusted pursuant to subdivision (d) of Section 1798.199.95. (B) Alone or in combination, annually buys, sells, or shares the personal information of 100,000 or more consumers or households. (C) Derives 50 percent or more of its annual revenues from selling or sharing consumers’ personal information." *Cal. Civ. Code § 1798.140(d)(1).* <https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.140>
 
 [^stat-130-policy]: **Cal. Civ. Code § 1798.130** — "Disclose the following information in its online privacy policy or policies if the business has an online privacy policy or policies and in any California-specific description of consumers’ privacy rights, or if the business does not maintain those policies, on its internet website, and update that information at least once every 12 months:" *Cal. Civ. Code § 1798.130(a)(5).* <https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.130>
 
