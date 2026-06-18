@@ -244,8 +244,11 @@ describeWithSource('SPA `>`-anchor field migration parity (#476)', () => {
 // its value), spanning both `>` and simple keys. Two fields are PARTIALLY migrated (only their
 // byte-parity-expressible occurrence): `series_designation` and `strategic_partnership_exception_shares`.
 // Fields whose every fill rewrites surrounding literal text (`liquidation_preference_multiple`,
-// `dividend_formula_prefix`), a span crossing a Word field (`no_redemption_clause`), or a computed
-// non-metadata field (`or_officer_clause`) are deliberately left on the legacy path — see PR scope.
+// `dividend_formula_prefix`), a span crossing a Word field (`no_redemption_clause`), a computed
+// non-metadata field (`or_officer_clause`), or an irreducibly-ambiguous fill point (`initial_purchase_price`
+// — the same blank sits in a byte-identical sentence across the three mutually-exclusive dividend-variant
+// paragraphs, so the only disambiguator is far-away paragraph context, which makes for a brittle anchor)
+// are deliberately left on the legacy path — see PR scope.
 // ---------------------------------------------------------------------------
 const COI = 'nvca-certificate-of-incorporation';
 
@@ -254,9 +257,9 @@ describe('loadSelectorContracts (CoI)', () => {
     const recipeDir = resolveRecipeDir(COI);
     const fieldNames = loadRecipeMetadata(recipeDir).fields.map((f) => f.name);
     const { manifests, templateManifest } = loadSelectorContracts(recipeDir, fieldNames);
-    // 28 fields migrated (content-only); see header note for the deferrals.
-    expect(manifests).toHaveLength(28);
-    expect(templateManifest?.migrated_keys).toHaveLength(74);
+    // 27 fields migrated (content-only); see header note for the deferrals.
+    expect(manifests).toHaveLength(27);
+    expect(templateManifest?.migrated_keys).toHaveLength(69);
     // every field_id is a real metadata field (loadSelectorContracts already enforces this, but assert
     // the join key explicitly) and every migrated key is a real replacements.json key (no drift/typos).
     const metaFields = new Set(fieldNames);
