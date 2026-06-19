@@ -360,6 +360,11 @@ and highlight removal from filled fields.
 - **WHEN** template runs contain highlight formatting on `{field}` placeholders
 - **THEN** highlighting is removed from runs where the field was filled with a value
 
+#### Scenario: [OA-FIL-030] Fill output is a flat OPC package with no directory entries
+- **WHEN** `fillDocx` produces an output DOCX (including the re-zip after the underlying templating library writes the package)
+- **THEN** the output zip contains no directory entries (no part name ends with `/`)
+- **AND** every real OPC part (such as `[Content_Types].xml` and `word/document.xml`) is preserved, so Microsoft Word opens the document without an "unreadable content" repair prompt
+
 ### Requirement: Fill Pipeline Behavioral Consistency
 Template and recipe/external fill paths MUST maintain consistent behavior
 for optional field defaulting while allowing path-specific boolean coercion.

@@ -12,7 +12,7 @@ import AdmZip from 'adm-zip';
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
 import type { Document, Element, Node } from '@xmldom/xmldom';
 import { getParagraphText, replaceParagraphTextRange, SafeDocxError } from '@usejunior/docx-core';
-import { enumerateTextParts, getGeneralTextPartNames } from './recipe/ooxml-parts.js';
+import { copyEntriesSkippingDirs, enumerateTextParts, getGeneralTextPartNames } from './recipe/ooxml-parts.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 
@@ -338,9 +338,7 @@ export async function applySelections(
 
   // Rebuild zip from scratch (adm-zip data descriptor workaround)
   const outZip = new AdmZip();
-  for (const entry of zip.getEntries()) {
-    outZip.addFile(entry.entryName, entry.getData());
-  }
+  copyEntriesSkippingDirs(zip, outZip);
   const outBuf = outZip.toBuffer();
   writeFileSync(outputPath, outBuf);
 }
