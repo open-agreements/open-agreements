@@ -49,7 +49,7 @@ Removing `migrated_keys` from the legacy patcher input MUST NOT reduce post-fill
 - **AND** verification fails even though that key was removed from the legacy patcher dict
 
 ### Requirement: Selector Postconditions
-A `FieldSelectorManifest` MUST support postconditions evaluated after fill, surfaced as `VerifyCheck` entries. Phase 1 MUST support `no_unresolved_placeholder`, `all_occurrences_identical`, and `no_double_dollar`. `all_occurrences_identical` MUST range over the resolved occurrence set and assert identical rendered text.
+A `FieldSelectorManifest` MUST support postconditions evaluated after fill, surfaced as `VerifyCheck` entries. Phase 1 MUST support `no_unresolved_placeholder`, `all_occurrences_identical`, and `no_double_dollar`. `all_occurrences_identical` MUST range over the resolved occurrence set and assert identical rendered text. `no_double_dollar` is a **currency-class** postcondition: it MUST be declared only on fields whose value is a monetary amount inserted after a `$` in the template (e.g. `purchase_price_per_share`, `par_value_per_share`). It MUST NOT be declared on name, enum, or date fields, where a `$ $`/`$$` artifact cannot arise — declaring it there is semantically meaningless noise.
 
 #### Scenario: [OA-SEL-007] all_occurrences_identical passes
 - **WHEN** every resolved occurrence of `company_name` renders the same value
@@ -58,6 +58,11 @@ A `FieldSelectorManifest` MUST support postconditions evaluated after fill, surf
 #### Scenario: [OA-SEL-008] all_occurrences_identical fails on divergence
 - **WHEN** two resolved occurrences of a field render different text after fill
 - **THEN** the `all_occurrences_identical` check fails with the diverging occurrences in `details`
+
+#### Scenario: [OA-SEL-022] no_double_dollar is currency-class only
+- **WHEN** a recipe declares field manifests for a name field (`company_name`) and a currency field (`purchase_price_per_share`)
+- **THEN** only the currency field's manifest carries `no_double_dollar` in `postconditions`
+- **AND** the name field's manifest omits it, because a name value cannot produce a `$ $`/`$$` artifact
 
 ### Requirement: Per-Field Opt-In Backward Compatibility
 The selector engine MUST be opt-in per field via the presence of `fields/<field_id>.json`. A recipe with no `fields/` directory MUST behave exactly as today (legacy `replacements.json` path only). `content/templates/` MUST be unaffected.

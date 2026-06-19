@@ -17,6 +17,7 @@
 
 ## 4. Postconditions
 - [x] 4.1 `postconditions.ts` — emit `VerifyCheck`s for `no_unresolved_placeholder`, `all_occurrences_identical`, `no_double_dollar`
+- [x] 4.2 `no_double_dollar` is currency-class — authored only on monetary fields (`purchase_price_per_share`, `par_value_per_share`), not on name/enum/date manifests (#491)
 
 ## 5. Drift detection
 - [x] 5.1 Add a safe-docx parse path in `src/core/recipe/source-drift.ts`; resolve occurrence locators
