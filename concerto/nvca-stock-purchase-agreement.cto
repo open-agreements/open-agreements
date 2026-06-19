@@ -27,7 +27,7 @@ asset NvcaStockPurchaseAgreement extends Contract {
   o String investor_counsel
   o String company_counsel_name
   o String lead_purchaser_name
-  o String series_designation default="A"
+  o String series_designation default=""
   o String agreement_date_month_day default="January 15"
   o String agreement_year_two_digits default="26"
   o String par_value_per_share default="0.0001"

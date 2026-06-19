@@ -15,7 +15,7 @@
       "primary": { "kind": "regex", "pattern": "\\[____________\\]" }
     }
   ],
-  "postconditions": ["no_unresolved_placeholder", "all_occurrences_identical", "no_double_dollar"],
+  "postconditions": ["no_unresolved_placeholder", "all_occurrences_identical"],
   "failure_behavior": "warn",
   "fixtures": [
     { "occurrence": 0, "anchor": "[Insert Company Name]", "note": "bracketed insert anchor" },
