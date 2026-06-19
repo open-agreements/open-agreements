@@ -514,6 +514,33 @@ describe('fillDocx', () => {
     expect(/<w:t(?:\s+[^>]*)?>[^<]*<w:br\/>/.test(outXml)).toBe(false);
   });
 
+  it.openspec('OA-FIL-030')('emits a flat OPC package with no zip directory entries', async () => {
+    const xml =
+      '<?xml version="1.0" encoding="UTF-8"?>' +
+      `<w:document xmlns:w="${W_NS}"><w:body>` +
+      '<w:p><w:r><w:t>Hello {company_name}</w:t></w:r></w:p>' +
+      '</w:body></w:document>';
+    const buf = buildDocxBuffer(xml);
+
+    const result = await fillDocx({
+      templateBuffer: buf,
+      data: { company_name: 'Acme Corp' },
+      stripParagraphPatterns: [],
+    });
+
+    const outZip = new AdmZip(Buffer.from(result));
+    const entries = outZip.getEntries();
+    const dirEntries = entries
+      .filter((entry) => entry.isDirectory || entry.entryName.endsWith('/'))
+      .map((entry) => entry.entryName);
+    const names = entries.map((entry) => entry.entryName);
+
+    expect(dirEntries).toEqual([]);
+    expect(names).toContain('[Content_Types].xml');
+    expect(names).toContain('word/document.xml');
+    expect(outZip.getEntry('word/document.xml')!.getData().toString('utf-8')).toContain('Acme Corp');
+  });
+
   it.openspec('OA-ENG-006')('strips drafting note paragraphs by default', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +

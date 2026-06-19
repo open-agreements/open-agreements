@@ -9,7 +9,12 @@ import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
 import type { Document, Element, Node } from '@xmldom/xmldom';
 import { createReport } from 'docx-templates';
 import { sanitizeCurrencyValuesFromDocx, BLANK_PLACEHOLDER } from './fill-utils.js';
-import { enumerateTextParts, getGeneralTextPartNames } from './recipe/ooxml-parts.js';
+import {
+  copyEntriesSkippingDirs,
+  enumerateTextParts,
+  getGeneralTextPartNames,
+  rezipWithoutDirEntries,
+} from './recipe/ooxml-parts.js';
 import type { FieldDefinition } from './metadata.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
@@ -342,9 +347,7 @@ function stripParagraphs(docxBuffer: Buffer, patterns: RegExp[]): Buffer {
 
   // Rebuild the zip from scratch (adm-zip data descriptor workaround)
   const outZip = new AdmZip();
-  for (const entry of zip.getEntries()) {
-    outZip.addFile(entry.entryName, entry.getData());
-  }
+  copyEntriesSkippingDirs(zip, outZip);
   return outZip.toBuffer();
 }
 
@@ -436,9 +439,7 @@ function stripFilledHighlighting(
   if (!modified) return docxBuffer;
 
   const outZip = new AdmZip();
-  for (const entry of zip.getEntries()) {
-    outZip.addFile(entry.entryName, entry.getData());
-  }
+  copyEntriesSkippingDirs(zip, outZip);
   return outZip.toBuffer();
 }
 
@@ -548,9 +549,7 @@ function stripEmptyTableRows(docxBuffer: Buffer): Buffer {
   if (!modified) return docxBuffer;
 
   const outZip = new AdmZip();
-  for (const entry of zip.getEntries()) {
-    outZip.addFile(entry.entryName, entry.getData());
-  }
+  copyEntriesSkippingDirs(zip, outZip);
   return outZip.toBuffer();
 }
 
@@ -602,8 +601,10 @@ export async function fillDocx(options: FillDocxOptions): Promise<Uint8Array> {
     processLineBreaksAsNewText: true,
   });
 
+  const filledBuffer = rezipWithoutDirEntries(new AdmZip(Buffer.from(filled))).toBuffer();
+
   // Step 5: Remove malformed empty table rows from conditional rendering
-  const cleaned = stripEmptyTableRows(Buffer.from(filled));
+  const cleaned = stripEmptyTableRows(filledBuffer);
   // Step 6: Renumber clause headings so fully-omitted clauses leave no gap
   return renumberClauseHeadings(cleaned);
 }
@@ -743,8 +744,6 @@ function renumberClauseHeadings(docxBuffer: Buffer): Buffer {
   zip.updateFile('word/document.xml', Buffer.from(serializer.serializeToString(doc), 'utf-8'));
 
   const outZip = new AdmZip();
-  for (const entry of zip.getEntries()) {
-    outZip.addFile(entry.entryName, entry.getData());
-  }
+  copyEntriesSkippingDirs(zip, outZip);
   return outZip.toBuffer();
 }

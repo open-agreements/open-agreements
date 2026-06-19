@@ -19,7 +19,7 @@ import { cleanDocument } from './recipe/cleaner.js';
 import { patchDocument } from './recipe/patcher.js';
 import { applySelectorContracts, type FieldSelectorManifest, type FieldResolution } from './selectors/index.js';
 import { applySelections } from './selector.js';
-import { enumerateTextParts, getGeneralTextPartNames } from './recipe/ooxml-parts.js';
+import { enumerateTextParts, getGeneralTextPartNames, rezipWithoutDirEntries } from './recipe/ooxml-parts.js';
 import type { FieldDefinition, CleanConfig } from './metadata.js';
 import type { SelectionsConfig } from './selector.js';
 import type { VerifyResult } from './recipe/types.js';
@@ -292,6 +292,6 @@ async function collapseDoubleSpacesInDocx(docxPath: string): Promise<void> {
   }
 
   if (anyModified) {
-    writeFileSync(docxPath, zip.toBuffer());
+    writeFileSync(docxPath, rezipWithoutDirEntries(zip).toBuffer());
   }
 }

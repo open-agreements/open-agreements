@@ -3,7 +3,7 @@ import { writeFileSync } from 'node:fs';
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
 import type { Document, Element } from '@xmldom/xmldom';
 import { replaceParagraphTextRange } from '@usejunior/docx-core';
-import { enumerateTextParts, getGeneralTextPartNames } from './ooxml-parts.js';
+import { copyEntriesSkippingDirs, enumerateTextParts, getGeneralTextPartNames } from './ooxml-parts.js';
 import { BLANK_PLACEHOLDER } from '../fill-utils.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
@@ -86,9 +86,7 @@ export async function normalizeBracketArtifacts(
   // No declarative rules → no-op. Brackets remain visible for lawyers.
   if (!hasDeclarativeRules) {
     const outZip = new AdmZip();
-    for (const entry of zip.getEntries()) {
-      outZip.addFile(entry.entryName, entry.getData());
-    }
+    copyEntriesSkippingDirs(zip, outZip);
     writeFileSync(outputPath, outZip.toBuffer());
     return stats;
   }
@@ -196,9 +194,7 @@ export async function normalizeBracketArtifacts(
   }
 
   const outZip = new AdmZip();
-  for (const entry of zip.getEntries()) {
-    outZip.addFile(entry.entryName, entry.getData());
-  }
+  copyEntriesSkippingDirs(zip, outZip);
   writeFileSync(outputPath, outZip.toBuffer());
 
   return stats;
