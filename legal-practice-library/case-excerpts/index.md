@@ -15,6 +15,7 @@
 * [AECI Australia Pty Ltd v Convey](aeci-australia-pty-ltd-v-convey.md) - AECI Australia Pty Ltd v Convey [2020] QSC 207 (Bradley J), quoting Just Group Ltd v Peck (2016) 344 ALR 162. — quoted in 1 document(s).
 * [Aesthetic Facial & Ocular Plastic Surgery Center, P.A. v. Zaldivar](aesthetic-facial-ocular-plastic-surgery-center-p-a-v-zaldivar.md) - Aesthetic Facial & Ocular Plastic Surgery Ctr., P.A. v. Zaldivar, 264 N.C. App. 260 (2019). — quoted in 2 document(s).
 * [AG Spectrum Co. v. Elder](ag-spectrum-co-v-elder.md) - AG Spectrum Co. v. Elder, 865 F.3d 1088 (8th Cir. 2017). — quoted in 2 document(s).
+* [Akridge v. Alfa Mutual Ins. Co., 93 F.4th 1181 (11th Cir. 2024)](akridge-v-alfa-mutual-ins-co-93-f-4th-1181-11th-cir-2024.md) - Akridge v. Alfa Mutual Ins. Co., 93 F.4th 1181 (11th Cir. 2024). — quoted in 1 document(s).
 * [Albemarle Paper Co. v. Moody, 422 U.S. 405 (1975)](albemarle-paper-co-v-moody-422-u-s-405-1975.md) - Albemarle Paper Co. v. Moody, 422 U.S. 405 (1975). — quoted in 2 document(s).
 * [Alex Sheshunoff Management Services, L.P. v. Johnson](alex-sheshunoff-management-services-l-p-v-johnson.md) - Alex Sheshunoff Mgmt. Servs., L.P. v. Johnson, 209 S.W.3d 644 (Tex. 2006). — quoted in 2 document(s).
 * [All Stainless, Inc. v. Colby](all-stainless-inc-v-colby.md) - All Stainless, Inc. v. Colby, 364 Mass. 773 (1974). — quoted in 2 document(s).
@@ -478,7 +479,6 @@
 * [United States v. Massachusetts Institute of Technology, 129 F.3d 681 (1st Cir...](united-states-v-massachusetts-institute-of-technology-129-f-3d-681-1st-cir.md) - United States v. Massachusetts Institute of Technology, 129 F.3d 681 (1st Cir. 1997). — quoted in 1 document(s).
 * [Unlimited Opportunity, Inc. v. Waadah](unlimited-opportunity-inc-v-waadah.md) - Unlimited Opportunity, Inc. v. Waadah, 290 Neb. 629, 637, 861 N.W.2d 437 (2015). — quoted in 2 document(s).
 * [Upjohn Co. v. United States, 449 U.S. 383 (1981)](upjohn-co-v-united-states-449-u-s-383-1981.md) - Upjohn Co. v. United States, 449 U.S. 383 (1981). — quoted in 1 document(s).
-* [US Courts, Akridge v. Alfa Ins. Companies (ALND 5:22-cv-01350)](us-courts-akridge-v-alfa-ins-companies-alnd-5-22-cv-01350.md) - US Courts, Akridge v. Alfa Ins. Companies (ALND 5:22-cv-01350). — quoted in 1 document(s).
 * [V.I. Diving Schools/Supplies, Inc. v. Dixon](v-i-diving-schools-supplies-inc-v-dixon.md) - V.I. Diving Schools/Supplies, Inc. v. Dixon, Civ. No. 1046/1982 (Terr. Ct. V.I. Oct. 7, 1983). — quoted in 1 document(s).
 * [Valley Medical Specialists v. Farber](valley-medical-specialists-v-farber.md) - Valley Medical Specialists v. Farber, 194 Ariz. 363, 982 P.2d 1277 (1999). — quoted in 2 document(s).
 * [Van Dyck Printing Co. v. DiNicola](van-dyck-printing-co-v-dinicola.md) - Van Dyck Printing Co. v. DiNicola, 43 Conn. Supp. 191 (1993). — quoted in 2 document(s).
