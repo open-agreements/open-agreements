@@ -2,6 +2,7 @@
 
 ## 2026-06-19
 * **Update**: feat(privacy): audit-native phrasing library — linter-verify exemplars + regex evidence (closes #886) (#922) ([735071a](https://github.com/UseJunior/legal-explainer/commit/735071abab43099f3be6846395712d7455fe9f3c))
+* **Update**: feat(privacy): concept-grammar tagger pass — fill RegexEvidence captures (closes #889) (#925) ([e9d2c7c](https://github.com/UseJunior/legal-explainer/commit/e9d2c7ca5669c3fabec08924938343577ee6e318))
 
 ## 2026-06-17
 * **Update**: fix(privacy-corpus): reconcile pinned+unpinned exa, reject portals, honor verified URL corrections (closes #842) (#844) ([3fc45e6](https://github.com/UseJunior/legal-explainer/commit/3fc45e6058a064744056c10ed85cdca6b13302d1))
