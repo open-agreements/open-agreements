@@ -7,7 +7,7 @@ import {
   getParagraphText,
   SafeDocxError,
 } from '@usejunior/docx-core';
-import { enumerateTextParts, getGeneralTextPartNames } from './ooxml-parts.js';
+import { copyEntriesSkippingDirs, enumerateTextParts, getGeneralTextPartNames } from './ooxml-parts.js';
 import { parseReplacementKey, resolveReplacementValue } from './replacement-keys.js';
 import type { ParsedKey, ReplacementValue } from './replacement-keys.js';
 
@@ -200,10 +200,7 @@ export async function patchDocument(
   // descriptor issues. Some DOCX files use streaming (bit 3) flags which
   // adm-zip's updateFile/writeZip/toBuffer handle incorrectly.
   const outZip = new AdmZip();
-  for (const entry of zip.getEntries()) {
-    const data = modifiedParts.get(entry.entryName) ?? entry.getData();
-    outZip.addFile(entry.entryName, data);
-  }
+  copyEntriesSkippingDirs(zip, outZip, (entryName, entryData) => modifiedParts.get(entryName) ?? entryData);
   writeFileSync(outputPath, outZip.toBuffer());
   return { outputPath, zeroMatchKeys };
 }

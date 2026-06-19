@@ -18,6 +18,7 @@ import AdmZip from 'adm-zip';
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
 import type { Document, Element } from '@xmldom/xmldom';
 import yaml from 'js-yaml';
+import { copyEntriesSkippingDirs } from './recipe/ooxml-parts.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 const XML_NS = 'http://www.w3.org/XML/1998/namespace';
@@ -550,9 +551,9 @@ export function humanizeDocxBuffer(input: Buffer, ctx: HumanizeContext): Buffer 
   const sourceZip = new AdmZip(input);
   const destinationZip = new AdmZip();
 
-  for (const entry of sourceZip.getEntries()) {
-    let data = entry.getData();
-    if (XML_PATH_RE.test(entry.entryName)) {
+  copyEntriesSkippingDirs(sourceZip, destinationZip, (entryName, entryData) => {
+    let data = entryData;
+    if (XML_PATH_RE.test(entryName)) {
       let text = data.toString('utf8');
       text = cleanupConditionalParagraphs(text);
       text = text.replace(IF_MARKER_RE, '');
@@ -560,13 +561,13 @@ export function humanizeDocxBuffer(input: Buffer, ctx: HumanizeContext): Buffer 
       text = text.replace(XREF_SENTINEL_RE, 'Section [#]');
       text = replaceFieldTokens(text, ctx.fieldLabels, ctx.fieldDefaults);
       text = collapseMultiSpaceOutsideFieldCodes(text);
-      if (entry.entryName.startsWith('word/')) {
+      if (entryName.startsWith('word/')) {
         text = highlightPlaceholderRuns(text);
       }
       data = Buffer.from(text, 'utf8');
     }
-    destinationZip.addFile(entry.entryName, data);
-  }
+    return data;
+  });
 
   return destinationZip.toBuffer();
 }
