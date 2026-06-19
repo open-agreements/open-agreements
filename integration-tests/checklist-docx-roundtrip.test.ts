@@ -312,6 +312,40 @@ const ACTION_HEADERS = ['ID', 'Description', 'Status', 'Assigned To', 'Due Date'
 const ISSUE_HEADERS = ['ID', 'Title', 'Status', 'Summary', 'Citation'];
 
 describe('checklist DOCX round-trip', () => {
+  it('formatChecklistDocx strips zip directory entries from its input (flat OPC package)', async () => {
+    // Render a real checklist DOCX, then inject a stray `word/` directory entry
+    // (the OPC violation that makes Word prompt "unreadable content"). The
+    // formatter must drop it on write-back regardless of input. See [OA-FIL-030].
+    const rendered = await renderChecklistDocx(baseChecklist);
+
+    const injected = new AdmZip();
+    for (const e of new AdmZip(rendered).getEntries()) {
+      injected.addFile(e.entryName, e.getData());
+    }
+    injected.addFile('word/', Buffer.alloc(0)); // stray directory entry
+
+    const tempDir = mkdtempSync(join(tmpdir(), 'oa-roundtrip-dir-'));
+    tempDirs.push(tempDir);
+    const docxPath = join(tempDir, 'with-dir-entry.docx');
+    injected.writeZip(docxPath);
+
+    // Sanity: the injected input really contains the directory entry.
+    const before = new AdmZip(readFileSync(docxPath))
+      .getEntries()
+      .filter((e) => e.entryName.endsWith('/'))
+      .map((e) => e.entryName);
+    expect(before).toContain('word/');
+
+    await formatChecklistDocx(docxPath);
+
+    const after = new AdmZip(readFileSync(docxPath));
+    const dirEntries = after.getEntries().filter((e) => e.isDirectory || e.entryName.endsWith('/'));
+    const names = after.getEntries().map((e) => e.entryName);
+    expect(dirEntries).toEqual([]);
+    expect(names).toContain('[Content_Types].xml');
+    expect(names).toContain('word/document.xml');
+  });
+
   it('round-trip no-op: import of rendered checklist produces null patch', async () => {
     const buffer = await renderChecklistDocx(baseChecklist);
 

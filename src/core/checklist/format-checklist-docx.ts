@@ -10,6 +10,7 @@
 import AdmZip from 'adm-zip';
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
 import type { Document as XMLDocument, Element } from '@xmldom/xmldom';
+import { rezipWithoutDirEntries } from '../recipe/ooxml-parts.js';
 import {
   classifyRow,
   getDirectChildRows,
@@ -296,5 +297,7 @@ export async function formatChecklistDocx(docxPath: string): Promise<void> {
   const serializer = new XMLSerializer();
   const updatedXml = serializer.serializeToString(xmlDoc);
   zip.updateFile('word/document.xml', Buffer.from(updatedXml, 'utf-8'));
-  zip.writeZip(docxPath);
+  // Rebuild dropping any zip directory entries so the output is a valid flat OPC
+  // package (Word rejects directory entries as unreadable content). See [OA-FIL-030].
+  rezipWithoutDirEntries(zip).writeZip(docxPath);
 }
