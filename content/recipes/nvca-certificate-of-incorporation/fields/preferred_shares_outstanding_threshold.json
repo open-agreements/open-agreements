@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "field_id": "preferred_shares_outstanding_threshold",
+  "field_label": "Preferred Shares Outstanding Threshold",
+  "description": "Minimum shares of Preferred Stock outstanding for protective provisions to apply",
+  "source_template_version": "10-1-2025",
+  "occurrences": [
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "when\\s+at\\s+least\\s+(\\[__\\])",
+        "group": 1
+      }
+    },
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "least\\s+(\\[____\\])",
+        "group": 1
+      }
+    }
+  ],
+  "postconditions": [
+    "no_unresolved_placeholder",
+    "no_double_dollar"
+  ],
+  "failure_behavior": "warn",
+  "fixtures": []
+}

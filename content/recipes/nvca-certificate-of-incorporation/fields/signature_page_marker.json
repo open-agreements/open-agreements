@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "field_id": "signature_page_marker",
+  "field_label": "Signature Page Marker",
+  "description": "Signature page marker text",
+  "source_template_version": "10-1-2025",
+  "occurrences": [
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "(\\[Signature\\s+Page\\s+Follows\\])",
+        "group": 1
+      }
+    }
+  ],
+  "postconditions": [
+    "no_unresolved_placeholder",
+    "no_double_dollar"
+  ],
+  "failure_behavior": "warn",
+  "fixtures": []
+}

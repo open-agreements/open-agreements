@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "field_id": "registered_agent_name",
+  "field_label": "Registered Agent Name",
+  "description": "Name of the registered agent in Delaware",
+  "source_template_version": "10-1-2025",
+  "occurrences": [
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "is\\s+(\\[_____________________\\])",
+        "group": 1
+      }
+    }
+  ],
+  "postconditions": [
+    "no_unresolved_placeholder",
+    "no_double_dollar"
+  ],
+  "failure_behavior": "warn",
+  "fixtures": []
+}

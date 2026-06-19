@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "field_id": "original_issue_price",
+  "field_label": "Original Issue Price",
+  "description": "Original purchase price per share of Series A Preferred Stock",
+  "source_template_version": "10-1-2025",
+  "occurrences": [
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "to\\s+(\\$_______\\s+\\[insert\\s+original\\s+purchase\\s+price\\s+of\\s+Series\\s+A\\s+Preferred\\s+Stock\\])",
+        "group": 1
+      }
+    }
+  ],
+  "postconditions": [
+    "no_unresolved_placeholder",
+    "no_double_dollar"
+  ],
+  "failure_behavior": "warn",
+  "fixtures": []
+}
