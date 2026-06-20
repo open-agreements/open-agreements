@@ -1,5 +1,8 @@
 # Ai Hiring Update Log
 
+## 2026-06-20
+* **Update**: fix(content): triage firm-only sourcing in AI-hiring/bias topics (cluster 1/5, refs #950) (#952) ([bf817a4](https://github.com/UseJunior/legal-explainer/commit/bf817a4d862a2cb27fd23deee014ffa30830a457))
+
 ## 2026-06-18
 * **Update**: fix(content): close citation/coverage gaps in AI-employment topic notes [#838] (#851) ([40a7367](https://github.com/UseJunior/legal-explainer/commit/40a7367cd8aacfc5c9f9dcef32876f49217dee86))
 
