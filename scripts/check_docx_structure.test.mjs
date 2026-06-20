@@ -297,6 +297,30 @@ describe('check_docx_structure', () => {
     expect(await codesFor(good)).not.toContain('MISSING_PSTYLE_ON_VISIBLE_PARAGRAPH');
   });
 
+  it('does not flag an unstyled paragraph after a section break that ends a styled paragraph', async () => {
+    const good = await writeDocx({
+      document: documentXml(
+        [
+          // Last paragraph of section 1: styled heading carrying the w:sectPr
+          // *inside* its pPr (the common WordprocessingML shape).
+          '<w:p><w:pPr><w:pStyle w:val="OAClauseHeading"/><w:sectPr><w:type w:val="nextPage"/></w:sectPr></w:pPr><w:r><w:t>Heading ending section one</w:t></w:r></w:p>',
+          // Section 2's first paragraph — must NOT inherit across the break.
+          '<w:p><w:r><w:t>New section body</w:t></w:r></w:p>',
+        ].join(''),
+      ),
+      extra: {
+        'word/styles.xml': stylesXml(
+          [
+            '<w:style w:type="paragraph" w:styleId="OAClauseHeading"><w:pPr><w:jc w:val="center"/></w:pPr><w:rPr><w:b/></w:rPr></w:style>',
+            '<w:style w:type="paragraph" w:styleId="OATitle"><w:pPr><w:jc w:val="center"/></w:pPr></w:style>',
+          ].join(''),
+        ),
+      },
+    });
+
+    expect(await codesFor(good)).not.toContain('MISSING_PSTYLE_ON_VISIBLE_PARAGRAPH');
+  });
+
   it('flags separate/end split across adjacent runs without cached result text', async () => {
     const broken = await writeDocx({
       extra: {

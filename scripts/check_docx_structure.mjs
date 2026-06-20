@@ -351,29 +351,38 @@ function missingPStyleVisibleParagraphIssues(documentXml, stylesXml) {
       previousVisibleParagraph = null;
       continue;
     }
-    if (!hasVisibleText(xml)) continue;
 
-    const offset = match.index ?? 0;
-    const styleId = paragraphStyleId(xml);
-    if (styleId == null) {
-      if (hasPagesStyleContract && hasInlineParagraphAlignment(xml)) {
-        findings.push({ offset, visibleIndex, reason: 'inline_alignment' });
-      } else if (
-        hasPagesStyleContract &&
-        previousVisibleParagraph?.styleId &&
-        styleCarriesVisibleProperties(previousVisibleParagraph.styleId, styleBlocks)
-      ) {
-        findings.push({
-          offset,
-          visibleIndex,
-          reason: 'previous_visible_style',
-          previousStyleId: previousVisibleParagraph.styleId,
-        });
+    if (hasVisibleText(xml)) {
+      const offset = match.index ?? 0;
+      const styleId = paragraphStyleId(xml);
+      if (styleId == null) {
+        if (hasPagesStyleContract && hasInlineParagraphAlignment(xml)) {
+          findings.push({ offset, visibleIndex, reason: 'inline_alignment' });
+        } else if (
+          hasPagesStyleContract &&
+          previousVisibleParagraph?.styleId &&
+          styleCarriesVisibleProperties(previousVisibleParagraph.styleId, styleBlocks)
+        ) {
+          findings.push({
+            offset,
+            visibleIndex,
+            reason: 'previous_visible_style',
+            previousStyleId: previousVisibleParagraph.styleId,
+          });
+        }
       }
+
+      previousVisibleParagraph = { styleId };
+      visibleIndex++;
     }
 
-    previousVisibleParagraph = { styleId };
-    visibleIndex++;
+    // A paragraph carrying a section break (w:sectPr in its pPr) is the last
+    // paragraph of its section. The standalone-sectPr boundary alternative
+    // can't see this shape — the paragraph match swallows the inner sectPr —
+    // so reset here so prior styled state doesn't bleed into the next section.
+    if (/<w:sectPr[\s>]/.test(xml)) {
+      previousVisibleParagraph = null;
+    }
   }
 
   return findings;
