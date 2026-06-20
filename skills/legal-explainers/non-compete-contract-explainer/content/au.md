@@ -2,7 +2,7 @@
 jurisdiction: "Australia"
 slug: au
 countryCode: AU
-snapshotAsOf: "2026-06-19"
+snapshotAsOf: "2026-06-20"
 lastReviewed: "2026-06-16"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/au
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/au · **Snapshot as of:** 2026-06-19 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/au · **Snapshot as of:** 2026-06-20 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Australia[^about]
 
