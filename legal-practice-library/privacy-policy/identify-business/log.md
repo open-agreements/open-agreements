@@ -1,5 +1,8 @@
 # Identify Business Update Log
 
+## 2026-06-20
+* **Update**: feat(privacy/#944): corpus precision-gate + tuned passive-ordering branch for disclose-rights-catalog (#947) ([7ca7449](https://github.com/UseJunior/legal-explainer/commit/7ca7449395a51152482d8f8d43779070a61c32d9))
+
 ## 2026-06-19
 * **Update**: feat(privacy): audit-native phrasing library — linter-verify exemplars + regex evidence (closes #886) (#922) ([735071a](https://github.com/UseJunior/legal-explainer/commit/735071abab43099f3be6846395712d7455fe9f3c))
 * **Update**: feat(privacy): concept-grammar tagger pass — fill RegexEvidence captures (closes #889) (#925) ([e9d2c7c](https://github.com/UseJunior/legal-explainer/commit/e9d2c7ca5669c3fabec08924938343577ee6e318))
