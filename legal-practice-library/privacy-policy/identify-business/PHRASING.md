@@ -83,10 +83,10 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 > questions regarding this privacy policy, you may write to us at: APA Corporation Attn: Legal Department 2000 Post Oak Blvd
 
 - conformance: conforming
-- source: [APA](https://apacorp.com/privacy)
+- source: [APA](https://apacorp.com/privacy-policy/)
 - detected_by: A→B→C within gap
 - captured: 2026-06-15T19:34:23.938Z
-- link_to_source: <https://apacorp.com/privacy>
+- link_to_source: <https://apacorp.com/privacy-policy/>
 
 ### AT&T {#at-t}
 
@@ -103,10 +103,10 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 > contact and other Personal Information to send you marketing information. Instructions on how you can opt-out from marketing communications are included in each marketing communication you receive. You can also email us atprivacyoffice@abbvie.com
 
 - conformance: conforming
-- source: [AbbVie](https://privacy-id.abbvie.com/abbvie-id/)
+- source: [AbbVie](https://privacy.abbvie/privacy-policies/us-privacy-policy.html)
 - detected_by: A→B→C within gap
 - captured: 2026-06-15T19:34:23.938Z
-- link_to_source: <https://privacy-id.abbvie.com/abbvie-id/>
+- link_to_source: <https://privacy.abbvie/privacy-policies/us-privacy-policy.html>
 
 ### Abbott Laboratories {#abbott-laboratories}
 
@@ -183,7 +183,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 > contact
 
 - conformance: non-conforming
-- source: [Interactive Brokers](https://interactivebrokers.com/privacy)
+- source: [Interactive Brokers](https://www.interactivebrokers.com/en/accounts/legalDocuments/privacy.php)
 - detected_by: A only; no action
 - captured: 2026-06-15T19:34:23.938Z
-- link_to_source: <https://interactivebrokers.com/privacy>
+- link_to_source: <https://www.interactivebrokers.com/en/accounts/legalDocuments/privacy.php>

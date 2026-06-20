@@ -74,12 +74,46 @@ function extractText(docxPath: string): string {
   return parts.join('');
 }
 
+/** Read the raw word/document.xml from a DOCX (for structural assertions). */
+function readDocumentXml(docxPath: string): string {
+  const zip = new AdmZip(docxPath);
+  const entry = zip.getEntry('word/document.xml');
+  return entry ? entry.getData().toString('utf-8') : '';
+}
+
 // ---------------------------------------------------------------------------
 // Helper to make paragraph XML with marker prefix
 // ---------------------------------------------------------------------------
 
 function para(text: string): string {
   return `<w:p xmlns:w="${W_NS}"><w:r><w:t xml:space="preserve">${text}</w:t></w:r></w:p>`;
+}
+
+/**
+ * Paragraph containing leading text followed by a complex Word cross-reference
+ * field (fldChar begin/separate/end + instrText) whose cached result is `fieldResult`.
+ * Mirrors the real NVCA "Additional Closings" clause structure from issue #479.
+ */
+function paraWithComplexField(leadingText: string, fieldResult: string): string {
+  return (
+    `<w:p xmlns:w="${W_NS}">` +
+    `<w:r><w:t xml:space="preserve">${leadingText}</w:t></w:r>` +
+    `<w:r><w:fldChar w:fldCharType="begin"/></w:r>` +
+    `<w:r><w:instrText xml:space="preserve"> REF _Ref137575642 \\r \\h  \\* MERGEFORMAT </w:instrText></w:r>` +
+    `<w:r><w:fldChar w:fldCharType="separate"/></w:r>` +
+    `<w:r><w:t>${fieldResult}</w:t></w:r>` +
+    `<w:r><w:fldChar w:fldCharType="end"/></w:r>` +
+    `</w:p>`
+  );
+}
+
+/** Paragraph whose ONLY content is a simple field (<w:fldSimple>). */
+function paraWithSimpleField(fieldResult: string): string {
+  return (
+    `<w:p xmlns:w="${W_NS}">` +
+    `<w:fldSimple w:instr=" REF _Ref137575642 \\h "><w:r><w:t>${fieldResult}</w:t></w:r></w:fldSimple>` +
+    `</w:p>`
+  );
 }
 
 function tableCell(...paragraphs: string[]): string {
@@ -691,5 +725,88 @@ describe('inline selections', () => {
     if (!result.success) {
       expect(result.error.message).toContain('inline');
     }
+  });
+});
+
+// ---------------------------------------------------------------------------
+// Field-construct stripping on replaceWith substitution (issue #479)
+// ---------------------------------------------------------------------------
+
+describe('replaceWith strips orphaned field constructs', () => {
+  const fieldGroup: SelectionsConfig = {
+    groups: [{
+      id: 'additional_closings',
+      type: 'checkbox',
+      standalone: true,
+      markerless: true,
+      options: [{
+        marker: 'Additional Closings',
+        trigger: { field: 'closing_type', equals: 'additional' },
+        replaceWith: '[Reserved]',
+      }],
+    }],
+  };
+
+  it('removes fldChar/instrText when the option is de-selected (the #479 fix)', async () => {
+    const body = `
+      ${para('Section 1.2(a) Initial Closing.')}
+      ${paraWithComplexField('Additional Closings. See ', 'Exhibit A')}
+      ${para('Section 1.2(c) Tranche Closing.')}
+    `;
+    const inputPath = buildTestDocx(body);
+    const outputPath = join(makeTempDir(), 'out.docx');
+
+    await applySelections(inputPath, outputPath, fieldGroup, { closing_type: 'single' });
+
+    const xml = readDocumentXml(outputPath);
+    // No field machinery survives — so nothing re-resolves to "Exhibit A".
+    expect(xml).not.toContain('<w:fldChar');
+    expect(xml).not.toContain('<w:instrText');
+
+    const text = extractText(outputPath);
+    expect(text).toContain('[Reserved]');
+    expect(text).not.toContain('Exhibit A');
+    expect(text).not.toContain('Additional Closings');
+  });
+
+  it('leaves the field intact when the option is selected (control)', async () => {
+    const body = `
+      ${para('Section 1.2(a) Initial Closing.')}
+      ${paraWithComplexField('Additional Closings. See ', 'Exhibit A')}
+      ${para('Section 1.2(c) Tranche Closing.')}
+    `;
+    const inputPath = buildTestDocx(body);
+    const outputPath = join(makeTempDir(), 'out.docx');
+
+    await applySelections(inputPath, outputPath, fieldGroup, { closing_type: 'additional' });
+
+    const xml = readDocumentXml(outputPath);
+    // Kept paragraph: field machinery must remain untouched.
+    expect(xml).toContain('<w:fldChar');
+    expect(xml).toContain('<w:instrText');
+
+    const text = extractText(outputPath);
+    expect(text).toContain('Additional Closings');
+    expect(text).toContain('Exhibit A');
+  });
+
+  it('renders [Reserved] when the paragraph was entirely a simple field', async () => {
+    const body = `
+      ${para('Section 1.2(a) Initial Closing.')}
+      ${paraWithSimpleField('Additional Closings (Exhibit A)')}
+      ${para('Section 1.2(c) Tranche Closing.')}
+    `;
+    const inputPath = buildTestDocx(body);
+    const outputPath = join(makeTempDir(), 'out.docx');
+
+    await applySelections(inputPath, outputPath, fieldGroup, { closing_type: 'single' });
+
+    const xml = readDocumentXml(outputPath);
+    expect(xml).not.toContain('<w:fldSimple');
+
+    const text = extractText(outputPath);
+    // Placeholder is not silently dropped despite there being no <w:t> left after stripping.
+    expect(text).toContain('[Reserved]');
+    expect(text).not.toContain('Exhibit A');
   });
 });

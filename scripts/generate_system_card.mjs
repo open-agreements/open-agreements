@@ -435,7 +435,7 @@ async function loadAllureTestResultIndex() {
   return { available: true, byRef };
 }
 
-function normalizeScenarioStatus(status) {
+export function normalizeScenarioStatus(status) {
   return status === "covered" ? "covered" : "missing";
 }
 
@@ -495,7 +495,7 @@ function buildEpicBreakdown(rows, bindingEpicByRef) {
   return breakdown;
 }
 
-function parseMatrixMarkdown(markdown, { bindingEpicByRef }) {
+export function parseMatrixMarkdown(markdown, { bindingEpicByRef }) {
   const rows = [];
   let currentCapability = null;
 
@@ -733,7 +733,7 @@ function metricCardHtml({ label, value, note, warning = false }) {
   ].join("");
 }
 
-function makeSystemCardMarkdown({ traceability, runtimeTrust, linkContext }) {
+export function makeSystemCardMarkdown({ traceability, runtimeTrust, linkContext }) {
   const runtime = runtimeTrust.available ? runtimeTrust.data : null;
   const runtimeSource = runtime?.runtime_source ?? "allure-summary";
   const hasRuntimeMetrics = runtime?.metrics_available !== false;
@@ -1027,4 +1027,6 @@ async function main() {
   console.log(`Generated system card: ${relOutput}`);
 }
 
-await main();
+if (process.argv[1] && path.resolve(process.argv[1]) === __filename) {
+  await main();
+}

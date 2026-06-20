@@ -1,5 +1,9 @@
 # Outside Counsel Update Log
 
+## 2026-06-18
+* **Update**: fix(content): close citation/coverage gaps in AI-employment topic notes [#838] (#851) ([40a7367](https://github.com/UseJunior/legal-explainer/commit/40a7367cd8aacfc5c9f9dcef32876f49217dee86))
+* **Update**: feat(content-rule): pull quote must encompass the inline {% q %} it supports (#854) (#857) ([755c535](https://github.com/UseJunior/legal-explainer/commit/755c535cce07fc60d16ef7c74671b035515bd070))
+
 ## 2026-06-12
 * **Update**: fix(privacy): future-effective frontmatter + table markers, enum corrections, NJ official source, verbatimQuote ellipsis ban (#698) ([bea6a5b](https://github.com/UseJunior/legal-explainer/commit/bea6a5bf59d1e2ff9c709d879d23dcd09f968a85))
 

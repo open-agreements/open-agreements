@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "field_id": "common_shares_authorized",
+  "field_label": "Common Shares Authorized",
+  "description": "Number of authorized shares of Common Stock",
+  "source_template_version": "10-1-2025",
+  "occurrences": [
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "are\\s+(\\[_____\\])",
+        "group": 1
+      }
+    }
+  ],
+  "postconditions": [
+    "no_unresolved_placeholder",
+    "no_double_dollar"
+  ],
+  "failure_behavior": "warn",
+  "fixtures": []
+}

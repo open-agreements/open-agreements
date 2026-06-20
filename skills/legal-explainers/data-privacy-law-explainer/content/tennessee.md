@@ -2,7 +2,7 @@
 jurisdiction: "Tennessee"
 slug: tennessee
 countryCode: US
-snapshotAsOf: "2026-06-17"
+snapshotAsOf: "2026-06-19"
 lastReviewed: "2026-06-06"
 canonicalUrl: https://openagreements.org/practice-guides/privacy/us/tennessee
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/tennessee · **Snapshot as of:** 2026-06-17 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/tennessee · **Snapshot as of:** 2026-06-19 · License: CC BY 4.0 · © openagreements.org
 
 # Tennessee Consumer Privacy Law (TIPA)[^about]
 
@@ -74,7 +74,7 @@ A controller that cures within the 60-day window and certifies the cure in writi
 
 [^stat-3311-exempt]: **Tenn. Code Ann. § 47-18-3311** — "This part does not apply to: - (1) A body, authority, board, bureau, commission, district, or agency of this state or of a political subdivision of this state; - (2) A financial institution, an affiliate of a financial institution, or data subject to Title V of the federal Gramm-Leach-Bliley Act (15 U.S.C. § 6801 et seq.);" *Tenn. Code Ann. § 47-18-3311(a).* <https://law.justia.com/codes/tennessee/title-47/chapter-18/part-33/section-47-18-3311/#:~:text=This%20part%20does%20not%20apply,U.S.C.%20%C2%A7%206801%20et%20seq.)%3B>
 
-[^stat-3305-notice]: **Tenn. Code Ann. § 47-18-3305** — "A controller shall provide a reasonably accessible, clear, and meaningful privacy notice that includes: - (1) The categories of personal information processed by the controller; - (2) The purpose for processing personal information;" *Tenn. Code Ann. § 47-18-3305(c).* <https://law.justia.com/codes/tennessee/title-47/chapter-18/part-33/section-47-18-3305/#:~:text=A%20controller%20shall%20provide%20a,purpose%20for%20processing%20personal%20information%3B>
+[^stat-3305-notice]: **Tenn. Code Ann. § 47-18-3305** — "A controller shall provide a reasonably accessible, clear, and meaningful privacy notice that includes: - (1) The categories of personal information processed by the controller; - (2) The purpose for processing personal information; - (3) How consumers may exercise their consumer rights pursuant to § 47-18-3304, including how a consumer may appeal a controller's decision with regard to the consumer's request; - (4) The categories of personal information that the controller sells to third parties, if any; and - (5) The categories of third parties, if any, to whom the controller sells personal information." *Tenn. Code Ann. § 47-18-3305(c).* <https://law.justia.com/codes/tennessee/title-47/chapter-18/part-33/section-47-18-3305/#:~:text=A%20controller%20shall%20provide%20a,the%20controller%20sells%20personal%20information.>
 
 [^stat-3306-contract]: **Tenn. Code Ann. § 47-18-3306** — "A contract between a controller and a processor governs the processor's data processing procedures with respect to processing performed on behalf of the controller. The contract is binding and must clearly set forth instructions for processing data, the nature and purpose of processing, the type of data subject to processing, the duration of processing, and the rights and obligations of both parties." *Tenn. Code Ann. § 47-18-3306(b).* <https://law.justia.com/codes/tennessee/title-47/chapter-18/part-33/section-47-18-3306/#:~:text=A%20contract%20between%20a%20controller,and%20obligations%20of%20both%20parties.>
 

@@ -217,11 +217,11 @@ This agreement constitutes the entire agreement between the parties regarding it
 By signing this agreement, each party acknowledges and agrees to the restrictive covenant obligations above. Employee confirms having read and understood each provision, including the Cover Terms.
 
 <!-- oa:signer id=employer kind=entity capacity=through_representative label="Employer" -->
-**Employer**
+Employer: {employer_name}
 
 Signature: _______________
-Print Name: {employer_name}
-Title: _______________
+Signatory Name: {employer_signatory_name}
+Title: {employer_signatory_title}
 Date: _______________
 
 <!-- oa:signer id=employee kind=individual capacity=personal label="Employee" -->

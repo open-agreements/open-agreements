@@ -32,7 +32,7 @@ fields:
   - name: series_designation
     type: string
     description: Series designation shown in the agreement title and share definitions
-    default: A
+    default: ""
   - name: agreement_date_month_day
     type: string
     description: Month/day portion of the agreement date in the opening paragraph

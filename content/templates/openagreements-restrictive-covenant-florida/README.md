@@ -89,6 +89,8 @@ rendered as cover-term rows in the output document.
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `employer_name` | string | yes | Legal name of the employer |
+| `employer_signatory_name` | string | no | Full name of the authorized signatory signing for the employer |
+| `employer_signatory_title` | string | no | Title of the authorized signatory signing for the employer |
 | `employee_name` | string | yes | Full legal name of the employee |
 | `employee_title` | string | no | Employee job title or position |
 | `effective_date` | date | yes | Effective date of this agreement |

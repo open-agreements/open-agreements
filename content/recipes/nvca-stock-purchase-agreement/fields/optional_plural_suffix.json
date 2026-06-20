@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "field_id": "optional_plural_suffix",
+  "field_label": "Optional Plural Suffix",
+  "description": "The optional \"s\" in the \"Closing[s]; Delivery.\" heading, toggled depending on whether the financing has additional closings. Anchored on \"Closing\" so the [s] blank is captured at exactly that span.",
+  "source_template_version": "10-28-2025",
+  "occurrences": [
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "Closing(\\[s\\])",
+        "group": 1
+      }
+    }
+  ],
+  "postconditions": [
+    "no_unresolved_placeholder"
+  ],
+  "failure_behavior": "warn",
+  "fixtures": [
+    {
+      "occurrence": 0,
+      "anchor": "Closing[s]",
+      "note": "section heading; regex captures only the [s] suffix"
+    }
+  ]
+}

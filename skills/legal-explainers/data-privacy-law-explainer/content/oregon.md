@@ -2,7 +2,7 @@
 jurisdiction: "Oregon"
 slug: oregon
 countryCode: US
-snapshotAsOf: "2026-06-17"
+snapshotAsOf: "2026-06-19"
 lastReviewed: "2026-06-05"
 canonicalUrl: https://openagreements.org/practice-guides/privacy/us/oregon
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/oregon · **Snapshot as of:** 2026-06-17 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/oregon · **Snapshot as of:** 2026-06-19 · License: CC BY 4.0 · © openagreements.org
 
 # Oregon Consumer Privacy Law (OCPA)[^about]
 
@@ -86,7 +86,7 @@ There is also no longer a general right to cure. The OCPA's pre-suit notice-and-
 
 [^stat-581-contract]: **Or. Rev. Stat. § 646A.581** — "The processor shall enter into a contract with the controller that governs how the processor processes personal data on the controller’s behalf." *Or. Rev. Stat. § 646A.581(2).* <https://www.oregonlegislature.gov/bills_laws/ors/ors646A.html>
 
-[^stat-581-terms]: **Or. Rev. Stat. § 646A.581** — "(d) Ensure that each person that processes personal data is subject to a duty of confidentiality with respect to the personal data; (e) Require the processor to delete the personal data or return the personal data to the controller at the controller’s direction or at the end of the provision of services, unless a law requires the processor to retain the personal data;" *Or. Rev. Stat. § 646A.581(2).* <https://www.oregonlegislature.gov/bills_laws/ors/ors646A.html>
+[^stat-581-terms]: **Or. Rev. Stat. § 646A.581** — "(b) Set forth clear instructions for processing data, the nature and purpose of the processing, the type of data that is subject to processing and the duration of the processing; (c) Specify the rights and obligations of both parties with respect to the subject matter of the contract; (d) Ensure that each person that processes personal data is subject to a duty of confidentiality with respect to the personal data; (e) Require the processor to delete the personal data or return the personal data to the controller at the controller’s direction or at the end of the provision of services, unless a law requires the processor to retain the personal data; (f) Require the processor to make available to the controller, at the controller’s request, all information the controller needs to verify that the processor has complied with all obligations the processor has under ORS 646A.570 to 646A.589; (g) Require the processor to enter into a subcontract with a person the processor engages to assist with processing personal data on the controller’s behalf and in the subcontract require the subcontractor to meet the processor’s obligations under the processor’s contract with the controller; and (h) Allow the controller, the controller’s designee or a qualified and independent person the processor engages, in accordance with an appropriate and accepted control standard, framework or procedure, to assess the processor’s policies and technical and organizational measures for complying with the processor’s obligations under ORS 646A.570 to 646A.589, and require the processor to cooperate with the assessment and, at the controller’s request, report the results of the assessment to the controller." *Or. Rev. Stat. § 646A.581(2)(b)-(h).* <https://www.oregonlegislature.gov/bills_laws/ors/ors646A.html>
 
 [^stat-578-consent]: **Or. Rev. Stat. § 646A.578** — "Process sensitive data about a consumer without first obtaining the consumer’s consent or, if the controller knows the consumer is a child, without processing the sensitive data in accordance with the Children’s Online Privacy Protection Act of 1998, 15 U.S.C. 6501 et seq." *Or. Rev. Stat. § 646A.578(2)(b).* <https://www.oregonlegislature.gov/bills_laws/ors/ors646A.html>
 

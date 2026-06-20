@@ -25,11 +25,11 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 ## Quoted passages
 
-### rummery-v-illinois-bell-telephone-co-250-f-3d-553-7th-cir-2001-every-single-piece-of-scrap-paper-084b5d63 {#rummery-v-illinois-bell-telephone-co-250-f-3d-553-7th-cir-2001-every-single-piece-of-scrap-paper-084b5d63}
+### rummery-v-illinois-bell-telephone-co-250-f-3d-553-7th-cir-2001-not-required-to-keep-every-single-a6400cd6 {#rummery-v-illinois-bell-telephone-co-250-f-3d-553-7th-cir-2001-not-required-to-keep-every-single-a6400cd6}
 
-> every single piece of scrap paper
+> not required to keep every single piece of scrap paper that various employees may create during the termination process. It is sufficient that the employer retains only the actual employment record itself, not the rough drafts or processes which may lead up to it.
 
 - supports: `who-should-write-ai-layoff-memo`
 - source_cards: `rummery-v-illinois-bell-telephone-co-250-f-3d-55`
 - cited_by: [Business rationale documentation for AI-driven layoffs](../ai-layoffs/business-rationale-documentation.md)
-- link_to_source: <https://www.courtlistener.com/opinion/773294/michael-rummery-v-illinois-bell-telephone-company#:~:text=every%20single%20piece%20of%20scrap%20paper>
+- link_to_source: <https://www.courtlistener.com/opinion/773294/michael-rummery-v-illinois-bell-telephone-company#:~:text=not%20required%20to%20keep%20every,may%20lead%20up%20to%20it.>

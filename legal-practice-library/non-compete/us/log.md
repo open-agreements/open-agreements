@@ -1,5 +1,8 @@
 # Us Update Log
 
+## 2026-06-18
+* **Update**: fix(content): close citation/coverage gaps in non-compete notes (WY/ME/OR) [#838] (#849) ([c6ff050](https://github.com/UseJunior/legal-explainer/commit/c6ff050f3284a3b0d69d3c36d76eab5e36a1bd93))
+
 ## 2026-06-16
 * **Update**: feat(ia): checklists as a top-level product line — country-first /checklists (closes #803) (#804) ([2602c18](https://github.com/UseJunior/legal-explainer/commit/2602c18434aef56cbc170c8061d60c29c0c41954))
 

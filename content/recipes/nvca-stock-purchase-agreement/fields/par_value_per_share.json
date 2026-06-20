@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "field_id": "par_value_per_share",
+  "field_label": "Par Value Per Share",
+  "description": "Par value of the Series preferred stock named in the purchase clause (\"Stock, $[__] par value per share\"). A bare contextual locator on $[__] resolves to zero, so a regex with surrounding context captures the exact 2-underscore blank.",
+  "source_template_version": "10-28-2025",
+  "occurrences": [
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "Stock, \\$(\\[__\\])\\spar value",
+        "group": 1
+      }
+    }
+  ],
+  "postconditions": [
+    "no_unresolved_placeholder",
+    "no_double_dollar"
+  ],
+  "failure_behavior": "warn",
+  "fixtures": [
+    {
+      "occurrence": 0,
+      "anchor": "Stock, $[__] par value",
+      "note": "purchase clause; regex captures only the [__] blank between \"Stock, $\" and \"par value\""
+    }
+  ]
+}

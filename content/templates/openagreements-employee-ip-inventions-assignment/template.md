@@ -125,11 +125,11 @@ This agreement is governed by the law listed in Cover Terms, and disputes will b
 In consideration of Employee's employment or continued employment by Company, each party acknowledges and agrees to the assignment and confidentiality obligations above.
 
 <!-- oa:signer id=company kind=entity capacity=through_representative label="Company" -->
-**Company**
+Company: {company_name}
 
 Signature: _______________
-Print Name: {company_name}
-Title: _______________
+Signatory Name: {company_signatory_name}
+Title: {company_signatory_title}
 Date: _______________
 
 <!-- oa:signer id=employee kind=individual capacity=personal label="Employee" -->

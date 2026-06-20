@@ -83,10 +83,10 @@ Phrasing library for [REQ-privacy-law.privacy-policy.describe-third-party-recipi
 > share your personal information with our employees, contractors, consultants and other parties who require such information to assist us with establishing, maintaining and managing our business relationship with you, including: third part
 
 - conformance: conforming
-- source: [APA](https://apacorp.com/privacy)
+- source: [APA](https://apacorp.com/privacy-policy/)
 - detected_by: A→B→C within gap
 - captured: 2026-06-15T19:34:23.938Z
-- link_to_source: <https://apacorp.com/privacy>
+- link_to_source: <https://apacorp.com/privacy-policy/>
 
 ### AT&T {#at-t}
 
@@ -103,10 +103,10 @@ Phrasing library for [REQ-privacy-law.privacy-policy.describe-third-party-recipi
 > provided to us through websites, mobile sites, mobile applications, third part
 
 - conformance: conforming
-- source: [AbbVie](https://privacy-id.abbvie.com/abbvie-id/)
+- source: [AbbVie](https://privacy.abbvie/privacy-policies/us-privacy-policy.html)
 - detected_by: A→B→C within gap
 - captured: 2026-06-15T19:34:23.938Z
-- link_to_source: <https://privacy-id.abbvie.com/abbvie-id/>
+- link_to_source: <https://privacy.abbvie/privacy-policies/us-privacy-policy.html>
 
 ### Abbott Laboratories {#abbott-laboratories}
 

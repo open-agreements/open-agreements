@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "field_id": "number_of_classes",
+  "field_label": "Number Of Classes",
+  "description": "Number of classes of stock (e.g., two)",
+  "source_template_version": "10-1-2025",
+  "occurrences": [
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "has\\s+(\\[two\\])",
+        "group": 1
+      }
+    },
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "class,\\s+shall\\s+be\\s+entitled\\s+to\\s+elect\\s+(\\[__\\])",
+        "group": 1
+      }
+    }
+  ],
+  "postconditions": [
+    "no_unresolved_placeholder",
+    "no_double_dollar"
+  ],
+  "failure_behavior": "warn",
+  "fixtures": []
+}

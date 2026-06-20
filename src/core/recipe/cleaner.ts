@@ -3,7 +3,7 @@ import { writeFileSync } from 'node:fs';
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
 import type { Document, Element, Node } from '@xmldom/xmldom';
 import type { CleanConfig, GuidanceEntry, GuidanceOutput } from '../metadata.js';
-import { enumerateTextParts, getGeneralTextPartNames } from './ooxml-parts.js';
+import { copyEntriesSkippingDirs, enumerateTextParts, getGeneralTextPartNames } from './ooxml-parts.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 
@@ -165,10 +165,10 @@ export async function cleanDocument(
 
   // Rebuild the zip from scratch to avoid adm-zip data descriptor issues
   const outZip = new AdmZip();
-  for (const entry of zip.getEntries()) {
-    const data = modifiedParts.get(entry.entryName) ?? entry.getData();
-    outZip.addFile(entry.entryName, data);
-  }
+  copyEntriesSkippingDirs(zip, outZip, (entryName, entryData) => {
+    const data = modifiedParts.get(entryName) ?? entryData;
+    return data;
+  });
   writeFileSync(outputPath, outZip.toBuffer());
 
   const result: CleanResult = { outputPath };

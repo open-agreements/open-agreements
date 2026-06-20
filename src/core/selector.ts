@@ -12,7 +12,7 @@ import AdmZip from 'adm-zip';
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
 import type { Document, Element, Node } from '@xmldom/xmldom';
 import { getParagraphText, replaceParagraphTextRange, SafeDocxError } from '@usejunior/docx-core';
-import { enumerateTextParts, getGeneralTextPartNames } from './recipe/ooxml-parts.js';
+import { copyEntriesSkippingDirs, enumerateTextParts, getGeneralTextPartNames } from './recipe/ooxml-parts.js';
 
 const W_NS = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
 
@@ -338,9 +338,7 @@ export async function applySelections(
 
   // Rebuild zip from scratch (adm-zip data descriptor workaround)
   const outZip = new AdmZip();
-  for (const entry of zip.getEntries()) {
-    outZip.addFile(entry.entryName, entry.getData());
-  }
+  copyEntriesSkippingDirs(zip, outZip);
   const outBuf = outZip.toBuffer();
   writeFileSync(outputPath, outBuf);
 }
@@ -623,9 +621,60 @@ function processStandaloneGroup(
   return madeChanges;
 }
 
+/**
+ * Remove embedded Word field constructs from a paragraph so no orphaned field
+ * survives a text substitution. Complex fields use runs containing <w:fldChar>
+ * (begin/separate/end) and <w:instrText>; simple fields use <w:fldSimple>.
+ *
+ * Without this, replacing a paragraph's text (e.g. with the "[Reserved]"
+ * placeholder) empties a cross-reference field's cached result run but leaves
+ * the field machinery intact, so Word/LibreOffice re-resolves the reference
+ * (e.g. a `REF` field re-rendering its bookmark target like "Exhibit A").
+ */
+function stripFieldConstructs(para: Element): void {
+  // Snapshot matches into an array before removal — getElementsByTagNameNS
+  // returns a live NodeList that shifts as nodes are removed.
+  const toRemove: Element[] = [];
+
+  // Remove every <w:r> that carries field machinery (fldChar or instrText).
+  const runs = para.getElementsByTagNameNS(W_NS, 'r');
+  for (let i = 0; i < runs.length; i++) {
+    const r = runs[i];
+    if (
+      r.getElementsByTagNameNS(W_NS, 'fldChar').length > 0 ||
+      r.getElementsByTagNameNS(W_NS, 'instrText').length > 0
+    ) {
+      toRemove.push(r);
+    }
+  }
+
+  // Remove any simple fields (<w:fldSimple>) wholesale.
+  const simple = para.getElementsByTagNameNS(W_NS, 'fldSimple');
+  for (let i = 0; i < simple.length; i++) toRemove.push(simple[i]);
+
+  for (const el of toRemove) el.parentNode?.removeChild(el);
+}
+
 /** Replace all <w:t> content in a paragraph with new text. First node gets the text, rest get empty string. */
 function replaceParagraphText(para: Element, newText: string): void {
+  stripFieldConstructs(para);
   const tElements = para.getElementsByTagNameNS(W_NS, 't');
+  // If stripping removed every text node (e.g. the paragraph was entirely a
+  // <w:fldSimple>), synthesize a run so newText is never silently dropped.
+  if (tElements.length === 0) {
+    const doc = para.ownerDocument;
+    if (doc) {
+      const r = doc.createElementNS(W_NS, 'w:r');
+      const t = doc.createElementNS(W_NS, 'w:t');
+      // Preserve any leading/trailing whitespace in the placeholder, matching
+      // how authored runs carry xml:space="preserve".
+      t.setAttribute('xml:space', 'preserve');
+      t.textContent = newText;
+      r.appendChild(t);
+      para.appendChild(r);
+    }
+    return;
+  }
   for (let i = 0; i < tElements.length; i++) {
     tElements[i].textContent = i === 0 ? newText : '';
   }

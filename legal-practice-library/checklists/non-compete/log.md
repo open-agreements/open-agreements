@@ -1,5 +1,8 @@
 # Non Compete Update Log
 
+## 2026-06-18
+* **Update**: feat(checklist): expand general non-compete court-narrowing variations to 10 states (#768) (#789) ([47e3135](https://github.com/UseJunior/legal-explainer/commit/47e313592083bb514236de1367e336ee6743e232))
+
 ## 2026-06-16
 * **Update**: feat(ia): checklists as a top-level product line — country-first /checklists (closes #803) (#804) ([2602c18](https://github.com/UseJunior/legal-explainer/commit/2602c18434aef56cbc170c8061d60c29c0c41954))
 

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "field_id": "qualified_financing_notice_days",
+  "field_label": "Qualified Financing Notice Days",
+  "description": "Days of prior notice required for qualified financing",
+  "source_template_version": "10-1-2025",
+  "occurrences": [
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "Corporation\\s+at\\s+least\\s+(\\[__\\])",
+        "group": 1
+      }
+    }
+  ],
+  "postconditions": [
+    "no_unresolved_placeholder",
+    "no_double_dollar"
+  ],
+  "failure_behavior": "warn",
+  "fixtures": []
+}

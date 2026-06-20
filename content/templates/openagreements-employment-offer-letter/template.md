@@ -114,11 +114,11 @@ This offer expires on the date listed in Cover Terms unless extended in writing 
 By signing this Employment Offer Letter, each party agrees to these Cover Terms and Standard Terms.
 
 <!-- oa:signer id=employer kind=entity capacity=through_representative label="Employer" -->
-**Employer**
+Employer: {employer_name}
 
 Signature: _______________
-Print Name: {employer_name}
-Title: _______________
+Signatory Name: {employer_signatory_name}
+Title: {employer_signatory_title}
 Date: _______________
 
 <!-- oa:signer id=employee kind=individual capacity=personal label="Employee" -->

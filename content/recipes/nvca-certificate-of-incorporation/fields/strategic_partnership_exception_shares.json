@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "field_id": "strategic_partnership_exception_shares",
+  "field_label": "Strategic Partnership Exception Shares",
+  "description": "Max shares issuable for strategic partnerships without triggering anti-dilution",
+  "source_template_version": "10-1-2025",
+  "occurrences": [
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "greater\\s+than\\s+\\$(\\[_______\\])",
+        "group": 1
+      }
+    }
+  ],
+  "postconditions": [
+    "no_unresolved_placeholder",
+    "no_double_dollar"
+  ],
+  "failure_behavior": "warn",
+  "fixtures": []
+}

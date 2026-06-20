@@ -14,6 +14,8 @@ transparent startup hiring and onboarding workflows.
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `company_name` | string | yes | Legal name of employer |
+| `company_signatory_name` | string | no | Full name of the authorized signatory signing for the company |
+| `company_signatory_title` | string | no | Title of the authorized signatory signing for the company |
 | `employee_name` | string | yes | Full legal name of employee |
 | `effective_date` | date | yes | Effective date of this agreement |
 | `prior_inventions_disclosure` | string | no | List of prior inventions excluded from assignment, or `None listed` |

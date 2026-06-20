@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "field_id": "specify_percentage",
+  "field_label": "Specify Percentage",
+  "description": "Percentage threshold for specified provisions",
+  "source_template_version": "10-1-2025",
+  "occurrences": [
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "least\\s+(\\[specify\\s+percentage\\])",
+        "group": 1
+      }
+    }
+  ],
+  "postconditions": [
+    "no_unresolved_placeholder",
+    "no_double_dollar"
+  ],
+  "failure_behavior": "warn",
+  "fixtures": []
+}

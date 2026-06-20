@@ -14,6 +14,8 @@ clear, editable terms and source transparency.
 | Field | Type | Required | Description |
 |-------|------|----------|-------------|
 | `employer_name` | string | yes | Legal name of the employer |
+| `employer_signatory_name` | string | no | Full name of the authorized signatory signing for the employer |
+| `employer_signatory_title` | string | no | Title of the authorized signatory signing for the employer |
 | `employee_name` | string | yes | Full legal name of the employee |
 | `position_title` | string | yes | Offered role title |
 | `employment_type` | enum | yes | `full-time` or `part-time` |
@@ -81,13 +83,23 @@ anchored text.
 - **THEN** underline boundaries are preserved
 - **AND** trailing unmatched brackets are trimmed without moving underlined anchor text
 
-### [OA-FIL-029] Entity-plus-individual signers render as stacked asymmetric blocks
+### [OA-FIL-029] Entity-plus-individual signers draw the entity name above the line and distinguish the human signatory
 - **WHEN** `cover-standard-signature-v1` renders a template with
   `mode: signers` and `arrangement=entity-plus-individual`
-- **THEN** it renders a stacked entity signer block followed by a stacked
-  individual signer block in DOCX
-- **AND** the Markdown output preserves the same signer order
-- **AND** the individual signer block omits any `Title` row
+- **THEN** the entity signer block draws the entity's legal name in a header row
+  **above** the signature line — the caps party label in the left cell, the
+  entity legal-name value in the right cell, with **no rule** under it (the name
+  sits above the line; it is not a line to sign on)
+- **AND** the entity block renders distinct `Signatory Name` and `Title` rows for
+  the human who signs on the entity's behalf (no `Print Name` row), and the
+  `Signature` row is taller so the ruled line has room to sign on
+- **AND** exactly one entity legal-name line is required (its label equals the
+  signer `label`, e.g. `Employer: {employer_name}`); zero or duplicate is an
+  authoring error that fails the render
+- **AND** the individual signer block is unchanged — bold party header plus a
+  `Print Name` row — and it omits any `Title` row
+- **AND** the Markdown output likewise shows the entity name above the signature
+  line and preserves signer order
 - **AND** legacy `two-party` rendering remains unchanged
 
 ## Attribution

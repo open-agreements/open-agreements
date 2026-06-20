@@ -41,3 +41,29 @@ export function getGeneralTextPartNames(parts: OoxmlTextParts): string[] {
   if (parts.endnotes) names.push(parts.endnotes);
   return names;
 }
+
+/**
+ * Copy OPC parts from one zip to another, excluding directory entries.
+ *
+ * OOXML packages are a flat set of parts; directory entries such as `word/`
+ * are JSZip/zip container artifacts and can make Word repair the document.
+ */
+export function copyEntriesSkippingDirs(
+  sourceZip: AdmZip,
+  destinationZip: AdmZip,
+  getData: (entryName: string, entryData: Buffer) => Buffer = (_entryName, entryData) => entryData,
+): void {
+  for (const entry of sourceZip.getEntries()) {
+    if (entry.isDirectory || entry.entryName.endsWith('/')) continue;
+    destinationZip.addFile(entry.entryName, getData(entry.entryName, entry.getData()));
+  }
+}
+
+/**
+ * Rebuild a zip from scratch while dropping directory entries.
+ */
+export function rezipWithoutDirEntries(zip: AdmZip): AdmZip {
+  const outZip = new AdmZip();
+  copyEntriesSkippingDirs(zip, outZip);
+  return outZip;
+}

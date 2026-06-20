@@ -118,11 +118,11 @@ The interesting disagreement is not whether hallucination indemnity exists today
 
 [^google-cloud-generative-ai-indemnified-services]: **Google Cloud, Generative AI Indemnified Services** — "The following Services are covered by the Additional Google Indemnification Obligations in the Service Specific Terms." *Google Cloud, Generative AI Indemnified Services.* <https://cloud.google.com/terms/generative-ai-indemnified-services>
 
-[^anthropic-on-bedrock-commercial-terms-of-service-2]: **Anthropic on Bedrock, Commercial Terms of Service** — "false, incomplete, misleading" *Anthropic on Bedrock, Commercial Terms of Service.* <https://www-cdn.anthropic.com/6b68a6508f0210c5fe08f0199caa05c4ee6fb4dc/Anthropic-on-Bedrock-Commercial-Terms-of-Service_Dec_2023.pdf>
+[^anthropic-on-bedrock-commercial-terms-of-service-2]: **Anthropic on Bedrock, Commercial Terms of Service** — "checking their accuracy, as they may be false, incomplete, misleading or not reflective of" *Anthropic on Bedrock, Commercial Terms of Service.* <https://www-cdn.anthropic.com/6b68a6508f0210c5fe08f0199caa05c4ee6fb4dc/Anthropic-on-Bedrock-Commercial-Terms-of-Service_Dec_2023.pdf>
 
 [^microsoft-customer-copyright-commitment-required-2]: **Microsoft, Customer Copyright Commitment Required Mitigations** — "The Customer Copyright Commitment (‘CCC’) is a provision in the Microsoft Product Terms that describes Microsoft's obligation to defend customers against certain third-party intellectual property claims relating to Output Content." *Microsoft, Customer Copyright Commitment Required Mitigations.* <https://learn.microsoft.com/en-us/azure/foundry/responsible-ai/openai/customer-copyright-commitment>
 
-[^openai-openai-services-agreement-2]: **OpenAI, OpenAI Services Agreement** — "solely responsible" *OpenAI, OpenAI Services Agreement.* <https://openai.com/policies/services-agreement/>
+[^openai-openai-services-agreement-2]: **OpenAI, OpenAI Services Agreement** — "Customer is solely responsible for all use of the Outputs and for evaluating the accuracy and appropriateness of Output for Customer’s use case." *OpenAI, OpenAI Services Agreement.* <https://openai.com/policies/services-agreement/>
 
 [^google-cloud-terms-of-service]: **Google Cloud Terms of Service** — "These Google Cloud Terms of Service (together, the ‘Agreement’) are entered into by Google and the entity or person agreeing to these terms (‘Customer’) and govern Customer's access to and use of the Services." *Google Cloud Terms of Service.* <https://cloud.google.com/terms>
 

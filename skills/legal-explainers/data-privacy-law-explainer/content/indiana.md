@@ -2,7 +2,7 @@
 jurisdiction: "Indiana"
 slug: indiana
 countryCode: US
-snapshotAsOf: "2026-06-17"
+snapshotAsOf: "2026-06-19"
 lastReviewed: "2026-06-06"
 canonicalUrl: https://openagreements.org/practice-guides/privacy/us/indiana
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/indiana · **Snapshot as of:** 2026-06-17 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/indiana · **Snapshot as of:** 2026-06-19 · License: CC BY 4.0 · © openagreements.org
 
 # Indiana Consumer Privacy Law (INCDPA)[^about]
 
@@ -48,13 +48,13 @@ Indiana's law took effect on January 1, 2026, and closely follows the structure 
 
 **Short answer.** A controller must provide a reasonably accessible, clear, and meaningful privacy notice that lists the categories of personal data processed and the purpose for processing, among the statute's required disclosures [^stat-4-3-notice].
 
-Section 24-15-4-3 is the content checklist for an Indiana privacy policy. In full it requires five elements: the categories of personal data processed, the purpose for processing, how consumers exercise their rights (including how to appeal a controller's decision), the categories of personal data shared with third parties, and the categories of those third parties. Indiana also requires data minimization (collection limited to what is adequate, relevant, and reasonably necessary) and, where a controller sells personal data or processes it for targeted advertising, a clear and conspicuous disclosure of that activity and how to opt out. The notice the policy presents should match the data practices the controller actually carries out.
+Section 24-15-4-3 is the content checklist for an Indiana privacy policy. Its five required disclosures are the categories of personal data processed, the purpose for processing, how consumers exercise their rights (including how to appeal a controller's decision), the categories of personal data the controller shares with third parties, and the categories of those third parties [^stat-4-3-notice]. Indiana also requires data minimization (collection limited to what is adequate, relevant, and reasonably necessary) and, where a controller sells personal data or processes it for targeted advertising, a clear and conspicuous disclosure of that activity and how to opt out. The notice the policy presents should match the data practices the controller actually carries out.
 
 ## What must your contracts with processors say? {#vendor-contracts}
 
 **Short answer.** A contract between a controller and a processor must govern the processor's data processing on the controller's behalf — so a data processing agreement is a statutory requirement, not a best practice [^stat-5-2-contract].
 
-Section 24-15-5-2 then specifies the required terms: processing instructions, the nature and purpose of processing, the type of data and duration, a duty of confidentiality, deletion or return of data at the controller's direction, the information needed to demonstrate compliance, cooperation with reasonable assessments, and a requirement to bind subcontractors by written contract to the same obligations. A compliant template data processing agreement tracks each of these.
+Section 24-15-5-2 then specifies the required terms: processing instructions, the nature and purpose of processing, the type of data and duration, a duty of confidentiality, deletion or return of data at the controller's direction, the information needed to demonstrate compliance, cooperation with reasonable assessments [^stat-5-2-terms], and a requirement to bind subcontractors by written contract to the same obligations [^stat-5-2-terms-subcontractor]. A compliant template data processing agreement tracks each of these.
 
 ## Do you need consent to process sensitive data? {#sensitive-data}
 
@@ -74,9 +74,13 @@ Indiana's 30-day cure period has no sunset date — it remains a permanent, buil
 
 [^stat-1-1-exempt]: **Ind. Code § 24-15-1-1** — "(4) Any nonprofit organization. (5) Any institution of higher education." *Ind. Code § 24-15-1-1(b).* <https://iga.in.gov/ic/2024/Title_24/Article_15.pdf>
 
-[^stat-4-3-notice]: **Ind. Code § 24-15-4-3** — "A controller shall provide consumers with a reasonably accessible, clear, and meaningful privacy notice that includes: (1) the categories of personal data processed by the controller; (2) the purpose for processing personal data;" *Ind. Code § 24-15-4-3.* <https://iga.in.gov/ic/2024/Title_24/Article_15.pdf>
+[^stat-4-3-notice]: **Ind. Code § 24-15-4-3** — "A controller shall provide consumers with a reasonably accessible, clear, and meaningful privacy notice that includes: (1) the categories of personal data processed by the controller; (2) the purpose for processing personal data; (3) how consumers may exercise their consumer rights under IC 24-15-3, including how a consumer may appeal a controller's decision with regard to the consumer's request; (4) the categories of personal data that the controller shares with third parties, if any; and (5) the categories of third parties, if any, with whom the controller shares personal data." *Ind. Code § 24-15-4-3.* <https://codes.findlaw.com/in/title-24-trade-regulation/in-code-sect-24-15-4-3/>
 
 [^stat-5-2-contract]: **Ind. Code § 24-15-5-2** — "A contract between a controller and a processor shall govern the processor's data processing procedures with respect to processing performed on behalf of the controller." *Ind. Code § 24-15-5-2(a).* <https://iga.in.gov/ic/2024/Title_24/Article_15.pdf>
+
+[^stat-5-2-terms]: **Ind. Code § 24-15-5-2** — "The contract must be binding and clearly set forth instructions for processing personal data, the nature and purpose of processing, the type of data subject to processing, the duration of processing, and the rights and obligations of both parties. The contract must also include requirements that the processor do the following: (1) Ensure that each individual processing personal data is subject to a duty of confidentiality with respect to the data. (2) At the controller's direction, delete or return all personal data to the controller as requested at the end of the provision of services, unless retention of the personal data is required by law. (3) Upon the reasonable request of the controller, make available to the controller all information in its possession necessary to demonstrate the processor's compliance with the obligations in this chapter. (4) Allow, and cooperate with, reasonable assessments by the controller or the controller's designated assessor." *Ind. Code § 24-15-5-2(a).* <https://iga.in.gov/ic/2024/Title_24/Article_15.pdf>
+
+[^stat-5-2-terms-subcontractor]: **Ind. Code § 24-15-5-2** — "(5) Subject to subsection (b), engage any subcontractor pursuant to a written contract that requires the subcontractor to meet the obligations of the processor with respect to the personal data." *Ind. Code § 24-15-5-2(a).* <https://iga.in.gov/ic/2024/Title_24/Article_15.pdf>
 
 [^stat-4-1-consent]: **Ind. Code § 24-15-4-1** — "A controller shall not process sensitive data concerning a consumer without obtaining the consumer's consent, or, in the case of the processing of sensitive data concerning a known child, without processing such data in accordance with the federal Children's Online Privacy Protection Act (15 U.S.C. 6501 et seq.)." *Ind. Code § 24-15-4-1(5).* <https://iga.in.gov/ic/2024/Title_24/Article_15.pdf>
 

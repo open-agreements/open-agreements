@@ -24,18 +24,6 @@ const CANONICAL_EMPLOYMENT_CASES = [
   'content/templates/openagreements-restrictive-covenant-wyoming/template.md',
 ] as const;
 
-function blockFor(markdown: string, label: string, nextLabel?: string): string {
-  const start = markdown.indexOf(`**${label}**`);
-  if (start === -1) {
-    return '';
-  }
-  if (!nextLabel) {
-    return markdown.slice(start);
-  }
-  const end = markdown.indexOf(`**${nextLabel}**`, start + 1);
-  return end === -1 ? markdown.slice(start) : markdown.slice(start, end);
-}
-
 function signatureMarkdownSection(markdown: string, headingTitle: string): string {
   const marker = `## ${headingTitle}`;
   const start = markdown.indexOf(marker);
@@ -61,9 +49,21 @@ describe('employment signer arrangement rendering', () => {
         rendered.markdown,
         compiled.contractSpec.sections.signature.heading_title
       );
-      const entityBlock = blockFor(signatureMarkdown, entitySigner.label, individualSigner.label);
-      const individualBlock = blockFor(signatureMarkdown, individualSigner.label);
+      // Entity block: the legal name is drawn above the line via a promoted
+      // `<Label>: {field}` line (no bold party header); the human signatory is
+      // captured by distinct Signatory Name + Title rows. The individual block
+      // keeps the bold header and Print Name.
+      const entityStart = signatureMarkdown.indexOf(`${entitySigner.label}:`);
+      const individualStart = signatureMarkdown.indexOf(`**${individualSigner.label}**`);
+      expect(entityStart).toBeGreaterThanOrEqual(0);
+      expect(individualStart).toBeGreaterThan(entityStart);
+      const entityBlock = signatureMarkdown.slice(entityStart, individualStart);
+      const individualBlock = signatureMarkdown.slice(individualStart);
+      expect(signatureMarkdown).not.toContain(`**${entitySigner.label}**`);
+      expect(entityBlock).toContain('Signatory Name:');
       expect(entityBlock).toContain('Title:');
+      expect(entityBlock).not.toContain('Print Name:');
+      expect(individualBlock).toContain('Print Name:');
       expect(individualBlock).not.toContain('Title:');
 
       const buffer = await Packer.toBuffer(rendered.document);
@@ -79,9 +79,21 @@ describe('employment signer arrangement rendering', () => {
 
       expect(tableTexts).toHaveLength(2);
       expect(tableTexts[0]).toContain(entitySigner.label.toUpperCase());
+      expect(tableTexts[0]).toContain('Signatory Name');
       expect(tableTexts[0]).toContain('Title');
+      expect(tableTexts[0]).not.toContain('Print Name');
       expect(tableTexts[1]).toContain(individualSigner.label.toUpperCase());
+      expect(tableTexts[1]).toContain('Print Name');
       expect(tableTexts[1]).not.toContain('Title');
+
+      // The `Signature` rows must render at the taller signature-line height
+      // (500 twips) so the ruled line has room to sign on — taller than the 340
+      // height used by the other signature rows. (Both are renderer layout
+      // constants in cover-standard-signature-v1.mjs, tuned tighter than the
+      // original 864/690 to remove excess vertical airiness.) Asserting the
+      // rendered DOCX guards the row heights end-to-end.
+      expect(documentXml).toContain('<w:trHeight w:val="500" w:hRule="atLeast"/>');
+      expect(documentXml).toContain('<w:trHeight w:val="340" w:hRule="atLeast"/>');
     });
   }
 });

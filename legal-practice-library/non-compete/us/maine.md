@@ -131,7 +131,7 @@ The 2026 healthcare development is now law. Governor Mills signed L.D. 2200 on A
 
 [^lord-specificity-goodwill-restraint]: **Lord v. Lord** — "Upon remand, on the basis of the existing record and any further evidence received, the presiding justice should first define the nature and components of the good will included in the determination of value and then proceed to determine the scope of any restraint which may be reasonably necessary to protect the value of the asset." *Lord v. Lord, 454 A.2d 830, 835 (Me. 1983).* <https://www.courtlistener.com/opinion/2367150/lord-v-lord/#:~:text=Upon%20remand%2C%20on%20the%20basis,the%20value%20of%20the%20asset.>
 
-[^maine-599b-no-poach-definition-ban]: **26 M.R.S. § 599-B — Restrictive employment agreements** — "An employer may not:" *26 M.R.S. § 599-B(2).* <https://legislature.maine.gov/statutes/26/title26sec599-B.html>
+[^maine-599b-no-poach-definition-ban]: **26 M.R.S. § 599-B — Restrictive employment agreements** — "An employer may not: A. Enter into a restrictive employment agreement" *26 M.R.S. § 599-B(2).* <https://legislature.maine.gov/statutes/26/title26sec599-B.html>
 
 [^maine-599b-penalty-enforcement]: **26 M.R.S. § 599-B — Restrictive employment agreements** — "An employer that violates subsection 2 commits a civil violation for which a fine of not less than $5,000 may be adjudged. The Department of Labor is responsible for enforcement of this section." *26 M.R.S. § 599-B(3).* <https://legislature.maine.gov/statutes/26/title26sec599-B.html>
 

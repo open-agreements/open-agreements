@@ -4,7 +4,7 @@
 
 * [1st American Systems, Inc. v. Rezatto](1st-american-systems-inc-v-rezatto.md) - 1st American Systems, Inc. v. Rezatto, 311 N.W.2d 51, 57 (S.D. 1981). — quoted in 2 document(s).
 * [205 Corp. v. Brandow](205-corp-v-brandow.md) - 205 Corp. v. Brandow, 517 N.W.2d 548 (Iowa 1994). — quoted in 2 document(s).
-* [23 LTD v. Herman](23-ltd-v-herman.md) - 23 LTD v. Herman, 2019 COA 113. — quoted in 2 document(s).
+* [23 LTD v. Herman](23-ltd-v-herman.md) - 23 LTD v. Herman, 2019 COA 113. — quoted in 3 document(s).
 * [7's Enterprises, Inc. v. Del Rosario](7-s-enterprises-inc-v-del-rosario.md) - 7's Enterprises, Inc. v. Del Rosario, 111 Haw. 484, 143 P.3d 23 (2006). — quoted in 2 document(s).
 * [A.N. Deringer, Inc. v. Strough](a-n-deringer-inc-v-strough.md) - A.N. Deringer, Inc. v. Strough, 103 F.3d 243, 247-48 (2d Cir. 1996). — quoted in 2 document(s).
 * [ACAS Acquisitions (Precitech) Inc. v. Hobert](acas-acquisitions-precitech-inc-v-hobert.md) - ACAS Acquisitions (Precitech) Inc. v. Hobert, 155 N.H. 381 (2007). — quoted in 2 document(s).
@@ -15,6 +15,7 @@
 * [AECI Australia Pty Ltd v Convey](aeci-australia-pty-ltd-v-convey.md) - AECI Australia Pty Ltd v Convey [2020] QSC 207 (Bradley J), quoting Just Group Ltd v Peck (2016) 344 ALR 162. — quoted in 1 document(s).
 * [Aesthetic Facial & Ocular Plastic Surgery Center, P.A. v. Zaldivar](aesthetic-facial-ocular-plastic-surgery-center-p-a-v-zaldivar.md) - Aesthetic Facial & Ocular Plastic Surgery Ctr., P.A. v. Zaldivar, 264 N.C. App. 260 (2019). — quoted in 2 document(s).
 * [AG Spectrum Co. v. Elder](ag-spectrum-co-v-elder.md) - AG Spectrum Co. v. Elder, 865 F.3d 1088 (8th Cir. 2017). — quoted in 2 document(s).
+* [Akridge v. Alfa Mutual Ins. Co., 93 F.4th 1181 (11th Cir. 2024)](akridge-v-alfa-mutual-ins-co-93-f-4th-1181-11th-cir-2024.md) - Akridge v. Alfa Mutual Ins. Co., 93 F.4th 1181 (11th Cir. 2024). — quoted in 1 document(s).
 * [Albemarle Paper Co. v. Moody, 422 U.S. 405 (1975)](albemarle-paper-co-v-moody-422-u-s-405-1975.md) - Albemarle Paper Co. v. Moody, 422 U.S. 405 (1975). — quoted in 2 document(s).
 * [Alex Sheshunoff Management Services, L.P. v. Johnson](alex-sheshunoff-management-services-l-p-v-johnson.md) - Alex Sheshunoff Mgmt. Servs., L.P. v. Johnson, 209 S.W.3d 644 (Tex. 2006). — quoted in 2 document(s).
 * [All Stainless, Inc. v. Colby](all-stainless-inc-v-colby.md) - All Stainless, Inc. v. Colby, 364 Mass. 773 (1974). — quoted in 2 document(s).
@@ -54,7 +55,7 @@
 * [BDO Seidman v. Hirshberg](bdo-seidman-v-hirshberg.md) - BDO Seidman v. Hirshberg, 93 N.Y.2d 382, 388 (1999). — quoted in 2 document(s).
 * [Becker v. Bailey](becker-v-bailey.md) - Becker v. Bailey, 268 Md. 93 (1973). — quoted in 2 document(s).
 * [Beilfuss v. Huffy Corp.](beilfuss-v-huffy-corp.md) - Beilfuss v. Huffy Corp., 2004 WI App 118. — quoted in 2 document(s).
-* [Belt Power, LLC v. Reed](belt-power-llc-v-reed.md) - Belt Power, LLC v. Reed, 354 Ga. App. 289 (2020). — quoted in 2 document(s).
+* [Belt Power, LLC v. Reed](belt-power-llc-v-reed.md) - Belt Power, LLC v. Reed, 354 Ga. App. 289 (2020). — quoted in 3 document(s).
 * [Benchmark Medical Holdings, Inc. v. Barnes](benchmark-medical-holdings-inc-v-barnes.md) - Benchmark Med. Holdings, Inc. v. Barnes, 328 F. Supp. 2d 1236 (M.D. Ala. 2004). — quoted in 2 document(s).
 * [Bend-Tech Group (A Firm) v Beek](bend-tech-group-a-firm-v-beek.md) - Bend-Tech Group (A Firm) v Beek [2015] WASC 491 (Pritchard J). — quoted in 2 document(s).
 * [Bendinger v. Marshalltown Trowel Co.](bendinger-v-marshalltown-trowel-co.md) - Bendinger v. Marshalltown Trowel Co., 338 Ark. 410, 994 S.W.2d 468 (1999). — quoted in 2 document(s).
@@ -155,7 +156,7 @@
 * [Ellis v. James V. Hurson Associates, Inc.](ellis-v-james-v-hurson-associates-inc.md) - Ellis v. James V. Hurson Assocs., Inc., 565 A.2d 615 (D.C. 1989). — quoted in 2 document(s).
 * [EMC Corp. v. Arturi](emc-corp-v-arturi.md) - EMC Corp. v. Arturi, 655 F.3d 75 (1st Cir. 2011). — quoted in 5 document(s).
 * [Emeco International Pty Ltd v O'Shea [No 2]](emeco-international-pty-ltd-v-o-shea-no-2.md) - Emeco International Pty Ltd v O'Shea [No 2] [2012] WASC 348 (Edelman J). — quoted in 2 document(s).
-* [Emerick v. Cardiac Study Center, Inc.](emerick-v-cardiac-study-center-inc.md) - Emerick v. Cardiac Study Ctr., Inc., 189 Wn. App. 711 (2015). — quoted in 2 document(s).
+* [Emerick v. Cardiac Study Center, Inc.](emerick-v-cardiac-study-center-inc.md) - Emerick v. Cardiac Study Ctr., Inc., 189 Wn. App. 711 (2015). — quoted in 3 document(s).
 * [Empiregas, Inc. of Kosciusko v. Bain](empiregas-inc-of-kosciusko-v-bain.md) - Empiregas, Inc. of Kosciusko v. Bain, 599 So. 2d 971 (Miss. 1992). — quoted in 2 document(s).
 * [Employment Staffing Group, Inc. v. Little](employment-staffing-group-inc-v-little.md) - Emp't Staffing Grp., Inc. v. Little, 243 N.C. App. 266 (2015). — quoted in 2 document(s).
 * [England Logistics, Inc. v. Kelle's Transport Service, LLC](england-logistics-inc-v-kelle-s-transport-service-llc.md) - England Logistics, Inc. v. Kelle's Transp. Serv., LLC, 2024 UT App 137. — quoted in 2 document(s).
@@ -200,7 +201,7 @@
 * [Hartman v. W.H. Odell & Associates, Inc.](hartman-v-w-h-odell-associates-inc.md) - Hartman v. W.H. Odell & Assocs., 117 N.C. App. 307 (1994). — quoted in 2 document(s).
 * [Hassler v. Circle C Resources](hassler-v-circle-c-resources.md) - Hassler v. Circle C Resources, 2022 WY 28, 505 P.3d 169. — quoted in 3 document(s).
 * [Hasty v. Rent-A-Driver, Inc.](hasty-v-rent-a-driver-inc.md) - Hasty v. Rent-A-Driver, Inc., 671 S.W.2d 471, 472 (Tenn. 1984). — quoted in 2 document(s).
-* [Hawkins Chemical, Inc. v. McNea](hawkins-chemical-inc-v-mcnea.md) - Hawkins Chem., Inc. v. McNea, 321 N.W.2d 918, 920 (N.D. 1982). — quoted in 2 document(s).
+* [Hawkins Chemical, Inc. v. McNea](hawkins-chemical-inc-v-mcnea.md) - Hawkins Chem., Inc. v. McNea, 321 N.W.2d 918, 920 (N.D. 1982). — quoted in 3 document(s).
 * [HCC Specialty Underwriters, Inc. v. Woodbury](hcc-specialty-underwriters-inc-v-woodbury.md) - HCC Specialty Underwriters, Inc. v. Woodbury, 289 F. Supp. 3d 303 (D.N.H. 2018). — quoted in 2 document(s).
 * [HD Supply Facilities Maint., Ltd. v. Bymoen](hd-supply-facilities-maint-ltd-v-bymoen.md) - HD Supply Facilities Maint., Ltd. v. Bymoen, 125 Nev. 200, 210 P.3d 183 (2009). — quoted in 2 document(s).
 * [Healthcare Services of the Ozarks, Inc. v. Copeland](healthcare-services-of-the-ozarks-inc-v-copeland.md) - Healthcare Servs. of the Ozarks, Inc. v. Copeland, 198 S.W.3d 604 (Mo. banc 2006). — quoted in 2 document(s).
@@ -473,11 +474,11 @@
 * [Tung v. Ah Sam](tung-v-ah-sam.md) - Tung v. Ah Sam, 4 A.S.R. 764 (Trial Div. 1971). — quoted in 1 document(s).
 * [United Laboratories, Inc. v. Kuykendall](united-laboratories-inc-v-kuykendall.md) - United Labs., Inc. v. Kuykendall, 322 N.C. 643 (1988). — quoted in 2 document(s).
 * [United States v. Heppner, No. 25 Cr. 503 (JSR), 2026 WL 436479 (S.D.N.Y. Feb....](united-states-v-heppner-no-25-cr-503-jsr-2026-wl-436479-s-d-n-y-feb.md) - United States v. Heppner, No. 25 Cr. 503 (JSR), 2026 WL 436479 (S.D.N.Y. Feb. 17, 2026), discussed in Reuters. — quoted in 1 document(s).
+* [United States v. Heppner (S.D.N.Y.)](united-states-v-heppner-s-d-n-y.md) - United States v. Heppner, No. 25 Cr. 503 (JSR), 2026 WL 436479 (S.D.N.Y. Feb. 19, 2026). — quoted in 1 document(s).
 * [United States v. Kovel, 296 F.2d 918 (2d Cir. 1961)](united-states-v-kovel-296-f-2d-918-2d-cir-1961.md) - United States v. Kovel, 296 F.2d 918 (2d Cir. 1961). — quoted in 2 document(s).
 * [United States v. Massachusetts Institute of Technology, 129 F.3d 681 (1st Cir...](united-states-v-massachusetts-institute-of-technology-129-f-3d-681-1st-cir.md) - United States v. Massachusetts Institute of Technology, 129 F.3d 681 (1st Cir. 1997). — quoted in 1 document(s).
 * [Unlimited Opportunity, Inc. v. Waadah](unlimited-opportunity-inc-v-waadah.md) - Unlimited Opportunity, Inc. v. Waadah, 290 Neb. 629, 637, 861 N.W.2d 437 (2015). — quoted in 2 document(s).
 * [Upjohn Co. v. United States, 449 U.S. 383 (1981)](upjohn-co-v-united-states-449-u-s-383-1981.md) - Upjohn Co. v. United States, 449 U.S. 383 (1981). — quoted in 1 document(s).
-* [US Courts, Akridge v. Alfa Ins. Companies (ALND 5:22-cv-01350)](us-courts-akridge-v-alfa-ins-companies-alnd-5-22-cv-01350.md) - US Courts, Akridge v. Alfa Ins. Companies (ALND 5:22-cv-01350). — quoted in 1 document(s).
 * [V.I. Diving Schools/Supplies, Inc. v. Dixon](v-i-diving-schools-supplies-inc-v-dixon.md) - V.I. Diving Schools/Supplies, Inc. v. Dixon, Civ. No. 1046/1982 (Terr. Ct. V.I. Oct. 7, 1983). — quoted in 1 document(s).
 * [Valley Medical Specialists v. Farber](valley-medical-specialists-v-farber.md) - Valley Medical Specialists v. Farber, 194 Ariz. 363, 982 P.2d 1277 (1999). — quoted in 2 document(s).
 * [Van Dyck Printing Co. v. DiNicola](van-dyck-printing-co-v-dinicola.md) - Van Dyck Printing Co. v. DiNicola, 43 Conn. Supp. 191 (1993). — quoted in 2 document(s).
@@ -493,6 +494,7 @@
 * [Voorhees v. Guyan Machinery Co.](voorhees-v-guyan-machinery-co.md) - Voorhees v. Guyan Mach. Co., 191 W. Va. 450, 446 S.E.2d 672 (1994). — quoted in 1 document(s).
 * [Wallis Nominees (Computing) Pty Ltd v Pickett](wallis-nominees-computing-pty-ltd-v-pickett.md) - Wallis Nominees (Computing) Pty Ltd v Pickett [2013] VSCA 24 (Warren CJ and Davies AJA). — quoted in 1 document(s).
 * [Warner & Co. v. Solberg](warner-co-v-solberg.md) - Warner & Co. v. Solberg, 2001 ND 156, ¶ 29, 634 N.W.2d 65. — quoted in 2 document(s).
+* [Warner v. Gilbarco, Inc. (E.D. Mich.)](warner-v-gilbarco-inc-e-d-mich.md) - Warner v. Gilbarco, Inc., No. 2:24-cv-12333, 2026 WL 373043 (E.D. Mich. Feb. 10, 2026). — quoted in 1 document(s).
 * [Warner v. Gilbarco Inc. et al., Case No. 2:24-cv-12333 (E.D. Mich. Feb. 10, 2...](warner-v-gilbarco-inc-et-al-case-no-2-24-cv-12333-e-d-mich-feb-10-2.md) - Warner v. Gilbarco Inc. et al., Case No. 2:24-cv-12333 (E.D. Mich. Feb. 10, 2026). — quoted in 2 document(s).
 * [Watercolor Salon, LLC v. Hixon](watercolor-salon-llc-v-hixon.md) - Watercolor Salon, LLC v. Hixon, No. 2021-IA-01151-SCT (Miss. 2022). — quoted in 2 document(s).
 * [Watson v. Fort Worth Bank & Trust, 487 U.S. 977 (1988)](watson-v-fort-worth-bank-trust-487-u-s-977-1988.md) - Watson v. Fort Worth Bank & Trust, 487 U.S. 977 (1988). — quoted in 2 document(s).

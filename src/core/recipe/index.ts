@@ -3,7 +3,9 @@ import { join } from 'node:path';
 import { loadRecipeMetadata, loadCleanConfig, loadNormalizeConfig } from '../metadata.js';
 import { loadSelectionsConfig } from '../selector.js';
 import { resolveRecipeDir } from '../../utils/paths.js';
-import { verifyOutput } from './verifier.js';
+import { verifyOutput, extractAllText } from './verifier.js';
+import { extractSearchText } from './replacement-keys.js';
+import { loadSelectorContracts, evaluatePostconditions } from '../selectors/index.js';
 import { ensureSourceDocx } from './downloader.js';
 import {
   loadComputedProfile,
@@ -63,6 +65,31 @@ export async function runRecipe(options: RecipeRunOptions): Promise<RecipeRunRes
     }
   }
 
+  // Selector contracts (opt-in per field via fields/<field_id>.json). The
+  // declarative migrated_keys list — NOT inference — determines which legacy
+  // keys the selector engine owns. Those are removed from the dict handed to
+  // the legacy patcher only; the verifier still receives the FULL key set.
+  const metadataFieldNames = metadata.fields.map((f) => f.name);
+  const { manifests: selectorManifests, templateManifest } = loadSelectorContracts(recipeDir, metadataFieldNames);
+  const migratedKeys = new Set(templateManifest?.migrated_keys ?? []);
+  const patchReplacements: typeof replacements = {};
+  for (const [key, value] of Object.entries(replacements)) {
+    if (migratedKeys.has(key)) continue;
+    patchReplacements[key] = value;
+  }
+  // Map each selector field to the source anchors of its migrated keys
+  // (for the all_occurrences_identical postcondition).
+  const migratedAnchorsByField: Record<string, string[]> = {};
+  for (const key of migratedKeys) {
+    const raw = replacements[key];
+    if (raw === undefined) continue;
+    const valueStr = typeof raw === 'string' ? raw : raw.value;
+    const fieldMatch = valueStr.match(/\{([a-zA-Z0-9_]+)\}/);
+    if (!fieldMatch) continue;
+    const fieldId = fieldMatch[1];
+    (migratedAnchorsByField[fieldId] ??= []).push(extractSearchText(key));
+  }
+
   const inputValues = { ...values };
   const computedInputValues = toComputedValueMap(inputValues);
   const computedProfile = loadComputedProfile(recipeDir);
@@ -104,7 +131,8 @@ export async function runRecipe(options: RecipeRunOptions): Promise<RecipeRunRes
     values: effectiveValues,
     fields: metadata.fields,
     priorityFieldNames: metadata.priority_fields,
-    cleanPatch: { cleanConfig, replacements },
+    cleanPatch: { cleanConfig, replacements: patchReplacements },
+    selectorManifests,
     selectionsConfig,
     postProcess: shouldNormalizeBracketArtifacts
       ? async (outputDocPath: string) => {
@@ -114,7 +142,28 @@ export async function runRecipe(options: RecipeRunOptions): Promise<RecipeRunRes
         });
       }
       : undefined,
-    verify: (p) => verifyOutput(p, verificationValues, replacements, cleanConfig),
+    verify: async (p) => {
+      // Verifier receives the FULL replacements key set (incl. migrated keys) so
+      // a selector occurrence that failed to fill is still caught as a leftover
+      // source placeholder — coverage is preserved after migration.
+      const base = await verifyOutput(p, verificationValues, replacements, cleanConfig);
+      if (selectorManifests.length === 0) return base;
+      const fieldValues: Record<string, string> = {};
+      for (const manifest of selectorManifests) {
+        const v = effectiveValues[manifest.field_id];
+        if (typeof v === 'string') fieldValues[manifest.field_id] = v;
+      }
+      const postconditionChecks = evaluatePostconditions({
+        outputText: extractAllText(p),
+        manifests: selectorManifests,
+        fieldValues,
+        migratedAnchorsByField,
+      });
+      return {
+        passed: base.passed && postconditionChecks.every((c) => c.passed),
+        checks: [...base.checks, ...postconditionChecks],
+      };
+    },
     keepIntermediate,
   });
 
@@ -134,7 +183,7 @@ export { patchDocument } from './patcher.js';
 export type { PatchResult } from './patcher.js';
 export { verifyOutput, normalizeText, extractAllText, countFormattingAnomalies } from './verifier.js';
 export { ensureSourceDocx } from './downloader.js';
-export { checkRecipeSourceDrift, computeSourceStructureSignature } from './source-drift.js';
+export { checkRecipeSourceDrift, checkSelectorDrift, computeSourceStructureSignature } from './source-drift.js';
 export { enumerateTextParts, getGeneralTextPartNames } from './ooxml-parts.js';
 export type { OoxmlTextParts } from './ooxml-parts.js';
 export type { RecipeRunOptions, RecipeRunResult, VerifyResult, VerifyCheck } from './types.js';

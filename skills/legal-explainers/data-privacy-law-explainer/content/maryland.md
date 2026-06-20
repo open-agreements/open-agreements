@@ -2,7 +2,7 @@
 jurisdiction: "Maryland"
 slug: maryland
 countryCode: US
-snapshotAsOf: "2026-06-17"
+snapshotAsOf: "2026-06-19"
 lastReviewed: "2026-06-06"
 canonicalUrl: https://openagreements.org/practice-guides/privacy/us/maryland
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/maryland · **Snapshot as of:** 2026-06-17 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/maryland · **Snapshot as of:** 2026-06-19 · License: CC BY 4.0 · © openagreements.org
 
 # Maryland Consumer Privacy Law (MODPA)[^about]
 
@@ -54,7 +54,7 @@ Section 14-4707(d) is the content checklist, and one item is more demanding than
 
 **Short answer.** A controller that uses a processor must enter into a binding contract governing the processor's data processing on the controller's behalf — so a data processing agreement is a statutory requirement, not a best practice [^stat-4708-contract].
 
-Section 14-4708 then specifies the required terms: processing instructions, the nature and purpose of processing, the type of data and the duration, and the rights and obligations of both parties — plus mandatory covenants that the processor keep staff under a duty of confidentiality, maintain reasonable security, delete or return data at the controller's direction, provide the information needed to demonstrate compliance, bind subcontractors by written contract to the same obligations, and cooperate with assessments. A compliant template DPA tracks each of these.
+Section 14-4708 then specifies the required terms: processing instructions, the nature and purpose of processing, the type of data and the duration, and the rights and obligations of both parties — plus mandatory covenants that the processor keep staff under a duty of confidentiality, maintain reasonable security, delete or return data at the controller's direction, provide the information needed to demonstrate compliance, bind subcontractors by written contract to the same obligations, and cooperate with assessments [^stat-4708-terms]. A compliant template DPA tracks each of these.
 
 ## What are the rules for sensitive data? {#sensitive-data}
 
@@ -72,9 +72,11 @@ There is no standalone private right of action — consumers cannot sue controll
 
 [^stat-4702-apply]: **Md. Code Ann., Com. Law § 14-4702** — "(1) Controlled or processed the personal data of at least 35,000 consumers, excluding personal data controlled or processed solely for the purpose of completing a payment transaction; or (2) Controlled or processed the personal data of at least 10,000 consumers and derived more than 20% of its gross revenue from the sale of personal data." *Md. Code Ann., Com. Law § 14-4702.* <https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gcl&section=14-4702>
 
-[^stat-4707-notice]: **Md. Code Ann., Com. Law § 14-4707** — "A controller shall provide a consumer with a reasonably accessible, clear, and meaningful privacy notice that includes: (1) The categories of personal data processed by the controller, including sensitive data; (2) The controller’s purpose for processing personal data;" *Md. Code Ann., Com. Law § 14-4707(d).* <https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gcl&section=14-4707>
+[^stat-4707-notice]: **Md. Code Ann., Com. Law § 14-4707** — "A controller shall provide a consumer with a reasonably accessible, clear, and meaningful privacy notice that includes: (1) The categories of personal data processed by the controller, including sensitive data; (2) The controller’s purpose for processing personal data; (3) How a consumer may exercise the consumer’s rights under this subtitle, including how a consumer may appeal a controller’s decision regarding the consumer’s request or may revoke consent; (4) The categories of third parties with which the controller shares personal data with a level of detail that enables a consumer to understand the type of, business model of, or processing conducted by each third party; (5) The categories of personal data, including sensitive data, that the controller shares with third parties; and (6) An active e–mail address or other online mechanism that a consumer may use to contact the controller." *Md. Code Ann., Com. Law § 14-4707(d).* <https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gcl&section=14-4707>
 
 [^stat-4708-contract]: **Md. Code Ann., Com. Law § 14-4708** — "If a controller uses a processor to process the personal data of consumers, the controller and the processor shall enter into a contract that governs the processor’s data processing procedures with respect to processing performed on behalf of the controller." *Md. Code Ann., Com. Law § 14-4708(a)(1).* <https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gcl&section=14-4708>
+
+[^stat-4708-terms]: **Md. Code Ann., Com. Law § 14-4708** — "(2) The contract shall be binding and shall clearly set forth: (i) Instructions for processing data; (ii) The nature and purpose of processing; (iii) The type of data subject to processing; (iv) The duration of processing; and (v) The rights and obligations of both parties. (3) The contract shall require that the processor: (i) Ensure that each person processing personal data is subject to a duty of confidentiality with respect to the personal data; (ii) Establish, implement, and maintain reasonable administrative, technical, and physical data security practices to protect the confidentiality, integrity, and accessibility of personal data, considering the volume and nature of the personal data; (iii) Stop processing data on request by the controller made in accordance with a consumer’s authenticated request; (iv) At the controller’s direction, delete or return all personal data to the controller as requested at the end of the provision of service, unless retention of the personal data is required by law; (v) On the reasonable request of the controller, make available to the controller all information in the processor’s possession necessary to demonstrate the processor’s compliance with the obligations in this subtitle; (vi) After providing the controller an opportunity to object, engage a subcontractor to assist with processing personal data on the controller’s behalf only in accordance with a written contract that requires the subcontractor to meet the processor’s obligations regarding the personal data under the processor’s contract with the controller; and (vii) Allow and cooperate with reasonable assessments by the controller, the controller’s designated assessor, or a qualified and independent assessor arranged for by the processor to assess the processor’s policies and technical and organizational measures in support of the obligations under this subtitle." *Md. Code Ann., Com. Law § 14-4708(a)(2)–(3).* <https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gcl&section=14-4708>
 
 [^stat-4707-sensitive]: **Md. Code Ann., Com. Law § 14-4707** — "A controller may not: (1) Except where the collection or processing is strictly necessary to provide or maintain a specific product or service requested by the consumer to whom the personal data pertains, collect, process, or share sensitive data concerning a consumer; (2) Sell sensitive data;" *Md. Code Ann., Com. Law § 14-4707(a).* <https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gcl&section=14-4707>
 

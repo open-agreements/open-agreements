@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "field_id": "acquisition_exception_shares",
+  "field_label": "Acquisition Exception Shares",
+  "description": "Max shares issuable as acquisition consideration without triggering anti-dilution",
+  "source_template_version": "10-1-2025",
+  "occurrences": [
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "exceed\\s+\\$(\\[_______\\])",
+        "group": 1
+      }
+    },
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "less\\s+than\\s+\\$(\\[_______\\])",
+        "group": 1
+      }
+    },
+    {
+      "primary": {
+        "kind": "regex",
+        "pattern": "Directors\\]\\s+(\\[\\[do\\s+not\\s+exceed\\s+an\\s+aggregate\\s+of\\s+\\[______\\])",
+        "group": 1
+      }
+    }
+  ],
+  "postconditions": [
+    "no_unresolved_placeholder",
+    "no_double_dollar"
+  ],
+  "failure_behavior": "warn",
+  "fixtures": []
+}

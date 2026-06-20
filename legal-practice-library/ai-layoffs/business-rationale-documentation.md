@@ -126,7 +126,7 @@ Perhaps more than companies assume. Shopify-type headcount memos and Box-type ro
 
 [^morgan-lewis-managing-workforce-reductions-in-di-2]: **Morgan Lewis commentary** — "RIF Procedure (written): think ‘Exhibit A’" *Morgan Lewis, Managing Workforce Reductions in Difficult Times.* <https://www.morganlewis.com/~/media/files/publication/presentation/webinar/lepgtestingfundamentals_webcast_17feb09.ashx>
 
-[^rummery-v-illinois-bell-telephone-co-250-f-3d-55]: **Rummery v. Illinois Bell Telephone Co., 250 F.3d 553 (7th Cir. 2001)** — "every single piece of scrap paper" *Rummery v. Illinois Bell Telephone Co., 250 F.3d 553 (7th Cir. 2001).* <https://www.courtlistener.com/opinion/773294/michael-rummery-v-illinois-bell-telephone-company#:~:text=every%20single%20piece%20of%20scrap%20paper>
+[^rummery-v-illinois-bell-telephone-co-250-f-3d-55]: **Rummery v. Illinois Bell Telephone Co., 250 F.3d 553 (7th Cir. 2001)** — "not required to keep every single piece of scrap paper that various employees may create during the termination process. It is sufficient that the employer retains only the actual employment record itself, not the rough drafts or processes which may lead up to it." *Rummery v. Illinois Bell Telephone Co., 250 F.3d 553 (7th Cir. 2001).* <https://www.courtlistener.com/opinion/773294/michael-rummery-v-illinois-bell-telephone-company#:~:text=not%20required%20to%20keep%20every,may%20lead%20up%20to%20it.>
 
 [^29-c-f-r-1602-14-2]: **29 C.F.R. § 1602.14** — "lay-off or termination" *29 C.F.R. § 1602.14.* <https://www.ecfr.gov/current/title-29/subtitle-B/chapter-XIV/part-1602/subpart-C>
 
