@@ -38,7 +38,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > We find that the remedy for this Non-Solicitation Agreement's shortcomings is not quite that simple and it cannot be made to comply with § 219A by merely deleting the word “indirectly.”
 
-- supports: `customer-nonsolicitation`, `definitions`, `severability-and-reformation`
-- source_cards: `autry-no-sever`, `autry-no-sever-defs`, `autry-no-sever-severability`
+- supports: `customer-nonsolicitation`, `definitions`, `recent-developments`, `severability-and-reformation`
+- source_cards: `autry-indirect-recent`, `autry-no-sever`, `autry-no-sever-defs`, `autry-no-sever-severability`
 - cited_by: [Non-Compete Agreement Review Checklist — Oklahoma](../checklists/non-compete/us/oklahoma.md), [Non-Competes in Oklahoma](../non-compete/us/oklahoma.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4520541/autry-v-acosta-inc/#:~:text=We%20find%20that%20the%20remedy,merely%20deleting%20the%20word%20%E2%80%9Cindirectly.%E2%80%9D>
