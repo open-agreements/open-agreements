@@ -106,7 +106,7 @@ The statute includes independent contractors in its employee definition and requ
 
 **Short answer.** Minnesota changed from a common-law enforceability regime to a prospective statutory ban in 2023, then added a service-contract restriction in 2024.
 
-**May 24, 2023:** Governor Tim Walz signed SF 3035, adding Minn. Stat. § 181.988 and prohibiting most new employee and independent-contractor non-competes [^stinson-minn-181-988-signed-effective].
+**May 24, 2023:** Governor Tim Walz signed SF 3035, adding Minn. Stat. § 181.988 and prohibiting most new employee and independent-contractor non-competes [^minn-181-988-void-recent][^stinson-minn-181-988-signed-effective].
 
 **July 1, 2023:** The ban took effect for new agreements. Commentary treats pre-July 1, 2023 agreements as still governed by the preexisting common-law framework [^cooley-minn-181-988-not-retroactive-development][^littler-minn-181-988-existing-agreements].
 
@@ -159,6 +159,8 @@ The statute includes independent contractors in its employee definition and requ
 [^minn-181-9881-employee-notice]: **Minn. Stat. § 181.9881, subd. 2(c)** — "the service provider must provide notice to their employees of this section and the restrictive covenant in the existing contract that violates this section." *Minn. Stat. § 181.9881, subd. 2(c) (2025).* <https://www.revisor.mn.gov/statutes/cite/181.9881>
 
 [^minn-181-9881-software-consulting-exemption]: **Minn. Stat. § 181.9881, subd. 3** — "This section does not apply to workers providing professional business consulting for computer software development and related services" *Minn. Stat. § 181.9881, subd. 3 (2025).* <https://www.revisor.mn.gov/statutes/cite/181.9881>
+
+[^minn-181-988-void-recent]: **Minn. Stat. § 181.988, subd. 2(a)** — "Any covenant not to compete contained in a contract or agreement is void and unenforceable." *Minn. Stat. § 181.988, subd. 2(a) (2025).* <https://www.revisor.mn.gov/statutes/cite/181.988>
 
 [^stinson-minn-181-988-signed-effective]: **Stinson commentary** — "MN SF 3035, signed by Governor Walz on May 24, 2023, restricts employers from entering into noncompetition agreements on or after July 1, 2023" *Stinson, Minnesota Non-Compete Ban Signed into Law and Effective July 1, 2023 (2023).* <https://www.stinson.com/newsroom-publications-minnesota-non-compete-ban-signed-into-law-and-effective-july-1-2023>
 
