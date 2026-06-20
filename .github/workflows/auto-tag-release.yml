@@ -36,6 +36,12 @@ jobs:
       - uses: actions/checkout@v5
         with:
           fetch-depth: 0
+          # Do NOT persist the GITHUB_TOKEN as an http.extraheader: it would
+          # override the release-bot App token on the tag push below (git applies
+          # the persisted Authorization header in preference to the push URL's
+          # credential), so the push would authenticate as github-actions[bot]
+          # — read-only here — and 403. The App token must be the only credential.
+          persist-credentials: false
 
       - name: Detect a merged version bump without a tag
         id: detect
