@@ -37,6 +37,10 @@ export const CHECKS = {
     name: 'UNREGISTERED_PART',
     description: 'A required part exists in the zip but is not registered in [Content_Types].xml or word/_rels/document.xml.rels — Word for Mac still flags the package because the part is unreachable.',
   },
+  MISSING_PSTYLE_ON_VISIBLE_PARAGRAPH: {
+    name: 'MISSING_PSTYLE_ON_VISIBLE_PARAGRAPH',
+    description: 'A visible-text paragraph lacks w:pStyle where Apple Pages may drop inline paragraph alignment or inherit visible properties from the previous styled paragraph.',
+  },
 };
 
 function parseArgs(argv) {
@@ -249,6 +253,113 @@ function encodedApostropheOffsets(xml) {
   return [...xml.matchAll(/&apos;/g)].map((match) => match.index ?? 0);
 }
 
+function paragraphBlocks(xml) {
+  return [...xml.matchAll(/<w:p[\s>][\s\S]*?<\/w:p>/g)].map((match) => ({
+    xml: match[0],
+    offset: match.index ?? 0,
+  }));
+}
+
+function hasVisibleText(paraXml) {
+  return /<w:t[^>]*>[^<]/.test(paraXml);
+}
+
+function paragraphPropertiesXml(paraXml) {
+  return paraXml.match(/<w:pPr\b[\s\S]*?<\/w:pPr>/i)?.[0] ?? '';
+}
+
+function paragraphStyleId(paraXml) {
+  return paraXml.match(/<w:pStyle\b[^>]*\bw:val="([^"]+)"/i)?.[1] ?? null;
+}
+
+function hasPagesRiskyAlignment(xml) {
+  return [...xml.matchAll(/<w:jc\b([^>]*)>/gi)].some((match) => {
+    const val = match[1].match(/\bw:val="([^"]+)"/i)?.[1]?.toLowerCase();
+    return val == null || ['center', 'right', 'end'].includes(val);
+  });
+}
+
+function hasInlineParagraphAlignment(paraXml) {
+  return hasPagesRiskyAlignment(paragraphPropertiesXml(paraXml));
+}
+
+function styleBlocksById(stylesXml) {
+  const blocks = new Map();
+  for (const match of stylesXml.matchAll(/<w:style\b[^>]*\bw:styleId="([^"]+)"[^>]*>[\s\S]*?<\/w:style>/gi)) {
+    blocks.set(match[1], match[0]);
+  }
+  return blocks;
+}
+
+function xmlElementEnabled(xml, tagName, disabledValues = new Set(['0', 'false', 'off'])) {
+  const re = new RegExp(`<w:${tagName}\\b([^>]*)>`, 'gi');
+  for (const match of xml.matchAll(re)) {
+    const val = match[1].match(/\bw:val="([^"]+)"/i)?.[1]?.toLowerCase();
+    if (val == null || !disabledValues.has(val)) {
+      return true;
+    }
+  }
+  return false;
+}
+
+function styleCarriesVisibleProperties(styleBlock) {
+  if (!styleBlock) return false;
+  const pPr = styleBlock.match(/<w:pPr\b[\s\S]*?<\/w:pPr>/i)?.[0] ?? '';
+  const rPr = styleBlock.match(/<w:rPr\b[\s\S]*?<\/w:rPr>/i)?.[0] ?? '';
+  return (
+    hasPagesRiskyAlignment(pPr) ||
+    xmlElementEnabled(rPr, 'b') ||
+    xmlElementEnabled(rPr, 'i') ||
+    xmlElementEnabled(rPr, 'u', new Set(['0', 'false', 'off', 'none']))
+  );
+}
+
+function hasExplicitPagesStyleContract(styleBlocks) {
+  // Legacy/imported templates contain benign unstyled centered paragraphs and
+  // built-in Word styles. The Pages regression this check guards is actionable
+  // once a template declares the OA named-style contract used by our renderers.
+  return ['OATitle', 'OAClauseHeading', 'OABlockSignatureFollow'].some((styleId) => styleBlocks.has(styleId));
+}
+
+function missingPStyleVisibleParagraphIssues(documentXml, stylesXml) {
+  const styleBlocks = styleBlocksById(stylesXml);
+  const hasPagesStyleContract = hasExplicitPagesStyleContract(styleBlocks);
+  const findings = [];
+  let previousVisibleParagraph = null;
+  let visibleIndex = 0;
+
+  for (const paragraph of paragraphBlocks(documentXml)) {
+    if (!hasVisibleText(paragraph.xml)) continue;
+
+    const styleId = paragraphStyleId(paragraph.xml);
+    if (styleId == null) {
+      if (hasPagesStyleContract && hasInlineParagraphAlignment(paragraph.xml)) {
+        findings.push({
+          offset: paragraph.offset,
+          visibleIndex,
+          reason: 'inline_alignment',
+        });
+      } else if (
+        hasPagesStyleContract &&
+        previousVisibleParagraph?.styleId &&
+        styleCarriesVisibleProperties(styleBlocks.get(previousVisibleParagraph.styleId))
+      ) {
+        findings.push({
+          offset: paragraph.offset,
+          visibleIndex,
+          reason: 'previous_visible_style',
+          previousStyleId: previousVisibleParagraph.styleId,
+        });
+      }
+    }
+
+    previousVisibleParagraph = { styleId };
+    visibleIndex++;
+  }
+
+  return findings;
+}
+
 function issue(code, part, details = {}) {
   return {
     code,
@@ -326,6 +437,12 @@ export async function lintDocx(docxPath) {
   const documentPart = zip.file('word/document.xml');
   if (documentPart) {
     const documentXml = await documentPart.async('string');
+    const stylesPart = zip.file('word/styles.xml');
+    const stylesXml = stylesPart ? await stylesPart.async('string') : '';
+    for (const finding of missingPStyleVisibleParagraphIssues(documentXml, stylesXml)) {
+      issues.push(issue('MISSING_PSTYLE_ON_VISIBLE_PARAGRAPH', 'word/document.xml', finding));
+    }
+
     const refIds = collectCommentIds(documentXml, 'commentReference');
     if (refIds.size > 0) {
       const definedIds = collectCommentIds(commentsXml ?? '', 'comment');

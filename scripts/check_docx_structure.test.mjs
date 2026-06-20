@@ -29,6 +29,15 @@ function commentsXml(body) {
   ].join('');
 }
 
+function stylesXml(styles) {
+  return [
+    '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>',
+    '<w:styles xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">',
+    styles,
+    '</w:styles>',
+  ].join('');
+}
+
 async function writeDocx(parts) {
   const dir = mkdtempSync(join(tmpdir(), 'oa-docx-structure-'));
   tempDirs.push(dir);
@@ -157,6 +166,85 @@ describe('check_docx_structure', () => {
 
     expect(await codesFor(broken)).toContain('ENCODED_APOSTROPHE_IN_BODY');
     expect(await codesFor(good)).not.toContain('ENCODED_APOSTROPHE_IN_BODY');
+  });
+
+  it('flags visible unstyled paragraphs whose inline alignment may be dropped by Pages', async () => {
+    const broken = await writeDocx({
+      document: documentXml(
+        [
+          '<w:p>',
+          '<w:pPr><w:jc w:val="center"/></w:pPr>',
+          '<w:r><w:t>Centered without pStyle</w:t></w:r>',
+          '</w:p>',
+        ].join(''),
+      ),
+      extra: {
+        'word/styles.xml': stylesXml(
+          '<w:style w:type="paragraph" w:styleId="OATitle"><w:pPr><w:jc w:val="center"/></w:pPr></w:style>',
+        ),
+      },
+    });
+    const good = await writeDocx({
+      document: documentXml(
+        [
+          '<w:p>',
+          '<w:pPr><w:pStyle w:val="OATitle"/><w:jc w:val="center"/></w:pPr>',
+          '<w:r><w:t>Centered with pStyle</w:t></w:r>',
+          '</w:p>',
+        ].join(''),
+      ),
+    });
+
+    expect(await codesFor(broken)).toContain('MISSING_PSTYLE_ON_VISIBLE_PARAGRAPH');
+    expect(await codesFor(good)).not.toContain('MISSING_PSTYLE_ON_VISIBLE_PARAGRAPH');
+  });
+
+  it('flags visible unstyled paragraphs that follow a visibly styled paragraph', async () => {
+    const broken = await writeDocx({
+      document: documentXml(
+        [
+          '<w:p><w:pPr><w:pStyle w:val="OAClauseHeading"/></w:pPr><w:r><w:t>Heading</w:t></w:r></w:p>',
+          '<w:p><w:r><w:t>Body that could inherit heading formatting</w:t></w:r></w:p>',
+        ].join(''),
+      ),
+      extra: {
+        'word/styles.xml': stylesXml(
+          [
+            '<w:style w:type="paragraph" w:styleId="OAClauseHeading">',
+            '<w:name w:val="OA Clause Heading"/>',
+            '<w:pPr><w:jc w:val="center"/></w:pPr>',
+            '<w:rPr><w:b/><w:u w:val="single"/></w:rPr>',
+            '</w:style>',
+          ].join(''),
+        ),
+      },
+    });
+    const good = await writeDocx({
+      document: documentXml(
+        [
+          '<w:p><w:pPr><w:pStyle w:val="OABody"/></w:pPr><w:r><w:t>Styled body</w:t></w:r></w:p>',
+          '<w:p><w:r><w:t>Benign unstyled body</w:t></w:r></w:p>',
+        ].join(''),
+      ),
+      extra: {
+        'word/styles.xml': stylesXml(
+          [
+            '<w:style w:type="paragraph" w:styleId="OABody">',
+            '<w:name w:val="OA Body"/>',
+            '<w:pPr><w:spacing w:after="160"/></w:pPr>',
+            '<w:rPr><w:color w:val="111111"/></w:rPr>',
+            '</w:style>',
+            '<w:style w:type="paragraph" w:styleId="OATitle">',
+            '<w:name w:val="OA Title"/>',
+            '<w:pPr><w:jc w:val="center"/></w:pPr>',
+            '</w:style>',
+          ].join(''),
+        ),
+      },
+    });
+
+    expect(await codesFor(broken)).toContain('MISSING_PSTYLE_ON_VISIBLE_PARAGRAPH');
+    expect(await codesFor(good)).not.toContain('MISSING_PSTYLE_ON_VISIBLE_PARAGRAPH');
   });
 
   it('flags separate/end split across adjacent runs without cached result text', async () => {

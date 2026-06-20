@@ -57,10 +57,18 @@ A `pStyle`-presence-only check is **not** sufficient — it would still pass
 if someone reintroduced inline-centered headings on `Normal`. Assert the
 style properties.
 
-## Out of scope (today)
+## Repo-wide structural lint
 
-`cover-standard-signature-v1.mjs` does not currently satisfy this invariant
-on every paragraph (the employment offer letter has 75 paragraphs, only 24
-with `pStyle`). It renders OK in Pages today because its visual variants
-happen to be left-aligned, but this is structurally fragile. A future PR
-should retrofit it to the same contract.
+`scripts/check_docx_structure.mjs` also runs a catalog-wide Pages guard over
+`content/templates/*/template.docx`. That lint intentionally uses a narrower
+rule than the layout-specific tests above: for templates that declare the
+OpenAgreements Pages style contract, it flags visible-text paragraphs that lack
+`pStyle` when the paragraph has risky inline `<w:jc>` alignment, or when the
+immediately preceding visible paragraph references a style whose `styles.xml`
+definition carries alignment, bold, italic, or underline that could leak
+through Pages inheritance.
+
+Do not replace this lint with a blanket "every visible paragraph needs
+`pStyle`" assertion. Some templates have benign unstyled body paragraphs that
+render correctly in Pages, and the structural lint exists to catch the known
+Pages failure modes without false-failing those templates.
