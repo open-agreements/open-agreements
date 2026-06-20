@@ -37,6 +37,10 @@ export const CHECKS = {
     name: 'UNREGISTERED_PART',
     description: 'A required part exists in the zip but is not registered in [Content_Types].xml or word/_rels/document.xml.rels — Word for Mac still flags the package because the part is unreachable.',
   },
+  MISSING_PSTYLE_ON_VISIBLE_PARAGRAPH: {
+    name: 'MISSING_PSTYLE_ON_VISIBLE_PARAGRAPH',
+    description: 'A visible-text paragraph lacks w:pStyle where Apple Pages may drop inline paragraph alignment or inherit visible properties from the previous styled paragraph.',
+  },
 };
 
 function parseArgs(argv) {
@@ -249,6 +253,141 @@ function encodedApostropheOffsets(xml) {
   return [...xml.matchAll(/&apos;/g)].map((match) => match.index ?? 0);
 }
 
+function hasVisibleText(paraXml) {
+  return /<w:t[^>]*>[^<]/.test(paraXml);
+}
+
+function paragraphPropertiesXml(paraXml) {
+  return paraXml.match(/<w:pPr\b[\s\S]*?<\/w:pPr>/i)?.[0] ?? '';
+}
+
+function paragraphStyleId(paraXml) {
+  return paraXml.match(/<w:pStyle\b[^>]*\bw:val="([^"]+)"/i)?.[1] ?? null;
+}
+
+function hasPagesRiskyAlignment(xml) {
+  return [...xml.matchAll(/<w:jc\b([^>]*)>/gi)].some((match) => {
+    const val = match[1].match(/\bw:val="([^"]+)"/i)?.[1]?.toLowerCase();
+    return val == null || ['center', 'right', 'end'].includes(val);
+  });
+}
+
+function hasInlineParagraphAlignment(paraXml) {
+  return hasPagesRiskyAlignment(paragraphPropertiesXml(paraXml));
+}
+
+function styleBlocksById(stylesXml) {
+  const blocks = new Map();
+  for (const match of stylesXml.matchAll(/<w:style\b[^>]*\bw:styleId="([^"]+)"[^>]*>[\s\S]*?<\/w:style>/gi)) {
+    blocks.set(match[1], match[0]);
+  }
+  return blocks;
+}
+
+function xmlElementEnabled(xml, tagName, disabledValues = new Set(['0', 'false', 'off'])) {
+  const re = new RegExp(`<w:${tagName}\\b([^>]*)>`, 'gi');
+  for (const match of xml.matchAll(re)) {
+    const val = match[1].match(/\bw:val="([^"]+)"/i)?.[1]?.toLowerCase();
+    if (val == null || !disabledValues.has(val)) {
+      return true;
+    }
+  }
+  return false;
+}
+
+function styleCarriesVisibleProperties(styleId, styleBlocks, visited = new Set()) {
+  // Resolve w:basedOn up the inheritance chain so a style that inherits its
+  // risky alignment/emphasis from a parent (e.g. OASubHeading basedOn
+  // OAClauseHeading) is still treated as carrying those properties. Cycle-guarded.
+  if (!styleId || visited.has(styleId)) return false;
+  visited.add(styleId);
+  const styleBlock = styleBlocks.get(styleId);
+  if (!styleBlock) return false;
+  const pPr = styleBlock.match(/<w:pPr\b[\s\S]*?<\/w:pPr>/i)?.[0] ?? '';
+  const rPr = styleBlock.match(/<w:rPr\b[\s\S]*?<\/w:rPr>/i)?.[0] ?? '';
+  if (
+    hasPagesRiskyAlignment(pPr) ||
+    xmlElementEnabled(rPr, 'b') ||
+    xmlElementEnabled(rPr, 'i') ||
+    xmlElementEnabled(rPr, 'u', new Set(['0', 'false', 'off', 'none']))
+  ) {
+    return true;
+  }
+  const basedOn = styleBlock.match(/<w:basedOn\b[^>]*\bw:val="([^"]+)"/i)?.[1];
+  return basedOn ? styleCarriesVisibleProperties(basedOn, styleBlocks, visited) : false;
+}
+
+function hasExplicitPagesStyleContract(styleBlocks) {
+  // Legacy/imported templates contain benign unstyled centered paragraphs and
+  // built-in Word styles; they render fine in Pages and must not false-fail.
+  // Any OA-prefixed paragraph style signals an OpenAgreements-rendered template
+  // bound by the Pages style contract — a more durable signal than a fixed
+  // sentinel list, which a future OA template using different OA style names
+  // would silently bypass.
+  return [...styleBlocks.keys()].some((styleId) => styleId.startsWith('OA'));
+}
+
+// Paragraphs interleaved with the structural boundaries across which Pages does
+// NOT carry paragraph inheritance: table starts/ends, cell ends, text-box
+// content, and section breaks. matchAll yields these left-to-right and
+// non-overlapping, so a boundary marker resets the previous-paragraph state and
+// rule (b) can't leak a style across it (avoids false positives in tables, etc).
+// Boundary open/close tags are matched as zero-content markers (not whole
+// blocks) so paragraphs inside a cell / text box are still scanned.
+const PARAGRAPH_OR_BOUNDARY_REGEX =
+  /<w:p[\s>][\s\S]*?<\/w:p>|<w:tbl[\s>]|<\/w:tbl>|<\/w:tc>|<w:txbxContent[\s>]|<\/w:txbxContent>|<w:sectPr[\s>]/g;
+
+function missingPStyleVisibleParagraphIssues(documentXml, stylesXml) {
+  const styleBlocks = styleBlocksById(stylesXml);
+  const hasPagesStyleContract = hasExplicitPagesStyleContract(styleBlocks);
+  const findings = [];
+  let previousVisibleParagraph = null;
+  let visibleIndex = 0;
+
+  for (const match of documentXml.matchAll(PARAGRAPH_OR_BOUNDARY_REGEX)) {
+    const xml = match[0];
+    if (!xml.endsWith('</w:p>')) {
+      // Structural boundary marker — Pages inheritance does not cross it.
+      previousVisibleParagraph = null;
+      continue;
+    }
+
+    if (hasVisibleText(xml)) {
+      const offset = match.index ?? 0;
+      const styleId = paragraphStyleId(xml);
+      if (styleId == null) {
+        if (hasPagesStyleContract && hasInlineParagraphAlignment(xml)) {
+          findings.push({ offset, visibleIndex, reason: 'inline_alignment' });
+        } else if (
+          hasPagesStyleContract &&
+          previousVisibleParagraph?.styleId &&
+          styleCarriesVisibleProperties(previousVisibleParagraph.styleId, styleBlocks)
+        ) {
+          findings.push({
+            offset,
+            visibleIndex,
+            reason: 'previous_visible_style',
+            previousStyleId: previousVisibleParagraph.styleId,
+          });
+        }
+      }
+
+      previousVisibleParagraph = { styleId };
+      visibleIndex++;
+    }
+
+    // A paragraph carrying a section break (w:sectPr in its pPr) is the last
+    // paragraph of its section. The standalone-sectPr boundary alternative
+    // can't see this shape — the paragraph match swallows the inner sectPr —
+    // so reset here so prior styled state doesn't bleed into the next section.
+    if (/<w:sectPr[\s>]/.test(xml)) {
+      previousVisibleParagraph = null;
+    }
+  }
+
+  return findings;
+}
+
 function issue(code, part, details = {}) {
   return {
     code,
@@ -272,6 +411,11 @@ export async function lintDocx(docxPath) {
       issues.push(issue('ORPHAN_COMMENTS_PART', 'word/comments.xml'));
     }
   }
+
+  // Resolved once; the body Pages-style check below reads it. (Header/footer
+  // coverage is deferred — see the pStyle check wiring under the document part.)
+  const stylesPart = zip.file('word/styles.xml');
+  const stylesXml = stylesPart ? await stylesPart.async('string') : '';
 
   for (const name of Object.keys(zip.files).sort()) {
     if (!relevantXmlPart(name) && !bodyXmlPart(name)) continue;
@@ -326,6 +470,15 @@ export async function lintDocx(docxPath) {
   const documentPart = zip.file('word/document.xml');
   if (documentPart) {
     const documentXml = await documentPart.async('string');
+    // Pages style-contract check, body only. Header/footer parts also carry the
+    // contract per the layouts README, but extending the check there surfaces
+    // findings (e.g. right-aligned cover-term header cells) that need visual
+    // Pages reproduction before they can be treated as defects — deferred to
+    // #504 so this lint stays catalog-green.
+    for (const finding of missingPStyleVisibleParagraphIssues(documentXml, stylesXml)) {
+      issues.push(issue('MISSING_PSTYLE_ON_VISIBLE_PARAGRAPH', 'word/document.xml', finding));
+    }
+
     const refIds = collectCommentIds(documentXml, 'commentReference');
     if (refIds.size > 0) {
       const definedIds = collectCommentIds(commentsXml ?? '', 'comment');

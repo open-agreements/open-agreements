@@ -57,10 +57,26 @@ A `pStyle`-presence-only check is **not** sufficient — it would still pass
 if someone reintroduced inline-centered headings on `Normal`. Assert the
 style properties.
 
-## Out of scope (today)
+## Repo-wide structural lint
 
-`cover-standard-signature-v1.mjs` does not currently satisfy this invariant
-on every paragraph (the employment offer letter has 75 paragraphs, only 24
-with `pStyle`). It renders OK in Pages today because its visual variants
-happen to be left-aligned, but this is structurally fragile. A future PR
-should retrofit it to the same contract.
+`scripts/check_docx_structure.mjs` also runs a catalog-wide Pages guard over
+`content/templates/*/template.docx` (`word/document.xml` body). That lint
+intentionally uses a narrower rule than the layout-specific tests above: for
+templates that declare the OpenAgreements Pages style contract (any `OA`-prefixed
+paragraph style), it flags visible-text paragraphs that lack `pStyle` when the
+paragraph has risky inline `<w:jc>` alignment (center/right/end), or when the
+immediately preceding visible paragraph references a style whose `styles.xml`
+definition (resolved through `w:basedOn`) carries alignment, bold, italic, or
+underline that could leak through Pages inheritance. Previous-paragraph state is
+reset at table, table-cell, text-box, and section-break boundaries, across which
+Pages does not carry inheritance.
+
+Do not replace this lint with a blanket "every visible paragraph needs
+`pStyle`" assertion. Some templates have benign unstyled body paragraphs that
+render correctly in Pages, and the structural lint exists to catch the known
+Pages failure modes without false-failing those templates.
+
+Header/footer parts also carry the contract, but extending the lint there
+surfaces findings (e.g. right-aligned cover-term header cells) that need visual
+Pages reproduction before being treated as defects — tracked in #504 so this
+lint stays catalog-green.
