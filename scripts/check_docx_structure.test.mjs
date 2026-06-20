@@ -247,6 +247,56 @@ describe('check_docx_structure', () => {
     expect(await codesFor(good)).not.toContain('MISSING_PSTYLE_ON_VISIBLE_PARAGRAPH');
   });
 
+  it('resolves w:basedOn so an inherited visible property still flags the following paragraph', async () => {
+    const broken = await writeDocx({
+      document: documentXml(
+        [
+          '<w:p><w:pPr><w:pStyle w:val="OASubHeading"/></w:pPr><w:r><w:t>Sub heading</w:t></w:r></w:p>',
+          '<w:p><w:r><w:t>Body that could inherit bold from the base style</w:t></w:r></w:p>',
+        ].join(''),
+      ),
+      extra: {
+        'word/styles.xml': stylesXml(
+          [
+            // OASubHeading carries no direct visible props, but inherits bold
+            // from OAHeadingBase via w:basedOn — must still be detected.
+            '<w:style w:type="paragraph" w:styleId="OAHeadingBase"><w:rPr><w:b/></w:rPr></w:style>',
+            '<w:style w:type="paragraph" w:styleId="OASubHeading"><w:basedOn w:val="OAHeadingBase"/><w:pPr><w:spacing w:after="120"/></w:pPr></w:style>',
+          ].join(''),
+        ),
+      },
+    });
+
+    expect(await codesFor(broken)).toContain('MISSING_PSTYLE_ON_VISIBLE_PARAGRAPH');
+  });
+
+  it('does not flag an unstyled paragraph in a new table cell after a styled paragraph in the previous cell', async () => {
+    const good = await writeDocx({
+      document: documentXml(
+        [
+          '<w:tbl>',
+          '<w:tr><w:tc>',
+          '<w:p><w:pPr><w:pStyle w:val="OAClauseHeading"/></w:pPr><w:r><w:t>Heading in cell one</w:t></w:r></w:p>',
+          '</w:tc></w:tr>',
+          '<w:tr><w:tc>',
+          '<w:p><w:r><w:t>Plain body in cell two</w:t></w:r></w:p>',
+          '</w:tc></w:tr>',
+          '</w:tbl>',
+        ].join(''),
+      ),
+      extra: {
+        'word/styles.xml': stylesXml(
+          [
+            '<w:style w:type="paragraph" w:styleId="OAClauseHeading"><w:pPr><w:jc w:val="center"/></w:pPr><w:rPr><w:b/></w:rPr></w:style>',
+            '<w:style w:type="paragraph" w:styleId="OATitle"><w:pPr><w:jc w:val="center"/></w:pPr></w:style>',
+          ].join(''),
+        ),
+      },
+    });
+
+    expect(await codesFor(good)).not.toContain('MISSING_PSTYLE_ON_VISIBLE_PARAGRAPH');
+  });
+
   it('flags separate/end split across adjacent runs without cached result text', async () => {
     const broken = await writeDocx({
       extra: {
