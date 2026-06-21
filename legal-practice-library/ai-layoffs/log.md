@@ -1,5 +1,8 @@
 # Ai Layoffs Update Log
 
+## 2026-06-20
+* **Update**: fix(content): firm-only sourcing triage — AI-layoff/WARN topics (cluster 2/5, refs #950) (#957) ([539e66c](https://github.com/UseJunior/legal-explainer/commit/539e66cadb586980b62a2afb5b3bc45bd1295b67))
+
 ## 2026-06-18
 * **Update**: fix(content): close citation/coverage gaps in AI-employment topic notes [#838] (#851) ([40a7367](https://github.com/UseJunior/legal-explainer/commit/40a7367cd8aacfc5c9f9dcef32876f49217dee86))
 * **Update**: fix(content): #852 Section A — correct wrong-source citations (PR2) (#885) ([833bd1b](https://github.com/UseJunior/legal-explainer/commit/833bd1bc7919f048c6c81b032f73f20b76875f70))
