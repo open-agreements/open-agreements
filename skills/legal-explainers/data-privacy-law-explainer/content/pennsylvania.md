@@ -2,7 +2,7 @@
 jurisdiction: "Pennsylvania"
 slug: pennsylvania
 countryCode: US
-snapshotAsOf: "2026-06-20"
+snapshotAsOf: "2026-06-21"
 lastReviewed: "2026-06-07"
 canonicalUrl: https://openagreements.org/practice-guides/privacy/us/pennsylvania
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/pennsylvania · **Snapshot as of:** 2026-06-20 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/pennsylvania · **Snapshot as of:** 2026-06-21 · License: CC BY 4.0 · © openagreements.org
 
 # Pennsylvania Consumer Privacy Law[^about]
 
