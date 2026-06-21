@@ -1,5 +1,8 @@
 # Us Update Log
 
+## 2026-06-21
+* **Update**: content(non-compete/va): re-anchor 2026 statutory changes to enrolled primary law (closes #950) (#964) ([cb3e154](https://github.com/UseJunior/legal-explainer/commit/cb3e154c5a830c1e8b37b0611d71970a553ac7f3))
+
 ## 2026-06-20
 * **Update**: feat(audit): firm-only sourcing linter + re-anchor non-compete statutory claims (refs #853) (#948) ([921b26f](https://github.com/UseJunior/legal-explainer/commit/921b26fe7b594f9d243a1a359e8e51ea6ffa9e55))
 
