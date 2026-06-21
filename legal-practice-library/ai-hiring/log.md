@@ -1,5 +1,8 @@
 # Ai Hiring Update Log
 
+## 2026-06-21
+* **Update**: chore(#950 follow-ups): widen primary-law taxonomy doc + fix stale Colorado date (#967) ([5d28261](https://github.com/UseJunior/legal-explainer/commit/5d28261559141131438477b80828f95aadd989a9))
+
 ## 2026-06-20
 * **Update**: fix(content): triage firm-only sourcing in AI-hiring/bias topics (cluster 1/5, refs #950) (#952) ([bf817a4](https://github.com/UseJunior/legal-explainer/commit/bf817a4d862a2cb27fd23deee014ffa30830a457))
 
