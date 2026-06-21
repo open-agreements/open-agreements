@@ -91,7 +91,7 @@
     "build:site:vercel": "npm run build:workspace && npm run generate:schemas && npm run export:system-card-runtime:build && npm run generate:system-card && npm run build:site && npm run build:arp-manifest && npm run sign:arp-manifest",
     "build:arp-manifest": "node scripts/build-wellknown-ai-index.cjs",
     "sign:arp-manifest": "node scripts/sign-manifest.cjs",
-    "prepare": "npm run build",
+    "prepare": "command -v tsc >/dev/null 2>&1 && npm run build || echo 'skip build: typescript not installed (production/omit-dev install)'",
     "report:allure": "rm -rf ./allure-report && allure awesome ./allure-results --output ./allure-report --group-by epic,feature,story && node scripts/patch_allure_html_sanitizer.mjs --report-dir ./allure-report",
     "report:allure:open": "allure open ./allure-report",
     "allure:deploy": "node scripts/deploy_allure_report.mjs",
