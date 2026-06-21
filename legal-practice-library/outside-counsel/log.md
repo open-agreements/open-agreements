@@ -1,5 +1,8 @@
 # Outside Counsel Update Log
 
+## 2026-06-20
+* **Update**: fix(content): firm-only sourcing triage — counsel-transition topics (cluster 4/5, refs #950) (#959) ([673ea82](https://github.com/UseJunior/legal-explainer/commit/673ea82cb79aec3ad37abd8913bb7e4919ae0339))
+
 ## 2026-06-18
 * **Update**: fix(content): close citation/coverage gaps in AI-employment topic notes [#838] (#851) ([40a7367](https://github.com/UseJunior/legal-explainer/commit/40a7367cd8aacfc5c9f9dcef32876f49217dee86))
 * **Update**: feat(content-rule): pull quote must encompass the inline {% q %} it supports (#854) (#857) ([755c535](https://github.com/UseJunior/legal-explainer/commit/755c535cce07fc60d16ef7c74671b035515bd070))
