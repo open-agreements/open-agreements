@@ -2,7 +2,7 @@
 jurisdiction: "Wyoming"
 slug: wyoming
 countryCode: US
-snapshotAsOf: "2026-06-19"
+snapshotAsOf: "2026-06-20"
 lastReviewed: "2026-04-14"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/wyoming
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/wyoming · **Snapshot as of:** 2026-06-19 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/wyoming · **Snapshot as of:** 2026-06-20 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Wyoming[^about]
 
@@ -183,7 +183,7 @@ Commentary specifically warns employers to evaluate routine replacement or updat
 
 **Short answer.** Wyoming moved from a mostly common-law regime to a broad prospective statutory ban with enumerated exceptions.
 
-**March 19, 2025:** Governor Mark Gordon signed Senate File 107, creating Wyo. Stat. § 1-23-108 and adding physician-specific rules [^ogletree-effective-date].
+**March 19, 2025:** Governor Mark Gordon signed Senate File 107, creating Wyo. Stat. § 1-23-108 and adding physician-specific rules [^sf107-effective-date][^ogletree-effective-date].
 
 **July 1, 2025:** The new statute took effect for contracts entered into on or after that date. Earlier contracts were not altered, amended, or impaired by the act [^sf107-effective-date].
 
@@ -289,9 +289,9 @@ Commentary specifically warns employers to evaluate routine replacement or updat
 
 [^hassler-baseline]: **Hassler v. Circle C Resources** — "By rejecting the liberal blue pencil rule, we encourage employers to incorporate only reasonable trade restraints into their employment contracts" *Hassler v. Circle C Resources, 2022 WY 28, 505 P.3d 169.* <https://www.courtlistener.com/opinion/9998701/charlene-hassler-v-circle-c-resources/#:~:text=By%20rejecting%20the%20liberal%20blue,restraints%20into%20their%20employment%20contracts>
 
-[^ogletree-effective-date]: **Ogletree Deakins commentary** — "The new legislation, which will take effect on July 1, 2025, applies to contracts entered into on or after that date." *Ogletree Deakins, Wyoming Enacts Law to Restrict the Use of Noncompete Agreements (2025).* <https://ogletree.com/insights-resources/blog-posts/wyoming-enacts-law-to-restrict-the-use-of-noncompete-agreements/>
-
 [^sf107-effective-date]: **SF 107 §§ 1–3** — "This act shall apply to contracts entered into on and after July 1, 2025." *S.F. 107, Enrolled Act No. 87, §§ 1–3, 68th Leg., Gen. Sess. (Wyo. 2025).* <https://wyoleg.gov/2025/Enroll/SF0107.pdf>
+
+[^ogletree-effective-date]: **Ogletree Deakins commentary** — "The new legislation, which will take effect on July 1, 2025, applies to contracts entered into on or after that date." *Ogletree Deakins, Wyoming Enacts Law to Restrict the Use of Noncompete Agreements (2025).* <https://ogletree.com/insights-resources/blog-posts/wyoming-enacts-law-to-restrict-the-use-of-noncompete-agreements/>
 
 [^brown-consideration-backdrop]: **Brown v. Best Home Health & Hospice, LLC** — "Continued employment is not sufficient consideration to support a non-compete agreement." *Brown v. Best Home Health & Hospice, LLC, 2021 WY 83, 491 P.3d 1021.* <https://www.courtlistener.com/opinion/9998787/jennifer-brown-fka-jennifer-stringer-nora-youngren-and-carol-wolfe-v/#:~:text=Continued%20employment%20is%20not%20sufficient,to%20support%20a%20non%2Dcompete%20agreement.>
 

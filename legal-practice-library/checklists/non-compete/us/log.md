@@ -1,5 +1,8 @@
 # Us Update Log
 
+## 2026-06-20
+* **Update**: feat(audit): firm-only sourcing linter + re-anchor non-compete statutory claims (refs #853) (#948) ([921b26f](https://github.com/UseJunior/legal-explainer/commit/921b26fe7b594f9d243a1a359e8e51ea6ffa9e55))
+
 ## 2026-06-16
 * **Update**: feat(ia): checklists as a top-level product line — country-first /checklists (closes #803) (#804) ([2602c18](https://github.com/UseJunior/legal-explainer/commit/2602c18434aef56cbc170c8061d60c29c0c41954))
 
