@@ -1,5 +1,8 @@
 # Ai Vendors Update Log
 
+## 2026-06-20
+* **Update**: fix(content): firm-only sourcing triage — AI vendor/data/token topics (cluster 5/5, refs #950) (#956) ([7798b65](https://github.com/UseJunior/legal-explainer/commit/7798b654ff070ede8059488aa66993ab6ab27584))
+
 ## 2026-06-18
 * **Update**: fix(content): close citation/coverage gaps in AI-employment topic notes [#838] (#851) ([40a7367](https://github.com/UseJunior/legal-explainer/commit/40a7367cd8aacfc5c9f9dcef32876f49217dee86))
 * **Update**: fix(content): #852 Section A — correct wrong-source citations (PR2) (#885) ([833bd1b](https://github.com/UseJunior/legal-explainer/commit/833bd1bc7919f048c6c81b032f73f20b76875f70))
