@@ -1,5 +1,8 @@
 # Ai Policies Update Log
 
+## 2026-06-20
+* **Update**: fix(content): firm-only sourcing triage — AI-policy/AUP/monitoring topics (cluster 3/5, refs #950) (#958) ([f09e1e9](https://github.com/UseJunior/legal-explainer/commit/f09e1e91ea3a57ca524a01327a4f7cae65357f46))
+
 ## 2026-06-18
 * **Update**: fix(content): close citation/coverage gaps in AI-employment topic notes [#838] (#851) ([40a7367](https://github.com/UseJunior/legal-explainer/commit/40a7367cd8aacfc5c9f9dcef32876f49217dee86))
 
