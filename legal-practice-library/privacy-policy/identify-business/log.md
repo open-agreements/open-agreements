@@ -1,5 +1,8 @@
 # Identify Business Update Log
 
+## 2026-06-22
+* **Update**: feat(privacy-detector): raw-source offsets for RegexEvidence via eyecite SpanUpdater (#954) (#980) ([9bd83d5](https://github.com/UseJunior/legal-explainer/commit/9bd83d5027fd85d3abd11cbd25d28adc30570877))
+
 ## 2026-06-20
 * **Update**: feat(privacy/#944): corpus precision-gate + tuned passive-ordering branch for disclose-rights-catalog (#947) ([7ca7449](https://github.com/UseJunior/legal-explainer/commit/7ca7449395a51152482d8f8d43779070a61c32d9))
 
