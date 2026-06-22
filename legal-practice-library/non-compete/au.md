@@ -115,7 +115,7 @@ Use this national page for the common structure, then go to the local note for t
 - 
 - 
 
-For cross-border context, see the [worldwide comparison](/practice-guides/non-compete/international#country-au).
+For cross-border context, see the [worldwide comparison](/practice-guides/non-compete/worldwide#country-au).
 
 > [!NOTE]
 > **Practice note.**
