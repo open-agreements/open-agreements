@@ -61,4 +61,14 @@ describe('evaluatePostconditions', () => {
     });
     expect(checks[0].passed).toBe(false);
   });
+
+  it('no_double_dollar flags whitespace-separated $ $ (locks the \\s* span)', () => {
+    const checks = evaluatePostconditions({
+      outputText: 'price of $ $1,000,000',
+      manifests: [manifest(['no_double_dollar'])],
+      fieldValues: {},
+      migratedAnchorsByField: {},
+    });
+    expect(checks[0].passed).toBe(false);
+  });
 });
