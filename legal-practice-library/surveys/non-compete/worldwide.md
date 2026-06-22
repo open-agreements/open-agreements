@@ -1,15 +1,15 @@
 ---
 type: Law Survey
-title: International Non-Compete Survey
+title: Worldwide Non-Compete Survey
 description: Worldwide comparison matrix for non-compete.
-resource: 'https://openagreements.org/surveys/non-compete/international'
+resource: 'https://openagreements.org/surveys/non-compete/worldwide'
 tags:
   - non-compete
   - survey
   - international
 ---
 
-# International Non-Compete Survey
+# Worldwide Non-Compete Survey
 
 # Schema
 
