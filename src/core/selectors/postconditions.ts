@@ -22,7 +22,7 @@ export interface PostconditionInput {
   migratedAnchorsByField: Record<string, string[]>;
 }
 
-const DOUBLE_DOLLAR = /\$[\s \t]*\$/;
+const DOUBLE_DOLLAR = /\$\s*\$/;
 
 export function evaluatePostconditions(input: PostconditionInput): VerifyCheck[] {
   const { outputText, manifests, fieldValues, migratedAnchorsByField } = input;

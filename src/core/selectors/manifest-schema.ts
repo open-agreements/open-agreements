@@ -57,9 +57,6 @@ const FingerprintStep = z
   })
   .strict();
 
-/** Any locator step. `section` is only meaningful in `scope` (enforced below + by the resolver). */
-const LocatorStepSchema = z.discriminatedUnion('kind', [SectionStep, RegexStep, ContextualStep, FingerprintStep]);
-
 /** A span-producing step: valid as `primary` or as an `assertion` (never `section`). */
 const SpanStepSchema = z.discriminatedUnion('kind', [RegexStep, ContextualStep, FingerprintStep]);
 
