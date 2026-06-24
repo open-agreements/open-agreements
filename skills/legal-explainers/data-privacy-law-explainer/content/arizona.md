@@ -2,7 +2,7 @@
 jurisdiction: "Arizona"
 slug: arizona
 countryCode: US
-snapshotAsOf: "2026-06-22"
+snapshotAsOf: "2026-06-24"
 lastReviewed: "2026-06-11"
 canonicalUrl: https://openagreements.org/practice-guides/privacy/us/arizona
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/arizona · **Snapshot as of:** 2026-06-22 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/arizona · **Snapshot as of:** 2026-06-24 · License: CC BY 4.0 · © openagreements.org
 
 # Arizona Consumer Privacy Law[^about]
 
