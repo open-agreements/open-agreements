@@ -1,5 +1,8 @@
 # Non Compete Update Log
 
+## 2026-06-24
+* **Update**: feat(json-twins): Phase 2 — Model B fields↔requirements + boilerplate→standard-provision (#1000) (#1005) ([c7a207f](https://github.com/UseJunior/legal-explainer/commit/c7a207f8b112098ff764b65e96103b7e015ea028))
+
 ## 2026-06-18
 * **Update**: feat(checklist): expand general non-compete court-narrowing variations to 10 states (#768) (#789) ([47e3135](https://github.com/UseJunior/legal-explainer/commit/47e313592083bb514236de1367e336ee6743e232))
 
