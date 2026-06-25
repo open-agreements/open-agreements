@@ -20,7 +20,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-personal-data-cate
 
 ### 3M {#3m}
 
-> we may collect Personal Data such as: Contact Information
+> When you interact with us, we may collect Personal Data such as: Contact Information, including your name, company name, job title, address, e-mail address, and phone number.
 
 - conformance: conforming
 - source: [3M](https://www.3m.com/3M/en_US/company-us/privacy-policy/)
@@ -30,7 +30,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-personal-data-cate
 
 ### A-Mark Precious Metals {#a-mark-precious-metals}
 
-> types of Personal Data: Personal and contact information, such as name
+> When you open an account with us, create a profile, purchase or sell a product through our Services, engage with our Services, request marketing or advertising information, fill out forms or applications, and other interactions, you may provide us with the following types of Personal Data: Personal and contact information, such as name, date of birth, email address, physical address, mobile or landline telephone number, age, and gender.
 
 - conformance: conforming
 - source: [A-Mark Precious Metals](https://amark.com/privacy)
@@ -40,7 +40,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-personal-data-cate
 
 ### ABM Industries {#abm-industries}
 
-> We collect basic personal details like your name
+> We collect basic personal details like your name and email address, and other business-related personal information.
 
 - conformance: conforming
 - source: [ABM Industries](https://abm.com/privacy-policy)
@@ -48,19 +48,9 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-personal-data-cate
 - captured: 2026-06-25T11:52:44.981Z
 - link_to_source: <https://abm.com/privacy-policy>
 
-### AECOM {#aecom}
-
-> information we collect ### Company Public Websites or User Survey When expressing interest in AECOM’s products or services, completing a survey, or using our “Contact Us” or similar features, you may have the option to provide contact information such as your name
-
-- conformance: conforming
-- source: [AECOM](https://aecom.com/en-ca/privacy-policy/)
-- detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
-- link_to_source: <https://aecom.com/en-ca/privacy-policy/>
-
 ### AES {#aes}
 
-> Data We collect the following categories of Personal Data to the extent applicable to your relationship with AES: Basic Data: Name
+> We collect the following categories of Personal Data to the extent applicable to your relationship with AES: Basic Data: Name, title, company, job responsibilities, phone number, mailing address, email address, contact details, and information related to payments that you make to AES or AES makes to you.
 
 - conformance: conforming
 - source: [AES](https://aes.com/privacy-policy)
@@ -70,7 +60,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-personal-data-cate
 
 ### AGCO {#agco}
 
-> Categories of Personal Information Processed by or on behalf of AGCO Purposes for which AGCO may Process your Personal Information Legal Grounds for Processing Personal Information Personal Details: Name
+> Personal Details: Name; salutation; gender; photograph; video; date of birth; profession; business or employer; sector; vehicle registration number.
 
 - conformance: conforming
 - source: [AGCO](https://www.agcocorp.com/int/en/home/privacy-center/privacy-statement/privacy-statement-en.html)
@@ -80,7 +70,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-personal-data-cate
 
 ### APA {#apa}
 
-> types of personal information in connection with the Site, including: contact and identification information, such as name
+> APA collects and maintains different types of personal information in connection with the Site, including: contact and identification information, such as name, address, telephone number and email address; business relationship information, including information related to agreements, feedback and information requested or provided by or from you; information related to your employment or application for employment, including your work and educational history; information related to our media, investor and public relations activities; information related to leases of mineral or surface rights; and information related to exploration, development and production activities, permits and licenses, emergency planning and environmental stewardship.
 
 - conformance: conforming
 - source: [APA](https://apacorp.com/privacy-policy/)
@@ -90,7 +80,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-personal-data-cate
 
 ### AT&T {#at-t}
 
-> we automatically collect a variety of information, which may include time spent on websites or apps, website and ip address
+> We automatically collect a variety of information, which may include time spent on websites or apps, website and IP addresses, advertising IDs, links viewed and ads seen, videos watched, search terms entered, and items placed in online AT&T shopping carts.
 
 - conformance: conforming
 - source: [AT&T](https://about.att.com/ecms/dam/csr/privacy-redesign/ATT_Privacy_Policy-220606.pdf)
@@ -100,7 +90,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-personal-data-cate
 
 ### AbbVie {#abbvie}
 
-> categories of Personal Information: Direct identifiers, including name
+> This could include the following categories of Personal Information: Direct identifiers, including name and contact Information such as your address, phone number, or email address; Registration information, such as your username and password; Health-related information, insurance and demographic information in the context of a patient support program, survey or questionnaire; Income and demographic information when you request financial assistance for one of our products; Remuneration information when you provide a service to AbbVie in your capacity as a health care professional; Employment, education and other background information when you inquire about employment with AbbVie; and Professional, clinical practice and educational background when you participate in an AbbVie sponsored program, research or survey in your capacity as a health care professional.
 
 - conformance: conforming
 - source: [AbbVie](https://privacy.abbvie/privacy-policies/us-privacy-policy.html)
@@ -110,7 +100,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-personal-data-cate
 
 ### Abbott Laboratories {#abbott-laboratories}
 
-> types of Personal Information: Categories of Personal Information we may collect, use, or disclose Purposes for collection, use, and disclosure Applicable Individuals Categories of recipients to whom Personal Information may be disclosed Identifiers
+> Abbott may collect, use, and disclose the following types of Personal Information: Categories of Personal Information we may collect, use, or disclose Purposes for collection, use, and disclosure Applicable Individuals Categories of recipients to whom Personal Information may be disclosed Identifiers , including name, email address, mailing address, online identifier, IP address, phone number, or other similar identifiers.
 
 - conformance: conforming
 - source: [Abbott Laboratories](https://abbott.com/privacy-policy)
@@ -120,7 +110,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-personal-data-cate
 
 ### Advanced Micro Devices {#advanced-micro-devices}
 
-> We collect Personal Information when you interact with us online, including: Personal identifiers
+> Online submissions: We collect Personal Information when you interact with us online, including: Personal identifiers and professional and employment information .
 
 - conformance: conforming
 - source: [Advanced Micro Devices](https://www.amd.com/en/legal/privacy.html)
@@ -130,7 +120,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-personal-data-cate
 
 ### Aflac {#aflac}
 
-> We collect the following information when you use these Services: (a) Registration, Enrollment, and Account Information
+> We collect the following information when you use these Services: (a) Registration, Enrollment, and Account Information: When you create an account for the Services, you voluntarily give us personal information.
 
 - conformance: conforming
 - source: [Aflac](https://aflac.com/privacy-policy)
@@ -138,9 +128,19 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-personal-data-cate
 - captured: 2026-06-25T11:52:44.981Z
 - link_to_source: <https://aflac.com/privacy-policy>
 
+### Alaska Air {#alaska-air}
+
+> We collect the following types of personal data: Contact information such as name, username, and other contact details such as postal address, telephone number, and email address.
+
+- conformance: conforming
+- source: [Alaska Air](https://www.alaskaair.com/content/legal/privacy-policy)
+- detected_by: A→B→C within gap
+- captured: 2026-06-25T11:52:44.981Z
+- link_to_source: <https://www.alaskaair.com/content/legal/privacy-policy>
+
 ### Ace Hardware {#ace-hardware}
 
-> Categories of Personal Information Collected and Disclosed Generally, we may collect the following
+> Generally, we may collect the following categories of personal information (as set forth in the CCPA) about California residents.
 
 - conformance: partial
 - source: [Ace Hardware](https://www.acehardware.com/privacy/california)
@@ -150,7 +150,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-personal-data-cate
 
 ### Adobe {#adobe}
 
-> information we collect or combine information
+> To help keep our databases current and to provide you the most relevant content and experiences, we may infer or generate information based on the information we collect or combine information provided by you with information from third party sources, in accordance with applicable law.
 
 - conformance: partial
 - source: [Adobe](https://www.adobe.com/privacy/policy.html)
@@ -160,7 +160,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-personal-data-cate
 
 ### Ally Financial {#ally-financial}
 
-> information we collect from and about you during your
+> Our Online Privacy Notice (the “Notice”) describes the information we collect from and about you during your visit to our online interfaces (websites and mobile applications) owned or controlled by us (the “Site”).
 
 - conformance: partial
 - source: [Ally Financial](https://ally.com/privacy)
@@ -170,7 +170,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-personal-data-cate
 
 ### Enterprise Products Partners {#enterprise-products-partners}
 
-> we collect
+> Changes in Privacy Policy All "personal information" ("personal information" is defined as any information that identifies, contacts or locates, or can be used to identify, contact, or locate, the person to whom such information pertains) that we collect and maintain will be subject to the version of the Privacy Policy in effect at the time of such collection.
 
 - conformance: non-conforming
 - source: [Enterprise Products Partners](https://enterpriseproducts.com/privacy-policy)
@@ -180,7 +180,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-personal-data-cate
 
 ### Fastenal {#fastenal}
 
-> information we collect
+> The information we collect through our website will help Fastenal effectively enhance this Site, expand product growth and better serve our customers, which will result in continued customer satisfaction.
 
 - conformance: non-conforming
 - source: [Fastenal](https://fastenalmx.crafter4.fastenal.com/en/legal-information)
@@ -190,7 +190,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-personal-data-cate
 
 ### Targa Resources {#targa-resources}
 
-> types of Personal Information
+> Targa collects different types of Personal Information of those Individuals who seek to be, are, or were employed, in a working relationship, or otherwise similarly engaged by Targa.
 
 - conformance: non-conforming
 - source: [Targa Resources](https://www.targaresources.com/static-files/e1f1164e-43f4-49c1-8886-f6359d5279aa)

@@ -18,19 +18,9 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-sale-and-targeted-
 
 ## Example phrasings
 
-### 3M {#3m}
-
-> right to opt out of “sharing,” as defined under the CCPA); The processing of your Personal Data
-
-- conformance: conforming
-- source: [3M](https://www.3m.com/3M/en_US/company-us/privacy-policy/)
-- detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
-- link_to_source: <https://www.3m.com/3M/en_US/company-us/privacy-policy/>
-
 ### A-Mark Precious Metals {#a-mark-precious-metals}
 
-> opt-out of the selling or sharing of your Personal Data
+> If your browser supports it, you can turn on the Global Privacy Control (GPC) to opt-out of the selling or sharing of your Personal Data.
 
 - conformance: conforming
 - source: [A-Mark Precious Metals](https://amark.com/privacy)
@@ -38,19 +28,9 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-sale-and-targeted-
 - captured: 2026-06-25T11:52:44.981Z
 - link_to_source: <https://amark.com/privacy>
 
-### AES {#aes}
-
-> right to opt-out of targeted advertising and the sharing of personal information
-
-- conformance: conforming
-- source: [AES](https://aes.com/privacy-policy)
-- detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
-- link_to_source: <https://aes.com/privacy-policy>
-
 ### AGCO {#agco}
 
-> Do Not Sell or Share My Personal Information
+> To stop such sales or the sharing of Personal Information, see Do Not Sell or Share My Personal Information.
 
 - conformance: conforming
 - source: [AGCO](https://www.agcocorp.com/int/en/home/privacy-center/privacy-statement/privacy-statement-en.html)
@@ -60,7 +40,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-sale-and-targeted-
 
 ### AT&T {#at-t}
 
-> do not attempt to re-identify individuals in aggregated reports.) How we share your information
+> (We do not attempt to re-identify individuals in aggregated reports.) How we share your information
 
 - conformance: conforming
 - source: [AT&T](https://about.att.com/ecms/dam/csr/privacy-redesign/ATT_Privacy_Policy-220606.pdf)
@@ -70,7 +50,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-sale-and-targeted-
 
 ### Abbott Laboratories {#abbott-laboratories}
 
-> right to opt-out of the “sale” of your Personal Information
+> You may have the right to opt-out of the “sale” of your Personal Information as that term is defined by applicable U.S. State Privacy Laws.
 
 - conformance: conforming
 - source: [Abbott Laboratories](https://abbott.com/privacy-policy)
@@ -80,7 +60,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-sale-and-targeted-
 
 ### Ace Hardware {#ace-hardware}
 
-> do not disclose personal information to third parties in exchange for monetary compensation, we may "sell" or "share" the following categories of personal information
+> While we do not disclose personal information to third parties in exchange for monetary compensation, we may "sell" or "share" the following categories of personal information: identifiers; commercial information; location data; and internet and network activity information.
 
 - conformance: conforming
 - source: [Ace Hardware](https://www.acehardware.com/privacy/california)
@@ -90,7 +70,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-sale-and-targeted-
 
 ### Advanced Micro Devices {#advanced-micro-devices}
 
-> right to opt-out of the processing of your Personal Information for the purpose of (i) the sale your Personal Information
+> Depending on where you reside, you may have the right to opt-out of the processing of your Personal Information for the purpose of (i) the sale your Personal Information by AMD to third parties for monetary or other valuable consideration, (ii) targeted advertising, cross-context behavioral advertising, or sharing , or (iii) certain profiling activities.
 
 - conformance: conforming
 - source: [Advanced Micro Devices](https://www.amd.com/en/legal/privacy.html)
@@ -100,7 +80,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-sale-and-targeted-
 
 ### Aflac {#aflac}
 
-> right to opt-out of the sale or share of your personal information
+> If you are a California resident, you have the right, subject to certain exceptions, to notice of the personal information we collect, the right to know such personal information, the right to correct inaccurate personal information, the right to delete some or all of the personal information we collect, the right to opt-out of the sale or share of your personal information, and the right to limit the use and disclosure of sensitive personal information,.
 
 - conformance: conforming
 - source: [Aflac](https://aflac.com/privacy-policy)
@@ -110,7 +90,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-sale-and-targeted-
 
 ### Air Products & Chemicals {#air-products-chemicals}
 
-> opt out of the sharing of your personal information
+> You can opt out of the sharing of your personal information collected via cookies with third parties by adjusting your cookie preferences on our websites or on your browser.
 
 - conformance: conforming
 - source: [Air Products & Chemicals](https://airproducts.com/privacy-notice)
@@ -118,19 +98,9 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-sale-and-targeted-
 - captured: 2026-06-25T11:52:44.981Z
 - link_to_source: <https://airproducts.com/privacy-notice>
 
-### Albertsons {#albertsons}
-
-> Right to Opt-Out of the Sale and Sharing of Personal Data
-
-- conformance: conforming
-- source: [Albertsons](https://www.albertsonscompanies.com/policies-and-disclosures/privacy-policy/default.aspx)
-- detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
-- link_to_source: <https://www.albertsonscompanies.com/policies-and-disclosures/privacy-policy/default.aspx>
-
 ### Allstate {#allstate}
 
-> right to opt-out of sharing of personal information
+> Various federal and state laws provide privacy rights to consumers including the right to know, access, delete, or correct personal information, the right to opt-out of sharing of personal information with affiliates for marketing or the right to opt-out of receiving email marketing.
 
 - conformance: conforming
 - source: [Allstate](https://roadsidemobile.allstate.com/tac/privacystatement)
@@ -138,9 +108,39 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-sale-and-targeted-
 - captured: 2026-06-25T11:52:44.981Z
 - link_to_source: <https://roadsidemobile.allstate.com/tac/privacystatement>
 
+### Altice USA {#altice-usa}
+
+> Right to Opt out of the Sale and/or Sharing of CA Personal Information We do not “Sell” or “Share” Customers’ or Website Users’ CA Personal Information.
+
+- conformance: conforming
+- source: [Altice USA](https://optimum.com/privacy)
+- detected_by: A→B→C within gap
+- captured: 2026-06-25T11:52:44.981Z
+- link_to_source: <https://optimum.com/privacy>
+
+### Altria {#altria}
+
+> We also do not disclose your personal information for purposes of targeted advertising (also sometimes referred to as “sharing” for cross-context behavioral advertising.)
+
+- conformance: conforming
+- source: [Altria](https://www.altria.com/privacy)
+- detected_by: A→B→C within gap
+- captured: 2026-06-25T11:52:44.981Z
+- link_to_source: <https://www.altria.com/privacy>
+
+### American Airlines Group {#american-airlines-group}
+
+> Also, as described in the section titled “Opting out of marketing communications and sharing your information with third parties”, you can opt out of having your information shared with third parties for those parties' direct marketing purposes by emailing us at privacy@aa.com.
+
+- conformance: conforming
+- source: [American Airlines Group](https://www.aa.com/i18n/customer-service/support/privacy-policy.jsp)
+- detected_by: A→B→C within gap
+- captured: 2026-06-25T11:52:44.981Z
+- link_to_source: <https://www.aa.com/i18n/customer-service/support/privacy-policy.jsp>
+
 ### AECOM {#aecom}
 
-> opt-out of tracking by Hotjar here: https://www.hotjar.com/terms and can learn about Hotjar’s ability to use and share
+> Hotjar: You can opt-out of tracking by Hotjar here: https://www.hotjar.com/terms and can learn about Hotjar’s ability to use and share information through the Hotjar Terms & Conditions of Use, available at https://www.hotjar.com/terms
 
 - conformance: partial
 - source: [AECOM](https://aecom.com/en-ca/privacy-policy/)
@@ -150,7 +150,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-sale-and-targeted-
 
 ### Adobe {#adobe}
 
-> Do not share
+> Do not share anything you wouldn’t want publicly known unless you are sure you are posting it within an app or website that allows you to control who sees what you post.
 
 - conformance: partial
 - source: [Adobe](https://www.adobe.com/privacy/policy.html)
@@ -160,7 +160,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-sale-and-targeted-
 
 ### Airbnb {#airbnb}
 
-> opt-out of this sharing
+> In some cases, you may opt-out of this sharing in your account settings.
 
 - conformance: partial
 - source: [Airbnb](https://assets.airbnb.com/help/Privacy_Policy_-_English_June_2024.pdf?disposition=inline)
@@ -170,7 +170,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-sale-and-targeted-
 
 ### APA {#apa}
 
-> opt-out
+> Your consent may be implied, deemed (using an opt-out mechanism) or express.
 
 - conformance: non-conforming
 - source: [APA](https://apacorp.com/privacy-policy/)
@@ -178,22 +178,22 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-sale-and-targeted-
 - captured: 2026-06-25T11:52:44.981Z
 - link_to_source: <https://apacorp.com/privacy-policy/>
 
-### Alcoa {#alcoa}
-
-> opt out
-
-- conformance: non-conforming
-- source: [Alcoa](https://www.alcoa.com/global/en/general/privacy)
-- detected_by: A only; no action
-- captured: 2026-06-25T11:52:44.981Z
-- link_to_source: <https://www.alcoa.com/global/en/general/privacy>
-
 ### Fifth Third Bancorp {#fifth-third-bancorp}
 
-> do not
+> We do not control these third-party websites and we are not responsible for their data collection and use.
 
 - conformance: non-conforming
 - source: [Fifth Third Bancorp](https://www.53.com/content/fifth-third/en/privacy-security/online-privacy-policy.html)
 - detected_by: A only; no action
 - captured: 2026-06-25T11:52:44.981Z
 - link_to_source: <https://www.53.com/content/fifth-third/en/privacy-security/online-privacy-policy.html>
+
+### Intercontinental Exchange {#intercontinental-exchange}
+
+> California residents have the right to opt-out of certain transfers of your information that involve monetary or other consideration.
+
+- conformance: non-conforming
+- source: [Intercontinental Exchange](https://www.ice.com/privacy-security-center)
+- detected_by: A only; no action
+- captured: 2026-06-25T11:52:44.981Z
+- link_to_source: <https://www.ice.com/privacy-security-center>
