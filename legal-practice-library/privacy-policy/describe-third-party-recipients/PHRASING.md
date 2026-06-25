@@ -25,7 +25,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.describe-third-party-recipi
 - conformance: conforming
 - source: [ABM Industries](https://abm.com/privacy-policy)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://abm.com/privacy-policy>
 
 ### AECOM {#aecom}
@@ -35,7 +35,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.describe-third-party-recipi
 - conformance: conforming
 - source: [AECOM](https://aecom.com/en-ca/privacy-policy/)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://aecom.com/en-ca/privacy-policy/>
 
 ### AES {#aes}
@@ -45,7 +45,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.describe-third-party-recipi
 - conformance: conforming
 - source: [AES](https://aes.com/privacy-policy)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://aes.com/privacy-policy>
 
 ### AGCO {#agco}
@@ -55,7 +55,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.describe-third-party-recipi
 - conformance: conforming
 - source: [AGCO](https://www.agcocorp.com/int/en/home/privacy-center/privacy-statement/privacy-statement-en.html)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://www.agcocorp.com/int/en/home/privacy-center/privacy-statement/privacy-statement-en.html>
 
 ### APA {#apa}
@@ -65,7 +65,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.describe-third-party-recipi
 - conformance: conforming
 - source: [APA](https://apacorp.com/privacy-policy/)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://apacorp.com/privacy-policy/>
 
 ### AT&T {#at-t}
@@ -75,7 +75,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.describe-third-party-recipi
 - conformance: conforming
 - source: [AT&T](https://about.att.com/ecms/dam/csr/privacy-redesign/ATT_Privacy_Policy-220606.pdf)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://about.att.com/ecms/dam/csr/privacy-redesign/ATT_Privacy_Policy-220606.pdf>
 
 ### AbbVie {#abbvie}
@@ -85,7 +85,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.describe-third-party-recipi
 - conformance: conforming
 - source: [AbbVie](https://privacy.abbvie/privacy-policies/us-privacy-policy.html)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://privacy.abbvie/privacy-policies/us-privacy-policy.html>
 
 ### Abbott Laboratories {#abbott-laboratories}
@@ -95,7 +95,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.describe-third-party-recipi
 - conformance: conforming
 - source: [Abbott Laboratories](https://abbott.com/privacy-policy)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://abbott.com/privacy-policy>
 
 ### Ace Hardware {#ace-hardware}
@@ -105,7 +105,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.describe-third-party-recipi
 - conformance: conforming
 - source: [Ace Hardware](https://www.acehardware.com/privacy/california)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://www.acehardware.com/privacy/california>
 
 ### Adobe {#adobe}
@@ -115,7 +115,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.describe-third-party-recipi
 - conformance: conforming
 - source: [Adobe](https://www.adobe.com/privacy/policy.html)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://www.adobe.com/privacy/policy.html>
 
 ### Aflac {#aflac}
@@ -125,7 +125,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.describe-third-party-recipi
 - conformance: conforming
 - source: [Aflac](https://aflac.com/privacy-policy)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://aflac.com/privacy-policy>
 
 ### Air Products & Chemicals {#air-products-chemicals}
@@ -135,8 +135,28 @@ Phrasing library for [REQ-privacy-law.privacy-policy.describe-third-party-recipi
 - conformance: conforming
 - source: [Air Products & Chemicals](https://airproducts.com/privacy-notice)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://airproducts.com/privacy-notice>
+
+### Advance Auto Parts {#advance-auto-parts}
+
+> If you would like to provide additional information to facilitate your opt-out request, you may also visit here.
+
+- conformance: partial
+- source: [Advance Auto Parts](https://shop.advanceautoparts.com/about-us/privacy-policy)
+- detected_by: A→B matched; C (target) missing
+- captured: 2026-06-25T17:31:28.012Z
+- link_to_source: <https://shop.advanceautoparts.com/about-us/privacy-policy>
+
+### CMS Energy {#cms-energy}
+
+> Who does CMS Energy share my information with?
+
+- conformance: partial
+- source: [CMS Energy](https://www.cmsenergy.com/privacy-statement/default.aspx)
+- detected_by: A→B matched; C (target) missing
+- captured: 2026-06-25T17:31:28.012Z
+- link_to_source: <https://www.cmsenergy.com/privacy-statement/default.aspx>
 
 ### Charles Schwab {#charles-schwab}
 
@@ -145,25 +165,25 @@ Phrasing library for [REQ-privacy-law.privacy-policy.describe-third-party-recipi
 - conformance: partial
 - source: [Charles Schwab](https://www.schwab.com/legal/schwab-bank-privacy-security)
 - detected_by: A→B matched; C (target) missing
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://www.schwab.com/legal/schwab-bank-privacy-security>
 
-### Erie Insurance {#erie-insurance}
+### Delek US {#delek-us}
 
-> McCalmon may license use of the Site to a third-party organization (“Sponsor”) who may customize the Site and make it available to their clients, customers, and others related to their organization.
+> We will collect and use information through our web site only in the ways disclosed in this statement.
 
-- conformance: partial
-- source: [Erie Insurance](https://epl.erieinsurance.com/privacy.cfm)
-- detected_by: A→B matched; C (target) missing
-- captured: 2026-06-25T11:52:44.981Z
-- link_to_source: <https://epl.erieinsurance.com/privacy.cfm>
+- conformance: non-conforming
+- source: [Delek US](https://www.delekus.com/privacy-policy/default.aspx)
+- detected_by: A only; no action
+- captured: 2026-06-25T17:31:28.012Z
+- link_to_source: <https://www.delekus.com/privacy-policy/default.aspx>
 
-### Jacobs Solutions {#jacobs-solutions}
+### Loews {#loews}
 
-> In addition to the purposes stipulated in this Privacy Statement, we may use your Personal Data for further purposes under the conditions provided in local laws to the extent this is explicitly allowed by law or such an obligation is imposed on Jacobs by law.
+> Information contained in subsidiary websites linked to this website has been provided by the respective subsidiaries.
 
-- conformance: partial
-- source: [Jacobs Solutions](https://www.jacobs.com/policies/privacy-policy)
-- detected_by: A→B matched; C (target) missing
-- captured: 2026-06-25T11:52:44.981Z
-- link_to_source: <https://www.jacobs.com/policies/privacy-policy>
+- conformance: non-conforming
+- source: [Loews](https://www.loews.com/privacy-policy/default.aspx)
+- detected_by: A only; no action
+- captured: 2026-06-25T17:31:28.012Z
+- link_to_source: <https://www.loews.com/privacy-policy/default.aspx>

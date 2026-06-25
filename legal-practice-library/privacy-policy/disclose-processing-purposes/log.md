@@ -5,6 +5,7 @@
 * **Update**: feat(privacy-detector): rescue the render-failure tail — corpus markdown coverage 367→388 (#1034) ([c3a0cf9](https://github.com/UseJunior/legal-explainer/commit/c3a0cf968b053ec7cd91d05ecc8ba53a0e0c843c))
 * **Update**: feat(privacy-detector): markdown corpus re-ingest via Safari render + tag-strip extraction (#1031) ([ce74c38](https://github.com/UseJunior/legal-explainer/commit/ce74c3858727526c25762842d254ec6c2acf00fd))
 * **Update**: feat(privacy-detector): full-sentence phrasing-library exemplars (closes #1039) (#1042) ([d196dd7](https://github.com/UseJunior/legal-explainer/commit/d196dd72491c5fe260d973fda3450bc3da88fab7))
+* **Update**: feat(privacy-corpus): complete the Fortune 500 — 431 → 491 policies (+60) (#1048) ([e5cf57e](https://github.com/UseJunior/legal-explainer/commit/e5cf57eb3defd892074ca767797e4d1fe89df887))
 
 ## 2026-06-22
 * **Update**: feat(privacy-detector): raw-source offsets for RegexEvidence via eyecite SpanUpdater (#954) (#980) ([9bd83d5](https://github.com/UseJunior/legal-explainer/commit/9bd83d5027fd85d3abd11cbd25d28adc30570877))
