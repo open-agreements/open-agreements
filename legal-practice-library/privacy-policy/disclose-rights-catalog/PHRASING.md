@@ -26,7 +26,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: conforming
 - source: [3M](https://www.3m.com/3M/en_US/company-us/privacy-policy/)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://www.3m.com/3M/en_US/company-us/privacy-policy/>
 
 ### A-Mark Precious Metals {#a-mark-precious-metals}
@@ -36,7 +36,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: conforming
 - source: [A-Mark Precious Metals](https://amark.com/privacy)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://amark.com/privacy>
 
 ### AECOM {#aecom}
@@ -46,7 +46,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: conforming
 - source: [AECOM](https://aecom.com/en-ca/privacy-policy/)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://aecom.com/en-ca/privacy-policy/>
 
 ### AGCO {#agco}
@@ -56,7 +56,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: conforming
 - source: [AGCO](https://www.agcocorp.com/int/en/home/privacy-center/privacy-statement/privacy-statement-en.html)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://www.agcocorp.com/int/en/home/privacy-center/privacy-statement/privacy-statement-en.html>
 
 ### APA {#apa}
@@ -66,7 +66,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: conforming
 - source: [APA](https://apacorp.com/privacy-policy/)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://apacorp.com/privacy-policy/>
 
 ### AbbVie {#abbvie}
@@ -76,7 +76,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: conforming
 - source: [AbbVie](https://privacy.abbvie/privacy-policies/us-privacy-policy.html)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://privacy.abbvie/privacy-policies/us-privacy-policy.html>
 
 ### Abbott Laboratories {#abbott-laboratories}
@@ -86,7 +86,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: conforming
 - source: [Abbott Laboratories](https://abbott.com/privacy-policy)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://abbott.com/privacy-policy>
 
 ### Ace Hardware {#ace-hardware}
@@ -96,7 +96,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: conforming
 - source: [Ace Hardware](https://www.acehardware.com/privacy/california)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://www.acehardware.com/privacy/california>
 
 ### Adobe {#adobe}
@@ -106,7 +106,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: conforming
 - source: [Adobe](https://www.adobe.com/privacy/policy.html)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://www.adobe.com/privacy/policy.html>
 
 ### Advanced Micro Devices {#advanced-micro-devices}
@@ -116,7 +116,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: conforming
 - source: [Advanced Micro Devices](https://www.amd.com/en/legal/privacy.html)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://www.amd.com/en/legal/privacy.html>
 
 ### Aflac {#aflac}
@@ -126,7 +126,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: conforming
 - source: [Aflac](https://aflac.com/privacy-policy)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://aflac.com/privacy-policy>
 
 ### Air Products & Chemicals {#air-products-chemicals}
@@ -136,7 +136,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: conforming
 - source: [Air Products & Chemicals](https://airproducts.com/privacy-notice)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://airproducts.com/privacy-notice>
 
 ### Alcoa {#alcoa}
@@ -146,7 +146,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: partial
 - source: [Alcoa](https://www.alcoa.com/global/en/general/privacy)
 - detected_by: A→B matched; C (target) missing
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://www.alcoa.com/global/en/general/privacy>
 
 ### Archer Daniels Midland {#archer-daniels-midland}
@@ -156,7 +156,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: partial
 - source: [Archer Daniels Midland](https://www.adm.com/en-us/legal/privacy/privacy-na/)
 - detected_by: A→B matched; C (target) missing
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://www.adm.com/en-us/legal/privacy/privacy-na/>
 
 ### Boston Scientific {#boston-scientific}
@@ -166,7 +166,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: partial
 - source: [Boston Scientific](https://bostonscientific.com/privacy)
 - detected_by: A→B matched; C (target) missing
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://bostonscientific.com/privacy>
 
 ### Andersons {#andersons}
@@ -176,7 +176,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: non-conforming
 - source: [Andersons](https://andersonsinc.com/privacy)
 - detected_by: A only; no action
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://andersonsinc.com/privacy>
 
 ### Capital One Financial {#capital-one-financial}
@@ -186,7 +186,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: non-conforming
 - source: [Capital One Financial](https://www.capitalone.com/privacy/online-privacy-policy/)
 - detected_by: A only; no action
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://www.capitalone.com/privacy/online-privacy-policy/>
 
 ### Deere {#deere}
@@ -196,5 +196,5 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: non-conforming
 - source: [Deere](https://www.deere.com/en/privacy-and-data/index.html)
 - detected_by: A only; no action
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://www.deere.com/en/privacy-and-data/index.html>

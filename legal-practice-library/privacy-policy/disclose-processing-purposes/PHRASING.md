@@ -25,7 +25,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-processing-purpose
 - conformance: conforming
 - source: [A-Mark Precious Metals](https://amark.com/privacy)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://amark.com/privacy>
 
 ### AECOM {#aecom}
@@ -35,7 +35,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-processing-purpose
 - conformance: conforming
 - source: [AECOM](https://aecom.com/en-ca/privacy-policy/)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://aecom.com/en-ca/privacy-policy/>
 
 ### AES {#aes}
@@ -45,7 +45,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-processing-purpose
 - conformance: conforming
 - source: [AES](https://aes.com/privacy-policy)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://aes.com/privacy-policy>
 
 ### AGCO {#agco}
@@ -55,7 +55,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-processing-purpose
 - conformance: conforming
 - source: [AGCO](https://www.agcocorp.com/int/en/home/privacy-center/privacy-statement/privacy-statement-en.html)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://www.agcocorp.com/int/en/home/privacy-center/privacy-statement/privacy-statement-en.html>
 
 ### APA {#apa}
@@ -65,7 +65,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-processing-purpose
 - conformance: conforming
 - source: [APA](https://apacorp.com/privacy-policy/)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://apacorp.com/privacy-policy/>
 
 ### Abbott Laboratories {#abbott-laboratories}
@@ -75,7 +75,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-processing-purpose
 - conformance: conforming
 - source: [Abbott Laboratories](https://abbott.com/privacy-policy)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://abbott.com/privacy-policy>
 
 ### Ace Hardware {#ace-hardware}
@@ -85,7 +85,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-processing-purpose
 - conformance: conforming
 - source: [Ace Hardware](https://www.acehardware.com/privacy/california)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://www.acehardware.com/privacy/california>
 
 ### Adobe {#adobe}
@@ -95,7 +95,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-processing-purpose
 - conformance: conforming
 - source: [Adobe](https://www.adobe.com/privacy/policy.html)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://www.adobe.com/privacy/policy.html>
 
 ### Advanced Micro Devices {#advanced-micro-devices}
@@ -105,7 +105,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-processing-purpose
 - conformance: conforming
 - source: [Advanced Micro Devices](https://www.amd.com/en/legal/privacy.html)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://www.amd.com/en/legal/privacy.html>
 
 ### Aflac {#aflac}
@@ -115,7 +115,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-processing-purpose
 - conformance: conforming
 - source: [Aflac](https://aflac.com/privacy-policy)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://aflac.com/privacy-policy>
 
 ### Air Products & Chemicals {#air-products-chemicals}
@@ -125,7 +125,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-processing-purpose
 - conformance: conforming
 - source: [Air Products & Chemicals](https://airproducts.com/privacy-notice)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://airproducts.com/privacy-notice>
 
 ### Airbnb {#airbnb}
@@ -135,7 +135,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-processing-purpose
 - conformance: conforming
 - source: [Airbnb](https://assets.airbnb.com/help/Privacy_Policy_-_English_June_2024.pdf?disposition=inline)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://assets.airbnb.com/help/Privacy_Policy_-_English_June_2024.pdf?disposition=inline>
 
 ### Crown Holdings {#crown-holdings}
@@ -145,8 +145,18 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-processing-purpose
 - conformance: partial
 - source: [Crown Holdings](https://www.crowncork.com/crown-brazil-privacy-policy)
 - detected_by: A→B matched; C (target) missing
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://www.crowncork.com/crown-brazil-privacy-policy>
+
+### Delek US {#delek-us}
+
+> We use the information you send to us by e-mail to respond to your inquiry or request, and otherwise in accordance with this Privacy Policy and the Terms of Use for this web site.
+
+- conformance: partial
+- source: [Delek US](https://www.delekus.com/privacy-policy/default.aspx)
+- detected_by: A→B matched; C (target) missing
+- captured: 2026-06-25T17:31:28.012Z
+- link_to_source: <https://www.delekus.com/privacy-policy/default.aspx>
 
 ### Dominion Energy {#dominion-energy}
 
@@ -155,18 +165,8 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-processing-purpose
 - conformance: partial
 - source: [Dominion Energy](http://www.dominionenergy.com/en/California-Consumer-Notice-of-Privacy-Rights)
 - detected_by: A→B matched; C (target) missing
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <http://www.dominionenergy.com/en/California-Consumer-Notice-of-Privacy-Rights>
-
-### Erie Insurance {#erie-insurance}
-
-> McCalmon shares personal data collected from you with Sponsors, subscribing organizations, agents, and contractors who may use the data in connection with their relationship with McCalmon, the Sponsor, or the workplace.
-
-- conformance: partial
-- source: [Erie Insurance](https://epl.erieinsurance.com/privacy.cfm)
-- detected_by: A→B matched; C (target) missing
-- captured: 2026-06-25T11:52:44.981Z
-- link_to_source: <https://epl.erieinsurance.com/privacy.cfm>
 
 ### American Tower {#american-tower}
 
@@ -175,7 +175,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-processing-purpose
 - conformance: non-conforming
 - source: [American Tower](https://www.americantower.com/us/privacy)
 - detected_by: A only; no action
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://www.americantower.com/us/privacy>
 
 ### Archer Daniels Midland {#archer-daniels-midland}
@@ -185,5 +185,5 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-processing-purpose
 - conformance: non-conforming
 - source: [Archer Daniels Midland](https://www.adm.com/en-us/legal/privacy/privacy-na/)
 - detected_by: A only; no action
-- captured: 2026-06-25T11:52:44.981Z
+- captured: 2026-06-25T17:31:28.012Z
 - link_to_source: <https://www.adm.com/en-us/legal/privacy/privacy-na/>
