@@ -1,5 +1,8 @@
 # Disclose Personal Data Categories Update Log
 
+## 2026-06-25
+* **Update**: feat(privacy-detector): markdown corpus re-ingest via Safari render + tag-strip extraction (#1031) ([ce74c38](https://github.com/UseJunior/legal-explainer/commit/ce74c3858727526c25762842d254ec6c2acf00fd))
+
 ## 2026-06-22
 * **Update**: feat(privacy-detector): raw-source offsets for RegexEvidence via eyecite SpanUpdater (#954) (#980) ([9bd83d5](https://github.com/UseJunior/legal-explainer/commit/9bd83d5027fd85d3abd11cbd25d28adc30570877))
 

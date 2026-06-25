@@ -25,27 +25,27 @@ Phrasing library for [REQ-privacy-law.privacy-policy.describe-third-party-recipi
 - conformance: conforming
 - source: [3M](https://www.3m.com/3M/en_US/company-us/privacy-policy/)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://www.3m.com/3M/en_US/company-us/privacy-policy/>
 
 ### A-Mark Precious Metals {#a-mark-precious-metals}
 
-> share your personal data (defined below), including when you visit the websites, mobile applications, or other online services we maintain, or otherwise interact with us directly (collectively, the "services").certain subsidiaries and affiliate
+> sell a product through our services, engage with our services, request marketing or advertis
 
 - conformance: conforming
 - source: [A-Mark Precious Metals](https://amark.com/privacy)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://amark.com/privacy>
 
 ### ABM Industries {#abm-industries}
 
-> discloseif you submit your personal information using one of our web forms, we may provide your information to our service provider
+> disclose if you submit your personal information using one of our web forms, we may provide your information to our service provider
 
 - conformance: conforming
 - source: [ABM Industries](https://abm.com/privacy-policy)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://abm.com/privacy-policy>
 
 ### AECOM {#aecom}
@@ -55,7 +55,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.describe-third-party-recipi
 - conformance: conforming
 - source: [AECOM](https://aecom.com/en-ca/privacy-policy/)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://aecom.com/en-ca/privacy-policy/>
 
 ### AES {#aes}
@@ -65,7 +65,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.describe-third-party-recipi
 - conformance: conforming
 - source: [AES](https://aes.com/privacy-policy)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://aes.com/privacy-policy>
 
 ### AGCO {#agco}
@@ -75,7 +75,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.describe-third-party-recipi
 - conformance: conforming
 - source: [AGCO](https://www.agcocorp.com/int/en/home/privacy-center/privacy-statement/privacy-statement-en.html)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://www.agcocorp.com/int/en/home/privacy-center/privacy-statement/privacy-statement-en.html>
 
 ### APA {#apa}
@@ -85,7 +85,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.describe-third-party-recipi
 - conformance: conforming
 - source: [APA](https://apacorp.com/privacy-policy/)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://apacorp.com/privacy-policy/>
 
 ### AT&T {#at-t}
@@ -95,7 +95,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.describe-third-party-recipi
 - conformance: conforming
 - source: [AT&T](https://about.att.com/ecms/dam/csr/privacy-redesign/ATT_Privacy_Policy-220606.pdf)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://about.att.com/ecms/dam/csr/privacy-redesign/ATT_Privacy_Policy-220606.pdf>
 
 ### AbbVie {#abbvie}
@@ -105,7 +105,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.describe-third-party-recipi
 - conformance: conforming
 - source: [AbbVie](https://privacy.abbvie/privacy-policies/us-privacy-policy.html)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://privacy.abbvie/privacy-policies/us-privacy-policy.html>
 
 ### Abbott Laboratories {#abbott-laboratories}
@@ -115,7 +115,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.describe-third-party-recipi
 - conformance: conforming
 - source: [Abbott Laboratories](https://abbott.com/privacy-policy)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://abbott.com/privacy-policy>
 
 ### Ace Hardware {#ace-hardware}
@@ -125,7 +125,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.describe-third-party-recipi
 - conformance: conforming
 - source: [Ace Hardware](https://www.acehardware.com/privacy/california)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://www.acehardware.com/privacy/california>
 
 ### Adobe {#adobe}
@@ -135,7 +135,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.describe-third-party-recipi
 - conformance: conforming
 - source: [Adobe](https://www.adobe.com/privacy/policy.html)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://www.adobe.com/privacy/policy.html>
 
 ### Charles Schwab {#charles-schwab}
@@ -145,7 +145,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.describe-third-party-recipi
 - conformance: partial
 - source: [Charles Schwab](https://www.schwab.com/legal/schwab-bank-privacy-security)
 - detected_by: A→B matched; C (target) missing
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://www.schwab.com/legal/schwab-bank-privacy-security>
 
 ### Erie Insurance {#erie-insurance}
@@ -155,7 +155,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.describe-third-party-recipi
 - conformance: partial
 - source: [Erie Insurance](https://epl.erieinsurance.com/privacy.cfm)
 - detected_by: A→B matched; C (target) missing
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://epl.erieinsurance.com/privacy.cfm>
 
 ### Jacobs Solutions {#jacobs-solutions}
@@ -165,5 +165,5 @@ Phrasing library for [REQ-privacy-law.privacy-policy.describe-third-party-recipi
 - conformance: partial
 - source: [Jacobs Solutions](https://www.jacobs.com/policies/privacy-policy)
 - detected_by: A→B matched; C (target) missing
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://www.jacobs.com/policies/privacy-policy>
