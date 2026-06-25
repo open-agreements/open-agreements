@@ -20,7 +20,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 
 ### 3M {#3m}
 
-> questions about our retention policies, please contact us at privacy\ office@mmm.com
+> If you have questions about our retention policies, please contact us at privacy\ office@mmm.com.
 
 - conformance: conforming
 - source: [3M](https://www.3m.com/3M/en_US/company-us/privacy-policy/)
@@ -30,7 +30,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 
 ### A-Mark Precious Metals {#a-mark-precious-metals}
 
-> contact us at privacy@gold.com
+> If you reside in a state that allows the submission of privacy rights requests by an authorized agent and you would like to authorize an agent to submit an access, deletion, or correction request on your behalf, please designate your authorized agent by filling out the form at the following link Online Consumer Request Form (please note, we use my.datasubject.com to collect your request online) or contact us at privacy@gold.com.
 
 - conformance: conforming
 - source: [A-Mark Precious Metals](https://amark.com/privacy)
@@ -40,7 +40,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 
 ### ABM Industries {#abm-industries}
 
-> contact us at cybersecurityoperations@abm.com
+> If you are a parent or guardian of a child under the age of 16 and believe he or she has disclosed personal information to us, please contact us at cybersecurityoperations@abm.com .
 
 - conformance: conforming
 - source: [ABM Industries](https://abm.com/privacy-policy)
@@ -50,7 +50,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 
 ### AECOM {#aecom}
 
-> questions regarding this Notice or general privacy-related questions or concerns related to your “Personal Data” should be addressed to the AECOM Privacy Office at: privacyquestions@aecom.com
+> Any questions regarding this Notice or general privacy-related questions or concerns related to your “Personal Data” should be addressed to the AECOM Privacy Office at: privacyquestions@aecom.com
 
 - conformance: conforming
 - source: [AECOM](https://aecom.com/en-ca/privacy-policy/)
@@ -60,7 +60,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 
 ### AES {#aes}
 
-> Contact Us If you have questions or comments regarding this Policy or our privacy practices, please contact us at: Privacy Office 4300 Wilson Blvd
+> If you have questions or comments regarding this Policy or our privacy practices, please contact us at: Privacy Office 4300 Wilson Blvd.
 
 - conformance: conforming
 - source: [AES](https://aes.com/privacy-policy)
@@ -70,7 +70,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 
 ### AGCO {#agco}
 
-> contact details if you have any questions about this privacy statement, our processing of your personal information, or your dealings with a site, an app or a device, please contact us at: agco corporation fao global compliance team 4205 river green parkway duluth, ga 30096 united st
+> Contact details If you have any questions about this Privacy Statement, our Processing of your Personal Information, or your dealings with a Site, an App or a Device, please contact us at: AGCO Corporation FAO Global Compliance Team 4205 River Green Parkway Duluth, GA 30096 United States
 
 - conformance: conforming
 - source: [AGCO](https://www.agcocorp.com/int/en/home/privacy-center/privacy-statement/privacy-statement-en.html)
@@ -80,7 +80,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 
 ### APA {#apa}
 
-> questions regarding this privacy policy, you may write to us at: APA Corporation Attn: Legal Department 2000 Post Oak Blvd
+> If you have any questions regarding this privacy policy, you may write to us at: APA Corporation Attn: Legal Department 2000 Post Oak Blvd., Suite 100
 
 - conformance: conforming
 - source: [APA](https://apacorp.com/privacy-policy/)
@@ -90,7 +90,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 
 ### AbbVie {#abbvie}
 
-> contact and other Personal Information to send you marketing information. Instructions on how you can opt-out from marketing communications are included in each marketing communication you receive. You can also email us atprivacyoffice@abbvie.com
+> Please contact us by clicking on the “Contact” link, by using the AbbVie contact information on the AbbVie mobile application, by emailing us atprivacyoffice@abbvie.comor by calling us toll-free at 1-800-255-5162.
 
 - conformance: conforming
 - source: [AbbVie](https://privacy.abbvie/privacy-policies/us-privacy-policy.html)
@@ -100,7 +100,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 
 ### Abbott Laboratories {#abbott-laboratories}
 
-> questions about your Personal Information, please contact us by clicking on the “Contact Us” link on the website you are visiting or by emailing us at privacy@abbott.com
+> If you have other questions about your Personal Information, please contact us by clicking on the “Contact Us” link on the website you are visiting or by emailing us at privacy@abbott.com.
 
 - conformance: conforming
 - source: [Abbott Laboratories](https://abbott.com/privacy-policy)
@@ -110,7 +110,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 
 ### Adobe {#adobe}
 
-> contact with questions or concerns? If you have a privacy question, concern, or request, please fill out a privacy inquiry form. If you are outside North America, you can also get in touch with Adobe Ireland's data protection officer at DPO@Adobe.com
+> If you are outside North America, you can also get in touch with Adobe Ireland's data protection officer at DPO@Adobe.com or by postal mail at 4-6 Riverwalk, Citywest Business Park, Dublin 24, Ireland.
 
 - conformance: conforming
 - source: [Adobe](https://www.adobe.com/privacy/policy.html)
@@ -120,7 +120,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 
 ### Advanced Micro Devices {#advanced-micro-devices}
 
-> contact us at privacy@amd.com
+> If you are a member of the public and wish to exercise any of your privacy rights, please contact us at privacy@amd.com.
 
 - conformance: conforming
 - source: [Advanced Micro Devices](https://www.amd.com/en/legal/privacy.html)
@@ -130,7 +130,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 
 ### Aflac {#aflac}
 
-> Contact Us For more information about our privacy practices, go to our full Privacy Policy or send an email to privacyoffice@aflac.com
+> Contact Us For more information about our privacy practices, go to our full Privacy Policy or send an email to privacyoffice@aflac.com.
 
 - conformance: conforming
 - source: [Aflac](https://aflac.com/privacy-policy)
@@ -140,7 +140,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 
 ### AT&T {#at-t}
 
-> contact and billing information and service-related details, including Customer Proprietary Network Information. https://about.att.com/privacy/privacy-notice.html Page 1 of 12 AT
+> Social media posts also may be collected, if you reach out to us directly on social media or mention AT&T. Sometimes this data is de-identiﬁed, aggregated, or anonymized.
 
 - conformance: partial
 - source: [AT&T](https://about.att.com/ecms/dam/csr/privacy-redesign/ATT_Privacy_Policy-220606.pdf)
@@ -150,7 +150,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 
 ### Ace Hardware {#ace-hardware}
 
-> contact Customer Care at
+> Additionally, individuals may contact Customer Care at 1-888-827-4223 or complete a form in Ace stores.
 
 - conformance: partial
 - source: [Ace Hardware](https://www.acehardware.com/privacy/california)
@@ -158,19 +158,19 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 - captured: 2026-06-25T11:52:44.981Z
 - link_to_source: <https://www.acehardware.com/privacy/california>
 
-### Albertsons {#albertsons}
+### Ally Financial {#ally-financial}
 
-> Contact Us
+> If you have questions about personal information you provided on an Ally website, select the "Contact Us" link – usually found in the navigation menu – or log into your Ally account and select My Profile to edit your personal information.
 
 - conformance: partial
-- source: [Albertsons](https://www.albertsonscompanies.com/policies-and-disclosures/privacy-policy/default.aspx)
+- source: [Ally Financial](https://ally.com/privacy)
 - detected_by: A→B matched; C (target) missing
 - captured: 2026-06-25T11:52:44.981Z
-- link_to_source: <https://www.albertsonscompanies.com/policies-and-disclosures/privacy-policy/default.aspx>
+- link_to_source: <https://ally.com/privacy>
 
 ### AutoZone {#autozone}
 
-> contact
+> “Data Protection Officer” and “DPO”: mean the individual appointed by You to oversee data protection compliance and act as a point of contact for data subjects and supervisory authorities.
 
 - conformance: non-conforming
 - source: [AutoZone](https://www.autozonepro.com/ui/info/terms-and-conditions?section=PrivacyPolicy)
@@ -178,12 +178,12 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 - captured: 2026-06-25T11:52:44.981Z
 - link_to_source: <https://www.autozonepro.com/ui/info/terms-and-conditions?section=PrivacyPolicy>
 
-### DTE Energy {#dte-energy}
+### Crown Holdings {#crown-holdings}
 
-> Questions
+> Answer your questions and comments.
 
 - conformance: non-conforming
-- source: [DTE Energy](https://www.dteenergy.com/us/en/quicklinks/customer-data-privacy-policy.html)
+- source: [Crown Holdings](https://www.crowncork.com/crown-brazil-privacy-policy)
 - detected_by: A only; no action
 - captured: 2026-06-25T11:52:44.981Z
-- link_to_source: <https://www.dteenergy.com/us/en/quicklinks/customer-data-privacy-policy.html>
+- link_to_source: <https://www.crowncork.com/crown-brazil-privacy-policy>

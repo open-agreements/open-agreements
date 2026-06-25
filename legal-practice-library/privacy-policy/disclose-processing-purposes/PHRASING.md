@@ -18,19 +18,9 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-processing-purpose
 
 ## Example phrasings
 
-### 3M {#3m}
-
-> we may process through your interactions with us, including, but not limited to: Through online activities and Services
-
-- conformance: conforming
-- source: [3M](https://www.3m.com/3M/en_US/company-us/privacy-policy/)
-- detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
-- link_to_source: <https://www.3m.com/3M/en_US/company-us/privacy-policy/>
-
 ### A-Mark Precious Metals {#a-mark-precious-metals}
 
-> We use cookies to facilitate your navigation of the website, enable you to select products, recognize you and your access privileges, track your usage of the websites, and provide
+> We use cookies to facilitate your navigation of the website, enable you to select products, recognize you and your access privileges, track your usage of the websites, and provide you with information or advertising relating to our products or services.
 
 - conformance: conforming
 - source: [A-Mark Precious Metals](https://amark.com/privacy)
@@ -38,19 +28,9 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-processing-purpose
 - captured: 2026-06-25T11:52:44.981Z
 - link_to_source: <https://amark.com/privacy>
 
-### ABM Industries {#abm-industries}
-
-> for the purposes described in this Privacy Policy; With our vendors to provide
-
-- conformance: conforming
-- source: [ABM Industries](https://abm.com/privacy-policy)
-- detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
-- link_to_source: <https://abm.com/privacy-policy>
-
 ### AECOM {#aecom}
 
-> We use your information for the following purposes: To manage your relationship with AECOM and better serve you when using the services
+> We use your information for the following purposes: To manage your relationship with AECOM and better serve you when using the services by personalizing and improving your experience.
 
 - conformance: conforming
 - source: [AECOM](https://aecom.com/en-ca/privacy-policy/)
@@ -60,7 +40,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-processing-purpose
 
 ### AES {#aes}
 
-> We use Personal Data to provide
+> We use Personal Data to provide our services and respond to inquiries, to manage accounts and maintain business operations, to provide relevant marketing, and to fulfill other business and compliance purposes.
 
 - conformance: conforming
 - source: [AES](https://aes.com/privacy-policy)
@@ -70,7 +50,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-processing-purpose
 
 ### AGCO {#agco}
 
-> for the purposes of allowing those recipients to operate
+> We may share your Personal Information with recipients outside AGCO, including with our joint venture partner, AGCO Finance, for the purposes of allowing those recipients to operate their business, Sites, Apps or Devices and provide you with products or services you have selected.
 
 - conformance: conforming
 - source: [AGCO](https://www.agcocorp.com/int/en/home/privacy-center/privacy-statement/privacy-statement-en.html)
@@ -80,7 +60,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-processing-purpose
 
 ### APA {#apa}
 
-> We may use temporary session cookies, which are terminated when you close your browser session, to store certain personal information you provide
+> We may use temporary session cookies, which are terminated when you close your browser session, to store certain personal information you provide for purposes of administering that session and facilitating transactions requested by you during that session.
 
 - conformance: conforming
 - source: [APA](https://apacorp.com/privacy-policy/)
@@ -88,29 +68,9 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-processing-purpose
 - captured: 2026-06-25T11:52:44.981Z
 - link_to_source: <https://apacorp.com/privacy-policy/>
 
-### AT&T {#at-t}
-
-> we use your information We rely on the information we collect to support our business functions, power our services
-
-- conformance: conforming
-- source: [AT&T](https://about.att.com/ecms/dam/csr/privacy-redesign/ATT_Privacy_Policy-220606.pdf)
-- detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
-- link_to_source: <https://about.att.com/ecms/dam/csr/privacy-redesign/ATT_Privacy_Policy-220606.pdf>
-
-### AbbVie {#abbvie}
-
-> we use Personal Information When we share Personal Information Additional information for California residents Additional information for health care professionals Privacy of children Your privacy choices Data security
-
-- conformance: conforming
-- source: [AbbVie](https://privacy.abbvie/privacy-policies/us-privacy-policy.html)
-- detected_by: A→B→C within gap
-- captured: 2026-06-25T11:52:44.981Z
-- link_to_source: <https://privacy.abbvie/privacy-policies/us-privacy-policy.html>
-
 ### Abbott Laboratories {#abbott-laboratories}
 
-> We may use any of the categories of Personal Information listed above for our internal business purposes, such as data analysis
+> We may use any of the categories of Personal Information listed above for our internal business purposes, such as data analysis, audits, developing new products, enhancing our Services, identifying usage trends and determining the effectiveness of our promotional campaigns.
 
 - conformance: conforming
 - source: [Abbott Laboratories](https://abbott.com/privacy-policy)
@@ -120,7 +80,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-processing-purpose
 
 ### Ace Hardware {#ace-hardware}
 
-> for purposes of marketing and advertising and to improve
+> We may disclose these categories to third-party advertising networks, analytics providers, franchises, and social networks for purposes of marketing and advertising and to improve and measure our ad campaigns.
 
 - conformance: conforming
 - source: [Ace Hardware](https://www.acehardware.com/privacy/california)
@@ -130,7 +90,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-processing-purpose
 
 ### Adobe {#adobe}
 
-> We use your personal information to enable you to register with Adobe and to provide
+> We use your personal information to enable you to register with Adobe and to provide you with our Services and Software, and other products or services that you request.
 
 - conformance: conforming
 - source: [Adobe](https://www.adobe.com/privacy/policy.html)
@@ -138,19 +98,49 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-processing-purpose
 - captured: 2026-06-25T11:52:44.981Z
 - link_to_source: <https://www.adobe.com/privacy/policy.html>
 
-### Booz Allen Hamilton {#booz-allen-hamilton}
+### Advanced Micro Devices {#advanced-micro-devices}
 
-> For purposes of this notice, “Personal Data
+> Our Privacy Notice explains the personal data AMD processes and how we use your Personal Information when you use our products, services, or technologies or provide us with your Personal Information in other ways both online and offline.
 
-- conformance: partial
-- source: [Booz Allen Hamilton](https://www.boozallen.com/content/dam/home/docs/corp/esg/legal/us-states-privacy-policy.pdf)
-- detected_by: A→B matched; C (target) missing
+- conformance: conforming
+- source: [Advanced Micro Devices](https://www.amd.com/en/legal/privacy.html)
+- detected_by: A→B→C within gap
 - captured: 2026-06-25T11:52:44.981Z
-- link_to_source: <https://www.boozallen.com/content/dam/home/docs/corp/esg/legal/us-states-privacy-policy.pdf>
+- link_to_source: <https://www.amd.com/en/legal/privacy.html>
+
+### Aflac {#aflac}
+
+> We use information collected from you to provide our Services and contact you.
+
+- conformance: conforming
+- source: [Aflac](https://aflac.com/privacy-policy)
+- detected_by: A→B→C within gap
+- captured: 2026-06-25T11:52:44.981Z
+- link_to_source: <https://aflac.com/privacy-policy>
+
+### Air Products & Chemicals {#air-products-chemicals}
+
+> We may use the personal information described above for the following purposes: Provide services to you upon your request: you may complete a form or send us an e-mail to purchase a product, download a report or other material, register for a conference, submit a request, respond to an e-mail or blog posting, ask a question, or make a comment.
+
+- conformance: conforming
+- source: [Air Products & Chemicals](https://airproducts.com/privacy-notice)
+- detected_by: A→B→C within gap
+- captured: 2026-06-25T11:52:44.981Z
+- link_to_source: <https://airproducts.com/privacy-notice>
+
+### Airbnb {#airbnb}
+
+> Please follow the links and review the supplemental information describing how we process personal information for those regions and services.
+
+- conformance: conforming
+- source: [Airbnb](https://assets.airbnb.com/help/Privacy_Policy_-_English_June_2024.pdf?disposition=inline)
+- detected_by: A→B→C within gap
+- captured: 2026-06-25T11:52:44.981Z
+- link_to_source: <https://assets.airbnb.com/help/Privacy_Policy_-_English_June_2024.pdf?disposition=inline>
 
 ### Crown Holdings {#crown-holdings}
 
-> we process your sensitive personal data
+> If we process your sensitive personal data for other purposes, we will support ourselves on the appropriate legal bases.
 
 - conformance: partial
 - source: [Crown Holdings](https://www.crowncork.com/crown-brazil-privacy-policy)
@@ -160,7 +150,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-processing-purpose
 
 ### Dominion Energy {#dominion-energy}
 
-> for purposes of internet-based advertising, and/or maintaining certain relationships through which we work to
+> However, certain activities such as allowing third-party cookies on our websites and mobile applications, sharing information for purposes of internet-based advertising, and/or maintaining certain relationships through which we work to bring you non-affiliate products may be considered a "sale" under the CCPA.
 
 - conformance: partial
 - source: [Dominion Energy](http://www.dominionenergy.com/en/California-Consumer-Notice-of-Privacy-Rights)
@@ -168,9 +158,19 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-processing-purpose
 - captured: 2026-06-25T11:52:44.981Z
 - link_to_source: <http://www.dominionenergy.com/en/California-Consumer-Notice-of-Privacy-Rights>
 
+### Erie Insurance {#erie-insurance}
+
+> McCalmon shares personal data collected from you with Sponsors, subscribing organizations, agents, and contractors who may use the data in connection with their relationship with McCalmon, the Sponsor, or the workplace.
+
+- conformance: partial
+- source: [Erie Insurance](https://epl.erieinsurance.com/privacy.cfm)
+- detected_by: A→B matched; C (target) missing
+- captured: 2026-06-25T11:52:44.981Z
+- link_to_source: <https://epl.erieinsurance.com/privacy.cfm>
+
 ### American Tower {#american-tower}
 
-> for the purposes
+> The data collected by American Tower is limited to the data necessary for the purposes pursued as described below.
 
 - conformance: non-conforming
 - source: [American Tower](https://www.americantower.com/us/privacy)
@@ -180,7 +180,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-processing-purpose
 
 ### Archer Daniels Midland {#archer-daniels-midland}
 
-> for purposes
+> Grenada’s Data Protection Act, No. 1 of 2023 (GDPA) requires ADM to obtain explicit consent before processing data, ensure that personal data is collected for a specific and legitimate purpose, and avoid disclosing information for purposes other than those originally agreed upon.
 
 - conformance: non-conforming
 - source: [Archer Daniels Midland](https://www.adm.com/en-us/legal/privacy/privacy-na/)
