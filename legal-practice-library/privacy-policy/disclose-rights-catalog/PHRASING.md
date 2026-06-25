@@ -26,17 +26,17 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: conforming
 - source: [3M](https://www.3m.com/3M/en_US/company-us/privacy-policy/)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://www.3m.com/3M/en_US/company-us/privacy-policy/>
 
 ### A-Mark Precious Metals {#a-mark-precious-metals}
 
-> right to deny any requests made pursuant to the rights listed below if the law does not allow or require us to comply with them.Your Privacy RightsData Subject Requests … You may have the right to (1) request to know more about the categories and specific pieces of Personal Data
+> right to deny any requests made pursuant to the rights listed below if the law does not allow or require us to comply with them … Your Privacy Rights Data Subject Requests … You may have the right to (1) request to know more about the categories and specific pieces of Personal Data
 
 - conformance: conforming
 - source: [A-Mark Precious Metals](https://amark.com/privacy)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://amark.com/privacy>
 
 ### AECOM {#aecom}
@@ -46,27 +46,27 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: conforming
 - source: [AECOM](https://aecom.com/en-ca/privacy-policy/)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://aecom.com/en-ca/privacy-policy/>
 
 ### AES {#aes}
 
-> right to request the deletion of your personal information that we have collected;The right to request the correction of your personal information that we collected;The right to opt-out of targeted advertising
+> right to request the deletion of your personal information that we have collected; The right to request the correction of your personal information that we collected; The right to opt-out of targeted advertising
 
 - conformance: conforming
 - source: [AES](https://aes.com/privacy-policy)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://aes.com/privacy-policy>
 
 ### AGCO {#agco}
 
-> Your Rights As noted in the Statement, you have certain rights under the Privacy Act 2020 in New Zealand … You may request access to any Personal Data
+> Your rights It is your responsibility to ensure that any Personal Information you provide to AGCO is complete, accurate and up to date … Subject to Applicable Laws, you may have any of the following rights: the right to request access to, or copies of, your Personal Information
 
 - conformance: conforming
 - source: [AGCO](https://www.agcocorp.com/int/en/home/privacy-center/privacy-statement/privacy-statement-en.html)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://www.agcocorp.com/int/en/home/privacy-center/privacy-statement/privacy-statement-en.html>
 
 ### APA {#apa}
@@ -76,7 +76,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: conforming
 - source: [APA](https://apacorp.com/privacy-policy/)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://apacorp.com/privacy-policy/>
 
 ### AT&T {#at-t}
@@ -86,7 +86,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: conforming
 - source: [AT&T](https://about.att.com/ecms/dam/csr/privacy-redesign/ATT_Privacy_Policy-220606.pdf)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://about.att.com/ecms/dam/csr/privacy-redesign/ATT_Privacy_Policy-220606.pdf>
 
 ### AbbVie {#abbvie}
@@ -96,7 +96,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: conforming
 - source: [AbbVie](https://privacy.abbvie/privacy-policies/us-privacy-policy.html)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://privacy.abbvie/privacy-policies/us-privacy-policy.html>
 
 ### Abbott Laboratories {#abbott-laboratories}
@@ -106,7 +106,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: conforming
 - source: [Abbott Laboratories](https://abbott.com/privacy-policy)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://abbott.com/privacy-policy>
 
 ### Ace Hardware {#ace-hardware}
@@ -116,7 +116,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: conforming
 - source: [Ace Hardware](https://www.acehardware.com/privacy/california)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://www.acehardware.com/privacy/california>
 
 ### Adobe {#adobe}
@@ -126,17 +126,17 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: conforming
 - source: [Adobe](https://www.adobe.com/privacy/policy.html)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://www.adobe.com/privacy/policy.html>
 
 ### Advanced Micro Devices {#advanced-micro-devices}
 
-> Your Privacy Rights Certain jurisdictions have specific legal requirements and grant privacy rights with respect to personal information, and we will comply with restrictions and any requests you submit as required by applicable law … For example, you may have the right to review, correct, and delete personal information
+> Your Privacy Rights ’ section of this Privacy Notice … back to top Security and Quality AMD will take reasonable steps to protect Personal Information … We use a variety of security technologies and procedures to help protect Personal Information from unauthorized access, use, and disclosure … For example, when we transmit sensitive Personal Information
 
 - conformance: conforming
 - source: [Advanced Micro Devices](https://www.amd.com/en/legal/privacy.html)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://www.amd.com/en/legal/privacy.html>
 
 ### Bank of America {#bank-of-america}
@@ -146,7 +146,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: partial
 - source: [Bank of America](https://bankofamerica.com/privacy)
 - detected_by: A→B matched; C (target) missing
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://bankofamerica.com/privacy>
 
 ### BorgWarner {#borgwarner}
@@ -156,7 +156,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: partial
 - source: [BorgWarner](https://www.borgwarner.com/legal/terms-of-use)
 - detected_by: A→B matched; C (target) missing
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://www.borgwarner.com/legal/terms-of-use>
 
 ### Boston Scientific {#boston-scientific}
@@ -166,7 +166,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: partial
 - source: [Boston Scientific](https://bostonscientific.com/privacy)
 - detected_by: A→B matched; C (target) missing
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://bostonscientific.com/privacy>
 
 ### American International {#american-international}
@@ -176,7 +176,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: non-conforming
 - source: [American International](https://www.talbot.aig.com/privacy-policy-us)
 - detected_by: A only; no action
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://www.talbot.aig.com/privacy-policy-us>
 
 ### Capital One Financial {#capital-one-financial}
@@ -186,7 +186,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: non-conforming
 - source: [Capital One Financial](https://www.capitalone.com/privacy/online-privacy-policy/)
 - detected_by: A only; no action
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://www.capitalone.com/privacy/online-privacy-policy/>
 
 ### Caterpillar {#caterpillar}
@@ -196,5 +196,5 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: non-conforming
 - source: [Caterpillar](https://www.caterpillar.com/en/legal-notices/cds-privacy-notice.html)
 - detected_by: A only; no action
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://www.caterpillar.com/en/legal-notices/cds-privacy-notice.html>

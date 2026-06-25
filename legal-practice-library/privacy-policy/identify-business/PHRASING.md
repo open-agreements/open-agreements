@@ -20,12 +20,12 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 
 ### 3M {#3m}
 
-> questions about our retention policies, please contact us at privacy office@mmm.com
+> questions about our retention policies, please contact us at privacy\ office@mmm.com
 
 - conformance: conforming
 - source: [3M](https://www.3m.com/3M/en_US/company-us/privacy-policy/)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://www.3m.com/3M/en_US/company-us/privacy-policy/>
 
 ### A-Mark Precious Metals {#a-mark-precious-metals}
@@ -35,7 +35,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 - conformance: conforming
 - source: [A-Mark Precious Metals](https://amark.com/privacy)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://amark.com/privacy>
 
 ### ABM Industries {#abm-industries}
@@ -45,7 +45,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 - conformance: conforming
 - source: [ABM Industries](https://abm.com/privacy-policy)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://abm.com/privacy-policy>
 
 ### AECOM {#aecom}
@@ -55,7 +55,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 - conformance: conforming
 - source: [AECOM](https://aecom.com/en-ca/privacy-policy/)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://aecom.com/en-ca/privacy-policy/>
 
 ### AES {#aes}
@@ -65,7 +65,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 - conformance: conforming
 - source: [AES](https://aes.com/privacy-policy)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://aes.com/privacy-policy>
 
 ### AGCO {#agco}
@@ -75,7 +75,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 - conformance: conforming
 - source: [AGCO](https://www.agcocorp.com/int/en/home/privacy-center/privacy-statement/privacy-statement-en.html)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://www.agcocorp.com/int/en/home/privacy-center/privacy-statement/privacy-statement-en.html>
 
 ### APA {#apa}
@@ -85,7 +85,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 - conformance: conforming
 - source: [APA](https://apacorp.com/privacy-policy/)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://apacorp.com/privacy-policy/>
 
 ### AT&T {#at-t}
@@ -95,7 +95,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 - conformance: conforming
 - source: [AT&T](https://about.att.com/ecms/dam/csr/privacy-redesign/ATT_Privacy_Policy-220606.pdf)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://about.att.com/ecms/dam/csr/privacy-redesign/ATT_Privacy_Policy-220606.pdf>
 
 ### AbbVie {#abbvie}
@@ -105,7 +105,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 - conformance: conforming
 - source: [AbbVie](https://privacy.abbvie/privacy-policies/us-privacy-policy.html)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://privacy.abbvie/privacy-policies/us-privacy-policy.html>
 
 ### Abbott Laboratories {#abbott-laboratories}
@@ -115,7 +115,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 - conformance: conforming
 - source: [Abbott Laboratories](https://abbott.com/privacy-policy)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://abbott.com/privacy-policy>
 
 ### Adobe {#adobe}
@@ -125,17 +125,17 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 - conformance: conforming
 - source: [Adobe](https://www.adobe.com/privacy/policy.html)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://www.adobe.com/privacy/policy.html>
 
 ### Advanced Micro Devices {#advanced-micro-devices}
 
-> contact the Communication Preference Centre. - Data Protection Officer (“DPO”): We have appointed a DPO in Germany who may be contacted for information relating to that jurisdiction at privacy.germany@amd.com
+> contact us at privacy@amd.com
 
 - conformance: conforming
 - source: [Advanced Micro Devices](https://www.amd.com/en/legal/privacy.html)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://www.amd.com/en/legal/privacy.html>
 
 ### Ace Hardware {#ace-hardware}
@@ -145,7 +145,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 - conformance: partial
 - source: [Ace Hardware](https://www.acehardware.com/privacy/california)
 - detected_by: A→B matched; C (target) missing
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://www.acehardware.com/privacy/california>
 
 ### Albertsons {#albertsons}
@@ -155,7 +155,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 - conformance: partial
 - source: [Albertsons](https://www.albertsonscompanies.com/policies-and-disclosures/privacy-policy/default.aspx)
 - detected_by: A→B matched; C (target) missing
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://www.albertsonscompanies.com/policies-and-disclosures/privacy-policy/default.aspx>
 
 ### Ally Financial {#ally-financial}
@@ -165,25 +165,25 @@ Phrasing library for [REQ-privacy-law.privacy-policy.identify-business](https://
 - conformance: partial
 - source: [Ally Financial](https://ally.com/privacy)
 - detected_by: A→B matched; C (target) missing
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-25T09:25:07.040Z
 - link_to_source: <https://ally.com/privacy>
 
-### BorgWarner {#borgwarner}
-
-> questions
-
-- conformance: non-conforming
-- source: [BorgWarner](https://www.borgwarner.com/legal/terms-of-use)
-- detected_by: A only; no action
-- captured: 2026-06-15T19:34:23.938Z
-- link_to_source: <https://www.borgwarner.com/legal/terms-of-use>
-
-### Interactive Brokers {#interactive-brokers}
+### AutoZone {#autozone}
 
 > contact
 
 - conformance: non-conforming
-- source: [Interactive Brokers](https://www.interactivebrokers.com/en/accounts/legalDocuments/privacy.php)
+- source: [AutoZone](https://www.autozonepro.com/ui/info/terms-and-conditions?section=PrivacyPolicy)
 - detected_by: A only; no action
-- captured: 2026-06-15T19:34:23.938Z
-- link_to_source: <https://www.interactivebrokers.com/en/accounts/legalDocuments/privacy.php>
+- captured: 2026-06-25T09:25:07.040Z
+- link_to_source: <https://www.autozonepro.com/ui/info/terms-and-conditions?section=PrivacyPolicy>
+
+### DTE Energy {#dte-energy}
+
+> Questions
+
+- conformance: non-conforming
+- source: [DTE Energy](https://www.dteenergy.com/us/en/quicklinks/customer-data-privacy-policy.html)
+- detected_by: A only; no action
+- captured: 2026-06-25T09:25:07.040Z
+- link_to_source: <https://www.dteenergy.com/us/en/quicklinks/customer-data-privacy-policy.html>
