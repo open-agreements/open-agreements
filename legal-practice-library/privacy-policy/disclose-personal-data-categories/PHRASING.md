@@ -25,7 +25,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-personal-data-cate
 - conformance: conforming
 - source: [3M](https://www.3m.com/3M/en_US/company-us/privacy-policy/)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T17:31:28.012Z
+- captured: 2026-06-25T19:50:59.018Z
 - link_to_source: <https://www.3m.com/3M/en_US/company-us/privacy-policy/>
 
 ### A-Mark Precious Metals {#a-mark-precious-metals}
@@ -35,7 +35,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-personal-data-cate
 - conformance: conforming
 - source: [A-Mark Precious Metals](https://amark.com/privacy)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T17:31:28.012Z
+- captured: 2026-06-25T19:50:59.018Z
 - link_to_source: <https://amark.com/privacy>
 
 ### ABM Industries {#abm-industries}
@@ -45,7 +45,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-personal-data-cate
 - conformance: conforming
 - source: [ABM Industries](https://abm.com/privacy-policy)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T17:31:28.012Z
+- captured: 2026-06-25T19:50:59.018Z
 - link_to_source: <https://abm.com/privacy-policy>
 
 ### AES {#aes}
@@ -55,7 +55,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-personal-data-cate
 - conformance: conforming
 - source: [AES](https://aes.com/privacy-policy)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T17:31:28.012Z
+- captured: 2026-06-25T19:50:59.018Z
 - link_to_source: <https://aes.com/privacy-policy>
 
 ### AGCO {#agco}
@@ -65,7 +65,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-personal-data-cate
 - conformance: conforming
 - source: [AGCO](https://www.agcocorp.com/int/en/home/privacy-center/privacy-statement/privacy-statement-en.html)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T17:31:28.012Z
+- captured: 2026-06-25T19:50:59.018Z
 - link_to_source: <https://www.agcocorp.com/int/en/home/privacy-center/privacy-statement/privacy-statement-en.html>
 
 ### APA {#apa}
@@ -75,7 +75,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-personal-data-cate
 - conformance: conforming
 - source: [APA](https://apacorp.com/privacy-policy/)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T17:31:28.012Z
+- captured: 2026-06-25T19:50:59.018Z
 - link_to_source: <https://apacorp.com/privacy-policy/>
 
 ### AT&T {#at-t}
@@ -85,7 +85,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-personal-data-cate
 - conformance: conforming
 - source: [AT&T](https://about.att.com/ecms/dam/csr/privacy-redesign/ATT_Privacy_Policy-220606.pdf)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T17:31:28.012Z
+- captured: 2026-06-25T19:50:59.018Z
 - link_to_source: <https://about.att.com/ecms/dam/csr/privacy-redesign/ATT_Privacy_Policy-220606.pdf>
 
 ### AbbVie {#abbvie}
@@ -95,7 +95,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-personal-data-cate
 - conformance: conforming
 - source: [AbbVie](https://privacy.abbvie/privacy-policies/us-privacy-policy.html)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T17:31:28.012Z
+- captured: 2026-06-25T19:50:59.018Z
 - link_to_source: <https://privacy.abbvie/privacy-policies/us-privacy-policy.html>
 
 ### Abbott Laboratories {#abbott-laboratories}
@@ -105,7 +105,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-personal-data-cate
 - conformance: conforming
 - source: [Abbott Laboratories](https://abbott.com/privacy-policy)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T17:31:28.012Z
+- captured: 2026-06-25T19:50:59.018Z
 - link_to_source: <https://abbott.com/privacy-policy>
 
 ### Advanced Micro Devices {#advanced-micro-devices}
@@ -115,7 +115,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-personal-data-cate
 - conformance: conforming
 - source: [Advanced Micro Devices](https://www.amd.com/en/legal/privacy.html)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T17:31:28.012Z
+- captured: 2026-06-25T19:50:59.018Z
 - link_to_source: <https://www.amd.com/en/legal/privacy.html>
 
 ### Aflac {#aflac}
@@ -125,7 +125,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-personal-data-cate
 - conformance: conforming
 - source: [Aflac](https://aflac.com/privacy-policy)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T17:31:28.012Z
+- captured: 2026-06-25T19:50:59.018Z
 - link_to_source: <https://aflac.com/privacy-policy>
 
 ### Alaska Air {#alaska-air}
@@ -135,7 +135,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-personal-data-cate
 - conformance: conforming
 - source: [Alaska Air](https://www.alaskaair.com/content/legal/privacy-policy)
 - detected_by: A→B→C within gap
-- captured: 2026-06-25T17:31:28.012Z
+- captured: 2026-06-25T19:50:59.018Z
 - link_to_source: <https://www.alaskaair.com/content/legal/privacy-policy>
 
 ### Ace Hardware {#ace-hardware}
@@ -145,7 +145,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-personal-data-cate
 - conformance: partial
 - source: [Ace Hardware](https://www.acehardware.com/privacy/california)
 - detected_by: A→B matched; C (target) missing
-- captured: 2026-06-25T17:31:28.012Z
+- captured: 2026-06-25T19:50:59.018Z
 - link_to_source: <https://www.acehardware.com/privacy/california>
 
 ### Adobe {#adobe}
@@ -155,7 +155,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-personal-data-cate
 - conformance: partial
 - source: [Adobe](https://www.adobe.com/privacy/policy.html)
 - detected_by: A→B matched; C (target) missing
-- captured: 2026-06-25T17:31:28.012Z
+- captured: 2026-06-25T19:50:59.018Z
 - link_to_source: <https://www.adobe.com/privacy/policy.html>
 
 ### Ally Financial {#ally-financial}
@@ -165,7 +165,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-personal-data-cate
 - conformance: partial
 - source: [Ally Financial](https://ally.com/privacy)
 - detected_by: A→B matched; C (target) missing
-- captured: 2026-06-25T17:31:28.012Z
+- captured: 2026-06-25T19:50:59.018Z
 - link_to_source: <https://ally.com/privacy>
 
 ### Cincinnati Financial {#cincinnati-financial}
@@ -175,7 +175,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-personal-data-cate
 - conformance: non-conforming
 - source: [Cincinnati Financial](https://www.cinfin.com/privacy)
 - detected_by: A only; no action
-- captured: 2026-06-25T17:31:28.012Z
+- captured: 2026-06-25T19:50:59.018Z
 - link_to_source: <https://www.cinfin.com/privacy>
 
 ### Enterprise Products Partners {#enterprise-products-partners}
@@ -185,7 +185,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-personal-data-cate
 - conformance: non-conforming
 - source: [Enterprise Products Partners](https://enterpriseproducts.com/privacy-policy)
 - detected_by: A only; no action
-- captured: 2026-06-25T17:31:28.012Z
+- captured: 2026-06-25T19:50:59.018Z
 - link_to_source: <https://enterpriseproducts.com/privacy-policy>
 
 ### W.W. Grainger {#w-w-grainger}
@@ -195,5 +195,5 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-personal-data-cate
 - conformance: non-conforming
 - source: [W.W. Grainger](https://www.grainger.com/content/legal-privacy-policy)
 - detected_by: A only; no action
-- captured: 2026-06-25T17:31:28.012Z
+- captured: 2026-06-25T19:50:59.018Z
 - link_to_source: <https://www.grainger.com/content/legal-privacy-policy>
