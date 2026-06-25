@@ -20,6 +20,7 @@ Published by [openagreements.org](https://openagreements.org). Licensed CC BY 4.
 * [Outside Counsel](outside-counsel/)
 * [Privacy](privacy/)
 * [Privacy Policy](privacy-policy/)
+* [Startup Financing](startup-financing/)
 * [Surveys](surveys/)
 
 Supporting evidence — [verbatim passages our notes rely on](case-excerpts/), each linked to the full opinion on CourtListener (Free Law Project). Not a case database.
