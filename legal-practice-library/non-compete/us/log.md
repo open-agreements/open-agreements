@@ -1,5 +1,8 @@
 # Us Update Log
 
+## 2026-06-26
+* **Update**: Update South Dakota non-compete note for HB 1180 (eff. July 1, 2026) (#1084) ([9a4eb72](https://github.com/UseJunior/legal-explainer/commit/9a4eb72213fd3640c99e12cdaf1d21d962c0fe51))
+
 ## 2026-06-21
 * **Update**: content(non-compete/va): re-anchor 2026 statutory changes to enrolled primary law (closes #950) (#964) ([cb3e154](https://github.com/UseJunior/legal-explainer/commit/cb3e154c5a830c1e8b37b0611d71970a553ac7f3))
 

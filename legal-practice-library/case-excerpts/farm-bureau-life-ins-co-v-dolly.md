@@ -6,7 +6,7 @@ description: >-
   quoted in 2 document(s).
 citation: 'Farm Bureau Life Ins. Co. v. Dolly, 2018 S.D. 28, ¶ 13, 910 N.W.2d 196.'
 resource: 'https://www.courtlistener.com/opinion/4479790/farm-bureau-life-ins-co-v-dolly/'
-timestamp: '2026-06-12'
+timestamp: '2026-06-26'
 document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/south-dakota'
