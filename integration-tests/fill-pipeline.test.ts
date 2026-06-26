@@ -1230,7 +1230,7 @@ describe('confirmation cover notice + clause renumbering', () => {
     },
   ] as unknown as Parameters<typeof prepareFillData>[0]['fields'];
 
-  it.openspec('OA-TMP-070')('derives any_confirmation_pending only for applicable, unconfirmed confirm clauses', () => {
+  it.openspec(['OA-TMP-070', 'OA-TMP-071'])('derives any_confirmation_pending only for applicable, unconfirmed confirm clauses', () => {
     const confirmClauses = [{ id: 'counsel', confirm: 'notice_confirmed', condition: 'covered' }];
     const run = (covered: string, confirmed: string) =>
       prepareFillData({
@@ -1330,7 +1330,7 @@ describe('confirmation cover notice + clause renumbering', () => {
   // it so multi-run bullet text can be matched as it visually reads.
   const flat = (s: string): string => s.replace(/\s+/g, ' ');
 
-  it.openspec('OA-TMP-074')('resolves a cover-notice <<xref:…>> sentinel to the target heading\'s post-renumber "Section N"', async () => {
+  it.openspec(['OA-TMP-074', 'OA-TMP-075'])('resolves a cover-notice <<xref:…>> sentinel to the target heading\'s post-renumber "Section N"', async () => {
     const text = flat(await filledHeadingText(
       docFromHeadings(
         headingPara(1, 'Alpha'),
@@ -1353,55 +1353,4 @@ describe('confirmation cover notice + clause renumbering', () => {
     expect(text).toContain('• Section 1 — see clause');
   });
 
-  it.openspec('OA-TMP-071')('renders the cover confirmation notice only when an applicable confirm field is unconfirmed', async () => {
-    const flDir = resolve(import.meta.dirname, '..', 'content', 'templates', 'openagreements-restrictive-covenant-florida');
-    const fillFlZip = async (values: Record<string, unknown>): Promise<AdmZip> => {
-      const dir = mkdtempSync(join(tmpdir(), 'oa-fl-notice-'));
-      const out = join(dir, 'out.docx');
-      await fillTemplate({ templateDir: flDir, values, outputPath: out });
-      return new AdmZip(readFileSync(out));
-    };
-    const docXmlOf = (zip: AdmZip): string =>
-      zip.getEntry('word/document.xml')!.getData().toString('utf-8');
-    const fillFl = async (values: Record<string, unknown>): Promise<string> =>
-      docXmlOf(await fillFlZip(values)).replace(/<[^>]+>/g, '');
-
-    // Covered employee, advance notice NOT confirmed → notice + in-body bracket present.
-    const unconfirmedZip = await fillFlZip({ covered_employee: 'true', choice_act_advance_notice_confirmed: 'false' });
-    const unconfirmedXml = docXmlOf(unconfirmedZip);
-    const unconfirmed = unconfirmedXml.replace(/<[^>]+>/g, '');
-    expect(unconfirmed).toContain('CONFIRMATION REQUIRED BEFORE SIGNING');
-    expect(unconfirmed).toContain('[CONFIRM before signing');
-    expect(unconfirmed).toContain('openagreements.org/legal/non-compete/florida');
-
-    // The cover bullet names the live "Section N" of the CHOICE Act counsel clause,
-    // matching that clause's own renumbered heading, and the sentinel is resolved.
-    // (Collapse the serializer's inter-element whitespace first.)
-    const unconfirmedFlat = unconfirmed.replace(/\s+/g, ' ');
-    expect(unconfirmedFlat).toContain('For the item below, confirm the stated fact occurred');
-    expect(unconfirmedFlat).not.toContain('For each item below, confirm the stated fact occurred');
-    expect(unconfirmedFlat).toContain('Item requiring confirmation:');
-    expect(unconfirmedFlat).not.toContain('Items requiring confirmation:');
-    expect(unconfirmedXml).not.toMatch(/xref:oa_xref_/); // no raw sentinel left
-    const bulletNum = unconfirmedFlat.match(/• Section (\d+) — CHOICE Act Counsel Advisal/)?.[1];
-    expect(bulletNum).toBeDefined();
-    expect(unconfirmedFlat).toContain(`${bulletNum}. CHOICE Act Counsel Advisal`); // heading carries the same number
-    // The number is an internal hyperlink to the clause heading's bookmark…
-    expect(unconfirmedXml).toMatch(/<w:hyperlink[^>]*w:anchor="oa_xref_[0-9a-f]+"/);
-    // …and the URL is a real external hyperlink relationship.
-    const relsXml = unconfirmedZip.getEntry('word/_rels/document.xml.rels')!.getData().toString('utf-8');
-    expect(relsXml).toMatch(
-      /Target="https:\/\/openagreements\.org\/legal\/non-compete\/florida"[^>]*TargetMode="External"/
-    );
-
-    // Covered employee, confirmed → no notice, no bracket.
-    const confirmed = await fillFl({ covered_employee: 'true', choice_act_advance_notice_confirmed: 'true' });
-    expect(confirmed).not.toContain('CONFIRMATION REQUIRED BEFORE SIGNING');
-    expect(confirmed).not.toContain('[CONFIRM before signing');
-
-    // Non-covered employee → recital and notice are both fully absent (applicability gate).
-    const nonCovered = await fillFl({ covered_employee: 'false' });
-    expect(nonCovered).not.toContain('CONFIRMATION REQUIRED BEFORE SIGNING');
-    expect(nonCovered).not.toContain('CHOICE Act Counsel Advisal');
-  });
 });

@@ -702,7 +702,7 @@ Body.
     expect(rendered.markdown).toContain('{END-FOR signer}');
   });
 
-  it.openspec('OA-FIL-029')('draws the entity legal name above the signature line; individual keeps Print Name', () => {
+  it.openspec(['OA-FIL-029', 'OA-TMP-057'])('draws the entity legal name above the signature line; individual keeps Print Name', () => {
     const style = loadStyleProfile(stylePath);
     const compiled = compileCanonicalSourceString(buildCanonicalSource(), 'inline entity-name canonical source');
     const [entitySigner, individualSigner] = compiled.contractSpec.sections.signature.signers;
