@@ -1,6 +1,7 @@
 # Us Update Log
 
 ## 2026-06-26
+* **Update**: Rename content/legal/ -> content/practice-guides/ to match URL taxonomy (#1082) ([7fb9b1a](https://github.com/UseJunior/legal-explainer/commit/7fb9b1a59b1be5495d248f7d0fff7a1a9bc6f126))
 * **Update**: Update South Dakota non-compete note for HB 1180 (eff. July 1, 2026) (#1084) ([9a4eb72](https://github.com/UseJunior/legal-explainer/commit/9a4eb72213fd3640c99e12cdaf1d21d962c0fe51))
 * **Update**: Add Brown v. Best post-hire-consideration Q&A to Wyoming non-compete page (#1081) ([a00f292](https://github.com/UseJunior/legal-explainer/commit/a00f292cc5fb7d0a534712301ce8b4a2ed0f4334))
 
