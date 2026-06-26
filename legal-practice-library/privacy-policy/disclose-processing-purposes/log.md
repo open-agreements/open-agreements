@@ -1,6 +1,7 @@
 # Disclose Processing Purposes Update Log
 
 ## 2026-06-26
+* **Update**: feat(privacy-corpus): propagate 3M email correction to published content (#1059) (#1076) ([e554d23](https://github.com/UseJunior/legal-explainer/commit/e554d23c5ad83772974162f854d5fe46d898caba))
 * **Update**: feat(privacy-corpus): add EchoStar — 492 → 493 policies (496/500 URLs) (#1055) ([fef5546](https://github.com/UseJunior/legal-explainer/commit/fef554671f164d24aeeea46e7e2ada4d3cc88cd4))
 
 ## 2026-06-25
