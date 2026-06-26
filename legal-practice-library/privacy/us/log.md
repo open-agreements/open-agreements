@@ -1,5 +1,8 @@
 # Us Update Log
 
+## 2026-06-26
+* **Update**: Rename content/legal/ -> content/practice-guides/ to match URL taxonomy (#1082) ([7fb9b1a](https://github.com/UseJunior/legal-explainer/commit/7fb9b1a59b1be5495d248f7d0fff7a1a9bc6f126))
+
 ## 2026-06-18
 * **Update**: fix(content): close citation/coverage gaps in privacy notes (16 states) [#838] (#850) ([446acad](https://github.com/UseJunior/legal-explainer/commit/446acadc6ce8f536bdae05ea39e34c3852359bad))
 * **Update**: fix(content): re-ingest deferred sources for NJ/IN privacy + WARN/token-economics topics [#852] (#864) ([ff690fe](https://github.com/UseJunior/legal-explainer/commit/ff690fe5c5d0548cd61a77353a93c1758ffe5541))

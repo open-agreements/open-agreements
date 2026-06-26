@@ -1,5 +1,8 @@
 # Non Compete Update Log
 
+## 2026-06-26
+* **Update**: Rename content/legal/ -> content/practice-guides/ to match URL taxonomy (#1082) ([7fb9b1a](https://github.com/UseJunior/legal-explainer/commit/7fb9b1a59b1be5495d248f7d0fff7a1a9bc6f126))
+
 ## 2026-06-22
 * **Update**: refactor(ia): rename worldwide survey URL /international → /worldwide with 301s (#976) (#977) ([8356032](https://github.com/UseJunior/legal-explainer/commit/8356032f8745b0bbaeaa9373bd97d19e87e959e5))
 

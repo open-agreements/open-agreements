@@ -1,5 +1,8 @@
 # Au Update Log
 
+## 2026-06-26
+* **Update**: Rename content/legal/ -> content/practice-guides/ to match URL taxonomy (#1082) ([7fb9b1a](https://github.com/UseJunior/legal-explainer/commit/7fb9b1a59b1be5495d248f7d0fff7a1a9bc6f126))
+
 ## 2026-06-15
 * **Update**: feat(ia): country-first jurisdiction paths + /practice-guides & /surveys roots (closes #790) (#800) ([01b7b50](https://github.com/UseJunior/legal-explainer/commit/01b7b5028fe5cdd75b5ff4652151f0c9b19d0545))
 
