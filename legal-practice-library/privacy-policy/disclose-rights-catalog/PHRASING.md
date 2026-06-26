@@ -26,7 +26,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: conforming
 - source: [3M](https://www.3m.com/3M/en_US/company-us/privacy-policy/)
 - detected_by: A→B→C within gap
-- captured: 2026-06-26T06:24:33.520Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://www.3m.com/3M/en_US/company-us/privacy-policy/>
 
 ### A-Mark Precious Metals {#a-mark-precious-metals}
@@ -36,7 +36,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: conforming
 - source: [A-Mark Precious Metals](https://amark.com/privacy)
 - detected_by: A→B→C within gap
-- captured: 2026-06-26T06:24:33.520Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://amark.com/privacy>
 
 ### AECOM {#aecom}
@@ -46,7 +46,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: conforming
 - source: [AECOM](https://aecom.com/en-ca/privacy-policy/)
 - detected_by: A→B→C within gap
-- captured: 2026-06-26T06:24:33.520Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://aecom.com/en-ca/privacy-policy/>
 
 ### AGCO {#agco}
@@ -56,7 +56,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: conforming
 - source: [AGCO](https://www.agcocorp.com/int/en/home/privacy-center/privacy-statement/privacy-statement-en.html)
 - detected_by: A→B→C within gap
-- captured: 2026-06-26T06:24:33.520Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://www.agcocorp.com/int/en/home/privacy-center/privacy-statement/privacy-statement-en.html>
 
 ### APA {#apa}
@@ -66,17 +66,17 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: conforming
 - source: [APA](https://apacorp.com/privacy-policy/)
 - detected_by: A→B→C within gap
-- captured: 2026-06-26T06:24:33.520Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://apacorp.com/privacy-policy/>
 
 ### AbbVie {#abbvie}
 
-> When you exercise your rights, you may lose access to certain aspects of AbbVie Services that require your Personal Information to perform the service.
+> Your privacy rights Additional information for job applicants Additional information for health care professionals Additional information for participants in patient and customer programs Consumer health data privacy notice Loyalty programs Privacy of children Our contact information Data security and retention International personal information transfers Accessing our sites globally
 
 - conformance: conforming
 - source: [AbbVie](https://privacy.abbvie/privacy-policies/us-privacy-policy.html)
 - detected_by: A→B→C within gap
-- captured: 2026-06-26T06:24:33.520Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://privacy.abbvie/privacy-policies/us-privacy-policy.html>
 
 ### Abbott Laboratories {#abbott-laboratories}
@@ -86,17 +86,17 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: conforming
 - source: [Abbott Laboratories](https://abbott.com/privacy-policy)
 - detected_by: A→B→C within gap
-- captured: 2026-06-26T06:24:33.520Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://abbott.com/privacy-policy>
 
 ### Ace Hardware {#ace-hardware}
 
-> Right to Know: California residents have the right to request that we provide them certain information about how we have handled their personal information, including the: - categories of personal information collected - categories of sources which personal information was collected from - business and/or commercial purposes for collecting, selling, or sharing their personal information - categories of third parties with whom we have disclosed their personal information - specific pieces of personal information the business has collected about the consumer Right to Correction: California residents have the right to correct inaccuracies in their personal information.
+> Right to Know: California residents have the right to request that we provide them certain information about how we have handled their personal information, including the: categories of personal information collected categories of sources which personal information was collected from business and/or commercial purposes for collecting, selling, or sharing their personal information categories of third parties with whom we have disclosed their personal information specific pieces of personal information the business has collected about the consumer
 
 - conformance: conforming
 - source: [Ace Hardware](https://www.acehardware.com/privacy/california)
 - detected_by: A→B→C within gap
-- captured: 2026-06-26T06:24:33.520Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://www.acehardware.com/privacy/california>
 
 ### Adobe {#adobe}
@@ -106,7 +106,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: conforming
 - source: [Adobe](https://www.adobe.com/privacy/policy.html)
 - detected_by: A→B→C within gap
-- captured: 2026-06-26T06:24:33.520Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://www.adobe.com/privacy/policy.html>
 
 ### Advanced Micro Devices {#advanced-micro-devices}
@@ -116,7 +116,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: conforming
 - source: [Advanced Micro Devices](https://www.amd.com/en/legal/privacy.html)
 - detected_by: A→B→C within gap
-- captured: 2026-06-26T06:24:33.520Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://www.amd.com/en/legal/privacy.html>
 
 ### Aflac {#aflac}
@@ -126,7 +126,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: conforming
 - source: [Aflac](https://aflac.com/privacy-policy)
 - detected_by: A→B→C within gap
-- captured: 2026-06-26T06:24:33.520Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://aflac.com/privacy-policy>
 
 ### Air Products & Chemicals {#air-products-chemicals}
@@ -136,7 +136,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: conforming
 - source: [Air Products & Chemicals](https://airproducts.com/privacy-notice)
 - detected_by: A→B→C within gap
-- captured: 2026-06-26T06:24:33.520Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://airproducts.com/privacy-notice>
 
 ### Alcoa {#alcoa}
@@ -146,7 +146,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: partial
 - source: [Alcoa](https://www.alcoa.com/global/en/general/privacy)
 - detected_by: A→B matched; C (target) missing
-- captured: 2026-06-26T06:24:33.520Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://www.alcoa.com/global/en/general/privacy>
 
 ### Archer Daniels Midland {#archer-daniels-midland}
@@ -156,7 +156,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: partial
 - source: [Archer Daniels Midland](https://www.adm.com/en-us/legal/privacy/privacy-na/)
 - detected_by: A→B matched; C (target) missing
-- captured: 2026-06-26T06:24:33.520Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://www.adm.com/en-us/legal/privacy/privacy-na/>
 
 ### Boston Scientific {#boston-scientific}
@@ -166,8 +166,18 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: partial
 - source: [Boston Scientific](https://bostonscientific.com/privacy)
 - detected_by: A→B matched; C (target) missing
-- captured: 2026-06-26T06:24:33.520Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://bostonscientific.com/privacy>
+
+### American International {#american-international}
+
+> The purpose of this Policy is to explain what Personal Information we collect, access, use, store, transfer and/or disclose (together, “process”), the reasons we process your Personal Information, to whom Personal Information is disclosed and your rights under the relevant laws.
+
+- conformance: non-conforming
+- source: [American International](https://www.talbot.aig.com/privacy-policy-us)
+- detected_by: A only; no action
+- captured: 2026-06-26T07:03:35.871Z
+- link_to_source: <https://www.talbot.aig.com/privacy-policy-us>
 
 ### Andersons {#andersons}
 
@@ -176,7 +186,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: non-conforming
 - source: [Andersons](https://andersonsinc.com/privacy)
 - detected_by: A only; no action
-- captured: 2026-06-26T06:24:33.520Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://andersonsinc.com/privacy>
 
 ### Capital One Financial {#capital-one-financial}
@@ -186,15 +196,5 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-rights-catalog](ht
 - conformance: non-conforming
 - source: [Capital One Financial](https://www.capitalone.com/privacy/online-privacy-policy/)
 - detected_by: A only; no action
-- captured: 2026-06-26T06:24:33.520Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://www.capitalone.com/privacy/online-privacy-policy/>
-
-### Deere {#deere}
-
-> If you have these rights in your country/region, such as in the EU/UK, and if you wish to access, correct, update, request deletion, request information, object, request restriction of processing, request data portability, not be subject to decisions based solely on automated processing, or otherwise take action with respect to Personal Data, you can exercise your rights by completing a data subject request form below at any time or by contacting us using the contact details provided in Section 12 ("How to Contact Us") below.
-
-- conformance: non-conforming
-- source: [Deere](https://www.deere.com/en/privacy-and-data/index.html)
-- detected_by: A only; no action
-- captured: 2026-06-26T06:24:33.520Z
-- link_to_source: <https://www.deere.com/en/privacy-and-data/index.html>

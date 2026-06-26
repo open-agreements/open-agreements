@@ -25,7 +25,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-sale-and-targeted-
 - conformance: conforming
 - source: [A-Mark Precious Metals](https://amark.com/privacy)
 - detected_by: A→B→C within gap
-- captured: 2026-06-26T06:24:33.520Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://amark.com/privacy>
 
 ### AT&T {#at-t}
@@ -35,8 +35,18 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-sale-and-targeted-
 - conformance: conforming
 - source: [AT&T](https://about.att.com/ecms/dam/csr/privacy-redesign/ATT_Privacy_Policy-220606.pdf)
 - detected_by: A→B→C within gap
-- captured: 2026-06-26T06:24:33.520Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://about.att.com/ecms/dam/csr/privacy-redesign/ATT_Privacy_Policy-220606.pdf>
+
+### AbbVie {#abbvie}
+
+> To exercise your right to opt out of the sharing of your personal information for targeted advertising, you can click the “Your Privacy Choices” link here or at the footer of some of our sites.
+
+- conformance: conforming
+- source: [AbbVie](https://privacy.abbvie/privacy-policies/us-privacy-policy.html)
+- detected_by: A→B→C within gap
+- captured: 2026-06-26T07:03:35.871Z
+- link_to_source: <https://privacy.abbvie/privacy-policies/us-privacy-policy.html>
 
 ### Abbott Laboratories {#abbott-laboratories}
 
@@ -45,7 +55,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-sale-and-targeted-
 - conformance: conforming
 - source: [Abbott Laboratories](https://abbott.com/privacy-policy)
 - detected_by: A→B→C within gap
-- captured: 2026-06-26T06:24:33.520Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://abbott.com/privacy-policy>
 
 ### Ace Hardware {#ace-hardware}
@@ -55,7 +65,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-sale-and-targeted-
 - conformance: conforming
 - source: [Ace Hardware](https://www.acehardware.com/privacy/california)
 - detected_by: A→B→C within gap
-- captured: 2026-06-26T06:24:33.520Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://www.acehardware.com/privacy/california>
 
 ### Advanced Micro Devices {#advanced-micro-devices}
@@ -65,7 +75,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-sale-and-targeted-
 - conformance: conforming
 - source: [Advanced Micro Devices](https://www.amd.com/en/legal/privacy.html)
 - detected_by: A→B→C within gap
-- captured: 2026-06-26T06:24:33.520Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://www.amd.com/en/legal/privacy.html>
 
 ### Aflac {#aflac}
@@ -75,7 +85,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-sale-and-targeted-
 - conformance: conforming
 - source: [Aflac](https://aflac.com/privacy-policy)
 - detected_by: A→B→C within gap
-- captured: 2026-06-26T06:24:33.520Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://aflac.com/privacy-policy>
 
 ### Air Products & Chemicals {#air-products-chemicals}
@@ -85,7 +95,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-sale-and-targeted-
 - conformance: conforming
 - source: [Air Products & Chemicals](https://airproducts.com/privacy-notice)
 - detected_by: A→B→C within gap
-- captured: 2026-06-26T06:24:33.520Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://airproducts.com/privacy-notice>
 
 ### Allstate {#allstate}
@@ -95,7 +105,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-sale-and-targeted-
 - conformance: conforming
 - source: [Allstate](https://roadsidemobile.allstate.com/tac/privacystatement)
 - detected_by: A→B→C within gap
-- captured: 2026-06-26T06:24:33.520Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://roadsidemobile.allstate.com/tac/privacystatement>
 
 ### Altice USA {#altice-usa}
@@ -105,7 +115,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-sale-and-targeted-
 - conformance: conforming
 - source: [Altice USA](https://optimum.com/privacy)
 - detected_by: A→B→C within gap
-- captured: 2026-06-26T06:24:33.520Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://optimum.com/privacy>
 
 ### Altria {#altria}
@@ -115,7 +125,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-sale-and-targeted-
 - conformance: conforming
 - source: [Altria](https://www.altria.com/privacy)
 - detected_by: A→B→C within gap
-- captured: 2026-06-26T06:24:33.520Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://www.altria.com/privacy>
 
 ### American Airlines Group {#american-airlines-group}
@@ -125,18 +135,8 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-sale-and-targeted-
 - conformance: conforming
 - source: [American Airlines Group](https://www.aa.com/i18n/customer-service/support/privacy-policy.jsp)
 - detected_by: A→B→C within gap
-- captured: 2026-06-26T06:24:33.520Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://www.aa.com/i18n/customer-service/support/privacy-policy.jsp>
-
-### American Electric Power {#american-electric-power}
-
-> You may opt out of the sharing of your information in this context by filling out our online form or contacting us at 833-795-1194.
-
-- conformance: conforming
-- source: [American Electric Power](https://aep.com/privacy)
-- detected_by: A→B→C within gap
-- captured: 2026-06-26T06:24:33.520Z
-- link_to_source: <https://aep.com/privacy>
 
 ### AECOM {#aecom}
 
@@ -145,7 +145,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-sale-and-targeted-
 - conformance: partial
 - source: [AECOM](https://aecom.com/en-ca/privacy-policy/)
 - detected_by: A→B matched; C (target) missing
-- captured: 2026-06-26T06:24:33.520Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://aecom.com/en-ca/privacy-policy/>
 
 ### Adobe {#adobe}
@@ -155,7 +155,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-sale-and-targeted-
 - conformance: partial
 - source: [Adobe](https://www.adobe.com/privacy/policy.html)
 - detected_by: A→B matched; C (target) missing
-- captured: 2026-06-26T06:24:33.520Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://www.adobe.com/privacy/policy.html>
 
 ### Airbnb {#airbnb}
@@ -165,7 +165,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-sale-and-targeted-
 - conformance: partial
 - source: [Airbnb](https://assets.airbnb.com/help/Privacy_Policy_-_English_June_2024.pdf?disposition=inline)
 - detected_by: A→B matched; C (target) missing
-- captured: 2026-06-26T06:24:33.520Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://assets.airbnb.com/help/Privacy_Policy_-_English_June_2024.pdf?disposition=inline>
 
 ### APA {#apa}
@@ -175,7 +175,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-sale-and-targeted-
 - conformance: non-conforming
 - source: [APA](https://apacorp.com/privacy-policy/)
 - detected_by: A only; no action
-- captured: 2026-06-26T06:24:33.520Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://apacorp.com/privacy-policy/>
 
 ### Fifth Third Bancorp {#fifth-third-bancorp}
@@ -185,7 +185,7 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-sale-and-targeted-
 - conformance: non-conforming
 - source: [Fifth Third Bancorp](https://www.53.com/content/fifth-third/en/privacy-security/online-privacy-policy.html)
 - detected_by: A only; no action
-- captured: 2026-06-26T06:24:33.520Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://www.53.com/content/fifth-third/en/privacy-security/online-privacy-policy.html>
 
 ### Intercontinental Exchange {#intercontinental-exchange}
@@ -195,5 +195,5 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-sale-and-targeted-
 - conformance: non-conforming
 - source: [Intercontinental Exchange](https://www.ice.com/privacy-security-center)
 - detected_by: A only; no action
-- captured: 2026-06-26T06:24:33.520Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://www.ice.com/privacy-security-center>
