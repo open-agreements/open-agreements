@@ -4,10 +4,11 @@ title: Non-Competes in South Dakota
 description: >-
   A question-by-question summary of South Dakota non-compete law under SDCL
   chapter 53-9, including employee covenants, customer non-solicits, healthcare
-  practitioners, sale-of-business covenants, independent contractors, and
-  trade-secret alternatives.
+  practitioners, sale-of-business covenants, a new owner non-compete exception
+  for transfers of ownership interests in business entities effective July 1,
+  2026, independent contractors, and trade-secret alternatives.
 resource: 'https://openagreements.org/practice-guides/non-compete/us/south-dakota'
-timestamp: '2026-06-02'
+timestamp: '2026-06-26'
 tags:
   - non-compete
   - South Dakota
@@ -15,7 +16,7 @@ tags:
 
 # Non-Competes in South Dakota[^about]
 
-A question-by-question summary of South Dakota non-compete law under SDCL chapter 53-9, including employee covenants, customer non-solicits, healthcare practitioners, sale-of-business covenants, independent contractors, and trade-secret alternatives.
+A question-by-question summary of South Dakota non-compete law under SDCL chapter 53-9, including employee covenants, customer non-solicits, healthcare practitioners, sale-of-business covenants, a new owner non-compete exception for transfers of ownership interests in business entities effective July 1, 2026, independent contractors, and trade-secret alternatives.
 
 ## Are employee non-compete agreements enforceable in South Dakota? {#employee-noncompetes}
 
@@ -90,6 +91,13 @@ The key drafting move is to tie the restriction to purchased goodwill. A buyer m
 
 South Dakota also recognizes a parallel exception for partnerships. On or in anticipation of dissolution, partners may agree not to carry on a similar business, though the permitted geography is tighter than the goodwill-sale rule, reaching only the same municipality where the partnership did business [^sdcl-53-9-10-partnership-dissolution].
 
+A new statutory exception is on the way. South Dakota has enacted House Bill 1180, which takes effect July 1, 2026 and adds a separate sale-of-business lane for transfers of ownership interests in business entities. Beginning on that date, the parties to a business entity's governing document, or to a contract for the purchase, sale, or transfer of an ownership interest in the entity, will be able to agree that a departing owner not engage in the same or similar business within the entity's specified geographic area for up to three years from the date of transfer [^hb-1180-owner-entity-transfer]. That will fill the space between the goodwill-sale exception in SDCL 53-9-9 and the partnership-dissolution exception in SDCL 53-9-10 by expressly reaching transfers of ownership interests in entities such as LLCs and corporations, and will permit a longer three-year restriction than the two-year ceiling on employee covenants.
+
+> [!NOTE]
+> **Practice note.**
+>
+> This exception is not yet in force. House Bill 1180 takes effect July 1, 2026, so a covenant signed before that date on the transfer of an entity ownership interest still depends on the existing goodwill-sale and partnership-dissolution exceptions. For transfers on or after July 1, 2026, draft the owner covenant to the House Bill 1180 limits, namely the same or similar business, the entity's specified geographic area, and no more than three years from the date of transfer [^hb-1180-owner-entity-transfer].
+
 ## Will South Dakota courts narrow an overbroad non-compete? {#overbroad-covenants}
 
 **Short answer.** Sometimes. South Dakota recognizes partial enforcement, but that does not let a drafter ignore the statute; the court modifies only to conform the covenant to statutory limits [^franklin-partial-enforcement].
@@ -147,7 +155,7 @@ For templates, align the duration clause, agreement term, termination language, 
 
 
 
-[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-02. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not South Dakota. This article synthesizes South Dakota primary law and is not legal advice from a South Dakota-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
+[^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-26. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not South Dakota. This article synthesizes South Dakota primary law and is not legal advice from a South Dakota-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 
 [^sdcl-53-9-8-void-baseline]: **S.D. Codified Laws § 53-9-8** — "Any contract restraining exercise of a lawful profession, trade, or business is void to that extent, except as provided by §§ 53-9-9 to 53-9-12, inclusive." *S.D. Codified Laws § 53-9-8.* <https://sdlegislature.gov/Statutes/53-9-8>
 
@@ -180,6 +188,8 @@ For templates, align the duration clause, agreement term, termination language, 
 [^franklin-similar-business]: **Franklin v. Forever Venture, Inc.** — "We conclude that a determination of what constitutes ‘carrying on a similar business’ in SDCL 53-9-9 should not include businesses or activities that are isolated, insubstantial, or non-detrimental." *Franklin v. Forever Venture, Inc., 2005 S.D. 53, ¶ 13, 696 N.W.2d 545.* <https://www.courtlistener.com/opinion/901375/franklin-v-forever-venture-inc/#:~:text=We%20conclude%20that%20a%20determination,are%20isolated%2C%20insubstantial%2C%20or%20non%2Ddetrimental.>
 
 [^sdcl-53-9-10-partnership-dissolution]: **S.D. Codified Laws § 53-9-10** — "Partners may, upon or in anticipation of a dissolution of the partnership, agree that none of them will carry on a similar business within the same municipality where the partnership business has been transacted or within a specified part thereof." *S.D. Codified Laws § 53-9-10.* <https://sdlegislature.gov/Statutes/53-9-10>
+
+[^hb-1180-owner-entity-transfer]: **S.D. House Bill 1180 (2026)** — "In any governing document of a business entity, or as part of a contract for the purchase, sale, or transfer of an ownership interest in the entity, the parties may agree that an owner, after the transfer of the interest in the entity, may not engage, directly or indirectly, in the same or similar type of business conducted by the entity during the owner's period of ownership, within the specified geographic area in which the entity conducts business, for a period not exceeding three years from the date of transfer." *2026 S.D. House Bill 1180, § 1 (to be codified at SDCL ch. 53-9) (eff. July 1, 2026).* <https://sdlegislature.gov/Session/Bill/27031>
 
 [^franklin-partial-enforcement]: **Franklin v. Forever Venture, Inc.** — "Yet, despite the covenant being overbroad in its restraint, we need not invalidate the entire provision." *Franklin v. Forever Venture, Inc., 2005 S.D. 53, ¶ 15, 696 N.W.2d 545.* <https://www.courtlistener.com/opinion/901375/franklin-v-forever-venture-inc/#:~:text=Yet%2C%20despite%20the%20covenant%20being,not%20invalidate%20the%20entire%20provision.>
 

@@ -6,7 +6,7 @@ description: >-
   quoted in 2 document(s).
 citation: 'Franklin v. Forever Venture, Inc., 2005 S.D. 53, ¶ 14, 696 N.W.2d 545.'
 resource: 'https://www.courtlistener.com/opinion/901375/franklin-v-forever-venture-inc/'
-timestamp: '2026-06-12'
+timestamp: '2026-06-26'
 document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/south-dakota'

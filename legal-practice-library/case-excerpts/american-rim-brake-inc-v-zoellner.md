@@ -7,7 +7,7 @@ description: >-
 citation: 'American Rim & Brake, Inc. v. Zoellner, 382 N.W.2d 421, 424 (S.D. 1986).'
 resource: >-
   https://www.courtlistener.com/opinion/1585102/american-rim-brake-inc-v-zoellner/
-timestamp: '2026-06-12'
+timestamp: '2026-06-26'
 document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/south-dakota'

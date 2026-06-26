@@ -7,7 +7,7 @@ description: >-
 citation: 'Central Monitoring Serv., Inc. v. Zakinski, 1996 S.D. 116, 553 N.W.2d 513.'
 resource: >-
   https://www.courtlistener.com/opinion/899991/central-monitoring-service-inc-v-zakinski/
-timestamp: '2026-06-12'
+timestamp: '2026-06-26'
 document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/south-dakota'
