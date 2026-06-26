@@ -1,5 +1,8 @@
 # Identify Business Update Log
 
+## 2026-06-26
+* **Update**: feat(privacy-corpus): add EchoStar — 492 → 493 policies (496/500 URLs) (#1055) ([fef5546](https://github.com/UseJunior/legal-explainer/commit/fef554671f164d24aeeea46e7e2ada4d3cc88cd4))
+
 ## 2026-06-25
 * **Update**: feat(privacy-detector): rescue final 7 holdouts via canonical captures — corpus 388→395 (#1041) ([5f17372](https://github.com/UseJunior/legal-explainer/commit/5f173729a023f9fb2108bf5dd25d3e159a2f716f))
 * **Update**: feat(privacy-corpus): add Diamondback Energy — lower content floor to 1000 (491 → 492) (#1050) ([6da2a05](https://github.com/UseJunior/legal-explainer/commit/6da2a05c855a6e997f4c4de12d2e3473f8cb04cc))
