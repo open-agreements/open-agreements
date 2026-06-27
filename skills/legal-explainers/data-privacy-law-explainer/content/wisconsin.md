@@ -2,7 +2,7 @@
 jurisdiction: "Wisconsin"
 slug: wisconsin
 countryCode: US
-snapshotAsOf: "2026-06-26"
+snapshotAsOf: "2026-06-27"
 lastReviewed: "2026-06-11"
 canonicalUrl: https://openagreements.org/practice-guides/privacy/us/wisconsin
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/privacy/us/wisconsin · **Snapshot as of:** 2026-06-26 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/privacy/us/wisconsin · **Snapshot as of:** 2026-06-27 · License: CC BY 4.0 · © openagreements.org
 
 # Wisconsin Consumer Privacy Law[^about]
 
