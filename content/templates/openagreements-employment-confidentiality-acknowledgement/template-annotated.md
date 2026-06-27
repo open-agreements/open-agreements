@@ -1,3 +1,7 @@
+> **This is a fill-in template, not legal advice.** Replace every `{field}` token
+> with your own value. `[[Defined Terms]]` are glossary markers, not blanks.
+> Clean (token-only) version: ./template.md
+
 # Employment Confidentiality Acknowledgement
 
 OpenAgreements Employment Confidentiality Acknowledgement (v1.2). Free to use under CC BY 4.0.
