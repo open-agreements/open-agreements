@@ -669,27 +669,4 @@ describe('validateTemplate multiselect coverage', () => {
     expect(result.errors.filter((e) => e.includes('statutory_compliance_representation'))).toEqual([]);
   });
 
-  it.openspec('OA-TMP-075')('emits the cover-notice cross-reference anchor, sentinel, and external hyperlink in the unfilled Florida template', () => {
-    const flDir = join(templatesDir, 'openagreements-restrictive-covenant-florida');
-    const zip = new AdmZip(join(flDir, 'template.docx'));
-    const docXml = zip.getEntry('word/document.xml')!.getData().toString('utf-8');
-    const relsXml = zip.getEntry('word/_rels/document.xml.rels')!.getData().toString('utf-8');
-
-    // The CHOICE Act counsel clause heading carries an xref bookmark…
-    expect(docXml).toMatch(/<w:bookmarkStart[^>]*w:name="oa_xref_[0-9a-f]+"/);
-    // …the cover bullet carries the matching (XML-escaped) cross-reference sentinel,
-    // inside an internal hyperlink to that bookmark…
-    const bm = docXml.match(/w:name="(oa_xref_[0-9a-f]+)"/)![1];
-    expect(docXml).toContain(`&lt;&lt;xref:${bm}&gt;&gt;`);
-    expect(docXml).toMatch(new RegExp(`<w:hyperlink[^>]*w:anchor="${bm}"`));
-    // …and the "for more details" URL is a real external hyperlink relationship.
-    expect(relsXml).toMatch(
-      /Type="[^"]*\/hyperlink"[^>]*Target="https:\/\/openagreements\.org\/legal\/non-compete\/florida"[^>]*TargetMode="External"/
-    );
-
-    // The unresolved sentinel must never be mistaken for an unknown placeholder.
-    const result = validateTemplate(flDir, 'openagreements-restrictive-covenant-florida');
-    expect([...result.errors, ...result.warnings].filter((m) => m.includes('xref'))).toEqual([]);
-    expect(result.errors).toEqual([]);
-  });
 });

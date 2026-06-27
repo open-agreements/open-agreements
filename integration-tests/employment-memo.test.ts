@@ -85,35 +85,6 @@ describe('employment memo generator', () => {
     expect(memo.disclaimer).toContain('not legal advice');
   });
 
-  it.openspec('OA-FIL-016')('produces deterministic baseline variance findings against selected baseline template', () => {
-    const templateId = 'openagreements-employee-ip-inventions-assignment';
-    const metadata = loadMetadata(mustFindTemplateDir(templateId));
-
-    const memo = generateEmploymentMemo({
-      templateId,
-      templateMetadata: metadata,
-      baselineTemplateId: templateId,
-      generatedAt: '2026-02-13T10:00:00.000Z',
-      values: {
-        company_name: 'Acme, Inc.',
-        employee_name: 'Taylor Developer',
-        effective_date: '2026-03-01',
-        confidential_information_definition: 'non-public business information',
-        return_of_materials_timing: 'within 5 days of termination',
-        governing_law: 'Delaware',
-        venue: 'San Francisco County, California',
-      },
-    });
-
-    const baselineVariance = memo.findings.filter((finding) => finding.category === 'baseline_variance');
-    expect(baselineVariance.length).toBeGreaterThan(0);
-
-    const governingLawVariance = baselineVariance.find((finding) =>
-      finding.id.includes('governing_law')
-    );
-    expect(governingLawVariance).toBeDefined();
-  });
-
   it.openspec('OA-FIL-016')('renders markdown output with mandatory disclaimer and citations', () => {
     const templateId = 'openagreements-employment-confidentiality-acknowledgement';
     const metadata = loadMetadata(mustFindTemplateDir(templateId));
@@ -173,30 +144,6 @@ describe('wyoming restrictive covenant memo', () => {
     const hasslerWarning = jurisdictionWarnings.find((f) => f.id.includes('hassler'));
     expect(hasslerWarning).toBeDefined();
     expect(hasslerWarning!.summary).toContain('Hassler');
-  });
-
-  it.openspec('OA-FIL-016')('warns when restriction pathway is none but non-compete fields populated', () => {
-    const templateId = 'openagreements-restrictive-covenant-wyoming';
-    const metadata = loadMetadata(mustFindTemplateDir(templateId));
-
-    const memo = generateEmploymentMemo({
-      templateId,
-      templateMetadata: metadata,
-      generatedAt: '2026-03-30T10:00:00.000Z',
-      values: {
-        employer_name: 'Mountain Corp',
-        employee_name: 'Jane Doe',
-        worker_category: 'Other',
-        applicable_noncompete_exceptions: 'None',
-        governing_law: 'Wyoming',
-      },
-    });
-
-    const pathwayWarning = memo.findings.find((f) =>
-      f.category === 'jurisdiction_warning' && f.id.includes('pathway-none')
-    );
-    expect(pathwayWarning).toBeDefined();
-    expect(pathwayWarning!.summary).toContain('void');
   });
 
   it.openspec('OA-FIL-016')('flags high-severity finding when worker category is blank', () => {

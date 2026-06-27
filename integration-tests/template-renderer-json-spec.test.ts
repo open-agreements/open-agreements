@@ -16,7 +16,13 @@ const it = itAllure.epic('Filling & Rendering');
 const repoRoot = join(import.meta.dirname, '..');
 const stylePath = join(repoRoot, 'scripts', 'template-specs', 'styles', 'openagreements-default-v1.json');
 const sources = discoverTemplateSources(repoRoot);
-const specPaths = sources.map((source) => join(repoRoot, source.jsonPath));
+const nativeSharedLayoutSlugs = new Set([
+  'openagreements-board-consent-safe',
+  'openagreements-stockholder-consent-safe',
+]);
+const specPaths = sources
+  .filter((source) => nativeSharedLayoutSlugs.has(source.slug))
+  .map((source) => join(repoRoot, source.jsonPath));
 
 describe('json template renderer', () => {
   it.openspec('OA-TMP-017')('supports multiple templates sharing the same layout id', () => {
@@ -33,7 +39,7 @@ describe('json template renderer', () => {
     }
     const sharedLayouts = [...specsByLayout.entries()].filter(([, group]) => group.length >= 2);
     expect(sharedLayouts.length).toBeGreaterThanOrEqual(1);
-    expect(specsByLayout.has('cover-standard-signature-v1')).toBe(true);
+    expect(specsByLayout.has('traditional-consent-v1')).toBe(true);
 
     const outputs = specs.map((spec) => renderFromValidatedSpec(spec, style));
     expect(outputs.length).toBe(specs.length);

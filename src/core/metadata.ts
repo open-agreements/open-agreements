@@ -78,7 +78,15 @@ export const FieldDefinitionSchema: z.ZodType<FieldDefinition> = z.lazy(() =>
     type: FieldTypeEnum,
     description: z.string(),
     display_label: z.string().optional(),
-    default: z.string().optional(),
+    // Accept YAML-native scalar defaults (`default: false`, `default: 5`) by
+    // coercing to their string form before validation. Upstream-authored
+    // metadata serializes booleans/numbers natively; downstream code already
+    // treats `default` as a string (e.g. JSON.parse(field.default), the
+    // `=== 'false'` checks), and String(false) === 'false' is value-preserving.
+    default: z.preprocess(
+      (v) => (typeof v === 'boolean' || typeof v === 'number' ? String(v) : v),
+      z.string().optional(),
+    ),
     default_value_rationale: z.string().optional(),
     options: z.array(z.string()).optional(),
     derive_booleans: z.boolean().optional(),
