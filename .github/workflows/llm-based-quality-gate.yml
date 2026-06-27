@@ -72,6 +72,7 @@ jobs:
       head_ref: ${{ steps.pr.outputs.head_ref }}
       head_sha: ${{ steps.pr.outputs.head_sha }}
       labels: ${{ steps.pr.outputs.labels }}
+      author: ${{ steps.pr.outputs.author }}
     steps:
       - name: Resolve PR context
         id: pr
@@ -84,10 +85,11 @@ jobs:
           PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
           PR_BASE_REF: ${{ github.event.pull_request.base.ref }}
           PR_LABELS: ${{ toJSON(github.event.pull_request.labels.*.name) }}
+          PR_AUTHOR: ${{ github.event.pull_request.user.login }}
         run: |
           set -euo pipefail
           if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
-            gh pr view "$DISPATCH_PR_NUMBER" --repo "$GITHUB_REPOSITORY" --json headRefOid,headRefName,baseRefName,labels,headRepository,headRepositoryOwner > "$RUNNER_TEMP/pr.json"
+            gh pr view "$DISPATCH_PR_NUMBER" --repo "$GITHUB_REPOSITORY" --json headRefOid,headRefName,baseRefName,labels,author,headRepository,headRepositoryOwner > "$RUNNER_TEMP/pr.json"
             # SECURITY: the job-level `if:` permits workflow_dispatch
             # unconditionally; the same-repo gate (`head.repo.full_name ==
             # github.repository`) is only enforced for pull_request events. Without
@@ -105,6 +107,7 @@ jobs:
               echo "head_ref=$(jq -r '.headRefName' "$RUNNER_TEMP/pr.json")"
               echo "base_ref=$(jq -r '.baseRefName' "$RUNNER_TEMP/pr.json")"
               echo "labels=$(jq -c '[.labels[].name]' "$RUNNER_TEMP/pr.json")"
+              echo "author=$(jq -r '.author.login' "$RUNNER_TEMP/pr.json")"
             } >> "$GITHUB_OUTPUT"
           else
             {
@@ -117,6 +120,7 @@ jobs:
               # single-line so the downstream `JSON.parse(PR_LABELS)` keeps
               # working and the override label can be evaluated.
               echo "labels=$(printf '%s' "$PR_LABELS" | jq -c .)"
+              echo "author=$PR_AUTHOR"
             } >> "$GITHUB_OUTPUT"
           fi
 
@@ -371,6 +375,8 @@ jobs:
           LLM_GATE_BLOCKING: ${{ env.LLM_GATE_BLOCKING }}
           PR_NUMBER: ${{ needs.parse-checklist.outputs.pr_number }}
           PR_LABELS: ${{ needs.parse-checklist.outputs.labels }}
+          PR_AUTHOR: ${{ needs.parse-checklist.outputs.author }}
+          PR_HEAD_REF: ${{ needs.parse-checklist.outputs.head_ref }}
           EVENT_NAME: ${{ github.event_name }}
           HEAD_SHA: ${{ needs.parse-checklist.outputs.head_sha }}
           REPO: ${{ github.repository }}
@@ -428,10 +434,25 @@ jobs:
             const passes = rows.filter(r => r.status === 'PASS').length;
             const overall = warns > 0 ? '⚠️ WARN' : (passes > 0 ? '✅ PASS' : '❓ NO RESULTS');
             const labels = JSON.parse(process.env.PR_LABELS || '[]');
-            const overrideActive = labels.includes('llm-gate/override');
+            const labelOverride = labels.includes('llm-gate/override');
+            // Automated SSOT-mirror sync PRs (deterministic branch `update/templates-*`
+            // opened by the GitHub App bot) carry generated, pre-reviewed content
+            // (LE projection tests + the OA acceptance gates). Their large binary
+            // DOCX diffs deterministically break the per-item LLM call, and code
+            // review of generated output adds no signal — so they are auto-overridden.
+            // Requires BOTH the deterministic branch prefix AND a bot author so a
+            // human can't craft a branch name to bypass the gate.
+            const author = process.env.PR_AUTHOR || '';
+            const headRef = process.env.PR_HEAD_REF || '';
+            const isBotAuthor = author.endsWith('[bot]') || author.startsWith('app/');
+            const isSyncBotPR = headRef.startsWith('update/templates-') && isBotAuthor;
+            const overrideActive = labelOverride || isSyncBotPR;
 
+            const overrideReason = isSyncBotPR && !labelOverride
+              ? 'automated sync PR (`update/templates-*`, bot-authored)'
+              : '`llm-gate/override` label is set';
             const overrideBanner = overrideActive
-              ? '\n\n> ⚠️ **Override active** — `llm-gate/override` label is set; this gate\'s WARN findings are non-blocking on this PR.\n'
+              ? `\n\n> ⚠️ **Override active** — ${overrideReason}; this gate\'s WARN findings are non-blocking on this PR.\n`
               : '';
             const summary = `**Overall:** ${overall} (${passes} pass · ${warns} warn · ${rows.length} total)`;
 
