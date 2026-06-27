@@ -163,10 +163,10 @@ export function validateTemplate(templateDir: string, templateId: string): Templ
     };
   }
 
-  // Upstream-authored templates (synced from the canonical Markdoc source, marked
-  // by a `template.mdoc` in the dir) ship a fully-rendered, humanized DOCX rather
-  // than an OA fill-token document — so the `{field}` placeholder-coverage / FOR /
-  // multiselect scans below do not apply. Their metadata has already been validated
+  // Templates that ship a fully-rendered, humanized DOCX (marked by a
+  // `template.mdoc` in the dir) rather than an OA fill-token document — so the
+  // `{field}` placeholder-coverage / FOR / multiselect scans below do not apply.
+  // Their metadata has already been validated
   // above by loadMetadata, and the license check runs separately. BUT the unsafe-tag
   // security scan is defense-in-depth and runs for EVERY committed DOCX regardless
   // of authorship (a DOCX must never carry docx-templates control/code tags).

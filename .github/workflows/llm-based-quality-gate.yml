@@ -435,9 +435,9 @@ jobs:
             const overall = warns > 0 ? '⚠️ WARN' : (passes > 0 ? '✅ PASS' : '❓ NO RESULTS');
             const labels = JSON.parse(process.env.PR_LABELS || '[]');
             const labelOverride = labels.includes('llm-gate/override');
-            // Automated SSOT-mirror sync PRs (deterministic branch `update/templates-*`
-            // opened by the GitHub App bot) carry generated, pre-reviewed content
-            // (LE projection tests + the OA acceptance gates). Their large binary
+            // Automated template-update PRs (deterministic branch `update/templates-*`
+            // opened by the maintenance bot) carry generated, pre-reviewed content
+            // (validated upstream + by the acceptance gates below). Their large binary
             // DOCX diffs deterministically break the per-item LLM call, and code
             // review of generated output adds no signal — so they are auto-overridden.
             // Requires BOTH the deterministic branch prefix AND a bot author so a
@@ -449,7 +449,7 @@ jobs:
             const overrideActive = labelOverride || isSyncBotPR;
 
             const overrideReason = isSyncBotPR && !labelOverride
-              ? 'automated sync PR (`update/templates-*`, bot-authored)'
+              ? 'automated template-update PR (`update/templates-*`, bot-authored)'
               : '`llm-gate/override` label is set';
             const overrideBanner = overrideActive
               ? `\n\n> ⚠️ **Override active** — ${overrideReason}; this gate\'s WARN findings are non-blocking on this PR.\n`

@@ -79,7 +79,7 @@ export const FieldDefinitionSchema: z.ZodType<FieldDefinition> = z.lazy(() =>
     description: z.string(),
     display_label: z.string().optional(),
     // Accept YAML-native scalar defaults (`default: false`, `default: 5`) by
-    // coercing to their string form before validation. Upstream-authored
+    // coercing to their string form before validation. Generated template
     // metadata serializes booleans/numbers natively; downstream code already
     // treats `default` as a string (e.g. JSON.parse(field.default), the
     // `=== 'false'` checks), and String(false) === 'false' is value-preserving.
