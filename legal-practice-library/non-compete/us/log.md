@@ -1,5 +1,8 @@
 # Us Update Log
 
+## 2026-06-27
+* **Update**: fix(vermont): narrow unsupported Q8 garden-leave + inevitable-disclosure claims (closes #122) (#1121) ([2b887f3](https://github.com/UseJunior/legal-explainer/commit/2b887f3923400b5d46c2041995dd0ec14fc5042a))
+
 ## 2026-06-26
 * **Update**: Rename content/legal/ -> content/practice-guides/ to match URL taxonomy (#1082) ([7fb9b1a](https://github.com/UseJunior/legal-explainer/commit/7fb9b1a59b1be5495d248f7d0fff7a1a9bc6f126))
 * **Update**: Update South Dakota non-compete note for HB 1180 (eff. July 1, 2026) (#1084) ([9a4eb72](https://github.com/UseJunior/legal-explainer/commit/9a4eb72213fd3640c99e12cdaf1d21d962c0fe51))
