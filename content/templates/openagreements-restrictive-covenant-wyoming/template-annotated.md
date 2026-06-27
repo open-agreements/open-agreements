@@ -1,3 +1,7 @@
+> **This is a fill-in template, not legal advice.** Replace every `{field}` token
+> with your own value. `[[Defined Terms]]` are glossary markers, not blanks.
+> Clean (token-only) version: ./template.md
+
 # Employee Restrictive Covenant Agreement
 
 ## Cover Terms
