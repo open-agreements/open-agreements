@@ -1,5 +1,8 @@
 # Au Update Log
 
+## 2026-06-28
+* **Update**: Add notice, threshold, sale-of-business, and non-solicit columns to the non-compete survey table (closes #1122) (#1190) (d7148d9)
+
 ## 2026-06-26
 * **Update**: Rename content/legal/ -> content/practice-guides/ to match URL taxonomy (#1082) (7fb9b1a)
 

@@ -2,6 +2,7 @@
 
 ## 2026-06-28
 * **Update**: feat(non-compete): futureEffective[] + Legislation JSON-LD (closes #1085) (#1185) (61d26ba)
+* **Update**: Add notice, threshold, sale-of-business, and non-solicit columns to the non-compete survey table (closes #1122) (#1190) (d7148d9)
 
 ## 2026-06-27
 * **Update**: fix(vermont): narrow unsupported Q8 garden-leave + inevitable-disclosure claims (closes #122) (#1121) (2b887f3)

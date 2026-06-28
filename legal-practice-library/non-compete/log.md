@@ -1,5 +1,8 @@
 # Non Compete Update Log
 
+## 2026-06-28
+* **Update**: Add notice, threshold, sale-of-business, and non-solicit columns to the non-compete survey table (closes #1122) (#1190) (d7148d9)
+
 ## 2026-06-27
 * **Update**: Standardize core question slugs + per-row Details deep links on clause-family pages (#668) (#1133) (38b29ae)
 
