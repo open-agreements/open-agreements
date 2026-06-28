@@ -2,7 +2,7 @@
 jurisdiction: "Virginia"
 slug: virginia
 countryCode: US
-snapshotAsOf: "2026-06-27"
+snapshotAsOf: "2026-06-28"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/virginia
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/virginia · **Snapshot as of:** 2026-06-27 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/virginia · **Snapshot as of:** 2026-06-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Virginia[^about]
 
@@ -37,7 +37,7 @@ Virginia non-compete law combines Va. Code § 40.1-28.7:8, a common-law reasonab
 | **Maximum length set by law** | No statutory limit |
 | **Must the employer pay to enforce?** | Yes — severance or disclosed pay if fired without cause |
 
-## Are employee non-compete agreements enforceable in Virginia? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Virginia? {#employee-non-compete-enforceability}
 
 **Short answer.** Sometimes. Virginia remains a reasonableness state for workers outside the statutory ban, but Va. Code § 40.1-28.7:8 flatly prohibits employers from entering into, enforcing, or threatening to enforce non-competes with covered *low-wage employees* [^statutory-ban-baseline].
 
@@ -88,7 +88,7 @@ That does not mean every enforceability question can be decided from the pleadin
 >
 > Do not rely on a savings clause to rescue broad language. Virginia's cases put the burden on the employer to defend the language it chose, and clear overbreadth cannot be cured by asking the court to read the covenant as if it were narrower [^home-paramount-no-extrinsic-narrowing][^motion-control-strict-construction].
 
-## Does the restricted period toll or extend during breach or litigation in Virginia? {#tolling-extension}
+## Does the restricted period toll or extend during breach or litigation in Virginia? {#extended-for-breach}
 
 **Short answer.** Virginia law does not squarely answer this in the staged authorities. No source in this corpus resolves whether a non-compete period tolls during breach or litigation, or whether an extension-on-breach clause is enforceable; the available cases only supply strict-construction and overbreadth background [^tolling-motion-control-strict][^tolling-home-paramount-overbreadth].
 

@@ -2,7 +2,7 @@
 jurisdiction: "Maryland"
 slug: maryland
 countryCode: US
-snapshotAsOf: "2026-06-27"
+snapshotAsOf: "2026-06-28"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/maryland
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/maryland · **Snapshot as of:** 2026-06-27 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/maryland · **Snapshot as of:** 2026-06-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Maryland[^about]
 
@@ -35,7 +35,7 @@ Maryland enforces non-competes only when the restraint is reasonable under commo
 | **Restriction extended during a breach?** | Unsettled |
 | **Maximum length set by law** | No fixed cap for ordinary employees; 1 year for covered health-care |
 
-## Are employee non-compete agreements enforceable in Maryland? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Maryland? {#employee-non-compete-enforceability}
 
 **Short answer.** Yes, sometimes. Maryland is a reasonableness state, not a general ban state, so an ordinary employee non-compete is enforceable only if the employer has a legally protected interest, the restraint is no wider in scope and duration than reasonably necessary, it does not impose undue hardship on the employee, and it does not violate public policy [^seneca-four-part-test][^becker-general-rule].
 
@@ -89,7 +89,7 @@ Section 3-716 reinforces that focus. Section 3-716(a)'s void rule carves out pro
 >
 > Do not use a Maryland non-compete to block ordinary competition unconnected to a protectable interest. Tie the restraint to specific unique services, trade secrets, customer lists, or goodwill, and handle confidential-information protection through separate confidentiality and trade-secret terms [^becker-protectable-interests][^statute-client-list-carveout].
 
-## What duration and geographic scope are reasonable for a Maryland non-compete? {#duration-geography}
+## What duration and geographic scope are reasonable for a Maryland non-compete? {#duration-limits}
 
 **Short answer.** Outside the § 3-716 categories there is no fixed cap for ordinary employees. Maryland courts judge time and territory case by case, asking whether the restraint is reasonable on the specific facts [^ruhl-no-yardstick][^seneca-overbroad].
 
@@ -139,7 +139,7 @@ Trade-secret remedies can also outrun a contract's damages cap. In *Ingram v. Ca
 >
 > Where § 3-716 voids the covenant, build the protection plan around confidentiality and the trade-secret statute instead. Identify the actual trade secrets, document reasonable secrecy measures, and preserve the statutory injunction and damages remedies that do not depend on an enforceable non-compete [^mutsa-trade-secret-definition][^mutsa-injunction].
 
-## Does a Maryland non-compete toll or extend during breach or litigation? {#tolling-extension}
+## Does a Maryland non-compete toll or extend during breach or litigation? {#extended-for-breach}
 
 **Short answer.** This is an open Maryland question. No staged Maryland statute or appellate decision squarely endorses automatic judicial tolling or enforcement of an extension-on-breach clause after the stated restricted period expires [^ruhl-reasonableness-backdrop][^becker-reasonableness-backdrop].
 

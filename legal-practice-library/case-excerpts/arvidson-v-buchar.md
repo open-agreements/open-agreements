@@ -46,7 +46,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 > Accordingly, the Arvidsons have met their summary judgment burden, and the Court finds the covenant to not compete invalid and unenforceable as a matter of law
 
-- supports: `employee-noncompetes`
+- supports: `employee-non-compete-enforceability`
 - source_cards: `arvidson-enforceable`
 - cited_by: [Non-Competes in the U.S. Virgin Islands](../non-compete/us/virgin-islands.md)
 - link_to_source: <https://usvipublicportal-api.vicourts.org/courts/87edff36-c02b-4073-aea4-c0652bc123d9/cms/case/7432A3F8-AD71-45C5-B028-B4471D746A4E/docketentrydocuments/27b98266-7d9f-405f-b7ba-c221f8db0a97>
@@ -55,7 +55,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 > Accordingly, the Court implements this rule with a greater willingness to refuse to reform agreements that are not reasonable on their face
 
-- supports: `overbroad-narrowing`
+- supports: `court-narrowing`
 - source_cards: `q6-arvidson-strict`
 - cited_by: [Non-Competes in the U.S. Virgin Islands](../non-compete/us/virgin-islands.md)
 - link_to_source: <https://usvipublicportal-api.vicourts.org/courts/87edff36-c02b-4073-aea4-c0652bc123d9/cms/case/7432A3F8-AD71-45C5-B028-B4471D746A4E/docketentrydocuments/27b98266-7d9f-405f-b7ba-c221f8db0a97>
@@ -82,7 +82,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 > reasonableness is a fact intensive inquiry that depends on weighing the totality of the circumstances
 
-- supports: `governing-test`, `tolling`
+- supports: `extended-for-breach`, `governing-test`
 - source_cards: `arvidson-factintensive`, `q7-arvidson`
 - cited_by: [Non-Competes in the U.S. Virgin Islands](../non-compete/us/virgin-islands.md)
 - link_to_source: <https://usvipublicportal-api.vicourts.org/courts/87edff36-c02b-4073-aea4-c0652bc123d9/cms/case/7432A3F8-AD71-45C5-B028-B4471D746A4E/docketentrydocuments/27b98266-7d9f-405f-b7ba-c221f8db0a97>
@@ -91,7 +91,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 > The Covenant to not compete does not pass the three pronged business interest test and, by failing to provide time, place, and manner restrictions, is overly broad and invalid
 
-- supports: `duration-geography-scope`
+- supports: `duration-limits`
 - source_cards: `arvidson-scope`
 - cited_by: [Non-Competes in the U.S. Virgin Islands](../non-compete/us/virgin-islands.md)
 - link_to_source: <https://usvipublicportal-api.vicourts.org/courts/87edff36-c02b-4073-aea4-c0652bc123d9/cms/case/7432A3F8-AD71-45C5-B028-B4471D746A4E/docketentrydocuments/27b98266-7d9f-405f-b7ba-c221f8db0a97>
@@ -100,7 +100,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 > the soundest rule for the Virgin Islands is the equitable reformation approach
 
-- supports: `overbroad-narrowing`
+- supports: `court-narrowing`
 - source_cards: `q6-arvidson`
 - cited_by: [Non-Competes in the U.S. Virgin Islands](../non-compete/us/virgin-islands.md)
 - link_to_source: <https://usvipublicportal-api.vicourts.org/courts/87edff36-c02b-4073-aea4-c0652bc123d9/cms/case/7432A3F8-AD71-45C5-B028-B4471D746A4E/docketentrydocuments/27b98266-7d9f-405f-b7ba-c221f8db0a97>

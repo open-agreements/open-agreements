@@ -30,7 +30,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Because this restraint in each clause is unreasonable, each clause is void and unenforceable even if each is otherwise reasonable.
 
-- supports: `tolling-during-breach`
+- supports: `extended-for-breach`, `tolling-during-breach`
 - source_cards: `q6-hrblock-void`, `wi-hrblock-void`
 - cited_by: [Non-Compete Agreement Review Checklist — Wisconsin](../checklists/non-compete/us/wisconsin.md), [Non-Competes in Wisconsin](../non-compete/us/wisconsin.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1912635/hr-block-eastern-enterprises-inc-v-swenson/#:~:text=Because%20this%20restraint%20in%20each,if%20each%20is%20otherwise%20reasonable.>
@@ -39,7 +39,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > The effect of the extension provision thus makes the duration of the restraint not a fixed and definite time period but a time period that is contingent upon outcomes the employee cannot predict.
 
-- supports: `definitions`, `tolling-during-breach`
+- supports: `definitions`, `extended-for-breach`, `tolling-during-breach`
 - source_cards: `q6-hrblock-extension`, `wi-hrblock-definite-def`, `wi-hrblock-extension`
 - cited_by: [Non-Compete Agreement Review Checklist — Wisconsin](../checklists/non-compete/us/wisconsin.md), [Non-Competes in Wisconsin](../non-compete/us/wisconsin.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1912635/hr-block-eastern-enterprises-inc-v-swenson/#:~:text=The%20effect%20of%20the%20extension,outcomes%20the%20employee%20cannot%20predict.>

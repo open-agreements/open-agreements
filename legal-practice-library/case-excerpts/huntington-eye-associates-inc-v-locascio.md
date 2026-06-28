@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > An employee covenant not to compete is unreasonable on its face if its time or area limitations are excessively broad, or where the covenant appears designed to intimidate employees rather than to protect the employer’s business, and a court should hold any such covenant void and unenforceable, and not undertake even a partial enforcement of it, bearing in mind, however, that a standard of “unreasonable on its face” is to be distinguished from the standard of “reasonableness” used in inquiries adopted by other authorities to address the minor instances of overbreadth to which restrictive covenants are naturally prone.
 
-- supports: `court-narrowing`, `definitions`, `restrictive-covenants-each-independently-includable`, `severability-and-reformation`, `tolling`, `tolling-during-breach`
+- supports: `court-narrowing`, `definitions`, `extended-for-breach`, `restrictive-covenants-each-independently-includable`, `severability-and-reformation`, `tolling-during-breach`
 - source_cards: `huntington-eye-no-partial-enforcement`, `huntington-eye-tolling-no-partial-enforcement`, `wv-huntington-cov`, `wv-huntington-def`, `wv-huntington-sev`, `wv-huntington-toll`
 - cited_by: [Non-Compete Agreement Review Checklist — West Virginia](../checklists/non-compete/us/west-virginia.md), [Non-Competes in West Virginia](../non-compete/us/west-virginia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1298767/huntington-eye-associates-inc-v-locascio/#:~:text=An%20employee%20covenant%20not%20to,restrictive%20covenants%20are%20naturally%20prone.>

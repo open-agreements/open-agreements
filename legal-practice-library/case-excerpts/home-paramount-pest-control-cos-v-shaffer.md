@@ -50,7 +50,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > the clear overbreadth of the function here cannot be saved by narrow tailoring of geographic scope and duration.
 
-- supports: `court-narrowing`, `definitions`, `reasonableness-test`, `tolling-during-breach`, `tolling-extension`
+- supports: `court-narrowing`, `definitions`, `extended-for-breach`, `reasonableness-test`, `tolling-during-breach`
 - source_cards: `home-paramount-no-save`, `home-paramount-overbreadth`, `home-paramount-overbreadth-no-save`, `home-paramount-overbreadth-tolling`, `tolling-home-paramount-overbreadth`
 - cited_by: [Non-Compete Agreement Review Checklist — Virginia](../checklists/non-compete/us/virginia.md), [Non-Competes in Virginia](../non-compete/us/virginia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1057978/home-paramount-pest-control-v-shaffer/#:~:text=the%20clear%20overbreadth%20of%20the,of%20geographic%20scope%20and%20duration.>

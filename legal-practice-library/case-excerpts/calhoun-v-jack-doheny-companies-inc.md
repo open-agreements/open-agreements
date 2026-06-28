@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > As we shall show, it should have considered reformation of the agreement in the process of deciding the preliminary injunction motion.
 
-- supports: `reformation`, `severability-and-reformation`
+- supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `calhoun-pi-reform`, `tx-calhoun-pi-reform`
 - cited_by: [Non-Compete Agreement Review Checklist — Texas](../checklists/non-compete/us/texas.md), [Non-Competes in Texas](../non-compete/us/texas.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4773823/donald-calhoun-v-jack-doheny-companies-inc/#:~:text=As%20we%20shall%20show%2C%20it,deciding%20the%20preliminary%20injunction%20motion.>

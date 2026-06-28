@@ -30,7 +30,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > The court has held that the contract must be valid as written, and the court will not apportion or enforce a contract to the extent that it might be considered reasonable.
 
-- supports: `court-reformation`, `severability-and-reformation`
+- supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `bendinger-valid-as-written`, `q5-bendinger-no-rewrite`
 - cited_by: [Non-Compete Agreement Review Checklist — Arkansas](../checklists/non-compete/us/arkansas.md), [Non-Competes in Arkansas](../non-compete/us/arkansas.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2454655/bendinger-v-marshalltown-trowell-co/#:~:text=The%20court%20has%20held%20that,it%20might%20be%20considered%20reasonable.>

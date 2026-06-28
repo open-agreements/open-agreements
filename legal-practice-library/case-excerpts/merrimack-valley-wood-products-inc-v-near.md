@@ -30,7 +30,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Courts have the power to reform overly broad restrictive covenants if the employer shows that it acted in good faith in the execution of the employment contract.
 
-- supports: `court-reformation`, `severability-and-reformation`, `timing-and-execution-acknowledgements`, `tolling-during-breach`
+- supports: `court-narrowing`, `extended-for-breach`, `severability-and-reformation`, `timing-and-execution-acknowledgements`, `tolling-during-breach`
 - source_cards: `near-good-faith-reformation`, `near-reformation-narrowing`, `nh-near-good-faith`, `nh-near-good-faith-reformation`, `nh-near-narrowing-remedy`
 - cited_by: [Non-Compete Agreement Review Checklist — New Hampshire](../checklists/non-compete/us/new-hampshire.md), [Non-Competes in New Hampshire](../non-compete/us/new-hampshire.md)
 - link_to_source: <https://www.courtlistener.com/opinion/8093022/merrimack-valley-wood-products-inc-v-near/#:~:text=Courts%20have%20the%20power%20to,execution%20of%20the%20employment%20contract.>
@@ -39,7 +39,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Thus, the restrictive covenant goes far beyond the defendant’s sphere of customer goodwill, and was more restrictive than necessary to protect the plaintiffs’ legitimate interests.
 
-- supports: `definitions`, `new-hampshire-statutory-gates`, `restrictive-covenants-each-independently-includable`, `scope-duration-geography`
+- supports: `definitions`, `duration-limits`, `new-hampshire-statutory-gates`, `restrictive-covenants-each-independently-includable`
 - source_cards: `near-customer-sphere`, `nh-near-customer-sphere`, `nh-near-goodwill-gate`, `nh-near-sphere-covenant`
 - cited_by: [Non-Compete Agreement Review Checklist — New Hampshire](../checklists/non-compete/us/new-hampshire.md), [Non-Competes in New Hampshire](../non-compete/us/new-hampshire.md)
 - link_to_source: <https://www.courtlistener.com/opinion/8093022/merrimack-valley-wood-products-inc-v-near/#:~:text=Thus%2C%20the%20restrictive%20covenant%20goes,protect%20the%20plaintiffs%E2%80%99%20legitimate%20interests.>

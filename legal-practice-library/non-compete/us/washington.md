@@ -17,7 +17,7 @@ tags:
 
 Washington enforces employee non-competes today only above high, inflation-adjusted earnings thresholds and under strict notice and consideration rules — and a near-total statutory ban takes effect June 30, 2027 under Engrossed Substitute House Bill 1155.
 
-## Are employee non-compete agreements enforceable in Washington? {#enforceability}
+## Are employee non-compete agreements enforceable in Washington? {#employee-non-compete-enforceability}
 
 **Short answer.** Today, only narrowly — and not for long. Washington's Noncompetition Covenants Act, chapter 49.62 RCW, makes an employee non-compete void unless the employer clears every statutory condition, including an earnings threshold that exceeds $126,858.83 for 2026 [^rcw-020-void-conditions][^lni-thresholds-enforceability]. A near-total ban on all non-competition covenants then takes effect on June 30, 2027 [^eshb1155-intent-enforceability][^eshb1155-effective-date-enforceability].
 
@@ -62,7 +62,7 @@ That independent-consideration requirement codifies *Labriola v. Pollard Group, 
 
 This is Washington's garden-leave rule. An employer that lays a worker off cannot also enforce the non-compete for free; it must keep paying base salary during the restricted period, minus any compensation the former employee earns through subsequent employment [^rcw-020-layoff].
 
-## How long can a Washington non-compete last? {#duration}
+## How long can a Washington non-compete last? {#duration-limits}
 
 **Short answer.** Eighteen months is the practical ceiling. A court or arbitrator must presume that any non-compete longer than eighteen months after termination is unreasonable and unenforceable, and only clear and convincing evidence can rebut that presumption [^rcw-020-duration-duration].
 
@@ -146,7 +146,7 @@ But under the current statute, reformation is not free. RCW 49.62.080 imposes th
 >
 > Do not rely on a Washington court to save an overbroad covenant. Even though courts can reform, the act of reforming or partially enforcing triggers the statutory penalty against the employer, so scope, duration, and geography should be drafted to the minimum the legitimate interest requires [^rcw-080-reformation-penalty-court-narrowing][^woodmay-reasonable-extent-court-narrowing].
 
-## Does a Washington non-compete toll or extend during breach or litigation? {#tolling}
+## Does a Washington non-compete toll or extend during breach or litigation? {#extended-for-breach}
 
 **Short answer.** This is an open question, and the statute's structure cuts against automatic extension. Chapter 49.62 RCW does not address tolling or extending the restricted period during a breach or while litigation is pending, and the eighteen-month presumption caps duration regardless [^rcw-020-duration-tolling][^woodmay-reasonable-extent-tolling].
 

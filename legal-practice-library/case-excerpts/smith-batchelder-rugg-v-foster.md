@@ -38,7 +38,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > In scrutinizing restrictive covenants, this court employs the following three-pronged test: “[a] restraint on employment is reasonable only if it is no greater than necessary for the protection of the employer’s legitimate interest, does not impose undue hardship on the employee and is not injurious to the public interest.”
 
-- supports: `definitions`, `employee-noncompetes`, `new-hampshire-statutory-gates`, `restrictive-covenants-each-independently-includable`
+- supports: `definitions`, `employee-non-compete-enforceability`, `new-hampshire-statutory-gates`, `restrictive-covenants-each-independently-includable`
 - source_cards: `foster-three-part-test`, `nh-foster-restraint-test`, `nh-foster-three-part`, `nh-foster-three-prong-gate`
 - cited_by: [Non-Compete Agreement Review Checklist — New Hampshire](../checklists/non-compete/us/new-hampshire.md), [Non-Competes in New Hampshire](../non-compete/us/new-hampshire.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2375592/smith-batchelder-rugg-v-foster/#:~:text=In%20scrutinizing%20restrictive%20covenants%2C%20this,injurious%20to%20the%20public%20interest.%E2%80%9D>

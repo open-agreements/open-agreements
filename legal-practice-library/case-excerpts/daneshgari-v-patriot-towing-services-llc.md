@@ -30,7 +30,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > But the Supreme Court of Georgia has rejected—at least implicitly—the idea that “equity permits a court to extend the period of a non-compete agreement.”
 
-- supports: `tolling-during-breach`
+- supports: `extended-for-breach`, `tolling-during-breach`
 - source_cards: `ga-daneshgari-equity`, `q10-daneshgari-equity`
 - cited_by: [Non-Compete Agreement Review Checklist — Georgia](../checklists/non-compete/us/georgia.md), [Non-Competes in Georgia](../non-compete/us/georgia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/5295364/khosrow-daneshgari-v-patriot-towing-services-llc/#:~:text=But%20the%20Supreme%20Court%20of,period%20of%20a%20non%2Dcompete%20agreement.%E2%80%9D>
@@ -39,7 +39,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > On appeal, the defendants contend that the trial court erred in extending its injunction beyond the contractual expiration of the noncompete agreement. For the reasons set forth infra, we agree and reverse.
 
-- supports: `tolling-during-breach`
+- supports: `extended-for-breach`, `tolling-during-breach`
 - source_cards: `ga-daneshgari-no-extend`, `q10-daneshgari-no-extend`
 - cited_by: [Non-Compete Agreement Review Checklist — Georgia](../checklists/non-compete/us/georgia.md), [Non-Competes in Georgia](../non-compete/us/georgia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/5295364/khosrow-daneshgari-v-patriot-towing-services-llc/#:~:text=On%20appeal%2C%20the%20defendants%20contend,infra%2C%20we%20agree%20and%20reverse.>

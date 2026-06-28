@@ -17,7 +17,7 @@ tags:
 
 American Samoa has no non-compete statute and no on-point case law found in our review; its High Court would gap-fill through the imported common law of A.S.C.A. § 1.0201 and the Restatement reasonableness test, while local public policy and a tiny island economy make aggressive covenants hard to enforce.
 
-## Are employee non-compete agreements enforceable in American Samoa? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in American Samoa? {#employee-non-compete-enforceability}
 
 **Short answer.** Probably sometimes, but the law is genuinely unsettled. American Samoa has no statute that governs employee non-competes and no High Court decision that has squarely enforced or struck one down. A covenant would be judged under the common law the High Court imports through A.S.C.A. § 1.0201 [^asca-1-0201], which in practice means the Restatement reasonableness framework.
 
@@ -70,7 +70,7 @@ In *American Samoa Gov't v. Samoa Aviation, Inc.*, the High Court refused to voi
 
 That tendency is reinforced by *Ilalio*'s reliance on Restatement § 208, which lets a court enforce the remainder of a contract or limit an unconscionable term rather than strike everything [^ilalio-partial]. Still, reformation here is a prediction: no American Samoa decision has blue-penciled an employee non-compete, so an employer should draft to a defensible scope rather than count on judicial rescue.
 
-## Does the restricted period toll or extend if the employee breaches? {#tolling}
+## Does the restricted period toll or extend if the employee breaches? {#extended-for-breach}
 
 **Short answer.** American Samoa law is silent. No statute or High Court decision addresses whether a non-compete clock pauses during a breach, during litigation, or during an injunction application — and the deep-research record finds no local authority on either contractual or equitable tolling. The prudent assumption is that a court will not pause the clock unless the contract says so, so any extension-on-breach must be drafted expressly [^asca-1-0201-tolling].
 

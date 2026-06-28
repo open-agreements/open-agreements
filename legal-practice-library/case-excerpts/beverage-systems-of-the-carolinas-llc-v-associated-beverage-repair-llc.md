@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > However, parties cannot contract to give a court power that it does not have.
 
-- supports: `blue-pencil`, `severability-and-reformation`
+- supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `nc-beverage-contract`, `q5-beverage-contract`
 - cited_by: [Non-Compete Agreement Review Checklist — North Carolina](../checklists/non-compete/us/north-carolina.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/3186954/beverage-systems-of-the-carolinas-llc-v-associated-beverage-repair-llc/#:~:text=However%2C%20parties%20cannot%20contract%20to,that%20it%20does%20not%20have.>
@@ -41,7 +41,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > North Carolina has adopted the “strict blue pencil doctrine” under which a court cannot rewrite a faulty covenant not to compete but may enforce divisible and reasonable portions of the covenant while striking the unenforceable portions.
 
-- supports: `blue-pencil`, `severability-and-reformation`
+- supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `nc-beverage-strict`, `q5-beverage-strict`
 - cited_by: [Non-Compete Agreement Review Checklist — North Carolina](../checklists/non-compete/us/north-carolina.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/3186954/beverage-systems-of-the-carolinas-llc-v-associated-beverage-repair-llc/#:~:text=North%20Carolina%20has%20adopted%20the,while%20striking%20the%20unenforceable%20portions.>

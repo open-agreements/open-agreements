@@ -17,7 +17,7 @@ tags:
 
 Puerto Rico has no non-compete statute; post-employment covenants are enforceable only if they satisfy the strict three-part reasonableness test of Arthur Young & Co. v. Vega III, and courts void rather than rewrite any covenant that falls short.
 
-## Are employee non-compete agreements enforceable in Puerto Rico? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Puerto Rico? {#employee-non-compete-enforceability}
 
 **Short answer.** Sometimes. Puerto Rico has no statute that governs non-competes. As a civil-law jurisdiction, it enforces post-employment covenants only when they satisfy the strict three-part reasonableness test the Puerto Rico Supreme Court announced in *Arthur Young & Co. v. Vega III* [^ay-test].
 
@@ -83,7 +83,7 @@ This is a meaningful clarification of *Arthur Young*. The Court explained that i
 
 *Reyes Ramis* also confirms that the strict *Arthur Young* requirements are an employment-law doctrine. The Court held that a non-compete tied to a stock-redemption arrangement among owners did not have to conform fully to the strict conditions established in *Arthur Young* [^rr-stock]. Covenants ancillary to the sale of a business or an ownership exit are analyzed more flexibly than employer-employee restraints.
 
-## Does the restricted period toll or extend if the employee breaches? {#tolling}
+## Does the restricted period toll or extend if the employee breaches? {#extended-for-breach}
 
 **Short answer.** Puerto Rico primary law is silent. No Puerto Rico Supreme Court, Court of Appeals, federal district, or First Circuit decision squarely approves or rejects either a contractual extension-on-breach clause or a court-ordered equitable extension of a Puerto Rico non-compete. The safest assumption is that a court will hold the employer to the twelve-month ceiling [^ay-duration-2].
 

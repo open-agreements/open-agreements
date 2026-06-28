@@ -16,7 +16,7 @@ tags:
 
 Indiana enforces non-competes only when they are reasonable and protect a legitimate interest, applies a strict eraser-style blue pencil, and bans most physician-hospital covenants by statute.
 
-## Are employee non-compete agreements enforceable in Indiana? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Indiana? {#employee-non-compete-enforceability}
 
 **Short answer.** Yes, sometimes. Indiana is a reasonableness state, not a general ban state for the ordinary workforce. Courts disfavor non-competes as restraints of trade, construe them strictly against the employer, and enforce them only when the restraint is reasonable and protects a legitimate business interest [^krueger-strict-construction][^dicen-disfavored].
 
@@ -48,7 +48,7 @@ The Indiana Court of Appeals settled this point in *Med-1 Solutions, LLC v. Tayl
 
 Even so, consideration is only the threshold. In *Med-1 Solutions* itself the court still affirmed the denial of an injunction because the employer could not show the restraint was reasonable — so a covenant supported by continued employment can still fail on overbreadth.
 
-## What duration, geography, and activity scope are reasonable for an Indiana non-compete? {#duration-geography-scope}
+## What duration, geography, and activity scope are reasonable for an Indiana non-compete? {#duration-limits}
 
 **Short answer.** There is no fixed cap. The employer bears the burden of proving the covenant is reasonable in time, activity, and geographic scope, and a restraint that bars working for a competitor in *any capacity* is routinely struck down as too broad [^krueger-scope-burden][^med1-any-capacity].
 
@@ -111,7 +111,7 @@ On costs, Indiana follows the American Rule. A court may shift attorney's fees t
 >
 > Do not assume a foreign choice-of-law or forum clause will carry an Indiana covenant dispute. For a contract to improve Indiana real estate the clause is void by statute, and absent a contractual fee provision, attorney's fees are recoverable only for frivolous or bad-faith litigation [^forum-void-construction][^fees-bad-faith].
 
-## Does an Indiana non-compete toll or extend during breach or litigation? {#tolling-extension}
+## Does an Indiana non-compete toll or extend during breach or litigation? {#extended-for-breach}
 
 **Short answer.** This is an open Indiana question. No Indiana statute or precedential appellate decision squarely endorses automatically tolling or extending the restricted period while the former employee is in breach or while litigation is pending [^q8-krueger-reasonableness][^q8-heraeus-eraser].
 

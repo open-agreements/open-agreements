@@ -18,7 +18,7 @@ tags:
 
 A question-by-question summary of Idaho non-compete law under Idaho Code title 44 chapter 27, including the key-employee requirement, 18-month presumption, blue-pencil rule, non-solicitation versus non-dealing clauses, healthcare providers, sale-of-business covenants, choice-of-law limits, and trade-secret alternatives.
 
-## Are employee non-compete agreements enforceable in Idaho? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Idaho? {#employee-non-compete-enforceability}
 
 **Short answer.** Yes, but only for key employees or key independent contractors and only if the covenant is reasonable. Idaho Code § 44-2701 makes a qualifying covenant enforceable if reasonable[^idaho-44-2701-key-employee-enforceable] as to duration, geography, work scope, and business need.
 
@@ -59,7 +59,7 @@ That broad definition does not eliminate tailoring. Idaho Code § 44-2701 still 
 >
 > Name the protected interest and connect it to the worker. A generic competition ban is weaker than a covenant tied to the actual customer contacts, referral sources, confidential processes, technologies, or similar interests the worker can use against the employer [^idaho-44-2702-legitimate-interests][^idaho-44-2701-tailoring].
 
-## How long can an Idaho non-compete last, and what consideration is required? {#duration-consideration}
+## How long can an Idaho non-compete last, and what consideration is required? {#duration-limits}
 
 **Short answer.** Eighteen months or less is the statutory safe-harbor term. Idaho Code § 44-2704 presumes an eighteen-month-or-shorter postemployment term reasonable, and a restriction longer than eighteen months requires consideration beyond employment or continued employment [^idaho-44-2704-duration-presumption][^idaho-44-2704-duration-consideration].
 
@@ -85,7 +85,7 @@ Those presumptions matter in practice because a court may still ask whether the 
 >
 > Avoid statewide or all-industry language unless the facts justify it. Idaho's presumptions are strongest when the territory tracks the worker's actual service area or influence and the restricted business tracks the worker's actual work for the employer [^idaho-44-2704-geographic-presumption][^idaho-44-2704-line-of-business-presumption].
 
-## Will an Idaho court modify an overbroad non-compete? {#court-modification}
+## Will an Idaho court modify an overbroad non-compete? {#court-narrowing}
 
 **Short answer.** Usually yes, because Idaho's statute uses mandatory modification language. Idaho Code § 44-2703 says a court shall limit or modify[^idaho-44-2703-mandatory-modification] an unreasonable covenant and enforce it as limited or modified.
 
@@ -126,7 +126,7 @@ That makes no-service or non-dealing clauses a drafting risk. A clause that bars
 >
 > Healthcare enforcement needs evidence about actual services, patient access, referral sources, continuity of care, and community need. A reasonable time and radius may still fail as an injunction if the public-interest showing favors patient access to the provider [^intermountain-patient-choice][^dick-public-welfare].
 
-## Does an Idaho non-compete period toll or extend during a breach or litigation? {#tolling-during-breach}
+## Does an Idaho non-compete period toll or extend during a breach or litigation? {#extended-for-breach}
 
 **Short answer.** Idaho law is unsettled. No Idaho statute or Idaho appellate decision in the staged source corpus squarely addresses whether a non-compete term tolls during breach or litigation, so the safer answer is that the issue remains open.
 

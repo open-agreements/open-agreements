@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > When evaluating the reasonableness of a restrictive covenant, a court examines the restriction holistically and in context. That means evaluating all of the dimensions of the restrictive covenant and considering how it operates with other restrictions in the contract.
 
-- supports: `definitions`, `delaware-statutory-gates`, `employee-noncompetes`, `restrictive-covenants-each-independently-includable`, `tolling-during-breach`
+- supports: `definitions`, `delaware-statutory-gates`, `employee-non-compete-enforceability`, `restrictive-covenants-each-independently-includable`, `tolling-during-breach`
 - source_cards: `de-sunder-holistic-cov`, `de-sunder-holistic-def`, `de-sunder-holistic-gate`, `de-sunder-holistic-toll`, `sunder-chancery-holistic-review`
 - cited_by: [Non-Compete Agreement Review Checklist — Delaware](../checklists/non-compete/us/delaware.md), [Non-Competes in Delaware](../non-compete/us/delaware.md)
 - link_to_source: <https://www.courtlistener.com/opinion/9444424/sunder-energy-llc-v-jackson/#:~:text=When%20evaluating%20the%20reasonableness%20of,other%20restrictions%20in%20the%20contract.>

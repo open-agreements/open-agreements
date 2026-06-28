@@ -15,7 +15,7 @@ tags:
 
 A question-by-question summary of Wyoming's 2025 non-compete statute, recent Wyoming case law, and state-specific commentary on restrictive covenants.
 
-## Are employee non-compete agreements enforceable in Wyoming? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Wyoming? {#employee-non-compete-enforceability}
 
 **Short answer.** For contracts entered into on or after July 1, 2025, usually no. Wyo. Stat. § 1-23-108(a) voids most labor non-competes[^wyo-1-23-voids-labor-noncompetes] unless the covenant fits a statutory exception.
 
@@ -50,7 +50,7 @@ Wyoming courts also strictly construe[^brown-post-hire-strict-construction] rest
 
 **Short answer.** Likely yes under the dominant 2025 law-firm commentary, but that is still an interpretation rather than a Wyoming appellate holding.
 
-The reason is the statutory phrase "any person"[^wyo-1-23-any-person]. State-specific law-firm commentary reads that wording broadly enough to reach independent contractors, not only W-2 employees [^littler-any-status][^faegre-includes-contractors][^fisher-colorado-any-person]. That same broad phrasing closely mirrors Colorado's void-for-compensation rule, which is why commentary points to Colorado as the analogue. *See our companion note on [whether Colorado employee non-competes are enforceable](/practice-guides/non-compete/us/colorado#enforceability).*
+The reason is the statutory phrase "any person"[^wyo-1-23-any-person]. State-specific law-firm commentary reads that wording broadly enough to reach independent contractors, not only W-2 employees [^littler-any-status][^faegre-includes-contractors][^fisher-colorado-any-person]. That same broad phrasing closely mirrors Colorado's void-for-compensation rule, which is why commentary points to Colorado as the analogue. *See our companion note on [whether Colorado employee non-competes are enforceable](/practice-guides/non-compete/us/colorado#employee-non-compete-enforceability).*
 
 That is a strong drafting assumption for Wyoming templates, but a careful note should still say that Wyoming courts have not yet issued a controlling appellate decision on the contractor question.
 

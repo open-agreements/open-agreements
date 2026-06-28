@@ -30,7 +30,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Non-competition agreements are not favored in law and in considering them, courts recognize there are three major aspects to be looked to: the rights of the employer, the rights of the employee, and the rights of the public.
 
-- supports: `employee-noncompetes`, `mississippi-statutory-gates`, `restrictive-covenants-each-independently-includable`, `tolling-extension`
+- supports: `employee-non-compete-enforceability`, `extended-for-breach`, `mississippi-statutory-gates`, `restrictive-covenants-each-independently-includable`
 - source_cards: `ms-texas-road-boring-covenants`, `ms-texas-road-boring-gate`, `q7-texas-road-boring`, `texas-road-boring-three-aspects`
 - cited_by: [Non-Compete Agreement Review Checklist — Mississippi](../checklists/non-compete/us/mississippi.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1880375/texas-road-boring-co-of-louisiana-miss-v-parker/#:~:text=Non%2Dcompetition%20agreements%20are%20not%20favored,the%20rights%20of%20the%20public.>

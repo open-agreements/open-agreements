@@ -30,7 +30,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Courts are more reluctant to disturb restrictive covenants in buy-sell agreements than those in employment contracts.
 
-- supports: `duration-geography`, `new-mexico-statutory-gates`, `sale-of-business`
+- supports: `duration-limits`, `new-mexico-statutory-gates`, `sale-of-business`
 - source_cards: `bowen-sale-deference-gate`, `bowen-sale-more-deference`, `q10-bowen-sale-deference`
 - cited_by: [Non-Compete Agreement Review Checklist — New Mexico](../checklists/non-compete/us/new-mexico.md), [Non-Competes in New Mexico](../non-compete/us/new-mexico.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1211410/bowen-v-carlsbad-insurance-real-estate-inc/#:~:text=Courts%20are%20more%20reluctant%20to,than%20those%20in%20employment%20contracts.>
@@ -39,7 +39,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > It is well-settled that a restrictive covenant is valid if it is within reasonable limits of time and space and ancillary to a sale of a business.
 
-- supports: `duration-geography`, `new-mexico-statutory-gates`, `sale-of-business`
+- supports: `duration-limits`, `new-mexico-statutory-gates`, `sale-of-business`
 - source_cards: `bowen-sale-valid`, `bowen-sale-valid-gate`, `q10-bowen-sale-valid`
 - cited_by: [Non-Compete Agreement Review Checklist — New Mexico](../checklists/non-compete/us/new-mexico.md), [Non-Competes in New Mexico](../non-compete/us/new-mexico.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1211410/bowen-v-carlsbad-insurance-real-estate-inc/#:~:text=It%20is%20well%2Dsettled%20that%20a,a%20sale%20of%20a%20business.>
@@ -57,7 +57,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Whether there is a reasonable restraint depends on the facts of a particular case, D. W. Trowbridge Ford, Inc. v. Galyen, 200 Neb. 103, 106 , 262 N.W.2d 442, 445 (1978), and is a matter of law for the courts to decide.
 
-- supports: `definitions`, `duration-geography`
+- supports: `definitions`, `duration-limits`
 - source_cards: `bowen-facts-of-case`, `bowen-facts-particular-case`
 - cited_by: [Non-Compete Agreement Review Checklist — New Mexico](../checklists/non-compete/us/new-mexico.md), [Non-Competes in New Mexico](../non-compete/us/new-mexico.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1211410/bowen-v-carlsbad-insurance-real-estate-inc/#:~:text=Whether%20there%20is%20a%20reasonable,for%20the%20courts%20to%20decide.>

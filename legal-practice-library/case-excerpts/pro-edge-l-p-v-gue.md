@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Further, the court finds that the covenant not to compete is not unreasonably restrictive in time or area. The non-compete clause does not prevent Dr. Gue from practicing in the field of veterinary medicine, nor even in the specialty of embryo transfer in livestock. It merely prevents him from doing so within 250-miles of a Trans Ova facility, and for only 1 year following his separation from employment.
 
-- supports: `definitions`, `time-and-geography`
+- supports: `definitions`, `duration-limits`
 - source_cards: `ia-pro-edge-duration`, `q4-pro-edge-one-year`
 - cited_by: [Non-Compete Agreement Review Checklist — Iowa](../checklists/non-compete/us/iowa.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2397219/pro-edge-lp-v-gue/#:~:text=Further%2C%20the%20court%20finds%20that,following%20his%20separation%20from%20employment.>

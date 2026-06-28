@@ -16,7 +16,7 @@ tags:
 
 Rhode Island bans non-competes for several worker categories and regulated professions, while other restrictive covenants remain governed by strict common-law reasonableness limits and trade-secret law.
 
-## Are employee non-compete agreements enforceable in Rhode Island? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Rhode Island? {#employee-non-compete-enforceability}
 
 **Short answer.** Often no for covered workers. The Rhode Island Noncompetition Agreement Act makes a non-compete unenforceable against FLSA-nonexempt employees, student interns, workers age 18 or younger, and low-wage employees [^rinaa-covered-workers].
 

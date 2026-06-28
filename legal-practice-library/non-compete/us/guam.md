@@ -18,7 +18,7 @@ tags:
 
 Guam voids employee non-compete agreements by statute — 18 GCA § 88105 derives from former California Civil Code § 1673 and is virtually identical to California's Business and Professions Code § 16600 — and the Supreme Court of Guam reads it as a per-se ban, leaving only narrow sale-of-business and partnership-dissolution exceptions.
 
-## Are employee non-compete agreements enforceable in Guam? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Guam? {#employee-non-compete-enforceability}
 
 **Short answer.** No. Guam voids employee non-compete agreements by statute. Title 18 of the Guam Code Annotated, section 88105, makes every contract that restrains someone from exercising a lawful profession, trade, or business void to that extent, except for two narrow statutory exceptions — and in *Island Eye Center, Inc. v. Lombard* the Supreme Court of Guam read that language as a per-se ban [^stat-88105][^ie-void-holding].
 

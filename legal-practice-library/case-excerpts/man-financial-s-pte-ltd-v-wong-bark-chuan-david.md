@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 > All interference with individual liberty of action in trading, and all restraints of trade of themselves, if there is nothing more, are contrary to public policy, and therefore void.
 
-- supports: `employee-noncompetes`
+- supports: `employee-non-compete-enforceability`
 - source_cards: `mf-prima-facie-void`
 - cited_by: [Non-Competes in Singapore](../non-compete/sg.md)
 - link_to_source: <https://www.elitigation.sg/gdviewer/s/2007_SGCA_53>
@@ -65,7 +65,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 > There must always – and this is a fundamental legal proposition in this particular area of the law – be a legitimate proprietary interest which the court will then seek to protect by way of the doctrine of restraint of trade
 
-- supports: `employee-noncompetes`
+- supports: `employee-non-compete-enforceability`
 - source_cards: `mf-interest-required`
 - cited_by: [Non-Competes in Singapore](../non-compete/sg.md)
 - link_to_source: <https://www.elitigation.sg/gdviewer/s/2007_SGCA_53>
@@ -74,7 +74,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 > To recapitulate, Clause C.1 must be reasonable not only as between the parties, but also in the interests of the public as well before it will be upheld by the court.
 
-- supports: `employee-noncompetes`
+- supports: `employee-non-compete-enforceability`
 - source_cards: `mf-parties-public`
 - cited_by: [Non-Competes in Singapore](../non-compete/sg.md)
 - link_to_source: <https://www.elitigation.sg/gdviewer/s/2007_SGCA_53>

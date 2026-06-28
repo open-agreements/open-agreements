@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > As a matter of public policy, we strongly disfavor restrictive covenants, and the use of an equitable remedy to extend such a restriction beyond the plain terms of the contract, even in the context of a sale of a business, was not warranted without a finding that damages would be inadequate.
 
-- supports: `tolling-during-breach`, `tolling-extension`
+- supports: `extended-for-breach`, `tolling-during-breach`
 - source_cards: `automile-extension`, `automile-extension-disfavored`
 - cited_by: [Non-Compete Agreement Review Checklist — Massachusetts](../checklists/non-compete/us/massachusetts.md), [Non-Competes in Massachusetts](../non-compete/us/massachusetts.md)
 - link_to_source: <https://caselaw.findlaw.com/court/ma-supreme-judicial-court/2042227.html>

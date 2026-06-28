@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Arkansas Code Annotated section 4-75-101 (Supp. 2015), which became effective on July 22, 2015, pursuant to the enactment of Act 921 of 2015.
 
-- supports: `employee-noncompetes`, `parties-and-cover-term-identification`, `timing-and-execution-acknowledgements`
+- supports: `employee-non-compete-enforceability`, `parties-and-cover-term-identification`, `timing-and-execution-acknowledgements`
 - source_cards: `box-act-921-cover`, `box-act-921-timing`, `q1-box-effective-date`
 - cited_by: [Non-Compete Agreement Review Checklist — Arkansas](../checklists/non-compete/us/arkansas.md), [Non-Competes in Arkansas](../non-compete/us/arkansas.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4441363/box-v-jb-hunt-transport-inc/#:~:text=Arkansas%20Code%20Annotated%20section%204%2D75%2D101,of%20Act%20921%20of%202015.>
@@ -38,7 +38,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > However, in the present case the statutory law arguably applies only to the parties’ third restricted stock agreement executed in October 2015 after Act 921 became effective.
 
-- supports: `court-reformation`, `entire-agreement-amendment-waiver-e-signatures`
+- supports: `court-narrowing`, `entire-agreement-amendment-waiver-e-signatures`
 - source_cards: `box-amendment-track`, `q5-box-effective-date`
 - cited_by: [Non-Compete Agreement Review Checklist — Arkansas](../checklists/non-compete/us/arkansas.md), [Non-Competes in Arkansas](../non-compete/us/arkansas.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4441363/box-v-jb-hunt-transport-inc/#:~:text=However%2C%20in%20the%20present%20case,after%20Act%20921%20became%20effective.>

@@ -27,7 +27,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Covenants not to compete are enforceable if carefully drawn to protect only the legitimate interests of the employer.
 
-- supports: `court-narrowing`, `definitions`, `employee-noncompetes`, `reasonableness-test`, `restrictive-covenants-each-independently-includable`, `severability-and-reformation`
+- supports: `court-narrowing`, `definitions`, `employee-non-compete-enforceability`, `reasonableness-test`, `restrictive-covenants-each-independently-includable`, `severability-and-reformation`
 - source_cards: `narrow-careful-drafting`, `reason-legitimate-interests`, `robbins-legitimate-interests`, `ut-careful-drafting-sev`, `ut-robbins-cov`, `ut-robbins-defs`
 - cited_by: [Non-Compete Agreement Review Checklist — Utah](../checklists/non-compete/us/utah.md), [Non-Competes in Utah](../non-compete/us/utah.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1231169/robbins-v-finlay/#:~:text=Covenants%20not%20to%20compete%20are,legitimate%20interests%20of%20the%20employer.>

@@ -2,7 +2,7 @@
 jurisdiction: "Mississippi"
 slug: mississippi
 countryCode: US
-snapshotAsOf: "2026-06-27"
+snapshotAsOf: "2026-06-28"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/mississippi
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/mississippi · **Snapshot as of:** 2026-06-27 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/mississippi · **Snapshot as of:** 2026-06-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Mississippi[^about]
 
@@ -35,7 +35,7 @@ Mississippi enforces non-competes only when the restraint is reasonable under co
 | **Restriction extended during a breach?** | No judicial tolling (Frierson); express extension clause given effect (Cascio) |
 | **Maximum length set by law** | No statutory limit |
 
-## Are employee non-compete agreements enforceable in Mississippi? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Mississippi? {#employee-non-compete-enforceability}
 
 **Short answer.** Yes, sometimes. Mississippi is a common-law reasonableness state, not a general ban state and not a statutory-cap state. A non-compete is enforceable only if it is reasonable when the court weighs three competing interests — the employer's, the employee's, and the public's — and the employer carries the burden of proving that reasonableness [^texas-road-boring-three-aspects][^redd-foster-disfavored].
 
@@ -61,7 +61,7 @@ That said, timing still matters. Mississippi courts have suggested that a covena
 >
 > Do not assume the consideration question disappears in Mississippi just because continued employment can suffice. Document the covenant's tie to the employment relationship, and pair it with new consideration where practical, because Mississippi still construes the agreement strictly and scrutinizes the circumstances of signing [^raines-continued-employment].
 
-## What duration and geographic scope are reasonable for a Mississippi non-compete? {#duration-geography}
+## What duration and geographic scope are reasonable for a Mississippi non-compete? {#duration-limits}
 
 **Short answer.** There is no statutory cap. Mississippi courts test duration and territory against the employer's actual footprint and the employee's real influence, so a restraint tied to where the employee worked is far easier to defend than a sweeping statewide ban [^heatherly-statewide-unreasonable][^timber-lake-radius-reasonable].
 
@@ -113,7 +113,7 @@ In *Kennedy v. Metropolitan Life Insurance Co.*, the covenant barred conduct tha
 >
 > Do not assume a standard non-solicitation clause stops a former employee from serving customers who come to them. If the goal is to bar servicing former clients regardless of who makes first contact, use explicit non-dealing or no-acceptance language, because Mississippi reads ambiguity against the employer [^kennedy-ambiguous-accepting].
 
-## Does a Mississippi non-compete toll or extend during breach or litigation? {#tolling-extension}
+## Does a Mississippi non-compete toll or extend during breach or litigation? {#extended-for-breach}
 
 **Short answer.** Two different rules apply. A Mississippi court will not, on its own, extend a covenant beyond the end date the contract sets just because enforcement was delayed — under *Frierson*, the restricted period runs from the contractual termination date, not from a later decree. But where the agreement itself provides for an extension on breach, a court can give that clause effect [^frierson-no-extension][^cascio-extension-effect].
 

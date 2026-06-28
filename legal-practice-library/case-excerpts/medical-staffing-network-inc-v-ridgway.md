@@ -39,7 +39,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > To be enforceable under North Carolina law, a non-competition agreement must be: (1) in writing; (2) part of an employment contract; (3) based on valuable consideration; (4) reasonable as to time and territory; and (5) designed to protect a legitimate business interest.
 
-- supports: `enforceable`, `restrictive-covenants-each-independently-includable`
+- supports: `employee-non-compete-enforceability`, `restrictive-covenants-each-independently-includable`
 - source_cards: `nc-ridgway-five-factor`, `q1-ridgway-five-factor`
 - cited_by: [Non-Compete Agreement Review Checklist — North Carolina](../checklists/non-compete/us/north-carolina.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1156110/medical-staffing-network-inc-v-ridgway/#:~:text=To%20be%20enforceable%20under%20North,protect%20a%20legitimate%20business%20interest.>

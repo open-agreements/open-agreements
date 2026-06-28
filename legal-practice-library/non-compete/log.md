@@ -1,5 +1,8 @@
 # Non Compete Update Log
 
+## 2026-06-27
+* **Update**: Standardize core question slugs + per-row Details deep links on clause-family pages (#668) (#1133) ([38b29ae](https://github.com/UseJunior/legal-explainer/commit/38b29ae9680ea3061e43a26f0d4d5912196e04b3))
+
 ## 2026-06-26
 * **Update**: Rename content/legal/ -> content/practice-guides/ to match URL taxonomy (#1082) ([7fb9b1a](https://github.com/UseJunior/legal-explainer/commit/7fb9b1a59b1be5495d248f7d0fff7a1a9bc6f126))
 

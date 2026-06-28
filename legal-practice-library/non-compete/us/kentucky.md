@@ -16,7 +16,7 @@ tags:
 
 Kentucky enforces non-competes only when the restraint is reasonable under common law and supported by valid consideration, with a narrow statutory ban for temporary health care staffing.
 
-## Are employee non-compete agreements enforceable in Kentucky? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Kentucky? {#employee-non-compete-enforceability}
 
 **Short answer.** Yes, sometimes. Kentucky is a reasonableness state, not a general ban state. A non-compete is enforceable only if it is supported by valid consideration and is reasonable — affording fair protection to a legitimate employer interest without being so broad as to harm the public or impose undue hardship on the employee [^kegel-reasonableness-test].
 
@@ -55,7 +55,7 @@ The Kentucky Uniform Trade Secrets Act, codified at KRS 365.880 through 365.900,
 >
 > Do not use a Kentucky non-compete to block competition disconnected from a protectable interest. Tie the restraint to specific confidential information, trade secrets, or customer goodwill, and keep trade-secret remedies in a separate confidentiality and KUTSA strategy [^kutsa-trade-secret-definition].
 
-## What duration and geographic scope are reasonable for a Kentucky non-compete? {#duration-geography}
+## What duration and geographic scope are reasonable for a Kentucky non-compete? {#duration-limits}
 
 **Short answer.** There is no statutory cap. Kentucky courts weigh duration, geography, the employer's protectable interest, the burden on the employee, and the public effect as a whole, rather than applying fixed numbers [^q4-kegel-reasonableness].
 
@@ -81,7 +81,7 @@ That equitable power is not a license to overreach. Reformation is discretionary
 >
 > Do not rely on Kentucky's blue-pencil power as a safety net for an aggressive covenant. Draft tiered, severable, reasonable restraints, because reformation is discretionary and a court may decline to rescue a covenant it views as overreaching [^kegel-blue-pencil][^hodges-reformation-geography].
 
-## Does a Kentucky non-compete toll or extend during breach or litigation? {#tolling-extension}
+## Does a Kentucky non-compete toll or extend during breach or litigation? {#extended-for-breach}
 
 **Short answer.** This is an open Kentucky question. No staged Kentucky statute or appellate decision squarely endorses automatically tolling or extending the restricted period while the former employee is in breach or while litigation is pending [^q6-kegel-reasonableness-backdrop][^q6-kegel-blue-pencil].
 

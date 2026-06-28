@@ -66,7 +66,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > These requirements are: (1) the covenant must “be supported by consideration,” (2) “no bad faith” was involved “in the negotiation of the contract,” (3) the covenant must “be necessary to protect the goodwill of the business,” and (4) the covenant must “be reasonable in its restrictions as to time and area.
 
-- supports: `employee-noncompetes`, `reasonableness-test`, `restrictive-covenants-each-independently-includable`, `utah-statutory-gates`
+- supports: `employee-non-compete-enforceability`, `reasonableness-test`, `restrictive-covenants-each-independently-includable`, `utah-statutory-gates`
 - source_cards: `england-rose-park-test`, `reason-four-part`, `ut-rose-park-cov`, `ut-rose-park-gate`
 - cited_by: [Non-Compete Agreement Review Checklist — Utah](../checklists/non-compete/us/utah.md), [Non-Competes in Utah](../non-compete/us/utah.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10141125/england-logistics-v-kelles-transport-service/#:~:text=These%20requirements%20are%3A%20(1)%20the,as%20to%20time%20and%20area.>

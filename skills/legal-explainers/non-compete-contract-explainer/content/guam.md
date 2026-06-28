@@ -2,7 +2,7 @@
 jurisdiction: "Guam"
 slug: guam
 countryCode: US
-snapshotAsOf: "2026-06-27"
+snapshotAsOf: "2026-06-28"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/guam
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/guam · **Snapshot as of:** 2026-06-27 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/guam · **Snapshot as of:** 2026-06-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Guam[^about]
 
@@ -35,7 +35,7 @@ Guam voids employee non-compete agreements by statute — 18 GCA § 88105 derive
 | **Restriction extended during a breach?** | Not addressed |
 | **Maximum length set by law** | Not applicable (employee covenant void regardless of duration) |
 
-## Are employee non-compete agreements enforceable in Guam? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Guam? {#employee-non-compete-enforceability}
 
 **Short answer.** No. Guam voids employee non-compete agreements by statute. Title 18 of the Guam Code Annotated, section 88105, makes every contract that restrains someone from exercising a lawful profession, trade, or business void to that extent, except for two narrow statutory exceptions — and in *Island Eye Center, Inc. v. Lombard* the Supreme Court of Guam read that language as a per-se ban [^stat-88105][^ie-void-holding].
 

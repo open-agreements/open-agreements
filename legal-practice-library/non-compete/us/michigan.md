@@ -17,7 +17,7 @@ tags:
 
 Michigan enforces employee non-competes only when they are reasonable under MCL 445.774a, judges business-to-business covenants under the antitrust rule of reason, and gives courts discretion to limit overbroad covenants rather than voiding them outright.
 
-## Are employee non-compete agreements enforceable in Michigan? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Michigan? {#employee-non-compete-enforceability}
 
 **Short answer.** Yes, sometimes. Michigan is a reasonableness state, not a general-ban state: MCL 445.774a lets an employer enforce a covenant that protects a reasonable competitive business interest and is reasonable in duration, geographic area, and the type of employment restricted [^mcl-774a-employer-may-obtain][^borgiel-unfair-advantage].
 
@@ -40,7 +40,7 @@ The Michigan Uniform Trade Secrets Act supplies the trade-secret overlay. A trad
 
 "To the extent such an agreement provides reasonable protection for the confidential information of the employer, it does not violate the statute and is enforceable."[^follmer-confidential-info]
 
-## How long and how broad can a Michigan non-compete be? {#duration-geography}
+## How long and how broad can a Michigan non-compete be? {#duration-limits}
 
 **Short answer.** There is no fixed numeric cap. MCL 445.774a requires the duration, geographic area, and type of employment to be reasonable, and whether a covenant clears that bar is a question of law when the facts are undisputed [^mcl-774a-reasonable-scope][^coates-question-of-law].
 
@@ -121,7 +121,7 @@ But the clause type matters. In *Barshaw v. Allegheny Performance Plastics, LLC*
 
 "Under Michigan law, the Michigan forum-selection clause is valid and enforceable."[^stryker-michigan-clauses]
 
-## Does a Michigan non-compete toll or extend during breach or litigation? {#tolling-extension}
+## Does a Michigan non-compete toll or extend during breach or litigation? {#extended-for-breach}
 
 **Short answer.** This is an open Michigan question. No Michigan statute or appellate decision surfaced here squarely endorses automatic judicial tolling, or enforcement of an extension-on-breach clause after the stated restricted period expires [^mcl-774a-tolling-backdrop][^coates-tolling-backdrop].
 

@@ -17,7 +17,7 @@ tags:
 
 A question-by-question summary of Nevada non-compete law, including NRS 613.195, mandatory judicial revision, hourly-wage workers, volunteer customer limits, layoffs, assignment in transactions, healthcare covenants, and trade-secret alternatives.
 
-## Are employee non-compete agreements enforceable in Nevada? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Nevada? {#employee-non-compete-enforceability}
 
 **Short answer.** Yes, if they satisfy Nevada's statute. A non-compete is void unless it is supported by valuable consideration, protects no more than the employer needs, avoids undue hardship, and uses restrictions appropriate to the consideration given [^q1-nrs-613-195-enforceability].
 
@@ -40,7 +40,7 @@ The fourth requirement is especially important for mid-employment agreements. It
 >
 > Draft the restriction around the actual interest being protected. Nevada's statutory text makes the employer justify both the business need and the fit between the restraint and the consideration [^q2-nrs-613-195-four-prong].
 
-## Must a Nevada court revise an overbroad non-compete instead of voiding it? {#court-revision}
+## Must a Nevada court revise an overbroad non-compete instead of voiding it? {#court-narrowing}
 
 **Short answer.** Usually yes, when revision is possible. NRS 613.195(6) directs the court to revise and enforce an overbroad but consideration-supported covenant, and *Tough Turtle Turf* confirms that judicial revision is mandatory when the court can revise instead of rewrite the agreement [^q3-nrs-613-195-revision][^q3-tough-turtle-mandatory][^q3-tough-turtle-rewrite].
 
@@ -133,7 +133,7 @@ The open question is how much *Camco* survives the statutory proportionality req
 >
 > For a mid-employment rollout, fresh value is safer than relying only on continued employment. *Camco* supports continued employment as consideration, but the current statute separately tests whether the restriction is appropriate to the consideration [^q8-camco-consideration][^q8-nrs-613-195-consideration].
 
-## Does a Nevada non-compete toll or extend during breach or litigation? {#tolling-during-breach}
+## Does a Nevada non-compete toll or extend during breach or litigation? {#extended-for-breach}
 
 **Short answer.** This is an open question. Nevada's staged statute and cases do not squarely address judicial tolling or contractual extension clauses, though NRS 613.195(6) lets a court revise and enforce reasonable terms when revision is possible [^q9-nrs-613-195-revision].
 

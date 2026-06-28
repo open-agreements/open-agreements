@@ -2,7 +2,7 @@
 jurisdiction: "Australia"
 slug: au
 countryCode: AU
-snapshotAsOf: "2026-06-27"
+snapshotAsOf: "2026-06-28"
 lastReviewed: "2026-06-16"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/au
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/au · **Snapshot as of:** 2026-06-27 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/au · **Snapshot as of:** 2026-06-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Australia[^about]
 
@@ -35,7 +35,7 @@ Australia treats post-employment non-competes under the common-law restraint-of-
 | **Restriction extended during a breach?** | Not addressed |
 | **Maximum length set by law** | No statutory limit |
 
-## Are non-competes enforceable in Australia? {#enforceability}
+## Are non-competes enforceable in Australia? {#employee-non-compete-enforceability}
 
 **Short answer.** Only if the employer can justify them. A post-employment non-compete is treated as a restraint of trade, which Australian courts presume is invalid unless the employer shows the restraint is reasonably necessary to protect a legitimate business interest and is reasonable in reference to the interests of the parties and the public [^lindner-prima-facie-void] [^olson-justifiable-reasonable]. The validity of the restraint is assessed at the time the contract is made, not with hindsight [^olson-tested-at-contract].
 

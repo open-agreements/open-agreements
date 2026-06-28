@@ -36,7 +36,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > The time was only for one year, and while the statement of the locality itself was broad, the covenant was definitely restricted to the solicitation of customers of the plaintiff.
 
-- supports: `definitions`, `duration-geography`
+- supports: `definitions`, `duration-limits`
 - source_cards: `roessler-one-year-customer-limit`, `roessler-solicitation-limit`
 - cited_by: [Non-Compete Agreement Review Checklist — Connecticut](../checklists/non-compete/us/connecticut.md), [Non-Competes in Connecticut](../non-compete/us/connecticut.md)
 - link_to_source: <https://www.courtlistener.com/opinion/3323907/roessler-v-burwell/#:~:text=The%20time%20was%20only%20for,of%20customers%20of%20the%20plaintiff.>

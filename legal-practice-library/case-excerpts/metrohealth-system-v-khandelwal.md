@@ -38,7 +38,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > In short, evidence presented at the hearing supported the trial court’s finding that the 2015 noncompete agreement was more restrictive than necessary but that it could be modified to protect MetroHealth’s legitimate business interests.
 
-- supports: `duration-geography`, `ohio-statutory-gates`
+- supports: `duration-limits`, `ohio-statutory-gates`
 - source_cards: `metrohealth-modified`, `oh-metrohealth-trimmed`
 - cited_by: [Non-Compete Agreement Review Checklist — Ohio](../checklists/non-compete/us/ohio.md), [Non-Competes in Ohio](../non-compete/us/ohio.md)
 - link_to_source: <https://www.courtlistener.com/opinion/6205147/metrohealth-sys-v-khandelwal/#:~:text=In%20short%2C%20evidence%20presented%20at,protect%20MetroHealth%E2%80%99s%20legitimate%20business%20interests.>

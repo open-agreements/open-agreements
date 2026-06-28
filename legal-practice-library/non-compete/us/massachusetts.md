@@ -18,7 +18,7 @@ tags:
 
 Massachusetts enforces employee non-competes only when they meet the Noncompetition Agreement Act — a garden-leave or other agreed consideration, a 12-month cap, and strict notice rules — and voids them entirely for physicians, nurses, psychologists, social workers, and most of the broadcasting industry.
 
-## Are employee non-compete agreements enforceable in Massachusetts? {#enforceability}
+## Are employee non-compete agreements enforceable in Massachusetts? {#employee-non-compete-enforceability}
 
 **Short answer.** Sometimes, and only on strict terms. For agreements entered into on or after October 1, 2018, the Massachusetts Noncompetition Agreement Act makes an employee non-compete enforceable only if it satisfies a list of statutory requirements — including paid garden leave or other agreed consideration, a 12-month cap, and advance written notice [^mnaa-validity][^nuvasive-effective-date].
 
@@ -54,7 +54,7 @@ A qualifying garden leave clause means paying the former employee, on a pro-rata
 >
 > Do not rely on a token payment as *other mutually-agreed upon consideration* without analysis. The only consideration the statute defines is a garden leave clause paying at least 50% of the employee's highest base salary across the restricted period; the enforceability of a smaller fixed sum is unsettled, so size the consideration conservatively and specify it in the agreement [^consideration-requirement][^garden-leave-fifty-percent].
 
-## How long can a Massachusetts non-compete last? {#duration}
+## How long can a Massachusetts non-compete last? {#duration-limits}
 
 **Short answer.** Twelve months, with one narrow exception. The restricted period may not exceed 12 months from the end of employment, unless the employee breached a fiduciary duty or unlawfully took employer property — in which case it may run up to 2 years [^duration-cap].
 
@@ -107,7 +107,7 @@ These bans predate the 2018 act and operate independently of it. A contract rest
 
 The statutory bar is reinforced by Massachusetts common-law choice-of-law analysis, which can cut against a Massachusetts clause too. The Supreme Judicial Court refused to enforce a Massachusetts choice-of-law clause where applying Massachusetts law would violate the fundamental public policy of another state — California — that favors employee mobility [^oxford-choice-of-law]. Civil actions over a covered non-compete must be brought in the employee's county of residence or, by mutual agreement, in Suffolk County [^venue-statute].
 
-## Will a Massachusetts court reform an overbroad non-compete? {#reformation}
+## Will a Massachusetts court reform an overbroad non-compete? {#court-narrowing}
 
 **Short answer.** It can, at its discretion. Section 24L expressly authorizes a court to reform or otherwise revise a noncompetition agreement to make it valid and enforceable to the extent necessary to protect the employer's legitimate business interests [^reformation-statute].
 
@@ -126,7 +126,7 @@ In *F.A. Bartlett Tree Expert Co. v. Barrington*, the Supreme Judicial Court tre
 >
 > Do not assume a non-compete signed years ago still binds an employee who has since been promoted or had a material change in pay or duties. Under the material-change doctrine a court may treat the original covenant as abandoned, so re-paper the non-compete — in compliance with the current statute — whenever the role materially changes [^bartlett-abandonment][^bartlett-newcontract].
 
-## Does a Massachusetts non-compete toll or extend during a breach or litigation? {#tolling-extension}
+## Does a Massachusetts non-compete toll or extend during a breach or litigation? {#extended-for-breach}
 
 **Short answer.** Only as the statute allows, and a court will not extend it for you. The act itself extends the restricted period to up to 2 years when the employee breached a fiduciary duty or unlawfully took employer property; outside that, and absent an express tolling clause, a Massachusetts court will not equitably extend a non-compete past its stated term [^duration-extension][^emc-no-extension].
 

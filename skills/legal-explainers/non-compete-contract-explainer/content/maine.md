@@ -2,7 +2,7 @@
 jurisdiction: "Maine"
 slug: maine
 countryCode: US
-snapshotAsOf: "2026-06-27"
+snapshotAsOf: "2026-06-28"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/maine
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/maine · **Snapshot as of:** 2026-06-27 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/maine · **Snapshot as of:** 2026-06-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Maine[^about]
 
@@ -36,7 +36,7 @@ Maine regulates employee non-competes through 26 M.R.S. § 599-A, using statutor
 | **Restriction extended during a breach?** | Not addressed |
 | **Maximum length set by law** | No statutory maximum (reasonable duration) |
 
-## Are employee non-compete agreements enforceable in Maine? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Maine? {#employee-non-compete-enforceability}
 
 **Short answer.** Sometimes, but Maine starts from a statutory anti-restraint rule: 26 M.R.S. § 599-A says non-competes are contrary to public policy[^maine-599a-public-policy-narrow-interests] and enforceable only if reasonable and no broader than necessary to protect specified employer interests.
 

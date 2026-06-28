@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > The Sixth Appellate District has held that a covenant not to compete may not expire while the enforceability of that contract is being litigated.
 
-- supports: `tolling-during-breach`, `tolling-extension`
+- supports: `extended-for-breach`, `tolling-during-breach`
 - source_cards: `homan-tolling`, `oh-homan-tolling`
 - cited_by: [Non-Compete Agreement Review Checklist — Ohio](../checklists/non-compete/us/ohio.md), [Non-Competes in Ohio](../non-compete/us/ohio.md)
 - link_to_source: <https://www.courtlistener.com/opinion/3953241/homan-inc-v-a1-ag-services-llc/#:~:text=The%20Sixth%20Appellate%20District%20has,that%20contract%20is%20being%20litigated.>

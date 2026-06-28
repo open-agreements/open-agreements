@@ -16,7 +16,7 @@ tags:
 
 Florida enforces non-competes by statute and is among the most employer-friendly states, requiring a legitimate business interest and reasonable terms, with a separate 2025 CHOICE Act track for high earners.
 
-## Are employee non-compete agreements enforceable in Florida? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Florida? {#employee-non-compete-enforceability}
 
 **Short answer.** Yes. Florida is one of the most employer-friendly non-compete states in the country. Every restraint of trade is unlawful as a baseline, but section 542.335 of the Florida Statutes creates a broad statutory exception: a restrictive covenant is enforceable when it is in a signed writing, justified by a legitimate business interest, and reasonably necessary to protect that interest in time, area, and line of business [^q1-542018-baseline][^q1-542335-intro][^q1-542335-writing][^q1-542335-necessary].
 
@@ -42,7 +42,7 @@ The Florida Supreme Court confirmed in *White v. Mederi Caretenders* that the st
 >
 > A naked interest in avoiding ordinary competition is not protectable. Plead and prove a specific interest from the statutory categories — or an analogous one supported by evidence — because a restraint not tied to a legitimate business interest is void and unenforceable [^q2-542335-void].
 
-## How long can a Florida non-compete last? {#duration-reasonableness}
+## How long can a Florida non-compete last? {#duration-limits}
 
 **Short answer.** Under section 542.335, duration is governed by rebuttable presumptions that vary by context. Against a former employee, a restraint of six months or less is presumed reasonable and one longer than two years is presumed unreasonable. The window widens for the sale of a business and for covenants predicated on trade secrets, where five years or less is presumed reasonable [^q3-542335-employee-presumption][^q3-542335-tradesecret-presumption].
 
@@ -50,7 +50,7 @@ These are presumptions, not caps — either side can rebut them with evidence. F
 
 The presumptions vary by the relationship between the parties; for distributors, dealers, franchisees, or licensees of a mark, a restraint of one year or less is presumed reasonable [^q3-542335-distributor-presumption].
 
-## Will a Florida court rewrite an overbroad non-compete instead of voiding it? {#blue-pencil-reformation}
+## Will a Florida court rewrite an overbroad non-compete instead of voiding it? {#court-narrowing}
 
 **Short answer.** Yes — reformation is mandatory. If a restraint is overbroad, overlong, or otherwise broader than necessary, section 542.335 directs the court to *modify the restraint and grant only the relief reasonably necessary* to protect the legitimate business interest, rather than strike the covenant entirely [^q4-542335-modify].
 
@@ -111,7 +111,7 @@ In *Open Magnetic Imaging v. Nieves-Garcia*, the Third District found no Florida
 
 "In fact, we have located no Florida decision to date which has declined to enforce a non-compete agreement by virtue of the fact that an employee has been required to execute it after employment has commenced."[^q9-omi-consideration]
 
-## Does a Florida non-compete period pause or extend if the employee breaches or litigates? {#tolling-extension}
+## Does a Florida non-compete period pause or extend if the employee breaches or litigates? {#extended-for-breach}
 
 **Short answer.** Section 542.335 does not expressly address tolling — it neither requires nor forbids extending the restricted period for the time a former employee was in breach. What the statute does provide is a strong enforcement remedy: a violation creates a presumption of irreparable injury, and courts enforce covenants by injunction [^q10-542335-injunction].
 

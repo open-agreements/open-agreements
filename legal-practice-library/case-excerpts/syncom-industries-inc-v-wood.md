@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Finally, as the defendants have challenged both the geographic and temporal scope of the restrictive covenants, and have properly preserved those challenges, both aspects of the covenants are open to possible reformation.
 
-- supports: `tolling-during-breach`
+- supports: `extended-for-breach`
 - source_cards: `syncom-reformation-open`
 - cited_by: [Non-Competes in New Hampshire](../non-compete/us/new-hampshire.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1896769/syncom-industries-inc-v-wood/#:~:text=Finally%2C%20as%20the%20defendants%20have,are%20open%20to%20possible%20reformation.>
@@ -38,7 +38,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > If the trial court were to determine that the restrictive covenants could not be reformed due to Syncom’s bad faith, then there would be no need to further address their enforceability.
 
-- supports: `court-reformation`, `severability-and-reformation`, `timing-and-execution-acknowledgements`
+- supports: `court-narrowing`, `severability-and-reformation`, `timing-and-execution-acknowledgements`
 - source_cards: `nh-syncom-bad-faith`, `nh-syncom-reformation-bad-faith`, `syncom-bad-faith-reformation`
 - cited_by: [Non-Compete Agreement Review Checklist — New Hampshire](../checklists/non-compete/us/new-hampshire.md), [Non-Competes in New Hampshire](../non-compete/us/new-hampshire.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1896769/syncom-industries-inc-v-wood/#:~:text=If%20the%20trial%20court%20were,to%20further%20address%20their%20enforceability.>

@@ -48,7 +48,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > We have held that employment contracts containing general covenants by an employe not to compete after the termination of his employment are prima facie enforcible if they are reasonably limited as to duration of time and geographical extent.
 
-- supports: `definitions`, `employee-noncompetes`, `pennsylvania-statutory-gates`, `tolling-during-breach`, `tolling-extension`
+- supports: `definitions`, `employee-non-compete-enforceability`, `extended-for-breach`, `pennsylvania-statutory-gates`, `tolling-during-breach`
 - source_cards: `morgans-prima-facie`, `pa-morgans-prima-facie`, `pa-morgans-prima-facie-gate`, `pa-morgans-tolling`, `q8-morgans-prima-facie`
 - cited_by: [Non-Compete Agreement Review Checklist — Pennsylvania](../checklists/non-compete/us/pennsylvania.md), [Non-Competes in Pennsylvania](../non-compete/us/pennsylvania.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2330966/morgans-home-equipment-corp-v-martucci/#:~:text=We%20have%20held%20that%20employment,of%20time%20and%20geographical%20extent.>
