@@ -1,5 +1,8 @@
 # Non Compete Update Log
 
+## 2026-06-28
+* **Update**: feat(checklist): general Restatement §188-via-case authority for base reasonableness items (#582) (#1130) ([327c25b](https://github.com/UseJunior/legal-explainer/commit/327c25ba3428c63be436ba7fba94a55161365e23))
+
 ## 2026-06-24
 * **Update**: feat(json-twins): Phase 2 — Model B fields↔requirements + boilerplate→standard-provision (#1000) (#1005) ([c7a207f](https://github.com/UseJunior/legal-explainer/commit/c7a207f8b112098ff764b65e96103b7e015ea028))
 

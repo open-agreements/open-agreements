@@ -3,12 +3,14 @@ type: Case Excerpt
 title: 'Central Monitoring Service, Inc. v. Zakinski'
 description: >-
   Central Monitoring Serv., Inc. v. Zakinski, 1996 S.D. 116, 553 N.W.2d 513. —
-  quoted in 2 document(s).
+  quoted in 3 document(s).
 citation: 'Central Monitoring Serv., Inc. v. Zakinski, 1996 S.D. 116, 553 N.W.2d 513.'
 resource: >-
   https://www.courtlistener.com/opinion/899991/central-monitoring-service-inc-v-zakinski/
 timestamp: '2026-06-26'
 document_references:
+  - type: Review Checklist
+    resource: 'https://openagreements.org/checklists/non-compete/us'
   - type: Review Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/south-dakota'
   - type: State Law Practice Note
@@ -22,9 +24,18 @@ tags:
 
 *Central Monitoring Serv., Inc. v. Zakinski, 1996 S.D. 116, 553 N.W.2d 513.*
 
-Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
+
+### central-monitoring-service-inc-v-zakinski-a-promise-to-refrain-from-competition-7ef9579c {#central-monitoring-service-inc-v-zakinski-a-promise-to-refrain-from-competition-7ef9579c}
+
+> A promise to refrain from competition that imposes a restraint that is ancillary to an otherwise valid transaction or relationship is unreasonably in restraint of trade if (a) the restraint is greater than is needed to protect the promisee’s legitimate interest, or (b) the promisee’s need is outweighed by the hardship to the promisor and the likely injury to the public.
+
+- supports: `definitions`, `restrictive-covenants-each-independently-includable`
+- source_cards: `restatement-188-rule-of-reason`, `restatement-188-rule-of-reason-covenants`
+- cited_by: [Non-Compete Agreement Review Checklist](../checklists/non-compete/us.md)
+- link_to_source: <https://www.courtlistener.com/opinion/899991/central-monitoring-service-inc-v-zakinski/#:~:text=A%20promise%20to%20refrain%20from,likely%20injury%20to%20the%20public.>
 
 ### central-monitoring-service-inc-v-zakinski-however-if-an-employee-is-fired-71911c83 {#central-monitoring-service-inc-v-zakinski-however-if-an-employee-is-fired-71911c83}
 
