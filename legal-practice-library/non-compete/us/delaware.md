@@ -16,7 +16,7 @@ tags:
 
 Delaware enforces reasonable non-competes under Court of Chancery and Supreme Court case law, but modern decisions refuse to blue-pencil overbroad covenants and must be read with the physician ban and choice-of-law statute.
 
-## Are employee non-compete agreements enforceable in Delaware? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Delaware? {#employee-non-compete-enforceability}
 
 **Short answer.** Yes, if the covenant is reasonable, protects a legitimate economic interest, and survives the equities. Delaware courts do not mechanically enforce non-competes [^fp-uc-reasonableness-test].
 

@@ -18,7 +18,7 @@ tags:
 
 A question-by-question summary of South Dakota non-compete law under SDCL chapter 53-9, including employee covenants, customer non-solicits, healthcare practitioners, sale-of-business covenants, a new owner non-compete exception for transfers of ownership interests in business entities effective July 1, 2026, independent contractors, and trade-secret alternatives.
 
-## Are employee non-compete agreements enforceable in South Dakota? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in South Dakota? {#employee-non-compete-enforceability}
 
 **Short answer.** Sometimes, but only inside the statutory exception. SDCL 53-9-8 voids restraints on a lawful profession, trade, or business[^sdcl-53-9-8-void-baseline] except for the chapter 53-9 exceptions, and SDCL 53-9-11 allows an employee covenant only within its time, geography, customer, and like-business limits [^sdcl-53-9-11-employee-exception].
 

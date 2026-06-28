@@ -2,7 +2,7 @@
 jurisdiction: "Iowa"
 slug: iowa
 countryCode: US
-snapshotAsOf: "2026-06-27"
+snapshotAsOf: "2026-06-28"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/iowa
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/iowa · **Snapshot as of:** 2026-06-27 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/iowa · **Snapshot as of:** 2026-06-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Iowa[^about]
 
@@ -35,7 +35,7 @@ Iowa non-compete law uses a three-prong common-law reasonableness test, permits 
 | **Restriction extended during a breach?** | Unsettled |
 | **Maximum length set by law** | No statutory safe harbor (case by case) |
 
-## Are employee non-compete agreements enforceable in Iowa? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Iowa? {#employee-non-compete-enforceability}
 
 **Short answer.** Yes, when they are reasonable. Iowa has no general employee non-compete statute, so ordinary employment covenants are governed by a common-law reasonableness test that asks whether the restraint protects the employer without overburdening the employee or the public [^q1-revere-three-prong].
 
@@ -67,7 +67,7 @@ The other side of that rule is equally important. Iowa does not let a covenant s
 
 *AG Spectrum* shows the same limit in an independent-contractor setting. The Eighth Circuit, applying Iowa law, treated the company's ordinary reseller support and training as not entitled to special protection [^q3-ag-spectrum-support].
 
-## How long or geographically broad can an Iowa non-compete be? {#time-and-geography}
+## How long or geographically broad can an Iowa non-compete be? {#duration-limits}
 
 **Short answer.** There is no statutory safe harbor. Iowa evaluates duration, geography, and activity limits case by case, and the Eighth Circuit, applying Iowa law, has predicted that Iowa treats the ultimate enforceability question as one for the court [^q4-ag-spectrum-court-question][^q4-pro-edge-one-year].
 
@@ -77,7 +77,7 @@ The examples are fact-specific. In *Pro Edge*, a federal court applying Iowa law
 
 By contrast, *AG Spectrum* held a three-year restraint unreasonable on a record where the independent contractor developed his own customer base and received minimal support from the company [^q4-ag-spectrum-unreasonable]. The same case predicted that Iowa would leave enforceability to the court rather than a jury [^q4-ag-spectrum-court-question].
 
-## Will an Iowa court fix an overbroad non-compete or void it? {#court-reformation}
+## Will an Iowa court fix an overbroad non-compete or void it? {#court-narrowing}
 
 **Short answer.** Usually it may reform. Iowa rejected a strict all-or-nothing approach and allows partial enforcement to the extent reasonably necessary to protect legitimate interests, unless the facts show bad faith or oppression [^q5-ehlers-reform].
 
@@ -92,7 +92,7 @@ This is Iowa's version of a *purple pencil* rule. In *Ehlers*, the Iowa Supreme 
 >
 > Do not draft an intentionally oppressive covenant and assume a court will rescue it. *Ehlers* expressly preserves a bad-faith limit, and no covenant inserted for reasons other than protecting legitimate employer interests should be enforced in equity [^q5-ehlers-bad-faith].
 
-## Does an Iowa non-compete period toll or extend during breach or litigation? {#tolling-during-breach}
+## Does an Iowa non-compete period toll or extend during breach or litigation? {#extended-for-breach}
 
 **Short answer.** Iowa has no controlling appellate authority squarely deciding that a non-compete period tolls during breach or enforcement litigation. The closest Iowa doctrine is reformation, which reshapes an overbroad covenant to a reasonable scope; it is not a tolling rule [^q6-ehlers-reform].
 

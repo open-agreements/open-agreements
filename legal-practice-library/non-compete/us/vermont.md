@@ -16,7 +16,7 @@ tags:
 
 A question-by-question summary of Vermont's common-law reasonableness test for restrictive covenants, the leading Vermont Supreme Court cases, and the pending 2025-2026 legislative overhaul (H.205, H.334, H.583).
 
-## Are employee non-compete agreements enforceable in Vermont? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Vermont? {#employee-non-compete-enforceability}
 
 **Short answer.** Sometimes, under a common-law reasonableness test, but the framework is in active flux as the 2025-2026 legislature advances a sweeping prohibition.
 

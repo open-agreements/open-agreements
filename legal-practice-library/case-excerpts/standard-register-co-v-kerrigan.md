@@ -38,7 +38,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Stated negatively, the territorial scope renders the restraint unreasonable if it covers an area broader than necessary to protect the legitimate interest of the employer.
 
-- supports: `definitions`, `duration-geography`
+- supports: `definitions`, `duration-limits`
 - source_cards: `kerrigan-territorial-scope`, `sc-kerrigan-territory-def`
 - cited_by: [Non-Compete Agreement Review Checklist — South Carolina](../checklists/non-compete/us/south-carolina.md), [Non-Competes in South Carolina](../non-compete/us/south-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1356432/standard-register-co-v-kerrigan/#:~:text=Stated%20negatively%2C%20the%20territorial%20scope,legitimate%20interest%20of%20the%20employer.>
@@ -47,7 +47,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > The reason that contracts against competition are held to be unenforceable unless they meet certain criteria, is that they constitute a restraint upon trade which is against public policy.
 
-- supports: `employee-noncompetes`, `restrictive-covenants-each-independently-includable`, `south-carolina-statutory-gates`
+- supports: `employee-non-compete-enforceability`, `restrictive-covenants-each-independently-includable`, `south-carolina-statutory-gates`
 - source_cards: `kerrigan-restraint-of-trade`, `sc-kerrigan-gate`, `sc-kerrigan-restraint-cov`
 - cited_by: [Non-Compete Agreement Review Checklist — South Carolina](../checklists/non-compete/us/south-carolina.md), [Non-Competes in South Carolina](../non-compete/us/south-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1356432/standard-register-co-v-kerrigan/#:~:text=The%20reason%20that%20contracts%20against,which%20is%20against%20public%20policy.>

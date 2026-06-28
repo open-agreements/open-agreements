@@ -64,7 +64,7 @@ Supporting case-law excerpt. Quoted across 9 document(s) in the OpenAgreements l
 
 > Any contractual restraint of trade is prima facie unlawful and invalid.
 
-- supports: `enforceability`, `federal-reform`, `tolling`
+- supports: `employee-non-compete-enforceability`, `enforceability`, `federal-reform`, `tolling`
 - source_cards: `lindner-prima-facie`, `lindner-prima-facie-void`, `lindner-prima-facie-void-reform`, `lindner-prima-facie-void-tolling`
 - cited_by: [Non-Competes in Australia](../non-compete/au.md), [Non-Compete Enforceability in New South Wales](../non-compete/au/new-south-wales.md), [Non-Compete Enforceability in Victoria](../non-compete/au/victoria.md)
 - link_to_source: <https://www.hcourt.gov.au/sites/default/files/eresources/1950/HCA/48.pdf>

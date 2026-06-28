@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > To be reasonable in relation to an employer's competitive business interest, a restrictive covenant must protect against the employee's gaining some unfair advantage in competition with the employer, but not prohibit the employee from using general knowledge or skill.
 
-- supports: `definitions`, `employee-noncompetes`, `michigan-statutory-gates`, `parties-and-cover-term-identification`, `protectable-interests`, `restrictive-covenants-each-independently-includable`
+- supports: `definitions`, `employee-non-compete-enforceability`, `michigan-statutory-gates`, `parties-and-cover-term-identification`, `protectable-interests`, `restrictive-covenants-each-independently-includable`
 - source_cards: `borgiel-general-skill`, `borgiel-unfair-advantage`, `mi-borgiel-covenants`, `mi-borgiel-cover`, `mi-borgiel-defs`, `mi-borgiel-gate`, `mi-borgiel-skill-gate`
 - cited_by: [Non-Compete Agreement Review Checklist — Michigan](../checklists/non-compete/us/michigan.md), [Non-Competes in Michigan](../non-compete/us/michigan.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2026165/st-clair-medical-pc-v-borgiel/#:~:text=To%20be%20reasonable%20in%20relation,using%20general%20knowledge%20or%20skill.>

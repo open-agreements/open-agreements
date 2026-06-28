@@ -30,7 +30,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > "A restraint is reasonable only if it: (1) is no greater than is required for the protection of the legitimate interest of the employer, (2) does not impose undue hardship on the employee, and (3) is not injurious to the public"
 
-- supports: `enforceability`, `new-york-doctrine-gates`, `physician-specific-notices-and-carve-outs`, `restrictive-covenants-each-independently-includable`
+- supports: `employee-non-compete-enforceability`, `new-york-doctrine-gates`, `physician-specific-notices-and-carve-outs`, `restrictive-covenants-each-independently-includable`
 - source_cards: `natural-organics-public-prong`, `natural-organics-restraint-test`, `natural-organics-three-prong-gate`, `natural-organics-three-prong-test`
 - cited_by: [Non-Compete Agreement Review Checklist — New York](../checklists/non-compete/us/new-york.md), [Non-Competes in New York](../non-compete/us/new-york.md)
 - link_to_source: <https://www.courtlistener.com/opinion/5897806/natural-organics-inc-v-kirkendall/#:~:text=%22A%20restraint%20is%20reasonable%20only,not%20injurious%20to%20the%20public%22>

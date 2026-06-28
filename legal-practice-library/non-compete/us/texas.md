@@ -20,7 +20,7 @@ tags:
 
 A question-by-question summary of Texas non-compete law under the Covenants Not to Compete Act, Tex. Bus. & Com. Code §§ 15.50–15.52, including the ancillary-agreement requirement, the Light–Sheshunoff–Marsh consideration line, the reasonable time-geography-scope test, mandatory reformation of overbroad covenants, the pre-reformation damages bar, the attorney's-fee preemption question, the physician and SB 1318 health-care-practitioner limits, choice-of-law and forum rules, tolling, and trade-secret alternatives.
 
-## Are employee non-compete agreements enforceable in Texas? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Texas? {#employee-non-compete-enforceability}
 
 **Short answer.** Yes, within statutory limits. Texas is a reasonableness state: a non-compete is enforceable when it is ancillary to or part of an otherwise enforceable agreement and is limited as to time, geographic area, and scope of activity in a way that is reasonable and no broader than necessary to protect the employer's goodwill or other business interest [^bc-1550a-test].
 
@@ -68,7 +68,7 @@ The court went further in *Mann Frankfort Stein & Lipp Advisors, Inc. v. Fieldin
 
 For drafting, the lesson is to make the consideration concrete and to actually deliver it. An agreement that expressly promises access to confidential information, training, or equity, and that the employer honors, stands on far firmer ground than one resting on continued employment alone.
 
-## What time, geography, and scope limits are reasonable in Texas? {#reasonable-scope}
+## What time, geography, and scope limits are reasonable in Texas? {#duration-limits}
 
 **Short answer.** Limits tailored to the employer's actual protectable interest, no broader than necessary. The Act requires reasonable limits on time, geographic area, and scope of activity, and a restraint greater than needed to protect goodwill or another business interest is unreasonable [^q5-bc-1550a-scope]. There are no fixed numeric ceilings outside the health-care provisions; reasonableness is fact-specific.
 
@@ -83,7 +83,7 @@ Texas publishes no numeric ceiling for ordinary covenants, so reasonableness is 
 >
 > Do not assume a covenant that bars an employee from an entire industry across a wide region will be enforced. The Act requires the restraint to be no greater than necessary to protect a specific business interest, and an overbroad covenant is exposed to reformation down to the minimum a court finds reasonable [^q5-bc-1550a-scope].
 
-## Will a Texas court reform an overbroad non-compete instead of voiding it? {#reformation}
+## Will a Texas court reform an overbroad non-compete instead of voiding it? {#court-narrowing}
 
 **Short answer.** Yes, reformation is mandatory. If a covenant is ancillary to an otherwise enforceable agreement but its limits are unreasonable, the court shall reform it to the minimum reasonable restraint and enforce it as reformed [^bc-1551c-reform]. A federal court applying Texas law has said reformation should be considered even at the preliminary-injunction stage [^calhoun-pi-reform].
 
@@ -185,7 +185,7 @@ A choice-of-law clause is harder to use as an end-run around Texas policy. In *D
 
 The federal courts apply the same conflicts analysis. In *Cardoni v. Prosperity Bank*, the Fifth Circuit walked through the Texas-versus-other-state policy comparison, noting that Texas generally permits covenants that are reasonably limited in time and geography [^cardoni-conflicts]. The combined lesson is that forum clauses tend to hold, while a choice-of-law clause selecting a more employer-friendly state may yield to Texas policy when a Texas worker and Texas interests are involved, and conversely Texas policy may yield where another state's fundamental policy controls.
 
-## Does a tolling clause extend a Texas non-compete during breach or litigation? {#tolling-during-breach}
+## Does a tolling clause extend a Texas non-compete during breach or litigation? {#extended-for-breach}
 
 **Short answer.** Texas law does not clearly bless contractual tolling. No Texas statute or Texas Supreme Court decision squarely authorizes extending a non-compete's clock for the time an employee spent breaching or litigating, and any such extension still has to satisfy the Act's reasonableness limit [^q12-bc-1550a-reasonable]. The more dependable protection against ongoing violations is injunctive relief, which the Act expressly authorizes [^q12-bc-1551a-injunction].
 

@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Generally, because covenants not to compete are considered to be restraints on trade, they are presumptively void and are enforceable only to the extent that they are demonstratively reasonable.
 
-- supports: `employee-noncompetes`, `restrictive-covenants-each-independently-includable`
+- supports: `employee-non-compete-enforceability`, `restrictive-covenants-each-independently-includable`
 - source_cards: `mo-yates-presumptive-void`, `yates-presumptively-void`
 - cited_by: [Non-Compete Agreement Review Checklist — Missouri](../checklists/non-compete/us/missouri.md), [Non-Competes in Missouri](../non-compete/us/missouri.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1590178/payroll-advance-inc-v-yates/#:~:text=Generally%2C%20because%20covenants%20not%20to,that%20they%20are%20demonstratively%20reasonable.>

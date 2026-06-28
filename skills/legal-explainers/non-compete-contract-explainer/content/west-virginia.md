@@ -2,7 +2,7 @@
 jurisdiction: "West Virginia"
 slug: west-virginia
 countryCode: US
-snapshotAsOf: "2026-06-27"
+snapshotAsOf: "2026-06-28"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/west-virginia
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/west-virginia · **Snapshot as of:** 2026-06-27 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/west-virginia · **Snapshot as of:** 2026-06-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in West Virginia[^about]
 
@@ -35,7 +35,7 @@ West Virginia uses the common-law Reddy reasonableness test for employee non-com
 | **Restriction extended during a breach?** | Open question |
 | **Maximum length set by law** | No general statutory limit; physician covenants capped at 1 year |
 
-## Are employee non-compete agreements enforceable in West Virginia? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in West Virginia? {#employee-non-compete-enforceability}
 
 **Short answer.** Sometimes. West Virginia does not ban ordinary employee non-competes, but the employer must satisfy *Reddy* by showing a legitimate protectable interest and a restraint that is no greater than needed, does not impose undue hardship, and is not injurious to the public [^reddy-employee-rule-of-reason].
 
@@ -79,7 +79,7 @@ The practical distinction matters. A non-compete bars similar work in a time and
 
 Validity still depends on a three-factor test: a protectable business interest, a provision that reasonably and fairly protects it, and no unjust restriction on the employee's chosen business activity. The employer bears the first two burdens, while the employee bears the unjust-restriction burden [^wood-three-factor-test].
 
-## Does the restricted period toll or extend during a breach or lawsuit in West Virginia? {#tolling}
+## Does the restricted period toll or extend during a breach or lawsuit in West Virginia? {#extended-for-breach}
 
 **Short answer.** This is an open West Virginia question. The staged West Virginia appellate corpus does not contain a decision squarely deciding whether a court may extend a non-compete period for time spent in breach or litigation, or whether an extension-on-breach clause is enforceable.
 

@@ -27,7 +27,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > A restraint of trade is justifiable only if the restriction is reasonable in reference to the interests of the parties and of the public
 
-- supports: `enforceability`
+- supports: `employee-non-compete-enforceability`, `enforceability`
 - source_cards: `olson-justifiable-reasonable`
 - cited_by: [Non-Competes in Australia](../non-compete/au.md), [Non-Compete Enforceability in New South Wales](../non-compete/au/new-south-wales.md)
 - link_to_source: <https://www.caselaw.nsw.gov.au/decision/549fb2db3004262463b8633d>
@@ -90,7 +90,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > The courts in general take a stricter and less favourable view of covenants in restraint of trade entered into between employer and employee than of similar covenants in commercial agreements
 
-- supports: `enforceability`
+- supports: `employee-non-compete-enforceability`, `enforceability`
 - source_cards: `olson-stricter-employment`
 - cited_by: [Non-Competes in Australia](../non-compete/au.md), [Non-Compete Enforceability in New South Wales](../non-compete/au/new-south-wales.md)
 - link_to_source: <https://www.caselaw.nsw.gov.au/decision/549fb2db3004262463b8633d>
@@ -99,7 +99,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > The validity of the restraint is to be tested at the time of entering into the contract
 
-- supports: `enforceability`, `reasonableness`, `reasonableness-factors`, `tolling`
+- supports: `employee-non-compete-enforceability`, `reasonableness`, `reasonableness-factors`, `tolling`
 - source_cards: `olson-tested-at-contract`, `olson-tested-at-contract-reasonableness`, `olson-tested-at-contract-tolling`
 - cited_by: [Non-Competes in Australia](../non-compete/au.md), [Non-Compete Enforceability in New South Wales](../non-compete/au/new-south-wales.md)
 - link_to_source: <https://www.caselaw.nsw.gov.au/decision/549fb2db3004262463b8633d>

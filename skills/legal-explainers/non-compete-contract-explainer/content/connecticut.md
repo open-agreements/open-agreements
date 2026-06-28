@@ -2,7 +2,7 @@
 jurisdiction: "Connecticut"
 slug: connecticut
 countryCode: US
-snapshotAsOf: "2026-06-27"
+snapshotAsOf: "2026-06-28"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/connecticut
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/connecticut · **Snapshot as of:** 2026-06-27 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/connecticut · **Snapshot as of:** 2026-06-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Connecticut[^about]
 
@@ -35,7 +35,7 @@ Connecticut generally enforces non-competes only when the restraint is reasonabl
 | **Restriction extended during a breach?** | Silent — open question |
 | **Maximum length set by law** | No general statutory cap; physicians/PAs/APRNs capped at 1 year |
 
-## Are employee non-compete agreements enforceable in Connecticut? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Connecticut? {#employee-non-compete-enforceability}
 
 **Short answer.** Yes, sometimes. Connecticut is a reasonableness state, not a general ban state, and an employee non-compete is enforceable only if it is partial, reasonable, protective of a fair employer interest, not unduly harsh on the employee, and not injurious to the public interest [^scott-employee-noncompete-reasonableness][^scott-employee-livelihood].
 
@@ -63,7 +63,7 @@ CUTSA supplies the trade-secret overlay. A trade secret includes information suc
 >
 > Do not use a non-compete to block ordinary competition disconnected from a protectable interest. Tie the restraint to specific confidential information, trade secrets, customer lists, or goodwill, and keep trade-secret remedies in a separate confidentiality and CUTSA strategy [^scott-customer-confidential-information][^cutsa-trade-secret-definition][^cutsa-injunctive-relief].
 
-## What duration and geographic scope are reasonable for a Connecticut non-compete? {#duration-geography}
+## What duration and geographic scope are reasonable for a Connecticut non-compete? {#duration-limits}
 
 **Short answer.** There is no single statewide cap for ordinary employees. Connecticut courts balance time, geography, employer protection, employee burden, and public interest as a whole [^scott-geographic-area-reasonable][^scott-five-year-duration][^van-dyck-time-geography-intertwined].
 
@@ -117,7 +117,7 @@ For homemaker-companion and home-health services, Connecticut voids covenants no
 >
 > Do not use the ordinary *Scott* reasonableness test to rescue a covenant that a Connecticut occupation-specific statute voids. For covered workers, the statute controls first, and common-law reasonableness matters only if the statutory rule leaves room for enforcement [^physician-one-year-fifteen-mile-limit][^security-guard-trade-secret-exception][^home-health-worker-covenant-void].
 
-## Does a Connecticut non-compete toll or extend during breach or litigation? {#tolling-extension}
+## Does a Connecticut non-compete toll or extend during breach or litigation? {#extended-for-breach}
 
 **Short answer.** This is an open Connecticut question. No staged Connecticut statute or appellate decision squarely endorses automatic judicial tolling or enforcement of an extension-on-breach clause after the stated restricted period expires [^van-dyck-injunction-moot-after-period][^scott-reasonableness-backdrop-for-tolling].
 

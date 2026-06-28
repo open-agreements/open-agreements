@@ -16,7 +16,7 @@ tags:
 
 Montana starts from § 28-2-703's restraint-of-trade rule, but the Dobbins partial-restraint rule of reason leaves narrow covenants enforceable, while § 28-2-724 now bans many health-care provider non-competes in 2025 and 2026.
 
-## Are employee non-compete agreements enforceable in Montana? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Montana? {#employee-non-compete-enforceability}
 
 **Short answer.** Sometimes. Montana Code § 28-2-703 makes restraints on a lawful profession, trade, or business void, but Montana is not a California-style total-ban state because *Dobbins* preserves reasonable partial restraints [^montana-restraint-baseline][^dobbins-partial-restraint].
 

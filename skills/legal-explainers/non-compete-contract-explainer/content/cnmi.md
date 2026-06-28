@@ -2,7 +2,7 @@
 jurisdiction: "Northern Mariana Islands"
 slug: cnmi
 countryCode: US
-snapshotAsOf: "2026-06-27"
+snapshotAsOf: "2026-06-28"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/cnmi
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/cnmi · **Snapshot as of:** 2026-06-27 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/cnmi · **Snapshot as of:** 2026-06-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in the Northern Mariana Islands[^about]
 
@@ -35,7 +35,7 @@ The CNMI has no non-compete statute; post-employment covenants are enforceable o
 | **Restriction extended during a breach?** | Silent — rely on an explicit tolling clause kept within § 188 reasonableness |
 | **Maximum length set by law** | No statutory limit |
 
-## Are employee non-compete agreements enforceable in the CNMI? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in the CNMI? {#employee-non-compete-enforceability}
 
 **Short answer.** Sometimes. The Commonwealth of the Northern Mariana Islands has no statute that governs non-competes. When local written law is silent, the Commonwealth's rules-of-decision statute makes the Restatements the rules of decision [^cmc-3401], so a post-employment covenant is enforceable only if it is reasonable under Restatement (Second) of Contracts § 188.
 
@@ -112,7 +112,7 @@ A preliminary injunction is the usual enforcement tool, and in federal court it 
 
 That outcome is narrow in two respects. The court found the employer had produced a signed non-compete for only one of the two employees and none for the other, so the denial did not rest solely on covenant reasonableness. And it is a single fact-specific federal order, not a CNMI appellate rule. Even so, the same public-interest logic would likely make a physician, nurse, or other specialist non-compete hard to enforce where the restraint would remove the only local provider — a strong inference to plan around, not settled law.
 
-## Does the restricted period toll or extend if the employee breaches? {#tolling}
+## Does the restricted period toll or extend if the employee breaches? {#extended-for-breach}
 
 **Short answer.** CNMI primary law is silent. No Commonwealth statute or decision approves or rejects pausing or extending a non-compete during a period of breach or pending litigation, so the question is genuinely open. A contractual tolling clause is the safer route, but any extension must still leave the total restraint reasonable under § 188 [^tolling-188].
 

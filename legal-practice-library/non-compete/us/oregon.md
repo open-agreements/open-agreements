@@ -18,7 +18,7 @@ tags:
 
 A question-by-question summary of Oregon non-compete law, including ORS 653.295, the two-week notice rule, the exempt-employee salary threshold, the 12-month cap, garden-leave pay, void-not-voidable treatment, non-solicitation covenants, the 2025 medical-licensee ban, choice of law, and trade-secret alternatives.
 
-## Are employee non-compete agreements enforceable in Oregon? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Oregon? {#employee-non-compete-enforceability}
 
 **Short answer.** Sometimes, but only if the employer satisfies a strict statutory checklist. Under ORS 653.295, a non-compete is void and unenforceable unless the employer gave advance written notice or secured the covenant on a bona fide advancement, the employee is an exempt salaried worker who clears an annual income threshold, the employer has a protectable interest, and the employer delivers a signed copy within 30 days of termination — subject to the garden-leave and on-air-broadcasting paths discussed below [^q1-ors-653-295-void-unless].
 
@@ -75,7 +75,7 @@ The labor agency describes the same option in plainer terms, framing it as enfor
 >
 > If you plan to rely on the garden-leave option, put the payment promise in the agreement itself. The statute conditions this path on a written agreement to pay the greater of the two amounts for the restricted period [^q4-ors-653-295-garden-leave][^q4-boli-garden-leave].
 
-## How long can an Oregon non-compete last? {#duration}
+## How long can an Oregon non-compete last? {#duration-limits}
 
 **Short answer.** No more than 12 months from termination. ORS 653.295(3) caps the term at 12 months after the employee's termination, and any portion of the term beyond 12 months is void and cannot be enforced [^q5-ors-653-295-duration].
 
@@ -178,7 +178,7 @@ Because the checklist and the 12-month limit do not reach non-employment covenan
 >
 > Match the legal framework to the deal. An employee non-compete must clear the ORS 653.295 checklist, but a covenant tied to a business sale or an owner's interest falls outside the statute and is judged under common-law reasonableness, so do not assume the 12-month statutory cap applies to it [^q9b-ors-653-295-employment-only].
 
-## Does an Oregon non-compete toll or extend during breach or litigation? {#tolling-during-breach}
+## Does an Oregon non-compete toll or extend during breach or litigation? {#extended-for-breach}
 
 **Short answer.** Oregon authority is silent, and the statute's fixed cap cuts against tolling. ORS 653.295(3) measures the maximum 12-month term from the date of termination and voids any term in excess of 12 months, so a clause that purports to pause and extend the restriction past 12 months from termination risks running into that hard cap. No Oregon statute or case squarely approves or rejects a tolling clause [^q10-ors-653-295-cap].
 

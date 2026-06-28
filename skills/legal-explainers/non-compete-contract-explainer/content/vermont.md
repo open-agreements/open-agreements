@@ -2,7 +2,7 @@
 jurisdiction: "Vermont"
 slug: vermont
 countryCode: US
-snapshotAsOf: "2026-06-27"
+snapshotAsOf: "2026-06-28"
 lastReviewed: "2026-06-01"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/vermont
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/vermont · **Snapshot as of:** 2026-06-27 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/vermont · **Snapshot as of:** 2026-06-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Vermont[^about]
 
@@ -35,7 +35,7 @@ A question-by-question summary of Vermont's common-law reasonableness test for r
 | **Restriction extended during a breach?** | No equitable rewriting of the time term (Roy's Orthopedic) |
 | **Maximum length set by law** | No statutory limit |
 
-## Are employee non-compete agreements enforceable in Vermont? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Vermont? {#employee-non-compete-enforceability}
 
 **Short answer.** Sometimes, under a common-law reasonableness test, but the framework is in active flux as the 2025-2026 legislature advances a sweeping prohibition.
 

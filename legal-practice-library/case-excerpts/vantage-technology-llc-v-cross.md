@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Hence, a court may modify an unreasonable covenant so as to render it reasonable.
 
-- supports: `court-narrowing`, `tolling-during-breach`, `tolling-extension`
+- supports: `court-narrowing`, `extended-for-breach`, `tolling-during-breach`
 - source_cards: `tolling-reasonableness`, `vantage-modify`, `vantage-reasonableness-check`
 - cited_by: [Non-Compete Agreement Review Checklist — Tennessee](../checklists/non-compete/us/tennessee.md), [Non-Competes in Tennessee](../non-compete/us/tennessee.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1561156/vantage-technology-llc-v-cross/#:~:text=Hence%2C%20a%20court%20may%20modify,as%20to%20render%20it%20reasonable.>

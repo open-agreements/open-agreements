@@ -2,7 +2,7 @@
 jurisdiction: "Delaware"
 slug: delaware
 countryCode: US
-snapshotAsOf: "2026-06-27"
+snapshotAsOf: "2026-06-28"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/delaware
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/delaware · **Snapshot as of:** 2026-06-27 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/delaware · **Snapshot as of:** 2026-06-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Delaware[^about]
 
@@ -35,7 +35,7 @@ Delaware enforces reasonable non-competes under Court of Chancery and Supreme Co
 | **Restriction extended during a breach?** | Not addressed |
 | **Maximum length set by law** | No statutory limit |
 
-## Are employee non-compete agreements enforceable in Delaware? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Delaware? {#employee-non-compete-enforceability}
 
 **Short answer.** Yes, if the covenant is reasonable, protects a legitimate economic interest, and survives the equities. Delaware courts do not mechanically enforce non-competes [^fp-uc-reasonableness-test].
 

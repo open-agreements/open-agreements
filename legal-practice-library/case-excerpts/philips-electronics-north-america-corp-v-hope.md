@@ -30,7 +30,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Such tolling provisions appear to be valid under North Carolina law.
 
-- supports: `tolling`, `tolling-during-breach`
+- supports: `extended-for-breach`, `tolling-during-breach`
 - source_cards: `nc-philips-valid`, `q7-philips-valid`
 - cited_by: [Non-Compete Agreement Review Checklist — North Carolina](../checklists/non-compete/us/north-carolina.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2579285/philips-electronics-north-america-corp-v-hope/#:~:text=Such%20tolling%20provisions%20appear%20to,valid%20under%20North%20Carolina%20law.>
@@ -39,7 +39,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Thus, the expiration of the Non-Competition Agreement should be tolled for eleven months, until April 9, 2010.
 
-- supports: `tolling`
+- supports: `extended-for-breach`
 - source_cards: `q7-philips-tolled`
 - cited_by: [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2579285/philips-electronics-north-america-corp-v-hope/#:~:text=Thus%2C%20the%20expiration%20of%20the,months%2C%20until%20April%209%2C%202010.>

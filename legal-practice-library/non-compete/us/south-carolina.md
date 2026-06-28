@@ -16,7 +16,7 @@ tags:
 
 South Carolina enforces non-competes only when the restraint is reasonable under common law, strictly construes them against the employer, and will not blue-pencil an overbroad covenant.
 
-## Are employee non-compete agreements enforceable in South Carolina? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in South Carolina? {#employee-non-compete-enforceability}
 
 **Short answer.** Yes, sometimes. South Carolina has no general non-compete statute, so enforceability turns on common law: a covenant is upheld only if it is necessary to protect a legitimate interest, reasonably limited in time and place, not unduly harsh on the employee, reasonable as a matter of public policy, and supported by valuable consideration [^team-ia-five-factor-test][^kerrigan-restraint-of-trade].
 
@@ -64,7 +64,7 @@ Federal courts applying South Carolina law draw the line at the employee's own c
 >
 > Do not ask a current employee to sign a non-compete on the strength of keeping the same job. Pair the covenant with genuine new consideration — a raise, bonus, promotion, or a change in status — and document it, because an unchanged role will not support the restraint [^poole-separate-consideration][^poole-duties-unchanged].
 
-## What duration and geographic scope are reasonable for a South Carolina non-compete? {#duration-geography}
+## What duration and geographic scope are reasonable for a South Carolina non-compete? {#duration-limits}
 
 **Short answer.** There is no statutory cap; reasonableness is judged on the facts. The territory may be no broader than necessary to protect the employer's legitimate interest, and both time and place must independently be reasonably limited [^kerrigan-territorial-scope][^q4-team-ia-five-factor-test].
 
@@ -112,7 +112,7 @@ In *Palmetto Mortuary Transport, Inc. v. Knight Systems, Inc.*, the South Caroli
 >
 > Do not assume the relaxed sale-of-business standard rescues an ordinary employment non-compete. The looser scrutiny applies because the covenant is part of a business sale; a covenant a worker signs as a condition of employment is still judged under the strict five-factor test [^palmetto-relaxed-scrutiny][^palmetto-enforced].
 
-## Does a South Carolina non-compete toll or extend during breach or litigation? {#tolling-extension}
+## Does a South Carolina non-compete toll or extend during breach or litigation? {#extended-for-breach}
 
 **Short answer.** South Carolina law points against it. In *Stonhard*, the Supreme Court held that extending a covenant's time period beyond its stated expiration would be against public policy, and no South Carolina decision endorses automatic judicial tolling during a breach [^stonhard-no-extension][^q8-team-ia-five-factor-test].
 

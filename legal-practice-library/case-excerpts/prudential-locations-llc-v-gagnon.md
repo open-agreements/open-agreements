@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 > Even if a restrictive covenant otherwise satisfies the Traeger three-factor reasonableness test, it is unenforceable unless it is ancillary to a legitimate purpose not violative of Chapter 480.
 
-- supports: `court-narrowing`, `employee-noncompetes`, `hawaii-statutory-gates`, `protectable-interests`, `restrictive-covenants-each-independently-includable`, `severability-and-reformation`
+- supports: `court-narrowing`, `employee-non-compete-enforceability`, `hawaii-statutory-gates`, `protectable-interests`, `restrictive-covenants-each-independently-includable`, `severability-and-reformation`
 - source_cards: `employee-gagnon-legitimate-purpose-required`, `hi-gagnon-purpose-over-reasonableness`, `hi-gate-purpose-over-reasonableness`, `hi-narrowing-purpose`, `interests-gagnon-legitimate-purpose-required`, `narrowing-gagnon-legitimate-purpose-required`
 - cited_by: [Non-Compete Agreement Review Checklist — Hawaii](../checklists/non-compete/us/hawaii.md), [Non-Competes in Hawaii](../non-compete/us/hawaii.md)
 - link_to_source: <https://www.courtlistener.com/opinion/6358303/prudential-locations-llc-v-gagnon/#:~:text=Even%20if%20a%20restrictive%20covenant,not%20violative%20of%20Chapter%20480.>
@@ -59,7 +59,7 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 > Preventing competition, however, is not a legitimate ancillary purpose under HRS § 480-4(a).
 
-- supports: `court-narrowing`, `definitions`, `employee-noncompetes`, `protectable-interests`, `restrictive-covenants-each-independently-includable`
+- supports: `court-narrowing`, `definitions`, `employee-non-compete-enforceability`, `protectable-interests`, `restrictive-covenants-each-independently-includable`
 - source_cards: `employee-gagnon-competition-not-purpose`, `hi-gagnon-not-competition`, `hi-gagnon-purpose-not-competition`, `interests-gagnon-competition-not-purpose`, `narrowing-gagnon-competition-not-purpose`
 - cited_by: [Non-Compete Agreement Review Checklist — Hawaii](../checklists/non-compete/us/hawaii.md), [Non-Competes in Hawaii](../non-compete/us/hawaii.md)
 - link_to_source: <https://www.courtlistener.com/opinion/6358303/prudential-locations-llc-v-gagnon/#:~:text=Preventing%20competition%2C%20however%2C%20is%20not,purpose%20under%20HRS%20%C2%A7%20480%2D4(a).>

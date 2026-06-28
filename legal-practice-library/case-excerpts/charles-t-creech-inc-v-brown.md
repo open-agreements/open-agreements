@@ -38,7 +38,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Because we hold that this Agreement was not supported by adequate consideration, that is the only issue we address.
 
-- supports: `duration-geography`, `kentucky-statutory-gates`
+- supports: `duration-limits`, `kentucky-statutory-gates`
 - source_cards: `creech-consideration-only-issue`, `ky-creech-onlyissue-gate`
 - cited_by: [Non-Compete Agreement Review Checklist — Kentucky](../checklists/non-compete/us/kentucky.md), [Non-Competes in Kentucky](../non-compete/us/kentucky.md)
 - link_to_source: <https://www.courtlistener.com/opinion/5444327/charles-t-creech-inc-v-brown/#:~:text=Because%20we%20hold%20that%20this,the%20only%20issue%20we%20address.>
@@ -47,7 +47,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > In doing so, the Court proposed a six factor test that should be applied by the trial court in determining whether the non-compete portion of the Agreement is enforceable.
 
-- supports: `duration-geography`, `kentucky-statutory-gates`
+- supports: `duration-limits`, `kentucky-statutory-gates`
 - source_cards: `creech-six-factor-proposed`, `ky-creech-sixfactor-gate`
 - cited_by: [Non-Compete Agreement Review Checklist — Kentucky](../checklists/non-compete/us/kentucky.md), [Non-Competes in Kentucky](../non-compete/us/kentucky.md)
 - link_to_source: <https://www.courtlistener.com/opinion/5444327/charles-t-creech-inc-v-brown/#:~:text=In%20doing%20so%2C%20the%20Court%20proposed,of%20the%20Agreement%20is%20enforceable.>

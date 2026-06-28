@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Although plaintiff argues that the expansive restriction is necessary to protect its business interests, plaintiff does not have an unlimited right to restrict the business choices of its clients.
 
-- supports: `definitions`, `duration-geography`, `michigan-statutory-gates`, `restrictive-covenants-each-independently-includable`
+- supports: `definitions`, `duration-limits`, `michigan-statutory-gates`, `restrictive-covenants-each-independently-includable`
 - source_cards: `mi-midmichigan-covenants`, `mi-midmichigan-defs`, `mi-midmichigan-gate`, `mid-michigan-unlimited`
 - cited_by: [Non-Compete Agreement Review Checklist — Michigan](../checklists/non-compete/us/michigan.md), [Non-Competes in Michigan](../non-compete/us/michigan.md)
 - link_to_source: <https://www.courts.michigan.gov/siteassets/case-documents/uploads/opinions/final/coa/20160218_c323890_37_323890.opn.pdf>

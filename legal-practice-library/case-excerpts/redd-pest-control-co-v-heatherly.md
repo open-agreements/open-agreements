@@ -48,7 +48,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > We are of the opinion that the chancellor was justified in finding that it would be unreasonable as to Heatherly to restrict him from engaging in the pest control business throughout the State of Mississippi for the reason that Heatherly possessed no information that would make his competition with Redd unfair except in the Tupelo area.
 
-- supports: `definitions`, `duration-geography`, `mississippi-statutory-gates`, `parties-and-cover-term-identification`
+- supports: `definitions`, `duration-limits`, `mississippi-statutory-gates`, `parties-and-cover-term-identification`
 - source_cards: `heatherly-statewide-unreasonable`, `ms-heatherly-gate`, `ms-heatherly-territory`, `ms-heatherly-title`
 - cited_by: [Non-Compete Agreement Review Checklist — Mississippi](../checklists/non-compete/us/mississippi.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1851641/redd-pest-control-co-v-heatherly/#:~:text=We%20are%20of%20the%20opinion,except%20in%20the%20Tupelo%20area.>

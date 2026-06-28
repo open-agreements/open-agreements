@@ -2,7 +2,7 @@
 jurisdiction: "Wyoming"
 slug: wyoming
 countryCode: US
-snapshotAsOf: "2026-06-27"
+snapshotAsOf: "2026-06-28"
 lastReviewed: "2026-04-14"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/wyoming
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/wyoming · **Snapshot as of:** 2026-06-27 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/wyoming · **Snapshot as of:** 2026-06-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Wyoming[^about]
 
@@ -36,7 +36,7 @@ A question-by-question summary of Wyoming's 2025 non-compete statute, recent Wyo
 | **Restriction extended during a breach?** | Not addressed |
 | **Maximum length set by law** | No statutory limit |
 
-## Are employee non-compete agreements enforceable in Wyoming? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Wyoming? {#employee-non-compete-enforceability}
 
 **Short answer.** For contracts entered into on or after July 1, 2025, usually no. Wyo. Stat. § 1-23-108(a) voids most labor non-competes[^wyo-1-23-voids-labor-noncompetes] unless the covenant fits a statutory exception.
 
@@ -71,7 +71,7 @@ Wyoming courts also strictly construe[^brown-post-hire-strict-construction] rest
 
 **Short answer.** Likely yes under the dominant 2025 law-firm commentary, but that is still an interpretation rather than a Wyoming appellate holding.
 
-The reason is the statutory phrase "any person"[^wyo-1-23-any-person]. State-specific law-firm commentary reads that wording broadly enough to reach independent contractors, not only W-2 employees [^littler-any-status][^faegre-includes-contractors][^fisher-colorado-any-person]. That same broad phrasing closely mirrors Colorado's void-for-compensation rule, which is why commentary points to Colorado as the analogue. *See our companion note on [whether Colorado employee non-competes are enforceable](/practice-guides/non-compete/us/colorado#enforceability).*
+The reason is the statutory phrase "any person"[^wyo-1-23-any-person]. State-specific law-firm commentary reads that wording broadly enough to reach independent contractors, not only W-2 employees [^littler-any-status][^faegre-includes-contractors][^fisher-colorado-any-person]. That same broad phrasing closely mirrors Colorado's void-for-compensation rule, which is why commentary points to Colorado as the analogue. *See our companion note on [whether Colorado employee non-competes are enforceable](/practice-guides/non-compete/us/colorado#employee-non-compete-enforceability).*
 
 That is a strong drafting assumption for Wyoming templates, but a careful note should still say that Wyoming courts have not yet issued a controlling appellate decision on the contractor question.
 

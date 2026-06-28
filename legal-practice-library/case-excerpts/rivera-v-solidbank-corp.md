@@ -27,7 +27,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 > A provision on territorial limitation is necessary to guide an employee of what constitutes as violation of a restrictive covenant and whether the geographic scope is co-extensive with that in which the employer is doing business.
 
-- supports: `duration-geography`, `tolling`
+- supports: `duration-limits`, `extended-for-breach`
 - source_cards: `q11-rivera-certainty`, `rivera-territorial`
 - cited_by: [Non-Competes in the Philippines](../non-compete/ph.md)
 - link_to_source: <https://lawphil.net/judjuris/juri2006/apr2006/gr_163269_2006.html>

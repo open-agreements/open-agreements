@@ -39,7 +39,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Contracts which hinder them from doing so are "strictly construed and rigidly scanned and are declared void unless necessary for the reasonable protection of the employer."
 
-- supports: `definitions`, `employee-noncompetes`, `post-hire-consideration`, `pre-2025-agreements`, `timing-and-execution-acknowledgements`, `tolling-during-breach`
+- supports: `definitions`, `employee-non-compete-enforceability`, `post-hire-consideration`, `pre-2025-agreements`, `timing-and-execution-acknowledgements`, `tolling-during-breach`
 - source_cards: `brown-post-hire-strict-construction`, `brown-rigid-scrutiny`, `brown-strict-construction`, `brown-strict-construction-baseline`, `brown-tolling-scrutiny`
 - cited_by: [Non-Compete Agreement Review Checklist — Wyoming](../checklists/non-compete/us/wyoming.md), [Non-Competes in Wyoming](../non-compete/us/wyoming.md)
 - link_to_source: <https://www.courtlistener.com/opinion/9998787/jennifer-brown-fka-jennifer-stringer-nora-youngren-and-carol-wolfe-v/#:~:text=Contracts%20which%20hinder%20them%20from,reasonable%20protection%20of%20the%20employer.%22>

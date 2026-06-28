@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > As such, SDCL 53-9-12 “must be construed narrowly so as to promote the prohibition against contracts in restraint of trade.”
 
-- supports: `employee-noncompetes`, `restrictive-covenants-each-independently-includable`
+- supports: `employee-non-compete-enforceability`, `restrictive-covenants-each-independently-includable`
 - source_cards: `dolly-narrow-exception`, `sd-dolly-narrow-cov`
 - cited_by: [Non-Compete Agreement Review Checklist — South Dakota](../checklists/non-compete/us/south-dakota.md), [Non-Competes in South Dakota](../non-compete/us/south-dakota.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4479790/farm-bureau-life-ins-co-v-dolly/#:~:text=As%20such%2C%20SDCL%2053%2D9%2D12%20%E2%80%9Cmust,contracts%20in%20restraint%20of%20trade.%E2%80%9D>

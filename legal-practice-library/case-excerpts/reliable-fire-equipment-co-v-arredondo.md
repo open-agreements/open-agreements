@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 > A restrictive covenant, assuming it is ancillary to a valid employment relationship, is reasonable only if the covenant: (1) is no greater than is required for the protection of a legitimate business interest of the employer-promisee; (2) does not impose undue hardship on the employee-promisor, and (3) is not injurious to the public.
 
-- supports: `definitions`, `employee-noncompetes`, `restrictive-covenants-each-independently-includable`
+- supports: `definitions`, `employee-non-compete-enforceability`, `restrictive-covenants-each-independently-includable`
 - source_cards: `enforceable-when-reasonable-baseline`, `legitimate-business-interest-three-prong`, `reliable-fire-3prong`
 - cited_by: [Non-Compete Agreement Review Checklist](../checklists/non-compete/us.md), [Non-Competes in Illinois](../non-compete/us/illinois.md)
 - link_to_source: <https://www.courtlistener.com/opinion/3135645/reliable-fire-equipment-co-v-arredondo/#:~:text=A%20restrictive%20covenant%2C%20assuming%20it,not%20injurious%20to%20the%20public.>

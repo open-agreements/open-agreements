@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > The reasonableness of a noncompetition provision is a question of law when the relevant facts are undisputed.
 
-- supports: `duration-geography`, `michigan-statutory-gates`, `tolling-during-breach`, `tolling-extension`
+- supports: `duration-limits`, `extended-for-breach`, `michigan-statutory-gates`, `tolling-during-breach`
 - source_cards: `coates-question-of-law`, `coates-tolling-backdrop`, `mi-coates-gate`, `mi-coates-tolling`
 - cited_by: [Non-Compete Agreement Review Checklist — Michigan](../checklists/non-compete/us/michigan.md), [Non-Competes in Michigan](../non-compete/us/michigan.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2220514/coates-v-bastian-brothers-inc/#:~:text=The%20reasonableness%20of%20a%20noncompetition,the%20relevant%20facts%20are%20undisputed.>

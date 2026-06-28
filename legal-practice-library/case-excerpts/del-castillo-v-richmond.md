@@ -27,7 +27,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 > Later cases, and we think the rule is now well established, have held that a contract in restraint of trade is valid providing there is a limitation upon either time or place.
 
-- supports: `duration-geography`
+- supports: `duration-limits`
 - source_cards: `delcastillo-time-or-place`
 - cited_by: [Non-Competes in the Philippines](../non-compete/ph.md)
 - link_to_source: <https://lawphil.net/judjuris/juri1924/feb1924/gr_21127_1924.html>

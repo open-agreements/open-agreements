@@ -30,7 +30,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Covenants of this nature are in restraint of trade; the test is whether the particular restraint is reasonable on the specific facts.
 
-- supports: `tolling-during-breach`, `tolling-extension`
+- supports: `extended-for-breach`, `tolling-during-breach`
 - source_cards: `md-ruhl-reasonableness-backdrop`, `ruhl-reasonableness-backdrop`
 - cited_by: [Non-Compete Agreement Review Checklist — Maryland](../checklists/non-compete/us/maryland.md), [Non-Competes in Maryland](../non-compete/us/maryland.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2292892/ruhl-v-f-a-bartlett-tree-expert-co/#:~:text=Covenants%20of%20this%20nature%20are,reasonable%20on%20the%20specific%20facts.>
@@ -39,7 +39,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > There is no arbitrary yardstick as to what protection of the business of the employer is reasonably necessary, no categorical measurement of what constitutes undue hardship on the employee, no precise scales to weigh the interest of the public.
 
-- supports: `definitions`, `duration-geography`
+- supports: `definitions`, `duration-limits`
 - source_cards: `md-ruhl-no-yardstick`, `ruhl-no-yardstick`
 - cited_by: [Non-Compete Agreement Review Checklist — Maryland](../checklists/non-compete/us/maryland.md), [Non-Competes in Maryland](../non-compete/us/maryland.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2292892/ruhl-v-f-a-bartlett-tree-expert-co/#:~:text=There%20is%20no%20arbitrary%20yardstick,the%20interest%20of%20the%20public.>

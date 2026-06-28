@@ -41,7 +41,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Instead, our courts carefully review the covenants to assure they “(1) [are] reasonable in geographic scope and temporal duration, (2) advance a legitimate economic interest of the party seeking its enforcement, and (3) survive a balancing of the equities.”
 
-- supports: `definitions`, `delaware-statutory-gates`, `employee-noncompetes`, `restrictive-covenants-each-independently-includable`
+- supports: `definitions`, `delaware-statutory-gates`, `employee-non-compete-enforceability`, `restrictive-covenants-each-independently-includable`
 - source_cards: `de-fp-uc-test-cov`, `de-fp-uc-test-def`, `de-fp-uc-test-gate`, `fp-uc-reasonableness-test`
 - cited_by: [Non-Compete Agreement Review Checklist — Delaware](../checklists/non-compete/us/delaware.md), [Non-Competes in Delaware](../non-compete/us/delaware.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4739986/fp-uc-holdings-llc-fpmcm-llc-and-fast-pace-medical-clinic-pllc-v/#:~:text=Instead%2C%20our%20courts%20carefully%20review,a%20balancing%20of%20the%20equities.%E2%80%9D>

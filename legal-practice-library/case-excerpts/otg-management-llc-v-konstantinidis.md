@@ -39,7 +39,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > In order to be enforceable, an anticompetitive covenant ancillary to an employment agreement must be reasonable in time and area, necessary to protect the employer’s legitimate interests, not harmful to the public, and not unreasonably burdensome to the employee.
 
-- supports: `enforceability`, `parties-and-cover-term-identification`, `tolling-during-breach`, `tolling-extension`
+- supports: `employee-non-compete-enforceability`, `extended-for-breach`, `parties-and-cover-term-identification`, `tolling-during-breach`
 - source_cards: `otg-duration-reasonableness`, `otg-enforceability-standard`, `otg-time-area-cover`, `tolling-time-reasonableness`
 - cited_by: [Non-Compete Agreement Review Checklist — New York](../checklists/non-compete/us/new-york.md), [Non-Competes in New York](../non-compete/us/new-york.md)
 - link_to_source: <https://www.courtlistener.com/opinion/6314442/otg-management-llc-v-konstantinidis/#:~:text=In%20order%20to%20be%20enforceable%2C,unreasonably%20burdensome%20to%20the%20employee.>

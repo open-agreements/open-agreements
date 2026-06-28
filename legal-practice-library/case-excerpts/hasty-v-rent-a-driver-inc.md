@@ -47,7 +47,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > They are not, however, invalid per se and may be enforced, provided, they are reasonable under the particular circumstances.
 
-- supports: `enforceability`, `restrictive-covenants-each-independently-includable`
+- supports: `employee-non-compete-enforceability`, `restrictive-covenants-each-independently-includable`
 - source_cards: `hasty-disfavored`, `hasty-disfavored-enforceable`
 - cited_by: [Non-Compete Agreement Review Checklist — Tennessee](../checklists/non-compete/us/tennessee.md), [Non-Competes in Tennessee](../non-compete/us/tennessee.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2366827/hasty-v-rent-a-driver-inc/#:~:text=They%20are%20not%2C%20however%2C%20invalid,reasonable%20under%20the%20particular%20circumstances.>

@@ -2,7 +2,7 @@
 jurisdiction: "Rhode Island"
 slug: rhode-island
 countryCode: US
-snapshotAsOf: "2026-06-27"
+snapshotAsOf: "2026-06-28"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/rhode-island
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/rhode-island · **Snapshot as of:** 2026-06-27 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/rhode-island · **Snapshot as of:** 2026-06-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Rhode Island[^about]
 
@@ -36,7 +36,7 @@ Rhode Island bans non-competes for several worker categories and regulated profe
 | **Restriction extended during a breach?** | Not addressed |
 | **Maximum length set by law** | No general statutory length limit; physician/APRN sale-of-practice exception capped at 5 years |
 
-## Are employee non-compete agreements enforceable in Rhode Island? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Rhode Island? {#employee-non-compete-enforceability}
 
 **Short answer.** Often no for covered workers. The Rhode Island Noncompetition Agreement Act makes a non-compete unenforceable against FLSA-nonexempt employees, student interns, workers age 18 or younger, and low-wage employees [^rinaa-covered-workers].
 

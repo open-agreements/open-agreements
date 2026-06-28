@@ -16,7 +16,7 @@ tags:
 
 Alaska uses a common-law reasonableness test for non-competes, led by Alaska Supreme Court cases and AUTSA trade-secret remedies, with no general statutory non-compete ban as of 2026.
 
-## Are employee non-compete agreements enforceable in Alaska? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Alaska? {#employee-non-compete-enforceability}
 
 **Short answer.** Yes, if they are reasonable, but Alaska courts start from a skeptical posture: employee non-competes are strictly construed[^decristofaro-disfavored-strictly-construed].
 
@@ -45,7 +45,7 @@ That doctrine is not a drafting license. If the employer willfully overreached, 
 >
 > Do not call Alaska a simple blue-pencil state. *Data Management* uses reasonable alteration, and the employer bears the good-faith burden before an overbroad covenant can be rescued [^data-management-reasonable-alteration].
 
-## Must an Alaska non-compete include geographic and time limits? {#time-geography-limits}
+## Must an Alaska non-compete include geographic and time limits? {#duration-limits}
 
 **Short answer.** Not always. A customer-focused activity restraint can survive without stated geography or duration when it is narrowly drawn to protect customer-list interests [^metcalfe-no-time-geography-required].
 

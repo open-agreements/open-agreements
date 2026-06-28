@@ -30,7 +30,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > They are, therefore, strictly construed.
 
-- supports: `alaska-statutory-gates`, `employee-noncompetes`, `governing-law-venue-dispute-process`, `parties-and-cover-term-identification`, `restrictive-covenants-each-independently-includable`
+- supports: `alaska-statutory-gates`, `employee-non-compete-enforceability`, `governing-law-venue-dispute-process`, `parties-and-cover-term-identification`, `restrictive-covenants-each-independently-includable`
 - source_cards: `ak-decristofaro-strict-cov`, `ak-decristofaro-strict-cover`, `ak-decristofaro-strict-gate`, `ak-decristofaro-strict-law`, `decristofaro-disfavored-strictly-construed`
 - cited_by: [Non-Compete Agreement Review Checklist — Alaska](../checklists/non-compete/us/alaska.md), [Non-Competes in Alaska](../non-compete/us/alaska.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1234367/decristofaro-v-security-national-bank/#:~:text=They%20are%2C%20therefore%2C%20strictly%20construed.>

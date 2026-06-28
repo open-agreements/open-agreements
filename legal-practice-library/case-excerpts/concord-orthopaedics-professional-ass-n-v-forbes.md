@@ -30,7 +30,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > A restraint on competition must be narrowly tailored in both geography and duration to protect COPA’s legitimate interest in its goodwill.
 
-- supports: `definitions`, `new-hampshire-statutory-gates`, `scope-duration-geography`
+- supports: `definitions`, `duration-limits`, `new-hampshire-statutory-gates`
 - source_cards: `forbes-duration-geography`, `nh-forbes-narrow-tailoring`, `nh-forbes-tailoring-gate`
 - cited_by: [Non-Compete Agreement Review Checklist — New Hampshire](../checklists/non-compete/us/new-hampshire.md), [Non-Competes in New Hampshire](../non-compete/us/new-hampshire.md)
 - link_to_source: <https://www.courtlistener.com/opinion/8091834/concord-orthopaedics-professional-assn-v-forbes/#:~:text=A%20restraint%20on%20competition%20must,legitimate%20interest%20in%20its%20goodwill.>

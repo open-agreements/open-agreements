@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > These considerations form the basis of the three-part test we use to determine the validity of restrictive covenants: (1) Is the restraint, from the standpoint of the employer, reasonable in the sense that it is no greater than necessary to protect the employer in some legitimate business interest? (2) From the standpoint of the employee, is the restraint reasonable in the sense that it is not unduly harsh and oppressive in curtailing his legitimate efforts to earn a livelihood? (3) Is the restraint reasonable from the standpoint of a sound public policy?
 
-- supports: `employee-noncompetes`, `reasonableness-test`, `virginia-statutory-gates`
+- supports: `employee-non-compete-enforceability`, `reasonableness-test`, `virginia-statutory-gates`
 - source_cards: `omniplex-basic-test`, `omniplex-gate-test`, `omniplex-three-part-test`
 - cited_by: [Non-Compete Agreement Review Checklist — Virginia](../checklists/non-compete/us/virginia.md), [Non-Competes in Virginia](../non-compete/us/virginia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1058921/omniplex-world-services-v-us-inv/#:~:text=These%20considerations%20form%20the%20basis,of%20a%20sound%20public%20policy%3F>

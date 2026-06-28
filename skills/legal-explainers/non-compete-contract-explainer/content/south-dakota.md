@@ -2,7 +2,7 @@
 jurisdiction: "South Dakota"
 slug: south-dakota
 countryCode: US
-snapshotAsOf: "2026-06-27"
+snapshotAsOf: "2026-06-28"
 lastReviewed: "2026-06-26"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/south-dakota
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/south-dakota · **Snapshot as of:** 2026-06-27 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/south-dakota · **Snapshot as of:** 2026-06-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in South Dakota[^about]
 
@@ -35,7 +35,7 @@ A question-by-question summary of South Dakota non-compete law under SDCL chapte
 | **Restriction extended during a breach?** | Not addressed by statute |
 | **Maximum length set by law** | Two years or less for employee covenants (SDCL 53-9-11) |
 
-## Are employee non-compete agreements enforceable in South Dakota? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in South Dakota? {#employee-non-compete-enforceability}
 
 **Short answer.** Sometimes, but only inside the statutory exception. SDCL 53-9-8 voids restraints on a lawful profession, trade, or business[^sdcl-53-9-8-void-baseline] except for the chapter 53-9 exceptions, and SDCL 53-9-11 allows an employee covenant only within its time, geography, customer, and like-business limits [^sdcl-53-9-11-employee-exception].
 
