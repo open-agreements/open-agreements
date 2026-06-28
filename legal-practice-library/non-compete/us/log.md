@@ -1,5 +1,8 @@
 # Us Update Log
 
+## 2026-06-28
+* **Update**: feat(non-compete): futureEffective[] + Legislation JSON-LD (closes #1085) (#1185) ([61d26ba](https://github.com/UseJunior/legal-explainer/commit/61d26bafa1819b3591ebb3fc5c3feae0b99859e7))
+
 ## 2026-06-27
 * **Update**: fix(vermont): narrow unsupported Q8 garden-leave + inevitable-disclosure claims (closes #122) (#1121) ([2b887f3](https://github.com/UseJunior/legal-explainer/commit/2b887f3923400b5d46c2041995dd0ec14fc5042a))
 * **Update**: Standardize core question slugs + per-row Details deep links on clause-family pages (#668) (#1133) ([38b29ae](https://github.com/UseJunior/legal-explainer/commit/38b29ae9680ea3061e43a26f0d4d5912196e04b3))
