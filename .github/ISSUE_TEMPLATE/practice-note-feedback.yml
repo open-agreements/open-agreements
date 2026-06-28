@@ -1,6 +1,6 @@
-name: Practice-note correction
-description: Report a factual error, broken citation, stale law update, or copy issue on a published practice-note page.
-title: "Practice-note correction: "
+name: Practice note feedback
+description: Share feedback on a published practice-note page — a correction, a suggestion, a question, or anything we could improve. All feedback is welcome and helps us get it right.
+title: "Practice note feedback: "
 labels:
   - area/practice-notes
 body:
@@ -31,21 +31,22 @@ body:
   - type: textarea
     id: issue
     attributes:
-      label: What is wrong?
+      label: Your feedback
+      description: What did you notice? A factual correction, a suggestion, a question, or anything that could be clearer — whatever it is, we're glad to hear it.
     validations:
       required: true
 
   - type: textarea
     id: suggested_correction
     attributes:
-      label: Suggested correction
+      label: Suggested change (optional)
     validations:
       required: false
 
   - type: textarea
     id: source_backing
     attributes:
-      label: Source / authority backing the correction
+      label: Source / authority (if relevant)
       placeholder: Statute citation, case citation, link to law-firm commentary, etc.
     validations:
       required: false
@@ -53,12 +54,13 @@ body:
   - type: dropdown
     id: severity
     attributes:
-      label: Severity
+      label: Type of feedback
       options:
         - Factual error (legal substance)
         - Citation is broken or wrong
         - Stale (law has changed)
         - Copy / phrasing
+        - Suggestion / general feedback
         - Other
     validations:
       required: false
