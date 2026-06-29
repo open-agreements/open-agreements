@@ -19,7 +19,8 @@
     "templateCatalogUrl": "https://usejunior.com/templates",
     "documentationIndexUrl": "https://github.com/open-agreements/open-agreements/tree/main/docs",
     "documentationBaseUrl": "https://github.com/open-agreements/open-agreements/blob/main/docs",
-    "trustUrl": "https://usejunior.com/security"
+    "trustUrl": "https://usejunior.com/security",
+    "legalPracticeLibraryUrl": "https://openagreements.org"
   },
   "bugs": {
     "url": "https://github.com/open-agreements/open-agreements/issues"

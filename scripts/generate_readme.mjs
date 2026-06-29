@@ -6,6 +6,7 @@ import { fileURLToPath } from "node:url";
 
 import { buildCatalog } from "./lib/catalog-data.mjs";
 import { loadSkillsCatalog } from "./lib/skills-data.mjs";
+import { buildLibrary } from "./lib/library-data.mjs";
 import docsNav from "../site/_data/docsNav.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -30,6 +31,13 @@ const DOCUMENTATION_BASE_URL = normalizeUrl(
   "documentationBaseUrl",
 );
 const TRUST_URL = normalizeUrl(README_CONFIG.trustUrl, "trustUrl");
+// Content host for the Legal Practice Library. Deliberately separate from
+// websiteUrl/templateCatalogUrl (usejunior.com) — the practice guides, surveys,
+// and checklists live on openagreements.org.
+const LEGAL_PRACTICE_LIBRARY_URL = normalizeUrl(
+  README_CONFIG.legalPracticeLibraryUrl,
+  "legalPracticeLibraryUrl",
+);
 
 function readJson(path) {
   return JSON.parse(readFileSync(path, "utf-8"));
@@ -58,11 +66,14 @@ function withUtm(url) {
 }
 
 const CONTENTS = [
-  ["How It Works", "#how-it-works"],
-  ["Available Templates", "#available-templates"],
+  ["Legal Practice Library", "#legal-practice-library"],
+  ["Templates", "#available-templates"],
+  ["Checklists", "#checklists"],
+  ["Law Surveys", "#law-surveys"],
+  ["For AI Agents", "#for-ai-agents"],
   ["Available Skills", "#available-skills"],
+  ["Template Filling via MCP", "#template-filling-via-mcp"],
   ["Packages", "#packages"],
-  ["Quick Start", "#quick-start"],
   ["Install", "#install"],
   ["Documentation", "#documentation"],
   ["Privacy", "#privacy"],
@@ -108,6 +119,77 @@ function formatSourceCell(template) {
 
 function renderContents() {
   return CONTENTS.map(([label, anchor]) => `- [${label}](${anchor})`).join("\n");
+}
+
+function libraryUrl(path) {
+  return `${LEGAL_PRACTICE_LIBRARY_URL}${path}`;
+}
+
+function renderLegalPracticeLibrary() {
+  const library = buildLibrary({ rootDir: root });
+  const lines = [];
+  lines.push(
+    `Primary-source-backed legal practice notes, projected from openagreements.org as plain markdown under [\`legal-practice-library/\`](${githubTreeUrl("legal-practice-library")}). Each note cites primary law and links to its canonical page (with machine-readable twins — see [For AI Agents](#for-ai-agents)).`,
+  );
+  lines.push("");
+  lines.push(
+    renderTable(
+      ["Topic", "What it covers", "Coverage", "Browse", "Live"],
+      library.practiceGuides.map((section) => [
+        section.label,
+        section.blurb,
+        section.coverage,
+        `[Markdown](${githubTreeUrl(section.repoPath)})`,
+        `[Web](${libraryUrl(section.live)})`,
+      ]),
+    ),
+  );
+  lines.push("");
+  lines.push(
+    `Backed by ${library.caseExcerptCount} verbatim [case excerpts](${githubTreeUrl("legal-practice-library/case-excerpts")}) — the passages our notes rely on, each linked to the full opinion on CourtListener. Supporting evidence, not a case database.`,
+  );
+  return lines.join("\n").trim();
+}
+
+function renderLawSurveys() {
+  const library = buildLibrary({ rootDir: root });
+  const lines = [];
+  lines.push(
+    "Side-by-side comparison tables across jurisdictions. The web pages also publish machine-readable `.json` and `.csv` twins (append `.json` / `.csv`, e.g. `/surveys/non-compete/us.csv`).",
+  );
+  lines.push("");
+  lines.push(
+    renderTable(
+      ["Survey", "Browse", "Live"],
+      library.surveys.map((survey) => [
+        survey.title,
+        `[Markdown](${githubBlobUrl(survey.repoPath)})`,
+        survey.resource ? `[Web](${survey.resource})` : "—",
+      ]),
+    ),
+  );
+  return lines.join("\n").trim();
+}
+
+function renderChecklists() {
+  const library = buildLibrary({ rootDir: root });
+  const lines = [];
+  lines.push(
+    "Clause-by-clause reviewer checklists. Each has `.json` and `.docx` twins on the web, and contract checklists also emit a `contract-api.json` for template integrations.",
+  );
+  lines.push("");
+  lines.push(
+    renderTable(
+      ["Topic", "What it covers", "Browse", "Live"],
+      library.checklists.map((section) => [
+        section.label,
+        section.blurb,
+        `[Markdown](${githubTreeUrl(section.repoPath)})`,
+        `[Web](${libraryUrl(section.live)})`,
+      ]),
+    ),
+  );
+  return lines.join("\n").trim();
 }
 
 function renderSkills() {
@@ -267,6 +349,9 @@ export function buildReadme() {
   const template = readFileSync(README_TEMPLATE_PATH, "utf-8").trim();
   const rendered = renderTemplate(template, {
     CONTENTS: renderContents(),
+    LEGAL_PRACTICE_LIBRARY: renderLegalPracticeLibrary(),
+    LAW_SURVEYS: renderLawSurveys(),
+    CHECKLISTS: renderChecklists(),
     AVAILABLE_SKILLS: renderSkills(),
     AVAILABLE_TEMPLATES: renderTemplates(),
     PACKAGES: renderPackages(),

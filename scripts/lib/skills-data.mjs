@@ -7,10 +7,12 @@ import yaml from "js-yaml";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export const REPO_ROOT = resolve(__dirname, "../..");
+// Legal Explainers lead — the substantive 50-state research skills draw the most
+// demand and best represent the project; template-filling and utility skills follow.
 const GROUP_ORDER = [
+  "Legal Explainers",
   "Agreement Drafting And Filling",
   "Editing And Client Workflows",
-  "Legal Explainers",
   "Compliance And Audit",
   "Developer Workflows",
 ];
