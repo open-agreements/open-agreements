@@ -435,21 +435,34 @@ jobs:
             const overall = warns > 0 ? '⚠️ WARN' : (passes > 0 ? '✅ PASS' : '❓ NO RESULTS');
             const labels = JSON.parse(process.env.PR_LABELS || '[]');
             const labelOverride = labels.includes('llm-gate/override');
-            // Automated template-update PRs (deterministic branch `update/templates-*`
-            // opened by the maintenance bot) carry generated, pre-reviewed content
-            // (validated upstream + by the acceptance gates below). Their large binary
-            // DOCX diffs deterministically break the per-item LLM call, and code
-            // review of generated output adds no signal — so they are auto-overridden.
-            // Requires BOTH the deterministic branch prefix AND a bot author so a
-            // human can't craft a branch name to bypass the gate.
+            // Automated maintenance PRs (deterministic branches `update/templates`
+            // and `update/corpus`, opened by the maintenance bot) carry generated,
+            // pre-reviewed content (validated upstream + by the acceptance gates
+            // below). Their large generated diffs — binary DOCX for templates, bulk
+            // text for the corpus/skill updates — deterministically break the
+            // per-item LLM call, and review of generated output adds no signal, so
+            // they are auto-overridden. Requires BOTH a known maintenance branch (or
+            // the legacy per-SHA `update/templates-*` prefix, retained so any
+            // still-open older sync PR keeps its override) AND the specific
+            // maintenance-bot author. The author is pinned to that one identity — not
+            // "any bot/app" — because the stable branch names are predictable, so a
+            // broad guard would let any other installed app with write access open a
+            // PR on these branches and bypass the gate. The two pinned forms are the
+            // REST webhook login (`…[bot]`, used on `pull_request` events) and the
+            // GraphQL/`gh` login (`app/…`, used on the `workflow_dispatch` path).
             const author = process.env.PR_AUTHOR || '';
             const headRef = process.env.PR_HEAD_REF || '';
-            const isBotAuthor = author.endsWith('[bot]') || author.startsWith('app/');
-            const isSyncBotPR = headRef.startsWith('update/templates-') && isBotAuthor;
+            const MAINTENANCE_BRANCHES = ['update/templates', 'update/corpus'];
+            const isMaintenanceBranch =
+              MAINTENANCE_BRANCHES.includes(headRef) ||
+              headRef.startsWith('update/templates-');
+            const MAINTENANCE_BOT_AUTHORS = new Set(['app/oa-ssot-sync', 'oa-ssot-sync[bot]']);
+            const isMaintenanceBotAuthor = MAINTENANCE_BOT_AUTHORS.has(author);
+            const isSyncBotPR = isMaintenanceBranch && isMaintenanceBotAuthor;
             const overrideActive = labelOverride || isSyncBotPR;
 
             const overrideReason = isSyncBotPR && !labelOverride
-              ? 'automated template-update PR (`update/templates-*`, bot-authored)'
+              ? 'automated maintenance PR (`update/templates` or `update/corpus`, bot-authored)'
               : '`llm-gate/override` label is set';
             const overrideBanner = overrideActive
               ? `\n\n> ⚠️ **Override active** — ${overrideReason}; this gate\'s WARN findings are non-blocking on this PR.\n`
