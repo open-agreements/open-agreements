@@ -20,7 +20,7 @@ const RESERVED_FILES = new Set(["index.md", "log.md"]);
 // they cannot drift from what the corpus bot syncs. Rows are ordered by measured
 // demand (Vercel log drain, 30d): non-compete >> privacy > AI. `kind`:
 // "jurisdictional" renders a "N states (+ international)" coverage label;
-// "topic" renders a plain note count. A section may span multiple `dirs` (the
+// "topic" renders a plain practice-guide count. A section may span multiple `dirs` (the
 // collapsed AI & Workforce row); its Browse link then points at the library root.
 export const PRACTICE_GUIDE_SECTIONS = [
   {
@@ -165,7 +165,7 @@ function coverageLabel(kind, { total, stateCount, internationalCount }) {
       ? `${stateCount} U.S. states + international`
       : `${stateCount} U.S. states`;
   }
-  return `${total} note${total === 1 ? "" : "s"}`;
+  return `${total} practice guide${total === 1 ? "" : "s"}`;
 }
 
 /**

@@ -146,7 +146,7 @@ function renderLegalPracticeLibrary() {
   );
   lines.push("");
   lines.push(
-    `Backed by ${library.caseExcerptCount} verbatim [case excerpts](${githubTreeUrl("legal-practice-library/case-excerpts")}) — the passages our notes rely on, each linked to the full opinion on CourtListener. Supporting evidence, not a case database.`,
+    `Backed by ${library.caseExcerptCount} verbatim [case excerpts](${githubTreeUrl("legal-practice-library/case-excerpts")}) — the passages our practice guides rely on, each linked to the full opinion on CourtListener. Supporting evidence, not a case database.`,
   );
   return lines.join("\n").trim();
 }
