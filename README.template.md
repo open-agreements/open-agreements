@@ -19,7 +19,7 @@
 
 Open, primary-source-backed U.S. legal content **and** standard agreement templates — built for legal teams of any size and the agents helping them.
 
-- **Legal Practice Library** — jurisdiction-by-jurisdiction practice notes (non-compete & restrictive covenants, consumer data privacy, AI employment law), every claim cited to primary law.
+- **Legal Practice Library** — jurisdiction-by-jurisdiction practice guides (non-compete & restrictive covenants, consumer data privacy, AI employment law), every claim cited to primary law.
 - **Templates** — 40+ fillable forms across NDAs, cloud service agreements, employment docs, SAFEs, and NVCA financing documents.
 - **Checklists** — clause-by-clause reviewer checklists.
 - **Law Surveys** — 50-state and international comparison tables.
@@ -31,7 +31,7 @@ Everything ships as plain markdown in this repo and as machine-readable twins on
 ## Who this is for
 
 OpenAgreements is for legal teams of any size and the agents helping them. The
-practice notes, surveys, and checklists answer jurisdiction-specific questions
+practice guides, surveys, and checklists answer jurisdiction-specific questions
 with citations to primary law; the templates start from standard forms teams
 already recognize — Common Paper, Bonterms, NVCA model documents, and YC SAFE
 templates — keeping source, license, and validation context close to the
@@ -66,7 +66,7 @@ agent or the CLI, see [Template Filling via MCP](#template-filling-via-mcp).
 
 ## For AI Agents
 
-Every practice note, survey, and checklist is plain markdown in
+Every practice guide, survey, and checklist is plain markdown in
 [`legal-practice-library/`](https://github.com/open-agreements/open-agreements/tree/main/legal-practice-library) — clone or fetch it directly. The pages also publish machine-readable twins on openagreements.org, which vary by content type:
 
 | Content | Markdown | JSON | Other |
@@ -151,7 +151,7 @@ open-agreements/
     templates/            # Fillable DOCX templates with {tag} placeholders
     external/             # YC SAFE templates vendored unchanged
     recipes/              # Recipe instructions for non-redistributable sources
-  legal-practice-library/ # Practice notes, surveys, and checklists (markdown)
+  legal-practice-library/ # Practice guides, surveys, and checklists (markdown)
   skills/                 # Agent skill definitions
   server.json             # MCP server manifest
   gemini-extension.json   # Gemini CLI extension config

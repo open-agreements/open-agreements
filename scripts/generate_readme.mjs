@@ -129,7 +129,7 @@ function renderLegalPracticeLibrary() {
   const library = buildLibrary({ rootDir: root });
   const lines = [];
   lines.push(
-    `Primary-source-backed legal practice notes, projected from openagreements.org as plain markdown under [\`legal-practice-library/\`](${githubTreeUrl("legal-practice-library")}). Each note cites primary law and links to its canonical page (with machine-readable twins — see [For AI Agents](#for-ai-agents)).`,
+    `Primary-source-backed legal practice guides, projected from openagreements.org as plain markdown under [\`legal-practice-library/\`](${githubTreeUrl("legal-practice-library")}). Each guide cites primary law and links to its canonical page (with machine-readable twins — see [For AI Agents](#for-ai-agents)).`,
   );
   lines.push("");
   lines.push(

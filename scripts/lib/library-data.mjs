@@ -91,11 +91,24 @@ export const CHECKLIST_SECTIONS = [
 export const SURVEYS_DIR = "surveys";
 export const CASE_EXCERPTS_DIR = "case-excerpts";
 
-// State-law notes carry `STATE_TYPE`; non-U.S.-state jurisdiction notes (e.g.
-// Australian states) carry `NOTE_TYPE` and signal "+ international". The pillar
-// ("Law Topic") and other types are neither, so they don't trigger it.
-const STATE_TYPE = "State Law Practice Note";
-const NOTE_TYPE = "Practice Note";
+// State-law guides carry a `STATE_TYPES` value; non-U.S.-state jurisdiction
+// guides (e.g. Australian states) carry a `NOTE_TYPES` value and signal
+// "+ international". The pillar ("Law Topic") and other types are neither, so
+// they don't trigger it.
+//
+// These are the bundle's machine-readable `type` controlled vocabulary, written
+// verbatim into the projected `legal-practice-library/**` frontmatter by
+// legal-explainer's scripts/render-okf-bundle.ts and matched below by SET
+// membership. The vocabulary was renamed "… Practice Note" → "… Practice Guide"
+// under #1245, but the bundle is bot-projected from legal-explainer on its own
+// cadence, so during the transition the committed frontmatter may carry EITHER
+// the legacy or the new value. Matching both keeps the README counts correct
+// regardless of when re-projection lands — array order is irrelevant.
+//
+// CLEANUP FOLLOW-UP: once the bot has re-projected the bundle to the new
+// vocabulary everywhere, drop the legacy "… Practice Note" entries below.
+const STATE_TYPES = ["State Law Practice Guide", "State Law Practice Note"];
+const NOTE_TYPES = ["Practice Guide", "Practice Note"];
 
 function parseFrontmatter(raw) {
   const match = raw.match(/^---\n([\s\S]*?)\n---/);
@@ -136,9 +149,9 @@ function tallyTypes(rootDir, dirs) {
     for (const file of conceptFiles(resolve(rootDir, LIBRARY_DIR, dir))) {
       total += 1;
       const { type } = parseFrontmatter(readFileSync(file, "utf-8"));
-      if (type === STATE_TYPE) {
+      if (STATE_TYPES.includes(type)) {
         stateCount += 1;
-      } else if (type === NOTE_TYPE) {
+      } else if (NOTE_TYPES.includes(type)) {
         internationalCount += 1;
       }
     }

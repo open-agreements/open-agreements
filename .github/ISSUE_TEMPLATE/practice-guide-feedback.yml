@@ -1,15 +1,15 @@
-name: Practice note feedback
-description: Share feedback on a published practice-note page — a correction, a suggestion, a question, or anything we could improve. All feedback is welcome and helps us get it right.
-title: "Practice note feedback: "
+name: Practice guide feedback
+description: Share feedback on a published practice-guide page — a correction, a suggestion, a question, or anything we could improve. All feedback is welcome and helps us get it right.
+title: "Practice guide feedback: "
 labels:
-  - area/practice-notes
+  - area/practice-guides
 body:
   - type: markdown
     attributes:
       value: |
         Triage notes:
         - Set issue Type to `Bug` for factual errors or broken citations; `Feature` for stale-law updates requiring a content rewrite.
-        - Maintainers assign `area/practice-notes`, `priority/*`, and `status/*` labels during triage.
+        - Maintainers assign `area/practice-guides`, `priority/*`, and `status/*` labels during triage.
         - Keep Assignees, Projects, and Milestone empty unless ownership / scheduling is explicit.
 
   - type: input
