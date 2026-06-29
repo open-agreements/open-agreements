@@ -2,7 +2,7 @@
 jurisdiction: "Tennessee"
 slug: tennessee
 countryCode: US
-snapshotAsOf: "2026-06-20"
+snapshotAsOf: "2026-06-29"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/tennessee
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/tennessee · **Snapshot as of:** 2026-06-20 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/tennessee · **Snapshot as of:** 2026-06-29 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Tennessee[^about]
 
@@ -35,7 +35,7 @@ Tennessee enforces non-competes that are reasonable and protect a legitimate bus
 | **Restriction extended during a breach?** | Open question — 2026 statute silent |
 | **Maximum length set by law** | Rebuttable presumptions: 2 yrs employee/contractor; 3 yrs distributor; 5 yrs+ seller; health-care safe harbor 2 yrs |
 
-## Are employee non-compete agreements enforceable in Tennessee? {#enforceability}
+## Are employee non-compete agreements enforceable in Tennessee? {#employee-non-compete-enforceability}
 
 **Short answer.** Sometimes. Tennessee enforces a non-compete that is reasonable and protects a legitimate business interest, but it treats the covenant as a disfavored restraint of trade. A new statute effective July 1, 2026 adds rebuttable time-reasonableness presumptions and makes a non-compete void against any employee earning less than $70,000 a year [^hasty-disfavored][^s50-1-211-threshold][^s50-1-210-presumptions].
 
@@ -68,7 +68,7 @@ Annualized compensation is defined broadly to include wages, salary, commissions
 
 "Notwithstanding a law to the contrary, an employer shall not require, request, or enforce a noncompete agreement against an employee whose annualized compensation is less than seventy thousand dollars ($70,000)."[^threshold-rule]
 
-## How long can a Tennessee non-compete last? {#time-limits}
+## How long can a Tennessee non-compete last? {#duration-limits}
 
 **Short answer.** For agreements governed by the 2026 statute, a court presumes a restraint is unreasonable in time if it runs longer than the period set for the relevant relationship: two years for a former employee or independent contractor, three years for a distributor, dealer, franchisee, lessee, or licensee, and the longer of five years or the payout period for the seller of a business [^time-presumption-rule][^time-employee-2yr][^time-distributor-3yr][^time-seller-5yr].
 
@@ -138,7 +138,7 @@ That preservation matters for drafting: an employer can protect trade secrets th
 
 This fits the sale-of-business context, where a buyer paying for a business is protecting purchased goodwill rather than merely restraining a former employee. In the healthcare setting, a covenant tied to the purchase or sale of a provider's practice likewise gets a rebuttable presumption that its agreed duration and area are reasonable [^sale-healthcare].
 
-## Does a Tennessee non-compete toll or extend during a breach or while litigation is pending? {#tolling-extension}
+## Does a Tennessee non-compete toll or extend during a breach or while litigation is pending? {#extended-for-breach}
 
 **Short answer.** This is an open question in Tennessee. No Tennessee statute or appellate decision squarely endorses automatically tolling or extending the restricted period while the employee is in breach or while enforcement litigation is pending, and the 2026 statute does not address tolling [^tolling-statute-silent][^tolling-reasonableness].
 

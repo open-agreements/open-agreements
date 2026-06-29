@@ -16,7 +16,7 @@ tags:
 
 North Dakota voids employee non-competes under N.D. Cent. Code § 9-08-06, one of the strictest bans in the United States, with only sale-of-goodwill and dissociation exceptions.
 
-## Are employee non-compete agreements enforceable in North Dakota? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in North Dakota? {#employee-non-compete-enforceability}
 
 **Short answer.** No. North Dakota law makes a contract that restrains a lawful profession, trade, or business to that extent void[^north-dakota-business-restraint-void].
 

@@ -7,7 +7,7 @@ okf_version: '0.1'
 OpenAgreements legal practice library — practice notes, checklists, and market-standard
 surveys, projected from openagreements.org as an Open Knowledge Format bundle.
 
-Published by [openagreements.org](https://openagreements.org). Licensed CC BY 4.0 (see `LICENSE`). A one-way projection from UseJunior/legal-explainer — file content fixes upstream, not here.
+Published by [openagreements.org](https://openagreements.org). Licensed CC BY 4.0 (see `LICENSE`). Generated and maintained programmatically — open a content issue rather than editing files here.
 
 ## Documents
 
@@ -20,6 +20,7 @@ Published by [openagreements.org](https://openagreements.org). Licensed CC BY 4.
 * [Outside Counsel](outside-counsel/)
 * [Privacy](privacy/)
 * [Privacy Policy](privacy-policy/)
+* [Startup Financing](startup-financing/)
 * [Surveys](surveys/)
 
 Supporting evidence — [verbatim passages our notes rely on](case-excerpts/), each linked to the full opinion on CourtListener (Free Law Project). Not a case database.

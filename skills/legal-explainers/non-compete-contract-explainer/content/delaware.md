@@ -2,7 +2,7 @@
 jurisdiction: "Delaware"
 slug: delaware
 countryCode: US
-snapshotAsOf: "2026-06-20"
+snapshotAsOf: "2026-06-29"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/delaware
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/delaware · **Snapshot as of:** 2026-06-20 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/delaware · **Snapshot as of:** 2026-06-29 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Delaware[^about]
 
@@ -35,7 +35,7 @@ Delaware enforces reasonable non-competes under Court of Chancery and Supreme Co
 | **Restriction extended during a breach?** | Not addressed |
 | **Maximum length set by law** | No statutory limit |
 
-## Are employee non-compete agreements enforceable in Delaware? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Delaware? {#employee-non-compete-enforceability}
 
 **Short answer.** Yes, if the covenant is reasonable, protects a legitimate economic interest, and survives the equities. Delaware courts do not mechanically enforce non-competes [^fp-uc-reasonableness-test].
 
@@ -74,6 +74,14 @@ The modern no-blue-pencil spine comes from *Kodiak*, *Intertek*, and *Sunder*. T
 > **Drafting note.**
 >
 > In a Delaware M&A covenant, define the restricted business by the acquired business and the goodwill actually purchased. Do not use buyer-family affiliate language to protect unrelated legacy businesses unless the record supports that scope [^kodiak-goodwill-limit].
+
+## How does Delaware treat customer and employee non-solicitation covenants? {#non-solicitation}
+
+**Short answer.** Delaware reviews both customer and employee non-solicitation covenants for reasonableness the same way it reviews any restrictive covenant, and it refuses to blue-pencil an overbroad one [^de-cust-fp-reasonableness][^de-cust-sunder-noblue].
+
+*Sunder Energy* itself turned on restrictive covenants of exactly these kinds: a customer restriction barring any business with the company's customers [^de-cust-sunder-restriction] and a personnel restriction barring recruitment of its people [^de-emp-sunder-restriction].
+
+The Delaware Supreme Court treated the personnel restriction as a true employee non-solicit and held it overbroad because it reached anyone ever employed for any period of time [^de-emp-sunder-overbroad], applied the four-part non-solicitation test [^de-emp-fp-test], and declined to blue-pencil the covenant [^de-ns-sunder-refuse][^de-cust-sunder-noblue].
 
 ## Are equity-forfeiture or forfeiture-for-competition provisions enforceable in Delaware? {#forfeiture-for-competition}
 
@@ -168,6 +176,20 @@ The through-line is not that Delaware became anti-enforcement. It is that Delawa
 [^derge-substantial-consideration]: **Derge v. D&H United Fueling Solutions, Inc.** — "Plaintiff received substantial consideration—nearly $1 million—in a Merger that was conditioned on his agreement to the Non-Compete." *Derge v. D&H United Fueling Sols., Inc., C.A. No. 2025-0087-BWD, slip op. at 16-17 (Del. Ch. Dec. 8, 2025).* <https://www.courtlistener.com/opinion/10749078/william-brian-derge-v-dh-united-fueling-solutions-inc/#:~:text=Plaintiff%20received%20substantial%20consideration,conditioned%20on%20his%20agreement%20to%20the%20Non%2DCompete.>
 
 [^derge-reasonable-sale-scope]: **Derge v. D&H United Fueling Solutions, Inc.** — "The record here shows that Tanknology conducted business across the United States and internationally, and that, as COO, Plaintiff had responsibility over operations across all markets. Thus, Defendants have a legitimate business interest in the Protected Area." *Derge v. D&H United Fueling Sols., Inc., C.A. No. 2025-0087-BWD, slip op. at 19 (Del. Ch. Dec. 8, 2025).* <https://www.courtlistener.com/opinion/10749078/william-brian-derge-v-dh-united-fueling-solutions-inc/#:~:text=The%20record%20here%20shows%20that,interest%20in%20the%20Protected%20Area.>
+
+[^de-cust-fp-reasonableness]: **FP UC Holdings, LLC v. Hamilton** — "Instead, our courts carefully review the covenants to assure they ‘(1) [are] reasonable in geographic scope and temporal duration, (2) advance a legitimate economic interest of the party seeking its enforcement, and (3) survive a balancing of the equities.’" *FP UC Holdings, LLC v. Hamilton, 2020 WL 1492783, at *6 (Del. Ch. Mar. 27, 2020).* <https://www.courtlistener.com/opinion/4739986/fp-uc-holdings-llc-fpmcm-llc-and-fast-pace-medical-clinic-pllc-v/#:~:text=Instead%2C%20our%20courts%20carefully%20review,a%20balancing%20of%20the%20equities.%E2%80%9D>
+
+[^de-cust-sunder-noblue]: **Sunder Energy, LLC v. Jackson** — "This argument, however, turns the analysis on its head and creates perverse incentives for employers drafting restrictive covenants." *Sunder Energy, LLC v. Jackson, 332 A.3d 472, 495 (Del. 2024).* <https://www.courtlistener.com/opinion/10291288/sunder-energy-llc-v-tyler-jackson/#:~:text=This%20argument%2C%20however%2C%20turns%20the,for%20employers%20drafting%20restrictive%20covenants.>
+
+[^de-cust-sunder-restriction]: **Sunder Energy, LLC v. Jackson** — "The 2019 LLC Agreement further prohibited Incentive Unit holders from soliciting, selling to, accepting any business from, or engaging in any business relationship with any of Sunder’s customers (the ‘Customer Restriction’)" *Sunder Energy, LLC v. Jackson, 332 A.3d 472, 481 n.35 (Del. 2024).* <https://www.courtlistener.com/opinion/10291288/sunder-energy-llc-v-tyler-jackson/#:~:text=The%202019%20LLC%20Agreement%20further,Sunder%E2%80%99s%20customers%20(the%20%E2%80%9CCustomer%20Restriction%E2%80%9D)>
+
+[^de-emp-sunder-restriction]: **Sunder Energy, LLC v. Jackson** — "The Personnel Restriction prohibited Incentive Unit holders and their affiliates from recruiting or ‘encourag[ing] to leave’ any individual whom Sunder employed, received services from, or had a business relationship with." *Sunder Energy, LLC v. Jackson, 332 A.3d 472 (Del. 2024).* <https://www.courtlistener.com/opinion/10291288/sunder-energy-llc-v-tyler-jackson/#:~:text=The%20Personnel%20Restriction%20prohibited%20Incentive,had%20a%20business%20relationship%20with.>
+
+[^de-emp-sunder-overbroad]: **Sunder Energy, LLC v. Jackson** — "The Personnel Restriction is similarly overbroad, preventing Jackson and his ‘affiliates’ from directly or indirectly communicating regarding employment with any person who has ever been employed by Sunder for any period of time." *Sunder Energy, LLC v. Jackson, 332 A.3d 472, 502 (Del. 2024).* <https://www.courtlistener.com/opinion/10291288/sunder-energy-llc-v-tyler-jackson/#:~:text=The%20Personnel%20Restriction%20is%20similarly,for%20any%20period%20of%20time.>
+
+[^de-emp-fp-test]: **FP UC Holdings, LLC v. Hamilton** — "Under Delaware law, a non-solicitation covenant is enforceable if it ‘(1) meets general contract law requirements, (2) is reasonable in scope and duration, (3) advances a legitimate economic interest of the party enforcing the covenant, and (4) survives a balance of the equities.’" *FP UC Holdings, LLC v. Hamilton, 2020 WL 1492783 (Del. Ch. Mar. 27, 2020).* <https://www.courtlistener.com/opinion/4739986/fp-uc-holdings-llc-fpmcm-llc-and-fast-pace-medical-clinic-pllc-v/#:~:text=Under%20Delaware%20law%2C%20a%20non%2Dsolicitation,a%20balance%20of%20the%20equities.%E2%80%9D>
+
+[^de-ns-sunder-refuse]: **Sunder Energy, LLC v. Jackson** — "The Court of Chancery was well within its discretion to apply that precedent and refuse to blue pencil the covenants." *Sunder Energy, LLC v. Jackson, 332 A.3d 472, 492 (Del. 2024).* <https://www.courtlistener.com/opinion/10291288/sunder-energy-llc-v-tyler-jackson/#:~:text=The%20Court%20of%20Chancery%20was,to%20blue%20pencil%20the%20covenants.>
 
 [^ainslie-condition-precedent]: **Cantor Fitzgerald, L.P. v. Ainslie** — "It found, instead, that the Competitive Activity Condition was a condition precedent to Cantor Fitzgerald’s duty to pay the Conditioned Amounts. We agree with that conclusion, and the Plaintiffs do not contest it on appeal." *Cantor Fitzgerald, L.P. v. Ainslie, 312 A.3d 674, 690 (Del. 2024).* <https://www.courtlistener.com/opinion/9469727/cantor-fitzgerald-lp-v-ainslie/#:~:text=It%20found%2C%20instead%2C%20that%20the,not%20contest%20it%20on%20appeal.>
 

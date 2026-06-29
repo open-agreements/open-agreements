@@ -2,7 +2,7 @@
 jurisdiction: "Wyoming"
 slug: wyoming
 countryCode: US
-snapshotAsOf: "2026-06-20"
+snapshotAsOf: "2026-06-29"
 lastReviewed: "2026-04-14"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/wyoming
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/wyoming · **Snapshot as of:** 2026-06-20 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/wyoming · **Snapshot as of:** 2026-06-29 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Wyoming[^about]
 
@@ -36,7 +36,7 @@ A question-by-question summary of Wyoming's 2025 non-compete statute, recent Wyo
 | **Restriction extended during a breach?** | Not addressed |
 | **Maximum length set by law** | No statutory limit |
 
-## Are employee non-compete agreements enforceable in Wyoming? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Wyoming? {#employee-non-compete-enforceability}
 
 **Short answer.** For contracts entered into on or after July 1, 2025, usually no. Wyo. Stat. § 1-23-108(a) voids most labor non-competes[^wyo-1-23-voids-labor-noncompetes] unless the covenant fits a statutory exception.
 
@@ -59,11 +59,19 @@ Wyoming cases also strictly construe non-competes[^brown-strict-construction] an
 >
 > No published Wyoming authority addresses tolling a non-compete during a breach. Wyoming strictly construes restrictive covenants and puts the burden on the employer to justify the restraint [^brown-strict-construction]. A tolling provision adds duration that faces the same reasonableness scrutiny as the original term — without judicial willingness to trim — so the realistic downside is voiding the covenant, not narrowing it.
 
+## Does Wyoming require separate consideration for a non-compete signed after hire? {#post-hire-consideration}
+
+**Short answer.** Yes, for any covenant that falls outside the 2025 statutory void. When an employer asks someone who is already employed to sign a non-compete, Wyoming common law requires separate, contemporaneous consideration[^brown-post-hire-consideration] for the new promise — continued at-will employment, by itself, is not enough.
+
+This is a pure common-law rule, so it does not turn on the 2025 statute or any effective date. It governs the pre-2025 cohort and any post-2025 covenant drafted to fit a statutory exception, because neither cohort escapes Wyoming's demanding reasonableness baseline. The practical consequence is a drafting one: a non-compete presented after the start date should recite its own bargained-for consideration — a raise, a bonus, equity, a promotion, or access to confidential information tied to a new role — rather than rely on the worker simply keeping the job.
+
+Wyoming courts also strictly construe[^brown-post-hire-strict-construction] restrictive covenants and put the burden on the employer to justify the restraint, so a covenant that fails the consideration requirement is unlikely to be rescued on review. This question covers consideration only; a separate question covers whether a court will narrow an otherwise overbroad covenant.
+
 ## Does Wyoming's non-compete ban apply to independent contractors? {#independent-contractors}
 
 **Short answer.** Likely yes under the dominant 2025 law-firm commentary, but that is still an interpretation rather than a Wyoming appellate holding.
 
-The reason is the statutory phrase "any person"[^wyo-1-23-any-person]. State-specific law-firm commentary reads that wording broadly enough to reach independent contractors, not only W-2 employees [^littler-any-status][^faegre-includes-contractors][^fisher-colorado-any-person]. That same broad phrasing closely mirrors Colorado's void-for-compensation rule, which is why commentary points to Colorado as the analogue. *See our companion note on [whether Colorado employee non-competes are enforceable](/practice-guides/non-compete/us/colorado#enforceability).*
+The reason is the statutory phrase "any person"[^wyo-1-23-any-person]. State-specific law-firm commentary reads that wording broadly enough to reach independent contractors, not only W-2 employees [^littler-any-status][^faegre-includes-contractors][^fisher-colorado-any-person]. That same broad phrasing closely mirrors Colorado's void-for-compensation rule, which is why commentary points to Colorado as the analogue. *See our companion note on [whether Colorado employee non-competes are enforceable](/practice-guides/non-compete/us/colorado#employee-non-compete-enforceability).*
 
 That is a strong drafting assumption for Wyoming templates, but a careful note should still say that Wyoming courts have not yet issued a controlling appellate decision on the contractor question.
 
@@ -216,6 +224,10 @@ Commentary specifically warns employers to evaluate routine replacement or updat
 [^brown-strict-construction]: **Brown v. Best Home Health & Hospice, LLC** — "Contracts which hinder them from doing so are ‘strictly construed and rigidly scanned and are declared void unless necessary for the reasonable protection of the employer.’" *Brown v. Best Home Health & Hospice, LLC, 2021 WY 83, 491 P.3d 1021.* <https://www.courtlistener.com/opinion/9998787/jennifer-brown-fka-jennifer-stringer-nora-youngren-and-carol-wolfe-v/#:~:text=Contracts%20which%20hinder%20them%20from,reasonable%20protection%20of%20the%20employer.%22>
 
 [^brown-separate-consideration]: **Brown v. Best Home Health & Hospice, LLC** — "when an employer requests an existing employee sign a non-compete agreement, the employer must provide ‘separate contemporaneous consideration’ for the new promise" *Brown v. Best Home Health & Hospice, LLC, 2021 WY 83, 491 P.3d 1021.* <https://www.courtlistener.com/opinion/9998787/jennifer-brown-fka-jennifer-stringer-nora-youngren-and-carol-wolfe-v/#:~:text=when%20an%20employer%20requests%20an,consideration%22%20for%20the%20new%20promise>
+
+[^brown-post-hire-consideration]: **Brown v. Best Home Health & Hospice, LLC** — "when an employer requests an existing employee sign a non-compete agreement, the employer must provide ‘separate contemporaneous consideration’ for the new promise" *Brown v. Best Home Health & Hospice, LLC, 2021 WY 83, 491 P.3d 1021.* <https://www.courtlistener.com/opinion/9998787/jennifer-brown-fka-jennifer-stringer-nora-youngren-and-carol-wolfe-v/#:~:text=when%20an%20employer%20requests%20an,consideration%22%20for%20the%20new%20promise>
+
+[^brown-post-hire-strict-construction]: **Brown v. Best Home Health & Hospice, LLC** — "Contracts which hinder them from doing so are ‘strictly construed and rigidly scanned and are declared void unless necessary for the reasonable protection of the employer.’" *Brown v. Best Home Health & Hospice, LLC, 2021 WY 83, 491 P.3d 1021.* <https://www.courtlistener.com/opinion/9998787/jennifer-brown-fka-jennifer-stringer-nora-youngren-and-carol-wolfe-v/#:~:text=Contracts%20which%20hinder%20them%20from,reasonable%20protection%20of%20the%20employer.%22>
 
 [^wyo-1-23-any-person]: **Wyo. Stat. § 1-23-108(a)** — "Any covenant not to compete that restricts the right of any person to receive compensation for performance of skilled or unskilled labor shall be void." *Wyo. Stat. § 1-23-108(a) (2025).* <https://wyoleg.gov/2025/Enroll/SF0107.pdf>
 

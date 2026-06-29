@@ -2,7 +2,7 @@
 jurisdiction: "U.S. Virgin Islands"
 slug: virgin-islands
 countryCode: US
-snapshotAsOf: "2026-06-20"
+snapshotAsOf: "2026-06-29"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/virgin-islands
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/virgin-islands · **Snapshot as of:** 2026-06-20 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/virgin-islands · **Snapshot as of:** 2026-06-29 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in the U.S. Virgin Islands[^about]
 
@@ -34,7 +34,7 @@ The U.S. Virgin Islands may enforce a reasonable non-compete but has no statute 
 | **Restriction extended during a breach?** | Silent — no statute or case addresses tolling |
 | **Maximum length set by law** | No statutory limit |
 
-## Are employee non-compete agreements enforceable in the U.S. Virgin Islands? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in the U.S. Virgin Islands? {#employee-non-compete-enforceability}
 
 **Short answer.** Sometimes. The Virgin Islands is a *reasonableness* jurisdiction, not a per se ban like California or North Dakota. A covenant can be enforced if it is ancillary to a valid relationship, supported by consideration, and no broader than necessary to protect a legitimate business interest. But there is no non-compete statute, the leading authority is a single trial-court decision with no V.I. Supreme Court ruling behind it, and that decision struck the covenant in front of it down — so enforcement is real but fact-dependent and far from automatic [^arvidson-enforceable].
 
@@ -66,7 +66,7 @@ Under *Connor*, when the law is unsettled the court does not default to the majo
 
 The practical takeaway: a covenant should be defended on Virgin Islands terms. Citing only mainland precedent or the Restatement as if it controlled invites a *Banks* challenge that the rule was never properly adopted here.
 
-## How do courts judge a covenant's duration, geographic area, and scope? {#duration-geography-scope}
+## How do courts judge a covenant's duration, geographic area, and scope? {#duration-limits}
 
 **Short answer.** By asking whether each dimension is no broader than necessary to protect a legitimate interest. *Arvidson* struck its covenant precisely because it gave no durational, territorial, or activity limit and never identified the interest it was meant to protect [^arvidson-scope]. The older decision in *V.I. Diving Schools v. Dixon* voided a covenant on the same ground — that it was an unreasonable restraint greater than necessary to protect the employer's business interest [^dixon-void].
 
@@ -87,7 +87,7 @@ A covenant should therefore state an explicit duration, a defined geographic are
 
 No on-point Virgin Islands case resolves the question, so this is a planning judgment rather than a settled rule. Obtaining the covenant at hire — when the offer of employment is itself the consideration — avoids the mid-employment problem, though even a covenant signed at hire must still satisfy *Arvidson*'s ancillary, protectable-interest, and reasonable-scope requirements.
 
-## Will a court narrow an overbroad covenant, or void it entirely? {#overbroad-narrowing}
+## Will a court narrow an overbroad covenant, or void it entirely? {#court-narrowing}
 
 **Short answer.** *Arvidson* chose *equitable reformation* as the soundest rule for Virgin Islands non-competes, rejecting both the rigid blue-pencil rule and the all-or-nothing approach [^q6-arvidson]. But the court adopted reformation with an express *greater willingness to refuse to reform* agreements that are not reasonable on their face [^q6-arvidson-strict], and it declined to rewrite the covenant in front of it because that clause had no time, place, or scope limit to salvage. An employer therefore cannot assume a court will rescue an overbroad clause.
 
@@ -98,7 +98,7 @@ No on-point Virgin Islands case resolves the question, so this is a planning jud
 
 A savings or step-down clause may improve the odds of partial enforcement, but only if enough reasonable terms already exist for a court to enforce without effectively writing a new covenant. The safer assumption is that the covenant as drafted is the covenant the court will judge.
 
-## Does the restricted period toll or extend if the employee breaches? {#tolling}
+## Does the restricted period toll or extend if the employee breaches? {#extended-for-breach}
 
 **Short answer.** No Virgin Islands statute or decision addresses tolling — whether the clock pauses, or the restricted period is extended, while a former employee is violating the covenant or litigation is pending. This is an open question in the territory [^q7-arvidson].
 

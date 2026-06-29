@@ -30,7 +30,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > The trial court also did not err by using its discretion and refusing to modify the Agreement.
 
-- supports: `court-modification`, `severability-and-reformation`
+- supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `mo-sigma-refusal`, `sigma-refused-modification`
 - cited_by: [Non-Compete Agreement Review Checklist — Missouri](../checklists/non-compete/us/missouri.md), [Non-Competes in Missouri](../non-compete/us/missouri.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2741957/sigma-aldrich-corporation-v-omar-vikin/#:~:text=The%20trial%20court%20also%20did,refusing%20to%20modify%20the%20Agreement.>

@@ -7,7 +7,7 @@ description: >-
 citation: '1st American Systems, Inc. v. Rezatto, 311 N.W.2d 51, 57 (S.D. 1981).'
 resource: >-
   https://www.courtlistener.com/opinion/2193337/1st-american-systems-inc-v-rezatto/
-timestamp: '2026-06-12'
+timestamp: '2026-06-26'
 document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/south-dakota'

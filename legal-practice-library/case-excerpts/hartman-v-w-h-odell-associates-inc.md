@@ -30,7 +30,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > A court at most may choose not to enforce a distinctly separable part of a covenant in order to render the provision reasonable.
 
-- supports: `blue-pencil`
+- supports: `court-narrowing`
 - source_cards: `q5-hartman-separable`
 - cited_by: [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1305744/hartman-v-wh-odell-and-associates-inc/#:~:text=A%20court%20at%20most%20may,to%20render%20the%20provision%20reasonable.>
@@ -39,7 +39,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > A restriction as to territory is reasonable only to the extent it protects the legitimate interests of the employer in maintaining [its] customers.
 
-- supports: `definitions`, `north-carolina-statutory-gates`, `time-territory`
+- supports: `definitions`, `duration-limits`, `north-carolina-statutory-gates`
 - source_cards: `nc-hartman-customer-territory`, `nc-hartman-territory`, `q3-hartman-territory`
 - cited_by: [Non-Compete Agreement Review Checklist — North Carolina](../checklists/non-compete/us/north-carolina.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1305744/hartman-v-wh-odell-and-associates-inc/#:~:text=A%20restriction%20as%20to%20territory,employer%20in%20maintaining%20%5Bits%5D%20customers.>
@@ -48,7 +48,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > The party who seeks the enforcement of the covenant not to compete has the burden of proving that the covenant is reasonable.
 
-- supports: `remedies`, `time-territory`
+- supports: `duration-limits`, `remedies`
 - source_cards: `nc-hartman-burden`, `q3-hartman-burden`
 - cited_by: [Non-Compete Agreement Review Checklist — North Carolina](../checklists/non-compete/us/north-carolina.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1305744/hartman-v-wh-odell-and-associates-inc/#:~:text=The%20party%20who%20seeks%20the,that%20the%20covenant%20is%20reasonable.>
@@ -57,7 +57,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > The reasonableness of a noncompetition covenant is a matter of law for the court to decide.
 
-- supports: `time-territory`
+- supports: `duration-limits`
 - source_cards: `q3-hartman-matter-of-law`
 - cited_by: [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1305744/hartman-v-wh-odell-and-associates-inc/#:~:text=The%20reasonableness%20of%20a%20noncompetition,for%20the%20court%20to%20decide.>

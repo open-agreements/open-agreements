@@ -22,7 +22,7 @@ tags:
 
 A question-by-question summary of Georgia non-compete law under the Georgia Restrictive Covenants Act (O.C.G.A. §§ 13-8-50 to 13-8-59), covering the reasonableness standard, the employee-category limits, the two-, three-, and five-year durational presumptions, implied geographic scope after Wimmer, customer and employee non-solicitation covenants, material contact, judicial modification (blue-pencil), choice-of-law limits under Motorsports of Conyers, tolling and the no-equitable-extension rule of Daneshgari, confidentiality and trade-secret alternatives, physician covenants, and the May 11, 2011 effective date.
 
-## Are employee non-compete agreements enforceable in Georgia? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Georgia? {#employee-non-compete-enforceability}
 
 **Short answer.** Yes, when they are reasonable and the worker performs a covered job function. Under the Georgia Restrictive Covenants Act, a post-employment non-compete is permitted so long as it is reasonable in time, geographic area, and scope of prohibited activities [^q1-grca-13-8-53a-reasonable]. As the next question explains, the Act separately limits which employees can be bound by a post-employment non-compete.
 
@@ -55,7 +55,7 @@ The *key employee* and *professional* categories are defined narrowly, and court
 >
 > Confirm that the employee actually performs a covered function before relying on a non-compete. A reasonable covenant is still void as a post-employment non-compete against a worker who does not solicit, sell, manage, or qualify as a key employee or professional, as *Blair v. Pantera Enterprises* shows [^q2-grca-13-8-53a-categories][^q2-blair-key-employee].
 
-## How long can a Georgia non-compete last? {#duration}
+## How long can a Georgia non-compete last? {#duration-limits}
 
 **Short answer.** It depends on the relationship, with rebuttable presumptions of two, three, or five years. O.C.G.A. § 13-8-57 presumes a restraint of two years or less reasonable against a former employee, three years or less against a distributor, dealer, franchisee, lessee, or licensee, and the longer of five years or the payout period reasonable against the seller or owner of a business [^q3-grca-13-8-57b-employee][^q3-grca-13-8-57c-other][^q3-grca-13-8-57d-sale].
 
@@ -124,7 +124,7 @@ The statute carves out customer non-solicitation and confidentiality, but it doe
 >
 > Treat an employee non-recruitment or no-hire clause as a GRCA covenant, not a common-law one. *Belt Power v. Reed* placed these covenants within the Act, which means the reasonableness standard and modification limits apply [^q6-beltpower-grca][^q6-wimmer-nonrecruit].
 
-## Can a Georgia court blue-pencil an overbroad covenant? {#blue-pencil}
+## Can a Georgia court blue-pencil an overbroad covenant? {#court-narrowing}
 
 **Short answer.** Yes, within a limit. O.C.G.A. § 13-8-53(d) makes a non-compliant covenant void but allows a court to modify it, so long as the modification does not make the covenant more restrictive for the employee than as originally drafted; O.C.G.A. § 13-8-54(b) directs courts to grant only the relief reasonably necessary [^q7-grca-13-8-53d-modify][^q7-grca-13-8-54b-relief].
 
@@ -177,7 +177,7 @@ The court set out a sequence: test the covenant against the GRCA first, and only
 >
 > Do not rely on a Delaware, Florida, or other out-of-state choice-of-law clause to enforce a covenant that would fail in Georgia. *Motorsports of Conyers v. Burbach* requires a Georgia court to test GRCA compliance first and bars foreign law when the covenant is unreasonable under the Act [^q9-motorsports-touchstone][^q9-motorsports-mechanism].
 
-## Does a Georgia non-compete toll or extend during breach or litigation? {#tolling-during-breach}
+## Does a Georgia non-compete toll or extend during breach or litigation? {#extended-for-breach}
 
 **Short answer.** A court will not extend it, and a private tolling clause is on uncertain ground. In *Daneshgari v. Patriot Towing Services, LLC*, the Court of Appeals held that a trial court cannot extend a non-compete beyond its contractual expiration, even against a party violating an injunction, because Georgia courts have rejected the idea that equity lets a court extend the period of a non-compete. Whether a contractual clause that pauses and extends the restraint would fare better has not been squarely decided [^q10-daneshgari-no-extend][^q10-daneshgari-equity].
 

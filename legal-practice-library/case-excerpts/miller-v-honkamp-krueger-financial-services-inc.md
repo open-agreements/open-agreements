@@ -9,7 +9,7 @@ citation: >-
   2021).
 resource: >-
   https://www.courtlistener.com/opinion/5040408/cara-miller-v-honkamp-krueger-financial/
-timestamp: '2026-06-12'
+timestamp: '2026-06-26'
 document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/south-dakota'

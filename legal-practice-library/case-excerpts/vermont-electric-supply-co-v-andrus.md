@@ -30,7 +30,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > enforcement will be ordered unless the agreement is found to be contrary to public policy, unnecessary for protection of the employer, or unnecessarily restrictive of the rights of the employee, with due regard being given to the subject matter of the contract and the circumstances and conditions under which it is to be performed.
 
-- supports: `alternatives`, `definitions`, `employee-noncompetes`, `mid-employment-consideration`, `pending-legislation`, `physician-specific-notices-and-carve-outs`, `vermont-statutory-gates`
+- supports: `alternatives`, `definitions`, `employee-non-compete-enforceability`, `mid-employment-consideration`, `pending-legislation`, `physician-specific-notices-and-carve-outs`, `vermont-statutory-gates`
 - source_cards: `alternatives-andrus-reasonableness-test`, `andrus-health-framework`, `andrus-nda-scrutiny`, `andrus-reasonableness-test`, `andrus-reasonableness-test-drafting`, `andrus-reasonableness-test-pending`, `andrus-test-gate`
 - cited_by: [Non-Compete Agreement Review Checklist — Vermont](../checklists/non-compete/us/vermont.md), [Non-Competes in Vermont](../non-compete/us/vermont.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1972913/vermont-electric-supply-company-inc-v-andrus/#:~:text=enforcement%20will%20be%20ordered%20unless,it%20is%20to%20be%20performed.>

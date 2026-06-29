@@ -29,8 +29,8 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > A covenant not to compete is enforceable only if it is necessary to protect a legitimate business interest, reasonably limited in time and space, and consonant with the public interest.
 
-- supports: `definitions`, `enforceability`
-- source_cards: `boulanger-reasonableness`, `boulanger-time-and-space`
+- supports: `definitions`, `employee-non-compete-enforceability`, `massachusetts-statutory-gates`
+- source_cards: `boulanger-reasonable-restraint`, `boulanger-reasonableness`, `boulanger-time-and-space`
 - cited_by: [Non-Compete Agreement Review Checklist — Massachusetts](../checklists/non-compete/us/massachusetts.md), [Non-Competes in Massachusetts](../non-compete/us/massachusetts.md)
 - link_to_source: <https://www.courtlistener.com/opinion/6579005/boulanger-v-dunkin-donuts-inc/#:~:text=A%20covenant%20not%20to%20compete%20is,consonant%20with%20the%20public%20interest.>
 

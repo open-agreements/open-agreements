@@ -2,7 +2,7 @@
 jurisdiction: "Minnesota"
 slug: minnesota
 countryCode: US
-snapshotAsOf: "2026-06-20"
+snapshotAsOf: "2026-06-29"
 lastReviewed: "2026-05-27"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/minnesota
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/minnesota · **Snapshot as of:** 2026-06-20 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/minnesota · **Snapshot as of:** 2026-06-29 · License: CC BY 4.0 · © openagreements.org
 
 # Employment Non-Competes in Minnesota[^about]
 
@@ -34,7 +34,7 @@ A question-by-question summary of Minnesota's 2023 non-compete statute, legacy M
 | **Can a court narrow it?** | No |
 | **Applies to contractors?** | Yes |
 
-## Are employee non-compete agreements enforceable in Minnesota? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Minnesota? {#employee-non-compete-enforceability}
 
 **Short answer.** Usually no, for agreements entered into on or after July 1, 2023. Minn. Stat. § 181.988 makes covered covenants not to compete void and unenforceable[^minn-181-988-voids-employment-noncompetes], unless a sale-of-business or dissolution exception applies.
 

@@ -9,7 +9,7 @@ citation: >-
   125.
 resource: >-
   https://www.courtlistener.com/opinion/1882124/communication-technical-systems-inc-v-densmore/
-timestamp: '2026-06-12'
+timestamp: '2026-06-26'
 document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/south-dakota'

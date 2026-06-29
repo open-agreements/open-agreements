@@ -30,7 +30,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > (1) Is the restriction reasonably necessary for the protection of the employer’s business; (2) is it unreasonably restrictive of the employee’s rights; and (3) is it prejudicial to the public interest?
 
-- supports: `employee-noncompetes`, `iowa-statutory-gates`
+- supports: `employee-non-compete-enforceability`, `iowa-statutory-gates`
 - source_cards: `ia-revere-test`, `q1-revere-three-prong`
 - cited_by: [Non-Compete Agreement Review Checklist — Iowa](../checklists/non-compete/us/iowa.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1989929/revere-transducers-inc-v-deere-co/#:~:text=(1)%20Is%20the%20restriction%20reasonably,prejudicial%20to%20the%20public%20interest%3F>

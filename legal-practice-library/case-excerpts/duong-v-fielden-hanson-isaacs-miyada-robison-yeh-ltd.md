@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > We hold that Golden Road does not prohibit a district court from blue-penciling an unreasonable noncompetition agreement if the agreement itself allows for it.
 
-- supports: `court-revision`, `severability-and-reformation`
+- supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `nv-duong-savings`, `q3-duong-savings-clause`
 - cited_by: [Non-Compete Agreement Review Checklist — Nevada](../checklists/non-compete/us/nevada.md), [Non-Competes in Nevada](../non-compete/us/nevada.md)
 - link_to_source: <https://www.courtlistener.com/opinion/5304741/duong-md-vs-fielden-hanson-isaacs-miyada-robison-yeh-ltd/#:~:text=We%20hold%20that%20Golden%20Road,agreement%20itself%20allows%20for%20it.>

@@ -17,7 +17,7 @@ tags:
 
 New Hampshire enforces reasonable non-competes under a common-law test, but RSA 275:70 creates a pre-acceptance notice rule, RSA 275:70-a voids low-wage employee noncompetes, healthcare statutes void certain geographic practice restrictions, and RSA chapter 350-B preserves trade-secret alternatives.
 
-## Are employee non-compete agreements enforceable in New Hampshire? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in New Hampshire? {#employee-non-compete-enforceability}
 
 **Short answer.** Yes, if the restraint is reasonable and no statute makes it unenforceable. New Hampshire uses a three-part reasonableness test: the restriction must protect a legitimate employer interest, avoid undue hardship on the employee, and avoid injury to the public interest [^foster-three-part-test][^hobert-reasonable-enforceable].
 
@@ -52,7 +52,7 @@ Goodwill is often the practical center of the analysis. New Hampshire cases allo
 >
 > Before enforcing, identify the employer asset at risk. A covenant based only on the cost of hiring or training workers is unlikely to satisfy the first prong of the New Hampshire test [^olsten-recruiting-costs].
 
-## How narrow must a New Hampshire non-compete's duration, geography, and customer scope be? {#scope-duration-geography}
+## How narrow must a New Hampshire non-compete's duration, geography, and customer scope be? {#duration-limits}
 
 **Short answer.** Narrow enough to match the protected interest. Customer and geography limits generally should track the employee's actual sphere of customer influence, and duration should last no longer than needed to protect the employer's goodwill or confidential information [^near-customer-sphere][^forbes-duration-geography].
 
@@ -60,7 +60,7 @@ New Hampshire courts are especially skeptical of all-customer restrictions. In *
 
 The same principle applies to geography. A territory is not reasonable merely because it is named. It should correspond to the market where the employee had customer or patient contact, or to another concrete employer interest.
 
-## Will a New Hampshire court reform an overbroad non-compete? {#court-reformation}
+## Will a New Hampshire court reform an overbroad non-compete? {#court-narrowing}
 
 **Short answer.** Yes, but only if the employer proves good faith in the execution of the agreement. New Hampshire courts have power to reform overbroad covenants, but bad-faith presentation can defeat that remedy [^near-good-faith-reformation][^syncom-bad-faith-reformation].
 
@@ -114,6 +114,12 @@ Asset-purchase standing can also matter. In *Atronix*, the New Hampshire Supreme
 
 That does not make sale covenants unlimited. The agreement still should tie the restraint to the goodwill or business assets being sold, and the written duration still matters.
 
+## How does New Hampshire treat employee non-solicitation covenants? {#employee-non-solicitation}
+
+**Short answer.** With no New Hampshire decision squarely on employee anti-raiding in our review, such a covenant would be judged under the same three-part *Foster* reasonableness test as a non-compete — no greater than necessary to protect a legitimate interest, no undue hardship, and no injury to the public [^nh-ens-foster] — and *Olsten* cautions that the mere cost of recruiting and hiring employees is not itself a protectable interest [^nh-ens-olsten].
+
+RSA 275:70-a's low-wage ban does not reach an anti-raiding clause, because its noncompete-agreement definition is limited to restraints on the low-wage employee's own work for another employer [^nh-ens-rsa-definition].
+
 ## Can New Hampshire independent contractors be bound by non-competes? {#independent-contractors}
 
 **Short answer.** New Hampshire appellate law in this source set does not supply a settled independent-contractor rule. Treat contractor noncompetes as high-risk restraints that still must satisfy the same concrete-interest and narrow-tailoring principles that govern employee covenants [^hobert-legitimate-interests-contractors][^hcc-persuasive-limits].
@@ -138,7 +144,7 @@ Trade-secret relief is not a substitute for an overbroad noncompete. It protects
 >
 > If the business concern is information misuse, build the record for trade-secret protection: identify the information, document economic value from secrecy, and maintain reasonable secrecy measures. RSA chapter 350-B is strongest when the facts support secrecy, not merely competition [^rsa-350-b-1-definition][^rsa-350-b-2-injunction].
 
-## Does a New Hampshire non-compete period pause or extend during breach or litigation? {#tolling-during-breach}
+## Does a New Hampshire non-compete period pause or extend during breach or litigation? {#extended-for-breach}
 
 **Short answer.** This is unsettled for employment noncompetes. New Hampshire appellate law in this source set does not squarely decide whether a restricted period pauses during breach, extends while litigation is pending, or whether a contractual extension-during-breach clause is enforceable [^gosselin-no-extension].
 
@@ -196,6 +202,12 @@ In the sale-of-business setting, *Gosselin* rejected a court-ordered extension o
 [^gosselin-sale-covenant]: **Gosselin v. Archibald** — "The terms of the agreement, as set forth in the purchase and sale contract, are reasonable and enforceable." *Gosselin v. Archibald, 121 N.H. 1016 (1981).* <https://www.courtlistener.com/opinion/2059042/gosselin-v-archibald/#:~:text=The%20terms%20of%20the%20agreement%2C,contract%2C%20are%20reasonable%20and%20enforceable.>
 
 [^atronix-assigned-covenant]: **Atronix, Inc. v. Morris** — "Because we conclude that Morris’s non-compete agreement was conveyed to the plaintiff under the plain language of section 2.02(a)(xii), we need not address either the plaintiff’s additional arguments or the defendants’ argument" *Atronix, Inc. v. Morris, 197 A.3d 79 (N.H. 2018).* <https://www.courtlistener.com/opinion/4546183/atronix-inc-v-kenneth-morris-a/#:~:text=Because%20we%20conclude%20that%20Morris%E2%80%99s,arguments%20or%20the%20defendants%E2%80%99%20argument>
+
+[^nh-ens-foster]: **Smith, Batchelder & Rugg v. Foster** — "In scrutinizing restrictive covenants, this court employs the following three-pronged test: ‘[a] restraint on employment is reasonable only if it is no greater than necessary for the protection of the employer’s legitimate interest, does not impose undue hardship on the employee and is not injurious to the public interest.’" *Smith, Batchelder & Rugg v. Foster, 119 N.H. 679 (1979).* <https://www.courtlistener.com/opinion/2375592/smith-batchelder-rugg-v-foster/#:~:text=In%20scrutinizing%20restrictive%20covenants%2C%20this,injurious%20to%20the%20public%20interest.%E2%80%9D>
+
+[^nh-ens-olsten]: **National Employment Service Corp. v. Olsten Staffing Service, Inc.** — "Thus, we hold that although there may be valid reasons for restrictive covenants, the mere cost associated with recruiting and hiring employees is not a legitimate interest protectable by a restrictive covenant in an employment contract." *National Employment Service Corp. v. Olsten Staffing Service, Inc., 145 N.H. 158 (2000).* <https://www.courtlistener.com/opinion/8092147/national-employment-service-corp-v-olsten-staffing-service-inc/#:~:text=Thus%2C%20we%20hold%20that%20although,covenant%20in%20an%20employment%20contract.>
+
+[^nh-ens-rsa-definition]: **RSA 275:70-a** — "‘Noncompete agreement’ means an agreement between an employer and a low-wage employee that restricts such low-wage employee from performing: (1) Work for another employer for a specified period of time; (2) Work in a specified geographical area; or (3) Work for another employer that is similar to such low-wage employee’s work for the employer who is a party to the agreement." *RSA 275:70-a, I(c).* <https://gc.nh.gov/rsa/html/XXIII/275/275-70-a.htm>
 
 [^hobert-legitimate-interests-contractors]: **ACAS Acquisitions (Precitech) Inc. v. Hobert** — "The first step in determining the reasonableness of a given restraint is to determine whether the restraint was narrowly tailored to protect the employer’s legitimate interests." *ACAS Acquisitions (Precitech) Inc. v. Hobert, 155 N.H. 381 (2007).* <https://www.courtlistener.com/opinion/2320967/acas-acquisitions-precitech-inc-v-hobert/#:~:text=The%20first%20step%20in%20determining,protect%20the%20employer%E2%80%99s%20legitimate%20interests.>
 

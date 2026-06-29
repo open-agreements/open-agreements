@@ -2,7 +2,7 @@
 jurisdiction: "Maine"
 slug: maine
 countryCode: US
-snapshotAsOf: "2026-06-20"
+snapshotAsOf: "2026-06-29"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/maine
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/maine · **Snapshot as of:** 2026-06-20 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/maine · **Snapshot as of:** 2026-06-29 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Maine[^about]
 
@@ -36,7 +36,7 @@ Maine regulates employee non-competes through 26 M.R.S. § 599-A, using statutor
 | **Restriction extended during a breach?** | Not addressed |
 | **Maximum length set by law** | No statutory maximum (reasonable duration) |
 
-## Are employee non-compete agreements enforceable in Maine? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Maine? {#employee-non-compete-enforceability}
 
 **Short answer.** Sometimes, but Maine starts from a statutory anti-restraint rule: 26 M.R.S. § 599-A says non-competes are contrary to public policy[^maine-599a-public-policy-narrow-interests] and enforceable only if reasonable and no broader than necessary to protect specified employer interests.
 
@@ -104,6 +104,12 @@ Maine also has a separate employment NDA statute. Section 599-C protects reporti
 >
 > Do not make a confidentiality clause do non-compete work. Maine allows protection for specialized confidential information, but *Bernier* distinguishes that from blocking general skill and knowledge [^bernier-confidential-not-general-skill].
 
+## How does Maine treat sale-of-business non-compete covenants? {#sale-of-business}
+
+**Short answer.** Maine's noncompete statute reaches only an employee or prospective employee, so a covenant given by the seller of a business falls outside it and remains governed by common-law reasonableness [^me-sob-599a][^me-sob-lord].
+
+Because Section 599-A is defined by the employment relationship [^me-sob-599a], a seller's covenant is tested under Maine common law, which enforces a restraint only so far as it is reasonable and no wider than necessary to protect the business interest at issue [^me-sob-lord]. Maine has no modern controlling decision in our review applying that standard specifically to a sale-of-business covenant, so the seller analysis rests on the general common-law rule rather than a seller-specific holding.
+
 ## What trade-secret remedies are available in Maine? {#trade-secrets}
 
 **Short answer.** Maine trade-secret law gives employers remedies that can substitute for or sit beside narrow restrictive covenants, including injunctions, damages, exemplary damages, and attorney-fee awards [^maine-utsa-injunctions][^maine-utsa-damages][^maine-utsa-fees].
@@ -160,6 +166,10 @@ The 2026 healthcare development is now law. Governor Mills signed L.D. 2200 on A
 [^maine-599c-discrimination-reporting]: **26 M.R.S. § 599-C — Nondisclosure agreements** — "An employer may not require an employee, intern or applicant for employment to enter into a contract or agreement that waives or limits any right to report or discuss unlawful employment discrimination, as defined and limited by Title 5, chapter 337, subchapter 3, occurring in the workplace or at work-related events." *26 M.R.S. § 599-C(2).* <https://legislature.maine.gov/statutes/26/title26sec599-C.html>
 
 [^maine-599c-proprietary-info-saved]: **26 M.R.S. § 599-C — Nondisclosure agreements** — "Nothing in this section may be construed as limiting the use of nondisclosure agreements to protect the confidentiality of proprietary information, trade secrets or information that is otherwise confidential by law, rule or regulation." *26 M.R.S. § 599-C(4).* <https://legislature.maine.gov/statutes/26/title26sec599-C.html>
+
+[^me-sob-599a]: **26 M.R.S. § 599-A — Noncompete agreements** — "‘Noncompete agreement’ means a contract or contract provision that prohibits an employee or prospective employee from working in the same or a similar profession or in a specified geographic area for a certain period of time following termination of employment." *26 M.R.S. § 599-A(1)(B).* <https://legislature.maine.gov/statutes/26/title26sec599-A.html>
+
+[^me-sob-lord]: **Lord v. Lord** — "We have long recognized that non-competition agreements are contrary to public policy and will be enforced only to the extent that they are reasonable and sweep no wider than necessary to protect the business interests in issue." *Lord v. Lord, 454 A.2d 830, 834 (Me. 1983).* <https://www.courtlistener.com/opinion/2367150/lord-v-lord/#:~:text=We%20have%20long%20recognized%20that,the%20business%20interests%20in%20issue.>
 
 [^maine-utsa-injunctions]: **10 M.R.S. § 1543 — Uniform Trade Secrets Act (Injunctive relief)** — "Actual or threatened misappropriation may be restrained or enjoined." *10 M.R.S. § 1543(1).* <https://legislature.maine.gov/statutes/10/title10sec1543.html>
 

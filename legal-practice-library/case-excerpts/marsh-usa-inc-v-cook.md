@@ -23,6 +23,15 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 ## Quoted passages
 
+### marsh-usa-inc-v-cook-covenants-that-place-limits-on-former-a5334543 {#marsh-usa-inc-v-cook-covenants-that-place-limits-on-former-a5334543}
+
+> Covenants that place limits on former employees' professional mobility or restrict their solicitation of the former employers' customers and employees are restraints on trade and are governed by the Act.
+
+- supports: `non-solicitation-sale-of-business`
+- source_cards: `tx-ns-marsh`
+- cited_by: [Non-Competes in Texas](../non-compete/us/texas.md)
+- link_to_source: <https://www.courtlistener.com/opinion/2541088/marsh-usa-inc-v-cook/#:~:text=Covenants%20that%20place%20limits%20on,are%20governed%20by%20the%20Act.>
+
 ### marsh-usa-inc-v-cook-we-hold-that-under-the-terms-24749138 {#marsh-usa-inc-v-cook-we-hold-that-under-the-terms-24749138}
 
 > We hold that, under the terms of the Covenants Not to Compete Act (Act), the consideration for the noncompete agreement (stock options) is reasonably related to the company's interest in protecting its goodwill, a business interest the Act recognizes as worthy of protection.

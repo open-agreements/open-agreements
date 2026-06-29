@@ -38,7 +38,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > The modern, prevailing common-law standard of reasonableness for employee agreements not to compete applies a three-pronged test.
 
-- supports: `enforceability`, `new-york-doctrine-gates`, `restrictive-covenants-each-independently-includable`
+- supports: `employee-non-compete-enforceability`, `new-york-doctrine-gates`, `restrictive-covenants-each-independently-includable`
 - source_cards: `bdo-reasonableness-standard`, `bdo-three-prong-covenants`, `bdo-three-prong-gate`
 - cited_by: [Non-Compete Agreement Review Checklist — New York](../checklists/non-compete/us/new-york.md), [Non-Competes in New York](../non-compete/us/new-york.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2117265/bdo-seidman-v-hirshberg/#:~:text=The%20modern%2C%20prevailing%20common%2Dlaw%20standard,compete%20applies%20a%20three%2Dpronged%20test.>

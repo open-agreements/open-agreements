@@ -33,7 +33,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > The non-competition contracts go well beyond the bounds of what is allowable under § 219A and violate the legislatively expressed public policy.
 
-- supports: `employee-noncompetes`, `restrictive-covenants-each-independently-includable`
+- supports: `employee-non-compete-enforceability`, `restrictive-covenants-each-independently-includable`
 - source_cards: `howard-noncompete-void`, `howard-void-covenants`
 - cited_by: [Non-Compete Agreement Review Checklist — Oklahoma](../checklists/non-compete/us/oklahoma.md), [Non-Competes in Oklahoma](../non-compete/us/oklahoma.md)
 - link_to_source: <https://www.courtlistener.com/opinion/5327051/howard-v-nitro-lift-technologies-llc/#:~:text=The%20non%2Dcompetition%20contracts%20go%20well,the%20legislatively%20expressed%20public%20policy.>

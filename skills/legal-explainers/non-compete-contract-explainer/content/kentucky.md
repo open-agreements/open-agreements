@@ -2,7 +2,7 @@
 jurisdiction: "Kentucky"
 slug: kentucky
 countryCode: US
-snapshotAsOf: "2026-06-20"
+snapshotAsOf: "2026-06-29"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/kentucky
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/kentucky · **Snapshot as of:** 2026-06-20 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/kentucky · **Snapshot as of:** 2026-06-29 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Kentucky[^about]
 
@@ -35,7 +35,7 @@ Kentucky enforces non-competes only when the restraint is reasonable under commo
 | **Restriction extended during a breach?** | Unsettled |
 | **Maximum length set by law** | No statutory cap |
 
-## Are employee non-compete agreements enforceable in Kentucky? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Kentucky? {#employee-non-compete-enforceability}
 
 **Short answer.** Yes, sometimes. Kentucky is a reasonableness state, not a general ban state. A non-compete is enforceable only if it is supported by valid consideration and is reasonable — affording fair protection to a legitimate employer interest without being so broad as to harm the public or impose undue hardship on the employee [^kegel-reasonableness-test].
 
@@ -74,7 +74,7 @@ The Kentucky Uniform Trade Secrets Act, codified at KRS 365.880 through 365.900,
 >
 > Do not use a Kentucky non-compete to block competition disconnected from a protectable interest. Tie the restraint to specific confidential information, trade secrets, or customer goodwill, and keep trade-secret remedies in a separate confidentiality and KUTSA strategy [^kutsa-trade-secret-definition].
 
-## What duration and geographic scope are reasonable for a Kentucky non-compete? {#duration-geography}
+## What duration and geographic scope are reasonable for a Kentucky non-compete? {#duration-limits}
 
 **Short answer.** There is no statutory cap. Kentucky courts weigh duration, geography, the employer's protectable interest, the burden on the employee, and the public effect as a whole, rather than applying fixed numbers [^q4-kegel-reasonableness].
 
@@ -100,7 +100,13 @@ That equitable power is not a license to overreach. Reformation is discretionary
 >
 > Do not rely on Kentucky's blue-pencil power as a safety net for an aggressive covenant. Draft tiered, severable, reasonable restraints, because reformation is discretionary and a court may decline to rescue a covenant it views as overreaching [^kegel-blue-pencil][^hodges-reformation-geography].
 
-## Does a Kentucky non-compete toll or extend during breach or litigation? {#tolling-extension}
+## How does Kentucky treat employee non-solicitation covenants? {#employee-non-solicitation}
+
+**Short answer.** Kentucky has no on-point employee non-solicit decision in our review, so the covenant would be treated as an ordinary restrictive covenant judged under the same *Kegel* reasonableness test [^ky-ens-kegel] and supported by valid consideration under *Creech* [^ky-ens-creech].
+
+Under *Kegel*, the restraint must afford only fair protection to the employer's interest without harming the public or imposing undue hardship on the employee [^ky-ens-kegel]; under *Creech*, a covenant fails for lack of consideration when the employer gives up no legal right [^ky-ens-creech].
+
+## Does a Kentucky non-compete toll or extend during breach or litigation? {#extended-for-breach}
 
 **Short answer.** This is an open Kentucky question. No staged Kentucky statute or appellate decision squarely endorses automatically tolling or extending the restricted period while the former employee is in breach or while litigation is pending [^q6-kegel-reasonableness-backdrop][^q6-kegel-blue-pencil].
 
@@ -181,6 +187,10 @@ The enacted baseline therefore remains common-law reasonableness and considerati
 [^kegel-blue-pencil]: **Kegel v. Tillotson** — "our courts have adopted a ‘blue pencil’ rule, whereby we are empowered to reform or amend restrictions in a non-compete clause if the initial restrictions are overly broad or burdensome." *Kegel v. Tillotson, 297 S.W.3d 908 (Ky. App. 2009).* <https://www.courtlistener.com/opinion/2169063/kegel-v-tillotson/#:~:text=our%20courts%20have%20adopted%20a,are%20overly%20broad%20or%20burdensome.>
 
 [^hodges-reformation-geography]: **Hodges v. Todd** — "we hold that the trial court had the authority to enforce the covenant by establishing a reasonable geographical limitation based on the intention of the parties at the time the contract was executed." *Hodges v. Todd, 698 S.W.2d 317 (Ky. App. 1985).* <https://www.courtlistener.com/opinion/1781513/hodges-v-todd/#:~:text=we%20hold%20that%20the%20trial,time%20the%20contract%20was%20executed.>
+
+[^ky-ens-kegel]: **Kegel v. Tillotson** — "agreements on restraint of trade are reasonable if, ‘on consideration of the subject, nature of the business, situation of the parties and circumstances of the particular case, the restriction is such only as to afford fair protection to the interests of the covenan-tee and is not so large as to interfere with the public interests or impose undue hardship on the party restricted." *Kegel v. Tillotson, 297 S.W.3d 908 (Ky. App. 2009).* <https://www.courtlistener.com/opinion/2169063/kegel-v-tillotson/#:~:text=agreements%20on%20restraint%20of%20trade,hardship%20on%20the%20party%20restricted.>
+
+[^ky-ens-creech]: **Charles T. Creech, Inc. v. Brown** — "Because the Agreement did not require Creech to forbear the exercise of some legal right or otherwise result in some detriment to Creech, there was no consideration." *Charles T. Creech, Inc. v. Brown, 433 S.W.3d 345 (Ky. 2014).* <https://www.courtlistener.com/opinion/5444327/charles-t-creech-inc-v-brown/#:~:text=Because%20the%20Agreement%20did%20not,Creech%2C%20there%20was%20no%20consideration.>
 
 [^q6-kegel-reasonableness-backdrop]: **Kegel v. Tillotson** — "agreements on restraint of trade are reasonable if, ‘on consideration of the subject, nature of the business, situation of the parties and circumstances of the particular case, the restriction is such only as to afford fair protection to the interests of the covenan-tee and is not so large as to interfere with the public interests or impose undue hardship on the party restricted." *Kegel v. Tillotson, 297 S.W.3d 908 (Ky. App. 2009).* <https://www.courtlistener.com/opinion/2169063/kegel-v-tillotson/#:~:text=agreements%20on%20restraint%20of%20trade,hardship%20on%20the%20party%20restricted.>
 

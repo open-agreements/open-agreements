@@ -56,8 +56,8 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 > The legitimate interest alleged by DWS is its goodwill in its customers, the essence of which is its customer connections which may include knowledge of, and influence over, its customers.
 
-- supports: `legitimate-interest`
-- source_cards: `wallis-customer-connection`
+- supports: `customer-non-solicitation`, `legitimate-interest`
+- source_cards: `vic-cust-legitimate-interest`, `wallis-customer-connection`
 - cited_by: [Non-Compete Enforceability in Victoria](../non-compete/au/victoria.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/vic/VSCA/2013/24.html>
 
@@ -74,7 +74,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 > we conclude that while DWS did have a legitimate interest in restraining Mr Pickett, the clause was unreasonable having regard to both its extent and to its duration.
 
-- supports: `legitimate-interest`, `reasonableness-factors`
-- source_cards: `wallis-conclude-unreasonable`, `wallis-conclude-unreasonable-scope`
+- supports: `customer-non-solicitation`, `legitimate-interest`, `reasonableness-factors`
+- source_cards: `vic-cust-void-if-wider`, `wallis-conclude-unreasonable`, `wallis-conclude-unreasonable-scope`
 - cited_by: [Non-Compete Enforceability in Victoria](../non-compete/au/victoria.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/vic/VSCA/2013/24.html>

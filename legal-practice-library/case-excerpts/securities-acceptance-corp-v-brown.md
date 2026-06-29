@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > A contract in restraint of trade, which is neither limited in time nor space, is against public policy and void.
 
-- supports: `definitions`, `tolling-during-breach`, `tolling-extension`
+- supports: `definitions`, `extended-for-breach`, `tolling-during-breach`
 - source_cards: `ne-brown-unlimited-def`, `ne-brown-unlimited-toll`, `q11-brown-reasonableness`
 - cited_by: [Non-Compete Agreement Review Checklist — Nebraska](../checklists/non-compete/us/nebraska.md), [Non-Competes in Nebraska](../non-compete/us/nebraska.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1948918/securities-acceptance-corporation-v-brown/#:~:text=A%20contract%20in%20restraint%20of,against%20public%20policy%20and%20void.>
@@ -41,7 +41,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > There are three general requirements relating to partial restraints of trade: First, is the restriction reasonable in the sense that it is not injurious to the public; second, is the restriction reasonable in the sense that it is no greater than is reasonably necessary to protect the employer in some legitimate interest; and, third, is the restriction reasonable in the sense that it is not unduly harsh and oppressive on the employee.
 
-- supports: `definitions`, `employee-noncompetes`, `nebraska-statutory-gates`, `trade-secrets`
-- source_cards: `ne-brown-three-part-def`, `ne-brown-three-part-gate`, `q1-brown-three-part-test`, `q10-brown-reasonableness`
+- supports: `definitions`, `employee-non-compete-enforceability`, `employee-non-solicitation`, `nebraska-statutory-gates`, `trade-secrets`
+- source_cards: `ne-brown-three-part-def`, `ne-brown-three-part-gate`, `ne-ens-brown`, `q1-brown-three-part-test`, `q10-brown-reasonableness`
 - cited_by: [Non-Compete Agreement Review Checklist — Nebraska](../checklists/non-compete/us/nebraska.md), [Non-Competes in Nebraska](../non-compete/us/nebraska.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1948918/securities-acceptance-corporation-v-brown/#:~:text=There%20are%20three%20general%20requirements,and%20oppressive%20on%20the%20employee.>

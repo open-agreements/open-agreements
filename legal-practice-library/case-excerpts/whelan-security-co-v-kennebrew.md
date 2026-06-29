@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Accordingly, when the provisions of a non-compete clause impose a restraint that is unreasonably broad, appellate courts still can give effect to its purpose by refusing to give effect to the unreasonable terms or modifying the terms of the contract to be reasonable.
 
-- supports: `court-modification`, `severability-and-reformation`
+- supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `mo-whelan-modification`, `whelan-modification`
 - cited_by: [Non-Compete Agreement Review Checklist — Missouri](../checklists/non-compete/us/missouri.md), [Non-Competes in Missouri](../non-compete/us/missouri.md)
 - link_to_source: <https://www.courtlistener.com/opinion/5283000/whelan-security-co-v-kennebrew/#:~:text=Accordingly%2C%20when%20the%20provisions%20of,the%20contract%20to%20be%20reasonable.>
@@ -47,7 +47,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > The employer has the burden to prove that the non-compete agreement protects its legitimate interests in trade secrets or customer contacts and that the agreement is reasonable as to time and geographic space.
 
-- supports: `definitions`, `employee-noncompetes`, `missouri-statutory-gates`, `parties-and-cover-term-identification`, `restrictive-covenants-each-independently-includable`, `tolling`, `tolling-during-breach`
+- supports: `definitions`, `employee-non-compete-enforceability`, `extended-for-breach`, `missouri-statutory-gates`, `parties-and-cover-term-identification`, `restrictive-covenants-each-independently-includable`, `tolling-during-breach`
 - source_cards: `mo-tolling-whelan`, `mo-whelan-burden-cov`, `mo-whelan-burden-cover`, `mo-whelan-burden-gate`, `mo-whelan-time-space`, `tolling-whelan-time`, `whelan-employer-burden`
 - cited_by: [Non-Compete Agreement Review Checklist — Missouri](../checklists/non-compete/us/missouri.md), [Non-Competes in Missouri](../non-compete/us/missouri.md)
 - link_to_source: <https://www.courtlistener.com/opinion/5283000/whelan-security-co-v-kennebrew/#:~:text=The%20employer%20has%20the%20burden,to%20time%20and%20geographic%20space.>

@@ -30,7 +30,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Restrictive covenants are unfavored in Louisiana and are narrowly and strictly construed.
 
-- supports: `reformation`, `severability-and-reformation`
+- supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `brock-severance`, `la-brock-sev`
 - cited_by: [Non-Compete Agreement Review Checklist — Louisiana](../checklists/non-compete/us/louisiana.md), [Non-Competes in Louisiana](../non-compete/us/louisiana.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4656603/brock-services-llc-v-richard-rogillio/#:~:text=Restrictive%20covenants%20are%20unfavored%20in,are%20narrowly%20and%20strictly%20construed.>

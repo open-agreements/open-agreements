@@ -72,6 +72,7 @@ jobs:
       head_ref: ${{ steps.pr.outputs.head_ref }}
       head_sha: ${{ steps.pr.outputs.head_sha }}
       labels: ${{ steps.pr.outputs.labels }}
+      author: ${{ steps.pr.outputs.author }}
     steps:
       - name: Resolve PR context
         id: pr
@@ -84,10 +85,11 @@ jobs:
           PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
           PR_BASE_REF: ${{ github.event.pull_request.base.ref }}
           PR_LABELS: ${{ toJSON(github.event.pull_request.labels.*.name) }}
+          PR_AUTHOR: ${{ github.event.pull_request.user.login }}
         run: |
           set -euo pipefail
           if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
-            gh pr view "$DISPATCH_PR_NUMBER" --repo "$GITHUB_REPOSITORY" --json headRefOid,headRefName,baseRefName,labels,headRepository,headRepositoryOwner > "$RUNNER_TEMP/pr.json"
+            gh pr view "$DISPATCH_PR_NUMBER" --repo "$GITHUB_REPOSITORY" --json headRefOid,headRefName,baseRefName,labels,author,headRepository,headRepositoryOwner > "$RUNNER_TEMP/pr.json"
             # SECURITY: the job-level `if:` permits workflow_dispatch
             # unconditionally; the same-repo gate (`head.repo.full_name ==
             # github.repository`) is only enforced for pull_request events. Without
@@ -105,6 +107,7 @@ jobs:
               echo "head_ref=$(jq -r '.headRefName' "$RUNNER_TEMP/pr.json")"
               echo "base_ref=$(jq -r '.baseRefName' "$RUNNER_TEMP/pr.json")"
               echo "labels=$(jq -c '[.labels[].name]' "$RUNNER_TEMP/pr.json")"
+              echo "author=$(jq -r '.author.login' "$RUNNER_TEMP/pr.json")"
             } >> "$GITHUB_OUTPUT"
           else
             {
@@ -117,6 +120,7 @@ jobs:
               # single-line so the downstream `JSON.parse(PR_LABELS)` keeps
               # working and the override label can be evaluated.
               echo "labels=$(printf '%s' "$PR_LABELS" | jq -c .)"
+              echo "author=$PR_AUTHOR"
             } >> "$GITHUB_OUTPUT"
           fi
 
@@ -371,6 +375,8 @@ jobs:
           LLM_GATE_BLOCKING: ${{ env.LLM_GATE_BLOCKING }}
           PR_NUMBER: ${{ needs.parse-checklist.outputs.pr_number }}
           PR_LABELS: ${{ needs.parse-checklist.outputs.labels }}
+          PR_AUTHOR: ${{ needs.parse-checklist.outputs.author }}
+          PR_HEAD_REF: ${{ needs.parse-checklist.outputs.head_ref }}
           EVENT_NAME: ${{ github.event_name }}
           HEAD_SHA: ${{ needs.parse-checklist.outputs.head_sha }}
           REPO: ${{ github.repository }}
@@ -428,10 +434,38 @@ jobs:
             const passes = rows.filter(r => r.status === 'PASS').length;
             const overall = warns > 0 ? '⚠️ WARN' : (passes > 0 ? '✅ PASS' : '❓ NO RESULTS');
             const labels = JSON.parse(process.env.PR_LABELS || '[]');
-            const overrideActive = labels.includes('llm-gate/override');
+            const labelOverride = labels.includes('llm-gate/override');
+            // Automated maintenance PRs (deterministic branches `update/templates`
+            // and `update/corpus`, opened by the maintenance bot) carry generated,
+            // pre-reviewed content (validated upstream + by the acceptance gates
+            // below). Their large generated diffs — binary DOCX for templates, bulk
+            // text for the corpus/skill updates — deterministically break the
+            // per-item LLM call, and review of generated output adds no signal, so
+            // they are auto-overridden. Requires BOTH a known maintenance branch (or
+            // the legacy per-SHA `update/templates-*` prefix, retained so any
+            // still-open older sync PR keeps its override) AND the specific
+            // maintenance-bot author. The author is pinned to that one identity — not
+            // "any bot/app" — because the stable branch names are predictable, so a
+            // broad guard would let any other installed app with write access open a
+            // PR on these branches and bypass the gate. The two pinned forms are the
+            // REST webhook login (`…[bot]`, used on `pull_request` events) and the
+            // GraphQL/`gh` login (`app/…`, used on the `workflow_dispatch` path).
+            const author = process.env.PR_AUTHOR || '';
+            const headRef = process.env.PR_HEAD_REF || '';
+            const MAINTENANCE_BRANCHES = ['update/templates', 'update/corpus'];
+            const isMaintenanceBranch =
+              MAINTENANCE_BRANCHES.includes(headRef) ||
+              headRef.startsWith('update/templates-');
+            const MAINTENANCE_BOT_AUTHORS = new Set(['app/oa-ssot-sync', 'oa-ssot-sync[bot]']);
+            const isMaintenanceBotAuthor = MAINTENANCE_BOT_AUTHORS.has(author);
+            const isSyncBotPR = isMaintenanceBranch && isMaintenanceBotAuthor;
+            const overrideActive = labelOverride || isSyncBotPR;
 
+            const overrideReason = isSyncBotPR && !labelOverride
+              ? 'automated maintenance PR (`update/templates` or `update/corpus`, bot-authored)'
+              : '`llm-gate/override` label is set';
             const overrideBanner = overrideActive
-              ? '\n\n> ⚠️ **Override active** — `llm-gate/override` label is set; this gate\'s WARN findings are non-blocking on this PR.\n'
+              ? `\n\n> ⚠️ **Override active** — ${overrideReason}; this gate\'s WARN findings are non-blocking on this PR.\n`
               : '';
             const summary = `**Overall:** ${overall} (${passes} pass · ${warns} warn · ${rows.length} total)`;
 

@@ -30,7 +30,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > If a contract by an employee in restraint of competition is too broad to be a reasonable protection to the employer’s business it will not be enforced.
 
-- supports: `restrictive-covenants-each-independently-includable`, `time-territory`
+- supports: `duration-limits`, `restrictive-covenants-each-independently-includable`
 - source_cards: `nc-daniel-overbroad`, `q3-daniel-overbroad`
 - cited_by: [Non-Compete Agreement Review Checklist — North Carolina](../checklists/non-compete/us/north-carolina.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1205500/whittaker-general-medical-corp-v-daniel/#:~:text=If%20a%20contract%20by%20an,it%20will%20not%20be%20enforced.>
@@ -39,7 +39,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Such covenants are enforceable in this state if they are (1) in writing, (2) made part of a contract of employment, (3) based on valuable consideration, (4) reasonable both as to time and territory, and (5) not against public policy.
 
-- supports: `enforceable`, `north-carolina-statutory-gates`
+- supports: `employee-non-compete-enforceability`, `north-carolina-statutory-gates`
 - source_cards: `nc-daniel-five-factor`, `q1-daniel-five-factor`
 - cited_by: [Non-Compete Agreement Review Checklist — North Carolina](../checklists/non-compete/us/north-carolina.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1205500/whittaker-general-medical-corp-v-daniel/#:~:text=Such%20covenants%20are%20enforceable%20in,(5)%20not%20against%20public%20policy.>
@@ -48,7 +48,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > The courts will not rewrite a contract if it is too broad but will simply not enforce it.
 
-- supports: `blue-pencil`
+- supports: `court-narrowing`
 - source_cards: `q5-daniel-rewrite`
 - cited_by: [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1205500/whittaker-general-medical-corp-v-daniel/#:~:text=The%20courts%20will%20not%20rewrite,will%20simply%20not%20enforce%20it.>

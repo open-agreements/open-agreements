@@ -30,7 +30,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > We find that the scope of activity restricted by the covenant is unreasonably broad.
 
-- supports: `definitions`, `duration-geography-scope`, `indiana-statutory-gates`
+- supports: `definitions`, `duration-limits`, `indiana-statutory-gates`
 - source_cards: `med1-any-capacity`, `med1-any-capacity-defs`, `med1-any-capacity-gate`
 - cited_by: [Non-Compete Agreement Review Checklist — Indiana](../checklists/non-compete/us/indiana.md), [Non-Competes in Indiana](../non-compete/us/indiana.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10283022/med-1-solutions-llc-v-jennifer-taylor/#:~:text=We%20find%20that%20the%20scope,the%20covenant%20is%20unreasonably%20broad.>

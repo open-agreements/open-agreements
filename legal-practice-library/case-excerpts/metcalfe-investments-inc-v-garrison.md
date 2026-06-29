@@ -30,7 +30,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > A covenant not to contact former customers will also be unreasonable if the former employee did not have access to confidential information.
 
-- supports: `alaska-statutory-gates`, `definitions`, `time-geography-limits`
+- supports: `alaska-statutory-gates`, `definitions`, `duration-limits`
 - source_cards: `ak-metcalfe-confidential-defs`, `ak-metcalfe-confidential-gate`, `metcalfe-confidential-info`
 - cited_by: [Non-Compete Agreement Review Checklist — Alaska](../checklists/non-compete/us/alaska.md), [Non-Competes in Alaska](../non-compete/us/alaska.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1274957/metcalfe-investments-inc-v-garrison/#:~:text=A%20covenant%20not%20to%20contact,have%20access%20to%20confidential%20information.>
@@ -39,7 +39,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > For instance, if a business is so large that a restraint on contacting former clients would amount to a bar prohibiting the employee from practicing his or her specialty, the court will require the restraint to be drafted more narrowly.
 
-- supports: `alaska-statutory-gates`, `restrictive-covenants-each-independently-includable`, `time-geography-limits`
+- supports: `alaska-statutory-gates`, `duration-limits`, `restrictive-covenants-each-independently-includable`
 - source_cards: `ak-metcalfe-specialty-cov`, `ak-metcalfe-specialty-gate`, `metcalfe-specialty-bar`
 - cited_by: [Non-Compete Agreement Review Checklist — Alaska](../checklists/non-compete/us/alaska.md), [Non-Competes in Alaska](../non-compete/us/alaska.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1274957/metcalfe-investments-inc-v-garrison/#:~:text=For%20instance%2C%20if%20a%20business,to%20be%20drafted%20more%20narrowly.>
@@ -66,7 +66,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > We conclude that the noncompetition agreement is not rendered unenforceable by the lack of a geographical or durational limitation.
 
-- supports: `alaska-statutory-gates`, `time-geography-limits`
+- supports: `alaska-statutory-gates`, `duration-limits`
 - source_cards: `ak-metcalfe-no-limits-gate`, `metcalfe-no-time-geography-required`
 - cited_by: [Non-Compete Agreement Review Checklist — Alaska](../checklists/non-compete/us/alaska.md), [Non-Competes in Alaska](../non-compete/us/alaska.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1274957/metcalfe-investments-inc-v-garrison/#:~:text=We%20conclude%20that%20the%20noncompetition,a%20geographical%20or%20durational%20limitation.>

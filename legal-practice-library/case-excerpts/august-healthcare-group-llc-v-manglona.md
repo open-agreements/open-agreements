@@ -3,15 +3,13 @@ type: Case Excerpt
 title: 'August Healthcare Group, LLC v. Manglona'
 description: >-
   August Healthcare Grp., LLC v. Manglona, No. 1:12-cv-00008, 2012 WL 12926085
-  (D. N. Mar. I. Oct. 12, 2012). — quoted in 3 document(s).
+  (D. N. Mar. I. Oct. 12, 2012). — quoted in 2 document(s).
 citation: >-
   August Healthcare Grp., LLC v. Manglona, No. 1:12-cv-00008, 2012 WL 12926085
   (D. N. Mar. I. Oct. 12, 2012).
 resource: 'https://www.govinfo.gov/app/details/USCOURTS-nmid-1_12-cv-00008'
-timestamp: '2026-06-11'
+timestamp: '2026-06-10'
 document_references:
-  - type: Review Checklist
-    resource: 'https://openagreements.org/checklists/non-compete/us'
   - type: Law Topic
     resource: 'https://openagreements.org/practice-guides/non-compete/us'
   - type: State Law Practice Note
@@ -25,7 +23,7 @@ tags:
 
 *August Healthcare Grp., LLC v. Manglona, No. 1:12-cv-00008, 2012 WL 12926085 (D. N. Mar. I. Oct. 12, 2012).*
 
-Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements legal practice library.
+Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements legal practice library.
 
 ## Quoted passages
 
@@ -42,9 +40,9 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 > A promise to refrain from competition that imposes a restraint that is ancillary to an otherwise valid transaction or relationship is unreasonably in restraint of trade if (a) the restraint is greater than is needed to protect the promisee's legitimate interest, or (b) the promisee's need is outweighed by the hardship to the promisor and the likely injury to the public.
 
-- supports: `reasonableness-standard`, `reasonableness-test`, `severability-and-reformation`, `tolling`, `tolling-reformation-consideration`
+- supports: `extended-for-breach`, `reasonableness-standard`, `reasonableness-test`, `tolling-reformation-consideration`
 - source_cards: `aug-188`, `reformation-188-rule`, `restatement-188-ancillary-restraints`, `tolling-188`
-- cited_by: [Non-Compete Agreement Review Checklist](../checklists/non-compete/us.md), [Restrictive Covenants: How Non-Competes, Non-Solicits, and Confidentiality Clauses Work Across the United States](../non-compete/us.md), [Non-Competes in the Northern Mariana Islands](../non-compete/us/cnmi.md)
+- cited_by: [Restrictive Covenants: How Non-Competes, Non-Solicits, and Confidentiality Clauses Work Across the United States](../non-compete/us.md), [Non-Competes in the Northern Mariana Islands](../non-compete/us/cnmi.md)
 - link_to_source: <https://www.govinfo.gov/app/details/USCOURTS-nmid-1_12-cv-00008>
 
 ### august-healthcare-group-llc-v-manglona-an-injunction-that-bars-pelisamen-and-1cb75293 {#august-healthcare-group-llc-v-manglona-an-injunction-that-bars-pelisamen-and-1cb75293}
@@ -69,7 +67,7 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 > In the absence of written law or local customary law, the CNMI looks to the United States common law as expressed in the Restatements.
 
-- supports: `employee-noncompetes`
+- supports: `employee-non-compete-enforceability`
 - source_cards: `aug-restatements`
 - cited_by: [Non-Competes in the Northern Mariana Islands](../non-compete/us/cnmi.md)
 - link_to_source: <https://www.govinfo.gov/app/details/USCOURTS-nmid-1_12-cv-00008>
@@ -96,7 +94,7 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 > There is no specific law, statute, or custom in the CNMI governing covenants not to compete.
 
-- supports: `employee-noncompetes`
+- supports: `employee-non-compete-enforceability`
 - source_cards: `aug-no-statute`
 - cited_by: [Non-Competes in the Northern Mariana Islands](../non-compete/us/cnmi.md)
 - link_to_source: <https://www.govinfo.gov/app/details/USCOURTS-nmid-1_12-cv-00008>

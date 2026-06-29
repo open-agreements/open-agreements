@@ -8,6 +8,8 @@ import { fileURLToPath } from "node:url";
 
 import {
   REPO_ROOT,
+  isUpstreamAuthored,
+  listOpenAgreementsRenderedTemplateIds,
   listOpenAgreementsTemplateIds,
 } from "./lib/template-utils.mjs";
 
@@ -268,9 +270,17 @@ export function isOAOwnedTemplateId(templateId, headOwnedIds) {
  * @param {Set<string>} headOwnedIds  IDs of OA-owned templates present in HEAD
  * @returns {Map<string, Array<{ status: string, path: string }>>}
  */
-export function expandTriggers(records, headOwnedIds) {
+export function expandTriggers(records, headOwnedIds, upstreamAuthoredIds = new Set()) {
   const triggers = new Map(); // templateId -> [trigger record, ...]
   const addTrigger = (templateId, record) => {
+    // Upstream-authored templates render their DOCX upstream; OA does not own
+    // their preview pipeline, so NOTHING — direct file changes OR layout/generator
+    // fan-out — ever requires an OA preview refresh for them. Guard at the single
+    // chokepoint so every trigger path (incl. the static fan-out sets and the
+    // `openagreements-` prefix fallback in isOAOwnedTemplateId) is covered.
+    // `upstreamAuthoredIds` is passed in (not derived from the filesystem here) so
+    // expandTriggers stays pure/testable; main() computes the real set.
+    if (upstreamAuthoredIds.has(templateId)) return;
     if (!triggers.has(templateId)) triggers.set(templateId, []);
     triggers.get(templateId).push(record);
   };
@@ -675,10 +685,16 @@ export async function main(env) {
     );
   }
 
-  // Build OA-owned set at HEAD for ownership + pipeline-wide expansion.
-  const headOwnedIds = new Set(listOpenAgreementsTemplateIds());
+  // Build OA-owned set at HEAD for ownership + pipeline-wide expansion. The
+  // rendered set excludes upstream-authored templates; pass the upstream-authored
+  // set explicitly so generator/layout fan-out never demands an OA preview refresh
+  // for templates OA does not render.
+  const headOwnedIds = new Set(listOpenAgreementsRenderedTemplateIds());
+  const upstreamAuthoredIds = new Set(
+    listOpenAgreementsTemplateIds().filter((id) => isUpstreamAuthored(id))
+  );
 
-  const triggered = expandTriggers(input.records, headOwnedIds);
+  const triggered = expandTriggers(input.records, headOwnedIds, upstreamAuthoredIds);
   if (triggered.size === 0) {
     console.log(
       "PASS preview-freshness gate: no render-affecting paths in diff."

@@ -2,7 +2,7 @@
 jurisdiction: "California"
 slug: california
 countryCode: US
-snapshotAsOf: "2026-06-20"
+snapshotAsOf: "2026-06-29"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/california
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/california · **Snapshot as of:** 2026-06-20 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/california · **Snapshot as of:** 2026-06-29 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in California[^about]
 
@@ -36,7 +36,7 @@ California voids employee non-compete agreements by statute and treats customer 
 | **Restriction extended during a breach?** | No (covenant is void) |
 | **Maximum length set by law** | Not applicable — void |
 
-## Are employee non-compete agreements enforceable in California? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in California? {#employee-non-compete-enforceability}
 
 **Short answer.** No. California voids employee non-compete agreements by statute. Business and Professions Code section 16600 makes any contract that restrains someone from engaging in a lawful profession, trade, or business void to that extent, and the Legislature has directed courts to read the ban *broadly* — voiding any noncompete in employment *no matter how narrowly tailored* — unless it fits a specific statutory exception [^stat-16600-void][^stat-16600-broadly].
 

@@ -41,7 +41,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > There can be no doubt that section 9-08-06, N.D.C.C., makes void the provision which attempts to prohibit the physicians from being employed by the Hospital at the end of the contract period with Spectrum.
 
-- supports: `employee-noncompetes`, `parties-and-cover-term-identification`
+- supports: `employee-non-compete-enforceability`, `parties-and-cover-term-identification`
 - source_cards: `nd-spectrum-physician-void-cover`, `spectrum-physician-employment-void`
 - cited_by: [Non-Compete Agreement Review Checklist — North Dakota](../checklists/non-compete/us/north-dakota.md), [Non-Competes in North Dakota](../non-compete/us/north-dakota.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1229922/spectrum-emergency-care-inc-v-st-josephs-hospital-health-center/#:~:text=There%20can%20be%20no%20doubt,the%20contract%20period%20with%20Spectrum.>

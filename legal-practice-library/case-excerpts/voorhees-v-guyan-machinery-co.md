@@ -27,7 +27,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 > In such circumstances, any information to which Mr. Voorhees was privy as a result of his position at Guyan Machinery was not subject to protection by the restrictive covenant.
 
-- supports: `employee-noncompetes`
+- supports: `employee-non-compete-enforceability`
 - source_cards: `voorhees-no-protectable-interest`
 - cited_by: [Non-Competes in West Virginia](../non-compete/us/west-virginia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1347675/voorhees-v-guyan-machinery-co/#:~:text=In%20such%20circumstances%2C%20any%20information,protection%20by%20the%20restrictive%20covenant.>

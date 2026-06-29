@@ -16,7 +16,7 @@ tags:
 
 New York has no general non-compete statute; employee non-competes are enforceable only to the extent they are reasonable under the common-law BDO Seidman test.
 
-## Are employee non-compete agreements enforceable in New York? {#enforceability}
+## Are employee non-compete agreements enforceable in New York? {#employee-non-compete-enforceability}
 
 **Short answer.** Yes, sometimes. New York has no general statute governing non-competes, so enforceability is decided under common law: an employee non-compete is enforceable only to the extent it is reasonable [^bdo-reasonableness-standard][^natural-organics-three-prong-test].
 
@@ -102,7 +102,7 @@ New York generally honors a contractual choice of law, but reserves a public-pol
 >
 > Do not assume a non-New York choice-of-law clause will rescue an employer-favorable covenant against a New York-based worker. Under *Brown & Brown*, a court can disregard the chosen law and apply New York reasonableness limits where the foreign law is truly obnoxious to New York policy [^brown-brown-choice-of-law].
 
-## Does a New York non-compete's restricted period pause (toll) during a breach or litigation? {#tolling-extension}
+## Does a New York non-compete's restricted period pause (toll) during a breach or litigation? {#extended-for-breach}
 
 **Short answer.** Treat it as an open question. New York measures a covenant's duration as part of the reasonableness test, and no controlling New York decision establishes that the restricted period automatically tolls — pauses and extends — while a former employee is violating the covenant or while litigation is pending [^tolling-time-reasonableness].
 

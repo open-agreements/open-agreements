@@ -33,7 +33,7 @@ Supporting case-law excerpt. Quoted across 5 document(s) in the OpenAgreements l
 
 > Being forewarned, EMC could have contracted, as the district judge noted, for tolling the term of the restriction during litigation, or for a period of restriction to commence upon preliminary finding of breach.
 
-- supports: `tolling`, `tolling-during-breach`, `tolling-extension`
+- supports: `extended-for-breach`, `tolling-during-breach`
 - source_cards: `emc-contract`, `emc-contract-for-tolling`, `emc-no-extension`, `emc-tolling`
 - cited_by: [Non-Compete Agreement Review Checklist — Massachusetts](../checklists/non-compete/us/massachusetts.md), [Non-Competes in the Northern Mariana Islands](../non-compete/us/cnmi.md), [Non-Competes in Massachusetts](../non-compete/us/massachusetts.md), [Non-Competes in Puerto Rico](../non-compete/us/puerto-rico.md)
 - link_to_source: <https://www.courtlistener.com/opinion/612666/emc-corp-v-arturi/#:~:text=Being%20forewarned%2C%20EMC%20could%20have,upon%20preliminary%20finding%20of%20breach.>
@@ -51,7 +51,7 @@ Supporting case-law excerpt. Quoted across 5 document(s) in the OpenAgreements l
 
 > We explained that "when the period of restraint has expired, even when the delay was substantially caused by the time consumed in legal appeals, specific relief is inappropriate and the injured party is left to his damages remedy.
 
-- supports: `remedies`, `tolling-extension`
+- supports: `extended-for-breach`, `remedies`
 - source_cards: `emc-expired`, `emc-expired-restraint`
 - cited_by: [Non-Compete Agreement Review Checklist — Massachusetts](../checklists/non-compete/us/massachusetts.md), [Non-Competes in Massachusetts](../non-compete/us/massachusetts.md)
 - link_to_source: <https://www.courtlistener.com/opinion/612666/emc-corp-v-arturi/#:~:text=We%20explained%20that%20%22when%20the,left%20to%20his%20damages%20remedy.>

@@ -2,7 +2,7 @@
 jurisdiction: "Illinois"
 slug: illinois
 countryCode: US
-snapshotAsOf: "2026-06-20"
+snapshotAsOf: "2026-06-29"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/illinois
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/illinois · **Snapshot as of:** 2026-06-20 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/illinois · **Snapshot as of:** 2026-06-29 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Illinois[^about]
 
@@ -36,7 +36,7 @@ A question-by-question summary of Illinois non-compete law under the Illinois Fr
 | **Restriction extended during a breach?** | Not addressed by statute — open question |
 | **Maximum length set by law** | No statutory maximum (duration judged for reasonableness) |
 
-## Are employee non-compete agreements enforceable in Illinois? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Illinois? {#employee-non-compete-enforceability}
 
 **Short answer.** Yes, but only if the covenant clears the statutory gates of the Illinois Freedom to Work Act and then survives the common-law reasonableness test. A covenant not to compete or not to solicit is illegal and void unless the employee received adequate consideration, the restraint is ancillary to a valid employment relationship, it is no greater than necessary to protect a legitimate business interest, it imposes no undue hardship, and it is not injurious to the public [^ifwa-15-enforceability][^reliable-fire-3prong].
 
@@ -126,7 +126,7 @@ Two industry-specific statutes outside the IFWA add their own bans. The Broadcas
 >
 > Check the worker's industry and role before relying on an Illinois covenant. Construction workers (outside the management/sales/owner carve-out), broadcasters, and temporary agency nurses face flat statutory voids that no reasonable drafting will cure, and covenants against public-sector union employees, COVID-era layoffs, and mental-health professionals serving veterans and first responders face their own conditional bars [^ifwa-10-construction][^ifwa-10-cba][^ifwa-10-covid][^ifwa-10-mentalhealth][^broadcast-ban][^nurse-ban].
 
-## Will an Illinois court rewrite an overbroad non-compete instead of voiding it? {#reformation}
+## Will an Illinois court rewrite an overbroad non-compete instead of voiding it? {#court-narrowing}
 
 **Short answer.** Sometimes, but it is discretionary and far from guaranteed. The IFWA permits reformation yet warns that extensive judicial rewriting may be against public policy, and Illinois courts have refused to rescue patently overbroad covenants [^ifwa-35-reformation][^assured-overbroad].
 
@@ -143,7 +143,7 @@ Courts weigh factors such as the fairness of the restraints as originally writte
 >
 > Do not treat Illinois reformation as a safety net for an aggressive covenant. Section 35 lets a court reform or sever in its discretion but warns that extensive rewriting may violate public policy, and *AssuredPartners, Inc. v. Schmitt* refused to rescue a patently overbroad restraint — so draft to the narrowest defensible scope rather than relying on a judge to cut it down [^ifwa-35-reformation][^assured-overbroad].
 
-## Does a tolling or extension-during-breach clause extend an Illinois non-compete? {#tolling-during-breach}
+## Does a tolling or extension-during-breach clause extend an Illinois non-compete? {#extended-for-breach}
 
 **Short answer.** Illinois law does not squarely answer this. No IFWA provision addresses a clause that pauses or extends the restricted period during breach or litigation, and an extension that pushes the effective restraint past a reasonable duration is exposed under the statute's reasonableness requirement and its limits on reformation [^q8-ifwa-15][^q8-ifwa-35].
 

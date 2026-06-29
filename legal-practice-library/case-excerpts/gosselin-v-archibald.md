@@ -36,7 +36,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > We cannot agree with the master’s extension of the time limitation of the covenant not to compete.
 
-- supports: `tolling-during-breach`
+- supports: `extended-for-breach`, `tolling-during-breach`
 - source_cards: `gosselin-no-extension`, `nh-gosselin-no-extension`
 - cited_by: [Non-Compete Agreement Review Checklist — New Hampshire](../checklists/non-compete/us/new-hampshire.md), [Non-Competes in New Hampshire](../non-compete/us/new-hampshire.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2059042/gosselin-v-archibald/#:~:text=We%20cannot%20agree%20with%20the%20master%E2%80%99s%20extension,the%20covenant%20not%20to%20compete.>

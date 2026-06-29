@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > A restriction covering a large area might be reasonable if in effect for a brief time, while a restriction covering a small area might be reasonable for a longer time.
 
-- supports: `duration-geography`
+- supports: `duration-limits`
 - source_cards: `van-dyck-time-geography-intertwined`
 - cited_by: [Non-Competes in Connecticut](../non-compete/us/connecticut.md)
 - link_to_source: <https://www.courtlistener.com/opinion/3334840/van-dyck-printing-co-v-dinicola/#:~:text=A%20restriction%20covering%20a%20large,reasonable%20for%20a%20longer%20time.>
@@ -38,7 +38,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Because the plaintiffs claim concerning the covenant at issue applied to a two year period commencing in April, 1987, the plaintiff’s request for injunctive relief has become moot.
 
-- supports: `tolling-during-breach`, `tolling-extension`
+- supports: `extended-for-breach`, `tolling-during-breach`
 - source_cards: `van-dyck-injunction-moot-after-period`, `van-dyck-moot`
 - cited_by: [Non-Compete Agreement Review Checklist — Connecticut](../checklists/non-compete/us/connecticut.md), [Non-Competes in Connecticut](../non-compete/us/connecticut.md)
 - link_to_source: <https://www.courtlistener.com/opinion/3334840/van-dyck-printing-co-v-dinicola/#:~:text=Because%20the%20plaintiffs%20claim%20concerning,injunctive%20relief%20has%20become%20moot.>

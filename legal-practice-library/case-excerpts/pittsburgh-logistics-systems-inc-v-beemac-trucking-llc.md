@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > As part of this balancing test, courts also consider the reasonableness of the restraint’s geographical scope as well as its duration of time.
 
-- supports: `duration-geography`
+- supports: `duration-limits`
 - source_cards: `beemac-geo-duration`
 - cited_by: [Non-Competes in Pennsylvania](../non-compete/us/pennsylvania.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4878381/pgh-logistics-aplt-v-beemac-trucking/#:~:text=As%20part%20of%20this%20balancing,as%20its%20duration%20of%20time.>

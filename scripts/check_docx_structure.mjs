@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
-import { relative, resolve, sep } from 'node:path';
+import { dirname, join, relative, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import JSZip from 'jszip';
@@ -475,8 +475,17 @@ export async function lintDocx(docxPath) {
     // findings (e.g. right-aligned cover-term header cells) that need visual
     // Pages reproduction before they can be treated as defects — deferred to
     // #504 so this lint stays catalog-green.
-    for (const finding of missingPStyleVisibleParagraphIssues(documentXml, stylesXml)) {
-      issues.push(issue('MISSING_PSTYLE_ON_VISIBLE_PARAGRAPH', 'word/document.xml', finding));
+    //
+    // Upstream-authored templates (synced from a canonical Markdoc source, marked
+    // by a sibling `template.mdoc`) ship a humanized DOCX rendered upstream; OA's
+    // named-pStyle convention does not apply to them and their render fidelity is
+    // owned by the upstream author. The package-integrity checks above (theme /
+    // webSettings / part registration — Word-readability) still run for every DOCX.
+    const isUpstreamAuthored = existsSync(join(dirname(docxPath), 'template.mdoc'));
+    if (!isUpstreamAuthored) {
+      for (const finding of missingPStyleVisibleParagraphIssues(documentXml, stylesXml)) {
+        issues.push(issue('MISSING_PSTYLE_ON_VISIBLE_PARAGRAPH', 'word/document.xml', finding));
+      }
     }
 
     const refIds = collectCommentIds(documentXml, 'commentReference');

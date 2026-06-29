@@ -2,7 +2,7 @@
 jurisdiction: "Vermont"
 slug: vermont
 countryCode: US
-snapshotAsOf: "2026-06-20"
+snapshotAsOf: "2026-06-29"
 lastReviewed: "2026-06-01"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/vermont
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/vermont · **Snapshot as of:** 2026-06-20 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/vermont · **Snapshot as of:** 2026-06-29 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Vermont[^about]
 
@@ -35,7 +35,7 @@ A question-by-question summary of Vermont's common-law reasonableness test for r
 | **Restriction extended during a breach?** | No equitable rewriting of the time term (Roy's Orthopedic) |
 | **Maximum length set by law** | No statutory limit |
 
-## Are employee non-compete agreements enforceable in Vermont? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Vermont? {#employee-non-compete-enforceability}
 
 **Short answer.** Sometimes, under a common-law reasonableness test, but the framework is in active flux as the 2025-2026 legislature advances a sweeping prohibition.
 
@@ -133,12 +133,12 @@ Healthcare-professional non-competes are not yet categorically void, but [H.583]
 
 **Sale-of-business covenants.** As *Fine Foods*, *Foti Fuels*, and *Miller v. Flegenheimer* together show, covenants ancillary to a real arms-length sale get more breathing room than employment covenants [^alternatives-fine-foods-sale-covenant][^alternatives-foti-fuels-sale-consideration][^alternatives-miller-sale-term-open]. Tie the covenant to dedicated transaction consideration and limit it to the geography of the acquired goodwill [^alternatives-fine-foods-sale-covenant].
 
-**Garden leave.** A paid notice-period structure (employee remains employed but is not working) sidesteps the reasonableness problems of a post-termination restraint by keeping the employer-employee relationship intact. Check pending H.205 before using any separation-payment structure, because H.205 is the active vehicle for Vermont's broader non-compete and stay-or-pay restrictions [^alternatives-vt-h205-status-page].
+**Garden leave.** A paid notice-period structure keeps the employee on the payroll — employed but not working — during the notice period, so any restriction operates while the employment relationship is still intact rather than as a post-termination restraint. Vermont courts have not yet tested how that structure fares under the reasonableness analysis, so treat it as an untested option rather than a guaranteed work-around. Check pending H.205 before using any separation-payment structure, because H.205 is the active vehicle for Vermont's broader non-compete and stay-or-pay restrictions [^alternatives-vt-h205-status-page].
 
 > [!NOTE]
 > **Practice note.**
 >
-> Do not rely on a Vermont *inevitable disclosure* theory as a primary trade-secret strategy. The Vermont Supreme Court has never adopted inevitable disclosure as a standalone basis for enjoining a former employee, and the VTSA's *actual or threatened* misappropriation standard in § 4602 requires conduct- or threat-specific proof rather than a presumption from new employment alone [^vtsa-4602-injunctive-caution].
+> Do not rely on a Vermont *inevitable disclosure* theory as a primary trade-secret strategy. The VTSA's remedy reaches only *actual or threatened* misappropriation — § 4602 authorizes an injunction against actual or threatened misappropriation, which calls for conduct- or threat-specific proof rather than a presumption that a departing employee will inevitably use trade secrets in a new role [^vtsa-4602-injunctive-caution].
 
 [^about]: By Steven Obiajulu, J.D. Published by [openagreements.org](https://openagreements.org). Last reviewed 2026-06-01. License: CC BY 4.0. Steven Obiajulu, J.D. is admitted in New York, not Vermont. This article synthesizes Vermont primary law and is not legal advice from a Vermont-admitted attorney. This article is for informational purposes only and does not create an attorney-client relationship.
 

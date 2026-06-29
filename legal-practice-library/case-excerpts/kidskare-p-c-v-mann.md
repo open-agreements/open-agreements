@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > As its remedy, the district court reformed the 9 distance provision of clause one by reducing the radius to thirty miles, finding that 10 the covenant was thus enforceable.
 
-- supports: `definitions`, `duration-geography`
+- supports: `definitions`, `duration-limits`
 - source_cards: `kidskare-facts-reformed-limits`, `kidskare-thirty-miles`
 - cited_by: [Non-Compete Agreement Review Checklist — New Mexico](../checklists/non-compete/us/new-mexico.md), [Non-Competes in New Mexico](../non-compete/us/new-mexico.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2789328/kidskare-v-mann/#:~:text=As%20its%20remedy%2C%20the%20district,the%20covenant%20was%20thus%20enforceable.>
@@ -38,7 +38,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > As reformed by the district 7 court, the covenant not to compete was reasonable and enforceable.
 
-- supports: `tolling-during-breach`, `tolling-extension`
+- supports: `extended-for-breach`, `tolling-during-breach`
 - source_cards: `kidskare-fixed-period`, `q6-kidskare-fixed-period`
 - cited_by: [Non-Compete Agreement Review Checklist — New Mexico](../checklists/non-compete/us/new-mexico.md), [Non-Competes in New Mexico](../non-compete/us/new-mexico.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2789328/kidskare-v-mann/#:~:text=As%20reformed%20by%20the%20district,compete%20was%20reasonable%20and%20enforceable.>

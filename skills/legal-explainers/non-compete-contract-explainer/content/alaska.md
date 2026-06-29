@@ -2,7 +2,7 @@
 jurisdiction: "Alaska"
 slug: alaska
 countryCode: US
-snapshotAsOf: "2026-06-20"
+snapshotAsOf: "2026-06-29"
 lastReviewed: "2026-06-01"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/alaska
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/alaska · **Snapshot as of:** 2026-06-20 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/alaska · **Snapshot as of:** 2026-06-29 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Alaska[^about]
 
@@ -34,7 +34,7 @@ Alaska uses a common-law reasonableness test for non-competes, led by Alaska Sup
 | **Restriction extended during a breach?** | Silent — no Alaska authority |
 | **Maximum length set by law** | No statutory limit |
 
-## Are employee non-compete agreements enforceable in Alaska? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Alaska? {#employee-non-compete-enforceability}
 
 **Short answer.** Yes, if they are reasonable, but Alaska courts start from a skeptical posture: employee non-competes are strictly construed[^decristofaro-disfavored-strictly-construed].
 
@@ -63,7 +63,7 @@ That doctrine is not a drafting license. If the employer willfully overreached, 
 >
 > Do not call Alaska a simple blue-pencil state. *Data Management* uses reasonable alteration, and the employer bears the good-faith burden before an overbroad covenant can be rescued [^data-management-reasonable-alteration].
 
-## Must an Alaska non-compete include geographic and time limits? {#time-geography-limits}
+## Must an Alaska non-compete include geographic and time limits? {#duration-limits}
 
 **Short answer.** Not always. A customer-focused activity restraint can survive without stated geography or duration when it is narrowly drawn to protect customer-list interests [^metcalfe-no-time-geography-required].
 
@@ -88,6 +88,12 @@ Healthcare facts sharpen the public-interest analysis. Because the challenged wo
 > **Practice note.**
 >
 > Alaska has no published blanket ban on healthcare non-competes, but *Wenzell* makes access-to-care facts important. A provider covenant that affects low-cost services for a population in need should be tested against public injury, not just geographic radius and duration [^wenzell-public-interest-low-cost].
+
+## How does Alaska treat employee non-solicitation covenants? {#employee-non-solicitation}
+
+**Short answer.** Alaska has no decision in our review squarely on employee anti-raiding, so such a covenant would be judged under the same multi-factor *Data Management* reasonableness analysis applied to non-competes [^ak-ens-factors].
+
+An overbroad covenant drafted in good faith may be altered rather than voided, but a court will refuse to alter one where the employer overreached willfully [^ak-ens-goodfaith].
 
 ## What role does AUTSA play in Alaska restrictive covenant disputes? {#autsa-trade-secrets}
 
@@ -138,6 +144,10 @@ Garden leave is a general option rather than an Alaska-specific doctrine; no pub
 [^wenzell-low-cost-competition-proof]: **Dominic Wenzell, DMD PC v. Ingrim** — "In such a case, competition will not be presumed and must be proven." *Dominic Wenzell, DMD PC v. Ingrim, 228 P.3d 103, 109 (Alaska 2010).* <https://www.courtlistener.com/opinion/2601652/dominic-wenzell-dmd-pc-v-ingrim/#:~:text=In%20such%20a%20case%2C%20competition,presumed%20and%20must%20be%20proven.>
 
 [^wenzell-public-interest-low-cost]: **Dominic Wenzell, DMD PC v. Ingrim** — "It appears from the record that Ingrim is employed by an organization providing an important, low-cost service to a population in need of such care." *Dominic Wenzell, DMD PC v. Ingrim, 228 P.3d 103, 111 (Alaska 2010).* <https://www.courtlistener.com/opinion/2601652/dominic-wenzell-dmd-pc-v-ingrim/#:~:text=It%20appears%20from%20the%20record,in%20need%20of%20such%20care.>
+
+[^ak-ens-factors]: **Data Management, Inc. v. Greene** — "Among the factors properly to be considered are: ‘[t]he absence or presence of limitations as to time and space, * * * whether the employee represents the sole contact with the customer; whether the employee is possessed with confidential information or trade secrets; whether the covenant seeks to eliminate competition which would be unfair to the employer or merely seeks to eliminate ordinary competition; whether the covenant seeks to stifle the inherent skill and experience of the employee; whether the benefit to the employer is disproportional to the detriment to the employee; whether the covenant operates as a bar to the employee’s sole means of support; whether the employee’s talent which the employer seeks to suppress was actually developed during the period of employment; and whether the forbidden employment is merely incidental to the main employment.’" *Data Mgmt., Inc. v. Greene, 757 P.2d 62, 65 (Alaska 1988).* <https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/#:~:text=Among%20the%20factors%20properly%20to,incidental%20to%20the%20main%20employment.%E2%80%9D>
+
+[^ak-ens-goodfaith]: **Data Management, Inc. v. Greene** — "The trial court must determine whether an employer has overreached willfully and, if so, the court should refuse to alter the covenant." *Data Mgmt., Inc. v. Greene, 757 P.2d 62, 65 (Alaska 1988).* <https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/#:~:text=The%20trial%20court%20must%20determine,refuse%20to%20alter%20the%20covenant.>
 
 [^autsa-injunctive-relief]: **AS 45.50.910 / .915 / .930 (AUTSA)** — "A court may enjoin actual or threatened misappropriation of trade secrets." *Alaska Stat. § 45.50.910(a).* <https://www.akleg.gov/pdf/billfiles/SLAs/SLA%201988/CH%20103%20SLA%201988.pdf>
 

@@ -48,7 +48,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Restrictive covenants which tend to prevent an employee from pursuing a similar vocation after termination of employment are disfavored.
 
-- supports: `definitions`, `enforceability`, `notice-to-future-employers-and-other-third-parties`, `restrictive-covenants-each-independently-includable`
+- supports: `definitions`, `employee-non-compete-enforceability`, `notice-to-future-employers-and-other-third-parties`, `restrictive-covenants-each-independently-includable`
 - source_cards: `amex-disfavored-covenants`, `amex-disfavored-defs`, `amex-disfavored-notice`, `q1-amex-disfavored`
 - cited_by: [Non-Compete Agreement Review Checklist — Arizona](../checklists/non-compete/us/arizona.md), [Non-Competes in Arizona](../non-compete/us/arizona.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1211495/amex-distributing-co-inc-v-mascari/#:~:text=Restrictive%20covenants%20which%20tend%20to,termination%20of%20employment%20are%20disfavored.>

@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Having made the contract limiting the period to two years from the date of termination of employment, the court may not extend the time beyond that date.
 
-- supports: `definitions`, `tolling-during-breach`, `tolling-extension`
+- supports: `definitions`, `extended-for-breach`, `tolling-during-breach`
 - source_cards: `frierson-no-extension`, `ms-frierson-period`, `ms-frierson-tolling`
 - cited_by: [Non-Compete Agreement Review Checklist — Mississippi](../checklists/non-compete/us/mississippi.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1722477/frierson-v-sheppard-building-supply-co/#:~:text=Having%20made%20the%20contract%20limiting,the%20time%20beyond%20that%20date.>

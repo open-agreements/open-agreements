@@ -2,7 +2,7 @@
 jurisdiction: "Alabama"
 slug: alabama
 countryCode: US
-snapshotAsOf: "2026-06-20"
+snapshotAsOf: "2026-06-29"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/alabama
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/alabama · **Snapshot as of:** 2026-06-20 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/alabama · **Snapshot as of:** 2026-06-29 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Alabama[^about]
 
@@ -35,7 +35,7 @@ A question-by-question summary of Alabama non-compete law under the 2016 Restric
 | **Restriction extended during a breach?** | Not addressed by statute or case law |
 | **Maximum length set by law** | 2 years presumed reasonable (employee) |
 
-## Are employee non-compete agreements enforceable in Alabama? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Alabama? {#employee-non-compete-enforceability}
 
 **Short answer.** Yes, but only inside a narrow statutory safe harbor. Alabama starts from the rule that every contract restraining a lawful profession, trade, or business is void, and then allows an employee non-compete as one of six listed exceptions; a covenant of two years or less is presumed reasonable [^ala-8-1-190-void][^ala-8-1-190-employee].
 
@@ -108,7 +108,7 @@ This is a timing trap that predates the 2016 Act but remains a live drafting ris
 >
 > Do not have a new hire sign an Alabama non-compete before the employment relationship actually begins. *Pitney Bowes* held that a covenant signed before employment was void and did not become valid when employment later started, so the safer practice is to execute the covenant once the person is employed and to re-execute it after any acquisition that changes the employing entity [^pitney-timing].
 
-## Will an Alabama court narrow an overbroad non-compete instead of voiding it? {#blue-pencil}
+## Will an Alabama court narrow an overbroad non-compete instead of voiding it? {#court-narrowing}
 
 **Short answer.** Sometimes. Section 8-1-193 lets a court reform a covenant that is overly broad in duration, but it also tells the court to void the restraint entirely if it does not fit one of the six statutory exceptions in the first place [^ala-8-1-193-reform][^ala-8-1-193-void].
 
@@ -148,7 +148,7 @@ So a professional cannot be barred from practicing, but conduct outside that pra
 >
 > Do not assume a non-compete will keep a licensed professional from practicing in Alabama. Because § 8-1-196 preserves the common-law professional exemption, a covenant cannot bar a physician, accountant, veterinarian, physical therapist, or similar professional from practicing the profession, even when it would otherwise fit a statutory category, though restrictions on business activity outside that practice may still operate [^ala-8-1-196][^benchmark-scope].
 
-## Does a tolling or extension-during-breach clause extend an Alabama non-compete? {#tolling-during-breach}
+## Does a tolling or extension-during-breach clause extend an Alabama non-compete? {#extended-for-breach}
 
 **Short answer.** Alabama law does not answer this directly. No Alabama appellate decision under the 2016 Act addresses a clause that pauses or extends the restricted period during breach or litigation, and a tolling clause that pushes the effective restraint past the presumptively reasonable window is exposed to reformation as an unreasonable duration [^q8-ala-8-1-190-2yr][^q8-ala-8-1-193-reform].
 

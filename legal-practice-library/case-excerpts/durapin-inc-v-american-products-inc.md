@@ -48,7 +48,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > However, since such provisions are not favored, they are subject to judicial scrutiny and will be enforced as written only if the contract is reasonable and does not extend beyond what is apparently necessary for the protection of those in whose favor it runs.
 
-- supports: `employee-noncompetes`, `restrictive-covenants-each-independently-includable`
+- supports: `employee-non-compete-enforceability`, `restrictive-covenants-each-independently-includable`
 - source_cards: `durapin-baseline-cov`, `durapin-reasonableness-baseline`
 - cited_by: [Non-Compete Agreement Review Checklist — Rhode Island](../checklists/non-compete/us/rhode-island.md), [Non-Competes in Rhode Island](../non-compete/us/rhode-island.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2334248/durapin-inc-v-american-products-inc/#:~:text=However%2C%20since%20such%20provisions%20are,in%20whose%20favor%20it%20runs.>

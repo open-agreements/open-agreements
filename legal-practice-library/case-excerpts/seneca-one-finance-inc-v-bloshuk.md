@@ -30,7 +30,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > A restrictive covenant is overbroad if it exceeds the limits of what is reasonably necessary to protect the employer’s legally protected interest.
 
-- supports: `definitions`, `duration-geography`
+- supports: `definitions`, `duration-limits`
 - source_cards: `md-seneca-overbroad`, `seneca-overbroad`
 - cited_by: [Non-Compete Agreement Review Checklist — Maryland](../checklists/non-compete/us/maryland.md), [Non-Competes in Maryland](../non-compete/us/maryland.md)
 - link_to_source: <https://www.courtlistener.com/opinion/7322313/seneca-one-finance-inc-v-bloshuk/#:~:text=A%20restrictive%20covenant%20is%20overbroad,the%20employer%E2%80%99s%20legally%20protected%20interest.>
@@ -39,7 +39,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > In Maryland, a restrictive employment covenant will only be enforced if it meets four requirements: “(1) the employer must have a legally protected interest, (2) the restrictive covenant must be no wider in scope and duration than is reasonably necessary to protect the employer’s interest, (3) the covenant cannot impose an undue hardship on the employee, and (4) the covenant cannot violate public policy.”
 
-- supports: `employee-noncompetes`
-- source_cards: `seneca-four-part-test`
+- supports: `employee-non-compete-enforceability`, `employee-non-solicitation`
+- source_cards: `md-ens-seneca`, `seneca-four-part-test`
 - cited_by: [Non-Competes in Maryland](../non-compete/us/maryland.md)
 - link_to_source: <https://www.courtlistener.com/opinion/7322313/seneca-one-finance-inc-v-bloshuk/#:~:text=In%20Maryland%2C%20a%20restrictive%20employment,covenant%20cannot%20violate%20public%20policy.%E2%80%9D>

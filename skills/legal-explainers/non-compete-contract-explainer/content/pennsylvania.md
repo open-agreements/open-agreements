@@ -2,7 +2,7 @@
 jurisdiction: "Pennsylvania"
 slug: pennsylvania
 countryCode: US
-snapshotAsOf: "2026-06-20"
+snapshotAsOf: "2026-06-29"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/pennsylvania
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/pennsylvania · **Snapshot as of:** 2026-06-20 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/pennsylvania · **Snapshot as of:** 2026-06-29 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Pennsylvania[^about]
 
@@ -35,7 +35,7 @@ Pennsylvania enforces non-competes only when they are ancillary to employment, s
 | **Restriction extended during a breach?** | Unsettled |
 | **Maximum length set by law** | No statutory limit (except Act 74 one-year cap for health care) |
 
-## Are employee non-compete agreements enforceable in Pennsylvania? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Pennsylvania? {#employee-non-compete-enforceability}
 
 **Short answer.** Yes, sometimes. Pennsylvania is a reasonableness state, not a general ban state, but its courts are historically hostile to restraints on trade. A non-compete is enforceable only if it is ancillary to an employment relationship, supported by adequate consideration, reasonably limited in time and territory, and designed to protect a legitimate business interest of the employer [^socko-four-part-test].
 
@@ -78,7 +78,7 @@ The emphasis on *specialized* training matters. Courts distinguish a real, propr
 >
 > Do not use a Pennsylvania non-compete to block competition that is disconnected from a protectable interest. Tie the restraint to specific trade secrets, confidential information, customer goodwill, or genuinely specialized training, because a covenant aimed at ordinary competition is not reasonably necessary to protect the employer [^q3-morgans-reasonably-necessary].
 
-## What duration and geographic scope are reasonable for a Pennsylvania non-compete? {#duration-geography}
+## What duration and geographic scope are reasonable for a Pennsylvania non-compete? {#duration-limits}
 
 **Short answer.** Outside Act 74's health care rules, there is no statutory cap. Pennsylvania courts permit enforcement only where the covenant is incident to employment, reasonably necessary to protect the employer, and reasonably limited in both duration and geographic extent [^sidco-general-rule][^beemac-geo-duration].
 
@@ -126,7 +126,7 @@ A 2026 Superior Court memorandum, *First National Trust Co. v. English*, illustr
 >
 > Do not draft a Pennsylvania non-solicitation clause that bars merely *accepting* business or that omits a geographic limit. Restrict the clause to affirmative solicitation of customers the employee actually served, because a no-accept or geographically unbounded clause invites a finding that it is unenforceable as written [^english-affirmative-act][^english-no-geo].
 
-## Does a Pennsylvania non-compete toll or extend during breach or litigation? {#tolling-extension}
+## Does a Pennsylvania non-compete toll or extend during breach or litigation? {#extended-for-breach}
 
 **Short answer.** This is an unsettled Pennsylvania question. No Pennsylvania statute or appellate decision discussed in this note squarely endorses automatically tolling or extending the restricted period while the former employee is in breach or while litigation is pending [^q8-sidco-reasonably-necessary][^q8-morgans-prima-facie].
 

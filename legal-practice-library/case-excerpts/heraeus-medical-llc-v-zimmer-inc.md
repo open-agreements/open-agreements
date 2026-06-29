@@ -57,7 +57,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > The doctrine, however, does not allow a court to rewrite a noncompetition agreement by adding, changing, or rearranging terms.
 
-- supports: `court-narrowing`, `tolling-during-breach`, `tolling-extension`
+- supports: `court-narrowing`, `extended-for-breach`, `tolling-during-breach`
 - source_cards: `heraeus-eraser`, `heraeus-eraser-tolling`, `q8-heraeus-eraser`
 - cited_by: [Non-Compete Agreement Review Checklist — Indiana](../checklists/non-compete/us/indiana.md), [Non-Competes in Indiana](../non-compete/us/indiana.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4683524/heraeus-medical-llc-v-zimmer-inc/#:~:text=The%20doctrine%2C%20however%2C%20does%20not,adding%2C%20changing%2C%20or%20rearranging%20terms.>

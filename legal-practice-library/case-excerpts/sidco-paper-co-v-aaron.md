@@ -36,7 +36,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Our courts will permit the equitable enforcement of post-employment restraints only where they are incident to an employment relation between the parties to the covenant, the restrictions are reasonably necessary for the protection of the employer, and the restrictions are reasonably limited in duration and geographic extent.
 
-- supports: `definitions`, `duration-geography`, `remedies`, `tolling-during-breach`, `tolling-extension`
+- supports: `definitions`, `duration-limits`, `extended-for-breach`, `remedies`, `tolling-during-breach`
 - source_cards: `pa-sidco-equitable-remedies`, `pa-sidco-standard-defs`, `pa-sidco-tolling`, `q8-sidco-reasonably-necessary`, `sidco-general-rule`
 - cited_by: [Non-Compete Agreement Review Checklist — Pennsylvania](../checklists/non-compete/us/pennsylvania.md), [Non-Competes in Pennsylvania](../non-compete/us/pennsylvania.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1437137/sidco-paper-company-v-aaron/#:~:text=Our%20courts%20will%20permit%20the,in%20duration%20and%20geographic%20extent.>

@@ -2,7 +2,7 @@
 jurisdiction: "Kansas"
 slug: kansas
 countryCode: US
-snapshotAsOf: "2026-06-20"
+snapshotAsOf: "2026-06-29"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/kansas
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/kansas · **Snapshot as of:** 2026-06-20 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/kansas · **Snapshot as of:** 2026-06-29 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Kansas[^about]
 
@@ -35,7 +35,7 @@ A question-by-question summary of Kansas non-compete law, including the Weber re
 | **Restriction extended during a breach?** | No — Doan declined an indefinite tolling-during-breach clause |
 | **Maximum length set by law** | No statutory limit for non-competes |
 
-## Are employee non-compete agreements enforceable in Kansas? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Kansas? {#employee-non-compete-enforceability}
 
 **Short answer.** Yes, when they are reasonable. Kansas enforces an employee non-compete that is ancillary to a lawful contract, reasonable under the circumstances, and not adverse to the public welfare [^weber-governing-standard].
 
@@ -57,7 +57,7 @@ Enforceability is a question Kansas appellate courts decide without deference to
 
 The public-welfare factor is a real limit, not a formality. In *Caring Hearts*, the Kansas Court of Appeals applied the same four questions to home-health workers and found no public-welfare problem on the facts [^caring-hearts-public-welfare].
 
-## Will a Kansas court narrow an overbroad non-compete instead of voiding it? {#modification-blue-pencil}
+## Will a Kansas court narrow an overbroad non-compete instead of voiding it? {#court-narrowing}
 
 **Short answer.** Usually it narrows. Kansas courts have long used their equitable power to reduce an overbroad restraint and enforce it as reduced, rather than striking the whole covenant [^eastern-equitable-reduction].
 
@@ -74,7 +74,7 @@ The 2025 statutory amendments add a separate, mandatory reformation command, but
 >
 > Do not rely on reformation as a license to overreach. Kansas will narrow an unreasonable restraint, but *Doan* shows a court will refuse to rewrite a term that is already reasonable, and an employer that drafts too broadly risks getting only the minimum relief a court considers necessary [^doan-no-rewrite][^eastern-equitable-reduction].
 
-## Does a tolling or extension-during-breach clause extend a Kansas non-compete? {#tolling-during-breach}
+## Does a tolling or extension-during-breach clause extend a Kansas non-compete? {#extended-for-breach}
 
 **Short answer.** Probably not as written. The only Kansas appellate decision on point refused to enforce a clause that tolled the restricted period during breach and during enforcement litigation, treating the resulting open-ended restraint as unreasonable [^doan-tolling-declined].
 

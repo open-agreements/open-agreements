@@ -48,7 +48,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > The cause is remanded for entry of a decree properly restraining the defendant from competing with plaintiff as provided herein. Said injunction shall restrain defendant from activity competitive to plaintiff in the six townships he served in plaintiff’s employment, shall embrace only the activities defendant undertook in plaintiff’s employment and shall be for a period of two years from the date that employment was terminated.
 
-- supports: `court-reformation`, `definitions`, `severability-and-reformation`, `tolling-during-breach`
+- supports: `court-narrowing`, `definitions`, `extended-for-breach`, `severability-and-reformation`, `tolling-during-breach`
 - source_cards: `ia-farm-bureau-fixed-period`, `ia-farm-bureau-no-addback`, `ia-farm-bureau-trimmed`, `q5-farm-bureau-partial`, `q6-farm-bureau-fixed-period`
 - cited_by: [Non-Compete Agreement Review Checklist — Iowa](../checklists/non-compete/us/iowa.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1935888/farm-bureau-service-co-of-maynard-v-kohls/#:~:text=The%20cause%20is%20remanded%20for,date%20that%20employment%20was%20terminated.>

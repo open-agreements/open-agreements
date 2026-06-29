@@ -1,7 +1,8 @@
 # Contributing
 
-This directory is generated from `UseJunior/legal-explainer` as a one-way
-content projection.
+This directory is generated and maintained programmatically from
+[openagreements.org](https://openagreements.org) as a one-way content
+publication.
 
-For practice-note content fixes, file an issue in `UseJunior/legal-explainer`
-rather than opening a pull request against this generated skill directory.
+For content fixes, open an issue rather than a pull request against this
+generated skill directory, and we'll fold the change in.

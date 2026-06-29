@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > A restrictive covenant must: (1) be necessary for the protection of the employer, that is, the employer must have a protectable interest justifying the restriction imposed on the activity of the employee; (2) provide a reasonable time limit; (3) provide a reasonable territorial limit; (4) not be harsh or oppressive as to the employee; and (5) not be contrary to public policy.
 
-- supports: `definitions`, `employee-noncompetes`, `parties-and-cover-term-identification`, `remedies`, `restrictive-covenants-each-independently-includable`, `wisconsin-statutory-gates`
+- supports: `definitions`, `employee-non-compete-enforceability`, `parties-and-cover-term-identification`, `remedies`, `restrictive-covenants-each-independently-includable`, `wisconsin-statutory-gates`
 - source_cards: `q1-star-direct-test`, `wi-star-five-factor-cov`, `wi-star-five-factor-cover`, `wi-star-five-factor-def`, `wi-star-five-factor-gate`, `wi-star-five-factor-rem`
 - cited_by: [Non-Compete Agreement Review Checklist — Wisconsin](../checklists/non-compete/us/wisconsin.md), [Non-Competes in Wisconsin](../non-compete/us/wisconsin.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1835915/star-direct-inc-v-dal-pra/#:~:text=A%20restrictive%20covenant%20must%3A%20(1),be%20contrary%20to%20public%20policy.>

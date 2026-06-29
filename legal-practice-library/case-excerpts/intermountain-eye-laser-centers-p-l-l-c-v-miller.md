@@ -41,7 +41,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > While the court may blue-pencil, if it can be done simply and accurately, the court will not do a substantial rewrite of the contract.
 
-- supports: `court-modification`, `severability-and-reformation`
+- supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `idaho-simple-blue-pencil-sev`, `intermountain-simple-blue-pencil`
 - cited_by: [Non-Compete Agreement Review Checklist — Idaho](../checklists/non-compete/us/idaho.md), [Non-Competes in Idaho](../non-compete/us/idaho.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2510251/intermountain-eye-laser-centers-pllc-v-miller/#:~:text=While%20the%20court%20may%20blue%2Dpencil%2C,substantial%20rewrite%20of%20the%20contract.>

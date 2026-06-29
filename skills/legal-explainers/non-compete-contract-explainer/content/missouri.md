@@ -2,7 +2,7 @@
 jurisdiction: "Missouri"
 slug: missouri
 countryCode: US
-snapshotAsOf: "2026-06-20"
+snapshotAsOf: "2026-06-29"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/missouri
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/missouri · **Snapshot as of:** 2026-06-20 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/missouri · **Snapshot as of:** 2026-06-29 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Missouri[^about]
 
@@ -35,7 +35,7 @@ Missouri enforces non-competes only when the restraint is reasonable and tied to
 | **Restriction extended during a breach?** | Not addressed |
 | **Maximum length set by law** | No statutory limit (~2 yrs commonly within range) |
 
-## Are employee non-compete agreements enforceable in Missouri? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Missouri? {#employee-non-compete-enforceability}
 
 **Short answer.** Yes, sometimes. Missouri is a reasonableness state, not a general ban state. A non-compete is enforceable only if it is reasonable — no more restrictive than necessary — and only to the extent it protects the employer's trade secrets or customer contacts, not mere competition [^copeland-reasonable-standard][^copeland-mere-competition].
 
@@ -95,7 +95,7 @@ Because *Baker* arose in the arbitration context and the Missouri Supreme Court 
 >
 > Do not rely on continued at-will employment as the only consideration for a Missouri non-compete. Support the covenant with independent consideration — a signing bonus, a raise, specialized training, or another concrete benefit — and document it, because *Baker* and *Durrell* make bare continued-employment consideration a litigation risk [^baker-illusory][^durrell-at-will][^jumbosack-consideration].
 
-## Will a Missouri court modify (blue-pencil) an overbroad non-compete? {#court-modification}
+## Will a Missouri court modify (blue-pencil) an overbroad non-compete? {#court-narrowing}
 
 **Short answer.** It can, but it does not have to. Missouri courts have authority to refuse to enforce unreasonable terms or to modify an overbroad covenant to make it reasonable, yet modification is discretionary — a court may instead decline to enforce the covenant at all [^whelan-modification][^sigma-refused-modification].
 
@@ -108,7 +108,7 @@ In *Sigma-Aldrich*, the court of appeals affirmed both the trial court's refusal
 >
 > Do not rely on a court to rewrite an overbroad covenant. Drafting to the outer edge risks both non-enforcement, if the court declines to modify, and forfeiture of a contractual attorney's-fee award even when the covenant is ultimately enforced as modified [^sigma-refused-modification][^paradise-prevailing-party].
 
-## Does a Missouri non-compete period toll or extend during a breach or litigation? {#tolling}
+## Does a Missouri non-compete period toll or extend during a breach or litigation? {#extended-for-breach}
 
 **Short answer.** Missouri law does not squarely answer this. Neither the non-solicitation safe harbor nor the owner-covenant statute addresses whether a restricted period pauses (tolls) while a former employee is violating the covenant or while litigation is pending, and Missouri appellate courts have not laid down a clear rule on judicial or contractual tolling for non-competes [^tolling-431-202-duration][^tolling-whelan-time].
 

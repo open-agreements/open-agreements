@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Accordingly, any extension of the time period would be against public policy, because it would be arbitrary and set precedent allowing a court to disrupt a party's private right to contract.
 
-- supports: `tolling-during-breach`, `tolling-extension`
+- supports: `extended-for-breach`, `tolling-during-breach`
 - source_cards: `sc-stonhard-extension-toll`, `stonhard-no-extension`
 - cited_by: [Non-Compete Agreement Review Checklist — South Carolina](../checklists/non-compete/us/south-carolina.md), [Non-Competes in South Carolina](../non-compete/us/south-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1202971/stonhard-inc-v-carolina-flooring-specialists-inc/#:~:text=Accordingly%2C%20any%20extension%20of%20the,party's%20private%20right%20to%20contract.>

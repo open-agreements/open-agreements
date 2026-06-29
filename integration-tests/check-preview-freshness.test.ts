@@ -45,15 +45,15 @@ function runRule(
 describe('per-template render-input rules', () => {
   it('canonical template.md change without preview → missing', () => {
     const { missing } = runRule([
-      { status: 'modified', path: 'content/templates/openagreements-employment-offer-letter/template.md' },
+      { status: 'modified', path: 'content/templates/openagreements-board-consent-safe/template.md' },
     ]);
-    expect(missing).toEqual(new Set(['openagreements-employment-offer-letter']));
+    expect(missing).toEqual(new Set(['openagreements-board-consent-safe']));
   });
 
   it('canonical template.md change WITH matching preview → not missing', () => {
     const { missing } = runRule([
-      { status: 'modified', path: 'content/templates/openagreements-employment-offer-letter/template.md' },
-      { status: 'modified', path: 'site/assets/previews/openagreements-employment-offer-letter/page-1.png' },
+      { status: 'modified', path: 'content/templates/openagreements-board-consent-safe/template.md' },
+      { status: 'modified', path: 'site/assets/previews/openagreements-board-consent-safe/page-1.png' },
     ]);
     expect(missing.size).toBe(0);
   });
@@ -80,12 +80,11 @@ describe('per-template render-input rules', () => {
     expect(triggered.size).toBe(0);
   });
 
-  it('template.json on the JSON-spec template without preview → missing', () => {
-    const { missing } = runRule([
-      { status: 'modified', path: 'content/templates/openagreements-employment-confidentiality-acknowledgement/template.json' },
-    ]);
-    expect(missing).toEqual(new Set(['openagreements-employment-confidentiality-acknowledgement']));
-  });
+  // NOTE: the upstream-authored exemption (a `template.mdoc` dir is skipped by
+  // the freshness gate) is exercised end-to-end by the upstream-sync's own CI,
+  // where real templates carry `template.mdoc`. It is intentionally not asserted
+  // here with a synthetic fixture: that would require writing a temporary
+  // template dir under content/templates, which races OA's parallel suites.
 
   it('template.docx change on any OA-owned template → missing', () => {
     const { missing } = runRule([
@@ -106,7 +105,7 @@ describe('per-template render-input rules', () => {
   it('README/practice-note/reference-source/.template.generated.json → no trigger', () => {
     for (const file of ['README.md', 'practice-note.md', 'reference-source.docx', '.template.generated.json']) {
       const { triggered } = runRule([
-        { status: 'modified', path: `content/templates/openagreements-employment-offer-letter/${file}` },
+        { status: 'modified', path: `content/templates/openagreements-board-consent-safe/${file}` },
       ]);
       expect(triggered.size, `${file} should not trigger`).toBe(0);
     }
@@ -254,22 +253,22 @@ describe('ownership / rename / deletion', () => {
 
   it('new OA-owned template added without previews → missing', () => {
     const { missing } = runRule([
-      { status: 'added', path: 'content/templates/openagreements-employment-offer-letter/template.docx' },
+      { status: 'added', path: 'content/templates/openagreements-due-diligence-request-list/template.docx' },
     ]);
-    expect(missing).toEqual(new Set(['openagreements-employment-offer-letter']));
+    expect(missing).toEqual(new Set(['openagreements-due-diligence-request-list']));
   });
 
   it('paired template.md + preview rename → not missing', () => {
     const { missing } = runRule([
       {
         status: 'renamed',
-        path: 'content/templates/openagreements-employment-offer-letter/template.md',
-        previousPath: 'content/templates/openagreements-employment-offer-letter-old/template.md',
+        path: 'content/templates/openagreements-board-consent-safe/template.md',
+        previousPath: 'content/templates/openagreements-board-consent-safe-old/template.md',
       },
       {
         status: 'renamed',
-        path: 'site/assets/previews/openagreements-employment-offer-letter/page-1.png',
-        previousPath: 'site/assets/previews/openagreements-employment-offer-letter-old/page-1.png',
+        path: 'site/assets/previews/openagreements-board-consent-safe/page-1.png',
+        previousPath: 'site/assets/previews/openagreements-board-consent-safe-old/page-1.png',
       },
     ]);
     expect(missing.size).toBe(0);
@@ -279,8 +278,8 @@ describe('ownership / rename / deletion', () => {
     const { missing } = runRule([
       {
         status: 'renamed',
-        path: 'content/templates/openagreements-employment-offer-letter/template.md',
-        previousPath: 'content/templates/openagreements-employment-offer-letter-old/template.md',
+        path: 'content/templates/openagreements-board-consent-safe/template.md',
+        previousPath: 'content/templates/openagreements-board-consent-safe-old/template.md',
       },
     ]);
     // Only the previous id is in CANONICAL_TEMPLATE_IDS as a known canonical
@@ -480,7 +479,7 @@ describe('CLI main-guard', () => {
         OA_CHANGED_FILES: JSON.stringify([
           {
             status: 'modified',
-            path: 'content/templates/openagreements-employment-offer-letter/template.md',
+            path: 'content/templates/openagreements-board-consent-safe/template.md',
             previousPath: null,
           },
         ]),
@@ -489,8 +488,8 @@ describe('CLI main-guard', () => {
       encoding: 'utf8',
     });
     expect(result.status).toBe(1);
-    expect(result.stderr).toMatch(/openagreements-employment-offer-letter/);
-    expect(result.stderr).toMatch(/::error file=content\/templates\/openagreements-employment-offer-letter\/template\.md/);
+    expect(result.stderr).toMatch(/openagreements-board-consent-safe/);
+    expect(result.stderr).toMatch(/::error file=content\/templates\/openagreements-board-consent-safe\/template\.md/);
   });
 
   it('exits 0 on a clean diff (only README touched)', () => {
@@ -501,7 +500,7 @@ describe('CLI main-guard', () => {
         OA_CHANGED_FILES: JSON.stringify([
           {
             status: 'modified',
-            path: 'content/templates/openagreements-employment-offer-letter/README.md',
+            path: 'content/templates/openagreements-board-consent-safe/README.md',
             previousPath: null,
           },
         ]),
@@ -521,7 +520,7 @@ describe('CLI main-guard', () => {
         OA_CHANGED_FILES: JSON.stringify([
           {
             status: 'added',
-            path: 'content/templates/openagreements-employment-offer-letter/template.docx',
+            path: 'content/templates/openagreements-due-diligence-request-list/template.docx',
             previousPath: null,
           },
         ]),
@@ -531,7 +530,7 @@ describe('CLI main-guard', () => {
     });
     expect(result.status).toBe(1);
     expect(result.stdout).not.toMatch(/satisfied via manifest/);
-    expect(result.stderr).toMatch(/openagreements-employment-offer-letter/);
+    expect(result.stderr).toMatch(/openagreements-due-diligence-request-list/);
   });
 
   it("'freshness/skip' label bypasses the gate even when manifest validation would fail", () => {
@@ -564,12 +563,12 @@ describe('CLI main-guard', () => {
         OA_CHANGED_FILES: JSON.stringify([
           {
             status: 'modified',
-            path: 'content/templates/openagreements-employment-offer-letter/template.docx',
+            path: 'content/templates/openagreements-board-consent-safe/template.docx',
             previousPath: null,
           },
           {
             status: 'modified',
-            path: 'content/templates/openagreements-employment-offer-letter/template.md',
+            path: 'content/templates/openagreements-board-consent-safe/template.md',
             previousPath: null,
           },
         ]),
@@ -578,7 +577,7 @@ describe('CLI main-guard', () => {
       encoding: 'utf8',
     });
     expect(result.status).toBe(1);
-    expect(result.stderr).toMatch(/openagreements-employment-offer-letter/);
+    expect(result.stderr).toMatch(/openagreements-board-consent-safe/);
     expect(result.stdout).not.toMatch(/satisfied via manifest/);
   });
 

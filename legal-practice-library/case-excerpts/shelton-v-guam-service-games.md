@@ -37,7 +37,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 > Since this agreement attempted to make the prohibition and restraint complete within the Territory of Guam, it is to that extent void.
 
-- supports: `employee-noncompetes`
+- supports: `employee-non-compete-enforceability`
 - source_cards: `shelton-void`
 - cited_by: [Non-Competes in Guam](../non-compete/us/guam.md)
 - link_to_source: <https://www.courtlistener.com/opinion/241093/austin-j-shelton-v-guam-service-games-a-copartnership/#:~:text=Since%20this%20agreement%20attempted%20to,is%20to%20that%20extent%20void.>

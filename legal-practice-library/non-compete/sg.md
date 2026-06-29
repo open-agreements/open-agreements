@@ -19,7 +19,7 @@ tags:
 
 Singapore has no non-compete statute; a post-employment restraint is presumptively void as a restraint of trade and binds a former employee only if the employer proves a legitimate proprietary interest and that the clause is reasonable between the parties and in the public interest, and a court may strike out but never rewrite an overbroad clause.
 
-## Are employee non-competes enforceable in Singapore? {#employee-noncompetes}
+## Are employee non-competes enforceable in Singapore? {#employee-non-compete-enforceability}
 
 **Short answer.** Only if the employer can justify them. Singapore has no statute that governs non-competes. A post-employment restraint is treated as a restraint of trade, which the courts presume is *void* and contrary to public policy [^mf-prima-facie-void]. To displace that presumption the employer must show the restraint protects a legitimate proprietary interest — not a mere wish to avoid competition [^mf-interest-required] — and that the clause is reasonable both between the parties and in the interests of the public [^mf-parties-public].
 
@@ -114,7 +114,7 @@ In *Mano Vikrant Singh v Cargill TSF Asia Pte Ltd*, the Court of Appeal kept the
 
 "Post termination employment restraints are thus not assessed with the same level of flexibility as garden leave provisions."[^mano-garden-leave]
 
-## Does a Singapore non-compete pause or extend if the employee breaches? {#tolling}
+## Does a Singapore non-compete pause or extend if the employee breaches? {#extended-for-breach}
 
 **Short answer.** Singapore law has not addressed it. No Singapore decision holds that the restraint period tolls — pauses and then resumes — while a former employee is in breach or while litigation runs, so an automatic extension-on-breach clause is untested. What Singapore does offer instead is the *springboard* injunction, a separate equitable remedy that neutralises an unfair head-start rather than extending the covenant [^springboard-goh].
 

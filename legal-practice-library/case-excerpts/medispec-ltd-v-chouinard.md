@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Here, an examination of the particular facts is not necessary because the clause is overly broad on its face.
 
-- supports: `definitions`, `duration-geography`
+- supports: `definitions`, `duration-limits`
 - source_cards: `md-medispec-facially-overbroad`, `medispec-facially-overbroad`
 - cited_by: [Non-Compete Agreement Review Checklist — Maryland](../checklists/non-compete/us/maryland.md), [Non-Competes in Maryland](../non-compete/us/maryland.md)
 - link_to_source: <https://www.courtlistener.com/opinion/7315898/medispec-ltd-v-chouinard/#:~:text=Here%2C%20an%20examination%20of%20the,overly%20broad%20on%20its%20face.>

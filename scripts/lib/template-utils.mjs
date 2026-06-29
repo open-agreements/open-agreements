@@ -68,3 +68,22 @@ export function listOpenAgreementsTemplateIds() {
     isOpenAgreementsOwned(templateId, loadTemplateMetadata(templateId))
   );
 }
+
+/**
+ * Upstream-authored templates are synced from the canonical Markdoc source and
+ * marked by a `template.mdoc` in their directory. They ship a fully-rendered,
+ * humanized DOCX rather than an OA fill-token document, and OA does not render
+ * their preview PNGs — so the preview gates exempt them.
+ */
+export function isUpstreamAuthored(templateId) {
+  return existsSync(resolve(TEMPLATES_DIR, templateId, "template.mdoc"));
+}
+
+/**
+ * OA-owned templates whose previews OA itself renders (i.e. excluding
+ * upstream-authored templates). This is the set the preview gates require PNGs
+ * for and check freshness on.
+ */
+export function listOpenAgreementsRenderedTemplateIds() {
+  return listOpenAgreementsTemplateIds().filter((id) => !isUpstreamAuthored(id));
+}

@@ -17,7 +17,7 @@ tags:
 
 The District of Columbia bans non-compete provisions for most employees and allows them only for highly compensated employees who earn above an annually adjusted threshold and sign a covenant that meets strict scope, duration, and notice requirements.
 
-## Are employee non-compete agreements enforceable in the District of Columbia? {#enforceability}
+## Are employee non-compete agreements enforceable in the District of Columbia? {#employee-non-compete-enforceability}
 
 **Short answer.** Usually no. Since October 1, 2022, a District employer may not require or request that a *covered employee* — broadly, most employees who do not meet a high compensation threshold — sign or comply with a non-compete provision, and a non-compete provision in a covered employee's agreement entered into on or after that date is void as a matter of law [^ban-covered][^void-rule].
 
@@ -98,6 +98,14 @@ The statute carves a confidentiality restriction out of the non-compete definiti
 >
 > Keep a confidentiality clause to genuine confidential and proprietary information. The carve-out protects restrictions on disclosing or using employer information; a nondisclosure clause drafted so broadly that it effectively prevents the employee from working for a competitor risks being recharacterized as a prohibited non-compete provision [^confidentiality-carveout].
 
+## How does the District of Columbia treat customer non-solicitation covenants? {#customer-non-solicitation}
+
+**Short answer.** An ordinary customer non-solicit falls outside the District's statutory non-compete ban because it does not bar the employee from working for another for pay or running their own business, so it is judged under common-law reasonableness [^dc-cust-statute-outside-ban][^dc-cust-ellis-partial].
+
+The statutory ban reaches only a provision that stops an employee from performing work for another for pay or operating their own business, and an ordinary customer non-solicit does neither [^dc-cust-statute-outside-ban]. Such a covenant is instead measured against common-law reasonableness, under which a District of Columbia court may partially enforce the reasonable portion of an overbroad restraint rather than void it entirely [^dc-cust-ellis-partial].
+
+One untested wrinkle remains: a customer non-solicit drafted so broadly that it effectively forecloses working could in theory be recharacterized as a banned non-compete, a question no District of Columbia court has yet decided in our review.
+
 ## Are sale-of-business non-competes enforceable in the District of Columbia? {#sale-of-business}
 
 **Short answer.** They are not banned by the statute, but their enforceability still turns on common-law reasonableness. A covenant in which the seller of a business agrees not to compete with the buyer is excluded from the non-compete definition, so it is not void under the ban; it remains subject to the District's common-law rule of reason [^sale-carveout][^ellis-reasonableness].
@@ -138,7 +146,7 @@ Enforcement is real. In November 2023, the Attorney General announced settlement
 >
 > The exposure attaches per employee and to attempted enforcement, not just to a lawsuit you lose. Before presenting any District non-compete, confirm the worker is a highly compensated employee, the covenant meets every § 32-581.03 requirement, and the disclosures are made — because subjecting a covered employee to a banned covenant, or trying to enforce a void one, triggers fixed per-employee relief and Attorney General enforcement [^relief-amounts][^oag-enforcement].
 
-## Does a District of Columbia non-compete toll or extend during a breach or litigation? {#tolling-extension}
+## Does a District of Columbia non-compete toll or extend during a breach or litigation? {#extended-for-breach}
 
 **Short answer.** This is an open question, and the statute's structure cuts against automatic extension. The District's non-compete statute sets no tolling rule, and its caps run as a fixed number of calendar days measured from separation — language that sits uneasily with extending a highly compensated employee's restricted period during a breach or while litigation is pending [^tolling-duration-cap][^tolling-cumulative].
 
@@ -202,6 +210,10 @@ The duration limits are written as hard caps: a non-medical highly compensated e
 [^utsa-injunction]: **D.C. Code § 36-402** — "Actual or threatened misappropriation may be enjoined." *D.C. Code § 36-402(a).* <https://code.dccouncil.gov/us/dc/council/code/sections/36-402>
 
 [^lti-carveout]: **D.C. Code § 32-581.01** — "That provides a long-term incentive." *D.C. Code § 32-581.01(15)(C).* <https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01>
+
+[^dc-cust-statute-outside-ban]: **D.C. Code § 32-581.01** — "‘Non-compete provision’ means a provision in a written agreement or a workplace policy that prohibits an employee from performing work for another for pay or from operating the employee's own business." *D.C. Code § 32-581.01(15).* <https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01>
+
+[^dc-cust-ellis-partial]: **Ellis v. James V. Hurson Associates, Inc.** — "we join those jurisdictions which have rejected the view that covenants not to compete must be enforceable in whole or not at all." *Ellis v. James V. Hurson Assocs., Inc., 565 A.2d 615, 618 (D.C. 1989).* <https://www.courtlistener.com/opinion/1561257/ellis-v-james-v-hurson-associates-inc/#:~:text=we%20join%20those%20jurisdictions%20which,whole%20or%20not%20at%20all.>
 
 [^sale-carveout]: **D.C. Code § 32-581.01** — "Contained within or executed contemporaneously with an agreement between the seller of a business and one or more buyers of that business wherein the seller agrees not to compete with the buyer's business" *D.C. Code § 32-581.01(15)(A).* <https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01>
 

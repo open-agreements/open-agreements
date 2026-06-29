@@ -18,182 +18,172 @@ Phrasing library for [REQ-privacy-law.privacy-policy.disclose-processing-purpose
 
 ## Example phrasings
 
-### 3M {#3m}
-
-> we may process through your interactions with us, including, but not limited to: - Through online activities and Services
-
-- conformance: conforming
-- source: [3M](https://www.3m.com/3M/en_US/company-us/privacy-policy/)
-- detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
-- link_to_source: <https://www.3m.com/3M/en_US/company-us/privacy-policy/>
-
 ### A-Mark Precious Metals {#a-mark-precious-metals}
 
-> We use cookies to facilitate your navigation of the website, enable you to select products, recognize you and your access privileges, track your usage of the websites, and provide
+> We use cookies to facilitate your navigation of the website, enable you to select products, recognize you and your access privileges, track your usage of the websites, and provide you with information or advertising relating to our products or services.
 
 - conformance: conforming
 - source: [A-Mark Precious Metals](https://amark.com/privacy)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://amark.com/privacy>
-
-### ABM Industries {#abm-industries}
-
-> for the purposes described in this Privacy Policy;With our vendors to provide
-
-- conformance: conforming
-- source: [ABM Industries](https://abm.com/privacy-policy)
-- detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
-- link_to_source: <https://abm.com/privacy-policy>
 
 ### AECOM {#aecom}
 
-> We use your information for the following purposes: To manage your relationship with AECOM and better serve you when using the services
+> We use your information for the following purposes: To manage your relationship with AECOM and better serve you when using the services by personalizing and improving your experience.
 
 - conformance: conforming
 - source: [AECOM](https://aecom.com/en-ca/privacy-policy/)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://aecom.com/en-ca/privacy-policy/>
 
 ### AES {#aes}
 
-> we use Personal Data for direct marketing
+> We use Personal Data to provide our services and respond to inquiries, to manage accounts and maintain business operations, to provide relevant marketing, and to fulfill other business and compliance purposes.
 
 - conformance: conforming
 - source: [AES](https://aes.com/privacy-policy)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://aes.com/privacy-policy>
 
 ### AGCO {#agco}
 
-> for the purposes of allowing those recipients to operate
+> We may share your Personal Information with recipients outside AGCO, including with our joint venture partner, AGCO Finance, for the purposes of allowing those recipients to operate their business, Sites, Apps or Devices and provide you with products or services you have selected.
 
 - conformance: conforming
 - source: [AGCO](https://www.agcocorp.com/int/en/home/privacy-center/privacy-statement/privacy-statement-en.html)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://www.agcocorp.com/int/en/home/privacy-center/privacy-statement/privacy-statement-en.html>
 
 ### APA {#apa}
 
-> We may use temporary session cookies, which are terminated when you close your browser session, to store certain personal information you provide
+> We may use temporary session cookies, which are terminated when you close your browser session, to store certain personal information you provide for purposes of administering that session and facilitating transactions requested by you during that session.
 
 - conformance: conforming
 - source: [APA](https://apacorp.com/privacy-policy/)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://apacorp.com/privacy-policy/>
-
-### AT&T {#at-t}
-
-> We use your information, together with the information from testing and running our network, to power our services
-
-- conformance: conforming
-- source: [AT&T](https://about.att.com/ecms/dam/csr/privacy-redesign/ATT_Privacy_Policy-220606.pdf)
-- detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
-- link_to_source: <https://about.att.com/ecms/dam/csr/privacy-redesign/ATT_Privacy_Policy-220606.pdf>
 
 ### AbbVie {#abbvie}
 
-> we use Personal Information When we share Personal Information Additional information for California residents Additional information for health care professionals Privacy of children Your privacy choices Data security
+> How we may use Personal Data How we may disclose Personal Data Cookies and similar tracking and data collection technologies Links to third-party sites and social media plug-ins Your privacy rights Additional information for job applicants Additional information for health care professionals Additional information for participants in patient and customer programs Consumer health data privacy notice Loyalty programs Privacy of children Our contact information Data security and retention
 
 - conformance: conforming
 - source: [AbbVie](https://privacy.abbvie/privacy-policies/us-privacy-policy.html)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://privacy.abbvie/privacy-policies/us-privacy-policy.html>
 
 ### Abbott Laboratories {#abbott-laboratories}
 
-> We may use any of the categories of Personal Information listed above for our internal business purposes, such as data analysis
+> We may use any of the categories of Personal Information listed above for our internal business purposes, such as data analysis, audits, developing new products, enhancing our Services, identifying usage trends and determining the effectiveness of our promotional campaigns.
 
 - conformance: conforming
 - source: [Abbott Laboratories](https://abbott.com/privacy-policy)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://abbott.com/privacy-policy>
 
 ### Ace Hardware {#ace-hardware}
 
-> for purposes of marketing and advertising and to improve
+> We may disclose these categories to third-party advertising networks, analytics providers, franchises, and social networks for purposes of marketing and advertising and to improve and measure our ad campaigns.
 
 - conformance: conforming
 - source: [Ace Hardware](https://www.acehardware.com/privacy/california)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://www.acehardware.com/privacy/california>
 
 ### Adobe {#adobe}
 
-> We use your personal information to enable you to register with Adobe and to provide
+> We use your personal information to enable you to register with Adobe and to provide you with our Services and Software, and other products or services that you request.
 
 - conformance: conforming
 - source: [Adobe](https://www.adobe.com/privacy/policy.html)
 - detected_by: A→B→C within gap
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://www.adobe.com/privacy/policy.html>
 
-### Ameriprise Financial {#ameriprise-financial}
+### Advanced Micro Devices {#advanced-micro-devices}
 
-> We use cookies on our website to
+> Our Privacy Notice explains the personal data AMD processes and how we use your Personal Information when you use our products, services, or technologies or provide us with your Personal Information in other ways both online and offline.
+
+- conformance: conforming
+- source: [Advanced Micro Devices](https://www.amd.com/en/legal/privacy.html)
+- detected_by: A→B→C within gap
+- captured: 2026-06-26T07:03:35.871Z
+- link_to_source: <https://www.amd.com/en/legal/privacy.html>
+
+### Aflac {#aflac}
+
+> We use information collected from you to provide our Services and contact you.
+
+- conformance: conforming
+- source: [Aflac](https://aflac.com/privacy-policy)
+- detected_by: A→B→C within gap
+- captured: 2026-06-26T07:03:35.871Z
+- link_to_source: <https://aflac.com/privacy-policy>
+
+### Air Products & Chemicals {#air-products-chemicals}
+
+> We may use the personal information described above for the following purposes: Provide services to you upon your request: you may complete a form or send us an e-mail to purchase a product, download a report or other material, register for a conference, submit a request, respond to an e-mail or blog posting, ask a question, or make a comment.
+
+- conformance: conforming
+- source: [Air Products & Chemicals](https://airproducts.com/privacy-notice)
+- detected_by: A→B→C within gap
+- captured: 2026-06-26T07:03:35.871Z
+- link_to_source: <https://airproducts.com/privacy-notice>
+
+### Crown Holdings {#crown-holdings}
+
+> If we process your sensitive personal data for other purposes, we will support ourselves on the appropriate legal bases.
 
 - conformance: partial
-- source: [Ameriprise Financial](https://ir.ameriprise.com/privacy-policy/default.aspx?ItemId=26f4656d-f7a7-41fb-8807-f1132dbbfe25)
+- source: [Crown Holdings](https://www.crowncork.com/crown-brazil-privacy-policy)
 - detected_by: A→B matched; C (target) missing
-- captured: 2026-06-15T19:34:23.938Z
-- link_to_source: <https://ir.ameriprise.com/privacy-policy/default.aspx?ItemId=26f4656d-f7a7-41fb-8807-f1132dbbfe25>
+- captured: 2026-06-26T07:03:35.871Z
+- link_to_source: <https://www.crowncork.com/crown-brazil-privacy-policy>
 
-### Asbury Automotive {#asbury-automotive}
+### Delek US {#delek-us}
 
-> We use this information to
+> We use the information you send to us by e-mail to respond to your inquiry or request, and otherwise in accordance with this Privacy Policy and the Terms of Use for this web site.
 
 - conformance: partial
-- source: [Asbury Automotive](https://www.asburyauto.com/company/privacy-policy)
+- source: [Delek US](https://www.delekus.com/privacy-policy/default.aspx)
 - detected_by: A→B matched; C (target) missing
-- captured: 2026-06-15T19:34:23.938Z
-- link_to_source: <https://www.asburyauto.com/company/privacy-policy>
+- captured: 2026-06-26T07:03:35.871Z
+- link_to_source: <https://www.delekus.com/privacy-policy/default.aspx>
 
-### Booz Allen Hamilton {#booz-allen-hamilton}
+### Dominion Energy {#dominion-energy}
 
-> For purposes of this notice, “Personal Data
+> However, certain activities such as allowing third-party cookies on our websites and mobile applications, sharing information for purposes of internet-based advertising, and/or maintaining certain relationships through which we work to bring you non-affiliate products may be considered a "sale" under the CCPA.
 
 - conformance: partial
-- source: [Booz Allen Hamilton](https://www.boozallen.com/content/dam/home/docs/corp/esg/legal/us-states-privacy-policy.pdf)
+- source: [Dominion Energy](http://www.dominionenergy.com/en/California-Consumer-Notice-of-Privacy-Rights)
 - detected_by: A→B matched; C (target) missing
-- captured: 2026-06-15T19:34:23.938Z
-- link_to_source: <https://www.boozallen.com/content/dam/home/docs/corp/esg/legal/us-states-privacy-policy.pdf>
+- captured: 2026-06-26T07:03:35.871Z
+- link_to_source: <http://www.dominionenergy.com/en/California-Consumer-Notice-of-Privacy-Rights>
 
 ### American Tower {#american-tower}
 
-> for the purposes
+> The data collected by American Tower is limited to the data necessary for the purposes pursued as described below.
 
 - conformance: non-conforming
 - source: [American Tower](https://www.americantower.com/us/privacy)
 - detected_by: A only; no action
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://www.americantower.com/us/privacy>
 
 ### Archer Daniels Midland {#archer-daniels-midland}
 
-> for purposes
+> Grenada’s Data Protection Act, No. 1 of 2023 (GDPA) requires ADM to obtain explicit consent before processing data, ensure that personal data is collected for a specific and legitimate purpose, and avoid disclosing information for purposes other than those originally agreed upon.
 
 - conformance: non-conforming
 - source: [Archer Daniels Midland](https://www.adm.com/en-us/legal/privacy/privacy-na/)
 - detected_by: A only; no action
-- captured: 2026-06-15T19:34:23.938Z
+- captured: 2026-06-26T07:03:35.871Z
 - link_to_source: <https://www.adm.com/en-us/legal/privacy/privacy-na/>
-
-### Charles Schwab {#charles-schwab}
-
-> we use
-
-- conformance: non-conforming
-- source: [Charles Schwab](https://www.schwab.com/legal/schwab-bank-privacy-security)
-- detected_by: A only; no action
-- captured: 2026-06-15T19:34:23.938Z
-- link_to_source: <https://www.schwab.com/legal/schwab-bank-privacy-security>

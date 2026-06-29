@@ -12,26 +12,15 @@ const it = itAllure.epic('Filling & Rendering');
 const REPO_ROOT = join(import.meta.dirname, '..');
 const STYLE_PATH = join(REPO_ROOT, 'scripts', 'template-specs', 'styles', 'openagreements-default-v1.json');
 
-// Templates that compile through layout=cover-standard-signature-v1. The Pages-app
-// compatibility invariant (#262, #263) was already enforced for the traditional-consent
-// layout via canonical-board-consent + canonical-stockholder-consent tests; this file
-// extends the same guard to every cover-standard-signature template so a future renderer
-// regression can't silently land an unstyled-paragraph DOCX. See #339.
-const COVER_STANDARD_TEMPLATES = [
+// Native OA-owned templates that exercise the Pages-app compatibility invariant
+// (#262, #263) through the shared canonical renderer path.
+const NATIVE_CANONICAL_TEMPLATES = [
   {
-    slug: 'openagreements-employee-ip-inventions-assignment',
+    slug: 'openagreements-board-consent-safe',
     sourceType: 'canonical',
   },
   {
-    slug: 'openagreements-employment-confidentiality-acknowledgement',
-    sourceType: 'json',
-  },
-  {
-    slug: 'openagreements-employment-offer-letter',
-    sourceType: 'canonical',
-  },
-  {
-    slug: 'openagreements-restrictive-covenant-wyoming',
+    slug: 'openagreements-stockholder-consent-safe',
     sourceType: 'canonical',
   },
 ] as const;
@@ -68,8 +57,8 @@ async function renderTemplateBuffer(slug: string, sourceType: 'canonical' | 'jso
   return Packer.toBuffer(rendered.document);
 }
 
-describe('cover-standard-signature-v1 — Apple Pages compatibility invariant', () => {
-  for (const { slug, sourceType } of COVER_STANDARD_TEMPLATES) {
+describe('native canonical renderer — Apple Pages compatibility invariant', () => {
+  for (const { slug, sourceType } of NATIVE_CANONICAL_TEMPLATES) {
     // The invariant has three parts (mirrors #263's consent-layout regression guard):
     //   (1) Required named styles are declared in styles.xml with their visible properties.
     //   (2) Normal carries non-zero spacing-after so paragraphs render with vertical whitespace.
@@ -84,15 +73,13 @@ describe('cover-standard-signature-v1 — Apple Pages compatibility invariant', 
       // (1) Required named styles exist.
       const normalBlock = extractStyleBlock(stylesXml, 'Normal');
       const titleBlock = extractStyleBlock(stylesXml, 'OATitle');
-      const sectionTitleBlock = extractStyleBlock(stylesXml, 'OASectionTitle');
       const clauseHeadingBlock = extractStyleBlock(stylesXml, 'OAClauseHeading');
-      const clauseBodyBlock = extractStyleBlock(stylesXml, 'OAClauseBody');
+      const blockSignatureFollowBlock = extractStyleBlock(stylesXml, 'OABlockSignatureFollow');
 
       for (const [name, block] of [
         ['OATitle', titleBlock],
-        ['OASectionTitle', sectionTitleBlock],
         ['OAClauseHeading', clauseHeadingBlock],
-        ['OAClauseBody', clauseBodyBlock],
+        ['OABlockSignatureFollow', blockSignatureFollowBlock],
       ] as const) {
         expect(block, `${name} must declare basedOn=Normal`).toMatch(/<w:basedOn w:val="Normal"\/>/);
       }

@@ -39,7 +39,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Also, injunctive relief was awarded by extending the NCA for Cascio’s failure to cancel the C- Rental trade name.
 
-- supports: `tolling-during-breach`, `tolling-extension`
+- supports: `extended-for-breach`, `tolling-during-breach`
 - source_cards: `cascio-extension-effect`, `ms-cascio-effect`
 - cited_by: [Non-Compete Agreement Review Checklist — Mississippi](../checklists/non-compete/us/mississippi.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10627857/philip-t-cascio-jr-v-cascio-investments-llc-jackie-cascio-pearson-and/#:~:text=Also%2C%20injunctive%20relief%20was%20awarded,the%20C%2D%20Rental%20trade%20name.>
@@ -48,7 +48,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Further, in the event of any breach of this agreement, the time period of non-competition shall be extended by the time the undersigned was in breach, even if the time period of non-competition would have otherwise expired according to the terms of this Non-Competition Agreement.
 
-- supports: `tolling-during-breach`, `tolling-extension`
+- supports: `extended-for-breach`, `tolling-during-breach`
 - source_cards: `cascio-extension-clause`, `ms-cascio-clause`
 - cited_by: [Non-Compete Agreement Review Checklist — Mississippi](../checklists/non-compete/us/mississippi.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10627857/philip-t-cascio-jr-v-cascio-investments-llc-jackie-cascio-pearson-and/#:~:text=Further%2C%20in%20the%20event%20of,terms%20of%20this%20Non%2DCompetition%20Agreement.>

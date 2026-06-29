@@ -20,7 +20,7 @@ tags:
 
 A question-by-question summary of Arizona non-compete law, including the common-law reasonableness test, the strict no-rewrite (blue-pencil) rule, physician covenants under Valley Medical Specialists v. Farber, the broadcast-employee ban in A.R.S. § 23-494, continued-employment consideration, confidentiality covenants treated as de facto non-competes, the Arizona Uniform Trade Secrets Act, sale-of-business covenants, tolling, attorney fees, and the failed HB 2361 statewide-ban bill.
 
-## Are employee non-compete agreements enforceable in Arizona? {#enforceability}
+## Are employee non-compete agreements enforceable in Arizona? {#employee-non-compete-enforceability}
 
 **Short answer.** Sometimes. Arizona has no general statute banning or governing employee non-competes, so the question is decided under common law: a covenant not to compete is enforceable only if it is reasonable. Arizona courts treat these restraints as disfavored[^q1-amex-disfavored] and will refuse to enforce one that sweeps further than the employer's legitimate interest requires [^q1-farber-reasonableness].
 
@@ -154,7 +154,7 @@ More latitude is not a free pass. In *Berkadia Real Estate Advisors LLC v. Wadlu
 >
 > Tie a sale-of-business covenant's geography, duration, and scope of restricted activity to the goodwill actually being transferred. In *Berkadia* a nationwide covenant binding a seller who had only ever worked in Tucson was struck as unreasonable, and Arizona's no-rewrite rule meant the court would not pare it back [^q9-berkadia-unreasonable][^q9-gann-validity].
 
-## Does an Arizona non-compete period extend while the employee is in breach or litigation is pending? {#tolling}
+## Does an Arizona non-compete period extend while the employee is in breach or litigation is pending? {#extended-for-breach}
 
 **Short answer.** Arizona law does not squarely answer this. No Arizona appellate decision appears to have decided whether a non-compete period tolls — pauses and extends — while the former employee is violating the covenant or while enforcement litigation is pending. Because Arizona judges covenants for reasonableness and will not rewrite an overbroad term, a contractual extension-on-breach clause is best analyzed as part of the covenant's overall duration and drafted conservatively [^q10-farber-reasonableness][^q10-varsity-norewrite].
 

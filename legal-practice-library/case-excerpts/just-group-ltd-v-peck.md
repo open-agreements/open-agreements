@@ -27,7 +27,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > A term in a contract, which is a restraint of trade ('a restraint clause'), is presumed to be void as contrary to public policy.
 
-- supports: `enforceability`, `federal-reform`
+- supports: `employee-non-compete-enforceability`, `enforceability`, `federal-reform`
 - source_cards: `just-presumed-void`, `just-presumed-void-reform`
 - cited_by: [Non-Competes in Australia](../non-compete/au.md), [Non-Compete Enforceability in Victoria](../non-compete/au/victoria.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/vic/VSCA/2016/334.html>

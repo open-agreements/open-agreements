@@ -67,8 +67,17 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 > It does not follow that the covenant fails in toto. The six separate provisions contained within the covenant which earlier I have identified each is a separate severable covenant.
 
-- supports: `court-narrowing`
-- source_cards: `jeffress-no-toto`
+- supports: `court-narrowing`, `customer-non-solicitation`
+- source_cards: `jeffress-no-toto`, `tas-cust-severable`
+- cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/au/tasmania.md)
+- link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/tas/TASSC/1993/113.html>
+
+### neville-jeffress-advertising-pty-ltd-v-barlow-no-2-it-might-have-been-reasonable-for-f14fd5f6 {#neville-jeffress-advertising-pty-ltd-v-barlow-no-2-it-might-have-been-reasonable-for-f14fd5f6}
+
+> It might have been reasonable for the defendant to have been prevented for some defined and reasonable period after ceasing to be employed by the plaintiff from dealing with, or at least soliciting the business of, those persons who were clients of the plaintiff at the time of the termination of his employment or during some specified and reasonable time before that termination. The covenant goes much further and operates so as to merely protect the plaintiff from competition in circumstances where the law does not regard that as reasonable.
+
+- supports: `customer-non-solicitation`
+- source_cards: `tas-cust-genuine-connection`
 - cited_by: [Non-Compete Enforceability in Tasmania](../non-compete/au/tasmania.md)
 - link_to_source: <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/tas/TASSC/1993/113.html>
 

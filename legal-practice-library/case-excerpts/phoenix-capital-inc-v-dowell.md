@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 > Consequently, we discern no error in the trial court's refusing to extend the terms of the preliminary injunction beyond the one-year term specified in the parties' agreement.
 
-- supports: `tolling-during-breach`, `tolling-extension`
+- supports: `extended-for-breach`, `tolling-during-breach`
 - source_cards: `phoenix-no-extension`
 - cited_by: [Non-Compete Agreement Review Checklist — Colorado](../checklists/non-compete/us/colorado.md), [Non-Competes in Colorado](../non-compete/us/colorado.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2633761/phoenix-capital-inc-v-dowell/#:~:text=Consequently%2C%20we%20discern%20no%20error,specified%20in%20the%20parties'%20agreement.>
@@ -49,7 +49,7 @@ Supporting case-law excerpt. Quoted across 3 document(s) in the OpenAgreements l
 
 > In the preliminary injunction context, the employer has the burden to establish that the covenant not to compete falls within one of those narrow exceptions.
 
-- supports: `enforceability`, `remedies`, `restrictive-covenants-each-independently-includable`
+- supports: `employee-non-compete-enforceability`, `remedies`, `restrictive-covenants-each-independently-includable`
 - source_cards: `phoenix-employer-burden`, `phoenix-exception-burden`, `phoenix-injunction-burden`
 - cited_by: [Non-Compete Agreement Review Checklist](../checklists/non-compete/us.md), [Non-Compete Agreement Review Checklist — Colorado](../checklists/non-compete/us/colorado.md), [Non-Competes in Colorado](../non-compete/us/colorado.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2633761/phoenix-capital-inc-v-dowell/#:~:text=In%20the%20preliminary%20injunction%20context%2C,one%20of%20those%20narrow%20exceptions.>

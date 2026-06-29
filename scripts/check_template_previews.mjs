@@ -5,11 +5,11 @@ import { resolve } from "node:path";
 
 import {
   PREVIEWS_DIR,
-  listOpenAgreementsTemplateIds,
+  listOpenAgreementsRenderedTemplateIds,
 } from "./lib/template-utils.mjs";
 
 function main() {
-  const ownedTemplates = listOpenAgreementsTemplateIds();
+  const ownedTemplates = listOpenAgreementsRenderedTemplateIds();
 
   const missing = [];
   for (const templateId of ownedTemplates) {

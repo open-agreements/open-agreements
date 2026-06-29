@@ -2,7 +2,7 @@
 jurisdiction: "Oklahoma"
 slug: oklahoma
 countryCode: US
-snapshotAsOf: "2026-06-20"
+snapshotAsOf: "2026-06-29"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/oklahoma
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/oklahoma · **Snapshot as of:** 2026-06-20 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/oklahoma · **Snapshot as of:** 2026-06-29 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Oklahoma[^about]
 
@@ -35,7 +35,7 @@ Oklahoma voids employee non-compete agreements by statute and allows only narrow
 | **Restriction extended during a breach?** | Not addressed |
 | **Maximum length set by law** | No statutory limit on the ban; sale covenants limited to a county and contiguous counties |
 
-## Are employee non-compete agreements enforceable in Oklahoma? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Oklahoma? {#employee-non-compete-enforceability}
 
 **Short answer.** No. Oklahoma voids employee non-compete agreements by statute. A contract that restrains someone from exercising a lawful profession, trade, or business is void to that extent, except for the narrowly drawn covenants Oklahoma statutes specifically permit: sale-of-goodwill covenants (§ 218), partnership-dissolution covenants (§ 219), direct solicitation of established customers (§ 219A), and employee anti-raiding clauses (§ 219B) [^stat-217-general-void][^stat-219a-void-clause].
 

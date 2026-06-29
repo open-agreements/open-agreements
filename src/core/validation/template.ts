@@ -163,6 +163,21 @@ export function validateTemplate(templateDir: string, templateId: string): Templ
     };
   }
 
+  // Templates that ship a fully-rendered, humanized DOCX (marked by a
+  // `template.mdoc` in the dir) rather than an OA fill-token document — so the
+  // `{field}` placeholder-coverage / FOR / multiselect scans below do not apply.
+  // Their metadata has already been validated
+  // above by loadMetadata, and the license check runs separately. BUT the unsafe-tag
+  // security scan is defense-in-depth and runs for EVERY committed DOCX regardless
+  // of authorship (a DOCX must never carry docx-templates control/code tags).
+  if (existsSync(join(templateDir, 'template.mdoc'))) {
+    const rawXml = extractRawDocumentXml(templatePath);
+    if (rawXml) {
+      scanForUnsafeTemplateTags(rawXml, errors);
+    }
+    return { templateId, valid: errors.length === 0, errors, warnings };
+  }
+
   const metadataFieldNames = new Set(metadata.fields.map((f) => f.name));
   const priorityFieldNames = new Set(metadata.priority_fields);
   const multiselectFieldNames = new Set(

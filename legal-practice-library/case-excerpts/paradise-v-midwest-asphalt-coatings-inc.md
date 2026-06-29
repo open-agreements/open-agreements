@@ -50,7 +50,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Notwithstanding any affirmative defense, a party requesting payment of contractual attorney fees must be the prevailing party.
 
-- supports: `court-modification`, `remedies`
+- supports: `court-narrowing`, `remedies`
 - source_cards: `mo-paradise-fees`, `paradise-prevailing-party`
 - cited_by: [Non-Compete Agreement Review Checklist — Missouri](../checklists/non-compete/us/missouri.md), [Non-Competes in Missouri](../non-compete/us/missouri.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1873853/paradise-v-midwest-asphalt-coatings-inc/#:~:text=Notwithstanding%20any%20affirmative%20defense%2C%20a,must%20be%20the%20prevailing%20party.>

@@ -7,7 +7,7 @@ description: >-
 citation: 'Wilbur-Ellis Co. v. Erikson, 103 F.4th 1352, 1357 (8th Cir. 2024).'
 resource: >-
   https://www.courtlistener.com/opinion/9511796/wilbur-ellis-company-v-kevin-erikson/
-timestamp: '2026-06-12'
+timestamp: '2026-06-26'
 document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/south-dakota'

@@ -39,7 +39,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > The trial court ruled that Paragraph 12(D) was a restraint of trade, void and unenforceable under § 9-08-06, N.D.C.C.
 
-- supports: `employee-noncompetes`, `parties-and-cover-term-identification`
+- supports: `employee-non-compete-enforceability`, `parties-and-cover-term-identification`
 - source_cards: `nd-werlinger-agent-void-cover`, `werlinger-employee-noncompete-void`
 - cited_by: [Non-Compete Agreement Review Checklist — North Dakota](../checklists/non-compete/us/north-dakota.md), [Non-Competes in North Dakota](../non-compete/us/north-dakota.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1282430/werlinger-v-mutual-service-casualty-insurance-co/#:~:text=The%20trial%20court%20ruled%20that,unenforceable%20under%20%C2%A7%209%2D08%2D06%2C%20N.D.C.C.>

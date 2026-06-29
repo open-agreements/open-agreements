@@ -30,7 +30,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > It is the law's function to maintain a reasonable balance in this area.
 
-- supports: `employee-noncompetes`, `mississippi-statutory-gates`
+- supports: `employee-non-compete-enforceability`, `mississippi-statutory-gates`
 - source_cards: `donahoe-reasonable-balance`, `ms-donahoe-gate`
 - cited_by: [Non-Compete Agreement Review Checklist — Mississippi](../checklists/non-compete/us/mississippi.md), [Non-Competes in Mississippi](../non-compete/us/mississippi.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1748183/donahoe-v-tatum-dba-personnel-serv/#:~:text=It%20is%20the%20law's%20function,reasonable%20balance%20in%20this%20area.>

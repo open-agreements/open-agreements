@@ -36,7 +36,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > We have long recognized that non-competition agreements are contrary to public policy and will be enforced only to the extent that they are reasonable and sweep no wider than necessary to protect the business interests in issue.
 
-- supports: `employee-noncompetes`, `maine-statutory-gates`, `restrictive-covenants-each-independently-includable`
-- source_cards: `lord-no-wider-cov`, `lord-no-wider-gate`, `lord-no-wider-than-necessary`
+- supports: `employee-non-compete-enforceability`, `maine-statutory-gates`, `restrictive-covenants-each-independently-includable`, `sale-of-business`
+- source_cards: `lord-no-wider-cov`, `lord-no-wider-gate`, `lord-no-wider-than-necessary`, `me-sob-lord`
 - cited_by: [Non-Compete Agreement Review Checklist — Maine](../checklists/non-compete/us/maine.md), [Non-Competes in Maine](../non-compete/us/maine.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2367150/lord-v-lord/#:~:text=We%20have%20long%20recognized%20that,the%20business%20interests%20in%20issue.>

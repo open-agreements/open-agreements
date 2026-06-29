@@ -39,7 +39,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > However, even if the provision is too broad, the district court had within its power the ability to limit or modify the non-compete provision through blue-penciling.
 
-- supports: `court-modification`, `severability-and-reformation`
+- supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `blaskiewicz-blue-pencil-statute`, `idaho-blaskiewicz-modify-sev`
 - cited_by: [Non-Compete Agreement Review Checklist — Idaho](../checklists/non-compete/us/idaho.md), [Non-Competes in Idaho](../non-compete/us/idaho.md)
 - link_to_source: <https://www.courtlistener.com/opinion/8436739/blaskiewicz-v-spine-institute-of-idaho/#:~:text=However%2C%20even%20if%20the%20provision,the%20non%2Dcompete%20provision%20through%20blue%2Dpenciling.>
@@ -48,7 +48,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > While Intermountain Eye and Freiburger remain instructive, the district court’s failure to address the relevant statutes constitutes clear error.
 
-- supports: `employee-noncompetes`, `restrictive-covenants-each-independently-includable`
+- supports: `employee-non-compete-enforceability`, `restrictive-covenants-each-independently-includable`
 - source_cards: `blaskiewicz-statute-first`, `idaho-blaskiewicz-statute-first-cov`
 - cited_by: [Non-Compete Agreement Review Checklist — Idaho](../checklists/non-compete/us/idaho.md), [Non-Competes in Idaho](../non-compete/us/idaho.md)
 - link_to_source: <https://www.courtlistener.com/opinion/8436739/blaskiewicz-v-spine-institute-of-idaho/#:~:text=While%20Intermountain%20Eye%20and%20Freiburger,relevant%20statutes%20constitutes%20clear%20error.>

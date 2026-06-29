@@ -2,7 +2,7 @@
 jurisdiction: "Montana"
 slug: montana
 countryCode: US
-snapshotAsOf: "2026-06-20"
+snapshotAsOf: "2026-06-29"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/montana
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/montana · **Snapshot as of:** 2026-06-20 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/montana · **Snapshot as of:** 2026-06-29 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Montana[^about]
 
@@ -35,7 +35,7 @@ Montana starts from § 28-2-703's restraint-of-trade rule, but the Dobbins parti
 | **Restriction extended during a breach?** | Not addressed |
 | **Maximum length set by law** | No general statutory limit |
 
-## Are employee non-compete agreements enforceable in Montana? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Montana? {#employee-non-compete-enforceability}
 
 **Short answer.** Sometimes. Montana Code § 28-2-703 makes restraints on a lawful profession, trade, or business void, but Montana is not a California-style total-ban state because *Dobbins* preserves reasonable partial restraints [^montana-restraint-baseline][^dobbins-partial-restraint].
 

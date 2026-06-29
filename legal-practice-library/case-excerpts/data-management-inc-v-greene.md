@@ -29,8 +29,8 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Among the factors properly to be considered are: “[t]he absence or presence of limitations as to time and space, * * * whether the employee represents the sole contact with the customer; whether the employee is possessed with confidential information or trade secrets; whether the covenant seeks to eliminate competition which would be unfair to the employer or merely seeks to eliminate ordinary competition; whether the covenant seeks to stifle the inherent skill and experience of the employee; whether the benefit to the employer is disproportional to the detriment to the employee; whether the covenant operates as a bar to the employee’s sole means of support; whether the employee’s talent which the employer seeks to suppress was actually developed during the period of employment; and whether the forbidden employment is merely incidental to the main employment.”
 
-- supports: `alaska-statutory-gates`, `alternatives`, `definitions`, `employee-noncompetes`, `parties-and-cover-term-identification`, `reasonableness-test`, `restrictive-covenants-each-independently-includable`, `tolling-during-breach`, `writing-requirement`
-- source_cards: `ak-data-management-factors-cov`, `ak-data-management-factors-cover`, `ak-data-management-factors-defs`, `ak-data-management-factors-gate`, `ak-data-management-factors-tolling`, `data-management-reasonableness-factors`, `data-management-reasonableness-factors-alternatives`, `data-management-reasonableness-factors-reasonable`, `data-management-reasonableness-factors-writing`
+- supports: `alaska-statutory-gates`, `alternatives`, `definitions`, `employee-non-compete-enforceability`, `employee-non-solicitation`, `parties-and-cover-term-identification`, `reasonableness-test`, `restrictive-covenants-each-independently-includable`, `tolling-during-breach`, `writing-requirement`
+- source_cards: `ak-data-management-factors-cov`, `ak-data-management-factors-cover`, `ak-data-management-factors-defs`, `ak-data-management-factors-gate`, `ak-data-management-factors-tolling`, `ak-ens-factors`, `data-management-reasonableness-factors`, `data-management-reasonableness-factors-alternatives`, `data-management-reasonableness-factors-reasonable`, `data-management-reasonableness-factors-writing`
 - cited_by: [Non-Compete Agreement Review Checklist — Alaska](../checklists/non-compete/us/alaska.md), [Non-Competes in Alaska](../non-compete/us/alaska.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/#:~:text=Among%20the%20factors%20properly%20to,incidental%20to%20the%20main%20employment.%E2%80%9D>
 
@@ -47,7 +47,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > The trial court must determine whether an employer has overreached willfully and, if so, the court should refuse to alter the covenant.
 
-- supports: `court-narrowing`, `severability-and-reformation`
-- source_cards: `ak-data-management-overreach-sev`, `data-management-overreach-good-faith`
+- supports: `court-narrowing`, `employee-non-solicitation`, `severability-and-reformation`
+- source_cards: `ak-data-management-overreach-sev`, `ak-ens-goodfaith`, `data-management-overreach-good-faith`
 - cited_by: [Non-Compete Agreement Review Checklist — Alaska](../checklists/non-compete/us/alaska.md), [Non-Competes in Alaska](../non-compete/us/alaska.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1350283/data-management-inc-v-greene/#:~:text=The%20trial%20court%20must%20determine,refuse%20to%20alter%20the%20covenant.>

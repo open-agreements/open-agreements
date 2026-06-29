@@ -16,7 +16,7 @@ tags:
 
 Colorado makes most employee non-competes and customer non-solicits void by statute, allowing them only for highly compensated workers protecting trade secrets and banning them outright for health-care providers.
 
-## Are employee non-compete agreements enforceable in Colorado? {#enforceability}
+## Are employee non-compete agreements enforceable in Colorado? {#employee-non-compete-enforceability}
 
 **Short answer.** Usually no. For covenants entered into or renewed on or after August 10, 2022, Colorado law makes any covenant not to compete that restricts a person's right to earn compensation for labor void unless it fits a narrow statutory exception [^crs-void-rule][^crs-training-exception].
 
@@ -145,7 +145,7 @@ In *23 LTD v. Herman*, the court explained that it is not a court's function to 
 >
 > *Phoenix* predates the 2022 overhaul and the attorney general's active scrutiny of no-poach practices. Treat an overbroad employee no-hire clause as a litigation risk if it functions as a de facto restraint on worker mobility, and keep it limited to active solicitation tied to a legitimate interest [^phoenix-employee-nonsolicit][^crs-customer-nonsolicit-silence].
 
-## Does a Colorado non-compete toll or extend during breach or litigation? {#tolling-extension}
+## Does a Colorado non-compete toll or extend during breach or litigation? {#extended-for-breach}
 
 **Short answer.** This is an open Colorado question, and the statute's structure cuts against automatic extension. No Colorado statute or appellate decision endorses automatically tolling or extending the restricted period during a breach or while litigation is pending [^phoenix-no-extension][^crs-enforced-time].
 
