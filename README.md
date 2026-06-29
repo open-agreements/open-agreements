@@ -188,9 +188,9 @@ Side-by-side comparison tables across jurisdictions. The web pages also publish 
 
 | Survey | Browse | Live |
 |--------|--------|------|
-| International Non-Compete Survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/non-compete/international.md) | [Web](https://openagreements.org/surveys/non-compete/international) |
 | U.S. 50-State Non-Compete Survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/non-compete/us.md) | [Web](https://openagreements.org/surveys/non-compete/us) |
 | U.S. State Consumer Privacy Survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/privacy/us.md) | [Web](https://openagreements.org/surveys/privacy/us) |
+| Worldwide Non-Compete Survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/non-compete/worldwide.md) | [Web](https://openagreements.org/surveys/non-compete/worldwide) |
 
 ## For AI Agents
 
