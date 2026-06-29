@@ -2,7 +2,7 @@
 jurisdiction: "Utah"
 slug: utah
 countryCode: US
-snapshotAsOf: "2026-06-20"
+snapshotAsOf: "2026-06-28"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/utah
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/utah · **Snapshot as of:** 2026-06-20 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/utah · **Snapshot as of:** 2026-06-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Utah[^about]
 
@@ -35,7 +35,7 @@ Utah caps employee non-competes at one year under the Post-Employment Restrictio
 | **Restriction extended during a breach?** | No safe extension — one-year cap runs from separation; equitable tolling within the cap open |
 | **Maximum length set by law** | 1 year (a longer covenant is void) |
 
-## Are employee non-compete agreements enforceable in Utah? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Utah? {#employee-non-compete-enforceability}
 
 **Short answer.** Yes, but on a short leash. Utah enforces employee non-competes when they satisfy both the statute and the common law, yet the Post-Employment Restrictions Act caps any post-employment non-compete entered on or after May 10, 2016 at one year and voids anything longer [^upera-one-year].
 
@@ -48,7 +48,7 @@ Because the statute supplements rather than replaces the common law, a covenant 
 >
 > Do not treat compliance with the one-year cap as the whole analysis. A Utah non-compete must clear the statutory ceiling *and* the common-law reasonableness test; satisfying one does not cure a defect in the other [^upera-one-year][^england-rose-park-test].
 
-## How long can a Utah non-compete last before it is void? {#duration-one-year}
+## How long can a Utah non-compete last before it is void? {#duration-limits}
 
 **Short answer.** One year. For non-competes entered on or after May 10, 2016, an employer and employee may not agree to a post-employment restriction longer than one year from separation, and a covenant that violates the cap is void [^dur-one-year][^dur-void].
 
@@ -153,7 +153,7 @@ For overbreadth in scope or activity, Utah's common law has historically been re
 >
 > Do not rely on a savings or reformation clause to backstop an overbroad Utah non-compete. The statutory *void* rule for over-length covenants and the common-law preference for carefully drawn restraints both cut against judicial rewriting [^narrow-void][^narrow-careful-drafting].
 
-## Does the restricted period toll or extend during breach or litigation in Utah? {#tolling-extension}
+## Does the restricted period toll or extend during breach or litigation in Utah? {#extended-for-breach}
 
 **Short answer.** Utah has no statute or staged case squarely deciding judicial tolling, but the structure of the Act cuts hard against an extension clause. Because a non-compete may not exceed one year and a longer one is void, a clause that lengthens the restricted period during breach or litigation risks pushing the covenant past the statutory ceiling and voiding it [^toll-one-year][^toll-void].
 

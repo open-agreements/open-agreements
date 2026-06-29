@@ -2,7 +2,7 @@
 jurisdiction: "Hawaii"
 slug: hawaii
 countryCode: US
-snapshotAsOf: "2026-06-20"
+snapshotAsOf: "2026-06-28"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/hawaii
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/hawaii · **Snapshot as of:** 2026-06-20 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/hawaii · **Snapshot as of:** 2026-06-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Hawaii[^about]
 
@@ -35,7 +35,7 @@ Hawaii treats non-competes through HRS chapter 480's antitrust framework, includ
 | **Restriction extended during a breach?** | Open question |
 | **Maximum length set by law** | No statutory limit (reasonable period required) |
 
-## Are employee non-compete agreements enforceable in Hawaii? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Hawaii? {#employee-non-compete-enforceability}
 
 **Short answer.** Sometimes, but Hawaii starts from an antitrust rule. HRS 480-4(a) makes every in-state restraint of trade illegal, and HRS 480-4(c) allows only restrictive covenants that are ancillary to a legitimate purpose and do not substantially lessen competition or tend to create a monopoly [^employee-hrs-480-4-baseline][^employee-hrs-480-4-ancillary].
 
@@ -121,7 +121,7 @@ The drafting point is to protect information rather than work. A confidentiality
 >
 > Do not make an NDA do non-compete work. Hawaii preserves trade-secret and contract remedies, but *Gagnon* rejected a confidentiality theory where the record did not show real protected information or a trade-secret violation [^alternatives-hrs-482b-8-contracts-preserved][^alternatives-gagnon-no-confidential-record].
 
-## Does a Hawaii non-compete period toll during breach or litigation? {#tolling}
+## Does a Hawaii non-compete period toll during breach or litigation? {#extended-for-breach}
 
 **Short answer.** Open question. The staged Hawaii authorities do not squarely resolve whether a covenant period pauses while the former employee is allegedly breaching or while enforcement litigation is pending, so a tolling clause should be analyzed as part of the effective duration of the restraint under HRS 480-4(c) and *Traeger* [^tolling-hrs-480-4-ancillary][^tolling-traeger-scope-factors].
 

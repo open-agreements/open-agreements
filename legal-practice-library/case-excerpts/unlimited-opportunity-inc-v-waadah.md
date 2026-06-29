@@ -31,7 +31,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > It is not the function of the courts to reform a covenant not to compete in order to make it enforceable.
 
-- supports: `franchise-reformation`, `nebraska-statutory-gates`, `restrictive-covenants-each-independently-includable`, `tolling-during-breach`, `tolling-extension`
+- supports: `extended-for-breach`, `franchise-reformation`, `nebraska-statutory-gates`, `restrictive-covenants-each-independently-includable`, `tolling-during-breach`
 - source_cards: `ne-waadah-no-reform-cov`, `ne-waadah-no-reform-toll`, `ne-waadah-noreform-gate`, `q11-waadah-no-reform`, `q8-waadah-no-general-reform`
 - cited_by: [Non-Compete Agreement Review Checklist — Nebraska](../checklists/non-compete/us/nebraska.md), [Non-Competes in Nebraska](../non-compete/us/nebraska.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2792825/unlimited-opportunity-v-waadah/#:~:text=It%20is%20not%20the%20function,order%20to%20make%20it%20enforceable.>

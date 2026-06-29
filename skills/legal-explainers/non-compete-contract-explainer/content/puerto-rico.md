@@ -2,7 +2,7 @@
 jurisdiction: "Puerto Rico"
 slug: puerto-rico
 countryCode: US
-snapshotAsOf: "2026-06-20"
+snapshotAsOf: "2026-06-28"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/puerto-rico
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/puerto-rico · **Snapshot as of:** 2026-06-20 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/puerto-rico · **Snapshot as of:** 2026-06-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Puerto Rico[^about]
 
@@ -35,7 +35,7 @@ Puerto Rico has no non-compete statute; post-employment covenants are enforceabl
 | **Restriction extended during a breach?** | Silent — risky if it pushes enforcement past the 12-month ceiling |
 | **Maximum length set by law** | 12 months (additional time excessive and unnecessary) |
 
-## Are employee non-compete agreements enforceable in Puerto Rico? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Puerto Rico? {#employee-non-compete-enforceability}
 
 **Short answer.** Sometimes. Puerto Rico has no statute that governs non-competes. As a civil-law jurisdiction, it enforces post-employment covenants only when they satisfy the strict three-part reasonableness test the Puerto Rico Supreme Court announced in *Arthur Young & Co. v. Vega III* [^ay-test].
 
@@ -101,7 +101,7 @@ This is a meaningful clarification of *Arthur Young*. The Court explained that i
 
 *Reyes Ramis* also confirms that the strict *Arthur Young* requirements are an employment-law doctrine. The Court held that a non-compete tied to a stock-redemption arrangement among owners did not have to conform fully to the strict conditions established in *Arthur Young* [^rr-stock]. Covenants ancillary to the sale of a business or an ownership exit are analyzed more flexibly than employer-employee restraints.
 
-## Does the restricted period toll or extend if the employee breaches? {#tolling}
+## Does the restricted period toll or extend if the employee breaches? {#extended-for-breach}
 
 **Short answer.** Puerto Rico primary law is silent. No Puerto Rico Supreme Court, Court of Appeals, federal district, or First Circuit decision squarely approves or rejects either a contractual extension-on-breach clause or a court-ordered equitable extension of a Puerto Rico non-compete. The safest assumption is that a court will hold the employer to the twelve-month ceiling [^ay-duration-2].
 

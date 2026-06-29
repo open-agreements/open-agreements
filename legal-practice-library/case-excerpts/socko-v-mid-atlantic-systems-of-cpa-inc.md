@@ -30,7 +30,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Consistent with this legal background, currently in Pennsylvania, restrictive covenants are enforceable only if they are: (1) ancillary to an employment relationship between an employee and an employer; (2) supported by adequate consideration; (3) the restrictions are reasonably limited in duration and geographic extent; and (4) the restrictions are designed to protect the legitimate interests of the employer.
 
-- supports: `employee-noncompetes`, `pennsylvania-statutory-gates`, `restrictive-covenants-each-independently-includable`
+- supports: `employee-non-compete-enforceability`, `pennsylvania-statutory-gates`, `restrictive-covenants-each-independently-includable`
 - source_cards: `pa-socko-four-part-gate`, `pa-socko-test-covs`, `socko-four-part-test`
 - cited_by: [Non-Compete Agreement Review Checklist — Pennsylvania](../checklists/non-compete/us/pennsylvania.md), [Non-Competes in Pennsylvania](../non-compete/us/pennsylvania.md)
 - link_to_source: <https://www.courtlistener.com/opinion/3155889/socko-d-v-mid-atantic-systems-of-cpa-inc-aplt/#:~:text=Consistent%20with%20this%20legal%20background%2C,legitimate%20interests%20of%20the%20employer.>

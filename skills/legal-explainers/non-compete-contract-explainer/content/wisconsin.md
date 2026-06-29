@@ -2,7 +2,7 @@
 jurisdiction: "Wisconsin"
 slug: wisconsin
 countryCode: US
-snapshotAsOf: "2026-06-20"
+snapshotAsOf: "2026-06-28"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/wisconsin
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/wisconsin · **Snapshot as of:** 2026-06-20 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/wisconsin · **Snapshot as of:** 2026-06-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Wisconsin[^about]
 
@@ -35,7 +35,7 @@ A question-by-question summary of Wisconsin non-compete law under Wis. Stat. § 
 | **Restriction extended during a breach?** | No — an extension-during-breach clause voids the entire covenant (H&R Block v. Swenson) |
 | **Maximum length set by law** | No statutory limit |
 
-## Are employee non-compete agreements enforceable in Wisconsin? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Wisconsin? {#employee-non-compete-enforceability}
 
 **Short answer.** Yes, but only if they are reasonably necessary to protect a legitimate employer interest. Wisconsin is not a ban state, yet Wis. Stat. § 103.465 makes a restrictive covenant lawful and enforceable *only if* the restrictions imposed are reasonably necessary for the protection of the employer, and the courts apply a demanding five-factor test that an overbroad covenant fails [^q1-103465-core][^q1-star-direct-test].
 
@@ -49,7 +49,7 @@ The Wisconsin Supreme Court has distilled that standard into five prerequisites,
 
 The practical consequence, explored in the questions below, is that drafting precision matters more in Wisconsin than in most states: a covenant that reaches even slightly too far is not narrowed by the court — it is struck down in full.
 
-## Can a Wisconsin court blue-pencil or narrow an overbroad non-compete? {#blue-pencil}
+## Can a Wisconsin court blue-pencil or narrow an overbroad non-compete? {#court-narrowing}
 
 **Short answer.** No. Wis. Stat. § 103.465 declares that a covenant imposing an unreasonable restraint is void and unenforceable *even as to any part* that would have been a reasonable restraint, so Wisconsin courts do not rewrite, narrow, or blue-pencil an overbroad covenant. The Court of Appeals has confirmed that a contractual modification or savings clause cannot rescue a covenant that violates the statute [^q2-103465-void][^q2-diamond-modification].
 
@@ -113,7 +113,7 @@ The court paired that holding with a caution against bad faith: an employer that
 >
 > Even though continued at-will employment is technically sufficient consideration under *Runzheimer*, pairing a mid-employment covenant with new value (a raise, bonus, or promotion) is the safer course, because the court conditioned its holding on genuine forbearance rather than a sign-then-fire maneuver [^q5-runzheimer].
 
-## Can a Wisconsin non-compete be tolled or extended during a breach? {#tolling-during-breach}
+## Can a Wisconsin non-compete be tolled or extended during a breach? {#extended-for-breach}
 
 **Short answer.** No — and trying voids the covenant. In *H&R Block Eastern Enterprises, Inc. v. Swenson*, the Court of Appeals held that a clause extending the restricted period by any time the employee was in violation made the duration indefinite and unreasonable, so the entire clause was void under § 103.465 even if it would otherwise have been reasonable. A tolling or extension-during-breach clause is a void-trigger in Wisconsin, not an enforcement aid [^q6-hrblock-extension][^q6-hrblock-void].
 

@@ -2,7 +2,7 @@
 jurisdiction: "New Jersey"
 slug: new-jersey
 countryCode: US
-snapshotAsOf: "2026-06-20"
+snapshotAsOf: "2026-06-28"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/new-jersey
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/new-jersey · **Snapshot as of:** 2026-06-20 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/new-jersey · **Snapshot as of:** 2026-06-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in New Jersey[^about]
 
@@ -35,7 +35,7 @@ New Jersey enforces non-competes under the common-law Solari/Whitmyer reasonable
 | **Restriction extended during a breach?** | Yes — court may toll the restricted period during an actual breach (ADP v. Kusins) |
 | **Maximum length set by law** | No statutory limit |
 
-## Are employee non-compete agreements enforceable in New Jersey? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in New Jersey? {#employee-non-compete-enforceability}
 
 **Short answer.** Yes, when reasonable. New Jersey has no general non-compete statute for the ordinary workforce, so enforceability turns on the common-law *Solari/Whitmyer* test: a covenant is enforced only where it protects the employer's legitimate interests, imposes no undue hardship on the employee, and is not injurious to the public [^solari-given-effect][^solari-three-prong].
 
@@ -76,7 +76,7 @@ The New Jersey Trade Secrets Act, codified at N.J.S.A. 56:15-1 and following, ru
 >
 > Do not use a New Jersey non-compete to block competition disconnected from a protectable interest. Tie the restraint to specific trade secrets, confidential information, or customer relationships, and keep trade-secret remedies in a separate confidentiality and Trade Secrets Act strategy [^ingersoll-protectable-interests][^njtsa-trade-secret-definition].
 
-## What duration and geographic scope are reasonable for a New Jersey non-compete? {#duration-geography}
+## What duration and geographic scope are reasonable for a New Jersey non-compete? {#duration-limits}
 
 **Short answer.** There is no statutory cap. New Jersey courts test duration and territory as part of the undue-hardship and public-interest analysis, and durations in the one-to-two-year range are commonly upheld when the geography is tailored to where the employee actually worked [^more-two-year][^more-geography-reduced].
 
@@ -115,7 +115,7 @@ A narrowly drawn non-solicitation clause — limited to customers the employee a
 >
 > Do not draft a customer non-solicit that reaches every client regardless of the employee's contact with them. Limit it to customers the employee actually served or learned about, because New Jersey courts blue-pencil overbroad non-solicitation clauses and may narrow yours for you [^kusins-blue-pencil-definition].
 
-## Does a New Jersey non-compete toll or extend during breach or litigation? {#tolling-extension}
+## Does a New Jersey non-compete toll or extend during breach or litigation? {#extended-for-breach}
 
 **Short answer.** It can. In *ADP, LLC v. Kusins*, the Appellate Division enforced contractual tolling and remanded for the trial court to toll the restricted period during the time the former employees were violating their covenants [^kusins-tolling].
 

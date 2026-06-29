@@ -30,7 +30,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Like many other courts, this Court has adopted a position with respect to enforcement of noncompetition agreements similar to that set forth in § 188(1) of the Restatement (Second) of Contracts (1981) , which provides that a restrictive covenant “is unreasonably in restraint of trade if (a) the restraint is greater than is needed to protect the promisee’s legitimate interest, or (b) the promisee’s need is outweighed by the hardship to the promisor and the likely injury to the public.”
 
-- supports: `alternatives`, `confidentiality-and-trade-secret-treatment`, `definitions`, `employee-noncompetes`, `restrictive-covenants-each-independently-includable`, `vermont-statutory-gates`
+- supports: `alternatives`, `confidentiality-and-trade-secret-treatment`, `definitions`, `employee-non-compete-enforceability`, `restrictive-covenants-each-independently-includable`, `vermont-statutory-gates`
 - source_cards: `alternatives-barnes-restatement-framing`, `barnes-reasonableness-public-policy`, `barnes-restatement-confidentiality`, `barnes-restatement-covenants`, `barnes-restatement-defs`, `barnes-restatement-gate`
 - cited_by: [Non-Compete Agreement Review Checklist — Vermont](../checklists/non-compete/us/vermont.md), [Non-Competes in Vermont](../non-compete/us/vermont.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2264199/systems-and-software-inc-v-barnes/#:~:text=Like%20many%20other%20courts%2C%20this,likely%20injury%20to%20the%20public.%E2%80%9D>
@@ -57,7 +57,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > We have stated that “we will proceed with caution” when asked to enforce covenants against competitive employment because such restraints run counter to public policy favoring the right of individuals to engage in the commercial activity of their choice.
 
-- supports: `employee-noncompetes`, `restrictive-covenants-each-independently-includable`
+- supports: `employee-non-compete-enforceability`, `restrictive-covenants-each-independently-includable`
 - source_cards: `barnes-proceed-with-caution`, `barnes-restatement-framing`
 - cited_by: [Non-Compete Agreement Review Checklist — Vermont](../checklists/non-compete/us/vermont.md), [Non-Competes in Vermont](../non-compete/us/vermont.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2264199/systems-and-software-inc-v-barnes/#:~:text=We%20have%20stated%20that%20%E2%80%9Cwe,commercial%20activity%20of%20their%20choice.>

@@ -27,7 +27,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 > El término de no competencia no debe exceder de doce meses, entendiéndose que cualquier tiempo adicional es excesivo e innecesario para proteger adecuadamente al patrono.
 
-- supports: `reasonableness-requirements`, `tolling`
+- supports: `extended-for-breach`, `reasonableness-requirements`
 - source_cards: `ay-duration`, `ay-duration-2`
 - cited_by: [Non-Competes in Puerto Rico](../non-compete/us/puerto-rico.md)
 - link_to_source: <https://aldia.microjuris.com/wp-content/uploads/2022/09/136DPR157.pdf>
@@ -45,7 +45,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 > Para ser razonable, un acuerdo de no competir debe reunir los siguientes requisitos: (1) debe ser necesario para proteger un interés legítimo del patrono, (2) no debe imponer al empleado una carga demasiado onerosa, (3) y no debe afectar demasiado al público.
 
-- supports: `employee-noncompetes`
+- supports: `employee-non-compete-enforceability`
 - source_cards: `ay-test`
 - cited_by: [Non-Competes in Puerto Rico](../non-compete/us/puerto-rico.md)
 - link_to_source: <https://aldia.microjuris.com/wp-content/uploads/2022/09/136DPR157.pdf>

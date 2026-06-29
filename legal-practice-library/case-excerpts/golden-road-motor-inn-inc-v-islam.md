@@ -27,7 +27,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 > Under Nevada law, such an unreasonable provision renders the noncompete agreement wholly unenforceable.
 
-- supports: `court-revision`
+- supports: `court-narrowing`
 - source_cards: `q3-golden-road-old-rule`
 - cited_by: [Non-Competes in Nevada](../non-compete/us/nevada.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4240728/golden-rd-motor-inn-v-islam/#:~:text=Under%20Nevada%20law%2C%20such%20an,the%20noncompete%20agreement%20wholly%20unenforceable.>

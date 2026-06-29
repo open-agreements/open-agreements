@@ -48,7 +48,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Non-competition covenants are ordinarily enforceable as long as a court deems them reasonable.
 
-- supports: `employee-noncompetes`, `new-mexico-statutory-gates`, `restrictive-covenants-each-independently-includable`
+- supports: `employee-non-compete-enforceability`, `new-mexico-statutory-gates`, `restrictive-covenants-each-independently-includable`
 - source_cards: `mcgonigle-ordinary-covenants`, `mcgonigle-ordinary-enforceability`, `mcgonigle-ordinary-gate`
 - cited_by: [Non-Compete Agreement Review Checklist — New Mexico](../checklists/non-compete/us/new-mexico.md), [Non-Competes in New Mexico](../non-compete/us/new-mexico.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1291299/insure-new-mexico-llc-v-mcgonigle/#:~:text=Non%2Dcompetition%20covenants%20are%20ordinarily%20enforceable,a%20court%20deems%20them%20reasonable.>

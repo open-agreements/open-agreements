@@ -16,7 +16,7 @@ tags:
 
 Arkansas non-compete law under Ark. Code Ann. § 4-75-101, enacted by Act 921 of 2015, includes mandatory reformation, continued-employment consideration, a two-year presumption, a physician ban, and judicial tolling risk.
 
-## Are employee non-compete agreements enforceable in Arkansas? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Arkansas? {#employee-non-compete-enforceability}
 
 **Short answer.** Yes, if the covenant is ancillary to employment, protects a statutory business interest, and is no broader in time and scope than necessary to defend that interest [^q1-aca-enforceable].
 
@@ -52,7 +52,7 @@ That is a major statutory shift from the old common-law risk. In *Bendinger*, th
 
 The current drafting point is practical rather than formalistic. If there is no geography, the covenant needs another limiting mechanism, such as customer scope, activity scope, or business-scope limits tied to the employer's protectable interest [^q3-aca-no-geography][^q3-aca-factors].
 
-## How long can an Arkansas non-compete last? {#duration}
+## How long can an Arkansas non-compete last? {#duration-limits}
 
 **Short answer.** Two years is presumptively reasonable under the statute, unless the particular facts clearly show that two years is unreasonable compared with the employer's protectable interest [^q4-aca-two-years].
 
@@ -65,7 +65,7 @@ The presumption is not a safe harbor for every two-year clause. The statute ties
 >
 > Avoid treating two years as automatic. The presumption can be overcome by case-specific facts, especially if the protected interest is narrow or the work restriction is broad [^q4-aca-two-years].
 
-## Will an Arkansas court reform an overbroad non-compete? {#court-reformation}
+## Will an Arkansas court reform an overbroad non-compete? {#court-narrowing}
 
 **Short answer.** Yes, for a covered employment non-compete under § 4-75-101. If the restrictions are unreasonable, the court must reform the covenant as needed and enforce it under the reformed terms [^q5-aca-reformation].
 
@@ -103,7 +103,7 @@ Older physician cases should be framed as pre-2025 public-policy and common-law 
 >
 > Do not generalize the physician void rule to every licensed professional. The statute voids covered physician practice restrictions, while separately saying § 4-75-101 does not apply to people holding a professional license under Arkansas Code Title 17, Subtitle 3, except as provided in subsection k [^q7-aca-physician-void][^q7-aca-title-17].
 
-## Does an Arkansas non-compete period toll or extend during breach or litigation? {#tolling-extension}
+## Does an Arkansas non-compete period toll or extend during breach or litigation? {#extended-for-breach}
 
 **Short answer.** Sometimes by equitable injunction, but drafted contractual tolling clauses remain an open question. *Bud Anderson* treated a prospective injunction beyond the nominal one-year period as legally possible, while § 4-75-101 does not expressly validate tolling-on-breach clauses [^q8-bud-prospective][^q8-aca-remedies].
 

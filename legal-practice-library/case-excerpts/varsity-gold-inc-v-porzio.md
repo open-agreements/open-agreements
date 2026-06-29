@@ -38,7 +38,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > The court explained that, while Arizona courts may "blue pencil" a restrictive covenant by eliminating grammatically sever-able, unreasonable terms, the court cannot add provisions or rewrite them.
 
-- supports: `court-narrowing`, `severability-and-reformation`, `tolling`, `tolling-during-breach`
+- supports: `court-narrowing`, `extended-for-breach`, `severability-and-reformation`, `tolling-during-breach`
 - source_cards: `q10-varsity-norewrite`, `q3-varsity-bluepencil`, `varsity-bluepencil-sev`, `varsity-bluepencil-tolling`
 - cited_by: [Non-Compete Agreement Review Checklist — Arizona](../checklists/non-compete/us/arizona.md), [Non-Competes in Arizona](../non-compete/us/arizona.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2638678/varsity-gold-inc-v-porzio/#:~:text=The%20court%20explained%20that%2C%20while,add%20provisions%20or%20rewrite%20them.>

@@ -2,7 +2,7 @@
 jurisdiction: "Philippines"
 slug: ph
 countryCode: PH
-snapshotAsOf: "2026-06-20"
+snapshotAsOf: "2026-06-28"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/ph
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/ph · **Snapshot as of:** 2026-06-20 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/ph · **Snapshot as of:** 2026-06-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in the Philippines[^about]
 
@@ -35,7 +35,7 @@ The Philippines has no non-compete statute; a post-employment restraint is enfor
 | **Restriction extended during a breach?** | Not addressed |
 | **Maximum length set by law** | No statutory limit; one- and two-year restraints have been upheld when otherwise reasonable |
 
-## Are non-competes enforceable in the Philippines? {#employee-noncompetes}
+## Are non-competes enforceable in the Philippines? {#employee-non-compete-enforceability}
 
 **Short answer.** Yes, if they are reasonable. The Philippines has no statute that governs non-competes, and it is not a per se ban jurisdiction. A post-employment non-compete or *non-involvement* clause is enforced under the Civil Code's freedom-to-contract principle — provided the stipulation is not contrary to law, morals, good customs, public order, or public policy [^civilcode-1306]. Within that limit a restraint is valid as long as it carries reasonable limitations as to time, trade, and place [^tiu-time-trade-place].
 
@@ -55,7 +55,7 @@ The five factors are not a checklist with numeric thresholds; they are a structu
 
 Because reasonableness turns on the facts, it is generally not a question a court can resolve on the pleadings. In *Rivera* itself the Supreme Court set aside a summary judgment, holding that the trial court had foreclosed the evidence needed to decide whether the covenant was reasonable [^rivera-summary-judgment].
 
-## How long and how wide can a Philippine non-compete be? {#duration-geography}
+## How long and how wide can a Philippine non-compete be? {#duration-limits}
 
 **Short answer.** There is no statutory limit, but the durations the Supreme Court has actually upheld are short. In *Tiu*, a two-year non-involvement clause confined to the employer's pre-need industry was held reasonable [^tiu-two-year]. Geography matters too: the Court has said a territorial limitation is necessary so the employee knows what counts as a violation and so the restraint tracks where the employer actually does business [^rivera-territorial].
 
@@ -132,7 +132,7 @@ Garden leave operates while the employment relationship still exists, so it does
 
 "There is no prohibition under our labor laws against a garden leave clause in an employment contract."[^mejila-garden-leave]
 
-## Does a Philippine non-compete pause or extend if the employee breaches? {#tolling}
+## Does a Philippine non-compete pause or extend if the employee breaches? {#extended-for-breach}
 
 **Short answer.** The Supreme Court has not addressed it. No Philippine decision holds that the restraint period tolls — pauses and then resumes — while a former employee is in breach or while litigation runs, so a clause that purports to extend the covenant by the length of any breach is untested. An employer should treat the stated period as the maximum and not assume the clock stops while the employee competes.
 

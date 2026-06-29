@@ -39,7 +39,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 > restrictive clauses of the agreement are void and unenforceable as against public policy on the ground that they are unreasonable restraint on competition.
 
-- supports: `duration-geography-scope`, `overbroad-narrowing`
+- supports: `court-narrowing`, `duration-limits`
 - source_cards: `dixon-void`, `q6-dixon`
 - cited_by: [Non-Competes in the U.S. Virgin Islands](../non-compete/us/virgin-islands.md)
 - link_to_source: <https://cdnsm5-hosted.civiclive.com/UserFiles/Servers/Server_12810747/File/Opinions/Archive/VI%20Diving%20Sch%20v.%20Dixon%20%28IAM%29.pdf>

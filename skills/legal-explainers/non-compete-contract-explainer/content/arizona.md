@@ -2,7 +2,7 @@
 jurisdiction: "Arizona"
 slug: arizona
 countryCode: US
-snapshotAsOf: "2026-06-20"
+snapshotAsOf: "2026-06-28"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/arizona
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/arizona · **Snapshot as of:** 2026-06-20 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/arizona · **Snapshot as of:** 2026-06-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Arizona[^about]
 
@@ -35,7 +35,7 @@ A question-by-question summary of Arizona non-compete law, including the common-
 | **Restriction extended during a breach?** | Not addressed |
 | **Maximum length set by law** | No statutory limit |
 
-## Are employee non-compete agreements enforceable in Arizona? {#enforceability}
+## Are employee non-compete agreements enforceable in Arizona? {#employee-non-compete-enforceability}
 
 **Short answer.** Sometimes. Arizona has no general statute banning or governing employee non-competes, so the question is decided under common law: a covenant not to compete is enforceable only if it is reasonable. Arizona courts treat these restraints as disfavored[^q1-amex-disfavored] and will refuse to enforce one that sweeps further than the employer's legitimate interest requires [^q1-farber-reasonableness].
 
@@ -169,7 +169,7 @@ More latitude is not a free pass. In *Berkadia Real Estate Advisors LLC v. Wadlu
 >
 > Tie a sale-of-business covenant's geography, duration, and scope of restricted activity to the goodwill actually being transferred. In *Berkadia* a nationwide covenant binding a seller who had only ever worked in Tucson was struck as unreasonable, and Arizona's no-rewrite rule meant the court would not pare it back [^q9-berkadia-unreasonable][^q9-gann-validity].
 
-## Does an Arizona non-compete period extend while the employee is in breach or litigation is pending? {#tolling}
+## Does an Arizona non-compete period extend while the employee is in breach or litigation is pending? {#extended-for-breach}
 
 **Short answer.** Arizona law does not squarely answer this. No Arizona appellate decision appears to have decided whether a non-compete period tolls — pauses and extends — while the former employee is violating the covenant or while enforcement litigation is pending. Because Arizona judges covenants for reasonableness and will not rewrite an overbroad term, a contractual extension-on-breach clause is best analyzed as part of the covenant's overall duration and drafted conservatively [^q10-farber-reasonableness][^q10-varsity-norewrite].
 

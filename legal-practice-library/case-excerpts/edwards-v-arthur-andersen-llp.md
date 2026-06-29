@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > We reject Andersen's contention that we should adopt a narrow-restraint exception to section 16600 and leave it to the Legislature, if it chooses, either to relax the statutory restrictions or adopt additional exceptions to the prohibition-against-restraint rule under section 16600.
 
-- supports: `customer-nonsolicitation`, `employee-noncompetes`, `restrictive-covenants-each-independently-includable`
+- supports: `customer-nonsolicitation`, `employee-non-compete-enforceability`, `restrictive-covenants-each-independently-includable`
 - source_cards: `ca-edwards-covenants`, `edwards-reject-narrow`, `q2-edwards-reject-narrow`
 - cited_by: [Non-Compete Agreement Review Checklist — California](../checklists/non-compete/us/california.md), [Non-Competes in California](../non-compete/us/california.md)
 - link_to_source: <https://www.courtlistener.com/opinion/5608069/edwards-v-arthur-andersen-llp/#:~:text=We%20reject%20Andersen's%20contention%20that,prohibition%2Dagainst%2Drestraint%20rule%20under%20section%2016600.>

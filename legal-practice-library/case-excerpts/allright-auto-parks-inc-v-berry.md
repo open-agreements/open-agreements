@@ -38,7 +38,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Based upon the foregoing, the ultimate question presented in the case sub judice appears to be whether or not the time and territorial limits of the noncompetition agreement are greater than is required to protect the business interest of the complainant.
 
-- supports: `definitions`, `reasonableness-test`, `time-limits`
+- supports: `definitions`, `duration-limits`, `reasonableness-test`
 - source_cards: `allright-territory`, `allright-ultimate-question`, `allright-ultimate-question-time`
 - cited_by: [Non-Compete Agreement Review Checklist — Tennessee](../checklists/non-compete/us/tennessee.md), [Non-Competes in Tennessee](../non-compete/us/tennessee.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1784276/allright-auto-parks-inc-v-berry/#:~:text=Based%20upon%20the%20foregoing%2C%20the,business%20interest%20of%20the%20complainant.>

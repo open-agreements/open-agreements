@@ -37,7 +37,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Given that the modification provision is contrary to WIS. STAT. § 103.465, it could have no effect here.
 
-- supports: `blue-pencil`, `severability-and-reformation`
+- supports: `court-narrowing`, `severability-and-reformation`
 - source_cards: `q2-diamond-modification`, `wi-diamond-modification-sev`
 - cited_by: [Non-Compete Agreement Review Checklist — Wisconsin](../checklists/non-compete/us/wisconsin.md), [Non-Competes in Wisconsin](../non-compete/us/wisconsin.md)
 - link_to_source: <https://www.courtlistener.com/opinion/10110688/diamond-assets-llc-v-carlos-godina/#:~:text=Given%20that%20the%20modification%20provision,could%20have%20no%20effect%20here.>

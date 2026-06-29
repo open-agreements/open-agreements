@@ -2,7 +2,7 @@
 jurisdiction: "North Carolina"
 slug: north-carolina
 countryCode: US
-snapshotAsOf: "2026-06-20"
+snapshotAsOf: "2026-06-28"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/north-carolina
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/north-carolina · **Snapshot as of:** 2026-06-20 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/north-carolina · **Snapshot as of:** 2026-06-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in North Carolina[^about]
 
@@ -35,7 +35,7 @@ A question-by-question summary of North Carolina non-compete law, including the 
 | **Restriction extended during a breach?** | Express tolling clauses enforced (federal courts); equitable tolling unsettled |
 | **Maximum length set by law** | No statutory limit |
 
-## Are employee non-compete agreements enforceable in North Carolina? {#enforceable}
+## Are employee non-compete agreements enforceable in North Carolina? {#employee-non-compete-enforceability}
 
 **Short answer.** Sometimes. North Carolina enforces an employee non-compete only when it satisfies a five-part common-law test: the covenant must be in writing, part of an employment contract, supported by valuable consideration, reasonable as to time and territory, and designed to protect a legitimate business interest [^q1-ridgway-five-factor]. Because a non-compete is a partial restraint of trade — a category North Carolina law disfavors — a covenant is upheld only when it is supported by consideration, reasonably necessary, and not against public policy [^q1-gs-75-1][^q1-kuykendall-partial-restraint].
 
@@ -73,7 +73,7 @@ Once some new consideration is present, courts do not second-guess its amount. A
 >
 > Do not rely on continued at-will employment as consideration for a covenant signed by a current employee. Pair the covenant with a raise, bonus, promotion, or other new benefit and document it, because a mid-employment covenant must rest on new consideration to be enforceable [^q2-empt-staffing-milner][^q2-daniel-consideration].
 
-## How do North Carolina courts judge a non-compete's time and territory? {#time-territory}
+## How do North Carolina courts judge a non-compete's time and territory? {#duration-limits}
 
 **Short answer.** Reasonableness is a question of law for the court, and the employer bears the burden of proving it [^q3-hartman-matter-of-law][^q3-hartman-burden]. A geographic restriction is reasonable only to the extent it protects the employer's interest in keeping its existing customers, so a territory broader than the area where the employee actually built customer relationships is vulnerable [^q3-hartman-territory].
 
@@ -113,7 +113,7 @@ The restriction must also be limited to the kind of work the employee performed.
 >
 > Define the restricted activities by reference to the employee's actual role, not every line of the company's business. A covenant that bars an employee from any capacity at a competitor, including work the employee never performed, reaches beyond a legitimate interest and risks non-enforcement [^q4-ridgway-duties].
 
-## Can a North Carolina court rewrite or blue-pencil an overbroad non-compete? {#blue-pencil}
+## Can a North Carolina court rewrite or blue-pencil an overbroad non-compete? {#court-narrowing}
 
 **Short answer.** No — and this is the trap that catches many employers. North Carolina follows the *strict* blue-pencil doctrine: a court may strike a distinctly separable, unreasonable part of a covenant, but it may not rewrite or revise the remaining terms to make them reasonable [^q5-beverage-strict][^q5-hartman-separable]. A reformation clause does not change this — parties cannot give a court a power the law withholds [^q5-beverage-contract].
 
@@ -155,7 +155,7 @@ A customer non-solicit also has to stay within the employer's actual customer re
 >
 > Match the operative verb to the conduct you want to reach. If you intend to bar hiring as well as solicitation, say so expressly, because a covenant limited to *solicit, recruit, or induce* requires active persuasion and will not reach a passive hire; and confine customer non-solicits to actual, not prospective, customers [^q6-crockett-definitions][^q6-hejl-prospective].
 
-## Does a North Carolina non-compete period toll or extend during a breach or litigation? {#tolling}
+## Does a North Carolina non-compete period toll or extend during a breach or litigation? {#extended-for-breach}
 
 **Short answer.** Only if the contract says so. North Carolina has no appellate decision holding that a court will *equitably* extend a restricted period to make up for time the former employee spent violating the covenant, so equitable tolling is unsettled. But federal courts applying North Carolina law have enforced *express* extension-on-breach clauses, stating that such tolling provisions appear to be valid under North Carolina law [^q7-philips-valid][^q7-southtech-tolls].
 

@@ -27,7 +27,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 > The facts showed that the AM group had more than made out a prima facie case that confidential information had been misused by Dr Goh and Michelle to give an unfair advantage to Quikglow.
 
-- supports: `tolling`
+- supports: `extended-for-breach`
 - source_cards: `springboard-goh`
 - cited_by: [Non-Competes in Singapore](../non-compete/sg.md)
 - link_to_source: <https://www.elitigation.sg/gd/s/2016_SGHC_275>

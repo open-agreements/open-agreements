@@ -1,18 +1,18 @@
 # Outside Counsel Update Log
 
 ## 2026-06-20
-* **Update**: fix(content): firm-only sourcing triage — counsel-transition topics (cluster 4/5, refs #950) (#959) ([673ea82](https://github.com/UseJunior/legal-explainer/commit/673ea82cb79aec3ad37abd8913bb7e4919ae0339))
+* **Update**: fix(content): firm-only sourcing triage — counsel-transition topics (cluster 4/5, refs #950) (#959) (673ea82)
 
 ## 2026-06-18
-* **Update**: fix(content): close citation/coverage gaps in AI-employment topic notes [#838] (#851) ([40a7367](https://github.com/UseJunior/legal-explainer/commit/40a7367cd8aacfc5c9f9dcef32876f49217dee86))
-* **Update**: feat(content-rule): pull quote must encompass the inline {% q %} it supports (#854) (#857) ([755c535](https://github.com/UseJunior/legal-explainer/commit/755c535cce07fc60d16ef7c74671b035515bd070))
+* **Update**: fix(content): close citation/coverage gaps in AI-employment topic notes [#838] (#851) (40a7367)
+* **Update**: feat(content-rule): pull quote must encompass the inline {% q %} it supports (#854) (#857) (755c535)
 
 ## 2026-06-12
-* **Update**: fix(privacy): future-effective frontmatter + table markers, enum corrections, NJ official source, verbatimQuote ellipsis ban (#698) ([bea6a5b](https://github.com/UseJunior/legal-explainer/commit/bea6a5bf59d1e2ff9c709d879d23dcd09f968a85))
+* **Update**: fix(privacy): future-effective frontmatter + table markers, enum corrections, NJ official source, verbatimQuote ellipsis ban (#698) (bea6a5b)
 
 ## 2026-06-05
-* **Update**: pullQuoteLocator override + hard deep-link gate (#464) (#468) ([7624c36](https://github.com/UseJunior/legal-explainer/commit/7624c366371c428ab9c04ed49c7f0e8ab150902a))
+* **Update**: pullQuoteLocator override + hard deep-link gate (#464) (#468) (7624c36)
 
 ## 2026-06-04
-* **Update**: fix(topics): public meta descriptions, question-title punctuation, AI-Readiness eyebrow (#444) ([d0dfdb9](https://github.com/UseJunior/legal-explainer/commit/d0dfdb9d9788ea2e1142b6d68cfb220b72c58ee3))
-* **Update**: Topic-article content type + 29 AI-era practice notes (#440) ([f259900](https://github.com/UseJunior/legal-explainer/commit/f259900898e2ad9bb5da5aef5f7ff401b07e472f))
+* **Update**: fix(topics): public meta descriptions, question-title punctuation, AI-Readiness eyebrow (#444) (d0dfdb9)
+* **Update**: Topic-article content type + 29 AI-era practice notes (#440) (f259900)

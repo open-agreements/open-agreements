@@ -39,7 +39,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > However, this position was modified and it became generally recognized that, while non-competition clauses were in partial restraint of trade, they would nevertheless be upheld if the covenants were supported by valuable consideration, reasonably necessary to protect the interests of the covenantee, and not against public policy.
 
-- supports: `enforceable`, `restrictive-covenants-each-independently-includable`
+- supports: `employee-non-compete-enforceability`, `restrictive-covenants-each-independently-includable`
 - source_cards: `nc-kuykendall-partial-restraint`, `q1-kuykendall-partial-restraint`
 - cited_by: [Non-Compete Agreement Review Checklist — North Carolina](../checklists/non-compete/us/north-carolina.md), [Non-Competes in North Carolina](../non-compete/us/north-carolina.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1294109/united-laboratories-inc-v-kuykendall/#:~:text=However%2C%20this%20position%20was%20modified,and%20not%20against%20public%20policy.>

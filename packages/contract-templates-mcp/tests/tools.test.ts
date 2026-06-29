@@ -338,24 +338,17 @@ describe('contract-templates-mcp tools', () => {
     expect(data.inline_base64).toBeUndefined();
   });
 
-  it.openspec('OA-DST-078')('fill_template fills the Wyoming restrictive covenant template from canonical markdown source', async () => {
+  it.openspec('OA-DST-078')('fill_template fills the stockholder consent template from canonical markdown source', async () => {
     const result = await callTool('fill_template', {
-      template: 'openagreements-restrictive-covenant-wyoming',
+      template: 'openagreements-stockholder-consent-safe',
       values: {
-        employer_name: 'Acme Corporation',
-        employee_name: 'Jane Doe',
-        employee_title: 'Vice President of Sales',
+        company_name: 'Acme Corporation',
         effective_date: '2026-04-28',
-        worker_category: 'Executive',
-        applicable_noncompete_exceptions: 'Executive or Management Personnel, Trade Secret Protection',
-        employee_nonsolicit_included: 'true',
-        customer_nonsolicit_included: 'true',
-        noncompete_included: 'true',
-        territory: 'the states where Employee sold Employer services',
-        competitive_business_definition: 'the design, sale, implementation, or support of enterprise workflow software',
-        specified_competitors: 'Contoso, Globex',
-        nondealing_included: 'true',
-        noninvestment_included: 'true',
+        purchase_amount: '500,000',
+        stockholders: [
+          { name: 'Jane Stockholder' },
+          { name: 'Jordan Stockholder' },
+        ],
       },
       return_mode: 'inline_base64',
     });
@@ -363,22 +356,24 @@ describe('contract-templates-mcp tools', () => {
     expect(result.isError).toBeUndefined();
     expect(payload.ok).toBe(true);
     const data = payload.data as Record<string, unknown>;
-    expect(data.template).toBe('openagreements-restrictive-covenant-wyoming');
+    expect(data.template).toBe('openagreements-stockholder-consent-safe');
     expect(data.return_mode).toBe('inline_base64');
     expect(typeof data.output_path).toBe('string');
     expect(typeof data.inline_base64).toBe('string');
     expect((data.inline_base64 as string).length).toBeGreaterThan(10_000);
   });
 
-  it.openspec('OA-DST-078')('fill_template fills the employee IP assignment template from canonical markdown source', async () => {
+  it.openspec('OA-DST-078')('fill_template fills the board consent template from canonical markdown source', async () => {
     const result = await callTool('fill_template', {
-      template: 'openagreements-employee-ip-inventions-assignment',
+      template: 'openagreements-board-consent-safe',
       values: {
         company_name: 'Acme Corporation',
-        employee_name: 'Jane Doe',
         effective_date: '2026-04-28',
-        confidential_information_definition: 'non-public information relating to Company business, products, roadmaps, customers, and trade secrets',
-        return_of_materials_timing: 'within 3 business days after termination of employment',
+        purchase_amount: '500,000',
+        board_members: [
+          { name: 'Jane Director' },
+          { name: 'Jordan Director' },
+        ],
       },
       return_mode: 'inline_base64',
     });
@@ -386,7 +381,7 @@ describe('contract-templates-mcp tools', () => {
     expect(result.isError).toBeUndefined();
     expect(payload.ok).toBe(true);
     const data = payload.data as Record<string, unknown>;
-    expect(data.template).toBe('openagreements-employee-ip-inventions-assignment');
+    expect(data.template).toBe('openagreements-board-consent-safe');
     expect(data.return_mode).toBe('inline_base64');
     expect(typeof data.output_path).toBe('string');
     expect(typeof data.inline_base64).toBe('string');
@@ -394,15 +389,13 @@ describe('contract-templates-mcp tools', () => {
 
     const documentXml = readDocxText(data.inline_base64 as string);
     expect(documentXml).toContain('Acme Corporation');
-    expect(documentXml).toContain('Jane Doe');
+    expect(documentXml).toContain('Jane Director');
     expect(documentXml).toContain('2026-04-28');
     expect(documentXml).not.toContain('{company_name}');
-    expect(documentXml).not.toContain('{employee_name}');
+    expect(documentXml).not.toContain('{member.name}');
     expect(documentXml).not.toContain('[[');
-    // Wyoming-alignment: the canonical Defined Terms clause must render with
-    // its heading and at least one defined term name from the clause.
-    expect(documentXml).toContain('Defined Terms');
-    expect(documentXml).toContain('Covered Inventions');
+    expect(documentXml).toContain('Approval of SAFE Financing');
+    expect(documentXml).toContain('General Authorizing Resolution');
   });
 
   it.openspec('OA-DST-024')('fill_template returns TEMPLATE_NOT_FOUND for unknown template', async () => {

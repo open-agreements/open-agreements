@@ -16,7 +16,7 @@ tags:
 
 Ohio enforces non-competes only when the restraint is reasonable under the Raimonde rule, and its courts may reform an overbroad covenant or decline to enforce it at all.
 
-## Are employee non-compete agreements enforceable in Ohio? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Ohio? {#employee-non-compete-enforceability}
 
 **Short answer.** Yes, sometimes. Ohio is a reasonableness state, not a general ban state. A non-compete is enforceable only to the extent it is reasonable — meaning it is no greater than needed to protect the employer, does not impose undue hardship on the employee, and is not injurious to the public [^raimonde-reasonableness-test].
 
@@ -55,7 +55,7 @@ The Ohio Uniform Trade Secrets Act, codified at R.C. 1333.61 through 1333.69, de
 >
 > Do not use an Ohio non-compete to block competition disconnected from a protectable interest. Tie the restraint to identified confidential information, trade secrets, or customer goodwill, and keep a separate confidentiality and trade-secret strategy under R.C. 1333.61 et seq. [^outsa-trade-secret-definition][^raimonde-confidential-factor].
 
-## What duration and geographic scope are reasonable for an Ohio non-compete? {#duration-geography}
+## What duration and geographic scope are reasonable for an Ohio non-compete? {#duration-limits}
 
 **Short answer.** There is no statutory cap. Ohio courts weigh duration and territory together against the employer's actual protectable interest under *Raimonde*, and they may cut back a restraint that reaches further than necessary [^q4-raimonde-factors][^metrohealth-modified].
 
@@ -94,7 +94,7 @@ That holding turns on a statutory merger. A deal structured as an asset purchase
 >
 > Do not rely on *Acordia* for every transaction. It addresses covenants that pass by statutory merger; in an asset deal, include express assignment and successor-and-assigns language so the buyer can enforce the restraint [^acordia-successor].
 
-## Does an Ohio non-compete toll or extend during breach or litigation? {#tolling-extension}
+## Does an Ohio non-compete toll or extend during breach or litigation? {#extended-for-breach}
 
 **Short answer.** It can. Ohio appellate courts have held that a non-compete may not expire while its enforceability is being litigated, so the restricted period can be effectively extended until the case is resolved [^homan-tolling].
 

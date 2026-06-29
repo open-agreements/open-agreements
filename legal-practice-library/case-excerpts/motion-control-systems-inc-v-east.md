@@ -39,7 +39,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > As a restraint of trade, the covenant must be strictly construed and, if ambiguous, it must be construed in favor of the employee.
 
-- supports: `court-narrowing`, `severability-and-reformation`, `tolling-during-breach`, `tolling-extension`
+- supports: `court-narrowing`, `extended-for-breach`, `severability-and-reformation`, `tolling-during-breach`
 - source_cards: `motion-control-strict-construction`, `motion-control-strict-severability`, `motion-control-strict-tolling`, `tolling-motion-control-strict`
 - cited_by: [Non-Compete Agreement Review Checklist — Virginia](../checklists/non-compete/us/virginia.md), [Non-Competes in Virginia](../non-compete/us/virginia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1059467/motion-control-systems-inc-v-east/#:~:text=As%20a%20restraint%20of%20trade%2C,in%20favor%20of%20the%20employee.>

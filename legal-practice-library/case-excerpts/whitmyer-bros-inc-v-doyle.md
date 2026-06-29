@@ -36,7 +36,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > we pointed out that while a seller’s noncompetitive covenant designed to protect the good will of the business for the buyer is freely enforceable, an employee’s covenant not to compete after the termination of his employment is not as freely enforceable because of well recognized countervailing policy considerations.
 
-- supports: `employee-noncompetes`, `restrictive-covenants-each-independently-includable`
+- supports: `employee-non-compete-enforceability`, `restrictive-covenants-each-independently-includable`
 - source_cards: `nj-whitmyer-sale`, `whitmyer-sale-of-business`
 - cited_by: [Non-Compete Agreement Review Checklist — New Jersey](../checklists/non-compete/us/new-jersey.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2061132/whitmyer-bros-inc-v-doyle/#:~:text=we%20pointed%20out%20that%20while,well%20recognized%20countervailing%20policy%20considerations.>

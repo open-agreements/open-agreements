@@ -30,7 +30,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Because requiring Elder to forsake the customers that he brought to Ag Spectrum as an independent contractor is unreasonable in the circumstances, we hold that the noncompete provision demanding this result is unenforceable.
 
-- supports: `iowa-statutory-gates`, `time-and-geography`
+- supports: `duration-limits`, `iowa-statutory-gates`
 - source_cards: `ia-ag-spectrum-customers`, `q4-ag-spectrum-unreasonable`
 - cited_by: [Non-Compete Agreement Review Checklist — Iowa](../checklists/non-compete/us/iowa.md), [Non-Competes in Iowa](../non-compete/us/iowa.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4414551/ag-spectrum-company-v-vaughn-elder/#:~:text=Because%20requiring%20Elder%20to%20forsake,demanding%20this%20result%20is%20unenforceable.>
@@ -39,7 +39,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > For two reasons, we think that the Iowa Supreme Court would hold that the enforceability of a noncompete provision is a question for the court.
 
-- supports: `time-and-geography`
+- supports: `duration-limits`
 - source_cards: `q4-ag-spectrum-court-question`
 - cited_by: [Non-Competes in Iowa](../non-compete/us/iowa.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4414551/ag-spectrum-company-v-vaughn-elder/#:~:text=For%20two%20reasons%2C%20we%20think,a%20question%20for%20the%20court.>

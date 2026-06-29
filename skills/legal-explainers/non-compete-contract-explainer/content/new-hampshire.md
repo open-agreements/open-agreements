@@ -2,7 +2,7 @@
 jurisdiction: "New Hampshire"
 slug: new-hampshire
 countryCode: US
-snapshotAsOf: "2026-06-20"
+snapshotAsOf: "2026-06-28"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/new-hampshire
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/new-hampshire · **Snapshot as of:** 2026-06-20 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/new-hampshire · **Snapshot as of:** 2026-06-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in New Hampshire[^about]
 
@@ -36,7 +36,7 @@ New Hampshire enforces reasonable non-competes under a common-law test, but RSA 
 | **Restriction extended during a breach?** | Unsettled — no controlling authority |
 | **Maximum length set by law** | No statutory limit |
 
-## Are employee non-compete agreements enforceable in New Hampshire? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in New Hampshire? {#employee-non-compete-enforceability}
 
 **Short answer.** Yes, if the restraint is reasonable and no statute makes it unenforceable. New Hampshire uses a three-part reasonableness test: the restriction must protect a legitimate employer interest, avoid undue hardship on the employee, and avoid injury to the public interest [^foster-three-part-test][^hobert-reasonable-enforceable].
 
@@ -71,7 +71,7 @@ Goodwill is often the practical center of the analysis. New Hampshire cases allo
 >
 > Before enforcing, identify the employer asset at risk. A covenant based only on the cost of hiring or training workers is unlikely to satisfy the first prong of the New Hampshire test [^olsten-recruiting-costs].
 
-## How narrow must a New Hampshire non-compete's duration, geography, and customer scope be? {#scope-duration-geography}
+## How narrow must a New Hampshire non-compete's duration, geography, and customer scope be? {#duration-limits}
 
 **Short answer.** Narrow enough to match the protected interest. Customer and geography limits generally should track the employee's actual sphere of customer influence, and duration should last no longer than needed to protect the employer's goodwill or confidential information [^near-customer-sphere][^forbes-duration-geography].
 
@@ -79,7 +79,7 @@ New Hampshire courts are especially skeptical of all-customer restrictions. In *
 
 The same principle applies to geography. A territory is not reasonable merely because it is named. It should correspond to the market where the employee had customer or patient contact, or to another concrete employer interest.
 
-## Will a New Hampshire court reform an overbroad non-compete? {#court-reformation}
+## Will a New Hampshire court reform an overbroad non-compete? {#court-narrowing}
 
 **Short answer.** Yes, but only if the employer proves good faith in the execution of the agreement. New Hampshire courts have power to reform overbroad covenants, but bad-faith presentation can defeat that remedy [^near-good-faith-reformation][^syncom-bad-faith-reformation].
 
@@ -157,7 +157,7 @@ Trade-secret relief is not a substitute for an overbroad noncompete. It protects
 >
 > If the business concern is information misuse, build the record for trade-secret protection: identify the information, document economic value from secrecy, and maintain reasonable secrecy measures. RSA chapter 350-B is strongest when the facts support secrecy, not merely competition [^rsa-350-b-1-definition][^rsa-350-b-2-injunction].
 
-## Does a New Hampshire non-compete period pause or extend during breach or litigation? {#tolling-during-breach}
+## Does a New Hampshire non-compete period pause or extend during breach or litigation? {#extended-for-breach}
 
 **Short answer.** This is unsettled for employment noncompetes. New Hampshire appellate law in this source set does not squarely decide whether a restricted period pauses during breach, extends while litigation is pending, or whether a contractual extension-during-breach clause is enforceable [^gosselin-no-extension].
 

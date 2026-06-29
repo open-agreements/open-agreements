@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Under Arkansas law, a noncompete agreement must be valid as written; a court may not narrow it.
 
-- supports: `arkansas-statutory-gates`, `court-reformation`, `geographic-limit`
+- supports: `arkansas-statutory-gates`, `court-narrowing`, `geographic-limit`
 - source_cards: `nanomech-valid-as-written-gate`, `q3-nanomech-geography`, `q5-nanomech-no-narrow`
 - cited_by: [Non-Compete Agreement Review Checklist — Arkansas](../checklists/non-compete/us/arkansas.md), [Non-Competes in Arkansas](../non-compete/us/arkansas.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2777573/nanomech-inc-v-arunya-suresh/#:~:text=Under%20Arkansas%20law%2C%20a%20noncompete,court%20may%20not%20narrow%20it.>

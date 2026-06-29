@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > We decline to rescue a draftor from the risks of crafting a restrictive covenant that is patently overbroad.
 
-- supports: `definitions`, `reformation`, `severability-and-reformation`
+- supports: `court-narrowing`, `definitions`, `severability-and-reformation`
 - source_cards: `assured-overbroad`, `il-assured-no-rescue`, `il-assured-patently-overbroad`
 - cited_by: [Non-Compete Agreement Review Checklist — Illinois](../checklists/non-compete/us/illinois.md), [Non-Competes in Illinois](../non-compete/us/illinois.md)
 - link_to_source: <https://www.courtlistener.com/opinion/3173530/assuredpartners-inc-v-schmitt/#:~:text=We%20decline%20to%20rescue%20a,covenant%20that%20is%20patently%20overbroad.>

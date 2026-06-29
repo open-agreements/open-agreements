@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > A covenant restraining an employee from competing with his former employer upon termination of employment is reasonable if it is no greater than is required for the protection of the employer, does not impose undue hardship on the employee, and is not injurious to the public.
 
-- supports: `consideration`, `definitions`, `duration-geography`, `employee-noncompetes`, `ohio-statutory-gates`, `restrictive-covenants-each-independently-includable`, `timing-and-execution-acknowledgements`, `tolling-during-breach`, `tolling-extension`
+- supports: `consideration`, `definitions`, `duration-limits`, `employee-non-compete-enforceability`, `extended-for-breach`, `ohio-statutory-gates`, `restrictive-covenants-each-independently-includable`, `timing-and-execution-acknowledgements`, `tolling-during-breach`
 - source_cards: `oh-raimonde-extension-limit`, `oh-raimonde-gate`, `oh-raimonde-still-required`, `oh-raimonde-test-covenants`, `oh-raimonde-test-defs`, `q2-raimonde-reasonableness`, `q4-raimonde-factors`, `q7-raimonde-reasonableness`, `raimonde-reasonableness-test`
 - cited_by: [Non-Compete Agreement Review Checklist — Ohio](../checklists/non-compete/us/ohio.md), [Non-Competes in Ohio](../non-compete/us/ohio.md)
 - link_to_source: <https://www.courtlistener.com/opinion/6865409/raimonde-v-van-vlerah/#:~:text=A%20covenant%20restraining%20an%20employee,not%20injurious%20to%20the%20public.>

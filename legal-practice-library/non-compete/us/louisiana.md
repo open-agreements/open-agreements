@@ -19,7 +19,7 @@ tags:
 
 A question-by-question summary of Louisiana non-compete law under La. R.S. 23:921, including the default rule of nullity, the parish-naming geographic requirement, the two-year cap, the bar on judicial reformation, the prospective-employee timing trap, employee non-solicitation after Brown & Root v. Farris, the void choice-of-law rule, the 2025 physician burn-off limits, the 2026 intern and apprentice ban, and trade-secret alternatives.
 
-## Are employee non-compete agreements enforceable in Louisiana? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Louisiana? {#employee-non-compete-enforceability}
 
 **Short answer.** Only inside a narrow statutory lane. Louisiana starts from the position that any agreement restraining a lawful profession, trade, or business is null and void, and it enforces a non-compete only when the agreement fits one of the relationship-based exceptions the statute spells out [^rs-23921-a1].
 
@@ -33,7 +33,7 @@ Because the covenant is a statutory exception to a public-policy rule, Louisiana
 
 The practical consequence is that an out-of-state template will almost never survive in Louisiana. A covenant that reads as perfectly reasonable elsewhere is void here if it misses a statutory requirement, because reasonableness is not the test.
 
-## What geographic and durational limits must a Louisiana non-compete meet? {#geography-duration}
+## What geographic and durational limits must a Louisiana non-compete meet? {#duration-limits}
 
 **Short answer.** Named parishes and no more than two years. An employee non-compete must identify the specific parishes or municipalities where it applies and may not run longer than two years from the end of employment [^rs-23921-c]. A mileage radius does not satisfy the parish-naming requirement [^amcom-radius].
 
@@ -50,7 +50,7 @@ The geographic rule is the single most common drafting trap. Louisiana requires 
 >
 > Do not define the restricted territory by a mileage radius or a generic catch-all such as *any parish where the employer does business*. Louisiana requires named parishes or municipalities, and a radius was struck down as overly broad in *AMCOM* [^amcom-radius][^rs-23921-c].
 
-## Does a tolling or extension-during-breach clause extend a Louisiana non-compete? {#tolling-during-breach}
+## Does a tolling or extension-during-breach clause extend a Louisiana non-compete? {#extended-for-breach}
 
 **Short answer.** It should not be relied on. The statute caps the restraint at two years from termination, and Louisiana's strict-construction and no-reformation rules leave no room for a clause that pushes the restriction past that ceiling by adding back time spent in breach or litigation [^q3-rs-23921-c][^q3-teamenv-no-reform].
 
@@ -67,7 +67,7 @@ No Louisiana statute or appellate decision authorizes judicial tolling of the pe
 >
 > Do not assume a Louisiana court will add time back to a non-compete for a period of breach or litigation. The statute fixes a two-year ceiling measured from termination, and courts will not reform a covenant to extend it [^q3-rs-23921-c][^q3-teamenv-no-reform].
 
-## Will a Louisiana court narrow an overbroad non-compete instead of voiding it? {#reformation}
+## Will a Louisiana court narrow an overbroad non-compete instead of voiding it? {#court-narrowing}
 
 **Short answer.** Only by severing, never by rewriting. A court will not add or substitute language to save a defective covenant; at most it may strike an offending portion under a severability clause and enforce what independently complies with the statute [^q4-teamenv-no-reform][^brock-severance].
 

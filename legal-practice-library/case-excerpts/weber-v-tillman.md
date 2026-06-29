@@ -27,7 +27,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > A noncompetition covenant ancillary to an employment contract is valid and enforceable if the restraint is reasonable under the circumstances and not adverse to the public welfare.
 
-- supports: `employee-noncompetes`, `kansas-statutory-gates`, `parties-and-cover-term-identification`, `restrictive-covenants-each-independently-includable`
+- supports: `employee-non-compete-enforceability`, `kansas-statutory-gates`, `parties-and-cover-term-identification`, `restrictive-covenants-each-independently-includable`
 - source_cards: `weber-ancillary-cover`, `weber-governing-covenants`, `weber-governing-gate`, `weber-governing-standard`
 - cited_by: [Non-Compete Agreement Review Checklist — Kansas](../checklists/non-compete/us/kansas.md), [Non-Competes in Kansas](../non-compete/us/kansas.md)
 - link_to_source: <https://www.courtlistener.com/opinion/7969238/weber-v-tillman/#:~:text=A%20noncompetition%20covenant%20ancillary%20to,adverse%20to%20the%20public%20welfare.>

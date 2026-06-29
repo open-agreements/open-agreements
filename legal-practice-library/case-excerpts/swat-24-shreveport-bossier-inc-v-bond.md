@@ -30,7 +30,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Because such covenants are in derogation of the common right, they must be strictly construed against the party seeking their enforcement.
 
-- supports: `definitions`, `employee-noncompetes`, `louisiana-statutory-gates`, `restrictive-covenants-each-independently-includable`
+- supports: `definitions`, `employee-non-compete-enforceability`, `louisiana-statutory-gates`, `restrictive-covenants-each-independently-includable`
 - source_cards: `la-swat24-cov`, `la-swat24-defs`, `la-swat24-gate`, `swat24-strict-construction`
 - cited_by: [Non-Compete Agreement Review Checklist — Louisiana](../checklists/non-compete/us/louisiana.md), [Non-Competes in Louisiana](../non-compete/us/louisiana.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1860745/swat-24-shreveport-bossier-inc-v-bond/#:~:text=Because%20such%20covenants%20are%20in,the%20party%20seeking%20their%20enforcement.>

@@ -2,7 +2,7 @@
 jurisdiction: "Colorado"
 slug: colorado
 countryCode: US
-snapshotAsOf: "2026-06-20"
+snapshotAsOf: "2026-06-28"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/colorado
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/colorado · **Snapshot as of:** 2026-06-20 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/colorado · **Snapshot as of:** 2026-06-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Colorado[^about]
 
@@ -36,7 +36,7 @@ Colorado makes most employee non-competes and customer non-solicits void by stat
 | **Restriction extended during a breach?** | Open question — threshold must be met at enforcement, cutting against extension |
 | **Maximum length set by law** | No general duration limit |
 
-## Are employee non-compete agreements enforceable in Colorado? {#enforceability}
+## Are employee non-compete agreements enforceable in Colorado? {#employee-non-compete-enforceability}
 
 **Short answer.** Usually no. For covenants entered into or renewed on or after August 10, 2022, Colorado law makes any covenant not to compete that restricts a person's right to earn compensation for labor void unless it fits a narrow statutory exception [^crs-void-rule][^crs-training-exception].
 
@@ -165,7 +165,7 @@ In *23 LTD v. Herman*, the court explained that it is not a court's function to 
 >
 > *Phoenix* predates the 2022 overhaul and the attorney general's active scrutiny of no-poach practices. Treat an overbroad employee no-hire clause as a litigation risk if it functions as a de facto restraint on worker mobility, and keep it limited to active solicitation tied to a legitimate interest [^phoenix-employee-nonsolicit][^crs-customer-nonsolicit-silence].
 
-## Does a Colorado non-compete toll or extend during breach or litigation? {#tolling-extension}
+## Does a Colorado non-compete toll or extend during breach or litigation? {#extended-for-breach}
 
 **Short answer.** This is an open Colorado question, and the statute's structure cuts against automatic extension. No Colorado statute or appellate decision endorses automatically tolling or extending the restricted period during a breach or while litigation is pending [^phoenix-no-extension][^crs-enforced-time].
 

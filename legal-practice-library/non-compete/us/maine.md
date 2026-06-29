@@ -16,7 +16,7 @@ tags:
 
 Maine regulates employee non-competes through 26 M.R.S. § 599-A, using statutory bright-line limits plus Maine common-law reasonableness and as-applied review.
 
-## Are employee non-compete agreements enforceable in Maine? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Maine? {#employee-non-compete-enforceability}
 
 **Short answer.** Sometimes, but Maine starts from a statutory anti-restraint rule: 26 M.R.S. § 599-A says non-competes are contrary to public policy[^maine-599a-public-policy-narrow-interests] and enforceable only if reasonable and no broader than necessary to protect specified employer interests.
 

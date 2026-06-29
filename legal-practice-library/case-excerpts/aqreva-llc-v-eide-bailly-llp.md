@@ -6,7 +6,7 @@ description: >-
   in 2 document(s).
 citation: 'Aqreva, LLC v. Eide Bailly, LLP, 2020 S.D. 59, ¶ 32, 950 N.W.2d 774.'
 resource: 'https://www.courtlistener.com/opinion/9507869/aqreva-llc-v-eide-bailly-llp/'
-timestamp: '2026-06-12'
+timestamp: '2026-06-26'
 document_references:
   - type: Review Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/south-dakota'

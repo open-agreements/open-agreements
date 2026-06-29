@@ -41,7 +41,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > We hold that the written contract provisions do not constitute a restraint prohibited by Section 28-2-703, MCA.
 
-- supports: `employee-noncompetes`
+- supports: `employee-non-compete-enforceability`
 - source_cards: `dobbins-partial-restraint`
 - cited_by: [Non-Competes in Montana](../non-compete/us/montana.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1183224/dobbins-deguire-tucker-pc-v-rutherford-macdonald-olson/#:~:text=We%20hold%20that%20the%20written,prohibited%20by%20Section%2028%2D2%2D703%2C%20MCA.>

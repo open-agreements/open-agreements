@@ -29,7 +29,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > And while a covenant by an employee not to compete after the termination of his employment is not, because of the countervailing policy considerations, as freely enforceable, it will nonetheless be given effect if it is reasonable in view of all the circumstances of the particular case.
 
-- supports: `employee-noncompetes`, `restrictive-covenants-each-independently-includable`
+- supports: `employee-non-compete-enforceability`, `restrictive-covenants-each-independently-includable`
 - source_cards: `nj-solari-effect`, `solari-given-effect`
 - cited_by: [Non-Compete Agreement Review Checklist — New Jersey](../checklists/non-compete/us/new-jersey.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
 - link_to_source: <https://www.courtlistener.com/opinion/7374715/solari-industries-inc-v-malady/#:~:text=And%20while%20a%20covenant%20by,circumstances%20of%20the%20particular%20case.>
@@ -38,7 +38,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > It will generally be found to be reasonable where it simply protects the legitimate interests of the employer, imposes no undue hardship on the employee, and is not injurious to the public.
 
-- supports: `employee-noncompetes`, `new-jersey-statutory-gates`
+- supports: `employee-non-compete-enforceability`, `new-jersey-statutory-gates`
 - source_cards: `nj-solari-test`, `solari-three-prong`
 - cited_by: [Non-Compete Agreement Review Checklist — New Jersey](../checklists/non-compete/us/new-jersey.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
 - link_to_source: <https://www.courtlistener.com/opinion/7374715/solari-industries-inc-v-malady/#:~:text=It%20will%20generally%20be%20found,not%20injurious%20to%20the%20public.>

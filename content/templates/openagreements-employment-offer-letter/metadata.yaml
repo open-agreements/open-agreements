@@ -1,16 +1,11 @@
 name: OpenAgreements Employment Offer Letter
 category: employment
-description: >-
-  A startup-focused employment offer letter template for full-time or part-time
-  hiring with compensation, equity summary, and at-will framing.
+description: A startup-focused employment offer letter template for full-time or part-time hiring with compensation, equity summary, and at-will framing.
 source_url: https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-employment-offer-letter
 version: '1.1'
 license: CC-BY-4.0
 allow_derivatives: true
-attribution_text: >-
-  Authored by OpenAgreements contributors. Drafting structure informed by
-  publicly available permissive sources including the DocuSign template library
-  (MIT) and Papertrail legal-docs (CC0). Licensed under CC BY 4.0.
+attribution_text: Authored by OpenAgreements contributors. Drafting structure informed by publicly available permissive sources including the DocuSign template library (MIT) and Papertrail legal-docs (CC0). Licensed under CC BY 4.0.
 fields:
   - name: employer_name
     type: string
@@ -66,7 +61,6 @@ fields:
   - name: governing_law
     type: string
     description: Governing law state for the offer letter
-    default: California
     section: Legal
   - name: offer_expiration_date
     type: date

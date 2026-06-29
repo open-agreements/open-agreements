@@ -360,14 +360,14 @@ describe('docx post processing', () => {
   });
 
   it('post-processes a real cover-standard template buffer end-to-end', async () => {
-    // Strip theme/webSettings out of the on-disk Wyoming template to
+    // Strip theme/webSettings out of the on-disk board-consent template to
     // simulate the pre-fix state, then post-process and verify the parts
     // are re-injected with correct package references. Using the real
     // buffer (rather than the in-memory `makeDocx` fixture) exercises the
     // single-line `[Content_Types].xml` / `document.xml.rels` formatting
     // that the `docx` npm library actually emits.
     const realPath = resolve(
-      'content/templates/openagreements-restrictive-covenant-wyoming/template.docx',
+      'content/templates/openagreements-board-consent-safe/template.docx',
     );
     const original = await JSZip.loadAsync(readFileSync(realPath));
     original.remove('word/theme/theme1.xml');

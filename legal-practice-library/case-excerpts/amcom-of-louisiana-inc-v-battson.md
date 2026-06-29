@@ -30,7 +30,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > We agree with the trial court's factual finding that the geographical area encompassed within a 75-mile radius of Shreveport or Bossier City makes this employment agreement overly broad.
 
-- supports: `definitions`, `geography-duration`
+- supports: `definitions`, `duration-limits`
 - source_cards: `amcom-radius`, `la-amcom-defs`
 - cited_by: [Non-Compete Agreement Review Checklist — Louisiana](../checklists/non-compete/us/louisiana.md), [Non-Competes in Louisiana](../non-compete/us/louisiana.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1094717/amcom-of-louisiana-inc-v-battson/#:~:text=We%20agree%20with%20the%20trial,this%20employment%20agreement%20overly%20broad.>

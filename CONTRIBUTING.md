@@ -51,6 +51,86 @@ If you've built something on OpenAgreements, we'd love to feature it. Open a PR 
 
 *No projects listed yet — be the first!*
 
+## Template Versioning & Provenance
+
+This policy governs **first-party templates** (those authored here, e.g. `openagreements-*`).
+**Upstream-licensed templates** — Common Paper, Bonterms, NVCA derivatives, `yc-safe-*` — are exempt:
+their `version` field tracks the upstream standard's own published version (e.g. Common Paper CSA
+v2.1), and the rules below do not apply to them.
+
+### Semantic versioning (x.y.z)
+
+First-party template `version` fields follow `x.y.z`:
+
+- **patch (z)** — typos, formatting, clarifications that do not change legal meaning; non-substantive
+  bug fixes.
+- **minor (y)** — non-breaking additions: new optional fields, new optional clauses, new drafting
+  notes, expanded options on existing fields. Existing field shape is preserved.
+- **major (x)** — legal-text changes that change meaning; breaking field-shape changes (renames,
+  removals, type changes); clause-architecture rewrites.
+
+### The `0.x` posture and the `1.0` bar
+
+First-party templates stay at **`0.x.x` until they earn `1.0`**. A version `>= 1.0` signals a
+finality the early catalog has not yet reached, and that mismatch damages trust when content still
+shifts. The internal major/minor history is preserved behind the `0.` prefix (e.g. a template that
+was `2.0` becomes `0.2.0`); that relabel is **cosmetic** and does not reset anything.
+
+### Stability and the `1.0` ≡ `stable` graduation
+
+First-party template metadata carries a `stability` field:
+
+```
+stability: experimental | beta | stable
+```
+
+All first-party templates **start at `experimental`** under the `0.x` posture and are promoted
+individually. **Reaching `1.0` and earning the `stable` label are the same event** — one combined
+graduation checklist, not two orthogonal signals. A template is `stable` (i.e. `1.0`) only when:
+
+1. **It has a base, jurisdiction-neutral template plus multi-jurisdiction validation** — not one or
+   two state variants.
+2. **Protected-disclosures / DTSA parity holds where applicable** (employment-side templates that
+   reasonably need whistleblower / § 1833(b) carve-outs carry them).
+3. **Cover-term drafting notes are complete** for the template's high-risk fields.
+4. **Two consecutive minor releases without legal-text rework** — an empirical signal the form has
+   settled. The `0.x` renumber is cosmetic and does **not** reset this counter; prior settled history
+   still counts.
+
+`stability` is surfaced on the template-detail page, the CLI (`oa list`, `oa template show`), and
+MCP/API output. Until a template is `stable`/`1.0` it shows `experimental` or `beta`.
+
+### Changelog and archived versions
+
+Each first-party template carries a **`CHANGES.md`** adjacent to its `template.md`, surfaced as a
+"Changelog" tab on the template-detail page; entries use the `x.y.z` meanings above. Superseded
+versions are archived rather than deleted:
+
+- Archived versions live at **versioned URLs for every published version**, e.g.
+  `/templates/<slug>/v0.2.0/`, `/templates/<slug>/v0.2.1/` — the exact prior text stays retrievable.
+- The current version is indexable and **self-canonical** (`rel=canonical` points at itself, never
+  at an archive).
+- Archived HTML pages carry `<meta name="robots" content="noindex, follow">`; archived non-HTML
+  downloads (DOCX/PDF) carry `X-Robots-Tag: noindex`. Archived URLs stay **crawlable** (never
+  disallowed in `robots.txt`), so crawlers can see the `noindex`.
+- Do **not** `rel=canonical` an archived page to the current version — old legal text can differ in
+  legally meaningful ways and users may need the exact prior wording.
+
+### Provenance: `derived_from`, `credits`, `source_url`
+
+- **`derived_from`** — set **only** when a template is genuinely derived from a public,
+  permissively-licensed model (Common Paper, Bonterms, NVCA). Carries source name + version + URL.
+  **First-party originals legitimately leave `derived_from` empty** — authors are not required to
+  manufacture a derivation where none exists. Provenance for an original comes from its drafting
+  notes (sourced from published commentary), its git history, and adoption signals. We do **not**
+  retroactively hunt for permissively-licensed lookalikes to populate `derived_from` on originals.
+- **`credits`** — contributors / authors / reviewers who materially shaped the template (see
+  *Template credits* above; consent required). Populate these accurately — they are the primary
+  provenance signal for first-party originals.
+- **`source_url`** — canonical reference URL when applicable.
+
+An empty `derived_from` on a first-party original is **not** a `1.0` graduation blocker.
+
 ## Development Setup
 
 ```bash

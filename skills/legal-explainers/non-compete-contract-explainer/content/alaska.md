@@ -2,7 +2,7 @@
 jurisdiction: "Alaska"
 slug: alaska
 countryCode: US
-snapshotAsOf: "2026-06-20"
+snapshotAsOf: "2026-06-28"
 lastReviewed: "2026-06-01"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/alaska
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/alaska · **Snapshot as of:** 2026-06-20 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/alaska · **Snapshot as of:** 2026-06-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Alaska[^about]
 
@@ -34,7 +34,7 @@ Alaska uses a common-law reasonableness test for non-competes, led by Alaska Sup
 | **Restriction extended during a breach?** | Silent — no Alaska authority |
 | **Maximum length set by law** | No statutory limit |
 
-## Are employee non-compete agreements enforceable in Alaska? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Alaska? {#employee-non-compete-enforceability}
 
 **Short answer.** Yes, if they are reasonable, but Alaska courts start from a skeptical posture: employee non-competes are strictly construed[^decristofaro-disfavored-strictly-construed].
 
@@ -63,7 +63,7 @@ That doctrine is not a drafting license. If the employer willfully overreached, 
 >
 > Do not call Alaska a simple blue-pencil state. *Data Management* uses reasonable alteration, and the employer bears the good-faith burden before an overbroad covenant can be rescued [^data-management-reasonable-alteration].
 
-## Must an Alaska non-compete include geographic and time limits? {#time-geography-limits}
+## Must an Alaska non-compete include geographic and time limits? {#duration-limits}
 
 **Short answer.** Not always. A customer-focused activity restraint can survive without stated geography or duration when it is narrowly drawn to protect customer-list interests [^metcalfe-no-time-geography-required].
 

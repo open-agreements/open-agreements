@@ -2,7 +2,7 @@
 jurisdiction: "North Dakota"
 slug: north-dakota
 countryCode: US
-snapshotAsOf: "2026-06-20"
+snapshotAsOf: "2026-06-28"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/north-dakota
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/north-dakota · **Snapshot as of:** 2026-06-20 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/north-dakota · **Snapshot as of:** 2026-06-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in North Dakota[^about]
 
@@ -35,7 +35,7 @@ North Dakota voids employee non-competes under N.D. Cent. Code § 9-08-06, one o
 | **Restriction extended during a breach?** | Not addressed by statute |
 | **Maximum length set by law** | No statutory limit for the ban |
 
-## Are employee non-compete agreements enforceable in North Dakota? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in North Dakota? {#employee-non-compete-enforceability}
 
 **Short answer.** No. North Dakota law makes a contract that restrains a lawful profession, trade, or business to that extent void[^north-dakota-business-restraint-void].
 

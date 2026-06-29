@@ -19,7 +19,7 @@ tags:
 
 Australia treats post-employment non-competes under the common-law restraint-of-trade doctrine — presumptively void and enforceable only so far as reasonable to protect a legitimate business interest. Enforceability turns on the governing State or Territory, and NSW's Restraints of Trade Act 1976 lets a court read a restraint down.
 
-## Are non-competes enforceable in Australia? {#enforceability}
+## Are non-competes enforceable in Australia? {#employee-non-compete-enforceability}
 
 **Short answer.** Only if the employer can justify them. A post-employment non-compete is treated as a restraint of trade, which Australian courts presume is invalid unless the employer shows the restraint is reasonably necessary to protect a legitimate business interest and is reasonable in reference to the interests of the parties and the public [^lindner-prima-facie-void] [^olson-justifiable-reasonable]. The validity of the restraint is assessed at the time the contract is made, not with hindsight [^olson-tested-at-contract].
 
@@ -115,7 +115,7 @@ Use this national page for the common structure, then go to the local note for t
 - 
 - 
 
-For cross-border context, see the [worldwide comparison](/practice-guides/non-compete/international#country-au).
+For cross-border context, see the [worldwide comparison](/practice-guides/non-compete/worldwide#country-au).
 
 > [!NOTE]
 > **Practice note.**

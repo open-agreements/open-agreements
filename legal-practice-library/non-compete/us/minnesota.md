@@ -16,7 +16,7 @@ tags:
 
 A question-by-question summary of Minnesota's 2023 non-compete statute, legacy Minnesota common law, statutory exceptions, nonsolicitation treatment, and choice-of-law limits.
 
-## Are employee non-compete agreements enforceable in Minnesota? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Minnesota? {#employee-non-compete-enforceability}
 
 **Short answer.** Usually no, for agreements entered into on or after July 1, 2023. Minn. Stat. § 181.988 makes covered covenants not to compete void and unenforceable[^minn-181-988-voids-employment-noncompetes], unless a sale-of-business or dissolution exception applies.
 

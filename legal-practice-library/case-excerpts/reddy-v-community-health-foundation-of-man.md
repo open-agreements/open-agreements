@@ -30,7 +30,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > If the covenant is unreasonable on its face, then it is utterly void and unenforceable.
 
-- supports: `court-narrowing`, `notice-to-future-employers-and-other-third-parties`, `restrictive-covenants-each-independently-includable`, `severability-and-reformation`, `tolling`, `tolling-during-breach`
+- supports: `court-narrowing`, `extended-for-breach`, `notice-to-future-employers-and-other-third-parties`, `restrictive-covenants-each-independently-includable`, `severability-and-reformation`, `tolling-during-breach`
 - source_cards: `reddy-facially-unreasonable-void`, `reddy-tolling-facially-unreasonable`, `wv-reddy-void-cov`, `wv-reddy-void-notice`, `wv-reddy-void-sev`, `wv-reddy-void-toll`
 - cited_by: [Non-Compete Agreement Review Checklist — West Virginia](../checklists/non-compete/us/west-virginia.md), [Non-Competes in West Virginia](../non-compete/us/west-virginia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/#:~:text=If%20the%20covenant%20is%20unreasonable,is%20utterly%20void%20and%20unenforceable.>
@@ -39,7 +39,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > The employer must first show that he has an interest requiring protection.
 
-- supports: `definitions`, `employee-noncompetes`, `parties-and-cover-term-identification`, `restrictive-covenants-each-independently-includable`, `west-virginia-statutory-gates`
+- supports: `definitions`, `employee-non-compete-enforceability`, `parties-and-cover-term-identification`, `restrictive-covenants-each-independently-includable`, `west-virginia-statutory-gates`
 - source_cards: `reddy-employer-burden`, `wv-reddy-burden-cov`, `wv-reddy-burden-cover`, `wv-reddy-burden-def`, `wv-reddy-burden-gate`
 - cited_by: [Non-Compete Agreement Review Checklist — West Virginia](../checklists/non-compete/us/west-virginia.md), [Non-Competes in West Virginia](../non-compete/us/west-virginia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/#:~:text=The%20employer%20must%20first%20show,has%20an%20interest%20requiring%20protection.>
@@ -48,7 +48,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > The three-dimensional method of inquiry has been summarized in a leading article: “A restraint is reasonable only if it (1) is no greater than is required for the protection of the employer, (2) does not impose undue hardship on the employee, and (3) is not injurious to the public,” H.M. Blake, “Employee Agreements Not to Compete,” supra, at 648.
 
-- supports: `employee-noncompetes`, `low-wage-workers`, `tolling`, `tolling-during-breach`, `west-virginia-statutory-gates`
+- supports: `employee-non-compete-enforceability`, `extended-for-breach`, `low-wage-workers`, `tolling-during-breach`, `west-virginia-statutory-gates`
 - source_cards: `reddy-employee-rule-of-reason`, `reddy-low-wage-undue-hardship`, `reddy-tolling-reasonableness-test`, `wv-reddy-test-gate`, `wv-reddy-test-toll`
 - cited_by: [Non-Compete Agreement Review Checklist — West Virginia](../checklists/non-compete/us/west-virginia.md), [Non-Competes in West Virginia](../non-compete/us/west-virginia.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/#:~:text=The%20three%2Ddimensional%20method%20of%20inquiry,to%20Compete%2C%E2%80%9D%20supra%2C%20at%20648.>

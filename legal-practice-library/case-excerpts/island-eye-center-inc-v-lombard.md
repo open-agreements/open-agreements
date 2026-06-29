@@ -52,7 +52,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 > Our statute is derived from California Civil Code section 1673, since replaced by California Business and Professions Code section 16600.
 
-- supports: `employee-noncompetes`
+- supports: `employee-non-compete-enforceability`
 - source_cards: `ie-derived`
 - cited_by: [Non-Competes in Guam](../non-compete/us/guam.md)
 - link_to_source: <https://case-law.vlex.com/vid/island-eye-ctr-v-1039283384>
@@ -61,7 +61,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 > Therefore, we hold that section 88105 evidences public policy for employee mobility and every citizen's right to pursue lawful employment or enterprise of his or her choice.
 
-- supports: `employee-noncompetes`
+- supports: `employee-non-compete-enforceability`
 - source_cards: `ie-policy`
 - cited_by: [Non-Competes in Guam](../non-compete/us/guam.md)
 - link_to_source: <https://case-law.vlex.com/vid/island-eye-ctr-v-1039283384>
@@ -79,7 +79,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 > These post-employment terms are undoubtedly a restraint of trade in violation of 18 GCA § 88105 and are to that extent void.
 
-- supports: `employee-noncompetes`
+- supports: `employee-non-compete-enforceability`
 - source_cards: `ie-void-holding`
 - cited_by: [Non-Competes in Guam](../non-compete/us/guam.md)
 - link_to_source: <https://case-law.vlex.com/vid/island-eye-ctr-v-1039283384>
@@ -88,7 +88,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 > This is the first time we have been asked to interpret our restraint-of-trade provision.
 
-- supports: `employee-noncompetes`
+- supports: `employee-non-compete-enforceability`
 - source_cards: `ie-first-time`
 - cited_by: [Non-Competes in Guam](../non-compete/us/guam.md)
 - link_to_source: <https://case-law.vlex.com/vid/island-eye-ctr-v-1039283384>

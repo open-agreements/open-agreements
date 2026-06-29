@@ -39,7 +39,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > The employer also bears the burden of establishing that the agreement is reasonable in scope as to the time, activity, and geographic area restricted.
 
-- supports: `definitions`, `duration-geography-scope`, `indiana-statutory-gates`, `restrictive-covenants-each-independently-includable`, `tolling-during-breach`, `tolling-extension`
+- supports: `definitions`, `duration-limits`, `extended-for-breach`, `indiana-statutory-gates`, `restrictive-covenants-each-independently-includable`, `tolling-during-breach`
 - source_cards: `krueger-scope-burden`, `krueger-scope-covenants`, `krueger-scope-defs`, `krueger-scope-gate`, `krueger-scope-tolling`, `q8-krueger-reasonableness`
 - cited_by: [Non-Compete Agreement Review Checklist — Indiana](../checklists/non-compete/us/indiana.md), [Non-Competes in Indiana](../non-compete/us/indiana.md)
 - link_to_source: <https://www.courtlistener.com/opinion/852486/central-indiana-podiatry-pc-v-krueger/#:~:text=The%20employer%20also%20bears%20the,activity%2C%20and%20geographic%20area%20restricted.>
@@ -48,7 +48,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > We construe these covenants strictly against the employer and will not enforce an unreasonable restriction.
 
-- supports: `employee-noncompetes`, `remedies`, `restrictive-covenants-each-independently-includable`
+- supports: `employee-non-compete-enforceability`, `remedies`, `restrictive-covenants-each-independently-includable`
 - source_cards: `krueger-strict-construction`, `krueger-strict-covenants`, `krueger-unreasonable-remedies`
 - cited_by: [Non-Compete Agreement Review Checklist — Indiana](../checklists/non-compete/us/indiana.md), [Non-Competes in Indiana](../non-compete/us/indiana.md)
 - link_to_source: <https://www.courtlistener.com/opinion/852486/central-indiana-podiatry-pc-v-krueger/#:~:text=We%20construe%20these%20covenants%20strictly,not%20enforce%20an%20unreasonable%20restriction.>

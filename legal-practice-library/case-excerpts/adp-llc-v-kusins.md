@@ -30,7 +30,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > In all of the matters other than Kusins, we remand for a determination of the appropriate remedy for each defendant's breach of the RCA, including a tolling of the time limitations of the RCAs during the period of defendants' violations.
 
-- supports: `tolling-during-breach`, `tolling-extension`
+- supports: `extended-for-breach`, `tolling-during-breach`
 - source_cards: `kusins-tolling`, `nj-kusins-tolling`
 - cited_by: [Non-Compete Agreement Review Checklist — New Jersey](../checklists/non-compete/us/new-jersey.md), [Non-Competes in New Jersey](../non-compete/us/new-jersey.md)
 - link_to_source: <https://www.courtlistener.com/opinion/4650682/adp-llc-vs-erik-kusins-adp-llc-vs-ryan-hopper-adp-llc-vs-anthony-m/#:~:text=In%20all%20of%20the%20matters,the%20period%20of%20defendants'%20violations.>

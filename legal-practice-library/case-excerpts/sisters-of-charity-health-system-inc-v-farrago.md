@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Although reasonableness is a question of law, the inquiry is fact-intensive, and it depends on the specific circumstances of the case: the covenant’s duration, the scope of the specified geographic area, and the nature of the interest to be protected.
 
-- supports: `definitions`, `employee-noncompetes`, `tolling-during-breach`
+- supports: `definitions`, `employee-non-compete-enforceability`, `tolling-during-breach`
 - source_cards: `sisters-duration-geography-interest`, `sisters-factors-defs`, `sisters-factors-tolling`
 - cited_by: [Non-Compete Agreement Review Checklist — Maine](../checklists/non-compete/us/maine.md), [Non-Competes in Maine](../non-compete/us/maine.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2444708/sisters-of-charity-health-system-inc-v-farrago/#:~:text=Although%20reasonableness%20is%20a%20question,the%20interest%20to%20be%20protected.>

@@ -2,7 +2,7 @@
 jurisdiction: "District of Columbia"
 slug: district-of-columbia
 countryCode: US
-snapshotAsOf: "2026-06-20"
+snapshotAsOf: "2026-06-28"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/district-of-columbia
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/district-of-columbia · **Snapshot as of:** 2026-06-20 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/district-of-columbia · **Snapshot as of:** 2026-06-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in the District of Columbia[^about]
 
@@ -36,7 +36,7 @@ The District of Columbia bans non-compete provisions for most employees and allo
 | **Restriction extended during a breach?** | Open question — caps run as fixed days from separation |
 | **Maximum length set by law** | 365 days (non-medical highly compensated employee); 730 days (medical specialist) |
 
-## Are employee non-compete agreements enforceable in the District of Columbia? {#enforceability}
+## Are employee non-compete agreements enforceable in the District of Columbia? {#employee-non-compete-enforceability}
 
 **Short answer.** Usually no. Since October 1, 2022, a District employer may not require or request that a *covered employee* — broadly, most employees who do not meet a high compensation threshold — sign or comply with a non-compete provision, and a non-compete provision in a covered employee's agreement entered into on or after that date is void as a matter of law [^ban-covered][^void-rule].
 
@@ -157,7 +157,7 @@ Enforcement is real. In November 2023, the Attorney General announced settlement
 >
 > The exposure attaches per employee and to attempted enforcement, not just to a lawsuit you lose. Before presenting any District non-compete, confirm the worker is a highly compensated employee, the covenant meets every § 32-581.03 requirement, and the disclosures are made — because subjecting a covered employee to a banned covenant, or trying to enforce a void one, triggers fixed per-employee relief and Attorney General enforcement [^relief-amounts][^oag-enforcement].
 
-## Does a District of Columbia non-compete toll or extend during a breach or litigation? {#tolling-extension}
+## Does a District of Columbia non-compete toll or extend during a breach or litigation? {#extended-for-breach}
 
 **Short answer.** This is an open question, and the statute's structure cuts against automatic extension. The District's non-compete statute sets no tolling rule, and its caps run as a fixed number of calendar days measured from separation — language that sits uneasily with extending a highly compensated employee's restricted period during a breach or while litigation is pending [^tolling-duration-cap][^tolling-cumulative].
 

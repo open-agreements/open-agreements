@@ -2,7 +2,7 @@
 jurisdiction: "Nebraska"
 slug: nebraska
 countryCode: US
-snapshotAsOf: "2026-06-20"
+snapshotAsOf: "2026-06-28"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/nebraska
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/nebraska · **Snapshot as of:** 2026-06-20 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/nebraska · **Snapshot as of:** 2026-06-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Nebraska[^about]
 
@@ -35,7 +35,7 @@ Nebraska enforces only narrowly tailored, customer-specific covenants under a co
 | **Restriction extended during a breach?** | Silent |
 | **Maximum length set by law** | No statutory limit |
 
-## Are employee non-compete agreements enforceable in Nebraska? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Nebraska? {#employee-non-compete-enforceability}
 
 **Short answer.** Sometimes, but only if the covenant is narrow and reasonable. Nebraska has no general statutory ban as of June 2026, but Nebraska courts enforce employee restraints only when they protect a legitimate interest and do not go beyond what is reasonably necessary [^q1-brown-three-part-test].
 
@@ -129,7 +129,7 @@ Trade-secret and confidentiality tools are often better targeted than a broad no
 
 Use trade-secret provisions for information risk, and use customer covenants only for the customer relationships Nebraska recognizes as protectable.
 
-## Does a Nebraska non-compete period toll during breach or litigation? {#tolling-extension}
+## Does a Nebraska non-compete period toll during breach or litigation? {#extended-for-breach}
 
 **Short answer.** Nebraska appellate case law is silent. No staged Nebraska appellate decision squarely addresses whether a court may toll a non-compete period during breach or litigation, or whether a contractual extension-on-breach clause is enforceable [^q11-brown-reasonableness].
 

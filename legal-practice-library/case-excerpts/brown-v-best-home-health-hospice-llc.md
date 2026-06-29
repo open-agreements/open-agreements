@@ -39,8 +39,8 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Contracts which hinder them from doing so are "strictly construed and rigidly scanned and are declared void unless necessary for the reasonable protection of the employer."
 
-- supports: `definitions`, `employee-noncompetes`, `pre-2025-agreements`, `timing-and-execution-acknowledgements`, `tolling-during-breach`
-- source_cards: `brown-rigid-scrutiny`, `brown-strict-construction`, `brown-strict-construction-baseline`, `brown-tolling-scrutiny`
+- supports: `definitions`, `employee-non-compete-enforceability`, `post-hire-consideration`, `pre-2025-agreements`, `timing-and-execution-acknowledgements`, `tolling-during-breach`
+- source_cards: `brown-post-hire-strict-construction`, `brown-rigid-scrutiny`, `brown-strict-construction`, `brown-strict-construction-baseline`, `brown-tolling-scrutiny`
 - cited_by: [Non-Compete Agreement Review Checklist — Wyoming](../checklists/non-compete/us/wyoming.md), [Non-Competes in Wyoming](../non-compete/us/wyoming.md)
 - link_to_source: <https://www.courtlistener.com/opinion/9998787/jennifer-brown-fka-jennifer-stringer-nora-youngren-and-carol-wolfe-v/#:~:text=Contracts%20which%20hinder%20them%20from,reasonable%20protection%20of%20the%20employer.%22>
 
@@ -48,7 +48,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > when an employer requests an existing employee sign a non-compete agreement, the employer must provide "separate contemporaneous consideration" for the new promise
 
-- supports: `pre-2025-agreements`, `timing-and-execution-acknowledgements`, `wyoming-statutory-gates`
+- supports: `post-hire-consideration`, `pre-2025-agreements`, `timing-and-execution-acknowledgements`, `wyoming-statutory-gates`
 - source_cards: `brown-post-hire-consideration`, `brown-separate-consideration`
 - cited_by: [Non-Compete Agreement Review Checklist — Wyoming](../checklists/non-compete/us/wyoming.md), [Non-Competes in Wyoming](../non-compete/us/wyoming.md)
 - link_to_source: <https://www.courtlistener.com/opinion/9998787/jennifer-brown-fka-jennifer-stringer-nora-youngren-and-carol-wolfe-v/#:~:text=when%20an%20employer%20requests%20an,consideration%22%20for%20the%20new%20promise>

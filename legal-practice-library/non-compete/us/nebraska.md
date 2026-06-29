@@ -16,7 +16,7 @@ tags:
 
 Nebraska enforces only narrowly tailored, customer-specific covenants under a common-law reasonableness test, refuses to blue-pencil overbroad employment non-competes, and has no general statutory ban as of 2026.
 
-## Are employee non-compete agreements enforceable in Nebraska? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in Nebraska? {#employee-non-compete-enforceability}
 
 **Short answer.** Sometimes, but only if the covenant is narrow and reasonable. Nebraska has no general statutory ban as of June 2026, but Nebraska courts enforce employee restraints only when they protect a legitimate interest and do not go beyond what is reasonably necessary [^q1-brown-three-part-test].
 
@@ -110,7 +110,7 @@ Trade-secret and confidentiality tools are often better targeted than a broad no
 
 Use trade-secret provisions for information risk, and use customer covenants only for the customer relationships Nebraska recognizes as protectable.
 
-## Does a Nebraska non-compete period toll during breach or litigation? {#tolling-extension}
+## Does a Nebraska non-compete period toll during breach or litigation? {#extended-for-breach}
 
 **Short answer.** Nebraska appellate case law is silent. No staged Nebraska appellate decision squarely addresses whether a court may toll a non-compete period during breach or litigation, or whether a contractual extension-on-breach clause is enforceable [^q11-brown-reasonableness].
 

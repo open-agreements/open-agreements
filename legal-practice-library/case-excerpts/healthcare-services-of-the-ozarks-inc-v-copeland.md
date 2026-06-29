@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > In addition, such restrictions are not enforceable to protect an employer from mere competition by a former employee, but only to the extent that the restrictions protect the employer’s trade secrets or customer contacts.
 
-- supports: `definitions`, `employee-noncompetes`, `missouri-statutory-gates`
+- supports: `definitions`, `employee-non-compete-enforceability`, `missouri-statutory-gates`
 - source_cards: `copeland-mere-competition`, `mo-copeland-interest-gate`, `mo-copeland-mere-competition-defs`
 - cited_by: [Non-Compete Agreement Review Checklist — Missouri](../checklists/non-compete/us/missouri.md), [Non-Competes in Missouri](../non-compete/us/missouri.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1654936/healthcare-services-of-the-ozarks-inc-v-copeland/#:~:text=In%20addition%2C%20such%20restrictions%20are,trade%20secrets%20or%20customer%20contacts.>
@@ -41,7 +41,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > In practical terms, a non-compete agreement is reasonable if it is no more restrictive than is necessary to protect the legitimate interests of the employer.
 
-- supports: `employee-noncompetes`, `healthcare-physician`, `physician-specific-notices-and-carve-outs`, `restrictive-covenants-each-independently-includable`
+- supports: `employee-non-compete-enforceability`, `healthcare-physician`, `physician-specific-notices-and-carve-outs`, `restrictive-covenants-each-independently-includable`
 - source_cards: `copeland-reasonable-standard`, `mo-copeland-reasonable-cov`, `mo-physician-copeland`, `physician-copeland`
 - cited_by: [Non-Compete Agreement Review Checklist — Missouri](../checklists/non-compete/us/missouri.md), [Non-Competes in Missouri](../non-compete/us/missouri.md)
 - link_to_source: <https://www.courtlistener.com/opinion/1654936/healthcare-services-of-the-ozarks-inc-v-copeland/#:~:text=In%20practical%20terms%2C%20a%20non%2Dcompete,legitimate%20interests%20of%20the%20employer.>

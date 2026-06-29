@@ -2,7 +2,7 @@
 jurisdiction: "New Mexico"
 slug: new-mexico
 countryCode: US
-snapshotAsOf: "2026-06-20"
+snapshotAsOf: "2026-06-28"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/new-mexico
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/new-mexico · **Snapshot as of:** 2026-06-20 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/new-mexico · **Snapshot as of:** 2026-06-28 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in New Mexico[^about]
 
@@ -35,7 +35,7 @@ New Mexico enforces ordinary employee non-competes only when they are reasonable
 | **Restriction extended during a breach?** | Open question — no authority |
 | **Maximum length set by law** | No statutory limit |
 
-## Are employee non-compete agreements enforceable in New Mexico? {#employee-noncompetes}
+## Are employee non-compete agreements enforceable in New Mexico? {#employee-non-compete-enforceability}
 
 **Short answer.** Yes, sometimes. New Mexico is a common-law reasonableness state for ordinary employee non-competes: the covenant must be reasonable in time, geography, and scope, and it must be tied to a legitimate business interest rather than a naked restraint on work [^lovelace-reasonableness-test][^mcgonigle-ordinary-enforceability].
 
@@ -74,7 +74,7 @@ The New Mexico Uniform Trade Secrets Act supplies the statutory backstop. It def
 >
 > Do not draft a New Mexico non-compete as a penalty for leaving or as protection against ordinary competition. Tie the restraint to a specific interest, and keep the trade-secret strategy separate enough to stand even if the non-compete is narrowed or denied [^mcgonigle-general-skills][^utsa-injunction].
 
-## What duration and geographic scope are reasonable for a New Mexico non-compete? {#duration-geography}
+## What duration and geographic scope are reasonable for a New Mexico non-compete? {#duration-limits}
 
 **Short answer.** There is no general statutory cap. New Mexico courts evaluate time and territory under a facts-and-circumstances reasonableness test, looking at the business, the market, the parties, the protectable interest, and public impact [^bowen-facts-particular-case][^kidskare-facts-reformed-limits].
 
@@ -100,7 +100,7 @@ The drafting takeaway is direct: include an express severability and reformation
 >
 > Do not rely on a New Mexico court to rewrite a bare overbroad covenant. Include a clear reformation and severability clause, and draft the primary restriction narrowly enough that the court does not need to rescue it [^kidskare-contract-reformation][^kidskare-no-general-ruling].
 
-## Does a New Mexico non-compete toll or extend during breach or litigation? {#tolling-extension}
+## Does a New Mexico non-compete toll or extend during breach or litigation? {#extended-for-breach}
 
 **Short answer.** This is an open New Mexico question. The staged New Mexico non-compete cases and statutes do not squarely say that a court may automatically toll or extend a non-compete's restricted period while the former employee is allegedly breaching or while litigation is pending [^q6-lovelace-fixed-period][^q6-kidskare-fixed-period].
 
