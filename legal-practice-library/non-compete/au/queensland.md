@@ -113,6 +113,12 @@ Because validity is fixed at the date of contract, a drafting device that extend
 >
 > Do not rely on a clause that purports to extend the non-compete by the length of any breach. No clear Queensland authority validates tolling of the restraint period, and because reasonableness is determined as at the date of the agreement, an automatic extension risks being treated as unreasonable [^autoparts-tested-at-contract-tolling]. Treat the stated duration as the maximum and address an actual breach through an injunction or a damages claim instead.
 
+## How does Queensland treat customer non-solicitation covenants? {#customer-non-solicitation}
+
+**Short answer.** A customer non-solicit is a restraint of trade in Queensland — presumptively void but binding so far as it is reasonable and necessary to protect a legitimate interest, the principal one being the employer's connection with its customers [^qld-cust-principal-interest][^qld-cust-test-necessary].
+
+The court will protect the employer's relationships with its customers against a departed employee [^qld-cust-principal-interest], and the restraint binds only so far as it does not exceed what is reasonable and necessary to protect that interest [^qld-cust-test-necessary]. Queensland has no New South Wales-style read-down statute, so an overbroad covenant survives only through its own cascading or severable drafting.
+
 ## Do Queensland restraint rules differ for contractors and business sales? {#contractors-and-sale}
 
 **Short answer.** Yes, in different directions. Restraints on independent contractors are assessed under the same restraint-of-trade doctrine as employee covenants — the same legitimate-interest requirement and the same no-wider-than-necessary test — so the label of the relationship matters less than the substance of the interest the restraint actually protects. Restraints given by the seller of a business, by contrast, are judged much more leniently, because a buyer is entitled to protect the goodwill it paid for [^lindner-sale-distinction].
@@ -183,6 +189,10 @@ Because this is a future legislative matter, employers should treat the timeline
 [^lindner-onus]: **Lindner v Murdock's Garage** — "The onus was on the plaintiff firm to prove circumstances showing that the restriction on the defendant's freedom to work was reasonable." *Lindner v Murdock's Garage [1950] HCA 48; (1950) 83 CLR 628 (per McTiernan J).* <https://www.hcourt.gov.au/sites/default/files/eresources/1950/HCA/48.pdf>
 
 [^autoparts-tested-at-contract-tolling]: **Auto Parts Group Pty Ltd v Cooper** — "The reasonableness of the restraint is determined at the date of entry into the agreement." *Auto Parts Group Pty Ltd v Cooper [2015] QSC 155, quoting Vision Eye Institute Ltd v Kitchen [2014] QSC 260.* <https://archive.sclqld.org.au/qjudgment/2015/QSC15-155.pdf>
+
+[^qld-cust-principal-interest]: **Auto Parts Group Pty Ltd v Cooper** — "The principal interest which can be protected by a restraint against a former employee is the benefit of the former employer of the relationships with its customers." *Auto Parts Group Pty Ltd v Cooper [2015] QSC 155 at [262].* <https://archive.sclqld.org.au/qjudgment/2015/QSC15-155.pdf>
+
+[^qld-cust-test-necessary]: **Auto Parts Group Pty Ltd v Cooper** — "The restraint must operate to protect a legitimate interest of the covenantee. The test is whether the restrictive covenant exceeds what is reasonable and necessary for the protection of the legitimate interest." *Auto Parts Group Pty Ltd v Cooper [2015] QSC 155 at [259].* <https://archive.sclqld.org.au/qjudgment/2015/QSC15-155.pdf>
 
 [^lindner-sale-distinction]: **Lindner v Murdock's Garage** — "A distinction is drawn between a restraint upon trade included in an agreement for the sale of a business and a restraint included in an agreement with an employee." *Lindner v Murdock's Garage [1950] HCA 48; (1950) 83 CLR 628 (per Latham CJ).* <https://www.hcourt.gov.au/sites/default/files/eresources/1950/HCA/48.pdf>
 

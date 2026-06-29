@@ -2,7 +2,7 @@
 jurisdiction: "Tasmania, Australia"
 slug: tasmania
 countryCode: AU
-snapshotAsOf: "2026-06-28"
+snapshotAsOf: "2026-06-29"
 lastReviewed: "2026-06-10"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/au/tasmania
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/au/tasmania · **Snapshot as of:** 2026-06-28 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/au/tasmania · **Snapshot as of:** 2026-06-29 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Compete Enforceability in Tasmania[^about]
 
@@ -136,6 +136,12 @@ Because validity is fixed at the date of contract, a drafting device that extend
 >
 > Do not rely on a clause that purports to extend the non-compete by the length of any breach. No Tasmanian authority validates tolling of the restraint period, and because reasonableness is judged at the time of the contract, an automatic extension risks being treated as unreasonable [^bulk-tested-at-contract-tolling]. Treat the stated duration as the maximum and address an actual breach through an injunction or a damages claim instead.
 
+## How does Tasmania treat customer non-solicitation covenants? {#customer-non-solicitation}
+
+**Short answer.** Tasmania enforces a client non-solicit so far as it protects a genuine customer connection, but treats a clause reaching customers with no real connection as mere protection against competition, which the law will not allow [^tas-cust-genuine-connection].
+
+The leading Tasmanian restraint case was itself a client non-solicit: a covenant could reasonably bar dealing with persons who were clients at termination, yet went too far where it merely shielded the former employer from competition [^tas-cust-genuine-connection]. An overbroad covenant is severed rather than rewritten, where it is drafted as a series of separate, divisible promises [^tas-cust-severable].
+
 ## Do Tasmanian restraint rules differ for contractors and business sales? {#contractors-and-sale}
 
 **Short answer.** Yes, in different directions. Restraints on independent contractors are assessed under the same restraint-of-trade doctrine as employee covenants — the same legitimate-interest requirement and the same no-wider-than-necessary test — so the label of the relationship matters less than the substance of the interest the restraint actually protects. Restraints given by the seller of a business, by contrast, are judged more leniently, because a buyer is entitled to protect the goodwill it paid for [^lindner-sale-distinction].
@@ -212,6 +218,10 @@ Because this is a future legislative matter, employers should treat the timeline
 [^jeffress-money-in-lieu]: **Neville Jeffress Advertising Pty Ltd v Barlow (No 2)** — "If a man is dismissed without notice but with money in lieu, what he receives is, as a matter of law, damages for breach of contract." *Neville Jeffress Advertising Pty Ltd v Barlow (No 2) [1993] TASSC 113 (Zeeman J), quoting Sir John Donaldson in Dixon v Stenor Ltd (1973) IRLR 28.* <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/tas/TASSC/1993/113.html>
 
 [^bulk-tested-at-contract-tolling]: **Bulk Frozen Foods Pty Ltd v Excell** — "The reasonableness or otherwise of a restraint of trade must be judged by reference to the circumstances at the time of the contract: Lindner v Murdock's Garage [1950] HCA 48 ; (1950) 83 CLR 628 at 653." *Bulk Frozen Foods Pty Ltd v Excell [2014] TASSC 58 (Blow CJ), citing Lindner v Murdock's Garage (1950) 83 CLR 628.* <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/tas/TASSC/2014/58.html>
+
+[^tas-cust-genuine-connection]: **Neville Jeffress Advertising Pty Ltd v Barlow (No 2)** — "It might have been reasonable for the defendant to have been prevented for some defined and reasonable period after ceasing to be employed by the plaintiff from dealing with, or at least soliciting the business of, those persons who were clients of the plaintiff at the time of the termination of his employment or during some specified and reasonable time before that termination. The covenant goes much further and operates so as to merely protect the plaintiff from competition in circumstances where the law does not regard that as reasonable." *Neville Jeffress Advertising Pty Ltd v Barlow (No 2) [1993] TASSC 113 at [30] (Zeeman J).* <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/tas/TASSC/1993/113.html>
+
+[^tas-cust-severable]: **Neville Jeffress Advertising Pty Ltd v Barlow (No 2)** — "It does not follow that the covenant fails in toto. The six separate provisions contained within the covenant which earlier I have identified each is a separate severable covenant." *Neville Jeffress Advertising Pty Ltd v Barlow (No 2) [1993] TASSC 113 at [31] (Zeeman J).* <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/tas/TASSC/1993/113.html>
 
 [^lindner-sale-distinction]: **Lindner v Murdock's Garage** — "A distinction is drawn between a restraint upon trade included in an agreement for the sale of a business and a restraint included in an agreement with an employee." *Lindner v Murdock's Garage [1950] HCA 48; (1950) 83 CLR 628 (per Latham CJ, dissenting as to the outcome).* <https://www.hcourt.gov.au/sites/default/files/eresources/1950/HCA/48.pdf>
 

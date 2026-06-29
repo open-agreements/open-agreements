@@ -32,6 +32,15 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 - cited_by: [Non-Competes in the Philippines](../non-compete/ph.md)
 - link_to_source: <https://lawphil.net/judjuris/juri2006/apr2006/gr_163269_2006.html>
 
+### rivera-v-solidbank-corp-the-employer-has-to-adduce-evidence-f638d1a8 {#rivera-v-solidbank-corp-the-employer-has-to-adduce-evidence-f638d1a8}
+
+> the employer has to adduce evidence to prove that the restriction is reasonable and not greater than necessary to protect the employer’s legitimate business interests.
+
+- supports: `non-solicitation-sale-of-business`
+- source_cards: `ph-cust-rivera-test`
+- cited_by: [Non-Competes in the Philippines](../non-compete/ph.md)
+- link_to_source: <https://lawphil.net/judjuris/juri2006/apr2006/gr_163269_2006.html>
+
 ### rivera-v-solidbank-corp-there-is-no-factual-basis-for-6915586d {#rivera-v-solidbank-corp-there-is-no-factual-basis-for-6915586d}
 
 > There is no factual basis for the trial court's ruling, for the simple reason that it rendered summary judgment and thereby foreclosed the presentation of evidence by the parties to prove whether the restrictive covenant is reasonable or not.

@@ -2,7 +2,7 @@
 jurisdiction: "Texas"
 slug: texas
 countryCode: US
-snapshotAsOf: "2026-06-28"
+snapshotAsOf: "2026-06-29"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/texas
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/texas · **Snapshot as of:** 2026-06-28 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/texas · **Snapshot as of:** 2026-06-29 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Texas[^about]
 
@@ -215,6 +215,14 @@ In practice, rather than relying on a contractual tolling provision, a Texas emp
 >
 > Do not assume a Texas court will add back time to a non-compete for a period of breach or litigation based on a tolling clause. Texas law is unsettled on contractual tolling, and any extended restraint still must satisfy § 15.50(a)'s reasonableness limit, so the more reliable path is to seek injunctive relief for ongoing violations [^q12-bc-1550a-reasonable].
 
+## How does Texas treat employee non-solicitation and sale-of-business covenants? {#non-solicitation-sale-of-business}
+
+**Short answer.** The Texas Supreme Court has said that covenants restricting a former employee's solicitation of the employer's customers and employees are restraints of trade governed by the Covenants Not to Compete Act, so an employee non-solicit is judged under the same reasonable time/area/scope test as a non-compete [^tx-ns-marsh][^tx-ns-1550a].
+
+The classification is not fully settled: some appellate panels treat *Marsh*'s statement as dictum and decline to apply Section 15.50 to employee non-solicits.
+
+For a covenant given by the seller of a business, the same Section 15.50 enforceability test applies, but Section 15.51(b) shifts the burden of proof. When the agreement's primary purpose is to obligate the promisor to render personal services, the promisee must prove the covenant reasonable [^tx-sob-1551b-burden]; when the agreement has a different primary purpose, as in the classic sale-of-business posture, the burden flips and the promisor must establish that the covenant does not meet the criteria [^tx-sob-1551b-flip].
+
 ## Are trade-secret and confidentiality protections available in Texas? {#trade-secrets}
 
 **Short answer.** Yes. The Texas Uniform Trade Secrets Act lets a court enjoin actual or threatened misappropriation, independent of any covenant [^tutsa-injunction]. A confidentiality agreement is also available, but it cannot be drafted so broadly that it functions as a disguised non-compete and triggers the Act's reasonableness test [^q13-bc-1550a-disguised].
@@ -287,6 +295,14 @@ That statutory carve-out for *general knowledge, skill, and experience* is impor
 [^q12-bc-1550a-reasonable]: **Tex. Bus. & Com. Code § 15.50** — "a covenant not to compete is enforceable if it is ancillary to or part of an otherwise enforceable agreement at the time the agreement is made to the extent that it contains limitations as to time, geographical area, and scope of activity to be restrained that are reasonable and do not impose a greater restraint than is necessary to protect the goodwill or other business interest of the promisee." *Tex. Bus. & Com. Code § 15.50(a).* <https://statutes.capitol.texas.gov/Docs/BC/htm/BC.15.htm>
 
 [^q12-bc-1551a-injunction]: **Tex. Bus. & Com. Code § 15.51** — "a court may award the promisee under a covenant not to compete damages, injunctive relief, or both damages and injunctive relief for a breach by the promisor of the covenant." *Tex. Bus. & Com. Code § 15.51(a).* <https://statutes.capitol.texas.gov/Docs/BC/htm/BC.15.htm>
+
+[^tx-ns-marsh]: **Marsh USA Inc. v. Cook** — "Covenants that place limits on former employees' professional mobility or restrict their solicitation of the former employers' customers and employees are restraints on trade and are governed by the Act." *Marsh USA Inc. v. Cook, 354 S.W.3d 764, 768 (Tex. 2011).* <https://www.courtlistener.com/opinion/2541088/marsh-usa-inc-v-cook/#:~:text=Covenants%20that%20place%20limits%20on,are%20governed%20by%20the%20Act.>
+
+[^tx-ns-1550a]: **Tex. Bus. & Com. Code § 15.50** — "a covenant not to compete is enforceable if it is ancillary to or part of an otherwise enforceable agreement at the time the agreement is made to the extent that it contains limitations as to time, geographical area, and scope of activity to be restrained that are reasonable and do not impose a greater restraint than is necessary to protect the goodwill or other business interest of the promisee." *Tex. Bus. & Com. Code § 15.50(a).* <https://statutes.capitol.texas.gov/Docs/BC/htm/BC.15.htm>
+
+[^tx-sob-1551b-burden]: **Tex. Bus. & Com. Code § 15.51** — "If the primary purpose of the agreement to which the covenant is ancillary is to obligate the promisor to render personal services, for a term or at will, the promisee has the burden of establishing that the covenant meets the criteria specified by Section 15.50 of this code." *Tex. Bus. & Com. Code § 15.51(b).* <https://statutes.capitol.texas.gov/Docs/BC/htm/BC.15.htm>
+
+[^tx-sob-1551b-flip]: **Tex. Bus. & Com. Code § 15.51** — "If the agreement has a different primary purpose, the promisor has the burden of establishing that the covenant does not meet those criteria." *Tex. Bus. & Com. Code § 15.51(b).* <https://statutes.capitol.texas.gov/Docs/BC/htm/BC.15.htm>
 
 [^tutsa-injunction]: **Tex. Civ. Prac. & Rem. Code § 134A.003** — "Actual or threatened misappropriation may be enjoined if the order does not prohibit a person from using general knowledge, skill, and experience that person acquired during employment." *Tex. Civ. Prac. & Rem. Code § 134A.003.* <https://statutes.capitol.texas.gov/Docs/CP/htm/CP.134A.htm>
 

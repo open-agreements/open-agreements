@@ -32,7 +32,7 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Thus, we hold that although there may be valid reasons for restrictive covenants, the mere cost associated with recruiting and hiring employees is not a legitimate interest protectable by a restrictive covenant in an employment contract.
 
-- supports: `definitions`, `legitimate-interests`, `new-hampshire-statutory-gates`, `restrictive-covenants-each-independently-includable`
-- source_cards: `nh-olsten-cost-gate`, `nh-olsten-no-poach-interest`, `nh-olsten-recruiting-costs`, `olsten-recruiting-costs`
+- supports: `definitions`, `employee-non-solicitation`, `legitimate-interests`, `new-hampshire-statutory-gates`, `restrictive-covenants-each-independently-includable`
+- source_cards: `nh-ens-olsten`, `nh-olsten-cost-gate`, `nh-olsten-no-poach-interest`, `nh-olsten-recruiting-costs`, `olsten-recruiting-costs`
 - cited_by: [Non-Compete Agreement Review Checklist — New Hampshire](../checklists/non-compete/us/new-hampshire.md), [Non-Competes in New Hampshire](../non-compete/us/new-hampshire.md)
 - link_to_source: <https://www.courtlistener.com/opinion/8092147/national-employment-service-corp-v-olsten-staffing-service-inc/#:~:text=Thus%2C%20we%20hold%20that%20although,covenant%20in%20an%20employment%20contract.>

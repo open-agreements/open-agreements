@@ -23,6 +23,15 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 ## Quoted passages
 
+### tiu-v-platinum-plans-phil-inc-a-non-involvement-clause-is-not-4c59c449 {#tiu-v-platinum-plans-phil-inc-a-non-involvement-clause-is-not-4c59c449}
+
+> a non-involvement clause is not necessarily void for being in restraint of trade as long as there are reasonable limitations as to time, trade, and place.
+
+- supports: `non-solicitation-sale-of-business`
+- source_cards: `ph-cust-tiu-time-trade-place`
+- cited_by: [Non-Competes in the Philippines](../non-compete/ph.md)
+- link_to_source: <https://lawphil.net/judjuris/juri2007/feb2007/gr_163512_2007.html>
+
 ### tiu-v-platinum-plans-phil-inc-conformably-then-with-the-aforementioned-1baa9f5a {#tiu-v-platinum-plans-phil-inc-conformably-then-with-the-aforementioned-1baa9f5a}
 
 > Conformably then with the aforementioned pronouncements, a non-involvement clause is not necessarily void for being in restraint of trade as long as there are reasonable limitations as to time, trade, and place.

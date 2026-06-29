@@ -27,8 +27,8 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > The general rule in Maryland is that if a restrictive covenant in an employment contract is supported by adequate consideration and is ancillary to the employment contract, an employee’s agreement not to compete with his employer upon leaving the employment will be upheld “if the restraint is confined within limits which are no wider as to area and duration than are reasonably necessary for the protection of the business of the employer and do not impose undue hardship on the employee or disregard the interests of the public.”
 
-- supports: `employee-non-compete-enforceability`, `extended-for-breach`, `healthcare-high-earners`, `maryland-statutory-gates`, `restrictive-covenants-each-independently-includable`, `tolling-during-breach`
-- source_cards: `becker-general-rule`, `becker-highearner-reasonableness`, `becker-reasonableness-backdrop`, `md-becker-general-rule`, `md-becker-highearner-gate`, `md-becker-reasonableness-backdrop`
+- supports: `employee-non-compete-enforceability`, `employee-non-solicitation`, `extended-for-breach`, `healthcare-high-earners`, `maryland-statutory-gates`, `restrictive-covenants-each-independently-includable`, `tolling-during-breach`
+- source_cards: `becker-general-rule`, `becker-highearner-reasonableness`, `becker-reasonableness-backdrop`, `md-becker-general-rule`, `md-becker-highearner-gate`, `md-becker-reasonableness-backdrop`, `md-ens-becker`
 - cited_by: [Non-Compete Agreement Review Checklist — Maryland](../checklists/non-compete/us/maryland.md), [Non-Competes in Maryland](../non-compete/us/maryland.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2322561/becker-v-bailey/#:~:text=The%20general%20rule%20in%20Maryland,the%20interests%20of%20the%20public.%E2%80%9D>
 

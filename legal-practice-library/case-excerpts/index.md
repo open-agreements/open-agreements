@@ -153,7 +153,7 @@
 * [Edwards Moving & Rigging, Inc. v. W.O. Grubb Steel Erection, Inc.](edwards-moving-rigging-inc-v-w-o-grubb-steel-erection-inc.md) - Edwards Moving & Rigging, Inc. v. W.O. Grubb Steel Erection, Inc., No. 3:12CV146-HEH (E.D. Va. Apr. 23, 2012). — quoted in 2 document(s).
 * [Edwards v. Arthur Andersen LLP](edwards-v-arthur-andersen-llp.md) - Edwards v. Arthur Andersen LLP, 44 Cal. 4th 937 (2008). — quoted in 2 document(s).
 * [Ehlers v. Iowa Warehouse Co.](ehlers-v-iowa-warehouse-co.md) - Ehlers v. Iowa Warehouse Co., 188 N.W.2d 368 (Iowa 1971). — quoted in 2 document(s).
-* [Ellis v. James V. Hurson Associates, Inc.](ellis-v-james-v-hurson-associates-inc.md) - Ellis v. James V. Hurson Assocs., Inc., 565 A.2d 615 (D.C. 1989). — quoted in 3 document(s).
+* [Ellis v. James V. Hurson Associates, Inc.](ellis-v-james-v-hurson-associates-inc.md) - Ellis v. James V. Hurson Assocs., Inc., 565 A.2d 615, 618 (D.C. 1989). — quoted in 3 document(s).
 * [EMC Corp. v. Arturi](emc-corp-v-arturi.md) - EMC Corp. v. Arturi, 655 F.3d 75 (1st Cir. 2011). — quoted in 5 document(s).
 * [Emeco International Pty Ltd v O'Shea [No 2]](emeco-international-pty-ltd-v-o-shea-no-2.md) - Emeco International Pty Ltd v O'Shea [No 2] [2012] WASC 348 (Edelman J). — quoted in 2 document(s).
 * [Emerick v. Cardiac Study Center, Inc.](emerick-v-cardiac-study-center-inc.md) - Emerick v. Cardiac Study Ctr., Inc., 189 Wn. App. 711 (2015). — quoted in 3 document(s).

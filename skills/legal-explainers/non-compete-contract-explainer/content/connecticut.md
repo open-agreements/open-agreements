@@ -2,7 +2,7 @@
 jurisdiction: "Connecticut"
 slug: connecticut
 countryCode: US
-snapshotAsOf: "2026-06-28"
+snapshotAsOf: "2026-06-29"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/connecticut
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/connecticut · **Snapshot as of:** 2026-06-28 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/connecticut · **Snapshot as of:** 2026-06-29 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Connecticut[^about]
 
@@ -117,6 +117,12 @@ For homemaker-companion and home-health services, Connecticut voids covenants no
 >
 > Do not use the ordinary *Scott* reasonableness test to rescue a covenant that a Connecticut occupation-specific statute voids. For covered workers, the statute controls first, and common-law reasonableness matters only if the statutory rule leaves room for enforcement [^physician-one-year-fifteen-mile-limit][^security-guard-trade-secret-exception][^home-health-worker-covenant-void].
 
+## How does Connecticut treat employee non-solicitation covenants? {#employee-non-solicitation}
+
+**Short answer.** Connecticut has no appellate decision in our review squarely testing an employee anti-raiding covenant, so by analogy it would be judged under the same *Scott* reasonableness test that governs other restrictive covenants [^ct-ens-scott-reason][^ct-ens-scott-livelihood].
+
+Under that test a restraint on a former employee is enforceable only if it is partial and reasonable, a fair protection of the employer's interest, and not so broad as to harm the public [^ct-ens-scott-reason], and it fails if it would prevent the employee from supporting themselves [^ct-ens-scott-livelihood].
+
 ## Does a Connecticut non-compete toll or extend during breach or litigation? {#extended-for-breach}
 
 **Short answer.** This is an open Connecticut question. No staged Connecticut statute or appellate decision squarely endorses automatic judicial tolling or enforcement of an extension-on-breach clause after the stated restricted period expires [^van-dyck-injunction-moot-after-period][^scott-reasonableness-backdrop-for-tolling].
@@ -208,6 +214,10 @@ HB 5492 would have made a covenant void and unenforceable against employees earn
 [^physician-termination-nonrenewal-limit]: **Conn. Gen. Stat. § 20-14p** — "A covenant not to compete that is entered into, amended, extended or renewed on or after October 1, 2023, shall not be enforceable if (A) the physician who is a party to the employment or other contract or agreement does not agree to a proposed material change to the compensation terms of such contract or agreement prior to or at the time of the extension or renewal of such contract or agreement, and (B) the contract or agreement expires and is not renewed by the employer or the employment or contractual relationship is terminated by the employer, unless such employment or contractual relationship is terminated by the employer for cause." *Conn. Gen. Stat. § 20-14p(b)(3).* <https://www.cga.ct.gov/current/pub/chap_370.htm#sec_20-14p>
 
 [^home-health-client-no-hire-ban]: **Conn. Gen. Stat. § 20-683** — "Any no-hire clause in a contract between a homemaker-companion agency and a client of such agency is against public policy and shall be void." *Conn. Gen. Stat. § 20-683(b).* <https://www.cga.ct.gov/current/pub/chap_400o.htm#sec_20-683>
+
+[^ct-ens-scott-reason]: **Scott v. General Iron & Welding Co.** — "In order to be valid and binding, a covenant which restricts the activities of an employee following the termination of his employment must be partial and restricted in its operation ‘in respect either to time or place, . . . and must be reasonable — that is, it should afford only a fair protection to the interest of the party in whose favor it is made and must not be so large in its operation as to interfere with the interests of the public." *Scott v. Gen. Iron & Welding Co., 171 Conn. 132 (1976).* <https://www.courtlistener.com/opinion/2268855/scott-v-general-iron-welding-co/#:~:text=In%20order%20to%20be%20valid,the%20interests%20of%20the%20public.>
+
+[^ct-ens-scott-livelihood]: **Scott v. General Iron & Welding Co.** — "The interests of the employee himself must also be protected, and a restrictive covenant is unenforceable if by its terms the employee is precluded from pursuing his occupation and thus prevented from supporting himself and his family." *Scott v. Gen. Iron & Welding Co., 171 Conn. 132 (1976).* <https://www.courtlistener.com/opinion/2268855/scott-v-general-iron-welding-co/#:~:text=The%20interests%20of%20the%20employee,supporting%20himself%20and%20his%20family.>
 
 [^van-dyck-injunction-moot-after-period]: **Van Dyck Printing Co. v. DiNicola** — "Because the plaintiffs claim concerning the covenant at issue applied to a two year period commencing in April, 1987, the plaintiff’s request for injunctive relief has become moot." *Van Dyck Printing Co. v. DiNicola, 43 Conn. Supp. 191 (1993).* <https://www.courtlistener.com/opinion/3334840/van-dyck-printing-co-v-dinicola/#:~:text=Because%20the%20plaintiffs%20claim%20concerning,injunctive%20relief%20has%20become%20moot.>
 

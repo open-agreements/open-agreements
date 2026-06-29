@@ -2,7 +2,7 @@
 jurisdiction: "Victoria, Australia"
 slug: victoria
 countryCode: AU
-snapshotAsOf: "2026-06-28"
+snapshotAsOf: "2026-06-29"
 lastReviewed: "2026-06-10"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/au/victoria
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/au/victoria · **Snapshot as of:** 2026-06-28 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/au/victoria · **Snapshot as of:** 2026-06-29 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Compete Enforceability in Victoria[^about]
 
@@ -128,6 +128,12 @@ A drafting device that extends the period by the length of any breach pushes the
 >
 > Do not rely on a clause that purports to extend the non-compete by the length of any breach. No clear Victorian authority validates tolling of the restraint period, and because the existence of the interest is tested as at the date of the contract — with reasonableness generally tested by reference to that date — an automatic extension may risk being treated as unreasonable [^wallis-assessed-at-time-tolling]. Treat the stated duration as the maximum, and address an actual breach through an injunction or a damages claim instead.
 
+## How does Victoria treat customer non-solicitation covenants? {#customer-non-solicitation}
+
+**Short answer.** Victoria recognises an employer's goodwill in, and connection with, its customers as a legitimate interest a non-solicit may protect, but the restraint is void if it goes wider than that interest reasonably requires [^vic-cust-legitimate-interest][^vic-cust-void-if-wider].
+
+In *Wallis Nominees* the Court of Appeal accepted the customer-connection interest of the employer, DWS [^vic-cust-legitimate-interest], yet still struck the clause down as unreasonable in extent and duration [^vic-cust-void-if-wider]. The lesson is that the legitimate interest must be matched by a narrowly drawn restraint.
+
 ## Do Victorian restraint rules differ for contractors and business sales? {#contractors-and-sale}
 
 **Short answer.** In some respects, yes. Restraints on independent contractors are assessed under the same restraint-of-trade reasonableness doctrine as employee covenants; what matters is the substance of the interest at stake rather than the label put on the relationship. Restraints given by the seller of a business are judged more leniently than employee restraints, because a buyer is entitled to protect the goodwill it paid for and the parties bargain on more equal terms [^lindner-sale-distinction].
@@ -208,6 +214,10 @@ Because this is a future legislative matter, employers should treat the timeline
 [^wallis-assessed-at-time-tolling]: **Wallis Nominees (Computing) Pty Ltd v Pickett** — "The assessment of whether a legitimate interest exists is to be assessed at the time the contract is being entered into." *Wallis Nominees (Computing) Pty Ltd v Pickett [2013] VSCA 24 (Warren CJ and Davies AJA).* <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/vic/VSCA/2013/24.html>
 
 [^just-no-readdown-tolling]: **Just Group Ltd v Peck** — "However, it is not permissible for a court to read down an unduly wide clause in order to preserve its validity." *Just Group Ltd v Peck [2016] VSCA 334 (the Court).* <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/vic/VSCA/2016/334.html>
+
+[^vic-cust-legitimate-interest]: **Wallis Nominees (Computing) Pty Ltd v Pickett** — "The legitimate interest alleged by DWS is its goodwill in its customers, the essence of which is its customer connections which may include knowledge of, and influence over, its customers." *Wallis Nominees (Computing) Pty Ltd v Pickett [2013] VSCA 24 at [20].* <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/vic/VSCA/2013/24.html>
+
+[^vic-cust-void-if-wider]: **Wallis Nominees (Computing) Pty Ltd v Pickett** — "we conclude that while DWS did have a legitimate interest in restraining Mr Pickett, the clause was unreasonable having regard to both its extent and to its duration." *Wallis Nominees (Computing) Pty Ltd v Pickett [2013] VSCA 24 at [19].* <https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/vic/VSCA/2013/24.html>
 
 [^lindner-sale-distinction]: **Lindner v Murdock's Garage** — "A distinction is drawn between a restraint upon trade included in an agreement for the sale of a business and a restraint included in an agreement with an employee." *Lindner v Murdock's Garage [1950] HCA 48; (1950) 83 CLR 628 (per Latham CJ, dissenting).* <https://www.hcourt.gov.au/sites/default/files/eresources/1950/HCA/48.pdf>
 
