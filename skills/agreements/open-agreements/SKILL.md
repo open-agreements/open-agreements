@@ -24,6 +24,13 @@ catalog_order: 10
 
 Fill standard legal agreement templates and produce filled DOCX files.
 
+> **Doing legal research, not filling a form?** For U.S. 50-state law (non-compete,
+> consumer privacy, AI employment), see the Legal Practice Library — plain markdown
+> in [`legal-practice-library/`](https://github.com/open-agreements/open-agreements/tree/main/legal-practice-library)
+> or machine-readable twins on openagreements.org (append `.md` / `.json`; surveys
+> add `.csv`). The `data-privacy-law-explainer` and `non-compete-contract-explainer`
+> skills wrap that content.
+
 ## Activation
 
 Use this skill when the user wants to:

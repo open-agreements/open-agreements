@@ -19,27 +19,36 @@
 
 [English](https://github.com/open-agreements/open-agreements/blob/main/README.md) | [Español](https://github.com/open-agreements/open-agreements/blob/main/README.es.md) | [简体中文](https://github.com/open-agreements/open-agreements/blob/main/README.zh.md) | [Português (Brasil)](https://github.com/open-agreements/open-agreements/blob/main/README.pt-br.md) | [Deutsch](https://github.com/open-agreements/open-agreements/blob/main/README.de.md)
 
-Fill standard legal agreement templates and get signable DOCX files. OpenAgreements includes 40+ templates across NDAs, cloud service agreements, employment docs, contractor agreements, SAFEs, and NVCA financing documents.
+Open, primary-source-backed U.S. legal content **and** standard agreement templates — built for legal teams of any size and the agents helping them.
 
-Works with Claude Code, Gemini CLI, Cursor, and local MCP or CLI workflows.
+- **Legal Practice Library** — jurisdiction-by-jurisdiction practice notes (non-compete & restrictive covenants, consumer data privacy, AI employment law), every claim cited to primary law.
+- **Templates** — 40+ fillable forms across NDAs, cloud service agreements, employment docs, SAFEs, and NVCA financing documents.
+- **Checklists** — clause-by-clause reviewer checklists.
+- **Law Surveys** — 50-state and international comparison tables.
+
+Everything ships as plain markdown in this repo and as machine-readable twins on [openagreements.org](https://openagreements.org). Works with Claude Code, Gemini CLI, Cursor, and local MCP or CLI workflows.
 
 [Propose a Form Source](https://github.com/open-agreements/open-agreements/issues/new?template=form-source-proposal.yml) · [Request a Feature](https://github.com/open-agreements/open-agreements/issues/new?template=general-enhancement.yml) · [Report an Issue](https://github.com/open-agreements/open-agreements/issues/new/choose)
 
 ## Who this is for
 
-OpenAgreements starts with standard forms teams already recognize: Common
-Paper, Bonterms, NVCA model documents, and YC SAFE templates. It is for
-small-business legal teams, founders, and the agents helping them who need
-repeatable agreement filling with source, license, and validation context kept
-close to the document.
+OpenAgreements is for legal teams of any size and the agents helping them. The
+practice notes, surveys, and checklists answer jurisdiction-specific questions
+with citations to primary law; the templates start from standard forms teams
+already recognize — Common Paper, Bonterms, NVCA model documents, and YC SAFE
+templates — keeping source, license, and validation context close to the
+document. It does not provide legal advice; consult an attorney.
 
 ## Contents
 
-- [How It Works](#how-it-works)
-- [Available Templates](#available-templates)
+- [Legal Practice Library](#legal-practice-library)
+- [Templates](#available-templates)
+- [Checklists](#checklists)
+- [Law Surveys](#law-surveys)
+- [For AI Agents](#for-ai-agents)
 - [Available Skills](#available-skills)
+- [Template Filling via MCP](#template-filling-via-mcp)
 - [Packages](#packages)
-- [Quick Start](#quick-start)
 - [Install](#install)
 - [Documentation](#documentation)
 - [Privacy](#privacy)
@@ -49,69 +58,28 @@ close to the document.
 - [Built With OpenAgreements](#built-with-openagreements)
 - [License](#license)
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/open-agreements/open-agreements/main/docs/assets/demo-fill-nda.gif" alt="Fill a Mutual NDA in Claude Code — prompt, answer questions, get a signed-ready DOCX" width="720">
-</p>
+## Legal Practice Library
 
-> *Demo: Claude fills a Common Paper Mutual NDA in under 2 minutes. Sped up for brevity.*
+Primary-source-backed legal practice notes, projected from openagreements.org as plain markdown under [`legal-practice-library/`](https://github.com/open-agreements/open-agreements/tree/main/legal-practice-library). Each note cites primary law and links to its canonical page (with machine-readable twins — see [For AI Agents](#for-ai-agents)).
 
-## How It Works
+| Topic | What it covers | Coverage | Browse | Live |
+|-------|----------------|----------|--------|------|
+| Non-Compete & Restrictive Covenants | Enforceability, blue-pencil reformation, tolling, choice of law, and FTC-rule status. | 56 U.S. states + international | [Markdown](https://github.com/open-agreements/open-agreements/tree/main/legal-practice-library/non-compete) | [Web](https://openagreements.org/practice-guides/non-compete) |
+| Consumer Data Privacy | CCPA/CPRA and every comprehensive state privacy act — who's covered, consumer rights, opt-outs, and who enforces. | 51 U.S. states | [Markdown](https://github.com/open-agreements/open-agreements/tree/main/legal-practice-library/privacy) | [Web](https://openagreements.org/practice-guides/privacy/us) |
+| AI Vendors | Zero-data-retention, data residency, and the terms that matter in AI vendor contracts. | 9 notes | [Markdown](https://github.com/open-agreements/open-agreements/tree/main/legal-practice-library/ai-vendors) | [Web](https://openagreements.org/practice-guides/ai-vendors) |
+| AI & the Workforce | AI in hiring and adverse-action, workforce AI policies, and outside-counsel transitions. | 20 notes | [Markdown](https://github.com/open-agreements/open-agreements/tree/main/legal-practice-library) | [Web](https://openagreements.org/practice-guides) |
+| Privacy-Policy Requirement Phrasings | Preferred phrasings for what a U.S. consumer privacy policy must disclose. | 8 notes | [Markdown](https://github.com/open-agreements/open-agreements/tree/main/legal-practice-library/privacy-policy) | [Web](https://openagreements.org/practice-guides/privacy/us) |
 
-<!-- SYNC:architecture-diagram BEGIN -->
-```mermaid
-%%{init: {"flowchart": {"htmlLabels": true, "curve": "basis", "nodeSpacing": 30, "rankSpacing": 50}, "themeVariables": {"fontSize": "14px"}} }%%
-flowchart LR
-    InputLeft["<b>Catalog + values</b><br/>Common Paper · Bonterms ·<br/>NVCA · YC SAFE<br/><br/>party info · dates · terms"]
-
-    subgraph Server["open-agreements — local MCP server"]
-        direction LR
-
-        subgraph Discover["<b>1. Discover</b>"]
-            direction TB
-            DiscTool["<code>list_templates(cursor, limit)</code><br/><code>get_template(template_id)</code>"]
-        end
-
-        subgraph Fill["<b>2. Fill</b>"]
-            direction TB
-            FillTool["<code>fill_template(<br/>&nbsp;&nbsp;template, values,<br/>&nbsp;&nbsp;output_path, return_mode)</code>"]
-        end
-
-        Discover --> Fill
-    end
-
-    OutputRight["<b>Filled .docx</b><br/>ready to review, sign, and send"]
-
-    subgraph Client [" "]
-        direction TB
-        Prompt["<b>Prompt</b><br/>'Fill a Mutual NDA for Acme and Beta'"]
-        Agent["<b>Coding agent / MCP client</b><br/>Claude Code · Cursor · Gemini CLI"]
-        Prompt --> Agent
-    end
-
-    InputLeft --> Discover
-    Fill --> OutputRight
-    Agent <-->|tool call / tool result| Server
-
-    classDef io fill:#f5f5f5,stroke:#888,color:#222
-    classDef server fill:#eff6ff,stroke:#3b82f6,color:#1e3a8a
-    classDef stage fill:#eef2ff,stroke:#6366f1,color:#1e1b4b
-    classDef tools fill:#ecfdf5,stroke:#10b981,color:#064e3b
-    classDef ext fill:#ddd6fe,stroke:#7c3aed,color:#3b0764
-    classDef hidden fill:none,stroke:none
-    class InputLeft,OutputRight io
-    class Server server
-    class Discover,Fill stage
-    class DiscTool,FillTool tools
-    class Prompt,Agent ext
-    class Client hidden
-```
-<!-- SYNC:architecture-diagram END -->
-
-> *Local stdio MCP shown. The hosted HTTP server at `openagreements.org/api/mcp` exposes the same workflow plus a `search_templates` tool.*
+Backed by 516 verbatim [case excerpts](https://github.com/open-agreements/open-agreements/tree/main/legal-practice-library/case-excerpts) — the passages our notes rely on, each linked to the full opinion on CourtListener. Supporting evidence, not a case database.
 
 ## Available Templates
 
-The Source column links to the upstream standard, source document, or canonical project page (varies by publisher). The License column shows redistribution terms. Repo links point to the GitHub content directory for each template or recipe.
+Fill standard legal agreement templates and get signable DOCX files — party
+info, dates, and terms in, formatting-preserving Word document out. The Source
+column links to the upstream standard or canonical project page (varies by
+publisher); the License column shows redistribution terms; Repo links point to
+the GitHub content directory for each template or recipe. To fill one with an
+agent or the CLI, see [Template Filling via MCP](#template-filling-via-mcp).
 
 ### Confidentiality
 
@@ -204,6 +172,41 @@ The Source column links to the upstream standard, source document, or canonical 
 | Stockholder Consent SAFE | [Website](https://usejunior.com/templates/openagreements-stockholder-consent-safe?utm_source=github&utm_medium=readme&utm_campaign=open-agreements) | [OpenAgreements](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-stockholder-consent-safe) | [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-stockholder-consent-safe) |
 | Working Group List | [Website](https://usejunior.com/templates/working-group-list?utm_source=github&utm_medium=readme&utm_campaign=open-agreements) | [OpenAgreements](https://github.com/open-agreements/open-agreements) | [CC0-1.0](https://creativecommons.org/publicdomain/zero/1.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/working-group-list) |
 
+## Checklists
+
+Clause-by-clause reviewer checklists. Each has `.json` and `.docx` twins on the web, and contract checklists also emit a `contract-api.json` for template integrations.
+
+| Topic | What it covers | Browse | Live |
+|-------|----------------|--------|------|
+| Non-Compete review | Clause-by-clause reviewer checklists — a baseline plus 50-state overlays. | [Markdown](https://github.com/open-agreements/open-agreements/tree/main/legal-practice-library/checklists/non-compete) | [Web](https://openagreements.org/checklists/non-compete/us) |
+| Privacy-Policy review | What a compliant U.S. consumer privacy policy must contain. | [Markdown](https://github.com/open-agreements/open-agreements/tree/main/legal-practice-library/checklists/privacy-policy) | [Web](https://openagreements.org/checklists/privacy-policy/us) |
+| Venture Financing review | NVCA model-document review (e.g. the Stock Purchase Agreement). | [Markdown](https://github.com/open-agreements/open-agreements/tree/main/legal-practice-library/checklists/venture-financing) | [Web](https://openagreements.org/checklists/venture-financing/nvca-stock-purchase-agreement) |
+
+## Law Surveys
+
+Side-by-side comparison tables across jurisdictions. The web pages also publish machine-readable `.json` and `.csv` twins (append `.json` / `.csv`, e.g. `/surveys/non-compete/us.csv`).
+
+| Survey | Browse | Live |
+|--------|--------|------|
+| U.S. 50-State Non-Compete Survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/non-compete/us.md) | [Web](https://openagreements.org/surveys/non-compete/us) |
+| U.S. State Consumer Privacy Survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/privacy/us.md) | [Web](https://openagreements.org/surveys/privacy/us) |
+| Worldwide Non-Compete Survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/non-compete/worldwide.md) | [Web](https://openagreements.org/surveys/non-compete/worldwide) |
+
+## For AI Agents
+
+Every practice note, survey, and checklist is plain markdown in
+[`legal-practice-library/`](https://github.com/open-agreements/open-agreements/tree/main/legal-practice-library) — clone or fetch it directly. The pages also publish machine-readable twins on openagreements.org, which vary by content type:
+
+| Content | Markdown | JSON | Other |
+|---------|----------|------|-------|
+| Practice guides | `.md` or `/markdown` | `.json` or `/json` | — |
+| Law surveys | — | `.json` or `/json` | `.csv` (spreadsheet import) |
+| Checklists | `.md` or `/markdown` | `.json` or `/json` | `contract-api.json` (some contract checklists) |
+
+For example: `https://openagreements.org/practice-guides/non-compete/us/texas.json`, `https://openagreements.org/surveys/non-compete/us.csv`.
+
+The Legal Practice Library is a one-way projection from [UseJunior/legal-explainer](https://openagreements.org); fixes land upstream, not in this repo. Content is licensed CC BY 4.0.
+
 ## Available Skills
 
 Install any skill by name (paths below are for browsing only — installs are name-based and survive reorganization):
@@ -211,6 +214,13 @@ Install any skill by name (paths below are for browsing only — installs are na
 ```bash
 npx skills add open-agreements/open-agreements --skill <skill-name>
 ```
+
+### Legal Explainers
+
+| Skill | Description |
+|-------|-------------|
+| [non-compete-contract-explainer](https://github.com/open-agreements/open-agreements/tree/main/skills/legal-explainers/non-compete-contract-explainer) | Explain U.S. state-by-state (and select international) non-compete and restrictive-covenant law — whether a non-compete is enforceable, blue-pencil reformation, tolling, choice of law, independent-contractor reach, and recent bans. Reads a bundled, source-cited snapshot per jurisdiction. Use when the user says "non-compete," "noncompete contract," "restrictive covenant," "non-solicit," "garden leave," "covenant not to compete," "employment agreement," asks "is my non-compete enforceable," or names a U.S. state. |
+| [data-privacy-law-explainer](https://github.com/open-agreements/open-agreements/tree/main/skills/legal-explainers/data-privacy-law-explainer) | Explain U.S. state-by-state consumer data-privacy law (CCPA/CPRA, TDPSA, VCDPA, CPA, and the other comprehensive state acts) — who a law covers, applicability thresholds, privacy-policy requirements, consumer rights and opt-outs, private rights of action, and who enforces. Reads a bundled, source-cited snapshot per state. Use when the user says "CCPA," "CPRA," "state privacy law," "privacy policy," "data subject request," "consumer rights request," "opt-out of sale," "data broker," "sensitive data," asks "do I need to comply with <state>'s privacy law," or names a U.S. state together with privacy. |
 
 ### Agreement Drafting And Filling
 
@@ -233,13 +243,6 @@ npx skills add open-agreements/open-agreements --skill <skill-name>
 | [client-email](https://github.com/open-agreements/open-agreements/tree/main/skills/client-workflows/client-email) | Draft client-facing emails for legal services — cover notes for contract deliverables, redline summaries, deal status updates, and follow-ups. Use when composing or revising outbound emails to clients about legal work product. Triggers on "draft reply," "email to client," "cover note," "write back to," or any outbound email accompanying a legal deliverable. |
 | [delaware-franchise-tax](https://github.com/open-agreements/open-agreements/tree/main/skills/client-workflows/delaware-franchise-tax) | File your Delaware annual franchise tax and annual report. Guides you through tax calculation (Authorized Shares and Assumed Par Value Capital methods), the eCorp portal filing process, and payment. For Delaware C-Corps (March 1 deadline) and LLCs/LPs/GPs (June 1 deadline). Use when user says "Delaware franchise tax," "annual report Delaware," "file franchise tax," or "eCorp portal." |
 
-### Legal Explainers
-
-| Skill | Description |
-|-------|-------------|
-| [non-compete-contract-explainer](https://github.com/open-agreements/open-agreements/tree/main/skills/legal-explainers/non-compete-contract-explainer) | Explain U.S. state-by-state (and select international) non-compete and restrictive-covenant law — whether a non-compete is enforceable, blue-pencil reformation, tolling, choice of law, independent-contractor reach, and recent bans. Reads a bundled, source-cited snapshot per jurisdiction. Use when the user says "non-compete," "noncompete contract," "restrictive covenant," "non-solicit," "garden leave," "covenant not to compete," "employment agreement," asks "is my non-compete enforceable," or names a U.S. state. |
-| [data-privacy-law-explainer](https://github.com/open-agreements/open-agreements/tree/main/skills/legal-explainers/data-privacy-law-explainer) | Explain U.S. state-by-state consumer data-privacy law (CCPA/CPRA, TDPSA, VCDPA, CPA, and the other comprehensive state acts) — who a law covers, applicability thresholds, privacy-policy requirements, consumer rights and opt-outs, private rights of action, and who enforces. Reads a bundled, source-cited snapshot per state. Use when the user says "CCPA," "CPRA," "state privacy law," "privacy policy," "data subject request," "consumer rights request," "opt-out of sale," "data broker," "sensitive data," asks "do I need to comply with <state>'s privacy law," or names a U.S. state together with privacy. |
-
 ### Compliance And Audit
 
 | Skill | Description |
@@ -249,6 +252,60 @@ npx skills add open-agreements/open-agreements --skill <skill-name>
 | [iso-27001-evidence-collection](https://github.com/open-agreements/open-agreements/tree/main/skills/compliance/iso-27001-evidence-collection) | Collect, organize, and validate evidence for ISO 27001 and SOC 2 audits. API-first approach with CLI commands for major cloud platforms. Produces timestamped, auditor-ready evidence packages. Use when user says "collect audit evidence," "prepare evidence package," "evidence for the auditor," "refresh evidence," or "evidence gap analysis." |
 
 Internal repo-maintenance skills (marked `internal: true` in their SKILL.md metadata) are excluded from this catalog and from default `npx skills add` installs.
+
+## Template Filling via MCP
+
+Discover templates, interview for field values, and render a signed-ready DOCX —
+from a coding agent (Claude Code, Cursor, Gemini CLI) over MCP, or from the CLI.
+The MCP server today focuses on **template filling**; the Legal Practice Library
+above is consumed as markdown or via the web twins.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/open-agreements/open-agreements/main/docs/assets/demo-fill-nda.gif" alt="Fill a Mutual NDA in Claude Code — prompt, answer questions, get a signed-ready DOCX" width="720">
+</p>
+
+> *Demo: Claude fills a Common Paper Mutual NDA in under 2 minutes. Sped up for brevity.*
+>
+> *Local stdio MCP and the hosted HTTP server at `openagreements.org/api/mcp` expose the same workflow; the hosted server adds a `search_templates` tool.*
+
+### Quick Start
+
+#### With Claude Code
+
+Ask Claude:
+
+```text
+Fill the Common Paper mutual NDA for my company
+```
+
+Claude can discover templates, interview you for field values, and render a signed-ready DOCX.
+
+#### With the CLI
+
+```bash
+# See all available templates
+open-agreements list
+
+# Fill a template from a JSON data file
+open-agreements fill common-paper-mutual-nda -d values.json -o my-nda.docx
+
+# Fill with inline values
+open-agreements fill common-paper-mutual-nda --set party_1_name="Acme Corp" --set governing_law="Delaware"
+```
+
+#### Example Prompts
+
+- "Draft an NDA for our construction subcontractor"
+- "Create a consulting agreement for our insurance agency"
+- "Fill the independent contractor agreement for a freelance designer"
+- "Generate a SAFE with a $5M valuation cap"
+
+#### What Happens
+
+1. The agent runs `list --json` to discover templates and their fields.
+2. It interviews you for field values grouped by section.
+3. It runs `fill <template>` to render a DOCX preserving the source formatting.
+4. You review and sign the output document.
 
 ## Packages
 
@@ -270,6 +327,7 @@ open-agreements/
     templates/            # Fillable DOCX templates with {tag} placeholders
     external/             # YC SAFE templates vendored unchanged
     recipes/              # Recipe instructions for non-redistributable sources
+  legal-practice-library/ # Practice notes, surveys, and checklists (markdown)
   skills/                 # Agent skill definitions
   server.json             # MCP server manifest
   gemini-extension.json   # Gemini CLI extension config
@@ -342,45 +400,6 @@ This repository includes a Cursor plugin manifest at `.cursor-plugin/plugin.json
 Choose based on document sensitivity and internal policy. See the trust checklist below for the data-flow summary.
 
 </details>
-
-## Quick Start
-
-### With Claude Code
-
-Ask Claude:
-
-```text
-Fill the Common Paper mutual NDA for my company
-```
-
-Claude can discover templates, interview you for field values, and render a signed-ready DOCX.
-
-### With the CLI
-
-```bash
-# See all available templates
-open-agreements list
-
-# Fill a template from a JSON data file
-open-agreements fill common-paper-mutual-nda -d values.json -o my-nda.docx
-
-# Fill with inline values
-open-agreements fill common-paper-mutual-nda --set party_1_name="Acme Corp" --set governing_law="Delaware"
-```
-
-### Example Prompts
-
-- "Draft an NDA for our construction subcontractor"
-- "Create a consulting agreement for our insurance agency"
-- "Fill the independent contractor agreement for a freelance designer"
-- "Generate a SAFE with a $5M valuation cap"
-
-### What Happens
-
-1. The agent runs `list --json` to discover templates and their fields.
-2. It interviews you for field values grouped by section.
-3. It runs `fill <template>` to render a DOCX preserving the source formatting.
-4. You review and sign the output document.
 
 ## Install
 
@@ -473,7 +492,7 @@ Planned work is tracked in [open issues](https://github.com/open-agreements/open
 
 ## Contributing
 
-See [CONTRIBUTING.md](https://github.com/open-agreements/open-agreements/blob/main/CONTRIBUTING.md) for how to add templates, recipes, and other improvements.
+See [CONTRIBUTING.md](https://github.com/open-agreements/open-agreements/blob/main/CONTRIBUTING.md) for how to add templates, recipes, and other improvements. The Legal Practice Library is generated upstream — see its [`index.md`](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/index.md) for where to send content fixes.
 
 ## Built With OpenAgreements
 
@@ -489,10 +508,10 @@ Building on OpenAgreements? Open a PR to add your project.
 
 Project code is licensed under [Apache License 2.0](LICENSE). The Apache license covers the code only — bundled template content retains its upstream licenses, set by its respective authors:
 
-- CC BY 4.0 for Common Paper, Bonterms, and OpenAgreements-authored templates
+- CC BY 4.0 for Common Paper, Bonterms, OpenAgreements-authored templates, and the Legal Practice Library
 - CC BY-ND 4.0 for Y Combinator SAFE templates vendored unchanged
 - proprietary or non-redistributable for NVCA source documents handled via recipe workflows
 
 See each template's `metadata.yaml` for source-specific details.
 
-This tool generates documents from standard templates. It does not provide legal advice. Consult an attorney for legal guidance.
+This tool generates documents from standard templates and provides general legal information. It does not provide legal advice. Consult an attorney for legal guidance.

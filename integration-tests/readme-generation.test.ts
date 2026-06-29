@@ -15,6 +15,7 @@ import { describe, expect } from 'vitest';
 import { itAllure } from './helpers/allure-test.js';
 import { buildReadme } from '../scripts/generate_readme.mjs';
 import { buildCatalog } from '../scripts/lib/catalog-data.mjs';
+import { buildLibrary } from '../scripts/lib/library-data.mjs';
 
 const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const it = itAllure.epic('Platform & Distribution');
@@ -32,10 +33,19 @@ describe('README generation', () => {
       expect(first).toBe(second);
 
       // Stable headings sourced from the checked-in template.
-      expect(first).toContain('## How It Works');
       expect(first).toContain('## Available Templates');
       expect(first).toContain('## Available Skills');
       expect(first).toContain('## Packages');
+      expect(first).toContain('## Template Filling via MCP');
+
+      // Content-first sections (Legal Practice Library leads the README).
+      expect(first).toContain('## Legal Practice Library');
+      expect(first).toContain('## Law Surveys');
+      expect(first).toContain('## Checklists');
+      // Library rows link to the content host, not the usejunior.com template site.
+      expect(first).toMatch(
+        /https:\/\/openagreements\.org\/practice-guides\/non-compete/,
+      );
 
       // npm-safe absolute links: repo content is linked with absolute GitHub
       // URLs (npm renders the README without repo-relative context).
@@ -60,6 +70,14 @@ describe('README generation', () => {
       const catalogDataFile = readRepoFile('site/_data/catalog.js');
       expect(catalogDataFile).toContain('../../scripts/lib/catalog-data.mjs');
       expect(catalogDataFile).toContain('buildCatalog');
+
+      // The Legal Practice Library index is likewise a pure read of the
+      // committed OKF tree; counts are derived, never hard-coded.
+      const library = buildLibrary({ rootDir: ROOT });
+      expect(library.practiceGuides.length).toBeGreaterThan(0);
+      expect(library.practiceGuideCount).toBeGreaterThan(0);
+      expect(library.surveys.length).toBeGreaterThan(0);
+      expect(library.checklistCount).toBeGreaterThan(0);
     },
   );
 
