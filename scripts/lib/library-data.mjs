@@ -91,9 +91,18 @@ export const CHECKLIST_SECTIONS = [
 export const SURVEYS_DIR = "surveys";
 export const CASE_EXCERPTS_DIR = "case-excerpts";
 
-// State-law notes carry `STATE_TYPE`; non-U.S.-state jurisdiction notes (e.g.
+// State-law guides carry `STATE_TYPE`; non-U.S.-state jurisdiction guides (e.g.
 // Australian states) carry `NOTE_TYPE` and signal "+ international". The pillar
 // ("Law Topic") and other types are neither, so they don't trigger it.
+//
+// These two strings are NOT reader copy — they are the bundle's machine-readable
+// `type` controlled vocabulary, written verbatim into the projected
+// `legal-practice-library/**` frontmatter by legal-explainer's
+// scripts/render-okf-bundle.ts and matched exactly below (`type === STATE_TYPE`).
+// They are deliberately left as "Practice Note" under the "practice notes →
+// practice guides" rename (#1245): renaming them here without re-projecting the
+// bot-managed bundle would zero out the counts. The reader-facing label lives in
+// the website hero and this README's prose, and has been renamed there.
 const STATE_TYPE = "State Law Practice Note";
 const NOTE_TYPE = "Practice Note";
 
