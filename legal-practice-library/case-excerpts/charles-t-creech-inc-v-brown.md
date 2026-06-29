@@ -29,8 +29,8 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > Because the Agreement did not require Creech to forbear the exercise of some legal right or otherwise result in some detriment to Creech, there was no consideration.
 
-- supports: `consideration`, `entire-agreement-amendment-waiver-e-signatures`, `restrictive-covenants-each-independently-includable`, `timing-and-execution-acknowledgements`
-- source_cards: `creech-no-consideration`, `ky-creech-covs`, `ky-creech-entire`, `ky-creech-forbearance-timing`
+- supports: `consideration`, `employee-non-solicitation`, `entire-agreement-amendment-waiver-e-signatures`, `restrictive-covenants-each-independently-includable`, `timing-and-execution-acknowledgements`
+- source_cards: `creech-no-consideration`, `ky-creech-covs`, `ky-creech-entire`, `ky-creech-forbearance-timing`, `ky-ens-creech`
 - cited_by: [Non-Compete Agreement Review Checklist — Kentucky](../checklists/non-compete/us/kentucky.md), [Non-Competes in Kentucky](../non-compete/us/kentucky.md)
 - link_to_source: <https://www.courtlistener.com/opinion/5444327/charles-t-creech-inc-v-brown/#:~:text=Because%20the%20Agreement%20did%20not,Creech%2C%20there%20was%20no%20consideration.>
 

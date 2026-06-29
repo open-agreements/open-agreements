@@ -2,7 +2,7 @@
 jurisdiction: "Nebraska"
 slug: nebraska
 countryCode: US
-snapshotAsOf: "2026-06-28"
+snapshotAsOf: "2026-06-29"
 lastReviewed: "2026-06-02"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/nebraska
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/nebraska · **Snapshot as of:** 2026-06-28 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/nebraska · **Snapshot as of:** 2026-06-29 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in Nebraska[^about]
 
@@ -95,6 +95,12 @@ This is one of Nebraska's most important drafting rules. If the covenant reaches
 *Chambers-Dobson* involved both a sale agreement and a later employment agreement. The sale covenant protected the purchased customer list and goodwill; the employment covenant was upheld separately because the employee acquired customer information and goodwill during employment and the restricted customer pools were limited. Either way, the restrained party could still compete broadly outside those specific customer pools.
 
 That distinction matters. A sale covenant can protect purchased goodwill; an employment covenant cannot be a disguised market ban merely because the employee knows the business.
+
+## How does Nebraska treat employee non-solicitation covenants? {#employee-non-solicitation}
+
+**Short answer.** Little Nebraska law in our review squarely addresses employee raiding, so the covenant is judged under the same three-part *Securities Acceptance Corp. v. Brown* reasonableness test as a non-compete — not injurious to the public, no greater than necessary to protect a legitimate interest, and not unduly harsh on the employee [^ne-ens-brown].
+
+Overbreadth is fatal, because Nebraska courts will not reform a covenant not to compete to make it enforceable [^ne-ens-waadah].
 
 ## Can a successor enforce a Nebraska non-compete after a merger? {#successor-merger}
 
@@ -176,6 +182,10 @@ For modern media, technology, and sales roles, *Sisk* is the practical warning. 
 [^q5-waadah-entire-covenant]: **Unlimited Opportunity, Inc. v. Waadah** — "The district court was correct to consider the two covenants together and find the entire clause invalid if one portion is invalid." *Unlimited Opportunity, Inc. v. Waadah, 290 Neb. 629, 637, 861 N.W.2d 437 (2015).* <https://www.courtlistener.com/opinion/2792825/unlimited-opportunity-v-waadah/#:~:text=The%20district%20court%20was%20correct,if%20one%20portion%20is%20invalid.>
 
 [^q6-chambers-goodwill-sale]: **Chambers-Dobson, Inc. v. Squier** — "Thus, a covenant not to compete which is contained in a contract for sale of a business is a seller’s self-imposed restraint from trade and is frequently necessary to make goodwill in the seller’s business a transferable asset and ensure that the buyer receives the full value of acquired goodwill." *Chambers-Dobson, Inc. v. Squier, 238 Neb. 748, 756, 472 N.W.2d 391 (1991).* <https://www.courtlistener.com/opinion/2189174/chambers-dobson-inc-v-squier/#:~:text=Thus%2C%20a%20covenant%20not%20to,full%20value%20of%20acquired%20goodwill.>
+
+[^ne-ens-brown]: **Securities Acceptance Corp. v. Brown** — "There are three general requirements relating to partial restraints of trade: First, is the restriction reasonable in the sense that it is not injurious to the public; second, is the restriction reasonable in the sense that it is no greater than is reasonably necessary to protect the employer in some legitimate interest; and, third, is the restriction reasonable in the sense that it is not unduly harsh and oppressive on the employee." *Securities Acceptance Corp. v. Brown, 171 Neb. 406, 417, 106 N.W.2d 456 (1960).* <https://www.courtlistener.com/opinion/1948918/securities-acceptance-corporation-v-brown/#:~:text=There%20are%20three%20general%20requirements,and%20oppressive%20on%20the%20employee.>
+
+[^ne-ens-waadah]: **Unlimited Opportunity, Inc. v. Waadah** — "It is not the function of the courts to reform a covenant not to compete in order to make it enforceable." *Unlimited Opportunity, Inc. v. Waadah, 290 Neb. 629, 630, 861 N.W.2d 437 (2015).* <https://www.courtlistener.com/opinion/2792825/unlimited-opportunity-v-waadah/#:~:text=It%20is%20not%20the%20function,order%20to%20make%20it%20enforceable.>
 
 [^q7-aon-merger-successor]: **Aon Consulting, Inc. v. Midlands Financial Benefits, Inc.** — "We agree with those cases which hold, under statutes similar to Maryland's, that a covenant not to compete is an asset of a corporation which passes by operation of law to a successor corporation as the result of a merger, regardless of whether the agreement would otherwise be assignable." *Aon Consulting, Inc. v. Midlands Fin. Benefits, Inc., 275 Neb. 642, 748 N.W.2d 626 (2008).* <https://www.courtlistener.com/opinion/2139960/aon-consulting-v-midlands-financial/#:~:text=We%20agree%20with%20those%20cases,agreement%20would%20otherwise%20be%20assignable.>
 

@@ -47,8 +47,8 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > In order to be valid and binding, a covenant which restricts the activities of an employee following the termination of his employment must be partial and restricted in its operation “in respect either to time or place, . . . and must be reasonable — that is, it should afford only a fair protection to the interest of the party in whose favor it is made and must not be so large in its operation as to interfere with the interests of the public.
 
-- supports: `connecticut-statutory-gates`, `employee-non-compete-enforceability`, `restrictive-covenants-each-independently-includable`
-- source_cards: `scott-employee-noncompete-reasonableness`, `scott-five-factor-gate`, `scott-reasonableness-covenants`
+- supports: `connecticut-statutory-gates`, `employee-non-compete-enforceability`, `employee-non-solicitation`, `restrictive-covenants-each-independently-includable`
+- source_cards: `ct-ens-scott-reason`, `scott-employee-noncompete-reasonableness`, `scott-five-factor-gate`, `scott-reasonableness-covenants`
 - cited_by: [Non-Compete Agreement Review Checklist — Connecticut](../checklists/non-compete/us/connecticut.md), [Non-Competes in Connecticut](../non-compete/us/connecticut.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2268855/scott-v-general-iron-welding-co/#:~:text=In%20order%20to%20be%20valid,the%20interests%20of%20the%20public.>
 
@@ -65,8 +65,8 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > The interests of the employee himself must also be protected, and a restrictive covenant is unenforceable if by its terms the employee is precluded from pursuing his occupation and thus prevented from supporting himself and his family.
 
-- supports: `connecticut-statutory-gates`, `definitions`, `employee-non-compete-enforceability`, `restrictive-covenants-each-independently-includable`
-- source_cards: `scott-employee-livelihood`, `scott-livelihood-covenants`, `scott-livelihood-defs`, `scott-livelihood-gate`
+- supports: `connecticut-statutory-gates`, `definitions`, `employee-non-compete-enforceability`, `employee-non-solicitation`, `restrictive-covenants-each-independently-includable`
+- source_cards: `ct-ens-scott-livelihood`, `scott-employee-livelihood`, `scott-livelihood-covenants`, `scott-livelihood-defs`, `scott-livelihood-gate`
 - cited_by: [Non-Compete Agreement Review Checklist — Connecticut](../checklists/non-compete/us/connecticut.md), [Non-Competes in Connecticut](../non-compete/us/connecticut.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2268855/scott-v-general-iron-welding-co/#:~:text=The%20interests%20of%20the%20employee,supporting%20himself%20and%20his%20family.>
 

@@ -2,7 +2,7 @@
 jurisdiction: "District of Columbia"
 slug: district-of-columbia
 countryCode: US
-snapshotAsOf: "2026-06-28"
+snapshotAsOf: "2026-06-29"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/us/district-of-columbia
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/district-of-columbia · **Snapshot as of:** 2026-06-28 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/us/district-of-columbia · **Snapshot as of:** 2026-06-29 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in the District of Columbia[^about]
 
@@ -116,6 +116,14 @@ The statute carves a confidentiality restriction out of the non-compete definiti
 > **Drafting note.**
 >
 > Keep a confidentiality clause to genuine confidential and proprietary information. The carve-out protects restrictions on disclosing or using employer information; a nondisclosure clause drafted so broadly that it effectively prevents the employee from working for a competitor risks being recharacterized as a prohibited non-compete provision [^confidentiality-carveout].
+
+## How does the District of Columbia treat customer non-solicitation covenants? {#customer-non-solicitation}
+
+**Short answer.** An ordinary customer non-solicit falls outside the District's statutory non-compete ban because it does not bar the employee from working for another for pay or running their own business, so it is judged under common-law reasonableness [^dc-cust-statute-outside-ban][^dc-cust-ellis-partial].
+
+The statutory ban reaches only a provision that stops an employee from performing work for another for pay or operating their own business, and an ordinary customer non-solicit does neither [^dc-cust-statute-outside-ban]. Such a covenant is instead measured against common-law reasonableness, under which a District of Columbia court may partially enforce the reasonable portion of an overbroad restraint rather than void it entirely [^dc-cust-ellis-partial].
+
+One untested wrinkle remains: a customer non-solicit drafted so broadly that it effectively forecloses working could in theory be recharacterized as a banned non-compete, a question no District of Columbia court has yet decided in our review.
 
 ## Are sale-of-business non-competes enforceable in the District of Columbia? {#sale-of-business}
 
@@ -219,6 +227,10 @@ The duration limits are written as hard caps: a non-medical highly compensated e
 [^utsa-injunction]: **D.C. Code § 36-402** — "Actual or threatened misappropriation may be enjoined." *D.C. Code § 36-402(a).* <https://code.dccouncil.gov/us/dc/council/code/sections/36-402>
 
 [^lti-carveout]: **D.C. Code § 32-581.01** — "That provides a long-term incentive." *D.C. Code § 32-581.01(15)(C).* <https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01>
+
+[^dc-cust-statute-outside-ban]: **D.C. Code § 32-581.01** — "‘Non-compete provision’ means a provision in a written agreement or a workplace policy that prohibits an employee from performing work for another for pay or from operating the employee's own business." *D.C. Code § 32-581.01(15).* <https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01>
+
+[^dc-cust-ellis-partial]: **Ellis v. James V. Hurson Associates, Inc.** — "we join those jurisdictions which have rejected the view that covenants not to compete must be enforceable in whole or not at all." *Ellis v. James V. Hurson Assocs., Inc., 565 A.2d 615, 618 (D.C. 1989).* <https://www.courtlistener.com/opinion/1561257/ellis-v-james-v-hurson-associates-inc/#:~:text=we%20join%20those%20jurisdictions%20which,whole%20or%20not%20at%20all.>
 
 [^sale-carveout]: **D.C. Code § 32-581.01** — "Contained within or executed contemporaneously with an agreement between the seller of a business and one or more buyers of that business wherein the seller agrees not to compete with the buyer's business" *D.C. Code § 32-581.01(15)(A).* <https://code.dccouncil.gov/us/dc/council/code/sections/32-581.01>
 

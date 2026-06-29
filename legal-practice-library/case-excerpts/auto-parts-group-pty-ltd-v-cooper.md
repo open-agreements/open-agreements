@@ -70,11 +70,29 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 - cited_by: [Non-Compete Enforceability in Queensland](../non-compete/au/queensland.md)
 - link_to_source: <https://archive.sclqld.org.au/qjudgment/2015/QSC15-155.pdf>
 
+### auto-parts-group-pty-ltd-v-cooper-the-principal-interest-which-can-be-286c98a6 {#auto-parts-group-pty-ltd-v-cooper-the-principal-interest-which-can-be-286c98a6}
+
+> The principal interest which can be protected by a restraint against a former employee is the benefit of the former employer of the relationships with its customers.
+
+- supports: `customer-non-solicitation`
+- source_cards: `qld-cust-principal-interest`
+- cited_by: [Non-Compete Enforceability in Queensland](../non-compete/au/queensland.md)
+- link_to_source: <https://archive.sclqld.org.au/qjudgment/2015/QSC15-155.pdf>
+
 ### auto-parts-group-pty-ltd-v-cooper-the-reasonableness-of-the-restraint-is-e441b57e {#auto-parts-group-pty-ltd-v-cooper-the-reasonableness-of-the-restraint-is-e441b57e}
 
 > The reasonableness of the restraint is determined at the date of entry into the agreement.
 
 - supports: `garden-leave`, `reasonableness-factors`, `tolling`
 - source_cards: `autoparts-tested-at-contract`, `autoparts-tested-at-contract-gl`, `autoparts-tested-at-contract-tolling`
+- cited_by: [Non-Compete Enforceability in Queensland](../non-compete/au/queensland.md)
+- link_to_source: <https://archive.sclqld.org.au/qjudgment/2015/QSC15-155.pdf>
+
+### auto-parts-group-pty-ltd-v-cooper-the-restraint-must-operate-to-protect-7766c24e {#auto-parts-group-pty-ltd-v-cooper-the-restraint-must-operate-to-protect-7766c24e}
+
+> The restraint must operate to protect a legitimate interest of the covenantee. The test is whether the restrictive covenant exceeds what is reasonable and necessary for the protection of the legitimate interest.
+
+- supports: `customer-non-solicitation`
+- source_cards: `qld-cust-test-necessary`
 - cited_by: [Non-Compete Enforceability in Queensland](../non-compete/au/queensland.md)
 - link_to_source: <https://archive.sclqld.org.au/qjudgment/2015/QSC15-155.pdf>

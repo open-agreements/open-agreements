@@ -27,8 +27,8 @@ Supporting case-law excerpt. Quoted across 2 document(s) in the OpenAgreements l
 
 > agreements on restraint of trade are reasonable if, “on consideration of the subject, nature of the business, situation of the parties and circumstances of the particular case, the restriction is such only as to afford fair protection to the interests of the covenan-tee and is not so large as to interfere with the public interests or impose undue hardship on the party restricted.
 
-- supports: `definitions`, `duration-limits`, `employee-non-compete-enforceability`, `extended-for-breach`, `kentucky-statutory-gates`, `restrictive-covenants-each-independently-includable`, `tolling-during-breach`
-- source_cards: `kegel-reasonableness-test`, `ky-kegel-covs`, `ky-kegel-defs`, `ky-kegel-gate`, `ky-kegel-tolling-standard`, `q4-kegel-reasonableness`, `q6-kegel-reasonableness-backdrop`
+- supports: `definitions`, `duration-limits`, `employee-non-compete-enforceability`, `employee-non-solicitation`, `extended-for-breach`, `kentucky-statutory-gates`, `restrictive-covenants-each-independently-includable`, `tolling-during-breach`
+- source_cards: `kegel-reasonableness-test`, `ky-ens-kegel`, `ky-kegel-covs`, `ky-kegel-defs`, `ky-kegel-gate`, `ky-kegel-tolling-standard`, `q4-kegel-reasonableness`, `q6-kegel-reasonableness-backdrop`
 - cited_by: [Non-Compete Agreement Review Checklist — Kentucky](../checklists/non-compete/us/kentucky.md), [Non-Competes in Kentucky](../non-compete/us/kentucky.md)
 - link_to_source: <https://www.courtlistener.com/opinion/2169063/kegel-v-tillotson/#:~:text=agreements%20on%20restraint%20of%20trade,hardship%20on%20the%20party%20restricted.>
 

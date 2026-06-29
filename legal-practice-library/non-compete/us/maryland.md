@@ -120,6 +120,12 @@ Trade-secret remedies can also outrun a contract's damages cap. In *Ingram v. Ca
 >
 > Where § 3-716 voids the covenant, build the protection plan around confidentiality and the trade-secret statute instead. Identify the actual trade secrets, document reasonable secrecy measures, and preserve the statutory injunction and damages remedies that do not depend on an enforceable non-compete [^mutsa-trade-secret-definition][^mutsa-injunction].
 
+## How does Maryland treat employee non-solicitation covenants? {#employee-non-solicitation}
+
+**Short answer.** With no Maryland appellate decision squarely on employee anti-raiding in our review, such a covenant would be judged under Maryland's general reasonableness test — enforceable only if no broader than reasonably necessary to protect a legitimate interest, without undue hardship or harm to the public [^md-ens-becker][^md-ens-seneca].
+
+The statutory void in Section 3-716 does not reach an anti-raiding covenant, because it is textually keyed to a restraint on the signer's own ability to take new employment or become self-employed [^md-ens-3716].
+
 ## Does a Maryland non-compete toll or extend during breach or litigation? {#extended-for-breach}
 
 **Short answer.** This is an open Maryland question. No staged Maryland statute or appellate decision squarely endorses automatic judicial tolling or enforcement of an extension-on-breach clause after the stated restricted period expires [^ruhl-reasonableness-backdrop][^becker-reasonableness-backdrop].
@@ -215,6 +221,12 @@ A broader 2025 effort to clarify that § 3-716 reaches only post-separation rest
 [^ingram-liquidated-not-bar]: **Ingram v. Cantwell-Cleary Co.** — "We hold that the court did not err in declining to enforce the liquidated damages provisions contained in Appellants’ Non-Compete Agreements because they did not bar Cantwell-Cleary from recovering damages under its separate claims for misappropriation" *Ingram v. Cantwell-Cleary Co., 259 Md. App. 102 (2023).* <https://www.courtlistener.com/opinion/9454756/ingram-v-cantwell-cleary-co/#:~:text=We%20hold%20that%20the%20court,its%20separate%20claims%20for%20misappropriation>
 
 [^ingram-trade-secret-finding]: **Ingram v. Cantwell-Cleary Co.** — "We also hold that the court did not err in finding that Cantwell-Cleary’s confidential customer lists and pricing information constituted trade secrets and that Appellants had misappropriated that information." *Ingram v. Cantwell-Cleary Co., 259 Md. App. 102 (2023).* <https://www.courtlistener.com/opinion/9454756/ingram-v-cantwell-cleary-co/#:~:text=We%20also%20hold%20that%20the,Appellants%20had%20misappropriated%20that%20information.>
+
+[^md-ens-becker]: **Becker v. Bailey** — "The general rule in Maryland is that if a restrictive covenant in an employment contract is supported by adequate consideration and is ancillary to the employment contract, an employee’s agreement not to compete with his employer upon leaving the employment will be upheld ‘if the restraint is confined within limits which are no wider as to area and duration than are reasonably necessary for the protection of the business of the employer and do not impose undue hardship on the employee or disregard the interests of the public.’" *Becker v. Bailey, 268 Md. 93 (1973).* <https://www.courtlistener.com/opinion/2322561/becker-v-bailey/#:~:text=The%20general%20rule%20in%20Maryland,the%20interests%20of%20the%20public.%E2%80%9D>
+
+[^md-ens-seneca]: **Seneca One Finance, Inc. v. Bloshuk** — "In Maryland, a restrictive employment covenant will only be enforced if it meets four requirements: ‘(1) the employer must have a legally protected interest, (2) the restrictive covenant must be no wider in scope and duration than is reasonably necessary to protect the employer’s interest, (3) the covenant cannot impose an undue hardship on the employee, and (4) the covenant cannot violate public policy.’" *Seneca One Fin., Inc. v. Bloshuk, 214 F. Supp. 3d 457 (D. Md. 2016).* <https://www.courtlistener.com/opinion/7322313/seneca-one-finance-inc-v-bloshuk/#:~:text=In%20Maryland%2C%20a%20restrictive%20employment,covenant%20cannot%20violate%20public%20policy.%E2%80%9D>
+
+[^md-ens-3716]: **Md. Code, Lab. & Empl. § 3-716** — "A noncompete or conflict of interest provision in an employment contract or a similar document or agreement that restricts the ability of an employee to enter into employment with a new employer or to become self–employed in the same or similar business or trade shall be null and void as being against the public policy of the State." *Md. Code, Lab. & Empl. § 3-716(a)(3).* <https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=gle&section=3-716>
 
 [^ruhl-reasonableness-backdrop]: **Ruhl v. F. A. Bartlett Tree Expert Co.** — "Covenants of this nature are in restraint of trade; the test is whether the particular restraint is reasonable on the specific facts." *Ruhl v. F. A. Bartlett Tree Expert Co., 245 Md. 118 (1967).* <https://www.courtlistener.com/opinion/2292892/ruhl-v-f-a-bartlett-tree-expert-co/#:~:text=Covenants%20of%20this%20nature%20are,reasonable%20on%20the%20specific%20facts.>
 

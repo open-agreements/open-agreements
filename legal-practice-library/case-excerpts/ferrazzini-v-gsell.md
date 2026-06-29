@@ -27,7 +27,7 @@ Supporting case-law excerpt. Quoted across 1 document(s) in the OpenAgreements l
 
 > The contract under consideration, tested by the law, rules and principles above set forth, is clearly one in undue or unreasonable restraint of trade and therefore against public policy. It is limited as to time and space but not as to trade.
 
-- supports: `court-narrowing`, `reasonableness-test`
-- source_cards: `ferrazzini-not-trade`, `q5-ferrazzini-void`
+- supports: `court-narrowing`, `non-solicitation-sale-of-business`, `reasonableness-test`
+- source_cards: `ferrazzini-not-trade`, `ph-sob-ferrazzini`, `q5-ferrazzini-void`
 - cited_by: [Non-Competes in the Philippines](../non-compete/ph.md)
 - link_to_source: <https://lawphil.net/judjuris/juri1916/aug1916/gr_l-10712_1916.html>

@@ -1,5 +1,8 @@
 # Us Update Log
 
+## 2026-06-29
+* **Update**: Backfill non-solicit / sale-of-business cells with body + source-cards (#1213) — HELD for legal review (#1216) (95a4b4c)
+
 ## 2026-06-28
 * **Update**: feat(non-compete): futureEffective[] + Legislation JSON-LD (closes #1085) (#1185) (61d26ba)
 * **Update**: Add notice, threshold, sale-of-business, and non-solicit columns to the non-compete survey table (closes #1122) (#1190) (d7148d9)

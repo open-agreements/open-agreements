@@ -2,7 +2,7 @@
 jurisdiction: "Philippines"
 slug: ph
 countryCode: PH
-snapshotAsOf: "2026-06-28"
+snapshotAsOf: "2026-06-29"
 lastReviewed: "2026-06-03"
 canonicalUrl: https://openagreements.org/practice-guides/non-compete/ph
 license: CC BY 4.0
@@ -15,7 +15,7 @@ stale: false
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.
 >
-> **Canonical:** https://openagreements.org/practice-guides/non-compete/ph · **Snapshot as of:** 2026-06-28 · License: CC BY 4.0 · © openagreements.org
+> **Canonical:** https://openagreements.org/practice-guides/non-compete/ph · **Snapshot as of:** 2026-06-29 · License: CC BY 4.0 · © openagreements.org
 
 # Non-Competes in the Philippines[^about]
 
@@ -110,6 +110,14 @@ The distinction is timing, not labels. *Portillo* keeps post-employment non-comp
 
 "Irrefragably, this is a glaring violation of the ‘Confidentiality of Documents and Non-Compete Clause’ in his employment contract with CPI, thus, justifying the forfeiture of his unpaid commissions."[^century-violation]
 
+## How does the Philippines treat customer non-solicitation and sale-of-business covenants? {#non-solicitation-sale-of-business}
+
+**Short answer.** No Philippine decision squarely addresses a customer non-solicit or a pure sale-of-business covenant, but both would likely be measured against the same unitary Civil Code reasonableness and public-policy test that governs every restraint of trade [^ph-cust-rivera-test][^ph-cust-tiu-time-trade-place].
+
+A court would probably ask whether the covenant is reasonable and no greater than necessary to protect a legitimate business interest such as client goodwill [^ph-cust-rivera-test], and whether it is reasonably limited as to time, trade, and place [^ph-cust-tiu-time-trade-place].
+
+For a covenant given by the seller of a business there is no Section 16601-style statutory carve-out: the same Article 1306 standard applies, so a restraint reasonably limited as to time or place is valid [^ph-sob-delcastillo], while a restraint that sweeps too broadly — for example, one limited as to time and place but not as to trade — is void as against public policy [^ph-sob-ferrazzini].
+
 ## Do non-competes apply to independent contractors in the Philippines? {#contractors}
 
 **Short answer.** Yes. When the restrained party is an independent contractor rather than an employee, the dispute is handled as an ordinary civil action under the freedom-to-contract principle rather than as a labor case. In *Consulta v. Court of Appeals*, once the Supreme Court found that the managing associate was an independent agent and not an employee, it upheld her one-year exclusivity restriction as a reasonable restriction designed to protect the company's business interest [^consulta-reasonable].
@@ -193,6 +201,14 @@ Reform of employee non-competes has been a topic of legislative and practitioner
 [^century-violation]: **Century Properties, Inc. v. Babiano** — "Irrefragably, this is a glaring violation of the ‘Confidentiality of Documents and Non-Compete Clause’ in his employment contract with CPI, thus, justifying the forfeiture of his unpaid commissions." *Century Properties, Inc. v. Babiano, G.R. No. 220978, July 5, 2016.* <https://lawphil.net/judjuris/juri2016/jul2016/gr_220978_2016.html>
 
 [^century-forfeiture]: **Century Properties, Inc. v. Babiano** — "Finally, if undersigned breaches any terms of this contract, forms of compensation including commissions and incentives will be forfeited." *Century Properties, Inc. v. Babiano, G.R. No. 220978, July 5, 2016.* <https://lawphil.net/judjuris/juri2016/jul2016/gr_220978_2016.html>
+
+[^ph-cust-rivera-test]: **Rivera v. Solidbank Corp.** — "the employer has to adduce evidence to prove that the restriction is reasonable and not greater than necessary to protect the employer’s legitimate business interests." *Rivera v. Solidbank Corp., G.R. No. 163269, Apr. 19, 2006.* <https://lawphil.net/judjuris/juri2006/apr2006/gr_163269_2006.html>
+
+[^ph-cust-tiu-time-trade-place]: **Tiu v. Platinum Plans Phil., Inc.** — "a non-involvement clause is not necessarily void for being in restraint of trade as long as there are reasonable limitations as to time, trade, and place." *Tiu v. Platinum Plans Phil., Inc., G.R. No. 163512, Feb. 28, 2007.* <https://lawphil.net/judjuris/juri2007/feb2007/gr_163512_2007.html>
+
+[^ph-sob-delcastillo]: **Del Castillo v. Richmond** — "Later cases, and we think the rule is now well established, have held that a contract in restraint of trade is valid providing there is a limitation upon either time or place." *Del Castillo v. Richmond, G.R. No. L-21127, Feb. 9, 1924.* <https://lawphil.net/judjuris/juri1924/feb1924/gr_21127_1924.html>
+
+[^ph-sob-ferrazzini]: **Ferrazzini v. Gsell** — "The contract under consideration, tested by the law, rules and principles above set forth, is clearly one in undue or unreasonable restraint of trade and therefore against public policy. It is limited as to time and space but not as to trade." *Ferrazzini v. Gsell, G.R. No. L-10712, Aug. 10, 1916.* <https://lawphil.net/judjuris/juri1916/aug1916/gr_l-10712_1916.html>
 
 [^consulta-reasonable]: **Consulta v. Court of Appeals** — "The exclusivity provision was a reasonable restriction designed to prevent similar acts prejudicial to Pamana's business interest." *Consulta v. Court of Appeals, G.R. No. 145443, Mar. 18, 2005.* <https://lawphil.net/judjuris/juri2005/mar2005/gr_145443_2005.html>
 
