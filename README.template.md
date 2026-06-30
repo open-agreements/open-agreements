@@ -5,15 +5,10 @@
 # OpenAgreements
 
 [![npm version](https://img.shields.io/npm/v/open-agreements)](https://www.npmjs.com/package/open-agreements)
-[![npm downloads](https://img.shields.io/npm/dm/open-agreements.svg)](https://npmjs.org/package/open-agreements)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![CI](https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml/badge.svg)](https://github.com/open-agreements/open-agreements/actions/workflows/ci.yml)
 [![codecov](https://img.shields.io/codecov/c/github/open-agreements/open-agreements/main)](https://app.codecov.io/gh/open-agreements/open-agreements)
-[![Socket Badge](https://socket.dev/api/badge/npm/package/open-agreements)](https://socket.dev/npm/package/open-agreements)
-[![GitHub stargazers](https://img.shields.io/github/stars/open-agreements/open-agreements?style=social)](https://github.com/open-agreements/open-agreements/stargazers)
 [![Agent Skill](https://img.shields.io/badge/agent--skill-open--agreements-purple)](https://skills.sh)
-[![MCP Server Status](https://openagreements.openstatus.dev/badge)](https://openagreements.openstatus.dev/)
-[![install size](https://packagephobia.com/badge?p=open-agreements)](https://packagephobia.com/result?p=open-agreements)
 
 [English](https://github.com/open-agreements/open-agreements/blob/main/README.md) | [Español](https://github.com/open-agreements/open-agreements/blob/main/README.es.md) | [简体中文](https://github.com/open-agreements/open-agreements/blob/main/README.zh.md) | [Português (Brasil)](https://github.com/open-agreements/open-agreements/blob/main/README.pt-br.md) | [Deutsch](https://github.com/open-agreements/open-agreements/blob/main/README.de.md)
 
@@ -24,17 +19,16 @@ Open, primary-source-backed U.S. legal content **and** standard agreement templa
 - **Checklists** — clause-by-clause reviewer checklists.
 - **Law Surveys** — 50-state and international comparison tables.
 
-Everything ships as plain markdown in this repo and as machine-readable twins on [openagreements.org](https://openagreements.org). Works with Claude Code, Gemini CLI, Cursor, and local MCP or CLI workflows.
+This repository mirrors the OpenAgreements public legal content library for GitHub, local AI agents, and contributor pull requests. Everything ships as plain markdown here and as machine-readable twins on [openagreements.org](https://openagreements.org). Accepted content changes are reviewed and synchronized into the publishing workflow for openagreements.org.
 
-[Propose a Form Source](https://github.com/open-agreements/open-agreements/issues/new?template=form-source-proposal.yml) · [Request a Feature](https://github.com/open-agreements/open-agreements/issues/new?template=general-enhancement.yml) · [Report an Issue](https://github.com/open-agreements/open-agreements/issues/new/choose)
+[Propose a Form Source](https://github.com/open-agreements/open-agreements/issues/new?template=form-source-proposal.yml) · [Give Feedback](https://github.com/open-agreements/open-agreements/issues/new?template=practice-guide-feedback.yml) · [Request Coverage](https://github.com/open-agreements/open-agreements/issues/new?template=general-enhancement.yml) · [Report an Issue](https://github.com/open-agreements/open-agreements/issues/new/choose)
 
 ## Who this is for
 
-OpenAgreements is for legal teams of any size and the agents helping them. The
-practice guides, surveys, and checklists answer jurisdiction-specific questions
-with citations to primary law; the templates start from standard forms teams
-already recognize — Common Paper, Bonterms, NVCA model documents, and YC SAFE
-templates — keeping source, license, and validation context close to the
+The practice guides, surveys, and checklists answer jurisdiction-specific
+questions with citations to primary law; the templates start from standard forms
+teams already recognize — Common Paper, Bonterms, NVCA model documents, and YC
+SAFE templates — keeping source, license, and validation context close to the
 document. It does not provide legal advice; consult an attorney.
 
 ## Contents
@@ -77,7 +71,7 @@ Every practice guide, survey, and checklist is plain markdown in
 
 For example: `https://openagreements.org/practice-guides/non-compete/us/texas.json`, `https://openagreements.org/surveys/non-compete/us.csv`.
 
-The Legal Practice Library is a one-way projection from [UseJunior/legal-explainer](https://openagreements.org); fixes land upstream, not in this repo. Content is licensed CC BY 4.0.
+The Legal Practice Library is a one-way projection from the OpenAgreements publishing workflow at [openagreements.org](https://openagreements.org); fixes land upstream, not in this repo. Content is licensed CC BY 4.0.
 
 ## Available Skills
 
@@ -90,12 +84,6 @@ from a coding agent (Claude Code, Cursor, Gemini CLI) over MCP, or from the CLI.
 The MCP server today focuses on **template filling**; the Legal Practice Library
 above is consumed as markdown or via the web twins.
 
-<p align="center">
-  <img src="https://raw.githubusercontent.com/open-agreements/open-agreements/main/docs/assets/demo-fill-nda.gif" alt="Fill a Mutual NDA in Claude Code — prompt, answer questions, get a signed-ready DOCX" width="720">
-</p>
-
-> *Demo: Claude fills a Common Paper Mutual NDA in under 2 minutes. Sped up for brevity.*
->
 > *Local stdio MCP and the hosted HTTP server at `openagreements.org/api/mcp` expose the same workflow; the hosted server adds a `search_templates` tool.*
 
 ### Quick Start
