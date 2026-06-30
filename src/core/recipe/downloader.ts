@@ -5,7 +5,9 @@ import { createHash } from 'node:crypto';
 import type { RecipeMetadata } from '../metadata.js';
 
 // Lazy — must be a function so ESM import hoisting doesn't evaluate before
-// api/_shared.ts sets OPEN_AGREEMENTS_CACHE_ROOT for Vercel.
+// the hosting deployment sets OPEN_AGREEMENTS_CACHE_ROOT (e.g. Vercel
+// functions set this at request-handler entry to relocate the cache off
+// the read-only function bundle).
 function getCacheRoot(): string {
   return process.env['OPEN_AGREEMENTS_CACHE_ROOT']
     ?? join(homedir(), '.open-agreements', 'cache');

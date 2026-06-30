@@ -38,7 +38,7 @@ export interface TemplateSearchOptions {
   max_results?: number;
 }
 
-/** Minimal shape required from TemplateItem — avoids coupling to _shared.ts types. */
+/** Minimal shape required from TemplateItem — avoids coupling to the deploy's listing types. */
 interface TemplateItemLike {
   name: string;
   display_name: string;
