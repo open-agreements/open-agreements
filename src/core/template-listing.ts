@@ -3,7 +3,7 @@
  *
  * Canonical helpers for listing templates with metadata, used by:
  * - CLI `list --json` command
- * - Vercel API `_shared.ts`
+ * - the openagreements.org deploy (private `UseJunior/openagreements-org-deploy` repo)
  * - MCP `tools.ts` (via dynamic import or npm dependency)
  */
 

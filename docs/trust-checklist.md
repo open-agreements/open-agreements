@@ -32,14 +32,14 @@ Out of scope for this checklist:
 
 ## Cross-Repo Scope
 
-- This repo owns trust messaging for the OpenAgreements template connector (`api/mcp.ts`) and local package execution modes.
+- This repo owns trust messaging for the OpenAgreements template connector (served at `https://openagreements.org/api/mcp` from the private `UseJunior/openagreements-org-deploy` repo) and local package execution modes.
 - Redline MCP transport hardening belongs to `../junior-AI-email-bot` (fail-closed OAuth startup in beta/production, approved host allowlist, explicit OAuth discovery/probe responses).
 
 ## Cross-Repo Status
 
 | ID | Status | Requirement | Evidence paths |
 | --- | --- | --- | --- |
-| XREP-01 | Documented | Trust ownership between OpenAgreements template connector and Junior redline MCP is explicit | `docs/trust-checklist.md`; `api/mcp.ts`; `../junior-AI-email-bot/docs/mcp-redline-workflow.md`; `../junior-AI-email-bot/docs/safe-docx/trust-checklist.md` |
+| XREP-01 | Documented | Trust ownership between OpenAgreements template connector and Junior redline MCP is explicit | `docs/trust-checklist.md`; `https://openagreements.org/api/mcp` (served from private `UseJunior/openagreements-org-deploy`); `../junior-AI-email-bot/docs/mcp-redline-workflow.md`; `../junior-AI-email-bot/docs/safe-docx/trust-checklist.md` |
 
 ## Sprint 1 Status
 

@@ -1,13 +1,15 @@
 # Well-Known Paths
 
-This document is the in-repo governance record for every `/.well-known/*` path published by this repository. It is documentation only. It does not approve path migrations or content changes.
+This document is the in-repo governance record for every `/.well-known/*` path published at `https://openagreements.org/.well-known/*`. It is documentation only. It does not approve path migrations or content changes.
+
+> **Hosting note.** The openagreements.org deployment that serves these paths now lives in the private `UseJunior/openagreements-org-deploy` repo, not this public repo. References below to `api/auth/well-known-*.ts` and `vercel.json` describe the contract those handlers implement; the source files themselves live in the private deploy repo. Static `site/.well-known/*` artifacts in this repo are the canonical source-of-truth and are mirrored into the deploy repo at scaffold time.
 
 ## Scope
 
-- Static source-controlled files live under `site/.well-known/`.
+- Static source-controlled files live under `site/.well-known/` (canonical source-of-truth).
 - Generated build artifacts currently include `/.well-known/ai/index.json` and `/.well-known/arp/index.sig`.
 - `/.well-known/agent-skills/*` is published on `openagreements.org` by [UseJunior/legal-explainer](https://github.com/UseJunior/legal-explainer) (the app that serves the domain), not by this repository's build.
-- OAuth metadata is served through Vercel rewrites to API handlers, not from static files.
+- OAuth metadata is served through Vercel rewrites to API handlers in the private deploy repo, not from static files.
 - `/.well-known/ai/*` and `/.well-known/arp/*` are currently unregistered path families. They should migrate in a follow-up PR to `/.well-known/appspecific/...` names that comply with [RFC 8615](https://www.rfc-editor.org/rfc/rfc8615.html).
 
 ## Reverse-DNS Choice
