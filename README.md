@@ -70,7 +70,7 @@ Primary-source-backed legal practice guides, projected from openagreements.org a
 | AI & the Workforce | AI in hiring and adverse-action, workforce AI policies, and outside-counsel transitions. | 20 practice guides | [Markdown](https://github.com/open-agreements/open-agreements/tree/main/legal-practice-library) | [Web](https://openagreements.org/practice-guides) |
 | Privacy-Policy Requirement Phrasings | Preferred phrasings for what a U.S. consumer privacy policy must disclose. | 8 practice guides | [Markdown](https://github.com/open-agreements/open-agreements/tree/main/legal-practice-library/privacy-policy) | [Web](https://openagreements.org/practice-guides/privacy/us) |
 
-Backed by 516 verbatim [case excerpts](https://github.com/open-agreements/open-agreements/tree/main/legal-practice-library/case-excerpts) — the passages our practice guides rely on, each linked to the full opinion on CourtListener. Supporting evidence, not a case database.
+Backed by 519 verbatim [case excerpts](https://github.com/open-agreements/open-agreements/tree/main/legal-practice-library/case-excerpts) — the passages our practice guides rely on, each linked to the full opinion on CourtListener. Supporting evidence, not a case database.
 
 ## Available Templates
 
@@ -190,6 +190,7 @@ Side-by-side comparison tables across jurisdictions. The web pages also publish 
 | Survey | Browse | Live |
 |--------|--------|------|
 | U.S. 50-State Non-Compete Survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/non-compete/us.md) | [Web](https://openagreements.org/surveys/non-compete/us) |
+| U.S. invention-assignment survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/invention-assignment/us.md) | [Web](https://openagreements.org/surveys/invention-assignment/us) |
 | U.S. State Consumer Privacy Survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/privacy/us.md) | [Web](https://openagreements.org/surveys/privacy/us) |
 | Worldwide Non-Compete Survey | [Markdown](https://github.com/open-agreements/open-agreements/blob/main/legal-practice-library/surveys/non-compete/worldwide.md) | [Web](https://openagreements.org/surveys/non-compete/worldwide) |
 
