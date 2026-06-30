@@ -66,7 +66,7 @@ function fieldOfValue(value: string): string | null {
 }
 
 describe('loadSelectorContracts', () => {
-  it.openspec('OA-SEL-009')('[OA-SEL-009] returns nothing for a recipe with no fields/ directory', () => {
+  it('[OA-SEL-009] returns nothing for a recipe with no fields/ directory', () => {
     const dir = mkdtempSync(join(tmpdir(), 'recipe-no-fields-'));
     try {
       const { manifests, templateManifest } = loadSelectorContracts(dir, ['company_name']);
@@ -77,7 +77,7 @@ describe('loadSelectorContracts', () => {
     }
   });
 
-  it.openspec('OA-SEL-002')('[OA-SEL-002] rejects a manifest whose field_id is not in metadata.yaml', () => {
+  it('[OA-SEL-002] rejects a manifest whose field_id is not in metadata.yaml', () => {
     const dir = mkdtempSync(join(tmpdir(), 'recipe-bad-field-'));
     try {
       mkdirSync(join(dir, 'fields'));
@@ -135,7 +135,7 @@ describeWithSource('selector contracts against the real NVCA source', () => {
     expect(fields[0].occurrences.every((o) => !o.resolution.unresolved)).toBe(true);
   });
 
-  it.openspec('OA-SEL-010')('[OA-SEL-010] selector-patched coverage matches legacy replacement-patched coverage for company_name', async () => {
+  it('[OA-SEL-010] selector-patched coverage matches legacy replacement-patched coverage for company_name', async () => {
     const recipeDir = resolveRecipeDir('nvca-stock-purchase-agreement');
     const cleanConfig = loadCleanConfig(recipeDir);
     const dir = mkdtempSync(join(tmpdir(), 'selector-parity-'));

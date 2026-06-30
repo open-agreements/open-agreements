@@ -106,7 +106,7 @@ Date: _______________
 }
 
 describe('canonical Markdown authoring', () => {
-  it.openspec('OA-TMP-054')('renders directive-anchored sections from body H2 titles', () => {
+  it('renders directive-anchored sections from body H2 titles', () => {
     const style = loadStyleProfile(stylePath);
     const directiveAnchoredSource = buildCanonicalSource()
       .replace('## Standard Terms', '<!-- oa:section type=standard_terms -->\n## Operative Terms')
@@ -122,7 +122,7 @@ describe('canonical Markdown authoring', () => {
     expect(rendered.markdown).not.toContain('## Standard Terms');
   });
 
-  it.openspec('OA-TMP-055')('prefers directive-anchored standard terms when both anchor mechanisms are present', () => {
+  it('prefers directive-anchored standard terms when both anchor mechanisms are present', () => {
     const sourceWithBothAnchors = buildCanonicalSource()
       .replace(
         /## Standard Terms[\s\S]*?(?=## Signatures)/,
@@ -159,7 +159,7 @@ Legacy body.
     );
   });
 
-  it.openspec('OA-TMP-061')('compiles a confirm= clause into a statutory-compliance representation, resolving note/url from metadata, and renders a highlighted CONFIRM bracket gated on {IF !field}', async () => {
+  it('compiles a confirm= clause into a statutory-compliance representation, resolving note/url from metadata, and renders a highlighted CONFIRM bracket gated on {IF !field}', async () => {
     const { Packer } = await import('docx');
     const AdmZip = (await import('adm-zip')).default;
     const style = loadStyleProfile(stylePath);
@@ -201,7 +201,7 @@ The party gave the required notice before signing.
     expect(xml).toContain('w:val="yellow"');
   });
 
-  it.openspec('OA-TMP-065')('compileCanonicalSourceFile resolves confirm= note/url from the sibling metadata.yaml', () => {
+  it('compileCanonicalSourceFile resolves confirm= note/url from the sibling metadata.yaml', () => {
     const dir = mkdtempSync(join(tmpdir(), 'oa-canonical-confirm-'));
     writeFileSync(
       join(dir, 'template.md'),
@@ -244,7 +244,7 @@ fields:
     });
   });
 
-  it.openspec('OA-TMP-065')('renders a confirm_note containing special characters (quotes/brackets) without breaking the layout', async () => {
+  it('renders a confirm_note containing special characters (quotes/brackets) without breaking the layout', async () => {
     const { Packer } = await import('docx');
     const AdmZip = (await import('adm-zip')).default;
     const style = loadStyleProfile(stylePath);
@@ -270,7 +270,7 @@ The party gave the required notice before signing.
     expect(xml).toContain('[CONFIRM before signing: the &quot;advisal&quot; [and notice] were given before signing; see https://example.com/statute/542.45]');
   });
 
-  it.openspec('OA-TMP-068')('allows confirm= combined with when= as an applicability gate and wraps the whole clause (body + CONFIRM bracket) in {IF condition}', async () => {
+  it('allows confirm= combined with when= as an applicability gate and wraps the whole clause (body + CONFIRM bracket) in {IF condition}', async () => {
     const { Packer } = await import('docx');
     const AdmZip = (await import('adm-zip')).default;
     const style = loadStyleProfile(stylePath);
@@ -305,7 +305,7 @@ The party gave the required notice before signing.
     expect(text.indexOf('{IF covered_party}')).toBeLessThan(text.indexOf('{IF !notice_confirmed}'));
   });
 
-  it.openspec('OA-TMP-069')('rejects confirm= combined with omitted (a confirm clause is never replaced by a placeholder)', () => {
+  it('rejects confirm= combined with omitted (a confirm clause is never replaced by a placeholder)', () => {
     const source = buildCanonicalSource(
       `<!-- oa:clause id=bad-confirm confirm=notice_confirmed omitted="[Intentionally Omitted.]" -->
 ### Bad Confirm
@@ -319,7 +319,7 @@ Body.
     ).toThrow(/cannot combine confirm with omitted/);
   });
 
-  it.openspec('OA-TMP-066')('when= without omitted= wraps heading and body in {IF condition} so the clause is fully absent', async () => {
+  it('when= without omitted= wraps heading and body in {IF condition} so the clause is fully absent', async () => {
     const { Packer } = await import('docx');
     const AdmZip = (await import('adm-zip')).default;
     const style = loadStyleProfile(stylePath);
@@ -350,7 +350,7 @@ This optional clause body only appears when included.
     expect(text.indexOf('{IF clause_included}')).toBeLessThan(text.indexOf('Optional Clause'));
   });
 
-  it.openspec('OA-TMP-067')('when= with omitted= keeps the heading and a placeholder', async () => {
+  it('when= with omitted= keeps the heading and a placeholder', async () => {
     const { Packer } = await import('docx');
     const AdmZip = (await import('adm-zip')).default;
     const style = loadStyleProfile(stylePath);
@@ -379,7 +379,7 @@ This body is swapped for a placeholder when excluded.
     expect(text.indexOf('Placeholder Clause')).toBeLessThan(text.indexOf('{IF clause_included}'));
   });
 
-  it.openspec('OA-TMP-062')('rejects confirm= that restates confirm_note/authority_url in the directive (SSOT: they belong in metadata.yaml)', () => {
+  it('rejects confirm= that restates confirm_note/authority_url in the directive (SSOT: they belong in metadata.yaml)', () => {
     const restatesNote = buildCanonicalSource(
       `<!-- oa:clause id=restate-note confirm=notice_confirmed confirm_note="x" -->
 ### Restate Note
@@ -405,7 +405,7 @@ Body.
     ).toThrow(/must not restate confirm_note\/authority_url/);
   });
 
-  it.openspec('OA-TMP-062')('rejects confirm= whose field is missing from metadata, is not an SCR field, or lacks note/url', () => {
+  it('rejects confirm= whose field is missing from metadata, is not an SCR field, or lacks note/url', () => {
     const base = buildCanonicalSource(
       `<!-- oa:clause id=compliance-recital confirm=notice_confirmed -->
 ### Compliance Recital
@@ -442,7 +442,7 @@ Body.
     ).toThrow(/requires an http\(s\) authority_url/);
   });
 
-  it.openspec('OA-TMP-062')('rejects confirm= with a non-field-name value (strict parser; "always" is not a sentinel)', () => {
+  it('rejects confirm= with a non-field-name value (strict parser; "always" is not a sentinel)', () => {
     const source = buildCanonicalSource(
       `<!-- oa:clause id=bad-name-confirm confirm=NoticeConfirmed -->
 ### Bad Name Confirm
@@ -468,14 +468,14 @@ Body.
     );
   });
 
-  it.openspec('OA-TMP-055')('accepts legacy required section titles without section directives', () => {
+  it('accepts legacy required section titles without section directives', () => {
     const compiled = compileCanonicalSourceString(buildCanonicalSource(), 'inline legacy section source');
 
     expect(compiled.contractSpec.sections.standard_terms.heading_title).toBe('Standard Terms');
     expect(compiled.contractSpec.sections.signature.heading_title).toBe('Signatures');
   });
 
-  it.openspec('OA-TMP-054')('rejects sources that omit both standard terms anchor mechanisms', () => {
+  it('rejects sources that omit both standard terms anchor mechanisms', () => {
     expect(() =>
       compileCanonicalSourceString(
         buildCanonicalSource().replace('## Standard Terms', '## Resolutions'),
@@ -484,7 +484,7 @@ Body.
     ).toThrow(/missing required "<!-- oa:section type=standard_terms -->" directive or "## Standard Terms" section/);
   });
 
-  it.openspec('OA-TMP-054')('rejects oa:section directives that are not followed by a top-level heading', () => {
+  it('rejects oa:section directives that are not followed by a top-level heading', () => {
     expect(() =>
       compileCanonicalSourceString(
         buildCanonicalSource().replace('## Standard Terms', '<!-- oa:section type=standard_terms -->\nNot a heading'),
@@ -493,7 +493,7 @@ Body.
     ).toThrow(/oa:section type=standard_terms must be followed by a top-level "## Heading"/);
   });
 
-  it.openspec('OA-TMP-054')('rejects unsupported oa:section type values', () => {
+  it('rejects unsupported oa:section type values', () => {
     expect(() =>
       compileCanonicalSourceString(
         buildCanonicalSource().replace('## Standard Terms', '<!-- oa:section type=bogus -->\n## Resolutions'),
@@ -502,7 +502,7 @@ Body.
     ).toThrow(/uses unsupported oa:section type "bogus"/);
   });
 
-  it.openspec('OA-TMP-033')('compiles label-keyed cover terms and paragraph-based definitions with aliases', () => {
+  it('compiles label-keyed cover terms and paragraph-based definitions with aliases', () => {
     const compiled = compileCanonicalSourceString(buildCanonicalSource(), 'inline canonical source');
     const rows = compiled.contractSpec.sections.cover_terms.rows;
     const definitionsClause = compiled.contractSpec.sections.standard_terms.clauses[0];
@@ -613,7 +613,7 @@ Body.
     ).toThrow(/must start and end with a pipe/);
   });
 
-  it.openspec('OA-TMP-034')('rejects unresolved explicit references and alias collisions', () => {
+  it('rejects unresolved explicit references and alias collisions', () => {
     expect(() =>
       compileCanonicalSourceString(
         buildCanonicalSource('\nThe [[Missing Term]] must also comply.\n'),
@@ -632,7 +632,7 @@ Body.
     ).toThrow(/alias collision on "Companies"/);
   });
 
-  it.openspec('OA-TMP-035')('rejects output_markdown_path on canonical sources', () => {
+  it('rejects output_markdown_path on canonical sources', () => {
     const baseSource = buildCanonicalSource();
 
     expect(() =>
@@ -656,7 +656,7 @@ Body.
     ).toThrow(/must not declare output_markdown_path/);
   });
 
-  it.openspec('OA-TMP-035')('schema accepts 1-signer signer-mode but cover-standard-signature-v1 throws at render', () => {
+  it('schema accepts 1-signer signer-mode but cover-standard-signature-v1 throws at render', () => {
     const style = loadStyleProfile(stylePath);
     const oneSignerSource = buildCanonicalSource().replace(
       /<!-- oa:signer id=recipient[\s\S]+?Date: _______________\n/,
@@ -671,7 +671,7 @@ Body.
     );
   });
 
-  it.openspec('OA-TMP-058')('renders repeat-backed stacked signer output from canonical source', () => {
+  it('renders repeat-backed stacked signer output from canonical source', () => {
     const style = loadStyleProfile(stylePath);
     const repeatingSource = buildCanonicalSource()
       .replace(
@@ -702,7 +702,7 @@ Body.
     expect(rendered.markdown).toContain('{END-FOR signer}');
   });
 
-  it.openspec(['OA-FIL-029', 'OA-TMP-057'])('draws the entity legal name above the signature line; individual keeps Print Name', () => {
+  it('draws the entity legal name above the signature line; individual keeps Print Name', () => {
     const style = loadStyleProfile(stylePath);
     const compiled = compileCanonicalSourceString(buildCanonicalSource(), 'inline entity-name canonical source');
     const [entitySigner, individualSigner] = compiled.contractSpec.sections.signature.signers;
@@ -737,7 +737,7 @@ Body.
     expect(signatureMarkdown).toContain('Print Name: {recipient_name}');
   });
 
-  it.openspec('OA-FIL-029')('fails loud when an entity signer has no label-matching legal-name line to promote', () => {
+  it('fails loud when an entity signer has no label-matching legal-name line to promote', () => {
     const style = loadStyleProfile(stylePath);
     // Drop the `Company: {company_name}` line so the entity signer has no
     // legal-name line to draw above the signature line.
@@ -749,7 +749,7 @@ Body.
     );
   });
 
-  it.openspec('OA-TMP-035')('renders signer-mode output and omits alias metadata from legal text', () => {
+  it('renders signer-mode output and omits alias metadata from legal text', () => {
     const style = loadStyleProfile(stylePath);
     const compiled = compileCanonicalSourceString(buildCanonicalSource(), 'inline canonical source');
     const rendered = renderFromValidatedSpec(compiled.contractSpec, style);
@@ -778,7 +778,7 @@ Body.
   // and present in the body, or absent from both. The compiler should reject either
   // half on its own. These cover that contract.
   describe('optional cover_terms section', () => {
-    it.openspec('OA-TMP-047')('rejects sources that declare sections.cover_terms but omit the body section', () => {
+    it('rejects sources that declare sections.cover_terms but omit the body section', () => {
       const sourceWithoutBody = buildCanonicalSource().replace(
         /## Cover Terms[\s\S]*?(?=## Standard Terms)/,
         ''
@@ -788,7 +788,7 @@ Body.
       ).toThrow(/missing the "## Cover Terms" body section/);
     });
 
-    it.openspec('OA-TMP-047')('rejects sources that include the body section but omit sections.cover_terms', () => {
+    it('rejects sources that include the body section but omit sections.cover_terms', () => {
       const sourceWithoutFrontmatter = buildCanonicalSource().replace(
         /  cover_terms:\n    section_label: Cover Terms\n    heading_title: Cover Terms\n/,
         ''

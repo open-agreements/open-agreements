@@ -26,7 +26,7 @@ catalog_order: 20
 ## Use this skill when
 - A request asks to add tests, improve coverage, or harden regressions.
 - A change touches `src/`, `integration-tests/`, `packages/contracts-workspace`, or `packages/contracts-workspace-mcp`.
-- You need readable Allure behavior specs and OpenSpec traceability.
+- You need readable Allure behavior specs.
 
 ## Core philosophy
 1. Test highest-risk behavior first.
@@ -35,9 +35,7 @@ catalog_order: 20
    Prioritize branches where failures could produce wrong legal output or unsafe automation behavior.
 3. Treat Allure as test style, not test type.
    Use normal unit/integration tests with Allure labels, steps, and attachments in the same files.
-4. Keep spec and test effectively coextensive.
-   If behavior is important enough to test, map it to canonical OpenSpec scenarios or active change-package scenarios.
-5. Keep assertions behavior-oriented.
+4. Keep assertions behavior-oriented.
    Verify user-observable outputs, diagnostics, and mutation outcomes before internals.
 6. Make failures easy to debug.
    Attach structured context for inputs, normalized outputs, and error payloads.
@@ -68,12 +66,6 @@ catalog_order: 20
 - Keep one test file focused on one module or capability.
 - Migration policy: gradually rename legacy `*.allure.test.ts` files to `*.test.ts`; do not introduce new `*.allure.test.ts` files.
 
-### OpenSpec traceability
-- Use `.openspec('OA-###')` whenever a matching scenario ID exists for the behavior.
-- Scenario IDs may come from either canonical specs (`openspec/specs/open-agreements/spec.md`) or active change-package specs (`openspec/changes/<change-id>/specs/open-agreements/spec.md`).
-- Pre-canonical IDs from active change packages are valid during implementation and should remain stable when promoted into canonical specs.
-- For new important behavior, add scenario IDs in the active change package first, map tests immediately, then promote those IDs into canonical specs when archiving.
-
 ## Coverage expansion workflow
 1. Read coverage summaries and identify branch-heavy modules in `src/core/**` and integration flows.
 2. Rank by blast radius and mutation risk.
@@ -94,7 +86,6 @@ catalog_order: 20
 ```bash
 npm run test:run
 npm run test:coverage
-npm run check:spec-coverage
 npm run check:allure-labels
 ```
 

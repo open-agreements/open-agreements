@@ -145,7 +145,7 @@ describe('applyChecklistPatch', () => {
     setChecklistProposedPatchStore(null);
   });
 
-  it.openspec('OA-CKL-016')('applies a validated patch and increments revision exactly once', async () => {
+  it('applies a validated patch and increments revision exactly once', async () => {
     const checklist = buildChecklist();
     const patch = {
       patch_id: 'patch_apply_001',
@@ -208,7 +208,7 @@ describe('applyChecklistPatch', () => {
     });
   });
 
-  it.openspec('OA-CKL-023')('returns no-op on idempotent replay with same patch_id and payload', async () => {
+  it('returns no-op on idempotent replay with same patch_id and payload', async () => {
     const checklist = buildChecklist();
     const patch = {
       patch_id: 'patch_apply_002',
@@ -274,7 +274,7 @@ describe('applyChecklistPatch', () => {
     });
   });
 
-  it.openspec('OA-CKL-024')('rejects reused patch_id with different payload hash', async () => {
+  it('rejects reused patch_id with different payload hash', async () => {
     const checklist = buildChecklist();
     const patchV1 = {
       patch_id: 'patch_apply_003',
@@ -355,7 +355,7 @@ describe('applyChecklistPatch', () => {
     });
   });
 
-  it.openspec('OA-CKL-020')('rejects apply with missing validation artifact', async () => {
+  it('rejects apply with missing validation artifact', async () => {
     const result = await applyWithEvidence('missing-validation-artifact', {
       checklist_id: 'ck_001',
       checklist: buildChecklist(),
@@ -379,7 +379,7 @@ describe('applyChecklistPatch', () => {
     });
   });
 
-  it.openspec('OA-CKL-021')('rejects apply when validation_id does not match patch payload hash', async () => {
+  it('rejects apply when validation_id does not match patch payload hash', async () => {
     const checklist = buildChecklist();
     const validatedPatch = {
       patch_id: 'patch_apply_005',
@@ -427,7 +427,7 @@ describe('applyChecklistPatch', () => {
     });
   });
 
-  it.openspec('OA-CKL-018')('rejects stale revision for non-replay apply', async () => {
+  it('rejects stale revision for non-replay apply', async () => {
     const checklist = buildChecklist();
     const patch = {
       patch_id: 'patch_apply_006',
@@ -687,7 +687,7 @@ describe('applyChecklistPatch', () => {
     expect(result.error_code).toBe('POST_PATCH_SCHEMA_INVALID');
   });
 
-  it.openspec('OA-CKL-017')('preserves all-or-nothing behavior when apply-time target resolution fails', async () => {
+  it('preserves all-or-nothing behavior when apply-time target resolution fails', async () => {
     const validatedChecklist = {
       ...buildChecklist(),
       issues: {
@@ -837,7 +837,7 @@ describe('applyChecklistPatch', () => {
     });
   });
 
-  it.openspec('OA-CKL-027')('stores PROPOSED mode patch without mutating checklist revision', async () => {
+  it('stores PROPOSED mode patch without mutating checklist revision', async () => {
     const checklist = buildChecklist();
     const patch = {
       patch_id: 'patch_apply_008',

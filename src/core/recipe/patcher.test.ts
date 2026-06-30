@@ -63,7 +63,7 @@ function extractText(docxPath: string): string {
 }
 
 describe('patchDocument', () => {
-  it.openspec('OA-RCP-007')('replaces a placeholder within a single run', async () => {
+  it('replaces a placeholder within a single run', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -84,7 +84,7 @@ describe('patchDocument', () => {
     rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it.openspec('OA-RCP-008')('replaces a placeholder split across multiple runs', async () => {
+  it('replaces a placeholder split across multiple runs', async () => {
     // Word commonly splits "[Company Name]" across runs like:
     // Run 1: "[Company"  Run 2: " Name]"
     const xml =
@@ -109,7 +109,7 @@ describe('patchDocument', () => {
     rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it.openspec('OA-RCP-030')('replaces a placeholder split across three runs', async () => {
+  it('replaces a placeholder split across three runs', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -133,7 +133,7 @@ describe('patchDocument', () => {
     rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it.openspec('OA-RCP-030')('replaces a placeholder nested inside <w:hyperlink>', async () => {
+  it('replaces a placeholder nested inside <w:hyperlink>', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -157,7 +157,7 @@ describe('patchDocument', () => {
     rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it.openspec('OA-RCP-030')('replaces a placeholder split across direct and nested runs', async () => {
+  it('replaces a placeholder split across direct and nested runs', async () => {
     // Run directly in paragraph, then run inside hyperlink
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
@@ -183,7 +183,7 @@ describe('patchDocument', () => {
     rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it.openspec('OA-RCP-030')('replaces multiple different placeholders in the same paragraph', async () => {
+  it('replaces multiple different placeholders in the same paragraph', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -206,7 +206,7 @@ describe('patchDocument', () => {
     rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it.openspec('OA-RCP-031')('replaces longest match first to prevent partial matches', async () => {
+  it('replaces longest match first to prevent partial matches', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -229,7 +229,7 @@ describe('patchDocument', () => {
     rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it.openspec('OA-RCP-031')('handles multiple occurrences of the same placeholder', async () => {
+  it('handles multiple occurrences of the same placeholder', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -251,7 +251,7 @@ describe('patchDocument', () => {
     rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it.openspec('OA-RCP-031')('throws on infinite loop when replacement contains the key', async () => {
+  it('throws on infinite loop when replacement contains the key', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -273,7 +273,7 @@ describe('patchDocument', () => {
     rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it.openspec('OA-RCP-030')('preserves run properties (bold, italic) during replacement', async () => {
+  it('preserves run properties (bold, italic) during replacement', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -298,7 +298,7 @@ describe('patchDocument', () => {
     rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it.openspec('OA-RCP-032')('leaves paragraphs without matches untouched', async () => {
+  it('leaves paragraphs without matches untouched', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -318,7 +318,7 @@ describe('patchDocument', () => {
     rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it.openspec('OA-RCP-033')('replaces placeholder in word/header1.xml', async () => {
+  it('replaces placeholder in word/header1.xml', async () => {
     const docXml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -355,7 +355,7 @@ describe('patchDocument', () => {
     rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it.openspec('OA-RCP-032')('removes empty intermediate runs after cross-run replacement', async () => {
+  it('removes empty intermediate runs after cross-run replacement', async () => {
     // 3 runs: "[Com" + "pany" + " Name]" → after replacement, middle run should be removed
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
@@ -387,7 +387,7 @@ describe('patchDocument', () => {
     rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it.openspec('OA-RCP-032')('preserves runs with non-text children like <w:drawing>', async () => {
+  it('preserves runs with non-text children like <w:drawing>', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -448,7 +448,7 @@ describe('patchDocument — formatting preservation (docx-core)', () => {
     return result;
   }
 
-  it.openspec('OA-RCP-035')('no mid-word formatting split on cross-run replacement with common prefix', async () => {
+  it('no mid-word formatting split on cross-run replacement with common prefix', async () => {
     // Regression: surgical optimization caused "clause" (bold) + "(s)" (plain) split
     // when replacing "clause[(s)]" → "clause(s)" across formatting boundaries.
     const xml =
@@ -492,7 +492,7 @@ describe('patchDocument — formatting preservation (docx-core)', () => {
     rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it.openspec('OA-RCP-035')('container-boundary replacement uses fallback without throwing', async () => {
+  it('container-boundary replacement uses fallback without throwing', async () => {
     // Replacement spans from direct paragraph run into <w:hyperlink> child run.
     // docx-core throws UNSAFE_CONTAINER_BOUNDARY; patcher falls back to legacy charMap.
     const xml =
@@ -520,7 +520,7 @@ describe('patchDocument — formatting preservation (docx-core)', () => {
     rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it.openspec('OA-RCP-035')('tab before match does not shift replacement offset', async () => {
+  it('tab before match does not shift replacement offset', async () => {
     // Paragraph with <w:tab/> before the match; docx-core counts tabs as visible chars
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
@@ -548,7 +548,7 @@ describe('patchDocument — formatting preservation (docx-core)', () => {
     rmSync(inputPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it.openspec('OA-RCP-035')('replacementColor applied via addRunProps.color', async () => {
+  it('replacementColor applied via addRunProps.color', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -585,27 +585,27 @@ describe('isRunSafeToRemove', () => {
     return doc.documentElement as Element;
   }
 
-  it.openspec('OA-RCP-034')('returns true for run with only rPr and empty t', () => {
+  it('returns true for run with only rPr and empty t', () => {
     expect(isRunSafeToRemove(makeRun('<w:rPr><w:b/></w:rPr><w:t></w:t>'))).toBe(true);
   });
 
-  it.openspec('OA-RCP-034')('returns true for empty run', () => {
+  it('returns true for empty run', () => {
     expect(isRunSafeToRemove(makeRun(''))).toBe(true);
   });
 
-  it.openspec('OA-RCP-034')('returns false for run with drawing', () => {
+  it('returns false for run with drawing', () => {
     expect(isRunSafeToRemove(makeRun('<w:drawing>img</w:drawing>'))).toBe(false);
   });
 
-  it.openspec('OA-RCP-034')('returns false for run with br', () => {
+  it('returns false for run with br', () => {
     expect(isRunSafeToRemove(makeRun('<w:br/>'))).toBe(false);
   });
 
-  it.openspec('OA-RCP-034')('returns false for run with tab', () => {
+  it('returns false for run with tab', () => {
     expect(isRunSafeToRemove(makeRun('<w:tab/>'))).toBe(false);
   });
 
-  it.openspec('OA-RCP-034')('returns false for run with footnoteReference', () => {
+  it('returns false for run with footnoteReference', () => {
     expect(isRunSafeToRemove(makeRun('<w:footnoteReference w:id="1"/>'))).toBe(false);
   });
 });

@@ -66,7 +66,7 @@ function createRecipeFixture(options?: { computedProfile?: unknown; normalizeCon
 }
 
 describe('runRecipe', () => {
-  itFilling.openspec(['OA-RCP-002', 'OA-RCP-021'])('forwards priorityFieldNames when inputPath is supplied', async () => {
+  itFilling('forwards priorityFieldNames when inputPath is supplied', async () => {
     const recipeDir = createRecipeFixture();
 
     const runFillPipelineMock = vi.fn(async ({ outputPath }: { outputPath: string }) => ({
@@ -111,7 +111,7 @@ describe('runRecipe', () => {
     expect(result.fieldsUsed).toEqual(['company_name']);
   });
 
-  itFilling.openspec(['OA-RCP-022', 'OA-RCP-024'])('applies computed rules and captures pass-level trace', async () => {
+  itFilling('applies computed rules and captures pass-level trace', async () => {
     const computedProfile = {
       version: '1.0',
       max_passes: 3,
@@ -208,7 +208,7 @@ describe('runRecipe', () => {
     expect(result.computedOutPath).toBe(computedOutPath);
   });
 
-  itFilling.openspec('OA-RCP-001')('uses downloader path when inputPath is omitted', async () => {
+  itFilling('uses downloader path when inputPath is omitted', async () => {
     const recipeDir = createRecipeFixture();
     const ensureSourceDocxMock = vi.fn(async () => '/tmp/downloaded-source.docx');
 

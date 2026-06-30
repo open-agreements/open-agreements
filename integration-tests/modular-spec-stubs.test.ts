@@ -9,7 +9,7 @@ describe('modular spec stubs', () => {
   const platform = itAllure.epic('Platform & Distribution');
 
   platform
-    .openspec('OA-LEG-001')
+    
     .skip(
       'Restructure-only tombstone scenario; no runtime behavior exists beyond the canonical spec file.',
       () => {},

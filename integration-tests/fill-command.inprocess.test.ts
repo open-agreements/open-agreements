@@ -190,7 +190,7 @@ afterEach(() => {
 });
 
 describe('runFill in-process coverage', () => {
-  itFilling.openspec(['OA-TMP-005', 'OA-CLI-003'])('fills a template path and defaults output filename', async () => {
+  itFilling('fills a template path and defaults output filename', async () => {
     const harness = await loadFillHarness({
       templateDir: '/templates/common-paper-mutual-nda',
       metadata: {
@@ -220,7 +220,7 @@ describe('runFill in-process coverage', () => {
     expect(logSpy.mock.calls.some((call) => String(call[0]).includes('Filled'))).toBe(true);
   });
 
-  itCompliance.openspec('OA-DST-003')('blocks template fill when allow_derivatives is false', async () => {
+  itCompliance('blocks template fill when allow_derivatives is false', async () => {
     const harness = await loadFillHarness({
       templateDir: '/templates/restricted-template',
       metadata: {
@@ -252,7 +252,7 @@ describe('runFill in-process coverage', () => {
     expect(errorSpy).toHaveBeenCalledWith(expect.stringContaining('allow_derivatives=false'));
   });
 
-  itFilling.openspec('OA-TMP-006')('warns about missing priority fields but continues fill', async () => {
+  itFilling('warns about missing priority fields but continues fill', async () => {
     const harness = await loadFillHarness({
       templateDir: '/templates/common-paper-mutual-nda',
       metadata: {
@@ -279,7 +279,7 @@ describe('runFill in-process coverage', () => {
     expect(harness.spies.fillTemplate).toHaveBeenCalled();
   });
 
-  itFilling.openspec('OA-TMP-012')('routes external IDs to external fill pipeline', async () => {
+  itFilling('routes external IDs to external fill pipeline', async () => {
     const harness = await loadFillHarness({
       templateDir: undefined,
       externalDir: '/external/yc-safe-valuation-cap',

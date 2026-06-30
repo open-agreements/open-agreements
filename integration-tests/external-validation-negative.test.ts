@@ -181,7 +181,7 @@ describe('validateExternal negative scenarios', () => {
     expect(result.errors.join(' ')).toContain('replacements.json:');
   });
 
-  it.openspec('OA-RCP-027')('fails when clean.json has invalid schema', () => {
+  it('fails when clean.json has invalid schema', () => {
     const { dir, docxBuffer, docxSha } = createFixture();
     writeMetadata(dir, docxSha);
     writeFileSync(join(dir, 'template.docx'), docxBuffer);

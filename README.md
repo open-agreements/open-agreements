@@ -481,7 +481,7 @@ Security policy: see [SECURITY.md](https://github.com/open-agreements/open-agree
 
 ## Roadmap
 
-Planned work is tracked in [open issues](https://github.com/open-agreements/open-agreements/issues). Larger changes are designed first as proposals in [`openspec/changes/`](https://github.com/open-agreements/open-agreements/tree/main/openspec/changes).
+Planned work is tracked in [open issues](https://github.com/open-agreements/open-agreements/issues).
 
 ## Contributing
 

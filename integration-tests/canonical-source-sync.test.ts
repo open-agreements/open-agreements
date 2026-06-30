@@ -20,12 +20,12 @@ const stylePath = join(
 const canonicalTemplates = discoverTemplateSources(repoRoot).filter((s) => s.type === 'canonical');
 
 describe('canonical Markdown -> JSON spec sync', () => {
-  it.openspec('OA-TMP-035')('discovers at least one canonical template under content/templates', () => {
+  it('discovers at least one canonical template under content/templates', () => {
     expect(canonicalTemplates.length).toBeGreaterThan(0);
   });
 
   for (const source of canonicalTemplates) {
-    it.openspec('OA-TMP-035')(`${source.slug} compiles to its committed generated JSON`, () => {
+    it(`${source.slug} compiles to its committed generated JSON`, () => {
       const compiled = compileCanonicalSourceFile(join(repoRoot, source.templatePath));
       const committedJson = JSON.parse(readFileSync(join(repoRoot, source.jsonPath), 'utf-8'));
 
@@ -36,7 +36,7 @@ describe('canonical Markdown -> JSON spec sync', () => {
       ).toEqual(committedJson);
     });
 
-    it.openspec('OA-TMP-035')(`${source.slug} renders end-to-end from canonical source`, () => {
+    it(`${source.slug} renders end-to-end from canonical source`, () => {
       const compiled = compileCanonicalSourceFile(join(repoRoot, source.templatePath));
       const style = loadStyleProfile(stylePath);
       const rendered = renderFromValidatedSpec(compiled.contractSpec, style);

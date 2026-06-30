@@ -5,7 +5,7 @@ export const MUTUAL_NDA_SELECTION_SCENARIOS: Record<string, TemplateBehaviorScen
     id: 'mnda-fixed-term-selection',
     title: 'fixed-term flow removes non-selected options',
     story: 'Fixed term selection removes non-selected options',
-    description: 'Behavior-level assertion for the OpenSpec scenario.',
+    description: 'Behavior-level assertion for the mutual-NDA selection flow.',
     templateId: 'common-paper-mutual-nda',
     outputFilename: 'fixed-term.docx',
     values: {
@@ -32,7 +32,7 @@ export const MUTUAL_NDA_SELECTION_SCENARIOS: Record<string, TemplateBehaviorScen
     id: 'mnda-perpetual-selection',
     title: 'perpetual flow marks selected options',
     story: 'Perpetual selection marks selected options',
-    description: 'Behavior-level assertion for the OpenSpec scenario.',
+    description: 'Behavior-level assertion for the mutual-NDA selection flow.',
     templateId: 'common-paper-mutual-nda',
     outputFilename: 'perpetual.docx',
     values: {

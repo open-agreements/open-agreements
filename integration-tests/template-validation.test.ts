@@ -108,7 +108,7 @@ function buildDocxWithoutDocumentXml(): Buffer {
 }
 
 describe('validateTemplate', () => {
-  it.openspec('OA-TMP-015')('validates bonterms-mutual-nda without errors', async () => {
+  it('validates bonterms-mutual-nda without errors', async () => {
     const dir = join(templatesDir, 'bonterms-mutual-nda');
     await allureParameter('template_id', 'bonterms-mutual-nda');
     const result = await allureStep('Validate template', () =>
@@ -122,7 +122,7 @@ describe('validateTemplate', () => {
     });
   });
 
-  it.openspec('OA-TMP-015')('validates common-paper-mutual-nda without errors', async () => {
+  it('validates common-paper-mutual-nda without errors', async () => {
     const dir = join(templatesDir, 'common-paper-mutual-nda');
     await allureParameter('template_id', 'common-paper-mutual-nda');
     const result = await allureStep('Validate template', () =>
@@ -136,7 +136,7 @@ describe('validateTemplate', () => {
     });
   });
 
-  it.openspec('OA-TMP-015')('validates openagreements-employment-offer-letter without errors', async () => {
+  it('validates openagreements-employment-offer-letter without errors', async () => {
     const dir = join(templatesDir, 'openagreements-employment-offer-letter');
     await allureParameter('template_id', 'openagreements-employment-offer-letter');
     const result = await allureStep('Validate template', () =>
@@ -150,7 +150,7 @@ describe('validateTemplate', () => {
     });
   });
 
-  it.openspec('OA-TMP-015')('validates openagreements-employee-ip-inventions-assignment without errors', async () => {
+  it('validates openagreements-employee-ip-inventions-assignment without errors', async () => {
     const dir = join(templatesDir, 'openagreements-employee-ip-inventions-assignment');
     await allureParameter('template_id', 'openagreements-employee-ip-inventions-assignment');
     const result = await allureStep('Validate template', () =>
@@ -164,7 +164,7 @@ describe('validateTemplate', () => {
     });
   });
 
-  it.openspec('OA-TMP-015')('validates openagreements-employment-confidentiality-acknowledgement without errors', async () => {
+  it('validates openagreements-employment-confidentiality-acknowledgement without errors', async () => {
     const dir = join(templatesDir, 'openagreements-employment-confidentiality-acknowledgement');
     await allureParameter('template_id', 'openagreements-employment-confidentiality-acknowledgement');
     const result = await allureStep('Validate template', () =>
@@ -178,7 +178,7 @@ describe('validateTemplate', () => {
     });
   });
 
-  it.openspec('OA-TMP-015')('validates openagreements-restrictive-covenant-wyoming without errors', async () => {
+  it('validates openagreements-restrictive-covenant-wyoming without errors', async () => {
     const dir = join(templatesDir, 'openagreements-restrictive-covenant-wyoming');
     await allureParameter('template_id', 'openagreements-restrictive-covenant-wyoming');
     const result = await allureStep('Validate template', () =>
@@ -194,7 +194,7 @@ describe('validateTemplate', () => {
 });
 
 describe('validateMetadata', () => {
-  it.openspec('OA-TMP-015')('validates bonterms-mutual-nda metadata', async () => {
+  it('validates bonterms-mutual-nda metadata', async () => {
     const dir = join(templatesDir, 'bonterms-mutual-nda');
     await allureParameter('template_id', 'bonterms-mutual-nda');
     const result = await allureStep('Validate metadata.yaml', () => validateMetadata(dir));
@@ -205,7 +205,7 @@ describe('validateMetadata', () => {
     });
   });
 
-  it.openspec('OA-TMP-015')('validates employment offer metadata', async () => {
+  it('validates employment offer metadata', async () => {
     const dir = join(templatesDir, 'openagreements-employment-offer-letter');
     await allureParameter('template_id', 'openagreements-employment-offer-letter');
     const result = await allureStep('Validate metadata.yaml', () => validateMetadata(dir));
@@ -218,7 +218,7 @@ describe('validateMetadata', () => {
 });
 
 describe('validateTemplate placeholder coverage', () => {
-  it.openspec('OA-TMP-001')('reports error for missing required placeholder', async () => {
+  it('reports error for missing required placeholder', async () => {
     const dir = createTemplateFixture({
       docText: 'No placeholders here',
       fieldsYaml: '  - name: required_field\n    type: string\n    description: Required',
@@ -237,7 +237,7 @@ describe('validateTemplate placeholder coverage', () => {
     });
   });
 
-  it.openspec('OA-TMP-002')('reports warning for missing optional placeholder', async () => {
+  it('reports warning for missing optional placeholder', async () => {
     const dir = createTemplateFixture({
       docText: 'No placeholders here either',
       fieldsYaml: '  - name: optional_field\n    type: string\n    description: Optional',
@@ -256,7 +256,7 @@ describe('validateTemplate placeholder coverage', () => {
     });
   });
 
-  it.openspec('OA-TMP-016')('reports required-field errors for declarative replacements missing metadata tags', async () => {
+  it('reports required-field errors for declarative replacements missing metadata tags', async () => {
     const dir = createTemplateFixture({
       docText: 'Order form has [Company Name] only',
       fieldsYaml: '  - name: required_field\n    type: string\n    description: Priority field',
@@ -473,7 +473,7 @@ describe('validateTemplate multiselect coverage', () => {
     '      - cross_border_rider',
   ].join('\n');
 
-  it.openspec('OA-TMP-052')('does not warn about multiselect fields when direct DOCX conditionals use only derived keys', () => {
+  it('does not warn about multiselect fields when direct DOCX conditionals use only derived keys', () => {
     const dir = createTemplateFixture({
       docText: '{IF tech_rider_enabled}{END-IF}',
       fieldsYaml: multiselectFieldsYaml,
@@ -486,7 +486,7 @@ describe('validateTemplate multiselect coverage', () => {
     expect(result.warnings.join(' ')).not.toContain('industry_modules');
   });
 
-  it.openspec('OA-TMP-052')('does not warn about multiselect fields when replacement values use only derived keys', () => {
+  it('does not warn about multiselect fields when replacement values use only derived keys', () => {
     const dir = createTemplateFixture({
       docText: '[Industry riders]',
       fieldsYaml: multiselectFieldsYaml,
@@ -502,7 +502,7 @@ describe('validateTemplate multiselect coverage', () => {
     expect(result.warnings.join(' ')).not.toContain('industry_modules');
   });
 
-  it.openspec('OA-TMP-052')('rejects direct multiselect IF references in direct DOCX scanning mode', () => {
+  it('rejects direct multiselect IF references in direct DOCX scanning mode', () => {
     const dir = createTemplateFixture({
       docText: '{IF industry_modules}{END-IF}',
       fieldsYaml: multiselectFieldsYaml,
@@ -514,7 +514,7 @@ describe('validateTemplate multiselect coverage', () => {
     expect(result.errors.join(' ')).toContain('must not be referenced directly in {IF industry_modules}');
   });
 
-  it.openspec('OA-TMP-052')('rejects direct multiselect IF references in replacements mode even without derive_booleans', () => {
+  it('rejects direct multiselect IF references in replacements mode even without derive_booleans', () => {
     const dir = createTemplateFixture({
       docText: '[Industry riders]',
       fieldsYaml: multiselectWithoutDerivationYaml,
@@ -529,7 +529,7 @@ describe('validateTemplate multiselect coverage', () => {
     expect(result.errors.join(' ')).toContain('must not be referenced directly in {IF industry_modules}');
   });
 
-  it.openspec('OA-FIL-026')('throws a clear error for malformed multiselect JSON input', () => {
+  it('throws a clear error for malformed multiselect JSON input', () => {
     expect(() =>
       prepareFillData({
         values: { industry_modules: 'not-json' },
@@ -564,7 +564,7 @@ describe('validateTemplate multiselect coverage', () => {
     ).toThrow('Required collection fields are empty: industry_modules');
   });
 
-  it.openspec('OA-TMP-053')('warns when a derive_booleans multiselect is declared but no derived key is referenced (direct DOCX)', () => {
+  it('warns when a derive_booleans multiselect is declared but no derived key is referenced (direct DOCX)', () => {
     const dir = createTemplateFixture({
       docText: 'Body text without any rider conditional.',
       fieldsYaml: multiselectFieldsYaml,
@@ -576,7 +576,7 @@ describe('validateTemplate multiselect coverage', () => {
     expect(result.warnings.join(' ')).toContain('Optional field "industry_modules"');
   });
 
-  it.openspec('OA-TMP-053')('errors when a priority derive_booleans multiselect is declared but no derived key is referenced (direct DOCX)', () => {
+  it('errors when a priority derive_booleans multiselect is declared but no derived key is referenced (direct DOCX)', () => {
     const dir = createTemplateFixture({
       docText: 'Body text without any rider conditional.',
       fieldsYaml: multiselectFieldsYaml,
@@ -589,7 +589,7 @@ describe('validateTemplate multiselect coverage', () => {
     expect(result.errors.join(' ')).toContain('Priority field "industry_modules"');
   });
 
-  it.openspec('OA-TMP-053')('warns when a derive_booleans multiselect is declared but no derived key is referenced (replacements mode)', () => {
+  it('warns when a derive_booleans multiselect is declared but no derived key is referenced (replacements mode)', () => {
     const dir = createTemplateFixture({
       docText: '[Industry riders]',
       fieldsYaml: multiselectFieldsYaml,
@@ -604,7 +604,7 @@ describe('validateTemplate multiselect coverage', () => {
     expect(result.warnings.join(' ')).toContain('Optional field "industry_modules"');
   });
 
-  it.openspec('OA-TMP-053')('errors when a priority derive_booleans multiselect is declared but no derived key is referenced (replacements mode)', () => {
+  it('errors when a priority derive_booleans multiselect is declared but no derived key is referenced (replacements mode)', () => {
     const dir = createTemplateFixture({
       docText: '[Industry riders]',
       fieldsYaml: multiselectFieldsYaml,
@@ -620,7 +620,7 @@ describe('validateTemplate multiselect coverage', () => {
     expect(result.errors.join(' ')).toContain('Priority field "industry_modules"');
   });
 
-  it.openspec('OA-FIL-028')('rejects multiselect runtime input with non-string entries', () => {
+  it('rejects multiselect runtime input with non-string entries', () => {
     expect(() =>
       prepareFillData({
         values: { industry_modules: ['tech_rider', 7] as unknown[] },
@@ -637,7 +637,7 @@ describe('validateTemplate multiselect coverage', () => {
     ).toThrow('entry at index 1 must be a string');
   });
 
-  it.openspec('OA-FIL-028')('rejects multiselect runtime input with unknown options', () => {
+  it('rejects multiselect runtime input with unknown options', () => {
     expect(() =>
       prepareFillData({
         values: { industry_modules: ['tech_rider', 'unknown_option'] },
@@ -654,7 +654,7 @@ describe('validateTemplate multiselect coverage', () => {
     ).toThrow('received unknown option "unknown_option"');
   });
 
-  it.openspec('OA-TMP-073')('tolerates the derived {IF any_confirmation_pending} cover-notice tag without an unknown-placeholder finding', () => {
+  it('tolerates the derived {IF any_confirmation_pending} cover-notice tag without an unknown-placeholder finding', () => {
     // The Florida template's regenerated template.docx carries the cover-page
     // confirmation notice gated on {IF any_confirmation_pending} (a derived
     // synthetic key, not a metadata field). Validation must not flag it.

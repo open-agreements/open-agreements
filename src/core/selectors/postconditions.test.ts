@@ -20,7 +20,7 @@ function manifest(postconditions: FieldSelectorManifest['postconditions']): Fiel
 }
 
 describe('evaluatePostconditions', () => {
-  it.openspec('OA-SEL-007')('[OA-SEL-007] all_occurrences_identical passes when value present and no anchors remain', () => {
+  it('[OA-SEL-007] all_occurrences_identical passes when value present and no anchors remain', () => {
     const checks = evaluatePostconditions({
       outputText: 'Acme Inc. agrees and Acme Inc. shall...',
       manifests: [manifest(['all_occurrences_identical'])],
@@ -31,7 +31,7 @@ describe('evaluatePostconditions', () => {
     expect(checks[0].passed).toBe(true);
   });
 
-  it.openspec('OA-SEL-008')('[OA-SEL-008] all_occurrences_identical fails when a source anchor still remains (divergence)', () => {
+  it('[OA-SEL-008] all_occurrences_identical fails when a source anchor still remains (divergence)', () => {
     const checks = evaluatePostconditions({
       outputText: 'Acme Inc. agrees but [Company name] shall...',
       manifests: [manifest(['all_occurrences_identical'])],

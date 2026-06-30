@@ -6,7 +6,7 @@ import { arrayToRecord } from './test-utils.js';
 const it = itAllure.epic('Compliance & Governance').withLabels({ feature: 'Checklist Rendering v2' });
 
 describe('checklist render model traceability', () => {
-  it.openspec(['OA-CKL-004', 'OA-CKL-005', 'OA-CKL-006'])(
+  it(
     'renders canonical stage order with nested numbering while keeping stable IDs unchanged',
     () => {
       const entriesArray = [
@@ -88,7 +88,7 @@ describe('checklist render model traceability', () => {
     },
   );
 
-  it.openspec(['OA-CKL-008', 'OA-CKL-009'])(
+  it(
     'renders named pending signatories and signature artifact locations for partially signed documents',
     () => {
       const context = buildChecklistTemplateContext({
@@ -142,7 +142,7 @@ describe('checklist render model traceability', () => {
     },
   );
 
-  it.openspec(['OA-CKL-010', 'OA-CKL-012', 'OA-CKL-014'])(
+  it(
     'renders citation-backed document rows and keeps unlinked actions in fallback sections',
     () => {
       const context = buildChecklistTemplateContext({

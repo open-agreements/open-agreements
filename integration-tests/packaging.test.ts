@@ -38,34 +38,34 @@ describe('npm packaging', () => {
     }
   }, seconds(45));
 
-  it.openspec('OA-DST-029')('includes dist/cli/index.js', () => {
+  it('includes dist/cli/index.js', () => {
     if (!available) return;
     expect(files).toContain('dist/cli/index.js');
   });
 
-  it.openspec('OA-DST-029')('includes bin/open-agreements.js', () => {
+  it('includes bin/open-agreements.js', () => {
     if (!available) return;
     expect(files).toContain('bin/open-agreements.js');
   });
 
-  it.openspec('OA-DST-029')('includes a template metadata file', () => {
+  it('includes a template metadata file', () => {
     if (!available) return;
     expect(files.some((f) => f.startsWith('content/templates/') && f.endsWith('metadata.yaml'))).toBe(
       true
     );
   });
 
-  it.openspec('OA-DST-029')('includes a recipe metadata file', () => {
+  it('includes a recipe metadata file', () => {
     if (!available) return;
     expect(files.some((f) => f.startsWith('content/recipes/') && f.endsWith('metadata.yaml'))).toBe(true);
   });
 
-  it.openspec('OA-DST-029')('does NOT include src/', () => {
+  it('does NOT include src/', () => {
     if (!available) return;
     expect(files.some((f) => f.startsWith('src/'))).toBe(false);
   });
 
-  it.openspec('OA-DST-029')('does NOT include unbundled node_modules/', () => {
+  it('does NOT include unbundled node_modules/', () => {
     if (!available) return;
     // bundleDependencies intentionally places packages (and their transitive
     // deps) under node_modules/ inside the tarball. Only flag files that do
@@ -91,7 +91,7 @@ describe('npm packaging', () => {
     }
   });
 
-  it.openspec('OA-DST-005')('installs from packed tarball and runs list --json', () => {
+  it('installs from packed tarball and runs list --json', () => {
     if (!available) return;
 
     const repoRoot = new URL('..', import.meta.url).pathname;

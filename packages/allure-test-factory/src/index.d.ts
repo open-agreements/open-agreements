@@ -48,7 +48,6 @@ export interface AllureLabelDefaults<TEpic extends string = string> {
   suite?: string;
   subSuite?: string;
   severity?: string;
-  openspecScenarioIds?: string[];
   description?: string;
   tags?: string[];
   parameters?: Record<string, string | number | boolean | null | undefined>;
@@ -139,7 +138,6 @@ export type AllureBddContext = {
 export type WrappedAllureTestFn<TEpic extends string = string> = WrappedTestFn & {
   withLabels: (defaults: AllureLabelDefaults<TEpic>) => WrappedAllureTestFn<TEpic>;
   epic: (epic: TEpic) => WrappedAllureTestFn<TEpic>;
-  openspec: (...scenarioIds: Array<string | string[]>) => WrappedAllureTestFn<TEpic>;
   allure: (metadata: AllureMetadata<TEpic>) => WrappedAllureTestFn<TEpic>;
 };
 
@@ -154,16 +152,6 @@ export type AllureTestHelpers<TEpic extends string = string> = {
   allureJsonAttachment: (name: string, payload: unknown) => Promise<void>;
   getAllureRuntime: () => AllureRuntime | undefined;
 };
-
-// ── OpenSpec config ─────────────────────────────────────────────────────────
-
-export interface OpenSpecConfig {
-  enabled?: boolean;
-  repoBaseUrl?: string;
-  idPattern?: RegExp;
-  repoRoot?: string;
-  specRoot?: string;
-}
 
 // ── Lifecycle hook types ────────────────────────────────────────────────────
 
@@ -193,7 +181,6 @@ export interface AllureTestFactoryConfig<TEpic extends string = string> {
     fullName: string,
     defaults?: AllureLabelDefaults<TEpic>,
   ) => TEpic;
-  openspec?: OpenSpecConfig;
   beforeTest?: (ctx: BeforeTestContext) => void | Promise<void>;
   afterTest?: (ctx: AfterTestContext) => void | Promise<void>;
 }

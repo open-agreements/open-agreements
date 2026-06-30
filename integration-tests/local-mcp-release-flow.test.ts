@@ -14,7 +14,7 @@ const it = itAllure.epic('Platform & Distribution');
 
 describe('local MCP release flow', () => {
   it
-    .openspec('OA-DST-080')
+    
     .skip(
       'Enforced by CI job "isolated-runtime-smoke" via `npm run check:isolated-runtime`. No vitest test installs packed tarballs into a clean temp directory or exercises both local MCP binaries from that isolated context yet.',
       () => {},

@@ -28,13 +28,13 @@ function renderedConfirmText(url = FIELD.authority_url): string {
 }
 
 describe('checkStatutoryComplianceReps', () => {
-  it.openspec('OA-TMP-064')('passes when the {IF !field} + [CONFIRM …] bracket is present with a matching authority_url', () => {
+  it('passes when the {IF !field} + [CONFIRM …] bracket is present with a matching authority_url', () => {
     const errors: string[] = [];
     checkStatutoryComplianceReps(renderedConfirmText(), [FIELD], errors);
     expect(errors).toEqual([]);
   });
 
-  it.openspec('OA-TMP-064')('fails when only {IF !field} is present without the CONFIRM bracket (legacy when=/omitted loophole)', () => {
+  it('fails when only {IF !field} is present without the CONFIRM bracket (legacy when=/omitted loophole)', () => {
     const errors: string[] = [];
     // Mimics the old when=/omitted output: {IF !field} exists but no bracket.
     const legacy = 'Body.\n{IF !notice_confirmed}\n[Intentionally Omitted.]\n{END-IF}';
@@ -43,21 +43,21 @@ describe('checkStatutoryComplianceReps', () => {
     expect(errors[0]).toMatch(/must be gated by a clause confirm=/);
   });
 
-  it.openspec('OA-TMP-064')('fails when the bracket URL drifts from the metadata authority_url', () => {
+  it('fails when the bracket URL drifts from the metadata authority_url', () => {
     const errors: string[] = [];
     checkStatutoryComplianceReps(renderedConfirmText('https://example.com/wrong'), [FIELD], errors);
     expect(errors).toHaveLength(1);
     expect(errors[0]).toMatch(/does not match the URL in its rendered \[CONFIRM …\] bracket/);
   });
 
-  it.openspec('OA-TMP-064')('fails when the bracket URL has an extra suffix (equality, not substring)', () => {
+  it('fails when the bracket URL has an extra suffix (equality, not substring)', () => {
     const errors: string[] = [];
     checkStatutoryComplianceReps(renderedConfirmText(`${FIELD.authority_url}-extra`), [FIELD], errors);
     expect(errors).toHaveLength(1);
     expect(errors[0]).toMatch(/does not match the URL/);
   });
 
-  it.openspec('OA-TMP-064')('fails when the body is gated by an affirmative {IF field} (legacy when=/omitted spoof)', () => {
+  it('fails when the body is gated by an affirmative {IF field} (legacy when=/omitted spoof)', () => {
     const errors: string[] = [];
     // A legacy when=/omitted clause wraps the body in {IF field} and could put a
     // look-alike bracket (with the right URL) in omitted="…". The affirmative
@@ -75,7 +75,7 @@ describe('checkStatutoryComplianceReps', () => {
     expect(errors[0]).toMatch(/must use confirm= \(the recital body always renders\)/);
   });
 
-  it.openspec('OA-TMP-064')('tolerates a literal "]" inside the confirm_note', () => {
+  it('tolerates a literal "]" inside the confirm_note', () => {
     const errors: string[] = [];
     const withBracketNote = [
       'Body.',
@@ -87,13 +87,13 @@ describe('checkStatutoryComplianceReps', () => {
     expect(errors).toEqual([]);
   });
 
-  it.openspec('OA-TMP-064')('passes when the bracket note matches the metadata confirm_note', () => {
+  it('passes when the bracket note matches the metadata confirm_note', () => {
     const errors: string[] = [];
     checkStatutoryComplianceReps(renderedConfirmText(), [FIELD_WITH_NOTE], errors);
     expect(errors).toEqual([]);
   });
 
-  it.openspec('OA-TMP-064')('fails when the bracket note drifts from the metadata confirm_note', () => {
+  it('fails when the bracket note drifts from the metadata confirm_note', () => {
     const errors: string[] = [];
     const drifted = [
       'Body.',
@@ -106,7 +106,7 @@ describe('checkStatutoryComplianceReps', () => {
     expect(errors[0]).toMatch(/confirm_note .* does not match the note in its rendered \[CONFIRM …\] bracket/);
   });
 
-  it.openspec('OA-TMP-064')('is a no-op when no field is a statutory_compliance_representation', () => {
+  it('is a no-op when no field is a statutory_compliance_representation', () => {
     const errors: string[] = [];
     checkStatutoryComplianceReps('any text', [{ name: 'ordinary_flag' }], errors);
     expect(errors).toEqual([]);

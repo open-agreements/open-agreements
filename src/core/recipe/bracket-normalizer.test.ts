@@ -132,7 +132,7 @@ function escapeXml(value: string): string {
 }
 
 describe('normalizeBracketArtifacts', () => {
-  it.openspec('OA-ENG-008')('no-op when no declarative rules (does not strip brackets, does not corrupt formatting)', async () => {
+  it('no-op when no declarative rules (does not strip brackets, does not corrupt formatting)', async () => {
     const dir = mkdtempSync(join(tmpdir(), 'oa-bracket-normalizer-'));
     tempDirs.push(dir);
 
@@ -159,7 +159,7 @@ describe('normalizeBracketArtifacts', () => {
     expect(joined).toContain('[___________]');
   });
 
-  it.openspec('OA-ENG-008')('applies declarative paragraph rules with heading aliases and field interpolation', async () => {
+  it('applies declarative paragraph rules with heading aliases and field interpolation', async () => {
     const dir = mkdtempSync(join(tmpdir(), 'oa-bracket-normalizer-rules-'));
     tempDirs.push(dir);
 
@@ -240,7 +240,7 @@ describe('normalizeBracketArtifacts', () => {
     expect(joined).not.toContain(']');
   });
 
-  it.openspec('OA-ENG-008')('tracks expectation failures when a rule start/end anchor pair is not found', async () => {
+  it('tracks expectation failures when a rule start/end anchor pair is not found', async () => {
     const dir = mkdtempSync(join(tmpdir(), 'oa-bracket-normalizer-expectations-'));
     tempDirs.push(dir);
 
@@ -280,7 +280,7 @@ describe('normalizeBracketArtifacts', () => {
     );
   });
 
-  it.openspec('OA-ENG-008')('declarative rule preserves bold formatting on adjacent runs', async () => {
+  it('declarative rule preserves bold formatting on adjacent runs', async () => {
     const dir = mkdtempSync(join(tmpdir(), 'oa-bracket-normalizer-bold-'));
     tempDirs.push(dir);
 
@@ -326,7 +326,7 @@ describe('normalizeBracketArtifacts', () => {
     expect(stats.normalizedParagraphs).toBe(1);
   });
 
-  it.openspec('OA-ENG-008')('declarative rule preserves underline formatting when replacing brackets', async () => {
+  it('declarative rule preserves underline formatting when replacing brackets', async () => {
     const dir = mkdtempSync(join(tmpdir(), 'oa-bracket-normalizer-underline-'));
     tempDirs.push(dir);
 

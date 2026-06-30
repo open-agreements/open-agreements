@@ -187,7 +187,6 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("site/downloads");
   eleventyConfig.addPassthroughCopy("site/schemas");
   eleventyConfig.ignores.add("site/downloads/**/*.md");
-  eleventyConfig.ignores.add("site/trust/system-card.md");
 
   // site/downloads/ is generated at build time and gitignored, but Eleventy still
   // needs to passthrough-copy those generated files into _site/.

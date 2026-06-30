@@ -84,7 +84,7 @@ function getXmlContent(docxPath: string, entryPattern: RegExp): string {
 }
 
 describe('working-group-list rendering', () => {
-  it.openspec('OA-CKL-029')('renders one line per working group member', async () => {
+  it('renders one line per working group member', async () => {
     const templateDir = findTemplateDir('working-group-list');
     expect(templateDir).toBeTruthy();
 

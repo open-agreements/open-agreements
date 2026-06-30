@@ -55,7 +55,7 @@ function mockModules(overrides: Record<string, unknown> = {}): any {
 }
 
 describe('contract-templates-mcp tools', () => {
-  it.openspec('OA-DST-078')('lists expected tools', () => {
+  it('lists expected tools', () => {
     const names = listToolDescriptors().map((tool) => tool.name);
     // Signing tools removed (signing feature deleted)
     expect(names).toEqual([
@@ -65,7 +65,7 @@ describe('contract-templates-mcp tools', () => {
     ]);
   });
 
-  it.openspec('OA-DST-054')('returns compact-only template shape with pagination envelope', async () => {
+  it('returns compact-only template shape with pagination envelope', async () => {
     const result = await callTool('list_templates', {});
     const payload = getPayload(result);
 
@@ -113,7 +113,7 @@ describe('contract-templates-mcp tools', () => {
     }
   });
 
-  it.openspec('OA-DST-055')('paginates the catalog using cursor + limit roundtrip with no duplicates', async () => {
+  it('paginates the catalog using cursor + limit roundtrip with no duplicates', async () => {
     const allResult = await callTool('list_templates', { limit: 100 });
     const allTemplates = ((getPayload(allResult).data as Record<string, unknown>).templates) as Array<{ template_id: string }>;
     expect(allTemplates.length).toBeGreaterThan(2); // need enough to page through
@@ -143,7 +143,7 @@ describe('contract-templates-mcp tools', () => {
     expect(seen).toEqual(allTemplates.map((t) => t.template_id)); // same order as full catalog
   });
 
-  it.openspec('OA-DST-056')('maintains lexicographic continuity across page boundaries', async () => {
+  it('maintains lexicographic continuity across page boundaries', async () => {
     const limit = 2;
     const pages: Array<Array<{ template_id: string }>> = [];
     let cursor: string | undefined;
@@ -173,7 +173,7 @@ describe('contract-templates-mcp tools', () => {
     }
   });
 
-  it.openspec('OA-DST-057')('rejects out-of-range limit with INVALID_ARGUMENT', async () => {
+  it('rejects out-of-range limit with INVALID_ARGUMENT', async () => {
     for (const bad of [0, -1, 101, 1000]) {
       const r = await callTool('list_templates', { limit: bad });
       expect(r.isError).toBe(true);
@@ -185,7 +185,7 @@ describe('contract-templates-mcp tools', () => {
     }
   });
 
-  it.openspec('OA-DST-058')('rejects invalid cursor with INVALID_ARGUMENT', async () => {
+  it('rejects invalid cursor with INVALID_ARGUMENT', async () => {
     const cases = [
       'not-base64-+++',
       Buffer.from('garbage:value', 'utf8').toString('base64'),
@@ -202,7 +202,7 @@ describe('contract-templates-mcp tools', () => {
     }
   });
 
-  it.openspec('OA-DST-058')('rejects oversized cursor before base64 decode', async () => {
+  it('rejects oversized cursor before base64 decode', async () => {
     // Defense-in-depth: 512-char cap rejects bloated cursors before allocating decode buffers.
     const oversized = 'a'.repeat(1024);
     const r = await callTool('list_templates', { cursor: oversized });
@@ -213,7 +213,7 @@ describe('contract-templates-mcp tools', () => {
     expect(error.code).toBe('INVALID_ARGUMENT');
   });
 
-  it.openspec('OA-DST-059')('rejects legacy mode parameter with INVALID_ARGUMENT', async () => {
+  it('rejects legacy mode parameter with INVALID_ARGUMENT', async () => {
     for (const args of [{ mode: 'full' }, { mode: 'compact' }, { mode: 'anything' }]) {
       const r = await callTool('list_templates', args);
       expect(r.isError).toBe(true);
@@ -224,7 +224,7 @@ describe('contract-templates-mcp tools', () => {
     }
   });
 
-  it.openspec('OA-DST-078')('get_template returns a known template by ID', async () => {
+  it('get_template returns a known template by ID', async () => {
     const result = await callTool('get_template', { template_id: 'common-paper-mutual-nda' });
     const payload = getPayload(result);
     expect(result.isError).toBeUndefined();
@@ -235,7 +235,7 @@ describe('contract-templates-mcp tools', () => {
     expect(Array.isArray(template.fields)).toBe(true);
   });
 
-  it.openspec('OA-DST-061')('get_template returns options for enum fields matching source metadata', async () => {
+  it('get_template returns options for enum fields matching source metadata', async () => {
     const dir = findTemplateDir('common-paper-mutual-nda');
     if (!dir) throw new Error('common-paper-mutual-nda template not found on disk');
     const meta = loadMetadata(dir);
@@ -261,7 +261,7 @@ describe('contract-templates-mcp tools', () => {
     expect(actualEnumOptions).toEqual(expectedEnumOptions);
   });
 
-  it.openspec('OA-DST-062')('get_template omits options for non-enum field types', async () => {
+  it('get_template omits options for non-enum field types', async () => {
     const result = await callTool('get_template', { template_id: 'common-paper-mutual-nda' });
     const payload = getPayload(result);
     expect(result.isError).toBeUndefined();
@@ -276,7 +276,7 @@ describe('contract-templates-mcp tools', () => {
     }
   });
 
-  it.openspec('OA-DST-024')('returns TEMPLATE_NOT_FOUND for an unknown template id', async () => {
+  it('returns TEMPLATE_NOT_FOUND for an unknown template id', async () => {
     const result = await callTool('get_template', { template_id: 'nonexistent-template-id' });
     const payload = getPayload(result);
 
@@ -287,7 +287,7 @@ describe('contract-templates-mcp tools', () => {
     expect(error.code).toBe('TEMPLATE_NOT_FOUND');
   });
 
-  it.openspec('OA-DST-078')('fill_template fills a template in-process', async () => {
+  it('fill_template fills a template in-process', async () => {
     const result = await callTool('fill_template', {
       template: 'common-paper-mutual-nda',
       values: {
@@ -314,7 +314,7 @@ describe('contract-templates-mcp tools', () => {
   // Group A: Happy-path & envelope tests
   // -----------------------------------------------------------------------
 
-  it.openspec('OA-DST-078')('fill_template local_path return mode', async () => {
+  it('fill_template local_path return mode', async () => {
     const result = await callTool('fill_template', {
       template: 'common-paper-mutual-nda',
       values: {
@@ -338,7 +338,7 @@ describe('contract-templates-mcp tools', () => {
     expect(data.inline_base64).toBeUndefined();
   });
 
-  it.openspec('OA-DST-078')('fill_template fills the stockholder consent template from canonical markdown source', async () => {
+  it('fill_template fills the stockholder consent template from canonical markdown source', async () => {
     const result = await callTool('fill_template', {
       template: 'openagreements-stockholder-consent-safe',
       values: {
@@ -363,7 +363,7 @@ describe('contract-templates-mcp tools', () => {
     expect((data.inline_base64 as string).length).toBeGreaterThan(10_000);
   });
 
-  it.openspec('OA-DST-078')('fill_template fills the board consent template from canonical markdown source', async () => {
+  it('fill_template fills the board consent template from canonical markdown source', async () => {
     const result = await callTool('fill_template', {
       template: 'openagreements-board-consent-safe',
       values: {
@@ -398,7 +398,7 @@ describe('contract-templates-mcp tools', () => {
     expect(documentXml).toContain('General Authorizing Resolution');
   });
 
-  it.openspec('OA-DST-024')('fill_template returns TEMPLATE_NOT_FOUND for unknown template', async () => {
+  it('fill_template returns TEMPLATE_NOT_FOUND for unknown template', async () => {
     const result = await callTool('fill_template', {
       template: 'nonexistent-template',
       values: {},
@@ -410,7 +410,7 @@ describe('contract-templates-mcp tools', () => {
     expect(error.code).toBe('TEMPLATE_NOT_FOUND');
   });
 
-  it.openspec('OA-DST-032')('callTool returns error for unknown tool name', async () => {
+  it('callTool returns error for unknown tool name', async () => {
     const result = await callTool('nonexistent_tool', {});
     const payload = getPayload(result);
     expect(result.isError).toBe(true);
@@ -420,7 +420,7 @@ describe('contract-templates-mcp tools', () => {
     expect(error.message).toContain('Unknown tool');
   });
 
-  it.openspec('OA-DST-032')('callTool returns INVALID_ARGUMENT for Zod validation error', async () => {
+  it('callTool returns INVALID_ARGUMENT for Zod validation error', async () => {
     // template_id is required and must be min(1); passing empty string triggers Zod
     const result = await callTool('get_template', { template_id: '' });
     const payload = getPayload(result);
@@ -439,7 +439,7 @@ describe('contract-templates-mcp tools', () => {
       _resetModuleCache();
     });
 
-    it.openspec('OA-DST-032')('get_template catches loadMetadata error', async () => {
+    it('get_template catches loadMetadata error', async () => {
       _setModuleOverride(mockModules({
         loadMetadata: () => { throw new Error('corrupt metadata'); },
       }));
@@ -450,7 +450,7 @@ describe('contract-templates-mcp tools', () => {
       expect(error.code).toBe('TEMPLATE_NOT_FOUND');
     });
 
-    it.openspec('OA-DST-033')('get_template preserves nested array item schemas', async () => {
+    it('get_template preserves nested array item schemas', async () => {
       _setModuleOverride(mockModules({
         loadMetadata: () => ({
           name: 'Array Template',
@@ -489,7 +489,7 @@ describe('contract-templates-mcp tools', () => {
       ]);
     });
 
-    it.openspec('OA-TMP-045')('strips display_label from get_template payload (top-level + nested)', async () => {
+    it('strips display_label from get_template payload (top-level + nested)', async () => {
       // list_templates no longer carries `fields` on the wire (compact-only contract),
       // so display_label stripping is asserted only on get_template.
       _setModuleOverride(mockModules({
@@ -534,7 +534,7 @@ describe('contract-templates-mcp tools', () => {
       expect(getNestedItems[0]).not.toHaveProperty('display_label');
     });
 
-    it.openspec('OA-DST-060')('display_name falls back to template_id when upstream metadata is empty', async () => {
+    it('display_name falls back to template_id when upstream metadata is empty', async () => {
       _setModuleOverride(mockModules({
         listTemplateItems: () => [
           {
@@ -578,7 +578,7 @@ describe('contract-templates-mcp tools', () => {
       expect(templates[1].priority_field_count).toBe(1);
     });
 
-    it.openspec('OA-DST-032')('fill_template returns FILL_FAILED on engine error', async () => {
+    it('fill_template returns FILL_FAILED on engine error', async () => {
       _setModuleOverride(mockModules({
         fillTemplate: async () => { throw new Error('engine failure'); },
       }));
@@ -593,7 +593,7 @@ describe('contract-templates-mcp tools', () => {
       expect(error.message).toBe('engine failure');
     });
 
-    it.openspec('OA-DST-032')('fill_template returns TEMPLATE_NOT_FOUND when error mentions unknown template', async () => {
+    it('fill_template returns TEMPLATE_NOT_FOUND when error mentions unknown template', async () => {
       _setModuleOverride(mockModules({
         fillTemplate: async () => { throw new Error('unknown template: bad-id'); },
       }));
@@ -607,7 +607,7 @@ describe('contract-templates-mcp tools', () => {
       expect(error.code).toBe('TEMPLATE_NOT_FOUND');
     });
 
-    it.openspec('OA-DST-032')('fill_template extracts stderr from error object', async () => {
+    it('fill_template extracts stderr from error object', async () => {
       _setModuleOverride(mockModules({
         fillTemplate: async () => { throw { stderr: 'stderr error message', stdout: '', message: '' }; },
       }));
@@ -621,7 +621,7 @@ describe('contract-templates-mcp tools', () => {
       expect(error.message).toBe('stderr error message');
     });
 
-    it.openspec('OA-DST-032')('fill_template falls back to stdout when stderr is empty', async () => {
+    it('fill_template falls back to stdout when stderr is empty', async () => {
       _setModuleOverride(mockModules({
         fillTemplate: async () => { throw { stderr: '', stdout: 'stdout fallback message', message: '' }; },
       }));
@@ -635,7 +635,7 @@ describe('contract-templates-mcp tools', () => {
       expect(error.message).toBe('stdout fallback message');
     });
 
-    it.openspec('OA-DST-032')('fill_template handles non-object error (string throw)', async () => {
+    it('fill_template handles non-object error (string throw)', async () => {
       _setModuleOverride(mockModules({
         fillTemplate: async () => { throw 'string error'; },
       }));
@@ -649,7 +649,7 @@ describe('contract-templates-mcp tools', () => {
       expect(error.message).toBe('string error');
     });
 
-    it.openspec('OA-DST-032')('_resetModuleCache clears override between calls', async () => {
+    it('_resetModuleCache clears override between calls', async () => {
       // First call: override returns empty list
       _setModuleOverride(mockModules({
         listTemplateItems: () => [],

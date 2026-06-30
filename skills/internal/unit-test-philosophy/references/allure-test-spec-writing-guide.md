@@ -116,15 +116,6 @@ Keep test files focused:
 - one module or one capability per file
 - avoid unrelated assertions in the same file
 
-## OpenSpec Traceability Rules
-
-Use `.openspec('...')` only when the test maps directly to a spec scenario.
-
-Matching rules:
-- copy scenario text exactly
-- case-sensitive after whitespace normalization
-- keep backticks if the spec includes them
-
 ## Allure Report Hierarchy Notes
 
 This repo uses package-level compat reporters and setup hooks to keep Allure 3 hierarchy stable.
@@ -161,4 +152,3 @@ node scripts/report_package_coverage.mjs
 - One assertion per step where practical.
 - Attachments added for nontrivial data paths.
 - Error code/hint text validated for failure-path tests.
-- If traceability test: `.openspec()` text matches spec exactly.

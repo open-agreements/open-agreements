@@ -93,7 +93,7 @@ const NORMALIZE_CONFIG: NormalizeConfig = {
 };
 
 describe('source drift canary', () => {
-  it.openspec('OA-RCP-028')('passes when hash and structural anchors match recipe configuration', () => {
+  it('passes when hash and structural anchors match recipe configuration', () => {
     const dir = mkdtempSync(join(tmpdir(), 'oa-source-drift-pass-'));
     tempDirs.push(dir);
     const sourcePath = join(dir, 'source.docx');
@@ -124,7 +124,7 @@ describe('source drift canary', () => {
     expect(result.ok).toBe(true);
   });
 
-  it.openspec('OA-RCP-028')('fails when source hash mismatches metadata', () => {
+  it('fails when source hash mismatches metadata', () => {
     const dir = mkdtempSync(join(tmpdir(), 'oa-source-drift-hash-'));
     tempDirs.push(dir);
     const sourcePath = join(dir, 'source.docx');
@@ -147,7 +147,7 @@ describe('source drift canary', () => {
     expect(result.ok).toBe(false);
   });
 
-  it.openspec('OA-RCP-028')('reports structural anchor drift for missing replacement and normalize anchors', () => {
+  it('reports structural anchor drift for missing replacement and normalize anchors', () => {
     const dir = mkdtempSync(join(tmpdir(), 'oa-source-drift-anchors-'));
     tempDirs.push(dir);
     const sourcePath = join(dir, 'source.docx');
@@ -178,7 +178,7 @@ describe('source drift canary', () => {
     expect(result.ok).toBe(false);
   });
 
-  it.openspec('OA-RCP-029')('emits basic structure signature useful for drift diagnostics', () => {
+  it('emits basic structure signature useful for drift diagnostics', () => {
     const dir = mkdtempSync(join(tmpdir(), 'oa-source-drift-signature-'));
     tempDirs.push(dir);
     const sourcePath = join(dir, 'source.docx');
@@ -210,7 +210,7 @@ const oneAnchorManifest = (assertions?: FieldSelectorManifest['occurrences'][num
 });
 
 describe('selector drift detection (safe-docx parse path)', () => {
-  it.openspec('OA-SEL-016')('reports no selector drift when every occurrence resolves', async () => {
+  it('reports no selector drift when every occurrence resolves', async () => {
     const dir = mkdtempSync(join(tmpdir(), 'oa-selector-drift-ok-'));
     tempDirs.push(dir);
     const sourcePath = join(dir, 'source.docx');
@@ -237,7 +237,7 @@ describe('selector drift detection (safe-docx parse path)', () => {
     expect(result.ok).toBe(true);
   });
 
-  it.openspec('OA-SEL-017')('flags an unresolved field as drift and flips ok to false', async () => {
+  it('flags an unresolved field as drift and flips ok to false', async () => {
     const dir = mkdtempSync(join(tmpdir(), 'oa-selector-drift-missing-'));
     tempDirs.push(dir);
     const sourcePath = join(dir, 'source.docx');
@@ -259,7 +259,7 @@ describe('selector drift detection (safe-docx parse path)', () => {
     expect(result.ok).toBe(false);
   });
 
-  it.openspec('OA-SEL-018')('treats a duplicated anchor (more than one match) as drift', async () => {
+  it('treats a duplicated anchor (more than one match) as drift', async () => {
     const dir = mkdtempSync(join(tmpdir(), 'oa-selector-drift-dup-'));
     tempDirs.push(dir);
     const sourcePath = join(dir, 'source.docx');
@@ -272,7 +272,7 @@ describe('selector drift detection (safe-docx parse path)', () => {
     expect(drift.unresolved_selector_fields).toContain('company_name');
   });
 
-  it.openspec('OA-SEL-019')('reports an assertion failure as drift', async () => {
+  it('reports an assertion failure as drift', async () => {
     const dir = mkdtempSync(join(tmpdir(), 'oa-selector-drift-assert-'));
     tempDirs.push(dir);
     const sourcePath = join(dir, 'source.docx');

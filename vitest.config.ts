@@ -54,7 +54,6 @@ export default defineConfig({
         'content/**',
         'scripts/**',
         'site/**',
-        'openspec/**',
         'coverage/**',
         'allure-results/**',
         'allure-report/**',

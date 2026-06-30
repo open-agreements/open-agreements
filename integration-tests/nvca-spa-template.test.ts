@@ -806,7 +806,7 @@ describe('NVCA SPA Template', () => {
     }
   });
 
-  itVerification.openspec('OA-FIL-002')(
+  itVerification(
     'computes dispute-resolution forum defaults and governing-law alignment in exported artifact',
     async () => {
       await allureParameter('recipe_id', RECIPE_ID);

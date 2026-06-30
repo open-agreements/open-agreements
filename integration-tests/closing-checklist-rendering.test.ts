@@ -157,7 +157,7 @@ function getTableRowFormatting(docxPath: string): CellFormatting[][] {
 }
 
 describe('closing-checklist rendering', () => {
-  it.openspec('OA-CKL-028')('renders stage-first 4-column checklist with linked items and unlinked fallbacks', async () => {
+  it('renders stage-first 4-column checklist with linked items and unlinked fallbacks', async () => {
     const templateDir = findTemplateDir('closing-checklist');
     expect(templateDir).toBeTruthy();
 
