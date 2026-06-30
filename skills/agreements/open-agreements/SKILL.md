@@ -1,10 +1,14 @@
 ---
 name: open-agreements
 description: >-
-  Fill standard legal agreement templates (NDAs, cloud service agreements, SAFEs)
-  and produce filled DOCX files. Supports Common Paper, Bonterms, and
-  Y Combinator templates. Use when the user needs to draft a legal agreement,
-  create an NDA, fill a contract template, or generate a SAFE.
+  Navigate and use the OpenAgreements legal content library — source-cited
+  practice guides, review checklists, 50-state law surveys, and fill-ready
+  agreement templates. Look up state-by-state legal guides, checklists, and law
+  surveys, or fill standard templates (NDAs, cloud service agreements, SAFEs)
+  into signable DOCX files. Supports Common Paper, Bonterms, and Y Combinator
+  templates. Use when the user needs a practice guide, a review checklist, a law
+  survey, to draft a legal agreement, create an NDA, fill a contract template, or
+  generate a SAFE.
 license: Apache-2.0
 homepage: https://github.com/open-agreements/open-agreements
 compatibility: >-
@@ -15,21 +19,38 @@ compatibility: >-
   guaranteed offline behavior.
 metadata:
   author: open-agreements
-  version: "0.2.4"
+  version: "0.3.0"
 catalog_group: Agreement Drafting And Filling
 catalog_order: 10
 ---
 
 # open-agreements
 
-Fill standard legal agreement templates and produce filled DOCX files.
+OpenAgreements is a legal content library with four kinds of first-class
+content: **practice guides**, **review checklists**, **law surveys**, and
+**fill-ready agreement templates**. This skill makes an agent aware of all four
+and able to navigate them. Filling a template into a signable DOCX is **one** of
+those capabilities — see the fill workflow below.
 
-> **Doing legal research, not filling a form?** For U.S. 50-state law (non-compete,
-> consumer privacy, AI employment), see the Legal Practice Library — plain markdown
-> in [`legal-practice-library/`](https://github.com/open-agreements/open-agreements/tree/main/legal-practice-library)
-> or machine-readable twins on openagreements.org (append `.md` / `.json`; surveys
-> add `.csv`). The `data-privacy-law-explainer` and `non-compete-contract-explainer`
-> skills wrap that content.
+## What's in OpenAgreements
+
+| Content | What it is | How to read it |
+|---------|-----------|----------------|
+| **Practice guides** | Source-cited, state-by-state explanations of what the law says (e.g. non-compete, consumer privacy, AI in hiring). | Append `.md` or `.json` to a guide's canonical URL on openagreements.org. Browse as plain markdown under [`legal-practice-library/`](https://github.com/open-agreements/open-agreements/tree/main/legal-practice-library). |
+| **Review checklists** | Requirement-by-requirement checklists for reviewing an agreement against a standard form (e.g. the YC SAFE). | Append `.md` or `.json` to a checklist's canonical URL. |
+| **Law surveys** | 50-state comparison tables for a topic. | Append `.json` or `.csv` (spreadsheet import) to a survey's canonical URL; surveys have no `.md` twin. |
+| **Agreement templates** | Standard forms (Common Paper, Bonterms, Y Combinator, OpenAgreements) you can fill into signable DOCX. | Use the MCP or CLI fill workflow below. |
+
+For deep, jurisdiction-specific legal research, the `data-privacy-law-explainer`
+and `non-compete-contract-explainer` skills wrap the practice-guide content,
+bundling a per-jurisdiction snapshot offline.
+
+## Fill a template (one capability)
+
+The rest of this skill documents the **template-filling** capability —
+discovering a standard form and filling it into a signable DOCX. The other three
+content kinds above are read-only reference content: fetch their machine-readable
+twins or browse the repo directly.
 
 ## Activation
 
@@ -132,7 +153,7 @@ All template field definitions and fill logic are auditable in the repository.
 
 The two version numbers in this skill are independent and refer to different things:
 
-- **Skill version** (in this file's frontmatter, currently `0.2.3`) — versions the skill documentation itself.
+- **Skill version** (in this file's frontmatter, currently `0.3.0`) — versions the skill documentation itself.
 - **npm package version** (currently `0.7.4`) — the version of the upstream `open-agreements` npm package this skill recommends pinning. Check `npm view open-agreements version` for the latest.
 
 A newer skill version means the documentation was updated. A newer npm package version means the underlying tool was updated. They are not synchronized.
