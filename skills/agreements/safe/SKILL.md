@@ -12,7 +12,7 @@ compatibility: >-
   Local CLI requires Node.js >=20.
 metadata:
   author: open-agreements
-  version: "0.2.2"
+  version: "0.3.0"
 catalog_group: Agreement Drafting And Filling
 catalog_order: 70
 ---
@@ -113,6 +113,21 @@ Multiple SAFEs can be used in the same round (e.g., valuation cap SAFE + pro rat
 - `yc-safe-pro-rata-side-letter` — Pro Rata Side Letter (Y Combinator)
 
 Use `list_templates` (MCP) or `list --json` (CLI) for the latest inventory and field definitions.
+
+## Review checklist
+
+This skill ships a **bundled, offline copy** of the YC post-money SAFE
+(valuation cap) review checklist — a requirement-by-requirement guide for
+reviewing a filled SAFE against the standard Y Combinator form. It travels with
+the skill, so it works without a network call:
+
+- [`content/yc-post-money-safe-valuation-cap.md`](./content/yc-post-money-safe-valuation-cap.md) — human-readable checklist
+- [`content/yc-post-money-safe-valuation-cap.json`](./content/yc-post-money-safe-valuation-cap.json) — machine-readable twin
+
+Use it to walk through a SAFE clause by clause after filling. The live canonical
+version is at `https://openagreements.org/checklists/safes/yc-post-money-safe-valuation-cap`
+(append `.md` or `.json` for the twins). The checklist is general legal
+information, not legal advice.
 
 ## Notes
 

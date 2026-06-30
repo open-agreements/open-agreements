@@ -54,6 +54,24 @@ describe('skills directory layout', () => {
     }
   });
 
+  it('keeps the YC SAFE checklist bundled in the safe skill byte-identical to its canonical source', () => {
+    // The safe skill ships an offline copy of the YC SAFE review checklist so
+    // the bundle is self-contained (#1250). Guard the third in-repo copy from
+    // drifting away from the canonical checklists/safes/ source.
+    for (const file of [
+      'yc-post-money-safe-valuation-cap.json',
+      'yc-post-money-safe-valuation-cap.md',
+    ]) {
+      const canonical = join(REPO_ROOT, 'checklists', 'safes', file);
+      const bundled = join(SKILLS_ROOT, 'agreements', 'safe', 'content', file);
+      expect(existsSync(bundled), `${relative(REPO_ROOT, bundled)} is missing`).toBe(true);
+      expect(
+        readFileSync(bundled, 'utf-8'),
+        `${relative(REPO_ROOT, bundled)} drifted from ${relative(REPO_ROOT, canonical)}`,
+      ).toBe(readFileSync(canonical, 'utf-8'));
+    }
+  });
+
   it('publishes no skill that references files outside its own directory', () => {
     for (const dir of skillDirs) {
       const skillMd = readFileSync(join(dir, 'SKILL.md'), 'utf-8');
