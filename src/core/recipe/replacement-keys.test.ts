@@ -5,7 +5,7 @@ import { parseReplacementKey, extractSearchText } from './replacement-keys.js';
 const it = itAllure.epic('Cleaning & Normalization');
 
 describe('parseReplacementKey', () => {
-  it.openspec('OA-RCP-039')('parses a simple key', () => {
+  it('parses a simple key', () => {
     const result = parseReplacementKey('[Company Name]', '{company_name}');
     expect(result).toEqual({
       type: 'simple',
@@ -14,7 +14,7 @@ describe('parseReplacementKey', () => {
     });
   });
 
-  it.openspec('OA-RCP-039')('parses a context key with " > " separator', () => {
+  it('parses a context key with " > " separator', () => {
     const result = parseReplacementKey('Effective Date > [Fill in]', '{effective_date}');
     expect(result).toEqual({
       type: 'context',
@@ -24,7 +24,7 @@ describe('parseReplacementKey', () => {
     });
   });
 
-  it.openspec('OA-RCP-039')('splits on first " > " only', () => {
+  it('splits on first " > " only', () => {
     const result = parseReplacementKey('A > B > C', '{tag}');
     expect(result).toEqual({
       type: 'context',
@@ -34,7 +34,7 @@ describe('parseReplacementKey', () => {
     });
   });
 
-  it.openspec('OA-RCP-039')('does not confuse > inside text without spaces', () => {
+  it('does not confuse > inside text without spaces', () => {
     const result = parseReplacementKey('A>B', '{tag}');
     // " > " requires spaces, so "A>B" is simple
     expect(result.type).toBe('simple');
@@ -42,11 +42,11 @@ describe('parseReplacementKey', () => {
 });
 
 describe('extractSearchText', () => {
-  it.openspec('OA-RCP-039')('returns key as-is for simple keys', () => {
+  it('returns key as-is for simple keys', () => {
     expect(extractSearchText('[Company Name]')).toBe('[Company Name]');
   });
 
-  it.openspec('OA-RCP-039')('extracts placeholder from context key', () => {
+  it('extracts placeholder from context key', () => {
     expect(extractSearchText('Effective Date > [Fill in]')).toBe('[Fill in]');
   });
 });

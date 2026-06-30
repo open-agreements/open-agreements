@@ -49,7 +49,7 @@ describe('validateLicense', () => {
     expect(result.errors[0]).toContain('Failed to load metadata');
   });
 
-  it.openspec('OA-DST-003')('requires attribution text for CC-BY family licenses', () => {
+  it('requires attribution text for CC-BY family licenses', () => {
     const dir = createMetadataDir('CC-BY-ND-4.0', '   ');
 
     const result = validateLicense(dir, 'fixture-template');

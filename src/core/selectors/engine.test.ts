@@ -69,7 +69,7 @@ const companyManifest = (occurrences: FieldSelectorManifest['occurrences']): Fie
 });
 
 describe('applySelectorContracts (resolve → patch → serialize)', () => {
-  it.openspec(['OA-SEL-011','OA-SEL-020'])('[OA-SEL-011] rewrites two heterogeneous anchors to one {company_name} tag', async () => {
+  it('[OA-SEL-011] rewrites two heterogeneous anchors to one {company_name} tag', async () => {
     const input = buildDocx([
       para('This Agreement is entered into by [Insert Company Name] (the Company).'),
       para('All references to [Company name] mean the Company.'),
@@ -94,7 +94,7 @@ describe('applySelectorContracts (resolve → patch → serialize)', () => {
     expect(raw).not.toContain('_bk_');
   });
 
-  it.openspec('OA-SEL-003')('[OA-SEL-003] a section scope disambiguates the preamble blank from a stray blank', async () => {
+  it('[OA-SEL-003] a section scope disambiguates the preamble blank from a stray blank', async () => {
     const input = buildDocx([
       para('Stray earlier blank [____________] elsewhere.'),
       para('PREFERRED STOCK PURCHASE AGREEMENT', 'Heading1'),
@@ -117,7 +117,7 @@ describe('applySelectorContracts (resolve → patch → serialize)', () => {
     expect(text).toContain('Stray earlier blank [____________] elsewhere.');
   });
 
-  it.openspec('OA-SEL-014')('[OA-SEL-014] failure_behavior=block throws on an unresolved occurrence', async () => {
+  it('[OA-SEL-014] failure_behavior=block throws on an unresolved occurrence', async () => {
     const input = buildDocx([para('No anchor here at all.')]);
     const out = join(mkdtempSync(join(tmpdir(), 'selector-out-')), 'out.docx');
     const manifest: FieldSelectorManifest = {
@@ -127,7 +127,7 @@ describe('applySelectorContracts (resolve → patch → serialize)', () => {
     await expect(applySelectorContracts(input, out, [manifest])).rejects.toThrow(/blocked render/i);
   });
 
-  it.openspec('OA-SEL-015')('[OA-SEL-015] failure_behavior=warn does not throw on an unresolved occurrence', async () => {
+  it('[OA-SEL-015] failure_behavior=warn does not throw on an unresolved occurrence', async () => {
     const input = buildDocx([para('No anchor here at all.')]);
     const out = join(mkdtempSync(join(tmpdir(), 'selector-out-')), 'out.docx');
     const manifest = companyManifest([{ primary: { kind: 'regex', pattern: '\\[Insert Company Name\\]' } }]);

@@ -1,18 +1,12 @@
-<!-- OPENSPEC:START -->
-# OpenSpec Instructions
+# Repository guide
 
-These instructions are for AI assistants working in this project.
+OpenAgreements publishes primary-source-backed U.S. legal content and standard
+agreement templates, organized as first-class directories:
 
-Always open `@/openspec/AGENTS.md` when the request:
-- Mentions planning or proposals (words like proposal, spec, change, plan)
-- Introduces new capabilities, breaking changes, architecture shifts, or big performance/security work
-- Sounds ambiguous and you need the authoritative spec before coding
+- `practice-guides/` — jurisdiction practice guides, every claim cited to primary law
+- `checklists/` — RFC 2119-style requirement-by-requirement review checklists
+- `surveys/` — 50-state comparison tables (with machine-readable `.json` / `.csv` twins)
+- `content/templates/` — fill-ready standard agreement templates
+- `skills/` — installable agent skills
 
-Use `@/openspec/AGENTS.md` to learn:
-- How to create and apply change proposals
-- Spec format and conventions
-- Project structure and guidelines
-
-Keep this managed block so 'openspec update' can refresh the instructions.
-
-<!-- OPENSPEC:END -->
+See `README.md` for the full catalog and `CONTRIBUTING.md` before opening a pull request.

@@ -280,9 +280,6 @@ const helpers = createAllureTestHelpers<EpicName>({
   defaultEpic: 'Platform & Distribution',
   defaultParentSuite: 'epic',
   injectBddContext: false,
-  openspec: {
-    repoBaseUrl: 'https://github.com/open-agreements/open-agreements',
-  },
   beforeTest: ({ testKey }) => {
     beginAssertionCapture(testKey);
   },

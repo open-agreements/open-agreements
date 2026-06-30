@@ -24,12 +24,12 @@ function validManifest(overrides: Record<string, unknown> = {}) {
 }
 
 describe('FieldSelectorManifest schema', () => {
-  it.openspec('OA-SEL-001')('[OA-SEL-001] accepts a well-formed manifest', () => {
+  it('[OA-SEL-001] accepts a well-formed manifest', () => {
     const result = FieldSelectorManifestSchema.safeParse(validManifest());
     expect(result.success).toBe(true);
   });
 
-  it.openspec('OA-SEL-001')('[OA-SEL-001] rejects a manifest missing field_id / occurrences / failure_behavior', () => {
+  it('[OA-SEL-001] rejects a manifest missing field_id / occurrences / failure_behavior', () => {
     for (const missing of ['field_id', 'occurrences', 'failure_behavior']) {
       const m = validManifest();
       delete (m as Record<string, unknown>)[missing];
@@ -37,12 +37,12 @@ describe('FieldSelectorManifest schema', () => {
     }
   });
 
-  it.openspec('OA-SEL-001')('[OA-SEL-001] rejects a manifest carrying a requirement key (legal level is single-sourced elsewhere)', () => {
+  it('[OA-SEL-001] rejects a manifest carrying a requirement key (legal level is single-sourced elsewhere)', () => {
     const result = FieldSelectorManifestSchema.safeParse(validManifest({ requirement: 'MUST' }));
     expect(result.success).toBe(false);
   });
 
-  it.openspec('OA-SEL-001')('[OA-SEL-001] rejects an empty occurrences array', () => {
+  it('[OA-SEL-001] rejects an empty occurrences array', () => {
     expect(FieldSelectorManifestSchema.safeParse(validManifest({ occurrences: [] })).success).toBe(false);
   });
 

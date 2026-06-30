@@ -102,7 +102,7 @@ jobs:
       - name: Validate Gemini extension manifest contract
         run: npm run check:gemini-extension-manifest
 
-      - name: Run tests (includes OpenSpec traceability check)
+      - name: Run tests
         run: npm run test:run
 
       - name: Isolated package runtime smoke checks

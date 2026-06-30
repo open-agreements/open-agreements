@@ -25,7 +25,7 @@ const specPaths = sources
   .map((source) => join(repoRoot, source.jsonPath));
 
 describe('json template renderer', () => {
-  it.openspec('OA-TMP-017')('supports multiple templates sharing the same layout id', () => {
+  it('supports multiple templates sharing the same layout id', () => {
     const style = loadStyleProfile(stylePath);
     const specs = specPaths.map((specPath) => loadContractSpec(specPath));
 
@@ -48,7 +48,7 @@ describe('json template renderer', () => {
     }
   });
 
-  it.openspec('OA-TMP-017')('rejects unknown layout ids with actionable error', () => {
+  it('rejects unknown layout ids with actionable error', () => {
     const style = loadStyleProfile(stylePath);
     const spec = loadContractSpec(specPaths[0]);
     const badSpec = { ...spec, layout_id: 'nonexistent-layout-v1' };
@@ -57,7 +57,7 @@ describe('json template renderer', () => {
     expect(listRegisteredLayouts()).toContain('cover-standard-signature-v1');
   });
 
-  it.openspec('OA-TMP-017')('rejects style mismatch between spec and style profile', () => {
+  it('rejects style mismatch between spec and style profile', () => {
     const style = loadStyleProfile(stylePath);
     const spec = loadContractSpec(specPaths[0]);
     const badSpec = { ...spec, style_id: 'different-style-v2' };
@@ -65,7 +65,7 @@ describe('json template renderer', () => {
     expect(() => renderFromValidatedSpec(badSpec, style)).toThrow(/Style mismatch/);
   });
 
-  it.openspec('OA-TMP-017')('validates style token spacing types before rendering', () => {
+  it('validates style token spacing types before rendering', () => {
     const rawStyle = JSON.parse(readFileSync(stylePath, 'utf-8')) as Record<string, unknown>;
     const badStyle = {
       ...rawStyle,

@@ -155,7 +155,7 @@ afterEach(() => {
 });
 
 describe('runList in-process coverage', () => {
-  itDiscovery.openspec('OA-CLI-012')('emits sorted JSON envelope with normalized sources and mapped fields', async () => {
+  itDiscovery('emits sorted JSON envelope with normalized sources and mapped fields', async () => {
     const harness = await loadListHarness({
       templateEntries: [
         { id: 'z-template', dir: '/templates/z-template', baseDir: '/templates' },
@@ -226,7 +226,7 @@ describe('runList in-process coverage', () => {
     expect(zTemplate.fields[1]).not.toHaveProperty('display_label');
   });
 
-  itDiscovery.openspec('OA-CLI-013')('exits non-zero in --json-strict mode when metadata loading fails', async () => {
+  itDiscovery('exits non-zero in --json-strict mode when metadata loading fails', async () => {
     const harness = await loadListHarness({
       templateEntries: [
         { id: 'bad-template', dir: '/templates/bad-template', baseDir: '/templates' },
@@ -255,7 +255,7 @@ describe('runList in-process coverage', () => {
     expect(errorSpy).toHaveBeenCalledWith(expect.stringContaining('error: template bad-template: metadata parse failed'));
   });
 
-  itDiscovery.openspec('OA-CLI-024')('preserves nested array item schemas in JSON output', async () => {
+  itDiscovery('preserves nested array item schemas in JSON output', async () => {
     const harness = await loadListHarness({
       templateEntries: [
         { id: 'array-template', dir: '/templates/array-template', baseDir: '/templates' },
@@ -319,7 +319,7 @@ describe('runList in-process coverage', () => {
     expect(template.fields[0].items[1]).not.toHaveProperty('display_label');
   });
 
-  itDiscovery.openspec('OA-CLI-025')('exposes options on enum fields in JSON output, omits for non-enum', async () => {
+  itDiscovery('exposes options on enum fields in JSON output, omits for non-enum', async () => {
     const harness = await loadListHarness({
       templateEntries: [
         { id: 'enum-template', dir: '/templates/enum-template', baseDir: '/templates' },
@@ -368,7 +368,7 @@ describe('runList in-process coverage', () => {
     expect(dateField).not.toHaveProperty('options');
   });
 
-  itDiscovery.openspec('OA-TMP-043')('projects display_label through nested items, omitting on unlabeled siblings', async () => {
+  itDiscovery('projects display_label through nested items, omitting on unlabeled siblings', async () => {
     const harness = await loadListHarness({
       templateEntries: [
         { id: 'array-template', dir: '/templates/array-template', baseDir: '/templates' },
@@ -421,7 +421,7 @@ describe('runList in-process coverage', () => {
     expect(template.fields[0].items[1]).not.toHaveProperty('display_label');
   });
 
-  itDiscovery.openspec('OA-TMP-039')('projects credits and derived_from onto internal and external templates; omits them on recipes', async () => {
+  itDiscovery('projects credits and derived_from onto internal and external templates; omits them on recipes', async () => {
     const harness = await loadListHarness({
       templateEntries: [
         { id: 'credited-template', dir: '/templates/credited-template', baseDir: '/templates' },
@@ -488,11 +488,11 @@ describe('runList in-process coverage', () => {
     expect(plainRecipe.derived_from).toBeUndefined();
   });
 
-  itDiscovery.openspec('OA-TMP-036').skip('parse-time validation lives in the metadata loader; covered indirectly by list/fill flows that call loadMetadata, but a direct unit test is pending', () => {});
+  itDiscovery.skip('parse-time validation lives in the metadata loader; covered indirectly by list/fill flows that call loadMetadata, but a direct unit test is pending', () => {});
 
-  itDiscovery.openspec('OA-TMP-037').skip('default-empty-array behavior is enforced by the schema and exercised indirectly via list-command projection above; direct unit test is pending', () => {});
+  itDiscovery.skip('default-empty-array behavior is enforced by the schema and exercised indirectly via list-command projection above; direct unit test is pending', () => {});
 
-  itDiscovery.openspec('OA-TMP-038').skip('invalid-role rejection is enforced by the metadata schema; a direct negative test is pending', () => {});
+  itDiscovery.skip('invalid-role rejection is enforced by the metadata schema; a direct negative test is pending', () => {});
 
   itDiscovery('collects external and recipe metadata errors in non-strict JSON mode', async () => {
     const harness = await loadListHarness({
@@ -528,7 +528,7 @@ describe('runList in-process coverage', () => {
     expect(envelope.items[0].name).toBe('good-template');
   });
 
-  itDiscovery.openspec('OA-CLI-004')('renders human-readable table rows with error placeholders when metadata fails', async () => {
+  itDiscovery('renders human-readable table rows with error placeholders when metadata fails', async () => {
     const harness = await loadListHarness({
       templateEntries: [
         { id: 'good-template', dir: '/templates/good-template', baseDir: '/templates' },

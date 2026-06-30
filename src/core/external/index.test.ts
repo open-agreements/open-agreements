@@ -61,7 +61,7 @@ function createExternalFixture(overrides?: { sourceSha256?: string }) {
 }
 
 describe('runExternalFill', () => {
-  itFilling.openspec('OA-TMP-012')('passes priorityFieldNames through to unified fill pipeline', async () => {
+  itFilling('passes priorityFieldNames through to unified fill pipeline', async () => {
     const { root } = createExternalFixture();
 
     const runFillPipelineMock = vi.fn(async ({ outputPath }: { outputPath: string }) => ({

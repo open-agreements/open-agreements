@@ -79,7 +79,7 @@ describe('validateChecklistPatch', () => {
     },
   };
 
-  it.openspec('OA-CKL-019')('validates a patch with dry-run only and persists a validation artifact', async () => {
+  it('validates a patch with dry-run only and persists a validation artifact', async () => {
     const result = await validateWithEvidence('dry-run patch validation', {
       checklist_id: 'ck_001',
       checklist: baseChecklist,
@@ -127,7 +127,7 @@ describe('validateChecklistPatch', () => {
     });
   });
 
-  it.openspec('OA-CKL-022')('rejects unknown target paths without guessing', async () => {
+  it('rejects unknown target paths without guessing', async () => {
     const result = await validateWithEvidence('unknown target path validation', {
       checklist_id: 'ck_001',
       checklist: baseChecklist,
@@ -155,7 +155,7 @@ describe('validateChecklistPatch', () => {
     });
   });
 
-  it.openspec('OA-CKL-018')('rejects stale expected revision during validation', async () => {
+  it('rejects stale expected revision during validation', async () => {
     const result = await validateWithEvidence('stale expected revision validation', {
       checklist_id: 'ck_001',
       checklist: baseChecklist,
@@ -180,7 +180,7 @@ describe('validateChecklistPatch', () => {
     });
   });
 
-  it.openspec('OA-CKL-017')('rejects patches whose resulting state violates checklist schema', async () => {
+  it('rejects patches whose resulting state violates checklist schema', async () => {
     const result = await validateWithEvidence('post-patch schema invalid validation', {
       checklist_id: 'ck_001',
       checklist: baseChecklist,
@@ -578,7 +578,7 @@ describe('validateChecklistPatch', () => {
     }
   });
 
-  it.openspec('OA-CKL-033')('expires validation artifacts after TTL', async () => {
+  it('expires validation artifacts after TTL', async () => {
     await allureStep('Given validation artifact store is reset', async () => {
       setChecklistPatchValidationStore(null);
     });

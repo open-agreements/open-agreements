@@ -37,7 +37,7 @@ async function expectSafeParseOutcome(
 }
 
 describe('FieldDefinitionSchema', () => {
-  it.openspec('OA-TMP-020')('accepts a valid string field', async () => {
+  it('accepts a valid string field', async () => {
     await expectSafeParseOutcome(
       'FieldDefinitionSchema',
       FieldDefinitionSchema,
@@ -78,7 +78,7 @@ describe('FieldDefinitionSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-028')('accepts an array field with nested item schema', async () => {
+  it('accepts an array field with nested item schema', async () => {
     await expectSafeParseOutcome(
       'FieldDefinitionSchema',
       FieldDefinitionSchema,
@@ -104,7 +104,7 @@ describe('FieldDefinitionSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-063')('accepts a well-formed statutory_compliance_representation field', async () => {
+  it('accepts a well-formed statutory_compliance_representation field', async () => {
     await expectSafeParseOutcome(
       'FieldDefinitionSchema',
       FieldDefinitionSchema,
@@ -121,7 +121,7 @@ describe('FieldDefinitionSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-063')('rejects a non-boolean statutory_compliance_representation field', async () => {
+  it('rejects a non-boolean statutory_compliance_representation field', async () => {
     await expectSafeParseOutcome(
       'FieldDefinitionSchema',
       FieldDefinitionSchema,
@@ -138,7 +138,7 @@ describe('FieldDefinitionSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-063')('rejects a statutory_compliance_representation field defaulting to true', async () => {
+  it('rejects a statutory_compliance_representation field defaulting to true', async () => {
     await expectSafeParseOutcome(
       'FieldDefinitionSchema',
       FieldDefinitionSchema,
@@ -155,7 +155,7 @@ describe('FieldDefinitionSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-063')('rejects a statutory_compliance_representation field without authority_url', async () => {
+  it('rejects a statutory_compliance_representation field without authority_url', async () => {
     await expectSafeParseOutcome(
       'FieldDefinitionSchema',
       FieldDefinitionSchema,
@@ -171,7 +171,7 @@ describe('FieldDefinitionSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-063')('rejects an http-less authority_url on a statutory_compliance_representation field', async () => {
+  it('rejects an http-less authority_url on a statutory_compliance_representation field', async () => {
     await expectSafeParseOutcome(
       'FieldDefinitionSchema',
       FieldDefinitionSchema,
@@ -188,7 +188,7 @@ describe('FieldDefinitionSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-063')('rejects authority_url on a field that is not a statutory_compliance_representation', async () => {
+  it('rejects authority_url on a field that is not a statutory_compliance_representation', async () => {
     await expectSafeParseOutcome(
       'FieldDefinitionSchema',
       FieldDefinitionSchema,
@@ -203,7 +203,7 @@ describe('FieldDefinitionSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-063')('rejects a statutory_compliance_representation field without confirm_note', async () => {
+  it('rejects a statutory_compliance_representation field without confirm_note', async () => {
     await expectSafeParseOutcome(
       'FieldDefinitionSchema',
       FieldDefinitionSchema,
@@ -219,7 +219,7 @@ describe('FieldDefinitionSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-063')('rejects a blank confirm_note on a statutory_compliance_representation field', async () => {
+  it('rejects a blank confirm_note on a statutory_compliance_representation field', async () => {
     await expectSafeParseOutcome(
       'FieldDefinitionSchema',
       FieldDefinitionSchema,
@@ -236,7 +236,7 @@ describe('FieldDefinitionSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-063')('rejects confirm_note on a field that is not a statutory_compliance_representation', async () => {
+  it('rejects confirm_note on a field that is not a statutory_compliance_representation', async () => {
     await expectSafeParseOutcome(
       'FieldDefinitionSchema',
       FieldDefinitionSchema,
@@ -251,7 +251,7 @@ describe('FieldDefinitionSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-003')('rejects enum field without options', async () => {
+  it('rejects enum field without options', async () => {
     await expectSafeParseOutcome(
       'FieldDefinitionSchema',
       FieldDefinitionSchema,
@@ -264,7 +264,7 @@ describe('FieldDefinitionSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-020')('accepts enum field with options', async () => {
+  it('accepts enum field with options', async () => {
     await expectSafeParseOutcome(
       'FieldDefinitionSchema',
       FieldDefinitionSchema,
@@ -278,7 +278,7 @@ describe('FieldDefinitionSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-020')('rejects enum field with empty options', async () => {
+  it('rejects enum field with empty options', async () => {
     await expectSafeParseOutcome(
       'FieldDefinitionSchema',
       FieldDefinitionSchema,
@@ -292,7 +292,7 @@ describe('FieldDefinitionSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-049')('accepts a multiselect field with options, derive_booleans, and JSON default', async () => {
+  it('accepts a multiselect field with options, derive_booleans, and JSON default', async () => {
     await expectSafeParseOutcome(
       'FieldDefinitionSchema',
       FieldDefinitionSchema,
@@ -308,7 +308,7 @@ describe('FieldDefinitionSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-050')('rejects multiselect fields without options', async () => {
+  it('rejects multiselect fields without options', async () => {
     await expectSafeParseOutcome(
       'FieldDefinitionSchema',
       FieldDefinitionSchema,
@@ -321,7 +321,7 @@ describe('FieldDefinitionSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-050')('rejects multiselect options that are not valid identifiers', async () => {
+  it('rejects multiselect options that are not valid identifiers', async () => {
     await expectSafeParseOutcome(
       'FieldDefinitionSchema',
       FieldDefinitionSchema,
@@ -335,7 +335,7 @@ describe('FieldDefinitionSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-050')('rejects duplicate multiselect options', async () => {
+  it('rejects duplicate multiselect options', async () => {
     await expectSafeParseOutcome(
       'FieldDefinitionSchema',
       FieldDefinitionSchema,
@@ -349,7 +349,7 @@ describe('FieldDefinitionSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-050')('rejects derive_booleans on non-multiselect fields', async () => {
+  it('rejects derive_booleans on non-multiselect fields', async () => {
     await expectSafeParseOutcome(
       'FieldDefinitionSchema',
       FieldDefinitionSchema,
@@ -363,7 +363,7 @@ describe('FieldDefinitionSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-049')('accepts an empty multiselect JSON default', async () => {
+  it('accepts an empty multiselect JSON default', async () => {
     await expectSafeParseOutcome(
       'FieldDefinitionSchema',
       FieldDefinitionSchema,
@@ -378,7 +378,7 @@ describe('FieldDefinitionSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-050')('rejects multiselect defaults outside the options allowlist', async () => {
+  it('rejects multiselect defaults outside the options allowlist', async () => {
     await expectSafeParseOutcome(
       'FieldDefinitionSchema',
       FieldDefinitionSchema,
@@ -393,7 +393,7 @@ describe('FieldDefinitionSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-050')('rejects malformed multiselect JSON defaults', async () => {
+  it('rejects malformed multiselect JSON defaults', async () => {
     await expectSafeParseOutcome(
       'FieldDefinitionSchema',
       FieldDefinitionSchema,
@@ -408,7 +408,7 @@ describe('FieldDefinitionSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-050')('rejects multiselect defaults with non-string entries', async () => {
+  it('rejects multiselect defaults with non-string entries', async () => {
     await expectSafeParseOutcome(
       'FieldDefinitionSchema',
       FieldDefinitionSchema,
@@ -423,7 +423,7 @@ describe('FieldDefinitionSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-050')('rejects multiselect defaults with duplicate entries', async () => {
+  it('rejects multiselect defaults with duplicate entries', async () => {
     await expectSafeParseOutcome(
       'FieldDefinitionSchema',
       FieldDefinitionSchema,
@@ -438,7 +438,7 @@ describe('FieldDefinitionSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-004')('rejects number field with non-numeric default', async () => {
+  it('rejects number field with non-numeric default', async () => {
     await expectSafeParseOutcome(
       'FieldDefinitionSchema',
       FieldDefinitionSchema,
@@ -452,7 +452,7 @@ describe('FieldDefinitionSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-020')('accepts number field with numeric default', async () => {
+  it('accepts number field with numeric default', async () => {
     await expectSafeParseOutcome(
       'FieldDefinitionSchema',
       FieldDefinitionSchema,
@@ -466,7 +466,7 @@ describe('FieldDefinitionSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-020')('rejects boolean field with invalid default', async () => {
+  it('rejects boolean field with invalid default', async () => {
     await expectSafeParseOutcome(
       'FieldDefinitionSchema',
       FieldDefinitionSchema,
@@ -536,7 +536,7 @@ function buildRecipeMetadataPayload(fields: unknown[]) {
 }
 
 describe('TemplateMetadataSchema', () => {
-  it.openspec('OA-TMP-009')('accepts valid template metadata', async () => {
+  it('accepts valid template metadata', async () => {
     await expectSafeParseOutcome(
       'TemplateMetadataSchema',
       TemplateMetadataSchema,
@@ -553,7 +553,7 @@ describe('TemplateMetadataSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-010')('rejects metadata missing required license field', async () => {
+  it('rejects metadata missing required license field', async () => {
     await expectSafeParseOutcome(
       'TemplateMetadataSchema',
       TemplateMetadataSchema,
@@ -569,7 +569,7 @@ describe('TemplateMetadataSchema', () => {
     );
   });
 
-  it.openspec('OA-DST-060')('rejects metadata with empty or whitespace-only name', async () => {
+  it('rejects metadata with empty or whitespace-only name', async () => {
     // Empty name fails — schema-level guard for the list_templates display_name contract.
     await expectSafeParseOutcome(
       'TemplateMetadataSchema',
@@ -602,7 +602,7 @@ describe('TemplateMetadataSchema', () => {
     );
   });
 
-  it.openspec('OA-DST-060')('RecipeMetadataSchema rejects empty name', async () => {
+  it('RecipeMetadataSchema rejects empty name', async () => {
     await expectSafeParseOutcome(
       'RecipeMetadataSchema',
       RecipeMetadataSchema,
@@ -616,7 +616,7 @@ describe('TemplateMetadataSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-051')('rejects top-level field collisions with derived boolean keys', async () => {
+  it('rejects top-level field collisions with derived boolean keys', async () => {
     await expectSafeParseOutcome(
       'TemplateMetadataSchema',
       TemplateMetadataSchema,
@@ -638,7 +638,7 @@ describe('TemplateMetadataSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-051')('rejects derived key collisions between multiselect fields', async () => {
+  it('rejects derived key collisions between multiselect fields', async () => {
     await expectSafeParseOutcome(
       'TemplateMetadataSchema',
       TemplateMetadataSchema,
@@ -662,7 +662,7 @@ describe('TemplateMetadataSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-011')('rejects invalid license', async () => {
+  it('rejects invalid license', async () => {
     await expectSafeParseOutcome(
       'TemplateMetadataSchema',
       TemplateMetadataSchema,
@@ -679,7 +679,7 @@ describe('TemplateMetadataSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-021')('rejects unknown priority_fields entries', async () => {
+  it('rejects unknown priority_fields entries', async () => {
     await expectSafeParseOutcome(
       'TemplateMetadataSchema',
       TemplateMetadataSchema,
@@ -697,7 +697,7 @@ describe('TemplateMetadataSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-021')('rejects duplicate priority_fields entries', async () => {
+  it('rejects duplicate priority_fields entries', async () => {
     await expectSafeParseOutcome(
       'TemplateMetadataSchema',
       TemplateMetadataSchema,
@@ -715,7 +715,7 @@ describe('TemplateMetadataSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-036')('accepts valid credits and derived_from', async () => {
+  it('accepts valid credits and derived_from', async () => {
     await expectSafeParseOutcome(
       'TemplateMetadataSchema',
       TemplateMetadataSchema,
@@ -740,7 +740,7 @@ describe('TemplateMetadataSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-037')('defaults missing credits to empty array', async () => {
+  it('defaults missing credits to empty array', async () => {
     const parsed = await allureStep('Parse template metadata without credits', () =>
       TemplateMetadataSchema.parse({
         name: 'Test NDA',
@@ -759,7 +759,7 @@ describe('TemplateMetadataSchema', () => {
     });
   });
 
-  it.openspec('OA-TMP-038')('rejects credit role outside the closed enum', async () => {
+  it('rejects credit role outside the closed enum', async () => {
     await expectSafeParseOutcome(
       'TemplateMetadataSchema',
       TemplateMetadataSchema,
@@ -797,7 +797,7 @@ describe('TemplateMetadataSchema', () => {
 });
 
 describe('RecipeMetadataSchema', () => {
-  it.openspec('OA-RCP-014')('accepts valid recipe metadata', async () => {
+  it('accepts valid recipe metadata', async () => {
     await expectSafeParseOutcome(
       'RecipeMetadataSchema',
       RecipeMetadataSchema,
@@ -811,7 +811,7 @@ describe('RecipeMetadataSchema', () => {
     );
   });
 
-  it.openspec('OA-RCP-015')('rejects missing source_url', async () => {
+  it('rejects missing source_url', async () => {
     await expectSafeParseOutcome(
       'RecipeMetadataSchema',
       RecipeMetadataSchema,
@@ -824,7 +824,7 @@ describe('RecipeMetadataSchema', () => {
     );
   });
 
-  it.openspec('OA-RCP-042')('defaults optional to false', async () => {
+  it('defaults optional to false', async () => {
     const parsed = await allureStep('Parse recipe metadata with optional omitted', () =>
       RecipeMetadataSchema.parse({
         name: 'Test',
@@ -840,7 +840,7 @@ describe('RecipeMetadataSchema', () => {
     });
   });
 
-  it.openspec('OA-TMP-051')('rejects derived key collisions in external metadata', async () => {
+  it('rejects derived key collisions in external metadata', async () => {
     await expectSafeParseOutcome(
       'ExternalMetadataSchema',
       ExternalMetadataSchema,
@@ -862,7 +862,7 @@ describe('RecipeMetadataSchema', () => {
     );
   });
 
-  it.openspec('OA-TMP-051')('rejects derived key collisions in recipe metadata', async () => {
+  it('rejects derived key collisions in recipe metadata', async () => {
     await expectSafeParseOutcome(
       'RecipeMetadataSchema',
       RecipeMetadataSchema,
@@ -886,7 +886,7 @@ describe('RecipeMetadataSchema', () => {
 });
 
 describe('CleanConfigSchema', () => {
-  it.openspec('OA-ENG-010')('accepts valid clean config', async () => {
+  it('accepts valid clean config', async () => {
     await expectSafeParseOutcome(
       'CleanConfigSchema',
       CleanConfigSchema,
@@ -898,7 +898,7 @@ describe('CleanConfigSchema', () => {
     );
   });
 
-  it.openspec('OA-ENG-010')('defaults missing fields', async () => {
+  it('defaults missing fields', async () => {
     const parsed = await allureStep('Parse empty clean config', () => CleanConfigSchema.parse({}));
     await allureJsonAttachment('clean-config-defaults.json', parsed);
 
@@ -910,7 +910,7 @@ describe('CleanConfigSchema', () => {
 });
 
 describe('GuidanceOutputSchema', () => {
-  it.openspec('OA-RCP-043')('accepts valid guidance output', async () => {
+  it('accepts valid guidance output', async () => {
     await expectSafeParseOutcome(
       'GuidanceOutputSchema',
       GuidanceOutputSchema,
@@ -926,7 +926,7 @@ describe('GuidanceOutputSchema', () => {
     );
   });
 
-  it.openspec('OA-RCP-043')('rejects missing extractedFrom', async () => {
+  it('rejects missing extractedFrom', async () => {
     await expectSafeParseOutcome(
       'GuidanceOutputSchema',
       GuidanceOutputSchema,
@@ -937,7 +937,7 @@ describe('GuidanceOutputSchema', () => {
     );
   });
 
-  it.openspec('OA-RCP-043')('rejects invalid source type', async () => {
+  it('rejects invalid source type', async () => {
     await expectSafeParseOutcome(
       'GuidanceOutputSchema',
       GuidanceOutputSchema,

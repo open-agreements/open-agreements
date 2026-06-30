@@ -29,7 +29,7 @@ function readRepoFile(relPath: string): string {
 }
 
 describe('skills directory publish workflow', () => {
-  it.openspec('OA-DST-073')(
+  it(
     'changed scope publishes only the changed skill directories relative to the base ref',
     () => {
       const allSkills = listSkillDirectories();
@@ -59,7 +59,7 @@ describe('skills directory publish workflow', () => {
     },
   );
 
-  it.openspec('OA-DST-074')(
+  it(
     'selected scope publishes exactly the named subset and fails clearly on an unknown skill',
     () => {
       const allSkills = listSkillDirectories();
@@ -86,7 +86,7 @@ describe('skills directory publish workflow', () => {
     },
   );
 
-  it.openspec('OA-DST-075')(
+  it(
     'ClawHub publish passes the declared SKILL.md version without inventing one',
     () => {
       const skill = {
@@ -122,7 +122,7 @@ describe('skills directory publish workflow', () => {
     },
   );
 
-  it.openspec('OA-DST-076')(
+  it(
     'workflow automates only Smithery and ClawHub; docs mark skills.sh discovery-only',
     () => {
       const workflow = readRepoFile('.github/workflows/publish-skills-directories.yml');
@@ -137,7 +137,7 @@ describe('skills directory publish workflow', () => {
     },
   );
 
-  it.openspec('OA-DST-077')(
+  it(
     'workflow fails before publishing when a requested target secret is missing',
     () => {
       const workflow = readRepoFile('.github/workflows/publish-skills-directories.yml');

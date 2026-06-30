@@ -106,19 +106,19 @@ function endnotesXml(text: string): string {
 // ---------------------------------------------------------------------------
 
 describe('detectCurrencyFields', () => {
-  it.openspec('OA-FIL-003')('detects field when $ and {field} are split across runs', () => {
+  it('detects field when $ and {field} are split across runs', () => {
     const buf = buildDocxBuffer(docXmlSplitRuns(['Amount: $', '{purchase_amount}']));
     const fields = detectCurrencyFields(buf);
     expect(fields.has('purchase_amount')).toBe(true);
   });
 
-  it.openspec('OA-FIL-003')('returns empty set for DOCX without dollar-prefixed fields', () => {
+  it('returns empty set for DOCX without dollar-prefixed fields', () => {
     const buf = buildDocxBuffer(docXml(['Hello {name}, welcome to {company}']));
     const fields = detectCurrencyFields(buf);
     expect(fields.size).toBe(0);
   });
 
-  it.openspec('OA-FIL-003')('scans headers', () => {
+  it('scans headers', () => {
     const buf = buildDocxBuffer(docXml(['Body text']), {
       'word/header1.xml': headerXml('Fee: ${fee_amount}'),
     });
@@ -126,7 +126,7 @@ describe('detectCurrencyFields', () => {
     expect(fields.has('fee_amount')).toBe(true);
   });
 
-  it.openspec('OA-FIL-003')('scans footers', () => {
+  it('scans footers', () => {
     const buf = buildDocxBuffer(docXml(['Body text']), {
       'word/footer1.xml': footerXml('Total: ${total}'),
     });
@@ -134,7 +134,7 @@ describe('detectCurrencyFields', () => {
     expect(fields.has('total')).toBe(true);
   });
 
-  it.openspec('OA-FIL-003')('scans endnotes', () => {
+  it('scans endnotes', () => {
     const buf = buildDocxBuffer(docXml(['Body text']), {
       'word/endnotes.xml': endnotesXml('Cap: ${valuation_cap}'),
     });
@@ -142,7 +142,7 @@ describe('detectCurrencyFields', () => {
     expect(fields.has('valuation_cap')).toBe(true);
   });
 
-  it.openspec('OA-FIL-003')('detects multiple currency fields in a single paragraph', () => {
+  it('detects multiple currency fields in a single paragraph', () => {
     const buf = buildDocxBuffer(docXml(['Fee: ${fee} and Cap: ${cap}']));
     const fields = detectCurrencyFields(buf);
     expect(fields.has('fee')).toBe(true);
@@ -151,7 +151,7 @@ describe('detectCurrencyFields', () => {
 });
 
 describe('sanitizeCurrencyValuesFromDocx', () => {
-  it.openspec('OA-FIL-004')('strips $ from string values for detected currency fields', () => {
+  it('strips $ from string values for detected currency fields', () => {
     const buf = buildDocxBuffer(docXml(['Amount: ${purchase_amount}']));
     const result = sanitizeCurrencyValuesFromDocx(
       { purchase_amount: '$50,000', name: 'Acme' },
@@ -161,7 +161,7 @@ describe('sanitizeCurrencyValuesFromDocx', () => {
     expect(result.name).toBe('Acme');
   });
 
-  it.openspec('OA-FIL-004')('does not strip $ from boolean values', () => {
+  it('does not strip $ from boolean values', () => {
     const buf = buildDocxBuffer(docXml(['Amount: ${some_field}']));
     const result = sanitizeCurrencyValuesFromDocx(
       { some_field: true, other: '$100' },
@@ -170,14 +170,14 @@ describe('sanitizeCurrencyValuesFromDocx', () => {
     expect(result.some_field).toBe(true);
   });
 
-  it.openspec('OA-FIL-004')('returns same object when no currency fields detected', () => {
+  it('returns same object when no currency fields detected', () => {
     const buf = buildDocxBuffer(docXml(['Hello {name}']));
     const values = { name: '$Alice' };
     const result = sanitizeCurrencyValuesFromDocx(values, buf);
     expect(result).toBe(values); // same reference — no copy needed
   });
 
-  it.openspec('OA-FIL-004')('does not strip $ from non-currency fields', () => {
+  it('does not strip $ from non-currency fields', () => {
     const buf = buildDocxBuffer(docXml(['Amount: ${amount}']));
     const result = sanitizeCurrencyValuesFromDocx(
       { amount: '$100', ticker: '$AAPL' },
@@ -193,7 +193,7 @@ describe('sanitizeCurrencyValuesFromDocx', () => {
 // ---------------------------------------------------------------------------
 
 describe('verifyTemplateFill', () => {
-  it.openspec('OA-FIL-005')('catches double dollar signs in output', () => {
+  it('catches double dollar signs in output', () => {
     const path = buildDocxFile(docXml(['The amount is $$50,000']));
     const result = verifyTemplateFill(path);
     expect(result.passed).toBe(false);
@@ -203,14 +203,14 @@ describe('verifyTemplateFill', () => {
     rmSync(path.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it.openspec('OA-FIL-005')('catches $ $ with whitespace between', () => {
+  it('catches $ $ with whitespace between', () => {
     const path = buildDocxFile(docXml(['The amount is $ $50,000']));
     const result = verifyTemplateFill(path);
     expect(result.passed).toBe(false);
     rmSync(path.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it.openspec('OA-RCP-012')('catches unrendered template tags', () => {
+  it('catches unrendered template tags', () => {
     const path = buildDocxFile(docXml(['Hello {unfilled_field}, welcome']));
     const result = verifyTemplateFill(path);
     expect(result.passed).toBe(false);
@@ -220,7 +220,7 @@ describe('verifyTemplateFill', () => {
     rmSync(path.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it.openspec('OA-FIL-006')('passes clean output with no issues', () => {
+  it('passes clean output with no issues', () => {
     const path = buildDocxFile(docXml(['Hello Alice, the amount is $50,000']));
     const result = verifyTemplateFill(path);
     expect(result.passed).toBe(true);
@@ -228,7 +228,7 @@ describe('verifyTemplateFill', () => {
     rmSync(path.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it.openspec('OA-FIL-005')('does not flag legitimate single dollar signs', () => {
+  it('does not flag legitimate single dollar signs', () => {
     const path = buildDocxFile(docXml(['Fee: $1,000', 'Cap: $5,000,000']));
     const result = verifyTemplateFill(path);
     const check = result.checks.find((c) => c.name === 'No double dollar signs');
@@ -236,7 +236,7 @@ describe('verifyTemplateFill', () => {
     rmSync(path.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it.openspec('OA-FIL-007')('scans headers and footers for issues', () => {
+  it('scans headers and footers for issues', () => {
     const path = buildDocxFile(docXml(['Body is clean']), {
       'word/header1.xml': headerXml('{leftover_tag}'),
     });
@@ -267,7 +267,7 @@ describe('prepareFillData', () => {
     derive_booleans: true,
   };
 
-  it.openspec('OA-FIL-008')('defaults optional fields to empty string when useBlankPlaceholder is false', () => {
+  it('defaults optional fields to empty string when useBlankPlaceholder is false', () => {
     const result = prepareFillData({
       values: { company: 'Acme' },
       fields,
@@ -278,7 +278,7 @@ describe('prepareFillData', () => {
     expect(result.is_free).toBe('');
   });
 
-  it.openspec('OA-FIL-008')('defaults optional fields to BLANK_PLACEHOLDER when useBlankPlaceholder is true', () => {
+  it('defaults optional fields to BLANK_PLACEHOLDER when useBlankPlaceholder is true', () => {
     const result = prepareFillData({
       values: { company: 'Acme' },
       fields,
@@ -288,7 +288,7 @@ describe('prepareFillData', () => {
     expect(result.is_free).toBe(BLANK_PLACEHOLDER);
   });
 
-  it.openspec('OA-FIL-008')('user values override defaults', () => {
+  it('user values override defaults', () => {
     const result = prepareFillData({
       values: { company: 'Acme', amount: '$50,000' },
       fields,
@@ -297,7 +297,7 @@ describe('prepareFillData', () => {
     expect(result.amount).toBe('$50,000');
   });
 
-  it.openspec('OA-FIL-008')('uses field.default when provided', () => {
+  it('uses field.default when provided', () => {
     const fieldsWithDefault = [
       ...fields.slice(0, 1),
       { name: 'amount', type: 'string' as const, description: 'Amount', default: 'N/A' },
@@ -323,7 +323,7 @@ describe('prepareFillData', () => {
     expect(result.amount).toBe('');
   });
 
-  it.openspec('OA-FIL-009')('coerces boolean fields when coerceBooleans is true', () => {
+  it('coerces boolean fields when coerceBooleans is true', () => {
     const result = prepareFillData({
       values: { company: 'Acme', is_free: 'true' },
       fields,
@@ -332,7 +332,7 @@ describe('prepareFillData', () => {
     expect(result.is_free).toBe(true);
   });
 
-  it.openspec('OA-FIL-009')('coerces "false" string to false boolean', () => {
+  it('coerces "false" string to false boolean', () => {
     const result = prepareFillData({
       values: { company: 'Acme', is_free: 'false' },
       fields,
@@ -341,7 +341,7 @@ describe('prepareFillData', () => {
     expect(result.is_free).toBe(false);
   });
 
-  it.openspec('OA-FIL-009')('does not coerce booleans when coerceBooleans is false', () => {
+  it('does not coerce booleans when coerceBooleans is false', () => {
     const result = prepareFillData({
       values: { company: 'Acme', is_free: 'true' },
       fields,
@@ -350,7 +350,7 @@ describe('prepareFillData', () => {
     expect(result.is_free).toBe('true');
   });
 
-  it.openspec('OA-FIL-009')('warns on missing priority fields', () => {
+  it('warns on missing priority fields', () => {
     const spy = vi.spyOn(console, 'warn').mockImplementation(() => {});
     prepareFillData({
       values: { amount: '100' },
@@ -362,7 +362,7 @@ describe('prepareFillData', () => {
     spy.mockRestore();
   });
 
-  it.openspec('OA-FIL-009')('calls computeDisplayFields callback', () => {
+  it('calls computeDisplayFields callback', () => {
     let callbackCalled = false;
     prepareFillData({
       values: { company: 'Acme' },
@@ -375,7 +375,7 @@ describe('prepareFillData', () => {
     expect(callbackCalled).toBe(true);
   });
 
-  it.openspec('OA-FIL-025')('normalizes multiselect arrays and derives booleans', () => {
+  it('normalizes multiselect arrays and derives booleans', () => {
     const result = prepareFillData({
       values: { industry_modules: ['a', 'c'] },
       fields: [multiselectField],
@@ -387,7 +387,7 @@ describe('prepareFillData', () => {
     expect(result.c_enabled).toBe(true);
   });
 
-  it.openspec('OA-FIL-025')('parses JSON-string multiselect input back into a real array', () => {
+  it('parses JSON-string multiselect input back into a real array', () => {
     const result = prepareFillData({
       values: { industry_modules: '["a","c"]' },
       fields: [multiselectField],
@@ -399,7 +399,7 @@ describe('prepareFillData', () => {
     expect(result.c_enabled).toBe(true);
   });
 
-  it.openspec('OA-FIL-025')('defaults omitted multiselect fields and derives false for every option', () => {
+  it('defaults omitted multiselect fields and derives false for every option', () => {
     const result = prepareFillData({
       values: {},
       fields: [multiselectField],
@@ -411,7 +411,7 @@ describe('prepareFillData', () => {
     expect(result.c_enabled).toBe(false);
   });
 
-  it.openspec('OA-FIL-025')('honors multiselect defaults declared in metadata', () => {
+  it('honors multiselect defaults declared in metadata', () => {
     const result = prepareFillData({
       values: {},
       fields: [{ ...multiselectField, default: '["a"]' }],
@@ -440,7 +440,7 @@ describe('prepareFillData', () => {
     expect(leakedEnabledKeys).toEqual([]);
   });
 
-  it.openspec('OA-FIL-025')('derives multiselect booleans before computeDisplayFields runs', () => {
+  it('derives multiselect booleans before computeDisplayFields runs', () => {
     let seenByCallback: Record<string, unknown> | undefined;
 
     const result = prepareFillData({
@@ -465,7 +465,7 @@ describe('prepareFillData', () => {
 // ---------------------------------------------------------------------------
 
 describe('fillDocx', () => {
-  it.openspec('OA-FIL-010')('passes fixSmartQuotes option through to createReport', async () => {
+  it('passes fixSmartQuotes option through to createReport', async () => {
     // Smart-quoted tag in the DOCX — \u201C and \u201D around tag name
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
@@ -488,7 +488,7 @@ describe('fillDocx', () => {
     expect(result.length).toBeGreaterThan(0);
   });
 
-  it.openspec('OA-FIL-011')('renders multiline values using explicit line-break runs', async () => {
+  it('renders multiline values using explicit line-break runs', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -514,7 +514,7 @@ describe('fillDocx', () => {
     expect(/<w:t(?:\s+[^>]*)?>[^<]*<w:br\/>/.test(outXml)).toBe(false);
   });
 
-  it.openspec('OA-FIL-030')('emits a flat OPC package with no zip directory entries', async () => {
+  it('emits a flat OPC package with no zip directory entries', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -541,7 +541,7 @@ describe('fillDocx', () => {
     expect(outZip.getEntry('word/document.xml')!.getData().toString('utf-8')).toContain('Acme Corp');
   });
 
-  it.openspec('OA-ENG-006')('strips drafting note paragraphs by default', async () => {
+  it('strips drafting note paragraphs by default', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -565,7 +565,7 @@ describe('fillDocx', () => {
     expect(outXml).not.toContain('Drafting note');
   });
 
-  it.openspec('OA-FIL-012')('preserves all paragraphs when stripParagraphPatterns is empty', async () => {
+  it('preserves all paragraphs when stripParagraphPatterns is empty', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -586,7 +586,7 @@ describe('fillDocx', () => {
     expect(outXml).toContain('Drafting note');
   });
 
-  it.openspec('OA-FIL-013')('strips highlighting from runs with filled fields', async () => {
+  it('strips highlighting from runs with filled fields', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -619,7 +619,7 @@ describe('fillDocx', () => {
     expect(highlightCount).toBeGreaterThanOrEqual(1);
   });
 
-  it.openspec('OA-FIL-012')('removes table row when all paragraphs are drafting notes', async () => {
+  it('removes table row when all paragraphs are drafting notes', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -647,7 +647,7 @@ describe('fillDocx', () => {
     expect(trCount).toBe(2);
   });
 
-  it.openspec('OA-FIL-012')('does not remove table row when it has non-note content', async () => {
+  it('does not remove table row when it has non-note content', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -687,7 +687,7 @@ describe('Regression: behavioral divergence', () => {
   ];
   const simplePriorityFieldNames = ['name'];
 
-  it.openspec('OA-FIL-014')('all paths default optional fields to BLANK_PLACEHOLDER', () => {
+  it('all paths default optional fields to BLANK_PLACEHOLDER', () => {
     const data = prepareFillData({
       values: { name: 'Acme' },
       fields: simpleFields,
@@ -696,7 +696,7 @@ describe('Regression: behavioral divergence', () => {
     expect(data.amount).toBe(BLANK_PLACEHOLDER);
   });
 
-  it.openspec('OA-FIL-014')('template path coerces boolean fields', () => {
+  it('template path coerces boolean fields', () => {
     const boolFields = [
       { name: 'company', type: 'string' as const, description: 'Co' },
       { name: 'flag', type: 'boolean' as const, description: 'Flag' },
@@ -709,7 +709,7 @@ describe('Regression: behavioral divergence', () => {
     expect(data.flag).toBe(false);
   });
 
-  it.openspec('OA-FIL-014')('recipe/external path does not coerce booleans', () => {
+  it('recipe/external path does not coerce booleans', () => {
     const boolFields = [
       { name: 'company', type: 'string' as const, description: 'Co' },
       { name: 'flag', type: 'boolean' as const, description: 'Flag' },
@@ -722,7 +722,7 @@ describe('Regression: behavioral divergence', () => {
     expect(data.flag).toBe('false');
   });
 
-  it.openspec('OA-FIL-014')('template path warns on missing priority fields', () => {
+  it('template path warns on missing priority fields', () => {
     const spy = vi.spyOn(console, 'warn').mockImplementation(() => {});
     prepareFillData({
       values: {},
@@ -736,7 +736,7 @@ describe('Regression: behavioral divergence', () => {
 });
 
 describe('runFillPipeline', () => {
-  it.openspec('OA-FIL-027')('excludes derived multiselect keys from fieldsUsed', async () => {
+  it('excludes derived multiselect keys from fieldsUsed', async () => {
     const tempDir = mkdtempSync(join(tmpdir(), 'fill-pipeline-fields-used-'));
     const inputPath = join(tempDir, 'source.docx');
     const outputPath = join(tempDir, 'output.docx');
@@ -771,7 +771,7 @@ describe('runFillPipeline', () => {
 // ---------------------------------------------------------------------------
 
 describe('Integration: template currency sanitization', () => {
-  it.openspec('OA-FIL-015')('template fill with $50,000 produces $50,000 not $$50,000', async () => {
+  it('template fill with $50,000 produces $50,000 not $$50,000', async () => {
     // Build a template DOCX with ${purchase_amount} (dollar before tag)
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
@@ -855,7 +855,7 @@ describe('NDA signature block fields', () => {
     changes_to_standard_terms: 'None.',
   };
 
-  it.openspec('OA-NDA-001')('fills all signature fields in entity mode (both parties)', async () => {
+  it('fills all signature fields in entity mode (both parties)', async () => {
     const { xml, buf } = await fillNdaTemplate({
       ...BASE_VALUES,
       party_1_type: 'entity',
@@ -891,7 +891,7 @@ describe('NDA signature block fields', () => {
     expect(buf.length).toBeGreaterThan(0);
   });
 
-  it.openspec('OA-NDA-002')('suppresses title/company for individual party (mixed mode)', async () => {
+  it('suppresses title/company for individual party (mixed mode)', async () => {
     const { xml } = await fillNdaTemplate({
       ...BASE_VALUES,
       party_1_type: 'entity',
@@ -920,7 +920,7 @@ describe('NDA signature block fields', () => {
     expect(xml).not.toMatch(/\{[a-z_][a-z0-9_]*\}/i);
   });
 
-  it.openspec('OA-NDA-003')('warns when individual party has title set', async () => {
+  it('warns when individual party has title set', async () => {
     const spy = vi.spyOn(console, 'warn').mockImplementation(() => {});
     try {
       await fillNdaTemplate({
@@ -1007,7 +1007,7 @@ function dummyAllValues(templateDir: string): Record<string, unknown> {
 describe('Signature block fields — role-based templates', () => {
   const TEMPLATES_DIR = resolve(__dirname, '../content/templates');
 
-  it.openspec('OA-NDA-004')('standard 2-party entity mode (pilot agreement)', async () => {
+  it('standard 2-party entity mode (pilot agreement)', async () => {
     const dir = join(TEMPLATES_DIR, 'common-paper-pilot-agreement');
     const xml = await fillAndExtractXml(dir, {
       company_name: 'Acme Corp',
@@ -1036,7 +1036,7 @@ describe('Signature block fields — role-based templates', () => {
     expect(xml).not.toMatch(/\{[a-z_][a-z0-9_]*\}/i);
   });
 
-  it.openspec('OA-NDA-005')('individual mode suppression (contractor agreement)', async () => {
+  it('individual mode suppression (contractor agreement)', async () => {
     const dir = join(TEMPLATES_DIR, 'common-paper-independent-contractor-agreement');
     const xml = await fillAndExtractXml(dir, {
       company_name_and_address: 'Acme Corp, 123 Main St',
@@ -1071,7 +1071,7 @@ describe('Signature block fields — role-based templates', () => {
     expect(xml).not.toMatch(/\{[a-z_][a-z0-9_]*\}/i);
   });
 
-  it.openspec('OA-NDA-006')('one-way NDA single party', async () => {
+  it('one-way NDA single party', async () => {
     const dir = join(TEMPLATES_DIR, 'common-paper-one-way-nda');
     const xml = await fillAndExtractXml(dir, {
       discloser_name_and_address: 'Acme Corp, 123 Main St, Wilmington, DE',
@@ -1096,7 +1096,7 @@ describe('Signature block fields — role-based templates', () => {
     expect(xml).not.toMatch(/\{[a-z_][a-z0-9_]*\}/i);
   });
 
-  it.openspec('OA-NDA-007')('dual sig block (CSA)', async () => {
+  it('dual sig block (CSA)', async () => {
     const dir = join(TEMPLATES_DIR, 'common-paper-cloud-service-agreement');
     const xml = await fillAndExtractXml(dir, {
       provider_name: 'Acme SaaS',
@@ -1157,7 +1157,7 @@ describe('Parametric smoke test — signatory fields across all templates', () =
     ? templateDirs
     : [...templateDirs, mutualNdaDir];
 
-  it.openspec('OA-NDA-008')('all templates fill cleanly in entity mode', async () => {
+  it('all templates fill cleanly in entity mode', async () => {
     const spy = vi.spyOn(console, 'warn').mockImplementation(() => {});
     try {
       for (const dir of allDirs) {
@@ -1189,7 +1189,7 @@ describe('Parametric smoke test — signatory fields across all templates', () =
     }
   }, seconds(60));
 
-  it.openspec('OA-NDA-008')('all templates fill cleanly in individual mode', async () => {
+  it('all templates fill cleanly in individual mode', async () => {
     const spy = vi.spyOn(console, 'warn').mockImplementation(() => {});
     try {
       for (const dir of allDirs) {
@@ -1230,7 +1230,7 @@ describe('confirmation cover notice + clause renumbering', () => {
     },
   ] as unknown as Parameters<typeof prepareFillData>[0]['fields'];
 
-  it.openspec(['OA-TMP-070', 'OA-TMP-071'])('derives any_confirmation_pending only for applicable, unconfirmed confirm clauses', () => {
+  it('derives any_confirmation_pending only for applicable, unconfirmed confirm clauses', () => {
     const confirmClauses = [{ id: 'counsel', confirm: 'notice_confirmed', condition: 'covered' }];
     const run = (covered: string, confirmed: string) =>
       prepareFillData({
@@ -1248,7 +1248,7 @@ describe('confirmation cover notice + clause renumbering', () => {
     expect(run('true', 'true')).toBe(false);
   });
 
-  it.openspec('OA-TMP-070')('treats a string "true" confirm value as confirmed even when coerceBooleans is off', () => {
+  it('treats a string "true" confirm value as confirmed even when coerceBooleans is off', () => {
     const confirmClauses = [{ id: 'recital', confirm: 'notice_confirmed' }];
     // coerceBooleans:false leaves the value as the string "true"; the derivation
     // must still read it as confirmed (not pending).
@@ -1261,7 +1261,7 @@ describe('confirmation cover notice + clause renumbering', () => {
     expect(pending).toBe(false);
   });
 
-  it.openspec('OA-TMP-070')('treats a confirm clause with no when= gate as always applicable', () => {
+  it('treats a confirm clause with no when= gate as always applicable', () => {
     const confirmClauses = [{ id: 'recital', confirm: 'notice_confirmed' }];
     const run = (confirmed: string) =>
       prepareFillData({
@@ -1287,7 +1287,7 @@ describe('confirmation cover notice + clause renumbering', () => {
     return xml.replace(/<[^>]+>/g, '');
   }
 
-  it.openspec('OA-TMP-072')('renumbers OAClauseHeading paragraphs sequentially, closing a gap left by an omitted clause', async () => {
+  it('renumbers OAClauseHeading paragraphs sequentially, closing a gap left by an omitted clause', async () => {
     const text = await filledHeadingText(
       docFromHeadings(headingPara(1, 'Alpha'), headingPara(2, 'Beta'), headingPara(16, 'Gamma'))
     );
@@ -1297,7 +1297,7 @@ describe('confirmation cover notice + clause renumbering', () => {
     expect(text).not.toContain('16. Gamma');
   });
 
-  it.openspec('OA-TMP-072')('renumber pass is idempotent for already-sequential headings', async () => {
+  it('renumber pass is idempotent for already-sequential headings', async () => {
     const text = await filledHeadingText(docFromHeadings(headingPara(1, 'Alpha'), headingPara(2, 'Beta')));
     expect(text).toContain('1. Alpha');
     expect(text).toContain('2. Beta');
@@ -1330,7 +1330,7 @@ describe('confirmation cover notice + clause renumbering', () => {
   // it so multi-run bullet text can be matched as it visually reads.
   const flat = (s: string): string => s.replace(/\s+/g, ' ');
 
-  it.openspec(['OA-TMP-074', 'OA-TMP-075'])('resolves a cover-notice <<xref:…>> sentinel to the target heading\'s post-renumber "Section N"', async () => {
+  it('resolves a cover-notice <<xref:…>> sentinel to the target heading\'s post-renumber "Section N"', async () => {
     const text = flat(await filledHeadingText(
       docFromHeadings(
         headingPara(1, 'Alpha'),
@@ -1343,7 +1343,7 @@ describe('confirmation cover notice + clause renumbering', () => {
     expect(text).not.toContain('xref:'); // raw sentinel fully resolved
   });
 
-  it.openspec('OA-TMP-074')('xref number tracks renumbering when an earlier clause is omitted', async () => {
+  it('xref number tracks renumbering when an earlier clause is omitted', async () => {
     // Same target clause, but Alpha is absent → target heading becomes 1, and the
     // bullet must follow to "Section 1" (no stale/gapped number).
     const text = flat(await filledHeadingText(

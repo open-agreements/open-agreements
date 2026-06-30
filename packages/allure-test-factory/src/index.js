@@ -1,8 +1,6 @@
 import { expect, it as vitestIt, test as vitestTest } from 'vitest';
 import { XMLBuilder, XMLParser } from 'fast-xml-parser';
 import Prism from 'prismjs';
-import fs from 'node:fs';
-import path from 'node:path';
 import { readFileSync } from 'node:fs';
 import 'prismjs/components/prism-json.js';
 
@@ -356,15 +354,6 @@ function computeTestKey() {
   return `${state.testPath ?? ''}::${state.currentTestName ?? ''}`;
 }
 
-function normalizeOpenSpecScenarioIds(values) {
-  const flattened = values.flatMap((value) => (Array.isArray(value) ? value : [value]));
-  const ids = flattened
-    .filter((value) => typeof value === 'string')
-    .map((value) => value.trim())
-    .filter((value) => value.length > 0);
-  return [...new Set(ids)];
-}
-
 function normalizeScenarioText(story) {
   const withoutPrefix = story.replace(/^Scenario:\s*/i, '').trim();
   return withoutPrefix.replace(/^\[[^\]]+\]\s*/, '').trim();
@@ -410,13 +399,6 @@ function normalizeFeatureLabel(value) {
 function mergeAllureDefaults(current, next) {
   const merged = { ...(current ?? {}), ...(next ?? {}) };
 
-  if (current?.openspecScenarioIds || next?.openspecScenarioIds) {
-    merged.openspecScenarioIds = normalizeOpenSpecScenarioIds([
-      ...(current?.openspecScenarioIds ?? []),
-      ...(next?.openspecScenarioIds ?? []),
-    ]);
-  }
-
   if (current?.tags || next?.tags) {
     merged.tags = normalizeTags([
       ...(current?.tags ?? []),
@@ -445,176 +427,10 @@ function resolveStoryLabel(explicitName, nameParts) {
   return nameParts.at(-1) ?? 'Unnamed test';
 }
 
-function extractScenarioId(story) {
-  const trimmed = story.trim();
-  const bracketed = trimmed.match(/^\[([^\]]+)\]/);
-  if (bracketed) {
-    return bracketed[1].trim();
-  }
-  return null;
-}
-
-function normalizeOpenSpecScenarioKey(value) {
-  return normalizeScenarioText(String(value))
-    .trim()
-    .replace(/\s+/g, ' ')
-    .toLowerCase();
-}
-
-function markdownHeadingToAnchor(heading) {
-  return heading
-    .trim()
-    .toLowerCase()
-    .normalize('NFKD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^\w\s-]/g, '')
-    .replace(/\s+/g, '-')
-    .replace(/-+/g, '-');
-}
-
 // ── Factory ─────────────────────────────────────────────────────────────────
 
 export function createAllureTestHelpers(config) {
   const resolveEpic = config.resolveEpic ?? ((_feature, _fullName, defaults) => defaults?.epic ?? config.defaultEpic);
-
-  // ── OpenSpec config ───────────────────────────────────────────────────
-  const openspecConfig = config.openspec ?? {};
-  const openspecEnabled = openspecConfig.enabled !== false;
-  const openspecIdPattern = openspecConfig.idPattern ?? /^(?:SDX|OA)-[\w-]+-?\d+$/i;
-  const openspecRepoBaseUrl = openspecConfig.repoBaseUrl ?? 'https://github.com/usejunior/safe-docx';
-  const openspecSearchUrl = `${openspecRepoBaseUrl}/search`;
-  const openspecRepoRoot = openspecConfig.repoRoot ?? process.cwd();
-  const openspecSpecRoot = openspecConfig.specRoot ?? path.join(openspecRepoRoot, 'openspec');
-
-  // ── OpenSpec index (lazy, per-factory instance) ───────────────────────
-
-  function listOpenSpecFiles(rootDir) {
-    if (!fs.existsSync(rootDir) || !fs.statSync(rootDir).isDirectory()) {
-      return [];
-    }
-
-    const queue = [rootDir];
-    const files = [];
-    while (queue.length > 0) {
-      const dir = queue.pop();
-      if (!dir) {
-        continue;
-      }
-      for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-        const fullPath = path.join(dir, entry.name);
-        if (entry.isDirectory()) {
-          queue.push(fullPath);
-          continue;
-        }
-        if (!entry.isFile() || entry.name !== 'spec.md') {
-          continue;
-        }
-        const relativePath = path.relative(openspecRepoRoot, fullPath);
-        if (!relativePath.includes(`${path.sep}specs${path.sep}`)) {
-          continue;
-        }
-        files.push(fullPath);
-      }
-    }
-    return files.sort();
-  }
-
-  let openSpecIndexCache = null;
-
-  function buildOpenSpecIndex() {
-    const scenarioNameToIds = new Map();
-    const idToMeta = new Map();
-
-    const files = listOpenSpecFiles(openspecSpecRoot);
-    // Sort canonical specs first so idToMeta first-match-wins picks the correct title
-    // (otherwise archive/ sorts before specs/ alphabetically and shadows canonical IDs)
-    files.sort((a, b) => {
-      const aCanonical = !a.includes(`${path.sep}changes${path.sep}`) && !a.includes(`${path.sep}private${path.sep}`);
-      const bCanonical = !b.includes(`${path.sep}changes${path.sep}`) && !b.includes(`${path.sep}private${path.sep}`);
-      if (aCanonical !== bCanonical) return aCanonical ? -1 : 1;
-      return a.localeCompare(b);
-    });
-    for (const filePath of files) {
-      const content = fs.readFileSync(filePath, 'utf-8');
-      const relativePath = path.relative(openspecRepoRoot, filePath).split(path.sep).join('/');
-      const scenarioHeaderRe = /^\s*####\s+Scenario:\s*(.+?)\s*$/gm;
-      let match = scenarioHeaderRe.exec(content);
-      while (match) {
-        const rawScenario = match[1].trim();
-        const normalizedScenario = normalizeScenarioText(rawScenario);
-        const scenarioId = extractScenarioId(rawScenario);
-        if (scenarioId) {
-          const key = normalizeOpenSpecScenarioKey(normalizedScenario);
-          const mappedIds = scenarioNameToIds.get(key) ?? new Set();
-          mappedIds.add(scenarioId);
-          scenarioNameToIds.set(key, mappedIds);
-
-          if (!idToMeta.has(scenarioId)) {
-            const heading = `Scenario: ${rawScenario}`;
-            const anchor = markdownHeadingToAnchor(heading);
-            idToMeta.set(scenarioId, {
-              name: normalizedScenario,
-              url: `${openspecRepoBaseUrl}/blob/main/${relativePath}#${anchor}`,
-            });
-          }
-        }
-
-        match = scenarioHeaderRe.exec(content);
-      }
-    }
-
-    return { scenarioNameToIds, idToMeta };
-  }
-
-  function getOpenSpecIndex() {
-    if (!openSpecIndexCache) {
-      openSpecIndexCache = buildOpenSpecIndex();
-    }
-    return openSpecIndexCache;
-  }
-
-  function matchesOpenSpecIdPattern(value) {
-    return openspecIdPattern.test(value);
-  }
-
-  function extractScenarioIdWithPattern(story) {
-    const trimmed = story.trim();
-    const bracketed = trimmed.match(/^\[([^\]]+)\]/);
-    if (bracketed) {
-      return bracketed[1].trim();
-    }
-    return matchesOpenSpecIdPattern(trimmed) ? trimmed : null;
-  }
-
-  function inferScenarioIdFromStory(story) {
-    if (!openspecEnabled) {
-      return null;
-    }
-    const normalized = normalizeOpenSpecScenarioKey(story);
-    if (!normalized) {
-      return null;
-    }
-    const ids = getOpenSpecIndex().scenarioNameToIds.get(normalized);
-    if (!ids || ids.size !== 1) {
-      return null;
-    }
-    return [...ids][0];
-  }
-
-  function resolveOpenSpecLink(id) {
-    const indexEntry = getOpenSpecIndex().idToMeta.get(id);
-    if (indexEntry) {
-      return {
-        name: `[${id}] ${indexEntry.name}`,
-        url: indexEntry.url,
-      };
-    }
-
-    return {
-      name: `[${id}] OpenSpec search`,
-      url: `${openspecSearchUrl}?q=${encodeURIComponent(`${id} path:openspec`)}&type=code`,
-    };
-  }
 
   // ── Allure label application ──────────────────────────────────────────
 
@@ -829,72 +645,19 @@ export function createAllureTestHelpers(config) {
       }
 
       const nameParts = parseCurrentTestName();
-      const scenarioIds = defaults?.openspecScenarioIds ?? [];
-      const baseStoryLabels = scenarioIds.length > 0
-        ? scenarioIds
-        : [resolveStoryLabel(explicitName, nameParts)];
-      const storyLabels = baseStoryLabels.map((story) => {
+      const storyLabels = [resolveStoryLabel(explicitName, nameParts)].map((story) => {
         if (/^Scenario:\s*/i.test(story) || /^\[[^\]]+\]\s*/.test(story)) {
           return normalizeScenarioText(story);
         }
-        if (openspecEnabled && matchesOpenSpecIdPattern(story)) {
-          const meta = getOpenSpecIndex().idToMeta.get(story);
-          if (meta?.name) return meta.name;
-        }
         return story;
       });
-      const scenarioSerials = new Set();
-      if (openspecEnabled) {
-        for (const story of baseStoryLabels) {
-          const id = extractScenarioIdWithPattern(story);
-          if (id) scenarioSerials.add(id);
-        }
-        for (const story of storyLabels) {
-          const inferredId = inferScenarioIdFromStory(story);
-          if (inferredId) {
-            scenarioSerials.add(inferredId);
-          }
-        }
-      }
 
-      const isScenarioStyle = baseStoryLabels.some((story) => /^Scenario:\s*/i.test(story));
-      let effectiveDefaults = defaults;
-      if (scenarioIds.length > 0 || isScenarioStyle) {
-        const testName = resolveStoryLabel(explicitName, nameParts);
-        const scenarioLines = [...scenarioSerials].map((id) => {
-          const meta = openspecEnabled ? getOpenSpecIndex().idToMeta.get(id) : null;
-          return meta?.name ? `${id}: ${meta.name}` : id;
-        });
-        let description;
-        if (scenarioLines.length === 1) {
-          description = `**Scenario**: ${scenarioLines[0]}\n**Verifies**: ${testName}`;
-        } else if (scenarioLines.length > 1) {
-          description = `**Scenarios**:\n${scenarioLines.map((l) => `- ${l}`).join('\n')}\n**Verifies**: ${testName}`;
-        }
-        const autoDefaults = { description, tags: ['human-readable'], parameters: { audience: 'non-technical' } };
-        effectiveDefaults = mergeAllureDefaults(autoDefaults, defaults);
-      }
-
-      await applyDefaultAllureLabels(effectiveDefaults);
+      await applyDefaultAllureLabels(defaults);
 
       const allureRuntime = getAllureRuntime();
       if (allureRuntime) {
         for (const story of storyLabels) {
           await allureRuntime.story(story);
-        }
-        if (!defaults?.id && scenarioSerials.size === 1 && typeof allureRuntime.id === 'function') {
-          await allureRuntime.id([...scenarioSerials][0]);
-        }
-        if (typeof allureRuntime.label === 'function') {
-          for (const id of scenarioSerials) {
-            await allureRuntime.label('openspecScenarioId', id);
-          }
-        }
-        if (typeof allureRuntime.link === 'function') {
-          for (const id of scenarioSerials) {
-            const link = resolveOpenSpecLink(id);
-            await allureRuntime.link('openspec', link.url, link.name);
-          }
         }
       }
 
@@ -971,10 +734,6 @@ export function createAllureTestHelpers(config) {
       withAllure(base, mergeAllureDefaults(defaults, nextDefaults));
     wrapped.epic = (epic) =>
       withAllure(base, mergeAllureDefaults(defaults, { epic }));
-    wrapped.openspec = (...scenarioIds) =>
-      withAllure(base, mergeAllureDefaults(defaults, {
-        openspecScenarioIds: normalizeOpenSpecScenarioIds(scenarioIds),
-      }));
     wrapped.allure = (metadata) =>
       withAllure(base, mergeAllureDefaults(defaults, metadata));
 

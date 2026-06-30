@@ -25,7 +25,7 @@ function readRepoFile(relPath: string): string {
 }
 
 describe('README generation', () => {
-  it.openspec('OA-DST-064')(
+  it(
     'README generation is deterministic with stable headings and absolute links',
     () => {
       const first = buildReadme();
@@ -76,7 +76,7 @@ describe('README generation', () => {
     },
   );
 
-  it.openspec('OA-DST-065')(
+  it(
     'README generator reads catalog data from a pure shared helper',
     () => {
       // The shared helper returns plain catalog data (pure read, not an
@@ -102,7 +102,7 @@ describe('README generation', () => {
     },
   );
 
-  it.openspec('OA-DST-066')(
+  it(
     'committed README matches generator output (drift gate)',
     () => {
       // This is the assertion behind `npm run check:readme`: regenerating the
@@ -111,7 +111,7 @@ describe('README generation', () => {
     },
   );
 
-  it.openspec('OA-DST-067')(
+  it(
     'regenerated README stays in sync so the drift check passes',
     () => {
       expect(buildReadme()).toBe(readRepoFile('README.md'));

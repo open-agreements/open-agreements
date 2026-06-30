@@ -55,12 +55,6 @@ Use this together with the targeted verification commands at the end of this doc
 - Risk if wrong: We might delete legally meaningful choices implicitly.
 - Validation: `integration-tests/nvca-assumptions.test.ts` (expects headings fixed but option pair still present unless separately configured).
 
-### OA-ASSUMP-007: OpenSpec scenario coverage and implementation tests are separate quality gates
-
-- Assumption: OpenSpec scenario traceability does not replace behavior-level tests; both must pass.
-- Risk if wrong: We can have green scenario mapping with untested runtime behavior.
-- Validation: `npm run check:spec-coverage` + `npm run test:run`.
-
 ### OA-ASSUMP-008: Short placeholders discovered by scan should map to explicit metadata-backed replacements
 
 - Assumption: Any scan-discovered short placeholder that is intended for automation has an explicit mapping to metadata fields.
@@ -98,7 +92,6 @@ Use this together with the targeted verification commands at the end of this doc
 npx vitest run integration-tests/nvca-assumptions.test.ts src/core/recipe/bracket-normalizer.test.ts
 
 # Full quality gates
-npm run check:spec-coverage
 npm run test:run
 
 # Source drift canary (hash + structural anchors)

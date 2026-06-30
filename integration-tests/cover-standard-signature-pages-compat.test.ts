@@ -65,7 +65,7 @@ describe('native canonical renderer — Apple Pages compatibility invariant', ()
     //   (3) Every visible-text <w:p> in document.xml references an explicit pStyle.
     // Skipping any one of these re-exposes the #262 failure mode where Pages drops inline
     // alignment or inherits the previous paragraph's style properties.
-    it.openspec(['OA-TMP-046', 'OA-TMP-048'])(`${slug} renders Pages-compatible explicit-style tree`, async () => {
+    it(`${slug} renders Pages-compatible explicit-style tree`, async () => {
       const buffer = await renderTemplateBuffer(slug, sourceType);
       const documentXml = extractDocxXml(buffer, 'word/document.xml');
       const stylesXml = extractDocxXml(buffer, 'word/styles.xml');

@@ -9,7 +9,7 @@ const REPO_ROOT = resolve(fileURLToPath(new URL('..', import.meta.url)));
 const MANIFEST_PATH = resolve(REPO_ROOT, 'gemini-extension.json');
 
 describe('gemini extension manifest', () => {
-  it.openspec('OA-DST-079')('includes strict required top-level fields', () => {
+  it('includes strict required top-level fields', () => {
     const manifest = JSON.parse(
       readFileSync(MANIFEST_PATH, 'utf8'),
     ) as Record<string, unknown>;
@@ -19,7 +19,7 @@ describe('gemini extension manifest', () => {
     }
   });
 
-  it.openspec(['OA-DST-079', 'OA-WKS-032'])('defines local npx MCP servers without cwd overrides', () => {
+  it('defines local npx MCP servers without cwd overrides', () => {
     const manifest = JSON.parse(
       readFileSync(MANIFEST_PATH, 'utf8'),
     ) as {

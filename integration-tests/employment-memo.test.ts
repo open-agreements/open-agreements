@@ -21,7 +21,7 @@ function mustFindTemplateDir(templateId: string): string {
 const it = itAllure.epic('Compliance & Governance');
 
 describe('employment memo generator', () => {
-  it.openspec('OA-FIL-016')('generates disclaimer + findings + jurisdiction warnings for matching rules', () => {
+  it('generates disclaimer + findings + jurisdiction warnings for matching rules', () => {
     const templateId = 'openagreements-employee-ip-inventions-assignment';
     const metadata = loadMetadata(mustFindTemplateDir(templateId));
 
@@ -59,7 +59,7 @@ describe('employment memo generator', () => {
     expect(memo.counsel_escalation.high_risk_finding_ids.length).toBeGreaterThan(0);
   });
 
-  it.openspec('OA-FIL-016')('does not fabricate jurisdiction warnings when no rule matches', () => {
+  it('does not fabricate jurisdiction warnings when no rule matches', () => {
     const templateId = 'openagreements-employment-offer-letter';
     const metadata = loadMetadata(mustFindTemplateDir(templateId));
 
@@ -85,7 +85,7 @@ describe('employment memo generator', () => {
     expect(memo.disclaimer).toContain('not legal advice');
   });
 
-  it.openspec('OA-FIL-016')('renders markdown output with mandatory disclaimer and citations', () => {
+  it('renders markdown output with mandatory disclaimer and citations', () => {
     const templateId = 'openagreements-employment-confidentiality-acknowledgement';
     const metadata = loadMetadata(mustFindTemplateDir(templateId));
 
@@ -113,7 +113,7 @@ describe('employment memo generator', () => {
 });
 
 describe('wyoming restrictive covenant memo', () => {
-  it.openspec('OA-FIL-016')('generates SF 107 jurisdiction warnings for Wyoming governing law', () => {
+  it('generates SF 107 jurisdiction warnings for Wyoming governing law', () => {
     const templateId = 'openagreements-restrictive-covenant-wyoming';
     const metadata = loadMetadata(mustFindTemplateDir(templateId));
 
@@ -146,7 +146,7 @@ describe('wyoming restrictive covenant memo', () => {
     expect(hasslerWarning!.summary).toContain('Hassler');
   });
 
-  it.openspec('OA-FIL-016')('flags high-severity finding when worker category is blank', () => {
+  it('flags high-severity finding when worker category is blank', () => {
     const templateId = 'openagreements-restrictive-covenant-wyoming';
     const metadata = loadMetadata(mustFindTemplateDir(templateId));
 
@@ -167,7 +167,7 @@ describe('wyoming restrictive covenant memo', () => {
     expect(workerFinding).toBeDefined();
   });
 
-  it.openspec('OA-FIL-016')('generates duration range warning for non-compete exceeding 24 months', () => {
+  it('generates duration range warning for non-compete exceeding 24 months', () => {
     const templateId = 'openagreements-restrictive-covenant-wyoming';
     const metadata = loadMetadata(mustFindTemplateDir(templateId));
 
@@ -193,7 +193,7 @@ describe('wyoming restrictive covenant memo', () => {
     expect(durationWarning!.summary).toContain('Hassler');
   });
 
-  it.openspec('OA-FIL-016')('generates low-severity note for non-compete duration of 18 months', () => {
+  it('generates low-severity note for non-compete duration of 18 months', () => {
     const templateId = 'openagreements-restrictive-covenant-wyoming';
     const metadata = loadMetadata(mustFindTemplateDir(templateId));
 
@@ -218,7 +218,7 @@ describe('wyoming restrictive covenant memo', () => {
     expect(durationNote!.severity).toBe('low');
   });
 
-  it.openspec('OA-FIL-016')('does not generate duration warning for 12 months', () => {
+  it('does not generate duration warning for 12 months', () => {
     const templateId = 'openagreements-restrictive-covenant-wyoming';
     const metadata = loadMetadata(mustFindTemplateDir(templateId));
 
@@ -244,7 +244,7 @@ describe('wyoming restrictive covenant memo', () => {
 });
 
 describe('employment memo language guard', () => {
-  it.openspec('OA-FIL-017')('rewrites prescriptive wording and blocks prohibited phrases', () => {
+  it('rewrites prescriptive wording and blocks prohibited phrases', () => {
     const rewritten = applyAdviceLanguageGuard('We recommend this plan. You should use the best strategy.');
 
     expect(rewritten).not.toContain('We recommend');

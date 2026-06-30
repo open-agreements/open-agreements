@@ -48,39 +48,39 @@ async function runVerificationWithTrace(
 }
 
 describe('normalizeText', () => {
-  it.openspec('OA-RCP-040')('converts non-breaking spaces to regular spaces', () => {
+  it('converts non-breaking spaces to regular spaces', () => {
     expect(normalizeText('hello\u00A0world')).toBe('hello world');
     expect(normalizeText('hello\u2007world')).toBe('hello world');
     expect(normalizeText('hello\u202Fworld')).toBe('hello world');
   });
 
-  it.openspec('OA-RCP-040')('normalizes smart single quotes', () => {
+  it('normalizes smart single quotes', () => {
     expect(normalizeText('\u2018hello\u2019')).toBe("'hello'");
     expect(normalizeText('\u2039hi\u203A')).toBe("'hi'");
   });
 
-  it.openspec('OA-RCP-040')('normalizes smart double quotes', () => {
+  it('normalizes smart double quotes', () => {
     expect(normalizeText('\u201Chello\u201D')).toBe('"hello"');
     expect(normalizeText('\u00ABhi\u00BB')).toBe('"hi"');
     expect(normalizeText('\u201Ahi\u201E')).toBe('"hi"');
   });
 
-  it.openspec('OA-RCP-040')('collapses horizontal whitespace to single space', () => {
+  it('collapses horizontal whitespace to single space', () => {
     expect(normalizeText('hello   world')).toBe('hello world');
     expect(normalizeText('hello\t\tworld')).toBe('hello world');
   });
 
-  it.openspec('OA-RCP-040')('preserves newlines', () => {
+  it('preserves newlines', () => {
     expect(normalizeText('hello\nworld')).toBe('hello\nworld');
   });
 
-  it.openspec('OA-RCP-040')('trims', () => {
+  it('trims', () => {
     expect(normalizeText('  hello  ')).toBe('hello');
   });
 });
 
 describe('verifyOutput', () => {
-  it.openspec('OA-RCP-041')('skips empty string values', async () => {
+  it('skips empty string values', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -100,7 +100,7 @@ describe('verifyOutput', () => {
     rmSync(docxPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it.openspec('OA-RCP-041')('skips whitespace-only values', async () => {
+  it('skips whitespace-only values', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -120,7 +120,7 @@ describe('verifyOutput', () => {
     rmSync(docxPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it.openspec('OA-RCP-009')('matches with smart quotes normalized to straight', async () => {
+  it('matches with smart quotes normalized to straight', async () => {
     // Document contains smart quotes
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
@@ -142,7 +142,7 @@ describe('verifyOutput', () => {
     rmSync(docxPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it.openspec('OA-RCP-041')('matches with collapsed whitespace', async () => {
+  it('matches with collapsed whitespace', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -162,7 +162,7 @@ describe('verifyOutput', () => {
     rmSync(docxPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it.openspec('OA-RCP-041')('matches with non-breaking space', async () => {
+  it('matches with non-breaking space', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -182,7 +182,7 @@ describe('verifyOutput', () => {
     rmSync(docxPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it.openspec('OA-RCP-011')('finds values present only in header text', async () => {
+  it('finds values present only in header text', async () => {
     const docXml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
@@ -210,7 +210,7 @@ describe('verifyOutput', () => {
     rmSync(docxPath.replace('/test.docx', ''), { recursive: true, force: true });
   });
 
-  it.openspec('OA-RCP-013')('detects leftover bracketed placeholders from replacement keys', async () => {
+  it('detects leftover bracketed placeholders from replacement keys', async () => {
     const xml =
       '<?xml version="1.0" encoding="UTF-8"?>' +
       `<w:document xmlns:w="${W_NS}"><w:body>` +
