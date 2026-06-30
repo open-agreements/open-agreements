@@ -96,16 +96,6 @@ agent or the CLI, see [Template Filling via MCP](#template-filling-via-mcp).
 | Indemnification Agreement | [HTML](https://usejunior.com/templates/nvca-indemnification-agreement?utm_source=github&utm_medium=readme&utm_campaign=open-agreements) | [NVCA](https://nvca.org/wp-content/uploads/2021/12/NVCA-2020-Indemnification-Agreement.docx) | NVCA proprietary | — |
 | Management Rights Letter | [HTML](https://usejunior.com/templates/nvca-management-rights-letter?utm_source=github&utm_medium=readme&utm_campaign=open-agreements) | [NVCA](https://nvca.org/wp-content/uploads/2025/12/NVCA-2020-Management-Rights-Letter-1-1.docx) | NVCA proprietary | — |
 
-### Other
-
-| Template | HTML | Source | License | Repo |
-|----------|------|--------|---------|------|
-| Stockholder Consent SAFE | [HTML](https://usejunior.com/templates/openagreements-stockholder-consent-safe?utm_source=github&utm_medium=readme&utm_campaign=open-agreements) | [OpenAgreements](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-stockholder-consent-safe) | [Creative Commons (CC-BY)](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-stockholder-consent-safe) |
-| Board Consent SAFE | [HTML](https://usejunior.com/templates/openagreements-board-consent-safe?utm_source=github&utm_medium=readme&utm_campaign=open-agreements) | [OpenAgreements](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-board-consent-safe) | [Creative Commons (CC-BY)](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-board-consent-safe) |
-| Working Group List | [HTML](https://usejunior.com/templates/working-group-list?utm_source=github&utm_medium=readme&utm_campaign=open-agreements) | [OpenAgreements](https://github.com/open-agreements/open-agreements) | [Public domain (CC0)](https://creativecommons.org/publicdomain/zero/1.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/working-group-list) |
-| Due Diligence Request List | [HTML](https://usejunior.com/templates/openagreements-due-diligence-request-list?utm_source=github&utm_medium=readme&utm_campaign=open-agreements) | [OpenAgreements](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-due-diligence-request-list) | [Creative Commons (CC-BY)](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-due-diligence-request-list) |
-| Closing Checklist | [HTML](https://usejunior.com/templates/closing-checklist?utm_source=github&utm_medium=readme&utm_campaign=open-agreements) | [OpenAgreements](https://github.com/open-agreements/open-agreements) | [Public domain (CC0)](https://creativecommons.org/publicdomain/zero/1.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/closing-checklist) |
-
 ### Deals & Partnerships
 
 | Template | HTML | Source | License | Repo |
@@ -149,6 +139,13 @@ agent or the CLI, see [Template Filling via MCP](#template-filling-via-mcp).
 | Employment Confidentiality Acknowledgement | [HTML](https://usejunior.com/templates/openagreements-employment-confidentiality-acknowledgement?utm_source=github&utm_medium=readme&utm_campaign=open-agreements) | [OpenAgreements](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-employment-confidentiality-acknowledgement) | [Creative Commons (CC-BY)](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-employment-confidentiality-acknowledgement) |
 | Restrictive Covenant Massachusetts | [HTML](https://usejunior.com/templates/openagreements-restrictive-covenant-massachusetts?utm_source=github&utm_medium=readme&utm_campaign=open-agreements) | [OpenAgreements](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-restrictive-covenant-massachusetts) | [Creative Commons (CC-BY)](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-restrictive-covenant-massachusetts) |
 
+### Board & Stockholder Consents
+
+| Template | HTML | Source | License | Repo |
+|----------|------|--------|---------|------|
+| Stockholder Consent SAFE | [HTML](https://usejunior.com/templates/openagreements-stockholder-consent-safe?utm_source=github&utm_medium=readme&utm_campaign=open-agreements) | [OpenAgreements](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-stockholder-consent-safe) | [Creative Commons (CC-BY)](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-stockholder-consent-safe) |
+| Board Consent SAFE | [HTML](https://usejunior.com/templates/openagreements-board-consent-safe?utm_source=github&utm_medium=readme&utm_campaign=open-agreements) | [OpenAgreements](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-board-consent-safe) | [Creative Commons (CC-BY)](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-board-consent-safe) |
+
 ### Professional Services
 
 | Template | HTML | Source | License | Repo |
@@ -166,6 +163,14 @@ agent or the CLI, see [Template Filling via MCP](#template-filling-via-mcp).
 | AI Addendum | [HTML](https://usejunior.com/templates/common-paper-ai-addendum?utm_source=github&utm_medium=readme&utm_campaign=open-agreements) | [Common Paper](https://commonpaper.com/standards/ai-addendum/1.0) | [Creative Commons (CC-BY)](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-ai-addendum) |
 | AI Addendum In App | [HTML](https://usejunior.com/templates/common-paper-ai-addendum-in-app?utm_source=github&utm_medium=readme&utm_campaign=open-agreements) | [Common Paper](https://commonpaper.com/standards/ai-addendum/1.0) | [Creative Commons (CC-BY)](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-ai-addendum-in-app) |
 | Business Associate Agreement | [HTML](https://usejunior.com/templates/common-paper-business-associate-agreement?utm_source=github&utm_medium=readme&utm_campaign=open-agreements) | [Common Paper](https://commonpaper.com/standards/business-associate-agreement/1.0) | [Creative Commons (CC-BY)](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/common-paper-business-associate-agreement) |
+
+### Deal Process
+
+| Template | HTML | Source | License | Repo |
+|----------|------|--------|---------|------|
+| Working Group List | [HTML](https://usejunior.com/templates/working-group-list?utm_source=github&utm_medium=readme&utm_campaign=open-agreements) | [OpenAgreements](https://github.com/open-agreements/open-agreements) | [Public domain (CC0)](https://creativecommons.org/publicdomain/zero/1.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/working-group-list) |
+| Due Diligence Request List | [HTML](https://usejunior.com/templates/openagreements-due-diligence-request-list?utm_source=github&utm_medium=readme&utm_campaign=open-agreements) | [OpenAgreements](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-due-diligence-request-list) | [Creative Commons (CC-BY)](https://creativecommons.org/licenses/by/4.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/openagreements-due-diligence-request-list) |
+| Closing Checklist | [HTML](https://usejunior.com/templates/closing-checklist?utm_source=github&utm_medium=readme&utm_campaign=open-agreements) | [OpenAgreements](https://github.com/open-agreements/open-agreements) | [Public domain (CC0)](https://creativecommons.org/publicdomain/zero/1.0/) | [Repo](https://github.com/open-agreements/open-agreements/tree/main/content/templates/closing-checklist) |
 
 ## Checklists
 

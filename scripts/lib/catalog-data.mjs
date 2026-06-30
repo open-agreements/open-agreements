@@ -70,6 +70,21 @@ export const CATEGORIES = [
     match: (id) => id.startsWith("nvca-"),
   },
   {
+    slug: "corporate-consents",
+    label: "Board & Stockholder Consents",
+    description:
+      "Written board and stockholder consents authorizing SAFE and other early-stage financings.",
+    match: (id) => /(?:board|stockholder)-consent/.test(id),
+  },
+  {
+    slug: "deal-process",
+    label: "Deal Process",
+    description:
+      "Working group lists, diligence request lists, and closing checklists for transactions.",
+    match: (id) =>
+      /working-group-list|due-diligence|closing-checklist/.test(id),
+  },
+  {
     slug: "other",
     label: "Other",
     description: "Additional templates that do not map to the primary categories.",
