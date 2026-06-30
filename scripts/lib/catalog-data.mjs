@@ -77,6 +77,67 @@ export const CATEGORIES = [
   },
 ];
 
+// Template demand snapshot — user-directed content fetches (browser + AI agent
+// + SDK, excluding crawler/indexing traffic) over the trailing 180 days, from
+// the Vercel content-fetch Log Drain view
+// `open-agreements.vercel_drains.content_fetch_classified`. Pulled 2026-06-30.
+//
+// Drives README/catalog ordering so editorial prominence follows real demand:
+// category groups are ordered by the sum of their members' demand, and
+// templates within a group are ordered by their own demand. Builds must be
+// deterministic and offline, so this is a committed snapshot rather than a live
+// query — refresh it with the `analytics-review` runbook (the per-path
+// `cls IN ("browser","ai_agent","sdk")` query). Slugs absent here sort to 0.
+export const TEMPLATE_USAGE_DEMAND = {
+  "yc-safe-valuation-cap": 384,
+  "common-paper-mutual-nda": 241,
+  "openagreements-stockholder-consent-safe": 201,
+  "yc-safe-pro-rata-side-letter": 154,
+  "common-paper-design-partner-agreement": 152,
+  "nvca-rofr-co-sale-agreement": 142,
+  "bonterms-mutual-nda": 110,
+  "openagreements-employment-offer-letter": 107,
+  "openagreements-employee-ip-inventions-assignment": 104,
+  "nvca-investors-rights-agreement": 88,
+  "yc-safe-mfn": 88,
+  "common-paper-term-sheet": 77,
+  "nvca-voting-agreement": 76,
+  "openagreements-board-consent-safe": 75,
+  "nvca-stock-purchase-agreement": 73,
+  "common-paper-csa-click-through": 64,
+  "openagreements-restrictive-covenant-wyoming": 64,
+  "working-group-list": 62,
+  "yc-safe-discount": 62,
+  "common-paper-data-processing-agreement": 61,
+  "nvca-certificate-of-incorporation": 60,
+  "common-paper-independent-contractor-agreement": 58,
+  "openagreements-restrictive-covenant-florida": 57,
+  "common-paper-ai-addendum": 56,
+  "nvca-indemnification-agreement": 56,
+  "openagreements-due-diligence-request-list": 56,
+  "common-paper-professional-services-agreement": 55,
+  "common-paper-partnership-agreement": 54,
+  "bonterms-professional-services-agreement": 53,
+  "common-paper-csa-without-sla": 53,
+  "common-paper-pilot-agreement": 53,
+  "common-paper-csa-with-sla": 51,
+  "common-paper-order-form": 51,
+  "nvca-management-rights-letter": 46,
+  "common-paper-cloud-service-agreement": 44,
+  "common-paper-software-license-agreement": 44,
+  "common-paper-order-form-with-sla": 43,
+  "common-paper-ai-addendum-in-app": 40,
+  "common-paper-csa-with-ai": 40,
+  "common-paper-business-associate-agreement": 37,
+  "closing-checklist": 36,
+  "common-paper-statement-of-work": 35,
+  "openagreements-employment-confidentiality-acknowledgement": 34,
+  "common-paper-amendment": 33,
+  "common-paper-letter-of-intent": 33,
+  "common-paper-one-way-nda": 33,
+  "openagreements-restrictive-covenant-massachusetts": 5,
+};
+
 const LICENSE_FLAGS = {
   "CC0-1.0": { distributable: true, fillable: true },
   "CC-BY-4.0": { distributable: true, fillable: true },
@@ -202,6 +263,7 @@ export function buildCatalog({ rootDir = REPO_ROOT } = {}) {
       hasMarkdownDownload,
       contentTier,
       repoPath: getContentRepoPath(item.name, contentTier),
+      usageDemand: TEMPLATE_USAGE_DEMAND[item.name] ?? 0,
       ...flags,
     };
 
@@ -249,14 +311,22 @@ export function buildCatalog({ rootDir = REPO_ROOT } = {}) {
       (template) => template.category === category.slug,
     );
     const sources = [...new Set(categoryTemplates.map((template) => template.sourceLabel))];
+    const usageDemand = categoryTemplates.reduce(
+      (sum, template) => sum + template.usageDemand,
+      0,
+    );
     return {
       slug: category.slug,
       label: category.label,
       description: category.description,
       count: categoryTemplates.length,
       sources,
+      usageDemand,
     };
-  }).filter((category) => category.count > 0);
+  })
+    .filter((category) => category.count > 0)
+    // Order groups by real demand (most-used first); ties keep CATEGORIES order.
+    .sort((a, b) => b.usageDemand - a.usageDemand);
 
   const previewTemplates = templates.filter((template) => template.hasPreview);
 
