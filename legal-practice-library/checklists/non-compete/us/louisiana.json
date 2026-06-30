@@ -1,0 +1,1400 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/louisiana",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/louisiana.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/louisiana",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/louisiana/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/louisiana/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "louisiana",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — Louisiana",
+      "description": "A clause-by-clause reviewer checklist for Louisiana employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under La. R.S. 23:921's void-unless-excepted rule, parish-naming requirement, two-year cap, and occupation carve-outs.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "Louisiana",
+      "coverage": "Louisiana (US)",
+      "lastReviewed": "2026-06-12",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 50,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "label": "Physician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "louisiana-statutory-gates",
+        "label": "Louisiana statutory gates"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#identify-parties",
+        "requirementGuidance": "Confirm the employer named in the covenant is the entity that actually employs the worker. The statutory employee exception runs between an employer and a person employed as an agent, servant, or employee — a covenant papered with an affiliate that never employed the worker starts outside the only lane that could save it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "la-c-cover",
+            "authorityType": "primary-law",
+            "title": "La. R.S. 23:921",
+            "citation": "La. R.S. 23:921(C).",
+            "url": "https://legis.la.gov/Legis/Law.aspx?d=84015",
+            "proposition": "La. R.S. 23:921(C) supports that the employee exception covers a person who is employed as an agent, servant, or employee agreeing with his employer.",
+            "verbatimQuote": "Any person, including a corporation and the individual shareholders of such corporation, who is employed as an agent, servant, or employee may agree with his employer to refrain from carrying on or engaging in a business similar to that of the employer and/or from soliciting customers of the employer within a specified parish or parishes, municipality or municipalities, or parts thereof, so long as the employer carries on a like business therein, not to exceed a period of two years from termination of employment.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-c-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#identify-effective-date",
+        "requirementGuidance": "In Louisiana the effective date can decide enforceability on its own: a covenant signed before employment begins has been saved only where the agreement fixed an effective date equal to the worker's first day on the job. Verify the date is stated and lands inside the employment relationship.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "la-annison-cover",
+            "authorityType": "case-law",
+            "title": "Arthur J. Gallagher & Co. v. Annison",
+            "citation": "Arthur J. Gallagher & Co. v. Annison, 391 So. 3d 1089 (La. Ct. App. 2024).",
+            "url": "https://caselaw.findlaw.com/court/la-court-of-appeal/116265798.html",
+            "proposition": "Gallagher v. Annison supports that an agreement whose effective date equals the first day of employment survives a pre-start signature.",
+            "verbatimQuote": "But Annison and Cates expressly agreed with Gallagher that the effective date of their employment agreements was the date each commenced their respective employment.",
+            "date": "2024-06-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-annison-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#identify-employee-title",
+        "requirementGuidance": "Record the role with more care than usual, because occupation selects the governing rule here: physicians get burn-off caps measured from signing, automobile salesmen — and, for agreements effective on or after August 1, 2026, interns and apprentices — cannot be restrained at all, and real estate licensees need a rescission right. The stated title is the first signal that one of those special lanes applies.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#identify-governing-law",
+        "requirementGuidance": "Check that the governing state is stated — and treat a clause selecting another state's law for a Louisiana employee as a red flag rather than a fix. The statute voids choice-of-law and choice-of-forum clauses in employment contracts unless the employee ratifies them after the dispute has already arisen.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "la-a2-cover",
+            "authorityType": "primary-law",
+            "title": "La. R.S. 23:921",
+            "citation": "La. R.S. 23:921(A)(2).",
+            "url": "https://legis.la.gov/Legis/Law.aspx?d=84015",
+            "proposition": "La. R.S. 23:921(A)(2) supports that choice-of-forum and choice-of-law clauses in a Louisiana employment contract are null and void absent post-dispute ratification.",
+            "verbatimQuote": "shall be null and void except where the choice of forum clause or choice of law clause is expressly, knowingly, and voluntarily agreed to and ratified by the employee after the occurrence of the incident which is the subject of the civil or administrative action.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-a2-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#define-confidential-information",
+        "requirementGuidance": "Confirm the definition covers genuinely protectable information and nothing more. A definition so broad that honoring it would keep the worker from working in the field reads as a restraint on a lawful profession — which is exactly the conduct the statute voids by default.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "la-a1-defs",
+            "authorityType": "primary-law",
+            "title": "La. R.S. 23:921",
+            "citation": "La. R.S. 23:921(A)(1).",
+            "url": "https://legis.la.gov/Legis/Law.aspx?d=84015",
+            "proposition": "La. R.S. 23:921(A)(1) supports the default rule of nullity that an overbroad confidentiality definition risks triggering.",
+            "verbatimQuote": "Every contract or agreement, or provision thereof, by which anyone is restrained from exercising a lawful profession, trade, or business of any kind, except as provided in this Section, shall be null and void.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-a1-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#define-trade-secrets",
+        "requirementGuidance": "Keep Trade Secrets defined separately from ordinary confidential information. Louisiana's trade-secret statute supplies an injunction against actual or threatened misappropriation independent of any covenant, so a clean trade-secret definition preserves the remedy most likely to survive even when the covenant does not.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "la-lutsa-defs",
+            "authorityType": "primary-law",
+            "title": "La. R.S. 51:1432",
+            "citation": "La. R.S. 51:1432(A).",
+            "url": "https://legis.la.gov/Legis/Law.aspx?d=104049",
+            "proposition": "La. R.S. 51:1432 supports that actual or threatened misappropriation of a trade secret may be enjoined under the Louisiana Uniform Trade Secrets Act.",
+            "verbatimQuote": "Actual or threatened misappropriation may be enjoined.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-lutsa-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "cap-restricted-period-at-two-years-from-termination",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.louisiana.cap-restricted-period-at-two-years-from-termination",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period capped at two years",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#cap-restricted-period-at-two-years-from-termination",
+        "requirementGuidance": "Find every duration in the agreement and test it against the statutory ceiling: an employee non-compete or customer non-solicit may run at most two years from termination of employment. A single defined Restricted Period keeps that audit possible across the covenant suite — and a term past two years is not negotiated down by a court; it simply fails.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "la-c-defs",
+            "authorityType": "primary-law",
+            "title": "La. R.S. 23:921",
+            "citation": "La. R.S. 23:921(C).",
+            "url": "https://legis.la.gov/Legis/Law.aspx?d=84015",
+            "proposition": "La. R.S. 23:921(C) supports the named-parish requirement, the like-business limit, the customer-solicitation coverage, and the two-year-from-termination cap for employee covenants.",
+            "verbatimQuote": "Any person, including a corporation and the individual shareholders of such corporation, who is employed as an agent, servant, or employee may agree with his employer to refrain from carrying on or engaging in a business similar to that of the employer and/or from soliciting customers of the employer within a specified parish or parishes, municipality or municipalities, or parts thereof, so long as the employer carries on a like business therein, not to exceed a period of two years from termination of employment.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-c-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "name-parishes-or-municipalities-in-restricted-territory",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.louisiana.name-parishes-or-municipalities-in-restricted-territory",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Territory named by parish or municipality",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#name-parishes-or-municipalities-in-restricted-territory",
+        "requirementGuidance": "The territory must list parishes or municipalities — or parts of them — by name, limited to places where the employer actually carries on a like business. A mileage radius does not satisfy the statute: a restriction defined by a seventy-five-mile radius was struck as overly broad, and a catch-all reaching anywhere the employer operates fails for the same reason. Because courts here sever rather than rewrite, an overbroad territory is struck, never trimmed to fit.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "la-c-defs",
+            "authorityType": "primary-law",
+            "title": "La. R.S. 23:921",
+            "citation": "La. R.S. 23:921(C).",
+            "url": "https://legis.la.gov/Legis/Law.aspx?d=84015",
+            "proposition": "La. R.S. 23:921(C) supports the named-parish requirement, the like-business limit, the customer-solicitation coverage, and the two-year-from-termination cap for employee covenants.",
+            "verbatimQuote": "Any person, including a corporation and the individual shareholders of such corporation, who is employed as an agent, servant, or employee may agree with his employer to refrain from carrying on or engaging in a business similar to that of the employer and/or from soliciting customers of the employer within a specified parish or parishes, municipality or municipalities, or parts thereof, so long as the employer carries on a like business therein, not to exceed a period of two years from termination of employment.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-c-defs"
+          },
+          {
+            "sourceId": "la-amcom-defs",
+            "authorityType": "case-law",
+            "title": "AMCOM of Louisiana, Inc. v. Battson",
+            "citation": "AMCOM of La., Inc. v. Battson, 666 So. 2d 1227 (La. Ct. App. 1996).",
+            "url": "https://www.courtlistener.com/opinion/1094717/amcom-of-louisiana-inc-v-battson/",
+            "deepLink": "https://www.courtlistener.com/opinion/1094717/amcom-of-louisiana-inc-v-battson/#:~:text=We%20agree%20with%20the%20trial,this%20employment%20agreement%20overly%20broad.",
+            "proposition": "AMCOM supports that a Louisiana territory defined by a mileage radius rather than named parishes is overly broad.",
+            "verbatimQuote": "We agree with the trial court's factual finding that the geographical area encompassed within a 75-mile radius of Shreveport or Bossier City makes this employment agreement overly broad.",
+            "date": "1996-01-17",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-amcom-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered customers",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#define-covered-customers",
+        "requirementGuidance": "Bound the customer class to relationships the worker actually served during a stated look-back window, and remember that restraining customer solicitation sits inside the same statutory lane as the non-compete — named parishes, a like business, two years. An entire-book-of-business definition only widens a clause the law already reads narrowly.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "la-c-defs",
+            "authorityType": "primary-law",
+            "title": "La. R.S. 23:921",
+            "citation": "La. R.S. 23:921(C).",
+            "url": "https://legis.la.gov/Legis/Law.aspx?d=84015",
+            "proposition": "La. R.S. 23:921(C) supports the named-parish requirement, the like-business limit, the customer-solicitation coverage, and the two-year-from-termination cap for employee covenants.",
+            "verbatimQuote": "Any person, including a corporation and the individual shareholders of such corporation, who is employed as an agent, servant, or employee may agree with his employer to refrain from carrying on or engaging in a business similar to that of the employer and/or from soliciting customers of the employer within a specified parish or parishes, municipality or municipalities, or parts thereof, so long as the employer carries on a like business therein, not to exceed a period of two years from termination of employment.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-c-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#define-covered-employees",
+        "requirementGuidance": "Keep the anti-poaching class to colleagues the departing worker actually worked with. The clause sits outside the non-compete statute, but it is still tested for reasonableness in scope and duration — and a class sweeping in the whole workforce invites the same fate as a clause with no end date.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "la-farris-reasonable-defs",
+            "authorityType": "case-law",
+            "title": "Brown & Root Industrial Services, LLC v. Farris",
+            "citation": "Brown & Root Indus. Servs., LLC v. Farris, 392 So. 3d 424 (La. Ct. App. 2024).",
+            "url": "https://caselaw.findlaw.com/court/la-court-of-appeal/116318576.html",
+            "proposition": "Brown & Root v. Farris supports that an employee non-solicitation provision must be reasonable in scope and duration.",
+            "verbatimQuote": "Nevertheless, a review of the limited cases analyzing employee non-solicitation provisions reflects that courts have required that these non-solicitation provisions be reasonable in scope and duration, which we also find to be a necessary requirement and therefore applicable to our analysis of Promise Number 9.",
+            "date": "2024-06-27",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-farris-reasonable-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#define-protected-interests",
+        "requirementGuidance": "Recite the interests, but do not expect them to carry weight the statute never gives them. Louisiana enforces a covenant because it tracks the statutory text, not because the employer's interests are compelling, and the covenant is strictly construed against the party enforcing it — so the recital frames the clause without rescuing it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "la-swat24-defs",
+            "authorityType": "case-law",
+            "title": "SWAT 24 Shreveport Bossier, Inc. v. Bond",
+            "citation": "SWAT 24 Shreveport Bossier, Inc. v. Bond, 808 So. 2d 294 (La. 2001).",
+            "url": "https://www.courtlistener.com/opinion/1860745/swat-24-shreveport-bossier-inc-v-bond/",
+            "deepLink": "https://www.courtlistener.com/opinion/1860745/swat-24-shreveport-bossier-inc-v-bond/#:~:text=Because%20such%20covenants%20are%20in,the%20party%20seeking%20their%20enforcement.",
+            "proposition": "SWAT 24 supports that Louisiana restrictive covenants are strictly construed against the party seeking enforcement.",
+            "verbatimQuote": "Because such covenants are in derogation of the common right, they must be strictly construed against the party seeking their enforcement.",
+            "date": "2001-06-29",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-swat24-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-competitive-business",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Competitive business",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#define-competitive-business",
+        "requirementGuidance": "The statute permits restraining a business similar to that of the employer, so the definition should describe what the employer concretely does. A definition reaching lines of business the employer never carried on stretches past the exception's text — and outside the exception there is only the void zone.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "la-c-defs",
+            "authorityType": "primary-law",
+            "title": "La. R.S. 23:921",
+            "citation": "La. R.S. 23:921(C).",
+            "url": "https://legis.la.gov/Legis/Law.aspx?d=84015",
+            "proposition": "La. R.S. 23:921(C) supports the named-parish requirement, the like-business limit, the customer-solicitation coverage, and the two-year-from-termination cap for employee covenants.",
+            "verbatimQuote": "Any person, including a corporation and the individual shareholders of such corporation, who is employed as an agent, servant, or employee may agree with his employer to refrain from carrying on or engaging in a business similar to that of the employer and/or from soliciting customers of the employer within a specified parish or parishes, municipality or municipalities, or parts thereof, so long as the employer carries on a like business therein, not to exceed a period of two years from termination of employment.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-c-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where ownership or investment in competitors is restricted, look for a passive-holdings carve-out below a stated threshold. A clause that technically forbids holding ordinary public shares restrains more than the statutory exception describes, in a state where overreach means nullity rather than narrowing.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#define-passive-public-holdings",
+        "requirementGuidance": "Optional drafting mechanics: many agreements inline the carve-out language without a capitalized term. If the defined term appears, check that its percentage matches the operative carve-out it serves.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.11",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#define-solicit",
+        "requirementGuidance": "Define soliciting concretely, with initiating contact as the core. The definition matters twice in Louisiana: customer solicitation falls inside the statute's strict lane, while employee anti-poaching is judged under a common-law reasonableness standard — and a fuzzy definition blurs which regime each clause sits in.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "la-farris-not-governed-defs",
+            "authorityType": "case-law",
+            "title": "Brown & Root Industrial Services, LLC v. Farris",
+            "citation": "Brown & Root Indus. Servs., LLC v. Farris, 392 So. 3d 424 (La. Ct. App. 2024).",
+            "url": "https://caselaw.findlaw.com/court/la-court-of-appeal/116318576.html",
+            "proposition": "Brown & Root v. Farris supports that an employee non-solicitation agreement is not governed by La. R.S. 23:921, unlike a restraint on the worker's own trade.",
+            "verbatimQuote": "However, a contract by a former employee not to solicit employees of his former employer, like Promise Number 9, is not governed by La. R.S. 23:921.",
+            "date": "2024-06-27",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-farris-not-governed-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.12",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#define-termination-of-employment",
+        "requirementGuidance": "Pin down the event that ends employment, because the two-year ceiling is measured from termination — not from when competition stops, when judgment issues, or when the employer learns of a breach. An ambiguous trigger makes the one date the statute cares about contestable.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "la-c-defs",
+            "authorityType": "primary-law",
+            "title": "La. R.S. 23:921",
+            "citation": "La. R.S. 23:921(C).",
+            "url": "https://legis.la.gov/Legis/Law.aspx?d=84015",
+            "proposition": "La. R.S. 23:921(C) supports the named-parish requirement, the like-business limit, the customer-solicitation coverage, and the two-year-from-termination cap for employee covenants.",
+            "verbatimQuote": "Any person, including a corporation and the individual shareholders of such corporation, who is employed as an agent, servant, or employee may agree with his employer to refrain from carrying on or engaging in a business similar to that of the employer and/or from soliciting customers of the employer within a specified parish or parishes, municipality or municipalities, or parts thereof, so long as the employer carries on a like business therein, not to exceed a period of two years from termination of employment.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-c-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-timing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-timing",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "When the agreement was signed",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#acknowledge-timing",
+        "requirementGuidance": "The acknowledgement should record when the covenant was signed relative to the first day of work. A covenant signed by someone not yet employed has been held unenforceable, the recognized cure is an express effective date matching the start of employment, and for a worker already on the job, continued employment itself supplies the lawful cause — so the acknowledgement should make the timeline self-proving.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "la-rouses-timing",
+            "authorityType": "case-law",
+            "title": "Rouses Enterprises, L.L.C. v. Clapp",
+            "citation": "Rouses Enters., L.L.C. v. Clapp, No. 21-30293 (5th Cir. Mar. 8, 2022).",
+            "url": "https://www.ca5.uscourts.gov/opinions/unpub/21/21-30293.0.pdf",
+            "proposition": "Rouses supports that a Louisiana non-compete signed before the employment relationship exists is unenforceable.",
+            "verbatimQuote": "Because Clapp was not employed by Rouses when he signed the agreement, it is unenforceable under Louisiana law.",
+            "date": "2022-03-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-rouses-timing"
+          },
+          {
+            "sourceId": "la-annison-timing",
+            "authorityType": "case-law",
+            "title": "Arthur J. Gallagher & Co. v. Annison",
+            "citation": "Arthur J. Gallagher & Co. v. Annison, 391 So. 3d 1089 (La. Ct. App. 2024).",
+            "url": "https://caselaw.findlaw.com/court/la-court-of-appeal/116265798.html",
+            "proposition": "Gallagher v. Annison supports that an effective date fixed at the commencement of employment cures a pre-start signature.",
+            "verbatimQuote": "But Annison and Cates expressly agreed with Gallagher that the effective date of their employment agreements was the date each commenced their respective employment.",
+            "date": "2024-06-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-annison-timing"
+          },
+          {
+            "sourceId": "la-cellone-timing",
+            "authorityType": "case-law",
+            "title": "Cellular One, Inc. v. Boyd",
+            "citation": "Cellular One, Inc. v. Boyd, 653 So. 2d 30 (La. Ct. App. 1995).",
+            "url": "https://www.courtlistener.com/opinion/1154814/cellular-one-inc-v-boyd/",
+            "deepLink": "https://www.courtlistener.com/opinion/1154814/cellular-one-inc-v-boyd/#:~:text=Defendants%20signed%20these%20agreements%20as,condition%20of%20their%20continued%20employment.",
+            "proposition": "Cellular One supports that continued employment can support a Louisiana covenant signed as a condition of continued employment.",
+            "verbatimQuote": "Defendants signed these agreements as a condition of their continued employment.",
+            "date": "1995-03-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-cellone-timing"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-opportunity-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Chance to consult a lawyer",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#acknowledge-opportunity-to-consult-counsel",
+        "requirementGuidance": "No Louisiana statute requires it, but it is inexpensive evidence of a knowing signature in a regime where the worker's procedural posture — what was signed, when, and with what understanding — does real analytical work.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "Trade-secret obligations should last as long as secrecy does — federal law keys the right to continued secrecy. In Louisiana the trade-secret framework is the workhorse protection when the covenant itself fails, so a fixed expiry on trade-secret obligations gives away the most dependable remedy for no benefit.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-trade-secret-definition",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
+            "citation": "18 U.S.C. § 1839(3)(B) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1839",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
+            "proposition": "Federal law keys trade-secret status to continued secrecy, which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-dtsa-trade-secret-definition"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#state-confidentiality-duration",
+        "requirementGuidance": "Give ordinary confidential information its own finite term. An everything-forever confidentiality lid edges toward functioning as a restraint on working in the field — and a clause that operates that way gets tested under the statute the drafter was trying to stay out of.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "la-a1-confidentiality",
+            "authorityType": "primary-law",
+            "title": "La. R.S. 23:921",
+            "citation": "La. R.S. 23:921(A)(1).",
+            "url": "https://legis.la.gov/Legis/Law.aspx?d=84015",
+            "proposition": "La. R.S. 23:921(A)(1) supports the rule of nullity that a confidentiality clause functioning as a restraint on a lawful profession would trigger.",
+            "verbatimQuote": "Every contract or agreement, or provision thereof, by which anyone is restrained from exercising a lawful profession, trade, or business of any kind, except as provided in this Section, shall be null and void.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-a1-confidentiality"
+          }
+        ]
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#disclose-dtsa-notice",
+        "requirementGuidance": "Federal law, fully applicable in Louisiana: omit the immunity notice and the employer forfeits exemplary damages and attorney fees in a later trade-secret action against the worker. In a state that pushes employers toward trade-secret remedies instead of covenants, giving those remedies a haircut is an unforced error.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-immunity-notice",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-dtsa-immunity-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Confidentiality and non-disparagement language has to leave wages, hours, and working conditions discussable. Federal labor law protects that speech whatever state law governs the covenant, and the Board has been striking overbroad clauses in employee agreements.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nlra-section-7-rights",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-nlra-section-7-rights"
+          },
+          {
+            "sourceId": "mclaren-macomb-protected-activity",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-mclaren-macomb-protected-activity"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#permit-compelled-disclosure",
+        "requirementGuidance": "Confirm the carve-out for disclosure required by law, court order, or a government investigation, with notice to the employer where lawful. Confidentiality obligations cannot block legally compelled disclosure, and the express carve-out keeps the clause from overpromising.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#require-property-return-and-certification",
+        "requirementGuidance": "Return-or-delete at separation, certified in writing. Where the realistic protections are trade-secret and confidentiality claims rather than the covenant itself, the certification is the contemporaneous evidence those claims lean on if protected material later surfaces at a competitor.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-employee-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#permit-employee-nonsolicit",
+        "requirementGuidance": "Optional — and the one covenant in the family that lives outside the non-compete statute, because a promise not to recruit former colleagues does not restrain the worker's own trade. It is still tested for reasonableness in scope and duration, so route it through the anti-poaching gate at the end of this checklist.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "la-farris-not-governed-cov",
+            "authorityType": "case-law",
+            "title": "Brown & Root Industrial Services, LLC v. Farris",
+            "citation": "Brown & Root Indus. Servs., LLC v. Farris, 392 So. 3d 424 (La. Ct. App. 2024).",
+            "url": "https://caselaw.findlaw.com/court/la-court-of-appeal/116318576.html",
+            "proposition": "Brown & Root v. Farris supports that an employee non-solicitation agreement is not governed by La. R.S. 23:921.",
+            "verbatimQuote": "However, a contract by a former employee not to solicit employees of his former employer, like Promise Number 9, is not governed by La. R.S. 23:921.",
+            "date": "2024-06-27",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-farris-not-governed-cov"
+          },
+          {
+            "sourceId": "la-farris-reasonable-cov",
+            "authorityType": "case-law",
+            "title": "Brown & Root Industrial Services, LLC v. Farris",
+            "citation": "Brown & Root Indus. Servs., LLC v. Farris, 392 So. 3d 424 (La. Ct. App. 2024).",
+            "url": "https://caselaw.findlaw.com/court/la-court-of-appeal/116318576.html",
+            "proposition": "Brown & Root v. Farris supports that an employee non-solicitation provision must still be reasonable in scope and duration.",
+            "verbatimQuote": "Nevertheless, a review of the limited cases analyzing employee non-solicitation provisions reflects that courts have required that these non-solicitation provisions be reasonable in scope and duration, which we also find to be a necessary requirement and therefore applicable to our analysis of Promise Number 9.",
+            "date": "2024-06-27",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-farris-reasonable-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-customer-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#permit-customer-nonsolicit",
+        "requirementGuidance": "Despite the softer name, a customer non-solicit restrains the worker's own trade and travels inside the statutory lane: named parishes or municipalities, a like business carried on there, and two years from termination. Review it with exactly the rigor the non-compete gets.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "la-c-cov",
+            "authorityType": "primary-law",
+            "title": "La. R.S. 23:921",
+            "citation": "La. R.S. 23:921(C).",
+            "url": "https://legis.la.gov/Legis/Law.aspx?d=84015",
+            "proposition": "La. R.S. 23:921(C) supports that customer solicitation restraints sit inside the employee exception's named-parish, like-business, two-year structure.",
+            "verbatimQuote": "Any person, including a corporation and the individual shareholders of such corporation, who is employed as an agent, servant, or employee may agree with his employer to refrain from carrying on or engaging in a business similar to that of the employer and/or from soliciting customers of the employer within a specified parish or parishes, municipality or municipalities, or parts thereof, so long as the employer carries on a like business therein, not to exceed a period of two years from termination of employment.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-c-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-dealing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#permit-non-dealing",
+        "requirementGuidance": "A bar on doing business with covered customers even when they call first restrains the worker's trade more than a solicitation ban does — and the statute names no lane for it. Expect it to be measured against the default rule of nullity; treat its inclusion as a deliberate risk decision, not boilerplate.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "la-a1-cov",
+            "authorityType": "primary-law",
+            "title": "La. R.S. 23:921",
+            "citation": "La. R.S. 23:921(A)(1).",
+            "url": "https://legis.la.gov/Legis/Law.aspx?d=84015",
+            "proposition": "La. R.S. 23:921(A)(1) supports the default rule that restraints on a lawful profession, trade, or business are null and void except as the statute provides.",
+            "verbatimQuote": "Every contract or agreement, or provision thereof, by which anyone is restrained from exercising a lawful profession, trade, or business of any kind, except as provided in this Section, shall be null and void.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-a1-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-compete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#permit-non-compete",
+        "requirementGuidance": "Null by default, saved only by the statute's own terms, and strictly construed against the employer. If the clause appears at all, run it straight through the Louisiana statutory gates at the end of this checklist — exception, employment timing, parishes, two years, occupation carve-outs — before evaluating anything else about it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "la-a1-cov",
+            "authorityType": "primary-law",
+            "title": "La. R.S. 23:921",
+            "citation": "La. R.S. 23:921(A)(1).",
+            "url": "https://legis.la.gov/Legis/Law.aspx?d=84015",
+            "proposition": "La. R.S. 23:921(A)(1) supports the default rule that restraints on a lawful profession, trade, or business are null and void except as the statute provides.",
+            "verbatimQuote": "Every contract or agreement, or provision thereof, by which anyone is restrained from exercising a lawful profession, trade, or business of any kind, except as provided in this Section, shall be null and void.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-a1-cov"
+          },
+          {
+            "sourceId": "la-swat24-cov",
+            "authorityType": "case-law",
+            "title": "SWAT 24 Shreveport Bossier, Inc. v. Bond",
+            "citation": "SWAT 24 Shreveport Bossier, Inc. v. Bond, 808 So. 2d 294 (La. 2001).",
+            "url": "https://www.courtlistener.com/opinion/1860745/swat-24-shreveport-bossier-inc-v-bond/",
+            "deepLink": "https://www.courtlistener.com/opinion/1860745/swat-24-shreveport-bossier-inc-v-bond/#:~:text=Because%20such%20covenants%20are%20in,the%20party%20seeking%20their%20enforcement.",
+            "proposition": "SWAT 24 supports that Louisiana non-compete covenants are strictly construed against the party seeking their enforcement.",
+            "verbatimQuote": "Because such covenants are in derogation of the common right, they must be strictly construed against the party seeking their enforcement.",
+            "date": "2001-06-29",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-swat24-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Named-competitor narrowing",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementGuidance": "When the employer can name its real competitors, bind those instead of leaning on an open-ended Competitive Business definition. In a strict-construction regime every concrete boundary the drafter sets is one less ambiguity a court will resolve against enforcement.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "la-swat24-cov",
+            "authorityType": "case-law",
+            "title": "SWAT 24 Shreveport Bossier, Inc. v. Bond",
+            "citation": "SWAT 24 Shreveport Bossier, Inc. v. Bond, 808 So. 2d 294 (La. 2001).",
+            "url": "https://www.courtlistener.com/opinion/1860745/swat-24-shreveport-bossier-inc-v-bond/",
+            "deepLink": "https://www.courtlistener.com/opinion/1860745/swat-24-shreveport-bossier-inc-v-bond/#:~:text=Because%20such%20covenants%20are%20in,the%20party%20seeking%20their%20enforcement.",
+            "proposition": "SWAT 24 supports that Louisiana non-compete covenants are strictly construed against the party seeking their enforcement.",
+            "verbatimQuote": "Because such covenants are in derogation of the common right, they must be strictly construed against the party seeking their enforcement.",
+            "date": "2001-06-29",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-swat24-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#permit-non-investment",
+        "requirementGuidance": "Rare and deliberate. Confirm the passive-holdings carve-out is intact and the clause shares the defined Restricted Period — and watch for investment language broad enough to operate as a restraint on the worker's profession, which is the conduct the statute voids.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#require-non-disparagement",
+        "requirementGuidance": "Fine to include with a stated duration; the audit is in the carve-outs. Truthful testimony, statements to government agencies, and protected workplace speech must sit outside the clause — the Board treats overbroad non-disparagement as unlawful no matter which state's law governs the covenant.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mclaren-macomb-nondisparagement",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-mclaren-macomb-nondisparagement"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-physician-specific-rights",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Physician rights and notices",
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#address-physician-specific-rights",
+        "requirementGuidance": "The dedicated clause should state the Louisiana physician rules accurately: for contracts effective on or after January 1, 2025, the restraint runs from the effective date of the initial contract — a burn-off — and tops out at three years for a primary care physician and five years for any other physician. A clause copying the ordinary two-years-from-termination model gets both the clock and the cap wrong at once; the detailed math lives in the Louisiana statutory gates at the end of this checklist.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "la-m-physician",
+            "authorityType": "primary-law",
+            "title": "La. R.S. 23:921",
+            "citation": "La. R.S. 23:921(M)(1).",
+            "url": "https://legis.la.gov/Legis/Law.aspx?d=84015",
+            "proposition": "La. R.S. 23:921(M) supports the three-year cap, measured from the initial contract's effective date, on restraints against a primary care physician.",
+            "verbatimQuote": "Any provision in a contract or agreement which restrains a primary care physician from practicing medicine shall not exceed three years from the effective date of the initial contract or agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-m-physician"
+          },
+          {
+            "sourceId": "la-n-physician",
+            "authorityType": "primary-law",
+            "title": "La. R.S. 23:921",
+            "citation": "La. R.S. 23:921(N)(1).",
+            "url": "https://legis.la.gov/Legis/Law.aspx?d=84015",
+            "proposition": "La. R.S. 23:921(N) supports the five-year cap, measured from the initial contract's effective date, on restraints against physicians other than primary care physicians.",
+            "verbatimQuote": "For any physician other than a primary care physician as defined in Subsection M of this Section, any provision in a contract or agreement which restrains the physician from practicing medicine shall not exceed five years from the effective date of the initial contract or agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-n-physician"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "The worker's representation that no earlier agreement blocks the new role. On intake the same analysis runs in reverse: a covenant the worker signed elsewhere may be void as applied to a Louisiana employee — territory, duration, or forum clause — and the representation surfaces that question before the first customer call instead of after it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#address-notice-to-future-employers",
+        "requirementGuidance": "A genuine drafting choice, with the usual tortious-interference sensitivity sharpened here: warning a new employer off the worker based on a covenant that is null under the statute asserts rights the employer never had. If the clause appears, condition any notice on a covenant that actually fits a statutory exception.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-tolling-during-breach",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-tolling-during-breach",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restriction extended during a breach",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#address-tolling-during-breach",
+        "requirementGuidance": "The agreement should say whether the clock pauses during a breach — but in Louisiana flag any extension mechanism as a likely dead letter. The ceiling is two years measured from termination, fixed by statute; a covenant that violates the statute is not reformed into compliance; and no Louisiana statute or appellate decision blesses adding time back for breach or litigation. The safest reading is that an extension clause fails to the extent it carries the restraint past the ceiling.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "la-c-tolling",
+            "authorityType": "primary-law",
+            "title": "La. R.S. 23:921",
+            "citation": "La. R.S. 23:921(C).",
+            "url": "https://legis.la.gov/Legis/Law.aspx?d=84015",
+            "proposition": "La. R.S. 23:921(C) supports that the two-year ceiling runs from termination of employment, a fixed statutory cap a tolling clause cannot extend.",
+            "verbatimQuote": "within a specified parish or parishes, municipality or municipalities, or parts thereof, so long as the employer carries on a like business therein, not to exceed a period of two years from termination of employment.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-c-tolling"
+          },
+          {
+            "sourceId": "la-teamenv-tolling",
+            "authorityType": "case-law",
+            "title": "Team Environmental Services, Inc. v. Addison",
+            "citation": "Team Envtl. Servs., Inc. v. Addison, 2 F.3d 124 (5th Cir. 1993).",
+            "url": "https://www.courtlistener.com/opinion/5925/team-environmental-services-inc-v-addison/",
+            "deepLink": "https://www.courtlistener.com/opinion/5925/team-environmental-services-inc-v-addison/#:~:text=Finding%20that%20the%20agreement%20violates,render%20judgment%20for%20the%20defendants.",
+            "proposition": "Team Environmental supports that a Louisiana covenant violating the controlling statute may not be reformed, which forecloses judicially stretching the period.",
+            "verbatimQuote": "Finding that the agreement violates the controlling Louisiana statute and may not be reformed, we vacate the injunction and render judgment for the defendants.",
+            "date": "1993-09-15",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-teamenv-tolling"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#require-injunctive-relief-availability",
+        "requirementGuidance": "Keep the irreparable-harm acknowledgement — and remember the injunction most likely to issue in Louisiana is the trade-secret one, available against actual or threatened misappropriation whether or not any covenant survives. The acknowledgement supports the covenant claim; the statute carries the backup.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "la-lutsa-remedies",
+            "authorityType": "primary-law",
+            "title": "La. R.S. 51:1432",
+            "citation": "La. R.S. 51:1432(A).",
+            "url": "https://legis.la.gov/Legis/Law.aspx?d=104049",
+            "proposition": "La. R.S. 51:1432 supports that an injunction against actual or threatened misappropriation is available under the Louisiana Uniform Trade Secrets Act independent of any covenant.",
+            "verbatimQuote": "Actual or threatened misappropriation may be enjoined.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-lutsa-remedies"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-attorneys-fees-and-costs",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Attorney fees and costs",
+        "sectionId": "remedies",
+        "itemNumber": "13.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#address-attorneys-fees-and-costs",
+        "requirementGuidance": "A commercial choice — the default American Rule applies if the agreement is silent. If fee-shifting appears, check that it is mutual and prevailing-party based; a one-way employer clause bolted onto a covenant this fragile mostly documents overreach.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "draft-within-the-statute-rather-than-rely-on-severance",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.louisiana.draft-within-the-statute-rather-than-rely-on-severance",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No reliance on court narrowing",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#draft-within-the-statute-rather-than-rely-on-severance",
+        "requirementGuidance": "Read the severability clause as triage, not a safety net. A court will not rewrite a defective Louisiana covenant into compliance — at most, under a severability clause, it strikes the offending portion and enforces terms that already comply on their own. Drafting broad and counting on narrowing is how covenants end up entirely null here; each element should be compliant as written, with severance preserving the rest if one element still fails.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "la-teamenv-sev",
+            "authorityType": "case-law",
+            "title": "Team Environmental Services, Inc. v. Addison",
+            "citation": "Team Envtl. Servs., Inc. v. Addison, 2 F.3d 124 (5th Cir. 1993).",
+            "url": "https://www.courtlistener.com/opinion/5925/team-environmental-services-inc-v-addison/",
+            "deepLink": "https://www.courtlistener.com/opinion/5925/team-environmental-services-inc-v-addison/#:~:text=Finding%20that%20the%20agreement%20violates,render%20judgment%20for%20the%20defendants.",
+            "proposition": "Team Environmental supports that a Louisiana non-compete violating the controlling statute may not be reformed by a court.",
+            "verbatimQuote": "Finding that the agreement violates the controlling Louisiana statute and may not be reformed, we vacate the injunction and render judgment for the defendants.",
+            "date": "1993-09-15",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-teamenv-sev"
+          },
+          {
+            "sourceId": "la-brock-sev",
+            "authorityType": "case-law",
+            "title": "Brock Services, L.L.C. v. Rogillio",
+            "citation": "Brock Servs., L.L.C. v. Rogillio, 936 F.3d 290 (5th Cir. 2019).",
+            "url": "https://www.courtlistener.com/opinion/4656603/brock-services-llc-v-richard-rogillio/",
+            "deepLink": "https://www.courtlistener.com/opinion/4656603/brock-services-llc-v-richard-rogillio/#:~:text=Restrictive%20covenants%20are%20unfavored%20in,are%20narrowly%20and%20strictly%20construed.",
+            "proposition": "Brock Services supports that Louisiana restrictive covenants are disfavored and strictly construed, with courts enforcing only terms that comply with the statute.",
+            "verbatimQuote": "Restrictive covenants are unfavored in Louisiana and are narrowly and strictly construed.",
+            "date": "2019-08-27",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-brock-sev"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#address-survival-per-covenant",
+        "requirementGuidance": "Per-covenant survival keeps each clock independently checkable: perpetual for trade secrets, finite for ordinary confidentiality, never past two years from termination for the statutory covenants, and burn-off-based for physicians. A bundled survival clause is where an over-long duration hides from review.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-assignment-and-successors",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assignment and successors",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#address-assignment-and-successors",
+        "requirementGuidance": "Confirm employer-side assignability to successors and that the worker cannot assign. Whoever ends up holding the covenant inherits it exactly as the statute limits it — the named parishes, the two-year ceiling, the occupation carve-outs — so assignment relocates the covenant without ever expanding it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "keep-louisiana-law-and-forum-absent-post-dispute-ratification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.louisiana.keep-louisiana-law-and-forum-absent-post-dispute-ratification",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Louisiana law and forum",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#keep-louisiana-law-and-forum-absent-post-dispute-ratification",
+        "requirementGuidance": "For a Louisiana employee, the agreement must not lean on another state's law or an out-of-state forum: the statute makes both clause types in an employment contract null and void unless the employee expressly, knowingly, and voluntarily ratifies them after the incident giving rise to the dispute — a ratification that almost never happens in practice. The clause should still state governing law, venue, and process; Louisiana law in a Louisiana forum is the selection that operates as written, and a foreign clause signals a form that was never localized.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "la-a2-gov",
+            "authorityType": "primary-law",
+            "title": "La. R.S. 23:921",
+            "citation": "La. R.S. 23:921(A)(2).",
+            "url": "https://legis.la.gov/Legis/Law.aspx?d=84015",
+            "proposition": "La. R.S. 23:921(A)(2) supports that choice-of-forum and choice-of-law clauses in a Louisiana employee's contract are null and void unless ratified by the employee after the incident giving rise to the action.",
+            "verbatimQuote": "shall be null and void except where the choice of forum clause or choice of law clause is expressly, knowingly, and voluntarily agreed to and ratified by the employee after the occurrence of the incident which is the subject of the civil or administrative action.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-a2-gov"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Standard boilerplate with one Louisiana wrinkle worth checking: amendment mechanics should preserve the agreement's effective-date discipline, because enforceability keys to whether employment existed when the covenant took effect and which statutory regime — the physician caps, the intern and apprentice ban — was in force on that date.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "gate-employee-covenant-on-statutory-exception",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.louisiana.gate-employee-covenant-on-statutory-exception",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covenant fits a statutory exception",
+        "sectionId": "louisiana-statutory-gates",
+        "itemNumber": "19.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#gate-employee-covenant-on-statutory-exception",
+        "requirementGuidance": "Start here whenever a non-compete or customer non-solicit appears: the default rule voids every restraint on a lawful profession, trade, or business, and only the exceptions written into the statute save a covenant. Identify the exception the clause relies on — the employee lane, the sale of goodwill, or another listed track — and hold the drafting to its exact text, because the covenant is strictly construed against the employer and a missed element means nullity, not a closer look at reasonableness.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "la-a1-gate",
+            "authorityType": "primary-law",
+            "title": "La. R.S. 23:921",
+            "citation": "La. R.S. 23:921(A)(1).",
+            "url": "https://legis.la.gov/Legis/Law.aspx?d=84015",
+            "proposition": "La. R.S. 23:921(A)(1) supports the default rule of nullity that every Louisiana covenant must escape through a statutory exception.",
+            "verbatimQuote": "Every contract or agreement, or provision thereof, by which anyone is restrained from exercising a lawful profession, trade, or business of any kind, except as provided in this Section, shall be null and void.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-a1-gate"
+          },
+          {
+            "sourceId": "la-swat24-gate",
+            "authorityType": "case-law",
+            "title": "SWAT 24 Shreveport Bossier, Inc. v. Bond",
+            "citation": "SWAT 24 Shreveport Bossier, Inc. v. Bond, 808 So. 2d 294 (La. 2001).",
+            "url": "https://www.courtlistener.com/opinion/1860745/swat-24-shreveport-bossier-inc-v-bond/",
+            "deepLink": "https://www.courtlistener.com/opinion/1860745/swat-24-shreveport-bossier-inc-v-bond/#:~:text=Because%20such%20covenants%20are%20in,the%20party%20seeking%20their%20enforcement.",
+            "proposition": "SWAT 24 supports that covenants within the statutory exceptions are strictly construed against the party seeking enforcement.",
+            "verbatimQuote": "Because such covenants are in derogation of the common right, they must be strictly construed against the party seeking their enforcement.",
+            "date": "2001-06-29",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-swat24-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "ensure-employment-exists-on-covenant-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.louisiana.ensure-employment-exists-on-covenant-effective-date",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employment exists on the effective date",
+        "sectionId": "louisiana-statutory-gates",
+        "itemNumber": "19.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#ensure-employment-exists-on-covenant-effective-date",
+        "requirementGuidance": "Match the covenant's effective date against the worker's first day. A covenant signed by someone not yet employed is unenforceable; the recognized cure is an express effective date on or after the start of employment, so a candidate-stage signature without that date language is a defect no later drafting fixes.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "la-rouses-gate",
+            "authorityType": "case-law",
+            "title": "Rouses Enterprises, L.L.C. v. Clapp",
+            "citation": "Rouses Enters., L.L.C. v. Clapp, No. 21-30293 (5th Cir. Mar. 8, 2022).",
+            "url": "https://www.ca5.uscourts.gov/opinions/unpub/21/21-30293.0.pdf",
+            "proposition": "Rouses supports that a Louisiana non-compete signed before the employment relationship exists is unenforceable.",
+            "verbatimQuote": "Because Clapp was not employed by Rouses when he signed the agreement, it is unenforceable under Louisiana law.",
+            "date": "2022-03-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-rouses-gate"
+          },
+          {
+            "sourceId": "la-annison-gate",
+            "authorityType": "case-law",
+            "title": "Arthur J. Gallagher & Co. v. Annison",
+            "citation": "Arthur J. Gallagher & Co. v. Annison, 391 So. 3d 1089 (La. Ct. App. 2024).",
+            "url": "https://caselaw.findlaw.com/court/la-court-of-appeal/116265798.html",
+            "proposition": "Gallagher v. Annison supports that an effective date equal to the first day of employment cures a pre-start signature.",
+            "verbatimQuote": "But Annison and Cates expressly agreed with Gallagher that the effective date of their employment agreements was the date each commenced their respective employment.",
+            "date": "2024-06-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-annison-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "limit-physician-restraint-to-statutory-burn-off-caps",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.louisiana.limit-physician-restraint-to-statutory-burn-off-caps",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Physician burn-off caps",
+        "sectionId": "louisiana-statutory-gates",
+        "itemNumber": "19.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#limit-physician-restraint-to-statutory-burn-off-caps",
+        "requirementGuidance": "For physician contracts effective on or after January 1, 2025, check the clock and the cap together: the restraint runs from the effective date of the initial contract — a burn-off — and cannot exceed three years for a primary care physician or five years for any other physician. A physician who has already practiced past the burn-off window may be beyond restraint entirely, the opposite of the ordinary post-termination model.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "la-m-gate",
+            "authorityType": "primary-law",
+            "title": "La. R.S. 23:921",
+            "citation": "La. R.S. 23:921(M)(1).",
+            "url": "https://legis.la.gov/Legis/Law.aspx?d=84015",
+            "proposition": "La. R.S. 23:921(M) supports the three-year burn-off cap for primary care physicians, measured from the initial contract's effective date.",
+            "verbatimQuote": "Any provision in a contract or agreement which restrains a primary care physician from practicing medicine shall not exceed three years from the effective date of the initial contract or agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-m-gate"
+          },
+          {
+            "sourceId": "la-n-gate",
+            "authorityType": "primary-law",
+            "title": "La. R.S. 23:921",
+            "citation": "La. R.S. 23:921(N)(1).",
+            "url": "https://legis.la.gov/Legis/Law.aspx?d=84015",
+            "proposition": "La. R.S. 23:921(N) supports the five-year burn-off cap for physicians other than primary care physicians.",
+            "verbatimQuote": "For any physician other than a primary care physician as defined in Subsection M of this Section, any provision in a contract or agreement which restrains the physician from practicing medicine shall not exceed five years from the effective date of the initial contract or agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-n-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-non-competes-for-automobile-salesmen",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.louisiana.exclude-non-competes-for-automobile-salesmen",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No covenants for automobile salesmen",
+        "sectionId": "louisiana-statutory-gates",
+        "itemNumber": "19.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#exclude-non-competes-for-automobile-salesmen",
+        "requirementGuidance": "No agreement between an automobile salesman and his employer can restrain him from selling automobiles — a categorical bar written into the statute itself. If the worker sells cars, the analysis ends at the job description; no drafting inside the employee exception buys the covenant back.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "la-i-gate",
+            "authorityType": "primary-law",
+            "title": "La. R.S. 23:921",
+            "citation": "La. R.S. 23:921(I)(1).",
+            "url": "https://legis.la.gov/Legis/Law.aspx?d=84015",
+            "proposition": "La. R.S. 23:921(I) supports the categorical bar on restraining an automobile salesman from selling automobiles.",
+            "verbatimQuote": "There shall be no contract or agreement or provision entered into by an automobile salesman and his employer restraining him from selling automobiles.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-i-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-non-competes-for-interns-and-apprentices",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.louisiana.exclude-non-competes-for-interns-and-apprentices",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No covenants for interns and apprentices",
+        "sectionId": "louisiana-statutory-gates",
+        "itemNumber": "19.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#exclude-non-competes-for-interns-and-apprentices",
+        "requirementGuidance": "For agreements effective on or after August 1, 2026, an intern — paid or unpaid — or an apprentice cannot be restrained from engaging in a business or employment similar to the employer's. Check the worker's program status before anything else in the covenant: the ban is categorical, in the same shape as the automobile-salesman bar.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "la-act150-gate",
+            "authorityType": "primary-law",
+            "title": "La. Acts 2026, No. 150 (H.B. 315)",
+            "citation": "La. Acts 2026, No. 150 (enacting La. R.S. 23:921(P)), eff. Aug. 1, 2026.",
+            "url": "https://legis.la.gov/legis/ViewDocument.aspx?d=1475140",
+            "proposition": "La. Acts 2026, No. 150, enacting La. R.S. 23:921(P) effective August 1, 2026, supports the categorical ban on restraining an intern, whether paid or unpaid, or an apprentice.",
+            "verbatimQuote": "There shall be no contract or agreement or provision entered into by an intern, whether paid or unpaid, or apprentice and his employer restraining the intern or apprentice from engaging in a business or an employment similar to that of the employer.",
+            "date": "2026-06-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-act150-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "provide-real-estate-licensee-rescission-right",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.louisiana.provide-real-estate-licensee-rescission-right",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Rescission right for real estate licensees",
+        "sectionId": "louisiana-statutory-gates",
+        "itemNumber": "19.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#provide-real-estate-licensee-rescission-right",
+        "requirementGuidance": "A broker-licensee non-compete is unenforceable and an absolute nullity unless the licensee can rescind it until midnight of the third business day after execution or delivery, whichever is later. Confirm the rescission right is stated and that the window is computed from the later of the two dates — a covenant that satisfies every other element still fails for this occupation without it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "la-realestate-gate",
+            "authorityType": "primary-law",
+            "title": "La. R.S. 37:1448.1",
+            "citation": "La. R.S. 37:1448.1(A).",
+            "url": "https://legis.la.gov/Legis/Law.aspx?d=93285",
+            "proposition": "La. R.S. 37:1448.1 supports that a broker-licensee non-compete is an absolute nullity unless the licensee may rescind through midnight of the third business day after execution or delivery.",
+            "verbatimQuote": "shall be unenforceable and an absolute nullity unless the licensee shall have the right to rescind the non-compete agreement until midnight of the third business day following the execution of the non-compete agreement or the delivery of the agreement to the licensee, whichever is later.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-realestate-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-duration-limit-in-employee-anti-poaching-clause",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.louisiana.require-duration-limit-in-employee-anti-poaching-clause",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "End date on the anti-poaching clause",
+        "sectionId": "louisiana-statutory-gates",
+        "itemNumber": "19.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#require-duration-limit-in-employee-anti-poaching-clause",
+        "requirementGuidance": "The anti-poaching clause escapes the non-compete statute but not scrutiny: it must be reasonable in scope and duration, and a clause failed precisely because the agreement contained no durational language at all. Find the end date; if there is none, the clause has no defense to offer.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "la-farris-reasonable-gate",
+            "authorityType": "case-law",
+            "title": "Brown & Root Industrial Services, LLC v. Farris",
+            "citation": "Brown & Root Indus. Servs., LLC v. Farris, 392 So. 3d 424 (La. Ct. App. 2024).",
+            "url": "https://caselaw.findlaw.com/court/la-court-of-appeal/116318576.html",
+            "proposition": "Brown & Root v. Farris supports that an employee non-solicitation provision must be reasonable in scope and duration.",
+            "verbatimQuote": "Nevertheless, a review of the limited cases analyzing employee non-solicitation provisions reflects that courts have required that these non-solicitation provisions be reasonable in scope and duration, which we also find to be a necessary requirement and therefore applicable to our analysis of Promise Number 9.",
+            "date": "2024-06-27",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-farris-reasonable-gate"
+          },
+          {
+            "sourceId": "la-farris-no-duration-gate",
+            "authorityType": "case-law",
+            "title": "Brown & Root Industrial Services, LLC v. Farris",
+            "citation": "Brown & Root Indus. Servs., LLC v. Farris, 392 So. 3d 424 (La. Ct. App. 2024).",
+            "url": "https://caselaw.findlaw.com/court/la-court-of-appeal/116318576.html",
+            "proposition": "Brown & Root v. Farris supports that the employee non-solicitation clause failed because the agreement set no durational limit.",
+            "verbatimQuote": "In fact, the entire Agreement is devoid of any language, wording, or indication as to the duration of the terms of the contract.",
+            "date": "2024-06-27",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-farris-no-duration-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "confine-sale-of-business-covenant-to-named-parishes-and-two-years",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.louisiana.confine-sale-of-business-covenant-to-named-parishes-and-two-years",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Sale-of-business covenant limits",
+        "sectionId": "louisiana-statutory-gates",
+        "itemNumber": "19.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#confine-sale-of-business-covenant-to-named-parishes-and-two-years",
+        "requirementGuidance": "The goodwill-sale covenant runs on its own track with the same architecture: named parishes or municipalities where the buyer carries on the like business, and at most two years measured from the date of sale rather than from any employment event. Test both limits before relying on the sale exception — a multi-year covenant copied from a national acquisition form fails on its face.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "la-b-gate",
+            "authorityType": "primary-law",
+            "title": "La. R.S. 23:921",
+            "citation": "La. R.S. 23:921(B).",
+            "url": "https://legis.la.gov/Legis/Law.aspx?d=84015",
+            "proposition": "La. R.S. 23:921(B) supports that a sale-of-goodwill covenant is limited to named parishes where the buyer carries on a like business and to two years from the date of sale.",
+            "verbatimQuote": "Any person, including a corporation and the individual shareholders of such corporation, who sells the goodwill of a business may agree with the buyer that the seller or other interested party in the transaction, will refrain from carrying on or engaging in a business similar to the business being sold or from soliciting customers of the business being sold within a specified parish or parishes, or municipality or municipalities, or parts thereof, so long as the buyer, or any person deriving title to the goodwill from him, carries on a like business therein, not to exceed a period of two years from the date of sale.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/louisiana#src-la-b-gate"
+          }
+        ]
+      }
+    ]
+  }
+}

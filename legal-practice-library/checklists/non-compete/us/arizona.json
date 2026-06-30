@@ -1,0 +1,1422 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/arizona",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/arizona.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/arizona",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/arizona/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/arizona/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "arizona",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — Arizona",
+      "description": "A clause-by-clause reviewer checklist for Arizona employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the Valley Medical Specialists v. Farber reasonableness test and Arizona's strict trim-only blue pencil, which strikes overbroad terms but never rewrites them.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "Arizona",
+      "coverage": "Arizona (US)",
+      "lastReviewed": "2026-06-12",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 46,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "label": "Physician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "arizona-statutory-gates",
+        "label": "Arizona gates"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#identify-parties",
+        "requirementGuidance": "Confirm the named employer is the entity whose business interest the covenants claim to protect — Arizona measures every restraint against that specific interest. And identify what the employer actually is: if it is a television or radio station or network, the broadcast-employee ban in the Arizona gates section controls before anything else on this page.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#identify-effective-date",
+        "requirementGuidance": "Every covenant clock on this page runs from a defined start date, and Arizona courts evaluate the total effective duration for reasonableness. An undated agreement leaves each restricted period unanchored — and since no court here will repair an indeterminate term, the date needs to be on the page, not implied.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#identify-employee-title",
+        "requirementGuidance": "The role selects the rulebook. A physician's covenant is strictly construed for reasonableness under a heightened public-interest lens, and a broadcast employee cannot be required to sign a non-compete at all — so record the title and duties, then route the review to the matching item before weighing any terms.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "farber-strict-cover",
+            "authorityType": "case-law",
+            "title": "Valley Medical Specialists v. Farber",
+            "citation": "Valley Medical Specialists v. Farber, 194 Ariz. 363, 982 P.2d 1277 (1999).",
+            "url": "https://www.courtlistener.com/opinion/1253291/valley-medical-specialists-v-farber/",
+            "deepLink": "https://www.courtlistener.com/opinion/1253291/valley-medical-specialists-v-farber/#:~:text=In%20light%20of%20the%20great,be%20strictly%20construed%20for%20reasonableness.",
+            "proposition": "Farber supports routing physician agreements to heightened review: physician covenants are strictly construed for reasonableness because of the public policy interest involved.",
+            "verbatimQuote": "In light of the great public policy interest involved in covenants not to compete between physicians, each agreement will be strictly construed for reasonableness.",
+            "date": "1999-06-18",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-farber-strict-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#identify-governing-law",
+        "requirementGuidance": "Check that a governing state is stated — and treat a out-of-state selection in an Arizona-centered employment relationship as a red flag rather than a fix. A federal court applying Arizona conflicts principles has refused to let a foreign choice-of-law clause import a friendlier non-compete regime, because Arizona law does not approve of broad non-compete provisions.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "pathway-policy-cover",
+            "authorityType": "case-law",
+            "title": "Pathway Medical Technologies, Inc. v. Nelson",
+            "citation": "Pathway Medical Technologies, Inc. v. Nelson, No. CV11-0857-PHX-DGC, 2011 WL 4543928 (D. Ariz. Sept. 30, 2011).",
+            "url": "https://scholar.google.com/scholar_case?case=17995886739076358627",
+            "proposition": "Pathway supports flagging a foreign governing-law selection: Arizona does not approve of broad non-compete provisions, a fundamental policy a choice-of-law clause cannot be used to evade.",
+            "verbatimQuote": "Arizona law does not approve of broad non-compete provisions.",
+            "date": "2011-09-30",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-pathway-policy-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#define-confidential-information",
+        "requirementGuidance": "Test the definition for functional effect, not just clarity. Arizona treats a confidentiality covenant that sweeps broadly enough to bar competition in practice as a non-compete in disguise — an unlimited definition reaching non-secret information has been held unenforceable as the equivalent of a geographically unrestricted non-compete. Keep the defined class tied to genuinely confidential material with sensible limits.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "orca-defacto-defs",
+            "authorityType": "case-law",
+            "title": "Orca Communications Unlimited, LLC v. Noder",
+            "citation": "Orca Communications Unlimited, LLC v. Noder, 233 Ariz. 411 (Ct. App. 2013).",
+            "url": "https://www.courtlistener.com/opinion/6604207/orca-communications-unlimited-llc-v-noder/",
+            "deepLink": "https://www.courtlistener.com/opinion/6604207/orca-communications-unlimited-llc-v-noder/#:~:text=Thus%2C%20the%20trial%20court%20did,a%20geographically%20unrestricted%20non%2Dcompetition%20agreement.",
+            "proposition": "Orca supports scoping confidentiality and solicitation definitions tightly: an unlimited confidentiality covenant is unenforceable as the equivalent of a geographically unrestricted non-compete.",
+            "verbatimQuote": "Thus, the trial court did not err in finding that the confidentiality covenant is unenforceable as the equivalent of a geographically unrestricted non-competition agreement.",
+            "date": "2013-10-17",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-orca-defacto-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#define-trade-secrets",
+        "requirementGuidance": "Match the contractual definition to the statutory one: under the Arizona Uniform Trade Secrets Act, a trade secret derives independent economic value from secrecy and is the subject of reasonable secrecy efforts. A definition that tracks the statute lets the trade-secret obligations ride the strongest protectable interest Arizona law recognizes — and keeps the perpetual tier defensible.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "autsa-definition-defs",
+            "authorityType": "primary-law",
+            "title": "A.R.S. § 44-401",
+            "citation": "A.R.S. § 44-401(4).",
+            "url": "https://www.azleg.gov/ars/44/00401.htm",
+            "proposition": "A.R.S. § 44-401(4) supports defining trade secrets by independent economic value from secrecy plus reasonable secrecy efforts.",
+            "verbatimQuote": "\"Trade secret\" means information, including a formula, pattern, compilation, program, device, method, technique or process, that both: (a) Derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use. (b) Is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-autsa-definition-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-period",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#define-restricted-period",
+        "requirementGuidance": "One defined Restricted Period keeps every duration auditable against the reasonableness test: a restraint greater than necessary to protect the legitimate interest will not be enforced, and duration is one of the dimensions measured. Since an Arizona court strikes rather than shortens, the period should be set to what the interest actually requires — not to an opening negotiating position.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "farber-reasonableness-defs",
+            "authorityType": "case-law",
+            "title": "Valley Medical Specialists v. Farber",
+            "citation": "Valley Medical Specialists v. Farber, 194 Ariz. 363, 982 P.2d 1277 (1999).",
+            "url": "https://www.courtlistener.com/opinion/1253291/valley-medical-specialists-v-farber/",
+            "deepLink": "https://www.courtlistener.com/opinion/1253291/valley-medical-specialists-v-farber/#:~:text=A%20restriction%20is%20unreasonable%20and,likely%20injury%20to%20the%20public.",
+            "proposition": "Farber supports measuring each restraint dimension, including duration, against necessity: a restriction greater than necessary to protect the legitimate interest will not be enforced.",
+            "verbatimQuote": "A restriction is unreasonable and thus will not be enforced: (1) if the restraint is greater than necessary to protect the employer's legitimate interest; or (2) if that interest is outweighed by the hardship to the employee and the likely injury to the public.",
+            "date": "1999-06-18",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-farber-reasonableness-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-territory",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-territory",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted territory",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#define-restricted-territory",
+        "requirementGuidance": "Tie the geography to where the protected interest actually lives — the customers served, the market worked. Arizona enforces restraints no broader than the employer's legitimately protectable interests, and a territory drawn to ambition rather than evidence invites the court to strike the clause rather than shrink the map.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "amex-reasonable-defs",
+            "authorityType": "case-law",
+            "title": "Amex Distributing Co. v. Mascari",
+            "citation": "Amex Distributing Co. v. Mascari, 150 Ariz. 510, 724 P.2d 596 (Ct. App. 1986).",
+            "url": "https://www.courtlistener.com/opinion/1211495/amex-distributing-co-inc-v-mascari/",
+            "deepLink": "https://www.courtlistener.com/opinion/1211495/amex-distributing-co-inc-v-mascari/#:~:text=Reasonable%20restraints%2Dthose%20no%20broader%20than,interests%2Dwill%20be%20enforced%20in%20Arizona.",
+            "proposition": "Amex supports tying territory and scope to the protectable interest: Arizona enforces restraints no broader than the employer's legitimately protectable interests.",
+            "verbatimQuote": "Reasonable restraints-those no broader than the employer's legitimately protectable interests-will be enforced in Arizona.",
+            "date": "1986-07-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-amex-reasonable-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered customers",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#define-covered-customers",
+        "requirementGuidance": "Bound the class to customers the employee actually served or learned about during a stated look-back window. Arizona requires a protectable interest in the specific relationships restrained — the leading anti-piracy case failed precisely because the employer had no protectable interest in the account at issue — so an entire-book-of-business definition overreaches the interest that justifies the clause.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hilb-account-defs",
+            "authorityType": "case-law",
+            "title": "Hilb, Rogal & Hamilton Co. of Arizona v. McKinney",
+            "citation": "Hilb, Rogal & Hamilton Co. of Arizona v. McKinney, 190 Ariz. 213, 946 P.2d 464 (Ct. App. 1997).",
+            "url": "https://www.courtlistener.com/opinion/1124526/hilb-rogal-hamilton-co-of-arizona-inc-v-mckinney/",
+            "deepLink": "https://www.courtlistener.com/opinion/1124526/hilb-rogal-hamilton-co-of-arizona-inc-v-mckinney/#:~:text=We%20hold%20that%20HRH%20had,in%20the%20Bell%20Ford%20account.",
+            "proposition": "Hilb supports bounding the covered-customer class to relationships in which the employer holds a protectable interest; the court refused enforcement where the employer had none in the account at issue.",
+            "verbatimQuote": "We hold that HRH had no protectable interest in the Bell Ford account.",
+            "date": "1997-12-24",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-hilb-account-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#define-covered-employees",
+        "requirementGuidance": "Keep the no-poach class to colleagues the departing employee worked with or supervised. Arizona runs anti-piracy covenants through the same no-broader-than-necessary test as non-competes, so a definition spanning the whole workforce has to answer for an interest the employer cannot show in most of it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hilb-same-test-defs",
+            "authorityType": "case-law",
+            "title": "Hilb, Rogal & Hamilton Co. of Arizona v. McKinney",
+            "citation": "Hilb, Rogal & Hamilton Co. of Arizona v. McKinney, 190 Ariz. 213, 946 P.2d 464 (Ct. App. 1997).",
+            "url": "https://www.courtlistener.com/opinion/1124526/hilb-rogal-hamilton-co-of-arizona-inc-v-mckinney/",
+            "deepLink": "https://www.courtlistener.com/opinion/1124526/hilb-rogal-hamilton-co-of-arizona-inc-v-mckinney/#:~:text=A%20restrictive%20covenant%20%2D%20whether,the%20employer's%20legitimate%20business%20interest.",
+            "proposition": "Hilb supports running anti-piracy and non-solicit definitions through the same no-broader-than-necessary test as non-competes.",
+            "verbatimQuote": "A restrictive covenant - whether a covenant not to compete or an anti-piracy agreement - is enforceable as long as it is no broader than necessary to protect the employer's legitimate business interest.",
+            "date": "1997-12-24",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-hilb-same-test-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#define-protected-interests",
+        "requirementGuidance": "Name the interests concretely — trade secrets, confidential information, customer goodwill — because the interest inquiry is the threshold of every Arizona covenant fight. The employer must show an interest worth protecting before reasonableness is even reached, and a recital that gestures at competition generally identifies nothing a court can weigh.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hilb-same-test-defs",
+            "authorityType": "case-law",
+            "title": "Hilb, Rogal & Hamilton Co. of Arizona v. McKinney",
+            "citation": "Hilb, Rogal & Hamilton Co. of Arizona v. McKinney, 190 Ariz. 213, 946 P.2d 464 (Ct. App. 1997).",
+            "url": "https://www.courtlistener.com/opinion/1124526/hilb-rogal-hamilton-co-of-arizona-inc-v-mckinney/",
+            "deepLink": "https://www.courtlistener.com/opinion/1124526/hilb-rogal-hamilton-co-of-arizona-inc-v-mckinney/#:~:text=A%20restrictive%20covenant%20%2D%20whether,the%20employer's%20legitimate%20business%20interest.",
+            "proposition": "Hilb supports running anti-piracy and non-solicit definitions through the same no-broader-than-necessary test as non-competes.",
+            "verbatimQuote": "A restrictive covenant - whether a covenant not to compete or an anti-piracy agreement - is enforceable as long as it is no broader than necessary to protect the employer's legitimate business interest.",
+            "date": "1997-12-24",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-hilb-same-test-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-competitive-business",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Competitive business",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#define-competitive-business",
+        "requirementGuidance": "Describe the genuinely competing activity in concrete terms tied to what the employee did. Arizona disfavors restraints that keep a former employee from pursuing a similar vocation, and a definition that expands to anything the employer might someday do reads as exactly that — with no court willing to rewrite it down to size.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "amex-disfavored-defs",
+            "authorityType": "case-law",
+            "title": "Amex Distributing Co. v. Mascari",
+            "citation": "Amex Distributing Co. v. Mascari, 150 Ariz. 510, 724 P.2d 596 (Ct. App. 1986).",
+            "url": "https://www.courtlistener.com/opinion/1211495/amex-distributing-co-inc-v-mascari/",
+            "deepLink": "https://www.courtlistener.com/opinion/1211495/amex-distributing-co-inc-v-mascari/#:~:text=Restrictive%20covenants%20which%20tend%20to,termination%20of%20employment%20are%20disfavored.",
+            "proposition": "Amex supports drafting the competitive-business definition narrowly: covenants that tend to prevent an employee from pursuing a similar vocation are disfavored.",
+            "verbatimQuote": "Restrictive covenants which tend to prevent an employee from pursuing a similar vocation after termination of employment are disfavored.",
+            "date": "1986-07-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-amex-disfavored-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where ownership or investment in competitors is restricted, look for a passive-holdings carve-out below a stated threshold. A clause that technically forbids index funds and ordinary public shares is gratuitous overbreadth — and in a state where overbreadth gets struck rather than trimmed, gratuitous overbreadth is a self-inflicted wound.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#define-passive-public-holdings",
+        "requirementGuidance": "A drafting convenience, not a requirement — many agreements inline the carve-out language instead. If the capitalized term appears, confirm its percentage matches the operative carve-out it supports.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.11",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#define-solicit",
+        "requirementGuidance": "Pin the term to identifiable conduct. Arizona judges a covenant by what it does, not what it is called, so a solicitation definition that quietly captures any future dealing with customers pushes the clause toward treatment as a non-compete — and into the reasonableness analysis that comes with it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "orca-defacto-defs",
+            "authorityType": "case-law",
+            "title": "Orca Communications Unlimited, LLC v. Noder",
+            "citation": "Orca Communications Unlimited, LLC v. Noder, 233 Ariz. 411 (Ct. App. 2013).",
+            "url": "https://www.courtlistener.com/opinion/6604207/orca-communications-unlimited-llc-v-noder/",
+            "deepLink": "https://www.courtlistener.com/opinion/6604207/orca-communications-unlimited-llc-v-noder/#:~:text=Thus%2C%20the%20trial%20court%20did,a%20geographically%20unrestricted%20non%2Dcompetition%20agreement.",
+            "proposition": "Orca supports scoping confidentiality and solicitation definitions tightly: an unlimited confidentiality covenant is unenforceable as the equivalent of a geographically unrestricted non-compete.",
+            "verbatimQuote": "Thus, the trial court did not err in finding that the confidentiality covenant is unenforceable as the equivalent of a geographically unrestricted non-competition agreement.",
+            "date": "2013-10-17",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-orca-defacto-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.12",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#define-termination-of-employment",
+        "requirementGuidance": "Verify the trigger covers resignation, dismissal, and expiration of a fixed term the same way. The restricted period runs from this event, and with no Arizona authority on pausing or extending the clock, the definition is the only thing standing between the parties and a dispute over when the covenant even started.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "acknowledge-timing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-timing",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "When the agreement was signed",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#acknowledge-timing",
+        "requirementGuidance": "Arizona is forgiving here: continued at-will employment is sufficient consideration for a covenant signed after employment has already begun, so a mid-employment agreement does not need a raise or bonus to be binding. The acknowledgement still earns its place by pinning down the signing date and what consideration moved — the facts a later enforcement fight starts with.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mattison-consideration-timing",
+            "authorityType": "case-law",
+            "title": "Mattison v. Johnston",
+            "citation": "Mattison v. Johnston, 152 Ariz. 109, 730 P.2d 286 (Ct. App. 1986).",
+            "url": "https://www.courtlistener.com/opinion/1118936/mattison-v-johnston/",
+            "deepLink": "https://www.courtlistener.com/opinion/1118936/mattison-v-johnston/#:~:text=Although%20there%20is%20authority%20to,be%20on%20an%20at%2Dwill%20basis.",
+            "proposition": "Mattison supports the rule that continued at-will employment is sufficient consideration for a covenant executed after employment has commenced.",
+            "verbatimQuote": "Although there is authority to the contrary, most jurisdictions which have considered the issue have found that continued employment is sufficient consideration to support a restrictive covenant executed after employment has commenced even where employment continues to be on an at-will basis.",
+            "date": "1986-09-16",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-mattison-consideration-timing"
+          },
+          {
+            "sourceId": "compass-consideration-timing",
+            "authorityType": "case-law",
+            "title": "Compass Bank v. Hartley",
+            "citation": "Compass Bank v. Hartley, 430 F. Supp. 2d 989 (D. Ariz. 2006).",
+            "url": "https://www.courtlistener.com/opinion/2317852/compass-bank-v-hartley/",
+            "deepLink": "https://www.courtlistener.com/opinion/2317852/compass-bank-v-hartley/#:~:text=In%20addition%2C%20the%20promise%20of,be%20on%20an%20at%2Dwill%20basis.",
+            "proposition": "Compass Bank, applying Arizona law, supports the same rule: the promise of continued employment validates a covenant executed after the relationship has commenced.",
+            "verbatimQuote": "In addition, the promise of continued employment validates a covenant executed after the employment relationship has commenced, even where it continues to be on an at-will basis.",
+            "date": "2006-04-28",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-compass-consideration-timing"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-opportunity-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Chance to consult a lawyer",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#acknowledge-opportunity-to-consult-counsel",
+        "requirementGuidance": "No Arizona statute demands it, but the reasonableness analysis weighs hardship to the employee — and an acknowledgement that the employee had a real chance to take the agreement to a lawyer is inexpensive evidence that the process was fair rather than rushed.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "The trade-secret obligation should run as long as secrecy does — that is how the law defines the right, and a fixed expiry quietly licenses use of information the statute still protects. Arizona pairs the federal definition with its own trade-secrets act, and contractual remedies survive alongside the statutory ones, so this tier of the clause carries real weight.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-definition-conf",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
+            "citation": "18 U.S.C. § 1839(3)(B) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1839",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
+            "proposition": "Federal law keys trade-secret status to continued secrecy, which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-dtsa-definition-conf"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#state-confidentiality-duration",
+        "requirementGuidance": "Give ordinary confidential information its own finite term. In Arizona this split is load-bearing: a confidentiality clause with no time limit reaching non-secret information has been struck as the equivalent of a geographically unrestricted non-compete, so the perpetual tier should hold trade secrets only, with everything else on a clock.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "orca-defacto-conf",
+            "authorityType": "case-law",
+            "title": "Orca Communications Unlimited, LLC v. Noder",
+            "citation": "Orca Communications Unlimited, LLC v. Noder, 233 Ariz. 411 (Ct. App. 2013).",
+            "url": "https://www.courtlistener.com/opinion/6604207/orca-communications-unlimited-llc-v-noder/",
+            "deepLink": "https://www.courtlistener.com/opinion/6604207/orca-communications-unlimited-llc-v-noder/#:~:text=Thus%2C%20the%20trial%20court%20did,a%20geographically%20unrestricted%20non%2Dcompetition%20agreement.",
+            "proposition": "Orca supports a finite term for non-trade-secret confidentiality: the unlimited covenant was unenforceable as the equivalent of a geographically unrestricted non-compete.",
+            "verbatimQuote": "Thus, the trial court did not err in finding that the confidentiality covenant is unenforceable as the equivalent of a geographically unrestricted non-competition agreement.",
+            "date": "2013-10-17",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-orca-defacto-conf"
+          }
+        ]
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#disclose-dtsa-notice",
+        "requirementGuidance": "Federal law, fully applicable in Arizona: omit the immunity notice and the employer forfeits exemplary damages and attorney fees in a later trade-secret suit against the worker. Because trade secrets are the sturdiest interest an Arizona covenant can protect, giving away the strongest remedies for them is an unforced error.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-notice-disclosures",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-dtsa-notice-disclosures"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Confidentiality and non-disparagement language has to leave wages, hours, and working conditions discussable. Federal labor law protects that speech in every state, and the Board has been striking overbroad clauses in employee agreements.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nlra-section7-disclosures",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-nlra-section7-disclosures"
+          },
+          {
+            "sourceId": "mclaren-disclosures",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-mclaren-disclosures"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#permit-compelled-disclosure",
+        "requirementGuidance": "Confirm the carve-out for disclosure required by law, court order, or a government investigation, with notice to the employer where lawful. A confidentiality clause cannot stop legally compelled disclosure anyway — and in Arizona an overreaching clause risks being read as a restraint on competition rather than a shield for secrets.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#require-property-return-and-certification",
+        "requirementGuidance": "Return-or-delete at separation, certified in writing. The certification is the cleanest contemporaneous evidence if protected material later surfaces at a competitor — and worth dating carefully, since an Arizona misappropriation claim must be brought within three years of when the misappropriation is or should have been discovered.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "autsa-sol-property",
+            "authorityType": "primary-law",
+            "title": "A.R.S. § 44-406",
+            "citation": "A.R.S. § 44-406.",
+            "url": "https://www.azleg.gov/ars/44/00406.htm",
+            "proposition": "A.R.S. § 44-406 supports timely documentation at separation: a misappropriation action must be brought within three years of actual or constructive discovery.",
+            "verbatimQuote": "An action for misappropriation must be brought within three years after the misappropriation is discovered or by the exercise of reasonable diligence should have been discovered.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-autsa-sol-property"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-employee-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#permit-employee-nonsolicit",
+        "requirementGuidance": "Optional, and usually the lowest-risk covenant in the family — but Arizona gives it no special pass. Anti-piracy covenants face the same no-broader-than-necessary test as non-competes, so keep the clause inside the Covered Employees class and the Restricted Period rather than letting it drift into a general hiring ban.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hilb-same-test-covenants",
+            "authorityType": "case-law",
+            "title": "Hilb, Rogal & Hamilton Co. of Arizona v. McKinney",
+            "citation": "Hilb, Rogal & Hamilton Co. of Arizona v. McKinney, 190 Ariz. 213, 946 P.2d 464 (Ct. App. 1997).",
+            "url": "https://www.courtlistener.com/opinion/1124526/hilb-rogal-hamilton-co-of-arizona-inc-v-mckinney/",
+            "deepLink": "https://www.courtlistener.com/opinion/1124526/hilb-rogal-hamilton-co-of-arizona-inc-v-mckinney/#:~:text=A%20restrictive%20covenant%20%2D%20whether,the%20employer's%20legitimate%20business%20interest.",
+            "proposition": "Hilb supports applying the no-broader-than-necessary test to non-solicit and anti-piracy covenants exactly as to non-competes.",
+            "verbatimQuote": "A restrictive covenant - whether a covenant not to compete or an anti-piracy agreement - is enforceable as long as it is no broader than necessary to protect the employer's legitimate business interest.",
+            "date": "1997-12-24",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-hilb-same-test-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-customer-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#permit-customer-nonsolicit",
+        "requirementGuidance": "Optional, and enforceable only as far as the employer's interest in the specific customer relationships reaches. The leading Arizona case refused enforcement because the employer had no protectable interest in the account it was trying to protect — so audit the customer class against actual contact and actual goodwill, not revenue ambitions.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hilb-same-test-covenants",
+            "authorityType": "case-law",
+            "title": "Hilb, Rogal & Hamilton Co. of Arizona v. McKinney",
+            "citation": "Hilb, Rogal & Hamilton Co. of Arizona v. McKinney, 190 Ariz. 213, 946 P.2d 464 (Ct. App. 1997).",
+            "url": "https://www.courtlistener.com/opinion/1124526/hilb-rogal-hamilton-co-of-arizona-inc-v-mckinney/",
+            "deepLink": "https://www.courtlistener.com/opinion/1124526/hilb-rogal-hamilton-co-of-arizona-inc-v-mckinney/#:~:text=A%20restrictive%20covenant%20%2D%20whether,the%20employer's%20legitimate%20business%20interest.",
+            "proposition": "Hilb supports applying the no-broader-than-necessary test to non-solicit and anti-piracy covenants exactly as to non-competes.",
+            "verbatimQuote": "A restrictive covenant - whether a covenant not to compete or an anti-piracy agreement - is enforceable as long as it is no broader than necessary to protect the employer's legitimate business interest.",
+            "date": "1997-12-24",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-hilb-same-test-covenants"
+          },
+          {
+            "sourceId": "hilb-account-covenants",
+            "authorityType": "case-law",
+            "title": "Hilb, Rogal & Hamilton Co. of Arizona v. McKinney",
+            "citation": "Hilb, Rogal & Hamilton Co. of Arizona v. McKinney, 190 Ariz. 213, 946 P.2d 464 (Ct. App. 1997).",
+            "url": "https://www.courtlistener.com/opinion/1124526/hilb-rogal-hamilton-co-of-arizona-inc-v-mckinney/",
+            "deepLink": "https://www.courtlistener.com/opinion/1124526/hilb-rogal-hamilton-co-of-arizona-inc-v-mckinney/#:~:text=We%20hold%20that%20HRH%20had,in%20the%20Bell%20Ford%20account.",
+            "proposition": "Hilb supports auditing the restrained customer relationships for a genuine protectable interest; the court found none in the account at issue.",
+            "verbatimQuote": "We hold that HRH had no protectable interest in the Bell Ford account.",
+            "date": "1997-12-24",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-hilb-account-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-dealing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#permit-non-dealing",
+        "requirementGuidance": "Non-dealing bars serving covered customers even when they call first — a restraint on receiving business rather than chasing it. Because Arizona classifies covenants by functional effect, a non-dealing clause sits closer to a non-compete than to a non-solicit, and it should expect the full reasonableness analysis that reclassification brings.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "orca-defacto-covenants",
+            "authorityType": "case-law",
+            "title": "Orca Communications Unlimited, LLC v. Noder",
+            "citation": "Orca Communications Unlimited, LLC v. Noder, 233 Ariz. 411 (Ct. App. 2013).",
+            "url": "https://www.courtlistener.com/opinion/6604207/orca-communications-unlimited-llc-v-noder/",
+            "deepLink": "https://www.courtlistener.com/opinion/6604207/orca-communications-unlimited-llc-v-noder/#:~:text=Thus%2C%20the%20trial%20court%20did,a%20geographically%20unrestricted%20non%2Dcompetition%20agreement.",
+            "proposition": "Orca supports the functional-effect classification that pushes broad restraints into non-compete analysis regardless of label.",
+            "verbatimQuote": "Thus, the trial court did not err in finding that the confidentiality covenant is unenforceable as the equivalent of a geographically unrestricted non-competition agreement.",
+            "date": "2013-10-17",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-orca-defacto-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-compete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#permit-non-compete",
+        "requirementGuidance": "If a non-compete appears, treat it as the most fragile clause on the page: Arizona disfavors restraints on pursuing a similar vocation, enforces them only when reasonable, and will not repair an overbroad one. Route the review through the Arizona gates section — protectable interest first, then duration, geography, and activity scope against that interest.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "amex-disfavored-covenants",
+            "authorityType": "case-law",
+            "title": "Amex Distributing Co. v. Mascari",
+            "citation": "Amex Distributing Co. v. Mascari, 150 Ariz. 510, 724 P.2d 596 (Ct. App. 1986).",
+            "url": "https://www.courtlistener.com/opinion/1211495/amex-distributing-co-inc-v-mascari/",
+            "deepLink": "https://www.courtlistener.com/opinion/1211495/amex-distributing-co-inc-v-mascari/#:~:text=Restrictive%20covenants%20which%20tend%20to,termination%20of%20employment%20are%20disfavored.",
+            "proposition": "Amex supports treating the non-compete as the most scrutinized covenant: restraints that keep an employee from pursuing a similar vocation are disfavored.",
+            "verbatimQuote": "Restrictive covenants which tend to prevent an employee from pursuing a similar vocation after termination of employment are disfavored.",
+            "date": "1986-07-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-amex-disfavored-covenants"
+          },
+          {
+            "sourceId": "farber-reasonableness-covenants",
+            "authorityType": "case-law",
+            "title": "Valley Medical Specialists v. Farber",
+            "citation": "Valley Medical Specialists v. Farber, 194 Ariz. 363, 982 P.2d 1277 (1999).",
+            "url": "https://www.courtlistener.com/opinion/1253291/valley-medical-specialists-v-farber/",
+            "deepLink": "https://www.courtlistener.com/opinion/1253291/valley-medical-specialists-v-farber/#:~:text=A%20restriction%20is%20unreasonable%20and,likely%20injury%20to%20the%20public.",
+            "proposition": "Farber supports the two-part unreasonableness rule a non-compete must survive: necessity to the legitimate interest, and a balance against employee hardship and public injury.",
+            "verbatimQuote": "A restriction is unreasonable and thus will not be enforced: (1) if the restraint is greater than necessary to protect the employer's legitimate interest; or (2) if that interest is outweighed by the hardship to the employee and the likely injury to the public.",
+            "date": "1999-06-18",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-farber-reasonableness-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Named-competitor narrowing",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementGuidance": "When the employer can name its real competitors, the covenant should bind those instead of leaning on the open-ended Competitive Business definition. The payoff in Arizona is concrete: a named list is strong evidence the restraint matches the interest, and since the court will not rewrite an overbroad clause into a narrow one, the narrowing has to be done at the drafting table.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "varsity-norewrite-covenants",
+            "authorityType": "case-law",
+            "title": "Varsity Gold, Inc. v. Porzio",
+            "citation": "Varsity Gold, Inc. v. Porzio, 202 Ariz. 355, 45 P.3d 352 (Ct. App. 2002).",
+            "url": "https://www.courtlistener.com/opinion/2638678/varsity-gold-inc-v-porzio/",
+            "deepLink": "https://www.courtlistener.com/opinion/2638678/varsity-gold-inc-v-porzio/#:~:text=In%20summary%2C%20we%20decide%20that,render%20it%20reasonable%20and%20enforceable.",
+            "proposition": "Varsity Gold supports narrowing at the drafting table: the trial court erred by rewriting the covenant to render it reasonable and enforceable.",
+            "verbatimQuote": "In summary, we decide that the trial court erred by rewriting the restrictive covenant to render it reasonable and enforceable.",
+            "date": "2002-05-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-varsity-norewrite-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#permit-non-investment",
+        "requirementGuidance": "Rare and deliberate. Confirm the passive-holdings carve-out is intact and the clause shares the defined Restricted Period — an investment restraint with no boundaries is one more candidate for functional reclassification as a restraint on competition.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#require-non-disparagement",
+        "requirementGuidance": "Standard to include with a stated term, but audit the carve-outs: truthful testimony, statements to government agencies, and protected workplace speech must sit outside the clause. Federal labor law polices overbroad versions in every state, and Arizona adds no statute of its own — the federal limits are the operative ones.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mclaren-nondisparagement",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-mclaren-nondisparagement"
+          }
+        ]
+      },
+      {
+        "requirementId": "subject-physician-covenants-to-farber-heightened-scrutiny",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.arizona.subject-physician-covenants-to-farber-heightened-scrutiny",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Physician covenants under heightened review",
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#subject-physician-covenants-to-farber-heightened-scrutiny",
+        "requirementGuidance": "The dedicated physician clause should state Arizona's judge-made rule plainly: a physician non-compete is not automatically void, but every one is strictly construed for reasonableness because of the public interest in patients choosing their doctor — and in the leading case that public interest outweighed the employer's protectable interest, so the covenant fell. Review any physician restraint at its narrowest defensible scope, and treat close calls as losses.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "farber-strict-physician",
+            "authorityType": "case-law",
+            "title": "Valley Medical Specialists v. Farber",
+            "citation": "Valley Medical Specialists v. Farber, 194 Ariz. 363, 982 P.2d 1277 (1999).",
+            "url": "https://www.courtlistener.com/opinion/1253291/valley-medical-specialists-v-farber/",
+            "deepLink": "https://www.courtlistener.com/opinion/1253291/valley-medical-specialists-v-farber/#:~:text=In%20light%20of%20the%20great,be%20strictly%20construed%20for%20reasonableness.",
+            "proposition": "Farber supports strict construction of physician covenants for reasonableness given the public policy interest involved.",
+            "verbatimQuote": "In light of the great public policy interest involved in covenants not to compete between physicians, each agreement will be strictly construed for reasonableness.",
+            "date": "1999-06-18",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-farber-strict-physician"
+          },
+          {
+            "sourceId": "farber-publicpolicy-physician",
+            "authorityType": "case-law",
+            "title": "Valley Medical Specialists v. Farber",
+            "citation": "Valley Medical Specialists v. Farber, 194 Ariz. 363, 982 P.2d 1277 (1999).",
+            "url": "https://www.courtlistener.com/opinion/1253291/valley-medical-specialists-v-farber/",
+            "deepLink": "https://www.courtlistener.com/opinion/1253291/valley-medical-specialists-v-farber/#:~:text=Public%20policy%20concerns%20in%20this,interests%20in%20enforcing%20the%20agreement.",
+            "proposition": "Farber supports treating close physician-covenant calls as losses: the public policy concerns outweighed the employer's protectable interests.",
+            "verbatimQuote": "Public policy concerns in this case outweigh Valley Medical's protectable interests in enforcing the agreement.",
+            "date": "1999-06-18",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-farber-publicpolicy-physician"
+          },
+          {
+            "sourceId": "phoenix-notvoid-physician",
+            "authorityType": "case-law",
+            "title": "Phoenix Orthopaedic Surgeons, Ltd. v. Peairs",
+            "citation": "Phoenix Orthopaedic Surgeons, Ltd. v. Peairs, 164 Ariz. 54, 790 P.2d 752 (Ct. App. 1989).",
+            "url": "https://www.courtlistener.com/opinion/1425574/phoenix-orthopaedic-surgeons-ltd-v-peairs/",
+            "deepLink": "https://www.courtlistener.com/opinion/1425574/phoenix-orthopaedic-surgeons-ltd-v-peairs/#:~:text=We%20reject%2C%20however%2C%20Dr.%20Peairs',unenforceable%20as%20against%20public%20policy.",
+            "proposition": "Phoenix Orthopaedic supports the other half of the rule: physician covenants are not all unenforceable as against public policy, so a reasonable one can survive.",
+            "verbatimQuote": "We reject, however, Dr. Peairs' suggestion that all such covenants not to compete are unenforceable as against public policy.",
+            "date": "1989-11-27",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-phoenix-notvoid-physician"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "The worker's representation that no earlier agreement or order blocks the new role. It surfaces an incoming covenant before the first customer call — and gives the new employer the chance to evaluate whether that covenant would even survive an Arizona reasonableness review before relying on the hire.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#address-notice-to-future-employers",
+        "requirementGuidance": "A genuine drafting choice. If the clause appears, remember the posture it operates in: Arizona disfavors these restraints, and a warning letter built on a covenant that later fails the reasonableness test buys tortious-interference exposure without buying enforcement. Condition any third-party notice on a covenant the employer would actually defend in court.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "amex-disfavored-notice",
+            "authorityType": "case-law",
+            "title": "Amex Distributing Co. v. Mascari",
+            "citation": "Amex Distributing Co. v. Mascari, 150 Ariz. 510, 724 P.2d 596 (Ct. App. 1986).",
+            "url": "https://www.courtlistener.com/opinion/1211495/amex-distributing-co-inc-v-mascari/",
+            "deepLink": "https://www.courtlistener.com/opinion/1211495/amex-distributing-co-inc-v-mascari/#:~:text=Restrictive%20covenants%20which%20tend%20to,termination%20of%20employment%20are%20disfavored.",
+            "proposition": "Amex supports caution before asserting a covenant to third parties: restraints that keep an employee from pursuing a similar vocation are disfavored in Arizona.",
+            "verbatimQuote": "Restrictive covenants which tend to prevent an employee from pursuing a similar vocation after termination of employment are disfavored.",
+            "date": "1986-07-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-amex-disfavored-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-tolling-during-breach",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-tolling-during-breach",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restriction extended during a breach",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#address-tolling-during-breach",
+        "requirementGuidance": "The agreement should say whether the clock pauses during a breach — but flag any extension mechanism as an open Arizona question. No appellate decision here has decided whether a covenant period tolls during breach or litigation, so an extension clause is best read as part of the covenant's total duration, which is measured for reasonableness. And because the court will strike rather than shorten, an extension that pushes the effective period past reasonable risks taking the whole covenant with it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "farber-reasonableness-tolling",
+            "authorityType": "case-law",
+            "title": "Valley Medical Specialists v. Farber",
+            "citation": "Valley Medical Specialists v. Farber, 194 Ariz. 363, 982 P.2d 1277 (1999).",
+            "url": "https://www.courtlistener.com/opinion/1253291/valley-medical-specialists-v-farber/",
+            "deepLink": "https://www.courtlistener.com/opinion/1253291/valley-medical-specialists-v-farber/#:~:text=A%20restriction%20is%20unreasonable%20and,likely%20injury%20to%20the%20public.",
+            "proposition": "Farber supports measuring the covenant's total effective duration, extension included, against the reasonableness standard.",
+            "verbatimQuote": "A restriction is unreasonable and thus will not be enforced: (1) if the restraint is greater than necessary to protect the employer's legitimate interest; or (2) if that interest is outweighed by the hardship to the employee and the likely injury to the public.",
+            "date": "1999-06-18",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-farber-reasonableness-tolling"
+          },
+          {
+            "sourceId": "varsity-bluepencil-tolling",
+            "authorityType": "case-law",
+            "title": "Varsity Gold, Inc. v. Porzio",
+            "citation": "Varsity Gold, Inc. v. Porzio, 202 Ariz. 355, 45 P.3d 352 (Ct. App. 2002).",
+            "url": "https://www.courtlistener.com/opinion/2638678/varsity-gold-inc-v-porzio/",
+            "deepLink": "https://www.courtlistener.com/opinion/2638678/varsity-gold-inc-v-porzio/#:~:text=The%20court%20explained%20that%2C%20while,add%20provisions%20or%20rewrite%20them.",
+            "proposition": "Varsity Gold supports the risk framing for extension clauses: courts may eliminate grammatically severable unreasonable terms but cannot add provisions or rewrite them.",
+            "verbatimQuote": "The court explained that, while Arizona courts may \"blue pencil\" a restrictive covenant by eliminating grammatically sever-able, unreasonable terms, the court cannot add provisions or rewrite them.",
+            "date": "2002-05-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-varsity-bluepencil-tolling"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#require-injunctive-relief-availability",
+        "requirementGuidance": "Look for the acknowledgement that breach may cause irreparable harm and that an injunction is appropriate relief — then remember what it cannot do: no recital makes an unreasonable Arizona covenant enforceable, and a restraint greater than necessary to protect the legitimate interest will not be enforced at all, injunction clause or not.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "farber-reasonableness-remedies",
+            "authorityType": "case-law",
+            "title": "Valley Medical Specialists v. Farber",
+            "citation": "Valley Medical Specialists v. Farber, 194 Ariz. 363, 982 P.2d 1277 (1999).",
+            "url": "https://www.courtlistener.com/opinion/1253291/valley-medical-specialists-v-farber/",
+            "deepLink": "https://www.courtlistener.com/opinion/1253291/valley-medical-specialists-v-farber/#:~:text=A%20restriction%20is%20unreasonable%20and,likely%20injury%20to%20the%20public.",
+            "proposition": "Farber supports the limit on remedy recitals: an unreasonable restriction will not be enforced regardless of contractual acknowledgements.",
+            "verbatimQuote": "A restriction is unreasonable and thus will not be enforced: (1) if the restraint is greater than necessary to protect the employer's legitimate interest; or (2) if that interest is outweighed by the hardship to the employee and the likely injury to the public.",
+            "date": "1999-06-18",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-farber-reasonableness-remedies"
+          }
+        ]
+      },
+      {
+        "requirementId": "account-for-two-way-statutory-fee-shifting",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.arizona.account-for-two-way-statutory-fee-shifting",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Attorney fees run both ways",
+        "sectionId": "remedies",
+        "itemNumber": "13.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#account-for-two-way-statutory-fee-shifting",
+        "requirementGuidance": "A fee clause remains a commercial choice, but in Arizona silence does not mean each side pays its own way: in any contested action arising out of a contract, the court may award reasonable attorney fees to the successful party, whatever the agreement says. Read any fee clause against that backdrop — the exposure is mutual and discretionary by statute, and an employer that loses an overreaching enforcement action can be ordered to pay the former employee's fees.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ars-fees-remedies",
+            "authorityType": "primary-law",
+            "title": "A.R.S. § 12-341.01",
+            "citation": "A.R.S. § 12-341.01(A).",
+            "url": "https://www.azleg.gov/ars/12/00341-01.htm",
+            "proposition": "A.R.S. § 12-341.01(A) supports two-way discretionary fee exposure in covenant litigation: the court may award the successful party reasonable attorney fees in any contested contract action.",
+            "verbatimQuote": "In any contested action arising out of a contract, express or implied, the court may award the successful party reasonable attorney fees.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-ars-fees-remedies"
+          }
+        ]
+      },
+      {
+        "requirementId": "draft-grammatically-severable-covenants-for-the-strict-blue-pencil",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.arizona.draft-grammatically-severable-covenants-for-the-strict-blue-pencil",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Severable drafting, no court rescue",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#draft-grammatically-severable-covenants-for-the-strict-blue-pencil",
+        "requirementGuidance": "Treat any reformation or savings clause as decoration: an Arizona court may strike a grammatically severable unreasonable term, but it cannot add language or rewrite the covenant to make it reasonable — an appellate court has reversed a trial judge for doing exactly that. And where the unreasonable portion is not severable, the whole restraint falls. So review structure as hard as breadth: each duration, territory, and activity restriction should stand as its own grammatically severable unit a court could strike individually, with an ordinary severability clause tying the package together.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "varsity-bluepencil-sev",
+            "authorityType": "case-law",
+            "title": "Varsity Gold, Inc. v. Porzio",
+            "citation": "Varsity Gold, Inc. v. Porzio, 202 Ariz. 355, 45 P.3d 352 (Ct. App. 2002).",
+            "url": "https://www.courtlistener.com/opinion/2638678/varsity-gold-inc-v-porzio/",
+            "deepLink": "https://www.courtlistener.com/opinion/2638678/varsity-gold-inc-v-porzio/#:~:text=The%20court%20explained%20that%2C%20while,add%20provisions%20or%20rewrite%20them.",
+            "proposition": "Varsity Gold supports the trim-only rule: courts may eliminate grammatically severable unreasonable terms but cannot add provisions or rewrite a covenant.",
+            "verbatimQuote": "The court explained that, while Arizona courts may \"blue pencil\" a restrictive covenant by eliminating grammatically sever-able, unreasonable terms, the court cannot add provisions or rewrite them.",
+            "date": "2002-05-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-varsity-bluepencil-sev"
+          },
+          {
+            "sourceId": "varsity-norewrite-sev",
+            "authorityType": "case-law",
+            "title": "Varsity Gold, Inc. v. Porzio",
+            "citation": "Varsity Gold, Inc. v. Porzio, 202 Ariz. 355, 45 P.3d 352 (Ct. App. 2002).",
+            "url": "https://www.courtlistener.com/opinion/2638678/varsity-gold-inc-v-porzio/",
+            "deepLink": "https://www.courtlistener.com/opinion/2638678/varsity-gold-inc-v-porzio/#:~:text=In%20summary%2C%20we%20decide%20that,render%20it%20reasonable%20and%20enforceable.",
+            "proposition": "Varsity Gold supports the reversal rule: rewriting a restrictive covenant to render it reasonable and enforceable is error.",
+            "verbatimQuote": "In summary, we decide that the trial court erred by rewriting the restrictive covenant to render it reasonable and enforceable.",
+            "date": "2002-05-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-varsity-norewrite-sev"
+          },
+          {
+            "sourceId": "bryceland-severable-sev",
+            "authorityType": "case-law",
+            "title": "Bryceland v. Northey",
+            "citation": "Bryceland v. Northey, 160 Ariz. 213, 772 P.2d 36 (Ct. App. 1989).",
+            "url": "https://www.courtlistener.com/opinion/1414072/bryceland-v-northey/",
+            "deepLink": "https://www.courtlistener.com/opinion/1414072/bryceland-v-northey/#:~:text=Neither%20the%20contract%20itself%20nor,of%20the%20contract%20was%20severable.",
+            "proposition": "Bryceland supports the whole-covenant consequence: where the unreasonable portion is not severable, the restraint is not enforced.",
+            "verbatimQuote": "Neither the contract itself nor other evidence in the record indicates that this unreasonable portion of the contract was severable.",
+            "date": "1989-04-04",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-bryceland-severable-sev"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#address-survival-per-covenant",
+        "requirementGuidance": "Per-covenant survival keeps each clock independently checkable — perpetual for trade secrets, finite elsewhere. In Arizona the discipline doubles as severability insurance: covenants that survive on their own terms, in their own clauses, are exactly the grammatically separable units a court can preserve when it strikes a defective neighbor.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-assignment-and-successors",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assignment and successors",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#address-assignment-and-successors",
+        "requirementGuidance": "Confirm employer-side assignability to successors and that the worker cannot assign. Whoever ends up enforcing inherits the Arizona analysis unchanged — the assignee must still show its own legitimate interest behind the restraint, and an assignment clause moves the covenant without strengthening it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "avoid-importing-foreign-law-to-escape-arizona-policy",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.arizona.avoid-importing-foreign-law-to-escape-arizona-policy",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No borrowed law to loosen Arizona limits",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#avoid-importing-foreign-law-to-escape-arizona-policy",
+        "requirementGuidance": "Flag a out-of-state choice-of-law clause in an Arizona-centered employment relationship as a strategy, not a setting — and one that has failed. A federal court refused to apply a foreign clause that would have imported a friendlier regime, including judicial rewriting of overbroad covenants, holding the selection likely unenforceable under the Restatement because Arizona law does not approve of broad non-compete provisions. The clause should still state governing law, venue, and process; just confirm the forum-selection benefit stays with the parties who signed, because the state supreme court has declined to let closely related non-signatories enforce it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "pathway-policy-gov",
+            "authorityType": "case-law",
+            "title": "Pathway Medical Technologies, Inc. v. Nelson",
+            "citation": "Pathway Medical Technologies, Inc. v. Nelson, No. CV11-0857-PHX-DGC, 2011 WL 4543928 (D. Ariz. Sept. 30, 2011).",
+            "url": "https://scholar.google.com/scholar_case?case=17995886739076358627",
+            "proposition": "Pathway supports treating a foreign choice-of-law clause as an attempt to evade a fundamental Arizona policy disfavoring broad non-competes.",
+            "verbatimQuote": "Arizona law does not approve of broad non-compete provisions.",
+            "date": "2011-09-30",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-pathway-policy-gov"
+          },
+          {
+            "sourceId": "pathway-187-gov",
+            "authorityType": "case-law",
+            "title": "Pathway Medical Technologies, Inc. v. Nelson",
+            "citation": "Pathway Medical Technologies, Inc. v. Nelson, No. CV11-0857-PHX-DGC, 2011 WL 4543928 (D. Ariz. Sept. 30, 2011).",
+            "url": "https://scholar.google.com/scholar_case?case=17995886739076358627",
+            "proposition": "Pathway supports the conflicts mechanics: the foreign choice-of-law clause was likely unenforceable under Restatement (Second) of Conflict of Laws § 187(2)(b).",
+            "verbatimQuote": "the Agreement's choice of Washington law likely is not enforceable under Restatement section 187(2)(b).",
+            "date": "2011-09-30",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-pathway-187-gov"
+          },
+          {
+            "sourceId": "henderson-forum-gov",
+            "authorityType": "case-law",
+            "title": "Henderson v. Moskowitz",
+            "citation": "Henderson v. Moskowitz (Ariz. Nov. 28, 2025).",
+            "url": "https://www.courtlistener.com/opinion/10743771/henderson-v-hon-moskowitzsullivan/",
+            "deepLink": "https://www.courtlistener.com/opinion/10743771/henderson-v-hon-moskowitzsullivan/#:~:text=We%20decline%20to%20adopt%20that,under%20a%20contract%20are%20ample.",
+            "proposition": "Henderson supports limiting the forum-selection clause to its signatories: the Arizona Supreme Court declined to adopt the closely-related-party doctrine, holding the provisions of the contract control.",
+            "verbatimQuote": "We decline to adopt that doctrine with regard to forum selection clauses, holding that the provisions of the contract control and that other established doctrines providing non-signatories with benefits under a contract are ample.",
+            "date": "2025-11-28",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-henderson-forum-gov"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Standard boilerplate, with one Arizona convenience worth noting: a covenant refreshed by amendment mid-employment does not need fresh monetary consideration, since continued at-will employment is sufficient consideration for a covenant signed after employment has begun. The amendment mechanics just need to make clear which version of the covenant is the one in force.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mattison-amendments",
+            "authorityType": "case-law",
+            "title": "Mattison v. Johnston",
+            "citation": "Mattison v. Johnston, 152 Ariz. 109, 730 P.2d 286 (Ct. App. 1986).",
+            "url": "https://www.courtlistener.com/opinion/1118936/mattison-v-johnston/",
+            "deepLink": "https://www.courtlistener.com/opinion/1118936/mattison-v-johnston/#:~:text=Although%20there%20is%20authority%20to,be%20on%20an%20at%2Dwill%20basis.",
+            "proposition": "Mattison supports mid-employment amendments: continued employment is sufficient consideration for a covenant executed after employment has commenced.",
+            "verbatimQuote": "Although there is authority to the contrary, most jurisdictions which have considered the issue have found that continued employment is sufficient consideration to support a restrictive covenant executed after employment has commenced even where employment continues to be on an at-will basis.",
+            "date": "1986-09-16",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-mattison-amendments"
+          }
+        ]
+      },
+      {
+        "requirementId": "keep-covenants-no-broader-than-the-protectable-interest",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.arizona.keep-covenants-no-broader-than-the-protectable-interest",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protectable interest plus tailored scope",
+        "sectionId": "arizona-statutory-gates",
+        "itemNumber": "19.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#keep-covenants-no-broader-than-the-protectable-interest",
+        "requirementGuidance": "Run every restraint through the two-part test the enforcing employer will face: first an identifiable protectable interest — trade secrets, confidential information, customer goodwill — and then a scope no broader than that interest requires, with the employee's hardship and the public's interest on the other side of the scale. A covenant greater than necessary will not be enforced, and the interest inquiry is where weak covenants die first: the leading anti-piracy case failed because the employer had no protectable interest in the account it restrained.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "farber-reasonableness-gate",
+            "authorityType": "case-law",
+            "title": "Valley Medical Specialists v. Farber",
+            "citation": "Valley Medical Specialists v. Farber, 194 Ariz. 363, 982 P.2d 1277 (1999).",
+            "url": "https://www.courtlistener.com/opinion/1253291/valley-medical-specialists-v-farber/",
+            "deepLink": "https://www.courtlistener.com/opinion/1253291/valley-medical-specialists-v-farber/#:~:text=A%20restriction%20is%20unreasonable%20and,likely%20injury%20to%20the%20public.",
+            "proposition": "Farber supports the controlling two-part unreasonableness rule: a restraint greater than necessary, or outweighed by employee hardship and public injury, will not be enforced.",
+            "verbatimQuote": "A restriction is unreasonable and thus will not be enforced: (1) if the restraint is greater than necessary to protect the employer's legitimate interest; or (2) if that interest is outweighed by the hardship to the employee and the likely injury to the public.",
+            "date": "1999-06-18",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-farber-reasonableness-gate"
+          },
+          {
+            "sourceId": "amex-hardship-gate",
+            "authorityType": "case-law",
+            "title": "Amex Distributing Co. v. Mascari",
+            "citation": "Amex Distributing Co. v. Mascari, 150 Ariz. 510, 724 P.2d 596 (Ct. App. 1986).",
+            "url": "https://www.courtlistener.com/opinion/1211495/amex-distributing-co-inc-v-mascari/",
+            "deepLink": "https://www.courtlistener.com/opinion/1211495/amex-distributing-co-inc-v-mascari/#:~:text=Hardship%20to%20the%20employee%2C%20however%2C,be%20considered%20in%20determining%20reasonableness.",
+            "proposition": "Amex supports weighing the employee's hardship as a factor in the reasonableness determination.",
+            "verbatimQuote": "Hardship to the employee, however, is one of the factors to be considered in determining reasonableness.",
+            "date": "1986-07-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-amex-hardship-gate"
+          },
+          {
+            "sourceId": "hilb-account-gate",
+            "authorityType": "case-law",
+            "title": "Hilb, Rogal & Hamilton Co. of Arizona v. McKinney",
+            "citation": "Hilb, Rogal & Hamilton Co. of Arizona v. McKinney, 190 Ariz. 213, 946 P.2d 464 (Ct. App. 1997).",
+            "url": "https://www.courtlistener.com/opinion/1124526/hilb-rogal-hamilton-co-of-arizona-inc-v-mckinney/",
+            "deepLink": "https://www.courtlistener.com/opinion/1124526/hilb-rogal-hamilton-co-of-arizona-inc-v-mckinney/#:~:text=We%20hold%20that%20HRH%20had,in%20the%20Bell%20Ford%20account.",
+            "proposition": "Hilb supports the threshold role of the interest inquiry: the covenant failed because the employer had no protectable interest in the restrained account.",
+            "verbatimQuote": "We hold that HRH had no protectable interest in the Bell Ford account.",
+            "date": "1997-12-24",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-hilb-account-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "prohibit-required-broadcast-employee-noncompetes",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.arizona.prohibit-required-broadcast-employee-noncompetes",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No required non-competes for broadcast employees",
+        "sectionId": "arizona-statutory-gates",
+        "itemNumber": "19.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#prohibit-required-broadcast-employee-noncompetes",
+        "requirementGuidance": "Arizona's one statutory ban: a broadcast employer — a television or radio station or network — may not require a current or prospective employee to agree to a noncompete clause as a condition of employment. This is a categorical prohibition, not a reasonableness test, and the statute defines the banned clause as one prohibiting work in a specific geographic area for a specific period after leaving the broadcast employer. Establish what the employer is before weighing any covenant term; for everyone outside broadcasting, the common-law gates above and below still govern.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ars-23494-prohibition-gate",
+            "authorityType": "primary-law",
+            "title": "A.R.S. § 23-494",
+            "citation": "A.R.S. § 23-494(A).",
+            "url": "https://www.azleg.gov/ars/23/00494.htm",
+            "proposition": "A.R.S. § 23-494(A) supports the categorical ban: a broadcast employer may not require a current or prospective employee to agree to a noncompete clause as a condition of employment.",
+            "verbatimQuote": "As a condition of employment, it is unlawful for a broadcast employer to require a current or prospective employee to agree to a noncompete clause.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-ars-23494-prohibition-gate"
+          },
+          {
+            "sourceId": "ars-23494-definition-gate",
+            "authorityType": "primary-law",
+            "title": "A.R.S. § 23-494",
+            "citation": "A.R.S. § 23-494(B)(2).",
+            "url": "https://www.azleg.gov/ars/23/00494.htm",
+            "proposition": "A.R.S. § 23-494(B) supports the scope of the ban by defining the prohibited noncompete clause for broadcast employment.",
+            "verbatimQuote": "\"Noncompete clause\" means a clause in an employment contract with a broadcast employer that prohibits an employee from working in a specific geographic area for a specific period of time after leaving employment with the broadcast employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-ars-23494-definition-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "keep-confidentiality-and-nonsolicits-from-operating-as-de-facto-noncompetes",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.arizona.keep-confidentiality-and-nonsolicits-from-operating-as-de-facto-noncompetes",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No disguised non-competes",
+        "sectionId": "arizona-statutory-gates",
+        "itemNumber": "19.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#keep-confidentiality-and-nonsolicits-from-operating-as-de-facto-noncompetes",
+        "requirementGuidance": "Read every confidentiality and non-solicit clause for what it does, because that is how an Arizona court will read it: a clause broad enough to operate as a practical bar on competition is analyzed as a non-compete whatever its heading says, and an unlimited confidentiality covenant has been struck as the equivalent of a geographically unrestricted non-compete. The fix is scope, not labels — confine the clause to actual trade secrets and confidential information with reasonable limits, knowing the trade-secrets act protects the real secrets independently and preserves contract remedies besides.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "orca-defacto-gate",
+            "authorityType": "case-law",
+            "title": "Orca Communications Unlimited, LLC v. Noder",
+            "citation": "Orca Communications Unlimited, LLC v. Noder, 233 Ariz. 411 (Ct. App. 2013).",
+            "url": "https://www.courtlistener.com/opinion/6604207/orca-communications-unlimited-llc-v-noder/",
+            "deepLink": "https://www.courtlistener.com/opinion/6604207/orca-communications-unlimited-llc-v-noder/#:~:text=Thus%2C%20the%20trial%20court%20did,a%20geographically%20unrestricted%20non%2Dcompetition%20agreement.",
+            "proposition": "Orca supports the functional-effect rule: an unlimited confidentiality covenant is unenforceable as the equivalent of a geographically unrestricted non-compete.",
+            "verbatimQuote": "Thus, the trial court did not err in finding that the confidentiality covenant is unenforceable as the equivalent of a geographically unrestricted non-competition agreement.",
+            "date": "2013-10-17",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-orca-defacto-gate"
+          },
+          {
+            "sourceId": "hilb-same-test-gate",
+            "authorityType": "case-law",
+            "title": "Hilb, Rogal & Hamilton Co. of Arizona v. McKinney",
+            "citation": "Hilb, Rogal & Hamilton Co. of Arizona v. McKinney, 190 Ariz. 213, 946 P.2d 464 (Ct. App. 1997).",
+            "url": "https://www.courtlistener.com/opinion/1124526/hilb-rogal-hamilton-co-of-arizona-inc-v-mckinney/",
+            "deepLink": "https://www.courtlistener.com/opinion/1124526/hilb-rogal-hamilton-co-of-arizona-inc-v-mckinney/#:~:text=A%20restrictive%20covenant%20%2D%20whether,the%20employer's%20legitimate%20business%20interest.",
+            "proposition": "Hilb supports running anti-piracy covenants through the same no-broader-than-necessary enforceability test as non-competes.",
+            "verbatimQuote": "A restrictive covenant - whether a covenant not to compete or an anti-piracy agreement - is enforceable as long as it is no broader than necessary to protect the employer's legitimate business interest.",
+            "date": "1997-12-24",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-hilb-same-test-gate"
+          },
+          {
+            "sourceId": "autsa-contract-remedies-gate",
+            "authorityType": "primary-law",
+            "title": "A.R.S. § 44-407",
+            "citation": "A.R.S. § 44-407(B)(1).",
+            "url": "https://www.azleg.gov/ars/44/00407.htm",
+            "proposition": "A.R.S. § 44-407(B)(1) supports scoping confidentiality tightly without losing protection: AUTSA preserves contractual remedies whether or not based on misappropriation of a trade secret.",
+            "verbatimQuote": "Contractual remedies, whether or not based on misappropriation of a trade secret.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-autsa-contract-remedies-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "tie-sale-of-business-covenants-to-transferred-goodwill",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.arizona.tie-sale-of-business-covenants-to-transferred-goodwill",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Sale-of-business covenant sized to the goodwill",
+        "sectionId": "arizona-statutory-gates",
+        "itemNumber": "19.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#tie-sale-of-business-covenants-to-transferred-goodwill",
+        "requirementGuidance": "A covenant given with the sale of a business gets more room than an employment covenant — the buyer paid for the goodwill and may protect it — but the room has walls: limited as to time and space, the covenant is ordinarily valid unless it bars the seller from all business whatsoever. Check the activity, geography, and duration against the goodwill actually transferred, because a federal court applying Arizona law found a covenant unreasonable on all three dimensions, singularly and in combination, where they outran what the buyer acquired — and the no-rewrite rule meant nothing was salvaged.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "gann-validity-gate",
+            "authorityType": "case-law",
+            "title": "Gann v. Morris",
+            "citation": "Gann v. Morris, 122 Ariz. 517, 596 P.2d 43 (Ct. App. 1979).",
+            "url": "https://www.courtlistener.com/opinion/1362794/gann-v-morris/",
+            "deepLink": "https://www.courtlistener.com/opinion/1362794/gann-v-morris/#:~:text=Where%20limited%20as%20to%20time,refrain%20from%20all%20business%20whatsoever.",
+            "proposition": "Gann supports the sale-of-business latitude and its limit: a covenant limited as to time and space is ordinarily valid unless it bars the seller from all business whatsoever.",
+            "verbatimQuote": "Where limited as to time and space, the covenant is ordinarily valid unless it is to refrain from all business whatsoever.",
+            "date": "1979-03-29",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-gann-validity-gate"
+          },
+          {
+            "sourceId": "gann-goodwill-gate",
+            "authorityType": "case-law",
+            "title": "Gann v. Morris",
+            "citation": "Gann v. Morris, 122 Ariz. 517, 596 P.2d 43 (Ct. App. 1979).",
+            "url": "https://www.courtlistener.com/opinion/1362794/gann-v-morris/",
+            "deepLink": "https://www.courtlistener.com/opinion/1362794/gann-v-morris/#:~:text=The%20sale%20of%20such%20a,transfer%20of%20the%20good%20will.",
+            "proposition": "Gann supports the goodwill rationale: the sale of a business includes its goodwill, which the purchaser may protect.",
+            "verbatimQuote": "The sale of such a business necessarily includes the sale of good will and the purchaser has the right to assure himself as best he can of the transfer of the good will.",
+            "date": "1979-03-29",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-gann-goodwill-gate"
+          },
+          {
+            "sourceId": "berkadia-unreasonable-gate",
+            "authorityType": "case-law",
+            "title": "Berkadia Real Estate Advisors LLC v. Wadlund",
+            "citation": "Berkadia Real Estate Advisors LLC v. Wadlund, No. CV-22-00049-TUC-CKJ, 2024 WL 4125533 (D. Ariz. June 27, 2024).",
+            "url": "https://www.govinfo.gov/app/details/USCOURTS-azd-4_22-cv-00049/USCOURTS-azd-4_22-cv-00049-10",
+            "proposition": "Berkadia supports auditing sale-of-business covenants against the acquired goodwill: the activity scope, geography, and duration were unreasonable, singularly and in combination.",
+            "verbatimQuote": "The Court finds that the scope of activity, the geographic scope, and the duration of the TCRA restrictive covenants, singularly and in combination, are unreasonable.",
+            "date": "2024-06-27",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/arizona#src-berkadia-unreasonable-gate"
+          }
+        ]
+      }
+    ]
+  }
+}

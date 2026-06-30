@@ -1,0 +1,1374 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/missouri",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/missouri.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/missouri",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/missouri/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/missouri/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "missouri",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — Missouri",
+      "description": "A clause-by-clause reviewer checklist for Missouri employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the Copeland trade-secrets-or-customer-contacts test and the section 431.202 and 431.204 safe harbors.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "Missouri",
+      "coverage": "Missouri (US)",
+      "lastReviewed": "2026-06-12",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 47,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "label": "Physician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "missouri-statutory-gates",
+        "label": "Missouri statutory gates"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#identify-parties",
+        "requirementGuidance": "Confirm the named employer is the entity that holds the trade secrets and customer relationships the covenant claims to protect. The enforcing party must prove its own protectable interest and the reasonableness of the restraint, and a covenant running to an affiliate that owns neither the secrets nor the customer book starts that proof a step behind.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mo-whelan-burden-cover",
+            "authorityType": "case-law",
+            "title": "Whelan Security Co. v. Kennebrew",
+            "citation": "Whelan Sec. Co. v. Kennebrew, 379 S.W.3d 835 (Mo. banc 2012).",
+            "url": "https://www.courtlistener.com/opinion/5283000/whelan-security-co-v-kennebrew/",
+            "deepLink": "https://www.courtlistener.com/opinion/5283000/whelan-security-co-v-kennebrew/#:~:text=The%20employer%20has%20the%20burden,to%20time%20and%20geographic%20space.",
+            "proposition": "Whelan places the burden on the enforcing employer to prove a protectable interest and time/geography reasonableness, which is why the named employer should be the entity holding that interest.",
+            "verbatimQuote": "The employer has the burden to prove that the non-compete agreement protects its legitimate interests in trade secrets or customer contacts and that the agreement is reasonable as to time and geographic space.",
+            "date": "2012-08-14",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-whelan-burden-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#identify-effective-date",
+        "requirementGuidance": "Pin the date. Every Missouri reasonableness question is measured against stated terms — when the covenant began, what consideration moved at that moment, and how long each restriction runs after separation. An undated agreement leaves the consideration timeline (a live battleground here) and every duration clock open to dispute.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#identify-employee-title",
+        "requirementGuidance": "Record the role, because in Missouri the role is evidence of the only two interests that count: did this employee touch trade secrets, and did this employee have substantial contact with customers and a chance to influence them? A title with no plausible connection to either interest is an early warning that the covenant protects against competition itself.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mo-two-interests-cover",
+            "authorityType": "case-law",
+            "title": "Paradise v. Midwest Asphalt Coatings, Inc.",
+            "citation": "Paradise v. Midwest Asphalt Coatings, Inc., 316 S.W.3d 327 (Mo. App. W.D. 2010).",
+            "url": "https://www.courtlistener.com/opinion/1873853/paradise-v-midwest-asphalt-coatings-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/1873853/paradise-v-midwest-asphalt-coatings-inc/#:~:text=Missouri%20recognizes%20two%20legitimate%20business,trade%20secrets%20and%20customer%20contacts.",
+            "proposition": "Paradise restates the two legitimate business interests a Missouri covenant can protect, the interests the employee's role is evidence of.",
+            "verbatimQuote": "Missouri recognizes two legitimate business interests: trade secrets and customer contacts.",
+            "date": "2010-03-16",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-two-interests-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#identify-governing-law",
+        "requirementGuidance": "Check that the governing state is stated. When Missouri law applies, the covenant is justified against a statute that declares every contract in restraint of trade unlawful — the policy baseline the narrow trade-secret and customer-contact exceptions are carved out of — so the choice of Missouri law selects the whole reasonableness framework, not just a venue.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mo-restraint-backdrop-cover",
+            "authorityType": "primary-law",
+            "title": "Mo. Rev. Stat. § 416.031",
+            "citation": "Mo. Rev. Stat. § 416.031(1).",
+            "url": "https://revisor.mo.gov/main/OneSection.aspx?section=416.031",
+            "proposition": "Section 416.031 declares contracts in restraint of trade unlawful, the policy baseline a Missouri-governed covenant must be justified against.",
+            "verbatimQuote": "Every contract, combination or conspiracy in restraint of trade or commerce in this state is unlawful.",
+            "date": "1974-08-28",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-restraint-backdrop-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#define-confidential-information",
+        "requirementGuidance": "Check the definition against the statutory trade-secret test it will eventually be measured beside: information that derives independent economic value from secrecy and is subject to reasonable secrecy efforts. A definition that sweeps in everything the employee ever learned dilutes the genuinely secret material the covenant depends on.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mo-mutsa-definition",
+            "authorityType": "primary-law",
+            "title": "Mo. Rev. Stat. § 417.453",
+            "citation": "Mo. Rev. Stat. § 417.453(4).",
+            "url": "https://revisor.mo.gov/main/OneSection.aspx?section=417.453",
+            "proposition": "Section 417.453 defines a trade secret by independent economic value from secrecy plus reasonable secrecy efforts — the test contractual definitions should track.",
+            "verbatimQuote": "Derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by other persons who can obtain economic value from its disclosure or use; and (b) Is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "date": "1995-08-28",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-mutsa-definition"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#define-trade-secrets",
+        "requirementGuidance": "In Missouri this definition is load-bearing: trade secrets are one of only two interests that can carry any covenant in the agreement. Track the Uniform Trade Secrets Act elements — independent economic value from secrecy plus reasonable secrecy efforts — so the contractual term and the statutory claim reinforce each other instead of diverging.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mo-mutsa-definition",
+            "authorityType": "primary-law",
+            "title": "Mo. Rev. Stat. § 417.453",
+            "citation": "Mo. Rev. Stat. § 417.453(4).",
+            "url": "https://revisor.mo.gov/main/OneSection.aspx?section=417.453",
+            "proposition": "Section 417.453 defines a trade secret by independent economic value from secrecy plus reasonable secrecy efforts — the test contractual definitions should track.",
+            "verbatimQuote": "Derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by other persons who can obtain economic value from its disclosure or use; and (b) Is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "date": "1995-08-28",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-mutsa-definition"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-period",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#define-restricted-period",
+        "requirementGuidance": "One defined Restricted Period keeps every duration auditable against the reasonableness review, which tests the covenant's stated time terms. Missouri has no statutory ceiling for a non-compete; restrictions of up to about two years are commonly within the range courts will consider, but the employer must still justify the specific number on the facts.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mo-whelan-time-space",
+            "authorityType": "case-law",
+            "title": "Whelan Security Co. v. Kennebrew",
+            "citation": "Whelan Sec. Co. v. Kennebrew, 379 S.W.3d 835 (Mo. banc 2012).",
+            "url": "https://www.courtlistener.com/opinion/5283000/whelan-security-co-v-kennebrew/",
+            "deepLink": "https://www.courtlistener.com/opinion/5283000/whelan-security-co-v-kennebrew/#:~:text=The%20employer%20has%20the%20burden,to%20time%20and%20geographic%20space.",
+            "proposition": "Whelan makes time and geographic reasonableness part of the employer's burden, the yardstick the restricted period and territory definitions are measured by.",
+            "verbatimQuote": "The employer has the burden to prove that the non-compete agreement protects its legitimate interests in trade secrets or customer contacts and that the agreement is reasonable as to time and geographic space.",
+            "date": "2012-08-14",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-whelan-time-space"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-territory",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-territory",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted territory",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#define-restricted-territory",
+        "requirementGuidance": "Tie the geography to where the protected customer relationships and trade secrets actually live. Geographic reasonableness is half of the employer's burden, and a covenant with no territorial limit at all has already cost one Missouri employer both enforcement and a judicial rewrite — the court refused to supply the limit the drafter omitted.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mo-whelan-time-space",
+            "authorityType": "case-law",
+            "title": "Whelan Security Co. v. Kennebrew",
+            "citation": "Whelan Sec. Co. v. Kennebrew, 379 S.W.3d 835 (Mo. banc 2012).",
+            "url": "https://www.courtlistener.com/opinion/5283000/whelan-security-co-v-kennebrew/",
+            "deepLink": "https://www.courtlistener.com/opinion/5283000/whelan-security-co-v-kennebrew/#:~:text=The%20employer%20has%20the%20burden,to%20time%20and%20geographic%20space.",
+            "proposition": "Whelan makes time and geographic reasonableness part of the employer's burden, the yardstick the restricted period and territory definitions are measured by.",
+            "verbatimQuote": "The employer has the burden to prove that the non-compete agreement protects its legitimate interests in trade secrets or customer contacts and that the agreement is reasonable as to time and geographic space.",
+            "date": "2012-08-14",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-whelan-time-space"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered customers",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#define-covered-customers",
+        "requirementGuidance": "Bound the class to customers the employee actually serviced or had substantial contact with during a stated look-back window. The Missouri Supreme Court has already held customer-restriction language overbroad where it reached customers regardless of the employee's relationship with them — including people who were merely prospects — so an entire-book definition is a known failure mode.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mo-whelan-customer-defs",
+            "authorityType": "case-law",
+            "title": "Whelan Security Co. v. Kennebrew",
+            "citation": "Whelan Sec. Co. v. Kennebrew, 379 S.W.3d 835 (Mo. banc 2012).",
+            "url": "https://www.courtlistener.com/opinion/5283000/whelan-security-co-v-kennebrew/",
+            "deepLink": "https://www.courtlistener.com/opinion/5283000/whelan-security-co-v-kennebrew/#:~:text=As%20written%2C%20the%20customer%20non%2Dsolicitation,legitimate%20interest%20in%20customer%20contacts.",
+            "proposition": "Whelan held customer non-solicitation clauses overbroad as written where they reached beyond the employer's legitimate customer-contacts interest.",
+            "verbatimQuote": "As written, the customer non-solicitation clauses are more broad than necessary to protect Whelan’s legitimate interest in customer contacts.",
+            "date": "2012-08-14",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-whelan-customer-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#define-covered-employees",
+        "requirementGuidance": "Keep the no-poach class to colleagues the departing employee worked with, and watch the duration: a covenant protecting the employer's own workforce earns a conclusive presumption of reasonableness when its post-employment run is one year or less. A definition broad enough to cover the whole company does not forfeit the safe harbor, but it invites the facts-and-circumstances fight the harbor exists to avoid.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mo-431-202-presumption-defs",
+            "authorityType": "primary-law",
+            "title": "Mo. Rev. Stat. § 431.202",
+            "citation": "Mo. Rev. Stat. § 431.202.2.",
+            "url": "https://revisor.mo.gov/main/OneSection.aspx?section=431.202",
+            "proposition": "Section 431.202 keys its conclusive reasonableness presumption to a postemployment duration of no more than one year, the clock the covered-employees class and termination trigger feed.",
+            "verbatimQuote": "Whether a covenant covered by this section is reasonable shall be determined based upon the facts and circumstances pertaining to such covenant, but a covenant covered exclusively by subdivision (3) or (4) of subsection 1 of this section shall be conclusively presumed to be reasonable if its postemployment duration is no more than one year.",
+            "date": "2001-07-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-431-202-presumption-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#define-protected-interests",
+        "requirementGuidance": "Name the interests — and make sure the named interests are the two Missouri recognizes. Recitals about goodwill, market position, or competitive advantage add nothing here: a restriction is enforceable only to the extent it protects trade secrets or customer contacts, and language framed around keeping a former employee out of the market reads as the interest courts refuse to protect.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mo-copeland-mere-competition-defs",
+            "authorityType": "case-law",
+            "title": "Healthcare Services of the Ozarks, Inc. v. Copeland",
+            "citation": "Healthcare Servs. of the Ozarks, Inc. v. Copeland, 198 S.W.3d 604 (Mo. banc 2006).",
+            "url": "https://www.courtlistener.com/opinion/1654936/healthcare-services-of-the-ozarks-inc-v-copeland/",
+            "deepLink": "https://www.courtlistener.com/opinion/1654936/healthcare-services-of-the-ozarks-inc-v-copeland/#:~:text=In%20addition%2C%20such%20restrictions%20are,trade%20secrets%20or%20customer%20contacts.",
+            "proposition": "Copeland limits enforceable restraints to those protecting trade secrets or customer contacts, the rule the protected-interests and competitive-business definitions must respect.",
+            "verbatimQuote": "In addition, such restrictions are not enforceable to protect an employer from mere competition by a former employee, but only to the extent that the restrictions protect the employer’s trade secrets or customer contacts.",
+            "date": "2006-08-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-copeland-mere-competition-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-competitive-business",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Competitive business",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#define-competitive-business",
+        "requirementGuidance": "Describe the genuinely competing activity in concrete terms tied to what the employee did and knew. A definition that expands to anything the employer might someday do is a restraint on competition as such — exactly what a Missouri covenant is not allowed to protect against.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mo-copeland-mere-competition-defs",
+            "authorityType": "case-law",
+            "title": "Healthcare Services of the Ozarks, Inc. v. Copeland",
+            "citation": "Healthcare Servs. of the Ozarks, Inc. v. Copeland, 198 S.W.3d 604 (Mo. banc 2006).",
+            "url": "https://www.courtlistener.com/opinion/1654936/healthcare-services-of-the-ozarks-inc-v-copeland/",
+            "deepLink": "https://www.courtlistener.com/opinion/1654936/healthcare-services-of-the-ozarks-inc-v-copeland/#:~:text=In%20addition%2C%20such%20restrictions%20are,trade%20secrets%20or%20customer%20contacts.",
+            "proposition": "Copeland limits enforceable restraints to those protecting trade secrets or customer contacts, the rule the protected-interests and competitive-business definitions must respect.",
+            "verbatimQuote": "In addition, such restrictions are not enforceable to protect an employer from mere competition by a former employee, but only to the extent that the restrictions protect the employer’s trade secrets or customer contacts.",
+            "date": "2006-08-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-copeland-mere-competition-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where ownership or investment in competitors is restricted, look for a passive-holdings carve-out below a stated threshold. Owning a few public shares neither exposes trade secrets nor exploits customer contacts, so a clause that technically forbids index funds restricts conduct no protectable Missouri interest reaches — gratuitous overbreadth in a covenant that already has to prove its tailoring.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#define-passive-public-holdings",
+        "requirementGuidance": "A drafting convenience, not a requirement — many agreements inline the carve-out language instead. If the capitalized term appears, confirm its percentage matches the operative carve-out it supports.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.11",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#define-solicit",
+        "requirementGuidance": "Define the conduct precisely, because Missouri enforcement does not wait for proof the employee actually solicited anyone — the customer-contacts interest turns on the opportunity to influence, not on caught-in-the-act evidence. A clear definition tells the departing employee what is off limits before the dispute, which is where this clause earns its keep.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mo-paradise-no-solicitation",
+            "authorityType": "case-law",
+            "title": "Paradise v. Midwest Asphalt Coatings, Inc.",
+            "citation": "Paradise v. Midwest Asphalt Coatings, Inc., 316 S.W.3d 327 (Mo. App. W.D. 2010).",
+            "url": "https://www.courtlistener.com/opinion/1873853/paradise-v-midwest-asphalt-coatings-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/1873853/paradise-v-midwest-asphalt-coatings-inc/#:~:text=An%20employer%20is%20not%20required,violation%20of%20the%20non%2Dcompete%20agreement.",
+            "proposition": "Paradise holds enforcement does not require proof of actual solicitation, which makes a precise contractual definition of soliciting the parties' main guide to permitted conduct.",
+            "verbatimQuote": "An employer is not required to show actual solicitation or a willful violation of the non-compete agreement.",
+            "date": "2010-03-16",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-paradise-no-solicitation"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.12",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#define-termination-of-employment",
+        "requirementGuidance": "Verify the trigger covers resignation, dismissal, and expiration of a fixed term the same way. Missouri's statutory safe harbor measures its one-year presumption from the post-employment clock, and the reasonableness review measures the covenant's stated duration — both need an unambiguous start line.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mo-431-202-presumption-defs",
+            "authorityType": "primary-law",
+            "title": "Mo. Rev. Stat. § 431.202",
+            "citation": "Mo. Rev. Stat. § 431.202.2.",
+            "url": "https://revisor.mo.gov/main/OneSection.aspx?section=431.202",
+            "proposition": "Section 431.202 keys its conclusive reasonableness presumption to a postemployment duration of no more than one year, the clock the covered-employees class and termination trigger feed.",
+            "verbatimQuote": "Whether a covenant covered by this section is reasonable shall be determined based upon the facts and circumstances pertaining to such covenant, but a covenant covered exclusively by subdivision (3) or (4) of subsection 1 of this section shall be conclusively presumed to be reasonable if its postemployment duration is no more than one year.",
+            "date": "2001-07-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-431-202-presumption-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-timing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-timing",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "When the agreement was signed",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#acknowledge-timing",
+        "requirementGuidance": "In Missouri this acknowledgement should do more than date the signature — it should record what consideration moved and when, because the state's highest court has rejected continued at-will employment as valid consideration in a related context and the question is unresolved for non-competes. An acknowledgement reciting the specific benefit exchanged at signing is the cheapest evidence the covenant was bought rather than imposed.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mo-baker-timing",
+            "authorityType": "case-law",
+            "title": "Baker v. Bristol Care, Inc.",
+            "citation": "Baker v. Bristol Care, Inc., 450 S.W.3d 770 (Mo. banc 2014).",
+            "url": "https://www.courtlistener.com/opinion/2718919/carla-baker-v-bristol-care-inc-dba-bristol-manor-and-david-furnell/",
+            "deepLink": "https://www.courtlistener.com/opinion/2718919/carla-baker-v-bristol-care-inc-dba-bristol-manor-and-david-furnell/#:~:text=An%20offer%20of%20continued%20at%2Dwill,not%20already%20entitled%20to%20do.",
+            "proposition": "Baker holds a promise of continued at-will employment is not valid consideration, the reasoning that makes documenting the actual consideration exchange essential.",
+            "verbatimQuote": "An offer of continued at-will employment is not valid consideration because the employer makes no legally enforceable promise to do or refrain from doing anything it is not already entitled to do.",
+            "date": "2014-08-19",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-baker-timing"
+          },
+          {
+            "sourceId": "mo-jumbosack-timing",
+            "authorityType": "case-law",
+            "title": "JumboSack Corp. v. Buyck",
+            "citation": "JumboSack Corp. v. Buyck, 407 S.W.3d 51 (Mo. App. E.D. 2013).",
+            "url": "https://www.courtlistener.com/opinion/5285458/jumbosack-corp-v-buyck/",
+            "deepLink": "https://www.courtlistener.com/opinion/5285458/jumbosack-corp-v-buyck/#:~:text=In%20the%20instant%20case%2C%20Employee,at%2Dwill%20employment%2C%20salary%2C%20and%20commissions.",
+            "proposition": "JumboSack recognized continued at-will employment plus access to customers and assets as consideration, the line of cases the acknowledgement should document facts for.",
+            "verbatimQuote": "In the instant case, Employee received in consideration for his covenant not to compete, access to Employer’s new and existing customers, as well as continued at-will employment, salary, and commissions.",
+            "date": "2013-05-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-jumbosack-timing"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-opportunity-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Chance to consult a lawyer",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#acknowledge-opportunity-to-consult-counsel",
+        "requirementGuidance": "No Missouri statute demands it, but it remains cheap procedural-fairness evidence in a state where the employer carries the burden on every element of enforceability. Confirm the acknowledgement reflects a real window to seek advice rather than a same-day signature.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "The trade-secret obligation should last as long as secrecy does — federal law keys the right to continued secrecy, and Missouri's own act defines the asset the same way. The stakes are doubled here: a trade secret is one of the two interests every covenant in the agreement leans on, so a fixed expiry on trade-secret protection undercuts the restrictive covenants along with the confidentiality clause.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-trade-secret-definition",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
+            "citation": "18 U.S.C. § 1839(3)(B) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1839",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
+            "proposition": "Federal law keys trade-secret status to continued secrecy, which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-dtsa-trade-secret-definition"
+          },
+          {
+            "sourceId": "mo-mutsa-secrecy",
+            "authorityType": "primary-law",
+            "title": "Mo. Rev. Stat. § 417.453",
+            "citation": "Mo. Rev. Stat. § 417.453(4).",
+            "url": "https://revisor.mo.gov/main/OneSection.aspx?section=417.453",
+            "proposition": "Missouri's Uniform Trade Secrets Act likewise defines the trade secret by secrecy and secrecy efforts, supporting protection that runs as long as secrecy persists.",
+            "verbatimQuote": "Derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by other persons who can obtain economic value from its disclosure or use; and (b) Is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "date": "1995-08-28",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-mutsa-secrecy"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#state-confidentiality-duration",
+        "requirementGuidance": "Give ordinary confidential information its own finite term. A perpetual lid on material that never qualified as a trade secret is the same overreach Missouri polices in the covenants themselves, and the two-track structure keeps the perpetual obligation where the law actually supports it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#disclose-dtsa-notice",
+        "requirementGuidance": "Federal law, fully applicable to a Missouri agreement: omit the immunity notice and the employer forfeits exemplary damages and attorney fees in a later trade-secret suit against the employee. In a state where the trade-secret interest does so much of the covenant's work, giving away the strongest trade-secret remedies is an unforced error.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-immunity-notice",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-dtsa-immunity-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Confidentiality and non-disparagement language has to leave wages, hours, and working conditions discussable. Federal labor law protects that speech regardless of the governing state, and the Board has been striking overbroad clauses in employee agreements.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nlra-section-7-rights",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-nlra-section-7-rights"
+          },
+          {
+            "sourceId": "mclaren-macomb-protected-activity",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mclaren-macomb-protected-activity"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#permit-compelled-disclosure",
+        "requirementGuidance": "Confirm the carve-out for disclosure required by law, court order, or a government investigation, with notice to the employer where lawful. A confidentiality clause cannot block legally compelled disclosure, and the carve-out keeps an otherwise sound clause from reading as overreach in a state that scrutinizes every restraint for proportion.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#require-property-return-and-certification",
+        "requirementGuidance": "Return-or-delete at separation, certified in writing. In Missouri the certification feeds the parallel trade-secret track: the Uniform Trade Secrets Act lets a court enjoin even threatened misappropriation, and a signed certification that materials were returned — or evidence they were not — is exactly the proof that motion turns on.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mo-mutsa-injunction-return",
+            "authorityType": "primary-law",
+            "title": "Mo. Rev. Stat. § 417.455",
+            "citation": "Mo. Rev. Stat. § 417.455.1.",
+            "url": "https://revisor.mo.gov/main/OneSection.aspx?section=417.455",
+            "proposition": "Section 417.455 authorizes injunctions against actual or threatened misappropriation, the claim a property-return certification supplies evidence for.",
+            "verbatimQuote": "Actual or threatened misappropriation may be enjoined.",
+            "date": "1995-08-28",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-mutsa-injunction-return"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-employee-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#permit-employee-nonsolicit",
+        "requirementGuidance": "Optional, and the best-protected covenant in a Missouri agreement: a covenant against soliciting, recruiting, or hiring the employer's own workforce is the one restraint the legislature blessed with a conclusive reasonableness presumption when it runs a year or less. If the clause appears, route it through the Missouri gates at the end of this checklist to confirm it actually fits the harbor.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mo-431-202-presumption-cov",
+            "authorityType": "primary-law",
+            "title": "Mo. Rev. Stat. § 431.202",
+            "citation": "Mo. Rev. Stat. § 431.202.2.",
+            "url": "https://revisor.mo.gov/main/OneSection.aspx?section=431.202",
+            "proposition": "Section 431.202 gives employee no-hire and anti-raiding covenants a conclusive reasonableness presumption at a postemployment duration of one year or less.",
+            "verbatimQuote": "Whether a covenant covered by this section is reasonable shall be determined based upon the facts and circumstances pertaining to such covenant, but a covenant covered exclusively by subdivision (3) or (4) of subsection 1 of this section shall be conclusively presumed to be reasonable if its postemployment duration is no more than one year.",
+            "date": "2001-07-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-431-202-presumption-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-customer-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#permit-customer-nonsolicit",
+        "requirementGuidance": "Optional, and judged purely at common law — the statutory safe harbor does not reach customer restrictions. The clause stands or falls on the customer-contacts interest, which means its covered class is everything: the Missouri Supreme Court has already cut one of these down for reaching customers the employee had no relationship with.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mo-whelan-customer-cov",
+            "authorityType": "case-law",
+            "title": "Whelan Security Co. v. Kennebrew",
+            "citation": "Whelan Sec. Co. v. Kennebrew, 379 S.W.3d 835 (Mo. banc 2012).",
+            "url": "https://www.courtlistener.com/opinion/5283000/whelan-security-co-v-kennebrew/",
+            "deepLink": "https://www.courtlistener.com/opinion/5283000/whelan-security-co-v-kennebrew/#:~:text=As%20written%2C%20the%20customer%20non%2Dsolicitation,legitimate%20interest%20in%20customer%20contacts.",
+            "proposition": "Whelan struck customer non-solicitation language that exceeded the employer's legitimate customer-contacts interest.",
+            "verbatimQuote": "As written, the customer non-solicitation clauses are more broad than necessary to protect Whelan’s legitimate interest in customer contacts.",
+            "date": "2012-08-14",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-whelan-customer-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-dealing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#permit-non-dealing",
+        "requirementGuidance": "Non-dealing bars serving covered customers even when they call first — a restraint on accepting business rather than on chasing it. That breadth has to be justified against the same trade-secrets-or-customer-contacts test as everything else, against a statutory backdrop that makes restraints of trade unlawful by default; treat its inclusion as a deliberate risk decision, not boilerplate.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mo-restraint-backdrop-cov",
+            "authorityType": "primary-law",
+            "title": "Mo. Rev. Stat. § 416.031",
+            "citation": "Mo. Rev. Stat. § 416.031(1).",
+            "url": "https://revisor.mo.gov/main/OneSection.aspx?section=416.031",
+            "proposition": "Section 416.031 makes restraints of trade unlawful by default, the baseline a broad non-dealing covenant must overcome.",
+            "verbatimQuote": "Every contract, combination or conspiracy in restraint of trade or commerce in this state is unlawful.",
+            "date": "1974-08-28",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-restraint-backdrop-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-compete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#permit-non-compete",
+        "requirementGuidance": "A Missouri non-compete begins as a presumptively void restraint, and the employer must demonstrate reasonableness on every axis — protectable interest, time, and geography. If this clause appears at all, run it straight through the interest gate at the end of this checklist before evaluating any of its terms: a covenant that cannot name its trade secret or customer-contact interest fails no matter how modest its duration looks.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mo-yates-presumptive-void",
+            "authorityType": "case-law",
+            "title": "Payroll Advance, Inc. v. Yates",
+            "citation": "Payroll Advance, Inc. v. Yates, 270 S.W.3d 428 (Mo. App. S.D. 2008).",
+            "url": "https://www.courtlistener.com/opinion/1590178/payroll-advance-inc-v-yates/",
+            "deepLink": "https://www.courtlistener.com/opinion/1590178/payroll-advance-inc-v-yates/#:~:text=Generally%2C%20because%20covenants%20not%20to,that%20they%20are%20demonstratively%20reasonable.",
+            "proposition": "Yates states that non-competes are presumptively void restraints on trade, enforceable only to the extent demonstrably reasonable.",
+            "verbatimQuote": "Generally, because covenants not to compete are considered to be restraints on trade, they are presumptively void and are enforceable only to the extent that they are demonstratively reasonable.",
+            "date": "2008-11-17",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-yates-presumptive-void"
+          },
+          {
+            "sourceId": "mo-whelan-burden-cov",
+            "authorityType": "case-law",
+            "title": "Whelan Security Co. v. Kennebrew",
+            "citation": "Whelan Sec. Co. v. Kennebrew, 379 S.W.3d 835 (Mo. banc 2012).",
+            "url": "https://www.courtlistener.com/opinion/5283000/whelan-security-co-v-kennebrew/",
+            "deepLink": "https://www.courtlistener.com/opinion/5283000/whelan-security-co-v-kennebrew/#:~:text=The%20employer%20has%20the%20burden,to%20time%20and%20geographic%20space.",
+            "proposition": "Whelan assigns the employer the burden on protectable interest and time/geography reasonableness for a non-compete.",
+            "verbatimQuote": "The employer has the burden to prove that the non-compete agreement protects its legitimate interests in trade secrets or customer contacts and that the agreement is reasonable as to time and geographic space.",
+            "date": "2012-08-14",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-whelan-burden-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Named-competitor narrowing",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementGuidance": "When the employer can name its real competitors, bind those instead of leaning on the open-ended Competitive Business definition. Missouri's test rewards exactly this: a covenant is reasonable only if no more restrictive than necessary, and a named list is the most concrete proof of necessity a drafter can offer.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mo-copeland-reasonable-cov",
+            "authorityType": "case-law",
+            "title": "Healthcare Services of the Ozarks, Inc. v. Copeland",
+            "citation": "Healthcare Servs. of the Ozarks, Inc. v. Copeland, 198 S.W.3d 604 (Mo. banc 2006).",
+            "url": "https://www.courtlistener.com/opinion/1654936/healthcare-services-of-the-ozarks-inc-v-copeland/",
+            "deepLink": "https://www.courtlistener.com/opinion/1654936/healthcare-services-of-the-ozarks-inc-v-copeland/#:~:text=In%20practical%20terms%2C%20a%20non%2Dcompete,legitimate%20interests%20of%20the%20employer.",
+            "proposition": "Copeland defines reasonableness as no more restrictive than necessary, the standard a named-competitor list helps the covenant meet.",
+            "verbatimQuote": "In practical terms, a non-compete agreement is reasonable if it is no more restrictive than is necessary to protect the legitimate interests of the employer.",
+            "date": "2006-08-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-copeland-reasonable-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#permit-non-investment",
+        "requirementGuidance": "Rare and deliberate. Confirm the passive-holdings carve-out is intact and the clause shares the defined Restricted Period — and ask which trade secret or customer relationship a ban on investing actually protects, because that is the question a Missouri court will ask first.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#require-non-disparagement",
+        "requirementGuidance": "Standard to include with a stated term, and Missouri adds no covenant-specific rule of its own — so the audit is federal: truthful testimony, statements to government agencies, and protected workplace speech must sit outside the clause, because the Board polices overbroad versions in every state.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mclaren-macomb-nondisparagement",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mclaren-macomb-nondisparagement"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-physician-specific-rights",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Physician rights and notices",
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#address-physician-specific-rights",
+        "requirementGuidance": "The dedicated clause should state Missouri's position accurately: there is no physician-specific statute, so a physician covenant is tested under the same reasonableness standard as any other — no more restrictive than necessary, in service of trade secrets or customer (here, patient and referral) contacts. Watch the legislature when reviewing healthcare agreements: a 365-day, five-mile framework for physician covenants with nonprofit employers has been introduced but had not been enacted as of this review.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mo-physician-copeland",
+            "authorityType": "case-law",
+            "title": "Healthcare Services of the Ozarks, Inc. v. Copeland",
+            "citation": "Healthcare Servs. of the Ozarks, Inc. v. Copeland, 198 S.W.3d 604 (Mo. banc 2006).",
+            "url": "https://www.courtlistener.com/opinion/1654936/healthcare-services-of-the-ozarks-inc-v-copeland/",
+            "deepLink": "https://www.courtlistener.com/opinion/1654936/healthcare-services-of-the-ozarks-inc-v-copeland/#:~:text=In%20practical%20terms%2C%20a%20non%2Dcompete,legitimate%20interests%20of%20the%20employer.",
+            "proposition": "Copeland's reasonableness standard governs physician and other professional non-competes absent a profession-specific statute.",
+            "verbatimQuote": "In practical terms, a non-compete agreement is reasonable if it is no more restrictive than is necessary to protect the legitimate interests of the employer.",
+            "date": "2006-08-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-physician-copeland"
+          },
+          {
+            "sourceId": "mo-hb2979-physician-bill",
+            "authorityType": "primary-law",
+            "title": "Mo. H.B. 2979 (2026) — Missouri Rural Doctors Act",
+            "citation": "Mo. H.B. 2979, 103d Gen. Assemb., 2d Reg. Sess. (2026) (as introduced).",
+            "url": "https://documents.house.mo.gov/billtracking/bills261/hlrbillspdf/6359H.02I.pdf",
+            "proposition": "HB 2979 (2026), as introduced, would limit physician non-competes with nonprofit employers to a clinical setting, 365 days, and five miles — pending, not enacted.",
+            "verbatimQuote": "A covenant not to compete between a physician and a nonprofit employer shall be valid and enforceable only if: (1) The physician is providing health care services in a clinical setting; (2) The covenant not to compete does not restrict the physician's competitive activities for a period of more than three hundred sixty-five days; and (3) The covenant not to compete does not restrict the physician's competitive activities in a geographic area of more than five miles from the address of the office or facility in which the physician provides health care services in a clinical setting.",
+            "date": "2026-01-16",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-hb2979-physician-bill"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "The employee's representation that no earlier agreement or order blocks the new role. On Missouri intake it doubles as an interest screen: an incoming covenant from a prior employer gets the same trade-secrets-or-customer-contacts scrutiny as an outgoing one, and the representation surfaces the conflict before the first customer call instead of after it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#address-notice-to-future-employers",
+        "requirementGuidance": "A genuine drafting choice. A notice letter built on a covenant that cannot name its protectable interest invites a tortious-interference counterclaim rather than deterring a hire — so if the clause appears, condition any third-party notice on the covenant actually clearing the interest gate this checklist runs.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-tolling-during-breach",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-tolling-during-breach",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restriction extended during a breach",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#address-tolling-during-breach",
+        "requirementGuidance": "The agreement should say expressly whether the clock pauses during a breach, because Missouri has no clear authority requiring a court to toll it. Then test the worst case: an extension that pushes a one-year workforce covenant past its statutory safe harbor, or stretches a non-compete beyond the stated time terms the employer must defend as reasonable, trades a known-good duration for an open reasonableness fight.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mo-tolling-431-202",
+            "authorityType": "primary-law",
+            "title": "Mo. Rev. Stat. § 431.202",
+            "citation": "Mo. Rev. Stat. § 431.202.2.",
+            "url": "https://revisor.mo.gov/main/OneSection.aspx?section=431.202",
+            "proposition": "Section 431.202's conclusive presumption is keyed to a fixed one-year postemployment duration, a benchmark a tolling clause could push past.",
+            "verbatimQuote": "Whether a covenant covered by this section is reasonable shall be determined based upon the facts and circumstances pertaining to such covenant, but a covenant covered exclusively by subdivision (3) or (4) of subsection 1 of this section shall be conclusively presumed to be reasonable if its postemployment duration is no more than one year.",
+            "date": "2001-07-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-tolling-431-202"
+          },
+          {
+            "sourceId": "mo-tolling-whelan",
+            "authorityType": "case-law",
+            "title": "Whelan Security Co. v. Kennebrew",
+            "citation": "Whelan Sec. Co. v. Kennebrew, 379 S.W.3d 835 (Mo. banc 2012).",
+            "url": "https://www.courtlistener.com/opinion/5283000/whelan-security-co-v-kennebrew/",
+            "deepLink": "https://www.courtlistener.com/opinion/5283000/whelan-security-co-v-kennebrew/#:~:text=The%20employer%20has%20the%20burden,to%20time%20and%20geographic%20space.",
+            "proposition": "Whelan measures reasonableness against the covenant's stated time and geographic terms, the yardstick an extension-on-breach clause would be tested against.",
+            "verbatimQuote": "The employer has the burden to prove that the non-compete agreement protects its legitimate interests in trade secrets or customer contacts and that the agreement is reasonable as to time and geographic space.",
+            "date": "2012-08-14",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-tolling-whelan"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#require-injunctive-relief-availability",
+        "requirementGuidance": "Look for the acknowledgement that breach may cause irreparable harm and that an injunction is appropriate relief — then note the second path Missouri keeps open: the Uniform Trade Secrets Act independently authorizes injunctions against actual or threatened misappropriation, so a well-kept trade-secret program preserves relief even where the covenant itself falters.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mo-mutsa-injunction",
+            "authorityType": "primary-law",
+            "title": "Mo. Rev. Stat. § 417.455",
+            "citation": "Mo. Rev. Stat. § 417.455.1.",
+            "url": "https://revisor.mo.gov/main/OneSection.aspx?section=417.455",
+            "proposition": "Section 417.455 authorizes injunctions for actual or threatened trade-secret misappropriation, an independent route to relief alongside the covenant.",
+            "verbatimQuote": "Actual or threatened misappropriation may be enjoined.",
+            "date": "1995-08-28",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-mutsa-injunction"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-attorneys-fees-and-costs",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Attorney fees and costs",
+        "sectionId": "remedies",
+        "itemNumber": "13.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#address-attorneys-fees-and-costs",
+        "requirementGuidance": "A commercial choice with a Missouri trap inside: a contractual fee award goes only to the prevailing party, and an employer that needs the court to shrink its overbroad covenant before enforcing it can fail that test — winning the injunction and losing the fees. The fee clause is only as good as the covenant's tailoring.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mo-paradise-fees",
+            "authorityType": "case-law",
+            "title": "Paradise v. Midwest Asphalt Coatings, Inc.",
+            "citation": "Paradise v. Midwest Asphalt Coatings, Inc., 316 S.W.3d 327 (Mo. App. W.D. 2010).",
+            "url": "https://www.courtlistener.com/opinion/1873853/paradise-v-midwest-asphalt-coatings-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/1873853/paradise-v-midwest-asphalt-coatings-inc/#:~:text=Notwithstanding%20any%20affirmative%20defense%2C%20a,must%20be%20the%20prevailing%20party.",
+            "proposition": "Paradise conditions a contractual attorney-fee award on prevailing-party status, which an employer needing judicial modification may lose.",
+            "verbatimQuote": "Notwithstanding any affirmative defense, a party requesting payment of contractual attorney fees must be the prevailing party.",
+            "date": "2010-03-16",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-paradise-fees"
+          }
+        ]
+      },
+      {
+        "requirementId": "draft-within-reasonable-scope-rather-than-rely-on-modification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.missouri.draft-within-reasonable-scope-rather-than-rely-on-modification",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No reliance on a judicial rewrite",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#draft-within-reasonable-scope-rather-than-rely-on-modification",
+        "requirementGuidance": "Read the severability clause as a risk signal, not a safety net. A Missouri court can cure overbreadth two ways — refusing to give effect to the unreasonable terms or modifying them down to reasonable — but it is never required to choose modification, and one court of appeals affirmed a discretionary refusal to rewrite a covenant that had no geographic limit at all. Size every covenant to its trade-secret or customer-contact interest at the outset, and treat any clause that assumes a judicial rescue as the drafting error it is.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mo-whelan-modification",
+            "authorityType": "case-law",
+            "title": "Whelan Security Co. v. Kennebrew",
+            "citation": "Whelan Sec. Co. v. Kennebrew, 379 S.W.3d 835 (Mo. banc 2012).",
+            "url": "https://www.courtlistener.com/opinion/5283000/whelan-security-co-v-kennebrew/",
+            "deepLink": "https://www.courtlistener.com/opinion/5283000/whelan-security-co-v-kennebrew/#:~:text=Accordingly%2C%20when%20the%20provisions%20of,the%20contract%20to%20be%20reasonable.",
+            "proposition": "Whelan states courts may refuse to give effect to unreasonable terms or modify an overbroad covenant to be reasonable — a power, not an obligation.",
+            "verbatimQuote": "Accordingly, when the provisions of a non-compete clause impose a restraint that is unreasonably broad, appellate courts still can give effect to its purpose by refusing to give effect to the unreasonable terms or modifying the terms of the contract to be reasonable.",
+            "date": "2012-08-14",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-whelan-modification"
+          },
+          {
+            "sourceId": "mo-sigma-refusal",
+            "authorityType": "case-law",
+            "title": "Sigma-Aldrich Corp. v. Vikin",
+            "citation": "Sigma-Aldrich Corp. v. Vikin, 451 S.W.3d 767 (Mo. App. E.D. 2014).",
+            "url": "https://www.courtlistener.com/opinion/2741957/sigma-aldrich-corporation-v-omar-vikin/",
+            "deepLink": "https://www.courtlistener.com/opinion/2741957/sigma-aldrich-corporation-v-omar-vikin/#:~:text=The%20trial%20court%20also%20did,refusing%20to%20modify%20the%20Agreement.",
+            "proposition": "Sigma-Aldrich affirms that a court may, in its discretion, refuse to modify an overbroad covenant and decline to enforce it.",
+            "verbatimQuote": "The trial court also did not err by using its discretion and refusing to modify the Agreement.",
+            "date": "2014-10-14",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-sigma-refusal"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#address-survival-per-covenant",
+        "requirementGuidance": "Per-covenant survival keeps each clock independently checkable — perpetual for trade secrets, one year for a safe-harbored workforce covenant, whatever the facts justify for the rest. In Missouri the durations genuinely diverge by covenant type, so a single bundled survival clause is where an unexamined and indefensible duration hides.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-assignment-and-successors",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assignment and successors",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#address-assignment-and-successors",
+        "requirementGuidance": "Confirm employer-side assignability to successors and that the employee cannot assign. Remember what travels with the covenant in Missouri: the assignee inherits the burden of proving its own protectable interest, and customer contacts built for one business do not automatically map onto a successor's different book — an assignment clause moves the covenant but never upgrades it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "specify-governing-law-and-venue",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.specify-governing-law-and-venue",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law and venue",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#specify-governing-law-and-venue",
+        "requirementGuidance": "State the governing law, venue, and dispute process. Missouri has no statute overriding the parties' choice of law for restrictive covenants, so the clause operates as written — which makes it worth confirming the selection was deliberate, because choosing Missouri law selects the restraint-of-trade baseline and the two-interest reasonableness test for every covenant in the agreement.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mo-restraint-policy-law",
+            "authorityType": "primary-law",
+            "title": "Mo. Rev. Stat. § 416.031",
+            "citation": "Mo. Rev. Stat. § 416.031(1).",
+            "url": "https://revisor.mo.gov/main/OneSection.aspx?section=416.031",
+            "proposition": "Section 416.031 is the restraint-of-trade baseline that a Missouri choice-of-law clause imports into the covenant analysis.",
+            "verbatimQuote": "Every contract, combination or conspiracy in restraint of trade or commerce in this state is unlawful.",
+            "date": "1974-08-28",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-restraint-policy-law"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Boilerplate with a Missouri consideration trap inside: an amendment that adds or broadens a covenant mid-employment raises the same question as a new covenant — what did the employee get for it? — and the state's highest court has refused to count bare continued at-will employment as an enforceable promise. Review the amendment mechanics so a routine refresh does not quietly create an unsupported covenant.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mo-baker-amendment",
+            "authorityType": "case-law",
+            "title": "Baker v. Bristol Care, Inc.",
+            "citation": "Baker v. Bristol Care, Inc., 450 S.W.3d 770 (Mo. banc 2014).",
+            "url": "https://www.courtlistener.com/opinion/2718919/carla-baker-v-bristol-care-inc-dba-bristol-manor-and-david-furnell/",
+            "deepLink": "https://www.courtlistener.com/opinion/2718919/carla-baker-v-bristol-care-inc-dba-bristol-manor-and-david-furnell/#:~:text=An%20offer%20of%20continued%20at%2Dwill,not%20already%20entitled%20to%20do.",
+            "proposition": "Baker holds continued at-will employment is not valid consideration, the rule an amendment adding covenant obligations must reckon with.",
+            "verbatimQuote": "An offer of continued at-will employment is not valid consideration because the employer makes no legally enforceable promise to do or refrain from doing anything it is not already entitled to do.",
+            "date": "2014-08-19",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-baker-amendment"
+          }
+        ]
+      },
+      {
+        "requirementId": "limit-covenants-to-trade-secrets-or-customer-contacts",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.missouri.limit-covenants-to-trade-secrets-or-customer-contacts",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Tied to trade secrets or customer contacts",
+        "sectionId": "missouri-statutory-gates",
+        "itemNumber": "19.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#limit-covenants-to-trade-secrets-or-customer-contacts",
+        "requirementGuidance": "This is the gate everything else passes through. For each covenant, demand an answer to one question: which trade secret or which customer relationships does this restraint protect? Protection from competition itself is not a recognized interest, and the employer — not the employee — must prove both the interest and the reasonableness of the time and territory built around it. A covenant that cannot answer fails before its duration or geography is ever weighed.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mo-copeland-interest-gate",
+            "authorityType": "case-law",
+            "title": "Healthcare Services of the Ozarks, Inc. v. Copeland",
+            "citation": "Healthcare Servs. of the Ozarks, Inc. v. Copeland, 198 S.W.3d 604 (Mo. banc 2006).",
+            "url": "https://www.courtlistener.com/opinion/1654936/healthcare-services-of-the-ozarks-inc-v-copeland/",
+            "deepLink": "https://www.courtlistener.com/opinion/1654936/healthcare-services-of-the-ozarks-inc-v-copeland/#:~:text=In%20addition%2C%20such%20restrictions%20are,trade%20secrets%20or%20customer%20contacts.",
+            "proposition": "Copeland limits enforceable restraints to those protecting trade secrets or customer contacts — never mere competition — the central Missouri interest gate.",
+            "verbatimQuote": "In addition, such restrictions are not enforceable to protect an employer from mere competition by a former employee, but only to the extent that the restrictions protect the employer’s trade secrets or customer contacts.",
+            "date": "2006-08-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-copeland-interest-gate"
+          },
+          {
+            "sourceId": "mo-whelan-burden-gate",
+            "authorityType": "case-law",
+            "title": "Whelan Security Co. v. Kennebrew",
+            "citation": "Whelan Sec. Co. v. Kennebrew, 379 S.W.3d 835 (Mo. banc 2012).",
+            "url": "https://www.courtlistener.com/opinion/5283000/whelan-security-co-v-kennebrew/",
+            "deepLink": "https://www.courtlistener.com/opinion/5283000/whelan-security-co-v-kennebrew/#:~:text=The%20employer%20has%20the%20burden,to%20time%20and%20geographic%20space.",
+            "proposition": "Whelan places the burden of proving the protectable interest and time/geography reasonableness on the employer.",
+            "verbatimQuote": "The employer has the burden to prove that the non-compete agreement protects its legitimate interests in trade secrets or customer contacts and that the agreement is reasonable as to time and geographic space.",
+            "date": "2012-08-14",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-whelan-burden-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "keep-employee-no-hire-within-one-year-safe-harbor",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.missouri.keep-employee-no-hire-within-one-year-safe-harbor",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee no-hire within the one-year safe harbor",
+        "sectionId": "missouri-statutory-gates",
+        "itemNumber": "19.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#keep-employee-no-hire-within-one-year-safe-harbor",
+        "requirementGuidance": "Check the workforce covenant's clock: a covenant against soliciting, recruiting, or hiring the employer's own employees is conclusively presumed reasonable when its post-employment duration is one year or less — the strongest protection Missouri offers any employment covenant. Two footnotes matter on review: the no-separate-interest route does not cover employees who provide only secretarial or clerical services, and the harbor protects the workforce clause only — it lends nothing to the customer non-solicit or the non-compete sitting next to it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mo-431-202-presumption-gate",
+            "authorityType": "primary-law",
+            "title": "Mo. Rev. Stat. § 431.202",
+            "citation": "Mo. Rev. Stat. § 431.202.2.",
+            "url": "https://revisor.mo.gov/main/OneSection.aspx?section=431.202",
+            "proposition": "Section 431.202 conclusively presumes a qualifying employee no-hire/anti-raiding covenant reasonable if its postemployment duration is no more than one year.",
+            "verbatimQuote": "Whether a covenant covered by this section is reasonable shall be determined based upon the facts and circumstances pertaining to such covenant, but a covenant covered exclusively by subdivision (3) or (4) of subsection 1 of this section shall be conclusively presumed to be reasonable if its postemployment duration is no more than one year.",
+            "date": "2001-07-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-431-202-presumption-gate"
+          },
+          {
+            "sourceId": "mo-431-202-clerical-gate",
+            "authorityType": "primary-law",
+            "title": "Mo. Rev. Stat. § 431.202",
+            "citation": "Mo. Rev. Stat. § 431.202.1(4).",
+            "url": "https://revisor.mo.gov/main/OneSection.aspx?section=431.202",
+            "proposition": "Section 431.202's one-year route that requires no separate protectable interest excludes purely secretarial or clerical employees.",
+            "verbatimQuote": "Between an employer and one or more employees, notwithstanding the absence of the protectable interests described in subdivision (3) of this subsection, so long as such covenant does not continue for more than one year following the employee's employment; provided, however, that this subdivision shall not apply to covenants signed by employees who provide only secretarial or clerical services.",
+            "date": "2001-07-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-431-202-clerical-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-customer-nonsolicit-to-serviced-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.missouri.narrow-customer-nonsolicit-to-serviced-customers",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit limited to serviced customers",
+        "sectionId": "missouri-statutory-gates",
+        "itemNumber": "19.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#narrow-customer-nonsolicit-to-serviced-customers",
+        "requirementGuidance": "The customer clause should not reach customers the employee had no relationship with — that exact drafting has already been held overbroad by the Missouri Supreme Court, which flagged language sweeping in prospective customers as exceeding the customer-contacts interest. Confirm the covered class is the customers the employee actually serviced or substantially dealt with; that narrower class is what survived, and drafting to it from the start avoids betting the clause on a discretionary judicial rewrite.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mo-whelan-customer-gate",
+            "authorityType": "case-law",
+            "title": "Whelan Security Co. v. Kennebrew",
+            "citation": "Whelan Sec. Co. v. Kennebrew, 379 S.W.3d 835 (Mo. banc 2012).",
+            "url": "https://www.courtlistener.com/opinion/5283000/whelan-security-co-v-kennebrew/",
+            "deepLink": "https://www.courtlistener.com/opinion/5283000/whelan-security-co-v-kennebrew/#:~:text=As%20written%2C%20the%20customer%20non%2Dsolicitation,legitimate%20interest%20in%20customer%20contacts.",
+            "proposition": "Whelan held customer non-solicitation clauses overbroad as written because they exceeded the employer's legitimate customer-contacts interest.",
+            "verbatimQuote": "As written, the customer non-solicitation clauses are more broad than necessary to protect Whelan’s legitimate interest in customer contacts.",
+            "date": "2012-08-14",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-whelan-customer-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "support-covenant-with-independent-consideration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.missouri.support-covenant-with-independent-consideration",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Real consideration beyond continued employment",
+        "sectionId": "missouri-statutory-gates",
+        "itemNumber": "19.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#support-covenant-with-independent-consideration",
+        "requirementGuidance": "Find the consideration, and make sure it is more than the job itself. The Missouri Supreme Court has held that a promise of continued at-will employment binds the employer to nothing, and a federal court applied that reasoning directly to a non-compete; the older cases accepting continued employment plus customer access still stand, but the question is unresolved at the top. A signing bonus, raise, specialized training, or another concrete benefit — recited in the agreement — takes the issue off the table.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mo-baker-gate",
+            "authorityType": "case-law",
+            "title": "Baker v. Bristol Care, Inc.",
+            "citation": "Baker v. Bristol Care, Inc., 450 S.W.3d 770 (Mo. banc 2014).",
+            "url": "https://www.courtlistener.com/opinion/2718919/carla-baker-v-bristol-care-inc-dba-bristol-manor-and-david-furnell/",
+            "deepLink": "https://www.courtlistener.com/opinion/2718919/carla-baker-v-bristol-care-inc-dba-bristol-manor-and-david-furnell/#:~:text=An%20offer%20of%20continued%20at%2Dwill,not%20already%20entitled%20to%20do.",
+            "proposition": "Baker holds a promise of continued at-will employment is not valid consideration because the employer makes no enforceable promise.",
+            "verbatimQuote": "An offer of continued at-will employment is not valid consideration because the employer makes no legally enforceable promise to do or refrain from doing anything it is not already entitled to do.",
+            "date": "2014-08-19",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-baker-gate"
+          },
+          {
+            "sourceId": "mo-durrell-gate",
+            "authorityType": "case-law",
+            "title": "Durrell v. Tech Electronics, Inc.",
+            "citation": "Durrell v. Tech Elecs., Inc., No. 4:16-cv-01367, 2016 WL 6833956 (E.D. Mo. Nov. 15, 2016).",
+            "url": "https://www.govinfo.gov/app/details/USCOURTS-moed-4_16-cv-01367",
+            "proposition": "Durrell applied Baker to a non-compete, holding at-will employment is not a source of consideration under Missouri law.",
+            "verbatimQuote": "An offer of at-will employment, or the continuation of at-will employment, is simply not a source of consideration under Missouri contract law.",
+            "date": "2016-11-15",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-durrell-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "fit-owner-covenants-within-431-204-presumptions",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.missouri.fit-owner-covenants-within-431-204-presumptions",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Owner covenants within the statutory caps",
+        "sectionId": "missouri-statutory-gates",
+        "itemNumber": "19.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#fit-owner-covenants-within-431-204-presumptions",
+        "requirementGuidance": "When the covenant runs between a business entity and one of its owners, test it against the owner statute's presumptions: a covenant protecting the entity's employees and owners holds for up to two years after the owner relationship ends, and a customer covenant holds for up to five years if limited to customers the owner dealt with. Overbroad owner covenants get a different remedy too — the court is directed to modify and enforce as modified rather than choose. Verify genuine ownership before relying on any of it: the statute does not define owner and lends nothing to an ordinary employee's covenant.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mo-431-204-employee-gate",
+            "authorityType": "primary-law",
+            "title": "Mo. Rev. Stat. § 431.204",
+            "citation": "Mo. Rev. Stat. § 431.204.1.",
+            "url": "https://revisor.mo.gov/main/OneSection.aspx?section=431.204",
+            "proposition": "Section 431.204 presumes an owner's covenant not to solicit or interfere with the entity's employees or owners enforceable if it runs no more than two years after the owner's relationship ends.",
+            "verbatimQuote": "A reasonable covenant in writing promising not to solicit, recruit, hire, induce, persuade, encourage, or otherwise interfere with, directly or indirectly, the employment of one or more employees or owners of a business entity shall be presumed to be enforceable and not a restraint of trade pursuant to subsection 1 of section 416.031 if it is between a business entity and the owner of the business entity and does not continue for more than two years following the end of the owner's business relationship with the business entity.",
+            "date": "2023-08-28",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-431-204-employee-gate"
+          },
+          {
+            "sourceId": "mo-431-204-customer-gate",
+            "authorityType": "primary-law",
+            "title": "Mo. Rev. Stat. § 431.204",
+            "citation": "Mo. Rev. Stat. § 431.204.2.",
+            "url": "https://revisor.mo.gov/main/OneSection.aspx?section=431.204",
+            "proposition": "Section 431.204 presumes an owner customer non-solicitation covenant enforceable up to five years if limited to customers the owner dealt with.",
+            "verbatimQuote": "A reasonable covenant in writing promising not to solicit, induce, direct, or otherwise interfere with, directly or indirectly, a business entity's customers, including any reduction, termination, or transfer of any customer's business, in whole or in part, for the purposes of providing any product or any service that is competitive with those provided by the business entity shall be presumed to be enforceable and not a restraint of trade pursuant to subsection 1 of section 416.031 if the covenant is limited to customers with whom the owner dealt and if the covenant is between a business entity and an owner, so long as the covenant does not continue for more than five years following the end of the owner's business relationship with the business entity.",
+            "date": "2023-08-28",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-431-204-customer-gate"
+          },
+          {
+            "sourceId": "mo-431-204-modify-gate",
+            "authorityType": "primary-law",
+            "title": "Mo. Rev. Stat. § 431.204",
+            "citation": "Mo. Rev. Stat. § 431.204.4.",
+            "url": "https://revisor.mo.gov/main/OneSection.aspx?section=431.204",
+            "proposition": "Section 431.204 requires a court to modify an overbroad owner covenant and enforce it as modified — mandatory, unlike the discretionary treatment of employee covenants.",
+            "verbatimQuote": "If a covenant is overbroad, overlong, or otherwise not reasonably necessary to protect the protectable business interests of the business entity seeking enforcement of the covenant, a court shall modify the covenant, enforce the covenant as modified, and grant only the relief reasonably necessary to protect such interests.",
+            "date": "2023-08-28",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/missouri#src-mo-431-204-modify-gate"
+          }
+        ]
+      }
+    ]
+  }
+}

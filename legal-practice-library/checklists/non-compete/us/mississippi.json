@@ -1,0 +1,1279 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/mississippi",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/mississippi.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/mississippi",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/mississippi/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/mississippi/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "mississippi",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — Mississippi",
+      "description": "A clause-by-clause reviewer checklist for Mississippi employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the Texas Road Boring reasonableness balance, the Empiregas bad-faith-termination defense, and the Frierson and Cascio tolling split.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "Mississippi",
+      "coverage": "Mississippi (US)",
+      "lastReviewed": "2026-06-12",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 46,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "label": "Physician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "mississippi-statutory-gates",
+        "label": "Mississippi enforceability gates"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#identify-parties",
+        "requirementGuidance": "Name both parties precisely, then ask what relationship the signing parties actually create: Mississippi reviews an employment covenant strictly, while a covenant tied to a business sale or an ownership buyout earns more favorable treatment — an LLC member remained bound by an operating agreement's non-compete even after his interest was bought out. Check capacity too: a worker who signed as a minor and disaffirmed the agreement cannot be bound by it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ms-wiggins-parties",
+            "authorityType": "case-law",
+            "title": "Wiggins v. Southern Securities Group, LLC",
+            "citation": "Wiggins v. Southern Securities Group, LLC, No. 2024-CA-00251-SCT (Miss. 2025).",
+            "url": "https://www.courtlistener.com/opinion/10840985/robert-c-wiggins-v-southern-securities-group-llc-and-brandi-hoover/",
+            "deepLink": "https://www.courtlistener.com/opinion/10840985/robert-c-wiggins-v-southern-securities-group-llc-and-brandi-hoover/#:~:text=Thus%2C%20based%20on%20the%20evidence,enjoined%20from%20competing%20with%20SSG",
+            "proposition": "Wiggins shows the more favorable ownership-covenant posture: an LLC member remained bound by the operating agreement's non-compete after his interest was bought out, and the injunction enforcing it was affirmed.",
+            "verbatimQuote": "Thus, based on the evidence  presented at the preliminary-injunction hearing, the trial court did not err by finding that the  noncompete provision was binding on Wiggins and that Wiggins was enjoined from  competing with SSG",
+            "date": "2025-12-04",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-ms-wiggins-parties"
+          },
+          {
+            "sourceId": "ms-watercolor-parties",
+            "authorityType": "case-law",
+            "title": "Watercolor Salon, LLC v. Hixon",
+            "citation": "Watercolor Salon, LLC v. Hixon, No. 2021-IA-01151-SCT (Miss. 2022).",
+            "url": "https://www.courtlistener.com/opinion/10627678/watercolor-salon-llc-v-nealie-hixon/",
+            "deepLink": "https://www.courtlistener.com/opinion/10627678/watercolor-salon-llc-v-nealie-hixon/#:~:text=And%20because%20Nealie%20disaffirmed%20the,it%20is%20unenforceable%20against%20her.",
+            "proposition": "Watercolor Salon supports the capacity check: a worker who signed a non-compete as a minor and then disaffirmed it cannot be bound by the agreement.",
+            "verbatimQuote": "And because Nealie  disaffirmed the contract, it is unenforceable against her.",
+            "date": "2022-12-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-ms-watercolor-parties"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#identify-effective-date",
+        "requirementGuidance": "Confirm a stated effective date and reconcile it with the signing date. Every covenant clock in the agreement runs from a defined date, and in a state where a court will not add time at the back end of an expired restraint, the dates as written are the only dates the employer gets.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#identify-employee-title",
+        "requirementGuidance": "Record the title and actual duties, because Mississippi measures the permissible restraint against the employee's real influence rather than the organization chart: a statewide restriction failed where the employee's protectable customer relationships were confined to one local area.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ms-heatherly-title",
+            "authorityType": "case-law",
+            "title": "Redd Pest Control Co. v. Heatherly",
+            "citation": "Redd Pest Control Co. v. Heatherly, 248 Miss. 34, 157 So. 2d 133 (Miss. 1963).",
+            "url": "https://www.courtlistener.com/opinion/1851641/redd-pest-control-co-v-heatherly/",
+            "deepLink": "https://www.courtlistener.com/opinion/1851641/redd-pest-control-co-v-heatherly/#:~:text=We%20are%20of%20the%20opinion,except%20in%20the%20Tupelo%20area.",
+            "proposition": "Heatherly supports recording the employee's actual role: a statewide restraint was unreasonable where the employee's protectable influence was limited to one local area.",
+            "verbatimQuote": "We are of the opinion that the chancellor was justified in finding that it would be unreasonable as to Heatherly to restrict him from engaging in the pest control business throughout the State of Mississippi for the reason that Heatherly possessed no information that would make his competition with Redd unfair except in the Tupelo area.",
+            "date": "1963-11-04",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-ms-heatherly-title"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#identify-governing-law",
+        "requirementGuidance": "Check which state's law the agreement selects, because the selection decides whether the rules on this page govern at all. The practice note stages no Mississippi authority on choice-of-law or forum-selection fights, so treat an out-of-state selection in a Mississippi employment relationship as a flag for counsel review rather than a question this checklist can resolve.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#define-confidential-information",
+        "requirementGuidance": "Confirm the defined term covers information that is genuinely confidential rather than general skill and industry knowledge. Mississippi protects proprietary information by statute under its Uniform Trade Secrets Act independent of any contract, so the contractual definition is the layer that covers valuable information falling short of trade-secret status.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#define-trade-secrets",
+        "requirementGuidance": "Keep Trade Secrets a separate defined term from Confidential Information. The statutory trade-secret remedy — injunctive relief and damages under the Mississippi Uniform Trade Secrets Act — does not depend on a valid covenant, and a separate definition is what lets the perpetual trade-secret track run apart from the finite confidentiality term.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-restricted-period",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#define-restricted-period",
+        "requirementGuidance": "Audit the umbrella Restricted Period against the termination event it runs from: in Mississippi the restricted period runs from the contractual termination date, and a court may not extend the time beyond the date the contract sets. The period as drafted is the period the employer gets, unless an express extension clause says otherwise.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ms-frierson-period",
+            "authorityType": "case-law",
+            "title": "Frierson v. Sheppard Building Supply Co.",
+            "citation": "Frierson v. Sheppard Bldg. Supply Co., 247 Miss. 157, 154 So. 2d 151 (Miss. 1963).",
+            "url": "https://www.courtlistener.com/opinion/1722477/frierson-v-sheppard-building-supply-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/1722477/frierson-v-sheppard-building-supply-co/#:~:text=Having%20made%20the%20contract%20limiting,the%20time%20beyond%20that%20date.",
+            "proposition": "Frierson anchors the restricted-period clock: where the contract limits the restraint to a fixed period running from termination, a court may not extend the time beyond that date.",
+            "verbatimQuote": "Having made the contract limiting the period to two years from the date of termination of employment, the court may not extend the time beyond that date.",
+            "date": "1963-06-10",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-ms-frierson-period"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-territory",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-territory",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted territory",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#define-restricted-territory",
+        "requirementGuidance": "Tie the territory to the employer's actual footprint and the employee's real reach: a statewide restraint was unreasonable where the employee's protectable influence stopped at one local market. Remember the converse as well — a remote worker whose home sits inside the restricted radius is still bound, because geography keys on where the employee operates, not only where the customers sit.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ms-heatherly-territory",
+            "authorityType": "case-law",
+            "title": "Redd Pest Control Co. v. Heatherly",
+            "citation": "Redd Pest Control Co. v. Heatherly, 248 Miss. 34, 157 So. 2d 133 (Miss. 1963).",
+            "url": "https://www.courtlistener.com/opinion/1851641/redd-pest-control-co-v-heatherly/",
+            "deepLink": "https://www.courtlistener.com/opinion/1851641/redd-pest-control-co-v-heatherly/#:~:text=We%20are%20of%20the%20opinion,except%20in%20the%20Tupelo%20area.",
+            "proposition": "Heatherly supports sizing the territory to the employee's real influence: a statewide pest-control restraint was unreasonable where the employee's protectable information was limited to the Tupelo area.",
+            "verbatimQuote": "We are of the opinion that the chancellor was justified in finding that it would be unreasonable as to Heatherly to restrict him from engaging in the pest control business throughout the State of Mississippi for the reason that Heatherly possessed no information that would make his competition with Redd unfair except in the Tupelo area.",
+            "date": "1963-11-04",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-ms-heatherly-territory"
+          },
+          {
+            "sourceId": "ms-timber-lake-remote",
+            "authorityType": "case-law",
+            "title": "Timber Lake Foods, Inc. v. Estess",
+            "citation": "Timber Lake Foods, Inc. v. Estess, 72 So. 3d 521 (Miss. Ct. App. 2011).",
+            "url": "https://www.courtlistener.com/opinion/5053376/timber-lake-foods-inc-v-estess/",
+            "deepLink": "https://www.courtlistener.com/opinion/5053376/timber-lake-foods-inc-v-estess/#:~:text=She%20testified%20that%20she%20had,within%20250%20miles%20of%20Tupelo.",
+            "proposition": "Timber Lake shows that a remote employee working from a home located inside the restricted radius falls within the geographic restraint even when customers are elsewhere.",
+            "verbatimQuote": "She testified that she had worked out of Lawrence’s main office in California and from her home located in Baldwyn, Mississippi, which is within 250 miles of Tupelo.",
+            "date": "2011-03-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-ms-timber-lake-remote"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered customers",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#define-covered-customers",
+        "requirementGuidance": "Bound the class to customers the employee actually served or influenced during a stated look-back window. The employer must prove the restraint protects customer goodwill rather than suppresses ordinary competition, and a customer class wider than the employee's real relationships is where that proof usually fails.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#define-covered-employees",
+        "requirementGuidance": "Keep the no-poach class to colleagues the departing employee actually worked with during the look-back window. The practice note stages no Mississippi authority specific to employee non-solicits, so the clause stands on ordinary reasonableness — which makes a workforce-wide class the hardest version to defend.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#define-protected-interests",
+        "requirementGuidance": "Name the interests concretely — trade secrets, confidential information, customer goodwill, or an investment in specialized training. Mississippi treats these covenants as restraints on trade and individual freedom, disfavored and construed strictly against the drafter, so a recital that only gestures at competition gives the employer nothing to carry its burden with.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ms-redd-foster-interests",
+            "authorityType": "case-law",
+            "title": "Redd Pest Control Co. v. Foster",
+            "citation": "Redd Pest Control Co. v. Foster, 761 So. 2d 967 (Miss. Ct. App. 2000).",
+            "url": "https://www.courtlistener.com/opinion/1770475/redd-pest-control-co-inc-v-foster/",
+            "deepLink": "https://www.courtlistener.com/opinion/1770475/redd-pest-control-co-inc-v-foster/#:~:text=Contracts%20which%20contain%20non%2Dcompete%20agreements,not%20favored%20by%20the%20law.",
+            "proposition": "Foster supports demanding a concrete protectable interest: Mississippi views non-competes as contracts that restrict trade and individual freedom and does not favor them.",
+            "verbatimQuote": "Contracts which contain non-compete agreements have been viewed by this Court as contracts that restrict trade and individual freedom and are not favored by the law.",
+            "date": "2000-06-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-ms-redd-foster-interests"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-competitive-business",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Competitive business",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#define-competitive-business",
+        "requirementGuidance": "Define the competing activity by what the employee actually does for the employer rather than every line of the employer's business. The activity restrained is one of the three dimensions the reasonableness gate at the end of this checklist tests, and an any-capacity definition is the usual way that dimension fails.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where the covenant restricts owning or investing in competitors, look for a passive public-stock carve-out below a stated percentage. A covenant that technically bans index funds and ordinary public shares hands the employee an overbreadth argument in a state that already construes the document against the employer.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#define-passive-public-holdings",
+        "requirementGuidance": "Optional drafting mechanics. If the capitalized term appears, confirm its percentage matches the operative carve-out it serves; if it does not appear, inline carve-out language does the same work without a defined term.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.11",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#define-solicit",
+        "requirementGuidance": "Read the verbs harder than anything else in this section: Mississippi held a clause barring conduct that would tend to divert business ambiguous because it did not expressly prohibit accepting business from former clients who came over on their own initiative, and it construed the ambiguity against the employer. If the definition is meant to reach passive acceptance, it has to say so.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ms-kennedy-solicit",
+            "authorityType": "case-law",
+            "title": "Kennedy v. Metropolitan Life Insurance Co.",
+            "citation": "Kennedy v. Metropolitan Life Ins. Co., 759 So. 2d 362 (Miss. 2000).",
+            "url": "https://www.courtlistener.com/opinion/1855498/kennedy-v-metropolitan-life-ins-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/1855498/kennedy-v-metropolitan-life-ins-co/#:~:text=However%2C%20this%20Court%20concludes%20that,business%20with%20a%20former%20employee.",
+            "proposition": "Kennedy supports defining solicitation deliberately: a clause that did not expressly prohibit accepting business from former customers was ambiguous and construed against the employer.",
+            "verbatimQuote": "However, this Court concludes that the non-competition provision in the present case is ambiguous in that, unlike the provisions in Kemper and Girard , the provision in the present case does not expressly prohibit Kennedy from \"accepting\" business with a former employee.",
+            "date": "2000-03-16",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-ms-kennedy-solicit"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.12",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#define-termination-of-employment",
+        "requirementGuidance": "Pin down the trigger event and who can cause it. The restricted period runs from the contractual termination date, and the covenant's enforceability itself can turn on how the employment ended — a bad-faith discharge forfeits enforcement, while a voluntary resignation leaves the covenant on ordinary reasonableness footing.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ms-frierson-period",
+            "authorityType": "case-law",
+            "title": "Frierson v. Sheppard Building Supply Co.",
+            "citation": "Frierson v. Sheppard Bldg. Supply Co., 247 Miss. 157, 154 So. 2d 151 (Miss. 1963).",
+            "url": "https://www.courtlistener.com/opinion/1722477/frierson-v-sheppard-building-supply-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/1722477/frierson-v-sheppard-building-supply-co/#:~:text=Having%20made%20the%20contract%20limiting,the%20time%20beyond%20that%20date.",
+            "proposition": "Frierson anchors the restricted-period clock: where the contract limits the restraint to a fixed period running from termination, a court may not extend the time beyond that date.",
+            "verbatimQuote": "Having made the contract limiting the period to two years from the date of termination of employment, the court may not extend the time beyond that date.",
+            "date": "1963-06-10",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-ms-frierson-period"
+          },
+          {
+            "sourceId": "ms-empiregas-termination",
+            "authorityType": "case-law",
+            "title": "Empiregas, Inc. of Kosciusko v. Bain",
+            "citation": "Empiregas, Inc. of Kosciusko v. Bain, 599 So. 2d 971 (Miss. 1992).",
+            "url": "https://www.courtlistener.com/opinion/1870077/empiregas-inc-of-kosciusko-v-bain/",
+            "deepLink": "https://www.courtlistener.com/opinion/1870077/empiregas-inc-of-kosciusko-v-bain/#:~:text=Moreover%2C%20as%20we%20have%20indicated%2C,agreement%20will%20not%20be%20enforced.",
+            "proposition": "Empiregas makes the termination trigger substantive: when an employer terminates an employee in bad faith, the non-competition agreement will not be enforced.",
+            "verbatimQuote": "Moreover, as we have indicated, when an employer terminates an employee in bad faith, the terms of a non-competition agreement will not be enforced.",
+            "date": "1992-05-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-ms-empiregas-termination"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-timing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-timing",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "When the agreement was signed",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#acknowledge-timing",
+        "requirementGuidance": "Mississippi accepts continued at-will employment alone as sufficient consideration, so a mid-employment covenant does not need a recited raise or bonus to survive. Document the timing anyway: the court scrutinizes the circumstances of signing, and a covenant extracted just before an imminent, bad-faith discharge stands on weaker ground under the enforcement defense covered at the end of this checklist.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ms-raines-timing",
+            "authorityType": "case-law",
+            "title": "Raines v. Bottrell Insurance Agency, Inc.",
+            "citation": "Raines v. Bottrell Ins. Agency, Inc., 992 So. 2d 642 (Miss. Ct. App. 2008).",
+            "url": "https://www.courtlistener.com/opinion/1813535/raines-v-bottrell-ins-agency-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/1813535/raines-v-bottrell-ins-agency-inc/#:~:text=The%20supreme%20court%2C%20however%2C%20has,consideration%20to%20uphold%20a%20contract.",
+            "proposition": "Raines confirms, citing Frierson, that continued employment alone can be sufficient consideration to support a Mississippi restrictive covenant.",
+            "verbatimQuote": "The supreme court, however, has held that continued employment alone can be sufficient consideration to uphold a contract.",
+            "date": "2008-10-16",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-ms-raines-timing"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-opportunity-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Chance to consult a lawyer",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#acknowledge-opportunity-to-consult-counsel",
+        "requirementGuidance": "No Mississippi rule requires it, but the agreement will be construed strictly against the employer who drafted it, and a documented opportunity to take the document to a lawyer is inexpensive evidence of fair dealing if procedural fairness is later questioned in chancery.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "Trade-secret obligations should run for as long as the information stays secret — that is how federal law defines the right — while everything else carries a finite term. Keeping the two tracks separate preserves the statutory claim that does not depend on the covenant surviving review.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-trade-secret-definition",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
+            "citation": "18 U.S.C. § 1839(3)(B) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1839",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
+            "proposition": "Federal law keys trade-secret status to continued secrecy, which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-dtsa-trade-secret-definition"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#state-confidentiality-duration",
+        "requirementGuidance": "Give non-trade-secret confidential information its own stated end date. A perpetual lid on ordinary business information reads as exactly the kind of overreach a Mississippi court weighs against the employer when it balances the restraint against the employee's freedom to work.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#disclose-dtsa-notice",
+        "requirementGuidance": "Federal and non-negotiable: an employer that omits the immunity notice forfeits exemplary damages and attorney fees in a later trade-secret action against the worker. Verify the notice, or a compliant policy cross-reference, appears in any agreement governing confidential information.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-immunity-notice",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-dtsa-immunity-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Check that the confidentiality and non-disparagement clauses leave room for employees to discuss wages, hours, and working conditions. Section 7 protects that activity regardless of which state's law governs the agreement, and the Board has held that merely offering employees overbroad terms violates the Act.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nlra-section-7-rights",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-nlra-section-7-rights"
+          },
+          {
+            "sourceId": "mclaren-macomb-protected-activity",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-mclaren-macomb-protected-activity"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#permit-compelled-disclosure",
+        "requirementGuidance": "Confirm the carve-out permitting disclosure required by law, court order, or a government investigation, with notice to the employer where lawful. No confidentiality clause can block compelled disclosure, and drafting as though it could invites the strict-against-the-drafter reading Mississippi already applies to the whole document.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#require-property-return-and-certification",
+        "requirementGuidance": "Return-or-destroy at separation, certified in writing. The exit protocol is both a reasonable secrecy effort supporting trade-secret status and the contemporaneous record the employer wants in hand before asking a chancellor for an injunction over material that later surfaces at a competitor.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-employee-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#permit-employee-nonsolicit",
+        "requirementGuidance": "Optional, and the covenant with the least Mississippi-specific law behind it: the practice note stages no authority on employee no-poach clauses, so review this one on ordinary reasonableness — a class limited to colleagues the employee actually worked with, for a defensible period, in service of a named interest.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-customer-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#permit-customer-nonsolicit",
+        "requirementGuidance": "Optional and usually the employer's sturdiest restraint here, because Mississippi recognizes that a properly drafted clause reaching former customers can be reasonable and enforceable. The drafting, not the concept, is what failed in the leading case — so route this clause through the express-language gate at the end of this checklist before relying on it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ms-kennedy-covenants",
+            "authorityType": "case-law",
+            "title": "Kennedy v. Metropolitan Life Insurance Co.",
+            "citation": "Kennedy v. Metropolitan Life Ins. Co., 759 So. 2d 362 (Miss. 2000).",
+            "url": "https://www.courtlistener.com/opinion/1855498/kennedy-v-metropolitan-life-ins-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/1855498/kennedy-v-metropolitan-life-ins-co/#:~:text=This%20Court%20agrees%20with%20Met,reasonable%20and%20enforceable%20non%2Dcompete%20provision.",
+            "proposition": "Kennedy recognizes that a clause barring an ex-employee from accepting business from former customers can, in appropriate cases, be reasonable and enforceable — the concept is sound when the drafting is express.",
+            "verbatimQuote": "This Court agrees with Met Life that a non-compete provision which prohibits an ex-employee from accepting business with his former customers may, in appropriate cases, constitute a reasonable and enforceable non-compete provision.",
+            "date": "2000-03-16",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-ms-kennedy-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-dealing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#permit-non-dealing",
+        "requirementGuidance": "Non-dealing bars serving a covered customer even when the customer makes the first call — which is precisely the conduct Mississippi will not infer from solicitation language alone. If non-dealing is intended, the clause must say so expressly, and because it is a heavier restraint than a non-solicit, scope it at least as tightly.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ms-kennedy-covenants",
+            "authorityType": "case-law",
+            "title": "Kennedy v. Metropolitan Life Insurance Co.",
+            "citation": "Kennedy v. Metropolitan Life Ins. Co., 759 So. 2d 362 (Miss. 2000).",
+            "url": "https://www.courtlistener.com/opinion/1855498/kennedy-v-metropolitan-life-ins-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/1855498/kennedy-v-metropolitan-life-ins-co/#:~:text=This%20Court%20agrees%20with%20Met,reasonable%20and%20enforceable%20non%2Dcompete%20provision.",
+            "proposition": "Kennedy recognizes that a clause barring an ex-employee from accepting business from former customers can, in appropriate cases, be reasonable and enforceable — the concept is sound when the drafting is express.",
+            "verbatimQuote": "This Court agrees with Met Life that a non-compete provision which prohibits an ex-employee from accepting business with his former customers may, in appropriate cases, constitute a reasonable and enforceable non-compete provision.",
+            "date": "2000-03-16",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-ms-kennedy-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-compete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#permit-non-compete",
+        "requirementGuidance": "If a non-compete appears, route it straight through the Mississippi gates at the end of this checklist: the covenant is disfavored, construed strictly against the employer, and enforceable only if the employer proves it reasonable across time, territory, and restrained activity under the three-interest balance. Note the posture shift when the covenant rides a business sale or ownership settlement — Mississippi treats a restraint protecting conveyed goodwill more favorably than a pure employment restraint.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ms-texas-road-boring-covenants",
+            "authorityType": "case-law",
+            "title": "Texas Road Boring Co. of Louisiana-Mississippi v. Parker",
+            "citation": "Texas Road Boring Co. of La.-Miss. v. Parker, 194 So. 2d 885 (Miss. 1967).",
+            "url": "https://www.courtlistener.com/opinion/1880375/texas-road-boring-co-of-louisiana-miss-v-parker/",
+            "deepLink": "https://www.courtlistener.com/opinion/1880375/texas-road-boring-co-of-louisiana-miss-v-parker/#:~:text=Non%2Dcompetition%20agreements%20are%20not%20favored,the%20rights%20of%20the%20public.",
+            "proposition": "Texas Road Boring states the framework a Mississippi non-compete must survive: the covenant is disfavored and tested by balancing the rights of the employer, the employee, and the public.",
+            "verbatimQuote": "Non-competition agreements are not favored in law and in considering them, courts recognize there are three major aspects to be looked to: the rights of the employer, the rights of the employee, and the rights of the public.",
+            "date": "1967-02-20",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-ms-texas-road-boring-covenants"
+          },
+          {
+            "sourceId": "ms-redd-foster-covenants",
+            "authorityType": "case-law",
+            "title": "Redd Pest Control Co. v. Foster",
+            "citation": "Redd Pest Control Co. v. Foster, 761 So. 2d 967 (Miss. Ct. App. 2000).",
+            "url": "https://www.courtlistener.com/opinion/1770475/redd-pest-control-co-inc-v-foster/",
+            "deepLink": "https://www.courtlistener.com/opinion/1770475/redd-pest-control-co-inc-v-foster/#:~:text=Contracts%20which%20contain%20non%2Dcompete%20agreements,not%20favored%20by%20the%20law.",
+            "proposition": "Foster restates the strict-construction posture: non-competes restrict trade and individual freedom and are not favored by Mississippi law.",
+            "verbatimQuote": "Contracts which contain non-compete agreements have been viewed by this Court as contracts that restrict trade and individual freedom and are not favored by the law.",
+            "date": "2000-06-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-ms-redd-foster-covenants"
+          },
+          {
+            "sourceId": "ms-cooper-covenants",
+            "authorityType": "case-law",
+            "title": "Cooper v. Gidden",
+            "citation": "Cooper v. Gidden, 515 So. 2d 900 (Miss. 1987).",
+            "url": "https://www.courtlistener.com/opinion/1898073/cooper-v-gidden/",
+            "deepLink": "https://www.courtlistener.com/opinion/1898073/cooper-v-gidden/#:~:text=A%20covenant%20not%20to%20compete%20will,only%20to%20the%20original%20obligee.",
+            "proposition": "Cooper supports the more favorable sale-of-business posture: a covenant protecting conveyed goodwill is given general application unless its own terms make it personal to the original buyer.",
+            "verbatimQuote": "A covenant not to compete will be given general application unless, by its own terms, it specifically expresses an intent that it be a personal covenant flowing only to the original obligee.",
+            "date": "1987-11-12",
+            "pullQuoteLocator": "A covenant not to compete will|only to the original obligee.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-ms-cooper-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Named-competitor narrowing",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementGuidance": "When the employer can name its actual competitors, bind the names rather than leaning on the open-ended Competitive Business definition. Mississippi measures the restraint against the employer's real market and the employee's real influence, and a named list is the cheapest way to keep the activity dimension inside that line.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#permit-non-investment",
+        "requirementGuidance": "Rare and deliberate. Confirm the passive-holdings carve-out is intact and the clause shares the defined Restricted Period, then weigh it under the same disfavored-restraint balance as the rest of the suite — an investment ban is the covenant hardest to tie to customer goodwill or confidential information.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#require-non-disparagement",
+        "requirementGuidance": "Include it with a stated duration and the standard carve-outs — truthful testimony, statements to government agencies, and protected workplace speech. The federal limits do the real work on this clause, because the Board holds that offering employees overbroad non-disparagement terms is itself unlawful, whatever Mississippi contract law would tolerate.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mclaren-macomb-nondisparagement",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-mclaren-macomb-nondisparagement"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-physician-specific-rights",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Physician and health-care terms",
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#address-physician-specific-rights",
+        "requirementGuidance": "Mississippi has no statutory ban on physician or health care non-competes: bills to void them have been introduced repeatedly — most recently House Bill 500 in 2026 — and every one has failed, so a health-care covenant is tested on ordinary reasonableness like any other restraint on this page. Keep the dedicated clause for whatever physician-specific terms the agreement carries, and treat the failed bills as monitoring items, not law: recheck the Legislature's bill status each session before advising that no ban applies.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ms-hb500-monitoring",
+            "authorityType": "primary-law",
+            "title": "Mississippi House Bill 500 (2026 Reg. Sess.)",
+            "citation": "2026 Miss. H.B. 500 (Reg. Sess.).",
+            "url": "https://billstatus.ls.state.ms.us/documents/2026/pdf/HB/0500-0599/HB0500IN.pdf",
+            "proposition": "HB 500, a 2026 bill that died in committee, would have voided restrictions on a licensed health care provider's right to practice — a monitoring item, not current law.",
+            "verbatimQuote": "Any contract or agreement that creates, establishes or modifies the terms of a partnership, employment or any other form of professional relationship with a health care provider who is licensed in Mississippi, which includes any restriction of the right of the health care provider to practice his or her profession or occupation in any geographic area for any period of time after the termination of such partnership, employment or professional relationship, shall be void and unenforceable with respect to that restriction.",
+            "date": "2026-01-12",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-ms-hb500-monitoring"
+          },
+          {
+            "sourceId": "ms-sb2685-monitoring",
+            "authorityType": "primary-law",
+            "title": "Mississippi Senate Bill 2685 (2018 Reg. Sess.)",
+            "citation": "2018 Miss. S.B. 2685 (Reg. Sess.).",
+            "url": "https://billstatus.ls.state.ms.us/documents/2018/pdf/SB/2600-2699/SB2685IN.pdf",
+            "proposition": "SB 2685, a 2018 physician bill that failed on the Senate floor, would have voided contractual restrictions on a physician's right to practice medicine — part of the failed-bill pattern worth monitoring.",
+            "verbatimQuote": "If a provision in a contract that creates or establishes the terms of a partnership, employment, or any other form of professional relationship with a physician includes any restriction of the right of the physician to practice medicine, that provision shall be void and unenforceable with respect to the restriction.",
+            "date": "2018-01-15",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-ms-sb2685-monitoring"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "Check for the employee's representation that no prior covenant or court order blocks the new role. It surfaces an earlier employer's restraint before the first customer call, and it gives this employer an answer to a tortious-interference theory built on knowingly hiring into someone else's covenant.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#address-notice-to-future-employers",
+        "requirementGuidance": "A drafting choice, not a default. A notice clause can support enforcement, but a warning letter resting on a covenant that fails the reasonableness balance — or that the employer forfeited through a bad-faith firing — is raw material for a tortious-interference counterclaim. Condition any third-party notice on a covenant the employer still believes survives the gates at the end of this checklist.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-tolling-with-an-express-extension-clause",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.mississippi.address-tolling-with-an-express-extension-clause",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Express extension during a breach",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#address-tolling-with-an-express-extension-clause",
+        "requirementGuidance": "Mississippi splits this question down the middle, so check both halves. A court will not add the time on its own: where the contract limits the period to a term running from termination, the court may not extend the time beyond that date, and nothing tolls automatically while the former employee is in breach or litigation is pending. An express clause is a different matter — an agreement that extended the non-compete period by the time the covenantor was in breach was given effect, with the covenant extended and injunctive relief awarded for a continuing breach. If the employer wants the clock to pause, the clause must say so expressly and tie the extension to the actual breach period; an open-ended automatic extension risks turning a fixed restraint into a perpetual one.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ms-frierson-tolling",
+            "authorityType": "case-law",
+            "title": "Frierson v. Sheppard Building Supply Co.",
+            "citation": "Frierson v. Sheppard Bldg. Supply Co., 247 Miss. 157, 154 So. 2d 151 (Miss. 1963).",
+            "url": "https://www.courtlistener.com/opinion/1722477/frierson-v-sheppard-building-supply-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/1722477/frierson-v-sheppard-building-supply-co/#:~:text=Having%20made%20the%20contract%20limiting,the%20time%20beyond%20that%20date.",
+            "proposition": "Frierson holds that, where the contract limits the restraint to a fixed period running from termination, a court may not extend the time beyond that date — there is no judicial tolling.",
+            "verbatimQuote": "Having made the contract limiting the period to two years from the date of termination of employment, the court may not extend the time beyond that date.",
+            "date": "1963-06-10",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-ms-frierson-tolling"
+          },
+          {
+            "sourceId": "ms-cascio-clause",
+            "authorityType": "case-law",
+            "title": "Cascio v. Cascio Investments, LLC",
+            "citation": "Cascio v. Cascio Investments, LLC, 327 So. 3d 59 (Miss. 2021).",
+            "url": "https://www.courtlistener.com/opinion/10627857/philip-t-cascio-jr-v-cascio-investments-llc-jackie-cascio-pearson-and/",
+            "deepLink": "https://www.courtlistener.com/opinion/10627857/philip-t-cascio-jr-v-cascio-investments-llc-jackie-cascio-pearson-and/#:~:text=Further%2C%20in%20the%20event%20of,terms%20of%20this%20Non%2DCompetition%20Agreement.",
+            "proposition": "Cascio shows the express-clause route: the agreement provided that the non-compete period would be extended by the time the covenantor was in breach, even past its ordinary expiration.",
+            "verbatimQuote": "Further, in the event of any breach of this agreement, the        time period of non-competition shall be extended by the time the undersigned        was in breach, even if the time period of non-competition would have        otherwise expired according to the terms of this Non-Competition Agreement.",
+            "date": "2021-08-26",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-ms-cascio-clause"
+          },
+          {
+            "sourceId": "ms-cascio-effect",
+            "authorityType": "case-law",
+            "title": "Cascio v. Cascio Investments, LLC",
+            "citation": "Cascio v. Cascio Investments, LLC, 327 So. 3d 59 (Miss. 2021).",
+            "url": "https://www.courtlistener.com/opinion/10627857/philip-t-cascio-jr-v-cascio-investments-llc-jackie-cascio-pearson-and/",
+            "deepLink": "https://www.courtlistener.com/opinion/10627857/philip-t-cascio-jr-v-cascio-investments-llc-jackie-cascio-pearson-and/#:~:text=Also%2C%20injunctive%20relief%20was%20awarded,the%20C%2D%20Rental%20trade%20name.",
+            "proposition": "Cascio shows a Mississippi court giving an extension-on-breach clause effect by extending the covenant and awarding injunctive relief for a continuing breach.",
+            "verbatimQuote": "Also,  injunctive relief was awarded by extending the NCA for Cascio’s failure to cancel the C-  Rental trade name.",
+            "date": "2021-08-26",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-ms-cascio-effect"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#require-injunctive-relief-availability",
+        "requirementGuidance": "Look for the irreparable-harm acknowledgement, then remember what kind of remedy this is: an injunction is equitable, and a chancellor who finds the employee's termination arbitrary, capricious, or in bad faith can refuse to lend the hand of equity no matter what the agreement recites. The recital smooths the path to relief; it cannot clean the employer's hands.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ms-empiregas-remedies",
+            "authorityType": "case-law",
+            "title": "Empiregas, Inc. of Kosciusko v. Bain",
+            "citation": "Empiregas, Inc. of Kosciusko v. Bain, 599 So. 2d 971 (Miss. 1992).",
+            "url": "https://www.courtlistener.com/opinion/1870077/empiregas-inc-of-kosciusko-v-bain/",
+            "deepLink": "https://www.courtlistener.com/opinion/1870077/empiregas-inc-of-kosciusko-v-bain/#:~:text=However%2C%20when%20the%20Chancellor%20finds,refusing%20to%20enforce%20the%20agreement.",
+            "proposition": "Empiregas ties enforcement to equity: where the termination was arbitrary, capricious, or in bad faith, the chancellor may refuse to enforce the agreement.",
+            "verbatimQuote": "However, when the Chancellor finds that the employee's termination was arbitrary, capricious or in bad faith, he can \"lend the hand of equity\" in refusing to enforce the agreement.",
+            "date": "1992-05-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-ms-empiregas-remedies"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-attorneys-fees-and-costs",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Attorney-fee shifting",
+        "sectionId": "remedies",
+        "itemNumber": "13.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#address-attorneys-fees-and-costs",
+        "requirementGuidance": "A commercial choice. The practice note stages no Mississippi fee-shifting rule specific to restrictive covenants, so review the clause on ordinary contract terms: if the agreement is silent, each side bears its own fees under the default American Rule.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-equitable-reformation-without-relying-on-it",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.mississippi.permit-equitable-reformation-without-relying-on-it",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Reformation permitted, never relied on",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#permit-equitable-reformation-without-relying-on-it",
+        "requirementGuidance": "Mississippi will often narrow rather than void: an overbroad covenant is enforced to the extent it is reasonable, and the leading case cut a facially statewide restraint down to one town and a fifty-mile radius after framing the question as whether the reasonable part of a partly unreasonable covenant should be enforced. Permit reformation in the severability clause, but never draft in reliance on it — partial enforcement is the chancellor's equitable discretion, a grossly overbroad covenant invites refusal rather than rescue, and the safer structure is tiered, severable restraints each defensible standing alone.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ms-heatherly-reasonable-part",
+            "authorityType": "case-law",
+            "title": "Redd Pest Control Co. v. Heatherly",
+            "citation": "Redd Pest Control Co. v. Heatherly, 248 Miss. 34, 157 So. 2d 133 (Miss. 1963).",
+            "url": "https://www.courtlistener.com/opinion/1851641/redd-pest-control-co-v-heatherly/",
+            "deepLink": "https://www.courtlistener.com/opinion/1851641/redd-pest-control-co-v-heatherly/#:~:text=There%20is%20no%20sound%20reason,protects%20a%20legitimate%20business%20interest.",
+            "proposition": "Heatherly enforces an overbroad covenant only to the extent it is reasonable, protecting a legitimate business interest rather than voiding the agreement entirely.",
+            "verbatimQuote": "There is no sound reason why the contract should not be enforced to the extent that it is reasonable since it protects a legitimate business interest.",
+            "date": "1963-11-04",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-ms-heatherly-reasonable-part"
+          },
+          {
+            "sourceId": "ms-heatherly-question",
+            "authorityType": "case-law",
+            "title": "Redd Pest Control Co. v. Heatherly",
+            "citation": "Redd Pest Control Co. v. Heatherly, 248 Miss. 34, 157 So. 2d 133 (Miss. 1963).",
+            "url": "https://www.courtlistener.com/opinion/1851641/redd-pest-control-co-v-heatherly/",
+            "deepLink": "https://www.courtlistener.com/opinion/1851641/redd-pest-control-co-v-heatherly/#:~:text=The%20second%20question%20raised%20by,as%20to%20the%20reasonable%20part.",
+            "proposition": "Heatherly frames the reformation question as whether a covenant reasonable as to part of its territory and unreasonable as to the rest should be enforced as to the reasonable part.",
+            "verbatimQuote": "The second question raised by appellant is whether an agreement restricting competition which is reasonable as to part of the territory described in the agreement but unreasonable as to the rest should be enforced as to the reasonable part.",
+            "date": "1963-11-04",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-ms-heatherly-question"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#address-survival-per-covenant",
+        "requirementGuidance": "Per-covenant survival keeps each clock independently auditable — perpetual for trade secrets, finite everywhere else. The discipline pays twice in Mississippi: separately stated restraints are easier to enforce to their reasonable extent, and a single bundled survival clause obscures exactly the per-covenant timing a reviewer needs to test.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "assign-employee-covenants-expressly-and-before-departure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.mississippi.assign-employee-covenants-expressly-and-before-departure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Express, timely assignment to successors",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#assign-employee-covenants-expressly-and-before-departure",
+        "requirementGuidance": "Confirm an express assignability clause, and in any deal, move the covenant deliberately: a business buyer could not enforce an employee's non-compete where the asset-purchase agreement's plain language did not transfer the employment contract and a later assignment came after the employee had already resigned. The two regimes are mirror images — the seller's own covenant travels with the goodwill conveyed unless its terms make it personal, while an employee's covenant is just another contract that must be assigned expressly, in the deal documents, before the employee departs.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ms-herring-assignment",
+            "authorityType": "case-law",
+            "title": "Herring Gas Co. v. Pine Belt Gas, Inc.",
+            "citation": "Herring Gas Co. v. Pine Belt Gas, Inc., 2 So. 3d 636 (Miss. 2009).",
+            "url": "https://www.courtlistener.com/opinion/5104773/herring-gas-co-v-pine-belt-gas-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/5104773/herring-gas-co-v-pine-belt-gas-inc/#:~:text=We%20find%20that%20the%20covenant,it%20occurred%20after%20Rutland%E2%80%99s%20resignation.",
+            "proposition": "Herring Gas holds that an asset buyer could not enforce a predecessor's employee non-compete where the purchase agreement did not transfer it and a later assignment came after the employee resigned.",
+            "verbatimQuote": "We find that the covenant not to compete contained within Rutland’s employment contract with Broome Gas may not be enforced by Herring Gas against Pine Belt Gas for the following two reasons: (1) the plain language of the asset-purchase agreement precludes enforcement; and (2) the purported assignment of Rutland’s employment contract after the sale of assets was of no effect because it occurred after Rutland’s resignation.",
+            "date": "2009-02-12",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-ms-herring-assignment"
+          },
+          {
+            "sourceId": "ms-cooper-assignment",
+            "authorityType": "case-law",
+            "title": "Cooper v. Gidden",
+            "citation": "Cooper v. Gidden, 515 So. 2d 900 (Miss. 1987).",
+            "url": "https://www.courtlistener.com/opinion/1898073/cooper-v-gidden/",
+            "deepLink": "https://www.courtlistener.com/opinion/1898073/cooper-v-gidden/#:~:text=A%20covenant%20not%20to%20compete%20will,only%20to%20the%20original%20obligee.",
+            "proposition": "Cooper supplies the mirror-image rule: a covenant given by the seller of a business travels with the goodwill conveyed and is given general application unless the contract makes it personal to the original obligee.",
+            "verbatimQuote": "A covenant not to compete will be given general application unless, by its own terms, it specifically expresses an intent that it be a personal covenant flowing only to the original obligee.",
+            "date": "1987-11-12",
+            "pullQuoteLocator": "A covenant not to compete will|only to the original obligee.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-ms-cooper-assignment"
+          }
+        ]
+      },
+      {
+        "requirementId": "specify-governing-law-and-venue",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.specify-governing-law-and-venue",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law, venue, dispute process",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#specify-governing-law-and-venue",
+        "requirementGuidance": "Confirm the agreement states its governing law, venue, and dispute-resolution process. The practice note stages no Mississippi choice-of-law or forum-selection authority for these covenants, so the neutral instruction stands: name the selections clearly, and flag any out-of-state choice in a Mississippi employment relationship for counsel review rather than assuming how a court would resolve it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Standard boilerplate with a Mississippi inflection: because the covenant is construed strictly against the drafting employer, the integration and written-amendment mechanics are what keep an informal side promise or an unsigned revision from muddying which restraint text the chancellor actually reads.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "prove-reasonableness-in-time-territory-and-activity",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.mississippi.prove-reasonableness-in-time-territory-and-activity",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Reasonable in time, territory, and activity",
+        "sectionId": "mississippi-statutory-gates",
+        "itemNumber": "19.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#prove-reasonableness-in-time-territory-and-activity",
+        "requirementGuidance": "Run the covenant through the balance first: Mississippi weighs the rights of the employer, the rights of the employee, and the rights of the public, and the enforcing employer carries the burden of proving the restraint reasonable in duration, territory, and restrained activity, in service of a legitimate business interest rather than the suppression of ordinary competition. The law's stated job is to maintain a reasonable balance between protection and the freedom to work, and scope is measured against the employee's real influence — a statewide restraint failed where the employee's relationships were local, while a 250-mile radius held for a telephonic business whose market would have justified even a nationwide limit.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ms-texas-road-boring-gate",
+            "authorityType": "case-law",
+            "title": "Texas Road Boring Co. of Louisiana-Mississippi v. Parker",
+            "citation": "Texas Road Boring Co. of La.-Miss. v. Parker, 194 So. 2d 885 (Miss. 1967).",
+            "url": "https://www.courtlistener.com/opinion/1880375/texas-road-boring-co-of-louisiana-miss-v-parker/",
+            "deepLink": "https://www.courtlistener.com/opinion/1880375/texas-road-boring-co-of-louisiana-miss-v-parker/#:~:text=Non%2Dcompetition%20agreements%20are%20not%20favored,the%20rights%20of%20the%20public.",
+            "proposition": "Texas Road Boring states Mississippi's framework that non-competition agreements are disfavored and tested by balancing the rights of the employer, the employee, and the public.",
+            "verbatimQuote": "Non-competition agreements are not favored in law and in considering them, courts recognize there are three major aspects to be looked to: the rights of the employer, the rights of the employee, and the rights of the public.",
+            "date": "1967-02-20",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-ms-texas-road-boring-gate"
+          },
+          {
+            "sourceId": "ms-donahoe-gate",
+            "authorityType": "case-law",
+            "title": "Donahoe v. Tatum",
+            "citation": "Donahoe v. Tatum, 242 Miss. 253, 134 So. 2d 442 (Miss. 1961).",
+            "url": "https://www.courtlistener.com/opinion/1748183/donahoe-v-tatum-dba-personnel-serv/",
+            "deepLink": "https://www.courtlistener.com/opinion/1748183/donahoe-v-tatum-dba-personnel-serv/#:~:text=It%20is%20the%20law's%20function,reasonable%20balance%20in%20this%20area.",
+            "proposition": "Donahoe describes the court's role as maintaining a reasonable balance between an employer's protection and an employee's freedom to work.",
+            "verbatimQuote": "It is the law's function to maintain a reasonable balance in this area.",
+            "date": "1961-11-20",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-ms-donahoe-gate"
+          },
+          {
+            "sourceId": "ms-heatherly-gate",
+            "authorityType": "case-law",
+            "title": "Redd Pest Control Co. v. Heatherly",
+            "citation": "Redd Pest Control Co. v. Heatherly, 248 Miss. 34, 157 So. 2d 133 (Miss. 1963).",
+            "url": "https://www.courtlistener.com/opinion/1851641/redd-pest-control-co-v-heatherly/",
+            "deepLink": "https://www.courtlistener.com/opinion/1851641/redd-pest-control-co-v-heatherly/#:~:text=We%20are%20of%20the%20opinion,except%20in%20the%20Tupelo%20area.",
+            "proposition": "Heatherly holds a statewide restraint unreasonable where the employee's protectable influence was limited to one local area — scope is measured against the employee's real reach.",
+            "verbatimQuote": "We are of the opinion that the chancellor was justified in finding that it would be unreasonable as to Heatherly to restrict him from engaging in the pest control business throughout the State of Mississippi for the reason that Heatherly possessed no information that would make his competition with Redd unfair except in the Tupelo area.",
+            "date": "1963-11-04",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-ms-heatherly-gate"
+          },
+          {
+            "sourceId": "ms-timber-lake-gate",
+            "authorityType": "case-law",
+            "title": "Timber Lake Foods, Inc. v. Estess",
+            "citation": "Timber Lake Foods, Inc. v. Estess, 72 So. 3d 521 (Miss. Ct. App. 2011).",
+            "url": "https://www.courtlistener.com/opinion/5053376/timber-lake-foods-inc-v-estess/",
+            "deepLink": "https://www.courtlistener.com/opinion/5053376/timber-lake-foods-inc-v-estess/#:~:text=Since%20we%20find%20that%20a,radius%20of%20Tupelo%20was%20unreasonable.",
+            "proposition": "Timber Lake upholds a 250-mile radius as reasonable because a nationwide restriction would itself have reasonably protected the employer's telephonic brokerage business.",
+            "verbatimQuote": "Since we find that a nationwide geographic restriction would have reasonably protected Timber Lake’s interests, we cannot say that Timber Lake’s effort to balance Stephanie’s interest by reducing that restriction to within a 250-mile radius of Tupelo was unreasonable.",
+            "date": "2011-03-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-ms-timber-lake-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "forgo-enforcement-after-a-bad-faith-termination",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.mississippi.forgo-enforcement-after-a-bad-faith-termination",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No enforcement after a bad-faith firing",
+        "sectionId": "mississippi-statutory-gates",
+        "itemNumber": "19.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#forgo-enforcement-after-a-bad-faith-termination",
+        "requirementGuidance": "Before anyone relies on the covenant, ask how the employment ended: when an employer terminates an employee in bad faith, the terms of a non-competition agreement will not be enforced, and a chancellor who finds the discharge arbitrary, capricious, or in bad faith can refuse to lend the hand of equity to the employer who caused it. No clause drafts around the defense — a covenant perfectly reasonable on its face still fails on these facts. The limit runs the other way too: an employee who voluntarily resigns generally cannot invoke it, and the covenant is then tested on ordinary reasonableness.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ms-empiregas-gate",
+            "authorityType": "case-law",
+            "title": "Empiregas, Inc. of Kosciusko v. Bain",
+            "citation": "Empiregas, Inc. of Kosciusko v. Bain, 599 So. 2d 971 (Miss. 1992).",
+            "url": "https://www.courtlistener.com/opinion/1870077/empiregas-inc-of-kosciusko-v-bain/",
+            "deepLink": "https://www.courtlistener.com/opinion/1870077/empiregas-inc-of-kosciusko-v-bain/#:~:text=Moreover%2C%20as%20we%20have%20indicated%2C,agreement%20will%20not%20be%20enforced.",
+            "proposition": "Empiregas holds that an employer who terminates an employee in bad faith cannot enforce the non-competition agreement.",
+            "verbatimQuote": "Moreover, as we have indicated, when an employer terminates an employee in bad faith, the terms of a non-competition agreement will not be enforced.",
+            "date": "1992-05-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-ms-empiregas-gate"
+          },
+          {
+            "sourceId": "ms-empiregas-equity-gate",
+            "authorityType": "case-law",
+            "title": "Empiregas, Inc. of Kosciusko v. Bain",
+            "citation": "Empiregas, Inc. of Kosciusko v. Bain, 599 So. 2d 971 (Miss. 1992).",
+            "url": "https://www.courtlistener.com/opinion/1870077/empiregas-inc-of-kosciusko-v-bain/",
+            "deepLink": "https://www.courtlistener.com/opinion/1870077/empiregas-inc-of-kosciusko-v-bain/#:~:text=However%2C%20when%20the%20Chancellor%20finds,refusing%20to%20enforce%20the%20agreement.",
+            "proposition": "Empiregas ties the defense to equity: where the termination was arbitrary, capricious, or in bad faith, the chancellor may refuse to enforce the agreement.",
+            "verbatimQuote": "However, when the Chancellor finds that the employee's termination was arbitrary, capricious or in bad faith, he can \"lend the hand of equity\" in refusing to enforce the agreement.",
+            "date": "1992-05-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-ms-empiregas-equity-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-practice-restrictions-for-lawyers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.mississippi.exclude-practice-restrictions-for-lawyers",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No practice restrictions for lawyers",
+        "sectionId": "mississippi-statutory-gates",
+        "itemNumber": "19.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#exclude-practice-restrictions-for-lawyers",
+        "requirementGuidance": "If the worker is a lawyer, the professional-conduct rule displaces the reasonableness analysis: a partnership or employment agreement may not restrict the lawyer's right to practice after the relationship ends, except an agreement concerning benefits upon retirement. The rule keys on the profession, not on pay or seniority, and its only other out is its own carve-out for restrictions included in the terms of the sale of a law practice under Rule 1.17 — which is not a drafting workaround for an employment covenant.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ms-rule-56-gate",
+            "authorityType": "primary-law",
+            "title": "Mississippi Rule of Professional Conduct 5.6",
+            "citation": "Miss. R. Prof'l Conduct 5.6(a).",
+            "url": "https://courts.ms.gov/research/rules/msrulesofcourt/rules_of_professional_conduct.pdf",
+            "proposition": "Mississippi Rule of Professional Conduct 5.6(a) prohibits a partnership or employment agreement that restricts a lawyer's right to practice after the relationship ends, except for retirement benefits.",
+            "verbatimQuote": "(a) a partnership or employment agreement that restricts the rights of a lawyer to practice after termination of the relationship, except an agreement concerning benefits upon retirement; or",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-ms-rule-56-gate"
+          },
+          {
+            "sourceId": "ms-rule-56-sale-gate",
+            "authorityType": "primary-law",
+            "title": "Mississippi Rule of Professional Conduct 5.6",
+            "citation": "Miss. R. Prof'l Conduct 5.6.",
+            "url": "https://courts.ms.gov/research/rules/msrulesofcourt/rules_of_professional_conduct.pdf",
+            "proposition": "Rule 5.6 does not prohibit practice restrictions that are part of the sale of a law practice under Rule 1.17 — the rule's own carve-out.",
+            "verbatimQuote": "This Rule does not prohibit restrictions that may be included in the terms of the sale of a law practice pursuant to Rule 1.17.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-ms-rule-56-sale-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-no-acceptance-restrictions-expressly",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.mississippi.state-no-acceptance-restrictions-expressly",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Bar on accepting business stated expressly",
+        "sectionId": "mississippi-statutory-gates",
+        "itemNumber": "19.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#state-no-acceptance-restrictions-expressly",
+        "requirementGuidance": "If the employer means to stop the employee from serving former customers regardless of who reaches out first, the clause has to say that accepting their business is prohibited. A clause barring conduct that would tend to divert business was held ambiguous precisely because it lacked that express language, and the ambiguity was construed against the employer — while the same court recognized that an express no-acceptance clause can, in appropriate cases, be reasonable and enforceable. The verb choice is the substantive choice: solicitation language reaches active diversion only.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ms-kennedy-ambiguous-gate",
+            "authorityType": "case-law",
+            "title": "Kennedy v. Metropolitan Life Insurance Co.",
+            "citation": "Kennedy v. Metropolitan Life Ins. Co., 759 So. 2d 362 (Miss. 2000).",
+            "url": "https://www.courtlistener.com/opinion/1855498/kennedy-v-metropolitan-life-ins-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/1855498/kennedy-v-metropolitan-life-ins-co/#:~:text=However%2C%20this%20Court%20concludes%20that,business%20with%20a%20former%20employee.",
+            "proposition": "Kennedy holds a non-solicitation clause ambiguous where it did not expressly prohibit the employee from accepting business from former customers, construing the ambiguity against the employer.",
+            "verbatimQuote": "However, this Court concludes that the non-competition provision in the present case is ambiguous in that, unlike the provisions in Kemper and Girard , the provision in the present case does not expressly prohibit Kennedy from \"accepting\" business with a former employee.",
+            "date": "2000-03-16",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-ms-kennedy-ambiguous-gate"
+          },
+          {
+            "sourceId": "ms-kennedy-valid-gate",
+            "authorityType": "case-law",
+            "title": "Kennedy v. Metropolitan Life Insurance Co.",
+            "citation": "Kennedy v. Metropolitan Life Ins. Co., 759 So. 2d 362 (Miss. 2000).",
+            "url": "https://www.courtlistener.com/opinion/1855498/kennedy-v-metropolitan-life-ins-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/1855498/kennedy-v-metropolitan-life-ins-co/#:~:text=This%20Court%20agrees%20with%20Met,reasonable%20and%20enforceable%20non%2Dcompete%20provision.",
+            "proposition": "Kennedy recognizes that a clause barring an ex-employee from accepting business from former customers can, in appropriate cases, be reasonable and enforceable.",
+            "verbatimQuote": "This Court agrees with Met Life that a non-compete provision which prohibits an ex-employee from accepting business with his former customers may, in appropriate cases, constitute a reasonable and enforceable non-compete provision.",
+            "date": "2000-03-16",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/mississippi#src-ms-kennedy-valid-gate"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,1253 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/north-dakota",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/north-dakota.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/north-dakota",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/north-dakota/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/north-dakota/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "north-dakota",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — North Dakota",
+      "description": "A clause-by-clause reviewer checklist for North Dakota restrictive covenant agreements — N.D.C.C. § 9-08-06 voids non-competes and customer non-solicits, so the review screens for void restraints and then checks the confidentiality, trade-secret, and anti-raiding clauses that survive.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "North Dakota",
+      "coverage": "North Dakota (US)",
+      "lastReviewed": "2026-06-11",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 42,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "label": "Physician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "north-dakota-statutory-gates",
+        "label": "North Dakota statutory gates"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#identify-parties",
+        "requirementGuidance": "Confirm the employer entity named is the one that actually employs the worker and owns the information at stake. With competition restraints off the table, North Dakota enforcement runs through trade-secret and loyalty theories — and those claims belong to the entity holding the secrets and the employment relationship, not to an affiliate on the signature line.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#identify-effective-date",
+        "requirementGuidance": "The surviving obligations — confidentiality terms, the anti-raiding window — still need a defined start point, and any covenant claiming the sale-of-goodwill or owner-exit exception must run for a reasonable length of time measured from somewhere. An undated agreement leaves every one of those clocks unanchored.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#identify-employee-title",
+        "requirementGuidance": "Note the role, but do not expect it to change the outcome: North Dakota has no executive or professional carve-out, and its courts have voided restraints against insurance agents and emergency-room physicians alike. Title matters mainly as evidence of what protected information the worker actually touches.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nd-werlinger-agent-void-cover",
+            "authorityType": "case-law",
+            "title": "Werlinger v. Mutual Service Casualty Insurance Co.",
+            "citation": "Werlinger v. Mut. Serv. Cas. Ins. Co., 496 N.W.2d 26, 27 (N.D. 1993).",
+            "url": "https://www.courtlistener.com/opinion/1282430/werlinger-v-mutual-service-casualty-insurance-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/1282430/werlinger-v-mutual-service-casualty-insurance-co/#:~:text=The%20trial%20court%20ruled%20that,unenforceable%20under%20%C2%A7%209%2D08%2D06%2C%20N.D.C.C.",
+            "proposition": "Werlinger supports the rule that an employment non-compete against an insurance agent is void under § 9-08-06.",
+            "verbatimQuote": "The trial court ruled that Paragraph 12(D) was a restraint of trade, void and unenforceable under § 9-08-06, N.D.C.C.",
+            "date": "1993-02-23",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-werlinger-agent-void-cover"
+          },
+          {
+            "sourceId": "nd-spectrum-physician-void-cover",
+            "authorityType": "case-law",
+            "title": "Spectrum Emergency Care, Inc. v. St. Joseph's Hospital & Health Center",
+            "citation": "Spectrum Emergency Care, Inc. v. St. Joseph's Hosp. & Health Ctr., 479 N.W.2d 848, 851 (N.D. 1992).",
+            "url": "https://www.courtlistener.com/opinion/1229922/spectrum-emergency-care-inc-v-st-josephs-hospital-health-center/",
+            "deepLink": "https://www.courtlistener.com/opinion/1229922/spectrum-emergency-care-inc-v-st-josephs-hospital-health-center/#:~:text=There%20can%20be%20no%20doubt,the%20contract%20period%20with%20Spectrum.",
+            "proposition": "Spectrum supports applying § 9-08-06 to physician employment restraints.",
+            "verbatimQuote": "There can be no doubt that section 9-08-06, N.D.C.C., makes void the provision which attempts to prohibit the physicians from being employed by the Hospital at the end of the contract period with Spectrum.",
+            "date": "1992-01-14",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-spectrum-physician-void-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#identify-governing-law",
+        "requirementGuidance": "Check which state is named — and treat any non-North-Dakota selection covering a North Dakota worker as a primary red flag rather than housekeeping. The state supreme court refuses to let parties contract for another forum or body of law when the natural result is enforcing a non-compete against North Dakota public policy.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nd-osborne-cover",
+            "authorityType": "case-law",
+            "title": "Osborne v. Brown & Saenger, Inc.",
+            "citation": "Osborne v. Brown & Saenger, Inc., 2017 ND 288, ¶ 16, 904 N.W.2d 34.",
+            "url": "https://www.courtlistener.com/opinion/4449595/osborne-v-brown-saenger-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/4449595/osborne-v-brown-saenger-inc/#:~:text=Simply%20put%2C%20one%20may%20not,public%20policy%20against%20non%2Dcompete%20agreements.",
+            "proposition": "Osborne supports refusing choice-of-law and forum-selection clauses that would enable enforcement of a non-compete contrary to North Dakota public policy.",
+            "verbatimQuote": "Simply put, one may not contract for application of another state’s law or forum if the natural result is to allow enforcement of a non-compete agreement in violation of North Dakota’s longstanding and strong public policy against non-compete agreements.",
+            "date": "2017-12-07",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-osborne-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#define-confidential-information",
+        "requirementGuidance": "In North Dakota this definition carries the load the non-compete cannot. It should describe genuinely protected information rather than everything the worker ever learned — a definition that sweeps in general skills or public knowledge invites the argument that the clause restrains the trade itself instead of guarding secrets.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nd-utsa-definition-defs",
+            "authorityType": "primary-law",
+            "title": "N.D. Cent. Code ch. 47-25.1",
+            "citation": "N.D. Cent. Code § 47-25.1-01(4).",
+            "url": "https://ndlegis.gov/cencode/t47c25-1.pdf",
+            "proposition": "North Dakota's Uniform Trade Secrets Act defines trade secret by economic value from secrecy and reasonable efforts to maintain secrecy.",
+            "verbatimQuote": "4. \"Trade secret\" means information, including a formula, pattern, compilation, program, device, method, technique, or process, that: a. Derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use; and b. Is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-utsa-definition-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#define-trade-secrets",
+        "requirementGuidance": "Check the defined term against the statutory anchor: information deriving independent economic value from secrecy, subject to reasonable secrecy efforts. The closer the contract tracks North Dakota's Uniform Trade Secrets Act, the more of the employer's protection survives in a state where the restraint-based alternatives are void.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nd-utsa-definition-defs",
+            "authorityType": "primary-law",
+            "title": "N.D. Cent. Code ch. 47-25.1",
+            "citation": "N.D. Cent. Code § 47-25.1-01(4).",
+            "url": "https://ndlegis.gov/cencode/t47c25-1.pdf",
+            "proposition": "North Dakota's Uniform Trade Secrets Act defines trade secret by economic value from secrecy and reasonable efforts to maintain secrecy.",
+            "verbatimQuote": "4. \"Trade secret\" means information, including a formula, pattern, compilation, program, device, method, technique, or process, that: a. Derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use; and b. Is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-utsa-definition-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-period",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#define-restricted-period",
+        "requirementGuidance": "Only the surviving covenants need a clock here — chiefly the anti-raiding employee non-solicit and any finite confidentiality term. Confirm the defined period is referenced consistently: a period attached to a void restraint does no work, while an undefined one muddies the clauses that remain.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#define-covered-employees",
+        "requirementGuidance": "The anti-raiding covenant earns its narrow shelter by staying narrow. Keep the protected class to colleagues the departing worker actually worked with or could influence — a definition reaching the entire workforce reads like the broad restraint the statute voids rather than the targeted clause the supreme court let stand.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nd-warner-antiraiding-defs",
+            "authorityType": "case-law",
+            "title": "Warner & Co. v. Solberg",
+            "citation": "Warner & Co. v. Solberg, 2001 ND 156, ¶ 25, 634 N.W.2d 65.",
+            "url": "https://www.courtlistener.com/opinion/896854/warner-co-v-solberg/",
+            "deepLink": "https://www.courtlistener.com/opinion/896854/warner-co-v-solberg/#:~:text=This%20prohibition%20is%20narrowly%20drawn,as%20a%20restraint%20of%20trade.",
+            "proposition": "Warner supports that a narrowly drawn employee non-solicitation covenant is not void under § 9-08-06, though enforcement still depends on ordinary proof and remedies.",
+            "verbatimQuote": "This prohibition is narrowly drawn to penalize only Solberg’s actions of soliciting or influencing an employee to leave Warner and come to work for Vaaler and is not void as a restraint of trade.",
+            "date": "2001-09-05",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-warner-antiraiding-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#define-protected-interests",
+        "requirementGuidance": "A protected-interests recital cannot buy back a void restraint — the supreme court declined to carve judicial exceptions out of the statute and pointed employers at trade-secret legislation instead. Use the definition to identify the specific information assets the confidentiality and trade-secret clauses guard, not to argue for a covenant the statute forbids.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nd-warner-trade-secret-defs",
+            "authorityType": "case-law",
+            "title": "Warner & Co. v. Solberg",
+            "citation": "Warner & Co. v. Solberg, 2001 ND 156, ¶ 18, 634 N.W.2d 65.",
+            "url": "https://www.courtlistener.com/opinion/896854/warner-co-v-solberg/",
+            "deepLink": "https://www.courtlistener.com/opinion/896854/warner-co-v-solberg/#:~:text=Because%20of%20the%20plain%20language,we%20decline%20to%20do%20so.",
+            "proposition": "Warner supports using trade-secret law rather than a judicial exception to § 9-08-06 to protect confidential customer information.",
+            "verbatimQuote": "Because of the plain language of the statute, the history of legislation in North Dakota concerning this issue, and because North Dakota has enacted trade-secrets legislation, we decline to do so.",
+            "date": "2001-09-05",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-warner-trade-secret-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Wherever ownership or investment in competitors is restricted, look for the passive public-holdings carve-out below a stated threshold. North Dakota measures restraint by practical effect — a worker who must give something up to take part in a lawful business is restrained — so a clause that technically forbids holding ordinary public shares is gratuitous exposure.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nd-werlinger-practical-defs",
+            "authorityType": "case-law",
+            "title": "Werlinger v. Mutual Service Casualty Insurance Co.",
+            "citation": "Werlinger v. Mut. Serv. Cas. Ins. Co., 496 N.W.2d 26, 29 (N.D. 1993).",
+            "url": "https://www.courtlistener.com/opinion/1282430/werlinger-v-mutual-service-casualty-insurance-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/1282430/werlinger-v-mutual-service-casualty-insurance-co/#:~:text=Surely%20this%20was%20not%20freedom,no%20merit%20to%20this%20contention.",
+            "proposition": "Werlinger supports the rule that a restraint need not be absolute to be void under § 9-08-06.",
+            "verbatimQuote": "Surely this was not freedom to practice his profession in Grand Forks, since he would have to purchase the freedom with $2,000, and there is no merit to this contention.",
+            "date": "1993-02-23",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-werlinger-practical-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#define-passive-public-holdings",
+        "requirementGuidance": "Optional drafting mechanics. If the capitalized term appears, confirm its percentage threshold matches the operative carve-out it supports; if the carve-out is inlined without a defined term, nothing is missing.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#define-solicit",
+        "requirementGuidance": "This definition decides whether the surviving covenant stays inside its shelter. The clause the supreme court upheld penalized only soliciting or influencing an employee to leave — active conduct — and the federal court in this district required competent evidence of exactly that before granting relief. A definition that also captures passively receiving inquiries stretches past both holdings.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nd-warner-antiraiding-defs",
+            "authorityType": "case-law",
+            "title": "Warner & Co. v. Solberg",
+            "citation": "Warner & Co. v. Solberg, 2001 ND 156, ¶ 25, 634 N.W.2d 65.",
+            "url": "https://www.courtlistener.com/opinion/896854/warner-co-v-solberg/",
+            "deepLink": "https://www.courtlistener.com/opinion/896854/warner-co-v-solberg/#:~:text=This%20prohibition%20is%20narrowly%20drawn,as%20a%20restraint%20of%20trade.",
+            "proposition": "Warner supports that a narrowly drawn employee non-solicitation covenant is not void under § 9-08-06, though enforcement still depends on ordinary proof and remedies.",
+            "verbatimQuote": "This prohibition is narrowly drawn to penalize only Solberg’s actions of soliciting or influencing an employee to leave Warner and come to work for Vaaler and is not void as a restraint of trade.",
+            "date": "2001-09-05",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-warner-antiraiding-defs"
+          },
+          {
+            "sourceId": "nd-pruco-evidence-defs",
+            "authorityType": "case-law",
+            "title": "Pruco Securities Corp. v. Montgomery",
+            "citation": "Pruco Sec. Corp. v. Montgomery, 264 F. Supp. 2d 862, 868 (D.N.D. 2003).",
+            "url": "https://www.courtlistener.com/opinion/2507357/pruco-securities-corp-v-montgomery/",
+            "deepLink": "https://www.courtlistener.com/opinion/2507357/pruco-securities-corp-v-montgomery/#:~:text=Simply%20stated%2C%20the%20record%20at,follow%20him%20to%20Minnesota%20Life.",
+            "proposition": "Pruco supports requiring proof of solicitation before enforcing anti-raiding restrictions by injunction.",
+            "verbatimQuote": "Simply stated, the record at this stage is devoid of any competent evidence that Montgomery improperly solicited Prudential agents to follow him to Minnesota Life.",
+            "date": "2003-05-22",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-pruco-evidence-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#define-termination-of-employment",
+        "requirementGuidance": "Pin down the trigger event so resignation, dismissal, and the expiry of a fixed term all start the same clocks. Ambiguity here infects the anti-raiding window and the confidentiality term — the obligations a North Dakota court will actually enforce.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "acknowledge-timing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-timing",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "When the agreement was signed",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#acknowledge-timing",
+        "requirementGuidance": "Record when the agreement was signed relative to the start of employment and what consideration moved. North Dakota disputes rarely turn on consideration mechanics — the void rule disposes of most fights first — but a clean timing record supports the covenants that survive and the trade-secret claims that may follow them.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "acknowledge-opportunity-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Chance to consult a lawyer",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#acknowledge-opportunity-to-consult-counsel",
+        "requirementGuidance": "Inexpensive process evidence. No North Dakota statute requires it, but an acknowledged opportunity to take advice supports the fairness of the obligations that remain enforceable — and shows the employer treated the agreement as more than onboarding paperwork.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "Trade-secret obligations should run as long as secrecy does — the federal definition and North Dakota's own act both key protection to continued secrecy, not to a contract date. In a ban state this matters twice over: trade-secret law is the employer's main post-employment protection, and a fixed expiry voluntarily surrenders it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nd-dtsa-definition-conf",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
+            "citation": "18 U.S.C. § 1839(3)(B) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1839",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
+            "proposition": "Federal law keys trade-secret status to continued secrecy, which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-dtsa-definition-conf"
+          },
+          {
+            "sourceId": "nd-utsa-definition-conf",
+            "authorityType": "primary-law",
+            "title": "N.D. Cent. Code ch. 47-25.1",
+            "citation": "N.D. Cent. Code § 47-25.1-01(4).",
+            "url": "https://ndlegis.gov/cencode/t47c25-1.pdf",
+            "proposition": "North Dakota's Uniform Trade Secrets Act defines trade secret by economic value from secrecy and reasonable efforts to maintain secrecy.",
+            "verbatimQuote": "4. \"Trade secret\" means information, including a formula, pattern, compilation, program, device, method, technique, or process, that: a. Derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use; and b. Is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-utsa-definition-conf"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#state-confidentiality-duration",
+        "requirementGuidance": "Give ordinary confidential information a finite term on its own track, separate from the perpetual trade-secret obligation. An everything-forever clause is the kind of open-ended burden that invites a court to read the confidentiality covenant as a restraint on the trade rather than a guard on information.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#disclose-dtsa-notice",
+        "requirementGuidance": "Fully applicable in North Dakota. Omitting the federal immunity notice forfeits exemplary damages and attorney fees in a later trade-secret action against the worker — and trade-secret remedies are precisely the relief a North Dakota employer is left holding.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nd-dtsa-immunity-notice",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-dtsa-immunity-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Wages, hours, and working conditions must stay discussable no matter which state governs. Federal labor law protects that concerted activity, and the Board has been striking confidentiality and non-disparagement language broad enough to sweep it in.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nd-nlra-section-7",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-nlra-section-7"
+          },
+          {
+            "sourceId": "nd-mclaren-protected",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-mclaren-protected"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#permit-compelled-disclosure",
+        "requirementGuidance": "Confirm the standard carve-out for disclosure required by law, court order, or a government investigation, with notice to the employer where lawful. No confidentiality clause can outrun a subpoena; the carve-out keeps the worker from being contractually penalized for complying with one.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#require-property-return-and-certification",
+        "requirementGuidance": "Return-or-delete at separation, certified in writing. Because a North Dakota employer's post-employment protection runs through misappropriation claims rather than covenants, the certification is the contemporaneous record that the worker left with nothing — or the first exhibit when protected material surfaces at a competitor.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nd-utsa-injunction-return",
+            "authorityType": "primary-law",
+            "title": "N.D. Cent. Code ch. 47-25.1",
+            "citation": "N.D. Cent. Code § 47-25.1-02(1).",
+            "url": "https://ndlegis.gov/cencode/t47c25-1.pdf",
+            "proposition": "North Dakota's Uniform Trade Secrets Act authorizes injunctions for actual or threatened misappropriation.",
+            "verbatimQuote": "Actual or threatened misappropriation may be enjoined.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-utsa-injunction-return"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-employee-nonsolicit-to-anti-raiding",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.north-dakota.narrow-employee-nonsolicit-to-anti-raiding",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit kept to anti-raiding",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#narrow-employee-nonsolicit-to-anti-raiding",
+        "requirementGuidance": "The one post-employment covenant with a clear North Dakota shelter — and the shelter is exactly as wide as the clause is narrow. It must penalize only soliciting or influencing employees to leave; audit for creep into hiring bans, customer-facing riders, or workforce-wide reach, any of which drops the clause back into the void rule. Even the lawful version is enforced only on real proof of solicitation.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nd-warner-antiraiding-cov",
+            "authorityType": "case-law",
+            "title": "Warner & Co. v. Solberg",
+            "citation": "Warner & Co. v. Solberg, 2001 ND 156, ¶ 25, 634 N.W.2d 65.",
+            "url": "https://www.courtlistener.com/opinion/896854/warner-co-v-solberg/",
+            "deepLink": "https://www.courtlistener.com/opinion/896854/warner-co-v-solberg/#:~:text=This%20prohibition%20is%20narrowly%20drawn,as%20a%20restraint%20of%20trade.",
+            "proposition": "Warner supports that a narrowly drawn employee non-solicitation covenant is not void under § 9-08-06, though enforcement still depends on ordinary proof and remedies.",
+            "verbatimQuote": "This prohibition is narrowly drawn to penalize only Solberg’s actions of soliciting or influencing an employee to leave Warner and come to work for Vaaler and is not void as a restraint of trade.",
+            "date": "2001-09-05",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-warner-antiraiding-cov"
+          },
+          {
+            "sourceId": "nd-pruco-proof-cov",
+            "authorityType": "case-law",
+            "title": "Pruco Securities Corp. v. Montgomery",
+            "citation": "Pruco Sec. Corp. v. Montgomery, 264 F. Supp. 2d 862, 868 (D.N.D. 2003).",
+            "url": "https://www.courtlistener.com/opinion/2507357/pruco-securities-corp-v-montgomery/",
+            "deepLink": "https://www.courtlistener.com/opinion/2507357/pruco-securities-corp-v-montgomery/#:~:text=Simply%20stated%2C%20the%20record%20at,follow%20him%20to%20Minnesota%20Life.",
+            "proposition": "Pruco supports requiring proof of solicitation before enforcing anti-raiding restrictions by injunction.",
+            "verbatimQuote": "Simply stated, the record at this stage is devoid of any competent evidence that Montgomery improperly solicited Prudential agents to follow him to Minnesota Life.",
+            "date": "2003-05-22",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-pruco-proof-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-customer-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.north-dakota.exclude-customer-nonsolicit",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No customer non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#exclude-customer-nonsolicit",
+        "requirementGuidance": "Flag this clause on sight. The North Dakota Supreme Court treats post-employment customer solicitation and replacement restrictions as restraints of trade with no statutory exception, and it declined to create a judicial one — scoping the clause to a look-back window or material contacts does not change the analysis. The legitimate concern underneath it belongs in the trade-secret and confidentiality clauses.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nd-warner-customer-void-cov",
+            "authorityType": "case-law",
+            "title": "Warner & Co. v. Solberg",
+            "citation": "Warner & Co. v. Solberg, 2001 ND 156, ¶ 23, 634 N.W.2d 65.",
+            "url": "https://www.courtlistener.com/opinion/896854/warner-co-v-solberg/",
+            "deepLink": "https://www.courtlistener.com/opinion/896854/warner-co-v-solberg/#:~:text=The%20statute%20contains%20no%20exception,and%20(b)%20of%20the%20contract.",
+            "proposition": "Warner supports the rule that post-employment customer solicitation and replacement restrictions are void under § 9-08-06.",
+            "verbatimQuote": "The statute contains no exception for the contractual provisions in § 6(a) and (b) of the contract.",
+            "date": "2001-09-05",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-warner-customer-void-cov"
+          },
+          {
+            "sourceId": "nd-warner-replacement-void-cov",
+            "authorityType": "case-law",
+            "title": "Warner & Co. v. Solberg",
+            "citation": "Warner & Co. v. Solberg, 2001 ND 156, ¶ 24, 634 N.W.2d 65.",
+            "url": "https://www.courtlistener.com/opinion/896854/warner-co-v-solberg/",
+            "deepLink": "https://www.courtlistener.com/opinion/896854/warner-co-v-solberg/#:~:text=These%20limitations%20constitute%20a%20restraint,is%20%E2%80%9Cto%20that%20extent%20void.%E2%80%9D",
+            "proposition": "Warner supports striking customer-replacement restraints in employment agreements as void to that extent.",
+            "verbatimQuote": "These limitations constitute a restraint of trade and therefore the agreement is “to that extent void.”",
+            "date": "2001-09-05",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-warner-replacement-void-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-non-dealing-with-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.north-dakota.exclude-non-dealing-with-customers",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#exclude-non-dealing-with-customers",
+        "requirementGuidance": "A no-business covenant bars serving customers who arrive unprompted — a restraint on the worker's lawful business that runs at least as deep as the solicitation and replacement clauses the supreme court already voids to that extent. If the draft contains one, the cure is removal, not narrowing.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nd-warner-replacement-void-cov",
+            "authorityType": "case-law",
+            "title": "Warner & Co. v. Solberg",
+            "citation": "Warner & Co. v. Solberg, 2001 ND 156, ¶ 24, 634 N.W.2d 65.",
+            "url": "https://www.courtlistener.com/opinion/896854/warner-co-v-solberg/",
+            "deepLink": "https://www.courtlistener.com/opinion/896854/warner-co-v-solberg/#:~:text=These%20limitations%20constitute%20a%20restraint,is%20%E2%80%9Cto%20that%20extent%20void.%E2%80%9D",
+            "proposition": "Warner supports striking customer-replacement restraints in employment agreements as void to that extent.",
+            "verbatimQuote": "These limitations constitute a restraint of trade and therefore the agreement is “to that extent void.”",
+            "date": "2001-09-05",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-warner-replacement-void-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-post-employment-noncompete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.north-dakota.exclude-post-employment-noncompete",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No post-employment non-compete",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#exclude-post-employment-noncompete",
+        "requirementGuidance": "The headline rule of this page: a contract restraining a lawful profession, trade, or business is to that extent void, and ordinary employment non-competes fit neither statutory exception. The clause's presence is the finding. Escalate to the goodwill and owner-exit gate at the end of this checklist if a transaction is claimed; otherwise treat the covenant — and anything that exists only to serve it — as inoperative.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nd-statute-void-cov",
+            "authorityType": "primary-law",
+            "title": "N.D. Cent. Code § 9-08-06",
+            "citation": "N.D. Cent. Code § 9-08-06.",
+            "url": "https://ndlegis.gov/cencode/t09c08.pdf",
+            "proposition": "N.D. Cent. Code § 9-08-06 supplies North Dakota's baseline rule voiding contracts that restrain a lawful profession, trade, or business except for listed statutory exceptions.",
+            "verbatimQuote": "A contract by which anyone is restrained from exercising a lawful profession, trade, or business of any kind is to that extent void, except: 1. A person that sells the goodwill of a business and the person's partners, members, or shareholders may agree with the buyer to refrain from carrying on a similar business within a reasonable geographic area and for a reasonable length of time, if the buyer or any person deriving title to the goodwill from the buyer carries on a like business in that area.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-statute-void-cov"
+          },
+          {
+            "sourceId": "nd-earthworks-penalty-cov",
+            "authorityType": "case-law",
+            "title": "Earthworks, Inc. v. Sehn",
+            "citation": "Earthworks, Inc. v. Sehn, 553 N.W.2d 490, 493 (N.D. 1996).",
+            "url": "https://www.courtlistener.com/opinion/895669/earthworks-inc-v-sehn/",
+            "deepLink": "https://www.courtlistener.com/opinion/895669/earthworks-inc-v-sehn/#:~:text=The%20statute%20represents%20one%20of,penalty%20if%20he%20does%20so.",
+            "proposition": "Earthworks supports treating post-employment competitor bans and competition penalties as invalid under § 9-08-06 outside an exception.",
+            "verbatimQuote": "The statute represents one of the oldest and most continuous applications of public policy in contract law, and it invalidates provisions in employment contracts prohibiting an employee from working for a competitor after completion of his employment or imposing a penalty if he does so.",
+            "date": "1996-09-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-earthworks-penalty-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#permit-non-investment",
+        "requirementGuidance": "Rare, and unaddressed by North Dakota authority — which is not comfort. A clause restricting where the worker may invest can operate as a practical restraint on taking part in a lawful business, the exact analysis the courts apply to indirect restraints. Confirm the passive-holdings carve-out is intact and treat anything broader as a deliberate risk decision.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nd-werlinger-practical-cov",
+            "authorityType": "case-law",
+            "title": "Werlinger v. Mutual Service Casualty Insurance Co.",
+            "citation": "Werlinger v. Mut. Serv. Cas. Ins. Co., 496 N.W.2d 26, 29 (N.D. 1993).",
+            "url": "https://www.courtlistener.com/opinion/1282430/werlinger-v-mutual-service-casualty-insurance-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/1282430/werlinger-v-mutual-service-casualty-insurance-co/#:~:text=Surely%20this%20was%20not%20freedom,no%20merit%20to%20this%20contention.",
+            "proposition": "Werlinger supports the rule that a restraint need not be absolute to be void under § 9-08-06.",
+            "verbatimQuote": "Surely this was not freedom to practice his profession in Grand Forks, since he would have to purchase the freedom with $2,000, and there is no merit to this contention.",
+            "date": "1993-02-23",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-werlinger-practical-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#require-non-disparagement",
+        "requirementGuidance": "Reasonable to include with a stated duration, and uncontroversial under North Dakota law — the void rule targets restraints on trade, not on insults. Audit the carve-outs instead: truthful testimony, statements to government agencies, and protected workplace speech must sit outside the clause, and federal labor law polices the overbroad versions in every state.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nd-mclaren-nondisparagement",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-mclaren-nondisparagement"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-physician-specific-rights",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Physician rights and notices",
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#address-physician-specific-rights",
+        "requirementGuidance": "The dedicated clause should state what North Dakota law already does. Physician restraints fall under the general void rule — the supreme court protected even negotiating future employment while a current contract was still running — and a hospital or nonprofit employing physicians by written contract must preserve the physician's independent medical judgment. No physician-specific ban exists because none is needed.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nd-spectrum-negotiation-phys",
+            "authorityType": "case-law",
+            "title": "Spectrum Emergency Care, Inc. v. St. Joseph's Hospital & Health Center",
+            "citation": "Spectrum Emergency Care, Inc. v. St. Joseph's Hosp. & Health Ctr., 479 N.W.2d 848, 851 (N.D. 1992).",
+            "url": "https://www.courtlistener.com/opinion/1229922/spectrum-emergency-care-inc-v-st-josephs-hospital-health-center/",
+            "deepLink": "https://www.courtlistener.com/opinion/1229922/spectrum-emergency-care-inc-v-st-josephs-hospital-health-center/#:~:text=The%20ability%20to%20negotiate%20and,lawful%20profession%2C%20trade%2C%20or%20business.",
+            "proposition": "Spectrum supports applying § 9-08-06 to protect physicians' future employment negotiations and contracts.",
+            "verbatimQuote": "The ability to negotiate and contract for future employment is central to one's ability to exercise a lawful profession, trade, or business.",
+            "date": "1992-01-14",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-spectrum-negotiation-phys"
+          },
+          {
+            "sourceId": "nd-physician-judgment-phys",
+            "authorityType": "primary-law",
+            "title": "N.D. Cent. Code § 43-17-42",
+            "citation": "N.D. Cent. Code § 43-17-42.",
+            "url": "https://ndlegis.gov/cencode/t43c17.pdf",
+            "proposition": "N.D. Cent. Code § 43-17-42 permits certain hospital and nonprofit physician employment contracts while preserving independent medical judgment.",
+            "verbatimQuote": "The written contract must contain language to the effect the employment relationship with the physician may not affect the exercise of the physician's independent judgment in the practice of medicine, and the physician's independent judgment in the practice of medicine is in fact unaffected by the physician's employment relationship with the hospital, nonprofit entity, or charitable trust.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-physician-judgment-phys"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "The worker's representation that no earlier agreement blocks the new role. In North Dakota it doubles as an intake screen for covenants signed elsewhere: an out-of-state non-compete may prove unenforceable against North Dakota work, but surfacing it on day one beats discovering it in a demand letter.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#address-notice-to-future-employers",
+        "requirementGuidance": "Optional everywhere, and worth extra caution here: a notice program built around covenants that are void in North Dakota tells a new employer about restrictions that do not exist. If the clause appears, confine any disclosure to the obligations that actually survive — confidentiality, trade-secret, and the anti-raiding covenant.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-tolling-during-breach",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-tolling-during-breach",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restriction extended during a breach",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#address-tolling-during-breach",
+        "requirementGuidance": "The agreement should say whether a breach pauses the clock — but the only clocks that matter in North Dakota belong to the surviving covenants, and no statute or decision addresses extension. Watch the mechanism itself: an extension that operates as a penalty for competing walks into the same rule that voids competition penalties outright.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nd-earthworks-penalty-toll",
+            "authorityType": "case-law",
+            "title": "Earthworks, Inc. v. Sehn",
+            "citation": "Earthworks, Inc. v. Sehn, 553 N.W.2d 490, 493 (N.D. 1996).",
+            "url": "https://www.courtlistener.com/opinion/895669/earthworks-inc-v-sehn/",
+            "deepLink": "https://www.courtlistener.com/opinion/895669/earthworks-inc-v-sehn/#:~:text=The%20statute%20represents%20one%20of,penalty%20if%20he%20does%20so.",
+            "proposition": "Earthworks supports treating post-employment competitor bans and competition penalties as invalid under § 9-08-06 outside an exception.",
+            "verbatimQuote": "The statute represents one of the oldest and most continuous applications of public policy in contract law, and it invalidates provisions in employment contracts prohibiting an employee from working for a competitor after completion of his employment or imposing a penalty if he does so.",
+            "date": "1996-09-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-earthworks-penalty-toll"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#require-injunctive-relief-availability",
+        "requirementGuidance": "The irreparable-harm acknowledgement is standard and harmless, but it buys less here than elsewhere: the federal court in this district declined to enjoin alleged raiding without competent evidence of solicitation, recital or no recital. Treat the clause as supporting evidence, never as the showing itself.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nd-pruco-injunction-rem",
+            "authorityType": "case-law",
+            "title": "Pruco Securities Corp. v. Montgomery",
+            "citation": "Pruco Sec. Corp. v. Montgomery, 264 F. Supp. 2d 862, 868 (D.N.D. 2003).",
+            "url": "https://www.courtlistener.com/opinion/2507357/pruco-securities-corp-v-montgomery/",
+            "deepLink": "https://www.courtlistener.com/opinion/2507357/pruco-securities-corp-v-montgomery/#:~:text=Simply%20stated%2C%20the%20record%20at,follow%20him%20to%20Minnesota%20Life.",
+            "proposition": "Pruco supports requiring proof of solicitation before enforcing anti-raiding restrictions by injunction.",
+            "verbatimQuote": "Simply stated, the record at this stage is devoid of any competent evidence that Montgomery improperly solicited Prudential agents to follow him to Minnesota Life.",
+            "date": "2003-05-22",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-pruco-injunction-rem"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-attorneys-fees-and-costs",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Attorney fees and costs",
+        "sectionId": "remedies",
+        "itemNumber": "13.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#address-attorneys-fees-and-costs",
+        "requirementGuidance": "A commercial choice under the default American Rule. Check that the mechanism does not shade into a price on competing: a fee or damages provision triggered by lawful post-employment competition is an indirect restraint, and North Dakota voids restraints that work by penalty as readily as those that work by prohibition.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nd-werlinger-purchase-rem",
+            "authorityType": "case-law",
+            "title": "Werlinger v. Mutual Service Casualty Insurance Co.",
+            "citation": "Werlinger v. Mut. Serv. Cas. Ins. Co., 496 N.W.2d 26, 29 (N.D. 1993).",
+            "url": "https://www.courtlistener.com/opinion/1282430/werlinger-v-mutual-service-casualty-insurance-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/1282430/werlinger-v-mutual-service-casualty-insurance-co/#:~:text=Surely%20this%20was%20not%20freedom,no%20merit%20to%20this%20contention.",
+            "proposition": "Werlinger supports the rule that a restraint need not be absolute to be void under § 9-08-06.",
+            "verbatimQuote": "Surely this was not freedom to practice his profession in Grand Forks, since he would have to purchase the freedom with $2,000, and there is no merit to this contention.",
+            "date": "1993-02-23",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-werlinger-purchase-rem"
+          }
+        ]
+      },
+      {
+        "requirementId": "draft-for-striking-not-judicial-rescue",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.north-dakota.draft-for-striking-not-judicial-rescue",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No reliance on court narrowing",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#draft-for-striking-not-judicial-rescue",
+        "requirementGuidance": "Read the severability clause as an autopsy plan, not a parachute. The statute voids a restraint to that extent, and North Dakota's employment cases strike invalid restraints rather than trimming them to the bounds of reason. The partial-enforcement history lives only in sale-of-business settings, where a covenant tied to genuine goodwill was confined to the county the purchased business served — savings language inviting a court to rewrite an employee covenant has no rule to invoke.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nd-statute-extent-sev",
+            "authorityType": "primary-law",
+            "title": "N.D. Cent. Code § 9-08-06",
+            "citation": "N.D. Cent. Code § 9-08-06.",
+            "url": "https://ndlegis.gov/cencode/t09c08.pdf",
+            "proposition": "N.D. Cent. Code § 9-08-06 uses voiding language rather than a general reasonableness standard for covered restraints.",
+            "verbatimQuote": "A contract by which anyone is restrained from exercising a lawful profession, trade, or business of any kind is to that extent void, except: 1. A person that sells the goodwill of a business and the person's partners, members, or shareholders may agree with the buyer to refrain from carrying on a similar business within a reasonable geographic area and for a reasonable length of time, if the buyer or any person deriving title to the goodwill from the buyer carries on a like business in that area.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-statute-extent-sev"
+          },
+          {
+            "sourceId": "nd-hawkins-sale-sev",
+            "authorityType": "case-law",
+            "title": "Hawkins Chemical, Inc. v. McNea",
+            "citation": "Hawkins Chem., Inc. v. McNea, 321 N.W.2d 918, 920 (N.D. 1982).",
+            "url": "https://www.courtlistener.com/opinion/1586088/hawkins-chemical-inc-v-mcnea/",
+            "deepLink": "https://www.courtlistener.com/opinion/1586088/hawkins-chemical-inc-v-mcnea/#:~:text=Because%20the%20property%20and%20business,be%20enforceable%20in%20that%20county.",
+            "proposition": "Hawkins supports partial enforcement in a sale-of-business setting where an overbroad covenant can be confined to the valid county.",
+            "verbatimQuote": "Because the property and business purchased from Saunders and McNea were located and conducted in Ward County, we hold the non-competition agreement to be enforceable in that county.",
+            "date": "1982-07-09",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-hawkins-sale-sev"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#address-survival-per-covenant",
+        "requirementGuidance": "Per-covenant survival keeps the surviving suite auditable: perpetual for trade secrets, finite for ordinary confidential information, the anti-raiding window for the employee non-solicit — and nothing surviving for the clauses the statute voids. A bundled survival clause obscures exactly the distinctions this jurisdiction forces a reviewer to draw.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-assignment-and-successors",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assignment and successors",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#address-assignment-and-successors",
+        "requirementGuidance": "Confirm employer-side assignability for the obligations that survive — confidentiality and trade-secret protections should follow the business through a sale. What assignment cannot do is launder a restraint: a successor takes each covenant exactly as void or enforceable as the seller held it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "keep-north-dakota-law-and-forum-for-north-dakota-workers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.north-dakota.keep-north-dakota-law-and-forum-for-north-dakota-workers",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "North Dakota law and forum for North Dakota workers",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#keep-north-dakota-law-and-forum-for-north-dakota-workers",
+        "requirementGuidance": "For a North Dakota worker the clause must not route enforceability to another state — by chosen law, chosen forum, or the pair working together — when the natural result is enforcing a non-compete North Dakota public policy forbids. The supreme court refused to honor exactly that maneuver, and the foreign-forum statute independently lets a court decline an exclusive out-of-state forum that would be unfair or unreasonable. Still expect the clause to name law, venue, and process; it simply cannot serve as the escape hatch.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nd-osborne-gl",
+            "authorityType": "case-law",
+            "title": "Osborne v. Brown & Saenger, Inc.",
+            "citation": "Osborne v. Brown & Saenger, Inc., 2017 ND 288, ¶ 16, 904 N.W.2d 34.",
+            "url": "https://www.courtlistener.com/opinion/4449595/osborne-v-brown-saenger-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/4449595/osborne-v-brown-saenger-inc/#:~:text=Simply%20put%2C%20one%20may%20not,public%20policy%20against%20non%2Dcompete%20agreements.",
+            "proposition": "Osborne supports refusing choice-of-law and forum-selection clauses that would enable enforcement of a non-compete contrary to North Dakota public policy.",
+            "verbatimQuote": "Simply put, one may not contract for application of another state’s law or forum if the natural result is to allow enforcement of a non-compete agreement in violation of North Dakota’s longstanding and strong public policy against non-compete agreements.",
+            "date": "2017-12-07",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-osborne-gl"
+          },
+          {
+            "sourceId": "nd-foreign-forum-gl",
+            "authorityType": "primary-law",
+            "title": "N.D. Cent. Code § 28-04.1-03",
+            "citation": "N.D. Cent. Code § 28-04.1-03.",
+            "url": "https://ndlegis.gov/cencode/t28c04-1.pdf",
+            "proposition": "N.D. Cent. Code § 28-04.1-03 allows a North Dakota court to decline enforcement of an exclusive foreign-forum agreement when enforcement would be unfair or unreasonable.",
+            "verbatimQuote": "If the parties have agreed in writing that an action on a controversy may be brought only in another state and it is brought in a court of this state, the court will dismiss or stay the action, as appropriate, unless: 1. The court is required by statute to entertain the action; 2. The plaintiff cannot secure effective relief in the other state, for reasons other than delay in bringing the action; 3. The other state would be a substantially less convenient place for the trial of the action than this state; 4. The agreement as to the place of the action was obtained by misrepresentation, duress, the abuse of economic power, or other unconscionable means; or 5. It would for some other reason be unfair or unreasonable to enforce the agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-foreign-forum-gl"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Standard boilerplate with one local wrinkle: an integration clause that merges in covenants from offer letters, incentive plans, or commission schedules can quietly import a void restraint or a forfeiture trigger. Confirm what the merger language actually pulls into the agreement before signing off on it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "gate-goodwill-and-dissociation-covenants-by-statutory-exception",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.north-dakota.gate-goodwill-and-dissociation-covenants-by-statutory-exception",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Goodwill or owner-exit substance behind any exception covenant",
+        "sectionId": "north-dakota-statutory-gates",
+        "itemNumber": "19.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#gate-goodwill-and-dissociation-covenants-by-statutory-exception",
+        "requirementGuidance": "A covenant defended under the statutory exceptions must rest on a genuine sale of business goodwill or on a partner, member, or shareholder dissolution, dissociation, or ownership-interest sale — and must stay within a reasonable geographic area and length of time. Test substance, not labels: the supreme court held a 1/200th equity sale cannot transfer goodwill as a matter of law, and the exception validates only covenants connected with the goodwill actually sold.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nd-goodwill-exception-gate",
+            "authorityType": "primary-law",
+            "title": "N.D. Cent. Code § 9-08-06",
+            "citation": "N.D. Cent. Code § 9-08-06.",
+            "url": "https://ndlegis.gov/cencode/t09c08.pdf",
+            "proposition": "N.D. Cent. Code § 9-08-06 carves out only two exceptions to the business-restraint ban — sale of goodwill and owner dissolution or dissociation — each requiring a reasonable geographic area and a reasonable length of time.",
+            "verbatimQuote": "A contract by which anyone is restrained from exercising a lawful profession, trade, or business of any kind is to that extent void, except: 1. A person that sells the goodwill of a business and the person's partners, members, or shareholders may agree with the buyer to refrain from carrying on a similar business within a reasonable geographic area and for a reasonable length of time, if the buyer or any person deriving title to the goodwill from the buyer carries on a like business in that area. 2. Partners, members, or shareholders, upon or in anticipation of a dissolution of a partnership, limited liability company, or corporation; upon or in anticipation of a dissociation of a partner or member; or as part of an agreement addressing the dissociation or sale of a partner, member, or shareholder's ownership interest, may agree that all or any number of them will not carry on a similar business within a reasonable geographic area where the partnership, limited liability company, or corporation business has been transacted, or within a specified part of the area.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-goodwill-exception-gate"
+          },
+          {
+            "sourceId": "nd-warner-small-stock-gate",
+            "authorityType": "case-law",
+            "title": "Warner & Co. v. Solberg",
+            "citation": "Warner & Co. v. Solberg, 2001 ND 156, ¶ 29, 634 N.W.2d 65.",
+            "url": "https://www.courtlistener.com/opinion/896854/warner-co-v-solberg/",
+            "deepLink": "https://www.courtlistener.com/opinion/896854/warner-co-v-solberg/#:~:text=We%20agree%20with%20the%20trial,the%20goodwill%20of%20the%20business.",
+            "proposition": "Warner supports scrutinizing whether an equity sale is sufficient to qualify as a sale of goodwill.",
+            "verbatimQuote": "We agree with the trial court that, as a matter of law, the sale of a l/200th interest cannot be said to transfer the goodwill of the business.",
+            "date": "2001-09-05",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-warner-small-stock-gate"
+          },
+          {
+            "sourceId": "nd-earthworks-connection-gate",
+            "authorityType": "case-law",
+            "title": "Earthworks, Inc. v. Sehn",
+            "citation": "Earthworks, Inc. v. Sehn, 553 N.W.2d 490, 493 (N.D. 1996).",
+            "url": "https://www.courtlistener.com/opinion/895669/earthworks-inc-v-sehn/",
+            "deepLink": "https://www.courtlistener.com/opinion/895669/earthworks-inc-v-sehn/#:~:text=The%20exception%20relied%20on%20here,the%20goodwill%20of%20a%20business.",
+            "proposition": "Earthworks supports the rule that the sale-of-goodwill exception validates only limited non-competes connected with goodwill.",
+            "verbatimQuote": "The exception relied on here by Earthworks makes valid a limited non-competition agreement only if it is connected with the sale of the goodwill of a business.",
+            "date": "1996-09-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-earthworks-connection-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-forfeiture-for-competition-mechanisms",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.north-dakota.exclude-forfeiture-for-competition-mechanisms",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No pay forfeitures for competing",
+        "sectionId": "north-dakota-statutory-gates",
+        "itemNumber": "19.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#exclude-forfeiture-for-competition-mechanisms",
+        "requirementGuidance": "Sweep the compensation provisions, not just the covenants article: bonus clawbacks, deferred-compensation forfeitures, termination-pay conditions, and liquidated damages triggered by post-employment competition are indirect restraints. North Dakota asks whether the worker must buy back the freedom to compete, and it voids penalty mechanisms as readily as outright prohibitions.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nd-werlinger-freedom-gate",
+            "authorityType": "case-law",
+            "title": "Werlinger v. Mutual Service Casualty Insurance Co.",
+            "citation": "Werlinger v. Mut. Serv. Cas. Ins. Co., 496 N.W.2d 26, 29 (N.D. 1993).",
+            "url": "https://www.courtlistener.com/opinion/1282430/werlinger-v-mutual-service-casualty-insurance-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/1282430/werlinger-v-mutual-service-casualty-insurance-co/#:~:text=Surely%20this%20was%20not%20freedom,no%20merit%20to%20this%20contention.",
+            "proposition": "Werlinger supports the rule that a restraint need not be absolute to be void under § 9-08-06.",
+            "verbatimQuote": "Surely this was not freedom to practice his profession in Grand Forks, since he would have to purchase the freedom with $2,000, and there is no merit to this contention.",
+            "date": "1993-02-23",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-werlinger-freedom-gate"
+          },
+          {
+            "sourceId": "nd-earthworks-penalty-gate",
+            "authorityType": "case-law",
+            "title": "Earthworks, Inc. v. Sehn",
+            "citation": "Earthworks, Inc. v. Sehn, 553 N.W.2d 490, 493 (N.D. 1996).",
+            "url": "https://www.courtlistener.com/opinion/895669/earthworks-inc-v-sehn/",
+            "deepLink": "https://www.courtlistener.com/opinion/895669/earthworks-inc-v-sehn/#:~:text=The%20statute%20represents%20one%20of,penalty%20if%20he%20does%20so.",
+            "proposition": "Earthworks supports treating post-employment competitor bans and competition penalties as invalid under § 9-08-06 outside an exception.",
+            "verbatimQuote": "The statute represents one of the oldest and most continuous applications of public policy in contract law, and it invalidates provisions in employment contracts prohibiting an employee from working for a competitor after completion of his employment or imposing a penalty if he does so.",
+            "date": "1996-09-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-earthworks-penalty-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "keep-confidentiality-targeted-at-protected-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.north-dakota.keep-confidentiality-targeted-at-protected-information",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality not a disguised non-compete",
+        "sectionId": "north-dakota-statutory-gates",
+        "itemNumber": "19.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#keep-confidentiality-targeted-at-protected-information",
+        "requirementGuidance": "Read the confidentiality and trade-secret clauses for repackaged restraints: language that bars working for competitors or serving customers under the banner of protecting information inherits the void rule rather than the trade-secret safe ground. The supreme court pointed employers at trade-secret legislation precisely so the statute would need no judicial exceptions — keep the clause on that footing, scoped to information with genuine secrecy value.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nd-warner-ts-rationale-gate",
+            "authorityType": "case-law",
+            "title": "Warner & Co. v. Solberg",
+            "citation": "Warner & Co. v. Solberg, 2001 ND 156, ¶ 18, 634 N.W.2d 65.",
+            "url": "https://www.courtlistener.com/opinion/896854/warner-co-v-solberg/",
+            "deepLink": "https://www.courtlistener.com/opinion/896854/warner-co-v-solberg/#:~:text=Because%20of%20the%20plain%20language,we%20decline%20to%20do%20so.",
+            "proposition": "Warner supports using trade-secret law rather than a judicial exception to § 9-08-06 to protect confidential customer information.",
+            "verbatimQuote": "Because of the plain language of the statute, the history of legislation in North Dakota concerning this issue, and because North Dakota has enacted trade-secrets legislation, we decline to do so.",
+            "date": "2001-09-05",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-warner-ts-rationale-gate"
+          },
+          {
+            "sourceId": "nd-utsa-definition-gate",
+            "authorityType": "primary-law",
+            "title": "N.D. Cent. Code ch. 47-25.1",
+            "citation": "N.D. Cent. Code § 47-25.1-01(4).",
+            "url": "https://ndlegis.gov/cencode/t47c25-1.pdf",
+            "proposition": "North Dakota's Uniform Trade Secrets Act defines trade secret by economic value from secrecy and reasonable efforts to maintain secrecy.",
+            "verbatimQuote": "4. \"Trade secret\" means information, including a formula, pattern, compilation, program, device, method, technique, or process, that: a. Derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use; and b. Is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-utsa-definition-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "route-protection-through-trade-secret-and-loyalty-tools",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.north-dakota.route-protection-through-trade-secret-and-loyalty-tools",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protection built on trade-secret and loyalty tools",
+        "sectionId": "north-dakota-statutory-gates",
+        "itemNumber": "19.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#route-protection-through-trade-secret-and-loyalty-tools",
+        "requirementGuidance": "The strongest North Dakota agreement leans on what the state actually enforces: injunctions against actual or threatened misappropriation, damages for actual loss and unjust enrichment, the during-employment duty to prefer the employer's business, and equitable relief against secretly soliciting clients while still employed. If the draft's only real protection is a restraint, the employer has none.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nd-utsa-injunction-gate",
+            "authorityType": "primary-law",
+            "title": "N.D. Cent. Code ch. 47-25.1",
+            "citation": "N.D. Cent. Code § 47-25.1-02(1).",
+            "url": "https://ndlegis.gov/cencode/t47c25-1.pdf",
+            "proposition": "North Dakota's Uniform Trade Secrets Act authorizes injunctions for actual or threatened misappropriation.",
+            "verbatimQuote": "Actual or threatened misappropriation may be enjoined.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-utsa-injunction-gate"
+          },
+          {
+            "sourceId": "nd-utsa-damages-gate",
+            "authorityType": "primary-law",
+            "title": "N.D. Cent. Code ch. 47-25.1",
+            "citation": "N.D. Cent. Code § 47-25.1-03(1).",
+            "url": "https://ndlegis.gov/cencode/t47c25-1.pdf",
+            "proposition": "North Dakota's Uniform Trade Secrets Act authorizes damages for misappropriation, including actual loss and unjust enrichment.",
+            "verbatimQuote": "Damages can include both the actual loss caused by misappropriation and the unjust enrichment caused by misappropriation that is not taken into account in computing actual loss.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-utsa-damages-gate"
+          },
+          {
+            "sourceId": "nd-loyalty-duty-gate",
+            "authorityType": "primary-law",
+            "title": "N.D. Cent. Code § 34-02-14",
+            "citation": "N.D. Cent. Code § 34-02-14.",
+            "url": "https://ndlegis.gov/cencode/t34c02.pdf",
+            "proposition": "N.D. Cent. Code § 34-02-14 supplies a during-employment duty to prefer the employer's business in similar affairs.",
+            "verbatimQuote": "An employee who has any business to transact on the employee's own account similar to that entrusted to the employee by the employee's employer shall give the latter the preference always.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-loyalty-duty-gate"
+          },
+          {
+            "sourceId": "nd-biever-loyalty-gate",
+            "authorityType": "case-law",
+            "title": "Biever, Drees & Nordell v. Coutts",
+            "citation": "Biever, Drees & Nordell v. Coutts, 305 N.W.2d 33, 36 (N.D. 1981).",
+            "url": "https://www.courtlistener.com/opinion/2226690/biever-drees-nordell-v-coutts/",
+            "deepLink": "https://www.courtlistener.com/opinion/2226690/biever-drees-nordell-v-coutts/#:~:text=We%20believe%20the%20above%20provision,was%20employed%20by%20the%20firm.",
+            "proposition": "Biever supports equitable relief for secret solicitation of an employer's clients while still employed.",
+            "verbatimQuote": "We believe the above provision clearly sets forth what the firm had a right to expect from Coutts, i. e., that he would not solicit clients of the firm for himself while he was employed by the firm.",
+            "date": "1981-04-23",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-dakota#src-nd-biever-loyalty-gate"
+          }
+        ]
+      }
+    ]
+  }
+}

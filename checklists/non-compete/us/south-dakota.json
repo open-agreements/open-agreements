@@ -1,0 +1,1484 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/south-dakota",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/south-dakota.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/south-dakota",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/south-dakota/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/south-dakota/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "south-dakota",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — South Dakota",
+      "description": "A clause-by-clause reviewer checklist for South Dakota employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under SDCL 53-9-11's statutory whitelist, the two-year and specified-area limits, the existing-customer rule, and the healthcare practitioner provision.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "South Dakota",
+      "coverage": "South Dakota (US)",
+      "lastReviewed": "2026-06-12",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 48,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "label": "Physician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "south-dakota-statutory-gates",
+        "label": "South Dakota statutory gates"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#identify-parties",
+        "requirementGuidance": "Confirm the party named as employer is the entity that actually employs the worker. The statutory exception runs between an employee and an employer — a covenant papered with an affiliate, a staffing entity, or a customer that never employed the worker starts outside the only lane that could save it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sd-5911-cover",
+            "authorityType": "primary-law",
+            "title": "S.D. Codified Laws § 53-9-11",
+            "citation": "S.D. Codified Laws § 53-9-11.",
+            "url": "https://sdlegislature.gov/Statutes/53-9-11",
+            "proposition": "S.D. Codified Laws § 53-9-11 supports that the employee exception runs between an employee and an employer and measures its two-year limits from the date of termination of the agreement.",
+            "verbatimQuote": "Except as otherwise provided in § 53-9-11.2, an employee may agree with an employer at the time of employment or at any time during employment not to engage directly or indirectly in the same business or profession as that of the employer for any period not exceeding two years from the date of termination of the agreement and not to solicit existing customers of the employer within a specified county, first- or second-class municipality, or other specified area for any period not exceeding two years from the date of termination of the agreement, if the employer continues to carry on a like business therein.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-5911-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#identify-effective-date",
+        "requirementGuidance": "The date does double duty here: the two-year ceiling runs from the date of termination of the agreement, so the agreement's own life span sets the covenant clock, and the healthcare practitioner regime keys to whether the contract was entered into on or after July 1, 2023. Verify the date is stated and unambiguous.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sd-5911-cover",
+            "authorityType": "primary-law",
+            "title": "S.D. Codified Laws § 53-9-11",
+            "citation": "S.D. Codified Laws § 53-9-11.",
+            "url": "https://sdlegislature.gov/Statutes/53-9-11",
+            "proposition": "S.D. Codified Laws § 53-9-11 supports that the employee exception runs between an employee and an employer and measures its two-year limits from the date of termination of the agreement.",
+            "verbatimQuote": "Except as otherwise provided in § 53-9-11.2, an employee may agree with an employer at the time of employment or at any time during employment not to engage directly or indirectly in the same business or profession as that of the employer for any period not exceeding two years from the date of termination of the agreement and not to solicit existing customers of the employer within a specified county, first- or second-class municipality, or other specified area for any period not exceeding two years from the date of termination of the agreement, if the employer continues to carry on a like business therein.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-5911-cover"
+          },
+          {
+            "sourceId": "sd-1122-cover",
+            "authorityType": "primary-law",
+            "title": "S.D. Codified Laws § 53-9-11.2",
+            "citation": "S.D. Codified Laws § 53-9-11.2.",
+            "url": "https://sdlegislature.gov/Statutes/53-9-11.2",
+            "proposition": "S.D. Codified Laws § 53-9-11.2 supports that the practitioner voidable rule applies to contracts entered into on or after July 1, 2023.",
+            "verbatimQuote": "Notwithstanding § 53-9-11, a provision of a contract, entered into on or after July 1, 2023, is voidable if it restricts a practitioner, as defined in § 53-9-11.1, from practicing or otherwise providing professional services in accordance with the applicable scope of practice, after the conclusion of the practitioner's employment or after the dissolution of a partnership or other form of professional relationship.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-1122-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#identify-employee-title",
+        "requirementGuidance": "Record the role and any license with more care than usual, because occupation and classification select the governing rule: a long list of licensed healthcare roles gets the voidable-restriction protection, an independent contractor falls outside the employee exception entirely, and a narrow captive-insurance-agent lane is the only contractor exception the chapter offers. The stated title is the first signal that one of those special lanes applies.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sd-1111-cover",
+            "authorityType": "primary-law",
+            "title": "S.D. Codified Laws § 53-9-11.1",
+            "citation": "S.D. Codified Laws § 53-9-11.1.",
+            "url": "https://sdlegislature.gov/Statutes/53-9-11.1",
+            "proposition": "S.D. Codified Laws § 53-9-11.1 supports the broad multi-role practitioner definition that makes the worker's license a regime-selecting fact.",
+            "verbatimQuote": "For purposes of § 53-9-11.2, a practitioner means: (1) A physician licensed in accordance with chapter 36-4; (2) A physician assistant licensed in accordance with chapter 36-4A; (3) A paramedic or emergency medical technician licensed in accordance with chapter 36-4B; (4) A respiratory care practitioner licensed in accordance with chapter 36-4C; (5) A chiropractor licensed in accordance with chapter 36-5;",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-1111-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#identify-governing-law",
+        "requirementGuidance": "Check that the governing state is stated — and treat a clause selecting another state's law for a South Dakota worker as a flag rather than a fix. Courts here honor choice-of-law clauses only up to the point they contravene South Dakota public policy, and the chapter 53-9 baseline is exactly that kind of policy.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sd-miller-col-cover",
+            "authorityType": "case-law",
+            "title": "Miller v. Honkamp Krueger Financial Services, Inc.",
+            "citation": "Miller v. Honkamp Krueger Fin. Servs., Inc., 9 F.4th 1011, 1018 (8th Cir. 2021).",
+            "url": "https://www.courtlistener.com/opinion/5040408/cara-miller-v-honkamp-krueger-financial/",
+            "deepLink": "https://www.courtlistener.com/opinion/5040408/cara-miller-v-honkamp-krueger-financial/#:~:text=Under%20South%20Dakota%20law%2C%20courts,contravene%20South%20Dakota%20public%20policy.",
+            "proposition": "Miller supports that contractual choice-of-law provisions yield where they contravene South Dakota public policy.",
+            "verbatimQuote": "Under South Dakota law, courts honor contractual choice-of-law provisions unless they contravene South Dakota public policy.",
+            "date": "2021-08-24",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-miller-col-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#define-confidential-information",
+        "requirementGuidance": "Confirm the definition covers genuinely protectable information and nothing more. South Dakota enforces confidentiality covenants only to the extent reasonably necessary to protect the employer's interest in confidential information, and a definition broad enough to function as a work ban gets measured against the statute that voids restraints on a lawful profession.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sd-rezatto-defs",
+            "authorityType": "case-law",
+            "title": "1st American Systems, Inc. v. Rezatto",
+            "citation": "1st American Systems, Inc. v. Rezatto, 311 N.W.2d 51, 57 (S.D. 1981).",
+            "url": "https://www.courtlistener.com/opinion/2193337/1st-american-systems-inc-v-rezatto/",
+            "deepLink": "https://www.courtlistener.com/opinion/2193337/1st-american-systems-inc-v-rezatto/#:~:text=Because%20this%20dialectic%20exists%2C%20covenants%2C,employer%E2%80%99s%20interest%20in%20confidential%20information.",
+            "proposition": "Rezatto supports that South Dakota confidentiality covenants are strictly construed and enforced only to the extent reasonably necessary to protect confidential information.",
+            "verbatimQuote": "Because this dialectic exists, covenants, like paragraph 7, are strictly construed and enforced only to the extent reasonably necessary to protect the employer’s interest in confidential information.",
+            "date": "1981-08-19",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-rezatto-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#define-trade-secrets",
+        "requirementGuidance": "Keep Trade Secrets defined separately from ordinary confidential information. The state trade-secret act carries its own remedies — including fee-shifting in specified disputes — that operate independently of any covenant, so a clean definition preserves the protection most likely to survive even when the covenant does not.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sd-37294-defs",
+            "authorityType": "primary-law",
+            "title": "S.D. Codified Laws § 37-29-4",
+            "citation": "S.D. Codified Laws § 37-29-4.",
+            "url": "https://sdlegislature.gov/Statutes/37-29-4",
+            "proposition": "S.D. Codified Laws § 37-29-4 supports that South Dakota's trade-secret act carries its own fee-shifting remedies independent of any covenant.",
+            "verbatimQuote": "If (i) a claim of misappropriation is made in bad faith, (ii) a motion to terminate an injunction is made or resisted in bad faith, or (iii) willful and malicious misappropriation exists, the court may award reasonable attorney's fees to the prevailing party.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-37294-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "cap-restricted-period-at-two-years-from-termination-of-the-agreement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.south-dakota.cap-restricted-period-at-two-years-from-termination-of-the-agreement",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period capped at two years",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#cap-restricted-period-at-two-years-from-termination-of-the-agreement",
+        "requirementGuidance": "Find every duration in the agreement and test it against the statutory ceiling: a non-compete or existing-customer non-solicit may run at most two years, measured from the date of termination of the agreement. Note which event starts the clock — the agreement's termination, not the employment relationship's — and keep a single defined Restricted Period so the cap stays auditable across the covenant suite.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sd-5911-defs",
+            "authorityType": "primary-law",
+            "title": "S.D. Codified Laws § 53-9-11",
+            "citation": "S.D. Codified Laws § 53-9-11.",
+            "url": "https://sdlegislature.gov/Statutes/53-9-11",
+            "proposition": "S.D. Codified Laws § 53-9-11 supports the two-year cap measured from termination of the agreement, the specified-area requirement, the existing-customer limit, the same-business scope, and the like-business condition.",
+            "verbatimQuote": "Except as otherwise provided in § 53-9-11.2, an employee may agree with an employer at the time of employment or at any time during employment not to engage directly or indirectly in the same business or profession as that of the employer for any period not exceeding two years from the date of termination of the agreement and not to solicit existing customers of the employer within a specified county, first- or second-class municipality, or other specified area for any period not exceeding two years from the date of termination of the agreement, if the employer continues to carry on a like business therein.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-5911-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "specify-statutory-area-for-restricted-territory",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.south-dakota.specify-statutory-area-for-restricted-territory",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Territory uses the statutory area",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#specify-statutory-area-for-restricted-territory",
+        "requirementGuidance": "The territory must be a specified county, first- or second-class municipality, or other specified area where the employer continues to carry on a like business. The statute supplies that vocabulary itself, the exception is construed narrowly, and the like-business condition keeps operating after signing — the restraint holds only while the employer actually carries on the like business in the specified area.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sd-5911-defs",
+            "authorityType": "primary-law",
+            "title": "S.D. Codified Laws § 53-9-11",
+            "citation": "S.D. Codified Laws § 53-9-11.",
+            "url": "https://sdlegislature.gov/Statutes/53-9-11",
+            "proposition": "S.D. Codified Laws § 53-9-11 supports the two-year cap measured from termination of the agreement, the specified-area requirement, the existing-customer limit, the same-business scope, and the like-business condition.",
+            "verbatimQuote": "Except as otherwise provided in § 53-9-11.2, an employee may agree with an employer at the time of employment or at any time during employment not to engage directly or indirectly in the same business or profession as that of the employer for any period not exceeding two years from the date of termination of the agreement and not to solicit existing customers of the employer within a specified county, first- or second-class municipality, or other specified area for any period not exceeding two years from the date of termination of the agreement, if the employer continues to carry on a like business therein.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-5911-defs"
+          },
+          {
+            "sourceId": "sd-amrim-defs",
+            "authorityType": "case-law",
+            "title": "American Rim & Brake, Inc. v. Zoellner",
+            "citation": "American Rim & Brake, Inc. v. Zoellner, 382 N.W.2d 421, 424 (S.D. 1986).",
+            "url": "https://www.courtlistener.com/opinion/1585102/american-rim-brake-inc-v-zoellner/",
+            "deepLink": "https://www.courtlistener.com/opinion/1585102/american-rim-brake-inc-v-zoellner/#:~:text=In%20reading%20the%20exception%2C%20we,against%20general%20restraints%20on%20trade.",
+            "proposition": "American Rim supports narrow construction of the employee exception to promote the policy against general restraints on trade.",
+            "verbatimQuote": "In reading the exception, we must construe it narrowly so as to promote the proscription against general restraints on trade.",
+            "date": "1986-02-26",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-amrim-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "limit-covered-customers-to-existing-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.south-dakota.limit-covered-customers-to-existing-customers",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered customers limited to existing customers",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#limit-covered-customers-to-existing-customers",
+        "requirementGuidance": "The statute permits an agreement not to solicit existing customers of the employer — that is the entire grant. A defined customer class reaching prospects, long-departed accounts, or a whole market widens the clause past the exception's text, and the definition should describe people the worker may not pursue, not people the worker may never serve, because an agreement not to solicit is not an agreement not to sell.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sd-5911-defs",
+            "authorityType": "primary-law",
+            "title": "S.D. Codified Laws § 53-9-11",
+            "citation": "S.D. Codified Laws § 53-9-11.",
+            "url": "https://sdlegislature.gov/Statutes/53-9-11",
+            "proposition": "S.D. Codified Laws § 53-9-11 supports the two-year cap measured from termination of the agreement, the specified-area requirement, the existing-customer limit, the same-business scope, and the like-business condition.",
+            "verbatimQuote": "Except as otherwise provided in § 53-9-11.2, an employee may agree with an employer at the time of employment or at any time during employment not to engage directly or indirectly in the same business or profession as that of the employer for any period not exceeding two years from the date of termination of the agreement and not to solicit existing customers of the employer within a specified county, first- or second-class municipality, or other specified area for any period not exceeding two years from the date of termination of the agreement, if the employer continues to carry on a like business therein.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-5911-defs"
+          },
+          {
+            "sourceId": "sd-dolly-sell-defs",
+            "authorityType": "case-law",
+            "title": "Farm Bureau Life Ins. Co. v. Dolly",
+            "citation": "Farm Bureau Life Ins. Co. v. Dolly, 2018 S.D. 28, ¶ 10, 910 N.W.2d 196.",
+            "url": "https://www.courtlistener.com/opinion/4479790/farm-bureau-life-ins-co-v-dolly/",
+            "deepLink": "https://www.courtlistener.com/opinion/4479790/farm-bureau-life-ins-co-v-dolly/#:~:text=The%20circuit%20court%E2%80%99s%20conclusion%20that,reasonable%20interpretation%20of%20that%20statute.",
+            "proposition": "Dolly supports distinguishing a permitted agreement not to solicit from an impermissible agreement not to sell to existing customers.",
+            "verbatimQuote": "The circuit court’s conclusion that SDCL 53-9-12 permits an agreement not to solicit—rather than not to sell to—an insurer’s existing customers is the only reasonable interpretation of that statute.",
+            "date": "2018-04-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-dolly-sell-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#define-covered-employees",
+        "requirementGuidance": "Keep the anti-poaching class to colleagues the departing worker actually worked with during a stated look-back window. No staged South Dakota authority blesses a worker's own no-recruit promise, so the conservative reading treats it like every other restraint here: drafted narrowly, with nothing left for a court to read against the employer.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#define-protected-interests",
+        "requirementGuidance": "Recite the interests, but do not expect them to substitute for statutory fit. South Dakota does not start from a free-floating reasonableness test — the covenant lives or dies on whether it sits inside a chapter 53-9 exception, read narrowly — so the recital frames the clause without rescuing it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sd-amrim-defs",
+            "authorityType": "case-law",
+            "title": "American Rim & Brake, Inc. v. Zoellner",
+            "citation": "American Rim & Brake, Inc. v. Zoellner, 382 N.W.2d 421, 424 (S.D. 1986).",
+            "url": "https://www.courtlistener.com/opinion/1585102/american-rim-brake-inc-v-zoellner/",
+            "deepLink": "https://www.courtlistener.com/opinion/1585102/american-rim-brake-inc-v-zoellner/#:~:text=In%20reading%20the%20exception%2C%20we,against%20general%20restraints%20on%20trade.",
+            "proposition": "American Rim supports narrow construction of the employee exception to promote the policy against general restraints on trade.",
+            "verbatimQuote": "In reading the exception, we must construe it narrowly so as to promote the proscription against general restraints on trade.",
+            "date": "1986-02-26",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-amrim-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-competitive-business",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Competitive business",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#define-competitive-business",
+        "requirementGuidance": "The exception permits restraining the same business or profession as that of the employer, so the definition should describe what the employer concretely does. A definition reaching adjacent fields the employer never carried on stretches past the statutory text — and outside the exception there is only the void zone.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sd-5911-defs",
+            "authorityType": "primary-law",
+            "title": "S.D. Codified Laws § 53-9-11",
+            "citation": "S.D. Codified Laws § 53-9-11.",
+            "url": "https://sdlegislature.gov/Statutes/53-9-11",
+            "proposition": "S.D. Codified Laws § 53-9-11 supports the two-year cap measured from termination of the agreement, the specified-area requirement, the existing-customer limit, the same-business scope, and the like-business condition.",
+            "verbatimQuote": "Except as otherwise provided in § 53-9-11.2, an employee may agree with an employer at the time of employment or at any time during employment not to engage directly or indirectly in the same business or profession as that of the employer for any period not exceeding two years from the date of termination of the agreement and not to solicit existing customers of the employer within a specified county, first- or second-class municipality, or other specified area for any period not exceeding two years from the date of termination of the agreement, if the employer continues to carry on a like business therein.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-5911-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where ownership or investment in competitors is restricted, look for a passive-holdings carve-out below a stated threshold. A clause that technically forbids holding ordinary public shares restrains more than any exception describes, and the baseline statute voids a contract to the extent of the excess restraint.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sd-538-defs",
+            "authorityType": "primary-law",
+            "title": "S.D. Codified Laws § 53-9-8",
+            "citation": "S.D. Codified Laws § 53-9-8.",
+            "url": "https://sdlegislature.gov/Statutes/53-9-8",
+            "proposition": "S.D. Codified Laws § 53-9-8 supports the baseline rule voiding contracts that restrain a lawful profession, trade, or business to the extent of the restraint.",
+            "verbatimQuote": "Any contract restraining exercise of a lawful profession, trade, or business is void to that extent, except as provided by §§ 53-9-9 to 53-9-12, inclusive.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-538-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#define-passive-public-holdings",
+        "requirementGuidance": "Optional drafting mechanics: many agreements inline the carve-out language without a capitalized term. If the defined term appears, check that its percentage matches the operative carve-out it serves.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.11",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#define-solicit",
+        "requirementGuidance": "Define soliciting as affirmative outreach and stop there. The solicitation-versus-acceptance line is decisive in South Dakota: no statutory exception allows an agreement not to accept unsolicited business, so a definition that quietly captures passive acceptance converts a permitted clause into a void one.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sd-miller-unsol-defs",
+            "authorityType": "case-law",
+            "title": "Miller v. Honkamp Krueger Financial Services, Inc.",
+            "citation": "Miller v. Honkamp Krueger Fin. Servs., Inc., 9 F.4th 1011, 1019 (8th Cir. 2021).",
+            "url": "https://www.courtlistener.com/opinion/5040408/cara-miller-v-honkamp-krueger-financial/",
+            "deepLink": "https://www.courtlistener.com/opinion/5040408/cara-miller-v-honkamp-krueger-financial/#:~:text=None%20of%20the%20enumerated%20statutory,not%20to%20accept%20unsolicited%20business.",
+            "proposition": "Miller supports that no statutory exception permits an agreement not to accept unsolicited business.",
+            "verbatimQuote": "None of the enumerated statutory exceptions allow for agreements not to accept unsolicited business.",
+            "date": "2021-08-24",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-miller-unsol-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.12",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#define-termination-of-employment",
+        "requirementGuidance": "Pin down the event that ends the relationship and how it relates to the agreement's own termination, because the statutory two-year clock runs from the date of termination of the agreement. If the contract has a fixed term, an undefined gap between the job ending and the agreement ending makes the one date the statute cares about contestable.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sd-5911-defs",
+            "authorityType": "primary-law",
+            "title": "S.D. Codified Laws § 53-9-11",
+            "citation": "S.D. Codified Laws § 53-9-11.",
+            "url": "https://sdlegislature.gov/Statutes/53-9-11",
+            "proposition": "S.D. Codified Laws § 53-9-11 supports the two-year cap measured from termination of the agreement, the specified-area requirement, the existing-customer limit, the same-business scope, and the like-business condition.",
+            "verbatimQuote": "Except as otherwise provided in § 53-9-11.2, an employee may agree with an employer at the time of employment or at any time during employment not to engage directly or indirectly in the same business or profession as that of the employer for any period not exceeding two years from the date of termination of the agreement and not to solicit existing customers of the employer within a specified county, first- or second-class municipality, or other specified area for any period not exceeding two years from the date of termination of the agreement, if the employer continues to carry on a like business therein.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-5911-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-timing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-timing",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "When the agreement was signed",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#acknowledge-timing",
+        "requirementGuidance": "The statute permits the covenant at the time of employment or at any time during employment, and older authority treats continued employment as sufficient consideration for a mid-employment signature. Record the timing anyway — the same authority requires a further reasonableness inquiry when the employee is later fired through no fault of their own, so the execution facts feed directly into enforcement posture.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sd-5911-timing",
+            "authorityType": "primary-law",
+            "title": "S.D. Codified Laws § 53-9-11",
+            "citation": "S.D. Codified Laws § 53-9-11.",
+            "url": "https://sdlegislature.gov/Statutes/53-9-11",
+            "proposition": "S.D. Codified Laws § 53-9-11 supports allowing an employee covenant at the time of employment or at any time during employment.",
+            "verbatimQuote": "Except as otherwise provided in § 53-9-11.2, an employee may agree with an employer at the time of employment or at any time during employment not to engage directly or indirectly in the same business or profession as that of the employer for any period not exceeding two years from the date of termination of the agreement and not to solicit existing customers of the employer within a specified county, first- or second-class municipality, or other specified area for any period not exceeding two years from the date of termination of the agreement, if the employer continues to carry on a like business therein.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-5911-timing"
+          },
+          {
+            "sourceId": "sd-zakinski-consid-timing",
+            "authorityType": "case-law",
+            "title": "Central Monitoring Service, Inc. v. Zakinski",
+            "citation": "Central Monitoring Serv., Inc. v. Zakinski, 1996 S.D. 116, 553 N.W.2d 513.",
+            "url": "https://www.courtlistener.com/opinion/899991/central-monitoring-service-inc-v-zakinski/",
+            "deepLink": "https://www.courtlistener.com/opinion/899991/central-monitoring-service-inc-v-zakinski/#:~:text=That%20the%20Non%2DCompete%20and%20Confidentiality,to%20be%20binding%20and%20enforceable.",
+            "proposition": "Zakinski supports that continued employment can be sufficient consideration for a covenant signed during employment.",
+            "verbatimQuote": "That the Non-Compete and Confidentiality Agreement executed by Zakinski on June 9, 1992, required no additional consideration to be binding and enforceable.",
+            "date": "1996-09-18",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-zakinski-consid-timing"
+          },
+          {
+            "sourceId": "sd-zakinski-nofault-timing",
+            "authorityType": "case-law",
+            "title": "Central Monitoring Service, Inc. v. Zakinski",
+            "citation": "Central Monitoring Serv., Inc. v. Zakinski, 1996 S.D. 116, 553 N.W.2d 513.",
+            "url": "https://www.courtlistener.com/opinion/899991/central-monitoring-service-inc-v-zakinski/",
+            "deepLink": "https://www.courtlistener.com/opinion/899991/central-monitoring-service-inc-v-zakinski/#:~:text=However%2C%20if%20an%20employee%20is,whether%20the%20agreement%20is%20reasonable.",
+            "proposition": "Zakinski supports added reasonableness review when an employee is fired through no fault of the employee.",
+            "verbatimQuote": "However, if an employee is fired for no fault of his own, the court needs to go further to determine whether the agreement is reasonable.",
+            "date": "1996-09-18",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-zakinski-nofault-timing"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-opportunity-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Chance to consult a lawyer",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#acknowledge-opportunity-to-consult-counsel",
+        "requirementGuidance": "No South Dakota statute requires it, but it is inexpensive evidence of a knowing signature in a regime where the discharge facts and the worker's posture at signing can change how hard a court looks at the covenant.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "Trade-secret obligations should last as long as secrecy does — federal law keys the right to continued secrecy. In a state whose statute confines covenants this tightly, the trade-secret framework is the workhorse protection, so a fixed expiry on trade-secret obligations gives away the most dependable remedy for no benefit.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-trade-secret-definition",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
+            "citation": "18 U.S.C. § 1839(3)(B) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1839",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
+            "proposition": "Federal law keys trade-secret status to continued secrecy, which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-dtsa-trade-secret-definition"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#state-confidentiality-duration",
+        "requirementGuidance": "Give ordinary confidential information its own finite term, and keep the obligation tethered to genuinely confidential material. South Dakota enforces these covenants only to the extent reasonably necessary to protect the employer's interest in confidential information — an everything-forever lid invites a court to read the clause as a disguised work ban.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sd-rezatto-conf",
+            "authorityType": "case-law",
+            "title": "1st American Systems, Inc. v. Rezatto",
+            "citation": "1st American Systems, Inc. v. Rezatto, 311 N.W.2d 51, 57 (S.D. 1981).",
+            "url": "https://www.courtlistener.com/opinion/2193337/1st-american-systems-inc-v-rezatto/",
+            "deepLink": "https://www.courtlistener.com/opinion/2193337/1st-american-systems-inc-v-rezatto/#:~:text=Because%20this%20dialectic%20exists%2C%20covenants%2C,employer%E2%80%99s%20interest%20in%20confidential%20information.",
+            "proposition": "Rezatto supports enforcing confidentiality covenants only to the extent reasonably necessary to protect the employer's interest in confidential information.",
+            "verbatimQuote": "Because this dialectic exists, covenants, like paragraph 7, are strictly construed and enforced only to the extent reasonably necessary to protect the employer’s interest in confidential information.",
+            "date": "1981-08-19",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-rezatto-conf"
+          }
+        ]
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#disclose-dtsa-notice",
+        "requirementGuidance": "Federal law, fully applicable in South Dakota: omit the immunity notice and the employer forfeits exemplary damages and attorney fees in a later trade-secret action against the worker. Where the covenant itself is this constrained, weakening the trade-secret remedy is an unforced error.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-immunity-notice",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-dtsa-immunity-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Confidentiality and non-disparagement language has to leave wages, hours, and working conditions discussable. Federal labor law protects that speech whatever state law governs the covenant, and the Board has been striking overbroad clauses in employee agreements.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nlra-section-7-rights",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-nlra-section-7-rights"
+          },
+          {
+            "sourceId": "mclaren-macomb-protected-activity",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-mclaren-macomb-protected-activity"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#permit-compelled-disclosure",
+        "requirementGuidance": "Confirm the carve-out for disclosure required by law, court order, or a government investigation, with notice to the employer where lawful. Confidentiality obligations cannot block legally compelled disclosure, and the express carve-out keeps the clause from overpromising.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#require-property-return-and-certification",
+        "requirementGuidance": "Return-or-delete at separation, certified in writing. Where the realistic protections are trade-secret and confidentiality claims rather than the covenant itself, the certification is the contemporaneous evidence those claims lean on if protected material later surfaces at a competitor.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-employee-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#permit-employee-nonsolicit",
+        "requirementGuidance": "Optional, and the least-mapped covenant in the suite here: the staged South Dakota authority addresses no-hire promises between businesses, not a worker's own promise not to recruit former colleagues. What is settled is that the employer cannot achieve the same restraint through a side agreement with a customer or vendor — that pattern has its own gate at the end of this checklist.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sd-densmore-cov",
+            "authorityType": "case-law",
+            "title": "Communication Technical Sys., Inc. v. Densmore",
+            "citation": "Communication Technical Sys., Inc. v. Densmore, 1998 S.D. 87, ¶ 27, 583 N.W.2d 125.",
+            "url": "https://www.courtlistener.com/opinion/1882124/communication-technical-systems-inc-v-densmore/",
+            "deepLink": "https://www.courtlistener.com/opinion/1882124/communication-technical-systems-inc-v-densmore/#:~:text=Instead%2C%20CTS%20sought%20to%20bind,this%20it%20may%20not%20do.",
+            "proposition": "Densmore supports that an employer cannot restrain its own employee through a no-hire agreement with a third party where the employee signed no valid covenant.",
+            "verbatimQuote": "Instead, CTS sought to bind its employee through an agreement with a third party. As we have stated, this it may not do.",
+            "date": "1998-08-05",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-densmore-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-customer-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#permit-customer-nonsolicit",
+        "requirementGuidance": "Despite the softer name, this clause travels inside the same statutory lane as the non-compete: existing customers only, a specified area, a like business carried on there, and two years from termination of the agreement. Review it with exactly the rigor the non-compete gets, plus the solicitation-only limit.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sd-5911-cov",
+            "authorityType": "primary-law",
+            "title": "S.D. Codified Laws § 53-9-11",
+            "citation": "S.D. Codified Laws § 53-9-11.",
+            "url": "https://sdlegislature.gov/Statutes/53-9-11",
+            "proposition": "S.D. Codified Laws § 53-9-11 supports that the customer non-solicit shares the employee exception's existing-customer, specified-area, like-business, and two-year structure.",
+            "verbatimQuote": "Except as otherwise provided in § 53-9-11.2, an employee may agree with an employer at the time of employment or at any time during employment not to engage directly or indirectly in the same business or profession as that of the employer for any period not exceeding two years from the date of termination of the agreement and not to solicit existing customers of the employer within a specified county, first- or second-class municipality, or other specified area for any period not exceeding two years from the date of termination of the agreement, if the employer continues to carry on a like business therein.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-5911-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-dealing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#permit-non-dealing",
+        "requirementGuidance": "A bar on doing business with covered customers even when they call first is precisely the no-acceptance shape no statutory exception allows. Treat its inclusion as a deliberate risk decision, not boilerplate — the solicitation-not-acceptance gate at the end of this checklist applies to it in full.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sd-miller-cov",
+            "authorityType": "case-law",
+            "title": "Miller v. Honkamp Krueger Financial Services, Inc.",
+            "citation": "Miller v. Honkamp Krueger Fin. Servs., Inc., 9 F.4th 1011, 1019 (8th Cir. 2021).",
+            "url": "https://www.courtlistener.com/opinion/5040408/cara-miller-v-honkamp-krueger-financial/",
+            "deepLink": "https://www.courtlistener.com/opinion/5040408/cara-miller-v-honkamp-krueger-financial/#:~:text=None%20of%20the%20enumerated%20statutory,not%20to%20accept%20unsolicited%20business.",
+            "proposition": "Miller supports that no statutory exception allows an agreement not to accept unsolicited business, the shape a non-dealing covenant takes.",
+            "verbatimQuote": "None of the enumerated statutory exceptions allow for agreements not to accept unsolicited business.",
+            "date": "2021-08-24",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-miller-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-compete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#permit-non-compete",
+        "requirementGuidance": "Void by default to the extent it restrains a lawful profession, trade, or business, and saved only by an exception the courts read narrowly. If the clause appears at all, run it straight through the South Dakota statutory gates at the end of this checklist — exception fit, customer-restriction shape, practitioner status, worker classification — before evaluating anything else about it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sd-538-cov",
+            "authorityType": "primary-law",
+            "title": "S.D. Codified Laws § 53-9-8",
+            "citation": "S.D. Codified Laws § 53-9-8.",
+            "url": "https://sdlegislature.gov/Statutes/53-9-8",
+            "proposition": "S.D. Codified Laws § 53-9-8 supports the default rule voiding restraints on a lawful profession, trade, or business except as the chapter provides.",
+            "verbatimQuote": "Any contract restraining exercise of a lawful profession, trade, or business is void to that extent, except as provided by §§ 53-9-9 to 53-9-12, inclusive.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-538-cov"
+          },
+          {
+            "sourceId": "sd-dolly-narrow-cov",
+            "authorityType": "case-law",
+            "title": "Farm Bureau Life Ins. Co. v. Dolly",
+            "citation": "Farm Bureau Life Ins. Co. v. Dolly, 2018 S.D. 28, ¶ 13, 910 N.W.2d 196.",
+            "url": "https://www.courtlistener.com/opinion/4479790/farm-bureau-life-ins-co-v-dolly/",
+            "deepLink": "https://www.courtlistener.com/opinion/4479790/farm-bureau-life-ins-co-v-dolly/#:~:text=As%20such%2C%20SDCL%2053%2D9%2D12%20%E2%80%9Cmust,contracts%20in%20restraint%20of%20trade.%E2%80%9D",
+            "proposition": "Dolly supports narrow construction of chapter 53-9 exceptions to promote the prohibition against contracts in restraint of trade.",
+            "verbatimQuote": "As such, SDCL 53-9-12 “must be construed narrowly so as to promote the prohibition against contracts in restraint of trade.”",
+            "date": "2018-04-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-dolly-narrow-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Named-competitor narrowing",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementGuidance": "When the employer can name its real competitors, bind those instead of leaning on an open-ended Competitive Business definition. In a narrow-construction regime every concrete boundary the drafter sets is one less ambiguity a court will resolve against enforcement.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sd-dolly-narrow-cov",
+            "authorityType": "case-law",
+            "title": "Farm Bureau Life Ins. Co. v. Dolly",
+            "citation": "Farm Bureau Life Ins. Co. v. Dolly, 2018 S.D. 28, ¶ 13, 910 N.W.2d 196.",
+            "url": "https://www.courtlistener.com/opinion/4479790/farm-bureau-life-ins-co-v-dolly/",
+            "deepLink": "https://www.courtlistener.com/opinion/4479790/farm-bureau-life-ins-co-v-dolly/#:~:text=As%20such%2C%20SDCL%2053%2D9%2D12%20%E2%80%9Cmust,contracts%20in%20restraint%20of%20trade.%E2%80%9D",
+            "proposition": "Dolly supports narrow construction of chapter 53-9 exceptions to promote the prohibition against contracts in restraint of trade.",
+            "verbatimQuote": "As such, SDCL 53-9-12 “must be construed narrowly so as to promote the prohibition against contracts in restraint of trade.”",
+            "date": "2018-04-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-dolly-narrow-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#permit-non-investment",
+        "requirementGuidance": "Rare and deliberate. Confirm the passive-holdings carve-out is intact and the clause shares the defined Restricted Period — and watch for investment language broad enough to operate as a restraint on the worker's own trade, which is the conduct the baseline statute voids.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sd-538-cov",
+            "authorityType": "primary-law",
+            "title": "S.D. Codified Laws § 53-9-8",
+            "citation": "S.D. Codified Laws § 53-9-8.",
+            "url": "https://sdlegislature.gov/Statutes/53-9-8",
+            "proposition": "S.D. Codified Laws § 53-9-8 supports the default rule voiding restraints on a lawful profession, trade, or business except as the chapter provides.",
+            "verbatimQuote": "Any contract restraining exercise of a lawful profession, trade, or business is void to that extent, except as provided by §§ 53-9-9 to 53-9-12, inclusive.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-538-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#require-non-disparagement",
+        "requirementGuidance": "Fine to include with a stated duration; the audit is in the carve-outs. Truthful testimony, statements to government agencies, and protected workplace speech must sit outside the clause — the Board treats overbroad non-disparagement as unlawful no matter which state's law governs the covenant.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mclaren-macomb-nondisparagement",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-mclaren-macomb-nondisparagement"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-physician-specific-rights",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Physician rights and notices",
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#address-physician-specific-rights",
+        "requirementGuidance": "The dedicated clause should state the South Dakota rule accurately — and the rule reaches far beyond physicians. For contracts entered into on or after July 1, 2023, a provision restricting any listed practitioner from practicing after the relationship ends is voidable, with the practitioner definition covering physicians, physician assistants, emergency medical personnel, and many other licensed clinical roles. Use the statutory word voidable rather than void, and keep a practice restriction separate from a current-patient non-solicit that complies with the geographic and temporal limits, because the statute treats those differently; the full mechanics live in the South Dakota statutory gates at the end of this checklist.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sd-1122-phys",
+            "authorityType": "primary-law",
+            "title": "S.D. Codified Laws § 53-9-11.2",
+            "citation": "S.D. Codified Laws § 53-9-11.2.",
+            "url": "https://sdlegislature.gov/Statutes/53-9-11.2",
+            "proposition": "S.D. Codified Laws § 53-9-11.2 supports the voidable rule for practitioner practice restrictions in contracts entered into on or after July 1, 2023.",
+            "verbatimQuote": "Notwithstanding § 53-9-11, a provision of a contract, entered into on or after July 1, 2023, is voidable if it restricts a practitioner, as defined in § 53-9-11.1, from practicing or otherwise providing professional services in accordance with the applicable scope of practice, after the conclusion of the practitioner's employment or after the dissolution of a partnership or other form of professional relationship.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-1122-phys"
+          },
+          {
+            "sourceId": "sd-1111-phys",
+            "authorityType": "primary-law",
+            "title": "S.D. Codified Laws § 53-9-11.1",
+            "citation": "S.D. Codified Laws § 53-9-11.1.",
+            "url": "https://sdlegislature.gov/Statutes/53-9-11.1",
+            "proposition": "S.D. Codified Laws § 53-9-11.1 supports the broad statutory practitioner definition extending well beyond physicians.",
+            "verbatimQuote": "For purposes of § 53-9-11.2, a practitioner means: (1) A physician licensed in accordance with chapter 36-4; (2) A physician assistant licensed in accordance with chapter 36-4A; (3) A paramedic or emergency medical technician licensed in accordance with chapter 36-4B; (4) A respiratory care practitioner licensed in accordance with chapter 36-4C; (5) A chiropractor licensed in accordance with chapter 36-5;",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-1111-phys"
+          },
+          {
+            "sourceId": "sd-1122-exc-phys",
+            "authorityType": "primary-law",
+            "title": "S.D. Codified Laws § 53-9-11.2",
+            "citation": "S.D. Codified Laws § 53-9-11.2(1)-(2).",
+            "url": "https://sdlegislature.gov/Statutes/53-9-11.2",
+            "proposition": "S.D. Codified Laws § 53-9-11.2 supports the sale-of-practice and compliant current-patient solicitation exceptions to the practitioner rule.",
+            "verbatimQuote": "This section does not apply to any contractual provision that: (1) Is effective upon the sale of a practice or interest in a practice; or (2) Restricts a practitioner from soliciting current patients or clients of the former employer, partnership, or other professional relationship, provided the solicitation complies with the geographic and temporal limitations as referenced in § 53-9-11.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-1122-exc-phys"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "The worker's representation that no earlier agreement blocks the new role. On intake the same analysis runs in reverse: a covenant the worker signed elsewhere may be void as applied here — wrong duration, wrong territory shape, or a no-acceptance customer clause — and the representation surfaces that question before the first customer call instead of after it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#address-notice-to-future-employers",
+        "requirementGuidance": "A genuine drafting choice, with the usual tortious-interference sensitivity sharpened here: warning a new employer off the worker based on a covenant the statute voids asserts rights the employer never had. If the clause appears, condition any notice on a covenant that actually fits a chapter 53-9 exception.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-tolling-during-breach",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-tolling-during-breach",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restriction extended during a breach",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#address-tolling-during-breach",
+        "requirementGuidance": "The agreement should say whether the clock pauses during a breach — but treat any extension mechanism as untested here. No South Dakota statute addresses tolling, the two-year ceiling is written into the exception itself and runs from the date of termination of the agreement, and the cases construe the exceptions narrowly rather than generously. A clause that quietly carries the restraint past two years is asking a court to enlarge an exception, which is the one thing the cases consistently refuse to do.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sd-5911-tolling",
+            "authorityType": "primary-law",
+            "title": "S.D. Codified Laws § 53-9-11",
+            "citation": "S.D. Codified Laws § 53-9-11.",
+            "url": "https://sdlegislature.gov/Statutes/53-9-11",
+            "proposition": "S.D. Codified Laws § 53-9-11 supports that the two-year ceiling is part of the exception's text and runs from the date of termination of the agreement.",
+            "verbatimQuote": "Except as otherwise provided in § 53-9-11.2, an employee may agree with an employer at the time of employment or at any time during employment not to engage directly or indirectly in the same business or profession as that of the employer for any period not exceeding two years from the date of termination of the agreement and not to solicit existing customers of the employer within a specified county, first- or second-class municipality, or other specified area for any period not exceeding two years from the date of termination of the agreement, if the employer continues to carry on a like business therein.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-5911-tolling"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#require-injunctive-relief-availability",
+        "requirementGuidance": "Keep the irreparable-harm acknowledgement — and remember the most durable enforcement tools in South Dakota are the trade-secret remedies, which carry their own fee-shifting and operate whether or not the covenant survives. The acknowledgement supports the covenant claim; the statute carries the backup.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sd-37294-rem",
+            "authorityType": "primary-law",
+            "title": "S.D. Codified Laws § 37-29-4",
+            "citation": "S.D. Codified Laws § 37-29-4.",
+            "url": "https://sdlegislature.gov/Statutes/37-29-4",
+            "proposition": "S.D. Codified Laws § 37-29-4 supports attorney-fee shifting in specified South Dakota trade-secret disputes.",
+            "verbatimQuote": "If (i) a claim of misappropriation is made in bad faith, (ii) a motion to terminate an injunction is made or resisted in bad faith, or (iii) willful and malicious misappropriation exists, the court may award reasonable attorney's fees to the prevailing party.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-37294-rem"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-attorneys-fees-and-costs",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Attorney fees and costs",
+        "sectionId": "remedies",
+        "itemNumber": "13.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#address-attorneys-fees-and-costs",
+        "requirementGuidance": "A commercial choice — the default American Rule applies if the agreement is silent, while the trade-secret act supplies its own fee-shifting for bad-faith and willful misappropriation disputes and a three-year limitations clock for the claim itself. If contractual fee-shifting appears, check that it is mutual and prevailing-party based.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sd-37294-rem",
+            "authorityType": "primary-law",
+            "title": "S.D. Codified Laws § 37-29-4",
+            "citation": "S.D. Codified Laws § 37-29-4.",
+            "url": "https://sdlegislature.gov/Statutes/37-29-4",
+            "proposition": "S.D. Codified Laws § 37-29-4 supports attorney-fee shifting in specified South Dakota trade-secret disputes.",
+            "verbatimQuote": "If (i) a claim of misappropriation is made in bad faith, (ii) a motion to terminate an injunction is made or resisted in bad faith, or (iii) willful and malicious misappropriation exists, the court may award reasonable attorney's fees to the prevailing party.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-37294-rem"
+          },
+          {
+            "sourceId": "sd-37296-rem",
+            "authorityType": "primary-law",
+            "title": "S.D. Codified Laws § 37-29-6",
+            "citation": "S.D. Codified Laws § 37-29-6.",
+            "url": "https://sdlegislature.gov/Statutes/37-29-6",
+            "proposition": "S.D. Codified Laws § 37-29-6 supports the three-year statute of limitations for South Dakota trade-secret misappropriation claims.",
+            "verbatimQuote": "An action for misappropriation must be brought within three years after the misappropriation is discovered or by the exercise of reasonable diligence should have been discovered.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-37296-rem"
+          }
+        ]
+      },
+      {
+        "requirementId": "draft-within-statutory-limits-rather-than-rely-on-partial-enforcement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.south-dakota.draft-within-statutory-limits-rather-than-rely-on-partial-enforcement",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No reliance on court narrowing",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#draft-within-statutory-limits-rather-than-rely-on-partial-enforcement",
+        "requirementGuidance": "South Dakota courts will sometimes save an overbroad covenant — one decision declined to invalidate an entire overbroad provision — but the repair only conforms the covenant to what the statute already allows, and a court will not read in an exception the Legislature did not adopt. The structural protection worth confirming is divisibility: the baseline statute voids a contract only to the extent it restrains trade, so separable nondisclosure promises can survive a failed non-compete. Read the severability clause as triage, and expect each element to comply as written.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sd-franklin-partial-sev",
+            "authorityType": "case-law",
+            "title": "Franklin v. Forever Venture, Inc.",
+            "citation": "Franklin v. Forever Venture, Inc., 2005 S.D. 53, ¶ 15, 696 N.W.2d 545.",
+            "url": "https://www.courtlistener.com/opinion/901375/franklin-v-forever-venture-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/901375/franklin-v-forever-venture-inc/#:~:text=Yet%2C%20despite%20the%20covenant%20being,not%20invalidate%20the%20entire%20provision.",
+            "proposition": "Franklin supports South Dakota's partial-enforcement rule for an overbroad non-compete provision.",
+            "verbatimQuote": "Yet, despite the covenant being overbroad in its restraint, we need not invalidate the entire provision.",
+            "date": "2005-04-27",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-franklin-partial-sev"
+          },
+          {
+            "sourceId": "sd-miller-noexc-sev",
+            "authorityType": "case-law",
+            "title": "Miller v. Honkamp Krueger Financial Services, Inc.",
+            "citation": "Miller v. Honkamp Krueger Fin. Servs., Inc., 9 F.4th 1011, 1019 (8th Cir. 2021).",
+            "url": "https://www.courtlistener.com/opinion/5040408/cara-miller-v-honkamp-krueger-financial/",
+            "deepLink": "https://www.courtlistener.com/opinion/5040408/cara-miller-v-honkamp-krueger-financial/#:~:text=We%20will%20not%20read%20into,Dakota%20legislature%20did%20not%20adopt.",
+            "proposition": "Miller supports refusing to read a non-statutory exception into SDCL 53-9-11.",
+            "verbatimQuote": "We will not read into the statute an exception that the South Dakota legislature did not adopt.",
+            "date": "2021-08-24",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-miller-noexc-sev"
+          },
+          {
+            "sourceId": "sd-rezatto-div-sev",
+            "authorityType": "case-law",
+            "title": "1st American Systems, Inc. v. Rezatto",
+            "citation": "1st American Systems, Inc. v. Rezatto, 311 N.W.2d 51, 57 (S.D. 1981).",
+            "url": "https://www.courtlistener.com/opinion/2193337/1st-american-systems-inc-v-rezatto/",
+            "deepLink": "https://www.courtlistener.com/opinion/2193337/1st-american-systems-inc-v-rezatto/#:~:text=The%20trial%20court%20erred%20in,a%20general%20restraint%20on%20trade.",
+            "proposition": "Rezatto supports divisibility between invalid non-compete restraints and enforceable nondisclosure restrictions.",
+            "verbatimQuote": "The trial court erred in completely voiding the instant contract since it is divisible and paragraph 7 is not a general restraint on trade.",
+            "date": "1981-08-19",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-rezatto-div-sev"
+          }
+        ]
+      },
+      {
+        "requirementId": "ensure-covenants-expressly-survive-a-fixed-term-agreement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.south-dakota.ensure-covenants-expressly-survive-a-fixed-term-agreement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covenants expressly survive the agreement",
+        "sectionId": "survival",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#ensure-covenants-expressly-survive-a-fixed-term-agreement",
+        "requirementGuidance": "If the agreement has a fixed term, confirm the restrictive covenants expressly survive its termination, covenant by covenant. A federal appeals court applying South Dakota law held that once the parties performed a fixed-term agreement to its end, the agreement terminated on its stated date and the covenants terminated with it — and because the statutory two-year clock runs from the date of termination of the agreement, the agreement term, termination language, and survival clause have to be aligned before any duration math matters.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sd-wilbur-surv",
+            "authorityType": "case-law",
+            "title": "Wilbur-Ellis Co. v. Erikson",
+            "citation": "Wilbur-Ellis Co. v. Erikson, 103 F.4th 1352, 1357 (8th Cir. 2024).",
+            "url": "https://www.courtlistener.com/opinion/9511796/wilbur-ellis-company-v-kevin-erikson/",
+            "deepLink": "https://www.courtlistener.com/opinion/9511796/wilbur-ellis-company-v-kevin-erikson/#:~:text=Here%2C%20however%2C%20Erikson%20and%20Wilbur%2DEllis,as%20did%20the%20Restrictive%20Covenants.",
+            "proposition": "Wilbur-Ellis supports that restrictive covenants in a fixed-term agreement ended with the agreement absent express survival language.",
+            "verbatimQuote": "Here, however, Erikson and Wilbur-Ellis performed the obligations they owed each other, and thus, the Agreement terminated on March 31, 2019, as did the Restrictive Covenants.",
+            "date": "2024-06-12",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-wilbur-surv"
+          },
+          {
+            "sourceId": "sd-wilbur-context-surv",
+            "authorityType": "case-law",
+            "title": "Wilbur-Ellis Co. v. Erikson",
+            "citation": "Wilbur-Ellis Co. v. Erikson, 103 F.4th 1352, 1356 (8th Cir. 2024).",
+            "url": "https://www.courtlistener.com/opinion/9511796/wilbur-ellis-company-v-kevin-erikson/",
+            "deepLink": "https://www.courtlistener.com/opinion/9511796/wilbur-ellis-company-v-kevin-erikson/#:~:text=This%20gives%20Wilbur%2DEllis%20time%20to,leave%20during%20the%20specified%20duration.",
+            "proposition": "Wilbur-Ellis supports treating acquisition-related restrictive covenants as a tool to transition the business and protect purchased goodwill during the stated duration.",
+            "verbatimQuote": "This gives Wilbur-Ellis time to transition the business and protects the goodwill it purchased should an employee leave during the specified duration.",
+            "date": "2024-06-12",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-wilbur-context-surv"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-assignment-and-successors",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assignment and successors",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#address-assignment-and-successors",
+        "requirementGuidance": "Confirm employer-side assignability to successors and that the worker cannot assign. Whoever ends up holding the covenant inherits it exactly as the statute limits it — the specified area, the like-business condition, the two-year ceiling — and a successor that stops carrying on the like business in the restricted area loses the condition the exception depends on.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "expect-south-dakota-law-to-govern-south-dakota-covenants",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.south-dakota.expect-south-dakota-law-to-govern-south-dakota-covenants",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "South Dakota law expected to apply",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#expect-south-dakota-law-to-govern-south-dakota-covenants",
+        "requirementGuidance": "Do not let another state's choice-of-law clause stand in for compliance: courts honor those clauses only until they contravene South Dakota public policy, and a covenant that chapter 53-9 would void has been tested under South Dakota law despite the contract's selection of a different state. The clause should still state governing law, venue, and process — but for a South Dakota worker, territory, or customer base, plan on the chapter 53-9 analysis applying whatever the template names.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sd-miller-gov",
+            "authorityType": "case-law",
+            "title": "Miller v. Honkamp Krueger Financial Services, Inc.",
+            "citation": "Miller v. Honkamp Krueger Fin. Servs., Inc., 9 F.4th 1011, 1018 (8th Cir. 2021).",
+            "url": "https://www.courtlistener.com/opinion/5040408/cara-miller-v-honkamp-krueger-financial/",
+            "deepLink": "https://www.courtlistener.com/opinion/5040408/cara-miller-v-honkamp-krueger-financial/#:~:text=Under%20South%20Dakota%20law%2C%20courts,contravene%20South%20Dakota%20public%20policy.",
+            "proposition": "Miller supports refusing an out-of-state choice-of-law clause when the restrictive covenant violates South Dakota public policy.",
+            "verbatimQuote": "Under South Dakota law, courts honor contractual choice-of-law provisions unless they contravene South Dakota public policy.",
+            "date": "2021-08-24",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-miller-gov"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Standard boilerplate with one South Dakota wrinkle worth checking: amendment and termination mechanics should preserve the agreement's date discipline, because the statutory clock runs from the date the agreement terminates and the practitioner regime keys to when the contract was entered into. A casual restatement can silently move both dates.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "gate-employee-covenant-on-statutory-exception",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.south-dakota.gate-employee-covenant-on-statutory-exception",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covenant fits a statutory exception",
+        "sectionId": "south-dakota-statutory-gates",
+        "itemNumber": "19.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#gate-employee-covenant-on-statutory-exception",
+        "requirementGuidance": "Start here whenever a non-compete or customer non-solicit appears: the baseline statute voids any restraint on a lawful profession, trade, or business to that extent, and only the exceptions written into chapter 53-9 save a covenant. Identify the exception the clause relies on — the employee lane with its two-year, specified-area, existing-customer, and like-business limits, the sale of goodwill, or another listed track — and hold the drafting to its exact text, because the exceptions are construed narrowly and a missed element means the void baseline, not a closer look at reasonableness.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sd-538-gate",
+            "authorityType": "primary-law",
+            "title": "S.D. Codified Laws § 53-9-8",
+            "citation": "S.D. Codified Laws § 53-9-8.",
+            "url": "https://sdlegislature.gov/Statutes/53-9-8",
+            "proposition": "S.D. Codified Laws § 53-9-8 supports the baseline rule of voidness that every South Dakota covenant must escape through a chapter 53-9 exception.",
+            "verbatimQuote": "Any contract restraining exercise of a lawful profession, trade, or business is void to that extent, except as provided by §§ 53-9-9 to 53-9-12, inclusive.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-538-gate"
+          },
+          {
+            "sourceId": "sd-amrim-gate",
+            "authorityType": "case-law",
+            "title": "American Rim & Brake, Inc. v. Zoellner",
+            "citation": "American Rim & Brake, Inc. v. Zoellner, 382 N.W.2d 421, 424 (S.D. 1986).",
+            "url": "https://www.courtlistener.com/opinion/1585102/american-rim-brake-inc-v-zoellner/",
+            "deepLink": "https://www.courtlistener.com/opinion/1585102/american-rim-brake-inc-v-zoellner/#:~:text=In%20reading%20the%20exception%2C%20we,against%20general%20restraints%20on%20trade.",
+            "proposition": "American Rim supports narrow construction of the statutory exceptions to promote the proscription against general restraints on trade.",
+            "verbatimQuote": "In reading the exception, we must construe it narrowly so as to promote the proscription against general restraints on trade.",
+            "date": "1986-02-26",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-amrim-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "confine-customer-restrictions-to-solicitation-not-acceptance",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.south-dakota.confine-customer-restrictions-to-solicitation-not-acceptance",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Solicitation restricted, acceptance left alone",
+        "sectionId": "south-dakota-statutory-gates",
+        "itemNumber": "19.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#confine-customer-restrictions-to-solicitation-not-acceptance",
+        "requirementGuidance": "Scan every customer clause for no-service, no-sale, and no-acceptance language: none of the enumerated statutory exceptions allow an agreement not to accept unsolicited business, and an agreement not to solicit is not an agreement not to sell to customers who seek the worker out on their own. The safe clause targets affirmative solicitation of existing customers in the specified area and leaves unsolicited customer choice alone.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sd-miller-gate",
+            "authorityType": "case-law",
+            "title": "Miller v. Honkamp Krueger Financial Services, Inc.",
+            "citation": "Miller v. Honkamp Krueger Fin. Servs., Inc., 9 F.4th 1011, 1019 (8th Cir. 2021).",
+            "url": "https://www.courtlistener.com/opinion/5040408/cara-miller-v-honkamp-krueger-financial/",
+            "deepLink": "https://www.courtlistener.com/opinion/5040408/cara-miller-v-honkamp-krueger-financial/#:~:text=None%20of%20the%20enumerated%20statutory,not%20to%20accept%20unsolicited%20business.",
+            "proposition": "Miller supports that an employee non-solicit under SDCL 53-9-11 cannot prohibit accepting unsolicited business.",
+            "verbatimQuote": "None of the enumerated statutory exceptions allow for agreements not to accept unsolicited business.",
+            "date": "2021-08-24",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-miller-gate"
+          },
+          {
+            "sourceId": "sd-dolly-sell-gate",
+            "authorityType": "case-law",
+            "title": "Farm Bureau Life Ins. Co. v. Dolly",
+            "citation": "Farm Bureau Life Ins. Co. v. Dolly, 2018 S.D. 28, ¶ 10, 910 N.W.2d 196.",
+            "url": "https://www.courtlistener.com/opinion/4479790/farm-bureau-life-ins-co-v-dolly/",
+            "deepLink": "https://www.courtlistener.com/opinion/4479790/farm-bureau-life-ins-co-v-dolly/#:~:text=The%20circuit%20court%E2%80%99s%20conclusion%20that,reasonable%20interpretation%20of%20that%20statute.",
+            "proposition": "Dolly supports that a permitted agreement not to solicit is not an agreement not to sell to existing customers.",
+            "verbatimQuote": "The circuit court’s conclusion that SDCL 53-9-12 permits an agreement not to solicit—rather than not to sell to—an insurer’s existing customers is the only reasonable interpretation of that statute.",
+            "date": "2018-04-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-dolly-sell-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "avoid-voidable-practice-restrictions-for-healthcare-practitioners",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.south-dakota.avoid-voidable-practice-restrictions-for-healthcare-practitioners",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Healthcare practitioner restrictions are voidable",
+        "sectionId": "south-dakota-statutory-gates",
+        "itemNumber": "19.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#avoid-voidable-practice-restrictions-for-healthcare-practitioners",
+        "requirementGuidance": "For contracts entered into on or after July 1, 2023, a provision restricting a covered practitioner from practicing or providing professional services after the relationship ends is voidable at the practitioner's election — it stands unless avoided, which is why the statutory word is voidable rather than void, and why relying on it is a planning error even though including it is not unlawful. Check the worker's license against the broad practitioner list, then check for the two surviving shapes: a provision effective on the sale of a practice, and a current-patient non-solicit that complies with the geographic and temporal limits.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sd-1122-gate",
+            "authorityType": "primary-law",
+            "title": "S.D. Codified Laws § 53-9-11.2",
+            "citation": "S.D. Codified Laws § 53-9-11.2.",
+            "url": "https://sdlegislature.gov/Statutes/53-9-11.2",
+            "proposition": "S.D. Codified Laws § 53-9-11.2 supports the voidable rule for covered practitioner restrictions entered into on or after July 1, 2023.",
+            "verbatimQuote": "Notwithstanding § 53-9-11, a provision of a contract, entered into on or after July 1, 2023, is voidable if it restricts a practitioner, as defined in § 53-9-11.1, from practicing or otherwise providing professional services in accordance with the applicable scope of practice, after the conclusion of the practitioner's employment or after the dissolution of a partnership or other form of professional relationship.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-1122-gate"
+          },
+          {
+            "sourceId": "sd-1111-gate",
+            "authorityType": "primary-law",
+            "title": "S.D. Codified Laws § 53-9-11.1",
+            "citation": "S.D. Codified Laws § 53-9-11.1.",
+            "url": "https://sdlegislature.gov/Statutes/53-9-11.1",
+            "proposition": "S.D. Codified Laws § 53-9-11.1 supports the broad statutory practitioner definition — physicians, physician assistants, emergency medical personnel, and many other licensed clinical roles.",
+            "verbatimQuote": "For purposes of § 53-9-11.2, a practitioner means: (1) A physician licensed in accordance with chapter 36-4; (2) A physician assistant licensed in accordance with chapter 36-4A; (3) A paramedic or emergency medical technician licensed in accordance with chapter 36-4B; (4) A respiratory care practitioner licensed in accordance with chapter 36-4C; (5) A chiropractor licensed in accordance with chapter 36-5;",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-1111-gate"
+          },
+          {
+            "sourceId": "sd-1122-exc-gate",
+            "authorityType": "primary-law",
+            "title": "S.D. Codified Laws § 53-9-11.2",
+            "citation": "S.D. Codified Laws § 53-9-11.2(1)-(2).",
+            "url": "https://sdlegislature.gov/Statutes/53-9-11.2",
+            "proposition": "S.D. Codified Laws § 53-9-11.2 supports the sale-of-practice and compliant current-patient solicitation exceptions for practitioner contracts.",
+            "verbatimQuote": "This section does not apply to any contractual provision that: (1) Is effective upon the sale of a practice or interest in a practice; or (2) Restricts a practitioner from soliciting current patients or clients of the former employer, partnership, or other professional relationship, provided the solicitation complies with the geographic and temporal limitations as referenced in § 53-9-11.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-1122-exc-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "gate-contractor-covenants-on-the-captive-insurance-agent-exception",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.south-dakota.gate-contractor-covenants-on-the-captive-insurance-agent-exception",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Contractors fall outside the employee exception",
+        "sectionId": "south-dakota-statutory-gates",
+        "itemNumber": "19.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#gate-contractor-covenants-on-the-captive-insurance-agent-exception",
+        "requirementGuidance": "If the agreement labels the worker an independent contractor, the employee exception is off the table — the statute's plain language is limited to an employee's covenant with an employer, and the contract's own disclaimer of employment has been held to control. The only contractor lane in the chapter covers captive insurance agents working exclusively for a single insurer or affiliated group; a worker who fits neither category has no exception to stand in, which leaves the void baseline. Do not assume reclassification preserves the covenant.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sd-aqreva-gate",
+            "authorityType": "case-law",
+            "title": "Aqreva, LLC v. Eide Bailly, LLP",
+            "citation": "Aqreva, LLC v. Eide Bailly, LLP, 2020 S.D. 59, ¶ 32, 950 N.W.2d 774.",
+            "url": "https://www.courtlistener.com/opinion/9507869/aqreva-llc-v-eide-bailly-llp/",
+            "deepLink": "https://www.courtlistener.com/opinion/9507869/aqreva-llc-v-eide-bailly-llp/#:~:text=Per%20the%20plain%20language%20of,to%20compete%20with%20his%20employer.%E2%80%9D",
+            "proposition": "Aqreva supports that SDCL 53-9-11 is limited to an employee covenant with an employer and did not apply to an independent consultant.",
+            "verbatimQuote": "Per the plain language of SDCL 53-9-11, the Legislature has limited the provisions of this statute to an “employee’s covenant not to compete with his employer.”",
+            "date": "2020-10-28",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-aqreva-gate"
+          },
+          {
+            "sourceId": "sd-5912-gate",
+            "authorityType": "primary-law",
+            "title": "S.D. Codified Laws § 53-9-12",
+            "citation": "S.D. Codified Laws § 53-9-12.",
+            "url": "https://sdlegislature.gov/Statutes/53-9-12",
+            "proposition": "S.D. Codified Laws § 53-9-12 supports the narrow captive-insurance-agent independent-contractor exception.",
+            "verbatimQuote": "Any independent contractor who is an insurance producer as defined in subdivision 58-1-2(16) and is a captive agent who is not an independent agent and who works exclusively for a single insurance company or an affiliated group of insurance companies, even if the single insurance company allows its captive agents to market the products of another insurance company pursuant to contract, may agree with an insurer at the time of contracting or at any time during the term of the contract:",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-5912-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-third-party-no-hire-restraints",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.south-dakota.exclude-third-party-no-hire-restraints",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No restraint through a third-party contract",
+        "sectionId": "south-dakota-statutory-gates",
+        "itemNumber": "19.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#exclude-third-party-no-hire-restraints",
+        "requirementGuidance": "Check whether the employer is leaning on a no-hire, no-solicit, or no-recruit clause in a customer, vendor, or services contract to keep the worker in place. South Dakota treats that clause as a variation on the covenant not to compete and holds that an employer may not bind its own employee through an agreement with a third party — if the worker signed no valid covenant of their own, the third-party clause will not supply one.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sd-densmore-gate",
+            "authorityType": "case-law",
+            "title": "Communication Technical Sys., Inc. v. Densmore",
+            "citation": "Communication Technical Sys., Inc. v. Densmore, 1998 S.D. 87, ¶ 27, 583 N.W.2d 125.",
+            "url": "https://www.courtlistener.com/opinion/1882124/communication-technical-systems-inc-v-densmore/",
+            "deepLink": "https://www.courtlistener.com/opinion/1882124/communication-technical-systems-inc-v-densmore/#:~:text=Instead%2C%20CTS%20sought%20to%20bind,this%20it%20may%20not%20do.",
+            "proposition": "Densmore supports that an employer cannot restrain its own employee through a no-hire agreement with a third party where the employee signed no valid covenant of his own.",
+            "verbatimQuote": "Instead, CTS sought to bind its employee through an agreement with a third party. As we have stated, this it may not do.",
+            "date": "1998-08-05",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-densmore-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "confine-sale-of-goodwill-covenant-to-similar-business-in-specified-area",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.south-dakota.confine-sale-of-goodwill-covenant-to-similar-business-in-specified-area",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Sale-of-goodwill covenant limits",
+        "sectionId": "south-dakota-statutory-gates",
+        "itemNumber": "19.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#confine-sale-of-goodwill-covenant-to-similar-business-in-specified-area",
+        "requirementGuidance": "The goodwill-sale covenant runs on its own track: the seller refrains from carrying on a similar business within a specified county, city, or other specified area, and only while the buyer or a successor to the goodwill carries on a like business there. Even inside the exception, language reaching isolated, insubstantial, or non-detrimental activity is void as against public policy — tie the restraint to the purchased goodwill, not to every role the seller might ever take. The partnership-dissolution sibling is tighter still, reaching only the same municipality where the partnership did business.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sd-539-gate",
+            "authorityType": "primary-law",
+            "title": "S.D. Codified Laws § 53-9-9",
+            "citation": "S.D. Codified Laws § 53-9-9.",
+            "url": "https://sdlegislature.gov/Statutes/53-9-9",
+            "proposition": "S.D. Codified Laws § 53-9-9 supports the sale-of-goodwill exception for a similar-business restraint in a specified area while the buyer carries on a like business.",
+            "verbatimQuote": "Any person who sells the good will of a business may agree with the buyer to refrain from carrying on a similar business within a specified county, city, or other specified area, as long as the buyer or person deriving title to the good will from the seller carries on a like business within the specified geographical area.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-539-gate"
+          },
+          {
+            "sourceId": "sd-franklin-similar-gate",
+            "authorityType": "case-law",
+            "title": "Franklin v. Forever Venture, Inc.",
+            "citation": "Franklin v. Forever Venture, Inc., 2005 S.D. 53, ¶ 14, 696 N.W.2d 545.",
+            "url": "https://www.courtlistener.com/opinion/901375/franklin-v-forever-venture-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/901375/franklin-v-forever-venture-inc/#:~:text=Therefore%2C%20to%20the%20extent%20that,void%20as%20against%20public%20policy.",
+            "proposition": "Franklin supports that a sale-of-goodwill covenant is void as against public policy to the extent it reaches activity not fairly characterized as carrying on a similar business.",
+            "verbatimQuote": "Therefore, to the extent that the agreement may restrain Franklin from activities which could not fairly be characterized as \"carrying on a similar business,\" it is void as against public policy.",
+            "date": "2005-04-27",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-franklin-similar-gate"
+          },
+          {
+            "sourceId": "sd-5310-gate",
+            "authorityType": "primary-law",
+            "title": "S.D. Codified Laws § 53-9-10",
+            "citation": "S.D. Codified Laws § 53-9-10.",
+            "url": "https://sdlegislature.gov/Statutes/53-9-10",
+            "proposition": "S.D. Codified Laws § 53-9-10 supports the partnership-dissolution exception, limited to the same municipality where the partnership transacted business.",
+            "verbatimQuote": "Partners may, upon or in anticipation of a dissolution of the partnership, agree that none of them will carry on a similar business within the same municipality where the partnership business has been transacted or within a specified part thereof.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/south-dakota#src-sd-5310-gate"
+          }
+        ]
+      }
+    ]
+  }
+}

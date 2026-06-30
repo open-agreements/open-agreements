@@ -3,6 +3,7 @@
 ## 2026-06-29
 * **Update**: Backfill non-solicit / sale-of-business cells with body + source-cards (#1213) — HELD for legal review (#1216) (95a4b4c)
 * **Update**: feat(spec): spokes carry reqId on {% answer %}/{% caution %} (#1203 WS2) (#1273) (a64d00e)
+* **Update**: feat(spec): route template drafting notes through the spec-Requirement hub (#1203 WS3) (#1289) (bcb0554)
 
 ## 2026-06-28
 * **Update**: feat(non-compete): futureEffective[] + Legislation JSON-LD (closes #1085) (#1185) (61d26ba)

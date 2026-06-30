@@ -1,0 +1,1340 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/indiana",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/indiana.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/indiana",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/indiana/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/indiana/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "indiana",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — Indiana",
+      "description": "A clause-by-clause reviewer checklist for Indiana employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the common-law reasonableness test, the strict eraser blue pencil, and the layered physician statutes.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "Indiana",
+      "coverage": "Indiana (US)",
+      "lastReviewed": "2026-06-12",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 47,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "label": "Physician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "indiana-statutory-gates",
+        "label": "Indiana statutory gates"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#identify-parties",
+        "requirementGuidance": "Confirm the named employer is the entity that actually holds the goodwill, customer relationships, or confidential information the covenant claims to protect. Indiana puts the burden of proving a legitimate interest on the employer, so a covenant papered with a parent or staffing affiliate that owns none of the protected assets starts the enforcement case a step behind.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#identify-effective-date",
+        "requirementGuidance": "The execution date does decisive work for physicians: covenants entered on or after July 1, 2020 must carry the statutory contract terms, primary care physician covenants entered on or after July 1, 2023 are banned, and physician-hospital covenants entered on or after July 1, 2025 are void. An undated physician agreement leaves the reviewer unable to tell which statutory layer governs.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sea475-date-cover",
+            "authorityType": "primary-law",
+            "title": "Senate Enrolled Act 475 (2025), Ind. Code § 25-22.5-5.5-2.3",
+            "citation": "Ind. Code § 25-22.5-5.5-2.3(c) (Senate Enrolled Act 475, P.L. 207-2025).",
+            "url": "https://iga.in.gov/pdf-documents/124/2025/senate/bills/SB0475/SB0475.04.ENRH.pdf",
+            "proposition": "Senate Enrolled Act 475 makes a physician-hospital noncompete entered on or after July 1, 2025 void and unenforceable, which makes the execution date decisive for physician agreements.",
+            "verbatimQuote": "Any agreement in violation of this section is void and unenforceable.",
+            "date": "2025-07-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-sea475-date-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#identify-employee-title",
+        "requirementGuidance": "Record the role precisely — it selects the legal track. A primary care physician cannot be bound at all under the 2023 statute, a specialist physician's covenant must satisfy the 2020 contract-term requirements, and for everyone else the role defines the only activity scope a court will accept: a restraint must track the work the employee actually performed.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sea7-primary-care-cover",
+            "authorityType": "primary-law",
+            "title": "Senate Enrolled Act 7 (2023), Ind. Code § 25-22.5-5.5-2.5",
+            "citation": "Ind. Code § 25-22.5-5.5-2.5(b) (Senate Enrolled Act 7, P.L. 165-2023).",
+            "url": "https://iga.in.gov/pdf-documents/123/2023/senate/bills/SB0007/SB0007.05.ENRH.pdf",
+            "proposition": "Senate Enrolled Act 7 bars a primary care physician and an employer from entering into a noncompete agreement, which makes the physician's specialty a threshold review fact.",
+            "verbatimQuote": "Notwithstanding any other law, a primary care physician and an employer may not enter into a noncompete agreement.",
+            "date": "2023-07-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-sea7-primary-care-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#identify-governing-law",
+        "requirementGuidance": "Check that the governing state is stated. Indiana generally honors a choice-of-law clause, but treat a foreign-law selection in an otherwise Indiana-centered agreement as a deliberate move worth questioning — the usual motive is escaping the strict eraser rule, and the construction-contract limit covered later in this checklist voids the tactic outright for one industry.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#define-confidential-information",
+        "requirementGuidance": "Test the definition against what Indiana actually protects. Confidential information is a recognized protectable interest, but an employee's general skills and routine industry knowledge are not — so a definition that sweeps in everything the employee learned on the job converts a protectable-interest recital into evidence of overreach.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "krueger-interest-defs",
+            "authorityType": "case-law",
+            "title": "Central Indiana Podiatry, P.C. v. Krueger",
+            "citation": "Central Indiana Podiatry, P.C. v. Krueger, 882 N.E.2d 723 (Ind. 2008).",
+            "url": "https://www.courtlistener.com/opinion/852486/central-indiana-podiatry-pc-v-krueger/",
+            "deepLink": "https://www.courtlistener.com/opinion/852486/central-indiana-podiatry-pc-v-krueger/#:~:text=In%20arguing%20the%20reasonableness%20of,be%20protected%20by%20the%20agreement.",
+            "proposition": "Krueger requires the employer to first show a legitimate protectable interest, which the definitional recitals must support with specifics rather than a general wish to avoid competition.",
+            "verbatimQuote": "In arguing the reasonableness of a non-competition agreement, the employer must first show that it has a legitimate interest to be protected by the agreement.",
+            "date": "2008-03-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-krueger-interest-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#define-trade-secrets",
+        "requirementGuidance": "Track the statutory definition: independent economic value from secrecy plus reasonable efforts to keep the information secret. Indiana's trade-secret act runs alongside the covenant rather than replacing it, and for hospital-employed physicians whose non-competes are now void, the trade-secret and confidentiality definitions are the protection that remains — they deserve a careful read, not boilerplate treatment.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "iutsa-trade-secret-defs",
+            "authorityType": "primary-law",
+            "title": "Indiana Uniform Trade Secrets Act, Ind. Code § 24-2-3",
+            "citation": "Ind. Code § 24-2-3-2.",
+            "url": "https://iga.in.gov/laws/2025/ic/titles/24",
+            "proposition": "The Indiana Uniform Trade Secrets Act defines a trade secret by independent economic value from secrecy plus reasonable efforts to maintain secrecy.",
+            "verbatimQuote": "\"Trade secret\" means information, including a formula, pattern, compilation, program, device, method, technique, or process, that: (1) derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use; and (2) is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "date": "2025-01-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-iutsa-trade-secret-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-period",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#define-restricted-period",
+        "requirementGuidance": "One defined Restricted Period keeps every duration auditable against the reasonableness test, where the employer bears the burden on time along with activity and geography. Confirm the period is stated as its own severable term — if the duration is tangled into an indivisible clause, an Indiana court cannot shorten it and the whole covenant is at risk.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "krueger-scope-defs",
+            "authorityType": "case-law",
+            "title": "Central Indiana Podiatry, P.C. v. Krueger",
+            "citation": "Central Indiana Podiatry, P.C. v. Krueger, 882 N.E.2d 723 (Ind. 2008).",
+            "url": "https://www.courtlistener.com/opinion/852486/central-indiana-podiatry-pc-v-krueger/",
+            "deepLink": "https://www.courtlistener.com/opinion/852486/central-indiana-podiatry-pc-v-krueger/#:~:text=The%20employer%20also%20bears%20the,activity%2C%20and%20geographic%20area%20restricted.",
+            "proposition": "Krueger places the burden on the employer to establish reasonableness in time, activity, and geographic area, which the period and territory definitions must be drafted to survive.",
+            "verbatimQuote": "The employer also bears the burden of establishing that the agreement is reasonable in scope as to the time, activity, and geographic area restricted.",
+            "date": "2008-03-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-krueger-scope-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-territory",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-territory",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted territory",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#define-restricted-territory",
+        "requirementGuidance": "Tie the geography to where the employer actually does business or where the employee held influence — the employer must prove the territorial reach reasonable, and an everywhere-the-company-operates footprint rarely survives that showing. Prefer a territory drafted in severable tiers (county, then region) so an eraser pass can remove the outer ring without killing the core.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "krueger-scope-defs",
+            "authorityType": "case-law",
+            "title": "Central Indiana Podiatry, P.C. v. Krueger",
+            "citation": "Central Indiana Podiatry, P.C. v. Krueger, 882 N.E.2d 723 (Ind. 2008).",
+            "url": "https://www.courtlistener.com/opinion/852486/central-indiana-podiatry-pc-v-krueger/",
+            "deepLink": "https://www.courtlistener.com/opinion/852486/central-indiana-podiatry-pc-v-krueger/#:~:text=The%20employer%20also%20bears%20the,activity%2C%20and%20geographic%20area%20restricted.",
+            "proposition": "Krueger places the burden on the employer to establish reasonableness in time, activity, and geographic area, which the period and territory definitions must be drafted to survive.",
+            "verbatimQuote": "The employer also bears the burden of establishing that the agreement is reasonable in scope as to the time, activity, and geographic area restricted.",
+            "date": "2008-03-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-krueger-scope-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered customers",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#define-covered-customers",
+        "requirementGuidance": "Bound the class to customers the employee actually served or about whom the employee held confidential information, with a stated look-back window. A customer restriction that sweeps in the employer's entire book regardless of contact has drifted from the protectable interest that justifies it — and the employer is the party who must prove that connection.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "krueger-interest-defs",
+            "authorityType": "case-law",
+            "title": "Central Indiana Podiatry, P.C. v. Krueger",
+            "citation": "Central Indiana Podiatry, P.C. v. Krueger, 882 N.E.2d 723 (Ind. 2008).",
+            "url": "https://www.courtlistener.com/opinion/852486/central-indiana-podiatry-pc-v-krueger/",
+            "deepLink": "https://www.courtlistener.com/opinion/852486/central-indiana-podiatry-pc-v-krueger/#:~:text=In%20arguing%20the%20reasonableness%20of,be%20protected%20by%20the%20agreement.",
+            "proposition": "Krueger requires the employer to first show a legitimate protectable interest, which the definitional recitals must support with specifics rather than a general wish to avoid competition.",
+            "verbatimQuote": "In arguing the reasonableness of a non-competition agreement, the employer must first show that it has a legitimate interest to be protected by the agreement.",
+            "date": "2008-03-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-krueger-interest-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "limit-covered-employees-to-protectable-interest-roles",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.indiana.limit-covered-employees-to-protectable-interest-roles",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees tied to a real interest",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#limit-covered-employees-to-protectable-interest-roles",
+        "requirementGuidance": "This definition decides the no-poach clause's fate. Indiana voided an employee non-solicitation covenant precisely because it applied to all of the company's employees, and the eraser rule means a court cannot rewrite an all-employees class into a narrower one. Confirm the class is limited to workers with confidential information or specialized value — typically through a worked-with look-back — and that the limiting language is severable.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "heraeus-all-employees-defs",
+            "authorityType": "case-law",
+            "title": "Heraeus Medical, LLC v. Zimmer, Inc.",
+            "citation": "Heraeus Medical, LLC v. Zimmer, Inc., 135 N.E.3d 150 (Ind. 2019).",
+            "url": "https://www.courtlistener.com/opinion/4683524/heraeus-medical-llc-v-zimmer-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/4683524/heraeus-medical-llc-v-zimmer-inc/#:~:text=As%20written%2C%20the%20Kolbe%20Agreement's,applies%20to%20all%20Zimmer%20employees.",
+            "proposition": "Heraeus holds that an employee non-solicitation covenant reaching all of the company's employees is overbroad, making a protectable-interest-limited Covered Employees class enforceability-determinative.",
+            "verbatimQuote": "As written, the Kolbe Agreement's employee nonsolicitation covenant is overbroad because it applies to all Zimmer employees.",
+            "date": "2019-12-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-heraeus-all-employees-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#define-protected-interests",
+        "requirementGuidance": "Name the specific goodwill, customer relationships, trade secrets, or confidential information at stake. In Indiana this recital maps directly onto the employer's first burden of proof — showing a legitimate interest before reasonableness is even reached — so a generic desire to avoid competition written here is an admission, not a protection.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "krueger-interest-defs",
+            "authorityType": "case-law",
+            "title": "Central Indiana Podiatry, P.C. v. Krueger",
+            "citation": "Central Indiana Podiatry, P.C. v. Krueger, 882 N.E.2d 723 (Ind. 2008).",
+            "url": "https://www.courtlistener.com/opinion/852486/central-indiana-podiatry-pc-v-krueger/",
+            "deepLink": "https://www.courtlistener.com/opinion/852486/central-indiana-podiatry-pc-v-krueger/#:~:text=In%20arguing%20the%20reasonableness%20of,be%20protected%20by%20the%20agreement.",
+            "proposition": "Krueger requires the employer to first show a legitimate protectable interest, which the definitional recitals must support with specifics rather than a general wish to avoid competition.",
+            "verbatimQuote": "In arguing the reasonableness of a non-competition agreement, the employer must first show that it has a legitimate interest to be protected by the agreement.",
+            "date": "2008-03-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-krueger-interest-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-competitive-business",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Competitive business",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#define-competitive-business",
+        "requirementGuidance": "Describe the genuinely competing activity in concrete terms tied to what the employee did. The activity dimension is where Indiana covenants most often die: a definition that bars work for a competitor in any capacity — including roles untouched by any protectable interest — was held unreasonably broad, and no court here will trim it into shape.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "med1-any-capacity-defs",
+            "authorityType": "case-law",
+            "title": "Med-1 Solutions, LLC v. Taylor",
+            "citation": "Med-1 Solutions, LLC v. Taylor, No. 24A-PL-450 (Ind. Ct. App. Nov. 25, 2024).",
+            "url": "https://www.courtlistener.com/opinion/10283022/med-1-solutions-llc-v-jennifer-taylor/",
+            "deepLink": "https://www.courtlistener.com/opinion/10283022/med-1-solutions-llc-v-jennifer-taylor/#:~:text=We%20find%20that%20the%20scope,the%20covenant%20is%20unreasonably%20broad.",
+            "proposition": "Med-1 Solutions found that a covenant barring work for a competitor in any capacity restricted an unreasonably broad scope of activity.",
+            "verbatimQuote": "We find that the scope of activity restricted by the covenant is unreasonably broad.",
+            "date": "2024-11-25",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-med1-any-capacity-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where ownership or investment in competitors is restricted, look for a passive-holdings carve-out below a stated percentage. A clause that technically forbids holding index funds or ordinary public shares is gratuitous overbreadth — exactly the kind of unreasonable restriction an Indiana court refuses to enforce and will not soften by rewriting.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#define-passive-public-holdings",
+        "requirementGuidance": "A drafting convenience, not a requirement — many agreements inline the carve-out language instead. If the capitalized term appears, confirm its percentage matches the operative carve-out it supports.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.11",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#define-solicit",
+        "requirementGuidance": "Pin the verb down so enforcement is not a fact-by-fact dispute over who called whom. A definition limited to initiating contact keeps the restraint modest; one that also captures passively receiving inquiries widens the clause toward the overbreadth that Indiana courts strike rather than narrow. Whatever shape it takes, draft it as its own severable term.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.12",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#define-termination-of-employment",
+        "requirementGuidance": "Verify the trigger covers resignation, dismissal, and expiration of a fixed term the same way, since every covenant clock runs from this event. For physicians the cause distinction is statutory: a physician covenant becomes unenforceable when the employer terminates the physician without cause, so the definition must make who ended the relationship — and on what grounds — unambiguous.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sea7-without-cause-defs",
+            "authorityType": "primary-law",
+            "title": "Senate Enrolled Act 7 (2023), Ind. Code § 25-22.5-5.5-2",
+            "citation": "Ind. Code § 25-22.5-5.5-2(b)(1) (Senate Enrolled Act 7, P.L. 165-2023).",
+            "url": "https://iga.in.gov/pdf-documents/123/2023/senate/bills/SB0007/SB0007.05.ENRH.pdf",
+            "proposition": "Senate Enrolled Act 7 makes a physician noncompete unenforceable when the employer terminates the physician without cause, so the termination definition carries statutory weight for physician agreements.",
+            "verbatimQuote": "The employer terminates the physician's employment without cause.",
+            "date": "2023-07-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-sea7-without-cause-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-timing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-timing",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "When the agreement was signed",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#acknowledge-timing",
+        "requirementGuidance": "Consideration is not the fight in Indiana: continued at-will employment supports a covenant signed mid-employment, even one presented as sign-or-be-fired. The acknowledgement still earns its place by pinning the signing date — which selects the governing physician statute — and by recording what was exchanged, but do not expect a consideration recital to carry an overbroad covenant past the reasonableness test.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "med1-consideration-timing",
+            "authorityType": "case-law",
+            "title": "Med-1 Solutions, LLC v. Taylor",
+            "citation": "Med-1 Solutions, LLC v. Taylor, No. 24A-PL-450 (Ind. Ct. App. Nov. 25, 2024).",
+            "url": "https://www.courtlistener.com/opinion/10283022/med-1-solutions-llc-v-jennifer-taylor/",
+            "deepLink": "https://www.courtlistener.com/opinion/10283022/med-1-solutions-llc-v-jennifer-taylor/#:~:text=We%20hold%20that%2C%20where%20an,consideration%20for%20the%20latter%20agreement.",
+            "proposition": "Med-1 Solutions holds that continued at-will employment is sufficient consideration for a non-compete an employee is required to sign during employment.",
+            "verbatimQuote": "We hold that, where an at-will employee signs a non-competition agreement as a condition of their hiring and is later told to sign a new non-competition agreement or they will be fired, the employee's continued employment can serve as consideration for the latter agreement.",
+            "date": "2024-11-25",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-med1-consideration-timing"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-opportunity-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Chance to consult a lawyer",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#acknowledge-opportunity-to-consult-counsel",
+        "requirementGuidance": "No Indiana statute demands it, but it is cheap procedural-fairness evidence in a state whose courts construe every ambiguity against the employer. The acknowledgement reads best alongside a real review window rather than a same-day signature.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "Trade-secret obligations should last as long as secrecy does — both the federal definition and Indiana's act key protection to continued secrecy, not a contract date. A fixed expiry quietly converts a statutory right into a lapsing contractual one, and in Indiana the trade-secret layer often matters most where the covenant itself is shaky or, for hospital-employed physicians, statutorily void.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-trade-secret-definition",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
+            "citation": "18 U.S.C. § 1839(3)(B) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1839",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
+            "proposition": "Federal law keys trade-secret status to continued secrecy, which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-dtsa-trade-secret-definition"
+          },
+          {
+            "sourceId": "iutsa-secrecy-duration",
+            "authorityType": "primary-law",
+            "title": "Indiana Uniform Trade Secrets Act, Ind. Code § 24-2-3",
+            "citation": "Ind. Code § 24-2-3-2.",
+            "url": "https://iga.in.gov/laws/2025/ic/titles/24",
+            "proposition": "Indiana's trade-secret definition likewise keys protection to continued secrecy and reasonable secrecy efforts, supporting a secrecy-length rather than fixed-term obligation.",
+            "verbatimQuote": "\"Trade secret\" means information, including a formula, pattern, compilation, program, device, method, technique, or process, that: (1) derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use; and (2) is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "date": "2025-01-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-iutsa-secrecy-duration"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#state-confidentiality-duration",
+        "requirementGuidance": "Give ordinary confidential information its own finite term, separate from the perpetual trade-secret track. A perpetual lid on non-secret information is the kind of unreasonable reach Indiana courts refuse to enforce — and the two-track structure is itself a severability play, keeping the defensible obligation divisible from the aggressive one.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#disclose-dtsa-notice",
+        "requirementGuidance": "Federal law, fully applicable to Indiana agreements: omit the immunity notice and the employer forfeits exemplary damages and attorney fees in a later trade-secret suit against the worker. Because the trade-secret track is often the sturdiest protection an Indiana employer has, giving away its best remedies over a missing paragraph is an unforced error.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-immunity-notice",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-dtsa-immunity-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Confidentiality and non-disparagement language has to leave wages, hours, and working conditions discussable. Federal labor law protects that speech in every state, and the Board has been striking overbroad clauses in employee agreements — a federal overlay no Indiana drafting choice can contract around.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nlra-section-7-rights",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-nlra-section-7-rights"
+          },
+          {
+            "sourceId": "mclaren-macomb-protected-activity",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-mclaren-macomb-protected-activity"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#permit-compelled-disclosure",
+        "requirementGuidance": "Confirm the carve-out for disclosure required by law, court order, or a government investigation, with notice to the employer where lawful. Confidentiality obligations cannot block legally compelled disclosure, and a clause that pretends otherwise hands the employee an overbreadth argument against the whole confidentiality section.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#require-property-return-and-certification",
+        "requirementGuidance": "Return-or-delete at separation, certified in writing. In a state where the covenant itself may not survive review, the certification is the cleanest contemporaneous evidence for the trade-secret and confidentiality claims that will — and it costs nothing to police.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-employee-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#permit-employee-nonsolicit",
+        "requirementGuidance": "Optional, and analyzed under the same reasonableness and eraser rules as a non-compete. The decided Indiana case is a warning, not a blessing: a clause reaching all of the company's employees was held overbroad, so confirm this covenant rides the protectable-interest-limited Covered Employees class and the defined Restricted Period rather than restating a workforce-wide ban.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "heraeus-all-employees-covenants",
+            "authorityType": "case-law",
+            "title": "Heraeus Medical, LLC v. Zimmer, Inc.",
+            "citation": "Heraeus Medical, LLC v. Zimmer, Inc., 135 N.E.3d 150 (Ind. 2019).",
+            "url": "https://www.courtlistener.com/opinion/4683524/heraeus-medical-llc-v-zimmer-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/4683524/heraeus-medical-llc-v-zimmer-inc/#:~:text=As%20written%2C%20the%20Kolbe%20Agreement's,applies%20to%20all%20Zimmer%20employees.",
+            "proposition": "Heraeus holds that an employee non-solicitation covenant reaching all of the company's employees is overbroad.",
+            "verbatimQuote": "As written, the Kolbe Agreement's employee nonsolicitation covenant is overbroad because it applies to all Zimmer employees.",
+            "date": "2019-12-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-heraeus-all-employees-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-customer-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#permit-customer-nonsolicit",
+        "requirementGuidance": "Often the most defensible restraint in the Indiana family — but only when tied to the legitimate interest that justifies it. A clause limited to customers the employee served or knew confidentially sits on firm ground; one sweeping in every customer regardless of contact invites the same overbreadth finding as a bad non-compete, with no judicial trimming available.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "krueger-interest-covenants",
+            "authorityType": "case-law",
+            "title": "Central Indiana Podiatry, P.C. v. Krueger",
+            "citation": "Central Indiana Podiatry, P.C. v. Krueger, 882 N.E.2d 723 (Ind. 2008).",
+            "url": "https://www.courtlistener.com/opinion/852486/central-indiana-podiatry-pc-v-krueger/",
+            "deepLink": "https://www.courtlistener.com/opinion/852486/central-indiana-podiatry-pc-v-krueger/#:~:text=In%20arguing%20the%20reasonableness%20of,be%20protected%20by%20the%20agreement.",
+            "proposition": "Krueger's legitimate-interest requirement governs customer non-solicitation, which is defensible only when tied to customers connected to that interest.",
+            "verbatimQuote": "In arguing the reasonableness of a non-competition agreement, the employer must first show that it has a legitimate interest to be protected by the agreement.",
+            "date": "2008-03-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-krueger-interest-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-dealing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#permit-non-dealing",
+        "requirementGuidance": "Non-dealing bars serving covered customers even when they call first — a materially broader restraint than non-solicitation. Indiana construes every covenant strictly against the employer, so treat this clause as a deliberate risk decision that needs its own protectable-interest story, and confirm it is drafted severably from the narrower non-solicit so the modest clause survives if the broad one falls.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "krueger-strict-covenants",
+            "authorityType": "case-law",
+            "title": "Central Indiana Podiatry, P.C. v. Krueger",
+            "citation": "Central Indiana Podiatry, P.C. v. Krueger, 882 N.E.2d 723 (Ind. 2008).",
+            "url": "https://www.courtlistener.com/opinion/852486/central-indiana-podiatry-pc-v-krueger/",
+            "deepLink": "https://www.courtlistener.com/opinion/852486/central-indiana-podiatry-pc-v-krueger/#:~:text=We%20construe%20these%20covenants%20strictly,not%20enforce%20an%20unreasonable%20restriction.",
+            "proposition": "Krueger states that Indiana courts construe non-compete covenants strictly against the employer and will not enforce an unreasonable restriction.",
+            "verbatimQuote": "We construe these covenants strictly against the employer and will not enforce an unreasonable restriction.",
+            "date": "2008-03-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-krueger-strict-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-compete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#permit-non-compete",
+        "requirementGuidance": "The most disfavored covenant in the family. If it appears, run it through the Indiana gates at the end of this checklist: the employer must prove a legitimate interest plus reasonableness in time, activity, and geography, and the eraser rule means an overreaching version dies rather than shrinks. One posture note: a covenant ancillary to the sale of a business or an equity interest is judged under a more liberal, buyer-favoring standard, so classify the relationship before judging the breadth.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dicen-disfavored-covenants",
+            "authorityType": "case-law",
+            "title": "Dicen v. New Sesco, Inc.",
+            "citation": "Dicen v. New Sesco, Inc., 839 N.E.2d 684 (Ind. 2005).",
+            "url": "https://www.courtlistener.com/opinion/852724/dicen-v-new-sesco-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/852724/dicen-v-new-sesco-inc/#:~:text=Covenants%20not%20to%20compete%20are,not%20favored%20in%20the%20law.",
+            "proposition": "Dicen confirms that covenants not to compete are disfavored in Indiana law.",
+            "verbatimQuote": "Covenants not to compete are not favored in the law.",
+            "date": "2005-12-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-dicen-disfavored-covenants"
+          },
+          {
+            "sourceId": "krueger-scope-covenants",
+            "authorityType": "case-law",
+            "title": "Central Indiana Podiatry, P.C. v. Krueger",
+            "citation": "Central Indiana Podiatry, P.C. v. Krueger, 882 N.E.2d 723 (Ind. 2008).",
+            "url": "https://www.courtlistener.com/opinion/852486/central-indiana-podiatry-pc-v-krueger/",
+            "deepLink": "https://www.courtlistener.com/opinion/852486/central-indiana-podiatry-pc-v-krueger/#:~:text=The%20employer%20also%20bears%20the,activity%2C%20and%20geographic%20area%20restricted.",
+            "proposition": "Krueger places the burden on the employer to establish that the covenant is reasonable in time, activity, and geographic scope.",
+            "verbatimQuote": "The employer also bears the burden of establishing that the agreement is reasonable in scope as to the time, activity, and geographic area restricted.",
+            "date": "2008-03-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-krueger-scope-covenants"
+          },
+          {
+            "sourceId": "zollinger-sale-covenants",
+            "authorityType": "case-law",
+            "title": "Zollinger v. Wagner-Meinert Engineering, LLC",
+            "citation": "Zollinger v. Wagner-Meinert Eng'g, LLC, 146 N.E.3d 1060 (Ind. Ct. App. 2020).",
+            "url": "https://www.courtlistener.com/opinion/4747784/wayne-doug-zollinger-v-wagner-meinert-engineering-llc/",
+            "deepLink": "https://www.courtlistener.com/opinion/4747784/wayne-doug-zollinger-v-wagner-meinert-engineering-llc/#:~:text=Covenants%20in%20typical%20employment%20contracts,to%20a%20more%20liberal%20standard.",
+            "proposition": "Zollinger applies a more liberal standard to covenants ancillary to the sale of a business than the skeptical standard used for employment covenants.",
+            "verbatimQuote": "Covenants in typical employment contracts are reviewed under a \"skeptical\" standard, while covenants that arise ancillary to the sale of a business are subject to a more liberal standard.",
+            "date": "2020-04-23",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-zollinger-sale-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Named-competitor narrowing",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementGuidance": "When the employer can name its real competitors, bind those instead of leaning on an open-ended Competitive Business definition. Indiana rewards the structure twice: a named list is strong reasonableness evidence, and discrete list entries are exactly the kind of clearly divisible parts the blue pencil can strike individually while leaving a working covenant behind.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "heraeus-divisibility-covenants",
+            "authorityType": "case-law",
+            "title": "Heraeus Medical, LLC v. Zimmer, Inc.",
+            "citation": "Heraeus Medical, LLC v. Zimmer, Inc., 135 N.E.3d 150 (Ind. 2019).",
+            "url": "https://www.courtlistener.com/opinion/4683524/heraeus-medical-llc-v-zimmer-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/4683524/heraeus-medical-llc-v-zimmer-inc/#:~:text=A%20court%20can%20blue%2Dpencil%20unreasonable,unreasonable%20portions%20have%20been%20eliminated.",
+            "proposition": "Heraeus limits blue-penciling to covenants that are clearly divisible and that leave a reasonable restriction after the unreasonable parts are removed — the structure a named-competitor list provides.",
+            "verbatimQuote": "A court can blue-pencil unreasonable provisions from a restrictive covenant if the covenant is clearly divisible into parts and if a reasonable restriction remains to be enforced after the unreasonable portions have been eliminated.",
+            "date": "2019-12-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-heraeus-divisibility-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#permit-non-investment",
+        "requirementGuidance": "Rare and deliberate. Confirm the passive-holdings carve-out is intact, the clause shares the defined Restricted Period, and the restriction connects to a protectable interest rather than to a general wish to keep the employee's capital out of the industry — the latter reads as pure anti-competition, which Indiana refuses to protect.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#require-non-disparagement",
+        "requirementGuidance": "Standard to include with a stated term, but audit the carve-outs: truthful testimony, statements to government agencies, and protected workplace speech must sit outside the clause. The federal Board polices overbroad versions in every state, and a muzzle drafted wider than those carve-outs allow invites the same strict-construction reading Indiana gives every restraint.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mclaren-macomb-nondisparagement",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-mclaren-macomb-nondisparagement"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-physician-specific-rights",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Physician rights and notices",
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#address-physician-specific-rights",
+        "requirementGuidance": "The dedicated clause should state which statutory layer governs and implement it. For a physician covenant entered on or after July 1, 2020, the statute conditions enforceability on a list of mandatory provisions — including the physician's option to purchase a complete and final release at a reasonable price, an undefined term that has become a recurring dispute, so look for a stated price mechanism rather than a bare recital. The Indiana gates at the end of this checklist carry the two outright bans.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hea1004-clause",
+            "authorityType": "primary-law",
+            "title": "House Enrolled Act 1004 (2020), Ind. Code § 25-22.5-5.5-2",
+            "citation": "Ind. Code § 25-22.5-5.5-2 (House Enrolled Act 1004, P.L. 93-2020).",
+            "url": "https://iga.in.gov/pdf-documents/121/2020/house/bills/HB1004/HB1004.05.ENRS.pdf",
+            "proposition": "House Enrolled Act 1004 (2020) requires a physician noncompete to include specified provisions to be enforceable.",
+            "verbatimQuote": "To be enforceable, a physician noncompete agreement must include all of the following provisions:",
+            "date": "2020-07-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-hea1004-clause"
+          },
+          {
+            "sourceId": "sea7-buyout-clause",
+            "authorityType": "primary-law",
+            "title": "Senate Enrolled Act 7 (2023), Ind. Code § 25-22.5-5.5-2",
+            "citation": "Ind. Code § 25-22.5-5.5-2(a)(4) (Senate Enrolled Act 7, P.L. 165-2023).",
+            "url": "https://iga.in.gov/pdf-documents/123/2023/senate/bills/SB0007/SB0007.05.ENRH.pdf",
+            "proposition": "Senate Enrolled Act 7 requires that an enforceable physician noncompete give the physician an option to buy a complete release at a reasonable price.",
+            "verbatimQuote": "(4) A provision that provides the physician whose employment has terminated or whose contract has expired with the option to purchase a complete and final release from the terms of the enforceable physician noncompete agreement at a reasonable price.",
+            "date": "2023-07-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-sea7-buyout-clause"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "The worker's representation that no earlier agreement or order blocks the new role. It surfaces an incoming covenant before the first customer call instead of after it — and because Indiana enforcement turns on fact-heavy reasonableness questions, knowing about a prior restraint early is worth far more than litigating it late.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#address-notice-to-future-employers",
+        "requirementGuidance": "A genuine drafting choice, not a legal requirement. If the clause appears, keep the permitted disclosure factual — the covenant exists and says what it says — because a warning letter built on a covenant that later fails Indiana review is raw material for a tortious-interference counterclaim against the employer that sent it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-tolling-during-breach",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-tolling-during-breach",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restriction extended during a breach",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#address-tolling-during-breach",
+        "requirementGuidance": "The agreement should say whether the clock pauses during a breach — but flag any extension mechanism as an open Indiana question. No statute or precedential appellate decision endorses automatic tolling, an extension clause is itself covenant scope the employer must prove reasonable, and a court that can only erase language will not manufacture extra restricted time the contract did not clearly provide. The most defensible shape is a separate, severable provision tied to the duration of an actual breach.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "krueger-scope-tolling",
+            "authorityType": "case-law",
+            "title": "Central Indiana Podiatry, P.C. v. Krueger",
+            "citation": "Central Indiana Podiatry, P.C. v. Krueger, 882 N.E.2d 723 (Ind. 2008).",
+            "url": "https://www.courtlistener.com/opinion/852486/central-indiana-podiatry-pc-v-krueger/",
+            "deepLink": "https://www.courtlistener.com/opinion/852486/central-indiana-podiatry-pc-v-krueger/#:~:text=The%20employer%20also%20bears%20the,activity%2C%20and%20geographic%20area%20restricted.",
+            "proposition": "Krueger places the burden on the employer to prove reasonableness in scope, which applies to any clause that extends the restricted period.",
+            "verbatimQuote": "The employer also bears the burden of establishing that the agreement is reasonable in scope as to the time, activity, and geographic area restricted.",
+            "date": "2008-03-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-krueger-scope-tolling"
+          },
+          {
+            "sourceId": "heraeus-eraser-tolling",
+            "authorityType": "case-law",
+            "title": "Heraeus Medical, LLC v. Zimmer, Inc.",
+            "citation": "Heraeus Medical, LLC v. Zimmer, Inc., 135 N.E.3d 150 (Ind. 2019).",
+            "url": "https://www.courtlistener.com/opinion/4683524/heraeus-medical-llc-v-zimmer-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/4683524/heraeus-medical-llc-v-zimmer-inc/#:~:text=The%20doctrine%2C%20however%2C%20does%20not,adding%2C%20changing%2C%20or%20rearranging%20terms.",
+            "proposition": "Heraeus's eraser rule means a court cannot rewrite a covenant to add restricted time the contract did not clearly provide.",
+            "verbatimQuote": "The doctrine, however, does not allow a court to rewrite a noncompetition agreement by adding, changing, or rearranging terms.",
+            "date": "2019-12-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-heraeus-eraser-tolling"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#require-injunctive-relief-availability",
+        "requirementGuidance": "Look for the acknowledgement that breach may cause irreparable harm and that an injunction is appropriate relief — then remember its limits here. An Indiana court will not enforce an unreasonable restriction however emphatic the recital, and the reported pattern is exactly that: injunctions denied because the employer could not carry the reasonableness burden, recitals notwithstanding.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "krueger-unreasonable-remedies",
+            "authorityType": "case-law",
+            "title": "Central Indiana Podiatry, P.C. v. Krueger",
+            "citation": "Central Indiana Podiatry, P.C. v. Krueger, 882 N.E.2d 723 (Ind. 2008).",
+            "url": "https://www.courtlistener.com/opinion/852486/central-indiana-podiatry-pc-v-krueger/",
+            "deepLink": "https://www.courtlistener.com/opinion/852486/central-indiana-podiatry-pc-v-krueger/#:~:text=We%20construe%20these%20covenants%20strictly,not%20enforce%20an%20unreasonable%20restriction.",
+            "proposition": "Krueger's rule that an unreasonable restriction will not be enforced means an irreparable-harm recital cannot substitute for the employer's reasonableness showing at the injunction stage.",
+            "verbatimQuote": "We construe these covenants strictly against the employer and will not enforce an unreasonable restriction.",
+            "date": "2008-03-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-krueger-unreasonable-remedies"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-attorneys-fees-and-costs",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Attorney fees and costs",
+        "sectionId": "remedies",
+        "itemNumber": "13.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#address-attorneys-fees-and-costs",
+        "requirementGuidance": "A commercial choice against an American Rule backdrop: absent a contractual provision, Indiana shifts fees only for claims or defenses that are frivolous, unreasonable, groundless, or litigated in bad faith. Parties routinely contract around that default with a prevailing-party clause — if one appears, check that it runs both ways rather than only toward the employer.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "fees-bad-faith-remedies",
+            "authorityType": "primary-law",
+            "title": "Ind. Code § 34-52-1-1",
+            "citation": "Ind. Code § 34-52-1-1(b).",
+            "url": "https://iga.in.gov/laws/2025/ic/titles/34",
+            "proposition": "Indiana courts may award attorney's fees to the prevailing party only where a claim or defense was frivolous, unreasonable, groundless, or litigated in bad faith.",
+            "verbatimQuote": "In any civil action, the court may award attorney's fees as part of the cost to the prevailing party, if the court finds that either party: (1) brought the action or defense on a claim or defense that is frivolous, unreasonable, or groundless; (2) continued to litigate the action or defense after the party's claim or defense clearly became frivolous, unreasonable, or groundless; or (3) litigated the action in bad faith.",
+            "date": "2025-01-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-fees-bad-faith-remedies"
+          }
+        ]
+      },
+      {
+        "requirementId": "draft-severable-covenants-for-the-eraser-blue-pencil",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.indiana.draft-severable-covenants-for-the-eraser-blue-pencil",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Severable drafting, no court rescue",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#draft-severable-covenants-for-the-eraser-blue-pencil",
+        "requirementGuidance": "Treat any reformation or modification clause as a dead letter: Indiana courts cannot add terms to an unenforceable covenant even when the agreement purports to authorize it. The blue pencil only deletes, and only where the covenant is clearly divisible — an overbroad restriction written as one interconnected whole dies entirely. So review the structure, not just the breadth: each activity, customer class, territory tier, and duration should stand as its own grammatically severable unit a court could strike individually, with an ordinary severability clause tying the package together.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "heraeus-no-added-terms",
+            "authorityType": "case-law",
+            "title": "Heraeus Medical, LLC v. Zimmer, Inc.",
+            "citation": "Heraeus Medical, LLC v. Zimmer, Inc., 135 N.E.3d 150 (Ind. 2019).",
+            "url": "https://www.courtlistener.com/opinion/4683524/heraeus-medical-llc-v-zimmer-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/4683524/heraeus-medical-llc-v-zimmer-inc/#:~:text=Consistent%20with%20the%20history%20and,the%20power%20to%20do%20so.",
+            "proposition": "Heraeus holds that courts cannot add terms to an unenforceable covenant even when the agreement purports to authorize the court to do so.",
+            "verbatimQuote": "Consistent with the history and purpose of Indiana's blue pencil doctrine, courts cannot add terms to an unenforceable restrictive covenant in a noncompetition agreement—even when that agreement contains language purporting to give a court the power to do so.",
+            "date": "2019-12-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-heraeus-no-added-terms"
+          },
+          {
+            "sourceId": "clarks-indivisible-severability",
+            "authorityType": "case-law",
+            "title": "Clark's Sales and Service, Inc. v. Smith",
+            "citation": "Clark's Sales and Service, Inc. v. Smith, 4 N.E.3d 772 (Ind. Ct. App. 2014).",
+            "url": "https://www.courtlistener.com/opinion/2725543/clarks-sales-and-service-inc-v-john-d-smith-and-ferguson-enterprises/",
+            "deepLink": "https://www.courtlistener.com/opinion/2725543/clarks-sales-and-service-inc-v-john-d-smith-and-ferguson-enterprises/#:~:text=Paragraph%207(C)%20is%20indivisible%20and,blue%20pencil%20doctrine%20is%20inapplicable.",
+            "proposition": "Clark's Sales holds that an indivisible, unreasonable covenant cannot be blue-penciled and the doctrine is inapplicable.",
+            "verbatimQuote": "Paragraph 7(C) is indivisible and unreasonable as a whole, and the blue pencil doctrine is inapplicable.",
+            "date": "2014-02-20",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-clarks-indivisible-severability"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#address-survival-per-covenant",
+        "requirementGuidance": "Per-covenant survival keeps each clock independently checkable — perpetual for trade secrets, finite elsewhere. In Indiana the structure doubles as severability insurance: covenants whose durations stand apart are easier to defend as clearly divisible parts, while a single bundled survival clause is where an indivisible overbroad term hides.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-assignment-and-successors",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assignment and successors",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#address-assignment-and-successors",
+        "requirementGuidance": "Confirm employer-side assignability to successors and that the worker cannot assign. Whoever ends up enforcing inherits the Indiana posture along with the covenant: the protectable interest must be one the successor can actually claim as its own, and the reasonableness burden travels with the clause rather than being settled by the assignment.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "specify-governing-law-and-venue",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.specify-governing-law-and-venue",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law, venue, dispute process",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#specify-governing-law-and-venue",
+        "requirementGuidance": "State the governing law, venue, and dispute process. Indiana generally honors these selections, with one hard statutory exception worth screening for: in a contract for the improvement of Indiana real estate, a clause choosing another state's law or requiring out-of-state litigation, arbitration, or dispute resolution is void — so a construction-industry employer cannot route around Indiana covenant law by contract. Elsewhere, a foreign-forum selection paired with an aggressive covenant should be read as a signal the drafter wanted a softer reformation rule than the eraser.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "in-construction-forum-void",
+            "authorityType": "primary-law",
+            "title": "Ind. Code § 32-28-3-17",
+            "citation": "Ind. Code § 32-28-3-17.",
+            "url": "https://iga.in.gov/laws/2025/ic/titles/32",
+            "proposition": "Indiana voids a provision in a contract for the improvement of Indiana real estate that subjects it to another state's law or requires out-of-state dispute resolution.",
+            "verbatimQuote": "A provision in a contract for the improvement of real estate in Indiana is void if the provision: (1) makes the contract subject to the laws of another state; or (2) requires litigation, arbitration, or other dispute resolution process on the contract occur in another state.",
+            "date": "2025-01-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-in-construction-forum-void"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Standard boilerplate, with one Indiana-specific consequence to check: because continued employment alone supports a replacement covenant signed mid-employment, a routine amendment can quietly re-paper the restraint — and for a physician, the new execution date can move the agreement into a stricter statutory layer than the one it left. Confirm the merger clause states which covenant survives.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "med1-consideration-boilerplate",
+            "authorityType": "case-law",
+            "title": "Med-1 Solutions, LLC v. Taylor",
+            "citation": "Med-1 Solutions, LLC v. Taylor, No. 24A-PL-450 (Ind. Ct. App. Nov. 25, 2024).",
+            "url": "https://www.courtlistener.com/opinion/10283022/med-1-solutions-llc-v-jennifer-taylor/",
+            "deepLink": "https://www.courtlistener.com/opinion/10283022/med-1-solutions-llc-v-jennifer-taylor/#:~:text=We%20hold%20that%2C%20where%20an,consideration%20for%20the%20latter%20agreement.",
+            "proposition": "Med-1 Solutions holds that continued at-will employment supports a replacement covenant signed during employment, so amendment mechanics can re-paper a restraint without new consideration.",
+            "verbatimQuote": "We hold that, where an at-will employee signs a non-competition agreement as a condition of their hiring and is later told to sign a new non-competition agreement or they will be fired, the employee's continued employment can serve as consideration for the latter agreement.",
+            "date": "2024-11-25",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-med1-consideration-boilerplate"
+          }
+        ]
+      },
+      {
+        "requirementId": "keep-covenants-reasonable-and-tied-to-a-protectable-interest",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.indiana.keep-covenants-reasonable-and-tied-to-a-protectable-interest",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protectable interest plus reasonable scope",
+        "sectionId": "indiana-statutory-gates",
+        "itemNumber": "19.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#keep-covenants-reasonable-and-tied-to-a-protectable-interest",
+        "requirementGuidance": "Every restraint in the agreement must clear the two-step the employer will have to prove: first a legitimate protectable interest — goodwill, customer relationships, trade secrets, or confidential information, never the employee's general skills — and then reasonableness in the time, activity, and geographic area restricted. Activity scope is the usual failure point: a clause barring work for a competitor in any capacity was held unreasonably broad even though consideration was solid, so walk each covenant back to the job the employee actually did.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "krueger-interest-gate",
+            "authorityType": "case-law",
+            "title": "Central Indiana Podiatry, P.C. v. Krueger",
+            "citation": "Central Indiana Podiatry, P.C. v. Krueger, 882 N.E.2d 723 (Ind. 2008).",
+            "url": "https://www.courtlistener.com/opinion/852486/central-indiana-podiatry-pc-v-krueger/",
+            "deepLink": "https://www.courtlistener.com/opinion/852486/central-indiana-podiatry-pc-v-krueger/#:~:text=In%20arguing%20the%20reasonableness%20of,be%20protected%20by%20the%20agreement.",
+            "proposition": "Krueger requires the employer to first show a legitimate protectable interest before a non-compete will be tested for reasonableness.",
+            "verbatimQuote": "In arguing the reasonableness of a non-competition agreement, the employer must first show that it has a legitimate interest to be protected by the agreement.",
+            "date": "2008-03-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-krueger-interest-gate"
+          },
+          {
+            "sourceId": "krueger-scope-gate",
+            "authorityType": "case-law",
+            "title": "Central Indiana Podiatry, P.C. v. Krueger",
+            "citation": "Central Indiana Podiatry, P.C. v. Krueger, 882 N.E.2d 723 (Ind. 2008).",
+            "url": "https://www.courtlistener.com/opinion/852486/central-indiana-podiatry-pc-v-krueger/",
+            "deepLink": "https://www.courtlistener.com/opinion/852486/central-indiana-podiatry-pc-v-krueger/#:~:text=The%20employer%20also%20bears%20the,activity%2C%20and%20geographic%20area%20restricted.",
+            "proposition": "Krueger places the burden on the employer to establish that the covenant is reasonable in time, activity, and geographic scope.",
+            "verbatimQuote": "The employer also bears the burden of establishing that the agreement is reasonable in scope as to the time, activity, and geographic area restricted.",
+            "date": "2008-03-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-krueger-scope-gate"
+          },
+          {
+            "sourceId": "med1-any-capacity-gate",
+            "authorityType": "case-law",
+            "title": "Med-1 Solutions, LLC v. Taylor",
+            "citation": "Med-1 Solutions, LLC v. Taylor, No. 24A-PL-450 (Ind. Ct. App. Nov. 25, 2024).",
+            "url": "https://www.courtlistener.com/opinion/10283022/med-1-solutions-llc-v-jennifer-taylor/",
+            "deepLink": "https://www.courtlistener.com/opinion/10283022/med-1-solutions-llc-v-jennifer-taylor/#:~:text=We%20find%20that%20the%20scope,the%20covenant%20is%20unreasonably%20broad.",
+            "proposition": "Med-1 Solutions found that a covenant barring work for a competitor in any capacity restricted an unreasonably broad scope of activity.",
+            "verbatimQuote": "We find that the scope of activity restricted by the covenant is unreasonably broad.",
+            "date": "2024-11-25",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-med1-any-capacity-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-hea-1004-provisions-in-physician-noncompetes",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.indiana.require-hea-1004-provisions-in-physician-noncompetes",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Statutory terms in physician covenants",
+        "sectionId": "indiana-statutory-gates",
+        "itemNumber": "19.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#require-hea-1004-provisions-in-physician-noncompetes",
+        "requirementGuidance": "A physician covenant entered on or after July 1, 2020 is enforceable only if it contains every provision the statute mandates, including the physician's option to purchase a complete and final release at a reasonable price — verify each required term is present and the buyout has a workable price mechanism rather than a bare recital of the statutory phrase. Check the termination interaction too: the covenant becomes unenforceable when the employer terminates the physician without cause, so the enforceability question is never fully settled at signing.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "hea1004-gate",
+            "authorityType": "primary-law",
+            "title": "House Enrolled Act 1004 (2020), Ind. Code § 25-22.5-5.5-2",
+            "citation": "Ind. Code § 25-22.5-5.5-2 (House Enrolled Act 1004, P.L. 93-2020).",
+            "url": "https://iga.in.gov/pdf-documents/121/2020/house/bills/HB1004/HB1004.05.ENRS.pdf",
+            "proposition": "House Enrolled Act 1004 (2020) requires a physician noncompete to include specified provisions to be enforceable.",
+            "verbatimQuote": "To be enforceable, a physician noncompete agreement must include all of the following provisions:",
+            "date": "2020-07-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-hea1004-gate"
+          },
+          {
+            "sourceId": "sea7-buyout-gate",
+            "authorityType": "primary-law",
+            "title": "Senate Enrolled Act 7 (2023), Ind. Code § 25-22.5-5.5-2",
+            "citation": "Ind. Code § 25-22.5-5.5-2(a)(4) (Senate Enrolled Act 7, P.L. 165-2023).",
+            "url": "https://iga.in.gov/pdf-documents/123/2023/senate/bills/SB0007/SB0007.05.ENRH.pdf",
+            "proposition": "Senate Enrolled Act 7 requires that an enforceable physician noncompete give the physician an option to buy a complete release at a reasonable price.",
+            "verbatimQuote": "(4) A provision that provides the physician whose employment has terminated or whose contract has expired with the option to purchase a complete and final release from the terms of the enforceable physician noncompete agreement at a reasonable price.",
+            "date": "2023-07-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-sea7-buyout-gate"
+          },
+          {
+            "sourceId": "sea7-without-cause-gate",
+            "authorityType": "primary-law",
+            "title": "Senate Enrolled Act 7 (2023), Ind. Code § 25-22.5-5.5-2",
+            "citation": "Ind. Code § 25-22.5-5.5-2(b)(1) (Senate Enrolled Act 7, P.L. 165-2023).",
+            "url": "https://iga.in.gov/pdf-documents/123/2023/senate/bills/SB0007/SB0007.05.ENRH.pdf",
+            "proposition": "Senate Enrolled Act 7 makes a physician noncompete unenforceable when the employer terminates the physician without cause.",
+            "verbatimQuote": "The employer terminates the physician's employment without cause.",
+            "date": "2023-07-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-sea7-without-cause-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "prohibit-primary-care-physician-noncompetes",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.indiana.prohibit-primary-care-physician-noncompetes",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No non-competes for primary care physicians",
+        "sectionId": "indiana-statutory-gates",
+        "itemNumber": "19.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#prohibit-primary-care-physician-noncompetes",
+        "requirementGuidance": "For covenants entered on or after July 1, 2023, a primary care physician and an employer may not enter into a noncompete agreement — notwithstanding any other law. The ban is categorical for the covered class: no buyout, compensation level, or reasonableness showing revives it, and the contract-term requirements for other physician covenants are irrelevant to a clause the statute forbids outright. Confirm the physician's specialty before reviewing anything else in a physician agreement.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sea7-primary-care-gate",
+            "authorityType": "primary-law",
+            "title": "Senate Enrolled Act 7 (2023), Ind. Code § 25-22.5-5.5-2.5",
+            "citation": "Ind. Code § 25-22.5-5.5-2.5(b) (Senate Enrolled Act 7, P.L. 165-2023).",
+            "url": "https://iga.in.gov/pdf-documents/123/2023/senate/bills/SB0007/SB0007.05.ENRH.pdf",
+            "proposition": "Senate Enrolled Act 7 bars a primary care physician and an employer from entering into a noncompete agreement.",
+            "verbatimQuote": "Notwithstanding any other law, a primary care physician and an employer may not enter into a noncompete agreement.",
+            "date": "2023-07-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-sea7-primary-care-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "prohibit-physician-hospital-noncompetes",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.indiana.prohibit-physician-hospital-noncompetes",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No physician-hospital non-competes",
+        "sectionId": "indiana-statutory-gates",
+        "itemNumber": "19.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#prohibit-physician-hospital-noncompetes",
+        "requirementGuidance": "For covenants entered on or after July 1, 2025, a physician may not be bound by a noncompete with a hospital, a hospital parent company, an affiliated manager of a hospital, or a hospital system — any agreement in violation is void and unenforceable. The ban reaches new agreements only, and it leaves the employer three narrow tools: trade-secret nondisclosure terms, a current-employee non-solicit of at most one year that does not restrict patient interactions, referrals, clinical collaboration, or professional relationships, and covenants tied to the physician's sale of a majority-owned practice. Identify the employer entity first — a private-practice group falls back to the contract-term and primary-care layers instead.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sea475-void-gate",
+            "authorityType": "primary-law",
+            "title": "Senate Enrolled Act 475 (2025), Ind. Code § 25-22.5-5.5-2.3",
+            "citation": "Ind. Code § 25-22.5-5.5-2.3(c) (Senate Enrolled Act 475, P.L. 207-2025).",
+            "url": "https://iga.in.gov/pdf-documents/124/2025/senate/bills/SB0475/SB0475.04.ENRH.pdf",
+            "proposition": "Senate Enrolled Act 475 makes a physician-hospital noncompete entered on or after July 1, 2025 void and unenforceable.",
+            "verbatimQuote": "Any agreement in violation of this section is void and unenforceable.",
+            "date": "2025-07-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-sea475-void-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "keep-liquidated-damages-a-reasonable-forecast-of-loss",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.indiana.keep-liquidated-damages-a-reasonable-forecast-of-loss",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Liquidated damages sized to real loss",
+        "sectionId": "indiana-statutory-gates",
+        "itemNumber": "19.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#keep-liquidated-damages-a-reasonable-forecast-of-loss",
+        "requirementGuidance": "If the agreement stipulates a damages figure for covenant breach, test it as an Indiana court would: a sum grossly disproportionate to the loss from the breach, or one that prices conduct beyond the protected interest, is an unenforceable penalty — and the state supreme court struck every liquidated-damages provision before it in the leading case. Look for a figure tied to a documented estimate of the specific loss, not a flat in-terrorem number standing in for an injunction.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "amconsulting-penalty-gate",
+            "authorityType": "case-law",
+            "title": "American Consulting, Inc. v. Hannum Wagle & Cline Engineering, Inc.",
+            "citation": "American Consulting, Inc. v. Hannum Wagle & Cline Eng'g, Inc., 136 N.E.3d 208 (Ind. 2019).",
+            "url": "https://www.courtlistener.com/opinion/4688172/american-consulting-inc-dba-american-structurepoint-inc-v-hannum/",
+            "deepLink": "https://www.courtlistener.com/opinion/4688172/american-consulting-inc-dba-american-structurepoint-inc-v-hannum/#:~:text=When%20liquidated%20damages%20are%20grossly,rather%20than%20as%20liquidated%20damages.",
+            "proposition": "American Consulting holds that liquidated damages grossly disproportionate to the loss are treated as an unenforceable penalty.",
+            "verbatimQuote": "When liquidated damages are grossly disproportionate to the loss that results from the breach or are unconscionably in excess of the loss sought to be asserted, appellate courts will treat the sum as an unenforceable penalty rather than as liquidated damages.",
+            "date": "2019-12-18",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-amconsulting-penalty-gate"
+          },
+          {
+            "sourceId": "amconsulting-holding-gate",
+            "authorityType": "case-law",
+            "title": "American Consulting, Inc. v. Hannum Wagle & Cline Engineering, Inc.",
+            "citation": "American Consulting, Inc. v. Hannum Wagle & Cline Eng'g, Inc., 136 N.E.3d 208 (Ind. 2019).",
+            "url": "https://www.courtlistener.com/opinion/4688172/american-consulting-inc-dba-american-structurepoint-inc-v-hannum/",
+            "deepLink": "https://www.courtlistener.com/opinion/4688172/american-consulting-inc-dba-american-structurepoint-inc-v-hannum/#:~:text=In%20sum%2C%20we%20find%20that,at%20issue%20are%20unenforceable%20penalties.",
+            "proposition": "American Consulting found the liquidated-damages provisions at issue to be unenforceable penalties.",
+            "verbatimQuote": "In sum, we find that all of the liquidated damages provisions at issue are unenforceable penalties.",
+            "date": "2019-12-18",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/indiana#src-amconsulting-holding-gate"
+          }
+        ]
+      }
+    ]
+  }
+}

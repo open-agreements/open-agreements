@@ -1,0 +1,1284 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/connecticut",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/connecticut.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/connecticut",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/connecticut/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/connecticut/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "connecticut",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — Connecticut",
+      "description": "A clause-by-clause reviewer checklist for Connecticut employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the common-law five-factor reasonableness test and Connecticut's occupation-specific statutes.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "Connecticut",
+      "coverage": "Connecticut (US)",
+      "lastReviewed": "2026-06-12",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 48,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "label": "Physician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "connecticut-statutory-gates",
+        "label": "Connecticut statutory gates"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#identify-parties",
+        "requirementGuidance": "Confirm the named employer is the entity that actually employs the worker — in Connecticut several of the targeted statutes attach by employer type, not just worker type. A broadcast industry employer and a homemaker-companion agency each trigger their own statutory rules, so a covenant papered with a parent or staffing affiliate can obscure which regime governs.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#identify-effective-date",
+        "requirementGuidance": "The date does heavy lifting for clinician covenants: the statutory caps reach covenants entered into, amended, extended, or renewed on or after July 1, 2016 for physicians and October 1, 2023 for physician assistants and APRNs. An undated instrument — or an undated amendment — leaves the reviewer unable to tell whether the one-year and fifteen-mile ceilings apply.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ct-physician-cap-cover",
+            "authorityType": "primary-law",
+            "title": "Conn. Gen. Stat. § 20-14p",
+            "citation": "Conn. Gen. Stat. § 20-14p(b)(2).",
+            "url": "https://www.cga.ct.gov/current/pub/chap_370.htm#sec_20-14p",
+            "proposition": "Section 20-14p(b)(2) shows the statutory caps keying to the date a covenant is entered into, amended, extended, or renewed.",
+            "verbatimQuote": "A covenant not to compete that is entered into, amended, extended or renewed on or after July 1, 2016, shall not: (A) Restrict the physician's competitive activities (i) for a period of more than one year, and (ii) in a geographic region of more than fifteen miles from the primary site where such physician practices; or (B) be enforceable against a physician if (i) such employment contract or agreement was not made in anticipation of, or as part of, a partnership or ownership agreement and such contract or agreement expires and is not renewed, unless, prior to such expiration, the employer makes a bona fide offer to renew the contract on the same or similar terms and conditions, or (ii) the employment or contractual relationship is terminated by the employer, unless such employment or contractual relationship is terminated for cause.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-ct-physician-cap-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#identify-employee-title",
+        "requirementGuidance": "In Connecticut the worker's occupation selects the rulebook. Physicians, physician assistants, APRNs, security guards, broadcast employees, and home-care workers each sit under a different statutory rule, and everyone else gets common-law balancing. Record the title and the actual duties — the analysis cannot start without them.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#identify-governing-law",
+        "requirementGuidance": "Check that the governing state is stated. The choice decides whether the covenant is measured against Connecticut's five-factor reasonableness test and its occupation statutes or against some other body of law, and an agreement that leaves the question open invites a threshold fight before the merits.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#define-confidential-information",
+        "requirementGuidance": "Tie the definition to material the employer can genuinely call its own. Connecticut's leading case upheld a restraint because the employee's knowledge of the customer list and other confidential information posed a real threat to the business — a definition that sweeps in everything the worker ever learned reads as fair-protection overreach rather than a protectable interest.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "scott-customer-list",
+            "authorityType": "case-law",
+            "title": "Scott v. General Iron & Welding Co.",
+            "citation": "Scott v. Gen. Iron & Welding Co., 171 Conn. 132 (1976).",
+            "url": "https://www.courtlistener.com/opinion/2268855/scott-v-general-iron-welding-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/2268855/scott-v-general-iron-welding-co/#:~:text=The%20plaintiff%E2%80%99s%20knowledge%20of%20the,a%20reasonable%20period%20of%20time.",
+            "proposition": "Scott supports protecting customer lists and other confidential information as the interests behind a Connecticut restraint.",
+            "verbatimQuote": "The plaintiff’s knowledge of the defendant’s customer list was a potential threat to the defendant’s business, and the defendant was entitled to protect that and other confidential information for a reasonable period of time.",
+            "date": "1976-06-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-scott-customer-list"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#define-trade-secrets",
+        "requirementGuidance": "Track the statutory definition: independent economic value from secrecy plus reasonable secrecy efforts. The definition matters twice in Connecticut — it anchors the strongest protectable interest under the common-law test, and it is the only key that unlocks a security-guard covenant, where the employer must prove the guard actually obtained trade secrets as the statute defines them.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "cutsa-definition",
+            "authorityType": "primary-law",
+            "title": "Conn. Gen. Stat. § 35-51",
+            "citation": "Conn. Gen. Stat. § 35-51(d).",
+            "url": "https://www.cga.ct.gov/current/pub/chap_625.htm#sec_35-51",
+            "proposition": "Section 35-51 supplies the statutory trade-secret definition that anchors both the protectable-interest analysis and the security-guard exception.",
+            "verbatimQuote": "Notwithstanding the provisions of sections 1-210 , 31-40j to 31-40p , inclusive, and subsection (c) of section 12-62 , “trade secret” means information, including a formula, pattern, compilation, program, device, method, technique, process, drawing, cost data or customer list that: (1) Derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use, and (2) is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-cutsa-definition"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-period",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#define-restricted-period",
+        "requirementGuidance": "One defined Restricted Period keeps every duration auditable. Connecticut has no general statutory cap for ordinary employees — courts have upheld even a five-year management restriction on the right facts — but the period must be justified by the record, such as the years it took to build the customer base, and clinician covenants are capped at one year regardless.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "scott-duration",
+            "authorityType": "case-law",
+            "title": "Scott v. General Iron & Welding Co.",
+            "citation": "Scott v. Gen. Iron & Welding Co., 171 Conn. 132 (1976).",
+            "url": "https://www.courtlistener.com/opinion/2268855/scott-v-general-iron-welding-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/2268855/scott-v-general-iron-welding-co/#:~:text=In%20this%20case%2C%20the%20court,defendant%20to%20acquire%20its%20customers.",
+            "proposition": "Scott supports fact-specific review of duration, with a five-year restriction upheld where the record justified the period.",
+            "verbatimQuote": "In this case, the court could reasonably and logically conclude that a five-year restriction is reasonable, as the finding reveals that it had taken years of effort for the defendant to acquire its customers.",
+            "date": "1976-06-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-scott-duration"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-territory",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-territory",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted territory",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#define-restricted-territory",
+        "requirementGuidance": "Map the territory to where the employer actually does business. The Connecticut rule is blunt: a covenant protecting the employer in areas where it does not do business and is unlikely to do business is unreasonable as to area. Statewide can be defensible when the customer footprint is statewide; aspiration is not a footprint.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "scott-territory",
+            "authorityType": "case-law",
+            "title": "Scott v. General Iron & Welding Co.",
+            "citation": "Scott v. Gen. Iron & Welding Co., 171 Conn. 132 (1976).",
+            "url": "https://www.courtlistener.com/opinion/2268855/scott-v-general-iron-welding-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/2268855/scott-v-general-iron-welding-co/#:~:text=A%20restrictive%20covenant%20which%20protects,unreasonable%20with%20respect%20to%20area.",
+            "proposition": "Scott supports judging geographic scope against the employer's actual and likely business footprint.",
+            "verbatimQuote": "A restrictive covenant which protects the employer in areas in which he does not do business or is unlikely to do business is unreasonable with respect to area.",
+            "date": "1976-06-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-scott-territory"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered customers",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#define-covered-customers",
+        "requirementGuidance": "Bound the class to customers the worker actually serviced or solicited during a stated look-back window. That is the formulation Connecticut courts have rewarded since the 1930s — a customer-specific restraint protects the goodwill the employee personally built without restraining the rest of the market.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "roessler-customer-class",
+            "authorityType": "case-law",
+            "title": "Roessler v. Burwell",
+            "citation": "Roessler v. Burwell, 119 Conn. 289 (1934).",
+            "url": "https://www.courtlistener.com/opinion/3323907/roessler-v-burwell/",
+            "deepLink": "https://www.courtlistener.com/opinion/3323907/roessler-v-burwell/#:~:text=The%20limitation%20of%20the%20solicitation,had%20done%20in%20the%20past.",
+            "proposition": "Roessler supports limiting the covered-customer class to customers the employee serviced and solicited for the employer.",
+            "verbatimQuote": "The limitation of the solicitation to such customers was one well calculated to afford to the plaintiff a reasonable protection in his business against deprivation of customers with whom the defendant had very likely established friendly relations, and whom he could approach upon the definite basis of affording them as good or better service than the plaintiff had done in the past.",
+            "date": "1934-12-05",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-roessler-customer-class"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#define-covered-employees",
+        "requirementGuidance": "Keep the no-poach class to colleagues the departing worker actually worked with or supervised during the look-back window. No Connecticut occupation statute speaks to employee non-solicits, so the clause is judged on ordinary reasonableness — a modest, relationship-based class is far easier to defend than a workforce-wide hiring fence.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#define-protected-interests",
+        "requirementGuidance": "Name the interests in the vocabulary Connecticut recognizes: trade secrets, confidential information, customer lists, and customer goodwill. The fair-protection factor of the reasonableness test runs through these interests, so a recital that claims only a general wish to avoid competition supports nothing.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "scott-customer-list",
+            "authorityType": "case-law",
+            "title": "Scott v. General Iron & Welding Co.",
+            "citation": "Scott v. Gen. Iron & Welding Co., 171 Conn. 132 (1976).",
+            "url": "https://www.courtlistener.com/opinion/2268855/scott-v-general-iron-welding-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/2268855/scott-v-general-iron-welding-co/#:~:text=The%20plaintiff%E2%80%99s%20knowledge%20of%20the,a%20reasonable%20period%20of%20time.",
+            "proposition": "Scott supports protecting customer lists and other confidential information as the interests behind a Connecticut restraint.",
+            "verbatimQuote": "The plaintiff’s knowledge of the defendant’s customer list was a potential threat to the defendant’s business, and the defendant was entitled to protect that and other confidential information for a reasonable period of time.",
+            "date": "1976-06-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-scott-customer-list"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-competitive-business",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Competitive business",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#define-competitive-business",
+        "requirementGuidance": "Describe the genuinely competing activity in concrete terms, and test the definition against the worker's livelihood: a Connecticut covenant is unenforceable if its terms preclude the employee from pursuing their occupation and supporting themselves and their family. A definition that swallows the worker's whole trade fails that prong on its face.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "scott-livelihood-defs",
+            "authorityType": "case-law",
+            "title": "Scott v. General Iron & Welding Co.",
+            "citation": "Scott v. Gen. Iron & Welding Co., 171 Conn. 132 (1976).",
+            "url": "https://www.courtlistener.com/opinion/2268855/scott-v-general-iron-welding-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/2268855/scott-v-general-iron-welding-co/#:~:text=The%20interests%20of%20the%20employee,supporting%20himself%20and%20his%20family.",
+            "proposition": "Scott supports testing a competitive-business definition against the employee-livelihood prong of the reasonableness analysis.",
+            "verbatimQuote": "The interests of the employee himself must also be protected, and a restrictive covenant is unenforceable if by its terms the employee is precluded from pursuing his occupation and thus prevented from supporting himself and his family.",
+            "date": "1976-06-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-scott-livelihood-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where ownership or investment in competitors is restricted, look for a passive-holdings carve-out below a stated threshold. A clause that technically forbids holding index funds or ordinary public shares adds harshness the employer cannot justify under the fair-protection factor — gratuitous breadth with no protectable interest behind it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#define-passive-public-holdings",
+        "requirementGuidance": "A drafting convenience, not a requirement — plenty of agreements inline the carve-out language instead. If the capitalized term appears, confirm its percentage matches the operative carve-out it supports.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.11",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#define-solicit",
+        "requirementGuidance": "Pin the term down, and notice how much work a tight solicitation definition can do: Connecticut upheld a covenant with broad locality wording precisely because it was definitely restricted to soliciting the employer's own customers. A clear, customer-directed definition of soliciting is what makes that narrowing real.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "roessler-solicitation-limit",
+            "authorityType": "case-law",
+            "title": "Roessler v. Burwell",
+            "citation": "Roessler v. Burwell, 119 Conn. 289 (1934).",
+            "url": "https://www.courtlistener.com/opinion/3323907/roessler-v-burwell/",
+            "deepLink": "https://www.courtlistener.com/opinion/3323907/roessler-v-burwell/#:~:text=The%20time%20was%20only%20for,of%20customers%20of%20the%20plaintiff.",
+            "proposition": "Roessler supports the value of a tight, customer-directed solicitation limit even where locality wording is broad.",
+            "verbatimQuote": "The time was only for one year, and while the statement of the locality itself was broad, the covenant was definitely restricted to the solicitation of customers of the plaintiff.",
+            "date": "1934-12-05",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-roessler-solicitation-limit"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.12",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#define-termination-of-employment",
+        "requirementGuidance": "Verify the trigger covers resignation, dismissal, and expiration of a fixed term the same way — and for clinicians, capture who ended the relationship and why. The clinician statutes make a covenant unenforceable when the employer terminates other than for cause or lets the contract lapse without a bona fide renewal offer, so the definition feeds directly into enforceability, not just timing.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ct-clinician-termination",
+            "authorityType": "primary-law",
+            "title": "Conn. Gen. Stat. § 20-14p",
+            "citation": "Conn. Gen. Stat. § 20-14p(b)(2).",
+            "url": "https://www.cga.ct.gov/current/pub/chap_370.htm#sec_20-14p",
+            "proposition": "Section 20-14p(b)(2) makes who ended a physician's relationship, and whether for cause, decisive for covenant enforceability.",
+            "verbatimQuote": "A covenant not to compete that is entered into, amended, extended or renewed on or after July 1, 2016, shall not: (A) Restrict the physician's competitive activities (i) for a period of more than one year, and (ii) in a geographic region of more than fifteen miles from the primary site where such physician practices; or (B) be enforceable against a physician if (i) such employment contract or agreement was not made in anticipation of, or as part of, a partnership or ownership agreement and such contract or agreement expires and is not renewed, unless, prior to such expiration, the employer makes a bona fide offer to renew the contract on the same or similar terms and conditions, or (ii) the employment or contractual relationship is terminated by the employer, unless such employment or contractual relationship is terminated for cause.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-ct-clinician-termination"
+          }
+        ]
+      },
+      {
+        "requirementId": "tie-continued-employment-consideration-to-the-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.connecticut.tie-continued-employment-consideration-to-the-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Consideration tied to the covenant",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#tie-continued-employment-consideration-to-the-covenant",
+        "requirementGuidance": "For a covenant signed after employment began, look for an express statement that signing is a condition of continued employment — and evidence the worker actually received that continued employment. Connecticut's Supreme Court has rejected the idea that continued employment can never be consideration, and the Appellate Court treats continued at-will employment as sufficient when connected to the covenant; the worker can still win by proving no such connection existed, which is exactly what a bare, undated recital invites.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "duraflex-consideration",
+            "authorityType": "case-law",
+            "title": "Dur-A-Flex, Inc. v. Dy",
+            "citation": "Dur-A-Flex, Inc. v. Dy, 349 Conn. 513 (2024).",
+            "url": "https://www.courtlistener.com/opinion/10131708/dur-a-flex-inc-v-dy/",
+            "deepLink": "https://www.courtlistener.com/opinion/10131708/dur-a-flex-inc-v-dy/#:~:text=We%20conclude%2C%20therefore%2C%20that%20the%20trial%20court%20incorrectly,consideration%20for%20a%20noncompete%20agreement.",
+            "proposition": "Dur-A-Flex supports the current Connecticut Supreme Court rule that continued employment is not categorically insufficient consideration for a noncompete agreement.",
+            "verbatimQuote": "We conclude, therefore, that the trial court incorrectly determined that continued employment can never be consideration for a noncompete agreement.",
+            "date": "2024-07-02",
+            "pullQuoteLocator": "We conclude, therefore, that the trial court incorrectly|consideration for a noncompete agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-duraflex-consideration"
+          },
+          {
+            "sourceId": "schimenti-rule",
+            "authorityType": "case-law",
+            "title": "Schimenti Construction Co., LLC v. Schimenti",
+            "citation": "Schimenti Constr. Co., LLC v. Schimenti, 217 Conn. App. 224 (2023).",
+            "url": "https://www.courtlistener.com/opinion/9367427/schimenti-construction-co-llc-v-schimenti/",
+            "deepLink": "https://www.courtlistener.com/opinion/9367427/schimenti-construction-co-llc-v-schimenti/#:~:text=Its%20holding%20that%20consideration%20in,of%20employment%20remains%20binding%20precedent.",
+            "proposition": "Schimenti supports the rule that continued at-will employment can be sufficient consideration for a post-hire restrictive covenant.",
+            "verbatimQuote": "Its holding that consideration in the form of continued employment for at-will employees can be sufficient to make enforceable a restrictive covenant agreed to by the parties at some point after the commencement of employment remains binding precedent.",
+            "date": "2023-01-17",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-schimenti-rule"
+          },
+          {
+            "sourceId": "schimenti-connection",
+            "authorityType": "case-law",
+            "title": "Schimenti Construction Co., LLC v. Schimenti",
+            "citation": "Schimenti Constr. Co., LLC v. Schimenti, 217 Conn. App. 224 (2023).",
+            "url": "https://www.courtlistener.com/opinion/9367427/schimenti-construction-co-llc-v-schimenti/",
+            "deepLink": "https://www.courtlistener.com/opinion/9367427/schimenti-construction-co-llc-v-schimenti/#:~:text=At%20trial%2C%20as%20the%20plaintiff,consideration%20for%20a%20restrictive%20covenant.",
+            "proposition": "Schimenti supports the connection requirement — the worker may still prove signing and continued employment were unconnected.",
+            "verbatimQuote": "At trial, as the plaintiff did in Thoma, the defendant may present evidence that there was no con- nection between the nondisclosure agreement and his continued employment; but, if connected, continued employment can be sufficient consideration for a restrictive covenant.",
+            "date": "2023-01-17",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-schimenti-connection"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-opportunity-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Chance to consult a lawyer",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#acknowledge-opportunity-to-consult-counsel",
+        "requirementGuidance": "No Connecticut statute demands it, but the reasonableness test weighs how harshly the restraint lands on the worker — and a documented opportunity to take the agreement to a lawyer before signing is cheap evidence that the process was fair rather than coercive.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "The trade-secret obligation should last as long as secrecy does — that is how federal law defines the right, and Connecticut's own trade-secret act keys protection to continued secrecy the same way. A fixed expiry on trade-secret confidentiality quietly forfeits protection the employer is entitled to keep, and weakens the strongest interest available to support any accompanying covenant.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-trade-secret-definition",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
+            "citation": "18 U.S.C. § 1839(3)(B) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1839",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
+            "proposition": "Federal law keys trade-secret status to continued secrecy, which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-dtsa-trade-secret-definition"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#state-confidentiality-duration",
+        "requirementGuidance": "Give ordinary confidential information its own finite term. Connecticut's leading case speaks of protecting confidential information for a reasonable period of time, not forever — a perpetual lid on non-secret material is the kind of unbounded restraint the reasonableness lens treats with suspicion, and the two-track structure keeps the perpetual obligation where it belongs.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#disclose-dtsa-notice",
+        "requirementGuidance": "Federal law, fully applicable in Connecticut: omit the immunity notice and the employer forfeits exemplary damages and attorney fees in a later federal trade-secret suit against the worker. For an employer whose covenant strategy leans on trade secrets, giving up those remedies over a missing paragraph is an unforced error.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-immunity-notice",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-dtsa-immunity-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Confidentiality and non-disparagement language has to leave wages, hours, and working conditions discussable. Federal labor law protects that speech regardless of the governing state, and the Board has been striking overbroad clauses in employee agreements.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nlra-section-7-rights",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-nlra-section-7-rights"
+          },
+          {
+            "sourceId": "mclaren-macomb-protected-activity",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-mclaren-macomb-protected-activity"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#permit-compelled-disclosure",
+        "requirementGuidance": "Confirm the carve-out for disclosure required by law, court order, or a government investigation, with notice to the employer where lawful. A confidentiality clause cannot stop legally compelled disclosure, and a clause that pretends otherwise hands the worker an overbreadth argument for free.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#require-property-return-and-certification",
+        "requirementGuidance": "Return-or-delete at separation, certified in writing. In Connecticut the certification feeds straight into the trade-secret act: an employer who can show what left and what came back is far better positioned to enjoin actual or threatened misappropriation than one reconstructing the record after the fact.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "cutsa-injunction-return",
+            "authorityType": "primary-law",
+            "title": "Conn. Gen. Stat. § 35-52",
+            "citation": "Conn. Gen. Stat. § 35-52(a).",
+            "url": "https://www.cga.ct.gov/current/pub/chap_625.htm#sec_35-52",
+            "proposition": "Section 35-52 supports injunctive relief for actual or threatened misappropriation — the remedy a clean return-and-certification record serves.",
+            "verbatimQuote": "Actual or threatened misappropriation may be enjoined upon application to any court of competent jurisdiction.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-cutsa-injunction-return"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-employee-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#permit-employee-nonsolicit",
+        "requirementGuidance": "Optional, and the quietest covenant in the Connecticut family: no occupation statute addresses it, so it is judged on ordinary reasonableness. Keep it inside the Covered Employees class and the Restricted Period, and remember that a clause drafted as a blanket hiring fence draws the same balancing scrutiny as any other restraint.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-customer-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#permit-customer-nonsolicit",
+        "requirementGuidance": "Often the best-value covenant in Connecticut. The courts' oldest favorable authority enforced exactly this shape — a restraint limited to the employer's own customers, protecting the goodwill the worker built on the employer's dime while leaving the rest of the market open. Keep it tied to serviced-or-solicited customers and a stated period.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "roessler-goodwill",
+            "authorityType": "case-law",
+            "title": "Roessler v. Burwell",
+            "citation": "Roessler v. Burwell, 119 Conn. 289 (1934).",
+            "url": "https://www.courtlistener.com/opinion/3323907/roessler-v-burwell/",
+            "deepLink": "https://www.courtlistener.com/opinion/3323907/roessler-v-burwell/#:~:text=The%20limitation%20of%20the%20solicitation,had%20done%20in%20the%20past.",
+            "proposition": "Roessler supports enforcing a customer non-solicit limited to customers the employee serviced and solicited.",
+            "verbatimQuote": "The limitation of the solicitation to such customers was one well calculated to afford to the plaintiff a reasonable protection in his business against deprivation of customers with whom the defendant had very likely established friendly relations, and whom he could approach upon the definite basis of affording them as good or better service than the plaintiff had done in the past.",
+            "date": "1934-12-05",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-roessler-goodwill"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-dealing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#permit-non-dealing",
+        "requirementGuidance": "Non-dealing bars serving covered customers even when they call first — a meaningfully harsher restraint than a non-solicit. Under Connecticut's balancing it presses on the employee-livelihood and public-interest factors at the same time, since the customer loses their chosen provider too; treat its inclusion as a deliberate risk decision and keep the customer class tight.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "scott-livelihood-covenants",
+            "authorityType": "case-law",
+            "title": "Scott v. General Iron & Welding Co.",
+            "citation": "Scott v. Gen. Iron & Welding Co., 171 Conn. 132 (1976).",
+            "url": "https://www.courtlistener.com/opinion/2268855/scott-v-general-iron-welding-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/2268855/scott-v-general-iron-welding-co/#:~:text=The%20interests%20of%20the%20employee,supporting%20himself%20and%20his%20family.",
+            "proposition": "Scott supports the employee-livelihood limit on Connecticut restraints.",
+            "verbatimQuote": "The interests of the employee himself must also be protected, and a restrictive covenant is unenforceable if by its terms the employee is precluded from pursuing his occupation and thus prevented from supporting himself and his family.",
+            "date": "1976-06-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-scott-livelihood-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-compete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#permit-non-compete",
+        "requirementGuidance": "Available in Connecticut, but only on the common law's terms: partial in time or place, reasonable, fairly protective of the employer without crushing the worker or the public. Before evaluating any term of the clause, route the review through the Connecticut gates at the end of this checklist — first the worker's occupation, then the five-factor balancing.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "scott-reasonableness-covenants",
+            "authorityType": "case-law",
+            "title": "Scott v. General Iron & Welding Co.",
+            "citation": "Scott v. Gen. Iron & Welding Co., 171 Conn. 132 (1976).",
+            "url": "https://www.courtlistener.com/opinion/2268855/scott-v-general-iron-welding-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/2268855/scott-v-general-iron-welding-co/#:~:text=In%20order%20to%20be%20valid,the%20interests%20of%20the%20public.",
+            "proposition": "Scott supports the rule that a Connecticut employee non-compete must be partial, reasonable, fairly protective of the employer, and consistent with the public interest.",
+            "verbatimQuote": "In order to be valid and binding, a covenant which restricts the activities of an employee following the termination of his employment must be partial and restricted in its operation “in respect either to time or place, . . . and must be reasonable — that is, it should afford only a fair protection to the interest of the party in whose favor it is made and must not be so large in its operation as to interfere with the interests of the public.",
+            "date": "1976-06-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-scott-reasonableness-covenants"
+          },
+          {
+            "sourceId": "scott-livelihood-covenants",
+            "authorityType": "case-law",
+            "title": "Scott v. General Iron & Welding Co.",
+            "citation": "Scott v. Gen. Iron & Welding Co., 171 Conn. 132 (1976).",
+            "url": "https://www.courtlistener.com/opinion/2268855/scott-v-general-iron-welding-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/2268855/scott-v-general-iron-welding-co/#:~:text=The%20interests%20of%20the%20employee,supporting%20himself%20and%20his%20family.",
+            "proposition": "Scott supports the employee-livelihood limit on Connecticut restraints.",
+            "verbatimQuote": "The interests of the employee himself must also be protected, and a restrictive covenant is unenforceable if by its terms the employee is precluded from pursuing his occupation and thus prevented from supporting himself and his family.",
+            "date": "1976-06-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-scott-livelihood-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Named-competitor narrowing",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementGuidance": "When the employer can name its real competitors, the covenant should bind those instead of leaning on the open-ended Competitive Business definition. In a state where enforceability turns on whether the restraint affords only fair protection, a named list is self-proving narrowness — and it leaves the worker free to take the rest of the industry's jobs, which defuses the livelihood objection.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#permit-non-investment",
+        "requirementGuidance": "Rare and deliberate. Confirm the passive-holdings carve-out is intact and the clause shares the defined Restricted Period — an investment restraint with no carve-out and no end date is breadth the employer will struggle to justify as fair protection of any recognized interest.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#require-non-disparagement",
+        "requirementGuidance": "Standard to include with a stated term, but audit the carve-outs: truthful testimony, statements to government agencies, and protected workplace speech must sit outside the clause. Federal labor law polices overbroad versions in every state, and no Connecticut statute gives the clause any special shelter.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mclaren-macomb-nondisparagement",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-mclaren-macomb-nondisparagement"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-physician-specific-rights",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Physician rights and notices",
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#address-physician-specific-rights",
+        "requirementGuidance": "The dedicated clause should state Connecticut's physician rules plainly: the covenant is valid only if necessary to protect a legitimate business interest and reasonably limited in time, geography, and practice restrictions; for covenants entered into, amended, extended, or renewed on or after July 1, 2016, it cannot exceed one year or fifteen miles from the primary practice site; and it falls away when the employer terminates without cause or lets the contract lapse without a bona fide renewal offer. Parallel one-year and fifteen-mile rules cover physician assistants and APRNs — checked in the Connecticut gates below.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ct-physician-necessity",
+            "authorityType": "primary-law",
+            "title": "Conn. Gen. Stat. § 20-14p",
+            "citation": "Conn. Gen. Stat. § 20-14p(b)(1).",
+            "url": "https://www.cga.ct.gov/current/pub/chap_370.htm#sec_20-14p",
+            "proposition": "Section 20-14p(b)(1) supports the necessity and reasonable-limitation requirements for physician covenants.",
+            "verbatimQuote": "A covenant not to compete is valid and enforceable only if it is: (A) Necessary to protect a legitimate business interest; (B) reasonably limited in time, geographic scope and practice restrictions as necessary to protect such business interest; and (C) otherwise consistent with the law and public policy.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-ct-physician-necessity"
+          },
+          {
+            "sourceId": "ct-physician-cap-clause",
+            "authorityType": "primary-law",
+            "title": "Conn. Gen. Stat. § 20-14p",
+            "citation": "Conn. Gen. Stat. § 20-14p(b)(2).",
+            "url": "https://www.cga.ct.gov/current/pub/chap_370.htm#sec_20-14p",
+            "proposition": "Section 20-14p(b)(2) supports the one-year and fifteen-mile caps and the non-renewal and termination-without-cause rules for physician covenants.",
+            "verbatimQuote": "A covenant not to compete that is entered into, amended, extended or renewed on or after July 1, 2016, shall not: (A) Restrict the physician's competitive activities (i) for a period of more than one year, and (ii) in a geographic region of more than fifteen miles from the primary site where such physician practices; or (B) be enforceable against a physician if (i) such employment contract or agreement was not made in anticipation of, or as part of, a partnership or ownership agreement and such contract or agreement expires and is not renewed, unless, prior to such expiration, the employer makes a bona fide offer to renew the contract on the same or similar terms and conditions, or (ii) the employment or contractual relationship is terminated by the employer, unless such employment or contractual relationship is terminated for cause.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-ct-physician-cap-clause"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "The worker's representation that no earlier agreement or order blocks the new role. It surfaces an incoming covenant on day one — when the parties can still assess it under Connecticut's reasonableness lens and the relevant occupation statute — instead of after a demand letter arrives mid-quarter.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#address-notice-to-future-employers",
+        "requirementGuidance": "A genuine drafting choice, not a requirement. A notice provision can support enforcement, but warning a new employer off a worker based on a covenant that a Connecticut court would balance away — or that an occupation statute voids outright — invites a tortious-interference dispute. If the clause appears, condition any outreach on a covenant that actually survives the gates in this checklist.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-tolling-during-breach",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-tolling-during-breach",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restriction extended during a breach",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#address-tolling-during-breach",
+        "requirementGuidance": "The agreement should say whether the clock pauses during a breach — but flag any extension mechanism as an open Connecticut question. No staged statute or appellate decision endorses automatic extension; the staged authority treated a request for an injunction as moot once the covenant period had run, and any extension clause still has to survive the same reasonableness test as the underlying restraint. Draft it as a separate, breach-tied, bounded restraint, and do not assume a court will revive an expired covenant.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "van-dyck-moot",
+            "authorityType": "case-law",
+            "title": "Van Dyck Printing Co. v. DiNicola",
+            "citation": "Van Dyck Printing Co. v. DiNicola, 43 Conn. Supp. 191 (1993).",
+            "url": "https://www.courtlistener.com/opinion/3334840/van-dyck-printing-co-v-dinicola/",
+            "deepLink": "https://www.courtlistener.com/opinion/3334840/van-dyck-printing-co-v-dinicola/#:~:text=Because%20the%20plaintiffs%20claim%20concerning,injunctive%20relief%20has%20become%20moot.",
+            "proposition": "Van Dyck supports the open-question caution: the request for injunctive relief became moot after the covenant period expired.",
+            "verbatimQuote": "Because the plaintiffs claim concerning the covenant at issue applied to a two year period commencing in April, 1987, the plaintiff’s request for injunctive relief has become moot.",
+            "date": "1993-08-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-van-dyck-moot"
+          },
+          {
+            "sourceId": "scott-tolling-backdrop",
+            "authorityType": "case-law",
+            "title": "Scott v. General Iron & Welding Co.",
+            "citation": "Scott v. Gen. Iron & Welding Co., 171 Conn. 132 (1976).",
+            "url": "https://www.courtlistener.com/opinion/2268855/scott-v-general-iron-welding-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/2268855/scott-v-general-iron-welding-co/#:~:text=In%20determining%20whether%20a%20restrictive,of%20the%20restraint%20it%20imposes.%E2%80%9D",
+            "proposition": "Scott supports running any extension-on-breach clause through the same reasonableness framework as the underlying restraint.",
+            "verbatimQuote": "In determining whether a restrictive covenant of employment is in restraint of trade, “[t]he test of its validity is the reasonableness of the restraint it imposes.”",
+            "date": "1976-06-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-scott-tolling-backdrop"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#require-injunctive-relief-availability",
+        "requirementGuidance": "Look for the acknowledgement that breach may cause irreparable harm and that an injunction is appropriate relief. Where trade secrets are in play, Connecticut's trade-secret act independently authorizes an injunction against actual or threatened misappropriation — a second route to the same relief that does not depend on the covenant surviving review.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "cutsa-injunction-remedies",
+            "authorityType": "primary-law",
+            "title": "Conn. Gen. Stat. § 35-52",
+            "citation": "Conn. Gen. Stat. § 35-52(a).",
+            "url": "https://www.cga.ct.gov/current/pub/chap_625.htm#sec_35-52",
+            "proposition": "Section 35-52 supports statutory injunctive relief for actual or threatened trade-secret misappropriation, independent of the covenant.",
+            "verbatimQuote": "Actual or threatened misappropriation may be enjoined upon application to any court of competent jurisdiction.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-cutsa-injunction-remedies"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-attorneys-fees-and-costs",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Attorney fees and costs",
+        "sectionId": "remedies",
+        "itemNumber": "13.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#address-attorneys-fees-and-costs",
+        "requirementGuidance": "A commercial choice; the default American Rule applies if the agreement is silent. Check that any fee-shifting is mutual and prevailing-party based — a one-way employer clause adds to the harshness side of the ledger when a Connecticut court weighs how heavily the whole package lands on the worker.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "draft-severable-tiers-rather-than-rely-on-judicial-narrowing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.connecticut.draft-severable-tiers-rather-than-rely-on-judicial-narrowing",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Severable tiers, not court rescue",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#draft-severable-tiers-rather-than-rely-on-judicial-narrowing",
+        "requirementGuidance": "Read the severability clause as architecture, not insurance. Connecticut gives the drafter no reliable rule that a court will rewrite an overbroad covenant: internally inconsistent restraint language can be construed against the drafter when no reasonable reconciliation is possible, and the one statutory severance rule in this area preserves only the non-covenant remainder of a physician contract — not a trimmed restraint. Prefer separable tiers and customer-specific alternatives that leave a court narrower text to enforce or strike, instead of a savings clause that asks the court to supply a new radius or duration of its own.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "thoma-against-drafter",
+            "authorityType": "case-law",
+            "title": "Thoma v. Oxford Performance Materials, Inc.",
+            "citation": "Thoma v. Oxford Performance Materials, Inc., 153 Conn. App. 50 (2014).",
+            "url": "https://www.courtlistener.com/opinion/2733143/thoma-v-oxford-performance-materials-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/2733143/thoma-v-oxford-performance-materials-inc/#:~:text=Such%20a%20reasonable%20construction%20is,not%20possible%20in%20this%20case.",
+            "proposition": "Thoma supports the drafting risk that conflicting noncompetition language may not be reasonably reconcilable and can be construed against the drafter.",
+            "verbatimQuote": "Such a reasonable construction is not possible in this case.",
+            "date": "2014-09-23",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-thoma-against-drafter"
+          },
+          {
+            "sourceId": "ct-physician-remainder",
+            "authorityType": "primary-law",
+            "title": "Conn. Gen. Stat. § 20-14p",
+            "citation": "Conn. Gen. Stat. § 20-14p(c).",
+            "url": "https://www.cga.ct.gov/current/pub/chap_370.htm#sec_20-14p",
+            "proposition": "Section 20-14p(c) shows Connecticut's narrow statutory severance model: when the covenant is void, only the contract's remaining provisions survive.",
+            "verbatimQuote": "The remaining provisions of any contract or agreement that includes a covenant not to compete that is rendered void and unenforceable, in whole or in part, under the provisions of this section shall remain in full force and effect, including provisions that require the payment of damages resulting from any injury suffered by reason of termination of such contract or agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-ct-physician-remainder"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#address-survival-per-covenant",
+        "requirementGuidance": "Per-covenant survival keeps each clock independently checkable — perpetual for trade secrets, finite elsewhere. In Connecticut the discipline matters because each surviving covenant is balanced on its own footing: a defensible customer non-solicit should not have its fate bundled with a shakier market-wide restraint inside one undifferentiated survival clause.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-assignment-and-successors",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assignment and successors",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#address-assignment-and-successors",
+        "requirementGuidance": "Confirm employer-side assignability to successors and that the worker cannot assign. The successor inherits the Connecticut analysis along with the covenant: the reasonableness factors are re-weighed against the enforcing business's actual footprint and interests, so a restraint sized to the original employer does not automatically fit the buyer.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "specify-governing-law-and-venue",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.specify-governing-law-and-venue",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law, venue, dispute process",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#specify-governing-law-and-venue",
+        "requirementGuidance": "The clause should name governing law, venue, and the dispute process. For a Connecticut workforce the honest selection is Connecticut law and a Connecticut forum: the covenant was presumably drafted against the five-factor test and the occupation statutes, and a foreign-law clause papering a Connecticut clinician, guard, or home-care worker signals a form that was never localized — and tees up a choice-of-law fight on top of the merits.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Boilerplate with a Connecticut trap inside: the clinician statutes reach covenants entered into, amended, extended, or renewed on or after their trigger dates, so a routine amendment or renewal can pull an older physician, PA, or APRN covenant into the one-year and fifteen-mile regime. Review the amendment mechanics so a refresh does not silently convert a grandfathered covenant into a noncompliant one.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ct-amendment-retrigger",
+            "authorityType": "primary-law",
+            "title": "Conn. Gen. Stat. § 20-14p",
+            "citation": "Conn. Gen. Stat. § 20-14p(b)(2).",
+            "url": "https://www.cga.ct.gov/current/pub/chap_370.htm#sec_20-14p",
+            "proposition": "Section 20-14p(b)(2) reaches covenants amended, extended, or renewed after the trigger date — so amendments can re-paper an older covenant into the cap regime.",
+            "verbatimQuote": "A covenant not to compete that is entered into, amended, extended or renewed on or after July 1, 2016, shall not: (A) Restrict the physician's competitive activities (i) for a period of more than one year, and (ii) in a geographic region of more than fifteen miles from the primary site where such physician practices; or (B) be enforceable against a physician if (i) such employment contract or agreement was not made in anticipation of, or as part of, a partnership or ownership agreement and such contract or agreement expires and is not renewed, unless, prior to such expiration, the employer makes a bona fide offer to renew the contract on the same or similar terms and conditions, or (ii) the employment or contractual relationship is terminated by the employer, unless such employment or contractual relationship is terminated for cause.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-ct-amendment-retrigger"
+          }
+        ]
+      },
+      {
+        "requirementId": "keep-covenants-within-the-five-factor-reasonableness-test",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.connecticut.keep-covenants-within-the-five-factor-reasonableness-test",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Reasonableness on all five factors",
+        "sectionId": "connecticut-statutory-gates",
+        "itemNumber": "19.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#keep-covenants-within-the-five-factor-reasonableness-test",
+        "requirementGuidance": "Run every restraint through Connecticut's five recurring questions: duration, geography, fair protection of the employer, the burden on the employee, and the public interest. The covenant must be partial and restricted as to time or place, must afford only fair protection to the employer's interest, cannot interfere with the public, and is unenforceable if it stops the worker from pursuing their occupation and supporting their family. The factors trade off against each other — a wider area needs a shorter period — and the whole package is measured against a real protectable interest, not against the wish to avoid competition.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "scott-five-factor-gate",
+            "authorityType": "case-law",
+            "title": "Scott v. General Iron & Welding Co.",
+            "citation": "Scott v. Gen. Iron & Welding Co., 171 Conn. 132 (1976).",
+            "url": "https://www.courtlistener.com/opinion/2268855/scott-v-general-iron-welding-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/2268855/scott-v-general-iron-welding-co/#:~:text=In%20order%20to%20be%20valid,the%20interests%20of%20the%20public.",
+            "proposition": "Scott supports the five-factor validity rule for Connecticut employee restraints: partial operation, reasonableness, fair protection, and the public interest.",
+            "verbatimQuote": "In order to be valid and binding, a covenant which restricts the activities of an employee following the termination of his employment must be partial and restricted in its operation “in respect either to time or place, . . . and must be reasonable — that is, it should afford only a fair protection to the interest of the party in whose favor it is made and must not be so large in its operation as to interfere with the interests of the public.",
+            "date": "1976-06-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-scott-five-factor-gate"
+          },
+          {
+            "sourceId": "scott-livelihood-gate",
+            "authorityType": "case-law",
+            "title": "Scott v. General Iron & Welding Co.",
+            "citation": "Scott v. Gen. Iron & Welding Co., 171 Conn. 132 (1976).",
+            "url": "https://www.courtlistener.com/opinion/2268855/scott-v-general-iron-welding-co/",
+            "deepLink": "https://www.courtlistener.com/opinion/2268855/scott-v-general-iron-welding-co/#:~:text=The%20interests%20of%20the%20employee,supporting%20himself%20and%20his%20family.",
+            "proposition": "Scott supports the employee-livelihood prong: a covenant that precludes the worker's occupation is unenforceable.",
+            "verbatimQuote": "The interests of the employee himself must also be protected, and a restrictive covenant is unenforceable if by its terms the employee is precluded from pursuing his occupation and thus prevented from supporting himself and his family.",
+            "date": "1976-06-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-scott-livelihood-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "cap-physician-covenants-at-one-year-and-fifteen-miles",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.connecticut.cap-physician-covenants-at-one-year-and-fifteen-miles",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Physician covenants capped at one year and fifteen miles",
+        "sectionId": "connecticut-statutory-gates",
+        "itemNumber": "19.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#cap-physician-covenants-at-one-year-and-fifteen-miles",
+        "requirementGuidance": "For a physician covenant entered into, amended, extended, or renewed on or after July 1, 2016: no more than one year, no more than fifteen miles from the primary practice site, and no enforcement at all where the employer terminated without cause or let the contract lapse without a bona fide renewal offer. For covenants touched on or after October 1, 2023, add the compensation check: if the physician declined a proposed material change to compensation terms and the contract then expired unrenewed or was terminated without cause, the covenant fails. Check the dates and the separation story before reading a single defined term.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ct-physician-cap-gate",
+            "authorityType": "primary-law",
+            "title": "Conn. Gen. Stat. § 20-14p",
+            "citation": "Conn. Gen. Stat. § 20-14p(b)(2).",
+            "url": "https://www.cga.ct.gov/current/pub/chap_370.htm#sec_20-14p",
+            "proposition": "Section 20-14p(b)(2) supports the physician one-year and fifteen-mile caps and the non-renewal and termination-without-cause rules.",
+            "verbatimQuote": "A covenant not to compete that is entered into, amended, extended or renewed on or after July 1, 2016, shall not: (A) Restrict the physician's competitive activities (i) for a period of more than one year, and (ii) in a geographic region of more than fifteen miles from the primary site where such physician practices; or (B) be enforceable against a physician if (i) such employment contract or agreement was not made in anticipation of, or as part of, a partnership or ownership agreement and such contract or agreement expires and is not renewed, unless, prior to such expiration, the employer makes a bona fide offer to renew the contract on the same or similar terms and conditions, or (ii) the employment or contractual relationship is terminated by the employer, unless such employment or contractual relationship is terminated for cause.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-ct-physician-cap-gate"
+          },
+          {
+            "sourceId": "ct-physician-material-change-gate",
+            "authorityType": "primary-law",
+            "title": "Conn. Gen. Stat. § 20-14p",
+            "citation": "Conn. Gen. Stat. § 20-14p(b)(3).",
+            "url": "https://www.cga.ct.gov/current/pub/chap_370.htm#sec_20-14p",
+            "proposition": "Section 20-14p(b)(3) supports the material-compensation-change rule for physician covenants touched on or after October 1, 2023.",
+            "verbatimQuote": "A covenant not to compete that is entered into, amended, extended or renewed on or after October 1, 2023, shall not be enforceable if (A) the physician who is a party to the employment or other contract or agreement does not agree to a proposed material change to the compensation terms of such contract or agreement prior to or at the time of the extension or renewal of such contract or agreement, and (B) the contract or agreement expires and is not renewed by the employer or the employment or contractual relationship is terminated by the employer, unless such employment or contractual relationship is terminated by the employer for cause.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-ct-physician-material-change-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "cap-physician-assistant-and-aprn-covenants-at-one-year-and-fifteen-miles",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.connecticut.cap-physician-assistant-and-aprn-covenants-at-one-year-and-fifteen-miles",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "PA and APRN covenants capped at one year and fifteen miles",
+        "sectionId": "connecticut-statutory-gates",
+        "itemNumber": "19.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#cap-physician-assistant-and-aprn-covenants-at-one-year-and-fifteen-miles",
+        "requirementGuidance": "Physician assistants and advanced practice registered nurses have their own parallel caps: for covenants entered into, amended, extended, or renewed on or after October 1, 2023, no more than one year and no more than fifteen miles from the primary practice site, with the same non-renewal and termination-without-cause escape hatches as the physician statute. A clinician form drafted for physicians does not cover this — each profession has its own statute and its own trigger date, and an older PA or APRN covenant joins the regime the moment it is amended or renewed.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ct-pa-cap-gate",
+            "authorityType": "primary-law",
+            "title": "Conn. Gen. Stat. § 20-12k",
+            "citation": "Conn. Gen. Stat. § 20-12k(b)(2).",
+            "url": "https://www.cga.ct.gov/current/pub/chap_370.htm#sec_20-12k",
+            "proposition": "Section 20-12k(b)(2) supports the physician assistant one-year and fifteen-mile caps.",
+            "verbatimQuote": "A covenant not to compete that is entered into, amended, extended or renewed on or after October 1, 2023, shall not: (A) Restrict the physician assistant's competitive activities (i) for a period of more than one year, and (ii) in a geographic region of more than fifteen miles from the primary site where such physician assistant practices; or (B) be enforceable against a physician assistant if (i) such employment contract or agreement was not made in anticipation of, or as part of, a partnership or ownership agreement and such contract or agreement expires and is not renewed, unless, prior to such expiration, the employer makes a bona fide offer to renew the contract on the same or similar terms and conditions, or (ii) the employment or contractual relationship is terminated by the employer, unless such employment or contractual relationship is terminated for cause.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-ct-pa-cap-gate"
+          },
+          {
+            "sourceId": "ct-aprn-cap-gate",
+            "authorityType": "primary-law",
+            "title": "Conn. Gen. Stat. § 20-101d",
+            "citation": "Conn. Gen. Stat. § 20-101d(b)(2).",
+            "url": "https://www.cga.ct.gov/current/pub/chap_378.htm#sec_20-101d",
+            "proposition": "Section 20-101d(b)(2) supports the APRN one-year and fifteen-mile caps.",
+            "verbatimQuote": "A covenant not to compete that is entered into, amended, extended or renewed on or after October 1, 2023, shall not: (A) Restrict the advanced practice registered nurse's competitive activities (i) for a period of more than one year, and (ii) in a geographic region of more than fifteen miles from the primary site where such advanced practice registered nurse practices; or (B) be enforceable against an advanced practice registered nurse if (i) such employment contract or agreement was not made in anticipation of, or as part of, a partnership or ownership agreement and such contract or agreement expires and is not renewed, unless, prior to such expiration, the employer makes a bona fide offer to renew the contract on the same or similar terms and conditions, or (ii) the employment or contractual relationship is terminated by the employer, unless such employment or contractual relationship is terminated for cause.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-ct-aprn-cap-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-security-guard-non-competes-absent-proven-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.connecticut.exclude-security-guard-non-competes-absent-proven-trade-secrets",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No security-guard non-competes without proven trade secrets",
+        "sectionId": "connecticut-statutory-gates",
+        "itemNumber": "19.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#exclude-security-guard-non-competes-absent-proven-trade-secrets",
+        "requirementGuidance": "An employer cannot require a security guard — federal occupational classification 339032 — to agree not to work the same or a similar job at the same location for another employer or independently, unless the employer proves the guard obtained its trade secrets as the trade-secret act defines them. The exception runs on proof, not paperwork: a recital that the guard had access to confidential material does not carry the statutory burden, and the borrowed definition demands real economic value from secrecy plus genuine secrecy efforts.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ct-security-guard-gate",
+            "authorityType": "primary-law",
+            "title": "Conn. Gen. Stat. § 31-50a",
+            "citation": "Conn. Gen. Stat. § 31-50a(a).",
+            "url": "https://www.cga.ct.gov/current/pub/chap_557.htm#sec_31-50a",
+            "proposition": "Section 31-50a supports the security-guard non-compete ban unless the employer proves the guard obtained employer trade secrets.",
+            "verbatimQuote": "No employer may require any person employed in the classification 339032 of the standard occupational classification system of the Bureau of Labor Statistics of the United States Department of Labor to enter into an agreement prohibiting such person from engaging in the same or a similar job, at the same location at which the employer employs such person, for another employer or as a self-employed person, unless the employer proves that such person has obtained trade secrets, as defined in subsection (d) of section 35-51 , of the employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-ct-security-guard-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-post-employment-restraints-for-broadcast-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.connecticut.exclude-post-employment-restraints-for-broadcast-employees",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No post-employment restraints for broadcast employees",
+        "sectionId": "connecticut-statutory-gates",
+        "itemNumber": "19.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#exclude-post-employment-restraints-for-broadcast-employees",
+        "requirementGuidance": "A broadcast industry employment contract cannot require a covered broadcast employee to stay out of broadcast work in a specified area for a specified time after termination. The statute also closes the side doors: no clause forcing the employee to disclose competing offers after the contract term, and no clause obligating the employee to re-sign with the incumbent on whatever terms a rival offered. A covenant rebuilt as an offer-disclosure or matching obligation fails alongside the covenant itself.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ct-broadcast-gate",
+            "authorityType": "primary-law",
+            "title": "Conn. Gen. Stat. § 31-50b",
+            "citation": "Conn. Gen. Stat. § 31-50b(b).",
+            "url": "https://www.cga.ct.gov/current/pub/chap_557.htm#sec_31-50b",
+            "proposition": "Section 31-50b supports the ban on area-and-time restraints, offer-disclosure obligations, and match-and-extend obligations for covered broadcast employees.",
+            "verbatimQuote": "No broadcast industry employer employment contract for the services of a broadcast employee may contain a provision requiring that such broadcast employee: (1) Refrain from obtaining employment in a specified geographical area for a specified period of time after termination of employment with that broadcast industry employer; (2) Disclose the terms or conditions of an offer of employment, or the existence of any such offer, from any other broadcast industry employer following the expiration of the term of the employment contract; or (3) Agree to enter into a subsequent employment contract with the broadcast industry employer, or extend or renew the existing employment contract, upon the same terms and conditions offered by a prospective employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-ct-broadcast-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "void-covenants-for-homemaker-companion-and-home-health-workers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.connecticut.void-covenants-for-homemaker-companion-and-home-health-workers",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No covenants for home-care workers",
+        "sectionId": "connecticut-statutory-gates",
+        "itemNumber": "19.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#void-covenants-for-homemaker-companion-and-home-health-workers",
+        "requirementGuidance": "For workers covered by the homemaker, companion, and home-health services statute, a covenant not to compete is against public policy — void and unenforceable, with no compensation, consideration, or trade-secret cure. The companion rule voids no-hire clauses between a homemaker-companion agency and its clients, so the agency cannot recreate the restraint by charging the client a penalty, fee, or damages for hiring the worker directly. If either device appears in the package, strike it rather than tailor it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ct-home-health-void-gate",
+            "authorityType": "primary-law",
+            "title": "Conn. Gen. Stat. § 20-681",
+            "citation": "Conn. Gen. Stat. § 20-681.",
+            "url": "https://www.cga.ct.gov/current/pub/chap_400o.htm#sec_20-681",
+            "proposition": "Section 20-681 supports the rule that covered homemaker, companion, and home-health service non-competes are void and unenforceable.",
+            "verbatimQuote": "Any covenant not to compete is against public policy and shall be void and unenforceable.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-ct-home-health-void-gate"
+          },
+          {
+            "sourceId": "ct-home-health-no-hire-gate",
+            "authorityType": "primary-law",
+            "title": "Conn. Gen. Stat. § 20-683",
+            "citation": "Conn. Gen. Stat. § 20-683(b).",
+            "url": "https://www.cga.ct.gov/current/pub/chap_400o.htm#sec_20-683",
+            "proposition": "Section 20-683 supports the ban on no-hire clauses between homemaker-companion agencies and their clients.",
+            "verbatimQuote": "Any no-hire clause in a contract between a homemaker-companion agency and a client of such agency is against public policy and shall be void.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/connecticut#src-ct-home-health-no-hire-gate"
+          }
+        ]
+      }
+    ]
+  }
+}

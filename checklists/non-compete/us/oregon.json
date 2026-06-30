@@ -1,0 +1,1417 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/oregon",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/oregon.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/oregon",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/oregon/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/oregon/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "oregon",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — Oregon",
+      "description": "A clause-by-clause reviewer checklist for Oregon employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under ORS 653.295's notice rule, salary threshold, 12-month cap, garden-leave path, and the 2025 medical-licensee ban.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "Oregon",
+      "coverage": "Oregon (US)",
+      "lastReviewed": "2026-06-11",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 50,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "label": "Physician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "oregon-statutory-gates",
+        "label": "Oregon statutory gates"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#identify-parties",
+        "requirementGuidance": "Confirm the named employer is the entity that actually employs and pays the worker. Oregon's checklist runs on employer-side facts — who sent the offer letter, who pays the garden-leave money, who must deliver the signed copy after termination — and a covenant papered with a parent or affiliate muddies every one of those obligations before the review even starts.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#identify-effective-date",
+        "requirementGuidance": "Dates carry unusual weight here. The signing date determines whether the covenant rode in with a conforming offer letter or needed a bona fide advancement, the 12-month clock runs from termination, and agreements signed before 2022 live under an older and more forgiving version of the statute. An undated covenant makes all three questions guesswork.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "or-notice-gateway-cover",
+            "authorityType": "primary-law",
+            "title": "ORS 653.295",
+            "citation": "ORS 653.295(1)(a).",
+            "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors653.html",
+            "proposition": "ORS 653.295(1)(a) ties validity to the timing of the written offer or a subsequent bona fide advancement, which is why the covenant's dates matter.",
+            "verbatimQuote": "A noncompetition agreement entered into between an employer and employee is void and unenforceable unless: (a)(A) The employer informs the employee in a written employment offer received by the employee at least two weeks before the first day of the employee's employment that a noncompetition agreement is required as a condition of employment; or (B) The noncompetition agreement is entered into upon a subsequent bona fide advancement of the employee by the employer",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-notice-gateway-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#identify-employee-title",
+        "requirementGuidance": "Record the role, because in Oregon it does double duty: the statute binds only exempt salaried workers, so the title is the first clue to exempt status, and the duties behind it are the evidence of what trade secrets or sensitive plans the worker can actually reach. A title that reads non-exempt or clerical should send you straight to the statutory gates at the end of this checklist.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#identify-governing-law",
+        "requirementGuidance": "Check that a governing state is stated — and treat a foreign selection for an Oregon-resident employee working primarily in Oregon as a red flag rather than an escape hatch. Oregon's choice-of-law statute points the employment contract back to Oregon law regardless of what the clause says.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "or-choice-of-law-cover",
+            "authorityType": "primary-law",
+            "title": "ORS 15.320",
+            "citation": "ORS 15.320(3).",
+            "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors015.html",
+            "proposition": "ORS 15.320(3) applies Oregon law to an employment contract for services rendered primarily in Oregon by an Oregon resident, limiting foreign choice-of-law clauses.",
+            "verbatimQuote": "Notwithstanding any other provision of ORS 15.300 to 15.380, but subject to the limitations on applicability imposed by ORS 15.305, the law of Oregon applies to the following contracts:",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-choice-of-law-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#define-confidential-information",
+        "requirementGuidance": "Test the definition against the statute's second protectable-interest category: competitively sensitive confidential business or professional information, illustrated by product development plans, launch plans, marketing strategy, and sales plans. A definition built around those concrete categories supports the covenant; a definition that sweeps in everything the worker ever learned supports nothing and invites a Workplace Fairness Act problem if it reaches workplace-conduct complaints.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "or-protectable-interest-defs",
+            "authorityType": "primary-law",
+            "title": "ORS 653.295",
+            "citation": "ORS 653.295(2).",
+            "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors653.html",
+            "proposition": "ORS 653.295(2) defines the protectable interest through access to trade secrets or competitively sensitive confidential business or professional information, with concrete examples.",
+            "verbatimQuote": "For purposes of subsection (1)(c) of this section, an employer has a protectable interest when the employee: (a) Has access to trade secrets, as defined in ORS 646.461; (b) Has access to competitively sensitive confidential business or professional information that otherwise would not qualify as a trade secret, including product development plans, product launch plans, marketing strategy or sales plans",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-protectable-interest-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#define-trade-secrets",
+        "requirementGuidance": "The definition should track Oregon's Uniform Trade Secrets Act: information with independent economic value from secrecy, subject to reasonable secrecy efforts. Access to trade secrets so defined is the first statutory protectable interest, and the statute expressly preserves trade-secret remedies even where the non-compete fails — so a clean definition keeps working after the covenant dies.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "or-utsa-definition",
+            "authorityType": "primary-law",
+            "title": "ORS 646.461",
+            "citation": "ORS 646.461(4).",
+            "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors646.html",
+            "proposition": "ORS 646.461(4) supplies the trade-secret definition the non-compete statute incorporates: independent economic value from secrecy plus reasonable secrecy efforts.",
+            "verbatimQuote": "“Trade secret” means information, including a drawing, cost data, customer list, formula, pattern, compilation, program, device, method, technique or process that: (a) Derives independent economic value, actual or potential, from not being generally known to the public or to other persons who can obtain economic value from its disclosure or use; and (b) Is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-utsa-definition"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-period",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#define-restricted-period",
+        "requirementGuidance": "One defined Restricted Period keeps the durations auditable against the hardest number in Oregon law: 12 months from the date of termination for the non-compete, with the excess void. Verify the defined period runs from termination — not from breach, judgment, or the end of litigation — because that reference point is what the statute fixes.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "or-duration-defs",
+            "authorityType": "primary-law",
+            "title": "ORS 653.295",
+            "citation": "ORS 653.295(3).",
+            "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors653.html",
+            "proposition": "ORS 653.295(3) caps the term at 12 months measured from the employee's termination and voids the excess.",
+            "verbatimQuote": "The term of a noncompetition agreement may not exceed 12 months from the date of the employee's termination. The remainder of a term of a noncompetition agreement in excess of 12 months is void and may not be enforced by a court of this state.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-duration-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-territory",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-territory",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted territory",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#define-restricted-territory",
+        "requirementGuidance": "Tie the geography to where the protected information could actually be exploited. Oregon's statute does not prescribe a territory limit, but the protectable-interest requirement does the same work: a footprint that outruns the trade secrets and strategic plans the worker touched reads as a restraint on employment rather than a shield for information, and there is no judicial rewrite waiting to save it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-covered-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered customers",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#define-covered-customers",
+        "requirementGuidance": "Bound the class to customers with an active or ongoing relationship — that is the construction Oregon's Court of Appeals gave the statutory non-solicit carve-out, which excludes former and merely incidental patrons. A customer definition that reaches anyone who ever did business with the employer pushes the clause outside the protection that keeps non-solicits free of the statutory checklist.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "or-henry-customers-defs",
+            "authorityType": "case-law",
+            "title": "Oregon Psychiatric Partners, LLP v. Henry",
+            "citation": "Oregon Psychiatric Partners, LLP v. Henry, 293 Or. App. 471, 429 P.3d 399 (2018).",
+            "url": "https://www.courtlistener.com/opinion/6657507/or-psychiatric-partners-llp-v-henry/",
+            "deepLink": "https://www.courtlistener.com/opinion/6657507/or-psychiatric-partners-llp-v-henry/#:~:text=Those%20definitions%20support%20defendant's%20contention,former%20or%20merely%20incidental%20patrons.",
+            "proposition": "Henry construed customers of the employer in the non-solicit carve-out to mean active or ongoing relationships, excluding former or merely incidental patrons.",
+            "verbatimQuote": "Those definitions support defendant's contention that the phrase “customers of the employer” refers to those people with an active or ongoing relationship with the employer and does not include former or merely incidental patrons.",
+            "date": "2018-08-22",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-henry-customers-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#define-covered-employees",
+        "requirementGuidance": "Keep the no-poach class to colleagues the departing worker actually worked with during a stated look-back window. Oregon's statute carves employee non-solicits out of the non-compete checklist without regulating them further, so the clause is judged on ordinary reasonableness — and a workforce-wide hiring ban is the version most likely to be recharacterized as a restraint the checklist should have governed.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "or-carveout-defs",
+            "authorityType": "primary-law",
+            "title": "ORS 653.295",
+            "citation": "ORS 653.295(5).",
+            "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors653.html",
+            "proposition": "ORS 653.295(5) carves bonus restriction agreements and covenants not to solicit employees or customers out of the non-compete requirements.",
+            "verbatimQuote": "Subsections (1) and (3) of this section do not apply to: (a) Bonus restriction agreements, which are lawful agreements that may be enforced by the courts in this state; or (b) A covenant not to solicit employees of the employer or solicit or transact business with customers of the employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-carveout-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#define-protected-interests",
+        "requirementGuidance": "Name the interests in the statute's own terms: access to trade secrets, or access to competitively sensitive confidential business or professional information that would not qualify as a trade secret. Goodwill recitals add color but no enforceability in Oregon — the protectable-interest condition runs through information access, and the definition should make that showing easy to assemble.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "or-protectable-interest-defs",
+            "authorityType": "primary-law",
+            "title": "ORS 653.295",
+            "citation": "ORS 653.295(2).",
+            "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors653.html",
+            "proposition": "ORS 653.295(2) defines the protectable interest through access to trade secrets or competitively sensitive confidential business or professional information, with concrete examples.",
+            "verbatimQuote": "For purposes of subsection (1)(c) of this section, an employer has a protectable interest when the employee: (a) Has access to trade secrets, as defined in ORS 646.461; (b) Has access to competitively sensitive confidential business or professional information that otherwise would not qualify as a trade secret, including product development plans, product launch plans, marketing strategy or sales plans",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-protectable-interest-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-competitive-business",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Competitive business",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#define-competitive-business",
+        "requirementGuidance": "Describe the genuinely competing activity concretely. The leading Oregon-law enforcement case turned on a departing executive whose strategic knowledge mapped directly onto a named rival's product and pricing decisions — that is the level of specificity a reviewer should look for, not a definition that captures every company in the industry.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "or-nike-interest-defs",
+            "authorityType": "case-law",
+            "title": "Nike, Inc. v. McCarthy",
+            "citation": "Nike, Inc. v. McCarthy, 379 F.3d 576 (9th Cir. 2004).",
+            "url": "https://www.courtlistener.com/opinion/787342/nike-inc-v-eugene-mccarthy/",
+            "deepLink": "https://www.courtlistener.com/opinion/787342/nike-inc-v-eugene-mccarthy/#:~:text=We%20also%20hold%20that%20Nike,information%20McCarthy%20acquired%20at%20Nike.",
+            "proposition": "Nike v. McCarthy grounded the legitimate interest in the specific strategic information the departing executive could exploit at a named competitor.",
+            "verbatimQuote": "We also hold that Nike has a legitimate interest in enforcing the agreement, because there is a substantial risk that McCarthy — in shaping Reebok's product allocation, sales and pricing strategies — could enable Reebok to divert a significant amount of Nike's footwear sales given the highly confidential information McCarthy acquired at Nike.",
+            "date": "2004-08-09",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-nike-interest-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where ownership or investment in competitors is restricted, look for a passive-holdings carve-out below a stated percentage. A clause that technically forbids index funds and ordinary public shares restrains the worker far beyond any information-based interest the Oregon statute recognizes, and gratuitous overbreadth is expensive in a state whose default answer to a defective covenant is void.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#define-passive-public-holdings",
+        "requirementGuidance": "A drafting convenience rather than a requirement — many agreements simply inline the carve-out. If the capitalized term appears, confirm its percentage matches the operative carve-out it feeds.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.11",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#define-solicit",
+        "requirementGuidance": "Pin the term down, and notice how much Oregon's carve-out already covers: the statute exempts covenants not to solicit employees, and not to solicit or transact business with customers, from the non-compete checklist. A solicitation definition that quietly expands into a ban on competing at all forfeits that exemption — the further the definition drifts from solicitation, the closer the clause drifts to the checklist.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "or-carveout-defs",
+            "authorityType": "primary-law",
+            "title": "ORS 653.295",
+            "citation": "ORS 653.295(5).",
+            "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors653.html",
+            "proposition": "ORS 653.295(5) carves bonus restriction agreements and covenants not to solicit employees or customers out of the non-compete requirements.",
+            "verbatimQuote": "Subsections (1) and (3) of this section do not apply to: (a) Bonus restriction agreements, which are lawful agreements that may be enforced by the courts in this state; or (b) A covenant not to solicit employees of the employer or solicit or transact business with customers of the employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-carveout-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.12",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#define-termination-of-employment",
+        "requirementGuidance": "Verify the trigger treats resignation, dismissal, and expiration of a fixed term the same way. In Oregon this event starts two unforgiving clocks at once — the 12-month maximum restraint and the 30-day window for delivering the signed copy — and it fixes the year against which the salary threshold is measured. An ambiguous trigger destabilizes all three.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "or-conditions-defs",
+            "authorityType": "primary-law",
+            "title": "ORS 653.295",
+            "citation": "ORS 653.295(1)(b)-(e).",
+            "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors653.html",
+            "proposition": "ORS 653.295(1)(b)-(e) measures the salary threshold at termination and requires delivery of a signed copy within 30 days after termination.",
+            "verbatimQuote": "(1) A noncompetition agreement entered into between an employer and employee is void and unenforceable unless:",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-conditions-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-timing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-timing",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "When the agreement was signed",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#acknowledge-timing",
+        "requirementGuidance": "In Oregon the timing recital is evidence for a validity condition, not just procedural hygiene. The acknowledgement should record either that the written offer disclosing the non-compete arrived at least two weeks before the first day of work, or that the covenant was signed on a genuine promotion — the two gateways the Ninth Circuit walked through before enforcing an Oregon covenant signed mid-employment. Continued employment alone is recited nowhere because it qualifies nowhere.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "or-timing-gateways",
+            "authorityType": "primary-law",
+            "title": "ORS 653.295",
+            "citation": "ORS 653.295(1)(a).",
+            "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors653.html",
+            "proposition": "ORS 653.295(1)(a) makes two-week advance written notice or a subsequent bona fide advancement the only valid formation timings.",
+            "verbatimQuote": "A noncompetition agreement entered into between an employer and employee is void and unenforceable unless: (a)(A) The employer informs the employee in a written employment offer received by the employee at least two weeks before the first day of the employee's employment that a noncompetition agreement is required as a condition of employment; or (B) The noncompetition agreement is entered into upon a subsequent bona fide advancement of the employee by the employer",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-timing-gateways"
+          },
+          {
+            "sourceId": "or-nike-timing",
+            "authorityType": "case-law",
+            "title": "Nike, Inc. v. McCarthy",
+            "citation": "Nike, Inc. v. McCarthy, 379 F.3d 576 (9th Cir. 2004).",
+            "url": "https://www.courtlistener.com/opinion/787342/nike-inc-v-eugene-mccarthy/",
+            "deepLink": "https://www.courtlistener.com/opinion/787342/nike-inc-v-eugene-mccarthy/#:~:text=Construing%20the%20Oregon%20statute%20and,statutory%20requirements%20to%20be%20enforceable.",
+            "proposition": "Nike v. McCarthy enforced a covenant signed in connection with a promotion after testing it against the statutory timing requirements.",
+            "verbatimQuote": "Construing the Oregon statute and reviewing the circumstances surrounding McCarthy's promotion and the execution of the noncompete agreement, we hold that the agreement meets the statutory requirements to be enforceable.",
+            "date": "2004-08-09",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-nike-timing"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-opportunity-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Chance to consult a lawyer",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#acknowledge-opportunity-to-consult-counsel",
+        "requirementGuidance": "No Oregon statute demands it, but the two-week offer window exists precisely so a candidate can evaluate the covenant before committing. A counsel acknowledgement documents that the window was usable in fact — cheap insurance for an employer that will someday carry the burden of proving every formality was honored.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "The trade-secret obligation should run as long as secrecy does — that is how federal law defines the right, and Oregon's non-compete statute expressly leaves trade-secret remedies untouched no matter what happens to the covenant. A fixed expiry on trade-secret protection gives away the one protection that survives even a void non-compete.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-trade-secret-definition",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
+            "citation": "18 U.S.C. § 1839(3)(B) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1839",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
+            "proposition": "Federal law keys trade-secret status to continued secrecy, which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-dtsa-trade-secret-definition"
+          },
+          {
+            "sourceId": "or-preserve-remedies",
+            "authorityType": "primary-law",
+            "title": "ORS 653.295",
+            "citation": "ORS 653.295(6).",
+            "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors653.html",
+            "proposition": "ORS 653.295(6) preserves trade-secret and proprietary-information remedies by injunction or other lawful means regardless of the non-compete's fate.",
+            "verbatimQuote": "Nothing in this section restricts the right of any person to protect trade secrets or other proprietary information by injunction or any other lawful means under other applicable laws.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-preserve-remedies"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#state-confidentiality-duration",
+        "requirementGuidance": "Give ordinary confidential information its own finite term. Oregon's protectable-interest framework already distinguishes trade secrets from competitively sensitive information that does not qualify as one — the two-track duration structure mirrors that statutory line and keeps the perpetual obligation where the law actually supports it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#disclose-dtsa-notice",
+        "requirementGuidance": "Federal law, fully applicable in Oregon: omit the immunity notice and the employer forfeits exemplary damages and attorney fees in a later trade-secret suit against the worker. Because trade-secret remedies are the tool Oregon law most reliably leaves in the employer's hands, weakening them through a missing boilerplate notice is an unforced error.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-immunity-notice",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-dtsa-immunity-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Confidentiality and non-disparagement language has to leave wages, hours, and working conditions discussable. Federal labor law protects that speech in every state, and the Board has been striking overbroad clauses in employee agreements — a federal floor that operates alongside Oregon's own Workplace Fairness Act limits.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nlra-section-7-rights",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-nlra-section-7-rights"
+          },
+          {
+            "sourceId": "mclaren-macomb-protected-activity",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-mclaren-macomb-protected-activity"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#permit-compelled-disclosure",
+        "requirementGuidance": "Confirm the carve-out for disclosure required by law, court order, or a government investigation. Oregon adds its own statutory floor: an agreement cannot be used to prevent an employee from disclosing or discussing workplace discrimination or harassment, so the contractual carve-out should be at least as wide as the Workplace Fairness Act demands.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "or-wfa-disclosures",
+            "authorityType": "primary-law",
+            "title": "ORS 659A.370",
+            "citation": "ORS 659A.370(1).",
+            "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors659A.html",
+            "proposition": "ORS 659A.370(1) bars nondisclosure and nondisparagement provisions that prevent an employee from disclosing or discussing discrimination or harassment.",
+            "verbatimQuote": "it is an unlawful employment practice for an employer to enter into an agreement with a former, current or prospective employee, as a condition of employment, continued employment, promotion, compensation or the receipt of benefits, that contains a nondisclosure provision, a nondisparagement provision or any other provision that has the purpose or effect of preventing the employee from disclosing or discussing conduct: (a)(A) That constitutes discrimination prohibited by ORS 659A.030, including conduct that constitutes sexual assault; or (B) That constitutes discrimination prohibited by ORS 659A.082 or 659A.112; and (b)(A) That occurred between employees or between an employer and an employee in the workplace or at a work-related event that is off the employment premises and coordinated by or through the employer; or (B) That occurred between an employer and an employee off the employment premises.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-wfa-disclosures"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#require-property-return-and-certification",
+        "requirementGuidance": "Return-or-delete at separation, certified in writing. Oregon's separation window is already busy — the employer owes the worker a signed copy of the covenant within 30 days — so fold the certification into the same offboarding sequence and the two obligations police each other.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-employee-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#permit-employee-nonsolicit",
+        "requirementGuidance": "Optional, and in Oregon statutorily privileged: covenants not to solicit the employer's employees sit entirely outside the non-compete checklist, so no offer-letter notice, salary threshold, or 12-month cap applies. The privilege rewards staying recognizably a non-solicit — keep it inside the Covered Employees class and a sensible period rather than letting it grow into a hiring ban.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "or-carveout-covenants",
+            "authorityType": "primary-law",
+            "title": "ORS 653.295",
+            "citation": "ORS 653.295(5)(b).",
+            "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors653.html",
+            "proposition": "ORS 653.295(5)(b) exempts covenants not to solicit employees, and not to solicit or transact business with customers, from the non-compete requirements.",
+            "verbatimQuote": "Subsections (1) and (3) of this section do not apply to: (a) Bonus restriction agreements, which are lawful agreements that may be enforced by the courts in this state; or (b) A covenant not to solicit employees of the employer or solicit or transact business with customers of the employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-carveout-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-customer-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#permit-customer-nonsolicit",
+        "requirementGuidance": "Also outside the checklist — and sometimes the survivor when the non-compete fails: Oregon's Court of Appeals treated a covenant that flunked the non-compete requirements as at least partly enforceable through the customer-restriction carve-out. The same case narrowed the carve-out to active, ongoing customer relationships, so the clause earns its protected status only when drafted that tightly.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "or-henry-partial-covenants",
+            "authorityType": "case-law",
+            "title": "Oregon Psychiatric Partners, LLP v. Henry",
+            "citation": "Oregon Psychiatric Partners, LLP v. Henry, 293 Or. App. 471, 429 P.3d 399 (2018).",
+            "url": "https://www.courtlistener.com/opinion/6657507/or-psychiatric-partners-llp-v-henry/",
+            "deepLink": "https://www.courtlistener.com/opinion/6657507/or-psychiatric-partners-llp-v-henry/#:~:text=For%20the%20reasons%20that%20follow%2C,factual%20issues%20that%20may%20remain.",
+            "proposition": "Henry held a covenant that failed the non-compete checklist remained at least partly enforceable as a customer non-solicitation agreement under the carve-out.",
+            "verbatimQuote": "For the reasons that follow, we agree with plaintiff's alternative argument that the agreement is at least in part enforceable under ORS 653.295(4)(b), and we leave to further proceedings in the trial court the resolution of any factual issues that may remain.",
+            "date": "2018-08-22",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-henry-partial-covenants"
+          },
+          {
+            "sourceId": "or-henry-customers-covenants",
+            "authorityType": "case-law",
+            "title": "Oregon Psychiatric Partners, LLP v. Henry",
+            "citation": "Oregon Psychiatric Partners, LLP v. Henry, 293 Or. App. 471, 429 P.3d 399 (2018).",
+            "url": "https://www.courtlistener.com/opinion/6657507/or-psychiatric-partners-llp-v-henry/",
+            "deepLink": "https://www.courtlistener.com/opinion/6657507/or-psychiatric-partners-llp-v-henry/#:~:text=Those%20definitions%20support%20defendant's%20contention,former%20or%20merely%20incidental%20patrons.",
+            "proposition": "Henry limited the customer carve-out to active or ongoing relationships, excluding former and incidental patrons.",
+            "verbatimQuote": "Those definitions support defendant's contention that the phrase “customers of the employer” refers to those people with an active or ongoing relationship with the employer and does not include former or merely incidental patrons.",
+            "date": "2018-08-22",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-henry-customers-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-dealing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#permit-non-dealing",
+        "requirementGuidance": "Oregon's carve-out is unusually generous here: it exempts covenants not to solicit or transact business with customers of the employer, so even the broader no-dealing form escapes the statutory checklist when confined to the employer's customers. The boundary still matters — stretch the customer class past active, ongoing relationships and the clause starts looking like the non-compete the checklist was written for.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "or-carveout-covenants",
+            "authorityType": "primary-law",
+            "title": "ORS 653.295",
+            "citation": "ORS 653.295(5)(b).",
+            "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors653.html",
+            "proposition": "ORS 653.295(5)(b) exempts covenants not to solicit employees, and not to solicit or transact business with customers, from the non-compete requirements.",
+            "verbatimQuote": "Subsections (1) and (3) of this section do not apply to: (a) Bonus restriction agreements, which are lawful agreements that may be enforced by the courts in this state; or (b) A covenant not to solicit employees of the employer or solicit or transact business with customers of the employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-carveout-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-compete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#permit-non-compete",
+        "requirementGuidance": "An Oregon employee non-compete is void and unenforceable unless the employer clears every statutory condition — notice or advancement, exempt status, protectable interest, post-termination delivery, and the salary threshold, with garden leave as the fallback. If this clause appears at all, route the review straight through the Oregon statutory gates at the end of this checklist before evaluating any of its terms.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "or-void-unless-covenants",
+            "authorityType": "primary-law",
+            "title": "ORS 653.295",
+            "citation": "ORS 653.295(1).",
+            "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors653.html",
+            "proposition": "ORS 653.295(1) makes an Oregon employee non-compete void and unenforceable unless every statutory condition is met, beginning with the notice-or-advancement gateway.",
+            "verbatimQuote": "A noncompetition agreement entered into between an employer and employee is void and unenforceable unless: (a)(A) The employer informs the employee in a written employment offer received by the employee at least two weeks before the first day of the employee's employment that a noncompetition agreement is required as a condition of employment; or (B) The noncompetition agreement is entered into upon a subsequent bona fide advancement of the employee by the employer",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-void-unless-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Named-competitor narrowing",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementGuidance": "When the employer can name its real competitors, the covenant should bind those instead of leaning on an open-ended Competitive Business definition. Oregon's protectable-interest analysis is concrete — the leading case matched the executive's confidential knowledge to a single named rival — and a covenant that mirrors that specificity is far easier to defend than one drawn around an entire industry.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "or-nike-interest-covenants",
+            "authorityType": "case-law",
+            "title": "Nike, Inc. v. McCarthy",
+            "citation": "Nike, Inc. v. McCarthy, 379 F.3d 576 (9th Cir. 2004).",
+            "url": "https://www.courtlistener.com/opinion/787342/nike-inc-v-eugene-mccarthy/",
+            "deepLink": "https://www.courtlistener.com/opinion/787342/nike-inc-v-eugene-mccarthy/#:~:text=We%20also%20hold%20that%20Nike,information%20McCarthy%20acquired%20at%20Nike.",
+            "proposition": "Nike v. McCarthy tied enforceability to the specific confidential information the executive could exploit at one named competitor.",
+            "verbatimQuote": "We also hold that Nike has a legitimate interest in enforcing the agreement, because there is a substantial risk that McCarthy — in shaping Reebok's product allocation, sales and pricing strategies — could enable Reebok to divert a significant amount of Nike's footwear sales given the highly confidential information McCarthy acquired at Nike.",
+            "date": "2004-08-09",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-nike-interest-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#permit-non-investment",
+        "requirementGuidance": "Rare and deliberate. Confirm the passive-holdings carve-out is intact and the clause shares the defined Restricted Period — and remember that an investment restraint enjoys none of the carve-out protection Oregon gives non-solicits, so the closer it operates to a restraint on working, the more it should be tested against the statutory gates.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#require-non-disparagement",
+        "requirementGuidance": "Standard to include with a stated term, but in Oregon the carve-outs are statutory, not stylistic: the Workplace Fairness Act makes it unlawful to condition employment or benefits on a nondisparagement provision that keeps the worker from disclosing or discussing discrimination or harassment, and federal labor law polices overbroad versions on top of that. Audit the carve-outs before the covenant language.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "or-wfa-nondisparagement",
+            "authorityType": "primary-law",
+            "title": "ORS 659A.370",
+            "citation": "ORS 659A.370(1).",
+            "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors659A.html",
+            "proposition": "ORS 659A.370(1) makes a nondisparagement provision unlawful where it prevents an employee from disclosing or discussing discrimination or harassment.",
+            "verbatimQuote": "it is an unlawful employment practice for an employer to enter into an agreement with a former, current or prospective employee, as a condition of employment, continued employment, promotion, compensation or the receipt of benefits, that contains a nondisclosure provision, a nondisparagement provision or any other provision that has the purpose or effect of preventing the employee from disclosing or discussing conduct: (a)(A) That constitutes discrimination prohibited by ORS 659A.030, including conduct that constitutes sexual assault; or (B) That constitutes discrimination prohibited by ORS 659A.082 or 659A.112; and (b)(A) That occurred between employees or between an employer and an employee in the workplace or at a work-related event that is off the employment premises and coordinated by or through the employer; or (B) That occurred between an employer and an employee off the employment premises.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-wfa-nondisparagement"
+          },
+          {
+            "sourceId": "mclaren-macomb-nondisparagement",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-mclaren-macomb-nondisparagement"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-physician-specific-rights",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Physician rights and notices",
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#address-physician-specific-rights",
+        "requirementGuidance": "The dedicated clause should state Oregon's 2025 rule plainly: a non-compete restricting the practice of medicine or nursing is void between a medical licensee and a practice entity, management services organization, or hospital, with narrow exceptions — and the ban reaches agreements signed before the law took effect, so legacy physician covenants offer no shelter. If the worker holds a medical or nursing license, the medical-licensee gate at the end of this checklist controls.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "or-medical-ban-physician",
+            "authorityType": "primary-law",
+            "title": "ORS 653.297",
+            "citation": "ORS 653.297(2)(a).",
+            "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors653.html",
+            "proposition": "ORS 653.297(2)(a) voids a non-compete restricting the practice of medicine or nursing between a medical licensee and a person, management services organization, or hospital.",
+            "verbatimQuote": "a noncompetition agreement that restricts the practice of medicine or the practice of nursing is void and unenforceable between a medical licensee and: (A) A person, as defined in ORS 442.015; (B) A management services organization; or (C) A hospital, as defined in ORS 442.015, or a hospital-affiliated clinic, as defined in ORS 442.612.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-medical-ban-physician"
+          },
+          {
+            "sourceId": "or-medical-retro-physician",
+            "authorityType": "primary-law",
+            "title": "ORS 653.298",
+            "citation": "ORS 653.298 (2025 c.295 §9 note).",
+            "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors653.html",
+            "proposition": "The 2025 session-law note applies the medical-licensee ban to agreements entered before, on, or after the June 9, 2025 effective date.",
+            "verbatimQuote": "Sections 7 [653.297] and 8 [653.298], chapter 295, Oregon Laws 2025, apply to noncompetition agreements, as defined in section 7, chapter 295, Oregon Laws 2025, that restrict the practice of medicine or the practice of nursing and into which a medical licensee, as defined in section 7, chapter 295, Oregon Laws 2025, enters before, on or after the effective date of chapter 295, Oregon Laws 2025 [June 9, 2025].",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-medical-retro-physician"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "The worker's representation that no earlier agreement or order blocks the new role. On intake in Oregon, pair it with the inverse question: a covenant the candidate signed elsewhere may be governed by Oregon law anyway once the candidate is an Oregon resident working primarily here, and the representation is the natural place for that conversation to surface.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#address-notice-to-future-employers",
+        "requirementGuidance": "A genuine drafting choice. In Oregon, weigh it against the void-by-default regime: warning a new employer off a worker on the strength of a covenant that missed a formality means asserting an agreement the statute treats as void from the start, with reciprocal fee exposure waiting if the dispute ripens into litigation. If the clause appears, condition any outbound notice on a covenant that actually clears the statutory gates.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "avoid-tolling-beyond-twelve-months-from-termination",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.oregon.avoid-tolling-beyond-twelve-months-from-termination",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restriction extended during a breach",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#avoid-tolling-beyond-twelve-months-from-termination",
+        "requirementGuidance": "Flag any clause that pauses the restricted period during a breach and tacks the lost time onto the end. No Oregon statute or decision squarely approves or rejects tolling, but the statute measures the 12-month maximum from the date of termination and voids the excess — so an extension mechanism collides with the cap at exactly the moment it matters. The conservative clause states the parties' intent on breach but keeps the total restraint inside 12 months from termination; treat anything bolder as unsettled-law risk the employer is choosing on purpose.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "or-tolling-cap",
+            "authorityType": "primary-law",
+            "title": "ORS 653.295",
+            "citation": "ORS 653.295(3).",
+            "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors653.html",
+            "proposition": "ORS 653.295(3) measures the 12-month maximum from termination and voids the excess, which is in tension with tolling clauses that extend the restraint past that point.",
+            "verbatimQuote": "The term of a noncompetition agreement may not exceed 12 months from the date of the employee's termination. The remainder of a term of a noncompetition agreement in excess of 12 months is void and may not be enforced by a court of this state.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-tolling-cap"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#require-injunctive-relief-availability",
+        "requirementGuidance": "Look for the acknowledgement that breach may cause irreparable harm and that injunctive relief is appropriate — and note where Oregon law makes the remedy safest: the statute itself preserves injunctions to protect trade secrets and proprietary information whatever happens to the covenant, so an injunction theory anchored in the trade-secret interest outlives a non-compete that fails a formality.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "or-injunction-preserved",
+            "authorityType": "primary-law",
+            "title": "ORS 653.295",
+            "citation": "ORS 653.295(6).",
+            "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors653.html",
+            "proposition": "ORS 653.295(6) preserves the right to protect trade secrets and proprietary information by injunction or other lawful means regardless of the covenant's validity.",
+            "verbatimQuote": "Nothing in this section restricts the right of any person to protect trade secrets or other proprietary information by injunction or any other lawful means under other applicable laws.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-injunction-preserved"
+          }
+        ]
+      },
+      {
+        "requirementId": "draft-fee-clauses-as-mutual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.oregon.draft-fee-clauses-as-mutual",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Attorney fees and costs",
+        "sectionId": "remedies",
+        "itemNumber": "13.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#draft-fee-clauses-as-mutual",
+        "requirementGuidance": "Read any fee clause as mutual no matter how it is written, because Oregon law does: a contractual fee provision entitles whichever party prevails to reasonable fees, regardless of which party the contract named. A one-way employer clause therefore hands a departing employee a fee theory against a void covenant while giving the employer nothing it would not already have — so either draft the clause as mutual prevailing-party or leave fee-shifting out and live with the American Rule.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "or-reciprocal-fees",
+            "authorityType": "primary-law",
+            "title": "ORS 20.096",
+            "citation": "ORS 20.096(1).",
+            "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors020.html",
+            "proposition": "ORS 20.096(1) makes a one-sided contractual attorney-fee provision reciprocal, entitling the prevailing party to fees regardless of which party the contract specified.",
+            "verbatimQuote": "the party that prevails on the claim shall be entitled to reasonable attorney fees in addition to costs and disbursements, without regard to whether the prevailing party is the party specified in the contract and without regard to whether the prevailing party is a party to the contract.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-reciprocal-fees"
+          }
+        ]
+      },
+      {
+        "requirementId": "draft-within-the-statute-rather-than-rely-on-reformation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.oregon.draft-within-the-statute-rather-than-rely-on-reformation",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No reliance on court rescue",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#draft-within-the-statute-rather-than-rely-on-reformation",
+        "requirementGuidance": "Read the severability clause as a risk signal, not a safety net. Since the 2022 regime took effect, a non-conforming Oregon non-compete is void from the start — the older rule, under which a defective covenant merely remained voidable until the employee acted, is gone — and the statute's only built-in repair severs the portion of a term beyond 12 months. Nothing in that targeted severance invites a court to rebuild a covenant that missed the notice, status, interest, delivery, or salary conditions, so the covenant has to be drafted to the checklist on day one.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "or-excess-severance",
+            "authorityType": "primary-law",
+            "title": "ORS 653.295",
+            "citation": "ORS 653.295(3).",
+            "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors653.html",
+            "proposition": "ORS 653.295(3) severs only the over-12-month portion of a term, which is targeted statutory severance rather than a general reformation power.",
+            "verbatimQuote": "The remainder of a term of a noncompetition agreement in excess of 12 months is void and may not be enforced by a court of this state.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-excess-severance"
+          },
+          {
+            "sourceId": "or-bernard-superseded",
+            "authorityType": "case-law",
+            "title": "Bernard v. S.B., Inc.",
+            "citation": "Bernard v. S.B., Inc., 270 Or. App. 710 (2015).",
+            "url": "https://www.courtlistener.com/opinion/8166117/bernard-v-sb-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/8166117/bernard-v-sb-inc/#:~:text=As%20explained%20below%2C%20we%20conclude,time%20that%20defendant%20invoked%20it.",
+            "proposition": "Bernard applied the pre-2022 rule treating a defective non-compete as voidable and still in effect until voided — the regime the 2021 amendments replaced.",
+            "verbatimQuote": "As explained below, we conclude that plaintiffs evidence established, at most, that the noncompetition agreement was voidable (not void) but remained valid and in effect at the time that defendant invoked it.",
+            "date": "2015-05-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-bernard-superseded"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#address-survival-per-covenant",
+        "requirementGuidance": "Per-covenant survival keeps each clock independently checkable: perpetual for trade secrets, finite for ordinary confidential information, capped at 12 months from termination for the non-compete, common-law reasonable for the carved-out non-solicits. In Oregon a bundled survival clause is where an over-cap non-compete term hides — and the statute voids the excess wherever it appears.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-assignment-and-successors",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assignment and successors",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#address-assignment-and-successors",
+        "requirementGuidance": "Confirm employer-side assignability to successors and that the worker cannot assign. Two Oregon wrinkles for the successor: the statutory checklist governs only covenants made in the context of an employment relationship, so a covenant acquired in a business sale is judged under common-law reasonableness instead — and whoever ends up enforcing an employment covenant inherits the original employer's compliance record, including any missed notice or delivery.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "or-employment-only-assignment",
+            "authorityType": "primary-law",
+            "title": "ORS 653.295",
+            "citation": "ORS 653.295(4).",
+            "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors653.html",
+            "proposition": "ORS 653.295(4) confines the statutory checklist and cap to covenants made in the context of an employment relationship, leaving sale-of-business covenants to common law.",
+            "verbatimQuote": "Subsections (1) and (3) of this section apply only to noncompetition agreements made in the context of an employment relationship or contract and not otherwise.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-employment-only-assignment"
+          }
+        ]
+      },
+      {
+        "requirementId": "keep-oregon-law-for-oregon-resident-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.oregon.keep-oregon-law-for-oregon-resident-employees",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Oregon law for Oregon-based employees",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#keep-oregon-law-for-oregon-resident-employees",
+        "requirementGuidance": "For an Oregon resident performing services primarily in Oregon, the agreement must not lean on another state's law to sidestep the non-compete statute — Oregon's choice-of-law rule applies Oregon law to that employment contract notwithstanding the clause. The provision should still name governing law, venue, and process; the point is that for an Oregon-based employee, Oregon law is the only selection that operates as written, and a foreign selection mostly signals an unlocalized form.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "or-employment-choice-of-law",
+            "authorityType": "primary-law",
+            "title": "ORS 15.320",
+            "citation": "ORS 15.320(3).",
+            "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors015.html",
+            "proposition": "ORS 15.320(3) applies Oregon law to a contract of employment for services rendered primarily in Oregon by an Oregon resident, notwithstanding a contrary selection.",
+            "verbatimQuote": "Notwithstanding any other provision of ORS 15.300 to 15.380, but subject to the limitations on applicability imposed by ORS 15.305, the law of Oregon applies to the following contracts:",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-employment-choice-of-law"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Boilerplate with an Oregon trap inside: a mid-employment amendment that introduces or broadens a non-compete is a new covenant, and a new covenant needs its own gateway — a bona fide advancement, not a routine refresh signed for continued employment. Review the amendment mechanics so an annual re-papering exercise does not quietly create covenants the statute voids on arrival.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "or-advancement-amendments",
+            "authorityType": "primary-law",
+            "title": "ORS 653.295",
+            "citation": "ORS 653.295(1)(a)(B).",
+            "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors653.html",
+            "proposition": "ORS 653.295(1)(a)(B) permits a mid-employment covenant only upon a subsequent bona fide advancement, which constrains amendment-based rollouts.",
+            "verbatimQuote": "A noncompetition agreement entered into between an employer and employee is void and unenforceable unless: (a)(A) The employer informs the employee in a written employment offer received by the employee at least two weeks before the first day of the employee's employment that a noncompetition agreement is required as a condition of employment; or (B) The noncompetition agreement is entered into upon a subsequent bona fide advancement of the employee by the employer",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-advancement-amendments"
+          }
+        ]
+      },
+      {
+        "requirementId": "gate-non-compete-by-advance-notice-or-bona-fide-advancement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.oregon.gate-non-compete-by-advance-notice-or-bona-fide-advancement",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Two-week offer notice or a real promotion",
+        "sectionId": "oregon-statutory-gates",
+        "itemNumber": "19.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#gate-non-compete-by-advance-notice-or-bona-fide-advancement",
+        "requirementGuidance": "Start with the formation story. The covenant survives only if the written employment offer — received at least two weeks before the first day of work — told the candidate a non-compete would be a condition of employment, or the covenant was signed on a subsequent bona fide advancement. Ask for the offer letter and its date, or for the promotion that accompanied the signature; the leading case enforced a covenant precisely because the executive signed it in connection with a genuine promotion. A covenant rolled out mid-employment for nothing more than staying employed is void.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "or-gate-notice",
+            "authorityType": "primary-law",
+            "title": "ORS 653.295",
+            "citation": "ORS 653.295(1)(a).",
+            "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors653.html",
+            "proposition": "ORS 653.295(1)(a) conditions validity on two-week advance written-offer notice or a subsequent bona fide advancement.",
+            "verbatimQuote": "A noncompetition agreement entered into between an employer and employee is void and unenforceable unless: (a)(A) The employer informs the employee in a written employment offer received by the employee at least two weeks before the first day of the employee's employment that a noncompetition agreement is required as a condition of employment; or (B) The noncompetition agreement is entered into upon a subsequent bona fide advancement of the employee by the employer",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-gate-notice"
+          },
+          {
+            "sourceId": "or-gate-nike",
+            "authorityType": "case-law",
+            "title": "Nike, Inc. v. McCarthy",
+            "citation": "Nike, Inc. v. McCarthy, 379 F.3d 576 (9th Cir. 2004).",
+            "url": "https://www.courtlistener.com/opinion/787342/nike-inc-v-eugene-mccarthy/",
+            "deepLink": "https://www.courtlistener.com/opinion/787342/nike-inc-v-eugene-mccarthy/#:~:text=Construing%20the%20Oregon%20statute%20and,statutory%20requirements%20to%20be%20enforceable.",
+            "proposition": "Nike v. McCarthy enforced a covenant signed in connection with a bona fide advancement after construing the statutory timing requirements.",
+            "verbatimQuote": "Construing the Oregon statute and reviewing the circumstances surrounding McCarthy's promotion and the execution of the noncompete agreement, we hold that the agreement meets the statutory requirements to be enforceable.",
+            "date": "2004-08-09",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-gate-nike"
+          }
+        ]
+      },
+      {
+        "requirementId": "gate-non-compete-by-exempt-status-and-salary-threshold",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.oregon.gate-non-compete-by-exempt-status-and-salary-threshold",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Exempt status and the salary threshold",
+        "sectionId": "oregon-statutory-gates",
+        "itemNumber": "19.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#gate-non-compete-by-exempt-status-and-salary-threshold",
+        "requirementGuidance": "Unless the employer is paying garden leave, the worker has to be an exempt salaried employee whose annual gross salary and commissions at termination exceed the inflation-indexed threshold — a baseline of $100,533 that the labor agency adjusts every year, putting the figure at $119,541 for 2026. Measure against the year of termination, not the year of signing: a worker who cleared the number at signing but slipped below it by separation is outside the statute, and the covenant is void. For any covenant expected to run several years, build the annual re-check into the review.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "or-gate-threshold",
+            "authorityType": "primary-law",
+            "title": "ORS 653.295",
+            "citation": "ORS 653.295(1)(e).",
+            "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors653.html",
+            "proposition": "ORS 653.295(1)(e) requires annual gross salary and commissions at termination to exceed the inflation-indexed $100,533 baseline.",
+            "verbatimQuote": "The total amount of the employee's annual gross salary and commissions, calculated on an annual basis, at the time of the employee's termination exceeds $100,533, adjusted annually for inflation pursuant to the Consumer Price Index for All Urban Consumers, West Region (All Items), as published by the Bureau of Labor Statistics of the United States Department of Labor immediately preceding the calendar year of the employee's termination.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-gate-threshold"
+          },
+          {
+            "sourceId": "or-gate-boli-threshold",
+            "authorityType": "primary-law",
+            "title": "Oregon BOLI, Noncompetition Agreements",
+            "citation": "Oregon BOLI, Noncompetition Agreements.",
+            "url": "https://www.oregon.gov/boli/employers/pages/noncompetition-agreements.aspx",
+            "proposition": "The Oregon Bureau of Labor and Industries confirms the validity condition that pay at termination exceed the annually adjusted minimum, and publishes the running figure.",
+            "verbatimQuote": "For the provisions of a noncompetition agreement to be valid, the statute generally requires that the total amount of the employee's annual gross salary and commissions at the time of the employee's termination must exceed a minimum amount.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-gate-boli-threshold"
+          }
+        ]
+      },
+      {
+        "requirementId": "gate-non-compete-by-statutory-protectable-interest",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.oregon.gate-non-compete-by-statutory-protectable-interest",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "A statutory protectable interest",
+        "sectionId": "oregon-statutory-gates",
+        "itemNumber": "19.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#gate-non-compete-by-statutory-protectable-interest",
+        "requirementGuidance": "The employer needs a protectable interest in the statute's own categories: the worker has access to trade secrets, or to competitively sensitive confidential business or professional information such as product development plans, launch plans, marketing strategy, or sales plans — plus a narrow third path for on-air broadcasting talent with its own promotional-spend conditions. Look for documentation of the specific information this worker can reach; the test is concrete, and it applies even when the employer takes the garden-leave path.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "or-gate-interest",
+            "authorityType": "primary-law",
+            "title": "ORS 653.295",
+            "citation": "ORS 653.295(2).",
+            "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors653.html",
+            "proposition": "ORS 653.295(2) supplies the protectable-interest categories: trade-secret access and competitively sensitive confidential information.",
+            "verbatimQuote": "For purposes of subsection (1)(c) of this section, an employer has a protectable interest when the employee: (a) Has access to trade secrets, as defined in ORS 646.461; (b) Has access to competitively sensitive confidential business or professional information that otherwise would not qualify as a trade secret, including product development plans, product launch plans, marketing strategy or sales plans",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-gate-interest"
+          },
+          {
+            "sourceId": "or-gate-broadcast",
+            "authorityType": "primary-law",
+            "title": "ORS 653.295",
+            "citation": "ORS 653.295(2)(c).",
+            "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors653.html",
+            "proposition": "ORS 653.295(2)(c) supplies the separate on-air broadcasting protectable-interest path with its promotional-spend condition.",
+            "verbatimQuote": "For purposes of subsection (1)(c) of this section, an employer has a protectable interest when the employee:",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-gate-broadcast"
+          }
+        ]
+      },
+      {
+        "requirementId": "deliver-signed-copy-within-thirty-days-after-termination",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.oregon.deliver-signed-copy-within-thirty-days-after-termination",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Signed copy delivered within 30 days of termination",
+        "sectionId": "oregon-statutory-gates",
+        "itemNumber": "19.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#deliver-signed-copy-within-thirty-days-after-termination",
+        "requirementGuidance": "The quietest condition on the page, and the easiest to miss: within 30 days after the employee's termination, the employer has to provide a signed, written copy of the covenant's terms. The labor agency lists the delivery as a freestanding condition of validity, and it falls due after everyone has stopped thinking about the agreement — so confirm the obligation is recited in the document and wired into the offboarding workflow, with proof of delivery retained. An otherwise perfect covenant dies on this formality alone.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "or-gate-thirty-day",
+            "authorityType": "primary-law",
+            "title": "ORS 653.295",
+            "citation": "ORS 653.295(1)(d).",
+            "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors653.html",
+            "proposition": "ORS 653.295(1)(d) makes delivery of a signed, written copy within 30 days after termination a condition of validity.",
+            "verbatimQuote": "(1) A noncompetition agreement entered into between an employer and employee is void and unenforceable unless:",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-gate-thirty-day"
+          },
+          {
+            "sourceId": "or-gate-boli-conditions",
+            "authorityType": "primary-law",
+            "title": "Oregon BOLI, Noncompetition Agreements",
+            "citation": "Oregon BOLI, Noncompetition Agreements.",
+            "url": "https://www.oregon.gov/boli/employers/pages/noncompetition-agreements.aspx",
+            "proposition": "The Oregon Bureau of Labor and Industries lists exempt status, a protectable interest, and the 30-day signed-copy delivery as standalone conditions of validity.",
+            "verbatimQuote": "In addition, a noncompetition agreement is also void unless: The employee meets the criteria for a salaried exempt employee whose annual income at termination exceeds a minimum amount adjusted each year for inflation. (See below for details). The employer has an interest to protect, such as trade secrets; sensitive, confidential business or professional information; product development plans; launch plans; marketing strategy or sales plans; and finally, The employer must also provide a signed, written copy of the terms of the noncompetition agreement to the employee within 30 days after the employee's termination.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-gate-boli-conditions"
+          }
+        ]
+      },
+      {
+        "requirementId": "cap-non-compete-term-at-twelve-months",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.oregon.cap-non-compete-term-at-twelve-months",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No restraint past 12 months from termination",
+        "sectionId": "oregon-statutory-gates",
+        "itemNumber": "19.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#cap-non-compete-term-at-twelve-months",
+        "requirementGuidance": "The restricted period must not run past 12 months from the date of termination. The statute polices the line itself: whatever portion of the term exceeds 12 months is void and unenforceable in Oregon's courts, while the first 12 months stand. Check every duration reference — the defined Restricted Period, the covenant clause, the survival section — and remember the clock starts at termination, so an 18- or 24-month term in an agreement signed under the current regime is not negotiating room but dead text.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "or-gate-cap",
+            "authorityType": "primary-law",
+            "title": "ORS 653.295",
+            "citation": "ORS 653.295(3).",
+            "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors653.html",
+            "proposition": "ORS 653.295(3) caps the term at 12 months from termination and voids the excess.",
+            "verbatimQuote": "The term of a noncompetition agreement may not exceed 12 months from the date of the employee's termination. The remainder of a term of a noncompetition agreement in excess of 12 months is void and may not be enforced by a court of this state.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-gate-cap"
+          }
+        ]
+      },
+      {
+        "requirementId": "pay-garden-leave-to-bind-below-threshold-workers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.oregon.pay-garden-leave-to-bind-below-threshold-workers",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Garden-leave pay promise in writing",
+        "sectionId": "oregon-statutory-gates",
+        "itemNumber": "19.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#pay-garden-leave-to-bind-below-threshold-workers",
+        "requirementGuidance": "If the worker misses the exempt-status or salary conditions, the covenant can still be enforced for up to 12 months — but only if the employer commits in writing to pay, for the period of restriction, the greater of half the worker's annual gross base salary and commissions at termination or half the published threshold figure. Verify the payment promise sits in the agreement itself with both halves of the formula stated, and remember what the path does not buy: the offer-letter timing, the protectable interest, and the 30-day delivery conditions all still apply.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "or-gate-garden-leave",
+            "authorityType": "primary-law",
+            "title": "ORS 653.295",
+            "citation": "ORS 653.295(7).",
+            "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors653.html",
+            "proposition": "ORS 653.295(7) enforces a covenant against an otherwise unqualified worker for up to 12 months when the employer agrees in writing to pay the greater of the two statutory amounts.",
+            "verbatimQuote": "Notwithstanding subsection (1)(b) and (e) of this section, a noncompetition agreement is enforceable for the full term of the agreement, for up to 12 months, if the employer agrees in writing to provide the employee, for the time the employee is restricted from working, the greater of: (a) Compensation equal to at least 50 percent of the employee's annual gross base salary and commissions at the time of the employee's termination; or (b) Fifty percent of $100,533, adjusted annually for inflation pursuant to the Consumer Price Index for All Urban Consumers, West Region (All Items), as published by the Bureau of Labor Statistics of the United States Department of Labor immediately preceding the calendar year of the employee's termination.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-gate-garden-leave"
+          },
+          {
+            "sourceId": "or-gate-boli-garden",
+            "authorityType": "primary-law",
+            "title": "Oregon BOLI, Noncompetition Agreements",
+            "citation": "Oregon BOLI, Noncompetition Agreements.",
+            "url": "https://www.oregon.gov/boli/employers/pages/noncompetition-agreements.aspx",
+            "proposition": "The Oregon Bureau of Labor and Industries describes the garden-leave option as written agreement to pay the greater of the two statutory amounts for the term of the agreement.",
+            "verbatimQuote": "when the employer agrees in writing to pay either 50% of the employee's annual base salary plus commissions at termination or 50% of minimum salary listed above, whichever is greater, for the term of the agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-gate-boli-garden"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-non-competes-for-medical-licensees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.oregon.exclude-non-competes-for-medical-licensees",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No practice restraints on medical licensees",
+        "sectionId": "oregon-statutory-gates",
+        "itemNumber": "19.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#exclude-non-competes-for-medical-licensees",
+        "requirementGuidance": "For a worker holding a medical or nursing license, the agreement must not restrict the practice of medicine or nursing in favor of a practice entity, management services organization, or hospital — the 2025 law voids such covenants and reaches agreements signed before, on, or after its June 9, 2025 effective date, so there is no grandfathering to rely on. The exceptions are deliberately narrow: a licensee holding an ownership or membership interest of at least 1.5 percent of the entity, a documented recruitment-investment covenant with its own multi-year caps, or a licensee whose role involves no direct clinical care.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "or-gate-medical-ban",
+            "authorityType": "primary-law",
+            "title": "ORS 653.297",
+            "citation": "ORS 653.297(2)(a).",
+            "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors653.html",
+            "proposition": "ORS 653.297(2)(a) voids a non-compete restricting the practice of medicine or nursing between a medical licensee and a person, management services organization, or hospital.",
+            "verbatimQuote": "a noncompetition agreement that restricts the practice of medicine or the practice of nursing is void and unenforceable between a medical licensee and: (A) A person, as defined in ORS 442.015; (B) A management services organization; or (C) A hospital, as defined in ORS 442.015, or a hospital-affiliated clinic, as defined in ORS 442.612.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-gate-medical-ban"
+          },
+          {
+            "sourceId": "or-gate-medical-equity",
+            "authorityType": "primary-law",
+            "title": "ORS 653.297",
+            "citation": "ORS 653.297(2)(b)(A).",
+            "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors653.html",
+            "proposition": "ORS 653.297(2)(b)(A) excepts a medical licensee holding an ownership or membership interest of at least 1.5 percent of the entity.",
+            "verbatimQuote": "A noncompetition agreement between a medical licensee and another person that restricts the practice of medicine or the practice of nursing is valid and enforceable to the extent and under the terms provided in ORS 653.295 if: (A) The medical licensee is a shareholder or member of the other person or otherwise owns or controls an ownership or membership interest and the medical licensee's ownership or membership interest in the other person is equivalent to 1.5 percent or more of the entire ownership or membership interest that exists in the other person",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-gate-medical-equity"
+          },
+          {
+            "sourceId": "or-gate-medical-retro",
+            "authorityType": "primary-law",
+            "title": "ORS 653.298",
+            "citation": "ORS 653.298 (2025 c.295 §9 note).",
+            "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors653.html",
+            "proposition": "The 2025 session-law note applies ORS 653.297 to medical-licensee non-competes entered before, on, or after the June 9, 2025 effective date.",
+            "verbatimQuote": "Sections 7 [653.297] and 8 [653.298], chapter 295, Oregon Laws 2025, apply to noncompetition agreements, as defined in section 7, chapter 295, Oregon Laws 2025, that restrict the practice of medicine or the practice of nursing and into which a medical licensee, as defined in section 7, chapter 295, Oregon Laws 2025, enters before, on or after the effective date of chapter 295, Oregon Laws 2025 [June 9, 2025].",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-gate-medical-retro"
+          }
+        ]
+      },
+      {
+        "requirementId": "keep-confidentiality-and-nondisparagement-clear-of-workplace-fairness-act",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.oregon.keep-confidentiality-and-nondisparagement-clear-of-workplace-fairness-act",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No gag on discrimination or harassment complaints",
+        "sectionId": "oregon-statutory-gates",
+        "itemNumber": "19.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#keep-confidentiality-and-nondisparagement-clear-of-workplace-fairness-act",
+        "requirementGuidance": "Sweep the confidentiality, non-disparagement, and any catch-all provisions for language that could prevent the worker from disclosing or discussing workplace discrimination, harassment, or sexual assault. Oregon's Workplace Fairness Act makes conditioning employment, promotion, compensation, or benefits on such a provision an unlawful employment practice — a state-law limit that operates on top of the federal carve-outs earlier in this checklist. The cure is scope: keep secrecy obligations tied to trade secrets and competitively sensitive information, which Oregon law protects without reservation.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "or-gate-wfa",
+            "authorityType": "primary-law",
+            "title": "ORS 659A.370",
+            "citation": "ORS 659A.370(1).",
+            "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors659A.html",
+            "proposition": "ORS 659A.370(1) makes it an unlawful employment practice to condition employment or benefits on a provision preventing disclosure or discussion of discrimination or harassment.",
+            "verbatimQuote": "it is an unlawful employment practice for an employer to enter into an agreement with a former, current or prospective employee, as a condition of employment, continued employment, promotion, compensation or the receipt of benefits, that contains a nondisclosure provision, a nondisparagement provision or any other provision that has the purpose or effect of preventing the employee from disclosing or discussing conduct: (a)(A) That constitutes discrimination prohibited by ORS 659A.030, including conduct that constitutes sexual assault; or (B) That constitutes discrimination prohibited by ORS 659A.082 or 659A.112; and (b)(A) That occurred between employees or between an employer and an employee in the workplace or at a work-related event that is off the employment premises and coordinated by or through the employer; or (B) That occurred between an employer and an employee off the employment premises.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-gate-wfa"
+          },
+          {
+            "sourceId": "or-gate-preserve",
+            "authorityType": "primary-law",
+            "title": "ORS 653.295",
+            "citation": "ORS 653.295(6).",
+            "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors653.html",
+            "proposition": "ORS 653.295(6) preserves trade-secret and proprietary-information protection by injunction or other lawful means.",
+            "verbatimQuote": "Nothing in this section restricts the right of any person to protect trade secrets or other proprietary information by injunction or any other lawful means under other applicable laws.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/oregon#src-or-gate-preserve"
+          }
+        ]
+      }
+    ]
+  }
+}

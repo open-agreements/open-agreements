@@ -16,6 +16,7 @@ Published by [openagreements.org](https://openagreements.org). Licensed CC BY 4.
 * [Ai Layoffs](ai-layoffs/)
 * [Ai Policies](ai-policies/)
 * [Ai Vendors](ai-vendors/)
+* [Invention Assignment](invention-assignment/)
 * [Non Compete](non-compete/)
 * [Outside Counsel](outside-counsel/)
 * [Privacy](privacy/)

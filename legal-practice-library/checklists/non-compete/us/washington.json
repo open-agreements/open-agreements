@@ -1,0 +1,1516 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/washington",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/washington.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/washington",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/washington/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/washington/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "washington",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — Washington",
+      "description": "A clause-by-clause reviewer checklist for Washington employee restrictive covenant agreements — earnings thresholds, disclosure and consideration timing, layoff pay, and the 2027 ban under chapter 49.62 RCW.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "Washington",
+      "coverage": "Washington (US)",
+      "lastReviewed": "2026-06-11",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 51,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "label": "Physician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "washington-statutory-gates",
+        "label": "Washington statutory gates"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#identify-parties",
+        "requirementGuidance": "Match the employer entity on the cover page to the entity that actually pays the worker. Washington measures the earnings threshold from the party seeking enforcement, so a covenant signed with a parent or affiliate that pays nothing may be unable to make the threshold showing at all.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-earnings-measure-1",
+            "authorityType": "primary-law",
+            "title": "RCW 49.62.010",
+            "citation": "RCW 49.62.010(1).",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.010",
+            "proposition": "RCW 49.62.010 measures earnings from the party seeking enforcement, annualized as of the earlier of the enforcement date or the separation date.",
+            "verbatimQuote": "annualized and calculated as of the earlier of the date enforcement of the noncompetition covenant is sought or the date of separation from employment",
+            "date": "2024-06-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-earnings-measure-1"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#identify-effective-date",
+        "requirementGuidance": "Date the instrument precisely. Covenants entered into now run under chapter 49.62 RCW as amended in 2024, and the date also fixes how much runway remains before the June 30, 2027 ban — which reaches the covenant whenever it was signed.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-ssb5935-1",
+            "authorityType": "primary-law",
+            "title": "Substitute Senate Bill 5935, ch. 36, Laws of 2024",
+            "citation": "Substitute Senate Bill 5935, ch. 36, Laws of 2024.",
+            "url": "https://lawfilesext.leg.wa.gov/biennium/2023-24/Htm/Bills/Session%20Laws/Senate/5935-S.SL.htm",
+            "proposition": "Substitute Senate Bill 5935 amended chapter 49.62 RCW effective in 2024 and is the version that governs covenants entered into now.",
+            "verbatimQuote": "AN ACT Relating to noncompetition covenants",
+            "date": "2024-03-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-ssb5935-1"
+          },
+          {
+            "sourceId": "wa-eshb1155-effective-1",
+            "authorityType": "primary-law",
+            "title": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026",
+            "citation": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 9.",
+            "url": "https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm",
+            "proposition": "ESHB 1155 takes effect June 30, 2027.",
+            "verbatimQuote": "This act takes effect June 30, 2027.",
+            "date": "2026-03-23",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-eshb1155-effective-1"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#identify-employee-title",
+        "requirementGuidance": "Record the role even though Washington gates enforceability on pay rather than position. Duties still feed the reasonableness review that runs alongside the statute, and a recorded title plus compensation makes both inquiries answerable from the document.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#identify-governing-law",
+        "requirementGuidance": "Confirm the named state is Washington for a Washington-based worker. The statute voids any provision applying another state's substantive law to the covenant, so a foreign selection is not a drafting preference here — it is a void term.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-rcw-050-1",
+            "authorityType": "primary-law",
+            "title": "RCW 49.62.050",
+            "citation": "RCW 49.62.050.",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.050",
+            "proposition": "RCW 49.62.050 voids out-of-state venue, protection-stripping, and non-Washington choice-of-law provisions for a Washington-based worker.",
+            "verbatimQuote": "A provision in a noncompetition covenant signed by an employee or independent contractor who is Washington-based is void and unenforceable: (1) If the covenant requires the employee or independent contractor to adjudicate a noncompetition covenant outside of this state; (2) To the extent it deprives the employee or independent contractor of the protections or benefits of this chapter; or (3) If it allows or requires the application of choice of law principles or the substantive law of any jurisdiction other than Washington state.",
+            "date": "2024-06-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-rcw-050-1"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#define-confidential-information",
+        "requirementGuidance": "Confidentiality agreements sit outside Washington's statutory definition of a non-compete, so keep this definition genuinely information-shaped. A definition broad enough to function as a restraint on working — sweeping in general skills or whole fields of activity — risks being read as the covenant the exclusion does not protect.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-rcw-010-exclusions-1",
+            "authorityType": "primary-law",
+            "title": "RCW 49.62.010",
+            "citation": "RCW 49.62.010(4).",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.010",
+            "proposition": "RCW 49.62.010(4) excludes nonsolicitation, confidentiality, trade-secret, qualifying sale-of-business, and qualifying franchise covenants from the definition of non-competition covenant.",
+            "verbatimQuote": "A \"noncompetition covenant\" does not include: (a) A nonsolicitation agreement; (b) a confidentiality agreement; (c) a covenant prohibiting use or disclosure of trade secrets or inventions; (d) a covenant entered into by a person purchasing or selling the goodwill of a business or otherwise acquiring or disposing of an ownership interest, but only if the person signing the covenant purchases, sells, acquires, or disposes of an interest representing one percent or more of the business; or (e) a covenant entered into by a franchisee when the franchise sale complies with RCW 19.100.020 (1).",
+            "date": "2024-06-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-rcw-010-exclusions-1"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#define-trade-secrets",
+        "requirementGuidance": "Define trade secrets on their own. Covenants protecting trade secrets are expressly excluded from non-compete treatment in Washington, and a standalone definition keeps that protected lane separate from the time-limited confidentiality obligations.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-rcw-010-exclusions-1",
+            "authorityType": "primary-law",
+            "title": "RCW 49.62.010",
+            "citation": "RCW 49.62.010(4).",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.010",
+            "proposition": "RCW 49.62.010(4) excludes nonsolicitation, confidentiality, trade-secret, qualifying sale-of-business, and qualifying franchise covenants from the definition of non-competition covenant.",
+            "verbatimQuote": "A \"noncompetition covenant\" does not include: (a) A nonsolicitation agreement; (b) a confidentiality agreement; (c) a covenant prohibiting use or disclosure of trade secrets or inventions; (d) a covenant entered into by a person purchasing or selling the goodwill of a business or otherwise acquiring or disposing of an ownership interest, but only if the person signing the covenant purchases, sells, acquires, or disposes of an interest representing one percent or more of the business; or (e) a covenant entered into by a franchisee when the franchise sale complies with RCW 19.100.020 (1).",
+            "date": "2024-06-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-rcw-010-exclusions-1"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-period",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#define-restricted-period",
+        "requirementGuidance": "One umbrella defined term lets you audit every covenant clock against Washington's eighteen-month presumption in a single pass. Stray per-clause durations are how a nineteen-month tail slips in and hands the worker a presumption of unenforceability.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-rcw-020-duration-1",
+            "authorityType": "primary-law",
+            "title": "RCW 49.62.020",
+            "citation": "RCW 49.62.020(2).",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.020",
+            "proposition": "RCW 49.62.020(2) presumes any non-compete longer than eighteen months unreasonable, rebuttable only by clear and convincing evidence that the longer term protects business or goodwill.",
+            "verbatimQuote": "A court or arbitrator must presume that any noncompetition covenant with a duration exceeding eighteen months after termination of employment is unreasonable and unenforceable. A party seeking enforcement may rebut the presumption by proving by clear and convincing evidence that a duration longer than eighteen months is necessary to protect the party's business or goodwill.",
+            "date": "2024-06-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-rcw-020-duration-1"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-territory",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-territory",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted territory",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#define-restricted-territory",
+        "requirementGuidance": "The statute says nothing about geography, but the common-law test that survives alongside it enforces a restraint only to the extent reasonable and necessary — and in Washington a court that narrows an overbroad territory charges the employer for the privilege. Tie the territory to where the worker actually operated.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-woodmay-1",
+            "authorityType": "case-law",
+            "title": "Wood v. May",
+            "citation": "Wood v. May, 73 Wn.2d 307 (1968).",
+            "url": "https://www.courtlistener.com/opinion/1207148/wood-v-may/",
+            "deepLink": "https://www.courtlistener.com/opinion/1207148/wood-v-may/#:~:text=It%20is%20well%20settled%20that,business%20interest%20of%20the%20employer.",
+            "proposition": "Wood v. May holds that equity enforces a restraint against a former employee only to the extent reasonable and necessary to protect a legitimate business interest.",
+            "verbatimQuote": "It is well settled that a court of equity will use its power to enforce a restriction against a former employee's competition only to the extent that such restriction is reasonable and necessary to protect a legitimate business interest of the employer.",
+            "date": "1968-03-14",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-woodmay-1"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered customers",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#define-covered-customers",
+        "requirementGuidance": "Bound the class to current customers the worker actually dealt with. In Washington the drafting trap is functional: a customer class wide enough that the clause effectively forbids doing business — not just soliciting — converts the clause into a non-compete with all the statutory conditions attached.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-rcw-010-acceptance-1",
+            "authorityType": "primary-law",
+            "title": "RCW 49.62.010",
+            "citation": "RCW 49.62.010(4).",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.010",
+            "proposition": "RCW 49.62.010(4) treats an agreement that directly or indirectly prohibits accepting or transacting business with a customer as a non-competition covenant.",
+            "verbatimQuote": "A \"noncompetition covenant\" also includes an agreement that directly or indirectly prohibits the acceptance or transaction of business with a customer.",
+            "date": "2024-06-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-rcw-010-acceptance-1"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#define-covered-employees",
+        "requirementGuidance": "Keep the no-poach class within the statutory exclusion, which protects only agreements against soliciting the employer's employees to leave. A class or verb set that reaches further — hiring bans, all-personnel coverage — moves the clause out of the safe definition.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-rcw-010-nonsolicit-1",
+            "authorityType": "primary-law",
+            "title": "RCW 49.62.010",
+            "citation": "RCW 49.62.010(5).",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.010",
+            "proposition": "RCW 49.62.010(5) defines a nonsolicitation agreement narrowly, limited to soliciting the employer's employees or current customers.",
+            "verbatimQuote": "\"Nonsolicitation agreement\" means an agreement between an employer and employee that prohibits solicitation by an employee, upon termination of employment: (a) Of any employee of the employer to leave the employer; or (b) of any current customer of the employer to cease or reduce the extent to which it is doing business with the employer.",
+            "date": "2024-06-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-rcw-010-nonsolicit-1"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#define-protected-interests",
+        "requirementGuidance": "Spell out the business and goodwill interests the covenants serve. If the employer ever needs a restricted period longer than eighteen months, the statute demands clear and convincing proof that the longer term protects business or goodwill — this definition is where that record starts.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-rcw-020-duration-1",
+            "authorityType": "primary-law",
+            "title": "RCW 49.62.020",
+            "citation": "RCW 49.62.020(2).",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.020",
+            "proposition": "RCW 49.62.020(2) presumes any non-compete longer than eighteen months unreasonable, rebuttable only by clear and convincing evidence that the longer term protects business or goodwill.",
+            "verbatimQuote": "A court or arbitrator must presume that any noncompetition covenant with a duration exceeding eighteen months after termination of employment is unreasonable and unenforceable. A party seeking enforcement may rebut the presumption by proving by clear and convincing evidence that a duration longer than eighteen months is necessary to protect the party's business or goodwill.",
+            "date": "2024-06-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-rcw-020-duration-1"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-competitive-business",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Competitive business",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#define-competitive-business",
+        "requirementGuidance": "Describe the actual competing activity narrowly. Washington defines a noncompetition covenant as anything restraining a worker from a lawful profession, trade, or business of any kind — the broader this definition, the more of the agreement that statutory machinery reaches.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-rcw-010-definition-1",
+            "authorityType": "primary-law",
+            "title": "RCW 49.62.010",
+            "citation": "RCW 49.62.010(4).",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.010",
+            "proposition": "RCW 49.62.010(4) defines a non-competition covenant to include every covenant restraining a worker from a lawful profession, trade, or business.",
+            "verbatimQuote": "\"Noncompetition covenant\" includes every written or oral covenant, agreement, or contract by which an employee or independent contractor is prohibited or restrained from engaging in a lawful profession, trade, or business of any kind.",
+            "date": "2024-06-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-rcw-010-definition-1"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where ownership of competitors is restricted, check for a passive-holdings carve-out below a stated threshold. A clause that technically bars index funds and ordinary public shares restrains far more than any legitimate interest requires — and in Washington a court trimming that excess triggers the statutory penalty against the employer.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-rcw-010-definition-1",
+            "authorityType": "primary-law",
+            "title": "RCW 49.62.010",
+            "citation": "RCW 49.62.010(4).",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.010",
+            "proposition": "RCW 49.62.010(4) defines a non-competition covenant to include every covenant restraining a worker from a lawful profession, trade, or business.",
+            "verbatimQuote": "\"Noncompetition covenant\" includes every written or oral covenant, agreement, or contract by which an employee or independent contractor is prohibited or restrained from engaging in a lawful profession, trade, or business of any kind.",
+            "date": "2024-06-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-rcw-010-definition-1"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#define-passive-public-holdings",
+        "requirementGuidance": "An optional drafting mechanic — many agreements inline the carve-out language without a capitalized term. Where the defined term exists, verify its percentage threshold matches the operative carve-out it supports.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.11",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#define-solicit",
+        "requirementGuidance": "In Washington this definition has a hard statutory edge: solicitation the worker initiates can be restrained, but a definition that also captures accepting or transacting business a customer brings is, by statute, a non-compete in disguise. Confirm the term stops at outreach.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-rcw-010-acceptance-1",
+            "authorityType": "primary-law",
+            "title": "RCW 49.62.010",
+            "citation": "RCW 49.62.010(4).",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.010",
+            "proposition": "RCW 49.62.010(4) treats an agreement that directly or indirectly prohibits accepting or transacting business with a customer as a non-competition covenant.",
+            "verbatimQuote": "A \"noncompetition covenant\" also includes an agreement that directly or indirectly prohibits the acceptance or transaction of business with a customer.",
+            "date": "2024-06-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-rcw-010-acceptance-1"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.12",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#define-termination-of-employment",
+        "requirementGuidance": "Make the trigger unambiguous across resignation, dismissal, and expiration of a fixed term. The separation date does double duty in Washington — it starts the restricted period and it is one of the two dates on which the threshold earnings are annualized.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-earnings-measure-2",
+            "authorityType": "primary-law",
+            "title": "RCW 49.62.010",
+            "citation": "RCW 49.62.010(1).",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.010",
+            "proposition": "RCW 49.62.010 defines earnings as compensation annualized as of the earlier of the date enforcement is sought or the date of separation.",
+            "verbatimQuote": "annualized and calculated as of the earlier of the date enforcement of the noncompetition covenant is sought or the date of separation from employment",
+            "date": "2024-06-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-earnings-measure-2"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-timing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-timing",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "When the agreement was signed",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#acknowledge-timing",
+        "requirementGuidance": "This recital carries statutory weight in Washington. For an at-hire covenant it should record that the terms were disclosed in writing no later than offer acceptance; for a post-hire covenant it should identify the independent consideration exchanged — each is a void-unless condition, and the acknowledgement is where the proof lives.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-rcw-020-disclosure-1",
+            "authorityType": "primary-law",
+            "title": "RCW 49.62.020",
+            "citation": "RCW 49.62.020(1)(a)(i).",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.020",
+            "proposition": "RCW 49.62.020(1)(a)(i) voids a non-compete unless the employer discloses its terms in writing by the time the worker accepts the offer.",
+            "verbatimQuote": "Unless the employer discloses the terms of the covenant in writing to the prospective employee no later than the time of the initial oral or written acceptance of the offer of employment",
+            "date": "2024-06-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-rcw-020-disclosure-1"
+          },
+          {
+            "sourceId": "wa-labriola-1",
+            "authorityType": "case-law",
+            "title": "Labriola v. Pollard Group, Inc.",
+            "citation": "Labriola v. Pollard Group, Inc., 152 Wn.2d 828 (2004).",
+            "url": "https://www.courtlistener.com/opinion/4908367/labriola-v-pollard-group-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/4908367/labriola-v-pollard-group-inc/#:~:text=A%20noncompete%20agreement%20entered%20into,time%20the%20agreement%20is%20reached.",
+            "proposition": "Labriola holds that a non-compete entered into after employment begins is validly formed only with independent consideration.",
+            "verbatimQuote": "A noncompete agreement entered into after employment has commenced is validly formed only when there is independent consideration at the time the agreement is reached.",
+            "date": "2004-11-10",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-labriola-1"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-opportunity-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Chance to consult a lawyer",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#acknowledge-opportunity-to-consult-counsel",
+        "requirementGuidance": "No Washington statute conditions enforcement on counsel-advisal, but the acknowledgement is inexpensive fairness evidence in a regime where the employer may someday need to carry a clear-and-convincing burden. It also blunts any later narrative that the covenant was sprung on the worker.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "The trade-secret obligation should last as long as secrecy does — that is how federal law defines the right, and Washington expressly excludes trade-secret covenants from its non-compete restrictions, so the open-ended duration costs nothing under chapter 49.62 RCW. A fixed end date surrenders statutory protection for no benefit.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-dtsa-1839-1",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
+            "citation": "18 U.S.C. § 1839(3)(B) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1839",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
+            "proposition": "Federal law keys trade-secret status to continued secrecy, which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-dtsa-1839-1"
+          },
+          {
+            "sourceId": "wa-rcw-010-exclusions-2",
+            "authorityType": "primary-law",
+            "title": "RCW 49.62.010",
+            "citation": "RCW 49.62.010(4).",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.010",
+            "proposition": "RCW 49.62.010(4) excludes confidentiality agreements and trade-secret covenants from the definition of non-competition covenant.",
+            "verbatimQuote": "A \"noncompetition covenant\" does not include: (a) A nonsolicitation agreement; (b) a confidentiality agreement; (c) a covenant prohibiting use or disclosure of trade secrets or inventions; (d) a covenant entered into by a person purchasing or selling the goodwill of a business or otherwise acquiring or disposing of an ownership interest, but only if the person signing the covenant purchases, sells, acquires, or disposes of an interest representing one percent or more of the business; or (e) a covenant entered into by a franchisee when the franchise sale complies with RCW 19.100.020 (1).",
+            "date": "2024-06-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-rcw-010-exclusions-2"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#state-confidentiality-duration",
+        "requirementGuidance": "Give ordinary confidential information its own finite term. The statutory exclusion shields confidentiality agreements, not open-ended restraints wearing the label — a perpetual obligation over non-secret information is the kind of overreach that invites a court to treat the clause as something other than a confidentiality agreement.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#disclose-dtsa-notice",
+        "requirementGuidance": "Federal law requires this notice in Washington agreements like everywhere else. Omitting it costs the employer exemplary damages and attorney fees in any later trade-secret action against the worker — a forfeiture no Washington-specific drafting can recover.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-dtsa-1833-1",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-dtsa-1833-1"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Confirm confidentiality and non-disparagement language yields to discussion of wages, hours, and working conditions. Federal labor law protects that speech regardless of what chapter 49.62 RCW says, and the Board strikes clauses that chill it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-nlra-s7-1",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-nlra-s7-1"
+          },
+          {
+            "sourceId": "wa-mclaren-1",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-mclaren-1"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#permit-compelled-disclosure",
+        "requirementGuidance": "Verify the carve-out for disclosure compelled by law, court order, or a government investigation, with notice to the employer where lawful. No contract outranks a subpoena; the carve-out keeps the worker from being trapped between obligations.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#require-property-return-and-certification",
+        "requirementGuidance": "Return-or-destroy at separation, certified in writing. In a state where the non-compete itself may be void on threshold or timing grounds — and disappears entirely in 2027 — the confidentiality-and-return machinery is the protection most likely to still be standing, so the certification deserves a careful read rather than a skim.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-employee-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#permit-employee-nonsolicit",
+        "requirementGuidance": "Optional, and in Washington the safest covenant in the family — but only inside the statutory definition, which covers soliciting the employer's employees to leave. Watch the franchise context separately: a franchisor cannot restrain a franchisee from soliciting or hiring the franchisor's or another franchisee's workers.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-rcw-010-nonsolicit-2",
+            "authorityType": "primary-law",
+            "title": "RCW 49.62.010",
+            "citation": "RCW 49.62.010(5).",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.010",
+            "proposition": "RCW 49.62.010(5) defines a nonsolicitation agreement narrowly, limited to soliciting the employer's employees or current customers.",
+            "verbatimQuote": "\"Nonsolicitation agreement\" means an agreement between an employer and employee that prohibits solicitation by an employee, upon termination of employment: (a) Of any employee of the employer to leave the employer; or (b) of any current customer of the employer to cease or reduce the extent to which it is doing business with the employer.",
+            "date": "2024-06-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-rcw-010-nonsolicit-2"
+          },
+          {
+            "sourceId": "wa-rcw-060-1",
+            "authorityType": "primary-law",
+            "title": "RCW 49.62.060",
+            "citation": "RCW 49.62.060(1)-(2).",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.060",
+            "proposition": "RCW 49.62.060 bars a franchisor from restraining a franchisee from soliciting or hiring employees of another franchisee of the same franchisor or of the franchisor itself.",
+            "verbatimQuote": "No franchisor may restrict, restrain, or prohibit in any way a franchisee from soliciting or hiring any employee of a franchisee of the same franchisor. (2) No franchisor may restrict, restrain, or prohibit in any way a franchisee from soliciting or hiring any employee of the franchisor.",
+            "date": "2020-01-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-rcw-060-1"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-customer-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#permit-customer-nonsolicit",
+        "requirementGuidance": "When present, confirm it reaches only current customers and only solicitation. And check the term against the coming narrowing: from June 30, 2027 the exclusion protects the clause only where the worker substantially developed a direct customer relationship and the restriction ends within eighteen months of termination.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-rcw-010-nonsolicit-2",
+            "authorityType": "primary-law",
+            "title": "RCW 49.62.010",
+            "citation": "RCW 49.62.010(5).",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.010",
+            "proposition": "RCW 49.62.010(5) defines a nonsolicitation agreement narrowly, limited to soliciting the employer's employees or current customers.",
+            "verbatimQuote": "\"Nonsolicitation agreement\" means an agreement between an employer and employee that prohibits solicitation by an employee, upon termination of employment: (a) Of any employee of the employer to leave the employer; or (b) of any current customer of the employer to cease or reduce the extent to which it is doing business with the employer.",
+            "date": "2024-06-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-rcw-010-nonsolicit-2"
+          },
+          {
+            "sourceId": "wa-eshb1155-nonsolicit-1",
+            "authorityType": "primary-law",
+            "title": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026",
+            "citation": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 3.",
+            "url": "https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm",
+            "proposition": "ESHB 1155 narrows the nonsolicitation definition effective June 30, 2027, requiring a substantially developed direct customer relationship and an eighteen-month maximum.",
+            "verbatimQuote": "if the employee established or substantially developed a direct relationship with the customer, patient, client, or prospect through the employee's work for the employer and the prohibition expires no later than 18 months following termination of employment",
+            "date": "2026-03-23",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-eshb1155-nonsolicit-1"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-dealing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#permit-non-dealing",
+        "requirementGuidance": "In Washington a non-dealing clause is not a cautious middle option — an agreement that directly or indirectly prohibits accepting or transacting business with a customer is, by statute, a non-compete. If this clause appears, every condition in the Washington gates section below applies to it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-rcw-010-acceptance-2",
+            "authorityType": "primary-law",
+            "title": "RCW 49.62.010",
+            "citation": "RCW 49.62.010(4).",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.010",
+            "proposition": "RCW 49.62.010(4) treats an agreement that directly or indirectly prohibits accepting or transacting business with a customer as a non-competition covenant.",
+            "verbatimQuote": "A \"noncompetition covenant\" also includes an agreement that directly or indirectly prohibits the acceptance or transaction of business with a customer.",
+            "date": "2024-06-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-rcw-010-acceptance-2"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-compete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#permit-non-compete",
+        "requirementGuidance": "A Washington non-compete is void unless the employer clears every statutory condition — disclosure or consideration, the earnings threshold, layoff pay — and the legislature has already scheduled the clause's extinction for June 30, 2027. If it appears, route the review through the Washington statutory gates at the end of this checklist before anything else.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-rcw-020-all-1",
+            "authorityType": "primary-law",
+            "title": "RCW 49.62.020",
+            "citation": "RCW 49.62.020(1).",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.020",
+            "proposition": "RCW 49.62.020(1) makes an employee non-compete void unless the employer satisfies each condition: timely written disclosure, independent consideration for a post-hire covenant, the earnings threshold, and layoff compensation.",
+            "verbatimQuote": "(1) A noncompetition covenant is void and unenforceable: (a)(i) Unless the employer discloses the terms of the covenant in writing to the prospective employee no later than the time of the initial oral or written acceptance of the offer of employment and, if the agreement becomes enforceable only at a later date due to changes in the employee's compensation, the employer specifically discloses that the agreement may be enforceable against the employee in the future; or (ii) If the covenant is entered into after the commencement of employment, unless the employer provides independent consideration for the covenant; (b) Unless the employee's earnings from the party seeking enforcement, when annualized, exceed one hundred thousand dollars per year. This dollar amount must be adjusted annually in accordance with RCW 49.62.040 ; (c) If the employee is terminated as the result of a layoff, unless enforcement of the noncompetition covenant includes compensation equivalent to the employee's base salary at the time of termination for the period of enforcement minus compensation earned through subsequent employment during the period of enforcement.",
+            "date": "2024-06-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-rcw-020-all-1"
+          },
+          {
+            "sourceId": "wa-eshb1155-intent-1",
+            "authorityType": "primary-law",
+            "title": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026",
+            "citation": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 1(3).",
+            "url": "https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm",
+            "proposition": "ESHB 1155 states the legislature's intent to ban non-competition covenants for all Washington-based workers and businesses.",
+            "verbatimQuote": "The legislature hereby intends to ban noncompetition covenants for all Washington-based workers and businesses.",
+            "date": "2026-03-23",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-eshb1155-intent-1"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Named-competitor narrowing",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementGuidance": "A named-competitor list is the economically rational way to draft here. Washington courts can pare an overbroad covenant down, but the act of paring obliges the employer to pay the statutory penalty plus the worker's fees — so a scope that needs no paring is worth real money.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-rcw-080-reform-1",
+            "authorityType": "primary-law",
+            "title": "RCW 49.62.080",
+            "citation": "RCW 49.62.080(3).",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.080",
+            "proposition": "RCW 49.62.080(3) imposes the $5,000 penalty whenever a court reforms, rewrites, modifies, or only partially enforces a non-compete.",
+            "verbatimQuote": "If a court or arbitrator reforms, rewrites, modifies, or only partially enforces any noncompetition covenant, the party seeking enforcement must pay the aggrieved person the greater of his or her actual damages or a statutory penalty of five thousand dollars, plus reasonable attorneys' fees, expenses, and costs incurred in the proceeding.",
+            "date": "2024-06-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-rcw-080-reform-1"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#permit-non-investment",
+        "requirementGuidance": "Rare and deliberate. Confirm the passive-holdings carve-out is intact and the clause runs on the shared Restricted Period — and note that from 2027 the definition expands to capture provisions that force a worker to return, repay, or forfeit compensation for competing, which is exactly the mechanic some investment restraints use.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-eshb1155-forfeiture-1",
+            "authorityType": "primary-law",
+            "title": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026",
+            "citation": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 3.",
+            "url": "https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm",
+            "proposition": "ESHB 1155 expands the definition of non-competition covenant to capture provisions requiring a worker to return, repay, or forfeit compensation as a consequence of competing.",
+            "verbatimQuote": "A \"noncompetition covenant\" also includes any provision in an agreement that threatens, demands, requires, or otherwise effectuates that an individual return, repay, or forfeit any right, benefit, or compensation, as a consequence of the individual engaging in a lawful profession, trade, or business of any kind.",
+            "date": "2026-03-23",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-eshb1155-forfeiture-1"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#require-non-disparagement",
+        "requirementGuidance": "Standard inclusion with a stated term, and chapter 49.62 RCW leaves it alone — the legal work happens in the carve-outs. Truthful testimony, statements to government agencies, and protected workplace speech must remain outside the clause, or federal labor law treats the provision as overbroad no matter what Washington allows.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-mclaren-2",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-mclaren-2"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-physician-specific-rights",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Physician rights and notices",
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#address-physician-specific-rights",
+        "requirementGuidance": "Washington draws no physician-specific line: a physician's non-compete rides the same earnings threshold and timing rules as anyone else's today, and falls under the same near-total ban in 2027. The dedicated clause should therefore state plainly which generally applicable rules govern, rather than implying a special healthcare carve-out chapter 49.62 RCW does not contain.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "The worker's representation that no earlier agreement or order blocks the new role. Worth keeping even for Washington-based hires whose prior covenants were signed elsewhere — an inbound covenant may be unenforceable here, but the representation surfaces it before anyone has to litigate that question.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#address-notice-to-future-employers",
+        "requirementGuidance": "A genuine drafting choice, with a Washington expiration date built in: from June 30, 2027, representing that a worker is subject to a non-compete is itself a statutory violation. A notice clause written as a standing instruction to tell new employers about the covenant becomes a liability script on that date.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-eshb1155-violation-1",
+            "authorityType": "primary-law",
+            "title": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026",
+            "citation": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 4(2).",
+            "url": "https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm",
+            "proposition": "ESHB 1155 makes it a violation to enforce, attempt to enforce, or threaten to enforce a non-compete, to represent that a worker is subject to one, or to enter into one.",
+            "verbatimQuote": "It is a violation of this chapter for an employer to enforce, attempt to enforce, or threaten to enforce against an employee or worker any noncompetition covenant, to represent that the employee or worker is subject to a noncompetition covenant, or to enter into or attempt to enter into a noncompetition covenant with an employee or worker.",
+            "date": "2026-03-23",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-eshb1155-violation-1"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-tolling-during-breach",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-tolling-during-breach",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restriction extended during a breach",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#address-tolling-during-breach",
+        "requirementGuidance": "The agreement should say whether the clock pauses during a breach — but treat any Washington tolling clause as unsettled territory. The statute is silent, no controlling decision blesses extension, and a tolled period that carries the total restriction past eighteen months walks straight into the unreasonableness presumption.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-rcw-020-duration-2",
+            "authorityType": "primary-law",
+            "title": "RCW 49.62.020",
+            "citation": "RCW 49.62.020(2).",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.020",
+            "proposition": "RCW 49.62.020(2) presumes any non-compete longer than eighteen months unreasonable, which constrains any tolling-based extension.",
+            "verbatimQuote": "A court or arbitrator must presume that any noncompetition covenant with a duration exceeding eighteen months after termination of employment is unreasonable and unenforceable.",
+            "date": "2024-06-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-rcw-020-duration-2"
+          },
+          {
+            "sourceId": "wa-woodmay-2",
+            "authorityType": "case-law",
+            "title": "Wood v. May",
+            "citation": "Wood v. May, 73 Wn.2d 307 (1968).",
+            "url": "https://www.courtlistener.com/opinion/1207148/wood-v-may/",
+            "deepLink": "https://www.courtlistener.com/opinion/1207148/wood-v-may/#:~:text=It%20is%20well%20settled%20that,business%20interest%20of%20the%20employer.",
+            "proposition": "Wood v. May limits enforcement to the reasonable extent of a restraint, which cuts against a clause mechanically extending the restricted period.",
+            "verbatimQuote": "It is well settled that a court of equity will use its power to enforce a restriction against a former employee's competition only to the extent that such restriction is reasonable and necessary to protect a legitimate business interest of the employer.",
+            "date": "1968-03-14",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-woodmay-2"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#require-injunctive-relief-availability",
+        "requirementGuidance": "Look for the acknowledgement that breach may cause irreparable harm and that an injunction is appropriate relief. Chapter 49.62 RCW supplies no presumption of irreparable injury, so this recital is most of what an enforcing employer brings to the emergency-relief hearing.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-attorneys-fees-and-costs",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Attorney fees and costs",
+        "sectionId": "remedies",
+        "itemNumber": "13.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#address-attorneys-fees-and-costs",
+        "requirementGuidance": "Read any fee clause against the statutory backdrop, which already shifts fees one way: an employer whose covenant violates the chapter — or merely gets reformed — pays the worker's reasonable fees, expenses, and costs on top of the penalty. A one-way employer-favoring clause does not change that exposure.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-rcw-080-penalty-1",
+            "authorityType": "primary-law",
+            "title": "RCW 49.62.080",
+            "citation": "RCW 49.62.080(2).",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.080",
+            "proposition": "RCW 49.62.080(2) requires a violator to pay the greater of actual damages or a $5,000 statutory penalty, plus fees and costs.",
+            "verbatimQuote": "If a court or arbitrator determines that a noncompetition covenant violates this chapter, the violator must pay the aggrieved person the greater of his or her actual damages or a statutory penalty of five thousand dollars, plus reasonable attorneys' fees, expenses, and costs incurred in the proceeding.",
+            "date": "2024-06-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-rcw-080-penalty-1"
+          }
+        ]
+      },
+      {
+        "requirementId": "avoid-reliance-on-judicial-reformation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.washington.avoid-reliance-on-judicial-reformation",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No reliance on court narrowing",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#avoid-reliance-on-judicial-reformation",
+        "requirementGuidance": "Washington courts will trim an overbroad covenant rather than void it — but trimming is a paid event. Whenever a court reforms, rewrites, modifies, or only partially enforces a covenant, the employer owes the worker the greater of actual damages or the $5,000 penalty plus fees, so read any savings clause as a record of what the overreach will cost, not a safety net. The covenant has to arrive at the courthouse already sized to the legitimate interest.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-emerick-partial-1",
+            "authorityType": "case-law",
+            "title": "Emerick v. Cardiac Study Center, Inc.",
+            "citation": "Emerick v. Cardiac Study Ctr., Inc., 189 Wn. App. 711 (2015).",
+            "url": "https://www.courtlistener.com/opinion/2830060/robert-emerick-v-cardiac-study-center-incps/",
+            "deepLink": "https://www.courtlistener.com/opinion/2830060/robert-emerick-v-cardiac-study-center-incps/#:~:text=If%20the%20trial%20court%20determines,entire%20covenant%20does%20not%20fail.",
+            "proposition": "Emerick holds that when certain terms of a covenant are unreasonable, the entire covenant does not fail and a court may modify it.",
+            "verbatimQuote": "If the trial court determines that certain terms of the covenant are unreasonable—such as the geographic and temporal scope of the restraint—the entire covenant does not fail.",
+            "date": "2015-08-24",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-emerick-partial-1"
+          },
+          {
+            "sourceId": "wa-rcw-080-reform-2",
+            "authorityType": "primary-law",
+            "title": "RCW 49.62.080",
+            "citation": "RCW 49.62.080(3).",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.080",
+            "proposition": "RCW 49.62.080(3) applies the same penalty when a court reforms, rewrites, modifies, or only partially enforces a non-compete.",
+            "verbatimQuote": "If a court or arbitrator reforms, rewrites, modifies, or only partially enforces any noncompetition covenant, the party seeking enforcement must pay the aggrieved person the greater of his or her actual damages or a statutory penalty of five thousand dollars, plus reasonable attorneys' fees, expenses, and costs incurred in the proceeding.",
+            "date": "2024-06-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-rcw-080-reform-2"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#address-survival-per-covenant",
+        "requirementGuidance": "Per-covenant survival keeps each clock independently checkable: the non-compete must be auditable against the eighteen-month presumption, while the trade-secret and confidentiality obligations live outside the statute and can lawfully run longer. Bundled survival language is how those very different clocks get confused.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-assignment-and-successors",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assignment and successors",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#address-assignment-and-successors",
+        "requirementGuidance": "Confirm employer-side assignability and that the worker cannot assign. Washington adds an arithmetic wrinkle: the earnings threshold is measured from the party seeking enforcement, so after a transaction the reviewer should ask whether the successor entity can still make that showing for this worker.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-earnings-measure-3",
+            "authorityType": "primary-law",
+            "title": "RCW 49.62.020",
+            "citation": "RCW 49.62.020(1)(b).",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.020",
+            "proposition": "RCW 49.62.020(1)(b) keys the earnings threshold to the employee's earnings from the party seeking enforcement.",
+            "verbatimQuote": "Unless the employee's earnings from the party seeking enforcement, when annualized, exceed one hundred thousand dollars per year.",
+            "date": "2024-06-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-earnings-measure-3"
+          }
+        ]
+      },
+      {
+        "requirementId": "specify-governing-law-and-venue",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.specify-governing-law-and-venue",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law and venue",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#specify-governing-law-and-venue",
+        "requirementGuidance": "For a Washington-based worker, all three answers are dictated: Washington law, Washington adjudication, full chapter 49.62 RCW protections. A clause routing the dispute to another forum or another state's law is independently void, so check this section for evasion rather than for elegance.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-rcw-050-2",
+            "authorityType": "primary-law",
+            "title": "RCW 49.62.050",
+            "citation": "RCW 49.62.050.",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.050",
+            "proposition": "RCW 49.62.050 voids out-of-state venue, protection-stripping, and non-Washington choice-of-law provisions for a Washington-based worker.",
+            "verbatimQuote": "A provision in a noncompetition covenant signed by an employee or independent contractor who is Washington-based is void and unenforceable: (1) If the covenant requires the employee or independent contractor to adjudicate a noncompetition covenant outside of this state; (2) To the extent it deprives the employee or independent contractor of the protections or benefits of this chapter; or (3) If it allows or requires the application of choice of law principles or the substantive law of any jurisdiction other than Washington state.",
+            "date": "2024-06-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-rcw-050-2"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Standard boilerplate, with one Washington-specific reading: there is no grandfathered status to protect or lose, because the 2027 ban voids covenants regardless of when the parties entered into them. What matters at every re-signing is fresh compliance — each new execution must independently satisfy the disclosure-or-consideration timing rules.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-eshb1155-voidall-1",
+            "authorityType": "primary-law",
+            "title": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026",
+            "citation": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 4(1).",
+            "url": "https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm",
+            "proposition": "ESHB 1155 voids non-competition covenants regardless of when the parties entered into them, reaching existing agreements.",
+            "verbatimQuote": "regardless of when the parties entered into the noncompetition covenant.",
+            "date": "2026-03-23",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-eshb1155-voidall-1"
+          }
+        ]
+      },
+      {
+        "requirementId": "gate-non-compete-by-earnings-threshold",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.washington.gate-non-compete-by-earnings-threshold",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Earnings above the statutory threshold",
+        "sectionId": "washington-statutory-gates",
+        "itemNumber": "19.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#gate-non-compete-by-earnings-threshold",
+        "requirementGuidance": "Verify the worker's annualized earnings from the enforcing party clear the inflation-adjusted threshold — $126,858.83 for employees and $317,147.09 for independent contractors in 2026, reset annually by the Department of Labor & Industries. Below the line the covenant is void as a matter of law, and a performer's covenant with a performance space cannot exceed three calendar days regardless of pay.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-rcw-020-threshold-g",
+            "authorityType": "primary-law",
+            "title": "RCW 49.62.020",
+            "citation": "RCW 49.62.020(1)(b).",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.020",
+            "proposition": "RCW 49.62.020(1)(b) voids an employee non-compete unless annualized earnings exceed the statutory threshold, adjusted under RCW 49.62.040.",
+            "verbatimQuote": "Unless the employee's earnings from the party seeking enforcement, when annualized, exceed one hundred thousand dollars per year. This dollar amount must be adjusted annually in accordance with RCW 49.62.040",
+            "date": "2024-06-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-rcw-020-threshold-g"
+          },
+          {
+            "sourceId": "wa-lni-thresholds-g",
+            "authorityType": "agency-guidance",
+            "title": "Washington State Department of Labor & Industries — Non-Compete Agreements",
+            "citation": "Wash. Dep't of Labor & Indus., Non-Compete Agreements (earnings thresholds, 2026).",
+            "url": "https://www.lni.wa.gov/workers-rights/workplace-policies/non-compete-agreements",
+            "proposition": "The Department of Labor & Industries sets the inflation-adjusted thresholds, which reach $126,858.83 for employees and $317,147.09 for independent contractors in 2026.",
+            "verbatimQuote": "Employees $116,593.18 $120,559.99 $123,394.17 $126,858.83 Independent Contractors $291,482.95 $301,399.98 $308,485.43 $317,147.09",
+            "date": "2026-01-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-lni-thresholds-g"
+          },
+          {
+            "sourceId": "wa-rcw-030-g",
+            "authorityType": "primary-law",
+            "title": "RCW 49.62.030",
+            "citation": "RCW 49.62.030(2).",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.030",
+            "proposition": "RCW 49.62.030(2) caps a performer's non-compete with a performance space at three calendar days.",
+            "verbatimQuote": "The duration of a noncompetition covenant between a performer and a performance space, or a third party scheduling the performer for a performance space, must not exceed three calendar days.",
+            "date": "2020-01-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-rcw-030-g"
+          }
+        ]
+      },
+      {
+        "requirementId": "disclose-covenant-terms-by-offer-acceptance",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.washington.disclose-covenant-terms-by-offer-acceptance",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Terms disclosed by offer acceptance",
+        "sectionId": "washington-statutory-gates",
+        "itemNumber": "19.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#disclose-covenant-terms-by-offer-acceptance",
+        "requirementGuidance": "For an at-hire covenant, confirm the terms were disclosed in writing no later than the worker's initial oral or written acceptance of the offer — an onboarding-packet covenant is too late and void. Where the worker is below the earnings threshold at signing, also confirm the specific disclosure that the agreement may become enforceable later as compensation rises.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-rcw-020-disclosure-g",
+            "authorityType": "primary-law",
+            "title": "RCW 49.62.020",
+            "citation": "RCW 49.62.020(1)(a)(i).",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.020",
+            "proposition": "RCW 49.62.020(1)(a)(i) voids a non-compete unless the employer discloses its terms in writing by the time the worker accepts the offer.",
+            "verbatimQuote": "Unless the employer discloses the terms of the covenant in writing to the prospective employee no later than the time of the initial oral or written acceptance of the offer of employment",
+            "date": "2024-06-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-rcw-020-disclosure-g"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-independent-consideration-for-post-hire-covenants",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.washington.require-independent-consideration-for-post-hire-covenants",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "New value for post-hire signing",
+        "sectionId": "washington-statutory-gates",
+        "itemNumber": "19.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#require-independent-consideration-for-post-hire-covenants",
+        "requirementGuidance": "A covenant signed after employment begins needs independent consideration — a raise, bonus, promotion, or other identifiable new value, recited in the agreement. The state supreme court held that keeping an at-will worker on the payroll is not consideration for a new restraint, and the statute wrote that holding into the void-unless list.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-rcw-020-consideration-g",
+            "authorityType": "primary-law",
+            "title": "RCW 49.62.020",
+            "citation": "RCW 49.62.020(1)(a)(ii).",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.020",
+            "proposition": "RCW 49.62.020(1)(a)(ii) voids a post-hire non-compete unless the employer provides independent consideration.",
+            "verbatimQuote": "If the covenant is entered into after the commencement of employment, unless the employer provides independent consideration for the covenant",
+            "date": "2024-06-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-rcw-020-consideration-g"
+          },
+          {
+            "sourceId": "wa-labriola-continued-g",
+            "authorityType": "case-law",
+            "title": "Labriola v. Pollard Group, Inc.",
+            "citation": "Labriola v. Pollard Group, Inc., 152 Wn.2d 828 (2004).",
+            "url": "https://www.courtlistener.com/opinion/4908367/labriola-v-pollard-group-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/4908367/labriola-v-pollard-group-inc/#:~:text=We%20hold%20that%20continued%20employment,Employee's%20promise%20not%20to%20compete.",
+            "proposition": "Labriola holds that continued employment did not serve as consideration for a post-hire non-compete.",
+            "verbatimQuote": "We hold that continued employment in this case did not serve as consideration by Employer in exchange for Employee's promise not to compete.",
+            "date": "2004-11-10",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-labriola-continued-g"
+          }
+        ]
+      },
+      {
+        "requirementId": "limit-duration-to-eighteen-months",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.washington.limit-duration-to-eighteen-months",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period within eighteen months",
+        "sectionId": "washington-statutory-gates",
+        "itemNumber": "19.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#limit-duration-to-eighteen-months",
+        "requirementGuidance": "The restricted period should not run past eighteen months after termination. Beyond that line the covenant is presumed unreasonable and unenforceable, and only clear and convincing evidence of necessity can rescue it — a burden few employers want to carry into court. Audit every covenant clock, including any tolling math, against this ceiling.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-rcw-020-duration-g",
+            "authorityType": "primary-law",
+            "title": "RCW 49.62.020",
+            "citation": "RCW 49.62.020(2).",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.020",
+            "proposition": "RCW 49.62.020(2) presumes any non-compete longer than eighteen months unreasonable, rebuttable only by clear and convincing evidence.",
+            "verbatimQuote": "A court or arbitrator must presume that any noncompetition covenant with a duration exceeding eighteen months after termination of employment is unreasonable and unenforceable. A party seeking enforcement may rebut the presumption by proving by clear and convincing evidence that a duration longer than eighteen months is necessary to protect the party's business or goodwill.",
+            "date": "2024-06-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-rcw-020-duration-g"
+          }
+        ]
+      },
+      {
+        "requirementId": "condition-layoff-enforcement-on-garden-leave-pay",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.washington.condition-layoff-enforcement-on-garden-leave-pay",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Layoff enforcement paid for",
+        "sectionId": "washington-statutory-gates",
+        "itemNumber": "19.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#condition-layoff-enforcement-on-garden-leave-pay",
+        "requirementGuidance": "If the worker is terminated in a layoff, the covenant is void unless its enforcement includes pay equal to the worker's base salary for the enforcement period, offset by what the worker earns elsewhere. Check that the agreement actually wires this in — an employer cannot lay a worker off and hold the restraint for free.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-rcw-020-layoff-g",
+            "authorityType": "primary-law",
+            "title": "RCW 49.62.020",
+            "citation": "RCW 49.62.020(1)(c).",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.020",
+            "proposition": "RCW 49.62.020(1)(c) voids a non-compete against a laid-off worker unless the employer pays base-salary compensation during the enforcement period, offset by subsequent earnings.",
+            "verbatimQuote": "If the employee is terminated as the result of a layoff, unless enforcement of the noncompetition covenant includes compensation equivalent to the employee's base salary at the time of termination for the period of enforcement minus compensation earned through subsequent employment during the period of enforcement.",
+            "date": "2024-06-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-rcw-020-layoff-g"
+          }
+        ]
+      },
+      {
+        "requirementId": "avoid-out-of-state-law-and-forum-for-washington-workers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.washington.avoid-out-of-state-law-and-forum-for-washington-workers",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No out-of-state law or forum",
+        "sectionId": "washington-statutory-gates",
+        "itemNumber": "19.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#avoid-out-of-state-law-and-forum-for-washington-workers",
+        "requirementGuidance": "The covenant must not send a Washington-based worker out of state to litigate, strip the protections of chapter 49.62 RCW, or apply another state's law. Each of those provisions is independently void, so the familiar play of papering the workforce under a friendlier state's law simply does not work against Washington workers.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-rcw-050-g",
+            "authorityType": "primary-law",
+            "title": "RCW 49.62.050",
+            "citation": "RCW 49.62.050.",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.050",
+            "proposition": "RCW 49.62.050 voids out-of-state venue, protection-stripping, and non-Washington choice-of-law provisions for a Washington-based worker.",
+            "verbatimQuote": "A provision in a noncompetition covenant signed by an employee or independent contractor who is Washington-based is void and unenforceable: (1) If the covenant requires the employee or independent contractor to adjudicate a noncompetition covenant outside of this state; (2) To the extent it deprives the employee or independent contractor of the protections or benefits of this chapter; or (3) If it allows or requires the application of choice of law principles or the substantive law of any jurisdiction other than Washington state.",
+            "date": "2024-06-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-rcw-050-g"
+          }
+        ]
+      },
+      {
+        "requirementId": "limit-nonsolicits-to-solicitation-only",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.washington.limit-nonsolicits-to-solicitation-only",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-solicits stop at solicitation",
+        "sectionId": "washington-statutory-gates",
+        "itemNumber": "19.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#limit-nonsolicits-to-solicitation-only",
+        "requirementGuidance": "Customer and employee restraints should not reach past solicitation the worker initiates. Since 2024, a clause that directly or indirectly forbids accepting or transacting business with a customer is itself a non-compete — threshold, disclosure, layoff pay, and duration rules included — and from mid-2027 the customer prong survives only for substantially developed direct relationships restricted for no more than eighteen months.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-rcw-010-acceptance-g",
+            "authorityType": "primary-law",
+            "title": "RCW 49.62.010",
+            "citation": "RCW 49.62.010(4).",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.010",
+            "proposition": "RCW 49.62.010(4) treats an agreement that directly or indirectly prohibits accepting or transacting business with a customer as a non-competition covenant.",
+            "verbatimQuote": "A \"noncompetition covenant\" also includes an agreement that directly or indirectly prohibits the acceptance or transaction of business with a customer.",
+            "date": "2024-06-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-rcw-010-acceptance-g"
+          },
+          {
+            "sourceId": "wa-eshb1155-nonsolicit-g",
+            "authorityType": "primary-law",
+            "title": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026",
+            "citation": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 3.",
+            "url": "https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm",
+            "proposition": "ESHB 1155 narrows the nonsolicitation definition effective June 30, 2027, requiring a substantially developed direct customer relationship and an eighteen-month maximum.",
+            "verbatimQuote": "if the employee established or substantially developed a direct relationship with the customer, patient, client, or prospect through the employee's work for the employer and the prohibition expires no later than 18 months following termination of employment",
+            "date": "2026-03-23",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-eshb1155-nonsolicit-g"
+          }
+        ]
+      },
+      {
+        "requirementId": "preserve-low-wage-second-job-rights",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.washington.preserve-low-wage-second-job-rights",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Second jobs protected for lower earners",
+        "sectionId": "washington-statutory-gates",
+        "itemNumber": "19.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#preserve-low-wage-second-job-rights",
+        "requirementGuidance": "No clause in the agreement — exclusivity, outside-activities, or anti-moonlighting language anywhere, not just the non-compete — may bar an employee earning less than twice the state minimum wage from a second job, contract work, or self-employment. The state supreme court reads the exceptions narrowly, so a generic full-time-and-attention clause needs an express carve-out for sub-threshold earners.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-rcw-070-g",
+            "authorityType": "primary-law",
+            "title": "RCW 49.62.070",
+            "citation": "RCW 49.62.070(1).",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=49.62.070",
+            "proposition": "RCW 49.62.070 bars an employer from restraining an employee earning less than twice the state minimum wage from taking an additional job.",
+            "verbatimQuote": "an employer may not restrict, restrain, or prohibit an employee earning less than twice the applicable state minimum hourly wage from having an additional job, supplementing their income by working for another employer, working as an independent contractor, or being self-employed.",
+            "date": "2020-01-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-rcw-070-g"
+          },
+          {
+            "sourceId": "wa-david-g",
+            "authorityType": "case-law",
+            "title": "David v. Freedom Vans, LLC",
+            "citation": "David v. Freedom Vans, LLC, 4 Wn.3d 242 (2025).",
+            "url": "https://www.courtlistener.com/opinion/10319821/springer-v-freedom-vans-llc/",
+            "deepLink": "https://www.courtlistener.com/opinion/10319821/springer-v-freedom-vans-llc/#:~:text=We%20decline%20to%20adopt%20this,the%20exceptions%20be%20construed%20narrowly.",
+            "proposition": "David v. Freedom Vans declines to read the duty-of-loyalty exception broadly, because doing so would render the chapter 49.62 RCW protections meaningless.",
+            "verbatimQuote": "We decline to adopt this expansive view of the duty of loyalty, as it would render the employee protections in chapter 49.62 RCW meaningless and would require us to ignore the directive in the statute itself that the exceptions be construed narrowly.",
+            "date": "2025-01-23",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-david-g"
+          }
+        ]
+      },
+      {
+        "requirementId": "plan-for-the-2027-ban",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.washington.plan-for-the-2027-ban",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "The 2027 ban horizon priced in",
+        "sectionId": "washington-statutory-gates",
+        "itemNumber": "19.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/washington#plan-for-the-2027-ban",
+        "requirementGuidance": "Price every Washington non-compete against its expiration date. On June 30, 2027 the covenant becomes void no matter when it was signed, enforcing or even threatening to enforce it becomes a violation, and by October 1, 2027 the employer must make reasonable efforts to tell affected workers their covenants are void. A reviewer approving this clause today is approving at most a short-lived restraint plus a notice obligation.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-eshb1155-violation-g",
+            "authorityType": "primary-law",
+            "title": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026",
+            "citation": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 4(2).",
+            "url": "https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm",
+            "proposition": "ESHB 1155 makes it a violation to enforce, attempt to enforce, or threaten to enforce a non-compete, to represent that a worker is subject to one, or to enter into one.",
+            "verbatimQuote": "It is a violation of this chapter for an employer to enforce, attempt to enforce, or threaten to enforce against an employee or worker any noncompetition covenant, to represent that the employee or worker is subject to a noncompetition covenant, or to enter into or attempt to enter into a noncompetition covenant with an employee or worker.",
+            "date": "2026-03-23",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-eshb1155-violation-g"
+          },
+          {
+            "sourceId": "wa-eshb1155-notice-g",
+            "authorityType": "primary-law",
+            "title": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026",
+            "citation": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 4(3).",
+            "url": "https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm",
+            "proposition": "ESHB 1155 requires employers, by October 1, 2027, to make reasonable efforts to notify current and former workers whose covenant is still within its time period that it is void.",
+            "verbatimQuote": "By October 1, 2027, an employer must make reasonable efforts to provide written notice to all current and former employees and independent contractors whose noncompetition covenant is still within its effective time period, that their noncompetition covenant is void and unenforceable.",
+            "date": "2026-03-23",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-eshb1155-notice-g"
+          },
+          {
+            "sourceId": "wa-eshb1155-voidall-g",
+            "authorityType": "primary-law",
+            "title": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026",
+            "citation": "Engrossed Substitute House Bill 1155, ch. 149, Laws of 2026, § 4(1).",
+            "url": "https://lawfilesext.leg.wa.gov/Biennium/2025-26/Htm/Bills/Session%20Laws/House/1155-S.SL.htm",
+            "proposition": "ESHB 1155 voids non-competition covenants regardless of when the parties entered into them, reaching existing agreements.",
+            "verbatimQuote": "regardless of when the parties entered into the noncompetition covenant.",
+            "date": "2026-03-23",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/washington#src-wa-eshb1155-voidall-g"
+          }
+        ]
+      }
+    ]
+  }
+}

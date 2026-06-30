@@ -1,0 +1,773 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/privacy-policy/us",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/privacy-policy/us.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/privacy-policy/us",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/privacy-policy/us/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/privacy-policy/us/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "privacy-policy",
+    "slug": "us",
+    "frontmatter": {
+      "title": "Privacy Policy Review Checklist",
+      "description": "A clause-by-clause reviewer checklist for privacy policies covering business identification, data disclosures, consumer rights, opt-outs, consent, and maintenance.",
+      "eyebrow": "Reviewer Checklist",
+      "coverage": "Jurisdiction-neutral (US)",
+      "lastReviewed": "2026-06-17",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 26,
+    "sections": [
+      {
+        "sectionId": "identity-scope-and-contact",
+        "label": "Identity, scope, and contact"
+      },
+      {
+        "sectionId": "data-collection-and-use-disclosures",
+        "label": "Data collection and use disclosures"
+      },
+      {
+        "sectionId": "consumer-rights-and-request-handling",
+        "label": "Consumer rights and request handling"
+      },
+      {
+        "sectionId": "sale-targeted-advertising-and-opt-out-signals",
+        "label": "Sale, targeted advertising, and opt-out signals"
+      },
+      {
+        "sectionId": "sensitive-data-consent",
+        "label": "Sensitive-data consent"
+      },
+      {
+        "sectionId": "maintenance-and-accuracy",
+        "label": "Maintenance and accuracy"
+      },
+      {
+        "sectionId": "data-type-and-status-modules-conditional",
+        "label": "Data-type and status modules (conditional)"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-business",
+        "specRequirementId": "REQ-privacy-law.privacy-policy.identify-business",
+        "links": [
+          {
+            "rel": "preferred-phrasing",
+            "href": "https://openagreements.org/spec/privacy-policy/identify-business/preferred.json",
+            "type": "application/json",
+            "title": "Canonical clause text that conforms to this requirement"
+          },
+          {
+            "rel": "phrasing-examples",
+            "href": "https://openagreements.org/spec/privacy-policy/identify-business/phrasing.json",
+            "type": "application/json",
+            "title": "Real-world exemplars labeled conforming / partial / non-conforming"
+          }
+        ],
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Business identified with a contact method",
+        "sectionId": "identity-scope-and-contact",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/privacy-policy/us#identify-business",
+        "requirementGuidance": "The policy should give consumers a working way to reach the business behind it — the comprehensive-act notice must carry an active email address or other online mechanism the consumer can use to contact the controller. A policy that offers no reachable contact point fails the most basic disclosure test before any substantive question is reached.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nj-notice-contact",
+            "authorityType": "primary-law",
+            "title": "N.J.S.A. 56:8-166.6",
+            "citation": "N.J.S.A. 56:8-166.6(a)(7).",
+            "url": "https://pub.njleg.gov/bills/2022/PL23/266_.PDF",
+            "proposition": "A controller's privacy notice must include an active electronic mail address or other online mechanism the consumer may use to contact the controller.",
+            "verbatimQuote": "(7) an active electronic mail address or other online mechanism that the consumer may use to contact the controller.",
+            "anchor": "https://openagreements.org/checklists/privacy-policy/us#src-nj-notice-contact"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-effective-date",
+        "specRequirementId": "REQ-privacy-law.privacy-policy.state-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date stated",
+        "sectionId": "identity-scope-and-contact",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/privacy-policy/us#state-effective-date",
+        "requirementGuidance": "The policy should carry an effective date. It is a fixed element of the website-operator notice and the anchor for the change-notification and refresh items below — without it, a reader cannot tell which version of the policy governs.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nv-operator-notice",
+            "authorityType": "primary-law",
+            "title": "NRS 603A.340",
+            "citation": "NRS 603A.340(1).",
+            "url": "https://www.leg.state.nv.us/nrs/NRS-603A.html",
+            "proposition": "An operator must make available an accessible notice with five fixed elements: categories of covered information collected and categories of third parties it may be shared with, any review-and-change process, the material-change notification process, third-party cross-site collection, and the effective date.",
+            "verbatimQuote": "Except as otherwise provided in subsection 2, an operator shall make available, in a manner reasonably calculated to be accessible by consumers whose covered information the operator collects through its Internet website or online service, a notice that: (a) Identifies the categories of covered information that the operator collects through its Internet website or online service about consumers who use or visit the Internet website or online service and the categories of third parties with whom the operator may share such covered information; (b) Provides a description of the process, if any such process exists, for an individual consumer who uses or visits the Internet website or online service to review and request changes to any of his or her covered information that is collected through the Internet website or online service; (c) Describes the process by which the operator notifies consumers who use or visit the Internet website or online service of material changes to the notice required to be made available by this subsection; (d) Discloses whether a third party may collect covered information about an individual consumer’s online activities over time and across different Internet websites or online services when the consumer uses the Internet website or online service of the operator; and (e) States the effective date of the notice.",
+            "anchor": "https://openagreements.org/checklists/privacy-policy/us#src-nv-operator-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "disclose-personal-data-categories",
+        "specRequirementId": "REQ-privacy-law.privacy-policy.disclose-personal-data-categories",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Categories of data collected",
+        "sectionId": "data-collection-and-use-disclosures",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/privacy-policy/us#disclose-personal-data-categories",
+        "requirementGuidance": "The policy should list the categories of personal data the business processes, calling out any sensitive-data categories separately. The comprehensive-act notice lists open with exactly this element, so an omission here is a substantive gap, not a stylistic one.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "tx-tdpsa-notice-contents-2",
+            "authorityType": "primary-law",
+            "title": "Tex. Bus. & Com. Code § 541.102",
+            "citation": "Tex. Bus. & Com. Code § 541.102(a).",
+            "url": "https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm",
+            "proposition": "A controller must provide a reasonably accessible and clear privacy notice that begins with the categories of personal data processed, including any sensitive data, and the purpose for processing.",
+            "verbatimQuote": "A controller shall provide consumers with a reasonably accessible and clear privacy notice that includes: (1) the categories of personal data processed by the controller, including, if applicable, any sensitive data processed by the controller; (2) the purpose for processing personal data;",
+            "anchor": "https://openagreements.org/checklists/privacy-policy/us#src-tx-tdpsa-notice-contents-2"
+          }
+        ]
+      },
+      {
+        "requirementId": "disclose-processing-purposes",
+        "specRequirementId": "REQ-privacy-law.privacy-policy.disclose-processing-purposes",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Why the data is used",
+        "sectionId": "data-collection-and-use-disclosures",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/privacy-policy/us#disclose-processing-purposes",
+        "requirementGuidance": "The policy should state the purposes for which it processes personal data. The purpose statement sits alongside the data categories in the statutory notice list, and a vague or missing purpose is the disclosure most often challenged as inadequate.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "tx-tdpsa-notice-contents-2",
+            "authorityType": "primary-law",
+            "title": "Tex. Bus. & Com. Code § 541.102",
+            "citation": "Tex. Bus. & Com. Code § 541.102(a).",
+            "url": "https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm",
+            "proposition": "A controller must provide a reasonably accessible and clear privacy notice that begins with the categories of personal data processed, including any sensitive data, and the purpose for processing.",
+            "verbatimQuote": "A controller shall provide consumers with a reasonably accessible and clear privacy notice that includes: (1) the categories of personal data processed by the controller, including, if applicable, any sensitive data processed by the controller; (2) the purpose for processing personal data;",
+            "anchor": "https://openagreements.org/checklists/privacy-policy/us#src-tx-tdpsa-notice-contents-2"
+          }
+        ]
+      },
+      {
+        "requirementId": "describe-third-party-recipients",
+        "specRequirementId": "REQ-privacy-law.privacy-policy.describe-third-party-recipients",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Who the data is shared with",
+        "sectionId": "data-collection-and-use-disclosures",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/privacy-policy/us#describe-third-party-recipients",
+        "requirementGuidance": "The policy should list the categories of personal data shared with third parties and describe the categories of recipients at a level of detail that lets a consumer understand what type of entity each one is. A bare statement that data may be shared with partners does not meet this bar.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "or-ocpa-notice-detail",
+            "authorityType": "primary-law",
+            "title": "Or. Rev. Stat. § 646A.578",
+            "citation": "Or. Rev. Stat. § 646A.578(4).",
+            "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors646A.html",
+            "proposition": "The privacy notice must also explain how consumers exercise and appeal their rights, list all categories of personal data shared with third parties, and describe the categories of recipient third parties at a level of detail that lets the consumer understand what type of entity each one is.",
+            "verbatimQuote": "(c) Describes how a consumer may exercise the consumer’s rights under ORS 646A.570 to 646A.589, including how a consumer may appeal a controller’s denial of a consumer’s request under ORS 646A.576; (d) Lists all categories of personal data, including the categories of sensitive data, that the controller shares with third parties; (e) Describes all categories of third parties with which the controller shares personal data at a level of detail that enables the consumer to understand what type of entity each third party is and, to the extent possible, how each third party may process personal data;",
+            "date": "2023-07-01",
+            "anchor": "https://openagreements.org/checklists/privacy-policy/us#src-or-ocpa-notice-detail"
+          }
+        ]
+      },
+      {
+        "requirementId": "disclose-rights-catalog",
+        "specRequirementId": "REQ-privacy-law.privacy-policy.disclose-rights-catalog",
+        "links": [
+          {
+            "rel": "preferred-phrasing",
+            "href": "https://openagreements.org/spec/privacy-policy/disclose-rights-catalog/preferred.json",
+            "type": "application/json",
+            "title": "Canonical clause text that conforms to this requirement"
+          },
+          {
+            "rel": "phrasing-examples",
+            "href": "https://openagreements.org/spec/privacy-policy/disclose-rights-catalog/phrasing.json",
+            "type": "application/json",
+            "title": "Real-world exemplars labeled conforming / partial / non-conforming"
+          }
+        ],
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Rights catalog disclosed",
+        "sectionId": "consumer-rights-and-request-handling",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/privacy-policy/us#disclose-rights-catalog",
+        "requirementGuidance": "When a comprehensive state privacy act covers the business, the policy should describe the rights that act grants consumers — to confirm processing and access the data, to correct inaccuracies, to delete personal data, to obtain a portable copy, and to opt out of targeted advertising, the sale of personal data, and profiling that drives significant decisions. The catalog is consistent across the acts, with some states adding opt-outs for sensitive-data collection and for voice- and facial-recognition features, so confirm the governing state's list before signing off on the rights section.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "fl-fdbr-rights",
+            "authorityType": "primary-law",
+            "title": "Fla. Stat. § 501.705(2)",
+            "citation": "Fla. Stat. § 501.705(2).",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2025/501.705",
+            "proposition": "A controller must honor authenticated requests for confirmation and access, correction, deletion, and portability, plus opt-outs from targeted advertising, sale, significant-effect profiling, sensitive-data collection or processing, and collection via voice- or facial-recognition features.",
+            "verbatimQuote": "(2) A controller shall comply with an authenticated consumer request to exercise any of the following rights: (a) To confirm whether a controller is processing the consumer’s personal data and to access the personal data. (b) To correct inaccuracies in the consumer’s personal data, taking into account the nature of the personal data and the purposes of the processing of the consumer’s personal data. (c) To delete any or all personal data provided by or obtained about the consumer. (d) To obtain a copy of the consumer’s personal data in a portable and, to the extent technically feasible, readily usable format if the data is available in a digital format. (e) To opt out of the processing of the personal data for purposes of: 1. Targeted advertising; 2. The sale of personal data; or 3. Profiling in furtherance of a decision that produces a legal or similarly significant effect concerning a consumer. (f) To opt out of the collection of sensitive data, including precise geolocation data, or the processing of sensitive data. (g) To opt out of the collection of personal data collected through the operation of a voice recognition or facial recognition feature.",
+            "anchor": "https://openagreements.org/checklists/privacy-policy/us#src-fl-fdbr-rights"
+          }
+        ]
+      },
+      {
+        "requirementId": "provide-rights-request-method",
+        "specRequirementId": "REQ-privacy-law.privacy-policy.provide-rights-request-method",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "How to submit a rights request",
+        "sectionId": "consumer-rights-and-request-handling",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/privacy-policy/us#provide-rights-request-method",
+        "requirementGuidance": "The policy should describe how a consumer exercises each disclosed right and give the request channel. The notice lists pair the rights catalog with the mechanics for using it, so a rights section that names the rights but not the route to use them is incomplete.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "or-ocpa-notice-detail-2",
+            "authorityType": "primary-law",
+            "title": "Or. Rev. Stat. § 646A.578",
+            "citation": "Or. Rev. Stat. § 646A.578(4).",
+            "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors646A.html",
+            "proposition": "The privacy notice must also explain how consumers exercise and appeal their rights, list all categories of personal data shared with third parties, and describe the categories of recipient third parties at a level of detail that lets the consumer understand what type of entity each one is.",
+            "verbatimQuote": "(c) Describes how a consumer may exercise the consumer’s rights under ORS 646A.570 to 646A.589, including how a consumer may appeal a controller’s denial of a consumer’s request under ORS 646A.576; (d) Lists all categories of personal data, including the categories of sensitive data, that the controller shares with third parties; (e) Describes all categories of third parties with which the controller shares personal data at a level of detail that enables the consumer to understand what type of entity each third party is and, to the extent possible, how each third party may process personal data;",
+            "date": "2023-07-01",
+            "anchor": "https://openagreements.org/checklists/privacy-policy/us#src-or-ocpa-notice-detail-2"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-response-timeline",
+        "specRequirementId": "REQ-privacy-law.privacy-policy.state-response-timeline",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Response timeline stated",
+        "sectionId": "consumer-rights-and-request-handling",
+        "itemNumber": "3.3",
+        "anchor": "https://openagreements.org/checklists/privacy-policy/us#state-response-timeline",
+        "requirementGuidance": "The policy should state the response timeline — a response without undue delay and no later than the statutory window, extendable once with in-window notice and a reason. Many states set an initial 45-day window; the cited Florida act allows a single 15-day extension, while several other states allow a longer (often 45-day) extension, so confirm the governing state's clock.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "fl-fdbr-response-clock",
+            "authorityType": "primary-law",
+            "title": "Fla. Stat. § 501.706(2)",
+            "citation": "Fla. Stat. § 501.706(2).",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2025/501.706",
+            "proposition": "A controller must respond to a consumer request within 45 days and may extend the period once by an additional 15 days, with in-window notice of the extension and its reason.",
+            "verbatimQuote": "(2) A controller shall respond to the consumer request without undue delay, which may not be later than 45 days after the date of receipt of the request. The controller may extend the response period once by an additional 15 days when reasonably necessary, taking into account the complexity and number of the consumer’s requests, so long as the controller informs the consumer of the extension within the initial 45-day response period, together with the reason for the extension.",
+            "anchor": "https://openagreements.org/checklists/privacy-policy/us#src-fl-fdbr-response-clock"
+          }
+        ]
+      },
+      {
+        "requirementId": "provide-appeal-process",
+        "specRequirementId": "REQ-privacy-law.privacy-policy.provide-appeal-process",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Appeal process for refusals",
+        "sectionId": "consumer-rights-and-request-handling",
+        "itemNumber": "3.4",
+        "anchor": "https://openagreements.org/checklists/privacy-policy/us#provide-appeal-process",
+        "requirementGuidance": "The policy should describe a conspicuously available process to appeal a refused request, answered in writing with reasons within the statutory window. A refusal is not the end of the road, and an appeal route that is missing or buried is itself a compliance gap.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "fl-fdbr-appeal",
+            "authorityType": "primary-law",
+            "title": "Fla. Stat. § 501.707",
+            "citation": "Fla. Stat. § 501.707.",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2025/501.707",
+            "proposition": "A controller must establish a conspicuously available appeal process for refused requests and answer the appeal in writing, with reasons, within 60 days.",
+            "verbatimQuote": "(1) A controller shall establish a process for a consumer to appeal the controller’s refusal to take action on a request within a reasonable period of time after the consumer’s receipt of the decision under s. 501.706(3). (2) The appeal process must be conspicuously available and similar to the process for initiating action to exercise consumer rights by submitting a request under s. 501.705. (3) A controller shall inform the consumer in writing of any action taken or not taken in response to an appeal under this section within 60 days after the date of receipt of the appeal, including a written explanation of the reason or reasons for the decision.",
+            "anchor": "https://openagreements.org/checklists/privacy-policy/us#src-fl-fdbr-appeal"
+          }
+        ]
+      },
+      {
+        "requirementId": "disclose-sale-and-targeted-ad-opt-out",
+        "specRequirementId": "REQ-privacy-law.privacy-policy.disclose-sale-and-targeted-ad-opt-out",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Sale and ad-targeting opt-out",
+        "sectionId": "sale-targeted-advertising-and-opt-out-signals",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/privacy-policy/us#disclose-sale-and-targeted-ad-opt-out",
+        "requirementGuidance": "When a state privacy regime covers the business and it sells personal data or processes it for targeted advertising, the policy should clearly and conspicuously disclose that activity and how the consumer opts out. This gate is not comprehensive-act-only: a covered website operator or commercial site can owe the disclosure under a limited-scope regime too.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ia-icdpa-sale-disclosure",
+            "authorityType": "primary-law",
+            "title": "Iowa Code § 715D.4",
+            "citation": "Iowa Code § 715D.4(6).",
+            "url": "https://www.legis.iowa.gov/docs/code/2025/715D.4.pdf",
+            "proposition": "A controller that sells personal data or engages in targeted advertising must clearly and conspicuously disclose that activity and how a consumer may opt out.",
+            "verbatimQuote": "If a controller sells a consumer’s personal data to third parties or engages in targeted advertising, the controller shall clearly and conspicuously disclose such activity, as well as the manner in which a consumer may exercise the right to opt out of such activity.",
+            "date": "2025-01-01",
+            "anchor": "https://openagreements.org/checklists/privacy-policy/us#src-ia-icdpa-sale-disclosure"
+          }
+        ]
+      },
+      {
+        "requirementId": "disclose-profiling-opt-out",
+        "specRequirementId": "REQ-privacy-law.privacy-policy.disclose-profiling-opt-out",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Profiling opt-out",
+        "sectionId": "sale-targeted-advertising-and-opt-out-signals",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/privacy-policy/us#disclose-profiling-opt-out",
+        "requirementGuidance": "When the business profiles consumers to make decisions that carry legal or similarly significant effects, the policy should disclose the right to opt out of that profiling.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "fl-fdbr-rights-2",
+            "authorityType": "primary-law",
+            "title": "Fla. Stat. § 501.705(2)",
+            "citation": "Fla. Stat. § 501.705(2).",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2025/501.705",
+            "proposition": "A controller must honor authenticated requests for confirmation and access, correction, deletion, and portability, plus opt-outs from targeted advertising, sale, significant-effect profiling, sensitive-data collection or processing, and collection via voice- or facial-recognition features.",
+            "verbatimQuote": "(2) A controller shall comply with an authenticated consumer request to exercise any of the following rights: (a) To confirm whether a controller is processing the consumer’s personal data and to access the personal data. (b) To correct inaccuracies in the consumer’s personal data, taking into account the nature of the personal data and the purposes of the processing of the consumer’s personal data. (c) To delete any or all personal data provided by or obtained about the consumer. (d) To obtain a copy of the consumer’s personal data in a portable and, to the extent technically feasible, readily usable format if the data is available in a digital format. (e) To opt out of the processing of the personal data for purposes of: 1. Targeted advertising; 2. The sale of personal data; or 3. Profiling in furtherance of a decision that produces a legal or similarly significant effect concerning a consumer. (f) To opt out of the collection of sensitive data, including precise geolocation data, or the processing of sensitive data. (g) To opt out of the collection of personal data collected through the operation of a voice recognition or facial recognition feature.",
+            "anchor": "https://openagreements.org/checklists/privacy-policy/us#src-fl-fdbr-rights-2"
+          }
+        ]
+      },
+      {
+        "requirementId": "honor-universal-opt-out-signal",
+        "specRequirementId": "REQ-privacy-law.privacy-policy.honor-universal-opt-out-signal",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Universal opt-out signal honored",
+        "sectionId": "sale-targeted-advertising-and-opt-out-signals",
+        "itemNumber": "4.3",
+        "anchor": "https://openagreements.org/checklists/privacy-policy/us#honor-universal-opt-out-signal",
+        "requirementGuidance": "When the governing comprehensive act requires a universal opt-out mechanism, the policy should state that it treats a user-selected signal — such as Global Privacy Control — as a valid opt-out from targeted advertising and the sale of personal data. A growing minority of states makes honoring the signal mandatory, and the duty attaches to what the site actually does, not just to what the policy says.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "co-cpa-uoom",
+            "authorityType": "primary-law",
+            "title": "Colo. Rev. Stat. § 6-1-1306",
+            "citation": "Colo. Rev. Stat. § 6-1-1306(1)(a)(IV)(B).",
+            "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-06.pdf",
+            "proposition": "Since July 1, 2024, a controller that processes personal data for targeted advertising or sells it must allow consumers to opt out through a user-selected universal opt-out mechanism meeting the Attorney General's technical specifications.",
+            "verbatimQuote": "a controller that processes personal data for purposes of targeted advertising or the sale of personal data shall allow consumers to exercise the right to opt out of the processing of personal data concerning the consumer for purposes of targeted advertising or the sale of personal data pursuant to subsections (1)(a)(I)(A) and (1)(a)(I)(B) of this section by controllers through a user-selected universal opt-out mechanism that meets the technical specifications established by the attorney general pursuant to section 6-1-1313.",
+            "anchor": "https://openagreements.org/checklists/privacy-policy/us#src-co-cpa-uoom"
+          }
+        ]
+      },
+      {
+        "requirementId": "obtain-consent-for-sensitive-data",
+        "specRequirementId": "REQ-privacy-law.privacy-policy.obtain-consent-for-sensitive-data",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Opt-in consent for sensitive data",
+        "sectionId": "sensitive-data-consent",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/privacy-policy/us#obtain-consent-for-sensitive-data",
+        "requirementGuidance": "When a state privacy regime covers the business and it processes sensitive data, it must satisfy the governing state's sensitive-data rule before processing. Opt-in affirmative consent is the rule in most states and the strict baseline a multistate policy should adopt; a few states, such as Iowa, instead require clear notice and an opt-out. Where consent governs, it is captured by an affirmative flow, not implied by a paragraph in the policy.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ia-icdpa-sensitive-optout",
+            "authorityType": "primary-law",
+            "title": "Iowa Code § 715D.4",
+            "citation": "Iowa Code § 715D.4(2).",
+            "url": "https://www.legis.iowa.gov/docs/code/2025/715D.4.pdf",
+            "proposition": "A controller may process sensitive data only after presenting the consumer with clear notice and an opportunity to opt out, and must handle a known child's data in accordance with COPPA — Iowa uses notice-and-opt-out, not opt-in consent.",
+            "verbatimQuote": "A controller shall not process sensitive data collected from a consumer for a nonexempt purpose without the consumer having been presented with clear notice and an opportunity to opt out of such processing, or, in the case of the processing of sensitive data concerning a known child, without processing such data in accordance with the federal Children’s Online Privacy Protection Act, 15 U.S.C. §6501 et seq.",
+            "date": "2025-01-01",
+            "anchor": "https://openagreements.org/checklists/privacy-policy/us#src-ia-icdpa-sensitive-optout"
+          },
+          {
+            "sourceId": "tx-tdpsa-sensitive-consent",
+            "authorityType": "primary-law",
+            "title": "Tex. Bus. & Com. Code § 541.101",
+            "citation": "Tex. Bus. & Com. Code § 541.101(b)(4).",
+            "url": "https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm",
+            "proposition": "A controller may not process a consumer's sensitive data without consent, and must handle a known child's data in accordance with COPPA.",
+            "verbatimQuote": "process the sensitive data of a consumer without obtaining the consumer's consent, or, in the case of processing the sensitive data of a known child, without processing that data in accordance with the Children's Online Privacy Protection Act of 1998 (15 U.S.C. Section 6501 et seq.).",
+            "anchor": "https://openagreements.org/checklists/privacy-policy/us#src-tx-tdpsa-sensitive-consent"
+          }
+        ]
+      },
+      {
+        "requirementId": "route-known-child-data-through-coppa",
+        "specRequirementId": "REQ-privacy-law.privacy-policy.route-known-child-data-through-coppa",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Known child data routed through COPPA",
+        "sectionId": "sensitive-data-consent",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/privacy-policy/us#route-known-child-data-through-coppa",
+        "requirementGuidance": "When the business has known child users — a child under 13, as COPPA defines the term — it must handle that child's data in accordance with COPPA, as the comprehensive acts incorporate. This is a federal duty, tied to online collection by covered operators, independent of any state coverage flag, and it is narrower than the separate minor-user duties some states impose for teens.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "tx-tdpsa-sensitive-consent",
+            "authorityType": "primary-law",
+            "title": "Tex. Bus. & Com. Code § 541.101",
+            "citation": "Tex. Bus. & Com. Code § 541.101(b)(4).",
+            "url": "https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm",
+            "proposition": "A controller may not process a consumer's sensitive data without consent, and must handle a known child's data in accordance with COPPA.",
+            "verbatimQuote": "process the sensitive data of a consumer without obtaining the consumer's consent, or, in the case of processing the sensitive data of a known child, without processing that data in accordance with the Children's Online Privacy Protection Act of 1998 (15 U.S.C. Section 6501 et seq.).",
+            "anchor": "https://openagreements.org/checklists/privacy-policy/us#src-tx-tdpsa-sensitive-consent"
+          }
+        ]
+      },
+      {
+        "requirementId": "keep-policy-current",
+        "specRequirementId": "REQ-privacy-law.privacy-policy.keep-policy-current",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Policy reviewed and refreshed",
+        "sectionId": "maintenance-and-accuracy",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/privacy-policy/us#keep-policy-current",
+        "requirementGuidance": "The policy should be reviewed and updated, and should carry a current effective or last-updated date, because laws such as the CCPA require a business to update its disclosures at least once every 12 months. A stale policy that no longer matches practice is both a contents gap and an accuracy exposure.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ca-ccpa-policy-contents",
+            "authorityType": "primary-law",
+            "title": "Cal. Civ. Code § 1798.130",
+            "citation": "Cal. Civ. Code § 1798.130(a)(5).",
+            "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1798.130",
+            "proposition": "A business must disclose the CCPA-required information in its online privacy policy — or on its website if it maintains no policy — and update that information at least once every 12 months.",
+            "verbatimQuote": "Disclose the following information in its online privacy policy or policies if the business has an online privacy policy or policies and in any California-specific description of consumers’ privacy rights, or if the business does not maintain those policies, on its internet website, and update that information at least once every 12 months:",
+            "anchor": "https://openagreements.org/checklists/privacy-policy/us#src-ca-ccpa-policy-contents"
+          }
+        ]
+      },
+      {
+        "requirementId": "describe-material-change-process",
+        "specRequirementId": "REQ-privacy-law.privacy-policy.describe-material-change-process",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Material-change notice described",
+        "sectionId": "maintenance-and-accuracy",
+        "itemNumber": "6.2",
+        "anchor": "https://openagreements.org/checklists/privacy-policy/us#describe-material-change-process",
+        "requirementGuidance": "The policy should describe how the business notifies consumers of material changes to it. This is a fixed element of the website-operator notice.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nv-operator-notice-2",
+            "authorityType": "primary-law",
+            "title": "NRS 603A.340",
+            "citation": "NRS 603A.340(1).",
+            "url": "https://www.leg.state.nv.us/nrs/NRS-603A.html",
+            "proposition": "An operator must make available an accessible notice with five fixed elements: categories of covered information collected and categories of third parties it may be shared with, any review-and-change process, the material-change notification process, third-party cross-site collection, and the effective date.",
+            "verbatimQuote": "Except as otherwise provided in subsection 2, an operator shall make available, in a manner reasonably calculated to be accessible by consumers whose covered information the operator collects through its Internet website or online service, a notice that: (a) Identifies the categories of covered information that the operator collects through its Internet website or online service about consumers who use or visit the Internet website or online service and the categories of third parties with whom the operator may share such covered information; (b) Provides a description of the process, if any such process exists, for an individual consumer who uses or visits the Internet website or online service to review and request changes to any of his or her covered information that is collected through the Internet website or online service; (c) Describes the process by which the operator notifies consumers who use or visit the Internet website or online service of material changes to the notice required to be made available by this subsection; (d) Discloses whether a third party may collect covered information about an individual consumer’s online activities over time and across different Internet websites or online services when the consumer uses the Internet website or online service of the operator; and (e) States the effective date of the notice.",
+            "anchor": "https://openagreements.org/checklists/privacy-policy/us#src-nv-operator-notice-2"
+          }
+        ]
+      },
+      {
+        "requirementId": "ensure-policy-accuracy",
+        "specRequirementId": "REQ-privacy-law.privacy-policy.ensure-policy-accuracy",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Policy matches actual practice",
+        "sectionId": "maintenance-and-accuracy",
+        "itemNumber": "6.3",
+        "anchor": "https://openagreements.org/checklists/privacy-policy/us#ensure-policy-accuracy",
+        "requirementGuidance": "The policy must accurately describe the business's actual data practices, and the business must follow the practices it describes. A policy that misstates actual practice is an unfair or deceptive act under FTC Act Section 5, and state consumer-protection (UDAP) statutes commonly reach the same conduct — in several states through a private right of action. This is the floor that makes every controls-promising disclosure above enforceable.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ftc-act-5-deceptive",
+            "authorityType": "primary-law",
+            "title": "FTC Act § 5",
+            "citation": "15 U.S.C. § 45(a)(1).",
+            "url": "https://www.law.cornell.edu/uscode/text/15/45",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/15/45#:~:text=Unfair%20methods%20of%20competition%20in,commerce%2C%20are%20hereby%20declared%20unlawful.",
+            "proposition": "Section 5 of the FTC Act declares unfair or deceptive acts or practices in or affecting commerce unlawful, which reaches a privacy policy that misstates a business's actual data practices.",
+            "verbatimQuote": "Unfair methods of competition in or affecting commerce, and unfair or deceptive acts or practices in or affecting commerce, are hereby declared unlawful.",
+            "anchor": "https://openagreements.org/checklists/privacy-policy/us#src-ftc-act-5-deceptive"
+          }
+        ]
+      },
+      {
+        "requirementId": "provide-sensitive-data-sale-notice",
+        "specRequirementId": "REQ-privacy-law.privacy-policy.provide-sensitive-data-sale-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Sensitive-data sale notice",
+        "sectionId": "data-type-and-status-modules-conditional",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/privacy-policy/us#provide-sensitive-data-sale-notice",
+        "requirementGuidance": "When the Texas Data Privacy and Security Act covers the business and it sells sensitive personal data, the policy must include the fixed statutory notice Texas prescribes word for word. Because the governing act prescribes exact language, copy the notice verbatim rather than paraphrasing it; other states scope their sensitive-data-sale disclosures differently.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "tx-tdpsa-sale-notice",
+            "authorityType": "primary-law",
+            "title": "Tex. Bus. & Com. Code § 541.102(b)",
+            "citation": "Tex. Bus. & Com. Code § 541.102(b).",
+            "url": "https://statutes.capitol.texas.gov/Docs/BC/htm/BC.541.htm",
+            "proposition": "A controller that sells sensitive personal data must include a fixed statutory notice to that effect in its privacy notice.",
+            "verbatimQuote": "If a controller engages in the sale of personal data that is sensitive data, the controller shall include the following notice: \"NOTICE: We may sell your sensitive personal data.\"",
+            "anchor": "https://openagreements.org/checklists/privacy-policy/us#src-tx-tdpsa-sale-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "maintain-biometric-retention-policy",
+        "specRequirementId": "REQ-privacy-law.privacy-policy.maintain-biometric-retention-policy",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Biometric retention schedule",
+        "sectionId": "data-type-and-status-modules-conditional",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/privacy-policy/us#maintain-biometric-retention-policy",
+        "requirementGuidance": "When the business possesses biometric identifiers, it must maintain a written, publicly available policy with a retention schedule and destruction guidelines — destroying biometric data when the collection purpose is satisfied or within three years of the last interaction, whichever comes first.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "il-bipa-written-policy",
+            "authorityType": "primary-law",
+            "title": "740 ILCS 14/15(a)",
+            "citation": "740 ILCS 14/15(a).",
+            "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/074000140K15.htm",
+            "proposition": "A private entity in possession of biometric data must develop a written, publicly available policy establishing a retention schedule and destruction guidelines, with destruction when the collection purpose is satisfied or within 3 years of the individual's last interaction, whichever occurs first.",
+            "verbatimQuote": "A private entity in possession of biometric identifiers or biometric information must develop a written policy, made available to the public, establishing a retention schedule and guidelines for permanently destroying biometric identifiers and biometric information when the initial purpose for collecting or obtaining such identifiers or information has been satisfied or within 3 years of the individual's last interaction with the private entity, whichever occurs first.",
+            "date": "2008-10-03",
+            "anchor": "https://openagreements.org/checklists/privacy-policy/us#src-il-bipa-written-policy"
+          }
+        ]
+      },
+      {
+        "requirementId": "obtain-biometric-written-release",
+        "specRequirementId": "REQ-privacy-law.privacy-policy.obtain-biometric-written-release",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Biometric written release",
+        "sectionId": "data-type-and-status-modules-conditional",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/privacy-policy/us#obtain-biometric-written-release",
+        "requirementGuidance": "Before collecting a biometric identifier, the business must give written notice of the collection, its specific purpose, and its retention term, and obtain a written release. This is a pre-collection flow, not a policy paragraph.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "il-bipa-consent",
+            "authorityType": "primary-law",
+            "title": "740 ILCS 14/15(b)",
+            "citation": "740 ILCS 14/15(b).",
+            "url": "https://www.ilga.gov/documents/legislation/ilcs/documents/074000140K15.htm",
+            "proposition": "Before obtaining biometric data, a private entity must first give written notice that the data is being collected or stored, give written notice of the specific purpose and length of term of the collection, and receive a written release from the subject.",
+            "verbatimQuote": "No private entity may collect, capture, purchase, receive through trade, or otherwise obtain a person's or a customer's biometric identifier or biometric information, unless it first: (1) informs the subject or the subject's legally authorized representative in writing that a biometric identifier or biometric information is being collected or stored; (2) informs the subject or the subject's legally authorized representative in writing of the specific purpose and length of term for which a biometric identifier or biometric information is being collected, stored, and used; and (3) receives a written release executed by the subject of the biometric identifier or biometric information or the subject's legally authorized representative.",
+            "date": "2008-10-03",
+            "anchor": "https://openagreements.org/checklists/privacy-policy/us#src-il-bipa-consent"
+          }
+        ]
+      },
+      {
+        "requirementId": "maintain-consumer-health-data-policy",
+        "specRequirementId": "REQ-privacy-law.privacy-policy.maintain-consumer-health-data-policy",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Consumer-health-data policy",
+        "sectionId": "data-type-and-status-modules-conditional",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/privacy-policy/us#maintain-consumer-health-data-policy",
+        "requirementGuidance": "When the business collects consumer health data, it must maintain a dedicated consumer-health-data privacy policy disclosing the statutory elements, including the list of third-party categories and specific affiliates receiving the data.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-mhmda-policy",
+            "authorityType": "primary-law",
+            "title": "RCW 19.373.020(1)(a)",
+            "citation": "Wash. Rev. Code § 19.373.020(1)(a).",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=19.373.020",
+            "proposition": "Beginning March 31, 2024, a regulated entity and a small business must maintain a consumer health data privacy policy that clearly and conspicuously discloses five fixed elements, including a list of the categories of third parties and the specific affiliates receiving the data.",
+            "verbatimQuote": "beginning March 31, 2024, a regulated entity and a small business shall maintain a consumer health data privacy policy that clearly and conspicuously discloses: (i) The categories of consumer health data collected and the purpose for which the data is collected, including how the data will be used; (ii) The categories of sources from which the consumer health data is collected; (iii) The categories of consumer health data that is shared; (iv) A list of the categories of third parties and specific affiliates with whom the regulated entity or the small business shares the consumer health data; and (v) How a consumer can exercise the rights provided in RCW 19.373.040",
+            "anchor": "https://openagreements.org/checklists/privacy-policy/us#src-wa-mhmda-policy"
+          }
+        ]
+      },
+      {
+        "requirementId": "gate-consumer-health-data-on-consent",
+        "specRequirementId": "REQ-privacy-law.privacy-policy.gate-consumer-health-data-on-consent",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Consent gate for health data",
+        "sectionId": "data-type-and-status-modules-conditional",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/privacy-policy/us#gate-consumer-health-data-on-consent",
+        "requirementGuidance": "The business must not collect consumer health data except with consent for a specified purpose, or to the extent necessary to provide a product or service the consumer requested. This is a consent-before-collection gate.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wa-mhmda-consent",
+            "authorityType": "primary-law",
+            "title": "RCW 19.373.030(1)(a)",
+            "citation": "Wash. Rev. Code § 19.373.030(1)(a).",
+            "url": "https://app.leg.wa.gov/RCW/default.aspx?cite=19.373.030",
+            "proposition": "A business may not collect consumer health data except with consent for a specified purpose or to the extent necessary to provide a product or service the consumer requested.",
+            "verbatimQuote": "beginning March 31, 2024, a regulated entity or a small business may not collect any consumer health data except: (i) With consent from the consumer for such collection for a specified purpose; or (ii) To the extent necessary to provide a product or service that the consumer to whom such consumer health data relates has requested from such regulated entity or small business.",
+            "anchor": "https://openagreements.org/checklists/privacy-policy/us#src-wa-mhmda-consent"
+          }
+        ]
+      },
+      {
+        "requirementId": "provide-website-operator-notice",
+        "specRequirementId": "REQ-privacy-law.privacy-policy.provide-website-operator-notice",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Website-operator notice",
+        "sectionId": "data-type-and-status-modules-conditional",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/privacy-policy/us#provide-website-operator-notice",
+        "requirementGuidance": "When the business is a covered website operator, the policy should make available the five-element accessible notice: categories of covered information and of third-party recipients, the review-and-change process if any, the material-change notification process, third-party cross-site collection, and the effective date.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nv-operator-notice-3",
+            "authorityType": "primary-law",
+            "title": "NRS 603A.340",
+            "citation": "NRS 603A.340(1).",
+            "url": "https://www.leg.state.nv.us/nrs/NRS-603A.html",
+            "proposition": "An operator must make available an accessible notice with five fixed elements: categories of covered information collected and categories of third parties it may be shared with, any review-and-change process, the material-change notification process, third-party cross-site collection, and the effective date.",
+            "verbatimQuote": "Except as otherwise provided in subsection 2, an operator shall make available, in a manner reasonably calculated to be accessible by consumers whose covered information the operator collects through its Internet website or online service, a notice that: (a) Identifies the categories of covered information that the operator collects through its Internet website or online service about consumers who use or visit the Internet website or online service and the categories of third parties with whom the operator may share such covered information; (b) Provides a description of the process, if any such process exists, for an individual consumer who uses or visits the Internet website or online service to review and request changes to any of his or her covered information that is collected through the Internet website or online service; (c) Describes the process by which the operator notifies consumers who use or visit the Internet website or online service of material changes to the notice required to be made available by this subsection; (d) Discloses whether a third party may collect covered information about an individual consumer’s online activities over time and across different Internet websites or online services when the consumer uses the Internet website or online service of the operator; and (e) States the effective date of the notice.",
+            "anchor": "https://openagreements.org/checklists/privacy-policy/us#src-nv-operator-notice-3"
+          }
+        ]
+      },
+      {
+        "requirementId": "provide-minor-user-disclosures",
+        "specRequirementId": "REQ-privacy-law.privacy-policy.provide-minor-user-disclosures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Minor-user disclosures",
+        "sectionId": "data-type-and-status-modules-conditional",
+        "itemNumber": "7.7",
+        "anchor": "https://openagreements.org/checklists/privacy-policy/us#provide-minor-user-disclosures",
+        "requirementGuidance": "When the business directs services to, or has actual knowledge of, minor users, the policy should provide the applicable states' minors'-disclosure duties. These components activate on staggered effective dates, so confirm the precise per-state contents and timing in the governing states' notes before drafting this section.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-data-broker-opt-out",
+        "specRequirementId": "REQ-privacy-law.privacy-policy.disclose-data-broker-opt-out",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Data-broker opt-out disclosure",
+        "sectionId": "data-type-and-status-modules-conditional",
+        "itemNumber": "7.8",
+        "anchor": "https://openagreements.org/checklists/privacy-policy/us#disclose-data-broker-opt-out",
+        "requirementGuidance": "When the business is a data broker — it knowingly sells or licenses to third parties the brokered personal information of consumers with whom it has no direct relationship — the policy should disclose its opt-out practices: the method to request an opt-out, which activities or sales it covers, and whether a third party may exercise it, consistent with the broker's registration filing.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "vt-db-definition",
+            "authorityType": "primary-law",
+            "title": "9 V.S.A. § 2430",
+            "citation": "9 V.S.A. § 2430(4)(A).",
+            "url": "https://legislature.vermont.gov/statutes/fullchapter/09/062",
+            "proposition": "A data broker is a business that knowingly collects and sells or licenses to third parties the brokered personal information of consumers with whom it has no direct relationship.",
+            "verbatimQuote": "“Data broker” means a business, or unit or units of a business, separately or together, that knowingly collects and sells or licenses to third parties the brokered personal information of a consumer with whom the business does not have a direct relationship.",
+            "anchor": "https://openagreements.org/checklists/privacy-policy/us#src-vt-db-definition"
+          },
+          {
+            "sourceId": "vt-db-optout",
+            "authorityType": "primary-law",
+            "title": "9 V.S.A. § 2446",
+            "citation": "9 V.S.A. § 2446(a)(3)(B).",
+            "url": "https://legislature.vermont.gov/statutes/fullchapter/09/062",
+            "proposition": "A data broker's annual registration must disclose whether it permits consumer opt-outs, the method for requesting one, the activities it covers, and whether a third-party agent may exercise it.",
+            "verbatimQuote": "if the data broker permits a consumer to opt out of the data broker’s collection of brokered personal information, opt out of its databases, or opt out of certain sales of data: (i) the method for requesting an opt-out; (ii) if the opt-out applies to only certain activities or sales, which ones; and (iii) whether the data broker permits a consumer to authorize a third party to perform the opt-out on the consumer’s behalf;",
+            "anchor": "https://openagreements.org/checklists/privacy-policy/us#src-vt-db-optout"
+          }
+        ]
+      },
+      {
+        "requirementId": "register-as-data-broker",
+        "specRequirementId": "REQ-privacy-law.privacy-policy.register-as-data-broker",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Data-broker registration",
+        "sectionId": "data-type-and-status-modules-conditional",
+        "itemNumber": "7.9",
+        "anchor": "https://openagreements.org/checklists/privacy-policy/us#register-as-data-broker",
+        "requirementGuidance": "A data broker must register annually with the governing state — in Vermont, with the Secretary of State by January 31, paying the fee and providing the prescribed disclosures. This is a conduct duty that lives outside the policy's four corners; California, Texas, and Oregon impose parallel broker registration, detailed in the per-state notes.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "vt-db-registration-2",
+            "authorityType": "primary-law",
+            "title": "9 V.S.A. § 2446",
+            "citation": "9 V.S.A. § 2446(a).",
+            "url": "https://legislature.vermont.gov/statutes/fullchapter/09/062",
+            "proposition": "A data broker must register with the Secretary of State annually by January 31, pay a $100 fee, and disclose its addresses, opt-out practices, and other prescribed information.",
+            "verbatimQuote": "Annually, on or before January 31 following a year in which a person meets the definition of data broker as provided in section 2430 of this title, a data broker shall: (1) register with the Secretary of State; (2) pay a registration fee of $100.00; and (3) provide the following information: (A) the name and primary physical, e-mail, and Internet addresses of the data broker;",
+            "anchor": "https://openagreements.org/checklists/privacy-policy/us#src-vt-db-registration-2"
+          }
+        ]
+      }
+    ]
+  }
+}

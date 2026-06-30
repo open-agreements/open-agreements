@@ -1,0 +1,1279 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/kansas",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/kansas.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/kansas",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/kansas/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/kansas/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "kansas",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — Kansas",
+      "description": "A clause-by-clause reviewer checklist for Kansas employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the four-factor Weber v. Tillman reasonableness test and the K.S.A. 50-163 non-solicitation safe harbors.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "Kansas",
+      "coverage": "Kansas (US)",
+      "lastReviewed": "2026-06-12",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 47,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "label": "Physician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "kansas-statutory-gates",
+        "label": "Kansas statutory gates"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#identify-parties",
+        "requirementGuidance": "Confirm the named employer is the party to the employment relationship the covenant rides on. Kansas enforces a covenant only as an adjunct to a lawful contract, so an entity with no employment relationship to this worker has a much harder time showing the restraint protects its own legitimate business interest.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "weber-ancillary-cover",
+            "authorityType": "case-law",
+            "title": "Weber v. Tillman",
+            "citation": "Weber v. Tillman, 259 Kan. 457, 913 P.2d 84 (1996).",
+            "url": "https://www.courtlistener.com/opinion/7969238/weber-v-tillman/",
+            "deepLink": "https://www.courtlistener.com/opinion/7969238/weber-v-tillman/#:~:text=A%20noncompetition%20covenant%20ancillary%20to,adverse%20to%20the%20public%20welfare.",
+            "proposition": "Weber v. Tillman supports the requirement that an enforceable Kansas non-compete be ancillary to an employment contract, reasonable, and not adverse to the public welfare.",
+            "verbatimQuote": "A noncompetition covenant ancillary to an employment contract is valid and enforceable if the restraint is reasonable under the circumstances and not adverse to the public welfare.",
+            "date": "1996-03-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-weber-ancillary-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#identify-effective-date",
+        "requirementGuidance": "Pin the execution date and the start of employment. The statutory safe-harbor clocks for solicitation covenants run from the end of the relationship, and the reasonableness of a time limit is judged against the facts as they stood when the parties agreed — an undated covenant makes both harder to audit.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#identify-employee-title",
+        "requirementGuidance": "Record the role and duties. The legitimate-interest and undue-burden factors both turn on what this employee actually did — which customers they touched, what information they accessed — so the title line is the first evidence a reviewer reaches for when sizing the covenant against the four-factor test.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "weber-four-factor-cover",
+            "authorityType": "case-law",
+            "title": "Weber v. Tillman",
+            "citation": "Weber v. Tillman, 259 Kan. 457, 913 P.2d 84 (1996).",
+            "url": "https://www.courtlistener.com/opinion/7969238/weber-v-tillman/",
+            "deepLink": "https://www.courtlistener.com/opinion/7969238/weber-v-tillman/#:~:text=The%20analysis%20of%20whether%20the,contained%20in%20the%20covenant%20reasonable%3F",
+            "proposition": "Weber v. Tillman supports the four-factor reasonableness analysis that the employee's actual role and duties feed into.",
+            "verbatimQuote": "The analysis of whether the noncompetition clause is reasonable evaluates these factors: (1) Does the covenant protect a legitimate business interest of the employer? (2) Does the covenant create an undue burden on the employee? (3) Is the covenant injurious to the public welfare? (4) Are the time and territorial limitations contained in the covenant reasonable?",
+            "date": "1996-03-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-weber-four-factor-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#identify-governing-law",
+        "requirementGuidance": "Check that the governing state is stated. Kansas has no statute overriding the parties' choice of law for restrictive covenants, so this clause does real selection work — it decides whether the Weber framework and the K.S.A. 50-163 safe harbors govern the covenant at all.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#define-confidential-information",
+        "requirementGuidance": "Define the protected information in two tiers, because Kansas splits the remedies: the trade-secret statute carries misappropriation claims, while everything below trade-secret status is protected only by contract. A confidentiality definition that names the non-secret categories — pricing, customer lists, internal know-how — is what keeps that second tier enforceable at all.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "kutsa-contract-remedies-defs",
+            "authorityType": "primary-law",
+            "title": "K.S.A. 60-3326",
+            "citation": "K.S.A. 60-3326(b)(1).",
+            "url": "https://ksrevisor.gov/statutes/chapters/ch60/060_033_0026.html",
+            "proposition": "K.S.A. 60-3326 supports the two-tier structure: the trade-secret act leaves contractual remedies untouched, so non-trade-secret information is protected by the confidentiality definition or not at all.",
+            "verbatimQuote": "This act does not affect: (1) Contractual remedies, whether or not based upon misappropriation of a trade secret;",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-kutsa-contract-remedies-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#define-trade-secrets",
+        "requirementGuidance": "Track the statutory definition: independent economic value from secrecy plus reasonable efforts to keep it secret. A trade-secret definition that sweeps in public or easily reconstructed information overstates the statute — and weakens the legitimate-interest showing the rest of the covenant suite depends on.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "kutsa-trade-secret-definition",
+            "authorityType": "primary-law",
+            "title": "K.S.A. 60-3320",
+            "citation": "K.S.A. 60-3320(4).",
+            "url": "https://ksrevisor.gov/statutes/chapters/ch60/060_033_0020.html",
+            "proposition": "K.S.A. 60-3320 supports the statutory trade-secret definition a contract definition should track: independent economic value plus reasonable secrecy efforts.",
+            "verbatimQuote": "\"Trade secret\" means information, including a formula, pattern, compilation, program, device, method, technique, or process, that: (i) derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use, and (ii) is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-kutsa-trade-secret-definition"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-period",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#define-restricted-period",
+        "requirementGuidance": "One defined Restricted Period keeps every duration auditable against the time-limit factor. Kansas sets no statutory ceiling for a non-compete, which puts the full weight on reasonableness — a clean, fixed period is the easiest version to defend, and the version Kansas appellate decisions have approved.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-restricted-territory",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-territory",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted territory",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#define-restricted-territory",
+        "requirementGuidance": "Tie the geography to where the protected interest actually operates. The leading Kansas territorial decision is a warning label: the court cut an excessive area down to only what was necessary to protect the employer's interest and enforced just that — so an everywhere-we-do-business territory invites a court to shrink the clause to its lawful core.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "eastern-territory-reduction-defs",
+            "authorityType": "case-law",
+            "title": "Eastern Distributing Co. v. Flynn",
+            "citation": "Eastern Distributing Co. v. Flynn, 222 Kan. 666, 567 P.2d 1371 (1977).",
+            "url": "https://www.courtlistener.com/opinion/1195583/eastern-distributing-co-inc-v-flynn/",
+            "deepLink": "https://www.courtlistener.com/opinion/1195583/eastern-distributing-co-inc-v-flynn/#:~:text=We%20think%20the%20trial%20court,necessary%20to%20protect%20plaintiff's%20interest.",
+            "proposition": "Eastern Distributing supports the caution that a Kansas court will reduce an excessive territorial restraint to only what is necessary and enforce just that.",
+            "verbatimQuote": "We think the trial court in the exercise of its equitable powers fairly and reasonably reduced the area restriction to only that which was necessary to protect plaintiff's interest.",
+            "date": "1977-07-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-eastern-territory-reduction-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered customers",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#define-covered-customers",
+        "requirementGuidance": "Model the class on the statute's material contact customer concept — customers the employee solicited, produced, or serviced, or about whom the employee held confidential or proprietary information. That definition is what earns a customer non-solicit its conclusive presumption of enforceability, and it doubles as a sound tailoring benchmark for the rest of the covenant suite.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "material-contact-customer-definition",
+            "authorityType": "primary-law",
+            "title": "K.S.A. 50-163",
+            "citation": "K.S.A. 50-163(g)(2).",
+            "url": "https://ksrevisor.gov/statutes/chapters/ch50/050_001_0063.html",
+            "proposition": "K.S.A. 50-163(g)(2) supports the statutory material contact customer definition as the model for the Covered Customers class.",
+            "verbatimQuote": "\"Material contact customer\" means any customer or prospective customer that is solicited, produced or serviced, directly or indirectly, by the employee or owner at issue or any customer or prospective customer about whom the employee or owner, directly or indirectly, had confidential business or proprietary information or trade secrets in the course of the employee's or owner's relationship with the customer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-material-contact-customer-definition"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#define-covered-employees",
+        "requirementGuidance": "Keep the no-poach class to colleagues the departing employee actually worked with or supervised during a stated look-back window. The Kansas safe harbors documented in the practice note run to customer solicitation and owner covenants, so a coworker no-recruit clause should be built to stand on ordinary reasonableness: modest scope, defined class, fixed term.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#define-protected-interests",
+        "requirementGuidance": "Name the interests with Kansas specificity. Customer relationships, confidential information, and — for professional practices — referral sources are recognized protectable interests here; reciting them concretely gives the legitimate-business-interest factor something to grip.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "idbeis-referral-sources-defs",
+            "authorityType": "case-law",
+            "title": "Idbeis v. Wichita Surgical Specialists, P.A.",
+            "citation": "Idbeis v. Wichita Surgical Specialists, P.A., 279 Kan. 755, 112 P.3d 81 (2005).",
+            "url": "https://www.courtlistener.com/opinion/7970031/idbeis-v-wichita-surgical-specialists-pa/",
+            "deepLink": "https://www.courtlistener.com/opinion/7970031/idbeis-v-wichita-surgical-specialists-pa/#:~:text=In%20Kansas%2C%20however%2C%20the%20law,context%20of%20a%20medical%20practice.",
+            "proposition": "Idbeis supports listing referral sources among the legitimate interests a Kansas restrictive covenant may protect.",
+            "verbatimQuote": "In Kansas, however, the law is clear that referral sources are a legitimate interest which can be protected by a restrictive covenant even in the context of a medical practice.",
+            "date": "2005-06-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-idbeis-referral-sources-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-competitive-business",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Competitive business",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#define-competitive-business",
+        "requirementGuidance": "Describe the genuinely competing activity in concrete terms. An open-ended definition feeds the undue-burden factor against the employer, and a Kansas court asked to repair it may reduce the covenant to the minimum the court considers necessary rather than the scope the drafter imagined.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where ownership or investment in competitors is restricted, look for a passive-holdings carve-out below a stated threshold. A clause that technically forbids index funds and ordinary public shares burdens the employee far beyond any legitimate interest — exactly the imbalance the undue-burden factor exists to catch.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#define-passive-public-holdings",
+        "requirementGuidance": "Optional capitalized-term mechanics — many agreements inline the carve-out without a separate definition. If the term appears, check its percentage against the operative carve-out so the two never drift apart.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.11",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#define-solicit",
+        "requirementGuidance": "Read the definition against the statute's own verb list — solicit, recruit, induce, persuade, encourage, direct, or otherwise interfere. Kansas drafted its safe harbor around that breadth, so a contract definition wider than the statutory formula gains nothing, and a vaguer one converts enforcement into a fact-by-fact dispute.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "customer-nonsolicit-safe-harbor-defs",
+            "authorityType": "primary-law",
+            "title": "K.S.A. 50-163",
+            "citation": "K.S.A. 50-163(c)(5).",
+            "url": "https://ksrevisor.gov/statutes/chapters/ch50/050_001_0063.html",
+            "proposition": "K.S.A. 50-163(c)(5) supports the statutory solicitation verb list and the two-year clock that runs from the end of the employee's employment.",
+            "verbatimQuote": "A covenant in writing in which an employee agrees not to solicit, recruit, induce, persuade, encourage, direct or otherwise interfere with, directly or indirectly, a business entity's customers, including any reduction, termination, acceptance or transfer of any customer's business, in whole or in part, for the purpose of providing any product or service that is competitive with those provided by the employer shall be conclusively presumed to be enforceable and not a restraint of trade if the covenant is limited to material contact customers and the covenant is between an employer and an employee and does not continue for more than two years following the end of the employee's employment with the employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-customer-nonsolicit-safe-harbor-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.12",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#define-termination-of-employment",
+        "requirementGuidance": "Verify the trigger treats resignation, dismissal, and expiration of a fixed term the same way. The two-year safe-harbor clock for an employee customer non-solicit runs from the end of the employee's employment, so an ambiguous trigger leaves the covenant's most valuable presumption resting on a disputed date.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "customer-nonsolicit-safe-harbor-defs",
+            "authorityType": "primary-law",
+            "title": "K.S.A. 50-163",
+            "citation": "K.S.A. 50-163(c)(5).",
+            "url": "https://ksrevisor.gov/statutes/chapters/ch50/050_001_0063.html",
+            "proposition": "K.S.A. 50-163(c)(5) supports the statutory solicitation verb list and the two-year clock that runs from the end of the employee's employment.",
+            "verbatimQuote": "A covenant in writing in which an employee agrees not to solicit, recruit, induce, persuade, encourage, direct or otherwise interfere with, directly or indirectly, a business entity's customers, including any reduction, termination, acceptance or transfer of any customer's business, in whole or in part, for the purpose of providing any product or service that is competitive with those provided by the employer shall be conclusively presumed to be enforceable and not a restraint of trade if the covenant is limited to material contact customers and the covenant is between an employer and an employee and does not continue for more than two years following the end of the employee's employment with the employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-customer-nonsolicit-safe-harbor-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-timing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-timing",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "When the agreement was signed",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#acknowledge-timing",
+        "requirementGuidance": "Kansas removes the usual mid-employment anxiety: continued employment of an at-will employee is sufficient consideration for a covenant signed after hire, so a covenant rolled out mid-stream does not need a bonus or promotion to stand. The acknowledgement still earns its place by dating the signature and tying the covenant to the employment contract it must be ancillary to.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "puritan-bennett-continued-employment",
+            "authorityType": "case-law",
+            "title": "Puritan-Bennett Corp. v. Richter",
+            "citation": "Puritan-Bennett Corp. v. Richter, 8 Kan. App. 2d 311, 657 P.2d 589 (1983).",
+            "url": "https://www.courtlistener.com/opinion/1159191/puritan-bennett-corp-v-richter/",
+            "deepLink": "https://www.courtlistener.com/opinion/1159191/puritan-bennett-corp-v-richter/#:~:text=After%20reviewing%20these%20authorities%2C%20we,a%20covenant%20not%20to%20compete.",
+            "proposition": "Puritan-Bennett supports that continued employment of an at-will employee is sufficient consideration for a Kansas covenant signed after hire.",
+            "verbatimQuote": "After reviewing these authorities, we hold that continued employment should not as a matter of law be disregarded as consideration sufficient to uphold a covenant not to compete.",
+            "date": "1983-01-20",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-puritan-bennett-continued-employment"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-opportunity-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Chance to consult a lawyer",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#acknowledge-opportunity-to-consult-counsel",
+        "requirementGuidance": "No Kansas statute requires it, but the acknowledgement is cheap procedural-fairness evidence — useful color when a court weighs the undue-burden factor against an employee claiming surprise.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "Trade-secret obligations should run as long as secrecy does — that is how the federal definition works, and the Kansas act is built on the same secrecy-keyed structure. A fixed expiry on trade-secret protection volunteers away the strongest interest the covenant suite protects.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-trade-secret-definition",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
+            "citation": "18 U.S.C. § 1839(3)(B) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1839",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
+            "proposition": "Federal law keys trade-secret status to continued secrecy, which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-dtsa-trade-secret-definition"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#state-confidentiality-duration",
+        "requirementGuidance": "Give ordinary confidential information its own finite term. Kansas protects non-secret information through contract alone, and contracts are enforced only as far as they are reasonable — a perpetual lid on non-secret information is the kind of overreach a Kansas court trims to the minimum it considers necessary.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#disclose-dtsa-notice",
+        "requirementGuidance": "Federal law, fully applicable in Kansas: omit the immunity notice and the employer forfeits exemplary damages and attorney fees in a later trade-secret action against the worker. Given how much of the Kansas toolkit is trade-secret law, giving away those remedies is an unforced error.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-immunity-notice",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-dtsa-immunity-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Confidentiality and non-disparagement language must leave wages, hours, and working conditions discussable. Federal labor law protects that speech no matter which state's law governs the agreement, and the Board has struck overbroad clauses in employee agreements.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nlra-section-7-rights",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-nlra-section-7-rights"
+          },
+          {
+            "sourceId": "mclaren-macomb-protected-activity",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-mclaren-macomb-protected-activity"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#permit-compelled-disclosure",
+        "requirementGuidance": "Confirm the carve-out for disclosure required by law, court order, or a government investigation, with notice to the employer where lawful. No confidentiality covenant outruns a subpoena; the carve-out plus notice procedure keeps the clause realistic and the employee out of an impossible position.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#require-property-return-and-certification",
+        "requirementGuidance": "Return-or-delete at separation, certified in writing. Kansas trade-secret claims rise or fall on reasonable secrecy efforts, and a signed certification is the cleanest contemporaneous proof of those efforts if protected material later surfaces at a competitor.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-employee-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#permit-employee-nonsolicit",
+        "requirementGuidance": "Optional, and judged in Kansas by the general standard: a restraint is reasonable if it is reasonable in view of all the facts and circumstances and does not contravene the public welfare. Keep the clause inside the Covered Employees class and the Restricted Period so it reads as a modest restraint rather than a workforce-wide hiring ban.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ksa-restraint-baseline",
+            "authorityType": "primary-law",
+            "title": "K.S.A. 50-163",
+            "citation": "K.S.A. 50-163(c)(1).",
+            "url": "https://ksrevisor.gov/statutes/chapters/ch50/050_001_0063.html",
+            "proposition": "K.S.A. 50-163(c)(1) supports the general reasonableness baseline that governs covenants outside the enumerated safe harbors.",
+            "verbatimQuote": "An arrangement, contract, agreement, trust, understanding or combination is a reasonable restraint of trade or commerce if such restraint is reasonable in view of all of the facts and circumstances of the particular case and does not contravene public welfare.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-ksa-restraint-baseline"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-customer-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#permit-customer-nonsolicit",
+        "requirementGuidance": "Optional — and the best-supported covenant on the page when drafted to the statute: limited to material contact customers and capped at two years, it is conclusively presumed enforceable and not a restraint of trade. If it appears, run it through the Kansas safe-harbor gate at the end of this checklist before anything else.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "customer-nonsolicit-safe-harbor-covenants",
+            "authorityType": "primary-law",
+            "title": "K.S.A. 50-163",
+            "citation": "K.S.A. 50-163(c)(5).",
+            "url": "https://ksrevisor.gov/statutes/chapters/ch50/050_001_0063.html",
+            "proposition": "K.S.A. 50-163(c)(5) supports the conclusive presumption for an employee customer non-solicit limited to material contact customers and capped at two years, with coverage extending to acceptance and transfer of a customer's business.",
+            "verbatimQuote": "A covenant in writing in which an employee agrees not to solicit, recruit, induce, persuade, encourage, direct or otherwise interfere with, directly or indirectly, a business entity's customers, including any reduction, termination, acceptance or transfer of any customer's business, in whole or in part, for the purpose of providing any product or service that is competitive with those provided by the employer shall be conclusively presumed to be enforceable and not a restraint of trade if the covenant is limited to material contact customers and the covenant is between an employer and an employee and does not continue for more than two years following the end of the employee's employment with the employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-customer-nonsolicit-safe-harbor-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-dealing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#permit-non-dealing",
+        "requirementGuidance": "Non-dealing bars serving covered customers even when they call first. The Kansas safe-harbor text reaches that conduct — the presumed covenant covers acceptance and transfer of a customer's business, not just outreach — so a non-dealing clause drafted to the material-contact class and the two-year cap can ride the same statutory presumption as the non-solicit.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "customer-nonsolicit-safe-harbor-covenants",
+            "authorityType": "primary-law",
+            "title": "K.S.A. 50-163",
+            "citation": "K.S.A. 50-163(c)(5).",
+            "url": "https://ksrevisor.gov/statutes/chapters/ch50/050_001_0063.html",
+            "proposition": "K.S.A. 50-163(c)(5) supports the conclusive presumption for an employee customer non-solicit limited to material contact customers and capped at two years, with coverage extending to acceptance and transfer of a customer's business.",
+            "verbatimQuote": "A covenant in writing in which an employee agrees not to solicit, recruit, induce, persuade, encourage, direct or otherwise interfere with, directly or indirectly, a business entity's customers, including any reduction, termination, acceptance or transfer of any customer's business, in whole or in part, for the purpose of providing any product or service that is competitive with those provided by the employer shall be conclusively presumed to be enforceable and not a restraint of trade if the covenant is limited to material contact customers and the covenant is between an employer and an employee and does not continue for more than two years following the end of the employee's employment with the employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-customer-nonsolicit-safe-harbor-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-compete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#permit-non-compete",
+        "requirementGuidance": "Optional and enforceable in Kansas when reasonable — but the employer carries the burden of proving reasonableness, and enforceability gets a fresh look on appeal with no deference to the trial court. If the clause appears, route the review through the four-factor gate at the end of this checklist before evaluating any of its terms.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "weber-governing-covenants",
+            "authorityType": "case-law",
+            "title": "Weber v. Tillman",
+            "citation": "Weber v. Tillman, 259 Kan. 457, 913 P.2d 84 (1996).",
+            "url": "https://www.courtlistener.com/opinion/7969238/weber-v-tillman/",
+            "deepLink": "https://www.courtlistener.com/opinion/7969238/weber-v-tillman/#:~:text=A%20noncompetition%20covenant%20ancillary%20to,adverse%20to%20the%20public%20welfare.",
+            "proposition": "Weber v. Tillman supports the governing Kansas rule that an employee non-compete is enforceable if reasonable and not adverse to the public welfare.",
+            "verbatimQuote": "A noncompetition covenant ancillary to an employment contract is valid and enforceable if the restraint is reasonable under the circumstances and not adverse to the public welfare.",
+            "date": "1996-03-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-weber-governing-covenants"
+          },
+          {
+            "sourceId": "doan-unlimited-review",
+            "authorityType": "case-law",
+            "title": "Doan Family Corp. v. Arnberger",
+            "citation": "Doan Family Corp. v. Arnberger, 522 P.3d 364 (Kan. Ct. App. 2022).",
+            "url": "https://www.courtlistener.com/opinion/9367497/doan-family-corp-v-arnberger/",
+            "deepLink": "https://www.courtlistener.com/opinion/9367497/doan-family-corp-v-arnberger/#:~:text=Kansas%20appellate%20courts%20exercise%20unlimited,contract%20is%20enforceable%20as%20written.",
+            "proposition": "Doan supports that Kansas appellate courts review the enforceability of a non-compete without deference to the trial court.",
+            "verbatimQuote": "Kansas appellate courts exercise unlimited review when determining whether a noncompete clause in an employment contract is enforceable as written.",
+            "date": "2022-12-30",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-doan-unlimited-review"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Named-competitor narrowing",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementGuidance": "When the employer can name its real competitors, bind those instead of leaning on the open-ended Competitive Business definition. Kansas reformation runs one direction only — a court reduces unreasonable terms but has no discretion to rewrite ones that are already reasonable — so the narrow, defensible formulation the parties draft is the one that gets enforced as written.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "doan-no-rewrite-covenants",
+            "authorityType": "case-law",
+            "title": "Doan Family Corp. v. Arnberger",
+            "citation": "Doan Family Corp. v. Arnberger, 522 P.3d 364 (Kan. Ct. App. 2022).",
+            "url": "https://www.courtlistener.com/opinion/9367497/doan-family-corp-v-arnberger/",
+            "deepLink": "https://www.courtlistener.com/opinion/9367497/doan-family-corp-v-arnberger/#:~:text=Because%20the%20two%2Dyear%20term%20was,that%20term%20of%20the%20agreement.",
+            "proposition": "Doan supports that Kansas reformation reaches only unreasonable terms, so a reasonable, narrowly drafted covenant is enforced as written.",
+            "verbatimQuote": "Because the two-year term was reasonable, the court did not have the discretion to rewrite that term of the agreement.",
+            "date": "2022-12-30",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-doan-no-rewrite-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#permit-non-investment",
+        "requirementGuidance": "Rare and deliberate. Confirm the passive-holdings carve-out is intact and the clause shares the defined Restricted Period — an investment restraint with no carve-out and no clock is the kind of undue burden the four-factor test screens out.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#require-non-disparagement",
+        "requirementGuidance": "Reasonable to include with a stated duration, but check the carve-outs first: truthful testimony, statements to government agencies, and legally protected workplace speech have to stay outside the clause, because federal labor law polices overbroad versions no matter which state's law governs.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mclaren-macomb-nondisparagement",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-mclaren-macomb-nondisparagement"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-physician-specific-rights",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Physician rights and notices",
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#address-physician-specific-rights",
+        "requirementGuidance": "The dedicated clause should state the Kansas position plainly: there is no physician or healthcare non-compete ban, covenants in medical practices are evaluated under the ordinary reasonableness test, and referral sources are a recognized legitimate interest a practice may protect. A 2026 proposal to ban most physician non-competes died in the 2025 to 2026 session without becoming law, so a clause drafted on the assumption of a ban misstates current Kansas law.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "idbeis-referral-sources-physician",
+            "authorityType": "case-law",
+            "title": "Idbeis v. Wichita Surgical Specialists, P.A.",
+            "citation": "Idbeis v. Wichita Surgical Specialists, P.A., 279 Kan. 755, 112 P.3d 81 (2005).",
+            "url": "https://www.courtlistener.com/opinion/7970031/idbeis-v-wichita-surgical-specialists-pa/",
+            "deepLink": "https://www.courtlistener.com/opinion/7970031/idbeis-v-wichita-surgical-specialists-pa/#:~:text=In%20Kansas%2C%20however%2C%20the%20law,context%20of%20a%20medical%20practice.",
+            "proposition": "Idbeis supports that Kansas applies ordinary covenant law to medical practices and recognizes referral sources as a protectable interest.",
+            "verbatimQuote": "In Kansas, however, the law is clear that referral sources are a legitimate interest which can be protected by a restrictive covenant even in the context of a medical practice.",
+            "date": "2005-06-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-idbeis-referral-sources-physician"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "The employee's representation that no earlier covenant or court order blocks the new role. Worth taking seriously on intake in Kansas, where a reasonable incoming covenant is likely enforceable — the representation surfaces that exposure before the first customer call instead of after it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#address-notice-to-future-employers",
+        "requirementGuidance": "A genuine drafting choice. A notice letter built on an overbroad covenant invites a tortious-interference fight the employer can lose along with the covenant, so condition any third-party disclosure on the covenant as a court would actually enforce it — which in Kansas may be a narrowed version of the covenant as written.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "avoid-indefinite-tolling-during-breach",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.kansas.avoid-indefinite-tolling-during-breach",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No open-ended extension during a breach",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#avoid-indefinite-tolling-during-breach",
+        "requirementGuidance": "Flag any clause that stretches the restricted period for as long as a breach or enforcement suit continues. The one Kansas appellate decision on point refused to enforce exactly that provision — a two-year term was reasonable, but an indefinite extension of it was not — and no Kansas case adds lost time back to a covenant on its own. The agreement should still answer the tolling question expressly; the defensible answer is a defined, reasonable fixed term, with damages and injunctive relief carrying the remedy load for in-term competition.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "doan-tolling-declined-ks",
+            "authorityType": "case-law",
+            "title": "Doan Family Corp. v. Arnberger",
+            "citation": "Doan Family Corp. v. Arnberger, 522 P.3d 364 (Kan. Ct. App. 2022).",
+            "url": "https://www.courtlistener.com/opinion/9367497/doan-family-corp-v-arnberger/",
+            "deepLink": "https://www.courtlistener.com/opinion/9367497/doan-family-corp-v-arnberger/#:~:text=The%20district%20court%20did%20not,the%20noncompete%20clause's%20tolling%20provision.",
+            "proposition": "Doan supports that a Kansas court may decline to enforce a tolling provision extending the restricted period during breach and litigation.",
+            "verbatimQuote": "The district court did not err, however, when it declined to enforce the noncompete clause's tolling provision.",
+            "date": "2022-12-30",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-doan-tolling-declined-ks"
+          },
+          {
+            "sourceId": "doan-tolling-indefinite-ks",
+            "authorityType": "case-law",
+            "title": "Doan Family Corp. v. Arnberger",
+            "citation": "Doan Family Corp. v. Arnberger, 522 P.3d 364 (Kan. Ct. App. 2022).",
+            "url": "https://www.courtlistener.com/opinion/9367497/doan-family-corp-v-arnberger/",
+            "deepLink": "https://www.courtlistener.com/opinion/9367497/doan-family-corp-v-arnberger/#:~:text=While%20a%20two%2Dyear%20period%20is,a%20reasonable%20restraint%20on%20Arnberger.",
+            "proposition": "Doan supports treating an indefinite extension of an otherwise reasonable restricted period as an unreasonable restraint.",
+            "verbatimQuote": "While a two-year period is a reasonable restriction under these facts, an indefinite extension of that period is not a reasonable restraint on Arnberger.",
+            "date": "2022-12-30",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-doan-tolling-indefinite-ks"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#require-injunctive-relief-availability",
+        "requirementGuidance": "Look for the acknowledgement that breach may cause irreparable harm and that an injunction is appropriate relief — then weigh it realistically: Kansas appellate courts review a covenant's enforceability without deference, so the recital smooths the path to relief but never substitutes for a covenant that survives the four-factor test.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "doan-unlimited-review-remedies",
+            "authorityType": "case-law",
+            "title": "Doan Family Corp. v. Arnberger",
+            "citation": "Doan Family Corp. v. Arnberger, 522 P.3d 364 (Kan. Ct. App. 2022).",
+            "url": "https://www.courtlistener.com/opinion/9367497/doan-family-corp-v-arnberger/",
+            "deepLink": "https://www.courtlistener.com/opinion/9367497/doan-family-corp-v-arnberger/#:~:text=Kansas%20appellate%20courts%20exercise%20unlimited,contract%20is%20enforceable%20as%20written.",
+            "proposition": "Doan supports that contractual recitals cannot lock in enforceability, because Kansas appellate courts review a covenant's enforceability without deference.",
+            "verbatimQuote": "Kansas appellate courts exercise unlimited review when determining whether a noncompete clause in an employment contract is enforceable as written.",
+            "date": "2022-12-30",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-doan-unlimited-review-remedies"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-attorneys-fees-and-costs",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Attorney fees and costs",
+        "sectionId": "remedies",
+        "itemNumber": "13.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#address-attorneys-fees-and-costs",
+        "requirementGuidance": "A commercial choice; the American Rule applies if the agreement is silent. Where fee-shifting appears, prefer mutual, prevailing-party drafting — a one-way employer clause hands the undue-burden factor another data point.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "rely-on-equitable-narrowing-not-statutory-reformation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.kansas.rely-on-equitable-narrowing-not-statutory-reformation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court narrowing within limits",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#rely-on-equitable-narrowing-not-statutory-reformation",
+        "requirementGuidance": "Keep the severability and reformation clause — Kansas courts genuinely use their equitable powers to reduce an overbroad restraint and enforce it as reduced. But read it as a backstop, not a license: a court reforms only unreasonable terms and has no discretion to rewrite ones that are already reasonable, and the statutory command to modify and enforce overbroad covenants belongs to the Restraint of Trade Act, which excludes covenants not to compete. Draft each covenant to its defensible scope first; an employer that overreaches risks getting only the minimum relief a court considers necessary.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "eastern-equitable-narrowing",
+            "authorityType": "case-law",
+            "title": "Eastern Distributing Co. v. Flynn",
+            "citation": "Eastern Distributing Co. v. Flynn, 222 Kan. 666, 567 P.2d 1371 (1977).",
+            "url": "https://www.courtlistener.com/opinion/1195583/eastern-distributing-co-inc-v-flynn/",
+            "deepLink": "https://www.courtlistener.com/opinion/1195583/eastern-distributing-co-inc-v-flynn/#:~:text=We%20think%20the%20trial%20court,necessary%20to%20protect%20plaintiff's%20interest.",
+            "proposition": "Eastern Distributing supports the common-law equitable power of Kansas courts to reduce an overbroad restraint and enforce the covenant as reduced.",
+            "verbatimQuote": "We think the trial court in the exercise of its equitable powers fairly and reasonably reduced the area restriction to only that which was necessary to protect plaintiff's interest.",
+            "date": "1977-07-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-eastern-equitable-narrowing"
+          },
+          {
+            "sourceId": "doan-no-rewrite-severability",
+            "authorityType": "case-law",
+            "title": "Doan Family Corp. v. Arnberger",
+            "citation": "Doan Family Corp. v. Arnberger, 522 P.3d 364 (Kan. Ct. App. 2022).",
+            "url": "https://www.courtlistener.com/opinion/9367497/doan-family-corp-v-arnberger/",
+            "deepLink": "https://www.courtlistener.com/opinion/9367497/doan-family-corp-v-arnberger/#:~:text=Because%20the%20two%2Dyear%20term%20was,that%20term%20of%20the%20agreement.",
+            "proposition": "Doan supports the ceiling on Kansas reformation: a court may reform an unreasonable term but may not rewrite a term that is already reasonable.",
+            "verbatimQuote": "Because the two-year term was reasonable, the court did not have the discretion to rewrite that term of the agreement.",
+            "date": "2022-12-30",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-doan-no-rewrite-severability"
+          },
+          {
+            "sourceId": "ksa-noncompete-exclusion-severability",
+            "authorityType": "primary-law",
+            "title": "K.S.A. 50-163",
+            "citation": "K.S.A. 50-163(e)(6).",
+            "url": "https://ksrevisor.gov/statutes/chapters/ch50/050_001_0063.html",
+            "proposition": "K.S.A. 50-163(e)(6) supports that the Restraint of Trade Act's mandatory reformation command does not apply to covenants not to compete.",
+            "verbatimQuote": "any franchise agreements or covenants not to compete",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-ksa-noncompete-exclusion-severability"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#address-survival-per-covenant",
+        "requirementGuidance": "Per-covenant survival keeps each clock independently checkable — perpetual for trade secrets, finite for everything else. Each Kansas covenant must also survive its own reasonableness analysis, and a single bundled survival clause obscures exactly the per-covenant timing a reviewer needs to test.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-assignment-and-successors",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assignment and successors",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#address-assignment-and-successors",
+        "requirementGuidance": "Confirm employer-side assignability to successors and that the employee cannot assign. In a sale, remember the covenant landscape shifts with the signer: solicitation covenants signed by an owner or seller ride a longer statutory runway than employee covenants, so an acquirer protecting purchased goodwill should paper sellers as owners rather than rely on assigned employee covenants alone.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "specify-governing-law-and-venue",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.specify-governing-law-and-venue",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law, venue, and forum",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#specify-governing-law-and-venue",
+        "requirementGuidance": "Specify governing law, venue, and dispute process. This checklist analyzes the Kansas framework, so confirm the selections are stated expressly and match where the work and the workforce actually sit; flag any out-of-state selection for counsel rather than treating it as routine boilerplate.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Boilerplate worth one Kansas-specific glance: because continued employment alone supports a covenant signed after hire, amendments and restatements are easy to paper here — so confirm the merger clause names which covenant instrument survives, or a superseded agreement and its replacement can both appear live in the file.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "puritan-bennett-amendments",
+            "authorityType": "case-law",
+            "title": "Puritan-Bennett Corp. v. Richter",
+            "citation": "Puritan-Bennett Corp. v. Richter, 8 Kan. App. 2d 311, 657 P.2d 589 (1983).",
+            "url": "https://www.courtlistener.com/opinion/1159191/puritan-bennett-corp-v-richter/",
+            "deepLink": "https://www.courtlistener.com/opinion/1159191/puritan-bennett-corp-v-richter/#:~:text=After%20reviewing%20these%20authorities%2C%20we,a%20covenant%20not%20to%20compete.",
+            "proposition": "Puritan-Bennett supports that continued employment can carry a refreshed or amended covenant in Kansas, which makes merger-clause precision the control point.",
+            "verbatimQuote": "After reviewing these authorities, we hold that continued employment should not as a matter of law be disregarded as consideration sufficient to uphold a covenant not to compete.",
+            "date": "1983-01-20",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-puritan-bennett-amendments"
+          }
+        ]
+      },
+      {
+        "requirementId": "satisfy-the-weber-reasonableness-factors",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.kansas.satisfy-the-weber-reasonableness-factors",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Four-factor reasonableness for the non-compete",
+        "sectionId": "kansas-statutory-gates",
+        "itemNumber": "19.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#satisfy-the-weber-reasonableness-factors",
+        "requirementGuidance": "Run the non-compete through all four questions: does it protect a legitimate business interest of the employer, does it create an undue burden on the employee, is it injurious to the public welfare, and are the time and territorial limits reasonable. The covenant must also be ancillary to a lawful employment contract — the employer proves each element, and the public-welfare factor is a live screen courts actually apply, not a recital.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "weber-governing-gate",
+            "authorityType": "case-law",
+            "title": "Weber v. Tillman",
+            "citation": "Weber v. Tillman, 259 Kan. 457, 913 P.2d 84 (1996).",
+            "url": "https://www.courtlistener.com/opinion/7969238/weber-v-tillman/",
+            "deepLink": "https://www.courtlistener.com/opinion/7969238/weber-v-tillman/#:~:text=A%20noncompetition%20covenant%20ancillary%20to,adverse%20to%20the%20public%20welfare.",
+            "proposition": "Weber v. Tillman supports the governing standard: a non-compete ancillary to an employment contract is enforceable if reasonable and not adverse to the public welfare.",
+            "verbatimQuote": "A noncompetition covenant ancillary to an employment contract is valid and enforceable if the restraint is reasonable under the circumstances and not adverse to the public welfare.",
+            "date": "1996-03-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-weber-governing-gate"
+          },
+          {
+            "sourceId": "weber-four-factor-gate",
+            "authorityType": "case-law",
+            "title": "Weber v. Tillman",
+            "citation": "Weber v. Tillman, 259 Kan. 457, 913 P.2d 84 (1996).",
+            "url": "https://www.courtlistener.com/opinion/7969238/weber-v-tillman/",
+            "deepLink": "https://www.courtlistener.com/opinion/7969238/weber-v-tillman/#:~:text=The%20analysis%20of%20whether%20the,contained%20in%20the%20covenant%20reasonable%3F",
+            "proposition": "Weber v. Tillman supports the four-factor reasonableness test this gate implements.",
+            "verbatimQuote": "The analysis of whether the noncompetition clause is reasonable evaluates these factors: (1) Does the covenant protect a legitimate business interest of the employer? (2) Does the covenant create an undue burden on the employee? (3) Is the covenant injurious to the public welfare? (4) Are the time and territorial limitations contained in the covenant reasonable?",
+            "date": "1996-03-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-weber-four-factor-gate"
+          },
+          {
+            "sourceId": "caring-hearts-public-welfare-gate",
+            "authorityType": "case-law",
+            "title": "Caring Hearts Personal Home Services, Inc. v. Hobley",
+            "citation": "Caring Hearts Personal Home Servs., Inc. v. Hobley, 35 Kan. App. 2d 345, 130 P.3d 1215 (2006).",
+            "url": "https://www.courtlistener.com/opinion/7213041/caring-hearts-personal-home-services-inc-v-hobley/",
+            "deepLink": "https://www.courtlistener.com/opinion/7213041/caring-hearts-personal-home-services-inc-v-hobley/#:~:text=There%20is%20no%20evidence%20that%20enforcement,injurious%20to%20the%20public%20welfare.",
+            "proposition": "Caring Hearts supports that Kansas courts apply the public-welfare factor as a real screen on the facts of each covenant.",
+            "verbatimQuote": "There is no evidence that enforcement of the noncompete agreement is injurious to the public welfare.",
+            "date": "2006-03-24",
+            "pullQuoteLocator": "There is no evidence that enforcement|injurious to the public welfare.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-caring-hearts-public-welfare-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "keep-statutory-presumptions-off-the-non-compete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.kansas.keep-statutory-presumptions-off-the-non-compete",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Statutory presumptions stay off the non-compete",
+        "sectionId": "kansas-statutory-gates",
+        "itemNumber": "19.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#keep-statutory-presumptions-off-the-non-compete",
+        "requirementGuidance": "Strike any recital claiming the non-compete is conclusively presumed enforceable, or that a court must modify and enforce it, under the Kansas Restraint of Trade Act. The Act excludes covenants not to compete, so its presumptions and its mandatory reformation command belong to the solicitation and owner covenants — the non-compete stands or falls on the common-law reasonableness test. No published Kansas decision has construed the exclusion yet, which is one more reason not to lean on the statute here.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ksa-noncompete-exclusion-gate",
+            "authorityType": "primary-law",
+            "title": "K.S.A. 50-163",
+            "citation": "K.S.A. 50-163(e)(6).",
+            "url": "https://ksrevisor.gov/statutes/chapters/ch50/050_001_0063.html",
+            "proposition": "K.S.A. 50-163(e)(6) supports that the Restraint of Trade Act, including its conclusive presumptions and reformation command, does not apply to covenants not to compete.",
+            "verbatimQuote": "any franchise agreements or covenants not to compete",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-ksa-noncompete-exclusion-gate"
+          },
+          {
+            "sourceId": "ksa-reformation-command-gate",
+            "authorityType": "primary-law",
+            "title": "K.S.A. 50-163",
+            "citation": "K.S.A. 50-163(b).",
+            "url": "https://ksrevisor.gov/statutes/chapters/ch50/050_001_0063.html",
+            "proposition": "K.S.A. 50-163(b) supports that the mandatory modify-and-enforce command operates only on covenants the Act governs.",
+            "verbatimQuote": "If a covenant that is not presumed to be enforceable pursuant to subsection (c) is determined to be overbroad or otherwise not reasonably necessary to protect a business interest of the business entity seeking enforcement of the covenant, the court shall modify the covenant, enforce the covenant as modified and grant only the relief reasonably necessary to protect such interests.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-ksa-reformation-command-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "fit-customer-nonsolicit-within-the-two-year-material-contact-safe-harbor",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.kansas.fit-customer-nonsolicit-within-the-two-year-material-contact-safe-harbor",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit inside the two-year safe harbor",
+        "sectionId": "kansas-statutory-gates",
+        "itemNumber": "19.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#fit-customer-nonsolicit-within-the-two-year-material-contact-safe-harbor",
+        "requirementGuidance": "Check one definition and one number: the covenant is limited to material contact customers — customers the employee solicited, produced, or serviced, or about whom the employee held confidential or proprietary information — and it runs no more than two years after the employment ends. Inside those limits the covenant is conclusively presumed enforceable; even then the statute preserves the employee's legal and equitable defenses, so the presumption ends the restraint-of-trade argument, not the case.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ksa-customer-nonsolicit-gate",
+            "authorityType": "primary-law",
+            "title": "K.S.A. 50-163",
+            "citation": "K.S.A. 50-163(c)(5).",
+            "url": "https://ksrevisor.gov/statutes/chapters/ch50/050_001_0063.html",
+            "proposition": "K.S.A. 50-163(c)(5) supports the conclusive presumption for an employee customer non-solicit limited to material contact customers and capped at two years.",
+            "verbatimQuote": "A covenant in writing in which an employee agrees not to solicit, recruit, induce, persuade, encourage, direct or otherwise interfere with, directly or indirectly, a business entity's customers, including any reduction, termination, acceptance or transfer of any customer's business, in whole or in part, for the purpose of providing any product or service that is competitive with those provided by the employer shall be conclusively presumed to be enforceable and not a restraint of trade if the covenant is limited to material contact customers and the covenant is between an employer and an employee and does not continue for more than two years following the end of the employee's employment with the employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-ksa-customer-nonsolicit-gate"
+          },
+          {
+            "sourceId": "ksa-material-contact-gate",
+            "authorityType": "primary-law",
+            "title": "K.S.A. 50-163",
+            "citation": "K.S.A. 50-163(g)(2).",
+            "url": "https://ksrevisor.gov/statutes/chapters/ch50/050_001_0063.html",
+            "proposition": "K.S.A. 50-163(g)(2) supports the statutory definition of material contact customer that scopes the safe harbor.",
+            "verbatimQuote": "\"Material contact customer\" means any customer or prospective customer that is solicited, produced or serviced, directly or indirectly, by the employee or owner at issue or any customer or prospective customer about whom the employee or owner, directly or indirectly, had confidential business or proprietary information or trade secrets in the course of the employee's or owner's relationship with the customer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-ksa-material-contact-gate"
+          },
+          {
+            "sourceId": "ksa-defenses-preserved-gate",
+            "authorityType": "primary-law",
+            "title": "K.S.A. 50-163",
+            "citation": "K.S.A. 50-163(c)(7).",
+            "url": "https://ksrevisor.gov/statutes/chapters/ch50/050_001_0063.html",
+            "proposition": "K.S.A. 50-163(c)(7) supports that the employee or owner may still assert legal and equitable defenses against a covenant inside a safe harbor.",
+            "verbatimQuote": "Notwithstanding the presumption of enforceability provided in subsections (c)(2) through (c)(5), an employee or owner shall be permitted to assert any applicable defense available at law or in equity for the court's consideration in a dispute regarding a written covenant.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-ksa-defenses-preserved-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "cap-owner-nonsolicit-covenants-at-four-years",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.kansas.cap-owner-nonsolicit-covenants-at-four-years",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Owner covenants inside the four-year safe harbor",
+        "sectionId": "kansas-statutory-gates",
+        "itemNumber": "19.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#cap-owner-nonsolicit-covenants-at-four-years",
+        "requirementGuidance": "For covenants signed by an owner or seller, use the longer statutory runway: a no-recruit covenant and a material-contact customer non-solicit are each conclusively presumed enforceable for up to four years after the owner's business relationship ends. The owner definition reaches sellers of any part of a business entity's assets or equity, so a buyer protecting purchased goodwill should paper sellers under these provisions — while remembering that a sale-related covenant not to compete stays outside the Act and answers to the common-law reasonableness test.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "ksa-owner-no-recruit-gate",
+            "authorityType": "primary-law",
+            "title": "K.S.A. 50-163",
+            "citation": "K.S.A. 50-163(c)(2).",
+            "url": "https://ksrevisor.gov/statutes/chapters/ch50/050_001_0063.html",
+            "proposition": "K.S.A. 50-163(c)(2) supports the four-year conclusive presumption for an owner covenant not to solicit a business entity's employees or owners.",
+            "verbatimQuote": "A covenant in writing in which an owner agrees to not solicit, recruit, induce, persuade, encourage, direct or otherwise interfere with, directly or indirectly, one or more employees or owners of a business entity for the purpose of interfering with the employment or ownership relationship of such employees or owners shall be conclusively presumed to be enforceable and not a restraint of trade if the covenant is between a business entity and an owner of the business entity and the covenant does not continue for more than four years following the end of the owner's business relationship with the business entity.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-ksa-owner-no-recruit-gate"
+          },
+          {
+            "sourceId": "ksa-owner-customer-nonsolicit-gate",
+            "authorityType": "primary-law",
+            "title": "K.S.A. 50-163",
+            "citation": "K.S.A. 50-163(c)(3).",
+            "url": "https://ksrevisor.gov/statutes/chapters/ch50/050_001_0063.html",
+            "proposition": "K.S.A. 50-163(c)(3) supports the four-year conclusive presumption for an owner covenant not to solicit the entity's material contact customers.",
+            "verbatimQuote": "A covenant in writing in which an owner agrees to not solicit, induce, persuade, encourage, service, direct or otherwise interfere with, directly or indirectly, a business entity's customers, including any reduction, termination, acceptance or transfer of any customer's business, in whole or in part, for the purpose of providing any product or service that is competitive with those provided by the business entity shall be conclusively presumed to be enforceable and not a restraint of trade if the covenant is limited to material contact customers and the covenant does not continue for more than four years following the end of the owner's business relationship with the business entity.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-ksa-owner-customer-nonsolicit-gate"
+          },
+          {
+            "sourceId": "ksa-owner-definition-gate",
+            "authorityType": "primary-law",
+            "title": "K.S.A. 50-163",
+            "citation": "K.S.A. 50-163(g)(3).",
+            "url": "https://ksrevisor.gov/statutes/chapters/ch50/050_001_0063.html",
+            "proposition": "K.S.A. 50-163(g)(3) supports the broad statutory owner definition, which includes sellers of business assets and equity interests.",
+            "verbatimQuote": "\"Owner\" means a current or former owner or seller of all or any part of the assets of a business entity or any interest in a business entity, including, but not limited to, a partnership interest, a membership interest in a limited liability company or a series limited liability company or any other equity interest or ownership interest.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-ksa-owner-definition-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "protect-non-trade-secret-information-by-separate-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.kansas.protect-non-trade-secret-information-by-separate-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Contract protection for non-secret information",
+        "sectionId": "kansas-statutory-gates",
+        "itemNumber": "19.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#protect-non-trade-secret-information-by-separate-covenant",
+        "requirementGuidance": "Map the information architecture: trade secrets go to the statute, everything else goes to contract. The trade-secret act is the exclusive remedy for misappropriation — tort claims are preempted — but it leaves contractual remedies untouched, so a separate, reasonable confidentiality covenant is the only protection ordinary confidential information gets. An agreement that labels everything a trade secret protects the non-secret half of that inventory with nothing.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wolfe-exclusive-remedy-gate",
+            "authorityType": "case-law",
+            "title": "Wolfe Electric, Inc. v. Duckworth",
+            "citation": "Wolfe Electric, Inc. v. Duckworth, 293 Kan. 375, 266 P.3d 516 (2011).",
+            "url": "https://www.courtlistener.com/opinion/7970813/wolfe-electric-inc-v-duckworth/",
+            "deepLink": "https://www.courtlistener.com/opinion/7970813/wolfe-electric-inc-v-duckworth/#:~:text=This%20is%20error%20because%20tort,KUTSA%20is%20the%20exclusive%20remedy.",
+            "proposition": "Wolfe Electric supports that KUTSA is the exclusive remedy for trade-secret misappropriation, preempting tort claims for that recovery.",
+            "verbatimQuote": "This is error because tort causes of action cannot include a claim to recover for trade secrets; KUTSA is the exclusive remedy.",
+            "date": "2011-10-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-wolfe-exclusive-remedy-gate"
+          },
+          {
+            "sourceId": "kutsa-contract-remedies-gate",
+            "authorityType": "primary-law",
+            "title": "K.S.A. 60-3326",
+            "citation": "K.S.A. 60-3326(b)(1).",
+            "url": "https://ksrevisor.gov/statutes/chapters/ch60/060_033_0026.html",
+            "proposition": "K.S.A. 60-3326 supports that the trade-secret act does not displace contractual remedies, leaving the confidentiality covenant as the protection for non-trade-secret information.",
+            "verbatimQuote": "This act does not affect: (1) Contractual remedies, whether or not based upon misappropriation of a trade secret;",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/kansas#src-kutsa-contract-remedies-gate"
+          }
+        ]
+      }
+    ]
+  }
+}

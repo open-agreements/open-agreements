@@ -1,0 +1,1322 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/florida",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/florida.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/florida",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/florida/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/florida/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "related-form",
+      "href": "https://openagreements.org/templates/openagreements-restrictive-covenant-florida",
+      "type": "text/html",
+      "title": "Employee Restrictive Covenant (Florida)"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "florida",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — Florida",
+      "description": "A clause-by-clause reviewer checklist for Florida employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under Fla. Stat. § 542.335 and the 2025 CHOICE Act.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "Florida",
+      "coverage": "Florida (US)",
+      "lastReviewed": "2026-06-11",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 50,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "label": "Physician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "florida-statutory-drafting-points",
+        "label": "Florida statutory drafting points"
+      },
+      {
+        "sectionId": "choice-act-covered-employee-track",
+        "label": "CHOICE Act covered-employee track"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#identify-parties",
+        "requirementGuidance": "Name the entity that actually employs the worker in the cover terms. Florida permits a third party, assignee, or successor to enforce only when the contract says so expressly, so an agreement papered to the wrong affiliate can leave the real operating company with nothing to enforce.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#identify-effective-date",
+        "requirementGuidance": "Date the instrument. Florida's modern framework governs covenants entered into on or after July 1, 1996, and agreements signed from July 1, 2025 can also qualify for the CHOICE Act's covered-employee track — both thresholds run from the execution date this term records.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "fl-choice-effective",
+            "authorityType": "primary-law",
+            "title": "Ch. 2025-213, Laws of Fla. (Florida CHOICE Act)",
+            "citation": "Ch. 2025-213, Laws of Fla., § 22.",
+            "url": "https://laws.flrules.org/2025/213",
+            "proposition": "The CHOICE Act took effect July 1, 2025, so the execution date determines whether the covered-employee track is available.",
+            "verbatimQuote": "This act shall take effect July 1, 2025.",
+            "date": "2025-07-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-fl-choice-effective"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#identify-employee-title",
+        "requirementGuidance": "Capture the role and its compensation context. CHOICE Act coverage turns on salary measured against the county annual mean wage — and a health care practitioner is excluded no matter the pay — so the title block is where covered-employee review starts.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "fl-543-covered-employee",
+            "authorityType": "primary-law",
+            "title": "Fla. Stat. § 542.43",
+            "citation": "Fla. Stat. § 542.43(3) (2025).",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2025/542.43",
+            "proposition": "A covered employee under the CHOICE Act earns more than twice the annual mean wage of the relevant Florida county.",
+            "verbatimQuote": "earns or is reasonably expected to earn a salary greater than twice the annual mean wage of the county in this state in which the covered employer has its principal place of business",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-fl-543-covered-employee"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#identify-governing-law",
+        "requirementGuidance": "Confirm the governing-law selection, then remember its limits in both directions: the CHOICE Act claims a covered employee whose primary place of work is Florida regardless of any choice-of-law clause, while sister states can refuse to apply Florida law on public-policy grounds.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q12-545-applicability",
+            "authorityType": "primary-law",
+            "title": "Fla. Stat. § 542.45",
+            "citation": "Fla. Stat. § 542.45(1)(a) (2025).",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2025/542.45",
+            "proposition": "The CHOICE Act applies to a covered employee whose primary place of work is Florida regardless of any choice-of-law provision.",
+            "verbatimQuote": "A covered noncompete agreement with a covered employee who maintains a primary place of work in this state, regardless of any applicable choice of law provisions",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-q12-545-applicability"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#define-confidential-information",
+        "requirementGuidance": "Define confidential information with boundaries that track Florida's protectable categories. Valuable confidential business or professional information short of trade-secret status is itself a legitimate business interest under the statute — but only information that genuinely qualifies, so the definition should exclude what is public or generally known.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "fl-542335-confidential-lbi",
+            "authorityType": "primary-law",
+            "title": "Fla. Stat. § 542.335(1)(b)2",
+            "citation": "Fla. Stat. § 542.335(1)(b)2 (2025).",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2025/542.335",
+            "proposition": "Valuable confidential business or professional information short of trade-secret status is a listed legitimate business interest.",
+            "verbatimQuote": "Valuable confidential business or professional information that otherwise does not qualify as trade secrets.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-fl-542335-confidential-lbi"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#define-trade-secrets",
+        "requirementGuidance": "Keep trade secrets separately defined. In Florida they are protected by FUTSA for as long as secrecy lasts, they sit first on the legitimate-business-interest list, and a covenant genuinely predicated on them earns the widest duration presumption — none of which works if they are blended into general confidentiality.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q13-688002-def",
+            "authorityType": "primary-law",
+            "title": "Fla. Stat. § 688.002",
+            "citation": "Fla. Stat. § 688.002(4) (2025).",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2025/688.002",
+            "proposition": "FUTSA defines a trade secret as information deriving independent economic value from secrecy and subject to reasonable secrecy efforts.",
+            "verbatimQuote": "“Trade secret” means information, including a formula, pattern, compilation, program, device, method, technique, or process",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-q13-688002-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-period",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#define-restricted-period",
+        "requirementGuidance": "Run every covenant off one defined Restricted Period so each duration can be checked once against the statutory presumption row for its covenant type, rather than re-derived clause by clause.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-restricted-territory",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-territory",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted territory",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#define-restricted-territory",
+        "requirementGuidance": "Florida tests restraints for reasonableness in time, area, and line of business, with the enforcing party bearing the burden of showing reasonable necessity. A territory tied to where the worker actually operated is the easy version of that showing; an undefined one hands the court something to modify.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q1-542335-intro",
+            "authorityType": "primary-law",
+            "title": "Fla. Stat. § 542.335",
+            "citation": "Fla. Stat. § 542.335(1) (2025).",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2025/542.335",
+            "proposition": "Section 542.335 makes restrictive covenants enforceable when reasonable in time, area, and line of business.",
+            "verbatimQuote": "enforcement of contracts that restrict or prohibit competition during or after the term of restrictive covenants, so long as such contracts are reasonable in time, area, and line of business, is not prohibited.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-q1-542335-intro"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered customers",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#define-covered-customers",
+        "requirementGuidance": "Bound the class by substantial relationships with specific customers — the statutory phrase — rather than the employer's entire book. Florida's interest list is open-ended (referral sources can qualify on the right proof), but the relationship must be specific and provable, and the definition is where that specificity starts.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q2-white-referral",
+            "authorityType": "case-law",
+            "title": "White v. Mederi Caretenders Visiting Servs. of Se. Fla., LLC",
+            "citation": "White v. Mederi Caretenders Visiting Servs. of Se. Fla., LLC, 226 So. 3d 774 (Fla. 2017).",
+            "url": "https://www.courtlistener.com/opinion/4426106/sc16-400-elizabeth-white-v-mederi-caretenders-visiting-services-of/",
+            "deepLink": "https://www.courtlistener.com/opinion/4426106/sc16-400-elizabeth-white-v-mederi-caretenders-visiting-services-of/#:~:text=In%20light%20of%20the%20foregoing%2C,the%20context%20and%20proof%20adduced.",
+            "proposition": "White holds the statutory list of legitimate business interests is non-exhaustive and that referral sources can qualify, depending on context and proof.",
+            "verbatimQuote": "In light of the foregoing, we conclude that home health service referral sources may be a protected legitimate business interest within the meaning of section 542.335, depending upon the context and proof adduced.",
+            "date": "2017-09-14",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-q2-white-referral"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#define-covered-employees",
+        "requirementGuidance": "A bounded class of colleagues the worker dealt with or supervised during a stated look-back. Florida enforces no-hire clauses under the same statutory framework as every other covenant, so a definition sweeping in the whole workforce simply invites the court to cut it down.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#define-protected-interests",
+        "requirementGuidance": "In Florida this definition is the whole ballgame: the enforcing party must plead and prove a legitimate business interest, and a covenant supported by none is void. The contractual recital should mirror interests the employer can actually evidence, not recite the statutory list wholesale.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q2-542335-lbi-list",
+            "authorityType": "primary-law",
+            "title": "Fla. Stat. § 542.335",
+            "citation": "Fla. Stat. § 542.335(1)(b) (2025).",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2025/542.335",
+            "proposition": "The enforcing party must plead and prove one or more legitimate business interests justifying the covenant.",
+            "verbatimQuote": "The person seeking enforcement of a restrictive covenant shall plead and prove the existence of one or more legitimate business interests justifying the restrictive covenant.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-q2-542335-lbi-list"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-competitive-business",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Competitive business",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#define-competitive-business",
+        "requirementGuidance": "Describe the restrained line of business concretely. The statute measures reasonableness by line of business, and while a Florida court will modify an overbroad definition rather than strike the covenant, what survives modification is only what the proven interest requires — so draft to that scope from the start.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where ownership or investment in competitors is restricted, look for a passive-holdings carve-out below a stated threshold. Even with Florida's pro-enforcement canons, a clause banning ordinary public-market holdings exceeds any legitimate interest and just gives the court a restraint to trim.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#define-passive-public-holdings",
+        "requirementGuidance": "An optional capitalized term; many forms inline the threshold instead. If it appears, confirm the threshold matches the operative carve-out it supports.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.11",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#define-solicit",
+        "requirementGuidance": "Spell out whether accepting unsolicited business counts as solicitation. Florida case law has refused to enforce a valid non-solicit where the customers came to the former employees unprompted, so this definition decides who wins the who-called-whom fight.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "carter-solicit-initiation",
+            "authorityType": "case-law",
+            "title": "Environmental Services, Inc. v. Carter",
+            "citation": "Env't Servs., Inc. v. Carter, 9 So. 3d 1258 (Fla. 5th DCA 2009).",
+            "url": "https://www.courtlistener.com/opinion/1645720/environmental-services-inc-v-carter/",
+            "deepLink": "https://www.courtlistener.com/opinion/1645720/environmental-services-inc-v-carter/#:~:text=While%20the%20court%20ruled%20that,without%20any%20solicitation%20from%20them.",
+            "proposition": "Carter shows a customer non-solicitation covenant can be valid yet go unenforced where the clients sought out the employees without any solicitation.",
+            "verbatimQuote": "While the court ruled that the non-solicitation covenant was valid, it refused to enforce that covenant, finding that ESI’s clients sought out Carter and Hannon without any solicitation from them.",
+            "date": "2009-04-24",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-carter-solicit-initiation"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.12",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#define-termination-of-employment",
+        "requirementGuidance": "Make the Restricted Period trigger indifferent to how employment ends — resignation, dismissal, or expiration of a term. Florida's duration presumptions are counted from the end of the relationship, and an ambiguous trigger muddies that arithmetic.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "acknowledge-timing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-timing",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "When the agreement was signed",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#acknowledge-timing",
+        "requirementGuidance": "Florida is forgiving on timing — continued at-will employment is sufficient consideration, and courts have enforced covenants signed long after the hire date — but the acknowledgement still fixes the execution date that CHOICE Act notice compliance and the 1996 statutory threshold are measured against.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q9-omi-consideration",
+            "authorityType": "case-law",
+            "title": "Open Magnetic Imaging, Inc. v. Nieves-Garcia",
+            "citation": "Open Magnetic Imaging, Inc. v. Nieves-Garcia, 826 So. 2d 415 (Fla. 3d DCA 2002).",
+            "url": "https://www.courtlistener.com/opinion/1630166/omi-inc-v-nieves-garcia/",
+            "deepLink": "https://www.courtlistener.com/opinion/1630166/omi-inc-v-nieves-garcia/#:~:text=In%20fact%2C%20we%20have%20located,it%20after%20employment%20has%20commenced.",
+            "proposition": "Open Magnetic Imaging confirms Florida courts will enforce a non-compete executed after employment began, treating continued employment as sufficient.",
+            "verbatimQuote": "In fact, we have located no Florida decision to date which has declined to enforce a non-compete agreement by virtue of the fact that an employee has been required to execute it after employment has commenced.",
+            "date": "2002-08-07",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-q9-omi-consideration"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-opportunity-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Chance to consult a lawyer",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#acknowledge-opportunity-to-consult-counsel",
+        "requirementGuidance": "On the ordinary § 542.335 track this is good hygiene; on the CHOICE Act track it is a statutory condition — the covered employee must be advised in writing of the right to seek counsel before signing. Flag its absence in any high-earner agreement.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q6-545-counsel",
+            "authorityType": "primary-law",
+            "title": "Fla. Stat. § 542.45",
+            "citation": "Fla. Stat. § 542.45(2)(a) (2025).",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2025/542.45",
+            "proposition": "A covered non-compete is enforceable only if the employee was advised in writing of the right to seek counsel before execution and given the required notice.",
+            "verbatimQuote": "A covered employee was advised, in writing, of the right to seek counsel before execution of the covered noncompete agreement and was provided notice as described in subsection (3)",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-q6-545-counsel"
+          }
+        ]
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "No end date on trade-secret obligations: protection lasts as long as secrecy under federal law and FUTSA alike, and a fixed term needlessly surrenders it. The perpetual obligation also underpins any later claim to the trade-secret duration presumption.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-trade-secret-secrecy",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
+            "citation": "18 U.S.C. § 1839(3)(B) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1839",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
+            "proposition": "Federal law keys trade-secret status to continued secrecy, which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-dtsa-trade-secret-secrecy"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#state-confidentiality-duration",
+        "requirementGuidance": "Ordinary confidential information gets its own finite term. The two-track structure also maps onto Florida's duration scheme, where only a covenant genuinely predicated on trade secrets earns the five-to-ten-year presumption window.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q3-542335-tradesecret-presumption",
+            "authorityType": "primary-law",
+            "title": "Fla. Stat. § 542.335",
+            "citation": "Fla. Stat. § 542.335(1)(e) (2025).",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2025/542.335",
+            "proposition": "A covenant predicated on trade-secret protection is presumed reasonable up to five years and unreasonable beyond ten years.",
+            "verbatimQuote": "a court shall presume reasonable in time any restraint of 5 years or less and shall presume unreasonable in time any restraint of more than 10 years.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-q3-542335-tradesecret-presumption"
+          }
+        ]
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#disclose-dtsa-notice",
+        "requirementGuidance": "A federal requirement that applies in Florida like everywhere else: omit the whistleblower-immunity notice and the employer forfeits exemplary damages and attorney fees in a later DTSA suit against the worker.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-immunity-notice",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-dtsa-immunity-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Confidentiality and non-disparagement terms must leave wage and working-condition discussion alone. Section 7 protects that speech in every state — Florida's covenant-friendly statute does not change federal labor law — and the Board has been striking overbroad clauses.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nlra-section-7-rights",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-nlra-section-7-rights"
+          },
+          {
+            "sourceId": "mclaren-macomb-protected-activity",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-mclaren-macomb-protected-activity"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#permit-compelled-disclosure",
+        "requirementGuidance": "Check the carve-out for disclosure required by law, court order, or a government inquiry, with notice to the employer where lawful — the standard cure for the contract-versus-subpoena bind.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#require-property-return-and-certification",
+        "requirementGuidance": "Return-or-delete at separation plus a written certification of compliance. In Florida the certification becomes a clean exhibit in the injunction practice the statute is built around — concrete proof of what was returned and when, if information later surfaces somewhere it should not.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-employee-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#permit-employee-nonsolicit",
+        "requirementGuidance": "Optional, and comfortably enforceable in Florida under the same statutory framework as everything else. The cases enforce no-hire clauses scoped to real working relationships — and trim overlong terms down to the presumption window rather than voiding them.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q8-balasco-nohire",
+            "authorityType": "case-law",
+            "title": "Balasco v. Gulf Auto Holding, Inc.",
+            "citation": "Balasco v. Gulf Auto Holding, Inc., 707 So. 2d 858 (Fla. 2d DCA 1998).",
+            "url": "https://www.courtlistener.com/opinion/1671732/balasco-v-gulf-auto-holding-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/1671732/balasco-v-gulf-auto-holding-inc/#:~:text=We%20agree%20that%20the%20agreement,no%20more%20than%20two%20years.",
+            "proposition": "Balasco enforced an employee anti-piracy (no-hire) covenant but reduced its three-year term to two years under the duration presumption.",
+            "verbatimQuote": "We agree that the agreement is enforceable but remand to shorten the period of restraint to no more than two years.",
+            "date": "1998-03-04",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-q8-balasco-nohire"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-customer-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#permit-customer-nonsolicit",
+        "requirementGuidance": "When included, confirm it tracks Covered Customers and the Restricted Period. Validity is only half the battle in Florida: enforcement can still fail where the customer initiated the contact, which is why this clause and the Solicit definition have to be reviewed together.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q8-carter-nonsolicit",
+            "authorityType": "case-law",
+            "title": "Environmental Services, Inc. v. Carter",
+            "citation": "Env't Servs., Inc. v. Carter, 9 So. 3d 1258 (Fla. 5th DCA 2009).",
+            "url": "https://www.courtlistener.com/opinion/1645720/environmental-services-inc-v-carter/",
+            "deepLink": "https://www.courtlistener.com/opinion/1645720/environmental-services-inc-v-carter/#:~:text=While%20the%20court%20ruled%20that,without%20any%20solicitation%20from%20them.",
+            "proposition": "Carter shows a customer non-solicitation covenant can be valid yet go unenforced where the clients sought out the employees without any solicitation.",
+            "verbatimQuote": "While the court ruled that the non-solicitation covenant was valid, it refused to enforce that covenant, finding that ESI’s clients sought out Carter and Hannon without any solicitation from them.",
+            "date": "2009-04-24",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-q8-carter-nonsolicit"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-dealing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#permit-non-dealing",
+        "requirementGuidance": "Broader than a non-solicit — it bars the business even when the customer calls first. Florida analyzes it under the same legitimate-interest and reasonableness framework rather than a separate hostility rule, but the broader reach calls for a correspondingly strong interest showing.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "fl-542335-restraints",
+            "authorityType": "primary-law",
+            "title": "Fla. Stat. § 542.335",
+            "citation": "Fla. Stat. § 542.335(1) (2025).",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2025/542.335",
+            "proposition": "Section 542.335 governs every contract restricting or prohibiting competition, which is why non-dealing covenants are analyzed under the same framework.",
+            "verbatimQuote": "enforcement of contracts that restrict or prohibit competition during or after the term of restrictive covenants, so long as such contracts are reasonable in time, area, and line of business, is not prohibited.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-fl-542335-restraints"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-compete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#permit-non-compete",
+        "requirementGuidance": "Florida will enforce a true non-compete when the employer pleads and proves a legitimate interest and reasonable necessity — a friendlier baseline than most states. The review question is therefore fit, not survival: bounded territory, a defined competitive business, and a duration inside the presumption window for the relationship.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q1-542335-necessary",
+            "authorityType": "primary-law",
+            "title": "Fla. Stat. § 542.335",
+            "citation": "Fla. Stat. § 542.335(1)(c) (2025).",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2025/542.335",
+            "proposition": "The enforcing party must plead and prove that the restraint is reasonably necessary to protect the legitimate business interest.",
+            "verbatimQuote": "A person seeking enforcement of a restrictive covenant also shall plead and prove that the contractually specified restraint is reasonably necessary to protect the legitimate business interest or interests justifying the restriction.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-q1-542335-necessary"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Named-competitor narrowing",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementGuidance": "Where the employer can name its real competitors, restrict those. A Florida court faced with overbreadth modifies the restraint down to what is reasonably necessary — so a covenant tailored at signing is the one that gets enforced as written instead of rewritten on the bench.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "fl-542335-modify-narrowing",
+            "authorityType": "primary-law",
+            "title": "Fla. Stat. § 542.335",
+            "citation": "Fla. Stat. § 542.335(1)(c) (2025).",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2025/542.335",
+            "proposition": "Florida courts modify an overbroad restraint and grant only the relief reasonably necessary, which rewards covenants tailored at signing.",
+            "verbatimQuote": "If a contractually specified restraint is overbroad, overlong, or otherwise not reasonably necessary to protect the legitimate business interest or interests, a court shall modify the restraint and grant only the relief reasonably necessary to protect such interest or interests.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-fl-542335-modify-narrowing"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#permit-non-investment",
+        "requirementGuidance": "A deliberate inclusion, not a default. Verify the passive-holdings carve-out and the shared Restricted Period — an investment ban is still a restrictive covenant in Florida and needs its own legitimate-interest justification.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#require-non-disparagement",
+        "requirementGuidance": "Include it with a stated duration, then check the carve-outs: truthful testimony, statements to government agencies, and protected concerted activity must stay outside its reach. Federal labor law polices overbroad versions regardless of how covenant-friendly Florida's own statute is.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mclaren-macomb-nondisparagement",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-mclaren-macomb-nondisparagement"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-physician-specific-rights",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Physician rights and notices",
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#address-physician-specific-rights",
+        "requirementGuidance": "The dedicated clause should carry Florida's two physician rules: the § 542.336 specialty-monopoly void, which strikes a specialist's covenant in any county where one entity employs all the physicians in that specialty, and the CHOICE Act's categorical exclusion of health care practitioners from covered-employee status.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q7-542336-trigger",
+            "authorityType": "primary-law",
+            "title": "Fla. Stat. § 542.336",
+            "citation": "Fla. Stat. § 542.336 (2025).",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2025/542.336",
+            "proposition": "Section 542.336 voids a specialist physician's covenant where one entity employs or contracts with all physicians in that specialty in the county.",
+            "verbatimQuote": "A restrictive covenant entered into with a physician who is licensed under chapter 458 or chapter 459 and who practices a medical specialty in a county wherein one entity employs or contracts with, either directly or through related or affiliated entities, all physicians who practice such specialty in that county is not supported by a legitimate business interest.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-q7-542336-trigger"
+          },
+          {
+            "sourceId": "q7-543-healthcare-exclusion",
+            "authorityType": "primary-law",
+            "title": "Fla. Stat. § 542.43",
+            "citation": "Fla. Stat. § 542.43(3) (2025).",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2025/542.43",
+            "proposition": "The CHOICE Act's definition of covered employee excludes health care practitioners, so their covenants remain under section 542.335.",
+            "verbatimQuote": "The term does not include a person classified as a health care practitioner as defined in s. 456.001.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-q7-543-healthcare-exclusion"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "The standard representation that no prior covenant or order blocks the new role. Florida's enforcement-friendly climate makes inbound conflicts likelier to be litigated, so surfacing a prior employer's covenant before day one matters more here, not less.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#address-notice-to-future-employers",
+        "requirementGuidance": "A genuine drafting choice. If included, tie disclosure to a reasonable belief of breach: a notice letter that overstates a covenant's reach can create interference exposure even in a state as enforcement-friendly as Florida.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-tolling-during-breach",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-tolling-during-breach",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restriction extended during a breach",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#address-tolling-during-breach",
+        "requirementGuidance": "Florida's statute is silent on tolling — it neither grants nor forbids extending the period for time spent in breach — so the contract must say it expressly, and the employer should be prepared to defend the extension as equitable relief rather than assume state law supplies it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q10-542335-injunction",
+            "authorityType": "primary-law",
+            "title": "Fla. Stat. § 542.335",
+            "citation": "Fla. Stat. § 542.335(1)(j) (2025).",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2025/542.335",
+            "proposition": "Section 542.335 provides injunctive enforcement and a presumption of irreparable injury on violation, but does not address tolling or extension of the restricted period.",
+            "verbatimQuote": "The violation of an enforceable restrictive covenant creates a presumption of irreparable injury to the person seeking enforcement of a restrictive covenant.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-q10-542335-injunction"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#require-injunctive-relief-availability",
+        "requirementGuidance": "Include the irreparable-harm acknowledgement, then note that Florida does part of the work by statute: a violation of an enforceable covenant is presumed irreparable, and a temporary injunction requires a proper bond the parties cannot contract away.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q11-542335-bond",
+            "authorityType": "primary-law",
+            "title": "Fla. Stat. § 542.335",
+            "citation": "Fla. Stat. § 542.335(1)(j) (2025).",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2025/542.335",
+            "proposition": "A temporary injunction requires a proper bond, and a contractual waiver of the bond requirement is unenforceable.",
+            "verbatimQuote": "No temporary injunction shall be entered unless the person seeking enforcement of a restrictive covenant gives a proper bond",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-q11-542335-bond"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-attorneys-fees-and-costs",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Attorney fees and costs",
+        "sectionId": "remedies",
+        "itemNumber": "13.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#address-attorneys-fees-and-costs",
+        "requirementGuidance": "Florida courts can award prevailing-party fees in covenant litigation even without a contractual fee clause — and the statute makes provisions limiting that authority unenforceable — so review the fee clause for consistency with the statute rather than treating it as the only source of fee exposure.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q11-542335-fees",
+            "authorityType": "primary-law",
+            "title": "Fla. Stat. § 542.335",
+            "citation": "Fla. Stat. § 542.335(1)(k) (2025).",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2025/542.335",
+            "proposition": "A court may award attorney's fees and costs to the prevailing party in a restrictive-covenant action even without a contractual fee provision.",
+            "verbatimQuote": "a court may award attorney’s fees and costs to the prevailing party in any action seeking enforcement of, or challenging the enforceability of, a restrictive covenant.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-q11-542335-fees"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-court-to-narrow-overbroad-terms",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.florida.require-court-to-narrow-overbroad-terms",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Disclaimer of judicial modification",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#require-court-to-narrow-overbroad-terms",
+        "requirementGuidance": "Florida inverts the no-reformation stance some states require: judicial modification of an overbroad restraint is mandatory — the court shall modify and grant only the relief reasonably necessary — so the agreement must not disclaim, waive, or contract around narrowing. A void-if-overbroad savings clause of the kind Wyoming demands is affirmatively wrong in Florida; the correct drafting is modification-friendly savings language that acknowledges the court's narrowing authority.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q4-542335-modify",
+            "authorityType": "primary-law",
+            "title": "Fla. Stat. § 542.335",
+            "citation": "Fla. Stat. § 542.335(1)(c) (2025).",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2025/542.335",
+            "proposition": "Florida courts must modify an overbroad restraint and grant only the relief reasonably necessary, rather than voiding the covenant.",
+            "verbatimQuote": "If a contractually specified restraint is overbroad, overlong, or otherwise not reasonably necessary to protect the legitimate business interest or interests, a court shall modify the restraint and grant only the relief reasonably necessary to protect such interest or interests.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-q4-542335-modify"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#address-survival-per-covenant",
+        "requirementGuidance": "State survival per covenant. Each Florida covenant type carries its own presumption window — six months to two years for employees, out to ten years for trade-secret-predicated restraints — and per-covenant expiration is what lets a reviewer line each duration up against the right statutory row.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-assignment-and-successors",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assignment and successors",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#address-assignment-and-successors",
+        "requirementGuidance": "In Florida, silence here is fatal to successor enforcement: an assignee or successor may enforce only where the covenant expressly authorized it. Confirm express employer-side assignability — acquisitions, reorganizations, and PEO arrangements trip this constantly — and that the worker cannot assign.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "fl-542335-assignee-express",
+            "authorityType": "primary-law",
+            "title": "Fla. Stat. § 542.335(1)(f)2",
+            "citation": "Fla. Stat. § 542.335(1)(f)2 (2025).",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2025/542.335",
+            "proposition": "An assignee or successor can enforce a Florida restrictive covenant only where the covenant expressly authorized such enforcement.",
+            "verbatimQuote": "In the case of an assignee or successor, the restrictive covenant expressly authorized enforcement by a party’s assignee or successor.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-fl-542335-assignee-express"
+          }
+        ]
+      },
+      {
+        "requirementId": "specify-governing-law-and-venue",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.specify-governing-law-and-venue",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law and venue",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#specify-governing-law-and-venue",
+        "requirementGuidance": "Align governing law, venue, and dispute process. A Florida clause is strong at home but travels poorly into employee-protective states — New York's highest court refused to apply Florida law to a customer non-solicit on public-policy grounds — so treat the selection as risk management, not a guarantee.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "q12-brown-publicpolicy",
+            "authorityType": "case-law",
+            "title": "Brown & Brown, Inc. v. Johnson",
+            "citation": "Brown & Brown, Inc. v. Johnson, 25 N.Y.3d 364 (2015).",
+            "url": "https://www.courtlistener.com/opinion/2807346/brown-brown-v-theresa-a-johnson/",
+            "deepLink": "https://www.courtlistener.com/opinion/2807346/brown-brown-v-theresa-a-johnson/#:~:text=On%20this%20appeal%2C%20we%20hold,public%20policy%20of%20this%20state.",
+            "proposition": "Brown & Brown shows a sister state may refuse to apply Florida non-compete law where it conflicts with that state's public policy.",
+            "verbatimQuote": "On this appeal, we hold that applying Florida law on restrictive covenants related to the non-solicitation of customers by a former employee would violate the public policy of this state.",
+            "date": "2015-06-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-q12-brown-publicpolicy"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Confirm the merger clause, written-amendment and no-waiver mechanics, and e-signature validity. On the CHOICE Act track the paper record matters doubly: enforceability rides on documented written advisals and acknowledgements, so the formalities clause is part of the compliance story.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "recite-legitimate-business-interest",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.florida.recite-legitimate-business-interest",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Legitimate business interest recited",
+        "sectionId": "florida-statutory-drafting-points",
+        "itemNumber": "19.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#recite-legitimate-business-interest",
+        "requirementGuidance": "The recitals should name at least one statutory interest the covenants protect — trade secrets, valuable confidential information, substantial relationships with specific customers, goodwill, or extraordinary or specialized training. The enforcer must plead and prove the interest, and a covenant supported by none is void, so naming it up front frames the case the employer will one day have to make.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "fl-542335-lbi-categories",
+            "authorityType": "primary-law",
+            "title": "Fla. Stat. § 542.335(1)(b)",
+            "citation": "Fla. Stat. § 542.335(1)(b)1–3 (2025).",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2025/542.335",
+            "proposition": "The statute enumerates protectable legitimate business interests, including trade secrets, valuable confidential information, and substantial customer relationships.",
+            "verbatimQuote": "1. Trade secrets, as defined in s. 688.002(4). 2. Valuable confidential business or professional information that otherwise does not qualify as trade secrets. 3. Substantial relationships with specific prospective or existing customers, patients, or clients.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-fl-542335-lbi-categories"
+          },
+          {
+            "sourceId": "fl-542335-void-no-lbi",
+            "authorityType": "primary-law",
+            "title": "Fla. Stat. § 542.335(1)(b)",
+            "citation": "Fla. Stat. § 542.335(1)(b)5 (2025).",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2025/542.335",
+            "proposition": "A restrictive covenant not supported by a legitimate business interest is void and unenforceable.",
+            "verbatimQuote": "Any restrictive covenant not supported by a legitimate business interest is unlawful and is void and unenforceable.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-fl-542335-void-no-lbi"
+          }
+        ]
+      },
+      {
+        "requirementId": "limit-duration-within-presumptively-reasonable-window",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.florida.limit-duration-within-presumptively-reasonable-window",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Duration in the presumed-unreasonable zone",
+        "sectionId": "florida-statutory-drafting-points",
+        "itemNumber": "19.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#limit-duration-within-presumptively-reasonable-window",
+        "requirementGuidance": "Check each duration against the presumption row for its relationship: six months presumed reasonable and over two years presumed unreasonable for a former employee, one and three years for distributors and franchisees, three and seven for the sale of a business, five and ten where the covenant protects trade secrets. A term above the ceiling does not void the covenant — Florida modifies — but it flips the burden onto the enforcer and invites the court to shorten it, so a draft should not start in the presumed-unreasonable zone.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "fl-542335-employee-window",
+            "authorityType": "primary-law",
+            "title": "Fla. Stat. § 542.335(1)(d)1",
+            "citation": "Fla. Stat. § 542.335(1)(d)1 (2025).",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2025/542.335",
+            "proposition": "Against a former employee, a restraint of six months or less is presumed reasonable and one over two years is presumed unreasonable.",
+            "verbatimQuote": "a court shall presume reasonable in time any restraint 6 months or less in duration and shall presume unreasonable in time any restraint more than 2 years in duration.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-fl-542335-employee-window"
+          },
+          {
+            "sourceId": "fl-542335-sale-window",
+            "authorityType": "primary-law",
+            "title": "Fla. Stat. § 542.335(1)(d)3",
+            "citation": "Fla. Stat. § 542.335(1)(d)3 (2025).",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2025/542.335",
+            "proposition": "For a sale-of-business covenant, a restraint of three years or less is presumed reasonable and one over seven years presumed unreasonable.",
+            "verbatimQuote": "a court shall presume reasonable in time any restraint 3 years or less in duration and shall presume unreasonable in time any restraint more than 7 years in duration.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-fl-542335-sale-window"
+          },
+          {
+            "sourceId": "fl-542335-tradesecret-window",
+            "authorityType": "primary-law",
+            "title": "Fla. Stat. § 542.335(1)(e)",
+            "citation": "Fla. Stat. § 542.335(1)(e) (2025).",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2025/542.335",
+            "proposition": "A covenant predicated on trade-secret protection is presumed reasonable up to five years and unreasonable beyond ten years.",
+            "verbatimQuote": "a court shall presume reasonable in time any restraint of 5 years or less and shall presume unreasonable in time any restraint of more than 10 years.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-fl-542335-tradesecret-window"
+          }
+        ]
+      },
+      {
+        "requirementId": "authorize-assignee-and-third-party-beneficiary-enforcement-expressly",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.florida.authorize-assignee-and-third-party-beneficiary-enforcement-expressly",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assignee and beneficiary enforcement authorized",
+        "sectionId": "florida-statutory-drafting-points",
+        "itemNumber": "19.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#authorize-assignee-and-third-party-beneficiary-enforcement-expressly",
+        "requirementGuidance": "Express enforcement language for assignees, successors, and any intended third-party beneficiary — identified, with the benefit stated. This is the statute's quiet trap: buyers in an acquisition, restructured affiliates, and PEO arrangements all need the language, and none of it can be implied after the fact. The clause should be present by default, not reserved for deals the parties happen to foresee.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "fl-542335-tpb-express",
+            "authorityType": "primary-law",
+            "title": "Fla. Stat. § 542.335(1)(f)1",
+            "citation": "Fla. Stat. § 542.335(1)(f)1 (2025).",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2025/542.335",
+            "proposition": "A third-party beneficiary can enforce a Florida restrictive covenant only where expressly identified and where the covenant expressly states it was intended for that person's benefit.",
+            "verbatimQuote": "In the case of a third-party beneficiary, the restrictive covenant expressly identified the person as a third-party beneficiary of the contract and expressly stated that the restrictive covenant was intended for the benefit of such person.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-fl-542335-tpb-express"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-non-competes-for-specialty-monopoly-physicians",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.florida.exclude-non-competes-for-specialty-monopoly-physicians",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Specialty-monopoly physician carve-out",
+        "sectionId": "florida-statutory-drafting-points",
+        "itemNumber": "19.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#exclude-non-competes-for-specialty-monopoly-physicians",
+        "requirementGuidance": "Where the worker is a physician, do not rely on an unconditional non-compete. Section 542.336 voids the covenant in any county where one entity employs or contracts with all the physicians practicing that specialty — and keeps it void for three years after a second entity arrives. Because the county-market facts cannot be known reliably at signing, the clause should carry a self-executing carve-out rather than bet the covenant on severance.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "fl-542336-specialty-void",
+            "authorityType": "primary-law",
+            "title": "Fla. Stat. § 542.336",
+            "citation": "Fla. Stat. § 542.336 (2025).",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2025/542.336",
+            "proposition": "Section 542.336 voids a specialist physician's covenant where one entity employs or contracts with all physicians in that specialty in the county.",
+            "verbatimQuote": "A restrictive covenant entered into with a physician who is licensed under chapter 458 or chapter 459 and who practices a medical specialty in a county wherein one entity employs or contracts with, either directly or through related or affiliated entities, all physicians who practice such specialty in that county is not supported by a legitimate business interest.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-fl-542336-specialty-void"
+          },
+          {
+            "sourceId": "fl-542336-three-year",
+            "authorityType": "primary-law",
+            "title": "Fla. Stat. § 542.336",
+            "citation": "Fla. Stat. § 542.336 (2025).",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2025/542.336",
+            "proposition": "The specialty-monopoly void continues for three years after a second entity begins offering the specialty in the county.",
+            "verbatimQuote": "Such restrictive covenants shall remain void and unenforceable for 3 years after the date on which a second entity that employs or contracts with, either directly or through related or affiliated entities, one or more physicians who practice such specialty begins offering such specialty services in that county.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-fl-542336-three-year"
+          }
+        ]
+      },
+      {
+        "requirementId": "recite-irreparable-injury-presumption",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.florida.recite-irreparable-injury-presumption",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Irreparable-injury presumption recited",
+        "sectionId": "florida-statutory-drafting-points",
+        "itemNumber": "19.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#recite-irreparable-injury-presumption",
+        "requirementGuidance": "Recite the statutory presumption: violation of an enforceable covenant is presumed to cause irreparable injury. The presumption arises by operation of law whether or not the agreement mentions it, but the recital aligns the remedies clause with the statute the court will actually apply at the injunction stage.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "fl-542335-irreparable",
+            "authorityType": "primary-law",
+            "title": "Fla. Stat. § 542.335(1)(j)",
+            "citation": "Fla. Stat. § 542.335(1)(j) (2025).",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2025/542.335",
+            "proposition": "A violation of an enforceable restrictive covenant creates a statutory presumption of irreparable injury.",
+            "verbatimQuote": "The violation of an enforceable restrictive covenant creates a presumption of irreparable injury to the person seeking enforcement of a restrictive covenant.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-fl-542335-irreparable"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-counsel-advisal-and-7-day-notice-for-covered-noncompete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.florida.require-counsel-advisal-and-7-day-notice-for-covered-noncompete",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Counsel advisal and 7-day notice",
+        "sectionId": "choice-act-covered-employee-track",
+        "itemNumber": "20.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#require-counsel-advisal-and-7-day-notice-for-covered-noncompete",
+        "requirementGuidance": "The agreement must recite that the covered employee was advised in writing of the right to seek counsel, and the employer must put the proposed agreement in the worker's hands at least seven days before the relevant offer expires. The seven-day clock is an operational step to verify against the actual dates, not just a recital to read.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "fl-545-counsel-advisal",
+            "authorityType": "primary-law",
+            "title": "Fla. Stat. § 542.45(2)(a)",
+            "citation": "Fla. Stat. § 542.45(2)(a) (2025).",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2025/542.45",
+            "proposition": "A covered non-compete is enforceable only if the employee was advised in writing of the right to seek counsel before execution and given the required notice.",
+            "verbatimQuote": "A covered employee was advised, in writing, of the right to seek counsel before execution of the covered noncompete agreement and was provided notice as described in subsection (3)",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-fl-545-counsel-advisal"
+          },
+          {
+            "sourceId": "fl-545-seven-day-notice",
+            "authorityType": "primary-law",
+            "title": "Fla. Stat. § 542.45(3)",
+            "citation": "Fla. Stat. § 542.45(3)(a) (2025).",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2025/542.45",
+            "proposition": "A covered employer must give a prospective covered employee the proposed non-compete at least seven days before the offer expires.",
+            "verbatimQuote": "A prospective covered employee at least 7 days before an offer of employment expires",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-fl-545-seven-day-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-written-acknowledgement-of-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.florida.require-written-acknowledgement-of-confidential-information",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Written confidential-information acknowledgement",
+        "sectionId": "choice-act-covered-employee-track",
+        "itemNumber": "20.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#require-written-acknowledgement-of-confidential-information",
+        "requirementGuidance": "Confirm the covered employee's written acknowledgement that the job will involve receiving confidential information or customer relationships. It is the CHOICE Act's sharper cousin of the legitimate-business-interest recital, and a covered-employee agreement should carry both.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "fl-545-ack-confidential",
+            "authorityType": "primary-law",
+            "title": "Fla. Stat. § 542.45(2)(b)",
+            "citation": "Fla. Stat. § 542.45(2)(b) (2025).",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2025/542.45",
+            "proposition": "A covered non-compete requires the covered employee's written acknowledgement of receiving confidential information or customer relationships.",
+            "verbatimQuote": "A covered employee acknowledges, in writing, that in the course of his or her employment, the covered employee will receive confidential information or customer relationships",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-fl-545-ack-confidential"
+          }
+        ]
+      },
+      {
+        "requirementId": "apply-garden-leave-day-for-day-offset",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.florida.apply-garden-leave-day-for-day-offset",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Garden-leave day-for-day offset",
+        "sectionId": "choice-act-covered-employee-track",
+        "itemNumber": "20.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/florida#apply-garden-leave-day-for-day-offset",
+        "requirementGuidance": "If garden leave rides alongside the covered non-compete, the agreement must reduce the non-compete period day-for-day by the nonworking portion of the notice period. The offset is the statutory price of the garden-leave structure — the two periods cannot be stacked end to end.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "fl-545-offset",
+            "authorityType": "primary-law",
+            "title": "Fla. Stat. § 542.45(2)(c)",
+            "citation": "Fla. Stat. § 542.45(2)(c) (2025).",
+            "url": "https://www.flsenate.gov/Laws/Statutes/2025/542.45",
+            "proposition": "A covered non-compete must reduce its noncompete period day-for-day by any nonworking portion of a garden-leave notice period.",
+            "verbatimQuote": "A covered noncompete agreement provides that the noncompete period is reduced day-for-day by any nonworking portion of the notice period",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/florida#src-fl-545-offset"
+          }
+        ]
+      }
+    ]
+  }
+}

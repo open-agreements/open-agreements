@@ -1,0 +1,1373 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/rhode-island",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/rhode-island.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/rhode-island",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/rhode-island/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/rhode-island/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "rhode-island",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — Rhode Island",
+      "description": "A clause-by-clause reviewer checklist for Rhode Island employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the ch. 28-59 worker-category bans, the physician and APRN practice-restriction statutes, and strict common-law reasonableness.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "Rhode Island",
+      "coverage": "Rhode Island (US)",
+      "lastReviewed": "2026-06-11",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 47,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "label": "Physician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "rhode-island-statutory-gates",
+        "label": "Rhode Island statutory gates"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#identify-parties",
+        "requirementGuidance": "Confirm the named employer is the entity the worker actually works for, and how the worker is engaged. Chapter 28-59 protects employees and expressly excludes independent contractors from that definition, so the relationship the signature page reflects feeds directly into whether the worker-category bans can apply at all.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "rinaa-employee-definition-cover",
+            "authorityType": "primary-law",
+            "title": "R.I. Gen. Laws § 28-59-2",
+            "citation": "R.I. Gen. Laws § 28-59-2(3).",
+            "url": "https://webserver.rilegislature.gov/Statutes/TITLE28/28-59/28-59-2.htm",
+            "proposition": "Section 28-59-2 defines employee for Chapter 28-59 and excludes independent contractors, which controls whether the worker-category bans can apply.",
+            "verbatimQuote": "“Employee” means an individual who works for hire, including an individual employed in a supervisory, managerial, or confidential position, but shall not include an independent contractor.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-rinaa-employee-definition-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#identify-effective-date",
+        "requirementGuidance": "Date the agreement. The APRN practice ban took effect June 17, 2024, and the low-wage category is indexed to federal poverty guidelines that change over time — so the execution date fixes which statutes and which figures frame the review. An undated covenant leaves both questions open.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "aprn-effective-date-cover",
+            "authorityType": "primary-law",
+            "title": "R.I. Gen. Laws § 5-34-50",
+            "citation": "R.I. Gen. Laws § 5-34-50, history.",
+            "url": "https://webserver.rilegislature.gov/Statutes/TITLE5/5-34/5-34-50.htm",
+            "proposition": "The statutory history dates the APRN practice-restriction ban to June 17, 2024, which makes the agreement's date relevant to which rules frame the review.",
+            "verbatimQuote": "P.L. 2024, ch. 118, § 1, effective June 17, 2024; P.L. 2024, ch. 128, § 1, effective June 17, 2024.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-aprn-effective-date-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#identify-employee-title",
+        "requirementGuidance": "Record the role, then look past it. What decides enforceability in Rhode Island is the worker-category screen — FLSA exemption status, student-intern status, age, and earnings — and a title proves none of those facts on its own. Treat the stated position as the starting point for the category check, not the answer to it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "rinaa-covered-workers-cover",
+            "authorityType": "primary-law",
+            "title": "R.I. Gen. Laws § 28-59-3",
+            "citation": "R.I. Gen. Laws § 28-59-3(a).",
+            "url": "https://webserver.rilegislature.gov/Statutes/TITLE28/28-59/28-59-3.htm",
+            "proposition": "Section 28-59-3(a) makes non-competes unenforceable against listed worker categories, which is why the worker's actual status matters more than the stated title.",
+            "verbatimQuote": "A noncompetition agreement shall not be enforceable against the following types of workers:",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-rinaa-covered-workers-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#identify-governing-law",
+        "requirementGuidance": "Check that the governing state is stated. The practice note records no Rhode Island anti-evasion statute for restrictive covenants, so do not assume a clause naming another state either escapes the worker-category and profession bans or leaves them untouched — flag any out-of-state selection covering a Rhode Island worker as an open question for counsel rather than a settled answer.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#define-confidential-information",
+        "requirementGuidance": "Rhode Island excludes nondisclosure and confidentiality agreements from the statutory non-compete definition, so the definition of confidential information decides which regime the clause lives under. Keep it tight: a definition broad enough to keep the worker out of the field altogether reads as an activity restraint and gives up the benefit of the exclusion.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "rinaa-nda-exclusion-defs",
+            "authorityType": "primary-law",
+            "title": "R.I. Gen. Laws § 28-59-2",
+            "citation": "R.I. Gen. Laws § 28-59-2(8)(vi).",
+            "url": "https://webserver.rilegislature.gov/Statutes/TITLE28/28-59/28-59-2.htm",
+            "proposition": "Section 28-59-2 excludes nondisclosure and confidentiality agreements from the statutory definition of noncompetition agreement, so a confidentiality clause is analyzed outside the chapter's bans.",
+            "verbatimQuote": "(vi) Nondisclosure or confidentiality agreements;",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-rinaa-nda-exclusion-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#define-trade-secrets",
+        "requirementGuidance": "Track the statutory definition. Rhode Island reserves trade-secret status for information that actually meets it, and the strongest fallback protections in this state — the preserved post-employment trade-secret agreement and the RIUTSA injunction — both hang on that definition. A bloated trade-secret definition weakens the one interest that survives every Rhode Island ban.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "riutsa-definition-defs",
+            "authorityType": "primary-law",
+            "title": "R.I. Gen. Laws § 6-41-1",
+            "citation": "R.I. Gen. Laws § 6-41-1(4).",
+            "url": "https://webserver.rilegislature.gov/Statutes/TITLE6/6-41/6-41-1.htm",
+            "proposition": "Section 6-41-1 supplies the trade-secret definition that Rhode Island trade-secret remedies depend on.",
+            "verbatimQuote": "“Trade secret” means information, including a formula, pattern, compilation, program, device, method, technique, or process, that:",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-riutsa-definition-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-period",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#define-restricted-period",
+        "requirementGuidance": "One defined Restricted Period keeps every duration auditable. Rhode Island most recently upheld a 24-month customer-focused restraint at the preliminary-injunction stage, but duration is still measured against the legitimate interest it protects — so the period needs a defensible rationale of its own, not just a favorable precedent.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "walls-customer-scope-defs",
+            "authorityType": "case-law",
+            "title": "Griggs & Browne Pest Control Co. v. Walls",
+            "citation": "Griggs & Browne Pest Control Co. v. Walls, 313 A.3d 616, 626 (R.I. 2024).",
+            "url": "https://www.courtlistener.com/opinion/9457984/griggs-browne-pest-control-co-inc-v-brian-walls/",
+            "deepLink": "https://www.courtlistener.com/opinion/9457984/griggs-browne-pest-control-co-inc-v-brian-walls/#:~:text=month%20period%2C%20and%20extends%20only,and%20previous%20clients%2C%20rather%20than",
+            "proposition": "Walls supports a 24-month restraint scoped to current and prior customers rather than a geographic territory as the customer-class shape that survived review.",
+            "verbatimQuote": "month period, and extends only to plaintiff’s current and previous clients, rather than",
+            "date": "2024-01-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-walls-customer-scope-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-territory",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-territory",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted territory",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#define-restricted-territory",
+        "requirementGuidance": "Tie geography to where the protected interest actually operates. Rhode Island will tolerate even a restraint with no stated limits in the right setting — but only to the extent necessary to protect the promisee's legitimate interests, which means an everywhere territory invites the court to cut the covenant down to what the employer can prove.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "cranston-necessity-defs",
+            "authorityType": "case-law",
+            "title": "Cranston Print Works Co. v. Pothier",
+            "citation": "Cranston Print Works Co. v. Pothier, 848 A.2d 213, 220 (R.I. 2004).",
+            "url": "https://www.courtlistener.com/opinion/2195476/cranston-print-works-co-v-pothier/",
+            "deepLink": "https://www.courtlistener.com/opinion/2195476/cranston-print-works-co-v-pothier/#:~:text=courts%20should%20uphold%20them%20only,protect%20the%20promisee%E2%80%99s%20legitimate%20interests.",
+            "proposition": "Cranston Print Works supports enforcing restraints lacking stated limits only to the extent necessary to protect the promisee's legitimate interests.",
+            "verbatimQuote": "courts should uphold them only to the extent they are necessary to protect the promisee’s legitimate interests.",
+            "date": "2004-05-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-cranston-necessity-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered customers",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#define-covered-customers",
+        "requirementGuidance": "Bound the class to customers whose relationships the worker actually serviced. The restraint Rhode Island's high court most recently enforced extended only to current and previous clients rather than to a territory — a defined customer class with a sensible look-back is the shape that survived review.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "walls-customer-scope-defs",
+            "authorityType": "case-law",
+            "title": "Griggs & Browne Pest Control Co. v. Walls",
+            "citation": "Griggs & Browne Pest Control Co. v. Walls, 313 A.3d 616, 626 (R.I. 2024).",
+            "url": "https://www.courtlistener.com/opinion/9457984/griggs-browne-pest-control-co-inc-v-brian-walls/",
+            "deepLink": "https://www.courtlistener.com/opinion/9457984/griggs-browne-pest-control-co-inc-v-brian-walls/#:~:text=month%20period%2C%20and%20extends%20only,and%20previous%20clients%2C%20rather%20than",
+            "proposition": "Walls supports a 24-month restraint scoped to current and prior customers rather than a geographic territory as the customer-class shape that survived review.",
+            "verbatimQuote": "month period, and extends only to plaintiff’s current and previous clients, rather than",
+            "date": "2024-01-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-walls-customer-scope-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#define-covered-employees",
+        "requirementGuidance": "Keep the no-poach class to colleagues the departing worker actually worked with or supervised. Employee non-solicits sit outside the statutory non-compete definition, which routes them to the common-law reasonableness test — and a workforce-wide class is exactly the breadth that test punishes.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "rinaa-definition-defs",
+            "authorityType": "primary-law",
+            "title": "R.I. Gen. Laws § 28-59-2",
+            "citation": "R.I. Gen. Laws § 28-59-2(8).",
+            "url": "https://webserver.rilegislature.gov/Statutes/TITLE28/28-59/28-59-2.htm",
+            "proposition": "Section 28-59-2 defines noncompetition agreement and excludes employee non-solicits, customer non-solicits, sale-of-business covenants, and confidentiality agreements, routing those restraints to other law.",
+            "verbatimQuote": "“Noncompetition agreement” means an agreement between an employer and an employee, or otherwise arising out of an existing or anticipated employment relationship, under which the employee or expected employee agrees that he or she will not engage in certain specified activities competitive with his or her employer after the employment relationship has ended.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-rinaa-definition-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#define-protected-interests",
+        "requirementGuidance": "Name the interests with specificity. The enforcing party must show a legitimate interest as one of the enforcement elements, and protection from ordinary competition does not qualify — the recital is where the agreement shows the confidential relationships, goodwill, or trade secrets each covenant is built to protect.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "durapin-elements-defs",
+            "authorityType": "case-law",
+            "title": "Durapin, Inc. v. American Products, Inc.",
+            "citation": "Durapin, Inc. v. Am. Prods., Inc., 559 A.2d 1051, 1053 (R.I. 1989).",
+            "url": "https://www.courtlistener.com/opinion/2334248/durapin-inc-v-american-products-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/2334248/durapin-inc-v-american-products-inc/#:~:text=Before%20a%20court%20reaches%20this,of%20a%20business%2C%20Restatement%20(Second)",
+            "proposition": "Durapin states the enforcement elements the party seeking enforcement must show, including a valid underlying relationship the covenant is ancillary to.",
+            "verbatimQuote": "Before a court reaches this question, however, the party seeking to enforce a noncompetition provision must show that (1) the provision is ancillary to an otherwise valid transaction or relationship, such as an employment contract or a contract for the purchase and sale of a business, Restatement (Second)",
+            "date": "1989-05-12",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-durapin-elements-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-competitive-business",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Competitive business",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#define-competitive-business",
+        "requirementGuidance": "Describe the genuinely competing activity in concrete terms. These covenants are disfavored and strictly scrutinized in Rhode Island, and the competition definition is usually where overbreadth enters — an anything-we-might-someday-do definition undercuts the no-broader-than-necessary showing the employer has to make.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "cranston-scrutiny-defs",
+            "authorityType": "case-law",
+            "title": "Cranston Print Works Co. v. Pothier",
+            "citation": "Cranston Print Works Co. v. Pothier, 848 A.2d 213, 219 (R.I. 2004).",
+            "url": "https://www.courtlistener.com/opinion/2195476/cranston-print-works-co-v-pothier/",
+            "deepLink": "https://www.courtlistener.com/opinion/2195476/cranston-print-works-co-v-pothier/#:~:text=It%20is%20well%20settled%20that,subject%20to%20strict%20judicial%20scrutiny.",
+            "proposition": "Cranston Print Works supports strict judicial scrutiny of covenants not to compete as disfavored restraints.",
+            "verbatimQuote": "It is well settled that covenants not to compete are disfavored and subject to strict judicial scrutiny.",
+            "date": "2004-05-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-cranston-scrutiny-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where ownership or investment in competitors is restricted, look for a passive-holdings carve-out below a stated threshold. A clause that technically forbids index funds and ordinary public shares restrains conduct no legitimate interest requires — gratuitous overbreadth in a state that enforces restraints only as far as apparently necessary.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#define-passive-public-holdings",
+        "requirementGuidance": "An optional defined term — many forms inline the percentage instead. When the capitalized term does appear, check that its threshold matches the carve-out that uses it and that the definition stays genuinely passive: no board seats, no advisory roles, no operational involvement.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.11",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#define-solicit",
+        "requirementGuidance": "Pin the term to initiating contact, and watch the patient-facing version: for a physician, a restraint framed as patient solicitation is still a restriction of the right to practice medicine, and the profession statute voids it. For everyone else, a definition that also captures passively received inquiries widens the restraint the common-law test must then justify.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "physician-ban-defs",
+            "authorityType": "primary-law",
+            "title": "R.I. Gen. Laws § 5-37-33",
+            "citation": "R.I. Gen. Laws § 5-37-33(a).",
+            "url": "https://webserver.rilegislature.gov/Statutes/TITLE5/5-37/5-37-33.htm",
+            "proposition": "Section 5-37-33 voids any restriction of a physician's right to practice medicine, which reaches patient-solicitation restraints however they are labeled.",
+            "verbatimQuote": "Any contract or agreement that creates or establishes the terms of a partnership, employment, or any other form of professional relationship with a physician licensed to practice medicine pursuant to this chapter that includes any restriction of the right of such physician to practice medicine shall be void and unenforceable with respect to said restriction; provided, however, that nothing herein shall render void or unenforceable the remaining provisions of any such contract or agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-physician-ban-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.12",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#define-termination-of-employment",
+        "requirementGuidance": "Verify the trigger treats resignation and dismissal the same way — or says expressly when it does not. Rhode Island's high court declined to read an involuntary-termination limit into a covenant that did not contain one, so whatever the parties want on this point has to appear in the text.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "walls-involuntary-defs",
+            "authorityType": "case-law",
+            "title": "Griggs & Browne Pest Control Co. v. Walls",
+            "citation": "Griggs & Browne Pest Control Co. v. Walls, 313 A.3d 616, 627 (R.I. 2024).",
+            "url": "https://www.courtlistener.com/opinion/9457984/griggs-browne-pest-control-co-inc-v-brian-walls/",
+            "deepLink": "https://www.courtlistener.com/opinion/9457984/griggs-browne-pest-control-co-inc-v-brian-walls/#:~:text=Walls%E2%80%99s%20argument%20that%20an%20involuntary,termination%20would%20preclude%20enforcement%20of",
+            "proposition": "Walls supports enforcement after involuntary termination where the covenant contains no limiting language tied to the reason for departure.",
+            "verbatimQuote": "Walls’s argument that an involuntary termination would preclude enforcement of",
+            "date": "2024-01-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-walls-involuntary-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "record-consideration-supporting-the-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.rhode-island.record-consideration-supporting-the-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Timing and consideration recital",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#record-consideration-supporting-the-covenant",
+        "requirementGuidance": "Recite when the covenant was signed and what the worker received for it. Rhode Island treated continued at-will employment plus training and licensure support as part of a lawful exchange for a restriction signed during employment — but that holding arrived in a preliminary-injunction posture under deferential review, and consideration remains an element the employer must prove. The contemporaneous record of what actually moved is what the employer will litigate with.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "walls-consideration-timing",
+            "authorityType": "case-law",
+            "title": "Griggs & Browne Pest Control Co. v. Walls",
+            "citation": "Griggs & Browne Pest Control Co. v. Walls, 313 A.3d 616, 625 (R.I. 2024).",
+            "url": "https://www.courtlistener.com/opinion/9457984/griggs-browne-pest-control-co-inc-v-brian-walls/",
+            "deepLink": "https://www.courtlistener.com/opinion/9457984/griggs-browne-pest-control-co-inc-v-brian-walls/#:~:text=employment%20relationship%20with%20plaintiff%3A%20In%20consideration%20for%20continued%20employment",
+            "proposition": "Walls supports treating continued employment and employer-provided training as consideration for a Rhode Island restriction signed during employment.",
+            "verbatimQuote": "employment relationship with plaintiff: In consideration for continued employment",
+            "date": "2024-01-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-walls-consideration-timing"
+          },
+          {
+            "sourceId": "walls-posture-timing",
+            "authorityType": "case-law",
+            "title": "Griggs & Browne Pest Control Co. v. Walls",
+            "citation": "Griggs & Browne Pest Control Co. v. Walls, 313 A.3d 616, 623 (R.I. 2024).",
+            "url": "https://www.courtlistener.com/opinion/9457984/griggs-browne-pest-control-co-inc-v-brian-walls/",
+            "deepLink": "https://www.courtlistener.com/opinion/9457984/griggs-browne-pest-control-co-inc-v-brian-walls/#:~:text=This%20Court%20reviews%20a%20trial,for%20an%20abuse%20of%20discretion.",
+            "proposition": "Walls reviewed a preliminary injunction for abuse of discretion, so its consideration holding is a strong signal rather than a final adjudication.",
+            "verbatimQuote": "This Court reviews a trial justice’s decision to grant a preliminary injunction for an abuse of discretion.",
+            "date": "2024-01-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-walls-posture-timing"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-opportunity-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Chance to consult a lawyer",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#acknowledge-opportunity-to-consult-counsel",
+        "requirementGuidance": "Cheap insurance, though no Rhode Island statute demands it. Two of the act's protected categories — student interns and workers age eighteen or younger — are the populations least likely to have had advice before signing, so an acknowledgement that the chance was real helps show the execution was informed rather than rote.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "Trade-secret obligations should run as long as secrecy does — that is how the federal definition works, and Rhode Island leans the same way: the act expressly preserves agreements not to share trade-secret information after employment ends, with no outer time limit. A fixed expiry surrenders protection the statute goes out of its way to keep.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-definition-conf",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
+            "citation": "18 U.S.C. § 1839(3)(B) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1839",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
+            "proposition": "Federal law keys trade-secret status to continued secrecy, which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-dtsa-definition-conf"
+          },
+          {
+            "sourceId": "rinaa-ts-preserved-conf",
+            "authorityType": "primary-law",
+            "title": "R.I. Gen. Laws § 28-59-3",
+            "citation": "R.I. Gen. Laws § 28-59-3(c).",
+            "url": "https://webserver.rilegislature.gov/Statutes/TITLE28/28-59/28-59-3.htm",
+            "proposition": "Section 28-59-3(c) preserves agreements not to share employer trade-secret information after employment, with no stated time limit.",
+            "verbatimQuote": "Nothing in this section shall preclude an employer from entering into an agreement with an employee not to share any information, including after the employee is no longer employed by the employer, regarding the employer or the employment that is a trade secret.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-rinaa-ts-preserved-conf"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#state-confidentiality-duration",
+        "requirementGuidance": "Give ordinary confidential information its own finite term. The statutory exclusion covers nondisclosure and confidentiality agreements, not unlimited lids on everything a worker ever learned — and an NDA written that broadly starts functioning as the hidden non-compete the rest of this checklist polices. The two-track structure keeps the perpetual obligation where the law actually supports it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "rinaa-nda-exclusion-conf",
+            "authorityType": "primary-law",
+            "title": "R.I. Gen. Laws § 28-59-2",
+            "citation": "R.I. Gen. Laws § 28-59-2(8)(vi).",
+            "url": "https://webserver.rilegislature.gov/Statutes/TITLE28/28-59/28-59-2.htm",
+            "proposition": "Section 28-59-2 excludes nondisclosure and confidentiality agreements from the noncompetition-agreement definition — an exclusion that presumes the clause stays a confidentiality clause rather than an activity restraint.",
+            "verbatimQuote": "(vi) Nondisclosure or confidentiality agreements;",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-rinaa-nda-exclusion-conf"
+          }
+        ]
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#disclose-dtsa-notice",
+        "requirementGuidance": "Federal law, fully applicable in Rhode Island: omit the immunity notice and the employer forfeits exemplary damages and attorney fees in a later trade-secret suit against the worker. Because trade-secret protection is the main fallback when a Rhode Island ban takes the non-compete away, those remedies are worth keeping intact.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-immunity-pdc",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-dtsa-immunity-pdc"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Check that wages, hours, and working conditions stay discussable notwithstanding the confidentiality and non-disparagement clauses. Section 7 protects that speech in Rhode Island as everywhere else, and the Board treats terms that broadly waive those rights as unlawful even at the offer stage.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nlra-section-7-pdc",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-nlra-section-7-pdc"
+          },
+          {
+            "sourceId": "mclaren-protected-pdc",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-mclaren-protected-pdc"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#permit-compelled-disclosure",
+        "requirementGuidance": "Confirm the carve-out for disclosure required by law, court order, or a government investigation. Rhode Island's strict-scrutiny posture makes a confidentiality clause with no compelled-disclosure exception an easy mark for overbreadth, and the carve-out costs the employer nothing it could lawfully keep.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#require-property-return-and-certification",
+        "requirementGuidance": "Return-or-delete at separation, certified in writing. For a worker inside one of Rhode Island's bans, the trade-secret and confidentiality terms carry the entire protective load — and the certification is the cleanest contemporaneous evidence if protected material later surfaces at a competitor.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-employee-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#permit-employee-nonsolicit",
+        "requirementGuidance": "Optional, and statutorily the quietest covenant in the family: the act's definition of a noncompetition agreement excludes employee non-solicits, so the clause answers to common law alone. Keep it inside the Covered Employees class and the Restricted Period so the reasonableness showing stays easy to make.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "rinaa-definition-cov",
+            "authorityType": "primary-law",
+            "title": "R.I. Gen. Laws § 28-59-2",
+            "citation": "R.I. Gen. Laws § 28-59-2(8).",
+            "url": "https://webserver.rilegislature.gov/Statutes/TITLE28/28-59/28-59-2.htm",
+            "proposition": "Section 28-59-2 defines noncompetition agreement around specified competitive activities and excludes employee and customer non-solicits, confidentiality agreements, and sale-of-business covenants from that definition.",
+            "verbatimQuote": "“Noncompetition agreement” means an agreement between an employer and an employee, or otherwise arising out of an existing or anticipated employment relationship, under which the employee or expected employee agrees that he or she will not engage in certain specified activities competitive with his or her employer after the employment relationship has ended.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-rinaa-definition-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-customer-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#permit-customer-nonsolicit",
+        "requirementGuidance": "Also outside the statutory definition, with one profession-shaped exception: a clause keeping a physician away from current patients is a restriction on the right to practice that the profession statute voids, whatever heading it sits under. For other workers, the customer-scoped restraint is the one Rhode Island courts most recently enforced — keep it tied to served customers and a stated period.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "physician-ban-cov",
+            "authorityType": "primary-law",
+            "title": "R.I. Gen. Laws § 5-37-33",
+            "citation": "R.I. Gen. Laws § 5-37-33(a).",
+            "url": "https://webserver.rilegislature.gov/Statutes/TITLE5/5-37/5-37-33.htm",
+            "proposition": "Section 5-37-33 voids any restriction of a physician's right to practice medicine, which captures patient-facing non-solicits however labeled.",
+            "verbatimQuote": "Any contract or agreement that creates or establishes the terms of a partnership, employment, or any other form of professional relationship with a physician licensed to practice medicine pursuant to this chapter that includes any restriction of the right of such physician to practice medicine shall be void and unenforceable with respect to said restriction; provided, however, that nothing herein shall render void or unenforceable the remaining provisions of any such contract or agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-physician-ban-cov"
+          },
+          {
+            "sourceId": "walls-scope-cov",
+            "authorityType": "case-law",
+            "title": "Griggs & Browne Pest Control Co. v. Walls",
+            "citation": "Griggs & Browne Pest Control Co. v. Walls, 313 A.3d 616, 626 (R.I. 2024).",
+            "url": "https://www.courtlistener.com/opinion/9457984/griggs-browne-pest-control-co-inc-v-brian-walls/",
+            "deepLink": "https://www.courtlistener.com/opinion/9457984/griggs-browne-pest-control-co-inc-v-brian-walls/#:~:text=month%20period%2C%20and%20extends%20only,and%20previous%20clients%2C%20rather%20than",
+            "proposition": "Walls supports the customer-scoped, time-limited restraint as the form Rhode Island courts most recently enforced.",
+            "verbatimQuote": "month period, and extends only to plaintiff’s current and previous clients, rather than",
+            "date": "2024-01-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-walls-scope-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-dealing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#permit-non-dealing",
+        "requirementGuidance": "Non-dealing bars serving covered customers even when they arrive unsolicited — a restraint on doing the work, not on chasing it. That pushes the clause toward the act's definition of an agreement not to engage in specified competitive activities, and toward the strict end of the common-law test; treat its inclusion as a deliberate risk decision, not boilerplate.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "rinaa-definition-cov",
+            "authorityType": "primary-law",
+            "title": "R.I. Gen. Laws § 28-59-2",
+            "citation": "R.I. Gen. Laws § 28-59-2(8).",
+            "url": "https://webserver.rilegislature.gov/Statutes/TITLE28/28-59/28-59-2.htm",
+            "proposition": "Section 28-59-2 defines noncompetition agreement around specified competitive activities and excludes employee and customer non-solicits, confidentiality agreements, and sale-of-business covenants from that definition.",
+            "verbatimQuote": "“Noncompetition agreement” means an agreement between an employer and an employee, or otherwise arising out of an existing or anticipated employment relationship, under which the employee or expected employee agrees that he or she will not engage in certain specified activities competitive with his or her employer after the employment relationship has ended.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-rinaa-definition-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-compete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#permit-non-compete",
+        "requirementGuidance": "Before reading any term of this clause, run the worker through the Rhode Island statutory gates at the end of this checklist: the act makes the covenant unenforceable outright for four protected categories, and the profession statutes void it for physicians and APRNs. For everyone left, it remains a disfavored restraint the employer must justify element by element.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "rinaa-ban-cov",
+            "authorityType": "primary-law",
+            "title": "R.I. Gen. Laws § 28-59-3",
+            "citation": "R.I. Gen. Laws § 28-59-3(a).",
+            "url": "https://webserver.rilegislature.gov/Statutes/TITLE28/28-59/28-59-3.htm",
+            "proposition": "Section 28-59-3(a) makes non-competes unenforceable against the listed worker categories, so the category screen comes before any clause-level review.",
+            "verbatimQuote": "A noncompetition agreement shall not be enforceable against the following types of workers:",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-rinaa-ban-cov"
+          },
+          {
+            "sourceId": "cranston-scrutiny-cov",
+            "authorityType": "case-law",
+            "title": "Cranston Print Works Co. v. Pothier",
+            "citation": "Cranston Print Works Co. v. Pothier, 848 A.2d 213, 219 (R.I. 2004).",
+            "url": "https://www.courtlistener.com/opinion/2195476/cranston-print-works-co-v-pothier/",
+            "deepLink": "https://www.courtlistener.com/opinion/2195476/cranston-print-works-co-v-pothier/#:~:text=It%20is%20well%20settled%20that,subject%20to%20strict%20judicial%20scrutiny.",
+            "proposition": "Cranston Print Works supports treating covenants not to compete as disfavored restraints subject to strict judicial scrutiny.",
+            "verbatimQuote": "It is well settled that covenants not to compete are disfavored and subject to strict judicial scrutiny.",
+            "date": "2004-05-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-cranston-scrutiny-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Named-competitor narrowing",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementGuidance": "When the employer can name its real competitors, bind those instead of leaning on the open-ended Competitive Business definition. A named list is strong evidence the restraint extends no further than apparently necessary — the exact measure Rhode Island enforces these provisions against.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "durapin-baseline-cov",
+            "authorityType": "case-law",
+            "title": "Durapin, Inc. v. American Products, Inc.",
+            "citation": "Durapin, Inc. v. Am. Prods., Inc., 559 A.2d 1051, 1053 (R.I. 1989).",
+            "url": "https://www.courtlistener.com/opinion/2334248/durapin-inc-v-american-products-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/2334248/durapin-inc-v-american-products-inc/#:~:text=However%2C%20since%20such%20provisions%20are,in%20whose%20favor%20it%20runs.",
+            "proposition": "Durapin supports enforcing covenants as written only when they extend no further than apparently necessary to protect the party they favor.",
+            "verbatimQuote": "However, since such provisions are not favored, they are subject to judicial scrutiny and will be enforced as written only if the contract is reasonable and does not extend beyond what is apparently necessary for the protection of those in whose favor it runs.",
+            "date": "1989-05-12",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-durapin-baseline-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#permit-non-investment",
+        "requirementGuidance": "Rare and deliberate. Confirm the passive-holdings carve-out is intact and the clause shares the defined Restricted Period — and remember that an investment restraint still has to identify a legitimate interest under the common-law test, which protection from the worker's capital alone will not supply.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#require-non-disparagement",
+        "requirementGuidance": "Reasonable to include with a stated term. Audit the carve-outs: truthful testimony, reports to government agencies, and protected workplace speech have to stay outside the clause, because the Board treats agreements that broadly waive Section 7 rights as unlawful from the moment they are offered.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mclaren-nondisparagement-nd",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-mclaren-nondisparagement-nd"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-physician-specific-rights",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Physician rights and notices",
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#address-physician-specific-rights",
+        "requirementGuidance": "The dedicated clause should state the Rhode Island rules plainly: any restriction of a physician's right to practice medicine is void, the 2024 statute does the same for an APRN, and the one exception both share is a sale-of-practice covenant lasting no more than five years. Each statute severs only the restriction — the rest of the contract survives — so the clause should describe what remains operative for a provider, not pretend the restraint exists.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "physician-ban-phys",
+            "authorityType": "primary-law",
+            "title": "R.I. Gen. Laws § 5-37-33",
+            "citation": "R.I. Gen. Laws § 5-37-33(a).",
+            "url": "https://webserver.rilegislature.gov/Statutes/TITLE5/5-37/5-37-33.htm",
+            "proposition": "Section 5-37-33 voids physician practice restrictions while preserving the remaining provisions of the contract.",
+            "verbatimQuote": "Any contract or agreement that creates or establishes the terms of a partnership, employment, or any other form of professional relationship with a physician licensed to practice medicine pursuant to this chapter that includes any restriction of the right of such physician to practice medicine shall be void and unenforceable with respect to said restriction; provided, however, that nothing herein shall render void or unenforceable the remaining provisions of any such contract or agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-physician-ban-phys"
+          },
+          {
+            "sourceId": "aprn-ban-phys",
+            "authorityType": "primary-law",
+            "title": "R.I. Gen. Laws § 5-34-50",
+            "citation": "R.I. Gen. Laws § 5-34-50(a).",
+            "url": "https://webserver.rilegislature.gov/Statutes/TITLE5/5-34/5-34-50.htm",
+            "proposition": "Section 5-34-50 voids APRN practice restrictions in parallel language, preserving the rest of the contract.",
+            "verbatimQuote": "Any contract or agreement that creates or establishes the terms of a partnership, employment, or any other form of professional relationship with an advanced practice registered nurse (“APRN”) licensed to practice pursuant to § 5-34-45 that includes any restriction of the right of the APRN to practice shall be void and unenforceable with respect to said restriction; provided, however, that nothing herein shall render void or unenforceable the remaining provisions of any such contract or agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-aprn-ban-phys"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "The worker's representation that no earlier agreement or order blocks the new role. On intake it doubles as a category screen: an incoming covenant binding a worker who is FLSA-nonexempt, a student intern, age eighteen or younger, or low-wage may be unenforceable here regardless of its terms — better to surface that question before the first customer call than after it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "rinaa-ban-conflicts",
+            "authorityType": "primary-law",
+            "title": "R.I. Gen. Laws § 28-59-3",
+            "citation": "R.I. Gen. Laws § 28-59-3(a).",
+            "url": "https://webserver.rilegislature.gov/Statutes/TITLE28/28-59/28-59-3.htm",
+            "proposition": "Section 28-59-3(a) supports the intake point that an incoming covenant binding a protected-category worker may be unenforceable in Rhode Island.",
+            "verbatimQuote": "A noncompetition agreement shall not be enforceable against the following types of workers:",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-rinaa-ban-conflicts"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#address-notice-to-future-employers",
+        "requirementGuidance": "A genuine drafting choice. If the clause appears, condition any notice letter on a covenant that actually survives the Rhode Island screens — warning a new employer off the worker based on a restriction the act or a profession statute voids accomplishes nothing legally and reads as pressure rather than protection.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-tolling-during-breach",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-tolling-during-breach",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restriction extended during a breach",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#address-tolling-during-breach",
+        "requirementGuidance": "The agreement should say whether the restricted period pauses during a breach — and any extension mechanism should be flagged as an open Rhode Island question. The practice note records no statute or decision addressing extension during a breach, so a tolling clause here rests on the general reasonableness test alone, with no authority blessing it and the strict-scrutiny posture weighing against surprise add-ons to the stated term.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#require-injunctive-relief-availability",
+        "requirementGuidance": "Look for the acknowledgement that breach may cause irreparable harm and that an injunction is appropriate relief — then discount it properly. Rhode Island's most recent enforcement was a preliminary injunction reviewed only for abuse of discretion, and the employer still had to carry the enforcement elements; a recital starts that showing, it does not finish it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "walls-posture-rem",
+            "authorityType": "case-law",
+            "title": "Griggs & Browne Pest Control Co. v. Walls",
+            "citation": "Griggs & Browne Pest Control Co. v. Walls, 313 A.3d 616, 623 (R.I. 2024).",
+            "url": "https://www.courtlistener.com/opinion/9457984/griggs-browne-pest-control-co-inc-v-brian-walls/",
+            "deepLink": "https://www.courtlistener.com/opinion/9457984/griggs-browne-pest-control-co-inc-v-brian-walls/#:~:text=This%20Court%20reviews%20a%20trial,for%20an%20abuse%20of%20discretion.",
+            "proposition": "Walls applied deferential abuse-of-discretion review to a preliminary injunction, so an irreparable-harm recital does not substitute for the merits showing.",
+            "verbatimQuote": "This Court reviews a trial justice’s decision to grant a preliminary injunction for an abuse of discretion.",
+            "date": "2024-01-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-walls-posture-rem"
+          },
+          {
+            "sourceId": "durapin-elements-rem",
+            "authorityType": "case-law",
+            "title": "Durapin, Inc. v. American Products, Inc.",
+            "citation": "Durapin, Inc. v. Am. Prods., Inc., 559 A.2d 1051, 1053 (R.I. 1989).",
+            "url": "https://www.courtlistener.com/opinion/2334248/durapin-inc-v-american-products-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/2334248/durapin-inc-v-american-products-inc/#:~:text=Before%20a%20court%20reaches%20this,of%20a%20business%2C%20Restatement%20(Second)",
+            "proposition": "Durapin places the burden of the enforcement elements on the party seeking enforcement, which a contractual recital cannot discharge.",
+            "verbatimQuote": "Before a court reaches this question, however, the party seeking to enforce a noncompetition provision must show that (1) the provision is ancillary to an otherwise valid transaction or relationship, such as an employment contract or a contract for the purchase and sale of a business, Restatement (Second)",
+            "date": "1989-05-12",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-durapin-elements-rem"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-attorneys-fees-and-costs",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Attorney fees and costs",
+        "sectionId": "remedies",
+        "itemNumber": "13.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#address-attorneys-fees-and-costs",
+        "requirementGuidance": "A commercial choice — the practice note records no Rhode Island fee-shifting rule specific to restrictive covenants. Check that any fee clause is mutual and prevailing-party based: a one-way employer fee right layered onto a disfavored restraint hands a reviewing court one more marker of overreach.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "preserve-partial-enforcement-by-avoiding-overreach",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.rhode-island.preserve-partial-enforcement-by-avoiding-overreach",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court narrowing preserved, not presumed",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#preserve-partial-enforcement-by-avoiding-overreach",
+        "requirementGuidance": "Permit judicial modification — Rhode Island grants it generously — but never draft as if it were guaranteed. Unreasonable restraints can be modified and enforced whether or not their terms are divisible, unless the circumstances indicate bad faith or deliberate overreaching, and even then relief goes no further than reasonably necessary to protect legitimate interests. Deliberate overbreadth is the one posture that forfeits the rescue. The act adds a separate severability layer for contracts containing a banned non-compete: the remainder survives and a court may still impose a restriction as a remedy for breach of a different agreement or duty — which preserves the contract, not the covenant.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "durapin-partial-sev",
+            "authorityType": "case-law",
+            "title": "Durapin, Inc. v. American Products, Inc.",
+            "citation": "Durapin, Inc. v. Am. Prods., Inc., 559 A.2d 1051, 1058-59 (R.I. 1989).",
+            "url": "https://www.courtlistener.com/opinion/2334248/durapin-inc-v-american-products-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/2334248/durapin-inc-v-american-products-inc/#:~:text=We%20believe%20this%20is%20the,the%20part%20of%20the%20promisee.",
+            "proposition": "Durapin adopts partial enforcement of unreasonable restraints whether or not divisible, unless bad faith or deliberate overreaching appears.",
+            "verbatimQuote": "We believe this is the appropriate time to choose the route that permits unreasonable restraints to be modified and enforced, whether or not their terms are divisible, unless the circumstances indicate bad faith or deliberate overreaching on the part of the promisee.",
+            "date": "1989-05-12",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-durapin-partial-sev"
+          },
+          {
+            "sourceId": "durapin-no-further-sev",
+            "authorityType": "case-law",
+            "title": "Durapin, Inc. v. American Products, Inc.",
+            "citation": "Durapin, Inc. v. Am. Prods., Inc., 559 A.2d 1051, 1059 (R.I. 1989).",
+            "url": "https://www.courtlistener.com/opinion/2334248/durapin-inc-v-american-products-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/2334248/durapin-inc-v-american-products-inc/#:~:text=Even%20under%20this%20approach%20a,protect%20a%20promisee%E2%80%99s%20legitimate%20interests.",
+            "proposition": "Durapin limits judicial relief to what is reasonably necessary to protect legitimate interests, even under partial enforcement.",
+            "verbatimQuote": "Even under this approach a court will go no further in granting relief than is reasonably necessary to protect a promisee’s legitimate interests.",
+            "date": "1989-05-12",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-durapin-no-further-sev"
+          },
+          {
+            "sourceId": "rinaa-severability-sev",
+            "authorityType": "primary-law",
+            "title": "R.I. Gen. Laws § 28-59-3",
+            "citation": "R.I. Gen. Laws § 28-59-3(b).",
+            "url": "https://webserver.rilegislature.gov/Statutes/TITLE28/28-59/28-59-3.htm",
+            "proposition": "Section 28-59-3(b) preserves the remainder of a contract containing an unenforceable non-compete and allows court-imposed restrictions as remedies for other breaches or duties.",
+            "verbatimQuote": "This section does not render void or unenforceable the remainder of a contract or agreement containing the unenforceable noncompetition agreement, nor does it preclude the imposition of a noncompetition restriction by a court, whether through preliminary or permanent injunctive relief or otherwise, as a remedy for a breach of another agreement or of a statutory or common law duty.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-rinaa-severability-sev"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#address-survival-per-covenant",
+        "requirementGuidance": "Per-covenant survival keeps each clock independently checkable — perpetual for trade secrets, finite elsewhere. In Rhode Island the structure also mirrors the law: the statutes treat a banned restriction, the surviving contract, and the preserved trade-secret agreement as separable pieces, and a survival clause should not fuse what the law splits.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-assignment-and-successors",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assignment and successors",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#address-assignment-and-successors",
+        "requirementGuidance": "Confirm employer-side assignability to successors and that the worker cannot assign. Whoever ends up enforcing inherits the same Rhode Island burden — a valid underlying relationship, consideration, a legitimate interest, and a tailored restraint — so an assignment clause moves the covenant without ever upgrading it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "specify-governing-law-and-venue",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.specify-governing-law-and-venue",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law and venue",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#specify-governing-law-and-venue",
+        "requirementGuidance": "State governing law, venue, and dispute process plainly. The practice note records no Rhode Island anti-evasion statute and no controlling choice-of-law decision for restrictive covenants, so treat a foreign-law clause covering a Rhode Island worker as unsettled risk in both directions: it is neither a reliable escape from the worker-category and profession bans nor a guaranteed dead letter.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Boilerplate worth one Rhode Island-specific look: covenants here are sometimes re-papered mid-employment — the leading consideration case involved exactly that posture — so the amendment mechanics should say which covenant version controls. A refresh that leaves two restraints of different scope both arguably alive is a gift to the other side's lawyer.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "walls-consideration-ea",
+            "authorityType": "case-law",
+            "title": "Griggs & Browne Pest Control Co. v. Walls",
+            "citation": "Griggs & Browne Pest Control Co. v. Walls, 313 A.3d 616, 625 (R.I. 2024).",
+            "url": "https://www.courtlistener.com/opinion/9457984/griggs-browne-pest-control-co-inc-v-brian-walls/",
+            "deepLink": "https://www.courtlistener.com/opinion/9457984/griggs-browne-pest-control-co-inc-v-brian-walls/#:~:text=employment%20relationship%20with%20plaintiff%3A%20In%20consideration%20for%20continued%20employment",
+            "proposition": "Walls involved a covenant signed during employment supported by continued employment, the posture that makes mid-employment re-papering workable in Rhode Island.",
+            "verbatimQuote": "employment relationship with plaintiff: In consideration for continued employment",
+            "date": "2024-01-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-walls-consideration-ea"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-non-competes-for-protected-worker-categories",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.rhode-island.exclude-non-competes-for-protected-worker-categories",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No non-competes for protected worker categories",
+        "sectionId": "rhode-island-statutory-gates",
+        "itemNumber": "19.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#exclude-non-competes-for-protected-worker-categories",
+        "requirementGuidance": "Establish the category facts before anything else: a noncompetition agreement is unenforceable against an employee who is FLSA-nonexempt, an undergraduate or graduate student intern, age eighteen or younger, or low-wage — defined as average annual earnings not more than two hundred fifty percent of the federal poverty level for individuals. The definitions do quiet work here. The act protects employees, not independent contractors, and the poverty multiple moves with the federal guidelines, so the earnings test is a review-time fact rather than a drafting-time one.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "rinaa-ban-gates",
+            "authorityType": "primary-law",
+            "title": "R.I. Gen. Laws § 28-59-3",
+            "citation": "R.I. Gen. Laws § 28-59-3(a).",
+            "url": "https://webserver.rilegislature.gov/Statutes/TITLE28/28-59/28-59-3.htm",
+            "proposition": "Section 28-59-3(a) makes non-competes unenforceable against FLSA-nonexempt employees, student interns, workers age 18 or younger, and low-wage employees.",
+            "verbatimQuote": "A noncompetition agreement shall not be enforceable against the following types of workers:",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-rinaa-ban-gates"
+          },
+          {
+            "sourceId": "rinaa-lowwage-gates",
+            "authorityType": "primary-law",
+            "title": "R.I. Gen. Laws § 28-59-2",
+            "citation": "R.I. Gen. Laws § 28-59-2(7).",
+            "url": "https://webserver.rilegislature.gov/Statutes/TITLE28/28-59/28-59-2.htm",
+            "proposition": "Section 28-59-2 defines low-wage employee by reference to 250 percent of the federal poverty level for individuals, a figure that moves with the federal guidelines.",
+            "verbatimQuote": "“Low-wage employee” means an employee whose average annual earnings, as defined in subsection (2), are not more than two hundred fifty percent (250%) of the federal poverty level for individuals as established by the United States Department of Health and Human Services federal poverty guidelines.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-rinaa-lowwage-gates"
+          },
+          {
+            "sourceId": "rinaa-employee-gates",
+            "authorityType": "primary-law",
+            "title": "R.I. Gen. Laws § 28-59-2",
+            "citation": "R.I. Gen. Laws § 28-59-2(3).",
+            "url": "https://webserver.rilegislature.gov/Statutes/TITLE28/28-59/28-59-2.htm",
+            "proposition": "Section 28-59-2 defines employee to exclude independent contractors, placing contractor relationships outside the chapter's bans.",
+            "verbatimQuote": "“Employee” means an individual who works for hire, including an individual employed in a supervisory, managerial, or confidential position, but shall not include an independent contractor.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-rinaa-employee-gates"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-practice-restrictions-for-physicians-and-aprns",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.rhode-island.exclude-practice-restrictions-for-physicians-and-aprns",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No practice restrictions for physicians or APRNs",
+        "sectionId": "rhode-island-statutory-gates",
+        "itemNumber": "19.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#exclude-practice-restrictions-for-physicians-and-aprns",
+        "requirementGuidance": "For a physician, any restriction of the right to practice medicine is void; for an APRN, the statute effective June 17, 2024 does the same in parallel language. The bans reach more than the clause labeled non-compete — geographic practice limits and limits on treating, consulting with, or soliciting current patients are all practice restrictions — and each statute severs the restriction while preserving the rest of the contract. The one exception both share: a sale-of-practice covenant lasting no more than five years.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "physician-ban-gates",
+            "authorityType": "primary-law",
+            "title": "R.I. Gen. Laws § 5-37-33",
+            "citation": "R.I. Gen. Laws § 5-37-33(a).",
+            "url": "https://webserver.rilegislature.gov/Statutes/TITLE5/5-37/5-37-33.htm",
+            "proposition": "Section 5-37-33 voids any restriction of a physician's right to practice medicine while preserving the remaining provisions of the contract.",
+            "verbatimQuote": "Any contract or agreement that creates or establishes the terms of a partnership, employment, or any other form of professional relationship with a physician licensed to practice medicine pursuant to this chapter that includes any restriction of the right of such physician to practice medicine shall be void and unenforceable with respect to said restriction; provided, however, that nothing herein shall render void or unenforceable the remaining provisions of any such contract or agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-physician-ban-gates"
+          },
+          {
+            "sourceId": "aprn-ban-gates",
+            "authorityType": "primary-law",
+            "title": "R.I. Gen. Laws § 5-34-50",
+            "citation": "R.I. Gen. Laws § 5-34-50(a).",
+            "url": "https://webserver.rilegislature.gov/Statutes/TITLE5/5-34/5-34-50.htm",
+            "proposition": "Section 5-34-50, effective June 17, 2024, voids APRN practice restrictions in parallel language while preserving the rest of the contract.",
+            "verbatimQuote": "Any contract or agreement that creates or establishes the terms of a partnership, employment, or any other form of professional relationship with an advanced practice registered nurse (“APRN”) licensed to practice pursuant to § 5-34-45 that includes any restriction of the right of the APRN to practice shall be void and unenforceable with respect to said restriction; provided, however, that nothing herein shall render void or unenforceable the remaining provisions of any such contract or agreement.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-aprn-ban-gates"
+          }
+        ]
+      },
+      {
+        "requirementId": "draft-excluded-restraints-as-their-own-covenant-type",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.rhode-island.draft-excluded-restraints-as-their-own-covenant-type",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Each restraint drafted as what it is",
+        "sectionId": "rhode-island-statutory-gates",
+        "itemNumber": "19.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#draft-excluded-restraints-as-their-own-covenant-type",
+        "requirementGuidance": "Check that every restraint is drafted as the covenant it actually is. The act's definition of a noncompetition agreement excludes employee non-solicits, customer non-solicits, nondisclosure and confidentiality agreements, and sale-of-business covenants — those fall to common law, trade-secret law, or a profession statute instead. Exclusion is not approval; it just changes the test. A restraint mislabeled as a non-compete, or an activity ban buried inside an NDA, invites a court to analyze the clause under the least favorable regime.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "rinaa-definition-gates",
+            "authorityType": "primary-law",
+            "title": "R.I. Gen. Laws § 28-59-2",
+            "citation": "R.I. Gen. Laws § 28-59-2(8).",
+            "url": "https://webserver.rilegislature.gov/Statutes/TITLE28/28-59/28-59-2.htm",
+            "proposition": "Section 28-59-2 defines noncompetition agreement and excludes employee non-solicits, customer non-solicits, sale-of-business covenants, and confidentiality agreements from the definition.",
+            "verbatimQuote": "“Noncompetition agreement” means an agreement between an employer and an employee, or otherwise arising out of an existing or anticipated employment relationship, under which the employee or expected employee agrees that he or she will not engage in certain specified activities competitive with his or her employer after the employment relationship has ended.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-rinaa-definition-gates"
+          },
+          {
+            "sourceId": "rinaa-nda-gates",
+            "authorityType": "primary-law",
+            "title": "R.I. Gen. Laws § 28-59-2",
+            "citation": "R.I. Gen. Laws § 28-59-2(8)(vi).",
+            "url": "https://webserver.rilegislature.gov/Statutes/TITLE28/28-59/28-59-2.htm",
+            "proposition": "Section 28-59-2 lists nondisclosure and confidentiality agreements among the covenants excluded from the statutory non-compete definition.",
+            "verbatimQuote": "(vi) Nondisclosure or confidentiality agreements;",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-rinaa-nda-gates"
+          }
+        ]
+      },
+      {
+        "requirementId": "satisfy-common-law-reasonableness-elements",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.rhode-island.satisfy-common-law-reasonableness-elements",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "The common-law enforcement showing",
+        "sectionId": "rhode-island-statutory-gates",
+        "itemNumber": "19.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#satisfy-common-law-reasonableness-elements",
+        "requirementGuidance": "Every covenant the statutes leave alive must be able to carry the enforcement showing: ancillary to a valid transaction or relationship, supported by consideration, protective of a legitimate interest, and no broader than apparently necessary for the protection of the party it favors — all under the strict scrutiny these disfavored provisions receive. Even a restraint with no time or geographic limit is not automatically void, but it will be upheld only to the extent necessary to protect legitimate interests, so confirm the agreement recites the specific interest each covenant serves.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "durapin-elements-gates",
+            "authorityType": "case-law",
+            "title": "Durapin, Inc. v. American Products, Inc.",
+            "citation": "Durapin, Inc. v. Am. Prods., Inc., 559 A.2d 1051, 1053 (R.I. 1989).",
+            "url": "https://www.courtlistener.com/opinion/2334248/durapin-inc-v-american-products-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/2334248/durapin-inc-v-american-products-inc/#:~:text=Before%20a%20court%20reaches%20this,of%20a%20business%2C%20Restatement%20(Second)",
+            "proposition": "Durapin states the elements the party seeking enforcement must show, beginning with a valid transaction or relationship the covenant is ancillary to.",
+            "verbatimQuote": "Before a court reaches this question, however, the party seeking to enforce a noncompetition provision must show that (1) the provision is ancillary to an otherwise valid transaction or relationship, such as an employment contract or a contract for the purchase and sale of a business, Restatement (Second)",
+            "date": "1989-05-12",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-durapin-elements-gates"
+          },
+          {
+            "sourceId": "cranston-scrutiny-gates",
+            "authorityType": "case-law",
+            "title": "Cranston Print Works Co. v. Pothier",
+            "citation": "Cranston Print Works Co. v. Pothier, 848 A.2d 213, 219 (R.I. 2004).",
+            "url": "https://www.courtlistener.com/opinion/2195476/cranston-print-works-co-v-pothier/",
+            "deepLink": "https://www.courtlistener.com/opinion/2195476/cranston-print-works-co-v-pothier/#:~:text=It%20is%20well%20settled%20that,subject%20to%20strict%20judicial%20scrutiny.",
+            "proposition": "Cranston Print Works supports strict judicial scrutiny of covenants not to compete as disfavored restraints.",
+            "verbatimQuote": "It is well settled that covenants not to compete are disfavored and subject to strict judicial scrutiny.",
+            "date": "2004-05-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-cranston-scrutiny-gates"
+          },
+          {
+            "sourceId": "cranston-necessity-gates",
+            "authorityType": "case-law",
+            "title": "Cranston Print Works Co. v. Pothier",
+            "citation": "Cranston Print Works Co. v. Pothier, 848 A.2d 213, 220 (R.I. 2004).",
+            "url": "https://www.courtlistener.com/opinion/2195476/cranston-print-works-co-v-pothier/",
+            "deepLink": "https://www.courtlistener.com/opinion/2195476/cranston-print-works-co-v-pothier/#:~:text=courts%20should%20uphold%20them%20only,protect%20the%20promisee%E2%80%99s%20legitimate%20interests.",
+            "proposition": "Cranston Print Works supports upholding restraints lacking stated limits only to the extent necessary to protect legitimate interests.",
+            "verbatimQuote": "courts should uphold them only to the extent they are necessary to protect the promisee’s legitimate interests.",
+            "date": "2004-05-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-cranston-necessity-gates"
+          }
+        ]
+      },
+      {
+        "requirementId": "rely-on-trade-secret-protection-when-the-non-compete-is-unavailable",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.rhode-island.rely-on-trade-secret-protection-when-the-non-compete-is-unavailable",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret fallback that stands alone",
+        "sectionId": "rhode-island-statutory-gates",
+        "itemNumber": "19.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#rely-on-trade-secret-protection-when-the-non-compete-is-unavailable",
+        "requirementGuidance": "Verify the trade-secret and confidentiality terms work with the non-compete deleted, because for protected categories and regulated professions it will be. The act expressly preserves post-employment trade-secret agreements, Rhode Island trade-secret law enjoins actual or threatened misappropriation, and contractual remedies survive alongside the statutory ones. That fallback stack only holds if confidential information is defined carefully, trade-secret treatment is reserved for information meeting the statutory definition, and the NDA is not written so broadly it becomes a hidden non-compete.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "rinaa-ts-gates",
+            "authorityType": "primary-law",
+            "title": "R.I. Gen. Laws § 28-59-3",
+            "citation": "R.I. Gen. Laws § 28-59-3(c).",
+            "url": "https://webserver.rilegislature.gov/Statutes/TITLE28/28-59/28-59-3.htm",
+            "proposition": "Section 28-59-3(c) preserves agreements not to share employer trade-secret information after employment, the statutory basis for the trade-secret fallback.",
+            "verbatimQuote": "Nothing in this section shall preclude an employer from entering into an agreement with an employee not to share any information, including after the employee is no longer employed by the employer, regarding the employer or the employment that is a trade secret.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-rinaa-ts-gates"
+          },
+          {
+            "sourceId": "riutsa-injunction-gates",
+            "authorityType": "primary-law",
+            "title": "R.I. Gen. Laws § 6-41-2",
+            "citation": "R.I. Gen. Laws § 6-41-2(a).",
+            "url": "https://webserver.rilegislature.gov/Statutes/TITLE6/6-41/6-41-2.htm",
+            "proposition": "Section 6-41-2 authorizes injunctions for actual or threatened trade-secret misappropriation.",
+            "verbatimQuote": "Actual or threatened misappropriation may be enjoined.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-riutsa-injunction-gates"
+          },
+          {
+            "sourceId": "riutsa-remedies-gates",
+            "authorityType": "primary-law",
+            "title": "R.I. Gen. Laws § 6-41-7",
+            "citation": "R.I. Gen. Laws § 6-41-7(b).",
+            "url": "https://webserver.rilegislature.gov/Statutes/TITLE6/6-41/6-41-7.htm",
+            "proposition": "Section 6-41-7 preserves contractual remedies despite the chapter's displacement of conflicting civil remedies, so an NDA operates alongside statutory trade-secret claims.",
+            "verbatimQuote": "This chapter does not affect:",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/rhode-island#src-riutsa-remedies-gates"
+          }
+        ]
+      }
+    ]
+  }
+}

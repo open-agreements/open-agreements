@@ -1,0 +1,1324 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/montana",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/montana.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/montana",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/montana/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/montana/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "montana",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — Montana",
+      "description": "A clause-by-clause reviewer checklist for Montana employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under Mont. Code Ann. § 28-2-703, where absolute restraints are void and only reasonable partial restraints survive.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "Montana",
+      "coverage": "Montana (US)",
+      "lastReviewed": "2026-06-12",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 47,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "label": "Physician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "montana-statutory-gates",
+        "label": "Montana statutory gates"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#identify-parties",
+        "requirementGuidance": "Confirm the named employer is the entity in the actual employment, partnership, or professional relationship. Montana ties enforcement to the employer's own legitimate protective interest and, for health-care workers, to the relationship the contract creates — a covenant running to an affiliate that never employed the worker starts the review with a standing question layered on top of the statutory ones.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#identify-effective-date",
+        "requirementGuidance": "The date carries unusual weight here. The health-care provider ban applies phase by phase to contracts made or renewed on or after each amendment's effective date — all physicians from January 1, 2026 — and the consideration analysis for a covenant signed after hire turns on what moved at signing. An undated agreement leaves both questions open.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mt-hb620-cover",
+            "authorityType": "primary-law",
+            "title": "House Bill 620 (Ch. 698, L. 2025)",
+            "citation": "2025 Mont. Laws ch. 698 (HB 620), §§ 2-3.",
+            "url": "https://archive.legmt.gov/content/Sessions/69th/Contractor_index/CH0698.pdf",
+            "proposition": "HB 620 applies the physician phase of the health-care provider ban to contracts made or renewed on or after January 1, 2026, which makes the agreement's date a gating fact.",
+            "verbatimQuote": "Applicability. [This act] applies to contracts made or renewed on or after January 1, 2026.",
+            "date": "2026-01-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-hb620-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#identify-employee-title",
+        "requirementGuidance": "Record the role first as a screening step: Montana's health-care provider statute lists covered licenses — physicians, psychologists, naturopathic physicians, social workers, counselors, therapists, peer support specialists, nurses, advanced practice nurses, and physician assistants — and a covered title can take the whole covenant suite off the table. For everyone else, the role is the first evidence of what protectable interest the restraint could possibly serve.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mt-724-providers-cover",
+            "authorityType": "primary-law",
+            "title": "Mont. Code Ann. § 28-2-724",
+            "citation": "Mont. Code Ann. § 28-2-724(2).",
+            "url": "https://mca.legmt.gov/bills/mca/title_0280/chapter_0020/part_0070/section_0240/0280-0020-0070-0240.html",
+            "proposition": "Section 28-2-724(2) lists the covered health-care provider licenses, which is why the worker's title is the first screening fact on a Montana review.",
+            "verbatimQuote": "(2) The requirements of subsection (1) apply to contracts or agreements involving the following health care providers: (a) a physician licensed under Title 37, chapter 3; (b) a psychologist licensed under Title 37, chapter 17; (c) a naturopathic physician licensed under Title 37, chapter 26; (d) a social worker licensed under Title 37, chapter 39; (e) a professional counselor licensed under Title 37, chapter 39; (f) an addiction counselor licensed under Title 37, chapter 39; (g) a marriage and family therapist licensed under Title 37, chapter 39; (h) a behavioral health peer support specialist licensed under Title 37, chapter 39; (i) a registered professional nurse or an advanced practice registered nurse licensed under Title 37, chapter 8; or (j) a physician assistant licensed under Title 37, chapter 20.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-724-providers-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#identify-governing-law",
+        "requirementGuidance": "Check that the governing state is stated. A covenant governed by Montana law answers to the restraint-of-trade statute and the partial-restraint case law from the first line, so the selection determines which framework every later item on this page applies under.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#define-confidential-information",
+        "requirementGuidance": "Keep the definition close to information that is genuinely not public and commercially valuable. Montana's preferred protection channel is the trade-secret statute plus narrow confidentiality covenants, and a definition that swallows everything the worker ever learned starts to operate like a restraint on practicing the trade — the category the statute voids.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mt-mutsa-definition",
+            "authorityType": "primary-law",
+            "title": "Mont. Code Ann. § 30-14-402",
+            "citation": "Mont. Code Ann. § 30-14-402(4).",
+            "url": "https://mca.legmt.gov/bills/mca/title_0300/chapter_0140/part_0040/section_0020/0300-0140-0040-0020.html",
+            "proposition": "Section 30-14-402(4) supplies Montana's trade-secret definition — independent economic value from secrecy plus reasonable secrecy efforts — the benchmark a confidentiality and trade-secret definition should track.",
+            "verbatimQuote": "(4) \"Trade secret\" means information or computer software, including a formula, pattern, compilation, program, device, method, technique, or process, that: (a) derives independent economic value, actual or potential, from not being generally known to and not being readily ascertainable by proper means by other persons who can obtain economic value from its disclosure or use; and (b) is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-mutsa-definition"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#define-trade-secrets",
+        "requirementGuidance": "Track the statutory definition: information or software with independent economic value from secrecy, protected by reasonable secrecy efforts. The definition earns its keep twice in Montana — it anchors the perpetual-protection clause, and proven trade-secret access is one of the few facts that can preserve enforcement after an employer-initiated termination.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mt-mutsa-definition",
+            "authorityType": "primary-law",
+            "title": "Mont. Code Ann. § 30-14-402",
+            "citation": "Mont. Code Ann. § 30-14-402(4).",
+            "url": "https://mca.legmt.gov/bills/mca/title_0300/chapter_0140/part_0040/section_0020/0300-0140-0040-0020.html",
+            "proposition": "Section 30-14-402(4) supplies Montana's trade-secret definition — independent economic value from secrecy plus reasonable secrecy efforts — the benchmark a confidentiality and trade-secret definition should track.",
+            "verbatimQuote": "(4) \"Trade secret\" means information or computer software, including a formula, pattern, compilation, program, device, method, technique, or process, that: (a) derives independent economic value, actual or potential, from not being generally known to and not being readily ascertainable by proper means by other persons who can obtain economic value from its disclosure or use; and (b) is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-mutsa-definition"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-period",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#define-restricted-period",
+        "requirementGuidance": "A single defined Restricted Period keeps every duration auditable against the reasonableness test, whose first element asks whether the covenant is limited in operation as to time or place. A clean, stated period is the easiest way to put the time limb beyond argument — an open-ended or renewing period invites the absolute-restraint characterization.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mt-dobbins-test-defs",
+            "authorityType": "case-law",
+            "title": "Dobbins, DeGuire & Tucker, P.C. v. Rutherford, MacDonald & Olson",
+            "citation": "Dobbins, DeGuire & Tucker, P.C. v. Rutherford, MacDonald & Olson, 218 Mont. 392, 708 P.2d 577 (1985).",
+            "url": "https://www.courtlistener.com/opinion/1183224/dobbins-deguire-tucker-pc-v-rutherford-macdonald-olson/",
+            "deepLink": "https://www.courtlistener.com/opinion/1183224/dobbins-deguire-tucker-pc-v-rutherford-macdonald-olson/#:~:text=%E2%80%9C(1)%20the%20covenant%20should%20be,the%20employee%20or%20the%20public.%E2%80%9D",
+            "proposition": "Dobbins states the three-part reasonableness test for partial restraints, whose first element asks for a limit as to time or place.",
+            "verbatimQuote": "“(1) the covenant should be limited in operation either as to time or place; (2) the covenant should be based on some good consideration; and (3) the covenant should afford a reasonable protection for and not impose an unreasonable burden upon the employer, the employee or the public.”",
+            "date": "1985-11-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-dobbins-test-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-territory",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-territory",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted territory",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#define-restricted-territory",
+        "requirementGuidance": "Test the territory against the worker's actual market, not the map. Montana voided a covenant that prohibited the worker from doing exactly the local work her trade depended on — so a territory that blankets everywhere the worker could realistically practice converts a nominally limited clause into an absolute restraint, whatever its label.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mt-curl-defs",
+            "authorityType": "case-law",
+            "title": "Montana Mountain Products v. Curl",
+            "citation": "Mont. Mountain Prods. v. Curl, 2005 MT 102, 327 Mont. 7, 112 P.3d 979.",
+            "url": "https://www.courtlistener.com/opinion/887309/montana-mountain-products-v-curl/",
+            "deepLink": "https://www.courtlistener.com/opinion/887309/montana-mountain-products-v-curl/#:~:text=Because%20the%20covenant%20prohibits%20Curl,an%20unlawful%20restraint%20on%20trade.",
+            "proposition": "Curl voided a covenant that prohibited the worker from engaging in her profession, the risk an overdrawn territory definition recreates.",
+            "verbatimQuote": "Because the covenant prohibits Curl from engaging in her profession, we conclude that it is unreasonable and therefore an unlawful restraint on trade.",
+            "date": "2005-04-26",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-curl-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered customers",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#define-covered-customers",
+        "requirementGuidance": "Bound the class to clients the worker actually served, ideally inside a stated look-back window. Montana's most successful covenant pattern is exactly this shape: a provision keyed to the firm's existing clients, with a payment consequence rather than a work ban, held to be a partial restraint. The wider the customer class, the further the clause drifts from the pattern that wins.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mt-alborn-feeclause-defs",
+            "authorityType": "case-law",
+            "title": "Junkermier, Clark, Campanella, Stevens, P.C. v. Alborn, Uithoven, Riekenberg, P.C.",
+            "citation": "Junkermier, Clark, Campanella, Stevens, P.C. v. Alborn, Uithoven, Riekenberg, P.C., 2016 MT 218, 384 Mont. 464, 380 P.3d 747.",
+            "url": "https://www.courtlistener.com/opinion/4254366/junkermier-clark-campanella-stevens-pc-v-alborn-uithoven/",
+            "deepLink": "https://www.courtlistener.com/opinion/4254366/junkermier-clark-campanella-stevens-pc-v-alborn-uithoven/#:~:text=Rather%2C%20the%20Covenant%20requires%20Former,their%20departure%20from%20the%20firm.",
+            "proposition": "The 2016 Alborn appeal treated a provision keyed to the firm's existing clients, with a payment consequence rather than a work ban, as a partial restraint — the customer-class shape Montana has enforced.",
+            "verbatimQuote": "Rather, the Covenant requires Former Shareholders to pay liquidated damages if they provide services to a Junkermier client within one year of their departure from the firm.",
+            "date": "2016-09-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-alborn-feeclause-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#define-covered-employees",
+        "requirementGuidance": "Keep the no-poach class to colleagues the departing worker actually worked with or supervised. The restraint statute reaches contracts restraining a business of any kind, so an employee non-solicit is itself a restraint tested for reasonableness — and no Montana high-court decision fixes a safe scope for one, which makes a modest, relationship-based class the only defensible drafting posture.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mt-703-defs",
+            "authorityType": "primary-law",
+            "title": "Mont. Code Ann. § 28-2-703",
+            "citation": "Mont. Code Ann. § 28-2-703.",
+            "url": "https://mca.legmt.gov/bills/mca/title_0280/chapter_0020/part_0070/section_0030/0280-0020-0070-0030.html",
+            "proposition": "Section 28-2-703 voids contracts restraining a business of any kind, which makes an employee non-solicit a restraint on trade tested for reasonableness.",
+            "verbatimQuote": "28-2-703. Contracts in restraint of trade generally void. Any contract by which anyone is restrained from exercising a lawful profession, trade, or business of any kind, otherwise than is provided for by 28-2-704 or 28-2-705, is to that extent void.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-703-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#define-protected-interests",
+        "requirementGuidance": "Name the interests concretely, because the employer will have to prove them. Montana recognized a firm's legitimate business interest in protecting its client base, and proof of a real protective interest is also what keeps enforcement alive in harder postures, like a separation the employer initiated. Recitals about competition in general do no work here.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mt-jccs-clientbase-defs",
+            "authorityType": "case-law",
+            "title": "Junkermier, Clark, Campanella, Stevens, P.C. v. Alborn",
+            "citation": "Junkermier, Clark, Campanella, Stevens, P.C. v. Alborn, 2020 MT 179.",
+            "url": "https://www.courtlistener.com/opinion/4767942/jccs-v-alborn/",
+            "deepLink": "https://www.courtlistener.com/opinion/4767942/jccs-v-alborn/#:~:text=We%20conclude%20the%20District%20Court,of%20protecting%20its%20client%20base.",
+            "proposition": "The 2020 Alborn appeal recognized the employer's legitimate business interest in protecting its client base — the kind of concrete interest a protected-interests definition should name.",
+            "verbatimQuote": "We conclude the District Court did not err by finding JCCS had a legitimate business interest in the Covenant of protecting its client base.",
+            "date": "2020-07-14",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-jccs-clientbase-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-competitive-business",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Competitive business",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#define-competitive-business",
+        "requirementGuidance": "Describe the genuinely competing activity in concrete terms. The wider this definition sweeps, the more the covenant looks like a bar on practicing the profession itself rather than a regulation of a limited slice of it — and that characterization, not the clause heading, is what decides which side of the void line the covenant lands on.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where ownership or investment in competitors is restricted, look for a passive-holdings carve-out below a stated threshold. A clause that technically forbids holding ordinary public shares in the industry restricts far more than any protectable interest requires, and gratuitous overbreadth is exactly what pushes a Montana covenant from the partial-restraint column into the void one.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#define-passive-public-holdings",
+        "requirementGuidance": "A drafting convenience, not a requirement — many agreements inline the carve-out language instead. If the capitalized term appears, confirm its percentage matches the operative carve-out it supports.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.11",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#define-solicit",
+        "requirementGuidance": "Pin the term to initiating contact. Montana has no decision fixing the boundaries of a stand-alone non-solicit, so the clause will be judged on how much trade it actually restrains — a definition that also captures passively accepting work from a client who calls first restrains more, and explains itself less, than one limited to active outreach.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "distinguish-employer-initiated-termination-in-the-termination-trigger",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.montana.distinguish-employer-initiated-termination-in-the-termination-trigger",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Who ended the relationship",
+        "sectionId": "definitions",
+        "itemNumber": "2.12",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#distinguish-employer-initiated-termination-in-the-termination-trigger",
+        "requirementGuidance": "The termination definition should do more than start the clock — it should record who ended the relationship and how. In Montana that single fact is usually decisive: an employer that chooses to end the employment relationship normally lacks a legitimate business interest in enforcing the covenant afterward, and the exception requires the employer to prove the worker misused trade secrets, customer relationships, or proprietary information. A trigger that lumps resignation, dismissal, and nonrenewal together hides the fact most likely to control the outcome.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mt-wrigg-termination",
+            "authorityType": "case-law",
+            "title": "Wrigg v. Junkermier, Clark, Campanella, Stevens, P.C.",
+            "citation": "Wrigg v. Junkermier, Clark, Campanella, Stevens, P.C., 2011 MT 290, 362 Mont. 496, 265 P.3d 646.",
+            "url": "https://www.courtlistener.com/opinion/889623/wrigg-v-junkermier-clark-campanella-stevens-pc/",
+            "deepLink": "https://www.courtlistener.com/opinion/889623/wrigg-v-junkermier-clark-campanella-stevens-pc/#:~:text=This%20disfavor%20only%20heightens%20when,the%20covenant%20not%20to%20compete.",
+            "proposition": "Wrigg holds that the disfavor of restraints heightens when the employer ends the relationship and still seeks enforcement, which is why the termination trigger should record who ended it.",
+            "verbatimQuote": "This disfavor only heightens when an employer chooses to end the employment relationship and yet seeks to enforce the covenant not to compete.",
+            "date": "2011-11-22",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-wrigg-termination"
+          },
+          {
+            "sourceId": "mt-wrigg-misconduct",
+            "authorityType": "case-law",
+            "title": "Wrigg v. Junkermier, Clark, Campanella, Stevens, P.C.",
+            "citation": "Wrigg v. Junkermier, Clark, Campanella, Stevens, P.C., 2011 MT 290, 362 Mont. 496, 265 P.3d 646.",
+            "url": "https://www.courtlistener.com/opinion/889623/wrigg-v-junkermier-clark-campanella-stevens-pc/",
+            "deepLink": "https://www.courtlistener.com/opinion/889623/wrigg-v-junkermier-clark-campanella-stevens-pc/#:~:text=A%20court%20should%20analyze%20whether,employee%20with%20an%20unfair%20advantage.",
+            "proposition": "Wrigg directs courts to analyze whether the former employee misused trade secrets, customer relationships, or proprietary information — the employer-proven exception after an employer-initiated separation.",
+            "verbatimQuote": "A court should analyze whether the former employee used trade secrets, customer relationships, or proprietary information that would provide an employee with an unfair advantage.",
+            "date": "2011-11-22",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-wrigg-misconduct"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-independent-consideration-for-post-hire-covenants",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.montana.require-independent-consideration-for-post-hire-covenants",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "New consideration for a covenant signed after hire",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#require-independent-consideration-for-post-hire-covenants",
+        "requirementGuidance": "Do not accept continued at-will employment alone as the exchange for a covenant signed after the job began. Montana held that the simple fact of continued employment may not be sufficient consideration for a non-compete signed months into the role; a post-hire covenant needs independent consideration — a raise, a promotion, access to trade secrets or confidential information, or another real benefit tied to the new restriction — documented at signing, not reconstructed later. Good consideration is also an element of the reasonableness test itself, so the gap defeats the restraint, not just the contract. A covenant presented during pre-employment negotiations can use the job offer as the exchange.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mt-access-continued",
+            "authorityType": "case-law",
+            "title": "Access Organics, Inc. v. Hernandez",
+            "citation": "Access Organics, Inc. v. Hernandez, 2008 MT 4, 341 Mont. 73, 175 P.3d 899.",
+            "url": "https://www.courtlistener.com/opinion/888657/access-organics-inc-v-hernandez/",
+            "deepLink": "https://www.courtlistener.com/opinion/888657/access-organics-inc-v-hernandez/#:~:text=In%20such%20circumstances%2C%20the%20simple,not%20serve%20as%20sufficient%20consideration.",
+            "proposition": "Access Organics holds that continued at-will employment alone may not be sufficient consideration for a Montana non-compete signed after hire.",
+            "verbatimQuote": "In such circumstances, the simple fact of the employee’s continued employment may not serve as sufficient consideration.",
+            "date": "2008-01-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-access-continued"
+          },
+          {
+            "sourceId": "mt-access-independent",
+            "authorityType": "case-law",
+            "title": "Access Organics, Inc. v. Hernandez",
+            "citation": "Access Organics, Inc. v. Hernandez, 2008 MT 4, 341 Mont. 73, 175 P.3d 899.",
+            "url": "https://www.courtlistener.com/opinion/888657/access-organics-inc-v-hernandez/",
+            "deepLink": "https://www.courtlistener.com/opinion/888657/access-organics-inc-v-hernandez/#:~:text=Non%2Dcompete%20agreements%20entered%20into%20by,be%20supported%20by%20independent%20consideration.",
+            "proposition": "Access Organics confirms that existing-employee covenants can be supported by independent consideration, such as a raise, promotion, or trade-secret access.",
+            "verbatimQuote": "Non-compete agreements entered into by existing employees may be supported by independent consideration.",
+            "date": "2008-01-03",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-access-independent"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-opportunity-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Chance to consult a lawyer",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#acknowledge-opportunity-to-consult-counsel",
+        "requirementGuidance": "No Montana statute demands it, but it is cheap evidence on the fairness side of the balancing test — the same test that weighs the burden on the worker against the employer's protection. An acknowledgement that the worker had a real chance to take the agreement to a lawyer makes the signing process harder to paint as oppressive.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "Trade-secret protection should run as long as secrecy does — both the federal definition and Montana's own trade-secret act key the right to continued secrecy, not to a contract term. In a state that pushes employers away from broad covenants and toward trade-secret protection, a fixed expiry on this clause gives away the most durable remedy the employer has.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mt-dtsa-definition",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
+            "citation": "18 U.S.C. § 1839(3)(B) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1839",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
+            "proposition": "Federal law keys trade-secret status to continued secrecy, which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-dtsa-definition"
+          },
+          {
+            "sourceId": "mt-mutsa-duration",
+            "authorityType": "primary-law",
+            "title": "Mont. Code Ann. § 30-14-402",
+            "citation": "Mont. Code Ann. § 30-14-402(4).",
+            "url": "https://mca.legmt.gov/bills/mca/title_0300/chapter_0140/part_0040/section_0020/0300-0140-0040-0020.html",
+            "proposition": "Montana's trade-secret definition likewise conditions the right on continued secrecy and reasonable secrecy efforts, supporting protection that lasts as long as the secret does.",
+            "verbatimQuote": "(4) \"Trade secret\" means information or computer software, including a formula, pattern, compilation, program, device, method, technique, or process, that: (a) derives independent economic value, actual or potential, from not being generally known to and not being readily ascertainable by proper means by other persons who can obtain economic value from its disclosure or use; and (b) is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-mutsa-duration"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#state-confidentiality-duration",
+        "requirementGuidance": "Give ordinary confidential information its own finite term. Montana's framework rewards narrow confidentiality covenants; a perpetual lid on non-secret information stretches the clause toward operating as a restraint on the trade itself, and the two-track structure keeps the perpetual obligation where the trade-secret statutes actually support it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#disclose-dtsa-notice",
+        "requirementGuidance": "Federal law, fully applicable in Montana: omit the immunity notice and the employer forfeits exemplary damages and attorney fees in a later trade-secret suit against the worker. Because trade-secret protection is the channel Montana law leaves widest open, giving away those remedies is an unforced error.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mt-dtsa-notice",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-dtsa-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Confidentiality and non-disparagement language has to leave wages, hours, and working conditions discussable. Federal labor law protects that speech regardless of the governing state, and the Board has been striking overbroad clauses in employee agreements.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mt-nlra-section7",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-nlra-section7"
+          },
+          {
+            "sourceId": "mt-mclaren-protected",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-mclaren-protected"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#permit-compelled-disclosure",
+        "requirementGuidance": "Confirm the carve-out for disclosure required by law, court order, or a government investigation, with notice to the employer where lawful. A confidentiality clause cannot stop legally compelled disclosure anywhere, and a clause drafted as if it could is the kind of overreach that draws strict construction against the drafter in a state already skeptical of restraints.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#require-property-return-and-certification",
+        "requirementGuidance": "Return-or-delete at separation, certified in writing. In a state whose strongest post-employment remedy is the trade-secret act, the certification is the cleanest contemporaneous evidence of what the worker kept — and of the reasonable secrecy efforts the statutory definition requires the employer to have made.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-employee-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#permit-employee-nonsolicit",
+        "requirementGuidance": "Optional — and untested at the top of Montana's courts. The restraint statute reaches contracts restraining a business of any kind, so treat the clause as a restraint that must stay partial and reasonable: limited to real working relationships, inside the defined Restricted Period, and never functioning as a hiring ban across the employer's whole workforce.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mt-703-covenants",
+            "authorityType": "primary-law",
+            "title": "Mont. Code Ann. § 28-2-703",
+            "citation": "Mont. Code Ann. § 28-2-703.",
+            "url": "https://mca.legmt.gov/bills/mca/title_0280/chapter_0020/part_0070/section_0030/0280-0020-0070-0030.html",
+            "proposition": "Section 28-2-703 is the baseline every Montana covenant is tested against: restraints on a lawful profession, trade, or business are void except under the statutory exceptions.",
+            "verbatimQuote": "28-2-703. Contracts in restraint of trade generally void. Any contract by which anyone is restrained from exercising a lawful profession, trade, or business of any kind, otherwise than is provided for by 28-2-704 or 28-2-705, is to that extent void.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-703-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-customer-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#permit-customer-nonsolicit",
+        "requirementGuidance": "Optional, and worth comparing against the structure Montana has actually enforced: a fee-for-service provision that lets the worker serve former clients subject to a payment, rather than forbidding the contact outright. A pure non-solicit is still a restraint under the statute with no decision fixing its permissible scope, so the closer it sits to actual served clients and active outreach, the safer it is.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mt-703-covenants",
+            "authorityType": "primary-law",
+            "title": "Mont. Code Ann. § 28-2-703",
+            "citation": "Mont. Code Ann. § 28-2-703.",
+            "url": "https://mca.legmt.gov/bills/mca/title_0280/chapter_0020/part_0070/section_0030/0280-0020-0070-0030.html",
+            "proposition": "Section 28-2-703 is the baseline every Montana covenant is tested against: restraints on a lawful profession, trade, or business are void except under the statutory exceptions.",
+            "verbatimQuote": "28-2-703. Contracts in restraint of trade generally void. Any contract by which anyone is restrained from exercising a lawful profession, trade, or business of any kind, otherwise than is provided for by 28-2-704 or 28-2-705, is to that extent void.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-703-covenants"
+          },
+          {
+            "sourceId": "mt-alborn-feeclause-cov",
+            "authorityType": "case-law",
+            "title": "Junkermier, Clark, Campanella, Stevens, P.C. v. Alborn, Uithoven, Riekenberg, P.C.",
+            "citation": "Junkermier, Clark, Campanella, Stevens, P.C. v. Alborn, Uithoven, Riekenberg, P.C., 2016 MT 218, 384 Mont. 464, 380 P.3d 747.",
+            "url": "https://www.courtlistener.com/opinion/4254366/junkermier-clark-campanella-stevens-pc-v-alborn-uithoven/",
+            "deepLink": "https://www.courtlistener.com/opinion/4254366/junkermier-clark-campanella-stevens-pc-v-alborn-uithoven/#:~:text=Rather%2C%20the%20Covenant%20requires%20Former,their%20departure%20from%20the%20firm.",
+            "proposition": "The 2016 Alborn appeal shows the customer-restraint structure Montana has enforced: a fee consequence for serving former firm clients rather than a prohibition on the work.",
+            "verbatimQuote": "Rather, the Covenant requires Former Shareholders to pay liquidated damages if they provide services to a Junkermier client within one year of their departure from the firm.",
+            "date": "2016-09-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-alborn-feeclause-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-dealing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#permit-non-dealing",
+        "requirementGuidance": "Non-dealing bars serving covered customers even when they call first — a restraint on doing the work, not just on chasing it. In Montana that matters structurally: the more a clause forbids performing the trade for a market segment, the closer it edges to the absolute-prohibition territory the statute voids. If it appears, keep the customer class tight and treat the clause as a deliberate risk decision.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mt-curl-covenants",
+            "authorityType": "case-law",
+            "title": "Montana Mountain Products v. Curl",
+            "citation": "Mont. Mountain Prods. v. Curl, 2005 MT 102, 327 Mont. 7, 112 P.3d 979.",
+            "url": "https://www.courtlistener.com/opinion/887309/montana-mountain-products-v-curl/",
+            "deepLink": "https://www.courtlistener.com/opinion/887309/montana-mountain-products-v-curl/#:~:text=Because%20the%20covenant%20prohibits%20Curl,an%20unlawful%20restraint%20on%20trade.",
+            "proposition": "Curl voided a covenant that prohibited the worker from engaging in her profession — the line a non-dealing clause or an unnarrowed non-compete risks crossing.",
+            "verbatimQuote": "Because the covenant prohibits Curl from engaging in her profession, we conclude that it is unreasonable and therefore an unlawful restraint on trade.",
+            "date": "2005-04-26",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-curl-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-compete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#permit-non-compete",
+        "requirementGuidance": "If a true non-compete appears, route it straight through the Montana statutory gates at the end of this checklist: the statute voids restraints on practicing a trade, and only a covenant that is genuinely partial — and reasonable on every element of the balancing test — survives. For covered health-care providers it is simply off the table. The drafting posture that wins here is the narrow, partial restraint, not the broad clause with a fallback.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mt-703-covenants",
+            "authorityType": "primary-law",
+            "title": "Mont. Code Ann. § 28-2-703",
+            "citation": "Mont. Code Ann. § 28-2-703.",
+            "url": "https://mca.legmt.gov/bills/mca/title_0280/chapter_0020/part_0070/section_0030/0280-0020-0070-0030.html",
+            "proposition": "Section 28-2-703 is the baseline every Montana covenant is tested against: restraints on a lawful profession, trade, or business are void except under the statutory exceptions.",
+            "verbatimQuote": "28-2-703. Contracts in restraint of trade generally void. Any contract by which anyone is restrained from exercising a lawful profession, trade, or business of any kind, otherwise than is provided for by 28-2-704 or 28-2-705, is to that extent void.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-703-covenants"
+          },
+          {
+            "sourceId": "mt-mungas-partial",
+            "authorityType": "case-law",
+            "title": "Mungas v. Great Falls Clinic, LLP",
+            "citation": "Mungas v. Great Falls Clinic, LLP, 2009 MT 426, 354 Mont. 50, 221 P.3d 1230.",
+            "url": "https://www.courtlistener.com/opinion/888694/mungas-v-great-falls-clinic-llp/",
+            "deepLink": "https://www.courtlistener.com/opinion/888694/mungas-v-great-falls-clinic-llp/#:~:text=The%20Dobbins%20Court%20concluded%20that,not%20to%20compete%20is%20reasonable.",
+            "proposition": "Mungas restates the controlling distinction: absolute prohibitions are void, while a non-absolute restraint gets a factual reasonableness determination.",
+            "verbatimQuote": "The Dobbins Court concluded that in those instances where a contract contains a restraint on a person’s ability to practice their profession, but such restraint is not an absolute prohibition, a factual determination must be made as to whether the covenant not to compete is reasonable.",
+            "date": "2009-12-15",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-mungas-partial"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Named-competitor narrowing",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementGuidance": "When the employer can name its real competitors, the covenant should bind those instead of leaning on an open-ended definition. A named list is the cheapest way to prove the restraint is partial — the worker can practice anywhere except a handful of identified firms — and Montana courts void overreaching covenants rather than trimming them, so the narrowing has to be in the document, not left to the judge.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mt-curl-covenants",
+            "authorityType": "case-law",
+            "title": "Montana Mountain Products v. Curl",
+            "citation": "Mont. Mountain Prods. v. Curl, 2005 MT 102, 327 Mont. 7, 112 P.3d 979.",
+            "url": "https://www.courtlistener.com/opinion/887309/montana-mountain-products-v-curl/",
+            "deepLink": "https://www.courtlistener.com/opinion/887309/montana-mountain-products-v-curl/#:~:text=Because%20the%20covenant%20prohibits%20Curl,an%20unlawful%20restraint%20on%20trade.",
+            "proposition": "Curl voided a covenant that prohibited the worker from engaging in her profession — the line a non-dealing clause or an unnarrowed non-compete risks crossing.",
+            "verbatimQuote": "Because the covenant prohibits Curl from engaging in her profession, we conclude that it is unreasonable and therefore an unlawful restraint on trade.",
+            "date": "2005-04-26",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-curl-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#permit-non-investment",
+        "requirementGuidance": "Rare and deliberate. Confirm the passive-holdings carve-out is intact and the clause shares the defined Restricted Period — and check that the investment restriction does not quietly reach how the worker practices or earns in the trade, which would pull it under the restraint statute's void rule.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#require-non-disparagement",
+        "requirementGuidance": "Standard to include with a stated term, but audit the carve-outs: truthful testimony, statements to government agencies, and protected workplace speech must sit outside the clause. Federal labor law polices overbroad versions in every state, and nothing in Montana law rescues a clause drafted past those limits.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mt-mclaren-nondisparagement",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-mclaren-nondisparagement"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-physician-specific-rights",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Physician rights and notices",
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#address-physician-specific-rights",
+        "requirementGuidance": "The dedicated clause should state Montana's rule plainly: a contract with a covered health-care provider may not restrict post-relationship practice, services, patient treatment, patient relationships, or patient solicitation — with coverage phased by when the contract was made or renewed, reaching all licensed physicians for contracts made or renewed on or after January 1, 2026. The clause should also locate what remains lawful: a covenant in connection with the sale and purchase of a practice, and a physician repayment provision for advanced money that decreases over time.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mt-724-ban-phys",
+            "authorityType": "primary-law",
+            "title": "Mont. Code Ann. § 28-2-724",
+            "citation": "Mont. Code Ann. § 28-2-724(1).",
+            "url": "https://mca.legmt.gov/bills/mca/title_0280/chapter_0020/part_0070/section_0240/0280-0020-0070-0240.html",
+            "proposition": "Section 28-2-724(1) bars covered health-care provider contracts from restricting post-relationship practice, services, patient treatment, patient relationships, or patient solicitation.",
+            "verbatimQuote": "(1) A contract that creates or establishes the terms of employment, a partnership, or any other form of professional relationship with a health care provider described in subsection (2) may not restrict the right of the health care provider, after the termination of the employment, partnership, or other form of professional relationship, to: (a) practice or provide services for which the provider is licensed, in any geographic area and for any period; (b) treat, advise, consult with, or establish a provider-patient relationship with any current patient of the employer or with a patient affiliated with a partnership or other form of professional relationship; or (c) solicit or seek to establish a provider-patient relationship with any current patient of the employer or with a patient affiliated with a partnership or other form of professional relationship.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-724-ban-phys"
+          },
+          {
+            "sourceId": "mt-724-exceptions-phys",
+            "authorityType": "primary-law",
+            "title": "Mont. Code Ann. § 28-2-724",
+            "citation": "Mont. Code Ann. § 28-2-724(3).",
+            "url": "https://mca.legmt.gov/bills/mca/title_0280/chapter_0020/part_0070/section_0240/0280-0020-0070-0240.html",
+            "proposition": "Section 28-2-724(3) preserves the sale-and-purchase-of-practice exception and the physician-only decreasing-payback exception.",
+            "verbatimQuote": "(3) This section does not apply to a contract in connection with the sale and purchase of a practice or to a provision for repayment of all or a portion of money paid or advanced to a physician licensed under Title 37, chapter 3, that is subject to a payback provision that decreases over time, including but not limited to a bona fide loan, relocation cost, signing bonus, education expense, and tuition repayment expense.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-724-exceptions-phys"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "The worker's representation that no earlier agreement or order blocks the new role. It earns its place on intake in Montana too: an incoming covenant from elsewhere may restrain far more than this state would enforce, and surfacing it before the first client call is cheaper than litigating it after.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#address-notice-to-future-employers",
+        "requirementGuidance": "A genuine drafting choice with a Montana caution attached: an enforcement letter sent after the employer itself ended the relationship runs into the rule that an employer normally lacks a legitimate interest in enforcing the covenant in that posture. If the clause appears, condition any third-party notice on a covenant the employer could actually enforce on the facts of the separation.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mt-wrigg-notice",
+            "authorityType": "case-law",
+            "title": "Wrigg v. Junkermier, Clark, Campanella, Stevens, P.C.",
+            "citation": "Wrigg v. Junkermier, Clark, Campanella, Stevens, P.C., 2011 MT 290, 362 Mont. 496, 265 P.3d 646.",
+            "url": "https://www.courtlistener.com/opinion/889623/wrigg-v-junkermier-clark-campanella-stevens-pc/",
+            "deepLink": "https://www.courtlistener.com/opinion/889623/wrigg-v-junkermier-clark-campanella-stevens-pc/#:~:text=This%20disfavor%20only%20heightens%20when,the%20covenant%20not%20to%20compete.",
+            "proposition": "Wrigg makes enforcement after an employer-initiated separation presumptively illegitimate, a posture to check before warning a new employer off the worker.",
+            "verbatimQuote": "This disfavor only heightens when an employer chooses to end the employment relationship and yet seeks to enforce the covenant not to compete.",
+            "date": "2011-11-22",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-wrigg-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-tolling-during-breach",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-tolling-during-breach",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restriction extended during a breach",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#address-tolling-during-breach",
+        "requirementGuidance": "The agreement should say whether the clock pauses during a breach — but flag any extension mechanism as an open Montana question. No statute or staged decision addresses extending a restricted period for time spent in violation, and an extension is itself part of the restraint, so it has to survive the same time-limit and balancing analysis as the covenant it stretches. A clause that can run indefinitely through repeated extensions undercuts the definite time limit the reasonableness test asks for.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mt-dobbins-tolling",
+            "authorityType": "case-law",
+            "title": "Dobbins, DeGuire & Tucker, P.C. v. Rutherford, MacDonald & Olson",
+            "citation": "Dobbins, DeGuire & Tucker, P.C. v. Rutherford, MacDonald & Olson, 218 Mont. 392, 708 P.2d 577 (1985).",
+            "url": "https://www.courtlistener.com/opinion/1183224/dobbins-deguire-tucker-pc-v-rutherford-macdonald-olson/",
+            "deepLink": "https://www.courtlistener.com/opinion/1183224/dobbins-deguire-tucker-pc-v-rutherford-macdonald-olson/#:~:text=%E2%80%9C(1)%20the%20covenant%20should%20be,the%20employee%20or%20the%20public.%E2%80%9D",
+            "proposition": "Any extension mechanism enlarges the restraint's operation in time, so it answers to the same Dobbins elements — a time or place limit and a reasonable balance of burdens.",
+            "verbatimQuote": "“(1) the covenant should be limited in operation either as to time or place; (2) the covenant should be based on some good consideration; and (3) the covenant should afford a reasonable protection for and not impose an unreasonable burden upon the employer, the employee or the public.”",
+            "date": "1985-11-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-dobbins-tolling"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#require-injunctive-relief-availability",
+        "requirementGuidance": "Look for the acknowledgement that breach may cause irreparable harm — then remember what actually moves a Montana court: a covenant that survives the void rule and the reasonableness test, or a genuine trade-secret claim, for which the statute authorizes an injunction against actual or threatened misappropriation independent of any covenant. A recital cannot supply the legitimate interest the employer has to prove.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mt-mutsa-injunction",
+            "authorityType": "primary-law",
+            "title": "Mont. Code Ann. § 30-14-403",
+            "citation": "Mont. Code Ann. § 30-14-403(1).",
+            "url": "https://mca.legmt.gov/bills/mca/title_0300/chapter_0140/part_0040/section_0030/0300-0140-0040-0030.html",
+            "proposition": "Montana's trade-secret act authorizes injunctions against actual or threatened misappropriation, a remedy that does not depend on the covenant's survival.",
+            "verbatimQuote": "30-14-403. Injunctive relief -- royalty. (1) Actual or threatened misappropriation may be enjoined.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-mutsa-injunction"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-attorneys-fees-and-costs",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Attorney fees and costs",
+        "sectionId": "remedies",
+        "itemNumber": "13.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#address-attorneys-fees-and-costs",
+        "requirementGuidance": "A commercial choice — the default American Rule applies if the agreement is silent. If a fee clause appears, check that it is mutual and prevailing-party based: a one-way employer fee right bolted onto a covenant of uncertain enforceability adds to the burden side of the balancing test without adding any protection the employer can prove it needs.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "draft-distinct-severable-promises-rather-than-rely-on-narrowing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.montana.draft-distinct-severable-promises-rather-than-rely-on-narrowing",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Separate promises, not a court rescue",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#draft-distinct-severable-promises-rather-than-rely-on-narrowing",
+        "requirementGuidance": "Read the severability clause as structure, not insurance. Montana courts construe restrictive covenants strictly and void an overbroad restraint outright rather than rewriting it into a narrower one — the statute's partial-void rule saves the lawful objects of a contract with several distinct objects, but it does not shrink a single aggressive clause. So check that confidentiality, trade-secret, customer, repayment, and competition promises are drafted as separate provisions, each sized to a lawful scope on its own, and treat any clause inviting a court to supply a new scope as a red flag.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mt-604-partial-void",
+            "authorityType": "primary-law",
+            "title": "Mont. Code Ann. § 28-2-604",
+            "citation": "Mont. Code Ann. § 28-2-604.",
+            "url": "https://mca.legmt.gov/bills/mca/title_0280/chapter_0020/part_0060/section_0040/0280-0020-0060-0040.html",
+            "proposition": "Section 28-2-604 voids a contract as to its unlawful objects while preserving the distinct lawful ones — a cleanup rule for separate promises, not a narrowing tool for one overbroad clause.",
+            "verbatimQuote": "28-2-604. When contract partially void. Where a contract has several distinct objects of which one at least is lawful and one at least is unlawful, in whole or in part, the contract is void as to the latter and valid as to the rest.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-604-partial-void"
+          },
+          {
+            "sourceId": "mt-curl-affirm",
+            "authorityType": "case-law",
+            "title": "Montana Mountain Products v. Curl",
+            "citation": "Mont. Mountain Prods. v. Curl, 2005 MT 102, 327 Mont. 7, 112 P.3d 979.",
+            "url": "https://www.courtlistener.com/opinion/887309/montana-mountain-products-v-curl/",
+            "deepLink": "https://www.courtlistener.com/opinion/887309/montana-mountain-products-v-curl/#:~:text=However%2C%20because%20we%20conclude%20that,judgment%20of%20the%20District%20Court.",
+            "proposition": "Curl shows the court declining to save an unreasonable covenant with a narrowed reading — it voided the restraint and affirmed.",
+            "verbatimQuote": "However, because we conclude that the covenant is unreasonable, we nonetheless affirm the judgment of the District Court.",
+            "date": "2005-04-26",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-curl-affirm"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#address-survival-per-covenant",
+        "requirementGuidance": "Per-covenant survival is the distinct-objects principle carried into the boilerplate: each promise should expire on its own schedule and read on its own. In Montana that separateness is what the partial-void rule preserves — a bundled survival clause that entangles the covenants makes it harder for the lawful promises to stand when a restraint falls.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-assignment-and-successors",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assignment and successors",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#address-assignment-and-successors",
+        "requirementGuidance": "Confirm employer-side assignability to successors and that the worker cannot assign. Note the Montana wrinkle for whoever inherits the covenant: the assignee enforces subject to the same statute and the same legitimate-interest showing, and a successor that ends the worker's employment itself walks into the employer-initiated-termination problem with the covenant it just acquired.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "specify-governing-law-and-venue",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.specify-governing-law-and-venue",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law, venue, dispute process",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#specify-governing-law-and-venue",
+        "requirementGuidance": "Specify governing law, venue, and the dispute process. For Montana work, expect the analysis on this page to follow the agreement into court: the restraint statute and the partial-restraint case law are the framework a Montana court applies to a Montana-law covenant, so the rest of this checklist is only as useful as the governing-law clause that makes it the operative test.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Boilerplate with a Montana trap inside: the health-care provider ban applies to contracts made or renewed on or after each phase's effective date, so a routine renewal or amendment can pull an older agreement into the current regime. Review the amendment and renewal mechanics with that in mind — and remember that a mid-employment amendment adding or expanding a covenant needs its own independent consideration.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mt-hb198-entire",
+            "authorityType": "primary-law",
+            "title": "House Bill 198 (Ch. 131, L. 2025)",
+            "citation": "2025 Mont. Laws ch. 131 (HB 198), §§ 2-3.",
+            "url": "https://archive.legmt.gov/content/Sessions/69th/Contractor_index/CH0131.pdf",
+            "proposition": "HB 198 applies its expansion of the health-care provider ban to contracts made or renewed on or after its effective date, which makes renewal mechanics a coverage trigger.",
+            "verbatimQuote": "Applicability. [This act] applies to contracts made or renewed on or after [the effective date of this act].",
+            "date": "2025-04-16",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-hb198-entire"
+          }
+        ]
+      },
+      {
+        "requirementId": "keep-restraints-partial-rather-than-absolute",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.montana.keep-restraints-partial-rather-than-absolute",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No restraint that blocks the trade outright",
+        "sectionId": "montana-statutory-gates",
+        "itemNumber": "19.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#keep-restraints-partial-rather-than-absolute",
+        "requirementGuidance": "Test every covenant against the worker's actual market, not its own wording: a restraint that leaves the worker no realistic way to practice the profession, trade, or business is void under the statute, and Montana voided a covenant that prohibited exactly the local work the worker's trade depended on. The clause that survives is the partial one — the worker keeps practicing, subject to a limited client, territory, time, or fee consequence. Ask, for each covenant, what work the worker could still lawfully do the day after signing; if the honest answer is none, the covenant fails before any reasonableness analysis begins.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mt-703-gate",
+            "authorityType": "primary-law",
+            "title": "Mont. Code Ann. § 28-2-703",
+            "citation": "Mont. Code Ann. § 28-2-703.",
+            "url": "https://mca.legmt.gov/bills/mca/title_0280/chapter_0020/part_0070/section_0030/0280-0020-0070-0030.html",
+            "proposition": "Section 28-2-703 voids any contract restraining a lawful profession, trade, or business except under the statutory exceptions — the baseline every Montana covenant must clear.",
+            "verbatimQuote": "28-2-703. Contracts in restraint of trade generally void. Any contract by which anyone is restrained from exercising a lawful profession, trade, or business of any kind, otherwise than is provided for by 28-2-704 or 28-2-705, is to that extent void.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-703-gate"
+          },
+          {
+            "sourceId": "mt-curl-gate",
+            "authorityType": "case-law",
+            "title": "Montana Mountain Products v. Curl",
+            "citation": "Mont. Mountain Prods. v. Curl, 2005 MT 102, 327 Mont. 7, 112 P.3d 979.",
+            "url": "https://www.courtlistener.com/opinion/887309/montana-mountain-products-v-curl/",
+            "deepLink": "https://www.courtlistener.com/opinion/887309/montana-mountain-products-v-curl/#:~:text=Because%20the%20covenant%20prohibits%20Curl,an%20unlawful%20restraint%20on%20trade.",
+            "proposition": "Curl voided a covenant that operated as an absolute prohibition on the worker's trade in her actual market.",
+            "verbatimQuote": "Because the covenant prohibits Curl from engaging in her profession, we conclude that it is unreasonable and therefore an unlawful restraint on trade.",
+            "date": "2005-04-26",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-curl-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "satisfy-the-dobbins-reasonableness-test",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.montana.satisfy-the-dobbins-reasonableness-test",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "All three reasonableness elements satisfied",
+        "sectionId": "montana-statutory-gates",
+        "itemNumber": "19.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#satisfy-the-dobbins-reasonableness-test",
+        "requirementGuidance": "Run each partial restraint through all three elements: a limit in operation as to time or place, some good consideration, and reasonable protection for — without an unreasonable burden on — the employer, the worker, or the public. The first element reads time or place, not both, but the third is a true balancing test, so a technically limited covenant still fails when the employer's protection is disproportionate to the burden. The structure with the strongest track record is the fee-for-service provision: a court found one reasonable on these factors after trial and sustained a multimillion-dollar judgment on it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mt-dobbins-gate",
+            "authorityType": "case-law",
+            "title": "Dobbins, DeGuire & Tucker, P.C. v. Rutherford, MacDonald & Olson",
+            "citation": "Dobbins, DeGuire & Tucker, P.C. v. Rutherford, MacDonald & Olson, 218 Mont. 392, 708 P.2d 577 (1985).",
+            "url": "https://www.courtlistener.com/opinion/1183224/dobbins-deguire-tucker-pc-v-rutherford-macdonald-olson/",
+            "deepLink": "https://www.courtlistener.com/opinion/1183224/dobbins-deguire-tucker-pc-v-rutherford-macdonald-olson/#:~:text=%E2%80%9C(1)%20the%20covenant%20should%20be,the%20employee%20or%20the%20public.%E2%80%9D",
+            "proposition": "Dobbins supplies the three elements a Montana partial restraint must satisfy: a time or place limit, good consideration, and a reasonable balance of protection and burden.",
+            "verbatimQuote": "“(1) the covenant should be limited in operation either as to time or place; (2) the covenant should be based on some good consideration; and (3) the covenant should afford a reasonable protection for and not impose an unreasonable burden upon the employer, the employee or the public.”",
+            "date": "1985-11-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-dobbins-gate"
+          },
+          {
+            "sourceId": "mt-jccs-dobbins-gate",
+            "authorityType": "case-law",
+            "title": "Junkermier, Clark, Campanella, Stevens, P.C. v. Alborn",
+            "citation": "Junkermier, Clark, Campanella, Stevens, P.C. v. Alborn, 2020 MT 179.",
+            "url": "https://www.courtlistener.com/opinion/4767942/jccs-v-alborn/",
+            "deepLink": "https://www.courtlistener.com/opinion/4767942/jccs-v-alborn/#:~:text=After%20conducting%20a%20bench%20trial%2C,based%20on%20the%20Dobbins%20factors.",
+            "proposition": "The 2020 Alborn appeal shows a covenant proven reasonable on the Dobbins factors after a bench trial — the fee-for-service structure surviving the full test.",
+            "verbatimQuote": "After conducting a bench trial, the District Court determined JCCS had proven the Covenant was reasonable based on the Dobbins factors.",
+            "date": "2020-07-14",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-jccs-dobbins-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-physician-restrictive-covenants",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.montana.exclude-physician-restrictive-covenants",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No practice or patient restrictions on physicians",
+        "sectionId": "montana-statutory-gates",
+        "itemNumber": "19.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#exclude-physician-restrictive-covenants",
+        "requirementGuidance": "For a contract with a licensed physician made or renewed on or after January 1, 2026, strike any clause restricting post-relationship practice or services in any geography for any period — and strike patient-facing substitutes too, because the statute reaches restrictions on treating, advising, consulting with, establishing relationships with, or soliciting the employer's current patients. A non-compete recast as a patient non-solicit fails the same way. What remains lawful: a covenant in connection with the sale and purchase of a practice, and a repayment provision for advanced money on a payback schedule that decreases over time.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mt-724-ban-gate",
+            "authorityType": "primary-law",
+            "title": "Mont. Code Ann. § 28-2-724",
+            "citation": "Mont. Code Ann. § 28-2-724(1).",
+            "url": "https://mca.legmt.gov/bills/mca/title_0280/chapter_0020/part_0070/section_0240/0280-0020-0070-0240.html",
+            "proposition": "Section 28-2-724(1) bars restricting a covered provider's post-relationship practice, services, patient treatment, patient relationships, or patient solicitation — practice bans and patient non-solicits alike.",
+            "verbatimQuote": "(1) A contract that creates or establishes the terms of employment, a partnership, or any other form of professional relationship with a health care provider described in subsection (2) may not restrict the right of the health care provider, after the termination of the employment, partnership, or other form of professional relationship, to: (a) practice or provide services for which the provider is licensed, in any geographic area and for any period; (b) treat, advise, consult with, or establish a provider-patient relationship with any current patient of the employer or with a patient affiliated with a partnership or other form of professional relationship; or (c) solicit or seek to establish a provider-patient relationship with any current patient of the employer or with a patient affiliated with a partnership or other form of professional relationship.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-724-ban-gate"
+          },
+          {
+            "sourceId": "mt-hb620-gate",
+            "authorityType": "primary-law",
+            "title": "House Bill 620 (Ch. 698, L. 2025)",
+            "citation": "2025 Mont. Laws ch. 698 (HB 620), §§ 2-3.",
+            "url": "https://archive.legmt.gov/content/Sessions/69th/Contractor_index/CH0698.pdf",
+            "proposition": "HB 620 extended the ban to all Title 37, chapter 3 physicians for contracts made or renewed on or after January 1, 2026.",
+            "verbatimQuote": "Applicability. [This act] applies to contracts made or renewed on or after January 1, 2026.",
+            "date": "2026-01-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-hb620-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-restrictive-covenants-for-covered-health-care-providers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.montana.exclude-restrictive-covenants-for-covered-health-care-providers",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No practice or patient restrictions on other covered providers",
+        "sectionId": "montana-statutory-gates",
+        "itemNumber": "19.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#exclude-restrictive-covenants-for-covered-health-care-providers",
+        "requirementGuidance": "Check the worker's license against the statute's full list: psychologists, social workers, professional counselors, addiction counselors, marriage and family therapists, and behavioral health peer support specialists are covered, and the 2025 amendments added naturopathic physicians, registered professional nurses, advanced practice registered nurses, and physician assistants for contracts made or renewed on or after the amendment's April 16, 2025 effective date. For any covered provider, the same full ban applies — practice, services, patient treatment, patient relationships, and patient solicitation — and the decreasing-payback exception is written for physicians only, so it offers these classes nothing. Date the contract and date any renewal; coverage turns on when the contract was made or renewed, not on when the dispute arises.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mt-724-providers-gate",
+            "authorityType": "primary-law",
+            "title": "Mont. Code Ann. § 28-2-724",
+            "citation": "Mont. Code Ann. § 28-2-724(2).",
+            "url": "https://mca.legmt.gov/bills/mca/title_0280/chapter_0020/part_0070/section_0240/0280-0020-0070-0240.html",
+            "proposition": "Section 28-2-724(2) lists every covered provider class, from physicians and psychologists through nurses, advanced practice nurses, and physician assistants.",
+            "verbatimQuote": "(2) The requirements of subsection (1) apply to contracts or agreements involving the following health care providers: (a) a physician licensed under Title 37, chapter 3; (b) a psychologist licensed under Title 37, chapter 17; (c) a naturopathic physician licensed under Title 37, chapter 26; (d) a social worker licensed under Title 37, chapter 39; (e) a professional counselor licensed under Title 37, chapter 39; (f) an addiction counselor licensed under Title 37, chapter 39; (g) a marriage and family therapist licensed under Title 37, chapter 39; (h) a behavioral health peer support specialist licensed under Title 37, chapter 39; (i) a registered professional nurse or an advanced practice registered nurse licensed under Title 37, chapter 8; or (j) a physician assistant licensed under Title 37, chapter 20.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-724-providers-gate"
+          },
+          {
+            "sourceId": "mt-hb198-gate",
+            "authorityType": "primary-law",
+            "title": "House Bill 198 (Ch. 131, L. 2025)",
+            "citation": "2025 Mont. Laws ch. 131 (HB 198), §§ 2-3.",
+            "url": "https://archive.legmt.gov/content/Sessions/69th/Contractor_index/CH0131.pdf",
+            "proposition": "HB 198 added naturopathic physicians, registered and advanced practice nurses, and physician assistants for contracts made or renewed on or after its effective date — coverage turns on the contract date.",
+            "verbatimQuote": "Applicability. [This act] applies to contracts made or renewed on or after [the effective date of this act].",
+            "date": "2025-04-16",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-hb198-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "fit-sale-and-partnership-covenants-to-the-statutory-exceptions",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.montana.fit-sale-and-partnership-covenants-to-the-statutory-exceptions",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Sale and partnership covenants inside the statutory lines",
+        "sectionId": "montana-statutory-gates",
+        "itemNumber": "19.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/montana#fit-sale-and-partnership-covenants-to-the-statutory-exceptions",
+        "requirementGuidance": "A covenant claiming the statutory exceptions has to earn them on the facts. The goodwill exception requires an actual sale of the goodwill of a business — a partnership document's recital is not a sale, and the exception was held inapplicable where no sale of property for pecuniary consideration occurred. The geography is a closed menu: the principal-office city or county, adjacent cities or counties, or a combination, for as long as the buyer or a successor carries on a like business there. Partners may agree on dissolution that one or more will not carry on a similar business within the same areas. A statewide or open-ended territory exceeds what either exception authorizes, and a covenant outside the exceptions falls back to the void rule and the partial-restraint analysis. The partnership branch is statutory as well.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mt-704-goodwill-gate",
+            "authorityType": "primary-law",
+            "title": "Mont. Code Ann. § 28-2-704",
+            "citation": "Mont. Code Ann. § 28-2-704.",
+            "url": "https://mca.legmt.gov/bills/mca/title_0280/chapter_0020/part_0070/section_0040/0280-0020-0070-0040.html",
+            "proposition": "Section 28-2-704(1) authorizes a seller-of-goodwill covenant only while the buyer or a successor carries on a like business in the described areas.",
+            "verbatimQuote": "28-2-704. Exception -- sale of goodwill of business. (1) A person who sells the goodwill of a business may agree with the buyer to refrain from carrying on a similar business within the areas provided in subsection (2) so long as the buyer or any person deriving title to the goodwill from the buyer carries on a like business in the described areas.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-704-goodwill-gate"
+          },
+          {
+            "sourceId": "mt-704-areas-gate",
+            "authorityType": "primary-law",
+            "title": "Mont. Code Ann. § 28-2-704",
+            "citation": "Mont. Code Ann. § 28-2-704(2)(e).",
+            "url": "https://mca.legmt.gov/bills/mca/title_0280/chapter_0020/part_0070/section_0040/0280-0020-0070-0040.html",
+            "proposition": "Section 28-2-704(2) fixes the closed geographic menu available to sale-of-goodwill covenants.",
+            "verbatimQuote": "(2) The agreement authorized in subsection (1) may apply in: (a) the city where the principal office of the business is located; (b) the county where the principal office of the business is located; (c) a city in any county adjacent to the county in which the principal office of the business is located; (d) any county adjacent to the county in which the principal office of the business is located; or (e) any combination of the areas in subsections (2)(a) through (2)(d).",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-704-areas-gate"
+          },
+          {
+            "sourceId": "mt-mungas-nosale-gate",
+            "authorityType": "case-law",
+            "title": "Mungas v. Great Falls Clinic, LLP",
+            "citation": "Mungas v. Great Falls Clinic, LLP, 2009 MT 426, 354 Mont. 50, 221 P.3d 1230.",
+            "url": "https://www.courtlistener.com/opinion/888694/mungas-v-great-falls-clinic-llp/",
+            "deepLink": "https://www.courtlistener.com/opinion/888694/mungas-v-great-falls-clinic-llp/#:~:text=Section%2028%2D2%2D704(1)%2C%20MCA%2C%20the%20sale,at%20issue%20in%20this%20case.",
+            "proposition": "Mungas held the goodwill exception inapplicable where no actual sale occurred — a recital does not create the exception.",
+            "verbatimQuote": "Section 28-2-704(1), MCA, the sale of goodwill exception to the prohibition on contracts in restraint of trade, does not apply to the partnership agreements at issue in this case.",
+            "date": "2009-12-15",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-mungas-nosale-gate"
+          },
+          {
+            "sourceId": "mt-705-gate",
+            "authorityType": "primary-law",
+            "title": "Mont. Code Ann. § 28-2-705",
+            "citation": "Mont. Code Ann. § 28-2-705.",
+            "url": "https://mca.legmt.gov/bills/mca/title_0280/chapter_0020/part_0070/section_0050/0280-0020-0070-0050.html",
+            "proposition": "Section 28-2-705 lets partners agree on dissolution that one or more will not carry on a similar business within the § 28-2-704(2) areas.",
+            "verbatimQuote": "28-2-705. Exception -- dissolution of partnership. Partners may, upon dissolution of the partnership, agree that one or more of them may not carry on a similar business within the areas provided in 28-2-704(2).",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/montana#src-mt-705-gate"
+          }
+        ]
+      }
+    ]
+  }
+}

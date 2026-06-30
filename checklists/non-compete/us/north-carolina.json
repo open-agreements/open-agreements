@@ -1,0 +1,1290 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/north-carolina",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/north-carolina.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/north-carolina",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/north-carolina/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/north-carolina/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "north-carolina",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — North Carolina",
+      "description": "A clause-by-clause reviewer checklist for North Carolina employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the Whittaker five-element test, the § 75-4 signed-writing rule, and the strict blue-pencil doctrine.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "North Carolina",
+      "coverage": "North Carolina (US)",
+      "lastReviewed": "2026-06-12",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 46,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "label": "Physician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "north-carolina-statutory-gates",
+        "label": "North Carolina enforceability gates"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#identify-parties",
+        "requirementGuidance": "Confirm the employer named is the entity that actually holds the customer relationships and confidential information the covenants protect. North Carolina measures both the legitimate interest and the permissible territory against the employer's own customers, so a covenant running to a parent or affiliate the worker never served opens a gap between the restraint and any interest that could support it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#identify-effective-date",
+        "requirementGuidance": "The date does more than start the clock in this state: whether the covenant was signed at hire or after the relationship began decides whether new consideration — a raise in pay or a new job assignment, for example — was required at all. An undated agreement leaves that threshold question, and every duration calculation, open for litigation.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nc-daniel-consideration-cover",
+            "authorityType": "case-law",
+            "title": "Whittaker General Medical Corp. v. Daniel",
+            "citation": "Whittaker Gen. Med. Corp. v. Daniel, 324 N.C. 523 (1989).",
+            "url": "https://www.courtlistener.com/opinion/1205500/whittaker-general-medical-corp-v-daniel/",
+            "deepLink": "https://www.courtlistener.com/opinion/1205500/whittaker-general-medical-corp-v-daniel/#:~:text=When%20the%20relationship%20of%20employer,or%20a%20new%20job%20assignment.",
+            "proposition": "Whittaker supports the timing rule that a covenant signed after the employment relationship is established needs its own consideration, such as a raise in pay or a new job assignment.",
+            "verbatimQuote": "When the relationship of employer and employee is established before the covenant not to compete is signed there must be consideration for the covenant such as a raise in pay or a new job assignment.",
+            "date": "1989-06-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-nc-daniel-consideration-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#identify-employee-title",
+        "requirementGuidance": "Record the role and duties with some precision, because the scope analysis runs through them: a restraint that bars work distinct from what the employee actually did fails, and the stated title plus duty description is the first evidence of what the employee actually did. The actual-duties gate at the end of this checklist does the substantive work.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#identify-governing-law",
+        "requirementGuidance": "Check the stated governing law, and read it separately from the forum clause rather than as one unit. For a contract entered into in North Carolina, an out-of-state forum or arbitration-venue selection is void as against public policy, while an out-of-state choice-of-law clause is not automatically void — the two selections live or die on different rules.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nc-gs-22b-3-cover",
+            "authorityType": "primary-law",
+            "title": "N.C. Gen. Stat. § 22B-3",
+            "citation": "N.C. Gen. Stat. § 22B-3.",
+            "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_22B/GS_22B-3.html",
+            "proposition": "Section 22B-3 supports reading the forum selection separately from the choice of law: an out-of-state forum provision in a contract entered into in North Carolina is void.",
+            "verbatimQuote": "Except as otherwise provided in this section, any provision in a contract entered into in North Carolina that requires the prosecution of any action or the arbitration of any dispute that arises from the contract to be instituted or heard in another state is against public policy and is void and unenforceable.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-nc-gs-22b-3-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#define-confidential-information",
+        "requirementGuidance": "Compare the definition to the Trade Secrets Protection Act benchmark: information that derives independent commercial value from not being generally known and is subject to reasonable secrecy efforts. A confidentiality definition that tracks the statute keeps the fallback claim alive even where a covenant fails, because the trade-secret remedy does not depend on a valid restraint.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nc-tspa-definition",
+            "authorityType": "primary-law",
+            "title": "N.C. Gen. Stat. § 66-152",
+            "citation": "N.C. Gen. Stat. § 66-152(3).",
+            "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_66/GS_66-152.html",
+            "proposition": "The Trade Secrets Protection Act defines a trade secret by its independent commercial value from not being generally known and reasonable efforts to maintain secrecy — the benchmark for confidentiality and trade-secret definitions.",
+            "verbatimQuote": "“Trade secret” means business or technical information, including but not limited to a formula, pattern, program, device, compilation of information, method, technique, or process that: a. Derives independent actual or potential commercial value from not being generally known or readily ascertainable through independent development or reverse engineering by persons who can obtain economic value from its disclosure or use; and b. Is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-nc-tspa-definition"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#define-trade-secrets",
+        "requirementGuidance": "Keep Trade Secrets a separate defined term aligned with the statutory definition. In North Carolina the Act, not the covenant, supplies the durable protection — injunctions, damages, and punitive damages for willful misappropriation survive even when a non-compete is struck — and a bloated definition sweeping in ordinary know-how dilutes the claim that matters most.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nc-tspa-definition",
+            "authorityType": "primary-law",
+            "title": "N.C. Gen. Stat. § 66-152",
+            "citation": "N.C. Gen. Stat. § 66-152(3).",
+            "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_66/GS_66-152.html",
+            "proposition": "The Trade Secrets Protection Act defines a trade secret by its independent commercial value from not being generally known and reasonable efforts to maintain secrecy — the benchmark for confidentiality and trade-secret definitions.",
+            "verbatimQuote": "“Trade secret” means business or technical information, including but not limited to a formula, pattern, program, device, compilation of information, method, technique, or process that: a. Derives independent actual or potential commercial value from not being generally known or readily ascertainable through independent development or reverse engineering by persons who can obtain economic value from its disclosure or use; and b. Is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-nc-tspa-definition"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-period",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#define-restricted-period",
+        "requirementGuidance": "One umbrella Restricted Period keeps each covenant's duration auditable against the reasonableness test, where time and territory are weighed together on a sliding scale — the longer the period, the tighter the footprint must be. Because a North Carolina court will not shorten an unreasonable term, the stated period has to be defensible exactly as written.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-restricted-territory",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-territory",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted territory",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#define-restricted-territory",
+        "requirementGuidance": "Tie the territory to where the employee actually worked and built customer relationships. A geographic restriction is reasonable only to the extent it protects the employer's interest in keeping its existing customers, so a footprint-wide or aspirational territory is among the most reliable ways to lose the whole covenant.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nc-hartman-territory",
+            "authorityType": "case-law",
+            "title": "Hartman v. W.H. Odell & Associates, Inc.",
+            "citation": "Hartman v. W.H. Odell & Assocs., 117 N.C. App. 307 (1994).",
+            "url": "https://www.courtlistener.com/opinion/1305744/hartman-v-wh-odell-and-associates-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/1305744/hartman-v-wh-odell-and-associates-inc/#:~:text=A%20restriction%20as%20to%20territory,employer%20in%20maintaining%20%5Bits%5D%20customers.",
+            "proposition": "Hartman supports tying the territory to the employer's customer base: a territorial restriction is reasonable only to the extent it protects the employer's interest in maintaining its customers.",
+            "verbatimQuote": "A restriction as to territory is reasonable only to the extent it protects the legitimate interests of the employer in maintaining [its] customers.",
+            "date": "1994-12-20",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-nc-hartman-territory"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered customers",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#define-covered-customers",
+        "requirementGuidance": "Bound the class to customers the employee actually served during a stated look-back window. A definition that reaches clients the employer itself never had is an impermissible restraint on the worker, so prospects and aspirational accounts belong outside the defined term.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nc-hejl-prospective",
+            "authorityType": "case-law",
+            "title": "Hejl v. Hood, Hargett & Associates, Inc.",
+            "citation": "Hejl v. Hood, Hargett & Assocs., 196 N.C. App. 299 (2009).",
+            "url": "https://www.courtlistener.com/opinion/1283156/hejl-v-hood-hargett-associates-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/1283156/hejl-v-hood-hargett-associates-inc/#:~:text=Defendant%E2%80%99s%20attempt%20to%20prevent%20Plaintiff,an%20impermissible%20restraint%20on%20Plaintiff.",
+            "proposition": "Hejl supports excluding prospective customers from the covered class: barring an employee from obtaining clients the employer itself had failed to obtain is an impermissible restraint.",
+            "verbatimQuote": "Defendant’s attempt to prevent Plaintiff from obtaining clients where Defendant had failed to do so, is an impermissible restraint on Plaintiff.",
+            "date": "2009-04-07",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-nc-hejl-prospective"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#define-covered-employees",
+        "requirementGuidance": "Keep the no-poach class to colleagues the departing employee actually worked with during the look-back window. North Carolina has no statute on employee non-solicits, so the clause stands or falls on ordinary restraint-of-trade reasonableness — and a workforce-wide mobility ban is the version most likely to fall.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#define-protected-interests",
+        "requirementGuidance": "Name the interests concretely, and make sure the facts can carry them: before any restraint is reasonably necessary in this state, the employee must have acquired intimate knowledge of the business not generally available to the public. A recital cannot supply that knowledge if the role never delivered it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nc-kuykendall-interest",
+            "authorityType": "case-law",
+            "title": "United Laboratories, Inc. v. Kuykendall",
+            "citation": "United Labs., Inc. v. Kuykendall, 322 N.C. 643 (1988).",
+            "url": "https://www.courtlistener.com/opinion/1294109/united-laboratories-inc-v-kuykendall/",
+            "deepLink": "https://www.courtlistener.com/opinion/1294109/united-laboratories-inc-v-kuykendall/#:~:text=Before%20a%20covenant%20can%20be,generally%20available%20to%20the%20public.",
+            "proposition": "Kuykendall supports the predicate that a covenant can be reasonably necessary to protect a legitimate interest only where the employee acquired intimate knowledge of the business not generally available to the public.",
+            "verbatimQuote": "Before a covenant can be found reasonably necessary for the protection of a legitimate business interest, we hold that it is first necessary to find the employee, as a result of his employment, acquired intimate knowledge of the nature and character of the business which was not otherwise generally available to the public.",
+            "date": "1988-07-28",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-nc-kuykendall-interest"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-competitive-business",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Competitive business",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#define-competitive-business",
+        "requirementGuidance": "Define the competing activity by reference to what the employee actually did, not every line of the employer's business. Covenants that prohibit future work distinct from the duties the employee actually performed are unenforceable, and an any-capacity definition is the classic way to trip that rule.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nc-ridgway-duties",
+            "authorityType": "case-law",
+            "title": "Medical Staffing Network, Inc. v. Ridgway",
+            "citation": "Med. Staffing Network, Inc. v. Ridgway, 194 N.C. App. 649 (2009).",
+            "url": "https://www.courtlistener.com/opinion/1156110/medical-staffing-network-inc-v-ridgway/",
+            "deepLink": "https://www.courtlistener.com/opinion/1156110/medical-staffing-network-inc-v-ridgway/#:~:text=However%2C%20we%20have%20held%20that,actually%20performed%20by%20the%20employee.",
+            "proposition": "Ridgway supports defining the restricted activity by the employee's actual duties: covenants prohibiting future work distinct from the duties actually performed are unenforceable.",
+            "verbatimQuote": "However, we have held that restrictive covenants are unenforceable where they prohibit the employee from engaging in future work that is distinct from the duties actually performed by the employee.",
+            "date": "2009-01-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-nc-ridgway-duties"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where ownership or investment in competitors is restricted, look for a passive public-holdings carve-out below a stated percentage. A covenant construed strictly against the drafter, with no judicial rewriting available, cannot afford gratuitous overbreadth like a technical ban on index funds and ordinary public shares.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#define-passive-public-holdings",
+        "requirementGuidance": "Optional drafting mechanics. If the capitalized term exists, check that its percentage agrees with the operative carve-out it serves; if it does not, inline carve-out language carries the same load without a defined term.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.11",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#define-solicit",
+        "requirementGuidance": "Pin down whether the clause reaches only active outreach or also passive acceptance, and say which expressly. North Carolina reads the verbs solicit, recruit, and induce to require active persuasion, so a clause that stops at those words does not prohibit hiring someone who shows up on their own.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nc-crockett-definitions",
+            "authorityType": "case-law",
+            "title": "Inland American Winston Hotels, Inc. v. Crockett",
+            "citation": "Inland Am. Winston Hotels, Inc. v. Crockett, 212 N.C. App. 349 (2011).",
+            "url": "https://www.courtlistener.com/opinion/2504879/inland-american-winston-hotels-inc-v-crockett/",
+            "deepLink": "https://www.courtlistener.com/opinion/2504879/inland-american-winston-hotels-inc-v-crockett/#:~:text=We%20note%20that%20all%20of,active%20persuasion%2C%20request%2C%20or%20petition.",
+            "proposition": "Crockett supports defining solicitation deliberately: the terms solicit, recruit, and induce all involve active persuasion, so they do not reach a passive hire.",
+            "verbatimQuote": "We note that all of the above-cited definitions of “solicit, recruit or induce” are similar in that they involve active persuasion, request, or petition.",
+            "date": "2011-06-07",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-nc-crockett-definitions"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.12",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#define-termination-of-employment",
+        "requirementGuidance": "Verify the trigger treats resignation, dismissal, and expiration of a fixed term consistently, because the Restricted Period and any express extension-on-breach clause both run from this event. Ambiguity about who ended the relationship, and when, becomes ambiguity about when every covenant expires.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "acknowledge-timing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-timing",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "When the agreement was signed",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#acknowledge-timing",
+        "requirementGuidance": "Timing is the consideration question in this state: a covenant signed after employment already exists must rest on new consideration, and continued at-will employment is not it. The acknowledgement should pin down the signing date relative to the first day of work and recite exactly what consideration moved — a raise, a new assignment, or a payment.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nc-empt-staffing-milner",
+            "authorityType": "case-law",
+            "title": "Employment Staffing Group, Inc. v. Little",
+            "citation": "Emp't Staffing Grp., Inc. v. Little, 243 N.C. App. 266 (2015).",
+            "url": "https://www.courtlistener.com/opinion/3007343/empt-staffing-grp-inc-v-little/",
+            "deepLink": "https://www.courtlistener.com/opinion/3007343/empt-staffing-grp-inc-v-little/#:~:text=%E2%80%9C%5BI%5Df%20an%20employment%20relationship%20already,be%20based%20upon%20new%20consideration.%E2%80%9D",
+            "proposition": "Employment Staffing supports the rule that a covenant added after an employment relationship already exists must be supported by new consideration.",
+            "verbatimQuote": "“[I]f an employment relationship already exists without a covenant not to compete, any such future covenant must be based upon new consideration.”",
+            "date": "2015-10-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-nc-empt-staffing-milner"
+          },
+          {
+            "sourceId": "nc-daniel-consideration",
+            "authorityType": "case-law",
+            "title": "Whittaker General Medical Corp. v. Daniel",
+            "citation": "Whittaker Gen. Med. Corp. v. Daniel, 324 N.C. 523 (1989).",
+            "url": "https://www.courtlistener.com/opinion/1205500/whittaker-general-medical-corp-v-daniel/",
+            "deepLink": "https://www.courtlistener.com/opinion/1205500/whittaker-general-medical-corp-v-daniel/#:~:text=When%20the%20relationship%20of%20employer,or%20a%20new%20job%20assignment.",
+            "proposition": "Whittaker supports the kinds of new consideration that suffice for a mid-employment covenant: a raise in pay or a new job assignment.",
+            "verbatimQuote": "When the relationship of employer and employee is established before the covenant not to compete is signed there must be consideration for the covenant such as a raise in pay or a new job assignment.",
+            "date": "1989-06-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-nc-daniel-consideration"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-opportunity-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Chance to consult a lawyer",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#acknowledge-opportunity-to-consult-counsel",
+        "requirementGuidance": "No North Carolina statute requires it, but the covenant is construed strictly against the drafter, and a documented opportunity to review with counsel is inexpensive evidence of arms-length dealing if procedural fairness is later questioned.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "Trade-secret obligations should run as long as secrecy does — that is how federal law defines the right — while everything else gets a finite term. The two-track structure matters in North Carolina because the trade-secret claim is the protection that survives a failed covenant; a fixed expiry quietly surrenders it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-trade-secret-definition",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
+            "citation": "18 U.S.C. § 1839(3)(B) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1839",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
+            "proposition": "Federal law keys trade-secret status to continued secrecy, which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-dtsa-trade-secret-definition"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#state-confidentiality-duration",
+        "requirementGuidance": "Give non-trade-secret confidential information its own stated end date. A perpetual lid on ordinary business information reads as overreach in a state that construes restraints strictly against the drafter and never trims them down to reasonable.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#disclose-dtsa-notice",
+        "requirementGuidance": "Federal and non-negotiable: omit the immunity notice and the employer forfeits exemplary damages and attorney fees in a later trade-secret action against the worker. In a state where the trade-secret claim often outlives the covenant, those remedies are worth keeping intact.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-immunity-notice",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-dtsa-immunity-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Make sure confidentiality and non-disparagement clauses step around wages, hours, and working conditions. Federal labor law protects that discussion in every state, and the Board treats overbroad terms offered to employees as unlawful on their own.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nlra-section-7-rights",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-nlra-section-7-rights"
+          },
+          {
+            "sourceId": "mclaren-macomb-protected-activity",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-mclaren-macomb-protected-activity"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#permit-compelled-disclosure",
+        "requirementGuidance": "Confirm the carve-out for disclosure required by law, court order, or a government investigation, with notice to the employer where lawful. A confidentiality clause cannot block legally compelled disclosure, and drafting as if it could only invites a strict-construction reading of everything around it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#require-property-return-and-certification",
+        "requirementGuidance": "Return-or-destroy at separation, certified in writing. The Trade Secrets Protection Act protects only information that is the subject of reasonable secrecy efforts, and a clean exit protocol with a signed certification is both that kind of effort and the contemporaneous evidence the employer wants if protected material later surfaces at a competitor.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nc-tspa-secrecy-efforts",
+            "authorityType": "primary-law",
+            "title": "N.C. Gen. Stat. § 66-152",
+            "citation": "N.C. Gen. Stat. § 66-152(3).",
+            "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_66/GS_66-152.html",
+            "proposition": "The Trade Secrets Protection Act conditions protection on efforts that are reasonable under the circumstances to maintain secrecy, which exit protocols and certifications help establish.",
+            "verbatimQuote": "“Trade secret” means business or technical information, including but not limited to a formula, pattern, program, device, compilation of information, method, technique, or process that: a. Derives independent actual or potential commercial value from not being generally known or readily ascertainable through independent development or reverse engineering by persons who can obtain economic value from its disclosure or use; and b. Is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-nc-tspa-secrecy-efforts"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-employee-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#permit-employee-nonsolicit",
+        "requirementGuidance": "Optional, and the lowest-risk covenant in the family here when the verbs are chosen deliberately. A clause limited to soliciting, recruiting, or inducing requires active persuasion and will not reach a passive hire — so decide whether a no-hire term is actually intended and, if so, say it expressly rather than assuming the non-solicit covers it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nc-crockett-active-persuasion",
+            "authorityType": "case-law",
+            "title": "Inland American Winston Hotels, Inc. v. Crockett",
+            "citation": "Inland Am. Winston Hotels, Inc. v. Crockett, 212 N.C. App. 349 (2011).",
+            "url": "https://www.courtlistener.com/opinion/2504879/inland-american-winston-hotels-inc-v-crockett/",
+            "deepLink": "https://www.courtlistener.com/opinion/2504879/inland-american-winston-hotels-inc-v-crockett/#:~:text=We%20note%20that%20all%20of,active%20persuasion%2C%20request%2C%20or%20petition.",
+            "proposition": "Crockett supports the verb-scope rule for employee non-solicits: solicit, recruit, and induce all require active persuasion, so the clause does not reach a passive hire.",
+            "verbatimQuote": "We note that all of the above-cited definitions of “solicit, recruit or induce” are similar in that they involve active persuasion, request, or petition.",
+            "date": "2011-06-07",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-nc-crockett-active-persuasion"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-customer-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#permit-customer-nonsolicit",
+        "requirementGuidance": "Optional and generally the employer's sturdiest restraint when held to actual relationships. Keep it inside the Covered Customers class: walling off clients the employer itself failed to win is an impermissible restraint, and overbreadth in this state is fixed by striking, never by narrowing.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nc-hejl-actual-customers",
+            "authorityType": "case-law",
+            "title": "Hejl v. Hood, Hargett & Associates, Inc.",
+            "citation": "Hejl v. Hood, Hargett & Assocs., 196 N.C. App. 299 (2009).",
+            "url": "https://www.courtlistener.com/opinion/1283156/hejl-v-hood-hargett-associates-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/1283156/hejl-v-hood-hargett-associates-inc/#:~:text=Defendant%E2%80%99s%20attempt%20to%20prevent%20Plaintiff,an%20impermissible%20restraint%20on%20Plaintiff.",
+            "proposition": "Hejl supports confining customer non-solicits to actual customers: preventing the worker from obtaining clients the employer never had is an impermissible restraint.",
+            "verbatimQuote": "Defendant’s attempt to prevent Plaintiff from obtaining clients where Defendant had failed to do so, is an impermissible restraint on Plaintiff.",
+            "date": "2009-04-07",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-nc-hejl-actual-customers"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-dealing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#permit-non-dealing",
+        "requirementGuidance": "Non-dealing bars serving a covered customer even when the customer makes the first call, which makes it a heavier restraint than a non-solicit. North Carolina upholds partial restraints only when supported by valuable consideration, reasonably necessary to protect the covenantee, and not against public policy — so treat inclusion as a deliberate risk decision and scope it at least as tightly as the non-solicit beside it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nc-kuykendall-partial-restraint",
+            "authorityType": "case-law",
+            "title": "United Laboratories, Inc. v. Kuykendall",
+            "citation": "United Labs., Inc. v. Kuykendall, 322 N.C. 643 (1988).",
+            "url": "https://www.courtlistener.com/opinion/1294109/united-laboratories-inc-v-kuykendall/",
+            "deepLink": "https://www.courtlistener.com/opinion/1294109/united-laboratories-inc-v-kuykendall/#:~:text=However%2C%20this%20position%20was%20modified,and%20not%20against%20public%20policy.",
+            "proposition": "Kuykendall supports the partial-restraint framework: covenants are upheld only if supported by valuable consideration, reasonably necessary to protect the covenantee, and not against public policy.",
+            "verbatimQuote": "However, this position was modified and it became generally recognized that, while non-competition clauses were in partial restraint of trade, they would nevertheless be upheld if the covenants were supported by valuable consideration, reasonably necessary to protect the interests of the covenantee, and not against public policy.",
+            "date": "1988-07-28",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-nc-kuykendall-partial-restraint"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-compete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#permit-non-compete",
+        "requirementGuidance": "If a non-compete appears at all, route the review straight through the North Carolina gates at the end of this checklist — the five-element test, the signed writing, the consideration timing, and the actual-duties and customer-territory limits. The covenant is a disfavored partial restraint against the backdrop of a statute declaring restraints of trade illegal, and one defective element ends the analysis.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nc-ridgway-five-factor",
+            "authorityType": "case-law",
+            "title": "Medical Staffing Network, Inc. v. Ridgway",
+            "citation": "Med. Staffing Network, Inc. v. Ridgway, 194 N.C. App. 649 (2009).",
+            "url": "https://www.courtlistener.com/opinion/1156110/medical-staffing-network-inc-v-ridgway/",
+            "deepLink": "https://www.courtlistener.com/opinion/1156110/medical-staffing-network-inc-v-ridgway/#:~:text=To%20be%20enforceable%20under%20North,protect%20a%20legitimate%20business%20interest.",
+            "proposition": "Ridgway restates the five elements every enforceable North Carolina non-compete must satisfy.",
+            "verbatimQuote": "To be enforceable under North Carolina law, a non-competition agreement must be: (1) in writing; (2) part of an employment contract; (3) based on valuable consideration; (4) reasonable as to time and territory; and (5) designed to protect a legitimate business interest.",
+            "date": "2009-01-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-nc-ridgway-five-factor"
+          },
+          {
+            "sourceId": "nc-gs-75-1",
+            "authorityType": "primary-law",
+            "title": "N.C. Gen. Stat. § 75-1",
+            "citation": "N.C. Gen. Stat. § 75-1.",
+            "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_75/GS_75-1.html",
+            "proposition": "Section 75-1 declares contracts in restraint of trade illegal — the policy backdrop that makes a non-compete a disfavored partial restraint.",
+            "verbatimQuote": "Every contract, combination in the form of trust or otherwise, or conspiracy in restraint of trade or commerce in the State of North Carolina is hereby declared to be illegal.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-nc-gs-75-1"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Named-competitor narrowing",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementGuidance": "When the employer can name its real competitors, bind those names instead of leaning on the open-ended Competitive Business definition. A restraint too broad to be a reasonable protection of the business is simply not enforced in this state, and a named list is the cheapest way to keep the covenant inside that line.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nc-daniel-overbroad",
+            "authorityType": "case-law",
+            "title": "Whittaker General Medical Corp. v. Daniel",
+            "citation": "Whittaker Gen. Med. Corp. v. Daniel, 324 N.C. 523 (1989).",
+            "url": "https://www.courtlistener.com/opinion/1205500/whittaker-general-medical-corp-v-daniel/",
+            "deepLink": "https://www.courtlistener.com/opinion/1205500/whittaker-general-medical-corp-v-daniel/#:~:text=If%20a%20contract%20by%20an,it%20will%20not%20be%20enforced.",
+            "proposition": "Whittaker supports narrowing the covenant at the drafting stage: a restraint too broad to be a reasonable protection of the employer's business will not be enforced.",
+            "verbatimQuote": "If a contract by an employee in restraint of competition is too broad to be a reasonable protection to the employer’s business it will not be enforced.",
+            "date": "1989-06-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-nc-daniel-overbroad"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#permit-non-investment",
+        "requirementGuidance": "Rare and deliberate. Confirm the passive-holdings carve-out is intact and the clause shares the defined Restricted Period — and remember that an unreasonable scope is struck rather than shrunk, taking the whole provision with it unless it was drafted as a distinctly separable unit.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#require-non-disparagement",
+        "requirementGuidance": "Include it with a stated duration, then read the carve-outs harder than the covenant: truthful testimony, statements to government agencies, and protected workplace speech have to stay outside the clause under federal labor law, no matter which state's law governs the agreement.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mclaren-macomb-nondisparagement",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-mclaren-macomb-nondisparagement"
+          }
+        ]
+      },
+      {
+        "requirementId": "weigh-public-health-factors-for-physician-covenants",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.north-carolina.weigh-public-health-factors-for-physician-covenants",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Public-health check for physician covenants",
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#weigh-public-health-factors-for-physician-covenants",
+        "requirementGuidance": "Treat any physician or health-care restraint as contested even when its time and territory look reasonable. A North Carolina court will refuse enforcement where ordering compliance would create a substantial question of potential harm to the public health, weighing the shortage of specialists in the restricted area, the impact of establishing a local monopoly — future fees and emergency availability included — and the public interest in a choice of physician. Run those factors against the local market before anyone relies on the clause; no recital drafts around them. A pending bill would bar non-compete clauses for hospital-employed health-care professionals outright; it has not been enacted, so the weighing test still governs — but check its status before papering a hospital clinician.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nc-zaldivar-balance",
+            "authorityType": "case-law",
+            "title": "Aesthetic Facial & Ocular Plastic Surgery Center, P.A. v. Zaldivar",
+            "citation": "Aesthetic Facial & Ocular Plastic Surgery Ctr., P.A. v. Zaldivar, 264 N.C. App. 260 (2019).",
+            "url": "https://www.courtlistener.com/opinion/4601038/aesthetic-facial-ocular-plastic-surgery-ctr-pa-v-zaldivar/",
+            "deepLink": "https://www.courtlistener.com/opinion/4601038/aesthetic-facial-ocular-plastic-surgery-ctr-pa-v-zaldivar/#:~:text=If%20ordering%20the%20covenantor%20to,refuse%20to%20enforce%20the%20covenant.",
+            "proposition": "Zaldivar supports the public-policy check: where enforcement would create a substantial question of potential harm to the public health, the public interest outweighs the covenant and the court refuses enforcement.",
+            "verbatimQuote": "If ordering the covenantor to honor his contractual obligation would create a substantial question of potential harm to the public health, then the public interests outweigh the contract interests of the covenantee, and the court will refuse to enforce the covenant.",
+            "date": "2019-03-19",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-nc-zaldivar-balance"
+          },
+          {
+            "sourceId": "nc-zaldivar-factors",
+            "authorityType": "case-law",
+            "title": "Aesthetic Facial & Ocular Plastic Surgery Center, P.A. v. Zaldivar",
+            "citation": "Aesthetic Facial & Ocular Plastic Surgery Ctr., P.A. v. Zaldivar, 264 N.C. App. 260 (2019).",
+            "url": "https://www.courtlistener.com/opinion/4601038/aesthetic-facial-ocular-plastic-surgery-ctr-pa-v-zaldivar/",
+            "deepLink": "https://www.courtlistener.com/opinion/4601038/aesthetic-facial-ocular-plastic-surgery-ctr-pa-v-zaldivar/#:~:text=This%20Court%20considers%20the%20following,the%20selection%20of%20a%20physician.",
+            "proposition": "Zaldivar lists the public-health factors: specialist shortage, monopoly impact including future fees and emergency availability, and patient choice of physician.",
+            "verbatimQuote": "This Court considers the following factors in determining the risk of substantial harm to the public: the shortage of specialists in the field in the restricted area, the impact of establishing a monopoly in the area, including the impact on fees in the future and the availability of a doctor at all times for emergencies, and the public interest in having a choice in the selection of a physician.",
+            "date": "2019-03-19",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-nc-zaldivar-factors"
+          },
+          {
+            "sourceId": "nc-sb673-pending",
+            "authorityType": "primary-law",
+            "title": "S.B. 673 (2025)",
+            "citation": "S.B. 673, 2025 Gen. Assemb., Reg. Sess. (N.C. 2025).",
+            "url": "https://www.ncleg.gov/Sessions/2025/Bills/Senate/PDF/S673v1.pdf",
+            "proposition": "Senate Bill 673 (2025, pending, not enacted) would prohibit a non-compete clause in the employment contract of a hospital-employed health-care professional.",
+            "verbatimQuote": "An employment contract for a health care professional employed by a hospital, as defined in G.S. 95-28.1B, shall not contain a non-compete clause.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-nc-sb673-pending"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "The worker's representation that no earlier covenant or court order blocks the new role. It works in both directions on intake: it surfaces a prior employer's restraint before the first customer call, and it protects this employer against a tortious-interference claim built on knowingly hiring into someone else's covenant.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#address-notice-to-future-employers",
+        "requirementGuidance": "A genuine drafting choice rather than a default. A notice clause can support enforcement, but a warning letter built on a covenant that fails the five-element test invites a tortious-interference counterclaim — condition any third-party notice on a covenant the employer still believes clears the gates at the end of this checklist.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-tolling-with-express-extension-clause",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.north-carolina.address-tolling-with-express-extension-clause",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Express extension during a breach",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#address-tolling-with-express-extension-clause",
+        "requirementGuidance": "If the employer wants the restricted period to extend for time the worker spends in breach, the clause has to say so expressly — and for how long. Federal courts applying North Carolina law have enforced express extension-on-breach clauses, in one case stretching the covenant by eleven months of non-compliance, but those are persuasive federal applications and no state appellate decision recognizes equitable tolling. Silence leaves the question unsettled rather than answered in the employer's favor.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nc-philips-valid",
+            "authorityType": "case-law",
+            "title": "Philips Electronics North America Corp. v. Hope",
+            "citation": "Philips Elecs. N. Am. Corp. v. Hope, 631 F. Supp. 2d 705 (M.D.N.C. 2009).",
+            "url": "https://www.courtlistener.com/opinion/2579285/philips-electronics-north-america-corp-v-hope/",
+            "deepLink": "https://www.courtlistener.com/opinion/2579285/philips-electronics-north-america-corp-v-hope/#:~:text=Such%20tolling%20provisions%20appear%20to,valid%20under%20North%20Carolina%20law.",
+            "proposition": "Philips supports the express-clause path: a contractual tolling provision pausing the protected period during non-compliance appears valid under North Carolina law.",
+            "verbatimQuote": "Such tolling provisions appear to be valid under North Carolina law.",
+            "date": "2009-06-30",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-nc-philips-valid"
+          },
+          {
+            "sourceId": "nc-southtech-tolls",
+            "authorityType": "case-law",
+            "title": "Southtech Orthopedics, Inc. v. Dingus",
+            "citation": "Southtech Orthopedics, Inc. v. Dingus, 428 F. Supp. 2d 410 (E.D.N.C. 2006).",
+            "url": "https://www.courtlistener.com/opinion/2524901/southtech-orthopedics-inc-v-dingus/",
+            "deepLink": "https://www.courtlistener.com/opinion/2524901/southtech-orthopedics-inc-v-dingus/#:~:text=On%20the%20other%20hand%2C%20as,that%20injunctive%20relief%20is%20warranted.",
+            "proposition": "Southtech supports giving effect to an express clause that tolls the time limitation while the employee remains in violation, preserving the bargained-for remedy.",
+            "verbatimQuote": "On the other hand, as discussed above, paragraph ll(m) of the employment agreement tolls the time limitation of the non-compete as long as defendant is in violation of it, and so plaintiff will not be deprived of its bargained-for remedy if it later turns out that injunctive relief is warranted.",
+            "date": "2006-03-27",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-nc-southtech-tolls"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#require-injunctive-relief-availability",
+        "requirementGuidance": "Look for the irreparable-harm acknowledgement, then discount it appropriately: reasonableness is a matter of law for the court and the party seeking enforcement carries the burden of proving the covenant reasonable, so the recital smooths the path to an injunction without ever substituting for the employer's proof.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nc-hartman-burden",
+            "authorityType": "case-law",
+            "title": "Hartman v. W.H. Odell & Associates, Inc.",
+            "citation": "Hartman v. W.H. Odell & Assocs., 117 N.C. App. 307 (1994).",
+            "url": "https://www.courtlistener.com/opinion/1305744/hartman-v-wh-odell-and-associates-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/1305744/hartman-v-wh-odell-and-associates-inc/#:~:text=The%20party%20who%20seeks%20the,that%20the%20covenant%20is%20reasonable.",
+            "proposition": "Hartman supports discounting recitals: the party seeking to enforce the covenant bears the burden of proving it reasonable.",
+            "verbatimQuote": "The party who seeks the enforcement of the covenant not to compete has the burden of proving that the covenant is reasonable.",
+            "date": "1994-12-20",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-nc-hartman-burden"
+          }
+        ]
+      },
+      {
+        "requirementId": "do-not-rely-on-fee-shifting-in-employment-covenants",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.north-carolina.do-not-rely-on-fee-shifting-in-employment-covenants",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No reliance on fee-shifting",
+        "sectionId": "remedies",
+        "itemNumber": "13.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#do-not-rely-on-fee-shifting-in-employment-covenants",
+        "requirementGuidance": "Read any fee clause as a negotiating term, not a recovery plan. North Carolina's reciprocal business-contract fee statute expressly excludes employment contracts, so a fee-shifting provision in an employment non-compete generally will not support an award; the realistic path is the discretionary award to a prevailing party on an unfair-trade-practices claim, on findings of willfulness or a frivolous and malicious action. Flag a clause promising either side fees these statutes will not deliver.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nc-gs-6-21-6",
+            "authorityType": "primary-law",
+            "title": "N.C. Gen. Stat. § 6-21.6",
+            "citation": "N.C. Gen. Stat. § 6-21.6(1).",
+            "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_6/GS_6-21.6.html",
+            "proposition": "The reciprocal attorney-fee statute for business contracts expressly excludes employment contracts, so a fee clause in an employment non-compete generally will not support an award.",
+            "verbatimQuote": "Business contract. - A contract entered into primarily for business or commercial purposes. The term does not include a consumer contract, an employment contract, or a contract to which a government or a governmental agency of this State is a party.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-nc-gs-6-21-6"
+          },
+          {
+            "sourceId": "nc-gs-75-16-1",
+            "authorityType": "primary-law",
+            "title": "N.C. Gen. Stat. § 75-16.1",
+            "citation": "N.C. Gen. Stat. § 75-16.1.",
+            "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_75/GS_75-16.1.html",
+            "proposition": "On an unfair-trade-practices claim, the court may in its discretion award the prevailing party a reasonable attorney fee on findings of willfulness or a frivolous and malicious action.",
+            "verbatimQuote": "In any suit instituted by a person who alleges that the defendant violated G.S. 75-1.1, the presiding judge may, in his discretion, allow a reasonable attorney fee to the duly licensed attorney representing the prevailing party, such attorney fee to be taxed as a part of the court costs and payable by the losing party, upon a finding by the presiding judge that: (1) The party charged with the violation has willfully engaged in the act or practice, and there was an unwarranted refusal by such party to fully resolve the matter which constitutes the basis of such suit; or (2) The party instituting the action knew, or should have known, the action was frivolous and malicious.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-nc-gs-75-16-1"
+          }
+        ]
+      },
+      {
+        "requirementId": "draft-severable-covenants-rather-than-rely-on-reformation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.north-carolina.draft-severable-covenants-rather-than-rely-on-reformation",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Severable terms, not court rescue",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#draft-severable-covenants-rather-than-rely-on-reformation",
+        "requirementGuidance": "Read the severability clause as the only repair mechanism the law allows here, and any reformation clause as a dead letter. A North Carolina court may strike a distinctly separable unreasonable term but cannot rewrite a faulty covenant, and a clause purporting to authorize judicial revision changes nothing — parties cannot contract to give a court a power it does not have. Check that time, territory, and activity scope are drafted as divisible units, each reasonable standing alone (tiered territories, stepped durations, separately stated restraints), so a strike leaves something worth enforcing.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nc-beverage-strict",
+            "authorityType": "case-law",
+            "title": "Beverage Systems of the Carolinas, LLC v. Associated Beverage Repair, LLC",
+            "citation": "Beverage Sys. of the Carolinas, LLC v. Associated Beverage Repair, LLC, 368 N.C. 693 (2016).",
+            "url": "https://www.courtlistener.com/opinion/3186954/beverage-systems-of-the-carolinas-llc-v-associated-beverage-repair-llc/",
+            "deepLink": "https://www.courtlistener.com/opinion/3186954/beverage-systems-of-the-carolinas-llc-v-associated-beverage-repair-llc/#:~:text=North%20Carolina%20has%20adopted%20the,while%20striking%20the%20unenforceable%20portions.",
+            "proposition": "Beverage Systems supports the strict blue-pencil doctrine: a court cannot rewrite a faulty covenant but may enforce divisible and reasonable portions while striking the unenforceable portions.",
+            "verbatimQuote": "North Carolina has adopted the “strict blue pencil doctrine” under which a court cannot rewrite a faulty covenant not to compete but may enforce divisible and reasonable portions of the covenant while striking the unenforceable portions.",
+            "date": "2016-03-18",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-nc-beverage-strict"
+          },
+          {
+            "sourceId": "nc-beverage-contract",
+            "authorityType": "case-law",
+            "title": "Beverage Systems of the Carolinas, LLC v. Associated Beverage Repair, LLC",
+            "citation": "Beverage Sys. of the Carolinas, LLC v. Associated Beverage Repair, LLC, 368 N.C. 693 (2016).",
+            "url": "https://www.courtlistener.com/opinion/3186954/beverage-systems-of-the-carolinas-llc-v-associated-beverage-repair-llc/",
+            "deepLink": "https://www.courtlistener.com/opinion/3186954/beverage-systems-of-the-carolinas-llc-v-associated-beverage-repair-llc/#:~:text=However%2C%20parties%20cannot%20contract%20to,that%20it%20does%20not%20have.",
+            "proposition": "Beverage Systems supports treating reformation clauses as inoperative: parties cannot contract to give a court a power it does not have.",
+            "verbatimQuote": "However, parties cannot contract to give a court power that it does not have.",
+            "date": "2016-03-18",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-nc-beverage-contract"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#address-survival-per-covenant",
+        "requirementGuidance": "Per-covenant survival keeps each clock independently checkable — perpetual for trade secrets, finite everywhere else. The discipline also serves the severance strategy: the more clearly each covenant stands on its own, the more plausibly a court treats an overbroad one as distinctly separable from the rest.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-assignment-and-successors",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assignment and successors",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#address-assignment-and-successors",
+        "requirementGuidance": "Confirm employer-side assignability to successors and that the worker cannot assign. Covenants surface in M&A diligence, and a successor enforcing an assigned covenant inherits the same five-element analysis and strike-only severance the original employer faced — assignment moves the covenant without strengthening it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "keep-north-carolina-forum-for-north-carolina-contracts",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.north-carolina.keep-north-carolina-forum-for-north-carolina-contracts",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "North Carolina forum for North Carolina contracts",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#keep-north-carolina-forum-for-north-carolina-contracts",
+        "requirementGuidance": "For a covenant entered into in North Carolina, the agreement must not require litigation or arbitration in another state — such a provision is against public policy, void and unenforceable. The bar reaches forum-selection and arbitration-venue clauses but not, by itself, an out-of-state choice-of-law clause, so analyze the two selections separately. The clause should still state governing law, venue, and dispute process: an in-state forum is the only forum selection that operates as written, and a national form's out-of-state venue clause is the surest sign the agreement was never localized.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nc-gs-22b-3",
+            "authorityType": "primary-law",
+            "title": "N.C. Gen. Stat. § 22B-3",
+            "citation": "N.C. Gen. Stat. § 22B-3.",
+            "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_22B/GS_22B-3.html",
+            "proposition": "A provision in a contract entered into in North Carolina requiring litigation or arbitration in another state is against public policy and void.",
+            "verbatimQuote": "Except as otherwise provided in this section, any provision in a contract entered into in North Carolina that requires the prosecution of any action or the arbitration of any dispute that arises from the contract to be instituted or heard in another state is against public policy and is void and unenforceable.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-nc-gs-22b-3"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Boilerplate with a statutory hook: any agreement limiting the right to do business in the State is unenforceable unless in writing and duly signed by the restrained party, so the amendment mechanics should require the same signed writing. An oral or unsigned modification of a covenant's scope buys the employer nothing.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nc-gs-75-4-amendments",
+            "authorityType": "primary-law",
+            "title": "N.C. Gen. Stat. § 75-4",
+            "citation": "N.C. Gen. Stat. § 75-4.",
+            "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_75/GS_75-4.html",
+            "proposition": "Section 75-4 makes any agreement limiting the right to do business in North Carolina unenforceable unless in writing and signed by the restrained party — a floor that amendment mechanics should preserve.",
+            "verbatimQuote": "No contract or agreement hereafter made, limiting the rights of any person to do business anywhere in the State of North Carolina shall be enforceable unless such agreement is in writing duly signed by the party who agrees not to enter into any such business within such territory: Provided, nothing herein shall be construed to legalize any contract or agreement not to enter into business in the State of North Carolina, or at any point in the State of North Carolina, which contract is now illegal, or which contract is made illegal by any other section of this Chapter.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-nc-gs-75-4-amendments"
+          }
+        ]
+      },
+      {
+        "requirementId": "satisfy-the-five-element-enforceability-test",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.north-carolina.satisfy-the-five-element-enforceability-test",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Five-element enforceability test",
+        "sectionId": "north-carolina-statutory-gates",
+        "itemNumber": "19.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#satisfy-the-five-element-enforceability-test",
+        "requirementGuidance": "Run the non-compete through all five elements first: in writing, made part of a contract of employment, based on valuable consideration, reasonable both as to time and territory, and not against public policy. The backdrop is a statute declaring every contract in restraint of trade illegal, so the covenant is read strictly against the drafter, a single defective element defeats enforcement, and no judicial rewriting is available to repair the defect afterward.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nc-daniel-five-factor",
+            "authorityType": "case-law",
+            "title": "Whittaker General Medical Corp. v. Daniel",
+            "citation": "Whittaker Gen. Med. Corp. v. Daniel, 324 N.C. 523 (1989).",
+            "url": "https://www.courtlistener.com/opinion/1205500/whittaker-general-medical-corp-v-daniel/",
+            "deepLink": "https://www.courtlistener.com/opinion/1205500/whittaker-general-medical-corp-v-daniel/#:~:text=Such%20covenants%20are%20enforceable%20in,(5)%20not%20against%20public%20policy.",
+            "proposition": "The North Carolina Supreme Court enforces employee covenants only if they are in writing, part of an employment contract, based on valuable consideration, reasonable as to time and territory, and not against public policy.",
+            "verbatimQuote": "Such covenants are enforceable in this state if they are (1) in writing, (2) made part of a contract of employment, (3) based on valuable consideration, (4) reasonable both as to time and territory, and (5) not against public policy.",
+            "date": "1989-06-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-nc-daniel-five-factor"
+          },
+          {
+            "sourceId": "nc-gs-75-1-gate",
+            "authorityType": "primary-law",
+            "title": "N.C. Gen. Stat. § 75-1",
+            "citation": "N.C. Gen. Stat. § 75-1.",
+            "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_75/GS_75-1.html",
+            "proposition": "Section 75-1 declares every contract in restraint of trade illegal — the policy backdrop against which the five-element test is applied strictly.",
+            "verbatimQuote": "Every contract, combination in the form of trust or otherwise, or conspiracy in restraint of trade or commerce in the State of North Carolina is hereby declared to be illegal.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-nc-gs-75-1-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-signed-writing-under-section-75-4",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.north-carolina.require-signed-writing-under-section-75-4",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Signed writing under § 75-4",
+        "sectionId": "north-carolina-statutory-gates",
+        "itemNumber": "19.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#require-signed-writing-under-section-75-4",
+        "requirementGuidance": "Check the execution block that matters: the statute makes any agreement limiting the right to do business in the State unenforceable unless it is in writing and duly signed by the party who agrees not to compete. The worker's signature is the one the statute keys on — an employer-signed counterpart missing the employee's signature fails the statutory floor, and there is no oral, implied, or course-of-conduct substitute. The rule reaches every restraint covenant in the agreement, not just the non-compete.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nc-gs-75-4",
+            "authorityType": "primary-law",
+            "title": "N.C. Gen. Stat. § 75-4",
+            "citation": "N.C. Gen. Stat. § 75-4.",
+            "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/HTML/BySection/Chapter_75/GS_75-4.html",
+            "proposition": "Section 75-4 makes any agreement limiting a person's right to do business in North Carolina unenforceable unless it is in writing and signed by the party who agrees not to compete.",
+            "verbatimQuote": "No contract or agreement hereafter made, limiting the rights of any person to do business anywhere in the State of North Carolina shall be enforceable unless such agreement is in writing duly signed by the party who agrees not to enter into any such business within such territory: Provided, nothing herein shall be construed to legalize any contract or agreement not to enter into business in the State of North Carolina, or at any point in the State of North Carolina, which contract is now illegal, or which contract is made illegal by any other section of this Chapter.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-nc-gs-75-4"
+          }
+        ]
+      },
+      {
+        "requirementId": "support-mid-employment-covenants-with-new-consideration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.north-carolina.support-mid-employment-covenants-with-new-consideration",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "New consideration for mid-employment covenants",
+        "sectionId": "north-carolina-statutory-gates",
+        "itemNumber": "19.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#support-mid-employment-covenants-with-new-consideration",
+        "requirementGuidance": "If the covenant was signed after employment began, continued at-will employment cannot be the consideration: something new must actually move — a raise, a new job assignment, a payment — and the instrument should recite what it was. The amount can be modest, because courts do not weigh adequacy and a few hundred dollars has satisfied the element. A covenant signed at hire needs no separate payment; the offer of new employment is itself valuable consideration.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nc-empt-staffing-new-consideration",
+            "authorityType": "case-law",
+            "title": "Employment Staffing Group, Inc. v. Little",
+            "citation": "Emp't Staffing Grp., Inc. v. Little, 243 N.C. App. 266 (2015).",
+            "url": "https://www.courtlistener.com/opinion/3007343/empt-staffing-grp-inc-v-little/",
+            "deepLink": "https://www.courtlistener.com/opinion/3007343/empt-staffing-grp-inc-v-little/#:~:text=%E2%80%9C%5BI%5Df%20an%20employment%20relationship%20already,be%20based%20upon%20new%20consideration.%E2%80%9D",
+            "proposition": "A covenant not to compete added after an employment relationship already exists must be supported by new consideration.",
+            "verbatimQuote": "“[I]f an employment relationship already exists without a covenant not to compete, any such future covenant must be based upon new consideration.”",
+            "date": "2015-10-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-nc-empt-staffing-new-consideration"
+          },
+          {
+            "sourceId": "nc-hejl-500",
+            "authorityType": "case-law",
+            "title": "Hejl v. Hood, Hargett & Associates, Inc.",
+            "citation": "Hejl v. Hood, Hargett & Assocs., 196 N.C. App. 299 (2009).",
+            "url": "https://www.courtlistener.com/opinion/1283156/hejl-v-hood-hargett-associates-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/1283156/hejl-v-hood-hargett-associates-inc/#:~:text=Therefore%2C%20because%20the%20parties%20dealt,due%20to%20lack%20of%20consideration.",
+            "proposition": "A $500 payment to an existing employee for signing a covenant was adequate consideration on the consideration element.",
+            "verbatimQuote": "Therefore, because the parties dealt at arms length, and the Plaintiff received $500.00 as consideration for signing the Agreement, we find the Agreement is not void due to lack of consideration.",
+            "date": "2009-04-07",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-nc-hejl-500"
+          },
+          {
+            "sourceId": "nc-qsp-newemployment",
+            "authorityType": "case-law",
+            "title": "QSP, Inc. v. Hair",
+            "citation": "QSP, Inc. v. Hair, 152 N.C. App. 174 (2002).",
+            "url": "https://www.courtlistener.com/opinion/1422226/qsp-inc-v-hair/",
+            "deepLink": "https://www.courtlistener.com/opinion/1422226/qsp-inc-v-hair/#:~:text=This%20offer%2C%20made%20by%20QSP,and%20therefore%20constituted%20valuable%20consideration.",
+            "proposition": "An offer of new employment constitutes valuable consideration, so a covenant entered at the start of employment is supported without a separate payment.",
+            "verbatimQuote": "This offer, made by QSP on 12 February 2000, was an offer of new employment and therefore constituted valuable consideration.",
+            "date": "2002-08-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-nc-qsp-newemployment"
+          }
+        ]
+      },
+      {
+        "requirementId": "confine-restraint-to-actual-duties-and-customer-territory",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.north-carolina.confine-restraint-to-actual-duties-and-customer-territory",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restraint confined to actual duties and customer territory",
+        "sectionId": "north-carolina-statutory-gates",
+        "itemNumber": "19.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#confine-restraint-to-actual-duties-and-customer-territory",
+        "requirementGuidance": "Strike-test the scope against the job the employee actually held: the covenant must not bar future work distinct from the duties the employee actually performed, and must not claim territory beyond what protects the employer's interest in keeping its customers. Reasonableness is a question of law on which the enforcing employer bears the burden, and a covenant too broad to be reasonable protection is refused, not resized. Any-capacity prohibitions and footprint-wide territories are the two fatal drafting choices this gate exists to catch.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nc-ridgway-actual-duties",
+            "authorityType": "case-law",
+            "title": "Medical Staffing Network, Inc. v. Ridgway",
+            "citation": "Med. Staffing Network, Inc. v. Ridgway, 194 N.C. App. 649 (2009).",
+            "url": "https://www.courtlistener.com/opinion/1156110/medical-staffing-network-inc-v-ridgway/",
+            "deepLink": "https://www.courtlistener.com/opinion/1156110/medical-staffing-network-inc-v-ridgway/#:~:text=However%2C%20we%20have%20held%20that,actually%20performed%20by%20the%20employee.",
+            "proposition": "Restrictive covenants are unenforceable where they prohibit the employee from future work distinct from the duties the employee actually performed.",
+            "verbatimQuote": "However, we have held that restrictive covenants are unenforceable where they prohibit the employee from engaging in future work that is distinct from the duties actually performed by the employee.",
+            "date": "2009-01-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-nc-ridgway-actual-duties"
+          },
+          {
+            "sourceId": "nc-hartman-customer-territory",
+            "authorityType": "case-law",
+            "title": "Hartman v. W.H. Odell & Associates, Inc.",
+            "citation": "Hartman v. W.H. Odell & Assocs., 117 N.C. App. 307 (1994).",
+            "url": "https://www.courtlistener.com/opinion/1305744/hartman-v-wh-odell-and-associates-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/1305744/hartman-v-wh-odell-and-associates-inc/#:~:text=A%20restriction%20as%20to%20territory,employer%20in%20maintaining%20%5Bits%5D%20customers.",
+            "proposition": "A territorial restriction is reasonable only to the extent it protects the employer's legitimate interest in maintaining its customers.",
+            "verbatimQuote": "A restriction as to territory is reasonable only to the extent it protects the legitimate interests of the employer in maintaining [its] customers.",
+            "date": "1994-12-20",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/north-carolina#src-nc-hartman-customer-territory"
+          }
+        ]
+      }
+    ]
+  }
+}

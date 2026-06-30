@@ -1,0 +1,1540 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/virginia",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/virginia.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/virginia",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/virginia/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/virginia/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "virginia",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — Virginia",
+      "description": "A clause-by-clause reviewer checklist for Virginia employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under Va. Code § 40.1-28.7:8's low-wage ban and Virginia's strict common-law reasonableness test.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "Virginia",
+      "coverage": "Virginia (US)",
+      "lastReviewed": "2026-06-11",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 50,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "label": "Physician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "virginia-statutory-gates",
+        "label": "Virginia statutory gates"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#identify-parties",
+        "requirementGuidance": "Confirm the named employer is the entity that actually employs and pays the worker. Virginia's ban runs against the employer that enters into, enforces, or even threatens to enforce the covenant, and the worker's protected status turns on earnings and overtime eligibility in that specific relationship — a covenant papered with a parent or staffing affiliate muddies both questions at once.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#identify-effective-date",
+        "requirementGuidance": "The date picks the regime. Covenants signed from July 1, 2025 face a protected class that includes every overtime-eligible employee regardless of pay, and agreements entered into, amended, or renewed before July 1, 2026 sit outside the new severance rule while anything after falls inside it. An undated Virginia covenant leaves its own governing law indeterminate.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "va-flsa-expansion",
+            "authorityType": "agency-guidance",
+            "title": "Virginia DOLI Notice of the Average Weekly Wage for 2026",
+            "citation": "Virginia Department of Workforce Development and Advancement, Notice of the Average Weekly Wage for 2026 (Jan. 6, 2026).",
+            "url": "https://doli.virginia.gov/2026/01/06/notice-of-the-average-weekly-wage-for-2026/",
+            "proposition": "Virginia DOLI supports the July 1, 2025 expansion that protects overtime-eligible employees regardless of average weekly earnings.",
+            "verbatimQuote": "Effective July 1, 2025, a “low-wage employee” also includes an employee who, regardless of average weekly earnings, is entitled to overtime compensation under the provisions of the Fair Labor Standards Act for any hours worked in excess of 40 hours in any one workweek.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-va-flsa-expansion"
+          },
+          {
+            "sourceId": "sb170-prospective-effdate",
+            "authorityType": "primary-law",
+            "title": "Virginia Acts of Assembly Ch. 883 (SB 170), enactment clause 2",
+            "citation": "2026 Va. Acts ch. 883 (S.B. 170), cl. 2.",
+            "url": "https://lis.virginia.gov/bill-details/20261/SB170",
+            "proposition": "2026 Va. Acts ch. 883 (SB 170) applies only prospectively, so agreements entered into, amended, or renewed before July 1, 2026 stay outside the new severance rule.",
+            "verbatimQuote": "That nothing in this act shall invalidate, alter, or otherwise affect any contract, covenant, or agreement entered into, amended, or renewed prior to July 1, 2026.",
+            "date": "2026-07-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-sb170-prospective-effdate"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#identify-employee-title",
+        "requirementGuidance": "Record the title, but treat it as evidence rather than a gate. Virginia's statutory screen runs on average weekly earnings and federal overtime eligibility, not job labels — a senior-sounding title on a non-exempt worker buys no protection — while the role's actual duties feed the function analysis every Virginia non-compete must later survive.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "va-flsa-expansion",
+            "authorityType": "agency-guidance",
+            "title": "Virginia DOLI Notice of the Average Weekly Wage for 2026",
+            "citation": "Virginia Department of Workforce Development and Advancement, Notice of the Average Weekly Wage for 2026 (Jan. 6, 2026).",
+            "url": "https://doli.virginia.gov/2026/01/06/notice-of-the-average-weekly-wage-for-2026/",
+            "proposition": "Virginia DOLI supports the July 1, 2025 expansion that protects overtime-eligible employees regardless of average weekly earnings.",
+            "verbatimQuote": "Effective July 1, 2025, a “low-wage employee” also includes an employee who, regardless of average weekly earnings, is entitled to overtime compensation under the provisions of the Fair Labor Standards Act for any hours worked in excess of 40 hours in any one workweek.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-va-flsa-expansion"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#identify-governing-law",
+        "requirementGuidance": "Check that a governing state is stated, because the selection decides which body of restrictive-covenant law applies. For a Virginia workforce that means the dual-track analysis on this page; a form that names another state for workers living and working in Virginia deserves scrutiny as an attempted detour around the statute rather than a drafting convenience.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#define-confidential-information",
+        "requirementGuidance": "Test the definition against what Virginia actually preserves: nondisclosure obligations aimed at the taking, misappropriating, or sharing of trade secrets and proprietary or confidential information. A definition so broad that it operates as a lid on ordinary competition drifts out of that safe harbor and toward the territory the statute polices.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "va-nda-preserved",
+            "authorityType": "primary-law",
+            "title": "Va. Code § 40.1-28.7:8",
+            "citation": "Va. Code Ann. § 40.1-28.7:8(C).",
+            "enactedCitation": "2020 Va. Acts cc. 948, 949; 2025 Va. Acts c. 585.",
+            "url": "https://law.lis.virginia.gov/vacode/40.1-28.7:8/",
+            "proposition": "Va. Code § 40.1-28.7:8 supports preserving nondisclosure agreements aimed at trade secrets, proprietary information, and confidential information.",
+            "verbatimQuote": "Nothing in this section shall serve to limit the creation or application of nondisclosure agreements intended to prohibit the taking, misappropriating, threatening to misappropriate, or sharing of certain information to which an employee has access, including trade secrets, as defined in § 59.1-336, and proprietary or confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-va-nda-preserved"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#define-trade-secrets",
+        "requirementGuidance": "Match the contractual definition to Virginia's statutory one: information with independent economic value from not being generally known, kept under reasonable secrecy efforts. A definition that sweeps in public or freely shared material weakens the one alternative protection Virginia law most clearly endorses.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "vutsa-definition",
+            "authorityType": "primary-law",
+            "title": "Va. Code § 59.1-336",
+            "citation": "Va. Code Ann. § 59.1-336.",
+            "url": "https://law.lis.virginia.gov/vacode/59.1-336/",
+            "proposition": "Va. Code § 59.1-336 supports the economic-value and reasonable-secrecy elements of Virginia's statutory trade-secret definition.",
+            "verbatimQuote": "Derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use, and 2. Is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-vutsa-definition"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-period",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#define-restricted-period",
+        "requirementGuidance": "One defined Restricted Period keeps every covenant's clock auditable — and remember that Virginia never reads duration in isolation. The court weighs function, geography, and duration together, so a modest period cannot redeem an immodest scope.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "preferred-elements-together",
+            "authorityType": "case-law",
+            "title": "Preferred Systems Solutions, Inc. v. GP Consulting, LLC",
+            "citation": "Preferred Sys. Sols., Inc. v. GP Consulting, LLC, 284 Va. 382 (2012).",
+            "url": "https://www.courtlistener.com/opinion/1057833/preferred-systems-solutions-v-gp-consulting/",
+            "deepLink": "https://www.courtlistener.com/opinion/1057833/preferred-systems-solutions-v-gp-consulting/#:~:text=We%20assess%20these%20elements%20together,rather%20than%20as%20distinct%20inquiries.",
+            "proposition": "Preferred Systems supports evaluating function, geographic scope, and duration together rather than as distinct inquiries.",
+            "verbatimQuote": "We assess these elements together rather than as distinct inquiries.",
+            "date": "2012-09-14",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-preferred-elements-together"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-territory",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-territory",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted territory",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#define-restricted-territory",
+        "requirementGuidance": "Tie the geography to where the worker actually operated or where the employer genuinely competes. Then verify the other elements pull their weight too: Virginia's leading cases hold that tight geography and duration cannot save a function clause that is clearly too broad.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "home-paramount-no-save",
+            "authorityType": "case-law",
+            "title": "Home Paramount Pest Control Cos. v. Shaffer",
+            "citation": "Home Paramount Pest Control Cos. v. Shaffer, 282 Va. 412, 718 S.E.2d 762 (2011).",
+            "url": "https://www.courtlistener.com/opinion/1057978/home-paramount-pest-control-v-shaffer/",
+            "deepLink": "https://www.courtlistener.com/opinion/1057978/home-paramount-pest-control-v-shaffer/#:~:text=the%20clear%20overbreadth%20of%20the,of%20geographic%20scope%20and%20duration.",
+            "proposition": "Home Paramount supports the rule that clear function overbreadth cannot be saved by narrow geography and duration.",
+            "verbatimQuote": "the clear overbreadth of the function here cannot be saved by narrow tailoring of geographic scope and duration.",
+            "date": "2011-11-04",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-home-paramount-no-save"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered customers",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#define-covered-customers",
+        "requirementGuidance": "Bound the class to customers the worker actually dealt with during a stated look-back window — and check the definition against Virginia's statutory line: a covenant cannot stop a protected worker from serving a customer the worker neither contacted first nor solicited. A definition that captures walk-in business crosses that line.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "va-customer-carveout",
+            "authorityType": "primary-law",
+            "title": "Va. Code § 40.1-28.7:8",
+            "citation": "Va. Code Ann. § 40.1-28.7:8(A).",
+            "enactedCitation": "2020 Va. Acts cc. 948, 949; 2025 Va. Acts c. 585.",
+            "url": "https://law.lis.virginia.gov/vacode/40.1-28.7:8/",
+            "proposition": "Va. Code § 40.1-28.7:8 supports the statutory carveout protecting service to customers the employee did not initiate contact with or solicit.",
+            "verbatimQuote": "shall not restrict an employee from providing a service to a customer or client of the employer if the employee does not initiate contact with or solicit the customer or client.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-va-customer-carveout"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#define-covered-employees",
+        "requirementGuidance": "Keep the no-poach class to colleagues the departing worker actually worked with or supervised. In Virginia the class definition may not even be the main event: the Court of Appeals has read the statute to block enforcement of an employee non-solicit against a protected worker entirely, so a tight definition only helps where the worker falls outside the protected class.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sentry-employee-nonsolicit",
+            "authorityType": "case-law",
+            "title": "Sentry Force Security, LLC v. Barrera",
+            "citation": "Sentry Force Sec., LLC v. Barrera, Record No. 1405-24-4, slip op. at 20 (Va. Ct. App. Jan. 27, 2026) (unpublished).",
+            "url": "https://www.vacourts.gov/opinions/opncavwp/1405244.pdf",
+            "proposition": "Sentry Force supports the unpublished Court of Appeals holding that § 40.1-28.7:8 prevents enforcing a covenant barring a protected worker from soliciting the employer's other employees.",
+            "verbatimQuote": "However, we affirm the circuit court’s decision on Sentry Force’s second assignment of error because Code § 40.1-28.7:8 does prevent Sentry Force from enforcing a “covenant not to compete” agreement against Barrera that stops Barrera (after he left Sentry Force) from soliciting Sentry Force’s other employees.",
+            "date": "2026-01-27",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-sentry-employee-nonsolicit"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#define-protected-interests",
+        "requirementGuidance": "Name the interests with the trial record in mind. The employer carries the burden of showing each restraint is no greater than necessary to protect a legitimate business interest, not unduly harsh on the worker's livelihood, and consistent with public policy — and a recital that just gestures at goodwill gives that burden nothing to stand on.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "modern-environments-employer-burden",
+            "authorityType": "case-law",
+            "title": "Modern Environments, Inc. v. Stinnett",
+            "citation": "Modern Env'ts, Inc. v. Stinnett, 263 Va. 491, 561 S.E.2d 694 (2002).",
+            "url": "https://www.courtlistener.com/opinion/1059338/modern-environments-inc-v-stinnett/",
+            "deepLink": "https://www.courtlistener.com/opinion/1059338/modern-environments-inc-v-stinnett/#:~:text=Second%2C%20the%20employer%20bears%20the,light%20of%20sound%20public%20policy.",
+            "proposition": "Modern Environments supports the employer's burden to prove a restraint is no greater than necessary, not unduly harsh, and reasonable in light of public policy.",
+            "verbatimQuote": "Second, the employer bears the burden to show that the restraint is no greater than necessary to protect a legitimate business interest, is not unduly harsh or oppressive in curtailing an employee's ability to earn a livelihood, and is reasonable in light of sound public policy.",
+            "date": "2002-04-19",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-modern-environments-employer-burden"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-competitive-business",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Competitive business",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#define-competitive-business",
+        "requirementGuidance": "Describe the competing activity in terms of what the employer concretely does. Virginia struck a covenant whose similar-business wording reached enterprises unrelated to the employer's specialized niche — overreach in this definition is a classic way an otherwise careful Virginia covenant fails whole.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "motion-control-overreach",
+            "authorityType": "case-law",
+            "title": "Motion Control Systems, Inc. v. East",
+            "citation": "Motion Control Sys., Inc. v. East, 262 Va. 33, 546 S.E.2d 424 (2001).",
+            "url": "https://www.courtlistener.com/opinion/1059467/motion-control-systems-inc-v-east/",
+            "deepLink": "https://www.courtlistener.com/opinion/1059467/motion-control-systems-inc-v-east/#:~:text=Accordingly%2C%20we%20conclude%20that%20the,MCS%20and%2C%20therefore%2C%20was%20unenforceable.",
+            "proposition": "Motion Control supports invalidating a covenant whose similar-business language reaches unrelated enterprises beyond the employer's legitimate business interest.",
+            "verbatimQuote": "Accordingly, we conclude that the trial court did not err in holding that the covenant not to compete in this case imposed restraints that exceeded those necessary to protect the legitimate business interests of MCS and, therefore, was unenforceable.",
+            "date": "2001-06-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-motion-control-overreach"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where ownership or investment in competitors is restricted, look for a passive-holdings carve-out below a stated percentage. A clause that technically forbids holding index funds or ordinary public shares is gratuitous harshness on the worker's side of the ledger — exactly the prong of the Virginia test the employer least wants to litigate.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#define-passive-public-holdings",
+        "requirementGuidance": "A drafting convenience rather than a requirement — many agreements simply inline the carve-out. If the defined term appears, confirm its ownership percentage matches the operative carve-out it supports.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.11",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#define-solicit",
+        "requirementGuidance": "Pin the term to initiating contact. Virginia's statute draws exactly that line for protected workers — service to a customer the worker did not approach stays lawful — and the Court of Appeals upheld a restriction precisely because it targeted the worker's own outreach to former customers. A definition that also captures passively received inquiries erases the distinction that keeps the clause alive.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "va-customer-carveout",
+            "authorityType": "primary-law",
+            "title": "Va. Code § 40.1-28.7:8",
+            "citation": "Va. Code Ann. § 40.1-28.7:8(A).",
+            "enactedCitation": "2020 Va. Acts cc. 948, 949; 2025 Va. Acts c. 585.",
+            "url": "https://law.lis.virginia.gov/vacode/40.1-28.7:8/",
+            "proposition": "Va. Code § 40.1-28.7:8 supports the statutory carveout protecting service to customers the employee did not initiate contact with or solicit.",
+            "verbatimQuote": "shall not restrict an employee from providing a service to a customer or client of the employer if the employee does not initiate contact with or solicit the customer or client.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-va-customer-carveout"
+          },
+          {
+            "sourceId": "sentry-direct-solicitation",
+            "authorityType": "case-law",
+            "title": "Sentry Force Security, LLC v. Barrera",
+            "citation": "Sentry Force Sec., LLC v. Barrera, Record No. 1405-24-4, slip op. at 14 (Va. Ct. App. Jan. 27, 2026) (unpublished).",
+            "url": "https://www.vacourts.gov/opinions/opncavwp/1405244.pdf",
+            "proposition": "Sentry Force supports the unpublished Court of Appeals reading that § 40.1-28.7:8 does not prevent barring direct customer solicitation by a former low-wage employee.",
+            "verbatimQuote": "Thus, even assuming Barrera is a low-wage employee for the purposes of this interlocutory appeal (as the parties do), Barrera cannot solicit his former employer’s customers for his own company.",
+            "date": "2026-01-27",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-sentry-direct-solicitation"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.12",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#define-termination-of-employment",
+        "requirementGuidance": "Verify the trigger treats resignation, dismissal, and expiration of a fixed term the same way — and that it distinguishes cause from no-cause. After July 1, 2026 the manner of termination carries money consequences in Virginia, so the definition that starts every clock cannot be vague about who ended the relationship or why.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "acknowledge-timing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-timing",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "When the agreement was signed",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#acknowledge-timing",
+        "requirementGuidance": "Document the signing date relative to the start of employment and what consideration moved — Virginia's staged authorities do not settle whether continued employment alone suffices for a mid-employment covenant, so a clean record is the cheap hedge. For post-June 2026 agreements, the acknowledgement should also capture any monetary compensation disclosed up front, because that disclosed compensation is what keeps the covenant alive after a termination without cause.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sb170-severance-condition",
+            "authorityType": "primary-law",
+            "title": "Virginia Acts of Assembly Ch. 883 (SB 170), Va. Code § 40.1-28.7:8(C)",
+            "citation": "2026 Va. Acts ch. 883 (S.B. 170) (codified at Va. Code Ann. § 40.1-28.7:8(C), eff. July 1, 2026).",
+            "enactedCitation": "2026 Va. Acts ch. 883 (S.B. 170).",
+            "url": "https://lis.virginia.gov/bill-details/20261/SB170",
+            "proposition": "2026 Va. Acts ch. 883 (SB 170) makes a non-compete unenforceable after a discharge without cause unless the employer provides severance or other monetary payment, and requires that payment to be disclosed when the covenant is signed.",
+            "verbatimQuote": "No covenant not to compete between an employer and an employee is enforceable if such employer discharges such employee from employment without providing severance benefits or other monetary payment to such employee, unless such employer discharges such employee for cause. Such severance benefits or other monetary payment shall be disclosed upon execution of the covenant not to compete.",
+            "date": "2026-07-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-sb170-severance-condition"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-opportunity-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Chance to consult a lawyer",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#acknowledge-opportunity-to-consult-counsel",
+        "requirementGuidance": "No Virginia statute requires it, but the acknowledgement is cheap procedural-fairness evidence in a state whose courts construe every ambiguity in the worker's favor. It reads best alongside a genuine review window rather than a signature demanded on day one.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "The trade-secret obligation should run as long as secrecy does, because that is how Virginia defines the right: status as a trade secret depends on continued economic value from secrecy and ongoing reasonable efforts to maintain it. A fixed expiry on trade-secret protection quietly concedes the secrecy element on a schedule.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "vutsa-secrecy",
+            "authorityType": "primary-law",
+            "title": "Va. Code § 59.1-336",
+            "citation": "Va. Code Ann. § 59.1-336.",
+            "url": "https://law.lis.virginia.gov/vacode/59.1-336/",
+            "proposition": "Va. Code § 59.1-336 keys trade-secret status to continued secrecy, which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "verbatimQuote": "Derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use, and 2. Is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-vutsa-secrecy"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#state-confidentiality-duration",
+        "requirementGuidance": "Give ordinary confidential information its own finite term. The two-track structure keeps the perpetual obligation where Virginia law clearly supports it — statutorily preserved nondisclosure aimed at trade secrets and proprietary information — and stops the residual clause from looking like an indefinite restraint on working with what the employee knows.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "va-nda-scope",
+            "authorityType": "primary-law",
+            "title": "Va. Code § 40.1-28.7:8",
+            "citation": "Va. Code Ann. § 40.1-28.7:8(C).",
+            "enactedCitation": "2020 Va. Acts cc. 948, 949; 2025 Va. Acts c. 585.",
+            "url": "https://law.lis.virginia.gov/vacode/40.1-28.7:8/",
+            "proposition": "Va. Code § 40.1-28.7:8 supports the preserved scope of nondisclosure agreements targeting trade secrets and proprietary or confidential information.",
+            "verbatimQuote": "Nothing in this section shall serve to limit the creation or application of nondisclosure agreements intended to prohibit the taking, misappropriating, threatening to misappropriate, or sharing of certain information to which an employee has access, including trade secrets, as defined in § 59.1-336, and proprietary or confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-va-nda-scope"
+          }
+        ]
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#disclose-dtsa-notice",
+        "requirementGuidance": "Federal law, fully applicable in Virginia: an agreement governing trade secrets or confidential information must carry the immunity notice, or the employer forfeits exemplary damages and attorney fees in a later federal trade-secret suit against the worker. In a state that pushes employers toward trade-secret protection instead of broad covenants, those remedies are worth keeping.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-immunity-notice",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-dtsa-immunity-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Confidentiality and non-disparagement language has to leave wages, hours, and working conditions discussable. Federal labor law protects that speech in every state, and the Board has been striking overbroad clauses in employee agreements.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nlra-section-7-rights",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-nlra-section-7-rights"
+          },
+          {
+            "sourceId": "mclaren-macomb-protected-activity",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-mclaren-macomb-protected-activity"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#permit-compelled-disclosure",
+        "requirementGuidance": "Confirm the carve-out for disclosure required by law, court order, or a government investigation, with notice to the employer where lawful. No confidentiality clause can outrun a subpoena, and a clause that pretends otherwise hands the worker an easy overbreadth argument in a state that construes restraints against the drafter.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#require-property-return-and-certification",
+        "requirementGuidance": "Return-or-delete at separation, certified in writing. Because Virginia steers employers toward trade-secret remedies rather than broad work bans, the certification is often the most useful page in the file: it is contemporaneous evidence of what the worker kept or gave back if protected material later surfaces at a competitor.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-employee-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#permit-employee-nonsolicit",
+        "requirementGuidance": "Optional — but in Virginia, screen the worker before evaluating the clause. The Court of Appeals has read the statute to block enforcement of an employee no-poach against a protected worker, so for low-wage or overtime-eligible employees this covenant may be dead on arrival no matter how narrowly it is drafted.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sentry-no-poach",
+            "authorityType": "case-law",
+            "title": "Sentry Force Security, LLC v. Barrera",
+            "citation": "Sentry Force Sec., LLC v. Barrera, Record No. 1405-24-4, slip op. at 20 (Va. Ct. App. Jan. 27, 2026) (unpublished).",
+            "url": "https://www.vacourts.gov/opinions/opncavwp/1405244.pdf",
+            "proposition": "Sentry Force supports the unpublished holding that the statute prevents enforcing an employee non-solicit against a protected worker.",
+            "verbatimQuote": "However, we affirm the circuit court’s decision on Sentry Force’s second assignment of error because Code § 40.1-28.7:8 does prevent Sentry Force from enforcing a “covenant not to compete” agreement against Barrera that stops Barrera (after he left Sentry Force) from soliciting Sentry Force’s other employees.",
+            "date": "2026-01-27",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-sentry-no-poach"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-customer-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#permit-customer-nonsolicit",
+        "requirementGuidance": "The covenant with the clearest lane in Virginia — provided it stays in that lane. A restriction confined to the worker's own outreach to former customers survives even for a protected worker, while anything reaching customer-initiated business runs into the statutory carve-out. Check the verbs: solicit and initiate, not serve or accept.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "va-carveout-covenants",
+            "authorityType": "primary-law",
+            "title": "Va. Code § 40.1-28.7:8",
+            "citation": "Va. Code Ann. § 40.1-28.7:8(A).",
+            "enactedCitation": "2020 Va. Acts cc. 948, 949; 2025 Va. Acts c. 585.",
+            "url": "https://law.lis.virginia.gov/vacode/40.1-28.7:8/",
+            "proposition": "Va. Code § 40.1-28.7:8 supports the carveout that customer non-solicits cannot reach customers the employee did not initiate contact with or solicit.",
+            "verbatimQuote": "shall not restrict an employee from providing a service to a customer or client of the employer if the employee does not initiate contact with or solicit the customer or client.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-va-carveout-covenants"
+          },
+          {
+            "sourceId": "sentry-direct-ok",
+            "authorityType": "case-law",
+            "title": "Sentry Force Security, LLC v. Barrera",
+            "citation": "Sentry Force Sec., LLC v. Barrera, Record No. 1405-24-4, slip op. at 14 (Va. Ct. App. Jan. 27, 2026) (unpublished).",
+            "url": "https://www.vacourts.gov/opinions/opncavwp/1405244.pdf",
+            "proposition": "Sentry Force supports the unpublished reading that a bar on direct customer solicitation survives even assuming the worker is a low-wage employee.",
+            "verbatimQuote": "Thus, even assuming Barrera is a low-wage employee for the purposes of this interlocutory appeal (as the parties do), Barrera cannot solicit his former employer’s customers for his own company.",
+            "date": "2026-01-27",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-sentry-direct-ok"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-dealing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#permit-non-dealing",
+        "requirementGuidance": "Non-dealing bars serving covered customers even when they call first — which is precisely the conduct Virginia's statute protects for covered workers: a customer who approaches the former employee can give that employee its business. Treat a non-dealing clause aimed at any protected worker as presumptively broken, and one aimed at exempt staff as a deliberate risk decision.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sentry-customer-initiated",
+            "authorityType": "case-law",
+            "title": "Sentry Force Security, LLC v. Barrera",
+            "citation": "Sentry Force Sec., LLC v. Barrera, Record No. 1405-24-4, slip op. at 15 (Va. Ct. App. Jan. 27, 2026) (unpublished).",
+            "url": "https://www.vacourts.gov/opinions/opncavwp/1405244.pdf",
+            "proposition": "Sentry Force supports the unpublished distinction that customer-initiated business cannot be blocked under § 40.1-28.7:8.",
+            "verbatimQuote": "In short, if the customer approaches the former employee with its business, the former employee is not restricted from accepting that customer’s business—and doing work for that customer of the former employer.",
+            "date": "2026-01-27",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-sentry-customer-initiated"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-compete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#permit-non-compete",
+        "requirementGuidance": "Two doors must open before a Virginia non-compete works. First the statute: no entering into, enforcing, or threatening to enforce against a low-wage employee — run the Virginia statutory gates at the end of this checklist before reading further. Then the common law: the employer must prove the restraint reasonable on every prong, with the covenant strictly construed against it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "va-ban-baseline",
+            "authorityType": "primary-law",
+            "title": "Va. Code § 40.1-28.7:8",
+            "citation": "Va. Code Ann. § 40.1-28.7:8(B).",
+            "enactedCitation": "2020 Va. Acts cc. 948, 949; 2025 Va. Acts c. 585.",
+            "url": "https://law.lis.virginia.gov/vacode/40.1-28.7:8/",
+            "proposition": "Va. Code § 40.1-28.7:8 supports the statutory ban on entering into, enforcing, or threatening to enforce a non-compete with any low-wage employee.",
+            "verbatimQuote": "No employer shall enter into, enforce, or threaten to enforce a covenant not to compete with any low-wage employee.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-va-ban-baseline"
+          },
+          {
+            "sourceId": "modern-environments-burden-covenants",
+            "authorityType": "case-law",
+            "title": "Modern Environments, Inc. v. Stinnett",
+            "citation": "Modern Env'ts, Inc. v. Stinnett, 263 Va. 491, 561 S.E.2d 694 (2002).",
+            "url": "https://www.courtlistener.com/opinion/1059338/modern-environments-inc-v-stinnett/",
+            "deepLink": "https://www.courtlistener.com/opinion/1059338/modern-environments-inc-v-stinnett/#:~:text=Second%2C%20the%20employer%20bears%20the,light%20of%20sound%20public%20policy.",
+            "proposition": "Modern Environments supports the employer's burden on every reasonableness prong of a Virginia non-compete.",
+            "verbatimQuote": "Second, the employer bears the burden to show that the restraint is no greater than necessary to protect a legitimate business interest, is not unduly harsh or oppressive in curtailing an employee's ability to earn a livelihood, and is reasonable in light of sound public policy.",
+            "date": "2002-04-19",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-modern-environments-burden-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Named-competitor narrowing",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementGuidance": "When the employer can name its real competitors, bind those instead of leaning on an open-ended competitive-business definition. Virginia has already shown what happens to the alternative: similar-business language that swept in unrelated enterprises rendered the covenant unenforceable, with no court trimming it back.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "motion-control-named-competitors",
+            "authorityType": "case-law",
+            "title": "Motion Control Systems, Inc. v. East",
+            "citation": "Motion Control Sys., Inc. v. East, 262 Va. 33, 546 S.E.2d 424 (2001).",
+            "url": "https://www.courtlistener.com/opinion/1059467/motion-control-systems-inc-v-east/",
+            "deepLink": "https://www.courtlistener.com/opinion/1059467/motion-control-systems-inc-v-east/#:~:text=Accordingly%2C%20we%20conclude%20that%20the,MCS%20and%2C%20therefore%2C%20was%20unenforceable.",
+            "proposition": "Motion Control supports narrowing the prohibited activity to genuine competitors because overreaching similar-business language rendered the covenant unenforceable.",
+            "verbatimQuote": "Accordingly, we conclude that the trial court did not err in holding that the covenant not to compete in this case imposed restraints that exceeded those necessary to protect the legitimate business interests of MCS and, therefore, was unenforceable.",
+            "date": "2001-06-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-motion-control-named-competitors"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#permit-non-investment",
+        "requirementGuidance": "Rare and deliberate. Confirm the passive-holdings carve-out is intact and the clause shares the defined Restricted Period — an investment restraint with no de minimis floor reads as unduly harsh in a state whose test expressly weighs the burden on the worker's livelihood.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#require-non-disparagement",
+        "requirementGuidance": "Standard to include with a stated term, but audit the carve-outs: truthful testimony, statements to government agencies, and protected workplace speech must sit outside the clause. Federal labor law polices overbroad versions in every state, Virginia included.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mclaren-nondisparagement",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-mclaren-nondisparagement"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-physician-specific-rights",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Physician rights and notices",
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#address-physician-specific-rights",
+        "requirementGuidance": "The dedicated clause should state Virginia's incoming rule plainly: legislation effective July 1, 2026 categorically bans employment non-competes with any health care professional, with the covered class reaching anyone licensed, registered, or certified by the Boards of Medicine, Nursing, Counseling, Optometry, Psychology, or Social Work. For these workers no pay level buys the employment covenant back, so the clause should disclaim the non-compete rather than dress it up. The ban reaches only employment non-competes, though: the acts still allow a sale-of-business covenant that is reasonable in scope, duration, and geographic area, and they preserve training-cost repayment terms and a narrowly construed customer non-solicit — so the carve-out language should track those lanes rather than assume a total prohibition.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sb128-physician-ban",
+            "authorityType": "primary-law",
+            "title": "Virginia Acts of Assembly Ch. 1114 (SB 128), Va. Code § 40.1-28.7:8(B)",
+            "citation": "2026 Va. Acts ch. 1114 (S.B. 128) (codified at Va. Code Ann. § 40.1-28.7:8(B), eff. July 1, 2026).",
+            "enactedCitation": "2026 Va. Acts ch. 1114 (S.B. 128).",
+            "url": "https://lis.virginia.gov/bill-details/20261/SB128",
+            "proposition": "2026 Va. Acts ch. 1114 (SB 128) categorically bans non-competes with any health care professional, effective July 1, 2026.",
+            "verbatimQuote": "No employer shall enter into, enforce, or threaten to enforce a covenant not to compete with any low-wage employee or health care professional.",
+            "date": "2026-07-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-sb128-physician-ban"
+          },
+          {
+            "sourceId": "sb128-physician-definition",
+            "authorityType": "primary-law",
+            "title": "Virginia Acts of Assembly Ch. 1114 (SB 128), Va. Code § 40.1-28.7:8(A)",
+            "citation": "2026 Va. Acts ch. 1114 (S.B. 128) (codified at Va. Code Ann. § 40.1-28.7:8(A), eff. July 1, 2026).",
+            "enactedCitation": "2026 Va. Acts ch. 1114 (S.B. 128).",
+            "url": "https://lis.virginia.gov/bill-details/20261/SB128",
+            "proposition": "2026 Va. Acts ch. 1114 (SB 128) defines the covered class as any person licensed, registered, or certified by the Board of Medicine, Nursing, Counseling, Optometry, Psychology, or Social Work.",
+            "verbatimQuote": "“Health care professional” means any person licensed, registered, or certified by the Board of Medicine, Nursing, Counseling, Optometry, Psychology, or Social Work.",
+            "date": "2026-07-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-sb128-physician-definition"
+          },
+          {
+            "sourceId": "sb128-physician-sale-carveout",
+            "authorityType": "primary-law",
+            "title": "Virginia Acts of Assembly Ch. 1114 (SB 128), Va. Code § 40.1-28.7:8(G)(2)",
+            "citation": "2026 Va. Acts ch. 1114 (S.B. 128) (codified at Va. Code Ann. § 40.1-28.7:8(G)(2), eff. July 1, 2026).",
+            "enactedCitation": "2026 Va. Acts ch. 1114 (S.B. 128).",
+            "url": "https://lis.virginia.gov/bill-details/20261/SB128",
+            "proposition": "2026 Va. Acts ch. 1114 (SB 128) preserves a sale-of-business covenant not to compete with a health care professional, provided it is reasonable in scope, duration, and geographic area.",
+            "verbatimQuote": "In such transactions, the seller and buyer may enter a covenant not to compete or similarly restrictive covenant for the health care professional or such person's business entity, provided that such covenant not to compete or similarly restrictive covenant is reasonable in scope, duration, and geographic area.",
+            "date": "2026-07-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-sb128-physician-sale-carveout"
+          },
+          {
+            "sourceId": "sb128-physician-nonsolicit-carveout",
+            "authorityType": "primary-law",
+            "title": "Virginia Acts of Assembly Ch. 1114 (SB 128), Va. Code § 40.1-28.7:8(H)",
+            "citation": "2026 Va. Acts ch. 1114 (S.B. 128) (codified at Va. Code Ann. § 40.1-28.7:8(H), eff. July 1, 2026).",
+            "enactedCitation": "2026 Va. Acts ch. 1114 (S.B. 128).",
+            "url": "https://lis.virginia.gov/bill-details/20261/SB128",
+            "proposition": "2026 Va. Acts ch. 1114 (SB 128) leaves health-care employers free to use training-cost repayment terms and a customer non-solicit that is narrowly construed to the professional's own material-contact customers and substantially similar services.",
+            "verbatimQuote": "Any reference to a prohibition against soliciting or attempting to solicit customers shall be narrowly construed to apply only to (i) the health care professional's customers, including actively sought prospective customers, with whom the health care professional had material contact during employment and (ii) products and services that are the same as or substantially similar to those provided by the employer.",
+            "date": "2026-07-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-sb128-physician-nonsolicit-carveout"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "The worker's representation that no earlier agreement or order blocks the new role. On the intake side it does double duty in Virginia: an incoming covenant signed elsewhere may be unenforceable against a worker the statute now protects, and the representation forces that conversation before the first customer call instead of after it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#address-notice-to-future-employers",
+        "requirementGuidance": "A genuine drafting choice with a Virginia hazard attached: the statute prohibits even threatening to enforce a covenant against a protected worker, and a violation carries a five-figure civil penalty. A warning letter to a new employer premised on a covenant the statute voids is a threat in slow motion — condition any notice provision on a covenant that actually survives the statutory gates.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "va-threaten-enforce",
+            "authorityType": "primary-law",
+            "title": "Va. Code § 40.1-28.7:8",
+            "citation": "Va. Code Ann. § 40.1-28.7:8(B).",
+            "enactedCitation": "2020 Va. Acts cc. 948, 949; 2025 Va. Acts c. 585.",
+            "url": "https://law.lis.virginia.gov/vacode/40.1-28.7:8/",
+            "proposition": "Va. Code § 40.1-28.7:8 supports the prohibition on threatening to enforce a non-compete against a low-wage employee.",
+            "verbatimQuote": "No employer shall enter into, enforce, or threaten to enforce a covenant not to compete with any low-wage employee.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-va-threaten-enforce"
+          },
+          {
+            "sourceId": "va-civil-penalty",
+            "authorityType": "primary-law",
+            "title": "Va. Code § 40.1-28.7:8",
+            "citation": "Va. Code Ann. § 40.1-28.7:8(E).",
+            "enactedCitation": "2020 Va. Acts cc. 948, 949; 2025 Va. Acts c. 585.",
+            "url": "https://law.lis.virginia.gov/vacode/40.1-28.7:8/",
+            "proposition": "Va. Code § 40.1-28.7:8 supports the $10,000 civil penalty for each violation of the ban.",
+            "verbatimQuote": "Any employer that violates the provisions of subsection B as determined by the Commissioner shall be subject to a civil penalty of $10,000 for each violation.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-va-civil-penalty"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-tolling-during-breach",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-tolling-during-breach",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restriction extended during a breach",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#address-tolling-during-breach",
+        "requirementGuidance": "The agreement should say whether the clock pauses during a breach — but treat any extension mechanism as unsettled Virginia law rather than a standard remedy. No staged Virginia authority decides tolling, and the backdrop cuts against it: covenants are strictly construed as restraints of trade, and a clause that can stretch the restricted period indefinitely hands the worker a ready-made overbreadth argument.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "motion-control-strict-tolling",
+            "authorityType": "case-law",
+            "title": "Motion Control Systems, Inc. v. East",
+            "citation": "Motion Control Sys., Inc. v. East, 262 Va. 33, 546 S.E.2d 424 (2001).",
+            "url": "https://www.courtlistener.com/opinion/1059467/motion-control-systems-inc-v-east/",
+            "deepLink": "https://www.courtlistener.com/opinion/1059467/motion-control-systems-inc-v-east/#:~:text=As%20a%20restraint%20of%20trade%2C,in%20favor%20of%20the%20employee.",
+            "proposition": "Motion Control supports the strict-construction backdrop against which an unresolved tolling or extension clause is assessed.",
+            "verbatimQuote": "As a restraint of trade, the covenant must be strictly construed and, if ambiguous, it must be construed in favor of the employee.",
+            "date": "2001-06-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-motion-control-strict-tolling"
+          },
+          {
+            "sourceId": "home-paramount-overbreadth-tolling",
+            "authorityType": "case-law",
+            "title": "Home Paramount Pest Control Cos. v. Shaffer",
+            "citation": "Home Paramount Pest Control Cos. v. Shaffer, 282 Va. 412, 718 S.E.2d 762 (2011).",
+            "url": "https://www.courtlistener.com/opinion/1057978/home-paramount-pest-control-v-shaffer/",
+            "deepLink": "https://www.courtlistener.com/opinion/1057978/home-paramount-pest-control-v-shaffer/#:~:text=the%20clear%20overbreadth%20of%20the,of%20geographic%20scope%20and%20duration.",
+            "proposition": "Home Paramount supports the rule that clear overbreadth cannot be saved by narrower drafting elements, the risk an extension clause raises.",
+            "verbatimQuote": "the clear overbreadth of the function here cannot be saved by narrow tailoring of geographic scope and duration.",
+            "date": "2011-11-04",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-home-paramount-overbreadth-tolling"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#require-injunctive-relief-availability",
+        "requirementGuidance": "Look for the acknowledgement that breach may cause irreparable harm and that an injunction is appropriate relief — then calibrate expectations: Virginia enforceability is rarely decided on the pleadings, because restraints are neither enforceable nor unenforceable in a factual vacuum. The employer will need an evidentiary record, not just a recital.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "assurance-data-evidence",
+            "authorityType": "case-law",
+            "title": "Assurance Data, Inc. v. Malyevac",
+            "citation": "Assurance Data, Inc. v. Malyevac, 286 Va. 137 (2013).",
+            "url": "https://www.courtlistener.com/opinion/1057728/assurance-data-inc-v-malyevac/",
+            "deepLink": "https://www.courtlistener.com/opinion/1057728/assurance-data-inc-v-malyevac/#:~:text=The%20premise%20running%20through%20Simmons%2C,unenforceable%20in%20a%20factual%20vacuum.",
+            "proposition": "Assurance Data supports the procedural rule that enforceability of a Virginia restraint generally requires factual development rather than decision in a factual vacuum.",
+            "verbatimQuote": "The premise running through Simmons, Modern Environments, Home Paramount, and our other decisions is that restraints on competition are neither enforceable nor unenforceable in a factual vacuum.",
+            "date": "2013-09-12",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-assurance-data-evidence"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-attorneys-fees-and-costs",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Attorney fees and costs",
+        "sectionId": "remedies",
+        "itemNumber": "13.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#address-attorneys-fees-and-costs",
+        "requirementGuidance": "A commercial choice — but note that Virginia's statute already shifts fees one way: a protected worker who proves a violation recovers reasonable costs, expert fees, and attorney fees from the employer. A one-sided employer fee clause sits awkwardly next to that regime; check that any fee-shifting is mutual and prevailing-party based.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "va-fee-recovery",
+            "authorityType": "primary-law",
+            "title": "Va. Code § 40.1-28.7:8",
+            "citation": "Va. Code Ann. § 40.1-28.7:8(F).",
+            "enactedCitation": "2020 Va. Acts cc. 948, 949; 2025 Va. Acts c. 585.",
+            "url": "https://law.lis.virginia.gov/vacode/40.1-28.7:8/",
+            "proposition": "Va. Code § 40.1-28.7:8 supports the worker's recovery of costs, expert fees, and attorney fees on a finding of violation.",
+            "verbatimQuote": "If the court finds a violation of the provisions of this section, the plaintiff shall be entitled to recover reasonable costs, including costs and reasonable fees for expert witnesses, and attorney fees from the former employer or other person who attempts to enforce an unlawful covenant not to compete against such plaintiff.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-va-fee-recovery"
+          }
+        ]
+      },
+      {
+        "requirementId": "draft-within-enforceable-scope-rather-than-expect-narrowing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.virginia.draft-within-enforceable-scope-rather-than-expect-narrowing",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No court rescue for overbroad terms",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#draft-within-enforceable-scope-rather-than-expect-narrowing",
+        "requirementGuidance": "Read the severability clause as a risk signal, not a safety net. Virginia courts strictly construe restrictive covenants, resolve ambiguity in the worker's favor, and will not narrow clear language to save it — the employer is stuck defending the words it chose, and clear overbreadth in one element can sink the entire restraint. An agreement that drafts broad and banks on judicial trimming is betting the covenant on a rescue Virginia does not perform; prefer separable covenants, each sized to a provable interest from the outset.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "home-paramount-language-chosen",
+            "authorityType": "case-law",
+            "title": "Home Paramount Pest Control Cos. v. Shaffer",
+            "citation": "Home Paramount Pest Control Cos. v. Shaffer, 282 Va. 412, 718 S.E.2d 762 (2011).",
+            "url": "https://www.courtlistener.com/opinion/1057978/home-paramount-pest-control-v-shaffer/",
+            "deepLink": "https://www.courtlistener.com/opinion/1057978/home-paramount-pest-control-v-shaffer/#:~:text=Home%20Paramount%20thus%20was%20limited,not%20contrary%20to%20public%20policy.",
+            "proposition": "Home Paramount supports rejecting an attempt to narrow clear covenant language through extrinsic evidence, leaving the employer to defend the language it chose.",
+            "verbatimQuote": "Home Paramount thus was limited to adducing evidence to prove that the language it chose furthered its legitimate business interests, did not unduly burden Shaffer’s ability to earn a living, and was not contrary to public policy.",
+            "date": "2011-11-04",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-home-paramount-language-chosen"
+          },
+          {
+            "sourceId": "motion-control-strict-severability",
+            "authorityType": "case-law",
+            "title": "Motion Control Systems, Inc. v. East",
+            "citation": "Motion Control Sys., Inc. v. East, 262 Va. 33, 546 S.E.2d 424 (2001).",
+            "url": "https://www.courtlistener.com/opinion/1059467/motion-control-systems-inc-v-east/",
+            "deepLink": "https://www.courtlistener.com/opinion/1059467/motion-control-systems-inc-v-east/#:~:text=As%20a%20restraint%20of%20trade%2C,in%20favor%20of%20the%20employee.",
+            "proposition": "Motion Control supports strict construction of Virginia non-competes and employee-favorable construction of ambiguities.",
+            "verbatimQuote": "As a restraint of trade, the covenant must be strictly construed and, if ambiguous, it must be construed in favor of the employee.",
+            "date": "2001-06-08",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-motion-control-strict-severability"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#address-survival-per-covenant",
+        "requirementGuidance": "Per-covenant survival keeps each clock independently checkable: trade-secret obligations can run while secrecy lasts, and every other restraint needs its own stated end date. In Virginia the discipline matters because the covenants are tested one by one: a customer clause drafted to the statutory line can survive while a broad non-compete fails, but only if their durations and triggers are not fused into a single bundled survival sentence.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-assignment-and-successors",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assignment and successors",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#address-assignment-and-successors",
+        "requirementGuidance": "Confirm employer-side assignability to successors and that the worker cannot assign. Remember what assignment cannot do in Virginia: a successor enforcing against a protected worker inherits the statutory bar along with the contract, and a successor enforcing against anyone else inherits the burden of justifying the original language as written.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "specify-governing-law-and-venue",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.specify-governing-law-and-venue",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law and venue",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#specify-governing-law-and-venue",
+        "requirementGuidance": "The clause should name governing law, venue, and dispute process. For a Virginia workforce, name Virginia: the staged authorities identify no statutory override of a foreign choice-of-law clause, but a selection designed to sidestep the low-wage ban for workers living and working in Virginia invites a public-policy challenge and signals a form that was never localized.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Boilerplate with a Virginia trap inside: the July 2026 severance rule reaches agreements entered into, amended, or renewed on or after July 1, 2026 — so a routine amendment or renewal of an older covenant pulls it into the new regime. Review the amendment mechanics so a comp refresh does not quietly re-paper the covenant without the severance economics the new law demands.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sb170-renewal-trigger",
+            "authorityType": "primary-law",
+            "title": "Virginia Acts of Assembly Ch. 883 (SB 170), enactment clause 2",
+            "citation": "2026 Va. Acts ch. 883 (S.B. 170), cl. 2.",
+            "url": "https://lis.virginia.gov/bill-details/20261/SB170",
+            "proposition": "2026 Va. Acts ch. 883 (SB 170) leaves only agreements entered into, amended, or renewed before July 1, 2026 unaffected, making amendment and renewal the events that pull an older covenant into the new regime.",
+            "verbatimQuote": "That nothing in this act shall invalidate, alter, or otherwise affect any contract, covenant, or agreement entered into, amended, or renewed prior to July 1, 2026.",
+            "date": "2026-07-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-sb170-renewal-trigger"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-non-competes-for-low-wage-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.virginia.exclude-non-competes-for-low-wage-employees",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No non-compete for low-wage workers",
+        "sectionId": "virginia-statutory-gates",
+        "itemNumber": "19.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#exclude-non-competes-for-low-wage-employees",
+        "requirementGuidance": "A non-compete cannot be entered into, enforced, or even threatened against a low-wage employee — for 2026, anyone averaging less than $1,507.01 per week, a class that also sweeps in interns, students, apprentices, and trainees and lower-paid independent contractors, while excluding workers paid mostly through sales commissions, incentives, or bonuses. Run the worker's pay math before reading a single covenant term. The downside is concrete: a covered worker has a two-year window to sue, the court can void the covenant and award liquidated damages, lost compensation, damages, and fees, and each violation draws a $10,000 civil penalty.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "va-gate-ban",
+            "authorityType": "primary-law",
+            "title": "Va. Code § 40.1-28.7:8",
+            "citation": "Va. Code Ann. § 40.1-28.7:8(B).",
+            "enactedCitation": "2020 Va. Acts cc. 948, 949; 2025 Va. Acts c. 585.",
+            "url": "https://law.lis.virginia.gov/vacode/40.1-28.7:8/",
+            "proposition": "Va. Code § 40.1-28.7:8 supports the ban on entering into, enforcing, or threatening to enforce a non-compete with any low-wage employee.",
+            "verbatimQuote": "No employer shall enter into, enforce, or threaten to enforce a covenant not to compete with any low-wage employee.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-va-gate-ban"
+          },
+          {
+            "sourceId": "doli-gate-threshold",
+            "authorityType": "agency-guidance",
+            "title": "Virginia DOLI Notice of the Average Weekly Wage for 2026",
+            "citation": "Virginia Department of Workforce Development and Advancement, Notice of the Average Weekly Wage for 2026 (Jan. 6, 2026).",
+            "url": "https://doli.virginia.gov/2026/01/06/notice-of-the-average-weekly-wage-for-2026/",
+            "proposition": "Virginia DOLI supports the 2026 low-wage threshold of less than $1,507.01 per week.",
+            "verbatimQuote": "Pursuant to Va. Code § 40.1-28.7:8, the term “low-wage employee” as applied to covenants not to compete has been calculated by the Virginia Department of Workforce Development and Advancement to include all employees who earn an average of less than $1,507.01 per week.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-doli-gate-threshold"
+          },
+          {
+            "sourceId": "va-gate-interns",
+            "authorityType": "primary-law",
+            "title": "Va. Code § 40.1-28.7:8",
+            "citation": "Va. Code Ann. § 40.1-28.7:8(A).",
+            "enactedCitation": "2020 Va. Acts cc. 948, 949; 2025 Va. Acts c. 585.",
+            "url": "https://law.lis.virginia.gov/vacode/40.1-28.7:8/",
+            "proposition": "Va. Code § 40.1-28.7:8 supports including interns, students, apprentices, and trainees in the protected class.",
+            "verbatimQuote": "includes interns, students, apprentices, or trainees employed, with or without pay, at a trade or occupation in order to gain work or educational experience.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-va-gate-interns"
+          },
+          {
+            "sourceId": "va-gate-contractors",
+            "authorityType": "primary-law",
+            "title": "Va. Code § 40.1-28.7:8",
+            "citation": "Va. Code Ann. § 40.1-28.7:8(A).",
+            "enactedCitation": "2020 Va. Acts cc. 948, 949; 2025 Va. Acts c. 585.",
+            "url": "https://law.lis.virginia.gov/vacode/40.1-28.7:8/",
+            "proposition": "Va. Code § 40.1-28.7:8 supports including lower-paid independent contractors in the protected class.",
+            "verbatimQuote": "also includes an individual who has independently contracted with another person to perform services independent of an employment relationship and who is compensated for such services by such person at an hourly rate that is less than the median hourly wage for the Commonwealth for all occupations as reported, for the preceding year, by the Bureau of Labor Statistics of the U.S. Department of Labor.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-va-gate-contractors"
+          },
+          {
+            "sourceId": "va-gate-commission",
+            "authorityType": "primary-law",
+            "title": "Va. Code § 40.1-28.7:8",
+            "citation": "Va. Code Ann. § 40.1-28.7:8(A).",
+            "enactedCitation": "2020 Va. Acts cc. 948, 949; 2025 Va. Acts c. 585.",
+            "url": "https://law.lis.virginia.gov/vacode/40.1-28.7:8/",
+            "proposition": "Va. Code § 40.1-28.7:8 supports the exclusion for employees paid mostly through sales commissions, incentives, or bonuses.",
+            "verbatimQuote": "shall not include any employee whose earnings are derived, in whole or in predominant part, from sales commissions, incentives, or bonuses paid to the employee by the employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-va-gate-commission"
+          },
+          {
+            "sourceId": "va-gate-private-action",
+            "authorityType": "primary-law",
+            "title": "Va. Code § 40.1-28.7:8",
+            "citation": "Va. Code Ann. § 40.1-28.7:8(D).",
+            "enactedCitation": "2020 Va. Acts cc. 948, 949; 2025 Va. Acts c. 585.",
+            "url": "https://law.lis.virginia.gov/vacode/40.1-28.7:8/",
+            "proposition": "Va. Code § 40.1-28.7:8 supports the worker's private action, its two-year window, and the voiding, injunction, liquidated-damages, lost-compensation, damages, and fee remedies.",
+            "verbatimQuote": "A low-wage employee may bring a civil action in a court of competent jurisdiction against any former employer or other person that attempts to enforce a covenant not to compete against such employee in violation of this section. An action under this section shall be brought within two years of the latter of (i) the date the covenant not to compete was signed, (ii) the date the low-wage employee learns of the covenant not to compete, (iii) the date the employment relationship is terminated, or (iv) the date the employer takes any step to enforce the covenant not to compete. The court shall have jurisdiction to void any covenant not to compete with a low-wage employee and to order all appropriate relief, including enjoining the conduct of any person or employer, ordering payment of liquidated damages, and awarding lost compensation, damages, and reasonable attorney fees and costs.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-va-gate-private-action"
+          },
+          {
+            "sourceId": "va-gate-penalty",
+            "authorityType": "primary-law",
+            "title": "Va. Code § 40.1-28.7:8",
+            "citation": "Va. Code Ann. § 40.1-28.7:8(E).",
+            "enactedCitation": "2020 Va. Acts cc. 948, 949; 2025 Va. Acts c. 585.",
+            "url": "https://law.lis.virginia.gov/vacode/40.1-28.7:8/",
+            "proposition": "Va. Code § 40.1-28.7:8 supports the $10,000 civil penalty for each violation of the ban as determined by the Commissioner.",
+            "verbatimQuote": "Any employer that violates the provisions of subsection B as determined by the Commissioner shall be subject to a civil penalty of $10,000 for each violation.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-va-gate-penalty"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-non-competes-for-overtime-eligible-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.virginia.exclude-non-competes-for-overtime-eligible-employees",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No non-compete for overtime-eligible workers",
+        "sectionId": "virginia-statutory-gates",
+        "itemNumber": "19.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#exclude-non-competes-for-overtime-eligible-employees",
+        "requirementGuidance": "For covenants signed from July 1, 2025, the protected class also includes every employee entitled to federal overtime pay — regardless of how much they earn. Check FLSA exemption status as its own gate: a well-paid non-exempt employee is protected even though their earnings clear the weekly threshold, and a misclassification mistake becomes a non-compete violation at the same time.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "va-gate-flsa",
+            "authorityType": "primary-law",
+            "title": "Va. Code § 40.1-28.7:8",
+            "citation": "Va. Code Ann. § 40.1-28.7:8(A).",
+            "enactedCitation": "2020 Va. Acts cc. 948, 949; 2025 Va. Acts c. 585.",
+            "url": "https://law.lis.virginia.gov/vacode/40.1-28.7:8/",
+            "proposition": "Va. Code § 40.1-28.7:8 supports the FLSA-overtime prong that protects overtime-eligible employees regardless of earnings.",
+            "verbatimQuote": "who, regardless of his average weekly earnings, is entitled to overtime compensation under the provisions of 29 U.S.C. § 207 for any hours worked in excess of 40 hours in any one workweek.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-va-gate-flsa"
+          },
+          {
+            "sourceId": "doli-gate-flsa",
+            "authorityType": "agency-guidance",
+            "title": "Virginia DOLI Notice of the Average Weekly Wage for 2026",
+            "citation": "Virginia Department of Workforce Development and Advancement, Notice of the Average Weekly Wage for 2026 (Jan. 6, 2026).",
+            "url": "https://doli.virginia.gov/2026/01/06/notice-of-the-average-weekly-wage-for-2026/",
+            "proposition": "Virginia DOLI supports the July 1, 2025 effective date of the overtime-eligible expansion.",
+            "verbatimQuote": "Effective July 1, 2025, a “low-wage employee” also includes an employee who, regardless of average weekly earnings, is entitled to overtime compensation under the provisions of the Fair Labor Standards Act for any hours worked in excess of 40 hours in any one workweek.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-doli-gate-flsa"
+          }
+        ]
+      },
+      {
+        "requirementId": "preserve-customer-initiated-business-for-protected-workers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.virginia.preserve-customer-initiated-business-for-protected-workers",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer-initiated business stays open",
+        "sectionId": "virginia-statutory-gates",
+        "itemNumber": "19.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#preserve-customer-initiated-business-for-protected-workers",
+        "requirementGuidance": "No covenant binding a protected worker may stop that worker from serving a customer the worker neither approached nor solicited — the carve-out is written into the statutory definition itself. The Court of Appeals read the line from both sides: a bar on the worker's own direct solicitation survives, while customer-initiated business stays open to the worker. Audit every customer-facing clause for verbs that reach passive acceptance.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "va-gate-carveout",
+            "authorityType": "primary-law",
+            "title": "Va. Code § 40.1-28.7:8",
+            "citation": "Va. Code Ann. § 40.1-28.7:8(A).",
+            "enactedCitation": "2020 Va. Acts cc. 948, 949; 2025 Va. Acts c. 585.",
+            "url": "https://law.lis.virginia.gov/vacode/40.1-28.7:8/",
+            "proposition": "Va. Code § 40.1-28.7:8 supports the statutory carveout protecting service to customers the worker did not initiate contact with or solicit.",
+            "verbatimQuote": "shall not restrict an employee from providing a service to a customer or client of the employer if the employee does not initiate contact with or solicit the customer or client.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-va-gate-carveout"
+          },
+          {
+            "sourceId": "sentry-gate-passive",
+            "authorityType": "case-law",
+            "title": "Sentry Force Security, LLC v. Barrera",
+            "citation": "Sentry Force Sec., LLC v. Barrera, Record No. 1405-24-4, slip op. at 15 (Va. Ct. App. Jan. 27, 2026) (unpublished).",
+            "url": "https://www.vacourts.gov/opinions/opncavwp/1405244.pdf",
+            "proposition": "Sentry Force supports the unpublished distinction that customer-initiated business cannot be blocked under § 40.1-28.7:8.",
+            "verbatimQuote": "In short, if the customer approaches the former employee with its business, the former employee is not restricted from accepting that customer’s business—and doing work for that customer of the former employer.",
+            "date": "2026-01-27",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-sentry-gate-passive"
+          },
+          {
+            "sourceId": "sentry-gate-direct",
+            "authorityType": "case-law",
+            "title": "Sentry Force Security, LLC v. Barrera",
+            "citation": "Sentry Force Sec., LLC v. Barrera, Record No. 1405-24-4, slip op. at 14 (Va. Ct. App. Jan. 27, 2026) (unpublished).",
+            "url": "https://www.vacourts.gov/opinions/opncavwp/1405244.pdf",
+            "proposition": "Sentry Force supports the unpublished reading that a bar on direct customer solicitation survives even for a low-wage employee.",
+            "verbatimQuote": "Thus, even assuming Barrera is a low-wage employee for the purposes of this interlocutory appeal (as the parties do), Barrera cannot solicit his former employer’s customers for his own company.",
+            "date": "2026-01-27",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-sentry-gate-direct"
+          }
+        ]
+      },
+      {
+        "requirementId": "avoid-employee-nonsolicits-for-protected-workers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.virginia.avoid-employee-nonsolicits-for-protected-workers",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No employee no-poach for protected workers",
+        "sectionId": "virginia-statutory-gates",
+        "itemNumber": "19.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#avoid-employee-nonsolicits-for-protected-workers",
+        "requirementGuidance": "Skip the employee non-solicit for any worker the statute protects. The Court of Appeals held the statute prevented enforcement of a covenant barring a departed protected worker from recruiting former colleagues — an unpublished memorandum opinion with limited precedential weight, but the only Virginia appellate reading on point. Treat the clause as presumptively unenforceable for protected workers until published authority says otherwise.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sentry-gate-no-poach",
+            "authorityType": "case-law",
+            "title": "Sentry Force Security, LLC v. Barrera",
+            "citation": "Sentry Force Sec., LLC v. Barrera, Record No. 1405-24-4, slip op. at 20 (Va. Ct. App. Jan. 27, 2026) (unpublished).",
+            "url": "https://www.vacourts.gov/opinions/opncavwp/1405244.pdf",
+            "proposition": "Sentry Force supports the unpublished holding that § 40.1-28.7:8 prevents enforcing a covenant barring a protected worker from soliciting the employer's other employees.",
+            "verbatimQuote": "However, we affirm the circuit court’s decision on Sentry Force’s second assignment of error because Code § 40.1-28.7:8 does prevent Sentry Force from enforcing a “covenant not to compete” agreement against Barrera that stops Barrera (after he left Sentry Force) from soliciting Sentry Force’s other employees.",
+            "date": "2026-01-27",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-sentry-gate-no-poach"
+          }
+        ]
+      },
+      {
+        "requirementId": "post-the-required-workplace-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.virginia.post-the-required-workplace-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Statute posted with employee notices",
+        "sectionId": "virginia-statutory-gates",
+        "itemNumber": "19.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#post-the-required-workplace-notice",
+        "requirementGuidance": "Ask for a photo of the break-room wall, not just the contract file: every Virginia employer must post a copy of the statute or an approved summary wherever its other required employee notices hang. The posting is a compliance artifact that travels with the covenant program — an employer relying on the statute's boundaries while skipping its posting duty starts the dispute a step behind.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "va-gate-posting",
+            "authorityType": "primary-law",
+            "title": "Va. Code § 40.1-28.7:8",
+            "citation": "Va. Code Ann. § 40.1-28.7:8(G).",
+            "enactedCitation": "2020 Va. Acts cc. 948, 949; 2025 Va. Acts c. 585.",
+            "url": "https://law.lis.virginia.gov/vacode/40.1-28.7:8/",
+            "proposition": "Va. Code § 40.1-28.7:8 supports the employer's obligation to post the statute or an approved summary with other required employee notices.",
+            "verbatimQuote": "Every employer shall post a copy of this section or a summary approved by the Department in the same location where other employee notices required by state or federal law are posted.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-va-gate-posting"
+          }
+        ]
+      },
+      {
+        "requirementId": "avoid-any-capacity-function-restrictions",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.virginia.avoid-any-capacity-function-restrictions",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No any-capacity work ban",
+        "sectionId": "virginia-statutory-gates",
+        "itemNumber": "19.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#avoid-any-capacity-function-restrictions",
+        "requirementGuidance": "Strike or rewrite any clause that bars the worker from serving a competitor in any capacity. Virginia's test asks whether the restraint exceeds what the employer's legitimate interest requires, with the employer carrying the burden — and the leading case held that an unconfined function element forced the employer to justify prohibiting every conceivable role at a competitor, a burden it could not carry. Tie the function to the job the worker actually did.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "omniplex-gate-test",
+            "authorityType": "case-law",
+            "title": "Omniplex World Services Corp. v. U.S. Investigations Services, Inc.",
+            "citation": "Omniplex World Servs. Corp. v. U.S. Investigations Servs., Inc., 270 Va. 246, 618 S.E.2d 340 (2005).",
+            "url": "https://www.courtlistener.com/opinion/1058921/omniplex-world-services-v-us-inv/",
+            "deepLink": "https://www.courtlistener.com/opinion/1058921/omniplex-world-services-v-us-inv/#:~:text=These%20considerations%20form%20the%20basis,of%20a%20sound%20public%20policy%3F",
+            "proposition": "Omniplex supports the three-part test asking whether the restraint protects the employer, does not unduly burden the employee, and is reasonable from a public-policy standpoint.",
+            "verbatimQuote": "These considerations form the basis of the three-part test we use to determine the validity of restrictive covenants: (1) Is the restraint, from the standpoint of the employer, reasonable in the sense that it is no greater than necessary to protect the employer in some legitimate business interest? (2) From the standpoint of the employee, is the restraint reasonable in the sense that it is not unduly harsh and oppressive in curtailing his legitimate efforts to earn a livelihood? (3) Is the restraint reasonable from the standpoint of a sound public policy?",
+            "date": "2005-09-16",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-omniplex-gate-test"
+          },
+          {
+            "sourceId": "home-paramount-gate-any-capacity",
+            "authorityType": "case-law",
+            "title": "Home Paramount Pest Control Cos. v. Shaffer",
+            "citation": "Home Paramount Pest Control Cos. v. Shaffer, 282 Va. 412, 718 S.E.2d 762 (2011).",
+            "url": "https://www.courtlistener.com/opinion/1057978/home-paramount-pest-control-v-shaffer/",
+            "deepLink": "https://www.courtlistener.com/opinion/1057978/home-paramount-pest-control-v-shaffer/#:~:text=Because%20Home%20Paramount%20did%20not,while%20employed%20by%20a%20competitor.",
+            "proposition": "Home Paramount supports the rule that an any-capacity function restriction puts the burden on the employer to justify prohibiting every conceivable activity at a competitor.",
+            "verbatimQuote": "Because Home Paramount did not confine the function element of the Provision to those activities it actually engaged in, it bore the burden of proving a legitimate business interest in prohibiting Shaffer from engaging in all reasonably conceivable activities while employed by a competitor.",
+            "date": "2011-11-04",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-home-paramount-gate-any-capacity"
+          }
+        ]
+      },
+      {
+        "requirementId": "pair-without-cause-termination-with-severance-or-disclosed-compensation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.virginia.pair-without-cause-termination-with-severance-or-disclosed-compensation",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Severance or disclosed pay if fired without cause",
+        "sectionId": "virginia-statutory-gates",
+        "itemNumber": "19.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#pair-without-cause-termination-with-severance-or-disclosed-compensation",
+        "requirementGuidance": "For agreements entered into, amended, or renewed on or after July 1, 2026, the non-compete needs a funded exit: it is unenforceable if the employer terminates without cause and the worker receives neither severance pay nor other monetary compensation disclosed in advance. Verify the agreement states the without-cause economics on its face — compensation invented at termination was not disclosed in advance. Older agreements stay outside the rule until amended or renewed.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sb170-gate-severance",
+            "authorityType": "primary-law",
+            "title": "Virginia Acts of Assembly Ch. 883 (SB 170), Va. Code § 40.1-28.7:8(C)",
+            "citation": "2026 Va. Acts ch. 883 (S.B. 170) (codified at Va. Code Ann. § 40.1-28.7:8(C), eff. July 1, 2026).",
+            "enactedCitation": "2026 Va. Acts ch. 883 (S.B. 170).",
+            "url": "https://lis.virginia.gov/bill-details/20261/SB170",
+            "proposition": "2026 Va. Acts ch. 883 (SB 170) makes a non-compete unenforceable after a without-cause discharge unless the employer provides severance or other monetary payment disclosed when the covenant is signed.",
+            "verbatimQuote": "No covenant not to compete between an employer and an employee is enforceable if such employer discharges such employee from employment without providing severance benefits or other monetary payment to such employee, unless such employer discharges such employee for cause. Such severance benefits or other monetary payment shall be disclosed upon execution of the covenant not to compete.",
+            "date": "2026-07-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-sb170-gate-severance"
+          },
+          {
+            "sourceId": "sb170-gate-prospective",
+            "authorityType": "primary-law",
+            "title": "Virginia Acts of Assembly Ch. 883 (SB 170), enactment clause 2",
+            "citation": "2026 Va. Acts ch. 883 (S.B. 170), cl. 2.",
+            "url": "https://lis.virginia.gov/bill-details/20261/SB170",
+            "proposition": "2026 Va. Acts ch. 883 (SB 170) applies only prospectively, leaving agreements entered into, amended, or renewed before July 1, 2026 outside the new severance rule.",
+            "verbatimQuote": "That nothing in this act shall invalidate, alter, or otherwise affect any contract, covenant, or agreement entered into, amended, or renewed prior to July 1, 2026.",
+            "date": "2026-07-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-sb170-gate-prospective"
+          }
+        ]
+      },
+      {
+        "requirementId": "exclude-non-competes-for-health-care-professionals",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.virginia.exclude-non-competes-for-health-care-professionals",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "No non-competes for health-care professionals",
+        "sectionId": "virginia-statutory-gates",
+        "itemNumber": "19.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#exclude-non-competes-for-health-care-professionals",
+        "requirementGuidance": "From July 1, 2026, no employment non-compete may bind any health care professional — the covered class reaches anyone licensed, registered, or certified by the Boards of Medicine, Nursing, Counseling, Optometry, Psychology, or Social Work, and unlike the low-wage analysis, no earnings level restores the employment covenant. For agreements entered into or renewed before that date, analyze the professional like any other Virginia worker: statutory ban first, then the common-law test.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "sb128-gate-healthcare",
+            "authorityType": "primary-law",
+            "title": "Virginia Acts of Assembly Ch. 1114 (SB 128), Va. Code § 40.1-28.7:8(B)",
+            "citation": "2026 Va. Acts ch. 1114 (S.B. 128) (codified at Va. Code Ann. § 40.1-28.7:8(B), eff. July 1, 2026).",
+            "enactedCitation": "2026 Va. Acts ch. 1114 (S.B. 128).",
+            "url": "https://lis.virginia.gov/bill-details/20261/SB128",
+            "proposition": "2026 Va. Acts ch. 1114 (SB 128) categorically bans non-competes with any health care professional, effective July 1, 2026.",
+            "verbatimQuote": "No employer shall enter into, enforce, or threaten to enforce a covenant not to compete with any low-wage employee or health care professional.",
+            "date": "2026-07-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-sb128-gate-healthcare"
+          },
+          {
+            "sourceId": "sb128-gate-boards",
+            "authorityType": "primary-law",
+            "title": "Virginia Acts of Assembly Ch. 1114 (SB 128), Va. Code § 40.1-28.7:8(A)",
+            "citation": "2026 Va. Acts ch. 1114 (S.B. 128) (codified at Va. Code Ann. § 40.1-28.7:8(A), eff. July 1, 2026).",
+            "enactedCitation": "2026 Va. Acts ch. 1114 (S.B. 128).",
+            "url": "https://lis.virginia.gov/bill-details/20261/SB128",
+            "proposition": "2026 Va. Acts ch. 1114 (SB 128) fixes the covered class as any person licensed, registered, or certified by the Board of Medicine, Nursing, Counseling, Optometry, Psychology, or Social Work.",
+            "verbatimQuote": "“Health care professional” means any person licensed, registered, or certified by the Board of Medicine, Nursing, Counseling, Optometry, Psychology, or Social Work.",
+            "date": "2026-07-01",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/virginia#src-sb128-gate-boards"
+          }
+        ]
+      }
+    ]
+  }
+}

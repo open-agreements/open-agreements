@@ -1,0 +1,1485 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/west-virginia",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/west-virginia.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/west-virginia",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/west-virginia/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/west-virginia/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "west-virginia",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — West Virginia",
+      "description": "A clause-by-clause reviewer checklist for West Virginia employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the Reddy reasonableness framework, where a facially unreasonable covenant is void with no judicial narrowing and physician covenants are capped at one year and thirty road miles.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "West Virginia",
+      "coverage": "West Virginia (US)",
+      "lastReviewed": "2026-06-12",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 47,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "label": "Physician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "west-virginia-statutory-gates",
+        "label": "West Virginia enforceability gates"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#identify-parties",
+        "requirementGuidance": "Confirm the named employer is the entity that actually holds the interests the covenants protect. The first move in any West Virginia enforcement fight is the employer showing it has an interest requiring protection, so a covenant running to an affiliate that owns no trade secrets, customer relationships, or training investment starts that showing already behind.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wv-reddy-burden-cover",
+            "authorityType": "case-law",
+            "title": "Reddy v. Community Health Foundation of Man",
+            "citation": "Reddy v. Cmty. Health Found. of Man, 171 W. Va. 368, 298 S.E.2d 906 (1982).",
+            "url": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/",
+            "deepLink": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/#:~:text=The%20employer%20must%20first%20show,has%20an%20interest%20requiring%20protection.",
+            "proposition": "Reddy places the threshold burden on the employer to show an interest requiring protection — the interest the named employer entity must actually hold.",
+            "verbatimQuote": "The employer must first show that he has an interest requiring protection.",
+            "date": "1982-12-15",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-reddy-burden-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#identify-effective-date",
+        "requirementGuidance": "The dates answer three separate questions here: when each restricted period starts and ends, whether the covenant was signed at hire or after employment had already begun — which decides whether new consideration is required — and, for a physician contract, whether the instrument was entered into, modified, renewed, or extended on or after July 1, 2017, which pulls it inside the physician statute. An undated covenant leaves all three open.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wv-47-11e-5-cover",
+            "authorityType": "primary-law",
+            "title": "W. Va. Code § 47-11E-5",
+            "citation": "W. Va. Code § 47-11E-5.",
+            "url": "https://code.wvlegislature.gov/47-11E-5/",
+            "proposition": "Section 47-11E-5 keys the physician article to contracts entered into, modified, renewed, or extended on or after July 1, 2017 — the date question the cover terms must answer.",
+            "verbatimQuote": "This article applies to any contract between a physician and his or her employer entered into, modified, renewed or extended on or after July 1, 2017: Provided, That the provisions of this article do not otherwise apply to or abrogate any contract in effect on or before June 30, 2017.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-47-11e-5-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#identify-employee-title",
+        "requirementGuidance": "Title and duties are the first evidence on the protectable-interest gate. A role built on general managerial skills — supervising, merchandising, purchasing, advertising — gives the employer nothing protectable to restrain, and a form covenant pinned to such a role fails before reasonableness is ever reached.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wv-helms-cover",
+            "authorityType": "case-law",
+            "title": "Helms Boys, Inc. v. Brady",
+            "citation": "Helms Boys, Inc. v. Brady, 171 W. Va. 66, 297 S.E.2d 840 (1982).",
+            "url": "https://www.courtlistener.com/opinion/1356394/helms-boys-inc-v-brady/",
+            "deepLink": "https://www.courtlistener.com/opinion/1356394/helms-boys-inc-v-brady/#:~:text=When%20the%20skills%20and%20information,are%20not%20protectible%20employer%20interests.",
+            "proposition": "Helms Boys holds that general managerial skills and information are not protectable employer interests — the rule the worker's title and duties evidence.",
+            "verbatimQuote": "When the skills and information acquired by a former employee are of a general managerial nature, such as supervisory, merchandising, purchasing and advertising skills and information, a restrictive covenant in an employment contract will not be enforced because such skills are not protectible employer interests.",
+            "date": "1982-11-18",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-helms-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#identify-governing-law",
+        "requirementGuidance": "Check that a governing state is named. Everything on this page assumes West Virginia law controls — the protectable-interest gate, the three-part reasonableness test, the facial-voidness rule, and the physician statute. A different choice of law trades this framework for another one and deserves its own review.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#define-confidential-information",
+        "requirementGuidance": "Tie the definition to information the employer actually keeps confidential. Trade secrets and customer lists are the assets West Virginia courts are reluctant to let a former employee exploit; a definition that sweeps in general know-how or public information stretches the clause toward a practical work ban that has to survive the full reasonableness framework.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wv-reddy-assets-def",
+            "authorityType": "case-law",
+            "title": "Reddy v. Community Health Foundation of Man",
+            "citation": "Reddy v. Cmty. Health Found. of Man, 171 W. Va. 368, 298 S.E.2d 906 (1982).",
+            "url": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/",
+            "deepLink": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/#:~:text=Trade%20secrets%20are%20very%20unlikely,to%20permit%20their%20competitive%20use.",
+            "proposition": "Reddy identifies trade secrets and customer lists as the employer assets courts are reluctant to let former employees use competitively — the assets the confidentiality definitions should track.",
+            "verbatimQuote": "Trade secrets are very unlikely to have been paid for, and this is reflected by the reluctance of courts to permit their use by former employees in the competitive market. Customer lists, too, are seldom paid for, and courts are therefore reluctant to permit their competitive use.",
+            "date": "1982-12-15",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-reddy-assets-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#define-trade-secrets",
+        "requirementGuidance": "Define trade secrets separately from ordinary confidential information. Trade secrets sit at the top of the protectable-interest hierarchy here — they are the cleanest justification for any restraint in the agreement — and a separate definition is what lets the perpetual trade-secret obligation and the finite confidentiality term run on different clocks.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wv-reddy-assets-def",
+            "authorityType": "case-law",
+            "title": "Reddy v. Community Health Foundation of Man",
+            "citation": "Reddy v. Cmty. Health Found. of Man, 171 W. Va. 368, 298 S.E.2d 906 (1982).",
+            "url": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/",
+            "deepLink": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/#:~:text=Trade%20secrets%20are%20very%20unlikely,to%20permit%20their%20competitive%20use.",
+            "proposition": "Reddy identifies trade secrets and customer lists as the employer assets courts are reluctant to let former employees use competitively — the assets the confidentiality definitions should track.",
+            "verbatimQuote": "Trade secrets are very unlikely to have been paid for, and this is reflected by the reluctance of courts to permit their use by former employees in the competitive market. Customer lists, too, are seldom paid for, and courts are therefore reluctant to permit their competitive use.",
+            "date": "1982-12-15",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-reddy-assets-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-period",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#define-restricted-period",
+        "requirementGuidance": "One defined Restricted Period keeps every duration auditable — and in West Virginia an excessively broad time limit is not a trimming exercise. A facially excessive period can make the whole covenant void without even partial enforcement, so the defined term is where the agreement either earns or forfeits its credibility.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wv-huntington-def",
+            "authorityType": "case-law",
+            "title": "Huntington Eye Associates, Inc. v. LoCascio",
+            "citation": "Huntington Eye Assocs., Inc. v. LoCascio, 210 W. Va. 76, 553 S.E.2d 773 (2001).",
+            "url": "https://www.courtlistener.com/opinion/1298767/huntington-eye-associates-inc-v-locascio/",
+            "deepLink": "https://www.courtlistener.com/opinion/1298767/huntington-eye-associates-inc-v-locascio/#:~:text=An%20employee%20covenant%20not%20to,restrictive%20covenants%20are%20naturally%20prone.",
+            "proposition": "Huntington Eye makes excessively broad time or area limitations facially unreasonable, voiding the covenant without even partial enforcement — the stakes for the period and territory definitions.",
+            "verbatimQuote": "An employee covenant not to compete is unreasonable on its face if its time or area limitations are excessively broad, or where the covenant appears designed to intimidate employees rather than to protect the employer’s business, and a court should hold any such covenant void and unenforceable, and not undertake even a partial enforcement of it, bearing in mind, however, that a standard of “unreasonable on its face” is to be distinguished from the standard of “reasonableness” used in inquiries adopted by other authorities to address the minor instances of overbreadth to which restrictive covenants are naturally prone.",
+            "date": "2001-07-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-huntington-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-territory",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-territory",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted territory",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#define-restricted-territory",
+        "requirementGuidance": "Bound the geography to where the employer's protected interests actually operate. Excessively broad area limitations are the other half of the facial-unreasonableness screen — a territory drawn around ambition rather than actual business reach risks voiding the covenant outright rather than inviting a court to shrink it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wv-huntington-def",
+            "authorityType": "case-law",
+            "title": "Huntington Eye Associates, Inc. v. LoCascio",
+            "citation": "Huntington Eye Assocs., Inc. v. LoCascio, 210 W. Va. 76, 553 S.E.2d 773 (2001).",
+            "url": "https://www.courtlistener.com/opinion/1298767/huntington-eye-associates-inc-v-locascio/",
+            "deepLink": "https://www.courtlistener.com/opinion/1298767/huntington-eye-associates-inc-v-locascio/#:~:text=An%20employee%20covenant%20not%20to,restrictive%20covenants%20are%20naturally%20prone.",
+            "proposition": "Huntington Eye makes excessively broad time or area limitations facially unreasonable, voiding the covenant without even partial enforcement — the stakes for the period and territory definitions.",
+            "verbatimQuote": "An employee covenant not to compete is unreasonable on its face if its time or area limitations are excessively broad, or where the covenant appears designed to intimidate employees rather than to protect the employer’s business, and a court should hold any such covenant void and unenforceable, and not undertake even a partial enforcement of it, bearing in mind, however, that a standard of “unreasonable on its face” is to be distinguished from the standard of “reasonableness” used in inquiries adopted by other authorities to address the minor instances of overbreadth to which restrictive covenants are naturally prone.",
+            "date": "2001-07-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-huntington-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered customers",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#define-covered-customers",
+        "requirementGuidance": "Keep the class to customers the worker actually served or learned about through confidential information, with a stated look-back window. A customer clause in West Virginia earns its lighter treatment by following customers and information rather than a map — a definition covering the employer's entire book of business reads as a market ban instead.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wv-wood-territorial-def",
+            "authorityType": "case-law",
+            "title": "Wood v. Acordia of West Virginia, Inc.",
+            "citation": "Wood v. Acordia of W. Va., Inc., 217 W. Va. 406, 618 S.E.2d 415 (2005).",
+            "url": "https://www.courtlistener.com/opinion/1289040/wood-v-acordia-of-west-virginia-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/1289040/wood-v-acordia-of-west-virginia-inc/#:~:text=Although%20both%20covenants%20not%20to,economic%20forces%20of%20the%20marketplace.",
+            "proposition": "Wood treats non-piracy provisions — which ordinarily carry no territorial limits — as less restrictive because they follow customers and information rather than a map.",
+            "verbatimQuote": "Although both covenants not to compete and non-piracy provisions are utilized to safeguard an employer's protectable business interests, non-piracy provisions, which ordinarily do not include territorial limits, are less restrictive on the employee and the economic forces of the marketplace.",
+            "date": "2005-07-07",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-wood-territorial-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#define-covered-employees",
+        "requirementGuidance": "Limit the no-poach class to colleagues the departing worker actually worked with or supervised during the look-back window. No staged West Virginia case sets a separate standard for employee non-solicits, so the clause lives or dies on staying a modest restraint rather than a workforce-wide mobility ban a court could treat as a disguised non-compete.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#define-protected-interests",
+        "requirementGuidance": "Name the interests with the West Virginia hierarchy in mind: trade secrets, customer lists, customer goodwill, and unusual employer-funded training are the assets that justify restraint, and the employer carries the burden of showing the interest and explaining how this worker could injure it. General skills recitals add words without adding enforceability.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wv-reddy-burden-def",
+            "authorityType": "case-law",
+            "title": "Reddy v. Community Health Foundation of Man",
+            "citation": "Reddy v. Cmty. Health Found. of Man, 171 W. Va. 368, 298 S.E.2d 906 (1982).",
+            "url": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/",
+            "deepLink": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/#:~:text=The%20employer%20must%20first%20show,has%20an%20interest%20requiring%20protection.",
+            "proposition": "Reddy puts the burden on the employer to show an interest requiring protection before any restraint is measured for reasonableness.",
+            "verbatimQuote": "The employer must first show that he has an interest requiring protection.",
+            "date": "1982-12-15",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-reddy-burden-def"
+          },
+          {
+            "sourceId": "wv-helms-def",
+            "authorityType": "case-law",
+            "title": "Helms Boys, Inc. v. Brady",
+            "citation": "Helms Boys, Inc. v. Brady, 171 W. Va. 66, 297 S.E.2d 840 (1982).",
+            "url": "https://www.courtlistener.com/opinion/1356394/helms-boys-inc-v-brady/",
+            "deepLink": "https://www.courtlistener.com/opinion/1356394/helms-boys-inc-v-brady/#:~:text=When%20the%20skills%20and%20information,are%20not%20protectible%20employer%20interests.",
+            "proposition": "Helms Boys excludes general managerial skills from the protectable-interest class the definition should name.",
+            "verbatimQuote": "When the skills and information acquired by a former employee are of a general managerial nature, such as supervisory, merchandising, purchasing and advertising skills and information, a restrictive covenant in an employment contract will not be enforced because such skills are not protectible employer interests.",
+            "date": "1982-11-18",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-helms-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-competitive-business",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Competitive business",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#define-competitive-business",
+        "requirementGuidance": "Describe the genuinely competing activity in concrete terms. The threshold in this state is never protection from ordinary competition, so a definition that expands to anything the employer might someday do signals a covenant aimed at the worker rather than at a protectable interest — the kind of apparent purpose that feeds the facial-unreasonableness screen.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wv-reddy-burden-def",
+            "authorityType": "case-law",
+            "title": "Reddy v. Community Health Foundation of Man",
+            "citation": "Reddy v. Cmty. Health Found. of Man, 171 W. Va. 368, 298 S.E.2d 906 (1982).",
+            "url": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/",
+            "deepLink": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/#:~:text=The%20employer%20must%20first%20show,has%20an%20interest%20requiring%20protection.",
+            "proposition": "Reddy puts the burden on the employer to show an interest requiring protection before any restraint is measured for reasonableness.",
+            "verbatimQuote": "The employer must first show that he has an interest requiring protection.",
+            "date": "1982-12-15",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-reddy-burden-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where ownership or investment in competitors is restricted, look for a passive-holdings carve-out below a stated threshold. A clause that technically forbids index funds and ordinary public shares is gratuitous overbreadth — exactly the kind of grasping detail that makes a covenant look designed to intimidate rather than protect.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#define-passive-public-holdings",
+        "requirementGuidance": "A drafting convenience, not a requirement — plenty of agreements inline the carve-out language instead. If the capitalized term appears, confirm its percentage matches the operative carve-out it supports.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.11",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#define-solicit",
+        "requirementGuidance": "Pin the term to the conduct West Virginia treats as piracy: soliciting the employer's customers or making use of the employer's confidential information after departure. A definition that drifts into barring all dealings or all similar work converts the clause from a non-piracy provision into something reviewed as a non-compete.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wv-wood-definition-def",
+            "authorityType": "case-law",
+            "title": "Wood v. Acordia of West Virginia, Inc.",
+            "citation": "Wood v. Acordia of W. Va., Inc., 217 W. Va. 406, 618 S.E.2d 415 (2005).",
+            "url": "https://www.courtlistener.com/opinion/1289040/wood-v-acordia-of-west-virginia-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/1289040/wood-v-acordia-of-west-virginia-inc/#:~:text=Accordingly%2C%20this%20Court%20holds%20that,of%20the%20employer's%20confidential%20information.",
+            "proposition": "Wood defines the non-piracy provision — restricting solicitation of the employer's customers and use of confidential information — as distinct from a non-compete's time-and-territory work ban.",
+            "verbatimQuote": "Accordingly, this Court holds that whereas a covenant not to compete in an employment agreement between an employer and an employee restricts the employee from engaging in business similar to that of the employer within a designated time and territory after the employment should cease, a non-piracy provision, also known as a non-solicitation or hands-off provision, in an employment agreement, restricts the employee, should the employment cease, from soliciting the employer's customers or making use of the employer's confidential information.",
+            "date": "2005-07-07",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-wood-definition-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.12",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#define-termination-of-employment",
+        "requirementGuidance": "Verify the trigger covers resignation, dismissal, and expiration of a fixed term the same way — every restricted-period clock runs from this event. For a physician contract the definition is outcome-determinative: the statute voids the covenant entirely when the employer is the one who terminates, so who ended the relationship cannot be left ambiguous.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wv-47-11e-2-termination-def",
+            "authorityType": "primary-law",
+            "title": "W. Va. Code § 47-11E-2",
+            "citation": "W. Va. Code § 47-11E-2.",
+            "url": "https://code.wvlegislature.gov/47-11E-2/",
+            "proposition": "Section 47-11E-2 voids a physician covenant upon employer termination, making the termination definition outcome-determinative in physician contracts.",
+            "verbatimQuote": "A covenant not to compete shall be void and unenforceable upon the termination of the physician’s employment by the employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-47-11e-2-termination-def"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-timing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-timing",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "When the agreement was signed",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#acknowledge-timing",
+        "requirementGuidance": "The timing acknowledgement does heavy lifting in West Virginia: a covenant signed at the start of employment rides the job itself as consideration, but one signed after employment has commenced needs new consideration that continued at-will employment cannot supply. The acknowledgement should pin down whether signing preceded the first day of work and, if not, what new value moved.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wv-envprod-rule-timing",
+            "authorityType": "case-law",
+            "title": "Environmental Products Co. v. Duncan",
+            "citation": "Env't Prods. Co. v. Duncan, 168 W. Va. 349, 285 S.E.2d 889 (1981).",
+            "url": "https://www.courtlistener.com/opinion/8217635/environmental-products-co-v-duncan/",
+            "deepLink": "https://www.courtlistener.com/opinion/8217635/environmental-products-co-v-duncan/#:~:text=If%20a%20covenant%20not%20to,new%20consideration%20to%20support%20it.",
+            "proposition": "Environmental Products requires new consideration for a covenant contracted after employment has commenced without restriction — the fact the timing acknowledgement must establish.",
+            "verbatimQuote": "If a covenant not to compete is contracted after employment has been commenced without restriction, there must be new consideration to support it.",
+            "date": "1981-12-02",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-envprod-rule-timing"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-opportunity-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Chance to consult a lawyer",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#acknowledge-opportunity-to-consult-counsel",
+        "requirementGuidance": "Cheap insurance, even though no West Virginia statute demands it. The undue-hardship prong invites scrutiny of how the covenant landed on the worker, and a documented opportunity to take the agreement to a lawyer is contemporaneous evidence the process was fair rather than ambush.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "The trade-secret obligation should last as long as secrecy does — that is how federal law defines the right, and West Virginia's trade-secret statute runs alongside the contract rather than replacing it: the act displaces conflicting civil remedies but expressly preserves contractual ones. A fixed expiry on trade-secret protection gives away rights the statutes would otherwise keep alive.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-trade-secret-definition",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
+            "citation": "18 U.S.C. § 1839(3)(B) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1839",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
+            "proposition": "Federal law keys trade-secret status to continued secrecy, which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-dtsa-trade-secret-definition"
+          },
+          {
+            "sourceId": "wv-47-22-7-conf",
+            "authorityType": "primary-law",
+            "title": "W. Va. Code § 47-22-7",
+            "citation": "W. Va. Code § 47-22-7.",
+            "url": "https://code.wvlegislature.gov/47-22-7/",
+            "proposition": "Section 47-22-7 displaces conflicting civil trade-secret remedies while preserving contractual remedies — the statutory backdrop the perpetual trade-secret clause works with.",
+            "verbatimQuote": "Except as provided in subsection (b), of this section, this article displaces conflicting tort, restitutionary and other law of this state providing civil remedies for misappropriation of a trade secret. (b) This article does not affect: (1) Contractual remedies, whether or not based upon misappropriation of a trade secret; (2) Other civil remedies that are not based upon misappropriation of a trade secret; or (3) Criminal remedies, whether or not based upon misappropriation of a trade secret.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-47-22-7-conf"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#state-confidentiality-duration",
+        "requirementGuidance": "Give ordinary confidential information its own finite term. A perpetual lid on non-secret information is the kind of clause that operates as a practical non-compete, and in this state a confidentiality covenant earns enforcement by staying tied to actual confidential information rather than to the worker's ability to do similar work.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wv-reddy-assets-conf",
+            "authorityType": "case-law",
+            "title": "Reddy v. Community Health Foundation of Man",
+            "citation": "Reddy v. Cmty. Health Found. of Man, 171 W. Va. 368, 298 S.E.2d 906 (1982).",
+            "url": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/",
+            "deepLink": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/#:~:text=Trade%20secrets%20are%20very%20unlikely,to%20permit%20their%20competitive%20use.",
+            "proposition": "Reddy grounds confidentiality protection in trade secrets and customer lists — actual confidential assets — rather than in restraining similar work generally.",
+            "verbatimQuote": "Trade secrets are very unlikely to have been paid for, and this is reflected by the reluctance of courts to permit their use by former employees in the competitive market. Customer lists, too, are seldom paid for, and courts are therefore reluctant to permit their competitive use.",
+            "date": "1982-12-15",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-reddy-assets-conf"
+          }
+        ]
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#disclose-dtsa-notice",
+        "requirementGuidance": "Federal law, fully applicable in West Virginia: omit the immunity notice and the employer forfeits exemplary damages and attorney fees in a later federal trade-secret suit against the worker. In an agreement whose strongest covenants lean on trade-secret protection, giving away those remedies is an unforced error.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-immunity-notice",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-dtsa-immunity-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Confidentiality and non-disparagement language has to leave wages, hours, and working conditions discussable. Federal labor law protects that speech regardless of the governing state, and the Board has been striking overbroad clauses in employee agreements.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nlra-section-7-rights",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-nlra-section-7-rights"
+          },
+          {
+            "sourceId": "mclaren-macomb-protected-activity",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-mclaren-macomb-protected-activity"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#permit-compelled-disclosure",
+        "requirementGuidance": "Confirm the carve-out for disclosure required by law, court order, or a government investigation, with notice to the employer where lawful. No confidentiality clause can countermand a subpoena, and a contract that pretends otherwise reads as overreach in a state whose courts already screen covenants for an intimidating purpose.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#require-property-return-and-certification",
+        "requirementGuidance": "Return-or-delete at separation, certified in writing. West Virginia's physician statute singles this protection out as one it never limits — provisions barring a departing physician from taking employer property, patient lists, or records survive even where the practice restraint is capped — and for every other worker the certification is the cleanest contemporaneous evidence if protected material later surfaces at a competitor.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wv-47-11e-3-prop",
+            "authorityType": "primary-law",
+            "title": "W. Va. Code § 47-11E-3",
+            "citation": "W. Va. Code § 47-11E-3.",
+            "url": "https://code.wvlegislature.gov/47-11E-3/",
+            "proposition": "Section 47-11E-3 preserves property and patient-record provisions in physician contracts even where the article caps the practice restraint.",
+            "verbatimQuote": "Provided that the contract does not state otherwise, nothing in this article limits the enforceability of: (1) Provisions prohibiting a physician from taking any property, patient lists or records of the employer with him or her upon the termination or expiration of the contract; (2) Provisions requiring a physician to repay an employer all or a portion of: (A) A loan; (B) Relocation expenses; (C) A signing bonus; (D) Remuneration to induce the physician to relocate or establish a physician practice in a specific geographic area; or (E) Recruiting, education and training expenses; (3) A nondisclosure provision relating to confidential information and trade secrets; (4) A nonsolicitation provision with respect to patients and employees of the employer; (5) A provision for liquidated damages; or (6) Any other provision of a contract that is not in violation of law.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-47-11e-3-prop"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-employee-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#permit-employee-nonsolicit",
+        "requirementGuidance": "Optional, and a comparatively safe inclusion: even the physician statute — the strictest covenant law in the state — expressly preserves non-solicits covering the employer's patients and employees. Keep it inside the Covered Employees class and the Restricted Period, and resist drafting it into a de facto hiring ban that would invite non-compete-style scrutiny.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wv-47-11e-3-cov",
+            "authorityType": "primary-law",
+            "title": "W. Va. Code § 47-11E-3",
+            "citation": "W. Va. Code § 47-11E-3.",
+            "url": "https://code.wvlegislature.gov/47-11E-3/",
+            "proposition": "Section 47-11E-3 expressly preserves patient and employee non-solicitation provisions in physician contracts, evidence the legislature treats non-solicits as a lesser tool.",
+            "verbatimQuote": "Provided that the contract does not state otherwise, nothing in this article limits the enforceability of: (1) Provisions prohibiting a physician from taking any property, patient lists or records of the employer with him or her upon the termination or expiration of the contract; (2) Provisions requiring a physician to repay an employer all or a portion of: (A) A loan; (B) Relocation expenses; (C) A signing bonus; (D) Remuneration to induce the physician to relocate or establish a physician practice in a specific geographic area; or (E) Recruiting, education and training expenses; (3) A nondisclosure provision relating to confidential information and trade secrets; (4) A nonsolicitation provision with respect to patients and employees of the employer; (5) A provision for liquidated damages; or (6) Any other provision of a contract that is not in violation of law.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-47-11e-3-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-customer-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#permit-customer-nonsolicit",
+        "requirementGuidance": "In West Virginia this clause has its own doctrinal home: a true non-piracy provision restricting solicitation of the employer's customers or use of confidential information, treated as less restrictive than a non-compete. If it appears, run it through the non-piracy gate at the end of this checklist — the lighter treatment holds only while the clause keeps that shape.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wv-wood-definition-cov",
+            "authorityType": "case-law",
+            "title": "Wood v. Acordia of West Virginia, Inc.",
+            "citation": "Wood v. Acordia of W. Va., Inc., 217 W. Va. 406, 618 S.E.2d 415 (2005).",
+            "url": "https://www.courtlistener.com/opinion/1289040/wood-v-acordia-of-west-virginia-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/1289040/wood-v-acordia-of-west-virginia-inc/#:~:text=Accordingly%2C%20this%20Court%20holds%20that,of%20the%20employer's%20confidential%20information.",
+            "proposition": "Wood distinguishes the non-piracy provision — restricting customer solicitation and use of confidential information — from the non-compete's time-and-territory work ban.",
+            "verbatimQuote": "Accordingly, this Court holds that whereas a covenant not to compete in an employment agreement between an employer and an employee restricts the employee from engaging in business similar to that of the employer within a designated time and territory after the employment should cease, a non-piracy provision, also known as a non-solicitation or hands-off provision, in an employment agreement, restricts the employee, should the employment cease, from soliciting the employer's customers or making use of the employer's confidential information.",
+            "date": "2005-07-07",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-wood-definition-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-dealing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#permit-non-dealing",
+        "requirementGuidance": "Non-dealing bars serving covered customers even when they arrive on their own — a restraint on receiving business rather than on chasing it. That pushes the clause away from the solicitation-and-information conduct that earns non-piracy treatment and toward the work-ban territory measured by the full reasonableness framework; treat its inclusion as a deliberate risk decision, not boilerplate.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wv-wood-territorial-cov",
+            "authorityType": "case-law",
+            "title": "Wood v. Acordia of West Virginia, Inc.",
+            "citation": "Wood v. Acordia of W. Va., Inc., 217 W. Va. 406, 618 S.E.2d 415 (2005).",
+            "url": "https://www.courtlistener.com/opinion/1289040/wood-v-acordia-of-west-virginia-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/1289040/wood-v-acordia-of-west-virginia-inc/#:~:text=Although%20both%20covenants%20not%20to,economic%20forces%20of%20the%20marketplace.",
+            "proposition": "Wood rests the non-piracy provision's lighter treatment on its being less restrictive on the employee and the marketplace — the rationale a non-dealing clause strains.",
+            "verbatimQuote": "Although both covenants not to compete and non-piracy provisions are utilized to safeguard an employer's protectable business interests, non-piracy provisions, which ordinarily do not include territorial limits, are less restrictive on the employee and the economic forces of the marketplace.",
+            "date": "2005-07-07",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-wood-territorial-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-compete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#permit-non-compete",
+        "requirementGuidance": "If a true non-compete appears, the employer owns the hard part: showing an interest requiring protection and a restraint no greater than needed — and a covenant that overreaches on its face is utterly void, with no court willing to enforce even part of it. Route the review straight through the West Virginia gates at the end of this checklist before polishing any term.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wv-reddy-burden-cov",
+            "authorityType": "case-law",
+            "title": "Reddy v. Community Health Foundation of Man",
+            "citation": "Reddy v. Cmty. Health Found. of Man, 171 W. Va. 368, 298 S.E.2d 906 (1982).",
+            "url": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/",
+            "deepLink": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/#:~:text=The%20employer%20must%20first%20show,has%20an%20interest%20requiring%20protection.",
+            "proposition": "Reddy assigns the employer the threshold burden of showing an interest requiring protection before a non-compete is enforced.",
+            "verbatimQuote": "The employer must first show that he has an interest requiring protection.",
+            "date": "1982-12-15",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-reddy-burden-cov"
+          },
+          {
+            "sourceId": "wv-reddy-void-cov",
+            "authorityType": "case-law",
+            "title": "Reddy v. Community Health Foundation of Man",
+            "citation": "Reddy v. Cmty. Health Found. of Man, 171 W. Va. 368, 298 S.E.2d 906 (1982).",
+            "url": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/",
+            "deepLink": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/#:~:text=If%20the%20covenant%20is%20unreasonable,is%20utterly%20void%20and%20unenforceable.",
+            "proposition": "Reddy voids a covenant that is unreasonable on its face — the all-or-nothing stake a West Virginia non-compete carries.",
+            "verbatimQuote": "If the covenant is unreasonable on its face, then it is utterly void and unenforceable.",
+            "date": "1982-12-15",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-reddy-void-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Named-competitor narrowing",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementGuidance": "When the employer can name its real competitors, the covenant should bind those instead of leaning on the open-ended Competitive Business definition. A named list is strong evidence the restraint is no greater than required — and in a state where facial overbreadth voids the covenant whole, narrowing on the page is worth far more than narrowing a judge will never perform.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wv-huntington-cov",
+            "authorityType": "case-law",
+            "title": "Huntington Eye Associates, Inc. v. LoCascio",
+            "citation": "Huntington Eye Assocs., Inc. v. LoCascio, 210 W. Va. 76, 553 S.E.2d 773 (2001).",
+            "url": "https://www.courtlistener.com/opinion/1298767/huntington-eye-associates-inc-v-locascio/",
+            "deepLink": "https://www.courtlistener.com/opinion/1298767/huntington-eye-associates-inc-v-locascio/#:~:text=An%20employee%20covenant%20not%20to,restrictive%20covenants%20are%20naturally%20prone.",
+            "proposition": "Huntington Eye denies even partial enforcement to a facially unreasonable covenant, which is why narrowing must happen on the page rather than in court.",
+            "verbatimQuote": "An employee covenant not to compete is unreasonable on its face if its time or area limitations are excessively broad, or where the covenant appears designed to intimidate employees rather than to protect the employer’s business, and a court should hold any such covenant void and unenforceable, and not undertake even a partial enforcement of it, bearing in mind, however, that a standard of “unreasonable on its face” is to be distinguished from the standard of “reasonableness” used in inquiries adopted by other authorities to address the minor instances of overbreadth to which restrictive covenants are naturally prone.",
+            "date": "2001-07-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-huntington-cov"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#permit-non-investment",
+        "requirementGuidance": "Rare and deliberate. Confirm the passive-holdings carve-out is intact and the clause shares the defined Restricted Period — an investment ban with no carve-out and no clear end reads as the grasping covenant the facial screen exists to catch.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#require-non-disparagement",
+        "requirementGuidance": "Standard to include with a stated term, but audit the carve-outs: truthful testimony, statements to government agencies, and protected workplace speech must sit outside the clause. Federal labor law polices overbroad versions in every state, and West Virginia adds no statutory cushion of its own.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mclaren-macomb-nondisparagement",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-mclaren-macomb-nondisparagement"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-physician-specific-rights",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-physician-specific-rights",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Physician rights and notices",
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#address-physician-specific-rights",
+        "requirementGuidance": "The dedicated clause should state West Virginia's physician rule plainly: a covenant not to compete in a physician-employer contract is capped at one year and thirty road miles from the primary place of practice, and it is void and unenforceable if the employer terminates the physician. It should also flag the statute's edges — the limits do not apply, unless the contract says otherwise, where the physician sold the practice to the employer or in contracts among physician owners of a health care practice.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wv-47-11e-2-limits-phys",
+            "authorityType": "primary-law",
+            "title": "W. Va. Code § 47-11E-2",
+            "citation": "W. Va. Code § 47-11E-2.",
+            "url": "https://code.wvlegislature.gov/47-11E-2/",
+            "proposition": "Section 47-11E-2 caps a physician employment non-compete at one year and thirty road miles from the primary place of practice.",
+            "verbatimQuote": "A covenant not to compete contained in a contract between a physician and an employer shall be limited to not more than: (1) One year in duration; and (2) Thirty road miles from the physician’s primary place of practice with the employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-47-11e-2-limits-phys"
+          },
+          {
+            "sourceId": "wv-47-11e-2-termination-phys",
+            "authorityType": "primary-law",
+            "title": "W. Va. Code § 47-11E-2",
+            "citation": "W. Va. Code § 47-11E-2.",
+            "url": "https://code.wvlegislature.gov/47-11E-2/",
+            "proposition": "Section 47-11E-2 voids a physician non-compete upon termination of the physician's employment by the employer.",
+            "verbatimQuote": "A covenant not to compete shall be void and unenforceable upon the termination of the physician’s employment by the employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-47-11e-2-termination-phys"
+          },
+          {
+            "sourceId": "wv-47-11e-4-phys",
+            "authorityType": "primary-law",
+            "title": "W. Va. Code § 47-11E-4",
+            "citation": "W. Va. Code § 47-11E-4.",
+            "url": "https://code.wvlegislature.gov/47-11E-4/",
+            "proposition": "Section 47-11E-4 exempts sale-of-practice covenants and contracts among physician owners from the physician article's limits unless the contract provides otherwise.",
+            "verbatimQuote": "The limitations set forth in this article do not apply to any of the following unless the contract terms provide otherwise: (1) In the case where the physician has sold his or her business or practice in the form of a sale of assets, stock, membership interests or otherwise to his or her employer; or (2) To contracts between physicians who are shareholders, owners, partners, members or directors of a health care practice.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-47-11e-4-phys"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "The worker's representation that no earlier agreement or order blocks the new role. It protects the employer against tortious-interference exposure from a prior employer and surfaces any incoming covenant early — before the first customer call, when the question can still be answered on paper rather than in court.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#address-notice-to-future-employers",
+        "requirementGuidance": "A genuine drafting choice with a West Virginia edge: a covenant that is unreasonable on its face is utterly void, so a warning letter waving such a covenant at a new employer asserts an instrument with no legal force — and trades enforcement value for tortious-interference exposure. If the clause appears, condition any third-party notice on a covenant that would actually survive review.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wv-reddy-void-notice",
+            "authorityType": "case-law",
+            "title": "Reddy v. Community Health Foundation of Man",
+            "citation": "Reddy v. Cmty. Health Found. of Man, 171 W. Va. 368, 298 S.E.2d 906 (1982).",
+            "url": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/",
+            "deepLink": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/#:~:text=If%20the%20covenant%20is%20unreasonable,is%20utterly%20void%20and%20unenforceable.",
+            "proposition": "Reddy makes a facially unreasonable covenant utterly void — the risk in asserting a doubtful covenant to a worker's next employer.",
+            "verbatimQuote": "If the covenant is unreasonable on its face, then it is utterly void and unenforceable.",
+            "date": "1982-12-15",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-reddy-void-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-tolling-during-breach",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-tolling-during-breach",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restriction extended during a breach",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#address-tolling-during-breach",
+        "requirementGuidance": "The agreement should say whether the clock pauses during a breach — but treat any extension mechanism as an open West Virginia question. No staged appellate decision squarely decides whether a court may add time for a breach or a lawsuit, and the surrounding rules cut against assuming it: a court that holds a facially unreasonable covenant utterly void, and refuses even partial enforcement of a grasping restraint, may also resist lengthening a restraint the parties did not validly supply. An express extension-on-breach clause is itself a longer restraint, so it should independently satisfy the three-part reasonableness test rather than being treated as automatic.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wv-reddy-void-toll",
+            "authorityType": "case-law",
+            "title": "Reddy v. Community Health Foundation of Man",
+            "citation": "Reddy v. Cmty. Health Found. of Man, 171 W. Va. 368, 298 S.E.2d 906 (1982).",
+            "url": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/",
+            "deepLink": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/#:~:text=If%20the%20covenant%20is%20unreasonable,is%20utterly%20void%20and%20unenforceable.",
+            "proposition": "Reddy supports the tolling caution: a court that voids a facially unreasonable covenant outright is unlikely to rescue an expired one with added time.",
+            "verbatimQuote": "If the covenant is unreasonable on its face, then it is utterly void and unenforceable.",
+            "date": "1982-12-15",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-reddy-void-toll"
+          },
+          {
+            "sourceId": "wv-huntington-toll",
+            "authorityType": "case-law",
+            "title": "Huntington Eye Associates, Inc. v. LoCascio",
+            "citation": "Huntington Eye Assocs., Inc. v. LoCascio, 210 W. Va. 76, 553 S.E.2d 773 (2001).",
+            "url": "https://www.courtlistener.com/opinion/1298767/huntington-eye-associates-inc-v-locascio/",
+            "deepLink": "https://www.courtlistener.com/opinion/1298767/huntington-eye-associates-inc-v-locascio/#:~:text=An%20employee%20covenant%20not%20to,restrictive%20covenants%20are%20naturally%20prone.",
+            "proposition": "Huntington Eye's refusal of even partial enforcement for facially unreasonable covenants informs the caution against judicially lengthened restraints.",
+            "verbatimQuote": "An employee covenant not to compete is unreasonable on its face if its time or area limitations are excessively broad, or where the covenant appears designed to intimidate employees rather than to protect the employer’s business, and a court should hold any such covenant void and unenforceable, and not undertake even a partial enforcement of it, bearing in mind, however, that a standard of “unreasonable on its face” is to be distinguished from the standard of “reasonableness” used in inquiries adopted by other authorities to address the minor instances of overbreadth to which restrictive covenants are naturally prone.",
+            "date": "2001-07-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-huntington-toll"
+          },
+          {
+            "sourceId": "wv-reddy-test-toll",
+            "authorityType": "case-law",
+            "title": "Reddy v. Community Health Foundation of Man",
+            "citation": "Reddy v. Cmty. Health Found. of Man, 171 W. Va. 368, 298 S.E.2d 906 (1982).",
+            "url": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/",
+            "deepLink": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/#:~:text=The%20three%2Ddimensional%20method%20of%20inquiry,to%20Compete%2C%E2%80%9D%20supra%2C%20at%20648.",
+            "proposition": "Reddy's three-part test governs any restraint, including one lengthened by an extension-on-breach clause, which must remain no greater than required.",
+            "verbatimQuote": "The three-dimensional method of inquiry has been summarized in a leading article: “A restraint is reasonable only if it (1) is no greater than is required for the protection of the employer, (2) does not impose undue hardship on the employee, and (3) is not injurious to the public,” H.M. Blake, “Employee Agreements Not to Compete,” supra, at 648.",
+            "date": "1982-12-15",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-reddy-test-toll"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#require-injunctive-relief-availability",
+        "requirementGuidance": "The irreparable-harm acknowledgement is standard and harmless — but it buys nothing on its own. West Virginia courts deny enforcement at the protectable-interest gate without ever reaching reasonableness, and no recital substitutes for the employer's threshold showing.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wv-special-services-rem",
+            "authorityType": "case-law",
+            "title": "Special Services Bureau, Inc. v. Friend",
+            "citation": "Special Servs. Bureau, Inc. v. Friend, No. 18-0478 (W. Va. Sept. 9, 2019) (mem. decision).",
+            "url": "https://www.courtlistener.com/opinion/4659311/special-services-bureau-inc-v-stacey-elizabeth-friend/",
+            "deepLink": "https://www.courtlistener.com/opinion/4659311/special-services-bureau-inc-v-stacey-elizabeth-friend/#:~:text=The%20circuit%20court%E2%80%99s%20consideration%20of,covenant%20failed%20on%20other%20grounds.",
+            "proposition": "Special Services Bureau shows enforcement failing at the protectable-interest gate before reasonableness or remedies are reached.",
+            "verbatimQuote": "The circuit court’s consideration of the reasonableness of the covenant was not necessary after the court found that the covenant failed on other grounds.",
+            "date": "2019-09-09",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-special-services-rem"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-attorneys-fees-and-costs",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Attorney fees and costs",
+        "sectionId": "remedies",
+        "itemNumber": "13.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#address-attorneys-fees-and-costs",
+        "requirementGuidance": "A commercial choice: with no fee clause, each side bears its own costs under the default American Rule. Note the statutory overlay for trade-secret claims — West Virginia's act lets the court award reasonable fees to the prevailing party in bad-faith and willful-malicious cases regardless of what the contract says — and check that any contractual fee-shifting runs both ways.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wv-47-22-4-rem",
+            "authorityType": "primary-law",
+            "title": "W. Va. Code § 47-22-4",
+            "citation": "W. Va. Code § 47-22-4.",
+            "url": "https://code.wvlegislature.gov/47-22-4/",
+            "proposition": "Section 47-22-4 authorizes attorney's-fee awards in specified bad-faith or willful-malicious trade-secret cases, independent of any contractual fee clause.",
+            "verbatimQuote": "If (a) a claim of misappropriation is made in bad faith, or (b) a motion to terminate an injunction is made or resisted in bad faith, or (c) willful and malicious misappropriation occurs, the court may award reasonable attorney's fees to the prevailing party.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-47-22-4-rem"
+          }
+        ]
+      },
+      {
+        "requirementId": "draft-facially-reasonable-covenants-rather-than-rely-on-narrowing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.west-virginia.draft-facially-reasonable-covenants-rather-than-rely-on-narrowing",
+        "requirementLevel": "SHOULD NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Facially reasonable from the start, no court rescue",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#draft-facially-reasonable-covenants-rather-than-rely-on-narrowing",
+        "requirementGuidance": "Read the severability boilerplate against West Virginia's two-step rule. A covenant unreasonable on its face — excessively broad time or area, or an apparent purpose of intimidating employees — is utterly void, and a court should not undertake even partial enforcement of it; tailoring is reserved for the minor overbreadth of a covenant that first passes the facial screen with the employer's interests proven. A savings clause does not move a covenant from the void column to the tailorable one, so the only safe draft is the narrow restraint the employer can defend at signing.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wv-reddy-void-sev",
+            "authorityType": "case-law",
+            "title": "Reddy v. Community Health Foundation of Man",
+            "citation": "Reddy v. Cmty. Health Found. of Man, 171 W. Va. 368, 298 S.E.2d 906 (1982).",
+            "url": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/",
+            "deepLink": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/#:~:text=If%20the%20covenant%20is%20unreasonable,is%20utterly%20void%20and%20unenforceable.",
+            "proposition": "Reddy holds a covenant unreasonable on its face utterly void and unenforceable — the rule a savings clause cannot contract around.",
+            "verbatimQuote": "If the covenant is unreasonable on its face, then it is utterly void and unenforceable.",
+            "date": "1982-12-15",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-reddy-void-sev"
+          },
+          {
+            "sourceId": "wv-huntington-sev",
+            "authorityType": "case-law",
+            "title": "Huntington Eye Associates, Inc. v. LoCascio",
+            "citation": "Huntington Eye Assocs., Inc. v. LoCascio, 210 W. Va. 76, 553 S.E.2d 773 (2001).",
+            "url": "https://www.courtlistener.com/opinion/1298767/huntington-eye-associates-inc-v-locascio/",
+            "deepLink": "https://www.courtlistener.com/opinion/1298767/huntington-eye-associates-inc-v-locascio/#:~:text=An%20employee%20covenant%20not%20to,restrictive%20covenants%20are%20naturally%20prone.",
+            "proposition": "Huntington Eye restates the facial-voidness rule and distinguishes it from the ordinary-overbreadth review where tailoring remains possible.",
+            "verbatimQuote": "An employee covenant not to compete is unreasonable on its face if its time or area limitations are excessively broad, or where the covenant appears designed to intimidate employees rather than to protect the employer’s business, and a court should hold any such covenant void and unenforceable, and not undertake even a partial enforcement of it, bearing in mind, however, that a standard of “unreasonable on its face” is to be distinguished from the standard of “reasonableness” used in inquiries adopted by other authorities to address the minor instances of overbreadth to which restrictive covenants are naturally prone.",
+            "date": "2001-07-06",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-huntington-sev"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#address-survival-per-covenant",
+        "requirementGuidance": "Each covenant should expire on its own definite schedule and read on its own. Self-contained survival language is what lets a sound non-piracy clause or confidentiality term outlive a failed non-compete — and in a state where a facially unreasonable covenant gets no judicial repair, that separateness is the difference between losing one covenant and losing them all.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-assignment-and-successors",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-assignment-and-successors",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assignment and successors",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#address-assignment-and-successors",
+        "requirementGuidance": "Confirm employer-side assignability to successors and that the worker cannot assign. Whoever ends up enforcing inherits the same burdens — the protectable interest must belong to the entity seeking enforcement, and the restraint must still be no greater than that interest requires — so an assignment clause moves the covenant but never upgrades it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "specify-governing-law-and-venue",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.specify-governing-law-and-venue",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law, venue, dispute process",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#specify-governing-law-and-venue",
+        "requirementGuidance": "The agreement should specify governing law, venue, and the dispute-resolution process. Restrictive-covenant outcomes are jurisdiction-sensitive, and the rest of this checklist applies West Virginia's framework — so confirm the clause matches the law the parties actually expect to govern, and treat any mismatch between the named state and the worker's real location as a question for counsel rather than a formality.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Standard boilerplate with two West Virginia wrinkles. An amendment that re-papers a covenant mid-employment is a covenant contracted after employment began, so it needs new consideration of its own. And for a physician contract, a modification, renewal, or extension on or after July 1, 2017 pulls an older agreement inside the physician statute — a routine refresh can quietly cap the covenant at one year and thirty road miles.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wv-envprod-entire",
+            "authorityType": "case-law",
+            "title": "Environmental Products Co. v. Duncan",
+            "citation": "Env't Prods. Co. v. Duncan, 168 W. Va. 349, 285 S.E.2d 889 (1981).",
+            "url": "https://www.courtlistener.com/opinion/8217635/environmental-products-co-v-duncan/",
+            "deepLink": "https://www.courtlistener.com/opinion/8217635/environmental-products-co-v-duncan/#:~:text=If%20a%20covenant%20not%20to,new%20consideration%20to%20support%20it.",
+            "proposition": "Environmental Products' new-consideration rule reaches any covenant re-papered after employment has commenced, including by amendment.",
+            "verbatimQuote": "If a covenant not to compete is contracted after employment has been commenced without restriction, there must be new consideration to support it.",
+            "date": "1981-12-02",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-envprod-entire"
+          },
+          {
+            "sourceId": "wv-47-11e-5-entire",
+            "authorityType": "primary-law",
+            "title": "W. Va. Code § 47-11E-5",
+            "citation": "W. Va. Code § 47-11E-5.",
+            "url": "https://code.wvlegislature.gov/47-11E-5/",
+            "proposition": "Section 47-11E-5 brings modified, renewed, or extended physician contracts inside the article on or after July 1, 2017 — the amendment trap in the boilerplate.",
+            "verbatimQuote": "This article applies to any contract between a physician and his or her employer entered into, modified, renewed or extended on or after July 1, 2017: Provided, That the provisions of this article do not otherwise apply to or abrogate any contract in effect on or before June 30, 2017.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-47-11e-5-entire"
+          }
+        ]
+      },
+      {
+        "requirementId": "satisfy-the-reddy-reasonableness-test",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.west-virginia.satisfy-the-reddy-reasonableness-test",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protectable interest plus the three reasonableness checks",
+        "sectionId": "west-virginia-statutory-gates",
+        "itemNumber": "19.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#satisfy-the-reddy-reasonableness-test",
+        "requirementGuidance": "Run every restraint through the two-stage inquiry. First, the employer must show an interest requiring protection — trade secrets, customer lists, customer goodwill, or unusual employer-funded training, never protection from ordinary competition — and explain how this worker could injure it. Then the restraint must be no greater than required for the employer's protection, impose no undue hardship on the worker, and not injure the public. General managerial skills do not open the gate, and the gate is dispositive on its own: when the employer fails it, the court never reaches reasonableness at all.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wv-reddy-burden-gate",
+            "authorityType": "case-law",
+            "title": "Reddy v. Community Health Foundation of Man",
+            "citation": "Reddy v. Cmty. Health Found. of Man, 171 W. Va. 368, 298 S.E.2d 906 (1982).",
+            "url": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/",
+            "deepLink": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/#:~:text=The%20employer%20must%20first%20show,has%20an%20interest%20requiring%20protection.",
+            "proposition": "Reddy places the threshold burden on the employer to show an interest requiring protection.",
+            "verbatimQuote": "The employer must first show that he has an interest requiring protection.",
+            "date": "1982-12-15",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-reddy-burden-gate"
+          },
+          {
+            "sourceId": "wv-reddy-test-gate",
+            "authorityType": "case-law",
+            "title": "Reddy v. Community Health Foundation of Man",
+            "citation": "Reddy v. Cmty. Health Found. of Man, 171 W. Va. 368, 298 S.E.2d 906 (1982).",
+            "url": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/",
+            "deepLink": "https://www.courtlistener.com/opinion/1309110/reddy-v-community-health-foundation-of-man/#:~:text=The%20three%2Ddimensional%20method%20of%20inquiry,to%20Compete%2C%E2%80%9D%20supra%2C%20at%20648.",
+            "proposition": "Reddy states West Virginia's three-part reasonableness test for employee restrictive covenants.",
+            "verbatimQuote": "The three-dimensional method of inquiry has been summarized in a leading article: “A restraint is reasonable only if it (1) is no greater than is required for the protection of the employer, (2) does not impose undue hardship on the employee, and (3) is not injurious to the public,” H.M. Blake, “Employee Agreements Not to Compete,” supra, at 648.",
+            "date": "1982-12-15",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-reddy-test-gate"
+          },
+          {
+            "sourceId": "wv-helms-gate",
+            "authorityType": "case-law",
+            "title": "Helms Boys, Inc. v. Brady",
+            "citation": "Helms Boys, Inc. v. Brady, 171 W. Va. 66, 297 S.E.2d 840 (1982).",
+            "url": "https://www.courtlistener.com/opinion/1356394/helms-boys-inc-v-brady/",
+            "deepLink": "https://www.courtlistener.com/opinion/1356394/helms-boys-inc-v-brady/#:~:text=When%20the%20skills%20and%20information,are%20not%20protectible%20employer%20interests.",
+            "proposition": "Helms Boys holds general managerial skills are not protectable employer interests.",
+            "verbatimQuote": "When the skills and information acquired by a former employee are of a general managerial nature, such as supervisory, merchandising, purchasing and advertising skills and information, a restrictive covenant in an employment contract will not be enforced because such skills are not protectible employer interests.",
+            "date": "1982-11-18",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-helms-gate"
+          },
+          {
+            "sourceId": "wv-special-services-gate",
+            "authorityType": "case-law",
+            "title": "Special Services Bureau, Inc. v. Friend",
+            "citation": "Special Servs. Bureau, Inc. v. Friend, No. 18-0478 (W. Va. Sept. 9, 2019) (mem. decision).",
+            "url": "https://www.courtlistener.com/opinion/4659311/special-services-bureau-inc-v-stacey-elizabeth-friend/",
+            "deepLink": "https://www.courtlistener.com/opinion/4659311/special-services-bureau-inc-v-stacey-elizabeth-friend/#:~:text=The%20circuit%20court%E2%80%99s%20consideration%20of,covenant%20failed%20on%20other%20grounds.",
+            "proposition": "Special Services Bureau confirms a court need not reach reasonableness once the covenant fails at the protectable-interest gate.",
+            "verbatimQuote": "The circuit court’s consideration of the reasonableness of the covenant was not necessary after the court found that the covenant failed on other grounds.",
+            "date": "2019-09-09",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-special-services-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "support-mid-employment-covenants-with-new-consideration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.west-virginia.support-mid-employment-covenants-with-new-consideration",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "New consideration for a covenant signed after hiring",
+        "sectionId": "west-virginia-statutory-gates",
+        "itemNumber": "19.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#support-mid-employment-covenants-with-new-consideration",
+        "requirementGuidance": "A covenant contracted after employment has commenced without restriction must be supported by new consideration — and keeping the same job is the exact fact pattern that fails, because a contract that alters no benefits, conditions, or terms and only imposes limitations supplies nothing. Treat the later covenant as a new contract needing its own new consideration, and look for the raise, bonus, promotion, equity grant, or term extension recited in the agreement and traceable in the record.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wv-envprod-rule-gate",
+            "authorityType": "case-law",
+            "title": "Environmental Products Co. v. Duncan",
+            "citation": "Env't Prods. Co. v. Duncan, 168 W. Va. 349, 285 S.E.2d 889 (1981).",
+            "url": "https://www.courtlistener.com/opinion/8217635/environmental-products-co-v-duncan/",
+            "deepLink": "https://www.courtlistener.com/opinion/8217635/environmental-products-co-v-duncan/#:~:text=If%20a%20covenant%20not%20to,new%20consideration%20to%20support%20it.",
+            "proposition": "Environmental Products requires new consideration for a covenant contracted after employment has commenced without restriction.",
+            "verbatimQuote": "If a covenant not to compete is contracted after employment has been commenced without restriction, there must be new consideration to support it.",
+            "date": "1981-12-02",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-envprod-rule-gate"
+          },
+          {
+            "sourceId": "wv-envprod-unchanged-gate",
+            "authorityType": "case-law",
+            "title": "Environmental Products Co. v. Duncan",
+            "citation": "Env't Prods. Co. v. Duncan, 168 W. Va. 349, 285 S.E.2d 889 (1981).",
+            "url": "https://www.courtlistener.com/opinion/8217635/environmental-products-co-v-duncan/",
+            "deepLink": "https://www.courtlistener.com/opinion/8217635/environmental-products-co-v-duncan/#:~:text=His%20contract%2C%20therefore%2C%20did%20not,employment%3B%20it%20only%20imposed%20limitations.",
+            "proposition": "Environmental Products voids a mid-employment covenant that altered no benefits, conditions, or terms and only imposed limitations.",
+            "verbatimQuote": "His contract, therefore, did not alter any benefits, conditions or terms of employment; it only imposed limitations.",
+            "date": "1981-12-02",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-envprod-unchanged-gate"
+          },
+          {
+            "sourceId": "wv-pemco-gate",
+            "authorityType": "case-law",
+            "title": "Pemco Corp. v. Rose",
+            "citation": "Pemco Corp. v. Rose, 163 W. Va. 420, 257 S.E.2d 885 (1979).",
+            "url": "https://www.courtlistener.com/opinion/8217515/pemco-corp-v-rose/",
+            "deepLink": "https://www.courtlistener.com/opinion/8217515/pemco-corp-v-rose/#:~:text=We%20believe%20Virginia%E2%80%99s%20highest%20court,based%20upon%20a%20new%20consideration.",
+            "proposition": "Pemco frames a later non-compete as a new contract that must rest on new consideration once employment was established without one.",
+            "verbatimQuote": "We believe Virginia’s highest court would probably follow the holding in Kistler that when the relationship of employer and employee is established without a restrictive covenant not to compete, any agreement thereafter not to compete, must be in the nature of a new contract based upon a new consideration.",
+            "date": "1979-07-16",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-pemco-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "cap-physician-covenants-at-one-year-and-thirty-road-miles",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.west-virginia.cap-physician-covenants-at-one-year-and-thirty-road-miles",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Physician covenant within the one-year, thirty-mile cap",
+        "sectionId": "west-virginia-statutory-gates",
+        "itemNumber": "19.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#cap-physician-covenants-at-one-year-and-thirty-road-miles",
+        "requirementGuidance": "A physician employment non-compete must not exceed one year or thirty road miles from the physician's primary place of practice — and it is void and unenforceable outright if the employer terminates the physician's employment. Check the dates: the article reaches contracts entered into, modified, renewed, or extended on or after July 1, 2017. Check the exemptions too — the caps do not apply, unless the contract says otherwise, where the physician sold the practice to the employer or in contracts among physician owners of a health care practice.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wv-47-11e-2-limits-gate",
+            "authorityType": "primary-law",
+            "title": "W. Va. Code § 47-11E-2",
+            "citation": "W. Va. Code § 47-11E-2.",
+            "url": "https://code.wvlegislature.gov/47-11E-2/",
+            "proposition": "Section 47-11E-2 caps physician employment non-competes at one year and thirty road miles from the primary place of practice.",
+            "verbatimQuote": "A covenant not to compete contained in a contract between a physician and an employer shall be limited to not more than: (1) One year in duration; and (2) Thirty road miles from the physician’s primary place of practice with the employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-47-11e-2-limits-gate"
+          },
+          {
+            "sourceId": "wv-47-11e-2-termination-gate",
+            "authorityType": "primary-law",
+            "title": "W. Va. Code § 47-11E-2",
+            "citation": "W. Va. Code § 47-11E-2.",
+            "url": "https://code.wvlegislature.gov/47-11E-2/",
+            "proposition": "Section 47-11E-2 voids a physician non-compete upon termination of the physician's employment by the employer.",
+            "verbatimQuote": "A covenant not to compete shall be void and unenforceable upon the termination of the physician’s employment by the employer.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-47-11e-2-termination-gate"
+          },
+          {
+            "sourceId": "wv-47-11e-5-gate",
+            "authorityType": "primary-law",
+            "title": "W. Va. Code § 47-11E-5",
+            "citation": "W. Va. Code § 47-11E-5.",
+            "url": "https://code.wvlegislature.gov/47-11E-5/",
+            "proposition": "Section 47-11E-5 applies the physician article to contracts entered into, modified, renewed, or extended on or after July 1, 2017.",
+            "verbatimQuote": "This article applies to any contract between a physician and his or her employer entered into, modified, renewed or extended on or after July 1, 2017: Provided, That the provisions of this article do not otherwise apply to or abrogate any contract in effect on or before June 30, 2017.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-47-11e-5-gate"
+          },
+          {
+            "sourceId": "wv-47-11e-4-gate",
+            "authorityType": "primary-law",
+            "title": "W. Va. Code § 47-11E-4",
+            "citation": "W. Va. Code § 47-11E-4.",
+            "url": "https://code.wvlegislature.gov/47-11E-4/",
+            "proposition": "Section 47-11E-4 exempts sale-of-practice covenants and physician-owner contracts from the article's limits unless the contract provides otherwise.",
+            "verbatimQuote": "The limitations set forth in this article do not apply to any of the following unless the contract terms provide otherwise: (1) In the case where the physician has sold his or her business or practice in the form of a sale of assets, stock, membership interests or otherwise to his or her employer; or (2) To contracts between physicians who are shareholders, owners, partners, members or directors of a health care practice.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-47-11e-4-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "keep-customer-restrictions-as-true-non-piracy-provisions",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.west-virginia.keep-customer-restrictions-as-true-non-piracy-provisions",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer limits kept to true non-piracy terms",
+        "sectionId": "west-virginia-statutory-gates",
+        "itemNumber": "19.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#keep-customer-restrictions-as-true-non-piracy-provisions",
+        "requirementGuidance": "Customer restrictions should keep the non-piracy shape: restricting solicitation of the employer's customers and use of the employer's confidential information, ordinarily with no territorial limits, while leaving general competition open. The lighter treatment is earned, not presumed — validity still turns on a protectable interest, a provision that reasonably and fairly protects it, and no unjust restriction on the worker's chosen business activity, with the employer carrying the first two burdens.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wv-wood-definition-gate",
+            "authorityType": "case-law",
+            "title": "Wood v. Acordia of West Virginia, Inc.",
+            "citation": "Wood v. Acordia of W. Va., Inc., 217 W. Va. 406, 618 S.E.2d 415 (2005).",
+            "url": "https://www.courtlistener.com/opinion/1289040/wood-v-acordia-of-west-virginia-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/1289040/wood-v-acordia-of-west-virginia-inc/#:~:text=Accordingly%2C%20this%20Court%20holds%20that,of%20the%20employer's%20confidential%20information.",
+            "proposition": "Wood defines the non-piracy provision as restricting customer solicitation and use of confidential information, distinct from a time-and-territory non-compete.",
+            "verbatimQuote": "Accordingly, this Court holds that whereas a covenant not to compete in an employment agreement between an employer and an employee restricts the employee from engaging in business similar to that of the employer within a designated time and territory after the employment should cease, a non-piracy provision, also known as a non-solicitation or hands-off provision, in an employment agreement, restricts the employee, should the employment cease, from soliciting the employer's customers or making use of the employer's confidential information.",
+            "date": "2005-07-07",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-wood-definition-gate"
+          },
+          {
+            "sourceId": "wv-wood-territorial-gate",
+            "authorityType": "case-law",
+            "title": "Wood v. Acordia of West Virginia, Inc.",
+            "citation": "Wood v. Acordia of W. Va., Inc., 217 W. Va. 406, 618 S.E.2d 415 (2005).",
+            "url": "https://www.courtlistener.com/opinion/1289040/wood-v-acordia-of-west-virginia-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/1289040/wood-v-acordia-of-west-virginia-inc/#:~:text=Although%20both%20covenants%20not%20to,economic%20forces%20of%20the%20marketplace.",
+            "proposition": "Wood treats non-piracy provisions — ordinarily without territorial limits — as less restrictive on the employee and the marketplace.",
+            "verbatimQuote": "Although both covenants not to compete and non-piracy provisions are utilized to safeguard an employer's protectable business interests, non-piracy provisions, which ordinarily do not include territorial limits, are less restrictive on the employee and the economic forces of the marketplace.",
+            "date": "2005-07-07",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-wood-territorial-gate"
+          },
+          {
+            "sourceId": "wv-wood-three-factor-gate",
+            "authorityType": "case-law",
+            "title": "Wood v. Acordia of West Virginia, Inc.",
+            "citation": "Wood v. Acordia of W. Va., Inc., 217 W. Va. 406, 618 S.E.2d 415 (2005).",
+            "url": "https://www.courtlistener.com/opinion/1289040/wood-v-acordia-of-west-virginia-inc/",
+            "deepLink": "https://www.courtlistener.com/opinion/1289040/wood-v-acordia-of-west-virginia-inc/#:~:text=In%20addition%2C%20we%20hold%20that,or%20she%20seeks%20to%20pursue.",
+            "proposition": "Wood conditions a non-piracy provision's validity on the three-factor test with the employer carrying the protectable-interest and fair-protection burdens.",
+            "verbatimQuote": "In addition, we hold that although a non-piracy provision in an employment agreement may appear reasonable on its face when viewed within the four corners of the agreement, the ultimate validity of such a provision is dependent upon: (1) whether the employer has a protectable business interest to be safeguarded in relation to the employee, (2) the extent to which the non-piracy provision reasonably and fairly protects that interest and (3) whether the non-piracy provision unjustly restricts the employee from engaging in the business activity he or she seeks to pursue.",
+            "date": "2005-07-07",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-wood-three-factor-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "review-sale-of-business-covenants-under-the-sale-standard",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.west-virginia.review-sale-of-business-covenants-under-the-sale-standard",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Sale-of-business covenants papered in the deal",
+        "sectionId": "west-virginia-statutory-gates",
+        "itemNumber": "19.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#review-sale-of-business-covenants-under-the-sale-standard",
+        "requirementGuidance": "When the covenant rides a genuine business sale, paper it in the transaction documents — given by the seller, supported by deal consideration. Sale covenants get the rule of reason applied with lesser scrutiny because the seller is being paid for goodwill, and the sale-specific test asks whether the restraint exceeds the buyer's protection needs, unduly burdens the seller, or injures the public. The breathing room is real — a fifteen-year, fifty-mile sale covenant has been upheld here — but it belongs to the deal, not to an employment agreement dressed up as one.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "wv-weaver-lesser-gate",
+            "authorityType": "case-law",
+            "title": "Weaver v. Ritchie",
+            "citation": "Weaver v. Ritchie, 197 W. Va. 690, 478 S.E.2d 363 (1996).",
+            "url": "https://www.courtlistener.com/opinion/1328666/weaver-v-ritchie/",
+            "deepLink": "https://www.courtlistener.com/opinion/1328666/weaver-v-ritchie/#:~:text=Because%20the%20motivation%20and%20purpose,ancillary%20to%20an%20employment%20agreement.",
+            "proposition": "Weaver applies the rule of reason with lesser scrutiny to covenants ancillary to the sale of a business than to employment covenants.",
+            "verbatimQuote": "Because the motivation and purpose of the restrictive covenant embraced in a sales agreement are substantially different from a covenant in an employment agreement, the rule of reason is applied with a lesser scrutiny in a sales contract than the covenant ancillary to an employment agreement.",
+            "date": "1996-10-16",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-weaver-lesser-gate"
+          },
+          {
+            "sourceId": "wv-weaver-test-gate",
+            "authorityType": "case-law",
+            "title": "Weaver v. Ritchie",
+            "citation": "Weaver v. Ritchie, 197 W. Va. 690, 478 S.E.2d 363 (1996).",
+            "url": "https://www.courtlistener.com/opinion/1328666/weaver-v-ritchie/",
+            "deepLink": "https://www.courtlistener.com/opinion/1328666/weaver-v-ritchie/#:~:text=To%20determine%20if%20a%20covenant,not%20injurious%20to%20the%20public.",
+            "proposition": "Weaver states the sale-specific three-part inquiry: buyer protection, seller hardship, and public injury.",
+            "verbatimQuote": "To determine if a covenant not to compete ancillary to a sale of a business is reasonable we use a three-part inquiry: A covenant not to compete is reasonable only if it (1) is no greater than is required for the protection of the buyer; (2) does not impose an undue hardship upon the seller, and (3) is not injurious to the public.",
+            "date": "1996-10-16",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-weaver-test-gate"
+          },
+          {
+            "sourceId": "wv-weaver-policy-gate",
+            "authorityType": "case-law",
+            "title": "Weaver v. Ritchie",
+            "citation": "Weaver v. Ritchie, 197 W. Va. 690, 478 S.E.2d 363 (1996).",
+            "url": "https://www.courtlistener.com/opinion/1328666/weaver-v-ritchie/",
+            "deepLink": "https://www.courtlistener.com/opinion/1328666/weaver-v-ritchie/#:~:text=A%20restriction%20imposed%20upon%20the,at%20the%20highest%20possible%20price.",
+            "proposition": "Weaver grounds the sale covenant's breathing room in the seller's freedom to sell goodwill at the highest price — a rationale that does not extend to employment covenants.",
+            "verbatimQuote": "A restriction imposed upon the seller of a business affords a person the freedom to sell something that has been acquired by virtue of their labor, skill or talent at the highest possible price.",
+            "date": "1996-10-16",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/west-virginia#src-wv-weaver-policy-gate"
+          }
+        ]
+      }
+    ]
+  }
+}

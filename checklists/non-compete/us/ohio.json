@@ -1,0 +1,1187 @@
+{
+  "type": "review-checklist",
+  "canonical": "https://openagreements.org/checklists/non-compete/us/ohio",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://openagreements.org/checklists/non-compete/us/ohio.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/ohio",
+      "type": "text/html"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/ohio/markdown",
+      "type": "text/markdown"
+    },
+    {
+      "rel": "alternate",
+      "href": "https://openagreements.org/checklists/non-compete/us/ohio/json",
+      "type": "application/json"
+    },
+    {
+      "rel": "agent-skill",
+      "href": "https://openagreements.org/skills/open-agreements/SKILL.md",
+      "type": "text/markdown"
+    }
+  ],
+  "data": {
+    "topic": "non-compete",
+    "slug": "ohio",
+    "frontmatter": {
+      "title": "Non-Compete Agreement Review Checklist — Ohio",
+      "description": "A clause-by-clause reviewer checklist for Ohio employee restrictive covenant agreements — confidentiality, non-solicits, non-competes, and non-disparagement under the Raimonde reasonableness test, with discretionary reformation and litigation tolling in view.",
+      "eyebrow": "Reviewer Checklist",
+      "jurisdiction": "Ohio",
+      "coverage": "Ohio (US)",
+      "lastReviewed": "2026-06-12",
+      "license": "CC BY 4.0",
+      "authors": [
+        "steven-obiajulu"
+      ]
+    },
+    "requirementCount": 46,
+    "sections": [
+      {
+        "sectionId": "parties-and-cover-term-identification",
+        "label": "Parties and cover-term identification"
+      },
+      {
+        "sectionId": "definitions",
+        "label": "Definitions"
+      },
+      {
+        "sectionId": "timing-and-execution-acknowledgements",
+        "label": "Timing and execution acknowledgements"
+      },
+      {
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "label": "Confidentiality and trade-secret treatment"
+      },
+      {
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "label": "Permitted disclosures and protected conduct"
+      },
+      {
+        "sectionId": "property-return-and-certification",
+        "label": "Property return and certification"
+      },
+      {
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "label": "Restrictive covenants"
+      },
+      {
+        "sectionId": "non-disparagement",
+        "label": "Non-disparagement"
+      },
+      {
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "label": "Physician-specific notices and carve-outs"
+      },
+      {
+        "sectionId": "no-conflicting-obligations",
+        "label": "No conflicting obligations"
+      },
+      {
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "label": "Notice to future employers and other third parties"
+      },
+      {
+        "sectionId": "tolling-during-breach",
+        "label": "Tolling during breach"
+      },
+      {
+        "sectionId": "remedies",
+        "label": "Remedies"
+      },
+      {
+        "sectionId": "severability-and-reformation",
+        "label": "Severability and reformation"
+      },
+      {
+        "sectionId": "survival",
+        "label": "Survival"
+      },
+      {
+        "sectionId": "assignment-and-successors",
+        "label": "Assignment and successors"
+      },
+      {
+        "sectionId": "governing-law-venue-dispute-process",
+        "label": "Governing law, venue, dispute process"
+      },
+      {
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "label": "Entire agreement, amendment, waiver, e-signatures"
+      },
+      {
+        "sectionId": "ohio-statutory-gates",
+        "label": "Ohio reasonableness gates"
+      }
+    ],
+    "requirements": [
+      {
+        "requirementId": "identify-parties",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-parties",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Parties identified by name",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#identify-parties",
+        "requirementGuidance": "Confirm the named employer is the entity the worker actually serves. In Ohio the covenant can outlive that entity — a statutory merger hands it to the survivor automatically — so a precise party recital is what later lets a successor, or the worker, trace who holds the restraint and who can enforce it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-effective-date",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-effective-date",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Effective date",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#identify-effective-date",
+        "requirementGuidance": "Every covenant clock should run from a stated date. Ohio adds a reason to be precise: the restricted period can be equitably extended while enforceability is litigated, and an extension argument is much harder to audit when the baseline start and end dates were never pinned down in the instrument.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "identify-employee-title",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-employee-title",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee title",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#identify-employee-title",
+        "requirementGuidance": "Record the role, because in Ohio the role carries real analytical weight: the reasonableness factors ask whether this employee actually held confidential information or trade secrets and whether the restraint targets unfair competition or just competition. A title and duties recital is the cheapest evidence on both questions.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "oh-raimonde-factors-cover",
+            "authorityType": "case-law",
+            "title": "Raimonde v. Van Vlerah",
+            "citation": "Raimonde v. Van Vlerah, 42 Ohio St. 2d 21, 325 N.E.2d 544 (1975).",
+            "url": "https://www.courtlistener.com/opinion/6865409/raimonde-v-van-vlerah/",
+            "deepLink": "https://www.courtlistener.com/opinion/6865409/raimonde-v-van-vlerah/#:~:text=whether%20the%20employee%20is%20possessed,seeks%20to%20eliminate%20ordinary%20competition",
+            "proposition": "Raimonde lists possession of confidential information or trade secrets and unfair-versus-ordinary competition among the factors weighed, which is why the employee's role and access matter as evidence.",
+            "verbatimQuote": "whether the employee is possessed with confidential information or trade secrets; whether the covenant seeks to eliminate competition which would be unfair to the employer or merely seeks to eliminate ordinary competition",
+            "date": "1975-04-02",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#src-oh-raimonde-factors-cover"
+          }
+        ]
+      },
+      {
+        "requirementId": "identify-governing-law",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.identify-governing-law",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law state named",
+        "sectionId": "parties-and-cover-term-identification",
+        "itemNumber": "1.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#identify-governing-law",
+        "requirementGuidance": "Check that the governing state is stated. Choosing Ohio law chooses the whole analytical frame — judge-made reasonableness applied covenant by covenant, with no statutory safe harbor to lean on — so the rest of this checklist assumes that choice is visible on the face of the agreement.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-confidential-information",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-confidential-information",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidential information",
+        "sectionId": "definitions",
+        "itemNumber": "2.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#define-confidential-information",
+        "requirementGuidance": "The definition is doing protectable-interest work in Ohio: whether the worker held confidential information is one of the factors a court weighs when it tests the restraint. A definition built around genuinely non-public business information supports the covenant; one that sweeps in everything the worker ever learned reads as a restraint on the worker rather than a shield for the employer.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "oh-raimonde-factors-defs",
+            "authorityType": "case-law",
+            "title": "Raimonde v. Van Vlerah",
+            "citation": "Raimonde v. Van Vlerah, 42 Ohio St. 2d 21, 325 N.E.2d 544 (1975).",
+            "url": "https://www.courtlistener.com/opinion/6865409/raimonde-v-van-vlerah/",
+            "deepLink": "https://www.courtlistener.com/opinion/6865409/raimonde-v-van-vlerah/#:~:text=whether%20the%20employee%20is%20possessed,seeks%20to%20eliminate%20ordinary%20competition",
+            "proposition": "Raimonde's factors include whether the employee held confidential information or trade secrets and whether the covenant targets unfair rather than ordinary competition, which is the analytical work the definitions perform.",
+            "verbatimQuote": "whether the employee is possessed with confidential information or trade secrets; whether the covenant seeks to eliminate competition which would be unfair to the employer or merely seeks to eliminate ordinary competition",
+            "date": "1975-04-02",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#src-oh-raimonde-factors-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-trade-secrets",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-trade-secrets",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade secrets",
+        "sectionId": "definitions",
+        "itemNumber": "2.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#define-trade-secrets",
+        "requirementGuidance": "Define trade secrets separately and track the statutory tests: independent economic value from secrecy, plus efforts reasonable under the circumstances to keep it secret. Ohio gives trade secrets their own statutory remedy independent of the contract, so a clean definition preserves a second line of protection even if a covenant later fails.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "oh-outsa-definition-defs",
+            "authorityType": "primary-law",
+            "title": "Ohio Rev. Code § 1333.61",
+            "citation": "Ohio Rev. Code § 1333.61(D).",
+            "url": "https://codes.ohio.gov/ohio-revised-code/section-1333.61",
+            "proposition": "R.C. 1333.61 defines an Ohio trade secret by independent economic value from secrecy and reasonable efforts to maintain secrecy, the tests a contractual trade-secret definition should track.",
+            "verbatimQuote": "(1) It derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use.(2) It is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#src-oh-outsa-definition-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-restricted-period",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-period",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted period",
+        "sectionId": "definitions",
+        "itemNumber": "2.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#define-restricted-period",
+        "requirementGuidance": "One defined Restricted Period keeps every duration auditable against the reasonableness analysis. In Ohio it also frames the tolling question covered later in this checklist — a court asked to keep the covenant alive through litigation needs a clearly bounded period to extend, not a scatter of inconsistent clocks.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-restricted-territory",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-restricted-territory",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restricted territory",
+        "sectionId": "definitions",
+        "itemNumber": "2.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#define-restricted-territory",
+        "requirementGuidance": "Tie the geography to the employer's actual market, not its ambitions. Ohio courts weigh territory as part of the no-greater-than-required prong, and a territory wider than the interest it protects invites a court to narrow the covenant — or, if the overreach is bad enough, to leave it unenforced.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "oh-raimonde-test-defs",
+            "authorityType": "case-law",
+            "title": "Raimonde v. Van Vlerah",
+            "citation": "Raimonde v. Van Vlerah, 42 Ohio St. 2d 21, 325 N.E.2d 544 (1975).",
+            "url": "https://www.courtlistener.com/opinion/6865409/raimonde-v-van-vlerah/",
+            "deepLink": "https://www.courtlistener.com/opinion/6865409/raimonde-v-van-vlerah/#:~:text=A%20covenant%20restraining%20an%20employee,not%20injurious%20to%20the%20public.",
+            "proposition": "Raimonde's three-part rule measures territory and time against what the employer's protection actually requires.",
+            "verbatimQuote": "A covenant restraining an employee from competing with his former employer upon termination of employment is reasonable if it is no greater than is required for the protection of the employer, does not impose undue hardship on the employee, and is not injurious to the public.",
+            "date": "1975-04-02",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#src-oh-raimonde-test-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-covered-customers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-customers",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered customers",
+        "sectionId": "definitions",
+        "itemNumber": "2.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#define-covered-customers",
+        "requirementGuidance": "Bound the class to customers the worker actually served during a stated look-back window. Customer goodwill is one of the interests that can carry an Ohio restraint, but goodwill lives in real relationships — an entire-book-of-business definition stretches past the interest and weakens the covenant it feeds.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-covered-employees",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-covered-employees",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Covered employees",
+        "sectionId": "definitions",
+        "itemNumber": "2.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#define-covered-employees",
+        "requirementGuidance": "Keep the no-poach class to colleagues the departing worker actually worked with or supervised during the look-back window. A workforce-wide definition turns a modest restraint into something a court will weigh much more skeptically under the hardship and public-injury prongs.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-protected-interests",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-protected-interests",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protected business interests",
+        "sectionId": "definitions",
+        "itemNumber": "2.7",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#define-protected-interests",
+        "requirementGuidance": "Name the interests concretely — confidential information, trade secrets, customer goodwill — because the whole Ohio analysis runs through them. A covenant is sized against the interest it protects; a recital that never identifies the interest leaves the court to guess, and a court that finds only ordinary competition behind the restraint will not sustain it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "oh-raimonde-factors-defs",
+            "authorityType": "case-law",
+            "title": "Raimonde v. Van Vlerah",
+            "citation": "Raimonde v. Van Vlerah, 42 Ohio St. 2d 21, 325 N.E.2d 544 (1975).",
+            "url": "https://www.courtlistener.com/opinion/6865409/raimonde-v-van-vlerah/",
+            "deepLink": "https://www.courtlistener.com/opinion/6865409/raimonde-v-van-vlerah/#:~:text=whether%20the%20employee%20is%20possessed,seeks%20to%20eliminate%20ordinary%20competition",
+            "proposition": "Raimonde's factors include whether the employee held confidential information or trade secrets and whether the covenant targets unfair rather than ordinary competition, which is the analytical work the definitions perform.",
+            "verbatimQuote": "whether the employee is possessed with confidential information or trade secrets; whether the covenant seeks to eliminate competition which would be unfair to the employer or merely seeks to eliminate ordinary competition",
+            "date": "1975-04-02",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#src-oh-raimonde-factors-defs"
+          }
+        ]
+      },
+      {
+        "requirementId": "define-competitive-business",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-competitive-business",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Competitive business",
+        "sectionId": "definitions",
+        "itemNumber": "2.8",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#define-competitive-business",
+        "requirementGuidance": "Describe the genuinely competing activity in concrete terms. A definition that expands to anything the employer might someday do reads as suppressing ordinary competition — exactly the purpose the Ohio factors treat as illegitimate — and forces the covenant to survive on a court's willingness to shrink it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-de-minimis-passive-public-investment-carveout",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-de-minimis-passive-public-investment-carveout",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Small public-stock carve-out",
+        "sectionId": "definitions",
+        "itemNumber": "2.9",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#permit-de-minimis-passive-public-investment-carveout",
+        "requirementGuidance": "Where ownership or investment in competitors is restricted, look for a passive-holdings carve-out below a stated threshold. A clause that technically forbids index funds and ordinary public shares adds hardship on the worker without adding protection for the employer — gratuitous weight on the prong of the Ohio test the employer least wants stressed.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-passive-public-holdings",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-passive-public-holdings",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Passive public holdings",
+        "sectionId": "definitions",
+        "itemNumber": "2.10",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#define-passive-public-holdings",
+        "requirementGuidance": "A drafting convenience, not a requirement — plenty of agreements inline the carve-out language instead. If the capitalized term appears, confirm its percentage matches the operative carve-out it supports.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-solicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-solicit",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "What counts as soliciting",
+        "sectionId": "definitions",
+        "itemNumber": "2.11",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#define-solicit",
+        "requirementGuidance": "Pin the term down — does it cover only initiating contact, or also accepting business that walks in the door? The narrower the defined conduct, the lighter the restraint weighs in the holistic analysis, and the less a later court has to interpret away.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "define-termination-of-employment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.define-termination-of-employment",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Termination of employment",
+        "sectionId": "definitions",
+        "itemNumber": "2.12",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#define-termination-of-employment",
+        "requirementGuidance": "Verify the trigger treats resignation, dismissal, and expiration of a fixed term consistently. The restricted period — and any extension of it during a dispute — runs from this event, so ambiguity here propagates into every downstream clock.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "recite-timing-and-continued-employment-consideration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.ohio.recite-timing-and-continued-employment-consideration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Timing and consideration recited",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#recite-timing-and-continued-employment-consideration",
+        "requirementGuidance": "The consideration story is straightforward in Ohio: continuing an at-will relationship the employer could lawfully have ended without cause is itself sufficient consideration for a covenant an existing employee signs, so a mid-employment covenant needs no separate payment or promotion. The recital should still capture the timing and what moved — and remember that consideration settles formation only, not reasonableness; an overbroad covenant fails the three-prong test no matter how well it was supported.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "oh-lakeland-consideration",
+            "authorityType": "case-law",
+            "title": "Lake Land Employment Group of Akron, LLC v. Columber",
+            "citation": "Lake Land Emp. Group of Akron, LLC v. Columber, 101 Ohio St. 3d 242, 2004-Ohio-786.",
+            "url": "https://www.courtlistener.com/opinion/6892723/lake-land-employment-group-of-akron-llc-v-columber/",
+            "deepLink": "https://www.courtlistener.com/opinion/6892723/lake-land-employment-group-of-akron-llc-v-columber/#:~:text=We%20therefore%20hold%20that%20consideration,legally%20be%20terminated%20without%20cause.",
+            "proposition": "Lake Land holds that continuing an at-will employment relationship that could be terminated without cause is sufficient consideration for a non-compete signed by an existing employee.",
+            "verbatimQuote": "We therefore hold that consideration exists to support a noncompetition agreement when, in exchange for the assent of an at-will employee to a proffered noncompetition agreement, the employer continues an at-will employment relationship that could legally be terminated without cause.",
+            "date": "2004-03-10",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#src-oh-lakeland-consideration"
+          },
+          {
+            "sourceId": "oh-raimonde-still-required",
+            "authorityType": "case-law",
+            "title": "Raimonde v. Van Vlerah",
+            "citation": "Raimonde v. Van Vlerah, 42 Ohio St. 2d 21, 325 N.E.2d 544 (1975).",
+            "url": "https://www.courtlistener.com/opinion/6865409/raimonde-v-van-vlerah/",
+            "deepLink": "https://www.courtlistener.com/opinion/6865409/raimonde-v-van-vlerah/#:~:text=A%20covenant%20restraining%20an%20employee,not%20injurious%20to%20the%20public.",
+            "proposition": "Raimonde's reasonableness rule still governs a covenant whose consideration is adequate, so consideration alone does not save an overbroad restraint.",
+            "verbatimQuote": "A covenant restraining an employee from competing with his former employer upon termination of employment is reasonable if it is no greater than is required for the protection of the employer, does not impose undue hardship on the employee, and is not injurious to the public.",
+            "date": "1975-04-02",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#src-oh-raimonde-still-required"
+          }
+        ]
+      },
+      {
+        "requirementId": "acknowledge-opportunity-to-consult-counsel",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.acknowledge-opportunity-to-consult-counsel",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Chance to consult a lawyer",
+        "sectionId": "timing-and-execution-acknowledgements",
+        "itemNumber": "3.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#acknowledge-opportunity-to-consult-counsel",
+        "requirementGuidance": "No Ohio rule demands it, but the acknowledgement is cheap evidence on the hardship prong: a worker who had a real opportunity to take the covenant to counsel is harder cast as the victim of an oppressive restraint signed under pressure.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "treat-trade-secret-protection-as-perpetual",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.treat-trade-secret-protection-as-perpetual",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret protection without an end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#treat-trade-secret-protection-as-perpetual",
+        "requirementGuidance": "Trade-secret protection should last as long as secrecy does — that is how both the federal definition and Ohio's statutory definition frame the right. A fixed expiry on trade-secret obligations gives away protection the law would otherwise supply indefinitely.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-trade-secret-definition",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — definition of a trade secret, 18 U.S.C. § 1839",
+            "citation": "18 U.S.C. § 1839(3)(B) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1839",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1839#:~:text=the%20information%20derives%20independent%20economic,or%20use%20of%20the%20information",
+            "proposition": "Federal law keys trade-secret status to continued secrecy, which is why contractual trade-secret protection should run as long as secrecy does rather than to a fixed date.",
+            "verbatimQuote": "the information derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable through proper means by, another person who can obtain economic value from the disclosure or use of the information",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#src-dtsa-trade-secret-definition"
+          },
+          {
+            "sourceId": "oh-outsa-definition-confidentiality",
+            "authorityType": "primary-law",
+            "title": "Ohio Rev. Code § 1333.61",
+            "citation": "Ohio Rev. Code § 1333.61(D).",
+            "url": "https://codes.ohio.gov/ohio-revised-code/section-1333.61",
+            "proposition": "Ohio's statutory trade-secret definition likewise turns on continued secrecy and reasonable efforts to maintain it, supporting a secrecy-long rather than fixed-term obligation.",
+            "verbatimQuote": "(1) It derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use.(2) It is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#src-oh-outsa-definition-confidentiality"
+          }
+        ]
+      },
+      {
+        "requirementId": "state-confidentiality-duration",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.state-confidentiality-duration",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Confidentiality end date",
+        "sectionId": "confidentiality-and-trade-secret-treatment",
+        "itemNumber": "4.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#state-confidentiality-duration",
+        "requirementGuidance": "Give ordinary confidential information its own finite term. The two-track structure keeps the perpetual obligation where the trade-secret statutes actually support it, and a bounded term for everything else sits far more comfortably with a reasonableness court than a perpetual lid on non-secret information.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "disclose-dtsa-notice",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.disclose-dtsa-notice",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "DTSA whistleblower notice",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#disclose-dtsa-notice",
+        "requirementGuidance": "Federal law, fully applicable to Ohio agreements: omit the immunity notice and the employer forfeits exemplary damages and attorney fees in a later trade-secret suit against the worker. For an employer whose strongest Ohio remedy is often the trade-secret claim rather than the covenant itself, that is a costly omission.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "dtsa-immunity-notice",
+            "authorityType": "primary-law",
+            "title": "Defend Trade Secrets Act — employer immunity-notice requirement, 18 U.S.C. § 1833(b)",
+            "citation": "18 U.S.C. § 1833(b)(3)(A) (2018).",
+            "url": "https://www.law.cornell.edu/uscode/text/18/1833",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/18/1833#:~:text=An%20employer%20shall%20provide%20notice,secret%20or%20other%20confidential%20information.",
+            "proposition": "The DTSA requires an employer to give notice of the trade-secret whistleblower immunity in any agreement governing the use of trade secrets or other confidential information.",
+            "verbatimQuote": "An employer shall provide notice of the immunity set forth in this subsection in any contract or agreement with an employee that governs the use of a trade secret or other confidential information.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#src-dtsa-immunity-notice"
+          }
+        ]
+      },
+      {
+        "requirementId": "carve-out-nlra-protected-discussion",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.carve-out-nlra-protected-discussion",
+        "requirementLevel": "MUST",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Wage-discussion carve-out",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#carve-out-nlra-protected-discussion",
+        "requirementGuidance": "Confidentiality and non-disparagement language has to leave wages, hours, and working conditions discussable. Federal labor law protects that speech regardless of the governing state, and the Board has been striking overbroad clauses in employee agreements.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "nlra-section-7-rights",
+            "authorityType": "primary-law",
+            "title": "NLRA Section 7 — protected concerted activity, 29 U.S.C. § 157",
+            "citation": "29 U.S.C. § 157 (NLRA § 7).",
+            "url": "https://www.law.cornell.edu/uscode/text/29/157",
+            "deepLink": "https://www.law.cornell.edu/uscode/text/29/157#:~:text=Employees%20shall%20have%20the%20right,other%20mutual%20aid%20or%20protection",
+            "proposition": "Section 7 protects concerted activity including wage discussion — the statutory basis for the carve-out from confidentiality and non-disparagement restrictions.",
+            "verbatimQuote": "Employees shall have the right to self-organization, to form, join, or assist labor organizations, to bargain collectively through representatives of their own choosing, and to engage in other concerted activities for the purpose of collective bargaining or other mutual aid or protection",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#src-nlra-section-7-rights"
+          },
+          {
+            "sourceId": "mclaren-macomb-protected-activity",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that offering severance terms that broadly waive Section 7 rights — including overbroad confidentiality and non-disparagement terms — violates the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#src-mclaren-macomb-protected-activity"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-compelled-disclosure",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-compelled-disclosure",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Court-ordered disclosure allowed",
+        "sectionId": "permitted-disclosures-and-protected-conduct",
+        "itemNumber": "5.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#permit-compelled-disclosure",
+        "requirementGuidance": "Confirm the carve-out for disclosure required by law, court order, or a government investigation, with notice to the employer where lawful. Confidentiality obligations cannot block legally compelled disclosure, and a clause that pretends otherwise reads as overreach to the same court that will weigh the rest of the agreement.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-property-return-and-certification",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-property-return-and-certification",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Property return and sign-off",
+        "sectionId": "property-return-and-certification",
+        "itemNumber": "6.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#require-property-return-and-certification",
+        "requirementGuidance": "Return-or-delete at separation, certified in writing. In Ohio the clause earns double duty: trade-secret status depends on efforts reasonable under the circumstances to maintain secrecy, and a documented return-and-certification routine is exactly the kind of effort that keeps the statutory protection alive.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "oh-outsa-reasonable-efforts",
+            "authorityType": "primary-law",
+            "title": "Ohio Rev. Code § 1333.61",
+            "citation": "Ohio Rev. Code § 1333.61(D).",
+            "url": "https://codes.ohio.gov/ohio-revised-code/section-1333.61",
+            "proposition": "R.C. 1333.61 conditions trade-secret status on efforts that are reasonable under the circumstances to maintain secrecy, which property-return and certification mechanics help evidence.",
+            "verbatimQuote": "(1) It derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use.(2) It is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#src-oh-outsa-reasonable-efforts"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-employee-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-employee-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Employee non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#permit-employee-nonsolicit",
+        "requirementGuidance": "Optional, and as the lightest restraint in the family it carries the least weight on the hardship and public-injury prongs — it does not stop the departing worker from earning a living. Keep it inside the Covered Employees class and the Restricted Period, and remember it still answers to the same reasonableness rule as everything else here.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "oh-raimonde-test-covenants",
+            "authorityType": "case-law",
+            "title": "Raimonde v. Van Vlerah",
+            "citation": "Raimonde v. Van Vlerah, 42 Ohio St. 2d 21, 325 N.E.2d 544 (1975).",
+            "url": "https://www.courtlistener.com/opinion/6865409/raimonde-v-van-vlerah/",
+            "deepLink": "https://www.courtlistener.com/opinion/6865409/raimonde-v-van-vlerah/#:~:text=A%20covenant%20restraining%20an%20employee,not%20injurious%20to%20the%20public.",
+            "proposition": "Raimonde's three-part reasonableness rule governs every post-employment restraint in the agreement, from the lightest non-solicit to the full non-compete.",
+            "verbatimQuote": "A covenant restraining an employee from competing with his former employer upon termination of employment is reasonable if it is no greater than is required for the protection of the employer, does not impose undue hardship on the employee, and is not injurious to the public.",
+            "date": "1975-04-02",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#src-oh-raimonde-test-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-customer-nonsolicit",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-customer-nonsolicit",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Customer non-solicit",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#permit-customer-nonsolicit",
+        "requirementGuidance": "Often the better instrument in Ohio than a full non-compete: it maps directly onto the customer-goodwill interest, restrains less, and a confidentiality-plus-non-solicit strategy backed by the trade-secret statute frequently protects the employer as well as a broad covenant would. Confirm it stays scoped to Covered Customers and the Restricted Period.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "oh-raimonde-test-covenants",
+            "authorityType": "case-law",
+            "title": "Raimonde v. Van Vlerah",
+            "citation": "Raimonde v. Van Vlerah, 42 Ohio St. 2d 21, 325 N.E.2d 544 (1975).",
+            "url": "https://www.courtlistener.com/opinion/6865409/raimonde-v-van-vlerah/",
+            "deepLink": "https://www.courtlistener.com/opinion/6865409/raimonde-v-van-vlerah/#:~:text=A%20covenant%20restraining%20an%20employee,not%20injurious%20to%20the%20public.",
+            "proposition": "Raimonde's three-part reasonableness rule governs every post-employment restraint in the agreement, from the lightest non-solicit to the full non-compete.",
+            "verbatimQuote": "A covenant restraining an employee from competing with his former employer upon termination of employment is reasonable if it is no greater than is required for the protection of the employer, does not impose undue hardship on the employee, and is not injurious to the public.",
+            "date": "1975-04-02",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#src-oh-raimonde-test-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-dealing",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-dealing",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-dealing covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#permit-non-dealing",
+        "requirementGuidance": "Non-dealing bars serving covered customers even when they call first — a meaningfully heavier restraint than a non-solicit, and one that presses on the hardship prong because it removes business the worker did nothing to chase. Treat its inclusion as a deliberate risk decision and size it tightly to the goodwill it protects.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "permit-non-compete",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-compete",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-compete covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#permit-non-compete",
+        "requirementGuidance": "If a true non-compete appears, route it straight through the Ohio gates at the end of this checklist: the three-prong reasonableness test, the protectable-interest tether, and the duration-and-territory fit. The covenant is enforceable only to the extent it survives that analysis, and a court may trim it — or decline to.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "oh-raimonde-test-covenants",
+            "authorityType": "case-law",
+            "title": "Raimonde v. Van Vlerah",
+            "citation": "Raimonde v. Van Vlerah, 42 Ohio St. 2d 21, 325 N.E.2d 544 (1975).",
+            "url": "https://www.courtlistener.com/opinion/6865409/raimonde-v-van-vlerah/",
+            "deepLink": "https://www.courtlistener.com/opinion/6865409/raimonde-v-van-vlerah/#:~:text=A%20covenant%20restraining%20an%20employee,not%20injurious%20to%20the%20public.",
+            "proposition": "Raimonde's three-part reasonableness rule governs every post-employment restraint in the agreement, from the lightest non-solicit to the full non-compete.",
+            "verbatimQuote": "A covenant restraining an employee from competing with his former employer upon termination of employment is reasonable if it is no greater than is required for the protection of the employer, does not impose undue hardship on the employee, and is not injurious to the public.",
+            "date": "1975-04-02",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#src-oh-raimonde-test-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "narrow-non-compete-by-specified-competitors-when-provided",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Named-competitor narrowing",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.5",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#narrow-non-compete-by-specified-competitors-when-provided",
+        "requirementGuidance": "When the employer can name its real competitors, bind those instead of leaning on the open-ended Competitive Business definition. A named list is strong evidence the restraint is no greater than required — the first prong of the Ohio test — and it spares the employer from betting on a discretionary judicial trim.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "oh-raimonde-test-covenants",
+            "authorityType": "case-law",
+            "title": "Raimonde v. Van Vlerah",
+            "citation": "Raimonde v. Van Vlerah, 42 Ohio St. 2d 21, 325 N.E.2d 544 (1975).",
+            "url": "https://www.courtlistener.com/opinion/6865409/raimonde-v-van-vlerah/",
+            "deepLink": "https://www.courtlistener.com/opinion/6865409/raimonde-v-van-vlerah/#:~:text=A%20covenant%20restraining%20an%20employee,not%20injurious%20to%20the%20public.",
+            "proposition": "Raimonde's three-part reasonableness rule governs every post-employment restraint in the agreement, from the lightest non-solicit to the full non-compete.",
+            "verbatimQuote": "A covenant restraining an employee from competing with his former employer upon termination of employment is reasonable if it is no greater than is required for the protection of the employer, does not impose undue hardship on the employee, and is not injurious to the public.",
+            "date": "1975-04-02",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#src-oh-raimonde-test-covenants"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-non-investment",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.permit-non-investment",
+        "requirementLevel": "MAY",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-investment covenant",
+        "sectionId": "restrictive-covenants-each-independently-includable",
+        "itemNumber": "7.6",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#permit-non-investment",
+        "requirementGuidance": "Rare and deliberate. Confirm the passive-holdings carve-out is intact and the clause shares the defined Restricted Period — an investment restraint with no carve-out and no end date is hardship without matching protection, and it drags the whole package down in a holistic analysis.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "require-non-disparagement",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-non-disparagement",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Non-disparagement",
+        "sectionId": "non-disparagement",
+        "itemNumber": "8.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#require-non-disparagement",
+        "requirementGuidance": "Standard to include with a stated term, but audit the carve-outs: truthful testimony, statements to government agencies, and protected workplace speech must sit outside the clause. Federal labor law polices overbroad versions in every state.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "mclaren-macomb-nondisparagement",
+            "authorityType": "agency-guidance",
+            "title": "NLRB news release on McLaren Macomb, 372 NLRB No. 58 (2023)",
+            "citation": "McLaren Macomb, 372 NLRB No. 58 (2023); NLRB Office of Public Affairs (Feb. 21, 2023).",
+            "url": "https://www.nlrb.gov/news-outreach/news-story/board-rules-that-employers-may-not-offer-severance-agreements-requiring",
+            "proposition": "The NLRB held that severance terms broadly waiving Section 7 rights — including overbroad non-disparagement provisions — violate the NLRA.",
+            "verbatimQuote": "simply offering employees a severance agreement that requires them to broadly give up their rights under Section 7 of the Act violates Section 8(a)(1) of the Act.",
+            "date": "2023-02-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#src-mclaren-macomb-nondisparagement"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-physician-public-interest-scrutiny",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.ohio.address-physician-public-interest-scrutiny",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Physician covenants face extra scrutiny",
+        "sectionId": "physician-specific-notices-and-carve-outs",
+        "itemNumber": "9.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#address-physician-public-interest-scrutiny",
+        "requirementGuidance": "A physician covenant is not an ordinary commercial restraint in Ohio: courts hold it unreasonable where it imposes undue hardship on the physician and injures the public because the physician's services are vital to the community and the demand for that expertise is critical. Draft the dedicated clause against that standard — narrow radius, short term, a genuine patient-access analysis — and note the moving target: a pending bill would cap certain nonprofit-hospital clinician restrictions at six months and a fifteen-mile radius, but it has not become law and nothing on this page assumes it.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "oh-metrohealth-physician-standard",
+            "authorityType": "case-law",
+            "title": "MetroHealth System v. Khandelwal",
+            "citation": "MetroHealth Sys. v. Khandelwal, 2022-Ohio-77, 183 N.E.3d 590 (8th Dist.).",
+            "url": "https://www.courtlistener.com/opinion/6205147/metrohealth-sys-v-khandelwal/",
+            "deepLink": "https://www.courtlistener.com/opinion/6205147/metrohealth-sys-v-khandelwal/#:~:text=A%20covenant%20restraining%20a%20physician%2Demployee,the%20people%20in%20the%20community.",
+            "proposition": "MetroHealth applies the physician-covenant public-interest rule: such a covenant is unreasonable where it imposes undue hardship and injures the public because the physician's services are vital to the community.",
+            "verbatimQuote": "A covenant restraining a physician-employee from competing with his employer upon termination of employment is unreasonable where it imposes undue hardship on the physician and is injurious to the public, the physician’s services are vital to the health, care and treatment of the public, and the demand for his medical expertise is critical to the people in the community.",
+            "date": "2022-01-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#src-oh-metrohealth-physician-standard"
+          },
+          {
+            "sourceId": "oh-williams-public-injury",
+            "authorityType": "case-law",
+            "title": "Williams v. Hobbs",
+            "citation": "Williams v. Hobbs, 9 Ohio App. 3d 331, 460 N.E.2d 287 (10th Dist. 1983).",
+            "url": "https://www.courtlistener.com/opinion/4007467/williams-v-hobbs/",
+            "deepLink": "https://www.courtlistener.com/opinion/4007467/williams-v-hobbs/#:~:text=The%20covenant%20imposes%20an%20undue,is%20injurious%20to%20the%20public.",
+            "proposition": "Williams affirmed findings that a physician's services were vital to the public and that the covenant was injurious to the public, illustrating the public-injury prong in medicine.",
+            "verbatimQuote": "The covenant imposes an undue hardship on the plaintiff, and also, it is injurious to the public.",
+            "date": "1983-04-12",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#src-oh-williams-public-injury"
+          },
+          {
+            "sourceId": "oh-sb301-pending-cap",
+            "authorityType": "primary-law",
+            "title": "Ohio S.B. 301 (136th General Assembly)",
+            "citation": "S.B. 301, 136th Gen. Assemb. (Ohio 2025).",
+            "url": "https://www.legislature.ohio.gov/legislation/136/sb301",
+            "proposition": "S.B. 301, a pending bill that has not become law, would allow a nonprofit hospital to impose only a limited post-employment restriction on covered clinicians — no more than six months and within a fifteen-mile radius.",
+            "verbatimQuote": "the employee will refrain, for a period not to exceed six months, from obtaining employment within a radius of fifteen miles of the physical location where the employee was employed with the hospital.",
+            "date": "2025-10-21",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#src-oh-sb301-pending-cap"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-no-conflicting-obligations-representation",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-no-conflicting-obligations-representation",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "No conflicting obligations",
+        "sectionId": "no-conflicting-obligations",
+        "itemNumber": "10.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#require-no-conflicting-obligations-representation",
+        "requirementGuidance": "The worker's representation that no earlier agreement or order blocks the new role. It surfaces an inbound covenant before the first customer call instead of after it, and it protects the employer against a tortious-interference claim from the prior employer.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-notice-to-future-employers",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-notice-to-future-employers",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Notice to future employers",
+        "sectionId": "notice-to-future-employers-and-other-third-parties",
+        "itemNumber": "11.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#address-notice-to-future-employers",
+        "requirementGuidance": "A genuine drafting choice. Notice provisions can support enforcement, but a warning letter built on a covenant that later fails the reasonableness analysis invites a tortious-interference response — so if the clause appears, condition any third-party notice on a restraint the employer is actually prepared to defend prong by prong.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "state-bounded-tolling-with-homan-litigation-extension",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.ohio.state-bounded-tolling-with-homan-litigation-extension",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Restriction extended during a breach?",
+        "sectionId": "tolling-during-breach",
+        "itemNumber": "12.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#state-bounded-tolling-with-homan-litigation-extension",
+        "requirementGuidance": "Say expressly whether the clock pauses during a breach — and know that Ohio backs the employer here: appellate courts have held a covenant may not expire while its enforceability is being litigated, so the restricted period can effectively extend until the case resolves, even where the court first trimmed the period for reasonableness. That extension is equitable, not automatic, and any written extension-on-breach clause must stay a bounded, breach-tied restraint — an indefinite one risks being cut back like any other overbroad term.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "oh-homan-tolling",
+            "authorityType": "case-law",
+            "title": "Homan, Inc. v. A1 AG Services, L.L.C.",
+            "citation": "Homan, Inc. v. A1 AG Servs., L.L.C., 175 Ohio App. 3d 51, 2008-Ohio-277, 885 N.E.2d 253 (3d Dist.).",
+            "url": "https://www.courtlistener.com/opinion/3953241/homan-inc-v-a1-ag-services-llc/",
+            "deepLink": "https://www.courtlistener.com/opinion/3953241/homan-inc-v-a1-ag-services-llc/#:~:text=The%20Sixth%20Appellate%20District%20has,that%20contract%20is%20being%20litigated.",
+            "proposition": "Homan adopts the rule that an Ohio non-compete may not expire while the enforceability of the contract is being litigated, effectively tolling the restricted period.",
+            "verbatimQuote": "The Sixth Appellate District has held that a covenant not to compete may not expire while the enforceability of that contract is being litigated.",
+            "date": "2008-01-28",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#src-oh-homan-tolling"
+          },
+          {
+            "sourceId": "oh-raimonde-extension-limit",
+            "authorityType": "case-law",
+            "title": "Raimonde v. Van Vlerah",
+            "citation": "Raimonde v. Van Vlerah, 42 Ohio St. 2d 21, 325 N.E.2d 544 (1975).",
+            "url": "https://www.courtlistener.com/opinion/6865409/raimonde-v-van-vlerah/",
+            "deepLink": "https://www.courtlistener.com/opinion/6865409/raimonde-v-van-vlerah/#:~:text=A%20covenant%20restraining%20an%20employee,not%20injurious%20to%20the%20public.",
+            "proposition": "Raimonde's reasonableness standard governs any extension of the restricted period, so an open-ended tolling or extension term must still be reasonable.",
+            "verbatimQuote": "A covenant restraining an employee from competing with his former employer upon termination of employment is reasonable if it is no greater than is required for the protection of the employer, does not impose undue hardship on the employee, and is not injurious to the public.",
+            "date": "1975-04-02",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#src-oh-raimonde-extension-limit"
+          }
+        ]
+      },
+      {
+        "requirementId": "require-injunctive-relief-availability",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.require-injunctive-relief-availability",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Injunction availability",
+        "sectionId": "remedies",
+        "itemNumber": "13.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#require-injunctive-relief-availability",
+        "requirementGuidance": "Look for the acknowledgement that breach may cause irreparable harm and that an injunction is appropriate relief — and remember Ohio supplies a second injunction route that does not depend on the covenant at all: actual or threatened misappropriation of a trade secret may be enjoined under the statute.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "oh-outsa-injunction",
+            "authorityType": "primary-law",
+            "title": "Ohio Rev. Code § 1333.62",
+            "citation": "Ohio Rev. Code § 1333.62(A).",
+            "url": "https://codes.ohio.gov/ohio-revised-code/section-1333.62",
+            "proposition": "R.C. 1333.62(A) gives a statutory injunction remedy independent of any covenant: actual or threatened misappropriation of a trade secret may be enjoined.",
+            "verbatimQuote": "Actual or threatened misappropriation may be enjoined.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#src-oh-outsa-injunction"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-attorneys-fees-and-costs",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-attorneys-fees-and-costs",
+        "requirementLevel": "MAY",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Attorney fees and costs",
+        "sectionId": "remedies",
+        "itemNumber": "13.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#address-attorneys-fees-and-costs",
+        "requirementGuidance": "A commercial choice with a documented Ohio failure mode: when a covenant fails, a prevailing-party fee clause runs in both directions, and a federal court applying Ohio law has already made an employer pay the departing employee's fees and costs under the employer's own clause. Price that risk before keeping fee-shifting in an aggressive covenant.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "oh-cintas-fee-shift",
+            "authorityType": "case-law",
+            "title": "Cintas Corp. v. Perry",
+            "citation": "Cintas Corp. v. Perry, 517 F.3d 459 (7th Cir. 2008).",
+            "url": "https://www.courtlistener.com/opinion/1462207/cintas-corporation-v-perry/",
+            "deepLink": "https://www.courtlistener.com/opinion/1462207/cintas-corporation-v-perry/#:~:text=The%20district%20court%20correctly%20concluded,costs%20under%20the%20employment%20agreement.",
+            "proposition": "Cintas, applying Ohio law, held the former employee was entitled to attorney's fees and costs under the employer's own fee-shifting clause after the covenant failed.",
+            "verbatimQuote": "The district court correctly concluded Perry was entitled to attorney’s fees and litigation costs under the employment agreement.",
+            "date": "2008-02-20",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#src-oh-cintas-fee-shift"
+          }
+        ]
+      },
+      {
+        "requirementId": "permit-reformation-without-relying-on-it",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.ohio.permit-reformation-without-relying-on-it",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Can a court narrow it?",
+        "sectionId": "severability-and-reformation",
+        "itemNumber": "14.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#permit-reformation-without-relying-on-it",
+        "requirementGuidance": "Keep the reformation and severability language — Ohio courts are empowered to modify an overbroad covenant and enforce it to the reasonable extent — but read it as permission, never as a plan. Modification sits in the trial court's discretion, and a court has refused to rewrite a covenant so overbroad that fixing it meant rebuilding the agreement. The safe posture is tiered, severable restraints sized to the protectable interest from the start, with judicial narrowing as the fallback rather than the design.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "oh-raimonde-reformation",
+            "authorityType": "case-law",
+            "title": "Raimonde v. Van Vlerah",
+            "citation": "Raimonde v. Van Vlerah, 42 Ohio St. 2d 21, 325 N.E.2d 544 (1975).",
+            "url": "https://www.courtlistener.com/opinion/6865409/raimonde-v-van-vlerah/",
+            "deepLink": "https://www.courtlistener.com/opinion/6865409/raimonde-v-van-vlerah/#:~:text=Courts%20are%20empowered%20to%20modify,agreements%20to%20achieve%20such%20results.",
+            "proposition": "Raimonde rejected strict blue-penciling and empowers Ohio courts to modify or amend an employment agreement to reach a reasonable, enforceable restraint.",
+            "verbatimQuote": "Courts are empowered to modify or amend employment agreements to achieve such results.",
+            "date": "1975-04-02",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#src-oh-raimonde-reformation"
+          },
+          {
+            "sourceId": "oh-kross-discretionary",
+            "authorityType": "case-law",
+            "title": "Kross Acquisition Co. v. Groundworks Ohio, LLC",
+            "citation": "Kross Acquisition Co. v. Groundworks Ohio, LLC, 2024-Ohio-592, 236 N.E.3d 453 (1st Dist.).",
+            "url": "https://www.courtlistener.com/opinion/9475789/kross-acquisition-co-llc-v-groundworks-ohio-llc/",
+            "deepLink": "https://www.courtlistener.com/opinion/9475789/kross-acquisition-co-llc-v-groundworks-ohio-llc/#:~:text=We%20agree%20that%20it%20is,for%20an%20abuse%20of%20discretion.",
+            "proposition": "Kross holds that modifying a non-compete is within the trial court's discretion, so a court may decline to reform an abusively overbroad covenant.",
+            "verbatimQuote": "We agree that it is within a trial court’s discretion to modify a noncompetition agreement, and so we review its decision not to modify such an agreement for an abuse of discretion.",
+            "date": "2024-02-16",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#src-oh-kross-discretionary"
+          }
+        ]
+      },
+      {
+        "requirementId": "address-survival-per-covenant",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-survival-per-covenant",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Survival after the agreement ends",
+        "sectionId": "survival",
+        "itemNumber": "15.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#address-survival-per-covenant",
+        "requirementGuidance": "Per-covenant survival keeps each clock independently checkable — perpetual for trade secrets, finite elsewhere. Under a holistic reasonableness regime that discipline matters: a bundled survival clause is where an unexamined duration hides, and an unexamined duration is exactly what a reviewing court goes looking for.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "include-express-assignment-beyond-statutory-merger",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.ohio.include-express-assignment-beyond-statutory-merger",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Assignment and successors",
+        "sectionId": "assignment-and-successors",
+        "itemNumber": "16.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#include-express-assignment-beyond-statutory-merger",
+        "requirementGuidance": "Include express assignment and successor-and-assigns language even though Ohio fills part of the gap: after a statutory merger, the surviving company may enforce the absorbed company's covenants as if it had stepped into the original employer's shoes, with no assignment clause needed — provided the covenant is reasonable in its hands. That rule turns on the merger structure, so an asset purchase, or a covenant the parties meant to be personal to the original employer, still needs the express language to travel safely.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "oh-acordia-successor",
+            "authorityType": "case-law",
+            "title": "Acordia of Ohio, L.L.C. v. Fishel",
+            "citation": "Acordia of Ohio, L.L.C. v. Fishel, 133 Ohio St. 3d 356, 2012-Ohio-4648, 978 N.E.2d 823.",
+            "url": "https://www.courtlistener.com/opinion/2690659/acordia-of-ohio-llc-v-fishel/",
+            "deepLink": "https://www.courtlistener.com/opinion/2690659/acordia-of-ohio-llc-v-fishel/#:~:text=We%20hold%20that%20the%20L.L.C.,the%20circumstances%20of%20this%20case.",
+            "proposition": "Acordia (on reconsideration) holds that a company surviving a statutory merger may enforce the absorbed company's non-competes as if it were the original contracting party, if the covenants are reasonable.",
+            "verbatimQuote": "We hold that the L.L.C. may enforce the noncompete agreements as if it had stepped into the shoes of the original contracting companies, provided that the noncompete agreements are reasonable under the circumstances of this case.",
+            "date": "2012-10-11",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#src-oh-acordia-successor"
+          }
+        ]
+      },
+      {
+        "requirementId": "specify-governing-law-and-venue",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.specify-governing-law-and-venue",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Governing law and venue",
+        "sectionId": "governing-law-venue-dispute-process",
+        "itemNumber": "17.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#specify-governing-law-and-venue",
+        "requirementGuidance": "Confirm the agreement specifies governing law, venue, and dispute process. When Ohio law governs, the dispute lands in the holistic reasonableness framework that runs through this entire checklist — so the clause should match where the worker actually lives and works, and the covenant should be drafted to survive that framework rather than to escape it.",
+        "variants": [],
+        "sources": []
+      },
+      {
+        "requirementId": "address-entire-agreement-amendment-waiver-and-e-signatures",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "standard-provision",
+        "sourceFootnotes": [],
+        "requirementLabel": "Entire agreement, amendments, e-signatures",
+        "sectionId": "entire-agreement-amendment-waiver-e-signatures",
+        "itemNumber": "18.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#address-entire-agreement-amendment-waiver-and-e-signatures",
+        "requirementGuidance": "Standard boilerplate that prevents oral modifications and confirms electronic execution. Worth a forward-looking glance in Ohio: a pending bill that would broadly prohibit employer non-competes is drafted to void only agreements entered into, modified, or extended on or after its effective date — it is not law, but if it ever passes, a routine amendment could be the act that pulls an old covenant into the new regime. Monitor, do not assume.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "oh-sb11-prospective",
+            "authorityType": "primary-law",
+            "title": "Ohio S.B. 11 (136th General Assembly)",
+            "citation": "S.B. 11, 136th Gen. Assemb. (Ohio 2025).",
+            "url": "https://www.legislature.ohio.gov/legislation/136/sb11",
+            "proposition": "S.B. 11, a pending bill that has not become law, would apply only prospectively, voiding agreements entered into, modified, or extended on or after its effective date rather than existing covenants.",
+            "verbatimQuote": "An agreement, or part of an agreement, between an employer and worker entered into, modified, or extended on or after the effective date of this section that is prohibited under division (A) of this section is void.",
+            "date": "2025-01-22",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#src-oh-sb11-prospective"
+          }
+        ]
+      },
+      {
+        "requirementId": "satisfy-raimonde-reasonableness-test",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.ohio.satisfy-raimonde-reasonableness-test",
+        "requirementLevel": "MUST",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Three-prong reasonableness test",
+        "sectionId": "ohio-statutory-gates",
+        "itemNumber": "19.1",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#satisfy-raimonde-reasonableness-test",
+        "requirementGuidance": "Run every restraint in the agreement through the controlling Ohio rule: no greater than is required for the protection of the employer, no undue hardship on the employee, and not injurious to the public. There is no general statute and no fixed numbers — the court weighs the employer's interest, the burden on the worker, and the public effect together, covenant by covenant — so each covenant should be independently defensible on all three prongs rather than sheltering inside the package.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "oh-raimonde-gate",
+            "authorityType": "case-law",
+            "title": "Raimonde v. Van Vlerah",
+            "citation": "Raimonde v. Van Vlerah, 42 Ohio St. 2d 21, 325 N.E.2d 544 (1975).",
+            "url": "https://www.courtlistener.com/opinion/6865409/raimonde-v-van-vlerah/",
+            "deepLink": "https://www.courtlistener.com/opinion/6865409/raimonde-v-van-vlerah/#:~:text=A%20covenant%20restraining%20an%20employee,not%20injurious%20to%20the%20public.",
+            "proposition": "Raimonde supplies Ohio's controlling three-part reasonableness rule for post-employment restraints.",
+            "verbatimQuote": "A covenant restraining an employee from competing with his former employer upon termination of employment is reasonable if it is no greater than is required for the protection of the employer, does not impose undue hardship on the employee, and is not injurious to the public.",
+            "date": "1975-04-02",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#src-oh-raimonde-gate"
+          }
+        ]
+      },
+      {
+        "requirementId": "tie-restraint-to-protectable-interest-not-ordinary-competition",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.ohio.tie-restraint-to-protectable-interest-not-ordinary-competition",
+        "requirementLevel": "MUST NOT",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Protects an interest, not just blocks competition",
+        "sectionId": "ohio-statutory-gates",
+        "itemNumber": "19.2",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#tie-restraint-to-protectable-interest-not-ordinary-competition",
+        "requirementGuidance": "The non-compete must not exist merely to suppress ordinary competition. The factor analysis asks whether this worker held confidential information or trade secrets and whether the covenant targets competition that would be unfair to the employer — a restraint untethered to a protectable interest will not stand. Demand that the covenant identify the confidential information, trade secrets, or customer goodwill it protects, in terms specific enough to measure the restraint against.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "oh-raimonde-ordinary-competition",
+            "authorityType": "case-law",
+            "title": "Raimonde v. Van Vlerah",
+            "citation": "Raimonde v. Van Vlerah, 42 Ohio St. 2d 21, 325 N.E.2d 544 (1975).",
+            "url": "https://www.courtlistener.com/opinion/6865409/raimonde-v-van-vlerah/",
+            "deepLink": "https://www.courtlistener.com/opinion/6865409/raimonde-v-van-vlerah/#:~:text=whether%20the%20employee%20is%20possessed,seeks%20to%20eliminate%20ordinary%20competition",
+            "proposition": "Raimonde's factors distinguish covenants that prevent unfair competition from covenants that merely eliminate ordinary competition, the tether this gate enforces.",
+            "verbatimQuote": "whether the employee is possessed with confidential information or trade secrets; whether the covenant seeks to eliminate competition which would be unfair to the employer or merely seeks to eliminate ordinary competition",
+            "date": "1975-04-02",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#src-oh-raimonde-ordinary-competition"
+          }
+        ]
+      },
+      {
+        "requirementId": "fit-duration-and-territory-to-actual-footprint",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.ohio.fit-duration-and-territory-to-actual-footprint",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Time and territory match the real footprint",
+        "sectionId": "ohio-statutory-gates",
+        "itemNumber": "19.3",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#fit-duration-and-territory-to-actual-footprint",
+        "requirementGuidance": "Match the term and the radius to the employee's role and the employer's actual market — there is no statutory cap and no safe-harbor number, so a copied fixed term or radius proves nothing. The documented Ohio outcome for overshooting is a judicial trim down to what the legitimate interests actually need, and a trim is a discretionary repair, not an entitlement.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "oh-metrohealth-trimmed",
+            "authorityType": "case-law",
+            "title": "MetroHealth System v. Khandelwal",
+            "citation": "MetroHealth Sys. v. Khandelwal, 2022-Ohio-77, 183 N.E.3d 590 (8th Dist.).",
+            "url": "https://www.courtlistener.com/opinion/6205147/metrohealth-sys-v-khandelwal/",
+            "deepLink": "https://www.courtlistener.com/opinion/6205147/metrohealth-sys-v-khandelwal/#:~:text=In%20short%2C%20evidence%20presented%20at,protect%20MetroHealth%E2%80%99s%20legitimate%20business%20interests.",
+            "proposition": "MetroHealth shows an Ohio court narrowing a covenant that was more restrictive than necessary to what the employer's legitimate interests required.",
+            "verbatimQuote": "In short, evidence presented at the hearing supported the trial court’s finding that the 2015 noncompete agreement was more restrictive than necessary but that it could be modified to protect MetroHealth’s legitimate business interests.",
+            "date": "2022-01-13",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#src-oh-metrohealth-trimmed"
+          }
+        ]
+      },
+      {
+        "requirementId": "maintain-outsa-confidentiality-backstop",
+        "specRequirementId": "REQ-labor-and-employment-law.restrictive-covenant-agreement.ohio.maintain-outsa-confidentiality-backstop",
+        "requirementLevel": "SHOULD",
+        "scrutiny": "substantive",
+        "sourceFootnotes": [],
+        "requirementLabel": "Trade-secret statute as backstop",
+        "sectionId": "ohio-statutory-gates",
+        "itemNumber": "19.4",
+        "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#maintain-outsa-confidentiality-backstop",
+        "requirementGuidance": "Check that the agreement keeps a confidentiality and trade-secret strategy running alongside the covenants. Ohio's trade-secret statute defines protection by secrecy and reasonable efforts, and it allows an injunction against actual or threatened misappropriation with no covenant needed — which is why a tight confidentiality architecture often protects the employer better than the broadest restraint on this page.",
+        "variants": [],
+        "sources": [
+          {
+            "sourceId": "oh-outsa-definition-gate",
+            "authorityType": "primary-law",
+            "title": "Ohio Rev. Code § 1333.61",
+            "citation": "Ohio Rev. Code § 1333.61(D).",
+            "url": "https://codes.ohio.gov/ohio-revised-code/section-1333.61",
+            "proposition": "R.C. 1333.61 supplies the statutory trade-secret definition — value from secrecy plus reasonable efforts — that the confidentiality architecture must satisfy to keep the backstop available.",
+            "verbatimQuote": "(1) It derives independent economic value, actual or potential, from not being generally known to, and not being readily ascertainable by proper means by, other persons who can obtain economic value from its disclosure or use.(2) It is the subject of efforts that are reasonable under the circumstances to maintain its secrecy.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#src-oh-outsa-definition-gate"
+          },
+          {
+            "sourceId": "oh-outsa-injunction-gate",
+            "authorityType": "primary-law",
+            "title": "Ohio Rev. Code § 1333.62",
+            "citation": "Ohio Rev. Code § 1333.62(A).",
+            "url": "https://codes.ohio.gov/ohio-revised-code/section-1333.62",
+            "proposition": "R.C. 1333.62(A) permits an injunction against actual or threatened misappropriation independent of any covenant, making the statute a freestanding backstop.",
+            "verbatimQuote": "Actual or threatened misappropriation may be enjoined.",
+            "anchor": "https://openagreements.org/checklists/non-compete/us/ohio#src-oh-outsa-injunction-gate"
+          }
+        ]
+      }
+    ]
+  }
+}
