@@ -8,7 +8,7 @@ citation: 'Palelei v. Star-Kist Samoa, Inc., 5 A.S.R.2d 162 (Trial Div. 1987).'
 resource: 'https://asbar.org/case-law/5asr2d162/'
 timestamp: '2026-06-03'
 document_references:
-  - type: State Law Practice Note
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/american-samoa'
 tags:
   - case-law

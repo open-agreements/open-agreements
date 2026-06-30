@@ -8,9 +8,9 @@ citation: 'Bend-Tech Group (A Firm) v Beek [2015] WASC 491 (Pritchard J).'
 resource: 'https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/wa/WASC/2015/491.html'
 timestamp: '2026-06-16'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/au'
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/non-compete/au/western-australia
 tags:

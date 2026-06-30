@@ -16,9 +16,9 @@ document_references:
     resource: 'https://openagreements.org/checklists/non-compete/us/new-york'
   - type: Review Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/wyoming'
-  - type: State Law Practice Note
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/florida'
-  - type: State Law Practice Note
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/new-york'
 tags:
   - case-law

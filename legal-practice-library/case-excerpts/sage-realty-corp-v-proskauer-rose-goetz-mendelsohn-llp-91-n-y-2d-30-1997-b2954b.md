@@ -12,7 +12,7 @@ citation: >-
 resource: 'https://www.law.cornell.edu/nyctap/091_0030.htm'
 timestamp: '2026-04-20'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/outside-counsel/privilege-across-counsel-transition
 tags:

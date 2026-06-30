@@ -12,7 +12,7 @@ citation: >-
 resource: 'https://caselaw.findlaw.com/us-1st-circuit/1074678.html'
 timestamp: '2026-04-20'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/outside-counsel/privilege-across-counsel-transition
 tags:

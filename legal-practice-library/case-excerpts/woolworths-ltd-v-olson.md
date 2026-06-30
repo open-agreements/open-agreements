@@ -6,9 +6,9 @@ citation: 'Woolworths Ltd v Olson [2004] NSWCA 372.'
 resource: 'https://www.caselaw.nsw.gov.au/decision/549fb2db3004262463b8633d'
 timestamp: '2026-06-16'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/au'
-  - type: Practice Note
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/au/new-south-wales'
 tags:
   - case-law

@@ -8,7 +8,7 @@ citation: 'Shopee Singapore Pte Ltd v Lim Teck Yong [2024] SGHC 29.'
 resource: 'https://www.elitigation.sg/gd/s/2024_SGHC_29'
 timestamp: '2026-06-03'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/sg'
 tags:
   - case-law

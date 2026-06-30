@@ -13,7 +13,7 @@ document_references:
     resource: 'https://openagreements.org/checklists/non-compete/us'
   - type: Review Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/illinois'
-  - type: State Law Practice Note
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/illinois'
 tags:
   - case-law

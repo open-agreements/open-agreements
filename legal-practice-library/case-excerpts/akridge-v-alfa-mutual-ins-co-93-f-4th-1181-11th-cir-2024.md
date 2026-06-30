@@ -9,7 +9,7 @@ resource: >-
   https://law.justia.com/cases/federal/appellate-courts/ca11/22-12045/22-12045-2024-02-16.html
 timestamp: '2026-04-19'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/ai-layoffs/ai-layoff-without-cause-vs-redundancy-us
 tags:

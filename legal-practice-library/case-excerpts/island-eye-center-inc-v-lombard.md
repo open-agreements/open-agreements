@@ -6,7 +6,7 @@ citation: 'Island Eye Ctr., Inc. v. Lombard, 2020 Guam 32.'
 resource: 'https://case-law.vlex.com/vid/island-eye-ctr-v-1039283384'
 timestamp: '2026-06-03'
 document_references:
-  - type: State Law Practice Note
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/guam'
 tags:
   - case-law

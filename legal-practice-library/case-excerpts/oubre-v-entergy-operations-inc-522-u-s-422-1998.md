@@ -8,7 +8,7 @@ citation: 'Oubre v. Entergy Operations, Inc., 522 U.S. 422 (1998).'
 resource: 'https://www.law.cornell.edu/supremecourt/text/522/422'
 timestamp: '2026-04-19'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/ai-layoffs/business-rationale-documentation
 tags:

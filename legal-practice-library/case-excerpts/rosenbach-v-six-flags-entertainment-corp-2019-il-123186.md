@@ -11,7 +11,7 @@ timestamp: '2026-06-12'
 document_references:
   - type: Law Topic
     resource: 'https://openagreements.org/practice-guides/privacy/us'
-  - type: State Law Practice Note
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/privacy/us/illinois'
 tags:
   - case-law

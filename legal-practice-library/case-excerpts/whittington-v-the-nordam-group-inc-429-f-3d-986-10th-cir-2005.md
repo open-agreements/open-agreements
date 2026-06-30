@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/166694/whittington-v-the-nordam-group-inc
 timestamp: '2026-04-19'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/ai-layoffs/business-rationale-documentation
 tags:

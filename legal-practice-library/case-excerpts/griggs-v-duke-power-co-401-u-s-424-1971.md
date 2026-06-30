@@ -6,10 +6,10 @@ citation: 'Griggs v. Duke Power Co., 401 U.S. 424 (1971).'
 resource: 'https://www.courtlistener.com/opinion/108284/griggs-v-duke-power-co'
 timestamp: '2026-04-20'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/ai-hiring/disparate-impact-ai-performance-review
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/ai-hiring/disparate-impact-ai-skill-requirements
 tags:

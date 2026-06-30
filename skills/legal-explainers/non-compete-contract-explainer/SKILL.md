@@ -23,7 +23,7 @@ catalog_order: 10
 # non-compete-contract-explainer
 
 Explain how a given jurisdiction treats non-competes and other restrictive
-covenants, using bundled, source-cited practice notes. This skill explains **what
+covenants, using bundled, source-cited practice guides. This skill explains **what
 the law says** — it does not give legal advice or tell a user whether their own
 contract is enforceable.
 
@@ -85,6 +85,23 @@ The bundled jurisdictions are listed in `manifest.json` at this skill's root
 `slug`, `jurisdiction`, `countryCode`, `snapshotAsOf`, `lastReviewed`, and a
 `stale` flag). Read that file to enumerate what's available before answering a
 "which states do you cover?" question.
+
+## Machine-readable twins
+
+Each bundled note is a point-in-time snapshot. The live canonical version on
+openagreements.org also publishes machine-readable twins you can fetch directly
+(a fixed URL only — never send the user's facts or contract text upstream):
+
+- **Practice guide** — append `.md` or `.json` to a guide's `canonicalUrl`
+  (e.g. `…/practice-guides/non-compete/us/texas.json`), or use the `/markdown`
+  and `/json` path aliases.
+- **50-state survey** — `…/surveys/non-compete/us.json` or `.csv` (spreadsheet
+  import). Surveys have no `/markdown` twin.
+- **Reviewer checklist** — `…/checklists/non-compete/us.json`.
+
+The full corpus is also browsable as plain markdown in the open-agreements repo
+under `legal-practice-library/` (`non-compete/`, `surveys/non-compete/`,
+`checklists/non-compete/`).
 
 ## See also
 

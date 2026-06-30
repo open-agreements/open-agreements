@@ -13,10 +13,10 @@ resource: >-
   https://law.justia.com/cases/new-york/court-of-appeals/1997/91-n-y-2d-30-0.html
 timestamp: '2026-04-20'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/outside-counsel/counsel-file-withholding-on-unpaid-invoices
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/outside-counsel/switching-counsel-consequences
 tags:

@@ -8,7 +8,7 @@ citation: 'Snyder v. Beam Technologies, Inc., No. 24-1136 (10th Cir. Aug. 5, 202
 resource: 'https://www.courtlistener.com/opinion/10648006/snyder-v-beam-technologies'
 timestamp: '2026-04-20'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/ai-vendors/trade-secret-leakage-containment
 tags:

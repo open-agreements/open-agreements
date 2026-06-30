@@ -11,7 +11,7 @@ resource: >-
   https://www.courtlistener.com/opinion/4427509/et-products-llc-v-de-miller-holdings-inc/
 timestamp: '2026-06-03'
 document_references:
-  - type: State Law Practice Note
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/indiana'
 tags:
   - case-law

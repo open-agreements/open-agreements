@@ -11,9 +11,9 @@ citation: >-
 resource: 'https://www.austlii.edu.au/cgi-bin/viewdoc/au/cases/act/ACTSC/2021/199.html'
 timestamp: '2026-06-16'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/au'
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/non-compete/au/australian-capital-territory
 tags:

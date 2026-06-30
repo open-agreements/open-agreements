@@ -13,7 +13,7 @@ resource: >-
   https://www.hinckleyallen.com/publications/ai-platforms-and-the-risk-of-privilege-waiver-critical-lessons-from-united-states-v-heppner/
 timestamp: '2026-04-20'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/ai-vendors/external-ai-vendor-privilege-risk
 tags:

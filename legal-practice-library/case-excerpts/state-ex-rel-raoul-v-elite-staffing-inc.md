@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/9467526/state-ex-rel-raoul-v-elite-staffing-inc/
 timestamp: '2026-06-03'
 document_references:
-  - type: State Law Practice Note
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/illinois'
 tags:
   - case-law

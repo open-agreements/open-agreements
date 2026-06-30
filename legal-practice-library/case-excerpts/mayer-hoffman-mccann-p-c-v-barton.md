@@ -8,7 +8,7 @@ citation: 'Mayer Hoffman McCann, P.C. v. Barton, 614 F.3d 893 (8th Cir. 2010).'
 resource: 'https://www.courtlistener.com/opinion/152690/mayer-hoffman-mccann-pc-v-barton/'
 timestamp: '2026-06-03'
 document_references:
-  - type: State Law Practice Note
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/missouri'
 tags:
   - case-law

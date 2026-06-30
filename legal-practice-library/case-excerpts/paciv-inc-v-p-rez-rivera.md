@@ -6,7 +6,7 @@ citation: 'PACIV, Inc. v. Pérez Rivera, 159 D.P.R. 523 (2003).'
 resource: 'https://www.lexjuris.com/LEXJURIS/tspr2003/lexj2003084.htm'
 timestamp: '2026-06-02'
 document_references:
-  - type: State Law Practice Note
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/puerto-rico'
 tags:
   - case-law

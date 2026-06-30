@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/8676262/banks-v-international-rental-leasing-corp/
 timestamp: '2026-06-03'
 document_references:
-  - type: State Law Practice Note
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/virgin-islands'
 tags:
   - case-law

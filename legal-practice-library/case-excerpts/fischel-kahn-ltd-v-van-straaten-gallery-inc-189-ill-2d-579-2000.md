@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/2098712/fischel-kahn-ltd-v-van-straaten-gallery-inc
 timestamp: '2026-04-20'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/outside-counsel/privilege-across-counsel-transition
 tags:

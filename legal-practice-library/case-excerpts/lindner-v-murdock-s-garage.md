@@ -8,25 +8,25 @@ citation: 'Lindner v Murdock''s Garage [1950] HCA 48; (1950) 83 CLR 628 (per Kit
 resource: 'https://www.hcourt.gov.au/sites/default/files/eresources/1950/HCA/48.pdf'
 timestamp: '2026-06-16'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/au'
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/non-compete/au/australian-capital-territory
-  - type: Practice Note
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/au/new-south-wales'
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/non-compete/au/northern-territory
-  - type: Practice Note
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/au/queensland'
-  - type: Practice Note
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/au/south-australia'
-  - type: Practice Note
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/au/tasmania'
-  - type: Practice Note
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/au/victoria'
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/non-compete/au/western-australia
 tags:

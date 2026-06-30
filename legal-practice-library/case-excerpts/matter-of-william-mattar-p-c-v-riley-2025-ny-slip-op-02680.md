@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/10579969/matter-of-william-mattar-pc-v-riley
 timestamp: '2026-04-20'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/ai-layoffs/retention-bonus-competitor-ai-pressure
 tags:

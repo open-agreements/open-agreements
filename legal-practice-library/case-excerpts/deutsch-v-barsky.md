@@ -6,7 +6,7 @@ citation: 'Deutsch v. Barsky, 795 A.2d 669 (D.C. 2002).'
 resource: 'https://www.courtlistener.com/opinion/1439721/deutsch-v-barsky/'
 timestamp: '2026-06-03'
 document_references:
-  - type: State Law Practice Note
+  - type: State Law Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/non-compete/us/district-of-columbia
 tags:

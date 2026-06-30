@@ -8,7 +8,7 @@ citation: 'Reyes Ramis CPA Group, P.S.C. v. Serra Torres, 194 D.P.R. ___ (2016).
 resource: 'http://www.lexjuris.com/lexjuris/tspr2016/lexj2016126.htm'
 timestamp: '2026-06-02'
 document_references:
-  - type: State Law Practice Note
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/puerto-rico'
 tags:
   - case-law

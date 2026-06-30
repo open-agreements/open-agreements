@@ -8,10 +8,10 @@ citation: 'Cavallaro v. United States, 284 F.3d 236 (1st Cir. 2002).'
 resource: 'https://www.courtlistener.com/opinion/199903/carvallaro-v-united-states'
 timestamp: '2026-04-20'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/ai-vendors/external-ai-vendor-privilege-risk
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/outside-counsel/privilege-across-counsel-transition
 tags:

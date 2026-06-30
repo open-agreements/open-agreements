@@ -7,7 +7,7 @@ resource: >-
   https://www.courtlistener.com/opinion/4493839/dynamex-operations-w-inc-v-superior-court-of-l-a-cnty
 timestamp: '2026-04-20'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/ai-layoffs/contractor-displacement-ai-efficiency
 tags:

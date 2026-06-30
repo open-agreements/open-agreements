@@ -10,7 +10,7 @@ citation: >-
 resource: 'https://www.elitigation.sg/gdviewer/s/2007_SGCA_53'
 timestamp: '2026-06-03'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/sg'
 tags:
   - case-law

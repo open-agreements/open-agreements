@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/4483518/berry-berry-acquisitions-llc-v-bfn-props-llc/
 timestamp: '2026-06-03'
 document_references:
-  - type: State Law Practice Note
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/oklahoma'
 tags:
   - case-law

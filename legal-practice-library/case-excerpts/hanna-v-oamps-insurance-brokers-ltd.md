@@ -8,9 +8,9 @@ citation: 'Hanna v OAMPS Insurance Brokers Ltd [2010] NSWCA 267.'
 resource: 'https://www.caselaw.nsw.gov.au/decision/549ff3313004262463c5979a'
 timestamp: '2026-06-16'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/au'
-  - type: Practice Note
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/au/new-south-wales'
 tags:
   - case-law

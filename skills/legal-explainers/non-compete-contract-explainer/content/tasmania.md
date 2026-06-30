@@ -10,7 +10,7 @@ stale: false
 ---
 
 > [!IMPORTANT]
-> **Informational only — not legal advice.** This is a snapshot of an OpenAgreements practice note,
+> **Informational only — not legal advice.** This is a snapshot of an OpenAgreements practice guide,
 > provided for general information. It is not legal advice, does not create an attorney-client
 > relationship, and is not a substitute for a licensed attorney in the relevant jurisdiction.
 > Laws change; verify against the canonical version before relying on it.

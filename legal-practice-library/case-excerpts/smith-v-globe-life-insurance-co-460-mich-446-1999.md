@@ -6,7 +6,7 @@ citation: 'Smith v. Globe Life Ins. Co., 460 Mich. 446 (1999).'
 resource: 'https://www.courtlistener.com/opinion/1693300/smith-v-globe-life-insurance/'
 timestamp: '2026-06-11'
 document_references:
-  - type: State Law Practice Note
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/privacy/us/michigan'
 tags:
   - case-law

@@ -6,7 +6,7 @@ citation: 'J.F.D. v. J.D., 2014 NY Slip Op 51547(U).'
 resource: 'https://www.nycourts.gov/Reporter/3dseries/2014/2014_51547.htm'
 timestamp: '2026-04-20'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/outside-counsel/counsel-file-withholding-on-unpaid-invoices
 tags:

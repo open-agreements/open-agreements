@@ -8,10 +8,10 @@ citation: 'United States v. Kovel, 296 F.2d 918 (2d Cir. 1961).'
 resource: 'https://www.courtlistener.com/opinion/255675/united-states-v-louis-kovel'
 timestamp: '2026-04-20'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/ai-vendors/external-ai-vendor-privilege-risk
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/outside-counsel/privilege-across-counsel-transition
 tags:

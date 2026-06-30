@@ -11,7 +11,7 @@ resource: >-
   https://cdnsm5-hosted.civiclive.com/UserFiles/Servers/Server_12810747/File/Opinions/Archive/VI%20Diving%20Sch%20v.%20Dixon%20%28IAM%29.pdf
 timestamp: '2026-06-03'
 document_references:
-  - type: State Law Practice Note
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/virgin-islands'
 tags:
   - case-law

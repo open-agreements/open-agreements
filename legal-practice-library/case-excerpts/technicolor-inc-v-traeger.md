@@ -8,7 +8,7 @@ citation: 'Technicolor, Inc. v. Traeger, 57 Haw. 113, 551 P.2d 163 (1976).'
 resource: 'https://www.courtlistener.com/opinion/1175722/technicolor-inc-v-traeger/'
 timestamp: '2026-06-02'
 document_references:
-  - type: State Law Practice Note
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/hawaii'
 tags:
   - case-law

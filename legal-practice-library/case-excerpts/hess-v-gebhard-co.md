@@ -12,7 +12,7 @@ document_references:
     resource: 'https://openagreements.org/checklists/non-compete/us'
   - type: Review Checklist
     resource: 'https://openagreements.org/checklists/non-compete/us/pennsylvania'
-  - type: State Law Practice Note
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/pennsylvania'
 tags:
   - case-law

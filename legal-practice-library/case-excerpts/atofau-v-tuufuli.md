@@ -6,7 +6,7 @@ citation: 'Atofau v. Tuufuli, 2 A.S.R. 414 (1948).'
 resource: 'https://asbar.org/case-law/atofau-v-tuufuli/'
 timestamp: '2026-06-03'
 document_references:
-  - type: State Law Practice Note
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/american-samoa'
 tags:
   - case-law

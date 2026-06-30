@@ -8,7 +8,7 @@ citation: 'Commodity Futures Trading Comm''n v. Weintraub, 471 U.S. 343 (1985).'
 resource: 'https://www.law.cornell.edu/supremecourt/text/471/343'
 timestamp: '2026-04-20'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/outside-counsel/privilege-across-counsel-transition
 tags:

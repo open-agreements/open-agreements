@@ -8,7 +8,7 @@ citation: 'Ollendorff v. Abrahamson, G.R. No. 13228, Sept. 13, 1918.'
 resource: 'https://lawphil.net/judjuris/juri1918/sep1918/gr_13228_1918.html'
 timestamp: '2026-06-03'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/ph'
 tags:
   - case-law

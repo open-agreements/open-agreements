@@ -8,7 +8,7 @@ citation: 'Lindgren v. Betham, 20 A.S.R.2d 98 (App. Div. 1992).'
 resource: 'https://asbar.org/case-law/lindgren-v-betham/'
 timestamp: '2026-06-03'
 document_references:
-  - type: State Law Practice Note
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/american-samoa'
 tags:
   - case-law

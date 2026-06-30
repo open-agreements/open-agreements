@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/773294/michael-rummery-v-illinois-bell-telephone-company
 timestamp: '2026-04-19'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/ai-layoffs/business-rationale-documentation
 tags:

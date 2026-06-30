@@ -6,7 +6,7 @@ citation: 'Pangelinan v. Pangelinan, 2024 MP 5.'
 resource: 'https://www.courtlistener.com/opinion/10124676/pangelinan-v-pangelinan/'
 timestamp: '2026-06-03'
 document_references:
-  - type: State Law Practice Note
+  - type: State Law Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/us/cnmi'
 tags:
   - case-law

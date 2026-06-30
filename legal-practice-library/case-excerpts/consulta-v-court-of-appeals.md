@@ -8,7 +8,7 @@ citation: 'Consulta v. Court of Appeals, G.R. No. 145443, Mar. 18, 2005.'
 resource: 'https://lawphil.net/judjuris/juri2005/mar2005/gr_145443_2005.html'
 timestamp: '2026-06-03'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/ph'
 tags:
   - case-law

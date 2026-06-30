@@ -9,7 +9,7 @@ resource: >-
   https://www.courtlistener.com/opinion/145789/meacham-v-knolls-atomic-power-laboratory
 timestamp: '2026-04-20'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/ai-hiring/disparate-impact-ai-skill-requirements
 tags:

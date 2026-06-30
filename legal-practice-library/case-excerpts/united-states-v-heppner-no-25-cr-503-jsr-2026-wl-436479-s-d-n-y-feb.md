@@ -13,7 +13,7 @@ resource: >-
   https://www.reuters.com/legal/transactional/artificial-intelligence-tools-third-party-by-any-other-name--pracin-2026-03-24/
 timestamp: '2026-04-20'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/ai-vendors/external-ai-vendor-privilege-risk
 tags:

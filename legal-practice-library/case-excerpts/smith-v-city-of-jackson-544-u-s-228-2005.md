@@ -6,7 +6,7 @@ citation: 'Smith v. City of Jackson, 544 U.S. 228 (2005).'
 resource: 'https://www.courtlistener.com/opinion/142883/smith-v-city-of-jackson'
 timestamp: '2026-04-20'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/ai-hiring/disparate-impact-ai-skill-requirements
 tags:

@@ -11,7 +11,7 @@ resource: >-
   https://storage.courtlistener.com/recap/gov.uscourts.mied.379552/gov.uscourts.mied.379552.94.0.pdf
 timestamp: '2026-04-20'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/ai-vendors/token-economics-for-legal-teams
 tags:

@@ -6,7 +6,7 @@ citation: 'Hengxin Technology Ltd v Jiang Wei [2009] SGHC 259.'
 resource: 'https://www.elitigation.sg/gd/s/2009_SGHC_259'
 timestamp: '2026-06-03'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/sg'
 tags:
   - case-law

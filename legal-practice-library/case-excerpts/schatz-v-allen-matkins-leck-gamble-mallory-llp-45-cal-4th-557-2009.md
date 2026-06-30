@@ -8,7 +8,7 @@ citation: 'Schatz v. Allen Matkins Leck Gamble & Mallory LLP, 45 Cal. 4th 557 (2
 resource: 'https://scocal.stanford.edu/opinion/schatz-v-allen-matkins-etc-33089'
 timestamp: '2026-04-20'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: >-
       https://openagreements.org/practice-guides/outside-counsel/fee-dispute-on-transition
 tags:

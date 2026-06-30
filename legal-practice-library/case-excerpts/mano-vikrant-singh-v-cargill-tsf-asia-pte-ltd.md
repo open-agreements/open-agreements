@@ -8,7 +8,7 @@ citation: 'Mano Vikrant Singh v Cargill TSF Asia Pte Ltd [2012] SGCA 42.'
 resource: 'https://www.elitigation.sg/gd/s/2012_SGCA_42'
 timestamp: '2026-06-03'
 document_references:
-  - type: Practice Note
+  - type: Practice Guide
     resource: 'https://openagreements.org/practice-guides/non-compete/sg'
 tags:
   - case-law
