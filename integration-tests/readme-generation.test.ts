@@ -52,6 +52,27 @@ describe('README generation', () => {
       expect(first).toMatch(
         /https:\/\/github\.com\/open-agreements\/open-agreements\/(tree|blob)\/main\//,
       );
+
+      // Content-first cleanup (#1246): no MCP status badge, no demo GIF, and
+      // content tables use concrete FORMAT labels (HTML/Markdown) rather than
+      // navigational words (Browse/Live/Website/Web) as column headers.
+      expect(first).not.toContain('MCP Server Status');
+      expect(first).not.toContain('demo-fill-nda.gif');
+      expect(first).not.toContain('| Browse |');
+      expect(first).not.toContain('| Live |');
+      expect(first).not.toContain('| Template | Website |');
+      expect(first).toContain('| Topic | What it covers | Coverage | Markdown | HTML |');
+      expect(first).toContain('| Template | HTML | Source | License | Repo |');
+
+      // Content-oriented CTAs replace the tooling-flavored "Request a Feature".
+      expect(first).not.toContain('Request a Feature');
+      expect(first).toContain('[Give Feedback]');
+      expect(first).toContain('[Request Coverage]');
+
+      // The downstream repo is described as a public projection / contribution
+      // surface without naming a private implementation repository.
+      expect(first).toContain('public legal content library');
+      expect(first).not.toContain('UseJunior/legal-explainer');
     },
   );
 

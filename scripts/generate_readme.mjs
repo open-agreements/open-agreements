@@ -134,13 +134,13 @@ function renderLegalPracticeLibrary() {
   lines.push("");
   lines.push(
     renderTable(
-      ["Topic", "What it covers", "Coverage", "Browse", "Live"],
+      ["Topic", "What it covers", "Coverage", "Markdown", "HTML"],
       library.practiceGuides.map((section) => [
         section.label,
         section.blurb,
         section.coverage,
         `[Markdown](${githubTreeUrl(section.repoPath)})`,
-        `[Web](${libraryUrl(section.live)})`,
+        `[HTML](${libraryUrl(section.live)})`,
       ]),
     ),
   );
@@ -160,11 +160,11 @@ function renderLawSurveys() {
   lines.push("");
   lines.push(
     renderTable(
-      ["Survey", "Browse", "Live"],
+      ["Survey", "Markdown", "HTML"],
       library.surveys.map((survey) => [
         survey.title,
         `[Markdown](${githubBlobUrl(survey.repoPath)})`,
-        survey.resource ? `[Web](${survey.resource})` : "—",
+        survey.resource ? `[HTML](${survey.resource})` : "—",
       ]),
     ),
   );
@@ -180,12 +180,12 @@ function renderChecklists() {
   lines.push("");
   lines.push(
     renderTable(
-      ["Topic", "What it covers", "Browse", "Live"],
+      ["Topic", "What it covers", "Markdown", "HTML"],
       library.checklists.map((section) => [
         section.label,
         section.blurb,
         `[Markdown](${githubTreeUrl(section.repoPath)})`,
-        `[Web](${libraryUrl(section.live)})`,
+        `[HTML](${libraryUrl(section.live)})`,
       ]),
     ),
   );
@@ -264,12 +264,12 @@ function renderTemplates() {
     lines.push("");
     lines.push(
       renderTable(
-        ["Template", "Website", "Source", "License", "Repo"],
+        ["Template", "HTML", "Source", "License", "Repo"],
         templates.map((template) => {
           const websiteUrl = withUtm(`${TEMPLATE_CATALOG_URL}/${template.id}`);
           return [
             makeTemplateLabel(template, duplicateCounts),
-            `[Website](${websiteUrl})`,
+            `[HTML](${websiteUrl})`,
             formatSourceCell(template),
             formatLicenseCell(template.license),
             `[Repo](${githubTreeUrl(template.repoPath)})`,
