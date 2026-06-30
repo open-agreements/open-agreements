@@ -105,10 +105,21 @@ const LICENSE_URLS = {
   "CC-BY-ND-4.0": "https://creativecommons.org/licenses/by-nd/4.0/",
 };
 
+// Human-readable rights-tier labels keyed by SPDX id. The license link is
+// retained so the precise terms stay one click away.
+const LICENSE_LABELS = {
+  "CC0-1.0": "Public domain (CC0)",
+  "CC-BY-4.0": "Creative Commons (CC-BY)",
+  "CC-BY-ND-4.0": "Creative Commons, no derivatives (CC-BY-ND)",
+};
+
 function formatLicenseCell(license) {
-  if (!license || license === "Recipe") return "Recipe";
+  // Recipe entries carry no redistributable license (we publish fill recipes,
+  // not the underlying NVCA forms), so they surface as proprietary.
+  if (!license || license === "Recipe") return "NVCA proprietary";
+  const label = LICENSE_LABELS[license] || license;
   const url = LICENSE_URLS[license];
-  return url ? `[${license}](${url})` : license;
+  return url ? `[${label}](${url})` : label;
 }
 
 function formatSourceCell(template) {
@@ -253,9 +264,14 @@ function renderTemplates() {
 
   const lines = [];
   for (const category of catalog.categories) {
-    const templates = catalog.templates.filter(
-      (template) => template.category === category.slug,
-    );
+    const templates = catalog.templates
+      .filter((template) => template.category === category.slug)
+      // Most-used first within the group; ties fall back to display name.
+      .sort(
+        (a, b) =>
+          b.usageDemand - a.usageDemand ||
+          a.displayName.localeCompare(b.displayName),
+      );
     if (templates.length === 0) {
       continue;
     }
@@ -272,7 +288,11 @@ function renderTemplates() {
             `[HTML](${websiteUrl})`,
             formatSourceCell(template),
             formatLicenseCell(template.license),
-            `[Repo](${githubTreeUrl(template.repoPath)})`,
+            // We publish NVCA fill recipes, not the forms themselves, so a
+            // "Repo" link would wrongly imply we host the source document.
+            template.contentTier === "recipe"
+              ? "—"
+              : `[Repo](${githubTreeUrl(template.repoPath)})`,
           ];
         }),
       ),
